@@ -1,0 +1,88 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "_note": "Issued by the coordinator by message 2026-10-22 (lot 3). Every non-WWOX paper is NOT WWOX EVIDENCE; class level; no dose, administration or suitability; not medical advice; do not touch the ledger or registries.",
+ "TASK_ID": "REPURP-10H-R1D-A-20261022",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "scientist-a",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "(1) Resolve four first-reading strength-scan flags by narrowing or widening, declaring contradicts_locator. (2) Search Europe PMC 2024-2026 for chaperone/proteostasis reports on a missense variant in a non-WWOX gene reporting a function readout beside the protein fraction readout; read at most 6 passing three tests; stage receipts, manifests with strength-scan.",
+ "SCOPE": {
+  "outputs": "deepdive_manifests/, receipt_staging/scientist-a/, note repurposing_10h_scientist-a_r1d_20261022.md"
+ },
+ "ACCEPTANCE_CRITERIA": [
+  "four flags resolved with contradicts_locator",
+  "manifests PASS and strength-scan clean",
+  "receipts staged not recorded",
+  "ledger and registries untouched"
+ ],
+ "DEPENDENCIES": [],
+ "REVIEW_REQUIREMENT": "Mirror ex post",
+ "INTERACTION_MODE": "AUTONOMOUS",
+ "RETRY_POLICY": "resume idempotently",
+ "CURRENT_STATE": "COMPLETE",
+ "assigned_on": "2026-10-22",
+ "TASK_ACK": {
+  "actor": "scientist-a",
+  "at": "2026-10-22T04:30:00Z",
+  "directive_version": 1,
+  "generation": 1,
+  "understanding": "Repair four flagged propositions; find and read up to six function-plus-protein reports on non-WWOX missense variants; stage receipts; no ledger or registry writes; no doses."
+ },
+ "TASK_CLAIM": {
+  "actor": "scientist-a",
+  "at": "2026-10-22T04:30:00Z",
+  "branch": "task/repurp-10h-r1d-a",
+  "worktree": ".claude/worktrees/r1d-a",
+  "reading_claims": [
+   "40421674",
+   "39013852",
+   "40449593",
+   "42161426",
+   "41274966"
+  ],
+  "note": "Claims taken with paper_packet.py claim."
+ },
+ "DEFAULTS_TAKEN": [
+  {
+   "condition": "flags concern first-reading entries",
+   "default": "repair in place with contradicts_locator CORRECTED auditors 0",
+   "why_safe": "revision visible, audit owed"
+  },
+  {
+   "condition": "39013852 supplement very large",
+   "default": "not opened; receipt partial, owed section named",
+   "why_safe": "no overstated depth"
+  },
+  {
+   "condition": "papers carry compound levels",
+   "default": "none carried",
+   "why_safe": "no dose"
+  },
+  {
+   "condition": "sixth candidate preliminary",
+   "default": "not read",
+   "why_safe": "proportion"
+  }
+ ],
+ "STOP_LOG": [],
+ "STAGED_RECEIPTS": [
+  "FTR-20261022-40421674-01",
+  "FTR-20261022-39013852-01",
+  "FTR-20261022-40449593-01",
+  "FTR-20261022-42161426-01",
+  "FTR-20261022-41274966-01"
+ ],
+ "MILESTONE_LOG": [
+  {
+   "at": "2026-10-22",
+   "milestone": "four scan flags resolved; five readings with manifests PASS and receipts staged; note and self-evaluation written; ledger and registries untouched"
+  }
+ ],
+ "OWED": [
+  "blind audit of the four repairs and of the declared text-versus-panel relations",
+  "supplement of 39013852",
+  "WWOX function assay not designed"
+ ]
+}

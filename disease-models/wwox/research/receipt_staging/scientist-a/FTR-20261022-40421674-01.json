@@ -1,0 +1,38 @@
+{
+ "event_id": "FTR-20261022-40421674-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "40421674",
+  "doi": "10.1002/jimd.70043"
+ },
+ "event_at": "2026-10-22T04:44:19Z",
+ "analysis_at": "2026-10-22T04:42:19Z",
+ "analysis_time_precision": "second",
+ "workflow": "Primary read by scientist-a under REPURP-10H-R1C-A-20261022: PMC efetch XML and PDF acquired with pmc_bucket_fetch.py and the Europe PMC supplementaryFiles endpoint, whole text read section by section, every figure opened as an image, the supplement read, locators captured while the document was open and verified by deepdive_manifest.py. Class-level substitute, NOT WWOX EVIDENCE.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID40421674_Hedayati2025_PMC_r2.xml",
+ "source_fingerprint": "d4ab964c00db7b9e6e84e0bafa2fff77c654afb805170a937e873e9a0bbd7f7e",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID40421674.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-a_r1d_20261022.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "context QUESTION_DRIVEN (the reader held the P5 cards and the question of whether a recovered protein carries function); the five figures were read from the native rasters embedded in the PDF (about 1500 to 2000 pixels wide) downscaled for viewing; supplement: the docx (two embedded images opened, table legends read) and Table S1 workbook read as a table; limits are inside the Discussion."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

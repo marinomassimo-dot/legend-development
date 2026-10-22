@@ -1,0 +1,604 @@
+{
+ "schema_version": 2,
+ "pmid": "40421674",
+ "doi": "10.1002/jimd.70043",
+ "receipt": "FTR-20261022-40421674-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-a_r1d_20261022.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not needed: PMC efetch XML, the PDF and supplements were returned by pmc_bucket_fetch.py."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Primary-evidence read of a NOT WWOX EVIDENCE paper under the Scientist brief; the analysis note is the dossier."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No consolidated baseline claim is narrowed, reversed or removed; a blind audit of the text-versus-panel relations is declared OWED."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for a candidate; class level only."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "counts_measured": "Not run by author name (surname-initial ambiguity); the paper's own programme: the group's earlier hiPSC-hepatocyte model of OTC deficiency is cited as ref 36.",
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "A urea-cycle and metabolic-disease group that built the patient hiPSC-hepatocyte line it tests here; the compounds and the model are one group's. NOT WWOX EVIDENCE."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "ornithine transcarbamylase AND pharmacological chaperone",
+    "count": 14,
+    "source": "PubMed ESearch count 2026-10-22"
+   },
+   {
+    "query": "ornithine transcarbamylase AND WWOX",
+    "count": 0,
+    "source": "PubMed ESearch count 2026-10-22"
+   }
+  ],
+  "note": "WWOX does not occur in the article; counts are title/abstract-level and license 'no paper is indexed', never 'never measured' (D-37)."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 57,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "<ref> elements counted in the JATS: 57; none WWOX-direct.",
+  "resolved": [],
+  "queued": [],
+  "note": "No WWOX-direct reference."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "registry_records.py get --pmid 40421674 --hops 0 and paper_packet.py packet (before the read)",
+  "hits": 0,
+  "finding": "NO RECORD MATCHED before this reading (a statement about that query, not about what the laboratory knows)."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-22",
+  "route": "dependency_integrity.py screen --manifest-block; PubMed efetch CommentsCorrections",
+  "result": "PubMed efetch 2026-10-22: no CommentsCorrections entry; dependency screen run (see block).",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 57,
+   "references_screened": 54,
+   "references_with_doi": 54,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 1,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 3
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID40421674_Hedayati2025_PMC_r2.xml",
+   "sha256": "d4ab964c00db7b9e6e84e0bafa2fff77c654afb805170a937e873e9a0bbd7f7e",
+   "kind": "article_text",
+   "note": "PMC efetch JATS for PMC12107682, retrieved with pmc_bucket_fetch.py.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-22",
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC12107682&rettype=xml",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none",
+    "result_sha256": "d4ab964c00db7b9e6e84e0bafa2fff77c654afb805170a937e873e9a0bbd7f7e"
+   }
+  },
+  {
+   "path": "files/supplement/PMID40421674_r2/PMC12107682.1.pdf",
+   "sha256": "231cb8b1c05d1d8b3cef30ebc67f7a6ba64c0f79d8a184f7a7f7c35a933fd376",
+   "kind": "article_binary",
+   "note": "Article PDF from the PMC open-data bucket; figure rasters extracted from it at native size.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-22",
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12107682.1/PMC12107682.1.pdf",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "result_sha256": "231cb8b1c05d1d8b3cef30ebc67f7a6ba64c0f79d8a184f7a7f7c35a933fd376"
+   }
+  },
+  {
+   "path": "files/supplement/PMID40421674_r2/JIMD-48-0-s001.docx",
+   "sha256": "7322ebb4b9d8dd91170d72b33d664759996492b9e8e2e646f0658631af2f8efd",
+   "kind": "supplement_binary",
+   "note": "Supporting Information docx (Supporting Figure 1, Tables S1 and S2 text); two embedded images extracted and opened.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-22",
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12107682.1/JIMD-48-0-s001.docx",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "result_sha256": "7322ebb4b9d8dd91170d72b33d664759996492b9e8e2e646f0658631af2f8efd"
+   }
+  },
+  {
+   "path": "files/supplement/PMID40421674_r2/JIMD-48-0-s002.xlsx",
+   "sha256": "e701a31f580a6a302bdbe291a9815a15b866d049a826f116654c7a371a8a04f7",
+   "kind": "supplement_binary",
+   "note": "Supporting Table S1 workbook: concentration-dependent thermal-shift replicates of the validated hits; read as a table.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-22",
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12107682.1/JIMD-48-0-s002.xlsx",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "result_sha256": "e701a31f580a6a302bdbe291a9815a15b866d049a826f116654c7a371a8a04f7"
+   }
+  },
+  {
+   "path": "files/figures/PMID40421674_r2/native/PMC12107682.1_p5_img1_native.png",
+   "sha256": "70d93b017254ce7f0efde658d045517e694e3e15933930fec42d8ffb81c3ca1a",
+   "kind": "figure",
+   "note": "Figure raster embedded on printed page 5 of the article PDF, extracted at native size (about 1500 to 2000 pixels wide) and opened downscaled.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID40421674_r2/PMC12107682.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Pixmap(doc, xref).save() of the page's largest image",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/figures/PMID40421674_r2/native/PMC12107682.1_p7_img1_native.png",
+   "sha256": "5f0dae5539a299d7ad827e6910e9a7274a0291771536dbb5f9312601011ccc22",
+   "kind": "figure",
+   "note": "Figure raster embedded on printed page 7 of the article PDF, extracted at native size (about 1500 to 2000 pixels wide) and opened downscaled.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID40421674_r2/PMC12107682.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Pixmap(doc, xref).save() of the page's largest image",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/figures/PMID40421674_r2/native/PMC12107682.1_p8_img1_native.png",
+   "sha256": "6824fd39d756487b7553dd76eeb0690aac4f0f0faca67e4d086473c8e7340467",
+   "kind": "figure",
+   "note": "Figure raster embedded on printed page 8 of the article PDF, extracted at native size (about 1500 to 2000 pixels wide) and opened downscaled.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID40421674_r2/PMC12107682.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Pixmap(doc, xref).save() of the page's largest image",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/figures/PMID40421674_r2/native/PMC12107682.1_p9_img1_native.png",
+   "sha256": "e8f0133dcda337803cad676bbbfe0d84c8caed45c385e7926db023b0f5b008d4",
+   "kind": "figure",
+   "note": "Figure raster embedded on printed page 9 of the article PDF, extracted at native size (about 1500 to 2000 pixels wide) and opened downscaled.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID40421674_r2/PMC12107682.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Pixmap(doc, xref).save() of the page's largest image",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/figures/PMID40421674_r2/native/PMC12107682.1_p11_img1_native.png",
+   "sha256": "82439cec61eab5dce6fe44b8897533be7d7f054feaf375d56e686b2b4334e6fa",
+   "kind": "figure",
+   "note": "Figure raster embedded on printed page 11 of the article PDF, extracted at native size (about 1500 to 2000 pixels wide) and opened downscaled.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID40421674_r2/PMC12107682.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Pixmap(doc, xref).save() of the page's largest image",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/supplement/PMID40421674_r3/JIMD-48-0-s001_docx_image1.png",
+   "sha256": "69de11835354a07f2e7e775caa488a8748472c088127e4c2523949bcadc5463e",
+   "kind": "figure",
+   "note": "Embedded image 1 of the Supporting Information docx, extracted with Python zipfile and opened.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID40421674_r2/JIMD-48-0-s001.docx",
+    "extractor": {
+     "name": "python zipfile",
+     "version": "stdlib",
+     "call": "ZipFile.read of word/media/image1.png",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/supplement/PMID40421674_r3/JIMD-48-0-s001_docx_image2.png",
+   "sha256": "57e884b130e414b50badbd6f6a423ff26f092e76d352ea2f02712a363a1decbf",
+   "kind": "figure",
+   "note": "Embedded image 2 of the Supporting Information docx, extracted with Python zipfile and opened.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID40421674_r2/JIMD-48-0-s001.docx",
+    "extractor": {
+     "name": "python zipfile",
+     "version": "stdlib",
+     "call": "ZipFile.read of word/media/image2.png",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC efetch JATS for PMC12107682 retrieved 2026-10-22, 127,887 bytes; the whole body is indexed locally for exact-text checks.",
+  "abstract_anchoring_waived": "Stated per entry; no entry is anchored to the abstract.",
+  "note": "QUESTION_DRIVEN: the reader held the P5 cards and the question 'does a recovered protein carry function'. Class-level substitute, NOT WWOX EVIDENCE. Read: abstract, introduction, methods, results, discussion, all five figures (native rasters extracted from the PDF and opened downscaled), the Supporting Information docx (its two images and the two table legends) and Table S1 as a table.",
+  "entries": [
+   {
+    "proposition": "NOT WWOX EVIDENCE. Text: the screen used wild-type OTC because disease-associated variants tend to aggregate and usually do not perform well in lengthy screening campaigns.",
+    "snippet": "The wild‐type form of human OTC was used in the screening, as disease‐associated variants show a tendency to aggregate and usually do not perform well in lengthy screening campaigns.",
+    "anchor": "Results, first subsection",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40421674_Hedayati2025_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "purified recombinant wild-type human ornithine transcarbamylase (thermal-shift screen); primary human hepatocytes and hiPSC-derived hepatocytes from a control and from patients with OTC deficiency; NOT a WWOX system (OTC is a mitochondrial trimeric enzyme of the urea cycle)",
+     "genotype": "OTC wild type; patient lines p.Tyr183Cys (no OTC protein), p.Arg92* (no OTC protein), p.Arg40His, and a fourth patient whose variant is not stated",
+     "endpoint": "thermal shift of the purified enzyme; OTC protein by western blot; OTC enzyme activity; urea secretion; ureagenesis"
+    }
+   },
+   {
+    "proposition": "Text: five validated hits presented optimal concentration-dependent stabilization of OTC, indicating ligand binding and protein stabilization.",
+    "snippet": "Five validated hits (PC1–PC5) (Figure 1B) presented optimal concentration‐dependent stabilization of OTC, indicating ligand binding and protein stabilization [42].",
+    "anchor": "Results, first subsection, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40421674_Hedayati2025_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "purified recombinant wild-type human ornithine transcarbamylase (thermal-shift screen); primary human hepatocytes and hiPSC-derived hepatocytes from a control and from patients with OTC deficiency; NOT a WWOX system (OTC is a mitochondrial trimeric enzyme of the urea cycle)",
+     "genotype": "OTC wild type; patient lines p.Tyr183Cys (no OTC protein), p.Arg92* (no OTC protein), p.Arg40His, and a fourth patient whose variant is not stated",
+     "endpoint": "thermal shift of the purified enzyme; OTC protein by western blot; OTC enzyme activity; urea secretion; ureagenesis"
+    }
+   },
+   {
+    "proposition": "Figure 1B as drawn: the thermal shift of each of the five compounds rises with concentration on a log axis to about 1.5 to 2 degrees at the highest concentrations plotted (about 100 to 120 micromolar) and the curves are still rising; no curve reaches a plateau; a shift of this size is the cut-off scale of the screen (one degree). The supplementary table S1 workbook gives three replicate melting temperatures per concentration (for the first compound about 1.65 degrees at 120 micromolar). A non-saturating rise does not show a binding constant.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1B (native raster, printed page 5)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID40421674_r2/native/PMC12107682.1_p5_img1_native.png",
+    "anchor": "Figure 1B (native raster, printed page 5)",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "purified recombinant wild-type human ornithine transcarbamylase (thermal-shift screen); primary human hepatocytes and hiPSC-derived hepatocytes from a control and from patients with OTC deficiency; NOT a WWOX system (OTC is a mitochondrial trimeric enzyme of the urea cycle)",
+     "genotype": "OTC wild type; patient lines p.Tyr183Cys (no OTC protein), p.Arg92* (no OTC protein), p.Arg40His, and a fourth patient whose variant is not stated",
+     "endpoint": "thermal shift of the purified enzyme; OTC protein by western blot; OTC enzyme activity; urea secretion; ureagenesis"
+    },
+    "qualifies": "entries[1]",
+    "qualifies_needle": "presented optimal concentration"
+   },
+   {
+    "proposition": "Text: PC2, PC5 and to a lesser extent PC3 decreased urea secretion and were suspected to inhibit OTC activity.",
+    "snippet": "PC2, PC5, and to a lesser extent PC3 decreased urea secretion and hence were suspected to inhibit OTC enzyme activity (Figure 2B).",
+    "anchor": "Results, second subsection",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40421674_Hedayati2025_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "purified recombinant wild-type human ornithine transcarbamylase (thermal-shift screen); primary human hepatocytes and hiPSC-derived hepatocytes from a control and from patients with OTC deficiency; NOT a WWOX system (OTC is a mitochondrial trimeric enzyme of the urea cycle)",
+     "genotype": "OTC wild type; patient lines p.Tyr183Cys (no OTC protein), p.Arg92* (no OTC protein), p.Arg40His, and a fourth patient whose variant is not stated",
+     "endpoint": "thermal shift of the purified enzyme; OTC protein by western blot; OTC enzyme activity; urea secretion; ureagenesis"
+    }
+   },
+   {
+    "proposition": "Figure 2B as drawn (urea secretion in primary human hepatocytes relative to control, two points per compound): PC1 about 99, PC2 about 86, PC3 about 96, PC4 about 106, PC5 about 86. Figure 2C: the ornithine and carbamoyl-phosphate substrate curves of PC1, PC4 and control overlap, single series with no replicate marks.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2B-C (native raster, printed page 7)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID40421674_r2/native/PMC12107682.1_p7_img1_native.png",
+    "anchor": "Figure 2B-C (native raster, printed page 7)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "purified recombinant wild-type human ornithine transcarbamylase (thermal-shift screen); primary human hepatocytes and hiPSC-derived hepatocytes from a control and from patients with OTC deficiency; NOT a WWOX system (OTC is a mitochondrial trimeric enzyme of the urea cycle)",
+     "genotype": "OTC wild type; patient lines p.Tyr183Cys (no OTC protein), p.Arg92* (no OTC protein), p.Arg40His, and a fourth patient whose variant is not stated",
+     "endpoint": "thermal shift of the purified enzyme; OTC protein by western blot; OTC enzyme activity; urea secretion; ureagenesis"
+    }
+   },
+   {
+    "proposition": "Text: based on the urea secretion assay, PC4 seemed to be the most effective compound in stabilizing OTC protein.",
+    "snippet": "Based on the results from the urea secretion assay, PC4 seemed to be the most effective compound in stabilizing OTC protein.",
+    "anchor": "Results, second subsection, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40421674_Hedayati2025_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "purified recombinant wild-type human ornithine transcarbamylase (thermal-shift screen); primary human hepatocytes and hiPSC-derived hepatocytes from a control and from patients with OTC deficiency; NOT a WWOX system (OTC is a mitochondrial trimeric enzyme of the urea cycle)",
+     "genotype": "OTC wild type; patient lines p.Tyr183Cys (no OTC protein), p.Arg92* (no OTC protein), p.Arg40His, and a fourth patient whose variant is not stated",
+     "endpoint": "thermal shift of the purified enzyme; OTC protein by western blot; OTC enzyme activity; urea secretion; ureagenesis"
+    }
+   },
+   {
+    "proposition": "Figures 2B and 2D as drawn: in 2B the relative urea secretion with PC4 is about 106 (two points, no test) against about 99 with PC1; in 2D, in a separate series with different units (picograms per cell), PC4 reaches about 23 against about 7 for control at 90 minutes (two stars at each time). A urea-secretion readout is a pathway output and carries no measure of OTC protein stability.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2B and 2D (native raster, printed page 7)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID40421674_r2/native/PMC12107682.1_p7_img1_native.png",
+    "anchor": "Figure 2B and 2D (native raster, printed page 7)",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "purified recombinant wild-type human ornithine transcarbamylase (thermal-shift screen); primary human hepatocytes and hiPSC-derived hepatocytes from a control and from patients with OTC deficiency; NOT a WWOX system (OTC is a mitochondrial trimeric enzyme of the urea cycle)",
+     "genotype": "OTC wild type; patient lines p.Tyr183Cys (no OTC protein), p.Arg92* (no OTC protein), p.Arg40His, and a fourth patient whose variant is not stated",
+     "endpoint": "thermal shift of the purified enzyme; OTC protein by western blot; OTC enzyme activity; urea secretion; ureagenesis"
+    },
+    "qualifies": "entries[5]",
+    "qualifies_needle": "PC4 seemed to be the most effective compound"
+   },
+   {
+    "proposition": "Text: both PC1 and PC4 docked on the surface of the OTC subunit but did not seem to interfere with trimer formation or with substrate binding.",
+    "snippet": "Both PC1 (Figure 3B) and PC4 (Figure 3C) docked on the surface of the OTC subunit but did not seem to interfere with the formation of the OTC trimer or with substrate binding (Figure 3D)",
+    "anchor": "Results, third subsection",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40421674_Hedayati2025_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "purified recombinant wild-type human ornithine transcarbamylase (thermal-shift screen); primary human hepatocytes and hiPSC-derived hepatocytes from a control and from patients with OTC deficiency; NOT a WWOX system (OTC is a mitochondrial trimeric enzyme of the urea cycle)",
+     "genotype": "OTC wild type; patient lines p.Tyr183Cys (no OTC protein), p.Arg92* (no OTC protein), p.Arg40His, and a fourth patient whose variant is not stated",
+     "endpoint": "thermal shift of the purified enzyme; OTC protein by western blot; OTC enzyme activity; urea secretion; ureagenesis"
+    }
+   },
+   {
+    "proposition": "Figure 3D as drawn: surface view with both docked compounds lying in the groove beside the carbamoyl-phosphate position; the compounds are placed by computer docking, not by a structure of a complex. Supplementary Table S2 lists the contact residues as lying close to the ornithine-binding site.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3D (native raster, printed page 8)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID40421674_r2/native/PMC12107682.1_p8_img1_native.png",
+    "anchor": "Figure 3D (native raster, printed page 8)",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "purified recombinant wild-type human ornithine transcarbamylase (thermal-shift screen); primary human hepatocytes and hiPSC-derived hepatocytes from a control and from patients with OTC deficiency; NOT a WWOX system (OTC is a mitochondrial trimeric enzyme of the urea cycle)",
+     "genotype": "OTC wild type; patient lines p.Tyr183Cys (no OTC protein), p.Arg92* (no OTC protein), p.Arg40His, and a fourth patient whose variant is not stated",
+     "endpoint": "thermal shift of the purified enzyme; OTC protein by western blot; OTC enzyme activity; urea secretion; ureagenesis"
+    },
+    "qualifies": "entries[7]",
+    "qualifies_needle": "did not seem to interfere with the formation of the OTC trimer"
+   },
+   {
+    "proposition": "Text: PC1 and PC4 gave a significant increase in OTC protein expression in control hiPSC-Heps but this effect was not observed in OTCD_3F hiPSC-Heps.",
+    "snippet": "While PC1 and PC4 treatment revealed a significant increase in OTC protein expression in Ctrl hiPSC‐Heps (Figure 4C,D), this effect was not observed in OTCD_3F hiPSC‐Heps (Figure 4C,D).",
+    "anchor": "Results, hiPSC-Heps subsection",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40421674_Hedayati2025_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "purified recombinant wild-type human ornithine transcarbamylase (thermal-shift screen); primary human hepatocytes and hiPSC-derived hepatocytes from a control and from patients with OTC deficiency; NOT a WWOX system (OTC is a mitochondrial trimeric enzyme of the urea cycle)",
+     "genotype": "OTC wild type; patient lines p.Tyr183Cys (no OTC protein), p.Arg92* (no OTC protein), p.Arg40His, and a fourth patient whose variant is not stated",
+     "endpoint": "thermal shift of the purified enzyme; OTC protein by western blot; OTC enzyme activity; urea secretion; ureagenesis"
+    }
+   },
+   {
+    "proposition": "Figure 4C-E as drawn: control hiPSC-Heps, OTC protein relative to vehicle about 190 (PC1) and about 230 (PC4, one point near 590), one star each, four to five points; OTC activity about 185 (PC1, one star, points from about 85 to 335) and about 125 (PC4, two stars). Patient line OTCD_3F: protein about 105 and about 97 and activity about 99 for both, all marked n.s.; the representative patient blot shows a darker OTC band with PC4 although the quantification is n.s.; the control CPS1 band looks similar across lanes by eye.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4C-E (native raster, printed page 9)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID40421674_r2/native/PMC12107682.1_p9_img1_native.png",
+    "anchor": "Figure 4C-E (native raster, printed page 9)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "purified recombinant wild-type human ornithine transcarbamylase (thermal-shift screen); primary human hepatocytes and hiPSC-derived hepatocytes from a control and from patients with OTC deficiency; NOT a WWOX system (OTC is a mitochondrial trimeric enzyme of the urea cycle)",
+     "genotype": "OTC wild type; patient lines p.Tyr183Cys (no OTC protein), p.Arg92* (no OTC protein), p.Arg40His, and a fourth patient whose variant is not stated",
+     "endpoint": "thermal shift of the purified enzyme; OTC protein by western blot; OTC enzyme activity; urea secretion; ureagenesis"
+    }
+   },
+   {
+    "proposition": "Text: PC1 and PC4 promote stabilization of wild-type OTC protein, thereby enhancing OTC enzymatic activity.",
+    "snippet": "These results suggest that PC1 and PC4 promote stabilization of wild‐type OTC protein, thereby enhancing OTC enzymatic activity.",
+    "anchor": "Results, hiPSC-Heps subsection, last paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40421674_Hedayati2025_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "purified recombinant wild-type human ornithine transcarbamylase (thermal-shift screen); primary human hepatocytes and hiPSC-derived hepatocytes from a control and from patients with OTC deficiency; NOT a WWOX system (OTC is a mitochondrial trimeric enzyme of the urea cycle)",
+     "genotype": "OTC wild type; patient lines p.Tyr183Cys (no OTC protein), p.Arg92* (no OTC protein), p.Arg40His, and a fourth patient whose variant is not stated",
+     "endpoint": "thermal shift of the purified enzyme; OTC protein by western blot; OTC enzyme activity; urea secretion; ureagenesis"
+    }
+   },
+   {
+    "proposition": "Figure 4C-E as drawn: the panels give steady-state OTC protein at one time point after treatment and the activity at the same point; no turnover, half-life or pulse-chase measurement is on the page, so 'stabilization' is an inference from a higher level. The effect is in control cells expressing wild-type OTC.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4C-E (native raster, printed page 9)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID40421674_r2/native/PMC12107682.1_p9_img1_native.png",
+    "anchor": "Figure 4C-E (native raster, printed page 9)",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "purified recombinant wild-type human ornithine transcarbamylase (thermal-shift screen); primary human hepatocytes and hiPSC-derived hepatocytes from a control and from patients with OTC deficiency; NOT a WWOX system (OTC is a mitochondrial trimeric enzyme of the urea cycle)",
+     "genotype": "OTC wild type; patient lines p.Tyr183Cys (no OTC protein), p.Arg92* (no OTC protein), p.Arg40His, and a fourth patient whose variant is not stated",
+     "endpoint": "thermal shift of the purified enzyme; OTC protein by western blot; OTC enzyme activity; urea secretion; ureagenesis"
+    },
+    "qualifies": "entries[11]",
+    "qualifies_needle": "promote stabilization of wild"
+   },
+   {
+    "proposition": "Text: in the patient hepatocytes treatment with PC4 gave a significant increase in OTC activity, not seen with PC1, and urea secretion and ureagenesis were significantly increased with both.",
+    "snippet": "treatment with PC4 revealed a significant increase in OTC enzymatic activity compared to DMSO‐treated PHHs from OTCD_4F (Figure 5E). This effect was not observed when treating PHHs with PC1 (Figure 5E). Urea secretion and ureagenesis, both were significantly increased in response to PC1 and PC4 treatment after a concomitant challenge with 15NH4Cl of OTCD_4F PHHs (Figure 5F,G).",
+    "anchor": "Results, patient hepatocytes subsection",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40421674_Hedayati2025_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "purified recombinant wild-type human ornithine transcarbamylase (thermal-shift screen); primary human hepatocytes and hiPSC-derived hepatocytes from a control and from patients with OTC deficiency; NOT a WWOX system (OTC is a mitochondrial trimeric enzyme of the urea cycle)",
+     "genotype": "OTC wild type; patient lines p.Tyr183Cys (no OTC protein), p.Arg92* (no OTC protein), p.Arg40His, and a fourth patient whose variant is not stated",
+     "endpoint": "thermal shift of the purified enzyme; OTC protein by western blot; OTC enzyme activity; urea secretion; ureagenesis"
+    }
+   },
+   {
+    "proposition": "Figure 5E-G as drawn (patient hepatocytes): OTC activity about 111 for PC4 (one star; seven points from about 85 to 140) and about 102 for PC1 (n.s.); urea secretion at 90 minutes about 0.58 (PC4), 0.41 (PC1) and 0.26 (vehicle) in milligrams per decilitre; 15N-urea enrichment about 22 (PC4), 20 (PC1), 9.5 (vehicle) and 15N2-urea about 15, 12 and 6, four points each, four stars. PC1 doubles ureagenesis with no change in measured OTC activity; the OTC activity change for PC4 is about 11 percent while ureagenesis rises about 2.3-fold. INFERENZA: the ureagenesis rise is not explained by the measured OTC activity for PC1.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5E-G (native raster, printed page 11)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID40421674_r2/native/PMC12107682.1_p11_img1_native.png",
+    "anchor": "Figure 5E-G (native raster, printed page 11)",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "purified recombinant wild-type human ornithine transcarbamylase (thermal-shift screen); primary human hepatocytes and hiPSC-derived hepatocytes from a control and from patients with OTC deficiency; NOT a WWOX system (OTC is a mitochondrial trimeric enzyme of the urea cycle)",
+     "genotype": "OTC wild type; patient lines p.Tyr183Cys (no OTC protein), p.Arg92* (no OTC protein), p.Arg40His, and a fourth patient whose variant is not stated",
+     "endpoint": "thermal shift of the purified enzyme; OTC protein by western blot; OTC enzyme activity; urea secretion; ureagenesis"
+    },
+    "qualifies": "entries[13]",
+    "qualifies_needle": "treatment with PC4 revealed a significant increase in OTC enzymatic activity"
+   },
+   {
+    "proposition": "Text: there were not enough biological replicates to assess a detectable effect on OTC protein expression in the patient hepatocytes.",
+    "snippet": "While we did not have enough biological replicates to assess a detectable effect on OTC protein expression (Figure 5C,D)",
+    "anchor": "Results, patient hepatocytes subsection",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40421674_Hedayati2025_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "purified recombinant wild-type human ornithine transcarbamylase (thermal-shift screen); primary human hepatocytes and hiPSC-derived hepatocytes from a control and from patients with OTC deficiency; NOT a WWOX system (OTC is a mitochondrial trimeric enzyme of the urea cycle)",
+     "genotype": "OTC wild type; patient lines p.Tyr183Cys (no OTC protein), p.Arg92* (no OTC protein), p.Arg40His, and a fourth patient whose variant is not stated",
+     "endpoint": "thermal shift of the purified enzyme; OTC protein by western blot; OTC enzyme activity; urea secretion; ureagenesis"
+    }
+   },
+   {
+    "proposition": "Figure 5C-D as drawn: PC1 about 118 (two points close together) and PC4 about 112 (two points, about 145 and about 80); no star or test; the representative blot shows similar OTC bands. The legend states two biological replicates and no statistical analysis for D.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5C-D (native raster, printed page 11)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID40421674_r2/native/PMC12107682.1_p11_img1_native.png",
+    "anchor": "Figure 5C-D (native raster, printed page 11)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "purified recombinant wild-type human ornithine transcarbamylase (thermal-shift screen); primary human hepatocytes and hiPSC-derived hepatocytes from a control and from patients with OTC deficiency; NOT a WWOX system (OTC is a mitochondrial trimeric enzyme of the urea cycle)",
+     "genotype": "OTC wild type; patient lines p.Tyr183Cys (no OTC protein), p.Arg92* (no OTC protein), p.Arg40His, and a fourth patient whose variant is not stated",
+     "endpoint": "thermal shift of the purified enzyme; OTC protein by western blot; OTC enzyme activity; urea secretion; ureagenesis"
+    }
+   },
+   {
+    "proposition": "Discussion text: females with unfavorable skewed X inactivation, with predominant expression of the mutant allele and little wild-type protein, might profit from PC4 treatment as it rescues OTC activity.",
+    "snippet": "Thus, females with unfavorable/skewed XCI causing predominant expression of the mutant OTC allele and only little of the wild‐type OTC protein might profit from PC4 treatment as it rescues OTC activity [57].",
+    "anchor": "Discussion, paragraph 6",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40421674_Hedayati2025_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "purified recombinant wild-type human ornithine transcarbamylase (thermal-shift screen); primary human hepatocytes and hiPSC-derived hepatocytes from a control and from patients with OTC deficiency; NOT a WWOX system (OTC is a mitochondrial trimeric enzyme of the urea cycle)",
+     "genotype": "OTC wild type; patient lines p.Tyr183Cys (no OTC protein), p.Arg92* (no OTC protein), p.Arg40His, and a fourth patient whose variant is not stated",
+     "endpoint": "thermal shift of the purified enzyme; OTC protein by western blot; OTC enzyme activity; urea secretion; ureagenesis"
+    }
+   },
+   {
+    "proposition": "Figure 5E as drawn: PC4 raises OTC activity in the patient hepatocytes by about 11 percent on average with a wide spread; the same paper's evidence that the compounds act on the enzyme is a gain on WILD-TYPE OTC in control cells (Figure 4) and no protein or activity gain in a missense patient line (OTCD_3F, Figure 4). Whether the 11 percent comes from wild-type or from mutant enzyme is not resolved by any panel.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5E (native raster, printed page 11)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID40421674_r2/native/PMC12107682.1_p11_img1_native.png",
+    "anchor": "Figure 5E (native raster, printed page 11)",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "purified recombinant wild-type human ornithine transcarbamylase (thermal-shift screen); primary human hepatocytes and hiPSC-derived hepatocytes from a control and from patients with OTC deficiency; NOT a WWOX system (OTC is a mitochondrial trimeric enzyme of the urea cycle)",
+     "genotype": "OTC wild type; patient lines p.Tyr183Cys (no OTC protein), p.Arg92* (no OTC protein), p.Arg40His, and a fourth patient whose variant is not stated",
+     "endpoint": "thermal shift of the purified enzyme; OTC protein by western blot; OTC enzyme activity; urea secretion; ureagenesis"
+    },
+    "qualifies": "entries[17]",
+    "qualifies_needle": "as it rescues OTC activity"
+   },
+   {
+    "proposition": "Text: hiPSC-Hep lines not expressing OTC protein, for example through an early stop mutation causing nonsense-mediated mRNA decay, are probably not suitable patient lines to treat with PCs.",
+    "snippet": "Generally, hiPSC‐Hep lines not expressing OTC protein—for example, due to an early stop mutation causing nonsense‐mediated mRNA decay—are probably not suitable patient lines to treat with PCs.",
+    "anchor": "Discussion, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40421674_Hedayati2025_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "purified recombinant wild-type human ornithine transcarbamylase (thermal-shift screen); primary human hepatocytes and hiPSC-derived hepatocytes from a control and from patients with OTC deficiency; NOT a WWOX system (OTC is a mitochondrial trimeric enzyme of the urea cycle)",
+     "genotype": "OTC wild type; patient lines p.Tyr183Cys (no OTC protein), p.Arg92* (no OTC protein), p.Arg40His, and a fourth patient whose variant is not stated",
+     "endpoint": "thermal shift of the purified enzyme; OTC protein by western blot; OTC enzyme activity; urea secretion; ureagenesis"
+    }
+   },
+   {
+    "proposition": "Supplementary Figure S1B (docx image 2) as drawn: OTC bands are absent in both OTCD_1M (a missense line, p.Tyr183Cys according to the main text) and OTCD_2F (a nonsense line) with vehicle, PC1 and PC4; CPS1 and the loading band are present in all lanes. So a missense line with no detectable OTC protein is also a line in which neither compound produced protein.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Supplementary Figure S1B (docx image 2)",
+    "surface": "figure",
+    "artifact": "files/supplement/PMID40421674_r3/JIMD-48-0-s001_docx_image2.png",
+    "anchor": "Supplementary Figure S1B (docx image 2)",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "purified recombinant wild-type human ornithine transcarbamylase (thermal-shift screen); primary human hepatocytes and hiPSC-derived hepatocytes from a control and from patients with OTC deficiency; NOT a WWOX system (OTC is a mitochondrial trimeric enzyme of the urea cycle)",
+     "genotype": "OTC wild type; patient lines p.Tyr183Cys (no OTC protein), p.Arg92* (no OTC protein), p.Arg40His, and a fourth patient whose variant is not stated",
+     "endpoint": "thermal shift of the purified enzyme; OTC protein by western blot; OTC enzyme activity; urea secretion; ureagenesis"
+    },
+    "qualifies": "entries[19]",
+    "qualifies_needle": "not expressing OTC protein"
+   },
+   {
+    "proposition": "Supplementary Figure S1A (docx image 1) as drawn: twelve brightfield fields (control, OTCD_1M, OTCD_2F, OTCD_3F, each untreated and with PC1 and PC4) with 100 micrometre scale bars; the OTCD_2F cells look different in morphology from the others in all three conditions; no counts.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Supplementary Figure S1A (docx image 1)",
+    "surface": "figure",
+    "artifact": "files/supplement/PMID40421674_r3/JIMD-48-0-s001_docx_image1.png",
+    "anchor": "Supplementary Figure S1A (docx image 1)",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "purified recombinant wild-type human ornithine transcarbamylase (thermal-shift screen); primary human hepatocytes and hiPSC-derived hepatocytes from a control and from patients with OTC deficiency; NOT a WWOX system (OTC is a mitochondrial trimeric enzyme of the urea cycle)",
+     "genotype": "OTC wild type; patient lines p.Tyr183Cys (no OTC protein), p.Arg92* (no OTC protein), p.Arg40His, and a fourth patient whose variant is not stated",
+     "endpoint": "thermal shift of the purified enzyme; OTC protein by western blot; OTC enzyme activity; urea secretion; ureagenesis"
+    }
+   },
+   {
+    "proposition": "Methods: all experiments were repeated with at least three biological replicates unless otherwise stated, with Student's t-test and one-way ANOVA or Kruskal-Wallis for group comparisons.",
+    "snippet": "All experiments were repeated with at least three biological replicates, which were not stated otherwise.",
+    "anchor": "Materials and methods, Statistics",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40421674_Hedayati2025_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "purified recombinant wild-type human ornithine transcarbamylase (thermal-shift screen); primary human hepatocytes and hiPSC-derived hepatocytes from a control and from patients with OTC deficiency; NOT a WWOX system (OTC is a mitochondrial trimeric enzyme of the urea cycle)",
+     "genotype": "OTC wild type; patient lines p.Tyr183Cys (no OTC protein), p.Arg92* (no OTC protein), p.Arg40His, and a fourth patient whose variant is not stated",
+     "endpoint": "thermal shift of the purified enzyme; OTC protein by western blot; OTC enzyme activity; urea secretion; ureagenesis"
+    }
+   }
+  ]
+ }
+}

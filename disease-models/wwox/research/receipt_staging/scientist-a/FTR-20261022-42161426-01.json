@@ -1,0 +1,38 @@
+{
+ "event_id": "FTR-20261022-42161426-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "42161426",
+  "doi": "10.1136/openhrt-2026-004016"
+ },
+ "event_at": "2026-10-22T04:52:01Z",
+ "analysis_at": "2026-10-22T04:50:01Z",
+ "analysis_time_precision": "second",
+ "workflow": "Primary read by scientist-a under REPURP-10H-R1C-A-20261022: PMC efetch XML and PDF acquired with pmc_bucket_fetch.py and the Europe PMC supplementaryFiles endpoint, whole text read section by section, every figure opened as an image, the supplement read, locators captured while the document was open and verified by deepdive_manifest.py. Class-level substitute, NOT WWOX EVIDENCE.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID42161426_GLAM76K2026_PMC_r2.xml",
+ "source_fingerprint": "26641dd357562af2e8da7cd97831fed95a8394e835b7ce712a46cc3e7362843d",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID42161426.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-a_r1d_20261022.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "context QUESTION_DRIVEN; four figures from native rasters (Figures 1 to 3 as a contact sheet); supplement: S2 jpg and the legend docx; the chaperone concentration and schedule of the paper are deliberately not carried."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

@@ -1,0 +1,598 @@
+{
+ "schema_version": 2,
+ "pmid": "39013852",
+ "doi": "10.1038/s41467-024-49982-8",
+ "receipt": "FTR-20261022-39013852-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-a_r1d_20261022.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not needed: PMC efetch XML, the PDF and supplements were returned by pmc_bucket_fetch.py."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Primary-evidence read of a NOT WWOX EVIDENCE paper under the Scientist brief; the analysis note is the dossier."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No consolidated baseline claim is narrowed, reversed or removed; a blind audit of the text-versus-panel relations is declared OWED."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for a candidate; class level only."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "counts_measured": "Not run by author name (ambiguous initials); the paper is a multi-group study of HTRA1 with an earlier same-group structural paper cited as ref 13.",
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "A protease structural-biology and proteomics collaboration; the corrector strategies and the knock-in mouse are one study's, not independent replications. NOT WWOX EVIDENCE."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "HTRA1 AND R274Q",
+    "count": 2,
+    "source": "PubMed ESearch count 2026-10-22"
+   },
+   {
+    "query": "HTRA1 AND WWOX",
+    "count": 0,
+    "source": "PubMed ESearch count 2026-10-22"
+   }
+  ],
+  "note": "WWOX does not occur in the article; counts are title/abstract-level and license 'no paper is indexed', never 'never measured' (D-37)."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 81,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "<ref> elements counted in the JATS: 81; none WWOX-direct.",
+  "resolved": [],
+  "queued": [],
+  "note": "No WWOX-direct reference."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "registry_records.py get --pmid 39013852 --hops 0 and paper_packet.py packet (before the read)",
+  "hits": 0,
+  "finding": "NO RECORD MATCHED before this reading (a statement about that query, not about what the laboratory knows)."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-22",
+  "route": "dependency_integrity.py screen --manifest-block; PubMed efetch CommentsCorrections",
+  "result": "PubMed efetch 2026-10-22: no CommentsCorrections entry; dependency screen run (see block).",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 62,
+   "references_screened": 62,
+   "references_with_doi": 62,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 1,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {}
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID39013852_Bruning2024_PMC_r2.xml",
+   "sha256": "e66e5a24664d13b201d90c6635fcfff689aa2c8def947fc3c458f9a8753e4c0c",
+   "kind": "article_text",
+   "note": "PMC efetch JATS for PMC11252331, retrieved with pmc_bucket_fetch.py.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-22",
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC11252331&rettype=xml",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none",
+    "result_sha256": "e66e5a24664d13b201d90c6635fcfff689aa2c8def947fc3c458f9a8753e4c0c"
+   }
+  },
+  {
+   "path": "files/supplement/PMID39013852_r2/PMC11252331.1.pdf",
+   "sha256": "6bd76895a75875fd80490326945da8dd555b21c762729e9c34798c45968bf3b2",
+   "kind": "article_binary",
+   "note": "Article PDF from the PMC open-data bucket; figure rasters extracted from it at native size.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-22",
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11252331.1/PMC11252331.1.pdf",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "result_sha256": "6bd76895a75875fd80490326945da8dd555b21c762729e9c34798c45968bf3b2"
+   }
+  },
+  {
+   "path": "files/figures/PMID39013852_r2/pages_200dpi/PMC11252331.1_p2_200dpi.png",
+   "sha256": "fdbc34d5589a4b0814986b8f3618457ef15f60981abb20425c981018257aca90",
+   "kind": "figure",
+   "note": "Printed page 2 of the article PDF rendered at 200 dpi and opened as an image (figures are partly vector, so the page, not the embedded raster, is the surface).",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID39013852_r2/PMC11252331.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=200).save()",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/figures/PMID39013852_r2/pages_200dpi/PMC11252331.1_p4_200dpi.png",
+   "sha256": "add3e7b20df8c6a318754f92f5f085d7cd45cf878765f8366340cfd7d4eb2eed",
+   "kind": "figure",
+   "note": "Printed page 4 of the article PDF rendered at 200 dpi and opened as an image (figures are partly vector, so the page, not the embedded raster, is the surface).",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID39013852_r2/PMC11252331.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=200).save()",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/figures/PMID39013852_r2/pages_200dpi/PMC11252331.1_p6_200dpi.png",
+   "sha256": "69478840c0582eadaab8685337e82c77fd29f9d1260d7c168d06287f542423d1",
+   "kind": "figure",
+   "note": "Printed page 6 of the article PDF rendered at 200 dpi and opened as an image (figures are partly vector, so the page, not the embedded raster, is the surface).",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID39013852_r2/PMC11252331.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=200).save()",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/figures/PMID39013852_r2/pages_200dpi/PMC11252331.1_p7_200dpi.png",
+   "sha256": "07287d9dc5aed7695824b4e6f9a8848b168b84d059a565bd4dd285c954ba6ed5",
+   "kind": "figure",
+   "note": "Printed page 7 of the article PDF rendered at 200 dpi and opened as an image (figures are partly vector, so the page, not the embedded raster, is the surface).",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID39013852_r2/PMC11252331.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=200).save()",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/figures/PMID39013852_r2/pages_200dpi/PMC11252331.1_p8_200dpi.png",
+   "sha256": "100c7cc5c7cb384d618ce6da745f87bef46661902eefc9c4fd0985f4fed614a2",
+   "kind": "figure",
+   "note": "Printed page 8 of the article PDF rendered at 200 dpi and opened as an image (figures are partly vector, so the page, not the embedded raster, is the surface).",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID39013852_r2/PMC11252331.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=200).save()",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/figures/PMID39013852_r2/pages_200dpi/PMC11252331.1_p9_200dpi.png",
+   "sha256": "3619123920353e006a0ebae9c71befd721c7a5edac7f9b9ace1094d235d1edf1",
+   "kind": "figure",
+   "note": "Printed page 9 of the article PDF rendered at 200 dpi and opened as an image (figures are partly vector, so the page, not the embedded raster, is the surface).",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID39013852_r2/PMC11252331.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=200).save()",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC efetch JATS for PMC11252331 retrieved 2026-10-22, 182,154 bytes; the whole body is indexed locally for exact-text checks.",
+  "abstract_anchoring_waived": "Stated per entry; no entry is anchored to the abstract.",
+  "note": "QUESTION_DRIVEN: the reader held the P5 cards and the question 'does a recovered protein carry function'. Class-level substitute, NOT WWOX EVIDENCE. Read: abstract, introduction, results (all six figures from 200 dpi renders of the article PDF's printed pages 2, 4, 6, 7, 8 and 9), discussion and the methods text on proteolysis assays and statistics; the supplement (a 17 MB figures PDF, ten further PDFs and four workbooks) was NOT opened (captions only through the main text): coverage is partial, the owed section is the supplement, in particular Supplementary Figures 6 and 7 (mRNA and peptide detection) and 10 (corrected-genotype proteomics).",
+  "entries": [
+   {
+    "proposition": "NOT WWOX EVIDENCE. Text: all four mutations strongly reduced HTRA1 protease activity compared to wild type in cell-free beta-casein degradation assays.",
+    "snippet": "All mutations strongly reduced HTRA1 protease activity compared to wild-type (wt) HTRA1 in cell-free β-casein degradation assays (Fig. 1c and Supplementary Fig. 1a).",
+    "anchor": "Results, first subsection, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39013852_Bruning2024_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "purified recombinant human HTRA1 (a homotrimeric serine protease; wild type and pathogenic interface or non-interface missense variants) in cell-free assays; Htra1 R274Q knock-in mice (brain-vessel proteomics, immunoblot, immunohistochemistry); NOT a WWOX system (HTRA1 is a secreted, oligomeric protease; the 'correctors' are a compensating protein variant, synthetic ligands and a peptide, not a drug tested in a patient)",
+     "genotype": "HTRA1 R274Q, R166H, A173T, A252T; mouse Htra1 R274Q and D174R-S328A alleles",
+     "endpoint": "proteolytic activity on beta-casein, Tau or a peptide substrate; oligomeric state; brain-vessel protein abundance of HtrA1 and of substrates (Ltbp4, Prss23)"
+    }
+   },
+   {
+    "proposition": "Figure 1C as drawn: wild type clears the substrate in about 7 minutes; A252T (a trimer) in about 18 minutes; R274Q and R166H in about 32 minutes; A173T leaves about half of the substrate at 32 minutes. The non-interface A252T mutant, which Figure 1D-E show to be a trimer like wild type, is reduced in activity much less than the interface mutants but is still reduced: oligomeric state and activity are separable.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1C-E (printed page 2, 200 dpi render)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39013852_r2/pages_200dpi/PMC11252331.1_p2_200dpi.png",
+    "anchor": "Figure 1C-E (printed page 2, 200 dpi render)",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "purified recombinant human HTRA1 (a homotrimeric serine protease; wild type and pathogenic interface or non-interface missense variants) in cell-free assays; Htra1 R274Q knock-in mice (brain-vessel proteomics, immunoblot, immunohistochemistry); NOT a WWOX system (HTRA1 is a secreted, oligomeric protease; the 'correctors' are a compensating protein variant, synthetic ligands and a peptide, not a drug tested in a patient)",
+     "genotype": "HTRA1 R274Q, R166H, A173T, A252T; mouse Htra1 R274Q and D174R-S328A alleles",
+     "endpoint": "proteolytic activity on beta-casein, Tau or a peptide substrate; oligomeric state; brain-vessel protein abundance of HtrA1 and of substrates (Ltbp4, Prss23)"
+    },
+    "qualifies": "entries[0]",
+    "qualifies_needle": "All mutations strongly reduced HTRA1 protease activity"
+   },
+   {
+    "proposition": "Text: the small amounts of trimers account for the residual levels of enzymatic activity detected in the interface mutants.",
+    "snippet": "The small amounts of trimers account for the residual levels of enzymatic activity detected in interface mutants.",
+    "anchor": "Results, first subsection, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39013852_Bruning2024_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "purified recombinant human HTRA1 (a homotrimeric serine protease; wild type and pathogenic interface or non-interface missense variants) in cell-free assays; Htra1 R274Q knock-in mice (brain-vessel proteomics, immunoblot, immunohistochemistry); NOT a WWOX system (HTRA1 is a secreted, oligomeric protease; the 'correctors' are a compensating protein variant, synthetic ligands and a peptide, not a drug tested in a patient)",
+     "genotype": "HTRA1 R274Q, R166H, A173T, A252T; mouse Htra1 R274Q and D174R-S328A alleles",
+     "endpoint": "proteolytic activity on beta-casein, Tau or a peptide substrate; oligomeric state; brain-vessel protein abundance of HtrA1 and of substrates (Ltbp4, Prss23)"
+    }
+   },
+   {
+    "proposition": "Figure 1E as drawn (native mass spectrometry, 2 to 3 datasets per bar): monomer about 22 percent and trimer about 75 for wild type; monomer about 84 and trimer about 12 for R274Q; monomer about 94 and trimer about 2 for R166H; monomer 100 and trimer not detected for A173T; monomer about 25 and trimer about 75 for A252T. Figure 1D: the SEC-MALS trimer fraction is 92 percent for wild type, 4 for R274Q, 2 for R166H, 3 for A173T and 93 for A252T.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1D-E (printed page 2)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39013852_r2/pages_200dpi/PMC11252331.1_p2_200dpi.png",
+    "anchor": "Figure 1D-E (printed page 2)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "purified recombinant human HTRA1 (a homotrimeric serine protease; wild type and pathogenic interface or non-interface missense variants) in cell-free assays; Htra1 R274Q knock-in mice (brain-vessel proteomics, immunoblot, immunohistochemistry); NOT a WWOX system (HTRA1 is a secreted, oligomeric protease; the 'correctors' are a compensating protein variant, synthetic ligands and a peptide, not a drug tested in a patient)",
+     "genotype": "HTRA1 R274Q, R166H, A173T, A252T; mouse Htra1 R274Q and D174R-S328A alleles",
+     "endpoint": "proteolytic activity on beta-casein, Tau or a peptide substrate; oligomeric state; brain-vessel protein abundance of HtrA1 and of substrates (Ltbp4, Prss23)"
+    }
+   },
+   {
+    "proposition": "Text: the mouse knock-in shows a more than 7.5-fold depletion of HtrA1 protein despite comparable htra1 mRNA levels, indicating defects in folding and stability of HtrA1-R274Q.",
+    "snippet": "Among the most noticeable abnormalities was a >7.5-fold depletion of HtrA1 protein despite comparable htra1 mRNA levels in Htra1R274Q compared to Htra1wt vessels (Supplementary Fig. 6b, c) indicating defects in folding and stability of HtrA1-R274Q.",
+    "anchor": "Results, third subsection, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39013852_Bruning2024_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "purified recombinant human HTRA1 (a homotrimeric serine protease; wild type and pathogenic interface or non-interface missense variants) in cell-free assays; Htra1 R274Q knock-in mice (brain-vessel proteomics, immunoblot, immunohistochemistry); NOT a WWOX system (HTRA1 is a secreted, oligomeric protease; the 'correctors' are a compensating protein variant, synthetic ligands and a peptide, not a drug tested in a patient)",
+     "genotype": "HTRA1 R274Q, R166H, A173T, A252T; mouse Htra1 R274Q and D174R-S328A alleles",
+     "endpoint": "proteolytic activity on beta-casein, Tau or a peptide substrate; oligomeric state; brain-vessel protein abundance of HtrA1 and of substrates (Ltbp4, Prss23)"
+    }
+   },
+   {
+    "proposition": "Figure 3B as drawn (mass spectrometry of isolated brain vessels, one point per mouse, n = 5 per genotype): Pan-HtrA1 about 1.0 for wild type (points about 0.8 to 1.2) and about 0.1 for R274Q (all five points near 0.1, p < 0.0001); the peptide carrying Arg274 is detected in wild type and not detected in R274Q; the peptide carrying Gln274 is detected in three of five R274Q samples and not in wild type. The mRNA comparison cited by the text is in Supplementary Figure 6B-C and was not opened in this reading. The measurement is of steady-state protein in a tissue; no synthesis or turnover rate is on the page, so 'folding and stability' is the authors' inference.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3B (printed page 6)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39013852_r2/pages_200dpi/PMC11252331.1_p6_200dpi.png",
+    "anchor": "Figure 3B (printed page 6)",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "purified recombinant human HTRA1 (a homotrimeric serine protease; wild type and pathogenic interface or non-interface missense variants) in cell-free assays; Htra1 R274Q knock-in mice (brain-vessel proteomics, immunoblot, immunohistochemistry); NOT a WWOX system (HTRA1 is a secreted, oligomeric protease; the 'correctors' are a compensating protein variant, synthetic ligands and a peptide, not a drug tested in a patient)",
+     "genotype": "HTRA1 R274Q, R166H, A173T, A252T; mouse Htra1 R274Q and D174R-S328A alleles",
+     "endpoint": "proteolytic activity on beta-casein, Tau or a peptide substrate; oligomeric state; brain-vessel protein abundance of HtrA1 and of substrates (Ltbp4, Prss23)"
+    },
+    "qualifies": "entries[4]",
+    "qualifies_needle": "indicating defects in folding and stability of HtrA1"
+   },
+   {
+    "proposition": "Text: seven Ltbp4 N-terminal peptides showed more than 17-fold enrichment in R274Q samples based on LFQ values, whereas enrichment of the 75 C-terminal peptides was much less pronounced (less than 1.5-fold).",
+    "snippet": "Specifically, 7 peptides covering the N-terminal (Nt) region of Ltbp4 showed an >17-fold enrichment in Htra1R274Q samples based on LFQ values, whereas enrichment of the 75 C-terminal (Ct) peptides was much less pronounced (<1.5-fold) (Fig. 3c)",
+    "anchor": "Results, third subsection, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39013852_Bruning2024_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "purified recombinant human HTRA1 (a homotrimeric serine protease; wild type and pathogenic interface or non-interface missense variants) in cell-free assays; Htra1 R274Q knock-in mice (brain-vessel proteomics, immunoblot, immunohistochemistry); NOT a WWOX system (HTRA1 is a secreted, oligomeric protease; the 'correctors' are a compensating protein variant, synthetic ligands and a peptide, not a drug tested in a patient)",
+     "genotype": "HTRA1 R274Q, R166H, A173T, A252T; mouse Htra1 R274Q and D174R-S328A alleles",
+     "endpoint": "proteolytic activity on beta-casein, Tau or a peptide substrate; oligomeric state; brain-vessel protein abundance of HtrA1 and of substrates (Ltbp4, Prss23)"
+    }
+   },
+   {
+    "proposition": "Figure 3C as drawn: Ltbp4-Nt about 1 in wild type and about 17 in R274Q (five points each, p < 0.0001); Ltbp4-Ct about 1.0 and 1.4 (p < 0.02); Prss23-Ct about 1 and about 13 (points about 7 to 18, p < 0.0001); Prss23-Nt about 1 and 1.3 (ns). The two non-specific bars are close to wild type, so the signal is region-specific.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3C (printed page 6)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39013852_r2/pages_200dpi/PMC11252331.1_p6_200dpi.png",
+    "anchor": "Figure 3C (printed page 6)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "purified recombinant human HTRA1 (a homotrimeric serine protease; wild type and pathogenic interface or non-interface missense variants) in cell-free assays; Htra1 R274Q knock-in mice (brain-vessel proteomics, immunoblot, immunohistochemistry); NOT a WWOX system (HTRA1 is a secreted, oligomeric protease; the 'correctors' are a compensating protein variant, synthetic ligands and a peptide, not a drug tested in a patient)",
+     "genotype": "HTRA1 R274Q, R166H, A173T, A252T; mouse Htra1 R274Q and D174R-S328A alleles",
+     "endpoint": "proteolytic activity on beta-casein, Tau or a peptide substrate; oligomeric state; brain-vessel protein abundance of HtrA1 and of substrates (Ltbp4, Prss23)"
+    }
+   },
+   {
+    "proposition": "Text: immunohistochemistry showed a significant increase of more than 1.5-fold in Ltbp4 signal intensity within the arterial wall of R274Q mice, with no difference in staining for laminin.",
+    "snippet": "Immunohistochemical (IHC) analysis of mouse brain further showed a significant >1.5-fold increase of Ltbp4 signal intensity within the arterial wall of Htra1R274Q mice whereas there was no difference in staining for laminin",
+    "anchor": "Results, third subsection, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39013852_Bruning2024_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "purified recombinant human HTRA1 (a homotrimeric serine protease; wild type and pathogenic interface or non-interface missense variants) in cell-free assays; Htra1 R274Q knock-in mice (brain-vessel proteomics, immunoblot, immunohistochemistry); NOT a WWOX system (HTRA1 is a secreted, oligomeric protease; the 'correctors' are a compensating protein variant, synthetic ligands and a peptide, not a drug tested in a patient)",
+     "genotype": "HTRA1 R274Q, R166H, A173T, A252T; mouse Htra1 R274Q and D174R-S328A alleles",
+     "endpoint": "proteolytic activity on beta-casein, Tau or a peptide substrate; oligomeric state; brain-vessel protein abundance of HtrA1 and of substrates (Ltbp4, Prss23)"
+    }
+   },
+   {
+    "proposition": "Figure 3F as drawn: Ltbp4 signal about 1.25 (wild type, 52 arteries from 3 mice) against about 1.85 (R274Q, 87 arteries from 4 mice), p < 0.03 by a Mann-Whitney test on vessels as the unit, a ratio of about 1.5; laminin about 0.35 against 0.32, ns. The unit of the test is the vessel, not the animal (three and four animals).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3F (printed page 6)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39013852_r2/pages_200dpi/PMC11252331.1_p6_200dpi.png",
+    "anchor": "Figure 3F (printed page 6)",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "purified recombinant human HTRA1 (a homotrimeric serine protease; wild type and pathogenic interface or non-interface missense variants) in cell-free assays; Htra1 R274Q knock-in mice (brain-vessel proteomics, immunoblot, immunohistochemistry); NOT a WWOX system (HTRA1 is a secreted, oligomeric protease; the 'correctors' are a compensating protein variant, synthetic ligands and a peptide, not a drug tested in a patient)",
+     "genotype": "HTRA1 R274Q, R166H, A173T, A252T; mouse Htra1 R274Q and D174R-S328A alleles",
+     "endpoint": "proteolytic activity on beta-casein, Tau or a peptide substrate; oligomeric state; brain-vessel protein abundance of HtrA1 and of substrates (Ltbp4, Prss23)"
+    },
+    "qualifies": "entries[8]",
+    "qualifies_needle": "significant >1.5"
+   },
+   {
+    "proposition": "Text: mixing the corrector variant with R274Q in various ratios caused a dose-dependent restoration of R274Q activity, and the functional repair involves restored multimeric assembly within mixed trimers.",
+    "snippet": "Mixing the proteins in various ratios caused a dose-dependent restoration of R274Q activity (Fig. 2b and Supplementary Fig. 5a).",
+    "anchor": "Results, second subsection, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39013852_Bruning2024_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "purified recombinant human HTRA1 (a homotrimeric serine protease; wild type and pathogenic interface or non-interface missense variants) in cell-free assays; Htra1 R274Q knock-in mice (brain-vessel proteomics, immunoblot, immunohistochemistry); NOT a WWOX system (HTRA1 is a secreted, oligomeric protease; the 'correctors' are a compensating protein variant, synthetic ligands and a peptide, not a drug tested in a patient)",
+     "genotype": "HTRA1 R274Q, R166H, A173T, A252T; mouse Htra1 R274Q and D174R-S328A alleles",
+     "endpoint": "proteolytic activity on beta-casein, Tau or a peptide substrate; oligomeric state; brain-vessel protein abundance of HtrA1 and of substrates (Ltbp4, Prss23)"
+    }
+   },
+   {
+    "proposition": "Figure 2B as drawn: one gel per mixing ratio (R274Q alone, the double mutant in cis, and the inactive corrector with R274Q at 1:3, 1:1 and 3:1); the substrate disappears by about 12 minutes at 1:3, about 8 at 1:1 and about 4 at 3:1, against about 28 for R274Q alone; the legend states the data are representative of 2 independent experiments and gives no error bars or quantification. Figure 2D-E: the corrector mixed with R274Q shifts the chromatographic and mass-spectrometric profile from monomer to trimer.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2B-E (printed page 4)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39013852_r2/pages_200dpi/PMC11252331.1_p4_200dpi.png",
+    "anchor": "Figure 2B-E (printed page 4)",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "purified recombinant human HTRA1 (a homotrimeric serine protease; wild type and pathogenic interface or non-interface missense variants) in cell-free assays; Htra1 R274Q knock-in mice (brain-vessel proteomics, immunoblot, immunohistochemistry); NOT a WWOX system (HTRA1 is a secreted, oligomeric protease; the 'correctors' are a compensating protein variant, synthetic ligands and a peptide, not a drug tested in a patient)",
+     "genotype": "HTRA1 R274Q, R166H, A173T, A252T; mouse Htra1 R274Q and D174R-S328A alleles",
+     "endpoint": "proteolytic activity on beta-casein, Tau or a peptide substrate; oligomeric state; brain-vessel protein abundance of HtrA1 and of substrates (Ltbp4, Prss23)"
+    },
+    "qualifies": "entries[10]",
+    "qualifies_needle": "dose"
+   },
+   {
+    "proposition": "Text: the key abnormalities of the vasculature of R274Q mice were all attenuated in the compound-heterozygous R274Q/D174R-S328A vessels, including a more than 11-fold increase of Pan-HtrA1 compared to R274Q.",
+    "snippet": "Indeed, the key abnormalities detected in the vasculature of Htra1R274Q mice were all attenuated in Htra1R274Q/D174R-S328A brain vessels (Fig. 4d and Supplementary Fig. 10). Specifically, we found a > 11-fold increase in the levels of Pan-HtrA1 in Htra1R274Q/D174R-S328A compared to Htra1R274Q mice (Fig. 4d).",
+    "anchor": "Results, fourth subsection, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39013852_Bruning2024_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "purified recombinant human HTRA1 (a homotrimeric serine protease; wild type and pathogenic interface or non-interface missense variants) in cell-free assays; Htra1 R274Q knock-in mice (brain-vessel proteomics, immunoblot, immunohistochemistry); NOT a WWOX system (HTRA1 is a secreted, oligomeric protease; the 'correctors' are a compensating protein variant, synthetic ligands and a peptide, not a drug tested in a patient)",
+     "genotype": "HTRA1 R274Q, R166H, A173T, A252T; mouse Htra1 R274Q and D174R-S328A alleles",
+     "endpoint": "proteolytic activity on beta-casein, Tau or a peptide substrate; oligomeric state; brain-vessel protein abundance of HtrA1 and of substrates (Ltbp4, Prss23)"
+    }
+   },
+   {
+    "proposition": "Figure 4D as drawn (five mice per genotype): Pan-HtrA1 about 1.0 (wild type), about 0.1 (R274Q), about 2.8 (D174R-S328A alone, points about 1.8 to 4.2) and about 1.1 (R274Q/D174R-S328A); Ltbp4-Nt about 1 (wild type), about 17 (R274Q), about 50 to 85 (D174R-S328A) and about 5 (R274Q/D174R-S328A); Prss23-Ct about 1, about 14, about 20 and about 6. In the corrected genotype the substrate readouts therefore remain about five- to six-fold above wild type. The Pan-HtrA1 measure excludes the Arg274 peptide but includes the corrector protein itself, which accumulates to about 2.8 times wild type when alone, so the rise in Pan-HtrA1 does not isolate stabilised R274Q protein (INFERENZA, reader's).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4D (printed page 7)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39013852_r2/pages_200dpi/PMC11252331.1_p7_200dpi.png",
+    "anchor": "Figure 4D (printed page 7)",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "purified recombinant human HTRA1 (a homotrimeric serine protease; wild type and pathogenic interface or non-interface missense variants) in cell-free assays; Htra1 R274Q knock-in mice (brain-vessel proteomics, immunoblot, immunohistochemistry); NOT a WWOX system (HTRA1 is a secreted, oligomeric protease; the 'correctors' are a compensating protein variant, synthetic ligands and a peptide, not a drug tested in a patient)",
+     "genotype": "HTRA1 R274Q, R166H, A173T, A252T; mouse Htra1 R274Q and D174R-S328A alleles",
+     "endpoint": "proteolytic activity on beta-casein, Tau or a peptide substrate; oligomeric state; brain-vessel protein abundance of HtrA1 and of substrates (Ltbp4, Prss23)"
+    },
+    "qualifies": "entries[12]",
+    "qualifies_needle": "attenuated in Htra1R274Q/D174R"
+   },
+   {
+    "proposition": "Text: the authors say the observations on the isoform-specific Gln274 peptide point to stabilization of HtrA1-R274Q in the presence of the corrector.",
+    "snippet": "These observations point to stabilization of HtrA1-R274Q in the presence of D174R-S328A.",
+    "anchor": "Results, fourth subsection, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39013852_Bruning2024_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "purified recombinant human HTRA1 (a homotrimeric serine protease; wild type and pathogenic interface or non-interface missense variants) in cell-free assays; Htra1 R274Q knock-in mice (brain-vessel proteomics, immunoblot, immunohistochemistry); NOT a WWOX system (HTRA1 is a secreted, oligomeric protease; the 'correctors' are a compensating protein variant, synthetic ligands and a peptide, not a drug tested in a patient)",
+     "genotype": "HTRA1 R274Q, R166H, A173T, A252T; mouse Htra1 R274Q and D174R-S328A alleles",
+     "endpoint": "proteolytic activity on beta-casein, Tau or a peptide substrate; oligomeric state; brain-vessel protein abundance of HtrA1 and of substrates (Ltbp4, Prss23)"
+    }
+   },
+   {
+    "proposition": "Figure 4D Gln274 panel as drawn: not detected in wild type and in D174R-S328A alone; about 1 for the combined wild-type-over-R274Q group (three points); about 5.5 in the corrected genotype (five points from about 2.5 to 9.5), p < 0.02. The legend states the peptide was not detected in two of five samples in two comparison groups and that these groups were combined for the test; no correction for multiple comparisons.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4D, Gln274 panel (printed page 7)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39013852_r2/pages_200dpi/PMC11252331.1_p7_200dpi.png",
+    "anchor": "Figure 4D, Gln274 panel (printed page 7)",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "purified recombinant human HTRA1 (a homotrimeric serine protease; wild type and pathogenic interface or non-interface missense variants) in cell-free assays; Htra1 R274Q knock-in mice (brain-vessel proteomics, immunoblot, immunohistochemistry); NOT a WWOX system (HTRA1 is a secreted, oligomeric protease; the 'correctors' are a compensating protein variant, synthetic ligands and a peptide, not a drug tested in a patient)",
+     "genotype": "HTRA1 R274Q, R166H, A173T, A252T; mouse Htra1 R274Q and D174R-S328A alleles",
+     "endpoint": "proteolytic activity on beta-casein, Tau or a peptide substrate; oligomeric state; brain-vessel protein abundance of HtrA1 and of substrates (Ltbp4, Prss23)"
+    },
+    "qualifies": "entries[14]",
+    "qualifies_needle": "point to stabilization of HtrA1"
+   },
+   {
+    "proposition": "Text: the proteome changes in R274Q/D174R-S328A vessels overlapped with those of wt/D174R-S328A vessels, indicating functional rescue of the single R274Q allele.",
+    "snippet": "Proteome changes in Htra1R274Q/D174R-S328A vessels exhibited a distinct profile which overlapped with the profile of Htra1wt/D174R-S328A vessels, indicating functional rescue of the single Htra1R274Q allele.",
+    "anchor": "Results, fourth subsection, last paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39013852_Bruning2024_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "purified recombinant human HTRA1 (a homotrimeric serine protease; wild type and pathogenic interface or non-interface missense variants) in cell-free assays; Htra1 R274Q knock-in mice (brain-vessel proteomics, immunoblot, immunohistochemistry); NOT a WWOX system (HTRA1 is a secreted, oligomeric protease; the 'correctors' are a compensating protein variant, synthetic ligands and a peptide, not a drug tested in a patient)",
+     "genotype": "HTRA1 R274Q, R166H, A173T, A252T; mouse Htra1 R274Q and D174R-S328A alleles",
+     "endpoint": "proteolytic activity on beta-casein, Tau or a peptide substrate; oligomeric state; brain-vessel protein abundance of HtrA1 and of substrates (Ltbp4, Prss23)"
+    }
+   },
+   {
+    "proposition": "Figure 4G as drawn: principal-component plot of five mice per genotype; the ellipse of the corrected genotype (green) lies between the wild-type group (grey) and the heterozygous-corrector group (light purple) and overlaps both, away from the R274Q and D174R-S328A ellipses; one green point lies far from the others (about 25 units on the second axis).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4G (printed page 7)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39013852_r2/pages_200dpi/PMC11252331.1_p7_200dpi.png",
+    "anchor": "Figure 4G (printed page 7)",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "purified recombinant human HTRA1 (a homotrimeric serine protease; wild type and pathogenic interface or non-interface missense variants) in cell-free assays; Htra1 R274Q knock-in mice (brain-vessel proteomics, immunoblot, immunohistochemistry); NOT a WWOX system (HTRA1 is a secreted, oligomeric protease; the 'correctors' are a compensating protein variant, synthetic ligands and a peptide, not a drug tested in a patient)",
+     "genotype": "HTRA1 R274Q, R166H, A173T, A252T; mouse Htra1 R274Q and D174R-S328A alleles",
+     "endpoint": "proteolytic activity on beta-casein, Tau or a peptide substrate; oligomeric state; brain-vessel protein abundance of HtrA1 and of substrates (Ltbp4, Prss23)"
+    },
+    "qualifies": "entries[16]",
+    "qualifies_needle": "indicating functional rescue of the single"
+   },
+   {
+    "proposition": "Legend of Figure 4: significance was tested by a two-sided unpaired t-test and no correction for multiple comparison was performed.",
+    "snippet": "Significance was tested by two-sided unpaired t-test; no correction for multiple comparison was performed",
+    "anchor": "Figure 4 legend, panel d",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39013852_Bruning2024_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "purified recombinant human HTRA1 (a homotrimeric serine protease; wild type and pathogenic interface or non-interface missense variants) in cell-free assays; Htra1 R274Q knock-in mice (brain-vessel proteomics, immunoblot, immunohistochemistry); NOT a WWOX system (HTRA1 is a secreted, oligomeric protease; the 'correctors' are a compensating protein variant, synthetic ligands and a peptide, not a drug tested in a patient)",
+     "genotype": "HTRA1 R274Q, R166H, A173T, A252T; mouse Htra1 R274Q and D174R-S328A alleles",
+     "endpoint": "proteolytic activity on beta-casein, Tau or a peptide substrate; oligomeric state; brain-vessel protein abundance of HtrA1 and of substrates (Ltbp4, Prss23)"
+    }
+   },
+   {
+    "proposition": "Text: the two ligands carrying two guanidiniocarbonyl-pyrrole groups yielded a 2 to 2.8-fold increase in proteolytic activity of R274Q, R166H and A173T in biochemical assays.",
+    "snippet": "Compounds MK1 and 2 carrying two GCP groups connected to a central tris(2-aminoethyl)amine core via peptidic linkers of different sizes yielded a 2 to 2.8-fold increase in proteolytic activity of R274Q, R166H and A173T in biochemical assays (Fig. 5b).",
+    "anchor": "Results, fifth subsection",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39013852_Bruning2024_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "purified recombinant human HTRA1 (a homotrimeric serine protease; wild type and pathogenic interface or non-interface missense variants) in cell-free assays; Htra1 R274Q knock-in mice (brain-vessel proteomics, immunoblot, immunohistochemistry); NOT a WWOX system (HTRA1 is a secreted, oligomeric protease; the 'correctors' are a compensating protein variant, synthetic ligands and a peptide, not a drug tested in a patient)",
+     "genotype": "HTRA1 R274Q, R166H, A173T, A252T; mouse Htra1 R274Q and D174R-S328A alleles",
+     "endpoint": "proteolytic activity on beta-casein, Tau or a peptide substrate; oligomeric state; brain-vessel protein abundance of HtrA1 and of substrates (Ltbp4, Prss23)"
+    }
+   },
+   {
+    "proposition": "Figure 5B (right panel) as drawn: relative activity in wild type about 0.17 (control) and about 0.21 with the first ligand; R274Q about 0.045 (control), about 0.105 (first ligand) and about 0.093 (second ligand); R166H about 0.04, 0.08 and 0.09; A173T about 0.022, 0.065 and 0.06; A252T about 0.058 (control) and about 0.015 with both ligands. The best-treated interface mutant (R274Q with the first ligand, about 0.105) remains about 60 percent of untreated wild type and the treated A173T (about 0.065) about 40 percent; two or three points per bar.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5B (printed page 8)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39013852_r2/pages_200dpi/PMC11252331.1_p8_200dpi.png",
+    "anchor": "Figure 5B (printed page 8)",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "purified recombinant human HTRA1 (a homotrimeric serine protease; wild type and pathogenic interface or non-interface missense variants) in cell-free assays; Htra1 R274Q knock-in mice (brain-vessel proteomics, immunoblot, immunohistochemistry); NOT a WWOX system (HTRA1 is a secreted, oligomeric protease; the 'correctors' are a compensating protein variant, synthetic ligands and a peptide, not a drug tested in a patient)",
+     "genotype": "HTRA1 R274Q, R166H, A173T, A252T; mouse Htra1 R274Q and D174R-S328A alleles",
+     "endpoint": "proteolytic activity on beta-casein, Tau or a peptide substrate; oligomeric state; brain-vessel protein abundance of HtrA1 and of substrates (Ltbp4, Prss23)"
+    },
+    "qualifies": "entries[19]",
+    "qualifies_needle": "yielded a 2 to 2.8"
+   },
+   {
+    "proposition": "Text: for the peptide, activation was up to 5-fold for R274Q and up to 12-fold for R166H although the affinity for the mutants was lower.",
+    "snippet": "The affinity of R274Q and R166H for VDAC2 peptide was lower (Kd = 12 µM for R274Q; Kd = 6 µM for R166H) but the peptide resulted in a significant activation by up to 5 and 12-fold for R274Q and R166H, respectively.",
+    "anchor": "Results, sixth subsection, paragraph 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39013852_Bruning2024_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "purified recombinant human HTRA1 (a homotrimeric serine protease; wild type and pathogenic interface or non-interface missense variants) in cell-free assays; Htra1 R274Q knock-in mice (brain-vessel proteomics, immunoblot, immunohistochemistry); NOT a WWOX system (HTRA1 is a secreted, oligomeric protease; the 'correctors' are a compensating protein variant, synthetic ligands and a peptide, not a drug tested in a patient)",
+     "genotype": "HTRA1 R274Q, R166H, A173T, A252T; mouse Htra1 R274Q and D174R-S328A alleles",
+     "endpoint": "proteolytic activity on beta-casein, Tau or a peptide substrate; oligomeric state; brain-vessel protein abundance of HtrA1 and of substrates (Ltbp4, Prss23)"
+    }
+   },
+   {
+    "proposition": "Figure 6D as drawn (relative activity per picomole of enzyme): wild type rises from about 70 to about 300 with the peptide (Vmax about 260), while R274Q rises from about 2 to about 11 (Vmax about 14) on a different axis; R274Q at saturating peptide therefore reaches about 16 percent of the activity of untreated wild type. INFERENZA, reader's: this compares two panels of one figure, which the text sets at different enzyme concentrations (30 nanomolar wild type, 300 nanomolar R274Q).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 6D (printed page 9)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39013852_r2/pages_200dpi/PMC11252331.1_p9_200dpi.png",
+    "anchor": "Figure 6D (printed page 9)",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "purified recombinant human HTRA1 (a homotrimeric serine protease; wild type and pathogenic interface or non-interface missense variants) in cell-free assays; Htra1 R274Q knock-in mice (brain-vessel proteomics, immunoblot, immunohistochemistry); NOT a WWOX system (HTRA1 is a secreted, oligomeric protease; the 'correctors' are a compensating protein variant, synthetic ligands and a peptide, not a drug tested in a patient)",
+     "genotype": "HTRA1 R274Q, R166H, A173T, A252T; mouse Htra1 R274Q and D174R-S328A alleles",
+     "endpoint": "proteolytic activity on beta-casein, Tau or a peptide substrate; oligomeric state; brain-vessel protein abundance of HtrA1 and of substrates (Ltbp4, Prss23)"
+    },
+    "qualifies": "entries[21]",
+    "qualifies_needle": "activation by up to 5 and 12"
+   },
+   {
+    "proposition": "Authors' limitation: delivering biologics to the brain vasculature is a practical limitation of the genetic-corrector approach.",
+    "snippet": "Yet a practical limitation of this approach is the difficulty to deliver biologics to the brain vasculature.",
+    "anchor": "Discussion, paragraph 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39013852_Bruning2024_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "purified recombinant human HTRA1 (a homotrimeric serine protease; wild type and pathogenic interface or non-interface missense variants) in cell-free assays; Htra1 R274Q knock-in mice (brain-vessel proteomics, immunoblot, immunohistochemistry); NOT a WWOX system (HTRA1 is a secreted, oligomeric protease; the 'correctors' are a compensating protein variant, synthetic ligands and a peptide, not a drug tested in a patient)",
+     "genotype": "HTRA1 R274Q, R166H, A173T, A252T; mouse Htra1 R274Q and D174R-S328A alleles",
+     "endpoint": "proteolytic activity on beta-casein, Tau or a peptide substrate; oligomeric state; brain-vessel protein abundance of HtrA1 and of substrates (Ltbp4, Prss23)"
+    }
+   },
+   {
+    "proposition": "Authors' limitation: the affinity of the supramolecular ligands is rather weak and their specificity low in their current form.",
+    "snippet": "In their current form, the affinity of GCPs is rather weak and their specificity low.",
+    "anchor": "Discussion, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39013852_Bruning2024_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "purified recombinant human HTRA1 (a homotrimeric serine protease; wild type and pathogenic interface or non-interface missense variants) in cell-free assays; Htra1 R274Q knock-in mice (brain-vessel proteomics, immunoblot, immunohistochemistry); NOT a WWOX system (HTRA1 is a secreted, oligomeric protease; the 'correctors' are a compensating protein variant, synthetic ligands and a peptide, not a drug tested in a patient)",
+     "genotype": "HTRA1 R274Q, R166H, A173T, A252T; mouse Htra1 R274Q and D174R-S328A alleles",
+     "endpoint": "proteolytic activity on beta-casein, Tau or a peptide substrate; oligomeric state; brain-vessel protein abundance of HtrA1 and of substrates (Ltbp4, Prss23)"
+    }
+   },
+   {
+    "proposition": "Authors' statement: the genetically supplied corrector was inactive by design, so restoration of activity is conditional on the presence of the pathogenic mutant, which the authors say limits off-target effects.",
+    "snippet": "The advantage of an enzymatically inactive corrector is that restoration of activity is conditional on the presence of the pathogenic mutant thereby limiting off-target effects.",
+    "anchor": "Discussion, paragraph 4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39013852_Bruning2024_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "purified recombinant human HTRA1 (a homotrimeric serine protease; wild type and pathogenic interface or non-interface missense variants) in cell-free assays; Htra1 R274Q knock-in mice (brain-vessel proteomics, immunoblot, immunohistochemistry); NOT a WWOX system (HTRA1 is a secreted, oligomeric protease; the 'correctors' are a compensating protein variant, synthetic ligands and a peptide, not a drug tested in a patient)",
+     "genotype": "HTRA1 R274Q, R166H, A173T, A252T; mouse Htra1 R274Q and D174R-S328A alleles",
+     "endpoint": "proteolytic activity on beta-casein, Tau or a peptide substrate; oligomeric state; brain-vessel protein abundance of HtrA1 and of substrates (Ltbp4, Prss23)"
+    }
+   }
+  ]
+ }
+}

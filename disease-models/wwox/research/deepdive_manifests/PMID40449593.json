@@ -1,0 +1,702 @@
+{
+ "schema_version": 2,
+ "pmid": "40449593",
+ "doi": "10.1016/j.jbc.2025.110315",
+ "receipt": "FTR-20261022-40449593-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-a_r1d_20261022.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not needed: PMC efetch XML, the PDF and supplements were returned by pmc_bucket_fetch.py."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Primary-evidence read of a NOT WWOX EVIDENCE paper under the Scientist brief; the analysis note is the dossier."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No consolidated baseline claim is narrowed, reversed or removed; a blind audit of the text-versus-panel relations is declared OWED."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for a candidate; class level only."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "counts_measured": "Not run by author name (ambiguous initials).",
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "A lysosomal-disease and newborn-screening group; the clinical onset data used for the correlations come from other groups' case reports (refs 11-16, 39, 64-66), so the clinical side is not this group's own measurement. NOT WWOX EVIDENCE."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "galactosylceramidase AND missense AND activity",
+    "count": 17,
+    "source": "PubMed ESearch count 2026-10-22"
+   },
+   {
+    "query": "galactosylceramidase AND WWOX",
+    "count": 0,
+    "source": "PubMed ESearch count 2026-10-22"
+   }
+  ],
+  "note": "WWOX does not occur in the article; counts are title/abstract-level and license 'no paper is indexed', never 'never measured' (D-37)."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 66,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "<ref> elements counted in the JATS: 66; none WWOX-direct.",
+  "resolved": [],
+  "queued": [],
+  "note": "No WWOX-direct reference."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "registry_records.py get --pmid 40449593 --hops 0 and paper_packet.py packet (before the read)",
+  "hits": 0,
+  "finding": "NO RECORD MATCHED before this reading (a statement about that query, not about what the laboratory knows)."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-22",
+  "route": "dependency_integrity.py screen --manifest-block; PubMed efetch CommentsCorrections",
+  "result": "PubMed efetch 2026-10-22: no CommentsCorrections entry; dependency screen run (see block).",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 66,
+   "references_screened": 60,
+   "references_with_doi": 60,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 1,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 6
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID40449593_GALC2025_PMC_r2.xml",
+   "sha256": "18a739714272de6668a6c5e3b06334ec934d29678a54b018aecf382cf344a9d1",
+   "kind": "article_text",
+   "note": "PMC efetch JATS for PMC12256330, retrieved with pmc_bucket_fetch.py.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-22",
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC12256330&rettype=xml",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none",
+    "result_sha256": "18a739714272de6668a6c5e3b06334ec934d29678a54b018aecf382cf344a9d1"
+   }
+  },
+  {
+   "path": "files/supplement/PMID40449593_r2/PMC12256330.1.pdf",
+   "sha256": "46049b24a6d4165cc46d230f24925acb4d4ed5350aaf05b74d74456af21014ed",
+   "kind": "article_binary",
+   "note": "Article PDF from the PMC open-data bucket; figure rasters extracted from it at native size.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-22",
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12256330.1/PMC12256330.1.pdf",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "result_sha256": "46049b24a6d4165cc46d230f24925acb4d4ed5350aaf05b74d74456af21014ed"
+   }
+  },
+  {
+   "path": "files/supplement/PMID40449593_r2/mmc1.docx",
+   "sha256": "61067aef0ff88293fe5eb5f735c5666684f4959c9c4d3a39c792975dc63d2927",
+   "kind": "supplement_binary",
+   "note": "Supplementary Information docx (proteomics methods and a table of mutagenesis primers); text read.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-22",
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12256330.1/mmc1.docx",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "result_sha256": "61067aef0ff88293fe5eb5f735c5666684f4959c9c4d3a39c792975dc63d2927"
+   }
+  },
+  {
+   "path": "files/figures/PMID40449593_r2/native/PMC12256330.1_p2_img1_native.png",
+   "sha256": "a4510ef7a387520f4d1e6092c34f0ef7a1797b31d93af7866675a3e1a7a7b09f",
+   "kind": "figure",
+   "note": "Figure raster embedded on printed page 2 of the article PDF, extracted at native size (about 1400 to 2000 pixels wide) and opened.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID40449593_r2/PMC12256330.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Pixmap(doc, xref).save() of the page's image",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/figures/PMID40449593_r2/native/PMC12256330.1_p3_img1_native.png",
+   "sha256": "2253dcc331104909cfe8abff36beef3c8b68404c2dbb99e134f4ac6dc142187b",
+   "kind": "figure",
+   "note": "Figure raster embedded on printed page 3 of the article PDF, extracted at native size (about 1400 to 2000 pixels wide) and opened.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID40449593_r2/PMC12256330.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Pixmap(doc, xref).save() of the page's image",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/figures/PMID40449593_r2/native/PMC12256330.1_p4_img1_native.png",
+   "sha256": "5cf70b8a67df1c903316a82f2ceed4afd40b98f493a88c36d60fe5279ccb8ff5",
+   "kind": "figure",
+   "note": "Figure raster embedded on printed page 4 of the article PDF, extracted at native size (about 1400 to 2000 pixels wide) and opened.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID40449593_r2/PMC12256330.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Pixmap(doc, xref).save() of the page's image",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/figures/PMID40449593_r2/native/PMC12256330.1_p5_img1_native.png",
+   "sha256": "65bfcbc3904449f088057728e4a297ce15ecad91e4f7d2c4e5fd03a8a818935a",
+   "kind": "figure",
+   "note": "Figure raster embedded on printed page 5 of the article PDF, extracted at native size (about 1400 to 2000 pixels wide) and opened.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID40449593_r2/PMC12256330.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Pixmap(doc, xref).save() of the page's image",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/figures/PMID40449593_r2/native/PMC12256330.1_p7_img1_native.png",
+   "sha256": "ac9a2b707fd7d47d7e34ed4336471e2a5f4d27ea5684b762f033eebaa7f38ac9",
+   "kind": "figure",
+   "note": "Figure raster embedded on printed page 7 of the article PDF, extracted at native size (about 1400 to 2000 pixels wide) and opened.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID40449593_r2/PMC12256330.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Pixmap(doc, xref).save() of the page's image",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/figures/PMID40449593_r2/native/PMC12256330.1_p8_img1_native.png",
+   "sha256": "da5a4f6b71e7ee9ea98a2e2c16067f71823e5a075a190a3b8fd968a2dc6fa6b0",
+   "kind": "figure",
+   "note": "Figure raster embedded on printed page 8 of the article PDF, extracted at native size (about 1400 to 2000 pixels wide) and opened.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID40449593_r2/PMC12256330.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Pixmap(doc, xref).save() of the page's image",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/figures/PMID40449593_r2/native/PMC12256330.1_p9_img1_native.png",
+   "sha256": "b6d5a901872c552ef3158c8d2e20e9d5efaeae65834d25d61b9c53b512ede01b",
+   "kind": "figure",
+   "note": "Figure raster embedded on printed page 9 of the article PDF, extracted at native size (about 1400 to 2000 pixels wide) and opened.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID40449593_r2/PMC12256330.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Pixmap(doc, xref).save() of the page's image",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/figures/PMID40449593_r2/native/PMC12256330.1_p10_img1_native.png",
+   "sha256": "3dc88ad2f1957b363fa9268550bac65ca3be81f7655c435a4949627cc758b953",
+   "kind": "figure",
+   "note": "Figure raster embedded on printed page 10 of the article PDF, extracted at native size (about 1400 to 2000 pixels wide) and opened.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID40449593_r2/PMC12256330.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Pixmap(doc, xref).save() of the page's image",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/figures/PMID40449593_r2/native/PMC12256330.1_p11_img1_native.png",
+   "sha256": "74f541a3234188bc94b3a30f5f9cd3eb5b36cb311be0c797a96ac42ce9bf1f81",
+   "kind": "figure",
+   "note": "Figure raster embedded on printed page 11 of the article PDF, extracted at native size (about 1400 to 2000 pixels wide) and opened.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID40449593_r2/PMC12256330.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Pixmap(doc, xref).save() of the page's image",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/figures/PMID40449593_r2/native/PMC12256330.1_p12_img1_native.png",
+   "sha256": "07db4a04152ebf3a5189fc9a1c89b61ba4b7e60debd989ed0e4dac4bd983549e",
+   "kind": "figure",
+   "note": "Figure raster embedded on printed page 12 of the article PDF, extracted at native size (about 1400 to 2000 pixels wide) and opened.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID40449593_r2/PMC12256330.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Pixmap(doc, xref).save() of the page's image",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/figures/PMID40449593_r2/native/PMC12256330.1_p12_img2_native.png",
+   "sha256": "6cdf9a13e12901436cfc60549d4253ce87b695b6e6328ef2341fde264068f9de",
+   "kind": "figure",
+   "note": "Figure raster embedded on printed page 12 of the article PDF, extracted at native size (about 1400 to 2000 pixels wide) and opened.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID40449593_r2/PMC12256330.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Pixmap(doc, xref).save() of the page's image",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/figures/PMID40449593_r2/native/PMC12256330.1_p14_img1_native.png",
+   "sha256": "764e97204695f6d53a593686d27f9c1cbe2d9ecb346e5acbe54cf7f8d074d8e1",
+   "kind": "figure",
+   "note": "Figure raster embedded on printed page 14 of the article PDF, extracted at native size (about 1400 to 2000 pixels wide) and opened.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID40449593_r2/PMC12256330.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Pixmap(doc, xref).save() of the page's image",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/figures/PMID40449593_r2/native/PMC12256330.1_p15_img1_native.png",
+   "sha256": "a047871a0d3070bdc2e552c88a2b7ffe97b97e6c0b2e7313dc578e0e94cbaf01",
+   "kind": "figure",
+   "note": "Figure raster embedded on printed page 15 of the article PDF, extracted at native size (about 1400 to 2000 pixels wide) and opened.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID40449593_r2/PMC12256330.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Pixmap(doc, xref).save() of the page's image",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC efetch JATS for PMC12256330 retrieved 2026-10-22, 219,210 bytes; the whole body is indexed locally for exact-text checks.",
+  "abstract_anchoring_waived": "Stated per entry; no entry is anchored to the abstract.",
+  "note": "QUESTION_DRIVEN: the reader held the P5 cards and the question of how protein quantity relates to function across a panel of variants. Class-level substitute, NOT WWOX EVIDENCE; no drug or chaperone was applied. Read: abstract, results, discussion, methods headings and the statistics sentences, all thirteen figures (native rasters extracted from the PDF and opened, Figures 1 to 4 as a contact sheet), Table 3 and Table 4 as text, and the supplementary docx text; the wide results tables were read as text, not cell by cell.",
+  "entries": [
+   {
+    "proposition": "NOT WWOX EVIDENCE. Text: 20 of the 31 variant transfectants reduced GALC activity by more than 98 percent.",
+    "snippet": "By contrast, 20 of the 31 MMV transfectants reduced GALC activity by more than 98%",
+    "anchor": "Results, third subsection, paragraph 1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40449593_GALC2025_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "transient expression of galactosylceramidase (GALC) missense variants in a GALC-knockout human oligodendrocytic cell line (MO3.13); lysate activity, mature lysosomal protein, secreted protein, intracellular precursor, psychosine; correlations with literature age-of-onset; NOT a WWOX system (a lysosomal hydrolase; no chaperone was applied in this paper)",
+     "genotype": "GALC missense variants (about 36 incl. p.I562T pseudodeficiency background)",
+     "endpoint": "GALC enzyme activity, lys-GALC and pre-GALC by western blot or ELISA, secreted GALC by ELISA, psychosine"
+    }
+   },
+   {
+    "proposition": "Figure 5 as drawn (3 to 4 points per variant bar, 24 points for wild type): wild type 100 percent; polymorphic variants about 100, 77, 67, 65 and 37 percent; six intermediate-activity bars (orange, about 3.4 to 7.1 percent); twenty bars (red) at or below about 2 percent, ending at zero for p.G553R. Agrees with the text count.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5 (native raster, printed page 7)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID40449593_r2/native/PMC12256330.1_p7_img1_native.png",
+    "anchor": "Figure 5 (native raster, printed page 7)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "transient expression of galactosylceramidase (GALC) missense variants in a GALC-knockout human oligodendrocytic cell line (MO3.13); lysate activity, mature lysosomal protein, secreted protein, intracellular precursor, psychosine; correlations with literature age-of-onset; NOT a WWOX system (a lysosomal hydrolase; no chaperone was applied in this paper)",
+     "genotype": "GALC missense variants (about 36 incl. p.I562T pseudodeficiency background)",
+     "endpoint": "GALC enzyme activity, lys-GALC and pre-GALC by western blot or ELISA, secreted GALC by ELISA, psychosine"
+    }
+   },
+   {
+    "proposition": "Text: lys-GALC levels were positively and highly correlated with GALC activity among wild type and all 36 variants (Pearson r = 0.93), so mature enzyme is the primary contributor to activity.",
+    "snippet": "Importantly, lys-GALC levels were positively and highly correlated to GALC activity among WT and all 36 MMVs examined (Fig. 7, E and F, Pearson r = 0.93, p < 0.0001).",
+    "anchor": "Results, lys-GALC subsection",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40449593_GALC2025_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "transient expression of galactosylceramidase (GALC) missense variants in a GALC-knockout human oligodendrocytic cell line (MO3.13); lysate activity, mature lysosomal protein, secreted protein, intracellular precursor, psychosine; correlations with literature age-of-onset; NOT a WWOX system (a lysosomal hydrolase; no chaperone was applied in this paper)",
+     "genotype": "GALC missense variants (about 36 incl. p.I562T pseudodeficiency background)",
+     "endpoint": "GALC enzyme activity, lys-GALC and pre-GALC by western blot or ELISA, secreted GALC by ELISA, psychosine"
+    }
+   },
+   {
+    "proposition": "Figure 7E-F as drawn: the fitted line is carried by the cluster of wild type and polymorphic variants at 65 to 105 percent activity; the enlarged panel F (activity below 8 percent) shows lys-GALC from 0 to about 16 percent with no visible relation to activity inside that range (p.G286D with the pseudodeficiency background at about 16 percent protein and 7 percent activity; p.I250T about 11 percent protein and 0.6 percent activity; many points at zero); p.R396W (an active-site variant) sits well above the line (about 47 percent protein, about 4 percent activity). INFERENZA, reader's: within the low-activity range the protein level does not rank the variants; the 0.93 is a statement about the whole range.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 7E-F (native raster, printed page 9)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID40449593_r2/native/PMC12256330.1_p9_img1_native.png",
+    "anchor": "Figure 7E-F (native raster, printed page 9)",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "transient expression of galactosylceramidase (GALC) missense variants in a GALC-knockout human oligodendrocytic cell line (MO3.13); lysate activity, mature lysosomal protein, secreted protein, intracellular precursor, psychosine; correlations with literature age-of-onset; NOT a WWOX system (a lysosomal hydrolase; no chaperone was applied in this paper)",
+     "genotype": "GALC missense variants (about 36 incl. p.I562T pseudodeficiency background)",
+     "endpoint": "GALC enzyme activity, lys-GALC and pre-GALC by western blot or ELISA, secreted GALC by ELISA, psychosine"
+    },
+    "qualifies": "entries[2]",
+    "qualifies_needle": "highly correlated to GALC activity"
+   },
+   {
+    "proposition": "Text: the residual GALC activity in the cell model was highly correlated with the age of disease onset in compound-heterozygous patients (Pearson r = 0.94, p < 0.0001).",
+    "snippet": "Remarkably, the GALC activity associated with these variants was highly correlated with the clinical onset observed in KD patients (Fig. 6B, Pearson r = 0.94, p < 0.0001).",
+    "anchor": "Results, fourth subsection",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40449593_GALC2025_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "transient expression of galactosylceramidase (GALC) missense variants in a GALC-knockout human oligodendrocytic cell line (MO3.13); lysate activity, mature lysosomal protein, secreted protein, intracellular precursor, psychosine; correlations with literature age-of-onset; NOT a WWOX system (a lysosomal hydrolase; no chaperone was applied in this paper)",
+     "genotype": "GALC missense variants (about 36 incl. p.I562T pseudodeficiency background)",
+     "endpoint": "GALC enzyme activity, lys-GALC and pre-GALC by western blot or ELISA, secreted GALC by ELISA, psychosine"
+    }
+   },
+   {
+    "proposition": "Figure 6A-B as drawn: twelve variants; ten of them have cell-model activity between 0 and 1.6 percent and median onset between 4.5 and 22 months; two points carry the slope: p.G286D with the pseudodeficiency background (7.1 percent, 60 months) and p.I384T with it (3.7 percent, 42 months). Removing the two would leave a cluster in which activity differences of one percent coexist with onset from 4.5 to 22 months. n = 12 points, with 1 to 4 reported cases behind each.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 6A-B (native raster, printed page 8)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID40449593_r2/native/PMC12256330.1_p8_img1_native.png",
+    "anchor": "Figure 6A-B (native raster, printed page 8)",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "transient expression of galactosylceramidase (GALC) missense variants in a GALC-knockout human oligodendrocytic cell line (MO3.13); lysate activity, mature lysosomal protein, secreted protein, intracellular precursor, psychosine; correlations with literature age-of-onset; NOT a WWOX system (a lysosomal hydrolase; no chaperone was applied in this paper)",
+     "genotype": "GALC missense variants (about 36 incl. p.I562T pseudodeficiency background)",
+     "endpoint": "GALC enzyme activity, lys-GALC and pre-GALC by western blot or ELISA, secreted GALC by ELISA, psychosine"
+    },
+    "qualifies": "entries[4]",
+    "qualifies_needle": "highly correlated with the clinical onset"
+   },
+   {
+    "proposition": "Text: for homozygous genotypes the activity was almost perfectly correlated with the age of symptom onset (Pearson r = 0.98).",
+    "snippet": "Strikingly, the activity associated with these variants was almost perfectly correlated with the age of symptom onset in KD patients (Fig. 6C, Pearson r = 0.98, p < 0.00001).",
+    "anchor": "Results, fourth subsection, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40449593_GALC2025_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "transient expression of galactosylceramidase (GALC) missense variants in a GALC-knockout human oligodendrocytic cell line (MO3.13); lysate activity, mature lysosomal protein, secreted protein, intracellular precursor, psychosine; correlations with literature age-of-onset; NOT a WWOX system (a lysosomal hydrolase; no chaperone was applied in this paper)",
+     "genotype": "GALC missense variants (about 36 incl. p.I562T pseudodeficiency background)",
+     "endpoint": "GALC enzyme activity, lys-GALC and pre-GALC by western blot or ELISA, secreted GALC by ELISA, psychosine"
+    }
+   },
+   {
+    "proposition": "Figure 6C and the table of Figure 6A as drawn: seven points; one point (p.G286D with the pseudodeficiency background, 7.1 percent, 504 months) lies far from the other six (all between 0 and 1.6 percent activity and between 5 and 162 months); the table shows p.G57S with the background at 1.3 percent activity and 162 months against p.L645R at 1.6 percent and 90 months and p.T529M with it at 0.5 percent and 10.5 months. The coefficient is carried by the single extreme point.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 6A and 6C (native raster, printed page 8)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID40449593_r2/native/PMC12256330.1_p8_img1_native.png",
+    "anchor": "Figure 6A and 6C (native raster, printed page 8)",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "transient expression of galactosylceramidase (GALC) missense variants in a GALC-knockout human oligodendrocytic cell line (MO3.13); lysate activity, mature lysosomal protein, secreted protein, intracellular precursor, psychosine; correlations with literature age-of-onset; NOT a WWOX system (a lysosomal hydrolase; no chaperone was applied in this paper)",
+     "genotype": "GALC missense variants (about 36 incl. p.I562T pseudodeficiency background)",
+     "endpoint": "GALC enzyme activity, lys-GALC and pre-GALC by western blot or ELISA, secreted GALC by ELISA, psychosine"
+    },
+    "qualifies": "entries[6]",
+    "qualifies_needle": "almost perfectly correlated"
+   },
+   {
+    "proposition": "Text: no significant correlation between secreted GALC and age of symptom onset, so reduced secretion is not a major factor contributing to clinical onset.",
+    "snippet": "Significant correlations between sec-GALC levels and age of symptom onset were not detected (Fig. 8, B and C). Therefore, we conclude that reduced GALC secretion is not a major factor contributing to clinical onset in KD.",
+    "anchor": "Results, secretion subsection",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40449593_GALC2025_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "transient expression of galactosylceramidase (GALC) missense variants in a GALC-knockout human oligodendrocytic cell line (MO3.13); lysate activity, mature lysosomal protein, secreted protein, intracellular precursor, psychosine; correlations with literature age-of-onset; NOT a WWOX system (a lysosomal hydrolase; no chaperone was applied in this paper)",
+     "genotype": "GALC missense variants (about 36 incl. p.I562T pseudodeficiency background)",
+     "endpoint": "GALC enzyme activity, lys-GALC and pre-GALC by western blot or ELISA, secreted GALC by ELISA, psychosine"
+    }
+   },
+   {
+    "proposition": "Figure 8B-C as drawn: compound heterozygous r = -0.17 (p = 0.6, 12 points) and homozygous r = -0.07 (p = 0.88, 7 points); p.I250T, p.S273F and p.P318A sit at 80 to 95 percent secreted protein with 0.1 to 1 percent activity and onset between 5 and 28 months. A non-significant correlation on 7 to 12 points is not evidence of no relation.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 8B-C (native raster, printed page 10)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID40449593_r2/native/PMC12256330.1_p10_img1_native.png",
+    "anchor": "Figure 8B-C (native raster, printed page 10)",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "transient expression of galactosylceramidase (GALC) missense variants in a GALC-knockout human oligodendrocytic cell line (MO3.13); lysate activity, mature lysosomal protein, secreted protein, intracellular precursor, psychosine; correlations with literature age-of-onset; NOT a WWOX system (a lysosomal hydrolase; no chaperone was applied in this paper)",
+     "genotype": "GALC missense variants (about 36 incl. p.I562T pseudodeficiency background)",
+     "endpoint": "GALC enzyme activity, lys-GALC and pre-GALC by western blot or ELISA, secreted GALC by ELISA, psychosine"
+    },
+    "qualifies": "entries[8]",
+    "qualifies_needle": "reduced GALC secretion is not a major factor"
+   },
+   {
+    "proposition": "Text: no correlation between intracellular pre-GALC levels and GALC activity, or between pre-GALC and secreted GALC.",
+    "snippet": "we did not detect any correlations between intracellular pre-GALC level and GALC activity (Fig. 11B, Pearson r = −0.02, n = 37), or between pre-GALC and sec-GALC levels (Fig. 11C, Pearson r = 0.01, n = 37).",
+    "anchor": "Results, activity-versus-secretion subsection",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40449593_GALC2025_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "transient expression of galactosylceramidase (GALC) missense variants in a GALC-knockout human oligodendrocytic cell line (MO3.13); lysate activity, mature lysosomal protein, secreted protein, intracellular precursor, psychosine; correlations with literature age-of-onset; NOT a WWOX system (a lysosomal hydrolase; no chaperone was applied in this paper)",
+     "genotype": "GALC missense variants (about 36 incl. p.I562T pseudodeficiency background)",
+     "endpoint": "GALC enzyme activity, lys-GALC and pre-GALC by western blot or ELISA, secreted GALC by ELISA, psychosine"
+    }
+   },
+   {
+    "proposition": "Figure 11A-C as drawn: activity against secreted protein r = 0.50 (a vertical band of variants with 0 to 4 percent activity and 0 to 120 percent secreted protein); activity against precursor r = -0.02 and secreted against precursor r = 0.01, with one variant (p.N295T) at about 610 percent precursor. Intracellular precursor level alone does not locate a variant on the activity axis in this panel.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 11A-C (native raster, printed page 12)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID40449593_r2/native/PMC12256330.1_p12_img2_native.png",
+    "anchor": "Figure 11A-C (native raster, printed page 12)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "transient expression of galactosylceramidase (GALC) missense variants in a GALC-knockout human oligodendrocytic cell line (MO3.13); lysate activity, mature lysosomal protein, secreted protein, intracellular precursor, psychosine; correlations with literature age-of-onset; NOT a WWOX system (a lysosomal hydrolase; no chaperone was applied in this paper)",
+     "genotype": "GALC missense variants (about 36 incl. p.I562T pseudodeficiency background)",
+     "endpoint": "GALC enzyme activity, lys-GALC and pre-GALC by western blot or ELISA, secreted GALC by ELISA, psychosine"
+    }
+   },
+   {
+    "proposition": "Text: a negative correlation between residual GALC activity and psychosine, which confirms that GALC function impaired by pathogenic variants increases psychosine accumulation.",
+    "snippet": "Affirmatively, there was a negative correlation between residual GALC activity and psychosine level among mock control, WT-GALC, p.I562T, and the 12 pathogenic MMVs we analyzed (Fig. 12A, Pearson r = −0.63, p < 0.01, n = 15).",
+    "anchor": "Results, psychosine subsection",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40449593_GALC2025_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "transient expression of galactosylceramidase (GALC) missense variants in a GALC-knockout human oligodendrocytic cell line (MO3.13); lysate activity, mature lysosomal protein, secreted protein, intracellular precursor, psychosine; correlations with literature age-of-onset; NOT a WWOX system (a lysosomal hydrolase; no chaperone was applied in this paper)",
+     "genotype": "GALC missense variants (about 36 incl. p.I562T pseudodeficiency background)",
+     "endpoint": "GALC enzyme activity, lys-GALC and pre-GALC by western blot or ELISA, secreted GALC by ELISA, psychosine"
+    }
+   },
+   {
+    "proposition": "Figure 12A as drawn (activity on a logarithmic axis): psychosine falls from about 2100 percent of wild type at zero-to-0.1 percent activity to about 100 at wild type; between 0.4 and 9 percent activity the psychosine ranges from about 550 to 1700 percent. The coefficient is about -0.63 on 15 points.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 12A (native raster, printed page 14)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID40449593_r2/native/PMC12256330.1_p14_img1_native.png",
+    "anchor": "Figure 12A (native raster, printed page 14)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "transient expression of galactosylceramidase (GALC) missense variants in a GALC-knockout human oligodendrocytic cell line (MO3.13); lysate activity, mature lysosomal protein, secreted protein, intracellular precursor, psychosine; correlations with literature age-of-onset; NOT a WWOX system (a lysosomal hydrolase; no chaperone was applied in this paper)",
+     "genotype": "GALC missense variants (about 36 incl. p.I562T pseudodeficiency background)",
+     "endpoint": "GALC enzyme activity, lys-GALC and pre-GALC by western blot or ELISA, secreted GALC by ELISA, psychosine"
+    }
+   },
+   {
+    "proposition": "Text: psychosine levels did not correlate with the age of onset in compound heterozygous or homozygous genotypes (Fig. 12C-D).",
+    "snippet": "However, the cellular psychosine levels did not correlate to the age of symptom onset in patients with these MMV genotypes (Fig. 12, C and D).",
+    "anchor": "Discussion, psychosine paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40449593_GALC2025_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "transient expression of galactosylceramidase (GALC) missense variants in a GALC-knockout human oligodendrocytic cell line (MO3.13); lysate activity, mature lysosomal protein, secreted protein, intracellular precursor, psychosine; correlations with literature age-of-onset; NOT a WWOX system (a lysosomal hydrolase; no chaperone was applied in this paper)",
+     "genotype": "GALC missense variants (about 36 incl. p.I562T pseudodeficiency background)",
+     "endpoint": "GALC enzyme activity, lys-GALC and pre-GALC by western blot or ELISA, secreted GALC by ELISA, psychosine"
+    }
+   },
+   {
+    "proposition": "Figure 12C-D as drawn: r = 0.23 (p = 0.11, 12 points) and r = 0.50 (p = 0.25, 7 points) with the sign opposite to the activity-based relation. The authors attribute the lack of correlation to insufficient penetrance of transient transfection and to uncertain cross-correction; the same cell data give an activity-versus-onset correlation of 0.92 to 0.99 in Figure 12B.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 12B-D (native raster, printed page 14)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID40449593_r2/native/PMC12256330.1_p14_img1_native.png",
+    "anchor": "Figure 12B-D (native raster, printed page 14)",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "transient expression of galactosylceramidase (GALC) missense variants in a GALC-knockout human oligodendrocytic cell line (MO3.13); lysate activity, mature lysosomal protein, secreted protein, intracellular precursor, psychosine; correlations with literature age-of-onset; NOT a WWOX system (a lysosomal hydrolase; no chaperone was applied in this paper)",
+     "genotype": "GALC missense variants (about 36 incl. p.I562T pseudodeficiency background)",
+     "endpoint": "GALC enzyme activity, lys-GALC and pre-GALC by western blot or ELISA, secreted GALC by ELISA, psychosine"
+    },
+    "qualifies": "entries[14]",
+    "qualifies_needle": "did not correlate to the age of symptom onset"
+   },
+   {
+    "proposition": "Authors' explanation: the lack of psychosine-onset correlation is likely due to insufficient penetrance of GALC expression in cell populations by transient transfection, and the efficiency of cross-correction by secreted enzyme may be low or absent in variants that impair secretion.",
+    "snippet": "The lack of clinical correlation with psychosine levels in the cell models is likely due to an insufficient penetrance of GALC expression in cell populations by transient transfection.",
+    "anchor": "Discussion, psychosine paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40449593_GALC2025_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "transient expression of galactosylceramidase (GALC) missense variants in a GALC-knockout human oligodendrocytic cell line (MO3.13); lysate activity, mature lysosomal protein, secreted protein, intracellular precursor, psychosine; correlations with literature age-of-onset; NOT a WWOX system (a lysosomal hydrolase; no chaperone was applied in this paper)",
+     "genotype": "GALC missense variants (about 36 incl. p.I562T pseudodeficiency background)",
+     "endpoint": "GALC enzyme activity, lys-GALC and pre-GALC by western blot or ELISA, secreted GALC by ELISA, psychosine"
+    }
+   },
+   {
+    "proposition": "Text: the p.I562T background synergistically reduces activity of six of ten covariants, and reductions of activity and of secretion are highly correlated (r = 0.92, n = 8).",
+    "snippet": "Interestingly, the p.I562T covariants that resulted in reduced GALC activity, also caused a significant reduction in GALC secretion (Fig. 10B), and the two were highly correlated (Fig. 10D, Pearson r = 0.92, p < 0.001, n = 8).",
+    "anchor": "Results, p.I562T subsection",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40449593_GALC2025_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "transient expression of galactosylceramidase (GALC) missense variants in a GALC-knockout human oligodendrocytic cell line (MO3.13); lysate activity, mature lysosomal protein, secreted protein, intracellular precursor, psychosine; correlations with literature age-of-onset; NOT a WWOX system (a lysosomal hydrolase; no chaperone was applied in this paper)",
+     "genotype": "GALC missense variants (about 36 incl. p.I562T pseudodeficiency background)",
+     "endpoint": "GALC enzyme activity, lys-GALC and pre-GALC by western blot or ELISA, secreted GALC by ELISA, psychosine"
+    }
+   },
+   {
+    "proposition": "Figure 10D-E as drawn: reduced secreted protein plotted against reduced activity for eight covariants, all points between about 60 and 100 percent reductions with five of eight at 100 percent on the vertical axis; Figure 10E: five points, two at about 55 percent and three at 100 percent reduction. The panels show clustering at the ceiling (a reduction cannot exceed 100 percent), which limits what a coefficient on these points can show.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 10D-E (native raster, printed page 12)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID40449593_r2/native/PMC12256330.1_p12_img1_native.png",
+    "anchor": "Figure 10D-E (native raster, printed page 12)",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "transient expression of galactosylceramidase (GALC) missense variants in a GALC-knockout human oligodendrocytic cell line (MO3.13); lysate activity, mature lysosomal protein, secreted protein, intracellular precursor, psychosine; correlations with literature age-of-onset; NOT a WWOX system (a lysosomal hydrolase; no chaperone was applied in this paper)",
+     "genotype": "GALC missense variants (about 36 incl. p.I562T pseudodeficiency background)",
+     "endpoint": "GALC enzyme activity, lys-GALC and pre-GALC by western blot or ELISA, secreted GALC by ELISA, psychosine"
+    },
+    "qualifies": "entries[17]",
+    "qualifies_needle": "highly correlated (Fig. 10D"
+   },
+   {
+    "proposition": "Text: the authors say these variants might selectively disrupt GALC trafficking to the lysosome, but not to the extracellular space.",
+    "snippet": "Taken together, our data suggest that these MMVs might selectively disrupt GALC trafficking to lysosome, but not to the extracellular space.",
+    "anchor": "Results, secretion subsection",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40449593_GALC2025_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "transient expression of galactosylceramidase (GALC) missense variants in a GALC-knockout human oligodendrocytic cell line (MO3.13); lysate activity, mature lysosomal protein, secreted protein, intracellular precursor, psychosine; correlations with literature age-of-onset; NOT a WWOX system (a lysosomal hydrolase; no chaperone was applied in this paper)",
+     "genotype": "GALC missense variants (about 36 incl. p.I562T pseudodeficiency background)",
+     "endpoint": "GALC enzyme activity, lys-GALC and pre-GALC by western blot or ELISA, secreted GALC by ELISA, psychosine"
+    }
+   },
+   {
+    "proposition": "Figure 13A as drawn: variants 1 to 5 (p.G111S, p.E130K, p.I250T, p.S273F, p.D544N) show activity 0.1 to 0.9 percent with secreted protein not significantly different from wild type; variants 6 to 12 show 21 to 79 percent secreted protein; variants 13 to 26 show 12 percent or less and 0 for twelve of them. 13 variants have 0 to 4 percent secreted protein (Figure 13B).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 13A-B (native raster, printed page 15)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID40449593_r2/native/PMC12256330.1_p15_img1_native.png",
+    "anchor": "Figure 13A-B (native raster, printed page 15)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "transient expression of galactosylceramidase (GALC) missense variants in a GALC-knockout human oligodendrocytic cell line (MO3.13); lysate activity, mature lysosomal protein, secreted protein, intracellular precursor, psychosine; correlations with literature age-of-onset; NOT a WWOX system (a lysosomal hydrolase; no chaperone was applied in this paper)",
+     "genotype": "GALC missense variants (about 36 incl. p.I562T pseudodeficiency background)",
+     "endpoint": "GALC enzyme activity, lys-GALC and pre-GALC by western blot or ELISA, secreted GALC by ELISA, psychosine"
+    }
+   },
+   {
+    "proposition": "Methods: each variant (n = 4) was compared with wild type (n = 24) by an unpaired two-tailed t test.",
+    "snippet": "Our current cell model and assays would be an ideal in vitro platform to screen and develop therapeutics, such as PCs for KD.",
+    "anchor": "Discussion, last-but-one subsection",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40449593_GALC2025_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "transient expression of galactosylceramidase (GALC) missense variants in a GALC-knockout human oligodendrocytic cell line (MO3.13); lysate activity, mature lysosomal protein, secreted protein, intracellular precursor, psychosine; correlations with literature age-of-onset; NOT a WWOX system (a lysosomal hydrolase; no chaperone was applied in this paper)",
+     "genotype": "GALC missense variants (about 36 incl. p.I562T pseudodeficiency background)",
+     "endpoint": "GALC enzyme activity, lys-GALC and pre-GALC by western blot or ELISA, secreted GALC by ELISA, psychosine"
+    }
+   },
+   {
+    "proposition": "Methods: the unpaired t-test compares each variant (n = 4) with the wild type (n = 24); two-tailed, 95 percent confidence.",
+    "snippet": "Individual MMV (n = 4) was compared to WT (n = 24) by an unpaired t test (two-tailed, 95% confidence interval",
+    "anchor": "Figure 5 legend",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID40449593_GALC2025_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "transient expression of galactosylceramidase (GALC) missense variants in a GALC-knockout human oligodendrocytic cell line (MO3.13); lysate activity, mature lysosomal protein, secreted protein, intracellular precursor, psychosine; correlations with literature age-of-onset; NOT a WWOX system (a lysosomal hydrolase; no chaperone was applied in this paper)",
+     "genotype": "GALC missense variants (about 36 incl. p.I562T pseudodeficiency background)",
+     "endpoint": "GALC enzyme activity, lys-GALC and pre-GALC by western blot or ELISA, secreted GALC by ELISA, psychosine"
+    }
+   },
+   {
+    "proposition": "Figure 1 (schematic of secretory routes and the GALC domain map with the variants and catalytic residues), Figure 2 (GALC-KO design with PCR, western blot, activity 0.464 versus 0.025 and psychosine 0.013 versus 0.277), Figure 3 and Figure 4 (proteome of knockout versus parent, 366 differentially expressed proteins) were opened; they carry the model validation and no variant-level result used above.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figures 1 to 4 (native rasters, printed pages 2 to 5)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID40449593_r2/native/PMC12256330.1_p2_img1_native.png",
+    "anchor": "Figures 1 to 4 (native rasters, printed pages 2 to 5)",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "transient expression of galactosylceramidase (GALC) missense variants in a GALC-knockout human oligodendrocytic cell line (MO3.13); lysate activity, mature lysosomal protein, secreted protein, intracellular precursor, psychosine; correlations with literature age-of-onset; NOT a WWOX system (a lysosomal hydrolase; no chaperone was applied in this paper)",
+     "genotype": "GALC missense variants (about 36 incl. p.I562T pseudodeficiency background)",
+     "endpoint": "GALC enzyme activity, lys-GALC and pre-GALC by western blot or ELISA, secreted GALC by ELISA, psychosine"
+    }
+   }
+  ]
+ }
+}

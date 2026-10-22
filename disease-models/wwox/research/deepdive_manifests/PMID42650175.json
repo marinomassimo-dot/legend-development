@@ -337,7 +337,7 @@
     }
    },
    {
-    "proposition": "The rescue is in plasmid co-expression models; the authors say gene augmentation rather than gene therapy because in vivo viral delivery was not performed, and list the lack of an in-vivo knock-in model and the few residues studied as limits.",
+    "proposition": "The authors describe the combined approach throughout as gene augmentation rather than gene therapy because in vivo viral delivery in animals was not performed in this study.",
     "snippet": "The combined approach is described throughout as gene augmentation rather than gene therapy because in vivo viral delivery in animals was not performed in this study.",
     "surface": "body",
     "artifact": "files/fulltext/PMID42650175_Delahanty2026_PMC_r2.xml",
@@ -347,6 +347,17 @@
      "system": "HEK293T cells and human iPSC-derived astrocytes and cortical neurons expressing rat GAT-1-EYFP variants (SLC6A1 p.Ala305Val); membrane transporter, ER trafficking (NOT WWOX evidence)",
      "genotype": "de novo SLC6A1 missense, heterozygous modelled by 1:1 cDNA co-expression",
      "comparator": "wild-type GAT-1; Ala305Thr and Ser295Leu comparators"
+    },
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42650175.json",
+     "entry": 3,
+     "what_changed": "Strength-scan flag resolved by narrowing the proposition to its quote: the words 'rescue', 'plasmid co-expression models' and the list of limits (no in-vivo knock-in model, few residues) were not in the quote and are removed. Author self-correction; blind audit owed.",
+     "audit": {
+      "auditors": 0,
+      "verdicts": [
+       "CORRECTED"
+      ]
+     }
     }
    },
    {
@@ -376,8 +387,8 @@
     }
    },
    {
-    "proposition": "HELD-resume question (a): the uptake rescue is reported as a ratio to wild type from batches of cells, N = 5 to 6 batches per condition, with each batch plotted as a dot.",
-    "snippet": "In A, N = 6 batches of cells; in B, N = 5",
+    "proposition": "Figure 5 legend: panel A uses N = 6 batches of cells and panel B uses N = 5-6 batches of new cells.",
+    "snippet": "In A, N = 6 batches of cells; in B, N = 5–6 batches of new cells.",
     "anchor": "Figure 5 legend",
     "surface": "body",
     "artifact": "files/fulltext/PMID42650175_Delahanty2026_PMC_r2.xml",
@@ -386,6 +397,17 @@
      "system": "GAT-1 (SLC6A1) variants A305V, A305T, A288V, S295L as YFP-tagged constructs in HEK293T cells and human iPSC-derived astrocytes and neurons, heterozygous-like co-expression with wild-type cDNA, phenylbutyrate, bile-acid chaperone and salubrinal; NOT a WWOX system",
      "genotype": "SLC6A1 A305V (novel, uncertain significance), A305T, A288V, S295L",
      "endpoint": "[3H]GABA uptake relative to wild type, ER overlap, total YFP fluorescence, band intensities"
+    },
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42650175.json",
+     "entry": 6,
+     "what_changed": "Strength-scan flag resolved by narrowing the proposition to the legend sentence and widening the quote to its full wording; the words 'rescue', 'ratio to wild type' and 'each batch plotted as a dot' were not in the quote and are removed. Author self-correction; blind audit owed.",
+     "audit": {
+      "auditors": 0,
+      "verdicts": [
+       "CORRECTED"
+      ]
+     }
     }
    },
    {
@@ -417,7 +439,7 @@
     }
    },
    {
-    "proposition": "Figure 6A-C read (file g006): extra wild-type cDNA raises A305V uptake from about 0.33 to about 0.7, 1.1 and 1.4 of wild type (0.5 microgram wild-type control as reference); with equal mutant and wild-type cDNA the phenylbutyrate series reads about 0.65, 0.81, 0.97, 1.18 (A305V) and 0.49, 0.65, 0.83, 1.04 (S295L); no arm shows wild-type cDNA plus the same phenylbutyrate without mutant, although phenylbutyrate raises wild-type protein in the other GAT-1 and GABRA1 papers of this lot, so a wild-type-dosage effect cannot be separated from rescue of the mutant.",
+    "proposition": "Figure 6A-C read (file g006): extra wild-type cDNA raises A305V uptake from about 0.33 to about 0.7, 1.1 and 1.4 of wild type (0.5 microgram wild-type control as reference); with equal mutant and wild-type cDNA the phenylbutyrate series reads about 0.65, 0.81, 0.97, 1.18 (A305V) and 0.49, 0.65, 0.83, 1.04 (S295L); no arm shows wild-type cDNA plus the same phenylbutyrate without mutant, although phenylbutyrate raises wild-type protein in the other GAT-1 and GABRA1 papers of this lot, so an effect of wild-type dosage cannot be separated from an effect on the mutant protein.",
     "snippet": "Augmentation of the wildtype GAT-1 cDNA dose-dependently increased the GABA uptake",
     "anchor": "Figure 6A-C (augmentation dose and phenylbutyrate series)",
     "surface": "figure",
@@ -429,7 +451,18 @@
      "endpoint": "[3H]GABA uptake relative to wild type, ER overlap, total YFP fluorescence, band intensities"
     },
     "qualifies": "entries[8]",
-    "qualifies_needle": "This suggests that the combined approach"
+    "qualifies_needle": "This suggests that the combined approach",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42650175.json",
+     "entry": 9,
+     "what_changed": "Strength-scan flag resolved: the word 'rescue' was the reader's own inference and not in the quote; the sentence now states the confound without the word. Author self-correction; blind audit owed.",
+     "audit": {
+      "auditors": 0,
+      "verdicts": [
+       "CORRECTED"
+      ]
+     }
+    }
    },
    {
     "proposition": "Question (c): protein and function are measured on the same variant in the phenylbutyrate arm only: ER overlap falls and total YFP fluorescence returns to about wild type with the phenylbutyrate class, but the augmentation arm has no protein read-out.",

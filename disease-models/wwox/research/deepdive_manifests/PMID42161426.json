@@ -1,0 +1,402 @@
+{
+ "schema_version": 2,
+ "pmid": "42161426",
+ "doi": "10.1136/openhrt-2026-004016",
+ "receipt": "FTR-20261022-42161426-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-a_r1d_20261022.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not needed: PMC efetch XML, the PDF and supplements were returned by pmc_bucket_fetch.py."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Primary-evidence read of a NOT WWOX EVIDENCE paper under the Scientist brief; the analysis note is the dossier."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No consolidated baseline claim is narrowed, reversed or removed; a blind audit of the text-versus-panel relations is declared OWED."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for a candidate; class level only."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "counts_measured": "Not run (single-centre clinical-genetics group, ambiguous initials).",
+  "research_type": "descriptive_clinical",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "A cardiology group; the cell experiment is a small validation inside a case report. NOT WWOX EVIDENCE."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "GLA AND migalastat AND missense",
+    "count": 15,
+    "source": "PubMed ESearch count 2026-10-22"
+   },
+   {
+    "query": "GLA AND WWOX",
+    "count": 1,
+    "source": "PubMed ESearch count 2026-10-22"
+   }
+  ],
+  "note": "WWOX does not occur in the article; counts are title/abstract-level and license 'no paper is indexed', never 'never measured' (D-37)."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 28,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "<ref> elements counted in the JATS: 28; none WWOX-direct.",
+  "resolved": [],
+  "queued": [],
+  "note": "No WWOX-direct reference."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "registry_records.py get --pmid 42161426 --hops 0 and paper_packet.py packet (before the read)",
+  "hits": 0,
+  "finding": "NO RECORD MATCHED before this reading (a statement about that query, not about what the laboratory knows)."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-22",
+  "route": "dependency_integrity.py screen --manifest-block; PubMed efetch CommentsCorrections",
+  "result": "PubMed efetch 2026-10-22: no CommentsCorrections entry; dependency screen run (see block).",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 28,
+   "references_screened": 26,
+   "references_with_doi": 26,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 1,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 2
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42161426_GLAM76K2026_PMC_r2.xml",
+   "sha256": "26641dd357562af2e8da7cd97831fed95a8394e835b7ce712a46cc3e7362843d",
+   "kind": "article_text",
+   "note": "PMC efetch JATS for PMC13202032, retrieved with pmc_bucket_fetch.py.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-22",
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC13202032&rettype=xml",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none",
+    "result_sha256": "26641dd357562af2e8da7cd97831fed95a8394e835b7ce712a46cc3e7362843d"
+   }
+  },
+  {
+   "path": "files/supplement/PMID42161426_r2/PMC13202032.1.pdf",
+   "sha256": "6a1efe132742bb4d3b0e175041e06d9e27ad8c04a05cff592bb268b368621120",
+   "kind": "article_binary",
+   "note": "Article PDF from the PMC open-data bucket; figure rasters extracted from it at native size.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-22",
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13202032.1/PMC13202032.1.pdf",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "result_sha256": "6a1efe132742bb4d3b0e175041e06d9e27ad8c04a05cff592bb268b368621120"
+   }
+  },
+  {
+   "path": "files/supplement/PMID42161426_r2/openhrt-13-1-s003.docx",
+   "sha256": "c74064061a1049f192d97ada6a63377f11cb486bdcce15ab5d8d52d04d26e480",
+   "kind": "supplement_binary",
+   "note": "Supplementary legends docx (Supplemental Figures S1 and S2 legends); text read.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-22",
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC13202032.1/openhrt-13-1-s003.docx",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "result_sha256": "c74064061a1049f192d97ada6a63377f11cb486bdcce15ab5d8d52d04d26e480"
+   }
+  },
+  {
+   "path": "files/figures/PMID42161426_r2/native/PMC13202032.1_p4_img1_native.png",
+   "sha256": "bae14cd8373d1a4c2a38b6948b7c02836dc817b9b53a6d7efb31eb604a95a940",
+   "kind": "figure",
+   "note": "Figure raster embedded on printed page 4 of the article PDF, extracted at native size (about 2400 pixels wide) and opened downscaled.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID42161426_r2/PMC13202032.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Pixmap(doc, xref).save() of the page's image",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/figures/PMID42161426_r2/native/PMC13202032.1_p5_img1_native.png",
+   "sha256": "7f604a077247ba10052b3fc4c7709ffebe78748d95c6e0379ec26ed9d9bfbe1d",
+   "kind": "figure",
+   "note": "Figure raster embedded on printed page 5 of the article PDF, extracted at native size (about 2400 pixels wide) and opened downscaled.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID42161426_r2/PMC13202032.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Pixmap(doc, xref).save() of the page's image",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/figures/PMID42161426_r2/native/PMC13202032.1_p6_img1_native.png",
+   "sha256": "ca86b3fefb6d5ce431417ddc179e0960219a4ce5145e37089b49a8b4d280da98",
+   "kind": "figure",
+   "note": "Figure raster embedded on printed page 6 of the article PDF, extracted at native size (about 2400 pixels wide) and opened downscaled.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID42161426_r2/PMC13202032.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Pixmap(doc, xref).save() of the page's image",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/figures/PMID42161426_r2/native/PMC13202032.1_p8_img1_native.png",
+   "sha256": "dbbf8c994c60f9f0d89d57bfb9e057fb260abcc0b1659ca5fa5d578e0876879d",
+   "kind": "figure",
+   "note": "Figure raster embedded on printed page 8 of the article PDF, extracted at native size (about 2400 pixels wide) and opened downscaled.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID42161426_r2/PMC13202032.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Pixmap(doc, xref).save() of the page's image",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/figures/PMID42161426_r2/openhrt-13-1-s002.jpg",
+   "sha256": "df56a9df45b4c0c8bf1b2c74604d3d9ff353bd892e6b8be9a68972b2e77054c0",
+   "kind": "figure",
+   "note": "Supplementary Figure S2 (additional immunohistochemistry), a file of the Europe PMC bundle, opened.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-22",
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13202032/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "europepmc_supplementaryFiles_bundle (file as stored on disk; route recorded 2026-10-22)",
+    "user_agent_policy": "none",
+    "result_sha256": "df56a9df45b4c0c8bf1b2c74604d3d9ff353bd892e6b8be9a68972b2e77054c0"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC efetch JATS for PMC13202032 retrieved 2026-10-22, 87,344 bytes; the whole body is indexed locally for exact-text checks.",
+  "abstract_anchoring_waived": "Stated per entry; no entry is anchored to the abstract.",
+  "note": "QUESTION_DRIVEN (protein quantity, activity and chaperone response in one missense variant). Class-level substitute, NOT WWOX EVIDENCE. Read: abstract, introduction, methods headings, results, discussion, all four figures (native rasters extracted from the PDF; Figures 1 to 3 as a contact sheet), Tables 1 to 3 as text, the supplementary figure S2 jpg and the supplementary legend docx. No dose or schedule is carried; the chaperone concentration of the paper is deliberately not reproduced.",
+  "entries": [
+   {
+    "proposition": "NOT WWOX EVIDENCE. Text: mutant GLA showed a slight reduction in protein that was not statistically significant, and no obvious difference in cellular localisation from wild type.",
+    "snippet": "Although GLA-MU demonstrated a slight reduction, this was not statistically significant (figure 4C).",
+    "anchor": "Results, functional validation, paragraph 2",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42161426_GLAM76K2026_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "AC16 human cardiomyocyte line stably overexpressing a GFP-tagged wild-type or p.Met76Lys alpha-galactosidase A by lentivirus, with and without a pharmacological chaperone of the enzyme; plus clinical, biopsy and biochemical data of one family; NOT a WWOX system (a lysosomal hydrolase with an approved active-site chaperone)",
+     "genotype": "GLA c.227T>A p.Met76Lys (variant of uncertain significance) against wild type and empty vector",
+     "endpoint": "GLA mRNA, GLA protein by western blot, localisation by GFP fluorescence, alpha-galactosidase A enzyme activity in lysates"
+    }
+   },
+   {
+    "proposition": "Figure 4A-C as drawn: GLA mRNA about 0.25 (empty vector), about 0.92 (mutant) and about 0.97 (wild type), the last two ns; GLA protein about 0.6, about 1.8 and about 2.1, mutant against wild type ns, six points per bar; Figure 4D-E: GFP-positive cells of similar density and cytoplasmic fluorescence for the mutant and wild type. The GFP is a fusion reporter on the enzyme according to Supplementary Figure S1's legend, so the localisation is that of a fusion protein.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4A-E (native raster, printed page 8)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42161426_r2/native/PMC13202032.1_p8_img1_native.png",
+    "anchor": "Figure 4A-E (native raster, printed page 8)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "AC16 human cardiomyocyte line stably overexpressing a GFP-tagged wild-type or p.Met76Lys alpha-galactosidase A by lentivirus, with and without a pharmacological chaperone of the enzyme; plus clinical, biopsy and biochemical data of one family; NOT a WWOX system (a lysosomal hydrolase with an approved active-site chaperone)",
+     "genotype": "GLA c.227T>A p.Met76Lys (variant of uncertain significance) against wild type and empty vector",
+     "endpoint": "GLA mRNA, GLA protein by western blot, localisation by GFP fluorescence, alpha-galactosidase A enzyme activity in lysates"
+    }
+   },
+   {
+    "proposition": "Text: enzyme activity in mutant cells was markedly reduced compared with wild type, independent of protein expression, so the variant potentially impairs enzyme function rather than protein quantity.",
+    "snippet": "Importantly, α-Gal A enzymic activity in GLA-MU cells was markedly reduced compared with GLA-WT (figure 4F), and this reduction is independent of protein expression levels.",
+    "anchor": "Results, functional validation, paragraph 3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42161426_GLAM76K2026_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "AC16 human cardiomyocyte line stably overexpressing a GFP-tagged wild-type or p.Met76Lys alpha-galactosidase A by lentivirus, with and without a pharmacological chaperone of the enzyme; plus clinical, biopsy and biochemical data of one family; NOT a WWOX system (a lysosomal hydrolase with an approved active-site chaperone)",
+     "genotype": "GLA c.227T>A p.Met76Lys (variant of uncertain significance) against wild type and empty vector",
+     "endpoint": "GLA mRNA, GLA protein by western blot, localisation by GFP fluorescence, alpha-galactosidase A enzyme activity in lysates"
+    }
+   },
+   {
+    "proposition": "Figure 4F as drawn (five points per bar): relative activity about 0.35 for empty vector, about 0.65 for the mutant (ns against empty vector) and about 1.15 for wild type (four stars against both). The mutant's activity is not distinguishable from that of cells carrying no GLA construct; the mutant protein is present at about 1.8 times the empty-vector level (Figure 4C, three stars) with an activity increment over the empty-vector level that is not significant. INFERENZA, reader's: the panel is compatible with a protein that is present and contributes little or no activity above the cells' own background.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4F (native raster, printed page 8)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42161426_r2/native/PMC13202032.1_p8_img1_native.png",
+    "anchor": "Figure 4F (native raster, printed page 8)",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "AC16 human cardiomyocyte line stably overexpressing a GFP-tagged wild-type or p.Met76Lys alpha-galactosidase A by lentivirus, with and without a pharmacological chaperone of the enzyme; plus clinical, biopsy and biochemical data of one family; NOT a WWOX system (a lysosomal hydrolase with an approved active-site chaperone)",
+     "genotype": "GLA c.227T>A p.Met76Lys (variant of uncertain significance) against wild type and empty vector",
+     "endpoint": "GLA mRNA, GLA protein by western blot, localisation by GFP fluorescence, alpha-galactosidase A enzyme activity in lysates"
+    },
+    "qualifies": "entries[2]",
+    "qualifies_needle": "markedly reduced compared with GLA"
+   },
+   {
+    "proposition": "Text: before treatment the mutant to wild-type activity ratio was 37.36 percent; after the chaperone it rose to 45.7 percent, an absolute increase of 8.36 percentage points and a 1.36-fold change.",
+    "snippet": "This increase was more pronounced in GLA-MU and reached statistical significance (p<0.05). Before drug treatment the ratio of GLA enzymatic activity in MU to WT was 37.36%. After DGJ treatment this ratio increased to 45.7%, representing an absolute increase of 8.36 percentage points and a 1.36-fold change relative to baseline.",
+    "anchor": "Results, chaperone subsection",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42161426_GLAM76K2026_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "AC16 human cardiomyocyte line stably overexpressing a GFP-tagged wild-type or p.Met76Lys alpha-galactosidase A by lentivirus, with and without a pharmacological chaperone of the enzyme; plus clinical, biopsy and biochemical data of one family; NOT a WWOX system (a lysosomal hydrolase with an approved active-site chaperone)",
+     "genotype": "GLA c.227T>A p.Met76Lys (variant of uncertain significance) against wild type and empty vector",
+     "endpoint": "GLA mRNA, GLA protein by western blot, localisation by GFP fluorescence, alpha-galactosidase A enzyme activity in lysates"
+    }
+   },
+   {
+    "proposition": "Figure 4G as drawn (five points per bar): wild type about 0.78, wild type with the chaperone about 0.86 (ns); mutant about 0.29, mutant with the chaperone about 0.39 (one star). The absolute activity gain of the mutant is about 0.10 on a scale where wild type is 0.78; the figure has no empty-vector arm, so the gain cannot be separated from a chaperone effect on the host cells' own enzyme (about 0.35 against 1.15 in Figure 4F, i.e. about 30 percent of wild-type level in untransduced-background terms). The threshold figures are those of a published cell-based amenability assay quoted by the authors; that assay was not run here. INFERENZA, reader's.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4G (native raster, printed page 8)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42161426_r2/native/PMC13202032.1_p8_img1_native.png",
+    "anchor": "Figure 4G (native raster, printed page 8)",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "AC16 human cardiomyocyte line stably overexpressing a GFP-tagged wild-type or p.Met76Lys alpha-galactosidase A by lentivirus, with and without a pharmacological chaperone of the enzyme; plus clinical, biopsy and biochemical data of one family; NOT a WWOX system (a lysosomal hydrolase with an approved active-site chaperone)",
+     "genotype": "GLA c.227T>A p.Met76Lys (variant of uncertain significance) against wild type and empty vector",
+     "endpoint": "GLA mRNA, GLA protein by western blot, localisation by GFP fluorescence, alpha-galactosidase A enzyme activity in lysates"
+    },
+    "qualifies": "entries[4]",
+    "qualifies_needle": "reached statistical significance"
+   },
+   {
+    "proposition": "Discussion: the authors say that the observation that treatment restored activity suggests the mutant enzyme retains conformational plasticity so that it can be stabilised by the chaperone.",
+    "snippet": "Importantly, in vitro treatment with DGJ restored α-Gal A enzymatic activity.",
+    "anchor": "Discussion, paragraph 6",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42161426_GLAM76K2026_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "AC16 human cardiomyocyte line stably overexpressing a GFP-tagged wild-type or p.Met76Lys alpha-galactosidase A by lentivirus, with and without a pharmacological chaperone of the enzyme; plus clinical, biopsy and biochemical data of one family; NOT a WWOX system (a lysosomal hydrolase with an approved active-site chaperone)",
+     "genotype": "GLA c.227T>A p.Met76Lys (variant of uncertain significance) against wild type and empty vector",
+     "endpoint": "GLA mRNA, GLA protein by western blot, localisation by GFP fluorescence, alpha-galactosidase A enzyme activity in lysates"
+    }
+   },
+   {
+    "proposition": "Figure 4G as drawn: the mutant with the chaperone reaches about 0.39, about 45 percent of untreated wild type (0.78) and about 45 percent of treated wild type (0.86); 'restored' is a partial gain of about 8 percentage points of wild-type activity.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4G (native raster, printed page 8)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42161426_r2/native/PMC13202032.1_p8_img1_native.png",
+    "anchor": "Figure 4G (native raster, printed page 8)",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "AC16 human cardiomyocyte line stably overexpressing a GFP-tagged wild-type or p.Met76Lys alpha-galactosidase A by lentivirus, with and without a pharmacological chaperone of the enzyme; plus clinical, biopsy and biochemical data of one family; NOT a WWOX system (a lysosomal hydrolase with an approved active-site chaperone)",
+     "genotype": "GLA c.227T>A p.Met76Lys (variant of uncertain significance) against wild type and empty vector",
+     "endpoint": "GLA mRNA, GLA protein by western blot, localisation by GFP fluorescence, alpha-galactosidase A enzyme activity in lysates"
+    },
+    "qualifies": "entries[6]",
+    "qualifies_needle": "restored"
+   },
+   {
+    "proposition": "Text: the heterozygous proband showed alpha-galactosidase A activity in a low-normal range together with an elevated plasma lyso-Gb3.",
+    "snippet": "The proband exhibited α-Gal A activity in a low-normal range (3.56; reference range 2.20–17.65 µmol/L/hour), together with an elevated plasma lyso-Gb3 (11.84; reference <1.11 µg/L).",
+    "anchor": "Results, genetic and biochemical testing",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42161426_GLAM76K2026_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "AC16 human cardiomyocyte line stably overexpressing a GFP-tagged wild-type or p.Met76Lys alpha-galactosidase A by lentivirus, with and without a pharmacological chaperone of the enzyme; plus clinical, biopsy and biochemical data of one family; NOT a WWOX system (a lysosomal hydrolase with an approved active-site chaperone)",
+     "genotype": "GLA c.227T>A p.Met76Lys (variant of uncertain significance) against wild type and empty vector",
+     "endpoint": "GLA mRNA, GLA protein by western blot, localisation by GFP fluorescence, alpha-galactosidase A enzyme activity in lysates"
+    }
+   },
+   {
+    "proposition": "Methods caveat in the table note: units differ between the table's column heads and its note (micromole per litre per hour against nanomole per millilitre per hour, microgram per litre against nanogram per millilitre).",
+    "snippet": "Note: α-Gal A activity assessment of dried blood spots (nmol/mL/hour; reference range 2.20–17.65) and plasma lyso-Gb3 (ng/mL; reference <1.11) are shown",
+    "anchor": "Table 2 note",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42161426_GLAM76K2026_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "AC16 human cardiomyocyte line stably overexpressing a GFP-tagged wild-type or p.Met76Lys alpha-galactosidase A by lentivirus, with and without a pharmacological chaperone of the enzyme; plus clinical, biopsy and biochemical data of one family; NOT a WWOX system (a lysosomal hydrolase with an approved active-site chaperone)",
+     "genotype": "GLA c.227T>A p.Met76Lys (variant of uncertain significance) against wild type and empty vector",
+     "endpoint": "GLA mRNA, GLA protein by western blot, localisation by GFP fluorescence, alpha-galactosidase A enzyme activity in lysates"
+    }
+   },
+   {
+    "proposition": "Authors' limitations: the drug is not approved in the authors' country and its clinical efficacy and safety require confirmation; electron microscopy and Gb3 staining were unavailable.",
+    "snippet": "Additionally, although in vitro findings suggested potential responsiveness of the GLA variant to migalastat, the drug is not yet approved in China, and its clinical efficacy and safety require confirmation through longitudinal follow-up.",
+    "anchor": "Discussion, limitations paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42161426_GLAM76K2026_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "AC16 human cardiomyocyte line stably overexpressing a GFP-tagged wild-type or p.Met76Lys alpha-galactosidase A by lentivirus, with and without a pharmacological chaperone of the enzyme; plus clinical, biopsy and biochemical data of one family; NOT a WWOX system (a lysosomal hydrolase with an approved active-site chaperone)",
+     "genotype": "GLA c.227T>A p.Met76Lys (variant of uncertain significance) against wild type and empty vector",
+     "endpoint": "GLA mRNA, GLA protein by western blot, localisation by GFP fluorescence, alpha-galactosidase A enzyme activity in lysates"
+    }
+   },
+   {
+    "proposition": "Figures 1 to 3 and Supplementary Figures S1 and S2 were opened: clinical imaging (Figure 1), biopsy pathology (Figure 2, panels a to p), the pedigree sequences, conservation alignment, a prediction bar and a structural model (Figure 3), the lentiviral reporter and additional immunohistochemistry (supplement). They carry the case characterisation and bear no result used above beyond the GFP-fusion statement.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figures 1 to 3 and supplement (native rasters, pages 4 to 6, and the supplementary JPEG)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID42161426_r2/native/PMC13202032.1_p6_img1_native.png",
+    "anchor": "Figures 1 to 3 and supplement (native rasters, pages 4 to 6, and the supplementary JPEG)",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "AC16 human cardiomyocyte line stably overexpressing a GFP-tagged wild-type or p.Met76Lys alpha-galactosidase A by lentivirus, with and without a pharmacological chaperone of the enzyme; plus clinical, biopsy and biochemical data of one family; NOT a WWOX system (a lysosomal hydrolase with an approved active-site chaperone)",
+     "genotype": "GLA c.227T>A p.Met76Lys (variant of uncertain significance) against wild type and empty vector",
+     "endpoint": "GLA mRNA, GLA protein by western blot, localisation by GFP fluorescence, alpha-galactosidase A enzyme activity in lysates"
+    }
+   }
+  ]
+ }
+}

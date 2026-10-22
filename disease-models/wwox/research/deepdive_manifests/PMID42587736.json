@@ -534,8 +534,8 @@
     }
    },
    {
-    "proposition": "Function: patch-clamp peaks trend up with treatment but not significantly.",
-    "snippet": "trended upwards with PBA treatment",
+    "proposition": "Function: in whole-cell patch-clamp the variants showed a lower average current amplitude that trended upwards with treatment; the authors state the trends were not statistically significant, in part due to the high variance and limited scope of the experiment.",
+    "snippet": "Compared to WT, all variants showed a lower average current amplitude that trended upwards with PBA treatment. However, these trends were not statistically significant, in part due to the high variance and limited scope of this experiment.",
     "anchor": "Results 3.4, paragraph 3",
     "surface": "body",
     "artifact": "files/fulltext/PMID42587736_Song2026_PMC_r2.xml",
@@ -544,6 +544,17 @@
      "system": "GABRA1 missense variants in HEK293T cells (homozygous and 1:1 with an HA-tagged wild-type allele, with beta2 or beta3 and gamma2S) and Gabra1 +/A322D knock-in mice, treated with the phenylbutyrate class; NOT a WWOX system",
      "genotype": "GABRA1 I148F, R214C, R214H, M263T, T292S, A322D, F325L; mouse A322D heterozygote",
      "endpoint": "total alpha1 by Western blot, surface alpha1 by flow cytometry, peak GABA current, regional brain alpha1"
+    },
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42587736.json",
+     "entry": 15,
+     "what_changed": "Strength-scan flag resolved by widening the quote to the authors' own sentence stating the trends were not statistically significant; the proposition now follows that sentence; the pointer from entry 16 ('trended upwards with PBA treat') still resolves. Author self-correction; blind audit owed.",
+     "audit": {
+      "auditors": 0,
+      "verdicts": [
+       "CORRECTED"
+      ]
+     }
     }
    },
    {

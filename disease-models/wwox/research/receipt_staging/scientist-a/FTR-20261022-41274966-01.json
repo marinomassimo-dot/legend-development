@@ -1,0 +1,38 @@
+{
+ "event_id": "FTR-20261022-41274966-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "41274966",
+  "doi": "10.1038/s41598-025-29143-7"
+ },
+ "event_at": "2026-10-22T04:54:03Z",
+ "analysis_at": "2026-10-22T04:52:03Z",
+ "analysis_time_precision": "second",
+ "workflow": "Primary read by scientist-a under REPURP-10H-R1C-A-20261022: PMC efetch XML and PDF acquired with pmc_bucket_fetch.py and the Europe PMC supplementaryFiles endpoint, whole text read section by section, every figure opened as an image, the supplement read, locators captured while the document was open and verified by deepdive_manifest.py. Class-level substitute, NOT WWOX EVIDENCE.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID41274966_Tubastatin2025_PMC_r2.xml",
+ "source_fingerprint": "74502be43909796db6de99143a6bd40e376772c11c0ad248924a5bc77049451e",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID41274966.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-a_r1d_20261022.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "context QUESTION_DRIVEN; figures from native rasters; Table 1 read against its printed page render and recomputed from the printed individual values; the supplement PDF (three full-length blot sets) opened as a page render; compound levels of the paper are deliberately not carried."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

@@ -1,0 +1,460 @@
+{
+ "schema_version": 2,
+ "pmid": "41274966",
+ "doi": "10.1038/s41598-025-29143-7",
+ "receipt": "FTR-20261022-41274966-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "disease-models/wwox/research/repurposing_10h_scientist-a_r1d_20261022.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not needed: PMC efetch XML, the PDF and supplements were returned by pmc_bucket_fetch.py."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Primary-evidence read of a NOT WWOX EVIDENCE paper under the Scientist brief; the analysis note is the dossier."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No consolidated baseline claim is narrowed, reversed or removed; a blind audit of the text-versus-panel relations is declared OWED."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for a candidate; class level only."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "counts_measured": "Not run (ambiguous initials).",
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "A single-laboratory mouse study of one compound; no replication. NOT WWOX EVIDENCE."
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "HDAC6 AND phenylketonuria",
+    "count": 1,
+    "source": "PubMed ESearch count 2026-10-22"
+   },
+   {
+    "query": "HDAC6 AND WWOX",
+    "count": 0,
+    "source": "PubMed ESearch count 2026-10-22"
+   }
+  ],
+  "note": "WWOX does not occur in the article; counts are title/abstract-level and license 'no paper is indexed', never 'never measured' (D-37)."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 33,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "<ref> elements counted in the JATS: 33; none WWOX-direct.",
+  "resolved": [],
+  "queued": [],
+  "note": "No WWOX-direct reference."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "registry_records.py get --pmid 41274966 --hops 0 and paper_packet.py packet (before the read)",
+  "hits": 0,
+  "finding": "NO RECORD MATCHED before this reading (a statement about that query, not about what the laboratory knows)."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-22",
+  "route": "dependency_integrity.py screen --manifest-block; PubMed efetch CommentsCorrections",
+  "result": "PubMed efetch 2026-10-22: no CommentsCorrections entry; dependency screen run (see block).",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 32,
+   "references_screened": 24,
+   "references_with_doi": 24,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 1,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 8
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41274966_Tubastatin2025_PMC_r2.xml",
+   "sha256": "74502be43909796db6de99143a6bd40e376772c11c0ad248924a5bc77049451e",
+   "kind": "article_text",
+   "note": "PMC efetch JATS for PMC12748783, retrieved with pmc_bucket_fetch.py.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-22",
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC12748783&rettype=xml",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none",
+    "result_sha256": "74502be43909796db6de99143a6bd40e376772c11c0ad248924a5bc77049451e"
+   }
+  },
+  {
+   "path": "files/supplement/PMID41274966_r2/PMC12748783.1.pdf",
+   "sha256": "23a2c5f6ca81615e4a5475f7d8a37f7056b10f298cc230bd7c35d981a00613f3",
+   "kind": "article_binary",
+   "note": "Article PDF from the PMC open-data bucket; figure rasters extracted from it at native size.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-22",
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12748783.1/PMC12748783.1.pdf",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "result_sha256": "23a2c5f6ca81615e4a5475f7d8a37f7056b10f298cc230bd7c35d981a00613f3"
+   }
+  },
+  {
+   "path": "files/supplement/PMID41274966_r2/41598_2025_29143_MOESM1_ESM.pdf",
+   "sha256": "357155b9a3ea10560d1f6a88c7785773beeee78f03ab085658b1bee6476c3bc3",
+   "kind": "supplement_binary",
+   "note": "Supplementary Information PDF (uncropped blots).",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-22",
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12748783.1/41598_2025_29143_MOESM1_ESM.pdf",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "result_sha256": "357155b9a3ea10560d1f6a88c7785773beeee78f03ab085658b1bee6476c3bc3"
+   }
+  },
+  {
+   "path": "files/supplement/PMID41274966_r3/MOESM1_p1_150dpi.png",
+   "sha256": "49098836e07a488da167f57ca46d4b6ba181ee26fff6ff1617794f0b301cf732",
+   "kind": "figure",
+   "note": "Supplement PDF page 1 rendered at 150 dpi and opened.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID41274966_r2/41598_2025_29143_MOESM1_ESM.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=150).save()",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/figures/PMID41274966_r2/pages_200dpi/PMC12748783.1_p2_200dpi.png",
+   "sha256": "0aa61f7564b01fa52178130536210c1edc7df5498b6c1399a3cb982d6586852f",
+   "kind": "figure",
+   "note": "Printed page 2 of the article PDF rendered at 200 dpi (Table 1 is a text table; the page render is the surface compared with the JATS table).",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID41274966_r2/PMC12748783.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=200).save()",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/figures/PMID41274966_r2/native/PMC12748783.1_p3_img1_native.png",
+   "sha256": "b1bb8d85a95b306ecb655743339f248ea53e08218fb7b47506f7c5d5d26ec9bf",
+   "kind": "figure",
+   "note": "Figure raster embedded on printed page 3 of the article PDF (about 1200 to 1800 pixels wide), extracted at native size and opened.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID41274966_r2/PMC12748783.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Pixmap(doc, xref).save() of the page's image",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/figures/PMID41274966_r2/native/PMC12748783.1_p3_img2_native.png",
+   "sha256": "49ef88bf891a04514ea9d2801b4ab5fbfdb8bcbf5023a7c9e39f58c2b1ecda19",
+   "kind": "figure",
+   "note": "Figure raster embedded on printed page 3 of the article PDF (about 1200 to 1800 pixels wide), extracted at native size and opened.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID41274966_r2/PMC12748783.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Pixmap(doc, xref).save() of the page's image",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  },
+  {
+   "path": "files/figures/PMID41274966_r2/native/PMC12748783.1_p4_img1_native.png",
+   "sha256": "4743af1c70b63bb380e4c92e08fbc27afd58e5e59ab8efe091a0faeca321d75b",
+   "kind": "figure",
+   "note": "Figure raster embedded on printed page 4 of the article PDF (about 1200 to 1800 pixels wide), extracted at native size and opened.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID41274966_r2/PMC12748783.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "Pixmap(doc, xref).save() of the page's image",
+     "join": ""
+    },
+    "acquired_on": "2026-10-22"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC efetch JATS for PMC12748783 retrieved 2026-10-22, 84,510 bytes; the whole body is indexed locally for exact-text checks.",
+  "abstract_anchoring_waived": "Stated per entry; no entry is anchored to the abstract.",
+  "note": "QUESTION_DRIVEN (protein quantity, a circulating functional readout and an in-vivo chaperone-axis compound). Class-level substitute, NOT WWOX EVIDENCE; the compound levels of the paper are deliberately not carried. Read: abstract, introduction, results, discussion, methods, all four figures (native rasters), Table 1 against its printed page render, and the supplement PDF page (three full-length blot sets) opened.",
+  "entries": [
+   {
+    "proposition": "NOT WWOX EVIDENCE. Methods: three mice per group were used.",
+    "snippet": "Subjects were divided into three groups, with three mice per group: a wild-type control group, a sham group administered DMSO, and an HDAC6i-treated group.",
+    "anchor": "Methods, animal study",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41274966_Tubastatin2025_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Pah(enu2) mice (homozygous PAH p.Phe263Ser missense) treated for 12 weeks with a selective HDAC6 inhibitor or vehicle, compared with wild-type mice; plasma phenylalanine, coat colour, liver PAH and acetylated HSP90 by western blot; NOT a WWOX system (PAH is a liver tetrameric enzyme; the readout is a circulating metabolite)",
+     "genotype": "Pah enu2 homozygous missense; wild-type BTBR",
+     "endpoint": "plasma phenylalanine (a function readout), coat colour, liver PAH protein, acetylated HSP90"
+    }
+   },
+   {
+    "proposition": "Table 1 as printed (page 2): the sham group lists two animals (numbered 1 and 2) at every time point, the treated group three (3 to 5) and the wild-type group three (6 to 8); the sham means and error terms equal those of two values (week 0: 1349.1 and 1345.1, mean 1347.0, error 2.0). The western blot of Figure 3A also shows two sham lanes (mouse number 1 and 2), three treated and three wild-type. So the sham group has two animals in the data shown, against 'three mice per group' in the Methods and the Discussion.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Table 1 (printed page 2, 200 dpi render) and Figure 3A",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41274966_r2/pages_200dpi/PMC12748783.1_p2_200dpi.png",
+    "anchor": "Table 1 (printed page 2, 200 dpi render) and Figure 3A",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "experimental_context": {
+     "system": "Pah(enu2) mice (homozygous PAH p.Phe263Ser missense) treated for 12 weeks with a selective HDAC6 inhibitor or vehicle, compared with wild-type mice; plasma phenylalanine, coat colour, liver PAH and acetylated HSP90 by western blot; NOT a WWOX system (PAH is a liver tetrameric enzyme; the readout is a circulating metabolite)",
+     "genotype": "Pah enu2 homozygous missense; wild-type BTBR",
+     "endpoint": "plasma phenylalanine (a function readout), coat colour, liver PAH protein, acetylated HSP90"
+    },
+    "contradicts": "entries[0]",
+    "contradicts_needle": "with three mice per group"
+   },
+   {
+    "proposition": "Text: plasma phenylalanine fell to 1039.39 ± 36.27 at week 8 and to 749.41 ± 42.16 at week 12 in the treated group, against the sham group at week 12.",
+    "snippet": "The TSA-treated group showed a statistically significant reduction in plasma phenylalanine levels, decreasing to 1039.39 ± 36.27 µM at weeks 8 which was significantly lower than the sham group (1338.59 ± 8.76 µM, p < 0.05), and further reducing to 749.41 ± 42.16 µM at week 12, compared to the sham group (1341.59 ± 5.24 µM, p < 0.01)",
+    "anchor": "Results, first subsection",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41274966_Tubastatin2025_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Pah(enu2) mice (homozygous PAH p.Phe263Ser missense) treated for 12 weeks with a selective HDAC6 inhibitor or vehicle, compared with wild-type mice; plasma phenylalanine, coat colour, liver PAH and acetylated HSP90 by western blot; NOT a WWOX system (PAH is a liver tetrameric enzyme; the readout is a circulating metabolite)",
+     "genotype": "Pah enu2 homozygous missense; wild-type BTBR",
+     "endpoint": "plasma phenylalanine (a function readout), coat colour, liver PAH protein, acetylated HSP90"
+    }
+   },
+   {
+    "proposition": "Table 1 recomputed by the reader from the individual values printed in it (INFERENZA; no data file): treated week 4 mean of 1241.2, 1091 and 1272.4 is 1201.5 (printed 1198.11); week 8 mean of 981.4, 1030.7 and 1068.1 is 1026.7 (printed 1039.39); week 12 mean of 672.1, 758.8 and 866.9 is 765.9 (printed 749.41); wild type week 0 mean of 230.9, 225.7 and 233.8 is 230.1 (printed 253.30) and week 12 mean of 242.8, 289.6 and 239.0 is 257.1 (printed 250.27); treated week 0 (1297.9 against 1298.00), sham and the other wild-type means agree. The text gives the sham week-12 mean as 1341.59 and the table 1341.01. The direction and the order of magnitude of the change are the same under either set of numbers; the treated group at week 12 remains about three times the wild-type level on either.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Table 1 recomputation (printed page 2)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41274966_r2/pages_200dpi/PMC12748783.1_p2_200dpi.png",
+    "anchor": "Table 1 recomputation (printed page 2)",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "Pah(enu2) mice (homozygous PAH p.Phe263Ser missense) treated for 12 weeks with a selective HDAC6 inhibitor or vehicle, compared with wild-type mice; plasma phenylalanine, coat colour, liver PAH and acetylated HSP90 by western blot; NOT a WWOX system (PAH is a liver tetrameric enzyme; the readout is a circulating metabolite)",
+     "genotype": "Pah enu2 homozygous missense; wild-type BTBR",
+     "endpoint": "plasma phenylalanine (a function readout), coat colour, liver PAH protein, acetylated HSP90"
+    },
+    "qualifies": "entries[2]",
+    "qualifies_needle": "decreasing to 1039.39"
+   },
+   {
+    "proposition": "Text: the progressive reduction of about 50 percent compared with the sham group highlights therapeutic potential and ameliorates PKU symptoms.",
+    "snippet": "The progressive reduction in plasma phenylalanine levels over the 12-week treatment period, approximately 50% compared to the sham group, highlights the therapeutic potential of managing hyperphenylalaninemia, thereby ameliorating PKU symptoms.",
+    "anchor": "Results, first subsection",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41274966_Tubastatin2025_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Pah(enu2) mice (homozygous PAH p.Phe263Ser missense) treated for 12 weeks with a selective HDAC6 inhibitor or vehicle, compared with wild-type mice; plasma phenylalanine, coat colour, liver PAH and acetylated HSP90 by western blot; NOT a WWOX system (PAH is a liver tetrameric enzyme; the readout is a circulating metabolite)",
+     "genotype": "Pah enu2 homozygous missense; wild-type BTBR",
+     "endpoint": "plasma phenylalanine (a function readout), coat colour, liver PAH protein, acetylated HSP90"
+    }
+   },
+   {
+    "proposition": "Figure 1 and Table 1 as drawn: treated phenylalanine about 750 against sham about 1340 at week 12, a reduction of about 44 percent, with the wild-type level at about 250; the treated group is still about three times the wild-type level at the last time point; no further time point.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1 plot (native raster, printed page 3)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41274966_r2/native/PMC12748783.1_p3_img2_native.png",
+    "anchor": "Figure 1 plot (native raster, printed page 3)",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "Pah(enu2) mice (homozygous PAH p.Phe263Ser missense) treated for 12 weeks with a selective HDAC6 inhibitor or vehicle, compared with wild-type mice; plasma phenylalanine, coat colour, liver PAH and acetylated HSP90 by western blot; NOT a WWOX system (PAH is a liver tetrameric enzyme; the readout is a circulating metabolite)",
+     "genotype": "Pah enu2 homozygous missense; wild-type BTBR",
+     "endpoint": "plasma phenylalanine (a function readout), coat colour, liver PAH protein, acetylated HSP90"
+    },
+    "qualifies": "entries[4]",
+    "qualifies_needle": "approximately 50% compared to the sham group"
+   },
+   {
+    "proposition": "Text: the authors say these findings indicate that HDAC6 inhibition enhances PAH protein expression by inhibiting the degradation of PAH, contributing to increased PAH levels in the liver.",
+    "snippet": "These findings indicate that HDAC6 inhibition enhances PAH protein expression by inhibiting the degradation of PAH, thereby contributing to increased PAH levels in the liver and ameliorating PKU symptoms in the animal model.",
+    "anchor": "Results, liver PAH subsection",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41274966_Tubastatin2025_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Pah(enu2) mice (homozygous PAH p.Phe263Ser missense) treated for 12 weeks with a selective HDAC6 inhibitor or vehicle, compared with wild-type mice; plasma phenylalanine, coat colour, liver PAH and acetylated HSP90 by western blot; NOT a WWOX system (PAH is a liver tetrameric enzyme; the readout is a circulating metabolite)",
+     "genotype": "Pah enu2 homozygous missense; wild-type BTBR",
+     "endpoint": "plasma phenylalanine (a function readout), coat colour, liver PAH protein, acetylated HSP90"
+    }
+   },
+   {
+    "proposition": "Figure 3A and 3C as drawn: PAH normalised to GAPDH about 0.56 (sham, two mice), about 0.83 (treated, three) and about 0.90 (wild type, three), four stars between sham and treated; acetylated HSP90 over HSP90 about 0.54, 0.88 and 0.68. The bar charts carry error bars on two and three animals; no turnover, half-life or degradation measurement appears in the paper, so inhibition of PAH degradation is inferred from steady-state level.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3 (native raster, printed page 4)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41274966_r2/native/PMC12748783.1_p4_img1_native.png",
+    "anchor": "Figure 3 (native raster, printed page 4)",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "Pah(enu2) mice (homozygous PAH p.Phe263Ser missense) treated for 12 weeks with a selective HDAC6 inhibitor or vehicle, compared with wild-type mice; plasma phenylalanine, coat colour, liver PAH and acetylated HSP90 by western blot; NOT a WWOX system (PAH is a liver tetrameric enzyme; the readout is a circulating metabolite)",
+     "genotype": "Pah enu2 homozygous missense; wild-type BTBR",
+     "endpoint": "plasma phenylalanine (a function readout), coat colour, liver PAH protein, acetylated HSP90"
+    },
+    "qualifies": "entries[6]",
+    "qualifies_needle": "inhibiting the degradation of PAH"
+   },
+   {
+    "proposition": "Text: a fur-colour change to black was observed in treated mice, which the authors say reflects recovery of the pathway converting phenylalanine to melanin and suggests improved PAH activity.",
+    "snippet": "The coat color change in the PKU mouse model reflects a recovery in the metabolic pathway converting phenylalanine to melanin, which depends on the proper function of the PAH enzyme.",
+    "anchor": "Results, fur-colour subsection",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41274966_Tubastatin2025_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Pah(enu2) mice (homozygous PAH p.Phe263Ser missense) treated for 12 weeks with a selective HDAC6 inhibitor or vehicle, compared with wild-type mice; plasma phenylalanine, coat colour, liver PAH and acetylated HSP90 by western blot; NOT a WWOX system (PAH is a liver tetrameric enzyme; the readout is a circulating metabolite)",
+     "genotype": "Pah enu2 homozygous missense; wild-type BTBR",
+     "endpoint": "plasma phenylalanine (a function readout), coat colour, liver PAH protein, acetylated HSP90"
+    }
+   },
+   {
+    "proposition": "Figure 2 as drawn: one photograph per group and time point (wild type, sham, treated) at baseline, 4, 8 and 12 weeks; the treated animal darkens progressively; there is no score, blinding or count of animals with colour change; the treated animal at baseline is already brownish rather than grey in the photograph.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2 (native raster, printed page 3)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41274966_r2/native/PMC12748783.1_p3_img1_native.png",
+    "anchor": "Figure 2 (native raster, printed page 3)",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "Pah(enu2) mice (homozygous PAH p.Phe263Ser missense) treated for 12 weeks with a selective HDAC6 inhibitor or vehicle, compared with wild-type mice; plasma phenylalanine, coat colour, liver PAH and acetylated HSP90 by western blot; NOT a WWOX system (PAH is a liver tetrameric enzyme; the readout is a circulating metabolite)",
+     "genotype": "Pah enu2 homozygous missense; wild-type BTBR",
+     "endpoint": "plasma phenylalanine (a function readout), coat colour, liver PAH protein, acetylated HSP90"
+    },
+    "qualifies": "entries[8]",
+    "qualifies_needle": "reflects a recovery in the metabolic pathway"
+   },
+   {
+    "proposition": "Text: necropsy revealed kidney enlargement and ascites, which the authors say indicates dose-dependent toxicity.",
+    "snippet": "Necropsy revealed kidney enlargement and ascites, indicating dose-dependent toxicity.",
+    "anchor": "Results, fur-colour subsection",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41274966_Tubastatin2025_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Pah(enu2) mice (homozygous PAH p.Phe263Ser missense) treated for 12 weeks with a selective HDAC6 inhibitor or vehicle, compared with wild-type mice; plasma phenylalanine, coat colour, liver PAH and acetylated HSP90 by western blot; NOT a WWOX system (PAH is a liver tetrameric enzyme; the readout is a circulating metabolite)",
+     "genotype": "Pah enu2 homozygous missense; wild-type BTBR",
+     "endpoint": "plasma phenylalanine (a function readout), coat colour, liver PAH protein, acetylated HSP90"
+    }
+   },
+   {
+    "proposition": "Not on any panel: the group that died is described in the text only; no survival curve, count, body weights or necropsy figure is in the main text. Two levels were tested (the second only described in words), so a graded relation cannot be shown from them; the supplement (uncropped blots) does not bear on it.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Results text, page 2 (no panel)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41274966_r2/pages_200dpi/PMC12748783.1_p2_200dpi.png",
+    "anchor": "Results text, page 2 (no panel)",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "Pah(enu2) mice (homozygous PAH p.Phe263Ser missense) treated for 12 weeks with a selective HDAC6 inhibitor or vehicle, compared with wild-type mice; plasma phenylalanine, coat colour, liver PAH and acetylated HSP90 by western blot; NOT a WWOX system (PAH is a liver tetrameric enzyme; the readout is a circulating metabolite)",
+     "genotype": "Pah enu2 homozygous missense; wild-type BTBR",
+     "endpoint": "plasma phenylalanine (a function readout), coat colour, liver PAH protein, acetylated HSP90"
+    }
+   },
+   {
+    "proposition": "Text: acetylated HSP90 was significantly increased in treated mice, correlating with increased PAH protein in the liver; the authors say TSA enhances stabilization of mutant PAH.",
+    "snippet": "In the western blot analysis, acetylated HSP90 was significantly increased in Paheun2 mice treated with TSA, correlating with increased expression of the PAH protein in the liver (Fig. 3).",
+    "anchor": "Results, HSP90 subsection",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41274966_Tubastatin2025_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Pah(enu2) mice (homozygous PAH p.Phe263Ser missense) treated for 12 weeks with a selective HDAC6 inhibitor or vehicle, compared with wild-type mice; plasma phenylalanine, coat colour, liver PAH and acetylated HSP90 by western blot; NOT a WWOX system (PAH is a liver tetrameric enzyme; the readout is a circulating metabolite)",
+     "genotype": "Pah enu2 homozygous missense; wild-type BTBR",
+     "endpoint": "plasma phenylalanine (a function readout), coat colour, liver PAH protein, acetylated HSP90"
+    }
+   },
+   {
+    "proposition": "Authors' limitation: the use of only three mice per group restricts the statistical power and representativeness of the finding.",
+    "snippet": "Second, the use of only three mice per group restricts the statistical power and representativeness of the finding.",
+    "anchor": "Discussion, limitations paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41274966_Tubastatin2025_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Pah(enu2) mice (homozygous PAH p.Phe263Ser missense) treated for 12 weeks with a selective HDAC6 inhibitor or vehicle, compared with wild-type mice; plasma phenylalanine, coat colour, liver PAH and acetylated HSP90 by western blot; NOT a WWOX system (PAH is a liver tetrameric enzyme; the readout is a circulating metabolite)",
+     "genotype": "Pah enu2 homozygous missense; wild-type BTBR",
+     "endpoint": "plasma phenylalanine (a function readout), coat colour, liver PAH protein, acetylated HSP90"
+    }
+   },
+   {
+    "proposition": "Methods: statistical analysis used one-way or two-way ANOVA with Dunnett or Tukey post hoc tests, with at least three repeats stated, and the uncropped blots are provided in Supplementary Figure S1.",
+    "snippet": "To ensure data transparency, the full-length uncropped blot images are presented in Supplementary Fig. S1.",
+    "anchor": "Methods, western blot",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41274966_Tubastatin2025_PMC_r2.xml",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Pah(enu2) mice (homozygous PAH p.Phe263Ser missense) treated for 12 weeks with a selective HDAC6 inhibitor or vehicle, compared with wild-type mice; plasma phenylalanine, coat colour, liver PAH and acetylated HSP90 by western blot; NOT a WWOX system (PAH is a liver tetrameric enzyme; the readout is a circulating metabolite)",
+     "genotype": "Pah enu2 homozygous missense; wild-type BTBR",
+     "endpoint": "plasma phenylalanine (a function readout), coat colour, liver PAH protein, acetylated HSP90"
+    }
+   },
+   {
+    "proposition": "Supplementary Figure S1 as drawn: three full-length blot sets, each with eight lanes in the order sham (two), treated (three) and wild type (three), for acetylated HSP90, HSP90, PAH and GAPDH. The same two-sham, three-treated, three-wild-type layout is repeated on all three sets, so the three blots are three runs of the same eight animals' samples (technical repeats), consistent with 'at least three repeats' and not with three sham animals. The PAH band of the third set carries a second, fainter band beneath it in several lanes.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Supplementary Figure S1 (supplement PDF page 1, 150 dpi render)",
+    "surface": "figure",
+    "artifact": "files/supplement/PMID41274966_r3/MOESM1_p1_150dpi.png",
+    "anchor": "Supplementary Figure S1 (supplement PDF page 1, 150 dpi render)",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "Pah(enu2) mice (homozygous PAH p.Phe263Ser missense) treated for 12 weeks with a selective HDAC6 inhibitor or vehicle, compared with wild-type mice; plasma phenylalanine, coat colour, liver PAH and acetylated HSP90 by western blot; NOT a WWOX system (PAH is a liver tetrameric enzyme; the readout is a circulating metabolite)",
+     "genotype": "Pah enu2 homozygous missense; wild-type BTBR",
+     "endpoint": "plasma phenylalanine (a function readout), coat colour, liver PAH protein, acetylated HSP90"
+    }
+   }
+  ]
+ }
+}
