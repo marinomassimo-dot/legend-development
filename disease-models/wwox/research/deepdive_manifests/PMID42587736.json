@@ -315,7 +315,7 @@
     }
    },
    {
-    "proposition": "In vivo, after 7 days of PBA at 100 mg/kg/day by intraperitoneal injection, alpha1 rose 14.0 percent in cortex and 72.8 percent in thalamus of Gabra1 +/A322D mice and not in hippocampus or cerebellum; gamma2 rose 42.0 percent in thalamus only; beta2 did not change. Figure 5 shows 3 to 4 animals per group, expression normalised to wild-type cortex; no seizure, behaviour or receptor-function outcome is measured in the mice.",
+    "proposition": "In vivo, after 7 days of PBA at 100 mg/kg/day by intraperitoneal injection, alpha1 rose 14.0 percent in cortex and 72.8 percent in thalamus of Gabra1 +/A322D mice and not in hippocampus or cerebellum; gamma2 rose 42.0 percent in thalamus only; beta2 did not change. Figure 5 plots three to four points per bar for alpha1 (panel B) and gamma2 (panel C) and two to three for beta2 (panel D), against the legend's n = 4 mice per group, expression normalised to wild-type cortex; no seizure, behaviour or receptor-function outcome is measured in the mice.",
     "snippet": "We found that PBA treatment increased α1 expression in the Gabra1+/A322D cortex by 14.0% (# p < 0.05) and the thalamus by 72.8% (**** p < 0.0001) but that it did not affect expression in other regions",
     "surface": "body",
     "artifact": "files/fulltext/PMID42587736_Song2026_PMC_r2.xml",
@@ -325,6 +325,17 @@
      "system": "HEK293T cells expressing GABRA1 variants; Gabra1 +/A322D knock-in mice (7 days of 100 mg/kg/day PBA i.p., brain western blots); one child (class level, NOT WWOX evidence)",
      "genotype": "GABRA1 missense variants; mouse A322D",
      "comparator": "vehicle and wild-type control"
+    },
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42587736.json",
+     "entry": 1,
+     "what_changed": "Replaced 'Figure 5 shows 3 to 4 animals per group' with per-panel point counts (three to four for alpha1 and gamma2, two to three for beta2) against the legend's n = 4 mice; source: blind audit locator_audit_R1c_R2c_20261022, Figure 5 opened.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ]
+     }
     }
    },
    {
@@ -367,7 +378,7 @@
     }
    },
    {
-    "proposition": "Figure 5 as drawn: alpha1 normalised to wild-type cortex, vehicle against PBA: cortex about 1.0 to 1.15 (hash mark only), thalamus about 1.0 to 1.7 (four asterisks), hippocampus and cerebellum ns; gamma2 thalamus about 1.0 to 1.4 (one asterisk); beta2 ns; dots show 3 to 4 animals per bar.",
+    "proposition": "Figure 5 as drawn: alpha1 normalised to wild-type cortex, vehicle against PBA: cortex about 1.0 to 1.15 (hash mark only), thalamus about 1.0 to 1.7 (four asterisks), hippocampus and cerebellum ns; gamma2 thalamus about 1.0 to 1.4 (one asterisk); beta2 ns; dots: three to four per bar in the alpha1 and gamma2 panels, two to three in the beta2 panel.",
     "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5 panels A to D: western blots of alpha1, beta2, gamma2 and ATPase for Ctx, Cb, Hipp, Thal vehicle and PBA; bar charts of normalised intensities with individual animal dots.",
     "surface": "figure",
     "artifact": "files/figures/PMID42587736_r2/cells-15-01327-g005.jpg",
@@ -377,6 +388,17 @@
      "system": "HEK293T cells expressing GABRA1 variants; Gabra1 +/A322D knock-in mice (7 days of 100 mg/kg/day PBA i.p., brain western blots); one child (class level, NOT WWOX evidence)",
      "genotype": "GABRA1 missense variants; mouse A322D",
      "comparator": "vehicle and wild-type control"
+    },
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42587736.json",
+     "entry": 5,
+     "what_changed": "Replaced 'dots show 3 to 4 animals per bar' with per-panel counts (three to four in the alpha1 and gamma2 panels, two to three in the beta2 panel); source: blind audit, Figure 5 opened.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ]
+     }
     }
    },
    {
@@ -432,7 +454,7 @@
     }
    },
    {
-    "proposition": "Figure 5 read from the image: per-animal points are plotted (about four dots per bar for alpha1 and gamma2, three for beta2). Alpha1 relative to wild-type cortex: cortex about 1.0 to 1.15, cerebellum about 0.5 to 0.6, hippocampus about 1.2 to 1.1, thalamus about 1.0 to 1.7; gamma2 thalamus about 1.0 to 1.4. The legend assigns beta2 to panel C and gamma2 to panel D and says the data are normalised to vehicle-treated mice, but the image has gamma2 in C, beta2 in D and the axis reads 'ratio to WT Ctx'. n = 4 mice per group per the legend.",
+    "proposition": "Figure 5 read from the image: per-animal points are plotted (three to four dots per bar for alpha1 and gamma2, two to three for beta2). Alpha1 relative to wild-type cortex: cortex about 1.0 to 1.15, cerebellum about 0.5 to 0.6, hippocampus about 1.2 to 1.1, thalamus about 1.0 to 1.7; gamma2 thalamus about 1.0 to 1.4. The legend assigns beta2 to panel C and gamma2 to panel D and says the data are normalised to vehicle-treated mice, but the image has gamma2 in C, beta2 in D and the axis reads 'ratio to WT Ctx'. n = 4 mice per group per the legend.",
     "snippet": "PBA increases α1 subunit expression in a region-specific manner in the brains of",
     "anchor": "Figure 5 legend and panels A-D",
     "surface": "figure",
@@ -444,7 +466,18 @@
      "endpoint": "total alpha1 by Western blot, surface alpha1 by flow cytometry, peak GABA current, regional brain alpha1"
     },
     "qualifies": "entries[9]",
-    "qualifies_needle": "We observed a matching 42.0% increase in γ2 e"
+    "qualifies_needle": "We observed a matching 42.0% increase in γ2 e",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42587736.json",
+     "entry": 10,
+     "what_changed": "Same count error as entries 1 and 5 found by the author on re-checking neighbours: 'about four dots per bar for alpha1 and gamma2, three for beta2' became three to four and two to three; Figure 5 re-opened; no blind audit of this neighbour yet (owed).",
+     "audit": {
+      "auditors": 0,
+      "verdicts": [
+       "CORRECTED"
+      ]
+     }
+    }
    },
    {
     "proposition": "Question (b), total versus surface and wild-type versus variant. In vitro, total (Western) and surface (flow cytometry of non-permeabilised cells) alpha1 are measured separately, and the wild-type allele is distinguished from the variant only by an HA tag on the wild-type construct.",
@@ -650,7 +683,7 @@
     }
    },
    {
-    "proposition": "Figure S2B and S2C as drawn (alpha1 / HA-wild-type alpha1 with beta3 and gamma2S, four points per bar): total alpha1 untreated is about 0.37 (I148P), 0.50 (R214H), 0.23 (M263K), 0.33 (M263T), 0.24 (A322D) of wild type and about 0.64, 0.80, 0.61, 0.63, 0.64 with treatment, all treated-versus-untreated brackets four asterisks, wild type treated about 1.3; the HA-tagged wild-type alpha1 is about 1.0 of wild type for I148P, R214H and M263T, about 1.05 for A322D (one hash) and about 0.34 for M263K (two hashes), and rises to about 1.05 to 1.25 with treatment in every condition including the wild-type one (about 1.2). The M263K reduction of about two thirds agrees with the text.",
+    "proposition": "Figure S2B and S2C as drawn (alpha1 / HA-wild-type alpha1 with beta3 and gamma2S, four to five points per bar): total alpha1 untreated is about 0.37 (I148P), 0.50 (R214H), 0.23 (M263K), 0.33 (M263T), 0.24 (A322D) of wild type and about 0.64, 0.80, 0.61, 0.63, 0.64 with treatment, all treated-versus-untreated brackets in the total-alpha1 panel four asterisks, wild type treated about 1.3; the HA-tagged wild-type alpha1 is about 1.0 of wild type for I148P, R214H and M263T, about 1.05 for A322D (one hash) and about 0.34 for M263K (two hashes), and rises to about 1.05 to 1.25 with treatment in every condition including the wild-type one (about 1.2); the treated-versus-untreated brackets of that panel carry four asterisks except A322D, which carries three. The M263K reduction of about two thirds agrees with the text.",
     "snippet": "[figure attestation - pixels cannot be quote-matched] Supplementary Figure S2B and S2C (page 2)",
     "surface": "figure",
     "artifact": "files/supplement/PMID42587736_r3/cells-4310591-supplementary_p2_300dpi.png",
@@ -660,6 +693,17 @@
      "system": "HEK293T cells co-expressing GABRA1 variants or wild type with an HA-tagged wild-type allele and partnering subunits, treated with the phenylbutyrate class; NOT a WWOX system",
      "genotype": "GABRA1 I148F, I148P, R214H, M263K, M263T, T292S, A322D, F325L, wild type",
      "endpoint": "Western-blot intensity ratios to untreated wild type (gamma2, beta2, total alpha1, HA-tagged wild-type alpha1)"
+    },
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42587736.json",
+     "entry": 26,
+     "what_changed": "Re-check of a neighbour flagged by the blind audit: points per bar in Figure S2 read four to five (the treated wild-type bar carries five) and the four-asterisk statement is restricted to the total-alpha1 panel (A322D carries three in the HA panel); Supplementary page re-opened; no blind audit of the corrected wording yet (owed).",
+     "audit": {
+      "auditors": 0,
+      "verdicts": [
+       "CORRECTED"
+      ]
+     }
     }
    },
    {

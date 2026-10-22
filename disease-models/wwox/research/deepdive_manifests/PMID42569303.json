@@ -698,7 +698,7 @@
     }
    },
    {
-    "proposition": "Workbook, embedded uncropped images, Figure 1 blots (seven images): contact sheet of thumbnails (about 500 pixels each) of the full-field films for the secreted, soluble, insoluble, loading-control and native-gel panels; the native-gel film shows monomer and high-molecular-weight material in the lanes; opened as thumbnails, not lane by lane, so no lane-level reading is claimed.",
+    "proposition": "Workbook, embedded uncropped images, Figure 1 blots (seven files, eight thumbnails because the first file holds two frames): contact sheet of thumbnails (about 500 pixels each) of the full-field films for the secreted, soluble, insoluble, loading-control and native-gel panels; the native-gel film shows monomer and high-molecular-weight material in the lanes; opened as thumbnails, not lane by lane, so no lane-level reading is claimed.",
     "snippet": "[figure attestation - pixels cannot be quote-matched] Rawdata workbook images, contact sheet 1",
     "surface": "figure",
     "artifact": "files/supplement/PMID42569303_r3/Rawdata_uncropped_blots_contact_sheet_1.png",
@@ -708,6 +708,17 @@
      "system": "HEK293 cells and mouse embryonic fibroblasts (wild type and knockout lines) expressing HA-tagged neuroserpin (wild type or the Portland S52R variant), a soluble, glycosylated, polymerising protein of the ER lumen; NOT a WWOX system (WWOX is a cytosolic protein with no ER-lumen N-glycan route)",
      "genotype": "SERPINI1 S52R (Portland) and glycosylation-site mutants; ATG5, ATG7, FAM134B, SEC62, STX17, FIP200, UGGT1 and CNX knockout MEF",
      "endpoint": "fraction of endolysosomes positive for the variant (LysoQuant), secreted/soluble/insoluble fractions by immunoblot, native-gel polymers"
+    },
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42569303.json",
+     "entry": 29,
+     "what_changed": "Replaced 'seven images' with 'seven files, eight thumbnails because the first file holds two frames'; source: blind audit, the contact sheet opened; the workbook's first TIFF is two-frame.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ]
+     }
     }
    },
    {

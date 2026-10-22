@@ -499,7 +499,7 @@
     }
    },
    {
-    "proposition": "Supplementary Figure S1B as drawn (Ala305Thr, seven numbered tools): about -1.7 (1 mCSM), -3.3 (2 mCSM-membrane), -2.0 (3 SDM), -0.25 (4 DUET), +0.5 (5 Dynamut), -0.1 (6 Dynamut2), -0.2 (7 INPS-MD sequence only). Six of seven are negative; the largest effect is tool 2, mCSM-membrane, not DUET, whose bar is the second smallest in magnitude among the negative ones; the mean of the seven bars is about -1.0, not -1.4 (the text's average is over a nine-tool panel that S1B does not show). Readings are from the printed axis. INFERENZA, not a DATO: the printed -3.4 sits near tool 2's bar, so a mislabelled tool is one possible reading and is not established. In silico predictions are HYPOTHESIS material, not measurements.",
+    "proposition": "Supplementary Figure S1B as drawn (Ala305Thr, seven numbered tools): about -1.7 (1 mCSM), -3.3 (2 mCSM-membrane), -2.0 (3 SDM), -0.25 (4 DUET), +0.5 (5 Dynamut), -0.1 (6 Dynamut2), -0.2 (7 INPS-MD sequence only). Six of seven are negative; the largest effect is tool 2, mCSM-membrane, not DUET, whose bar is the third smallest in magnitude among the negative bars (after -0.1 and -0.2); the mean of the seven bars is about -1.0, not -1.4 (the text's average is over a nine-tool panel that S1B does not show). Readings are from the printed axis. INFERENZA, not a DATO: the printed -3.4 sits near tool 2's bar, so a mislabelled tool is one possible reading and is not established. In silico predictions are HYPOTHESIS material, not measurements.",
     "snippet": "[figure attestation - pixels cannot be quote-matched] Supplementary Figure S1B (page 1)",
     "surface": "figure",
     "artifact": "files/supplement/PMID42650175_r3/genes-4381080-supplementary_p1_300dpi.png",
@@ -511,7 +511,18 @@
      "endpoint": "predicted change in folding free energy, kcal/mol"
     },
     "contradicts": "entries[14]",
-    "contradicts_needle": "DUET estimating the largest effect for p.Ala305Thr"
+    "contradicts_needle": "DUET estimating the largest effect for p.Ala305Thr",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42650175.json",
+     "entry": 15,
+     "what_changed": "Replaced 'second smallest in magnitude among the negative ones' with 'third smallest ... (after -0.1 and -0.2)' for the DUET bar of about -0.25; source: blind audit, Supplementary Figure S1B opened; the contradicted text entry and the readings of the seven bars are unchanged.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ]
+     }
+    }
    },
    {
     "proposition": "Text for the main Figure 2B: DUET predicted the largest single effect for the Ala305Val substitution (-3.4 kcal/mol).",
