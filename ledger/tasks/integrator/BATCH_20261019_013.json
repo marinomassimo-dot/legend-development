@@ -19,7 +19,8 @@
   "candidates_propagated": 0,
   "paper_registry": "16 record-scoped ops, no FULL_FALLBACK: 11 count repairs (PAPER 470-474, 478, 520, 521, 527-529), PAPER 408-409 evidence depth and role, PAPER 545-548 inserted",
   "literature_log": "15 record-scoped ops: LIT-0683/0684/0742-0746 depth and status, LIT-0817-0820 appended",
-  "growth_anchors": "+4 papers, +4 literature (GA event 58)"
+  "growth_anchors": "+4 papers, +4 literature (GA event 58)",
+  "second_pass": "Main moved during the batch (peer completing passes and audit repairs grew manifests): a second record-scoped pass of 15 ops re-derived 15 further counts (12 new records plus a second correction of PAPER 470, 472, 527); staged -02 receipts of those pass are cited as staged, not recorded"
  },
  "DEFAULTS_TAKEN": [
   {
@@ -53,6 +54,10 @@
   {
    "condition": "current_state IN_BATCH_COMMIT flag",
    "default": "not set, as in 012: path-scoped landing instead"
+  },
+  {
+   "condition": "Manifests kept growing after the first landing (suite went 0 -> 15 disagreements on main)",
+   "default": "repaired again on a second branch from main; counts are bound to the manifest at landing time and the suite is re-run on the merged tree; receipts staged by peers are not recorded by the integrator (the Orchestrator records them)"
   }
  ],
  "STOP_LOG": [],
