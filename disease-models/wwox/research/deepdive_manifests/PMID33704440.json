@@ -323,12 +323,24 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Supplementary Table S3 gives the wild-type and first-variant peak current densities as -72.9 and -45.0 pA/pF with a t-test P of 0.18.",
+    "proposition": "The supplementary table row for peak current density reads -72.9±12.2 and -45.0±15.3 pA/pF with 0.18 in the last column.",
     "snippet": "Ipeak (pA/pF) -72.9±12.2 -45.0±15.3 0.18",
     "surface": "supplement",
     "anchor": "Supplementary Table S3",
     "artifact": "files/supplement/PMID33704440_r2/awab101_Supplementary_Data.txt",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID33704440.json",
+     "entry": 8,
+     "what_changed": "2026-10-22 text-form sweep after the blind text control: the proposition added a clause the quote does not carry; narrowed to the quote (or the quote widened to the source sentence). Prior wording began: Supplementary Table S3 gives the wild-type and first-variant peak current densit",
+     "audit": {
+      "auditors": 0,
+      "verdicts": [
+       "CLAUSE_ADDED_SELF_SWEEP"
+      ],
+      "method": "Blind text control, quote versus proposition (aud=1) or advisory strength scan (aud=0); the repair is unaudited"
+     }
+    }
    },
    {
     "proposition": "The supplementary legend states that 15 of 19 chromaffin cells expressing the first variant experienced a dramatic loss of seal quality.",
@@ -339,12 +351,24 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "The supplementary legend states that the action-potential-current increases are 3-, 4- and 7-fold, respectively, for three of the variants.",
-    "snippet": "show a 3-, 4-, and 7-fold increase, respectively.",
+    "proposition": "The supplementary legend states that the action-potential current in I1306T (-144±36), I860M (-185±82) and I860N (-302±84 nC/μF) shows a 3-, 4- and 7-fold increase, respectively.",
+    "snippet": "the AP current in I1306T (-144±36 nC/μF), I860M (-185±82 nC/μF) and I860N (-302±84 nC/μF) show a 3-, 4-, and 7-fold increase, respectively.",
     "surface": "supplement",
     "anchor": "Supplementary Figure S3 legend, panel E",
     "artifact": "files/supplement/PMID33704440_r2/awab101_Supplementary_Data.txt",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID33704440.json",
+     "entry": 10,
+     "what_changed": "2026-10-22 text-form sweep after the blind text control: the proposition added a clause the quote does not carry; narrowed to the quote (or the quote widened to the source sentence). Prior wording began: The supplementary legend states that the action-potential-current increases are ",
+     "audit": {
+      "auditors": 0,
+      "verdicts": [
+       "CLAUSE_ADDED_SELF_SWEEP"
+      ],
+      "method": "Blind text control, quote versus proposition (aud=1) or advisory strength scan (aud=0); the repair is unaudited"
+     }
+    }
    },
    {
     "proposition": "Figure 2 read as an image: for I860N the time to peak is about 85 against 24 ms for wild type (four stars), inactivation at 500 ms about 52 against 98 percent (four stars), peak density about minus 45 against minus 73 pA/pF (not different), half-activation about minus 59 against minus 42 mV (four stars); for I860M time to peak about 46 against 23 ms (three stars), inactivation about 88 against 97 percent (four stars), half-activation about minus 49 against minus 41 mV (four stars) and peak density not different.",

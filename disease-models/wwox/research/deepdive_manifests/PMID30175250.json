@@ -478,12 +478,24 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "The only gene-expression assay in the Methods is a TaqMan panel for sodium channel alpha and beta subunits; no calcium channel gene is named in it, so this paper measures no T-type transcript.",
+    "proposition": "The Methods describe quantitative RT-PCR with pre-designed TaqMan assays for mouse Scn1a, 2a, 3a, 5a, 8a and 1b to 4b and an internal standard.",
     "snippet": "pre-designed TaqMan assays for mouse Scn1a, 2a, 3a, 5a, 8a, and 1b-4b as well as the internal standard 18 S rRNA or GAPD",
     "surface": "body",
     "anchor": "Methods, Quantitative RT-PCR",
     "artifact": "files/fulltext/PMID30175250_Ogiwara2018_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID30175250.json",
+     "entry": 19,
+     "what_changed": "2026-10-22 text-form sweep after the blind text control: the proposition added a clause or inference the quote does not carry; narrowed to the quote. Prior wording began: The only gene-expression assay in the Methods is a TaqMan panel for sodium chann",
+     "audit": {
+      "auditors": 0,
+      "verdicts": [
+       "CLAUSE_ADDED_SELF_SWEEP"
+      ],
+      "method": "Blind text control, quote versus proposition (aud=1) or advisory strength scan (aud=0); the repair is unaudited"
+     }
+    }
    },
    {
     "proposition": "Group comparisons used Mann-Whitney U or unpaired t tests unless otherwise stated.",

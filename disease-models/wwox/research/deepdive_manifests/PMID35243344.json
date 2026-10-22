@@ -413,12 +413,24 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "The authors face the tension themselves: T-current is impaired, yet ethosuximide works; they look for T-type mRNA upregulation and find none, and say that alterations in mRNA do not account for the ethosuximide-sensitive component, so the efficacy of ethosuximide here is not explained by a measured T-type gain. Their abstract's phrase 'suggesting a gain of function of T-type calcium channels' is an inference not supported by the measured current or the transcript data.",
+    "proposition": "The authors write that these negative data indicate that alterations in Cav mRNA expression levels could not account for the ethosuximide-sensitive component of cortical and thalamic hyperactivity.",
     "snippet": "These negative data indicate that alterations in Cav mRNA expression levels could not account for the ethosuximide-sensitive component of cortical and thalamic hyperactivity.",
     "surface": "body",
     "anchor": "Results, Thalamic hyperactivity was synchronized to cortical SWDs in PV-ArchT mice",
     "artifact": "files/fulltext/PMID35243344_Yang2022_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35243344.json",
+     "entry": 2,
+     "what_changed": "2026-10-22 blind text control (locator_audit_R2d_figures_20261022.md): the proposition added a clause the quote does not carry; narrowed to the quote (or the quote widened to the source sentences that carry the clause). Prior wording began: The authors face the tension themselves: T-current is impaired, yet ethosuximide",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "method": "Blind text control, quote versus proposition (aud=1) or advisory strength scan (aud=0); the repair is unaudited"
+     }
+    }
    },
    {
     "proposition": "The authors cite that in Cav3.2 and Cav3.3 double knockout mice, in which TRN rebound bursts are abolished, gamma-butyrolactone-induced discharges still occur and remain highly sensitive to ethosuximide (a second line of evidence that ethosuximide efficacy does not require the TRN T-type rebound mechanism). This is cited, not read here; the primary is parked (restricted deposit).",
@@ -465,12 +477,24 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "For the quantitative PCR the Methods describe PV-ArchT mice fed normal chow (3 mice) against PV-ArchT mice fed doxycycline chow (3 mice), i.e. the comparison group is the same genotype with the transgene repressed.",
+    "proposition": "The Methods state that total RNA was extracted from cortices and thalami of PV-ArchT mice fed normal chow (3 mice) and PV-ArchT mice fed doxycycline chow (3 mice).",
     "snippet": "Total RNA was extracted from cortices and thalami of PV-ArchT mice fed normal chow (n = 3 mice) and PV-ArchT mice fed doxycycline (DOX) chow (n = 3 mice).",
     "surface": "body",
     "anchor": "Methods, RNA extraction and quantitative RT-PCR",
     "artifact": "files/fulltext/PMID35243344_Yang2022_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35243344.json",
+     "entry": 7,
+     "what_changed": "2026-10-22 text-form sweep after the blind text control: the proposition added a clause or inference the quote does not carry; narrowed to the quote. Prior wording began: For the quantitative PCR the Methods describe PV-ArchT mice fed normal chow (3 m",
+     "audit": {
+      "auditors": 0,
+      "verdicts": [
+       "CLAUSE_ADDED_SELF_SWEEP"
+      ],
+      "method": "Blind text control, quote versus proposition (aud=1) or advisory strength scan (aud=0); the repair is unaudited"
+     }
+    }
    },
    {
     "proposition": "The supplementary Table S1 legend states that none of the intrinsic-excitability measures of the reticular-nucleus PV neurons differed between PV-ArchT and control.",
@@ -481,12 +505,24 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Supplementary Figure 1 states that thalamic hyperactive events coincided with cortical spike-and-wave discharges in 87 percent of events (6 records from 3 mice).",
+    "proposition": "The supplementary legend states that the events coincided with cortical spike-and-wave discharges (87 ± 1.4 percent; 6 records from 3 mice).",
     "snippet": "coincided with cortical SWDs (87 ± 1.4%, n = 6 records from 3 mice)",
     "surface": "supplement",
     "anchor": "Supplementary Figure 1 legend",
     "artifact": "files/supplement/PMID35243344_r2/fcac010_supplementary_data.txt",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35243344.json",
+     "entry": 9,
+     "what_changed": "2026-10-22 text-form sweep after the blind text control: the proposition added a clause the quote does not carry; narrowed to the quote (or the quote widened to the source sentence). Prior wording began: Supplementary Figure 1 states that thalamic hyperactive events coincided with co",
+     "audit": {
+      "auditors": 0,
+      "verdicts": [
+       "CLAUSE_ADDED_SELF_SWEEP"
+      ],
+      "method": "Blind text control, quote versus proposition (aud=1) or advisory strength scan (aud=0); the repair is unaudited"
+     }
+    }
    },
    {
     "proposition": "Figure 7 read as an image: in situ hybridisation shows Cav3.1 in all cortical layers and thalamus but not the reticular nucleus, Cav3.2 strong in layer V and the reticular nucleus, Cav3.3 in all cortical layers and the reticular nucleus, with no visible difference between model and control; qPCR bars (three animals, points shown) cortex Cav3.1 about 0.72 against 1.0, Cav3.2 about 0.94 against 0.98, Cav3.3 about 0.97 against 1.03 and thalamus Cav3.1 about 0.82 against 1.03, no star; the thalamic Cav3.2 and Cav3.3 values are not plotted.",

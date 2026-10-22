@@ -264,12 +264,24 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "The authors word the cause of the bursting as likely increased expression of T-type calcium channels; this is an inference stated with 'likely'.",
+    "proposition": "The authors write that the bursting is likely driven by increased expression of T-type calcium channels.",
     "snippet": "likely driven by increased expression of T-type calcium channels",
     "surface": "body",
     "anchor": "Results, Increased burst firing in RT, last sentence",
     "artifact": "files/fulltext/PMID40166234_Jang2025_bioRxiv.txt",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID40166234.json",
+     "entry": 4,
+     "what_changed": "2026-10-22 text-form sweep after the blind text control: the proposition added a clause the quote does not carry; narrowed to the quote (or the quote widened to the source sentence). Prior wording began: The authors word the cause of the bursting as likely increased expression of T-t",
+     "audit": {
+      "auditors": 0,
+      "verdicts": [
+       "CLAUSE_ADDED_SELF_SWEEP"
+      ],
+      "method": "Blind text control, quote versus proposition (aud=1) or advisory strength scan (aud=0); the repair is unaudited"
+     }
+    }
    },
    {
     "proposition": "The authors report that Z944 treatment rescued social behaviour in the knockout mice.",

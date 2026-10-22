@@ -267,12 +267,24 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "The Data Availability Statement refers to supplementary material; the article XML contains no supplementary-material element, so no supplement was available to read.",
+    "proposition": "The Data Availability Statement says the original contributions are included in the article or supplementary material, with further inquiries to the corresponding author.",
     "snippet": "The original contributions presented in the study are included in the article/supplementary material, further inquiries can be directed to the corresponding author.",
     "surface": "body",
     "anchor": "Data Availability Statement",
     "artifact": "files/fulltext/PMID34483921_Iizumi2021_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34483921.json",
+     "entry": 11,
+     "what_changed": "2026-10-22 text-form sweep after the blind text control: the proposition added a clause or inference the quote does not carry; narrowed to the quote. Prior wording began: The Data Availability Statement refers to supplementary material; the article XM",
+     "audit": {
+      "auditors": 0,
+      "verdicts": [
+       "CLAUSE_ADDED_SELF_SWEEP"
+      ],
+      "method": "Blind text control, quote versus proposition (aud=1) or advisory strength scan (aud=0); the repair is unaudited"
+     }
+    }
    },
    {
     "proposition": "Figure 1 read as an image: wild-type vehicle points sit at 5 with one at 3; mutant vehicle points sit at 5 with one at 4; wild-type phenytoin points range from 1 to 5, the bulk at 2 and 3; mutant phenytoin points are mostly 5 with points at 4 and 3; a four-star bracket joins wild-type vehicle with wild-type phenytoin and another joins wild-type phenytoin with mutant phenytoin; no star joins mutant vehicle with mutant phenytoin.",

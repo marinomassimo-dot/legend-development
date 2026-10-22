@@ -422,12 +422,24 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "A drug-by-genotype design with several comparison genotypes: ethosuximide had no effect on locomotion, anxiety or social recognition memory in wild-type mice, and did not rescue the social memory deficit of two other autism-related models (PAK3 transgenic; FMR1 knockout) that lack absence seizures. The authors conclude ethosuximide acts in the Neuroligin 2 knockout through blocking the discharges. Group sizes and statistics for these controls are in the supplementary figures that were not opened here.",
+    "proposition": "The authors report that ethosuximide injection in wild-type mice had no effects on locomotion, anxiety and social recognition memory, performed to test whether ethosuximide might ameliorate the knockout's behavioural deficits through mechanisms independent of the discharges.",
     "snippet": "To test the possibility that ETX might ameliorate the behavioral deficits of NLG2 KO mice through mechanisms independent of the SWDs, we first performed ETX injection experiments in WT mice but found that ETX had no effects on locomotion, anxiety and social recognition memory",
     "surface": "body",
     "anchor": "Results, ETX alleviates behavior deficits in NLG2 KO mice",
     "artifact": "files/fulltext/PMID32719346_Liu2020_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID32719346.json",
+     "entry": 2,
+     "what_changed": "2026-10-22 blind text control (locator_audit_R2d_figures_20261022.md): the proposition added a clause the quote does not carry; narrowed to the quote (or the quote widened to the source sentences that carry the clause). Prior wording began: A drug-by-genotype design with several comparison genotypes: ethosuximide had no",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "method": "Blind text control, quote versus proposition (aud=1) or advisory strength scan (aud=0); the repair is unaudited"
+     }
+    }
    },
    {
     "proposition": "Local delivery points to the thalamus: ethosuximide or diazepam injected into the ventrobasal thalamus, but not the cortex, diminished the discharges, partially, and the authors give drug diffusion as the explanation for incomplete blockade; other brain regions may contribute.",
@@ -466,12 +478,24 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "In 13 wild-type mice the open-field measures were reported similar before and after systemic ethosuximide (travel distance p = 0.4772); the comparison is before against after in the same animals.",
+    "proposition": "The legend reports similar travel distance (p = 0.4772), speed, mobile time, freezing time and periphery and centre time after systemic ethosuximide compared to before injections in 13 wild-type mice.",
     "snippet": "Open field test showing similar travel distance (p = 0.4772), travel speed (p = 0.4833), mobile time (p = 0.5539), freezing time (p = 0.8073), time spent in periphery zone (p = 0.9018), and time spent in center zone (p = 0.8903) after systemic injections of ETX compared to before injections in WT mice (n = 13)",
     "surface": "supplement",
     "anchor": "Supplementary Fig. 7 legend, panel a",
     "artifact": "files/supplement/PMID32719346_r2/41467_2020_17560_MOESM1_ESM.txt",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID32719346.json",
+     "entry": 6,
+     "what_changed": "2026-10-22 text-form sweep after the blind text control: the proposition added a clause or inference the quote does not carry; narrowed to the quote. Prior wording began: In 13 wild-type mice the open-field measures were reported similar before and af",
+     "audit": {
+      "auditors": 0,
+      "verdicts": [
+       "CLAUSE_ADDED_SELF_SWEEP"
+      ],
+      "method": "Blind text control, quote versus proposition (aud=1) or advisory strength scan (aud=0); the repair is unaudited"
+     }
+    }
    },
    {
     "proposition": "The authors report similar elevated-plus-maze open-arm time in wild-type mice before and after ethosuximide (p = 0.7839).",
@@ -482,20 +506,44 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "In the PAK3 transgenic comparison the preference of wild-type mice for the novel mouse over the familiar one is reported before (p = 0.0009) and after (p = 0.0003) ethosuximide, and the transgenic mice show no preference before (p = 0.5266) or after (p = 0.886) it.",
+    "proposition": "The legend reports p values for wild-type mice before (0.0009) and after (0.0003) ethosuximide and for the PAK3 transgenic mice before (0.5266) and after (0.886) it.",
     "snippet": "WT mice before treatment: p = 0.0009, after treatment: p = 0.0003, n = 8; PAK3 Tg mice before treatment: p = 0.5266, after treatment: p = 0.886, n = 12",
     "surface": "supplement",
     "anchor": "Supplementary Fig. 8 legend, panel b",
     "artifact": "files/supplement/PMID32719346_r2/41467_2020_17560_MOESM1_ESM.txt",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID32719346.json",
+     "entry": 8,
+     "what_changed": "2026-10-22 text-form sweep after the blind text control: the proposition added a clause the quote does not carry; narrowed to the quote (or the quote widened to the source sentence). Prior wording began: In the PAK3 transgenic comparison the preference of wild-type mice for the novel",
+     "audit": {
+      "auditors": 0,
+      "verdicts": [
+       "CLAUSE_ADDED_SELF_SWEEP"
+      ],
+      "method": "Blind text control, quote versus proposition (aud=1) or advisory strength scan (aud=0); the repair is unaudited"
+     }
+    }
    },
    {
-    "proposition": "In the FMR1 knockout comparison the knockout mice show no preference for the novel mouse before (p = 0.8359) or after (p = 0.6543) ethosuximide.",
+    "proposition": "The legend reports p values for the FMR1 knockout mice before (0.8359) and after (0.6543) ethosuximide.",
     "snippet": "FMR1 KO mice before treatment: p = 0.8359; after treatment: p = 0.6543, n = 7",
     "surface": "supplement",
     "anchor": "Supplementary Fig. 9 legend, panel b",
     "artifact": "files/supplement/PMID32719346_r2/41467_2020_17560_MOESM1_ESM.txt",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID32719346.json",
+     "entry": 9,
+     "what_changed": "2026-10-22 text-form sweep after the blind text control: the proposition added a clause the quote does not carry; narrowed to the quote (or the quote widened to the source sentence). Prior wording began: In the FMR1 knockout comparison the knockout mice show no preference for the nov",
+     "audit": {
+      "auditors": 0,
+      "verdicts": [
+       "CLAUSE_ADDED_SELF_SWEEP"
+      ],
+      "method": "Blind text control, quote versus proposition (aud=1) or advisory strength scan (aud=0); the repair is unaudited"
+     }
+    }
    },
    {
     "proposition": "The authors report that the rebound action-potential number in thalamic neurons fell significantly after ethosuximide in both genotypes (wild type p = 0.0012, knockout p = 0.0001).",
@@ -506,12 +554,24 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "The authors report that the number of rebound action potentials after ethosuximide did not differ between wild-type (20 neurons) and knockout (34 neurons) thalamic neurons (p = 0.9259).",
+    "proposition": "The legend reports a similar number of rebound action potentials after ethosuximide in wild-type (20 neurons) and knockout (34 neurons) thalamic neurons (p = 0.9259).",
     "snippet": "similar number of action potentials in the rebound burst firing after ETX treatment in WT (n = 20) and NLG2 KO (n = 34) thalamic neurons (p = 0.9259)",
     "surface": "supplement",
     "anchor": "Supplementary Fig. 10 legend, panel c",
     "artifact": "files/supplement/PMID32719346_r2/41467_2020_17560_MOESM1_ESM.txt",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID32719346.json",
+     "entry": 11,
+     "what_changed": "2026-10-22 text-form sweep after the blind text control: the proposition added a clause or inference the quote does not carry; narrowed to the quote. Prior wording began: The authors report that the number of rebound action potentials after ethosuximi",
+     "audit": {
+      "auditors": 0,
+      "verdicts": [
+       "CLAUSE_ADDED_SELF_SWEEP"
+      ],
+      "method": "Blind text control, quote versus proposition (aud=1) or advisory strength scan (aud=0); the repair is unaudited"
+     }
+    }
    },
    {
     "proposition": "After ethosuximide the knockout thalamic neurons still showed lower sIPSC amplitude (p = 0.0005) and frequency (p = 0.0008) than wild type.",
