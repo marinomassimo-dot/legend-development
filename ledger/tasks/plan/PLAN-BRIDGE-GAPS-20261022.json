@@ -34,6 +34,10 @@
     {
       "need": "19 unvalidated roadmap rows",
       "result": "DONE for two: indication_and_transfer (is the evidence transferred from another disease) and verification_scope (what supports it, audited or not) are validated nonempty-or-UNKNOWN when p4_roadmap_fields is present. The two time rows are now covered by translation. The other rows are narrative that a card can carry as free text; validating them would be 17 fields of ceremony. Validation only, nothing rewritten."
+    },
+    {
+      "need": "G-2 multi-endpoint disease side, and abstention state (resumed 2026-10-22)",
+      "result": "G-2 DONE: optional disease_assertions list (empty allowed), per-endpoint comparison, singular spelling unchanged; regression test_several_disease_endpoints_each_compare_on_their_own. Abstention state DECLINED: the existing abstention marker plus card_kind/abstention_card and check_cards.py are adequate; the empty disease list removes the one thing that forced a fake disease assertion. All 21 existing packets (12 deep, 9 early) rebuilt byte-for-byte identical."
     }
   ],
   "DEFAULTS_TAKEN": [
@@ -41,7 +45,8 @@
   ],
   "DECISIONS_TAKEN": [
     "NO_CHANGE as a fourth sign with its own comparison status rather than a card-level flag.",
-    "Reused the existing translation keys; documented access as time to access."
+    "Reused the existing translation keys; documented access as time to access.",
+    "G-2 as an alternative key rather than a card field, so existing cards cannot change."
   ],
   "STOP_LOG": [
     "None."

@@ -172,14 +172,24 @@ def build_card(payload: dict) -> dict:
         for key in ("id", "name")
     ):
         raise ValueError("candidate requires id and name")
-    disease = payload.get("disease_assertion")
-    validate_assertion(disease)
+    plural = "disease_assertions" in payload
+    if plural:
+        # Several endpoints, or none: an empty list is a disease side nobody qualified.
+        if "disease_assertion" in payload:
+            raise ValueError("give disease_assertion or disease_assertions, not both")
+        diseases = payload["disease_assertions"]
+        if not isinstance(diseases, list):
+            raise ValueError("disease_assertions must be a list")
+    else:
+        diseases = [payload.get("disease_assertion")]
+    for disease in diseases:
+        validate_assertion(disease)
     assertions = payload.get("drug_assertions")
     if not isinstance(assertions, list):
         raise ValueError("drug_assertions must be a list (empty permits abstention)")
     for row in assertions:
         validate_assertion(row)
-    ids = [disease["id"]] + [row["id"] for row in assertions]
+    ids = [d["id"] for d in diseases] + [row["id"] for row in assertions]
     if len(ids) != len(set(ids)):
         raise ValueError("assertion identifiers must be unique")
     lookup = normalise_label_lookup(payload.get("label_lookup"))
@@ -189,6 +199,14 @@ def build_card(payload: dict) -> dict:
     results = []
     for row in assertions:
         reasons = []
+        same = [d for d in diseases if not plural or (
+            d["target_id"] == row["target_id"] and d["endpoint"] == row["endpoint"])]
+        disease = next((d for d in same if d["context"] == row["context"]),
+                       same[0] if same else None)
+        if disease is None:
+            reasons.append("no disease assertion on this target and endpoint")
+            results.append({"assertion_id": row["id"], "status": "UNRESOLVED", "reasons": reasons})
+            continue
         for key in ("target_id", "endpoint"):
             if disease[key] != row[key] or disease[key] == "UNKNOWN":
                 reasons.append(f"{key}: mismatch or unknown")
