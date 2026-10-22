@@ -112,7 +112,7 @@ last_batch_commit_date: 2026-10-22
 last_batch_commit_type: MANUAL
 commit_candidates_propagated: 2
 target_wm_version: WM_v7.27
-trigger: MANUAL (ACTOR_ID integrator, assigned by the Orchestrator). Registry identity and depth, no disease-model change: two registry-only candidates (CC-20261022-SCIENTISTD-R4C-01, CC-20261022-SCIENTISTD-R4D-01) propagated with no claim; PAPER 549-556 and LIT-0821-0828 as identity records for eight receipts that had none (ORPHAN_COMPLETE_READ 5 before, 0 after); the depth, receipt, coverage and locator count of twenty records brought to their standing -02 receipts; every locator count re-derived from its manifest. WM_v7.27 preserved.
+trigger: MANUAL (ACTOR_ID integrator, assigned by the Orchestrator). Registry identity and depth, no disease-model change: two registry-only candidates (CC-20261022-SCIENTISTD-R4C-01, CC-20261022-SCIENTISTD-R4D-01) propagated with no claim; PAPER 549-556 and LIT-0821-0828 as identity records for eight receipts that had none (ORPHAN_COMPLETE_READ 5 before, 0 after); the depth, receipt, coverage and locator count of twenty-seven records brought to their standing -02 receipts; every locator count re-derived from its manifest. WM_v7.27 preserved.
 ```
 
 Every batch's scope — the candidates it propagated, newest first back to `BATCH_20260810_001`,

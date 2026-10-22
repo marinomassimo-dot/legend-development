@@ -1,0 +1,38 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "_note": "Assigned by the Orchestrator in the session of 2026-10-22. Registry identity and depth only; no claim added or modified; not medical advice.",
+ "TASK_ID": "BATCH_20261019_014",
+ "ACTOR_ID": "integrator",
+ "OWNER": "orchestrator",
+ "CURRENT_STATE": "COMPLETE",
+ "assigned_on": "2026-10-22",
+ "OBJECTIVE": "Record-scoped BATCH_COMMIT: (a) identity and depth for the FTR-20261022 receipts of R1d, R4c, R4d, R2d and R2e, clearing every ORPHAN_COMPLETE_READ, with locator counts re-derived; (b) evaluate CC-20261022-SCIENTISTD-R4C-01 and R4D-01 and any other new non-held candidate; (c) carry the WM version forward.",
+ "TASK_CLAIM": {
+  "actor": "integrator",
+  "branch": "task/integrator-batch-014",
+  "worktree": ".claude/worktrees/int-014",
+  "snapshot": "backup/20261022_batch014 (not committed)",
+  "base": "057d3c53a58e2fa3ce12e47c948e6c6ee86b0e8d"
+ },
+ "RESULT": {
+  "wm_version": "WM_v7.27 preserved",
+  "candidates_propagated": 2,
+  "paper_registry": "record-scoped, no FULL_FALLBACK: PAPER 549-556 inserted (R1d x5, R4c x3); depth, receipt, coverage, count and surfaces refreshed for 27 existing records; audit sentences updated for 12 R4c/R4d records and PAPER 545",
+  "literature_log": "LIT-0821-0828 inserted; depth line and status note of the refreshed records updated",
+  "growth_anchors": "+8 papers, +8 literature (GA event 59)",
+  "orphans": "ORPHAN_COMPLETE_READ 5 before, 0 after",
+  "ledger_rewrites_in_place": "none (no append-only ledger record rewritten)"
+ },
+ "DEFAULTS_TAKEN": [
+  {"condition": "R4C and R4D candidates carry no ops and no claim", "default": "propagated as registry presence and depth only; BATCH DISPOSITION blocks written on both; their STRICT-PASS manifests and the audit files (R4c 45 of 49 SUPPORTED, 4 narrowed; R4d 87 audited, none unsupported, 57 narrowed) are cited as sample audits, not as full audits"},
+  {"condition": "R1d papers: blind audit found adverse triples and the reader's repair was in flight", "default": "identity/depth/orphan work done; no statement rests on a figure value of those manifests; no claim; the three CORRECTED-with-0-auditors entries are cited nowhere; counts re-derived after fa184c9c landed (no count moved)"},
+  {"condition": "Peers' R2e completing receipts were recorded by the Orchestrator mid-batch", "default": "seven further records (32878331, 33704440, 35079122, 35184274, 37082241, 40068874, 40825030) brought to the standing receipts and re-counted in a second pass"},
+  {"condition": "R4 deferred candidates and the old provenance candidate", "default": "the two deferred candidates stay deferred, evidence unchanged (the R1d audit concerns identity records, not their claim content); CC-20260826-PROVENANCE-01 is old, MAJOR by consequence, not new: left queued"},
+  {"condition": "WM version rule", "default": "no disease-model change, no bump; current_state IN_BATCH_COMMIT not set (path-scoped landing, as 012/013)"},
+  {"condition": "PAPER 499 and 506 already cite another audit file", "default": "audit sentence left as is; R4d audit file not added there"},
+  {"condition": "Merge conflicts in regenerated pathograph surfaces", "default": "took main's version and regenerated from the merged registries"},
+  {"condition": "First layer commit made with git commit rather than legend_commit.sh", "default": "later commits via legend_commit.sh; noted in the report"}
+ ],
+ "STOP_LOG": [],
+ "HELD_UNCHANGED": []
+}

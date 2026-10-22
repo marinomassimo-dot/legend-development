@@ -19723,7 +19723,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Date processed:** 2026-10-21 (`FTR-20261021-32878331-01`)
 **Discovery source:** reached by group R2 (T-type and ethosuximide evidence for DL-MECH-170) of the ten-hour repurposing batch
 **Status:** processed
-**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Status note:** record created by `BATCH_20261019_012`; reading is `complete_fulltext_read` (updated 2026-10-22 by `BATCH_20261019_014` to the standing receipt `FTR-20261022-32878331-02`; superseded wording «`partial_fulltext_read`»), never upgraded from its receipt.
 **Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
 **Transferability:** T4 — NOT WWOX EVIDENCE
 **clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
@@ -19731,7 +19731,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Working Model impact:** none
 **Report mentions:** research/repurposing_10h_scientist-b_20261021.md
 **Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
-**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-32878331-01` ; manifest `deepdive_manifests/PMID32878331.json`; landing [[paper_registry_current#PAPER 454]]
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261022-32878331-02` ; manifest `deepdive_manifests/PMID32878331.json`; landing [[paper_registry_current#PAPER 454]]
 **Note:** class-level record. Not medical advice.
 
 ---
@@ -19747,7 +19747,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Date processed:** 2026-10-21 (`FTR-20261021-33704440-01`)
 **Discovery source:** reached by group R2 (T-type and ethosuximide evidence for DL-MECH-170) of the ten-hour repurposing batch
 **Status:** processed
-**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read` (updated 2026-10-22 by `BATCH_20261019_014` to the standing receipt `FTR-20261022-33704440-02`; superseded wording «`partial_fulltext_read`»), never upgraded from its receipt.
 **Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
 **Transferability:** T4 — NOT WWOX EVIDENCE
 **clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
@@ -19755,7 +19755,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Working Model impact:** none
 **Report mentions:** research/repurposing_10h_scientist-b_20261021.md
 **Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
-**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-33704440-01` ; manifest `deepdive_manifests/PMID33704440.json`; landing [[paper_registry_current#PAPER 455]]
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261022-33704440-02` ; manifest `deepdive_manifests/PMID33704440.json`; landing [[paper_registry_current#PAPER 455]]
 **Note:** class-level record. Not medical advice.
 
 ---
@@ -19771,7 +19771,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Date processed:** 2026-10-21 (`FTR-20261021-35079122-01`)
 **Discovery source:** reached by group R2 (T-type and ethosuximide evidence for DL-MECH-170) of the ten-hour repurposing batch
 **Status:** processed
-**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read` (updated 2026-10-22 by `BATCH_20261019_014` to the standing receipt `FTR-20261022-35079122-02`; superseded wording «`partial_fulltext_read`»), never upgraded from its receipt.
 **Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
 **Transferability:** T4 — NOT WWOX EVIDENCE
 **clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
@@ -19779,7 +19779,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Working Model impact:** none
 **Report mentions:** research/repurposing_10h_scientist-b_20261021.md
 **Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
-**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-35079122-01` ; manifest `deepdive_manifests/PMID35079122.json`; landing [[paper_registry_current#PAPER 456]]
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261022-35079122-02` ; manifest `deepdive_manifests/PMID35079122.json`; landing [[paper_registry_current#PAPER 456]]
 **Note:** class-level record. Not medical advice.
 
 ---
@@ -19795,7 +19795,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Date processed:** 2026-10-21 (`FTR-20261021-35184274-01`)
 **Discovery source:** reached by group R2 (T-type and ethosuximide evidence for DL-MECH-170) of the ten-hour repurposing batch
 **Status:** processed
-**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Status note:** record created by `BATCH_20261019_012`; reading is `complete_fulltext_read` (updated 2026-10-22 by `BATCH_20261019_014` to the standing receipt `FTR-20261022-35184274-02`; superseded wording «`partial_fulltext_read`»), never upgraded from its receipt.
 **Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
 **Transferability:** T4 — NOT WWOX EVIDENCE
 **clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
@@ -19803,7 +19803,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Working Model impact:** none
 **Report mentions:** research/repurposing_10h_scientist-b_20261021.md
 **Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
-**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-35184274-01` ; manifest `deepdive_manifests/PMID35184274.json`; landing [[paper_registry_current#PAPER 457]]
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261022-35184274-02` ; manifest `deepdive_manifests/PMID35184274.json`; landing [[paper_registry_current#PAPER 457]]
 **Note:** class-level record. Not medical advice.
 
 ---
@@ -19891,7 +19891,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Date processed:** 2026-10-21 (`FTR-20261021-37082241-01`)
 **Discovery source:** reached by group R2 (T-type and ethosuximide evidence for DL-MECH-170) of the ten-hour repurposing batch
 **Status:** processed
-**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Status note:** record created by `BATCH_20261019_012`; reading is `complete_fulltext_read` (updated 2026-10-22 by `BATCH_20261019_014` to the standing receipt `FTR-20261022-37082241-02`; superseded wording «`partial_fulltext_read`»), never upgraded from its receipt.
 **Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
 **Transferability:** T4 — NOT WWOX EVIDENCE
 **clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
@@ -19899,7 +19899,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Working Model impact:** none
 **Report mentions:** research/repurposing_10h_scientist-b_20261021.md
 **Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
-**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-37082241-01` ; manifest `deepdive_manifests/PMID37082241.json`; landing [[paper_registry_current#PAPER 461]]
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261022-37082241-02` ; manifest `deepdive_manifests/PMID37082241.json`; landing [[paper_registry_current#PAPER 461]]
 **Note:** class-level record. Not medical advice.
 
 ---
@@ -19939,7 +19939,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Date processed:** 2026-10-21 (`FTR-20261021-40068874-01`)
 **Discovery source:** reached by group R2 (T-type and ethosuximide evidence for DL-MECH-170) of the ten-hour repurposing batch
 **Status:** processed
-**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Status note:** record created by `BATCH_20261019_012`; reading is `complete_fulltext_read` (updated 2026-10-22 by `BATCH_20261019_014` to the standing receipt `FTR-20261022-40068874-02`; superseded wording «`partial_fulltext_read`»), never upgraded from its receipt.
 **Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
 **Transferability:** T4 — NOT WWOX EVIDENCE
 **clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
@@ -19947,7 +19947,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Working Model impact:** none
 **Report mentions:** research/repurposing_10h_scientist-b_20261021.md
 **Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
-**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-40068874-01` ; manifest `deepdive_manifests/PMID40068874.json`; landing [[paper_registry_current#PAPER 463]]
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261022-40068874-02` ; manifest `deepdive_manifests/PMID40068874.json`; landing [[paper_registry_current#PAPER 463]]
 **Note:** class-level record. Not medical advice.
 
 ---
@@ -19963,7 +19963,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Date processed:** 2026-10-21 (`FTR-20261021-40825030-01`)
 **Discovery source:** reached by group R2 (T-type and ethosuximide evidence for DL-MECH-170) of the ten-hour repurposing batch
 **Status:** processed
-**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Status note:** record created by `BATCH_20261019_012`; reading is `partial_fulltext_read` (updated 2026-10-22 by `BATCH_20261019_014` to the standing receipt `FTR-20261022-40825030-02`; superseded wording «`partial_fulltext_read`»), never upgraded from its receipt.
 **Primary pathway:** none for this gene — T-type calcium-channel and ethosuximide pharmacology in non-WWOX systems
 **Transferability:** T4 — NOT WWOX EVIDENCE
 **clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
@@ -19971,7 +19971,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Working Model impact:** none
 **Report mentions:** research/repurposing_10h_scientist-b_20261021.md
 **Next action:** none — read and registered; its use for DL-MECH-170 is limited to the discovery-ledger note of this batch
-**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-40825030-01` ; manifest `deepdive_manifests/PMID40825030.json`; landing [[paper_registry_current#PAPER 464]]
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261022-40825030-02` ; manifest `deepdive_manifests/PMID40825030.json`; landing [[paper_registry_current#PAPER 464]]
 **Note:** class-level record. Not medical advice.
 
 ---
