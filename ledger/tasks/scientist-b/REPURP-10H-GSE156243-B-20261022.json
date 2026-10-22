@@ -1,5 +1,5 @@
 {
- "_schema": "LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT",
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
  "_note": "Part of the ten-hour repurposing batch ORCH-REPURPOSING-10H-20261021. Adjacent and transferable literature: every paper that is not WWOX evidence is labelled NOT WWOX EVIDENCE, at class level, no dose, no paediatric suitability presumed, not medical advice.",
  "TASK_ID": "REPURP-10H-GSE156243-B-20261022",
  "DIRECTIVE_VERSION": 1,
@@ -10,7 +10,7 @@
  "OBJECTIVE": "Roadmap first observed-transcriptomic input: qualify GSE156243 (WWOX-knockout versus wild-type human brain organoids, week 15) as an input, and run the simplest exploratory reversal query with the thresholds declared BEFORE looking at any drug. The plan marks it blocked only because the bytes were never fetched; the reconciliation measured the GEO supplementary directory reachable and the three originals at about 0.54 MB.",
  "SCOPE": {
   "inputs": [
-   "disease-models/wwox/research/drug_repurposing/roadmap_v4_r14_20261020.md section 'GSE156243 \u2014 primo input del ramo trascrittomico osservato' (a plan, not an authority)",
+   "disease-models/wwox/research/drug_repurposing/roadmap_v4_r14_20261020.md section 'GSE156243 — primo input del ramo trascrittomico osservato' (a plan, not an authority)",
    "disease-models/wwox/research/drug_repurposing/reconciliation_20261020.md"
   ],
   "outputs": "files/ for the originals (gitignored, with sha256); a qualification note and a results folder under disease-models/wwox/research/drug_repurposing/gse156243/ (new, yours alone); a staged receipt only if a paper reading is involved",
@@ -38,7 +38,7 @@
   "report"
  ],
  "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
- "CURRENT_STATE": "ASSIGNED",
+ "CURRENT_STATE": "DONE_PENDING_LANDING",
  "assigned_on": "2026-10-22",
  "CHECKPOINT": {
   "at": "2026-10-21",
@@ -72,5 +72,42 @@
    "self-eval, report"
   ],
   "notes": "Each reading: manifest PASS, receipt staged under research/receipt_staging/scientist-b/, note section appended in research/repurposing_10h_scientist-b_20261021.md. A resume re-reads this and git log on branch task/repurp-10h-r2-b."
+ },
+ "TASK_ACK": {
+  "by": "scientist-b",
+  "on": "2026-10-22"
+ },
+ "TASK_CLAIM": {
+  "by": "scientist-b",
+  "branch": "task/repurp-10h-gse156243-b",
+  "worktree": ".claude/worktrees/gse-b",
+  "on": "2026-10-22"
+ },
+ "DEFAULTS_TAKEN": [
+  "Tested universe not recoverable from the three files: used counts rows with total count >=10 as a labelled PROXY (19,694) only for the random control; reported the paper figure 15,370 beside it",
+  "Effect filter abs(log2FC)>=0.26 because the lists store two decimals and the paper rule FC>1.2 is log2 0.263",
+  "SigCom LINCS entity identifiers mapped through its key-less metadata API after a symbol-based first request returned zero; first response kept as FORMAT_ATTEMPT1",
+  "iLINCS qualified for reachability only (shares L1000 data; not an independent vote)",
+  "Plain lookup run on WWOX, GRIN2A, HTR2C (genes named in the paper top-100 lists) rather than all module genes",
+  "R2b/R2 T-type conflict reconciled in the new note section 1; the earlier notes were not edited",
+  "No receipt staged: the paper (PMID 34268881) already has a reading receipt; a dataset is not a paper reading"
+ ],
+ "STOP_LOG": [],
+ "RESULT": {
+  "verdict": "INCONCLUSIVE (context dominates); descriptive data kept",
+  "digests_match_roadmap": true,
+  "counts": {
+   "padj_le_0.01": {
+    "up": 518,
+    "down": 317
+   },
+   "padj_le_0.05": {
+    "up": 1071,
+    "down": 826
+   },
+   "p_only": 2267
+  },
+  "note": "disease-models/wwox/research/repurposing_10h_scientist-b_20261022c.md",
+  "folder": "disease-models/wwox/research/drug_repurposing/gse156243/"
  }
 }

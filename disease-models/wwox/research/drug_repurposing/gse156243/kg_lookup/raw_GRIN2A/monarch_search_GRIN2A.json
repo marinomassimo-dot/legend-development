@@ -1,0 +1,736 @@
+{
+  "facet_fields": [
+    {
+      "facet_values": [
+        {
+          "count": 12,
+          "label": "biolink:Gene"
+        }
+      ],
+      "label": "category"
+    },
+    {
+      "facet_values": [
+        {
+          "count": 2,
+          "label": "Danio rerio"
+        },
+        {
+          "count": 2,
+          "label": "Xenopus laevis"
+        },
+        {
+          "count": 1,
+          "label": "Bos taurus"
+        },
+        {
+          "count": 1,
+          "label": "Canis lupus familiaris"
+        },
+        {
+          "count": 1,
+          "label": "Gallus gallus"
+        },
+        {
+          "count": 1,
+          "label": "Homo sapiens"
+        },
+        {
+          "count": 1,
+          "label": "Mus musculus"
+        },
+        {
+          "count": 1,
+          "label": "Rattus norvegicus"
+        },
+        {
+          "count": 1,
+          "label": "Sus scrofa"
+        },
+        {
+          "count": 1,
+          "label": "Xenopus tropicalis"
+        }
+      ],
+      "label": "in_taxon_label"
+    }
+  ],
+  "facet_queries": [],
+  "items": [
+    {
+      "broad_synonym": null,
+      "category": "biolink:Gene",
+      "deprecated": null,
+      "description": null,
+      "exact_synonym": null,
+      "file_source": "hgnc_gene_nodes",
+      "full_name": "glutamate ionotropic receptor NMDA type subunit 2A",
+      "has_attribute": null,
+      "has_biological_sex": null,
+      "has_descendant": null,
+      "has_descendant_count": null,
+      "has_descendant_label": null,
+      "has_gene": null,
+      "has_phenotype": null,
+      "has_phenotype_closure": null,
+      "has_phenotype_closure_label": null,
+      "has_phenotype_count": null,
+      "has_phenotype_label": null,
+      "highlighting": {
+        "name": [
+          "<em>GRIN2A</em>"
+        ],
+        "symbol": [
+          "<em>GRIN2A</em>"
+        ]
+      },
+      "id": "HGNC:4585",
+      "in_taxon": "NCBITaxon:9606",
+      "in_taxon_label": "Homo sapiens",
+      "iri": null,
+      "match_type": "exact",
+      "matched_field": "name",
+      "name": "GRIN2A",
+      "namespace": "HGNC",
+      "narrow_synonym": null,
+      "provided_by": "hgnc_gene_nodes",
+      "related_synonym": null,
+      "same_as": null,
+      "score": 63.04768,
+      "subsets": null,
+      "symbol": "GRIN2A",
+      "synonym": [
+        "GluN2A",
+        "NR2A",
+        "NMDAR2A",
+        "glutamate receptor, ionotropic, N-methyl D-aspartate 2A"
+      ],
+      "synonyms": null,
+      "type": "SO:0001217",
+      "xref": [
+        "ENSEMBL:ENSG00000183454",
+        "OMIM:138253"
+      ]
+    },
+    {
+      "broad_synonym": null,
+      "category": "biolink:Gene",
+      "deprecated": null,
+      "description": "glutamate ionotropic receptor NMDA type subunit 2A",
+      "exact_synonym": null,
+      "file_source": "ncbi_gene_9615_nodes",
+      "full_name": "glutamate ionotropic receptor NMDA type subunit 2A",
+      "has_attribute": null,
+      "has_biological_sex": null,
+      "has_descendant": null,
+      "has_descendant_count": null,
+      "has_descendant_label": null,
+      "has_gene": null,
+      "has_phenotype": null,
+      "has_phenotype_closure": null,
+      "has_phenotype_closure_label": null,
+      "has_phenotype_count": null,
+      "has_phenotype_label": null,
+      "highlighting": {
+        "name": [
+          "<em>GRIN2A</em>"
+        ],
+        "symbol": [
+          "<em>GRIN2A</em>"
+        ]
+      },
+      "id": "NCBIGene:490012",
+      "in_taxon": "NCBITaxon:9615",
+      "in_taxon_label": "Canis lupus familiaris",
+      "iri": null,
+      "match_type": "exact",
+      "matched_field": "name",
+      "name": "GRIN2A",
+      "namespace": "NCBIGene",
+      "narrow_synonym": null,
+      "provided_by": "ncbi_gene_9615_nodes",
+      "related_synonym": null,
+      "same_as": null,
+      "score": 57.31607,
+      "subsets": null,
+      "symbol": "GRIN2A",
+      "synonym": null,
+      "synonyms": null,
+      "type": null,
+      "xref": null
+    },
+    {
+      "broad_synonym": null,
+      "category": "biolink:Gene",
+      "deprecated": null,
+      "description": "glutamate ionotropic receptor NMDA type subunit 2A",
+      "exact_synonym": null,
+      "file_source": "ncbi_gene_9031_nodes",
+      "full_name": "glutamate ionotropic receptor NMDA type subunit 2A",
+      "has_attribute": null,
+      "has_biological_sex": null,
+      "has_descendant": null,
+      "has_descendant_count": null,
+      "has_descendant_label": null,
+      "has_gene": null,
+      "has_phenotype": null,
+      "has_phenotype_closure": null,
+      "has_phenotype_closure_label": null,
+      "has_phenotype_count": null,
+      "has_phenotype_label": null,
+      "highlighting": {
+        "name": [
+          "<em>GRIN2A</em>"
+        ],
+        "symbol": [
+          "<em>GRIN2A</em>"
+        ]
+      },
+      "id": "NCBIGene:427678",
+      "in_taxon": "NCBITaxon:9031",
+      "in_taxon_label": "Gallus gallus",
+      "iri": null,
+      "match_type": "exact",
+      "matched_field": "name",
+      "name": "GRIN2A",
+      "namespace": "NCBIGene",
+      "narrow_synonym": null,
+      "provided_by": "ncbi_gene_9031_nodes",
+      "related_synonym": null,
+      "same_as": null,
+      "score": 57.31607,
+      "subsets": null,
+      "symbol": "GRIN2A",
+      "synonym": null,
+      "synonyms": null,
+      "type": null,
+      "xref": null
+    },
+    {
+      "broad_synonym": null,
+      "category": "biolink:Gene",
+      "deprecated": null,
+      "description": "glutamate ionotropic receptor NMDA type subunit 2A",
+      "exact_synonym": null,
+      "file_source": "ncbi_gene_9823_nodes",
+      "full_name": "glutamate ionotropic receptor NMDA type subunit 2A",
+      "has_attribute": null,
+      "has_biological_sex": null,
+      "has_descendant": null,
+      "has_descendant_count": null,
+      "has_descendant_label": null,
+      "has_gene": null,
+      "has_phenotype": null,
+      "has_phenotype_closure": null,
+      "has_phenotype_closure_label": null,
+      "has_phenotype_count": null,
+      "has_phenotype_label": null,
+      "highlighting": {
+        "name": [
+          "<em>GRIN2A</em>"
+        ],
+        "symbol": [
+          "<em>GRIN2A</em>"
+        ]
+      },
+      "id": "NCBIGene:100736832",
+      "in_taxon": "NCBITaxon:9823",
+      "in_taxon_label": "Sus scrofa",
+      "iri": null,
+      "match_type": "exact",
+      "matched_field": "name",
+      "name": "GRIN2A",
+      "namespace": "NCBIGene",
+      "narrow_synonym": null,
+      "provided_by": "ncbi_gene_9823_nodes",
+      "related_synonym": null,
+      "same_as": null,
+      "score": 57.31607,
+      "subsets": null,
+      "symbol": "GRIN2A",
+      "synonym": null,
+      "synonyms": null,
+      "type": null,
+      "xref": null
+    },
+    {
+      "broad_synonym": null,
+      "category": "biolink:Gene",
+      "deprecated": null,
+      "description": "glutamate ionotropic receptor NMDA type subunit 2A",
+      "exact_synonym": null,
+      "file_source": "ncbi_gene_9913_nodes",
+      "full_name": "glutamate ionotropic receptor NMDA type subunit 2A",
+      "has_attribute": null,
+      "has_biological_sex": null,
+      "has_descendant": null,
+      "has_descendant_count": null,
+      "has_descendant_label": null,
+      "has_gene": null,
+      "has_phenotype": null,
+      "has_phenotype_closure": null,
+      "has_phenotype_closure_label": null,
+      "has_phenotype_count": null,
+      "has_phenotype_label": null,
+      "highlighting": {
+        "name": [
+          "<em>GRIN2A</em>"
+        ],
+        "symbol": [
+          "<em>GRIN2A</em>"
+        ]
+      },
+      "id": "NCBIGene:524212",
+      "in_taxon": "NCBITaxon:9913",
+      "in_taxon_label": "Bos taurus",
+      "iri": null,
+      "match_type": "exact",
+      "matched_field": "name",
+      "name": "GRIN2A",
+      "namespace": "NCBIGene",
+      "narrow_synonym": null,
+      "provided_by": "ncbi_gene_9913_nodes",
+      "related_synonym": null,
+      "same_as": null,
+      "score": 57.31607,
+      "subsets": null,
+      "symbol": "GRIN2A",
+      "synonym": null,
+      "synonyms": null,
+      "type": null,
+      "xref": null
+    },
+    {
+      "broad_synonym": null,
+      "category": "biolink:Gene",
+      "deprecated": null,
+      "description": null,
+      "exact_synonym": null,
+      "file_source": "alliance_gene_nodes",
+      "full_name": "glutamate receptor, ionotropic, N-methyl D-aspartate 2A",
+      "has_attribute": null,
+      "has_biological_sex": null,
+      "has_descendant": null,
+      "has_descendant_count": null,
+      "has_descendant_label": null,
+      "has_gene": null,
+      "has_phenotype": null,
+      "has_phenotype_closure": null,
+      "has_phenotype_closure_label": null,
+      "has_phenotype_count": null,
+      "has_phenotype_label": null,
+      "highlighting": {
+        "name": [
+          "<em>grin2a</em>"
+        ],
+        "symbol": [
+          "<em>grin2a</em>"
+        ],
+        "synonym": [
+          "<em>grin2a</em>"
+        ]
+      },
+      "id": "Xenbase:XB-GENE-992741",
+      "in_taxon": "NCBITaxon:8364",
+      "in_taxon_label": "Xenopus tropicalis",
+      "iri": null,
+      "match_type": "exact",
+      "matched_field": "name",
+      "name": "grin2a",
+      "namespace": "Xenbase",
+      "narrow_synonym": null,
+      "provided_by": "alliance_gene_nodes",
+      "related_synonym": null,
+      "same_as": null,
+      "score": 34.495872,
+      "subsets": null,
+      "symbol": "grin2a",
+      "synonym": [
+        "grin2a",
+        "glutamate receptor, ionotropic, N-methyl D-aspartate 2A",
+        "LOC100126660",
+        "nr2a"
+      ],
+      "synonyms": null,
+      "type": "SO:0000704",
+      "xref": [
+        "UniProtKB:F6X9P6",
+        "ENSEMBL:ENSXETG00000008002",
+        "NCBI_Gene:100489006",
+        "RefSeq:KAE8579842",
+        "Xenbase:XB-GENE-992741",
+        "Xenbase:XB-GENEPAGE-992740"
+      ]
+    },
+    {
+      "broad_synonym": null,
+      "category": "biolink:Gene",
+      "deprecated": null,
+      "description": null,
+      "exact_synonym": null,
+      "file_source": "alliance_gene_nodes",
+      "full_name": "glutamate ionotropic receptor NMDA type subunit 2A",
+      "has_attribute": null,
+      "has_biological_sex": null,
+      "has_descendant": null,
+      "has_descendant_count": null,
+      "has_descendant_label": null,
+      "has_gene": null,
+      "has_phenotype": null,
+      "has_phenotype_closure": null,
+      "has_phenotype_closure_label": null,
+      "has_phenotype_count": null,
+      "has_phenotype_label": null,
+      "highlighting": {
+        "name": [
+          "<em>Grin2a</em>"
+        ],
+        "symbol": [
+          "<em>Grin2a</em>"
+        ]
+      },
+      "id": "RGD:2737",
+      "in_taxon": "NCBITaxon:10116",
+      "in_taxon_label": "Rattus norvegicus",
+      "iri": null,
+      "match_type": "exact",
+      "matched_field": "name",
+      "name": "Grin2a",
+      "namespace": "RGD",
+      "narrow_synonym": null,
+      "provided_by": "alliance_gene_nodes",
+      "related_synonym": null,
+      "same_as": null,
+      "score": 34.495872,
+      "subsets": null,
+      "symbol": "Grin2a",
+      "synonym": [
+        "GluN2A",
+        "N-methyl D-aspartate receptor subtype 2A",
+        "N-methyl-D-aspartate receptor subunit 2A",
+        "NMDAR2A",
+        "NR2A",
+        "glutamate [NMDA] receptor subunit epsilon-1",
+        "glutamate receptor ionotropic, NMDA 2A",
+        "glutamate receptor, ionotropic, N-methyl D-aspartate 2A"
+      ],
+      "synonyms": null,
+      "type": "SO:0001217",
+      "xref": [
+        "ENSEMBL:ENSRNOG00000033942",
+        "NCBI_Gene:24409",
+        "PANTHER:PTHR18966",
+        "UniProtKB:Q00959",
+        "RGD:2737"
+      ]
+    },
+    {
+      "broad_synonym": null,
+      "category": "biolink:Gene",
+      "deprecated": null,
+      "description": null,
+      "exact_synonym": null,
+      "file_source": "alliance_gene_nodes",
+      "full_name": "glutamate receptor, ionotropic, NMDA2A (epsilon 1)",
+      "has_attribute": null,
+      "has_biological_sex": null,
+      "has_descendant": null,
+      "has_descendant_count": null,
+      "has_descendant_label": null,
+      "has_gene": null,
+      "has_phenotype": null,
+      "has_phenotype_closure": null,
+      "has_phenotype_closure_label": null,
+      "has_phenotype_count": null,
+      "has_phenotype_label": null,
+      "highlighting": {
+        "name": [
+          "<em>Grin2a</em>"
+        ],
+        "symbol": [
+          "<em>Grin2a</em>"
+        ]
+      },
+      "id": "MGI:95820",
+      "in_taxon": "NCBITaxon:10090",
+      "in_taxon_label": "Mus musculus",
+      "iri": null,
+      "match_type": "exact",
+      "matched_field": "name",
+      "name": "Grin2a",
+      "namespace": "MGI",
+      "narrow_synonym": null,
+      "provided_by": "alliance_gene_nodes",
+      "related_synonym": null,
+      "same_as": null,
+      "score": 34.495872,
+      "subsets": null,
+      "symbol": "Grin2a",
+      "synonym": [
+        "NR2A",
+        "NMDAR2A",
+        "GluN2A",
+        "GluRepsilon1"
+      ],
+      "synonyms": null,
+      "type": "SO:0001217",
+      "xref": [
+        "ENSEMBL:ENSMUSG00000059003",
+        "NCBI_Gene:14811",
+        "PANTHER:PTHR18966",
+        "UniProtKB:P35436",
+        "MGI:95820"
+      ]
+    },
+    {
+      "broad_synonym": null,
+      "category": "biolink:Gene",
+      "deprecated": null,
+      "description": null,
+      "exact_synonym": null,
+      "file_source": "alliance_gene_nodes",
+      "full_name": "glutamate receptor, ionotropic, N-methyl D-aspartate 2A",
+      "has_attribute": null,
+      "has_biological_sex": null,
+      "has_descendant": null,
+      "has_descendant_count": null,
+      "has_descendant_label": null,
+      "has_gene": null,
+      "has_phenotype": null,
+      "has_phenotype_closure": null,
+      "has_phenotype_closure_label": null,
+      "has_phenotype_count": null,
+      "has_phenotype_label": null,
+      "highlighting": {
+        "name": [
+          "<em>grin2a.S</em>"
+        ],
+        "symbol": [
+          "<em>grin2a.S</em>"
+        ],
+        "synonym": [
+          "<em>grin2a.S</em>"
+        ]
+      },
+      "id": "Xenbase:XB-GENE-17340975",
+      "in_taxon": "NCBITaxon:8355",
+      "in_taxon_label": "Xenopus laevis",
+      "iri": null,
+      "match_type": null,
+      "matched_field": null,
+      "name": "grin2a.S",
+      "namespace": "Xenbase",
+      "narrow_synonym": null,
+      "provided_by": "alliance_gene_nodes",
+      "related_synonym": null,
+      "same_as": null,
+      "score": 30.714138,
+      "subsets": null,
+      "symbol": "grin2a.S",
+      "synonym": [
+        "grin2a.S",
+        "glutamate receptor, ionotropic, N-methyl D-aspartate 2A",
+        "LOC100126660",
+        "nr2a"
+      ],
+      "synonyms": null,
+      "type": "SO:0000704",
+      "xref": [
+        "UniProtKB:A0A974BVX3",
+        "NCBI_Gene:100126660",
+        "RefSeq:XP_018094560",
+        "RefSeq:OCT61455",
+        "Xenbase:XB-GENE-17340975",
+        "Xenbase:XB-GENEPAGE-992740"
+      ]
+    },
+    {
+      "broad_synonym": null,
+      "category": "biolink:Gene",
+      "deprecated": null,
+      "description": null,
+      "exact_synonym": null,
+      "file_source": "alliance_gene_nodes",
+      "full_name": "glutamate receptor, ionotropic, N-methyl D-aspartate 2A",
+      "has_attribute": null,
+      "has_biological_sex": null,
+      "has_descendant": null,
+      "has_descendant_count": null,
+      "has_descendant_label": null,
+      "has_gene": null,
+      "has_phenotype": null,
+      "has_phenotype_closure": null,
+      "has_phenotype_closure_label": null,
+      "has_phenotype_count": null,
+      "has_phenotype_label": null,
+      "highlighting": {
+        "name": [
+          "<em>grin2a.L</em>",
+          "<em>grin2a</em>.L"
+        ],
+        "symbol": [
+          "<em>grin2a.L</em>",
+          "<em>grin2a</em>.L"
+        ],
+        "synonym": [
+          "<em>grin2a.L</em>",
+          "<em>grin2a</em>.L"
+        ]
+      },
+      "id": "Xenbase:XB-GENE-1021446",
+      "in_taxon": "NCBITaxon:8355",
+      "in_taxon_label": "Xenopus laevis",
+      "iri": null,
+      "match_type": null,
+      "matched_field": null,
+      "name": "grin2a.L",
+      "namespace": "Xenbase",
+      "narrow_synonym": null,
+      "provided_by": "alliance_gene_nodes",
+      "related_synonym": null,
+      "same_as": null,
+      "score": 30.714138,
+      "subsets": null,
+      "symbol": "grin2a.L",
+      "synonym": [
+        "grin2a.L",
+        "glutamate receptor, ionotropic, N-methyl D-aspartate 2A",
+        "LOC100126660",
+        "nr2a"
+      ],
+      "synonyms": null,
+      "type": "SO:0000704",
+      "xref": [
+        "UniProtKB:B7ZSK1",
+        "NCBI_Gene:100127346",
+        "RefSeq:NP_001106367",
+        "Xenbase:XB-GENE-1021446",
+        "Xenbase:XB-GENEPAGE-992740"
+      ]
+    },
+    {
+      "broad_synonym": null,
+      "category": "biolink:Gene",
+      "deprecated": null,
+      "description": null,
+      "exact_synonym": null,
+      "file_source": "alliance_gene_nodes",
+      "full_name": "glutamate receptor, ionotropic, N-methyl D-aspartate 2A, a",
+      "has_attribute": null,
+      "has_biological_sex": null,
+      "has_descendant": null,
+      "has_descendant_count": null,
+      "has_descendant_label": null,
+      "has_gene": null,
+      "has_phenotype": null,
+      "has_phenotype_closure": null,
+      "has_phenotype_closure_label": null,
+      "has_phenotype_count": null,
+      "has_phenotype_label": null,
+      "highlighting": {
+        "name": [
+          "<em>grin2aa</em>"
+        ],
+        "symbol": [
+          "<em>grin2aa</em>"
+        ]
+      },
+      "id": "ZFIN:ZDB-GENE-070424-129",
+      "in_taxon": "NCBITaxon:7955",
+      "in_taxon_label": "Danio rerio",
+      "iri": null,
+      "match_type": null,
+      "matched_field": null,
+      "name": "grin2aa",
+      "namespace": "ZFIN",
+      "narrow_synonym": null,
+      "provided_by": "alliance_gene_nodes",
+      "related_synonym": null,
+      "same_as": null,
+      "score": 7.598463,
+      "subsets": null,
+      "symbol": "grin2aa",
+      "synonym": [
+        "NR2A.2",
+        "si:ch211-13c14.1",
+        "zNMDA-2A.2"
+      ],
+      "synonyms": null,
+      "type": "SO:0001217",
+      "xref": [
+        "UniProtKB:A0A8M9PXD6",
+        "ENSEMBL:ENSDARG00000034493",
+        "NCBI_Gene:563297",
+        "ZFIN:ZDB-GENE-070424-129",
+        "PANTHER:PTHR43958"
+      ]
+    },
+    {
+      "broad_synonym": null,
+      "category": "biolink:Gene",
+      "deprecated": null,
+      "description": null,
+      "exact_synonym": null,
+      "file_source": "alliance_gene_nodes",
+      "full_name": "glutamate receptor, ionotropic, N-methyl D-aspartate 2A, b",
+      "has_attribute": null,
+      "has_biological_sex": null,
+      "has_descendant": null,
+      "has_descendant_count": null,
+      "has_descendant_label": null,
+      "has_gene": null,
+      "has_phenotype": null,
+      "has_phenotype_closure": null,
+      "has_phenotype_closure_label": null,
+      "has_phenotype_count": null,
+      "has_phenotype_label": null,
+      "highlighting": {
+        "name": [
+          "<em>grin2ab</em>"
+        ],
+        "symbol": [
+          "<em>grin2ab</em>"
+        ]
+      },
+      "id": "ZFIN:ZDB-GENE-070424-223",
+      "in_taxon": "NCBITaxon:7955",
+      "in_taxon_label": "Danio rerio",
+      "iri": null,
+      "match_type": null,
+      "matched_field": null,
+      "name": "grin2ab",
+      "namespace": "ZFIN",
+      "narrow_synonym": null,
+      "provided_by": "alliance_gene_nodes",
+      "related_synonym": null,
+      "same_as": null,
+      "score": 7.598463,
+      "subsets": null,
+      "symbol": "grin2ab",
+      "synonym": [
+        "si:dkey-20i6.1",
+        "zNMDA-2A.1",
+        "im:7137621",
+        "NR2A.1"
+      ],
+      "synonyms": null,
+      "type": "SO:0001217",
+      "xref": [
+        "UniProtKB:A0A8M9PIL3",
+        "UniProtKB:A0A8M9PIL7",
+        "ENSEMBL:ENSDARG00000070543",
+        "UniProtKB:A0AC58JG37",
+        "NCBI_Gene:570493",
+        "UniProtKB:F1QDE5",
+        "ZFIN:ZDB-GENE-070424-223",
+        "UniProtKB:A0AC58JG38",
+        "UniProtKB:A0AC58JG40",
+        "PANTHER:PTHR43958"
+      ]
+    }
+  ],
+  "limit": 20,
+  "offset": 0,
+  "scope": null,
+  "total": 12
+}

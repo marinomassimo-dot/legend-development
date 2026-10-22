@@ -1,0 +1,746 @@
+{
+  "facet_fields": [
+    {
+      "facet_values": [
+        {
+          "count": 12,
+          "label": "biolink:Gene"
+        }
+      ],
+      "label": "category"
+    },
+    {
+      "facet_values": [
+        {
+          "count": 2,
+          "label": "Danio rerio"
+        },
+        {
+          "count": 2,
+          "label": "Xenopus laevis"
+        },
+        {
+          "count": 1,
+          "label": "Bos taurus"
+        },
+        {
+          "count": 1,
+          "label": "Canis lupus familiaris"
+        },
+        {
+          "count": 1,
+          "label": "Gallus gallus"
+        },
+        {
+          "count": 1,
+          "label": "Homo sapiens"
+        },
+        {
+          "count": 1,
+          "label": "Mus musculus"
+        },
+        {
+          "count": 1,
+          "label": "Rattus norvegicus"
+        },
+        {
+          "count": 1,
+          "label": "Sus scrofa"
+        },
+        {
+          "count": 1,
+          "label": "Xenopus tropicalis"
+        }
+      ],
+      "label": "in_taxon_label"
+    }
+  ],
+  "facet_queries": [],
+  "items": [
+    {
+      "broad_synonym": null,
+      "category": "biolink:Gene",
+      "deprecated": null,
+      "description": null,
+      "exact_synonym": null,
+      "file_source": "hgnc_gene_nodes",
+      "full_name": "5-hydroxytryptamine receptor 2C",
+      "has_attribute": null,
+      "has_biological_sex": null,
+      "has_descendant": null,
+      "has_descendant_count": null,
+      "has_descendant_label": null,
+      "has_gene": null,
+      "has_phenotype": null,
+      "has_phenotype_closure": null,
+      "has_phenotype_closure_label": null,
+      "has_phenotype_count": null,
+      "has_phenotype_label": null,
+      "highlighting": {
+        "name": [
+          "<em>HTR2C</em>"
+        ],
+        "symbol": [
+          "<em>HTR2C</em>"
+        ]
+      },
+      "id": "HGNC:5295",
+      "in_taxon": "NCBITaxon:9606",
+      "in_taxon_label": "Homo sapiens",
+      "iri": null,
+      "match_type": "exact",
+      "matched_field": "name",
+      "name": "HTR2C",
+      "namespace": "HGNC",
+      "narrow_synonym": null,
+      "provided_by": "hgnc_gene_nodes",
+      "related_synonym": null,
+      "same_as": null,
+      "score": 63.04768,
+      "subsets": null,
+      "symbol": "HTR2C",
+      "synonym": [
+        "5-HT2C",
+        "5HTR2C",
+        "HTR1C",
+        "5-hydroxytryptamine (serotonin) receptor 2C",
+        "5-hydroxytryptamine (serotonin) receptor 2C, G protein-coupled"
+      ],
+      "synonyms": null,
+      "type": "SO:0001217",
+      "xref": [
+        "ENSEMBL:ENSG00000147246",
+        "OMIM:312861"
+      ]
+    },
+    {
+      "broad_synonym": null,
+      "category": "biolink:Gene",
+      "deprecated": null,
+      "description": "5-hydroxytryptamine receptor 2C",
+      "exact_synonym": null,
+      "file_source": "ncbi_gene_9615_nodes",
+      "full_name": "5-hydroxytryptamine receptor 2C",
+      "has_attribute": null,
+      "has_biological_sex": null,
+      "has_descendant": null,
+      "has_descendant_count": null,
+      "has_descendant_label": null,
+      "has_gene": null,
+      "has_phenotype": null,
+      "has_phenotype_closure": null,
+      "has_phenotype_closure_label": null,
+      "has_phenotype_count": null,
+      "has_phenotype_label": null,
+      "highlighting": {
+        "name": [
+          "<em>HTR2C</em>"
+        ],
+        "symbol": [
+          "<em>HTR2C</em>"
+        ]
+      },
+      "id": "NCBIGene:450240",
+      "in_taxon": "NCBITaxon:9615",
+      "in_taxon_label": "Canis lupus familiaris",
+      "iri": null,
+      "match_type": "exact",
+      "matched_field": "name",
+      "name": "HTR2C",
+      "namespace": "NCBIGene",
+      "narrow_synonym": null,
+      "provided_by": "ncbi_gene_9615_nodes",
+      "related_synonym": null,
+      "same_as": null,
+      "score": 57.31607,
+      "subsets": null,
+      "symbol": "HTR2C",
+      "synonym": null,
+      "synonyms": null,
+      "type": null,
+      "xref": null
+    },
+    {
+      "broad_synonym": null,
+      "category": "biolink:Gene",
+      "deprecated": null,
+      "description": "5-hydroxytryptamine receptor 2C",
+      "exact_synonym": null,
+      "file_source": "ncbi_gene_9031_nodes",
+      "full_name": "5-hydroxytryptamine receptor 2C",
+      "has_attribute": null,
+      "has_biological_sex": null,
+      "has_descendant": null,
+      "has_descendant_count": null,
+      "has_descendant_label": null,
+      "has_gene": null,
+      "has_phenotype": null,
+      "has_phenotype_closure": null,
+      "has_phenotype_closure_label": null,
+      "has_phenotype_count": null,
+      "has_phenotype_label": null,
+      "highlighting": {
+        "name": [
+          "<em>HTR2C</em>"
+        ],
+        "symbol": [
+          "<em>HTR2C</em>"
+        ]
+      },
+      "id": "NCBIGene:428707",
+      "in_taxon": "NCBITaxon:9031",
+      "in_taxon_label": "Gallus gallus",
+      "iri": null,
+      "match_type": "exact",
+      "matched_field": "name",
+      "name": "HTR2C",
+      "namespace": "NCBIGene",
+      "narrow_synonym": null,
+      "provided_by": "ncbi_gene_9031_nodes",
+      "related_synonym": null,
+      "same_as": null,
+      "score": 57.31607,
+      "subsets": null,
+      "symbol": "HTR2C",
+      "synonym": null,
+      "synonyms": null,
+      "type": null,
+      "xref": null
+    },
+    {
+      "broad_synonym": null,
+      "category": "biolink:Gene",
+      "deprecated": null,
+      "description": "5-hydroxytryptamine receptor 2C",
+      "exact_synonym": null,
+      "file_source": "ncbi_gene_9913_nodes",
+      "full_name": "5-hydroxytryptamine receptor 2C",
+      "has_attribute": null,
+      "has_biological_sex": null,
+      "has_descendant": null,
+      "has_descendant_count": null,
+      "has_descendant_label": null,
+      "has_gene": null,
+      "has_phenotype": null,
+      "has_phenotype_closure": null,
+      "has_phenotype_closure_label": null,
+      "has_phenotype_count": null,
+      "has_phenotype_label": null,
+      "highlighting": {
+        "name": [
+          "<em>HTR2C</em>"
+        ],
+        "symbol": [
+          "<em>HTR2C</em>"
+        ]
+      },
+      "id": "NCBIGene:407134",
+      "in_taxon": "NCBITaxon:9913",
+      "in_taxon_label": "Bos taurus",
+      "iri": null,
+      "match_type": "exact",
+      "matched_field": "name",
+      "name": "HTR2C",
+      "namespace": "NCBIGene",
+      "narrow_synonym": null,
+      "provided_by": "ncbi_gene_9913_nodes",
+      "related_synonym": null,
+      "same_as": null,
+      "score": 57.31607,
+      "subsets": null,
+      "symbol": "HTR2C",
+      "synonym": null,
+      "synonyms": null,
+      "type": null,
+      "xref": null
+    },
+    {
+      "broad_synonym": null,
+      "category": "biolink:Gene",
+      "deprecated": null,
+      "description": "5-hydroxytryptamine receptor 2C",
+      "exact_synonym": null,
+      "file_source": "ncbi_gene_9823_nodes",
+      "full_name": "5-hydroxytryptamine receptor 2C",
+      "has_attribute": null,
+      "has_biological_sex": null,
+      "has_descendant": null,
+      "has_descendant_count": null,
+      "has_descendant_label": null,
+      "has_gene": null,
+      "has_phenotype": null,
+      "has_phenotype_closure": null,
+      "has_phenotype_closure_label": null,
+      "has_phenotype_count": null,
+      "has_phenotype_label": null,
+      "highlighting": {
+        "name": [
+          "<em>HTR2C</em>"
+        ],
+        "symbol": [
+          "<em>HTR2C</em>"
+        ]
+      },
+      "id": "NCBIGene:100524920",
+      "in_taxon": "NCBITaxon:9823",
+      "in_taxon_label": "Sus scrofa",
+      "iri": null,
+      "match_type": "exact",
+      "matched_field": "name",
+      "name": "HTR2C",
+      "namespace": "NCBIGene",
+      "narrow_synonym": null,
+      "provided_by": "ncbi_gene_9823_nodes",
+      "related_synonym": null,
+      "same_as": null,
+      "score": 57.31607,
+      "subsets": null,
+      "symbol": "HTR2C",
+      "synonym": null,
+      "synonyms": null,
+      "type": null,
+      "xref": null
+    },
+    {
+      "broad_synonym": null,
+      "category": "biolink:Gene",
+      "deprecated": null,
+      "description": null,
+      "exact_synonym": null,
+      "file_source": "alliance_gene_nodes",
+      "full_name": "5-hydroxytryptamine (serotonin) receptor 2C, G protein-coupled",
+      "has_attribute": null,
+      "has_biological_sex": null,
+      "has_descendant": null,
+      "has_descendant_count": null,
+      "has_descendant_label": null,
+      "has_gene": null,
+      "has_phenotype": null,
+      "has_phenotype_closure": null,
+      "has_phenotype_closure_label": null,
+      "has_phenotype_count": null,
+      "has_phenotype_label": null,
+      "highlighting": {
+        "name": [
+          "<em>htr2c</em>"
+        ],
+        "symbol": [
+          "<em>htr2c</em>"
+        ],
+        "synonym": [
+          "<em>htr2c</em>"
+        ]
+      },
+      "id": "Xenbase:XB-GENE-967634",
+      "in_taxon": "NCBITaxon:8364",
+      "in_taxon_label": "Xenopus tropicalis",
+      "iri": null,
+      "match_type": "exact",
+      "matched_field": "name",
+      "name": "htr2c",
+      "namespace": "Xenbase",
+      "narrow_synonym": null,
+      "provided_by": "alliance_gene_nodes",
+      "related_synonym": null,
+      "same_as": null,
+      "score": 34.384373,
+      "subsets": null,
+      "symbol": "htr2c",
+      "synonym": [
+        "htr2c",
+        "5-hydroxytryptamine (serotonin) receptor 2C, G protein-coupled",
+        "5-HT2C"
+      ],
+      "synonyms": null,
+      "type": "SO:0000704",
+      "xref": [
+        "UniProtKB:F7AZS9",
+        "ENSEMBL:ENSXETG00000024787",
+        "NCBI_Gene:100496012",
+        "RefSeq:KAE8584692",
+        "Xenbase:XB-GENE-967634",
+        "Xenbase:XB-GENEPAGE-967633"
+      ]
+    },
+    {
+      "broad_synonym": null,
+      "category": "biolink:Gene",
+      "deprecated": null,
+      "description": null,
+      "exact_synonym": null,
+      "file_source": "alliance_gene_nodes",
+      "full_name": "5-hydroxytryptamine receptor 2C",
+      "has_attribute": null,
+      "has_biological_sex": null,
+      "has_descendant": null,
+      "has_descendant_count": null,
+      "has_descendant_label": null,
+      "has_gene": null,
+      "has_phenotype": null,
+      "has_phenotype_closure": null,
+      "has_phenotype_closure_label": null,
+      "has_phenotype_count": null,
+      "has_phenotype_label": null,
+      "highlighting": {
+        "name": [
+          "<em>Htr2c</em>"
+        ],
+        "symbol": [
+          "<em>Htr2c</em>"
+        ],
+        "synonym": [
+          "5-<em>HTR2C</em>"
+        ]
+      },
+      "id": "RGD:2848",
+      "in_taxon": "NCBITaxon:10116",
+      "in_taxon_label": "Rattus norvegicus",
+      "iri": null,
+      "match_type": "exact",
+      "matched_field": "name",
+      "name": "Htr2c",
+      "namespace": "RGD",
+      "narrow_synonym": null,
+      "provided_by": "alliance_gene_nodes",
+      "related_synonym": null,
+      "same_as": null,
+      "score": 34.384373,
+      "subsets": null,
+      "symbol": "Htr2c",
+      "synonym": [
+        "5-HT-1C",
+        "5-HT1C",
+        "5-HT2C",
+        "5-HTR2C",
+        "5-hydroxytryptamine (serotonin) receptor 2C",
+        "5-hydroxytryptamine (serotonin) receptor 2C, G protein-coupled",
+        "5-hydroxytryptamine receptor 1C",
+        "5HT-1C",
+        "serotonin 1c receptor",
+        "serotonin receptor 2C"
+      ],
+      "synonyms": null,
+      "type": "SO:0001217",
+      "xref": [
+        "ENSEMBL:ENSRNOG00065009778",
+        "ENSEMBL:ENSRNOG00055024346",
+        "ENSEMBL:ENSRNOG00060018315",
+        "ENSEMBL:ENSRNOG00000030877",
+        "NCBI_Gene:25187",
+        "PANTHER:PTHR24247",
+        "UniProtKB:P08909",
+        "RGD:2848"
+      ]
+    },
+    {
+      "broad_synonym": null,
+      "category": "biolink:Gene",
+      "deprecated": null,
+      "description": null,
+      "exact_synonym": null,
+      "file_source": "alliance_gene_nodes",
+      "full_name": "5-hydroxytryptamine (serotonin) receptor 2C",
+      "has_attribute": null,
+      "has_biological_sex": null,
+      "has_descendant": null,
+      "has_descendant_count": null,
+      "has_descendant_label": null,
+      "has_gene": null,
+      "has_phenotype": null,
+      "has_phenotype_closure": null,
+      "has_phenotype_closure_label": null,
+      "has_phenotype_count": null,
+      "has_phenotype_label": null,
+      "highlighting": {
+        "name": [
+          "<em>Htr2c</em>"
+        ],
+        "symbol": [
+          "<em>Htr2c</em>"
+        ],
+        "synonym": [
+          "5-<em>HTR2C</em>"
+        ]
+      },
+      "id": "MGI:96281",
+      "in_taxon": "NCBITaxon:10090",
+      "in_taxon_label": "Mus musculus",
+      "iri": null,
+      "match_type": "exact",
+      "matched_field": "name",
+      "name": "Htr2c",
+      "namespace": "MGI",
+      "narrow_synonym": null,
+      "provided_by": "alliance_gene_nodes",
+      "related_synonym": null,
+      "same_as": null,
+      "score": 34.384373,
+      "subsets": null,
+      "symbol": "Htr2c",
+      "synonym": [
+        "Htr1c",
+        "5-HT2C receptor",
+        "5-HT2cR",
+        "5HT1c",
+        "SR1",
+        "5-HTR2C",
+        "5-hydroxytryptamine (serotonin) receptor 1C",
+        "5-HT2C",
+        "5HT-1C"
+      ],
+      "synonyms": null,
+      "type": "SO:0001217",
+      "xref": [
+        "ENSEMBL:ENSMUSG00000041380",
+        "NCBI_Gene:15560",
+        "PANTHER:PTHR24247",
+        "UniProtKB:B1ATN4",
+        "UniProtKB:B2RUD4",
+        "UniProtKB:P34968",
+        "UniProtKB:Q8BZI5",
+        "UniProtKB:S4R2T0",
+        "MGI:96281"
+      ]
+    },
+    {
+      "broad_synonym": null,
+      "category": "biolink:Gene",
+      "deprecated": null,
+      "description": null,
+      "exact_synonym": null,
+      "file_source": "alliance_gene_nodes",
+      "full_name": "5-hydroxytryptamine (serotonin) receptor 2C, G protein-coupled",
+      "has_attribute": null,
+      "has_biological_sex": null,
+      "has_descendant": null,
+      "has_descendant_count": null,
+      "has_descendant_label": null,
+      "has_gene": null,
+      "has_phenotype": null,
+      "has_phenotype_closure": null,
+      "has_phenotype_closure_label": null,
+      "has_phenotype_count": null,
+      "has_phenotype_label": null,
+      "highlighting": {
+        "name": [
+          "<em>htr2c.L</em>",
+          "<em>htr2c</em>.L"
+        ],
+        "symbol": [
+          "<em>htr2c.L</em>",
+          "<em>htr2c</em>.L"
+        ],
+        "synonym": [
+          "<em>htr2c.L</em>",
+          "<em>htr2c</em>.L"
+        ]
+      },
+      "id": "Xenbase:XB-GENE-17331591",
+      "in_taxon": "NCBITaxon:8355",
+      "in_taxon_label": "Xenopus laevis",
+      "iri": null,
+      "match_type": null,
+      "matched_field": null,
+      "name": "htr2c.L",
+      "namespace": "Xenbase",
+      "narrow_synonym": null,
+      "provided_by": "alliance_gene_nodes",
+      "related_synonym": null,
+      "same_as": null,
+      "score": 30.614859,
+      "subsets": null,
+      "symbol": "htr2c.L",
+      "synonym": [
+        "htr2c.L",
+        "5-hydroxytryptamine (serotonin) receptor 2C, G protein-coupled",
+        "5-HT2C"
+      ],
+      "synonyms": null,
+      "type": "SO:0000704",
+      "xref": [
+        "UniProtKB:A0A1L8F7W0",
+        "NCBI_Gene:108698473",
+        "Xenbase:XB-GENE-17331591",
+        "Xenbase:XB-GENEPAGE-967633"
+      ]
+    },
+    {
+      "broad_synonym": null,
+      "category": "biolink:Gene",
+      "deprecated": null,
+      "description": null,
+      "exact_synonym": null,
+      "file_source": "alliance_gene_nodes",
+      "full_name": "5-hydroxytryptamine (serotonin) receptor 2C, G protein-coupled",
+      "has_attribute": null,
+      "has_biological_sex": null,
+      "has_descendant": null,
+      "has_descendant_count": null,
+      "has_descendant_label": null,
+      "has_gene": null,
+      "has_phenotype": null,
+      "has_phenotype_closure": null,
+      "has_phenotype_closure_label": null,
+      "has_phenotype_count": null,
+      "has_phenotype_label": null,
+      "highlighting": {
+        "name": [
+          "<em>htr2c.S</em>"
+        ],
+        "symbol": [
+          "<em>htr2c.S</em>"
+        ],
+        "synonym": [
+          "<em>htr2c.S</em>"
+        ]
+      },
+      "id": "Xenbase:XB-GENE-6255755",
+      "in_taxon": "NCBITaxon:8355",
+      "in_taxon_label": "Xenopus laevis",
+      "iri": null,
+      "match_type": null,
+      "matched_field": null,
+      "name": "htr2c.S",
+      "namespace": "Xenbase",
+      "narrow_synonym": null,
+      "provided_by": "alliance_gene_nodes",
+      "related_synonym": null,
+      "same_as": null,
+      "score": 30.614859,
+      "subsets": null,
+      "symbol": "htr2c.S",
+      "synonym": [
+        "htr2c.S",
+        "5-hydroxytryptamine (serotonin) receptor 2C, G protein-coupled",
+        "5-HT2C"
+      ],
+      "synonyms": null,
+      "type": "SO:0000704",
+      "xref": [
+        "UniProtKB:A0A8J0TRT9",
+        "NCBI_Gene:108700167",
+        "RefSeq:XP_041431003",
+        "Xenbase:XB-GENE-6255755",
+        "Xenbase:XB-GENEPAGE-967633"
+      ]
+    },
+    {
+      "broad_synonym": null,
+      "category": "biolink:Gene",
+      "deprecated": null,
+      "description": null,
+      "exact_synonym": null,
+      "file_source": "alliance_gene_nodes",
+      "full_name": "5-hydroxytryptamine (serotonin) receptor 2C, G protein-coupled-like 2",
+      "has_attribute": null,
+      "has_biological_sex": null,
+      "has_descendant": null,
+      "has_descendant_count": null,
+      "has_descendant_label": null,
+      "has_gene": null,
+      "has_phenotype": null,
+      "has_phenotype_closure": null,
+      "has_phenotype_closure_label": null,
+      "has_phenotype_count": null,
+      "has_phenotype_label": null,
+      "highlighting": {
+        "name": [
+          "<em>htr2cl2</em>"
+        ],
+        "symbol": [
+          "<em>htr2cl2</em>"
+        ]
+      },
+      "id": "ZFIN:ZDB-GENE-120215-109",
+      "in_taxon": "NCBITaxon:7955",
+      "in_taxon_label": "Danio rerio",
+      "iri": null,
+      "match_type": null,
+      "matched_field": null,
+      "name": "htr2cl2",
+      "namespace": "ZFIN",
+      "narrow_synonym": null,
+      "provided_by": "alliance_gene_nodes",
+      "related_synonym": null,
+      "same_as": null,
+      "score": 7.598463,
+      "subsets": null,
+      "symbol": "htr2cl2",
+      "synonym": [
+        "si:ch1073-263o8.1"
+      ],
+      "synonyms": null,
+      "type": "SO:0001217",
+      "xref": [
+        "ZFIN:ZDB-GENE-120215-109",
+        "ENSEMBL:ENSDARG00000013210",
+        "PANTHER:PTHR24247",
+        "UniProtKB:A0A8M1PZA4",
+        "NCBI_Gene:798599"
+      ]
+    },
+    {
+      "broad_synonym": null,
+      "category": "biolink:Gene",
+      "deprecated": null,
+      "description": null,
+      "exact_synonym": null,
+      "file_source": "alliance_gene_nodes",
+      "full_name": "5-hydroxytryptamine (serotonin) receptor 2C, G protein-coupled-like 1",
+      "has_attribute": null,
+      "has_biological_sex": null,
+      "has_descendant": null,
+      "has_descendant_count": null,
+      "has_descendant_label": null,
+      "has_gene": null,
+      "has_phenotype": null,
+      "has_phenotype_closure": null,
+      "has_phenotype_closure_label": null,
+      "has_phenotype_count": null,
+      "has_phenotype_label": null,
+      "highlighting": {
+        "name": [
+          "<em>htr2cl1</em>"
+        ],
+        "symbol": [
+          "<em>htr2cl1</em>"
+        ]
+      },
+      "id": "ZFIN:ZDB-GENE-081104-48",
+      "in_taxon": "NCBITaxon:7955",
+      "in_taxon_label": "Danio rerio",
+      "iri": null,
+      "match_type": null,
+      "matched_field": null,
+      "name": "htr2cl1",
+      "namespace": "ZFIN",
+      "narrow_synonym": null,
+      "provided_by": "alliance_gene_nodes",
+      "related_synonym": null,
+      "same_as": null,
+      "score": 7.598463,
+      "subsets": null,
+      "symbol": "htr2cl1",
+      "synonym": [
+        "si:dkey-24g18.2"
+      ],
+      "synonyms": null,
+      "type": "SO:0001217",
+      "xref": [
+        "NCBI_Gene:100000981",
+        "ZFIN:ZDB-GENE-081104-48",
+        "PANTHER:PTHR24247",
+        "UniProtKB:A0AC58FWM0",
+        "UniProtKB:B2WSB2",
+        "UniProtKB:A0AC58FXC8",
+        "UniProtKB:A0AB32TLT9",
+        "UniProtKB:F6PDA4",
+        "ENSEMBL:ENSDARG00000018228"
+      ]
+    }
+  ],
+  "limit": 20,
+  "offset": 0,
+  "scope": null,
+  "total": 12
+}

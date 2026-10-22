@@ -1,0 +1,1351 @@
+{
+  "data": {
+    "genes": {
+      "nodes": [
+        {
+          "conceptId": "hgnc:18607",
+          "interactions": [
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL4298101",
+                "name": "LADIRATUZUMAB VEDOTIN"
+              },
+              "interactionScore": 2.926420908678395,
+              "interactionTypes": [
+                {
+                  "directionality": null,
+                  "type": "binder"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            }
+          ],
+          "longName": "solute carrier family 39 member 6",
+          "name": "SLC39A6"
+        },
+        {
+          "conceptId": "hgnc:23615",
+          "interactions": [
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:18469",
+                "name": "SPARFLOXACIN"
+              },
+              "interactionScore": 1.950947272452263,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "PRISM",
+                  "sourceDbVersion": "20-Jan-2020"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:60245",
+                "name": "IMIDAPRIL"
+              },
+              "interactionScore": 1.672240519244797,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "PRISM",
+                  "sourceDbVersion": "20-Jan-2020"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "ncit:C61091",
+                "name": "SEPANTRONIUM BROMIDE"
+              },
+              "interactionScore": 0.7803789089809055,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "PRISM",
+                  "sourceDbVersion": "20-Jan-2020"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:237058",
+                "name": "THONZONIUM"
+              },
+              "interactionScore": 1.950947272452263,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "PRISM",
+                  "sourceDbVersion": "20-Jan-2020"
+                }
+              ]
+            }
+          ],
+          "longName": "solute carrier family 35 member F2",
+          "name": "SLC35F2"
+        },
+        {
+          "conceptId": "hgnc:23363",
+          "interactions": [],
+          "longName": "solute carrier family 71 member 1",
+          "name": "SLC71A1"
+        },
+        {
+          "conceptId": "hgnc:20861",
+          "interactions": [
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:1819",
+                "name": "BUPRENORPHINE"
+              },
+              "interactionScore": 10.4050521197454,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 40328918
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "ClinPGx",
+                  "sourceDbVersion": "20260831"
+                }
+              ]
+            }
+          ],
+          "longName": "solute carrier family 39 member 10",
+          "name": "SLC39A10"
+        },
+        {
+          "conceptId": "hgnc:28983",
+          "interactions": [],
+          "longName": "transmembrane protein 94",
+          "name": "TMEM94"
+        },
+        {
+          "conceptId": "hgnc:12876",
+          "interactions": [],
+          "longName": "solute carrier family 39 member 1",
+          "name": "SLC39A1"
+        },
+        {
+          "conceptId": "hgnc:14108",
+          "interactions": [
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:2665204",
+                "name": "MOMELOTINIB"
+              },
+              "interactionScore": 3.901894544904527,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "PRISM",
+                  "sourceDbVersion": "20-Jan-2020"
+                }
+              ]
+            }
+          ],
+          "longName": "exportin 7",
+          "name": "XPO7"
+        },
+        {
+          "conceptId": "hgnc:10938",
+          "interactions": [
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:10454",
+                "name": "THIAMINE"
+              },
+              "interactionScore": 31.21515635923622,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "Drug Repurposing Hub",
+                  "sourceDbVersion": "20250818"
+                },
+                {
+                  "sourceDbName": "GuideToPharmacology",
+                  "sourceDbVersion": "2026.2"
+                }
+              ]
+            }
+          ],
+          "longName": "solute carrier family 19 member 2",
+          "name": "SLC19A2"
+        },
+        {
+          "conceptId": "hgnc:21082",
+          "interactions": [],
+          "longName": "SEC63 protein translocation regulator",
+          "name": "SEC63"
+        },
+        {
+          "conceptId": "hgnc:20692",
+          "interactions": [
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:3268",
+                "name": "DEXFENFLURAMINE"
+              },
+              "interactionScore": 1.04050521197454,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "GuideToPharmacology",
+                  "sourceDbVersion": "2026.2"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "iuphar.ligand:5095",
+                "name": "&ALPHA;-PROPYLDOPACETAMIDE"
+              },
+              "interactionScore": 1.04050521197454,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "GuideToPharmacology",
+                  "sourceDbVersion": "2026.2"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:1872441",
+                "name": "TELOTRISTAT ETHYL"
+              },
+              "interactionScore": 1.560757817961811,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:15996",
+                "name": "MIRTAZAPINE"
+              },
+              "interactionScore": 0.3901894544904527,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 18496129
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "ClinPGx",
+                  "sourceDbVersion": "20260831"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "ncit:C81112",
+                "name": "FENCLONINE"
+              },
+              "interactionScore": 0.7803789089809055,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "GuideToPharmacology",
+                  "sourceDbVersion": "2026.2"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "iuphar.ligand:11405",
+                "name": "LP533401"
+              },
+              "interactionScore": 1.560757817961811,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "Drug Repurposing Hub",
+                  "sourceDbVersion": "20250818"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "ncit:C265",
+                "name": "ANTIDEPRESSANT AGENT"
+              },
+              "interactionScore": 0.1224123778793577,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 18496129
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "ClinPGx",
+                  "sourceDbVersion": "20260831"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:3554",
+                "name": "DISULFIRAM"
+              },
+              "interactionScore": 0.1076384702042628,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 22925276
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "ClinPGx",
+                  "sourceDbVersion": "20260831"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:195085",
+                "name": "EFAVIRENZ"
+              },
+              "interactionScore": 0.2401165873787401,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 39768746
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "ClinPGx",
+                  "sourceDbVersion": "20260831"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "iuphar.ligand:5126",
+                "name": "6-FLUOROTRYPTOPHAN"
+              },
+              "interactionScore": 1.560757817961811,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "GuideToPharmacology",
+                  "sourceDbVersion": "2026.2"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "iuphar.ligand:12993",
+                "name": "TPT-004"
+              },
+              "interactionScore": 1.560757817961811,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "GuideToPharmacology",
+                  "sourceDbVersion": "2026.2"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "ncit:C171780",
+                "name": "RODATRISTAT"
+              },
+              "interactionScore": 1.560757817961811,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "GuideToPharmacology",
+                  "sourceDbVersion": "2026.2"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:343047",
+                "name": "ATAZANAVIR"
+              },
+              "interactionScore": 0.6936701413163605,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 39768746
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "ClinPGx",
+                  "sourceDbVersion": "20260831"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "chembl:CHEMBL2103855",
+                "name": "TELOTRISTAT"
+              },
+              "interactionScore": 1.560757817961811,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "chembl:CHEMBL3348963",
+                "name": "TELOTRISTAT ETIPRATE"
+              },
+              "interactionScore": 1.560757817961811,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            }
+          ],
+          "longName": "tryptophan hydroxylase 2",
+          "name": "TPH2"
+        },
+        {
+          "conceptId": "hgnc:21876",
+          "interactions": [],
+          "longName": "RAD50 interactor 1",
+          "name": "RINT1"
+        },
+        {
+          "conceptId": "hgnc:14085",
+          "interactions": [
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "ncit:C1291",
+                "name": "ANTISENSE OLIGONUCLEOTIDES"
+              },
+              "interactionScore": 0.4729569145338821,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 14574981
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "NCI",
+                  "sourceDbVersion": "14-September-2017"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL2108679",
+                "name": "OZANEZUMAB"
+              },
+              "interactionScore": 7.803789089809054,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "drugbank:DB17923",
+                "name": "ATI-355"
+              },
+              "interactionScore": 15.6075781796181,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 22544872
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "TTD",
+                  "sourceDbVersion": "2020.06.01"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "iuphar.ligand:8254",
+                "name": "OZANEZUMAB"
+              },
+              "interactionScore": 7.803789089809054,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "antibody"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "GuideToPharmacology",
+                  "sourceDbVersion": "2026.2"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL1742987",
+                "name": "ATINUMAB"
+              },
+              "interactionScore": 7.803789089809054,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "ncit:C2351",
+                "name": "HYPERBARIC OXYGEN"
+              },
+              "interactionScore": 3.121515635923622,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 12951059
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "NCI",
+                  "sourceDbVersion": "14-September-2017"
+                }
+              ]
+            }
+          ],
+          "longName": "reticulon 4",
+          "name": "RTN4"
+        },
+        {
+          "conceptId": "hgnc:11566",
+          "interactions": [
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:1191",
+                "name": "ASPIRIN"
+              },
+              "interactionScore": 0.9004372026702756,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 23736108
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "ClinPGx",
+                  "sourceDbVersion": "20260831"
+                }
+              ]
+            }
+          ],
+          "longName": "TAP binding protein",
+          "name": "TAPBP"
+        },
+        {
+          "conceptId": "hgnc:16073",
+          "interactions": [],
+          "longName": "sideroflexin 5",
+          "name": "SFXN5"
+        },
+        {
+          "conceptId": "hgnc:21483",
+          "interactions": [],
+          "longName": "solute carrier family 35 member F1",
+          "name": "SLC35F1"
+        },
+        {
+          "conceptId": "hgnc:11003",
+          "interactions": [
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:1116632",
+                "name": "TICAGRELOR"
+              },
+              "interactionScore": 0.1614577053063942,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "GuideToPharmacology",
+                  "sourceDbVersion": "2026.2"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "iuphar.ligand:13932",
+                "name": "EOS-984"
+              },
+              "interactionScore": 1.614577053063942,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "GuideToPharmacology",
+                  "sourceDbVersion": "2026.2"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "iuphar.ligand:4734",
+                "name": "KF24345"
+              },
+              "interactionScore": 1.614577053063942,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "GuideToPharmacology",
+                  "sourceDbVersion": "2026.2"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:6390",
+                "name": "LIDOFLAZINE"
+              },
+              "interactionScore": 0.8072885265319711,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "Drug Repurposing Hub",
+                  "sourceDbVersion": "20250818"
+                },
+                {
+                  "sourceDbName": "TTD",
+                  "sourceDbVersion": "2020.06.01"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "ncit:C76030",
+                "name": "DRAFLAZINE"
+              },
+              "interactionScore": 1.614577053063942,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "GuideToPharmacology",
+                  "sourceDbVersion": "2026.2"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:486610",
+                "name": "PACLITAXEL PROTEIN-BOUND"
+              },
+              "interactionScore": 0.024463288682787,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 24361227
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "ClinPGx",
+                  "sourceDbVersion": "20260831"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL418509",
+                "name": "NITROBENZYLMERCAPTOPURINE RIBONUCLEOSIDE"
+              },
+              "interactionScore": 1.614577053063942,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 19574048
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "iuphar.ligand:380",
+                "name": "CYCLOPENTYLADENOSINE"
+              },
+              "interactionScore": 0.2018221316329927,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "Drug Repurposing Hub",
+                  "sourceDbVersion": "20250818"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:253453",
+                "name": "PEGINTERFERON ALFA-2B"
+              },
+              "interactionScore": 0.1041662614879962,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 20812847
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "ClinPGx",
+                  "sourceDbVersion": "20260831"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:3521",
+                "name": "DIPYRIDAMOLE"
+              },
+              "interactionScore": 0.09314867613830435,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                },
+                {
+                  "sourceDbName": "Drug Repurposing Hub",
+                  "sourceDbVersion": "20250818"
+                },
+                {
+                  "sourceDbName": "GuideToPharmacology",
+                  "sourceDbVersion": "2026.2"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:6851",
+                "name": "METHOTREXATE"
+              },
+              "interactionScore": 0.02713574879099062,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 26237184
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "ClinPGx",
+                  "sourceDbVersion": "20260831"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:1256",
+                "name": "AZATHIOPRINE"
+              },
+              "interactionScore": 0.06727404387766427,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 26332308
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "ClinPGx",
+                  "sourceDbVersion": "20260831"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "iuphar.ligand:4511",
+                "name": "[3H]NITROBENZYLMERCAPTOPURINE RIBONUCLEOSIDE"
+              },
+              "interactionScore": 1.614577053063942,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "GuideToPharmacology",
+                  "sourceDbVersion": "2026.2"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:3008",
+                "name": "CYCLOSPORINE"
+              },
+              "interactionScore": 0.0366949330241805,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 40766322
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "ClinPGx",
+                  "sourceDbVersion": "20260831"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "ncit:C77980",
+                "name": "TECADENOSON"
+              },
+              "interactionScore": 1.076384702042628,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 23388705
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "iuphar.ligand:4512",
+                "name": "NITROBENZYLMERCAPTOPURINE RIBONUCLEOSIDE"
+              },
+              "interactionScore": 1.614577053063942,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "GuideToPharmacology",
+                  "sourceDbVersion": "2026.2"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "ncit:C584",
+                "name": "RECOMBINANT INTERFERON"
+              },
+              "interactionScore": 0.08279882323404832,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 12868960
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "NCI",
+                  "sourceDbVersion": "14-September-2017"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:1670303",
+                "name": "TIPIRACIL HYDROCHLORIDE"
+              },
+              "interactionScore": 3.229154106127884,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 28992563
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "ClinPGx",
+                  "sourceDbVersion": "20260831"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "iuphar.ligand:4513",
+                "name": "NBTGR"
+              },
+              "interactionScore": 1.614577053063942,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "GuideToPharmacology",
+                  "sourceDbVersion": "2026.2"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:120608",
+                "name": "PEGINTERFERON ALFA-2A"
+              },
+              "interactionScore": 0.1076384702042628,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 20812847
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "ClinPGx",
+                  "sourceDbVersion": "20260831"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:103",
+                "name": "MERCAPTOPURINE"
+              },
+              "interactionScore": 0.05293695255947352,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 26237184
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "ClinPGx",
+                  "sourceDbVersion": "20260831"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "ncit:C922",
+                "name": "URIDINE"
+              },
+              "interactionScore": 0.5381923510213141,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 10763851
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "NCI",
+                  "sourceDbVersion": "14-September-2017"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:12574",
+                "name": "GEMCITABINE"
+              },
+              "interactionScore": 0.05567507079530835,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 22705007
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "CIViC",
+                  "sourceDbVersion": "01-September-2026"
+                },
+                {
+                  "sourceDbName": "CGI",
+                  "sourceDbVersion": "2022-02-01"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:1310469",
+                "name": "DEHYDRATED ALCOHOL"
+              },
+              "interactionScore": 0.04139941161702416,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 15258586
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "NCI",
+                  "sourceDbVersion": "14-September-2017"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:10803",
+                "name": "TRIFLURIDINE"
+              },
+              "interactionScore": 0.1699554792698886,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 28992563
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "ClinPGx",
+                  "sourceDbVersion": "20260831"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:24698",
+                "name": "FLUDARABINE"
+              },
+              "interactionScore": 0.1009110658164963,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 23388705
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:9344",
+                "name": "RIBAVIRIN"
+              },
+              "interactionScore": 0.08072885265319711,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 20812847
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "ClinPGx",
+                  "sourceDbVersion": "20260831"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "ncit:C65389",
+                "name": "DILAZEP"
+              },
+              "interactionScore": 0.5381923510213141,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "Drug Repurposing Hub",
+                  "sourceDbVersion": "20250818"
+                },
+                {
+                  "sourceDbName": "GuideToPharmacology",
+                  "sourceDbVersion": "2026.2"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:3041",
+                "name": "CYTARABINE"
+              },
+              "interactionScore": 0.03548520995744927,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 15632314
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "NCI",
+                  "sourceDbVersion": "14-September-2017"
+                }
+              ]
+            }
+          ],
+          "longName": "solute carrier family 29 member 1 (Augustine blood group)",
+          "name": "SLC29A1"
+        },
+        {
+          "conceptId": "hgnc:12009",
+          "interactions": [],
+          "longName": "triosephosphate isomerase 1",
+          "name": "TPI1"
+        },
+        {
+          "conceptId": "hgnc:11865",
+          "interactions": [],
+          "longName": "transmembrane 9 superfamily member 2",
+          "name": "TM9SF2"
+        },
+        {
+          "conceptId": "hgnc:28480",
+          "interactions": [],
+          "longName": "solute carrier family 35 member G2",
+          "name": "SLC35G2"
+        },
+        {
+          "conceptId": "hgnc:30621",
+          "interactions": [],
+          "longName": "SPNS lysolipid transporter 1, lysophospholipid",
+          "name": "SPNS1"
+        },
+        {
+          "conceptId": "hgnc:25694",
+          "interactions": [
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "iuphar.ligand:14226",
+                "name": "NVP-BHG712"
+              },
+              "interactionScore": 4.256612230804938,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "GuideToPharmacology",
+                  "sourceDbVersion": "2026.2"
+                }
+              ]
+            }
+          ],
+          "longName": "TBC1 domain family member 15",
+          "name": "TBC1D15"
+        },
+        {
+          "conceptId": "hgnc:15698",
+          "interactions": [],
+          "longName": "ubiquitin conjugating enzyme E2 Q1",
+          "name": "UBE2Q1"
+        }
+      ]
+    }
+  }
+}
