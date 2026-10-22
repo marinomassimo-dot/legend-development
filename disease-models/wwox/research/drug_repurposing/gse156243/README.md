@@ -1,5 +1,7 @@
 # GSE156243 qualification and exploratory reversal query (scientist-b, 2026-10-22)
 
+TRANSFORMATION NOTICE: in the ten files listed in `uuid_transform_manifest.tsv` the hyphens inside UUIDs were removed (publication-gate false positive on UUID fragments); no other byte changed. The verbatim originals are under the shared gitignored `files/geo/GSE156243/tool_responses_verbatim/`; the manifest gives the verbatim sha256 and byte count of each, and `transform_uuids.py verify` re-inserts hyphens and compares byte for byte (all 10 LOSSLESS; the inverse leaves the value of the "md5" key alone because an md5 digest is also 32 hex). The scripts sigcom_query.py and sigcom_summarise.py were run on the verbatim form; to rerun them point them at the verbatim copies or restore with transform_uuids.restore.
+
 Exploratory, class level, not medical advice. LINCS output is NOT WWOX EVIDENCE. The dataset is a WWOX
 knockout versus wild-type organoid contrast; it is not a Q230P, child or rescue signature.
 
