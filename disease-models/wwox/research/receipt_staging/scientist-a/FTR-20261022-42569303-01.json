@@ -1,0 +1,38 @@
+{
+ "event_id": "FTR-20261022-42569303-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "42569303",
+  "doi": "10.1080/27694127.2026.2712797"
+ },
+ "event_at": "2026-10-22T04:23:31Z",
+ "analysis_at": "2026-10-22T04:21:31Z",
+ "analysis_time_precision": "second",
+ "workflow": "Primary read by scientist-a under REPURP-10H-R1C-A-20261022: PMC efetch XML and PDF acquired with pmc_bucket_fetch.py and the Europe PMC supplementaryFiles endpoint, whole text read section by section, every figure opened as an image, the supplement read, locators captured while the document was open and verified by deepdive_manifest.py. Class-level substitute for a route-labelling design (an ER-lumen glycoprotein), NOT WWOX EVIDENCE.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID42569303_Hoefner2026_PMC_r2.xml",
+ "source_fingerprint": "dc8822eebc5ec98bc797b35aedda7b8e342eb6ef06bb1ba4cfecf54172ea549c",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID42569303.json",
+  "disease-models/wwox/research/repurposing_10h_scientist-a_r1c_20261022.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "context QUESTION_DRIVEN (the reader held the P5 cards on the compartment and route questions); the six figures were read from the native rasters embedded in the PDF (2300 to 4800 pixels wide) downscaled for viewing; the supplementary workbook was read as ten sheets of values (per-cell counts agree with the legends, the replicate structure is not recoverable from it) and its 22 uncropped-blot images were opened as contact-sheet thumbnails, not lane by lane; limitations are inside the Discussion."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}
