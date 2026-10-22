@@ -142,8 +142,9 @@ python3 framework/scripts/deepdive_manifest.py --disease wwox --pmid <PMID> --ve
 python3 framework/scripts/paper_packet.py check --pmid <PMID>   # ok · refused · established nothing — none is a pass
 ```
 
-A blind audit is cheap — `locator_audit.py --pmid <PMID> --triples 10` is the auditor's whole
-input — and in one wave it found 23 of 101 propositions over- or undershooting after every gate.
+A blind audit is cheap — `locator_audit.py --pmid <PMID> --triples 10` is its whole input; one
+wave found 23 of 101 propositions over- or undershooting. First run `--strength-scan --pmid <PMID>`:
+words (null, mediates) your proposition has and the quote lacks; advisory.
 
 **M4 · receipt.** Never by hand. **Alone**: `fulltext_receipts.py record --receipt <event.json>`,
 then `verify`. **In a parallel wave**: never `record` (four actors appending to one hash chain

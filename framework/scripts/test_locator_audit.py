@@ -242,5 +242,71 @@ class TheRealManifestsAreAudited(unittest.TestCase):
         self.assertEqual(chosen.read_bytes(), before, "the audit wrote a real manifest")
 
 
+class TheStrengthScanReadsWords(unittest.TestCase):
+    """`--strength-scan`: advisory, read-only, exit 0. Each case is a real audit failure."""
+
+    def flags(self, proposition, snippet, loose=False):
+        return [f[0] for f in audit.strength_flags(
+            {"proposition": proposition, "snippet": snippet}, loose)]
+
+    def test_a_proposition_word_the_quote_lacks_is_flagged(self) -> None:
+        """R4b: 'the clinical endpoint was null' written over a quote that never says null."""
+        self.assertIn("null", self.flags(
+            "the clinical endpoint was null",
+            "resulting in a placebo-adjusted difference of -0.34 (-1.55, 0.87)"))
+
+    def test_a_passing_proposition_is_not_flagged(self) -> None:
+        self.assertEqual([], self.flags(
+            "the median age was 75 years", "The median age for the cohort was 75 years."))
+
+    def test_a_word_present_in_both_is_not_flagged(self) -> None:
+        self.assertEqual([], self.flags(
+            "the response was dose-dependent", "the response appeared dose-dependent"))
+
+    def test_a_dropped_hedge_is_flagged(self) -> None:
+        """R3c: 'plays a significant role in mediating' became 'mediates'."""
+        self.assertIn("hedge-dropped", self.flags(
+            "the drug mediates the protection",
+            "the drug plays a significant role in mediating the protection"))
+
+    def test_a_negation_phrase_with_its_qualifier_dropped_is_flagged(self) -> None:
+        """R4b_R2b: 'no significant difference' became 'did not differ'."""
+        self.assertIn("qualifier-dropped", self.flags(
+            "the responder proportion did not differ by age",
+            "there was no significant difference in the proportion of responders"))
+        self.assertEqual([], self.flags(
+            "no significant difference in responders",
+            "there was no significant difference in the proportion of responders"))
+
+    def test_the_noisy_quantifiers_need_loose(self) -> None:
+        self.assertEqual([], self.flags("every bar spans zero", "the bars span zero"))
+        self.assertIn("every", self.flags("every bar spans zero", "the bars span zero", loose=True))
+
+    def test_an_entry_with_no_quote_is_reported_and_nothing_is_written(self) -> None:
+        with TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            directory = root / "disease-models/wwox/research/deepdive_manifests"
+            directory.mkdir(parents=True)
+            path = directory / "PMID12345678.json"
+            path.write_text(json.dumps({"pmid": "12345678", "verbatim_locators": {"entries": [
+                {"proposition": "the endpoint was null", "snippet": ""},
+                {"proposition": "the endpoint was null", "snippet": "the endpoint was reached"},
+                {"proposition": "x", "snippet": "[figure attestation - pixels] bars"}]}}))
+            before = path.read_bytes()
+            out = io.StringIO()
+            with redirect_stdout(out):
+                status = audit.main(["--root", str(root), "--strength-scan"])
+            text = out.getvalue()
+            self.assertEqual(0, status, "an advisory scan must never fail a build")
+            self.assertIn("no quote", text)
+            self.assertRegex(text, r"#1\s+null\s+\"null\"")
+            self.assertIn("1 figure attestations and 1 entries without a quote", text)
+            self.assertEqual(before, path.read_bytes(), "the scan wrote into a manifest")
+
+    def test_every_row_names_the_audit_triple_that_justified_it(self) -> None:
+        for row in audit.STRENGTH_WORDS + audit.LOOSE_WORDS:
+            self.assertRegex(row[-1], r"\d{8} #\d+", row[0])
+
+
 if __name__ == "__main__":
     sys.exit(0 if unittest.main(exit=False, verbosity=2).result.wasSuccessful() else 1)

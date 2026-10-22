@@ -1,0 +1,46 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "TASK_ID": "PLAN-STRENGTH-SCAN-20261022",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "plan",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Advisory --strength-scan mode on locator_audit.py: strength/null/causal words in a locator proposition that its quote lacks, calibrated on the blind audits under page_adjudications/.",
+ "SCOPE": [
+  "framework/scripts/locator_audit.py (mode + STRENGTH_WORDS table)",
+  "framework/scripts/test_locator_audit.py (already in the battery)",
+  "framework/scripts/README.md routing row",
+  "framework/protocols/scientist_standing_brief.md (one sentence, +78 bytes)"
+ ],
+ "CURRENT_STATE": "COMPLETED",
+ "assigned_on": "2026-10-22",
+ "CALIBRATION": {
+  "method": "724 audited triples from locator_audit R1, R3, R3_repairs_R3b, R3c, R4b_R2b (rows) plus R4_cards (10 manifests, 8 failed named); proposition and quote taken from the manifest revision in git history just before the audit file was first committed, matched by index and quote prefix. Figure attestations (13 adverse) are not scanned. In-sample: the word list was shortened on this same data.",
+  "quote_bearing_adverse": 58,
+  "passed": 700,
+  "default": {
+   "recall": "18/58 = 31% (18/71 = 25% counting 13 unscannable figure attestations)",
+   "false_flag_rate_on_passed": "28/700 = 4.0%",
+   "precision": "39%"
+  },
+  "loose": {
+   "recall": "23/58 = 40%",
+   "false_flag_rate_on_passed": "80/700 = 11.4%"
+  },
+  "dropped": "every/all/only moved behind --loose (56 of the 80 loose false flags, marginal precision about the 8% base rate); first, replicated/confirmed, never/none, in vivo/in patients scope dropped (0 adverse of 21 passed-triple hits)",
+  "kept": "null, dose-dependent, significant, prevents/rescues, mediates/causal, hedge-dropped, qualifier-dropped (the best rule: 8 adverse vs 4 passed)",
+  "scientist_d_estimate": "7 of 15 (47%) by hand; measured 31% on quote-bearing triples of the audits"
+ },
+ "DEFAULTS_TAKEN": [
+  "mode of locator_audit.py rather than a new file; word table lives in that file with an origin per row",
+  "tests added to test_locator_audit.py, already enrolled in run_release_regressions.py, so no new enrolment",
+  "figure attestations and quote-less entries are not scanned (counted in the summary line)",
+  "pre-repair propositions recovered from git history, not from the repaired manifests"
+ ],
+ "DECISIONS_TAKEN": [
+  "shortened the default list to reach a 4% false-flag rate; --loose keeps the quantifier rows for whoever wants them",
+  "brief grew by 78 bytes (replaced the audit sentence, added the pointer)"
+ ],
+ "STOP_LOG": []
+}

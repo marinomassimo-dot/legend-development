@@ -33,6 +33,23 @@ attention.
     locator_audit.py --pmid 32000863      # one study
     locator_audit.py --strict             # non-zero exit when a quote is not found
 
+## `--strength-scan` — the WORD, not the quote (advisory, exit 0, writes nothing)
+
+    locator_audit.py --strength-scan [--pmid 32000863] [--loose]
+
+Two checks already stand: the validator proves a quote EXISTS, and the numeral check proves
+every NUMERAL of a proposition is in its quote. Neither sees a WORD. This mode lists, per
+`verbatim_locators.entries` item, the quantifier, null-result, causal or exclusivity word the
+PROPOSITION carries and the QUOTE does not (table `STRENGTH_WORDS`, each row with the audit
+triples that justified it), plus two dropped-qualifier rows: a quote that hedges ("plays a role
+in", "no SIGNIFICANT difference") under a proposition that does not. Measured against the
+blind audits (R1, R3, R3 repairs, R3c, R4 cards, R4b/R2b: 58 quote-bearing adverse triples,
+700 passed ones, in-sample): it flags about 31 percent of those adverse triples and about 4 percent
+of the passed ones (`--loose`: 40 and 11 percent). It is a
+PROMPT to re-read the quote, never a verdict; it cannot see scope, period, counting or
+direction errors, and it does NOT decide whether a quote supports its proposition - that is a
+judgement, and it needs a blind audit (`legend-locator-audit`). No baseline, no gate.
+
 `--corpus` overrides where the artifacts live, because `files/` is gitignored and exists in
 one checkout while sessions run in worktrees. Without a readable corpus this script reports
 that it could not look, which is a different statement from finding nothing wrong.
@@ -41,6 +58,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -103,6 +121,127 @@ def text_artifact(pmid: str, corpus: Path) -> Path | None:
             if best is None or candidate.stat().st_size > best.stat().st_size:
                 best = candidate
     return best
+
+
+# --- strength scan -------------------------------------------------------------------------
+# One row per word family: (label, kind, in-proposition regex, in-quote regex, excused-in-
+# proposition regex, one-line why, origin). Text is lower-cased, punctuation collapsed to single
+# spaces and padded with one space each side, so ` word ` matches whole words.
+#   kind "absent":  flag when the proposition matches and the quote does NOT match the quote regex
+#   kind "dropped": flag when the proposition matches, the quote matches, and the proposition
+#                   does not already carry the quote's qualifier (the excused regex)
+# Edit here and nowhere else. A row earns its place by an audit triple (manifest-index, audit
+# file); a row with none was dropped on 2026-10-22 (first, replicated/confirmed, never/none,
+# in vivo / in patients scope): 0 of 21 passed-triple hits were adverse, so they only cost trust.
+_QW = (r"(?:significan\w*|substantial\w*|apparent\w*|statistically|grossly|overt\w*|obvious\w*|"
+       r"clear\w*|marked\w*|appreciabl\w*|detectabl\w*|reliabl\w*)")
+_HEDGE = (r" may | might | could | suggest\w* | potential\w* | possibl\w* | likely | appear\w* | "
+          r"indicat\w* | role | associat\w* | correlat\w* | seem\w* | putative | propos\w* | "
+          r"hypothes\w* | predict\w* ")
+_NEGATIVE = (r" never | no | not | none | without | neither | nor | fail\w* | absent | lack\w* | "
+             r"n t | ns | similar | comparable | unchanged | equal ")
+STRENGTH_WORDS = (
+    ("null", "absent", r" null | no difference | did not differ | no effect | no change | failed | underpowered | under powered ",
+     _NEGATIVE, "", "null-result wording in the proposition, no negation in the quote",
+     "36538782 #4 #9 #12 and 39625912 #8 'did not differ' for an interval covering the powered effect (R4b_R2b, R4_cards)"),
+    ("dose-dependent", "absent", r" dose dependen\w* | dose response | dose proportional\w* ", r" dose ",
+     "", "dose-dependence in the proposition, no 'dose' in the quote",
+     "40665325 #21 (R3, R3 repairs)"),
+    ("significant", "absent", r" significan\w* ", r" significan\w* | p | \d \d+ ",
+     "", "'significant' in the proposition, no significance wording or statistic in the quote",
+     "38731820 #3 (R1)"),
+    ("prevents", "absent", r" prevent\w* | protect\w* | rescu\w* | abolish\w* | eliminat\w* ",
+     r" prevent\w* | protect\w* | rescu\w* | abolish\w* | eliminat\w* | block\w* | attenuat\w* | restor\w* | revers\w* | ameliorat\w* ",
+     "", "protective / rescue verb in the proposition, none in the quote",
+     "35589394 #3 'prevented the injury' (R3c)"),
+    ("mediates", "absent",
+     r" mediat\w* | drives | driven | drove | driving | causes | caused | causal\w* | proves | proved | requires | required | necessary | sufficient | responsible ",
+     r" mediat\w* | driv\w* | drove | caus\w* | prov\w* | requir\w* | necessar\w* | sufficien\w* | responsible | dependen\w* ",
+     "", "causal / strength verb in the proposition, not in the quote",
+     "35589394 #8 'mediates' (R3c)"),
+    ("hedge-dropped", "dropped",
+     r" mediates | drives | causes | proves | prevents | demonstrates | establishes | confirms | rescues | protects ",
+     _HEDGE, _HEDGE, "strong verb in the proposition while the quote hedges ('plays a role in', 'suggests')",
+     "35589394 #8 'plays a significant role in mediating' -> 'mediates' (R3c)"),
+    ("qualifier-dropped", "dropped",
+     r" did not \w+ | do not \w+ | does not \w+ | no \w+ | unchanged | not \w+ | never ",
+     r" (?:no|not|non|nor|without|neither) (?:\w+ ){0,2}?" + _QW + " ", _QW,
+     "quote says 'no SIGNIFICANT / substantial ...', proposition says plain 'no / did not'",
+     "42334048 #7, 41980417 #7 #8, 38147624 #6, 38378758 #7, 36538782 #4 (R1, R3, R4b_R2b)"),
+)
+
+
+# The quantifier rows the brief names. Measured on the blind audits (700 passed triples, 58 quote-
+# bearing adverse ones) they added 5 hits for 37 more passed triples flagged - about the base rate
+# of adverse triples, so no information - and were taken out of the default list. `--loose` puts
+# them back for a manifest whose propositions are heavy on "every / all / only".
+LOOSE_WORDS = (
+    ("every", "absent", r" every | always | all | entire ",
+     r" every | all | each | always | any | both | entire | whole | throughout | across ",
+     "", "universal quantifier in the proposition, none in the quote",
+     "41250984 #12 'every class' and 42286026 #7 'all four' (R4b_R2b); 38378758 #13 (R1)"),
+    ("only", "absent", r" only | solely | exclusively | sole ",
+     r" only | sole | solely | exclusively | alone | unique\w* | restricted | limited | specific\w* | just ",
+     "", "exclusivity in the proposition, none in the quote",
+     "31402619 #3, 38731820 #3, 38378758 #15 (R1); 29940337 #0, 42310739 #10 (R3 repairs); 42389070 #5 (R4b_R2b)"),
+)
+
+
+def _words(text: str) -> str:
+    return " " + re.sub(r"[^a-z0-9]+", " ", str(text).lower().replace("\u2019", "'")) + " "
+
+
+def strength_flags(entry: dict, loose: bool = False) -> list[tuple[str, str, str]]:
+    """(label, word in the proposition, why) for each strength word the quote lacks; [] if none."""
+    proposition, quote = _words(entry.get("proposition", "")), _words(entry.get("snippet", ""))
+    flags = []
+    for label, kind, prop_rx, quote_rx, excused_rx, why, _origin in (
+            STRENGTH_WORDS + LOOSE_WORDS if loose else STRENGTH_WORDS):
+        found = re.search(prop_rx, proposition)
+        if not found:
+            continue
+        if kind == "absent":
+            hit = not re.search(quote_rx, quote)
+        else:
+            hit = bool(re.search(quote_rx, quote)) and not re.search(excused_rx, proposition)
+        if hit:
+            flags.append((label, found.group(0).strip(), why))
+    return flags
+
+
+def strength_scan(root: Path, disease: str, pmid: str = "", loose: bool = False) -> int:
+    """Advisory: print the strength words each proposition carries that its quote does not."""
+    scanned = flagged = unquoted = attested = 0
+    for path in manifests(root, disease):
+        if pmid and pmid not in path.stem:
+            continue
+        try:
+            entries = json.loads(path.read_text(encoding="utf-8"))["verbatim_locators"]["entries"]
+        except (OSError, ValueError, KeyError, TypeError):
+            continue
+        if not isinstance(entries, list):
+            continue
+        for index, entry in enumerate(entries):
+            if not isinstance(entry, dict):
+                continue
+            quote = str(entry.get("snippet") or "").strip()
+            if not quote:
+                unquoted += 1
+                print(f"  {path.stem.removeprefix('PMID'):>10}  #{index:<3} (no quote - nothing to compare)")
+                continue
+            if quote.startswith("[figure attestation"):
+                attested += 1  # a description of pixels, not a sentence of the source
+                continue
+            scanned += 1
+            flags = strength_flags(entry, loose)
+            flagged += bool(flags)
+            for label, word, why in flags:
+                print(f"  {path.stem.removeprefix('PMID'):>10}  #{index:<3} {label:<17} \"{word}\" - {why}")
+    print(f"\nstrength scan (ADVISORY, exit 0): {scanned} quoted entries read, {flagged} with a "
+          f"word the quote lacks; {attested} figure attestations and {unquoted} entries without a "
+          f"quote not read.\nA flag is a prompt to re-read the quote against the proposition, not a "
+          f"finding; whether a quote SUPPORTS its proposition is judgement and needs a blind audit.")
+    return 0
 
 
 def audit_one(path: Path, corpus: Path) -> dict:
@@ -262,10 +401,17 @@ def main(argv: list[str] | None = None) -> int:
                         help=("with --pmid: print a BLIND audit packet instead - N sampled "
                               "(proposition, quote, anchor) triples as JSON, 0 for all, and "
                               "nothing else from the manifest (legend-locator-audit input)"))
+    parser.add_argument("--strength-scan", action="store_true",
+                        help=("advisory: per entry, the strength / negation / result / scope words "
+                              "the proposition carries and the quote lacks (honours --pmid; exit 0)"))
+    parser.add_argument("--loose", action="store_true",
+                        help="with --strength-scan: also the noisy every / all / only rows")
     parser.add_argument("--seed", default="", help="--triples sample seed (default: the PMID)")
     args = parser.parse_args(argv)
 
     root = Path(args.root).resolve()
+    if args.strength_scan:
+        return strength_scan(root, args.disease, args.pmid, args.loose)
     if args.triples is not None:
         if not args.pmid:
             parser.error("--triples needs --pmid")

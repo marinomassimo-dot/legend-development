@@ -90,6 +90,7 @@ Run everything as `python3 <path> --help` first. Paths are repo-relative.
 | You want | Run |
 |---|---|
 | does every locator's quote actually occur in the artifact it was taken from (in a worktree, pass `--corpus`; the run prints the hint when it cannot see its surfaces) — and, with `--pmid <PMID> --triples N`, the **blind packet** for a `legend-locator-audit` auditor: N reproducibly sampled (proposition, quote, anchor) triples and no other manifest field | `framework/scripts/locator_audit.py` |
+| which WORDS a locator's proposition carries that its quote lacks (null, causal, 'significant', a dropped hedge or qualifier) — advisory, exit 0, writes nothing; a prompt to re-read, never a judgement of support (`--loose` adds the noisy every / only rows) | `framework/scripts/locator_audit.py --strength-scan [--pmid <PMID>]` |
 | a paper's load-bearing citations — **how many this checkout can adjudicate** (the denominator, always printed), and the reader's `SUPPORTED` / `NOT_CONTAINED` / `CONTRADICTED` tally against it; the judgement stays with the reader | `framework/scripts/upstream_citation_census.py` |
 | which readings contradicted an already-persisted locator, and were they audited | `framework/scripts/locator_contradiction_audit.py` |
 | where the identifiers inside a locator's proposition came from | `framework/scripts/locator_identifier_provenance.py` |
