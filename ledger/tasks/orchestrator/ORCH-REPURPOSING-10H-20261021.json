@@ -78,7 +78,7 @@
     "group": "R2",
     "agentId": "afd899465e185a8d9",
     "task": "REPURP-10H-GSE156243-B-20261022",
-    "state": "RESUMED 03:2xZ after rate-limit stop (reset 02:40Z): GSE156243 qualification, branch task/repurp-10h-gse156243-b",
+    "state": "GSE156243 CLOSED AND LANDED (8e6efecc): digests match roadmap; 4 KO + 2 WT; padj<=0.01 518 up/317 down, <=0.05 1071/826; universe CONTEXT_UNRESOLVED (paper 15370 vs filter 19694); SigCom LINCS reversal INCONCLUSIVE (context dominates, 74 of top 100 from lines with no tissue annotation); independent recomputation dispatched; idle",
     "previous_agents": [
      "a85b13d3c3c5f7071",
      "a9ce64fa724e5f4ef",
@@ -185,6 +185,10 @@
    {
     "t": "2026-10-22T03:4xZ",
     "event": "scientist-c closed R3c; corrected dose statement for the multi-kinase inhibitor sent to scientist-a (P5 input): Day 5 AUC roughly proportional 3-21 mg (slope ~0.95-0.98), supralinear from 1 mg only via one patient, 21-42 mg ratio 1.27, N per cohort 1,1,3,3,3,8,5; audits dispatched on R3c and on R4b+R2b. Ids paired by launch description"
+   },
+   {
+    "t": "2026-10-22T03:5xZ",
+    "event": "GSE156243 qualified and exploratory reversal done by scientist-b (INCONCLUSIVE, context dominates; no compound recommendation); T-type reconciliation: P47T adult hippocampus n=5 tested vs GSE158681/2 P17 n=2-4 untested are different datasets, Cacna1h lower in both, Cacna1g up only in P47T, Cacna1i lower at P17; independent recompute from originals dispatched (verifier does not read the scripts first)"
    }
   ],
   "audits": {
@@ -235,6 +239,11 @@
     "file": "page_adjudications/locator_audit_R4b_R2b_20261022.md",
     "state": "RUNNING",
     "scope": "R4b ten readings incl. Table S7 WWOX row; R2b five readings and the GEO dataset reading; the interaction-test direction"
+   },
+   "GSE156243_recompute": {
+    "agentId": "ab808d4cb51880535",
+    "file": "page_adjudications/recompute_GSE156243_20261022.md",
+    "state": "RUNNING"
    }
   },
   "harness": {
