@@ -21,7 +21,7 @@ They are not a transcription slip: the numbers in each note match their own sour
 | Cacna1h | down, log2 -1.02 | lower in hippocampus (0.47, 0.73, 0.90), 0.92 in cortex |
 | Cacna1i | absent from the sheet | lower in all four (0.33 to 0.52) |
 
-**One reconciled statement.** In Wwox-deficient mouse brain bulk RNA-seq, Cacna1h mRNA is lower in the hippocampus in
+**One reconciled statement.** In Wwox-deficient mouse brain bulk RNA-seq, Cacna1h mRNA group means are lower in the hippocampus (ratios 0.47 to 0.92 at P17, partial transcript mapping, no test; softened after the blind audit) in
 both model families (adult P47T knock-in, n = 5 per group, tested; P17 null and deletion lines, n = 2 to 4 per group,
 untested ratios with partial transcript mapping). Cacna1g is higher in the adult P47T hippocampus and has no consistent
 direction at P17; Cacna1i is lower at P17 in all four comparisons and is not listed in any P47T sheet.
