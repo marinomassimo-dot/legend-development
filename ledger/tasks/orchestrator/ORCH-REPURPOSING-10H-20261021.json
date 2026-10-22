@@ -67,7 +67,7 @@
     "group": "R1",
     "agentId": "a690b0766b3bc4360",
     "task": "REPURP-10H-P5-A-20261022",
-    "state": "P5 two-path comparison (relay started 03:2xZ). Previous: deep-cards repair landed d71f3f2e, abstention-gap verdicts landed c0b91adf, receipt recorded 49602af4",
+    "state": "P5 two-path comparison LANDED (8ed0f930): 21 rows, 202 cells verified 0 problems; deep non-dominated = all five candidates (9 of 10 pairs incomparable by endpoint and genotype class), early non-dominated = all three; seven of twelve deep rows rest on one Q230P measurement counting once; plain lookup reaches only rows with no WWOX-system measurement; INCONCLUSIVE for choosing a candidate, KEEP for choosing what to measure; idle",
     "previous_agents": [
      "ab601f2e19d3a1d37",
      "a3c29605f071db51b",
@@ -189,6 +189,10 @@
    {
     "t": "2026-10-22T03:5xZ",
     "event": "GSE156243 qualified and exploratory reversal done by scientist-b (INCONCLUSIVE, context dominates; no compound recommendation); T-type reconciliation: P47T adult hippocampus n=5 tested vs GSE158681/2 P17 n=2-4 untested are different datasets, Cacna1h lower in both, Cacna1g up only in P47T, Cacna1i lower at P17; independent recompute from originals dispatched (verifier does not read the scripts first)"
+   },
+   {
+    "t": "2026-10-22T04:0xZ",
+    "event": "P5 landed; recompute of GSE156243 returned; PUBLICATION GATE BLOCK on gse156243 (service UUID fragments collide with a private-identifier digest) blocks pushes since ~03:55Z: scientist-b asked to store verbatim originals under files/ with sha256 and keep a declared hyphen-less transformed copy in the tree, lossless check required; the gate is not loosened"
    }
   ],
   "audits": {
@@ -243,7 +247,7 @@
    "GSE156243_recompute": {
     "agentId": "ab808d4cb51880535",
     "file": "page_adjudications/recompute_GSE156243_20261022.md",
-    "state": "RUNNING"
+    "state": "RETURNED: every file digest, count, threshold list, design fact, symbol count REPRODUCED; declaration precedes every drug query; two corrections (top-25 6 h claim false, 22 of 25; name-versus-signature unit for 70 of 100 and 3 of 100); universe 15,370 not reproducible by any simple rule; class labels are the reader mapping"
    }
   },
   "harness": {
