@@ -1,0 +1,181 @@
+{
+ "task": "REPURP-10H-WWOXROWS-D-20261022",
+ "note": "Search log for repurposing_10h_scientist-d_20261022c.md. Digests are SHA-256 (64 hex) of the exact file searched; for pdf supplements the searched file is a pdftotext rendering. 'source' is the path under the shared checkout.",
+ "aliases_tried": [
+  "WWOX",
+  "FRA16D",
+  "WOX1",
+  "SDR41C1",
+  "HGNC:12799",
+  "ENSG00000186153",
+  "605131",
+  "WW domain",
+  "WW-domain",
+  "WOREE",
+  "SCAR12",
+  "DEE28",
+  "EIEE28",
+  "HHCMA56",
+  "D16S432E",
+  "16q23",
+  "16q23.1",
+  "16q23.2",
+  "16q23.3",
+  "NM_016373",
+  "NM_130791",
+  "NM_001291997",
+  "NG_011976"
+ ],
+ "not_tried": [
+  "variant notation",
+  "FOR (English word)",
+  "figures and images",
+  "non-English text"
+ ],
+ "files_searched": [
+  {
+   "pmid": "35330882",
+   "searched_file": "PMID35330882_Data_Sheet_1.docx",
+   "source": "files/fulltext/PMID35330882_wwoxrows_supplement/x/Data_Sheet_1.docx",
+   "sha256_of_searched_file": "74d4cae46e76cc34dd8ab4ed7af534e0aebe410a46ed346d5c09a7596f1507cb"
+  },
+  {
+   "pmid": "37583270",
+   "searched_file": "PMID37583270_EPI4-8-1383-s001.docx",
+   "source": "files/fulltext/PMID37583270_wwoxrows_supplement/x/EPI4-8-1383-s001.docx",
+   "sha256_of_searched_file": "bb236e66a882c9a6655549771e998b7dffa27d323b70418c1e0d3fabfbfe6ebc"
+  },
+  {
+   "pmid": "38279250",
+   "searched_file": "PMID38279250_TabsuppS1.xlsx",
+   "source": "files/fulltext/PMID38279250_wwoxrows_supplement/x/ijms-25-01248-s001_x/Tab supp S1.xlsx",
+   "sha256_of_searched_file": "fb0e091f7361cb893f1367c80ad83e93aee6a3c41589ebc2d941b21596e9bf1e"
+  },
+  {
+   "pmid": "38678505",
+   "searched_file": "PMID38678505_MOESM1.txt",
+   "source": "derived: pdftotext -layout of the supplement PDF",
+   "sha256_of_searched_file": "b3052fb703a0c90548fd0024caea4e9910e99bb528000bf815ccd057802e0f17"
+  },
+  {
+   "pmid": "40126049",
+   "searched_file": "PMID40126049_CerulliIrelli2025_supplement_EPI-66-2253-s001.pdftotext-layout.txt",
+   "source": "files/fulltext/PMID40126049_CerulliIrelli2025_supplement/EPI-66-2253-s001.pdftotext-layout.txt",
+   "sha256_of_searched_file": "fd7959ffaaa18277a728597aad0758fbb1277fa17d672250268ab29df7a6c84c"
+  },
+  {
+   "pmid": "41137852",
+   "searched_file": "PMID41137852_EPI-67-272-s001.docx",
+   "source": "files/fulltext/PMID41137852_wwoxrows_supplement/x/EPI-67-272-s001.docx",
+   "sha256_of_searched_file": "0ccb9e99acc5f27672bb66043c87fc151f8c7b0a1c1374250ebd4a1202eab6b1"
+  },
+  {
+   "pmid": "41137852",
+   "searched_file": "PMID41137852_EPI-67-272-s002.docx",
+   "source": "files/fulltext/PMID41137852_wwoxrows_supplement/x/EPI-67-272-s002.docx",
+   "sha256_of_searched_file": "40c8d39d9859ee9e3863034df3abc182e96dafc2ea0ce78ec77ed0d435f6df3e"
+  },
+  {
+   "pmid": "41137852",
+   "searched_file": "PMID41137852_EPI-67-272-s003.docx",
+   "source": "files/fulltext/PMID41137852_wwoxrows_supplement/x/EPI-67-272-s003.docx",
+   "sha256_of_searched_file": "10e335085b4805a8d14f36b27d72e4aa525321a27f4b654c812b1c41c649ac84"
+  },
+  {
+   "pmid": "41713210",
+   "searched_file": "PMID41713210_cep-2025-02089-Supplementary-Table-1.txt",
+   "source": "derived: pdftotext -layout of the supplement PDF",
+   "sha256_of_searched_file": "88b3a85ee94933ac8c993bbaf792c663f1f09e3040f62d49cf19e180eea6d9df"
+  },
+  {
+   "pmid": "41713210",
+   "searched_file": "PMID41713210_cep-2025-02089-Supplementary-Table-2.txt",
+   "source": "derived: pdftotext -layout of the supplement PDF",
+   "sha256_of_searched_file": "50e441d7bed216f1ae33f98ee9bfddc9302d9a6b31e0aa8b897e4924f0008108"
+  },
+  {
+   "pmid": "41713210",
+   "searched_file": "PMID41713210_cep-2025-02089-Supplementary-Table-3.txt",
+   "source": "derived: pdftotext -layout of the supplement PDF",
+   "sha256_of_searched_file": "8286e11c24bbec629136e26e8e6b5aeeb6490cca3c6e274b624d89e83bdd94e5"
+  },
+  {
+   "pmid": "41713210",
+   "searched_file": "PMID41713210_cep-2025-02089-Supplementary-Table-4.txt",
+   "source": "derived: pdftotext -layout of the supplement PDF",
+   "sha256_of_searched_file": "35ac6b734a2c85041a6e77213b5c50d614cbad078f244b856a6323835050d0ba"
+  },
+  {
+   "pmid": "42220229",
+   "searched_file": "PMID42220229_EPI4-11-1184-s001.docx",
+   "source": "files/fulltext/PMID42220229_wwoxrows_supplement/x/EPI4-11-1184-s001.docx",
+   "sha256_of_searched_file": "5ac584d93059a32611819585493826b9dab612ec89259dcec63d308db9e4a846"
+  },
+  {
+   "pmid": "42220229",
+   "searched_file": "PMID42220229_EPI4-11-1184-s002.docx",
+   "source": "files/fulltext/PMID42220229_wwoxrows_supplement/x/EPI4-11-1184-s002.docx",
+   "sha256_of_searched_file": "7ae77e110a57cf04a89f1b8f45fbbce4dd0be2e7d4e267391d2a62cef2bab3b6"
+  },
+  {
+   "pmid": "42220229",
+   "searched_file": "PMID42220229_EPI4-11-1184-s003.docx",
+   "source": "files/fulltext/PMID42220229_wwoxrows_supplement/x/EPI4-11-1184-s003.docx",
+   "sha256_of_searched_file": "78b28b64d21a7ad435fbc5485f49bc77187c1c501b1411485d1824f2a67cc8b6"
+  },
+  {
+   "pmid": "42220229",
+   "searched_file": "PMID42220229_EPI4-11-1184-s004.docx",
+   "source": "files/fulltext/PMID42220229_wwoxrows_supplement/x/EPI4-11-1184-s004.docx",
+   "sha256_of_searched_file": "d3d4cec74f9c9bda22284677dbf2fe556d978fd3be67b8d5483a84f449b9f1cd"
+  },
+  {
+   "pmid": "42334048",
+   "searched_file": "PMID42334048_s001.txt",
+   "source": "files/supplement/PMID42334048/EPI-67-4536-s001.txt",
+   "sha256_of_searched_file": "11459b423fbe586646ab20fed12011c17cd06cac36a6f3d51fe08d1d1fb3779d"
+  },
+  {
+   "pmid": "42394473",
+   "searched_file": "PMID42394473_Karaer2026_supplement_EPD2-28-1252-s001.docx",
+   "source": "files/fulltext/PMID42394473_Karaer2026_supplement/EPD2-28-1252-s001.docx",
+   "sha256_of_searched_file": "b6fe061924ec6358536b09c48183f1a5718d0dede51079a1070263e85d8c963a"
+  },
+  {
+   "pmid": "42449462",
+   "searched_file": "PMID42449462_42466_2026_513_MOESM1_ESM.docx",
+   "source": "files/fulltext/PMID42449462_wwoxrows_supplement/x/42466_2026_513_MOESM1_ESM.docx",
+   "sha256_of_searched_file": "ca516615085938bf3740f067fe79e9728bbbc20644736528000ac25d1210f5f6"
+  },
+  {
+   "pmid": "42528014",
+   "searched_file": "PMID42528014_CNS-32-e71061-s001.xlsx",
+   "source": "files/fulltext/PMID42528014_wwoxrows_supplement/x/CNS-32-e71061-s001.xlsx",
+   "sha256_of_searched_file": "5f97e5801bc3889777a9e6a0a703f732669c311311467ee87bc67875d99dd1a2"
+  },
+  {
+   "pmid": "42541364",
+   "searched_file": "PMID42541364_EPI4-11-1635-s001.docx",
+   "source": "files/fulltext/PMID42541364_wwoxrows_supplement/x/EPI4-11-1635-s001.docx",
+   "sha256_of_searched_file": "feb367e1ea02b1629057181816bd28822e2eb4dfd4d864d23831ac43ca4cce19"
+  },
+  {
+   "pmid": "42798297",
+   "searched_file": "PMID42798297_ENE-33-e70760-s001.docx",
+   "source": "files/fulltext/PMID42798297_wwoxrows_supplement/x/ENE-33-e70760-s001.docx",
+   "sha256_of_searched_file": "19c57d6a23500da7cdd36a9de5b62390328f7e55773f9c230c827f217e77a489"
+  },
+  {
+   "pmid": "42828465",
+   "searched_file": "PMID42828465_EPI4-9999-0-s001.xlsx",
+   "source": "files/fulltext/PMID42828465_wwoxrows_supplement/x/EPI4-9999-0-s001.xlsx",
+   "sha256_of_searched_file": "6ad7d647939dd8052a4d261b776f8929fe0262ba1fa8d60261f66e4fb6b8cfd3"
+  },
+  {
+   "pmid": "42828465",
+   "searched_file": "PMID42828465_EPI4-9999-0-s002.xlsx",
+   "source": "files/fulltext/PMID42828465_wwoxrows_supplement/x/EPI4-9999-0-s002.xlsx",
+   "sha256_of_searched_file": "27cfd7325eb721ec11b395cbfaade42c196ddf8068572bbb3ea37ce436366f3b"
+  }
+ ]
+}

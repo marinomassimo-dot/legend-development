@@ -34,6 +34,54 @@
   "report"
  ],
  "DELIVERABLE": "manifests, staged receipt JSONs, commit candidates, analysis note, self-eval",
- "CURRENT_STATE": "ASSIGNED",
- "assigned_on": "2026-10-22"
+ "CURRENT_STATE": "DONE",
+ "assigned_on": "2026-10-22",
+ "TASK_ACK": {
+  "actor": "scientist-d",
+  "at": "2026-10-22T03:00:00Z",
+  "note": "Standing brief v3 read; branch task/repurp-10h-wwoxrows-d in .claude/worktrees/wwoxrows-d; context_policy QUESTION_DRIVEN; a search task, not a reading task."
+ },
+ "TASK_CLAIM": {
+  "actor": "scientist-d",
+  "at": "2026-10-22T03:00:00Z",
+  "lot": [
+   "42334048",
+   "40126049",
+   "37583270",
+   "42394473",
+   "42798297",
+   "38678505",
+   "42397117",
+   "42449462",
+   "41713210",
+   "42828465",
+   "42528014",
+   "36734057"
+  ]
+ },
+ "DEFAULTS_TAKEN": [
+  "Twelve papers counted; five further genotype-only supplements (42220229, 38279250, 42541364, 35330882, 41137852) already downloaded were searched and reported but not counted",
+  "No manifest and no new receipt: this was a supplement symbol search, not a reading, and a receipt would claim a reading not done; the one R4b receipt for 42334048 stands",
+  "Supplements fetched from the open Europe PMC supplementaryFiles route only, into files/fulltext/PMID<id>_wwoxrows_supplement/",
+  "Scratch symlink workspace used because the search tool walks files/supplement only; pdf supplements converted with pdftotext first",
+  "The R4b note was corrected in place on the all-zero S7 column (now UNDETERMINED)",
+  "Alias FOR dropped (English-word false hits)"
+ ],
+ "STOP_LOG": [],
+ "RESULT": {
+  "note": "disease-models/wwox/research/repurposing_10h_scientist-d_20261022c.md",
+  "searchlog": "disease-models/wwox/research/repurposing_10h_scientist-d_20261022c_searchlog.json",
+  "papers_counted": 12,
+  "papers_with_wwox_symbol_in_supplement": 2,
+  "wwox_direct_treatment_rows": 8,
+  "independent_upper_bound": 8,
+  "independent_lower_bound": 7,
+  "genotype_only_rows": 3,
+  "parked": [
+   "36734057 (publisher bot challenge, 403)",
+   "42397117 supplement images (not searchable)"
+  ],
+  "blind_audit": "OWED",
+  "s7_all_zero_column": "UNDETERMINED"
+ }
 }
