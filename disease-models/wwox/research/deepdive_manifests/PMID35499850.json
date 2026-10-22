@@ -3,7 +3,7 @@
  "pmid": "35499850",
  "doi": "10.1001/jamaneurol.2022.0829",
  "pmcid": "PMC9062770",
- "receipt": "FTR-20261021-35499850-01",
+ "receipt": "FTR-20261022-35499850-02",
  "context_policy": "QUESTION_DRIVEN",
  "context_policy_note": "Held before reading: the R4b task's questions (a confirmed repurposed drug; a missense precedent; an external or natural-history comparator that held up; a pre-dose drift measurement) and the early-benefit note (symptomatic benefit is not disease modification; no pharmacodynamic readout for WWOX) and the known-roads outcome vocabulary S/R/C/D. Nothing about this paper's result was held; registry comparison run after the first pass.",
  "landing": [
@@ -157,6 +157,151 @@
     "user_agent_policy": "none",
     "acquired_on": "2026-10-21",
     "derived": false
+   }
+  },
+  {
+   "path": "files/supplement/PMID35499850_r2/jamaneurol-e220829-s001.pdf",
+   "sha256": "419c79b9ab029706e00f670cc54494ffdcdb4a63041520fd3d20804ca93fdbda",
+   "kind": "supplement_binary",
+   "note": "Supplement 1: the clinical study protocol, Amendment 3.0 of 8 June 2020 (189 pages), from the PMC open-data bucket; read in its synopsis, objectives, selection criteria, statistics, amendment summary and COVID-19 appendix; the questionnaire appendices were not read.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9062770.1/jamaneurol-e220829-s001.pdf",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "derived": false,
+    "acquired_on": "2026-10-22",
+    "result_sha256": "419c79b9ab029706e00f670cc54494ffdcdb4a63041520fd3d20804ca93fdbda"
+   }
+  },
+  {
+   "path": "files/supplement/PMID35499850_r2/jamaneurol-e220829-s001.txt",
+   "sha256": "eb101cdc413158b6a48370a3d76619a856e201109b877a3bdc3f9ee9db5750dd",
+   "kind": "supplement_text",
+   "note": "Text layer of the protocol by pdftotext -layout.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdftotext",
+    "user_agent_policy": "none",
+    "derived": true,
+    "derived_from": "files/supplement/PMID35499850_r2/jamaneurol-e220829-s001.pdf",
+    "extractor": {
+     "name": "pdftotext",
+     "version": "24.02.0",
+     "call": "pdftotext -layout <pdf> - | tr '\\f' '\\n' > <txt> (page-separator form feeds replaced by newlines; no other change)"
+    },
+    "acquired_on": "2026-10-22",
+    "result_sha256": "eb101cdc413158b6a48370a3d76619a856e201109b877a3bdc3f9ee9db5750dd"
+   }
+  },
+  {
+   "path": "files/supplement/PMID35499850_r2/jamaneurol-e220829-s002.pdf",
+   "sha256": "855f19b838a6a029d7ee5e100ee1000cc2ac8b91f9748c57940129fc7c4b50c7",
+   "kind": "supplement_binary",
+   "note": "Supplement 2: Supplementary Online Content (8 pages: study design figure, forest plots, titration and tapering table, gatekeeping table), from the PMC open-data bucket; read in full.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9062770.1/jamaneurol-e220829-s002.pdf",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "derived": false,
+    "acquired_on": "2026-10-22",
+    "result_sha256": "855f19b838a6a029d7ee5e100ee1000cc2ac8b91f9748c57940129fc7c4b50c7"
+   }
+  },
+  {
+   "path": "files/supplement/PMID35499850_r2/jamaneurol-e220829-s002.txt",
+   "sha256": "0b7d4d6cbf02a6930652d8c84e992d03e3378554f7fb80835cf5cecf68c47d93",
+   "kind": "supplement_text",
+   "note": "Text layer of the Supplementary Online Content by pdftotext -layout.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdftotext",
+    "user_agent_policy": "none",
+    "derived": true,
+    "derived_from": "files/supplement/PMID35499850_r2/jamaneurol-e220829-s002.pdf",
+    "extractor": {
+     "name": "pdftotext",
+     "version": "24.02.0",
+     "call": "pdftotext -layout <pdf> - | tr '\\f' '\\n' > <txt> (page-separator form feeds replaced by newlines; no other change)"
+    },
+    "acquired_on": "2026-10-22",
+    "result_sha256": "0b7d4d6cbf02a6930652d8c84e992d03e3378554f7fb80835cf5cecf68c47d93"
+   }
+  },
+  {
+   "path": "files/supplement/PMID35499850_r2/jamaneurol-e220829-s003.pdf",
+   "sha256": "ea898101946a16b6d648664b93e8ccf7f3f20ca26c5d1b96b15e47c4a52e310a",
+   "kind": "supplement_binary",
+   "note": "Supplement 3: Data Sharing Statement (1 page), from the PMC open-data bucket; read in full.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC9062770.1/jamaneurol-e220829-s003.pdf",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "derived": false,
+    "acquired_on": "2026-10-22",
+    "result_sha256": "ea898101946a16b6d648664b93e8ccf7f3f20ca26c5d1b96b15e47c4a52e310a"
+   }
+  },
+  {
+   "path": "files/supplement/PMID35499850_r2/jamaneurol-e220829-s003.txt",
+   "sha256": "80d340dcb37e9f87b5f46c3f29869f09966858407ffe68c598a7f1fa1d941284",
+   "kind": "supplement_text",
+   "note": "Text layer of the Data Sharing Statement by pdftotext -layout.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdftotext",
+    "user_agent_policy": "none",
+    "derived": true,
+    "derived_from": "files/supplement/PMID35499850_r2/jamaneurol-e220829-s003.pdf",
+    "extractor": {
+     "name": "pdftotext",
+     "version": "24.02.0",
+     "call": "pdftotext -layout <pdf> - | tr '\\f' '\\n' > <txt> (page-separator form feeds replaced by newlines; no other change)"
+    },
+    "acquired_on": "2026-10-22",
+    "result_sha256": "80d340dcb37e9f87b5f46c3f29869f09966858407ffe68c598a7f1fa1d941284"
+   }
+  },
+  {
+   "path": "files/page_renders/PMID35499850/s002_p-2.png",
+   "sha256": "5949a7b2aacbfc8ac7f9c6fd8075a45f49b419c2efbc3ce5310184a0a9899153",
+   "kind": "figure",
+   "note": "Supplement 2 page 2 (eFigure 1, study design) rendered at 90 dpi, opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdftoppm render",
+    "user_agent_policy": "none",
+    "derived": true,
+    "derived_from": "files/supplement/PMID35499850_r2/jamaneurol-e220829-s002.pdf",
+    "extractor": {
+     "name": "pdftoppm",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 90 -f 2 -l 3 -png s002.pdf s002_p (page 2)"
+    },
+    "acquired_on": "2026-10-22",
+    "result_sha256": "5949a7b2aacbfc8ac7f9c6fd8075a45f49b419c2efbc3ce5310184a0a9899153"
+   }
+  },
+  {
+   "path": "files/page_renders/PMID35499850/s002_p-3.png",
+   "sha256": "46aba4a4f358f481ced994203603dc02e536aca74cca3fb0bbc83b4de43a0e73",
+   "kind": "figure",
+   "note": "Supplement 2 page 3 (eFigure 2, forest plots) rendered at 90 dpi, opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdftoppm render",
+    "user_agent_policy": "none",
+    "derived": true,
+    "derived_from": "files/supplement/PMID35499850_r2/jamaneurol-e220829-s002.pdf",
+    "extractor": {
+     "name": "pdftoppm",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 90 -f 2 -l 3 -png s002.pdf s002_p (page 3)"
+    },
+    "acquired_on": "2026-10-22",
+    "result_sha256": "46aba4a4f358f481ced994203603dc02e536aca74cca3fb0bbc83b4de43a0e73"
    }
   }
  ],
@@ -318,6 +463,126 @@
     "surface": "body",
     "panel_text_relation": "text_only",
     "artifact": "files/fulltext/PMID35499850_Knupp2022_PMC.xml"
+   },
+   {
+    "proposition": "NOT WWOX EVIDENCE (fenfluramine in Lennox-Gastaut syndrome, phase 3). The protocol cover page lists Amendment 3.0 (8 June 2020), Amendment 2.1 (29 July 2019), Amendment 1.0 for the rest of the world (10 January 2018) and the original protocol version 1.1 (13 July 2017).",
+    "snippet": "Date and Version of 08 June 2020 (Amendment 3.0) Study Protocol: 29 July 2019 (Amendment 2.1) 10 January 2018 (Amendment 1.0 ROW) 13 July 2017 Version 1.1 (Original Protocol)",
+    "anchor": "Protocol cover page",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID35499850_r2/jamaneurol-e220829-s001.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Amendment 3.0 removed the Vineland scale as a study assessment in Part 2 because, in the version programmed for electronic administration, the caregiver was presented with fewer questions than required to determine standard scores.",
+    "snippet": "Removal of VABS as a study assessment in Part 2; due to an error in the version programmed for electronic administration, the subject/caregiver was presented with fewer questions than required to determine standard scores.",
+    "anchor": "Protocol Appendix 11, summary of Amendment 3.0, item 1",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID35499850_r2/jamaneurol-e220829-s001.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The protocol's primary efficacy endpoint for Part 1 is the percent change in drop-seizure frequency per 28 days between the combined titration and maintenance periods and baseline.",
+    "snippet": "The primary efficacy endpoint for Part 1 is the percent change in frequency of seizures that result in drops (DSF: drop seizure frequency) per 28 days between the combined Titration and Maintenance (T+M) and Baseline periods in Cohort A.",
+    "anchor": "Protocol section 10.1.6.1",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID35499850_r2/jamaneurol-e220829-s001.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The protocol states that the sample size for Part 1 Cohort A was estimated under the assumption that adding the drug at 0.8 mg/kg/day to current therapy leads to a mean decrease in drop seizures 30 percentage points greater than placebo.",
+    "snippet": "The sample size for Part 1 Cohort A was estimated under the assumption that adding ZX008 at 0.8 mg/kg/day to current therapy will lead to a mean decrease in drop seizures that is 30 percentage points greater than adding placebo to current therapy.",
+    "anchor": "Protocol section 10.1.1",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID35499850_r2/jamaneurol-e220829-s001.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The protocol's statistics section defines the second hierarchy CGI-I endpoint as the proportion rated by the investigator as minimally, much or very much improved.",
+    "snippet": "The second key secondary endpoint – the proportion of subjects assessed by the Principal Investigator as minimally, much, or very much improved on the CGI-I – will be analyzed using a Cochran-Mantel-Haenszel test (CMH) stratified by weight strata.",
+    "anchor": "Protocol section 10.1.6.1, key secondary analyses",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID35499850_r2/jamaneurol-e220829-s001.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The protocol synopsis lists the proportion of subjects who achieve a clinically meaningful improvement, defined as much or very much improved, on the Clinical Global Impression of Improvement as assessed by the principal investigator.",
+    "snippet": "Proportion of subjects who achieve clinically-meaningful improvement (much or very much improved) in the Clinical Global Impression – Improvement as assessed by Principal Investigator comparing the ZX008 0.8 mg/kg/day and 0.2 mg/kg/day groups independently",
+    "anchor": "Protocol synopsis, key secondary endpoints",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID35499850_r2/jamaneurol-e220829-s001.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The gatekeeping table row for the global-impression step reads 'rating, as assessed by the principal investigator – Any' (the word 'Improvement' follows on the next line; the comparison with the synopsis and statistics definitions is carried by the other entries).",
+    "snippet": "rating, as assessed by the principal investigator – Any",
+    "anchor": "eTable 2, step 3",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID35499850_r2/jamaneurol-e220829-s002.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The protocol says a complete description of the statistical analyses will be available in a statistical analysis plan that will be finalized before the database is locked.",
+    "snippet": "A complete description of the statistical analyses and methods will be available in a SAP, which will be finalized before the database is locked.",
+    "anchor": "Protocol section 10.1.6",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID35499850_r2/jamaneurol-e220829-s001.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The protocol states that the drug was administered orally twice daily as an oral solution of fenfluramine hydrochloride containing 2.2 mg/mL fenfluramine.",
+    "snippet": "Fenfluramine was administered orally twice daily as an oral solution of fenfluramine hydrochloride containing 2.2 mg/mL fenfluramine.",
+    "anchor": "eFigure 1 footnote",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID35499850_r2/jamaneurol-e220829-s002.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The protocol lists trace or greater mitral or aortic valve regurgitation in subjects aged 18 or under among its listed abnormalities.",
+    "snippet": "a. Trace or greater mitral or aortic valve regurgitation in subjects ≤18 years of age",
+    "anchor": "Protocol, randomization inclusion criteria, synopsis",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID35499850_r2/jamaneurol-e220829-s001.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The protocol states that all subjects are required to have follow-ups at 3 and 6 months.",
+    "snippet": "All subjects are required to have follow-ups at 3 and 6 months.",
+    "anchor": "Protocol synopsis",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID35499850_r2/jamaneurol-e220829-s001.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The protocol states that the mean and median percent change in drop-seizure frequency will be presented and its statistical significance assessed with a Wilcoxon signed-rank test.",
+    "snippet": "Both the mean and median percent change in DSF will be presented and the statistical significance of the percent change will be assessed using a Wilcoxon signed-rank test.",
+    "anchor": "Protocol section 10.2.4.2",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID35499850_r2/jamaneurol-e220829-s001.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The protocol's data-sharing text says written requests for data by legitimate investigators, researchers or clinicians may be submitted to the sponsor.",
+    "snippet": "Written requests for data by legitimate investigators/researchers/clinicians may be submitted to Zogenix, Inc.",
+    "anchor": "Data Sharing Statement",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID35499850_r2/jamaneurol-e220829-s003.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PANEL READING, eFigure 2A (page 3): in the combined titration and maintenance period the median difference from placebo in generalised tonic-clonic seizures is about -50 for the higher dose and about -60 for the lower dose (both P below .001, 38 patients per active arm and 38 on placebo), with overlapping intervals; the lower-dose point estimate (about -60) is the larger reduction against placebo than the higher-dose one (about -50) on this seizure type, while for drop seizures the lower dose is -10.5 (95% CI -25.0 to 4.0, P .146) and the higher -19.9 (-31.0 to -8.7, P .001); tonic seizures at the higher dose are -16.9 (-34.1 to 0.4, P .060).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] eFigure 2 panel A rows 'GTC' read -50.3 (-76.7, -23.8) .001 for 0.7 mg/kg/day and -60.4 (-84.9, -36.0) < .001 for 0.2 mg/kg/day; 'Drop Seizures' -19.9 and -10.5; 'Tonic' -16.9 (-34.1, 0.4) .060.",
+    "anchor": "eFigure 2A, read as an image",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID35499850/s002_p-3.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "PANEL READING, eFigure 1 (page 2): the design has a 4-week baseline, a 2-week titration, a 12-week maintenance period and a 1-year open-label extension; 263 randomised 1:1:1 to 87, 89 and 87.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] eFigure 1 reads 'N = 263', 'Fenfluramine 0.7 mg/kg/day n = 87', 'Fenfluramine 0.2 mg/kg/day n = 89', 'Placebo n = 87'.",
+    "anchor": "eFigure 1, read as an image",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID35499850/s002_p-2.png",
+    "panel_text_relation": "panel_only"
    }
   ],
   "source_fulltext_indexed": true,

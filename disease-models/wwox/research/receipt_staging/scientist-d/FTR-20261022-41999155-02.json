@@ -1,0 +1,37 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261022-41999155-02",
+ "study_id": {
+  "pmid": "41999155",
+  "doi": "10.1002/epi.70253"
+ },
+ "analysis_at": "2026-10-22T04:47:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-d, task REPURP-R4D-D-20261022, resume of the partial receipt FTR-20261021-41999155-01 (owed: Data S2, the abbreviated protocol). The docx text (454 lines, about 468 thousand characters, of which about 383 thousand are embedded reference-manager base64 payloads in citation fields and carry no protocol content) was read in full after stripping those payloads for reading only; the protocol sections from the synopsis to the abbreviations list and the reference list heading were read; the references themselves (numbered list of citations) were not individually read. The one embedded image (the schema) was extracted and opened. Staged for the integrator, not appended.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID41999155_Jha2026_PMC.xml",
+ "source_fingerprint": "1e7a8ba2efeaab568a2b650ee870b096751df00bd6f7f0951ca313f5b8c965c7",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID41999155.json"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "manifest",
+  "Data S2 read in full apart from the reference list; schema image opened"
+ ],
+ "prior_receipt": "FTR-20261021-41999155-01",
+ "reread_reason": "inadequate_prior_coverage",
+ "event_at": "2026-10-22T04:47:00Z"
+}

@@ -1,0 +1,37 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261022-39439575-02",
+ "study_id": {
+  "pmid": "39439575",
+  "doi": "10.1212/CPJ.0000000000200391"
+ },
+ "analysis_at": "2026-10-22T04:43:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-d, task REPURP-R4D-D-20261022, resume of the partial receipt FTR-20261021-39439575-01 (owed: the five figures and eTable 1). The five figure images were obtained from the PMC image CDN addresses embedded in the saved article page and opened as images; the figure captions were read before and agree with the image order. eTable 1 (summary of published instruments) is not linked from the PMC page (its Associated Data lists only a data availability statement), the Europe PMC supplementary route answers that the record is not open access, and the publisher page refused the request (HTTP 403), so the supplement stays unavailable and is not claimed read. Staged for the integrator, not appended.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID39439575_Berg2024comm_PMC_page.html",
+ "source_fingerprint": "b300c4ee1fe1c40b105e30a833740604421e87c0856c0bdb86c2d004163ec957",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "unavailable"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID39439575.json"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "manifest",
+  "Five figure images opened; the printed p values and coefficients compared with the main text; eTable 1 unavailable"
+ ],
+ "prior_receipt": "FTR-20261021-39439575-01",
+ "reread_reason": "inadequate_prior_coverage",
+ "event_at": "2026-10-22T04:43:00Z"
+}

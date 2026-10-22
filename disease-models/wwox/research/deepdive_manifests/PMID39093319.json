@@ -3,7 +3,7 @@
  "pmid": "39093319",
  "doi": "10.1002/epi4.12975",
  "pmcid": "PMC11296097",
- "receipt": "FTR-20261021-39093319-01",
+ "receipt": "FTR-20261022-39093319-02",
  "context_policy": "QUESTION_DRIVEN",
  "context_policy_note": "Held before reading: the R4b task's questions (a confirmed repurposed drug; a missense precedent; an external or natural-history comparator that held up; a pre-dose drift measurement) and the early-benefit note (symptomatic benefit is not disease modification; no pharmacodynamic readout for WWOX) and the known-roads outcome vocabulary S/R/C/D. Nothing about this paper's result was held; registry comparison run after the first pass.",
  "landing": [
@@ -144,6 +144,96 @@
     "acquired_on": "2026-10-21",
     "derived": false
    }
+  },
+  {
+   "path": "files/supplement/PMID39093319_r2/EPI4-9-1176-s001.docx",
+   "sha256": "62a7a3ce9b464ad601a960363c1e4776e10705fcd49b9c765ad2a8ea487abcc0",
+   "kind": "supplement_binary",
+   "note": "Supplementary file 1 (Figure S1 as an embedded TIFF, legend and reference text), from the PMC open-data bucket.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11296097.1/EPI4-9-1176-s001.docx",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "derived": false,
+    "acquired_on": "2026-10-22",
+    "result_sha256": "62a7a3ce9b464ad601a960363c1e4776e10705fcd49b9c765ad2a8ea487abcc0"
+   }
+  },
+  {
+   "path": "files/supplement/PMID39093319_r2/EPI4-9-1176-s001.txt",
+   "sha256": "9d10d07392421cc201515ab3718be4bfff17ce171e73ab739b00f50effa0035c",
+   "kind": "supplement_text",
+   "note": "Text of supplementary file 1 by docx_to_text.py.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "framework/scripts/docx_to_text.py",
+    "user_agent_policy": "none",
+    "derived": true,
+    "derived_from": "files/supplement/PMID39093319_r2/EPI4-9-1176-s001.docx",
+    "extractor": {
+     "name": "framework/scripts/docx_to_text.py",
+     "version": "repository main f941c9c8",
+     "call": "python3 framework/scripts/docx_to_text.py --out <txt> <docx>"
+    },
+    "acquired_on": "2026-10-22",
+    "result_sha256": "9d10d07392421cc201515ab3718be4bfff17ce171e73ab739b00f50effa0035c"
+   }
+  },
+  {
+   "path": "files/supplement/PMID39093319_r2/EPI4-9-1176-s002.docx",
+   "sha256": "b31c89c9023364e1df943931b0e3d73adc25c0491e532d7cf0faf252e60e9042",
+   "kind": "supplement_binary",
+   "note": "Supplementary file 2 (Supplementary Tables 1 to 4: evidence levels, patient characteristics, patients with the ketogenic diet, patients with quinidine; 175 table rows), from the PMC open-data bucket; read in full.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11296097.1/EPI4-9-1176-s002.docx",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "derived": false,
+    "acquired_on": "2026-10-22",
+    "result_sha256": "b31c89c9023364e1df943931b0e3d73adc25c0491e532d7cf0faf252e60e9042"
+   }
+  },
+  {
+   "path": "files/supplement/PMID39093319_r2/EPI4-9-1176-s002.txt",
+   "sha256": "95ac7e0fc31665690b1e77c1cba70d441ada410c69830c262f77e8c1992c89e3",
+   "kind": "supplement_text",
+   "note": "Text of supplementary file 2 by docx_to_text.py.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "framework/scripts/docx_to_text.py",
+    "user_agent_policy": "none",
+    "derived": true,
+    "derived_from": "files/supplement/PMID39093319_r2/EPI4-9-1176-s002.docx",
+    "extractor": {
+     "name": "framework/scripts/docx_to_text.py",
+     "version": "repository main f941c9c8",
+     "call": "python3 framework/scripts/docx_to_text.py --out <txt> <docx>"
+    },
+    "acquired_on": "2026-10-22",
+    "result_sha256": "95ac7e0fc31665690b1e77c1cba70d441ada410c69830c262f77e8c1992c89e3"
+   }
+  },
+  {
+   "path": "files/page_renders/PMID39093319/figS1_2x.png",
+   "sha256": "a90d65545d72799ad75a0a691a463ec37c24b443e7616047b6b2cb89cfba62fe",
+   "kind": "figure",
+   "note": "Supplementary Figure S1 (mechanism schematic with benefit tallies), the embedded TIFF of supplementary file 1 rendered with PyMuPDF at 2x (1443 x 1010 px), opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "PyMuPDF render of the docx TIFF",
+    "user_agent_policy": "none",
+    "derived": true,
+    "derived_from": "files/supplement/PMID39093319_r2/EPI4-9-1176-s001.docx",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "unzip word/media/image1.tif; fitz.open(tif)[0].get_pixmap(matrix=Matrix(2,2)).save(png)"
+    },
+    "acquired_on": "2026-10-22",
+    "result_sha256": "a90d65545d72799ad75a0a691a463ec37c24b443e7616047b6b2cb89cfba62fe"
+   }
   }
  ],
  "verbatim_locators": {
@@ -267,6 +357,78 @@
     "anchor": "Figure 2",
     "surface": "figure",
     "artifact": "files/figures/PMID39093319_r2/EPI4-9-1176-g001.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "NOT WWOX EVIDENCE (KCNT1-related epilepsy, treatment review). Supplementary Table 2 gives the three phenotype groups as 135, 30 and 32 patients (197 in all).",
+    "snippet": "EIMFS (n=135) | DEE (n=30) | (AD)SHE (n=32)",
+    "anchor": "Supplementary Table 2",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID39093319_r2/EPI4-9-1176-s002.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Rows of the ketogenic-diet table (Supplementary Table 3) include the entry 'NA (we only know that it has been tried)' where no outcome is recorded.",
+    "snippet": "NA (we only know that it has been tried)",
+    "anchor": "Supplementary Table 3, benefit column",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID39093319_r2/EPI4-9-1176-s002.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A row of the ketogenic-diet table (Supplementary Table 3) is coded 'Yes' with the wording 'temporarily effective'.",
+    "snippet": "Ohba et al. 2015 (5) | 2,25 | NA | NA - between 1 month and 2 years 3 months | NA | Yes: \"temporarily effective\"",
+    "anchor": "Supplementary Table 3, benefit column",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID39093319_r2/EPI4-9-1176-s002.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A row of the ketogenic-diet table (Supplementary Table 3) is coded 'Yes' with the cohort-level wording 'most often reported to be effective' (one Bonardi row).",
+    "snippet": "Bonardi et al. (4) | 22 | NA | NA - but between 3 months and 22 years | NA | Yes: \"most often reported to be effective\"",
+    "anchor": "Supplementary Table 3, benefit column",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID39093319_r2/EPI4-9-1176-s002.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A row of the quinidine table (Supplementary Table 4) reads 'long QT at dose > 70 mg/kg/d'.",
+    "snippet": "No | long QT at dose > 70 mg/kg/d |",
+    "anchor": "Supplementary Table 4, adverse events column",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID39093319_r2/EPI4-9-1176-s002.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A row of the quinidine table (Supplementary Table 4) records a severe proliferative pulmonary and mediastinal vasculopathy resulting in life-threatening pulmonary hemorrhage.",
+    "snippet": "severe proliferative pulmonary and mediastinal vasculopathy resulting in life-threatening pulmonary hemorrhage",
+    "anchor": "Supplementary Table 4, M896K row",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID39093319_r2/EPI4-9-1176-s002.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Table 1 gives the level-4 wording 'Case-series, case-control studies, or historically controlled studies'.",
+    "snippet": "Case-series, case-control studies, or historically controlled studies",
+    "anchor": "Supplementary Table 1",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID39093319_r2/EPI4-9-1176-s002.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The legend of Supplementary Figure S1 marks in bold blue the top 4 drugs that were reported with benefits for the greatest proportion of patients.",
+    "snippet": "In bold blue: Top 4 drugs that were reported with benefits for the greatest proportion of patients",
+    "anchor": "Supplementary Figure S1 legend",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID39093319_r2/EPI4-9-1176-s001.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PANEL READING, Supplementary Figure S1: the schematic prints benefit tallies of quinidine 25 of 56 (44.6 percent), ketogenic diet 25 of 40 (printed 62.4 percent; 25 of 40 is 62.5), cannabidiol oil 6 of 12 (50 percent), vigabatrin tried in 39 of 129 with benefit for 25 percent, stiripentol 4 of 8, nitrazepam 2 of 6 and potassium bromide 8 of 20; stiripentol and nitrazepam also print the tested counts 14 and 7. The relation of the diet denominator of 40 to the 82 rows of Supplementary Table 3 and the main-text remark on cannabidiol and diet are not in this image and are carried by other entries.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Supplementary Figure S1: 'QUINIDINE: Channel blocker Benefits for 25/56 (44,6%)'; 'ketogenic diet Benefits for 25/40 (62,4%)'; 'CBD oil Benefits for 6/12 (50%)'.",
+    "anchor": "Supplementary Figure S1, read as an image",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID39093319/figS1_2x.png",
     "panel_text_relation": "panel_only"
    }
   ],

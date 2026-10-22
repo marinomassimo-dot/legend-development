@@ -1,0 +1,38 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261022-35499850-02",
+ "study_id": {
+  "pmid": "35499850",
+  "doi": "10.1001/jamaneurol.2022.0829"
+ },
+ "analysis_at": "2026-10-22T04:37:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-d, task REPURP-R4D-D-20261022, resume of the partial receipt FTR-20261021-35499850-01 (owed: three supplementary PDFs). Route: the three PDFs already on disk (SHA-256 identical to fresh PMC open-data downloads); Supplements 2 and 3 read in full with pages 2 and 3 rendered and opened as images; the 189-page protocol read in its cover, synopsis, objectives, selection criteria, statistics (Part 1 and Part 2), amendment summary and COVID-19 appendix; the questionnaire appendices and the visit-schedule and procedure chapters were not read, so supplementary stays captions_only and depth partial.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID35499850_Knupp2022_PMC.xml",
+ "source_fingerprint": "240acee571f4112120e540d00671c84fcb2e0c7b8adde8112f30b0ac1c0e434d",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "captions_only"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID35499850.json"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "manifest",
+  "Supplements 2 and 3 read in full; protocol read in part",
+  "eFigures 1-2 opened as images"
+ ],
+ "prior_receipt": "FTR-20261021-35499850-01",
+ "reread_reason": "inadequate_prior_coverage",
+ "event_at": "2026-10-22T04:37:00Z"
+}

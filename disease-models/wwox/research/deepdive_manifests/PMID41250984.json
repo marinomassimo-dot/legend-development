@@ -3,7 +3,7 @@
  "pmid": "41250984",
  "doi": "10.1002/epi4.70192",
  "pmcid": "PMC12903803",
- "receipt": "FTR-20261021-41250984-01",
+ "receipt": "FTR-20261022-41250984-02",
  "context_policy": "QUESTION_DRIVEN",
  "context_policy_note": "Held before reading: the R4b task's questions (a confirmed repurposed drug; a missense precedent; an external or natural-history comparator that held up; a pre-dose drift measurement) and the early-benefit note (symptomatic benefit is not disease modification; no pharmacodynamic readout for WWOX) and the known-roads outcome vocabulary S/R/C/D. Nothing about this paper's result was held; registry comparison run after the first pass.",
  "landing": [
@@ -144,6 +144,156 @@
     "acquired_on": "2026-10-21",
     "derived": false
    }
+  },
+  {
+   "path": "files/supplement/PMID41250984_r2/EPI4-11-190-s001.pdf",
+   "sha256": "19012b2f4ed75b24cb5467516d4f64268fd74238a433a0cd90b6a10f58fd142e",
+   "kind": "supplement_binary",
+   "note": "Supplemental Information (12 pages: Figures S1 to S5, Table S1 phenotype severity score questions, Table S2 primers), from the PMC open-data bucket; read in full.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12903803.1/EPI4-11-190-s001.pdf",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "derived": false,
+    "acquired_on": "2026-10-22",
+    "result_sha256": "19012b2f4ed75b24cb5467516d4f64268fd74238a433a0cd90b6a10f58fd142e"
+   }
+  },
+  {
+   "path": "files/supplement/PMID41250984_r2/EPI4-11-190-s001.txt",
+   "sha256": "254b210cb9f2ef4e2a69ccccca656e1907bd3eea17ff115307b6bc5a5351c54b",
+   "kind": "supplement_text",
+   "note": "Text layer of the Supplemental Information by pdftotext -layout.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdftotext",
+    "user_agent_policy": "none",
+    "derived": true,
+    "derived_from": "files/supplement/PMID41250984_r2/EPI4-11-190-s001.pdf",
+    "extractor": {
+     "name": "pdftotext",
+     "version": "24.02.0",
+     "call": "pdftotext -layout <pdf> - | tr '\\f' '\\n' > <txt> (page-separator form feeds replaced by newlines; no other change)"
+    },
+    "acquired_on": "2026-10-22",
+    "result_sha256": "254b210cb9f2ef4e2a69ccccca656e1907bd3eea17ff115307b6bc5a5351c54b"
+   }
+  },
+  {
+   "path": "files/supplement/PMID41250984_r2/EPI4-11-190-s002.xlsx",
+   "sha256": "8276af2023729ed53544d7627721e3b6df5afb24aa18f56bba663a6b9446ce07",
+   "kind": "supplement_binary",
+   "note": "Dataset S1 (one sheet, 48 rows: quantitative functional properties of the KCNQ2 variants, homozygous and heterozygous, with functional class and dominant-negative flag), from the PMC open-data bucket; read in full.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12903803.1/EPI4-11-190-s002.xlsx",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "derived": false,
+    "acquired_on": "2026-10-22",
+    "result_sha256": "8276af2023729ed53544d7627721e3b6df5afb24aa18f56bba663a6b9446ce07"
+   }
+  },
+  {
+   "path": "files/supplement/PMID41250984_r2/EPI4-11-190-s002.txt",
+   "sha256": "002363d8731b4d3d69d97c8a9310f5c4e7ef1eb4bb7ee3fadb52d304357bfc7e",
+   "kind": "supplement_text",
+   "note": "Text of Dataset S1 by xlsx_to_text.py.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "framework/scripts/xlsx_to_text.py",
+    "user_agent_policy": "none",
+    "derived": true,
+    "derived_from": "files/supplement/PMID41250984_r2/EPI4-11-190-s002.xlsx",
+    "extractor": {
+     "name": "framework/scripts/xlsx_to_text.py",
+     "version": "repository main f941c9c8",
+     "call": "python3 framework/scripts/xlsx_to_text.py <xlsx> > <txt>"
+    },
+    "acquired_on": "2026-10-22",
+    "result_sha256": "002363d8731b4d3d69d97c8a9310f5c4e7ef1eb4bb7ee3fadb52d304357bfc7e"
+   }
+  },
+  {
+   "path": "files/page_renders/PMID41250984/s001_p05.png",
+   "sha256": "2ca2dce025741cd356ff14693828f2b44c41938f7b330f59c62d5a7592df073b",
+   "kind": "figure",
+   "note": "Supplemental page 5 (Figure S3A and B, homozygous variants) rendered at 80 dpi, opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdftoppm render",
+    "user_agent_policy": "none",
+    "derived": true,
+    "derived_from": "files/supplement/PMID41250984_r2/EPI4-11-190-s001.pdf",
+    "extractor": {
+     "name": "pdftoppm",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 80 -png s001.pdf p (page 5)"
+    },
+    "acquired_on": "2026-10-22",
+    "result_sha256": "2ca2dce025741cd356ff14693828f2b44c41938f7b330f59c62d5a7592df073b"
+   }
+  },
+  {
+   "path": "files/page_renders/PMID41250984/s001_p06.png",
+   "sha256": "ad30df7a5810ef74ae96f472d4807a1226e8837120b3f2e25e649c10a66e60ab",
+   "kind": "figure",
+   "note": "Supplemental page 6 (Figure S3C and D, heterozygous variants) rendered at 80 dpi, opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdftoppm render",
+    "user_agent_policy": "none",
+    "derived": true,
+    "derived_from": "files/supplement/PMID41250984_r2/EPI4-11-190-s001.pdf",
+    "extractor": {
+     "name": "pdftoppm",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 80 -png s001.pdf p (page 6)"
+    },
+    "acquired_on": "2026-10-22",
+    "result_sha256": "ad30df7a5810ef74ae96f472d4807a1226e8837120b3f2e25e649c10a66e60ab"
+   }
+  },
+  {
+   "path": "files/page_renders/PMID41250984/s001_p07.png",
+   "sha256": "b1d41720eecfdad0845a3a433f4aa2e7ed2312b57e15f9e7a4d13b81d1839d53",
+   "kind": "figure",
+   "note": "Supplemental page 7 (Figure S4, retigabine) rendered at 80 dpi, opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdftoppm render",
+    "user_agent_policy": "none",
+    "derived": true,
+    "derived_from": "files/supplement/PMID41250984_r2/EPI4-11-190-s001.pdf",
+    "extractor": {
+     "name": "pdftoppm",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 80 -png s001.pdf p (page 7)"
+    },
+    "acquired_on": "2026-10-22",
+    "result_sha256": "b1d41720eecfdad0845a3a433f4aa2e7ed2312b57e15f9e7a4d13b81d1839d53"
+   }
+  },
+  {
+   "path": "files/page_renders/PMID41250984/s001_p08.png",
+   "sha256": "0b542fdd3b6f05df36dbbd993d9dc2de2acd7178b949ae8c06c2f4bb9bc412af",
+   "kind": "figure",
+   "note": "Supplemental page 8 (Figure S5, severity score by age) rendered at 80 dpi, opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdftoppm render",
+    "user_agent_policy": "none",
+    "derived": true,
+    "derived_from": "files/supplement/PMID41250984_r2/EPI4-11-190-s001.pdf",
+    "extractor": {
+     "name": "pdftoppm",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 80 -png s001.pdf p (page 8)"
+    },
+    "acquired_on": "2026-10-22",
+    "result_sha256": "0b542fdd3b6f05df36dbbd993d9dc2de2acd7178b949ae8c06c2f4bb9bc412af"
+   }
   }
  ],
  "verbatim_locators": {
@@ -271,6 +421,70 @@
     "anchor": "Figure 1",
     "surface": "figure",
     "artifact": "files/figures/PMID41250984_r2/EPI4-11-190-g001.jpg",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "NOT WWOX EVIDENCE (KCNQ2 developmental and epileptic encephalopathy, parent survey plus cell electrophysiology). Dataset S1 is titled 'Quantitative functional properties of KCNQ2 variants'.",
+    "snippet": "Dataset S1 - Quantitative functional properties of KCNQ2 variants",
+    "anchor": "Dataset S1, title row",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID41250984_r2/EPI4-11-190-s002.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Figure S3 legend states that average whole-cell current densities at +40 mV from CHO-Q3 cells expressing epilepsy-associated KCNQ2 variants in the homozygous state are quantified relative to the wild-type channel measured in parallel.",
+    "snippet": "Average whole-cell current densities recorded at +40 mV from CHO-Q3 cells electroporated with epilepsy-associated KCNQ2 variants expressed in the homozygous state quantified relative to the WT channel measured in parallel (n = 10-77).",
+    "anchor": "Figure S3 legend, panel A",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID41250984_r2/EPI4-11-190-s001.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Four variants (E123K, D212E, A235V, G301S) with more than 30 percent of wild-type current in the homozygous state were not tested in the heterozygous state, so the heterozygous series is selected by the homozygous result.",
+    "snippet": "Four variants (E123K, D212E, A235V, G301S) that had current densities greater than 30% of WT in the homozygous state were not tested in the heterozygous state.",
+    "anchor": "Figure S3 continued, legend C and D",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID41250984_r2/EPI4-11-190-s001.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The supplement's severity-score key states that highlighted answers are scored 1 and all others 0.",
+    "snippet": "Highlighted answers are scored 1; all others are scored 0.",
+    "anchor": "Table S1 heading",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID41250984_r2/EPI4-11-190-s001.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The supplement states that data for R207W and T274M were previously published.",
+    "snippet": "Data for R207W and T274M were previously published.23",
+    "anchor": "Figure S4 legend",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID41250984_r2/EPI4-11-190-s001.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PANEL READING, Figure S4 (page 7): with 10 micromolar retigabine the heterozygous R207W and L292P curves rise above the wild-type curve, the D282N curve rises to about the wild-type level, and the T274M curve stays below the wild-type curve though above the untreated variant curve; four variants, with error bars on the points, no sample size printed and no statistics on the figure.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure S4 panels R207W, T274M, D282N, L292P with WT|WT circles, WT|variant squares and WT|variant +retigabine orange diamonds; the T274M orange curve ends below the WT curve.",
+    "anchor": "Figure S4, read as an image",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID41250984/s001_p07.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "PANEL READING, Figure S5 (page 8): the phenotype severity score by age band (under 2, 2 to 4.9, 5 to 9.9, 10 and older) is a bar chart with individual points of about 8 to 12 per band, bars at about 1.2, 2.0, 2.3 and 2.0 on an axis that ends at 6 (the highest point is about 5); the bars are not labelled as means, so a difference of about one point between bands is read from bar heights; no test is shown.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure S5 axis 'PSS' 0 to 6 with bands '< 2 y', '2-4.9 y', '5-9.9 y', '10 and older' and filled points per band.",
+    "anchor": "Figure S5, read as an image",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID41250984/s001_p08.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "PANEL READING, Figure S3 panels A and B and C and D (pages 5 and 6): most variants sit well below 1.0 of wild-type peak current at +40 mV in the homozygous panels (A) and the heterozygous panels (C) with individual cells scattered up to 2 to 5 fold; in the activation-shift panels some variants (E123K and D212E in panel B, about +12 and +14 mV) are well away from zero, many are 'nd', and the heterozygous shifts (panel D) are mostly within a few millivolts of zero; the plots carry no statistics.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure S3 panels A-D list variants from E123K to R581G with open circles per cell, larger filled mean circles, dashed line at 1.0 and nd marks.",
+    "anchor": "Figure S3, read as images",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID41250984/s001_p05.png",
     "panel_text_relation": "panel_only"
    }
   ],

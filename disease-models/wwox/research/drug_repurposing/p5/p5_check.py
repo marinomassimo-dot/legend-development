@@ -29,8 +29,6 @@ for path in ("RECUPERO_PROFONDO", "BENEFICIO_PRECOCE"):
     for r in cells[path]:
         card = json.load(open(os.path.join(DRUG, r["card_file"])))
         for dim, c in r["dims"].items():
-            if dim == "exposure_proportionality_SUPERSEDED":
-                continue
             n += 1
             if c["card_field"] is None:
                 if c["value"] != "UNKNOWN": bad.append(f"{r['id']} {dim}: no field but value {c['value'][:30]}")

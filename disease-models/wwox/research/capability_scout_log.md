@@ -1279,3 +1279,15 @@ assertions keyed by endpoint. Cost: hours. **Cost / API / privacy risk:** none.
 **Cost / API / privacy risk:** none; no keyed API, no unlawful source.
 
 **Next surgical micro-step:** none required.
+
+## 2026-10-22 · scientist-d · R4d (repurposing group R4, lot 3)
+
+**Gap (with evidence).** Resuming seven manifests needed the same scratch code seven times (a builder that appends artifacts and locators, a figure fetch from the image addresses embedded in a saved article page, a stripper for reference-manager payloads in a Word supplement); the blind audit then narrowed 57 of 87 propositions that borrowed a subject or predicate from the sentence next to the quote.
+
+**CHANGE = NONE.** The scratch helpers are session-local and not yet shared by three Scientists; the narrowing lesson is a drafting habit (write the proposition from the quote), recorded in the self-evaluation.
+
+**Named, not built.** A shared resume-manifest builder that checks, before writing, that every scope word of a proposition occurs in its snippet.
+
+**Cost / API / privacy risk:** none; no keyed API, no unlawful source (a publisher refusal was not circumvented).
+
+**Next surgical micro-step:** none required.

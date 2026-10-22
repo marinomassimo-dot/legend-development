@@ -3,7 +3,7 @@
  "pmid": "41999155",
  "doi": "10.1002/epi.70253",
  "pmcid": "PMC13360919",
- "receipt": "FTR-20261021-41999155-01",
+ "receipt": "FTR-20261022-41999155-02",
  "context_policy": "QUESTION_DRIVEN",
  "context_policy_note": "Held before reading: the batch selection file's group R4 question for this paper, the early-benefit note (symptomatic benefit is not disease modification; no pharmacodynamic readout for WWOX) and the known-roads outcome vocabulary S/R/C/D. Nothing about this paper's result was held; registry comparison run after the first pass.",
  "landing": [
@@ -248,6 +248,26 @@
      "call": "python3 framework/scripts/docx_to_text.py --out <txt> <docx>"
     }
    }
+  },
+  {
+   "path": "files/page_renders/PMID41999155/s002media/image1.png",
+   "sha256": "f9d1698efdf21eb18f25754e76d4530821e502abe8b425ad3e0b8ef15264cb8f",
+   "kind": "figure",
+   "note": "The one embedded image of Data S2 (the trial schema), extracted from the docx and opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "python zipfile extraction",
+    "user_agent_policy": "none",
+    "derived": true,
+    "derived_from": "files/supplement/PMID41999155_r2/EPI-67-3644-s002.docx",
+    "extractor": {
+     "name": "python zipfile",
+     "version": "3.12",
+     "call": "zipfile.ZipFile(docx).read('word/media/image1.png')"
+    },
+    "acquired_on": "2026-10-22",
+    "result_sha256": "f9d1698efdf21eb18f25754e76d4530821e502abe8b425ad3e0b8ef15264cb8f"
+   }
   }
  ],
  "verbatim_locators": {
@@ -471,6 +491,110 @@
     "anchor": "Supplementary Figure S1",
     "surface": "figure",
     "artifact": "files/page_renders/PMID41999155/s001media/image1.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "NOT WWOX EVIDENCE (single-participant fluoxetine protocol, KCNC1-related disorder, abbreviated protocol for publication). The protocol lists long QT syndrome, including acquired long QT syndrome, and a family history of QT prolongation (in its exclusion criteria, per the anchor).",
+    "snippet": "Long QT syndrome including acquired long QT syndrome (e.g., due to concomitant use of a drug that prolongs the QT); a family history of QT prolongation",
+    "anchor": "Data S2, 5.2 Exclusion Criteria",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID41999155_r2/EPI-67-3644-s002.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The protocol unblinds parent-report measures and the clinician global rating in weeks 0 to 8 (known placebo).",
+    "snippet": "Parent report measures and CGI-I assessed during weeks 0-8 will be unblinded to family and study doctor (known placebo)",
+    "anchor": "Data S2, 6.3 Randomization and Blinding",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID41999155_r2/EPI-67-3644-s002.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The protocol unblinds the developmental assessments at month 7 (known active treatment).",
+    "snippet": "developmental assessments at month 7 will be unblinded to the family and study doctor (known active treatment)",
+    "anchor": "Data S2, 6.3 Randomization and Blinding",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID41999155_r2/EPI-67-3644-s002.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The protocol itself says the placebo lead-in and randomized start do not completely blind the active treatment period.",
+    "snippet": "While placebo lead-in and randomized start moment does not completely blind to the active treatment period",
+    "anchor": "Data S2, 4.2 Scientific Rationale for Study Design",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID41999155_r2/EPI-67-3644-s002.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The protocol has no data safety monitoring board, giving the individualized nature of the study as the reason.",
+    "snippet": "Given the individualized nature of the study, there will be no Data Safety Monitoring Board (DSMB).",
+    "anchor": "Data S2, 11.1.4 Safety Oversight",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID41999155_r2/EPI-67-3644-s002.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The protocol did not include fluoxetine pharmacokinetic measurement and gives three factors for that choice.",
+    "snippet": "Extrapolating from these data, our rationale for not including fluoxetine pharmacokinetics was based on three factors.",
+    "anchor": "Data S2, 6.1.2 Pharmacokinetics and Metabolism",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID41999155_r2/EPI-67-3644-s002.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The protocol states that doses will not exceed 5 mg per day in this study.",
+    "snippet": "Doses will not exceed 5 mg per day in this study.",
+    "anchor": "Data S2, 6.1.4 Dose Escalation and Modifications",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID41999155_r2/EPI-67-3644-s002.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The protocol states that recruitment is established because the family sought out the collaboration and co-designed the protocol.",
+    "snippet": "Recruitment is established as this family sought out this collaboration and has co-designed the protocol with investigators.",
+    "anchor": "Data S2, 5.3 Recruitment and Retention",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID41999155_r2/EPI-67-3644-s002.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The protocol's rationale text reads 'A 2023 publication by Ambrosino and colleagues described a clinical case in Italy of a child with epilepsy and a de novo heterozygous missense variant in KCNC1' (treatment and variant follow in the next sentence).",
+    "snippet": "A 2023 publication by Ambrosino and colleagues described a clinical case in Italy of a child with epilepsy and a de novo heterozygous missense variant in KCNC1",
+    "anchor": "Data S2, 2.2 Background, Rationale for fluoxetine",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID41999155_r2/EPI-67-3644-s002.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The protocol records, for one prior child with a gain-of-function KCNC1 variant, a single plasma concentration at the starting and target dose.",
+    "snippet": "In the prior trial of fluoxetine in a 4.5-year-old child with a gain of function variant in KCNC1, the starting and target dose of 6 mg per day resulted a plasma concentration of 171.3 ng/ml",
+    "anchor": "Data S2, 6.1.2 Pharmacokinetics and Metabolism, Inference paragraph",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID41999155_r2/EPI-67-3644-s002.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The protocol gives the expected duration of participation as 32 to 40 weeks in the end-of-study definition.",
+    "snippet": "The expected duration of participation is 32 to 40 weeks.",
+    "anchor": "Data S2, 4.3 End of Study Definition",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID41999155_r2/EPI-67-3644-s002.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The protocol's synopsis gives the study duration as 32 to 42 weeks (the end-of-study definition in Data S2 gives 32 to 40 weeks in another entry).",
+    "snippet": "Study Duration: | 32 to 42 weeks",
+    "anchor": "Data S2, 1.1 Synopsis",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID41999155_r2/EPI-67-3644-s002.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PANEL READING, Data S2 schema (embedded image): a bar from left to right labelled Baseline, Placebo, Random start, Treatment, Random stop, Placebo, over an axis marked 2 months, 4 months, 8 months and 10-11 months; the treatment block ends at the 8 month mark and the second placebo block ends at 10-11 months.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Schema bar: Baseline, Placebo, Random start, Treatment, Random stop, Placebo; axis ticks 2 months, 4 months, 8 months, 10-11 months",
+    "anchor": "Data S2, Schema image",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID41999155/s002media/image1.png",
     "panel_text_relation": "panel_only"
    }
   ],

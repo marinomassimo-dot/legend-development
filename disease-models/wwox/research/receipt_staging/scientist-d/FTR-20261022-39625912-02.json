@@ -1,0 +1,37 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261022-39625912-02",
+ "study_id": {
+  "pmid": "39625912",
+  "doi": "10.1371/journal.pone.0312936"
+ },
+ "analysis_at": "2026-10-22T04:46:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-d, task REPURP-R4D-D-20261022, resume of the partial receipt FTR-20261021-39625912-01 (owed: the 56-page protocol). The protocol text layer (pages 1 to 47, including appendices 1 to 8) was read in full; appendices 9 to 11 (pages 48 to 56, scanned ethics approvals and member lists) rendered and opened as images; the dates and decisions on pages 48, 49, 51 and 55 are attested, the member lists on pages 50 and 52 to 54 and 56 were only glanced at and no claim rests on them. Staged for the integrator, not appended.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID39625912_Wied2024_PMC.xml",
+ "source_fingerprint": "323ec2e26426921ac05359d9ffba50b954efc56fbd4b1447b51444e1eccfdae3",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID39625912.json"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "manifest",
+  "Protocol read to page 47 and pages 48 to 49 as images; pages 48-56 scanned approvals opened as images"
+ ],
+ "prior_receipt": "FTR-20261021-39625912-01",
+ "reread_reason": "inadequate_prior_coverage",
+ "event_at": "2026-10-22T04:46:00Z"
+}

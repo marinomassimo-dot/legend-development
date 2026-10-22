@@ -3,7 +3,7 @@
  "pmid": "39625912",
  "doi": "10.1371/journal.pone.0312936",
  "pmcid": "PMC11614242",
- "receipt": "FTR-20261021-39625912-01",
+ "receipt": "FTR-20261022-39625912-02",
  "context_policy": "QUESTION_DRIVEN",
  "context_policy_note": "Held before reading: the batch selection file's group R4 question for this paper, the early-benefit note (symptomatic benefit is not disease modification; no pharmacodynamic readout for WWOX) and the known-roads outcome vocabulary S/R/C/D. Nothing about this paper's result was held; registry comparison run after the first pass.",
  "landing": [
@@ -200,6 +200,86 @@
      "version": "24.02.0",
      "call": "pdfimages -f 7 -l 7 -png <pdf> p7img"
     }
+   }
+  },
+  {
+   "path": "files/page_renders/PMID39625912/hi-48.png",
+   "sha256": "306a14c4299fd15f84fe350c431e1292abf7619fc451b74170a18060bd956ec0",
+   "kind": "figure",
+   "note": "Protocol page 48 (Appendix 9, ethics committee resolution, scanned image with no text layer) rendered at 90 dpi, opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdftoppm render",
+    "user_agent_policy": "none",
+    "derived": true,
+    "derived_from": "files/supplement/PMID39625912_r2/pone.0312936.s001.pdf",
+    "extractor": {
+     "name": "pdftoppm",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 90 -f 48 -l 50 -png s001.pdf hi (page 48)"
+    },
+    "acquired_on": "2026-10-22",
+    "result_sha256": "306a14c4299fd15f84fe350c431e1292abf7619fc451b74170a18060bd956ec0"
+   }
+  },
+  {
+   "path": "files/page_renders/PMID39625912/hi-49.png",
+   "sha256": "e952bfe11c4bd608e5a30113809787eac79d00778c8b8abf5433d39e60ea2e86",
+   "kind": "figure",
+   "note": "Protocol page 49 (Appendix 9, second page of the resolution) rendered at 90 dpi, opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdftoppm render",
+    "user_agent_policy": "none",
+    "derived": true,
+    "derived_from": "files/supplement/PMID39625912_r2/pone.0312936.s001.pdf",
+    "extractor": {
+     "name": "pdftoppm",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 90 -f 48 -l 50 -png s001.pdf hi (page 49)"
+    },
+    "acquired_on": "2026-10-22",
+    "result_sha256": "e952bfe11c4bd608e5a30113809787eac79d00778c8b8abf5433d39e60ea2e86"
+   }
+  },
+  {
+   "path": "files/page_renders/PMID39625912/hj-51.png",
+   "sha256": "0ef771c34b3f0084f87412d8cfcd916be309904ca57641b45766e6a490570db6",
+   "kind": "figure",
+   "note": "Protocol page 51 (Appendix 10, Rome ethics committee notice) rendered at 80 dpi, opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdftoppm render",
+    "user_agent_policy": "none",
+    "derived": true,
+    "derived_from": "files/supplement/PMID39625912_r2/pone.0312936.s001.pdf",
+    "extractor": {
+     "name": "pdftoppm",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 80 -f 51 -l 56 -png s001.pdf hj (page 51)"
+    },
+    "acquired_on": "2026-10-22",
+    "result_sha256": "0ef771c34b3f0084f87412d8cfcd916be309904ca57641b45766e6a490570db6"
+   }
+  },
+  {
+   "path": "files/page_renders/PMID39625912/hj-55.png",
+   "sha256": "a19b7cb306ddec4875dbf4e1549669ac2acb6719b906cc089fb0250cd0983089",
+   "kind": "figure",
+   "note": "Protocol page 55 (Appendix 11, Prague ethics committee opinion) rendered at 80 dpi, opened as an image.",
+   "acquisition_recipe": {
+    "http_method": "GET",
+    "tier": "pdftoppm render",
+    "user_agent_policy": "none",
+    "derived": true,
+    "derived_from": "files/supplement/PMID39625912_r2/pone.0312936.s001.pdf",
+    "extractor": {
+     "name": "pdftoppm",
+     "version": "24.02.0",
+     "call": "pdftoppm -r 80 -f 51 -l 56 -png s001.pdf hj (page 55)"
+    },
+    "acquired_on": "2026-10-22",
+    "result_sha256": "a19b7cb306ddec4875dbf4e1549669ac2acb6719b906cc089fb0250cd0983089"
    }
   }
  ],
@@ -408,6 +488,134 @@
     "anchor": "Figure 2, embedded raster of PDF page 7",
     "surface": "figure",
     "artifact": "files/page_renders/PMID39625912/p7img-001.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "NOT WWOX EVIDENCE (tuberous sclerosis, a pre-seizure timing trial protocol). Protocol v05 states that the study does not test any investigational product.",
+    "snippet": "it is important that this study does not test any investigational product, so only",
+    "anchor": "Adverse events (protocol page 22)",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID39625912_r2/pone.0312936.s001.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Protocol v05 randomises in blocks stratified for centre, in ratio 1:1.",
+    "snippet": "Randomization will be performed as block randomization stratified for centre. Patients will be randomized in ratio 1:1.",
+    "anchor": "Randomization procedures (page 21)",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID39625912_r2/pone.0312936.s001.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Protocol v05 lists, among the video EEG findings that qualify for randomization, 'distribution of abnormalities: A, and severity of abnormalities III'.",
+    "snippet": "distribution of abnormalities: A, and severity of abnormalities III",
+    "anchor": "Criteria for randomization (page 17)",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID39625912_r2/pone.0312936.s001.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Protocol v05 states that it is not allowed to use sedation to obtain sleep.",
+    "snippet": "It is not allowed to use sedation to obtain sleep.",
+    "anchor": "Study procedures, Video EEG (page 16)",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID39625912_r2/pone.0312936.s001.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Protocol v05 lists 'antiepileptic treatment at or prior to study entry' as an item (in the list of criteria named in the anchor).",
+    "snippet": "antiepileptic treatment at or prior to study entry,",
+    "anchor": "Exclusion criteria (page 13)",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID39625912_r2/pone.0312936.s001.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Protocol v05's statistics text says the figure was 'determined based on our previous study (Jozwiak, 2011), in which similar parameters were' assessed; the preceding words name the sample size.",
+    "snippet": "determined based on our previous study (Jozwiak, 2011), in which similar parameters were",
+    "anchor": "Statistical analyses (page 26)",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID39625912_r2/pone.0312936.s001.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Protocol v05 prints the alpha error of the power calculation as 0.5; I read that as a probable typographical slip for 0.05, an inference the protocol does not make.",
+    "snippet": "The power of these tests was calculated for the p-level (alpha error) set at 0.5, and assuming",
+    "anchor": "Statistical analyses (page 26)",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID39625912_r2/pone.0312936.s001.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Protocol v05's statistics section uses the term 'Treatment analysis set'.",
+    "snippet": "Treatment analysis set will comprise of",
+    "anchor": "Statistical analyses (page 26)",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID39625912_r2/pone.0312936.s001.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Protocol v05's summary uses the term 'Outcome analysis set'.",
+    "snippet": "Outcome analysis set will comprise of",
+    "anchor": "Protocol summary, Statistical considerations (page 6)",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID39625912_r2/pone.0312936.s001.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Protocol v05 states that the safety of patients in the study will be monitored by an 'Independent Ethics Board'.",
+    "snippet": "The safety of patients in the study will be monitored by Independent Ethics Board supported",
+    "anchor": "Data quality assurance (page 25)",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID39625912_r2/pone.0312936.s001.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Protocol v05 lets the study be stopped for unacceptable safety, in which case all participating and new patients enter the observational part only.",
+    "snippet": "the study can be stopped for unacceptable safety. In this case, all participating and new patients will enter the observational part of the project only.",
+    "anchor": "Early stopping rules (page 25)",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID39625912_r2/pone.0312936.s001.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Protocol v05 states that antiepileptic drug will be tapered off starting from the follow-up (visit) after a clause about not developing clinical seizures; the conditions are on the preceding lines across a page break.",
+    "snippet": "develop clinical seizures, antiepileptic drug will be tapered off starting from the follow-up",
+    "anchor": "Follow-up visit (page 20)",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID39625912_r2/pone.0312936.s001.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Protocol v05 names the Bayley Scales of Infant Development (BSID) as a test used to measure the child's level of development.",
+    "snippet": "1. The Bayley Scales of Infant Development (BSID): will be used to measure the child’s",
+    "anchor": "Neuropsychological assessment (page 18) and Appendix 5",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID39625912_r2/pone.0312936.s001.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PANEL READING, Appendix 9 (pages 48 and 49): the first appendix page is a scanned resolution of the bioethics committee of an institute in Warsaw, numbered 66/KBE/2013 and dated as a meeting of 23 January 2013, and the second page is signed by the committee chair and dated 31 January 2013 under a sentence that grants consent to the research project; the text is Polish and I read it with limited confidence, so only the number, the dates and the grant of consent are claimed.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] UCHWAŁA nr 66/KBE/2013; Warszawa, dnia 31.01.2013 r.",
+    "anchor": "Appendix 9, protocol pages 48 and 49 (scanned images)",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID39625912/hi-48.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "PANEL READING, Appendix 10 (page 51): an Italian university hospital ethics committee notice dated 5 December 2013 in English states that the EPISTOP study was approved by the ethics committee on 2 December 2013; pages 52 to 54 are the committee member lists.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Notice is hereby given that, the Study EPISTOP was approved by Ethics Committee on 2nd December 2013.",
+    "anchor": "Appendix 10, protocol page 51 (scanned image)",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID39625912/hj-51.png",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "PANEL READING, Appendix 11 (page 55): a Czech university hospital ethics committee issued a favourable opinion for the EPISTOP project, session date 11 September 2013; page 56 is the committee member list.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] EC issues: favourable opinion; Date of EC Session: 11. 9. 2013",
+    "anchor": "Appendix 11, protocol page 55 (scanned image)",
+    "surface": "figure",
+    "artifact": "files/page_renders/PMID39625912/hj-55.png",
     "panel_text_relation": "panel_only"
    }
   ],
