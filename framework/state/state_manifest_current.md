@@ -107,12 +107,12 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20261019_012
+last_batch_commit_id: BATCH_20261019_013
 last_batch_commit_date: 2026-10-22
 last_batch_commit_type: MANUAL
-commit_candidates_propagated: 2
+commit_candidates_propagated: 0
 target_wm_version: WM_v7.27
-trigger: MANUAL (operator-authorised, ACTOR_ID orchestrator by stated assumption, task ORCH-REPURPOSING-10H-20261021). Identity records PAPER 429-544 and LIT-0701-0816 for 116 receipts that had none (ORPHAN_COMPLETE_READ 36 before, 0 after), plus the research-layer propagation of what two candidate headers say survived their audits: DL-MECH-170 qualified and neither narrowed nor promoted, DL-MECH-171 and DL-MECH-172 appended, FT-115 and FT-113 updated. The R3 attribution addition to DL-THER-089 is HELD. NO WORKING-MODEL BUMP: section 2 bumps only for a BATCH_COMMIT that modifies the disease model, and nothing here changes a claim, block, Status, Type, Summary, support or uncertainty - every record carries Claim links none and Working Model impact none, except PAPER 530, whose only link is a cross-reference to a claim that already cites it; the same reasoning BATCH_20261019_009, _010 and _011 applied to a provenance sentence, a detection-rule citation and a locator count. WM_v7.27 is preserved with its date, history note and changelog row untouched.
+trigger: MANUAL (ACTOR_ID integrator, assigned by the Orchestrator). Registry repair, no disease-model change and no candidate propagated: 11 locator-count disagreements re-derived from their manifests (PAPER 470-474, 478, 520, 521, 527-529), the evidence depth of PAPER 408-409 and PAPER 470-474 brought to their standing receipts, and PAPER 545-548 with LIT-0817-0820 as identity records for four receipts that had none (ORPHAN_COMPLETE_READ 3 before, 0 after). WM_v7.27 preserved.
 ```
 
 Every batch's scope — the candidates it propagated, newest first back to `BATCH_20260810_001`,
@@ -126,7 +126,7 @@ with the keys written beside each and the notes on `BATCH_20260806_002` — is i
 
 ```yaml
 last_lint_type: LINT_AUTOMATIC
-last_lint_id: LINT_20261022_BATCH_20261019_012
+last_lint_id: LINT_20261022_BATCH_20261019_013
 last_lint_date: 2026-10-22
 last_lint_result: WARN
 ```
@@ -213,8 +213,8 @@ to make a suite green — the only way to move it is to have made the change you
 
 ```yaml
 growth_anchor_ledger: framework/state/growth_anchors.jsonl
-growth_anchor_events: 57
-growth_anchor_head: eb6c8f49e9d20632fdf9e99e020627c68abf1f4d47cc892bb65756582039679c
+growth_anchor_events: 58
+growth_anchor_head: 0bfc0328cf841659f54ac2fc694581b7bdd05d7b30a67aabed9b56946023611e
 ```
 
 ```bash

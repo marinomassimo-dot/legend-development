@@ -1,0 +1,63 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "_note": "Assigned by the Orchestrator in the session of 2026-10-22. Registry repair only; no claim added or modified; not medical advice.",
+ "TASK_ID": "BATCH_20261019_013",
+ "ACTOR_ID": "integrator",
+ "OWNER": "orchestrator",
+ "CURRENT_STATE": "COMPLETE",
+ "assigned_on": "2026-10-22",
+ "OBJECTIVE": "Record-scoped BATCH_COMMIT: (a) repair the 11 registry locator-count disagreements and add PAPER/LIT identity for receipts with none; (b) propagate non-held candidates from today's lots; (c) carry WM version forward.",
+ "TASK_CLAIM": {
+  "actor": "integrator",
+  "branch": "task/integrator-batch-013",
+  "worktree": ".claude/worktrees/int-013",
+  "snapshot": "backup/20261022_batch013 (not committed)",
+  "base": "66288a29aa6a9eb6aa91fae00bc5ca0d5fa778ee"
+ },
+ "RESULT": {
+  "wm_version": "WM_v7.27 preserved",
+  "candidates_propagated": 0,
+  "paper_registry": "16 record-scoped ops, no FULL_FALLBACK: 11 count repairs (PAPER 470-474, 478, 520, 521, 527-529), PAPER 408-409 evidence depth and role, PAPER 545-548 inserted",
+  "literature_log": "15 record-scoped ops: LIT-0683/0684/0742-0746 depth and status, LIT-0817-0820 appended",
+  "growth_anchors": "+4 papers, +4 literature (GA event 58)"
+ },
+ "DEFAULTS_TAKEN": [
+  {
+   "condition": "No candidate in the queue from today's lots was both new and unheld",
+   "default": "propagated none; R1 and R3 stay DEFERRED; R1c/R2c wrote no candidate and no claim was written from their notes"
+  },
+  {
+   "condition": "All 11 disagreements were understatements",
+   "default": "classified each by git history of the manifest: every one held exactly the declared count at first receipt (stale totals); PMID 32678276's 6 equals the mapping key count only by coincidence, its first manifest also had 6 entries"
+  },
+  {
+   "condition": "Five records (PMIDs 27616982, 30175250, 32678276, 32751129, 34483921) have a later receipt -02 that extended the manifest",
+   "default": "depth, receipt, coverage and count follow the standing receipt; the superseded wording is quoted in guillemets"
+  },
+  {
+   "condition": "Six records (PMIDs 37296418, 35499850, 36538782, 42286026, 42334048, 42389070) grew by audit-repair or declaration commits with no new receipt",
+   "default": "count and surfaces corrected; receipt and depth left as the ledger holds them; the record says the manifest was amended after the receipt"
+  },
+  {
+   "condition": "PAPER 408/409 (PMIDs 42650175, 42587736) carried the -01 partial depth; standing receipts are -03 complete",
+   "default": "updated depth, receipt, count and the Role sentence; LIT-0683/0684 likewise"
+  },
+  {
+   "condition": "Four receipts (41378214, 41373471, 42569303 complete; 40166234 partial) had no registry identity",
+   "default": "PAPER 545-548 / LIT-0817-0820, T4 NOT WWOX EVIDENCE, WWOX count 0 measured on the artefacts on the root checkout, identity from PubMed 2026-10-22, findings not restated, audit owed noted"
+  },
+  {
+   "condition": "WM version rule",
+   "default": "no disease-model change, so no bump (state manifest §2, prompt_batch_commit §4.6; precedents 009-012)"
+  },
+  {
+   "condition": "current_state IN_BATCH_COMMIT flag",
+   "default": "not set, as in 012: path-scoped landing instead"
+  }
+ ],
+ "STOP_LOG": [],
+ "HELD_UNCHANGED": [
+  "CC-20261021-SCIENTIST-A-R1-PROTEOSTASIS-01",
+  "CC-20261021-SCIENTIST-C-R3-A51-ATTRIBUTION-01"
+ ]
+}
