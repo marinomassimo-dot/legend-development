@@ -275,7 +275,7 @@
     }
    },
    {
-    "proposition": "Figure 4F as drawn (five points per bar): relative activity about 0.35 for empty vector, about 0.65 for the mutant (ns against empty vector) and about 1.15 for wild type (four stars against both). The mutant's activity is not distinguishable from that of cells carrying no GLA construct; the mutant protein is present at about 1.8 times the empty-vector level (Figure 4C, three stars) with an activity increment over the empty-vector level that is not significant. INFERENZA, reader's: the panel is compatible with a protein that is present and contributes little or no activity above the cells' own background.",
+    "proposition": "Figure 4F as drawn (five points per bar): relative activity about 0.35 for empty vector, about 0.65 for the mutant (ns against empty vector) and about 1.15 for wild type (four stars against both). The mutant's activity is not distinguishable from that of cells carrying no GLA construct; the mutant protein is present at about three times the empty-vector level (about 1.8 against about 0.6; Figure 4C, three stars) with an activity increment over the empty-vector level that is not significant. INFERENZA, reader's: the panel is compatible with a protein that is present and contributes little or no activity above the cells' own background.",
     "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4F (native raster, printed page 8)",
     "surface": "figure",
     "artifact": "files/figures/PMID42161426_r2/native/PMC13202032.1_p8_img1_native.png",
@@ -287,10 +287,21 @@
      "endpoint": "GLA mRNA, GLA protein by western blot, localisation by GFP fluorescence, alpha-galactosidase A enzyme activity in lysates"
     },
     "qualifies": "entries[2]",
-    "qualifies_needle": "markedly reduced compared with GLA"
+    "qualifies_needle": "markedly reduced compared with GLA",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42161426.json",
+     "entry": 3,
+     "what_changed": "AUDIT: blind audit: 1.8 against 0.6 is about three-fold, not 1.8 times.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ]
+     }
+    }
    },
    {
-    "proposition": "Text: before treatment the mutant to wild-type activity ratio was 37.36 percent; after the chaperone it rose to 45.7 percent, an absolute increase of 8.36 percentage points and a 1.36-fold change.",
+    "proposition": "Text: before the chaperone the mutant to wild-type activity ratio was 37.36 percent and afterwards 45.7 percent, an absolute increase of 8.36 percentage points; the paper prints a 1.36-fold change relative to baseline. INFERENZA, reader's: 45.7 divided by 37.36 gives about 1.22, not 1.36, so the printed fold change does not close on the printed ratios; both exceed the 1.2 threshold the authors quote, the recomputed value only just.",
     "snippet": "This increase was more pronounced in GLA-MU and reached statistical significance (p<0.05). Before drug treatment the ratio of GLA enzymatic activity in MU to WT was 37.36%. After DGJ treatment this ratio increased to 45.7%, representing an absolute increase of 8.36 percentage points and a 1.36-fold change relative to baseline.",
     "anchor": "Results, chaperone subsection",
     "surface": "body",
@@ -300,6 +311,17 @@
      "system": "AC16 human cardiomyocyte line stably overexpressing a GFP-tagged wild-type or p.Met76Lys alpha-galactosidase A by lentivirus, with and without a pharmacological chaperone of the enzyme; plus clinical, biopsy and biochemical data of one family; NOT a WWOX system (a lysosomal hydrolase with an approved active-site chaperone)",
      "genotype": "GLA c.227T>A p.Met76Lys (variant of uncertain significance) against wild type and empty vector",
      "endpoint": "GLA mRNA, GLA protein by western blot, localisation by GFP fluorescence, alpha-galactosidase A enzyme activity in lysates"
+    },
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42161426.json",
+     "entry": 4,
+     "what_changed": "Flag from the blind audit: the printed 1.36-fold does not follow from the printed ratios; the proposition now says what the paper prints and what recomputes (INFERENZA).",
+     "audit": {
+      "auditors": 0,
+      "verdicts": [
+       "CORRECTED"
+      ]
+     }
     }
    },
    {
@@ -331,7 +353,7 @@
     }
    },
    {
-    "proposition": "Figure 4G as drawn: the mutant with the chaperone reaches about 0.39, about 45 percent of untreated wild type (0.78) and about 45 percent of treated wild type (0.86); 'restored' is a partial gain of about 8 percentage points of wild-type activity.",
+    "proposition": "Figure 4G as drawn: the mutant with the chaperone reaches about 0.39, about 50 percent of untreated wild type (0.78) and about 45 percent of treated wild type (0.86); 'restored' is a partial gain of about 8 percentage points of wild-type activity.",
     "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4G (native raster, printed page 8)",
     "surface": "figure",
     "artifact": "files/figures/PMID42161426_r2/native/PMC13202032.1_p8_img1_native.png",
@@ -343,7 +365,18 @@
      "endpoint": "GLA mRNA, GLA protein by western blot, localisation by GFP fluorescence, alpha-galactosidase A enzyme activity in lysates"
     },
     "qualifies": "entries[6]",
-    "qualifies_needle": "restored"
+    "qualifies_needle": "restored",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42161426.json",
+     "entry": 7,
+     "what_changed": "AUDIT: blind audit: 0.39 against 0.78 is about 50 percent, not 45.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ]
+     }
+    }
    },
    {
     "proposition": "Text: the heterozygous proband showed alpha-galactosidase A activity in a low-normal range together with an elevated plasma lyso-Gb3.",

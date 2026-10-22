@@ -618,7 +618,7 @@
     }
    },
    {
-    "proposition": "Figure 10D-E as drawn: reduced secreted protein plotted against reduced activity for eight covariants, all points between about 60 and 100 percent reductions with five of eight at 100 percent on the vertical axis; Figure 10E: five points, two at about 55 percent and three at 100 percent reduction. The panels show clustering at the ceiling (a reduction cannot exceed 100 percent), which limits what a coefficient on these points can show.",
+    "proposition": "Figure 10D-E as drawn: reduced secreted protein (vertical) plotted against reduced activity (horizontal) for eight covariants, all between about 60 and 100 percent reductions, with four of the eight at 100 percent on the vertical axis; Figure 10E: five points, two at about 88 to 89 percent reduction of secreted protein and three at 100 percent, with reductions of precursor from about 52 to 79 percent. The panels show clustering at the ceiling (a reduction cannot exceed 100 percent), which limits what a coefficient on these points can show.",
     "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 10D-E (native raster, printed page 12)",
     "surface": "figure",
     "artifact": "files/figures/PMID40449593_r2/native/PMC12256330.1_p12_img1_native.png",
@@ -630,7 +630,18 @@
      "endpoint": "GALC enzyme activity, lys-GALC and pre-GALC by western blot or ELISA, secreted GALC by ELISA, psychosine"
     },
     "qualifies": "entries[17]",
-    "qualifies_needle": "highly correlated (Fig. 10D"
+    "qualifies_needle": "highly correlated (Fig. 10D",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID40449593.json",
+     "entry": 18,
+     "what_changed": "AUDIT: blind audit: four (not five) of eight points at 100 percent in Figure 10D; Figure 10E axes stated explicitly.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ]
+     }
+    }
    },
    {
     "proposition": "Text: the authors say these variants might selectively disrupt GALC trafficking to the lysosome, but not to the extracellular space.",
@@ -646,7 +657,7 @@
     }
    },
    {
-    "proposition": "Figure 13A as drawn: variants 1 to 5 (p.G111S, p.E130K, p.I250T, p.S273F, p.D544N) show activity 0.1 to 0.9 percent with secreted protein not significantly different from wild type; variants 6 to 12 show 21 to 79 percent secreted protein; variants 13 to 26 show 12 percent or less and 0 for twelve of them. 13 variants have 0 to 4 percent secreted protein (Figure 13B).",
+    "proposition": "Figure 13A as drawn: variants 1 to 5 (p.G111S, p.E130K, p.I250T, p.S273F, p.D544N) show activity 0.1 to 0.9 percent with secreted protein not significantly different from wild type; variants 6 to 12 show 21 to 79 percent secreted protein; variants 13 to 26 show 12 percent or less and 0 for nine of them (variants 18 to 26). 13 variants have 0 to 4 percent secreted protein (Figure 13B).",
     "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 13A-B (native raster, printed page 15)",
     "surface": "figure",
     "artifact": "files/figures/PMID40449593_r2/native/PMC12256330.1_p15_img1_native.png",
@@ -656,10 +667,21 @@
      "system": "transient expression of galactosylceramidase (GALC) missense variants in a GALC-knockout human oligodendrocytic cell line (MO3.13); lysate activity, mature lysosomal protein, secreted protein, intracellular precursor, psychosine; correlations with literature age-of-onset; NOT a WWOX system (a lysosomal hydrolase; no chaperone was applied in this paper)",
      "genotype": "GALC missense variants (about 36 incl. p.I562T pseudodeficiency background)",
      "endpoint": "GALC enzyme activity, lys-GALC and pre-GALC by western blot or ELISA, secreted GALC by ELISA, psychosine"
+    },
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID40449593.json",
+     "entry": 20,
+     "what_changed": "AUDIT: blind audit: nine variants (18 to 26) have secreted protein 0 in Figure 13A, not twelve; native raster re-opened.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ]
+     }
     }
    },
    {
-    "proposition": "Methods: each variant (n = 4) was compared with wild type (n = 24) by an unpaired two-tailed t test.",
+    "proposition": "Authors' statement: their current cell model and assays would be an ideal in vitro platform to screen and develop therapeutics, such as pharmacological chaperones, for Krabbe disease; no chaperone was applied in this paper.",
     "snippet": "Our current cell model and assays would be an ideal in vitro platform to screen and develop therapeutics, such as PCs for KD.",
     "anchor": "Discussion, last-but-one subsection",
     "surface": "body",
@@ -669,6 +691,17 @@
      "system": "transient expression of galactosylceramidase (GALC) missense variants in a GALC-knockout human oligodendrocytic cell line (MO3.13); lysate activity, mature lysosomal protein, secreted protein, intracellular precursor, psychosine; correlations with literature age-of-onset; NOT a WWOX system (a lysosomal hydrolase; no chaperone was applied in this paper)",
      "genotype": "GALC missense variants (about 36 incl. p.I562T pseudodeficiency background)",
      "endpoint": "GALC enzyme activity, lys-GALC and pre-GALC by western blot or ELISA, secreted GALC by ELISA, psychosine"
+    },
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID40449593.json",
+     "entry": 21,
+     "what_changed": "AUDIT: blind audit: the Discussion quote could not carry the Methods t-test proposition (carried by entry 22); the proposition is restored to the statement the quote makes.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ]
+     }
     }
    },
    {

@@ -251,7 +251,7 @@
     }
    },
    {
-    "proposition": "Figure 1C as drawn: wild type clears the substrate in about 7 minutes; A252T (a trimer) in about 18 minutes; R274Q and R166H in about 32 minutes; A173T leaves about half of the substrate at 32 minutes. The non-interface A252T mutant, which Figure 1D-E show to be a trimer like wild type, is reduced in activity much less than the interface mutants but is still reduced: oligomeric state and activity are separable.",
+    "proposition": "Figure 1C as drawn: wild type clears the substrate in about 7 minutes; A252T (a trimer) to about 2 percent by about 18 to 21 minutes; R274Q in about 32 minutes; R166H still about 10 percent at 32 minutes; A173T leaves about half of the substrate at 32 minutes. The non-interface A252T mutant, which Figure 1D-E show to be a trimer like wild type, is reduced in activity much less than the interface mutants but is still reduced: oligomeric state and activity are separable.",
     "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1C-E (printed page 2, 200 dpi render)",
     "surface": "figure",
     "artifact": "files/figures/PMID39013852_r2/pages_200dpi/PMC11252331.1_p2_200dpi.png",
@@ -263,7 +263,18 @@
      "endpoint": "proteolytic activity on beta-casein, Tau or a peptide substrate; oligomeric state; brain-vessel protein abundance of HtrA1 and of substrates (Ltbp4, Prss23)"
     },
     "qualifies": "entries[0]",
-    "qualifies_needle": "All mutations strongly reduced HTRA1 protease activity"
+    "qualifies_needle": "All mutations strongly reduced HTRA1 protease activity",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID39013852.json",
+     "entry": 1,
+     "what_changed": "AUDIT: blind audit: R166H does not clear (about 10 percent at 32 minutes); A252T value re-read from the printed curve.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ]
+     }
+    }
    },
    {
     "proposition": "Text: the small amounts of trimers account for the residual levels of enzymatic activity detected in the interface mutants.",
@@ -387,7 +398,7 @@
     }
    },
    {
-    "proposition": "Figure 2B as drawn: one gel per mixing ratio (R274Q alone, the double mutant in cis, and the inactive corrector with R274Q at 1:3, 1:1 and 3:1); the substrate disappears by about 12 minutes at 1:3, about 8 at 1:1 and about 4 at 3:1, against about 28 for R274Q alone; the legend states the data are representative of 2 independent experiments and gives no error bars or quantification. Figure 2D-E: the corrector mixed with R274Q shifts the chromatographic and mass-spectrometric profile from monomer to trimer.",
+    "proposition": "Figure 2B as drawn: one gel per mixing ratio (R274Q alone, the double mutant in cis, and the inactive corrector with R274Q at 1:3, 1:1 and 3:1); the substrate band is last visible at about 12 minutes at 1:3, about 8 (faint) at 1:1 and about 4 at 3:1, against about 28 for R274Q alone; the legend states the data are representative of 2 independent experiments and gives no error bars or quantification. Figure 2D-E: the corrector mixed with R274Q shifts the chromatographic and mass-spectrometric profile from monomer to trimer.",
     "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2B-E (printed page 4)",
     "surface": "figure",
     "artifact": "files/figures/PMID39013852_r2/pages_200dpi/PMC11252331.1_p4_200dpi.png",
@@ -399,7 +410,18 @@
      "endpoint": "proteolytic activity on beta-casein, Tau or a peptide substrate; oligomeric state; brain-vessel protein abundance of HtrA1 and of substrates (Ltbp4, Prss23)"
     },
     "qualifies": "entries[10]",
-    "qualifies_needle": "dose"
+    "qualifies_needle": "dose",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID39013852.json",
+     "entry": 11,
+     "what_changed": "Neighbour of the audited count class: 'disappears by' reworded to 'last visible at', the printed gel time points; page render re-opened.",
+     "audit": {
+      "auditors": 0,
+      "verdicts": [
+       "CORRECTED"
+      ]
+     }
+    }
    },
    {
     "proposition": "Text: the key abnormalities of the vasculature of R274Q mice were all attenuated in the compound-heterozygous R274Q/D174R-S328A vessels, including a more than 11-fold increase of Pan-HtrA1 compared to R274Q.",
@@ -471,7 +493,7 @@
     }
    },
    {
-    "proposition": "Figure 4G as drawn: principal-component plot of five mice per genotype; the ellipse of the corrected genotype (green) lies between the wild-type group (grey) and the heterozygous-corrector group (light purple) and overlaps both, away from the R274Q and D174R-S328A ellipses; one green point lies far from the others (about 25 units on the second axis).",
+    "proposition": "Figure 4G as drawn: principal-component plot of five mice per genotype; the ellipse of the corrected genotype (green) lies to the lower right of the wild-type group (grey), overlaps the heterozygous-corrector group (light purple) and lies apart from the R274Q (orange) and D174R-S328A (dark purple) ellipses, which sit at the upper right; one green point lies far below the others. The axes of this render carry no tick values, so no coordinate is read.",
     "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4G (printed page 7)",
     "surface": "figure",
     "artifact": "files/figures/PMID39013852_r2/pages_200dpi/PMC11252331.1_p7_200dpi.png",
@@ -483,7 +505,18 @@
      "endpoint": "proteolytic activity on beta-casein, Tau or a peptide substrate; oligomeric state; brain-vessel protein abundance of HtrA1 and of substrates (Ltbp4, Prss23)"
     },
     "qualifies": "entries[16]",
-    "qualifies_needle": "indicating functional rescue of the single"
+    "qualifies_needle": "indicating functional rescue of the single",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID39013852.json",
+     "entry": 17,
+     "what_changed": "AUDIT: blind audit: the green ellipse is not between wild type and the heterozygous-corrector group; the axis has no ticks, so the numeric offset is dropped; page render re-opened.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ]
+     }
+    }
    },
    {
     "proposition": "Legend of Figure 4: significance was tested by a two-sided unpaired t-test and no correction for multiple comparison was performed.",
