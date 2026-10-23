@@ -1,0 +1,38 @@
+{
+ "event_id": "FTR-20261023-36779245-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "36779245",
+  "doi": "10.1111/epi.17542"
+ },
+ "event_at": "2026-10-23T20:45:42Z",
+ "analysis_at": "2026-10-23T20:39:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-a module batch 2026-10-23 (task MODULE-A-20261023); QUESTION_DRIVEN WWOX-DIRECT targeted re-read of the antiseizure-medication paragraph, Table 2 and one Discussion paragraph; prepared as JSON for the integrator and staged, not appended.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID36779245_Oliver2023_PMC_r2.xml",
+ "source_fingerprint": "780f42de9b3982fa5bf9bf1e6bb76f71384c943aa197fb2d4de80be7ac7e7a34",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "read",
+  "figures": "not_read",
+  "tables": "read",
+  "discussion": "not_read",
+  "limitations": "not_present",
+  "references": "not_read",
+  "supplementary": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID36779245.json",
+  "disease-models/wwox/research/module_batch_selection_scientist-a_20261023.md"
+ ],
+ "evidence_basis": [
+  "Targeted re-read for one question (which antiseizure drug classes does the cohort list, and does the paper report any response by drug or class): the antiseizure-medication paragraph of the Results and Table 2 (the drug row parsed cell-wise from the JATS) were read; one Discussion paragraph (differential diagnosis) was read for a burst-suppression statement. Section coverage is stated conservatively: only Results and Tables are marked read.",
+  "Eight locators appended to the manifest (entries 39 to 46); no earlier locator changed or contradicted."
+ ],
+ "prior_receipt": "FTR-20261019-36779245-01",
+ "reread_reason": "new_question_outside_prior_coverage"
+}

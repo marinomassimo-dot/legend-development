@@ -2,11 +2,12 @@
  "schema_version": 2,
  "pmid": "30361190",
  "doi": "10.1684/epd.2018.1005",
- "receipt": "FTR-20261003-30361190-01",
+ "receipt": "FTR-20261023-30361190-01",
  "landing": [
   "intake_wave_20261003w4_A",
   "CC-20261003W4-A-REGISTRY-01",
-  "CC-20261003W4-A-SHAUKAT-01"
+  "CC-20261003W4-A-SHAUKAT-01",
+  "disease-models/wwox/research/module_batch_selection_scientist-a_20261023.md"
  ],
  "skills_considered": [
   {
@@ -205,7 +206,7 @@
   "source_fulltext_indexed": true,
   "source_fulltext_indexed_evidence": "pdftotext -layout over the 12-page publisher PDF: abstract, introduction, methods, results, discussion, Table 1 (four pages), figure legends 1-3 and the reference list.",
   "abstract_anchoring_waived": "The derived text has no separate abstract surface; abstract quotes are anchored by their anchor text.",
-  "note": "COVERAGE: every section, Table 1 in full, Figures 1-3 inspected at page resolution (growth charts, EEG traces, MRI panels) without radiological re-reading. Supplementary 'didactic slides' on the journal website were not fetched.",
+  "note": "COVERAGE: every section, Table 1 in full, Figures 1-3 inspected at page resolution (growth charts, EEG traces, MRI panels) without radiological re-reading. Supplementary 'didactic slides' on the journal website were not fetched. 2026-10-23 (module batch, scientist-a, QUESTION_DRIVEN, receipt FTR-20261023-30361190-01): six entries appended for the question 'which metabolic investigations are reported normal in each child, and what happened on vigabatrin in each'; no earlier entry changed or contradicted.",
   "entries": [
    {
     "proposition": "The abstract's 'progressive brain atrophy' is a statement about the syndrome, phrased as a possibility.",
@@ -317,6 +318,54 @@
     "surface": "body",
     "artifact": "files/fulltext/PMID30361190_Shaukat2018_JLE.txt",
     "anchor": "Results, Clinical data, page 405 left column",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "First child: the first line of the list of investigations the paper calls normal begins with lactate. The list continues over the next lines (ammonia, acylcarnitine, uric acid, homocysteine, plasma amino acids, urine organic acids, transferrin isoforms); each is blood or urine chemistry, and no brain or muscle measurement is in it.",
+    "snippet": "The following investigations were normal: lactate,",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30361190_Shaukat2018_JLE.txt",
+    "anchor": "Results, clinical data, first child, page 403 right column",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "First child: the list of normal investigations ends with urine organic acids and transferrin isoforms (the word is split over the line break).",
+    "snippet": "plasma amino acids, urine organic acids, and trans-",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30361190_Shaukat2018_JLE.txt",
+    "anchor": "Results, clinical data, first child, page 403 right column",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Second child: the list of normal investigations begins with the echocardiogram and lactate, ammonia, acylcarnitine profile and uric acid.",
+    "snippet": "gram, lactate, ammonia, acylcarnitine profile, uric acid,",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30361190_Shaukat2018_JLE.txt",
+    "anchor": "Results, clinical data, second child, page 404 left column",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Second child: the list of normal investigations ends with urine organic acid and urine sulfocystine. Transferrin isoforms are not in this child's list, so the map's statement that transferrin isoforms were normal in both patients is not what the second child's list says.",
+    "snippet": "and urine sulfocystine. Cranial MRI at two months of",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30361190_Shaukat2018_JLE.txt",
+    "anchor": "Results, clinical data, second child, page 404 left column",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Second child: epileptic spasms were captured on EEG and vigabatrin was started; the next column line records that it was added with a partial response, which is a different outcome from the first child's resolution of spasms.",
+    "snippet": "and epileptic spasms were captured. Vigabatrin was",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30361190_Shaukat2018_JLE.txt",
+    "anchor": "Results, clinical data, second child, page 403 left column to page 404",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Second child, at 11 months: hemispasms in clusters persisted on four antiepileptic drugs including vigabatrin, sodium valproate, clobazam and phenobarbital; the two-child series therefore holds one resolution and one partial response to vigabatrin, in children with the same gene.",
+    "snippet": "on four antiepileptic medications including vigaba-",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30361190_Shaukat2018_JLE.txt",
+    "anchor": "Results, clinical data, second child, page 404 left column",
     "panel_text_relation": "text_only"
    }
   ]

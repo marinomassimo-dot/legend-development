@@ -2,13 +2,14 @@
  "schema_version": 2,
  "pmid": "24456803",
  "doi": "10.1186/1750-1172-9-12",
- "receipt": "FTR-20261003-24456803-01",
+ "receipt": "FTR-20261023-24456803-01",
  "context_policy": "SOURCE_FIRST",
  "landing": [
   "disease-models/wwox/research/fulltext_dossiers/PMID24456803.md",
   "disease-models/wwox/research/intake_wave_20261003_A.md",
   "disease-models/wwox/research/commit_candidates/CC-20261003-A-REGISTRY-01.md",
-  "disease-models/wwox/research/commit_candidates/CC-20261003-A-ARG54-01.md"
+  "disease-models/wwox/research/commit_candidates/CC-20261003-A-ARG54-01.md",
+  "disease-models/wwox/research/module_batch_selection_scientist-a_20261023.md"
  ],
  "skills_considered": [
   {
@@ -226,9 +227,26 @@
     "surface": "figure",
     "artifact": "files/fulltext/PMID24456803_AbdelSalam2014_supplement/1750-1172-9-12-2.jpg",
     "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "For the one genotyped child (II:4) the normal metabolic screen explicitly includes serum lactate and ammonia, together with amino and organic acids and very long chain fatty acids. The same list is the whole of the paper's metabolic evidence: it is blood and urine chemistry.",
+    "snippet": "blood gas analyses, ammonia, serum lactate, plasma urea, electrolytes, urine and serum amino and organic acids, and very long chain fatty acids",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24456803_AbdelSalam2014_PMC.xml",
+    "anchor": "Results, paragraph 1 (clinical description of II:4)",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Search of the article text (tool run 2026-10-23 over the declared JATS): the strings 'biops' and 'muscle' occur zero times; 'mitochond' occurs only in the Discussion on the murine retina and in two reference titles. The paper therefore reports no muscle biopsy and no mitochondrial study of the patient, contrary to the registry wording 'complete metabolic and mitochondrial screen, muscle biopsy included' that the map's metabolic-biomarker passage inherits. The row anchored is the screen sentence.",
+    "snippet": "Normal results were found in metabolic screening including liver and renal function tests",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24456803_AbdelSalam2014_PMC.xml",
+    "anchor": "Results, paragraph 1; search statement in the proposition",
+    "panel_text_relation": "text_only"
    }
   ],
   "source_fulltext_indexed": true,
-  "source_fulltext_indexed_evidence": "Europe PMC REST PMC3918143/fullTextXML returned HTTP 200 with a full JATS body on 2026-10-02; the declared artefact is that response, byte for byte."
+  "source_fulltext_indexed_evidence": "Europe PMC REST PMC3918143/fullTextXML returned HTTP 200 with a full JATS body on 2026-10-02; the declared artefact is that response, byte for byte.",
+  "note": " 2026-10-23 (module batch, scientist-a, QUESTION_DRIVEN, receipt FTR-20261023-24456803-01): two entries appended for the question 'does the paper report serum lactate, a muscle biopsy or a mitochondrial study'; no earlier entry changed or contradicted."
  }
 }

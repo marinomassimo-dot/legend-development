@@ -2,11 +2,12 @@
  "schema_version": 2,
  "pmid": "34268881",
  "doi": "10.15252/emmm.202013610",
- "receipt": "FTR-20260814-34268881-03",
+ "receipt": "FTR-20261023-34268881-01",
  "landing": [
   "PAPER 039",
   "DL-MECH-098",
-  "PMID34268881.md"
+  "PMID34268881.md",
+  "disease-models/wwox/research/module_batch_selection_scientist-a_20261023.md"
  ],
  "coverage_status": "partial_fulltext_read",
  "declared_reading_gap": "Appendix Figures S1-S6 are cited by the article but absent from the eight-item official PMC supplementary package. EMMM-13-e13610-s004.docx is the labelled Appendix and contains Appendix Table S1 only. All other available article, figure, table and peer-review surfaces were read in full.",
@@ -221,6 +222,24 @@
      "name": "xlsx_to_text (python zipfile and regex over sharedStrings and sheet XML, helpers from framework/scripts/supplement_symbol_search.py)",
      "version": "1.0",
      "call": "inline script, 2026-10-21: both workbooks (s006 then s005), every row, cells joined by tab, prefixed by EV1_up or EV2_down; the second source workbook is files/fulltext/PMID34268881_assets/EMMM-13-e13610-s005.xlsx",
+     "join": ""
+    }
+   }
+  },
+  {
+   "path": "files/fulltext/PMID34268881_assets/EMMM-13-e13610-s007_review_derived.txt",
+   "sha256": "bf26baf9e8aff3c6d4355e90eb5b3d6931883eb166b771351ebb6782cab1fecd",
+   "kind": "supplement_text",
+   "note": "Review-process file (47 pages, the declared s007 PDF) flattened to text with pdftotext -nopgbrk so a quote can be verified; the PDF itself stays the evidentiary surface.",
+   "acquisition_recipe": {
+    "derived": true,
+    "acquired_on": "2026-10-23",
+    "result_sha256": "bf26baf9e8aff3c6d4355e90eb5b3d6931883eb166b771351ebb6782cab1fecd",
+    "derived_from": "files/fulltext/PMID34268881_assets/EMMM-13-e13610-s007.pdf",
+    "extractor": {
+     "name": "pdftotext (poppler)",
+     "version": "as installed on the host 2026-10-23",
+     "call": "pdftotext -nopgbrk EMMM-13-e13610-s007.pdf EMMM-13-e13610-s007_review_derived.txt",
      "join": ""
     }
    }
@@ -638,9 +657,81 @@
     "artifact": "files/fulltext/PMID34268881_assets/Table_EV1_EV2_derived.txt",
     "anchor": "Table EV1, row for CACNA1E (derived text line 864)",
     "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table EV1 (upregulated list) carries the MTOR transcript itself: log2 fold change +0.4, adjusted P 0.0498 (marginal). The DL-MECH-034 wording 'mTOR/EIF4EBP1 down' is therefore not what this table shows for MTOR; the transcript is not mTORC1 signalling either way.",
+    "snippet": "EV1_up\tENSG00000198793\tMTOR\t2475\t6.0299999999999998E-3\t4.9799999999999997E-2\t0.4\tmechanistic_target_of_rapamycin_kinase_\tprotein_coding",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID34268881_assets/Table_EV1_EV2_derived.txt",
+    "anchor": "Table EV1, row for MTOR (derived text); columns ensg, symbol, EntrezID, pvalue, padj, log2FoldChange",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table EV2 (downregulated list) carries EIF4EBP1: log2 fold change -0.87, adjusted P 5.81E-4. This is the only mTOR-axis transcript behind the 'mTOR/EIF4EBP1 down' wording and it is a transcript, not 4E-BP1 phosphorylation.",
+    "snippet": "EV2_down\tENSG00000187840\tEIF4EBP1\t1978\t9.7100000000000002E-6\t5.8100000000000003E-4\t-0.87\teukaryotic_translation_initiation_factor_4E_binding_protein_1_\tprotein_coding",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID34268881_assets/Table_EV1_EV2_derived.txt",
+    "anchor": "Table EV2, row for EIF4EBP1 (derived text)",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table EV1 lists DDIT4 as upregulated (log2 fold change +0.71, adjusted P 1.03E-5); in the same two lists TSC2 is downregulated (log2 -0.37, adjusted P 0.0378). The mTOR-axis transcripts therefore do not move in one direction.",
+    "snippet": "EV1_up\tENSG00000168209\tDDIT4\t54541\t5.7499999999999999E-8\t1.03E-5\t0.71\tDNA_damage_inducible_transcript_4_\tprotein_coding",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID34268881_assets/Table_EV1_EV2_derived.txt",
+    "anchor": "Table EV1, row for DDIT4 (derived text)",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table EV2 lists TSC2 as downregulated (log2 fold change -0.37, adjusted P 0.0378), a small change near the nominal-P inclusion edge.",
+    "snippet": "EV2_down\tENSG00000103197\tTSC2\t7249\t3.9300000000000003E-3\t3.78E-2\t-0.37\tTSC_complex_subunit_2_\tprotein_coding",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID34268881_assets/Table_EV1_EV2_derived.txt",
+    "anchor": "Table EV2, row for TSC2 (derived text)",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table EV2 lists RB1CC1 (the autophagy-initiation scaffold FIP200) as downregulated: log2 fold change -0.99, adjusted P 3.84E-4. This is the transcript level of one autophagy gene; no autophagic flux is measured in the paper.",
+    "snippet": "EV2_down\tENSG00000023287\tRB1CC1\t9821\t5.4399999999999996E-6\t3.8400000000000001E-4\t-0.99\tRB1_inducible_coiled-coil_1_\tprotein_coding",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID34268881_assets/Table_EV1_EV2_derived.txt",
+    "anchor": "Table EV2, row for RB1CC1 (derived text)",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Symbol search of both lists (tool run 2026-10-23 over the declared derived text, exact symbol match on the symbol column): RPTOR, RICTOR, RPS6KB1, RPS6, ULK1, ATG5, ATG7, BECN1, MAP1LC3B, SQSTM1, TSC1, AKT1, AKT2, AKT3 and PTEN are in neither the upregulated nor the downregulated list; listed besides those above are EIF4EBP2 (up, adjusted P 0.054), DEPTOR (up), RPS6KB2 (down) and SESN2 (down). Absence from a nominal-P list is not absence of change. The row shown is RPS6KB2.",
+    "snippet": "EV2_down\tENSG00000175634\tRPS6KB2\t6199\t1.47E-3\t1.95E-2\t-0.39\tribosomal_protein_S6_kinase_B2_\tprotein_coding",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID34268881_assets/Table_EV1_EV2_derived.txt",
+    "anchor": "Table EV2, row for RPS6KB2 (derived text); search statement in the proposition",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table EV1 lists the glycolysis genes HK2 (log2 fold change +2.46, adjusted P 8.75E-34), SLC2A1 (+1.44), SLC2A3 (+1.04) and LDHA (+0.91) as upregulated; PDK1, PKM and HIF1A are in neither list (same tool run); PDK3 is listed up with adjusted P 0.0565. The row shown is HK2. The mouse-derived 'PDK1 measured up' is not reproduced by this dataset.",
+    "snippet": "EV1_up\tENSG00000159399\tHK2\t3099\t5.4700000000000005E-38\t8.7499999999999996E-34\t2.46\thexokinase_2_\tprotein_coding",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID34268881_assets/Table_EV1_EV2_derived.txt",
+    "anchor": "Table EV1, row for HK2 (derived text)",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Results state that GSEA/GO of the top 3,000 differentially expressed genes showed inhibition of ATP-synthesis-coupled electron transport and oxidative phosphorylation, with enrichment of glycolysis and gluconeogenesis; the supporting panel is Appendix Fig S3A, which is not available to this reading (declared). The text names no mTOR, autophagy, 4E-BP or rapamycin term: those strings occur zero times in the article JATS (tool run 2026-10-23).",
+    "snippet": "inhibition of processes related to ATP synthesis‐coupled electron transport and oxidative phosphorylation (Appendix Fig S3A)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34268881_Steinberg2021_PMC.xml",
+    "anchor": "Results, RNA-sequencing paragraph, first sentence",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Review-process file, referee remark (not the authors' data): a referee of the submitted version writes that WWOX overexpression had a detrimental impact on DNA damage/apoptosis, shown in a figure S3F of that version. The submitted figure S3F is not among the files this reading holds; the quote is the referee's characterization, not a measurement the authors report here.",
+    "snippet": "An example is the detrimental impact of WWOX overexpression on DNA damage/apoptosis shown in figure S3F.",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID34268881_assets/EMMM-13-e13610-s007_review_derived.txt",
+    "anchor": "Review-process file, referee 1 reply block (PDF page 23 of 47)",
+    "panel_text_relation": "text_only"
    }
   ],
-  "note": "2026-10-21 (R2 batch, scientist-b, QUESTION_DRIVEN, receipt FTR-20261021-34268881-08): four entries appended for the question 'does a WWOX-deficient dataset list a T-type gene'; Tables EV1 and EV2 flattened to a derived text artifact; no earlier entry changed or contradicted."
+  "note": "2026-10-21 (R2 batch, scientist-b, QUESTION_DRIVEN, receipt FTR-20261021-34268881-08): four entries appended for the question 'does a WWOX-deficient dataset list a T-type gene'; Tables EV1 and EV2 flattened to a derived text artifact; no earlier entry changed or contradicted. 2026-10-23 (module batch, scientist-a, QUESTION_DRIVEN, receipt FTR-20261023-34268881-01): nine entries appended for the question 'what do the deposited WWOX-KO organoid lists say about the mTOR axis, glycolysis genes and HIF1A/PDK1, and is there any statement on overexpression harm'; no earlier entry changed or contradicted. Appendix Fig S3A remains unavailable."
  },
  "reading_history": [
   {

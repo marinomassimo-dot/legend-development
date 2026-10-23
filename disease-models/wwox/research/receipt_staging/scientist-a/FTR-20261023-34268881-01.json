@@ -1,0 +1,38 @@
+{
+ "event_id": "FTR-20261023-34268881-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "34268881",
+  "doi": "10.15252/emmm.202013610"
+ },
+ "event_at": "2026-10-23T20:45:37Z",
+ "analysis_at": "2026-10-23T20:40:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-a module batch 2026-10-23 (task MODULE-A-20261023); QUESTION_DRIVEN WWOX-DIRECT targeted re-read for the mTOR-axis, glycolysis-gene and overexpression-harm questions; prepared as JSON for the integrator and staged, not appended.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID34268881_Steinberg2021_PMC.xml, files/fulltext/PMID34268881_assets/Table_EV1_EV2_derived.txt (derived from the declared Tables EV1 and EV2 workbooks) and files/fulltext/PMID34268881_assets/EMMM-13-e13610-s007_review_derived.txt (derived from the declared review-file PDF)",
+ "source_fingerprint": "de340289bc6704c9b9ec752f81afed64a02211a83d95d675a1d46f40be6304f6",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "read",
+  "figures": "not_read",
+  "tables": "not_present",
+  "discussion": "not_read",
+  "limitations": "not_present",
+  "references": "not_read",
+  "supplementary": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
+  "disease-models/wwox/research/module_batch_selection_scientist-a_20261023.md"
+ ],
+ "evidence_basis": [
+  "Targeted re-read for one question set (what do the paper's deposited WWOX-KO organoid differential-expression lists say about MTOR, EIF4EBP1, DDIT4, TSC2, RB1CC1 and glycolysis genes, and does the paper or its review file say anything on harm from WWOX overexpression): the RNA-seq Results paragraph; Tables EV1 and EV2 searched by exact symbol over the derived text and checked cell-wise against both workbooks for the rows quoted; review-file pages 22 to 24 read. Section coverage is stated conservatively: only Results is marked read.",
+  "Nine locators appended to the manifest (entries 43 to 51); no earlier locator changed or contradicted. Appendix Fig S3A remains unavailable."
+ ],
+ "prior_receipt": "FTR-20261021-34268881-08",
+ "reread_reason": "new_question_outside_prior_coverage"
+}
