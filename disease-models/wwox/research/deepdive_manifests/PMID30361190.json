@@ -367,15 +367,17 @@
     "snippet": "and urine sulfocystine. Cranial MRI at two months of",
     "surface": "body",
     "artifact": "files/fulltext/PMID30361190_Shaukat2018_JLE.txt",
-    "anchor": "Results, clinical data, second child, page 404 left column",
+    "anchor": "Results, clinical data, second child, page 405 left column",
     "panel_text_relation": "text_only",
     "contradicts_locator": {
      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID30361190.json",
      "entry": 17,
-     "what_changed": "blind-audit finding class 'bundled proposition' (module repairs 2026-10-23): proposition narrowed to what its quote carries; readings from other lines or tool runs are labelled as the reader's. The repair is not itself audited.",
+     "what_changed": "anchor page/column corrected after the third blind audit; quote and proposition unchanged.",
      "audit": {
-      "auditors": 0,
-      "verdicts": []
+      "auditors": 1,
+      "verdicts": [
+       "third blind audit 2026-10-23: SUPPORTED on substance, anchor-level defect (page/column); the corrected anchor is not itself audited."
+      ]
      }
     }
    },
@@ -401,15 +403,17 @@
     "snippet": "on four antiepileptic medications including vigaba-",
     "surface": "body",
     "artifact": "files/fulltext/PMID30361190_Shaukat2018_JLE.txt",
-    "anchor": "Results, clinical data, second child, page 404 left column",
+    "anchor": "Results, clinical data, second child, page 404 right column",
     "panel_text_relation": "text_only",
     "contradicts_locator": {
      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID30361190.json",
      "entry": 19,
-     "what_changed": "blind-audit finding class 'bundled proposition' (module repairs 2026-10-23): proposition narrowed to what its quote carries; readings from other lines or tool runs are labelled as the reader's. The repair is not itself audited.",
+     "what_changed": "anchor page/column corrected after the third blind audit; quote and proposition unchanged.",
      "audit": {
-      "auditors": 0,
-      "verdicts": []
+      "auditors": 1,
+      "verdicts": [
+       "third blind audit 2026-10-23: SUPPORTED on substance, anchor-level defect (page/column); the corrected anchor is not itself audited."
+      ]
      }
     }
    },
