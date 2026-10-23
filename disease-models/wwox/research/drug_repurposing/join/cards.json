@@ -4859,7 +4859,7 @@
      "depths": [
       "complete_fulltext_read"
      ],
-     "digest": "9d2c7c3cd5f3ee4c",
+     "digest": "b8e63a50706737f5",
      "locators": 139,
      "origin_id": "R-02",
      "papers": 5,
@@ -4935,8 +4935,16 @@
         "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
        ],
        "audit_status": "AUDIT_FILE_PRESENT",
-       "audited_entries": 4,
+       "audited_entries": 6,
        "contradiction_verdicts": [
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT"
+        },
         {
          "auditors": 1,
          "verdict": "PARTIAL"
@@ -4959,7 +4967,7 @@
        "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json",
        "pmid": "42422765",
        "reading_depth": "complete_fulltext_read",
-       "receipt_events": 14,
+       "receipt_events": 15,
        "receipt_id": "FTR-20260814-42422765-06",
        "unaudited_contradictions": 0
       }
@@ -4979,12 +4987,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "memantine (approved); MK-801 / APV as tools",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:427; evidence table digest 9d2c7c3cd5f3ee4c"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:427; evidence table digest b8e63a50706737f5"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "b0727c6f2b5357c9ea087095e867a14338ab384a9c167c3086011d76d977360b",
+   "input_sha256": "0c15792c418d3c5b5fd66060021c07a2a4f3e0abadeff22cbaab5b4f67158399",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -5009,7 +5017,7 @@
     "depths": [
      "complete_fulltext_read"
     ],
-    "digest": "9d2c7c3cd5f3ee4c",
+    "digest": "b8e63a50706737f5",
     "locators": 139,
     "origin_id": "R-02",
     "papers": 5,
@@ -5085,8 +5093,16 @@
        "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
       ],
       "audit_status": "AUDIT_FILE_PRESENT",
-      "audited_entries": 4,
+      "audited_entries": 6,
       "contradiction_verdicts": [
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT"
+       },
        {
         "auditors": 1,
         "verdict": "PARTIAL"
@@ -5109,7 +5125,7 @@
       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json",
       "pmid": "42422765",
       "reading_depth": "complete_fulltext_read",
-      "receipt_events": 14,
+      "receipt_events": 15,
       "receipt_id": "FTR-20260814-42422765-06",
       "unaudited_contradictions": 0
      }

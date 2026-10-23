@@ -182,8 +182,8 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "47733abf19721f9e",
-  "locators": 138,
+  "digest": "e669027c73256236",
+  "locators": 143,
   "origin_id": "CLAIM 002",
   "papers": 4,
   "query_id": "Q-CLAIM002",
@@ -247,11 +247,11 @@
     "audited_entries": 0,
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
-    "locator_count": 44,
+    "locator_count": 49,
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42397075.json",
     "pmid": "42397075",
     "reading_depth": "complete_fulltext_read",
-    "receipt_events": 5,
+    "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
     "unaudited_contradictions": 0
    }
@@ -265,8 +265,8 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "91499d361e5d0a63",
-  "locators": 126,
+  "digest": "3d8e294c9b636a2b",
+  "locators": 131,
   "origin_id": "CLAIM 003",
   "papers": 4,
   "query_id": "Q-CLAIM003",
@@ -321,11 +321,11 @@
     "audited_entries": 0,
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
-    "locator_count": 44,
+    "locator_count": 49,
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42397075.json",
     "pmid": "42397075",
     "reading_depth": "complete_fulltext_read",
-    "receipt_events": 5,
+    "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
     "unaudited_contradictions": 0
    }
@@ -382,8 +382,8 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "b6299ec39945611f",
-  "locators": 434,
+  "digest": "dd588a5840e8b9cd",
+  "locators": 439,
   "origin_id": "CLAIM 005",
   "papers": 12,
   "query_id": "Q-CLAIM005",
@@ -630,11 +630,11 @@
     "audited_entries": 0,
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
-    "locator_count": 44,
+    "locator_count": 49,
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42397075.json",
     "pmid": "42397075",
     "reading_depth": "complete_fulltext_read",
-    "receipt_events": 5,
+    "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
     "unaudited_contradictions": 0
    },
@@ -645,8 +645,16 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 4,
+    "audited_entries": 6,
     "contradiction_verdicts": [
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
      {
       "auditors": 1,
       "verdict": "PARTIAL"
@@ -669,7 +677,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json",
     "pmid": "42422765",
     "reading_depth": "complete_fulltext_read",
-    "receipt_events": 14,
+    "receipt_events": 15,
     "receipt_id": "FTR-20260814-42422765-06",
     "unaudited_contradictions": 0
    },
@@ -1128,7 +1136,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "8cc980cf293d0fe0",
+  "digest": "f8d031c061df2a3e",
   "locators": 111,
   "origin_id": "CLAIM 011",
   "papers": 5,
@@ -1202,8 +1210,16 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 4,
+    "audited_entries": 6,
     "contradiction_verdicts": [
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
      {
       "auditors": 1,
       "verdict": "PARTIAL"
@@ -1226,7 +1242,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json",
     "pmid": "42422765",
     "reading_depth": "complete_fulltext_read",
-    "receipt_events": 14,
+    "receipt_events": 15,
     "receipt_id": "FTR-20260814-42422765-06",
     "unaudited_contradictions": 0
    }
@@ -2373,7 +2389,7 @@
   "depths": [
    "complete_fulltext_read"
   ],
-  "digest": "a4d8ab0251658eb1",
+  "digest": "55d4ce5c2f7eed95",
   "locators": 113,
   "origin_id": "CLAIM 031",
   "papers": 4,
@@ -2435,8 +2451,16 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 4,
+    "audited_entries": 6,
     "contradiction_verdicts": [
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
      {
       "auditors": 1,
       "verdict": "PARTIAL"
@@ -2459,7 +2483,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json",
     "pmid": "42422765",
     "reading_depth": "complete_fulltext_read",
-    "receipt_events": 14,
+    "receipt_events": 15,
     "receipt_id": "FTR-20260814-42422765-06",
     "unaudited_contradictions": 0
    }
@@ -2473,7 +2497,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "739100de9bd7d44d",
+  "digest": "16b794e281778964",
   "locators": 493,
   "origin_id": "CLAIM 032",
   "papers": 24,
@@ -2886,8 +2910,16 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 4,
+    "audited_entries": 6,
     "contradiction_verdicts": [
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
      {
       "auditors": 1,
       "verdict": "PARTIAL"
@@ -2910,7 +2942,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json",
     "pmid": "42422765",
     "reading_depth": "complete_fulltext_read",
-    "receipt_events": 14,
+    "receipt_events": 15,
     "receipt_id": "FTR-20260814-42422765-06",
     "unaudited_contradictions": 0
    },
@@ -3331,7 +3363,7 @@
   "depths": [
    "complete_fulltext_read"
   ],
-  "digest": "91854ee0edb8de43",
+  "digest": "55db3de4a65b93ad",
   "locators": 238,
   "origin_id": "CLAIM 037",
   "papers": 8,
@@ -3468,8 +3500,16 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 4,
+    "audited_entries": 6,
     "contradiction_verdicts": [
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
      {
       "auditors": 1,
       "verdict": "PARTIAL"
@@ -3492,7 +3532,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json",
     "pmid": "42422765",
     "reading_depth": "complete_fulltext_read",
-    "receipt_events": 14,
+    "receipt_events": 15,
     "receipt_id": "FTR-20260814-42422765-06",
     "unaudited_contradictions": 0
    }
@@ -3591,7 +3631,7 @@
   "depths": [
    "complete_fulltext_read"
   ],
-  "digest": "618667a18ea00ef0",
+  "digest": "93b9a5aeab2a546f",
   "locators": 48,
   "origin_id": "CLAIM 040",
   "papers": 1,
@@ -3604,8 +3644,16 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 4,
+    "audited_entries": 6,
     "contradiction_verdicts": [
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
      {
       "auditors": 1,
       "verdict": "PARTIAL"
@@ -3628,7 +3676,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json",
     "pmid": "42422765",
     "reading_depth": "complete_fulltext_read",
-    "receipt_events": 14,
+    "receipt_events": 15,
     "receipt_id": "FTR-20260814-42422765-06",
     "unaudited_contradictions": 0
    }
@@ -5853,7 +5901,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "35d181b56b347b5a",
+  "digest": "0d4915db142ee7fb",
   "locators": 136,
   "origin_id": "DL-MECH-011",
   "papers": 6,
@@ -5943,8 +5991,16 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 4,
+    "audited_entries": 6,
     "contradiction_verdicts": [
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
      {
       "auditors": 1,
       "verdict": "PARTIAL"
@@ -5967,7 +6023,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json",
     "pmid": "42422765",
     "reading_depth": "complete_fulltext_read",
-    "receipt_events": 14,
+    "receipt_events": 15,
     "receipt_id": "FTR-20260814-42422765-06",
     "unaudited_contradictions": 0
    }
@@ -7984,7 +8040,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "1b995c2c38553f2a",
+  "digest": "960861821c1a1f41",
   "locators": 111,
   "origin_id": "DL-MECH-031",
   "papers": 5,
@@ -8058,8 +8114,16 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 4,
+    "audited_entries": 6,
     "contradiction_verdicts": [
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
      {
       "auditors": 1,
       "verdict": "PARTIAL"
@@ -8082,7 +8146,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json",
     "pmid": "42422765",
     "reading_depth": "complete_fulltext_read",
-    "receipt_events": 14,
+    "receipt_events": 15,
     "receipt_id": "FTR-20260814-42422765-06",
     "unaudited_contradictions": 0
    }
@@ -9849,7 +9913,7 @@
   "depths": [
    "complete_fulltext_read"
   ],
-  "digest": "2134e03c84b778d5",
+  "digest": "15b58aebe48042b7",
   "locators": 131,
   "origin_id": "DL-MECH-059",
   "papers": 6,
@@ -9939,8 +10003,16 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 4,
+    "audited_entries": 6,
     "contradiction_verdicts": [
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
      {
       "auditors": 1,
       "verdict": "PARTIAL"
@@ -9963,7 +10035,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json",
     "pmid": "42422765",
     "reading_depth": "complete_fulltext_read",
-    "receipt_events": 14,
+    "receipt_events": 15,
     "receipt_id": "FTR-20260814-42422765-06",
     "unaudited_contradictions": 0
    }
@@ -9976,7 +10048,7 @@
   "depths": [
    "complete_fulltext_read"
   ],
-  "digest": "2b9117118ece27e6",
+  "digest": "0b8187cf1dc6abc9",
   "locators": 131,
   "origin_id": "DL-MECH-060",
   "papers": 6,
@@ -10066,8 +10138,16 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 4,
+    "audited_entries": 6,
     "contradiction_verdicts": [
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
      {
       "auditors": 1,
       "verdict": "PARTIAL"
@@ -10090,7 +10170,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json",
     "pmid": "42422765",
     "reading_depth": "complete_fulltext_read",
-    "receipt_events": 14,
+    "receipt_events": 15,
     "receipt_id": "FTR-20260814-42422765-06",
     "unaudited_contradictions": 0
    }
@@ -10962,8 +11042,8 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "f20aee5cf61e14f2",
-  "locators": 613,
+  "digest": "996a9a5c0ac10d80",
+  "locators": 618,
   "origin_id": "DL-MECH-070",
   "papers": 19,
   "query_id": "Q-DL-MECH-070",
@@ -11320,11 +11400,11 @@
     "audited_entries": 0,
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
-    "locator_count": 44,
+    "locator_count": 49,
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42397075.json",
     "pmid": "42397075",
     "reading_depth": "complete_fulltext_read",
-    "receipt_events": 5,
+    "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
     "unaudited_contradictions": 0
    },
@@ -11335,8 +11415,16 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 4,
+    "audited_entries": 6,
     "contradiction_verdicts": [
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
      {
       "auditors": 1,
       "verdict": "PARTIAL"
@@ -11359,7 +11447,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json",
     "pmid": "42422765",
     "reading_depth": "complete_fulltext_read",
-    "receipt_events": 14,
+    "receipt_events": 15,
     "receipt_id": "FTR-20260814-42422765-06",
     "unaudited_contradictions": 0
    },
@@ -11387,7 +11475,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "4cefdd069d02123b",
+  "digest": "121cdb827c97e5d6",
   "locators": 698,
   "origin_id": "DL-MECH-071",
   "papers": 31,
@@ -11915,8 +12003,16 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 4,
+    "audited_entries": 6,
     "contradiction_verdicts": [
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
      {
       "auditors": 1,
       "verdict": "PARTIAL"
@@ -11939,7 +12035,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json",
     "pmid": "42422765",
     "reading_depth": "complete_fulltext_read",
-    "receipt_events": 14,
+    "receipt_events": 15,
     "receipt_id": "FTR-20260814-42422765-06",
     "unaudited_contradictions": 0
    },
@@ -11967,8 +12063,8 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "23dc91bd01b9f509",
-  "locators": 449,
+  "digest": "8ff6b21e1bf4afca",
+  "locators": 454,
   "origin_id": "DL-MECH-072",
   "papers": 13,
   "query_id": "Q-DL-MECH-072",
@@ -12234,11 +12330,11 @@
     "audited_entries": 0,
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
-    "locator_count": 44,
+    "locator_count": 49,
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42397075.json",
     "pmid": "42397075",
     "reading_depth": "complete_fulltext_read",
-    "receipt_events": 5,
+    "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
     "unaudited_contradictions": 0
    },
@@ -12249,8 +12345,16 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 4,
+    "audited_entries": 6,
     "contradiction_verdicts": [
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
      {
       "auditors": 1,
       "verdict": "PARTIAL"
@@ -12273,7 +12377,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json",
     "pmid": "42422765",
     "reading_depth": "complete_fulltext_read",
-    "receipt_events": 14,
+    "receipt_events": 15,
     "receipt_id": "FTR-20260814-42422765-06",
     "unaudited_contradictions": 0
    },
@@ -12301,8 +12405,8 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "8cc450fd6d04aa6d",
-  "locators": 434,
+  "digest": "24268ffd1a15a9dd",
+  "locators": 439,
   "origin_id": "DL-MECH-073",
   "papers": 12,
   "query_id": "Q-DL-MECH-073",
@@ -12549,11 +12653,11 @@
     "audited_entries": 0,
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
-    "locator_count": 44,
+    "locator_count": 49,
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42397075.json",
     "pmid": "42397075",
     "reading_depth": "complete_fulltext_read",
-    "receipt_events": 5,
+    "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
     "unaudited_contradictions": 0
    },
@@ -12564,8 +12668,16 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 4,
+    "audited_entries": 6,
     "contradiction_verdicts": [
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
      {
       "auditors": 1,
       "verdict": "PARTIAL"
@@ -12588,7 +12700,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json",
     "pmid": "42422765",
     "reading_depth": "complete_fulltext_read",
-    "receipt_events": 14,
+    "receipt_events": 15,
     "receipt_id": "FTR-20260814-42422765-06",
     "unaudited_contradictions": 0
    },
@@ -12616,8 +12728,8 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "f97ce262948b7cbe",
-  "locators": 443,
+  "digest": "20c774468362bed1",
+  "locators": 448,
   "origin_id": "DL-MECH-074",
   "papers": 13,
   "query_id": "Q-DL-MECH-074",
@@ -12878,11 +12990,11 @@
     "audited_entries": 0,
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
-    "locator_count": 44,
+    "locator_count": 49,
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42397075.json",
     "pmid": "42397075",
     "reading_depth": "complete_fulltext_read",
-    "receipt_events": 5,
+    "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
     "unaudited_contradictions": 0
    },
@@ -12893,8 +13005,16 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 4,
+    "audited_entries": 6,
     "contradiction_verdicts": [
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
      {
       "auditors": 1,
       "verdict": "PARTIAL"
@@ -12917,7 +13037,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json",
     "pmid": "42422765",
     "reading_depth": "complete_fulltext_read",
-    "receipt_events": 14,
+    "receipt_events": 15,
     "receipt_id": "FTR-20260814-42422765-06",
     "unaudited_contradictions": 0
    },
@@ -12945,8 +13065,8 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "92b4523c6cfa17bc",
-  "locators": 466,
+  "digest": "a17f604159436357",
+  "locators": 471,
   "origin_id": "DL-MECH-075",
   "papers": 14,
   "query_id": "Q-DL-MECH-075",
@@ -13221,11 +13341,11 @@
     "audited_entries": 0,
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
-    "locator_count": 44,
+    "locator_count": 49,
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42397075.json",
     "pmid": "42397075",
     "reading_depth": "complete_fulltext_read",
-    "receipt_events": 5,
+    "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
     "unaudited_contradictions": 0
    },
@@ -13236,8 +13356,16 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 4,
+    "audited_entries": 6,
     "contradiction_verdicts": [
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
      {
       "auditors": 1,
       "verdict": "PARTIAL"
@@ -13260,7 +13388,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json",
     "pmid": "42422765",
     "reading_depth": "complete_fulltext_read",
-    "receipt_events": 14,
+    "receipt_events": 15,
     "receipt_id": "FTR-20260814-42422765-06",
     "unaudited_contradictions": 0
    },
@@ -13446,8 +13574,8 @@
   "depths": [
    "complete_fulltext_read"
   ],
-  "digest": "ad6b9ecf988d77ac",
-  "locators": 69,
+  "digest": "fa0de7df23fc1d66",
+  "locators": 74,
   "origin_id": "DL-MECH-086",
   "papers": 2,
   "query_id": "Q-DL-MECH-086",
@@ -13474,11 +13602,11 @@
     "audited_entries": 0,
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
-    "locator_count": 44,
+    "locator_count": 49,
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42397075.json",
     "pmid": "42397075",
     "reading_depth": "complete_fulltext_read",
-    "receipt_events": 5,
+    "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
     "unaudited_contradictions": 0
    }
@@ -13958,7 +14086,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "83fae55f616af3c7",
+  "digest": "102abecbfe725e64",
   "locators": 493,
   "origin_id": "DL-MECH-101",
   "papers": 24,
@@ -14371,8 +14499,16 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 4,
+    "audited_entries": 6,
     "contradiction_verdicts": [
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
      {
       "auditors": 1,
       "verdict": "PARTIAL"
@@ -14395,7 +14531,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json",
     "pmid": "42422765",
     "reading_depth": "complete_fulltext_read",
-    "receipt_events": 14,
+    "receipt_events": 15,
     "receipt_id": "FTR-20260814-42422765-06",
     "unaudited_contradictions": 0
    },
@@ -14423,7 +14559,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "3014bfe193af2483",
+  "digest": "985f915fc6f27f4f",
   "locators": 665,
   "origin_id": "DL-MECH-102",
   "papers": 32,
@@ -14948,8 +15084,16 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 4,
+    "audited_entries": 6,
     "contradiction_verdicts": [
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
      {
       "auditors": 1,
       "verdict": "PARTIAL"
@@ -14972,7 +15116,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json",
     "pmid": "42422765",
     "reading_depth": "complete_fulltext_read",
-    "receipt_events": 14,
+    "receipt_events": 15,
     "receipt_id": "FTR-20260814-42422765-06",
     "unaudited_contradictions": 0
    },
@@ -15389,8 +15533,8 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "d635d0ae48c3f011",
-  "locators": 310,
+  "digest": "c162286c122865cc",
+  "locators": 315,
   "origin_id": "DL-MECH-113",
   "papers": 9,
   "query_id": "Q-DL-MECH-113",
@@ -15634,11 +15778,11 @@
     "audited_entries": 0,
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
-    "locator_count": 44,
+    "locator_count": 49,
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42397075.json",
     "pmid": "42397075",
     "reading_depth": "complete_fulltext_read",
-    "receipt_events": 5,
+    "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
     "unaudited_contradictions": 0
    }
@@ -18572,8 +18716,8 @@
   "depths": [
    "complete_fulltext_read"
   ],
-  "digest": "0d1fdd037c4499d5",
-  "locators": 134,
+  "digest": "8f8129303e6831d4",
+  "locators": 139,
   "origin_id": "DL-META-088",
   "papers": 4,
   "query_id": "Q-DL-META-088",
@@ -18614,11 +18758,11 @@
     "audited_entries": 0,
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
-    "locator_count": 44,
+    "locator_count": 49,
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42397075.json",
     "pmid": "42397075",
     "reading_depth": "complete_fulltext_read",
-    "receipt_events": 5,
+    "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
     "unaudited_contradictions": 0
    },
@@ -18629,8 +18773,16 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 4,
+    "audited_entries": 6,
     "contradiction_verdicts": [
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
      {
       "auditors": 1,
       "verdict": "PARTIAL"
@@ -18653,7 +18805,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json",
     "pmid": "42422765",
     "reading_depth": "complete_fulltext_read",
-    "receipt_events": 14,
+    "receipt_events": 15,
     "receipt_id": "FTR-20260814-42422765-06",
     "unaudited_contradictions": 0
    }
@@ -20371,7 +20523,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "28efba9cc3b97d0c",
+  "digest": "edba289c7ad0d48b",
   "locators": 140,
   "origin_id": "DL-MOL-005",
   "papers": 6,
@@ -20459,8 +20611,16 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 4,
+    "audited_entries": 6,
     "contradiction_verdicts": [
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
      {
       "auditors": 1,
       "verdict": "PARTIAL"
@@ -20483,7 +20643,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json",
     "pmid": "42422765",
     "reading_depth": "complete_fulltext_read",
-    "receipt_events": 14,
+    "receipt_events": 15,
     "receipt_id": "FTR-20260814-42422765-06",
     "unaudited_contradictions": 0
    }
@@ -20952,8 +21112,8 @@
   "depths": [
    "complete_fulltext_read"
   ],
-  "digest": "cfd486252bfb36c6",
-  "locators": 69,
+  "digest": "13328af5757a8bae",
+  "locators": 74,
   "origin_id": "DL-THER-087",
   "papers": 2,
   "query_id": "Q-DL-THER-087",
@@ -20980,11 +21140,11 @@
     "audited_entries": 0,
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
-    "locator_count": 44,
+    "locator_count": 49,
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42397075.json",
     "pmid": "42397075",
     "reading_depth": "complete_fulltext_read",
-    "receipt_events": 5,
+    "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
     "unaudited_contradictions": 0
    }
@@ -20998,8 +21158,8 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "d724b60fa7239823",
-  "locators": 126,
+  "digest": "59f0720d766af752",
+  "locators": 131,
   "origin_id": "DL-THER-089",
   "papers": 4,
   "query_id": "Q-DL-THER-089",
@@ -21054,11 +21214,11 @@
     "audited_entries": 0,
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
-    "locator_count": 44,
+    "locator_count": 49,
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42397075.json",
     "pmid": "42397075",
     "reading_depth": "complete_fulltext_read",
-    "receipt_events": 5,
+    "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
     "unaudited_contradictions": 0
    }
@@ -21173,8 +21333,8 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "03b18f0a6ccb0811",
-  "locators": 694,
+  "digest": "55ce1536707444ef",
+  "locators": 699,
   "origin_id": "DL-THER-105",
   "papers": 32,
   "query_id": "Q-DL-THER-105",
@@ -21699,11 +21859,11 @@
     "audited_entries": 0,
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
-    "locator_count": 44,
+    "locator_count": 49,
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42397075.json",
     "pmid": "42397075",
     "reading_depth": "complete_fulltext_read",
-    "receipt_events": 5,
+    "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
     "unaudited_contradictions": 0
    },
@@ -21714,8 +21874,16 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 4,
+    "audited_entries": 6,
     "contradiction_verdicts": [
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
      {
       "auditors": 1,
       "verdict": "PARTIAL"
@@ -21738,7 +21906,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json",
     "pmid": "42422765",
     "reading_depth": "complete_fulltext_read",
-    "receipt_events": 14,
+    "receipt_events": 15,
     "receipt_id": "FTR-20260814-42422765-06",
     "unaudited_contradictions": 0
    },
@@ -22509,8 +22677,8 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "1ed490887f18b833",
-  "locators": 919,
+  "digest": "8778c725c6b37947",
+  "locators": 924,
   "origin_id": "CLAIM 002",
   "papers": 39,
   "query_id": "Q-PG-02aacb3c8e59",
@@ -23138,11 +23306,11 @@
     "audited_entries": 0,
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
-    "locator_count": 44,
+    "locator_count": 49,
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42397075.json",
     "pmid": "42397075",
     "reading_depth": "complete_fulltext_read",
-    "receipt_events": 5,
+    "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
     "unaudited_contradictions": 0
    },
@@ -23153,8 +23321,16 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 4,
+    "audited_entries": 6,
     "contradiction_verdicts": [
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
      {
       "auditors": 1,
       "verdict": "PARTIAL"
@@ -23177,7 +23353,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json",
     "pmid": "42422765",
     "reading_depth": "complete_fulltext_read",
-    "receipt_events": 14,
+    "receipt_events": 15,
     "receipt_id": "FTR-20260814-42422765-06",
     "unaudited_contradictions": 0
    },
@@ -24029,7 +24205,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "1026622fcd9b675d",
+  "digest": "33d7a856059d4636",
   "locators": 519,
   "origin_id": "CLAIM 007",
   "papers": 23,
@@ -24392,8 +24568,16 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 4,
+    "audited_entries": 6,
     "contradiction_verdicts": [
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
      {
       "auditors": 1,
       "verdict": "PARTIAL"
@@ -24416,7 +24600,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json",
     "pmid": "42422765",
     "reading_depth": "complete_fulltext_read",
-    "receipt_events": 14,
+    "receipt_events": 15,
     "receipt_id": "FTR-20260814-42422765-06",
     "unaudited_contradictions": 0
    }
@@ -24431,7 +24615,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "ce3bd39c30061cf0",
+  "digest": "1339a5097c988bdb",
   "locators": 514,
   "origin_id": "CLAIM 003",
   "papers": 17,
@@ -24783,8 +24967,16 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 4,
+    "audited_entries": 6,
     "contradiction_verdicts": [
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
      {
       "auditors": 1,
       "verdict": "PARTIAL"
@@ -24807,7 +24999,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json",
     "pmid": "42422765",
     "reading_depth": "complete_fulltext_read",
-    "receipt_events": 14,
+    "receipt_events": 15,
     "receipt_id": "FTR-20260814-42422765-06",
     "unaudited_contradictions": 0
    }
@@ -24846,7 +25038,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "6fc488e9854798b5",
+  "digest": "a3bd1073bd94f394",
   "locators": 519,
   "origin_id": "CLAIM 007",
   "papers": 23,
@@ -25209,8 +25401,16 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 4,
+    "audited_entries": 6,
     "contradiction_verdicts": [
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
      {
       "auditors": 1,
       "verdict": "PARTIAL"
@@ -25233,7 +25433,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json",
     "pmid": "42422765",
     "reading_depth": "complete_fulltext_read",
-    "receipt_events": 14,
+    "receipt_events": 15,
     "receipt_id": "FTR-20260814-42422765-06",
     "unaudited_contradictions": 0
    }
@@ -25246,7 +25446,7 @@
   "depths": [
    "complete_fulltext_read"
   ],
-  "digest": "cb0f67a661dd24d3",
+  "digest": "d60a3be29c50f1ff",
   "locators": 48,
   "origin_id": "CLAIM 011",
   "papers": 1,
@@ -25259,8 +25459,16 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 4,
+    "audited_entries": 6,
     "contradiction_verdicts": [
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
      {
       "auditors": 1,
       "verdict": "PARTIAL"
@@ -25283,7 +25491,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json",
     "pmid": "42422765",
     "reading_depth": "complete_fulltext_read",
-    "receipt_events": 14,
+    "receipt_events": 15,
     "receipt_id": "FTR-20260814-42422765-06",
     "unaudited_contradictions": 0
    }
@@ -25782,7 +25990,7 @@
   "depths": [
    "complete_fulltext_read"
   ],
-  "digest": "9d2c7c3cd5f3ee4c",
+  "digest": "b8e63a50706737f5",
   "locators": 139,
   "origin_id": "R-02",
   "papers": 5,
@@ -25858,8 +26066,16 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 4,
+    "audited_entries": 6,
     "contradiction_verdicts": [
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
      {
       "auditors": 1,
       "verdict": "PARTIAL"
@@ -25882,7 +26098,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json",
     "pmid": "42422765",
     "reading_depth": "complete_fulltext_read",
-    "receipt_events": 14,
+    "receipt_events": 15,
     "receipt_id": "FTR-20260814-42422765-06",
     "unaudited_contradictions": 0
    }
