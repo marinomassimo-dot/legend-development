@@ -259,6 +259,8 @@ Everything that touches Q230P or a WWOX-system test is an experiment, not a read
 
 ### 5.1 D1 · The audit field is read at the wrong depth
 
+**Status at landing: already repaired on `main` by commit `9c4dbe4d` (plan), which reads the nested shape and re-derives `Q-N-17` and `Q-R-02` as READ rows. The measurement below is the evidence for that repair; M1 is done.**
+
 `repurposing_join.manifest_evidence` (lines ~372–386) reads `declaration.get("auditors")` and
 `declaration.get("verdict")`. The schema that `locator_contradiction_audit.py` writes and checks
 (`_entry_audit_evidence`) is `contradicts_locator = {…, "audit": {"auditors": n, "verdicts": […]}}`.
