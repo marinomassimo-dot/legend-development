@@ -82,10 +82,10 @@ time; it does not redistribute or license the article text.
 | Status | Records | Share |
 |---|---:|---:|
 | **Not found by identifier** — run the intake gate | 261 | 37% |
-| **Catalogued, never processed** — the reading debt | 126 | 18% |
+| **Catalogued, never processed** — the reading debt | 125 | 18% |
 | Known to the tracking log only | 83 | 12% |
 | Processed from the abstract | 3 | 0% |
-| Partial full text read | 68 | 10% |
+| Partial full text read | 69 | 10% |
 | Full text read | 165 | 23% |
 
 ⚠️ This second table combines registry state with the authoritative append-only
@@ -184,7 +184,6 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [25891642](https://pubmed.ncbi.nlm.nih.gov/25891642/) | 2015 | ✅ | Journal Article | catalogued only | Effect of the WWOX gene on the regulation of the cell cycle and apoptosis in human ovarian cancer stem cells. |
 | [25789010](https://pubmed.ncbi.nlm.nih.gov/25789010/) | 2015 | ✅ | Journal Article | catalogued only | Ectopic expression of the WWOX gene suppresses stemness of human ovarian cancer stem cells. |
 | [25710931](https://pubmed.ncbi.nlm.nih.gov/25710931/) | 2015 | ✅ | Journal Article; Research Support, Non-U.S. Gov't; Review | catalogued only | Versatile communication strategies among tandem WW domain repeats. |
-| [25708809](https://pubmed.ncbi.nlm.nih.gov/25708809/) | 2015 | ✅ | Journal Article; Research Support, Non-U.S. Gov't | catalogued only | MicroRNA-153 promotes Wnt/β-catenin activation in hepatocellular carcinoma through suppression of WWOX. |
 | [25703206](https://pubmed.ncbi.nlm.nih.gov/25703206/) | 2015 | ✅ | Journal Article; Research Support, N.I.H., Extramural; Research Support, Non-U.S. Gov't | catalogued only | Allostery mediates ligand binding to WWOX tumor suppressor via a conformational switch. |
 | [25678599](https://pubmed.ncbi.nlm.nih.gov/25678599/) | 2015 | ✅ | Journal Article; Research Support, Non-U.S. Gov't | catalogued only | The Tumor-Suppressor WWOX and HDAC3 Inhibit the Transcriptional Activity of the β-Catenin Coactivator BCL9-2 in Breast Cancer Cells. |
 | [25662954](https://pubmed.ncbi.nlm.nih.gov/25662954/) | 2015 | ✅ | Journal Article; Research Support, N.I.H., Extramural; Research Support, Non-U.S. Gov't; Review | catalogued only | Structural insights into the functional versatility of WW domain-containing oxidoreductase tumor suppressor. |
@@ -575,7 +574,7 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [41776383](https://pubmed.ncbi.nlm.nih.gov/41776383/) | 2026 | — | Journal Article; Multicenter Study | screened | Pharmacogenomics of response to interferon-beta and glatiramer acetate in Multiple Sclerosis: A multi-centric study. |
 | [28151481](https://pubmed.ncbi.nlm.nih.gov/28151481/) | 2017 | ✅ | Journal Article; Retracted Publication | screened | 🛑 RETRACTED — Epigenetic regulation of HGF/Met receptor axis is critical for the outgrowth of bone metastasis from breast carcinoma. |
 
-*(showing all 470 outstanding records)*
+*(showing all 469 outstanding records)*
 
 ## Already processed from this seed
 
@@ -596,6 +595,7 @@ for an entirely unprocessed record.
 | [33195192](https://pubmed.ncbi.nlm.nih.gov/33195192/) | 2020 | ✅ | partial full text | PAPER 129 | Wwox Deficiency Causes Downregulation of Prosurvival ERK Signaling and Abnormal Homeostatic Responses in Mouse Skin. |
 | [32764489](https://pubmed.ncbi.nlm.nih.gov/32764489/) | 2020 | ✅ | partial full text | receipt FTR-20260920-32764489-01 | Therapeutic Zfra4-10 or WWOX7-21 Peptide Induces Complex Formation of WWOX with Selective Protein Targets in Organs that Leads to Cancer Suppression and Spleen Cytotoxic Memory Z Cell Activation In Vivo. |
 | [28749468](https://pubmed.ncbi.nlm.nih.gov/28749468/) | 2017 | ✅ | partial full text | CORPUS-STUB-126 | WWOX sensitises ovarian cancer cells to paclitaxel via modulation of the ER stress response. |
+| [25708809](https://pubmed.ncbi.nlm.nih.gov/25708809/) | 2015 | ✅ | partial full text | receipt FTR-20261023-25708809-01 | MicroRNA-153 promotes Wnt/β-catenin activation in hepatocellular carcinoma through suppression of WWOX. |
 | [25649963](https://pubmed.ncbi.nlm.nih.gov/25649963/) | 2015 | ✅ | partial full text | receipt FTR-20261003-25649963-02 | Loss of wwox expression in zebrafish embryos causes edema and alters Ca(2+) dynamics. |
 | [25537520](https://pubmed.ncbi.nlm.nih.gov/25537520/) | 2014 | ✅ | partial full text | receipt FTR-20261002-25537520-01 | WW domain-containing oxidoreductase in neuronal injury and neurological diseases. |
 | [24308844](https://pubmed.ncbi.nlm.nih.gov/24308844/) | 2013 | ✅ | partial full text | receipt FTR-20261019-24308844-03 | Molecular origin of the binding of WWOX tumor suppressor to ErbB4 receptor tyrosine kinase. |
@@ -822,7 +822,7 @@ for an entirely unprocessed record.
 | [22484428](https://pubmed.ncbi.nlm.nih.gov/22484428/) | 2012 | — | full text | PAPER 367 | WWOX-mediated apoptosis in A549 cells mainly involves the mitochondrial pathway. |
 | [21476439](https://pubmed.ncbi.nlm.nih.gov/21476439/) | 2011 | — | full text | PAPER 244 | WWOX oxidoreductase--substrate and enzymatic characterization. |
 
-*(showing all 236 processed records from the seed)*
+*(showing all 237 processed records from the seed)*
 
 ## How to work one
 
