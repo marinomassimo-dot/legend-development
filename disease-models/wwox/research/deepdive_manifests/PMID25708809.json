@@ -210,20 +210,38 @@
   "note": "QUESTION_DRIVEN: the reader held the question 'does the only in-vivo WWOX-raising experiment of the registry show a raised WWOX protein, in which tissue and with what evidence'. Read: introduction, results, discussion, methods and the six figures (native rasters opened); supplementary figure legends read, the four supplementary images not opened.",
   "entries": [
    {
-    "proposition": "In human HCC cell lines the miR-153 mimic lowers WWOX protein and the antisense raises it (blots of one lane per condition); the paper's own assays are all in liver-cancer lines.",
+    "proposition": "In human HCC cell lines the miR-153 mimic lowers WWOX protein expression (quoted sentence; the companion sentence on the antisense is in the same paragraph).",
     "snippet": "Transfection of miR-153 mimics resulted in a reduced WWOX protein expression",
     "surface": "body",
     "artifact": "files/fulltext/PMID25708809_Hua2015_PMC_r2.xml",
     "anchor": "Results, 'MicroRNA-153 regulates beta-catenin activation through suppression of WWOX'",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID25708809.json",
+     "entry": 0,
+     "what_changed": "blind-audit finding class 'bundled proposition' (module repairs 2026-10-23): proposition narrowed to what its quote carries; readings from other lines or tool runs are labelled as the reader's. The repair is not itself audited.",
+     "audit": {
+      "auditors": 0,
+      "verdicts": []
+     }
+    }
    },
    {
-    "proposition": "In the diethylnitrosamine mouse liver-tumour model, the systemically given antagomir is reported to raise WWOX protein in the tumours and lower the Wnt-target genes; the paper presents this as one pair of western blots (Figure 5C and 5D) with no quantification graph.",
+    "proposition": "In the diethylnitrosamine mouse model, the quoted sentence reports that systemic antagomir delivery up-regulated WWOX protein and inhibited Wnt-target genes. (Reader's observation from Figure 5, see entry 2: shown as one pair of blots with no quantification graph.)",
     "snippet": "Importantly, we found that systemic delivery of miR-153 antagomir up-regulated WWOX protein levels and inhibited expression of Wnt signaling target genes",
     "surface": "body",
     "artifact": "files/fulltext/PMID25708809_Hua2015_PMC_r2.xml",
     "anchor": "Results, 'MicroRNA-153 promotes HCC growth in vivo', last sentence",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID25708809.json",
+     "entry": 1,
+     "what_changed": "blind-audit finding class 'bundled proposition' (module repairs 2026-10-23): proposition narrowed to what its quote carries; readings from other lines or tool runs are labelled as the reader's. The repair is not itself audited.",
+     "audit": {
+      "auditors": 0,
+      "verdicts": []
+     }
+    }
    },
    {
     "proposition": "Figure 5C as drawn: two tumour lanes per group; the WWOX band is visibly stronger in the two antagomir lanes than in the two negative-control lanes, with GAPDH as loading control. No densitometry, no n per lane and no normal-liver (non-tumour) lanes are shown; the tissue is HCC tumour, not normal liver and not brain.",
@@ -270,20 +288,38 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "The Methods give the antagomir only as 'systemically administrated' at week 28 of the diethylnitrosamine protocol; the Methods state no dose, vehicle, chemistry or route beyond that word, and no pharmacokinetic or brain-exposure measurement is reported.",
+    "proposition": "The quoted Methods sentence gives the antagomir only as 'systemically administrated' at week 28; it states no dose or vehicle. (Reader's reading of the rest of the Methods section, outside the quote: it names none either, and no pharmacokinetic or brain-exposure measurement is reported.)",
     "snippet": "Mice were systemically administrated with miR-NC or miR-153 antagomir at week 28.",
     "surface": "body",
     "artifact": "files/fulltext/PMID25708809_Hua2015_PMC_r2.xml",
     "anchor": "Methods, Mouse experiments, second paragraph",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID25708809.json",
+     "entry": 6,
+     "what_changed": "blind-audit finding class 'bundled proposition' (module repairs 2026-10-23): proposition narrowed to what its quote carries; readings from other lines or tool runs are labelled as the reader's. The repair is not itself audited.",
+     "audit": {
+      "auditors": 0,
+      "verdicts": []
+     }
+    }
    },
    {
-    "proposition": "The cell systems of the paper are two HCC lines; the in vivo systems are nude-mouse xenografts and a chemically induced liver-tumour model, plus 42 human HCC specimens. No neural cell or brain tissue is used, so miR-153 repression of WWOX is not shown in any neural context by this paper.",
+    "proposition": "The quoted Methods sentence names two HCC lines as the cell systems. (Reader's reading of the Methods and Results, outside the quote: the in vivo systems are nude-mouse xenografts, a chemically induced liver-tumour model and 42 human HCC specimens, and no neural cell or brain tissue is used; a text search of the JATS found no brain, neur or cerebr string.)",
     "snippet": "HCC cell lines (HepG2 and HuH7 cells) were obtained from The Cell Bank of Type Culture Collection",
     "surface": "body",
     "artifact": "files/fulltext/PMID25708809_Hua2015_PMC_r2.xml",
     "anchor": "Methods, Cell culture",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID25708809.json",
+     "entry": 7,
+     "what_changed": "blind-audit finding class 'bundled proposition' (module repairs 2026-10-23): proposition narrowed to what its quote carries; readings from other lines or tool runs are labelled as the reader's. The repair is not itself audited.",
+     "audit": {
+      "auditors": 0,
+      "verdicts": []
+     }
+    }
    },
    {
     "proposition": "The Discussion itself says miR-153 can act as an oncogenic microRNA or as a tumour suppressor depending on cellular context.",
@@ -294,20 +330,38 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "The Discussion cites prostate-cancer work in which miR-153 up-regulation promotes proliferation through suppression of PTEN: another target of the same microRNA is named in the paper itself.",
+    "proposition": "The Discussion quote names prostate-cancer work in which miR-153 up-regulation promotes proliferation through suppression of PTEN.",
     "snippet": "up-regulation of miR-153 promotes cell proliferation via suppression of the PTEN tumor suppressor gene in human prostate cancer",
     "surface": "body",
     "artifact": "files/fulltext/PMID25708809_Hua2015_PMC_r2.xml",
     "anchor": "Discussion, paragraph 3",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID25708809.json",
+     "entry": 9,
+     "what_changed": "blind-audit finding class 'bundled proposition' (module repairs 2026-10-23): proposition narrowed to what its quote carries; readings from other lines or tool runs are labelled as the reader's. The repair is not itself audited.",
+     "audit": {
+      "auditors": 0,
+      "verdicts": []
+     }
+    }
    },
    {
-    "proposition": "The survival sentence says that LOW miR-153 correlated with reduced tumour-free and overall survival, while the same paper's title for that section and its panel C draw the higher-expression curve failing earlier: the text and the panel disagree in direction.",
+    "proposition": "The quoted sentence says that LOW miR-153 correlated with reduced tumour-free and overall survival. (Reader's comparison with Figure 6C, entry 11: the panel draws the higher-expression curve failing earlier, so text and panel disagree in direction.)",
     "snippet": "Kaplan-Meier analysis further revealed that low miR-153 level in HCC tissues significantly correlated with the markedly reduced tumor-free survival and overall survival of HCC patients",
     "surface": "body",
     "artifact": "files/fulltext/PMID25708809_Hua2015_PMC_r2.xml",
     "anchor": "Results, 'MicroRNA-153 correlates with poor survival of HCC patients'",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID25708809.json",
+     "entry": 10,
+     "what_changed": "blind-audit finding class 'bundled proposition' (module repairs 2026-10-23): proposition narrowed to what its quote carries; readings from other lines or tool runs are labelled as the reader's. The repair is not itself audited.",
+     "audit": {
+      "auditors": 0,
+      "verdicts": []
+     }
+    }
    },
    {
     "proposition": "Figure 6C as drawn: the solid curve labelled relative higher miR-153 expression falls to zero by about 20 months while the dashed curve labelled lower expression stays at 100% to about 14 months, is at about 75% then and at about 50% from about 16 months to the end of its trace; the step size of the curves suggests small groups (n is not stated in the legend). This direction matches the section title and not the sentence above.",

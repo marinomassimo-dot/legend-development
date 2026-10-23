@@ -105,7 +105,7 @@
     "panel_text_relation": "panel_only"
    },
    {
-    "proposition": "The paper's only statement on cerebral lactate is one sentence on MR spectroscopy in the single described patient (a homozygous WWOX exon-6 deletion within a region of maternal uniparental disomy, with two variants in HSPG2): the non-essential amino acids were decreased globally and lactate was 'extremely low'. No spectrum, value, region, sequence or reference range is given, and neither of the two figure legends mentions MRS (the figure images were not held).",
+    "proposition": "The quoted sentence is the paper's statement on MR spectroscopy in the single described patient: non-essential amino acids decreased globally and lactate 'extremely low'. The sentence gives no value, region, sequence or reference range. (Reader's observations, outside the quote: the paper's two figure legends do not mention MRS; the figure images were not held.)",
     "snippet": "MR spectroscopy for non-essential amino acids was decreased globally and lactate levels were extremely low.",
     "surface": "body",
     "artifact": "files/fulltext/PMID30362252_Davids2019_PMC_2026-09-27.xml",
@@ -114,46 +114,80 @@
     "contradicts_locator": {
      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID30362252.json",
      "entry": 5,
-     "what_changed": "'neither of the two figures shows MRS' narrowed to the figure legends, because the figure images were not held (same weakness class as the audited overshoot).",
+     "what_changed": "blind-audit finding class 'bundled proposition' (module repairs 2026-10-23): proposition narrowed to what its quote carries; readings from other lines or tool runs are labelled as the reader's. The repair is not itself audited.",
      "audit": {
-      "auditors": 1,
-      "verdicts": [
-       "not separately audited; wording narrowed after the module-batch blind audit flagged a sibling entry; the repair is not itself audited."
-      ]
+      "auditors": 0,
+      "verdicts": []
      }
     }
    },
    {
-    "proposition": "The authors assign the HSPG2 variants to the skeletal dysplasia, osteoporosis and flexion contractures, which they say could not be attributed to WWOX; the sentence does not mention the brain, MRS or lactate. The map's reading of HSPG2 as a confounder of the MRS lactate finding is the map's own inference, not a statement of this paper.",
+    "proposition": "The quoted sentence attributes skeletal dysplasia, osteoporosis and flexion contractures to something other than WWOX; it does not mention the brain, MRS or lactate. (Reader's inference: the map's reading of HSPG2 as a confounder of the MRS lactate finding is the map's own, not stated in this sentence; the HSPG2 attribution to those features is in the Discussion text beyond the quote.)",
     "snippet": "Other clinical features in our patient, including skeletal dysplasia, osteoporosis, and flexion contractures, could not be attributed to the variant in WWOX.",
     "surface": "body",
     "artifact": "files/fulltext/PMID30362252_Davids2019_PMC_2026-09-27.xml",
     "anchor": "Results, paragraph after the expression analysis",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID30362252.json",
+     "entry": 6,
+     "what_changed": "blind-audit finding class 'bundled proposition' (module repairs 2026-10-23): proposition narrowed to what its quote carries; readings from other lines or tool runs are labelled as the reader's. The repair is not itself audited.",
+     "audit": {
+      "auditors": 0,
+      "verdicts": []
+     }
+    }
    },
    {
-    "proposition": "The patient's drug history as stated: seizures got little relief from pharmacotherapy and she was 'optimized' to phenobarbital, topiramate and pyridoxine. No sodium-channel blocker and no vigabatrin is named, so this patient carries no information on those classes.",
+    "proposition": "The quoted sentence gives the patient's drug history: little relief from pharmacotherapy, 'optimized' to phenobarbital, topiramate and pyridoxine; no sodium-channel blocker and no vigabatrin is named in it.",
     "snippet": "Pharmacotherapeutics provided little relief to seizure activity but the child was optimized to a regimen of phenobarbital, topiramate, and pyridoxine.",
     "surface": "body",
     "artifact": "files/fulltext/PMID30362252_Davids2019_PMC_2026-09-27.xml",
     "anchor": "Results, clinical description, second paragraph",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID30362252.json",
+     "entry": 7,
+     "what_changed": "blind-audit finding class 'bundled proposition' (module repairs 2026-10-23): proposition narrowed to what its quote carries; readings from other lines or tool runs are labelled as the reader's. The repair is not itself audited.",
+     "audit": {
+      "auditors": 0,
+      "verdicts": []
+     }
+    }
    },
    {
-    "proposition": "Neonatal hypoglycaemia is recorded in the first-days laboratory results of this patient, in a pregnancy the same paragraph describes as complicated by maternal gestational diabetes; the paper does not connect the two or either to WWOX.",
+    "proposition": "The quoted first-days laboratory results of this patient include hypoglycaemia; the quote does not connect it to WWOX. (Reader's note: the same clinical paragraph describes the pregnancy as complicated by gestational diabetes, outside this quote.)",
     "snippet": "Laboratory results demonstrated polycythemia of the newborn, neutropenia, thrombocytopenia, abnormal buffy coat cellular inclusions, hypoglycemia, septicemia",
     "surface": "body",
     "artifact": "files/fulltext/PMID30362252_Davids2019_PMC_2026-09-27.xml",
     "anchor": "Results, clinical description, first paragraph",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID30362252.json",
+     "entry": 8,
+     "what_changed": "blind-audit finding class 'bundled proposition' (module repairs 2026-10-23): proposition narrowed to what its quote carries; readings from other lines or tool runs are labelled as the reader's. The repair is not itself audited.",
+     "audit": {
+      "auditors": 0,
+      "verdicts": []
+     }
+    }
    },
    {
-    "proposition": "The Discussion states that the patient showed some findings of the metabolic syndrome reported in Wwox-deficient mice, without naming which findings, measuring any metabolite or giving values; it sits beside the MRS sentence in a paper that reports no peripheral metabolic panel.",
+    "proposition": "The Discussion sentence states that the patient exhibited some findings of the metabolic syndrome reported in Wwox-deficient mice; the sentence names no finding and gives no value.",
     "snippet": "Our patient also exhibited some findings of the metabolic syndrome reported in Wwox-deficient mice",
     "surface": "body",
     "artifact": "files/fulltext/PMID30362252_Davids2019_PMC_2026-09-27.xml",
     "anchor": "Discussion, paragraph on the loss of the full-length protein",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID30362252.json",
+     "entry": 9,
+     "what_changed": "blind-audit finding class 'bundled proposition' (module repairs 2026-10-23): proposition narrowed to what its quote carries; readings from other lines or tool runs are labelled as the reader's. The repair is not itself audited.",
+     "audit": {
+      "auditors": 0,
+      "verdicts": []
+     }
+    }
    }
   ]
  }

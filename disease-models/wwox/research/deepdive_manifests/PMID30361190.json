@@ -321,20 +321,38 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "First child: the first line of the list of investigations the paper calls normal begins with lactate. The list continues over the next lines (ammonia, acylcarnitine, uric acid, homocysteine, plasma amino acids, urine organic acids, transferrin isoforms); each is blood or urine chemistry, and no brain or muscle measurement is in it.",
+    "proposition": "First child: the quoted line opens the list of investigations the paper calls normal with lactate; the list continues on the following lines (entry 15).",
     "snippet": "The following investigations were normal: lactate,",
     "surface": "body",
     "artifact": "files/fulltext/PMID30361190_Shaukat2018_JLE.txt",
     "anchor": "Results, clinical data, first child, page 403 right column",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID30361190.json",
+     "entry": 14,
+     "what_changed": "blind-audit finding class 'bundled proposition' (module repairs 2026-10-23): proposition narrowed to what its quote carries; readings from other lines or tool runs are labelled as the reader's. The repair is not itself audited.",
+     "audit": {
+      "auditors": 0,
+      "verdicts": []
+     }
+    }
    },
    {
-    "proposition": "First child: the list of normal investigations ends with urine organic acids and transferrin isoforms (the word is split over the line break).",
+    "proposition": "First child: the list of normal investigations ends with plasma amino acids, urine organic acids and transferrin isoforms (the last word split over the line break). (Reader's reading of entries 14 and 15 together: blood and urine chemistry only.)",
     "snippet": "plasma amino acids, urine organic acids, and trans-",
     "surface": "body",
     "artifact": "files/fulltext/PMID30361190_Shaukat2018_JLE.txt",
     "anchor": "Results, clinical data, first child, page 403 right column",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID30361190.json",
+     "entry": 15,
+     "what_changed": "blind-audit finding class 'bundled proposition' (module repairs 2026-10-23): proposition narrowed to what its quote carries; readings from other lines or tool runs are labelled as the reader's. The repair is not itself audited.",
+     "audit": {
+      "auditors": 0,
+      "verdicts": []
+     }
+    }
    },
    {
     "proposition": "Second child: the list of normal investigations begins with the echocardiogram and lactate, ammonia, acylcarnitine profile and uric acid.",
@@ -345,27 +363,62 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Second child: the list of normal investigations ends with urine organic acid and urine sulfocystine. Transferrin isoforms are not in this child's list, so the map's statement that transferrin isoforms were normal in both patients is not what the second child's list says.",
+    "proposition": "Second child: the quoted line ends the list of normal investigations with urine sulfocystine; transferrin isoforms do not occur in the quoted lines of this child's list (reader's comparison with entry 15; the map states transferrin isoforms normal in both).",
     "snippet": "and urine sulfocystine. Cranial MRI at two months of",
     "surface": "body",
     "artifact": "files/fulltext/PMID30361190_Shaukat2018_JLE.txt",
     "anchor": "Results, clinical data, second child, page 404 left column",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID30361190.json",
+     "entry": 17,
+     "what_changed": "blind-audit finding class 'bundled proposition' (module repairs 2026-10-23): proposition narrowed to what its quote carries; readings from other lines or tool runs are labelled as the reader's. The repair is not itself audited.",
+     "audit": {
+      "auditors": 0,
+      "verdicts": []
+     }
+    }
    },
    {
-    "proposition": "Second child: epileptic spasms were captured on EEG and vigabatrin was started; the next column line records that it was added with a partial response, which is a different outcome from the first child's resolution of spasms.",
+    "proposition": "Second child: epileptic spasms were captured on EEG and vigabatrin was started (the outcome is in the next column line, entry 19).",
     "snippet": "and epileptic spasms were captured. Vigabatrin was",
     "surface": "body",
     "artifact": "files/fulltext/PMID30361190_Shaukat2018_JLE.txt",
     "anchor": "Results, clinical data, second child, page 403 left column to page 404",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID30361190.json",
+     "entry": 18,
+     "what_changed": "blind-audit finding class 'bundled proposition' (module repairs 2026-10-23): proposition narrowed to what its quote carries; readings from other lines or tool runs are labelled as the reader's. The repair is not itself audited.",
+     "audit": {
+      "auditors": 0,
+      "verdicts": []
+     }
+    }
    },
    {
-    "proposition": "Second child, at 11 months: hemispasms in clusters persisted on four antiepileptic drugs including vigabatrin, sodium valproate, clobazam and phenobarbital; the two-child series therefore holds one resolution and one partial response to vigabatrin, in children with the same gene.",
+    "proposition": "Second child: the quoted line records four antiepileptic drugs including vigabatrin at 11 months (the continuation names sodium valproate, clobazam and phenobarbital and the persistent hemispasms in clusters). (Reader's synthesis across entries 18 and 19 and the first child's resolution in entry 12: one resolution and one partial response to vigabatrin.)",
     "snippet": "on four antiepileptic medications including vigaba-",
     "surface": "body",
     "artifact": "files/fulltext/PMID30361190_Shaukat2018_JLE.txt",
     "anchor": "Results, clinical data, second child, page 404 left column",
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID30361190.json",
+     "entry": 19,
+     "what_changed": "blind-audit finding class 'bundled proposition' (module repairs 2026-10-23): proposition narrowed to what its quote carries; readings from other lines or tool runs are labelled as the reader's. The repair is not itself audited.",
+     "audit": {
+      "auditors": 0,
+      "verdicts": []
+     }
+    }
+   },
+   {
+    "proposition": "Second child: a drug is recorded as 'added with a partial response' in the line that continues the vigabatrin sentence of entry 18 (the column break separates the drug name from this line; the reader joins them).",
+    "snippet": "added with a partial response.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30361190_Shaukat2018_JLE.txt",
+    "anchor": "Results, clinical data, second child, page 404 right column, first line",
     "panel_text_relation": "text_only"
    }
   ]
