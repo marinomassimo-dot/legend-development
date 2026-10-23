@@ -142,12 +142,23 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Hearing impairment occurred in treated survivors and not in control survivors, with aminoglycoside co-exposure in both treated cases; the trial states it could not establish the drug's contribution.",
+    "proposition": "Hearing impairment occurred in 2 of 26 treated survivors and 0 of 13 control survivors, and both treated cases had received gentamicin (one at a supratherapeutic level).",
     "snippet": "hearing impairment occurred in 2 of 26 surviving treated subjects (8%; both received gentamicin, 1 with a supratherapeutic level), 0 of 13 surviving control subjects",
     "surface": "body",
     "artifact": "files/fulltext/PMID33201535_Soul2021_PMC_r2.xml",
     "anchor": "Results, Study Participants",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID33201535.json",
+     "entry": 3,
+     "what_changed": "Proposition restated to what the quote carries after the blind module-batch audit (OVERSHOOT, quote-level); the clause about the trial not being able to establish the drug's contribution moved to its own entry.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ]
+     }
+    }
    },
    {
     "proposition": "Most randomised neonates had acute symptomatic seizures from ischaemic or haemorrhagic etiologies (36 of 43).",
@@ -203,6 +214,14 @@
     "surface": "body",
     "artifact": "files/fulltext/PMID33201535_Soul2021_PMC_r2.xml",
     "anchor": "Discussion, paragraph 3",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The trial states that neither it nor the earlier open-label trial enrolled enough subjects to establish definitively any contribution of the drug to hearing impairment.",
+    "snippet": "Neither bumetanide trial enrolled sufficient subjects to establish definitively any potential contribution of bumetanide to hearing impairment",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33201535_Soul2021_PMC_r2.xml",
+    "anchor": "Discussion, paragraph 2",
     "panel_text_relation": "text_only"
    }
   ]
