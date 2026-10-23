@@ -78,7 +78,23 @@ def query(request: dict, fetch=_http.get_json) -> dict:
     if not molecules:
         out["status"] = "NO_MATCH_FOUND"
         return out
-    for mol in molecules[:1]:
+    # A free-text search returns the nearest molecule, which for a sentence or a class name is some
+    # unrelated entry (8 of 10 cached MATCH_FOUND answers of the join were not the named substance).
+    # MATCH_FOUND therefore needs a molecule whose pref_name or synonym IS the queried name; the
+    # nearest hit is recorded in `nearest` so a reader sees what the search returned instead.
+    wanted = " ".join(drug.casefold().split())
+    def names_of(mol):
+        names = [mol.get("pref_name")] + [syn.get("molecule_synonym") for syn in mol.get("molecule_synonyms") or []]
+        return {" ".join(str(n).casefold().split()) for n in names if n}
+    exact = [mol for mol in molecules if wanted in names_of(mol)]
+    if not exact:
+        out["status"] = "NO_MATCH_FOUND"
+        out["nearest"] = [{"molecule_chembl_id": m.get("molecule_chembl_id"), "pref_name": m.get("pref_name")}
+                          for m in molecules[:3]]
+        out["note"] = ("NO_MATCH_FOUND is an answer about this query on this date, never absence: no molecule's name or synonym equals the queried name; the nearest "
+                       "search hits are in `nearest` and are NOT the named substance")
+        return out
+    for mol in exact[:1]:
         mid = mol.get("molecule_chembl_id")
         url = f"{BASE}/mechanism.json?molecule_chembl_id={mid}&limit=20"
         out["requests_sent"].append(url)

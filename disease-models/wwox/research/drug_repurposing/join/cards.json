@@ -13,20 +13,17 @@
      "citation": "Zdrazil B. et al. The ChEMBL Database in 2023: a drug discovery platform spanning multiple bioactivity data types and time periods. Nucleic Acids Res 2024;52(D1):D1180-D1192. https://doi.org/10.1093/nar/gkad1004; web services: Davies M. et al. 2015 (Nucleic Acids Res 43:W612)",
      "error": "",
      "evidence_label": "NOT WWOX EVIDENCE",
-     "first_hits": [
-      "molecule_without_mechanism"
-     ],
-     "hit_count": 1,
+     "first_hits": [],
+     "hit_count": 0,
      "hits_total_before_cap": null,
      "licence": "CC BY-SA 3.0; key-less, no payment",
      "requests_sent": [
       "https://www.ebi.ac.uk/chembl/api/data/status.json",
-      "https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?q=mTOR%20inhibitors&limit=5",
-      "https://www.ebi.ac.uk/chembl/api/data/mechanism.json?molecule_chembl_id=CHEMBL5760702&limit=20"
+      "https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?q=mTOR%20inhibitors&limit=5"
      ],
-     "retrieved_at": "2026-10-23T17:08:24Z",
+     "retrieved_at": "2026-10-23T20:53:02Z",
      "source_version": "ChEMBL_37 2026-05-01",
-     "status": "MATCH_FOUND"
+     "status": "NO_MATCH_FOUND"
     },
     {
      "adapter": "openfda",
@@ -98,20 +95,17 @@
       "citation": "Zdrazil B. et al. The ChEMBL Database in 2023: a drug discovery platform spanning multiple bioactivity data types and time periods. Nucleic Acids Res 2024;52(D1):D1180-D1192. https://doi.org/10.1093/nar/gkad1004; web services: Davies M. et al. 2015 (Nucleic Acids Res 43:W612)",
       "error": "",
       "evidence_label": "NOT WWOX EVIDENCE",
-      "first_hits": [
-       "molecule_without_mechanism"
-      ],
-      "hit_count": 1,
+      "first_hits": [],
+      "hit_count": 0,
       "hits_total_before_cap": null,
       "licence": "CC BY-SA 3.0; key-less, no payment",
       "requests_sent": [
        "https://www.ebi.ac.uk/chembl/api/data/status.json",
-       "https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?q=mTOR%20inhibitors&limit=5",
-       "https://www.ebi.ac.uk/chembl/api/data/mechanism.json?molecule_chembl_id=CHEMBL5760702&limit=20"
+       "https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?q=mTOR%20inhibitors&limit=5"
       ],
-      "retrieved_at": "2026-10-23T17:08:24Z",
+      "retrieved_at": "2026-10-23T20:53:02Z",
       "source_version": "ChEMBL_37 2026-05-01",
-      "status": "MATCH_FOUND"
+      "status": "NO_MATCH_FOUND"
      },
      {
       "adapter": "openfda",
@@ -195,7 +189,7 @@
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "d0f501433f3fa75f9f46fe0f006ac56450cdd443bd5de5c111d0941f2d494960",
+   "input_sha256": "525a6d69d8f54a7499cd4d4b43190e3af14bf16a1d0ceaa207515cf08dd94cb1",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -235,7 +229,7 @@
    "measure_next": {
     "dependence": "NO_RECEIPTED_EVIDENCE",
     "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
-    "external_hits": 2,
+    "external_hits": 1,
     "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
     "would_move": "N-01 (disease-models/wwox/analysis/mechanism_intervention_map.md:630)"
    },
@@ -277,20 +271,17 @@
      "citation": "Zdrazil B. et al. The ChEMBL Database in 2023: a drug discovery platform spanning multiple bioactivity data types and time periods. Nucleic Acids Res 2024;52(D1):D1180-D1192. https://doi.org/10.1093/nar/gkad1004; web services: Davies M. et al. 2015 (Nucleic Acids Res 43:W612)",
      "error": "",
      "evidence_label": "NOT WWOX EVIDENCE",
-     "first_hits": [
-      "BLOOD GROUP SPECIFIC SUBSTANCES A, B, AND AB"
-     ],
-     "hit_count": 1,
+     "first_hits": [],
+     "hit_count": 0,
      "hits_total_before_cap": null,
      "licence": "CC BY-SA 3.0; key-less, no payment",
      "requests_sent": [
       "https://www.ebi.ac.uk/chembl/api/data/status.json",
-      "https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?q=Lithium%20as%20a%20WWOX-specific%20disease%20modifier&limit=5",
-      "https://www.ebi.ac.uk/chembl/api/data/mechanism.json?molecule_chembl_id=CHEMBL2108943&limit=20"
+      "https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?q=Lithium%20as%20a%20WWOX-specific%20disease%20modifier&limit=5"
      ],
-     "retrieved_at": "2026-10-23T17:08:30Z",
+     "retrieved_at": "2026-10-23T20:52:48Z",
      "source_version": "ChEMBL_37 2026-05-01",
-     "status": "MATCH_FOUND"
+     "status": "NO_MATCH_FOUND"
     },
     {
      "adapter": "openfda",
@@ -362,20 +353,17 @@
       "citation": "Zdrazil B. et al. The ChEMBL Database in 2023: a drug discovery platform spanning multiple bioactivity data types and time periods. Nucleic Acids Res 2024;52(D1):D1180-D1192. https://doi.org/10.1093/nar/gkad1004; web services: Davies M. et al. 2015 (Nucleic Acids Res 43:W612)",
       "error": "",
       "evidence_label": "NOT WWOX EVIDENCE",
-      "first_hits": [
-       "BLOOD GROUP SPECIFIC SUBSTANCES A, B, AND AB"
-      ],
-      "hit_count": 1,
+      "first_hits": [],
+      "hit_count": 0,
       "hits_total_before_cap": null,
       "licence": "CC BY-SA 3.0; key-less, no payment",
       "requests_sent": [
        "https://www.ebi.ac.uk/chembl/api/data/status.json",
-       "https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?q=Lithium%20as%20a%20WWOX-specific%20disease%20modifier&limit=5",
-       "https://www.ebi.ac.uk/chembl/api/data/mechanism.json?molecule_chembl_id=CHEMBL2108943&limit=20"
+       "https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?q=Lithium%20as%20a%20WWOX-specific%20disease%20modifier&limit=5"
       ],
-      "retrieved_at": "2026-10-23T17:08:30Z",
+      "retrieved_at": "2026-10-23T20:52:48Z",
       "source_version": "ChEMBL_37 2026-05-01",
-      "status": "MATCH_FOUND"
+      "status": "NO_MATCH_FOUND"
      },
      {
       "adapter": "openfda",
@@ -459,7 +447,7 @@
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "40f77e7406d712c4d3361b6824bc76f34224da1bbb83327e454b3ecafa2af518",
+   "input_sha256": "e4d02defbbd51e1cd30c2343a611196347c1ca63a6882742c74e90fa056aa0c1",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -499,7 +487,7 @@
    "measure_next": {
     "dependence": "NO_RECEIPTED_EVIDENCE",
     "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
-    "external_hits": 2,
+    "external_hits": 1,
     "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
     "would_move": "N-02 (disease-models/wwox/analysis/mechanism_intervention_map.md:641)"
    },
@@ -2277,20 +2265,17 @@
      "citation": "Zdrazil B. et al. The ChEMBL Database in 2023: a drug discovery platform spanning multiple bioactivity data types and time periods. Nucleic Acids Res 2024;52(D1):D1180-D1192. https://doi.org/10.1093/nar/gkad1004; web services: Davies M. et al. 2015 (Nucleic Acids Res 43:W612)",
      "error": "",
      "evidence_label": "NOT WWOX EVIDENCE",
-     "first_hits": [
-      "molecule_without_mechanism"
-     ],
-     "hit_count": 1,
+     "first_hits": [],
+     "hit_count": 0,
      "hits_total_before_cap": null,
      "licence": "CC BY-SA 3.0; key-less, no payment",
      "requests_sent": [
       "https://www.ebi.ac.uk/chembl/api/data/status.json",
-      "https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?q=4-PBA%20/%20TUDCA%20on%20the%20ER-chaperone%20rationale&limit=5",
-      "https://www.ebi.ac.uk/chembl/api/data/mechanism.json?molecule_chembl_id=CHEMBL3544516&limit=20"
+      "https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?q=4-PBA%20/%20TUDCA%20on%20the%20ER-chaperone%20rationale&limit=5"
      ],
-     "retrieved_at": "2026-10-23T17:04:55Z",
+     "retrieved_at": "2026-10-23T20:53:24Z",
      "source_version": "ChEMBL_37 2026-05-01",
-     "status": "MATCH_FOUND"
+     "status": "NO_MATCH_FOUND"
     },
     {
      "adapter": "openfda",
@@ -2374,20 +2359,17 @@
       "citation": "Zdrazil B. et al. The ChEMBL Database in 2023: a drug discovery platform spanning multiple bioactivity data types and time periods. Nucleic Acids Res 2024;52(D1):D1180-D1192. https://doi.org/10.1093/nar/gkad1004; web services: Davies M. et al. 2015 (Nucleic Acids Res 43:W612)",
       "error": "",
       "evidence_label": "NOT WWOX EVIDENCE",
-      "first_hits": [
-       "molecule_without_mechanism"
-      ],
-      "hit_count": 1,
+      "first_hits": [],
+      "hit_count": 0,
       "hits_total_before_cap": null,
       "licence": "CC BY-SA 3.0; key-less, no payment",
       "requests_sent": [
        "https://www.ebi.ac.uk/chembl/api/data/status.json",
-       "https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?q=4-PBA%20/%20TUDCA%20on%20the%20ER-chaperone%20rationale&limit=5",
-       "https://www.ebi.ac.uk/chembl/api/data/mechanism.json?molecule_chembl_id=CHEMBL3544516&limit=20"
+       "https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?q=4-PBA%20/%20TUDCA%20on%20the%20ER-chaperone%20rationale&limit=5"
       ],
-      "retrieved_at": "2026-10-23T17:04:55Z",
+      "retrieved_at": "2026-10-23T20:53:24Z",
       "source_version": "ChEMBL_37 2026-05-01",
-      "status": "MATCH_FOUND"
+      "status": "NO_MATCH_FOUND"
      },
      {
       "adapter": "openfda",
@@ -2483,7 +2465,7 @@
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "9b73e65a3b85136dd3c1adc533a0c8f47c9662673d434c4e04f1252339e2d2ce",
+   "input_sha256": "7d562fb8caa2c7fb589a756f8ccee712cce2fb2ce315e720968dcf90d9059583",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -2523,7 +2505,7 @@
    "measure_next": {
     "dependence": "NO_RECEIPTED_EVIDENCE",
     "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
-    "external_hits": 1,
+    "external_hits": 0,
     "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
     "would_move": "N-11 (disease-models/wwox/analysis/mechanism_intervention_map.md:720)"
    },
@@ -2565,20 +2547,17 @@
      "citation": "Zdrazil B. et al. The ChEMBL Database in 2023: a drug discovery platform spanning multiple bioactivity data types and time periods. Nucleic Acids Res 2024;52(D1):D1180-D1192. https://doi.org/10.1093/nar/gkad1004; web services: Davies M. et al. 2015 (Nucleic Acids Res 43:W612)",
      "error": "",
      "evidence_label": "NOT WWOX EVIDENCE",
-     "first_hits": [
-      "CYANOCOBALAMIN CO 57"
-     ],
-     "hit_count": 1,
+     "first_hits": [],
+     "hit_count": 0,
      "hits_total_before_cap": null,
      "licence": "CC BY-SA 3.0; key-less, no payment",
      "requests_sent": [
       "https://www.ebi.ac.uk/chembl/api/data/status.json",
-      "https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?q=HSP70%20co-inducers&limit=5",
-      "https://www.ebi.ac.uk/chembl/api/data/mechanism.json?molecule_chembl_id=CHEMBL2096655&limit=20"
+      "https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?q=HSP70%20co-inducers&limit=5"
      ],
-     "retrieved_at": "2026-10-23T17:05:22Z",
+     "retrieved_at": "2026-10-23T20:53:00Z",
      "source_version": "ChEMBL_37 2026-05-01",
-     "status": "MATCH_FOUND"
+     "status": "NO_MATCH_FOUND"
     },
     {
      "adapter": "openfda",
@@ -2670,20 +2649,17 @@
       "citation": "Zdrazil B. et al. The ChEMBL Database in 2023: a drug discovery platform spanning multiple bioactivity data types and time periods. Nucleic Acids Res 2024;52(D1):D1180-D1192. https://doi.org/10.1093/nar/gkad1004; web services: Davies M. et al. 2015 (Nucleic Acids Res 43:W612)",
       "error": "",
       "evidence_label": "NOT WWOX EVIDENCE",
-      "first_hits": [
-       "CYANOCOBALAMIN CO 57"
-      ],
-      "hit_count": 1,
+      "first_hits": [],
+      "hit_count": 0,
       "hits_total_before_cap": null,
       "licence": "CC BY-SA 3.0; key-less, no payment",
       "requests_sent": [
        "https://www.ebi.ac.uk/chembl/api/data/status.json",
-       "https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?q=HSP70%20co-inducers&limit=5",
-       "https://www.ebi.ac.uk/chembl/api/data/mechanism.json?molecule_chembl_id=CHEMBL2096655&limit=20"
+       "https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?q=HSP70%20co-inducers&limit=5"
       ],
-      "retrieved_at": "2026-10-23T17:05:22Z",
+      "retrieved_at": "2026-10-23T20:53:00Z",
       "source_version": "ChEMBL_37 2026-05-01",
-      "status": "MATCH_FOUND"
+      "status": "NO_MATCH_FOUND"
      },
      {
       "adapter": "openfda",
@@ -2787,7 +2763,7 @@
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "1ddfc1e4411d2aa24f7ffc9ed95c52b8b585991b913646e057af4f2a88445f51",
+   "input_sha256": "29123cd4fafd3a165816d9c90b60cd2c2ee196a215e30f40bb26576b911da342",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -2827,7 +2803,7 @@
    "measure_next": {
     "dependence": "NO_RECEIPTED_EVIDENCE",
     "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
-    "external_hits": 3,
+    "external_hits": 2,
     "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
     "would_move": "N-12 (disease-models/wwox/analysis/mechanism_intervention_map.md:726)"
    },
@@ -3507,20 +3483,17 @@
      "citation": "Zdrazil B. et al. The ChEMBL Database in 2023: a drug discovery platform spanning multiple bioactivity data types and time periods. Nucleic Acids Res 2024;52(D1):D1180-D1192. https://doi.org/10.1093/nar/gkad1004; web services: Davies M. et al. 2015 (Nucleic Acids Res 43:W612)",
      "error": "",
      "evidence_label": "NOT WWOX EVIDENCE",
-     "first_hits": [
-      "ATRACURIUM BESYLATE"
-     ],
-     "hit_count": 1,
+     "first_hits": [],
+     "hit_count": 0,
      "hits_total_before_cap": null,
      "licence": "CC BY-SA 3.0; key-less, no payment",
      "requests_sent": [
       "https://www.ebi.ac.uk/chembl/api/data/status.json",
-      "https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?q=Pannexin-1%20blockade&limit=5",
-      "https://www.ebi.ac.uk/chembl/api/data/mechanism.json?molecule_chembl_id=CHEMBL1200527&limit=20"
+      "https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?q=Pannexin-1%20blockade&limit=5"
      ],
-     "retrieved_at": "2026-10-23T17:06:58Z",
+     "retrieved_at": "2026-10-23T20:53:14Z",
      "source_version": "ChEMBL_37 2026-05-01",
-     "status": "MATCH_FOUND"
+     "status": "NO_MATCH_FOUND"
     },
     {
      "adapter": "openfda",
@@ -3609,20 +3582,17 @@
       "citation": "Zdrazil B. et al. The ChEMBL Database in 2023: a drug discovery platform spanning multiple bioactivity data types and time periods. Nucleic Acids Res 2024;52(D1):D1180-D1192. https://doi.org/10.1093/nar/gkad1004; web services: Davies M. et al. 2015 (Nucleic Acids Res 43:W612)",
       "error": "",
       "evidence_label": "NOT WWOX EVIDENCE",
-      "first_hits": [
-       "ATRACURIUM BESYLATE"
-      ],
-      "hit_count": 1,
+      "first_hits": [],
+      "hit_count": 0,
       "hits_total_before_cap": null,
       "licence": "CC BY-SA 3.0; key-less, no payment",
       "requests_sent": [
        "https://www.ebi.ac.uk/chembl/api/data/status.json",
-       "https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?q=Pannexin-1%20blockade&limit=5",
-       "https://www.ebi.ac.uk/chembl/api/data/mechanism.json?molecule_chembl_id=CHEMBL1200527&limit=20"
+       "https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?q=Pannexin-1%20blockade&limit=5"
       ],
-      "retrieved_at": "2026-10-23T17:06:58Z",
+      "retrieved_at": "2026-10-23T20:53:14Z",
       "source_version": "ChEMBL_37 2026-05-01",
-      "status": "MATCH_FOUND"
+      "status": "NO_MATCH_FOUND"
      },
      {
       "adapter": "openfda",
@@ -3739,7 +3709,7 @@
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "909d99ce452e08986fea7ab523e7b92820dfb1596a4375baa2f9cbe83e501556",
+   "input_sha256": "0ee46fd6d5bfe79d02d1475abd9037882d3926d5d67e51087a3f0bcf586b201e",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -3796,7 +3766,7 @@
    "measure_next": {
     "dependence": "ONE_PAPER (34634460, depth complete_fulltext_read, 26 locators, audit UNAUDITED)",
     "experiment_sketch": "replicate the one measurement this query stands on, changing the laboratory or the model but not the endpoint",
-    "external_hits": 2,
+    "external_hits": 1,
     "measurement": "an independent measurement of the same endpoint in a second system, or the same system from a second laboratory: the query rests on one reading",
     "would_move": "N-16 (disease-models/wwox/analysis/mechanism_intervention_map.md:769)"
    },
@@ -3838,20 +3808,17 @@
      "citation": "Zdrazil B. et al. The ChEMBL Database in 2023: a drug discovery platform spanning multiple bioactivity data types and time periods. Nucleic Acids Res 2024;52(D1):D1180-D1192. https://doi.org/10.1093/nar/gkad1004; web services: Davies M. et al. 2015 (Nucleic Acids Res 43:W612)",
      "error": "",
      "evidence_label": "NOT WWOX EVIDENCE",
-     "first_hits": [
-      "TRIGLYCERIDES, MEDIUM-CHAIN"
-     ],
-     "hit_count": 1,
+     "first_hits": [],
+     "hit_count": 0,
      "hits_total_before_cap": null,
      "licence": "CC BY-SA 3.0; key-less, no payment",
      "requests_sent": [
       "https://www.ebi.ac.uk/chembl/api/data/status.json",
-      "https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?q=Tau-lowering%2C%20imported%20from%20tauopathy%20into%20CHAIN%20C&limit=5",
-      "https://www.ebi.ac.uk/chembl/api/data/mechanism.json?molecule_chembl_id=CHEMBL2108659&limit=20"
+      "https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?q=Tau-lowering%2C%20imported%20from%20tauopathy%20into%20CHAIN%20C&limit=5"
      ],
-     "retrieved_at": "2026-10-23T17:08:47Z",
+     "retrieved_at": "2026-10-23T20:53:07Z",
      "source_version": "ChEMBL_37 2026-05-01",
-     "status": "MATCH_FOUND"
+     "status": "NO_MATCH_FOUND"
     },
     {
      "adapter": "openfda",
@@ -3925,7 +3892,7 @@
      "id": "DA-Q-N-17",
      "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:775",
      "reading_depth": "complete_fulltext_read",
-     "receipt": "FTR-20260726-22193544-01",
+     "receipt": "FTR-20260913-15064722-01",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-17",
      "target_id": "UNKNOWN"
     },
@@ -3936,20 +3903,17 @@
       "citation": "Zdrazil B. et al. The ChEMBL Database in 2023: a drug discovery platform spanning multiple bioactivity data types and time periods. Nucleic Acids Res 2024;52(D1):D1180-D1192. https://doi.org/10.1093/nar/gkad1004; web services: Davies M. et al. 2015 (Nucleic Acids Res 43:W612)",
       "error": "",
       "evidence_label": "NOT WWOX EVIDENCE",
-      "first_hits": [
-       "TRIGLYCERIDES, MEDIUM-CHAIN"
-      ],
-      "hit_count": 1,
+      "first_hits": [],
+      "hit_count": 0,
       "hits_total_before_cap": null,
       "licence": "CC BY-SA 3.0; key-less, no payment",
       "requests_sent": [
        "https://www.ebi.ac.uk/chembl/api/data/status.json",
-       "https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?q=Tau-lowering%2C%20imported%20from%20tauopathy%20into%20CHAIN%20C&limit=5",
-       "https://www.ebi.ac.uk/chembl/api/data/mechanism.json?molecule_chembl_id=CHEMBL2108659&limit=20"
+       "https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?q=Tau-lowering%2C%20imported%20from%20tauopathy%20into%20CHAIN%20C&limit=5"
       ],
-      "retrieved_at": "2026-10-23T17:08:47Z",
+      "retrieved_at": "2026-10-23T20:53:07Z",
       "source_version": "ChEMBL_37 2026-05-01",
-      "status": "MATCH_FOUND"
+      "status": "NO_MATCH_FOUND"
      },
      {
       "adapter": "openfda",
@@ -4017,17 +3981,111 @@
     },
     "legend_evidence": {
      "abstention": null,
-     "complete_reads": 7,
+     "complete_reads": 32,
      "depths": [
       "NO_RECEIPT",
-      "complete_fulltext_read"
+      "complete_fulltext_read",
+      "partial_fulltext_read"
      ],
-     "digest": "f142a826dbba79df",
-     "locators": 138,
+     "digest": "ba224b888e856e21",
+     "locators": 965,
      "origin_id": "N-17",
-     "papers": 8,
+     "papers": 55,
      "query_id": "Q-N-17",
      "rows": [
+      {
+       "adjudication_files": [],
+       "audit_status": "CONTRADICTIONS_AUDITED",
+       "audited_entries": 9,
+       "contradiction_verdicts": [
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT/CORRECTED"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT/CORRECTED"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT/CORRECTED"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT/CORRECTED"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT/CORRECTED"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT/CORRECTED"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT/CORRECTED"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT/CORRECTED"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT/CORRECTED"
+        }
+       ],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 24,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID15064722.json",
+       "pmid": "15064722",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 1,
+       "receipt_id": "FTR-20260913-15064722-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 32,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID17803050.json",
+       "pmid": "17803050",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 1,
+       "receipt_id": "FTR-20260806-17803050-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 54,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID17823927.json",
+       "pmid": "17823927",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 1,
+       "receipt_id": "FTR-20260914-17823927-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 30,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID19500159.json",
+       "pmid": "19500159",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 1,
+       "receipt_id": "FTR-20260806-19500159-01",
+       "unaudited_contradictions": 0
+      },
       {
        "adjudication_files": [],
        "audit_status": "UNAUDITED",
@@ -4048,12 +4106,154 @@
        "audited_entries": 0,
        "contradiction_verdicts": [],
        "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 24,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID24308844.json",
+       "pmid": "24308844",
+       "reading_depth": "partial_fulltext_read",
+       "receipt_events": 3,
+       "receipt_id": "FTR-20260810-24308844-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "CONTRADICTIONS_AUDITED",
+       "audited_entries": 2,
+       "contradiction_verdicts": [
+        {
+         "auditors": 2,
+         "verdict": "OVERSHOOT/CORRECTED"
+        },
+        {
+         "auditors": 2,
+         "verdict": "UNVERIFIABLE_SURFACE/SUPPORTED"
+        }
+       ],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 42,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID24369382.json",
+       "pmid": "24369382",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 5,
+       "receipt_id": "FTR-20260913-24369382-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 11,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID24456803.json",
+       "pmid": "24456803",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 2,
+       "receipt_id": "FTR-20261003-24456803-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "CONTRADICTIONS_AUDITED",
+       "audited_entries": 1,
+       "contradiction_verdicts": [
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT/CORRECTED"
+        }
+       ],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 56,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID24932569.json",
+       "pmid": "24932569",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 3,
+       "receipt_id": "FTR-20260913-24932569-02",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 22,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID25012504.json",
+       "pmid": "25012504",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 1,
+       "receipt_id": "FTR-20260814-25012504-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 40,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID25331887.json",
+       "pmid": "25331887",
+       "reading_depth": "partial_fulltext_read",
+       "receipt_events": 2,
+       "receipt_id": "FTR-20260810-25331887-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "NO_MANIFEST",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 0,
+       "manifest": "",
+       "pmid": "25411445",
+       "reading_depth": "NO_RECEIPT",
+       "receipt_events": 0,
+       "receipt_id": "",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [
+        "disease-models/wwox/research/page_adjudications/locator_audit_deep_cards_20261022.md"
+       ],
+       "audit_status": "AUDIT_FILE_PRESENT",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 7,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID25649963.json",
+       "pmid": "25649963",
+       "reading_depth": "partial_fulltext_read",
+       "receipt_events": 2,
+       "receipt_id": "FTR-20260921-25649963-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
        "locator_count": 8,
        "manifest": "disease-models/wwox/research/deepdive_manifests/PMID25650666.json",
        "pmid": "25650666",
        "reading_depth": "complete_fulltext_read",
        "receipt_events": 3,
        "receipt_id": "FTR-20261003-25650666-03",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "NO_MANIFEST",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 0,
+       "manifest": "",
+       "pmid": "26345274",
+       "reading_depth": "NO_RECEIPT",
+       "receipt_events": 0,
+       "receipt_id": "",
        "unaudited_contradictions": 0
       },
       {
@@ -4076,12 +4276,124 @@
        "audited_entries": 0,
        "contradiction_verdicts": [],
        "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 28,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID26499798.json",
+       "pmid": "26499798",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 1,
+       "receipt_id": "FTR-20260909-26499798-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "NO_MANIFEST",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 0,
+       "manifest": "",
+       "pmid": "26857392",
+       "reading_depth": "partial_fulltext_read",
+       "receipt_events": 1,
+       "receipt_id": "FTR-20260726-26857392-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 5,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID27308416.json",
+       "pmid": "27308416",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 1,
+       "receipt_id": "FTR-20260811-27308416-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 8,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID27495153.json",
+       "pmid": "27495153",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 2,
+       "receipt_id": "FTR-20261003-27495153-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
        "locator_count": 22,
        "manifest": "disease-models/wwox/research/deepdive_manifests/PMID27551439.json",
        "pmid": "27551439",
        "reading_depth": "complete_fulltext_read",
        "receipt_events": 3,
        "receipt_id": "FTR-20261019-27551439-03",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 10,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID29808465.json",
+       "pmid": "29808465",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 3,
+       "receipt_id": "FTR-20261004-29808465-03",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "NO_MANIFEST",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 0,
+       "manifest": "",
+       "pmid": "30202070",
+       "reading_depth": "partial_fulltext_read",
+       "receipt_events": 1,
+       "receipt_id": "FTR-20260922-30202070-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 18,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID30356099.json",
+       "pmid": "30356099",
+       "reading_depth": "partial_fulltext_read",
+       "receipt_events": 4,
+       "receipt_id": "FTR-20260811-30356099-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 14,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID30361190.json",
+       "pmid": "30361190",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 2,
+       "receipt_id": "FTR-20261003-30361190-01",
        "unaudited_contradictions": 0
       },
       {
@@ -4111,12 +4423,185 @@
        "audited_entries": 0,
        "contradiction_verdicts": [],
        "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 5,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID30853297.json",
+       "pmid": "30853297",
+       "reading_depth": "partial_fulltext_read",
+       "receipt_events": 3,
+       "receipt_id": "FTR-20260923-30853297-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "CONTRADICTIONS_AUDITED",
+       "audited_entries": 1,
+       "contradiction_verdicts": [
+        {
+         "auditors": 1,
+         "verdict": "PARTIAL"
+        }
+       ],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 15,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID31340538.json",
+       "pmid": "31340538",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 2,
+       "receipt_id": "FTR-20260806-31340538-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 25,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID32581702.json",
+       "pmid": "32581702",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 2,
+       "receipt_id": "FTR-20260810-32581702-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 14,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID33255508.json",
+       "pmid": "33255508",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 2,
+       "receipt_id": "FTR-20260806-33255508-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 35,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID33916893.json",
+       "pmid": "33916893",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 2,
+       "receipt_id": "FTR-20260909-33916893-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "CONTRADICTIONS_AUDITED",
+       "audited_entries": 2,
+       "contradiction_verdicts": [
+        {
+         "auditors": 1,
+         "verdict": "blind locator audit, 2026-10-21, task REPURP-10H-R2-B-20261021: one separate history-free read-only agent received only (proposition, quote, anchor) triples plus the source artefacts; verdict on this triple: SUPPORTED, minor caveats. The wording repair applied afterwards is not itself audited."
+        },
+        {
+         "auditors": 1,
+         "verdict": "blind locator audit, 2026-10-21, task REPURP-10H-R2-B-20261021: one separate history-free read-only agent received only (proposition, quote, anchor) triples plus the source artefacts; verdict on this triple: SUPPORTED, wording fix. The wording repair applied afterwards is not itself audited."
+        }
+       ],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 43,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
+       "pmid": "34268881",
+       "reading_depth": "partial_fulltext_read",
+       "receipt_events": 8,
+       "receipt_id": "FTR-20260726-34268881-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
        "locator_count": 26,
        "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34634460.json",
        "pmid": "34634460",
        "reading_depth": "complete_fulltext_read",
        "receipt_events": 4,
        "receipt_id": "FTR-20260810-34634460-02",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "CONTRADICTIONS_AUDITED",
+       "audited_entries": 1,
+       "contradiction_verdicts": [
+        {
+         "auditors": 1,
+         "verdict": "SUPPORTED"
+        }
+       ],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 28,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35328751.json",
+       "pmid": "35328751",
+       "reading_depth": "partial_fulltext_read",
+       "receipt_events": 4,
+       "receipt_id": "FTR-20260921-35328751-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 12,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35573960.json",
+       "pmid": "35573960",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 2,
+       "receipt_id": "FTR-20261003-35573960-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 4,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35716775.json",
+       "pmid": "35716775",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 5,
+       "receipt_id": "FTR-20260726-35716775-02",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 16,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35792847.json",
+       "pmid": "35792847",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 1,
+       "receipt_id": "FTR-20261003-35792847-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 4,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36271927.json",
+       "pmid": "36271927",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 2,
+       "receipt_id": "FTR-20261003-36271927-01",
        "unaudited_contradictions": 0
       },
       {
@@ -4128,6 +4613,156 @@
        "locator_count": 0,
        "manifest": "",
        "pmid": "36499501",
+       "reading_depth": "NO_RECEIPT",
+       "receipt_events": 0,
+       "receipt_id": "",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [
+        "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
+       ],
+       "audit_status": "AUDIT_FILE_PRESENT",
+       "audited_entries": 1,
+       "contradiction_verdicts": [
+        {
+         "auditors": 1,
+         "verdict": "SUPPORTS"
+        }
+       ],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 39,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36779245.json",
+       "pmid": "36779245",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 7,
+       "receipt_id": "FTR-20260804-36779245-02",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "CONTRADICTIONS_AUDITED",
+       "audited_entries": 18,
+       "contradiction_verdicts": [
+        {
+         "auditors": 1,
+         "verdict": "blind locator audit, 2026-09-13, task ALDAZ-REPAIR-A-20260913: a separate agent with no session history received only (proposition, quote, anchor) triples plus the artefacts - no dossier, no candidate, no claim record, no reader identity. It opened the XML and cut a 3x crop of Fig 1a panel a at native 1801x1412, locating the four antibody rows from a y-darkness profile and running per-lane ImageMagick densitometry."
+        },
+        {
+         "auditors": 1,
+         "verdict": "blind locator audit, 2026-09-13, task ALDAZ-REPAIR-A-20260913: a separate agent with no session history received only (proposition, quote, anchor) triples plus the artefacts - no dossier, no candidate, no claim record, no reader identity. It opened the XML and cut a 3x crop of Fig 1a panel a at native 1801x1412, locating the four antibody rows from a y-darkness profile and running per-lane ImageMagick densitometry."
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT/CORRECTED"
+        },
+        {
+         "auditors": 1,
+         "verdict": "blind locator audit, 2026-09-13, task ALDAZ-REPAIR-A-20260913: a separate agent with no session history received only (proposition, quote, anchor) triples plus the artefacts - no dossier, no candidate, no claim record, no reader identity. It opened the XML and cut a 3x crop of Fig 1a panel a at native 1801x1412, locating the four antibody rows from a y-darkness profile and running per-lane ImageMagick densitometry."
+        },
+        {
+         "auditors": 1,
+         "verdict": "blind locator audit, 2026-09-13, general-purpose auditor receiving only (proposition, quote, anchor) triples plus the artefacts, no dossier, no claim record, no reader identity; it opened every named image"
+        },
+        {
+         "auditors": 1,
+         "verdict": "blind locator audit, 2026-09-13, general-purpose auditor receiving only (proposition, quote, anchor) triples plus the artefacts, no dossier, no claim record, no reader identity; it opened every named image"
+        },
+        {
+         "auditors": 1,
+         "verdict": "blind locator audit, 2026-09-13, general-purpose auditor receiving only (proposition, quote, anchor) triples plus the artefacts, no dossier, no claim record, no reader identity; it opened every named image"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT/CORRECTED"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT/CORRECTED"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT/CORRECTED"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT/CORRECTED"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT/CORRECTED"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT/CORRECTED"
+        },
+        {
+         "auditors": 1,
+         "verdict": "blind locator audit, 2026-10-21, task REPURP-10H-R2-B-20261021: one separate history-free read-only agent received only (proposition, quote, anchor) triples plus the source artefacts; verdict on this triple: SUPPORTED, anchor-label error. The wording repair applied afterwards is not itself audited."
+        },
+        {
+         "auditors": 1,
+         "verdict": "blind locator audit, 2026-10-21, task REPURP-10H-R2-B-20261021: one separate history-free read-only agent received only (proposition, quote, anchor) triples plus the source artefacts; verdict on this triple: SUPPORTED, anchor-label error. The wording repair applied afterwards is not itself audited."
+        },
+        {
+         "auditors": 1,
+         "verdict": "blind locator audit, 2026-10-21, task REPURP-10H-R2-B-20261021: one separate history-free read-only agent received only (proposition, quote, anchor) triples plus the source artefacts; verdict on this triple: SUPPORTED. The wording repair applied afterwards is not itself audited."
+        },
+        {
+         "auditors": 1,
+         "verdict": "blind locator audit, 2026-10-21, task REPURP-10H-R2-B-20261021: one separate history-free read-only agent received only (proposition, quote, anchor) triples plus the source artefacts; verdict on this triple: OVERSHOOT (minor). The wording repair applied afterwards is not itself audited."
+        },
+        {
+         "auditors": 1,
+         "verdict": "blind locator audit, 2026-10-21, task REPURP-10H-R2-B-20261021: one separate history-free read-only agent received only (proposition, quote, anchor) triples plus the source artefacts; verdict on this triple: SUPPORTED, scope caveat. The wording repair applied afterwards is not itself audited."
+        }
+       ],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 70,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36828035.json",
+       "pmid": "36828035",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 5,
+       "receipt_id": "FTR-20260913-36828035-03",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 11,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36926521.json",
+       "pmid": "36926521",
+       "reading_depth": "partial_fulltext_read",
+       "receipt_events": 2,
+       "receipt_id": "FTR-20261004-36926521-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 6,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36937954.json",
+       "pmid": "36937954",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 1,
+       "receipt_id": "FTR-20261004-36937954-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "NO_MANIFEST",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 0,
+       "manifest": "",
+       "pmid": "37324196",
        "reading_depth": "NO_RECEIPT",
        "receipt_events": 0,
        "receipt_id": "",
@@ -4146,6 +4781,146 @@
        "receipt_events": 1,
        "receipt_id": "FTR-20260805-37519886-01",
        "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 8,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID37781246.json",
+       "pmid": "37781246",
+       "reading_depth": "partial_fulltext_read",
+       "receipt_events": 2,
+       "receipt_id": "FTR-20261002-37781246-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 14,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID38161429.json",
+       "pmid": "38161429",
+       "reading_depth": "partial_fulltext_read",
+       "receipt_events": 3,
+       "receipt_id": "FTR-20260726-38161429-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "NO_MANIFEST",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 0,
+       "manifest": "",
+       "pmid": "39894307",
+       "reading_depth": "NO_RECEIPT",
+       "receipt_events": 0,
+       "receipt_id": "",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 15,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID40126049.json",
+       "pmid": "40126049",
+       "reading_depth": "partial_fulltext_read",
+       "receipt_events": 1,
+       "receipt_id": "FTR-20261003-40126049-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 6,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID40217411.json",
+       "pmid": "40217411",
+       "reading_depth": "partial_fulltext_read",
+       "receipt_events": 1,
+       "receipt_id": "FTR-20261003-40217411-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 7,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID40336300.json",
+       "pmid": "40336300",
+       "reading_depth": "partial_fulltext_read",
+       "receipt_events": 1,
+       "receipt_id": "FTR-20261004-40336300-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 12,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID41124647.json",
+       "pmid": "41124647",
+       "reading_depth": "partial_fulltext_read",
+       "receipt_events": 3,
+       "receipt_id": "FTR-20260921-41124647-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 6,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42068099.json",
+       "pmid": "42068099",
+       "reading_depth": "partial_fulltext_read",
+       "receipt_events": 1,
+       "receipt_id": "FTR-20261003-42068099-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 7,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42248868.json",
+       "pmid": "42248868",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 1,
+       "receipt_id": "FTR-20261004-42248868-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "NO_MANIFEST",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 0,
+       "manifest": "",
+       "pmid": "42721537",
+       "reading_depth": "NO_RECEIPT",
+       "receipt_events": 0,
+       "receipt_id": "",
+       "unaudited_contradictions": 0
       }
      ],
      "unaudited_contradictions": 0
@@ -4163,12 +4938,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*importing a disease's dominant modality because the pathway diagram looks like that disease, without checking which way the arrow points.* CHAIN C reads like a tauopathy — WWOX loss → GSK3β de-repressed → pTau S396/S404 up (`CLAIM 035`, `DL-MECH-019`) — and tauopathy's dominant modality is **tau-lowering**. In the only system where the question was asked, tau-lowering **removes the benefit of bot",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:775; evidence table digest f142a826dbba79df"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:775; evidence table digest ba224b888e856e21"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "c81a8cc4fb1130472387a69bd8f67669204da9bf39490cdfb4335cbc2b4ec957",
+   "input_sha256": "a544ff37915616fcf0c3c6da6a138211a8ab42c6e7831920838243d23b288c4d",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -4189,17 +4964,111 @@
    },
    "legend_evidence": {
     "abstention": null,
-    "complete_reads": 7,
+    "complete_reads": 32,
     "depths": [
      "NO_RECEIPT",
-     "complete_fulltext_read"
+     "complete_fulltext_read",
+     "partial_fulltext_read"
     ],
-    "digest": "f142a826dbba79df",
-    "locators": 138,
+    "digest": "ba224b888e856e21",
+    "locators": 965,
     "origin_id": "N-17",
-    "papers": 8,
+    "papers": 55,
     "query_id": "Q-N-17",
     "rows": [
+     {
+      "adjudication_files": [],
+      "audit_status": "CONTRADICTIONS_AUDITED",
+      "audited_entries": 9,
+      "contradiction_verdicts": [
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT/CORRECTED"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT/CORRECTED"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT/CORRECTED"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT/CORRECTED"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT/CORRECTED"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT/CORRECTED"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT/CORRECTED"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT/CORRECTED"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT/CORRECTED"
+       }
+      ],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 24,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID15064722.json",
+      "pmid": "15064722",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 1,
+      "receipt_id": "FTR-20260913-15064722-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 32,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID17803050.json",
+      "pmid": "17803050",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 1,
+      "receipt_id": "FTR-20260806-17803050-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 54,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID17823927.json",
+      "pmid": "17823927",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 1,
+      "receipt_id": "FTR-20260914-17823927-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 30,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID19500159.json",
+      "pmid": "19500159",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 1,
+      "receipt_id": "FTR-20260806-19500159-01",
+      "unaudited_contradictions": 0
+     },
      {
       "adjudication_files": [],
       "audit_status": "UNAUDITED",
@@ -4220,12 +5089,154 @@
       "audited_entries": 0,
       "contradiction_verdicts": [],
       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 24,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID24308844.json",
+      "pmid": "24308844",
+      "reading_depth": "partial_fulltext_read",
+      "receipt_events": 3,
+      "receipt_id": "FTR-20260810-24308844-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "CONTRADICTIONS_AUDITED",
+      "audited_entries": 2,
+      "contradiction_verdicts": [
+       {
+        "auditors": 2,
+        "verdict": "OVERSHOOT/CORRECTED"
+       },
+       {
+        "auditors": 2,
+        "verdict": "UNVERIFIABLE_SURFACE/SUPPORTED"
+       }
+      ],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 42,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID24369382.json",
+      "pmid": "24369382",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 5,
+      "receipt_id": "FTR-20260913-24369382-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 11,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID24456803.json",
+      "pmid": "24456803",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 2,
+      "receipt_id": "FTR-20261003-24456803-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "CONTRADICTIONS_AUDITED",
+      "audited_entries": 1,
+      "contradiction_verdicts": [
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT/CORRECTED"
+       }
+      ],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 56,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID24932569.json",
+      "pmid": "24932569",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 3,
+      "receipt_id": "FTR-20260913-24932569-02",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 22,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID25012504.json",
+      "pmid": "25012504",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 1,
+      "receipt_id": "FTR-20260814-25012504-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 40,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID25331887.json",
+      "pmid": "25331887",
+      "reading_depth": "partial_fulltext_read",
+      "receipt_events": 2,
+      "receipt_id": "FTR-20260810-25331887-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "NO_MANIFEST",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 0,
+      "manifest": "",
+      "pmid": "25411445",
+      "reading_depth": "NO_RECEIPT",
+      "receipt_events": 0,
+      "receipt_id": "",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [
+       "disease-models/wwox/research/page_adjudications/locator_audit_deep_cards_20261022.md"
+      ],
+      "audit_status": "AUDIT_FILE_PRESENT",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 7,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID25649963.json",
+      "pmid": "25649963",
+      "reading_depth": "partial_fulltext_read",
+      "receipt_events": 2,
+      "receipt_id": "FTR-20260921-25649963-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
       "locator_count": 8,
       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID25650666.json",
       "pmid": "25650666",
       "reading_depth": "complete_fulltext_read",
       "receipt_events": 3,
       "receipt_id": "FTR-20261003-25650666-03",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "NO_MANIFEST",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 0,
+      "manifest": "",
+      "pmid": "26345274",
+      "reading_depth": "NO_RECEIPT",
+      "receipt_events": 0,
+      "receipt_id": "",
       "unaudited_contradictions": 0
      },
      {
@@ -4248,12 +5259,124 @@
       "audited_entries": 0,
       "contradiction_verdicts": [],
       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 28,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID26499798.json",
+      "pmid": "26499798",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 1,
+      "receipt_id": "FTR-20260909-26499798-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "NO_MANIFEST",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 0,
+      "manifest": "",
+      "pmid": "26857392",
+      "reading_depth": "partial_fulltext_read",
+      "receipt_events": 1,
+      "receipt_id": "FTR-20260726-26857392-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 5,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID27308416.json",
+      "pmid": "27308416",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 1,
+      "receipt_id": "FTR-20260811-27308416-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 8,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID27495153.json",
+      "pmid": "27495153",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 2,
+      "receipt_id": "FTR-20261003-27495153-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
       "locator_count": 22,
       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID27551439.json",
       "pmid": "27551439",
       "reading_depth": "complete_fulltext_read",
       "receipt_events": 3,
       "receipt_id": "FTR-20261019-27551439-03",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 10,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID29808465.json",
+      "pmid": "29808465",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 3,
+      "receipt_id": "FTR-20261004-29808465-03",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "NO_MANIFEST",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 0,
+      "manifest": "",
+      "pmid": "30202070",
+      "reading_depth": "partial_fulltext_read",
+      "receipt_events": 1,
+      "receipt_id": "FTR-20260922-30202070-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 18,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID30356099.json",
+      "pmid": "30356099",
+      "reading_depth": "partial_fulltext_read",
+      "receipt_events": 4,
+      "receipt_id": "FTR-20260811-30356099-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 14,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID30361190.json",
+      "pmid": "30361190",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 2,
+      "receipt_id": "FTR-20261003-30361190-01",
       "unaudited_contradictions": 0
      },
      {
@@ -4283,12 +5406,185 @@
       "audited_entries": 0,
       "contradiction_verdicts": [],
       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 5,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID30853297.json",
+      "pmid": "30853297",
+      "reading_depth": "partial_fulltext_read",
+      "receipt_events": 3,
+      "receipt_id": "FTR-20260923-30853297-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "CONTRADICTIONS_AUDITED",
+      "audited_entries": 1,
+      "contradiction_verdicts": [
+       {
+        "auditors": 1,
+        "verdict": "PARTIAL"
+       }
+      ],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 15,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID31340538.json",
+      "pmid": "31340538",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 2,
+      "receipt_id": "FTR-20260806-31340538-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 25,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID32581702.json",
+      "pmid": "32581702",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 2,
+      "receipt_id": "FTR-20260810-32581702-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 14,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID33255508.json",
+      "pmid": "33255508",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 2,
+      "receipt_id": "FTR-20260806-33255508-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 35,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID33916893.json",
+      "pmid": "33916893",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 2,
+      "receipt_id": "FTR-20260909-33916893-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "CONTRADICTIONS_AUDITED",
+      "audited_entries": 2,
+      "contradiction_verdicts": [
+       {
+        "auditors": 1,
+        "verdict": "blind locator audit, 2026-10-21, task REPURP-10H-R2-B-20261021: one separate history-free read-only agent received only (proposition, quote, anchor) triples plus the source artefacts; verdict on this triple: SUPPORTED, minor caveats. The wording repair applied afterwards is not itself audited."
+       },
+       {
+        "auditors": 1,
+        "verdict": "blind locator audit, 2026-10-21, task REPURP-10H-R2-B-20261021: one separate history-free read-only agent received only (proposition, quote, anchor) triples plus the source artefacts; verdict on this triple: SUPPORTED, wording fix. The wording repair applied afterwards is not itself audited."
+       }
+      ],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 43,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
+      "pmid": "34268881",
+      "reading_depth": "partial_fulltext_read",
+      "receipt_events": 8,
+      "receipt_id": "FTR-20260726-34268881-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
       "locator_count": 26,
       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34634460.json",
       "pmid": "34634460",
       "reading_depth": "complete_fulltext_read",
       "receipt_events": 4,
       "receipt_id": "FTR-20260810-34634460-02",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "CONTRADICTIONS_AUDITED",
+      "audited_entries": 1,
+      "contradiction_verdicts": [
+       {
+        "auditors": 1,
+        "verdict": "SUPPORTED"
+       }
+      ],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 28,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35328751.json",
+      "pmid": "35328751",
+      "reading_depth": "partial_fulltext_read",
+      "receipt_events": 4,
+      "receipt_id": "FTR-20260921-35328751-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 12,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35573960.json",
+      "pmid": "35573960",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 2,
+      "receipt_id": "FTR-20261003-35573960-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 4,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35716775.json",
+      "pmid": "35716775",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 5,
+      "receipt_id": "FTR-20260726-35716775-02",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 16,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35792847.json",
+      "pmid": "35792847",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 1,
+      "receipt_id": "FTR-20261003-35792847-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 4,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36271927.json",
+      "pmid": "36271927",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 2,
+      "receipt_id": "FTR-20261003-36271927-01",
       "unaudited_contradictions": 0
      },
      {
@@ -4300,6 +5596,156 @@
       "locator_count": 0,
       "manifest": "",
       "pmid": "36499501",
+      "reading_depth": "NO_RECEIPT",
+      "receipt_events": 0,
+      "receipt_id": "",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [
+       "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
+      ],
+      "audit_status": "AUDIT_FILE_PRESENT",
+      "audited_entries": 1,
+      "contradiction_verdicts": [
+       {
+        "auditors": 1,
+        "verdict": "SUPPORTS"
+       }
+      ],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 39,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36779245.json",
+      "pmid": "36779245",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 7,
+      "receipt_id": "FTR-20260804-36779245-02",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "CONTRADICTIONS_AUDITED",
+      "audited_entries": 18,
+      "contradiction_verdicts": [
+       {
+        "auditors": 1,
+        "verdict": "blind locator audit, 2026-09-13, task ALDAZ-REPAIR-A-20260913: a separate agent with no session history received only (proposition, quote, anchor) triples plus the artefacts - no dossier, no candidate, no claim record, no reader identity. It opened the XML and cut a 3x crop of Fig 1a panel a at native 1801x1412, locating the four antibody rows from a y-darkness profile and running per-lane ImageMagick densitometry."
+       },
+       {
+        "auditors": 1,
+        "verdict": "blind locator audit, 2026-09-13, task ALDAZ-REPAIR-A-20260913: a separate agent with no session history received only (proposition, quote, anchor) triples plus the artefacts - no dossier, no candidate, no claim record, no reader identity. It opened the XML and cut a 3x crop of Fig 1a panel a at native 1801x1412, locating the four antibody rows from a y-darkness profile and running per-lane ImageMagick densitometry."
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT/CORRECTED"
+       },
+       {
+        "auditors": 1,
+        "verdict": "blind locator audit, 2026-09-13, task ALDAZ-REPAIR-A-20260913: a separate agent with no session history received only (proposition, quote, anchor) triples plus the artefacts - no dossier, no candidate, no claim record, no reader identity. It opened the XML and cut a 3x crop of Fig 1a panel a at native 1801x1412, locating the four antibody rows from a y-darkness profile and running per-lane ImageMagick densitometry."
+       },
+       {
+        "auditors": 1,
+        "verdict": "blind locator audit, 2026-09-13, general-purpose auditor receiving only (proposition, quote, anchor) triples plus the artefacts, no dossier, no claim record, no reader identity; it opened every named image"
+       },
+       {
+        "auditors": 1,
+        "verdict": "blind locator audit, 2026-09-13, general-purpose auditor receiving only (proposition, quote, anchor) triples plus the artefacts, no dossier, no claim record, no reader identity; it opened every named image"
+       },
+       {
+        "auditors": 1,
+        "verdict": "blind locator audit, 2026-09-13, general-purpose auditor receiving only (proposition, quote, anchor) triples plus the artefacts, no dossier, no claim record, no reader identity; it opened every named image"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT/CORRECTED"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT/CORRECTED"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT/CORRECTED"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT/CORRECTED"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT/CORRECTED"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT/CORRECTED"
+       },
+       {
+        "auditors": 1,
+        "verdict": "blind locator audit, 2026-10-21, task REPURP-10H-R2-B-20261021: one separate history-free read-only agent received only (proposition, quote, anchor) triples plus the source artefacts; verdict on this triple: SUPPORTED, anchor-label error. The wording repair applied afterwards is not itself audited."
+       },
+       {
+        "auditors": 1,
+        "verdict": "blind locator audit, 2026-10-21, task REPURP-10H-R2-B-20261021: one separate history-free read-only agent received only (proposition, quote, anchor) triples plus the source artefacts; verdict on this triple: SUPPORTED, anchor-label error. The wording repair applied afterwards is not itself audited."
+       },
+       {
+        "auditors": 1,
+        "verdict": "blind locator audit, 2026-10-21, task REPURP-10H-R2-B-20261021: one separate history-free read-only agent received only (proposition, quote, anchor) triples plus the source artefacts; verdict on this triple: SUPPORTED. The wording repair applied afterwards is not itself audited."
+       },
+       {
+        "auditors": 1,
+        "verdict": "blind locator audit, 2026-10-21, task REPURP-10H-R2-B-20261021: one separate history-free read-only agent received only (proposition, quote, anchor) triples plus the source artefacts; verdict on this triple: OVERSHOOT (minor). The wording repair applied afterwards is not itself audited."
+       },
+       {
+        "auditors": 1,
+        "verdict": "blind locator audit, 2026-10-21, task REPURP-10H-R2-B-20261021: one separate history-free read-only agent received only (proposition, quote, anchor) triples plus the source artefacts; verdict on this triple: SUPPORTED, scope caveat. The wording repair applied afterwards is not itself audited."
+       }
+      ],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 70,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36828035.json",
+      "pmid": "36828035",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 5,
+      "receipt_id": "FTR-20260913-36828035-03",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 11,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36926521.json",
+      "pmid": "36926521",
+      "reading_depth": "partial_fulltext_read",
+      "receipt_events": 2,
+      "receipt_id": "FTR-20261004-36926521-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 6,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36937954.json",
+      "pmid": "36937954",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 1,
+      "receipt_id": "FTR-20261004-36937954-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "NO_MANIFEST",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 0,
+      "manifest": "",
+      "pmid": "37324196",
       "reading_depth": "NO_RECEIPT",
       "receipt_events": 0,
       "receipt_id": "",
@@ -4318,6 +5764,146 @@
       "receipt_events": 1,
       "receipt_id": "FTR-20260805-37519886-01",
       "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 8,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID37781246.json",
+      "pmid": "37781246",
+      "reading_depth": "partial_fulltext_read",
+      "receipt_events": 2,
+      "receipt_id": "FTR-20261002-37781246-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 14,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID38161429.json",
+      "pmid": "38161429",
+      "reading_depth": "partial_fulltext_read",
+      "receipt_events": 3,
+      "receipt_id": "FTR-20260726-38161429-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "NO_MANIFEST",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 0,
+      "manifest": "",
+      "pmid": "39894307",
+      "reading_depth": "NO_RECEIPT",
+      "receipt_events": 0,
+      "receipt_id": "",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 15,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID40126049.json",
+      "pmid": "40126049",
+      "reading_depth": "partial_fulltext_read",
+      "receipt_events": 1,
+      "receipt_id": "FTR-20261003-40126049-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 6,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID40217411.json",
+      "pmid": "40217411",
+      "reading_depth": "partial_fulltext_read",
+      "receipt_events": 1,
+      "receipt_id": "FTR-20261003-40217411-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 7,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID40336300.json",
+      "pmid": "40336300",
+      "reading_depth": "partial_fulltext_read",
+      "receipt_events": 1,
+      "receipt_id": "FTR-20261004-40336300-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 12,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID41124647.json",
+      "pmid": "41124647",
+      "reading_depth": "partial_fulltext_read",
+      "receipt_events": 3,
+      "receipt_id": "FTR-20260921-41124647-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 6,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42068099.json",
+      "pmid": "42068099",
+      "reading_depth": "partial_fulltext_read",
+      "receipt_events": 1,
+      "receipt_id": "FTR-20261003-42068099-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 7,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42248868.json",
+      "pmid": "42248868",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 1,
+      "receipt_id": "FTR-20261004-42248868-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "NO_MANIFEST",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 0,
+      "manifest": "",
+      "pmid": "42721537",
+      "reading_depth": "NO_RECEIPT",
+      "receipt_events": 0,
+      "receipt_id": "",
+      "unaudited_contradictions": 0
      }
     ],
     "unaudited_contradictions": 0
@@ -4329,9 +5915,9 @@
     "NO_MATCH_FOUND is information not available for those queries and that coverage: it is not proof the label is absent, not DRUG_HAS_NO_LABEL, not biological counterevidence and not a reason to drop the candidate."
    ],
    "measure_next": {
-    "dependence": "8_PAPERS_7_COMPLETE",
+    "dependence": "55_PAPERS_32_COMPLETE",
     "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
-    "external_hits": 1,
+    "external_hits": 0,
     "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
     "would_move": "N-17 (disease-models/wwox/analysis/mechanism_intervention_map.md:775)"
    },
@@ -4681,7 +6267,7 @@
       "https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?q=Memantine&limit=5",
       "https://www.ebi.ac.uk/chembl/api/data/mechanism.json?molecule_chembl_id=CHEMBL807&limit=20"
      ],
-     "retrieved_at": "2026-10-23T17:07:32Z",
+     "retrieved_at": "2026-10-23T20:53:19Z",
      "source_version": "ChEMBL_37 2026-05-01",
      "status": "MATCH_FOUND"
     },
@@ -4781,7 +6367,7 @@
        "https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?q=Memantine&limit=5",
        "https://www.ebi.ac.uk/chembl/api/data/mechanism.json?molecule_chembl_id=CHEMBL807&limit=20"
       ],
-      "retrieved_at": "2026-10-23T17:07:32Z",
+      "retrieved_at": "2026-10-23T20:53:19Z",
       "source_version": "ChEMBL_37 2026-05-01",
       "status": "MATCH_FOUND"
      },
@@ -4992,7 +6578,7 @@
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "0c15792c418d3c5b5fd66060021c07a2a4f3e0abadeff22cbaab5b4f67158399",
+   "input_sha256": "26551eea80c609ab820a61473aba422a19a1df74355eb620243289aea2c69a55",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -5183,20 +6769,17 @@
      "citation": "Zdrazil B. et al. The ChEMBL Database in 2023: a drug discovery platform spanning multiple bioactivity data types and time periods. Nucleic Acids Res 2024;52(D1):D1180-D1192. https://doi.org/10.1093/nar/gkad1004; web services: Davies M. et al. 2015 (Nucleic Acids Res 43:W612)",
      "error": "",
      "evidence_label": "NOT WWOX EVIDENCE",
-     "first_hits": [
-      "molecule_without_mechanism"
-     ],
-     "hit_count": 1,
+     "first_hits": [],
+     "hit_count": 0,
      "hits_total_before_cap": null,
      "licence": "CC BY-SA 3.0; key-less, no payment",
      "requests_sent": [
       "https://www.ebi.ac.uk/chembl/api/data/status.json",
-      "https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?q=Wnt%20/%20tankyrase%20inhibition&limit=5",
-      "https://www.ebi.ac.uk/chembl/api/data/mechanism.json?molecule_chembl_id=CHEMBL2139947&limit=20"
+      "https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?q=Wnt%20/%20tankyrase%20inhibition&limit=5"
      ],
-     "retrieved_at": "2026-10-23T17:09:27Z",
+     "retrieved_at": "2026-10-23T20:52:51Z",
      "source_version": "ChEMBL_37 2026-05-01",
-     "status": "MATCH_FOUND"
+     "status": "NO_MATCH_FOUND"
     },
     {
      "adapter": "openfda",
@@ -5289,20 +6872,17 @@
       "citation": "Zdrazil B. et al. The ChEMBL Database in 2023: a drug discovery platform spanning multiple bioactivity data types and time periods. Nucleic Acids Res 2024;52(D1):D1180-D1192. https://doi.org/10.1093/nar/gkad1004; web services: Davies M. et al. 2015 (Nucleic Acids Res 43:W612)",
       "error": "",
       "evidence_label": "NOT WWOX EVIDENCE",
-      "first_hits": [
-       "molecule_without_mechanism"
-      ],
-      "hit_count": 1,
+      "first_hits": [],
+      "hit_count": 0,
       "hits_total_before_cap": null,
       "licence": "CC BY-SA 3.0; key-less, no payment",
       "requests_sent": [
        "https://www.ebi.ac.uk/chembl/api/data/status.json",
-       "https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?q=Wnt%20/%20tankyrase%20inhibition&limit=5",
-       "https://www.ebi.ac.uk/chembl/api/data/mechanism.json?molecule_chembl_id=CHEMBL2139947&limit=20"
+       "https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?q=Wnt%20/%20tankyrase%20inhibition&limit=5"
       ],
-      "retrieved_at": "2026-10-23T17:09:27Z",
+      "retrieved_at": "2026-10-23T20:52:51Z",
       "source_version": "ChEMBL_37 2026-05-01",
-      "status": "MATCH_FOUND"
+      "status": "NO_MATCH_FOUND"
      },
      {
       "adapter": "openfda",
@@ -5423,7 +7003,7 @@
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "2508271ea6d6b02949ed83ea28acbc3637943c56a3361f73a634ed69280f882c",
+   "input_sha256": "cc4734fbe848a08710fc0d304c3904889d719d27db29e3e4a11c38a87c1ade64",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -5480,7 +7060,7 @@
    "measure_next": {
     "dependence": "ONE_PAPER (38203337, depth complete_fulltext_read, 30 locators, audit UNAUDITED)",
     "experiment_sketch": "replicate the one measurement this query stands on, changing the laboratory or the model but not the endpoint",
-    "external_hits": 3,
+    "external_hits": 2,
     "measurement": "an independent measurement of the same endpoint in a second system, or the same system from a second laboratory: the query rests on one reading",
     "would_move": "R-03 (disease-models/wwox/analysis/mechanism_intervention_map.md:452)"
    },
@@ -5533,7 +7113,7 @@
       "https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?q=Lithium&limit=5",
       "https://www.ebi.ac.uk/chembl/api/data/mechanism.json?molecule_chembl_id=CHEMBL1201333&limit=20"
      ],
-     "retrieved_at": "2026-10-23T17:09:39Z",
+     "retrieved_at": "2026-10-23T20:53:17Z",
      "source_version": "ChEMBL_37 2026-05-01",
      "status": "MATCH_FOUND"
     },
@@ -5620,7 +7200,7 @@
        "https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?q=Lithium&limit=5",
        "https://www.ebi.ac.uk/chembl/api/data/mechanism.json?molecule_chembl_id=CHEMBL1201333&limit=20"
       ],
-      "retrieved_at": "2026-10-23T17:09:39Z",
+      "retrieved_at": "2026-10-23T20:53:17Z",
       "source_version": "ChEMBL_37 2026-05-01",
       "status": "MATCH_FOUND"
      },
@@ -5710,7 +7290,7 @@
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "d47999404a107cdbd6557a652b59b1c791b54a89d09f639dcba68d27517f90e8",
+   "input_sha256": "0696626aa68b98755c2f5054eba307ef93554d5bab936abdf01a8b8db12be147",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -6557,7 +8137,8 @@
      "epistemic_status": "IPOTESI",
      "id": "DA-Q-R-08",
      "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:575",
-     "reading_depth": "UNKNOWN",
+     "reading_depth": "complete_fulltext_read",
+     "receipt": "FTR-20260913-15064722-01",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md R-08",
      "target_id": "the pathogenic base — restoring the invariant AG acceptor"
     },
@@ -6596,15 +8177,886 @@
      "status": "NOT_ATTEMPTED"
     },
     "legend_evidence": {
-     "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
-     "complete_reads": 0,
-     "depths": [],
-     "digest": "12bbb5dc94cd36a1",
-     "locators": 0,
+     "abstention": null,
+     "complete_reads": 31,
+     "depths": [
+      "NO_RECEIPT",
+      "complete_fulltext_read",
+      "partial_fulltext_read"
+     ],
+     "digest": "a124cf567ea6cb56",
+     "locators": 915,
      "origin_id": "R-08",
-     "papers": 0,
+     "papers": 51,
      "query_id": "Q-R-08",
-     "rows": [],
+     "rows": [
+      {
+       "adjudication_files": [],
+       "audit_status": "CONTRADICTIONS_AUDITED",
+       "audited_entries": 9,
+       "contradiction_verdicts": [
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT/CORRECTED"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT/CORRECTED"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT/CORRECTED"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT/CORRECTED"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT/CORRECTED"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT/CORRECTED"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT/CORRECTED"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT/CORRECTED"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT/CORRECTED"
+        }
+       ],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 24,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID15064722.json",
+       "pmid": "15064722",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 1,
+       "receipt_id": "FTR-20260913-15064722-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 9,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID17360458.json",
+       "pmid": "17360458",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 1,
+       "receipt_id": "FTR-20260811-17360458-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 32,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID17803050.json",
+       "pmid": "17803050",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 1,
+       "receipt_id": "FTR-20260806-17803050-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 54,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID17823927.json",
+       "pmid": "17823927",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 1,
+       "receipt_id": "FTR-20260914-17823927-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 30,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID19500159.json",
+       "pmid": "19500159",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 1,
+       "receipt_id": "FTR-20260806-19500159-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 11,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID22193544.json",
+       "pmid": "22193544",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 6,
+       "receipt_id": "FTR-20260726-22193544-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 39,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID22574198.json",
+       "pmid": "22574198",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 1,
+       "receipt_id": "FTR-20260914-22574198-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 24,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID24308844.json",
+       "pmid": "24308844",
+       "reading_depth": "partial_fulltext_read",
+       "receipt_events": 3,
+       "receipt_id": "FTR-20260810-24308844-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "CONTRADICTIONS_AUDITED",
+       "audited_entries": 2,
+       "contradiction_verdicts": [
+        {
+         "auditors": 2,
+         "verdict": "OVERSHOOT/CORRECTED"
+        },
+        {
+         "auditors": 2,
+         "verdict": "UNVERIFIABLE_SURFACE/SUPPORTED"
+        }
+       ],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 42,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID24369382.json",
+       "pmid": "24369382",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 5,
+       "receipt_id": "FTR-20260913-24369382-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 11,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID24456803.json",
+       "pmid": "24456803",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 2,
+       "receipt_id": "FTR-20261003-24456803-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "CONTRADICTIONS_AUDITED",
+       "audited_entries": 1,
+       "contradiction_verdicts": [
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT/CORRECTED"
+        }
+       ],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 56,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID24932569.json",
+       "pmid": "24932569",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 3,
+       "receipt_id": "FTR-20260913-24932569-02",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 22,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID25012504.json",
+       "pmid": "25012504",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 1,
+       "receipt_id": "FTR-20260814-25012504-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 40,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID25331887.json",
+       "pmid": "25331887",
+       "reading_depth": "partial_fulltext_read",
+       "receipt_events": 2,
+       "receipt_id": "FTR-20260810-25331887-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "NO_MANIFEST",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 0,
+       "manifest": "",
+       "pmid": "25411445",
+       "reading_depth": "NO_RECEIPT",
+       "receipt_events": 0,
+       "receipt_id": "",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [
+        "disease-models/wwox/research/page_adjudications/locator_audit_deep_cards_20261022.md"
+       ],
+       "audit_status": "AUDIT_FILE_PRESENT",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 7,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID25649963.json",
+       "pmid": "25649963",
+       "reading_depth": "partial_fulltext_read",
+       "receipt_events": 2,
+       "receipt_id": "FTR-20260921-25649963-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 8,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID25650666.json",
+       "pmid": "25650666",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 3,
+       "receipt_id": "FTR-20261003-25650666-03",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "NO_MANIFEST",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 0,
+       "manifest": "",
+       "pmid": "26345274",
+       "reading_depth": "NO_RECEIPT",
+       "receipt_events": 0,
+       "receipt_id": "",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 7,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID26355344.json",
+       "pmid": "26355344",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 2,
+       "receipt_id": "FTR-20261019-26355344-02",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 28,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID26499798.json",
+       "pmid": "26499798",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 1,
+       "receipt_id": "FTR-20260909-26499798-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "NO_MANIFEST",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 0,
+       "manifest": "",
+       "pmid": "26857392",
+       "reading_depth": "partial_fulltext_read",
+       "receipt_events": 1,
+       "receipt_id": "FTR-20260726-26857392-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 5,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID27308416.json",
+       "pmid": "27308416",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 1,
+       "receipt_id": "FTR-20260811-27308416-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 8,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID27495153.json",
+       "pmid": "27495153",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 2,
+       "receipt_id": "FTR-20261003-27495153-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 22,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID27551439.json",
+       "pmid": "27551439",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 3,
+       "receipt_id": "FTR-20261019-27551439-03",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 10,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID29808465.json",
+       "pmid": "29808465",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 3,
+       "receipt_id": "FTR-20261004-29808465-03",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "NO_MANIFEST",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 0,
+       "manifest": "",
+       "pmid": "30202070",
+       "reading_depth": "partial_fulltext_read",
+       "receipt_events": 1,
+       "receipt_id": "FTR-20260922-30202070-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 18,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID30356099.json",
+       "pmid": "30356099",
+       "reading_depth": "partial_fulltext_read",
+       "receipt_events": 4,
+       "receipt_id": "FTR-20260811-30356099-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 14,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID30361190.json",
+       "pmid": "30361190",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 2,
+       "receipt_id": "FTR-20261003-30361190-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 5,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID30853297.json",
+       "pmid": "30853297",
+       "reading_depth": "partial_fulltext_read",
+       "receipt_events": 3,
+       "receipt_id": "FTR-20260923-30853297-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "CONTRADICTIONS_AUDITED",
+       "audited_entries": 1,
+       "contradiction_verdicts": [
+        {
+         "auditors": 1,
+         "verdict": "PARTIAL"
+        }
+       ],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 15,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID31340538.json",
+       "pmid": "31340538",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 2,
+       "receipt_id": "FTR-20260806-31340538-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 25,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID32581702.json",
+       "pmid": "32581702",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 2,
+       "receipt_id": "FTR-20260810-32581702-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 14,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID33255508.json",
+       "pmid": "33255508",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 2,
+       "receipt_id": "FTR-20260806-33255508-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 35,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID33916893.json",
+       "pmid": "33916893",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 2,
+       "receipt_id": "FTR-20260909-33916893-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "CONTRADICTIONS_AUDITED",
+       "audited_entries": 2,
+       "contradiction_verdicts": [
+        {
+         "auditors": 1,
+         "verdict": "blind locator audit, 2026-10-21, task REPURP-10H-R2-B-20261021: one separate history-free read-only agent received only (proposition, quote, anchor) triples plus the source artefacts; verdict on this triple: SUPPORTED, minor caveats. The wording repair applied afterwards is not itself audited."
+        },
+        {
+         "auditors": 1,
+         "verdict": "blind locator audit, 2026-10-21, task REPURP-10H-R2-B-20261021: one separate history-free read-only agent received only (proposition, quote, anchor) triples plus the source artefacts; verdict on this triple: SUPPORTED, wording fix. The wording repair applied afterwards is not itself audited."
+        }
+       ],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 43,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
+       "pmid": "34268881",
+       "reading_depth": "partial_fulltext_read",
+       "receipt_events": 8,
+       "receipt_id": "FTR-20260726-34268881-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "CONTRADICTIONS_AUDITED",
+       "audited_entries": 1,
+       "contradiction_verdicts": [
+        {
+         "auditors": 1,
+         "verdict": "SUPPORTED"
+        }
+       ],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 28,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35328751.json",
+       "pmid": "35328751",
+       "reading_depth": "partial_fulltext_read",
+       "receipt_events": 4,
+       "receipt_id": "FTR-20260921-35328751-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 12,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35573960.json",
+       "pmid": "35573960",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 2,
+       "receipt_id": "FTR-20261003-35573960-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 4,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35716775.json",
+       "pmid": "35716775",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 5,
+       "receipt_id": "FTR-20260726-35716775-02",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 16,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35792847.json",
+       "pmid": "35792847",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 1,
+       "receipt_id": "FTR-20261003-35792847-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 4,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36271927.json",
+       "pmid": "36271927",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 2,
+       "receipt_id": "FTR-20261003-36271927-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [
+        "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
+       ],
+       "audit_status": "AUDIT_FILE_PRESENT",
+       "audited_entries": 1,
+       "contradiction_verdicts": [
+        {
+         "auditors": 1,
+         "verdict": "SUPPORTS"
+        }
+       ],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 39,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36779245.json",
+       "pmid": "36779245",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 7,
+       "receipt_id": "FTR-20260804-36779245-02",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "CONTRADICTIONS_AUDITED",
+       "audited_entries": 18,
+       "contradiction_verdicts": [
+        {
+         "auditors": 1,
+         "verdict": "blind locator audit, 2026-09-13, task ALDAZ-REPAIR-A-20260913: a separate agent with no session history received only (proposition, quote, anchor) triples plus the artefacts - no dossier, no candidate, no claim record, no reader identity. It opened the XML and cut a 3x crop of Fig 1a panel a at native 1801x1412, locating the four antibody rows from a y-darkness profile and running per-lane ImageMagick densitometry."
+        },
+        {
+         "auditors": 1,
+         "verdict": "blind locator audit, 2026-09-13, task ALDAZ-REPAIR-A-20260913: a separate agent with no session history received only (proposition, quote, anchor) triples plus the artefacts - no dossier, no candidate, no claim record, no reader identity. It opened the XML and cut a 3x crop of Fig 1a panel a at native 1801x1412, locating the four antibody rows from a y-darkness profile and running per-lane ImageMagick densitometry."
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT/CORRECTED"
+        },
+        {
+         "auditors": 1,
+         "verdict": "blind locator audit, 2026-09-13, task ALDAZ-REPAIR-A-20260913: a separate agent with no session history received only (proposition, quote, anchor) triples plus the artefacts - no dossier, no candidate, no claim record, no reader identity. It opened the XML and cut a 3x crop of Fig 1a panel a at native 1801x1412, locating the four antibody rows from a y-darkness profile and running per-lane ImageMagick densitometry."
+        },
+        {
+         "auditors": 1,
+         "verdict": "blind locator audit, 2026-09-13, general-purpose auditor receiving only (proposition, quote, anchor) triples plus the artefacts, no dossier, no claim record, no reader identity; it opened every named image"
+        },
+        {
+         "auditors": 1,
+         "verdict": "blind locator audit, 2026-09-13, general-purpose auditor receiving only (proposition, quote, anchor) triples plus the artefacts, no dossier, no claim record, no reader identity; it opened every named image"
+        },
+        {
+         "auditors": 1,
+         "verdict": "blind locator audit, 2026-09-13, general-purpose auditor receiving only (proposition, quote, anchor) triples plus the artefacts, no dossier, no claim record, no reader identity; it opened every named image"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT/CORRECTED"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT/CORRECTED"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT/CORRECTED"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT/CORRECTED"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT/CORRECTED"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT/CORRECTED"
+        },
+        {
+         "auditors": 1,
+         "verdict": "blind locator audit, 2026-10-21, task REPURP-10H-R2-B-20261021: one separate history-free read-only agent received only (proposition, quote, anchor) triples plus the source artefacts; verdict on this triple: SUPPORTED, anchor-label error. The wording repair applied afterwards is not itself audited."
+        },
+        {
+         "auditors": 1,
+         "verdict": "blind locator audit, 2026-10-21, task REPURP-10H-R2-B-20261021: one separate history-free read-only agent received only (proposition, quote, anchor) triples plus the source artefacts; verdict on this triple: SUPPORTED, anchor-label error. The wording repair applied afterwards is not itself audited."
+        },
+        {
+         "auditors": 1,
+         "verdict": "blind locator audit, 2026-10-21, task REPURP-10H-R2-B-20261021: one separate history-free read-only agent received only (proposition, quote, anchor) triples plus the source artefacts; verdict on this triple: SUPPORTED. The wording repair applied afterwards is not itself audited."
+        },
+        {
+         "auditors": 1,
+         "verdict": "blind locator audit, 2026-10-21, task REPURP-10H-R2-B-20261021: one separate history-free read-only agent received only (proposition, quote, anchor) triples plus the source artefacts; verdict on this triple: OVERSHOOT (minor). The wording repair applied afterwards is not itself audited."
+        },
+        {
+         "auditors": 1,
+         "verdict": "blind locator audit, 2026-10-21, task REPURP-10H-R2-B-20261021: one separate history-free read-only agent received only (proposition, quote, anchor) triples plus the source artefacts; verdict on this triple: SUPPORTED, scope caveat. The wording repair applied afterwards is not itself audited."
+        }
+       ],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 70,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36828035.json",
+       "pmid": "36828035",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 5,
+       "receipt_id": "FTR-20260913-36828035-03",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 11,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36926521.json",
+       "pmid": "36926521",
+       "reading_depth": "partial_fulltext_read",
+       "receipt_events": 2,
+       "receipt_id": "FTR-20261004-36926521-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 6,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36937954.json",
+       "pmid": "36937954",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 1,
+       "receipt_id": "FTR-20261004-36937954-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 14,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID38161429.json",
+       "pmid": "38161429",
+       "reading_depth": "partial_fulltext_read",
+       "receipt_events": 3,
+       "receipt_id": "FTR-20260726-38161429-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "NO_MANIFEST",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 0,
+       "manifest": "",
+       "pmid": "39894307",
+       "reading_depth": "NO_RECEIPT",
+       "receipt_events": 0,
+       "receipt_id": "",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 15,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID40126049.json",
+       "pmid": "40126049",
+       "reading_depth": "partial_fulltext_read",
+       "receipt_events": 1,
+       "receipt_id": "FTR-20261003-40126049-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 6,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID40217411.json",
+       "pmid": "40217411",
+       "reading_depth": "partial_fulltext_read",
+       "receipt_events": 1,
+       "receipt_id": "FTR-20261003-40217411-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 7,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID40336300.json",
+       "pmid": "40336300",
+       "reading_depth": "partial_fulltext_read",
+       "receipt_events": 1,
+       "receipt_id": "FTR-20261004-40336300-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 12,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID41124647.json",
+       "pmid": "41124647",
+       "reading_depth": "partial_fulltext_read",
+       "receipt_events": 3,
+       "receipt_id": "FTR-20260921-41124647-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 6,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42068099.json",
+       "pmid": "42068099",
+       "reading_depth": "partial_fulltext_read",
+       "receipt_events": 1,
+       "receipt_id": "FTR-20261003-42068099-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 7,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42248868.json",
+       "pmid": "42248868",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 1,
+       "receipt_id": "FTR-20261004-42248868-01",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "NO_MANIFEST",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 0,
+       "manifest": "",
+       "pmid": "42721537",
+       "reading_depth": "NO_RECEIPT",
+       "receipt_events": 0,
+       "receipt_id": "",
+       "unaudited_contradictions": 0
+      }
+     ],
      "unaudited_contradictions": 0
     },
     "p4_fields": {
@@ -6620,12 +9072,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "cytosine base editor (C→T on the antisense strand) or prime editor",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:575; evidence table digest 12bbb5dc94cd36a1"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:575; evidence table digest a124cf567ea6cb56"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "e972e969c910b74ebafdbfac9d419d9f5b37049380f53dfdc7b0c3d8685610a5",
+   "input_sha256": "73819ca4b1609874d6813dbd9c2f727a27d1e5bf49feb22bef615d23e3908171",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -6642,15 +9094,886 @@
     "status": "NOT_ATTEMPTED"
    },
    "legend_evidence": {
-    "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
-    "complete_reads": 0,
-    "depths": [],
-    "digest": "12bbb5dc94cd36a1",
-    "locators": 0,
+    "abstention": null,
+    "complete_reads": 31,
+    "depths": [
+     "NO_RECEIPT",
+     "complete_fulltext_read",
+     "partial_fulltext_read"
+    ],
+    "digest": "a124cf567ea6cb56",
+    "locators": 915,
     "origin_id": "R-08",
-    "papers": 0,
+    "papers": 51,
     "query_id": "Q-R-08",
-    "rows": [],
+    "rows": [
+     {
+      "adjudication_files": [],
+      "audit_status": "CONTRADICTIONS_AUDITED",
+      "audited_entries": 9,
+      "contradiction_verdicts": [
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT/CORRECTED"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT/CORRECTED"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT/CORRECTED"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT/CORRECTED"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT/CORRECTED"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT/CORRECTED"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT/CORRECTED"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT/CORRECTED"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT/CORRECTED"
+       }
+      ],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 24,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID15064722.json",
+      "pmid": "15064722",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 1,
+      "receipt_id": "FTR-20260913-15064722-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 9,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID17360458.json",
+      "pmid": "17360458",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 1,
+      "receipt_id": "FTR-20260811-17360458-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 32,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID17803050.json",
+      "pmid": "17803050",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 1,
+      "receipt_id": "FTR-20260806-17803050-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 54,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID17823927.json",
+      "pmid": "17823927",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 1,
+      "receipt_id": "FTR-20260914-17823927-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 30,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID19500159.json",
+      "pmid": "19500159",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 1,
+      "receipt_id": "FTR-20260806-19500159-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 11,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID22193544.json",
+      "pmid": "22193544",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 6,
+      "receipt_id": "FTR-20260726-22193544-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 39,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID22574198.json",
+      "pmid": "22574198",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 1,
+      "receipt_id": "FTR-20260914-22574198-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 24,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID24308844.json",
+      "pmid": "24308844",
+      "reading_depth": "partial_fulltext_read",
+      "receipt_events": 3,
+      "receipt_id": "FTR-20260810-24308844-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "CONTRADICTIONS_AUDITED",
+      "audited_entries": 2,
+      "contradiction_verdicts": [
+       {
+        "auditors": 2,
+        "verdict": "OVERSHOOT/CORRECTED"
+       },
+       {
+        "auditors": 2,
+        "verdict": "UNVERIFIABLE_SURFACE/SUPPORTED"
+       }
+      ],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 42,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID24369382.json",
+      "pmid": "24369382",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 5,
+      "receipt_id": "FTR-20260913-24369382-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 11,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID24456803.json",
+      "pmid": "24456803",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 2,
+      "receipt_id": "FTR-20261003-24456803-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "CONTRADICTIONS_AUDITED",
+      "audited_entries": 1,
+      "contradiction_verdicts": [
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT/CORRECTED"
+       }
+      ],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 56,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID24932569.json",
+      "pmid": "24932569",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 3,
+      "receipt_id": "FTR-20260913-24932569-02",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 22,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID25012504.json",
+      "pmid": "25012504",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 1,
+      "receipt_id": "FTR-20260814-25012504-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 40,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID25331887.json",
+      "pmid": "25331887",
+      "reading_depth": "partial_fulltext_read",
+      "receipt_events": 2,
+      "receipt_id": "FTR-20260810-25331887-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "NO_MANIFEST",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 0,
+      "manifest": "",
+      "pmid": "25411445",
+      "reading_depth": "NO_RECEIPT",
+      "receipt_events": 0,
+      "receipt_id": "",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [
+       "disease-models/wwox/research/page_adjudications/locator_audit_deep_cards_20261022.md"
+      ],
+      "audit_status": "AUDIT_FILE_PRESENT",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 7,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID25649963.json",
+      "pmid": "25649963",
+      "reading_depth": "partial_fulltext_read",
+      "receipt_events": 2,
+      "receipt_id": "FTR-20260921-25649963-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 8,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID25650666.json",
+      "pmid": "25650666",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 3,
+      "receipt_id": "FTR-20261003-25650666-03",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "NO_MANIFEST",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 0,
+      "manifest": "",
+      "pmid": "26345274",
+      "reading_depth": "NO_RECEIPT",
+      "receipt_events": 0,
+      "receipt_id": "",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 7,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID26355344.json",
+      "pmid": "26355344",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 2,
+      "receipt_id": "FTR-20261019-26355344-02",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 28,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID26499798.json",
+      "pmid": "26499798",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 1,
+      "receipt_id": "FTR-20260909-26499798-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "NO_MANIFEST",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 0,
+      "manifest": "",
+      "pmid": "26857392",
+      "reading_depth": "partial_fulltext_read",
+      "receipt_events": 1,
+      "receipt_id": "FTR-20260726-26857392-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 5,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID27308416.json",
+      "pmid": "27308416",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 1,
+      "receipt_id": "FTR-20260811-27308416-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 8,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID27495153.json",
+      "pmid": "27495153",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 2,
+      "receipt_id": "FTR-20261003-27495153-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 22,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID27551439.json",
+      "pmid": "27551439",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 3,
+      "receipt_id": "FTR-20261019-27551439-03",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 10,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID29808465.json",
+      "pmid": "29808465",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 3,
+      "receipt_id": "FTR-20261004-29808465-03",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "NO_MANIFEST",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 0,
+      "manifest": "",
+      "pmid": "30202070",
+      "reading_depth": "partial_fulltext_read",
+      "receipt_events": 1,
+      "receipt_id": "FTR-20260922-30202070-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 18,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID30356099.json",
+      "pmid": "30356099",
+      "reading_depth": "partial_fulltext_read",
+      "receipt_events": 4,
+      "receipt_id": "FTR-20260811-30356099-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 14,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID30361190.json",
+      "pmid": "30361190",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 2,
+      "receipt_id": "FTR-20261003-30361190-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 5,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID30853297.json",
+      "pmid": "30853297",
+      "reading_depth": "partial_fulltext_read",
+      "receipt_events": 3,
+      "receipt_id": "FTR-20260923-30853297-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "CONTRADICTIONS_AUDITED",
+      "audited_entries": 1,
+      "contradiction_verdicts": [
+       {
+        "auditors": 1,
+        "verdict": "PARTIAL"
+       }
+      ],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 15,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID31340538.json",
+      "pmid": "31340538",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 2,
+      "receipt_id": "FTR-20260806-31340538-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 25,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID32581702.json",
+      "pmid": "32581702",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 2,
+      "receipt_id": "FTR-20260810-32581702-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 14,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID33255508.json",
+      "pmid": "33255508",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 2,
+      "receipt_id": "FTR-20260806-33255508-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 35,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID33916893.json",
+      "pmid": "33916893",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 2,
+      "receipt_id": "FTR-20260909-33916893-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "CONTRADICTIONS_AUDITED",
+      "audited_entries": 2,
+      "contradiction_verdicts": [
+       {
+        "auditors": 1,
+        "verdict": "blind locator audit, 2026-10-21, task REPURP-10H-R2-B-20261021: one separate history-free read-only agent received only (proposition, quote, anchor) triples plus the source artefacts; verdict on this triple: SUPPORTED, minor caveats. The wording repair applied afterwards is not itself audited."
+       },
+       {
+        "auditors": 1,
+        "verdict": "blind locator audit, 2026-10-21, task REPURP-10H-R2-B-20261021: one separate history-free read-only agent received only (proposition, quote, anchor) triples plus the source artefacts; verdict on this triple: SUPPORTED, wording fix. The wording repair applied afterwards is not itself audited."
+       }
+      ],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 43,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
+      "pmid": "34268881",
+      "reading_depth": "partial_fulltext_read",
+      "receipt_events": 8,
+      "receipt_id": "FTR-20260726-34268881-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "CONTRADICTIONS_AUDITED",
+      "audited_entries": 1,
+      "contradiction_verdicts": [
+       {
+        "auditors": 1,
+        "verdict": "SUPPORTED"
+       }
+      ],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 28,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35328751.json",
+      "pmid": "35328751",
+      "reading_depth": "partial_fulltext_read",
+      "receipt_events": 4,
+      "receipt_id": "FTR-20260921-35328751-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 12,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35573960.json",
+      "pmid": "35573960",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 2,
+      "receipt_id": "FTR-20261003-35573960-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 4,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35716775.json",
+      "pmid": "35716775",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 5,
+      "receipt_id": "FTR-20260726-35716775-02",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 16,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35792847.json",
+      "pmid": "35792847",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 1,
+      "receipt_id": "FTR-20261003-35792847-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 4,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36271927.json",
+      "pmid": "36271927",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 2,
+      "receipt_id": "FTR-20261003-36271927-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [
+       "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
+      ],
+      "audit_status": "AUDIT_FILE_PRESENT",
+      "audited_entries": 1,
+      "contradiction_verdicts": [
+       {
+        "auditors": 1,
+        "verdict": "SUPPORTS"
+       }
+      ],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 39,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36779245.json",
+      "pmid": "36779245",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 7,
+      "receipt_id": "FTR-20260804-36779245-02",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "CONTRADICTIONS_AUDITED",
+      "audited_entries": 18,
+      "contradiction_verdicts": [
+       {
+        "auditors": 1,
+        "verdict": "blind locator audit, 2026-09-13, task ALDAZ-REPAIR-A-20260913: a separate agent with no session history received only (proposition, quote, anchor) triples plus the artefacts - no dossier, no candidate, no claim record, no reader identity. It opened the XML and cut a 3x crop of Fig 1a panel a at native 1801x1412, locating the four antibody rows from a y-darkness profile and running per-lane ImageMagick densitometry."
+       },
+       {
+        "auditors": 1,
+        "verdict": "blind locator audit, 2026-09-13, task ALDAZ-REPAIR-A-20260913: a separate agent with no session history received only (proposition, quote, anchor) triples plus the artefacts - no dossier, no candidate, no claim record, no reader identity. It opened the XML and cut a 3x crop of Fig 1a panel a at native 1801x1412, locating the four antibody rows from a y-darkness profile and running per-lane ImageMagick densitometry."
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT/CORRECTED"
+       },
+       {
+        "auditors": 1,
+        "verdict": "blind locator audit, 2026-09-13, task ALDAZ-REPAIR-A-20260913: a separate agent with no session history received only (proposition, quote, anchor) triples plus the artefacts - no dossier, no candidate, no claim record, no reader identity. It opened the XML and cut a 3x crop of Fig 1a panel a at native 1801x1412, locating the four antibody rows from a y-darkness profile and running per-lane ImageMagick densitometry."
+       },
+       {
+        "auditors": 1,
+        "verdict": "blind locator audit, 2026-09-13, general-purpose auditor receiving only (proposition, quote, anchor) triples plus the artefacts, no dossier, no claim record, no reader identity; it opened every named image"
+       },
+       {
+        "auditors": 1,
+        "verdict": "blind locator audit, 2026-09-13, general-purpose auditor receiving only (proposition, quote, anchor) triples plus the artefacts, no dossier, no claim record, no reader identity; it opened every named image"
+       },
+       {
+        "auditors": 1,
+        "verdict": "blind locator audit, 2026-09-13, general-purpose auditor receiving only (proposition, quote, anchor) triples plus the artefacts, no dossier, no claim record, no reader identity; it opened every named image"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT/CORRECTED"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT/CORRECTED"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT/CORRECTED"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT/CORRECTED"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT/CORRECTED"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT/CORRECTED"
+       },
+       {
+        "auditors": 1,
+        "verdict": "blind locator audit, 2026-10-21, task REPURP-10H-R2-B-20261021: one separate history-free read-only agent received only (proposition, quote, anchor) triples plus the source artefacts; verdict on this triple: SUPPORTED, anchor-label error. The wording repair applied afterwards is not itself audited."
+       },
+       {
+        "auditors": 1,
+        "verdict": "blind locator audit, 2026-10-21, task REPURP-10H-R2-B-20261021: one separate history-free read-only agent received only (proposition, quote, anchor) triples plus the source artefacts; verdict on this triple: SUPPORTED, anchor-label error. The wording repair applied afterwards is not itself audited."
+       },
+       {
+        "auditors": 1,
+        "verdict": "blind locator audit, 2026-10-21, task REPURP-10H-R2-B-20261021: one separate history-free read-only agent received only (proposition, quote, anchor) triples plus the source artefacts; verdict on this triple: SUPPORTED. The wording repair applied afterwards is not itself audited."
+       },
+       {
+        "auditors": 1,
+        "verdict": "blind locator audit, 2026-10-21, task REPURP-10H-R2-B-20261021: one separate history-free read-only agent received only (proposition, quote, anchor) triples plus the source artefacts; verdict on this triple: OVERSHOOT (minor). The wording repair applied afterwards is not itself audited."
+       },
+       {
+        "auditors": 1,
+        "verdict": "blind locator audit, 2026-10-21, task REPURP-10H-R2-B-20261021: one separate history-free read-only agent received only (proposition, quote, anchor) triples plus the source artefacts; verdict on this triple: SUPPORTED, scope caveat. The wording repair applied afterwards is not itself audited."
+       }
+      ],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 70,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36828035.json",
+      "pmid": "36828035",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 5,
+      "receipt_id": "FTR-20260913-36828035-03",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 11,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36926521.json",
+      "pmid": "36926521",
+      "reading_depth": "partial_fulltext_read",
+      "receipt_events": 2,
+      "receipt_id": "FTR-20261004-36926521-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 6,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36937954.json",
+      "pmid": "36937954",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 1,
+      "receipt_id": "FTR-20261004-36937954-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 14,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID38161429.json",
+      "pmid": "38161429",
+      "reading_depth": "partial_fulltext_read",
+      "receipt_events": 3,
+      "receipt_id": "FTR-20260726-38161429-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "NO_MANIFEST",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 0,
+      "manifest": "",
+      "pmid": "39894307",
+      "reading_depth": "NO_RECEIPT",
+      "receipt_events": 0,
+      "receipt_id": "",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 15,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID40126049.json",
+      "pmid": "40126049",
+      "reading_depth": "partial_fulltext_read",
+      "receipt_events": 1,
+      "receipt_id": "FTR-20261003-40126049-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 6,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID40217411.json",
+      "pmid": "40217411",
+      "reading_depth": "partial_fulltext_read",
+      "receipt_events": 1,
+      "receipt_id": "FTR-20261003-40217411-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 7,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID40336300.json",
+      "pmid": "40336300",
+      "reading_depth": "partial_fulltext_read",
+      "receipt_events": 1,
+      "receipt_id": "FTR-20261004-40336300-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 12,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID41124647.json",
+      "pmid": "41124647",
+      "reading_depth": "partial_fulltext_read",
+      "receipt_events": 3,
+      "receipt_id": "FTR-20260921-41124647-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 6,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42068099.json",
+      "pmid": "42068099",
+      "reading_depth": "partial_fulltext_read",
+      "receipt_events": 1,
+      "receipt_id": "FTR-20261003-42068099-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 7,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42248868.json",
+      "pmid": "42248868",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 1,
+      "receipt_id": "FTR-20261004-42248868-01",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "NO_MANIFEST",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 0,
+      "manifest": "",
+      "pmid": "42721537",
+      "reading_depth": "NO_RECEIPT",
+      "receipt_events": 0,
+      "receipt_id": "",
+      "unaudited_contradictions": 0
+     }
+    ],
     "unaudited_contradictions": 0
    },
    "limits": [
@@ -6660,10 +9983,10 @@
     "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
    ],
    "measure_next": {
-    "dependence": "NO_RECEIPTED_EVIDENCE",
-    "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
+    "dependence": "51_PAPERS_31_COMPLETE",
+    "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
     "external_hits": 0,
-    "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
+    "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
     "would_move": "R-08 (disease-models/wwox/analysis/mechanism_intervention_map.md:575)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
@@ -6704,20 +10027,17 @@
      "citation": "Zdrazil B. et al. The ChEMBL Database in 2023: a drug discovery platform spanning multiple bioactivity data types and time periods. Nucleic Acids Res 2024;52(D1):D1180-D1192. https://doi.org/10.1093/nar/gkad1004; web services: Davies M. et al. 2015 (Nucleic Acids Res 43:W612)",
      "error": "",
      "evidence_label": "NOT WWOX EVIDENCE",
-     "first_hits": [
-      "molecule_without_mechanism"
-     ],
-     "hit_count": 1,
+     "first_hits": [],
+     "hit_count": 0,
      "hits_total_before_cap": null,
      "licence": "CC BY-SA 3.0; key-less, no payment",
      "requests_sent": [
       "https://www.ebi.ac.uk/chembl/api/data/status.json",
-      "https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?q=Proteostasis%20modulation%20for%20an%20SDR%20missense%20allele&limit=5",
-      "https://www.ebi.ac.uk/chembl/api/data/mechanism.json?molecule_chembl_id=CHEMBL2408405&limit=20"
+      "https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?q=Proteostasis%20modulation%20for%20an%20SDR%20missense%20allele&limit=5"
      ],
-     "retrieved_at": "2026-10-23T17:05:55Z",
+     "retrieved_at": "2026-10-23T20:52:53Z",
      "source_version": "ChEMBL_37 2026-05-01",
-     "status": "MATCH_FOUND"
+     "status": "NO_MATCH_FOUND"
     },
     {
      "adapter": "openfda",
@@ -6809,20 +10129,17 @@
       "citation": "Zdrazil B. et al. The ChEMBL Database in 2023: a drug discovery platform spanning multiple bioactivity data types and time periods. Nucleic Acids Res 2024;52(D1):D1180-D1192. https://doi.org/10.1093/nar/gkad1004; web services: Davies M. et al. 2015 (Nucleic Acids Res 43:W612)",
       "error": "",
       "evidence_label": "NOT WWOX EVIDENCE",
-      "first_hits": [
-       "molecule_without_mechanism"
-      ],
-      "hit_count": 1,
+      "first_hits": [],
+      "hit_count": 0,
       "hits_total_before_cap": null,
       "licence": "CC BY-SA 3.0; key-less, no payment",
       "requests_sent": [
        "https://www.ebi.ac.uk/chembl/api/data/status.json",
-       "https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?q=Proteostasis%20modulation%20for%20an%20SDR%20missense%20allele&limit=5",
-       "https://www.ebi.ac.uk/chembl/api/data/mechanism.json?molecule_chembl_id=CHEMBL2408405&limit=20"
+       "https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?q=Proteostasis%20modulation%20for%20an%20SDR%20missense%20allele&limit=5"
       ],
-      "retrieved_at": "2026-10-23T17:05:55Z",
+      "retrieved_at": "2026-10-23T20:52:53Z",
       "source_version": "ChEMBL_37 2026-05-01",
-      "status": "MATCH_FOUND"
+      "status": "NO_MATCH_FOUND"
      },
      {
       "adapter": "openfda",
@@ -6926,7 +10243,7 @@
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "2ed391b19a2400c1a0b3c9c2b07996109fdc170c6b1f64872fc492d866bc5763",
+   "input_sha256": "481eff7ae0103c567024ba8bc3db166d5e04ef2e72f4ce65b4413b10fa92aa1c",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -6966,7 +10283,7 @@
    "measure_next": {
     "dependence": "NO_RECEIPTED_EVIDENCE",
     "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
-    "external_hits": 3,
+    "external_hits": 2,
     "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
     "would_move": "R-09 (disease-models/wwox/analysis/mechanism_intervention_map.md:600)"
    },

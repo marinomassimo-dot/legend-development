@@ -3,25 +3,31 @@
  "citation": "Zdrazil B. et al. The ChEMBL Database in 2023: a drug discovery platform spanning multiple bioactivity data types and time periods. Nucleic Acids Res 2024;52(D1):D1180-D1192. https://doi.org/10.1093/nar/gkad1004; web services: Davies M. et al. 2015 (Nucleic Acids Res 43:W612)",
  "error": "",
  "evidence_label": "NOT WWOX EVIDENCE",
- "hits": [
+ "hits": [],
+ "licence": "CC BY-SA 3.0; key-less, no payment",
+ "nearest": [
   {
-   "kind": "molecule_without_mechanism",
-   "max_phase": null,
    "molecule_chembl_id": "CHEMBL3544516",
+   "pref_name": null
+  },
+  {
+   "molecule_chembl_id": "CHEMBL1375018",
+   "pref_name": null
+  },
+  {
+   "molecule_chembl_id": "CHEMBL20066",
    "pref_name": null
   }
  ],
- "licence": "CC BY-SA 3.0; key-less, no payment",
- "note": "NO_MATCH_FOUND is an answer about this query on this date, never absence",
+ "note": "NO_MATCH_FOUND: no molecule's name or synonym equals the queried name; the nearest search hits are in `nearest` and are NOT the named substance",
  "request": {
   "drug": "4-PBA / TUDCA on the ER-chaperone rationale"
  },
  "requests_sent": [
   "https://www.ebi.ac.uk/chembl/api/data/status.json",
-  "https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?q=4-PBA%20/%20TUDCA%20on%20the%20ER-chaperone%20rationale&limit=5",
-  "https://www.ebi.ac.uk/chembl/api/data/mechanism.json?molecule_chembl_id=CHEMBL3544516&limit=20"
+  "https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?q=4-PBA%20/%20TUDCA%20on%20the%20ER-chaperone%20rationale&limit=5"
  ],
- "retrieved_at": "2026-10-23T17:04:55Z",
+ "retrieved_at": "2026-10-23T20:53:24Z",
  "source_version": "ChEMBL_37 2026-05-01",
- "status": "MATCH_FOUND"
+ "status": "NO_MATCH_FOUND"
 }

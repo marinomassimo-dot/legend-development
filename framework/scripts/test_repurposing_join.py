@@ -79,6 +79,35 @@ class Queries(unittest.TestCase):
 
 
 class Evidence(unittest.TestCase):
+    def test_leads_behind_any_leading_marker_become_queries(self):
+        queries = rj.derive_queries()
+        # 7 of 226 leads begin with a star, target, warning, green or medal marker, not the red circle
+        ids = {q["origin_id"] for q in queries if q["kind"] == "lead"}
+        for lead in ("DL-MECH-033", "DL-MECH-034", "DL-MECH-037", "DL-MECH-040", "DL-MECH-046",
+                     "DL-BIO-008", "DL-MOL-012"):
+            self.assertIn(lead, ids)
+
+    def test_pathograph_line_reads_the_paper_it_was_bound_from(self):
+        queries = rj.derive_queries()
+        lines = [q for q in queries if q["kind"] == "mechanism_line"
+                 and rj.PMID_IN_TEXT.search(q["bound_from"])]
+        self.assertTrue(lines)
+        for query in lines:
+            self.assertIn(rj.PMID_IN_TEXT.search(query["bound_from"]).group(1), query["pmids"])
+
+    def test_a_line_inherits_the_papers_of_the_claim_it_is_bound_to(self):
+        queries = rj.derive_queries()
+        claims = {q["origin_id"]: q for q in queries if q["kind"] == "claim"}
+        checked = 0
+        for query in queries:
+            if query["kind"] != "mechanism_line":
+                continue
+            for name in query["bound_claims"]:
+                for pmid in claims.get(name, {}).get("pmids", []):
+                    self.assertIn(pmid, query["pmids"])
+                    checked += 1
+        self.assertGreater(checked, 0)
+
     def test_locator_count_is_the_length_of_entries(self):
         manifest = {"verbatim_locators": {"entries": [{"proposition": "p"}, {"proposition": "q"}],
                                           "mapping_like_key": 1, "note": "x", "waived": False}}

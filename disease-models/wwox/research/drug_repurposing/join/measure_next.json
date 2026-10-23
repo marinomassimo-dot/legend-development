@@ -2,7 +2,7 @@
  {
   "dependence": "NO_RECEIPTED_EVIDENCE",
   "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
-  "external_hits": 2,
+  "external_hits": 1,
   "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
   "query_id": "Q-N-01",
   "would_move": "N-01 (disease-models/wwox/analysis/mechanism_intervention_map.md:630)"
@@ -10,7 +10,7 @@
  {
   "dependence": "NO_RECEIPTED_EVIDENCE",
   "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
-  "external_hits": 2,
+  "external_hits": 1,
   "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
   "query_id": "Q-N-02",
   "would_move": "N-02 (disease-models/wwox/analysis/mechanism_intervention_map.md:641)"
@@ -82,7 +82,7 @@
  {
   "dependence": "NO_RECEIPTED_EVIDENCE",
   "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
-  "external_hits": 1,
+  "external_hits": 0,
   "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
   "query_id": "Q-N-11",
   "would_move": "N-11 (disease-models/wwox/analysis/mechanism_intervention_map.md:720)"
@@ -90,7 +90,7 @@
  {
   "dependence": "NO_RECEIPTED_EVIDENCE",
   "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
-  "external_hits": 3,
+  "external_hits": 2,
   "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
   "query_id": "Q-N-12",
   "would_move": "N-12 (disease-models/wwox/analysis/mechanism_intervention_map.md:726)"
@@ -122,15 +122,15 @@
  {
   "dependence": "ONE_PAPER (34634460, depth complete_fulltext_read, 26 locators, audit UNAUDITED)",
   "experiment_sketch": "replicate the one measurement this query stands on, changing the laboratory or the model but not the endpoint",
-  "external_hits": 2,
+  "external_hits": 1,
   "measurement": "an independent measurement of the same endpoint in a second system, or the same system from a second laboratory: the query rests on one reading",
   "query_id": "Q-N-16",
   "would_move": "N-16 (disease-models/wwox/analysis/mechanism_intervention_map.md:769)"
  },
  {
-  "dependence": "8_PAPERS_7_COMPLETE",
+  "dependence": "55_PAPERS_32_COMPLETE",
   "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
-  "external_hits": 1,
+  "external_hits": 0,
   "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
   "query_id": "Q-N-17",
   "would_move": "N-17 (disease-models/wwox/analysis/mechanism_intervention_map.md:775)"
@@ -154,7 +154,7 @@
  {
   "dependence": "ONE_PAPER (38203337, depth complete_fulltext_read, 30 locators, audit UNAUDITED)",
   "experiment_sketch": "replicate the one measurement this query stands on, changing the laboratory or the model but not the endpoint",
-  "external_hits": 3,
+  "external_hits": 2,
   "measurement": "an independent measurement of the same endpoint in a second system, or the same system from a second laboratory: the query rests on one reading",
   "query_id": "Q-R-03",
   "would_move": "R-03 (disease-models/wwox/analysis/mechanism_intervention_map.md:452)"
@@ -192,17 +192,17 @@
   "would_move": "R-07 (disease-models/wwox/analysis/mechanism_intervention_map.md:550)"
  },
  {
-  "dependence": "NO_RECEIPTED_EVIDENCE",
-  "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
+  "dependence": "51_PAPERS_31_COMPLETE",
+  "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
   "external_hits": 0,
-  "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
+  "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
   "query_id": "Q-R-08",
   "would_move": "R-08 (disease-models/wwox/analysis/mechanism_intervention_map.md:575)"
  },
  {
   "dependence": "NO_RECEIPTED_EVIDENCE",
   "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
-  "external_hits": 3,
+  "external_hits": 2,
   "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
   "query_id": "Q-R-09",
   "would_move": "R-09 (disease-models/wwox/analysis/mechanism_intervention_map.md:600)"

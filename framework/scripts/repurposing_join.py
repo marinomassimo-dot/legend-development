@@ -73,6 +73,7 @@ STOPWORDS = {
     "TIER", "REVIVAL", "TRIGGER", "PREMISE", "TAG", "BLOCCO", "BLOCK", "SPLIT", "READY", "GAP",
     "NO", "YES", "NONE", "ALL", "ANY", "ONE", "TWO", "NEW", "OLD", "SEE", "PER", "VIA", "VS",
 }
+HOPS = 3  # rounds of record-to-record inheritance; D measured the fixed point inside three
 HIT_CAP = 100  # hits kept per cached adapter response; the total before the cap is recorded
 GENE_TOKEN = re.compile(r"\b[A-Z][A-Z0-9]{2,7}\b")
 PMID_IN_TEXT = re.compile(r"\bPMID[\s:_-]*(\d{6,9})\b")
@@ -156,7 +157,9 @@ def paper_pmids(root: Path) -> dict[str, list[str]]:
 def lead_queries(root: Path) -> list[dict]:
     out = []
     for record in rr.parse_records(root, DISEASE, "discovery_ledger_current"):
-        if record.kind != "record" or not record.record_id.upper().lstrip("🔴 ").startswith("DL-"):
+        # The id is what the heading carries after ANY leading marker (red, star, target, warning,
+        # medal ... — 7 of 226 leads were dropped when only the red circle was stripped).
+        if record.kind != "record" or not rr.identity_token(record.record_id).startswith("DL-"):
             continue
         fields = record_fields(record.text)
         causal = fields.get("Causal statement", "") or fields.get("Catena di ragionamento", "")
@@ -166,6 +169,7 @@ def lead_queries(root: Path) -> list[dict]:
                     "origin_title": record.record_id[:300],
                     "terms": gene_tokens(record.record_id + " " + causal),
                     "claims_named": sorted({f"CLAIM {n}" for n in CLAIM_IN_TEXT.findall(record.text)}),
+                    "leads_named": sorted(set(LEAD_IN_TEXT.findall(record.text)) - {rr.identity_token(record.record_id)}),
                     "papers_named": sorted({f"PAPER {n}" for n in PAPER_IN_TEXT.findall(record.text)}),
                     "pmids": sorted(set(PMID_IN_TEXT.findall(record.text)))})
     return out
@@ -249,7 +253,9 @@ def pathograph_queries(path: Path = PATHOGRAPH, limit: int = 40) -> list[dict]:
                     "terms": gene_tokens(f"{row['left']} {row['right']} {row['text']}"),
                     "relation_type": row["relation"], "review_state": row["review_state"],
                     "bound_claims": row["claims"], "bound_from": row["source_ref"],
-                    "pmids": sorted(set(PMID_IN_TEXT.findall(row["text"])))})
+                    # `bound_from` names the manifest (PMIDnnnnnnnn.json|entries[i]) or the registry
+                    # heading the line was bound from: it is evidence the line carries, so it is read.
+                    "pmids": sorted(set(PMID_IN_TEXT.findall(row["text"])) | set(PMID_IN_TEXT.findall(row["source_ref"])))})
     return out
 
 
@@ -259,7 +265,7 @@ def derive_queries(root: Path = ROOT, axis: str = "") -> list[dict]:
     queries = claims + leads + mechanism_queries() + pathograph_queries()
     # The leverage: a lead, a map record or a pathograph line that names a claim or a lead
     # inherits that record's receipted papers, so its evidence table is the evidence LEGEND
-    # already holds, not an empty one. One hop only, and the route is written into the query
+    # already holds, not an empty one. Up to HOPS hops, and the route is written into the query
     # (`pmids_via_records`) so a reader sees where each paper came from.
     papers = paper_pmids(root)
     # First hop: every query resolves the PAPER ids it names itself.
@@ -269,23 +275,32 @@ def derive_queries(root: Path = ROOT, axis: str = "") -> list[dict]:
         if own:
             query["pmids_via_records"] = {pmid: names for pmid, names in sorted(own.items())}
             query["pmids"] = sorted(set(query["pmids"]) | set(own))
-    # Second hop: a record that names a claim or a lead inherits that record's papers.
-    record_pmids = {claim["origin_id"]: claim["pmids"] for claim in claims}
-    record_pmids.update({lead["origin_id"]: lead["pmids"] for lead in leads})
-    for query in queries:
-        named = (list(query.get("claims_named") or []) + list(query.get("bound_claims") or [])
-                 + list(query.get("leads_named") or []))
-        named = [name for name in named if name != query["origin_id"]]
-        inherited = {}
-        for name in named:
-            for pmid in record_pmids.get(name, []):
-                if pmid not in query["pmids"]:
-                    inherited.setdefault(pmid, []).append(name)
-        if inherited:
-            via = dict(query.get("pmids_via_records") or {})
-            via.update({pmid: sorted(set(names)) for pmid, names in inherited.items()})
-            query["pmids_via_records"] = dict(sorted(via.items()))
-            query["pmids"] = sorted(set(query["pmids"]) | set(inherited))
+    # Following hops (at most HOPS rounds): a record that names a claim or a lead inherits that
+    # record's papers, and a lead that cites a lead passes the papers on. A pathograph line IS bound
+    # to the claim it names, so only a claim or lead is barred from naming itself.
+    record_query = {claim["origin_id"]: claim for claim in claims}
+    record_query.update({lead["origin_id"]: lead for lead in leads})
+    for _ in range(HOPS):
+        grew = False
+        for query in queries:
+            named = (list(query.get("claims_named") or []) + list(query.get("bound_claims") or [])
+                     + list(query.get("leads_named") or []))
+            if query["kind"] in ("claim", "lead"):
+                named = [name for name in named if name != query["origin_id"]]
+            inherited = {}
+            for name in named:
+                for pmid in (record_query.get(name) or {}).get("pmids", []):
+                    if pmid not in query["pmids"]:
+                        inherited.setdefault(pmid, []).append(name)
+            if inherited:
+                grew = True
+                via = dict(query.get("pmids_via_records") or {})
+                for pmid, names in inherited.items():
+                    via[pmid] = sorted(set(names))
+                query["pmids_via_records"] = dict(sorted(via.items()))
+                query["pmids"] = sorted(set(query["pmids"]) | set(inherited))
+        if not grew:
+            break
     if axis:
         wanted = [term.lower() for term in AXES[axis]]
         queries = [q for q in queries

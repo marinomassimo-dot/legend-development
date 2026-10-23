@@ -21,7 +21,7 @@
   "https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?q=Lithium&limit=5",
   "https://www.ebi.ac.uk/chembl/api/data/mechanism.json?molecule_chembl_id=CHEMBL1201333&limit=20"
  ],
- "retrieved_at": "2026-10-23T17:09:39Z",
+ "retrieved_at": "2026-10-23T20:53:17Z",
  "source_version": "ChEMBL_37 2026-05-01",
  "status": "MATCH_FOUND"
 }
