@@ -11,6 +11,17 @@
 > a re-read of named panels against a named question. What was admitted before the source was
 > re-opened is listed in the task record's `TASK_ACK`.
 
+> **Correction note, 2026-10-23 (BATCH_20261019_015, integrator).** Two cells of this file rested on
+> statements about `PMID 42422765` that the blind module-row audit
+> (`page_adjudications/locator_audit_module_rows_20261023.md`) returned as `OVERSHOOT` and that the
+> reader withdrew and repaired in manifest entries 14 and 10 (commit `bf151b43`, receipt
+> `FTR-20261023-42422765-01`): item 5 of the dose-flag section (the four-dose 0 / 0 / 0 / ~76 %
+> assembly, which cited entry 14 for no survivors at the 8 × 10¹⁰ arm) and row S2 of the endpoint table
+> (*P1 and P5 both plateau near 75 %*, which cited entry 10). Both cells are re-sourced from the
+> repaired entries; every other cell is unchanged. The repair covers entries 10 and 14 only: other
+> entries of that manifest were not re-opened. This note carries no dose guidance; nothing here is
+> medical advice.
+
 ## 0 · What changed on 2026-10-21
 
 Harness Engineering's §0 measured that the paper the roadmap wanted transcribed from an abstract
@@ -185,7 +196,7 @@ in it. That gap is an `IPOTESI` to be tested, not a limitation to be waived.
 | # | figure_or_table | model | control | age | intervention | direction | duration | limits |
 |---|---|---|---|---|---|---|---|---|
 | **S1** | **Figure 3B**, 300 dpi (`fig3_…_1744x1699.png`), re-inspected at native resolution and measured against the printed axes — **the adjudication panel of §3** | `KO` | **`WT+RI` (*n* = 20) and `KO+RI` (*n* = 10)**, both plotted | ICV at P0–P1; followed to **300 days** | `W` at `LD` (*n* = 20) **and** `HD` (*n* = 30) | 🔴 **increase at both doses, but only HD is durable, and the two are qualitatively different.** Measured off the axes: `KO+RI` first death ~day 9, its **0 % marker spanning days 13–21 and centred ~day 17**; **`LD` holds 100 % to ~day 18, declines, and reaches 0 % at ~day 79**; **`HD` holds 100 % to ~day 50**, steps to ~92 % at ~day 50.3 and ~84 % at ~day 69, **then plateaus at 76–77 % from ~day 80 through day 300**; `WT+RI` is at 100 % to ~day 45, ≈ 89–90 % to ~day 122, and **≈ 71–72 % from ~day 126 through day 300**. Caption statistics: HD vs WT **p = 0.78**, HD vs LD p < 0.0001, LD vs `KO+RI` p < 0.0001 | HD: effect held to **300 days**, the end of the plot. LD: ~79 days, at which point the arm is extinct | 🔴 **Read the duration of the effect, not the survival of the cohort.** LD's benefit is a **postponement of death**, not a durable rescue; HD's plateau sits **at or marginally above the wild-type control's own survival** (76–77 % vs 71–72 %), which is what `p = 0.78` says and which also means *"comparable to WT"* here includes a wild-type arm that itself lost ~29 % of its animals over 300 days. Two doses cannot locate a threshold (§3.1). The absolute dose is uncertain by exactly a factor of two (§3.2). 🔴 **Two reading traps on this panel, both corrected 2026-10-21 after a blind audit returned `UNDERSHOOT` on manifest entry 40 (see §3.4):** the red marker at ~day 22 is a **censoring tick on the 100 % line**, not the last point before a drop, and red is **absent from the image between days 27.8 and 49.8** because the navy wild-type curve is drawn over it at the same height. The first HD step is at ~day 50.3, not ~day 24 |
-| **S2** | **Figure S8A–S8D**, 200 dpi render (manifest entry 10; not re-opened in this fill) | `KO` | `KO+RI` (*n* = 6), dead by ~day 15 | injection at **P1 (*n* = 6), P2 (*n* = 6), P3 (*n* = 3), P5 (*n* = 7)**; weight and glucose at **P14** | `W` at **HD only**, timing varied | **increase.** S8B: the **P1 and P5** arms plateau near **75 % to 300 days**. S8C/S8D: `***` and `**` for WT vs KO, and a **single `ns` spanning all five treated timepoints against WT** | to 300 days for P1 and P5 | 🔴 **The 300-day plot shows only P1 and P5**; P2, P3 and P4 appear solely in the 40-day panel, and **P3 is an *n* = 3 arm that lost animals** (down to ~67 % at ~day 24). 🔴 **The tested window is P1–P5** on the panels, while the Methods heading and the Discussion both write *P0–P5* and the main cohorts were injected at P0–P1. 🔴 **`NOT_MEASURED` is not `SMALLER`:** the authors state *"Therapeutic rescue beyond this early postnatal window was not explored, as* Wwox*-null mice rapidly deteriorate with progressive neurological dysfunction and early lethality, precluding effective intervention at later stages."* That is a statement about what was not done and why — it is **not** a measurement that later treatment helps less. Nothing in this corpus bounds efficacy after P5 in either direction |
+| **S2** | **Figure S8A–S8D**, 200 dpi render (manifest entry 10; not re-opened in this fill) | `KO` | `KO+RI` (*n* = 6), dead by ~day 15 | injection at **P1 (*n* = 6), P2 (*n* = 6), P3 (*n* = 3), P5 (*n* = 7)**; weight and glucose at **P14** | `W` at **HD only**, timing varied | **increase.** S8B: **P1** (*n* = 6) holds **100 % to ~day 300**, and only **P5** (*n* = 7) plateaus near **75 %** (from ~day 35 to day 300) *[corrected 2026-10-23: the earlier cell said both P1 and P5 plateau near 75 %; see the correction note at the top of this file]*. S8C/S8D: `***` and `**` for WT vs KO, and a **single `ns` spanning all five treated timepoints against WT** | to 300 days for P1 and P5 | 🔴 **The 300-day plot shows only P1 and P5**; P2, P3 and P4 appear solely in the 40-day panel, and **P3 is an *n* = 3 arm that lost animals** (down to ~67 % at ~day 24). 🔴 **The tested window is P1–P5** on the panels, while the Methods heading and the Discussion both write *P0–P5* and the main cohorts were injected at P0–P1. 🔴 **`NOT_MEASURED` is not `SMALLER`:** the authors state *"Therapeutic rescue beyond this early postnatal window was not explored, as* Wwox*-null mice rapidly deteriorate with progressive neurological dysfunction and early lethality, precluding effective intervention at later stages."* That is a statement about what was not done and why — it is **not** a measurement that later treatment helps less. Nothing in this corpus bounds efficacy after P5 in either direction |
 | **S3** | **Figure 4B–4K**, 104 ppi (manifest entries 0/1/2; not re-opened in this fill — see §3.3) | `KO` | **`WT` only (*n* = 9) against `KO+HD` (*n* = 10)** | behaviour at **3 months**; injection at P0–P1 | `W` at **HD only** | **mixed, and partly counter-directional.** The text states *"Locomotor activity parameters … showed no significant differences between groups (Figures 4B, 4D–4G)"*, while the same figure prints an asterisk on 4D (velocity) and 4E (distance), and panel **4K reports treated animals with significantly higher rotarod latency than WT** | single session at 3 months | 🔴 **There is no untreated-disease arm, by construction:** *"Behavioral testing could not be performed in untreated* Wwox*-null mice due to severe morbidity and early lethality, and LD-treated mice did not survive to P90; therefore, analyses were limited to WT and HD-treated groups."* 🔴 **No cognitive endpoint is measured anywhere in the study.** The 4D/4E text-versus-panel conflict is a persisted, declared contradiction whose figure bytes the blind audit returned `UNVERIFIABLE_SURFACE`; it is **not adjudicated here** (§3.3). No multiplicity correction is declared by either side |
 | **S4** | **Figure S4A–S4E**, 300 dpi render (manifest entry 27; not re-opened in this fill) | `KO` | `WT` and `KO` | not stated on the panel | `W` at `LD` **and** `HD` | 🟢 **graded.** Composite motor score: WT ≈ 0, KO ≈ 3.6, **LD ≈ 1.8**, **HD ≈ 0.3**; **WT–HD `ns`**, **LD–HD `***`**. The low dose is genuinely intermediate | single assessment | Fertility (S4C–S4D) rests on roughly **three plotted observations per group** and has **no untreated-KO comparator**. The motor measure is the clearest graded dose-response in the whole study and it is in a supplement, not in the main figures |
 
@@ -257,14 +268,17 @@ of others**, and the title binds it to exactly the three where it is weakest.
    2.63 × 10¹¹ vg"* claims more than two dose points can carry: with two arms a step and a steep
    continuum are indistinguishable, and what the panel **refuses** is linear interpolation of
    durable benefit, not the existence of intermediate behaviour. The step reading is
-   **strengthened, not established,** by assembling four dose levels across two figures — Figure
-   2B's `AAV9-hSynI-hWWOX` arms at 4 × 10¹⁰ (*n* = 3) and 8 × 10¹⁰ (*n* = 5), same promoter, same
-   WPRE-free architecture, **no survivors in either** (manifest entry 14), against 1.23 × 10¹¹
-   (extinct at ~day 79) and 2.63 × 10¹¹ (76–77 % at 300 days) — so durable survival reads
-   0 / 0 / 0 / ~76 % across four doses. 🔴 **The arms are different cohorts in different
-   experiments**, and manifest entry 14 already records that the running text claims 8 × 10¹⁰
-   rescued lethality where the panel reading does not; that discrepancy is carried unresolved,
-   with the presumption left in favour of the text.
+   **not strengthened by assembling arms across figures.** An earlier version of this item assembled
+   four dose levels (a 0 / 0 / 0 / ~76 % durable-survival series) from Figure 2B's arms and Figure
+   3B's; that Figure 2B reading is **withdrawn** (correction note at the top of this file, 2026-10-23).
+   As repaired in manifest entry 14: in Figure 2B the `AAV9-hSynI-hWWOX` 8 × 10¹⁰ arm (*n* = 5) and the
+   WPRE-bearing 4 × 10¹⁰ arm (*n* = 3) both sit at 100 % to their last markers (about days 27 and 31),
+   where follow-up of those arms ends, and the 33 % step belongs to the WPRE-free 4 × 10¹⁰ arm
+   (*n* = 3). The panel therefore agrees with the running text and carries no statement about
+   durability beyond about day 31. 🔴 **The arms are different cohorts in different experiments, and
+   one of them carries WPRE**, so no four-point series can be assembled from them: the
+   step-or-continuum question stays open on the two Figure 3B arms, and the item's first inference
+   (two dose points cannot locate a threshold) stands without the assembly.
 6. 🔴 **Two numbers in the flag's prose are corrected by measurement.** The flag writes that LD
    *"shifts death from ~20 to ~90 days"* and that HD *"plateaus at ~80 % to 300 days"*. Measured
    off the axes: `KO+RI`'s 0 % marker is **centred at ~day 17** and spans days 13–21, LD reaches 0 % at **~day 79**, and the HD plateau is
