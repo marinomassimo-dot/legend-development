@@ -13,7 +13,7 @@
   "supplementary": "unavailable",
   "references": "not_read"
  },
- "event_at": "2026-10-23T21:01:00Z",
+ "event_at": "2026-10-23T20:49:29Z",
  "event_id": "FTR-20261023-42397075-01",
  "evidence_basis": [
   "QUESTION-FRAMED RESUME, not a re-reading: the question was where the Wnt/beta-catenin endpoint behind a repurposing row is measured. Read, in the accepted-manuscript text rendering already fingerprinted, one Results paragraph on Wnt and TCF4 (p. 9), one Discussion paragraph (p. 15) and reference 23. Results and Discussion are marked read only because the schema needs one read section; what was actually read is the named paragraphs (and reference 23), recorded in five new locators, and every other section is declared not_read here (earlier receipts carry the full coverage).",

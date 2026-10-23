@@ -13,7 +13,7 @@
   "supplementary": "read",
   "references": "not_read"
  },
- "event_at": "2026-10-23T21:03:00Z",
+ "event_at": "2026-10-23T20:49:29Z",
  "event_id": "FTR-20261023-42422765-01",
  "evidence_basis": [
   "REPAIR PASS after the blind module-row audit (page_adjudications/locator_audit_module_rows_20261023.md), which returned OVERSHOOT on manifest entries 14 and 10. Both re-inspected on the declared surfaces before any edit: Figure 2B from the 500 ppi embedded raster of mmc2.pdf page 4 (arms read from legend colours and the caption, which says the black dot is a mouse collected for analysis), and Supplementary S8A to S8D from a 400 dpi render of mmc1.pdf page 10.",

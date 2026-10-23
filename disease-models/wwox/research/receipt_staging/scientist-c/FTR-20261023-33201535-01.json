@@ -13,7 +13,7 @@
   "supplementary": "unavailable",
   "references": "not_read"
  },
- "event_at": "2026-10-23T20:57:00Z",
+ "event_at": "2026-10-23T20:49:29Z",
  "event_id": "FTR-20261023-33201535-01",
  "evidence_basis": [
   "PMC author-manuscript JATS XML (efetch) read in full as a tag-stripped rendering: Abstract, Introduction, Patients and Methods, Results, Discussion, Tables 1 to 3 and figure legends. The six figure images were declared in the XML but absent from the PMC bucket, so figures were not opened. The online supplement was not obtained. Reference list counted, not read.",

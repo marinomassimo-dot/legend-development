@@ -13,7 +13,7 @@
   "supplementary": "not_present",
   "references": "not_read"
  },
- "event_at": "2026-10-23T20:55:00Z",
+ "event_at": "2026-10-23T20:49:29Z",
  "event_id": "FTR-20261023-33053775-01",
  "evidence_basis": [
   "Europe PMC JATS XML read section by section as a tag-stripped rendering: Abstract, Introduction, Results 2.1 to 2.3, Discussion, Methods 4.1 to 4.4, Conclusions and Table 1. Figure legends read; figure images were not opened (captions_only). No supplement exists (PMC flag). Reference list counted, not read.",
