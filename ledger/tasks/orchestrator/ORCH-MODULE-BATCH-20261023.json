@@ -18,15 +18,15 @@
    "steps": [
     {
      "step": "Scientists A,B,C resolve and read SELECT rows (A: Q-N-01..07, B: Q-N-08..15, C: Q-R-04..09 plus the 3 REPLICATE rows)",
-     "status": "TODO"
+     "status": "DONE"
     },
     {
      "step": "Scientist D: gap study on typed pharmacological assertions of the 21 cards and on the early-benefit axis",
-     "status": "TODO"
+     "status": "DONE"
     },
     {
      "step": "Blind auditor for the 2 AUDIT rows (Q-N-17, Q-R-02)",
-     "status": "TODO"
+     "status": "DONE"
     }
    ]
   },
@@ -35,7 +35,7 @@
    "steps": [
     {
      "step": "Record staged receipts, integrator batch 015 for identities/depth/candidates, rerun repurposing_join.py run and diff, battery on the final SHA, push",
-     "status": "TODO"
+     "status": "IN_PROGRESS"
     }
    ]
   },
@@ -50,10 +50,18 @@
   }
  },
  "WATCH": {
-  "cycles_done": 0,
+  "cycles_done": 1,
   "cron_id": null,
-  "roster": {},
-  "log": []
+  "roster": {
+   "scientist-a": "lot + 4 repair rounds landed; idle",
+   "scientist-b": "lot + quote repairs landed; idle",
+   "scientist-c": "lot + 3 repair rounds landed; idle",
+   "scientist-d": "blind-spot study landed; idle",
+   "harness": "a7af8e0e583e898b0 running: module fixes M2-M8, scaffold re-source"
+  },
+  "log": [
+   "2026-10-23T21:31Z cycle 1: all four Scientists finished and landed; no rate-limit stop; 3 blind audit rounds on repairs (15% -> 2.4% substantive); integrator 015 landed; audit-count bug fixed and pushed; Harness module fixes running; no new studies handed out because the operator asked for the diagnosis after the batch"
+  ]
  },
  "DECISIONS_TAKEN": [
   "2026-10-23: operator approved the batch and asked for a diagnosis afterwards; duration chosen by the Orchestrator (6 hours, hourly watch)."
