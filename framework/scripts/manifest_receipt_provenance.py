@@ -124,7 +124,9 @@ if str(HERE) not in sys.path:
 #: It fell to 9 on 2026-10-20: PMID25779665 (a wrong-date id, repointed by the repoint tool) and the
 #: 11 manifests that read SUPERSEDED_ARTIFACTS (5 old artifact-divergence cases, 5 re-read on
 #: 2026-10-19/20, and PMID42422765) left the defect count; 21 measured -> 9. LOWERED, never raised.
-BASELINE_DEFECTS = 9
+#: It fell to 8 on 2026-10-23: PMID30362252 was repointed by manifest_receipt_repoint to the earliest
+#: same-study event that names it and now CONFORMS. LOWERED, never raised.
+BASELINE_DEFECTS = 8
 
 DEFECTS = ("NOT_THE_PRODUCER", "UNNAMED", "UNKNOWN_EVENT", "NO_RECEIPT")
 

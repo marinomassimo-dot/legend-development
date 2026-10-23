@@ -375,7 +375,7 @@ class TheLiveCorpus(unittest.TestCase):
         the ceiling fell) or it changed class (and that is worth noticing).
         """
         expected = {"19936220", "22193544", "22634283", "23370280", "24550385", "26675548",
-                    "30362252", "34831305", "36828035"}
+                    "34831305", "36828035"}
         for pmid in sorted(expected):
             with self.subTest(pmid):
                 done = self.run_tool("--pmid", pmid)
