@@ -2,7 +2,7 @@
  "schema_version": 2,
  "pmid": "24456803",
  "doi": "10.1186/1750-1172-9-12",
- "receipt": "FTR-20261023-24456803-01",
+ "receipt": "FTR-20261003-24456803-01",
  "context_policy": "SOURCE_FIRST",
  "landing": [
   "disease-models/wwox/research/fulltext_dossiers/PMID24456803.md",
