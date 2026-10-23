@@ -80,8 +80,8 @@
     },
     {
      "step": "C. Land, gate, push",
-     "status": "IN_PROGRESS",
-     "evidence": ""
+     "status": "DONE",
+     "evidence": "landed main cfb677400ae9b424d56eb676e566e4457c868d7d (task_close.py); gate PASS 0 blocks, LINT 0 BLOCK, receipts OK 848; its fresh-clone battery was stopped by its owner when the E landing superseded it (DEFAULTS_TAKEN) and the E battery covered it; pushed inside the E push (main 2bcb5d35 chain, safe_push PUBLISHED verified=ls-remote)"
     }
    ]
   },
@@ -95,8 +95,8 @@
     },
     {
      "step": "D. Land, gate, push",
-     "status": "IN_PROGRESS",
-     "evidence": ""
+     "status": "DONE",
+     "evidence": "landed main c34bbf812ef69a5f7062c82c024a7215245848a6 (task_close.py); gate PASS at the E landing that carried it; covered by the E fresh-clone battery (two documentation guards repaired at 72f3a71f, re-run OK); pushed with safe_push in the E push"
     }
    ]
   },
