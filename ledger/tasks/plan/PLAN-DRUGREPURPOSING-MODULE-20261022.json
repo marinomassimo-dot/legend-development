@@ -13,7 +13,17 @@
  "branch": "task/plan-drugrepurposing-module",
  "CURRENT_STATE": "IN_PROGRESS",
  "AUTHORISED_QUEUE": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "PAUSED",
+  "PAUSE_REASON": "operator switching permission mode back to autonomous; the session may be restarted (operator instruction, 2026-10-23). Stages A and B are landed on main and pushed; nothing is uncommitted.",
+  "RESUME": {
+   "next_step": "OBJ_C_JOIN[0] — continue deliverable C from the WIP commit, then finish C's done-criteria: one live run per axis, routing row in framework/scripts/README.md for framework/scripts/repurposing_join.py, enrolment of framework/scripts/test_repurposing_join.py in scripts/run_release_regressions.py, chmod +x on both new entrypoints (scripts/test_release_surface.py fails without it — it already caught the two B entrypoints), then land with task_close.py, gate, fresh-clone battery, safe_push.",
+   "wip_branch": "task/plan-repurp-c",
+   "wip_commit": "e78b4a5198f9fce62b7c270cbef17812bf8730ed",
+   "wip_subject": "WIP, DO NOT LAND — plan: deliverable C join (queries, evidence table, derived cards, measure-next), suite green, output snapshot",
+   "wip_worktree": ".claude/worktrees/repurp-module",
+   "state_of_c": "framework/scripts/repurposing_join.py written and running (run | queries | diff); framework/scripts/test_repurposing_join.py 16 tests OK offline; full offline run over the corpus: 332 queries (47 claims, 219 leads, 26 mechanism records, 40 mechanism lines), 332 evidence tables of which 146 abstain, 26 derived cards, measure_next per card; output snapshot committed under disease-models/wwox/research/drug_repurposing/join/. NOT yet done: the live run, the routing row, the battery enrolment, the executable bit, the landing.",
+   "open_question_for_the_next_turn": "whether the committed join/ snapshot should stay committed (it goes stale as batches land; no freshness gate was added on purpose, because such a gate would turn red on unrelated Scientist batches — `run` reports the diff instead)."
+  },
   "OBJ_A_SURVEY": {
    "order": 1,
    "steps": [
@@ -44,8 +54,8 @@
     },
     {
      "step": "B. Land, gate, push",
-     "status": "IN_PROGRESS",
-     "evidence": ""
+     "status": "DONE",
+     "evidence": "landed main c17e6e336f39a3d2f30b176761cc613d80c8fc8d (task_close.py); fresh-clone battery on that SHA returned FAIL on scripts/test_release_surface.py (the two new entrypoints lacked the executable bit) — repaired on main 380e3a643476077f06b9b236367ae811732c0b97, suite re-run OK; gate PASS 0 blocks, LINT 0 BLOCK, receipts verify OK 848; safe_push development main PUBLISHED verified=ls-remote at 380e3a64"
     }
    ]
   },
@@ -163,9 +173,9 @@
   {
    "stage": "B",
    "date": "2026-10-23",
-   "landed": "see OBJ_B_SEAM[2] evidence once landed",
+   "landed": "main c17e6e33 then the executable-bit repair 380e3a643476077f06b9b236367ae811732c0b97, pushed to development (gate PASS)",
    "measured": "selftest --live: 6/6 adapters green on 2026-10-23 (versions recorded per adapter); offline suite 18 tests OK; one-file removal measured for each adapter; tool routing, self-test coverage and bridge suites OK; gate PASS on the worktree",
-   "failed": "first draft of the convention test rejected the word 'key' inside 'optional key not used' (fixed by checking 'key-less'); the fresh template is red by design until its licence is read",
+   "failed": "first draft of the convention test rejected the word 'key' inside 'optional key not used' (fixed by checking 'key-less'); the fresh template is red by design until its licence is read; the fresh-clone battery caught a real regression — scripts/test_release_surface.py requires the executable bit on a shebang entrypoint, which the two new files lacked (repaired, suite green, battery's other 154 suites unaffected)",
    "removed_or_merged": "no second HTTP client, no cache, no retry layer; DailyMed fallback documented, not coded",
    "not_built": "see NOT_BUILT_BY_DESIGN[1]",
    "licences": "six terms pages read and quoted in each adapter's INFO and in ACKNOWLEDGEMENTS.md; declined: GtoPdb (key), CLUE (key), SemMedDB (UMLS), Orphadata Products (DTA), AetherCell (research licence)",
