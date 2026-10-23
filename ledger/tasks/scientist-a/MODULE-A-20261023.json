@@ -1,0 +1,71 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "_note": "Sub-task of ORCH-MODULE-BATCH-20261023 (rows Q-N-01 to Q-N-07). Every non-WWOX paper is NOT WWOX EVIDENCE; no dose, administration or suitability; not medical advice.",
+ "TASK_ID": "MODULE-A-20261023",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "scientist-a",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Resolve the support of module rows Q-N-01 to Q-N-07, select and read up to 12 papers, and record observations on the module row.",
+ "SCOPE": {
+  "outputs": "deepdive_manifests/, receipt_staging/scientist-a/, note module_batch_selection_scientist-a_20261023.md"
+ },
+ "ACCEPTANCE_CRITERIA": [
+  "selection note with per-row outcomes and observations",
+  "manifests PASS and strength-scan clean",
+  "receipts staged not recorded",
+  "ledger and registries untouched"
+ ],
+ "DEPENDENCIES": [],
+ "REVIEW_REQUIREMENT": "Mirror ex post",
+ "INTERACTION_MODE": "AUTONOMOUS",
+ "RETRY_POLICY": "resume idempotently",
+ "CURRENT_STATE": "COMPLETE",
+ "assigned_on": "2026-10-23",
+ "TASK_ACK": {
+  "actor": "scientist-a",
+  "at": "2026-10-23T20:33:00Z",
+  "directive_version": 1,
+  "generation": 1,
+  "understanding": "Resolve and read for seven module rows; stage receipts; no ledger or registry writes; observations on the module row."
+ },
+ "TASK_CLAIM": {
+  "actor": "scientist-a",
+  "at": "2026-10-23T20:33:00Z",
+  "branch": "task/module-a-20261023",
+  "worktree": ".claude/worktrees/module-a",
+  "reading_claims": [
+   "42190144",
+   "30362252",
+   "34268881",
+   "25708809"
+  ],
+  "note": "42190144 also carries a stale claim by scientist-b from 2026-10-20 with no work behind it; proceeded."
+ },
+ "DEFAULTS_TAKEN": [
+  "Riccardi 2026 parked rather than bypassing a proof-of-work bot challenge.",
+  "Resumed already-receipted papers with question-driven appends instead of reading new papers, because the rows' papers were already receipted.",
+  "No e-mail-requiring service used."
+ ],
+ "STOP_LOG": [],
+ "STAGED_RECEIPTS": [
+  "FTR-20261023-34268881-01",
+  "FTR-20261023-30362252-01",
+  "FTR-20261023-36779245-01",
+  "FTR-20261023-30361190-01",
+  "FTR-20261023-24456803-01",
+  "FTR-20261023-25708809-01"
+ ],
+ "MILESTONE_LOG": [
+  {
+   "at": "2026-10-23",
+   "milestone": "selection note, six readings with manifests PASS, receipts staged"
+  }
+ ],
+ "OWED": [
+  "Riccardi, Choi, Wang full texts",
+  "blind audit of new locators",
+  "Battaglia/Johannsen MRS statements"
+ ]
+}

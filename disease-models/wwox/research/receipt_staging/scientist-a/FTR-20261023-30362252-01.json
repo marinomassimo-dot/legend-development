@@ -1,0 +1,38 @@
+{
+ "event_id": "FTR-20261023-30362252-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "30362252",
+  "doi": "10.1002/humu.23675"
+ },
+ "event_at": "2026-10-23T20:45:32Z",
+ "analysis_at": "2026-10-23T20:41:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-a module batch 2026-10-23 (task MODULE-A-20261023); QUESTION_DRIVEN WWOX-DIRECT re-read of the whole PMC text for the cerebral-lactate, HSPG2-attribution, metabolic-findings and drug-history questions; prepared as JSON for the integrator and staged, not appended.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID30362252_Davids2019_PMC_2026-09-27.xml",
+ "source_fingerprint": "4bfc73890bf903a8dcfd36fb0ea7f8970eed808581c08160f1def7335999d6ca",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_present",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "references": "not_read",
+  "supplementary": "unavailable"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID30362252.json",
+  "disease-models/wwox/research/module_batch_selection_scientist-a_20261023.md"
+ ],
+ "evidence_basis": [
+  "The whole PMC JATS body was read section by section for four questions (what the paper says about cerebral lactate on MR spectroscopy, to which findings it attributes the HSPG2 variants, which metabolic findings it records, and which drugs it names). Figures 1 and 2 were NOT opened as images: the PMC bucket does not carry them and the NCBI and Europe PMC figure routes are bot-challenged, so figures stay captions_only; the supplement (Supp. Tables S1 to S4, Supp. Figures S1 to S4) stays unavailable.",
+  "Five locators appended to the manifest (entries 5 to 9); no earlier locator changed or contradicted. The manifest's five deep-dive slots remain the waivers it already carried."
+ ],
+ "prior_receipt": "FTR-20260927-30362252-02",
+ "reread_reason": "new_question_outside_prior_coverage"
+}

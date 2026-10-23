@@ -1,0 +1,38 @@
+{
+ "event_id": "FTR-20261023-25708809-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "25708809",
+  "doi": "10.18632/oncotarget.2927"
+ },
+ "event_at": "2026-10-23T20:45:22Z",
+ "analysis_at": "2026-10-23T20:43:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-a module batch 2026-10-23 (task MODULE-A-20261023); first read, QUESTION_DRIVEN, of the whole PMC article: PMC efetch XML, article PDF and supplement acquired with pmc_bucket_fetch.py, whole text read section by section, the six figures opened as native rasters extracted from the PDF, supplementary legends read; locators captured while the document was open and verified by deepdive_manifest.py. A liver-cancer microRNA paper about WWOX regulation; prepared as JSON for the integrator and staged, not appended.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID25708809_Hua2015_PMC_r2.xml",
+ "source_fingerprint": "fc453cb531ddee0ea7589bc82741dddf7c09d84b9251de029dd5eb266c959864",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "references": "not_read",
+  "supplementary": "captions_only"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID25708809.json",
+  "disease-models/wwox/research/module_batch_selection_scientist-a_20261023.md"
+ ],
+ "evidence_basis": [
+  "The context was QUESTION_DRIVEN (the reader held the question whether the only in-vivo WWOX-raising experiment of the registry shows a raised WWOX protein, in which tissue and by what evidence). The six article figures were read from native rasters of about 200 ppi extracted from the PDF; paper_packet.py rank showed raster, not vector, figures. The four supplementary images were not opened: the legends only.",
+  "Twelve locators in the new manifest (entries 0 to 11), including four figure attestations; none contradicts an earlier locator because no manifest existed."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

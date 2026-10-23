@@ -1,0 +1,38 @@
+{
+ "event_id": "FTR-20261023-30361190-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "30361190",
+  "doi": "10.1684/epd.2018.1005"
+ },
+ "event_at": "2026-10-23T20:45:27Z",
+ "analysis_at": "2026-10-23T20:42:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-a module batch 2026-10-23 (task MODULE-A-20261023); QUESTION_DRIVEN WWOX-DIRECT targeted re-read of the two clinical case descriptions for the normal-investigations lists and the vigabatrin course; prepared as JSON for the integrator and staged, not appended.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID30361190_Shaukat2018_JLE.txt (derived text layer of files/fulltext/PMID30361190_Shaukat2018_JLE.pdf)",
+ "source_fingerprint": "ae3103d907aceef77695534708bca43e6b476fca12b401ca0f8c0785842ade78",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_present",
+  "references": "not_read",
+  "supplementary": "unavailable"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID30361190.json",
+  "disease-models/wwox/research/module_batch_selection_scientist-a_20261023.md"
+ ],
+ "evidence_basis": [
+  "Targeted re-read for one question set (which metabolic investigations are reported normal in each child and what happened on vigabatrin in each): the clinical-data descriptions of both children in the Results, read in the derived text layer of the publisher PDF (two-column layout, every locator a single-column fragment). Section coverage is stated conservatively: only Results is marked read.",
+  "Six locators appended to the manifest (entries 14 to 19); no earlier locator changed or contradicted."
+ ],
+ "prior_receipt": "FTR-20261003-30361190-01",
+ "reread_reason": "new_question_outside_prior_coverage"
+}

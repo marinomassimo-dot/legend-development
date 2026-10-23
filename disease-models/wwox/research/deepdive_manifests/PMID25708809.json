@@ -1,0 +1,327 @@
+{
+ "schema_version": 2,
+ "pmid": "25708809",
+ "doi": "10.18632/oncotarget.2927",
+ "receipt": "FTR-20261023-25708809-01",
+ "landing": [
+  "disease-models/wwox/research/module_batch_selection_scientist-a_20261023.md"
+ ],
+ "context_policy": "QUESTION_DRIVEN",
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not needed: PMC efetch XML, the article PDF and the supplement came from pmc_bucket_fetch.py."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Primary-evidence read under the Scientist brief for a module-batch row; the selection note is the dossier. The paper is a liver-cancer microRNA paper about WWOX regulation, not a WWOX-deficiency model."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No persisted locator is contradicted; a blind audit of this new manifest is owed to the integrator."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "counts_measured": "Not run by author name (surname-initial ambiguity for a Chinese hospital group).",
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "A liver-cancer group; one microRNA-153 paper on WWOX; not a WWOX-deficiency group and no neural work in the paper."
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {
+    "query": "miR-153 AND WWOX",
+    "count": 1,
+    "source": "PubMed ESearch count 2026-10-23",
+    "external_provenance": {
+     "command": "eutils esearch db=pubmed term='miR-153 AND WWOX'",
+     "date": "2026-10-23"
+    }
+   },
+   {
+    "query": "miR-153 AND WWOX AND (brain OR neuron* OR neural)",
+    "count": 0,
+    "source": "PubMed ESearch count 2026-10-23",
+    "external_provenance": {
+     "command": "eutils esearch db=pubmed",
+     "date": "2026-10-23"
+    }
+   }
+  ],
+  "note": "Counts are title/abstract-level index counts and license 'no paper is indexed', never 'never measured' (D-37)."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 35,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "<ref> elements counted in the JATS: 35. WWOX-direct references exist (the Dishevelled-2 link and general WWOX tumour-suppressor reviews) but none is a WWOX neural or deficiency model.",
+  "resolved": [],
+  "queued": [],
+  "note": "Not followed: none of the WWOX-direct references bears on neural WWOX regulation by miR-153."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "registry_records.py get --pmid 25708809 and paper_packet.py packet (before the read)",
+  "hits": 0,
+  "finding": "NO RECORD MATCHED before this reading (a statement about that query, not about what the laboratory knows); the hypotheses ledger names the paper by journal and year without a PMID."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-23",
+  "route": "dependency_integrity.py screen --doi --manifest-block; PubMed efetch CommentsCorrections",
+  "result": "No retraction, expression of concern or correction found for the paper in PubMed (CommentsCorrections empty at 2026-10-23); dependency screen run (see block).",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 35,
+   "references_screened": 33,
+   "references_with_doi": 33,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 2,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 2
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID25708809_Hua2015_PMC_r2.xml",
+   "sha256": "fc453cb531ddee0ea7589bc82741dddf7c09d84b9251de029dd5eb266c959864",
+   "kind": "article_text",
+   "note": "PMC efetch JATS for PMC4414157, retrieved with pmc_bucket_fetch.py.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-23",
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC4414157&rettype=xml",
+    "http_method": "GET",
+    "tier": "pmc_efetch_xml",
+    "user_agent_policy": "none",
+    "result_sha256": "fc453cb531ddee0ea7589bc82741dddf7c09d84b9251de029dd5eb266c959864"
+   }
+  },
+  {
+   "path": "files/supplement/PMID25708809_r2/PMC4414157.1.pdf",
+   "sha256": "f4c38796596944701fcebd982e5552d68034021119d3eb678912008cc4b81045",
+   "kind": "article_binary",
+   "note": "Article PDF from the PMC open-data bucket; figure rasters extracted from it at native size.",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-23",
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4414157.1/PMC4414157.1.pdf",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "result_sha256": "f4c38796596944701fcebd982e5552d68034021119d3eb678912008cc4b81045"
+   }
+  },
+  {
+   "path": "files/supplement/PMID25708809_r2/oncotarget-06-3840-s001.pdf",
+   "sha256": "2b84deabe7ebe84e9bd53160b8244a8f6bcc229807214f90aae8f1e9f366d8fa",
+   "kind": "article_binary",
+   "note": "Supplementary Figures 1 to 4 (one page); the legends were read, the four images were not opened (declared gap).",
+   "acquisition_recipe": {
+    "derived": false,
+    "acquired_on": "2026-10-23",
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC4414157.1/oncotarget-06-3840-s001.pdf",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "result_sha256": "2b84deabe7ebe84e9bd53160b8244a8f6bcc229807214f90aae8f1e9f366d8fa"
+   }
+  },
+  {
+   "path": "files/figures/PMID25708809_r2/native/PMC4414157.1_p3_img0_native.png",
+   "sha256": "9433ae2c0db49856bf94c78e32cf21679ef27cd0d0fcc86192c5af1be526afb3",
+   "kind": "figure",
+   "note": "Figure 3: native embedded raster extracted from the article PDF page 3 (PyMuPDF), opened as an image; the vector/raster survey by paper_packet.py rank shows a raster at about 200 ppi.",
+   "acquisition_recipe": {
+    "derived": true,
+    "acquired_on": "2026-10-23",
+    "result_sha256": "9433ae2c0db49856bf94c78e32cf21679ef27cd0d0fcc86192c5af1be526afb3",
+    "derived_from": "files/supplement/PMID25708809_r2/PMC4414157.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF get_images / Pixmap save",
+     "version": "as installed on the host 2026-10-23",
+     "call": "inline script: page 3 embedded images saved as PNG",
+     "join": ""
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID25708809_r2/native/PMC4414157.1_p4_img1_native.png",
+   "sha256": "61a137762b091a89afbebb957ee054f46c8640dd543db565f026edbb357cbe41",
+   "kind": "figure",
+   "note": "Figure 5: native embedded raster extracted from the article PDF page 4 (PyMuPDF), opened as an image; the vector/raster survey by paper_packet.py rank shows a raster at about 200 ppi.",
+   "acquisition_recipe": {
+    "derived": true,
+    "acquired_on": "2026-10-23",
+    "result_sha256": "61a137762b091a89afbebb957ee054f46c8640dd543db565f026edbb357cbe41",
+    "derived_from": "files/supplement/PMID25708809_r2/PMC4414157.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF get_images / Pixmap save",
+     "version": "as installed on the host 2026-10-23",
+     "call": "inline script: page 4 embedded images saved as PNG",
+     "join": ""
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID25708809_r2/native/PMC4414157.1_p5_img0_native.png",
+   "sha256": "98da388bbd5eb95cc2cdb378008c082de2b6c1bfd5129969d185270f0a3bfa1f",
+   "kind": "figure",
+   "note": "Figure 6: native embedded raster extracted from the article PDF page 5 (PyMuPDF), opened as an image; the vector/raster survey by paper_packet.py rank shows a raster at about 200 ppi.",
+   "acquisition_recipe": {
+    "derived": true,
+    "acquired_on": "2026-10-23",
+    "result_sha256": "98da388bbd5eb95cc2cdb378008c082de2b6c1bfd5129969d185270f0a3bfa1f",
+    "derived_from": "files/supplement/PMID25708809_r2/PMC4414157.1.pdf",
+    "extractor": {
+     "name": "PyMuPDF get_images / Pixmap save",
+     "version": "as installed on the host 2026-10-23",
+     "call": "inline script: page 5 embedded images saved as PNG",
+     "join": ""
+    }
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC efetch JATS for PMC4414157 retrieved 2026-10-23; the whole body is indexed locally for exact-text checks.",
+  "abstract_anchoring_waived": "Stated per entry; no entry is anchored to the abstract.",
+  "note": "QUESTION_DRIVEN: the reader held the question 'does the only in-vivo WWOX-raising experiment of the registry show a raised WWOX protein, in which tissue and with what evidence'. Read: introduction, results, discussion, methods and the six figures (native rasters opened); supplementary figure legends read, the four supplementary images not opened.",
+  "entries": [
+   {
+    "proposition": "In human HCC cell lines the miR-153 mimic lowers WWOX protein and the antisense raises it (blots of one lane per condition); the paper's own assays are all in liver-cancer lines.",
+    "snippet": "Transfection of miR-153 mimics resulted in a reduced WWOX protein expression",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25708809_Hua2015_PMC_r2.xml",
+    "anchor": "Results, 'MicroRNA-153 regulates beta-catenin activation through suppression of WWOX'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In the diethylnitrosamine mouse liver-tumour model, the systemically given antagomir is reported to raise WWOX protein in the tumours and lower the Wnt-target genes; the paper presents this as one pair of western blots (Figure 5C and 5D) with no quantification graph.",
+    "snippet": "Importantly, we found that systemic delivery of miR-153 antagomir up-regulated WWOX protein levels and inhibited expression of Wnt signaling target genes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25708809_Hua2015_PMC_r2.xml",
+    "anchor": "Results, 'MicroRNA-153 promotes HCC growth in vivo', last sentence",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 5C as drawn: two tumour lanes per group; the WWOX band is visibly stronger in the two antagomir lanes than in the two negative-control lanes, with GAPDH as loading control. No densitometry, no n per lane and no normal-liver (non-tumour) lanes are shown; the tissue is HCC tumour, not normal liver and not brain.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5C native raster, printed page 4 (blot: WWOX over GAPDH; NC two lanes, miR-153 AG two lanes)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID25708809_r2/native/PMC4414157.1_p4_img1_native.png",
+    "anchor": "Figure 5C (native 774x532 raster, PDF page 4)",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "C57BL/6 mice with diethylnitrosamine-induced liver tumours (HCC), tumour lysates; NOT brain, NOT a WWOX-deficient model",
+     "genotype": "wild-type WWOX; miR-153 antagomir versus negative-control oligo",
+     "endpoint": "WWOX, Cyclin D1 and p21 protein by western blot, two lanes per group"
+    },
+    "qualifies": "entries[1]",
+    "qualifies_needle": "up-regulated WWOX protein levels"
+   },
+   {
+    "proposition": "Figure 3B and 3C as drawn: in HepG2 cells the WWOX band is weaker after miR-153 mimic than after negative control and stronger after antisense than after negative control, one lane per condition, GAPDH loading control; Figure 3D's reporter fold change falls with the mimic and rises about fivefold with the antisense on the wild-type 3'UTR construct and not on the seed-mutant construct.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3B, 3C and 3D native raster, printed page 3",
+    "surface": "figure",
+    "artifact": "files/figures/PMID25708809_r2/native/PMC4414157.1_p3_img0_native.png",
+    "anchor": "Figure 3B to 3D (native 791x570 raster, PDF page 3)",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "human HCC cell lines HepG2 and HuH7 (liver cancer), in vitro; NOT a neural system",
+     "genotype": "wild-type WWOX; miR-153 mimic or antisense transfection",
+     "endpoint": "WWOX protein by western blot, one lane per condition"
+    }
+   },
+   {
+    "proposition": "The Figure 3A legend names miR-163, not miR-153, as the microRNA whose binding sites are predicted: a typographical error in the source, confirming the registry's note of typing errors in this paper.",
+    "snippet": "Computer prediction of miR-163 binding sites",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25708809_Hua2015_PMC_r2.xml",
+    "anchor": "Figure 3 legend, panel A",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The luciferase-reporter sentence names miR-300 mimics and antisense where the surrounding text and panel D concern miR-153: a second typographical error in the source.",
+    "snippet": "As shown in Figure 3D, miR-300 mimics or antisense led to a reduction or increase of luciferase activity.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25708809_Hua2015_PMC_r2.xml",
+    "anchor": "Results, WWOX section, paragraph 2",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Methods give the antagomir only as 'systemically administrated' at week 28 of the diethylnitrosamine protocol; the Methods state no dose, vehicle, chemistry or route beyond that word, and no pharmacokinetic or brain-exposure measurement is reported.",
+    "snippet": "Mice were systemically administrated with miR-NC or miR-153 antagomir at week 28.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25708809_Hua2015_PMC_r2.xml",
+    "anchor": "Methods, Mouse experiments, second paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The cell systems of the paper are two HCC lines; the in vivo systems are nude-mouse xenografts and a chemically induced liver-tumour model, plus 42 human HCC specimens. No neural cell or brain tissue is used, so miR-153 repression of WWOX is not shown in any neural context by this paper.",
+    "snippet": "HCC cell lines (HepG2 and HuH7 cells) were obtained from The Cell Bank of Type Culture Collection",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25708809_Hua2015_PMC_r2.xml",
+    "anchor": "Methods, Cell culture",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Discussion itself says miR-153 can act as an oncogenic microRNA or as a tumour suppressor depending on cellular context.",
+    "snippet": "miR-153 could either act as an onco-miRNA or a tumor suppressor in human cancers, which might be dependent on cellular context",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25708809_Hua2015_PMC_r2.xml",
+    "anchor": "Discussion, paragraph 3",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Discussion cites prostate-cancer work in which miR-153 up-regulation promotes proliferation through suppression of PTEN: another target of the same microRNA is named in the paper itself.",
+    "snippet": "up-regulation of miR-153 promotes cell proliferation via suppression of the PTEN tumor suppressor gene in human prostate cancer",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25708809_Hua2015_PMC_r2.xml",
+    "anchor": "Discussion, paragraph 3",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The survival sentence says that LOW miR-153 correlated with reduced tumour-free and overall survival, while the same paper's title for that section and its panel C draw the higher-expression curve failing earlier: the text and the panel disagree in direction.",
+    "snippet": "Kaplan-Meier analysis further revealed that low miR-153 level in HCC tissues significantly correlated with the markedly reduced tumor-free survival and overall survival of HCC patients",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25708809_Hua2015_PMC_r2.xml",
+    "anchor": "Results, 'MicroRNA-153 correlates with poor survival of HCC patients'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 6C as drawn: the solid curve labelled relative higher miR-153 expression falls to zero by about 20 months while the dashed curve labelled lower expression stays at 100% to about 14 months, is at about 75% then and at about 50% from about 16 months to the end of its trace; the step size of the curves suggests small groups (n is not stated in the legend). This direction matches the section title and not the sentence above.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 6C native raster, printed page 5 (overall survival, higher versus lower miR-153)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID25708809_r2/native/PMC4414157.1_p5_img0_native.png",
+    "anchor": "Figure 6C (native 996x630 raster, PDF page 5)",
+    "panel_text_relation": "panel_only",
+    "experimental_context": {
+     "system": "human HCC specimens, Kaplan-Meier analysis; NOT WWOX-DEE",
+     "genotype": "HCC patients split by relative miR-153 level",
+     "endpoint": "overall survival, months"
+    }
+   }
+  ]
+ }
+}

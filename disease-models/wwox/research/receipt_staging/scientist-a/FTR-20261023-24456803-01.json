@@ -1,0 +1,38 @@
+{
+ "event_id": "FTR-20261023-24456803-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "24456803",
+  "doi": "10.1186/1750-1172-9-12"
+ },
+ "event_at": "2026-10-23T20:45:17Z",
+ "analysis_at": "2026-10-23T20:44:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-a module batch 2026-10-23 (task MODULE-A-20261023); QUESTION_DRIVEN WWOX-DIRECT targeted re-read of the clinical description and a text search for the metabolic-screen question; prepared as JSON for the integrator and staged, not appended.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID24456803_AbdelSalam2014_PMC.xml",
+ "source_fingerprint": "2adc28364cef73585dbeee8679781fd93fb3441bce95a4c0bcca7acc154a3a55",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_present",
+  "references": "not_read",
+  "supplementary": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID24456803.json",
+  "disease-models/wwox/research/module_batch_selection_scientist-a_20261023.md"
+ ],
+ "evidence_basis": [
+  "Targeted re-read for one question (does the paper report serum lactate, a muscle biopsy or a mitochondrial study): the first Results paragraph read, and the whole JATS searched for the strings biops, muscle, mitochond and lactate. Section coverage is stated conservatively: only Results is marked read.",
+  "Two locators appended to the manifest (entries 11 and 12); no earlier locator changed or contradicted."
+ ],
+ "prior_receipt": "FTR-20261003-24456803-01",
+ "reread_reason": "new_question_outside_prior_coverage"
+}

@@ -2,10 +2,11 @@
  "schema_version": 2,
  "pmid": "30362252",
  "doi": "10.1002/humu.23675",
- "receipt": "FTR-20260726-30362252-01",
+ "receipt": "FTR-20261023-30362252-01",
  "landing": [
   "PAPER 044",
-  "CC-20260922-SPLICE-ARM-01"
+  "CC-20260922-SPLICE-ARM-01",
+  "disease-models/wwox/research/module_batch_selection_scientist-a_20261023.md"
  ],
  "skills_considered": [
   {
@@ -61,7 +62,7 @@
   "source_fulltext_indexed": true,
   "source_fulltext_indexed_evidence": "JATS from E-utilities efetch db=pmc id=6296882, 57,578 bytes, 27 body paragraphs, 4 figure captions, no Methods section element (brief report; methods in a non-open-access supplement). Every text locator is matched against the body of that artifact; figure-legend locators are quoted from the captions of the same artifact.",
   "abstract_anchoring_waived": "No locator draws on the abstract; every entry is matched against the body of the declared JATS artifact.",
-  "note": "Coverage of this pass: Abstract, Introduction/case narrative, Results (expression analysis), Discussion and all four figure legends read from the JATS. Methods: not present in the PMC body. Supplementary: Supp. Figures S1-S4 and Tables S1-S4 exist as one docx that is NOT open access (Europe PMC: 'Article with id PMC6296882 is not open access one'; the PMC bin URL answers a bot challenge) -- unavailable, declared. Panels were not inspected; the Figure 2 legends were read as text.",
+  "note": "Coverage of this pass: Abstract, Introduction/case narrative, Results (expression analysis), Discussion and all four figure legends read from the JATS. Methods: not present in the PMC body. Supplementary: Supp. Figures S1-S4 and Tables S1-S4 exist as one docx that is NOT open access (Europe PMC: 'Article with id PMC6296882 is not open access one'; the PMC bin URL answers a bot challenge) -- unavailable, declared. Panels were not inspected; the Figure 2 legends were read as text. 2026-10-23 (module batch, scientist-a, QUESTION_DRIVEN, receipt FTR-20261023-30362252-01): five entries appended for the question 'what does this paper say about cerebral lactate, HSPG2 attribution, metabolic findings and drug history'; no earlier entry changed or contradicted. Figures 1 and 2 were not available as images (PMC bucket lacks them; NCBI and Europe PMC figure routes are bot-challenged), so the figure coverage stays captions_only and the supplement stays unavailable.",
   "entries": [
    {
     "proposition": "THE RUNNING TEXT RESOLVES NOTHING: the body states the two alternatives -- not expressed OR degraded -- in the same disjunctive form this repository refuses to collapse elsewhere. This is the sentence CC-20260922-SPLICE-ARM-01 section 2 substitutes for the abstract's indicative, and it is now receipted rather than attested.",
@@ -102,6 +103,46 @@
     "artifact": "files/fulltext/PMID30362252_Davids2019_PMC_2026-09-27.xml",
     "anchor": "Figure 2 legend, panel B, first clause -- the whole quantitative basis of the NMD statement",
     "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "The paper's only statement on cerebral lactate is one sentence on MR spectroscopy in the single described patient (a homozygous WWOX exon-6 deletion within a region of maternal uniparental disomy, with two variants in HSPG2): the non-essential amino acids were decreased globally and lactate was 'extremely low'. No spectrum, value, region, sequence or reference range is given, and neither of the two figures shows MRS.",
+    "snippet": "MR spectroscopy for non-essential amino acids was decreased globally and lactate levels were extremely low.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30362252_Davids2019_PMC_2026-09-27.xml",
+    "anchor": "Results, clinical description, neuroimaging paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors assign the HSPG2 variants to the skeletal dysplasia, osteoporosis and flexion contractures, which they say could not be attributed to WWOX; the sentence does not mention the brain, MRS or lactate. The map's reading of HSPG2 as a confounder of the MRS lactate finding is the map's own inference, not a statement of this paper.",
+    "snippet": "Other clinical features in our patient, including skeletal dysplasia, osteoporosis, and flexion contractures, could not be attributed to the variant in WWOX.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30362252_Davids2019_PMC_2026-09-27.xml",
+    "anchor": "Results, paragraph after the expression analysis",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The patient's drug history as stated: seizures got little relief from pharmacotherapy and she was 'optimized' to phenobarbital, topiramate and pyridoxine. No sodium-channel blocker and no vigabatrin is named, so this patient carries no information on those classes.",
+    "snippet": "Pharmacotherapeutics provided little relief to seizure activity but the child was optimized to a regimen of phenobarbital, topiramate, and pyridoxine.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30362252_Davids2019_PMC_2026-09-27.xml",
+    "anchor": "Results, clinical description, second paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Neonatal hypoglycaemia is recorded in the first-days laboratory results of this patient, in a pregnancy the same paragraph describes as complicated by maternal gestational diabetes; the paper does not connect the two or either to WWOX.",
+    "snippet": "Laboratory results demonstrated polycythemia of the newborn, neutropenia, thrombocytopenia, abnormal buffy coat cellular inclusions, hypoglycemia, septicemia",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30362252_Davids2019_PMC_2026-09-27.xml",
+    "anchor": "Results, clinical description, first paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Discussion states that the patient showed some findings of the metabolic syndrome reported in Wwox-deficient mice, without naming which findings, measuring any metabolite or giving values; it sits beside the MRS sentence in a paper that reports no peripheral metabolic panel.",
+    "snippet": "Our patient also exhibited some findings of the metabolic syndrome reported in Wwox-deficient mice",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30362252_Davids2019_PMC_2026-09-27.xml",
+    "anchor": "Discussion, paragraph on the loss of the full-length protein",
+    "panel_text_relation": "text_only"
    }
   ]
  }
