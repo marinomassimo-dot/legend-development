@@ -160,10 +160,10 @@
      "status": "NO_MATCH_FOUND"
     },
     "legend_evidence": {
-     "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+     "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
      "complete_reads": 0,
      "depths": [],
-     "digest": "6e65904c8a383291",
+     "digest": "4db04ef11f9c1f85",
      "locators": 0,
      "origin_id": "N-01",
      "papers": 0,
@@ -184,12 +184,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*`INSUFFICIENT` — mai misurato a livello proteico in alcun sistema WWOX.* The reflex move in genetic DEE, imported from TSC.",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:630; evidence table digest 6e65904c8a383291"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:630; evidence table digest 4db04ef11f9c1f85"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "525a6d69d8f54a7499cd4d4b43190e3af14bf16a1d0ceaa207515cf08dd94cb1",
+   "input_sha256": "3152c35870081f53e249cd93c0d56cce980b835569809f9c90bd391c9383162d",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -209,10 +209,10 @@
     "status": "NO_MATCH_FOUND"
    },
    "legend_evidence": {
-    "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+    "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
     "complete_reads": 0,
     "depths": [],
-    "digest": "6e65904c8a383291",
+    "digest": "4db04ef11f9c1f85",
     "locators": 0,
     "origin_id": "N-01",
     "papers": 0,
@@ -227,10 +227,10 @@
     "NO_MATCH_FOUND is information not available for those queries and that coverage: it is not proof the label is absent, not DRUG_HAS_NO_LABEL, not biological counterevidence and not a reason to drop the candidate."
    ],
    "measure_next": {
-    "dependence": "NO_RECEIPTED_EVIDENCE",
+    "dependence": "LINKAGE_GAP",
     "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
     "external_hits": 1,
-    "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
+    "measurement": "the link from this record to a paper: one identifier in the record that resolves to a PMID (the SOURCE_IDS line); until then the external hits stand alone and are NOT WWOX EVIDENCE",
     "would_move": "N-01 (disease-models/wwox/analysis/mechanism_intervention_map.md:630)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
@@ -418,10 +418,10 @@
      "status": "NO_MATCH_FOUND"
     },
     "legend_evidence": {
-     "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+     "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
      "complete_reads": 0,
      "depths": [],
-     "digest": "ad94fe85a1ee32d8",
+     "digest": "a788a849450637cc",
      "locators": 0,
      "origin_id": "N-02",
      "papers": 0,
@@ -442,12 +442,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*evidence transfer that was never genotype-controlled*, compounded by *wrong",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:641; evidence table digest ad94fe85a1ee32d8"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:641; evidence table digest a788a849450637cc"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "e4d02defbbd51e1cd30c2343a611196347c1ca63a6882742c74e90fa056aa0c1",
+   "input_sha256": "4b729ac64d41b0a6dae4158aad61cea5bc366aa7a22187a39bf310d99e49f2d9",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -467,10 +467,10 @@
     "status": "NO_MATCH_FOUND"
    },
    "legend_evidence": {
-    "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+    "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
     "complete_reads": 0,
     "depths": [],
-    "digest": "ad94fe85a1ee32d8",
+    "digest": "a788a849450637cc",
     "locators": 0,
     "origin_id": "N-02",
     "papers": 0,
@@ -485,10 +485,10 @@
     "NO_MATCH_FOUND is information not available for those queries and that coverage: it is not proof the label is absent, not DRUG_HAS_NO_LABEL, not biological counterevidence and not a reason to drop the candidate."
    ],
    "measure_next": {
-    "dependence": "NO_RECEIPTED_EVIDENCE",
+    "dependence": "LINKAGE_GAP",
     "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
     "external_hits": 1,
-    "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
+    "measurement": "the link from this record to a paper: one identifier in the record that resolves to a PMID (the SOURCE_IDS line); until then the external hits stand alone and are NOT WWOX EVIDENCE",
     "would_move": "N-02 (disease-models/wwox/analysis/mechanism_intervention_map.md:641)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
@@ -651,10 +651,10 @@
      "status": "NOT_ATTEMPTED"
     },
     "legend_evidence": {
-     "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+     "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
      "complete_reads": 0,
      "depths": [],
-     "digest": "318b60bacd9041d8",
+     "digest": "4d9f841a93c4b61e",
      "locators": 0,
      "origin_id": "N-03",
      "papers": 0,
@@ -675,12 +675,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*the target is not causally downstream of WWOX.* Precision therapy in",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:649; evidence table digest 318b60bacd9041d8"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:649; evidence table digest 4d9f841a93c4b61e"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "5c0c1094a54a1c93f09336ec57dad1630d491a69c4ed663ef73f0943fd4dcdf2",
+   "input_sha256": "1099bb403cf9b3aae0580d20c05bda7591a694f64773521b18990326a4ddd682",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -697,10 +697,10 @@
     "status": "NOT_ATTEMPTED"
    },
    "legend_evidence": {
-    "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+    "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
     "complete_reads": 0,
     "depths": [],
-    "digest": "318b60bacd9041d8",
+    "digest": "4d9f841a93c4b61e",
     "locators": 0,
     "origin_id": "N-03",
     "papers": 0,
@@ -715,10 +715,10 @@
     "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
    ],
    "measure_next": {
-    "dependence": "NO_RECEIPTED_EVIDENCE",
+    "dependence": "LINKAGE_GAP",
     "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
     "external_hits": 1,
-    "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
+    "measurement": "the link from this record to a paper: one identifier in the record that resolves to a PMID (the SOURCE_IDS line); until then the external hits stand alone and are NOT WWOX EVIDENCE",
     "would_move": "N-03 (disease-models/wwox/analysis/mechanism_intervention_map.md:649)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
@@ -841,10 +841,10 @@
      "status": "NOT_ATTEMPTED"
     },
     "legend_evidence": {
-     "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+     "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
      "complete_reads": 0,
      "depths": [],
-     "digest": "12f22bd551b07862",
+     "digest": "8d7b801d96a65af0",
      "locators": 0,
      "origin_id": "N-04",
      "papers": 0,
@@ -865,12 +865,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*corrects a marker, not the mechanism* — plus an unmeasured premise. VABAM is",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:657; evidence table digest 12f22bd551b07862"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:657; evidence table digest 8d7b801d96a65af0"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "14858b6bb49d95190bc92d8d3aad99884f2f5a97d763fbae122527896d10e032",
+   "input_sha256": "57391e4248c01e34b82c79d1cc4b18601b336c7d3ea60abe668a2fd12da44e36",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -887,10 +887,10 @@
     "status": "NOT_ATTEMPTED"
    },
    "legend_evidence": {
-    "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+    "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
     "complete_reads": 0,
     "depths": [],
-    "digest": "12f22bd551b07862",
+    "digest": "8d7b801d96a65af0",
     "locators": 0,
     "origin_id": "N-04",
     "papers": 0,
@@ -905,10 +905,10 @@
     "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
    ],
    "measure_next": {
-    "dependence": "NO_RECEIPTED_EVIDENCE",
+    "dependence": "LINKAGE_GAP",
     "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
     "external_hits": 0,
-    "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
+    "measurement": "the link from this record to a paper: one identifier in the record that resolves to a PMID (the SOURCE_IDS line); until then the external hits stand alone and are NOT WWOX EVIDENCE",
     "would_move": "N-04 (disease-models/wwox/analysis/mechanism_intervention_map.md:657)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
@@ -1071,10 +1071,10 @@
      "status": "NOT_ATTEMPTED"
     },
     "legend_evidence": {
-     "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+     "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
      "complete_reads": 0,
      "depths": [],
-     "digest": "db3346dd894dc0e1",
+     "digest": "9a410209ee5cf268",
      "locators": 0,
      "origin_id": "N-05",
      "papers": 0,
@@ -1095,12 +1095,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*the target is not the bottleneck.* Normal transcript with protein not detected",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:666; evidence table digest db3346dd894dc0e1"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:666; evidence table digest 9a410209ee5cf268"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "22f5b6a36b3fb4edaa2007d255c1f35e8af42a0789c833266f2d280d25a51e4a",
+   "input_sha256": "ad673bdeed622c1d2e3702ab5149110cf835597e8fde5f0ea103475ee67fc952",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -1117,10 +1117,10 @@
     "status": "NOT_ATTEMPTED"
    },
    "legend_evidence": {
-    "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+    "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
     "complete_reads": 0,
     "depths": [],
-    "digest": "db3346dd894dc0e1",
+    "digest": "9a410209ee5cf268",
     "locators": 0,
     "origin_id": "N-05",
     "papers": 0,
@@ -1135,10 +1135,10 @@
     "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
    ],
    "measure_next": {
-    "dependence": "NO_RECEIPTED_EVIDENCE",
+    "dependence": "LINKAGE_GAP",
     "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
     "external_hits": 1,
-    "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
+    "measurement": "the link from this record to a paper: one identifier in the record that resolves to a PMID (the SOURCE_IDS line); until then the external hits stand alone and are NOT WWOX EVIDENCE",
     "would_move": "N-05 (disease-models/wwox/analysis/mechanism_intervention_map.md:666)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
@@ -1301,10 +1301,10 @@
      "status": "NOT_ATTEMPTED"
     },
     "legend_evidence": {
-     "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+     "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
      "complete_reads": 0,
      "depths": [],
-     "digest": "fe29937ba778f2be",
+     "digest": "2338dacff48e809e",
      "locators": 0,
      "origin_id": "N-06",
      "papers": 0,
@@ -1325,12 +1325,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*corrects/reports a biomarker, not the mechanism* — inverted: here the biomarker",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:679; evidence table digest fe29937ba778f2be"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:679; evidence table digest 2338dacff48e809e"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "ed4c6af0a82d35ba895e8d11be885d51a888431a6ef95c8b1e5285f6eb96e723",
+   "input_sha256": "420bed0b2b7baa71bf9fdc76696a7df65c2077d9d41ba105c60440fc98942bf4",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -1347,10 +1347,10 @@
     "status": "NOT_ATTEMPTED"
    },
    "legend_evidence": {
-    "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+    "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
     "complete_reads": 0,
     "depths": [],
-    "digest": "fe29937ba778f2be",
+    "digest": "2338dacff48e809e",
     "locators": 0,
     "origin_id": "N-06",
     "papers": 0,
@@ -1365,10 +1365,10 @@
     "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
    ],
    "measure_next": {
-    "dependence": "NO_RECEIPTED_EVIDENCE",
+    "dependence": "LINKAGE_GAP",
     "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
     "external_hits": 1,
-    "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
+    "measurement": "the link from this record to a paper: one identifier in the record that resolves to a PMID (the SOURCE_IDS line); until then the external hits stand alone and are NOT WWOX EVIDENCE",
     "would_move": "N-06 (disease-models/wwox/analysis/mechanism_intervention_map.md:679)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
@@ -1491,10 +1491,10 @@
      "status": "NOT_ATTEMPTED"
     },
     "legend_evidence": {
-     "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+     "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
      "complete_reads": 0,
      "depths": [],
-     "digest": "4eb8331a62e845bc",
+     "digest": "c9960f0d67f87dde",
      "locators": 0,
      "origin_id": "N-07",
      "papers": 0,
@@ -1515,12 +1515,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*toxicity incompatible* + *wrong endpoint*. The only approved drug that corrects a",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:687; evidence table digest 4eb8331a62e845bc"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:687; evidence table digest c9960f0d67f87dde"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "57f62c6b30a2096550463428e614d5e08bfc96e9b4f6b4396708ec5883fca868",
+   "input_sha256": "fc2d082a71cc24bda8246ebb810137816bf183b4c2d879c0dfc66d0dad00acf5",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -1537,10 +1537,10 @@
     "status": "NOT_ATTEMPTED"
    },
    "legend_evidence": {
-    "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+    "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
     "complete_reads": 0,
     "depths": [],
-    "digest": "4eb8331a62e845bc",
+    "digest": "c9960f0d67f87dde",
     "locators": 0,
     "origin_id": "N-07",
     "papers": 0,
@@ -1555,10 +1555,10 @@
     "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
    ],
    "measure_next": {
-    "dependence": "NO_RECEIPTED_EVIDENCE",
+    "dependence": "LINKAGE_GAP",
     "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
     "external_hits": 0,
-    "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
+    "measurement": "the link from this record to a paper: one identifier in the record that resolves to a PMID (the SOURCE_IDS line); until then the external hits stand alone and are NOT WWOX EVIDENCE",
     "would_move": "N-07 (disease-models/wwox/analysis/mechanism_intervention_map.md:687)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
@@ -1709,10 +1709,10 @@
      "status": "NOT_ATTEMPTED"
     },
     "legend_evidence": {
-     "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+     "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
      "complete_reads": 0,
      "depths": [],
-     "digest": "0249c1612d1b595d",
+     "digest": "8e3a47fdd26b70bb",
      "locators": 0,
      "origin_id": "N-08",
      "papers": 0,
@@ -1733,12 +1733,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*toxicity incompatible* + *two-hop inference*. Dose-dependent peripheral",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:697; evidence table digest 0249c1612d1b595d"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:697; evidence table digest 8e3a47fdd26b70bb"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "781b01a3b7243731254d1ed61b6a94667f73adef228a612216948e257844e71b",
+   "input_sha256": "5db0920127687f51e3d416e60ea64aaee6fa456bf6cad8b47b5aabce241c8ac0",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -1755,10 +1755,10 @@
     "status": "NOT_ATTEMPTED"
    },
    "legend_evidence": {
-    "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+    "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
     "complete_reads": 0,
     "depths": [],
-    "digest": "0249c1612d1b595d",
+    "digest": "8e3a47fdd26b70bb",
     "locators": 0,
     "origin_id": "N-08",
     "papers": 0,
@@ -1773,10 +1773,10 @@
     "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
    ],
    "measure_next": {
-    "dependence": "NO_RECEIPTED_EVIDENCE",
+    "dependence": "LINKAGE_GAP",
     "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
     "external_hits": 0,
-    "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
+    "measurement": "the link from this record to a paper: one identifier in the record that resolves to a PMID (the SOURCE_IDS line); until then the external hits stand alone and are NOT WWOX EVIDENCE",
     "would_move": "N-08 (disease-models/wwox/analysis/mechanism_intervention_map.md:697)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
@@ -1939,10 +1939,10 @@
      "status": "NOT_ATTEMPTED"
     },
     "legend_evidence": {
-     "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+     "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
      "complete_reads": 0,
      "depths": [],
-     "digest": "19d805eec8eb8b27",
+     "digest": "47026bab0ff0a7bc",
      "locators": 0,
      "origin_id": "N-09",
      "papers": 0,
@@ -1963,12 +1963,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*acts in the wrong direction.* Phospho-Tyr33 WOX1 is **pro-apoptotic**; the peptide",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:703; evidence table digest 19d805eec8eb8b27"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:703; evidence table digest 47026bab0ff0a7bc"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "d49f5c4b7396b673c6f1cdcd1fbb669e271f8d74036288fa9a3e8135e59417e4",
+   "input_sha256": "f6f50bce2a05c663756be0da55ee33e14dc1763df0c7bd4f4eec653406277c70",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -1985,10 +1985,10 @@
     "status": "NOT_ATTEMPTED"
    },
    "legend_evidence": {
-    "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+    "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
     "complete_reads": 0,
     "depths": [],
-    "digest": "19d805eec8eb8b27",
+    "digest": "47026bab0ff0a7bc",
     "locators": 0,
     "origin_id": "N-09",
     "papers": 0,
@@ -2003,10 +2003,10 @@
     "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
    ],
    "measure_next": {
-    "dependence": "NO_RECEIPTED_EVIDENCE",
+    "dependence": "LINKAGE_GAP",
     "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
     "external_hits": 1,
-    "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
+    "measurement": "the link from this record to a paper: one identifier in the record that resolves to a PMID (the SOURCE_IDS line); until then the external hits stand alone and are NOT WWOX EVIDENCE",
     "would_move": "N-09 (disease-models/wwox/analysis/mechanism_intervention_map.md:703)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
@@ -2157,10 +2157,10 @@
      "status": "NOT_ATTEMPTED"
     },
     "legend_evidence": {
-     "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+     "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
      "complete_reads": 0,
      "depths": [],
-     "digest": "eafe5d97a5c27e7a",
+     "digest": "6a3fba6cb32cd063",
      "locators": 0,
      "origin_id": "N-10",
      "papers": 0,
@@ -2181,12 +2181,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*derived from a mechanism that cannot work.* SSOs **mask** elements; they do not",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:712; evidence table digest eafe5d97a5c27e7a"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:712; evidence table digest 6a3fba6cb32cd063"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "7c5fee6c570aa4f8498b0c32e33a2a16f13e31ecc86ecf622a86d426e168f184",
+   "input_sha256": "73205f353d4c06d441a74d9472e44d73bc8cdfa658c4be9b0732c6548fbada01",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -2203,10 +2203,10 @@
     "status": "NOT_ATTEMPTED"
    },
    "legend_evidence": {
-    "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+    "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
     "complete_reads": 0,
     "depths": [],
-    "digest": "eafe5d97a5c27e7a",
+    "digest": "6a3fba6cb32cd063",
     "locators": 0,
     "origin_id": "N-10",
     "papers": 0,
@@ -2221,10 +2221,10 @@
     "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
    ],
    "measure_next": {
-    "dependence": "NO_RECEIPTED_EVIDENCE",
+    "dependence": "LINKAGE_GAP",
     "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
     "external_hits": 0,
-    "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
+    "measurement": "the link from this record to a paper: one identifier in the record that resolves to a PMID (the SOURCE_IDS line); until then the external hits stand alone and are NOT WWOX EVIDENCE",
     "would_move": "N-10 (disease-models/wwox/analysis/mechanism_intervention_map.md:712)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
@@ -2436,10 +2436,10 @@
      "status": "NO_MATCH_FOUND"
     },
     "legend_evidence": {
-     "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+     "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
      "complete_reads": 0,
      "depths": [],
-     "digest": "a62eb4c4c498c7b9",
+     "digest": "8740dab2646b5d5c",
      "locators": 0,
      "origin_id": "N-11",
      "papers": 0,
@@ -2460,12 +2460,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*derived from a textbook default.* \"Misfolded protein → ERAD → chemical chaperone\"",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:720; evidence table digest a62eb4c4c498c7b9"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:720; evidence table digest 8740dab2646b5d5c"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "7d562fb8caa2c7fb589a756f8ccee712cce2fb2ce315e720968dcf90d9059583",
+   "input_sha256": "0558dde205566880be869df4705a603b3e674a5dc6c3fcc1b832505fa7e29e34",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -2485,10 +2485,10 @@
     "status": "NO_MATCH_FOUND"
    },
    "legend_evidence": {
-    "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+    "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
     "complete_reads": 0,
     "depths": [],
-    "digest": "a62eb4c4c498c7b9",
+    "digest": "8740dab2646b5d5c",
     "locators": 0,
     "origin_id": "N-11",
     "papers": 0,
@@ -2503,10 +2503,10 @@
     "NO_MATCH_FOUND is information not available for those queries and that coverage: it is not proof the label is absent, not DRUG_HAS_NO_LABEL, not biological counterevidence and not a reason to drop the candidate."
    ],
    "measure_next": {
-    "dependence": "NO_RECEIPTED_EVIDENCE",
+    "dependence": "LINKAGE_GAP",
     "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
     "external_hits": 0,
-    "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
+    "measurement": "the link from this record to a paper: one identifier in the record that resolves to a PMID (the SOURCE_IDS line); until then the external hits stand alone and are NOT WWOX EVIDENCE",
     "would_move": "N-11 (disease-models/wwox/analysis/mechanism_intervention_map.md:720)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
@@ -2734,10 +2734,10 @@
      "status": "NO_MATCH_FOUND"
     },
     "legend_evidence": {
-     "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+     "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
      "complete_reads": 0,
      "depths": [],
-     "digest": "4bff59285e352979",
+     "digest": "daba4a8903333386",
      "locators": 0,
      "origin_id": "N-12",
      "papers": 0,
@@ -2758,12 +2758,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*wrong direction, hidden inside a plausible one.* \"It is a chaperone, therefore it",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:726; evidence table digest 4bff59285e352979"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:726; evidence table digest daba4a8903333386"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "29123cd4fafd3a165816d9c90b60cd2c2ee196a215e30f40bb26576b911da342",
+   "input_sha256": "86d591cebcc104cdd8d1c3532a584d433ac0461e2694a4cad871393060078232",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -2783,10 +2783,10 @@
     "status": "NO_MATCH_FOUND"
    },
    "legend_evidence": {
-    "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+    "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
     "complete_reads": 0,
     "depths": [],
-    "digest": "4bff59285e352979",
+    "digest": "daba4a8903333386",
     "locators": 0,
     "origin_id": "N-12",
     "papers": 0,
@@ -2801,10 +2801,10 @@
     "NO_MATCH_FOUND is information not available for those queries and that coverage: it is not proof the label is absent, not DRUG_HAS_NO_LABEL, not biological counterevidence and not a reason to drop the candidate."
    ],
    "measure_next": {
-    "dependence": "NO_RECEIPTED_EVIDENCE",
+    "dependence": "LINKAGE_GAP",
     "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
     "external_hits": 2,
-    "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
+    "measurement": "the link from this record to a paper: one identifier in the record that resolves to a PMID (the SOURCE_IDS line); until then the external hits stand alone and are NOT WWOX EVIDENCE",
     "would_move": "N-12 (disease-models/wwox/analysis/mechanism_intervention_map.md:726)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
@@ -2927,10 +2927,10 @@
      "status": "NOT_ATTEMPTED"
     },
     "legend_evidence": {
-     "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+     "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
      "complete_reads": 0,
      "depths": [],
-     "digest": "bd206ecba9b5c14c",
+     "digest": "07ab5c0854c9c114",
      "locators": 0,
      "origin_id": "N-13",
      "papers": 0,
@@ -2951,12 +2951,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*the target is not causally downstream of WWOX in the cell being targeted* +",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:731; evidence table digest bd206ecba9b5c14c"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:731; evidence table digest 07ab5c0854c9c114"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "83e818030eaaa938c4d914a14409a273d4efed971fc48b8c3646d14ead8c9989",
+   "input_sha256": "d270d7cf4f3f31693398caae786abee9b81fc7a0fbb276644d96177761429d76",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -2973,10 +2973,10 @@
     "status": "NOT_ATTEMPTED"
    },
    "legend_evidence": {
-    "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+    "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
     "complete_reads": 0,
     "depths": [],
-    "digest": "bd206ecba9b5c14c",
+    "digest": "07ab5c0854c9c114",
     "locators": 0,
     "origin_id": "N-13",
     "papers": 0,
@@ -2991,10 +2991,10 @@
     "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
    ],
    "measure_next": {
-    "dependence": "NO_RECEIPTED_EVIDENCE",
+    "dependence": "LINKAGE_GAP",
     "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
     "external_hits": 0,
-    "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
+    "measurement": "the link from this record to a paper: one identifier in the record that resolves to a PMID (the SOURCE_IDS line); until then the external hits stand alone and are NOT WWOX EVIDENCE",
     "would_move": "N-13 (disease-models/wwox/analysis/mechanism_intervention_map.md:731)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
@@ -3185,10 +3185,10 @@
      "status": "NOT_ATTEMPTED"
     },
     "legend_evidence": {
-     "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+     "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
      "complete_reads": 0,
      "depths": [],
-     "digest": "b7985862422972ae",
+     "digest": "7eef7412a2fe5d91",
      "locators": 0,
      "origin_id": "N-14",
      "papers": 0,
@@ -3209,12 +3209,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*the direction of the axis is context-dependent and was assumed.* Two independent",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:744; evidence table digest b7985862422972ae"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:744; evidence table digest 7eef7412a2fe5d91"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "dbcd3cb901cf9bf76c04dc12d3d85ac33004c2fe35f25341bbcef381fe873994",
+   "input_sha256": "01f76c96eb4acbfb69ba08ca63c89a42e2dc97683557dc568d549c3d0cb6e5b4",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -3231,10 +3231,10 @@
     "status": "NOT_ATTEMPTED"
    },
    "legend_evidence": {
-    "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+    "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
     "complete_reads": 0,
     "depths": [],
-    "digest": "b7985862422972ae",
+    "digest": "7eef7412a2fe5d91",
     "locators": 0,
     "origin_id": "N-14",
     "papers": 0,
@@ -3249,10 +3249,10 @@
     "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
    ],
    "measure_next": {
-    "dependence": "NO_RECEIPTED_EVIDENCE",
+    "dependence": "LINKAGE_GAP",
     "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
     "external_hits": 1,
-    "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
+    "measurement": "the link from this record to a paper: one identifier in the record that resolves to a PMID (the SOURCE_IDS line); until then the external hits stand alone and are NOT WWOX EVIDENCE",
     "would_move": "N-14 (disease-models/wwox/analysis/mechanism_intervention_map.md:744)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
@@ -3375,10 +3375,10 @@
      "status": "NOT_ATTEMPTED"
     },
     "legend_evidence": {
-     "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+     "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
      "complete_reads": 0,
      "depths": [],
-     "digest": "239013617cf709c5",
+     "digest": "16d746201b2d5654",
      "locators": 0,
      "origin_id": "N-15",
      "papers": 0,
@@ -3399,12 +3399,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*corrects a biomarker (seizures) but not the mechanism (development)*. In published",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:754; evidence table digest 239013617cf709c5"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:754; evidence table digest 16d746201b2d5654"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "27d760995d8d62fede66c1ab54695dfedc5b4cf0b59dfff0bc864aba6049d7b2",
+   "input_sha256": "5e99b81b9449bd8ae499c3e69bee7e28b42e7a585c684e4c9bf7556c056c1803",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -3421,10 +3421,10 @@
     "status": "NOT_ATTEMPTED"
    },
    "legend_evidence": {
-    "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+    "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
     "complete_reads": 0,
     "depths": [],
-    "digest": "239013617cf709c5",
+    "digest": "16d746201b2d5654",
     "locators": 0,
     "origin_id": "N-15",
     "papers": 0,
@@ -3439,10 +3439,10 @@
     "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
    ],
    "measure_next": {
-    "dependence": "NO_RECEIPTED_EVIDENCE",
+    "dependence": "LINKAGE_GAP",
     "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
     "external_hits": 0,
-    "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
+    "measurement": "the link from this record to a paper: one identifier in the record that resolves to a PMID (the SOURCE_IDS line); until then the external hits stand alone and are NOT WWOX EVIDENCE",
     "would_move": "N-15 (disease-models/wwox/analysis/mechanism_intervention_map.md:754)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
@@ -3668,7 +3668,7 @@
      "depths": [
       "complete_fulltext_read"
      ],
-     "digest": "8b4121a427138f6b",
+     "digest": "6c81e25d4a100c00",
      "locators": 26,
      "origin_id": "N-16",
      "papers": 1,
@@ -3678,6 +3678,19 @@
        "adjudication_files": [],
        "audit_status": "UNAUDITED",
        "audited_entries": 0,
+       "bound_check": {
+        "binding": "UNVERIFIED",
+        "endpoint_words_found": [],
+        "endpoint_words_missing": [],
+        "publication_types": [
+         "Journal Article",
+         "Research Support, Non-U.S. Gov't"
+        ],
+        "reason": "the record declares no endpoint (no bold span in its decisive test): name the readout and its unit",
+        "retrieved_at": "2026-10-23",
+        "source": "NCBI PubMed efetch",
+        "title": "Altered neocortical oscillations and cellular excitability in an in vitro Wwox knockout mouse model of epileptic encephalopathy."
+       },
        "contradiction_verdicts": [],
        "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
        "locator_count": 26,
@@ -3704,12 +3717,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*a negative stated as an absence of effect, when what exists is an untested point estimate in the adverse direction.* In the only WWOX system in which a selective pannexin-1 blocker has ever been applied (`Wwox` S-KO neocortical slice, P13–P17), normalized burst frequency rose to **≈ 2.55 during treatment and ≈ 2.6 at washout against a baseline of 1.0**, carrying **no significance marker and no re",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:769; evidence table digest 8b4121a427138f6b"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:769; evidence table digest 6c81e25d4a100c00"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "0ee46fd6d5bfe79d02d1475abd9037882d3926d5d67e51087a3f0bcf586b201e",
+   "input_sha256": "760058e4e83cdb5587f2601928e49d77624a5ce923f24fe32799b152b6f84dc4",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -3734,7 +3747,7 @@
     "depths": [
      "complete_fulltext_read"
     ],
-    "digest": "8b4121a427138f6b",
+    "digest": "6c81e25d4a100c00",
     "locators": 26,
     "origin_id": "N-16",
     "papers": 1,
@@ -3744,6 +3757,19 @@
       "adjudication_files": [],
       "audit_status": "UNAUDITED",
       "audited_entries": 0,
+      "bound_check": {
+       "binding": "UNVERIFIED",
+       "endpoint_words_found": [],
+       "endpoint_words_missing": [],
+       "publication_types": [
+        "Journal Article",
+        "Research Support, Non-U.S. Gov't"
+       ],
+       "reason": "the record declares no endpoint (no bold span in its decisive test): name the readout and its unit",
+       "retrieved_at": "2026-10-23",
+       "source": "NCBI PubMed efetch",
+       "title": "Altered neocortical oscillations and cellular excitability in an in vitro Wwox knockout mouse model of epileptic encephalopathy."
+      },
       "contradiction_verdicts": [],
       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
       "locator_count": 26,
@@ -6119,7 +6145,7 @@
      "depths": [
       "complete_fulltext_read"
      ],
-     "digest": "1db1857eaa255163",
+     "digest": "998f8a00ab93cef8",
      "locators": 25,
      "origin_id": "R-01",
      "papers": 1,
@@ -6129,6 +6155,28 @@
        "adjudication_files": [],
        "audit_status": "UNAUDITED",
        "audited_entries": 0,
+       "bound_check": {
+        "binding": "UNVERIFIED",
+        "endpoint_words_found": [
+         "onset"
+        ],
+        "endpoint_words_missing": [
+         "delayed",
+         "post",
+         "hypomorphic",
+         "null",
+         "intermediate",
+         "10¹¹"
+        ],
+        "publication_types": [
+         "Journal Article",
+         "Review"
+        ],
+        "reason": "not a primary article (PubMed type: Review); endpoint words not in its title/abstract: delayed, post, hypomorphic, null, intermediate, 10¹¹",
+        "retrieved_at": "2026-10-23",
+        "source": "NCBI PubMed efetch",
+        "title": "WWOX in brain development and disease: Molecular mechanisms and therapeutic opportunities."
+       },
        "contradiction_verdicts": [],
        "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
        "locator_count": 25,
@@ -6155,12 +6203,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "AAV9, human Synapsin-I promoter, WWOX cDNA; ICV. ⚠️ **Corrected 2026-09-27 — the therapeutic configuration is WPRE-FREE.** The 2021 vector map (Appendix Fig S1A, read at 300 dpi) shows all three constructs WPRE-free, and the 2021 paper never mentions WPRE; the 2026 dose study removed WPRE deliberately (*“we removed WPRE as a proactive risk-mitigation step”*, receipted locator) and states the price",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:403; evidence table digest 1db1857eaa255163"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:403; evidence table digest 998f8a00ab93cef8"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "f2d0eb656941bddb38ab263eeeb8241301901b92f3863e0fa25627956a63fedb",
+   "input_sha256": "646778ab872f8f3263a76d7179396058ee6b6218fd7052e2edde094c68caf4cc",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -6182,7 +6230,7 @@
     "depths": [
      "complete_fulltext_read"
     ],
-    "digest": "1db1857eaa255163",
+    "digest": "998f8a00ab93cef8",
     "locators": 25,
     "origin_id": "R-01",
     "papers": 1,
@@ -6192,6 +6240,28 @@
       "adjudication_files": [],
       "audit_status": "UNAUDITED",
       "audited_entries": 0,
+      "bound_check": {
+       "binding": "UNVERIFIED",
+       "endpoint_words_found": [
+        "onset"
+       ],
+       "endpoint_words_missing": [
+        "delayed",
+        "post",
+        "hypomorphic",
+        "null",
+        "intermediate",
+        "10¹¹"
+       ],
+       "publication_types": [
+        "Journal Article",
+        "Review"
+       ],
+       "reason": "not a primary article (PubMed type: Review); endpoint words not in its title/abstract: delayed, post, hypomorphic, null, intermediate, 10¹¹",
+       "retrieved_at": "2026-10-23",
+       "source": "NCBI PubMed efetch",
+       "title": "WWOX in brain development and disease: Molecular mechanisms and therapeutic opportunities."
+      },
       "contradiction_verdicts": [],
       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
       "locator_count": 25,
@@ -6962,7 +7032,7 @@
      "depths": [
       "complete_fulltext_read"
      ],
-     "digest": "4e96c70fbc422ab9",
+     "digest": "4044b7bb1d87b241",
      "locators": 30,
      "origin_id": "R-03",
      "papers": 1,
@@ -6972,6 +7042,22 @@
        "adjudication_files": [],
        "audit_status": "UNAUDITED",
        "audited_entries": 0,
+       "bound_check": {
+        "binding": "UNVERIFIED",
+        "endpoint_words_found": [
+         "nuclear"
+        ],
+        "endpoint_words_missing": [
+         "catenin"
+        ],
+        "publication_types": [
+         "Journal Article"
+        ],
+        "reason": "endpoint words not in its title/abstract: catenin",
+        "retrieved_at": "2026-10-23",
+        "source": "NCBI PubMed efetch",
+        "title": "Mechanistic Investigation of WWOX Function in NF-kB-Induced Skin Inflammation in Psoriasis."
+       },
        "contradiction_verdicts": [],
        "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
        "locator_count": 30,
@@ -6998,12 +7084,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "tankyrase inhibitor (e.g. XAV939 as tool); no paediatric-profiled candidate identified",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:452; evidence table digest 4e96c70fbc422ab9"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:452; evidence table digest 4044b7bb1d87b241"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "cc4734fbe848a08710fc0d304c3904889d719d27db29e3e4a11c38a87c1ade64",
+   "input_sha256": "29cc3c9af11c6f5e4b14449ad6d35234134d758c0164c2e7b32a731e42101f06",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -7028,7 +7114,7 @@
     "depths": [
      "complete_fulltext_read"
     ],
-    "digest": "4e96c70fbc422ab9",
+    "digest": "4044b7bb1d87b241",
     "locators": 30,
     "origin_id": "R-03",
     "papers": 1,
@@ -7038,6 +7124,22 @@
       "adjudication_files": [],
       "audit_status": "UNAUDITED",
       "audited_entries": 0,
+      "bound_check": {
+       "binding": "UNVERIFIED",
+       "endpoint_words_found": [
+        "nuclear"
+       ],
+       "endpoint_words_missing": [
+        "catenin"
+       ],
+       "publication_types": [
+        "Journal Article"
+       ],
+       "reason": "endpoint words not in its title/abstract: catenin",
+       "retrieved_at": "2026-10-23",
+       "source": "NCBI PubMed efetch",
+       "title": "Mechanistic Investigation of WWOX Function in NF-kB-Induced Skin Inflammation in Psoriasis."
+      },
       "contradiction_verdicts": [],
       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
       "locator_count": 30,
@@ -7261,10 +7363,10 @@
      "status": "MATCH_FOUND"
     },
     "legend_evidence": {
-     "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+     "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
      "complete_reads": 0,
      "depths": [],
-     "digest": "3d0f7acbc09296b7",
+     "digest": "7b88f6bca6c40729",
      "locators": 0,
      "origin_id": "R-04",
      "papers": 0,
@@ -7285,12 +7387,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "lithium carbonate",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:476; evidence table digest 3d0f7acbc09296b7"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:476; evidence table digest 7b88f6bca6c40729"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "0696626aa68b98755c2f5054eba307ef93554d5bab936abdf01a8b8db12be147",
+   "input_sha256": "ae21a5bbc3b540c9758031ccfb8e5eb01ace3002c2837b65d44c6c6360ff9657",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -7310,10 +7412,10 @@
     "status": "MATCH_FOUND"
    },
    "legend_evidence": {
-    "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+    "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
     "complete_reads": 0,
     "depths": [],
-    "digest": "3d0f7acbc09296b7",
+    "digest": "7b88f6bca6c40729",
     "locators": 0,
     "origin_id": "R-04",
     "papers": 0,
@@ -7328,10 +7430,10 @@
     "A label exists for the product identified; presence certifies neither approval, currency, paediatric suitability nor WOREE relevance."
    ],
    "measure_next": {
-    "dependence": "NO_RECEIPTED_EVIDENCE",
+    "dependence": "LINKAGE_GAP",
     "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
     "external_hits": 3,
-    "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
+    "measurement": "the link from this record to a paper: one identifier in the record that resolves to a PMID (the SOURCE_IDS line); until then the external hits stand alone and are NOT WWOX EVIDENCE",
     "would_move": "R-04 (disease-models/wwox/analysis/mechanism_intervention_map.md:476)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
@@ -7510,10 +7612,10 @@
      "status": "NOT_ATTEMPTED"
     },
     "legend_evidence": {
-     "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+     "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
      "complete_reads": 0,
      "depths": [],
-     "digest": "73939cb725e634fa",
+     "digest": "f9a866825237aac9",
      "locators": 0,
      "origin_id": "R-05",
      "papers": 0,
@@ -7534,12 +7636,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "ketogenic diet",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:501; evidence table digest 73939cb725e634fa"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:501; evidence table digest f9a866825237aac9"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "ac883c9e2ebb7e70592ea4ea01e0ee8c4020d6bf5221eccb1c6bfcfe4d5230bf",
+   "input_sha256": "4bc4ffd5a384a6f1eabc728037985d42021841d79af9bba465ef7542313e6d11",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -7556,10 +7658,10 @@
     "status": "NOT_ATTEMPTED"
    },
    "legend_evidence": {
-    "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+    "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
     "complete_reads": 0,
     "depths": [],
-    "digest": "73939cb725e634fa",
+    "digest": "f9a866825237aac9",
     "locators": 0,
     "origin_id": "R-05",
     "papers": 0,
@@ -7574,10 +7676,10 @@
     "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
    ],
    "measure_next": {
-    "dependence": "NO_RECEIPTED_EVIDENCE",
+    "dependence": "LINKAGE_GAP",
     "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
     "external_hits": 0,
-    "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
+    "measurement": "the link from this record to a paper: one identifier in the record that resolves to a PMID (the SOURCE_IDS line); until then the external hits stand alone and are NOT WWOX EVIDENCE",
     "would_move": "R-05 (disease-models/wwox/analysis/mechanism_intervention_map.md:501)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
@@ -7740,10 +7842,10 @@
      "status": "NOT_ATTEMPTED"
     },
     "legend_evidence": {
-     "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+     "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
      "complete_reads": 0,
      "depths": [],
-     "digest": "f41f8c6f9fadde98",
+     "digest": "104cd6d1ac198b4f",
      "locators": 0,
      "origin_id": "R-06",
      "papers": 0,
@@ -7764,12 +7866,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "class: IL-1β/NLRP3, MAPK/NF-κB or microglia-targeting agent",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:526; evidence table digest f41f8c6f9fadde98"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:526; evidence table digest 104cd6d1ac198b4f"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "b57dc867df04fbc4c1817e98c43783783ae8b85eb0f8c4d01df32f2ed6a93d71",
+   "input_sha256": "d13ee2a163d21c5298c86b50a7bb66eee24a95fdf6214b47b1502a11ac0b7c34",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -7786,10 +7888,10 @@
     "status": "NOT_ATTEMPTED"
    },
    "legend_evidence": {
-    "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+    "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
     "complete_reads": 0,
     "depths": [],
-    "digest": "f41f8c6f9fadde98",
+    "digest": "104cd6d1ac198b4f",
     "locators": 0,
     "origin_id": "R-06",
     "papers": 0,
@@ -7804,10 +7906,10 @@
     "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
    ],
    "measure_next": {
-    "dependence": "NO_RECEIPTED_EVIDENCE",
+    "dependence": "LINKAGE_GAP",
     "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
     "external_hits": 1,
-    "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
+    "measurement": "the link from this record to a paper: one identifier in the record that resolves to a PMID (the SOURCE_IDS line); until then the external hits stand alone and are NOT WWOX EVIDENCE",
     "would_move": "R-06 (disease-models/wwox/analysis/mechanism_intervention_map.md:526)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
@@ -7986,10 +8088,10 @@
      "status": "NOT_ATTEMPTED"
     },
     "legend_evidence": {
-     "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+     "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
      "complete_reads": 0,
      "depths": [],
-     "digest": "d8b4cfb05f2ea48f",
+     "digest": "ad39ca826922653c",
      "locators": 0,
      "origin_id": "R-07",
      "papers": 0,
@@ -8010,12 +8112,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "bumetanide",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:550; evidence table digest d8b4cfb05f2ea48f"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:550; evidence table digest ad39ca826922653c"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "0f54d3ccda35175d6dd1c8d7d42e38a13b93ead0a6e13d9dbec5334ddbed11b4",
+   "input_sha256": "386bf42e882fc039c2b0dd94912fb362cd2f030de03d0eea824f71a3a27a5927",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -8032,10 +8134,10 @@
     "status": "NOT_ATTEMPTED"
    },
    "legend_evidence": {
-    "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+    "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
     "complete_reads": 0,
     "depths": [],
-    "digest": "d8b4cfb05f2ea48f",
+    "digest": "ad39ca826922653c",
     "locators": 0,
     "origin_id": "R-07",
     "papers": 0,
@@ -8050,10 +8152,10 @@
     "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
    ],
    "measure_next": {
-    "dependence": "NO_RECEIPTED_EVIDENCE",
+    "dependence": "LINKAGE_GAP",
     "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
     "external_hits": 0,
-    "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
+    "measurement": "the link from this record to a paper: one identifier in the record that resolves to a PMID (the SOURCE_IDS line); until then the external hits stand alone and are NOT WWOX EVIDENCE",
     "would_move": "R-07 (disease-models/wwox/analysis/mechanism_intervention_map.md:550)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
@@ -10214,10 +10316,10 @@
      "status": "NO_MATCH_FOUND"
     },
     "legend_evidence": {
-     "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+     "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
      "complete_reads": 0,
      "depths": [],
-     "digest": "c44de0928b8cde48",
+     "digest": "138c6f381def3215",
      "locators": 0,
      "origin_id": "R-09",
      "papers": 0,
@@ -10238,12 +10340,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "conditional; **no molecule is design-ready**. Three families: site-specific pharmacological chaperone · kinetic stabilizer · indirect proteostasis regulator",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:600; evidence table digest c44de0928b8cde48"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:600; evidence table digest 138c6f381def3215"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "481eff7ae0103c567024ba8bc3db166d5e04ef2e72f4ce65b4413b10fa92aa1c",
+   "input_sha256": "6ca9ca9d7655f1c4435a8813f7e833368a131674e70638068149d4d196b9e24c",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -10263,10 +10365,10 @@
     "status": "NO_MATCH_FOUND"
    },
    "legend_evidence": {
-    "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+    "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
     "complete_reads": 0,
     "depths": [],
-    "digest": "c44de0928b8cde48",
+    "digest": "138c6f381def3215",
     "locators": 0,
     "origin_id": "R-09",
     "papers": 0,
@@ -10281,10 +10383,10 @@
     "NO_MATCH_FOUND is information not available for those queries and that coverage: it is not proof the label is absent, not DRUG_HAS_NO_LABEL, not biological counterevidence and not a reason to drop the candidate."
    ],
    "measure_next": {
-    "dependence": "NO_RECEIPTED_EVIDENCE",
+    "dependence": "LINKAGE_GAP",
     "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
     "external_hits": 2,
-    "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
+    "measurement": "the link from this record to a paper: one identifier in the record that resolves to a PMID (the SOURCE_IDS line); until then the external hits stand alone and are NOT WWOX EVIDENCE",
     "would_move": "R-09 (disease-models/wwox/analysis/mechanism_intervention_map.md:600)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",

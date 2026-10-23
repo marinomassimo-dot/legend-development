@@ -704,7 +704,7 @@
   "depths": [
    "complete_fulltext_read"
   ],
-  "digest": "9cf17a4164d009e2",
+  "digest": "cfb7e667a57782c8",
   "locators": 70,
   "origin_id": "CLAIM 006",
   "papers": 1,
@@ -714,6 +714,10 @@
     "adjudication_files": [],
     "audit_status": "CONTRADICTIONS_AUDITED",
     "audited_entries": 18,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [
      {
       "auditors": 1,
@@ -954,10 +958,10 @@
   "unaudited_contradictions": 0
  },
  {
-  "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+  "abstention": "NO_PAPER: the record names PAPER 008, which exist in the registry and cite no PMID; missing datum: a paper cited by any record reached",
   "complete_reads": 0,
   "depths": [],
-  "digest": "203c5cabfd6c4e7e",
+  "digest": "561010a537719769",
   "locators": 0,
   "origin_id": "CLAIM 008",
   "papers": 0,
@@ -1118,10 +1122,10 @@
   "unaudited_contradictions": 0
  },
  {
-  "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+  "abstention": "NO_PAPER: the registry record itself cites no PMID or PAPER id and names no other record; missing datum: a citation in the record",
   "complete_reads": 0,
   "depths": [],
-  "digest": "156a90911d4974f5",
+  "digest": "54d86bdc61a6886a",
   "locators": 0,
   "origin_id": "CLAIM 010",
   "papers": 0,
@@ -1255,7 +1259,7 @@
   "depths": [
    "complete_fulltext_read"
   ],
-  "digest": "3e0a69f1ef8ec181",
+  "digest": "5326a192f98500de",
   "locators": 10,
   "origin_id": "CLAIM 012",
   "papers": 1,
@@ -1265,6 +1269,10 @@
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 10,
@@ -1284,7 +1292,7 @@
   "depths": [
    "partial_fulltext_read"
   ],
-  "digest": "5b7fc68fd24650c7",
+  "digest": "e8b23b22a2773208",
   "locators": 20,
   "origin_id": "CLAIM 013",
   "papers": 1,
@@ -1294,6 +1302,10 @@
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 20,
@@ -1782,7 +1794,7 @@
   "depths": [
    "complete_fulltext_read"
   ],
-  "digest": "1d2731f161e0d9af",
+  "digest": "4c7ffb8c60de5a31",
   "locators": 41,
   "origin_id": "CLAIM 020",
   "papers": 1,
@@ -1792,6 +1804,10 @@
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 41,
@@ -1811,7 +1827,7 @@
   "depths": [
    "complete_fulltext_read"
   ],
-  "digest": "6a812ace488663dd",
+  "digest": "626926844f143f31",
   "locators": 26,
   "origin_id": "CLAIM 021",
   "papers": 1,
@@ -1821,6 +1837,19 @@
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "UNVERIFIED",
+     "endpoint_words_found": [],
+     "endpoint_words_missing": [],
+     "publication_types": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't"
+     ],
+     "reason": "the record declares no endpoint (no bold span in its decisive test): name the readout and its unit",
+     "retrieved_at": "2026-10-23",
+     "source": "NCBI PubMed efetch",
+     "title": "Altered neocortical oscillations and cellular excitability in an in vitro Wwox knockout mouse model of epileptic encephalopathy."
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 26,
@@ -1835,10 +1864,10 @@
   "unaudited_contradictions": 0
  },
  {
-  "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+  "abstention": "NO_PAPER: the registry record itself cites no PMID or PAPER id and names no other record; missing datum: a citation in the record",
   "complete_reads": 0,
   "depths": [],
-  "digest": "ef01d9eab20b9a35",
+  "digest": "6c0460c12ec9680b",
   "locators": 0,
   "origin_id": "CLAIM 022",
   "papers": 0,
@@ -2120,7 +2149,7 @@
   "depths": [
    "complete_fulltext_read"
   ],
-  "digest": "3e569c38490e6387",
+  "digest": "f8636a9568052899",
   "locators": 30,
   "origin_id": "CLAIM 028",
   "papers": 1,
@@ -2130,6 +2159,18 @@
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "UNVERIFIED",
+     "endpoint_words_found": [],
+     "endpoint_words_missing": [],
+     "publication_types": [
+      "Journal Article"
+     ],
+     "reason": "the record declares no endpoint (no bold span in its decisive test): name the readout and its unit",
+     "retrieved_at": "2026-10-23",
+     "source": "NCBI PubMed efetch",
+     "title": "Mechanistic Investigation of WWOX Function in NF-kB-Induced Skin Inflammation in Psoriasis."
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 30,
@@ -3193,7 +3234,7 @@
   "depths": [
    "complete_fulltext_read"
   ],
-  "digest": "0f416337e88ef46f",
+  "digest": "633699098838c0bb",
   "locators": 11,
   "origin_id": "CLAIM 035",
   "papers": 1,
@@ -3203,6 +3244,10 @@
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 11,
@@ -3631,7 +3676,7 @@
   "depths": [
    "complete_fulltext_read"
   ],
-  "digest": "93b9a5aeab2a546f",
+  "digest": "cf2cd225931b95d5",
   "locators": 48,
   "origin_id": "CLAIM 040",
   "papers": 1,
@@ -3645,6 +3690,10 @@
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
     "audited_entries": 6,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [
      {
       "auditors": 1,
@@ -3689,7 +3738,7 @@
   "depths": [
    "complete_fulltext_read"
   ],
-  "digest": "d46c52b41e1cf3c9",
+  "digest": "80b7b68109f87416",
   "locators": 70,
   "origin_id": "CLAIM 041",
   "papers": 1,
@@ -3699,6 +3748,10 @@
     "adjudication_files": [],
     "audit_status": "CONTRADICTIONS_AUDITED",
     "audited_entries": 18,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [
      {
       "auditors": 1,
@@ -4041,7 +4094,7 @@
   "depths": [
    "complete_fulltext_read"
   ],
-  "digest": "f41f159de0c1fa68",
+  "digest": "085d4d7c02b27ae4",
   "locators": 25,
   "origin_id": "CLAIM 046",
   "papers": 1,
@@ -4051,6 +4104,10 @@
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 25,
@@ -13746,7 +13803,7 @@
   "depths": [
    "NO_RECEIPT"
   ],
-  "digest": "1415bab01d73ed3a",
+  "digest": "18e747c501c9b33c",
   "locators": 0,
   "origin_id": "DL-MECH-001",
   "papers": 1,
@@ -13756,6 +13813,10 @@
     "adjudication_files": [],
     "audit_status": "NO_MANIFEST",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 0,
@@ -13775,7 +13836,7 @@
   "depths": [
    "NO_RECEIPT"
   ],
-  "digest": "7d80214486b5cc29",
+  "digest": "18b7ec4f06d602f1",
   "locators": 0,
   "origin_id": "DL-MECH-002",
   "papers": 1,
@@ -13785,6 +13846,10 @@
     "adjudication_files": [],
     "audit_status": "NO_MANIFEST",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 0,
@@ -13804,7 +13869,7 @@
   "depths": [
    "NO_RECEIPT"
   ],
-  "digest": "a97c0a87385d174b",
+  "digest": "9717da2ac18fa18c",
   "locators": 0,
   "origin_id": "DL-MECH-003",
   "papers": 1,
@@ -13814,6 +13879,10 @@
     "adjudication_files": [],
     "audit_status": "NO_MANIFEST",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 0,
@@ -13828,10 +13897,10 @@
   "unaudited_contradictions": 0
  },
  {
-  "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+  "abstention": "NO_PAPER: the registry record itself cites no PMID or PAPER id and names no other record; missing datum: a citation in the record",
   "complete_reads": 0,
   "depths": [],
-  "digest": "d70c86be9faed2d5",
+  "digest": "93ab4af3eaa75c25",
   "locators": 0,
   "origin_id": "DL-MECH-004",
   "papers": 0,
@@ -22790,7 +22859,7 @@
   "depths": [
    "partial_fulltext_read"
   ],
-  "digest": "e8976d49e896593d",
+  "digest": "8f6dea24a4906f3d",
   "locators": 9,
   "origin_id": "DL-MECH-023",
   "papers": 1,
@@ -22800,6 +22869,10 @@
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 9,
@@ -28976,7 +29049,7 @@
   "depths": [
    "complete_fulltext_read"
   ],
-  "digest": "7fac5ddb4cc261b7",
+  "digest": "d99092d8e2e2d425",
   "locators": 56,
   "origin_id": "DL-MECH-036",
   "papers": 1,
@@ -28986,6 +29059,10 @@
     "adjudication_files": [],
     "audit_status": "CONTRADICTIONS_AUDITED",
     "audited_entries": 1,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [
      {
       "auditors": 1,
@@ -31825,7 +31902,7 @@
   "depths": [
    "partial_fulltext_read"
   ],
-  "digest": "097722ee4b24abad",
+  "digest": "5bda3302b3fac314",
   "locators": 14,
   "origin_id": "DL-MECH-041",
   "papers": 1,
@@ -31835,6 +31912,10 @@
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 14,
@@ -31854,7 +31935,7 @@
   "depths": [
    "partial_fulltext_read"
   ],
-  "digest": "ac7261c87b0bd120",
+  "digest": "537772883bc4b8ca",
   "locators": 14,
   "origin_id": "DL-MECH-042",
   "papers": 1,
@@ -31864,6 +31945,10 @@
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 14,
@@ -34203,7 +34288,7 @@
   "depths": [
    "partial_fulltext_read"
   ],
-  "digest": "ebd3b69443868ebc",
+  "digest": "785baa75f8e01b7f",
   "locators": 12,
   "origin_id": "DL-MECH-047",
   "papers": 1,
@@ -34213,6 +34298,10 @@
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 12,
@@ -35260,7 +35349,7 @@
   "depths": [
    "partial_fulltext_read"
   ],
-  "digest": "42cdca3c8ca58156",
+  "digest": "a345fbbd50b84613",
   "locators": 12,
   "origin_id": "DL-MECH-050",
   "papers": 1,
@@ -35270,6 +35359,10 @@
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 12,
@@ -35289,7 +35382,7 @@
   "depths": [
    "partial_fulltext_read"
   ],
-  "digest": "58de8b87f2454a58",
+  "digest": "f4a56a4b391a3860",
   "locators": 12,
   "origin_id": "DL-MECH-051",
   "papers": 1,
@@ -35299,6 +35392,10 @@
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 12,
@@ -35313,10 +35410,10 @@
   "unaudited_contradictions": 0
  },
  {
-  "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+  "abstention": "NO_PAPER: the registry record itself cites no PMID or PAPER id and names no other record; missing datum: a citation in the record",
   "complete_reads": 0,
   "depths": [],
-  "digest": "aa3350d7b8b407f5",
+  "digest": "94cba6c030355bc7",
   "locators": 0,
   "origin_id": "DL-MECH-052",
   "papers": 0,
@@ -55953,7 +56050,7 @@
   "depths": [
    "complete_fulltext_read"
   ],
-  "digest": "dca94b3d4b807316",
+  "digest": "cbf9b514a7d5dbaf",
   "locators": 22,
   "origin_id": "DL-MECH-103",
   "papers": 1,
@@ -55963,6 +56060,10 @@
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 22,
@@ -59915,7 +60016,7 @@
   "depths": [
    "partial_fulltext_read"
   ],
-  "digest": "5861a562f52b6633",
+  "digest": "80f9f1008691173e",
   "locators": 8,
   "origin_id": "DL-MECH-120",
   "papers": 1,
@@ -59925,6 +60026,10 @@
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 8,
@@ -60021,7 +60126,7 @@
   "depths": [
    "partial_fulltext_read"
   ],
-  "digest": "c3f22e3060d6c516",
+  "digest": "625214aa133be1b4",
   "locators": 7,
   "origin_id": "DL-MECH-122",
   "papers": 1,
@@ -60031,6 +60136,10 @@
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 7,
@@ -60050,7 +60159,7 @@
   "depths": [
    "partial_fulltext_read"
   ],
-  "digest": "cf16c22db76d196f",
+  "digest": "ba276f6e9158e2e8",
   "locators": 11,
   "origin_id": "DL-MECH-123",
   "papers": 1,
@@ -60060,6 +60169,10 @@
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 11,
@@ -60122,7 +60235,7 @@
   "depths": [
    "partial_fulltext_read"
   ],
-  "digest": "16ff1f478b9ea860",
+  "digest": "c97a86724436d932",
   "locators": 23,
   "origin_id": "DL-MECH-125",
   "papers": 1,
@@ -60132,6 +60245,10 @@
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 23,
@@ -60151,7 +60268,7 @@
   "depths": [
    "complete_fulltext_read"
   ],
-  "digest": "5b94f233cc63bc16",
+  "digest": "bf441b7a3a847008",
   "locators": 17,
   "origin_id": "DL-MECH-126",
   "papers": 1,
@@ -60161,6 +60278,10 @@
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 17,
@@ -60266,7 +60387,7 @@
   "depths": [
    "complete_fulltext_read"
   ],
-  "digest": "870ef6ffb5f1954c",
+  "digest": "200de1782dc5986e",
   "locators": 11,
   "origin_id": "DL-MECH-128",
   "papers": 1,
@@ -60276,6 +60397,10 @@
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 11,
@@ -60295,7 +60420,7 @@
   "depths": [
    "complete_fulltext_read"
   ],
-  "digest": "206a3dea0cf89732",
+  "digest": "69e9f491da346ddc",
   "locators": 15,
   "origin_id": "DL-MECH-129",
   "papers": 1,
@@ -60305,6 +60430,10 @@
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 15,
@@ -60324,7 +60453,7 @@
   "depths": [
    "complete_fulltext_read"
   ],
-  "digest": "7d819455ea37bd10",
+  "digest": "a4ce8db3d7ea30eb",
   "locators": 12,
   "origin_id": "DL-MECH-130",
   "papers": 1,
@@ -60334,6 +60463,10 @@
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 12,
@@ -60353,7 +60486,7 @@
   "depths": [
    "complete_fulltext_read"
   ],
-  "digest": "8ea20d503465a862",
+  "digest": "ab7fe5dc8f9517b2",
   "locators": 33,
   "origin_id": "DL-MECH-131",
   "papers": 1,
@@ -60363,6 +60496,10 @@
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 33,
@@ -60382,7 +60519,7 @@
   "depths": [
    "complete_fulltext_read"
   ],
-  "digest": "8be0915d41a3e1f8",
+  "digest": "ac9a20bb3b8f56d7",
   "locators": 16,
   "origin_id": "DL-MECH-132",
   "papers": 1,
@@ -60392,6 +60529,10 @@
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 16,
@@ -60670,7 +60811,7 @@
   "depths": [
    "complete_fulltext_read"
   ],
-  "digest": "b5ef3fff4a401bc8",
+  "digest": "f2cf0cfb249adaf5",
   "locators": 11,
   "origin_id": "DL-MECH-137",
   "papers": 1,
@@ -60680,6 +60821,10 @@
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 11,
@@ -60699,7 +60844,7 @@
   "depths": [
    "partial_fulltext_read"
   ],
-  "digest": "1087b3158ae159f1",
+  "digest": "9f4960c248f499f9",
   "locators": 10,
   "origin_id": "DL-MECH-138",
   "papers": 1,
@@ -60709,6 +60854,10 @@
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 10,
@@ -60887,7 +61036,7 @@
   "depths": [
    "partial_fulltext_read"
   ],
-  "digest": "900284601c37da97",
+  "digest": "82310303c7278205",
   "locators": 10,
   "origin_id": "DL-MECH-142",
   "papers": 1,
@@ -60897,6 +61046,10 @@
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 10,
@@ -60916,7 +61069,7 @@
   "depths": [
    "complete_fulltext_read"
   ],
-  "digest": "09a0e49bf223d4f0",
+  "digest": "26eb5e45e3841f1b",
   "locators": 41,
   "origin_id": "DL-MECH-143",
   "papers": 1,
@@ -60926,6 +61079,10 @@
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 41,
@@ -60945,7 +61102,7 @@
   "depths": [
    "complete_fulltext_read"
   ],
-  "digest": "9b50b59521520956",
+  "digest": "2aef215ead9f20ec",
   "locators": 13,
   "origin_id": "DL-MECH-144",
   "papers": 1,
@@ -60955,6 +61112,10 @@
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 13,
@@ -61017,7 +61178,7 @@
   "depths": [
    "complete_fulltext_read"
   ],
-  "digest": "b21312108d46d317",
+  "digest": "19ed2eaa74bc4323",
   "locators": 15,
   "origin_id": "DL-MECH-146",
   "papers": 1,
@@ -61027,6 +61188,10 @@
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 15,
@@ -61046,7 +61211,7 @@
   "depths": [
    "complete_fulltext_read"
   ],
-  "digest": "b86269b3c752b7c9",
+  "digest": "6eb379f26ec8fc01",
   "locators": 10,
   "origin_id": "DL-MECH-147",
   "papers": 1,
@@ -61056,6 +61221,10 @@
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 10,
@@ -61144,10 +61313,10 @@
   "unaudited_contradictions": 0
  },
  {
-  "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+  "abstention": "NO_PAPER: the registry record itself cites no PMID or PAPER id and names no other record; missing datum: a citation in the record",
   "complete_reads": 0,
   "depths": [],
-  "digest": "f0d08e628d8b99cf",
+  "digest": "c1bbbb6203536aa3",
   "locators": 0,
   "origin_id": "DL-MECH-149",
   "papers": 0,
@@ -61156,10 +61325,10 @@
   "unaudited_contradictions": 0
  },
  {
-  "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+  "abstention": "NO_PAPER: the registry record itself cites no PMID or PAPER id and names no other record; missing datum: a citation in the record",
   "complete_reads": 0,
   "depths": [],
-  "digest": "42007166e57ef375",
+  "digest": "dc8b1c8a4b8addef",
   "locators": 0,
   "origin_id": "DL-MECH-150",
   "papers": 0,
@@ -61173,7 +61342,7 @@
   "depths": [
    "partial_fulltext_read"
   ],
-  "digest": "1cf4086937460fa7",
+  "digest": "72d982c2848d4936",
   "locators": 26,
   "origin_id": "DL-MECH-151",
   "papers": 1,
@@ -61183,6 +61352,10 @@
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 26,
@@ -61202,7 +61375,7 @@
   "depths": [
    "partial_fulltext_read"
   ],
-  "digest": "a2ab45b66ad0829d",
+  "digest": "58814985dd43842d",
   "locators": 13,
   "origin_id": "DL-MECH-152",
   "papers": 1,
@@ -61212,6 +61385,10 @@
     "adjudication_files": [],
     "audit_status": "CONTRADICTIONS_AUDITED",
     "audited_entries": 1,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [
      {
       "auditors": 1,
@@ -61279,7 +61456,7 @@
   "depths": [
    "partial_fulltext_read"
   ],
-  "digest": "90d3aa07925f788d",
+  "digest": "92a5d53e15aa0378",
   "locators": 15,
   "origin_id": "DL-MECH-154",
   "papers": 1,
@@ -61289,6 +61466,10 @@
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 15,
@@ -61308,7 +61489,7 @@
   "depths": [
    "partial_fulltext_read"
   ],
-  "digest": "2e5c25a8043f1d9b",
+  "digest": "7f9a673df35e201f",
   "locators": 28,
   "origin_id": "DL-MECH-155",
   "papers": 1,
@@ -61318,6 +61499,10 @@
     "adjudication_files": [],
     "audit_status": "CONTRADICTIONS_AUDITED",
     "audited_entries": 1,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [
      {
       "auditors": 1,
@@ -61385,7 +61570,7 @@
   "depths": [
    "complete_fulltext_read"
   ],
-  "digest": "dc6c9ac2138967e4",
+  "digest": "6bc431b9eba42745",
   "locators": 9,
   "origin_id": "DL-MECH-157",
   "papers": 1,
@@ -61395,6 +61580,10 @@
     "adjudication_files": [],
     "audit_status": "CONTRADICTIONS_AUDITED",
     "audited_entries": 1,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [
      {
       "auditors": 1,
@@ -61419,7 +61608,7 @@
   "depths": [
    "complete_fulltext_read"
   ],
-  "digest": "a022b8413a8d04da",
+  "digest": "461c457a09b34bd9",
   "locators": 7,
   "origin_id": "DL-MECH-158",
   "papers": 1,
@@ -61429,6 +61618,10 @@
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 7,
@@ -61486,10 +61679,10 @@
   "unaudited_contradictions": 0
  },
  {
-  "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+  "abstention": "NO_PAPER: the registry record itself cites no PMID or PAPER id and names no other record; missing datum: a citation in the record",
   "complete_reads": 0,
   "depths": [],
-  "digest": "ddaf19f006c19459",
+  "digest": "d20904e33847f9b7",
   "locators": 0,
   "origin_id": "DL-MECH-160",
   "papers": 0,
@@ -61547,7 +61740,7 @@
   "depths": [
    "partial_fulltext_read"
   ],
-  "digest": "b5da2f6554acb09c",
+  "digest": "0f66d188fec79e29",
   "locators": 10,
   "origin_id": "DL-MECH-162",
   "papers": 1,
@@ -61557,6 +61750,10 @@
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 10,
@@ -61576,7 +61773,7 @@
   "depths": [
    "partial_fulltext_read"
   ],
-  "digest": "e16db04039663a3f",
+  "digest": "b4419a532185dd90",
   "locators": 8,
   "origin_id": "DL-MECH-163",
   "papers": 1,
@@ -61586,6 +61783,10 @@
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 8,
@@ -61605,7 +61806,7 @@
   "depths": [
    "partial_fulltext_read"
   ],
-  "digest": "b5e40cb1786b3c65",
+  "digest": "da624779dc818a20",
   "locators": 7,
   "origin_id": "DL-MECH-164",
   "papers": 1,
@@ -61615,6 +61816,10 @@
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 7,
@@ -61634,7 +61839,7 @@
   "depths": [
    "partial_fulltext_read"
   ],
-  "digest": "1bcca78210f534c9",
+  "digest": "baecc06acae7fc67",
   "locators": 9,
   "origin_id": "DL-MECH-165",
   "papers": 1,
@@ -61644,6 +61849,10 @@
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 9,
@@ -61707,7 +61916,7 @@
   "depths": [
    "complete_fulltext_read"
   ],
-  "digest": "8fc961303965f29e",
+  "digest": "37876bc7aa10ae57",
   "locators": 28,
   "origin_id": "DL-MECH-167",
   "papers": 1,
@@ -61717,6 +61926,10 @@
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 28,
@@ -61736,7 +61949,7 @@
   "depths": [
    "complete_fulltext_read"
   ],
-  "digest": "43bcd496aafe4a4c",
+  "digest": "53f0c5b9a8af6e1b",
   "locators": 28,
   "origin_id": "DL-MECH-168",
   "papers": 1,
@@ -61746,6 +61959,10 @@
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 28,
@@ -65904,7 +66121,7 @@
   "depths": [
    "complete_fulltext_read"
   ],
-  "digest": "bd30dde3777b430d",
+  "digest": "90873bfa9e9ee42b",
   "locators": 23,
   "origin_id": "DL-META-097",
   "papers": 1,
@@ -65914,6 +66131,10 @@
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 23,
@@ -65933,7 +66154,7 @@
   "depths": [
    "complete_fulltext_read"
   ],
-  "digest": "60e0ba7e6e2a7dfc",
+  "digest": "6f4760fe86063659",
   "locators": 23,
   "origin_id": "DL-META-098",
   "papers": 1,
@@ -65943,6 +66164,10 @@
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 23,
@@ -75268,7 +75493,7 @@
   "depths": [
    "complete_fulltext_read"
   ],
-  "digest": "e7bdbfd400d04c54",
+  "digest": "14118d426895fd9c",
   "locators": 41,
   "origin_id": "DL-METH-108",
   "papers": 1,
@@ -75278,6 +75503,10 @@
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 41,
@@ -81410,7 +81639,7 @@
   "depths": [
    "partial_fulltext_read"
   ],
-  "digest": "37f120ca0e541904",
+  "digest": "c733f295f963d452",
   "locators": 11,
   "origin_id": "DL-METH-121",
   "papers": 1,
@@ -81420,6 +81649,10 @@
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 11,
@@ -81526,7 +81759,7 @@
   "depths": [
    "complete_fulltext_read"
   ],
-  "digest": "f000f26505abda91",
+  "digest": "fd99d0f835591b9e",
   "locators": 11,
   "origin_id": "DL-METH-124",
   "papers": 1,
@@ -81536,6 +81769,10 @@
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 11,
@@ -81555,7 +81792,7 @@
   "depths": [
    "complete_fulltext_read"
   ],
-  "digest": "3514b6d0ddfc124d",
+  "digest": "b33e74c060b0f92a",
   "locators": 11,
   "origin_id": "DL-METH-125",
   "papers": 1,
@@ -81565,6 +81802,10 @@
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 11,
@@ -81584,7 +81825,7 @@
   "depths": [
    "NO_RECEIPT"
   ],
-  "digest": "d9ba4f3313363721",
+  "digest": "c1b87c96e0d99fbe",
   "locators": 0,
   "origin_id": "DL-MOL-001",
   "papers": 1,
@@ -81594,6 +81835,10 @@
     "adjudication_files": [],
     "audit_status": "NO_MANIFEST",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 0,
@@ -81613,7 +81858,7 @@
   "depths": [
    "NO_RECEIPT"
   ],
-  "digest": "855fc8bca87916ce",
+  "digest": "bc4c3967790ff1e3",
   "locators": 0,
   "origin_id": "DL-MOL-002",
   "papers": 1,
@@ -81623,6 +81868,10 @@
     "adjudication_files": [],
     "audit_status": "NO_MANIFEST",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 0,
@@ -83019,7 +83268,7 @@
   "depths": [
    "complete_fulltext_read"
   ],
-  "digest": "5959d7969ef1e973",
+  "digest": "45ff4c9a41d4f983",
   "locators": 7,
   "origin_id": "DL-MOL-006",
   "papers": 1,
@@ -83029,6 +83278,10 @@
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 7,
@@ -83048,7 +83301,7 @@
   "depths": [
    "complete_fulltext_read"
   ],
-  "digest": "0a5a8ed2f9fe396c",
+  "digest": "a74977f193cf574d",
   "locators": 12,
   "origin_id": "DL-MOL-007",
   "papers": 1,
@@ -83058,6 +83311,10 @@
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 12,
@@ -83121,7 +83378,7 @@
   "depths": [
    "complete_fulltext_read"
   ],
-  "digest": "74209d72199dfe7f",
+  "digest": "b6a772770b7fc752",
   "locators": 22,
   "origin_id": "DL-MOL-009",
   "papers": 1,
@@ -83131,6 +83388,10 @@
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 22,
@@ -86060,7 +86321,7 @@
   "depths": [
    "NO_RECEIPT"
   ],
-  "digest": "577008be5a647e67",
+  "digest": "cd3994bf4213db40",
   "locators": 0,
   "origin_id": "DL-REPO-001",
   "papers": 1,
@@ -86070,6 +86331,10 @@
     "adjudication_files": [],
     "audit_status": "NO_MANIFEST",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 0,
@@ -92508,10 +92773,10 @@
   "unaudited_contradictions": 0
  },
  {
-  "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+  "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
   "complete_reads": 0,
   "depths": [],
-  "digest": "6e65904c8a383291",
+  "digest": "4db04ef11f9c1f85",
   "locators": 0,
   "origin_id": "N-01",
   "papers": 0,
@@ -92520,10 +92785,10 @@
   "unaudited_contradictions": 0
  },
  {
-  "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+  "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
   "complete_reads": 0,
   "depths": [],
-  "digest": "ad94fe85a1ee32d8",
+  "digest": "a788a849450637cc",
   "locators": 0,
   "origin_id": "N-02",
   "papers": 0,
@@ -92532,10 +92797,10 @@
   "unaudited_contradictions": 0
  },
  {
-  "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+  "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
   "complete_reads": 0,
   "depths": [],
-  "digest": "318b60bacd9041d8",
+  "digest": "4d9f841a93c4b61e",
   "locators": 0,
   "origin_id": "N-03",
   "papers": 0,
@@ -92544,10 +92809,10 @@
   "unaudited_contradictions": 0
  },
  {
-  "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+  "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
   "complete_reads": 0,
   "depths": [],
-  "digest": "12f22bd551b07862",
+  "digest": "8d7b801d96a65af0",
   "locators": 0,
   "origin_id": "N-04",
   "papers": 0,
@@ -92556,10 +92821,10 @@
   "unaudited_contradictions": 0
  },
  {
-  "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+  "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
   "complete_reads": 0,
   "depths": [],
-  "digest": "db3346dd894dc0e1",
+  "digest": "9a410209ee5cf268",
   "locators": 0,
   "origin_id": "N-05",
   "papers": 0,
@@ -92568,10 +92833,10 @@
   "unaudited_contradictions": 0
  },
  {
-  "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+  "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
   "complete_reads": 0,
   "depths": [],
-  "digest": "fe29937ba778f2be",
+  "digest": "2338dacff48e809e",
   "locators": 0,
   "origin_id": "N-06",
   "papers": 0,
@@ -92580,10 +92845,10 @@
   "unaudited_contradictions": 0
  },
  {
-  "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+  "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
   "complete_reads": 0,
   "depths": [],
-  "digest": "4eb8331a62e845bc",
+  "digest": "c9960f0d67f87dde",
   "locators": 0,
   "origin_id": "N-07",
   "papers": 0,
@@ -92592,10 +92857,10 @@
   "unaudited_contradictions": 0
  },
  {
-  "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+  "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
   "complete_reads": 0,
   "depths": [],
-  "digest": "0249c1612d1b595d",
+  "digest": "8e3a47fdd26b70bb",
   "locators": 0,
   "origin_id": "N-08",
   "papers": 0,
@@ -92604,10 +92869,10 @@
   "unaudited_contradictions": 0
  },
  {
-  "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+  "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
   "complete_reads": 0,
   "depths": [],
-  "digest": "19d805eec8eb8b27",
+  "digest": "47026bab0ff0a7bc",
   "locators": 0,
   "origin_id": "N-09",
   "papers": 0,
@@ -92616,10 +92881,10 @@
   "unaudited_contradictions": 0
  },
  {
-  "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+  "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
   "complete_reads": 0,
   "depths": [],
-  "digest": "eafe5d97a5c27e7a",
+  "digest": "6a3fba6cb32cd063",
   "locators": 0,
   "origin_id": "N-10",
   "papers": 0,
@@ -92628,10 +92893,10 @@
   "unaudited_contradictions": 0
  },
  {
-  "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+  "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
   "complete_reads": 0,
   "depths": [],
-  "digest": "a62eb4c4c498c7b9",
+  "digest": "8740dab2646b5d5c",
   "locators": 0,
   "origin_id": "N-11",
   "papers": 0,
@@ -92640,10 +92905,10 @@
   "unaudited_contradictions": 0
  },
  {
-  "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+  "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
   "complete_reads": 0,
   "depths": [],
-  "digest": "4bff59285e352979",
+  "digest": "daba4a8903333386",
   "locators": 0,
   "origin_id": "N-12",
   "papers": 0,
@@ -92652,10 +92917,10 @@
   "unaudited_contradictions": 0
  },
  {
-  "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+  "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
   "complete_reads": 0,
   "depths": [],
-  "digest": "bd206ecba9b5c14c",
+  "digest": "07ab5c0854c9c114",
   "locators": 0,
   "origin_id": "N-13",
   "papers": 0,
@@ -92664,10 +92929,10 @@
   "unaudited_contradictions": 0
  },
  {
-  "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+  "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
   "complete_reads": 0,
   "depths": [],
-  "digest": "b7985862422972ae",
+  "digest": "7eef7412a2fe5d91",
   "locators": 0,
   "origin_id": "N-14",
   "papers": 0,
@@ -92676,10 +92941,10 @@
   "unaudited_contradictions": 0
  },
  {
-  "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+  "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
   "complete_reads": 0,
   "depths": [],
-  "digest": "239013617cf709c5",
+  "digest": "16d746201b2d5654",
   "locators": 0,
   "origin_id": "N-15",
   "papers": 0,
@@ -92693,7 +92958,7 @@
   "depths": [
    "complete_fulltext_read"
   ],
-  "digest": "8b4121a427138f6b",
+  "digest": "6c81e25d4a100c00",
   "locators": 26,
   "origin_id": "N-16",
   "papers": 1,
@@ -92703,6 +92968,19 @@
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "UNVERIFIED",
+     "endpoint_words_found": [],
+     "endpoint_words_missing": [],
+     "publication_types": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't"
+     ],
+     "reason": "the record declares no endpoint (no bold span in its decisive test): name the readout and its unit",
+     "retrieved_at": "2026-10-23",
+     "source": "NCBI PubMed efetch",
+     "title": "Altered neocortical oscillations and cellular excitability in an in vitro Wwox knockout mouse model of epileptic encephalopathy."
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 26,
@@ -94703,7 +94981,7 @@
   "depths": [
    "complete_fulltext_read"
   ],
-  "digest": "8b7c36d602998d7a",
+  "digest": "8d1fbe05741af4a6",
   "locators": 11,
   "origin_id": "CLAIM 010",
   "papers": 1,
@@ -94713,6 +94991,10 @@
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 11,
@@ -96542,7 +96824,7 @@
   "depths": [
    "complete_fulltext_read"
   ],
-  "digest": "b8ea3a5b8866b1f6",
+  "digest": "717b6616e478392c",
   "locators": 11,
   "origin_id": "CLAIM 010",
   "papers": 1,
@@ -96552,6 +96834,10 @@
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "NOT_CHECKED",
+     "reason": "offline with no cached PubMed record"
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 11,
@@ -100566,7 +100852,7 @@
   "depths": [
    "complete_fulltext_read"
   ],
-  "digest": "1db1857eaa255163",
+  "digest": "998f8a00ab93cef8",
   "locators": 25,
   "origin_id": "R-01",
   "papers": 1,
@@ -100576,6 +100862,28 @@
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "UNVERIFIED",
+     "endpoint_words_found": [
+      "onset"
+     ],
+     "endpoint_words_missing": [
+      "delayed",
+      "post",
+      "hypomorphic",
+      "null",
+      "intermediate",
+      "10¹¹"
+     ],
+     "publication_types": [
+      "Journal Article",
+      "Review"
+     ],
+     "reason": "not a primary article (PubMed type: Review); endpoint words not in its title/abstract: delayed, post, hypomorphic, null, intermediate, 10¹¹",
+     "retrieved_at": "2026-10-23",
+     "source": "NCBI PubMed efetch",
+     "title": "WWOX in brain development and disease: Molecular mechanisms and therapeutic opportunities."
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 25,
@@ -100716,7 +101024,7 @@
   "depths": [
    "complete_fulltext_read"
   ],
-  "digest": "4e96c70fbc422ab9",
+  "digest": "4044b7bb1d87b241",
   "locators": 30,
   "origin_id": "R-03",
   "papers": 1,
@@ -100726,6 +101034,22 @@
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
+    "bound_check": {
+     "binding": "UNVERIFIED",
+     "endpoint_words_found": [
+      "nuclear"
+     ],
+     "endpoint_words_missing": [
+      "catenin"
+     ],
+     "publication_types": [
+      "Journal Article"
+     ],
+     "reason": "endpoint words not in its title/abstract: catenin",
+     "retrieved_at": "2026-10-23",
+     "source": "NCBI PubMed efetch",
+     "title": "Mechanistic Investigation of WWOX Function in NF-kB-Induced Skin Inflammation in Psoriasis."
+    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 30,
@@ -100740,10 +101064,10 @@
   "unaudited_contradictions": 0
  },
  {
-  "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+  "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
   "complete_reads": 0,
   "depths": [],
-  "digest": "3d0f7acbc09296b7",
+  "digest": "7b88f6bca6c40729",
   "locators": 0,
   "origin_id": "R-04",
   "papers": 0,
@@ -100752,10 +101076,10 @@
   "unaudited_contradictions": 0
  },
  {
-  "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+  "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
   "complete_reads": 0,
   "depths": [],
-  "digest": "73939cb725e634fa",
+  "digest": "f9a866825237aac9",
   "locators": 0,
   "origin_id": "R-05",
   "papers": 0,
@@ -100764,10 +101088,10 @@
   "unaudited_contradictions": 0
  },
  {
-  "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+  "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
   "complete_reads": 0,
   "depths": [],
-  "digest": "f41f8c6f9fadde98",
+  "digest": "104cd6d1ac198b4f",
   "locators": 0,
   "origin_id": "R-06",
   "papers": 0,
@@ -100776,10 +101100,10 @@
   "unaudited_contradictions": 0
  },
  {
-  "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+  "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
   "complete_reads": 0,
   "depths": [],
-  "digest": "d8b4cfb05f2ea48f",
+  "digest": "ad39ca826922653c",
   "locators": 0,
   "origin_id": "R-07",
   "papers": 0,
@@ -101671,10 +101995,10 @@
   "unaudited_contradictions": 0
  },
  {
-  "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+  "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
   "complete_reads": 0,
   "depths": [],
-  "digest": "c44de0928b8cde48",
+  "digest": "138c6f381def3215",
   "locators": 0,
   "origin_id": "R-09",
   "papers": 0,

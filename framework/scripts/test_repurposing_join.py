@@ -187,8 +187,34 @@ class Evidence(unittest.TestCase):
 
     def test_a_query_without_papers_abstains(self):
         table = rj.evidence_for({"query_id": "Q-X", "origin_id": "X", "pmids": []}, {})
-        self.assertEqual(table["abstention"], "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY")
+        self.assertTrue(table["abstention"].startswith("LINKAGE_GAP:"), table["abstention"])
+        self.assertIn("missing datum:", table["abstention"])
         self.assertEqual(table["papers"], 0)
+
+    def test_abstention_names_the_state_and_the_missing_datum(self):
+        named = {"kind": "mechanism_record", "linkage": {"ids_named": ["DL-MOL-013"], "ids_reaching_a_pmid": [],
+                                                       "ids_in_registry_without_pmid": ["DL-MOL-013"],
+                                                       "ids_not_found_in_registry": []}}
+        text = rj.abstention_for(named)
+        self.assertTrue(text.startswith("NO_PAPER:"), text)
+        self.assertIn("DL-MOL-013", text)
+        named["linkage"] = {"ids_named": ["DL-X-1"], "ids_reaching_a_pmid": [], "ids_in_registry_without_pmid": [],
+                            "ids_not_found_in_registry": ["DL-X-1"]}
+        self.assertTrue(rj.abstention_for(named).startswith("LINKAGE_GAP:"))
+        self.assertIn("not found in the registry", rj.abstention_for(named))
+        self.assertTrue(rj.abstention_for({"kind": "lead", "linkage": {}}).startswith("NO_PAPER:"))
+
+    def test_every_abstention_in_the_corpus_has_a_state_and_a_datum(self):
+        queries = rj.derive_queries()
+        receipts = rj.load_receipts()
+        states = set()
+        for query in queries:
+            table = rj.evidence_for(query, receipts)
+            if table["abstention"]:
+                states.add(table["abstention"].split(":")[0])
+                self.assertIn("missing datum:", table["abstention"])
+                self.assertNotIn("NO_RECEIPTED_EVIDENCE", table["abstention"])
+        self.assertTrue(states <= {"LINKAGE_GAP", "NO_PAPER"}, states)
 
     def test_reading_depth_is_the_strongest_standing_receipt(self):
         events = [{"reading_depth": "partial_fulltext_read"}, {"reading_depth": "complete_fulltext_read"},
@@ -267,8 +293,11 @@ class Run(unittest.TestCase):
         for row in rows:
             self.assertIn(row["kind"], ("SELECT", "READ", "REPLICATE", "AUDIT"))
             self.assertTrue(row["ask"] and row["who"] and row["origin"])
-            if row["kind"] in ("REPLICATE", "AUDIT", "READ") and row["dependence"] != "NO_RECEIPTED_EVIDENCE":
+            if row["kind"] in ("REPLICATE", "AUDIT", "READ") and row["dependence"] not in ("LINKAGE_GAP", "NO_PAPER"):
                 self.assertTrue(row["pmids"], row)
+            if row["kind"] == "SELECT":
+                self.assertIn(row["dependence"], ("LINKAGE_GAP", "NO_PAPER"))
+            self.assertTrue(row["acquisition"])
             if row["kind"] == "REPLICATE":
                 self.assertEqual(row["lead_spec"]["status"], "open")
                 self.assertEqual(row["lead_spec"]["tag"], "INFERENZA")
@@ -280,6 +309,42 @@ class Run(unittest.TestCase):
                                "--write", str(self.tmp / "handoff.md")], capture_output=True, text=True, cwd=ROOT)
         self.assertEqual(done.returncode, 0, done.stderr)
         self.assertEqual((self.tmp / "handoff.md").read_text(encoding="utf-8"), text)
+
+    def test_replicate_rows_are_screened_and_their_lead_specs_pass_the_ledger_validator(self):
+        import discovery_lead as dl
+        rows = rj.handoff_rows(*self._cards_and_queries())
+        replicate = [r for r in rows if r["kind"] == "REPLICATE"]
+        self.assertTrue(replicate)
+        for row in replicate:
+            self.assertIn(row["binding"]["binding"], ("PRIMARY_WITH_ENDPOINT_WORDS", "UNVERIFIED", "NOT_CHECKED"))
+            self.assertIn("independent = a different laboratory", row["act"])
+            self.assertEqual(dl.validate(row["lead_spec"]), [], row["lead_spec"])
+            self.assertIn("NOT WWOX EVIDENCE", row["lead_spec"]["transfer_limit"])
+
+    def _cards_and_queries(self):
+        rj.run(self.tmp, axis="", live=False)
+        cards = json.loads((self.tmp / "cards.json").read_text(encoding="utf-8"))
+        queries = {q["query_id"]: q for q in json.loads((self.tmp / "queries.json").read_text(encoding="utf-8"))}
+        return cards, queries
+
+    def test_bound_check_refuses_a_review_and_a_missing_endpoint(self):
+        cache = self.tmp / "pm"
+        cache.mkdir()
+        record = {"pmid": "1", "status": "MATCH_FOUND", "error": "", "title": "A review", "retrieved_at": "2026-01-01",
+                  "source": "t", "publication_types": ["Journal Article", "Review"], "words": ["catenin", "organoid"]}
+        (cache / "1.json").write_text(json.dumps(record), encoding="utf-8")
+        query = {"decisive_test": "**first measure nuclear catenin state**, then more"}
+        verdict = rj.bound_check("1", query, cache, live=False)
+        self.assertEqual(verdict["binding"], "UNVERIFIED")
+        self.assertIn("not a primary article", verdict["reason"])
+        self.assertEqual(verdict["endpoint_words_found"], ["catenin"])
+        self.assertEqual(verdict["endpoint_words_missing"], ["nuclear"])
+        record["publication_types"] = ["Journal Article"]
+        record["words"] = ["catenin", "nuclear"]
+        (cache / "1.json").write_text(json.dumps(record), encoding="utf-8")
+        self.assertEqual(rj.bound_check("1", query, cache, live=False)["binding"], "PRIMARY_WITH_ENDPOINT_WORDS")
+        self.assertIn("declares no endpoint", rj.bound_check("1", {"decisive_test": "UNKNOWN"}, cache, False)["reason"])
+        self.assertEqual(rj.bound_check("2", query, cache, live=False)["binding"], "NOT_CHECKED")
 
     def test_cli_run_and_diff_against_a_hand_made_card(self):
         done = subprocess.run([sys.executable, str(CLI), "run", "--axis", "wnt", "--out", str(self.tmp)],

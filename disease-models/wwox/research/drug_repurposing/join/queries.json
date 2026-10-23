@@ -1,8 +1,36 @@
 [
  {
   "axis": "all",
-  "digest": "3fd745d2d0d75e86",
+  "digest": "abaa76abc69dd686",
   "kind": "claim",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 003",
+    "PAPER 014",
+    "PAPER 016",
+    "PAPER 017",
+    "PAPER 045",
+    "PAPER 133",
+    "PAPER 143",
+    "PAPER 145",
+    "PAPER 294",
+    "PAPER 295"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 003",
+    "PAPER 014",
+    "PAPER 016",
+    "PAPER 017",
+    "PAPER 045",
+    "PAPER 133",
+    "PAPER 143",
+    "PAPER 145",
+    "PAPER 294",
+    "PAPER 295"
+   ]
+  },
   "origin_file": "disease-models/wwox/registries/claim_registry_current.md",
   "origin_id": "CLAIM 001",
   "origin_line": 33,
@@ -72,8 +100,25 @@
  },
  {
   "axis": "all",
-  "digest": "9557239cade0143f",
+  "digest": "70f08f1e767925fd",
   "kind": "claim",
+  "linkage": {
+   "ids_in_registry_without_pmid": [
+    "PAPER 001"
+   ],
+   "ids_named": [
+    "PAPER 001",
+    "PAPER 031",
+    "PAPER 039",
+    "PAPER 094"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 031",
+    "PAPER 039",
+    "PAPER 094"
+   ]
+  },
   "origin_file": "disease-models/wwox/registries/claim_registry_current.md",
   "origin_id": "CLAIM 002",
   "origin_line": 50,
@@ -103,8 +148,24 @@
  },
  {
   "axis": "all",
-  "digest": "a0de79f6ec336260",
+  "digest": "ebe0dca502652a83",
   "kind": "claim",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 004",
+    "PAPER 005",
+    "PAPER 063",
+    "PAPER 094"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 004",
+    "PAPER 005",
+    "PAPER 063",
+    "PAPER 094"
+   ]
+  },
   "origin_file": "disease-models/wwox/registries/claim_registry_current.md",
   "origin_id": "CLAIM 003",
   "origin_line": 70,
@@ -133,8 +194,20 @@
  },
  {
   "axis": "all",
-  "digest": "17661a25a655926c",
+  "digest": "a4dc6d790e4cf172",
   "kind": "claim",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 005",
+    "PAPER 063"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 005",
+    "PAPER 063"
+   ]
+  },
   "origin_file": "disease-models/wwox/registries/claim_registry_current.md",
   "origin_id": "CLAIM 004",
   "origin_line": 87,
@@ -160,8 +233,38 @@
  },
  {
   "axis": "all",
-  "digest": "f5ef1e36ebc1a5c9",
+  "digest": "71ac43807aedfc8d",
   "kind": "claim",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 006",
+    "PAPER 007",
+    "PAPER 011",
+    "PAPER 019",
+    "PAPER 039",
+    "PAPER 042",
+    "PAPER 057",
+    "PAPER 058",
+    "PAPER 059",
+    "PAPER 094",
+    "PAPER 202"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 006",
+    "PAPER 007",
+    "PAPER 011",
+    "PAPER 019",
+    "PAPER 039",
+    "PAPER 042",
+    "PAPER 057",
+    "PAPER 058",
+    "PAPER 059",
+    "PAPER 094",
+    "PAPER 202"
+   ]
+  },
   "origin_file": "disease-models/wwox/registries/claim_registry_current.md",
   "origin_id": "CLAIM 005",
   "origin_line": 106,
@@ -211,8 +314,18 @@
  },
  {
   "axis": "all",
-  "digest": "e6b5e2b8fbda2985",
+  "digest": "cb5f391ea2bbaf4d",
   "kind": "claim",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 007"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 007"
+   ]
+  },
   "origin_file": "disease-models/wwox/registries/claim_registry_current.md",
   "origin_id": "CLAIM 006",
   "origin_line": 123,
@@ -235,8 +348,20 @@
  },
  {
   "axis": "all",
-  "digest": "ef707f72e9dbd33d",
+  "digest": "ff5493a66bb25001",
   "kind": "claim",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 007",
+    "PAPER 104"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 007",
+    "PAPER 104"
+   ]
+  },
   "origin_file": "disease-models/wwox/registries/claim_registry_current.md",
   "origin_id": "CLAIM 007",
   "origin_line": 141,
@@ -264,8 +389,18 @@
  },
  {
   "axis": "all",
-  "digest": "41e31a53f8debc0a",
+  "digest": "ef0bbfef0ad953aa",
   "kind": "claim",
+  "linkage": {
+   "ids_in_registry_without_pmid": [
+    "PAPER 008"
+   ],
+   "ids_named": [
+    "PAPER 008"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
   "origin_file": "disease-models/wwox/registries/claim_registry_current.md",
   "origin_id": "CLAIM 008",
   "origin_line": 161,
@@ -282,8 +417,35 @@
  },
  {
   "axis": "all",
-  "digest": "5d58a14be4a250ea",
+  "digest": "e87c5c476cbf8a3f",
   "kind": "claim",
+  "linkage": {
+   "ids_in_registry_without_pmid": [
+    "PAPER 002"
+   ],
+   "ids_named": [
+    "PAPER 002",
+    "PAPER 017",
+    "PAPER 023",
+    "PAPER 054",
+    "PAPER 061",
+    "PAPER 071",
+    "PAPER 357",
+    "PAPER 361",
+    "PAPER 362"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 017",
+    "PAPER 023",
+    "PAPER 054",
+    "PAPER 061",
+    "PAPER 071",
+    "PAPER 357",
+    "PAPER 361",
+    "PAPER 362"
+   ]
+  },
   "origin_file": "disease-models/wwox/registries/claim_registry_current.md",
   "origin_id": "CLAIM 009",
   "origin_line": 177,
@@ -339,8 +501,14 @@
  },
  {
   "axis": "all",
-  "digest": "031736c5b2fb0cb6",
+  "digest": "bc516363fa3fffe0",
   "kind": "claim",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
   "origin_file": "disease-models/wwox/registries/claim_registry_current.md",
   "origin_id": "CLAIM 010",
   "origin_line": 197,
@@ -354,8 +522,20 @@
  },
  {
   "axis": "all",
-  "digest": "e9c223e81c9ffbdf",
+  "digest": "304c6d4e47cb3225",
   "kind": "claim",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 011",
+    "PAPER 082"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 011",
+    "PAPER 082"
+   ]
+  },
   "origin_file": "disease-models/wwox/registries/claim_registry_current.md",
   "origin_id": "CLAIM 011",
   "origin_line": 212,
@@ -384,8 +564,18 @@
  },
  {
   "axis": "all",
-  "digest": "b494098d5328cf24",
+  "digest": "607c595657631eef",
   "kind": "claim",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 012"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 012"
+   ]
+  },
   "origin_file": "disease-models/wwox/registries/claim_registry_current.md",
   "origin_id": "CLAIM 012",
   "origin_line": 267,
@@ -403,8 +593,18 @@
  },
  {
   "axis": "all",
-  "digest": "d61343cab9581409",
+  "digest": "1c5ee9b6be0950c8",
   "kind": "claim",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 014"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 014"
+   ]
+  },
   "origin_file": "disease-models/wwox/registries/claim_registry_current.md",
   "origin_id": "CLAIM 013",
   "origin_line": 284,
@@ -423,8 +623,22 @@
  },
  {
   "axis": "all",
-  "digest": "0ddb7720da9700d5",
+  "digest": "d7cf1e4dd0f191d7",
   "kind": "claim",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 020",
+    "PAPER 021",
+    "PAPER 022"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 020",
+    "PAPER 021",
+    "PAPER 022"
+   ]
+  },
   "origin_file": "disease-models/wwox/registries/claim_registry_current.md",
   "origin_id": "CLAIM 014",
   "origin_line": 302,
@@ -451,8 +665,24 @@
  },
  {
   "axis": "all",
-  "digest": "b1465d75b3e3e34b",
+  "digest": "aeb72d3b70918ff7",
   "kind": "claim",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 004",
+    "PAPER 019",
+    "PAPER 020",
+    "PAPER 021"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 004",
+    "PAPER 019",
+    "PAPER 020",
+    "PAPER 021"
+   ]
+  },
   "origin_file": "disease-models/wwox/registries/claim_registry_current.md",
   "origin_id": "CLAIM 015",
   "origin_line": 319,
@@ -487,8 +717,20 @@
  },
  {
   "axis": "all",
-  "digest": "d423bf1a39f7ec4f",
+  "digest": "b6c82e4fd48effa0",
   "kind": "claim",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 019",
+    "PAPER 056"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 019",
+    "PAPER 056"
+   ]
+  },
   "origin_file": "disease-models/wwox/registries/claim_registry_current.md",
   "origin_id": "CLAIM 016",
   "origin_line": 336,
@@ -514,8 +756,24 @@
  },
  {
   "axis": "all",
-  "digest": "33199ee23cb6482c",
+  "digest": "354d785b90dd3bd0",
   "kind": "claim",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 015",
+    "PAPER 018",
+    "PAPER 025",
+    "PAPER 040"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 015",
+    "PAPER 018",
+    "PAPER 025",
+    "PAPER 040"
+   ]
+  },
   "origin_file": "disease-models/wwox/registries/claim_registry_current.md",
   "origin_id": "CLAIM 017",
   "origin_line": 356,
@@ -553,8 +811,18 @@
  },
  {
   "axis": "all",
-  "digest": "e12d3199ae5e32b0",
+  "digest": "734c908d536ad984",
   "kind": "claim",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 025"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 025"
+   ]
+  },
   "origin_file": "disease-models/wwox/registries/claim_registry_current.md",
   "origin_id": "CLAIM 018",
   "origin_line": 375,
@@ -571,8 +839,28 @@
  },
  {
   "axis": "all",
-  "digest": "70473a3dec9bc077",
+  "digest": "62100d524e404a4a",
   "kind": "claim",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 018",
+    "PAPER 025",
+    "PAPER 040",
+    "PAPER 041",
+    "PAPER 042",
+    "PAPER 117"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 018",
+    "PAPER 025",
+    "PAPER 040",
+    "PAPER 041",
+    "PAPER 042",
+    "PAPER 117"
+   ]
+  },
   "origin_file": "disease-models/wwox/registries/claim_registry_current.md",
   "origin_id": "CLAIM 019",
   "origin_line": 391,
@@ -611,8 +899,18 @@
  },
  {
   "axis": "all",
-  "digest": "565681f9dc89201a",
+  "digest": "2a2b89b04207761e",
   "kind": "claim",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 015"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 015"
+   ]
+  },
   "origin_file": "disease-models/wwox/registries/claim_registry_current.md",
   "origin_id": "CLAIM 020",
   "origin_line": 413,
@@ -635,8 +933,18 @@
  },
  {
   "axis": "all",
-  "digest": "d116c1240967f078",
+  "digest": "4ff3d00487d71ffb",
   "kind": "claim",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 031"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 031"
+   ]
+  },
   "origin_file": "disease-models/wwox/registries/claim_registry_current.md",
   "origin_id": "CLAIM 021",
   "origin_line": 431,
@@ -654,8 +962,14 @@
  },
  {
   "axis": "all",
-  "digest": "bdba76a68c505f2d",
+  "digest": "d5f3fd06e8729896",
   "kind": "claim",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
   "origin_file": "disease-models/wwox/registries/claim_registry_current.md",
   "origin_id": "CLAIM 022",
   "origin_line": 447,
@@ -669,8 +983,22 @@
  },
  {
   "axis": "all",
-  "digest": "d93a87a92af59862",
+  "digest": "d6d9f080340cbb04",
   "kind": "claim",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 026",
+    "PAPER 081",
+    "PAPER 086"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 026",
+    "PAPER 081",
+    "PAPER 086"
+   ]
+  },
   "origin_file": "disease-models/wwox/registries/claim_registry_current.md",
   "origin_id": "CLAIM 023",
   "origin_line": 463,
@@ -693,8 +1021,18 @@
  },
  {
   "axis": "all",
-  "digest": "5a6bf722240a4ecf",
+  "digest": "5528ece74f07bcfb",
   "kind": "claim",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 055"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 055"
+   ]
+  },
   "origin_file": "disease-models/wwox/registries/claim_registry_current.md",
   "origin_id": "CLAIM 024",
   "origin_line": 483,
@@ -715,8 +1053,18 @@
  },
  {
   "axis": "all",
-  "digest": "71ea4924b751e9e1",
+  "digest": "504e1a4cd16a7469",
   "kind": "claim",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 091"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 091"
+   ]
+  },
   "origin_file": "disease-models/wwox/registries/claim_registry_current.md",
   "origin_id": "CLAIM 025",
   "origin_line": 501,
@@ -736,8 +1084,20 @@
  },
  {
   "axis": "all",
-  "digest": "77301080c00b8e03",
+  "digest": "c6cbca445deeaf98",
   "kind": "claim",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 032",
+    "PAPER 103"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 032",
+    "PAPER 103"
+   ]
+  },
   "origin_file": "disease-models/wwox/registries/claim_registry_current.md",
   "origin_id": "CLAIM 026",
   "origin_line": 520,
@@ -757,8 +1117,14 @@
  },
  {
   "axis": "all",
-  "digest": "20f09bc27949f821",
+  "digest": "349f97494d22a828",
   "kind": "claim",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
   "origin_file": "disease-models/wwox/registries/claim_registry_current.md",
   "origin_id": "CLAIM 027",
   "origin_line": 536,
@@ -778,8 +1144,18 @@
  },
  {
   "axis": "all",
-  "digest": "82d4b56b6588a6fa",
+  "digest": "aef10c7819a81648",
   "kind": "claim",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 383"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 383"
+   ]
+  },
   "origin_file": "disease-models/wwox/registries/claim_registry_current.md",
   "origin_id": "CLAIM 028",
   "origin_line": 553,
@@ -802,8 +1178,26 @@
  },
  {
   "axis": "all",
-  "digest": "99c6a7d0bcc5812d",
+  "digest": "4a3610cce70137ee",
   "kind": "claim",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 010",
+    "PAPER 027",
+    "PAPER 030",
+    "PAPER 110",
+    "PAPER 115"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 010",
+    "PAPER 027",
+    "PAPER 030",
+    "PAPER 110",
+    "PAPER 115"
+   ]
+  },
   "origin_file": "disease-models/wwox/registries/claim_registry_current.md",
   "origin_id": "CLAIM 029",
   "origin_line": 584,
@@ -829,8 +1223,30 @@
  },
  {
   "axis": "all",
-  "digest": "f5ee58c254ea7671",
+  "digest": "b67318d3348b6c85",
   "kind": "claim",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 018",
+    "PAPER 039",
+    "PAPER 040",
+    "PAPER 041",
+    "PAPER 042",
+    "PAPER 043",
+    "PAPER 089"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 018",
+    "PAPER 039",
+    "PAPER 040",
+    "PAPER 041",
+    "PAPER 042",
+    "PAPER 043",
+    "PAPER 089"
+   ]
+  },
   "origin_file": "disease-models/wwox/registries/claim_registry_current.md",
   "origin_id": "CLAIM 030",
   "origin_line": 606,
@@ -877,8 +1293,24 @@
  },
  {
   "axis": "all",
-  "digest": "db7754c4133d97cb",
+  "digest": "a680175d3e99daf2",
   "kind": "claim",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 011",
+    "PAPER 018",
+    "PAPER 045",
+    "PAPER 320"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 011",
+    "PAPER 018",
+    "PAPER 045",
+    "PAPER 320"
+   ]
+  },
   "origin_file": "disease-models/wwox/registries/claim_registry_current.md",
   "origin_id": "CLAIM 031",
   "origin_line": 627,
@@ -917,8 +1349,50 @@
  },
  {
   "axis": "all",
-  "digest": "42f76660f09b8567",
+  "digest": "ac00975f7741e44f",
   "kind": "claim",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 007",
+    "PAPER 011",
+    "PAPER 021",
+    "PAPER 042",
+    "PAPER 043",
+    "PAPER 045",
+    "PAPER 049",
+    "PAPER 053",
+    "PAPER 077",
+    "PAPER 078",
+    "PAPER 098",
+    "PAPER 107",
+    "PAPER 138",
+    "PAPER 171",
+    "PAPER 176",
+    "PAPER 208",
+    "PAPER 209"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 007",
+    "PAPER 011",
+    "PAPER 021",
+    "PAPER 042",
+    "PAPER 043",
+    "PAPER 045",
+    "PAPER 049",
+    "PAPER 053",
+    "PAPER 077",
+    "PAPER 078",
+    "PAPER 098",
+    "PAPER 107",
+    "PAPER 138",
+    "PAPER 171",
+    "PAPER 176",
+    "PAPER 208",
+    "PAPER 209"
+   ]
+  },
   "origin_file": "disease-models/wwox/registries/claim_registry_current.md",
   "origin_id": "CLAIM 032",
   "origin_line": 644,
@@ -1002,8 +1476,34 @@
  },
  {
   "axis": "all",
-  "digest": "69bb44bffc21d2b8",
+  "digest": "c43c2d0c95e6ab79",
   "kind": "claim",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 018",
+    "PAPER 039",
+    "PAPER 040",
+    "PAPER 041",
+    "PAPER 042",
+    "PAPER 210",
+    "PAPER 217",
+    "PAPER 218",
+    "PAPER 219"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 018",
+    "PAPER 039",
+    "PAPER 040",
+    "PAPER 041",
+    "PAPER 042",
+    "PAPER 210",
+    "PAPER 217",
+    "PAPER 218",
+    "PAPER 219"
+   ]
+  },
   "origin_file": "disease-models/wwox/registries/claim_registry_current.md",
   "origin_id": "CLAIM 033",
   "origin_line": 668,
@@ -1055,8 +1555,20 @@
  },
  {
   "axis": "all",
-  "digest": "c73f81b297d3213a",
+  "digest": "240ac5c929ab49f2",
   "kind": "claim",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 054",
+    "PAPER 071"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 054",
+    "PAPER 071"
+   ]
+  },
   "origin_file": "disease-models/wwox/registries/claim_registry_current.md",
   "origin_id": "CLAIM 034",
   "origin_line": 694,
@@ -1085,8 +1597,18 @@
  },
  {
   "axis": "all",
-  "digest": "c4d079da66f53af2",
+  "digest": "8ba20a346ef3ad6e",
   "kind": "claim",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 056"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 056"
+   ]
+  },
   "origin_file": "disease-models/wwox/registries/claim_registry_current.md",
   "origin_id": "CLAIM 035",
   "origin_line": 711,
@@ -1106,8 +1628,28 @@
  },
  {
   "axis": "all",
-  "digest": "05457512f8ccbe90",
+  "digest": "08b496a1c9d01f84",
   "kind": "claim",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 057",
+    "PAPER 058",
+    "PAPER 059",
+    "PAPER 075",
+    "PAPER 076",
+    "PAPER 078"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 057",
+    "PAPER 058",
+    "PAPER 059",
+    "PAPER 075",
+    "PAPER 076",
+    "PAPER 078"
+   ]
+  },
   "origin_file": "disease-models/wwox/registries/claim_registry_current.md",
   "origin_id": "CLAIM 036",
   "origin_line": 728,
@@ -1152,8 +1694,22 @@
  },
  {
   "axis": "all",
-  "digest": "d26976806b8d1662",
+  "digest": "a3af83f0c0af1972",
   "kind": "claim",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 042",
+    "PAPER 058",
+    "PAPER 059"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 042",
+    "PAPER 058",
+    "PAPER 059"
+   ]
+  },
   "origin_file": "disease-models/wwox/registries/claim_registry_current.md",
   "origin_id": "CLAIM 037",
   "origin_line": 753,
@@ -1181,8 +1737,20 @@
  },
  {
   "axis": "all",
-  "digest": "b5d4db9e2458cfea",
+  "digest": "5a2480a6cd03adf6",
   "kind": "claim",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 057",
+    "PAPER 059"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 057",
+    "PAPER 059"
+   ]
+  },
   "origin_file": "disease-models/wwox/registries/claim_registry_current.md",
   "origin_id": "CLAIM 038",
   "origin_line": 770,
@@ -1202,8 +1770,20 @@
  },
  {
   "axis": "all",
-  "digest": "590262beb221c874",
+  "digest": "448dcc4a0963089c",
   "kind": "claim",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 020",
+    "PAPER 059"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 020",
+    "PAPER 059"
+   ]
+  },
   "origin_file": "disease-models/wwox/registries/claim_registry_current.md",
   "origin_id": "CLAIM 039",
   "origin_line": 788,
@@ -1221,8 +1801,18 @@
  },
  {
   "axis": "all",
-  "digest": "34ca63ed756194b1",
+  "digest": "b24a182007eaad3f",
   "kind": "claim",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 011"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 011"
+   ]
+  },
   "origin_file": "disease-models/wwox/registries/claim_registry_current.md",
   "origin_id": "CLAIM 040",
   "origin_line": 805,
@@ -1240,8 +1830,18 @@
  },
  {
   "axis": "all",
-  "digest": "94976bc6cbed9cb3",
+  "digest": "2d9d3f5ed772beb4",
   "kind": "claim",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 007"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 007"
+   ]
+  },
   "origin_file": "disease-models/wwox/registries/claim_registry_current.md",
   "origin_id": "CLAIM 041",
   "origin_line": 823,
@@ -1259,8 +1859,22 @@
  },
  {
   "axis": "all",
-  "digest": "329f074a7064cc2d",
+  "digest": "d4d5e89a552d60f5",
   "kind": "claim",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 017",
+    "PAPER 268",
+    "PAPER 269"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 017",
+    "PAPER 268",
+    "PAPER 269"
+   ]
+  },
   "origin_file": "disease-models/wwox/registries/claim_registry_current.md",
   "origin_id": "CLAIM 042",
   "origin_line": 841,
@@ -1291,8 +1905,26 @@
  },
  {
   "axis": "all",
-  "digest": "53076f8cca133c7e",
+  "digest": "344c18c9e3b5c3eb",
   "kind": "claim",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 136",
+    "PAPER 137",
+    "PAPER 138",
+    "PAPER 139",
+    "PAPER 141"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 136",
+    "PAPER 137",
+    "PAPER 138",
+    "PAPER 139",
+    "PAPER 141"
+   ]
+  },
   "origin_file": "disease-models/wwox/registries/claim_registry_current.md",
   "origin_id": "CLAIM 043",
   "origin_line": 932,
@@ -1319,8 +1951,20 @@
  },
  {
   "axis": "all",
-  "digest": "92557a656b2c01f7",
+  "digest": "6b574a4df77d54d8",
   "kind": "claim",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 140",
+    "PAPER 141"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 140",
+    "PAPER 141"
+   ]
+  },
   "origin_file": "disease-models/wwox/registries/claim_registry_current.md",
   "origin_id": "CLAIM 044",
   "origin_line": 948,
@@ -1340,8 +1984,20 @@
  },
  {
   "axis": "all",
-  "digest": "54e41a307a303817",
+  "digest": "4b47f86408574c7b",
   "kind": "claim",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 004",
+    "PAPER 156"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 004",
+    "PAPER 156"
+   ]
+  },
   "origin_file": "disease-models/wwox/registries/claim_registry_current.md",
   "origin_id": "CLAIM 045",
   "origin_line": 964,
@@ -1361,8 +2017,18 @@
  },
  {
   "axis": "all",
-  "digest": "8eca116887e7cb1b",
+  "digest": "a1f74ffab69b73e0",
   "kind": "claim",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 223"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 223"
+   ]
+  },
   "origin_file": "disease-models/wwox/registries/claim_registry_current.md",
   "origin_id": "CLAIM 046",
   "origin_line": 984,
@@ -1380,8 +2046,24 @@
  },
  {
   "axis": "all",
-  "digest": "779344fc23b4ab38",
+  "digest": "93861bc236c333a5",
   "kind": "claim",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 225",
+    "PAPER 226",
+    "PAPER 227",
+    "PAPER 228"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 225",
+    "PAPER 226",
+    "PAPER 227",
+    "PAPER 228"
+   ]
+  },
   "origin_file": "disease-models/wwox/registries/claim_registry_current.md",
   "origin_id": "CLAIM 047",
   "origin_line": 1007,
@@ -1408,12 +2090,24 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "282a5552c5b8f7a3",
+  "digest": "a16a2029da5b8cec",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-002",
    "DL-MECH-005"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-BIO-002",
+    "DL-MECH-005"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-BIO-002",
+    "DL-MECH-005"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-BIO-001",
   "origin_line": 24,
@@ -1455,12 +2149,28 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "4dc499664590bce3",
+  "digest": "29b75f701d1a19e8",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-001",
    "DL-MECH-005"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-BIO-001",
+    "DL-MECH-005",
+    "PAPER 206",
+    "PAPER 217"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-BIO-001",
+    "DL-MECH-005",
+    "PAPER 206",
+    "PAPER 217"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-BIO-002",
   "origin_line": 45,
@@ -1507,11 +2217,21 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "b7802f7ec2ca7fb1",
+  "digest": "e8b13930bfcc283e",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-002"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-BIO-002"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-BIO-002"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-BIO-003",
   "origin_line": 501,
@@ -1558,12 +2278,24 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "8ea93063173ab4dc",
+  "digest": "3f2e712561b66713",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-001",
    "DL-MECH-019"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-BIO-001",
+    "DL-MECH-019"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-BIO-001",
+    "DL-MECH-019"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-BIO-004",
   "origin_line": 509,
@@ -1777,9 +2509,15 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "855629dd12752807",
+  "digest": "3cb3550c41d15a0c",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-BIO-005",
   "origin_line": 398,
@@ -1801,9 +2539,15 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "f24beaa3ff34c20f",
+  "digest": "7ca25b4e02342eaf",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-BIO-006",
   "origin_line": 405,
@@ -1823,11 +2567,21 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "8b462713ed720f34",
+  "digest": "7d6d6af433066e6a",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-020"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-MECH-020"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-MECH-020"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-BIO-007",
   "origin_line": 652,
@@ -2023,13 +2777,27 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "d1df1e5a53c2ee4f",
+  "digest": "1bbb86eb090f0a37",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-005",
    "DL-BIO-007",
    "DL-MECH-034"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-BIO-005",
+    "DL-BIO-007",
+    "DL-MECH-034"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-BIO-005",
+    "DL-BIO-007",
+    "DL-MECH-034"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-BIO-008",
   "origin_line": 797,
@@ -2277,12 +3045,24 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "724b726032353e79",
+  "digest": "43c9cb17f65e7445",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-005",
    "DL-BIO-006"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-BIO-005",
+    "DL-BIO-006"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-BIO-005",
+    "DL-BIO-006"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-BIO-009",
   "origin_line": 946,
@@ -2321,11 +3101,21 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "c6c73fe09609ba38",
+  "digest": "e397c2d5251a8a7c",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-061"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-MECH-061"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-MECH-061"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-BIO-010",
   "origin_line": 58,
@@ -2377,11 +3167,21 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "10809c871c5f70b3",
+  "digest": "b4e3275edd4d7ebc",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-017"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-MECH-017"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-MECH-017"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-BIO-011",
   "origin_line": 1573,
@@ -2591,13 +3391,29 @@
   "claims_named": [
    "CLAIM 030"
   ],
-  "digest": "6e7fe2ab31339d0b",
+  "digest": "061134ff7c3b3f76",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-001",
    "DL-MECH-019",
    "DL-MECH-064"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 030",
+    "DL-BIO-001",
+    "DL-MECH-019",
+    "DL-MECH-064"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 030",
+    "DL-BIO-001",
+    "DL-MECH-019",
+    "DL-MECH-064"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-BIO-012",
   "origin_line": 1798,
@@ -2894,12 +3710,28 @@
    "CLAIM 017",
    "CLAIM 030"
   ],
-  "digest": "b632a5c45ec7d343",
+  "digest": "1c81bf51d156e498",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-066",
    "DL-MECH-067"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 017",
+    "CLAIM 030",
+    "DL-MECH-066",
+    "DL-MECH-067"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 017",
+    "CLAIM 030",
+    "DL-MECH-066",
+    "DL-MECH-067"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-BIO-013",
   "origin_line": 1790,
@@ -3202,11 +4034,27 @@
    "CLAIM 007",
    "CLAIM 030"
   ],
-  "digest": "fb635798ef2aed38",
+  "digest": "1f76d62b84fe3941",
   "kind": "lead",
   "leads_named": [
    "DL-THER-089"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 006",
+    "CLAIM 007",
+    "CLAIM 030",
+    "DL-THER-089"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 006",
+    "CLAIM 007",
+    "CLAIM 030",
+    "DL-THER-089"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-BIO-085",
   "origin_line": 2407,
@@ -3371,7 +4219,7 @@
   "claims_named": [
    "CLAIM 030"
   ],
-  "digest": "89044573c6d67404",
+  "digest": "7ca1a7a1e27c0d9b",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-001",
@@ -3390,6 +4238,47 @@
    "DL-REPO-001",
    "DL-THER-081"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 030",
+    "DL-BIO-001",
+    "DL-BIO-085",
+    "DL-MECH-001",
+    "DL-MECH-017",
+    "DL-MECH-055",
+    "DL-MECH-086",
+    "DL-META-088",
+    "DL-META-091",
+    "DL-METH-085",
+    "DL-METH-091",
+    "DL-MOL-001",
+    "DL-MOL-006",
+    "DL-MOL-008",
+    "DL-REPO-001",
+    "DL-THER-081"
+   ],
+   "ids_not_found_in_registry": [
+    "DL-METH-085",
+    "DL-METH-091",
+    "DL-THER-081"
+   ],
+   "ids_reaching_a_pmid": [
+    "CLAIM 030",
+    "DL-BIO-001",
+    "DL-BIO-085",
+    "DL-MECH-001",
+    "DL-MECH-017",
+    "DL-MECH-055",
+    "DL-MECH-086",
+    "DL-META-088",
+    "DL-META-091",
+    "DL-MOL-001",
+    "DL-MOL-006",
+    "DL-MOL-008",
+    "DL-REPO-001"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-BIO-090",
   "origin_line": 2487,
@@ -3744,11 +4633,21 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "533a6cb69ada05a0",
+  "digest": "6c0f5c89d5f52d81",
   "kind": "lead",
   "leads_named": [
    "DL-METH-094"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-METH-094"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-METH-094"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-BIO-095",
   "origin_line": 3407,
@@ -4095,9 +4994,25 @@
    "CLAIM 009",
    "CLAIM 025"
   ],
-  "digest": "6fcda61fd5774ff3",
+  "digest": "03d0221c06c99c69",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 009",
+    "CLAIM 025",
+    "PAPER 061",
+    "PAPER 062"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 009",
+    "CLAIM 025",
+    "PAPER 061",
+    "PAPER 062"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-BIOM-014",
   "origin_line": 3464,
@@ -4154,12 +5069,24 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "361cc67fcc6026e5",
+  "digest": "e313435f137a6cb0",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-002",
    "DL-MECH-003"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-MECH-002",
+    "DL-MECH-003"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-MECH-002",
+    "DL-MECH-003"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-001",
   "origin_line": 152,
@@ -4180,12 +5107,24 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "2764ce7c30c76acd",
+  "digest": "39f1a38c418521e6",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-001",
    "DL-MOL-001"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-MECH-001",
+    "DL-MOL-001"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-MECH-001",
+    "DL-MOL-001"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-002",
   "origin_line": 159,
@@ -4212,11 +5151,21 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "ecf3066089946b0f",
+  "digest": "ca7152bb0976f972",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-001"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-MECH-001"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-MECH-001"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-003",
   "origin_line": 166,
@@ -4239,9 +5188,15 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "80c3440c11454646",
+  "digest": "8883df690b6716cc",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-004",
   "origin_line": 172,
@@ -4259,13 +5214,27 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "49ee82d73225c7e5",
+  "digest": "0dd2b604582adad5",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-001",
    "DL-BIO-002",
    "DL-MECH-006"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-BIO-001",
+    "DL-BIO-002",
+    "DL-MECH-006"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-BIO-001",
+    "DL-BIO-002",
+    "DL-MECH-006"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-005",
   "origin_line": 178,
@@ -4321,12 +5290,26 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "2bb0c5ae3588ff44",
+  "digest": "900d6e97935d4f57",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-001",
    "DL-MECH-005"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-BIO-001",
+    "DL-MECH-005",
+    "PAPER 030"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-BIO-001",
+    "DL-MECH-005",
+    "PAPER 030"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-006",
   "origin_line": 185,
@@ -4385,7 +5368,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "c0233408e5a4196e",
+  "digest": "5eb1cd4da2d24333",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-005",
@@ -4394,6 +5377,24 @@
    "DL-MOL-003",
    "DL-MOL-005"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-MECH-005",
+    "DL-MECH-006",
+    "DL-MOL-001",
+    "DL-MOL-003",
+    "DL-MOL-005"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-MECH-005",
+    "DL-MECH-006",
+    "DL-MOL-001",
+    "DL-MOL-003",
+    "DL-MOL-005"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-007",
   "origin_line": 192,
@@ -4538,13 +5539,27 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "60eb8bda4acc953e",
+  "digest": "18de30a428674915",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-001",
    "DL-MECH-006",
    "DL-MOL-003"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-BIO-001",
+    "DL-MECH-006",
+    "DL-MOL-003"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-BIO-001",
+    "DL-MECH-006",
+    "DL-MOL-003"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-008",
   "origin_line": 200,
@@ -4682,12 +5697,26 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "f65ad3feca11e6fb",
+  "digest": "2963f10d81b2d39d",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-001",
    "DL-MOL-005"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-BIO-001",
+    "DL-MOL-005",
+    "PAPER 029"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-BIO-001",
+    "DL-MOL-005",
+    "PAPER 029"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-009",
   "origin_line": 207,
@@ -4829,13 +5858,29 @@
   "claims_named": [
    "CLAIM 004"
   ],
-  "digest": "2b19a7193f26a348",
+  "digest": "2bfc3699006aeffe",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-005",
    "DL-MECH-007",
    "DL-MOL-005"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 004",
+    "DL-MECH-005",
+    "DL-MECH-007",
+    "DL-MOL-005"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 004",
+    "DL-MECH-005",
+    "DL-MECH-007",
+    "DL-MOL-005"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-010",
   "origin_line": 214,
@@ -4998,11 +6043,23 @@
   "claims_named": [
    "CLAIM 013"
   ],
-  "digest": "17eae961d05eabec",
+  "digest": "23b1b9be0e614b37",
   "kind": "lead",
   "leads_named": [
    "DL-MOL-005"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 013",
+    "DL-MOL-005"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 013",
+    "DL-MOL-005"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-011",
   "origin_line": 221,
@@ -5120,13 +6177,35 @@
   "claims_named": [
    "CLAIM 006"
   ],
-  "digest": "fe6ec17570250e51",
+  "digest": "ce6b2c5a4e2859f5",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-008",
    "DL-MECH-010",
    "DL-REPO-002"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 006",
+    "DL-MECH-008",
+    "DL-MECH-010",
+    "DL-REPO-002",
+    "PAPER 101",
+    "PAPER 105",
+    "PAPER 106"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 006",
+    "DL-MECH-008",
+    "DL-MECH-010",
+    "DL-REPO-002",
+    "PAPER 101",
+    "PAPER 105",
+    "PAPER 106"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-012",
   "origin_line": 231,
@@ -5317,11 +6396,21 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "1392e462cb2762b3",
+  "digest": "edd1ba111c42e351",
   "kind": "lead",
   "leads_named": [
    "DL-MOL-001"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-MOL-001"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-MOL-001"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-013",
   "origin_line": 242,
@@ -5346,11 +6435,21 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "486a60b65a1081d1",
+  "digest": "ecfed57e6e5c0a3c",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-012"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-MECH-012"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-MECH-012"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-014",
   "origin_line": 252,
@@ -5521,11 +6620,21 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "62b2b04718e8b3db",
+  "digest": "caf4bc70c55b85c8",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-012"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-MECH-012"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-MECH-012"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-015",
   "origin_line": 260,
@@ -5696,9 +6805,15 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "b4a4d2c4abf15fad",
+  "digest": "07386524c0e2b636",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-016",
   "origin_line": 268,
@@ -5719,11 +6834,23 @@
   "claims_named": [
    "CLAIM 007"
   ],
-  "digest": "660fb4812b33f863",
+  "digest": "1c1e197709fb27c3",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-033"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 007",
+    "DL-MECH-033"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 007",
+    "DL-MECH-033"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-017",
   "origin_line": 364,
@@ -5934,13 +7061,31 @@
   "claims_named": [
    "CLAIM 026"
   ],
-  "digest": "00e9b66bc9ace784",
+  "digest": "ff92db6eb745b01f",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-005",
    "DL-MECH-008",
    "DL-MOL-003"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 026",
+    "DL-MECH-005",
+    "DL-MECH-008",
+    "DL-MOL-003",
+    "PAPER 103"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 026",
+    "DL-MECH-005",
+    "DL-MECH-008",
+    "DL-MOL-003",
+    "PAPER 103"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-018",
   "origin_line": 287,
@@ -6109,12 +7254,28 @@
   "claims_named": [
    "CLAIM 030"
   ],
-  "digest": "a999577821ac867f",
+  "digest": "b17677d2d57277e0",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-001",
    "DL-MECH-017"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 030",
+    "DL-BIO-001",
+    "DL-MECH-017",
+    "PAPER 056"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 030",
+    "DL-BIO-001",
+    "DL-MECH-017",
+    "PAPER 056"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-019",
   "origin_line": 453,
@@ -6320,12 +7481,24 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "c59e218b792ed261",
+  "digest": "194739eb2d79fda2",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-021",
    "DL-MECH-095"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-MECH-021",
+    "DL-MECH-095"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-MECH-021",
+    "DL-MECH-095"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-020",
   "origin_line": 471,
@@ -6500,11 +7673,21 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "73d45502734bac95",
+  "digest": "3a6424132c5eadb0",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-020"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-MECH-020"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-MECH-020"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-021",
   "origin_line": 530,
@@ -6704,12 +7887,32 @@
    "CLAIM 019",
    "CLAIM 039"
   ],
-  "digest": "464db87a0d556784",
+  "digest": "7c033219fa8db83b",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-002",
    "DL-MOL-007"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 019",
+    "CLAIM 039",
+    "DL-BIO-002",
+    "DL-MOL-007",
+    "PAPER 042",
+    "PAPER 171"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 019",
+    "CLAIM 039",
+    "DL-BIO-002",
+    "DL-MOL-007",
+    "PAPER 042",
+    "PAPER 171"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-022",
   "origin_line": 552,
@@ -6799,9 +8002,15 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "451b5fb60726da6a",
+  "digest": "808be99513295ac6",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-023",
   "origin_line": 412,
@@ -6823,9 +8032,15 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "c4ba8b346391c291",
+  "digest": "ef36e298169e5e90",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-024",
   "origin_line": 419,
@@ -6850,9 +8065,19 @@
   "claims_named": [
    "CLAIM 025"
   ],
-  "digest": "9139ccd7e98a8d1b",
+  "digest": "1a533ef592091379",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 025"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 025"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-025",
   "origin_line": 427,
@@ -6882,13 +8107,27 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "40799d7a822b1b5b",
+  "digest": "1a81456d9154a630",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-002",
    "DL-BIO-003",
    "DL-MECH-021"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-BIO-002",
+    "DL-BIO-003",
+    "DL-MECH-021"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-BIO-002",
+    "DL-BIO-003",
+    "DL-MECH-021"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-026",
   "origin_line": 614,
@@ -7088,11 +8327,21 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "9251e05d373aa1c5",
+  "digest": "4430d487ea501466",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-022"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-MECH-022"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-MECH-022"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-027",
   "origin_line": 625,
@@ -7189,12 +8438,28 @@
   "claims_named": [
    "CLAIM 019"
   ],
-  "digest": "8cbdbc395b74973d",
+  "digest": "d9054c91ce05db8b",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-019",
    "DL-MECH-022"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 019",
+    "DL-MECH-019",
+    "DL-MECH-022",
+    "PAPER 007"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 019",
+    "DL-MECH-019",
+    "DL-MECH-022",
+    "PAPER 007"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-028",
   "origin_line": 643,
@@ -7425,7 +8690,7 @@
   "claims_named": [
    "CLAIM 019"
   ],
-  "digest": "ceeb83f5ca979c5e",
+  "digest": "842ad5097a7d404c",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-001",
@@ -7433,6 +8698,24 @@
    "DL-MECH-019",
    "DL-MECH-030"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 019",
+    "DL-BIO-001",
+    "DL-BIO-003",
+    "DL-MECH-019",
+    "DL-MECH-030"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 019",
+    "DL-BIO-001",
+    "DL-BIO-003",
+    "DL-MECH-019",
+    "DL-MECH-030"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-029",
   "origin_line": 685,
@@ -7656,12 +8939,28 @@
   "claims_named": [
    "CLAIM 019"
   ],
-  "digest": "a605aac89933bfa4",
+  "digest": "4f60a2f09fd5ebe2",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-022",
    "DL-MECH-029"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 019",
+    "DL-MECH-022",
+    "DL-MECH-029",
+    "PAPER 018"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 019",
+    "DL-MECH-022",
+    "DL-MECH-029",
+    "PAPER 018"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-030",
   "origin_line": 711,
@@ -7881,11 +9180,23 @@
   "claims_named": [
    "CLAIM 011"
   ],
-  "digest": "ba225941fb8019b9",
+  "digest": "5b96d880caf80218",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-027"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 011",
+    "DL-MECH-027"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 011",
+    "DL-MECH-027"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-031",
   "origin_line": 729,
@@ -8001,11 +9312,21 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "42d0d900feeed3db",
+  "digest": "f75112d774948017",
   "kind": "lead",
   "leads_named": [
    "DL-MOL-001"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-MOL-001"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-MOL-001"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-032",
   "origin_line": 385,
@@ -8037,12 +9358,35 @@
    "CLAIM 019",
    "CLAIM 030"
   ],
-  "digest": "2ae7983bcd9959bd",
+  "digest": "0a7e4d7a98afba9a",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-026",
    "DL-MECH-037"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [
+    "CLAIM 008"
+   ],
+   "ids_named": [
+    "CLAIM 007",
+    "CLAIM 008",
+    "CLAIM 019",
+    "CLAIM 030",
+    "DL-MECH-026",
+    "DL-MECH-037",
+    "PAPER 098"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 007",
+    "CLAIM 019",
+    "CLAIM 030",
+    "DL-MECH-026",
+    "DL-MECH-037",
+    "PAPER 098"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-033",
   "origin_line": 756,
@@ -8245,12 +9589,24 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "4441402abdcb9085",
+  "digest": "5073057da14a4424",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-008",
    "DL-MECH-020"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-BIO-008",
+    "DL-MECH-020"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-BIO-008",
+    "DL-MECH-020"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-034",
   "origin_line": 785,
@@ -8464,9 +9820,19 @@
   "claims_named": [
    "CLAIM 001"
   ],
-  "digest": "641ee66650fb0a05",
+  "digest": "a348a206342a7213",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 001"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 001"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-035",
   "origin_line": 808,
@@ -8527,9 +9893,15 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "f7bc31c2c66db1a2",
+  "digest": "52db1dcec3b91070",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-036",
   "origin_line": 826,
@@ -8550,13 +9922,31 @@
    "CLAIM 019",
    "CLAIM 030"
   ],
-  "digest": "d805ea2579f4b3bb",
+  "digest": "332c1da6f315fe48",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-026",
    "DL-MECH-029",
    "DL-MOL-010"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 019",
+    "CLAIM 030",
+    "DL-MECH-026",
+    "DL-MECH-029",
+    "DL-MOL-010"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 019",
+    "CLAIM 030",
+    "DL-MECH-026",
+    "DL-MECH-029",
+    "DL-MOL-010"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-037",
   "origin_line": 847,
@@ -8814,11 +10204,23 @@
   "claims_named": [
    "CLAIM 001"
   ],
-  "digest": "0368bcbeaf6385ff",
+  "digest": "828252adf5486331",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-035"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 001",
+    "DL-MECH-035"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 001",
+    "DL-MECH-035"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-038",
   "origin_line": 894,
@@ -8888,11 +10290,21 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "08a272605ded318e",
+  "digest": "ede296bbe046a06b",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-030"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-MECH-030"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-MECH-030"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-039",
   "origin_line": 907,
@@ -9104,12 +10516,24 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "ca9418a6aeb69d09",
+  "digest": "9e4b5b437d8f3713",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-034",
    "DL-MECH-037"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-MECH-034",
+    "DL-MECH-037"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-MECH-034",
+    "DL-MECH-037"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-040",
   "origin_line": 918,
@@ -9352,11 +10776,21 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "221bfb03a930c517",
+  "digest": "89bddb4808468ce2",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-042"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-MECH-042"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-MECH-042"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-041",
   "origin_line": 927,
@@ -9379,9 +10813,15 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "128eee65b2f454ef",
+  "digest": "1151a5e6ac772a56",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-042",
   "origin_line": 934,
@@ -9401,11 +10841,23 @@
   "claims_named": [
    "CLAIM 030"
   ],
-  "digest": "9789e1bf7d57bcc3",
+  "digest": "dd7b360f76288c77",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-034"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 030",
+    "DL-MECH-034"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 030",
+    "DL-MECH-034"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-043",
   "origin_line": 987,
@@ -9620,12 +11072,26 @@
   "claims_named": [
    "CLAIM 019"
   ],
-  "digest": "e7dfae1b158eb3fa",
+  "digest": "d06d5f9b13837fd0",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-002",
    "DL-BIO-003"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 019",
+    "DL-BIO-002",
+    "DL-BIO-003"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 019",
+    "DL-BIO-002",
+    "DL-BIO-003"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-044",
   "origin_line": 1000,
@@ -9706,12 +11172,24 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "7f060c92b8ac2aca",
+  "digest": "fc647a6f62c7b562",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-003",
    "DL-MECH-027"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-BIO-003",
+    "DL-MECH-027"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-BIO-003",
+    "DL-MECH-027"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-045",
   "origin_line": 1021,
@@ -9821,12 +11299,28 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "e8b12567bd2e9837",
+  "digest": "6f1963610fc6c46b",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-039",
    "DL-MOL-011"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-MECH-039",
+    "DL-MOL-011",
+    "PAPER 098",
+    "PAPER 107"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-MECH-039",
+    "DL-MOL-011",
+    "PAPER 098",
+    "PAPER 107"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-046",
   "origin_line": 1068,
@@ -10063,9 +11557,15 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "c1359db587762b33",
+  "digest": "517e41cb100659f2",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-047",
   "origin_line": 1108,
@@ -10088,11 +11588,25 @@
   "claims_named": [
    "CLAIM 019"
   ],
-  "digest": "3120813915f9206c",
+  "digest": "b6a0add2873df283",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-047"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 019",
+    "DL-MECH-047",
+    "PAPER 030"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 019",
+    "DL-MECH-047",
+    "PAPER 030"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-048",
   "origin_line": 1143,
@@ -10147,12 +11661,28 @@
    "CLAIM 019",
    "CLAIM 030"
   ],
-  "digest": "11af3c2b6d32cebe",
+  "digest": "39bda968a12f8fe2",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-017",
    "DL-MECH-047"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 019",
+    "CLAIM 030",
+    "DL-MECH-017",
+    "DL-MECH-047"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 019",
+    "CLAIM 030",
+    "DL-MECH-017",
+    "DL-MECH-047"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-049",
   "origin_line": 1187,
@@ -10369,11 +11899,21 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "a9e945baf6965653",
+  "digest": "c26a2cb46d5660b5",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-047"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-MECH-047"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-MECH-047"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-050",
   "origin_line": 1231,
@@ -10399,11 +11939,21 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "f5108b4e33505796",
+  "digest": "ee8105efdf78ffa3",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-050"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-MECH-050"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-MECH-050"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-051",
   "origin_line": 1278,
@@ -10426,9 +11976,15 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "dfafaa21ff15c219",
+  "digest": "a009d63d37d5db76",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-052",
   "origin_line": 1325,
@@ -10448,11 +12004,27 @@
    "CLAIM 019",
    "CLAIM 033"
   ],
-  "digest": "7cf6efdd940b9ef9",
+  "digest": "a4466cc151622436",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-045"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 019",
+    "CLAIM 033",
+    "DL-MECH-045",
+    "PAPER 134"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 019",
+    "CLAIM 033",
+    "DL-MECH-045",
+    "PAPER 134"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-053",
   "origin_line": 1372,
@@ -10589,9 +12161,15 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "0955ba10ab42e747",
+  "digest": "4067c70a3d34cc6d",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-054",
   "origin_line": 1395,
@@ -10610,9 +12188,15 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "af9e719e221257e4",
+  "digest": "be44a2ead0c9e3d0",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-055",
   "origin_line": 1414,
@@ -10631,9 +12215,15 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "ef0634233e040f3e",
+  "digest": "1972dd03da30cebc",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-056",
   "origin_line": 1433,
@@ -10654,9 +12244,15 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "389bf36f0a0fb5f2",
+  "digest": "0ce8eb0ec384fdb1",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-057",
   "origin_line": 1451,
@@ -10674,9 +12270,15 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "359edb812cca9ec6",
+  "digest": "3539d531fdee3099",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-058",
   "origin_line": 1469,
@@ -10696,9 +12298,21 @@
   "claims_named": [
    "CLAIM 031"
   ],
-  "digest": "397b3a5ab59e2248",
+  "digest": "462017127fb2a8a4",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 031",
+    "PAPER 173"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 031",
+    "PAPER 173"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-059",
   "origin_line": 1487,
@@ -10739,9 +12353,19 @@
   "claims_named": [
    "CLAIM 031"
   ],
-  "digest": "10ae49b53bdfa6d0",
+  "digest": "ce14018f7a966212",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 031"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 031"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-060",
   "origin_line": 1507,
@@ -10780,9 +12404,21 @@
    "CLAIM 009",
    "CLAIM 028"
   ],
-  "digest": "876d6fac1a41efac",
+  "digest": "70e55b862d29312f",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 009",
+    "CLAIM 028"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 009",
+    "CLAIM 028"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-061",
   "origin_line": 1527,
@@ -10835,11 +12471,21 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "c63a2da6fdf2f2a2",
+  "digest": "43bbc07a7136f0e0",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-061"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-MECH-061"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-MECH-061"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-062",
   "origin_line": 1547,
@@ -10893,11 +12539,25 @@
    "CLAIM 024",
    "CLAIM 028"
   ],
-  "digest": "aa1279d5488a9527",
+  "digest": "0e0e5d5ac14aaffc",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-011"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 024",
+    "CLAIM 028",
+    "DL-BIO-011"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 024",
+    "CLAIM 028",
+    "DL-BIO-011"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-063",
   "origin_line": 1586,
@@ -11110,7 +12770,7 @@
    "CLAIM 028",
    "CLAIM 030"
   ],
-  "digest": "f908d4bcb722079c",
+  "digest": "b32542f8b3cef999",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-012",
@@ -11118,6 +12778,28 @@
    "DL-MECH-065",
    "DL-MECH-066"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 016",
+    "CLAIM 028",
+    "CLAIM 030",
+    "DL-BIO-012",
+    "DL-MECH-019",
+    "DL-MECH-065",
+    "DL-MECH-066"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 016",
+    "CLAIM 028",
+    "CLAIM 030",
+    "DL-BIO-012",
+    "DL-MECH-019",
+    "DL-MECH-065",
+    "DL-MECH-066"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-064",
   "origin_line": 1623,
@@ -11359,12 +13041,24 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "1630fa5215c48491",
+  "digest": "acdc5b0ab5217e0d",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-019",
    "DL-MECH-064"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-MECH-019",
+    "DL-MECH-064"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-MECH-019",
+    "DL-MECH-064"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-065",
   "origin_line": 1635,
@@ -11643,11 +13337,21 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "d7e40fa4ab803178",
+  "digest": "7c9a67674da5adf4",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-064"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-MECH-064"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-MECH-064"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-066",
   "origin_line": 1646,
@@ -11869,12 +13573,24 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "d3ea827c385e6368",
+  "digest": "65a213e6b9fcf6e6",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-064",
    "DL-MECH-066"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-MECH-064",
+    "DL-MECH-066"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-MECH-064",
+    "DL-MECH-066"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-067",
   "origin_line": 1714,
@@ -12157,7 +13873,7 @@
   "claims_named": [
    "CLAIM 016"
   ],
-  "digest": "f06180f9663aba59",
+  "digest": "2b8b392cedd2c6ed",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-013",
@@ -12165,6 +13881,24 @@
    "DL-MECH-066",
    "DL-MECH-067"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 016",
+    "DL-BIO-013",
+    "DL-MECH-064",
+    "DL-MECH-066",
+    "DL-MECH-067"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 016",
+    "DL-BIO-013",
+    "DL-MECH-064",
+    "DL-MECH-066",
+    "DL-MECH-067"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-068",
   "origin_line": 1726,
@@ -12511,7 +14245,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "8323fc4a489d0696",
+  "digest": "d32013588969e8a0",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-002",
@@ -12519,6 +14253,22 @@
    "DL-MECH-054",
    "DL-MECH-055"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-BIO-002",
+    "DL-MECH-045",
+    "DL-MECH-054",
+    "DL-MECH-055"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-BIO-002",
+    "DL-MECH-045",
+    "DL-MECH-054",
+    "DL-MECH-055"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-069",
   "origin_line": 1827,
@@ -12644,12 +14394,24 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "06388087cda50f4b",
+  "digest": "0a3684e654f40a02",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-054",
    "DL-MECH-069"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-MECH-054",
+    "DL-MECH-069"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-MECH-054",
+    "DL-MECH-069"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-069b",
   "origin_line": 1845,
@@ -12778,7 +14540,7 @@
    "CLAIM 005",
    "CLAIM 026"
   ],
-  "digest": "299f182b2013b3b6",
+  "digest": "f64a925aeea86eb9",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-010",
@@ -12786,6 +14548,30 @@
    "DL-MECH-018",
    "DL-MECH-031"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 003",
+    "CLAIM 004",
+    "CLAIM 005",
+    "CLAIM 026",
+    "DL-MECH-010",
+    "DL-MECH-012",
+    "DL-MECH-018",
+    "DL-MECH-031"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 003",
+    "CLAIM 004",
+    "CLAIM 005",
+    "CLAIM 026",
+    "DL-MECH-010",
+    "DL-MECH-012",
+    "DL-MECH-018",
+    "DL-MECH-031"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-070",
   "origin_line": 1860,
@@ -13099,13 +14885,33 @@
    "CLAIM 015",
    "CLAIM 032"
   ],
-  "digest": "fa2661288227aa36",
+  "digest": "f3dbbb831c12a6d6",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-026",
    "DL-MECH-027",
    "DL-MECH-031"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 014",
+    "CLAIM 015",
+    "CLAIM 032",
+    "DL-MECH-026",
+    "DL-MECH-027",
+    "DL-MECH-031"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 014",
+    "CLAIM 015",
+    "CLAIM 032",
+    "DL-MECH-026",
+    "DL-MECH-027",
+    "DL-MECH-031"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-071",
   "origin_line": 1896,
@@ -13422,12 +15228,28 @@
   "claims_named": [
    "CLAIM 005"
   ],
-  "digest": "d3b463fe02797d3c",
+  "digest": "95e545e1e8da23c4",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-073",
    "DL-MECH-074"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 005",
+    "DL-MECH-073",
+    "DL-MECH-074",
+    "PAPER 006"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 005",
+    "DL-MECH-073",
+    "DL-MECH-074",
+    "PAPER 006"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-072",
   "origin_line": 1936,
@@ -13503,12 +15325,26 @@
   "claims_named": [
    "CLAIM 005"
   ],
-  "digest": "9cebb1f9a45c6368",
+  "digest": "bf99e8cc30998889",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-072",
    "DL-MECH-074"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 005",
+    "DL-MECH-072",
+    "DL-MECH-074"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 005",
+    "DL-MECH-072",
+    "DL-MECH-074"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-073",
   "origin_line": 1999,
@@ -13581,12 +15417,26 @@
   "claims_named": [
    "CLAIM 005"
   ],
-  "digest": "e5f8e4f3332a7247",
+  "digest": "6b3a59c80a0d3fc3",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-072",
    "DL-MECH-073"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 005",
+    "DL-MECH-072",
+    "DL-MECH-073"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 005",
+    "DL-MECH-072",
+    "DL-MECH-073"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-074",
   "origin_line": 2042,
@@ -13685,13 +15535,33 @@
    "CLAIM 005",
    "CLAIM 037"
   ],
-  "digest": "07585a882d0c6606",
+  "digest": "5e642e17fe79a575",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-072",
    "DL-MECH-073",
    "DL-MECH-076"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 005",
+    "CLAIM 037",
+    "DL-MECH-072",
+    "DL-MECH-073",
+    "DL-MECH-076",
+    "PAPER 042"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 005",
+    "CLAIM 037",
+    "DL-MECH-072",
+    "DL-MECH-073",
+    "DL-MECH-076",
+    "PAPER 042"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-075",
   "origin_line": 2085,
@@ -13782,7 +15652,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "972b51899304495a",
+  "digest": "c68fb1e490a83638",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-073",
@@ -13791,6 +15661,24 @@
    "DL-MECH-077",
    "DL-MECH-078"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-MECH-073",
+    "DL-MECH-074",
+    "DL-MECH-075",
+    "DL-MECH-077",
+    "DL-MECH-078"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-MECH-073",
+    "DL-MECH-074",
+    "DL-MECH-075",
+    "DL-MECH-077",
+    "DL-MECH-078"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-076",
   "origin_line": 2151,
@@ -13887,13 +15775,27 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "843fef5b2d862be6",
+  "digest": "24faebed2e790e45",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-074",
    "DL-MECH-076",
    "DL-MECH-078"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-MECH-074",
+    "DL-MECH-076",
+    "DL-MECH-078"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-MECH-074",
+    "DL-MECH-076",
+    "DL-MECH-078"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-077",
   "origin_line": 2193,
@@ -13983,13 +15885,27 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "31607909ebe69184",
+  "digest": "b2325131ec8bf562",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-075",
    "DL-MECH-076",
    "DL-MECH-077"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-MECH-075",
+    "DL-MECH-076",
+    "DL-MECH-077"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-MECH-075",
+    "DL-MECH-076",
+    "DL-MECH-077"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-078",
   "origin_line": 2236,
@@ -14088,12 +16004,24 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "fb7e9c2ee47b709b",
+  "digest": "5572788f46f21f64",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-048",
    "DL-METH-084"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-MECH-048",
+    "DL-METH-084"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-MECH-048",
+    "DL-METH-084"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-083",
   "origin_line": 2316,
@@ -14236,11 +16164,21 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "71404d99ee27f8d1",
+  "digest": "f9817c8d04cad9e8",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-087"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-MECH-087"
+   ],
+   "ids_not_found_in_registry": [
+    "DL-MECH-087"
+   ],
+   "ids_reaching_a_pmid": []
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-086",
   "origin_line": 2428,
@@ -14258,12 +16196,24 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "d6a9743f068dacbb",
+  "digest": "3cb85c127955b764",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-090",
    "DL-META-091"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-BIO-090",
+    "DL-META-091"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-BIO-090",
+    "DL-META-091"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-092",
   "origin_line": 2832,
@@ -14636,7 +16586,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "64aef53c3216b9cd",
+  "digest": "54b8444a84311719",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-008",
@@ -14645,6 +16595,24 @@
    "DL-MECH-034",
    "DL-META-091"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-BIO-008",
+    "DL-BIO-085",
+    "DL-MECH-020",
+    "DL-MECH-034",
+    "DL-META-091"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-BIO-008",
+    "DL-BIO-085",
+    "DL-MECH-020",
+    "DL-MECH-034",
+    "DL-META-091"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-094",
   "origin_line": 2890,
@@ -15044,7 +17012,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "ecec294edb3f43e7",
+  "digest": "ce2e3d179ffd2309",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-007",
@@ -15052,6 +17020,22 @@
    "DL-MECH-028",
    "DL-MOL-009"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-BIO-007",
+    "DL-MECH-020",
+    "DL-MECH-028",
+    "DL-MOL-009"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-BIO-007",
+    "DL-MECH-020",
+    "DL-MECH-028",
+    "DL-MOL-009"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-095",
   "origin_line": 3282,
@@ -15269,11 +17253,21 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "27471b9acde851a0",
+  "digest": "30bff59fd581e51c",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-094"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-MECH-094"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-MECH-094"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-096",
   "origin_line": 3149,
@@ -15598,12 +17592,26 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "551527a06dd3ac9e",
+  "digest": "f1fc4576973e0d0f",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-034",
    "DL-MECH-094"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-MECH-034",
+    "DL-MECH-094",
+    "PAPER 039"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-MECH-034",
+    "DL-MECH-094",
+    "PAPER 039"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-098",
   "origin_line": 3298,
@@ -15945,9 +17953,19 @@
   "claims_named": [
    "CLAIM 036"
   ],
-  "digest": "9f8e94554d99fecc",
+  "digest": "dc73b715189307c0",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 036"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 036"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-099",
   "origin_line": 3344,
@@ -15998,9 +18016,19 @@
   "claims_named": [
    "CLAIM 036"
   ],
-  "digest": "8c31ceaf2c0ae1c1",
+  "digest": "8978106233f8b713",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 036"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 036"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-100",
   "origin_line": 3353,
@@ -16050,9 +18078,19 @@
   "claims_named": [
    "CLAIM 032"
   ],
-  "digest": "13ef6b4cb46e6885",
+  "digest": "37cfa75ca7786fe9",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 032"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 032"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-101",
   "origin_line": 3363,
@@ -16167,9 +18205,21 @@
    "CLAIM 032",
    "CLAIM 036"
   ],
-  "digest": "9f61023ef9dc987d",
+  "digest": "d7ded92a6ddf84b1",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 032",
+    "CLAIM 036"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 032",
+    "CLAIM 036"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-102",
   "origin_line": 3373,
@@ -16309,9 +18359,15 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "41b08abb13cc73bd",
+  "digest": "c0407da190bf278e",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-103",
   "origin_line": 3315,
@@ -16333,11 +18389,21 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "2f5e449fa95cd8ed",
+  "digest": "403e6491b1ee79fa",
   "kind": "lead",
   "leads_named": [
    "DL-THER-095"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-THER-095"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-THER-095"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-104",
   "origin_line": 3332,
@@ -16681,12 +18747,26 @@
   "claims_named": [
    "CLAIM 019"
   ],
-  "digest": "91fe80a546deee8c",
+  "digest": "c6971d26e03ca243",
   "kind": "lead",
   "leads_named": [
    "DL-METH-094",
    "DL-METH-107"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 019",
+    "DL-METH-094",
+    "DL-METH-107"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 019",
+    "DL-METH-094",
+    "DL-METH-107"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-106",
   "origin_line": 3484,
@@ -17039,9 +19119,15 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "9a07ebbc6f6388e0",
+  "digest": "367cc0e9f77304ad",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-107",
   "origin_line": 3515,
@@ -17065,11 +19151,21 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "45da296aca1a13be",
+  "digest": "2dfa61c8b378f86a",
   "kind": "lead",
   "leads_named": [
    "DL-METH-108"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-METH-108"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-METH-108"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-111",
   "origin_line": 3566,
@@ -17099,11 +19195,27 @@
    "CLAIM 007",
    "CLAIM 024"
   ],
-  "digest": "51d8b2cc68ac245f",
+  "digest": "e860d099f352e04f",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-111"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 002",
+    "CLAIM 007",
+    "CLAIM 024",
+    "DL-MECH-111"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 002",
+    "CLAIM 007",
+    "CLAIM 024",
+    "DL-MECH-111"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-113",
   "origin_line": 3594,
@@ -17167,11 +19279,23 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "3b764cc7fe14c9f4",
+  "digest": "a1dbbbd5231aec78",
   "kind": "lead",
   "leads_named": [
    "DL-METH-120"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-METH-120",
+    "PAPER 216"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-METH-120",
+    "PAPER 216"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-114",
   "origin_line": 3743,
@@ -17249,11 +19373,23 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "c448d135f6ff0603",
+  "digest": "4edc0aeba651f1dc",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-116"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-MECH-116",
+    "PAPER 245"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-MECH-116",
+    "PAPER 245"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-115",
   "origin_line": 3787,
@@ -17312,12 +19448,24 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "c75b36ce317b9623",
+  "digest": "8cb4607dca52c652",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-001",
    "DL-MECH-115"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-BIO-001",
+    "DL-MECH-115"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-BIO-001",
+    "DL-MECH-115"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-116",
   "origin_line": 3799,
@@ -17370,9 +19518,21 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "e745845e8a7970ce",
+  "digest": "813d3e9ad4eec0a9",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 262",
+    "PAPER 266"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 262",
+    "PAPER 266"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-117",
   "origin_line": 3813,
@@ -17404,9 +19564,21 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "60159ef47afc9527",
+  "digest": "963e4dcbc6d88ba2",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 263",
+    "PAPER 264"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 263",
+    "PAPER 264"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-118",
   "origin_line": 3823,
@@ -17436,9 +19608,23 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "15488c24e7d7caa1",
+  "digest": "f5ffe81bf7c75c49",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 263",
+    "PAPER 264",
+    "PAPER 265"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 263",
+    "PAPER 264",
+    "PAPER 265"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-119",
   "origin_line": 3833,
@@ -17474,9 +19660,19 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "abdbc40732f7a8a5",
+  "digest": "fb75935d75ec68a0",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 273"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 273"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-120",
   "origin_line": 3843,
@@ -17503,9 +19699,23 @@
   "claims_named": [
    "CLAIM 042"
   ],
-  "digest": "7878d00ec930c4b4",
+  "digest": "2f47088e45b2a808",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 042",
+    "PAPER 268",
+    "PAPER 269"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 042",
+    "PAPER 268",
+    "PAPER 269"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-121",
   "origin_line": 3853,
@@ -17541,9 +19751,19 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "1238a0a6aebf3b81",
+  "digest": "0029f93cd47821b3",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 275"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 275"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-122",
   "origin_line": 3863,
@@ -17570,9 +19790,19 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "aaacf7c14fa0fe17",
+  "digest": "de41d6f468129782",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 276"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 276"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-123",
   "origin_line": 3873,
@@ -17598,9 +19828,21 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "fa675845ed5ad85c",
+  "digest": "3b8b2623736f9c4d",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 276",
+    "PAPER 277"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 276",
+    "PAPER 277"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-124",
   "origin_line": 3883,
@@ -17634,9 +19876,19 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "03a8fa5bc341f5d9",
+  "digest": "0a216b595a7617d5",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 283"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 283"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-125",
   "origin_line": 3893,
@@ -17664,9 +19916,19 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "ede645cfe1267b9b",
+  "digest": "f1161f899738fdc9",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 280"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 280"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-126",
   "origin_line": 3903,
@@ -17694,9 +19956,21 @@
   "claims_named": [
    "CLAIM 029"
   ],
-  "digest": "64e53c1e606397bd",
+  "digest": "fd57f75b033d6fa4",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 029",
+    "PAPER 288"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 029",
+    "PAPER 288"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-127",
   "origin_line": 3913,
@@ -17740,9 +20014,22 @@
   "claims_named": [
    "CLAIM 010"
   ],
-  "digest": "c9f5c58796229252",
+  "digest": "eba767c4c43338a8",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [
+    "CLAIM 010"
+   ],
+   "ids_named": [
+    "CLAIM 010",
+    "PAPER 289"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 289"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-128",
   "origin_line": 3923,
@@ -17771,9 +20058,19 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "dc36053f89cf64ff",
+  "digest": "b088b583b2c1ddd9",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 290"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 290"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-129",
   "origin_line": 3933,
@@ -17798,9 +20095,19 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "2482d414e53fcfce",
+  "digest": "e94b42e2ec90509d",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 285"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 285"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-130",
   "origin_line": 3943,
@@ -17826,9 +20133,19 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "e47fb19c96bead4b",
+  "digest": "e434f87129c58f08",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 097"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 097"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-131",
   "origin_line": 3953,
@@ -17853,9 +20170,19 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "a7455834363c5ab5",
+  "digest": "5962a78d3c83655b",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 279"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 279"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-132",
   "origin_line": 3963,
@@ -17881,9 +20208,23 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "a981594c06d49f34",
+  "digest": "56bfd933716d437a",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 003",
+    "PAPER 294",
+    "PAPER 295"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 003",
+    "PAPER 294",
+    "PAPER 295"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-133",
   "origin_line": 3973,
@@ -17919,9 +20260,21 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "f61654874be462f4",
+  "digest": "0cb9ef47d1662601",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 076",
+    "PAPER 302"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 076",
+    "PAPER 302"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-134",
   "origin_line": 3983,
@@ -17952,9 +20305,25 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "f779f92c19aaca09",
+  "digest": "f843aee7e84781be",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 145",
+    "PAPER 296",
+    "PAPER 298",
+    "PAPER 299"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 145",
+    "PAPER 296",
+    "PAPER 298",
+    "PAPER 299"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-135",
   "origin_line": 3993,
@@ -17997,9 +20366,27 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "81c63e338501b8a5",
+  "digest": "9c54cf1a132a1b23",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 311",
+    "PAPER 312",
+    "PAPER 313",
+    "PAPER 314",
+    "PAPER 315"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 311",
+    "PAPER 312",
+    "PAPER 313",
+    "PAPER 314",
+    "PAPER 315"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-136",
   "origin_line": 4037,
@@ -18044,9 +20431,19 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "d4e212d75fb6607a",
+  "digest": "9eb918c646a4b70b",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 314"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 314"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-137",
   "origin_line": 4047,
@@ -18071,9 +20468,19 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "e491ed1f6aa7853c",
+  "digest": "1e5bba12f82f40a0",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 299"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 299"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-138",
   "origin_line": 4057,
@@ -18102,11 +20509,27 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "a8dd7cd12c566685",
+  "digest": "1867113b1673adf6",
   "kind": "lead",
   "leads_named": [
    "DL-METH-125"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-METH-125",
+    "PAPER 316",
+    "PAPER 317",
+    "PAPER 318"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-METH-125",
+    "PAPER 316",
+    "PAPER 317",
+    "PAPER 318"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-139",
   "origin_line": 4067,
@@ -18142,9 +20565,23 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "c4c59c0497133568",
+  "digest": "10271d4bddd44f0e",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 299",
+    "PAPER 322",
+    "PAPER 323"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 299",
+    "PAPER 322",
+    "PAPER 323"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-140",
   "origin_line": 4087,
@@ -18183,9 +20620,21 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "e20d3b16ffc8476d",
+  "digest": "b96a8249488d7228",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 005",
+    "PAPER 322"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 005",
+    "PAPER 322"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-141",
   "origin_line": 4097,
@@ -18214,9 +20663,19 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "5e1c40aba3641dc0",
+  "digest": "69899dcb37f5ae14",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 324"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 324"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-142",
   "origin_line": 4107,
@@ -18243,9 +20702,19 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "4f945fff614ad1f7",
+  "digest": "d550492ec9bae0c1",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 015"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 015"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-143",
   "origin_line": 4117,
@@ -18270,9 +20739,19 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "487e85a0e51c6548",
+  "digest": "cafe61d4168c4601",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 336"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 336"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-144",
   "origin_line": 4127,
@@ -18298,9 +20777,21 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "9ca4519d154e9b4f",
+  "digest": "bc433242101c870a",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 325",
+    "PAPER 338"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 325",
+    "PAPER 338"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-145",
   "origin_line": 4137,
@@ -18331,9 +20822,19 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "9e9fe4b0afb46d8d",
+  "digest": "793f7a0fe6836bc1",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 333"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 333"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-146",
   "origin_line": 4147,
@@ -18357,9 +20858,19 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "28b199f0b708fee3",
+  "digest": "0346410f7d2bc3f4",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 334"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 334"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-147",
   "origin_line": 4157,
@@ -18383,9 +20894,23 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "bace375c6615b0b6",
+  "digest": "19b10777acc4722e",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 148",
+    "PAPER 152",
+    "PAPER 340"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 148",
+    "PAPER 152",
+    "PAPER 340"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-148",
   "origin_line": 4167,
@@ -18421,9 +20946,15 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "3f78a0fd03e3326f",
+  "digest": "ed5b26f978790eb0",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-149",
   "origin_line": 4177,
@@ -18441,9 +20972,15 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "1c76b82ebd20e590",
+  "digest": "9070ebb20dbd6535",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-150",
   "origin_line": 4187,
@@ -18459,9 +20996,19 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "8e3aadfae0d5c54f",
+  "digest": "c0cf6e009ece80a6",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 022"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 022"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-151",
   "origin_line": 4199,
@@ -18487,9 +21034,19 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "0c3c6b315ccdbbbf",
+  "digest": "54dbb4ce0b2d1d5d",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 129"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 129"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-152",
   "origin_line": 4209,
@@ -18514,9 +21071,21 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "0c86dc3d541fdd82",
+  "digest": "9d3945574cf9e3a1",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 022",
+    "PAPER 130"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 022",
+    "PAPER 130"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-153",
   "origin_line": 4219,
@@ -18550,9 +21119,19 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "8a77ee8d9d742c41",
+  "digest": "acccbdb1f767b502",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 130"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 130"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-154",
   "origin_line": 4229,
@@ -18580,9 +21159,19 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "aea51aafb0f1cbdc",
+  "digest": "6f75d43714178f98",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 023"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 023"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-155",
   "origin_line": 4239,
@@ -18607,9 +21196,21 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "21b1d0ae6f98c962",
+  "digest": "ccf42cef2ee9c4b4",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 359",
+    "PAPER 362"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 359",
+    "PAPER 362"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-156",
   "origin_line": 4249,
@@ -18639,9 +21240,19 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "87c1a96bd11bd26f",
+  "digest": "ca574b153788cbbb",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 363"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 363"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-157",
   "origin_line": 4259,
@@ -18666,9 +21277,19 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "650bfd93da2f1084",
+  "digest": "bb91a86052a80503",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 360"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 360"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-158",
   "origin_line": 4269,
@@ -18692,9 +21313,21 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "f1144880c76dafa5",
+  "digest": "5bb5b5e9036a75a9",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 361",
+    "PAPER 362"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 361",
+    "PAPER 362"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-159",
   "origin_line": 4279,
@@ -18725,9 +21358,15 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "5782a3daf5741853",
+  "digest": "c6e07797d306d8e3",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-160",
   "origin_line": 4289,
@@ -18744,9 +21383,21 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "fab0c9a20ccaa8bf",
+  "digest": "785bf70a4435d839",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 368",
+    "PAPER 369"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 368",
+    "PAPER 369"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-161",
   "origin_line": 4299,
@@ -18776,9 +21427,19 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "c8c652b563179845",
+  "digest": "8216a11525223995",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 366"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 366"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-162",
   "origin_line": 4309,
@@ -18802,9 +21463,19 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "70673dd8623dfb98",
+  "digest": "0f6af13d88eca8dd",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 414"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 414"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-163",
   "origin_line": 4319,
@@ -18831,9 +21502,19 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "df011dd1a6f8cebc",
+  "digest": "4b42c98b3beec983",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 412"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 412"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-164",
   "origin_line": 4329,
@@ -18859,9 +21540,19 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "8b713b401af324d4",
+  "digest": "45b84613b04e4e83",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 411"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 411"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-165",
   "origin_line": 4339,
@@ -18885,9 +21576,21 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "df339e0ee20cc301",
+  "digest": "0e8cdb63e10645ff",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 117",
+    "PAPER 425"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 117",
+    "PAPER 425"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-166",
   "origin_line": 4349,
@@ -18917,9 +21620,19 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "f666060a3b6b95a0",
+  "digest": "c363bb1fd080495f",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 425"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 425"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-167",
   "origin_line": 4359,
@@ -18944,9 +21657,19 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "3066b419706e04f0",
+  "digest": "633050c4ada9377b",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 425"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 425"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-168",
   "origin_line": 4369,
@@ -18971,9 +21694,31 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "b81b9748366aed44",
+  "digest": "e7cc1a489185a27b",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 416",
+    "PAPER 419",
+    "PAPER 420",
+    "PAPER 421",
+    "PAPER 422",
+    "PAPER 423",
+    "PAPER 424"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 416",
+    "PAPER 419",
+    "PAPER 420",
+    "PAPER 421",
+    "PAPER 422",
+    "PAPER 423",
+    "PAPER 424"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-169",
   "origin_line": 4379,
@@ -19031,12 +21776,26 @@
   "claims_named": [
    "CLAIM 016"
   ],
-  "digest": "61d295e6e0cd2d9e",
+  "digest": "e453b76fdcf972b4",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-171",
    "DL-MECH-172"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 016",
+    "DL-MECH-171",
+    "DL-MECH-172"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 016",
+    "DL-MECH-171",
+    "DL-MECH-172"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-170",
   "origin_line": 4391,
@@ -19088,11 +21847,23 @@
   "claims_named": [
    "CLAIM 016"
   ],
-  "digest": "46358c1906e26354",
+  "digest": "3d7d1413de167e22",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-170"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 016",
+    "DL-MECH-170"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 016",
+    "DL-MECH-170"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-171",
   "origin_line": 4414,
@@ -19202,11 +21973,21 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "25f31c48df6bd935",
+  "digest": "2476acd3cecea4ff",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-170"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-MECH-170"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-MECH-170"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-172",
   "origin_line": 4427,
@@ -19309,9 +22090,15 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "0fab214abd28863e",
+  "digest": "efb1046782289576",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-META-088",
   "origin_line": 2454,
@@ -19333,7 +22120,7 @@
   "claims_named": [
    "CLAIM 019"
   ],
-  "digest": "081cda7394e5a2dd",
+  "digest": "89d8926c713de04c",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-085",
@@ -19342,6 +22129,26 @@
    "DL-MECH-034",
    "DL-MECH-037"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 019",
+    "DL-BIO-085",
+    "DL-BIO-090",
+    "DL-MECH-029",
+    "DL-MECH-034",
+    "DL-MECH-037"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 019",
+    "DL-BIO-085",
+    "DL-BIO-090",
+    "DL-MECH-029",
+    "DL-MECH-034",
+    "DL-MECH-037"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-META-091",
   "origin_line": 2704,
@@ -19774,11 +22581,21 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "a7428ec7786271de",
+  "digest": "e8944674c494f5f3",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-085"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-BIO-085"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-BIO-085"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-META-093",
   "origin_line": 2863,
@@ -19945,9 +22762,15 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "e534347572b5399d",
+  "digest": "2e81dcd478055d53",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-META-097",
   "origin_line": 3196,
@@ -19964,9 +22787,15 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "877797aa787e189f",
+  "digest": "c9356ad3db110243",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-META-098",
   "origin_line": 3235,
@@ -19983,11 +22812,21 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "60d773fbe9cd98b9",
+  "digest": "df3af64714eb3960",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-078"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-MECH-078"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-MECH-078"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-METH-079",
   "origin_line": 2268,
@@ -20067,11 +22906,21 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "0ea796766626e0df",
+  "digest": "7536078aadbac2be",
   "kind": "lead",
   "leads_named": [
    "DL-METH-079"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-METH-079"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-METH-079"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-METH-081",
   "origin_line": 2290,
@@ -20157,12 +23006,24 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "dc13569df8267241",
+  "digest": "5801eaaa4c281d6b",
   "kind": "lead",
   "leads_named": [
    "DL-METH-079",
    "DL-METH-081"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-METH-079",
+    "DL-METH-081"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-METH-079",
+    "DL-METH-081"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-METH-082",
   "origin_line": 2302,
@@ -20263,7 +23124,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "25e872db484a31c5",
+  "digest": "06aaf0563e7978ee",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-083",
@@ -20272,6 +23133,25 @@
    "DL-THER-081",
    "DL-THER-089"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-MECH-083",
+    "DL-METH-081",
+    "DL-METH-082",
+    "DL-THER-081",
+    "DL-THER-089"
+   ],
+   "ids_not_found_in_registry": [
+    "DL-THER-081"
+   ],
+   "ids_reaching_a_pmid": [
+    "DL-MECH-083",
+    "DL-METH-081",
+    "DL-METH-082",
+    "DL-THER-089"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-METH-084",
   "origin_line": 2338,
@@ -20428,7 +23308,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "45e320bc36664dcf",
+  "digest": "ecb9a2376d1258e3",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-096",
@@ -20438,6 +23318,27 @@
    "DL-METH-096",
    "DL-METH-097"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-MECH-096",
+    "DL-META-097",
+    "DL-META-098",
+    "DL-METH-091",
+    "DL-METH-096",
+    "DL-METH-097"
+   ],
+   "ids_not_found_in_registry": [
+    "DL-METH-091"
+   ],
+   "ids_reaching_a_pmid": [
+    "DL-MECH-096",
+    "DL-META-097",
+    "DL-META-098",
+    "DL-METH-096",
+    "DL-METH-097"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-METH-093",
   "origin_line": 3115,
@@ -20839,7 +23740,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "67a970a0476445a9",
+  "digest": "888bd1ce940c1039",
   "kind": "lead",
   "leads_named": [
    "DL-METH-084",
@@ -20847,6 +23748,23 @@
    "DL-METH-092",
    "DL-METH-093"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-METH-084",
+    "DL-METH-091",
+    "DL-METH-092",
+    "DL-METH-093"
+   ],
+   "ids_not_found_in_registry": [
+    "DL-METH-091",
+    "DL-METH-092"
+   ],
+   "ids_reaching_a_pmid": [
+    "DL-METH-084",
+    "DL-METH-093"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-METH-094",
   "origin_line": 3383,
@@ -21207,12 +24125,24 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "573b2395773dcc12",
+  "digest": "d88a77b2d94633a8",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-083",
    "DL-METH-084"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-MECH-083",
+    "DL-METH-084"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-MECH-083",
+    "DL-METH-084"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-METH-096",
   "origin_line": 2577,
@@ -21368,7 +24298,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "febef0c61c5b5b60",
+  "digest": "aba9035d9a7879c6",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-092",
@@ -21376,6 +24306,23 @@
    "DL-METH-091",
    "DL-METH-096"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-MECH-092",
+    "DL-META-091",
+    "DL-METH-091",
+    "DL-METH-096"
+   ],
+   "ids_not_found_in_registry": [
+    "DL-METH-091"
+   ],
+   "ids_reaching_a_pmid": [
+    "DL-MECH-092",
+    "DL-META-091",
+    "DL-METH-096"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-METH-097",
   "origin_line": 2591,
@@ -21753,12 +24700,25 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "593992372feaf412",
+  "digest": "5488a541831a8522",
   "kind": "lead",
   "leads_named": [
    "DL-METH-091",
    "DL-METH-094"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-METH-091",
+    "DL-METH-094"
+   ],
+   "ids_not_found_in_registry": [
+    "DL-METH-091"
+   ],
+   "ids_reaching_a_pmid": [
+    "DL-METH-094"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-METH-098",
   "origin_line": 3426,
@@ -22102,11 +25062,21 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "6d44464f4ed24759",
+  "digest": "f1c916cd8adc2064",
   "kind": "lead",
   "leads_named": [
    "DL-METH-094"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-METH-094"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-METH-094"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-METH-107",
   "origin_line": 3497,
@@ -22449,9 +25419,15 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "32f59c29cff501e3",
+  "digest": "65ad717e59e0a3a8",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-METH-108",
   "origin_line": 3528,
@@ -22471,12 +25447,26 @@
   "claims_named": [
    "CLAIM 023"
   ],
-  "digest": "e385b1cf5e340d93",
+  "digest": "1777c95f84868f08",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-106",
    "DL-METH-079"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 023",
+    "DL-MECH-106",
+    "DL-METH-079"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 023",
+    "DL-MECH-106",
+    "DL-METH-079"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-METH-109",
   "origin_line": 3539,
@@ -22856,11 +25846,21 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "5297ef9ec7f3d8ef",
+  "digest": "df7355a99396ca8b",
   "kind": "lead",
   "leads_named": [
    "DL-METH-108"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-METH-108"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-METH-108"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-METH-110",
   "origin_line": 3553,
@@ -22884,12 +25884,24 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "3410000e440b421d",
+  "digest": "a11d8cfe5fe7b114",
   "kind": "lead",
   "leads_named": [
    "DL-METH-108",
    "DL-METH-110"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-METH-108",
+    "DL-METH-110"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-METH-108",
+    "DL-METH-110"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-METH-112",
   "origin_line": 3581,
@@ -22917,11 +25929,21 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "84bd706c8219dc70",
+  "digest": "e402c8bd27d3a4d9",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-021"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-MECH-021"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-MECH-021"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-METH-114",
   "origin_line": 3607,
@@ -23122,12 +26144,26 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "52f013d57490c4f7",
+  "digest": "4b6cf63134a2748d",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-098",
    "DL-THER-105"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-MECH-098",
+    "DL-THER-105",
+    "PAPER 039"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-MECH-098",
+    "DL-THER-105",
+    "PAPER 039"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-METH-116",
   "origin_line": 3628,
@@ -23538,9 +26574,29 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "2caa28400419d764",
+  "digest": "22a52281ed37901a",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 177",
+    "PAPER 180",
+    "PAPER 181",
+    "PAPER 182",
+    "PAPER 214",
+    "PAPER 216"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 177",
+    "PAPER 180",
+    "PAPER 181",
+    "PAPER 182",
+    "PAPER 214",
+    "PAPER 216"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-METH-117",
   "origin_line": 3641,
@@ -23585,12 +26641,38 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "2461d6d576630dc5",
+  "digest": "cf6f93fc4ac7162f",
   "kind": "lead",
   "leads_named": [
    "DL-METH-120",
    "DL-THER-116"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-METH-120",
+    "DL-THER-116",
+    "PAPER 178",
+    "PAPER 179",
+    "PAPER 180",
+    "PAPER 182",
+    "PAPER 183",
+    "PAPER 187",
+    "PAPER 232"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-METH-120",
+    "DL-THER-116",
+    "PAPER 178",
+    "PAPER 179",
+    "PAPER 180",
+    "PAPER 182",
+    "PAPER 183",
+    "PAPER 187",
+    "PAPER 232"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-METH-118",
   "origin_line": 3661,
@@ -23661,11 +26743,29 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "1dc6a4790d0f58b3",
+  "digest": "e201bc30e4f33005",
   "kind": "lead",
   "leads_named": [
    "DL-METH-116"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-METH-116",
+    "PAPER 177",
+    "PAPER 180",
+    "PAPER 181",
+    "PAPER 182"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-METH-116",
+    "PAPER 177",
+    "PAPER 180",
+    "PAPER 181",
+    "PAPER 182"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-METH-119",
   "origin_line": 3683,
@@ -24089,12 +27189,30 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "1a4d0be48e61203b",
+  "digest": "5c029f1134ecfc2c",
   "kind": "lead",
   "leads_named": [
    "DL-METH-118",
    "DL-THER-116"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-METH-118",
+    "DL-THER-116",
+    "PAPER 184",
+    "PAPER 185",
+    "PAPER 188"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-METH-118",
+    "DL-THER-116",
+    "PAPER 184",
+    "PAPER 185",
+    "PAPER 188"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-METH-120",
   "origin_line": 3714,
@@ -24165,9 +27283,19 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "cc46eac171423d92",
+  "digest": "25ca11c6930c4c7f",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 215"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 215"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-METH-121",
   "origin_line": 3763,
@@ -24190,9 +27318,21 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "643275f5eb3f620a",
+  "digest": "79b36d24040d5459",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 306",
+    "PAPER 307"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 306",
+    "PAPER 307"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-METH-122",
   "origin_line": 4003,
@@ -24223,9 +27363,21 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "9cbd887a5beb8353",
+  "digest": "55912497e1a6c0d0",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 252",
+    "PAPER 253"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 252",
+    "PAPER 253"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-METH-123",
   "origin_line": 4013,
@@ -24259,9 +27411,19 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "2714d290437fa2a4",
+  "digest": "643950acc70a392f",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 258"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 258"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-METH-124",
   "origin_line": 4023,
@@ -24286,9 +27448,19 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "a931070dbdced768",
+  "digest": "c8e519fafb6cb5a0",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 318"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 318"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-METH-125",
   "origin_line": 4077,
@@ -24312,12 +27484,24 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "374b6e154ff7a9df",
+  "digest": "31828eb3888f0aaf",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-002",
    "DL-MOL-002"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-MECH-002",
+    "DL-MOL-002"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-MECH-002",
+    "DL-MOL-002"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MOL-001",
   "origin_line": 73,
@@ -24338,11 +27522,21 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "fc849a6137e50d27",
+  "digest": "7051e7128bc38d07",
   "kind": "lead",
   "leads_named": [
    "DL-MOL-001"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-MOL-001"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-MOL-001"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MOL-002",
   "origin_line": 83,
@@ -24365,12 +27559,24 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "9b1850005ebd686c",
+  "digest": "3c2692abd8be563b",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-007",
    "DL-MECH-008"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-MECH-007",
+    "DL-MECH-008"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-MECH-007",
+    "DL-MECH-008"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MOL-003",
   "origin_line": 93,
@@ -24494,13 +27700,27 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "9607ef828b427c05",
+  "digest": "1ba4aa53e671e657",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-001",
    "DL-MECH-007",
    "DL-MOL-005"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-BIO-001",
+    "DL-MECH-007",
+    "DL-MOL-005"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-BIO-001",
+    "DL-MECH-007",
+    "DL-MOL-005"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MOL-004",
   "origin_line": 105,
@@ -24645,7 +27865,7 @@
   "claims_named": [
    "CLAIM 011"
   ],
-  "digest": "9a57f49e883c5c8e",
+  "digest": "04d24678a43939b5",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-001",
@@ -24655,6 +27875,30 @@
    "DL-MECH-011",
    "DL-MOL-004"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 011",
+    "DL-BIO-001",
+    "DL-MECH-007",
+    "DL-MECH-009",
+    "DL-MECH-010",
+    "DL-MECH-011",
+    "DL-MOL-004",
+    "PAPER 011"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 011",
+    "DL-BIO-001",
+    "DL-MECH-007",
+    "DL-MECH-009",
+    "DL-MECH-010",
+    "DL-MECH-011",
+    "DL-MOL-004",
+    "PAPER 011"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MOL-005",
   "origin_line": 115,
@@ -24807,9 +28051,15 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "820ba084f81efc28",
+  "digest": "20dc1e4364eb0299",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MOL-006",
   "origin_line": 279,
@@ -24827,9 +28077,19 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "b38eb1ab12ed1746",
+  "digest": "136560dfc484b830",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 133"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 133"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MOL-007",
   "origin_line": 373,
@@ -24850,9 +28110,15 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "71c32a834be3afe6",
+  "digest": "90175411f0577c80",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MOL-008",
   "origin_line": 576,
@@ -24871,9 +28137,15 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "0ebd1099c644f407",
+  "digest": "cf5dff7cdaf78bda",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MOL-009",
   "origin_line": 663,
@@ -24890,11 +28162,21 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "2af933c413d262f5",
+  "digest": "1557fad4a0731a44",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-033"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-MECH-033"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-MECH-033"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MOL-010",
   "origin_line": 817,
@@ -25102,12 +28384,24 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "9cb74a8e0b5996d8",
+  "digest": "b7e28f1a45a56d5f",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-003",
    "DL-MECH-045"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-BIO-003",
+    "DL-MECH-045"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-BIO-003",
+    "DL-MECH-045"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MOL-011",
   "origin_line": 1036,
@@ -25224,11 +28518,23 @@
   "claims_named": [
    "CLAIM 019"
   ],
-  "digest": "0b8848c696a6ef54",
+  "digest": "58d6d914e6260842",
   "kind": "lead",
   "leads_named": [
    "DL-MOL-010"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 019",
+    "DL-MOL-010"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 019",
+    "DL-MOL-010"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MOL-012",
   "origin_line": 1050,
@@ -25442,12 +28748,24 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "5cd9d249cc77d708",
+  "digest": "0080e1cf5c6623f9",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-046",
    "DL-MOL-011"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-MECH-046",
+    "DL-MOL-011"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-MECH-046",
+    "DL-MOL-011"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MOL-013",
   "origin_line": 1086,
@@ -25692,11 +29010,21 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "9ba254f1410e8303",
+  "digest": "9dcf5cea4e3cde8c",
   "kind": "lead",
   "leads_named": [
    "DL-MOL-001"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-MOL-001"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-MOL-001"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-REPO-001",
   "origin_line": 128,
@@ -25719,13 +29047,29 @@
   "claims_named": [
    "CLAIM 006"
   ],
-  "digest": "b2e09bbd181ff5e8",
+  "digest": "b8bedbfefa50c807",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-008",
    "DL-MECH-012",
    "DL-MOL-005"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 006",
+    "DL-MECH-008",
+    "DL-MECH-012",
+    "DL-MOL-005"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 006",
+    "DL-MECH-008",
+    "DL-MECH-012",
+    "DL-MOL-005"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-REPO-002",
   "origin_line": 137,
@@ -25902,12 +29246,26 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "0931f45616d418c8",
+  "digest": "7988839a89afc1c5",
   "kind": "lead",
   "leads_named": [
    "DL-REPO-001",
    "DL-REPO-002"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-REPO-001",
+    "DL-REPO-002",
+    "PAPER 222"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-REPO-001",
+    "DL-REPO-002",
+    "PAPER 222"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-REPO-003",
   "origin_line": 3728,
@@ -26081,11 +29439,21 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "d6f4d63838ce818c",
+  "digest": "15f078765b0032e7",
   "kind": "lead",
   "leads_named": [
    "DL-METH-079"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-METH-079"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-METH-079"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-THER-080",
   "origin_line": 2279,
@@ -26173,11 +29541,21 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "40b176eb84ed43ca",
+  "digest": "279375e39bf171c5",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-086"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-MECH-086"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-MECH-086"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-THER-087",
   "origin_line": 2438,
@@ -26198,7 +29576,7 @@
   "claims_named": [
    "CLAIM 003"
   ],
-  "digest": "06594d79650dab85",
+  "digest": "8bcf78a428011823",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-078",
@@ -26206,6 +29584,25 @@
    "DL-METH-079",
    "DL-THER-081"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 003",
+    "DL-MECH-078",
+    "DL-MECH-083",
+    "DL-METH-079",
+    "DL-THER-081"
+   ],
+   "ids_not_found_in_registry": [
+    "DL-THER-081"
+   ],
+   "ids_reaching_a_pmid": [
+    "CLAIM 003",
+    "DL-MECH-078",
+    "DL-MECH-083",
+    "DL-METH-079"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-THER-089",
   "origin_line": 2370,
@@ -26366,7 +29763,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "79097d513acfdf37",
+  "digest": "17ba7dfc1fa10948",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-001",
@@ -26378,6 +29775,30 @@
    "DL-MOL-001",
    "DL-REPO-001"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-BIO-001",
+    "DL-MECH-001",
+    "DL-MECH-083",
+    "DL-META-091",
+    "DL-META-093",
+    "DL-METH-093",
+    "DL-MOL-001",
+    "DL-REPO-001"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-BIO-001",
+    "DL-MECH-001",
+    "DL-MECH-083",
+    "DL-META-091",
+    "DL-META-093",
+    "DL-METH-093",
+    "DL-MOL-001",
+    "DL-REPO-001"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-THER-095",
   "origin_line": 2963,
@@ -26770,9 +30191,23 @@
    "CLAIM 011",
    "CLAIM 032"
   ],
-  "digest": "ced95b0dd3891ad8",
+  "digest": "afd7c87875916cf9",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 002",
+    "CLAIM 011",
+    "CLAIM 032"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 002",
+    "CLAIM 011",
+    "CLAIM 032"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-THER-105",
   "origin_line": 3445,
@@ -26916,11 +30351,25 @@
   "claims_named": [
    "CLAIM 001"
   ],
-  "digest": "227bfc311ec252d6",
+  "digest": "9465715b568f4434",
   "kind": "lead",
   "leads_named": [
    "DL-METH-107"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 001",
+    "DL-METH-107",
+    "PAPER 040"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 001",
+    "DL-METH-107",
+    "PAPER 040"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-THER-106",
   "origin_line": 3503,
@@ -27299,9 +30748,15 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "584c32f146514b2c",
+  "digest": "1fc8d492f065be91",
   "kind": "lead",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-THER-115",
   "origin_line": 3617,
@@ -27326,13 +30781,40 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "db4bc69361c0c3b2",
+  "digest": "b384ffd074957a57",
   "kind": "lead",
   "leads_named": [
    "DL-METH-118",
    "DL-METH-120",
    "DL-THER-117"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-METH-118",
+    "DL-METH-120",
+    "DL-THER-117",
+    "PAPER 183",
+    "PAPER 184",
+    "PAPER 185",
+    "PAPER 186",
+    "PAPER 187",
+    "PAPER 188"
+   ],
+   "ids_not_found_in_registry": [
+    "DL-THER-117"
+   ],
+   "ids_reaching_a_pmid": [
+    "DL-METH-118",
+    "DL-METH-120",
+    "PAPER 183",
+    "PAPER 184",
+    "PAPER 185",
+    "PAPER 186",
+    "PAPER 187",
+    "PAPER 188"
+   ]
+  },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-THER-116",
   "origin_line": 3702,
@@ -27402,10 +30884,16 @@
   "candidate": "mTOR inhibitors",
   "claims_named": [],
   "decisive_test": "a protein-level mTORC1 readout (pS6, p4E-BP1) in a WWOX-deficient neuronal",
-  "digest": "e30776a97f3c573d",
+  "digest": "77653ff9d01331c5",
   "intervention": "*`INSUFFICIENT` — mai misurato a livello proteico in alcun sistema WWOX.* The reflex move in genetic DEE, imported from TSC.",
   "kind": "mechanism_record",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-01",
   "origin_line": 630,
@@ -27424,10 +30912,16 @@
   "candidate": "Lithium as a WWOX-specific disease modifier",
   "claims_named": [],
   "decisive_test": "a PTZ arm with an explicit tested `−/−` vs `+/+` contrast, or a different",
-  "digest": "7d78d858cb8a59b2",
+  "digest": "6934db1385a48924",
   "intervention": "*evidence transfer that was never genotype-controlled*, compounded by *wrong",
   "kind": "mechanism_record",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-02",
   "origin_line": 641,
@@ -27446,10 +30940,16 @@
   "candidate": "Sodium-channel blockers",
   "claims_named": [],
   "decisive_test": "documented Na-blocker response in WWOX-BS cases, or a Nav dependence measured",
-  "digest": "31bc4fbe5b4d0e8e",
+  "digest": "730942a85b225f49",
   "intervention": "*the target is not causally downstream of WWOX.* Precision therapy in",
   "kind": "mechanism_record",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-03",
   "origin_line": 649,
@@ -27468,10 +30968,16 @@
   "candidate": "Broad GABAergic push",
   "claims_named": [],
   "decisive_test": "`E_GABA` measurement in a WWOX system; or a WWOX cohort with structured VABAM",
-  "digest": "434319bdd77b7bd0",
+  "digest": "f64cd1ecd61f2a7a",
   "intervention": "*corrects a marker, not the mechanism* — plus an unmeasured premise. VABAM is",
   "kind": "mechanism_record",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-04",
   "origin_line": 657,
@@ -27488,10 +30994,16 @@
   "candidate": "Boosting WWOX expression alone",
   "claims_named": [],
   "decisive_test": "evidence that a compound-heterozygous transcript behaves differently from the",
-  "digest": "d1a72836b2385afe",
+  "digest": "ae4b6d4eee237e96",
   "intervention": "*the target is not the bottleneck.* Normal transcript with protein not detected",
   "kind": "mechanism_record",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-05",
   "origin_line": 666,
@@ -27510,10 +31022,16 @@
   "candidate": "Lactate, and metabolic blood biomarkers generally, as WWOX readouts",
   "claims_named": [],
   "decisive_test": "Seahorse/fluxomics showing a real bioenergetic shift in donor-derived cells.",
-  "digest": "8162d3bef7734c50",
+  "digest": "7d220fa895f75e58",
   "intervention": "*corrects/reports a biomarker, not the mechanism* — inverted: here the biomarker",
   "kind": "mechanism_record",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-06",
   "origin_line": 679,
@@ -27532,10 +31050,16 @@
   "candidate": "Digoxin",
   "claims_named": [],
   "decisive_test": "UNKNOWN",
-  "digest": "0661cf94cdc692ab",
+  "digest": "8eb0334cb010afa7",
   "intervention": "*toxicity incompatible* + *wrong endpoint*. The only approved drug that corrects a",
   "kind": "mechanism_record",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-07",
   "origin_line": 687,
@@ -27552,10 +31076,16 @@
   "candidate": "Dichloroacetate",
   "claims_named": [],
   "decisive_test": "UNKNOWN",
-  "digest": "b47d6e882c5dd6b0",
+  "digest": "59326f19cac3e386",
   "intervention": "*toxicity incompatible* + *two-hop inference*. Dose-dependent peripheral",
   "kind": "mechanism_record",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-08",
   "origin_line": 697,
@@ -27574,10 +31104,16 @@
   "candidate": "pTyr33-WWOX peptide as functional restoration",
   "claims_named": [],
   "decisive_test": "UNKNOWN",
-  "digest": "191c76fa6147189c",
+  "digest": "82f73b67d1b78e4c",
   "intervention": "*acts in the wrong direction.* Phospho-Tyr33 WOX1 is **pro-apoptotic**; the peptide",
   "kind": "mechanism_record",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-09",
   "origin_line": 703,
@@ -27596,10 +31132,16 @@
   "candidate": "Splice-switching ASO for a canonical acceptor allele",
   "claims_named": [],
   "decisive_test": "UNKNOWN",
-  "digest": "f86c9325b4c5c4e0",
+  "digest": "60bccefef9b03297",
   "intervention": "*derived from a mechanism that cannot work.* SSOs **mask** elements; they do not",
   "kind": "mechanism_record",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-10",
   "origin_line": 712,
@@ -27618,10 +31160,16 @@
   "candidate": "4-PBA / TUDCA on the ER-chaperone rationale",
   "claims_named": [],
   "decisive_test": "UNKNOWN",
-  "digest": "e07c4640fb3eab0d",
+  "digest": "84cea61ceefa4628",
   "intervention": "*derived from a textbook default.* \"Misfolded protein → ERAD → chemical chaperone\"",
   "kind": "mechanism_record",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-11",
   "origin_line": 720,
@@ -27641,10 +31189,16 @@
   "candidate": "HSP70 co-inducers",
   "claims_named": [],
   "decisive_test": "UNKNOWN",
-  "digest": "dc6400f32d3fa58d",
+  "digest": "b0fbe9b268b96676",
   "intervention": "*wrong direction, hidden inside a plausible one.* \"It is a chaperone, therefore it",
   "kind": "mechanism_record",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-12",
   "origin_line": 726,
@@ -27664,10 +31218,16 @@
   "candidate": "Pro-myelinating agents",
   "claims_named": [],
   "decisive_test": "UNKNOWN",
-  "digest": "41c108b71afc0f7a",
+  "digest": "5417ef5ec69ad5e1",
   "intervention": "*the target is not causally downstream of WWOX in the cell being targeted* +",
   "kind": "mechanism_record",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-13",
   "origin_line": 731,
@@ -27684,10 +31244,16 @@
   "candidate": "Antioxidants",
   "claims_named": [],
   "decisive_test": "UNKNOWN",
-  "digest": "7fcf43629afd8a11",
+  "digest": "f5727116310401ee",
   "intervention": "*the direction of the axis is context-dependent and was assumed.* Two independent",
   "kind": "mechanism_record",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-14",
   "origin_line": 744,
@@ -27708,10 +31274,16 @@
   "candidate": "Counting seizure control as developmental protection",
   "claims_named": [],
   "decisive_test": "UNKNOWN",
-  "digest": "899cd1cbbec12f63",
+  "digest": "e14cbc9b025da9ec",
   "intervention": "*corrects a biomarker (seizures) but not the mechanism (development)*. In published",
   "kind": "mechanism_record",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-15",
   "origin_line": 754,
@@ -27730,10 +31302,20 @@
    "CLAIM 021"
   ],
   "decisive_test": "UNKNOWN",
-  "digest": "13abf67ba71e5aeb",
+  "digest": "e241eb3afa06fad5",
   "intervention": "*a negative stated as an absence of effect, when what exists is an untested point estimate in the adverse direction.* In the only WWOX system in which a selective pannexin-1 blocker has ever been applied (`Wwox` S-KO neocortical slice, P13–P17), normalized burst frequency rose to **≈ 2.55 during treatment and ≈ 2.6 at washout against a baseline of 1.0**, carrying **no significance marker and no re",
   "kind": "mechanism_record",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 021"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 021"
+   ]
+  },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-16",
   "origin_line": 769,
@@ -27757,13 +31339,27 @@
    "CLAIM 035"
   ],
   "decisive_test": "UNKNOWN",
-  "digest": "98d42a48b15ed2f3",
+  "digest": "59464d926da2e904",
   "intervention": "*importing a disease's dominant modality because the pathway diagram looks like that disease, without checking which way the arrow points.* CHAIN C reads like a tauopathy — WWOX loss → GSK3β de-repressed → pTau S396/S404 up (`CLAIM 035`, `DL-MECH-019`) — and tauopathy's dominant modality is **tau-lowering**. In the only system where the question was asked, tau-lowering **removes the benefit of bot",
   "kind": "mechanism_record",
   "leads_named": [
    "DL-MECH-019",
    "DL-MECH-069"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 035",
+    "DL-MECH-019",
+    "DL-MECH-069"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 035",
+    "DL-MECH-019",
+    "DL-MECH-069"
+   ]
+  },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-17",
   "origin_line": 775,
@@ -28014,8 +31610,24 @@
    "CLAIM 032"
   ],
   "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json|entries[13]",
-  "digest": "e1824a013ffddb7f",
+  "digest": "2c4098ffd6025701",
   "kind": "mechanism_line",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 002",
+    "CLAIM 005",
+    "CLAIM 030",
+    "CLAIM 032"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 002",
+    "CLAIM 005",
+    "CLAIM 030",
+    "CLAIM 032"
+   ]
+  },
   "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
   "origin_id": "CLAIM 002",
   "origin_line": 0,
@@ -28208,8 +31820,20 @@
    "CLAIM 034"
   ],
   "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID37897534.json|entries[12]",
-  "digest": "124b0b2bd95b155b",
+  "digest": "cce76e5adff79594",
   "kind": "mechanism_line",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 009",
+    "CLAIM 034"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 009",
+    "CLAIM 034"
+   ]
+  },
   "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
   "origin_id": "CLAIM 009",
   "origin_line": 0,
@@ -28270,8 +31894,20 @@
    "CLAIM 016"
   ],
   "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID32000863.json|entries[28]",
-  "digest": "daebe997e6c7b864",
+  "digest": "84ea4a01f6de46f3",
   "kind": "mechanism_line",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 015",
+    "CLAIM 016"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 015",
+    "CLAIM 016"
+   ]
+  },
   "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
   "origin_id": "CLAIM 015",
   "origin_line": 0,
@@ -28314,8 +31950,18 @@
    "CLAIM 010"
   ],
   "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID34937577.json|entries[9]",
-  "digest": "9ce5e38691fc8f46",
+  "digest": "14b4d38974fb12c8",
   "kind": "mechanism_line",
+  "linkage": {
+   "ids_in_registry_without_pmid": [
+    "CLAIM 010"
+   ],
+   "ids_named": [
+    "CLAIM 010"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
   "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
   "origin_id": "CLAIM 010",
   "origin_line": 0,
@@ -28342,8 +31988,20 @@
    "CLAIM 015"
   ],
   "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID32581702.json|entries[2]",
-  "digest": "d19ffef41894a6c0",
+  "digest": "5f2528e74f63f00d",
   "kind": "mechanism_line",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 014",
+    "CLAIM 015"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 014",
+    "CLAIM 015"
+   ]
+  },
   "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
   "origin_id": "CLAIM 014",
   "origin_line": 0,
@@ -28389,8 +32047,20 @@
    "CLAIM 004"
   ],
   "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID18460020.json|entries[0]",
-  "digest": "b751d8085fd4f0d9",
+  "digest": "fd40748ac33591ed",
   "kind": "mechanism_line",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 002",
+    "CLAIM 004"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 002",
+    "CLAIM 004"
+   ]
+  },
   "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
   "origin_id": "CLAIM 002",
   "origin_line": 0,
@@ -28443,8 +32113,18 @@
    "CLAIM 007"
   ],
   "bound_from": "working_model_current.md#BLOCK 2|CLAIM 007",
-  "digest": "0b3ec1a1586332eb",
+  "digest": "54a621a63d8e3c6f",
   "kind": "mechanism_line",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 007"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 007"
+   ]
+  },
   "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
   "origin_id": "CLAIM 007",
   "origin_line": 0,
@@ -28480,8 +32160,20 @@
    "CLAIM 034"
   ],
   "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID37897534.json|entries[13]",
-  "digest": "0c9e86c2ca321855",
+  "digest": "7eb50426b2c8cd59",
   "kind": "mechanism_line",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 009",
+    "CLAIM 034"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 009",
+    "CLAIM 034"
+   ]
+  },
   "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
   "origin_id": "CLAIM 009",
   "origin_line": 0,
@@ -28540,8 +32232,20 @@
    "CLAIM 034"
   ],
   "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID21075834.json|entries[6]",
-  "digest": "5ca187ddb6004b60",
+  "digest": "e9f98eb284cb4f78",
   "kind": "mechanism_line",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 009",
+    "CLAIM 034"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 009",
+    "CLAIM 034"
+   ]
+  },
   "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
   "origin_id": "CLAIM 009",
   "origin_line": 0,
@@ -28597,8 +32301,20 @@
    "CLAIM 034"
   ],
   "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID21075834.json|entries[5]",
-  "digest": "c37712e5951a35f7",
+  "digest": "8950c822de83f0cd",
   "kind": "mechanism_line",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 009",
+    "CLAIM 034"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 009",
+    "CLAIM 034"
+   ]
+  },
   "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
   "origin_id": "CLAIM 009",
   "origin_line": 0,
@@ -28651,8 +32367,24 @@
    "CLAIM 035"
   ],
   "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID22193544.json|entries[6]",
-  "digest": "1132a382c0f48061",
+  "digest": "b38ce14272a8207b",
   "kind": "mechanism_line",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 016",
+    "CLAIM 028",
+    "CLAIM 030",
+    "CLAIM 035"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 016",
+    "CLAIM 028",
+    "CLAIM 030",
+    "CLAIM 035"
+   ]
+  },
   "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
   "origin_id": "CLAIM 016",
   "origin_line": 0,
@@ -28723,8 +32455,18 @@
    "CLAIM 014"
   ],
   "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID31543760.json|entries[8]",
-  "digest": "7dc25b95b9fd4f75",
+  "digest": "72818209e239dea2",
   "kind": "mechanism_line",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 014"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 014"
+   ]
+  },
   "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
   "origin_id": "CLAIM 014",
   "origin_line": 0,
@@ -28762,8 +32504,18 @@
    "CLAIM 014"
   ],
   "bound_from": "claim_registry_current.md#CLAIM 014|Title",
-  "digest": "6b6eda3fc14f7e27",
+  "digest": "ab510b56eb7208ce",
   "kind": "mechanism_line",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 014"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 014"
+   ]
+  },
   "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
   "origin_id": "CLAIM 014",
   "origin_line": 0,
@@ -28797,8 +32549,18 @@
    "CLAIM 016"
   ],
   "bound_from": "working_model_current.md#BLOCK 2|CLAIM 016",
-  "digest": "fbf097e8b982704c",
+  "digest": "9b51519e6802cbd9",
   "kind": "mechanism_line",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 016"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 016"
+   ]
+  },
   "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
   "origin_id": "CLAIM 016",
   "origin_line": 0,
@@ -28834,8 +32596,20 @@
    "CLAIM 004"
   ],
   "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID18460020.json|entries[10]",
-  "digest": "84ec30e5d823ef5b",
+  "digest": "1fdf6cee4de182c3",
   "kind": "mechanism_line",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 002",
+    "CLAIM 004"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 002",
+    "CLAIM 004"
+   ]
+  },
   "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
   "origin_id": "CLAIM 002",
   "origin_line": 0,
@@ -28887,8 +32661,20 @@
    "CLAIM 034"
   ],
   "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID37897534.json|entries[1]",
-  "digest": "7a1351670205054f",
+  "digest": "10c4f7a099339b13",
   "kind": "mechanism_line",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 009",
+    "CLAIM 034"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 009",
+    "CLAIM 034"
+   ]
+  },
   "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
   "origin_id": "CLAIM 009",
   "origin_line": 0,
@@ -28950,8 +32736,18 @@
    "CLAIM 009"
   ],
   "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID25012504.json|entries[0]",
-  "digest": "3d09eda91276652f",
+  "digest": "eebe59086a236f99",
   "kind": "mechanism_line",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 009"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 009"
+   ]
+  },
   "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
   "origin_id": "CLAIM 009",
   "origin_line": 0,
@@ -29006,8 +32802,18 @@
    "CLAIM 010"
   ],
   "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID34937577.json|entries[6]",
-  "digest": "f5e8186c161b738d",
+  "digest": "2474f949f28aa032",
   "kind": "mechanism_line",
+  "linkage": {
+   "ids_in_registry_without_pmid": [
+    "CLAIM 010"
+   ],
+   "ids_named": [
+    "CLAIM 010"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
   "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
   "origin_id": "CLAIM 010",
   "origin_line": 0,
@@ -29031,8 +32837,29 @@
    "CLAIM 037"
   ],
   "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID24369382.json|entries[11]",
-  "digest": "9ff4ad5e094802e0",
+  "digest": "79e41e3f387047b3",
   "kind": "mechanism_line",
+  "linkage": {
+   "ids_in_registry_without_pmid": [
+    "CLAIM 008"
+   ],
+   "ids_named": [
+    "CLAIM 007",
+    "CLAIM 008",
+    "CLAIM 019",
+    "CLAIM 030",
+    "CLAIM 033",
+    "CLAIM 037"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 007",
+    "CLAIM 019",
+    "CLAIM 030",
+    "CLAIM 033",
+    "CLAIM 037"
+   ]
+  },
   "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
   "origin_id": "CLAIM 007",
   "origin_line": 0,
@@ -29165,8 +32992,24 @@
    "CLAIM 037"
   ],
   "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID31315632.json|entries[7]",
-  "digest": "e92855c7a9232aff",
+  "digest": "44c117e4a11d8af0",
   "kind": "mechanism_line",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 003",
+    "CLAIM 006",
+    "CLAIM 030",
+    "CLAIM 037"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 003",
+    "CLAIM 006",
+    "CLAIM 030",
+    "CLAIM 037"
+   ]
+  },
   "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
   "origin_id": "CLAIM 003",
   "origin_line": 0,
@@ -29276,8 +33119,18 @@
    "CLAIM 014"
   ],
   "bound_from": "working_model_current.md#BLOCK 2|CLAIM 014",
-  "digest": "ed7bd6d24a2a7a71",
+  "digest": "1728534318489fd9",
   "kind": "mechanism_line",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 014"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 014"
+   ]
+  },
   "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
   "origin_id": "CLAIM 014",
   "origin_line": 0,
@@ -29311,8 +33164,18 @@
    "CLAIM 009"
   ],
   "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID35328751.json|entries[2]",
-  "digest": "055bd364a689a7a0",
+  "digest": "560d56eff7b2fe54",
   "kind": "mechanism_line",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 009"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 009"
+   ]
+  },
   "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
   "origin_id": "CLAIM 009",
   "origin_line": 0,
@@ -29373,8 +33236,29 @@
    "CLAIM 037"
   ],
   "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID24369382.json|entries[30]",
-  "digest": "7407b2ae6a420c76",
+  "digest": "63e464e023d97040",
   "kind": "mechanism_line",
+  "linkage": {
+   "ids_in_registry_without_pmid": [
+    "CLAIM 008"
+   ],
+   "ids_named": [
+    "CLAIM 007",
+    "CLAIM 008",
+    "CLAIM 019",
+    "CLAIM 030",
+    "CLAIM 033",
+    "CLAIM 037"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 007",
+    "CLAIM 019",
+    "CLAIM 030",
+    "CLAIM 033",
+    "CLAIM 037"
+   ]
+  },
   "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
   "origin_id": "CLAIM 007",
   "origin_line": 0,
@@ -29506,8 +33390,20 @@
    "CLAIM 040"
   ],
   "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json|entries[26]",
-  "digest": "b0776c0fd7a041d9",
+  "digest": "1d5b79b227d1ab3e",
   "kind": "mechanism_line",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 011",
+    "CLAIM 040"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 011",
+    "CLAIM 040"
+   ]
+  },
   "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
   "origin_id": "CLAIM 011",
   "origin_line": 0,
@@ -29546,8 +33442,18 @@
    "CLAIM 011"
   ],
   "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID33195192.json|entries[8]",
-  "digest": "08a3e9302e8dd53f",
+  "digest": "f7bfdd4c07ecbfa4",
   "kind": "mechanism_line",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 011"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 011"
+   ]
+  },
   "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
   "origin_id": "CLAIM 011",
   "origin_line": 0,
@@ -29592,8 +33498,20 @@
    "CLAIM 004"
   ],
   "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID16223882.json|entries[16]",
-  "digest": "08835a203fc27659",
+  "digest": "798f9dcb9901313e",
   "kind": "mechanism_line",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 002",
+    "CLAIM 004"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 002",
+    "CLAIM 004"
+   ]
+  },
   "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
   "origin_id": "CLAIM 002",
   "origin_line": 0,
@@ -29643,8 +33561,18 @@
    "CLAIM 007"
   ],
   "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID15064722.json|entries[11]",
-  "digest": "1e2a2bb6971c1f48",
+  "digest": "a76d68c470d18fa5",
   "kind": "mechanism_line",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 007"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 007"
+   ]
+  },
   "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
   "origin_id": "CLAIM 007",
   "origin_line": 0,
@@ -29672,8 +33600,18 @@
    "CLAIM 009"
   ],
   "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID21901168.json|entries[0]",
-  "digest": "5e95daff90c8b2ec",
+  "digest": "3ea723e3c7bbf270",
   "kind": "mechanism_line",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 009"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 009"
+   ]
+  },
   "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
   "origin_id": "CLAIM 009",
   "origin_line": 0,
@@ -29722,8 +33660,18 @@
    "CLAIM 009"
   ],
   "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID27308416.json|entries[4]",
-  "digest": "ea7f072b0f31562e",
+  "digest": "ddd271b9553d464e",
   "kind": "mechanism_line",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 009"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 009"
+   ]
+  },
   "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
   "origin_id": "CLAIM 009",
   "origin_line": 0,
@@ -29781,8 +33729,18 @@
    "CLAIM 014"
   ],
   "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID31543760.json|entries[7]",
-  "digest": "a006c80a5e2b428d",
+  "digest": "85b1ddeb3df0c22b",
   "kind": "mechanism_line",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 014"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 014"
+   ]
+  },
   "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
   "origin_id": "CLAIM 014",
   "origin_line": 0,
@@ -29820,8 +33778,22 @@
    "CLAIM 041"
   ],
   "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID36828035.json|entries[6]",
-  "digest": "31939e1938efc059",
+  "digest": "3a086500de4e9ca7",
   "kind": "mechanism_line",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 006",
+    "CLAIM 007",
+    "CLAIM 041"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 006",
+    "CLAIM 007",
+    "CLAIM 041"
+   ]
+  },
   "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
   "origin_id": "CLAIM 006",
   "origin_line": 0,
@@ -29848,8 +33820,18 @@
    "CLAIM 009"
   ],
   "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID21901168.json|entries[6]",
-  "digest": "0fd7bf2a55458e50",
+  "digest": "b2fe48836579a32d",
   "kind": "mechanism_line",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 009"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 009"
+   ]
+  },
   "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
   "origin_id": "CLAIM 009",
   "origin_line": 0,
@@ -29903,8 +33885,20 @@
    "CLAIM 034"
   ],
   "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID37897534.json|entries[11]",
-  "digest": "8ff5d52e4d64fd22",
+  "digest": "373c69f944d2b0fb",
   "kind": "mechanism_line",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 009",
+    "CLAIM 034"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 009",
+    "CLAIM 034"
+   ]
+  },
   "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
   "origin_id": "CLAIM 009",
   "origin_line": 0,
@@ -29965,8 +33959,20 @@
    "CLAIM 034"
   ],
   "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID37897534.json|entries[9]",
-  "digest": "6d1e59d8da2dda17",
+  "digest": "b6e74a1fe1a70b72",
   "kind": "mechanism_line",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 009",
+    "CLAIM 034"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 009",
+    "CLAIM 034"
+   ]
+  },
   "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
   "origin_id": "CLAIM 009",
   "origin_line": 0,
@@ -30024,8 +34030,18 @@
    "CLAIM 007"
   ],
   "bound_from": "claim_registry_current.md#CLAIM 007|Title",
-  "digest": "af8a35e83b838983",
+  "digest": "17a1ee3ba5b6f111",
   "kind": "mechanism_line",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 007"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 007"
+   ]
+  },
   "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
   "origin_id": "CLAIM 007",
   "origin_line": 0,
@@ -30057,8 +34073,18 @@
    "CLAIM 002"
   ],
   "bound_from": "claim_registry_current.md#CLAIM 002|Title",
-  "digest": "cffa75665f469775",
+  "digest": "3bb43c1dae7ee70a",
   "kind": "mechanism_line",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 002"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 002"
+   ]
+  },
   "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
   "origin_id": "CLAIM 002",
   "origin_line": 0,
@@ -30098,8 +34124,20 @@
    "CLAIM 034"
   ],
   "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID21075834.json|entries[2]",
-  "digest": "fb0b3517af56876f",
+  "digest": "c81d00a2830f0b06",
   "kind": "mechanism_line",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 009",
+    "CLAIM 034"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 009",
+    "CLAIM 034"
+   ]
+  },
   "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
   "origin_id": "CLAIM 009",
   "origin_line": 0,
@@ -30149,8 +34187,18 @@
    "CLAIM 009"
   ],
   "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID17567906.json|entries[2]",
-  "digest": "ae1806c35390613c",
+  "digest": "d167e1de40e17e7e",
   "kind": "mechanism_line",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 009"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 009"
+   ]
+  },
   "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
   "origin_id": "CLAIM 009",
   "origin_line": 0,
@@ -30199,8 +34247,18 @@
    "CLAIM 003"
   ],
   "bound_from": "claim_registry_current.md#CLAIM 003|Title",
-  "digest": "8365eb15b3b063f4",
+  "digest": "4b6caa41f47c95d8",
   "kind": "mechanism_line",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 003"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 003"
+   ]
+  },
   "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
   "origin_id": "CLAIM 003",
   "origin_line": 0,
@@ -30238,8 +34296,18 @@
    "CLAIM 014"
   ],
   "bound_from": "disease-models/wwox/research/deepdive_manifests/PMID31543760.json|entries[1]",
-  "digest": "c6ae3880134f7511",
+  "digest": "060682781342c298",
   "kind": "mechanism_line",
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 014"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 014"
+   ]
+  },
   "origin_file": "disease-models/wwox/analysis/data/pathograph_export.jsonl",
   "origin_id": "CLAIM 014",
   "origin_line": 0,
@@ -30274,10 +34342,16 @@
   "candidate": "AAV9-hSynI-WWOX",
   "claims_named": [],
   "decisive_test": "**delayed, post-onset dosing in a hypomorphic (non-null) model**, with SWD/ECoG and myelin readouts; plus an **intermediate-dose arm between 1.23 and 2.63 × 10¹¹ vg** to localize the threshold",
-  "digest": "4e2acb2a6bf74636",
+  "digest": "bca7e4b9d1f6bbe7",
   "intervention": "AAV9, human Synapsin-I promoter, WWOX cDNA; ICV. ⚠️ **Corrected 2026-09-27 — the therapeutic configuration is WPRE-FREE.** The 2021 vector map (Appendix Fig S1A, read at 300 dpi) shows all three constructs WPRE-free, and the 2021 paper never mentions WPRE; the 2026 dose study removed WPRE deliberately (*“we removed WPRE as a proactive risk-mitigation step”*, receipted locator) and states the price",
   "kind": "mechanism_record",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "R-01",
   "origin_line": 403,
@@ -30302,10 +34376,22 @@
    "CLAIM 031"
   ],
   "decisive_test": "MEA on WWOX-null neurons/organoids: does memantine (or MK-801) reduce spontaneous burst frequency/amplitude and PAC, dose-dependently, **with the parental/rescue line as the internal comparator**?",
-  "digest": "9fa1c9f37d0972d8",
+  "digest": "6fbc9f14b2129e0a",
   "intervention": "memantine (approved); MK-801 / APV as tools",
   "kind": "mechanism_record",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 021",
+    "CLAIM 031"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 021",
+    "CLAIM 031"
+   ]
+  },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "R-02",
   "origin_line": 427,
@@ -30351,10 +34437,20 @@
    "CLAIM 028"
   ],
   "decisive_test": "in WOREE organoids, **first measure nuclear β-catenin state**, then XAV939 **vs** CHIR99021 on cortical-layering rescue — the two-armed design is what fixes the sign in the right context",
-  "digest": "aefb1fc7c36f83fb",
+  "digest": "73af4dce4fbd42e8",
   "intervention": "tankyrase inhibitor (e.g. XAV939 as tool); no paediatric-profiled candidate identified",
   "kind": "mechanism_record",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "CLAIM 028"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "CLAIM 028"
+   ]
+  },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "R-03",
   "origin_line": 452,
@@ -30381,10 +34477,16 @@
   "candidate": "Lithium",
   "claims_named": [],
   "decisive_test": "a PTZ + lithium arm with an **explicit, tested** `−/−` vs `+/+` comparison — or a different GSK3β inhibitor under the same design. Until then, no genotype-specific claim is available",
-  "digest": "e13a09763a69b6c8",
+  "digest": "f6c36ea1ed594783",
   "intervention": "lithium carbonate",
   "kind": "mechanism_record",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "R-04",
   "origin_line": 476,
@@ -30403,10 +34505,16 @@
   "candidate": "Ketogenic diet",
   "claims_named": [],
   "decisive_test": "**Seahorse OCR/ECAR on donor-derived fibroblasts/LCL vs control** — the only remaining falsifier since lactate became ambiguous. Zero-cost second test: Seahorse on the existing WWOX-KO organoids, closing the transcriptome→flux gap",
-  "digest": "e374e10df5a95a4d",
+  "digest": "dbaa24425f89c422",
   "intervention": "ketogenic diet",
   "kind": "mechanism_record",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "R-05",
   "origin_line": 501,
@@ -30427,10 +34535,16 @@
   "candidate": "Anti-neuroinflammatory",
   "claims_named": [],
   "decisive_test": "in the **existing, characterized Wwox^P47T mouse** (survives >1 year, vs ~1 month for the null): does the agent reduce astro-microgliosis, slow Purkinje loss, and improve motor coordination?",
-  "digest": "e0c115bfe92b3c55",
+  "digest": "8331444eadcaa26a",
   "intervention": "class: IL-1β/NLRP3, MAPK/NF-κB or microglia-targeting agent",
   "kind": "mechanism_record",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "R-06",
   "origin_line": 526,
@@ -30449,10 +34563,16 @@
   "candidate": "Bumetanide",
   "claims_named": [],
   "decisive_test": "**gramicidin perforated-patch `E_GABA`** in WWOX-KO vs parental neurons/organoids, with NKCC1/KCC2 quantification and the GABA response itself. **This single experiment converts the entire M3 axis from T6 to T2 — or closes it**",
-  "digest": "4e34194ac7d36c73",
+  "digest": "84abe4e2498c9732",
   "intervention": "bumetanide",
   "kind": "mechanism_record",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "R-07",
   "origin_line": 550,
@@ -30472,12 +34592,22 @@
   "candidate": "Base / prime editing of a canonical splice-acceptor allele",
   "claims_named": [],
   "decisive_test": "**first**, characterize the real transcript: junction-spanning RT-PCR ± NMD block, amplicon sequencing, long-read if multiple isoforms appear. **No editing-vs-anything choice may precede this.** Then: PAM availability and bystander-cytosine survey at the locus",
-  "digest": "759d921742e3d9bb",
+  "digest": "cd615c996918437d",
   "intervention": "cytosine base editor (C→T on the antisense strand) or prime editor",
   "kind": "mechanism_record",
   "leads_named": [
    "DL-MOL-013"
   ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-MOL-013"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-MOL-013"
+   ]
+  },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "R-08",
   "origin_line": 575,
@@ -30701,10 +34831,16 @@
   "candidate": "Proteostasis modulation for an SDR missense allele",
   "claims_named": [],
   "decisive_test": "the ordered sequence, each step informative alone: (1) WB + qRT-PCR on variant-carrying cells vs control; (2) **nascent synthesis + pulse-chase** with soluble/insoluble fractionation, to separate production from disappearance; (3) orthogonal turnover probes (proteasomal and lysosomal arms with viability) — HSC70/LAMP1 are associative, **LAMP2A-dependence is what CMA requires**; (4) only then a min",
-  "digest": "d1bfbfaef4569d11",
+  "digest": "69a472d71cbf1646",
   "intervention": "conditional; **no molecule is design-ready**. Three families: site-specific pharmacological chaperone · kinetic stabilizer · indirect proteostasis regulator",
   "kind": "mechanism_record",
   "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "R-09",
   "origin_line": 600,
