@@ -13,7 +13,8 @@
  "branch": "task/plan-drugrepurposing-module",
  "CURRENT_STATE": "IN_PROGRESS",
  "AUTHORISED_QUEUE": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
+  "COMPLETED_ON": "2026-10-23",
   "PAUSE_HISTORY": "PAUSED on 2026-10-23 while the operator switched the permission mode back to autonomous; resumed the same day on the Orchestrator's instruction at OBJ_C_JOIN[0] from the WIP commit below (branch aligned to main f5120062 first).",
   "RESUME": {
    "next_step": "OBJ_C_JOIN[0] — continue deliverable C from the WIP commit, then finish C's done-criteria: one live run per axis, routing row in framework/scripts/README.md for framework/scripts/repurposing_join.py, enrolment of framework/scripts/test_repurposing_join.py in scripts/run_release_regressions.py, chmod +x on both new entrypoints (scripts/test_release_surface.py fails without it — it already caught the two B entrypoints), then land with task_close.py, gate, fresh-clone battery, safe_push.",
@@ -109,8 +110,8 @@
     },
     {
      "step": "E. Final report: self-evaluation per framework/protocols/session_self_evaluation.md, capability-scout entry, takeaways; land, gate, push",
-     "status": "IN_PROGRESS",
-     "evidence": ""
+     "status": "DONE",
+     "evidence": "landed main dd3d878922250a3527dc247636c6057ae592a12e (task_close.py); fresh-clone battery on that SHA (identity 2105045:49894127): REGRESSION VERDICT FAIL on scripts/test_documented_commands.py and scripts/test_repository_surface_determinism.py, one cause — the drug_repurposing README documented `repurposing_adapter.py list · selftest [--live]` and the subcommand-aware guard checked `list --help` for --live; repaired on main 72f3a71f (one README line), both suites OK on the committed tree; gate PASS 0 blocks, LINT 0 BLOCK, receipts verify OK 848; self-evaluation disease-models/wwox/research/session_evaluations/self_eval_plan_repurposing_module_20261023.md; capability-scout entry in research/capability_scout_log.md; takeaways in TAKEAWAYS; pushed with safe_push (see STAGE_REPORTS E)"
     }
    ]
   }
@@ -125,6 +126,8 @@
   "W43 harness-scout input missing from the Junior · proceed with the mandate, report the gap · the weekly triage waits on an input that does not exist and the mandate is explicit about its own order · with the input present, Monday triage would have been done first",
   "1 LAND_OVERDUE branch listed by harness_session_start (not this actor's) · left to its author, named in the stage report · landing another actor's branch is not this mandate's scope and deleting is reserved · nothing else changes",
   "Dry calls for the survey use a public gene symbol (WWOX), a public Ensembl id and two public drug names only · no identifier of any person, no key, no spend · the mandate forbids keys and private data; a key-less read with public terms is the declared default · nothing would differ",
+  "E: the battery on dd3d8789 turned two suites red from one documentation line; the repair commit 72f3a71f (one Markdown line) is pushed after re-running exactly those two suites plus the gate, not after a third 30-minute fresh-clone battery · the line is read by exactly those two guards and no code changed · reversible: the next landing on main runs the full battery again",
+  "C-stage battery (cfb67740) stopped by its owner with `kill <pid>` once the E landing superseded it; the E battery covers C and D · the operator's time is the scarce resource and two concurrent batteries halve each other · recorded here rather than silently",
   "A record-only commit on main after the battery-verified push (this task record's stage-A closure) is pushed after a targeted re-run of the suites that read ledger/tasks (test_task_record_commit_hashes, test_mandate_continuity) and the gate on the exact SHA, not a second 30-minute fresh-clone battery · a JSON ledger record is read by exactly those suites · reversible: the next deliverable's landing runs the full battery again",
   "The survey note keeps raw API payloads out of the repository (a compact per-call summary file is committed; the payloads stay in the session scratchpad) · payloads carry free text that the publication gate may flag and that nobody reads again · the measurement is reproducible from the command recorded in the note · a payload needed later is re-fetched with its date"
  ],
@@ -208,7 +211,7 @@
   {
    "stage": "E",
    "date": "2026-10-23",
-   "landed": "see OBJ_E_PROOF[1] evidence once landed",
+   "landed": "main dd3d878922250a3527dc247636c6057ae592a12e, then the README repair 72f3a71f and this record closure; pushed to development with safe_push (gate PASS)",
    "measured": "see module_proof_20261023.md § 1; self-evaluation self_eval_plan_repurposing_module_20261023.md (ATTRIBUTION_CENSUS incidents 6, machine 4, self 2, severity_high 1); capability-scout entry appended to research/capability_scout_log.md",
    "failed": "nothing new in E; the honest misses are in the proof § 3",
    "removed_or_merged": "nothing",
