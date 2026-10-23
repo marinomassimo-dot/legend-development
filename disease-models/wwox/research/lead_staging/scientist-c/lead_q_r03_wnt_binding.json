@@ -1,0 +1,10 @@
+{
+ "kind": "MECH",
+ "status": "open",
+ "tag": "INFERENZA",
+ "title": "Wnt/tankyrase: the handoff binds this query to a psoriasis keratinocyte paper (PMID 38203337) that does not measure beta-catenin; the nuclear beta-catenin endpoint lives in the organoid paper and in cancer-cell papers from other laboratories",
+ "source": "scientist-c, task MODULE-C-20261023; handoff row Q-R-03 (mechanism_intervention_map.md:452), bound via CLAIM 028 to PMID 38203337 (abstract: NF-kB, calcium, PKC in keratinocytes; no Wnt); organoid endpoint is in PMID 42397075 (manifest present); outside measurements by abstract: Celebi 2020 (PMID 32368285, manifest present), Tao 2026 (PMID 42790938), Bouteille 2009 (PMID 19465938). NOT WWOX NEURAL EVIDENCE.",
+ "causal_statement": "INFERENZA: the REPLICATE row asks for a second measurement of an endpoint the bound paper never measured; the join's PMID came from a claim that cites the paper for context-dependence of WWOX output. Independent Wnt measurements exist only in cancer cells (WWOX knockdown raises nuclear Dvl or beta-catenin); none in developing neurons was found.",
+ "falsifier": "A WWOX-null or knockdown neuronal or neural-progenitor system from another laboratory showing no change or a decrease in nuclear beta-catenin.",
+ "transfer_limit": "Cancer cell lines, different species and tissues; abstract-level for the 2026 gastric paper. Not medical advice; no tankyrase inhibitor is evaluated."
+}

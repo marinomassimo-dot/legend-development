@@ -1,0 +1,10 @@
+{
+ "kind": "MECH",
+ "status": "open",
+ "tag": "INFERENZA",
+ "title": "AAV9-hSynI-WWOX: the handoff binds this query to a review (PMID 42128308), not to a measurement; no second-laboratory AAV-WWOX measurement was found in PubMed",
+ "source": "scientist-c, task MODULE-C-20261023; handoff row Q-R-01 (mechanism_intervention_map.md:403); PMID 42128308 is a Review (PubMed article type); the primaries are PMID 34747138 and PMID 42422765 (manifests present), both from one laboratory; PubMed query WWOX AND (AAV OR gene therapy OR gene replacement) in title/abstract returned 14 records on 2026-10-23, titles screened. NOT WWOX EVIDENCE for the search itself.",
+ "causal_statement": "INFERENZA: the 'one paper' dependence of Q-R-01 is an artefact of binding through a review citation; the measurement rests on at least two primary papers from one laboratory and on no paper from a second laboratory. A zero here licenses only 'none found in those queries'.",
+ "falsifier": "Any peer-reviewed or preprint AAV or lentiviral Wwox re-expression study from a laboratory other than the originating one, reporting survival or seizure endpoints.",
+ "transfer_limit": "Search was PubMed title/abstract only plus no web search; preprint servers and conference abstracts not covered. Not medical advice."
+}

@@ -1,0 +1,10 @@
+{
+ "kind": "MECH",
+ "status": "open",
+ "tag": "INFERENZA",
+ "title": "Pannexin-1 blockade: the only WWOX measurement (PMID 34634460) has two outside precedents on the same endpoint, in a human-tissue and a Panx1-knockout model, that were not yet read",
+ "source": "scientist-c, task MODULE-C-20261023; handoff row Q-N-16 (mechanism_intervention_map.md:769); manifest PMID34634460.json (26 locators, audit UNAUDITED); PubMed title/abstract search 2026-10-23 for pannexin with epileptiform/seizure/burst terms returned 6 records, titles screened; candidates Dossi 2018 (PMID 29848662) and Aquilino 2020 (PMID 33053775, same laboratory as 34634460). Abstracts only, NOT READ. NOT WWOX EVIDENCE.",
+ "causal_statement": "INFERENZA: the dependence of Q-N-16 on one reading can be split by a measurement of burst/epileptiform activity under pannexin-1 inhibition in another system. Two such papers exist by abstract (human epileptic tissue slices plus a mouse model; a Panx1-deficient mouse from the same laboratory as the WWOX paper). Until they are read, nothing about their effect size or about blocker-versus-genetic difference is asserted.",
+ "falsifier": "Reading both papers shows burst frequency under a selective pannexin-1 blocker unchanged or increased in slices from hyperexcitable tissue, in which case the WWOX point estimate is not an outlier; or shows a reduction at a developmental stage never tested in the WWOX slice.",
+ "transfer_limit": "Abstract-level only; no number is carried. Different species, tissue, age and blocker from the WWOX P13-P17 slice. Not WWOX evidence, carries no dose or suitability. Not medical advice."
+}
