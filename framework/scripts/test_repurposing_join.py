@@ -207,6 +207,29 @@ class Run(unittest.TestCase):
                 self.assertTrue(str(row.get(key, "")).strip(), row)
             self.assertIn(":", row["would_move"])
 
+    def test_handoff_turns_every_card_into_one_assignment_row(self):
+        rj.run(self.tmp, axis="wnt", live=False)
+        cards = json.loads((self.tmp / "cards.json").read_text(encoding="utf-8"))
+        queries = {q["query_id"]: q for q in json.loads((self.tmp / "queries.json").read_text(encoding="utf-8"))}
+        rows = rj.handoff_rows(cards, queries)
+        self.assertEqual(len(rows), len(cards))
+        for row in rows:
+            self.assertIn(row["kind"], ("SELECT", "READ", "REPLICATE", "AUDIT"))
+            self.assertTrue(row["ask"] and row["who"] and row["origin"])
+            if row["kind"] in ("REPLICATE", "AUDIT", "READ") and row["dependence"] != "NO_RECEIPTED_EVIDENCE":
+                self.assertTrue(row["pmids"], row)
+            if row["kind"] == "REPLICATE":
+                self.assertEqual(row["lead_spec"]["status"], "open")
+                self.assertEqual(row["lead_spec"]["tag"], "INFERENZA")
+        text = rj.render_handoff(rows, "2026-01-01", "wnt")
+        self.assertIn("NOT WWOX EVIDENCE", text)
+        self.assertIn("Not medical advice", text)
+        self.assertNotIn("2026-10-2", text.split("\n")[0].replace("2026-01-01", ""))  # the date is the argument, not the clock
+        done = subprocess.run([sys.executable, str(CLI), "handoff", "--out", str(self.tmp), "--date", "2026-01-01",
+                               "--write", str(self.tmp / "handoff.md")], capture_output=True, text=True, cwd=ROOT)
+        self.assertEqual(done.returncode, 0, done.stderr)
+        self.assertEqual((self.tmp / "handoff.md").read_text(encoding="utf-8"), text)
+
     def test_cli_run_and_diff_against_a_hand_made_card(self):
         done = subprocess.run([sys.executable, str(CLI), "run", "--axis", "wnt", "--out", str(self.tmp)],
                               capture_output=True, text=True, cwd=ROOT)

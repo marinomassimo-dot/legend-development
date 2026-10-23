@@ -626,7 +626,8 @@ def run(out_dir: Path, axis: str = "", live: bool = False, limit: int = 0) -> di
         if card is not None:
             cards.append({"query_id": query["query_id"], "card": card})
     before = previous_state(out_dir)
-    state = {"queries": {q["query_id"]: q["digest"] for q in queries},
+    state = {"axis": axis or "all",
+             "queries": {q["query_id"]: q["digest"] for q in queries},
              "evidence": {t["query_id"]: t["digest"] for t in tables},
              "cards": {c["query_id"]: digest(c["card"]) for c in cards}}
     changes = change_report(before, state)
@@ -672,6 +673,102 @@ def render(summary: dict) -> str:
     return "\n".join(lines)
 
 
+def handoff_rows(cards: list[dict], queries: dict[str, dict]) -> list[dict]:
+    """The feedback loop into research: each card's measure-next becomes one row the next batch
+    can act on. Four row kinds, decided by the dependence the join measured, never by hand:
+
+      SELECT   — no receipted paper behind the record: the read-only selector resolves the record's
+                 author-year citations to PMIDs and proposes reading rows;
+      READ     — one or more papers but none read to the end: a Scientist's complete read;
+      REPLICATE— the whole query rests on one complete read: the selector looks for an
+                 independent measurement of the same endpoint (a second laboratory or model);
+      AUDIT    — the locators carry contradictions nobody audited: a blind locator audit before
+                 the query may touch a baseline claim.
+
+    A row is an assignment, not a conclusion; nothing in it is a dose or a recommendation."""
+    rows = []
+    for item in cards:
+        card, query = item["card"], queries.get(item["query_id"], {})
+        table, nxt = card["legend_evidence"], card["measure_next"]
+        dep = nxt["dependence"]
+        pmids = [row["pmid"] for row in table["rows"]]
+        if dep == "NO_RECEIPTED_EVIDENCE":
+            kind, who, pmid_list = "SELECT", "read-only selector", []
+            ask = ("resolve the author-year citations of this record to PMIDs with registry_records.py "
+                   "and propose reading rows; until a receipt exists the external hits stand alone")
+        elif dep.startswith("ONE_PAPER"):
+            kind, who, pmid_list = "REPLICATE", "read-only selector, then a Scientist", pmids
+            ask = ("find an independent measurement of the same endpoint (second laboratory or second "
+                   "model); the query rests on this one complete read")
+        elif "NONE_READ_COMPLETE" in dep:
+            kind, who, pmid_list = "READ", "Scientist", pmids
+            ask = "complete full-text read of the strongest of these papers, with its receipt and manifest"
+        elif "UNAUDITED_CONTRADICTIONS" in dep:
+            kind, who = "AUDIT", "an auditor who is not the reader"
+            pmid_list = [row["pmid"] for row in table["rows"] if row["unaudited_contradictions"]]
+            ask = ("blind locator audit (legend-locator-audit) of the contradicts_locator entries in these "
+                   "manifests before the query touches a baseline claim")
+        else:
+            kind, who, pmid_list = "READ", "Scientist", pmids
+            ask = nxt["measurement"]
+        external = [f"{s['adapter']} {s['status']} ({s.get('retrieved_at') or 'not attempted'})"
+                    for s in card.get("external_sources", [])]
+        rows.append({"query_id": item["query_id"], "kind": kind, "who": who,
+                     "candidate": card["input"]["candidate"]["name"],
+                     "origin": nxt["would_move"], "dependence": dep, "pmids": pmid_list,
+                     "ask": ask, "external_sources": external,
+                     "lead_spec": lead_spec(item["query_id"], card, query) if kind == "REPLICATE" else None})
+    rows.sort(key=lambda row: (row["kind"], row["query_id"]))
+    return rows
+
+
+def lead_spec(query_id: str, card: dict, query: dict) -> dict:
+    """A discovery-ledger spec (the shape `discovery_lead.py check` validates) for a dependence
+    worth remembering as a lead: the query stands on one reading. Status open; tag INFERENZA;
+    it is staged by a Scientist, never appended by the join."""
+    row = card["legend_evidence"]["rows"][0]
+    return {
+        "kind": "MECH", "status": "open", "tag": "INFERENZA",
+        "title": f"{card['input']['candidate']['name']}: the repurposing query rests on a single complete read "
+                 f"(PMID {row['pmid']}); an independent measurement would split the dependence",
+        "source": (f"framework/scripts/repurposing_join.py handoff, {card['legend_evidence']['query_id']}, derived from "
+                   f"{query.get('origin_file', '')}:{query.get('origin_line', '')}; manifest {row['manifest']} "
+                   f"({row['locator_count']} locators, audit {row['audit_status']}); receipt {row.get('receipt_id', '')}"),
+        "causal_statement": (f"INFERENZA: every assertion the module can bind for '{card['input']['candidate']['name']}' "
+                             f"traces to one receipted reading; a second measurement of the same endpoint in a second "
+                             f"system or laboratory is the single datum that would move {card['measure_next']['would_move']}"),
+    }
+
+
+def render_handoff(rows: list[dict], date: str, axis: str) -> str:
+    lines = [
+        f"# Module handoff — rows for the next Scientist batch ({date}, axis {axis or 'all'})",
+        "",
+        "Rendered by `python3 framework/scripts/repurposing_join.py handoff` from `join/cards.json`; never typed.",
+        "Each row is what the join measured about the dependence behind one candidate and the one act that would",
+        "split it. A row is an assignment for the read-only selector, a Scientist or an auditor — not a conclusion,",
+        "not a ranking, not a dose. Every external source named is **NOT WWOX EVIDENCE** and carries its retrieval",
+        "date; its licence and citation are in the card and in `drug_repurposing/ACKNOWLEDGEMENTS.md`.",
+        "Not medical advice.",
+        "",
+        "| Kind | Query | Candidate (from the mechanism map heading) | Dependence measured | PMIDs | Ask | Who | Would move |",
+        "|---|---|---|---|---|---|---|---|",
+    ]
+    for row in rows:
+        lines.append(f"| {row['kind']} | `{row['query_id']}` | {row['candidate'][:60]} | {row['dependence'][:80]} | "
+                     f"{', '.join(row['pmids']) or '—'} | {row['ask']} | {row['who']} | {row['origin']} |")
+    counts = {}
+    for row in rows:
+        counts[row["kind"]] = counts.get(row["kind"], 0) + 1
+    lines += ["", "Counts: " + " · ".join(f"{k} {v}" for k, v in sorted(counts.items())), ""]
+    specs = [row["lead_spec"] for row in rows if row.get("lead_spec")]
+    if specs:
+        lines += ["## Lead specs (for `discovery_lead.py check`; a Scientist stages them, the join never appends)", ""]
+        for spec in specs:
+            lines += ["```json", json.dumps(spec, indent=1, ensure_ascii=False), "```", ""]
+    return "\n".join(lines)
+
+
 def diff_against_handmade(derived_card: dict, handmade: dict) -> dict:
     """What the derived card carries that the hand-written one does not, and the other way round.
 
@@ -713,11 +810,30 @@ def main(argv: list[str] | None = None) -> int:
         if name == "run":
             sp.add_argument("--live", action="store_true", help="call the adapters; otherwise cached or NOT_ATTEMPTED")
             sp.add_argument("--json", action="store_true")
+    p_hand = sub.add_parser("handoff", help="rows for the next batch from join/cards.json (SELECT / READ / REPLICATE / AUDIT)")
+    p_hand.add_argument("--out", type=Path, default=DEFAULT_OUT)
+    p_hand.add_argument("--date", required=True, help="YYYY-MM-DD written into the file (deterministic, never the clock)")
+    p_hand.add_argument("--write", type=Path, default=None, help="write the Markdown here (e.g. research/repurposing_batch_selection_<date>_module.md)")
+    p_hand.add_argument("--json", action="store_true")
     p_diff = sub.add_parser("diff", help="diff one derived card against a hand-made card in cards/")
     p_diff.add_argument("query_id")
     p_diff.add_argument("handmade", type=Path)
     p_diff.add_argument("--out", type=Path, default=DEFAULT_OUT)
     args = parser.parse_args(argv)
+    if args.command == "handoff":
+        cards = json.loads((args.out / "cards.json").read_text(encoding="utf-8"))
+        queries = {q["query_id"]: q for q in json.loads((args.out / "queries.json").read_text(encoding="utf-8"))}
+        state = json.loads((args.out / "state.json").read_text(encoding="utf-8")) if (args.out / "state.json").exists() else {}
+        rows = handoff_rows(cards, queries)
+        text = render_handoff(rows, args.date, state.get("axis", ""))
+        if args.write:
+            args.write.write_text(text, encoding="utf-8")
+            print(f"written {relative(args.write)}: {len(rows)} row(s)")
+        elif args.json:
+            print(json.dumps(rows, indent=1, ensure_ascii=False))
+        else:
+            print(text)
+        return 0
     if args.command == "diff":
         cards = json.loads((args.out / "cards.json").read_text(encoding="utf-8"))
         derived = next((row["card"] for row in cards if row["query_id"] == args.query_id), None)
