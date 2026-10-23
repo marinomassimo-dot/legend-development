@@ -1,0 +1,64 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "_note": "Orchestrator batch driven by the repurposing module's handoff file; observations feed a diagnosis of the module.",
+ "TASK_ID": "ORCH-MODULE-BATCH-20261023",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Work the 26 rows the repurposing module handed to research (research/repurposing_batch_selection_20261023_module.md): resolve 21 SELECT rows to PMIDs and read them, find independent measurements for 3 REPLICATE rows, blind-audit 2 AUDIT rows; then diagnose how the cycle worked and what the module cannot see (typed pharmacological assertions, early-benefit axis, missing data in abstentions, prose-cited records).",
+ "START_UTC": "2026-10-23T20:30:00Z",
+ "END_UTC": "2026-10-24T02:30:00Z",
+ "MAX_SCIENTISTS": 4,
+ "AUTHORISED_QUEUE_20261023": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_SELECT_READ": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "Scientists A,B,C resolve and read SELECT rows (A: Q-N-01..07, B: Q-N-08..15, C: Q-R-04..09 plus the 3 REPLICATE rows)",
+     "status": "TODO"
+    },
+    {
+     "step": "Scientist D: gap study on typed pharmacological assertions of the 21 cards and on the early-benefit axis",
+     "status": "TODO"
+    },
+    {
+     "step": "Blind auditor for the 2 AUDIT rows (Q-N-17, Q-R-02)",
+     "status": "TODO"
+    }
+   ]
+  },
+  "OBJ_INTEGRATE": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "Record staged receipts, integrator batch 015 for identities/depth/candidates, rerun repurposing_join.py run and diff, battery on the final SHA, push",
+     "status": "TODO"
+    }
+   ]
+  },
+  "OBJ_DIAGNOSIS": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "Diagnosis in Italian and written note: how the cycle worked, weaknesses, gaps, improvements from the Scientists' own observations; Harness backlog",
+     "status": "TODO"
+    }
+   ]
+  }
+ },
+ "WATCH": {
+  "cycles_done": 0,
+  "cron_id": null,
+  "roster": {},
+  "log": []
+ },
+ "DECISIONS_TAKEN": [
+  "2026-10-23: operator approved the batch and asked for a diagnosis afterwards; duration chosen by the Orchestrator (6 hours, hourly watch)."
+ ],
+ "DEFAULTS_TAKEN": [
+  "Fresh Scientist agents instead of resuming the large-context ones of 2026-10-22."
+ ]
+}
