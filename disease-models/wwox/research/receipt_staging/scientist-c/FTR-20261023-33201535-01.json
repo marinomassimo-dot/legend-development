@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-10-23T20:15:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "tables": "read",
+  "figures": "captions_only",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "unavailable",
+  "references": "not_read"
+ },
+ "event_at": "2026-10-23T20:57:00Z",
+ "event_id": "FTR-20261023-33201535-01",
+ "evidence_basis": [
+  "PMC author-manuscript JATS XML (efetch) read in full as a tag-stripped rendering: Abstract, Introduction, Patients and Methods, Results, Discussion, Tables 1 to 3 and figure legends. The six figure images were declared in the XML but absent from the PMC bucket, so figures were not opened. The online supplement was not obtained. Reference list counted, not read.",
+  "Eleven locators machine-verified. No dose, schedule or administration detail is carried into any proposition."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID33201535.json",
+  "disease-models/wwox/research/module_batch_selection_scientist-c_20261023.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "5cb3c434f0929292032c755d3271e53c805e0c895fd1ea57298ad042b393fcc1",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID33201535_Soul2021_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.1002/ana.25959",
+  "pmid": "33201535"
+ },
+ "workflow": "scientist-c, task MODULE-C2-20261023, branch task/module-c2-20261023; context_policy QUESTION_DRIVEN; prepared as JSON for the integrator, not appended by this actor."
+}

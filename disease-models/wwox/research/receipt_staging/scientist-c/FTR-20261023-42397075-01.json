@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-10-23T20:15:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "read",
+  "tables": "not_present",
+  "figures": "not_read",
+  "discussion": "read",
+  "limitations": "not_read",
+  "supplementary": "unavailable",
+  "references": "not_read"
+ },
+ "event_at": "2026-10-23T21:01:00Z",
+ "event_id": "FTR-20261023-42397075-01",
+ "evidence_basis": [
+  "QUESTION-FRAMED RESUME, not a re-reading: the question was where the Wnt/beta-catenin endpoint behind a repurposing row is measured. Read, in the accepted-manuscript text rendering already fingerprinted, one Results paragraph on Wnt and TCF4 (p. 9), one Discussion paragraph (p. 15) and reference 23. Results and Discussion are marked read only because the schema needs one read section; what was actually read is the named paragraphs (and reference 23), recorded in five new locators, and every other section is declared not_read here (earlier receipts carry the full coverage).",
+  "Supplementary Figure 6F, cited for the TCF4 western blot, was not obtained (unavailable) and no figure was opened; no blot value is recorded. The manifest was already FAIL under --verify-artifacts for 31 blocks on an older absent artefact before this edit; no new block was added."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID42397075.json",
+  "disease-models/wwox/research/module_batch_selection_scientist-c_20261023.md"
+ ],
+ "prior_receipt": "FTR-20261004-42397075-05",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "9775f766f68929e05665aa572196f4889083b501dc7f6792f1b9243e7dc0fd4b",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID42397075_Steinberg2026_OUP-AM.pdf",
+ "study_id": {
+  "doi": "10.1093/brain/awag239",
+  "pmid": "42397075"
+ },
+ "workflow": "scientist-c, task MODULE-C2-20261023, branch task/module-c2-20261023; context_policy QUESTION_DRIVEN; prepared as JSON for the integrator, not appended by this actor."
+}

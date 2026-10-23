@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-10-23T20:15:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "tables": "read",
+  "figures": "captions_only",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_present",
+  "references": "not_read"
+ },
+ "event_at": "2026-10-23T20:55:00Z",
+ "event_id": "FTR-20261023-33053775-01",
+ "evidence_basis": [
+  "Europe PMC JATS XML read section by section as a tag-stripped rendering: Abstract, Introduction, Results 2.1 to 2.3, Discussion, Methods 4.1 to 4.4, Conclusions and Table 1. Figure legends read; figure images were not opened (captions_only). No supplement exists (PMC flag). Reference list counted, not read.",
+  "Eleven locators machine-verified against the declared XML. One derived statistic (Fisher exact versus the printed chi-squared) was computed by the Scientist from Table 1 counts and carries external_provenance."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID33053775.json",
+  "disease-models/wwox/research/module_batch_selection_scientist-c_20261023.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "bf33b13b5ebc5a187040b5ebb9d392447b80fcf1d4bf461b91376d5040c240d6",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID33053775_Aquilino2020_EPMC.xml",
+ "study_id": {
+  "doi": "10.3390/ijms21207510",
+  "pmid": "33053775"
+ },
+ "workflow": "scientist-c, task MODULE-C2-20261023, branch task/module-c2-20261023; context_policy QUESTION_DRIVEN; prepared as JSON for the integrator, not appended by this actor."
+}
