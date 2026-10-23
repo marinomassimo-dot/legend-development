@@ -229,12 +229,21 @@
     "panel_text_relation": "text_confirmed_by_panel"
    },
    {
-    "proposition": "For the one genotyped child (II:4) the normal metabolic screen explicitly includes serum lactate and ammonia, together with amino and organic acids and very long chain fatty acids. The same list is the whole of the paper's metabolic evidence: it is blood and urine chemistry.",
+    "proposition": "For the one genotyped child (II:4) the normal metabolic screen explicitly includes serum lactate and ammonia, together with amino and organic acids and very long chain fatty acids (the quoted list).",
     "snippet": "blood gas analyses, ammonia, serum lactate, plasma urea, electrolytes, urine and serum amino and organic acids, and very long chain fatty acids",
     "surface": "body",
     "artifact": "files/fulltext/PMID24456803_AbdelSalam2014_PMC.xml",
     "anchor": "Results, paragraph 1 (clinical description of II:4)",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID24456803.json",
+     "entry": 11,
+     "what_changed": "blind-audit finding class 'bundled proposition' (module repairs 2026-10-23): proposition narrowed to what its quote carries; readings from other lines or tool runs are labelled as the reader's. The repair is not itself audited.",
+     "audit": {
+      "auditors": 0,
+      "verdicts": []
+     }
+    }
    },
    {
     "proposition": "Search of the article text (tool run 2026-10-23 over the declared JATS): the strings 'biops' and 'muscle' occur zero times; 'mitochond' occurs only in the Discussion on the murine retina and in two reference titles. The paper therefore reports no muscle biopsy and no mitochondrial study of the patient, contrary to the registry wording 'complete metabolic and mitochondrial screen, muscle biopsy included' that the map's metabolic-biomarker passage inherits. The row anchored is the screen sentence.",

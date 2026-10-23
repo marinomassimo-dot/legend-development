@@ -514,48 +514,93 @@
     }
    },
    {
-    "proposition": "The paper states antiseizure-medication resistance in all 13 patients except Patient 5 and says the drugs were used singly or in combination 'with variable efficacy'; the sentence gives no per-drug or per-class response, and neither does Table 2, whose drug row is headed 'trialed (current)'. So the cohort carries no documented sodium-channel-blocker response, positive or negative, only exposure.",
+    "proposition": "The quoted sentence states antiseizure-medication resistance in all 13 patients except Patient 5 and that the drugs were used singly or in combination 'with variable efficacy'; the sentence gives no per-drug or per-class response. (Reader's reading, from entry 44's row and the rest of the paragraph: no response by drug or class is reported anywhere in the paragraph or the Table 2 drug row, so the cohort documents sodium-channel-blocker exposure, not response.)",
     "snippet": "Epilepsy was resistant to antiseizure medications (ASMs) in all patients, except Patient 5. Different ASMs were used, single or in combination, with variable efficacy.",
     "surface": "body",
     "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC_r2.xml",
     "anchor": "Results, antiseizure-medication paragraph",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36779245.json",
+     "entry": 39,
+     "what_changed": "blind-audit finding class 'bundled proposition' (module repairs 2026-10-23): proposition narrowed to what its quote carries; readings from other lines or tool runs are labelled as the reader's. The repair is not itself audited.",
+     "audit": {
+      "auditors": 0,
+      "verdicts": []
+     }
+    }
    },
    {
-    "proposition": "Table 2, Patient 2: the list of antiseizure medications trialed includes lamotrigine and carbamazepine; the patient is marked drug-resistant. (Sodium-channel-blocking class assigned by this reader, not by the paper.)",
+    "proposition": "Table 2 drug row, Patient 2 cell: lamotrigine and carbamazepine are among the listed antiseizure medications. (Sodium-channel-blocking class assigned by this reader, not by the paper.)",
     "snippet": "LEV, VPA, LTG, CLB, CBZ, ACTH, CLP",
     "surface": "table",
     "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC_r2.xml",
     "anchor": "Table 2, row 'ASMs trialed (current)', Patient 2 column",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36779245.json",
+     "entry": 40,
+     "what_changed": "blind-audit finding class 'bundled proposition' (module repairs 2026-10-23): proposition narrowed to what its quote carries; readings from other lines or tool runs are labelled as the reader's. The repair is not itself audited.",
+     "audit": {
+      "auditors": 0,
+      "verdicts": []
+     }
+    }
    },
    {
-    "proposition": "Table 2, Patient 6: the list includes oxcarbazepine, lacosamide and lamotrigine among fourteen entries; the patient is marked drug-resistant. (Class assigned by this reader.)",
+    "proposition": "Table 2 drug row, Patient 6 cell: oxcarbazepine, lacosamide and lamotrigine are among fourteen listed entries. (Class assigned by this reader.)",
     "snippet": "CLB, TPM, CBD, MDZ, PER, PHB, LEV, CLP, OXC, VGB, LAC, ESM, LTG, DZP",
     "surface": "table",
     "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC_r2.xml",
     "anchor": "Table 2, row 'ASMs trialed (current)', Patient 6 column",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36779245.json",
+     "entry": 41,
+     "what_changed": "blind-audit finding class 'bundled proposition' (module repairs 2026-10-23): proposition narrowed to what its quote carries; readings from other lines or tool runs are labelled as the reader's. The repair is not itself audited.",
+     "audit": {
+      "auditors": 0,
+      "verdicts": []
+     }
+    }
    },
    {
-    "proposition": "Table 2, Patient 7: the list includes lamotrigine, zonisamide, lacosamide and phenytoin among fourteen entries; the patient is marked drug-resistant. (Class assigned by this reader.)",
+    "proposition": "Table 2 drug row, Patient 7 cell: lamotrigine, zonisamide, lacosamide and phenytoin are among fourteen listed entries. (Class assigned by this reader.)",
     "snippet": "LTG, ZNS, CLB, LAC, MDZ, PHT, PHB, PRED, ACTH, TPM, KD, VGB, VPA, LEV",
     "surface": "table",
     "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC_r2.xml",
     "anchor": "Table 2, row 'ASMs trialed (current)', Patient 7 column",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36779245.json",
+     "entry": 42,
+     "what_changed": "blind-audit finding class 'bundled proposition' (module repairs 2026-10-23): proposition narrowed to what its quote carries; readings from other lines or tool runs are labelled as the reader's. The repair is not itself audited.",
+     "audit": {
+      "auditors": 0,
+      "verdicts": []
+     }
+    }
    },
    {
-    "proposition": "Table 2, Patient 5, the one patient the paper does not mark drug-resistant: the list is valproic acid and levetiracetam only, with no sodium-channel-blocking drug among them (class assigned by this reader). The paper records this patient as the single non-drug-resistant case of the cohort and the Q230P homozygote elsewhere in its text.",
+    "proposition": "Table 2 drug row, Patient 5 cell (shown between the cells of Patients 4 and 6): valproic acid and levetiracetam only, with no sodium-channel-blocking drug (class assigned by this reader). That Patient 5 is the one non-resistant patient is stated in entry 39's sentence.",
     "snippet": "PHB, RFM, LEV, CBZ VPA, LEV CLB, TPM, CBD",
     "surface": "table",
     "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC_r2.xml",
     "anchor": "Table 2, row 'ASMs trialed (current)', Patient 5 column (VPA, LEV), shown between the cells of Patients 4 and 6",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36779245.json",
+     "entry": 43,
+     "what_changed": "blind-audit finding class 'bundled proposition' (module repairs 2026-10-23): proposition narrowed to what its quote carries; readings from other lines or tool runs are labelled as the reader's. The repair is not itself audited.",
+     "audit": {
+      "auditors": 0,
+      "verdicts": []
+     }
+    }
    },
    {
-    "proposition": "Count made by this reader from the thirteen cells of that row of Table 2, with the class label (carbamazepine, oxcarbazepine, phenytoin, lamotrigine, lacosamide, zonisamide, rufinamide as sodium-channel blockers; strict set carbamazepine, oxcarbazepine, phenytoin) supplied from general pharmacology and not by the paper: 8 of 13 patients (Patients 1, 2, 4, 6, 7, 9, 11, 13) list at least one drug of the broad set and 7 of 13 (Patients 1, 2, 4, 6, 7, 9, 11) list one of the strict set; Patients 3, 5, 8, 10 and 12 list none. Twelve of 13 are marked drug-resistant, so exposure is common and a response is not reported.",
-    "snippet": "ASMs trialed (current) PHB, VPA, RFM, VGB, PHT LEV, VPA, LTG, CLB, CBZ",
+    "proposition": "The quoted text is the whole drug row of Table 2 (thirteen cells). Count made by this reader from that row, class labels supplied from general pharmacology and not by the paper: 8 of 13 patients (Patients 1, 2, 4, 6, 7, 9, 11, 13) list at least one drug of the broad set and 7 of 13 (Patients 1, 2, 4, 6, 7, 9, 11) list one of the strict set; Patients 3, 5, 8, 10 and 12 list none. Patients 3, 5, 8, 10 and 12 list none of the broad set. Vigabatrin appears in the cells of Patients 1, 3, 6, 7, 8, 10, 11 and 13. The row is headed 'trialed (current)' and gives no response.",
+    "snippet": "ASMs trialed (current) PHB, VPA, RFM, VGB, PHT LEV, VPA, LTG, CLB, CBZ, ACTH, CLP VGB, VPA, LEV, CLP PHB, RFM, LEV, CBZ VPA, LEV CLB, TPM, CBD, MDZ, PER, PHB, LEV, CLP, OXC, VGB, LAC, ESM, LTG, DZP LTG, ZNS, CLB, LAC, MDZ, PHT, PHB, PRED, ACTH, TPM, KD, VGB, VPA, LEV VGB, PHB, DZP LEV, OXC, CBD LEV, VGB, CBD CLB, LAC, CBD, LEV, CBZ, PRED, VGB, KD, VPA VPA, KD, PHB, LEV, TPM, CLB, MDZ VPA, LTG, BRV, VGB, LEV, CLB, TPM, PER",
     "surface": "table",
     "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC_r2.xml",
     "anchor": "Table 2, row 'ASMs trialed (current)', beginning of the row; all thirteen columns counted",
@@ -563,23 +608,50 @@
     "external_provenance": {
      "command": "cell-wise count over the thirteen cells of the 'ASMs trialed (current)' row of Table 2 parsed from the declared JATS (python xml.etree), class labels from general pharmacology",
      "date": "2026-10-23"
+    },
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36779245.json",
+     "entry": 44,
+     "what_changed": "blind-audit finding class 'bundled proposition' (module repairs 2026-10-23): proposition narrowed to what its quote carries; readings from other lines or tool runs are labelled as the reader's. The repair is not itself audited.",
+     "audit": {
+      "auditors": 0,
+      "verdicts": []
+     }
     }
    },
    {
-    "proposition": "Text on vigabatrin: used in 7 of 10 patients for epileptic spasms. Table 2 lists vigabatrin for 8 patients (Patients 1, 3, 6, 7, 8, 10, 11, 13), the eighth being Patient 6, who has no spasms in the seizure-type row; the text and the table agree. No response to vigabatrin is reported per patient.",
+    "proposition": "Text on vigabatrin: used in 7 of 10 patients for epileptic spasms. The sentence gives no response to vigabatrin per patient. (Agreement with the vigabatrin cells of the Table 2 row: entry 44.)",
     "snippet": "Vigabatrin was used in 7 of 10 patients for the treatment of ES",
     "surface": "body",
     "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC_r2.xml",
     "anchor": "Results, antiseizure-medication paragraph",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36779245.json",
+     "entry": 45,
+     "what_changed": "blind-audit finding class 'bundled proposition' (module repairs 2026-10-23): proposition narrowed to what its quote carries; readings from other lines or tool runs are labelled as the reader's. The repair is not itself audited.",
+     "audit": {
+      "auditors": 0,
+      "verdicts": []
+     }
+    }
    },
    {
-    "proposition": "The Discussion places the burst-suppression pattern in STXBP1-related encephalopathy and states it is not described in WWOX-DEE. A burst-suppression framing of WWOX therefore rests on other sources, not on this cohort.",
-    "snippet": "30% of patients have a burst‐suppression pattern at onset, which is not described in WWOX‐DEE.",
+    "proposition": "Discussion, quoted sentence: burst-suppression at onset is attributed to STXBP1-related DEE (30% of its patients) and is stated not to be described in WWOX-DEE. (Reader's inference: a burst-suppression framing of WWOX rests on other sources, not on this cohort.)",
+    "snippet": "In STXBP1‐DEE, 30% of patients have a burst‐suppression pattern at onset, which is not described in WWOX‐DEE.",
     "surface": "body",
     "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC_r2.xml",
     "anchor": "Discussion, paragraph on differential diagnosis of early infantile DEE",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36779245.json",
+     "entry": 46,
+     "what_changed": "blind-audit finding class 'bundled proposition' (module repairs 2026-10-23): proposition narrowed to what its quote carries; readings from other lines or tool runs are labelled as the reader's. The repair is not itself audited.",
+     "audit": {
+      "auditors": 0,
+      "verdicts": []
+     }
+    }
    }
   ],
   "note": "Twenty locators. Two are anchored to inspected figure images and one to a table cell read against its neighbours; the rest to text. The figures were retrieved and inspected earlier the same day via the pmc.ncbi.nlm.nih.gov/articles/instance/<PMCID>/bin/ route, after four earlier routes had failed and the figures had been recorded as unobtainable.\n\n🔴 LOCATOR AUDIT AND REPAIR 2026-08-10. All twenty text snippets were matched against the local XML; THIRTEEN did not occur in it. Every one was the transcription class — the quote written as the page reads rather than extracted as the artifact contains — and this journal's markup is the worst case in the corpus: non-breaking hyphens (`WWOX‐DEE` written `WWOX-DEE`), en dashes (`Kaplan–Meier`, `spike–wave`, `7–8 Hz`), curly quotation marks, and superscript reference numbers interleaved in the running text (`hypomyelination, 13 , 46 , 47 , 48 a finding`). NOTHING WAS REWORDED: each snippet is the same span re-taken from the extracted text, and both ends were verified to land where the recorded quote landed, folded to alphanumerics so the comparison survives exactly the characters the transcription mangled. All thirteen now match in STRICT mode. No quote here was ever absent from the paper — the defect was fidelity, not integrity.\n\n🔴 SCHEMA v2 UPGRADE 2026-08-10. Three artifacts declared and fingerprinted: the JATS XML and the two figure images. The images are why this manifest could not reach v2 before today — the note above said they had been retrieved and inspected, and they were in no checkout: `files/` is gitignored, so the inspection travelled and its subject did not. Both were re-retrieved from pmc.ncbi.nlm.nih.gov/articles/instance/10952634/bin/ and re-inspected in this run, at 709x368 (Figure 3) and 709x226 (Figure 4).\n\nThe two figure locators had the FIGURE CAPTION in the snippet slot while their own propositions said \"read from the figure image rather than its caption\" — the manifest declared a reading of an image and carried the text that was not the evidence for it. The snippets now describe what the images show, which is the convention PMID34831305 set for `surface: figure`, and the captions are preserved here verbatim so nothing is lost: Figure 4 — \"Survival analysis for 75 individuals with WWOX developmental and epileptic encephalopathy stratified by genetic variant group. (A) Time to death. (B) Time to seizure onset.\"; Figure 3 — \"Location and type of pathogenic WWOX variants in our cohort (top) of 13 patients and those from the literature (bottom).\"\n\nPanel/text relation is declared on all twenty locators. Five text statements are marked `text_confirmed_by_panel` because the panel was read for that statement in this run: entries 1, 2 and 3 against Figure 4, which prints p = 0.0085 and p = 0.65 on its face and from which the 5-year separation can be read directly, and entries 4 and 5 against Figure 3's marker placement. Entry 0 is deliberately left `text_only`: it claims that one versus two missense variants makes no difference, and Figure 4A orders null/missense above missense/missense with overlapping bands. That is a QUALIFICATION — neither a confirmation nor a contradiction — and the vocabulary has no value for it. Recording it as confirmed would have been the over-claim; the gap is reported rather than papered over.\n\n2026-10-19 gold wave, scientist-b: re-acquired JATS (the 2026-08 XML absent), earlier locators re-pointed unchanged to the new surface (path only); new locators added for the treatment negatives, deaths, PET, Figure 1 polygraphy and panel C laterality, Figure 4A as drawn, and the supplement RNA studies. Owed sections of the prior reading (figures, introduction, supplementary) were read in this pass; the two EMF graphics of the supplement were not rendered, so supplementary coverage is partial. 2026-10-23 (module batch, scientist-a, QUESTION_DRIVEN, receipt FTR-20261023-36779245-01): eight entries appended for the question 'which antiseizure drug classes does the cohort list, and does it report any response by drug or class'; Table 2 parsed cell-wise from the declared JATS; no earlier entry changed or contradicted."
