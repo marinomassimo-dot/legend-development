@@ -168,12 +168,24 @@
   "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a supplement text layer or a figure image.",
   "entries": [
    {
-    "proposition": "NOT WWOX EVIDENCE. The guideline classifies a variant per ASO strategy into eligible, likely eligible, unlikely eligible, not eligible or unable to assess, and states that even targetable variants differ in strength.",
+    "proposition": "NOT WWOX EVIDENCE. The paper states that not all genetic variants can be targeted with ASOs and that targetable ones differ in strength (more or less eligible).",
     "snippet": "However, not all genetic variants can be targeted with ASOs; even the ones that can be targeted can be distinguished into more eligible (stronger) and less eligible (weaker) candidates.",
     "surface": "body",
     "anchor": "Introduction, paragraph 3",
     "artifact": "files/fulltext/PMID40139194_Cheerie2025_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID40139194.json",
+     "entry": 0,
+     "what_changed": "2026-10-23 blind locator audit of the module batch (locator_audit_module_batch_20261023.md): OVERSHOOT, quote-level; the proposition carried a clause the quote does not; narrowed to the quote. Prior wording began: NOT WWOX EVIDENCE. The guideline classifies a variant per ASO strategy into eligible, like",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "method": "Blind text control, quote versus proposition; the repair is unaudited"
+     }
+    }
    },
    {
     "proposition": "NOT WWOX EVIDENCE. The consensus rests on collective expertise from assessing variants at the working-group sites, and the authors state that gold-standard evidence was not available for many considerations; it is expert opinion piloted on test variants, not an experimental test of the rules.",
