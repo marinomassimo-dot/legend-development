@@ -12,7 +12,7 @@
  "END_UTC": "2026-10-24T02:30:00Z",
  "MAX_SCIENTISTS": 4,
  "AUTHORISED_QUEUE_20261023": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_SELECT_READ": {
    "order": 1,
    "steps": [
@@ -35,7 +35,7 @@
    "steps": [
     {
      "step": "Record staged receipts, integrator batch 015 for identities/depth/candidates, rerun repurposing_join.py run and diff, battery on the final SHA, push",
-     "status": "IN_PROGRESS"
+     "status": "DONE"
     }
    ]
   },
@@ -44,7 +44,7 @@
    "steps": [
     {
      "step": "Diagnosis in Italian and written note: how the cycle worked, weaknesses, gaps, improvements from the Scientists' own observations; Harness backlog",
-     "status": "TODO"
+     "status": "DONE"
     }
    ]
   }
@@ -60,7 +60,8 @@
    "harness": "a7af8e0e583e898b0 running: module fixes M2-M8, scaffold re-source"
   },
   "log": [
-   "2026-10-23T21:31Z cycle 1: all four Scientists finished and landed; no rate-limit stop; 3 blind audit rounds on repairs (15% -> 2.4% substantive); integrator 015 landed; audit-count bug fixed and pushed; Harness module fixes running; no new studies handed out because the operator asked for the diagnosis after the batch"
+   "2026-10-23T21:31Z cycle 1: all four Scientists finished and landed; no rate-limit stop; 3 blind audit rounds on repairs (15% -> 2.4% substantive); integrator 015 landed; audit-count bug fixed and pushed; Harness module fixes running; no new studies handed out because the operator asked for the diagnosis after the batch",
+   "2026-10-24T00:10Z closing: battery on c5f69919 found 3 reds (stale totals after rewrites, provenance ceiling 9->8, repoint test list), repaired; pushed 24d8db40 gate PASS; cron 7bcb3af6 deleted; diagnosis delivered to the operator in Italian"
   ]
  },
  "DECISIONS_TAKEN": [
