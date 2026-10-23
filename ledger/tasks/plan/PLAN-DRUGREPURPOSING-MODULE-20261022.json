@@ -34,17 +34,17 @@
    "steps": [
     {
      "step": "B. One adapter contract page in framework/protocols/ and one adapter directory under framework/ (path named with its reason); adapters declare name, inputs, outputs, network use, licence, retrieval-date stamping, self-test; plain-file registry; card format reused; CLI adapter list | add | remove | selftest",
-     "status": "TODO",
-     "evidence": ""
+     "status": "DONE",
+     "evidence": "framework/protocols/repurposing_adapter_convention.md (one page, a convention not a contract); framework/adapters/ (six one-file adapters: opentargets, chembl, pubtator3, openfda, orphadata, ilincs; _http.py door; discovery = directory listing, no registry, no base class, no version field); framework/scripts/repurposing_adapter.py list|add|remove|selftest [--live]|query|acknowledgements; output states are the bridge's MATCH_FOUND/NO_MATCH_FOUND/QUERY_ERROR; disease-models/wwox/research/drug_repurposing/ACKNOWLEDGEMENTS.md rendered from the adapters' licence/citation fields"
     },
     {
      "step": "B. Regression removes every adapter in turn with the core still running; each ADOPT NOW adapter MEASURED green or a recorded block; scripts/test_tool_routing.py green; suites enrolled in run_release_regressions.py",
-     "status": "TODO",
-     "evidence": ""
+     "status": "DONE",
+     "evidence": "framework/scripts/test_repurposing_adapter.py: 18 tests OK (verbosity=2; one-file removal of each adapter in a temp copy leaves the rest green and byte-identical; add/remove re-render the acknowledgements; three states; no score key; no e-mail; ACKNOWLEDGEMENTS.md freshness); enrolled in scripts/run_release_regressions.py; selftest --live 2026-10-23: 6 adapters, 0 red (chembl ChEMBL_37; ilincs LIB_5; openfda label+FAERS, amlexanox NO_MATCH_FOUND; opentargets api 26.9.0; orphadata CC-BY-4.0 payload; pubtator3 808 relations, treat -> NO_MATCH_FOUND); test_tool_routing OK; test_self_test_coverage OK; test_repurposing_bridge OK"
     },
     {
      "step": "B. Land, gate, push",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "evidence": ""
     }
    ]
@@ -120,6 +120,9 @@
  ],
  "DECISIONS_TAKEN": [
   "Worktree .claude/worktrees/repurp-module on branch task/plan-drugrepurposing-module cut from main 88559fd2 · alternative: commit on main from the root checkout (rejected: the task spans hours and five landings) · nobody consulted · reversible: git worktree remove after landing",
+  "B: adapter directory is framework/adapters/, not framework/scripts/ — every tool under scripts/ must be routed in the README (test_tool_routing), which would make adding or deleting an adapter a two-file act; the CLI is routed once and discovers the directory · alternative: a subdirectory of framework/scripts (rejected for the reason above) or disease-models/wwox/ (rejected: an adapter knows a service, not a disease) · nobody consulted · reversible by moving the directory and the one DEFAULT_DIR constant",
+  "B: a template adapter written by `add` is red until its licence fields are filled from the source's terms page (check_info refuses placeholders) · alternative: a green template (rejected: an unread licence would pass as read) · reversible",
+  "B: ACKNOWLEDGEMENTS.md lives at the operator-named path under disease-models/wwox/research/drug_repurposing/ and is rendered by the framework CLI; the path is a CLI default, not knowledge in the adapters · reversible by --acknowledgements PATH",
   "Open Targets dry call rewritten against the live schema (API 26.9.0): target.knownDrugs no longer exists, target.drugAndClinicalCandidates replaces it (measured HTTP 400 then 200) · consequence recorded as a survey finding: any adapter pins the API version it was measured against · reversible"
  ],
  "STOP_LOG": [
@@ -129,7 +132,18 @@
   "2026-10-22, received through the Orchestrator during deliverable A, binding every deliverable and overriding anything in the mandate file that reads more rigidly: lean, flexible, modular; patterns easy to implement and easy to remove; NO rigid contracts. Concretely for B: the adapter 'contract' is a one-page convention (a small function signature, a dict in and a dict out, a self-test), not a schema with validation layers, abstract base classes, registries kept in sync, or version fields; an adapter is one file dropped in or deleted with nothing else to edit; the CLI discovers adapters from the directory and requires no registration; no plugin framework, no dependency injection, no configuration language; plain Python modules and files over any infrastructure. Before adding anything: would deleting it later be a one-file act? If not, simplify until it is. Each stage report says what was NOT built for this reason."
  ],
  "NOT_BUILT_BY_DESIGN": [
-  "A: no survey schema, no candidate registry, no scoring of tools; one Markdown note plus one JSON list of calls, both deletable without any other edit"
+  "A: no survey schema, no candidate registry, no scoring of tools; one Markdown note plus one JSON list of calls, both deletable without any other edit",
+  "B: no abstract base class, no adapter registry file, no JSON schema or validator layer, no version field, no plugin framework, no dependency injection, no configuration language, no retry policy, no response cache, no ToolUniverse or OptimusKG install (direct key-less calls measured under a second each made a wrapper framework a dependency without evidence); the only shared code is a 30-line HTTP door; check_output() reports missing keys, it does not validate a schema"
+ ],
+ "OPERATOR_INSTRUCTIONS_LICENCES": "2026-10-23, received through the Orchestrator during B, binding alongside lean/modular: licences of every external source read from the source's own terms page (URL and date), complied with (attribution, requested citation, share-alike, rate limits, user-agent/contact), unclear or restrictive terms are a block and the source is not used; ACKNOWLEDGEMENTS.md derived from the adapters' own fields and thanking the maintainers; every output names its source and retrieval date; no e-mail addresses in records.",
+ "LICENCES_READ_20261023": [
+  "Open Targets: platform-docs.opentargets.org/licence — data CC0 1.0, API/code Apache-2.0, cite Buniello et al. NAR 2025 (doi 10.1093/nar/gkae1128); no rate limit stated",
+  "ChEMBL: chembl.gitbook.io about + FAQ, ebi.ac.uk/about/terms-of-use — CC BY-SA 3.0 (share-alike noted: fields copied verbatim, no derived database redistributed), EMBL-EBI expects attribution, no numeric limit; cite Zdrazil et al. NAR 2024 (doi 10.1093/nar/gkad1004)",
+  "PubTator 3: ncbi.nlm.nih.gov/home/about/policies — US government public domain, 3 requests/second, acknowledgment asked; the PubTator3 pages render no terms text (three pages measured); cite Wei et al. NAR 2024 (doi 10.1093/nar/gkae235)",
+  "openFDA: open.fda.gov/terms + /apis/authentication — CC0 1.0, credit line 'Data provided by the U.S. Food and Drug Administration' requested, 240/min and 1,000/day per IP without a key (no key used), payload disclaimer 'Do not rely on openFDA to make decisions regarding medical care'",
+  "Orphadata: orphadata.com/legal-notice + sciences.orphadata.com + the payload's own __licence field — API payload declares CC-BY-4.0; attribution text '© INSERM 1999 ... Accessed (date)'; AI-tool use must state Orphanet data was used (done in the attribution line); Orphadata Products are under a Data Transfer Agreement and are NOT used; logos not used",
+  "iLINCS: ilincs.org/help/iLINCS-paper — 'iLINCS is under Creative Commons (CC BY) license', free for everyone, attribution by citing Pilarczyk et al. Nat Commun 2022 (doi 10.1038/s41467-022-32205-3)",
+  "Declined on licence or terms grounds: IUPHAR Guide to Pharmacology web services (API key required, 401 measured); CLUE.io (registration/key); SemMedDB (UMLS licence); Orphadata Products (signed Data Transfer Agreement); AetherCell (research licence restricting listed uses); Every Cure MATRIX scores (a score, barred by the mandate's hard limit rather than by licence)"
  ],
  "BLOCKS_FOR_OPERATOR": [
   "No R interpreter on this host: drugfindR and CDRPipe (signature-reversal clients) stay a recorded block; installing R is a system package (mandate §5)",
@@ -145,6 +159,17 @@
    "removed_or_merged": "nothing removed; DailyMed folded into the openFDA row as its fallback rather than a row of its own; Europe PMC folded into PubTator3's replacement column",
    "not_built": "no survey schema, no tool registry, no scoring of tools (operator instruction 2026-10-22)",
    "blocks_for_operator": "none requiring an act; R interpreter and GtoPdb key stay recorded blocks with open alternatives"
+  },
+  {
+   "stage": "B",
+   "date": "2026-10-23",
+   "landed": "see OBJ_B_SEAM[2] evidence once landed",
+   "measured": "selftest --live: 6/6 adapters green on 2026-10-23 (versions recorded per adapter); offline suite 18 tests OK; one-file removal measured for each adapter; tool routing, self-test coverage and bridge suites OK; gate PASS on the worktree",
+   "failed": "first draft of the convention test rejected the word 'key' inside 'optional key not used' (fixed by checking 'key-less'); the fresh template is red by design until its licence is read",
+   "removed_or_merged": "no second HTTP client, no cache, no retry layer; DailyMed fallback documented, not coded",
+   "not_built": "see NOT_BUILT_BY_DESIGN[1]",
+   "licences": "six terms pages read and quoted in each adapter's INFO and in ACKNOWLEDGEMENTS.md; declined: GtoPdb (key), CLUE (key), SemMedDB (UMLS), Orphadata Products (DTA), AetherCell (research licence)",
+   "blocks_for_operator": "none"
   }
  ]
 }
