@@ -35,6 +35,8 @@ import hashlib
 import json
 import re
 import sys
+import xml.etree.ElementTree as ET
+from datetime import datetime, timezone
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -43,6 +45,7 @@ sys.path.insert(0, str(HERE))
 import registry_records as rr  # noqa: E402  the routed way to read a registry, never grep
 import repurposing_bridge as bridge  # noqa: E402
 import repurposing_adapter as adapters  # noqa: E402
+import eutils  # noqa: E402  the shared, polite NCBI door (throttle + cache); no key, no e-mail
 
 ROOT = HERE.parents[1]
 DISEASE = "wwox"
@@ -54,7 +57,7 @@ MANIFESTS = MODEL / "research" / "deepdive_manifests"
 ADJUDICATIONS = MODEL / "research" / "page_adjudications"
 RECEIPT_LEDGER = MODEL / "registries" / "fulltext_read_receipts.jsonl"  # fulltext_receipts.default_ledger_path
 
-# The three axes the mandate calls live. Plain data: delete a row and the axis is gone.
+# The axes the mandate calls live (three) plus the early-benefit row. Plain data: delete a row and the axis is gone.
 AXES = {
     "proteostasis": ["proteostasis", "chaperone", "phenylbutyrate", "misfolding", "SDR", "missense",
                      "proteasome", "HSP70", "UPR", "ERAD", "solubility"],
@@ -62,6 +65,10 @@ AXES = {
                 "ethosuximide", "bursting", "NMDAR", "network"],
     "wnt": ["Wnt", "MYC", "GSK3", "mTOR", "beta-catenin", "β-catenin", "tankyrase", "lithium",
             "rapamycin", "everolimus"],
+    # One data row from the Scientist's early-benefit candidate file (blind spots, 2026-10-23); `growth`
+    # is left out on purpose: it matches pathograph lines about body weight.
+    "early_benefit": ["vigabatrin", "ketogenic", "ethosuximide", "cannabidiol", "ACTH", "corticosteroid",
+                      "epileptic spasm", "seizure control", "early benefit"],
 }
 
 # Tokens that look like a gene symbol but are this repository's own vocabulary, a unit, or an
@@ -73,6 +80,7 @@ STOPWORDS = {
     "TIER", "REVIVAL", "TRIGGER", "PREMISE", "TAG", "BLOCCO", "BLOCK", "SPLIT", "READY", "GAP",
     "NO", "YES", "NONE", "ALL", "ANY", "ONE", "TWO", "NEW", "OLD", "SEE", "PER", "VIA", "VS",
 }
+HOPS = 3  # rounds of record-to-record inheritance; D measured the fixed point inside three
 HIT_CAP = 100  # hits kept per cached adapter response; the total before the cap is recorded
 GENE_TOKEN = re.compile(r"\b[A-Z][A-Z0-9]{2,7}\b")
 PMID_IN_TEXT = re.compile(r"\bPMID[\s:_-]*(\d{6,9})\b")
@@ -148,15 +156,18 @@ def paper_pmids(root: Path) -> dict[str, list[str]]:
             continue
         fields = record_fields(record.text)
         found = PMID_IN_TEXT.findall(fields.get("Identifier", "")) or PMID_IN_TEXT.findall(record.text[:600])
-        if found:
-            out[rr.identity_token(record.record_id)] = sorted(set(found))
+        # A PAPER record that cites no PMID stays in the map with an empty list: it EXISTS, and the
+        # abstention must be able to tell "no paper cited" from "no such record".
+        out[rr.identity_token(record.record_id)] = sorted(set(found))
     return out
 
 
 def lead_queries(root: Path) -> list[dict]:
     out = []
     for record in rr.parse_records(root, DISEASE, "discovery_ledger_current"):
-        if record.kind != "record" or not record.record_id.upper().lstrip("🔴 ").startswith("DL-"):
+        # The id is what the heading carries after ANY leading marker (red, star, target, warning,
+        # medal ... — 7 of 226 leads were dropped when only the red circle was stripped).
+        if record.kind != "record" or not rr.identity_token(record.record_id).startswith("DL-"):
             continue
         fields = record_fields(record.text)
         causal = fields.get("Causal statement", "") or fields.get("Catena di ragionamento", "")
@@ -166,6 +177,7 @@ def lead_queries(root: Path) -> list[dict]:
                     "origin_title": record.record_id[:300],
                     "terms": gene_tokens(record.record_id + " " + causal),
                     "claims_named": sorted({f"CLAIM {n}" for n in CLAIM_IN_TEXT.findall(record.text)}),
+                    "leads_named": sorted(set(LEAD_IN_TEXT.findall(record.text)) - {rr.identity_token(record.record_id)}),
                     "papers_named": sorted({f"PAPER {n}" for n in PAPER_IN_TEXT.findall(record.text)}),
                     "pmids": sorted(set(PMID_IN_TEXT.findall(record.text)))})
     return out
@@ -249,7 +261,9 @@ def pathograph_queries(path: Path = PATHOGRAPH, limit: int = 40) -> list[dict]:
                     "terms": gene_tokens(f"{row['left']} {row['right']} {row['text']}"),
                     "relation_type": row["relation"], "review_state": row["review_state"],
                     "bound_claims": row["claims"], "bound_from": row["source_ref"],
-                    "pmids": sorted(set(PMID_IN_TEXT.findall(row["text"])))})
+                    # `bound_from` names the manifest (PMIDnnnnnnnn.json|entries[i]) or the registry
+                    # heading the line was bound from: it is evidence the line carries, so it is read.
+                    "pmids": sorted(set(PMID_IN_TEXT.findall(row["text"])) | set(PMID_IN_TEXT.findall(row["source_ref"])))})
     return out
 
 
@@ -259,7 +273,7 @@ def derive_queries(root: Path = ROOT, axis: str = "") -> list[dict]:
     queries = claims + leads + mechanism_queries() + pathograph_queries()
     # The leverage: a lead, a map record or a pathograph line that names a claim or a lead
     # inherits that record's receipted papers, so its evidence table is the evidence LEGEND
-    # already holds, not an empty one. One hop only, and the route is written into the query
+    # already holds, not an empty one. Up to HOPS hops, and the route is written into the query
     # (`pmids_via_records`) so a reader sees where each paper came from.
     papers = paper_pmids(root)
     # First hop: every query resolves the PAPER ids it names itself.
@@ -269,23 +283,43 @@ def derive_queries(root: Path = ROOT, axis: str = "") -> list[dict]:
         if own:
             query["pmids_via_records"] = {pmid: names for pmid, names in sorted(own.items())}
             query["pmids"] = sorted(set(query["pmids"]) | set(own))
-    # Second hop: a record that names a claim or a lead inherits that record's papers.
-    record_pmids = {claim["origin_id"]: claim["pmids"] for claim in claims}
-    record_pmids.update({lead["origin_id"]: lead["pmids"] for lead in leads})
+    # Following hops (at most HOPS rounds): a record that names a claim or a lead inherits that
+    # record's papers, and a lead that cites a lead passes the papers on. A pathograph line IS bound
+    # to the claim it names, so only a claim or lead is barred from naming itself.
+    record_query = {claim["origin_id"]: claim for claim in claims}
+    record_query.update({lead["origin_id"]: lead for lead in leads})
+    for _ in range(HOPS):
+        grew = False
+        for query in queries:
+            named = (list(query.get("claims_named") or []) + list(query.get("bound_claims") or [])
+                     + list(query.get("leads_named") or []))
+            if query["kind"] in ("claim", "lead"):
+                named = [name for name in named if name != query["origin_id"]]
+            inherited = {}
+            for name in named:
+                for pmid in (record_query.get(name) or {}).get("pmids", []):
+                    if pmid not in query["pmids"]:
+                        inherited.setdefault(pmid, []).append(name)
+            if inherited:
+                grew = True
+                via = dict(query.get("pmids_via_records") or {})
+                for pmid, names in inherited.items():
+                    via[pmid] = sorted(set(names))
+                query["pmids_via_records"] = dict(sorted(via.items()))
+                query["pmids"] = sorted(set(query["pmids"]) | set(inherited))
+        if not grew:
+            break
+    # What each query could name and what that reached: the abstention (stage 2) reads this, so a
+    # record with no paper says WHICH link is missing, not only that nothing was found.
     for query in queries:
-        named = (list(query.get("claims_named") or []) + list(query.get("bound_claims") or [])
-                 + list(query.get("leads_named") or []))
-        named = [name for name in named if name != query["origin_id"]]
-        inherited = {}
-        for name in named:
-            for pmid in record_pmids.get(name, []):
-                if pmid not in query["pmids"]:
-                    inherited.setdefault(pmid, []).append(name)
-        if inherited:
-            via = dict(query.get("pmids_via_records") or {})
-            via.update({pmid: sorted(set(names)) for pmid, names in inherited.items()})
-            query["pmids_via_records"] = dict(sorted(via.items()))
-            query["pmids"] = sorted(set(query["pmids"]) | set(inherited))
+        names = sorted(set(query.get("claims_named") or []) | set(query.get("bound_claims") or [])
+                       | set(query.get("leads_named") or []) | set(query.get("papers_named") or []))
+        known = {name: (name in record_query or name in papers) for name in names}
+        reached = {name for name in names if (record_query.get(name) or {}).get("pmids") or papers.get(name)}
+        query["linkage"] = {"ids_named": names,
+                            "ids_reaching_a_pmid": sorted(reached),
+                            "ids_in_registry_without_pmid": sorted(n for n in names if known[n] and n not in reached),
+                            "ids_not_found_in_registry": sorted(n for n in names if not known[n])}
     if axis:
         wanted = [term.lower() for term in AXES[axis]]
         queries = [q for q in queries
@@ -393,11 +427,114 @@ def manifest_evidence(pmid: str) -> dict:
     return row
 
 
-def evidence_for(query: dict, receipts: dict[str, list[dict]]) -> dict:
+# ---- the bound paper of a one-paper query: is it a primary article, and does it contain the endpoint?
+
+NOT_PRIMARY = {"Review", "Systematic Review", "Meta-Analysis", "Editorial", "Comment", "Letter", "News",
+               "Published Erratum", "Retraction of Publication", "Biography", "Interview", "Guideline",
+               "Practice Guideline", "Introductory Journal Article", "Preprint"}
+GENERIC = {"first", "then", "measure", "measured", "state", "versus", "with", "same", "only", "model",
+           "arm", "design", "dose", "dosing", "rescue", "between", "from", "that", "this", "into"}
+BOLD = re.compile(r"\*\*(.+?)\*\*")
+
+
+def endpoint_terms(query: dict) -> list[str]:
+    """The words of the endpoint the record itself puts in bold in its decisive test (or revival
+    trigger). Empty when the record states none: then the binding is UNDECLARED, never guessed."""
+    words: list[str] = []
+    for span in BOLD.findall(query.get("decisive_test") or ""):
+        for word in re.findall(r"\w{4,}", span.casefold()):
+            if word not in GENERIC and word not in words:
+                words.append(word)
+    return words
+
+
+def fetch_pubmed_record(pmid: str) -> dict:
+    url = f"https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&retmode=xml&id={pmid}"
+    code, body = eutils.fetch(url)
+    if code != 200:
+        return {"pmid": pmid, "status": "QUERY_ERROR", "error": f"HTTP {code}"}
+    try:
+        article = ET.fromstring(body).find(".//PubmedArticle")
+    except ET.ParseError:
+        article = None
+    if article is None:
+        return {"pmid": pmid, "status": "NO_MATCH_FOUND", "error": ""}
+    title = "".join(article.find(".//ArticleTitle").itertext()) if article.find(".//ArticleTitle") is not None else ""
+    abstract = " ".join("".join(t.itertext()) for t in article.findall(".//AbstractText"))
+    return {"pmid": pmid, "status": "MATCH_FOUND", "error": "", "title": title,
+            "publication_types": [t.text for t in article.findall(".//PublicationTypeList/PublicationType") if t.text],
+            # a bag of words, not the abstract: enough to test a term, not a copy of the text
+            "words": sorted(set(re.findall(r"\w{4,}", (title + " " + abstract).casefold()))),
+            "retrieved_at": datetime.now(timezone.utc).strftime("%Y-%m-%d"), "source": "NCBI PubMed efetch"}
+
+
+def bound_check(pmid: str, query: dict, cache_dir: Path, live: bool) -> dict:
+    """Cheap screen of the one paper a REPLICATE row is bound to: its PubMed publication types
+    (a review is not a measurement) and whether the endpoint words appear in its title/abstract.
+    A screen, not a reading: the verdict lists what was found and missing so a human decides."""
+    cached = cache_dir / f"{pmid}.json"
+    record = None
+    if cached.exists():
+        record = json.loads(cached.read_text(encoding="utf-8"))
+    elif live:
+        record = fetch_pubmed_record(pmid)
+        if record["status"] == "MATCH_FOUND":
+            cache_dir.mkdir(parents=True, exist_ok=True)
+            cached.write_text(json.dumps(record, indent=1, ensure_ascii=False, sort_keys=True), encoding="utf-8")
+    if record is None or record["status"] != "MATCH_FOUND":
+        return {"binding": "NOT_CHECKED", "reason": "offline with no cached PubMed record" if record is None
+                else f"PubMed {record['status']}: {record.get('error', '')}"}
+    types = record["publication_types"]
+    terms = endpoint_terms(query)
+    found = [t for t in terms if t in set(record["words"])]
+    missing = [t for t in terms if t not in found]
+    reasons = []
+    if set(types) & NOT_PRIMARY:
+        reasons.append(f"not a primary article (PubMed type: {', '.join(sorted(set(types) & NOT_PRIMARY))})")
+    if not terms:
+        reasons.append("the record declares no endpoint (no bold span in its decisive test): name the readout and its unit")
+    elif missing:
+        reasons.append(f"endpoint words not in its title/abstract: {', '.join(missing)}")
+    return {"binding": "UNVERIFIED" if reasons else "PRIMARY_WITH_ENDPOINT_WORDS",
+            "reason": "; ".join(reasons), "publication_types": types, "title": record["title"][:160],
+            "endpoint_words_found": found, "endpoint_words_missing": missing,
+            "retrieved_at": record["retrieved_at"], "source": record["source"]}
+
+
+def abstention_for(query: dict) -> str:
+    """Why a query reaches no paper, as a measured state plus the one datum that is missing.
+
+      LINKAGE_GAP — the join cannot see a paper: the record names no identifier that reaches a
+                    PMID (nothing named, or the names are not in the registry). The paper may
+                    well exist; the record does not point to it.
+      NO_PAPER    — the identifiers it names (or the claim/lead record itself) exist in the
+                    registry and cite no PMID: the registry holds no paper for this record.
+
+    Neither says anything about the literature: a gap in the join is not an absence in the world."""
+    link = query.get("linkage") or {}
+    named = link.get("ids_named") or []
+    if query.get("kind") in ("claim", "lead") and not named:
+        return ("NO_PAPER: the registry record itself cites no PMID or PAPER id and names no other record; "
+                "missing datum: a citation in the record")
+    if not named:
+        return ("LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; "
+                "missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)")
+    empty, lost = link.get("ids_in_registry_without_pmid") or [], link.get("ids_not_found_in_registry") or []
+    if empty and not lost:
+        return (f"NO_PAPER: the record names {', '.join(empty)}, which exist in the registry and cite no PMID; "
+                "missing datum: a paper cited by any record reached")
+    return (f"LINKAGE_GAP: the record names {', '.join(named)} but none reaches a PMID"
+            + (f" ({', '.join(lost)} not found in the registry)" if lost else "")
+            + "; missing datum: an identifier whose registry record cites a paper")
+
+
+def evidence_for(query: dict, receipts: dict[str, list[dict]], checks: dict[str, dict] | None = None) -> dict:
     rows = []
     for pmid in query.get("pmids", []):
         events = receipts.get(pmid, [])
         row = manifest_evidence(pmid)
+        if checks and pmid in checks:
+            row["bound_check"] = checks[pmid]
         depth, event_id = strongest_event(events) if events else ("NO_RECEIPT", "")
         row["reading_depth"] = depth
         row["receipt_id"] = event_id
@@ -413,7 +550,7 @@ def evidence_for(query: dict, receipts: dict[str, list[dict]]) -> dict:
              "locators": sum(row["locator_count"] for row in rows),
              "unaudited_contradictions": sum(row["unaudited_contradictions"] for row in rows),
              "depths": sorted(depths),
-             "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY" if not rows else None}
+             "abstention": None if rows else abstention_for(query)}
     table["digest"] = digest({k: v for k, v in table.items() if k != "digest"})
     return table
 
@@ -572,9 +709,12 @@ def measure_next(query: dict, table: dict, external: list[dict]) -> dict:
     different measurement, and every case names the record the measurement would move."""
     moves = f"{query['origin_id']} ({query['origin_file']}:{query['origin_line']})"
     if not table["rows"]:
-        return {"dependence": "NO_RECEIPTED_EVIDENCE",
-                "measurement": "a first receipted reading of a paper that measures this mechanism "
-                               "in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
+        state = table["abstention"].split(":")[0]
+        return {"dependence": state,
+                "measurement": ("the link from this record to a paper: " if state == "LINKAGE_GAP"
+                                else "a first paper for this record: ")
+                               + table["abstention"].split("missing datum: ")[-1]
+                               + "; until then the external hits stand alone and are NOT WWOX EVIDENCE",
                 "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
                 "would_move": moves, "external_hits": len(external)}
     if table["papers"] == 1:
@@ -626,7 +766,10 @@ def run(out_dir: Path, axis: str = "", live: bool = False, limit: int = 0) -> di
     receipts = load_receipts()
     tables, cards = [], []
     for query in queries:
-        table = evidence_for(query, receipts)
+        # only a one-paper query is later a REPLICATE row, and only there does the binding matter
+        checks = ({pmid: bound_check(pmid, query, out_dir / "pubmed_cache", live) for pmid in query["pmids"]}
+                  if len(query.get("pmids", [])) == 1 else None)
+        table = evidence_for(query, receipts, checks)
         tables.append(table)
         hits = run_adapters(query, cache_dir, live)
         card = card_for(query, table, hits)
@@ -680,50 +823,82 @@ def render(summary: dict) -> str:
     return "\n".join(lines)
 
 
+INDEPENDENT = ("independent = a different laboratory from the bound paper (no shared corresponding or senior "
+               "author, no shared institution); a second model from the same laboratory is flagged, not counted, "
+               "and a cancer-cell measurement is a second system for a molecular endpoint, not for a network one")
+
+
+def open_clause(query: dict) -> str:
+    """What the record itself leaves open: the map's decisive test (repurposing records) or revival
+    trigger (negative-translation records), as written, without its markdown."""
+    clause = str(query.get("decisive_test") or "").replace("**", "").strip()
+    return "" if clause in ("", "UNKNOWN") else clause[:400]
+
+
+def acquisition_state(table: dict) -> str:
+    """What the repository holds of the papers behind a row, from the receipt ledger: depth counts,
+    or the linkage state when no paper is reached. Lawful obtainability is NOT probed here."""
+    if not table["rows"]:
+        return f"no paper reached ({(table.get('abstention') or 'UNKNOWN').split(':')[0]})"
+    counts: dict[str, int] = {}
+    for row in table["rows"]:
+        counts[row["reading_depth"]] = counts.get(row["reading_depth"], 0) + 1
+    return f"{len(table['rows'])} paper(s): " + ", ".join(f"{n} {d}" for d, n in sorted(counts.items()))
+
+
 def handoff_rows(cards: list[dict], queries: dict[str, dict]) -> list[dict]:
     """The feedback loop into research: each card's measure-next becomes one row the next batch
     can act on. Four row kinds, decided by the dependence the join measured, never by hand:
 
-      SELECT   — no receipted paper behind the record: the read-only selector resolves the record's
-                 author-year citations to PMIDs and proposes reading rows;
+      SELECT   — no paper reached (LINKAGE_GAP: the record points to none; NO_PAPER: the registry
+                 holds none for it): the read-only selector names the link or proposes reading rows;
       READ     — one or more papers but none read to the end: a Scientist's complete read;
-      REPLICATE— the whole query rests on one complete read: the selector looks for an
-                 independent measurement of the same endpoint (a second laboratory or model);
+      REPLICATE— the whole query rests on one reading: the selector looks for an independent
+                 measurement of the same endpoint; the bound paper is screened first (primary
+                 article? endpoint words present?) and the row says so;
       AUDIT    — the locators carry contradictions nobody audited: a blind locator audit before
                  the query may touch a baseline claim.
 
-    A row is an assignment, not a conclusion; nothing in it is a dose or a recommendation."""
+    `ask` is the record's own open clause when it has one, else the join's act; `acquisition` is what
+    the repository holds of the papers behind the row. A row is an assignment, not a conclusion;
+    nothing in it is a dose or a recommendation."""
     rows = []
     for item in cards:
         card, query = item["card"], queries.get(item["query_id"], {})
         table, nxt = card["legend_evidence"], card["measure_next"]
         dep = nxt["dependence"]
         pmids = [row["pmid"] for row in table["rows"]]
-        if dep == "NO_RECEIPTED_EVIDENCE":
+        binding = None
+        if dep in ("LINKAGE_GAP", "NO_PAPER"):
             kind, who, pmid_list = "SELECT", "read-only selector", []
-            ask = ("resolve the author-year citations of this record to PMIDs with registry_records.py "
-                   "and propose reading rows; until a receipt exists the external hits stand alone")
+            act = nxt["measurement"]
         elif dep.startswith("ONE_PAPER"):
             kind, who, pmid_list = "REPLICATE", "read-only selector, then a Scientist", pmids
-            ask = ("find an independent measurement of the same endpoint (second laboratory or second "
-                   "model); the query rests on this one complete read")
+            binding = (table["rows"][0].get("bound_check") or {"binding": "NOT_CHECKED", "reason": "no check recorded"})
+            act = ("find an independent measurement of the same endpoint; " + INDEPENDENT
+                   + ("" if binding["binding"] == "PRIMARY_WITH_ENDPOINT_WORDS"
+                      else f". BIND FIRST: {binding['binding']} — {binding.get('reason', '')}: replace the bound "
+                           "paper with a primary article that contains the endpoint before searching"))
         elif "NONE_READ_COMPLETE" in dep:
             kind, who, pmid_list = "READ", "Scientist", pmids
-            ask = "complete full-text read of the strongest of these papers, with its receipt and manifest"
+            act = "complete full-text read of the strongest of these papers, with its receipt and manifest"
         elif "UNAUDITED_CONTRADICTIONS" in dep:
             kind, who = "AUDIT", "an auditor who is not the reader"
             pmid_list = [row["pmid"] for row in table["rows"] if row["unaudited_contradictions"]]
-            ask = ("blind locator audit (legend-locator-audit) of the contradicts_locator entries in these "
+            act = ("blind locator audit (legend-locator-audit) of the contradicts_locator entries in these "
                    "manifests before the query touches a baseline claim")
         else:
             kind, who, pmid_list = "READ", "Scientist", pmids
-            ask = nxt["measurement"]
+            act = nxt["measurement"]
+        clause = open_clause(query)
         external = [f"{s['adapter']} {s['status']} ({s.get('retrieved_at') or 'not attempted'})"
                     for s in card.get("external_sources", [])]
         rows.append({"query_id": item["query_id"], "kind": kind, "who": who,
                      "candidate": card["input"]["candidate"]["name"],
                      "origin": nxt["would_move"], "dependence": dep, "pmids": pmid_list,
-                     "ask": ask, "external_sources": external,
+                     "ask": clause or act, "ask_source": "record open clause" if clause else "join act",
+                     "act": act, "acquisition": acquisition_state(table), "binding": binding,
+                     "external_sources": external,
                      "lead_spec": lead_spec(item["query_id"], card, query) if kind == "REPLICATE" else None})
     rows.sort(key=lambda row: (row["kind"], row["query_id"]))
     return rows
@@ -732,18 +907,31 @@ def handoff_rows(cards: list[dict], queries: dict[str, dict]) -> list[dict]:
 def lead_spec(query_id: str, card: dict, query: dict) -> dict:
     """A discovery-ledger spec (the shape `discovery_lead.py check` validates) for a dependence
     worth remembering as a lead: the query stands on one reading. Status open; tag INFERENZA;
-    it is staged by a Scientist, never appended by the join."""
+    falsifier and transfer limit are required fields, so they are written. It is staged by a
+    Scientist, never appended by the join."""
     row = card["legend_evidence"]["rows"][0]
+    name = card["input"]["candidate"]["name"]
+    check = row.get("bound_check") or {}
+    bound = ("bound paper screened: " + check["binding"] + (f" ({check['reason']})" if check.get("reason") else "")
+             if check else "bound paper not screened")
     return {
         "kind": "MECH", "status": "open", "tag": "INFERENZA",
-        "title": f"{card['input']['candidate']['name']}: the repurposing query rests on a single complete read "
+        "title": f"{name}: the repurposing query rests on a single reading "
                  f"(PMID {row['pmid']}); an independent measurement would split the dependence",
         "source": (f"framework/scripts/repurposing_join.py handoff, {card['legend_evidence']['query_id']}, derived from "
                    f"{query.get('origin_file', '')}:{query.get('origin_line', '')}; manifest {row['manifest']} "
-                   f"({row['locator_count']} locators, audit {row['audit_status']}); receipt {row.get('receipt_id', '')}"),
-        "causal_statement": (f"INFERENZA: every assertion the module can bind for '{card['input']['candidate']['name']}' "
-                             f"traces to one receipted reading; a second measurement of the same endpoint in a second "
+                   f"({row['locator_count']} locators, audit {row['audit_status']}); receipt {row.get('receipt_id', '')}; "
+                   f"{bound}"),
+        "causal_statement": (f"INFERENZA: every assertion the module can bind for '{name}' traces to one "
+                             f"receipted reading; a second measurement of the same endpoint in a second "
                              f"system or laboratory is the single datum that would move {card['measure_next']['would_move']}"),
+        "falsifier": (f"a primary article from an independent laboratory that measures the same endpoint "
+                      f"({', '.join(check.get('endpoint_words_found') or []) or 'endpoint to be named by the Scientist'}) "
+                      f"refutes the single-reading dependence, and refutes the direction if it disagrees; "
+                      f"{INDEPENDENT}"),
+        "transfer_limit": ("a measurement in another system transfers to the reference genotype only for the "
+                           "molecular endpoint it measured, not for network, phenotype or dose-response; every "
+                           "external-database statement about the candidate is NOT WWOX EVIDENCE"),
     }
 
 
@@ -758,12 +946,19 @@ def render_handoff(rows: list[dict], date: str, axis: str) -> str:
         "date; its licence and citation are in the card and in `drug_repurposing/ACKNOWLEDGEMENTS.md`.",
         "Not medical advice.",
         "",
-        "| Kind | Query | Candidate (from the mechanism map heading) | Dependence measured | PMIDs | Ask | Who | Would move |",
-        "|---|---|---|---|---|---|---|---|",
+        "`Ask` is the record's own open clause where it has one (else the join's act). `Acquisition` is what the",
+        "receipt ledger holds of the papers behind the row; whether a paper is lawfully obtainable is not probed.",
+        "States: `LINKAGE_GAP` = the record points to no paper the join can resolve (the paper may exist);",
+        "`NO_PAPER` = the registry holds no paper for the record. Neither is a statement about the literature.",
+        f"REPLICATE: {INDEPENDENT}.",
+        "",
+        "| Kind | Query | Candidate (from the mechanism map heading) | Dependence measured | PMIDs | Ask | Acquisition | To do | Who | Would move |",
+        "|---|---|---|---|---|---|---|---|---|---|",
     ]
     for row in rows:
+        todo = row["act"] if row["ask_source"] == "record open clause" else "(the Ask)"
         lines.append(f"| {row['kind']} | `{row['query_id']}` | {row['candidate'][:60]} | {row['dependence'][:80]} | "
-                     f"{', '.join(row['pmids']) or '—'} | {row['ask']} | {row['who']} | {row['origin']} |")
+                     f"{', '.join(row['pmids']) or '—'} | {row['ask']} | {row['acquisition']} | {todo} | {row['who']} | {row['origin']} |")
     counts = {}
     for row in rows:
         counts[row["kind"]] = counts.get(row["kind"], 0) + 1

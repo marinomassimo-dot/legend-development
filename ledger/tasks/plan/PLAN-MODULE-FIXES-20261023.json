@@ -1,0 +1,22 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "TASK_ID": "PLAN-MODULE-FIXES-20261023",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "plan",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Repair the repurposing module's measured defects from the four diagnoses of the 2026-10-23 module batch (Scientist D blind spots, Scientists A/B/C observations on the module row). Lean: modes of existing tools, one data row, no new file in framework/scripts.",
+ "assigned_on": "2026-10-23",
+ "worktree": ".claude/worktrees/module-fixes",
+ "branch": "task/plan-module-fixes",
+ "CURRENT_STATE": "DONE_PENDING_LANDING",
+ "STAGES": [
+  {"stage": "a", "commit": "4a9b364a", "what": "emoji-marker leads (7 of 226) become queries; pathograph lines read bound_from and inherit the bound claim; inheritance up to 3 hops; ChEMBL MATCH_FOUND needs a molecule whose name or synonym equals the queried name (10 -> 2, the 2 true)", "join_run_diff": "queries 332 -> 339; abstentions 59 -> 28", "not_built": "a fuzzy or synonym-expansion matcher for class names; a prose-citation resolver"},
+  {"stage": "b+c+d", "commit": "5d2a2fcc", "what": "abstention = LINKAGE_GAP or NO_PAPER plus the missing datum (replaces NO_RECEIPTED_EVIDENCE); handoff Ask = the record's own open clause, with an acquisition-state column; REPLICATE rows screen the bound paper (PubMed publication type, endpoint words from the record's bold decisive test; cached in join/pubmed_cache), define independence in one sentence, and render lead specs with falsifier and transfer_limit that pass discovery_lead.py check", "join_run_diff": "abstentions 28 each with state and datum; cards changed Q-N-16, Q-R-01, Q-R-03 (all three bound papers screened UNVERIFIED: review; endpoint word absent; endpoint undeclared)", "not_built": "an LLM or ontology endpoint extractor; automatic search for the replacing primary article; a lawful-obtainability probe; a laboratory-independence check from author lists (needs full text); a new handoff kind"},
+  {"stage": "e", "commit": "d7886f8a", "what": "early_benefit AXES data row (M6); module_proof prose corrected (M8)", "not_built": "run --locate (M5, ~25 lines, a shortlist with no field of an assertion), an assertion extractor, any ontology service, a prose-citation resolver, a graph walker deeper than 3 hops"}
+ ],
+ "LEFT_TO_INTEGRATOR": "map_identifier_edits_20261023.diff (M7) and the N-08 source row; simulated here on a scratch application: abstentions 28 -> 9 (Q-CLAIM008/010/022, Q-DL-MECH-004/052/149/150/160, Q-N-08), identical to Scientist D's figure",
+ "MAP_OVER_STATEMENT_LIST_FOR_THE_OPERATOR": "N-08 (DCA paediatric neurotoxicity premise), N-10 (cannot vs most likely not eligible), N-12 (a hypothesis written as a finding), N-15 (missing qualifier): from Scientist B's observations; map content not edited",
+ "CONSTRAINTS_HONOURED": "no e-mail sent to any service (PubMed via eutils with no e-mail or key); no Scientist manifest, mechanism map or scaffold touched; ChEMBL CC BY-SA 3.0 data copied verbatim as before"
+}

@@ -32,9 +32,11 @@ exactly the map's.
    verdicts with their auditor count, and the adjudication files naming the paper. Memantine
    (`Q-R-02`) rests on five complete reads and 139 locators; the AAV9 lever (`Q-R-01`) and the Wnt
    lever (`Q-R-03`) each rest on **one** complete read; the pannexin lever (`Q-N-16`) likewise.
-2. **Unaudited contradictions, surfaced.** Two candidates stand on manifests whose locators
-   contradict an earlier locator without an auditor: `Q-R-02` (five entries across two papers) and
-   `Q-N-17` (one). The hand-made set has no field for this; the handoff turns both into AUDIT rows.
+2. **Contradiction audits, surfaced.** *(Corrected 2026-10-23: the first version of this item read the
+   audit block one level too shallow and reported two candidates as standing on unaudited contradictions.
+   All 301 declarations in the corpus carry an audit block; `Q-R-02` and `Q-N-17` each carry one auditor
+   and a verdict, and the two AUDIT rows were an artefact. Repaired in `9c4dbe4d`.)* The join reads the
+   auditor count and verdicts per declaration; the hand-made set has no field for this.
 3. **Label lookups actually performed.** Every hand-made card declares `label_lookup: NOT_ATTEMPTED`.
    The derived cards carry a dated openFDA query for every map candidate: `MATCH_FOUND` for two
    (`Q-R-02`, `Q-R-04`), `NO_MATCH_FOUND` for eight class names (a class is not a product: the
@@ -58,15 +60,19 @@ exactly the map's.
    `Q-R-01` vs `C01_aav9_wwox` says exactly this: 42 fields differ, among them `directional_summary`
    (UNRESOLVED vs OPPOSES_DISEASE_CHANGE) and `assessment`. Extracting a typed assertion from a
    locator is a Scientist's reading act, and the module does not pretend to do it.
-2. **The early-benefit axis.** Nine `cards_early/` candidates (ethosuximide, vigabatrin, the
-   ketogenic diet, cannabidiol, the hormonal axis, …) have no counterpart because the mechanism map
-   names no early-benefit record; the calcium axis therefore produced two derived cards and neither
+2. **The early-benefit axis.** *(Corrected 2026-10-23: three of the nine, not none, have map records:
+   `R-05`, `N-04`, `N-15`.)* Nine `cards_early/` candidates (ethosuximide, vigabatrin, the
+   ketogenic diet, cannabidiol, the hormonal axis, …) mostly have no counterpart because the mechanism map
+   names few early-benefit records; the calcium axis therefore produced two derived cards and neither
    is the T-type blocker the hand-made set qualified. The candidate universe is the map's, and the
    map's gap is now visible as the module's gap.
 3. **Abstention cards with a named missing datum.** Seven hand-made abstentions name the datum
    that is missing and the search that failed to find it (`abstention_card.missing_datum`,
-   `search_record`); the derived abstention names only the dependence class.
-4. **Twenty map records cite their papers as author-year prose**, so the join finds no PMID
+   `search_record`); the derived abstention named only the dependence class. *(Closed 2026-10-23: every
+   derived abstention now carries `LINKAGE_GAP` or `NO_PAPER` and its missing datum.)*
+4. **Twenty-one map records (`R-04`..`R-09`, `N-01`..`N-15`) cite nothing the join can follow; 19 of
+   them cite no paper at all, and only `R-04` cites author-year prose** *(corrected 2026-10-23; the
+   first version said twenty records cite author-year prose)*, so the join finds no PMID
    behind them and abstains (`Q-N-01`…`Q-N-15`, `Q-R-04`…`Q-R-09`). The hand-made cards for the
    same levers were written from the manifests directly. The fix is in the record, not in the tool:
    the SELECT rows ask the selector to resolve those citations, and once a map record names a
