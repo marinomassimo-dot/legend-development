@@ -1,0 +1,236 @@
+{
+ "schema_version": 2,
+ "pmid": "40139194",
+ "doi": "10.1016/j.ajhg.2025.02.017",
+ "receipt": "FTR-20261023-40139194-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "MODULE-B-20261023"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true,
+   "reason": "Run inline; the manifest and the analysis note carry what the skill would produce."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Leads are staged in a commit candidate; the shared ledger is written by the Orchestrator."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever matured by this reading."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule is triaged."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 288,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-23: 'Aartsma-Rus A[au]' 288 (one co-author of the N=1 Collaborative working group); with (WWOX OR Wwox) 0. Initials-level string, may pool homonyms; the paper's senior author is the group name N=1 Collaborative.",
+  "research_type": "adjacent_method_expert",
+  "weighting": "A consensus-guideline Perspective from an international working group of clinicians and ASO developers; not an experiment. Authority is expert consensus piloted on test variants, which the paper itself says rests on collective expertise because gold-standard evidence is missing for many considerations.",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "occurrences of WWOX in the persisted PMC XML (case-insensitive)",
+    "route": "local grep -oi over files/fulltext/PMID40139194_Cheerie2025_PMC_r2.xml",
+    "count": 0
+   }
+  ],
+  "note": "NOT WWOX EVIDENCE: a transferable-literature paper; the zero count is the measurement and it is the whole statement about WWOX content of this surface."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 25,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "Reference count taken from the Crossref reference list used by dependency_integrity.py screen (references_declared); no reference was classified by topic here.",
+  "queue": [
+   {
+    "id": "MH-40139194-01",
+    "target": "Data S2 answer keys (mmc2.pdf) and the variant eligibility calculator",
+    "question": "Does any answer key assess a canonical acceptor variant, and how is it classified?",
+    "status": "open - supplement mmc2 only text-searched for acceptor terms, not read"
+   },
+   {
+    "id": "MH-40139194-02",
+    "target": "Reference list entry on assessment of 1,500 variants (cohort study of retrospective screening, later paper)",
+    "question": "What fraction of canonical splice site variants in a real screening cohort were classed not eligible?",
+    "status": "open - cited, not read"
+   }
+  ]
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Does the shared files/ tree or the receipt ledger already hold anything for PMID 40139194, and does another actor hold a claim?",
+  "hits": 0,
+  "finding": "paper_packet.py packet at claim time 2026-10-23: no prior receipt, no artefact, no peer claim; claimed by scientist-b under MODULE-B-20261023. Row context: Q-N-10 splice-switching ASO for a canonical acceptor allele: the map says SSOs mask elements and cannot create splice sites."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed esummary (JSON) 2026-10-23: pubtype [\"Journal Article\", \"Review\", \"Research Support, Non-U.S. Gov't\"]; no CommentsCorrections list on the record (absence is a statement about this query); dependency_integrity.py screen on the DOI: SCREENED_CLEAN, 24 of 25 references screened, nothing flagged.",
+  "performed": true,
+  "at": "2026-10-23",
+  "route": "PubMed esummary plus dependency_integrity.py screen --manifest-block",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 25,
+   "references_screened": 24,
+   "references_with_doi": 24,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 2,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 1
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID40139194_Cheerie2025_PMC_r2.xml",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&retmode=xml",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-23",
+    "derived": false
+   },
+   "sha256": "138a55b36cfc8b766c40ef7a8c838bab401d9e7b1e6d2d7092e7994d9a908e20"
+  },
+  {
+   "path": "files/supplement/PMID40139194_r2/mmc1_pymupdf.txt",
+   "kind": "supplement_text",
+   "note": "Text layer of Data S1 (mmc1.pdf, 64 pages) extracted with PyMuPDF get_text joined by newlines; the PDF is the declared source; no control characters in the result.",
+   "acquisition_recipe": {
+    "derived": true,
+    "acquired_on": "2026-10-23",
+    "derived_from": "files/supplement/PMID40139194_r2/mmc1.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_text() for each page, joined by newline",
+     "join": "newline"
+    },
+    "result_sha256": "60abe3f4f1a846e068bc6384d2b2bef8c06b5e60a714c628c9489ac410f8affd"
+   },
+   "sha256": "60abe3f4f1a846e068bc6384d2b2bef8c06b5e60a714c628c9489ac410f8affd"
+  },
+  {
+   "path": "files/supplement/PMID40139194_r2/mmc1.pdf",
+   "kind": "supplement_binary",
+   "note": "Data S1 as deposited in PMC open-data bucket; the PDF text layer is the surface the locators quote; figures of the supplement not opened.",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC12120168",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-23",
+    "derived": false
+   },
+   "sha256": "8f575c89f3dc840c15615d85b41b015c46c662bc9200f2c82c6565d1beb8a169"
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC JATS XML with a full article body, fingerprinted; Data S1 PDF text layer (64 pages) fingerprinted and quoted; the single main-text figure (fx1.jpg, graphical abstract) was not opened; every snippet is machine-verified against the declared text.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a supplement text layer or a figure image.",
+  "entries": [
+   {
+    "proposition": "NOT WWOX EVIDENCE. The guideline classifies a variant per ASO strategy into eligible, likely eligible, unlikely eligible, not eligible or unable to assess, and states that even targetable variants differ in strength.",
+    "snippet": "However, not all genetic variants can be targeted with ASOs; even the ones that can be targeted can be distinguished into more eligible (stronger) and less eligible (weaker) candidates.",
+    "surface": "body",
+    "anchor": "Introduction, paragraph 3",
+    "artifact": "files/fulltext/PMID40139194_Cheerie2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "NOT WWOX EVIDENCE. The consensus rests on collective expertise from assessing variants at the working-group sites, and the authors state that gold-standard evidence was not available for many considerations; it is expert opinion piloted on test variants, not an experimental test of the rules.",
+    "snippet": "That means that no gold-standard evidence for many considerations was available for the establishment of these guidelines.",
+    "surface": "body",
+    "anchor": "Discussion, paragraph 6",
+    "artifact": "files/fulltext/PMID40139194_Cheerie2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "NOT WWOX EVIDENCE. Table 2 lists a worked example in which a canonical donor-site variant in a gene is assessed for splice correction and classified not eligible; the entry is one training example, not a measured outcome.",
+    "snippet": "c.213+1G>C (GenBank: NM_003793.4; p.?)CTSF603539splice correctingnot eligible",
+    "surface": "body",
+    "anchor": "Outcomes, Training videos, Table 2",
+    "artifact": "files/fulltext/PMID40139194_Cheerie2025_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "NOT WWOX EVIDENCE. Data S1 states that when canonical splicing is destroyed by canonical splice site variants, branchpoint variants or loss of other splice-regulatory elements, the variant is most likely not eligible for splice correction.",
+    "snippet": "the variant is most likely not eligible for a splice correction ASO treatment",
+    "surface": "supplement",
+    "anchor": "Data S1, splice correction section, paragraph on destroyed canonical splicing",
+    "artifact": "files/supplement/PMID40139194_r2/mmc1_pymupdf.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "NOT WWOX EVIDENCE. Data S1 defines destroyed canonical splicing by the absence of wild-type transcript in functional analysis, and classes variants that fully abolish it as not amenable to splice correction; if some wild-type transcript persists the site is weakened instead.",
+    "snippet": "Variants that fully abolish canonical splicing are not amenable to a splice correction ASO",
+    "surface": "supplement",
+    "anchor": "Data S1, splice correction section",
+    "artifact": "files/supplement/PMID40139194_r2/mmc1_pymupdf.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "NOT WWOX EVIDENCE. Data S1 sets a hard rule for intronic variants close to the exon boundary: those within five base pairs of the boundary are considered not eligible for splice correction.",
+    "snippet": "Variants within 5 bp of the exon- intron/intron-exon boundary are considered",
+    "surface": "supplement",
+    "anchor": "Data S1, intronic variants paragraph",
+    "artifact": "files/supplement/PMID40139194_r2/mmc1_pymupdf.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "NOT WWOX EVIDENCE. Data S1 states that the first and last coding exons are usually not eligible for exon skipping because skipping would lose the start or stop codon.",
+    "snippet": "The first and last coding exons are usually not eligible for exon skipping as this would lead to the loss of the start or stop codon.",
+    "surface": "supplement",
+    "anchor": "Data S1, exon skipping, Assessing Exon Position and Frame",
+    "artifact": "files/supplement/PMID40139194_r2/mmc1_pymupdf.txt",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "NOT WWOX EVIDENCE. Data S1 flags that authors may claim no wild-type splicing remains although faint wild-type bands appear in a gel, so the destroyed versus weakened call depends on reading the gels and not the authors words.",
+    "snippet": "some manuscripts claim there is no wildtype splicing left whereas faint wildtype bands can be identified in a gel",
+    "surface": "supplement",
+    "anchor": "Data S1, splice correction section",
+    "artifact": "files/supplement/PMID40139194_r2/mmc1_pymupdf.txt",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}

@@ -1,0 +1,204 @@
+{
+ "schema_version": 2,
+ "pmid": "23611579",
+ "doi": "10.1016/j.ymgme.2013.03.019",
+ "receipt": "FTR-20261023-23611579-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "MODULE-B-20261023"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true,
+   "reason": "Run inline; the manifest and the analysis note carry what the skill would produce."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Leads are staged in a commit candidate; the shared ledger is written by the Orchestrator."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever matured by this reading."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule is triaged."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 215,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-23: 'Stacpoole PW[au]' 215; with (WWOX OR Wwox) 0. Initials-level string, may pool homonyms.",
+  "research_type": "descriptive_clinical",
+  "weighting": "The senior author's group (University of Florida) is the long-standing clinical group on dichloroacetate in congenital lactic acidosis and the source of the randomized trials this open-label follow-up continues; it reports its own trials, so the safety statement is the authors' reading of their own cohort.",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "occurrences of WWOX in the persisted PMC XML (case-insensitive)",
+    "route": "local grep -oi over files/fulltext/PMID23611579_Abdelmalak2013_PMC_r2.xml",
+    "count": 0
+   }
+  ],
+  "note": "NOT WWOX EVIDENCE: a transferable-literature paper; the zero count is the measurement and it is the whole statement about WWOX content of this surface."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 33,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "Reference count taken from the Crossref reference list used by dependency_integrity.py screen (references_declared); no reference was classified by topic here.",
+  "queue": [
+   {
+    "id": "MH-23611579-01",
+    "target": "Reference 11 in the paper: the MELAS randomized trial that ended early for peripheral neuropathy",
+    "question": "What age and exposure pattern did the neuropathy follow in that trial, and was it reversible?",
+    "status": "open - cited, not read"
+   },
+   {
+    "id": "MH-23611579-02",
+    "target": "Reference 13 in the paper: GSTZ1 haplotype and clearance in healthy subjects",
+    "question": "How large is the clearance difference between haplotypes, and does it hold in children?",
+    "status": "open - cited, not read"
+   }
+  ]
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Does the shared files/ tree or the receipt ledger already hold anything for PMID 23611579, and does another actor hold a claim?",
+  "hits": 0,
+  "finding": "paper_packet.py packet at claim time 2026-10-23: no prior receipt, no artefact, no peer claim; claimed by scientist-b under MODULE-B-20261023. Row context: Q-N-08 dichloroacetate: the map says dose-dependent peripheral neurotoxicity in a child is an unfavourable ratio."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed esummary (JSON) 2026-10-23: pubtype [\"Journal Article\"]; no CommentsCorrections list on the record (absence is a statement about this query); dependency_integrity.py screen on the DOI: SCREENED_CLEAN, 31 of 33 references screened, nothing flagged.",
+  "performed": true,
+  "at": "2026-10-23",
+  "route": "PubMed esummary plus dependency_integrity.py screen --manifest-block",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 33,
+   "references_screened": 31,
+   "references_with_doi": 31,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 2,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 2
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID23611579_Abdelmalak2013_PMC_r2.xml",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&retmode=xml",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-23",
+    "derived": false
+   },
+   "sha256": "cad83082b7c125b8b28e861703f904280c8007c580ffe58f1ad950e170076376"
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC JATS XML (author manuscript) with a full article body, fingerprinted; Figures 1 and 2 are declared in the XML but were not in the PMC open-data bucket and could not be fetched (HTTP 403/404 on the PMC and Europe PMC routes), so figures are unavailable and no figure value is used; every snippet is machine-verified against the XML.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a supplement text layer or a figure image.",
+  "entries": [
+   {
+    "proposition": "NOT WWOX EVIDENCE. The cohort is small and defined by congenital lactic acidosis, not by WWOX or any epileptic encephalopathy: the authors report eight participants, five from one randomized trial and three from an exercise trial.",
+    "snippet": "We now report outcome measures for 5 participants from the RCT of children with congenital lactic acidosis (10) and 3 subjects involved in the aforementioned exercise trial (12).",
+    "surface": "body",
+    "anchor": "Introduction, paragraph 1.1.3",
+    "artifact": "files/fulltext/PMID23611579_Abdelmalak2013_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "NOT WWOX EVIDENCE. Three of the eight participants had their drug paused or reduced because of periodic asymptomatic worsening of lower-extremity nerve conduction velocity; the sentence says asymptomatic, so the nerve-conduction change is reported without symptoms in these three.",
+    "snippet": "because of periodic asymptomatic worsening of lower extremity nerve conduction velocity",
+    "surface": "body",
+    "anchor": "Results 3.1.4",
+    "artifact": "files/fulltext/PMID23611579_Abdelmalak2013_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "NOT WWOX EVIDENCE. Symptomatic peripheral neuropathy that ended a randomized trial is attributed to a different, older population: a MELAS trial in older adolescents and adults, which the authors contrast with their paediatric-onset cohort.",
+    "snippet": "These findings contrast with results of a RCT conducted in older adolescents and adults with mitochondrial encephalomyopathy, lactic acidosis and stroke-like episodes (MELAS) that ended prematurely because of symptomatic and electrical evidence of exacerbation or new onset of peripheral neuropathy (11).",
+    "surface": "body",
+    "anchor": "Discussion 4.1.1",
+    "artifact": "files/fulltext/PMID23611579_Abdelmalak2013_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "NOT WWOX EVIDENCE. The authors give two modifiers of drug exposure that they say influence safety: metabolism of the drug falls with age, and a gene haplotype changes plasma clearance.",
+    "snippet": "However, DCA metabolism in humans is inversely proportional to age (21) and GSTZ1 haplotype also influences plasma clearance of the drug (13).",
+    "surface": "body",
+    "anchor": "Discussion 4.1.1",
+    "artifact": "files/fulltext/PMID23611579_Abdelmalak2013_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "NOT WWOX EVIDENCE. The authors state that their open-label design cannot separate drug effect from underlying disease as the cause of peripheral neuropathy, which limits attributing the nerve changes either to the drug or to the disease.",
+    "snippet": "This open label study cannot distinguish unequivocally between the relative impact of DCA exposure vs. underlying disease on the frequency or severity of peripheral neuropathy.",
+    "surface": "body",
+    "anchor": "Discussion 4.1.2",
+    "artifact": "files/fulltext/PMID23611579_Abdelmalak2013_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "NOT WWOX EVIDENCE. The efficacy endpoint is blood lactate, a systemic biomarker in congenital lactic acidosis; it is not a neuronal bioenergetic measurement and nothing in the paper measures brain energy metabolism.",
+    "snippet": "DCA maintained normal blood lactate concentrations in all patients of this series, even in the three PDC deficient children who chronically consumed diets relatively liberal in carbohydrates.",
+    "surface": "body",
+    "anchor": "Discussion 4.1.4",
+    "artifact": "files/fulltext/PMID23611579_Abdelmalak2013_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "NOT WWOX EVIDENCE. Developmental statements in this open-label series are descriptive and uncontrolled: five of the participants had neurodevelopmental delay, and the paper reports that all but one achieved milestones without a comparison arm.",
+    "snippet": "Patients 1–5 demonstrated mild to profound neurodevelopmental delay complicated in patient 5 by epilepsy that was treated with carbamazepine and diazepam",
+    "surface": "body",
+    "anchor": "Results 3.1.1",
+    "artifact": "files/fulltext/PMID23611579_Abdelmalak2013_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "NOT WWOX EVIDENCE. The one participant with epilepsy is reported with epilepsy and contractures persisting unchanged on the drug.",
+    "snippet": "except for patient 5 (whose epilepsy and contractures persisted unchanged), achieved developmental milestones and improved home functionality",
+    "surface": "body",
+    "anchor": "Results 3.1.5",
+    "artifact": "files/fulltext/PMID23611579_Abdelmalak2013_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}

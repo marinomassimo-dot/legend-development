@@ -1,0 +1,141 @@
+{
+ "_schema": "LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT",
+ "_note": "Sub-task of ORCH-MODULE-BATCH-20261023 (scientist-b lot: module rows Q-N-08..Q-N-15). Observations on the module row are part of the deliverable.",
+ "TASK_ID": "MODULE-B-20261023",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "scientist-b",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Resolve the author-year citations behind module rows Q-N-08..Q-N-15 to PMIDs, propose up to 3 further papers per row, persist a selection note with an Observations section, then read up to 12 papers (partial receipts first) in full-text read mode. Every non-WWOX paper is NOT WWOX EVIDENCE; no dose, administration or suitability; not medical advice.",
+ "SCOPE": {
+  "lot": "Q-N-08..Q-N-15 of disease-models/wwox/research/repurposing_batch_selection_20261023_module.md",
+  "contract": "ledger/tasks/orchestrator/ORCH-MODULE-BATCH-20261023.json"
+ },
+ "ACCEPTANCE_CRITERIA": [
+  "selection note module_batch_selection_scientist-b_20261023.md with Observations on the module row",
+  "per paper manifest PASS, receipt staged (never recorded)",
+  "DEFAULTS_TAKEN and STOP_LOG here"
+ ],
+ "DEPENDENCIES": [],
+ "REVIEW_REQUIREMENT": "Mirror ex post",
+ "INTERACTION_MODE": "AUTONOMOUS",
+ "RETRY_POLICY": "resume idempotently",
+ "MILESTONE_PLAN": [
+  "TASK_ACK/CLAIM",
+  "step 1 selection note",
+  "step 2 per-paper M0-M5",
+  "self-eval",
+  "report"
+ ],
+ "DELIVERABLE": "selection note, manifests, staged receipt JSONs, analysis note, report",
+ "CURRENT_STATE": "COMPLETE_PENDING_LANDING \u2014 selection note written, seven reads staged (none recorded)",
+ "assigned_on": "2026-10-23",
+ "TASK_ACK": {
+  "TASK_ID": "MODULE-B-20261023",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "DECISION": "ACCEPTED",
+  "ACTOR_ID": "scientist-b",
+  "acked_at": "2026-10-23T21:00:00Z",
+  "reading_mode": "PRIMARY_EVIDENCE_READ"
+ },
+ "TASK_CLAIM": {
+  "TASK_ID": "MODULE-B-20261023",
+  "GENERATION": 1,
+  "ACTOR_ID": "scientist-b",
+  "claimed_at": "2026-10-23T21:00:00Z",
+  "durable_pointer": "ledger/tasks/scientist-b/MODULE-B-20261023.json on branch task/module-b-20261023"
+ },
+ "DEFAULTS_TAKEN": [
+  {
+   "condition": "the map records carry no author-year citation, so the row's Ask could not be executed as written",
+   "default_taken": "resolved the premise-level support through registry_records.py theme and pmid queries and recorded the mismatch as the main observation",
+   "why_safe": "read-only, reversible, and it is the operator's requested diagnosis input"
+  },
+  {
+   "condition": "Kim 2023 and Cheerie 2025 are long; Data S1 has 64 pages",
+   "default_taken": "targeted partial reads with sections not read declared per receipt (not_read, captions_only, unavailable)",
+   "why_safe": "understates coverage; owed_sections.py will list the debt"
+  },
+  {
+   "condition": "pdftotext text of Data S1 carried form-feed characters the manifest verifier refuses",
+   "default_taken": "re-derived the text layer with PyMuPDF; deleted the control-character file",
+   "why_safe": "the rule forbids stripping, not re-deriving"
+  },
+  {
+   "condition": "preprints have no manifest in this repository",
+   "default_taken": "completing pass on the preprint staged as a receipt without a manifest, figure findings recorded in the selection note",
+   "why_safe": "same practice as the earlier receipt for that preprint"
+  },
+  {
+   "condition": "Unpaywall needs a contact address",
+   "default_taken": "did not use it; used Europe PMC and OpenAlex OA flags",
+   "why_safe": "the operator's address is not sent to an unrelated service"
+  }
+ ],
+ "STOP_LOG": [
+  {
+   "class": "none",
+   "entry": "No stop taken.",
+   "time_waited": "0"
+  }
+ ],
+ "WAVE_1_RESULT": {
+  "PMIDS_READ": [
+   "23611579",
+   "36432491",
+   "40139194",
+   "31597037",
+   "37438524",
+   "30497978"
+  ],
+  "COMPLETING_PASS": [
+   "10.1101/2025.11.22.689900 (preprint)"
+  ],
+  "STAGED_RECEIPTS": [
+   "FTR-20261023-23611579-01",
+   "FTR-20261023-36432491-01",
+   "FTR-20261023-40139194-01",
+   "FTR-20261023-31597037-01",
+   "FTR-20261023-37438524-01",
+   "FTR-20261023-30497978-01",
+   "FTR-20261023-PPR1124524-02"
+  ],
+  "PARKED": {
+   "18371080": "closed access",
+   "25411445": "closed access",
+   "41442931": "closed access",
+   "42721537": "closed access",
+   "39039877": "closed access"
+  },
+  "NOTE": "disease-models/wwox/research/module_batch_selection_scientist-b_20261023.md"
+ },
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Run inline through pmc_bucket_fetch.py; closed items checked on two OA indices only."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED, not performed by the author; no consolidated baseline claim is touched; a blind audit is owed if a commit candidate narrows the map or a claim."
+  },
+  {
+   "skill": "legend-session-self-eval",
+   "used": false,
+   "reason": "Declined for this short module task; the diagnosis the operator asked for is section 4 of the selection note. Owed if the integrator wants the session_evaluations record."
+  },
+  {
+   "skill": "legend-capability-scout",
+   "used": false,
+   "reason": "Gap recorded in the selection note section 4.3 (receipts by premise); CHANGE = NONE on the harness side from this actor."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional; a counterexample search (adversarial re-retrieval) was done inline for N-10."
+  }
+ ]
+}

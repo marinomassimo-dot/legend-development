@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-10-23T20:36:08Z",
+ "event_at": "2026-10-23T20:36:08Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_read"
+ },
+ "event_id": "FTR-20261023-40139194-01",
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "Whole main text read (Introduction, guideline development, Outcomes with Table 2, Discussion); the graphical abstract not opened. Data S1 (64-page PDF) was read only in the splice-correction and exon-position sections that the locators quote, so supplementary is declared not_read. Row Q-N-10 context QUESTION_DRIVEN. NOT WWOX EVIDENCE; consensus guideline, expert opinion piloted on test variants."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID40139194.json",
+  "disease-models/wwox/research/module_batch_selection_scientist-b_20261023.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "138a55b36cfc8b766c40ef7a8c838bab401d9e7b1e6d2d7092e7994d9a908e20",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID40139194_Cheerie2025_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.1016/j.ajhg.2025.02.017",
+  "pmid": "40139194"
+ },
+ "workflow": "scientist-b module batch MODULE-B-20261023 (row-driven read); PMC efetch XML acquired with pmc_bucket_fetch.py 2026-10-23, locators captured while the document was open and verified by deepdive_manifest.py; prepared as JSON for the integrator and staged, not appended. NOT WWOX EVIDENCE."
+}
