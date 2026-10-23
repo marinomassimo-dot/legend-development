@@ -372,15 +372,22 @@ def manifest_evidence(pmid: str) -> dict:
         declaration = entry.get("contradicts_locator")
         if not isinstance(declaration, dict):
             continue
-        auditors = declaration.get("auditors")
+        # Real manifests nest the audit: contradicts_locator.audit.{auditors:int, verdicts:[...]}
+        # (locator_contradiction_audit.py). The flat shape is read too, for older manifests.
+        audit = declaration.get("audit") if isinstance(declaration.get("audit"), dict) else declaration
+        auditors = audit.get("auditors")
         count = len(auditors) if isinstance(auditors, list) else int(auditors or 0)
-        verdict = str(declaration.get("verdict") or "UNSTATED")
+        verdicts = audit.get("verdicts")
+        if not isinstance(verdicts, list):
+            verdicts = [audit.get("verdict")] if audit.get("verdict") else []
+        verdict = "/".join(str(v) for v in verdicts) or "UNSTATED"
         row["contradiction_verdicts"].append({"verdict": verdict, "auditors": count})
         if count:
             row["audited_entries"] += 1
         else:
             row["unaudited_contradictions"] += 1
     row["audit_status"] = ("AUDIT_FILE_PRESENT" if row["adjudication_files"]
+                           else "CONTRADICTIONS_AUDITED" if row["audited_entries"] and not row["unaudited_contradictions"]
                            else "UNAUDITED" if row["locator_count"]
                            else "NO_LOCATORS")
     return row

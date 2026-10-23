@@ -128,10 +128,10 @@
   "would_move": "N-16 (disease-models/wwox/analysis/mechanism_intervention_map.md:769)"
  },
  {
-  "dependence": "1_UNAUDITED_CONTRADICTIONS",
-  "experiment_sketch": "legend-locator-audit over the declared triples",
+  "dependence": "8_PAPERS_7_COMPLETE",
+  "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
   "external_hits": 1,
-  "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
+  "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
   "query_id": "Q-N-17",
   "would_move": "N-17 (disease-models/wwox/analysis/mechanism_intervention_map.md:775)"
  },
@@ -144,10 +144,10 @@
   "would_move": "R-01 (disease-models/wwox/analysis/mechanism_intervention_map.md:403)"
  },
  {
-  "dependence": "5_UNAUDITED_CONTRADICTIONS",
-  "experiment_sketch": "legend-locator-audit over the declared triples",
+  "dependence": "5_PAPERS_5_COMPLETE",
+  "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
   "external_hits": 2,
-  "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
+  "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
   "query_id": "Q-R-02",
   "would_move": "R-02 (disease-models/wwox/analysis/mechanism_intervention_map.md:427)"
  },

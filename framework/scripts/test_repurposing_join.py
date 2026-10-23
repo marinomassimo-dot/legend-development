@@ -117,6 +117,28 @@ class Evidence(unittest.TestCase):
             rj.MANIFESTS = original
             shutil.rmtree(tmp, ignore_errors=True)
 
+    def test_audit_block_read_nested_flat_and_absent(self):
+        tmp = Path(tempfile.mkdtemp(prefix="join_"))
+        try:
+            real = {"manifest": "PMID1.json", "entry": 3, "what_changed": "x",
+                    "audit": {"auditors": 1, "verdicts": ["PARTIAL"]}}
+            manifest = {"verbatim_locators": {"entries": [
+                {"contradicts_locator": real},
+                {"contradicts_locator": {"verdict": "NARROW", "auditors": ["a", "b"]}},
+                {"contradicts_locator": {"manifest": "PMID1.json", "entry": 4}}]}}
+            (tmp / "PMID777777.json").write_text(json.dumps(manifest), encoding="utf-8")
+            original = rj.MANIFESTS
+            rj.MANIFESTS = tmp
+            row = rj.manifest_evidence("777777")
+            self.assertEqual(row["audited_entries"], 2)
+            self.assertEqual(row["unaudited_contradictions"], 1)
+            self.assertEqual([v["verdict"] for v in row["contradiction_verdicts"]],
+                             ["PARTIAL", "NARROW", "UNSTATED"])
+            self.assertEqual([v["auditors"] for v in row["contradiction_verdicts"]], [1, 2, 0])
+        finally:
+            rj.MANIFESTS = original
+            shutil.rmtree(tmp, ignore_errors=True)
+
     def test_strongest_event_carries_its_receipt_id(self):
         events = [{"evidence_depth": "partial_fulltext_read", "event_id": "FTR-1"},
                   {"evidence_depth": "complete_fulltext_read", "event_id": "FTR-2"}]
