@@ -178,12 +178,24 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "NOT WWOX EVIDENCE. The authors state the work is ex vivo and note the difficulty of translating in-vitro doses to humans; the compound is a proprietary product of the funder.",
+    "proposition": "NOT WWOX EVIDENCE. The paper states that the compound studied, arimoclomol-citrate, is a proprietary compound owned by the funder.",
     "snippet": "Arimoclomol-citrate is a proprietary compound owned by Orphazyme A/S.",
     "surface": "body",
     "anchor": "Materials and methods, Cell culture and drug treatment",
     "artifact": "files/fulltext/PMID30497978_Fog2018_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID30497978.json",
+     "entry": 6,
+     "what_changed": "2026-10-23 blind locator audit of the module batch (locator_audit_module_batch_20261023.md): OVERSHOOT, quote-level; the proposition carried a clause the quote does not; narrowed to the quote. Prior wording began: NOT WWOX EVIDENCE. The authors state the work is ex vivo and note the difficulty of transl",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "method": "Blind text control, quote versus proposition; the repair is unaudited"
+     }
+    }
    }
   ]
  }

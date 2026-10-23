@@ -715,12 +715,23 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "The Results state that GSEA/GO of the top 3,000 differentially expressed genes showed inhibition of ATP-synthesis-coupled electron transport and oxidative phosphorylation, with enrichment of glycolysis and gluconeogenesis; the supporting panel is Appendix Fig S3A, which is not available to this reading (declared). The text names no mTOR, autophagy, 4E-BP or rapamycin term: those strings occur zero times in the article JATS (tool run 2026-10-23).",
-    "snippet": "inhibition of processes related to ATP synthesis‐coupled electron transport and oxidative phosphorylation (Appendix Fig S3A)",
+    "proposition": "Results, RNA-sequencing paragraph, text search of the declared JATS surface (PMC.xml): the article does name the axes. Its sentence on the top-100 downregulated heatmap (Fig 4A) lists autophagy genes (IFI16, MDM2, RB1, PLAT, RB1CC1) and 'the mTOR pathway (EIF4EBP1, PIK3CA, RB1CC1)'. These are gene-name groupings of a top-100 list by fold change; no mTORC1 signalling, autophagic flux or rapamycin is reported. The string 4E-BP and the word rapamycin do not occur in that surface (text search); mTOR and autophagy occur once each, in this sentence. Appendix Fig S3A, cited for the oxidative-phosphorylation and glycolysis statement, is not held.",
+    "snippet": "In the top 100 downregulated genes were genes related to GABA receptors (GABRB3, GABRB2), autophagy (IFI16, MDM2, RB1, PLAT, RB1CC1), and the mTOR pathway (EIF4EBP1, PIK3CA, RB1CC1) (Fig 4A).",
     "surface": "body",
     "artifact": "files/fulltext/PMID34268881_Steinberg2021_PMC.xml",
-    "anchor": "Results, RNA-sequencing paragraph, first sentence",
-    "panel_text_relation": "text_only"
+    "anchor": "Results, RNA-sequencing paragraph, sentence on the top 100 downregulated genes (Fig 4A)",
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
+     "entry": 50,
+     "what_changed": "Own earlier wording 'mTOR, autophagy, 4E-BP or rapamycin occur zero times in the article' was false (OVERSHOOT, blind audit of the module batch 2026-10-23); replaced by the exact terms and location of the sentence that names them.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "blind locator audit of the module batch, 2026-10-23: OVERSHOOT on this entry; the repair applied afterwards is not itself audited."
+      ]
+     }
+    }
    },
    {
     "proposition": "Review-process file, referee remark (not the authors' data): a referee of the submitted version writes that WWOX overexpression had a detrimental impact on DNA damage/apoptosis, shown in a figure S3F of that version. The submitted figure S3F is not among the files this reading holds; the quote is the referee's characterization, not a measurement the authors report here.",

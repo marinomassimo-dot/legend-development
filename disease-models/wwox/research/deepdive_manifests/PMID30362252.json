@@ -105,12 +105,23 @@
     "panel_text_relation": "panel_only"
    },
    {
-    "proposition": "The paper's only statement on cerebral lactate is one sentence on MR spectroscopy in the single described patient (a homozygous WWOX exon-6 deletion within a region of maternal uniparental disomy, with two variants in HSPG2): the non-essential amino acids were decreased globally and lactate was 'extremely low'. No spectrum, value, region, sequence or reference range is given, and neither of the two figures shows MRS.",
+    "proposition": "The paper's only statement on cerebral lactate is one sentence on MR spectroscopy in the single described patient (a homozygous WWOX exon-6 deletion within a region of maternal uniparental disomy, with two variants in HSPG2): the non-essential amino acids were decreased globally and lactate was 'extremely low'. No spectrum, value, region, sequence or reference range is given, and neither of the two figure legends mentions MRS (the figure images were not held).",
     "snippet": "MR spectroscopy for non-essential amino acids was decreased globally and lactate levels were extremely low.",
     "surface": "body",
     "artifact": "files/fulltext/PMID30362252_Davids2019_PMC_2026-09-27.xml",
     "anchor": "Results, clinical description, neuroimaging paragraph",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID30362252.json",
+     "entry": 5,
+     "what_changed": "'neither of the two figures shows MRS' narrowed to the figure legends, because the figure images were not held (same weakness class as the audited overshoot).",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "not separately audited; wording narrowed after the module-batch blind audit flagged a sibling entry; the repair is not itself audited."
+      ]
+     }
+    }
    },
    {
     "proposition": "The authors assign the HSPG2 variants to the skeletal dysplasia, osteoporosis and flexion contractures, which they say could not be attributed to WWOX; the sentence does not mention the brain, MRS or lactate. The map's reading of HSPG2 as a confounder of the MRS lactate finding is the map's own inference, not a statement of this paper.",
