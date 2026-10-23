@@ -612,12 +612,23 @@
     }
    },
    {
-    "proposition": "WPRE removal did not lower transgene burden — it made it predictable and required a six-fold dose increase to recover efficacy. Protein without WPRE at 2E10 sits at or below wild type.",
+    "proposition": "FIGURE 2E, WPRE REMOVAL LOWERS TRANSGENE PROTEIN. Relative to WT = 1 in cortex/hippocampus/midbrain/cerebellum, the WPRE-bearing vector gives 11.6/11.9/4/2.4 at 2E10 and 25.6/22.3/11.6/6.2 at 4E10, whereas the WPRE-free vector gives 0.8/0.9/0.3/0.1 at 2E10 and 4.7/5.9/1.5/0.4 at 4E10: removing WPRE lowers protein at both doses (the Results state that WPRE enhanced WWOX protein). Without WPRE at 2E10 protein sits at or below wild type in all four regions; at 4E10 it is above wild type in cortex, hippocampus and midbrain and below it in cerebellum. The doses shown on this panel are 2E10 and 4E10 only; a dose increase to recover efficacy is not read from this panel. An earlier version of this entry said WPRE removal did not lower transgene burden and named a six-fold dose increase; both are withdrawn.",
     "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 2E lane values relative to WT=1, cortex/hippocampus/midbrain/cerebellum: WWOX without WPRE 0.8/0.9/0.3/0.1 at 2E10 and 4.7/5.9/1.5/0.4 at 4E10; WWOX+WPRE 11.6/11.9/4/2.4 at 2E10 and 25.6/22.3/11.6/6.2 at 4E10.",
     "surface": "figure",
-    "artifact": "files/fulltext/figures/PMID42422765/gr2.jpg",
-    "anchor": "Figure 2, panel E, read at 104 effective ppi",
-    "panel_text_relation": "panel_only"
+    "artifact": "files/fulltext/PMID42422765_Obeid2026_assets/mmc2.pdf",
+    "anchor": "Figure 2, panel E, page 4 of mmc2.pdf, embedded raster at 500 ppi, re-read 2026-10-23 after blind audit verdict OVERSHOOT; lane values reproduce the earlier quote",
+    "panel_text_relation": "panel_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json",
+     "entry": 15,
+     "what_changed": "Own persisted proposition corrected after the blind module-batch audit (OVERSHOOT): the lane values stand, but WPRE removal lowers protein at both doses and no six-fold dose increase is on the panel.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ]
+     }
+    }
    },
    {
     "proposition": "The Methods settle from their own side the correction I had to make to my Figure 1 criticism: the promoter comparison used WPRE-bearing constructs throughout, so its 4E10 is not the 4E10 of Figures 2 and 3.",

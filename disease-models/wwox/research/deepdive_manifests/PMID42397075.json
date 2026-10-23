@@ -81,16 +81,6 @@
  },
  "source_artifacts": [
   {
-   "path": "files/fulltext/PMID42397075_Aqeilan2026.pdf",
-   "sha256": "b6b44816bb5a029ad6dd3760dbf02ae94c5fcb69f8a9b5721f45c128bbf189a0",
-   "kind": "article_binary"
-  },
-  {
-   "path": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
-   "sha256": "9c48aa0934648f58f8f5d3b39fa73b0f31e0b0d8d284914b32bd5e3f9b34bb17",
-   "kind": "article_text"
-  },
-  {
    "path": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File009.pdf",
    "sha256": "19d1b1d7305315159f4319ece8e7da745015564cc94932058f1eeccd45aa6771",
    "kind": "article_binary"
@@ -391,7 +381,7 @@
     "proposition": "MYC is the top significantly upregulated gene in WWOX-deficient radial glia — the observation the paper's title rests on.",
     "snippet": "the proto-oncogene MYC (also known as c-Myc) as the top significantly upregulated gene in \n2 \nWWOX-deficient RGs (Fig. 3F).",
     "surface": "body",
-    "artifact": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
+    "artifact": "files/fulltext/PMID42397075_Steinberg2026_OUP-AM_fitz.txt",
     "anchor": "Results, 'Inverse relationship between MYC and WWOX', p. 8",
     "panel_text_relation": "text_only",
     "found_or_sought": "sought — captured 2026-08-09 while looking for the paper's central claim"
@@ -400,43 +390,63 @@
     "proposition": "The inverse WWOX-MYC relationship is claimed as a first in non-neoplastic tissue.",
     "snippet": "first time that an inverse relationship between WWOX and MYC has been observed in",
     "surface": "body",
-    "artifact": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
+    "artifact": "files/fulltext/PMID42397075_Steinberg2026_OUP-AM_fitz.txt",
     "anchor": "Results, p. 8. Fragment ends at a line break; the sentence continues 'non-neoplastic tissue.'",
     "panel_text_relation": "text_only",
     "found_or_sought": "sought — 2026-08-09"
    },
    {
-    "proposition": "🔴 THE CENTRAL PHENOTYPE IS ALMOST ENTIRELY IN THE ENGINEERED KNOCKOUT, NOT IN THE PATIENT LINES. Figure 2F plots cell-fraction log2FC against WT: the WWOX-KO loses neurons at about -2.6 log2FC with radial glia up about +0.55, while SCAR12 and WOREE both sit within roughly ±0.2 of WT on both populations. Panel E shows the same: WT and both patient lines carry a comparable neuronal fraction, and only the KO is depleted. The paper is titled 'impairs neurogenesis in human brain organoids'; on composition, the two patient-derived genotypes are close to wild type.",
-    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 2F, 'RGs and Neu cell fraction changes', log2FC versus WT: WWOX-KO Neu about -2.6 and RGs about +0.55; SCAR12 Neu about -0.2 and RGs about -0.15; WOREE both within about 0.05. Panel D cell counts: WT 5649, WWOX-KO 3020, SCAR12 3422, WOREE 5916.",
+    "proposition": "THE CENTRAL PHENOTYPE IS ALMOST ENTIRELY IN THE ENGINEERED KNOCKOUT, NOT IN THE PATIENT LINES. Figure 2F plots cell-fraction log2FC against WT: the WWOX-KO loses neurons at about -2.4 log2FC with radial glia up about +1.0, while SCAR12 (radial glia about -0.27, neurons about +0.18) and WOREE (radial glia about +0.08, neurons about -0.07) both sit within about 0.3 of WT on both populations. Panel E shows the same: WT, SCAR12 and WOREE carry a comparable neuronal fraction (about 0.45, 0.58 and 0.45), and only the KO is depleted (about 0.08). The paper is titled 'impairs neurogenesis in human brain organoids'; on composition, the two patient-derived genotypes are close to wild type. An earlier reading of this entry gave KO radial glia +0.55, KO neurons -2.6 and SCAR12 neurons -0.2 and is withdrawn.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 2F, 'RGs and Neu cell fraction changes', x-axis ticks -3 to +1 read at 125 px per unit on the 600 dpi render: WWOX-KO RGs bar to about +1.0 and Neu bar to about -2.38; SCAR12 RGs about -0.27 and Neu about +0.19; WOREE RGs about +0.08 and Neu about -0.06. Panel E neuronal fraction about 0.45 (WT), 0.08 (WWOX-KO), 0.58 (SCAR12), 0.45 (WOREE). Panel D cell counts: WT 5649, WWOX-KO 3020, SCAR12 3422, WOREE 5916.",
     "surface": "figure",
-    "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/figs/fig_p33_1217x776.jpeg",
-    "anchor": "Figure 2, panels D, E and F, read at 174 effective ppi from the image embedded in the PDF at native resolution",
+    "artifact": "files/fulltext/PMID42397075_Steinberg2026_assets/fig2F_600dpi.png",
+    "anchor": "Figure 2, panels D to F, page 33; the 600 dpi render of panel F and the embedded 1217 x 776 raster of the whole figure re-read 2026-10-23 after blind audit verdict OVERSHOOT (numerals)",
     "panel_text_relation": "panel_only",
-    "found_or_sought": "found — opening Figure 2 for the first time; the asymmetry is the first thing panel F shows"
+    "found_or_sought": "found — opening Figure 2 for the first time; the asymmetry is the first thing panel F shows",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42397075.json",
+     "entry": 2,
+     "what_changed": "Own persisted entry corrected after the blind module-batch audit (OVERSHOOT, numerals): KO RGs +0.55 -> about +1.0, KO Neu -2.6 -> about -2.4, SCAR12 Neu -0.2 -> about +0.18, SCAR12 RGs -0.15 -> about -0.27, WOREE RGs and Neu restated; agrees with entry 35.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ]
+     }
+    }
    },
    {
     "proposition": "The Figure 2 caption fixes what panel F plots, so the comparison above is the one the authors drew.",
     "snippet": "populations fraction changes in WWOX-mutated organoids, calculated relative to the WT",
     "surface": "body",
-    "artifact": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
+    "artifact": "files/fulltext/PMID42397075_Steinberg2026_OUP-AM_fitz.txt",
     "anchor": "Figure 2 caption, panel F",
     "panel_text_relation": "text_only",
     "found_or_sought": "found — read before interpreting the panel, per the rule adopted earlier today"
    },
    {
     "proposition": "The patient lines DO carry a maturation phenotype even though composition is near-normal: both invert the early/late neuronal balance relative to WT. Composition and maturation are separable, and the paper's phenotype in patient cells is the second.",
-    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 5F: WT near 35 percent early / 65 percent late; WOREE and SCAR12 both near 65 / 35. Figure 5G: log2FC versus WT positive for early and negative for late in both patient lines. n = 9094 cells.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 5F: WT near 33 percent early / 67 percent late; WOREE and SCAR12 near 66 and 68 percent early (34 and 32 late). Figure 5G: log2FC versus WT positive for early and negative for late in both patient lines. n = 9094 cells.",
     "surface": "figure",
-    "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/figs/fig_p35_1430x795.jpeg",
+    "artifact": "files/fulltext/PMID42397075_Steinberg2026_assets/figs/fig_p35_1430x795.jpeg",
     "anchor": "Figure 5, panels F and G, read at 204 effective ppi",
     "panel_text_relation": "panel_only",
-    "found_or_sought": "found — reading Figure 5 panels F and G"
+    "found_or_sought": "found — reading Figure 5 panels F and G",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42397075.json",
+     "entry": 4,
+     "what_changed": "Approximate percentages re-read against the Figure 5F bars while re-checking the neighbouring panels of the entry 2 error class: WT about 33/67 and patient lines about 66 and 68 percent early, not 35/65 and 65/35; the proposition's direction is unchanged.",
+     "audit": {
+      "auditors": 0,
+      "verdicts": []
+     }
+    }
    },
    {
     "proposition": "GUARD AGAINST A FALSE INFERENCE, recorded because the inference was one step away. Figure 5E shows canonical Wnt signalling among negatively-enriched GO processes, and A51 suppresses Wnt — but the caption states the contrast is developmental stage, not genotype, so a negative NES means Wnt is higher in early cells. Nothing about WWOX follows from that panel.",
     "snippet": "Representative Gene Ontology (GO) terms enriched in “late” cells compared to “early” cells",
     "surface": "body",
-    "artifact": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
+    "artifact": "files/fulltext/PMID42397075_Steinberg2026_OUP-AM_fitz.txt",
     "anchor": "Figure 5 caption, panel E",
     "panel_text_relation": "text_only",
     "found_or_sought": "found — I read the caption before asserting, which is the only reason the false inference was not written"
@@ -445,7 +455,7 @@
     "proposition": "WWOX-KO radial glia shift toward S and G2M with M depleted, and MYC expression correlates with S/G2M in the KO where it correlates with G1/G0 in WT. This is the mechanistic core of the cell-cycle argument.",
     "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 4C, cell proportion log2FC KO/WT: S about +0.78, G2M about +0.5, G1/G0 about -0.2, M about -0.35, with no error bars and no significance markers. Figure 4A: the KO and WT density curves along cell-cycle pseudotime are near-superimposed. Figure 4D: MYC-phase correlation about +0.2 for S in KO, negative for M, and near zero across all phases in WT.",
     "surface": "figure",
-    "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/figs/fig_p35_1430x749.png",
+    "artifact": "files/fulltext/PMID42397075_Steinberg2026_assets/figs/fig_p35_1430x749.png",
     "anchor": "Figure 4, panels A, C and D, read at 204 effective ppi. n = 2396 KO and 2152 WT radial glia per the caption.",
     "panel_text_relation": "panel_only",
     "found_or_sought": "found — the absence of error bars on panel C is visible on opening it"
@@ -454,7 +464,7 @@
     "proposition": "The Figure 4 caption confirms the overrepresentation direction the panels show.",
     "snippet": "overrepresented in WWOX-KO condition and in S - G2M phases, while Low potency in WT and \n21 \nG1/G0 - M phases.",
     "surface": "body",
-    "artifact": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
+    "artifact": "files/fulltext/PMID42397075_Steinberg2026_OUP-AM_fitz.txt",
     "anchor": "Figure 4 caption, panel H",
     "panel_text_relation": "text_confirmed_by_panel",
     "found_or_sought": "found — caption read alongside the panel"
@@ -463,7 +473,7 @@
     "proposition": "🔴 ASYMMETRIC SIGNIFICANCE IN THE ChIP-seq PANEL. Figure 4J tests MYC promoter binding at immature-neuron genes against a null of 1000 random gene sets. The caption reports a P value for the wild type only. The panel places WT far outside the null distribution and the KO inside it — i.e. MYC binds those promoters significantly in WT and not detectably in the knockout. No P is given for the KO, so 'not significant' is the reading the panel supports and not a statement the paper makes. Same structure as CLAIM 005: an unmarked comparison is not a declared negative.",
     "snippet": "1000 iterations with randomly selected gene sets of equal size (WT P-val < 0.0001)",
     "surface": "body",
-    "artifact": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
+    "artifact": "files/fulltext/PMID42397075_Steinberg2026_OUP-AM_fitz.txt",
     "anchor": "Figure 4 caption, panel J",
     "panel_text_relation": "text_confirmed_by_panel",
     "found_or_sought": "found — the caption gives one P value where the panel shows two conditions"
@@ -472,7 +482,7 @@
     "proposition": "The panel reading paired with that caption.",
     "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 4J: null histogram of mean MYC promoter binding density centred near 1.25; the WT marker sits at about 1.85, outside the distribution, and the KO marker at about 1.1, inside it.",
     "surface": "figure",
-    "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/figs/fig_p35_1430x749.png",
+    "artifact": "files/fulltext/PMID42397075_Steinberg2026_assets/figs/fig_p35_1430x749.png",
     "anchor": "Figure 4, panel J, read at 204 effective ppi",
     "panel_text_relation": "panel_only",
     "found_or_sought": "found — opening Figure 4"
@@ -481,7 +491,7 @@
     "proposition": "🔴 TEXT CONTRADICTED BY PANEL — the rescue is described as reaching wild-type level, and the figure never tests that comparison. Body half of the pair.",
     "snippet": "hyperexcitability to a level similar to the WT organoids [Fig. 6A(ii)].",
     "surface": "body",
-    "artifact": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
+    "artifact": "files/fulltext/PMID42397075_Steinberg2026_OUP-AM_fitz.txt",
     "anchor": "Results, p. 13, describing Figure 6A(ii)",
     "panel_text_relation": "text_only",
     "found_or_sought": "sought — 2026-08-09, looking for how the rescue was characterised"
@@ -490,7 +500,7 @@
     "proposition": "🔴 Panel half of the same pair: Figure 6A(ii) carries significance brackets for WT-versus-EGFP and EGFP-versus-treated only. There is no WT-versus-treated bracket, so 'a level similar to the WT organoids' describes a comparison the figure does not draw.",
     "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 6A(ii): brackets present for WT vs EGFP and for EGFP vs AAV9-hSynI-WWOX; no bracket joining WT and the treated condition.",
     "surface": "figure",
-    "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/figs/fig_p36_1430x1754.jpeg",
+    "artifact": "files/fulltext/PMID42397075_Steinberg2026_assets/figs/fig_p36_1430x1754.jpeg",
     "anchor": "Figure 6, panel A(ii), inspected at native resolution 2026-08-09",
     "panel_text_relation": "text_contradicted_by_panel",
     "found_or_sought": "found — 2026-08-09, on opening the panel; the missing bracket is what prompted checking the sentence",
@@ -501,25 +511,34 @@
     "proposition": "The rescue corrects neuronal function without correcting radial-glia abnormalities — the authors' own statement of what the therapy does and does not reach.",
     "snippet": "rescued neuronal functional phenotypes without correcting RG abnormalities",
     "surface": "body",
-    "artifact": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
+    "artifact": "files/fulltext/PMID42397075_Steinberg2026_OUP-AM_fitz.txt",
     "anchor": "Discussion, p. 16",
     "panel_text_relation": "text_only",
     "found_or_sought": "sought — 2026-08-09"
    },
    {
     "proposition": "The absence of an effect on radial glia is offered as a safety signal for the AAV approach.",
-    "snippet": "the RGs, as appreciated by the absence of differentially expressed genes and cell-cycle \n22 \nabnormalities (Supplementary Fig. 10C-F), potentially pointing to the safety profile of this \n23 \napproach.",
+    "snippet": "abnormalities (Supplementary Fig. 10C-F), potentially pointing to the safety profile of this",
     "surface": "body",
-    "artifact": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
-    "anchor": "Results, p. 13, on AAV9-WWOX infection of WOREE organoids",
+    "artifact": "files/fulltext/PMID42397075_Steinberg2026_OUP-AM_fitz.txt",
+    "anchor": "Results, p. 13, on AAV9-WWOX infection of WOREE organoids Snippet shortened on 2026-10-23 to the single source line, because the earlier multi-line span crossed an interpolated line number that the verifier reads as page furniture; the sentence ends 'approach.' on the next line.",
     "panel_text_relation": "text_only",
-    "found_or_sought": "sought — 2026-08-09"
+    "found_or_sought": "sought — 2026-08-09",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42397075.json",
+     "entry": 13,
+     "what_changed": "Snippet narrowed to one source line (the earlier span crossed interpolated line numbers); the sentence's tail 'approach.' is on the next line; proposition unchanged.",
+     "audit": {
+      "auditors": 0,
+      "verdicts": []
+     }
+    }
    },
    {
     "proposition": "The authors name the limits of the AAV approach, including a time-limited intervention window — the organoid counterpart of the P0-P5 ceiling recorded for PMID 42422765.",
     "snippet": "promoter specificity, vector targeting efficiency, and the time-limited nature",
     "surface": "body",
-    "artifact": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
+    "artifact": "files/fulltext/PMID42397075_Steinberg2026_OUP-AM_fitz.txt",
     "anchor": "Discussion, p. 16. Fragment lies within one line of the line-numbered surface.",
     "panel_text_relation": "text_only",
     "found_or_sought": "sought — 2026-08-09"
@@ -537,7 +556,7 @@
     "proposition": "SCAR12 patient organoids show hyperexcitability, reported as a novel finding consistent with patient seizures.",
     "snippet": "SCAR12 patient-derived organoid recordings also showed",
     "surface": "body",
-    "artifact": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
+    "artifact": "files/fulltext/PMID42397075_Steinberg2026_OUP-AM_fitz.txt",
     "anchor": "Results, p. 6. Fragment ends at a line break; the sentence continues 'hyperexcitability, a novel finding'.",
     "panel_text_relation": "text_only",
     "found_or_sought": "sought — 2026-08-09"
@@ -546,7 +565,7 @@
     "proposition": "🔴 THE FUNCTIONAL PILLAR IS NOT MYC-SELECTIVE. The MYC-inhibition experiment uses A51, which the paper itself describes as a multi-kinase inhibitor suppressing both Wnt and MYC, at 125 nM from week 8 to week 15. Any causal attribution to MYC inherits that ambiguity. It is also the first pharmacological intervention in a human WWOX-deficient neural model in this corpus — IPOTESI-level material for the therapeutic track, and a BLOCK-1 question if ever promoted.",
     "snippet": "established to suppress Wnt and MYC expression",
     "surface": "body",
-    "artifact": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
+    "artifact": "files/fulltext/PMID42397075_Steinberg2026_OUP-AM_fitz.txt",
     "anchor": "Results, p. 11, describing the A51 compound; dose and schedule in supplementary File009, 'MYC inhibition'",
     "panel_text_relation": "text_only",
     "found_or_sought": "found — reading the supplementary Methods for the dose, the descriptor 'multi-kinase' was in the article sentence I then went back to"
@@ -555,7 +574,7 @@
     "proposition": "🔴 THE THREE EXPERIMENTS CARRYING THE THESIS ARE THE THREE WITHOUT INDEPENDENT DIFFERENTIATIONS. The statistics section lists single-cell RNA-seq, MYC inhibition and NSCs ChIP-seq as the exceptions — precisely the three the WWOX-MYC interplay rests on. Everything else was replicated across independent differentiations.",
     "snippet": "Experiments were performed in independent differentiations, except for single-cell RNA-",
     "surface": "body",
-    "artifact": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
+    "artifact": "files/fulltext/PMID42397075_Steinberg2026_OUP-AM_fitz.txt",
     "anchor": "Statistical analysis, supplementary File009 and article. Fragment ends at a line break.",
     "panel_text_relation": "text_only",
     "found_or_sought": "found — reading the statistics section to interpret the panels"
@@ -564,7 +583,7 @@
     "proposition": "No blinding and no randomization, stated without qualification. Against the same laboratory's two other 2026/2021 papers read the same day this is a gradient: unconditional blinding in PMID 34747138, 'when feasible' in PMID 42422765, none here.",
     "snippet": "No randomization or blinding was applied in this study",
     "surface": "body",
-    "artifact": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
+    "artifact": "files/fulltext/PMID42397075_Steinberg2026_OUP-AM_fitz.txt",
     "anchor": "Statistical analysis",
     "panel_text_relation": "text_only",
     "found_or_sought": "found — recognised while reading the statistics because the other two papers were in mind, not because a gradient was being looked for"
@@ -573,7 +592,7 @@
     "proposition": "What the statistics do better than either sibling paper: normality tested, ANOVA with Tukey or Dunnett, or multiple t-tests with Benjamini-Hochberg FDR — multiplicity correction named, which neither PMID 34747138 nor PMID 42422765 declared.",
     "snippet": "multiple t-tests, correcting for multiple comparisons by controlling the False Discovery Rate",
     "surface": "body",
-    "artifact": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
+    "artifact": "files/fulltext/PMID42397075_Steinberg2026_OUP-AM_fitz.txt",
     "anchor": "Statistical analysis",
     "panel_text_relation": "text_only",
     "found_or_sought": "found — same reading pass as the blinding sentence"
