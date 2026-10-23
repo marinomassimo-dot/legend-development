@@ -1,0 +1,721 @@
+{
+ "adapter": "pubtator3",
+ "citation": "Wei C-H. et al. PubTator 3.0: an AI-powered literature resource for unlocking biomedical knowledge. Nucleic Acids Res 2024;52(W1):W540-W546. https://doi.org/10.1093/nar/gkae235",
+ "error": "",
+ "evidence_label": "NOT WWOX EVIDENCE",
+ "hits": [
+  {
+   "kind": "relation",
+   "publications": 149,
+   "source": "@DISEASE_Hypoxia",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 110,
+   "source": "@DISEASE_Neoplasms",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 101,
+   "source": "@DISEASE_Hypoxia",
+   "target": "@GENE_BNIP3",
+   "type": "stimulate"
+  },
+  {
+   "kind": "relation",
+   "publications": 96,
+   "source": "@GENE_HIF1A",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 66,
+   "source": "@DISEASE_Mitochondrial_Diseases",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 56,
+   "source": "@GENE_HIF1A",
+   "target": "@GENE_BNIP3",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 45,
+   "source": "@DISEASE_Hypoxia_Brain",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 31,
+   "source": "@DISEASE_Inflammation",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 30,
+   "source": "@DISEASE_Reperfusion_Injury",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 28,
+   "source": "@DISEASE_Necrosis",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 26,
+   "source": "@DISEASE_Death",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 25,
+   "source": "@DISEASE_Breast_Neoplasms",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 24,
+   "source": "@CHEMICAL_Reactive_Oxygen_Species",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 23,
+   "source": "@DISEASE_Ischemia",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 22,
+   "source": "@GENE_BCL2",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 22,
+   "source": "@GENE_BNIP3",
+   "target": "@GENE_HIF1A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 20,
+   "source": "@DISEASE_Heart_Failure",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 19,
+   "source": "@GENE_FOXO3",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 18,
+   "source": "@DISEASE_Carcinoma_Hepatocellular",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 18,
+   "source": "@DISEASE_Carcinoma_Renal_Cell",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 18,
+   "source": "@DISEASE_Nerve_Degeneration",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 18,
+   "source": "@DISEASE_Hypoxia_Brain",
+   "target": "@GENE_BNIP3",
+   "type": "stimulate"
+  },
+  {
+   "kind": "relation",
+   "publications": 17,
+   "source": "@GENE_BNIP3",
+   "target": "@GENE_MAP1LC3A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 16,
+   "source": "@DISEASE_Glioma",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 16,
+   "source": "@DISEASE_Malformations_of_Cortical_Development_Group_I",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 16,
+   "source": "@DISEASE_Neoplasm_Metastasis",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 15,
+   "source": "@DISEASE_Pancreatic_Neoplasms",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 14,
+   "source": "@DISEASE_Colorectal_Neoplasms",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 14,
+   "source": "@DISEASE_Heart_Diseases",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 13,
+   "source": "@CHEMICAL_Cisplatin",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 13,
+   "source": "@DISEASE_Stomach_Neoplasms",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 13,
+   "source": "@GENE_AKT1",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 12,
+   "source": "@DISEASE_Myocardial_Ischemia",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 12,
+   "source": "@GENE_BNIP3",
+   "target": "@GENE_TP53",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 11,
+   "source": "@DISEASE_Brain_Ischemia",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 11,
+   "source": "@GENE_BNIP3",
+   "target": "@GENE_BNIP3L",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 10,
+   "source": "@DISEASE_Acidosis",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 10,
+   "source": "@DISEASE_Acute_Kidney_Injury",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 10,
+   "source": "@DISEASE_Alzheimer_Disease",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 10,
+   "source": "@CHEMICAL_Reactive_Oxygen_Species",
+   "target": "@GENE_BNIP3",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 9,
+   "source": "@DISEASE_Atrophy",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 9,
+   "source": "@DISEASE_Ovarian_Neoplasms",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 9,
+   "source": "@DISEASE_Prostatic_Neoplasms",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 9,
+   "source": "@GENE_BNIP3",
+   "target": "@GENE_FOXO3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 9,
+   "source": "@GENE_MAPK8",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 9,
+   "source": "@GENE_MTOR",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 9,
+   "source": "@DISEASE_Neoplasms",
+   "target": "@GENE_BNIP3",
+   "type": "inhibit"
+  },
+  {
+   "kind": "relation",
+   "publications": 9,
+   "source": "@CHEMICAL_Decitabine",
+   "target": "@GENE_BNIP3",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 9,
+   "source": "@CHEMICAL_Reactive_Oxygen_Species",
+   "target": "@GENE_BNIP3",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 9,
+   "source": "@GENE_BNIP3",
+   "target": "@GENE_HIF1A",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 8,
+   "source": "@CHEMICAL_Adenosine_Triphosphate",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 8,
+   "source": "@CHEMICAL_Calcium",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 8,
+   "source": "@DISEASE_Cardiomyopathies",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 8,
+   "source": "@DISEASE_Fibrosis",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 8,
+   "source": "@DISEASE_Glioblastoma",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 8,
+   "source": "@DISEASE_Intervertebral_Disc_Degeneration",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 8,
+   "source": "@DISEASE_Lung_Neoplasms",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 8,
+   "source": "@DISEASE_Melanoma",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 8,
+   "source": "@DISEASE_Myocardial_Infarction",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 8,
+   "source": "@DISEASE_Sleep_Deprivation",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 8,
+   "source": "@DISEASE_Ventricular_Remodeling",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 8,
+   "source": "@GENE_BCL2",
+   "target": "@GENE_BNIP3",
+   "type": "interact"
+  },
+  {
+   "kind": "relation",
+   "publications": 8,
+   "source": "@GENE_FOXO3",
+   "target": "@GENE_BNIP3",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 7,
+   "source": "@DISEASE_Carcinogenesis",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 7,
+   "source": "@DISEASE_Kidney_Diseases",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 7,
+   "source": "@DISEASE_Multiple_Myeloma",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 7,
+   "source": "@DISEASE_Osteosarcoma",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 7,
+   "source": "@DISEASE_Pre_Eclampsia",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 7,
+   "source": "@DISEASE_Urinary_Bladder_Neoplasms",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 7,
+   "source": "@GENE_BNIP3",
+   "target": "@GENE_TRP53_PS",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 7,
+   "source": "@GENE_BNIP3",
+   "target": "@GENE_ULK1",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 7,
+   "source": "@CHEMICAL_2_Methoxyestradiol",
+   "target": "@GENE_BNIP3",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 7,
+   "source": "@CHEMICAL_Cisplatin",
+   "target": "@GENE_BNIP3",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 7,
+   "source": "@CHEMICAL_cobaltous_chloride",
+   "target": "@GENE_BNIP3",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 7,
+   "source": "@GENE_BNIP3",
+   "target": "@GENE_BECN1",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 7,
+   "source": "@DISEASE_Ischemia",
+   "target": "@GENE_BNIP3",
+   "type": "stimulate"
+  },
+  {
+   "kind": "relation",
+   "publications": 7,
+   "source": "@DISEASE_Mitochondrial_Diseases",
+   "target": "@GENE_BNIP3",
+   "type": "stimulate"
+  },
+  {
+   "kind": "relation",
+   "publications": 6,
+   "source": "@CHEMICAL_Lipids",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 6,
+   "source": "@CHEMICAL_Lipopolysaccharides",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 6,
+   "source": "@CHEMICAL_cobaltous_chloride",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 6,
+   "source": "@DISEASE_Carcinoma_Non_Small_Cell_Lung",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 6,
+   "source": "@DISEASE_Chemical_and_Drug_Induced_Liver_Injury",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 6,
+   "source": "@DISEASE_Drug_Related_Side_Effects_and_Adverse_Reactions",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 6,
+   "source": "@DISEASE_Muscular_Atrophy",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 6,
+   "source": "@DISEASE_Triple_Negative_Breast_Neoplasms",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 6,
+   "source": "@GENE_BCL2L1",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 6,
+   "source": "@GENE_BNIP3",
+   "target": "@GENE_BECN1",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 6,
+   "source": "@GENE_BNIP3",
+   "target": "@GENE_STAT3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 6,
+   "source": "@GENE_NFKB1",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 6,
+   "source": "@DISEASE_Hypoxia",
+   "target": "@GENE_BNIP3",
+   "type": "inhibit"
+  },
+  {
+   "kind": "relation",
+   "publications": 6,
+   "source": "@CHEMICAL_Doxorubicin",
+   "target": "@GENE_BNIP3",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 6,
+   "source": "@GENE_BAX",
+   "target": "@GENE_BNIP3",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 6,
+   "source": "@GENE_BNIP3",
+   "target": "@GENE_TNF",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 6,
+   "source": "@GENE_MAPK8",
+   "target": "@GENE_BNIP3",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 5,
+   "source": "@CHEMICAL_Doxorubicin",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 5,
+   "source": "@DISEASE_Arthritis_Rheumatoid",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 5,
+   "source": "@DISEASE_Carcinoma_Adenoid_Cystic",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 5,
+   "source": "@DISEASE_Fatty_Liver",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 5,
+   "source": "@DISEASE_Lymphoma_Large_B_Cell_Diffuse",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 5,
+   "source": "@DISEASE_Mitochondrial_Myopathy_with_a_Defect_in_Mitochondrial_Protein_Transport",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  }
+ ],
+ "hits_cap": 100,
+ "hits_total_before_cap": 1543,
+ "licence": "NCBI public domain; key-less, no payment; 3 req/s limit",
+ "note": "NO_MATCH_FOUND is an answer about this query on this date, never absence",
+ "request": {
+  "gene": "BNIP3"
+ },
+ "requests_sent": [
+  "https://www.ncbi.nlm.nih.gov/research/pubtator3-api/relations?e1=@GENE_BNIP3"
+ ],
+ "retrieved_at": "2026-10-23T17:09:15Z",
+ "source_version": "UNKNOWN",
+ "status": "MATCH_FOUND"
+}

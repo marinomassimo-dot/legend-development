@@ -1,0 +1,721 @@
+{
+ "adapter": "pubtator3",
+ "citation": "Wei C-H. et al. PubTator 3.0: an AI-powered literature resource for unlocking biomedical knowledge. Nucleic Acids Res 2024;52(W1):W540-W546. https://doi.org/10.1093/nar/gkae235",
+ "error": "",
+ "evidence_label": "NOT WWOX EVIDENCE",
+ "hits": [
+  {
+   "kind": "relation",
+   "publications": 38,
+   "source": "@GENE_CTNNB1",
+   "target": "@GENE_DVL2",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 17,
+   "source": "@DISEASE_Neoplasms",
+   "target": "@GENE_DVL2",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 11,
+   "source": "@DISEASE_Colorectal_Neoplasms",
+   "target": "@GENE_DVL2",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 11,
+   "source": "@GENE_DVL2",
+   "target": "@GENE_WNT3A",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 9,
+   "source": "@GENE_DVL2",
+   "target": "@GENE_WNT5A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 8,
+   "source": "@GENE_DVL2",
+   "target": "@GENE_AXIN1",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 7,
+   "source": "@DISEASE_Neural_Tube_Defects",
+   "target": "@GENE_DVL2",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 6,
+   "source": "@DISEASE_Carcinoma_Hepatocellular",
+   "target": "@GENE_DVL2",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 6,
+   "source": "@GENE_CTNNB1",
+   "target": "@GENE_DVL2",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 6,
+   "source": "@GENE_DVL2",
+   "target": "@GENE_WNT5A",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 5,
+   "source": "@DISEASE_Breast_Neoplasms",
+   "target": "@GENE_DVL2",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 5,
+   "source": "@GENE_DVL2",
+   "target": "@GENE_MAP1LC3A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 5,
+   "source": "@GENE_DVL2",
+   "target": "@GENE_VANGL2",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 5,
+   "source": "@GENE_DVL2",
+   "target": "@GENE_WNT3A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 5,
+   "source": "@GENE_CTNNB1",
+   "target": "@GENE_DVL2",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 4,
+   "source": "@DISEASE_Carcinoma_Non_Small_Cell_Lung",
+   "target": "@GENE_DVL2",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 4,
+   "source": "@DISEASE_Lung_Neoplasms",
+   "target": "@GENE_DVL2",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 4,
+   "source": "@DISEASE_Prostatic_Neoplasms",
+   "target": "@GENE_DVL2",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 4,
+   "source": "@DISEASE_Stomach_Neoplasms",
+   "target": "@GENE_DVL2",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 4,
+   "source": "@GENE_CFTR",
+   "target": "@GENE_DVL2",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 4,
+   "source": "@GENE_CSNK1E",
+   "target": "@GENE_DVL2",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 4,
+   "source": "@GENE_DVL2",
+   "target": "@GENE_JUN",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 4,
+   "source": "@GENE_DVL2",
+   "target": "@GENE_ROR2",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 4,
+   "source": "@CHEMICAL_Niclosamide",
+   "target": "@GENE_DVL2",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 3,
+   "source": "@DISEASE_Arthritis_Rheumatoid",
+   "target": "@GENE_DVL2",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 3,
+   "source": "@DISEASE_Carcinoma_Renal_Cell",
+   "target": "@GENE_DVL2",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 3,
+   "source": "@DISEASE_Cardiomegaly",
+   "target": "@GENE_DVL2",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 3,
+   "source": "@DISEASE_Glioma",
+   "target": "@GENE_DVL2",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 3,
+   "source": "@DISEASE_Hyperlipidemias",
+   "target": "@GENE_DVL2",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 3,
+   "source": "@DISEASE_Leukemia_Lymphocytic_Chronic_B_Cell",
+   "target": "@GENE_DVL2",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 3,
+   "source": "@DISEASE_Neoplasm_Metastasis",
+   "target": "@GENE_DVL2",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 3,
+   "source": "@DISEASE_Orofacial_Cleft_1",
+   "target": "@GENE_DVL2",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 3,
+   "source": "@DISEASE_Osteoarthritis",
+   "target": "@GENE_DVL2",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 3,
+   "source": "@DISEASE_Pancreatic_Neoplasms",
+   "target": "@GENE_DVL2",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 3,
+   "source": "@GENE_DVL2",
+   "target": "@GENE_DACT1",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 3,
+   "source": "@GENE_DVL2",
+   "target": "@GENE_FZD4",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 3,
+   "source": "@GENE_DVL2",
+   "target": "@GENE_NUP62",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 3,
+   "source": "@GENE_DVL2",
+   "target": "@GENE_PLK1",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 3,
+   "source": "@GENE_DVL2",
+   "target": "@GENE_ROR1",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 3,
+   "source": "@GENE_DVL2",
+   "target": "@GENE_SF3B1",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 3,
+   "source": "@GENE_DVL2",
+   "target": "@GENE_TFE3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 3,
+   "source": "@GENE_WNT2",
+   "target": "@GENE_DVL2",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 3,
+   "source": "@CHEMICAL_Quercetin",
+   "target": "@GENE_DVL2",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 3,
+   "source": "@GENE_DVL2",
+   "target": "@GENE_DACT1",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 3,
+   "source": "@GENE_DVL2",
+   "target": "@GENE_GSK3B",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 3,
+   "source": "@GENE_DVL2",
+   "target": "@GENE_HNF4A",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@CHEMICAL_6_methyladenine",
+   "target": "@GENE_DVL2",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@CHEMICAL_Reactive_Oxygen_Species",
+   "target": "@GENE_DVL2",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@DISEASE_Alzheimer_Disease",
+   "target": "@GENE_DVL2",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@DISEASE_Cleft_Palate",
+   "target": "@GENE_DVL2",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@DISEASE_Craniofacial_Abnormalities",
+   "target": "@GENE_DVL2",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@DISEASE_Depressive_Disorder",
+   "target": "@GENE_DVL2",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@DISEASE_Inflammation",
+   "target": "@GENE_DVL2",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@DISEASE_Liver_Cirrhosis",
+   "target": "@GENE_DVL2",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@DISEASE_Lymphatic_Metastasis",
+   "target": "@GENE_DVL2",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@DISEASE_Nasopharyngeal_Carcinoma",
+   "target": "@GENE_DVL2",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@DISEASE_Osteoporosis",
+   "target": "@GENE_DVL2",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@DISEASE_Prostatitis",
+   "target": "@GENE_DVL2",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@DISEASE_Robinow_Syndrome",
+   "target": "@GENE_DVL2",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@DISEASE_Spondylocostal_dysostosis_autosomal_recessive",
+   "target": "@GENE_DVL2",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@GENE_DVL2",
+   "target": "@GENE_APC",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@GENE_DVL2",
+   "target": "@GENE_ARRB1",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@GENE_DVL2",
+   "target": "@GENE_CCND1",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@GENE_DVL2",
+   "target": "@GENE_CTNNB1",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@GENE_DVL2",
+   "target": "@GENE_DVL3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@GENE_DVL2",
+   "target": "@GENE_ERBB4",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@GENE_DVL2",
+   "target": "@GENE_F2R",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@GENE_DVL2",
+   "target": "@GENE_LRP6",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@GENE_DVL2",
+   "target": "@GENE_NEDD4",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@GENE_DVL2",
+   "target": "@GENE_NEDD4L",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@GENE_DVL2",
+   "target": "@GENE_NXN",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@GENE_DVL2",
+   "target": "@GENE_RIPK4",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@GENE_DVL2",
+   "target": "@GENE_SNHG7",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@GENE_DVL2",
+   "target": "@GENE_SQSTM1",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@GENE_DVL2",
+   "target": "@GENE_TRIM14",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@GENE_DVL2",
+   "target": "@GENE_USP9X",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@GENE_DVL2",
+   "target": "@GENE_VANGL1",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@GENE_DVL2",
+   "target": "@GENE_WNT2",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@GENE_DVL2",
+   "target": "@GENE_WNT5B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@GENE_DVL2",
+   "target": "@GENE_WWOX",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@GENE_PWP1",
+   "target": "@GENE_DVL2",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@GENE_WWP1",
+   "target": "@GENE_DVL2",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@GENE_CTNNB1",
+   "target": "@GENE_DVL2",
+   "type": "interact"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@GENE_DVL2",
+   "target": "@GENE_GPSM1",
+   "type": "interact"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@GENE_DVL2",
+   "target": "@GENE_CCNG2",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@GENE_DVL2",
+   "target": "@GENE_SFRP1",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@GENE_DVL2",
+   "target": "@GENE_CDK14",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@GENE_DVL2",
+   "target": "@GENE_IRS1",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@GENE_DVL2",
+   "target": "@GENE_MMP2",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@GENE_DVL2",
+   "target": "@GENE_MMP9",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@GENE_DVL2",
+   "target": "@GENE_RAC1",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@GENE_DVL2",
+   "target": "@GENE_TNF",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@GENE_DVL2",
+   "target": "@GENE_TNFRSF11B",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@GENE_DVL2",
+   "target": "@GENE_TNFSF11",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_5_7_dihydroxy_6_methoxy_2_phenylchromen_4_one",
+   "target": "@GENE_DVL2",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_Caffeine",
+   "target": "@GENE_DVL2",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_Calcitriol",
+   "target": "@GENE_DVL2",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_Curcumin",
+   "target": "@GENE_DVL2",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_Dehydroepiandrosterone",
+   "target": "@GENE_DVL2",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_Hesperidin",
+   "target": "@GENE_DVL2",
+   "type": "associate"
+  }
+ ],
+ "hits_cap": 100,
+ "hits_total_before_cap": 497,
+ "licence": "NCBI public domain; key-less, no payment; 3 req/s limit",
+ "note": "NO_MATCH_FOUND is an answer about this query on this date, never absence",
+ "request": {
+  "gene": "DVL2"
+ },
+ "requests_sent": [
+  "https://www.ncbi.nlm.nih.gov/research/pubtator3-api/relations?e1=@GENE_DVL2"
+ ],
+ "retrieved_at": "2026-10-23T17:09:36Z",
+ "source_version": "UNKNOWN",
+ "status": "MATCH_FOUND"
+}

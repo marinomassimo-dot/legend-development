@@ -1,0 +1,721 @@
+{
+ "adapter": "pubtator3",
+ "citation": "Wei C-H. et al. PubTator 3.0: an AI-powered literature resource for unlocking biomedical knowledge. Nucleic Acids Res 2024;52(W1):W540-W546. https://doi.org/10.1093/nar/gkae235",
+ "error": "",
+ "evidence_label": "NOT WWOX EVIDENCE",
+ "hits": [
+  {
+   "kind": "relation",
+   "publications": 11,
+   "source": "@DISEASE_Inflammation",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 9,
+   "source": "@DISEASE_Neoplasms",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 5,
+   "source": "@DISEASE_Infections",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 4,
+   "source": "@DISEASE_Virus_Diseases",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 4,
+   "source": "@CHEMICAL_decamethrin",
+   "target": "@GENE_HSP70",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 4,
+   "source": "@DISEASE_Hypoxia",
+   "target": "@GENE_HSP70",
+   "type": "stimulate"
+  },
+  {
+   "kind": "relation",
+   "publications": 3,
+   "source": "@GENE_HSP70",
+   "target": "@GENE_TPR7",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 3,
+   "source": "@CHEMICAL_Hydrocortisone",
+   "target": "@GENE_HSP70",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 3,
+   "source": "@CHEMICAL_Cadmium_Chloride",
+   "target": "@GENE_HSP70",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 3,
+   "source": "@CHEMICAL_Cadmium",
+   "target": "@GENE_HSP70",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 3,
+   "source": "@CHEMICAL_Carbon_Dioxide",
+   "target": "@GENE_HSP70",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 3,
+   "source": "@CHEMICAL_Sodium_Chloride",
+   "target": "@GENE_HSP70",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 3,
+   "source": "@CHEMICAL_beta_Glucans",
+   "target": "@GENE_HSP70",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 3,
+   "source": "@CHEMICAL_beta_Naphthoflavone",
+   "target": "@GENE_HSP70",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@CHEMICAL_Glutathione",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@CHEMICAL_decamethrin",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@DISEASE_Acute_Kidney_Injury",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@DISEASE_Brain_Ischemia",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@DISEASE_Chemical_and_Drug_Induced_Liver_Injury",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@DISEASE_Fever",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@DISEASE_Necrosis",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@DISEASE_Osteosarcoma",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@DISEASE_Spinal_Cord_Injuries",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@DISEASE_Worster_Drought_syndrome",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@GENE_HSP70",
+   "target": "@GENE_CLA1",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@GENE_HSP70",
+   "target": "@GENE_J20",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@GENE_HSP70",
+   "target": "@GENE_ZTL",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@CHEMICAL_VER_155008",
+   "target": "@GENE_HSP70",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@CHEMICAL_Ammonia",
+   "target": "@GENE_HSP70",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@CHEMICAL_Chlorpyrifos",
+   "target": "@GENE_HSP70",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@CHEMICAL_Copper_Sulfate",
+   "target": "@GENE_HSP70",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@CHEMICAL_Copper",
+   "target": "@GENE_HSP70",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@CHEMICAL_Lead",
+   "target": "@GENE_HSP70",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@CHEMICAL_Mercury",
+   "target": "@GENE_HSP70",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@CHEMICAL_Salicylic_Acid",
+   "target": "@GENE_HSP70",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@CHEMICAL_arsenite",
+   "target": "@GENE_HSP70",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@CHEMICAL_cyhalothrin",
+   "target": "@GENE_HSP70",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@GENE_HSP70",
+   "target": "@GENE_TNF",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@DISEASE_Drug_Related_Side_Effects_and_Adverse_Reactions",
+   "target": "@GENE_HSP70",
+   "type": "stimulate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@DISEASE_Infections",
+   "target": "@GENE_HSP70",
+   "type": "stimulate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@DISEASE_Neoplasms",
+   "target": "@GENE_HSP70",
+   "type": "stimulate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_1_Deoxynojirimycin",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_2_C_methylerythritol_4_phosphate",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_Abscisic_Acid",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_Adenosine_Triphosphate",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_Cadmium",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_Carotenoids",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_Ceftriaxone",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_Copper",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_Cysteine",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_Histidine",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_Ifosfamide",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_Linseed_Oil",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_Melatonin",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_Nitric_Oxide",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_Nitrites",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_Piperonyl_Butoxide",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_Proline",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_Salts",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_Sodium",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_Starch",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_Steroids",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_Thallium",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_Tunicamycin",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_Tyrosine",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_Water",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_cyanoginosin_LR",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_cyhalothrin",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_ethiprole",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_fipronil",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_histidylleucine",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_jasmonic_acid",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_perfluorooctane_sulfonic_acid",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_polyglucosan",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_prostaglandin_A1",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Amyotrophic_Lateral_Sclerosis",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Arteritis",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Bloom_Syndrome",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Carcinoma_Renal_Cell",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Cold_Injury",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Corneal_Dystrophy_Band_Shaped",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Cryptorchidism",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Desmoplastic_Small_Round_Cell_Tumor",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Drug_Related_Side_Effects_and_Adverse_Reactions",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Enteritis",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Gastrointestinal_Diseases",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Growth_Disorders",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Hypersensitivity_Immediate",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Hypoxia",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Infertility",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Keratitis",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Kidney_Diseases",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Leishmaniasis_Cutaneous",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Leishmaniasis_Visceral",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Leishmaniasis",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Lupus_Erythematosus_Cutaneous",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Melanoma",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Microsporidiosis",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Myocardial_Stunning",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Otitis_Externa",
+   "target": "@GENE_HSP70",
+   "type": "associate"
+  }
+ ],
+ "hits_cap": 100,
+ "hits_total_before_cap": 265,
+ "licence": "NCBI public domain; key-less, no payment; 3 req/s limit",
+ "note": "NO_MATCH_FOUND is an answer about this query on this date, never absence",
+ "request": {
+  "gene": "HSP70"
+ },
+ "requests_sent": [
+  "https://www.ncbi.nlm.nih.gov/research/pubtator3-api/relations?e1=@GENE_HSP70"
+ ],
+ "retrieved_at": "2026-10-23T17:05:32Z",
+ "source_version": "UNKNOWN",
+ "status": "MATCH_FOUND"
+}

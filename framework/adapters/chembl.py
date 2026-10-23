@@ -8,6 +8,8 @@ not a score).
 """
 from __future__ import annotations
 
+from urllib.parse import quote
+
 from . import _http
 
 INFO = {
@@ -54,7 +56,7 @@ def query(request: dict, fetch=_http.get_json) -> dict:
     if status == 200 and isinstance(payload, dict):
         out["source_version"] = f"{payload.get('chembl_db_version')} {payload.get('chembl_release_date')}"
     if gene:
-        url = f"{BASE}/target/search.json?q={gene}&limit=20"
+        url = f"{BASE}/target/search.json?q={quote(gene)}&limit=20"
         out["requests_sent"].append(url)
         status, payload = fetch(url)
         if status != 200 or not isinstance(payload, dict):
@@ -66,7 +68,7 @@ def query(request: dict, fetch=_http.get_json) -> dict:
                                 "target_type": t.get("target_type")})
         out["status"] = "MATCH_FOUND" if out["hits"] else "NO_MATCH_FOUND"
         return out
-    url = f"{BASE}/molecule/search.json?q={drug}&limit=5"
+    url = f"{BASE}/molecule/search.json?q={quote(drug)}&limit=5"  # a name with spaces is a valid query
     out["requests_sent"].append(url)
     status, payload = fetch(url)
     if status != 200 or not isinstance(payload, dict):

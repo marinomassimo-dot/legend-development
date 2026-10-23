@@ -1,0 +1,114 @@
+{
+ "adapter": "openfda",
+ "citation": "Data provided by the U.S. Food and Drug Administration (openFDA), https://open.fda.gov — the credit line the terms page asks for",
+ "error": "",
+ "evidence_label": "NOT WWOX EVIDENCE",
+ "hits": [
+  {
+   "brand_name": [
+    "lithium carbonate"
+   ],
+   "effective_time": "20260427",
+   "generic_name": [
+    "LITHIUM CARBONATE"
+   ],
+   "kind": "label",
+   "sections": {
+    "contraindications": "4 CONTRAINDICATIONS Lithium is contraindicated in patients with known hypersensitivity to any inactive ingredient in the lithium carbonate capsule or lithium citrate products [see Adverse Reactions ( 6 )]. Known hypersensitivity to any inactive ingredient in the drug product ( 4 )",
+    "drug_interactions": "7 DRUG INTERACTIONS • Diuretics, NSAID, renin-angiotensin system antagonists, or metronidazole may increase lithium serum concentrations. Recommend frequent monitoring of serum lithium concentration and adjust dosage when necessary. ( 2.3 , 7.1 ) • Serotonergic Agents: Increased risk of serotonin syndrome when co-administered with lithium. ( 5.6 , 7.1 ) • Antipsychotics: There have been reports of neurologic adverse reactions in patients treated with lithium and an antipsychotic, ranging from extrapyramidal symptoms to neuroleptic malignant syndrome. ( 5.5 , 7.1 ) 7.1 Drugs Having Clinically Important Interactions with Lithium Table 4: Clinically Important Drug Interactions with Lithium Diuretics Clinical Impact: Diuretic-induced sodium loss may reduce lithium clearance and increase serum lithium concentrations . Intervention: More frequent monitoring of serum electrolyte and lithium concentrations. Reduce lithium dosage based on serum lithium concentration and clinical response [see Dosage and Administration ( 2.3 ), Warnings and Precautions ( 5.3 )]. Non-Steroidal Anti-inflammatory Drugs (NSAID) Clinical Impact: NSAID decrease renal blood flow, resulting in decreased renal clearance and increased serum lithium concentrations. Intervention: More frequent serum lithium concentration monitoring. Reduce lithium dosage based on serum lithium concentration and clinical response [see Dosage and Administration ( 2.3 )]. Renin-Angiotensin System Antagonists Clinical Impact: Concomitant use increase steady-state serum lithium concentrations. Intervention: More frequent monitoring of serum lithium concentration. Reduce lithium dosage based on serum lithium concentration and clinical response [see Dosage and Administration ( 2.3 )]. Serotonergic Drugs Clinical Impact: Concomitant use can precipitate serotonin syndrome. Intervention: Monitor patients for signs and symptoms of serotonin syndrome, particularly during lithium initiation. If serotonin syndrome occurs, consider dis",
+    "indications_and_usage": "1 INDICATIONS AND USAGE Lithium is a mood-stabilizing agent indicated as monotherapy for the treatment of bipolar I disorder: • Treatment of acute manic and mixed episodes in patients 7 years and older [see Clinical Studies ( 14 )] • Maintenance treatment in patients 7 years and older [see Clinical Studies ( 14 )] Lithium is a mood-stabilizing agent indicated as monotherapy for the treatment of bipolar I disorder: • Treatment of acute manic and mixed episodes in patients 7 years and older ( 1 ) • Maintenance treatment in patients 7 years and older ( 1 )",
+    "mechanism_of_action": "12.1 Mechanism of Action The mechanism of action of lithium as a mood stabilizing agent is unknown.",
+    "pediatric_use": "8.4 Pediatric Use The safety and effectiveness of lithium for monotherapy treatment of acute manic or mixed episodes of bipolar I disorder and maintenance monotherapy of bipolar I disorder in pediatric patients ages 7 to 17 years of age have been established in an acute-phase clinical trial of 8 weeks in duration followed by a 28-week randomized withdrawal phase [see Dosage and Administration (2.1), Adverse Reactions (6.1), Clinical Pharmacology (12.3), Clinical Studies (14)] . The safety and effectiveness of lithium has not been established in pediatric patients less than 7 years of age with bipolar I disorder."
+   },
+   "set_id": "01c4facd-ed79-4078-ba33-2044de372d0f"
+  },
+  {
+   "brand_name": [
+    "Lithium Sulphuratum"
+   ],
+   "effective_time": "20230817",
+   "generic_name": [
+    "LITHIUM SULPHURATUM"
+   ],
+   "kind": "label",
+   "sections": {
+    "indications_and_usage": "",
+    "warnings": ""
+   },
+   "set_id": "03280bb4-794d-57bb-e063-6394a90a854f"
+  },
+  {
+   "brand_name": [
+    "Lithium Iodatum"
+   ],
+   "effective_time": "20230818",
+   "generic_name": [
+    "LITHIUM IODATUM"
+   ],
+   "kind": "label",
+   "sections": {
+    "indications_and_usage": "",
+    "warnings": ""
+   },
+   "set_id": "03389426-36da-99ad-e063-6394a90a8132"
+  },
+  {
+   "caveat": "spontaneous reports; not a rate, not causal",
+   "kind": "faers_counts",
+   "reports_by_reaction": [
+    {
+     "count": 3657,
+     "term": "TOXICITY TO VARIOUS AGENTS"
+    },
+    {
+     "count": 3469,
+     "term": "DRUG INEFFECTIVE"
+    },
+    {
+     "count": 2753,
+     "term": "DRUG INTERACTION"
+    },
+    {
+     "count": 2735,
+     "term": "TREMOR"
+    },
+    {
+     "count": 2314,
+     "term": "NAUSEA"
+    },
+    {
+     "count": 2225,
+     "term": "OFF LABEL USE"
+    },
+    {
+     "count": 1992,
+     "term": "WEIGHT INCREASED"
+    },
+    {
+     "count": 1847,
+     "term": "FATIGUE"
+    },
+    {
+     "count": 1830,
+     "term": "VOMITING"
+    },
+    {
+     "count": 1797,
+     "term": "DEPRESSION"
+    }
+   ]
+  }
+ ],
+ "licence": "US public domain (CC0); key-less, no payment (optional key not used)",
+ "note": "NO_MATCH_FOUND is an answer about this query on this date, never absence; FAERS counts are spontaneous reports, never a rate; openFDA: do not rely on it for medical care decisions",
+ "request": {
+  "drug": "Lithium"
+ },
+ "requests_sent": [
+  "https://api.fda.gov/drug/label.json?{'search': 'openfda.generic_name:\"Lithium\"', 'limit': 3}",
+  "https://api.fda.gov/drug/event.json?{'search': 'patient.drug.medicinalproduct:\"Lithium\"', 'count': 'patient.reaction.reactionmeddrapt.exact', 'limit': 10}"
+ ],
+ "retrieved_at": "2026-10-23T17:09:42Z",
+ "source_version": "label last_updated 2026-10-23",
+ "status": "MATCH_FOUND"
+}

@@ -1,0 +1,61 @@
+{
+ "adapter": "pubtator3",
+ "citation": "Wei C-H. et al. PubTator 3.0: an AI-powered literature resource for unlocking biomedical knowledge. Nucleic Acids Res 2024;52(W1):W540-W546. https://doi.org/10.1093/nar/gkae235",
+ "error": "",
+ "evidence_label": "NOT WWOX EVIDENCE",
+ "hits": [
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@CHEMICAL_Reactive_Oxygen_Species",
+   "target": "@GENE_MOL",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@GENE_DUOX",
+   "target": "@GENE_MOL",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@GENE_NUMB",
+   "target": "@GENE_MOL",
+   "type": "interact"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@GENE_MOL",
+   "target": "@GENE_BSK",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@GENE_MOL",
+   "target": "@GENE_MACON1",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@GENE_NUMB",
+   "target": "@GENE_MOL",
+   "type": "positive_correlate"
+  }
+ ],
+ "licence": "NCBI public domain; key-less, no payment; 3 req/s limit",
+ "note": "NO_MATCH_FOUND is an answer about this query on this date, never absence",
+ "request": {
+  "gene": "MOL"
+ },
+ "requests_sent": [
+  "https://www.ncbi.nlm.nih.gov/research/pubtator3-api/relations?e1=@GENE_MOL"
+ ],
+ "retrieved_at": "2026-10-23T17:08:18Z",
+ "source_version": "UNKNOWN",
+ "status": "MATCH_FOUND"
+}

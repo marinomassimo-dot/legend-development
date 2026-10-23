@@ -1,0 +1,36 @@
+{
+ "adapter": "chembl",
+ "citation": "Zdrazil B. et al. The ChEMBL Database in 2023: a drug discovery platform spanning multiple bioactivity data types and time periods. Nucleic Acids Res 2024;52(D1):D1180-D1192. https://doi.org/10.1093/nar/gkad1004; web services: Davies M. et al. 2015 (Nucleic Acids Res 43:W612)",
+ "error": "",
+ "evidence_label": "NOT WWOX EVIDENCE",
+ "hits": [
+  {
+   "action_type": "ANTAGONIST",
+   "kind": "mechanism",
+   "max_phase": "4.0",
+   "mechanism_of_action": "Muscle-type nicotinic acetylcholine receptor antagonist",
+   "molecule_chembl_id": "CHEMBL1200527",
+   "pref_name": "ATRACURIUM BESYLATE",
+   "references": [
+    "DailyMed:archiveid=85008",
+    "PubMed:11379686",
+    "PubMed:16931985",
+    "PubMed:19417616"
+   ],
+   "target_chembl_id": "CHEMBL2362997"
+  }
+ ],
+ "licence": "CC BY-SA 3.0; key-less, no payment",
+ "note": "NO_MATCH_FOUND is an answer about this query on this date, never absence",
+ "request": {
+  "drug": "Pannexin-1 blockade"
+ },
+ "requests_sent": [
+  "https://www.ebi.ac.uk/chembl/api/data/status.json",
+  "https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?q=Pannexin-1%20blockade&limit=5",
+  "https://www.ebi.ac.uk/chembl/api/data/mechanism.json?molecule_chembl_id=CHEMBL1200527&limit=20"
+ ],
+ "retrieved_at": "2026-10-23T17:06:58Z",
+ "source_version": "ChEMBL_37 2026-05-01",
+ "status": "MATCH_FOUND"
+}

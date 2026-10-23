@@ -1,0 +1,721 @@
+{
+ "adapter": "pubtator3",
+ "citation": "Wei C-H. et al. PubTator 3.0: an AI-powered literature resource for unlocking biomedical knowledge. Nucleic Acids Res 2024;52(W1):W540-W546. https://doi.org/10.1093/nar/gkae235",
+ "error": "",
+ "evidence_label": "NOT WWOX EVIDENCE",
+ "hits": [
+  {
+   "kind": "relation",
+   "publications": 5707,
+   "source": "@DISEASE_Hypoxia",
+   "target": "@GENE_HIF1A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 3676,
+   "source": "@DISEASE_Neoplasms",
+   "target": "@GENE_HIF1A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2037,
+   "source": "@DISEASE_Hypoxia_Brain",
+   "target": "@GENE_HIF1A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1841,
+   "source": "@DISEASE_Hypoxia",
+   "target": "@GENE_HIF1A",
+   "type": "stimulate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1346,
+   "source": "@GENE_HIF1A",
+   "target": "@GENE_VEGFA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1022,
+   "source": "@DISEASE_Inflammation",
+   "target": "@GENE_HIF1A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 851,
+   "source": "@CHEMICAL_Oxygen",
+   "target": "@GENE_HIF1A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 716,
+   "source": "@DISEASE_Neoplasm_Metastasis",
+   "target": "@GENE_HIF1A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 639,
+   "source": "@GENE_HIF1A",
+   "target": "@GENE_VEGFA",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 632,
+   "source": "@DISEASE_Breast_Neoplasms",
+   "target": "@GENE_HIF1A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 553,
+   "source": "@DISEASE_Carcinoma_Hepatocellular",
+   "target": "@GENE_HIF1A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 495,
+   "source": "@DISEASE_Hypoxia_Brain",
+   "target": "@GENE_HIF1A",
+   "type": "stimulate"
+  },
+  {
+   "kind": "relation",
+   "publications": 494,
+   "source": "@GENE_AKT1",
+   "target": "@GENE_HIF1A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 442,
+   "source": "@DISEASE_Colorectal_Neoplasms",
+   "target": "@GENE_HIF1A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 379,
+   "source": "@CHEMICAL_Glucose",
+   "target": "@GENE_HIF1A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 371,
+   "source": "@CHEMICAL_cobaltous_chloride",
+   "target": "@GENE_HIF1A",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 365,
+   "source": "@GENE_HIF1A",
+   "target": "@GENE_VHL",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 323,
+   "source": "@CHEMICAL_Reactive_Oxygen_Species",
+   "target": "@GENE_HIF1A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 297,
+   "source": "@DISEASE_Carcinoma_Renal_Cell",
+   "target": "@GENE_HIF1A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 263,
+   "source": "@DISEASE_Carcinogenesis",
+   "target": "@GENE_HIF1A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 262,
+   "source": "@DISEASE_Prostatic_Neoplasms",
+   "target": "@GENE_HIF1A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 256,
+   "source": "@DISEASE_Pancreatic_Neoplasms",
+   "target": "@GENE_HIF1A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 256,
+   "source": "@DISEASE_Stomach_Neoplasms",
+   "target": "@GENE_HIF1A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 237,
+   "source": "@DISEASE_Squamous_Cell_Carcinoma_of_Head_and_Neck",
+   "target": "@GENE_HIF1A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 231,
+   "source": "@GENE_MTOR",
+   "target": "@GENE_HIF1A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 227,
+   "source": "@DISEASE_Ischemia",
+   "target": "@GENE_HIF1A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 223,
+   "source": "@DISEASE_Glioblastoma",
+   "target": "@GENE_HIF1A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 222,
+   "source": "@DISEASE_Carcinoma_Non_Small_Cell_Lung",
+   "target": "@GENE_HIF1A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 219,
+   "source": "@DISEASE_Fibrosis",
+   "target": "@GENE_HIF1A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 196,
+   "source": "@DISEASE_Brain_Ischemia",
+   "target": "@GENE_HIF1A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 195,
+   "source": "@DISEASE_Glioma",
+   "target": "@GENE_HIF1A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 192,
+   "source": "@GENE_EPO",
+   "target": "@GENE_HIF1A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 186,
+   "source": "@DISEASE_Diabetes_Mellitus",
+   "target": "@GENE_HIF1A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 183,
+   "source": "@DISEASE_Lung_Neoplasms",
+   "target": "@GENE_HIF1A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 180,
+   "source": "@CHEMICAL_2_Methoxyestradiol",
+   "target": "@GENE_HIF1A",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 178,
+   "source": "@CHEMICAL_Deferoxamine",
+   "target": "@GENE_HIF1A",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 175,
+   "source": "@GENE_HIF1A",
+   "target": "@GENE_EGLN1",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 174,
+   "source": "@CHEMICAL_Oxygen",
+   "target": "@GENE_HIF1A",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 168,
+   "source": "@DISEASE_Ovarian_Neoplasms",
+   "target": "@GENE_HIF1A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 168,
+   "source": "@GENE_HIF1A",
+   "target": "@GENE_CSE",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 159,
+   "source": "@DISEASE_Reperfusion_Injury",
+   "target": "@GENE_HIF1A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 159,
+   "source": "@GENE_HIF1A",
+   "target": "@GENE_ARNT",
+   "type": "interact"
+  },
+  {
+   "kind": "relation",
+   "publications": 158,
+   "source": "@GENE_HIF1A",
+   "target": "@GENE_NFKB1",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 151,
+   "source": "@CHEMICAL_Lactic_Acid",
+   "target": "@GENE_HIF1A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 149,
+   "source": "@CHEMICAL_cobaltous_chloride",
+   "target": "@GENE_HIF1A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 149,
+   "source": "@GENE_HIF1A",
+   "target": "@GENE_MAPK1",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 146,
+   "source": "@GENE_EP300",
+   "target": "@GENE_HIF1A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 146,
+   "source": "@GENE_HIF1A",
+   "target": "@GENE_STAT3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 143,
+   "source": "@CHEMICAL_3_(5'_hydroxymethyl_2'_furyl)_1_benzylindazole",
+   "target": "@GENE_HIF1A",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 137,
+   "source": "@CHEMICAL_Reactive_Oxygen_Species",
+   "target": "@GENE_HIF1A",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 133,
+   "source": "@GENE_HIF1A",
+   "target": "@GENE_CA9",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 130,
+   "source": "@CHEMICAL_Iron",
+   "target": "@GENE_HIF1A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 128,
+   "source": "@CHEMICAL_Oxygen",
+   "target": "@GENE_HIF1A",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 126,
+   "source": "@CHEMICAL_2_amino_3_(4'_N_N_bis(2_chloroethyl)amino)phenylpropionic_acid_N_oxide",
+   "target": "@GENE_HIF1A",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 124,
+   "source": "@DISEASE_Uterine_Cervical_Neoplasms",
+   "target": "@GENE_HIF1A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 123,
+   "source": "@DISEASE_Lymphatic_Metastasis",
+   "target": "@GENE_HIF1A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 123,
+   "source": "@GENE_HIF1A",
+   "target": "@GENE_TP53",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 122,
+   "source": "@DISEASE_Melanoma",
+   "target": "@GENE_HIF1A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 116,
+   "source": "@CHEMICAL_Lipids",
+   "target": "@GENE_HIF1A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 113,
+   "source": "@DISEASE_Neoplasms",
+   "target": "@GENE_HIF1A",
+   "type": "stimulate"
+  },
+  {
+   "kind": "relation",
+   "publications": 112,
+   "source": "@CHEMICAL_Lipopolysaccharides",
+   "target": "@GENE_HIF1A",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 107,
+   "source": "@DISEASE_Arthritis_Rheumatoid",
+   "target": "@GENE_HIF1A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 104,
+   "source": "@DISEASE_Myocardial_Ischemia",
+   "target": "@GENE_HIF1A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 103,
+   "source": "@GENE_HIF1A",
+   "target": "@GENE_HSP90AA1",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 100,
+   "source": "@DISEASE_Hypertension_Pulmonary",
+   "target": "@GENE_HIF1A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 100,
+   "source": "@CHEMICAL_Sirolimus",
+   "target": "@GENE_HIF1A",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 99,
+   "source": "@GENE_AKT1",
+   "target": "@GENE_HIF1A",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 96,
+   "source": "@GENE_HIF1A",
+   "target": "@GENE_BNIP3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 94,
+   "source": "@GENE_HIF1A",
+   "target": "@GENE_PIK3R1",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 91,
+   "source": "@GENE_HIF1A",
+   "target": "@GENE_PKM",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 90,
+   "source": "@DISEASE_Diabetic_Nephropathies",
+   "target": "@GENE_HIF1A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 90,
+   "source": "@GENE_HIF1A",
+   "target": "@GENE_TGFB1",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 89,
+   "source": "@DISEASE_Kidney_Diseases",
+   "target": "@GENE_HIF1A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 87,
+   "source": "@DISEASE_Mitochondrial_Diseases",
+   "target": "@GENE_HIF1A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 87,
+   "source": "@DISEASE_Triple_Negative_Breast_Neoplasms",
+   "target": "@GENE_HIF1A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 86,
+   "source": "@CHEMICAL_2_(4_morpholinyl)_8_phenyl_4H_1_benzopyran_4_one",
+   "target": "@GENE_HIF1A",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 85,
+   "source": "@CHEMICAL_oxalylglycine",
+   "target": "@GENE_HIF1A",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 84,
+   "source": "@DISEASE_Drug_Related_Side_Effects_and_Adverse_Reactions",
+   "target": "@GENE_HIF1A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 84,
+   "source": "@DISEASE_Osteosarcoma",
+   "target": "@GENE_HIF1A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 84,
+   "source": "@GENE_HIF1A",
+   "target": "@GENE_MTOR",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 84,
+   "source": "@GENE_HIF1A",
+   "target": "@GENE_TNF",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 83,
+   "source": "@CHEMICAL_Glucose",
+   "target": "@GENE_HIF1A",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 82,
+   "source": "@DISEASE_Obesity",
+   "target": "@GENE_HIF1A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 81,
+   "source": "@CHEMICAL_Metformin",
+   "target": "@GENE_HIF1A",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 80,
+   "source": "@DISEASE_Myocardial_Infarction",
+   "target": "@GENE_HIF1A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 79,
+   "source": "@CHEMICAL_Succinic_Acid",
+   "target": "@GENE_HIF1A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 78,
+   "source": "@DISEASE_Pre_Eclampsia",
+   "target": "@GENE_HIF1A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 78,
+   "source": "@GENE_HIF1A",
+   "target": "@GENE_CSE",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 77,
+   "source": "@CHEMICAL_Lipopolysaccharides",
+   "target": "@GENE_HIF1A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 77,
+   "source": "@GENE_HIF1A",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 77,
+   "source": "@GENE_HIF1A",
+   "target": "@GENE_RBMS1",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 75,
+   "source": "@GENE_CREBBP",
+   "target": "@GENE_HIF1A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 75,
+   "source": "@GENE_HIF1A",
+   "target": "@GENE_MAPK3",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 74,
+   "source": "@DISEASE_Heart_Diseases",
+   "target": "@GENE_HIF1A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 74,
+   "source": "@GENE_HIF1A",
+   "target": "@GENE_HK2",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 74,
+   "source": "@CHEMICAL_Resveratrol",
+   "target": "@GENE_HIF1A",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 74,
+   "source": "@GENE_EPO",
+   "target": "@GENE_HIF1A",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 73,
+   "source": "@GENE_HIF1A",
+   "target": "@GENE_IL1B",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 71,
+   "source": "@DISEASE_Carcinoma_Pancreatic_Ductal",
+   "target": "@GENE_HIF1A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 71,
+   "source": "@DISEASE_von_Hippel_Lindau_Disease",
+   "target": "@GENE_HIF1A",
+   "type": "associate"
+  }
+ ],
+ "hits_cap": 100,
+ "hits_total_before_cap": 12499,
+ "licence": "NCBI public domain; key-less, no payment; 3 req/s limit",
+ "note": "NO_MATCH_FOUND is an answer about this query on this date, never absence",
+ "request": {
+  "gene": "HIF1A"
+ },
+ "requests_sent": [
+  "https://www.ncbi.nlm.nih.gov/research/pubtator3-api/relations?e1=@GENE_HIF1A"
+ ],
+ "retrieved_at": "2026-10-23T17:07:50Z",
+ "source_version": "UNKNOWN",
+ "status": "MATCH_FOUND"
+}

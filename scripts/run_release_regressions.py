@@ -142,6 +142,10 @@ PRIORITY_TESTS = (
     # deleting each adapter in turn, three states that stay three facts, and no score key in any
     # output. Offline through canned responses; the live measurement is recorded by hand.
     "framework/scripts/test_repurposing_adapter.py",
+    # The join: every query names its origin record, a locator count is len(entries), the
+    # evidence table keeps NO_RECEIPT / UNAUDITED / NO_MANIFEST apart, cards are bridge-built
+    # hypotheses with an abstention, the run is byte-deterministic and reports its own diff.
+    "framework/scripts/test_repurposing_join.py",
     "framework/scripts/test_phase_handoff.py",
     # Record-level access to the two large registries, with the Aqeilan adverse cases: identifier
     # ambiguity, identity versus incidental mention, a caveat mid-record, expansion by hop, and
