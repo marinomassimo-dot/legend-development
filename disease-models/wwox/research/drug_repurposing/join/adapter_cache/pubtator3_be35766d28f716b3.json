@@ -1,0 +1,264 @@
+{
+ "adapter": "pubtator3",
+ "citation": "Wei C-H. et al. PubTator 3.0: an AI-powered literature resource for unlocking biomedical knowledge. Nucleic Acids Res 2024;52(W1):W540-W546. https://doi.org/10.1093/nar/gkae235",
+ "error": "",
+ "evidence_label": "NOT WWOX EVIDENCE",
+ "hits": [
+  {
+   "kind": "relation",
+   "publications": 4,
+   "source": "@GENE_GCM",
+   "target": "@GENE_REPO",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 3,
+   "source": "@GENE_GCM",
+   "target": "@GENE_REPO",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_Tyramine",
+   "target": "@GENE_REPO",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_601308",
+   "target": "@GENE_REPO",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Chromosome_15q_trisomy",
+   "target": "@GENE_REPO",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Inflammation",
+   "target": "@GENE_REPO",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@GENE_DRPR",
+   "target": "@GENE_REPO",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@GENE_FZR",
+   "target": "@GENE_REPO",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@GENE_GLCAT_P",
+   "target": "@GENE_REPO",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@GENE_GLIDE",
+   "target": "@GENE_REPO",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@GENE_JING",
+   "target": "@GENE_REPO",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@GENE_KLG",
+   "target": "@GENE_REPO",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@GENE_LGS",
+   "target": "@GENE_REPO",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@GENE_LIG",
+   "target": "@GENE_REPO",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@GENE_NIMC4",
+   "target": "@GENE_REPO",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@GENE_TAP",
+   "target": "@GENE_REPO",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@GENE_UBE3A",
+   "target": "@GENE_REPO",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@GENE_VDUP1",
+   "target": "@GENE_REPO",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Neurologic_Manifestations",
+   "target": "@GENE_REPO",
+   "type": "inhibit"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Seizures",
+   "target": "@GENE_REPO",
+   "type": "inhibit"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_polyglutamine",
+   "target": "@GENE_REPO",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@GENE_CAS",
+   "target": "@GENE_REPO",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@GENE_DR",
+   "target": "@GENE_REPO",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@GENE_SPI",
+   "target": "@GENE_REPO",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@GENE_VND",
+   "target": "@GENE_REPO",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_Glutamic_Acid",
+   "target": "@GENE_REPO",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_Glutamine",
+   "target": "@GENE_REPO",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_gamma_Aminobutyric_Acid",
+   "target": "@GENE_REPO",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@GENE_DPP",
+   "target": "@GENE_REPO",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@GENE_EAAT1",
+   "target": "@GENE_REPO",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@GENE_EGFR",
+   "target": "@GENE_REPO",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@GENE_GSTS1",
+   "target": "@GENE_REPO",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@GENE_IND",
+   "target": "@GENE_REPO",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@GENE_KLG",
+   "target": "@GENE_REPO",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@GENE_REPO",
+   "target": "@GENE_SOD1",
+   "type": "positive_correlate"
+  }
+ ],
+ "licence": "NCBI public domain; key-less, no payment; 3 req/s limit",
+ "note": "NO_MATCH_FOUND is an answer about this query on this date, never absence",
+ "request": {
+  "gene": "REPO"
+ },
+ "requests_sent": [
+  "https://www.ncbi.nlm.nih.gov/research/pubtator3-api/relations?e1=@GENE_REPO"
+ ],
+ "retrieved_at": "2026-10-23T17:06:51Z",
+ "source_version": "UNKNOWN",
+ "status": "MATCH_FOUND"
+}

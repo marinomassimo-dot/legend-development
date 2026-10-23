@@ -2,7 +2,7 @@
  {
   "dependence": "NO_RECEIPTED_EVIDENCE",
   "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
-  "external_hits": 0,
+  "external_hits": 2,
   "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
   "query_id": "Q-N-01",
   "would_move": "N-01 (disease-models/wwox/analysis/mechanism_intervention_map.md:630)"
@@ -10,7 +10,7 @@
  {
   "dependence": "NO_RECEIPTED_EVIDENCE",
   "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
-  "external_hits": 0,
+  "external_hits": 2,
   "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
   "query_id": "Q-N-02",
   "would_move": "N-02 (disease-models/wwox/analysis/mechanism_intervention_map.md:641)"
@@ -18,7 +18,7 @@
  {
   "dependence": "NO_RECEIPTED_EVIDENCE",
   "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
-  "external_hits": 0,
+  "external_hits": 1,
   "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
   "query_id": "Q-N-03",
   "would_move": "N-03 (disease-models/wwox/analysis/mechanism_intervention_map.md:649)"
@@ -34,7 +34,7 @@
  {
   "dependence": "NO_RECEIPTED_EVIDENCE",
   "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
-  "external_hits": 0,
+  "external_hits": 1,
   "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
   "query_id": "Q-N-05",
   "would_move": "N-05 (disease-models/wwox/analysis/mechanism_intervention_map.md:666)"
@@ -42,7 +42,7 @@
  {
   "dependence": "NO_RECEIPTED_EVIDENCE",
   "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
-  "external_hits": 0,
+  "external_hits": 1,
   "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
   "query_id": "Q-N-06",
   "would_move": "N-06 (disease-models/wwox/analysis/mechanism_intervention_map.md:679)"
@@ -66,7 +66,7 @@
  {
   "dependence": "NO_RECEIPTED_EVIDENCE",
   "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
-  "external_hits": 0,
+  "external_hits": 1,
   "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
   "query_id": "Q-N-09",
   "would_move": "N-09 (disease-models/wwox/analysis/mechanism_intervention_map.md:703)"
@@ -82,7 +82,7 @@
  {
   "dependence": "NO_RECEIPTED_EVIDENCE",
   "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
-  "external_hits": 0,
+  "external_hits": 1,
   "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
   "query_id": "Q-N-11",
   "would_move": "N-11 (disease-models/wwox/analysis/mechanism_intervention_map.md:720)"
@@ -90,7 +90,7 @@
  {
   "dependence": "NO_RECEIPTED_EVIDENCE",
   "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
-  "external_hits": 0,
+  "external_hits": 3,
   "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
   "query_id": "Q-N-12",
   "would_move": "N-12 (disease-models/wwox/analysis/mechanism_intervention_map.md:726)"
@@ -106,7 +106,7 @@
  {
   "dependence": "NO_RECEIPTED_EVIDENCE",
   "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
-  "external_hits": 0,
+  "external_hits": 1,
   "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
   "query_id": "Q-N-14",
   "would_move": "N-14 (disease-models/wwox/analysis/mechanism_intervention_map.md:744)"
@@ -120,49 +120,49 @@
   "would_move": "N-15 (disease-models/wwox/analysis/mechanism_intervention_map.md:754)"
  },
  {
-  "dependence": "ONE_PAPER (34634460, depth NO_RECEIPT, 26 locators, audit UNAUDITED)",
+  "dependence": "ONE_PAPER (34634460, depth complete_fulltext_read, 26 locators, audit UNAUDITED)",
   "experiment_sketch": "replicate the one measurement this query stands on, changing the laboratory or the model but not the endpoint",
-  "external_hits": 0,
+  "external_hits": 2,
   "measurement": "an independent measurement of the same endpoint in a second system, or the same system from a second laboratory: the query rests on one reading",
   "query_id": "Q-N-16",
   "would_move": "N-16 (disease-models/wwox/analysis/mechanism_intervention_map.md:769)"
  },
  {
-  "dependence": "2_PAPERS_NONE_READ_COMPLETE",
-  "experiment_sketch": "no laboratory work: the next informative act is a reading",
-  "external_hits": 0,
-  "measurement": "a complete full-text read of the strongest of these papers, with its receipt",
+  "dependence": "1_UNAUDITED_CONTRADICTIONS",
+  "experiment_sketch": "legend-locator-audit over the declared triples",
+  "external_hits": 1,
+  "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
   "query_id": "Q-N-17",
   "would_move": "N-17 (disease-models/wwox/analysis/mechanism_intervention_map.md:775)"
  },
  {
-  "dependence": "ONE_PAPER (42128308, depth NO_RECEIPT, 25 locators, audit UNAUDITED)",
+  "dependence": "ONE_PAPER (42128308, depth complete_fulltext_read, 25 locators, audit UNAUDITED)",
   "experiment_sketch": "replicate the one measurement this query stands on, changing the laboratory or the model but not the endpoint",
-  "external_hits": 0,
+  "external_hits": 1,
   "measurement": "an independent measurement of the same endpoint in a second system, or the same system from a second laboratory: the query rests on one reading",
   "query_id": "Q-R-01",
   "would_move": "R-01 (disease-models/wwox/analysis/mechanism_intervention_map.md:403)"
  },
  {
-  "dependence": "NO_RECEIPTED_EVIDENCE",
-  "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
-  "external_hits": 0,
-  "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
+  "dependence": "5_UNAUDITED_CONTRADICTIONS",
+  "experiment_sketch": "legend-locator-audit over the declared triples",
+  "external_hits": 2,
+  "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
   "query_id": "Q-R-02",
   "would_move": "R-02 (disease-models/wwox/analysis/mechanism_intervention_map.md:427)"
  },
  {
-  "dependence": "NO_RECEIPTED_EVIDENCE",
-  "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
-  "external_hits": 0,
-  "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
+  "dependence": "ONE_PAPER (38203337, depth complete_fulltext_read, 30 locators, audit UNAUDITED)",
+  "experiment_sketch": "replicate the one measurement this query stands on, changing the laboratory or the model but not the endpoint",
+  "external_hits": 3,
+  "measurement": "an independent measurement of the same endpoint in a second system, or the same system from a second laboratory: the query rests on one reading",
   "query_id": "Q-R-03",
   "would_move": "R-03 (disease-models/wwox/analysis/mechanism_intervention_map.md:452)"
  },
  {
   "dependence": "NO_RECEIPTED_EVIDENCE",
   "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
-  "external_hits": 0,
+  "external_hits": 3,
   "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
   "query_id": "Q-R-04",
   "would_move": "R-04 (disease-models/wwox/analysis/mechanism_intervention_map.md:476)"
@@ -178,7 +178,7 @@
  {
   "dependence": "NO_RECEIPTED_EVIDENCE",
   "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
-  "external_hits": 0,
+  "external_hits": 1,
   "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
   "query_id": "Q-R-06",
   "would_move": "R-06 (disease-models/wwox/analysis/mechanism_intervention_map.md:526)"
@@ -202,7 +202,7 @@
  {
   "dependence": "NO_RECEIPTED_EVIDENCE",
   "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
-  "external_hits": 0,
+  "external_hits": 3,
   "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
   "query_id": "Q-R-09",
   "would_move": "R-09 (disease-models/wwox/analysis/mechanism_intervention_map.md:600)"

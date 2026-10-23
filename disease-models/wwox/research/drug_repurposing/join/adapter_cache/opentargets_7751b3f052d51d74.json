@@ -1,0 +1,129 @@
+{
+ "adapter": "opentargets",
+ "citation": "Buniello A. et al. Open Targets Platform: facilitating therapeutic hypotheses building in drug discovery. Nucleic Acids Research 2025;53(D1):D1467-D1475. https://doi.org/10.1093/nar/gkae1128 (the page asks: 'If you use our code and/or our data, please cite our latest publication')",
+ "error": "",
+ "evidence_label": "NOT WWOX EVIDENCE",
+ "hits": [
+  {
+   "disease_id": "MONDO_0013687",
+   "disease_name": "autosomal recessive spinocerebellar ataxia 12",
+   "evidence_datatypes": [
+    "literature",
+    "animal_model",
+    "genetic_association",
+    "genetic_literature"
+   ],
+   "kind": "associated_disease"
+  },
+  {
+   "disease_id": "MONDO_0014533",
+   "disease_name": "developmental and epileptic encephalopathy, 28",
+   "evidence_datatypes": [
+    "literature",
+    "animal_model",
+    "genetic_association",
+    "genetic_literature"
+   ],
+   "kind": "associated_disease"
+  },
+  {
+   "disease_id": "MONDO_0018614",
+   "disease_name": "undetermined early-onset epileptic encephalopathy",
+   "evidence_datatypes": [
+    "literature",
+    "animal_model",
+    "genetic_association",
+    "genetic_literature"
+   ],
+   "kind": "associated_disease"
+  },
+  {
+   "disease_id": "MONDO_0010632",
+   "disease_name": "developmental and epileptic encephalopathy, 1",
+   "evidence_datatypes": [
+    "animal_model",
+    "genetic_association"
+   ],
+   "kind": "associated_disease"
+  },
+  {
+   "disease_id": "MONDO_0007576",
+   "disease_name": "esophageal cancer",
+   "evidence_datatypes": [
+    "literature",
+    "genetic_association",
+    "genetic_literature"
+   ],
+   "kind": "associated_disease"
+  },
+  {
+   "disease_id": "MONDO_0017856",
+   "disease_name": "X-linked spasticity-intellectual disability-epilepsy syndrome",
+   "evidence_datatypes": [
+    "genetic_association"
+   ],
+   "kind": "associated_disease"
+  },
+  {
+   "disease_id": "MONDO_0100062",
+   "disease_name": "genetic developmental and epileptic encephalopathy",
+   "evidence_datatypes": [
+    "literature",
+    "animal_model",
+    "genetic_literature"
+   ],
+   "kind": "associated_disease"
+  },
+  {
+   "disease_id": "MONDO_0007295",
+   "disease_name": "self-limited epilepsy with centrotemporal spikes",
+   "evidence_datatypes": [
+    "genetic_association"
+   ],
+   "kind": "associated_disease"
+  },
+  {
+   "disease_id": "EFO_0004329",
+   "disease_name": "alcohol drinking",
+   "evidence_datatypes": [
+    "genetic_association"
+   ],
+   "kind": "associated_disease"
+  },
+  {
+   "disease_id": "MONDO_0005580",
+   "disease_name": "esophageal squamous cell carcinoma",
+   "evidence_datatypes": [
+    "literature",
+    "genetic_association",
+    "somatic_mutation"
+   ],
+   "kind": "associated_disease"
+  },
+  {
+   "associated_diseases_total": 2012,
+   "drug_and_clinical_candidates": 0,
+   "kind": "target_summary",
+   "symbol": "WWOX",
+   "target_id": "ENSG00000186153",
+   "tractability_true": [
+    "AB:GO CC high conf",
+    "PR:UniProt Ubiquitination",
+    "PR:Database Ubiquitination",
+    "PR:Half-life Data"
+   ]
+  }
+ ],
+ "licence": "data CC0; API key-less, no payment",
+ "note": "NO_MATCH_FOUND is an answer about this query on this date, never absence",
+ "request": {
+  "ensembl_id": "ENSG00000186153",
+  "size": 10
+ },
+ "requests_sent": [
+  "https://api.platform.opentargets.org/api/v4/graphql"
+ ],
+ "retrieved_at": "2026-10-23T17:07:55Z",
+ "source_version": "api 26.9.0 data 26.09",
+ "status": "MATCH_FOUND"
+}

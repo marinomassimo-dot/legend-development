@@ -1,0 +1,721 @@
+{
+ "adapter": "pubtator3",
+ "citation": "Wei C-H. et al. PubTator 3.0: an AI-powered literature resource for unlocking biomedical knowledge. Nucleic Acids Res 2024;52(W1):W540-W546. https://doi.org/10.1093/nar/gkae235",
+ "error": "",
+ "evidence_label": "NOT WWOX EVIDENCE",
+ "hits": [
+  {
+   "kind": "relation",
+   "publications": 1457,
+   "source": "@GENE_CTNNB1",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1328,
+   "source": "@GENE_AKT1",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 815,
+   "source": "@DISEASE_Alzheimer_Disease",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 548,
+   "source": "@CHEMICAL_Lithium_Chloride",
+   "target": "@GENE_GSK3B",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 537,
+   "source": "@DISEASE_Neoplasms",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 420,
+   "source": "@GENE_GSK3B",
+   "target": "@GENE_MAPT",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 404,
+   "source": "@DISEASE_Inflammation",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 395,
+   "source": "@CHEMICAL_Lithium",
+   "target": "@GENE_GSK3B",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 349,
+   "source": "@CHEMICAL_SB_216763",
+   "target": "@GENE_GSK3B",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 229,
+   "source": "@DISEASE_Colorectal_Neoplasms",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 221,
+   "source": "@DISEASE_Neurodegenerative_Diseases",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 211,
+   "source": "@DISEASE_Reperfusion_Injury",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 203,
+   "source": "@DISEASE_Diabetes_Mellitus",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 196,
+   "source": "@DISEASE_Cognition_Disorders",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 180,
+   "source": "@GENE_GSK3B",
+   "target": "@GENE_CTNNB1",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 178,
+   "source": "@GENE_AKT1",
+   "target": "@GENE_GSK3B",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 177,
+   "source": "@DISEASE_Carcinoma_Hepatocellular",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 167,
+   "source": "@CHEMICAL_Glycogen",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 166,
+   "source": "@CHEMICAL_Glucose",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 165,
+   "source": "@CHEMICAL_Chir_99021",
+   "target": "@GENE_GSK3B",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 158,
+   "source": "@CHEMICAL_2_(4_morpholinyl)_8_phenyl_4H_1_benzopyran_4_one",
+   "target": "@GENE_GSK3B",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 157,
+   "source": "@GENE_CTNNB1",
+   "target": "@GENE_GSK3B",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 152,
+   "source": "@DISEASE_Nerve_Degeneration",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 146,
+   "source": "@DISEASE_Breast_Neoplasms",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 140,
+   "source": "@GENE_AKT1",
+   "target": "@GENE_GSK3B",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 138,
+   "source": "@DISEASE_Bipolar_Disorder",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 126,
+   "source": "@GENE_GSK3B",
+   "target": "@GENE_NFE2L2",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 123,
+   "source": "@GENE_NFE2L2",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 117,
+   "source": "@CHEMICAL_Lithium",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 117,
+   "source": "@GENE_GSK3B",
+   "target": "@GENE_SNAI1",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 114,
+   "source": "@DISEASE_Parkinson_Disease",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 112,
+   "source": "@DISEASE_Depressive_Disorder",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 112,
+   "source": "@DISEASE_Insulin_Resistance",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 112,
+   "source": "@GENE_GSK3B",
+   "target": "@GENE_CCND1",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 109,
+   "source": "@DISEASE_Diabetes_Mellitus_Type_2",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 109,
+   "source": "@CHEMICAL_4_benzyl_2_methyl_1_2_4_thiadiazolidine_3_5_dione",
+   "target": "@GENE_GSK3B",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 100,
+   "source": "@DISEASE_Neoplasm_Metastasis",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 100,
+   "source": "@DISEASE_Schizophrenia",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 99,
+   "source": "@DISEASE_Stomach_Neoplasms",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 98,
+   "source": "@DISEASE_Neuroinflammatory_Diseases",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 98,
+   "source": "@GENE_GSK3B",
+   "target": "@GENE_INS",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 96,
+   "source": "@CHEMICAL_Lipopolysaccharides",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 93,
+   "source": "@DISEASE_Malformations_of_Cortical_Development_Group_I",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 91,
+   "source": "@DISEASE_Carcinogenesis",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 88,
+   "source": "@DISEASE_Mental_Disorders",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 88,
+   "source": "@DISEASE_Mitochondrial_Diseases",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 88,
+   "source": "@DISEASE_Neurotoxicity_Syndromes",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 87,
+   "source": "@DISEASE_Prostatic_Neoplasms",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 86,
+   "source": "@CHEMICAL_AR_A014418",
+   "target": "@GENE_GSK3B",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 86,
+   "source": "@GENE_CTNNB1",
+   "target": "@GENE_GSK3B",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 85,
+   "source": "@DISEASE_Fibrosis",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 84,
+   "source": "@CHEMICAL_Adenosine_Triphosphate",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 80,
+   "source": "@GENE_WNT2",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 78,
+   "source": "@GENE_GSK3B",
+   "target": "@GENE_AXIN1",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 76,
+   "source": "@DISEASE_Pancreatic_Neoplasms",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 73,
+   "source": "@DISEASE_Diffuse_Neurofibrillary_Tangles_with_Calcification",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 73,
+   "source": "@GENE_MAPT",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 72,
+   "source": "@CHEMICAL_Valproic_Acid",
+   "target": "@GENE_GSK3B",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 69,
+   "source": "@GENE_GSK3B",
+   "target": "@GENE_NFKB1",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 69,
+   "source": "@CHEMICAL_6_bromoindirubin_3'_oxime",
+   "target": "@GENE_GSK3B",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 69,
+   "source": "@GENE_GSK3B",
+   "target": "@GENE_MAPT",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 66,
+   "source": "@DISEASE_Carcinoma_Non_Small_Cell_Lung",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 66,
+   "source": "@GENE_APP",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 65,
+   "source": "@DISEASE_Drug_Related_Side_Effects_and_Adverse_Reactions",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 65,
+   "source": "@DISEASE_Hypoxia",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 65,
+   "source": "@GENE_GSK3B",
+   "target": "@GENE_MYC",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 64,
+   "source": "@DISEASE_Obesity",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 62,
+   "source": "@DISEASE_Cardiomegaly",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 60,
+   "source": "@GENE_GSK3B",
+   "target": "@GENE_APP",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 60,
+   "source": "@CHEMICAL_3_(3_chloro_4_hydroxyphenylamino)_4_(4_nitrophenyl)_1H_pyrrole_2_5_dione",
+   "target": "@GENE_GSK3B",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 59,
+   "source": "@DISEASE_Memory_Disorders",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 56,
+   "source": "@DISEASE_Lung_Neoplasms",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 56,
+   "source": "@GENE_GSK3B",
+   "target": "@GENE_PIK3R1",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 56,
+   "source": "@GENE_GSK3B",
+   "target": "@GENE_INS",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 55,
+   "source": "@DISEASE_Ischemia",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 54,
+   "source": "@DISEASE_Mood_Disorders",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 53,
+   "source": "@DISEASE_Brain_Ischemia",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 53,
+   "source": "@DISEASE_Cardiomyopathies",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 53,
+   "source": "@DISEASE_Hypertrophy",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 52,
+   "source": "@DISEASE_Glioblastoma",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 52,
+   "source": "@DISEASE_Kidney_Diseases",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 52,
+   "source": "@GENE_GSK3B",
+   "target": "@GENE_PTEN",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 51,
+   "source": "@DISEASE_Glioma",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 50,
+   "source": "@DISEASE_Diabetic_Nephropathies",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 50,
+   "source": "@DISEASE_Neurologic_Manifestations",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 49,
+   "source": "@CHEMICAL_Reactive_Oxygen_Species",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 49,
+   "source": "@DISEASE_Heart_Diseases",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 49,
+   "source": "@GENE_MTOR",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 49,
+   "source": "@DISEASE_Neoplasms",
+   "target": "@GENE_GSK3B",
+   "type": "inhibit"
+  },
+  {
+   "kind": "relation",
+   "publications": 48,
+   "source": "@GENE_CREB1",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 48,
+   "source": "@GENE_GSK3B",
+   "target": "@GENE_PIK3CB",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 48,
+   "source": "@GENE_NFKB1",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 48,
+   "source": "@GENE_PIK3R1",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 48,
+   "source": "@GENE_PTK2B",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 47,
+   "source": "@CHEMICAL_Wortmannin",
+   "target": "@GENE_GSK3B",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 46,
+   "source": "@CHEMICAL_TWS_119",
+   "target": "@GENE_GSK3B",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 45,
+   "source": "@GENE_DPYSL2",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 45,
+   "source": "@GENE_GSK3B",
+   "target": "@GENE_APC",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 44,
+   "source": "@DISEASE_Squamous_Cell_Carcinoma_of_Head_and_Neck",
+   "target": "@GENE_GSK3B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 43,
+   "source": "@GENE_GSK3B",
+   "target": "@GENE_TGFB1",
+   "type": "associate"
+  }
+ ],
+ "hits_cap": 100,
+ "hits_total_before_cap": 10109,
+ "licence": "NCBI public domain; key-less, no payment; 3 req/s limit",
+ "note": "NO_MATCH_FOUND is an answer about this query on this date, never absence",
+ "request": {
+  "gene": "GSK3B"
+ },
+ "requests_sent": [
+  "https://www.ncbi.nlm.nih.gov/research/pubtator3-api/relations?e1=@GENE_GSK3B"
+ ],
+ "retrieved_at": "2026-10-23T17:08:02Z",
+ "source_version": "UNKNOWN",
+ "status": "MATCH_FOUND"
+}

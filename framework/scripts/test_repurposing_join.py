@@ -117,6 +117,23 @@ class Evidence(unittest.TestCase):
             rj.MANIFESTS = original
             shutil.rmtree(tmp, ignore_errors=True)
 
+    def test_strongest_event_carries_its_receipt_id(self):
+        events = [{"evidence_depth": "partial_fulltext_read", "event_id": "FTR-1"},
+                  {"evidence_depth": "complete_fulltext_read", "event_id": "FTR-2"}]
+        self.assertEqual(rj.strongest_event(events), ("complete_fulltext_read", "FTR-2"))
+
+    def test_paper_ids_resolve_to_pmids_through_the_registry(self):
+        papers = rj.paper_pmids(ROOT)
+        self.assertGreater(len(papers), 100)
+        self.assertTrue(all(pmid.isdigit() for pmids in papers.values() for pmid in pmids))
+        # a query that names a PAPER inherits its PMIDs, and says through which record
+        inherited = [q for q in rj.derive_queries() if q.get("pmids_via_records")]
+        self.assertTrue(inherited)
+        for query in inherited[:20]:
+            for pmid, names in query["pmids_via_records"].items():
+                self.assertIn(pmid, query["pmids"])
+                self.assertTrue(names)
+
     def test_a_query_without_papers_abstains(self):
         table = rj.evidence_for({"query_id": "Q-X", "origin_id": "X", "pmids": []}, {})
         self.assertEqual(table["abstention"], "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY")

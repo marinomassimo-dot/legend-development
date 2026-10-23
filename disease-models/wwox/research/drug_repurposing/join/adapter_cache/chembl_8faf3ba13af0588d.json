@@ -1,0 +1,27 @@
+{
+ "adapter": "chembl",
+ "citation": "Zdrazil B. et al. The ChEMBL Database in 2023: a drug discovery platform spanning multiple bioactivity data types and time periods. Nucleic Acids Res 2024;52(D1):D1180-D1192. https://doi.org/10.1093/nar/gkad1004; web services: Davies M. et al. 2015 (Nucleic Acids Res 43:W612)",
+ "error": "",
+ "evidence_label": "NOT WWOX EVIDENCE",
+ "hits": [
+  {
+   "kind": "molecule_without_mechanism",
+   "max_phase": "3.0",
+   "molecule_chembl_id": "CHEMBL1201333",
+   "pref_name": "LITHIUM"
+  }
+ ],
+ "licence": "CC BY-SA 3.0; key-less, no payment",
+ "note": "NO_MATCH_FOUND is an answer about this query on this date, never absence",
+ "request": {
+  "drug": "Lithium"
+ },
+ "requests_sent": [
+  "https://www.ebi.ac.uk/chembl/api/data/status.json",
+  "https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?q=Lithium&limit=5",
+  "https://www.ebi.ac.uk/chembl/api/data/mechanism.json?molecule_chembl_id=CHEMBL1201333&limit=20"
+ ],
+ "retrieved_at": "2026-10-23T17:09:39Z",
+ "source_version": "ChEMBL_37 2026-05-01",
+ "status": "MATCH_FOUND"
+}

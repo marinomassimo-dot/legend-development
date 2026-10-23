@@ -52,7 +52,7 @@ MECHANISM_MAP = MODEL / "analysis" / "mechanism_intervention_map.md"
 PATHOGRAPH = MODEL / "analysis" / "data" / "pathograph_export.jsonl"
 MANIFESTS = MODEL / "research" / "deepdive_manifests"
 ADJUDICATIONS = MODEL / "research" / "page_adjudications"
-RECEIPT_LEDGER = MODEL / "research" / "fulltext_read_receipts.jsonl"
+RECEIPT_LEDGER = MODEL / "registries" / "fulltext_read_receipts.jsonl"  # fulltext_receipts.default_ledger_path
 
 # The three axes the mandate calls live. Plain data: delete a row and the axis is gone.
 AXES = {
@@ -73,8 +73,12 @@ STOPWORDS = {
     "TIER", "REVIVAL", "TRIGGER", "PREMISE", "TAG", "BLOCCO", "BLOCK", "SPLIT", "READY", "GAP",
     "NO", "YES", "NONE", "ALL", "ANY", "ONE", "TWO", "NEW", "OLD", "SEE", "PER", "VIA", "VS",
 }
+HIT_CAP = 100  # hits kept per cached adapter response; the total before the cap is recorded
 GENE_TOKEN = re.compile(r"\b[A-Z][A-Z0-9]{2,7}\b")
 PMID_IN_TEXT = re.compile(r"\bPMID[\s:_-]*(\d{6,9})\b")
+CLAIM_IN_TEXT = re.compile(r"\bCLAIM[ _](\d{3})\b")
+LEAD_IN_TEXT = re.compile(r"\b(DL-[A-Z]+-\d{3})\b")
+PAPER_IN_TEXT = re.compile(r"\bPAPER[ _](\d{3})\b")
 MECHANISM_RECORD = re.compile(r"^### ([RN]-\d{2}) — (.+?)$", re.M)
 MAP_FIELD = re.compile(r"^\|\s*\*\*([A-Z_]+)\*\*\s*\|\s*(.+?)\s*\|\s*$", re.M)
 
@@ -129,7 +133,23 @@ def claim_queries(root: Path) -> list[dict]:
                     "origin_file": record.path, "origin_line": record.line,
                     "origin_title": title[:300],
                     "terms": terms,
+                    "papers_named": sorted({f"PAPER {n}" for n in PAPER_IN_TEXT.findall(record.text)}),
                     "pmids": sorted(set(PMID_IN_TEXT.findall(record.text)))})
+    return out
+
+
+def paper_pmids(root: Path) -> dict[str, list[str]]:
+    """PAPER id -> the PMIDs its registry record declares in `Identifier`. Read by record with
+    the routed parser (never grep): the registries cite papers by PAPER id far more often than
+    by PMID, so without this map most claims and leads would look unreceipted."""
+    out: dict[str, list[str]] = {}
+    for record in rr.parse_records(root, DISEASE, "paper_registry_current"):
+        if record.kind != "record" or not record.record_id.upper().startswith("PAPER"):
+            continue
+        fields = record_fields(record.text)
+        found = PMID_IN_TEXT.findall(fields.get("Identifier", "")) or PMID_IN_TEXT.findall(record.text[:600])
+        if found:
+            out[rr.identity_token(record.record_id)] = sorted(set(found))
     return out
 
 
@@ -145,6 +165,8 @@ def lead_queries(root: Path) -> list[dict]:
                     "origin_file": record.path, "origin_line": record.line,
                     "origin_title": record.record_id[:300],
                     "terms": gene_tokens(record.record_id + " " + causal),
+                    "claims_named": sorted({f"CLAIM {n}" for n in CLAIM_IN_TEXT.findall(record.text)}),
+                    "papers_named": sorted({f"PAPER {n}" for n in PAPER_IN_TEXT.findall(record.text)}),
                     "pmids": sorted(set(PMID_IN_TEXT.findall(record.text)))})
     return out
 
@@ -176,6 +198,9 @@ def mechanism_queries(path: Path = MECHANISM_MAP) -> list[dict]:
                     "decisive_test": fields.get("DECISIVE_PRECLINICAL_TEST",
                                                 bold_field(body, "REVIVAL_TRIGGER"))[:400],
                     "record_class": "repurposing" if record_id.startswith("R-") else "negative_translation",
+                    "claims_named": sorted({f"CLAIM {n}" for n in CLAIM_IN_TEXT.findall(body)}),
+                    "leads_named": sorted(set(LEAD_IN_TEXT.findall(body))),
+                    "papers_named": sorted({f"PAPER {n}" for n in PAPER_IN_TEXT.findall(body)}),
                     "pmids": sorted(set(PMID_IN_TEXT.findall(body)))})
     return out
 
@@ -229,7 +254,38 @@ def pathograph_queries(path: Path = PATHOGRAPH, limit: int = 40) -> list[dict]:
 
 
 def derive_queries(root: Path = ROOT, axis: str = "") -> list[dict]:
-    queries = claim_queries(root) + lead_queries(root) + mechanism_queries() + pathograph_queries()
+    claims = claim_queries(root)
+    leads = lead_queries(root)
+    queries = claims + leads + mechanism_queries() + pathograph_queries()
+    # The leverage: a lead, a map record or a pathograph line that names a claim or a lead
+    # inherits that record's receipted papers, so its evidence table is the evidence LEGEND
+    # already holds, not an empty one. One hop only, and the route is written into the query
+    # (`pmids_via_records`) so a reader sees where each paper came from.
+    papers = paper_pmids(root)
+    # First hop: every query resolves the PAPER ids it names itself.
+    for query in queries:
+        own = {pmid: [paper] for paper in query.get("papers_named") or [] for pmid in papers.get(paper, [])
+               if pmid not in query["pmids"]}
+        if own:
+            query["pmids_via_records"] = {pmid: names for pmid, names in sorted(own.items())}
+            query["pmids"] = sorted(set(query["pmids"]) | set(own))
+    # Second hop: a record that names a claim or a lead inherits that record's papers.
+    record_pmids = {claim["origin_id"]: claim["pmids"] for claim in claims}
+    record_pmids.update({lead["origin_id"]: lead["pmids"] for lead in leads})
+    for query in queries:
+        named = (list(query.get("claims_named") or []) + list(query.get("bound_claims") or [])
+                 + list(query.get("leads_named") or []))
+        named = [name for name in named if name != query["origin_id"]]
+        inherited = {}
+        for name in named:
+            for pmid in record_pmids.get(name, []):
+                if pmid not in query["pmids"]:
+                    inherited.setdefault(pmid, []).append(name)
+        if inherited:
+            via = dict(query.get("pmids_via_records") or {})
+            via.update({pmid: sorted(set(names)) for pmid, names in inherited.items()})
+            query["pmids_via_records"] = dict(sorted(via.items()))
+            query["pmids"] = sorted(set(query["pmids"]) | set(inherited))
     if axis:
         wanted = [term.lower() for term in AXES[axis]]
         queries = [q for q in queries
@@ -262,13 +318,19 @@ DEPTH_RANK = {"complete_fulltext_read": 4, "partial_fulltext_read": 3, "queried_
               "abstract_only": 1, "retrieved_not_read": 0}
 
 
-def strongest_depth(events: list[dict]) -> str:
-    best, rank = "UNKNOWN", -1
+def strongest_event(events: list[dict]) -> tuple[str, str]:
+    """(depth, event_id) of the strongest standing receipt; the receipt id travels with the
+    depth because the bridge refuses a complete-read declaration without its receipt."""
+    best, best_id, rank = "UNKNOWN", "", -1
     for event in events:
-        state = str(event.get("reading_depth") or event.get("event_type") or event.get("coverage") or "")
+        state = str(event.get("evidence_depth") or event.get("reading_depth") or "")
         if DEPTH_RANK.get(state, -1) > rank:
-            best, rank = state, DEPTH_RANK.get(state, -1)
-    return best
+            best, best_id, rank = state, str(event.get("event_id") or ""), DEPTH_RANK.get(state, -1)
+    return best, best_id
+
+
+def strongest_depth(events: list[dict]) -> str:
+    return strongest_event(events)[0]
 
 
 def adjudication_files(pmid: str) -> list[str]:
@@ -329,7 +391,9 @@ def evidence_for(query: dict, receipts: dict[str, list[dict]]) -> dict:
     for pmid in query.get("pmids", []):
         events = receipts.get(pmid, [])
         row = manifest_evidence(pmid)
-        row["reading_depth"] = strongest_depth(events) if events else "NO_RECEIPT"
+        depth, event_id = strongest_event(events) if events else ("NO_RECEIPT", "")
+        row["reading_depth"] = depth
+        row["receipt_id"] = event_id
         row["receipt_events"] = len(events)
         row["evidence_label"] = "WWOX EVIDENCE (receipted in this repository)"
         rows.append(row)
@@ -379,11 +443,38 @@ def run_adapters(query: dict, cache_dir: Path, live: bool) -> list[dict]:
                          "requests_sent": [], "error": ""})
             continue
         module = adapters.load(name)
-        result = module.query(request)
+        try:
+            result = module.query(request)
+        except Exception as exc:  # a crashing adapter is a QUERY_ERROR for this query, not a crash of the join
+            result = {"adapter": name, "status": "QUERY_ERROR", "request": request, "hits": [],
+                      "evidence_label": "NOT WWOX EVIDENCE", "note": "adapter raised; see error",
+                      "retrieved_at": "", "source_version": "UNKNOWN", "licence": "", "citation": "",
+                      "requests_sent": [], "error": f"{type(exc).__name__}: {exc}"}
+        # The cache keeps the adapter's verbatim fields but caps the hit list: a PubTator query on a
+        # common gene returns thousands of pairs, and the join needs the count and the first page,
+        # not a megabyte per query in the repository. The cap is written into the record.
+        total = len(result.get("hits") or [])
+        if total > HIT_CAP:
+            result["hits"] = result["hits"][:HIT_CAP]
+            result["hits_total_before_cap"] = total
+            result["hits_cap"] = HIT_CAP
         cache_dir.mkdir(parents=True, exist_ok=True)
         cached.write_text(json.dumps(result, indent=1, ensure_ascii=False, sort_keys=True), encoding="utf-8")
         hits.append(result)
     return hits
+
+
+def first_hits(result: dict, limit: int = 3) -> list[str]:
+    """The first few hits, named the way the source names them, so a reader of the card can see
+    WHAT matched (a class name searched on ChEMBL matches some molecule; the name says which)."""
+    names = []
+    for hit in (result.get("hits") or [])[:limit]:
+        label = (hit.get("pref_name") or hit.get("mechanism_of_action") or hit.get("disease_name")
+                 or hit.get("generic_name") or hit.get("preferred_term") or hit.get("compound")
+                 or (f"{hit.get('type')} {hit.get('source')} -> {hit.get('target')}" if hit.get("type") else None)
+                 or hit.get("kind") or "")
+        names.append(str(label)[:120])
+    return names
 
 
 def card_for(query: dict, table: dict, hits: list[dict]) -> dict | None:
@@ -405,6 +496,8 @@ def card_for(query: dict, table: dict, hits: list[dict]) -> dict | None:
     }
     if disease_assertion["reading_depth"] not in bridge.READING:
         disease_assertion["reading_depth"] = "UNKNOWN"
+    if table["rows"] and table["rows"][0].get("receipt_id"):
+        disease_assertion["receipt"] = table["rows"][0]["receipt_id"]
     external = [hit for hit in hits if hit.get("status") == "MATCH_FOUND"]
     packet = {
         "schema_version": 1,
@@ -431,6 +524,8 @@ def card_for(query: dict, table: dict, hits: list[dict]) -> dict | None:
              "retrieved_at": hit.get("retrieved_at"), "source_version": hit.get("source_version"),
              "licence": hit.get("licence"), "citation": hit.get("citation"),
              "requests_sent": hit.get("requests_sent"), "hit_count": len(hit.get("hits") or []),
+             "hits_total_before_cap": hit.get("hits_total_before_cap"),
+             "first_hits": first_hits(hit), "error": hit.get("error") or "",
              "evidence_label": "NOT WWOX EVIDENCE"}
             for hit in hits
         ],

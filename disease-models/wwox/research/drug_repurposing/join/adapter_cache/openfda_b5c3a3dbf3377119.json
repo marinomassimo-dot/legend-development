@@ -1,0 +1,120 @@
+{
+ "adapter": "openfda",
+ "citation": "Data provided by the U.S. Food and Drug Administration (openFDA), https://open.fda.gov — the credit line the terms page asks for",
+ "error": "",
+ "evidence_label": "NOT WWOX EVIDENCE",
+ "hits": [
+  {
+   "brand_name": [
+    "MEMANTINE HYDROCHLORIDE"
+   ],
+   "effective_time": "20260901",
+   "generic_name": [
+    "MEMANTINE HYDROCHLORIDE"
+   ],
+   "kind": "label",
+   "sections": {
+    "contraindications": "4 CONTRAINDICATIONS Memantine hydrochloride extended-release capsules are contraindicated in patients with known hypersensitivity to memantine hydrochloride or to any excipients used in the formulation. Memantine hydrochloride extended-release capsules are contraindicated in patients with known hypersensitivity to memantine hydrochloride or to any excipients used in the formulation. (4)",
+    "drug_interactions": "7 DRUG INTERACTIONS 7.1 Drugs That Make Urine Alkaline The clearance of memantine was reduced by about 80% under alkaline urine conditions at pH 8. Therefore, alterations of urine pH towards the alkaline condition may lead to an accumulation of the drug with a possible increase in adverse effects. Urine pH is altered by diet, drugs (e.g., carbonic anhydrase inhibitors, sodium bicarbonate) and clinical state of the patient (e.g., renal tubular acidosis or severe infections of the urinary tract). Hence, memantine should be used with caution under these conditions. 7.2 Use with Other N-methyl-D-aspartate (NMDA) Antagonists The combined use of memantine hydrochloride extended-release capsules with other NMDA antagonists (amantadine, ketamine, and dextromethorphan) has not been systematically evaluated and such use should be approached with caution.",
+    "indications_and_usage": "1 INDICATIONS AND USAGE Memantine hydrochloride extended-release capsules are indicated for the treatment of moderate to severe dementia of the Alzheimer’s type. Memantine hydrochloride is a N-methyl-D-aspartate (NMDA) receptor antagonist indicated for the treatment of moderate to severe dementia of the Alzheimer’s type. ( 1 )",
+    "mechanism_of_action": "12.1 Mechanism of Action Persistent activation of central nervous system N-methyl-D-aspartate (NMDA) receptors by the excitatory amino acid glutamate has been hypothesized to contribute to the symptomatology of Alzheimer’s disease. Memantine is postulated to exert its therapeutic effect through its action as a low to moderate affinity uncompetitive (open-channel) NMDA receptor antagonist which binds preferentially to the NMDA receptor-operated cation channels. There is no evidence that memantine prevents or slows neurodegeneration in patients with Alzheimer’s disease.",
+    "pediatric_use": "8.4 Pediatric Use Safety and effectiveness in pediatric patients have not been established. Memantine failed to demonstrate efficacy in two 12-week controlled clinical studies of 578 pediatric patients aged 6 to 12 years with autism spectrum disorders (ASD), including autism, Asperger’s disorder and Pervasive Development Disorder - Not Otherwise Specified (PDD-NOS). Memantine has not been studied in pediatric patients under 6 years of age or over 12 years of age. Memantine treatment was initiated at 3 mg/day and the dose was escalated to the target dose (weight-based) by week 6. Oral doses of memantine 3, 6, 9, or 15 mg extended-release capsules were administered once daily to patients with weights < 20 kg, 20 to 39 kg, 40 to 59 kg and ≥ 60 kg, respectively. In a randomized, 12-week double-blind, placebo-controlled parallel study (Study A) in patients with autism, there was no statistically significant difference in the Social Responsiveness Scale (SRS) total raw score between patients randomized to memantine (n=54) and those randomized to placebo (n=53). In a 12-week responder-enriched randomized withdrawal study (Study B) in 471 patients with ASD, there was no statistically significant difference in the loss of therapeutic response rates between patients randomized to remain on full-dose memantine (n=153) and those randomized to switch to placebo (n=158). The overall safety profile of memantine in pediatric patients was generally consistent with the known safety profile in adults [see Adverse Reactions (6.1) ] . In Study A, the adverse reactions in the memantine group (n=56) that were reported in at least 5% of patients and at least twice the frequency of the placebo group (N=58) are listed in Table 2. Table 2: Study A Commonly Reported Adverse Reactions with a Frequency ≥ 5% and Twice That of Placebo Adverse Reaction Memantine N=56 Placebo N=58 Cough 8.9% 3.4% Influenza 7.1% 3.4% Rhinorrhea 5.4% 0% Agitation 5.4% 1.7% Discontinuations due to Adverse Reactions a A"
+   },
+   "set_id": "007d4cb9-3fa9-40f3-b5ca-4083eccd6038"
+  },
+  {
+   "brand_name": [
+    "Memantine hydrochloride"
+   ],
+   "effective_time": "20230817",
+   "generic_name": [
+    "MEMANTINE"
+   ],
+   "kind": "label",
+   "sections": {
+    "contraindications": "4 CONTRAINDICATIONS Memantine hydrochloride tablets are contraindicated in patients with known hypersensitivity to memantine hydrochloride or to any excipients used in the formulation. Memantine hydrochloride tablets are contraindicated in patients with known hypersensitivity to memantine hydrochloride or to any excipients used in the formulation. (4)",
+    "drug_interactions": "7 DRUG INTERACTIONS 7.1 Drugs that Make the Urine Alkaline The clearance of memantine was reduced by about 80% under alkaline urine conditions at pH 8. Therefore, alterations of urine pH towards the alkaline condition may lead to an accumulation of the drug with a possible increase in adverse effects. Urine pH is altered by diet, drugs (e.g. carbonic anhydrase inhibitors, sodium bicarbonate) and clinical state of the patient (e.g. renal tubular acidosis or severe infections of the urinary tract). Hence, memantine should be used with caution under these conditions. 7.2 Use with Other N-methyl-D-aspartate (NMDA) Antagonists The combined use of memantine hydrochloride with other NMDA antagonists (amantadine, ketamine, and dextromethorphan) has not been systematically evaluated and such use should be approached with caution.",
+    "indications_and_usage": "1 INDICATIONS AND USAGE Memantine hydrochloride tablets are indicated for the treatment of moderate to severe dementia of the Alzheimer’s type. Memantine hydrochloride tablets are an N-methyl-D-aspartate (NMDA) receptor antagonist indicated for the treatment of moderate to severe dementia of the Alzheimer’s type. (1)",
+    "mechanism_of_action": "12.1 Mechanism of Action Persistent activation of central nervous system N-methyl-D-aspartate (NMDA) receptors by the excitatory amino acid glutamate has been hypothesized to contribute to the symptomatology of Alzheimer’s disease. Memantine is postulated to exert its therapeutic effect through its action as a low to moderate affinity uncompetitive (open-channel) NMDA receptor antagonist which binds preferentially to the NMDA receptor-operated cation channels. There is no evidence that memantine prevents or slows neurodegeneration in patients with Alzheimer’s disease.",
+    "pediatric_use": "8.4 Pediatric Use Safety and effectiveness in pediatric patients have not been established. Memantine failed to demonstrate efficacy in two 12-week controlled clinical studies of 578 pediatric patients aged 6 to 12 years with autism spectrum disorders (ASD), including autism, Asperger’s disorder and Pervasive Development Disorder - Not Otherwise Specified (PDD-NOS). Memantine has not been studied in pediatric patients under 6 years of age or over 12 years of age. Memantine treatment was initiated at 3 mg/day and the dose was escalated to the target dose (weight-based) by week 6. Oral doses of memantine 3 mg, 6 mg, 9 mg, or 15 mg extended-release capsules were administered once daily to patients with weights < 20 kg, 20 kg to 39 kg, 40 kg to 59 kg and ≥ 60 kg, respectively. In a randomized, 12-week double-blind, placebo-controlled parallel study (Study A) in patients with autism, there was no statistically significant difference in the Social Responsiveness Scale (SRS) total raw score between patients randomized to memantine (n=54) and those randomized to placebo (n=53). In a 12-week responder-enriched randomized withdrawal study (Study B) in 471 patients with ASD, there was no statistically significant difference in the loss of therapeutic response rates between patients randomized to remain on full-dose memantine (n=153) and those randomized to switch to placebo (n=158). The overall risk profile of memantine in pediatric patients was generally consistent with the known risk profile in adults [see Adverse Reactions (6.1)] . In Study A, the adverse reactions in the memantine group (n=56) that were reported in at least 5% of patients and at least twice the frequency of the placebo group (N=58) are listed in Table 2: Table 2: Study A Commonly Reported Adverse Reactions with a Frequency ≥ 5% and Twice That of Placebo Adverse Reaction Memantine N=56 Placebo N=58 Cough 8.9% 3.4% Influenza 7.1% 3.4% Rhinorrhea 5.4% 0% Agitation 5.4% 1.7% Discontinuations due to adverse rea"
+   },
+   "set_id": "054069b5-7aac-4106-821f-ebf7fd531b4f"
+  },
+  {
+   "brand_name": [
+    "Memantine Hydrochloride"
+   ],
+   "effective_time": "20240206",
+   "generic_name": [
+    "MEMANTINE HYDROCHLORIDE"
+   ],
+   "kind": "label",
+   "sections": {
+    "contraindications": "4 CONTRAINDICATIONS Memantine hydrochloride is contraindicated in patients with known hypersensitivity to memantine hydrochloride or to any excipients used in the formulation. ( 4 ) Memantine hydrochloride tablets are contraindicated in patients with known hypersensitivity to memantine hydrochloride or to any excipients used in the formulation.",
+    "drug_interactions": "7 DRUG INTERACTIONS 7.1 Drugs that Make the Urine Alkaline The clearance of memantine was reduced by about 80% under alkaline urine conditions at pH 8. Therefore, alterations of urine pH towards the alkaline condition may lead to an accumulation of the drug with a possible increase in adverse effects. Urine pH is altered by diet, drugs (e.g. carbonic anhydrase inhibitors, sodium bicarbonate) and clinical state of the patient (e.g. renal tubular acidosis or severe infections of the urinary tract). Hence, memantine should be used with caution under these conditions. 7.2 Use with Other N-methyl-D-aspartate (NMDA) Antagonists The combined use of memantine hydrochloride with other NMDA antagonists (amantadine, ketamine, and dextromethorphan) has not been systematically evaluated and such use should be approached with caution.",
+    "indications_and_usage": "1 INDICATIONS AND USAGE Memantine hydrochloride is an N-methyl-D-aspartate (NMDA) receptor antagonist indicated for the treatment of moderate to severe dementia of the Alzheimer's type. ( 1 ) Memantine hydrochloride tablets, USP are indicated for the treatment of moderate to severe dementia of the Alzheimer's type.",
+    "mechanism_of_action": "12.1 Mechanism of Action Persistent activation of central nervous system N-methyl-D-aspartate (NMDA) receptors by the excitatory amino acid glutamate has been hypothesized to contribute to the symptomatology of Alzheimer's disease. Memantine is postulated to exert its therapeutic effect through its action as a low to moderate affinity uncompetitive (open-channel) NMDA receptor antagonist which binds preferentially to the NMDA receptor-operated cation channels. There is no evidence that memantine prevents or slows neurodegeneration in patients with Alzheimer's disease.",
+    "pediatric_use": "8.4 Pediatric Use Safety and effectiveness in pediatric patients have not been established. Memantine failed to demonstrate efficacy in two 12-week controlled clinical studies of 578 pediatric patients aged 6-12 years with autism spectrum disorders (ASD), including autism, Asperger's disorder and Pervasive Development Disorder - Not Otherwise Specified (PDD-NOS). Memantine has not been studied in pediatric patients under 6 years of age or over 12 years of age. Memantine treatment was initiated at 3 mg/day and the dose was escalated to the target dose (weight-based) by week 6. Oral doses of memantine 3, 6, 9, or 15 mg extended-release capsules were administered once daily to patients with weights < 20 kg, 20-39 kg, 40-59 kg and ≥ 60 kg, respectively. In a randomized, 12-week double-blind, placebo-controlled parallel study (Study A) in patients with autism, there was no statistically significant difference in the Social Responsiveness Scale (SRS) total raw score between patients randomized to memantine (n=54) and those randomized to placebo (n=53). In a 12-week responder-enriched randomized withdrawal study (Study B) in 471 patients with ASD, there was no statistically significant difference in the loss of therapeutic response rates between patients randomized to remain on full-dose memantine (n=153) and those randomized to switch to placebo (n=158). The overall risk profile of memantine in pediatric patients was generally consistent with the known risk profile in adults [see Adverse Reactions ( 6.1 )] . In Study A, the adverse reactions in the memantine group (n=56) that were reported in at least 5% of patients and at least twice the frequency of the placebo group (N=58) are listed in Table 2: Table 2 Study A Commonly Reported Adverse Reactions with a Frequency ≥ 5% and Twice That of Placebo Adverse Reaction Memantine N=56 Placebo N=58 Cough 8.9% 3.4% Influenza 7.1% 3.4% Rhinorrhea 5.4% 0% Agitation 5.4% 1.7% Discontinuations due to adverse reactions a Aggression 3.6"
+   },
+   "set_id": "0ad2246a-ffa0-43a0-8094-58279d3e3a74"
+  },
+  {
+   "caveat": "spontaneous reports; not a rate, not causal",
+   "kind": "faers_counts",
+   "reports_by_reaction": [
+    {
+     "count": 1284,
+     "term": "FALL"
+    },
+    {
+     "count": 1082,
+     "term": "DEATH"
+    },
+    {
+     "count": 962,
+     "term": "DRUG INEFFECTIVE"
+    },
+    {
+     "count": 908,
+     "term": "CONFUSIONAL STATE"
+    },
+    {
+     "count": 894,
+     "term": "OFF LABEL USE"
+    },
+    {
+     "count": 755,
+     "term": "FATIGUE"
+    },
+    {
+     "count": 743,
+     "term": "HALLUCINATION"
+    },
+    {
+     "count": 697,
+     "term": "CONDITION AGGRAVATED"
+    },
+    {
+     "count": 622,
+     "term": "SOMNOLENCE"
+    },
+    {
+     "count": 621,
+     "term": "ASTHENIA"
+    }
+   ]
+  }
+ ],
+ "licence": "US public domain (CC0); key-less, no payment (optional key not used)",
+ "note": "NO_MATCH_FOUND is an answer about this query on this date, never absence; FAERS counts are spontaneous reports, never a rate; openFDA: do not rely on it for medical care decisions",
+ "request": {
+  "drug": "Memantine"
+ },
+ "requests_sent": [
+  "https://api.fda.gov/drug/label.json?{'search': 'openfda.generic_name:\"Memantine\"', 'limit': 3}",
+  "https://api.fda.gov/drug/event.json?{'search': 'patient.drug.medicinalproduct:\"Memantine\"', 'count': 'patient.reaction.reactionmeddrapt.exact', 'limit': 10}"
+ ],
+ "retrieved_at": "2026-10-23T17:07:37Z",
+ "source_version": "label last_updated 2026-10-23",
+ "status": "MATCH_FOUND"
+}

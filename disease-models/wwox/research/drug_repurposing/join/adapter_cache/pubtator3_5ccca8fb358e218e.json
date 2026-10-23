@@ -1,0 +1,721 @@
+{
+ "adapter": "pubtator3",
+ "citation": "Wei C-H. et al. PubTator 3.0: an AI-powered literature resource for unlocking biomedical knowledge. Nucleic Acids Res 2024;52(W1):W540-W546. https://doi.org/10.1093/nar/gkae235",
+ "error": "",
+ "evidence_label": "NOT WWOX EVIDENCE",
+ "hits": [
+  {
+   "kind": "relation",
+   "publications": 90,
+   "source": "@DISEASE_Epilepsy",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 74,
+   "source": "@CHEMICAL_5_(alpha_methyl_4_bromobenzylamino)phosphonomethyl_1_4_dihydroquinoxaline_2_3_dione",
+   "target": "@GENE_GRIN2A",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 67,
+   "source": "@DISEASE_Schizophrenia",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 60,
+   "source": "@CHEMICAL_Glutamic_Acid",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 48,
+   "source": "@GENE_GRIN1",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 44,
+   "source": "@GENE_GRIN1",
+   "target": "@GENE_GRIN2A",
+   "type": "interact"
+  },
+  {
+   "kind": "relation",
+   "publications": 38,
+   "source": "@GENE_DLG4",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 35,
+   "source": "@DISEASE_Nerve_Degeneration",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 32,
+   "source": "@DISEASE_Brain_Diseases",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 32,
+   "source": "@GENE_GRIN2A",
+   "target": "@GENE_GRIN2B",
+   "type": "interact"
+  },
+  {
+   "kind": "relation",
+   "publications": 30,
+   "source": "@DISEASE_Depressive_Disorder",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 28,
+   "source": "@DISEASE_Seizures",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 28,
+   "source": "@CHEMICAL_Ethanol",
+   "target": "@GENE_GRIN2A",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 25,
+   "source": "@DISEASE_Alzheimer_Disease",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 25,
+   "source": "@DISEASE_Developmental_Disabilities",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 24,
+   "source": "@DISEASE_Cognition_Disorders",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 23,
+   "source": "@GENE_GRIN2A",
+   "target": "@GENE_DLG4",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 23,
+   "source": "@GENE_GRIN2A",
+   "target": "@GENE_SRC",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 22,
+   "source": "@CHEMICAL_Glycine",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 22,
+   "source": "@DISEASE_Brain_Ischemia",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 22,
+   "source": "@CHEMICAL_TCN_201",
+   "target": "@GENE_GRIN2A",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 21,
+   "source": "@DISEASE_Aphasia",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 20,
+   "source": "@CHEMICAL_Ethanol",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 20,
+   "source": "@DISEASE_Intellectual_Disability",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 19,
+   "source": "@DISEASE_Mental_Disorders",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 19,
+   "source": "@DISEASE_Persistent_Infection",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 17,
+   "source": "@CHEMICAL_Alcohols",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 17,
+   "source": "@DISEASE_Neurotoxicity_Syndromes",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 16,
+   "source": "@CHEMICAL_N_Methylaspartate",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 16,
+   "source": "@DISEASE_Memory_Disorders",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 16,
+   "source": "@CHEMICAL_Dizocilpine_Maleate",
+   "target": "@GENE_GRIN2A",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 15,
+   "source": "@DISEASE_Bipolar_Disorder",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 15,
+   "source": "@CHEMICAL_Ethanol",
+   "target": "@GENE_GRIN2A",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 14,
+   "source": "@DISEASE_Landau_Kleffner_Syndrome",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 13,
+   "source": "@DISEASE_Autism_Spectrum_Disorder",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 13,
+   "source": "@DISEASE_Epilepsy_Rolandic",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 13,
+   "source": "@DISEASE_Lupus_Erythematosus_Systemic",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 13,
+   "source": "@DISEASE_Melanoma",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 12,
+   "source": "@DISEASE_Learning_Disabilities",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 12,
+   "source": "@DISEASE_Neoplasms",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 11,
+   "source": "@DISEASE_Anxiety",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 11,
+   "source": "@DISEASE_Neuralgia",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 11,
+   "source": "@GENE_FYN",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 11,
+   "source": "@GENE_GRIN1",
+   "target": "@GENE_GRIN2A",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 10,
+   "source": "@CHEMICAL_Calcium",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 10,
+   "source": "@CHEMICAL_Memantine",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 10,
+   "source": "@CHEMICAL_Morphine",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 10,
+   "source": "@DISEASE_Alcoholism",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 10,
+   "source": "@DISEASE_Attention_Deficit_Disorder_with_Hyperactivity",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 10,
+   "source": "@DISEASE_Epilepsies_Partial",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 10,
+   "source": "@DISEASE_Neurologic_Manifestations",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 10,
+   "source": "@DISEASE_Parkinson_Disease",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 10,
+   "source": "@GENE_GRIN2A",
+   "target": "@GENE_MAPK1",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 10,
+   "source": "@CHEMICAL_Memantine",
+   "target": "@GENE_GRIN2A",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 9,
+   "source": "@DISEASE_Huntington_Disease",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 9,
+   "source": "@DISEASE_Malformations_of_Cortical_Development",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 9,
+   "source": "@DISEASE_Neurodegenerative_Diseases",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 9,
+   "source": "@DISEASE_Pain",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 9,
+   "source": "@GENE_GRIN2A",
+   "target": "@GENE_PVALB",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 9,
+   "source": "@CHEMICAL_Nevirapine",
+   "target": "@GENE_GRIN2A",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 9,
+   "source": "@CHEMICAL_Ro_25_6981",
+   "target": "@GENE_GRIN2A",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 9,
+   "source": "@CHEMICAL_Cocaine",
+   "target": "@GENE_GRIN2A",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 9,
+   "source": "@DISEASE_Ischemia",
+   "target": "@GENE_GRIN2A",
+   "type": "stimulate"
+  },
+  {
+   "kind": "relation",
+   "publications": 8,
+   "source": "@CHEMICAL_Cocaine",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 8,
+   "source": "@DISEASE_Apraxias",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 8,
+   "source": "@DISEASE_Autistic_Disorder",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 8,
+   "source": "@DISEASE_Dyskinesia_Drug_Induced",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 8,
+   "source": "@DISEASE_Inflammation",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 8,
+   "source": "@GENE_GRIN2A",
+   "target": "@GENE_CAMK2G",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 8,
+   "source": "@GENE_GRIN2A",
+   "target": "@GENE_FYN",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 8,
+   "source": "@CHEMICAL_Glutamic_Acid",
+   "target": "@GENE_GRIN2A",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 8,
+   "source": "@CHEMICAL_ifenprodil",
+   "target": "@GENE_GRIN2A",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 8,
+   "source": "@CHEMICAL_N_Methylaspartate",
+   "target": "@GENE_GRIN2A",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 7,
+   "source": "@CHEMICAL_ifenprodil",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 7,
+   "source": "@DISEASE_Anti_N_Methyl_D_Aspartate_Receptor_Encephalitis",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 7,
+   "source": "@DISEASE_Brain_Injuries",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 7,
+   "source": "@DISEASE_Heredodegenerative_Disorders_Nervous_System",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 7,
+   "source": "@DISEASE_Ischemia",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 7,
+   "source": "@DISEASE_Malformations_of_Cortical_Development_Group_I",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 7,
+   "source": "@DISEASE_Speech_Disorders",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 7,
+   "source": "@DISEASE_Status_Epilepticus",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 7,
+   "source": "@GENE_GRIN2A",
+   "target": "@GENE_APP",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 7,
+   "source": "@CHEMICAL_bisphenol_A",
+   "target": "@GENE_GRIN2A",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 7,
+   "source": "@CHEMICAL_Glutamic_Acid",
+   "target": "@GENE_GRIN2A",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 7,
+   "source": "@CHEMICAL_Morphine",
+   "target": "@GENE_GRIN2A",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 7,
+   "source": "@GENE_BDNF",
+   "target": "@GENE_GRIN2A",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 6,
+   "source": "@CHEMICAL_Dopamine",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 6,
+   "source": "@CHEMICAL_Nicotine",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 6,
+   "source": "@DISEASE_245570",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 6,
+   "source": "@DISEASE_Hypoxia",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 6,
+   "source": "@DISEASE_Movement_Disorders",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 6,
+   "source": "@GENE_GRIN2A",
+   "target": "@GENE_GNRH1",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 6,
+   "source": "@GENE_GRIN2A",
+   "target": "@GENE_PTK2B",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 6,
+   "source": "@GENE_GRIN2A",
+   "target": "@GENE_GRIN2C",
+   "type": "interact"
+  },
+  {
+   "kind": "relation",
+   "publications": 6,
+   "source": "@CHEMICAL_Haloperidol",
+   "target": "@GENE_GRIN2A",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 6,
+   "source": "@CHEMICAL_Lipopolysaccharides",
+   "target": "@GENE_GRIN2A",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 6,
+   "source": "@CHEMICAL_Sevoflurane",
+   "target": "@GENE_GRIN2A",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 6,
+   "source": "@CHEMICAL_Glycine",
+   "target": "@GENE_GRIN2A",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 6,
+   "source": "@GENE_GRIN2A",
+   "target": "@GENE_SRC",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 5,
+   "source": "@CHEMICAL_Caffeine",
+   "target": "@GENE_GRIN2A",
+   "type": "associate"
+  }
+ ],
+ "hits_cap": 100,
+ "hits_total_before_cap": 1442,
+ "licence": "NCBI public domain; key-less, no payment; 3 req/s limit",
+ "note": "NO_MATCH_FOUND is an answer about this query on this date, never absence",
+ "request": {
+  "gene": "GRIN2A"
+ },
+ "requests_sent": [
+  "https://www.ncbi.nlm.nih.gov/research/pubtator3-api/relations?e1=@GENE_GRIN2A"
+ ],
+ "retrieved_at": "2026-10-23T17:06:13Z",
+ "source_version": "UNKNOWN",
+ "status": "MATCH_FOUND"
+}
