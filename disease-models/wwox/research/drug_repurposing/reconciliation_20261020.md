@@ -329,6 +329,21 @@ branch blocks no other branch.
 
 ---
 
+## 7b · Re-measured 2026-10-23 (`PLAN-DRUGREPURPOSING-MODULE-20261022`)
+
+Dated addendum; the verdicts above are left as they were on 2026-10-20.
+
+| Item | Was | Is (2026-10-23) | Evidence |
+|---|---|---|---|
+| P1 third-party clients | `ABSENT` | **not needed**: six services reachable key-less through one-file adapters, all `MEASURED` green live | `repurposing_adapter.py selftest --live` → 6 adapters, 0 red |
+| P4 cards | `PRESENT_AND_RUNNABLE`, no card produced | 21 hand-made cards (blind-audited once) and 26 derived cards, diffable against each other | `cards/`, `cards_early/`, `join/cards.json`, `repurposing_join.py diff` |
+| P5 ranking | `ABSENT`, deliberately | still no ranking; a measured dependence per candidate and a non-dominated comparison in `p5/` | `join/measure_next.json`, `p5/p5_comparison.md` |
+| GSE156243 | `ABSENT` | qualified; reversal query INCONCLUSIVE; iLINCS adapter for the signature census | `gse156243/README.md`, `framework/adapters/ilincs.py` |
+| ClinicalTrials.gov | `PRESENT_AND_RUNNABLE` | unchanged | `clinical_census.py` |
+| Declared block 1 (installing) | open | closed by the adapter route; drugfindR/CDRPipe remain blocked on R | `tool_survey_20261022.md` § 2 |
+| Declared block 4 (GSE156243) | open | lifted by a Scientist on 2026-10-22 | `gse156243/` |
+| Declared block 5 (P5, P7) | open | P5 answered as "what to measure"; P7 still has no first evaluation | `p5/`, this file |
+
 ## 8 · What this reconciliation did not touch
 
 The four scientific current files, `disease_model.md`, `_external_repos/MANIFEST.md`,
