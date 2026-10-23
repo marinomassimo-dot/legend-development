@@ -1291,3 +1291,15 @@ assertions keyed by endpoint. Cost: hours. **Cost / API / privacy risk:** none.
 **Cost / API / privacy risk:** none; no keyed API, no unlawful source (a publisher refusal was not circumvented).
 
 **Next surgical micro-step:** none required.
+
+## 2026-10-23 · plan · Drug Repurposing module (PLAN-DRUGREPURPOSING-MODULE-20261022)
+
+**Gap (with evidence).** Twenty of the twenty-six candidates the mechanism-intervention map names cite their papers as author-year prose, so the join (`repurposing_join.py`) finds no `PAPER`, `CLAIM` or `DL-` id behind them and abstains (`module_proof_20261023.md` § 3.4). The hand-made cards for the same levers were written from the manifests by hand and therefore carry the evidence the derived cards cannot see. The gap is in the record's citation habit, not in a missing tool.
+
+**CHANGE (proportional micro-upgrade, shipped).** The module itself: six one-file key-less adapters with their licences read at the source (`framework/adapters/`, `ACKNOWLEDGEMENTS.md` rendered from them), the join with per-paper depth and audit status and a one-hop inheritance through named records (146 → 59 abstentions), the `handoff` mode that turns each card's measured dependence into one SELECT / READ / REPLICATE / AUDIT row for the next batch, and two enrolled suites. No install, no framework, no registry, no score.
+
+**Named, not built.** A second inheritance hop (two records away; would inflate the tables); a freshness gate on the committed `join/` snapshot (would turn red on unrelated batches — `run` prints the diff instead); an extractor that turns a locator into a typed drug assertion (that is a reading, and stays with the Scientists); ToolUniverse / OptimusKG installs (WATCH / TRY in `tool_survey_20261022.md`).
+
+**Cost / API / privacy risk:** zero spend; six key-less public APIs with their rate limits honoured (PubTator 3 one request per query; openFDA under 1,000/day); no identifier of any person in any query; declined on terms: GtoPdb, CLUE, SemMedDB, Orphadata Products, AetherCell.
+
+**Next surgical micro-step:** the selector resolves the map's prose citations to `PAPER` ids (the 21 SELECT rows); on the next `run` the join inherits them with nothing else to change.

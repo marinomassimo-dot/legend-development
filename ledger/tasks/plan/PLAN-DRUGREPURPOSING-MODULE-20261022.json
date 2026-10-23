@@ -104,12 +104,12 @@
    "steps": [
     {
      "step": "E. Run C on the three live axes (missense-class proteostasis, T-type calcium, downstream Wnt/MYC/GSK3/mTOR); report what the module found that the hand-made cards did not and what it missed; update README.md stage table and the reconciliation from measurement",
-     "status": "TODO",
-     "evidence": ""
+     "status": "DONE",
+     "evidence": "disease-models/wwox/research/drug_repurposing/module_proof_20261023.md (live runs: proteostasis 26 queries/3 cards, calcium 16/2, wnt 23/5; found: measured depth and audit status per candidate, two unaudited-contradiction sets, dated label lookups, the route to the papers, a dependence per candidate; missed: the 30 typed drug assertions of the hand-made cards, the whole early-benefit axis (the map names no such record), named missing data in abstentions, twenty map records cited as prose); README.md module table and stage table re-measured; reconciliation_20261020.md § 7b dated addendum"
     },
     {
      "step": "E. Final report: self-evaluation per framework/protocols/session_self_evaluation.md, capability-scout entry, takeaways; land, gate, push",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "evidence": ""
     }
    ]
@@ -193,6 +193,35 @@
    "not_built": "see NOT_BUILT_BY_DESIGN[0] (C entry)",
    "licences": "no new source; every external_sources row on a card carries the adapter's licence and citation and the retrieval date",
    "blocks_for_operator": "none"
+  },
+  {
+   "stage": "D",
+   "date": "2026-10-23",
+   "landed": "main c34bbf812ef69a5f7062c82c024a7215245848a6 (task_close.py)",
+   "measured": "handoff over the 26 derived cards: 21 SELECT, 3 REPLICATE (each with a real PMID and a discovery-lead spec), 2 AUDIT naming the manifests with unaudited contradicts_locator entries; test_handoff green",
+   "failed": "nothing",
+   "removed_or_merged": "no new tool: a mode of repurposing_join.py; no dispatcher, no writer into another actor's surface",
+   "not_built": "see NOT_BUILT_BY_DESIGN (D entry)",
+   "licences": "no new source",
+   "blocks_for_operator": "none"
+  },
+  {
+   "stage": "E",
+   "date": "2026-10-23",
+   "landed": "see OBJ_E_PROOF[1] evidence once landed",
+   "measured": "see module_proof_20261023.md § 1; self-evaluation self_eval_plan_repurposing_module_20261023.md (ATTRIBUTION_CENSUS incidents 6, machine 4, self 2, severity_high 1); capability-scout entry appended to research/capability_scout_log.md",
+   "failed": "nothing new in E; the honest misses are in the proof § 3",
+   "removed_or_merged": "nothing",
+   "not_built": "a second inheritance hop; an assertion extractor; a freshness gate",
+   "licences": "no new source; six licences re-stated in the proof § 6",
+   "blocks_for_operator": "none"
   }
+ ],
+ "TAKEAWAYS": [
+  "The join is the module: without one-hop inheritance through PAPER, CLAIM and DL- ids the external adapters see almost nothing of LEGEND (146 abstentions); with it, 59 — and every route is written per PMID.",
+  "What steers research now: 26 rows for the next batch — two audits nobody had scheduled (Memantine's five unaudited contradictions across two papers; one on the tau-lowering import), three one-paper dependences to replicate, twenty-one prose-cited map records to resolve.",
+  "Derived cards report dependence; hand-made cards report direction. Neither replaces the other: the typed drug assertion is a reading act and stays with the Scientists.",
+  "Six key-less adapters, each one file, each with its licence read at the source and its citation printed with every output; nothing installed, nothing scored, nothing paid.",
+  "Two defects were caught by instruments and not by the author: the executable bit (fresh-clone battery) and the receipt-id requirement (the bridge's validator). The battery after each landing is not ceremony."
  ]
 }
