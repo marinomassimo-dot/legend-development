@@ -181,6 +181,29 @@ class ThreeStates(unittest.TestCase):
         self.assertIn("never absence", result["note"])
         self.assertEqual(result["hits"], [])
 
+    def test_chembl_match_found_needs_the_named_substance(self):
+        module = ra.load("chembl", ADAPTERS)
+
+        def fetch(url, params=None, body=None, timeout=20):
+            if "molecule/search" in url:
+                return 200, {"molecules": [
+                    {"molecule_chembl_id": "CHEMBL1", "pref_name": "CYANOCOBALAMIN CO 57", "molecule_synonyms": []},
+                    {"molecule_chembl_id": "CHEMBL2", "pref_name": "VALPROATE",
+                     "molecule_synonyms": [{"molecule_synonym": "Depakene"}]}]}
+            if "mechanism.json" in url:
+                return 200, {"mechanisms": [{"action_type": "MODULATOR", "mechanism_of_action": "x"}]}
+            return 200, {"chembl_db_version": "ChEMBL_T"}
+        # a class or sentence is not a molecule: the nearest hit must not become MATCH_FOUND
+        near = module.query({"drug": "HSP70 co-inducers"}, fetch=fetch)
+        self.assertEqual(near["status"], "NO_MATCH_FOUND")
+        self.assertEqual(near["hits"], [])
+        self.assertTrue(near["nearest"])
+        self.assertIn("never absence", near["note"])
+        # a synonym of the named substance is the substance, even when it is not the first hit
+        named = module.query({"drug": "depakene"}, fetch=fetch)
+        self.assertEqual(named["status"], "MATCH_FOUND")
+        self.assertEqual({h["molecule_chembl_id"] for h in named["hits"]}, {"CHEMBL2"})
+
     def test_openfda_404_is_no_match_not_error(self):
         module = ra.load("openfda", ADAPTERS)
         result = module.query({"drug": "amlexanox"}, fetch=lambda *a, **k: (404, {"error": {"code": "NOT_FOUND"}}))
