@@ -141,6 +141,7 @@ Run everything as `python3 <path> --help` first. Paths are repo-relative.
 | You want | Run |
 |---|---|
 | non-canonical candidate JSON from local source assertions, with explicit directional abstention and retained counterevidence | `framework/scripts/repurposing_bridge.py <packet.json>` |
+| one external repurposing source queried through its one-file adapter in `framework/adapters/` (Open Targets, ChEMBL, PubTator 3, openFDA, Orphadata, iLINCS; key-less, dated, **NOT WWOX EVIDENCE**, no score; `NO_MATCH_FOUND` is never absence) — list, add, remove, offline or `--live` self-test; convention in `framework/protocols/repurposing_adapter_convention.md` | `framework/scripts/repurposing_adapter.py list` · `… selftest [name] [--live]` · `… query <name> '<json>'` · `… add <name>` · `… remove <name>` |
 | structural LINT over the canonical state — the gate before any `BATCH_COMMIT` | `framework/scripts/legend_lint.py .` |
 | claim pairs that state incompatible things about one entity and endpoint — **a screen, not a verdict** | `framework/scripts/cross_claim_contradiction_census.py` |
 | what a paper DEPENDS ON, screened rather than the paper alone | `framework/scripts/dependency_integrity.py` |
