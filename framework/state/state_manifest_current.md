@@ -107,12 +107,12 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20261019_014
-last_batch_commit_date: 2026-10-22
+last_batch_commit_id: BATCH_20261019_015
+last_batch_commit_date: 2026-10-23
 last_batch_commit_type: MANUAL
-commit_candidates_propagated: 2
+commit_candidates_propagated: 0
 target_wm_version: WM_v7.27
-trigger: MANUAL (ACTOR_ID integrator, assigned by the Orchestrator). Registry identity and depth, no disease-model change: two registry-only candidates (CC-20261022-SCIENTISTD-R4C-01, CC-20261022-SCIENTISTD-R4D-01) propagated with no claim; PAPER 549-556 and LIT-0821-0828 as identity records for eight receipts that had none (ORPHAN_COMPLETE_READ 5 before, 0 after); the depth, receipt, coverage and locator count of twenty-seven records brought to their standing -02 receipts; every locator count re-derived from its manifest. WM_v7.27 preserved.
+trigger: MANUAL (ACTOR_ID integrator, assigned by the Orchestrator). Registry identity and depth, no disease-model change and no commit candidate: PAPER 557-566 and LIT-0829-0837 as identity records for ten receipts that had none (nine T4 NOT WWOX EVIDENCE, WWOX count 0 on the text artefacts; PAPER 566 promoted from CORPUS P379 as a WWOX-direct cancer-system paper); the depth, receipt, coverage and locator count of eight existing records brought to the receipts of 2026-10-23; sixteen identifier edits applied to the mechanism map (a non-current file), two held for a Selector pass; two cells of the Woree rescue reference scaffold re-sourced from the repaired manifest of PMID 42422765. WM_v7.27 preserved.
 ```
 
 Every batch's scope — the candidates it propagated, newest first back to `BATCH_20260810_001`,
@@ -126,8 +126,8 @@ with the keys written beside each and the notes on `BATCH_20260806_002` — is i
 
 ```yaml
 last_lint_type: LINT_AUTOMATIC
-last_lint_id: LINT_20261022_BATCH_20261019_014
-last_lint_date: 2026-10-22
+last_lint_id: LINT_20261023_BATCH_20261019_015
+last_lint_date: 2026-10-23
 last_lint_result: WARN
 ```
 
@@ -213,8 +213,8 @@ to make a suite green — the only way to move it is to have made the change you
 
 ```yaml
 growth_anchor_ledger: framework/state/growth_anchors.jsonl
-growth_anchor_events: 59
-growth_anchor_head: ba41084652f852fe3a93ffb79345c3a44000ec18b96bc15fd8ed9ed1cfa6e155
+growth_anchor_events: 60
+growth_anchor_head: 006b6b72d09573e61d263d0a01ec176adfddf4d1c6af910c75ad9ff8da36a5b2
 ```
 
 ```bash
@@ -262,7 +262,7 @@ baseline below must equal the live count, never preserve historical padding.
 
 ```yaml
 unread_premise_baseline: 0
-unread_premise_measured_on: 2026-10-22
+unread_premise_measured_on: 2026-10-23
 ```
 
 **It is a ratchet, not a wall.** Blocking on the whole legacy backlog would only teach sessions

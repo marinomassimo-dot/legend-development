@@ -275,7 +275,7 @@ The canonical P1–P7 codes follow the WWOX working model and claim registry. **
 **Journal/source:** Molecular Therapy Advances (OMTA — *Mol Ther Adv*) 2026;34 (Cell Press)
 **Identifier:** PMID 42422765 / PMCID PMC13343157 / DOI 10.1016/j.omta.2026.201791 — *Mol Ther Adv* 2026;34(3):201791. Identifier normalizzato in BATCH_20260710_A (era "da confermare"); main text full letto integralmente. Versione published del preprint bioRxiv omonimo.
 **Status:** integrated
-**Evidence depth:** complete_fulltext_read — article and S1–S8; latest receipt `FTR-20260814-42422765-06`; strict schema-v2 manifest `deepdive_manifests/PMID42422765.json`
+**Evidence depth:** complete_fulltext_read — article and S1–S8; latest receipt `FTR-20260814-42422765-06`; strict schema-v2 manifest `deepdive_manifests/PMID42422765.json` **Update 2026-10-23 (`BATCH_20261019_015`):** a further receipt, `FTR-20261023-42422765-01` (reason `adversarial_reanalysis`, a partial re-read, scientist-c, task `MODULE-C2-20261023`; sections the receipt marks read: figures, supplementary; not read or absent in that pass: abstract `not_read`, discussion `not_read`, introduction `not_read`, limitations `not_read`, methods `not_read`, references `not_read`, results `not_read`, tables `not_present`) — REPAIR PASS after the blind module-row audit (`research/page_adjudications/locator_audit_module_rows_20261023.md`), which returned OVERSHOOT on manifest entries 10 and 14; the receipt re-inspected both on the declared surfaces and repaired them (no entry was added). Entries 11, 13, 25, 37 and 46 are text quotations; entries 12, 28, 38, 40, 41 and 45 bear on other figures and were not re-opened in that pass, as the receipt states. It ADDS to the covered surface and supersedes nothing: the standing depth above does not move. The manifest named above was produced by `FTR-20261019-42422765-01` and now holds **48** persisted verbatim locators (re-derived 2026-10-23 as `len(verbatim_locators['entries'])`; surfaces: 24 body, 24 figure).
 **Primary pathway:** P7 — gene therapy readiness
 **Secondary pathway:** P4 / P6 indiretto
 **Model/species:** murine — Wwox-null (severo)
@@ -431,7 +431,7 @@ The canonical P1–P7 codes follow the WWOX working model and claim registry. **
 **Journal/source:** *Epilepsia*
 **Identifier:** PMID 36779245 / PMC PMC10952634 / DOI 10.1111/epi.17542
 **Status:** processed
-**Evidence depth:** complete_fulltext_read — `FTR-20260804-36779245-02`; manifest `deepdive_manifests/PMID36779245.json` (39 locators [corrected 2026-10-21 from «30 locators» by `BATCH_20261019_011` — a **stale total**, not a mis-measurement: the manifest held exactly 30 entries when this sentence was written (2026-09-27 to 2026-10-19), so the figure's attribution to `FTR-20260804-36779245-02` stands and is not re-pointed; the 9 later entries were added by `FTR-20261019-36779245-01` (2026-10-20: figures, supplement, treatment negatives), beside the ten this field already records for 2026-09-27. Re-derived today from the manifest on disk as `len(verbatim_locators['entries'])`], schema v2, 3 declared gaps; structural PASS — two declared artefacts, including the 2026-08 XML the first 20 locators quote, are absent from this deployment, which is an evidence-locality fact and not a provenance failure of the reading); declaration reconciled from the ledger by `CC-20260920-REGISTRY-LEDGER-DEPTH-01` (BATCH_20260920_001) — the reading is the receipt's, not this batch's. **Two later PARTIAL re-reads exist and NEITHER supersedes the complete one** (`CC-20260914-EVIDENCE-DEPTH-01`, re-derived from the ledger 2026-09-27): `FTR-20260810-36779245-03` (methods, results, tables, discussion) and `FTR-20260923-36779245-04` (**supplementary only** — it read `Table S1`, the surface `-02` recorded as `unavailable`, and found a variant/ACMG census with no age, outcome or survival column). A later partial is an ADDITION to the covered surface, never a downgrade of the complete event, and the two together are why this record's depth does not move. Ten locators were added on 2026-09-27 (entries 20-29, by two wave-2 packages) from a re-acquired PMC surface (`PMID36779245_Oliver2023_PMC_2026-09-27.xml`), declared beside the historical artefact rather than substituted for it.
+**Evidence depth:** complete_fulltext_read — `FTR-20260804-36779245-02`; manifest `deepdive_manifests/PMID36779245.json` (47 locators [re-derived 2026-10-23 by `BATCH_20261019_015` from «39 locators», a stale total: the 8 later entries were added by `FTR-20261023-36779245-01`; the earlier correction note follows] [corrected 2026-10-21 from «30 locators» by `BATCH_20261019_011` — a **stale total**, not a mis-measurement: the manifest held exactly 30 entries when this sentence was written (2026-09-27 to 2026-10-19), so the figure's attribution to `FTR-20260804-36779245-02` stands and is not re-pointed; the 9 later entries were added by `FTR-20261019-36779245-01` (2026-10-20: figures, supplement, treatment negatives), beside the ten this field already records for 2026-09-27. Re-derived today from the manifest on disk as `len(verbatim_locators['entries'])`], schema v2, 3 declared gaps; structural PASS — two declared artefacts, including the 2026-08 XML the first 20 locators quote, are absent from this deployment, which is an evidence-locality fact and not a provenance failure of the reading); declaration reconciled from the ledger by `CC-20260920-REGISTRY-LEDGER-DEPTH-01` (BATCH_20260920_001) — the reading is the receipt's, not this batch's. **Two later PARTIAL re-reads exist and NEITHER supersedes the complete one** (`CC-20260914-EVIDENCE-DEPTH-01`, re-derived from the ledger 2026-09-27): `FTR-20260810-36779245-03` (methods, results, tables, discussion) and `FTR-20260923-36779245-04` (**supplementary only** — it read `Table S1`, the surface `-02` recorded as `unavailable`, and found a variant/ACMG census with no age, outcome or survival column). A later partial is an ADDITION to the covered surface, never a downgrade of the complete event, and the two together are why this record's depth does not move. Ten locators were added on 2026-09-27 (entries 20-29, by two wave-2 packages) from a re-acquired PMC surface (`PMID36779245_Oliver2023_PMC_2026-09-27.xml`), declared beside the historical artefact rather than substituted for it. **Update 2026-10-23 (`BATCH_20261019_015`):** a further receipt, `FTR-20261023-36779245-01` (reason `new_question_outside_prior_coverage`, a partial re-read, scientist-a, task `MODULE-A-20261023`; sections the receipt marks read: results, tables; not read or absent in that pass: abstract `not_read`, discussion `not_read`, figures `not_read`, introduction `not_read`, limitations `not_present`, methods `not_read`, references `not_read`, supplementary `not_read`) — targeted re-read for one question (which antiseizure drug classes the cohort lists, and whether the paper reports any response by drug or class): the antiseizure-medication paragraph of the Results, Table 2 and one Discussion paragraph; 8 locators appended (entries 39 to 46), none changing or contradicting an earlier one. The blind module-row audit of 2026-10-23 judged 8 sampled entries of this manifest SUPPORTED (`research/page_adjudications/locator_audit_module_rows_20261023.md`). It ADDS to the covered surface and supersedes nothing: the standing depth above does not move. The manifest named above was produced by `FTR-20261023-36779245-01` and now holds **47** persisted verbatim locators (re-derived 2026-10-23 as `len(verbatim_locators['entries'])`; surfaces: 35 body, 7 table, 5 figure).
 **Primary pathway:** clinical spectrum / natural history / survival analysis
 **Model/species:** human — 13 pazienti, 12 famiglie, 5 centri
 **Genotype/model:** biallelic WWOX variants — N/N / N/M / M/M
@@ -5791,6 +5791,7 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 **Identifier:** PMID 25708809 / PMC4414157 / DOI 10.18632/oncotarget.2927
 **Tier (FASE 1):** C
 **Status:** screened — corpus placeholder
+**Promoted to:** [[paper_registry_current#PAPER 566]] by `BATCH_20261019_015` (receipt `FTR-20261023-25708809-01`); this placeholder is kept as history.
 **LIT link:** LIT-0379
 **Primary pathway:** oncology / tumor suppressor biology
 **Model/species:** mouse
@@ -6536,7 +6537,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Journal/source:** *EMBO Mol Med* 2021;13(8):e13610
 **Identifier:** PMID 34268881 / PMCID PMC8350905 / DOI 10.15252/emmm.202013610
 **Status:** claim_linked
-**Evidence depth:** partial_fulltext_read — `FTR-20260814-34268881-03`; articolo, 11/11 figure e tutti gli otto supplementi depositati letti, ma Appendix Figures S1–S6 sono assenti dal pacchetto ufficiale
+**Evidence depth:** partial_fulltext_read — `FTR-20260814-34268881-03`; articolo, 11/11 figure e tutti gli otto supplementi depositati letti, ma Appendix Figures S1–S6 sono assenti dal pacchetto ufficiale **Update 2026-10-23 (`BATCH_20261019_015`):** a further receipt, `FTR-20261023-34268881-01` (reason `new_question_outside_prior_coverage`, a partial re-read, scientist-a, task `MODULE-A-20261023`; sections the receipt marks read: results; not read or absent in that pass: abstract `not_read`, discussion `not_read`, figures `not_read`, introduction `not_read`, limitations `not_present`, methods `not_read`, references `not_read`, supplementary `not_read`, tables `not_present`) — targeted re-read for one question set (what the deposited WWOX-knockout organoid differential-expression lists say about MTOR, EIF4EBP1, DDIT4, TSC2, RB1CC1 and glycolysis genes, and whether the paper or its review file says anything on harm from WWOX overexpression): the RNA-seq Results paragraph, Tables EV1 and EV2 and review-file pages 22 to 24; 9 locators appended (entries 43 to 51), none changing or contradicting an earlier one; Appendix Fig S3A remains unavailable. It ADDS to the covered surface and supersedes nothing: the standing depth above does not move. The manifest named above was produced by `FTR-20260814-34268881-03` and now holds **52** persisted verbatim locators (re-derived 2026-10-23 as `len(verbatim_locators['entries'])`; surfaces: 22 body, 12 supplement, 18 figure).
 **Primary pathway:** P1 — network hyperexcitability / E-I balance
 **Secondary pathway:** P5 — metabolism (OXPHOS↓/glycolysis↑); P3 — Wnt; DDR
 **Model/species:** human cerebral & forebrain organoids; WiBR3 hESC WWOX-KO; patient iPSC (WSM c.517-2A>G WOREE; WPM G372R SCAR12); W-AAV / lenti-WWOX rescue
@@ -6605,7 +6606,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Journal/source:** *Epileptic Disord* 2018;20(5):401-12
 **Identifier:** PMID 30361190 / DOI 10.1684/epd.2018.1005 — bronze OA
 **Status:** claim_linked
-**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261003-30361190-01` (the earlier `FTR-20260726-30361190-01` is a legacy reconstruction, not a reading); manifest `deepdive_manifests/PMID30361190.json`; dossier `research/fulltext_dossiers/PMID30361190.md`
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261003-30361190-01` (the earlier `FTR-20260726-30361190-01` is a legacy reconstruction, not a reading); manifest `deepdive_manifests/PMID30361190.json`; dossier `research/fulltext_dossiers/PMID30361190.md` **Update 2026-10-23 (`BATCH_20261019_015`):** a further receipt, `FTR-20261023-30361190-01` (reason `new_question_outside_prior_coverage`, a partial re-read, scientist-a, task `MODULE-A-20261023`; sections the receipt marks read: results; not read or absent in that pass: abstract `not_read`, discussion `not_read`, figures `not_read`, introduction `not_read`, limitations `not_present`, methods `not_read`, references `not_read`, supplementary `unavailable`, tables `not_read`) — targeted re-read for one question set (which metabolic investigations are reported normal in each child and what happened on vigabatrin in each): the clinical-data descriptions of both children in the Results, read in the derived text layer of the publisher PDF; 6 locators appended (entries 14 to 19), none changing or contradicting an earlier one. It ADDS to the covered surface and supersedes nothing: the standing depth above does not move. The manifest named above was produced by `FTR-20261003-30361190-01` and now holds **20** persisted verbatim locators (re-derived 2026-10-23 as `len(verbatim_locators['entries'])`; surfaces: 20 body).
 **Primary pathway:** clinical spectrum / treatment response
 **Secondary pathway:** P2 — GABAergic safety (vigabatrin)
 **Model/species:** human — due bambini non imparentati, famiglie consanguinee
@@ -6650,7 +6651,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Journal/source:** *Orphanet J Rare Dis* 2014;9:12
 **Identifier:** PMID 24456803 / PMCID PMC3918143 / DOI 10.1186/1750-1172-9-12
 **Status:** claim_linked
-**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261003-24456803-01` (the earlier `FTR-20260726-24456803-01` is a legacy reconstruction without a coverage map, so the previous `complete` wording had no receipt behind it until now); manifest `deepdive_manifests/PMID24456803.json`; dossier `research/fulltext_dossiers/PMID24456803.md`
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261003-24456803-01` (the earlier `FTR-20260726-24456803-01` is a legacy reconstruction without a coverage map, so the previous `complete` wording had no receipt behind it until now); manifest `deepdive_manifests/PMID24456803.json`; dossier `research/fulltext_dossiers/PMID24456803.md` **Update 2026-10-23 (`BATCH_20261019_015`):** a further receipt, `FTR-20261023-24456803-01` (reason `new_question_outside_prior_coverage`, a partial re-read, scientist-a, task `MODULE-A-20261023`; sections the receipt marks read: results; not read or absent in that pass: abstract `not_read`, discussion `not_read`, figures `not_read`, introduction `not_read`, limitations `not_present`, methods `not_read`, references `not_read`, supplementary `not_read`, tables `not_read`) — targeted re-read for one question (whether the paper reports serum lactate, a muscle biopsy or a mitochondrial study): the first Results paragraph and a string search of the whole JATS; 2 locators appended (entries 11 and 12), none changing or contradicting an earlier one. It ADDS to the covered surface and supersedes nothing: the standing depth above does not move. The manifest named above was produced by `FTR-20261003-24456803-01` and now holds **13** persisted verbatim locators (re-derived 2026-10-23 as `len(verbatim_locators['entries'])`; surfaces: 10 body, 1 table, 1 supplement, 1 figure).
 **Primary pathway:** clinical spectrum / null biallelico
 **Model/species:** human — famiglia egiziana consanguinea
 **Genotype/model:** **p.Arg54\* omozigote** (`c.160C>T`, esone 2) — nonsenso, null biallelico **predetto** (nessun saggio di RNA o proteina dell'allele umano). 🔴 Nomenclatura: il corpo del paper e la Table 2 scrivono `c.160G>T`, ma la Figure 1D e l'Additional file 1 degli stessi autori scrivono `c.160C>T`, e su NM_016373.4 la posizione c.160 è **C** (codone 54 = CGA): `G>T` non può generare p.Arg54\*. Usare `c.160C>T` (correzione `CC-20261003-A-ARG54-01`)
@@ -6672,7 +6673,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Journal/source:** *Hum Mutat* 2019;40(1):42-47
 **Identifier:** PMID 30362252 / PMCID PMC6296882 / DOI 10.1002/humu.23675
 **Status:** claim_linked
-**Evidence depth:** full text reviewed (coverage_status: complete_fulltext_read; Suppl. Table S1 — 23 pazienti — NON recuperata)
+**Evidence depth:** full text reviewed (coverage_status: complete_fulltext_read; Suppl. Table S1 — 23 pazienti — NON recuperata) **Update 2026-10-23 (`BATCH_20261019_015`):** a further receipt, `FTR-20261023-30362252-01` (reason `new_question_outside_prior_coverage`, a partial re-read, scientist-a, task `MODULE-A-20261023`; sections the receipt marks read: abstract, discussion, introduction, results; not read or absent in that pass: figures `captions_only`, limitations `not_present`, methods `not_present`, references `not_read`, supplementary `unavailable`, tables `not_present`) — the whole PMC JATS body read section by section for four questions (cerebral lactate on MR spectroscopy, the findings the paper attributes to the HSPG2 variants, the metabolic findings it records, and the drugs it names); figures 1 and 2 were not opened as images and stay `captions_only`, the supplement stays `unavailable`; 5 locators appended (entries 5 to 9), none changing or contradicting an earlier one. It ADDS to the covered surface and supersedes nothing: the standing depth above does not move. The manifest named above was produced by `FTR-20260927-30362252-02` and now holds **10** persisted verbatim locators (re-derived 2026-10-23 as `len(verbatim_locators['entries'])`; surfaces: 7 body, 3 figure).
 **Primary pathway:** genotype / transcript isoform biology
 **Model/species:** human — fibroblasti di paziente
 **Genotype/model:** **microdelezione omozigote di 22 kb sull'esone 6**, entro una regione di **disomia uniparentale materna** 16q22.1-16q24.3. Fenotipo misto per varianti concomitanti in **HSPG2** (perlecan) → confondente scheletrico.
@@ -7380,7 +7381,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Tier (FASE 1):** not applicable — the FASE 1 triage covered corpus papers 221–400 only; this record is outside that window and the reading is complete, so a reading-priority label has no verdict to carry here (`BATCH_20260920_002`)
 **Status:** processed
 **Record provenance:** read in full; this PMID was in no registry at all, so the record is new, created by `CC-20260920-EIGHT-RECORD-CLASSIFICATION-01` (BATCH_20260920_002). `processed` and not `claim_linked`: this reading creates no claim.
-**Evidence depth:** complete_fulltext_read — ⚠️ **of an artefact that is no longer on this host.** The bytes that reading declares (sha256 `b6b44816bb5a029ad6dd3760dbf02ae94c5fcb69f8a9b5721f45c128bbf189a0`) are absent from every checkout, and a SHA-256 sweep of the host on 2026-10-04 (`evidence_presence.py --search`) recovered **none** of the sixteen absent artefacts of this reading, among them the published supplement that carries the detailed Materials and methods. A replacement article surface was acquired lawfully and free on 2026-10-04 (`files/fulltext/PMID42397075_Steinberg2026_OUP-AM.pdf`, sha256 `9775f766f68929e05665aa572196f4889083b501dc7f6792f1b9243e7dc0fd4b`, 36 pp) and measured to be the **same document with different bytes**: all six figure digests reproduce byte for byte and all 15 body snippets verify verbatim, while the file digest differs and each of the 36 pages carries a download-dated stamp — the only difference found, 🔵 and the stamp is the *observed* difference rather than a proven cause, since no second download was compared. 🔴 **Thirteen of the fourteen supplementary-figure locators of that reading therefore quote bytes that exist nowhere.** `FTR-20260810-42397075-04`; manifest `deepdive_manifests/PMID42397075.json` (44 locators [corrected 2026-10-21 from «30 locators» by `BATCH_20261019_011` — a **stale total**, not a mis-measurement: the manifest held exactly 30 entries when this sentence was written (2026-08-10 to 2026-10-04), so the figure's attribution to `FTR-20260810-42397075-04` stands and is not re-pointed; the 14 later entries were added by `FTR-20261004-42397075-05` (2026-10-04, intake wave 10); the artefact-absence warning above concerns which of these entries can be re-opened and is untouched by this count repair. Re-derived today from the manifest on disk as `len(verbatim_locators['entries'])`], schema v2, strict PASS, 0 gaps)
+**Evidence depth:** complete_fulltext_read — ⚠️ **of an artefact that is no longer on this host.** The bytes that reading declares (sha256 `b6b44816bb5a029ad6dd3760dbf02ae94c5fcb69f8a9b5721f45c128bbf189a0`) are absent from every checkout, and a SHA-256 sweep of the host on 2026-10-04 (`evidence_presence.py --search`) recovered **none** of the sixteen absent artefacts of this reading, among them the published supplement that carries the detailed Materials and methods. A replacement article surface was acquired lawfully and free on 2026-10-04 (`files/fulltext/PMID42397075_Steinberg2026_OUP-AM.pdf`, sha256 `9775f766f68929e05665aa572196f4889083b501dc7f6792f1b9243e7dc0fd4b`, 36 pp) and measured to be the **same document with different bytes**: all six figure digests reproduce byte for byte and all 15 body snippets verify verbatim, while the file digest differs and each of the 36 pages carries a download-dated stamp — the only difference found, 🔵 and the stamp is the *observed* difference rather than a proven cause, since no second download was compared. 🔴 **Thirteen of the fourteen supplementary-figure locators of that reading therefore quote bytes that exist nowhere.** `FTR-20260810-42397075-04`; manifest `deepdive_manifests/PMID42397075.json` (49 locators [re-derived 2026-10-23 by `BATCH_20261019_015` from «44 locators», a stale total: the 5 later entries were added by `FTR-20261023-42397075-01`; the earlier correction note follows] [corrected 2026-10-21 from «30 locators» by `BATCH_20261019_011` — a **stale total**, not a mis-measurement: the manifest held exactly 30 entries when this sentence was written (2026-08-10 to 2026-10-04), so the figure's attribution to `FTR-20260810-42397075-04` stands and is not re-pointed; the 14 later entries were added by `FTR-20261004-42397075-05` (2026-10-04, intake wave 10); the artefact-absence warning above concerns which of these entries can be re-opened and is untouched by this count repair. Re-derived today from the manifest on disk as `len(verbatim_locators['entries'])`], schema v2, strict PASS, 0 gaps) **Update 2026-10-23 (`BATCH_20261019_015`):** a further receipt, `FTR-20261023-42397075-01` (reason `new_question_outside_prior_coverage`, a partial re-read, scientist-c, task `MODULE-C2-20261023`; sections the receipt marks read: discussion, results; not read or absent in that pass: abstract `not_read`, figures `not_read`, introduction `not_read`, limitations `not_read`, methods `not_read`, references `not_read`, supplementary `unavailable`, tables `not_present`) — question-framed resume, not a re-reading: one Results paragraph on Wnt and TCF4, one Discussion paragraph and reference 23, read in the accepted-manuscript text rendering already fingerprinted; 5 locators appended; Supplementary Figure 6F was not obtained and no figure was opened. The artefact-absence warning above is untouched: the manifest still fails `--verify-artifacts` on the older absent artefact. It ADDS to the covered surface and supersedes nothing: the standing depth above does not move. The manifest named above was produced by `FTR-20260810-42397075-03` and now holds **49** persisted verbatim locators (re-derived 2026-10-23 as `len(verbatim_locators['entries'])`; surfaces: 28 body, 21 figure).
 **Primary pathway:** P3 — prenatal structure / neurogenesis
 **Model/species:** human — iPSC-derived neural organoids: wild-type, isogenic WWOX-knockout, and patient-derived lines
 **Genotype/model:** WOREE and SCAR12 patient lines carried alongside an engineered null; the paper names both syndromes
@@ -8790,7 +8791,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Identifier:** DOI 10.1101/2025.11.22.689900 / bioRxiv PPR1124524 — **nessun PMID**
 **Status:** processed
 **Registry role:** research layer — a preprint founds no claim (status vocabulary corrected by `BATCH_20261003_003` from «processed (research layer)», which LINT refuses as INVALID_STATUS; nothing else in the record changed)
-**Evidence depth:** `partial_fulltext_read` (**partial full text**) — ricevuta `FTR-20261003-PPR1124524-01`, PDF bioRxiv `files/fulltext/PPR1124524_Abudiab2025_bioRxiv.pdf` con layer di testo derivato, dossier `fulltext_dossiers/PPR1124524.md`. **Nessun deep-dive manifest**: i manifest sono indicizzati per PMID e un file con nome PPR non sarebbe risolvibile dal modulo di provenance; i locator stanno nel dossier e in `CC-20261003W4-B-MYELIN-CELLAUT-01`.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — ricevuta `FTR-20261003-PPR1124524-01`, PDF bioRxiv `files/fulltext/PPR1124524_Abudiab2025_bioRxiv.pdf` con layer di testo derivato, dossier `fulltext_dossiers/PPR1124524.md`. **Nessun deep-dive manifest**: i manifest sono indicizzati per PMID e un file con nome PPR non sarebbe risolvibile dal modulo di provenance; i locator stanno nel dossier e in `CC-20261003W4-B-MYELIN-CELLAUT-01`. **Update 2026-10-23 (`BATCH_20261019_015`):** a completing pass, `FTR-20261023-PPR1124524-02` (reason `inadequate_prior_coverage`, a partial reading, scientist-b, task `MODULE-B-20261023`; sections the receipt marks read: abstract, discussion, figures, introduction, methods, references, results; not read or absent: limitations `not_present`, supplementary `captions_only`, tables `not_present`) read the six main figures as rendered images (hand readings, UNVERIFIED at higher resolution where the receipt says so; the receipt records a disagreement between text and bar heights in one panel, with no source data deposited in the PDF) and leaves Supplementary Figures 1-6 `captions_only`. It ADDS to the covered surface and supersedes nothing; the depth is not raised. There is still no deep-dive manifest, so no locator count applies; the reading is recorded in the receipt and in `research/module_batch_selection_scientist-b_20261023.md`. Preprint, not peer reviewed: nothing here raises the status of any claim.
 **Integrity status:** clean
 **Primary pathway:** P4 — mielinizzazione / sostanza bianca
 **Model/species:** topo (condizionale Olig2-Cre; colture OPC dal null costitutivo), linea Oli-neu, HEK293T, dati umani snRNA-seq di lesioni di sclerosi multipla
@@ -17809,6 +17810,236 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Role:** Read in the R4c lot of the ten-hour repurposing batch (`ORCH-REPURPOSING-10H-20261021`, task `REPURP-R4C-D-20261022`) — precedents for trial design, outcome measures, natural history and external controls in other rare diseases — as a class-level substitute; the reader calls it NOT WWOX EVIDENCE. Design as this record describes it: expert review; no experimental system. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/repurposing_r4c_scientist-d_20261022.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
 **Next action:** none — read and registered
 **LIT link:** [[literature_tracking_log_current#LIT-0828]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 557
+**Short title:** Abdelmalak 2013 — long-term dichloroacetate in congenital lactic acidosis, open-label follow-up (substitute)
+**Full title:** Long-term safety of dichloroacetate in congenital lactic acidosis
+**Authors:** Abdelmalak M, Lew A, Ramezani R, Shroads AL, Coats BS, Langaee T, Shankar MN, Neiberger RE, Subramony SH, Stacpoole PW
+**Year:** 2013
+**Source type:** primary research — open-label long-term follow-up in patients
+**Journal/source:** *Mol Genet Metab* 2013;109(2):139-43
+**Identifier:** PMID 23611579 / PMC3751427 / DOI 10.1016/j.ymgme.2013.03.019
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_015` (ACTOR_ID `integrator`, task `INTEG-BATCH-20261019-015`) as the PAPER/LIT identity record of receipt `FTR-20261023-23611579-01`, which was in the ledger with no registry identity; reader: `scientist-b`, `research/module_batch_selection_scientist-b_20261023.md` (task `MODULE-B-20261023`). Identity from the PubMed record of 2026-10-23. `registry_records.py`-style search of both registries for this PMID returned no record on 2026-10-23; no corpus placeholder was promoted. No blind locator audit covers this manifest: the module-row audit of 2026-10-23 (`research/page_adjudications/locator_audit_module_rows_20261023.md`) sampled other manifests, so the entries are unaudited. Nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261023-23611579-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID23611579.json` (schema v2, strict PASS, **8** persisted verbatim locators; surfaces: 8 body); artefact `files/fulltext/PMID23611579_Abdelmalak2013_PMC_r2.xml` (sha256 `cad83082b7c125b8b28e861703f904280c8007c580ffe58f1ad950e170076376`); unread or absent (receipt): figures `unavailable`, limitations `not_present`, supplementary `not_present`, tables `not_read`
+**Primary pathway:** none for this gene — pyruvate dehydrogenase kinase inhibition with dichloroacetate, long-term safety in human metabolic disease
+**Model/species:** patients with congenital lactic acidosis
+**Genotype/model:** congenital lactic acidosis; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read text artefacts contain no occurrence of WWOX** (counted on the text artefacts on disk at registration: 0), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in the module batch of 2026-10-23 (task `MODULE-B-20261023`) for row N-08 of the mechanism map (dichloroacetate), as a class-level substitute. Design as this record describes it: primary research — open-label long-term follow-up in patients. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/module_batch_selection_scientist-b_20261023.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered
+**LIT link:** [[literature_tracking_log_current#LIT-0829]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 558
+**Short title:** Fog 2018 — arimoclomol and glucocerebrosidase refolding in patient-derived cells (substitute)
+**Full title:** The heat shock protein amplifier arimoclomol improves refolding, maturation and lysosomal activity of glucocerebrosidase
+**Authors:** Fog CK, Zago P, Malini E, Solanko LM, Peruzzo P, Bornaes C, Magnoni R, Mehmedbasic A, Petersen NHT, Bembi B, Aerts JFMG, Dardis A, … et al. (13 authors listed on PubMed)
+**Year:** 2018
+**Source type:** primary research — patient-derived cell models
+**Journal/source:** *EBioMedicine* 2018;38:142-153
+**Identifier:** PMID 30497978 / PMC6306395 / DOI 10.1016/j.ebiom.2018.11.037
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_015` (ACTOR_ID `integrator`, task `INTEG-BATCH-20261019-015`) as the PAPER/LIT identity record of receipt `FTR-20261023-30497978-01`, which was in the ledger with no registry identity; reader: `scientist-b`, `research/module_batch_selection_scientist-b_20261023.md` (task `MODULE-B-20261023`). Identity from the PubMed record of 2026-10-23. `registry_records.py`-style search of both registries for this PMID returned no record on 2026-10-23; no corpus placeholder was promoted. No blind locator audit covers this manifest: the module-row audit of 2026-10-23 (`research/page_adjudications/locator_audit_module_rows_20261023.md`) sampled other manifests, so the entries are unaudited. Nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261023-30497978-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID30497978.json` (schema v2, strict PASS, **7** persisted verbatim locators; surfaces: 7 body); artefact `files/fulltext/PMID30497978_Fog2018_PMC_r2.xml` (sha256 `570ca10690700b75d4b49075ee403d8240dcbc4b36c9b333572c67cad639d0d3`); unread or absent (receipt): figures `captions_only`, introduction `not_read`, limitations `not_present`, methods `not_read`, supplementary `captions_only`, tables `not_present`
+**Primary pathway:** none for this gene — heat shock protein co-induction acting on a mutant lysosomal enzyme
+**Model/species:** patient fibroblasts and stem-cell-derived neuron-like cells (title and reader note)
+**Genotype/model:** glucocerebrosidase variants; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read text artefacts contain no occurrence of WWOX** (counted on the text artefacts on disk at registration: 0), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in the module batch of 2026-10-23 (task `MODULE-B-20261023`) for row N-12 of the mechanism map (HSP70 co-inducers), as a class-level substitute. Design as this record describes it: primary research — patient-derived cell models. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/module_batch_selection_scientist-b_20261023.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered
+**LIT link:** [[literature_tracking_log_current#LIT-0830]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 559
+**Short title:** Kim 2019 — patient-customised oligonucleotide therapy, single-patient report (substitute, precedent)
+**Full title:** Patient-Customized Oligonucleotide Therapy for a Rare Genetic Disease
+**Authors:** Kim J, Hu C, Moufawad El Achkar C, Black LE, Douville J, Larson A, Pendergast MK, Goldkind SF, Lee EA, Kuniholm A, Soucy A, Vaze J, … et al. (48 authors listed on PubMed)
+**Year:** 2019
+**Source type:** primary research — single-patient case report with functional work
+**Journal/source:** *N Engl J Med* 2019;381(17):1644-1652
+**Identifier:** PMID 31597037 / PMC6961983 / DOI 10.1056/NEJMoa1813279
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_015` (ACTOR_ID `integrator`, task `INTEG-BATCH-20261019-015`) as the PAPER/LIT identity record of receipt `FTR-20261023-31597037-01`, which was in the ledger with no registry identity; reader: `scientist-b`, `research/module_batch_selection_scientist-b_20261023.md` (task `MODULE-B-20261023`). Identity from the PubMed record of 2026-10-23. `registry_records.py`-style search of both registries for this PMID returned no record on 2026-10-23; no corpus placeholder was promoted. No blind locator audit covers this manifest: the module-row audit of 2026-10-23 (`research/page_adjudications/locator_audit_module_rows_20261023.md`) sampled other manifests, so the entries are unaudited. Nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261023-31597037-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID31597037.json` (schema v2, strict PASS, **7** persisted verbatim locators; surfaces: 7 body); artefact `files/fulltext/PMID31597037_Kim2019_PMC_r2.xml` (sha256 `f67b45878b796eb143f6e0e44ae321f91c51edcad60d4fb3a75a745f0e6e7a76`); unread or absent (receipt): figures `unavailable`, limitations `not_present`, supplementary `not_read`, tables `not_present`
+**Primary pathway:** none for this gene — individualised splice-switching oligonucleotide development and its limits
+**Model/species:** single-patient report with patient-derived cell work (design descriptor from the title)
+**Genotype/model:** a rare splice-variant disease; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read text artefacts contain no occurrence of WWOX** (counted on the text artefacts on disk at registration: 0), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in the module batch of 2026-10-23 (task `MODULE-B-20261023`) for row N-10 of the mechanism map (splice-switching ASO), as a class-level substitute. Design as this record describes it: primary research — single-patient case report with functional work. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/module_batch_selection_scientist-b_20261023.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered
+**LIT link:** [[literature_tracking_log_current#LIT-0831]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 560
+**Short title:** Aquilino 2020 — pannexin-1 deficiency and epileptic activity in mice (substitute)
+**Full title:** Pannexin-1 Deficiency Decreases Epileptic Activity in Mice
+**Authors:** Aquilino MS, Whyte-Fagundes P, Lukewich MK, Zhang L, Bardakjian BL, Zoidl GR, Carlen PL
+**Year:** 2020
+**Source type:** primary research — mouse model, brain slices
+**Journal/source:** *Int J Mol Sci* 2020;21(20):7510
+**Identifier:** PMID 33053775 / PMC7589538 / DOI 10.3390/ijms21207510
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_015` (ACTOR_ID `integrator`, task `INTEG-BATCH-20261019-015`) as the PAPER/LIT identity record of receipt `FTR-20261023-33053775-01`, which was in the ledger with no registry identity; reader: `scientist-c`, `research/module_batch_selection_scientist-c_20261023.md` (task `MODULE-C2-20261023`). Identity from the PubMed record of 2026-10-23. `registry_records.py`-style search of both registries for this PMID returned no record on 2026-10-23; no corpus placeholder was promoted. No blind locator audit covers this manifest: the module-row audit of 2026-10-23 (`research/page_adjudications/locator_audit_module_rows_20261023.md`) sampled other manifests, so the entries are unaudited. Nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261023-33053775-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID33053775.json` (schema v2, strict PASS, **10** persisted verbatim locators; surfaces: 9 body, 1 table); artefact `files/fulltext/PMID33053775_Aquilino2020_EPMC.xml` (sha256 `bf33b13b5ebc5a187040b5ebb9d392447b80fcf1d4bf461b91376d5040c240d6`); unread or absent (receipt): figures `captions_only`, limitations `not_present`, references `not_read`, supplementary `not_present`
+**Primary pathway:** none for this gene — pannexin-1 channels and seizure-like activity
+**Model/species:** Panx1-knockout mouse, brain slices
+**Genotype/model:** Panx1 knockout; no WWOX-deficient system
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read text artefacts contain no occurrence of WWOX** (counted on the text artefacts on disk at registration: 0), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in the module batch of 2026-10-23 (task `MODULE-C2-20261023`) for row Q-N-16 of the module batch (pannexin-1), as a class-level substitute. Design as this record describes it: primary research — mouse model, brain slices. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/module_batch_selection_scientist-c_20261023.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading. The reader records that this laboratory is the same as that of a WWOX slice paper in the registry (shared authors, same institution), so the paper is a second model and not an independent laboratory; that is the reader's note and is not re-derived here.
+**Next action:** none — read and registered
+**LIT link:** [[literature_tracking_log_current#LIT-0832]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 561
+**Short title:** Soul 2021 — bumetanide in neonatal seizures, pilot randomised double-blind trial (substitute)
+**Full title:** A Pilot Randomized, Controlled, Double-Blind Trial of Bumetanide to Treat Neonatal Seizures
+**Authors:** Soul JS, Bergin AM, Stopp C, Hayes B, Singh A, Fortuno CR, O'Reilly D, Krishnamoorthy K, Jensen FE, Rofeberg V, Dong M, Vinks AA, … et al. (15 authors listed on PubMed)
+**Year:** 2021
+**Source type:** primary research — pilot randomised controlled trial (epub 2020-12-03)
+**Journal/source:** *Ann Neurol* 2021;89(2):327-340
+**Identifier:** PMID 33201535 / PMC8122513 / DOI 10.1002/ana.25959
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_015` (ACTOR_ID `integrator`, task `INTEG-BATCH-20261019-015`) as the PAPER/LIT identity record of receipt `FTR-20261023-33201535-01`, which was in the ledger with no registry identity; reader: `scientist-c`, `research/module_batch_selection_scientist-c_20261023.md` (task `MODULE-C2-20261023`). Identity from the PubMed record of 2026-10-23. `registry_records.py`-style search of both registries for this PMID returned no record on 2026-10-23; no corpus placeholder was promoted. No blind locator audit covers this manifest: the module-row audit of 2026-10-23 (`research/page_adjudications/locator_audit_module_rows_20261023.md`) sampled other manifests, so the entries are unaudited. Nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261023-33201535-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID33201535.json` (schema v2, strict PASS, **11** persisted verbatim locators; surfaces: 11 body); artefact `files/fulltext/PMID33201535_Soul2021_PMC_r2.xml` (sha256 `5cb3c434f0929292032c755d3271e53c805e0c895fd1ea57298ad042b393fcc1`); unread or absent (receipt): figures `captions_only`, limitations `not_present`, references `not_read`, supplementary `unavailable`
+**Primary pathway:** none for this gene — NKCC1 inhibition and the chloride gradient in neonatal seizures
+**Model/species:** neonates with seizures
+**Genotype/model:** mostly acquired neonatal brain injury (reader note); no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read text artefacts contain no occurrence of WWOX** (counted on the text artefacts on disk at registration: 0), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in the module batch of 2026-10-23 (task `MODULE-C2-20261023`) for row Q-R-07 of the module batch (bumetanide), as a class-level substitute. Design as this record describes it: primary research — pilot randomised controlled trial (epub 2020-12-03). Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/module_batch_selection_scientist-c_20261023.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered
+**LIT link:** [[literature_tracking_log_current#LIT-0833]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 562
+**Short title:** Lee 2022 — dichloroacetate plus pyruvate after seizure, rat model (substitute)
+**Full title:** Combined Treatment of Dichloroacetic Acid and Pyruvate Increased Neuronal Survival after Seizure
+**Authors:** Lee SH, Choi BY, Kho AR, Hong DK, Kang BS, Park MK, Lee SH, Choi HC, Song HK, Suh SW
+**Year:** 2022
+**Source type:** primary research — rat model
+**Journal/source:** *Nutrients* 2022;14(22):4804
+**Identifier:** PMID 36432491 / PMC9698956 / DOI 10.3390/nu14224804
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_015` (ACTOR_ID `integrator`, task `INTEG-BATCH-20261019-015`) as the PAPER/LIT identity record of receipt `FTR-20261023-36432491-01`, which was in the ledger with no registry identity; reader: `scientist-b`, `research/module_batch_selection_scientist-b_20261023.md` (task `MODULE-B-20261023`). Identity from the PubMed record of 2026-10-23. `registry_records.py`-style search of both registries for this PMID returned no record on 2026-10-23; no corpus placeholder was promoted. No blind locator audit covers this manifest: the module-row audit of 2026-10-23 (`research/page_adjudications/locator_audit_module_rows_20261023.md`) sampled other manifests, so the entries are unaudited. Nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261023-36432491-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID36432491.json` (schema v2, strict PASS, **8** persisted verbatim locators; surfaces: 8 body); artefact `files/fulltext/PMID36432491_Lee2022_PMC_r2.xml` (sha256 `28a08a48b1bc2f9f91a8561cdc98f2f3d0f323a73556dd637ea183d7e4f0ea99`); unread or absent (receipt): figures `captions_only`, limitations `not_present`, methods `not_read`, supplementary `not_read`, tables `not_present`
+**Primary pathway:** none for this gene — pyruvate dehydrogenase kinase inhibition and seizure injury
+**Model/species:** adult male rats, pilocarpine seizure model (reader note)
+**Genotype/model:** wild-type rat; no WWOX-deficient system
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read text artefacts contain no occurrence of WWOX** (counted on the text artefacts on disk at registration: 0), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in the module batch of 2026-10-23 (task `MODULE-B-20261023`) for row N-08 of the mechanism map (dichloroacetate), as a class-level substitute. Design as this record describes it: primary research — rat model. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/module_batch_selection_scientist-b_20261023.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered
+**LIT link:** [[literature_tracking_log_current#LIT-0834]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 563
+**Short title:** Kim 2023 — framework for individualised splice-switching oligonucleotide therapy (substitute, precedent)
+**Full title:** A framework for individualized splice-switching oligonucleotide therapy
+**Authors:** Kim J, Woo S, de Gusmao CM, Zhao B, Chin DH, DiDonato RL, Nguyen MA, Nakayama T, Hu CA, Soucy A, Kuniholm A, Thornton JK, … et al. (29 authors listed on PubMed)
+**Year:** 2023
+**Source type:** primary research — framework paper (taxonomy of splice variants and oligonucleotide amenability)
+**Journal/source:** *Nature* 2023;619(7971):828-836
+**Identifier:** PMID 37438524 / PMC10371869 / DOI 10.1038/s41586-023-06277-0
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_015` (ACTOR_ID `integrator`, task `INTEG-BATCH-20261019-015`) as the PAPER/LIT identity record of receipt `FTR-20261023-37438524-01`, which was in the ledger with no registry identity; reader: `scientist-b`, `research/module_batch_selection_scientist-b_20261023.md` (task `MODULE-B-20261023`). Identity from the PubMed record of 2026-10-23. `registry_records.py`-style search of both registries for this PMID returned no record on 2026-10-23; no corpus placeholder was promoted. No blind locator audit covers this manifest: the module-row audit of 2026-10-23 (`research/page_adjudications/locator_audit_module_rows_20261023.md`) sampled other manifests, so the entries are unaudited. Nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261023-37438524-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID37438524.json` (schema v2, strict PASS, **6** persisted verbatim locators; surfaces: 5 body, 1 figure); artefact `files/fulltext/PMID37438524_Kim2023_PMC_r2.xml` (sha256 `4f843c42feafc69db40d61a8b39af10fa2dc15f25ab60bb9d06a2539629b764f`); unread or absent (receipt): figures `captions_only`, introduction `not_read`, limitations `not_present`, methods `not_read`, results `not_read`, supplementary `not_read`, tables `not_read`
+**Primary pathway:** none for this gene — which splice variants are amenable to splice-switching oligonucleotides
+**Model/species:** patient-derived cell work and a taxonomy of variants (design descriptor from the title and reader note)
+**Genotype/model:** splice variants in general; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read text artefacts contain no occurrence of WWOX** (counted on the text artefacts on disk at registration: 0), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in the module batch of 2026-10-23 (task `MODULE-B-20261023`) for row N-10 of the mechanism map (splice-switching ASO), as a class-level substitute. Design as this record describes it: primary research — framework paper (taxonomy of splice variants and oligonucleotide amenability). Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/module_batch_selection_scientist-b_20261023.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered
+**LIT link:** [[literature_tracking_log_current#LIT-0835]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 564
+**Short title:** Cheerie 2025 — consensus guidelines for antisense eligibility of pathogenic variants (substitute, precedent)
+**Full title:** Consensus guidelines for assessing eligibility of pathogenic DNA variants for antisense oligonucleotide treatments
+**Authors:** Cheerie D, Meserve MM, Beijer D, Kaiwar C, Newton L, Taylor Tavares AL, Verran AS, Sherrill E, Leonard S, Sanders SJ, Blake E, Elkhateeb N, … et al. (40 authors listed on PubMed)
+**Year:** 2025
+**Source type:** expert consensus guideline (review)
+**Journal/source:** *Am J Hum Genet* 2025;112(5):975-983
+**Identifier:** PMID 40139194 / PMC12120168 / DOI 10.1016/j.ajhg.2025.02.017
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_015` (ACTOR_ID `integrator`, task `INTEG-BATCH-20261019-015`) as the PAPER/LIT identity record of receipt `FTR-20261023-40139194-01`, which was in the ledger with no registry identity; reader: `scientist-b`, `research/module_batch_selection_scientist-b_20261023.md` (task `MODULE-B-20261023`). Identity from the PubMed record of 2026-10-23. `registry_records.py`-style search of both registries for this PMID returned no record on 2026-10-23; no corpus placeholder was promoted. No blind locator audit covers this manifest: the module-row audit of 2026-10-23 (`research/page_adjudications/locator_audit_module_rows_20261023.md`) sampled other manifests, so the entries are unaudited. Nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261023-40139194-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID40139194.json` (schema v2, strict PASS, **8** persisted verbatim locators; surfaces: 3 body, 5 supplement); artefact `files/fulltext/PMID40139194_Cheerie2025_PMC_r2.xml` (sha256 `138a55b36cfc8b766c40ef7a8c838bab401d9e7b1e6d2d7092e7994d9a908e20`); unread or absent (receipt): figures `captions_only`, limitations `not_present`, supplementary `not_read`
+**Primary pathway:** none for this gene — eligibility criteria for antisense oligonucleotide treatment of pathogenic variants
+**Model/species:** expert consensus; no experimental system
+**Genotype/model:** pathogenic DNA variants in general; no WWOX allele
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read text artefacts contain no occurrence of WWOX** (counted on the text artefacts on disk at registration: 0), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in the module batch of 2026-10-23 (task `MODULE-B-20261023`) for row N-10 of the mechanism map (splice-switching ASO), as a class-level substitute. Design as this record describes it: expert consensus guideline (review). Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/module_batch_selection_scientist-b_20261023.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered
+**LIT link:** [[literature_tracking_log_current#LIT-0836]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 565
+**Short title:** Uzay 2026 — lithium in a SNAP25 encephalopathy knock-in mouse (substitute, precedent)
+**Full title:** Lithium as a therapeutic strategy for SNAP25 encephalopathies via modulation of homeostatic plasticity
+**Authors:** Uzay B, Ma ZZ, Uzay IA, Alten B, Monteggia LM, Kavalali ET
+**Year:** 2026
+**Source type:** primary research — mouse model
+**Journal/source:** *Neuropsychopharmacology* 2026 (online 2026-08-27; no volume or pages in the PubMed record of 2026-10-23)
+**Identifier:** PMID 42661025 / DOI 10.1038/s41386-026-02535-7
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_015` (ACTOR_ID `integrator`, task `INTEG-BATCH-20261019-015`) as the PAPER/LIT identity record of receipt `FTR-20261023-42661025-01`, which was in the ledger with no registry identity; reader: `scientist-c`, `research/module_batch_selection_scientist-c_20261023.md` (task `MODULE-C2-20261023`). Identity from the PubMed record of 2026-10-23. `registry_records.py`-style search of both registries for this PMID returned no record on 2026-10-23; no corpus placeholder was promoted. No blind locator audit covers this manifest: the module-row audit of 2026-10-23 (`research/page_adjudications/locator_audit_module_rows_20261023.md`) sampled other manifests, so the entries are unaudited. Nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261023-42661025-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID42661025.json` (schema v2, strict PASS, **12** persisted verbatim locators; surfaces: 12 body); artefact `files/fulltext/PMID42661025_Uzay2026_publisher.pdf` (sha256 `67f167dfefb88e312de182451318f565cc40c420422764049ede89514adc48d4`); unread or absent (receipt): figures `captions_only`, references `not_read`, supplementary `unavailable`, tables `not_present`
+**Primary pathway:** none for this gene — lithium and homeostatic plasticity in a genetic developmental and epileptic encephalopathy
+**Model/species:** SNAP25 knock-in mouse
+**Genotype/model:** SNAP25 missense knock-in; no WWOX-deficient system
+**Transferability:** T4 — 🔴 **NOT WWOX EVIDENCE: the read text artefacts contain no occurrence of WWOX** (counted on the text artefacts on disk at registration: 0), the article contains no WWOX measurement and carries no WWOX patient. It is an earned null for the gene and asserts nothing about WWOX biology
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Role:** Read in the module batch of 2026-10-23 (task `MODULE-C2-20261023`) for row Q-R-04 of the module batch (lithium), as a class-level substitute. Design as this record describes it: primary research — mouse model. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/module_batch_selection_scientist-c_20261023.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered
+**LIT link:** [[literature_tracking_log_current#LIT-0837]]
+**Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
+
+---
+## PAPER 566
+**Short title:** Hua 2015 — miR-153 promotes Wnt/β-catenin activation in hepatocellular carcinoma through suppression of WWOX
+**Full title:** MicroRNA-153 promotes Wnt/β-catenin activation in hepatocellular carcinoma through suppression of WWOX
+**Authors:** Hua HW, Jiang F, Huang Q, Liao Z, Ding G
+**Year:** 2015
+**Source type:** primary research — hepatocellular carcinoma cell lines and a murine liver cancer model
+**Journal/source:** *Oncotarget* 2015;6(6):3840-7
+**Identifier:** PMID 25708809 / PMC4414157 / DOI 10.18632/oncotarget.2927
+**Status:** processed
+**Record provenance:** created by `BATCH_20261019_015` (ACTOR_ID `integrator`, task `INTEG-BATCH-20261019-015`) as the PAPER/LIT identity record of receipt `FTR-20261023-25708809-01`, which was in the ledger with no registry identity; reader: `scientist-a`, `research/module_batch_selection_scientist-a_20261023.md` (task `MODULE-A-20261023`). Identity from the PubMed record of 2026-10-23. It is promoted from the corpus placeholder `CORPUS P379` / `LIT-0379`, which is kept as history. No blind locator audit covers this manifest: the module-row audit of 2026-10-23 (`research/page_adjudications/locator_audit_module_rows_20261023.md`) sampled other manifests, so the entries are unaudited. Nothing in this record depends on the locators being right.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261023-25708809-01` (the receipt that produced the manifest; no later reading has extended it); manifest `deepdive_manifests/PMID25708809.json` (schema v2, strict PASS, **12** persisted verbatim locators; surfaces: 9 body, 3 figure); artefact `files/fulltext/PMID25708809_Hua2015_PMC_r2.xml` (sha256 `fc453cb531ddee0ea7589bc82741dddf7c09d84b9251de029dd5eb266c959864`); unread or absent (receipt): limitations `not_present`, references `not_read`, supplementary `captions_only`, tables `not_present`
+**Primary pathway:** oncology / tumor suppressor biology — microRNA regulation of WWOX in a cancer system
+**Model/species:** human hepatocellular carcinoma cell lines; mouse liver cancer model
+**Genotype/model:** miR-153 overexpression / antigomir in a cancer system; no WWOX-deficient neural system and no WWOX patient
+**Transferability:** T3 — comparator or adjacent source — WWOX-direct, but a cancer system (hepatocellular carcinoma cells and a mouse liver cancer model), not a loss-of-function neural system; WWOX occurs 46 times in the read text artefact counted on disk at registration; no datum transfers to a WWOX allele
+**clinical relevance:** LOW — background. Not medical advice.
+**Claim links:** none
+**Role:** Read in the module batch of 2026-10-23 (task `MODULE-A-20261023`) for row N-05 of the mechanism map (anti-miR-153), as a WWOX-direct paper in a cancer system. Design as this record describes it: primary research — hepatocellular carcinoma cell lines and a murine liver cancer model. Its paper-level findings, with their locator-level evidence, live in the manifest and in `research/module_batch_selection_scientist-a_20261023.md` and are **not restated here**, so that no sentence in this identity record can outrun the audit state of the reading.
+**Next action:** none — read and registered
+**LIT link:** [[literature_tracking_log_current#LIT-0379]]
 **Note:** class-level record; no individual-level detail. Model and design lines are identity-level descriptors taken from the title, the PubMed record and the reader's assessment, not findings. No dose, route or schedule is reproduced. Not medical advice.
 
 ---

@@ -1,0 +1,40 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "_note": "Assigned by the Orchestrator in the session of 2026-10-23. Registry identity and depth, one map-identifier application and one scaffold re-sourcing; no claim added or modified; not medical advice.",
+ "TASK_ID": "BATCH_20261019_015",
+ "ACTOR_ID": "integrator",
+ "OWNER": "orchestrator",
+ "CURRENT_STATE": "COMPLETE",
+ "assigned_on": "2026-10-23",
+ "OBJECTIVE": "Record-scoped BATCH_COMMIT: (a) identity, depth, receipt and coverage lines for the receipts recorded on 2026-10-23, locator counts re-derived last; (b) evaluate any new commit candidate; (c) apply the Scientist D map identifier edits only if they pass the stated checks; (d) re-source two cells of the Woree rescue reference scaffold after the audited repair of PMID 42422765; (e) carry the WM version forward.",
+ "TASK_CLAIM": {
+  "actor": "integrator",
+  "branch": "task/integrator-batch-015",
+  "worktree": ".claude/worktrees/int-015",
+  "snapshot": "backup/20261023_batch015 (not committed)",
+  "base": "096afdf0862e95c0a4b6ca771df47bd2a0f3c7b7"
+ },
+ "RESULT": {
+  "wm_version": "WM_v7.27 preserved (carried forward as batches 009 to 014)",
+  "candidates_propagated": 0,
+  "paper_registry": "record-scoped, no FULL_FALLBACK: PAPER 557-566 inserted (nine receipts with no identity, T4 NOT WWOX EVIDENCE; PAPER 566 = PMID 25708809 promoted from CORPUS P379, WWOX-direct cancer system); depth/receipt/locator lines appended for PAPER 011, 018, 039, 043, 044, 045, 094, 157; stale totals of PAPER 018 (39 to 47) and 094 (44 to 49) re-derived",
+  "literature_log": "LIT-0829-0837 inserted; LIT-0379 promoted to processed",
+  "growth_anchors": "+10 papers, +9 literature (GA event 60)",
+  "map": "16 of 18 hunks of map_identifier_edits_20261023.diff applied path-scoped (git apply --check clean, pure additions of identifiers, mechanism_intervention_map.md is not one of the four scientific current files); R-07 and N-06 hunks held",
+  "scaffold": "item 5 of the dose-flag section and row S2 re-sourced from manifest entries 14 and 10, dated correction note naming commit bf151b43, no dose guidance (commit dfc8eb48)",
+  "ledger_rewrites_in_place": "none"
+ },
+ "DEFAULTS_TAKEN": [
+  {"condition": "No commit candidate exists in the queue for the module-batch Scientists", "default": "nothing propagated, no claim written from their notes; CC-20261021-SCIENTIST-A-R1-PROTEOSTASIS-01 and CC-20261021-SCIENTIST-C-R3-A51-ATTRIBUTION-01 stay deferred, evidence unchanged"},
+  {"condition": "ORPHAN_COMPLETE_READ is already 0 (all 2026-10-23 receipts are partial reads)", "default": "identity records still created for the ten receipts whose PMID had no PAPER record or only a corpus placeholder"},
+  {"condition": "Map diff: the author's own record says R-07 and N-06 need a Selector pass (DL-MECH-035 ambiguous for bumetanide, DL-BIO-008 one of four candidates)", "default": "those two hunks dropped, the other 16 applied with git apply --recount; the 'record already names the paper' check was done by existence of every cited id plus the author's per-record tally, not by a Selector pass"},
+  {"condition": "Scaffold correction note must name 'the commit'", "default": "names bf151b43, the commit that repaired manifest entries 10 and 14; the commit of the edit itself cannot name its own hash"},
+  {"condition": "Re-read receipts of 2026-10-23 add to, and do not supersede, the standing complete reads", "default": "depth of the existing records not changed; the update sentence avoids the literal depth token so the depth cross-check reads the standing depth"},
+  {"condition": "LIT records of existing papers carry no depth line", "default": "left unchanged apart from LIT-0379 (promotion)"},
+  {"condition": "PAPER 157 (preprint) has no manifest", "default": "no locator count declared; receipt cited"},
+  {"condition": "Nine pre-existing depth/receipt drifts of the cross-check (other PMIDs) and the FAIL of the PMID 42397075 manifest under --verify-artifacts (absent older artefact)", "default": "not touched, not mine"},
+  {"condition": "WM version rule", "default": "no disease-model change, no bump; current_state IN_BATCH_COMMIT not set (path-scoped landing, as 012 to 014)"}
+ ],
+ "STOP_LOG": [],
+ "HELD_UNCHANGED": ["map hunks R-07 (bumetanide) and N-06 (lactate)"]
+}

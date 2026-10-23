@@ -492,6 +492,7 @@ platform to run it has existed for years.
 | **EXPECTED_DIRECTION_OF_EFFECT** | 🔴 **conflicted across two admitted axes**: plausibly beneficial on M4 (GSK3β), **harmful on M5** — lithium stabilizes β-catenin and therefore *activates* a pathway already hyperactivated |
 | **MAIN_TRANSLATIONAL_RISK** | adopting a WWOX-specific rationale that the primary panel does not support |
 | **DECISIVE_PRECLINICAL_TEST** | a PTZ + lithium arm with an **explicit, tested** `−/−` vs `+/+` comparison — or a different GSK3β inhibitor under the same design. Until then, no genotype-specific claim is available |
+| **SOURCE_IDS** | CLAIM 016, CLAIM 035, PAPER 019, PAPER 056 |
 
 **Class:** `DEPRIORITIZE` — not for toxicity, but because **the evidence that made it the strongest
 signal does not say what it was read as saying**, and its direction is wrong on a second axis.
@@ -517,6 +518,7 @@ signal does not say what it was read as saying**, and its direction is wrong on 
 | **EXPECTED_DIRECTION_OF_EFFECT** | restore oxidative flux; **NOT** a demonstrated developmental modification |
 | **MAIN_TRANSLATIONAL_RISK** | 🔴 the rationale rests on models; **human WWOX metabolism is normal across four independent sources**, and the real-world continuation signal is poor (1/3 continued; listed among ineffective interventions in a severe case) |
 | **DECISIVE_PRECLINICAL_TEST** | **Seahorse OCR/ECAR on donor-derived fibroblasts/LCL vs control** — the only remaining falsifier since lactate became ambiguous. Zero-cost second test: Seahorse on the existing WWOX-KO organoids, closing the transcriptome→flux gap |
+| **SOURCE_IDS** | CLAIM 042, CLAIM 020, DL-MECH-020 |
 
 **Class:** `PROMISING_BUT_MECHANISTIC_GAP` — the gap being **transcriptome vs flux**, which one
 experiment closes.
@@ -542,6 +544,7 @@ experiment closes.
 | **EXPECTED_DIRECTION_OF_EFFECT** | ↓GFAP/Iba1, slowed progression — **symptomatic/slowing, not curative** |
 | **MAIN_TRANSLATIONAL_RISK** | 🔴 **the target is downstream of the target.** Neuron-restricted WWOX rescue *by itself* reduces gliosis — so part of this axis is a **consequence** of neuronal dysfunction, not an independent driver. Treating it treats an effect |
 | **DECISIVE_PRECLINICAL_TEST** | in the **existing, characterized Wwox^P47T mouse** (survives >1 year, vs ~1 month for the null): does the agent reduce astro-microgliosis, slow Purkinje loss, and improve motor coordination? |
+| **SOURCE_IDS** | CLAIM 006, DL-REPO-002 |
 
 **Class:** `TRANSFER_HYPOTHESIS`.
 
@@ -591,6 +594,7 @@ cannot be ranked at all until one measurement exists.
 | **EXPECTED_DIRECTION_OF_EFFECT** | restore correct exon-9 inclusion — measurable as a rise in the exon8–9/core transcript ratio |
 | **MAIN_TRANSLATIONAL_RISK** | delivery, and irreversibility in a gene whose over- and under-dosage are both harmful |
 | **DECISIVE_PRECLINICAL_TEST** | **first**, characterize the real transcript: junction-spanning RT-PCR ± NMD block, amplicon sequencing, long-read if multiple isoforms appear. **No editing-vs-anything choice may precede this.** Then: PAM availability and bystander-cytosine survey at the locus |
+| **SOURCE_IDS** | DL-MOL-011 |
 
 **Class:** `TRANSFER_HYPOTHESIS` — mechanistically possible, which is exactly what the ASO route is
 **not**.
@@ -616,6 +620,7 @@ cannot be ranked at all until one measurement exists.
 | **EXPECTED_DIRECTION_OF_EFFECT** | **soluble, correctly localized, functional** WWOX. Abundance alone is not success |
 | **MAIN_TRANSLATIONAL_RISK** | 🔴 **"stable but inert"** — and here it has an identified victim function: the ERLIQ 402–406 degron contains L404, required for the demonstrated GSK3β inhibition. Stability in WWOX **is bought with occlusion** |
 | **DECISIVE_PRECLINICAL_TEST** | the ordered sequence, each step informative alone: (1) WB + qRT-PCR on variant-carrying cells vs control; (2) **nascent synthesis + pulse-chase** with soluble/insoluble fractionation, to separate production from disappearance; (3) orthogonal turnover probes (proteasomal and lysosomal arms with viability) — HSC70/LAMP1 are associative, **LAMP2A-dependence is what CMA requires**; (4) only then a mini-screen; (5) promote a hit only if **≥2 orthogonal readouts beyond abundance** recover, including **subcellular localization** and partner binding |
+| **SOURCE_IDS** | CLAIM 019, DL-MECH-036, DL-MECH-037, DL-BIO-001 |
 
 **Class:** `PROMISING_BUT_MECHANISTIC_GAP` — the gap is causal, not pharmacological: the branch has
 not been discriminated.
@@ -628,6 +633,7 @@ not been discriminated.
 each carries what would **revive** it — nothing dies silently.
 
 ### N-01 — mTOR inhibitors (rapamycin / everolimus) → **`INSUFFICIENT` — mai misurato a livello proteico in alcun sistema WWOX**
+**Source ids:** PAPER 039, DL-MECH-034.
 **Failure mode:** *`INSUFFICIENT` — mai misurato a livello proteico in alcun sistema WWOX.* The reflex move in genetic DEE, imported from TSC.
 The only WWOX-specific measurement touching this axis shows **mTOR/EIF4EBP1 DOWN and autophagy DOWN**
 in WWOX-KO cerebral organoids. An mTOR inhibitor would push the **same direction as the only directional datum** — a **non-locatored transcriptomic signal at n = 2/4**, **not a measurement of mTORC1 signalling**.
@@ -639,6 +645,7 @@ directional datum is unfavourable*.
 system; or any WWOX model showing mTORC1 **hyper**activation.
 
 ### N-02 — Lithium as a WWOX-specific disease modifier → **the evidence does not say what it was read as saying**
+**Source ids:** CLAIM 016, PAPER 019.
 **Failure mode:** *evidence transfer that was never genotype-controlled*, compounded by *wrong
 direction on a second axis*. Lithium suppressed PTZ seizures in **all three genotypes including wild
 type**; and lithium activates Wnt, which is already hyperactivated. It remains an anticonvulsant; it
@@ -647,6 +654,7 @@ is not a WWOX-mechanism drug.
 GSK3β inhibitor under the same design.
 
 ### N-03 — Sodium-channel blockers (carbamazepine, phenytoin, oxcarbazepine) → **target not causally downstream of WWOX**
+**Source ids:** DL-REPO-001.
 **Failure mode:** *the target is not causally downstream of WWOX.* Precision therapy in
 burst-suppression DEE is gene-dependent: Na-blockers serve the Nav channelopathies (KCNQ2-GoF,
 SCN2A). The WWOX node is NMDAR/gap-junction. The value here is **differential** — it excludes a whole
@@ -655,6 +663,7 @@ class and redirects attention to R-02.
 in a WWOX model.
 
 ### N-04 — Broad GABAergic push (chronic high-dose benzodiazepines; vigabatrin as a mechanism play) → **premise unmeasured, and a real safety signal**
+**Source ids:** CLAIM 001, CLAIM 031, DL-MECH-035.
 **Failure mode:** *corrects a marker, not the mechanism* — plus an unmeasured premise. VABAM is
 documented in WWOX-DEE; and the depolarizing-GABA rationale **failed as a clinical predictor**
 (vigabatrin resolved spasms in a WWOX-null child). Both directions of the conflict are live: efficacy
@@ -664,6 +673,7 @@ is unchanged: caution / avoid unless alternatives are exhausted, with the risk e
 surveillance imaging.
 
 ### N-05 — Boosting WWOX expression alone (CRISPRa, anti-miR-153, small-molecule activators) → **downstream bottleneck, and an allele-asymmetric amplifier**
+**Source ids:** DL-MOL-004, CLAIM 019, DL-MECH-069.
 **Failure mode:** *the target is not the bottleneck.* Normal transcript with protein not detected
 means the bottleneck is downstream of transcription — a rejection resting on a **direct measurement
 of the exact variant**, which is why it holds where others fell.
@@ -685,6 +695,7 @@ Tier 1/2 biomarker file.
 **`REVIVAL_TRIGGER`:** Seahorse/fluxomics showing a real bioenergetic shift in donor-derived cells.
 
 ### N-07 — Digoxin (HIF1α inhibition) → **right target validation, wrong clinical object**
+**Source ids:** PAPER 091, CLAIM 025.
 **Failure mode:** *toxicity incompatible* + *wrong endpoint*. The only approved drug that corrects a
 Wwox-dependent phenotype **in vivo** — which makes it strong **target validation** for HIF1α/PDK1. But
 its endpoint in the mouse was **glycaemia**; the endpoint that matters here is **neuronal
@@ -701,6 +712,7 @@ mechanism. R-05 achieves the same metabolic bypass with an incomparably better p
 pending `legend-safety-triage`, and downstream of the falsification of R-05 anyway.
 
 ### N-09 — pTyr33-WWOX peptide as functional restoration → **the direction is inverted**
+**Source ids:** DL-MOL-008, CLAIM 023.
 **Failure mode:** *acts in the wrong direction.* Phospho-Tyr33 WOX1 is **pro-apoptotic**; the peptide
 **blocks** neuronal death, i.e. it acts as a competitive **inhibitor** of a WWOX-dependent function,
 not as its substitute. In a WWOX-**deficient** system, inhibiting WWOX function restores nothing. A
@@ -710,6 +722,7 @@ does not inherit this rationale. The refutation rests on the abstract (full text
 full text says otherwise it re-opens.
 
 ### N-10 — Splice-switching ASO for a canonical acceptor allele → **the modality cannot do the job**
+**Source ids:** DL-MOL-011.
 **Failure mode:** *derived from a mechanism that cannot work.* SSOs **mask** elements; they do not
 **create** splice sites. Masking the +8 cryptic site would shift splicing toward *another* aberrant
 product, not the wild type. In-frame skipping is impossible — exon 9 is the last exon and carries the
@@ -718,17 +731,20 @@ destabilizes the protein. The *Milasen* precedent is **regulatory**, not proof o
 Status `stress-tested`, **not** `refuted`: no systematic counterexample search was run.
 
 ### N-11 — 4-PBA / TUDCA on the ER-chaperone rationale → **wrong compartment**
+**Source ids:** DIS-004, DL-MECH-036, DL-MECH-037.
 **Failure mode:** *derived from a textbook default.* "Misfolded protein → ERAD → chemical chaperone"
 is true **only for ER/secretory proteins**. WWOX is cytosolic; the route is lysosomal. The rationale
 is dead, **the molecule is not**: 4-PBA is also an HDAC inhibitor and could act as an HSP co-inducer —
 **a different mechanism**, to be re-evaluated on that basis only if the lysosomal arm is confirmed.
 
 ### N-12 — HSP70 co-inducers (e.g. arimoclomol) for an SDR missense → **may accelerate the damage**
+**Source ids:** DL-MECH-047, CLAIM 019.
 **Failure mode:** *wrong direction, hidden inside a plausible one.* "It is a chaperone, therefore it
 helps folding" is false: **the sign depends on which chaperone and which route.** HSC70 does not
 rescue — it **delivers to the lysosome**. Proposed and withdrawn on the same day.
 
 ### N-13 — Pro-myelinating agents (clemastine, benztropine, T3, quetiapine) → **wrong cell compartment, and a closing window**
+**Source ids:** CLAIM 003, DL-MECH-031.
 **Failure mode:** *the target is not causally downstream of WWOX in the cell being targeted* +
 *developmental window*. Deleting Wwox in oligodendrocytes (Olig2-Cre) or astrocytes (GFAP-Cre)
 produces no evident anomaly; deleting it in **neurons** reproduces the whole phenotype, myelin
@@ -742,6 +758,7 @@ and a cell-autonomous oligodendroglial role under remyelination stress is in obs
 review-sourced primary still queued. **Partial benefit is not excluded.**
 
 ### N-14 — Antioxidants (NAC, CoQ10, creatine) on the "WWOX loss → ROS" rationale → **the relationship is not monotonic**
+**Source ids:** CLAIM 009, CLAIM 034, PAPER 054, PAPER 071.
 **Failure mode:** *the direction of the axis is context-dependent and was assumed.* Two independent
 primary systems run **counter-directionally**: in diabetic mouse photoreceptors WWOX is
 **up**-regulated and its siRNA knockdown **reduces** superoxide; in the fly, Wwox loss **lowers** and
@@ -752,6 +769,7 @@ raised to `conflicting evidence`, because the systems are not comparable — but
 wherever the claim is cited in support of NAC/CoQ10/creatine/KD logic.
 
 ### N-15 — Counting seizure control as developmental protection → **the most consequential negative in the whole portfolio**
+**Source ids:** CLAIM 031, DL-MECH-039.
 **Failure mode:** *corrects a biomarker (seizures) but not the mechanism (development)*. In published
 WWOX children, cognitive and psychomotor impairment **precedes** the onset of epileptic encephalopathy
 and **does not improve** when epileptic activity is controlled: *"the developmental outcome was

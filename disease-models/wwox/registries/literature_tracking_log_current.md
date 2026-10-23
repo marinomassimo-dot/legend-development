@@ -11263,7 +11263,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Identifier:** PMID 25708809 / PMC4414157 / DOI 10.18632/oncotarget.2927
 **Date discovered:** 2026-04-18
 **Date screened:** 2026-04-18
-**Date processed:** triage only
+**Date processed:** 2026-10-23 (`FTR-20261023-25708809-01`)
 **Date last touched:** 2026-04-18
 **Discovery window:** FASE 1 triage 221–400
 **Discovery source:** 400_paper.txt batch corpus
@@ -11272,7 +11272,8 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Quality status:** peer-reviewed (PubMed listing)
 **Filter decision:** background only
 **Tier:** C
-**Status:** screened
+**Status:** processed
+**Status note:** promoted to [[paper_registry_current#PAPER 566]] by `BATCH_20261019_015`; reading `partial_fulltext_read`, receipt `FTR-20261023-25708809-01`, never upgraded from its receipt.
 **Primary pathway:** oncology / tumor suppressor biology
 **Genotype/model tag:** unassigned in triage
 **Species:** mouse
@@ -11284,7 +11285,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Working Model impact:** none yet
 **Report mentions:** FASE 1 triage 221–400
 **Current status:** screened — C
-**Next action:** background-only; escalate only on convergence signal
+**Next action:** none — read; landing [[paper_registry_current#PAPER 566]]
 **Flags:** FASE 1 batch entry / no deep-dive yet
 **Note:** Title: MicroRNA-153 promotes Wnt/β-catenin activation in hepatocellular carcinoma through suppression of WWOX
 
@@ -22181,6 +22182,222 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Report mentions:** `research/repurposing_r4c_scientist-d_20261022.md`
 **Next action:** none — read and registered
 **Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261022-42494992-01`; manifest `deepdive_manifests/PMID42494992.json`; landing [[paper_registry_current#PAPER 556]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0829
+**Short title:** Abdelmalak 2013 — long-term dichloroacetate in congenital lactic acidosis, open-label follow-up (substitute)
+**Authors:** Abdelmalak M, Lew A, Ramezani R, Shroads AL, Coats BS, Langaee T, Shankar MN, Neiberger RE, Subramony SH, Stacpoole PW
+**Year:** 2013
+**Source type:** primary research — open-label long-term follow-up in patients
+**Journal/source:** *Mol Genet Metab* 2013;109(2):139-43
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 23611579 / PMC3751427 / DOI 10.1016/j.ymgme.2013.03.019
+**Date discovered:** 2026-10-23 (first receipt `FTR-20261023-23611579-01`)
+**Date processed:** 2026-10-23 (`FTR-20261023-23611579-01`)
+**Discovery source:** the module batch of 2026-10-23, `scientist-b` (see the receipt's outputs)
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_015`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — pyruvate dehydrogenase kinase inhibition with dichloroacetate, long-term safety in human metabolic disease
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/module_batch_selection_scientist-b_20261023.md`
+**Next action:** none — read and registered
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261023-23611579-01`; manifest `deepdive_manifests/PMID23611579.json`; landing [[paper_registry_current#PAPER 557]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0830
+**Short title:** Fog 2018 — arimoclomol and glucocerebrosidase refolding in patient-derived cells (substitute)
+**Authors:** Fog CK, Zago P, Malini E, Solanko LM, Peruzzo P, Bornaes C, Magnoni R, Mehmedbasic A, Petersen NHT, Bembi B, Aerts JFMG, Dardis A, … et al. (13 authors listed on PubMed)
+**Year:** 2018
+**Source type:** primary research — patient-derived cell models
+**Journal/source:** *EBioMedicine* 2018;38:142-153
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 30497978 / PMC6306395 / DOI 10.1016/j.ebiom.2018.11.037
+**Date discovered:** 2026-10-23 (first receipt `FTR-20261023-30497978-01`)
+**Date processed:** 2026-10-23 (`FTR-20261023-30497978-01`)
+**Discovery source:** the module batch of 2026-10-23, `scientist-b` (see the receipt's outputs)
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_015`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — heat shock protein co-induction acting on a mutant lysosomal enzyme
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/module_batch_selection_scientist-b_20261023.md`
+**Next action:** none — read and registered
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261023-30497978-01`; manifest `deepdive_manifests/PMID30497978.json`; landing [[paper_registry_current#PAPER 558]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0831
+**Short title:** Kim 2019 — patient-customised oligonucleotide therapy, single-patient report (substitute, precedent)
+**Authors:** Kim J, Hu C, Moufawad El Achkar C, Black LE, Douville J, Larson A, Pendergast MK, Goldkind SF, Lee EA, Kuniholm A, Soucy A, Vaze J, … et al. (48 authors listed on PubMed)
+**Year:** 2019
+**Source type:** primary research — single-patient case report with functional work
+**Journal/source:** *N Engl J Med* 2019;381(17):1644-1652
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 31597037 / PMC6961983 / DOI 10.1056/NEJMoa1813279
+**Date discovered:** 2026-10-23 (first receipt `FTR-20261023-31597037-01`)
+**Date processed:** 2026-10-23 (`FTR-20261023-31597037-01`)
+**Discovery source:** the module batch of 2026-10-23, `scientist-b` (see the receipt's outputs)
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_015`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — individualised splice-switching oligonucleotide development and its limits
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/module_batch_selection_scientist-b_20261023.md`
+**Next action:** none — read and registered
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261023-31597037-01`; manifest `deepdive_manifests/PMID31597037.json`; landing [[paper_registry_current#PAPER 559]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0832
+**Short title:** Aquilino 2020 — pannexin-1 deficiency and epileptic activity in mice (substitute)
+**Authors:** Aquilino MS, Whyte-Fagundes P, Lukewich MK, Zhang L, Bardakjian BL, Zoidl GR, Carlen PL
+**Year:** 2020
+**Source type:** primary research — mouse model, brain slices
+**Journal/source:** *Int J Mol Sci* 2020;21(20):7510
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 33053775 / PMC7589538 / DOI 10.3390/ijms21207510
+**Date discovered:** 2026-10-23 (first receipt `FTR-20261023-33053775-01`)
+**Date processed:** 2026-10-23 (`FTR-20261023-33053775-01`)
+**Discovery source:** the module batch of 2026-10-23, `scientist-c` (see the receipt's outputs)
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_015`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — pannexin-1 channels and seizure-like activity
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/module_batch_selection_scientist-c_20261023.md`
+**Next action:** none — read and registered
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261023-33053775-01`; manifest `deepdive_manifests/PMID33053775.json`; landing [[paper_registry_current#PAPER 560]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0833
+**Short title:** Soul 2021 — bumetanide in neonatal seizures, pilot randomised double-blind trial (substitute)
+**Authors:** Soul JS, Bergin AM, Stopp C, Hayes B, Singh A, Fortuno CR, O'Reilly D, Krishnamoorthy K, Jensen FE, Rofeberg V, Dong M, Vinks AA, … et al. (15 authors listed on PubMed)
+**Year:** 2021
+**Source type:** primary research — pilot randomised controlled trial (epub 2020-12-03)
+**Journal/source:** *Ann Neurol* 2021;89(2):327-340
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 33201535 / PMC8122513 / DOI 10.1002/ana.25959
+**Date discovered:** 2026-10-23 (first receipt `FTR-20261023-33201535-01`)
+**Date processed:** 2026-10-23 (`FTR-20261023-33201535-01`)
+**Discovery source:** the module batch of 2026-10-23, `scientist-c` (see the receipt's outputs)
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_015`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — NKCC1 inhibition and the chloride gradient in neonatal seizures
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/module_batch_selection_scientist-c_20261023.md`
+**Next action:** none — read and registered
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261023-33201535-01`; manifest `deepdive_manifests/PMID33201535.json`; landing [[paper_registry_current#PAPER 561]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0834
+**Short title:** Lee 2022 — dichloroacetate plus pyruvate after seizure, rat model (substitute)
+**Authors:** Lee SH, Choi BY, Kho AR, Hong DK, Kang BS, Park MK, Lee SH, Choi HC, Song HK, Suh SW
+**Year:** 2022
+**Source type:** primary research — rat model
+**Journal/source:** *Nutrients* 2022;14(22):4804
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 36432491 / PMC9698956 / DOI 10.3390/nu14224804
+**Date discovered:** 2026-10-23 (first receipt `FTR-20261023-36432491-01`)
+**Date processed:** 2026-10-23 (`FTR-20261023-36432491-01`)
+**Discovery source:** the module batch of 2026-10-23, `scientist-b` (see the receipt's outputs)
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_015`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — pyruvate dehydrogenase kinase inhibition and seizure injury
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/module_batch_selection_scientist-b_20261023.md`
+**Next action:** none — read and registered
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261023-36432491-01`; manifest `deepdive_manifests/PMID36432491.json`; landing [[paper_registry_current#PAPER 562]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0835
+**Short title:** Kim 2023 — framework for individualised splice-switching oligonucleotide therapy (substitute, precedent)
+**Authors:** Kim J, Woo S, de Gusmao CM, Zhao B, Chin DH, DiDonato RL, Nguyen MA, Nakayama T, Hu CA, Soucy A, Kuniholm A, Thornton JK, … et al. (29 authors listed on PubMed)
+**Year:** 2023
+**Source type:** primary research — framework paper (taxonomy of splice variants and oligonucleotide amenability)
+**Journal/source:** *Nature* 2023;619(7971):828-836
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 37438524 / PMC10371869 / DOI 10.1038/s41586-023-06277-0
+**Date discovered:** 2026-10-23 (first receipt `FTR-20261023-37438524-01`)
+**Date processed:** 2026-10-23 (`FTR-20261023-37438524-01`)
+**Discovery source:** the module batch of 2026-10-23, `scientist-b` (see the receipt's outputs)
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_015`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — which splice variants are amenable to splice-switching oligonucleotides
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/module_batch_selection_scientist-b_20261023.md`
+**Next action:** none — read and registered
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261023-37438524-01`; manifest `deepdive_manifests/PMID37438524.json`; landing [[paper_registry_current#PAPER 563]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0836
+**Short title:** Cheerie 2025 — consensus guidelines for antisense eligibility of pathogenic variants (substitute, precedent)
+**Authors:** Cheerie D, Meserve MM, Beijer D, Kaiwar C, Newton L, Taylor Tavares AL, Verran AS, Sherrill E, Leonard S, Sanders SJ, Blake E, Elkhateeb N, … et al. (40 authors listed on PubMed)
+**Year:** 2025
+**Source type:** expert consensus guideline (review)
+**Journal/source:** *Am J Hum Genet* 2025;112(5):975-983
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 40139194 / PMC12120168 / DOI 10.1016/j.ajhg.2025.02.017
+**Date discovered:** 2026-10-23 (first receipt `FTR-20261023-40139194-01`)
+**Date processed:** 2026-10-23 (`FTR-20261023-40139194-01`)
+**Discovery source:** the module batch of 2026-10-23, `scientist-b` (see the receipt's outputs)
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_015`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — eligibility criteria for antisense oligonucleotide treatment of pathogenic variants
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/module_batch_selection_scientist-b_20261023.md`
+**Next action:** none — read and registered
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261023-40139194-01`; manifest `deepdive_manifests/PMID40139194.json`; landing [[paper_registry_current#PAPER 564]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0837
+**Short title:** Uzay 2026 — lithium in a SNAP25 encephalopathy knock-in mouse (substitute, precedent)
+**Authors:** Uzay B, Ma ZZ, Uzay IA, Alten B, Monteggia LM, Kavalali ET
+**Year:** 2026
+**Source type:** primary research — mouse model
+**Journal/source:** *Neuropsychopharmacology* 2026 (online 2026-08-27; no volume or pages in the PubMed record of 2026-10-23)
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42661025 / DOI 10.1038/s41386-026-02535-7
+**Date discovered:** 2026-10-23 (first receipt `FTR-20261023-42661025-01`)
+**Date processed:** 2026-10-23 (`FTR-20261023-42661025-01`)
+**Discovery source:** the module batch of 2026-10-23, `scientist-c` (see the receipt's outputs)
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_015`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — lithium and homeostatic plasticity in a genetic developmental and epileptic encephalopathy
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/module_batch_selection_scientist-c_20261023.md`
+**Next action:** none — read and registered
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261023-42661025-01`; manifest `deepdive_manifests/PMID42661025.json`; landing [[paper_registry_current#PAPER 565]]
 **Note:** class-level record. Not medical advice.
 
 ---
