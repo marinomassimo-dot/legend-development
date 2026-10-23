@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-10-23T20:41:39Z",
+ "event_at": "2026-10-23T20:41:39Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "captions_only",
+  "references": "read"
+ },
+ "event_id": "FTR-20261023-PPR1124524-02",
+ "evidence_basis": [
+  "coverage_map",
+  "PREPRINT, NOT PEER REVIEWED; nothing here raises the status of any claim.",
+  "COMPLETING PASS on the owed sections of FTR-20261003-PPR1124524-01 (figures and supplementary were captions_only). The six main figures (pages 10, 12, 13, 14, 15, 16 of the PDF) were rendered at 150 dpi and opened as images; Figure 3 panels c and d (myelinated axons per field) were re-rendered at 400 dpi as crops. The PDF is a print-to-PDF of the preprint with raster figure panels. Supplementary Figures 1-6 (pages 17-22) were not opened and stay captions_only.",
+  "NEW from the figures (hand readings, bar heights read against the axis, about plus or minus 3 units): Figure 3c has no O-KO bar for the normal-diet group (O-CTR N=3 only), demyelination N=2 per genotype, remyelination N=3 per genotype; bars about 60 and about 34 and 31 and 59 and 36. Figure 3d right panel (myelinated axons per field): normal diet about 117 versus about 125; demyelination about 53 versus about 56; remyelination about 106 versus about 58, whereas the text of the Results gives 59.1 versus 36.1 per field for remyelination. The text values and the bars do not agree; which is correct is UNVERIFIED (preprint, no source data deposited in the PDF). The direction (fewer myelinated axons in O-KO after remyelination) is the same in both.",
+  "Figure 6f: the WWOX band in the Wwox-KO Oli-neu lanes is faint, not absent, on the 150 dpi render (hand reading, UNVERIFIED at higher resolution); Figure 4a: pooled samples N=2, N=2, N=3 for normal diet, demyelination, remyelination, nuclei counts as printed.",
+  "NOT WWOX EVIDENCE statement does not apply (this is a WWOX paper); the label that applies is PREPRINT."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/module_batch_selection_scientist-b_20261023.md"
+ ],
+ "prior_receipt": "FTR-20261003-PPR1124524-01",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "inadequate_prior_coverage",
+ "source_fingerprint": "3f2030acf225da73a4bbe338fa6417597bcaa09f70b04bdd7549928105e409a6",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PPR1124524_Abudiab2025_bioRxiv.pdf",
+ "study_id": {
+  "doi": "10.1101/2025.11.22.689900"
+ },
+ "workflow": "scientist-b MODULE-B-20261023 row Q-N-13 completing pass; context QUESTION_DRIVEN; page renders by PyMuPDF get_pixmap(dpi=150) and a 400 dpi clip; staged for the integrator, not appended."
+}

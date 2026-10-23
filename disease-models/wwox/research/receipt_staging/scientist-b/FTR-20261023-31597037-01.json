@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-10-23T20:37:08Z",
+ "event_at": "2026-10-23T20:37:08Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "unavailable",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_read"
+ },
+ "event_id": "FTR-20261023-31597037-01",
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "Whole JATS body read; the three main figures are declared but were not retrievable and the Supplementary Appendix was not fetched, so depth is partial. Row Q-N-10 context QUESTION_DRIVEN. NOT WWOX EVIDENCE; a single-patient uncontrolled report; no dose is drawn from it."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID31597037.json",
+  "disease-models/wwox/research/module_batch_selection_scientist-b_20261023.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "f67b45878b796eb143f6e0e44ae321f91c51edcad60d4fb3a75a745f0e6e7a76",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID31597037_Kim2019_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.1056/NEJMoa1813279",
+  "pmid": "31597037"
+ },
+ "workflow": "scientist-b module batch MODULE-B-20261023 (row-driven read); PMC efetch XML acquired with pmc_bucket_fetch.py 2026-10-23, locators captured while the document was open and verified by deepdive_manifest.py; prepared as JSON for the integrator and staged, not appended. NOT WWOX EVIDENCE."
+}

@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-10-23T20:38:08Z",
+ "event_at": "2026-10-23T20:38:08Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "figures": "captions_only",
+  "tables": "not_read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_read"
+ },
+ "event_id": "FTR-20261023-37438524-01",
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "TARGETED partial read: the Results subsection ASO-amenable variants, the Methods subsection ASO amenability taxonomy, the Discussion and Figure 2 (opened as an image) were read; Introduction, the other Results subsections, the rest of the Methods and the supplement were not. Declared per section. Row Q-N-10 context QUESTION_DRIVEN. NOT WWOX EVIDENCE; an ataxia-telangiectasia cohort."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID37438524.json",
+  "disease-models/wwox/research/module_batch_selection_scientist-b_20261023.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "4f843c42feafc69db40d61a8b39af10fa2dc15f25ab60bb9d06a2539629b764f",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID37438524_Kim2023_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.1038/s41586-023-06277-0",
+  "pmid": "37438524"
+ },
+ "workflow": "scientist-b module batch MODULE-B-20261023 (row-driven read); PMC efetch XML acquired with pmc_bucket_fetch.py 2026-10-23, locators captured while the document was open and verified by deepdive_manifest.py; prepared as JSON for the integrator and staged, not appended. NOT WWOX EVIDENCE."
+}

@@ -1,0 +1,190 @@
+{
+ "schema_version": 2,
+ "pmid": "30497978",
+ "doi": "10.1016/j.ebiom.2018.11.037",
+ "receipt": "FTR-20261023-30497978-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "MODULE-B-20261023"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true,
+   "reason": "Run inline; the manifest and the analysis note carry what the skill would produce."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Leads are staged in a commit candidate; the shared ledger is written by the Orchestrator."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever matured by this reading."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule is triaged."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 11,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-23: 'Fog CK[au]' 11; with (WWOX OR Wwox) 0; the senior author's name was not queried separately. Initials-level, may pool homonyms.",
+  "research_type": "experimental_lab",
+  "weighting": "Industry-funded study (Orphazyme A/S, the owner of the studied compound) with academic collaborators; ex vivo patient-cell experiments; the text states the compound is a proprietary compound of the funder.",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "occurrences of WWOX in the persisted PMC XML (case-insensitive)",
+    "route": "local grep -oi over files/fulltext/PMID30497978_Fog2018_PMC_r2.xml",
+    "count": 0
+   }
+  ],
+  "note": "NOT WWOX EVIDENCE: a transferable-literature paper; the zero count is the measurement and it is the whole statement about WWOX content of this surface."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 65,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "Reference count taken from the Crossref reference list used by dependency_integrity.py screen (references_declared); no reference was classified by topic here.",
+  "queue": [
+   {
+    "id": "MH-30497978-01",
+    "target": "Reference 28 in the paper: HSP induction by celastrol and MG-132 depends on UPR transcription factors",
+    "question": "Is the dependence on cytosolic versus ER chaperones resolved there, and for which client?",
+    "status": "open - cited, not read"
+   }
+  ]
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Does the shared files/ tree or the receipt ledger already hold anything for PMID 30497978, and does another actor hold a claim?",
+  "hits": 0,
+  "finding": "paper_packet.py packet at claim time 2026-10-23: no prior receipt, no artefact, no peer claim; claimed by scientist-b under MODULE-B-20261023. Row context: Q-N-12 HSP70 co-inducers: the map says the sign depends on which chaperone and which route, and that a co-inducer could accelerate damage."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed esummary (JSON) 2026-10-23: pubtype [\"Journal Article\"]; no CommentsCorrections list on the record (absence is a statement about this query); dependency_integrity.py screen on the DOI: SCREENED_CLEAN, 61 of 65 references screened, nothing flagged.",
+  "performed": true,
+  "at": "2026-10-23",
+  "route": "PubMed esummary plus dependency_integrity.py screen --manifest-block",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 65,
+   "references_screened": 61,
+   "references_with_doi": 61,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 2,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 4
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID30497978_Fog2018_PMC_r2.xml",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&retmode=xml",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-23",
+    "derived": false
+   },
+   "sha256": "570ca10690700b75d4b49075ee403d8240dcbc4b36c9b333572c67cad639d0d3"
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC JATS XML with a full article body, fingerprinted; the nine figure JPEGs and the supplement were acquired but not opened in this pass, so figures and supplementary are captions_only and no figure value is used; every snippet is machine-verified against the XML.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a supplement text layer or a figure image.",
+  "entries": [
+   {
+    "proposition": "NOT WWOX EVIDENCE. The compound is described as a co-inducer of the heat shock response that amplifies HSP70 chaperones; the paper builds its rationale on this property.",
+    "snippet": "Arimoclomol is a well-described co-inducer of the heat shock response, which includes the amplification of HSP70 chaperones [37,38].",
+    "surface": "body",
+    "anchor": "Results 3.1",
+    "artifact": "files/fulltext/PMID30497978_Fog2018_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "NOT WWOX EVIDENCE. In cultured patient fibroblasts the compound increased the amount of the mutant lysosomal enzyme across all tested genotypes, i.e. the direction of effect on these client proteins was up, not down.",
+    "snippet": "Arimoclomol dose-dependently increased the amount of GCase in primary GD fibroblasts across all tested genotypes, including neuronopathic and non-neuronopathic associated mutations (Fig. 1d–e).",
+    "surface": "body",
+    "anchor": "Results 3.1",
+    "artifact": "files/fulltext/PMID30497978_Fog2018_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "NOT WWOX EVIDENCE. The clients studied are ER-synthesised glycoproteins: an EndoH assay showed ER retention of the enzyme in one line, so the model concerns an ER-to-Golgi-to-lysosome client and not a cytosolic protein.",
+    "snippet": "The EndoH assay showed a clear ER-retention of GCase in this cell line",
+    "surface": "body",
+    "anchor": "Results 3.1",
+    "artifact": "files/fulltext/PMID30497978_Fog2018_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "NOT WWOX EVIDENCE. The authors state they could not determine which HSP70 family member is responsible for the effect: no UPR transcription factor induction was seen and the BiP knockdown was insufficient.",
+    "snippet": "our attempts at knock-down of HSPA5/BiP did not result in sufficient downregulation to unequivocally resolve the potential role of individual HSP70 family members in these processes (data not shown).",
+    "surface": "body",
+    "anchor": "Discussion, paragraph 7",
+    "artifact": "files/fulltext/PMID30497978_Fog2018_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "NOT WWOX EVIDENCE. Substrate storage could not be shown to fall: GlcCer was not increased in the fibroblasts and GlcSph could not be determined, so a fall in storage is not demonstrated.",
+    "snippet": "did not find any increased levels of GlcCer in the Gaucher disease fibroblasts and were technically unable to determine any amount of GlcSph",
+    "surface": "body",
+    "anchor": "Discussion, paragraph 11",
+    "artifact": "files/fulltext/PMID30497978_Fog2018_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "NOT WWOX EVIDENCE. In neuronal-like cells derived from patient stem cells the compound raised the level and EndoH-resistant fraction of the enzyme, an in-vitro neuronal result for a lysosomal ER client.",
+    "snippet": "Treatment with arimoclomol augmented both the level and EndoH resistant fraction of GCase in both neuronopathic and non-neuronopathic GD patient derived neuronal cells (Fig. 4d, e).",
+    "surface": "body",
+    "anchor": "Results 3.4",
+    "artifact": "files/fulltext/PMID30497978_Fog2018_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "NOT WWOX EVIDENCE. The authors state the work is ex vivo and note the difficulty of translating in-vitro doses to humans; the compound is a proprietary product of the funder.",
+    "snippet": "Arimoclomol-citrate is a proprietary compound owned by Orphazyme A/S.",
+    "surface": "body",
+    "anchor": "Materials and methods, Cell culture and drug treatment",
+    "artifact": "files/fulltext/PMID30497978_Fog2018_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}

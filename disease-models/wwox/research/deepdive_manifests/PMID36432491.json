@@ -1,0 +1,198 @@
+{
+ "schema_version": 2,
+ "pmid": "36432491",
+ "doi": "10.3390/nu14224804",
+ "receipt": "FTR-20261023-36432491-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "landing": [
+  "MODULE-B-20261023"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true,
+   "reason": "Run inline; the manifest and the analysis note carry what the skill would produce."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Leads are staged in a commit candidate; the shared ledger is written by the Orchestrator."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever matured by this reading."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule is triaged."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Scientists do not touch the four current files."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 702,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-23: 'Suh SW[au]' 702 (senior author); with (WWOX OR Wwox) 0; with dichloroacetate terms 3. Initials-level, may pool homonyms.",
+  "research_type": "experimental_lab",
+  "weighting": "A Hallym University group that has published repeatedly on dichloroacetate and pyruvate in rodent brain injury; the present study cites several of its own earlier studies for the dose rationale, so it is partly self-referential.",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "occurrences of WWOX in the persisted PMC XML (case-insensitive)",
+    "route": "local grep -oi over files/fulltext/PMID36432491_Lee2022_PMC_r2.xml",
+    "count": 0
+   }
+  ],
+  "note": "NOT WWOX EVIDENCE: a transferable-literature paper; the zero count is the measurement and it is the whole statement about WWOX content of this surface."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 78,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "Reference count taken from the Crossref reference list used by dependency_integrity.py screen (references_declared); no reference was classified by topic here.",
+  "queue": [
+   {
+    "id": "MH-36432491-01",
+    "target": "Reference 48 in the paper: low doses of DCA or pyruvate alone do not reduce seizure-induced neuronal death",
+    "question": "Is the single-agent null shown there with the same readouts and a same-model design?",
+    "status": "open - cited, not read"
+   }
+  ]
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Does the shared files/ tree or the receipt ledger already hold anything for PMID 36432491, and does another actor hold a claim?",
+  "hits": 0,
+  "finding": "paper_packet.py packet at claim time 2026-10-23: no prior receipt, no artefact, no peer claim; claimed by scientist-b under MODULE-B-20261023. Row context: Q-N-08 dichloroacetate: a paper that argues a neuroprotective direction in a seizure model, the opposite sign to the neurotoxicity framing of the map."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed esummary (JSON) 2026-10-23: pubtype [\"Journal Article\"]; no CommentsCorrections list on the record (absence is a statement about this query); dependency_integrity.py screen on the DOI: SCREENED_CLEAN, 73 of 78 references screened, nothing flagged.",
+  "performed": true,
+  "at": "2026-10-23",
+  "route": "PubMed esummary plus dependency_integrity.py screen --manifest-block",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 78,
+   "references_screened": 73,
+   "references_with_doi": 73,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 2,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 5
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID36432491_Lee2022_PMC_r2.xml",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&retmode=xml",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-23",
+    "derived": false
+   },
+   "sha256": "28a08a48b1bc2f9f91a8561cdc98f2f3d0f323a73556dd637ea183d7e4f0ea99"
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC JATS XML with a full article body, fingerprinted; the eight figure JPEGs and the supplement were acquired but not opened in this pass, so figures are captions_only and no figure value is used; every snippet is machine-verified against the XML.",
+  "abstract_anchoring_waived": "No locator uses the abstract as evidence; every locator quotes the body, a table, a supplement text layer or a figure image.",
+  "entries": [
+   {
+    "proposition": "NOT WWOX EVIDENCE. The model is an acquired seizure injury in adult male rats, not a genetic or developmental model: eight-week-old Sprague Dawley males.",
+    "snippet": "Experiments were conducted using 8-week-old Sprague Dawley male rats",
+    "surface": "body",
+    "anchor": "Methods 2.2 Experimental Animals",
+    "artifact": "files/fulltext/PMID36432491_Lee2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "NOT WWOX EVIDENCE. The groups are small: five per sham group and eight per seizure group, with oral treatment given once a day for one week.",
+    "snippet": "n = 5 for each sham group. n = 8 for each seizure group.",
+    "surface": "body",
+    "anchor": "Methods 2.4",
+    "artifact": "files/fulltext/PMID36432491_Lee2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "NOT WWOX EVIDENCE. In this model seizure raised the kinase PDK2 in the hippocampus and treatment with the combination lowered it, i.e. a PDK-PDH axis shift is measured after an acquired seizure injury.",
+    "snippet": "it was confirmed that the level of PDK2 significantly increased by 83.1% in the seizure-induced group compared to that in the sham–vehicle group.",
+    "surface": "body",
+    "anchor": "Results 3.1",
+    "artifact": "files/fulltext/PMID36432491_Lee2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "NOT WWOX EVIDENCE. Seizure lowered ATP in the model, so a seizure-induced bioenergetic deficit is measured here; it is not a measurement in a WWOX-deficient system.",
+    "snippet": "We found that ATP levels significantly decreased after seizure-induced group by 42.5% compared to that in the sham-vehicle group.",
+    "surface": "body",
+    "anchor": "Results 3.2",
+    "artifact": "files/fulltext/PMID36432491_Lee2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "NOT WWOX EVIDENCE. The combination raised the count of surviving hippocampal neurons versus vehicle after seizure; the effect is attributed by the authors to the combination, not to either agent.",
+    "snippet": "the number of NeuN (+) cells was found to be significantly higher in the DCA and pyruvate co-treatment group than in the vehicle treatment group",
+    "surface": "body",
+    "anchor": "Results 3.5",
+    "artifact": "files/fulltext/PMID36432491_Lee2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "NOT WWOX EVIDENCE. Each agent given alone was ineffective on neuronal survival in this study: the authors state that giving only DCA or only pyruvate after seizure was ineffective compared with the seizure group.",
+    "snippet": "the administration of only DCA or pyruvate once a day for one week after seizure was ineffective compared to the results of the seizure group",
+    "surface": "body",
+    "anchor": "Discussion, paragraph 6",
+    "artifact": "files/fulltext/PMID36432491_Lee2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "NOT WWOX EVIDENCE. The behavioural endpoint is a single sensorimotor test: the adhesive removal time rose after seizure and fell with the combination by day seven.",
+    "snippet": "At day 7, TRT time was significantly increased by 88.5 s in the seizure-induced group compared to the sham-vehicle group.",
+    "surface": "body",
+    "anchor": "Results 3.6",
+    "artifact": "files/fulltext/PMID36432491_Lee2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "NOT WWOX EVIDENCE. The authors themselves state that the drug has neurotoxic effects at high exposure, citing earlier work, so a toxicity ceiling is acknowledged in the paper that proposes the benefit.",
+    "snippet": "DCA has neurotoxic effects when used at high doses",
+    "surface": "body",
+    "anchor": "Discussion, paragraph 1",
+    "artifact": "files/fulltext/PMID36432491_Lee2022_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}

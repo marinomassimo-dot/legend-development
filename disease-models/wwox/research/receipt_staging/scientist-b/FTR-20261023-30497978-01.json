@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-10-23T20:39:08Z",
+ "event_at": "2026-10-23T20:39:08Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "captions_only"
+ },
+ "event_id": "FTR-20261023-30497978-01",
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "Results and Discussion read in full, supplementary figure legends read; Introduction (only its first paragraph) and Methods not read; nine figure JPEGs acquired but not opened. Row Q-N-12 context QUESTION_DRIVEN. NOT WWOX EVIDENCE; industry-funded ex vivo study of a Gaucher disease ER-to-lysosome client; no dose or suitability drawn."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID30497978.json",
+  "disease-models/wwox/research/module_batch_selection_scientist-b_20261023.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "570ca10690700b75d4b49075ee403d8240dcbc4b36c9b333572c67cad639d0d3",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID30497978_Fog2018_PMC_r2.xml",
+ "study_id": {
+  "doi": "10.1016/j.ebiom.2018.11.037",
+  "pmid": "30497978"
+ },
+ "workflow": "scientist-b module batch MODULE-B-20261023 (row-driven read); PMC efetch XML acquired with pmc_bucket_fetch.py 2026-10-23, locators captured while the document was open and verified by deepdive_manifest.py; prepared as JSON for the integrator and staged, not appended. NOT WWOX EVIDENCE."
+}
