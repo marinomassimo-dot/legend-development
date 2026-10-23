@@ -544,12 +544,23 @@
     "panel_text_relation": "panel_only"
    },
    {
-    "proposition": "THE P0-P5 WINDOW, VERIFIED AGAINST ITS PANEL rather than taken from running text. Treatment at any point P1-P5 gives survival to 300 days, and weight and glucose at P14 are ns against wild type across all five timepoints. What the panels add: the 300-day plot shows only P1 and P5; P2, P3 and P4 appear solely in the 40-day panel, and P3 is an n=3 arm that lost animals.",
-    "snippet": "[figure attestation — pixels cannot be quote-matched] S8A: KO+WWOX arms at P1 (n=6), P2 (n=6), P3 (n=3), P5 (n=7) against KO+RI (n=6) dead by ~15 days; only P3 falls, to ~67% at ~24 days. S8B: P1 and P5 plateau near 75% to 300 days. S8C and S8D: brackets *** and ** for WT-vs-KO, and a single ns spanning all five treated timepoints against WT.",
+    "proposition": "THE P1-P5 TIMING PANELS, READ AGAINST THEIR ARMS. Treatment at any point P1 to P5 gives survival to at least 40 days, and weight and glucose at P14 are ns against wild type across all five timepoints. The 300-day plot (S8B) shows only P1 and P5: P1 (n=6) stays at 100 percent to about day 300, whereas P5 (n=7) falls to about 75 percent at about day 35 and stays there to day 300. P2, P3 and P4 appear solely in the 40-day panel, and P3 is an n=3 arm that lost one animal (to about 67 percent at about day 24). An earlier reading that both P1 and P5 plateau near 75 percent is withdrawn: only P5 does.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] S8A: KO+RI (n=6) 67 percent at about day 13, 33 percent at about day 14, 0 percent at about day 15; KO+WWOX P1 (n=6), P2 (n=6) and P5 (n=7) at 100 percent to day 40; P3 (n=3) 67 percent from about day 24. S8B: x axis to 300 days; P1 (n=6) 100 percent with a marker at about day 300; P5 (n=7) 75 percent from about day 35 to day 300; KO+RI 0 percent by about day 15. S8C and S8D: brackets *** and ** for WT-vs-KO, and a single ns spanning all five treated timepoints against WT.",
     "surface": "figure",
     "artifact": "files/supplement/PMID42422765_r2/mmc1_p10_200dpi.png",
-    "anchor": "Supplementary Figure S8, panels A-D, rendered from mmc1.pdf page 10 at 200 effective ppi",
-    "panel_text_relation": "text_confirmed_by_panel"
+    "anchor": "Supplementary Figure S8, panels A-D, mmc1.pdf page 10, re-inspected 2026-10-23 at a 400 dpi render (the declared 200 dpi PNG is the same page) after blind audit verdict OVERSHOOT (quote level)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json",
+     "entry": 10,
+     "what_changed": "Own persisted entry corrected after the blind module-row audit (OVERSHOOT, quote level): only P5 plateaus near 75 percent; P1 holds 100 percent to day 300.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ]
+     }
+    }
    },
    {
     "proposition": "The survival threshold, stated in plain text and no longer read off a curve: the low dose does not produce animals that reach three months.",
@@ -576,12 +587,29 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Four survival doses exist across two figures and no single figure displays them: at 4E10 and 8E10 no treated arm survives, at 1.23E11 death by about 90 days, at 2.63E11 a plateau. The threshold is therefore not an artefact of comparing two doses.",
-    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 2B: KO+AAV-hWWOX 4E10 (n=3) dead ~18-20 days, 8E10 (n=5) dead ~17 days, KO+AAV-WWOX-WPRE 4E10 (n=3) ~33% at ~25 days, against KO (n=4) dead ~17-18 days.",
+    "proposition": "FIGURE 2B, ARMS ASSIGNED BY COLOUR AND MARKER. Without WPRE at 4E10 the treated arm is NOT rescued (two of three dead at about days 18 to 20; the third, a black dot, is a mouse collected for analysis at about day 25 at 33 percent); the WPRE-free 8E10 arm (n=5) and the WPRE-bearing 4E10 arm (n=3) both stay at 100 percent to their last marker (about days 27 and 31), where follow-up of those arms ends. The panel therefore agrees with the running text (8E10 without WPRE rescued lethality; 4E10 without WPRE did not), and it carries no dose beyond about day 31, so it is not a durability statement. An earlier reading of this entry, that no treated arm survives at 8E10, assigned the 4E10 arm's curve to the wrong arms and is withdrawn.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 2B Kaplan-Meier, x axis 0 to 50 days: KO (n=4, purple) 75 percent at about day 17, 50 percent at about day 18, 0 percent at about day 19; KO+AAV-hWWOX 4E10 (n=3, yellow) 67 percent at about day 18, 33 percent at about day 19, a black dot at 33 percent at about day 25; KO+AAV-hWWOX 8E10 (n=5, pink) 100 percent with a marker at about day 27; KO+AAV-WWOX-WPRE 4E10 (n=3, grey) 100 percent with a marker at about day 31; WT (n=5, navy) 100 percent to about day 40.",
     "surface": "figure",
-    "artifact": "files/fulltext/figures/PMID42422765/gr2.jpg",
-    "anchor": "Figure 2, panel B, read at 104 effective ppi. NOTE: the running text states that 8E10 without WPRE rescued lethality, which my panel reading does not support; recorded as a discrepancy to re-verify, with the presumption in favour of the text.",
-    "panel_text_relation": "panel_only"
+    "artifact": "files/fulltext/PMID42422765_Obeid2026_assets/mmc2.pdf",
+    "anchor": "Figure 2, panel B, page 4 of mmc2.pdf, embedded raster 2906 x 3769 px at 500 ppi, re-inspected 2026-10-23 after blind audit verdict OVERSHOOT; arm identity read from the legend colours and the Figure 2B caption (black dot = mouse collected for analysis)",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "experimental_context": {
+     "system": "Wwox-null mice injected ICV with AAV9-hSynI vectors, Kaplan-Meier to about day 40",
+     "genotype": "Wwox -/- (KO) with and without hWWOX vector, WT comparator",
+     "comparator": "KO and WT, 4E10 and 8E10 vg doses, with and without WPRE",
+     "endpoint": "survival to about day 31 in the treated arms"
+    },
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json",
+     "entry": 14,
+     "what_changed": "Own persisted entry corrected after the blind module-row audit (OVERSHOOT): the 8E10 arm and the WPRE 4E10 arm are at 100 percent to about days 27 and 31; the yellow WPRE-free 4E10 arm carries the 33 percent step; the prior 'no treated arm survives at 8E10' is withdrawn.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ]
+     }
+    }
    },
    {
     "proposition": "WPRE removal did not lower transgene burden — it made it predictable and required a six-fold dose increase to recover efficacy. Protein without WPRE at 2E10 sits at or below wild type.",
