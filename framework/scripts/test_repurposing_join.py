@@ -79,6 +79,10 @@ class Queries(unittest.TestCase):
 
 
 class Evidence(unittest.TestCase):
+    def test_every_axis_selects_something_including_early_benefit(self):
+        for axis in rj.AXES:
+            self.assertTrue(rj.derive_queries(axis=axis), axis)
+
     def test_leads_behind_any_leading_marker_become_queries(self):
         queries = rj.derive_queries()
         # 7 of 226 leads begin with a star, target, warning, green or medal marker, not the red circle

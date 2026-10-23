@@ -57,7 +57,7 @@ MANIFESTS = MODEL / "research" / "deepdive_manifests"
 ADJUDICATIONS = MODEL / "research" / "page_adjudications"
 RECEIPT_LEDGER = MODEL / "registries" / "fulltext_read_receipts.jsonl"  # fulltext_receipts.default_ledger_path
 
-# The three axes the mandate calls live. Plain data: delete a row and the axis is gone.
+# The axes the mandate calls live (three) plus the early-benefit row. Plain data: delete a row and the axis is gone.
 AXES = {
     "proteostasis": ["proteostasis", "chaperone", "phenylbutyrate", "misfolding", "SDR", "missense",
                      "proteasome", "HSP70", "UPR", "ERAD", "solubility"],
@@ -65,6 +65,10 @@ AXES = {
                 "ethosuximide", "bursting", "NMDAR", "network"],
     "wnt": ["Wnt", "MYC", "GSK3", "mTOR", "beta-catenin", "β-catenin", "tankyrase", "lithium",
             "rapamycin", "everolimus"],
+    # One data row from the Scientist's early-benefit candidate file (blind spots, 2026-10-23); `growth`
+    # is left out on purpose: it matches pathograph lines about body weight.
+    "early_benefit": ["vigabatrin", "ketogenic", "ethosuximide", "cannabidiol", "ACTH", "corticosteroid",
+                      "epileptic spasm", "seizure control", "early benefit"],
 }
 
 # Tokens that look like a gene symbol but are this repository's own vocabulary, a unit, or an
