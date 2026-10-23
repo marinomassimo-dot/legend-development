@@ -605,7 +605,7 @@
     "found_or_sought": "found"
    },
    {
-    "proposition": "2026-10-21 (R2 batch, scientist-b): the lists the supplementary tables carry are defined by the authors as genes with a fold change above 1.2 (or below 1/1.2) and a P below 0.01 (that this P is unadjusted is the reader's inference from the tables: the Methods give alpha 0.01, the Figure EV3 legend names the Wald test, and CACNA1E has P 0.0097 with an adjusted P of 0.067), after a 15,370-gene tested set; so a gene absent from both lists is one that is not clearly changed under that rule, not one shown absent or unexpressed (the Fig 4 legend gives wild type n = 2 against knockout n = 4, so absence from the lists is weak evidence of no change).",
+    "proposition": "2026-10-21 (R2 batch, scientist-b), narrowed to the quote: the authors define the lists carried by the supplementary tables as genes with a fold change above 1.2 (below 1/1.2) and P below 0.01; the quote does not say whether that P is adjusted. The further items formerly bundled here are in their own entries (Methods alpha and gene set, Wald test, sample numbers); that a gene absent from both lists is 'not clearly changed under that rule' and not 'shown absent' is the reader's inference, not a statement of the article.",
     "snippet": "1,246 genes were upregulated in WWOX‐KO COs and showed both a fold change greater than 1.2 (FC > 1.2) and a significant P‐value (P < 0.01), and 1,021 genes were downregulated (FC < 1/1.2, P < 0.01) (Fig EV3B; Tables EV1 and EV2).",
     "surface": "body",
     "artifact": "files/fulltext/PMID34268881_Steinberg2021_PMC.xml",
@@ -614,11 +614,11 @@
     "contradicts_locator": {
      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
      "entry": 39,
-     "what_changed": "'unadjusted' marked as the reader's inference from the tables; WT n=2 against KO n=4 added as a limit on the absence reading.",
+     "what_changed": "proposition narrowed to what the quote carries; the 15,370 set, alpha, Wald test, n=2 versus 4 and the CACNA1E padj moved to separate quoted entries or to entry 42.",
      "audit": {
       "auditors": 1,
       "verdicts": [
-       "blind locator audit, 2026-10-21, task REPURP-10H-R2-B-20261021: one separate history-free read-only agent received only (proposition, quote, anchor) triples plus the source artefacts; verdict on this triple: SUPPORTED, minor caveats. The wording repair applied afterwards is not itself audited."
+       "blind locator audit of the module repairs, 2026-10-23: OVERSHOOT at quote level (proposition bundled facts outside the quote); the split applied afterwards is not itself audited."
       ]
      }
     }
@@ -675,12 +675,23 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Table EV1 lists DDIT4 as upregulated (log2 fold change +0.71, adjusted P 1.03E-5); in the same two lists TSC2 is downregulated (log2 -0.37, adjusted P 0.0378). The mTOR-axis transcripts therefore do not move in one direction.",
+    "proposition": "Table EV1 lists DDIT4 as upregulated: log2 fold change +0.71, adjusted P 1.03E-5.",
     "snippet": "EV1_up\tENSG00000168209\tDDIT4\t54541\t5.7499999999999999E-8\t1.03E-5\t0.71\tDNA_damage_inducible_transcript_4_\tprotein_coding",
     "surface": "supplement",
     "artifact": "files/fulltext/PMID34268881_assets/Table_EV1_EV2_derived.txt",
     "anchor": "Table EV1, row for DDIT4 (derived text)",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
+     "entry": 45,
+     "what_changed": "proposition narrowed to the quoted DDIT4 row; TSC2 has its own entry and DEPTOR a new one.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "blind locator audit of the module repairs, 2026-10-23: OVERSHOOT at quote level (proposition bundled facts outside the quote); the split applied afterwards is not itself audited."
+      ]
+     }
+    }
    },
    {
     "proposition": "Table EV2 lists TSC2 as downregulated (log2 fold change -0.37, adjusted P 0.0378), a small change near the nominal-P inclusion edge.",
@@ -699,20 +710,42 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Symbol search of both lists (tool run 2026-10-23 over the declared derived text, exact symbol match on the symbol column): RPTOR, RICTOR, RPS6KB1, RPS6, ULK1, ATG5, ATG7, BECN1, MAP1LC3B, SQSTM1, TSC1, AKT1, AKT2, AKT3 and PTEN are in neither the upregulated nor the downregulated list; listed besides those above are EIF4EBP2 (up, adjusted P 0.054), DEPTOR (up), RPS6KB2 (down) and SESN2 (down). Absence from a nominal-P list is not absence of change. The row shown is RPS6KB2.",
+    "proposition": "Table EV2 lists RPS6KB2 as downregulated: log2 fold change -0.39, adjusted P 0.0195. Statement from a symbol search of both lists (tool run 2026-10-23 over the derived text, exact match on the symbol column; NOT in the quote): RPTOR, RICTOR, RPS6KB1, RPS6, ULK1, ATG5, ATG7, BECN1, MAP1LC3B, SQSTM1, TSC1, AKT1-3 and PTEN are in neither list; EIF4EBP2 (up) and SESN2 (down) are listed. Absence from a nominal-P list is not absence of change.",
     "snippet": "EV2_down\tENSG00000175634\tRPS6KB2\t6199\t1.47E-3\t1.95E-2\t-0.39\tribosomal_protein_S6_kinase_B2_\tprotein_coding",
     "surface": "supplement",
     "artifact": "files/fulltext/PMID34268881_assets/Table_EV1_EV2_derived.txt",
     "anchor": "Table EV2, row for RPS6KB2 (derived text); search statement in the proposition",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
+     "entry": 48,
+     "what_changed": "proposition narrowed to the quoted RPS6KB2 row; the symbol-search statement is labelled as a tool run outside the quote.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "blind locator audit of the module repairs, 2026-10-23: OVERSHOOT at quote level (proposition bundled facts outside the quote); the split applied afterwards is not itself audited."
+      ]
+     }
+    }
    },
    {
-    "proposition": "Table EV1 lists the glycolysis genes HK2 (log2 fold change +2.46, adjusted P 8.75E-34), SLC2A1 (+1.44), SLC2A3 (+1.04) and LDHA (+0.91) as upregulated; PDK1, PKM and HIF1A are in neither list (same tool run); PDK3 is listed up with adjusted P 0.0565. The row shown is HK2. The mouse-derived 'PDK1 measured up' is not reproduced by this dataset.",
+    "proposition": "Table EV1 lists HK2 as upregulated: log2 fold change +2.46, adjusted P 8.75E-34. Statement from a symbol search of both lists (tool run 2026-10-23, not in the quote): PDK1, PKM and HIF1A are in neither list; PDK3 is listed up with adjusted P 0.0565. SLC2A1 and LDHA have their own entries.",
     "snippet": "EV1_up\tENSG00000159399\tHK2\t3099\t5.4700000000000005E-38\t8.7499999999999996E-34\t2.46\thexokinase_2_\tprotein_coding",
     "surface": "supplement",
     "artifact": "files/fulltext/PMID34268881_assets/Table_EV1_EV2_derived.txt",
     "anchor": "Table EV1, row for HK2 (derived text)",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
+     "entry": 49,
+     "what_changed": "proposition narrowed to the quoted HK2 row; SLC2A1 and LDHA moved to their own entries; the absence statements are labelled as a tool run.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "blind locator audit of the module repairs, 2026-10-23: OVERSHOOT at quote level (proposition bundled facts outside the quote); the split applied afterwards is not itself audited."
+      ]
+     }
+    }
    },
    {
     "proposition": "Results, RNA-sequencing paragraph, text search of the declared JATS surface (PMC.xml): the article does name the axes. Its sentence on the top-100 downregulated heatmap (Fig 4A) lists autophagy genes (IFI16, MDM2, RB1, PLAT, RB1CC1) and 'the mTOR pathway (EIF4EBP1, PIK3CA, RB1CC1)'. These are gene-name groupings of a top-100 list by fold change; no mTORC1 signalling, autophagic flux or rapamycin is reported. The string 4E-BP and the word rapamycin do not occur in that surface (text search); mTOR and autophagy occur once each, in this sentence. Appendix Fig S3A, cited for the oxidative-phosphorylation and glycolysis statement, is not held.",
@@ -739,6 +772,62 @@
     "surface": "supplement",
     "artifact": "files/fulltext/PMID34268881_assets/EMMM-13-e13610-s007_review_derived.txt",
     "anchor": "Review-process file, referee 1 reply block (PDF page 23 of 47)",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Methods: expression counts were analysed with DESeq2 and differentially expressed genes were filtered with alpha set to 0.01 (the Methods name alpha, not whether the P in the lists is adjusted).",
+    "snippet": "Counts were normalized by DESeq2, and differentially expressed genes were filtered, setting alpha to 0.01.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34268881_Steinberg2021_PMC.xml",
+    "anchor": "Materials and Methods, RNA sequencing and analysis",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Methods: the resulting set of 15,370 genes is the set shown in the volcano plot, i.e. the tested set from which the two lists were drawn.",
+    "snippet": "The resulting set of 15,370 genes is illustrated in a “volcano scatter plot” showing fold change against P‐values (Fig EV3B)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34268881_Steinberg2021_PMC.xml",
+    "anchor": "Materials and Methods, RNA sequencing and analysis",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure EV3 legend: the P value of the volcano plot was calculated with the Wald test.",
+    "snippet": "The P‐value was calculated using the Wald test.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34268881_Steinberg2021_PMC.xml",
+    "anchor": "Figure EV3 legend, panel B",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 4 legend: the RNA-seq comparison is wild type n = 2 against knockout n = 4, so absence of a gene from the lists is weak evidence of no change (the last clause is the reader's inference).",
+    "snippet": "RNA sequencing (RNA‐seq) of week 15 COs and transcriptome analysis (WT: n = 2, KO: n = 4)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID34268881_Steinberg2021_PMC.xml",
+    "anchor": "Figure 4 legend, first clause",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table EV1 lists SLC2A1 as upregulated: log2 fold change +1.44, adjusted P 9.99E-10.",
+    "snippet": "EV1_up\tENSG00000117394\tSLC2A1\t6513\t1.3100000000000001E-12\t9.9899999999999996E-10\t1.44\tsolute_carrier_family_2_member_1_\tprotein_coding",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID34268881_assets/Table_EV1_EV2_derived.txt",
+    "anchor": "Table EV1, row for SLC2A1 (derived text)",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table EV1 lists LDHA as upregulated: log2 fold change +0.91, adjusted P 4.92E-6.",
+    "snippet": "EV1_up\tENSG00000134333\tLDHA\t3939\t2.4900000000000001E-8\t4.9200000000000003E-6\t0.91\tlactate_dehydrogenase_A_\tprotein_coding",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID34268881_assets/Table_EV1_EV2_derived.txt",
+    "anchor": "Table EV1, row for LDHA (derived text)",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table EV1 lists DEPTOR as upregulated: log2 fold change +1.16, adjusted P 3.09E-3.",
+    "snippet": "EV1_up\tENSG00000155792\tDEPTOR\t64798\t9.4500000000000007E-5\t3.0899999999999999E-3\t1.1599999999999999\tDEP_domain_containing_MTOR_interacting_protein_\tprotein_coding",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID34268881_assets/Table_EV1_EV2_derived.txt",
+    "anchor": "Table EV1, row for DEPTOR (derived text)",
     "panel_text_relation": "text_only"
    }
   ],
