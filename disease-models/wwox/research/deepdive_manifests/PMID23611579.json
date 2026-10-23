@@ -184,12 +184,24 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "NOT WWOX EVIDENCE. Developmental statements in this open-label series are descriptive and uncontrolled: five of the participants had neurodevelopmental delay, and the paper reports that all but one achieved milestones without a comparison arm.",
+    "proposition": "NOT WWOX EVIDENCE. Participants 1 to 5 are described as having mild to profound neurodevelopmental delay, with epilepsy in one of them; the sentence says nothing about outcome or comparison.",
     "snippet": "Patients 1–5 demonstrated mild to profound neurodevelopmental delay complicated in patient 5 by epilepsy that was treated with carbamazepine and diazepam",
     "surface": "body",
     "anchor": "Results 3.1.1",
     "artifact": "files/fulltext/PMID23611579_Abdelmalak2013_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID23611579.json",
+     "entry": 6,
+     "what_changed": "2026-10-23 blind locator audit of the module batch (locator_audit_module_batch_20261023.md): OVERSHOOT, quote-level; the proposition carried a clause the quote does not; narrowed to the quote. Prior wording began: NOT WWOX EVIDENCE. Developmental statements in this open-label series are descriptive and ",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "method": "Blind text control, quote versus proposition; the repair is unaudited"
+     }
+    }
    },
    {
     "proposition": "NOT WWOX EVIDENCE. The one participant with epilepsy is reported with epilepsy and contractures persisting unchanged on the drug.",
