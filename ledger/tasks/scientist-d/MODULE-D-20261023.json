@@ -1,0 +1,79 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "_note": "Opened by scientist-d from the lot given in ORCH-MODULE-BATCH-20261023 (Scientist D: gap study). scientist-d is a stated assumption of the Orchestrator.",
+ "TASK_ID": "MODULE-D-20261023",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "scientist-d",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Measurement study of what the repurposing module cannot see: typed pharmacological assertions, the early-benefit axis, missing data in abstentions, prose-cited map records. Numbers and proposed minimal changes; no extractor, no edit of the map, registries, ledgers (other than this record) or the four current files.",
+ "SCOPE": {
+  "contract": "ledger/tasks/orchestrator/ORCH-MODULE-BATCH-20261023.json",
+  "files": [
+   "disease-models/wwox/research/drug_repurposing/module_blindspots_20261023.md",
+   "disease-models/wwox/research/drug_repurposing/typed_assertions_20261023.tsv",
+   "disease-models/wwox/research/drug_repurposing/early_benefit_map_records_candidate_20261023.md",
+   "disease-models/wwox/research/drug_repurposing/map_identifier_edits_20261023.diff"
+  ]
+ },
+ "ACCEPTANCE_CRITERIA": [
+  "TSV with one row per assertion of the 21 cards",
+  "producibility number and needs stated",
+  "early-benefit candidate file",
+  "abstentions clustered, ranked by count",
+  "prose-cited records listed with identifier status and a diff file",
+  "labels: NOT WWOX EVIDENCE; no dose, suitability, score or rank; not medical advice"
+ ],
+ "DEPENDENCIES": [],
+ "REVIEW_REQUIREMENT": "Mirror ex post",
+ "INTERACTION_MODE": "AUTONOMOUS",
+ "RETRY_POLICY": "resume idempotently",
+ "MILESTONE_PLAN": [
+  "TASK_ACK/CLAIM",
+  "measure",
+  "write",
+  "commit",
+  "land"
+ ],
+ "DELIVERABLE": "the four files in SCOPE",
+ "CURRENT_STATE": "COMPLETE",
+ "assigned_on": "2026-10-23",
+ "TASK_ACK": {
+  "TASK_ID": "MODULE-D-20261023",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "decision": "ACCEPTED",
+  "at": "2026-10-23T20:45:07Z"
+ },
+ "TASK_CLAIM": {
+  "TASK_ID": "MODULE-D-20261023",
+  "GENERATION": 1,
+  "ACTOR_ID": "scientist-d",
+  "timestamp": "2026-10-23T20:45:07Z",
+  "durable_pointer": "branch scientist-d/module-d-20261023, worktree .claude/worktrees/module-d-20261023",
+  "note": "scientist-d is a stated assumption of the Orchestrator"
+ },
+ "DEFAULTS_TAKEN": [
+  {
+   "condition": "the lot text says 59 abstentions name missing data and 20 records are prose-cited; measurement gives 59 identical abstention strings and 21 records",
+   "default": "reported the measured figures and the correction, and clustered the hand-made cards' not_known entries (89) as the data that does name missing data",
+   "why_safe": "a note, no state touched",
+   "would_have_differed": "none"
+  },
+  {
+   "condition": "the task named a lean diff of the map; the map must not be edited",
+   "default": "built the patched copy and the diff in scratch, committed only the diff, checked it with git apply --check",
+   "why_safe": "the map is untouched",
+   "would_have_differed": "none"
+  },
+  {
+   "condition": "ChEMBL lookups were needed to measure the dictionary",
+   "default": "14 live adapter queries on 2026-10-23, key-less, results summarised in the note, nothing cached into the repository",
+   "why_safe": "read-only, free, NOT WWOX EVIDENCE",
+   "would_have_differed": "cached under join/adapter_cache if the Orchestrator wants them kept"
+  }
+ ],
+ "STOP_LOG": [],
+ "RESULT": "module_blindspots_20261023.md: (F1) the join reads contradicts_locator.auditors at the wrong depth, 301 of 301 declarations read as unaudited, which produced the two AUDIT handoff rows; (F2) the 59 abstentions are linkage gaps, 59 -> 9 simulated with 3 tool fixes and the identifier diff; (F3) a manifest rule reproduces the core four fields of 9 of 30 assertions (2 of 18 WWOX-sourced), 19 with named extra inputs, never 11; (F4) 21 prose-cited records, 16 with an identifier, 2 ambiguous, 2 resolving to zero, 1 to create; (F5) 3 of 9 early-benefit cards already have map records; (F6) 8 of 10 ChEMBL MATCH_FOUND are not the named substance; (F7) 7 of 226 leads dropped by an emoji filter."
+}
