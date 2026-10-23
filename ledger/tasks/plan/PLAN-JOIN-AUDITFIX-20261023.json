@@ -1,0 +1,15 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "TASK_ID": "PLAN-JOIN-AUDITFIX-20261023",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "plan",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "repurposing_join.py read contradicts_locator.auditors/verdict flat; real manifests nest them under contradicts_locator.audit. Fix, regression, rerun join, regenerate handoff and cards.",
+ "SCOPE": ["framework/scripts/repurposing_join.py", "framework/scripts/test_repurposing_join.py", "disease-models/wwox/research/drug_repurposing/join/", "disease-models/wwox/research/repurposing_batch_selection_20261023_module.md"],
+ "CURRENT_STATE": "COMPLETED",
+ "assigned_on": "2026-10-23",
+ "worktree": ".claude/worktrees/join-auditfix",
+ "branch": "task/plan-join-auditfix"
+}

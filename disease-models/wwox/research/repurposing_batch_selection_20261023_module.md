@@ -9,8 +9,8 @@ Not medical advice.
 
 | Kind | Query | Candidate (from the mechanism map heading) | Dependence measured | PMIDs | Ask | Who | Would move |
 |---|---|---|---|---|---|---|---|
-| AUDIT | `Q-N-17` | Tau-lowering, imported from tauopathy into CHAIN C | 1_UNAUDITED_CONTRADICTIONS | 30619736 | blind locator audit (legend-locator-audit) of the contradicts_locator entries in these manifests before the query touches a baseline claim | an auditor who is not the reader | N-17 (disease-models/wwox/analysis/mechanism_intervention_map.md:775) |
-| AUDIT | `Q-R-02` | Memantine | 5_UNAUDITED_CONTRADICTIONS | 36779245, 42422765 | blind locator audit (legend-locator-audit) of the contradicts_locator entries in these manifests before the query touches a baseline claim | an auditor who is not the reader | R-02 (disease-models/wwox/analysis/mechanism_intervention_map.md:427) |
+| READ | `Q-N-17` | Tau-lowering, imported from tauopathy into CHAIN C | 8_PAPERS_7_COMPLETE | 22193544, 25650666, 26355344, 27551439, 30619736, 34634460, 36499501, 37519886 | the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED | Scientist | N-17 (disease-models/wwox/analysis/mechanism_intervention_map.md:775) |
+| READ | `Q-R-02` | Memantine | 5_PAPERS_5_COMPLETE | 30361190, 34634460, 36686527, 36779245, 42422765 | the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED | Scientist | R-02 (disease-models/wwox/analysis/mechanism_intervention_map.md:427) |
 | REPLICATE | `Q-N-16` | Pannexin-1 blockade | ONE_PAPER (34634460, depth complete_fulltext_read, 26 locators, audit UNAUDITED) | 34634460 | find an independent measurement of the same endpoint (second laboratory or second model); the query rests on this one complete read | read-only selector, then a Scientist | N-16 (disease-models/wwox/analysis/mechanism_intervention_map.md:769) |
 | REPLICATE | `Q-R-01` | AAV9-hSynI-WWOX | ONE_PAPER (42128308, depth complete_fulltext_read, 25 locators, audit UNAUDITED) | 42128308 | find an independent measurement of the same endpoint (second laboratory or second model); the query rests on this one complete read | read-only selector, then a Scientist | R-01 (disease-models/wwox/analysis/mechanism_intervention_map.md:403) |
 | REPLICATE | `Q-R-03` | Wnt / tankyrase inhibition | ONE_PAPER (38203337, depth complete_fulltext_read, 30 locators, audit UNAUDITED) | 38203337 | find an independent measurement of the same endpoint (second laboratory or second model); the query rests on this one complete read | read-only selector, then a Scientist | R-03 (disease-models/wwox/analysis/mechanism_intervention_map.md:452) |
@@ -36,7 +36,7 @@ Not medical advice.
 | SELECT | `Q-R-08` | Base / prime editing of a canonical splice-acceptor allele | NO_RECEIPTED_EVIDENCE | — | resolve the author-year citations of this record to PMIDs with registry_records.py and propose reading rows; until a receipt exists the external hits stand alone | read-only selector | R-08 (disease-models/wwox/analysis/mechanism_intervention_map.md:575) |
 | SELECT | `Q-R-09` | Proteostasis modulation for an SDR missense allele | NO_RECEIPTED_EVIDENCE | — | resolve the author-year citations of this record to PMIDs with registry_records.py and propose reading rows; until a receipt exists the external hits stand alone | read-only selector | R-09 (disease-models/wwox/analysis/mechanism_intervention_map.md:600) |
 
-Counts: AUDIT 2 · REPLICATE 3 · SELECT 21
+Counts: READ 2 · REPLICATE 3 · SELECT 21
 
 ## Lead specs (for `discovery_lead.py check`; a Scientist stages them, the join never appends)
 
