@@ -1,0 +1,5456 @@
+[
+ {
+  "card": {
+   "abstention": "NO_DRUG_ASSERTIONS_SUPPLIED",
+   "assessment": "REQUIRES_QUALIFICATION",
+   "canonical": false,
+   "comparisons": [],
+   "directional_summary": "UNRESOLVED",
+   "epistemic_status": "IPOTESI",
+   "external_sources": [
+    {
+     "adapter": "chembl",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    },
+    {
+     "adapter": "openfda",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    },
+    {
+     "adapter": "pubtator3",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    }
+   ],
+   "input": {
+    "candidate": {
+     "id": "Q-N-01",
+     "name": "mTOR inhibitors"
+    },
+    "derived_by": "framework/scripts/repurposing_join.py",
+    "disease_assertion": {
+     "context": {
+      "cell_type": "UNKNOWN",
+      "developmental_stage": "UNKNOWN",
+      "disease_id": "UNKNOWN",
+      "genotype": "UNKNOWN",
+      "species": "UNKNOWN"
+     },
+     "direction": "UNKNOWN",
+     "endpoint": "UNKNOWN",
+     "epistemic_status": "IPOTESI",
+     "id": "DA-Q-N-01",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:630",
+     "reading_depth": "UNKNOWN",
+     "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-01",
+     "target_id": "UNKNOWN"
+    },
+    "drug_assertions": [],
+    "external_sources": [
+     {
+      "adapter": "chembl",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     },
+     {
+      "adapter": "openfda",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     },
+     {
+      "adapter": "pubtator3",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     }
+    ],
+    "label_lookup": {
+     "status": "NOT_ATTEMPTED"
+    },
+    "legend_evidence": {
+     "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+     "complete_reads": 0,
+     "depths": [],
+     "digest": "6e65904c8a383291",
+     "locators": 0,
+     "origin_id": "N-01",
+     "papers": 0,
+     "query_id": "Q-N-01",
+     "rows": [],
+     "unaudited_contradictions": 0
+    },
+    "p4_fields": {
+     "cellular_context": {
+      "cells_tissue_stage": "UNKNOWN",
+      "coverage": "UNKNOWN",
+      "limits": "UNKNOWN",
+      "target_expression": "UNKNOWN"
+     },
+     "endpoint_pursued": "UNKNOWN",
+     "functional_evidence_available": "UNKNOWN",
+     "temporal_or_model_limit": "UNKNOWN"
+    },
+    "p4_roadmap_fields": {
+     "indication_and_transfer": "*`INSUFFICIENT` — mai misurato a livello proteico in alcun sistema WWOX.* The reflex move in genetic DEE, imported from TSC.",
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:630; evidence table digest 6e65904c8a383291"
+    },
+    "route": "RECUPERO_PROFONDO",
+    "schema_version": 1
+   },
+   "input_sha256": "fa768e903802a3126e8f74e4cf33a28eee08b3c19de84ae925824a043fe25a07",
+   "label_lookup": {
+    "active_ingredient": "UNKNOWN",
+    "client_version": "UNKNOWN",
+    "coverage": "UNKNOWN",
+    "coverage_limit": "UNKNOWN",
+    "error": "UNKNOWN",
+    "formulation": "UNKNOWN",
+    "method": "UNKNOWN",
+    "product_name": "UNKNOWN",
+    "queries": [],
+    "retrieved_at": "UNKNOWN",
+    "source": "UNKNOWN",
+    "spl_id": "UNKNOWN",
+    "status": "NOT_ATTEMPTED"
+   },
+   "legend_evidence": {
+    "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+    "complete_reads": 0,
+    "depths": [],
+    "digest": "6e65904c8a383291",
+    "locators": 0,
+    "origin_id": "N-01",
+    "papers": 0,
+    "query_id": "Q-N-01",
+    "rows": [],
+    "unaudited_contradictions": 0
+   },
+   "limits": [
+    "Technical comparison is not efficacy, safety or experimental validation.",
+    "Sources and receipt references are retained, not independently verified.",
+    "Shared sources are not independent confirmations; scores are not pooled.",
+    "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
+   ],
+   "measure_next": {
+    "dependence": "NO_RECEIPTED_EVIDENCE",
+    "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
+    "external_hits": 0,
+    "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
+    "would_move": "N-01 (disease-models/wwox/analysis/mechanism_intervention_map.md:630)"
+   },
+   "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
+   "p4_fields": {
+    "cellular_context": {
+     "cells_tissue_stage": "UNKNOWN",
+     "coverage": "UNKNOWN",
+     "limits": "UNKNOWN",
+     "target_expression": "UNKNOWN"
+    },
+    "endpoint_pursued": "UNKNOWN",
+    "functional_evidence_available": "UNKNOWN",
+    "temporal_or_model_limit": "UNKNOWN"
+   },
+   "schema_version": 1,
+   "translation": {
+    "access": "UNKNOWN",
+    "cns_exposure": "UNKNOWN",
+    "functional_rescue": "UNKNOWN",
+    "interactions": "UNKNOWN",
+    "pediatric_suitability": "UNKNOWN",
+    "time_to_benefit": "UNKNOWN"
+   }
+  },
+  "query_id": "Q-N-01"
+ },
+ {
+  "card": {
+   "abstention": "NO_DRUG_ASSERTIONS_SUPPLIED",
+   "assessment": "REQUIRES_QUALIFICATION",
+   "canonical": false,
+   "comparisons": [],
+   "directional_summary": "UNRESOLVED",
+   "epistemic_status": "IPOTESI",
+   "external_sources": [
+    {
+     "adapter": "chembl",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    },
+    {
+     "adapter": "openfda",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    },
+    {
+     "adapter": "pubtator3",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    }
+   ],
+   "input": {
+    "candidate": {
+     "id": "Q-N-02",
+     "name": "Lithium as a WWOX-specific disease modifier"
+    },
+    "derived_by": "framework/scripts/repurposing_join.py",
+    "disease_assertion": {
+     "context": {
+      "cell_type": "UNKNOWN",
+      "developmental_stage": "UNKNOWN",
+      "disease_id": "UNKNOWN",
+      "genotype": "UNKNOWN",
+      "species": "UNKNOWN"
+     },
+     "direction": "UNKNOWN",
+     "endpoint": "UNKNOWN",
+     "epistemic_status": "IPOTESI",
+     "id": "DA-Q-N-02",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:641",
+     "reading_depth": "UNKNOWN",
+     "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-02",
+     "target_id": "UNKNOWN"
+    },
+    "drug_assertions": [],
+    "external_sources": [
+     {
+      "adapter": "chembl",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     },
+     {
+      "adapter": "openfda",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     },
+     {
+      "adapter": "pubtator3",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     }
+    ],
+    "label_lookup": {
+     "status": "NOT_ATTEMPTED"
+    },
+    "legend_evidence": {
+     "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+     "complete_reads": 0,
+     "depths": [],
+     "digest": "ad94fe85a1ee32d8",
+     "locators": 0,
+     "origin_id": "N-02",
+     "papers": 0,
+     "query_id": "Q-N-02",
+     "rows": [],
+     "unaudited_contradictions": 0
+    },
+    "p4_fields": {
+     "cellular_context": {
+      "cells_tissue_stage": "UNKNOWN",
+      "coverage": "UNKNOWN",
+      "limits": "UNKNOWN",
+      "target_expression": "UNKNOWN"
+     },
+     "endpoint_pursued": "UNKNOWN",
+     "functional_evidence_available": "UNKNOWN",
+     "temporal_or_model_limit": "UNKNOWN"
+    },
+    "p4_roadmap_fields": {
+     "indication_and_transfer": "*evidence transfer that was never genotype-controlled*, compounded by *wrong",
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:641; evidence table digest ad94fe85a1ee32d8"
+    },
+    "route": "RECUPERO_PROFONDO",
+    "schema_version": 1
+   },
+   "input_sha256": "827f2993bc3b031284ab7da19a59ba0d284bad6223703cc0487c280c31d64f71",
+   "label_lookup": {
+    "active_ingredient": "UNKNOWN",
+    "client_version": "UNKNOWN",
+    "coverage": "UNKNOWN",
+    "coverage_limit": "UNKNOWN",
+    "error": "UNKNOWN",
+    "formulation": "UNKNOWN",
+    "method": "UNKNOWN",
+    "product_name": "UNKNOWN",
+    "queries": [],
+    "retrieved_at": "UNKNOWN",
+    "source": "UNKNOWN",
+    "spl_id": "UNKNOWN",
+    "status": "NOT_ATTEMPTED"
+   },
+   "legend_evidence": {
+    "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+    "complete_reads": 0,
+    "depths": [],
+    "digest": "ad94fe85a1ee32d8",
+    "locators": 0,
+    "origin_id": "N-02",
+    "papers": 0,
+    "query_id": "Q-N-02",
+    "rows": [],
+    "unaudited_contradictions": 0
+   },
+   "limits": [
+    "Technical comparison is not efficacy, safety or experimental validation.",
+    "Sources and receipt references are retained, not independently verified.",
+    "Shared sources are not independent confirmations; scores are not pooled.",
+    "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
+   ],
+   "measure_next": {
+    "dependence": "NO_RECEIPTED_EVIDENCE",
+    "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
+    "external_hits": 0,
+    "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
+    "would_move": "N-02 (disease-models/wwox/analysis/mechanism_intervention_map.md:641)"
+   },
+   "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
+   "p4_fields": {
+    "cellular_context": {
+     "cells_tissue_stage": "UNKNOWN",
+     "coverage": "UNKNOWN",
+     "limits": "UNKNOWN",
+     "target_expression": "UNKNOWN"
+    },
+    "endpoint_pursued": "UNKNOWN",
+    "functional_evidence_available": "UNKNOWN",
+    "temporal_or_model_limit": "UNKNOWN"
+   },
+   "schema_version": 1,
+   "translation": {
+    "access": "UNKNOWN",
+    "cns_exposure": "UNKNOWN",
+    "functional_rescue": "UNKNOWN",
+    "interactions": "UNKNOWN",
+    "pediatric_suitability": "UNKNOWN",
+    "time_to_benefit": "UNKNOWN"
+   }
+  },
+  "query_id": "Q-N-02"
+ },
+ {
+  "card": {
+   "abstention": "NO_DRUG_ASSERTIONS_SUPPLIED",
+   "assessment": "REQUIRES_QUALIFICATION",
+   "canonical": false,
+   "comparisons": [],
+   "directional_summary": "UNRESOLVED",
+   "epistemic_status": "IPOTESI",
+   "external_sources": [
+    {
+     "adapter": "chembl",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    },
+    {
+     "adapter": "openfda",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    },
+    {
+     "adapter": "pubtator3",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    }
+   ],
+   "input": {
+    "candidate": {
+     "id": "Q-N-03",
+     "name": "Sodium-channel blockers"
+    },
+    "derived_by": "framework/scripts/repurposing_join.py",
+    "disease_assertion": {
+     "context": {
+      "cell_type": "UNKNOWN",
+      "developmental_stage": "UNKNOWN",
+      "disease_id": "UNKNOWN",
+      "genotype": "UNKNOWN",
+      "species": "UNKNOWN"
+     },
+     "direction": "UNKNOWN",
+     "endpoint": "UNKNOWN",
+     "epistemic_status": "IPOTESI",
+     "id": "DA-Q-N-03",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:649",
+     "reading_depth": "UNKNOWN",
+     "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-03",
+     "target_id": "UNKNOWN"
+    },
+    "drug_assertions": [],
+    "external_sources": [
+     {
+      "adapter": "chembl",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     },
+     {
+      "adapter": "openfda",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     },
+     {
+      "adapter": "pubtator3",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     }
+    ],
+    "label_lookup": {
+     "status": "NOT_ATTEMPTED"
+    },
+    "legend_evidence": {
+     "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+     "complete_reads": 0,
+     "depths": [],
+     "digest": "318b60bacd9041d8",
+     "locators": 0,
+     "origin_id": "N-03",
+     "papers": 0,
+     "query_id": "Q-N-03",
+     "rows": [],
+     "unaudited_contradictions": 0
+    },
+    "p4_fields": {
+     "cellular_context": {
+      "cells_tissue_stage": "UNKNOWN",
+      "coverage": "UNKNOWN",
+      "limits": "UNKNOWN",
+      "target_expression": "UNKNOWN"
+     },
+     "endpoint_pursued": "UNKNOWN",
+     "functional_evidence_available": "UNKNOWN",
+     "temporal_or_model_limit": "UNKNOWN"
+    },
+    "p4_roadmap_fields": {
+     "indication_and_transfer": "*the target is not causally downstream of WWOX.* Precision therapy in",
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:649; evidence table digest 318b60bacd9041d8"
+    },
+    "route": "RECUPERO_PROFONDO",
+    "schema_version": 1
+   },
+   "input_sha256": "072aae7d99e2b2ed7c866eeb2bd72532ccf450a434a2bd15ead45989818ebf5f",
+   "label_lookup": {
+    "active_ingredient": "UNKNOWN",
+    "client_version": "UNKNOWN",
+    "coverage": "UNKNOWN",
+    "coverage_limit": "UNKNOWN",
+    "error": "UNKNOWN",
+    "formulation": "UNKNOWN",
+    "method": "UNKNOWN",
+    "product_name": "UNKNOWN",
+    "queries": [],
+    "retrieved_at": "UNKNOWN",
+    "source": "UNKNOWN",
+    "spl_id": "UNKNOWN",
+    "status": "NOT_ATTEMPTED"
+   },
+   "legend_evidence": {
+    "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+    "complete_reads": 0,
+    "depths": [],
+    "digest": "318b60bacd9041d8",
+    "locators": 0,
+    "origin_id": "N-03",
+    "papers": 0,
+    "query_id": "Q-N-03",
+    "rows": [],
+    "unaudited_contradictions": 0
+   },
+   "limits": [
+    "Technical comparison is not efficacy, safety or experimental validation.",
+    "Sources and receipt references are retained, not independently verified.",
+    "Shared sources are not independent confirmations; scores are not pooled.",
+    "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
+   ],
+   "measure_next": {
+    "dependence": "NO_RECEIPTED_EVIDENCE",
+    "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
+    "external_hits": 0,
+    "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
+    "would_move": "N-03 (disease-models/wwox/analysis/mechanism_intervention_map.md:649)"
+   },
+   "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
+   "p4_fields": {
+    "cellular_context": {
+     "cells_tissue_stage": "UNKNOWN",
+     "coverage": "UNKNOWN",
+     "limits": "UNKNOWN",
+     "target_expression": "UNKNOWN"
+    },
+    "endpoint_pursued": "UNKNOWN",
+    "functional_evidence_available": "UNKNOWN",
+    "temporal_or_model_limit": "UNKNOWN"
+   },
+   "schema_version": 1,
+   "translation": {
+    "access": "UNKNOWN",
+    "cns_exposure": "UNKNOWN",
+    "functional_rescue": "UNKNOWN",
+    "interactions": "UNKNOWN",
+    "pediatric_suitability": "UNKNOWN",
+    "time_to_benefit": "UNKNOWN"
+   }
+  },
+  "query_id": "Q-N-03"
+ },
+ {
+  "card": {
+   "abstention": "NO_DRUG_ASSERTIONS_SUPPLIED",
+   "assessment": "REQUIRES_QUALIFICATION",
+   "canonical": false,
+   "comparisons": [],
+   "directional_summary": "UNRESOLVED",
+   "epistemic_status": "IPOTESI",
+   "external_sources": [
+    {
+     "adapter": "chembl",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    },
+    {
+     "adapter": "openfda",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    }
+   ],
+   "input": {
+    "candidate": {
+     "id": "Q-N-04",
+     "name": "Broad GABAergic push"
+    },
+    "derived_by": "framework/scripts/repurposing_join.py",
+    "disease_assertion": {
+     "context": {
+      "cell_type": "UNKNOWN",
+      "developmental_stage": "UNKNOWN",
+      "disease_id": "UNKNOWN",
+      "genotype": "UNKNOWN",
+      "species": "UNKNOWN"
+     },
+     "direction": "UNKNOWN",
+     "endpoint": "UNKNOWN",
+     "epistemic_status": "IPOTESI",
+     "id": "DA-Q-N-04",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:657",
+     "reading_depth": "UNKNOWN",
+     "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-04",
+     "target_id": "UNKNOWN"
+    },
+    "drug_assertions": [],
+    "external_sources": [
+     {
+      "adapter": "chembl",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     },
+     {
+      "adapter": "openfda",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     }
+    ],
+    "label_lookup": {
+     "status": "NOT_ATTEMPTED"
+    },
+    "legend_evidence": {
+     "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+     "complete_reads": 0,
+     "depths": [],
+     "digest": "12f22bd551b07862",
+     "locators": 0,
+     "origin_id": "N-04",
+     "papers": 0,
+     "query_id": "Q-N-04",
+     "rows": [],
+     "unaudited_contradictions": 0
+    },
+    "p4_fields": {
+     "cellular_context": {
+      "cells_tissue_stage": "UNKNOWN",
+      "coverage": "UNKNOWN",
+      "limits": "UNKNOWN",
+      "target_expression": "UNKNOWN"
+     },
+     "endpoint_pursued": "UNKNOWN",
+     "functional_evidence_available": "UNKNOWN",
+     "temporal_or_model_limit": "UNKNOWN"
+    },
+    "p4_roadmap_fields": {
+     "indication_and_transfer": "*corrects a marker, not the mechanism* — plus an unmeasured premise. VABAM is",
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:657; evidence table digest 12f22bd551b07862"
+    },
+    "route": "RECUPERO_PROFONDO",
+    "schema_version": 1
+   },
+   "input_sha256": "4ad44d0e12251324dbeba873b74386f75d03054cb45f16ba1c7e40c57a4de44f",
+   "label_lookup": {
+    "active_ingredient": "UNKNOWN",
+    "client_version": "UNKNOWN",
+    "coverage": "UNKNOWN",
+    "coverage_limit": "UNKNOWN",
+    "error": "UNKNOWN",
+    "formulation": "UNKNOWN",
+    "method": "UNKNOWN",
+    "product_name": "UNKNOWN",
+    "queries": [],
+    "retrieved_at": "UNKNOWN",
+    "source": "UNKNOWN",
+    "spl_id": "UNKNOWN",
+    "status": "NOT_ATTEMPTED"
+   },
+   "legend_evidence": {
+    "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+    "complete_reads": 0,
+    "depths": [],
+    "digest": "12f22bd551b07862",
+    "locators": 0,
+    "origin_id": "N-04",
+    "papers": 0,
+    "query_id": "Q-N-04",
+    "rows": [],
+    "unaudited_contradictions": 0
+   },
+   "limits": [
+    "Technical comparison is not efficacy, safety or experimental validation.",
+    "Sources and receipt references are retained, not independently verified.",
+    "Shared sources are not independent confirmations; scores are not pooled.",
+    "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
+   ],
+   "measure_next": {
+    "dependence": "NO_RECEIPTED_EVIDENCE",
+    "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
+    "external_hits": 0,
+    "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
+    "would_move": "N-04 (disease-models/wwox/analysis/mechanism_intervention_map.md:657)"
+   },
+   "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
+   "p4_fields": {
+    "cellular_context": {
+     "cells_tissue_stage": "UNKNOWN",
+     "coverage": "UNKNOWN",
+     "limits": "UNKNOWN",
+     "target_expression": "UNKNOWN"
+    },
+    "endpoint_pursued": "UNKNOWN",
+    "functional_evidence_available": "UNKNOWN",
+    "temporal_or_model_limit": "UNKNOWN"
+   },
+   "schema_version": 1,
+   "translation": {
+    "access": "UNKNOWN",
+    "cns_exposure": "UNKNOWN",
+    "functional_rescue": "UNKNOWN",
+    "interactions": "UNKNOWN",
+    "pediatric_suitability": "UNKNOWN",
+    "time_to_benefit": "UNKNOWN"
+   }
+  },
+  "query_id": "Q-N-04"
+ },
+ {
+  "card": {
+   "abstention": "NO_DRUG_ASSERTIONS_SUPPLIED",
+   "assessment": "REQUIRES_QUALIFICATION",
+   "canonical": false,
+   "comparisons": [],
+   "directional_summary": "UNRESOLVED",
+   "epistemic_status": "IPOTESI",
+   "external_sources": [
+    {
+     "adapter": "chembl",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    },
+    {
+     "adapter": "openfda",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    },
+    {
+     "adapter": "pubtator3",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    }
+   ],
+   "input": {
+    "candidate": {
+     "id": "Q-N-05",
+     "name": "Boosting WWOX expression alone"
+    },
+    "derived_by": "framework/scripts/repurposing_join.py",
+    "disease_assertion": {
+     "context": {
+      "cell_type": "UNKNOWN",
+      "developmental_stage": "UNKNOWN",
+      "disease_id": "UNKNOWN",
+      "genotype": "UNKNOWN",
+      "species": "UNKNOWN"
+     },
+     "direction": "UNKNOWN",
+     "endpoint": "UNKNOWN",
+     "epistemic_status": "IPOTESI",
+     "id": "DA-Q-N-05",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:666",
+     "reading_depth": "UNKNOWN",
+     "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-05",
+     "target_id": "UNKNOWN"
+    },
+    "drug_assertions": [],
+    "external_sources": [
+     {
+      "adapter": "chembl",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     },
+     {
+      "adapter": "openfda",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     },
+     {
+      "adapter": "pubtator3",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     }
+    ],
+    "label_lookup": {
+     "status": "NOT_ATTEMPTED"
+    },
+    "legend_evidence": {
+     "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+     "complete_reads": 0,
+     "depths": [],
+     "digest": "db3346dd894dc0e1",
+     "locators": 0,
+     "origin_id": "N-05",
+     "papers": 0,
+     "query_id": "Q-N-05",
+     "rows": [],
+     "unaudited_contradictions": 0
+    },
+    "p4_fields": {
+     "cellular_context": {
+      "cells_tissue_stage": "UNKNOWN",
+      "coverage": "UNKNOWN",
+      "limits": "UNKNOWN",
+      "target_expression": "UNKNOWN"
+     },
+     "endpoint_pursued": "UNKNOWN",
+     "functional_evidence_available": "UNKNOWN",
+     "temporal_or_model_limit": "UNKNOWN"
+    },
+    "p4_roadmap_fields": {
+     "indication_and_transfer": "*the target is not the bottleneck.* Normal transcript with protein not detected",
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:666; evidence table digest db3346dd894dc0e1"
+    },
+    "route": "RECUPERO_PROFONDO",
+    "schema_version": 1
+   },
+   "input_sha256": "d6d5826c0097b92beb42c54cc7e2177af55615761f8f1d4f38a31b8a7176df86",
+   "label_lookup": {
+    "active_ingredient": "UNKNOWN",
+    "client_version": "UNKNOWN",
+    "coverage": "UNKNOWN",
+    "coverage_limit": "UNKNOWN",
+    "error": "UNKNOWN",
+    "formulation": "UNKNOWN",
+    "method": "UNKNOWN",
+    "product_name": "UNKNOWN",
+    "queries": [],
+    "retrieved_at": "UNKNOWN",
+    "source": "UNKNOWN",
+    "spl_id": "UNKNOWN",
+    "status": "NOT_ATTEMPTED"
+   },
+   "legend_evidence": {
+    "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+    "complete_reads": 0,
+    "depths": [],
+    "digest": "db3346dd894dc0e1",
+    "locators": 0,
+    "origin_id": "N-05",
+    "papers": 0,
+    "query_id": "Q-N-05",
+    "rows": [],
+    "unaudited_contradictions": 0
+   },
+   "limits": [
+    "Technical comparison is not efficacy, safety or experimental validation.",
+    "Sources and receipt references are retained, not independently verified.",
+    "Shared sources are not independent confirmations; scores are not pooled.",
+    "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
+   ],
+   "measure_next": {
+    "dependence": "NO_RECEIPTED_EVIDENCE",
+    "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
+    "external_hits": 0,
+    "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
+    "would_move": "N-05 (disease-models/wwox/analysis/mechanism_intervention_map.md:666)"
+   },
+   "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
+   "p4_fields": {
+    "cellular_context": {
+     "cells_tissue_stage": "UNKNOWN",
+     "coverage": "UNKNOWN",
+     "limits": "UNKNOWN",
+     "target_expression": "UNKNOWN"
+    },
+    "endpoint_pursued": "UNKNOWN",
+    "functional_evidence_available": "UNKNOWN",
+    "temporal_or_model_limit": "UNKNOWN"
+   },
+   "schema_version": 1,
+   "translation": {
+    "access": "UNKNOWN",
+    "cns_exposure": "UNKNOWN",
+    "functional_rescue": "UNKNOWN",
+    "interactions": "UNKNOWN",
+    "pediatric_suitability": "UNKNOWN",
+    "time_to_benefit": "UNKNOWN"
+   }
+  },
+  "query_id": "Q-N-05"
+ },
+ {
+  "card": {
+   "abstention": "NO_DRUG_ASSERTIONS_SUPPLIED",
+   "assessment": "REQUIRES_QUALIFICATION",
+   "canonical": false,
+   "comparisons": [],
+   "directional_summary": "UNRESOLVED",
+   "epistemic_status": "IPOTESI",
+   "external_sources": [
+    {
+     "adapter": "chembl",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    },
+    {
+     "adapter": "openfda",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    },
+    {
+     "adapter": "pubtator3",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    }
+   ],
+   "input": {
+    "candidate": {
+     "id": "Q-N-06",
+     "name": "Lactate, and metabolic blood biomarkers generally, as WWOX readouts"
+    },
+    "derived_by": "framework/scripts/repurposing_join.py",
+    "disease_assertion": {
+     "context": {
+      "cell_type": "UNKNOWN",
+      "developmental_stage": "UNKNOWN",
+      "disease_id": "UNKNOWN",
+      "genotype": "UNKNOWN",
+      "species": "UNKNOWN"
+     },
+     "direction": "UNKNOWN",
+     "endpoint": "UNKNOWN",
+     "epistemic_status": "IPOTESI",
+     "id": "DA-Q-N-06",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:679",
+     "reading_depth": "UNKNOWN",
+     "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-06",
+     "target_id": "UNKNOWN"
+    },
+    "drug_assertions": [],
+    "external_sources": [
+     {
+      "adapter": "chembl",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     },
+     {
+      "adapter": "openfda",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     },
+     {
+      "adapter": "pubtator3",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     }
+    ],
+    "label_lookup": {
+     "status": "NOT_ATTEMPTED"
+    },
+    "legend_evidence": {
+     "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+     "complete_reads": 0,
+     "depths": [],
+     "digest": "fe29937ba778f2be",
+     "locators": 0,
+     "origin_id": "N-06",
+     "papers": 0,
+     "query_id": "Q-N-06",
+     "rows": [],
+     "unaudited_contradictions": 0
+    },
+    "p4_fields": {
+     "cellular_context": {
+      "cells_tissue_stage": "UNKNOWN",
+      "coverage": "UNKNOWN",
+      "limits": "UNKNOWN",
+      "target_expression": "UNKNOWN"
+     },
+     "endpoint_pursued": "UNKNOWN",
+     "functional_evidence_available": "UNKNOWN",
+     "temporal_or_model_limit": "UNKNOWN"
+    },
+    "p4_roadmap_fields": {
+     "indication_and_transfer": "*corrects/reports a biomarker, not the mechanism* — inverted: here the biomarker",
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:679; evidence table digest fe29937ba778f2be"
+    },
+    "route": "RECUPERO_PROFONDO",
+    "schema_version": 1
+   },
+   "input_sha256": "ee77d7e8c737640b4f40b81514bb8abced4e54737ee9f4f4b5f99c7587c6c0a5",
+   "label_lookup": {
+    "active_ingredient": "UNKNOWN",
+    "client_version": "UNKNOWN",
+    "coverage": "UNKNOWN",
+    "coverage_limit": "UNKNOWN",
+    "error": "UNKNOWN",
+    "formulation": "UNKNOWN",
+    "method": "UNKNOWN",
+    "product_name": "UNKNOWN",
+    "queries": [],
+    "retrieved_at": "UNKNOWN",
+    "source": "UNKNOWN",
+    "spl_id": "UNKNOWN",
+    "status": "NOT_ATTEMPTED"
+   },
+   "legend_evidence": {
+    "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+    "complete_reads": 0,
+    "depths": [],
+    "digest": "fe29937ba778f2be",
+    "locators": 0,
+    "origin_id": "N-06",
+    "papers": 0,
+    "query_id": "Q-N-06",
+    "rows": [],
+    "unaudited_contradictions": 0
+   },
+   "limits": [
+    "Technical comparison is not efficacy, safety or experimental validation.",
+    "Sources and receipt references are retained, not independently verified.",
+    "Shared sources are not independent confirmations; scores are not pooled.",
+    "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
+   ],
+   "measure_next": {
+    "dependence": "NO_RECEIPTED_EVIDENCE",
+    "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
+    "external_hits": 0,
+    "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
+    "would_move": "N-06 (disease-models/wwox/analysis/mechanism_intervention_map.md:679)"
+   },
+   "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
+   "p4_fields": {
+    "cellular_context": {
+     "cells_tissue_stage": "UNKNOWN",
+     "coverage": "UNKNOWN",
+     "limits": "UNKNOWN",
+     "target_expression": "UNKNOWN"
+    },
+    "endpoint_pursued": "UNKNOWN",
+    "functional_evidence_available": "UNKNOWN",
+    "temporal_or_model_limit": "UNKNOWN"
+   },
+   "schema_version": 1,
+   "translation": {
+    "access": "UNKNOWN",
+    "cns_exposure": "UNKNOWN",
+    "functional_rescue": "UNKNOWN",
+    "interactions": "UNKNOWN",
+    "pediatric_suitability": "UNKNOWN",
+    "time_to_benefit": "UNKNOWN"
+   }
+  },
+  "query_id": "Q-N-06"
+ },
+ {
+  "card": {
+   "abstention": "NO_DRUG_ASSERTIONS_SUPPLIED",
+   "assessment": "REQUIRES_QUALIFICATION",
+   "canonical": false,
+   "comparisons": [],
+   "directional_summary": "UNRESOLVED",
+   "epistemic_status": "IPOTESI",
+   "external_sources": [
+    {
+     "adapter": "chembl",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    },
+    {
+     "adapter": "openfda",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    }
+   ],
+   "input": {
+    "candidate": {
+     "id": "Q-N-07",
+     "name": "Digoxin"
+    },
+    "derived_by": "framework/scripts/repurposing_join.py",
+    "disease_assertion": {
+     "context": {
+      "cell_type": "UNKNOWN",
+      "developmental_stage": "UNKNOWN",
+      "disease_id": "UNKNOWN",
+      "genotype": "UNKNOWN",
+      "species": "UNKNOWN"
+     },
+     "direction": "UNKNOWN",
+     "endpoint": "UNKNOWN",
+     "epistemic_status": "IPOTESI",
+     "id": "DA-Q-N-07",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:687",
+     "reading_depth": "UNKNOWN",
+     "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-07",
+     "target_id": "UNKNOWN"
+    },
+    "drug_assertions": [],
+    "external_sources": [
+     {
+      "adapter": "chembl",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     },
+     {
+      "adapter": "openfda",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     }
+    ],
+    "label_lookup": {
+     "status": "NOT_ATTEMPTED"
+    },
+    "legend_evidence": {
+     "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+     "complete_reads": 0,
+     "depths": [],
+     "digest": "4eb8331a62e845bc",
+     "locators": 0,
+     "origin_id": "N-07",
+     "papers": 0,
+     "query_id": "Q-N-07",
+     "rows": [],
+     "unaudited_contradictions": 0
+    },
+    "p4_fields": {
+     "cellular_context": {
+      "cells_tissue_stage": "UNKNOWN",
+      "coverage": "UNKNOWN",
+      "limits": "UNKNOWN",
+      "target_expression": "UNKNOWN"
+     },
+     "endpoint_pursued": "UNKNOWN",
+     "functional_evidence_available": "UNKNOWN",
+     "temporal_or_model_limit": "UNKNOWN"
+    },
+    "p4_roadmap_fields": {
+     "indication_and_transfer": "*toxicity incompatible* + *wrong endpoint*. The only approved drug that corrects a",
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:687; evidence table digest 4eb8331a62e845bc"
+    },
+    "route": "RECUPERO_PROFONDO",
+    "schema_version": 1
+   },
+   "input_sha256": "f3b8f97c0954bcf2fefab1407eec3420f2d95dda34a590080b6c06d7b38522f8",
+   "label_lookup": {
+    "active_ingredient": "UNKNOWN",
+    "client_version": "UNKNOWN",
+    "coverage": "UNKNOWN",
+    "coverage_limit": "UNKNOWN",
+    "error": "UNKNOWN",
+    "formulation": "UNKNOWN",
+    "method": "UNKNOWN",
+    "product_name": "UNKNOWN",
+    "queries": [],
+    "retrieved_at": "UNKNOWN",
+    "source": "UNKNOWN",
+    "spl_id": "UNKNOWN",
+    "status": "NOT_ATTEMPTED"
+   },
+   "legend_evidence": {
+    "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+    "complete_reads": 0,
+    "depths": [],
+    "digest": "4eb8331a62e845bc",
+    "locators": 0,
+    "origin_id": "N-07",
+    "papers": 0,
+    "query_id": "Q-N-07",
+    "rows": [],
+    "unaudited_contradictions": 0
+   },
+   "limits": [
+    "Technical comparison is not efficacy, safety or experimental validation.",
+    "Sources and receipt references are retained, not independently verified.",
+    "Shared sources are not independent confirmations; scores are not pooled.",
+    "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
+   ],
+   "measure_next": {
+    "dependence": "NO_RECEIPTED_EVIDENCE",
+    "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
+    "external_hits": 0,
+    "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
+    "would_move": "N-07 (disease-models/wwox/analysis/mechanism_intervention_map.md:687)"
+   },
+   "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
+   "p4_fields": {
+    "cellular_context": {
+     "cells_tissue_stage": "UNKNOWN",
+     "coverage": "UNKNOWN",
+     "limits": "UNKNOWN",
+     "target_expression": "UNKNOWN"
+    },
+    "endpoint_pursued": "UNKNOWN",
+    "functional_evidence_available": "UNKNOWN",
+    "temporal_or_model_limit": "UNKNOWN"
+   },
+   "schema_version": 1,
+   "translation": {
+    "access": "UNKNOWN",
+    "cns_exposure": "UNKNOWN",
+    "functional_rescue": "UNKNOWN",
+    "interactions": "UNKNOWN",
+    "pediatric_suitability": "UNKNOWN",
+    "time_to_benefit": "UNKNOWN"
+   }
+  },
+  "query_id": "Q-N-07"
+ },
+ {
+  "card": {
+   "abstention": "NO_DRUG_ASSERTIONS_SUPPLIED",
+   "assessment": "REQUIRES_QUALIFICATION",
+   "canonical": false,
+   "comparisons": [],
+   "directional_summary": "UNRESOLVED",
+   "epistemic_status": "IPOTESI",
+   "external_sources": [
+    {
+     "adapter": "chembl",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    },
+    {
+     "adapter": "openfda",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    },
+    {
+     "adapter": "pubtator3",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    }
+   ],
+   "input": {
+    "candidate": {
+     "id": "Q-N-08",
+     "name": "Dichloroacetate"
+    },
+    "derived_by": "framework/scripts/repurposing_join.py",
+    "disease_assertion": {
+     "context": {
+      "cell_type": "UNKNOWN",
+      "developmental_stage": "UNKNOWN",
+      "disease_id": "UNKNOWN",
+      "genotype": "UNKNOWN",
+      "species": "UNKNOWN"
+     },
+     "direction": "UNKNOWN",
+     "endpoint": "UNKNOWN",
+     "epistemic_status": "IPOTESI",
+     "id": "DA-Q-N-08",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:697",
+     "reading_depth": "UNKNOWN",
+     "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-08",
+     "target_id": "UNKNOWN"
+    },
+    "drug_assertions": [],
+    "external_sources": [
+     {
+      "adapter": "chembl",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     },
+     {
+      "adapter": "openfda",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     },
+     {
+      "adapter": "pubtator3",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     }
+    ],
+    "label_lookup": {
+     "status": "NOT_ATTEMPTED"
+    },
+    "legend_evidence": {
+     "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+     "complete_reads": 0,
+     "depths": [],
+     "digest": "0249c1612d1b595d",
+     "locators": 0,
+     "origin_id": "N-08",
+     "papers": 0,
+     "query_id": "Q-N-08",
+     "rows": [],
+     "unaudited_contradictions": 0
+    },
+    "p4_fields": {
+     "cellular_context": {
+      "cells_tissue_stage": "UNKNOWN",
+      "coverage": "UNKNOWN",
+      "limits": "UNKNOWN",
+      "target_expression": "UNKNOWN"
+     },
+     "endpoint_pursued": "UNKNOWN",
+     "functional_evidence_available": "UNKNOWN",
+     "temporal_or_model_limit": "UNKNOWN"
+    },
+    "p4_roadmap_fields": {
+     "indication_and_transfer": "*toxicity incompatible* + *two-hop inference*. Dose-dependent peripheral",
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:697; evidence table digest 0249c1612d1b595d"
+    },
+    "route": "RECUPERO_PROFONDO",
+    "schema_version": 1
+   },
+   "input_sha256": "0336ee3a20c1e6e6a2b84cea374ac0ebe7faa891d2ab6158b96fd86b0be2d181",
+   "label_lookup": {
+    "active_ingredient": "UNKNOWN",
+    "client_version": "UNKNOWN",
+    "coverage": "UNKNOWN",
+    "coverage_limit": "UNKNOWN",
+    "error": "UNKNOWN",
+    "formulation": "UNKNOWN",
+    "method": "UNKNOWN",
+    "product_name": "UNKNOWN",
+    "queries": [],
+    "retrieved_at": "UNKNOWN",
+    "source": "UNKNOWN",
+    "spl_id": "UNKNOWN",
+    "status": "NOT_ATTEMPTED"
+   },
+   "legend_evidence": {
+    "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+    "complete_reads": 0,
+    "depths": [],
+    "digest": "0249c1612d1b595d",
+    "locators": 0,
+    "origin_id": "N-08",
+    "papers": 0,
+    "query_id": "Q-N-08",
+    "rows": [],
+    "unaudited_contradictions": 0
+   },
+   "limits": [
+    "Technical comparison is not efficacy, safety or experimental validation.",
+    "Sources and receipt references are retained, not independently verified.",
+    "Shared sources are not independent confirmations; scores are not pooled.",
+    "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
+   ],
+   "measure_next": {
+    "dependence": "NO_RECEIPTED_EVIDENCE",
+    "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
+    "external_hits": 0,
+    "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
+    "would_move": "N-08 (disease-models/wwox/analysis/mechanism_intervention_map.md:697)"
+   },
+   "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
+   "p4_fields": {
+    "cellular_context": {
+     "cells_tissue_stage": "UNKNOWN",
+     "coverage": "UNKNOWN",
+     "limits": "UNKNOWN",
+     "target_expression": "UNKNOWN"
+    },
+    "endpoint_pursued": "UNKNOWN",
+    "functional_evidence_available": "UNKNOWN",
+    "temporal_or_model_limit": "UNKNOWN"
+   },
+   "schema_version": 1,
+   "translation": {
+    "access": "UNKNOWN",
+    "cns_exposure": "UNKNOWN",
+    "functional_rescue": "UNKNOWN",
+    "interactions": "UNKNOWN",
+    "pediatric_suitability": "UNKNOWN",
+    "time_to_benefit": "UNKNOWN"
+   }
+  },
+  "query_id": "Q-N-08"
+ },
+ {
+  "card": {
+   "abstention": "NO_DRUG_ASSERTIONS_SUPPLIED",
+   "assessment": "REQUIRES_QUALIFICATION",
+   "canonical": false,
+   "comparisons": [],
+   "directional_summary": "UNRESOLVED",
+   "epistemic_status": "IPOTESI",
+   "external_sources": [
+    {
+     "adapter": "chembl",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    },
+    {
+     "adapter": "openfda",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    },
+    {
+     "adapter": "pubtator3",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    }
+   ],
+   "input": {
+    "candidate": {
+     "id": "Q-N-09",
+     "name": "pTyr33-WWOX peptide as functional restoration"
+    },
+    "derived_by": "framework/scripts/repurposing_join.py",
+    "disease_assertion": {
+     "context": {
+      "cell_type": "UNKNOWN",
+      "developmental_stage": "UNKNOWN",
+      "disease_id": "UNKNOWN",
+      "genotype": "UNKNOWN",
+      "species": "UNKNOWN"
+     },
+     "direction": "UNKNOWN",
+     "endpoint": "UNKNOWN",
+     "epistemic_status": "IPOTESI",
+     "id": "DA-Q-N-09",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:703",
+     "reading_depth": "UNKNOWN",
+     "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-09",
+     "target_id": "UNKNOWN"
+    },
+    "drug_assertions": [],
+    "external_sources": [
+     {
+      "adapter": "chembl",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     },
+     {
+      "adapter": "openfda",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     },
+     {
+      "adapter": "pubtator3",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     }
+    ],
+    "label_lookup": {
+     "status": "NOT_ATTEMPTED"
+    },
+    "legend_evidence": {
+     "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+     "complete_reads": 0,
+     "depths": [],
+     "digest": "19d805eec8eb8b27",
+     "locators": 0,
+     "origin_id": "N-09",
+     "papers": 0,
+     "query_id": "Q-N-09",
+     "rows": [],
+     "unaudited_contradictions": 0
+    },
+    "p4_fields": {
+     "cellular_context": {
+      "cells_tissue_stage": "UNKNOWN",
+      "coverage": "UNKNOWN",
+      "limits": "UNKNOWN",
+      "target_expression": "UNKNOWN"
+     },
+     "endpoint_pursued": "UNKNOWN",
+     "functional_evidence_available": "UNKNOWN",
+     "temporal_or_model_limit": "UNKNOWN"
+    },
+    "p4_roadmap_fields": {
+     "indication_and_transfer": "*acts in the wrong direction.* Phospho-Tyr33 WOX1 is **pro-apoptotic**; the peptide",
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:703; evidence table digest 19d805eec8eb8b27"
+    },
+    "route": "RECUPERO_PROFONDO",
+    "schema_version": 1
+   },
+   "input_sha256": "6c3af74d3f017678fafe7d7ffe20e1da351c48e2d5bb3edceda835bfaab4fd52",
+   "label_lookup": {
+    "active_ingredient": "UNKNOWN",
+    "client_version": "UNKNOWN",
+    "coverage": "UNKNOWN",
+    "coverage_limit": "UNKNOWN",
+    "error": "UNKNOWN",
+    "formulation": "UNKNOWN",
+    "method": "UNKNOWN",
+    "product_name": "UNKNOWN",
+    "queries": [],
+    "retrieved_at": "UNKNOWN",
+    "source": "UNKNOWN",
+    "spl_id": "UNKNOWN",
+    "status": "NOT_ATTEMPTED"
+   },
+   "legend_evidence": {
+    "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+    "complete_reads": 0,
+    "depths": [],
+    "digest": "19d805eec8eb8b27",
+    "locators": 0,
+    "origin_id": "N-09",
+    "papers": 0,
+    "query_id": "Q-N-09",
+    "rows": [],
+    "unaudited_contradictions": 0
+   },
+   "limits": [
+    "Technical comparison is not efficacy, safety or experimental validation.",
+    "Sources and receipt references are retained, not independently verified.",
+    "Shared sources are not independent confirmations; scores are not pooled.",
+    "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
+   ],
+   "measure_next": {
+    "dependence": "NO_RECEIPTED_EVIDENCE",
+    "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
+    "external_hits": 0,
+    "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
+    "would_move": "N-09 (disease-models/wwox/analysis/mechanism_intervention_map.md:703)"
+   },
+   "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
+   "p4_fields": {
+    "cellular_context": {
+     "cells_tissue_stage": "UNKNOWN",
+     "coverage": "UNKNOWN",
+     "limits": "UNKNOWN",
+     "target_expression": "UNKNOWN"
+    },
+    "endpoint_pursued": "UNKNOWN",
+    "functional_evidence_available": "UNKNOWN",
+    "temporal_or_model_limit": "UNKNOWN"
+   },
+   "schema_version": 1,
+   "translation": {
+    "access": "UNKNOWN",
+    "cns_exposure": "UNKNOWN",
+    "functional_rescue": "UNKNOWN",
+    "interactions": "UNKNOWN",
+    "pediatric_suitability": "UNKNOWN",
+    "time_to_benefit": "UNKNOWN"
+   }
+  },
+  "query_id": "Q-N-09"
+ },
+ {
+  "card": {
+   "abstention": "NO_DRUG_ASSERTIONS_SUPPLIED",
+   "assessment": "REQUIRES_QUALIFICATION",
+   "canonical": false,
+   "comparisons": [],
+   "directional_summary": "UNRESOLVED",
+   "epistemic_status": "IPOTESI",
+   "external_sources": [
+    {
+     "adapter": "chembl",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    },
+    {
+     "adapter": "openfda",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    },
+    {
+     "adapter": "pubtator3",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    }
+   ],
+   "input": {
+    "candidate": {
+     "id": "Q-N-10",
+     "name": "Splice-switching ASO for a canonical acceptor allele"
+    },
+    "derived_by": "framework/scripts/repurposing_join.py",
+    "disease_assertion": {
+     "context": {
+      "cell_type": "UNKNOWN",
+      "developmental_stage": "UNKNOWN",
+      "disease_id": "UNKNOWN",
+      "genotype": "UNKNOWN",
+      "species": "UNKNOWN"
+     },
+     "direction": "UNKNOWN",
+     "endpoint": "UNKNOWN",
+     "epistemic_status": "IPOTESI",
+     "id": "DA-Q-N-10",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:712",
+     "reading_depth": "UNKNOWN",
+     "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-10",
+     "target_id": "UNKNOWN"
+    },
+    "drug_assertions": [],
+    "external_sources": [
+     {
+      "adapter": "chembl",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     },
+     {
+      "adapter": "openfda",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     },
+     {
+      "adapter": "pubtator3",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     }
+    ],
+    "label_lookup": {
+     "status": "NOT_ATTEMPTED"
+    },
+    "legend_evidence": {
+     "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+     "complete_reads": 0,
+     "depths": [],
+     "digest": "eafe5d97a5c27e7a",
+     "locators": 0,
+     "origin_id": "N-10",
+     "papers": 0,
+     "query_id": "Q-N-10",
+     "rows": [],
+     "unaudited_contradictions": 0
+    },
+    "p4_fields": {
+     "cellular_context": {
+      "cells_tissue_stage": "UNKNOWN",
+      "coverage": "UNKNOWN",
+      "limits": "UNKNOWN",
+      "target_expression": "UNKNOWN"
+     },
+     "endpoint_pursued": "UNKNOWN",
+     "functional_evidence_available": "UNKNOWN",
+     "temporal_or_model_limit": "UNKNOWN"
+    },
+    "p4_roadmap_fields": {
+     "indication_and_transfer": "*derived from a mechanism that cannot work.* SSOs **mask** elements; they do not",
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:712; evidence table digest eafe5d97a5c27e7a"
+    },
+    "route": "RECUPERO_PROFONDO",
+    "schema_version": 1
+   },
+   "input_sha256": "d92546a895249796411dba9a1bf182e56de84a26968d5429ac1766eb0a7c8250",
+   "label_lookup": {
+    "active_ingredient": "UNKNOWN",
+    "client_version": "UNKNOWN",
+    "coverage": "UNKNOWN",
+    "coverage_limit": "UNKNOWN",
+    "error": "UNKNOWN",
+    "formulation": "UNKNOWN",
+    "method": "UNKNOWN",
+    "product_name": "UNKNOWN",
+    "queries": [],
+    "retrieved_at": "UNKNOWN",
+    "source": "UNKNOWN",
+    "spl_id": "UNKNOWN",
+    "status": "NOT_ATTEMPTED"
+   },
+   "legend_evidence": {
+    "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+    "complete_reads": 0,
+    "depths": [],
+    "digest": "eafe5d97a5c27e7a",
+    "locators": 0,
+    "origin_id": "N-10",
+    "papers": 0,
+    "query_id": "Q-N-10",
+    "rows": [],
+    "unaudited_contradictions": 0
+   },
+   "limits": [
+    "Technical comparison is not efficacy, safety or experimental validation.",
+    "Sources and receipt references are retained, not independently verified.",
+    "Shared sources are not independent confirmations; scores are not pooled.",
+    "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
+   ],
+   "measure_next": {
+    "dependence": "NO_RECEIPTED_EVIDENCE",
+    "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
+    "external_hits": 0,
+    "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
+    "would_move": "N-10 (disease-models/wwox/analysis/mechanism_intervention_map.md:712)"
+   },
+   "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
+   "p4_fields": {
+    "cellular_context": {
+     "cells_tissue_stage": "UNKNOWN",
+     "coverage": "UNKNOWN",
+     "limits": "UNKNOWN",
+     "target_expression": "UNKNOWN"
+    },
+    "endpoint_pursued": "UNKNOWN",
+    "functional_evidence_available": "UNKNOWN",
+    "temporal_or_model_limit": "UNKNOWN"
+   },
+   "schema_version": 1,
+   "translation": {
+    "access": "UNKNOWN",
+    "cns_exposure": "UNKNOWN",
+    "functional_rescue": "UNKNOWN",
+    "interactions": "UNKNOWN",
+    "pediatric_suitability": "UNKNOWN",
+    "time_to_benefit": "UNKNOWN"
+   }
+  },
+  "query_id": "Q-N-10"
+ },
+ {
+  "card": {
+   "abstention": "NO_DRUG_ASSERTIONS_SUPPLIED",
+   "assessment": "REQUIRES_QUALIFICATION",
+   "canonical": false,
+   "comparisons": [],
+   "directional_summary": "UNRESOLVED",
+   "epistemic_status": "IPOTESI",
+   "external_sources": [
+    {
+     "adapter": "chembl",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    },
+    {
+     "adapter": "openfda",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    },
+    {
+     "adapter": "pubtator3",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    },
+    {
+     "adapter": "pubtator3",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    }
+   ],
+   "input": {
+    "candidate": {
+     "id": "Q-N-11",
+     "name": "4-PBA / TUDCA on the ER-chaperone rationale"
+    },
+    "derived_by": "framework/scripts/repurposing_join.py",
+    "disease_assertion": {
+     "context": {
+      "cell_type": "UNKNOWN",
+      "developmental_stage": "UNKNOWN",
+      "disease_id": "UNKNOWN",
+      "genotype": "UNKNOWN",
+      "species": "UNKNOWN"
+     },
+     "direction": "UNKNOWN",
+     "endpoint": "UNKNOWN",
+     "epistemic_status": "IPOTESI",
+     "id": "DA-Q-N-11",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:720",
+     "reading_depth": "UNKNOWN",
+     "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-11",
+     "target_id": "UNKNOWN"
+    },
+    "drug_assertions": [],
+    "external_sources": [
+     {
+      "adapter": "chembl",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     },
+     {
+      "adapter": "openfda",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     },
+     {
+      "adapter": "pubtator3",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     },
+     {
+      "adapter": "pubtator3",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     }
+    ],
+    "label_lookup": {
+     "status": "NOT_ATTEMPTED"
+    },
+    "legend_evidence": {
+     "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+     "complete_reads": 0,
+     "depths": [],
+     "digest": "a62eb4c4c498c7b9",
+     "locators": 0,
+     "origin_id": "N-11",
+     "papers": 0,
+     "query_id": "Q-N-11",
+     "rows": [],
+     "unaudited_contradictions": 0
+    },
+    "p4_fields": {
+     "cellular_context": {
+      "cells_tissue_stage": "UNKNOWN",
+      "coverage": "UNKNOWN",
+      "limits": "UNKNOWN",
+      "target_expression": "UNKNOWN"
+     },
+     "endpoint_pursued": "UNKNOWN",
+     "functional_evidence_available": "UNKNOWN",
+     "temporal_or_model_limit": "UNKNOWN"
+    },
+    "p4_roadmap_fields": {
+     "indication_and_transfer": "*derived from a textbook default.* \"Misfolded protein → ERAD → chemical chaperone\"",
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:720; evidence table digest a62eb4c4c498c7b9"
+    },
+    "route": "RECUPERO_PROFONDO",
+    "schema_version": 1
+   },
+   "input_sha256": "3b12de89c4b63f5bcd60d4395372c62090b4d3a37304d610618b25d937d3e1cb",
+   "label_lookup": {
+    "active_ingredient": "UNKNOWN",
+    "client_version": "UNKNOWN",
+    "coverage": "UNKNOWN",
+    "coverage_limit": "UNKNOWN",
+    "error": "UNKNOWN",
+    "formulation": "UNKNOWN",
+    "method": "UNKNOWN",
+    "product_name": "UNKNOWN",
+    "queries": [],
+    "retrieved_at": "UNKNOWN",
+    "source": "UNKNOWN",
+    "spl_id": "UNKNOWN",
+    "status": "NOT_ATTEMPTED"
+   },
+   "legend_evidence": {
+    "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+    "complete_reads": 0,
+    "depths": [],
+    "digest": "a62eb4c4c498c7b9",
+    "locators": 0,
+    "origin_id": "N-11",
+    "papers": 0,
+    "query_id": "Q-N-11",
+    "rows": [],
+    "unaudited_contradictions": 0
+   },
+   "limits": [
+    "Technical comparison is not efficacy, safety or experimental validation.",
+    "Sources and receipt references are retained, not independently verified.",
+    "Shared sources are not independent confirmations; scores are not pooled.",
+    "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
+   ],
+   "measure_next": {
+    "dependence": "NO_RECEIPTED_EVIDENCE",
+    "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
+    "external_hits": 0,
+    "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
+    "would_move": "N-11 (disease-models/wwox/analysis/mechanism_intervention_map.md:720)"
+   },
+   "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
+   "p4_fields": {
+    "cellular_context": {
+     "cells_tissue_stage": "UNKNOWN",
+     "coverage": "UNKNOWN",
+     "limits": "UNKNOWN",
+     "target_expression": "UNKNOWN"
+    },
+    "endpoint_pursued": "UNKNOWN",
+    "functional_evidence_available": "UNKNOWN",
+    "temporal_or_model_limit": "UNKNOWN"
+   },
+   "schema_version": 1,
+   "translation": {
+    "access": "UNKNOWN",
+    "cns_exposure": "UNKNOWN",
+    "functional_rescue": "UNKNOWN",
+    "interactions": "UNKNOWN",
+    "pediatric_suitability": "UNKNOWN",
+    "time_to_benefit": "UNKNOWN"
+   }
+  },
+  "query_id": "Q-N-11"
+ },
+ {
+  "card": {
+   "abstention": "NO_DRUG_ASSERTIONS_SUPPLIED",
+   "assessment": "REQUIRES_QUALIFICATION",
+   "canonical": false,
+   "comparisons": [],
+   "directional_summary": "UNRESOLVED",
+   "epistemic_status": "IPOTESI",
+   "external_sources": [
+    {
+     "adapter": "chembl",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    },
+    {
+     "adapter": "openfda",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    },
+    {
+     "adapter": "pubtator3",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    },
+    {
+     "adapter": "pubtator3",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    }
+   ],
+   "input": {
+    "candidate": {
+     "id": "Q-N-12",
+     "name": "HSP70 co-inducers"
+    },
+    "derived_by": "framework/scripts/repurposing_join.py",
+    "disease_assertion": {
+     "context": {
+      "cell_type": "UNKNOWN",
+      "developmental_stage": "UNKNOWN",
+      "disease_id": "UNKNOWN",
+      "genotype": "UNKNOWN",
+      "species": "UNKNOWN"
+     },
+     "direction": "UNKNOWN",
+     "endpoint": "UNKNOWN",
+     "epistemic_status": "IPOTESI",
+     "id": "DA-Q-N-12",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:726",
+     "reading_depth": "UNKNOWN",
+     "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-12",
+     "target_id": "UNKNOWN"
+    },
+    "drug_assertions": [],
+    "external_sources": [
+     {
+      "adapter": "chembl",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     },
+     {
+      "adapter": "openfda",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     },
+     {
+      "adapter": "pubtator3",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     },
+     {
+      "adapter": "pubtator3",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     }
+    ],
+    "label_lookup": {
+     "status": "NOT_ATTEMPTED"
+    },
+    "legend_evidence": {
+     "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+     "complete_reads": 0,
+     "depths": [],
+     "digest": "4bff59285e352979",
+     "locators": 0,
+     "origin_id": "N-12",
+     "papers": 0,
+     "query_id": "Q-N-12",
+     "rows": [],
+     "unaudited_contradictions": 0
+    },
+    "p4_fields": {
+     "cellular_context": {
+      "cells_tissue_stage": "UNKNOWN",
+      "coverage": "UNKNOWN",
+      "limits": "UNKNOWN",
+      "target_expression": "UNKNOWN"
+     },
+     "endpoint_pursued": "UNKNOWN",
+     "functional_evidence_available": "UNKNOWN",
+     "temporal_or_model_limit": "UNKNOWN"
+    },
+    "p4_roadmap_fields": {
+     "indication_and_transfer": "*wrong direction, hidden inside a plausible one.* \"It is a chaperone, therefore it",
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:726; evidence table digest 4bff59285e352979"
+    },
+    "route": "RECUPERO_PROFONDO",
+    "schema_version": 1
+   },
+   "input_sha256": "2fd8e425c4d712891fab54dfd74912909c932b1e9a2cce9c5584945a3dcea29e",
+   "label_lookup": {
+    "active_ingredient": "UNKNOWN",
+    "client_version": "UNKNOWN",
+    "coverage": "UNKNOWN",
+    "coverage_limit": "UNKNOWN",
+    "error": "UNKNOWN",
+    "formulation": "UNKNOWN",
+    "method": "UNKNOWN",
+    "product_name": "UNKNOWN",
+    "queries": [],
+    "retrieved_at": "UNKNOWN",
+    "source": "UNKNOWN",
+    "spl_id": "UNKNOWN",
+    "status": "NOT_ATTEMPTED"
+   },
+   "legend_evidence": {
+    "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+    "complete_reads": 0,
+    "depths": [],
+    "digest": "4bff59285e352979",
+    "locators": 0,
+    "origin_id": "N-12",
+    "papers": 0,
+    "query_id": "Q-N-12",
+    "rows": [],
+    "unaudited_contradictions": 0
+   },
+   "limits": [
+    "Technical comparison is not efficacy, safety or experimental validation.",
+    "Sources and receipt references are retained, not independently verified.",
+    "Shared sources are not independent confirmations; scores are not pooled.",
+    "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
+   ],
+   "measure_next": {
+    "dependence": "NO_RECEIPTED_EVIDENCE",
+    "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
+    "external_hits": 0,
+    "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
+    "would_move": "N-12 (disease-models/wwox/analysis/mechanism_intervention_map.md:726)"
+   },
+   "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
+   "p4_fields": {
+    "cellular_context": {
+     "cells_tissue_stage": "UNKNOWN",
+     "coverage": "UNKNOWN",
+     "limits": "UNKNOWN",
+     "target_expression": "UNKNOWN"
+    },
+    "endpoint_pursued": "UNKNOWN",
+    "functional_evidence_available": "UNKNOWN",
+    "temporal_or_model_limit": "UNKNOWN"
+   },
+   "schema_version": 1,
+   "translation": {
+    "access": "UNKNOWN",
+    "cns_exposure": "UNKNOWN",
+    "functional_rescue": "UNKNOWN",
+    "interactions": "UNKNOWN",
+    "pediatric_suitability": "UNKNOWN",
+    "time_to_benefit": "UNKNOWN"
+   }
+  },
+  "query_id": "Q-N-12"
+ },
+ {
+  "card": {
+   "abstention": "NO_DRUG_ASSERTIONS_SUPPLIED",
+   "assessment": "REQUIRES_QUALIFICATION",
+   "canonical": false,
+   "comparisons": [],
+   "directional_summary": "UNRESOLVED",
+   "epistemic_status": "IPOTESI",
+   "external_sources": [
+    {
+     "adapter": "chembl",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    },
+    {
+     "adapter": "openfda",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    }
+   ],
+   "input": {
+    "candidate": {
+     "id": "Q-N-13",
+     "name": "Pro-myelinating agents"
+    },
+    "derived_by": "framework/scripts/repurposing_join.py",
+    "disease_assertion": {
+     "context": {
+      "cell_type": "UNKNOWN",
+      "developmental_stage": "UNKNOWN",
+      "disease_id": "UNKNOWN",
+      "genotype": "UNKNOWN",
+      "species": "UNKNOWN"
+     },
+     "direction": "UNKNOWN",
+     "endpoint": "UNKNOWN",
+     "epistemic_status": "IPOTESI",
+     "id": "DA-Q-N-13",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:731",
+     "reading_depth": "UNKNOWN",
+     "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-13",
+     "target_id": "UNKNOWN"
+    },
+    "drug_assertions": [],
+    "external_sources": [
+     {
+      "adapter": "chembl",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     },
+     {
+      "adapter": "openfda",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     }
+    ],
+    "label_lookup": {
+     "status": "NOT_ATTEMPTED"
+    },
+    "legend_evidence": {
+     "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+     "complete_reads": 0,
+     "depths": [],
+     "digest": "bd206ecba9b5c14c",
+     "locators": 0,
+     "origin_id": "N-13",
+     "papers": 0,
+     "query_id": "Q-N-13",
+     "rows": [],
+     "unaudited_contradictions": 0
+    },
+    "p4_fields": {
+     "cellular_context": {
+      "cells_tissue_stage": "UNKNOWN",
+      "coverage": "UNKNOWN",
+      "limits": "UNKNOWN",
+      "target_expression": "UNKNOWN"
+     },
+     "endpoint_pursued": "UNKNOWN",
+     "functional_evidence_available": "UNKNOWN",
+     "temporal_or_model_limit": "UNKNOWN"
+    },
+    "p4_roadmap_fields": {
+     "indication_and_transfer": "*the target is not causally downstream of WWOX in the cell being targeted* +",
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:731; evidence table digest bd206ecba9b5c14c"
+    },
+    "route": "RECUPERO_PROFONDO",
+    "schema_version": 1
+   },
+   "input_sha256": "9641eedd70ca224e9608ac91c200291fc754e6579aef62f29ab3fdc6a7d9bb6c",
+   "label_lookup": {
+    "active_ingredient": "UNKNOWN",
+    "client_version": "UNKNOWN",
+    "coverage": "UNKNOWN",
+    "coverage_limit": "UNKNOWN",
+    "error": "UNKNOWN",
+    "formulation": "UNKNOWN",
+    "method": "UNKNOWN",
+    "product_name": "UNKNOWN",
+    "queries": [],
+    "retrieved_at": "UNKNOWN",
+    "source": "UNKNOWN",
+    "spl_id": "UNKNOWN",
+    "status": "NOT_ATTEMPTED"
+   },
+   "legend_evidence": {
+    "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+    "complete_reads": 0,
+    "depths": [],
+    "digest": "bd206ecba9b5c14c",
+    "locators": 0,
+    "origin_id": "N-13",
+    "papers": 0,
+    "query_id": "Q-N-13",
+    "rows": [],
+    "unaudited_contradictions": 0
+   },
+   "limits": [
+    "Technical comparison is not efficacy, safety or experimental validation.",
+    "Sources and receipt references are retained, not independently verified.",
+    "Shared sources are not independent confirmations; scores are not pooled.",
+    "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
+   ],
+   "measure_next": {
+    "dependence": "NO_RECEIPTED_EVIDENCE",
+    "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
+    "external_hits": 0,
+    "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
+    "would_move": "N-13 (disease-models/wwox/analysis/mechanism_intervention_map.md:731)"
+   },
+   "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
+   "p4_fields": {
+    "cellular_context": {
+     "cells_tissue_stage": "UNKNOWN",
+     "coverage": "UNKNOWN",
+     "limits": "UNKNOWN",
+     "target_expression": "UNKNOWN"
+    },
+    "endpoint_pursued": "UNKNOWN",
+    "functional_evidence_available": "UNKNOWN",
+    "temporal_or_model_limit": "UNKNOWN"
+   },
+   "schema_version": 1,
+   "translation": {
+    "access": "UNKNOWN",
+    "cns_exposure": "UNKNOWN",
+    "functional_rescue": "UNKNOWN",
+    "interactions": "UNKNOWN",
+    "pediatric_suitability": "UNKNOWN",
+    "time_to_benefit": "UNKNOWN"
+   }
+  },
+  "query_id": "Q-N-13"
+ },
+ {
+  "card": {
+   "abstention": "NO_DRUG_ASSERTIONS_SUPPLIED",
+   "assessment": "REQUIRES_QUALIFICATION",
+   "canonical": false,
+   "comparisons": [],
+   "directional_summary": "UNRESOLVED",
+   "epistemic_status": "IPOTESI",
+   "external_sources": [
+    {
+     "adapter": "chembl",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    },
+    {
+     "adapter": "openfda",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    },
+    {
+     "adapter": "pubtator3",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    },
+    {
+     "adapter": "pubtator3",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    }
+   ],
+   "input": {
+    "candidate": {
+     "id": "Q-N-14",
+     "name": "Antioxidants"
+    },
+    "derived_by": "framework/scripts/repurposing_join.py",
+    "disease_assertion": {
+     "context": {
+      "cell_type": "UNKNOWN",
+      "developmental_stage": "UNKNOWN",
+      "disease_id": "UNKNOWN",
+      "genotype": "UNKNOWN",
+      "species": "UNKNOWN"
+     },
+     "direction": "UNKNOWN",
+     "endpoint": "UNKNOWN",
+     "epistemic_status": "IPOTESI",
+     "id": "DA-Q-N-14",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:744",
+     "reading_depth": "UNKNOWN",
+     "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-14",
+     "target_id": "UNKNOWN"
+    },
+    "drug_assertions": [],
+    "external_sources": [
+     {
+      "adapter": "chembl",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     },
+     {
+      "adapter": "openfda",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     },
+     {
+      "adapter": "pubtator3",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     },
+     {
+      "adapter": "pubtator3",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     }
+    ],
+    "label_lookup": {
+     "status": "NOT_ATTEMPTED"
+    },
+    "legend_evidence": {
+     "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+     "complete_reads": 0,
+     "depths": [],
+     "digest": "b7985862422972ae",
+     "locators": 0,
+     "origin_id": "N-14",
+     "papers": 0,
+     "query_id": "Q-N-14",
+     "rows": [],
+     "unaudited_contradictions": 0
+    },
+    "p4_fields": {
+     "cellular_context": {
+      "cells_tissue_stage": "UNKNOWN",
+      "coverage": "UNKNOWN",
+      "limits": "UNKNOWN",
+      "target_expression": "UNKNOWN"
+     },
+     "endpoint_pursued": "UNKNOWN",
+     "functional_evidence_available": "UNKNOWN",
+     "temporal_or_model_limit": "UNKNOWN"
+    },
+    "p4_roadmap_fields": {
+     "indication_and_transfer": "*the direction of the axis is context-dependent and was assumed.* Two independent",
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:744; evidence table digest b7985862422972ae"
+    },
+    "route": "RECUPERO_PROFONDO",
+    "schema_version": 1
+   },
+   "input_sha256": "737913fcd735152c7ba26a2194c911d1eee86dbbbb80ad023464d1ac8c4abc76",
+   "label_lookup": {
+    "active_ingredient": "UNKNOWN",
+    "client_version": "UNKNOWN",
+    "coverage": "UNKNOWN",
+    "coverage_limit": "UNKNOWN",
+    "error": "UNKNOWN",
+    "formulation": "UNKNOWN",
+    "method": "UNKNOWN",
+    "product_name": "UNKNOWN",
+    "queries": [],
+    "retrieved_at": "UNKNOWN",
+    "source": "UNKNOWN",
+    "spl_id": "UNKNOWN",
+    "status": "NOT_ATTEMPTED"
+   },
+   "legend_evidence": {
+    "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+    "complete_reads": 0,
+    "depths": [],
+    "digest": "b7985862422972ae",
+    "locators": 0,
+    "origin_id": "N-14",
+    "papers": 0,
+    "query_id": "Q-N-14",
+    "rows": [],
+    "unaudited_contradictions": 0
+   },
+   "limits": [
+    "Technical comparison is not efficacy, safety or experimental validation.",
+    "Sources and receipt references are retained, not independently verified.",
+    "Shared sources are not independent confirmations; scores are not pooled.",
+    "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
+   ],
+   "measure_next": {
+    "dependence": "NO_RECEIPTED_EVIDENCE",
+    "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
+    "external_hits": 0,
+    "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
+    "would_move": "N-14 (disease-models/wwox/analysis/mechanism_intervention_map.md:744)"
+   },
+   "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
+   "p4_fields": {
+    "cellular_context": {
+     "cells_tissue_stage": "UNKNOWN",
+     "coverage": "UNKNOWN",
+     "limits": "UNKNOWN",
+     "target_expression": "UNKNOWN"
+    },
+    "endpoint_pursued": "UNKNOWN",
+    "functional_evidence_available": "UNKNOWN",
+    "temporal_or_model_limit": "UNKNOWN"
+   },
+   "schema_version": 1,
+   "translation": {
+    "access": "UNKNOWN",
+    "cns_exposure": "UNKNOWN",
+    "functional_rescue": "UNKNOWN",
+    "interactions": "UNKNOWN",
+    "pediatric_suitability": "UNKNOWN",
+    "time_to_benefit": "UNKNOWN"
+   }
+  },
+  "query_id": "Q-N-14"
+ },
+ {
+  "card": {
+   "abstention": "NO_DRUG_ASSERTIONS_SUPPLIED",
+   "assessment": "REQUIRES_QUALIFICATION",
+   "canonical": false,
+   "comparisons": [],
+   "directional_summary": "UNRESOLVED",
+   "epistemic_status": "IPOTESI",
+   "external_sources": [
+    {
+     "adapter": "chembl",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    },
+    {
+     "adapter": "openfda",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    }
+   ],
+   "input": {
+    "candidate": {
+     "id": "Q-N-15",
+     "name": "Counting seizure control as developmental protection"
+    },
+    "derived_by": "framework/scripts/repurposing_join.py",
+    "disease_assertion": {
+     "context": {
+      "cell_type": "UNKNOWN",
+      "developmental_stage": "UNKNOWN",
+      "disease_id": "UNKNOWN",
+      "genotype": "UNKNOWN",
+      "species": "UNKNOWN"
+     },
+     "direction": "UNKNOWN",
+     "endpoint": "UNKNOWN",
+     "epistemic_status": "IPOTESI",
+     "id": "DA-Q-N-15",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:754",
+     "reading_depth": "UNKNOWN",
+     "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-15",
+     "target_id": "UNKNOWN"
+    },
+    "drug_assertions": [],
+    "external_sources": [
+     {
+      "adapter": "chembl",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     },
+     {
+      "adapter": "openfda",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     }
+    ],
+    "label_lookup": {
+     "status": "NOT_ATTEMPTED"
+    },
+    "legend_evidence": {
+     "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+     "complete_reads": 0,
+     "depths": [],
+     "digest": "239013617cf709c5",
+     "locators": 0,
+     "origin_id": "N-15",
+     "papers": 0,
+     "query_id": "Q-N-15",
+     "rows": [],
+     "unaudited_contradictions": 0
+    },
+    "p4_fields": {
+     "cellular_context": {
+      "cells_tissue_stage": "UNKNOWN",
+      "coverage": "UNKNOWN",
+      "limits": "UNKNOWN",
+      "target_expression": "UNKNOWN"
+     },
+     "endpoint_pursued": "UNKNOWN",
+     "functional_evidence_available": "UNKNOWN",
+     "temporal_or_model_limit": "UNKNOWN"
+    },
+    "p4_roadmap_fields": {
+     "indication_and_transfer": "*corrects a biomarker (seizures) but not the mechanism (development)*. In published",
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:754; evidence table digest 239013617cf709c5"
+    },
+    "route": "RECUPERO_PROFONDO",
+    "schema_version": 1
+   },
+   "input_sha256": "6ea31fdb03eae06d0dc48e6d3f9ef158ffb53d97aa555498de7d262c31267555",
+   "label_lookup": {
+    "active_ingredient": "UNKNOWN",
+    "client_version": "UNKNOWN",
+    "coverage": "UNKNOWN",
+    "coverage_limit": "UNKNOWN",
+    "error": "UNKNOWN",
+    "formulation": "UNKNOWN",
+    "method": "UNKNOWN",
+    "product_name": "UNKNOWN",
+    "queries": [],
+    "retrieved_at": "UNKNOWN",
+    "source": "UNKNOWN",
+    "spl_id": "UNKNOWN",
+    "status": "NOT_ATTEMPTED"
+   },
+   "legend_evidence": {
+    "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+    "complete_reads": 0,
+    "depths": [],
+    "digest": "239013617cf709c5",
+    "locators": 0,
+    "origin_id": "N-15",
+    "papers": 0,
+    "query_id": "Q-N-15",
+    "rows": [],
+    "unaudited_contradictions": 0
+   },
+   "limits": [
+    "Technical comparison is not efficacy, safety or experimental validation.",
+    "Sources and receipt references are retained, not independently verified.",
+    "Shared sources are not independent confirmations; scores are not pooled.",
+    "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
+   ],
+   "measure_next": {
+    "dependence": "NO_RECEIPTED_EVIDENCE",
+    "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
+    "external_hits": 0,
+    "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
+    "would_move": "N-15 (disease-models/wwox/analysis/mechanism_intervention_map.md:754)"
+   },
+   "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
+   "p4_fields": {
+    "cellular_context": {
+     "cells_tissue_stage": "UNKNOWN",
+     "coverage": "UNKNOWN",
+     "limits": "UNKNOWN",
+     "target_expression": "UNKNOWN"
+    },
+    "endpoint_pursued": "UNKNOWN",
+    "functional_evidence_available": "UNKNOWN",
+    "temporal_or_model_limit": "UNKNOWN"
+   },
+   "schema_version": 1,
+   "translation": {
+    "access": "UNKNOWN",
+    "cns_exposure": "UNKNOWN",
+    "functional_rescue": "UNKNOWN",
+    "interactions": "UNKNOWN",
+    "pediatric_suitability": "UNKNOWN",
+    "time_to_benefit": "UNKNOWN"
+   }
+  },
+  "query_id": "Q-N-15"
+ },
+ {
+  "card": {
+   "abstention": "NO_DRUG_ASSERTIONS_SUPPLIED",
+   "assessment": "REQUIRES_QUALIFICATION",
+   "canonical": false,
+   "comparisons": [],
+   "directional_summary": "UNRESOLVED",
+   "epistemic_status": "IPOTESI",
+   "external_sources": [
+    {
+     "adapter": "chembl",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    },
+    {
+     "adapter": "openfda",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    },
+    {
+     "adapter": "pubtator3",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    },
+    {
+     "adapter": "pubtator3",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    }
+   ],
+   "input": {
+    "candidate": {
+     "id": "Q-N-16",
+     "name": "Pannexin-1 blockade"
+    },
+    "derived_by": "framework/scripts/repurposing_join.py",
+    "disease_assertion": {
+     "context": {
+      "cell_type": "UNKNOWN",
+      "developmental_stage": "UNKNOWN",
+      "disease_id": "UNKNOWN",
+      "genotype": "UNKNOWN",
+      "species": "UNKNOWN"
+     },
+     "direction": "UNKNOWN",
+     "endpoint": "UNKNOWN",
+     "epistemic_status": "IPOTESI",
+     "id": "DA-Q-N-16",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:769",
+     "reading_depth": "UNKNOWN",
+     "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-16",
+     "target_id": "UNKNOWN"
+    },
+    "drug_assertions": [],
+    "external_sources": [
+     {
+      "adapter": "chembl",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     },
+     {
+      "adapter": "openfda",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     },
+     {
+      "adapter": "pubtator3",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     },
+     {
+      "adapter": "pubtator3",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     }
+    ],
+    "label_lookup": {
+     "status": "NOT_ATTEMPTED"
+    },
+    "legend_evidence": {
+     "abstention": null,
+     "complete_reads": 0,
+     "depths": [
+      "NO_RECEIPT"
+     ],
+     "digest": "c76230ae5f501134",
+     "locators": 26,
+     "origin_id": "N-16",
+     "papers": 1,
+     "query_id": "Q-N-16",
+     "rows": [
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 26,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34634460.json",
+       "pmid": "34634460",
+       "reading_depth": "NO_RECEIPT",
+       "receipt_events": 0,
+       "unaudited_contradictions": 0
+      }
+     ],
+     "unaudited_contradictions": 0
+    },
+    "p4_fields": {
+     "cellular_context": {
+      "cells_tissue_stage": "UNKNOWN",
+      "coverage": "UNKNOWN",
+      "limits": "UNKNOWN",
+      "target_expression": "UNKNOWN"
+     },
+     "endpoint_pursued": "UNKNOWN",
+     "functional_evidence_available": "UNKNOWN",
+     "temporal_or_model_limit": "UNKNOWN"
+    },
+    "p4_roadmap_fields": {
+     "indication_and_transfer": "*a negative stated as an absence of effect, when what exists is an untested point estimate in the adverse direction.* In the only WWOX system in which a selective pannexin-1 blocker has ever been applied (`Wwox` S-KO neocortical slice, P13–P17), normalized burst frequency rose to **≈ 2.55 during treatment and ≈ 2.6 at washout against a baseline of 1.0**, carrying **no significance marker and no re",
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:769; evidence table digest c76230ae5f501134"
+    },
+    "route": "RECUPERO_PROFONDO",
+    "schema_version": 1
+   },
+   "input_sha256": "beea3fc53a21ada310bf56ac0844e6a7fb791a92d208570fb4fa1b33850b45ad",
+   "label_lookup": {
+    "active_ingredient": "UNKNOWN",
+    "client_version": "UNKNOWN",
+    "coverage": "UNKNOWN",
+    "coverage_limit": "UNKNOWN",
+    "error": "UNKNOWN",
+    "formulation": "UNKNOWN",
+    "method": "UNKNOWN",
+    "product_name": "UNKNOWN",
+    "queries": [],
+    "retrieved_at": "UNKNOWN",
+    "source": "UNKNOWN",
+    "spl_id": "UNKNOWN",
+    "status": "NOT_ATTEMPTED"
+   },
+   "legend_evidence": {
+    "abstention": null,
+    "complete_reads": 0,
+    "depths": [
+     "NO_RECEIPT"
+    ],
+    "digest": "c76230ae5f501134",
+    "locators": 26,
+    "origin_id": "N-16",
+    "papers": 1,
+    "query_id": "Q-N-16",
+    "rows": [
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 26,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34634460.json",
+      "pmid": "34634460",
+      "reading_depth": "NO_RECEIPT",
+      "receipt_events": 0,
+      "unaudited_contradictions": 0
+     }
+    ],
+    "unaudited_contradictions": 0
+   },
+   "limits": [
+    "Technical comparison is not efficacy, safety or experimental validation.",
+    "Sources and receipt references are retained, not independently verified.",
+    "Shared sources are not independent confirmations; scores are not pooled.",
+    "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
+   ],
+   "measure_next": {
+    "dependence": "ONE_PAPER (34634460, depth NO_RECEIPT, 26 locators, audit UNAUDITED)",
+    "experiment_sketch": "replicate the one measurement this query stands on, changing the laboratory or the model but not the endpoint",
+    "external_hits": 0,
+    "measurement": "an independent measurement of the same endpoint in a second system, or the same system from a second laboratory: the query rests on one reading",
+    "would_move": "N-16 (disease-models/wwox/analysis/mechanism_intervention_map.md:769)"
+   },
+   "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
+   "p4_fields": {
+    "cellular_context": {
+     "cells_tissue_stage": "UNKNOWN",
+     "coverage": "UNKNOWN",
+     "limits": "UNKNOWN",
+     "target_expression": "UNKNOWN"
+    },
+    "endpoint_pursued": "UNKNOWN",
+    "functional_evidence_available": "UNKNOWN",
+    "temporal_or_model_limit": "UNKNOWN"
+   },
+   "schema_version": 1,
+   "translation": {
+    "access": "UNKNOWN",
+    "cns_exposure": "UNKNOWN",
+    "functional_rescue": "UNKNOWN",
+    "interactions": "UNKNOWN",
+    "pediatric_suitability": "UNKNOWN",
+    "time_to_benefit": "UNKNOWN"
+   }
+  },
+  "query_id": "Q-N-16"
+ },
+ {
+  "card": {
+   "abstention": "NO_DRUG_ASSERTIONS_SUPPLIED",
+   "assessment": "REQUIRES_QUALIFICATION",
+   "canonical": false,
+   "comparisons": [],
+   "directional_summary": "UNRESOLVED",
+   "epistemic_status": "IPOTESI",
+   "external_sources": [
+    {
+     "adapter": "chembl",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    },
+    {
+     "adapter": "openfda",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    },
+    {
+     "adapter": "pubtator3",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    },
+    {
+     "adapter": "pubtator3",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    }
+   ],
+   "input": {
+    "candidate": {
+     "id": "Q-N-17",
+     "name": "Tau-lowering, imported from tauopathy into CHAIN C"
+    },
+    "derived_by": "framework/scripts/repurposing_join.py",
+    "disease_assertion": {
+     "context": {
+      "cell_type": "UNKNOWN",
+      "developmental_stage": "UNKNOWN",
+      "disease_id": "UNKNOWN",
+      "genotype": "UNKNOWN",
+      "species": "UNKNOWN"
+     },
+     "direction": "UNKNOWN",
+     "endpoint": "UNKNOWN",
+     "epistemic_status": "IPOTESI",
+     "id": "DA-Q-N-17",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:775",
+     "reading_depth": "UNKNOWN",
+     "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-17",
+     "target_id": "UNKNOWN"
+    },
+    "drug_assertions": [],
+    "external_sources": [
+     {
+      "adapter": "chembl",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     },
+     {
+      "adapter": "openfda",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     },
+     {
+      "adapter": "pubtator3",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     },
+     {
+      "adapter": "pubtator3",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     }
+    ],
+    "label_lookup": {
+     "status": "NOT_ATTEMPTED"
+    },
+    "legend_evidence": {
+     "abstention": null,
+     "complete_reads": 0,
+     "depths": [
+      "NO_RECEIPT"
+     ],
+     "digest": "c0cb0730d5e13830",
+     "locators": 37,
+     "origin_id": "N-17",
+     "papers": 2,
+     "query_id": "Q-N-17",
+     "rows": [
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 11,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID22193544.json",
+       "pmid": "22193544",
+       "reading_depth": "NO_RECEIPT",
+       "receipt_events": 0,
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 26,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34634460.json",
+       "pmid": "34634460",
+       "reading_depth": "NO_RECEIPT",
+       "receipt_events": 0,
+       "unaudited_contradictions": 0
+      }
+     ],
+     "unaudited_contradictions": 0
+    },
+    "p4_fields": {
+     "cellular_context": {
+      "cells_tissue_stage": "UNKNOWN",
+      "coverage": "UNKNOWN",
+      "limits": "UNKNOWN",
+      "target_expression": "UNKNOWN"
+     },
+     "endpoint_pursued": "UNKNOWN",
+     "functional_evidence_available": "UNKNOWN",
+     "temporal_or_model_limit": "UNKNOWN"
+    },
+    "p4_roadmap_fields": {
+     "indication_and_transfer": "*importing a disease's dominant modality because the pathway diagram looks like that disease, without checking which way the arrow points.* CHAIN C reads like a tauopathy — WWOX loss → GSK3β de-repressed → pTau S396/S404 up (`CLAIM 035`, `DL-MECH-019`) — and tauopathy's dominant modality is **tau-lowering**. In the only system where the question was asked, tau-lowering **removes the benefit of bot",
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:775; evidence table digest c0cb0730d5e13830"
+    },
+    "route": "RECUPERO_PROFONDO",
+    "schema_version": 1
+   },
+   "input_sha256": "7121e8d42b0776237cfd6029a340e859209b8366bb5e419dd3f34572dbd506df",
+   "label_lookup": {
+    "active_ingredient": "UNKNOWN",
+    "client_version": "UNKNOWN",
+    "coverage": "UNKNOWN",
+    "coverage_limit": "UNKNOWN",
+    "error": "UNKNOWN",
+    "formulation": "UNKNOWN",
+    "method": "UNKNOWN",
+    "product_name": "UNKNOWN",
+    "queries": [],
+    "retrieved_at": "UNKNOWN",
+    "source": "UNKNOWN",
+    "spl_id": "UNKNOWN",
+    "status": "NOT_ATTEMPTED"
+   },
+   "legend_evidence": {
+    "abstention": null,
+    "complete_reads": 0,
+    "depths": [
+     "NO_RECEIPT"
+    ],
+    "digest": "c0cb0730d5e13830",
+    "locators": 37,
+    "origin_id": "N-17",
+    "papers": 2,
+    "query_id": "Q-N-17",
+    "rows": [
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 11,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID22193544.json",
+      "pmid": "22193544",
+      "reading_depth": "NO_RECEIPT",
+      "receipt_events": 0,
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 26,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34634460.json",
+      "pmid": "34634460",
+      "reading_depth": "NO_RECEIPT",
+      "receipt_events": 0,
+      "unaudited_contradictions": 0
+     }
+    ],
+    "unaudited_contradictions": 0
+   },
+   "limits": [
+    "Technical comparison is not efficacy, safety or experimental validation.",
+    "Sources and receipt references are retained, not independently verified.",
+    "Shared sources are not independent confirmations; scores are not pooled.",
+    "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
+   ],
+   "measure_next": {
+    "dependence": "2_PAPERS_NONE_READ_COMPLETE",
+    "experiment_sketch": "no laboratory work: the next informative act is a reading",
+    "external_hits": 0,
+    "measurement": "a complete full-text read of the strongest of these papers, with its receipt",
+    "would_move": "N-17 (disease-models/wwox/analysis/mechanism_intervention_map.md:775)"
+   },
+   "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
+   "p4_fields": {
+    "cellular_context": {
+     "cells_tissue_stage": "UNKNOWN",
+     "coverage": "UNKNOWN",
+     "limits": "UNKNOWN",
+     "target_expression": "UNKNOWN"
+    },
+    "endpoint_pursued": "UNKNOWN",
+    "functional_evidence_available": "UNKNOWN",
+    "temporal_or_model_limit": "UNKNOWN"
+   },
+   "schema_version": 1,
+   "translation": {
+    "access": "UNKNOWN",
+    "cns_exposure": "UNKNOWN",
+    "functional_rescue": "UNKNOWN",
+    "interactions": "UNKNOWN",
+    "pediatric_suitability": "UNKNOWN",
+    "time_to_benefit": "UNKNOWN"
+   }
+  },
+  "query_id": "Q-N-17"
+ },
+ {
+  "card": {
+   "abstention": "NO_DRUG_ASSERTIONS_SUPPLIED",
+   "assessment": "REQUIRES_QUALIFICATION",
+   "canonical": false,
+   "comparisons": [],
+   "directional_summary": "UNRESOLVED",
+   "epistemic_status": "IPOTESI",
+   "external_sources": [
+    {
+     "adapter": "chembl",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    },
+    {
+     "adapter": "openfda",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    },
+    {
+     "adapter": "pubtator3",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    },
+    {
+     "adapter": "pubtator3",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    }
+   ],
+   "input": {
+    "candidate": {
+     "id": "Q-R-01",
+     "name": "AAV9-hSynI-WWOX"
+    },
+    "derived_by": "framework/scripts/repurposing_join.py",
+    "disease_assertion": {
+     "context": {
+      "cell_type": "UNKNOWN",
+      "developmental_stage": "UNKNOWN",
+      "disease_id": "UNKNOWN",
+      "genotype": "UNKNOWN",
+      "species": "UNKNOWN"
+     },
+     "direction": "UNKNOWN",
+     "endpoint": "UNKNOWN",
+     "epistemic_status": "IPOTESI",
+     "id": "DA-Q-R-01",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:403",
+     "reading_depth": "UNKNOWN",
+     "source": "disease-models/wwox/analysis/mechanism_intervention_map.md R-01",
+     "target_id": "the WWOX locus product itself — neuronal WWOX protein"
+    },
+    "drug_assertions": [],
+    "external_sources": [
+     {
+      "adapter": "chembl",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     },
+     {
+      "adapter": "openfda",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     },
+     {
+      "adapter": "pubtator3",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     },
+     {
+      "adapter": "pubtator3",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     }
+    ],
+    "label_lookup": {
+     "status": "NOT_ATTEMPTED"
+    },
+    "legend_evidence": {
+     "abstention": null,
+     "complete_reads": 0,
+     "depths": [
+      "NO_RECEIPT"
+     ],
+     "digest": "0d51996fdac2683c",
+     "locators": 25,
+     "origin_id": "R-01",
+     "papers": 1,
+     "query_id": "Q-R-01",
+     "rows": [
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 25,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42128308.json",
+       "pmid": "42128308",
+       "reading_depth": "NO_RECEIPT",
+       "receipt_events": 0,
+       "unaudited_contradictions": 0
+      }
+     ],
+     "unaudited_contradictions": 0
+    },
+    "p4_fields": {
+     "cellular_context": {
+      "cells_tissue_stage": "UNKNOWN",
+      "coverage": "UNKNOWN",
+      "limits": "UNKNOWN",
+      "target_expression": "UNKNOWN"
+     },
+     "endpoint_pursued": "UNKNOWN",
+     "functional_evidence_available": "UNKNOWN",
+     "temporal_or_model_limit": "UNKNOWN"
+    },
+    "p4_roadmap_fields": {
+     "indication_and_transfer": "AAV9, human Synapsin-I promoter, WWOX cDNA; ICV. ⚠️ **Corrected 2026-09-27 — the therapeutic configuration is WPRE-FREE.** The 2021 vector map (Appendix Fig S1A, read at 300 dpi) shows all three constructs WPRE-free, and the 2021 paper never mentions WPRE; the 2026 dose study removed WPRE deliberately (*“we removed WPRE as a proactive risk-mitigation step”*, receipted locator) and states the price",
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:403; evidence table digest 0d51996fdac2683c"
+    },
+    "route": "RECUPERO_PROFONDO",
+    "schema_version": 1
+   },
+   "input_sha256": "9945639763451de3e61f81e10beb516cb5bbaf95fdc61425cd145899ef5e3679",
+   "label_lookup": {
+    "active_ingredient": "UNKNOWN",
+    "client_version": "UNKNOWN",
+    "coverage": "UNKNOWN",
+    "coverage_limit": "UNKNOWN",
+    "error": "UNKNOWN",
+    "formulation": "UNKNOWN",
+    "method": "UNKNOWN",
+    "product_name": "UNKNOWN",
+    "queries": [],
+    "retrieved_at": "UNKNOWN",
+    "source": "UNKNOWN",
+    "spl_id": "UNKNOWN",
+    "status": "NOT_ATTEMPTED"
+   },
+   "legend_evidence": {
+    "abstention": null,
+    "complete_reads": 0,
+    "depths": [
+     "NO_RECEIPT"
+    ],
+    "digest": "0d51996fdac2683c",
+    "locators": 25,
+    "origin_id": "R-01",
+    "papers": 1,
+    "query_id": "Q-R-01",
+    "rows": [
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 25,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42128308.json",
+      "pmid": "42128308",
+      "reading_depth": "NO_RECEIPT",
+      "receipt_events": 0,
+      "unaudited_contradictions": 0
+     }
+    ],
+    "unaudited_contradictions": 0
+   },
+   "limits": [
+    "Technical comparison is not efficacy, safety or experimental validation.",
+    "Sources and receipt references are retained, not independently verified.",
+    "Shared sources are not independent confirmations; scores are not pooled.",
+    "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
+   ],
+   "measure_next": {
+    "dependence": "ONE_PAPER (42128308, depth NO_RECEIPT, 25 locators, audit UNAUDITED)",
+    "experiment_sketch": "replicate the one measurement this query stands on, changing the laboratory or the model but not the endpoint",
+    "external_hits": 0,
+    "measurement": "an independent measurement of the same endpoint in a second system, or the same system from a second laboratory: the query rests on one reading",
+    "would_move": "R-01 (disease-models/wwox/analysis/mechanism_intervention_map.md:403)"
+   },
+   "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
+   "p4_fields": {
+    "cellular_context": {
+     "cells_tissue_stage": "UNKNOWN",
+     "coverage": "UNKNOWN",
+     "limits": "UNKNOWN",
+     "target_expression": "UNKNOWN"
+    },
+    "endpoint_pursued": "UNKNOWN",
+    "functional_evidence_available": "UNKNOWN",
+    "temporal_or_model_limit": "UNKNOWN"
+   },
+   "schema_version": 1,
+   "translation": {
+    "access": "UNKNOWN",
+    "cns_exposure": "UNKNOWN",
+    "functional_rescue": "UNKNOWN",
+    "interactions": "UNKNOWN",
+    "pediatric_suitability": "UNKNOWN",
+    "time_to_benefit": "UNKNOWN"
+   }
+  },
+  "query_id": "Q-R-01"
+ },
+ {
+  "card": {
+   "abstention": "NO_DRUG_ASSERTIONS_SUPPLIED",
+   "assessment": "REQUIRES_QUALIFICATION",
+   "canonical": false,
+   "comparisons": [],
+   "directional_summary": "UNRESOLVED",
+   "epistemic_status": "IPOTESI",
+   "external_sources": [
+    {
+     "adapter": "chembl",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    },
+    {
+     "adapter": "openfda",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    },
+    {
+     "adapter": "pubtator3",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    },
+    {
+     "adapter": "pubtator3",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    }
+   ],
+   "input": {
+    "candidate": {
+     "id": "Q-R-02",
+     "name": "Memantine"
+    },
+    "derived_by": "framework/scripts/repurposing_join.py",
+    "disease_assertion": {
+     "context": {
+      "cell_type": "UNKNOWN",
+      "developmental_stage": "UNKNOWN",
+      "disease_id": "UNKNOWN",
+      "genotype": "UNKNOWN",
+      "species": "UNKNOWN"
+     },
+     "direction": "UNKNOWN",
+     "endpoint": "UNKNOWN",
+     "epistemic_status": "IPOTESI",
+     "id": "DA-Q-R-02",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:427",
+     "reading_depth": "UNKNOWN",
+     "source": "disease-models/wwox/analysis/mechanism_intervention_map.md R-02",
+     "target_id": "NMDA receptor"
+    },
+    "drug_assertions": [],
+    "external_sources": [
+     {
+      "adapter": "chembl",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     },
+     {
+      "adapter": "openfda",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     },
+     {
+      "adapter": "pubtator3",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     },
+     {
+      "adapter": "pubtator3",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     }
+    ],
+    "label_lookup": {
+     "status": "NOT_ATTEMPTED"
+    },
+    "legend_evidence": {
+     "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+     "complete_reads": 0,
+     "depths": [],
+     "digest": "b7cfe5400ad9bc9a",
+     "locators": 0,
+     "origin_id": "R-02",
+     "papers": 0,
+     "query_id": "Q-R-02",
+     "rows": [],
+     "unaudited_contradictions": 0
+    },
+    "p4_fields": {
+     "cellular_context": {
+      "cells_tissue_stage": "UNKNOWN",
+      "coverage": "UNKNOWN",
+      "limits": "UNKNOWN",
+      "target_expression": "UNKNOWN"
+     },
+     "endpoint_pursued": "UNKNOWN",
+     "functional_evidence_available": "UNKNOWN",
+     "temporal_or_model_limit": "UNKNOWN"
+    },
+    "p4_roadmap_fields": {
+     "indication_and_transfer": "memantine (approved); MK-801 / APV as tools",
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:427; evidence table digest b7cfe5400ad9bc9a"
+    },
+    "route": "RECUPERO_PROFONDO",
+    "schema_version": 1
+   },
+   "input_sha256": "82fd6687a8ce84e88754b0a745ecf49020e780f9aa19d666325f2340ce028ebb",
+   "label_lookup": {
+    "active_ingredient": "UNKNOWN",
+    "client_version": "UNKNOWN",
+    "coverage": "UNKNOWN",
+    "coverage_limit": "UNKNOWN",
+    "error": "UNKNOWN",
+    "formulation": "UNKNOWN",
+    "method": "UNKNOWN",
+    "product_name": "UNKNOWN",
+    "queries": [],
+    "retrieved_at": "UNKNOWN",
+    "source": "UNKNOWN",
+    "spl_id": "UNKNOWN",
+    "status": "NOT_ATTEMPTED"
+   },
+   "legend_evidence": {
+    "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+    "complete_reads": 0,
+    "depths": [],
+    "digest": "b7cfe5400ad9bc9a",
+    "locators": 0,
+    "origin_id": "R-02",
+    "papers": 0,
+    "query_id": "Q-R-02",
+    "rows": [],
+    "unaudited_contradictions": 0
+   },
+   "limits": [
+    "Technical comparison is not efficacy, safety or experimental validation.",
+    "Sources and receipt references are retained, not independently verified.",
+    "Shared sources are not independent confirmations; scores are not pooled.",
+    "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
+   ],
+   "measure_next": {
+    "dependence": "NO_RECEIPTED_EVIDENCE",
+    "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
+    "external_hits": 0,
+    "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
+    "would_move": "R-02 (disease-models/wwox/analysis/mechanism_intervention_map.md:427)"
+   },
+   "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
+   "p4_fields": {
+    "cellular_context": {
+     "cells_tissue_stage": "UNKNOWN",
+     "coverage": "UNKNOWN",
+     "limits": "UNKNOWN",
+     "target_expression": "UNKNOWN"
+    },
+    "endpoint_pursued": "UNKNOWN",
+    "functional_evidence_available": "UNKNOWN",
+    "temporal_or_model_limit": "UNKNOWN"
+   },
+   "schema_version": 1,
+   "translation": {
+    "access": "UNKNOWN",
+    "cns_exposure": "UNKNOWN",
+    "functional_rescue": "UNKNOWN",
+    "interactions": "UNKNOWN",
+    "pediatric_suitability": "UNKNOWN",
+    "time_to_benefit": "UNKNOWN"
+   }
+  },
+  "query_id": "Q-R-02"
+ },
+ {
+  "card": {
+   "abstention": "NO_DRUG_ASSERTIONS_SUPPLIED",
+   "assessment": "REQUIRES_QUALIFICATION",
+   "canonical": false,
+   "comparisons": [],
+   "directional_summary": "UNRESOLVED",
+   "epistemic_status": "IPOTESI",
+   "external_sources": [
+    {
+     "adapter": "chembl",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    },
+    {
+     "adapter": "openfda",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    },
+    {
+     "adapter": "pubtator3",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    },
+    {
+     "adapter": "pubtator3",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    }
+   ],
+   "input": {
+    "candidate": {
+     "id": "Q-R-03",
+     "name": "Wnt / tankyrase inhibition"
+    },
+    "derived_by": "framework/scripts/repurposing_join.py",
+    "disease_assertion": {
+     "context": {
+      "cell_type": "UNKNOWN",
+      "developmental_stage": "UNKNOWN",
+      "disease_id": "UNKNOWN",
+      "genotype": "UNKNOWN",
+      "species": "UNKNOWN"
+     },
+     "direction": "UNKNOWN",
+     "endpoint": "UNKNOWN",
+     "epistemic_status": "IPOTESI",
+     "id": "DA-Q-R-03",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:452",
+     "reading_depth": "UNKNOWN",
+     "source": "disease-models/wwox/analysis/mechanism_intervention_map.md R-03",
+     "target_id": "Wnt/β-catenin"
+    },
+    "drug_assertions": [],
+    "external_sources": [
+     {
+      "adapter": "chembl",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     },
+     {
+      "adapter": "openfda",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     },
+     {
+      "adapter": "pubtator3",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     },
+     {
+      "adapter": "pubtator3",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     }
+    ],
+    "label_lookup": {
+     "status": "NOT_ATTEMPTED"
+    },
+    "legend_evidence": {
+     "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+     "complete_reads": 0,
+     "depths": [],
+     "digest": "2478afdb1336d63a",
+     "locators": 0,
+     "origin_id": "R-03",
+     "papers": 0,
+     "query_id": "Q-R-03",
+     "rows": [],
+     "unaudited_contradictions": 0
+    },
+    "p4_fields": {
+     "cellular_context": {
+      "cells_tissue_stage": "UNKNOWN",
+      "coverage": "UNKNOWN",
+      "limits": "UNKNOWN",
+      "target_expression": "UNKNOWN"
+     },
+     "endpoint_pursued": "UNKNOWN",
+     "functional_evidence_available": "UNKNOWN",
+     "temporal_or_model_limit": "UNKNOWN"
+    },
+    "p4_roadmap_fields": {
+     "indication_and_transfer": "tankyrase inhibitor (e.g. XAV939 as tool); no paediatric-profiled candidate identified",
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:452; evidence table digest 2478afdb1336d63a"
+    },
+    "route": "RECUPERO_PROFONDO",
+    "schema_version": 1
+   },
+   "input_sha256": "2dd88c9f8cee4f041d383243a6dc6f50c54bb15d1da35e9d915f7d20d2b2f3be",
+   "label_lookup": {
+    "active_ingredient": "UNKNOWN",
+    "client_version": "UNKNOWN",
+    "coverage": "UNKNOWN",
+    "coverage_limit": "UNKNOWN",
+    "error": "UNKNOWN",
+    "formulation": "UNKNOWN",
+    "method": "UNKNOWN",
+    "product_name": "UNKNOWN",
+    "queries": [],
+    "retrieved_at": "UNKNOWN",
+    "source": "UNKNOWN",
+    "spl_id": "UNKNOWN",
+    "status": "NOT_ATTEMPTED"
+   },
+   "legend_evidence": {
+    "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+    "complete_reads": 0,
+    "depths": [],
+    "digest": "2478afdb1336d63a",
+    "locators": 0,
+    "origin_id": "R-03",
+    "papers": 0,
+    "query_id": "Q-R-03",
+    "rows": [],
+    "unaudited_contradictions": 0
+   },
+   "limits": [
+    "Technical comparison is not efficacy, safety or experimental validation.",
+    "Sources and receipt references are retained, not independently verified.",
+    "Shared sources are not independent confirmations; scores are not pooled.",
+    "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
+   ],
+   "measure_next": {
+    "dependence": "NO_RECEIPTED_EVIDENCE",
+    "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
+    "external_hits": 0,
+    "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
+    "would_move": "R-03 (disease-models/wwox/analysis/mechanism_intervention_map.md:452)"
+   },
+   "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
+   "p4_fields": {
+    "cellular_context": {
+     "cells_tissue_stage": "UNKNOWN",
+     "coverage": "UNKNOWN",
+     "limits": "UNKNOWN",
+     "target_expression": "UNKNOWN"
+    },
+    "endpoint_pursued": "UNKNOWN",
+    "functional_evidence_available": "UNKNOWN",
+    "temporal_or_model_limit": "UNKNOWN"
+   },
+   "schema_version": 1,
+   "translation": {
+    "access": "UNKNOWN",
+    "cns_exposure": "UNKNOWN",
+    "functional_rescue": "UNKNOWN",
+    "interactions": "UNKNOWN",
+    "pediatric_suitability": "UNKNOWN",
+    "time_to_benefit": "UNKNOWN"
+   }
+  },
+  "query_id": "Q-R-03"
+ },
+ {
+  "card": {
+   "abstention": "NO_DRUG_ASSERTIONS_SUPPLIED",
+   "assessment": "REQUIRES_QUALIFICATION",
+   "canonical": false,
+   "comparisons": [],
+   "directional_summary": "UNRESOLVED",
+   "epistemic_status": "IPOTESI",
+   "external_sources": [
+    {
+     "adapter": "chembl",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    },
+    {
+     "adapter": "openfda",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    },
+    {
+     "adapter": "pubtator3",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    }
+   ],
+   "input": {
+    "candidate": {
+     "id": "Q-R-04",
+     "name": "Lithium"
+    },
+    "derived_by": "framework/scripts/repurposing_join.py",
+    "disease_assertion": {
+     "context": {
+      "cell_type": "UNKNOWN",
+      "developmental_stage": "UNKNOWN",
+      "disease_id": "UNKNOWN",
+      "genotype": "UNKNOWN",
+      "species": "UNKNOWN"
+     },
+     "direction": "UNKNOWN",
+     "endpoint": "UNKNOWN",
+     "epistemic_status": "IPOTESI",
+     "id": "DA-Q-R-04",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:476",
+     "reading_depth": "UNKNOWN",
+     "source": "disease-models/wwox/analysis/mechanism_intervention_map.md R-04",
+     "target_id": "GSK3β (among many)"
+    },
+    "drug_assertions": [],
+    "external_sources": [
+     {
+      "adapter": "chembl",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     },
+     {
+      "adapter": "openfda",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     },
+     {
+      "adapter": "pubtator3",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     }
+    ],
+    "label_lookup": {
+     "status": "NOT_ATTEMPTED"
+    },
+    "legend_evidence": {
+     "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+     "complete_reads": 0,
+     "depths": [],
+     "digest": "3d0f7acbc09296b7",
+     "locators": 0,
+     "origin_id": "R-04",
+     "papers": 0,
+     "query_id": "Q-R-04",
+     "rows": [],
+     "unaudited_contradictions": 0
+    },
+    "p4_fields": {
+     "cellular_context": {
+      "cells_tissue_stage": "UNKNOWN",
+      "coverage": "UNKNOWN",
+      "limits": "UNKNOWN",
+      "target_expression": "UNKNOWN"
+     },
+     "endpoint_pursued": "UNKNOWN",
+     "functional_evidence_available": "UNKNOWN",
+     "temporal_or_model_limit": "UNKNOWN"
+    },
+    "p4_roadmap_fields": {
+     "indication_and_transfer": "lithium carbonate",
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:476; evidence table digest 3d0f7acbc09296b7"
+    },
+    "route": "RECUPERO_PROFONDO",
+    "schema_version": 1
+   },
+   "input_sha256": "ff557ab7d15ac174c7bfd5051f42990f55025ac618aab6405a18a9fd9e88e699",
+   "label_lookup": {
+    "active_ingredient": "UNKNOWN",
+    "client_version": "UNKNOWN",
+    "coverage": "UNKNOWN",
+    "coverage_limit": "UNKNOWN",
+    "error": "UNKNOWN",
+    "formulation": "UNKNOWN",
+    "method": "UNKNOWN",
+    "product_name": "UNKNOWN",
+    "queries": [],
+    "retrieved_at": "UNKNOWN",
+    "source": "UNKNOWN",
+    "spl_id": "UNKNOWN",
+    "status": "NOT_ATTEMPTED"
+   },
+   "legend_evidence": {
+    "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+    "complete_reads": 0,
+    "depths": [],
+    "digest": "3d0f7acbc09296b7",
+    "locators": 0,
+    "origin_id": "R-04",
+    "papers": 0,
+    "query_id": "Q-R-04",
+    "rows": [],
+    "unaudited_contradictions": 0
+   },
+   "limits": [
+    "Technical comparison is not efficacy, safety or experimental validation.",
+    "Sources and receipt references are retained, not independently verified.",
+    "Shared sources are not independent confirmations; scores are not pooled.",
+    "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
+   ],
+   "measure_next": {
+    "dependence": "NO_RECEIPTED_EVIDENCE",
+    "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
+    "external_hits": 0,
+    "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
+    "would_move": "R-04 (disease-models/wwox/analysis/mechanism_intervention_map.md:476)"
+   },
+   "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
+   "p4_fields": {
+    "cellular_context": {
+     "cells_tissue_stage": "UNKNOWN",
+     "coverage": "UNKNOWN",
+     "limits": "UNKNOWN",
+     "target_expression": "UNKNOWN"
+    },
+    "endpoint_pursued": "UNKNOWN",
+    "functional_evidence_available": "UNKNOWN",
+    "temporal_or_model_limit": "UNKNOWN"
+   },
+   "schema_version": 1,
+   "translation": {
+    "access": "UNKNOWN",
+    "cns_exposure": "UNKNOWN",
+    "functional_rescue": "UNKNOWN",
+    "interactions": "UNKNOWN",
+    "pediatric_suitability": "UNKNOWN",
+    "time_to_benefit": "UNKNOWN"
+   }
+  },
+  "query_id": "Q-R-04"
+ },
+ {
+  "card": {
+   "abstention": "NO_DRUG_ASSERTIONS_SUPPLIED",
+   "assessment": "REQUIRES_QUALIFICATION",
+   "canonical": false,
+   "comparisons": [],
+   "directional_summary": "UNRESOLVED",
+   "epistemic_status": "IPOTESI",
+   "external_sources": [
+    {
+     "adapter": "chembl",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    },
+    {
+     "adapter": "openfda",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    },
+    {
+     "adapter": "pubtator3",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    },
+    {
+     "adapter": "pubtator3",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    }
+   ],
+   "input": {
+    "candidate": {
+     "id": "Q-R-05",
+     "name": "Ketogenic diet"
+    },
+    "derived_by": "framework/scripts/repurposing_join.py",
+    "disease_assertion": {
+     "context": {
+      "cell_type": "UNKNOWN",
+      "developmental_stage": "UNKNOWN",
+      "disease_id": "UNKNOWN",
+      "genotype": "UNKNOWN",
+      "species": "UNKNOWN"
+     },
+     "direction": "UNKNOWN",
+     "endpoint": "UNKNOWN",
+     "epistemic_status": "IPOTESI",
+     "id": "DA-Q-R-05",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:501",
+     "reading_depth": "UNKNOWN",
+     "source": "disease-models/wwox/analysis/mechanism_intervention_map.md R-05",
+     "target_id": "TCA entry, downstream of the PDK1→PDH block"
+    },
+    "drug_assertions": [],
+    "external_sources": [
+     {
+      "adapter": "chembl",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     },
+     {
+      "adapter": "openfda",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     },
+     {
+      "adapter": "pubtator3",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     },
+     {
+      "adapter": "pubtator3",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     }
+    ],
+    "label_lookup": {
+     "status": "NOT_ATTEMPTED"
+    },
+    "legend_evidence": {
+     "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+     "complete_reads": 0,
+     "depths": [],
+     "digest": "73939cb725e634fa",
+     "locators": 0,
+     "origin_id": "R-05",
+     "papers": 0,
+     "query_id": "Q-R-05",
+     "rows": [],
+     "unaudited_contradictions": 0
+    },
+    "p4_fields": {
+     "cellular_context": {
+      "cells_tissue_stage": "UNKNOWN",
+      "coverage": "UNKNOWN",
+      "limits": "UNKNOWN",
+      "target_expression": "UNKNOWN"
+     },
+     "endpoint_pursued": "UNKNOWN",
+     "functional_evidence_available": "UNKNOWN",
+     "temporal_or_model_limit": "UNKNOWN"
+    },
+    "p4_roadmap_fields": {
+     "indication_and_transfer": "ketogenic diet",
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:501; evidence table digest 73939cb725e634fa"
+    },
+    "route": "RECUPERO_PROFONDO",
+    "schema_version": 1
+   },
+   "input_sha256": "85a61f9029d08cf019559b1b65a27f50a23a46e8a6c96fdb300aabc5859084f1",
+   "label_lookup": {
+    "active_ingredient": "UNKNOWN",
+    "client_version": "UNKNOWN",
+    "coverage": "UNKNOWN",
+    "coverage_limit": "UNKNOWN",
+    "error": "UNKNOWN",
+    "formulation": "UNKNOWN",
+    "method": "UNKNOWN",
+    "product_name": "UNKNOWN",
+    "queries": [],
+    "retrieved_at": "UNKNOWN",
+    "source": "UNKNOWN",
+    "spl_id": "UNKNOWN",
+    "status": "NOT_ATTEMPTED"
+   },
+   "legend_evidence": {
+    "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+    "complete_reads": 0,
+    "depths": [],
+    "digest": "73939cb725e634fa",
+    "locators": 0,
+    "origin_id": "R-05",
+    "papers": 0,
+    "query_id": "Q-R-05",
+    "rows": [],
+    "unaudited_contradictions": 0
+   },
+   "limits": [
+    "Technical comparison is not efficacy, safety or experimental validation.",
+    "Sources and receipt references are retained, not independently verified.",
+    "Shared sources are not independent confirmations; scores are not pooled.",
+    "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
+   ],
+   "measure_next": {
+    "dependence": "NO_RECEIPTED_EVIDENCE",
+    "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
+    "external_hits": 0,
+    "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
+    "would_move": "R-05 (disease-models/wwox/analysis/mechanism_intervention_map.md:501)"
+   },
+   "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
+   "p4_fields": {
+    "cellular_context": {
+     "cells_tissue_stage": "UNKNOWN",
+     "coverage": "UNKNOWN",
+     "limits": "UNKNOWN",
+     "target_expression": "UNKNOWN"
+    },
+    "endpoint_pursued": "UNKNOWN",
+    "functional_evidence_available": "UNKNOWN",
+    "temporal_or_model_limit": "UNKNOWN"
+   },
+   "schema_version": 1,
+   "translation": {
+    "access": "UNKNOWN",
+    "cns_exposure": "UNKNOWN",
+    "functional_rescue": "UNKNOWN",
+    "interactions": "UNKNOWN",
+    "pediatric_suitability": "UNKNOWN",
+    "time_to_benefit": "UNKNOWN"
+   }
+  },
+  "query_id": "Q-R-05"
+ },
+ {
+  "card": {
+   "abstention": "NO_DRUG_ASSERTIONS_SUPPLIED",
+   "assessment": "REQUIRES_QUALIFICATION",
+   "canonical": false,
+   "comparisons": [],
+   "directional_summary": "UNRESOLVED",
+   "epistemic_status": "IPOTESI",
+   "external_sources": [
+    {
+     "adapter": "chembl",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    },
+    {
+     "adapter": "openfda",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    },
+    {
+     "adapter": "pubtator3",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    }
+   ],
+   "input": {
+    "candidate": {
+     "id": "Q-R-06",
+     "name": "Anti-neuroinflammatory"
+    },
+    "derived_by": "framework/scripts/repurposing_join.py",
+    "disease_assertion": {
+     "context": {
+      "cell_type": "UNKNOWN",
+      "developmental_stage": "UNKNOWN",
+      "disease_id": "UNKNOWN",
+      "genotype": "UNKNOWN",
+      "species": "UNKNOWN"
+     },
+     "direction": "UNKNOWN",
+     "endpoint": "UNKNOWN",
+     "epistemic_status": "IPOTESI",
+     "id": "DA-Q-R-06",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:526",
+     "reading_depth": "UNKNOWN",
+     "source": "disease-models/wwox/analysis/mechanism_intervention_map.md R-06",
+     "target_id": "de-repressed neuroinflammatory signalling"
+    },
+    "drug_assertions": [],
+    "external_sources": [
+     {
+      "adapter": "chembl",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     },
+     {
+      "adapter": "openfda",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     },
+     {
+      "adapter": "pubtator3",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     }
+    ],
+    "label_lookup": {
+     "status": "NOT_ATTEMPTED"
+    },
+    "legend_evidence": {
+     "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+     "complete_reads": 0,
+     "depths": [],
+     "digest": "f41f8c6f9fadde98",
+     "locators": 0,
+     "origin_id": "R-06",
+     "papers": 0,
+     "query_id": "Q-R-06",
+     "rows": [],
+     "unaudited_contradictions": 0
+    },
+    "p4_fields": {
+     "cellular_context": {
+      "cells_tissue_stage": "UNKNOWN",
+      "coverage": "UNKNOWN",
+      "limits": "UNKNOWN",
+      "target_expression": "UNKNOWN"
+     },
+     "endpoint_pursued": "UNKNOWN",
+     "functional_evidence_available": "UNKNOWN",
+     "temporal_or_model_limit": "UNKNOWN"
+    },
+    "p4_roadmap_fields": {
+     "indication_and_transfer": "class: IL-1β/NLRP3, MAPK/NF-κB or microglia-targeting agent",
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:526; evidence table digest f41f8c6f9fadde98"
+    },
+    "route": "RECUPERO_PROFONDO",
+    "schema_version": 1
+   },
+   "input_sha256": "2e9ca1bc87994225e4605a13bc4dfc2b91cc527993f6ff316fb5777ba3d5f3fa",
+   "label_lookup": {
+    "active_ingredient": "UNKNOWN",
+    "client_version": "UNKNOWN",
+    "coverage": "UNKNOWN",
+    "coverage_limit": "UNKNOWN",
+    "error": "UNKNOWN",
+    "formulation": "UNKNOWN",
+    "method": "UNKNOWN",
+    "product_name": "UNKNOWN",
+    "queries": [],
+    "retrieved_at": "UNKNOWN",
+    "source": "UNKNOWN",
+    "spl_id": "UNKNOWN",
+    "status": "NOT_ATTEMPTED"
+   },
+   "legend_evidence": {
+    "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+    "complete_reads": 0,
+    "depths": [],
+    "digest": "f41f8c6f9fadde98",
+    "locators": 0,
+    "origin_id": "R-06",
+    "papers": 0,
+    "query_id": "Q-R-06",
+    "rows": [],
+    "unaudited_contradictions": 0
+   },
+   "limits": [
+    "Technical comparison is not efficacy, safety or experimental validation.",
+    "Sources and receipt references are retained, not independently verified.",
+    "Shared sources are not independent confirmations; scores are not pooled.",
+    "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
+   ],
+   "measure_next": {
+    "dependence": "NO_RECEIPTED_EVIDENCE",
+    "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
+    "external_hits": 0,
+    "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
+    "would_move": "R-06 (disease-models/wwox/analysis/mechanism_intervention_map.md:526)"
+   },
+   "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
+   "p4_fields": {
+    "cellular_context": {
+     "cells_tissue_stage": "UNKNOWN",
+     "coverage": "UNKNOWN",
+     "limits": "UNKNOWN",
+     "target_expression": "UNKNOWN"
+    },
+    "endpoint_pursued": "UNKNOWN",
+    "functional_evidence_available": "UNKNOWN",
+    "temporal_or_model_limit": "UNKNOWN"
+   },
+   "schema_version": 1,
+   "translation": {
+    "access": "UNKNOWN",
+    "cns_exposure": "UNKNOWN",
+    "functional_rescue": "UNKNOWN",
+    "interactions": "UNKNOWN",
+    "pediatric_suitability": "UNKNOWN",
+    "time_to_benefit": "UNKNOWN"
+   }
+  },
+  "query_id": "Q-R-06"
+ },
+ {
+  "card": {
+   "abstention": "NO_DRUG_ASSERTIONS_SUPPLIED",
+   "assessment": "REQUIRES_QUALIFICATION",
+   "canonical": false,
+   "comparisons": [],
+   "directional_summary": "UNRESOLVED",
+   "epistemic_status": "IPOTESI",
+   "external_sources": [
+    {
+     "adapter": "chembl",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    },
+    {
+     "adapter": "openfda",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    },
+    {
+     "adapter": "pubtator3",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    },
+    {
+     "adapter": "pubtator3",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    }
+   ],
+   "input": {
+    "candidate": {
+     "id": "Q-R-07",
+     "name": "Bumetanide"
+    },
+    "derived_by": "framework/scripts/repurposing_join.py",
+    "disease_assertion": {
+     "context": {
+      "cell_type": "UNKNOWN",
+      "developmental_stage": "UNKNOWN",
+      "disease_id": "UNKNOWN",
+      "genotype": "UNKNOWN",
+      "species": "UNKNOWN"
+     },
+     "direction": "UNKNOWN",
+     "endpoint": "UNKNOWN",
+     "epistemic_status": "IPOTESI",
+     "id": "DA-Q-R-07",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:550",
+     "reading_depth": "UNKNOWN",
+     "source": "disease-models/wwox/analysis/mechanism_intervention_map.md R-07",
+     "target_id": "NKCC1"
+    },
+    "drug_assertions": [],
+    "external_sources": [
+     {
+      "adapter": "chembl",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     },
+     {
+      "adapter": "openfda",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     },
+     {
+      "adapter": "pubtator3",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     },
+     {
+      "adapter": "pubtator3",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     }
+    ],
+    "label_lookup": {
+     "status": "NOT_ATTEMPTED"
+    },
+    "legend_evidence": {
+     "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+     "complete_reads": 0,
+     "depths": [],
+     "digest": "d8b4cfb05f2ea48f",
+     "locators": 0,
+     "origin_id": "R-07",
+     "papers": 0,
+     "query_id": "Q-R-07",
+     "rows": [],
+     "unaudited_contradictions": 0
+    },
+    "p4_fields": {
+     "cellular_context": {
+      "cells_tissue_stage": "UNKNOWN",
+      "coverage": "UNKNOWN",
+      "limits": "UNKNOWN",
+      "target_expression": "UNKNOWN"
+     },
+     "endpoint_pursued": "UNKNOWN",
+     "functional_evidence_available": "UNKNOWN",
+     "temporal_or_model_limit": "UNKNOWN"
+    },
+    "p4_roadmap_fields": {
+     "indication_and_transfer": "bumetanide",
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:550; evidence table digest d8b4cfb05f2ea48f"
+    },
+    "route": "RECUPERO_PROFONDO",
+    "schema_version": 1
+   },
+   "input_sha256": "c5b4be0d740d946b20ad0c385864bbfb692f5db6e944efbecbdec25043e2264a",
+   "label_lookup": {
+    "active_ingredient": "UNKNOWN",
+    "client_version": "UNKNOWN",
+    "coverage": "UNKNOWN",
+    "coverage_limit": "UNKNOWN",
+    "error": "UNKNOWN",
+    "formulation": "UNKNOWN",
+    "method": "UNKNOWN",
+    "product_name": "UNKNOWN",
+    "queries": [],
+    "retrieved_at": "UNKNOWN",
+    "source": "UNKNOWN",
+    "spl_id": "UNKNOWN",
+    "status": "NOT_ATTEMPTED"
+   },
+   "legend_evidence": {
+    "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+    "complete_reads": 0,
+    "depths": [],
+    "digest": "d8b4cfb05f2ea48f",
+    "locators": 0,
+    "origin_id": "R-07",
+    "papers": 0,
+    "query_id": "Q-R-07",
+    "rows": [],
+    "unaudited_contradictions": 0
+   },
+   "limits": [
+    "Technical comparison is not efficacy, safety or experimental validation.",
+    "Sources and receipt references are retained, not independently verified.",
+    "Shared sources are not independent confirmations; scores are not pooled.",
+    "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
+   ],
+   "measure_next": {
+    "dependence": "NO_RECEIPTED_EVIDENCE",
+    "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
+    "external_hits": 0,
+    "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
+    "would_move": "R-07 (disease-models/wwox/analysis/mechanism_intervention_map.md:550)"
+   },
+   "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
+   "p4_fields": {
+    "cellular_context": {
+     "cells_tissue_stage": "UNKNOWN",
+     "coverage": "UNKNOWN",
+     "limits": "UNKNOWN",
+     "target_expression": "UNKNOWN"
+    },
+    "endpoint_pursued": "UNKNOWN",
+    "functional_evidence_available": "UNKNOWN",
+    "temporal_or_model_limit": "UNKNOWN"
+   },
+   "schema_version": 1,
+   "translation": {
+    "access": "UNKNOWN",
+    "cns_exposure": "UNKNOWN",
+    "functional_rescue": "UNKNOWN",
+    "interactions": "UNKNOWN",
+    "pediatric_suitability": "UNKNOWN",
+    "time_to_benefit": "UNKNOWN"
+   }
+  },
+  "query_id": "Q-R-07"
+ },
+ {
+  "card": {
+   "abstention": "NO_DRUG_ASSERTIONS_SUPPLIED",
+   "assessment": "REQUIRES_QUALIFICATION",
+   "canonical": false,
+   "comparisons": [],
+   "directional_summary": "UNRESOLVED",
+   "epistemic_status": "IPOTESI",
+   "external_sources": [
+    {
+     "adapter": "chembl",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    },
+    {
+     "adapter": "openfda",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    }
+   ],
+   "input": {
+    "candidate": {
+     "id": "Q-R-08",
+     "name": "Base / prime editing of a canonical splice-acceptor allele"
+    },
+    "derived_by": "framework/scripts/repurposing_join.py",
+    "disease_assertion": {
+     "context": {
+      "cell_type": "UNKNOWN",
+      "developmental_stage": "UNKNOWN",
+      "disease_id": "UNKNOWN",
+      "genotype": "UNKNOWN",
+      "species": "UNKNOWN"
+     },
+     "direction": "UNKNOWN",
+     "endpoint": "UNKNOWN",
+     "epistemic_status": "IPOTESI",
+     "id": "DA-Q-R-08",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:575",
+     "reading_depth": "UNKNOWN",
+     "source": "disease-models/wwox/analysis/mechanism_intervention_map.md R-08",
+     "target_id": "the pathogenic base — restoring the invariant AG acceptor"
+    },
+    "drug_assertions": [],
+    "external_sources": [
+     {
+      "adapter": "chembl",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     },
+     {
+      "adapter": "openfda",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     }
+    ],
+    "label_lookup": {
+     "status": "NOT_ATTEMPTED"
+    },
+    "legend_evidence": {
+     "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+     "complete_reads": 0,
+     "depths": [],
+     "digest": "12bbb5dc94cd36a1",
+     "locators": 0,
+     "origin_id": "R-08",
+     "papers": 0,
+     "query_id": "Q-R-08",
+     "rows": [],
+     "unaudited_contradictions": 0
+    },
+    "p4_fields": {
+     "cellular_context": {
+      "cells_tissue_stage": "UNKNOWN",
+      "coverage": "UNKNOWN",
+      "limits": "UNKNOWN",
+      "target_expression": "UNKNOWN"
+     },
+     "endpoint_pursued": "UNKNOWN",
+     "functional_evidence_available": "UNKNOWN",
+     "temporal_or_model_limit": "UNKNOWN"
+    },
+    "p4_roadmap_fields": {
+     "indication_and_transfer": "cytosine base editor (C→T on the antisense strand) or prime editor",
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:575; evidence table digest 12bbb5dc94cd36a1"
+    },
+    "route": "RECUPERO_PROFONDO",
+    "schema_version": 1
+   },
+   "input_sha256": "2368456da6f972424e351aecafde384733f27932c59008e76084ebaee4989b68",
+   "label_lookup": {
+    "active_ingredient": "UNKNOWN",
+    "client_version": "UNKNOWN",
+    "coverage": "UNKNOWN",
+    "coverage_limit": "UNKNOWN",
+    "error": "UNKNOWN",
+    "formulation": "UNKNOWN",
+    "method": "UNKNOWN",
+    "product_name": "UNKNOWN",
+    "queries": [],
+    "retrieved_at": "UNKNOWN",
+    "source": "UNKNOWN",
+    "spl_id": "UNKNOWN",
+    "status": "NOT_ATTEMPTED"
+   },
+   "legend_evidence": {
+    "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+    "complete_reads": 0,
+    "depths": [],
+    "digest": "12bbb5dc94cd36a1",
+    "locators": 0,
+    "origin_id": "R-08",
+    "papers": 0,
+    "query_id": "Q-R-08",
+    "rows": [],
+    "unaudited_contradictions": 0
+   },
+   "limits": [
+    "Technical comparison is not efficacy, safety or experimental validation.",
+    "Sources and receipt references are retained, not independently verified.",
+    "Shared sources are not independent confirmations; scores are not pooled.",
+    "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
+   ],
+   "measure_next": {
+    "dependence": "NO_RECEIPTED_EVIDENCE",
+    "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
+    "external_hits": 0,
+    "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
+    "would_move": "R-08 (disease-models/wwox/analysis/mechanism_intervention_map.md:575)"
+   },
+   "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
+   "p4_fields": {
+    "cellular_context": {
+     "cells_tissue_stage": "UNKNOWN",
+     "coverage": "UNKNOWN",
+     "limits": "UNKNOWN",
+     "target_expression": "UNKNOWN"
+    },
+    "endpoint_pursued": "UNKNOWN",
+    "functional_evidence_available": "UNKNOWN",
+    "temporal_or_model_limit": "UNKNOWN"
+   },
+   "schema_version": 1,
+   "translation": {
+    "access": "UNKNOWN",
+    "cns_exposure": "UNKNOWN",
+    "functional_rescue": "UNKNOWN",
+    "interactions": "UNKNOWN",
+    "pediatric_suitability": "UNKNOWN",
+    "time_to_benefit": "UNKNOWN"
+   }
+  },
+  "query_id": "Q-R-08"
+ },
+ {
+  "card": {
+   "abstention": "NO_DRUG_ASSERTIONS_SUPPLIED",
+   "assessment": "REQUIRES_QUALIFICATION",
+   "canonical": false,
+   "comparisons": [],
+   "directional_summary": "UNRESOLVED",
+   "epistemic_status": "IPOTESI",
+   "external_sources": [
+    {
+     "adapter": "chembl",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    },
+    {
+     "adapter": "openfda",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    },
+    {
+     "adapter": "pubtator3",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    },
+    {
+     "adapter": "pubtator3",
+     "citation": "",
+     "evidence_label": "NOT WWOX EVIDENCE",
+     "hit_count": 0,
+     "licence": "",
+     "requests_sent": [],
+     "retrieved_at": "",
+     "source_version": "UNKNOWN",
+     "status": "NOT_ATTEMPTED"
+    }
+   ],
+   "input": {
+    "candidate": {
+     "id": "Q-R-09",
+     "name": "Proteostasis modulation for an SDR missense allele"
+    },
+    "derived_by": "framework/scripts/repurposing_join.py",
+    "disease_assertion": {
+     "context": {
+      "cell_type": "UNKNOWN",
+      "developmental_stage": "UNKNOWN",
+      "disease_id": "UNKNOWN",
+      "genotype": "UNKNOWN",
+      "species": "UNKNOWN"
+     },
+     "direction": "UNKNOWN",
+     "endpoint": "UNKNOWN",
+     "epistemic_status": "IPOTESI",
+     "id": "DA-Q-R-09",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:600",
+     "reading_depth": "UNKNOWN",
+     "source": "disease-models/wwox/analysis/mechanism_intervention_map.md R-09",
+     "target_id": "WWOX protein stability — *and its function*"
+    },
+    "drug_assertions": [],
+    "external_sources": [
+     {
+      "adapter": "chembl",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     },
+     {
+      "adapter": "openfda",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     },
+     {
+      "adapter": "pubtator3",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     },
+     {
+      "adapter": "pubtator3",
+      "citation": "",
+      "evidence_label": "NOT WWOX EVIDENCE",
+      "hit_count": 0,
+      "licence": "",
+      "requests_sent": [],
+      "retrieved_at": "",
+      "source_version": "UNKNOWN",
+      "status": "NOT_ATTEMPTED"
+     }
+    ],
+    "label_lookup": {
+     "status": "NOT_ATTEMPTED"
+    },
+    "legend_evidence": {
+     "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+     "complete_reads": 0,
+     "depths": [],
+     "digest": "c44de0928b8cde48",
+     "locators": 0,
+     "origin_id": "R-09",
+     "papers": 0,
+     "query_id": "Q-R-09",
+     "rows": [],
+     "unaudited_contradictions": 0
+    },
+    "p4_fields": {
+     "cellular_context": {
+      "cells_tissue_stage": "UNKNOWN",
+      "coverage": "UNKNOWN",
+      "limits": "UNKNOWN",
+      "target_expression": "UNKNOWN"
+     },
+     "endpoint_pursued": "UNKNOWN",
+     "functional_evidence_available": "UNKNOWN",
+     "temporal_or_model_limit": "UNKNOWN"
+    },
+    "p4_roadmap_fields": {
+     "indication_and_transfer": "conditional; **no molecule is design-ready**. Three families: site-specific pharmacological chaperone · kinetic stabilizer · indirect proteostasis regulator",
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:600; evidence table digest c44de0928b8cde48"
+    },
+    "route": "RECUPERO_PROFONDO",
+    "schema_version": 1
+   },
+   "input_sha256": "545b1b8d58e0ea109e62ef4aa3f163f50f9b4ea25df9d7e78e352ecea67984b1",
+   "label_lookup": {
+    "active_ingredient": "UNKNOWN",
+    "client_version": "UNKNOWN",
+    "coverage": "UNKNOWN",
+    "coverage_limit": "UNKNOWN",
+    "error": "UNKNOWN",
+    "formulation": "UNKNOWN",
+    "method": "UNKNOWN",
+    "product_name": "UNKNOWN",
+    "queries": [],
+    "retrieved_at": "UNKNOWN",
+    "source": "UNKNOWN",
+    "spl_id": "UNKNOWN",
+    "status": "NOT_ATTEMPTED"
+   },
+   "legend_evidence": {
+    "abstention": "NO_RECEIPTED_EVIDENCE_FOR_THIS_QUERY",
+    "complete_reads": 0,
+    "depths": [],
+    "digest": "c44de0928b8cde48",
+    "locators": 0,
+    "origin_id": "R-09",
+    "papers": 0,
+    "query_id": "Q-R-09",
+    "rows": [],
+    "unaudited_contradictions": 0
+   },
+   "limits": [
+    "Technical comparison is not efficacy, safety or experimental validation.",
+    "Sources and receipt references are retained, not independently verified.",
+    "Shared sources are not independent confirmations; scores are not pooled.",
+    "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
+   ],
+   "measure_next": {
+    "dependence": "NO_RECEIPTED_EVIDENCE",
+    "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
+    "external_hits": 0,
+    "measurement": "a first receipted reading of a paper that measures this mechanism in a WWOX system; until then the external hits stand alone and are NOT WWOX EVIDENCE",
+    "would_move": "R-09 (disease-models/wwox/analysis/mechanism_intervention_map.md:600)"
+   },
+   "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
+   "p4_fields": {
+    "cellular_context": {
+     "cells_tissue_stage": "UNKNOWN",
+     "coverage": "UNKNOWN",
+     "limits": "UNKNOWN",
+     "target_expression": "UNKNOWN"
+    },
+    "endpoint_pursued": "UNKNOWN",
+    "functional_evidence_available": "UNKNOWN",
+    "temporal_or_model_limit": "UNKNOWN"
+   },
+   "schema_version": 1,
+   "translation": {
+    "access": "UNKNOWN",
+    "cns_exposure": "UNKNOWN",
+    "functional_rescue": "UNKNOWN",
+    "interactions": "UNKNOWN",
+    "pediatric_suitability": "UNKNOWN",
+    "time_to_benefit": "UNKNOWN"
+   }
+  },
+  "query_id": "Q-R-09"
+ }
+]
