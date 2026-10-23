@@ -45,7 +45,7 @@ the single door even though the files are where the architecture puts them.
 | Piece | Path | How to run it |
 |---|---|---|
 | Survey of external sources, with measured dry calls | [`tool_survey_20261022.md`](tool_survey_20261022.md) · [`tool_survey_20261022_drycalls.json`](tool_survey_20261022_drycalls.json) | read |
-| One-file adapters (Open Targets, ChEMBL, PubTator 3, openFDA, Orphadata, iLINCS) | `framework/adapters/`; convention `framework/protocols/repurposing_adapter_convention.md` | `python3 framework/scripts/repurposing_adapter.py list · selftest [--live] · query <name> '<json>' · add · remove` |
+| One-file adapters (Open Targets, ChEMBL, PubTator 3, openFDA, Orphadata, iLINCS) | `framework/adapters/`; convention `framework/protocols/repurposing_adapter_convention.md` | `python3 framework/scripts/repurposing_adapter.py selftest --live` (offline without the flag) · `python3 framework/scripts/repurposing_adapter.py list` · `… query <name> '<json>'` · `… add <name>` · `… remove <name>` |
 | Acknowledgements and licences, rendered from the adapters | [`ACKNOWLEDGEMENTS.md`](ACKNOWLEDGEMENTS.md) | `… repurposing_adapter.py acknowledgements --write` |
 | The join: queries from the registries, receipted evidence table, derived cards, measure-next | [`join/`](join/) | `python3 framework/scripts/repurposing_join.py run [--axis …] [--live]` (prints what changed) |
 | The feedback loop: one assignment row per card for the next batch | `research/repurposing_batch_selection_20261023_module.md` | `… repurposing_join.py handoff --date <YYYY-MM-DD> --write <file>` |
