@@ -1,0 +1,25 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "TASK_ID": "MODULE-C-20261023",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "scientist-c",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Resolve and select for rows Q-R-04..09 of the repurposing module handoff, search independent measurements for REPLICATE rows Q-N-16, Q-R-01, Q-R-03, stage leads, and record observations on the module row. Parent: ORCH-MODULE-BATCH-20261023.",
+ "CURRENT_STATE": "COMPLETED",
+ "TASK_ACK": {"actor": "scientist-c", "at": "2026-10-23", "directive_version": 1, "generation": 1},
+ "TASK_CLAIM": {"actor": "scientist-c", "branch": "task/module-c-20261023", "worktree": ".claude/worktrees/module-c", "mode": "SELECT_AND_SEARCH"},
+ "DEFAULTS_TAKEN": [
+  "module lead specs refused by discovery_lead check (no falsifier, transfer_limit); corrected rewrites staged instead",
+  "full-text reads not run: selection and binding diagnosis only; reserve list recorded in the note",
+  "ketogenic and bumetanide topics resolved to existing metabolic-batch records, not re-read"
+ ],
+ "STOP_LOG": [],
+ "RESULT": {
+  "note": "disease-models/wwox/research/module_batch_selection_scientist-c_20261023.md",
+  "leads_staged": 3,
+  "reads_completed": 0,
+  "receipts_staged": 0
+ }
+}
