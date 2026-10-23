@@ -1,0 +1,203 @@
+{
+ "schema_version": 2,
+ "pmid": "33053775",
+ "doi": "10.3390/ijms21207510",
+ "pmcid": "PMC7589538",
+ "receipt": "FTR-20261023-33053775-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the module handoff row (what the module asked and why) and the Scientist's own earlier abstract-level selection note; no registry record content was opened before the first pass.",
+ "landing": [
+  "disease-models/wwox/research/module_batch_selection_scientist-c_20261023.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Lawful route found on the first attempt (see source_artifacts.acquisition_recipe); no cascade needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline by the Scientist; the reading is the deliverable."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Comparator paper; no cumulative-ledger lead is claimed from it beyond the staged module leads."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever is matured by this paper."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for the reference genotype."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or corroborated; locators are exposed for a later blind audit."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "adjacent_method_expert",
+  "output_kind": "primary_research",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Pannexin-1 knockout and blocker study from the electrophysiology group (Carlen, Bardakjian) that also produced the WWOX neocortical-slice paper PMID 34634460: the same laboratory, a second model of the same blocker. Not WWOX evidence."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX[Title/Abstract] AND (pannexin* OR carbenoxolone OR gap junction OR network hyperexcitability OR burst*)",
+    "count": 4,
+    "source": "PubMed search 2026-10-23, titles screened"
+   }
+  ],
+  "note": "Counts are search hits only."
+ },
+ "multihop": {
+  "references_enumerated": 49,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "Reference 10 is Dossi 2018 (PMID 29848662), the human-tissue pannexin-1 paper; no lawful full text was obtained (publisher challenge page; Unpaywall reports closed access), parked with that cascade. The reference list was counted, not read."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 33053775 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "NO RECORD MATCHED in the registry surfaces at commit bf151b431e5f; a statement about that query only, not evidence the laboratory does not know the paper."
+ },
+ "retraction_check": {
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 49,
+   "references_screened": 41,
+   "references_with_doi": 41,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 2,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 8
+   }
+  },
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction (checked 2026-10-23 by the dependency screen)."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID33053775_Aquilino2020_EPMC.xml",
+   "sha256": "bf33b13b5ebc5a187040b5ebb9d392447b80fcf1d4bf461b91376d5040c240d6",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7589538/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC REST fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-23",
+    "result_sha256": "bf33b13b5ebc5a187040b5ebb9d392447b80fcf1d4bf461b91376d5040c240d6"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC lists the article as open access and in EPMC (PMC7589538); XML held locally and fingerprinted.",
+  "entries": [
+   {
+    "proposition": "Seizure-like events with 4-aminopyridine in slices, by group (total, event-positive, event-negative, percent, p): wild type 9, 7, 2, 78; knockout 12, 2, 10, 20; Brilliant Blue-FCF 10, 1, 9, 10; probenecid 13, 1, 12, 8.",
+    "snippet": "WT 9 7 2 78 - KO 12 2 10 20 0.0051 BB 10 1 9 10 0.0028 PB 13 1 12 8 0.0008",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID33053775_Aquilino2020_EPMC.xml",
+    "anchor": "Table 1 rows",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The unit counted is the slice, not the animal: the knockout slices come from 7 mice and the wild-type slices from 6.",
+    "snippet": "12 slices from 7 KO mice had fewer 4-AP-induced SLEs than in the 9 slices from 6 of their WT counterparts",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33053775_Aquilino2020_EPMC.xml",
+    "anchor": "Table 1 caption",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The statistical test for incidence is described two ways. The Methods say a Fisher exact test was used; the Table 1 caption reports chi-squared p values. Recomputed here from the table counts (my computation, not the paper's): the printed chi-squared values reproduce without continuity correction, every expected cell count is below 5, and the Fisher exact p values are 0.0092 (KO), 0.0055 (BB-FCF) and 0.0015 (probenecid), still below 0.05 but larger than the printed 0.0051, 0.0028 and 0.0008.",
+    "snippet": "a Fisher’s Exact test was used with a confidence interval (CI) of 95%",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33053775_Aquilino2020_EPMC.xml",
+    "anchor": "Methods 4.4, last sentence",
+    "panel_text_relation": "text_only",
+    "external_provenance": "Fisher exact (two-sided, hypergeometric enumeration) and Pearson chi-squared computed by the Scientist in Python on 2026-10-23 from the Table 1 counts (7/9 vs 2/12, 7/9 vs 1/10, 7/9 vs 1/13); not a figure of the paper."
+   },
+   {
+    "proposition": "The pharmacological arm in slices: pretreatment with the selective Panx1 blocker Brilliant Blue-FCF left one of 10 slices with a seizure-like event after 4-AP, and probenecid likewise one slice (Table 1).",
+    "snippet": "Across 10 4-AP experiments in slices of the BB group, only one case of seizure-like events occurred following pretreatment",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33053775_Aquilino2020_EPMC.xml",
+    "anchor": "Results 2.3",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Once a seizure-like event occurred in a knockout slice its duration and interval showed no significant difference from wild type (p = 0.861 and 0.794 in the paper): the effect is on whether events start, not on their shape.",
+    "snippet": "no significant differences in the duration of events (WT: 0.45 ± 0.06 min, KO: 0.44 ± 0.04 min, p = 0.861, t -test) or in the inter-SLE interval (WT: 2.29 ± 0.20 min, KO: 2.19 ± 0.31 min, p = 0.794, t -test)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33053775_Aquilino2020_EPMC.xml",
+    "anchor": "Results 2.3",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The endpoint here is incidence of seizure-like events triggered by a convulsant in slices from wild-type background mice; the WWOX paper's endpoint (normalised burst frequency of spontaneous activity in Wwox knockout slices) is a different quantity in a different preparation. The two are not the same measurement.",
+    "snippet": "Extracellular recording electrodes placed in layer II/III of neocortical slices recorded “spontaneous” or self-sustained population responses to the convulsant 4-AP",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33053775_Aquilino2020_EPMC.xml",
+    "anchor": "Results 2.3, first paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Laboratory identity: the animal procedures were approved by the Animal Care Committee of the University Health Network, the institution of the WWOX slice paper's electrophysiology group, and three authors (Aquilino, Bardakjian, Carlen, the last being the senior author) are shared with that paper. This is the same laboratory, so the finding is a second model, not an independent laboratory.",
+    "snippet": "reviewed and approved by the Animal Care Committee of the University Health Network",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33053775_Aquilino2020_EPMC.xml",
+    "anchor": "Methods 4.1; front matter author list",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Seizure severity under systemic pentylenetetrazol was not reduced in every sex and stage: knockout females spent more time in stage 5 than any other group, and knockout males more time in stage 2.",
+    "snippet": "Female KO animals spent significantly more time in stage 5 seizures than any other group",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33053775_Aquilino2020_EPMC.xml",
+    "anchor": "Results 2.1",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The knockout is a global CMV-Cre deletion of a floxed Panx1, and the authors themselves separate a developmental or compensatory effect from a direct one by adding acute blockers in slices.",
+    "snippet": "We also performed additional experiments to distinguish the direct contribution of Panx1 function from any developmental or compensatory effect arising from the genetic deletion of Panx1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33053775_Aquilino2020_EPMC.xml",
+    "anchor": "Results 2.3",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors state the pannexin-1 literature is split on the sign of the effect: the protein is said to both excite and inhibit seizure-like excitability across models and cell types.",
+    "snippet": "has been purported to both excite [ 9 , 10 , 11 ] or inhibit [ 12 , 13 ] seizure-like excitability across different models and even cell types",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33053775_Aquilino2020_EPMC.xml",
+    "anchor": "Introduction, paragraph 2",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}

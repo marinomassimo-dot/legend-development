@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-10-23T20:15:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "tables": "not_present",
+  "figures": "read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "supplementary": "read",
+  "references": "not_read"
+ },
+ "event_at": "2026-10-23T21:03:00Z",
+ "event_id": "FTR-20261023-42422765-01",
+ "evidence_basis": [
+  "REPAIR PASS after the blind module-row audit (page_adjudications/locator_audit_module_rows_20261023.md), which returned OVERSHOOT on manifest entries 14 and 10. Both re-inspected on the declared surfaces before any edit: Figure 2B from the 500 ppi embedded raster of mmc2.pdf page 4 (arms read from legend colours and the caption, which says the black dot is a mouse collected for analysis), and Supplementary S8A to S8D from a 400 dpi render of mmc1.pdf page 10.",
+  "ENTRY 14 confirmed OVERSHOOT: the WPRE-free 8E10 arm (n=5) and the WPRE-bearing 4E10 arm (n=3) stay at 100 percent to their last markers (about days 27 and 31); the 33 percent step and the black collection dot at about day 25 belong to the WPRE-free 4E10 arm (n=3). The old entry assigned the wrong arms. The panel agrees with the running text (rescue at 8E10 without WPRE). Follow-up of those arms ends at about day 31, so the panel carries no durability statement.",
+  "ENTRY 10 confirmed OVERSHOOT at quote level: S8B shows P1 (n=6) at 100 percent to about day 300 and only P5 (n=7) at 75 percent from about day 35. Neighbouring entries on the same two panels were re-checked: entry 15 (Figure 2E lane values) was re-read on the 500 ppi raster and its values reproduce; the S8A weight/glucose brackets of entry 10 (ns across the five timepoints, *** and **) match the 400 dpi render. Entries 11, 13, 25, 37 and 46 are text quotations; entries 12, 28, 38, 40, 41 and 45 bear on other figures (5, S5, 1, 3) and were NOT re-opened in this pass, so a transposition elsewhere in them is neither found nor excluded here (entries 38, 40, 41 and 45 are already audited contradicts_locator entries).",
+  "Two entries of drug_repurposing/woree_rescue_reference_scaffold.md rest on the withdrawn statements: item 5 of the section on the dose flag (the four-dose 0/0/0/about 76 percent assembly, which cites entry 14 for no survivors at 8E10) and row S2 of its endpoint table (P1 and P5 plateau near 75 percent, citing entry 10). The scaffold was not edited."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID42422765.json",
+  "disease-models/wwox/research/module_batch_selection_scientist-c_20261023.md"
+ ],
+ "prior_receipt": "FTR-20261021-42422765-02",
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "adversarial_reanalysis",
+ "source_fingerprint": "523b09e47b52620cacda9826bce88ac77dd8de65626f5148e2c8630383869cb4",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID42422765_Obeid2026_assets/mmc2.pdf",
+ "study_id": {
+  "doi": "10.1016/j.omta.2026.201791",
+  "pmid": "42422765"
+ },
+ "workflow": "scientist-c, task MODULE-C2-20261023, branch task/module-c2-20261023; context_policy QUESTION_DRIVEN; prepared as JSON for the integrator, not appended by this actor."
+}

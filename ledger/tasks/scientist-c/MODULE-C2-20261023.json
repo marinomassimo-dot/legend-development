@@ -1,0 +1,27 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "TASK_ID": "MODULE-C2-20261023",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "scientist-c",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Repair two audited overshoots in the 42422765 manifest, then read the REPLICATE and SELECT finds where a lawful body exists; parent ORCH-MODULE-BATCH-20261023.",
+ "CURRENT_STATE": "COMPLETED",
+ "TASK_ACK": {"actor": "scientist-c", "at": "2026-10-23", "directive_version": 1, "generation": 1},
+ "TASK_CLAIM": {"actor": "scientist-c", "branch": "task/module-c2-20261023", "worktree": ".claude/worktrees/module-c2", "mode": "REPAIR_THEN_READ"},
+ "DEFAULTS_TAKEN": [
+  "two papers parked (publisher challenge page; script shell) with the cascade run; no bypass attempted",
+  "42397075 handled as a question-framed resume with five new text locators; supplement unobtainable so no blot value written",
+  "scaffold cells resting on withdrawn statements reported, not edited",
+  "figures captions_only for all new readings; depth partial_fulltext_read"
+ ],
+ "STOP_LOG": [],
+ "RESULT": {
+  "repairs": ["42422765 entry 14", "42422765 entry 10"],
+  "reads": ["33053775", "33201535", "42661025", "42397075 (resume)"],
+  "parked": ["29848662", "42341672"],
+  "receipts_staged": ["FTR-20261023-33053775-01", "FTR-20261023-33201535-01", "FTR-20261023-42661025-01", "FTR-20261023-42397075-01", "FTR-20261023-42422765-01"],
+  "note": "disease-models/wwox/research/module_batch_selection_scientist-c_20261023.md section 6"
+ }
+}

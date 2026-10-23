@@ -1,0 +1,38 @@
+{
+ "analysis_at": "2026-10-23T20:15:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "tables": "not_present",
+  "figures": "captions_only",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "unavailable",
+  "references": "not_read"
+ },
+ "event_at": "2026-10-23T20:59:00Z",
+ "event_id": "FTR-20261023-42661025-01",
+ "evidence_basis": [
+  "Publisher open-access PDF (36 pages) read as a PyMuPDF text rendering from Abstract through Limitations, including the Methods and every figure legend. Plotted figures were not opened (captions_only). Supplementary Figures 1 to 3 and Supplementary Table 1 are cited but not in the PDF (unavailable). Reference list counted, not read.",
+  "Twelve locators machine-verified against the fingerprinted text derivative of the PDF. A string search of the rendering for GSK, glycogen and inositol returned 0 hits (command run 2026-10-23)."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID42661025.json",
+  "disease-models/wwox/research/module_batch_selection_scientist-c_20261023.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "first_read",
+ "source_fingerprint": "67f167dfefb88e312de182451318f565cc40c420422764049ede89514adc48d4",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PMID42661025_Uzay2026_publisher.pdf",
+ "study_id": {
+  "doi": "10.1038/s41386-026-02535-7",
+  "pmid": "42661025"
+ },
+ "workflow": "scientist-c, task MODULE-C2-20261023, branch task/module-c2-20261023; context_policy QUESTION_DRIVEN; prepared as JSON for the integrator, not appended by this actor."
+}

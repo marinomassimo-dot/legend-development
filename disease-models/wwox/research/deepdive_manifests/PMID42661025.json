@@ -1,0 +1,231 @@
+{
+ "schema_version": 2,
+ "pmid": "42661025",
+ "doi": "10.1038/s41386-026-02535-7",
+ "receipt": "FTR-20261023-42661025-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the module handoff row (what the module asked and why) and the Scientist's own earlier abstract-level selection note; no registry record content was opened before the first pass.",
+ "landing": [
+  "disease-models/wwox/research/module_batch_selection_scientist-c_20261023.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Lawful route found on the first attempt (see source_artifacts.acquisition_recipe); no cascade needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline by the Scientist; the reading is the deliverable."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Comparator paper; no cumulative-ledger lead is claimed from it beyond the staged module leads."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever is matured by this paper."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for the reference genotype."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or corroborated; locators are exposed for a later blind audit."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "adjacent_method_expert",
+  "output_kind": "primary_research",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Synaptic-physiology group; lithium in SNAP25 encephalopathy cultures and a knock-in mouse. A genetic developmental and epileptic encephalopathy, but a different gene and a different proposed lithium mechanism (AMPA-receptor downscaling). Not WWOX evidence."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "lithium[Title/Abstract] AND (pentylenetetrazol OR PTZ OR seizure threshold) AND (GSK3 OR glycogen synthase kinase) AND 2018:2026[dp]",
+    "count": 1,
+    "source": "PubMed search 2026-10-23; the single hit is the WWOX paper PMID 32000863"
+   }
+  ],
+  "note": "Counts are search hits only."
+ },
+ "multihop": {
+  "references_enumerated": 51,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "No WWOX-directed reference. A string search of the pdftotext rendering for GSK, glycogen and inositol returned 0 hits. The reference list was counted, not read."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 42661025 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "NO RECORD MATCHED in the registry surfaces at commit bf151b431e5f; a statement about that query only, not evidence the laboratory does not know the paper."
+ },
+ "retraction_check": {
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 51,
+   "references_screened": 49,
+   "references_with_doi": 49,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 2,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 2
+   }
+  },
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction (checked 2026-10-23 by the dependency screen). Plotted figures were not opened; figure statements come from legends."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42661025_Uzay2026_publisher_fitz.txt",
+   "sha256": "b96c22cd773f607e4dbb463dfebf0a721a3dda45c5495f3efc30ddc13841cbe4",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.nature.com/articles/s41386-026-02535-7.pdf",
+    "http_method": "GET",
+    "tier": "publisher open-access PDF (article marked OPEN); this text file is the PyMuPDF get_text of every page of that PDF",
+    "user_agent_policy": "browser_like",
+    "acquired_on": "2026-10-23",
+    "result_sha256": "b96c22cd773f607e4dbb463dfebf0a721a3dda45c5495f3efc30ddc13841cbe4"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID42661025_Uzay2026_publisher.pdf",
+   "sha256": "67f167dfefb88e312de182451318f565cc40c420422764049ede89514adc48d4",
+   "kind": "article_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://www.nature.com/articles/s41386-026-02535-7.pdf",
+    "http_method": "GET",
+    "tier": "publisher open-access PDF (article marked OPEN)",
+    "user_agent_policy": "browser_like",
+    "acquired_on": "2026-10-23",
+    "result_sha256": "67f167dfefb88e312de182451318f565cc40c420422764049ede89514adc48d4"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": false,
+  "source_fulltext_indexed_evidence": "Not indexed in Europe PMC full text (no PMCID at the time of reading); quotes are verifiable against the publisher PDF, held locally and fingerprinted (sha256 of the PDF recorded in the receipt).",
+  "entries": [
+   {
+    "proposition": "In primary neurons carrying SNAP25 variants, the two anti-seizure drugs tested (levetiracetam, topiramate) did not change resting membrane potential or action-potential measures, which the authors read as consistent with clinical drug resistance in SNAP25 encephalopathy.",
+    "snippet": "Acute LEV treatment did not alter RMP of control groups, nor affect RMPs of the neurons that express mutant SNAP25 variants",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42661025_Uzay2026_publisher_fitz.txt",
+    "anchor": "Results, first section",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In human induced neurons chronic lithium lowered mEPSC amplitude in every group including wild-type-SNAP25 neurons, so the downscaling is not specific to the mutant.",
+    "snippet": "Chronic lithium treatment led to a robust decrease in mEPSC amplitudes across all groups",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42661025_Uzay2026_publisher_fitz.txt",
+    "anchor": "Results, second section",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "In rat hippocampal cultures lithium hyperpolarised resting potential in D166Y and L50S neurons.",
+    "snippet": "more hyperpolarized RMPs in neurons expressing D166Y and L50S mutants",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42661025_Uzay2026_publisher_fitz.txt",
+    "anchor": "Results, second section",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Lithium raised action-potential frequency in wild-type neurons only; it had no effect on frequency in the mutant groups.",
+    "snippet": "frequency in WT neurons but had no effect in mutant groups",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42661025_Uzay2026_publisher_fitz.txt",
+    "anchor": "Results, second section",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The in vivo lithium arm is a before-and-after comparison within one L50S cohort ('the entire cohort' was treated), with no concurrent untreated L50S group reported for the seizure endpoint, although the Methods say control groups were kept on identical chow without lithium.",
+    "snippet": "then treated the entire cohort with lithium-infused chow for",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42661025_Uzay2026_publisher_fitz.txt",
+    "anchor": "Results, last section",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Methods statement that control animals existed, in tension with the entire-cohort design above; recorded as an unresolved wording difference, not as an error.",
+    "snippet": "Control groups were maintained on identical chow lacking lithium.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42661025_Uzay2026_publisher_fitz.txt",
+    "anchor": "Methods, Drug treatments",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Seizure frequency fell in lithium-treated L50S mice while seizure amplitude and duration did not change.",
+    "snippet": "while seizure amplitude and duration remained unchanged",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42661025_Uzay2026_publisher_fitz.txt",
+    "anchor": "Results, last paragraph, Fig. 5N-R text",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Seizure counts: baseline n = 7 animals, treated n = 5, tested by a ratio paired t test (p = 0.02); the pairing and the drop from 7 to 5 animals are not explained in the text I read.",
+    "snippet": "L50S baseline: n = 7, 33.57 ± 11.99 SEM; L50S lithium: n = 5, 10.4 ± 2.502 SEM; Ratio paired-t test (RPTT) p = 0.02",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42661025_Uzay2026_publisher_fitz.txt",
+    "anchor": "Fig. 5 legend, panel P (legend text; the plotted figure was not opened)",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Lithium did not improve anxiety-like behaviour, muscle strength or social interaction in L50S mice; benefit is limited to seizure frequency, exploration and long-term object memory.",
+    "snippet": "did not improve anxiety-like behavior, muscle strength, or social",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42661025_Uzay2026_publisher_fitz.txt",
+    "anchor": "Discussion, paragraph on lithium treatment",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors say pathways other than the synaptic downscaling they studied cannot be excluded as contributors: the mechanism in vivo is not isolated.",
+    "snippet": "cannot be ruled out solely based on our data",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42661025_Uzay2026_publisher_fitz.txt",
+    "anchor": "Discussion, penultimate paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Serum lithium was not measured in this study; the treatment protocol is said to give optimal serum levels on the strength of an earlier paper.",
+    "snippet": "results in optimal lithium concentrations in serum",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42661025_Uzay2026_publisher_fitz.txt",
+    "anchor": "Methods, Drug treatments",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Seizures were quantified at 10 months (baseline) and 11 months (post-treatment) of age, so age and treatment are confounded in a within-animal comparison.",
+    "snippet": "Baseline EEG recordings were acquired at 10 months of age, and post- treatment recordings were obtained at 11 months of age",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42661025_Uzay2026_publisher_fitz.txt",
+    "anchor": "Methods, EEG/EMG recordings",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "abstract_anchoring_waived": "Every proposition concerns Methods, legends or Discussion detail (design, counts, tests, what was not measured) that the abstract does not state, so the abstract cannot carry them."
+ }
+}

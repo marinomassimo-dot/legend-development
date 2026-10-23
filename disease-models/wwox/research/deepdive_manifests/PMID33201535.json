@@ -1,0 +1,210 @@
+{
+ "schema_version": 2,
+ "pmid": "33201535",
+ "doi": "10.1002/ana.25959",
+ "pmcid": "PMC8122513",
+ "receipt": "FTR-20261023-33201535-01",
+ "context_policy": "QUESTION_DRIVEN",
+ "context_policy_note": "Held before reading: the module handoff row (what the module asked and why) and the Scientist's own earlier abstract-level selection note; no registry record content was opened before the first pass.",
+ "landing": [
+  "disease-models/wwox/research/module_batch_selection_scientist-c_20261023.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Lawful route found on the first attempt (see source_artifacts.acquisition_recipe); no cascade needed."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline by the Scientist; the reading is the deliverable."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Comparator paper; no cumulative-ledger lead is claimed from it beyond the staged module leads."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No lever is matured by this paper."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed for the reference genotype."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "No baseline claim is narrowed, reversed or corroborated; locators are exposed for a later blind audit."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "research_type": "mixed",
+  "output_kind": "primary_research",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Randomised double-blind add-on pilot trial in neonates with mostly acquired brain injury; adjacent to the working model only through the depolarising-GABA premise. Not WWOX evidence."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (GABA OR chloride OR KCC2)",
+    "count": 3,
+    "source": "PubMed count as recorded in PMID41977367 manifest 2026-10-19; not re-run"
+   }
+  ],
+  "note": "Counts are search hits only."
+ },
+ "multihop": {
+  "references_enumerated": 48,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "No WWOX-directed reference. The reference list was counted, not read."
+ },
+ "corpus_crossquery": {
+  "query": "registry_records.py get --pmid 33201535 --hops 1 (run after the first pass)",
+  "hits": 0,
+  "note": "NO RECORD MATCHED in the registry surfaces at commit bf151b431e5f; a statement about that query only, not evidence the laboratory does not know the paper."
+ },
+ "retraction_check": {
+  "checked": true,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 48,
+   "references_screened": 45,
+   "references_with_doi": 45,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 2,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 3
+   }
+  },
+  "result": "PubMed metadata for this PMID was not found to list a retraction, expression of concern or correction (checked 2026-10-23 by the dependency screen). Author manuscript (PMC8122513); figures declared in the XML were not in the bucket, so figures were not opened."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID33201535_Soul2021_PMC_r2.xml",
+   "sha256": "5cb3c434f0929292032c755d3271e53c805e0c895fd1ea57298ad042b393fcc1",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC8122513&retmode=xml",
+    "http_method": "GET",
+    "tier": "NCBI efetch PMC XML via framework/scripts/pmc_bucket_fetch.py",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-23",
+    "result_sha256": "5cb3c434f0929292032c755d3271e53c805e0c895fd1ea57298ad042b393fcc1"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC reports the record in EPMC as an author manuscript (PMC8122513); XML held locally and fingerprinted.",
+  "entries": [
+   {
+    "proposition": "In the trial of an NKCC1 blocker added to phenobarbital for neonatal seizures, the plain comparison of seizure-burden reduction between treated and control groups was not significant.",
+    "snippet": "There were no significant group differences, likely related to the large differences in seizure burden across groups",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33201535_Soul2021_PMC_r2.xml",
+    "anchor": "Results, Table 3 paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The groups were unbalanced in seizure severity by chance, which the authors state, and the benefit claim rests on a post hoc adjustment for that imbalance.",
+    "snippet": "The large and statistically significant difference in seizure burden among groups led to the post hoc decision to analyze the effect of bumetanide versus control as potentially modified by total seizure burden",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33201535_Soul2021_PMC_r2.xml",
+    "anchor": "Results, Table 3 paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The one adverse event that differed significantly between arms was excess diuresis; neonatal death and hearing impairment did not differ significantly.",
+    "snippet": "There were no statistically significant differences in the incidence of minor or serious adverse events among groups, except for a higher rate of diuresis in treated versus control subjects (48% vs 13%, p = 0.02)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33201535_Soul2021_PMC_r2.xml",
+    "anchor": "Results, Study Participants",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Hearing impairment occurred in treated survivors and not in control survivors, with aminoglycoside co-exposure in both treated cases; the trial states it could not establish the drug's contribution.",
+    "snippet": "hearing impairment occurred in 2 of 26 surviving treated subjects (8%; both received gentamicin, 1 with a supratherapeutic level), 0 of 13 surviving control subjects",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33201535_Soul2021_PMC_r2.xml",
+    "anchor": "Results, Study Participants",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Most randomised neonates had acute symptomatic seizures from ischaemic or haemorrhagic etiologies (36 of 43).",
+    "snippet": "Most subjects (36/43, 84%) had acute symptomatic seizures from ischemic/hemorrhagic etiologies",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33201535_Soul2021_PMC_r2.xml",
+    "anchor": "Results, Study Participants",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The one genetic category appears only inside 'Other' (Table 1 footnote) and the authors say some genetic neonatal epilepsies may not be best treated by this drug.",
+    "snippet": "Although some genetically based neonatal onset epilepsies may not be best treated by bumetanide",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33201535_Soul2021_PMC_r2.xml",
+    "anchor": "Patients and Methods, Population and Trial Design",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Brain entry is raised as a concern by the authors themselves and answered by a hypothesis that the drug may act at the blood-brain barrier transporter without entering the brain; no chloride or brain-concentration measurement is described in the text read (string search for cerebrospinal, CSF and intracellular chloride found only discussion and reference mentions).",
+    "snippet": "The latter effect would not require blood brain penetration",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33201535_Soul2021_PMC_r2.xml",
+    "anchor": "Discussion, penultimate paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The depolarising GABA premise is cited from experimental literature, not measured in these infants.",
+    "snippet": "this expression is correlated with a depolarizing rather than inhibitory action at γ-aminobutyric acid type A (GABA A ) receptors",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33201535_Soul2021_PMC_r2.xml",
+    "anchor": "Introduction, paragraph 2",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors' own closing limitation: a small early-phase trial not designed for definitive answers, with the exposure-response relationship supported only after the post hoc interaction models.",
+    "snippet": "this small early phase trial was not designed to provide definitive answers to all the questions being tested",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33201535_Soul2021_PMC_r2.xml",
+    "anchor": "Discussion, last paragraphs",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Pharmacokinetics were highly variable between infants and altered by hypothermia, so a fixed exposure cannot be assumed.",
+    "snippet": "There was a large intersubject variability in clearance (coefficient of variation [CV] = 76.2%)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33201535_Soul2021_PMC_r2.xml",
+    "anchor": "Results, pharmacokinetic paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A prior open-label trial (NEMO) is cited as stopped early for reported lack of efficacy in 14 subjects without a control group, with others arguing the efficacy target was met: the trial record is mixed, not uniformly negative.",
+    "snippet": "The NEMO trial was stopped early for reported lack of efficacy, evaluated in a total of 14 subjects (no control group)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33201535_Soul2021_PMC_r2.xml",
+    "anchor": "Discussion, paragraph 3",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}
