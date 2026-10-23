@@ -72,8 +72,11 @@ QUESTION_DRIVEN (I had seen the map and ledger wording before opening the papers
 * **Q-N-01 mTOR.** In the paper's own deposited WWOX-KO organoid lists (WT n=2 vs KO n=4, nominal-P
   sets): EIF4EBP1 down (log2 -0.87), but **MTOR itself up** (+0.4, adjusted P 0.0498), DDIT4 up,
   DEPTOR up, EIF4EBP2 up, TSC2 down, RPS6KB2 down, RB1CC1 down; RPTOR, RICTOR, RPS6KB1, ULK1,
-  ATG5/7, BECN1, MAP1LC3B, SQSTM1 absent from both lists. The article text contains no mTOR,
-  autophagy, 4E-BP or rapamycin string. So the wording "mTOR/EIF4EBP1 down" (DL-MECH-034) is
+  ATG5/7, BECN1, MAP1LC3B, SQSTM1 absent from both lists. The Results sentence on the top-100
+  downregulated genes (Fig 4A) does name autophagy genes (IFI16, MDM2, RB1, PLAT, RB1CC1) and "the mTOR
+  pathway (EIF4EBP1, PIK3CA, RB1CC1)"; 4E-BP and rapamycin do not occur in that surface (text
+  search of the PMC JATS). An earlier version of this note said the article had no such string; that
+  was wrong (repaired in the manifest entry 50 by task module-a-repair). So the wording "mTOR/EIF4EBP1 down" (DL-MECH-034) is
   not what the table shows; the axis is mixed at transcript level and says nothing of
   signalling. This **supports INSUFFICIENT** and sharpens it. Separately, a referee of the
   submitted version remarks on detrimental overexpression effects (figure not held).
