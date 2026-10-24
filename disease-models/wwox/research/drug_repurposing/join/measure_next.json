@@ -1,9 +1,9 @@
 [
  {
-  "dependence": "14_UNAUDITED_CONTRADICTIONS",
-  "experiment_sketch": "legend-locator-audit over the declared triples",
+  "dependence": "49_PAPERS_29_COMPLETE",
+  "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
   "external_hits": 1,
-  "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
+  "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
   "query_id": "Q-N-01",
   "would_move": "N-01 (disease-models/wwox/analysis/mechanism_intervention_map.md:635)"
  },
@@ -24,7 +24,7 @@
   "would_move": "N-03 (disease-models/wwox/analysis/mechanism_intervention_map.md:656)"
  },
  {
-  "dependence": "12_UNAUDITED_CONTRADICTIONS",
+  "dependence": "2_UNAUDITED_CONTRADICTIONS",
   "experiment_sketch": "legend-locator-audit over the declared triples",
   "external_hits": 0,
   "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
@@ -32,7 +32,7 @@
   "would_move": "N-04 (disease-models/wwox/analysis/mechanism_intervention_map.md:665)"
  },
  {
-  "dependence": "12_UNAUDITED_CONTRADICTIONS",
+  "dependence": "2_UNAUDITED_CONTRADICTIONS",
   "experiment_sketch": "legend-locator-audit over the declared triples",
   "external_hits": 1,
   "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
@@ -72,7 +72,7 @@
   "would_move": "N-09 (disease-models/wwox/analysis/mechanism_intervention_map.md:714)"
  },
  {
-  "dependence": "12_UNAUDITED_CONTRADICTIONS",
+  "dependence": "2_UNAUDITED_CONTRADICTIONS",
   "experiment_sketch": "legend-locator-audit over the declared triples",
   "external_hits": 0,
   "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
@@ -80,23 +80,23 @@
   "would_move": "N-10 (disease-models/wwox/analysis/mechanism_intervention_map.md:724)"
  },
  {
-  "dependence": "9_UNAUDITED_CONTRADICTIONS",
-  "experiment_sketch": "legend-locator-audit over the declared triples",
+  "dependence": "48_PAPERS_28_COMPLETE",
+  "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
   "external_hits": 0,
-  "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
+  "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
   "query_id": "Q-N-11",
   "would_move": "N-11 (disease-models/wwox/analysis/mechanism_intervention_map.md:733)"
  },
  {
-  "dependence": "8_UNAUDITED_CONTRADICTIONS",
-  "experiment_sketch": "legend-locator-audit over the declared triples",
+  "dependence": "7_PAPERS_4_COMPLETE",
+  "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
   "external_hits": 2,
-  "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
+  "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
   "query_id": "Q-N-12",
   "would_move": "N-12 (disease-models/wwox/analysis/mechanism_intervention_map.md:740)"
  },
  {
-  "dependence": "10_UNAUDITED_CONTRADICTIONS",
+  "dependence": "2_UNAUDITED_CONTRADICTIONS",
   "experiment_sketch": "legend-locator-audit over the declared triples",
   "external_hits": 0,
   "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
@@ -112,7 +112,7 @@
   "would_move": "N-14 (disease-models/wwox/analysis/mechanism_intervention_map.md:760)"
  },
  {
-  "dependence": "13_UNAUDITED_CONTRADICTIONS",
+  "dependence": "2_UNAUDITED_CONTRADICTIONS",
   "experiment_sketch": "legend-locator-audit over the declared triples",
   "external_hits": 0,
   "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
@@ -128,7 +128,7 @@
   "would_move": "N-16 (disease-models/wwox/analysis/mechanism_intervention_map.md:787)"
  },
  {
-  "dependence": "13_UNAUDITED_CONTRADICTIONS",
+  "dependence": "2_UNAUDITED_CONTRADICTIONS",
   "experiment_sketch": "legend-locator-audit over the declared triples",
   "external_hits": 0,
   "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
@@ -144,7 +144,7 @@
   "would_move": "R-01 (disease-models/wwox/analysis/mechanism_intervention_map.md:403)"
  },
  {
-  "dependence": "12_UNAUDITED_CONTRADICTIONS",
+  "dependence": "2_UNAUDITED_CONTRADICTIONS",
   "experiment_sketch": "legend-locator-audit over the declared triples",
   "external_hits": 2,
   "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
@@ -168,18 +168,18 @@
   "would_move": "R-04 (disease-models/wwox/analysis/mechanism_intervention_map.md:476)"
  },
  {
-  "dependence": "9_UNAUDITED_CONTRADICTIONS",
-  "experiment_sketch": "legend-locator-audit over the declared triples",
+  "dependence": "49_PAPERS_30_COMPLETE",
+  "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
   "external_hits": 0,
-  "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
+  "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
   "query_id": "Q-R-05",
   "would_move": "R-05 (disease-models/wwox/analysis/mechanism_intervention_map.md:502)"
  },
  {
-  "dependence": "8_UNAUDITED_CONTRADICTIONS",
-  "experiment_sketch": "legend-locator-audit over the declared triples",
+  "dependence": "37_PAPERS_17_COMPLETE",
+  "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
   "external_hits": 1,
-  "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
+  "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
   "query_id": "Q-R-06",
   "would_move": "R-06 (disease-models/wwox/analysis/mechanism_intervention_map.md:528)"
  },
@@ -192,7 +192,7 @@
   "would_move": "R-07 (disease-models/wwox/analysis/mechanism_intervention_map.md:553)"
  },
  {
-  "dependence": "13_UNAUDITED_CONTRADICTIONS",
+  "dependence": "2_UNAUDITED_CONTRADICTIONS",
   "experiment_sketch": "legend-locator-audit over the declared triples",
   "external_hits": 0,
   "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
@@ -200,10 +200,10 @@
   "would_move": "R-08 (disease-models/wwox/analysis/mechanism_intervention_map.md:578)"
  },
  {
-  "dependence": "9_UNAUDITED_CONTRADICTIONS",
-  "experiment_sketch": "legend-locator-audit over the declared triples",
+  "dependence": "48_PAPERS_28_COMPLETE",
+  "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
   "external_hits": 2,
-  "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
+  "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
   "query_id": "Q-R-09",
   "would_move": "R-09 (disease-models/wwox/analysis/mechanism_intervention_map.md:604)"
  }
