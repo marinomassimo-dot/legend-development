@@ -1,0 +1,38 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-AUTONOMOUS-20261024",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Autonomous scientific continuation: resolve the three linkage gaps, settle the three REPLICATE requests by discriminating experiment where replication does not exist, correct the source-inaccurate mechanism-map records, and resolve the two deferred candidates on evidence rather than by escalation.",
+ "START_UTC": "2026-10-24T16:30:00Z",
+ "AUTHORISED_QUEUE_20261024": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_LINKAGE": {"order": 1, "steps": [
+   {"step": "Three LINKAGE_GAP rows get their identifiers or a recorded absence", "status": "DONE",
+    "evidence": "scientist-c MODULE-C8-20261024 (8d6e1da9): R-07 -> 34268881 confirmed and does not move the row; N-06 -> DL-BIO-008/30362252 confirmed, prose overstates the source count; N-08 identifiers created (PAPER 557, 562), and no paper measures dichloroacetate in a WWOX system"}]},
+  "OBJ_REPLICATE": {"order": 2, "steps": [
+   {"step": "Three REPLICATE rows: endpoint, verdict on independence, discriminating experiment where no replication exists", "status": "DONE",
+    "evidence": "same record: Q-R-01 bound to a Review, real measurements two papers/one lab; Q-R-03 endpoint is in 34268881 not the bound paper; Q-N-16 published arm has no vehicle time-control; three leads staged, OK on discovery_lead.py check, never appended"}]},
+  "OBJ_MAP": {"order": 3, "steps": [
+   {"step": "N-08, N-10, N-12, N-15 re-verified against source and narrowed where they overstate", "status": "IN_PROGRESS",
+    "evidence": "scientist-b dispatched 2026-10-24; two further flags from scientist-c folded in (N-06 source count, 'dominated by R-05' untested)"}]},
+  "OBJ_CANDIDATES": {"order": 4, "steps": [
+   {"step": "A51 attribution candidate: its held condition met by two independent audits; propagate what they support", "status": "IN_PROGRESS",
+    "evidence": "R3b covers additions 1-2; locator_audit_block1_sources_20261024.md covers addition 3 at 0 of 43 adverse; integrator BATCH_20261019_016 dispatched"},
+   {"step": "Proteostasis candidate: its held condition is a blind audit of the 2026-10-22 R1 repairs, which no audit had ever judged", "status": "IN_PROGRESS",
+    "evidence": "all 21 declarations in the six R1 manifests cite only the audit that condemned them; locator_audit_R1_repairs_20261024 dispatched"}]},
+  "OBJ_SUPPLEMENT": {"order": 5, "steps": [
+   {"step": "42397075 supplementary volume: one check of the approved route, then stop", "status": "DONE",
+    "evidence": "Europe PMC returns no PMCID, isOpenAccess N, hasSuppl N, inEPMC N; recorded in operator_pdf_wishlist_20261021.md (9c98082a) so no session re-attempts it"}]}
+ },
+ "DECISIONS_TAKEN": [
+  "2026-10-24: both deferred candidates were classified HUMAN_REQUIRED on 2026-10-23 and that was wrong. Each names its own unblocking condition, a blind audit by someone other than the producer, which is delegable. Dispatched rather than escalated.",
+  "2026-10-24: the join counted a condemned-and-repaired entry as audited, hiding 178 such entries across 71 manifests. Reported once in the handoff header rather than as a row per query, because 171 of 339 queries reach one and a queue listing them all is unreadable.",
+  "2026-10-24: the two remotes development and origin share one URL; the stale origin/main mirror made main look 24 commits ahead of itself. Resynced; the duplication is noted, not removed, because safe_push and the protocols name development."
+ ],
+ "DEFAULTS_TAKEN": [
+  "No new reading lot opened: the queue's open work is audit and wording, not acquisition.",
+  "The two anchor-level defects found in 42154236 and 42401046 are recorded for the next lot rather than given a repair round of their own."
+ ]
+}
