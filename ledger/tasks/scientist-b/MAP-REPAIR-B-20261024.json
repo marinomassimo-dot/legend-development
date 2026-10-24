@@ -1,15 +1,24 @@
 {
  "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
- "_note": "Operator-authorised wording repair of four records of disease-models/wwox/analysis/mechanism_intervention_map.md that were measured on 2026-10-23 (MODULE-B-20261023) to state more than their sources, plus two further flags handed over mid-task by the coordinator from scientist-c's measurement of 2026-10-24. Ordinary scientific maintenance in the analysis layer: no canonical current file touched, no receipt recorded.",
+ "_note": "Operator-authorised wording repair of four records of disease-models/wwox/analysis/mechanism_intervention_map.md that were measured on 2026-10-23 (MODULE-B-20261023) to state more than their sources, plus two further flags handed over mid-task by the coordinator from scientist-c's measurement of 2026-10-24. Ordinary scientific maintenance in the analysis layer: no canonical current file touched, no receipt recorded. DIRECTIVE_VERSION 3 (2026-10-24): the coordinator extended scope to the duplicate of the N-06 count sentence at row C10 of analysis/therapeutic_translation_second_pass.md, with a sweep of the analysis layer for that sentence and its count.",
  "TASK_ID": "MAP-REPAIR-B-20261024",
- "DIRECTIVE_VERSION": 2,
+ "DIRECTIVE_VERSION": 3,
  "GENERATION": 1,
  "OWNER": "orchestrator",
  "ACTOR_ID": "scientist-b",
  "PRIORITY": "HIGH",
  "OBJECTIVE": "Re-verify each flagged record against its source before touching it, then narrow the overstatement to what the source supports, restore dropped qualifications and separate hypothesis from finding; preserve the underlying scientific question and every alternative hypothesis; say where the measurement was never made; mark each edit with the date and the source it was re-derived from.",
  "SCOPE": {
-  "records": ["N-06", "N-08", "N-10", "N-12", "N-15"],
+  "records": [
+   "N-06",
+   "N-08",
+   "N-10",
+   "N-12",
+   "N-15",
+   "C10",
+   "C15",
+   "C16"
+  ],
   "file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "inputs": [
    "disease-models/wwox/research/module_batch_selection_scientist-b_20261023.md",
@@ -17,8 +26,7 @@
   ],
   "out_of_scope": [
    "the four scientific current files",
-   "receipt recording (the seven readings stay staged)",
-   "row C10 of analysis/therapeutic_translation_second_pass.md, which reproduces N-06's corrected sentence and is flagged in the record rather than edited"
+   "receipt recording (the seven readings stay staged)"
   ]
  },
  "ACCEPTANCE_CRITERIA": [
@@ -83,6 +91,18 @@
    "source": "DL-BIO-008 as it now stands (coordinator hand-over; scientist-c's measurement of 2026-10-24)",
    "verdict": "UNSOURCED COUNT — confirmed against the record: it names three sources, two human, of which exactly one is a complete human metabolic screen; the third is a mouse. 'Four independent human sources' is supported nowhere.",
    "action": "count rewritten from the record; the conclusion (the biomarker does not report) kept with its smaller support; the duplicate sentence in therapeutic_translation_second_pass.md flagged, not edited"
+  },
+  {
+   "record": "C10 (analysis/therapeutic_translation_second_pass.md)",
+   "source": "DL-BIO-008, re-derived from the record on 2026-10-24 and deliberately not copied from the map edit",
+   "verdict": "UNSOURCED COUNT, same sentence as N-06 — the record supports one complete human metabolic screen (entirely normal), one human MRS case in the opposite direction, and one mouse in the predicted direction.",
+   "action": "count rewritten in the cell with the supported figure stated; the negative kept on the smaller support; the unmeasured human direction recorded"
+  },
+  {
+   "record": "C15 and C16 (same file, same defect class, taken in passing)",
+   "source": "Shaukat 2018 derived text layer, digest ae3103d907aceef77695534708bca43e6b476fca12b401ca0f8c0785842ade78; CLAIM 031",
+   "verdict": "C15 reproduced N-15's two dropped qualifications verbatim; C16 presents the same single patient as CLAIM 033 reserve (4) as if it were an independent row.",
+   "action": "both qualifications restored in C15 with the scope ambiguity and the order-of-onset gap; C16 marked as one patient counted once and explicitly not a replication of C15"
   }
  ],
  "DEFAULTS_TAKEN": [
@@ -123,7 +143,8 @@
   "legend_lint": "WARN, 16 warnings — byte-identical to the pre-edit baseline on this branch",
   "growth_anchors": "PASS; unread_premises 0 before and after",
   "public_release_gate": "PASS",
-  "test_section_references": "PASS (census unchanged)"
+  "test_section_references": "PASS (census unchanged)",
+  "second_pass_2026_10_24": "LINT WARN 16 (baseline), growth_anchors PASS with unread_premises 0, public_release_gate PASS, test_section_references OK, table column count unchanged at 9 fields per row"
  },
  "skills_considered": [
   {
@@ -146,5 +167,18 @@
    "used": false,
    "reason": "Optional; the adversarial re-retrieval it would supply was already done for N-10 on 2026-10-23."
   }
- ]
+ ],
+ "SWEEP_2026_10_24": {
+  "query": "git grep -iE 'four independent human sources|four|three independent human|normal metabolism|normal metabolic|quattro fonti umane' over disease-models/wwox/{analysis,therapeutics,meta}",
+  "hits_that_are_this_claim": [
+   "analysis/therapeutic_translation_second_pass.md:548 (C10) — corrected"
+  ],
+  "hits_that_are_a_different_statement": [
+   "analysis/earliest_lesion_developmental_timeline_20260921.md:57 and :170 — 'four independent human fetal references' is a single-cell annotation method in a different paper; unrelated and left"
+  ],
+  "left_for_another_owner": [
+   "analysis/data/pathograph_export.jsonl and research/deepdive_manifests/PMID42397075.json carry the same fetal-reference sentence as derived locator surfaces; not this claim, and generated surfaces are not edited by hand"
+  ],
+  "note": "The sentence and its count appear in exactly two places in the reasoning layer; both are now corrected. Absence elsewhere is a statement about these queries over these three directories."
+ }
 }
