@@ -359,8 +359,17 @@
     "snippet": "gram, lactate, ammonia, acylcarnitine profile, uric acid,",
     "surface": "body",
     "artifact": "files/fulltext/PMID30361190_Shaukat2018_JLE.txt",
-    "anchor": "Results, clinical data, second child, page 404 left column",
-    "panel_text_relation": "text_only"
+    "anchor": "Results, clinical data, second child, page 405 left column",
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID30361190.json",
+     "entry": 16,
+     "what_changed": "anchor corrected against the printed page (PyMuPDF block geometry: column by block midpoint, printed page number from the page footer); quote and substance unchanged. Printed page 404 corrected to 405, found by the same sweep.",
+     "audit": {
+      "auditors": 0,
+      "verdicts": []
+     }
+    }
    },
    {
     "proposition": "Second child: the quoted line ends the list of normal investigations with urine sulfocystine; transferrin isoforms do not occur in the quoted lines of this child's list (reader's comparison with entry 15; the map states transferrin isoforms normal in both).",
@@ -382,19 +391,21 @@
     }
    },
    {
-    "proposition": "Second child: epileptic spasms were captured on EEG and vigabatrin was started (the outcome is in the next column line, entry 19).",
+    "proposition": "Second child: epileptic spasms were captured on EEG and vigabatrin was started (the outcome is at the top of the right column of the same page, entry 20).",
     "snippet": "and epileptic spasms were captured. Vigabatrin was",
     "surface": "body",
     "artifact": "files/fulltext/PMID30361190_Shaukat2018_JLE.txt",
-    "anchor": "Results, clinical data, second child, page 403 left column to page 404",
+    "anchor": "Results, clinical data, second child, page 404 left column",
     "panel_text_relation": "text_only",
     "contradicts_locator": {
      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID30361190.json",
      "entry": 18,
-     "what_changed": "blind-audit finding class 'bundled proposition' (module repairs 2026-10-23): proposition narrowed to what its quote carries; readings from other lines or tool runs are labelled as the reader's. The repair is not itself audited.",
+     "what_changed": "anchor corrected against the printed page (PyMuPDF block geometry: column by block midpoint, printed page number from the page footer); quote and substance unchanged. The cross-reference for the outcome is corrected from entry 19 to entry 20.",
      "audit": {
-      "auditors": 0,
-      "verdicts": []
+      "auditors": 1,
+      "verdicts": [
+       "blind audit of the narrowed entries 2026-10-24: SUPPORTED on substance, anchor-level defect; the corrected anchor is not itself audited."
+      ]
      }
     }
    },
@@ -422,8 +433,17 @@
     "snippet": "added with a partial response.",
     "surface": "body",
     "artifact": "files/fulltext/PMID30361190_Shaukat2018_JLE.txt",
-    "anchor": "Results, clinical data, second child, page 404 right column, first line",
-    "panel_text_relation": "text_only"
+    "anchor": "Results, clinical data, second child, page 404 right column, first body line below the Figure 2 caption",
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID30361190.json",
+     "entry": 20,
+     "what_changed": "anchor corrected against the printed page (PyMuPDF block geometry: column by block midpoint, printed page number from the page footer); quote and substance unchanged. 'first line' qualified: the column opens with the Figure 2 caption and this is the first body line under it.",
+     "audit": {
+      "auditors": 0,
+      "verdicts": []
+     }
+    }
    }
   ]
  }
