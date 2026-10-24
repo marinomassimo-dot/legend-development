@@ -332,8 +332,13 @@
      "entry": 14,
      "what_changed": "blind-audit finding class 'bundled proposition' (module repairs 2026-10-23): proposition narrowed to what its quote carries; readings from other lines or tool runs are labelled as the reader's. The repair is not itself audited.",
      "audit": {
-      "auditors": 0,
-      "verdicts": []
+      "auditors": 1,
+      "verdicts": [
+       "blind locator audit of the narrowed entries, recorded in disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md: the auditor received only (proposition, quote, anchor) triples plus the native artefacts and judged this triple SUPPORTED."
+      ],
+      "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md",
+      "triple": "manifest entry 14 of PMID30361190 (the audit file identifies the triples it judged by manifest entry number and prints no separate triple index)",
+      "audited_on": "2026-10-24"
      }
     }
    },
@@ -349,8 +354,13 @@
      "entry": 15,
      "what_changed": "blind-audit finding class 'bundled proposition' (module repairs 2026-10-23): proposition narrowed to what its quote carries; readings from other lines or tool runs are labelled as the reader's. The repair is not itself audited.",
      "audit": {
-      "auditors": 0,
-      "verdicts": []
+      "auditors": 1,
+      "verdicts": [
+       "blind locator audit of the narrowed entries, recorded in disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md: the auditor received only (proposition, quote, anchor) triples plus the native artefacts and judged this triple SUPPORTED."
+      ],
+      "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md",
+      "triple": "manifest entry 15 of PMID30361190 (the audit file identifies the triples it judged by manifest entry number and prints no separate triple index)",
+      "audited_on": "2026-10-24"
      }
     }
    },
@@ -383,10 +393,14 @@
      "entry": 17,
      "what_changed": "anchor page/column corrected after the third blind audit; quote and proposition unchanged.",
      "audit": {
-      "auditors": 1,
+      "auditors": 2,
       "verdicts": [
-       "third blind audit 2026-10-23: SUPPORTED on substance, anchor-level defect (page/column); the corrected anchor is not itself audited."
-      ]
+       "third blind audit 2026-10-23: SUPPORTED on substance, anchor-level defect (page/column); the corrected anchor is not itself audited.",
+       "blind locator audit of the narrowed entries, recorded in disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md: the auditor received only (proposition, quote, anchor) triples plus the native artefacts and judged this triple SUPPORTED."
+      ],
+      "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md",
+      "triple": "manifest entry 17 of PMID30361190 (the audit file identifies the triples it judged by manifest entry number and prints no separate triple index)",
+      "audited_on": "2026-10-24"
      }
     }
    },
@@ -402,10 +416,14 @@
      "entry": 18,
      "what_changed": "anchor corrected against the printed page (PyMuPDF block geometry: column by block midpoint, printed page number from the page footer); quote and substance unchanged. The cross-reference for the outcome is corrected from entry 19 to entry 20.",
      "audit": {
-      "auditors": 1,
+      "auditors": 2,
       "verdicts": [
-       "blind audit of the narrowed entries 2026-10-24: SUPPORTED on substance, anchor-level defect; the corrected anchor is not itself audited."
-      ]
+       "blind audit of the narrowed entries 2026-10-24: SUPPORTED on substance, anchor-level defect; the corrected anchor is not itself audited.",
+       "blind locator audit of the narrowed entries, recorded in disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md: SUPPORTED on substance, with an anchor-level defect (the quote sits in the left column of page 404, and the cross-reference for the outcome pointed at entry 19 rather than at the 'added with a partial response' line). Both were repaired afterwards (task module-a-r6, 2026-10-24); the repair is not itself audited."
+      ],
+      "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md",
+      "triple": "manifest entry 18 of PMID30361190 (the audit file identifies the triples it judged by manifest entry number and prints no separate triple index)",
+      "audited_on": "2026-10-24"
      }
     }
    },
@@ -421,10 +439,14 @@
      "entry": 19,
      "what_changed": "anchor page/column corrected after the third blind audit; quote and proposition unchanged.",
      "audit": {
-      "auditors": 1,
+      "auditors": 2,
       "verdicts": [
-       "third blind audit 2026-10-23: SUPPORTED on substance, anchor-level defect (page/column); the corrected anchor is not itself audited."
-      ]
+       "third blind audit 2026-10-23: SUPPORTED on substance, anchor-level defect (page/column); the corrected anchor is not itself audited.",
+       "blind locator audit of the narrowed entries, recorded in disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md: the auditor received only (proposition, quote, anchor) triples plus the native artefacts and judged this triple SUPPORTED."
+      ],
+      "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md",
+      "triple": "manifest entry 19 of PMID30361190 (the audit file identifies the triples it judged by manifest entry number and prints no separate triple index)",
+      "audited_on": "2026-10-24"
      }
     }
    },
