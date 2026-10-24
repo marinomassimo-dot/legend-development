@@ -23,7 +23,10 @@ Two subcommands, one file, no new state:
               pixel size, effective ppi where a printed size on disk makes it computable, and the
               route to open each one. It flags a figure that is probably part VECTOR — whose
               embedded raster is a fragment, so the PAGE must be rendered instead — and it never
-              ranks a surface that is absent from disk. Writes nothing, gates nothing, exits 0.
+              ranks a surface that is absent from disk. It names WHICH FIGURE each figure file
+              is, from the JATS `<fig>` graphics rather than from the filename (which does not
+              track the figure order), and says so when no JATS is on disk to decide.
+              Writes nothing, gates nothing, exits 0.
     claim   — say "I am reading this PMID now" in the repository's common git directory, which
               every worktree sees; `packet` lists claims and every other worktree's in-flight
               manifest or staged receipt for the PMID. A marker, never a lock (N5, 2026-10-20).
@@ -947,12 +950,68 @@ def measure_ppi(width: int, height: int, geometries: list[dict[str, Any]]) -> di
                      f"{ASSUMED_PRINTED_WIDTH_IN:.0f} in printed width"}
 
 
+# 🔴 THE FILENAME IS NOT THE FIGURE NUMBER, and nothing said so before 2026-10-24. In
+# PMID 42157447 the publisher's own numbering runs Figure 1 = `ACN3-9999-0-g005.jpg`,
+# Figure 5 = `g004.jpg`: eight files whose numeric order crosses the figure order in six of
+# eight places. A reader who opens `g005.jpg` for Figure 5 is reading Figure 1 and has no way
+# to notice, which is the error class the blind audits keep finding — a locator anchored to the
+# wrong panel passes every existing check, because every existing check matches text.
+#
+# The mapping is not a guess: JATS declares it, one `<graphic>` inside each `<fig>` beside that
+# fig's `<label>`. So it is read from the article XML the manifest already declares, and when no
+# JATS is on disk the ranking says the question is UNDECIDED rather than letting the filename
+# answer it. Figure labels are reported for FILES ONLY: an embedded raster or a page render is
+# identified by its page, and no `<fig>` names it.
+def jats_figure_labels(root: Path, disease: str, pmid: str,
+                       manifest: dict | None = None) -> tuple[dict[str, str], str]:
+    """({figure file basename: its JATS label}, the XML it came from) — ({}, "") with no JATS."""
+    import xml.etree.ElementTree as ET                     # noqa: PLC0415 - one call site
+
+    if manifest is None:
+        manifest = load_manifest(root, disease, pmid)
+    for item in (manifest or {}).get("source_artifacts") or []:
+        if not isinstance(item, dict) or str(item.get("kind")) != "article_text":
+            continue
+        path = root / str(item.get("path") or "")
+        if path.suffix.lower() != ".xml" or not path.is_file():
+            continue
+        try:
+            tree = ET.parse(path)
+        except (OSError, ET.ParseError):
+            continue
+        labels: dict[str, str] = {}
+        for element in tree.iter():
+            if element.tag.rsplit("}", 1)[-1] != "fig":
+                continue
+            found = [child for child in element.iter()
+                     if child.tag.rsplit("}", 1)[-1] == "label"]
+            label = re.sub(r"\s+", " ", "".join(found[0].itertext())).strip() if found else ""
+            if not label:
+                continue
+            for child in element.iter():
+                if child.tag.rsplit("}", 1)[-1] not in {"graphic", "inline-graphic"}:
+                    continue
+                for key, value in child.attrib.items():
+                    if key.rsplit("}", 1)[-1] == "href" and value:
+                        labels.setdefault(Path(str(value)).name.lower(), label)
+        if labels:
+            return labels, str(item.get("path") or "")
+    return {}, ""
+
+
 def rank_surfaces(root: Path, disease: str, pmid: str) -> dict[str, Any]:
     """Every figure-bearing surface for one PMID, ordered best-first for READING a figure."""
     manifest = load_manifest(root, disease, pmid)
     rows = artefacts(root, disease, pmid, manifest)
     kinds = {str(item.get("path") or ""): str(item.get("kind") or "")
              for item in (manifest or {}).get("source_artifacts") or [] if isinstance(item, dict)}
+    labels, labels_from = jats_figure_labels(root, disease, pmid, manifest)
+
+    def label_of(path: str) -> str:
+        """The JATS label of a figure FILE; the extensionless stem is tried too, because a
+        `<graphic>` href legitimately omits the suffix."""
+        name = Path(path).name.lower()
+        return labels.get(name) or labels.get(Path(name).stem, "")
 
     absent: list[dict[str, Any]] = []
     rasters: list[dict[str, Any]] = []
@@ -962,7 +1021,8 @@ def rank_surfaces(root: Path, disease: str, pmid: str) -> dict[str, Any]:
         suffix = path.suffix.lower()
         if suffix not in RASTER_SUFFIXES | {".pdf", ".tif", ".tiff"}:
             continue
-        shared = {"path": str(path), "kind": kinds.get(str(path), ""), "declared": row["declared"]}
+        shared = {"path": str(path), "kind": kinds.get(str(path), ""), "declared": row["declared"],
+                  "figure_label": label_of(str(path))}
         if not row["present"]:
             # 🔴 trap (b). Not a candidate at any size: it cannot be opened.
             absent.append({**shared, "note": "ABSENT from disk — never ranked; acquire it first "
@@ -1029,7 +1089,8 @@ def rank_surfaces(root: Path, disease: str, pmid: str) -> dict[str, Any]:
         measured = measure_ppi(entry["width"], entry["height"], geometries)
         candidates.append({
             "surface": entry["path"], "route": "on_disk", "kind": entry["kind"],
-            "declared": entry["declared"], "width": entry["width"], "height": entry["height"],
+            "declared": entry["declared"], "figure_label": entry.get("figure_label", ""),
+            "width": entry["width"], "height": entry["height"],
             "aspect": round(entry["aspect"], 5),
             "ppi": 0.0 if crop else round(measured["ppi"], 1),
             "ppi_basis": ("PAGE CROP — a band of a rendered page, not a whole figure; its printed "
@@ -1097,6 +1158,7 @@ def rank_surfaces(root: Path, disease: str, pmid: str) -> dict[str, Any]:
                 candidates.append({
                     "surface": f"{where} · PAGE RENDER at {RECOMMENDED_RENDER_DPI} dpi",
                     "route": "page_render", "kind": "figure", "declared": False,
+                    "figure_label": "",
                     "width": 0, "height": 0, "aspect": round(page["aspect"], 5),
                     "ppi": float(RECOMMENDED_RENDER_DPI),
                     "ppi_basis": f"~recommended render dpi; vector content is resolution-"
@@ -1138,6 +1200,7 @@ def rank_surfaces(root: Path, disease: str, pmid: str) -> dict[str, Any]:
                 candidates.append({
                     "surface": f"{where} · embedded {image['width']}x{image['height']}",
                     "route": "embedded", "kind": "figure", "declared": False,
+                    "figure_label": "",
                     "width": image["width"], "height": image["height"],
                     "aspect": round(image["aspect"], 5), "ppi": round(image["ppi"], 1),
                     "ppi_basis": f"measured: printed {image['placed_w_pt']:.0f} pt wide in {where}",
@@ -1156,8 +1219,17 @@ def rank_surfaces(root: Path, disease: str, pmid: str) -> dict[str, Any]:
     for position, row in enumerate(candidates, start=1):
         row["position"] = position
     unpaired = [row["surface"] for row in candidates if row["route"] == "page_render"]
+    # The clause that becomes false the moment a JATS decides it — and stays true, loudly, when
+    # there is no JATS. The two facts are different and are never printed as one.
+    unseen_figure = ("WHICH FIGURE a surface actually carries: no JATS article XML is on disk "
+                     "for this PMID, so nothing here decides it and the FILENAME IS NOT "
+                     "EVIDENCE of the figure number (measured on PMID 42157447: Figure 1 is "
+                     "g005.jpg and Figure 5 is g004.jpg); " if not labels else
+                     "which figure an EMBEDDED raster or a PAGE RENDER carries — a `<fig>` names "
+                     "a file, not a page, so only the file rows above are labelled; ")
     return {
         "pmid": pmid, "disease": disease, "candidates": candidates, "absent": absent,
+        "figure_labels": dict(sorted(labels.items())), "figure_labels_from": labels_from,
         "pdfs_on_disk": [entry["path"] for entry in pdfs],
         "duplicate_pdfs": duplicate_pdfs, "unopened_pdfs": unopened,
         "duplicate_rasters": duplicate_rasters,
@@ -1170,7 +1242,7 @@ def rank_surfaces(root: Path, disease: str, pmid: str) -> dict[str, Any]:
         "note": "ordered best-first for READING a figure, on measured ppi. It writes nothing, "
                 "gates nothing and classifies no figure as marginal: that is the reader's "
                 "declaration after inspection (brief M2).",
-        "cannot_see": ("which figure a surface actually carries; a panel cropped out of an "
+        "cannot_see": (unseen_figure + "a panel cropped out of an "
                        "otherwise whole raster; and a figure that is ENTIRELY vector on a page "
                        "carrying no figure-sized raster — the drawing count does not separate "
                        "that from a title page with rules (page 1 of this corpus's publisher PDF: "
@@ -1196,6 +1268,14 @@ def render_rank(report: dict[str, Any], limit: int = RANK_RENDER_LIMIT) -> str:
     shown.sort(key=lambda row: row["position"])
     lines = [f"RANK — PMID {report['pmid']} · {len(rows)} figure-bearing candidate(s) on disk, "
              f"{len(report['absent'])} not rankable · geometry by {report['geometry_instrument']}"]
+    if report.get("figure_labels"):
+        lines.append(f"  which figure each FILE is, from the JATS <fig> graphics of "
+                     f"{Path(report['figure_labels_from']).name} — not from the filename, which "
+                     f"does not track the figure order")
+    elif any(row["route"] == "on_disk" for row in rows) or report["absent"]:
+        lines.append("  🔴 which figure each file carries is UNDECIDED here: no JATS article XML "
+                     "on disk. Do NOT read the figure number off the filename — acquire the XML "
+                     "or read each file's own caption")
     if report["pymupdf_absent"]:
         lines.append("  🔴 a PDF on disk could not be opened for geometry — effective ppi below "
                      "may be ASSUMED where it would otherwise have been measured: "
@@ -1209,12 +1289,16 @@ def render_rank(report: dict[str, Any], limit: int = RANK_RENDER_LIMIT) -> str:
         size = f"{row['width']}x{row['height']}" if row["width"] else "page"
         ppi = f"{'~' if row['ppi_assumed'] else ''}{row['ppi']:.0f} ppi"
         lines.append(f"  {row['position']:>2}. {row['surface'][:62]:<62} {size:>11} {ppi:>11}")
+        if row.get("figure_label"):
+            lines.append(f"       this file is {row['figure_label']} (JATS)")
         lines.append(f"       {row['ppi_basis']}")
         lines.append(f"       → {row['read_this']}")
         for flag in row["flags"]:
             lines.append(f"       {flag}")
     for row in report["absent"]:
         lines.append(f"  --  {Path(row['path']).name[:62]:<62} {'-':>11} {'-':>11}")
+        if row.get("figure_label"):
+            lines.append(f"       this file is {row['figure_label']} (JATS)")
         lines.append(f"       {row['note']}")
     if len(shown) < len(rows):
         lines.append(f"  … {len(rows) - len(shown)} further candidate(s) ranked below these; "

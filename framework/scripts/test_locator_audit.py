@@ -202,6 +202,129 @@ class TheAuditFindsWhatItShould(unittest.TestCase):
         self.assertIn("<checkout that holds files/>", line)
         self.assertEqual("", audit.corpus_hint(self.workspace.root, self.workspace.corpus, 0))
 
+    # ---- NOT FOUND and NOT SEARCHED (2026-10-24, blind auditor) --------------------------
+
+    def _docx(self, name: str, text: str) -> str:
+        """A real .docx — a zip of XML, written with the standard library and nothing else."""
+        import zipfile
+        document = (
+            '<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">'
+            f"<w:body><w:p><w:r><w:t>{text}</w:t></w:r></w:p></w:body></w:document>")
+        with zipfile.ZipFile(self.workspace.corpus / name, "w") as archive:
+            archive.writestr("word/document.xml", document)
+        return f"files/fulltext/{name}"
+
+    def test_a_quote_in_a_docx_supplement_binary_is_found_not_reported_missing(self) -> None:
+        """🔴 The measured false NOT FOUND: entry 2 of PMID 31402619.
+
+        The quote is verbatim inside `ACN3-6-1407-s009.docx`, declared `supplement_binary` —
+        a kind this script did not read, so the quote was matched against the article XML
+        alone and reported NOT FOUND. A false NOT FOUND in a verification tool is worse than
+        a silence: a reader may withdraw a sound locator on the strength of it.
+        """
+        relative = self._docx("PMID12345678_s009.docx",
+                              "triturated three times with a 23G needle and centrifuged")
+        path = self.workspace.manifest(
+            [entry("triturated three times with a 23G needle", "supplement")],
+            schema=2,
+            artifacts=[{"path": "files/fulltext/PMID12345678_Author2020_PMC.xml",
+                        "kind": "article_text"},
+                       {"path": relative, "kind": "supplement_binary"}])
+        result = self.audit(path)
+        self.assertEqual([0], result["matched"], result)
+        self.assertEqual([], result["missing"])
+        self.assertIn("PMID12345678_s009.docx", result["artifact"])
+
+    def test_a_format_that_cannot_be_read_is_named_and_is_not_a_missing_quote(self) -> None:
+        """A surface this tool has no reader for is a SILENCE about its quotes, and the
+        manifest's readable surfaces are still audited. Before 2026-10-24 one `.xlsx` made the
+        whole manifest unauditable — 16 of them in this corpus."""
+        (self.workspace.corpus / "PMID12345678_tables.xlsx").write_bytes(b"PK\x03\x04binary")
+        path = self.workspace.manifest(
+            [entry("restored survival in Wwox null mice"),
+             dict(entry("a row that lives only in the spreadsheet", "supplement"),
+                  artifact="files/fulltext/PMID12345678_tables.xlsx")],
+            schema=2,
+            artifacts=[{"path": "files/fulltext/PMID12345678_Author2020_PMC.xml",
+                        "kind": "article_text"},
+                       {"path": "files/fulltext/PMID12345678_tables.xlsx",
+                        "kind": "supplement_binary"}])
+        result = self.audit(path)
+        self.assertEqual([0], result["matched"], result)
+        self.assertEqual([1], result["unreadable_entries"])
+        self.assertEqual([], result["missing"], "a quote never searched for is not missing")
+        self.assertEqual([".xlsx"], [item["format"] for item in result["unreadable"]])
+
+    def test_only_unreadable_surfaces_name_the_format_rather_than_claiming_no_surface(self) -> None:
+        (self.workspace.corpus / "PMID12345678_tables.xlsx").write_bytes(b"PK\x03\x04binary")
+        # Nothing else in the corpus to fall back to, so the format is the whole answer.
+        (self.workspace.corpus / "PMID12345678_Author2020_PMC.xml").unlink()
+        path = self.workspace.manifest(
+            [entry("a row that lives only in the spreadsheet", "supplement")],
+            schema=2,
+            artifacts=[{"path": "files/fulltext/PMID12345678_tables.xlsx",
+                        "kind": "supplement_binary"}])
+        result = audit.audit_one(path, self.workspace.corpus)
+        self.assertEqual("format_unreadable", result["cause"])
+        self.assertIn(".xlsx", result["reason"])
+        self.assertIn("NOT a quote that is absent", result["reason"])
+        self.assertEqual([], result["missing"])
+
+    def test_a_quote_whose_surface_is_absent_here_is_not_missing_when_a_sibling_is_present(self) -> None:
+        """🔴 The regression this fix nearly introduced, measured on PMID 38074073.
+
+        Reading the supplement made the manifest auditable, and 21 ARTICLE quotes were then
+        matched against the supplement alone and printed as NOT FOUND — a worse report than
+        the honest `unauditable` it replaced. Partial auditing is an improvement only if it
+        says what it skipped.
+        """
+        relative = self._docx("PMID12345678_s001.docx", "a sentence of the supplement")
+        path = self.workspace.manifest(
+            [dict(entry("restored survival in Wwox null mice"),
+                  artifact="files/fulltext/PMID12345678_absent.xml")],
+            schema=2,
+            artifacts=[{"path": "files/fulltext/PMID12345678_absent.xml", "kind": "article_text"},
+                       {"path": relative, "kind": "supplement_binary"}])
+        result = self.audit(path)
+        self.assertEqual([0], result["unfetched_entries"])
+        self.assertEqual([], result["missing"])
+
+    def test_a_genuinely_absent_quote_is_still_not_found_beside_an_unreadable_surface(self) -> None:
+        """The case that must NOT change: a quote whose own surface WAS read and does not
+        carry it stays a finding, whatever else the manifest declares."""
+        (self.workspace.corpus / "PMID12345678_tables.xlsx").write_bytes(b"PK\x03\x04binary")
+        path = self.workspace.manifest(
+            [dict(entry("restored fertility in Wwox null mice"),
+                  artifact="files/fulltext/PMID12345678_Author2020_PMC.xml")],
+            schema=2,
+            artifacts=[{"path": "files/fulltext/PMID12345678_Author2020_PMC.xml",
+                        "kind": "article_text"},
+                       {"path": "files/fulltext/PMID12345678_tables.xlsx",
+                        "kind": "supplement_binary"}])
+        result = self.audit(path)
+        self.assertEqual([0], result["missing"], result)
+        self.assertEqual([], result["unreadable_entries"])
+
+    def test_strict_fails_on_a_missing_quote_and_never_on_a_silence(self) -> None:
+        """`--strict` is about findings. A quote nobody could search for is not one."""
+        (self.workspace.corpus / "PMID12345678_tables.xlsx").write_bytes(b"PK\x03\x04binary")
+        self.workspace.manifest(
+            [dict(entry("a row that lives only in the spreadsheet", "supplement"),
+                  artifact="files/fulltext/PMID12345678_tables.xlsx"),
+             entry("restored survival in Wwox null mice")],
+            schema=2,
+            artifacts=[{"path": "files/fulltext/PMID12345678_Author2020_PMC.xml",
+                        "kind": "article_text"},
+                       {"path": "files/fulltext/PMID12345678_tables.xlsx",
+                        "kind": "supplement_binary"}])
+        printed = io.StringIO()
+        with redirect_stdout(printed):
+            code = audit.main(["--root", str(self.workspace.root),
+                               "--corpus", str(self.workspace.corpus), "--strict"])
+        self.assertEqual(0, code, printed.getvalue())
+        self.assertIn("NOT READ (format)", printed.getvalue())
+        self.assertIn("NOT SEARCHED", printed.getvalue())
+
     def test_strict_fails_when_a_quote_is_not_found(self) -> None:
         self.workspace.manifest([entry("restored fertility in Wwox null mice")])
         self.assertEqual(1, audit.main(["--root", str(self.workspace.root),

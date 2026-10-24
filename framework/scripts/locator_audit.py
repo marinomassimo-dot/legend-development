@@ -50,6 +50,16 @@ PROMPT to re-read the quote, never a verdict; it cannot see scope, period, count
 direction errors, and it does NOT decide whether a quote supports its proposition - that is a
 judgement, and it needs a blind audit (`legend-locator-audit`). No baseline, no gate.
 
+## NOT FOUND and NOT SEARCHED are two different facts
+
+A quote is reported NOT FOUND only when the surface it declares was actually read. Every
+declared text surface is read, including a `supplement_binary` — a `.docx` is a zip of XML and
+`_artifact_text` reads it with the standard library, which is why entry 2 of PMID 31402619 was
+a false NOT FOUND until 2026-10-24. A surface whose format has no text branch here is set
+aside, its format is NAMED, the manifest's readable surfaces are still audited, and the quotes
+that live in the set-aside surface are counted apart as NOT SEARCHED and are never `--strict`'s
+business. A silence is not a finding.
+
 `--corpus` overrides where the artifacts live, because `files/` is gitignored and exists in
 one checkout while sessions run in worktrees. Without a readable corpus this script reports
 that it could not look, which is a different statement from finding nothing wrong.
@@ -72,6 +82,13 @@ import surface_census as census  # noqa: E402
 
 ROOT = HERE.parents[1]
 TEXT_SUFFIXES = {".xml", ".html", ".htm", ".txt", ".docx"}
+
+# The suffixes `dm._artifact_text` has a text branch for. Anything else raises for a text kind,
+# and a surface this tool cannot read is a SILENCE about the quotes that live in it — never a
+# finding about them. Before 2026-10-24 one such surface made the WHOLE manifest unauditable
+# ("surface refused: text verification is unsupported for .xlsx", 16 manifests in this corpus);
+# now the readable surfaces are still audited and the format that could not be read is named.
+READABLE_SUFFIXES = {".docx", ".xml", ".html", ".htm", ".pptx", ".txt", ".md"}
 
 # 🔴 How much of this backlog is a debt with a floor, and how much is a tap still running.
 # Verified in the code rather than assumed, and it comes out NARROWER than it was first put
@@ -251,7 +268,8 @@ def audit_one(path: Path, corpus: Path) -> dict:
     entries = locators.get("entries") if isinstance(locators, dict) else None
     result = {"pmid": pmid, "schema": manifest.get("schema_version"), "entries": 0,
               "matched": [], "missing": [], "image": [], "artifact": None, "reason": None,
-              "cause": None}
+              "cause": None, "unreadable": [], "unreadable_entries": [],
+              "unfetched": [], "unfetched_entries": []}
     if not isinstance(entries, list) or not entries:
         result["reason"] = "no locator entries (waived or empty)"
         return result
@@ -264,8 +282,17 @@ def audit_one(path: Path, corpus: Path) -> dict:
     # quote is in a surface it declares and the guess did not pick. Declared beats resolved
     # wherever a declaration exists; resolution is the fallback for the legacy manifests,
     # which are the only ones that need it.
+    # 🔴 `supplement_binary` BELONGS IN THIS SET, and leaving it out manufactured the worst
+    # failure this tool can produce. Entry 2 of PMID 31402619 quotes the supplementary methods
+    # of `ACN3-6-1407-s009.docx`, declared `supplement_binary`; the kind was not read, so the
+    # quote was matched against the article XML alone and reported NOT FOUND — while
+    # `_artifact_text` reads a `.docx` and finds it verbatim, strict. A false NOT FOUND in a
+    # verification tool is worse than a silence, because a reader may withdraw a sound locator
+    # on the strength of it. `supplement_binary` is declared precisely so its text can be
+    # verified (`_artifact_text` says so in its own comment), so it is read here too.
     declared = [str(item.get("path", "")) for item in manifest.get("source_artifacts") or []
-                if str(item.get("kind")) in {"article_text", "supplement_text", "table"}]
+                if str(item.get("kind")) in {"article_text", "supplement_text", "table",
+                                             "supplement_binary"}]
     # A declared path is repository-relative and `files/` is gitignored, so in a worktree it
     # resolves to nothing while the same bytes sit under the corpus this run was pointed at.
     # Trying both is the difference between auditing a manifest and reporting it unauditable
@@ -279,6 +306,20 @@ def audit_one(path: Path, corpus: Path) -> dict:
                 break
         else:
             absent.append(relative)
+
+    # A format with no text branch is set aside, with its name, instead of refusing the manifest.
+    unreadable_names: set[str] = set()
+    readable: list[Path] = []
+    for candidate in surfaces:
+        if candidate.suffix.lower() in READABLE_SUFFIXES:
+            readable.append(candidate)
+        else:
+            unreadable_names.add(candidate.name)
+            result["unreadable"].append({"name": candidate.name,
+                                         "format": candidate.suffix.lower() or "no suffix"})
+    surfaces = readable
+    result["unfetched"] = list(absent)
+
     if not surfaces:
         artifact = text_artifact(pmid, corpus)
         if artifact is None:
@@ -291,6 +332,16 @@ def audit_one(path: Path, corpus: Path) -> dict:
             # is a limit, the other is an errand, and a reader who cannot tell them apart
             # will treat both as neither. It is the same distinction `NOTHING AUDITED` draws
             # for a whole run, which had simply never been drawn per manifest.
+            formats = sorted({item["format"] for item in result["unreadable"]})
+            if result["unreadable"] and not absent:
+                # NOT "no surface": a surface is here and this tool has no reader for its
+                # format. The errand is an extractor or a derived text surface, not a re-read.
+                result["reason"] = (
+                    f"every declared text surface is in a format this tool cannot read "
+                    f"({', '.join(formats)}: {', '.join(item['name'] for item in result['unreadable'])}) "
+                    f"— NOT a quote that is absent, and not a defect in the reading")
+                result["cause"] = "format_unreadable"
+                return result
             result["reason"] = (
                 f"declares {len(absent)} text surface(s) that are absent from this tree "
                 f"({', '.join(absent)}) — fetch them, this is not a defect in the reading"
@@ -320,7 +371,24 @@ def audit_one(path: Path, corpus: Path) -> dict:
             result["image"].append(index)
             continue
         found, _mode = dm._quote_matches(snippet, body)
-        (result["matched"] if found else result["missing"]).append(index)
+        if found:
+            result["matched"].append(index)
+            continue
+        # 🔴 NOT FOUND and COULD NOT LOOK are different facts, and only the first is a finding.
+        # A quote whose own declared artifact is one of the formats set aside above was never
+        # searched for, so reporting it NOT FOUND invites a reader to withdraw a sound locator.
+        # The same applies, exactly, to a quote whose surface is ABSENT from this tree while a
+        # sibling surface is present: before this bucket existed, PMID 38074073 went from
+        # "declares 1 surface absent from this tree" to "21 NOT FOUND" the moment its
+        # supplement became readable, because 21 article quotes were matched against the
+        # supplement alone. Partial auditing is only an improvement if it says what it skipped.
+        name = Path(str(entry.get("artifact") or "")).name
+        if name in unreadable_names:
+            result["unreadable_entries"].append(index)
+        elif name in {Path(relative).name for relative in absent}:
+            result["unfetched_entries"].append(index)
+        else:
+            result["missing"].append(index)
     return result
 
 
@@ -418,7 +486,7 @@ def main(argv: list[str] | None = None) -> int:
         return print_triples(root, args.disease, args.pmid, args.triples, args.seed or args.pmid)
     corpus = Path(args.corpus) if args.corpus else root / "files" / "fulltext"
 
-    audited = unauditable = missing_total = absent_here = 0
+    audited = unauditable = missing_total = absent_here = unread_format = unfetched_total = 0
     for path in manifests(root, args.disease):
         if args.pmid and args.pmid not in path.stem:
             continue
@@ -431,10 +499,28 @@ def main(argv: list[str] | None = None) -> int:
             continue
         audited += 1
         missing_total += len(result["missing"])
+        unread_format += len(result["unreadable_entries"])
+        unfetched_total += len(result["unfetched_entries"])
         verdict = "OK" if not result["missing"] else f"{len(result['missing'])} NOT FOUND"
+        if result["unreadable_entries"]:
+            verdict += f" · {len(result['unreadable_entries'])} NOT READ (format)"
+        if result["unfetched_entries"]:
+            verdict += f" · {len(result['unfetched_entries'])} NOT READ (surface not in this tree)"
         print(f"  {result['pmid']:>10}  schema={result['schema']}  "
               f"{len(result['matched'])}/{len(result['matched']) + len(result['missing'])} text "
               f"matched, {len(result['image'])} image  [{verdict}]  {result['artifact']}")
+        if result["unreadable_entries"]:
+            print(f"             entries {result['unreadable_entries']} were NOT SEARCHED: their "
+                  f"declared surface is in a format this tool cannot read "
+                  f"({', '.join(sorted({item['format'] for item in result['unreadable']}))}). "
+                  f"That is a silence, not a missing quote — verify them against the surface by "
+                  f"hand or declare a derived text surface")
+        if result["unfetched_entries"]:
+            absent_here += 1
+            print(f"             entries {result['unfetched_entries']} were NOT SEARCHED: the "
+                  f"surface each one declares is absent from this tree "
+                  f"({', '.join(result['unfetched'])}) — fetch it, this is not a defect in the "
+                  f"reading")
         if result["missing"]:
             print(f"             entries {result['missing']} do not occur in the artifact. A "
                   f"quote that cannot be found was written from the page, not taken from the "
@@ -442,6 +528,12 @@ def main(argv: list[str] | None = None) -> int:
 
     print(f"\n{audited} manifest(s) audited, {unauditable} unauditable, "
           f"{missing_total} quote(s) not found")
+    # Its own line, never appended to the summary above: that line is parsed, and a silence is
+    # a separate fact from a finding anyway.
+    if unread_format or unfetched_total:
+        print(f"{unread_format + unfetched_total} quote(s) NOT SEARCHED — {unread_format} whose "
+              f"surface's format cannot be read here, {unfetched_total} whose surface is absent "
+              f"from this tree. A silence, counted apart, and never --strict's business")
     if missing_total:
         print(CLOSED_SET_NOTE)
     hint = corpus_hint(root, corpus, absent_here)
