@@ -259,7 +259,7 @@
       "auditors": 2,
       "verdicts": [
        "SUPPORTED",
-       "SUPPORTED (re-judged in the blind audit of the R1 repairs, disease-models/wwox/research/page_adjudications/locator_audit_R1_repairs_20261024.md, 2026-10-24: the rewritten wording was judged against the native artefacts, without the author's notes, the task record or the earlier audit's reasoning; 0 of 21 triples adverse). The file corroborates the panel value independently: Figure 1B's box prints Pearson r 0.8771 with R squared 0.7692 while the body sentence gives r = 0.9448, whose square is 0.8927; the square root of 0.7692 is 0.8771, so the text value is the outlier."
+       "SUPPORTED"
       ],
       "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_20261022.md",
       "triple": 4,
@@ -275,7 +275,8 @@
         "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_repairs_20261024.md",
         "triple": 4,
         "audited_on": "2026-10-24",
-        "verdict": "SUPPORTED"
+        "verdict": "SUPPORTED",
+        "note": "Re-judged in the blind audit of the R1 repairs: the rewritten wording was judged against the native artefacts, without the author's notes, the task record or the earlier audit's reasoning. 0 of 21 triples adverse. The file corroborates the panel value independently: Figure 1B's box prints Pearson r 0.8771 with R squared 0.7692 while the body sentence gives r = 0.9448, whose square is 0.8927; the square root of 0.7692 is 0.8771, so the text value is the outlier."
        }
       ],
       "audit_file_note": "The scalar audit_file, triple and audited_on name the FIRST audit of this triple and are preserved unchanged; every audit of it, in order, is in audit_records."
@@ -303,7 +304,7 @@
       "auditors": 2,
       "verdicts": [
        "OVERSHOOT",
-       "SUPPORTED (re-judged in the blind audit of the R1 repairs, disease-models/wwox/research/page_adjudications/locator_audit_R1_repairs_20261024.md, 2026-10-24: the rewritten wording was judged against the native artefacts, without the author's notes, the task record or the earlier audit's reasoning; 0 of 21 triples adverse)."
+       "SUPPORTED"
       ],
       "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_20261022.md",
       "triple": 5,
@@ -319,7 +320,8 @@
         "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_repairs_20261024.md",
         "triple": 5,
         "audited_on": "2026-10-24",
-        "verdict": "SUPPORTED"
+        "verdict": "SUPPORTED",
+        "note": "Re-judged in the blind audit of the R1 repairs: the rewritten wording was judged against the native artefacts, without the author's notes, the task record or the earlier audit's reasoning. 0 of 21 triples adverse."
        }
       ],
       "audit_file_note": "The scalar audit_file, triple and audited_on name the FIRST audit of this triple and are preserved unchanged; every audit of it, in order, is in audit_records."
@@ -360,7 +362,7 @@
       "auditors": 2,
       "verdicts": [
        "OVERSHOOT",
-       "SUPPORTED (re-judged in the blind audit of the R1 repairs, disease-models/wwox/research/page_adjudications/locator_audit_R1_repairs_20261024.md, 2026-10-24: the rewritten wording was judged against the native artefacts, without the author's notes, the task record or the earlier audit's reasoning; 0 of 21 triples adverse)."
+       "SUPPORTED"
       ],
       "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_20261022.md",
       "triple": 7,
@@ -376,7 +378,8 @@
         "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_repairs_20261024.md",
         "triple": 7,
         "audited_on": "2026-10-24",
-        "verdict": "SUPPORTED"
+        "verdict": "SUPPORTED",
+        "note": "Re-judged in the blind audit of the R1 repairs: the rewritten wording was judged against the native artefacts, without the author's notes, the task record or the earlier audit's reasoning. 0 of 21 triples adverse."
        }
       ],
       "audit_file_note": "The scalar audit_file, triple and audited_on name the FIRST audit of this triple and are preserved unchanged; every audit of it, in order, is in audit_records."
@@ -456,7 +459,7 @@
       "auditors": 2,
       "verdicts": [
        "OVERSHOOT",
-       "SUPPORTED (re-judged in the blind audit of the R1 repairs, disease-models/wwox/research/page_adjudications/locator_audit_R1_repairs_20261024.md, 2026-10-24: the rewritten wording was judged against the native artefacts, without the author's notes, the task record or the earlier audit's reasoning; 0 of 21 triples adverse)."
+       "SUPPORTED"
       ],
       "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_20261022.md",
       "triple": 12,
@@ -472,7 +475,8 @@
         "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_repairs_20261024.md",
         "triple": 12,
         "audited_on": "2026-10-24",
-        "verdict": "SUPPORTED"
+        "verdict": "SUPPORTED",
+        "note": "Re-judged in the blind audit of the R1 repairs: the rewritten wording was judged against the native artefacts, without the author's notes, the task record or the earlier audit's reasoning. 0 of 21 triples adverse."
        }
       ],
       "audit_file_note": "The scalar audit_file, triple and audited_on name the FIRST audit of this triple and are preserved unchanged; every audit of it, in order, is in audit_records."

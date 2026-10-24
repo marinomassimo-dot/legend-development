@@ -304,7 +304,7 @@
       "auditors": 2,
       "verdicts": [
        "OVERSHOOT",
-       "SUPPORTED (re-judged in the blind audit of the R1 repairs, disease-models/wwox/research/page_adjudications/locator_audit_R1_repairs_20261024.md, 2026-10-24: the rewritten wording was judged against the native artefacts, without the author's notes, the task record or the earlier audit's reasoning; 0 of 21 triples adverse)."
+       "SUPPORTED"
       ],
       "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_20261022.md",
       "triple": 3,
@@ -320,7 +320,8 @@
         "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_repairs_20261024.md",
         "triple": 3,
         "audited_on": "2026-10-24",
-        "verdict": "SUPPORTED"
+        "verdict": "SUPPORTED",
+        "note": "Re-judged in the blind audit of the R1 repairs: the rewritten wording was judged against the native artefacts, without the author's notes, the task record or the earlier audit's reasoning. 0 of 21 triples adverse."
        }
       ],
       "audit_file_note": "The scalar audit_file, triple and audited_on name the FIRST audit of this triple and are preserved unchanged; every audit of it, in order, is in audit_records."
@@ -428,7 +429,7 @@
       "auditors": 2,
       "verdicts": [
        "SUPPORTED",
-       "SUPPORTED (re-judged in the blind audit of the R1 repairs, disease-models/wwox/research/page_adjudications/locator_audit_R1_repairs_20261024.md, 2026-10-24: the rewritten wording was judged against the native artefacts, without the author's notes, the task record or the earlier audit's reasoning; 0 of 21 triples adverse). The file corroborates the count independently: Figure 6C draws six animals at baseline (about 37, 20.7, 13, 12, 10 and 0.8 seizures), whose mean 15.58 and standard error about 5.0 match the body's 15.58 plus or minus 4.987, so the legend's 'N = 3 female' is the outlier."
+       "SUPPORTED"
       ],
       "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_20261022.md",
       "triple": 10,
@@ -444,7 +445,8 @@
         "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_repairs_20261024.md",
         "triple": 10,
         "audited_on": "2026-10-24",
-        "verdict": "SUPPORTED"
+        "verdict": "SUPPORTED",
+        "note": "Re-judged in the blind audit of the R1 repairs: the rewritten wording was judged against the native artefacts, without the author's notes, the task record or the earlier audit's reasoning. 0 of 21 triples adverse. The file corroborates the count independently: Figure 6C draws six animals at baseline (about 37, 20.7, 13, 12, 10 and 0.8 seizures), whose mean 15.58 and standard error about 5.0 match the body's 15.58 plus or minus 4.987, so the legend's 'N = 3 female' is the outlier."
        }
       ],
       "audit_file_note": "The scalar audit_file, triple and audited_on name the FIRST audit of this triple and are preserved unchanged; every audit of it, in order, is in audit_records."
@@ -552,7 +554,7 @@
       "auditors": 2,
       "verdicts": [
        "UNDERSHOOT",
-       "SUPPORTED (re-judged in the blind audit of the R1 repairs, disease-models/wwox/research/page_adjudications/locator_audit_R1_repairs_20261024.md, 2026-10-24: the rewritten wording was judged against the native artefacts, without the author's notes, the task record or the earlier audit's reasoning; 0 of 21 triples adverse)."
+       "SUPPORTED"
       ],
       "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_20261022.md",
       "triple": 17,
@@ -568,7 +570,8 @@
         "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_repairs_20261024.md",
         "triple": 17,
         "audited_on": "2026-10-24",
-        "verdict": "SUPPORTED"
+        "verdict": "SUPPORTED",
+        "note": "Re-judged in the blind audit of the R1 repairs: the rewritten wording was judged against the native artefacts, without the author's notes, the task record or the earlier audit's reasoning. 0 of 21 triples adverse."
        }
       ],
       "audit_file_note": "The scalar audit_file, triple and audited_on name the FIRST audit of this triple and are preserved unchanged; every audit of it, in order, is in audit_records."
