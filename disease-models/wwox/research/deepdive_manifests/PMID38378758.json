@@ -243,13 +243,29 @@
      "receipt": "FTR-20261021-38378758-01",
      "what_changed": "OVERSHOOT repaired: the hedge 'likely' is restored. Repair is UNAUDITED: it was written by the reader whose entry failed, and is not certified by that reader.",
      "audit": {
-      "auditors": 1,
+      "auditors": 2,
       "verdicts": [
-       "OVERSHOOT"
+       "OVERSHOOT",
+       "SUPPORTED (re-judged in the blind audit of the R1 repairs, disease-models/wwox/research/page_adjudications/locator_audit_R1_repairs_20261024.md, 2026-10-24: the rewritten wording was judged against the native artefacts, without the author's notes, the task record or the earlier audit's reasoning; 0 of 21 triples adverse)."
       ],
       "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_20261022.md",
       "triple": 1,
-      "audited_on": "2026-10-22"
+      "audited_on": "2026-10-22",
+      "audit_records": [
+       {
+        "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_20261022.md",
+        "triple": 1,
+        "audited_on": "2026-10-22",
+        "verdict": "OVERSHOOT"
+       },
+       {
+        "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_repairs_20261024.md",
+        "triple": 1,
+        "audited_on": "2026-10-24",
+        "verdict": "SUPPORTED"
+       }
+      ],
+      "audit_file_note": "The scalar audit_file, triple and audited_on name the FIRST audit of this triple and are preserved unchanged; every audit of it, in order, is in audit_records."
      }
     }
    },
@@ -271,13 +287,29 @@
      "receipt": "FTR-20261021-38378758-01",
      "what_changed": "OVERSHOOT repaired: 'function intact, quantity the lesion' was stated more strongly than 'likely' and 'suggests'. Repair is UNAUDITED: it was written by the reader whose entry failed, and is not certified by that reader.",
      "audit": {
-      "auditors": 1,
+      "auditors": 2,
       "verdicts": [
-       "OVERSHOOT"
+       "OVERSHOOT",
+       "SUPPORTED (re-judged in the blind audit of the R1 repairs, disease-models/wwox/research/page_adjudications/locator_audit_R1_repairs_20261024.md, 2026-10-24: the rewritten wording was judged against the native artefacts, without the author's notes, the task record or the earlier audit's reasoning; 0 of 21 triples adverse)."
       ],
       "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_20261022.md",
       "triple": 2,
-      "audited_on": "2026-10-22"
+      "audited_on": "2026-10-22",
+      "audit_records": [
+       {
+        "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_20261022.md",
+        "triple": 2,
+        "audited_on": "2026-10-22",
+        "verdict": "OVERSHOOT"
+       },
+       {
+        "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_repairs_20261024.md",
+        "triple": 2,
+        "audited_on": "2026-10-24",
+        "verdict": "SUPPORTED"
+       }
+      ],
+      "audit_file_note": "The scalar audit_file, triple and audited_on name the FIRST audit of this triple and are preserved unchanged; every audit of it, in order, is in audit_records."
      }
     }
    },
@@ -314,13 +346,29 @@
      "receipt": "FTR-20261021-38378758-01",
      "what_changed": "OVERSHOOT repaired: 'rises slightly above the untreated trace while the wild-type peak is unchanged' is replaced by the shift the panel shows and by the unequal wild-type peak counts and cell numbers. Repair is UNAUDITED: it was written by the reader whose entry failed, and is not certified by that reader.",
      "audit": {
-      "auditors": 1,
+      "auditors": 2,
       "verdicts": [
-       "OVERSHOOT"
+       "OVERSHOOT",
+       "SUPPORTED (re-judged in the blind audit of the R1 repairs, disease-models/wwox/research/page_adjudications/locator_audit_R1_repairs_20261024.md, 2026-10-24: the rewritten wording was judged against the native artefacts, without the author's notes, the task record or the earlier audit's reasoning; 0 of 21 triples adverse)."
       ],
       "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_20261022.md",
       "triple": 4,
-      "audited_on": "2026-10-22"
+      "audited_on": "2026-10-22",
+      "audit_records": [
+       {
+        "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_20261022.md",
+        "triple": 4,
+        "audited_on": "2026-10-22",
+        "verdict": "OVERSHOOT"
+       },
+       {
+        "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_repairs_20261024.md",
+        "triple": 4,
+        "audited_on": "2026-10-24",
+        "verdict": "SUPPORTED"
+       }
+      ],
+      "audit_file_note": "The scalar audit_file, triple and audited_on name the FIRST audit of this triple and are preserved unchanged; every audit of it, in order, is in audit_records."
      }
     }
    },
@@ -370,13 +418,29 @@
      "receipt": "FTR-20261021-38378758-01",
      "what_changed": "OVERSHOOT repaired: 'did not change variant abundance across the library' dropped the authors' 'substantial' and 'globally' and the pooled-readout limit. Repair is UNAUDITED: it was written by the reader whose entry failed, and is not certified by that reader.",
      "audit": {
-      "auditors": 1,
+      "auditors": 2,
       "verdicts": [
-       "OVERSHOOT"
+       "OVERSHOOT",
+       "SUPPORTED (re-judged in the blind audit of the R1 repairs, disease-models/wwox/research/page_adjudications/locator_audit_R1_repairs_20261024.md, 2026-10-24: the rewritten wording was judged against the native artefacts, without the author's notes, the task record or the earlier audit's reasoning; 0 of 21 triples adverse)."
       ],
       "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_20261022.md",
       "triple": 7,
-      "audited_on": "2026-10-22"
+      "audited_on": "2026-10-22",
+      "audit_records": [
+       {
+        "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_20261022.md",
+        "triple": 7,
+        "audited_on": "2026-10-22",
+        "verdict": "OVERSHOOT"
+       },
+       {
+        "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_repairs_20261024.md",
+        "triple": 7,
+        "audited_on": "2026-10-24",
+        "verdict": "SUPPORTED"
+       }
+      ],
+      "audit_file_note": "The scalar audit_file, triple and audited_on name the FIRST audit of this triple and are preserved unchanged; every audit of it, in order, is in audit_records."
      }
     }
    },
@@ -467,13 +531,29 @@
      "receipt": "FTR-20261021-38378758-01",
      "what_changed": "OVERSHOOT repaired: the chaperone clause is removed; the degron is predicted and hedged. Repair is UNAUDITED: it was written by the reader whose entry failed, and is not certified by that reader.",
      "audit": {
-      "auditors": 1,
+      "auditors": 2,
       "verdicts": [
-       "OVERSHOOT"
+       "OVERSHOOT",
+       "SUPPORTED (re-judged in the blind audit of the R1 repairs, disease-models/wwox/research/page_adjudications/locator_audit_R1_repairs_20261024.md, 2026-10-24: the rewritten wording was judged against the native artefacts, without the author's notes, the task record or the earlier audit's reasoning; 0 of 21 triples adverse)."
       ],
       "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_20261022.md",
       "triple": 13,
-      "audited_on": "2026-10-22"
+      "audited_on": "2026-10-22",
+      "audit_records": [
+       {
+        "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_20261022.md",
+        "triple": 13,
+        "audited_on": "2026-10-22",
+        "verdict": "OVERSHOOT"
+       },
+       {
+        "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_repairs_20261024.md",
+        "triple": 13,
+        "audited_on": "2026-10-24",
+        "verdict": "SUPPORTED"
+       }
+      ],
+      "audit_file_note": "The scalar audit_file, triple and audited_on name the FIRST audit of this triple and are preserved unchanged; every audit of it, in order, is in audit_records."
      }
     }
    },
@@ -508,13 +588,29 @@
      "receipt": "FTR-20261021-38378758-01",
      "what_changed": "UNDERSHOOT repaired: 'the only compound tested' understated the other probes. Repair is UNAUDITED: it was written by the reader whose entry failed, and is not certified by that reader.",
      "audit": {
-      "auditors": 1,
+      "auditors": 2,
       "verdicts": [
-       "UNDERSHOOT"
+       "UNDERSHOOT",
+       "SUPPORTED (re-judged in the blind audit of the R1 repairs, disease-models/wwox/research/page_adjudications/locator_audit_R1_repairs_20261024.md, 2026-10-24: the rewritten wording was judged against the native artefacts, without the author's notes, the task record or the earlier audit's reasoning; 0 of 21 triples adverse)."
       ],
       "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_20261022.md",
       "triple": 15,
-      "audited_on": "2026-10-22"
+      "audited_on": "2026-10-22",
+      "audit_records": [
+       {
+        "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_20261022.md",
+        "triple": 15,
+        "audited_on": "2026-10-22",
+        "verdict": "UNDERSHOOT"
+       },
+       {
+        "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_repairs_20261024.md",
+        "triple": 15,
+        "audited_on": "2026-10-24",
+        "verdict": "SUPPORTED"
+       }
+      ],
+      "audit_file_note": "The scalar audit_file, triple and audited_on name the FIRST audit of this triple and are preserved unchanged; every audit of it, in order, is in audit_records."
      }
     }
    }

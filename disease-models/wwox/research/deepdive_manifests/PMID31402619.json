@@ -273,13 +273,29 @@
      "receipt": "FTR-20261021-31402619-01",
      "what_changed": "OVERSHOOT repaired: the proposition attributed to the authors a transcript-level reading of the 176 mRNAs and generalised to 'polysome profiling by itself does not separate translational from transcript regulation'. The quote concerns the 33 mRNAs flagged by distribution; the 176 are read by the authors as altered synthesis; the paper adds its own separating controls. The narrowing now holds only for the 176-mRNA headline and for the absence of any mutant eIF2B protein read. Repair is UNAUDITED: it was written by the reader whose entry failed, and is not certified by that reader.",
      "audit": {
-      "auditors": 1,
+      "auditors": 2,
       "verdicts": [
-       "OVERSHOOT"
+       "OVERSHOOT",
+       "SUPPORTED (re-judged in the blind audit of the R1 repairs, disease-models/wwox/research/page_adjudications/locator_audit_R1_repairs_20261024.md, 2026-10-24: the rewritten wording was judged against the native artefacts, without the author's notes, the task record or the earlier audit's reasoning; 0 of 21 triples adverse)."
       ],
       "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_20261022.md",
       "triple": 1,
-      "audited_on": "2026-10-22"
+      "audited_on": "2026-10-22",
+      "audit_records": [
+       {
+        "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_20261022.md",
+        "triple": 1,
+        "audited_on": "2026-10-22",
+        "verdict": "OVERSHOOT"
+       },
+       {
+        "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_repairs_20261024.md",
+        "triple": 1,
+        "audited_on": "2026-10-24",
+        "verdict": "SUPPORTED"
+       }
+      ],
+      "audit_file_note": "The scalar audit_file, triple and audited_on name the FIRST audit of this triple and are preserved unchanged; every audit of it, in order, is in audit_records."
      }
     }
    },
@@ -301,13 +317,29 @@
      "receipt": "FTR-20261021-31402619-01",
      "what_changed": "OVERSHOOT repaired: 'so any insoluble pool is discarded by design' is not in the source and is removed; the quote carries only the spin. Repair is UNAUDITED: it was written by the reader whose entry failed, and is not certified by that reader.",
      "audit": {
-      "auditors": 1,
+      "auditors": 2,
       "verdicts": [
-       "OVERSHOOT"
+       "OVERSHOOT",
+       "SUPPORTED (re-judged in the blind audit of the R1 repairs, disease-models/wwox/research/page_adjudications/locator_audit_R1_repairs_20261024.md, 2026-10-24: the rewritten wording was judged against the native artefacts, without the author's notes, the task record or the earlier audit's reasoning; 0 of 21 triples adverse)."
       ],
       "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_20261022.md",
       "triple": 2,
-      "audited_on": "2026-10-22"
+      "audited_on": "2026-10-22",
+      "audit_records": [
+       {
+        "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_20261022.md",
+        "triple": 2,
+        "audited_on": "2026-10-22",
+        "verdict": "OVERSHOOT"
+       },
+       {
+        "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_repairs_20261024.md",
+        "triple": 2,
+        "audited_on": "2026-10-24",
+        "verdict": "SUPPORTED"
+       }
+      ],
+      "audit_file_note": "The scalar audit_file, triple and audited_on name the FIRST audit of this triple and are preserved unchanged; every audit of it, in order, is in audit_records."
      }
     }
    },
@@ -329,13 +361,29 @@
      "receipt": "FTR-20261021-31402619-01",
      "what_changed": "OVERSHOOT repaired: the quote does not carry the negative; the negative stands on a search of the named surfaces and is now declared as such. The inventory 'Western blots for eIF2alpha phosphorylation and 4E-BP1 only' was wrong: Supplementary Figure 9 reports an MBP immunoblot. Repair is UNAUDITED: it was written by the reader whose entry failed, and is not certified by that reader.",
      "audit": {
-      "auditors": 1,
+      "auditors": 2,
       "verdicts": [
-       "OVERSHOOT"
+       "OVERSHOOT",
+       "SUPPORTED (re-judged in the blind audit of the R1 repairs, disease-models/wwox/research/page_adjudications/locator_audit_R1_repairs_20261024.md, 2026-10-24: the rewritten wording was judged against the native artefacts, without the author's notes, the task record or the earlier audit's reasoning; 0 of 21 triples adverse)."
       ],
       "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_20261022.md",
       "triple": 3,
-      "audited_on": "2026-10-22"
+      "audited_on": "2026-10-22",
+      "audit_records": [
+       {
+        "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_20261022.md",
+        "triple": 3,
+        "audited_on": "2026-10-22",
+        "verdict": "OVERSHOOT"
+       },
+       {
+        "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_repairs_20261024.md",
+        "triple": 3,
+        "audited_on": "2026-10-24",
+        "verdict": "SUPPORTED"
+       }
+      ],
+      "audit_file_note": "The scalar audit_file, triple and audited_on name the FIRST audit of this triple and are preserved unchanged; every audit of it, in order, is in audit_records."
      }
     }
    },
