@@ -1,8 +1,8 @@
 {
  "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
- "_note": "Operator-authorised wording repair of four records of disease-models/wwox/analysis/mechanism_intervention_map.md that were measured on 2026-10-23 (MODULE-B-20261023) to state more than their sources, plus two further flags handed over mid-task by the coordinator from scientist-c's measurement of 2026-10-24. Ordinary scientific maintenance in the analysis layer: no canonical current file touched, no receipt recorded. DIRECTIVE_VERSION 3 (2026-10-24): the coordinator extended scope to the duplicate of the N-06 count sentence at row C10 of analysis/therapeutic_translation_second_pass.md, with a sweep of the analysis layer for that sentence and its count.",
+ "_note": "Operator-authorised wording repair of four records of disease-models/wwox/analysis/mechanism_intervention_map.md that were measured on 2026-10-23 (MODULE-B-20261023) to state more than their sources, plus two further flags handed over mid-task by the coordinator from scientist-c's measurement of 2026-10-24. Ordinary scientific maintenance in the analysis layer: no canonical current file touched, no receipt recorded. DIRECTIVE_VERSION 3 (2026-10-24): the coordinator extended scope to the duplicate of the N-06 count sentence at row C10 of analysis/therapeutic_translation_second_pass.md, with a sweep of the analysis layer for that sentence and its count. DIRECTIVE_VERSION 4 (2026-10-24): the blind locator audit (research/page_adjudications/locator_audit_map_repairs_20261024.md) returned 0 of 18 non-verbatim quotations but 3 of 5 records adverse at proposition level; those three plus one non-adverse quotation-mark flag are repaired here from the artefacts.",
  "TASK_ID": "MAP-REPAIR-B-20261024",
- "DIRECTIVE_VERSION": 3,
+ "DIRECTIVE_VERSION": 4,
  "GENERATION": 1,
  "OWNER": "orchestrator",
  "ACTOR_ID": "scientist-b",
@@ -26,7 +26,8 @@
   ],
   "out_of_scope": [
    "the four scientific current files",
-   "receipt recording (the seven readings stay staged)"
+   "receipt recording (the seven readings stay staged)",
+   "a third blind pass over these three repairs, which is owed and is not this actor's"
   ]
  },
  "ACCEPTANCE_CRITERIA": [
@@ -144,7 +145,8 @@
   "growth_anchors": "PASS; unread_premises 0 before and after",
   "public_release_gate": "PASS",
   "test_section_references": "PASS (census unchanged)",
-  "second_pass_2026_10_24": "LINT WARN 16 (baseline), growth_anchors PASS with unread_premises 0, public_release_gate PASS, test_section_references OK, table column count unchanged at 9 fields per row"
+  "second_pass_2026_10_24": "LINT WARN 16 (baseline), growth_anchors PASS with unread_premises 0, public_release_gate PASS, test_section_references OK, table column count unchanged at 9 fields per row",
+  "third_pass_2026_10_24": "LINT WARN 16 (baseline), growth_anchors PASS with unread_premises 0, public_release_gate PASS, test_section_references OK, table still 9 fields per row"
  },
  "skills_considered": [
   {
@@ -180,5 +182,35 @@
    "analysis/data/pathograph_export.jsonl and research/deepdive_manifests/PMID42397075.json carry the same fetal-reference sentence as derived locator surfaces; not this claim, and generated surfaces are not edited by hand"
   ],
   "note": "The sentence and its count appear in exactly two places in the reasoning layer; both are now corrected. Absence elsewhere is a statement about these queries over these three directories."
- }
+ },
+ "AUDIT_REPAIRS_2026_10_24": [
+  {
+   "record": "N-08",
+   "verdict": "OVERSHOOT (population)",
+   "what_was_wrong": "Called the source 'the long open-label paediatric series' and its finding 'the paediatric nerve signal', and leaned the age split on that label.",
+   "source": "Abdelmalak 2013 artefact: 'Patients (1 adult) ranged in age from 3.5 to 40.2 years at the start of DCA administration and are currently aged 16.9 to 49.9 years'; authors' scope 'at least from young childhood through early adulthood'; 8 patients (4 males), PDC E1a or respiratory-chain, 9.7 to 16.5 years.",
+   "repair": "Population restated as the source gives it, headline rewritten. The age-modifier sentence re-examined: what it supports is EXPOSURE (metabolism inversely proportional to age, GSTZ1 clearance), not symptom status — because the nerve effect 'persisted longest ... in patient 8, who ... is the oldest subject to be chronically treated with the drug' and was still asymptomatic. The paediatric/adult symptom contrast is recorded as NOT explained by this paper, which postulates technical variability, disease waxing and waning, chronic exposure and advancing age together."
+  },
+  {
+   "record": "N-10",
+   "verdict": "UNDERSHOOT",
+   "what_was_wrong": "Claimed the guideline's strongest word on the functional route is 'most likely not eligible', not 'cannot'. That was produced by stopping the quotation one sentence early.",
+   "source": "Data S1, same paragraph, two sentences later: 'Variants that fully abolish canonical splicing are not amenable to a splice correction ASO and are classified as \"not eligible\" for this approach.' Eligibility table: 'Not eligible — Canonical splice site and branchpoints are destroyed OR ... OR Variant within 5 bp of the canonical splice site'.",
+   "repair": "Fuller quotation carried, the flat form and the table criterion restored, headline rewritten so the guideline's force is not understated. The narrowing is relocated to where it belongs: the flat verdict applies to variants that 'fully abolish canonical splicing', and whether the reference acceptor allele is in that class has never been measured; the 5-bp criterion needs no measurement, so the class verdict stands on position while the functional route stays unevidenced."
+  },
+  {
+   "record": "N-12",
+   "verdict": "OVERSHOOT (population, by ellipsis)",
+   "what_was_wrong": "The ellipsis removed exactly 'in primary GD fibroblasts' and the prose then widened the restricted sentence to a second population.",
+   "source": "Fog 2018: 'Arimoclomol dose-dependently increased the amount of GCase in primary GD fibroblasts across all tested genotypes, including neuronopathic and non-neuronopathic associated mutations'; separately 'While equivalent increases where seen in the neuronal-like MASC cell system during shorter timelines (i.e. up to 9 days) it was not possible to maintain the neuronal like MASCs in their differentiated state for a longer time' (both verified verbatim today).",
+   "repair": "Full restricted sentence quoted; the neuronal system cited as its own sentence with its own system description and n = 2-4 per cell line."
+  },
+  {
+   "record": "N-06 and C10",
+   "verdict": "not adverse — quotation-mark flag",
+   "what_was_wrong": "'entirely normal' was quoted as if it were the paper's words; it is DL-BIO-008's compression.",
+   "source": "PAPER 043 artefact (digest 2adc28364cef73585dbeee8679781fd93fb3441bce95a4c0bcca7acc154a3a55): 'Normal results were found in metabolic screening including liver and renal function tests, complete blood count, blood gas analyses, ammonia, serum lactate, plasma urea, electrolytes, urine and serum amino and organic acids, and very long chain fatty acids.'",
+   "repair": "Paper's sentence substituted in both records, the compression named as the ledger's, and the three sources given their registry ids (PAPER 043 screen, PAPER 044 MRS and no screen, PAPER 024 mouse) following the audit's adjudication of the attribution."
+  }
+ ]
 }

@@ -691,10 +691,14 @@ published homozygote; or discrimination of the missense allele's folding fate.
 **Failure mode:** *corrects/reports a biomarker, not the mechanism* — inverted: here the biomarker
 does not even report. **Counted from the record rather than asserted:** `DL-BIO-008` names **three**
 sources, of which **two are human and exactly one is a complete human metabolic screen** — a WWOX
-null/null patient whose screen (ammonia, lactate, amino acids, organic acids, VLCFA) was *"entirely
-normal"*. The second human source is the **single MRS case**, which reports cerebral lactate
+null/null patient of whom the paper itself writes *"Normal results were found in metabolic screening
+including liver and renal function tests, complete blood count, blood gas analyses, ammonia, serum
+lactate, plasma urea, electrolytes, urine and serum amino and organic acids, and very long chain
+fatty acids"* (`PAPER 043`; the phrase *"entirely normal"* is the ledger's compression, not the
+paper's words, and carried quotation marks in this record until 2026-10-24). The second human source
+is the **single MRS case** (`PAPER 044`), which reports cerebral lactate
 *"extremely low"* — the **opposite** of what the Warburg model predicts — in a patient with a
-confounding HSPG2 variant. The third source is a **mouse**: `Wwox`-KO serum lactate significantly
+confounding HSPG2 variant. The third source is a **mouse** (`PAPER 024`): `Wwox`-KO serum lactate significantly
 raised, which is the direction the model predicts and the reason the record exists as an unresolved
 contradiction. Serum lactate is Tier 3, distal, and must not enter the Tier 1/2 biomarker file.
 ⚠️ **The conclusion is unchanged and its support is smaller than this record claimed.** One normal
@@ -705,9 +709,12 @@ metabolism remains **unmeasured** (`DL-BIO-008`, operative consequence 3).
 earlier wording — "four independent human sources show normal metabolism" — was an **unsourced
 count**: the record names one such screen and the other three sources are identified nowhere
 (measured independently by `scientist-c`,
-`research/module_linkage_and_replicate_scientist-c_20261024.md` §1). ⚠️ The same sentence is
-reproduced at row C10 of `analysis/therapeutic_translation_second_pass.md` and is **not** corrected
-there by this edit.*
+`research/module_linkage_and_replicate_scientist-c_20261024.md` §1); the duplicate at row C10 of
+`analysis/therapeutic_translation_second_pass.md` was corrected the same day. The attribution of the
+three sources was adjudicated by blind audit on 2026-10-24
+(`research/page_adjudications/locator_audit_map_repairs_20261024.md`): the complete human screen is
+`PAPER 043`, and `PAPER 044` holds the MRS and **no metabolic screen at all**. Paper-faithful
+wording substituted for the ledger's compression on the same date and from `PAPER 043`'s artefact.*
 **`REVIVAL_TRIGGER`:** Seahorse/fluxomics showing a real bioenergetic shift in donor-derived cells.
 
 ### N-07 — Digoxin (HIF1α inhibition) → **right target validation, wrong clinical object**
@@ -721,30 +728,47 @@ likely a typographic error for µg/kg and remains unverified against the origina
 **Use correctly:** as target validation. The ketogenic diet **dominates** it — same axis,
 incomparably better safety.
 
-### N-08 — Dichloroacetate (PDK inhibition) → **a peripheral-nerve signal that is asymptomatic in the paediatric series and symptomatic in an older cohort; and never measured in a WWOX system**
+### N-08 — Dichloroacetate (PDK inhibition) → **a peripheral-nerve signal that was asymptomatic throughout the one long-term cohort, symptomatic in a separate trial; and never measured in a WWOX system**
 **Source ids:** PAPER 557, PAPER 562 (both 🔴 **NOT WWOX EVIDENCE**, class-level), DL-MECH-020 (the
 WWOX-side Warburg/HIF1α rationale — the only WWOX anchor this row has).
 **Failure mode:** *two-hop inference* + *a safety margin that has never been measured in this
-disease*. **What the source says.** In the long open-label paediatric series in congenital lactic
-acidosis the nerve finding is **electrophysiological, not clinical**: *"Nerve conduction either did
+disease*. **The population first, because this record got it wrong twice.** The long open-label
+safety study is **not a paediatric series**: 8 patients (4 males) with proven deficiency of the PDC
+E1α subunit or of respiratory-chain complexes, followed for 9.7 to 16.5 years, and *"Patients (**1
+adult**) ranged in age from 3.5 to 40.2 years at the start of DCA administration and are currently
+aged 16.9 to 49.9 years"*. The authors' own scope is *"generally very well tolerated in patients
+with mitochondrial diseases, **at least from young childhood through early adulthood**"*.
+**What the source says.** In that cohort the nerve finding is **electrophysiological, not
+clinical**: *"Nerve conduction either did
 not change or decreased modestly and led to reduction or temporary discontinuation of DCA in 3
 patients, although symptomatic worsening of peripheral neuropathy did not occur"*; in the body,
 those three had the drug paused or halved *"because of periodic **asymptomatic** worsening of lower
 extremity nerve conduction velocity"*, and the change was *"not associated in any patient with
 changes in blood lactate or with any abnormalities in blood chemistries"*. The **symptomatic** cases
-are a different population: the same authors contrast their result with *"a RCT conducted in older
+come from a different study: the same authors contrast their result with *"a RCT conducted in older
 adolescents and adults with mitochondrial encephalomyopathy, lactic acidosis and stroke-like
 episodes (MELAS) that ended prematurely because of symptomatic and electrical evidence of
-exacerbation or new onset of peripheral neuropathy"*, and attribute the age split to
-pharmacokinetics (*"DCA metabolism in humans is inversely proportional to age"*) and to GSTZ1
-haplotype. They also state the design's limit themselves: it *"cannot distinguish unequivocally
-between the relative impact of DCA exposure vs. underlying disease on the frequency or severity of
-peripheral neuropathy"*, because neuropathy is common in mitochondrial disease before any DCA.
+exacerbation or new onset of peripheral neuropathy"*. They also state the design's limit
+themselves: it *"cannot distinguish unequivocally between the relative impact of DCA exposure vs.
+underlying disease on the frequency or severity of peripheral neuropathy"*, because neuropathy is
+common in mitochondrial disease before any DCA.
+⚠️ **And the age explanation cannot carry the symptom split — this record previously implied it
+could.** The authors do state that *"DCA metabolism in humans is inversely proportional to age"* and
+that GSTZ1 haplotype influences clearance, so **exposure** is age- and genotype-dependent; that
+survives. But **symptom status does not follow age inside this cohort**: the nerve effect
+*"persisted longest (up to 39 months before restarting DCA) in patient 8, who, to our knowledge, is
+the oldest subject to be chronically treated with the drug"* — and it was still **asymptomatic**,
+like the other two. So the paediatric/adult contrast between the two studies is **not explained by
+this paper**, which instead postulates a combination of *"technical variability in electrical
+measurements, the waxing and waning of the underlying disease, chronic DCA exposure and advancing
+age"*. What the pharmacokinetic sentence supports is a statement about **exposure**, not about who
+becomes symptomatic.
 ⇒ **Still parked, and for a reason that survives the narrowing.** The honest statement is *a drug
-whose paediatric nerve signal is asymptomatic and reversible but requires nerve-conduction
-monitoring, with exposure that rises as age rises and varies with GSTZ1 genotype, and with no proof
-of mechanism in this disease* — not *dose-dependent neurotoxicity in a child*. Parked pending
-`legend-safety-triage`, and downstream of the falsification of R-05 anyway.
+whose nerve signal in the one long-term cohort was asymptomatic and reversible in 3 of 8 across an
+age range from early childhood to adulthood, but required nerve-conduction monitoring, with exposure
+rising as age rises and varying with GSTZ1 genotype, and with no proof of mechanism in this disease*
+— not *dose-dependent neurotoxicity in a child*. Parked pending `legend-safety-triage`, and
+downstream of the falsification of R-05 anyway.
 ⚠️ **Not a denial, and two things are explicitly not measured.** (1) **No paper measures
 dichloroacetate in any WWOX system**, of any species — the row's intervention arm is non-WWOX
 throughout, so the *benefit* side of the ratio is unmeasured too, and nothing here says the compound
@@ -783,7 +807,7 @@ commentary had over-interpreted its own primary source.
 does not inherit this rationale. The refutation rests on the abstract (full text paywalled); if the
 full text says otherwise it re-opens.
 
-### N-10 — Splice-switching ASO for a canonical acceptor allele → **"not eligible" by the field's own criteria — which is weaker than "cannot"**
+### N-10 — Splice-switching ASO for a canonical acceptor allele → **"not eligible" by the field's own criteria, which say it flatly; what is missing is the measurement that would place this allele in that class**
 **Source ids:** DL-MOL-011.
 **Failure mode:** *derived from a mechanism that does not do what the design needs.* SSOs **mask**
 elements; they do not **create** splice sites. Masking the +8 cryptic site would shift splicing
@@ -802,13 +826,29 @@ class out of scope by **two separate routes, only one of which is experiment-fre
 > targeting with an ASO"*;
 > *"if canonical splicing is destroyed … the variant is **most likely not eligible** for a splice
 > correction ASO treatment. Canonical splicing is considered destroyed if no wildtype
-> transcript/splicing at the canonical splice sites can be identified in the functional analysis."*
-⚠️ **Scope, stated so this is not read as more than it is — and this is where the record said more
-than its source.** (1) The guideline is **expert consensus, not an experiment**; it says of itself
-that there is *"no gold-standard evidence for many considerations"*. (2) Its strongest word on the
-functional route is *"most likely not eligible"*, **not "cannot"** — and *"destroyed"* is a
-**transcript measurement that has never been made on the reference acceptor allele**. Across the
-whole published WWOX literature exactly **three** *cis* splice-allele transcript measurements
+> transcript/splicing at the canonical splice sites can be identified in the functional analysis.
+> If some wildtype transcript is still produced or protein function is detected, canonical splice
+> sites are considered as weakened. **Variants that fully abolish canonical splicing are not
+> amenable to a splice correction ASO and are classified as "not eligible" for this approach.**"*
+and the eligibility table makes both criteria hard, not hedged: *"Not eligible — Canonical splice
+site and branchpoints are destroyed OR … OR **Variant within 5 bp of the canonical splice site**"*.
+🟠 **Correction of this record's own first repair, 2026-10-24 (blind locator audit,
+`research/page_adjudications/locator_audit_map_repairs_20261024.md`, verdict UNDERSHOOT):** the
+earlier rewrite claimed the guideline's *"strongest word on the functional route is 'most likely
+not eligible', not 'cannot'"*. That was produced by **stopping the quotation one sentence early**.
+*"Most likely not eligible"* is the lead-in; two sentences later the same paragraph states the flat
+form — *not amenable*, classified *not eligible* — and the table reproduces it as a criterion. The
+guideline is therefore **as strong as this record originally was about the class**; the overstatement
+was never about the guideline's force.
+⚠️ **Scope, stated so this is not read as more than it is — and this is the part that does need
+narrowing.** (1) The guideline is **expert consensus, not an experiment**; it says of itself that
+there is *"no gold-standard evidence for many considerations"*. (2) The flat verdict applies to
+variants that *"fully abolish canonical splicing"*, and **whether the reference acceptor allele is
+in that class has never been measured**: *"destroyed"* is defined as a functional transcript result,
+and that result does not exist for this allele. The positional 5-bp criterion, by contrast, is met
+on sequence alone and needs no measurement — so the class verdict stands on position while the
+functional route stays unevidenced. Across the whole
+published WWOX literature exactly **three** *cis* splice-allele transcript measurements
 exist, **none** of them on this allele (`PREMISE: NOBODY_LOOKED`;
 [`splice_allele_rna_evidence_20260922.md`](splice_allele_rna_evidence_20260922.md), which also
 records that the "+8 cryptic ⇒ frameshift" arithmetic rests on an unstated coordinate convention
@@ -816,8 +856,8 @@ whose two readings give **opposite** frame outcomes). (3) The guideline itself w
 a published absence of wild-type transcript at face value: *"some manuscripts claim there is no
 wildtype splicing left whereas faint wildtype bands can be identified in a gel, which might be
 sufficient to consider this a suitable case."*
-⇒ Status `stress-tested`, **not** `refuted`, and the headline is now the guideline's verdict rather
-than a mechanistic impossibility. **Reopening:** a transcript measurement on the reference acceptor
+⇒ Status `stress-tested`, **not** `refuted`: the guideline's verdict on the class is flat, and what
+is unmeasured is this allele's membership of it by the functional criterion. **Reopening:** a transcript measurement on the reference acceptor
 allele that shows **residual wild-type splicing** would move it from the guideline's *destroyed* to
 its *weakened* class — *unlikely eligible*, not *not eligible* — and make an SSO a live question
 again. That measurement is the experiment `TX-001` was designed around, and it remains undone.
@@ -856,10 +896,19 @@ three layers behind it are of three different kinds, and separating them is the 
   applied to any WWOX allele, in any system.** Arimoclomol appears in these records only in a
   full-text-queue entry and in `D-03`, which itself says *"could accelerate"* — a conditional that
   this record had hardened into a statement.
-- **One non-WWOX comparator points the other way, and it was never in the record.** In Gaucher
-  patient fibroblasts and stem-cell-derived neuron-like cells the co-inducer *"dose-dependently
-  increased the amount of GCase … across all tested genotypes"*, including the EndoH-resistant pool
-  — i.e. it **raised** a misfolded lysosomal client. Limits: an **ER-synthesised, secretory-route**
+- **One non-WWOX comparator points the other way, and it was never in the record.** The measured
+  sentence names its population and this record must not widen it: *"Arimoclomol dose-dependently
+  increased the amount of GCase **in primary GD fibroblasts** across all tested genotypes, including
+  neuronopathic and non-neuronopathic associated mutations"*, including the EndoH-resistant pool —
+  i.e. it **raised** a misfolded lysosomal client. The neuronal system is a **separate** result in
+  the same paper, and is cited as its own sentence: *"While equivalent increases where seen in the
+  neuronal-like MASC cell system during shorter timelines (i.e. up to 9 days) it was not possible to
+  maintain the neuronal like MASCs in their differentiated state for a longer time"* (differentiated
+  skin-derived multipotent adult stem cells, n = 2–4 per cell line). 🟠 **Quotation scope repaired
+  2026-10-24:** the previous wording elided exactly the words *"in primary GD fibroblasts"* and then
+  widened the sentence to both populations (blind locator audit,
+  `research/page_adjudications/locator_audit_map_repairs_20261024.md`, verdict OVERSHOOT by
+  ellipsis). Limits: an **ER-synthesised, secretory-route**
   client, which is exactly the compartment N-11 rules out for WWOX; **no cytosolic client tested**;
   the authors could not resolve which HSP70 family member acts and could not demonstrate reduced
   substrate storage; the compound belongs to the funder. **NOT WWOX EVIDENCE.**
