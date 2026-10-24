@@ -4,6 +4,32 @@
 > read receipt, registry full-text declaration or queue entry (UNREAD_PREMISE). It is a record of what that run
 > argued, not a live conclusion: nothing here may be leaned on until the cited papers are opened.
 
+> **R1 verdict annotation (2026-10-24, `BATCH_20261019_017`, from `CC-20261021-SCIENTIST-A-R1-PROTEOSTASIS-01` proposal 2).**
+> The verdicts below were reached in `disease-models/wwox/research/repurposing_10h_scientist-a_20261021.md` §4
+> against seventeen **NOT WWOX EVIDENCE** primaries, and are landed here only now that the producer's
+> 2026-10-22 repairs have been audited blind by a second reader
+> (`disease-models/wwox/research/page_adjudications/locator_audit_R1_repairs_20261024.md`: exhaustive over
+> all 21 `contradicts_locator` entries of PMIDs 31402619, 32023956, 38378758, 38731820, 42157447 and
+> 42875792; 21 judged, 21 SUPPORTED, **0 adverse**).
+> **This annotation does not convert this historic record into a current conclusion.** The `UNREAD_PREMISE`
+> note above still holds: nothing in this file may be leaned on until the papers it cites are opened. Every
+> verdict is class-level and about the experimental design, never about WWOX biology, and carries **no dose,
+> no administration and no statement of suitability**. Nothing here is medical advice.
+>
+> | Proposal of this dossier | Verdict (2026-10-21, §4) | What carries it, and how far the audit reaches |
+> |---|---|---|
+> | `PA-1` — run a three-fraction design (soluble `S`, pellet `P`, spin-free total `T`), because a mild-lysis soluble read can call a present protein "absent" | **KEEP** — changes nothing in the branch; supported as feasible and informative | Rests on PMIDs 33914734, 39216838 and 30266908, which are **outside the scope of both R1 audits**: no audited triple supports or contradicts it. Its standing is the reader's, unaudited. |
+> | `PA-2` — the pellet may hold most of the "absent" protein | **INCONCLUSIVE** | Same three primaries, same scope limit. The measured minority fate is the pellet; "mostly clearance, minority pellet" is the typical pattern read, not "mostly pellet". Only a `Q230P` `S`/`P`/`T` result would settle it. |
+> | `PA-3` — an orthogonal, non-antibody read of abundance (MS or tagged fusion) | **KEEP, with a limit the dossier lacks**: the fusion read is total, not soluble, and an aggregating fusion may still fluoresce (INFERENZA) | Partly audited: 38378758 entry 13 — 28 of 63 low-abundance variants at exposed, predicted-stable positions, the degron reading the authors' own — was judged **SUPPORTED**, with the auditor recording that no sentence in that article says a folding chaperone would fail on them. 29785012, 34649609 and 38740822 are outside the audit scope. |
+> | `Premise 0` — "quantity of protein is not function": a rescued quantity may leave function behind | **KEEP, strengthened** | Audited support: 42157447 entry 8 (**SUPPORTED**) — butyrate raises total immature GAT-1 with a small, **variant-dependent** function gain, which the authors read as non-specific accumulation; it is a *partial* dissociation, not a clean quantity-up / function-flat case. 32023956 entry 4 (**SUPPORTED**) carries the two-assay agreement. 34649609, 33914734 and 40485335 are outside the audit scope. |
+>
+> **Where this annotation rests on a printed value, the figure is what it rests on.** For 32023956 the
+> audit's corroboration is adopted: Figure 1B prints Pearson r **0.8771** (95 percent interval 0.8381 to
+> 0.9071) with **R squared 0.7692**, while the body text gives r = 0.9448 for the same panel. Panels A and C
+> are internally consistent (0.8729 / 0.7620 and 0.7992 / 0.6388) and 0.9448 squared is 0.8927, not 0.7692,
+> whereas the square root of 0.7692 is 0.8771 — so the **text value is the outlier** and the panel value is
+> the one this annotation uses for the agreement of the two α-Gal A assays.
+
 # `Q230P` — minimal fractionation architecture and orthogonal detection
 
 **Date:** 2026-09-22 · **Actor:** Scientist B · **Class:** experimental architecture + reagent adjudication + one first-hand sequence derivation

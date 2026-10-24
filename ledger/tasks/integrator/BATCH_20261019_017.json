@@ -1,0 +1,56 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "_note": "Assigned by the Orchestrator in the session of 2026-10-24. Verification of a blind audit, then the research-layer propagation of the one proposal that audit was owed for. No claim added or modified; not medical advice.",
+ "TASK_ID": "BATCH_20261019_017",
+ "ACTOR_ID": "integrator",
+ "OWNER": "orchestrator",
+ "CURRENT_STATE": "COMPLETE",
+ "assigned_on": "2026-10-24",
+ "OBJECTIVE": "Verify page_adjudications/locator_audit_R1_repairs_20261024.md first-hand; then land the HELD part of CC-20261021-SCIENTIST-A-R1-PROTEOSTASIS-01 — proposal 2, the verdict annotations of the three historic Q230P dossiers — carrying the audit's two printed-value corroborations where an annotation would have rested on either value; leave held anything the audit does not support; carry WM_v7.27 forward.",
+ "TASK_CLAIM": {
+  "actor": "integrator",
+  "branch": "task/integrator-batch-017",
+  "worktree": ".claude/worktrees/int-017",
+  "snapshot": "backup/20261024_batch017 (not committed)",
+  "base": "8050597d962f5881d4c16c0d7ff1d6f8fcc63d81"
+ },
+ "AUDIT_VERIFICATION": {
+  "file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_repairs_20261024.md",
+  "scope_rederived": "3 (31402619) + 4 (32023956) + 6 (38378758) + 3 (38731820) + 4 (42157447) + 1 (42875792) = 21 contradicts_locator entries, all 21 citing locator_audit_R1_20261022.md; exhaustive as declared (343 contradicts_locator entries exist across all 101 manifests, none of the other 322 in these six files)",
+  "numbering": "the audit's entry ids reproduce the zero-based numbering of locator_audit.py --pmid <PMID> --triples 0 for all six manifests",
+  "quote_occurrence": "locator_audit.py --pmid over the six: one NOT FOUND, 31402619 entry 2, as the audit's note says; the quote is verbatim in files/supplement/PMID31402619/ACN3-6-1407-s009.docx, which the checker cannot read",
+  "corroboration_32023956": "re-read first-hand from files/figures/PMID32023956/ijms-21-00956-g001.jpg (731x1511): panel B box prints r 0.8771, CI 0.8381-0.9071, R squared 0.7692; panels A and C 0.8729/0.7620 and 0.7992/0.6388; body gives r = 0.9448 for panel B; 0.9448^2 = 0.8927 and sqrt(0.7692) = 0.8771, so the text value is the outlier",
+  "corroboration_38731820": "re-read first-hand from files/figures/PMID38731820/ijms-25-04601-g006.jpg (771x599): Figure 6C draws six animals at baseline (about 37, 20.7, 13, 12, 10, 0.8), mean 15.583 and SEM 5.014 against the body's 15.58 +/- 4.987, so the legend's 'N = 3 female' is the outlier",
+  "nuance_recorded": "the audit's phrase 'no form of soluble/insoluble or pellet retention appears anywhere in it' (31402619 supplementary methods) is loose: 'pellet' occurs twice there, both times in an RNA precipitation, never as protein solubility fractionation; the substance of the note holds and the triple is not adverse",
+  "verdict": "VERIFIED — 21 judged, 21 SUPPORTED, 0 adverse; the candidate's declared debt is paid"
+ },
+ "RESULT": {
+  "wm_version": "WM_v7.27 preserved (carried forward as batches 009 to 016)",
+  "candidates_propagated": 1,
+  "candidate": "CC-20261021-SCIENTIST-A-R1-PROTEOSTASIS-01 — proposal 2 landed, candidate closed; header hold marked RELEASED (not deleted), Owed marked PAID, BATCH DISPOSITION rewritten to PROPAGATED with the earlier BATCH_20261019_012 disposition preserved verbatim beneath it",
+  "annotations": "one blockquote above the title of each of the three historic Q230P dossiers in disease-models/wwox/research/vps_recovery_20260925/residue_q230p_20260922/: fractionation and orthogonal detection (PA-1 KEEP, PA-2 INCONCLUSIVE, PA-3 KEEP with limit, Premise 0 KEEP strengthened, 32023956 panel values); nascent synthesis discriminator (PB-1 KEEP, PB-2 KEEP, PB-3 INCONCLUSIVE, PB-4 INCONCLUSIVE for a protein-loss lesion with the NARROW verdict and the withdrawn polysome wording named as withdrawn, 38731820 six animals); systemic rescue (PC INCONCLUSIVE, not addressable by R1). No dossier sentence edited; UNREAD_PREMISE headers kept; class-level NOT WWOX EVIDENCE, no dose, administration or suitability",
+  "held_back": "none of proposal 2 — the audit returned 0 of 21 adverse, so no repaired entry withdraws a verdict; the rows resting on primaries outside the audit's scope (PA-1, PA-2, and PB-2's quotation at 38378758 entry 5, which carries no contradicts_locator) are landed with that scope stated in the row rather than suppressed or borrowed",
+  "registries": "untouched — none of the four scientific current files, no manifest entry, no ledger row, no growth-anchor event",
+  "ledger_rewrites_in_place": "none"
+ },
+ "DEFAULTS_TAKEN": [
+  {"condition": "WM version rule: no disease-model change", "default": "WM_v7.27 preserved, no bump; current_state IN_BATCH_COMMIT not set (path-scoped landing, as batches 012 to 016)"},
+  {"condition": "The mandate's enumeration of proposal 2 names PA-1/2/3, PB-1 to PB-4 and PC but not Premise 0", "default": "Premise 0 annotated as well — it is part of proposal 2 in the candidate's own words and two audited entries (42157447 entry 8, 32023956 entry 4) carry it; placed in the fractionation dossier, whose section 4 argues that function comes after molecular state"},
+  {"condition": "PA-1 ... PC are Scientist A's labels, not section ids inside the dossiers, so no unambiguous in-body anchor exists per proposal", "default": "one annotation block per dossier, placed between the recovered-record header and the dossier's own title; no dossier sentence edited"},
+  {"condition": "Verdicts whose grounds lie outside both R1 audits (33914734, 39216838, 30266908 for PA-1 and PA-2; 38378758 entry 5 for PB-2)", "default": "landed with the scope limit written into the row, so no verdict borrows the audit's standing"},
+  {"condition": "No claim, paper or literature record was created", "default": "growth_anchors.jsonl not appended to; growth_anchors.py check run as a gate instead"},
+  {"condition": "Producers have been stamping audit verdicts (audit_file, triple, audited_on) onto judged manifest entries", "default": "no manifest entry stamped by this batch — the readers' act, not asked for by the mandate, and a parallel integrator batch was in the same window"},
+  {"condition": "Phase 8.1 names legend_activity_log.md, which does not ship in this edition", "default": "snapshot path and pre-batch SHA recorded in the batch report and in batch_20261019_017_scope"},
+  {"condition": "Proposal 3 of the candidate (a ledger lead and a supplementary half-life check)", "default": "not landed and nothing owed for it: its own text routes the lead through discovery_lead.py stage and says it is not written in the candidate; no lead invented"}
+ ],
+ "STOP_LOG": [],
+ "HELD_UNCHANGED": ["CC-20261021-SCIENTIST-C-R3-A51-ATTRIBUTION-01 (another actor's deferred candidate, untouched and not named in the manifest or its history)"],
+ "VERIFICATION": {
+  "legend_lint": "WARN, 0 BLOCK (pre and post)",
+  "growth_anchors_check": "PASS",
+  "public_release_gate": "PASS",
+  "fulltext_receipts_verify": "OK",
+  "candidate_tree_freshness": "derived surfaces fresh",
+  "locator_count_crosscheck_sweep": "run last, after merging main"
+ }
+}

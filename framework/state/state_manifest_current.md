@@ -107,12 +107,12 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20261019_015
-last_batch_commit_date: 2026-10-23
+last_batch_commit_id: BATCH_20261019_017
+last_batch_commit_date: 2026-10-24
 last_batch_commit_type: MANUAL
-commit_candidates_propagated: 0
+commit_candidates_propagated: 1
 target_wm_version: WM_v7.27
-trigger: MANUAL (ACTOR_ID integrator, assigned by the Orchestrator). Registry identity and depth, no disease-model change and no commit candidate: PAPER 557-566 and LIT-0829-0837 as identity records for ten receipts that had none (nine T4 NOT WWOX EVIDENCE, WWOX count 0 on the text artefacts; PAPER 566 promoted from CORPUS P379 as a WWOX-direct cancer-system paper); the depth, receipt, coverage and locator count of eight existing records brought to the receipts of 2026-10-23; sixteen identifier edits applied to the mechanism map (a non-current file), two held for a Selector pass; two cells of the Woree rescue reference scaffold re-sourced from the repaired manifest of PMID 42422765. WM_v7.27 preserved.
+trigger: MANUAL (ACTOR_ID integrator, assigned by the Orchestrator). Research-layer only, no disease-model change: the blind audit of the 2026-10-22 R1 repairs (locator_audit_R1_repairs_20261024.md, 21 of 21 judged, 0 adverse) was verified by the integrator, and the proposal it had been holding back landed as verdict annotations on the three historic Q230P dossiers (PA-1, PA-3, PB-1, PB-2 and Premise 0 KEEP; PA-2, PB-3, PC INCONCLUSIVE; PB-4 INCONCLUSIVE for a protein-loss lesion, its NARROW verdict withdrawn). No claim, block, registry record or ledger row was written; the dossiers keep their UNREAD_PREMISE headers and everything landed is class-level NOT WWOX EVIDENCE with no dose, administration or suitability. WM_v7.27 preserved.
 ```
 
 Every batch's scope — the candidates it propagated, newest first back to `BATCH_20260810_001`,
@@ -126,8 +126,8 @@ with the keys written beside each and the notes on `BATCH_20260806_002` — is i
 
 ```yaml
 last_lint_type: LINT_AUTOMATIC
-last_lint_id: LINT_20261023_BATCH_20261019_015
-last_lint_date: 2026-10-23
+last_lint_id: LINT_20261024_BATCH_20261019_017
+last_lint_date: 2026-10-24
 last_lint_result: WARN
 ```
 
