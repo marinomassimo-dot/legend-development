@@ -107,12 +107,12 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20261019_016
+last_batch_commit_id: BATCH_20261019_017
 last_batch_commit_date: 2026-10-24
 last_batch_commit_type: MANUAL
 commit_candidates_propagated: 1
 target_wm_version: WM_v7.27
-trigger: MANUAL (ACTOR_ID integrator, assigned by the Orchestrator). One job, MINOR additive, no disease-model change: the A51 attribution candidate held since 2026-10-22 under the condition that the repaired manifests be audited by someone other than the producer was propagated once the integrator verified that condition discharged against both blind audit files (locator_audit_R3_repairs_R3b_20261022.md for the 38147624 and 40156289 repairs; locator_audit_block1_sources_20261024.md for 42154236 and 42401046, exhaustive, 43 of 43 SUPPORTED, 0 adverse). One dated additive block landed inside discovery_ledger_current#DL-THER-089 - attribution and BLOCK-1 notes only - carrying the caveats with the claims (n = 3 under a one-sided Mann-Whitney with a P = 0.05 floor for the Cdk7 morphology; no EEG and no seizure-burden endpoint in the GSK3 arm). No claim created, reversed or narrowed, no baseline touched, no dose or suitability statement written, every source NOT WWOX EVIDENCE, the Wnt-versus-MYC-versus-CDK attribution still unresolved. WM_v7.27 preserved.
+trigger: MANUAL (ACTOR_ID integrator, assigned by the Orchestrator). Research-layer only, no disease-model change: the blind audit of the 2026-10-22 R1 repairs (locator_audit_R1_repairs_20261024.md, 21 of 21 judged, 0 adverse) was verified by the integrator, and the proposal it had been holding back landed as verdict annotations on the three historic Q230P dossiers (PA-1, PA-3, PB-1, PB-2 and Premise 0 KEEP; PA-2, PB-3, PC INCONCLUSIVE; PB-4 INCONCLUSIVE for a protein-loss lesion, its NARROW verdict withdrawn). No claim, block, registry record or ledger row was written; the dossiers keep their UNREAD_PREMISE headers and everything landed is class-level NOT WWOX EVIDENCE with no dose, administration or suitability. WM_v7.27 preserved.
 ```
 
 Every batch's scope — the candidates it propagated, newest first back to `BATCH_20260810_001`,
@@ -126,7 +126,7 @@ with the keys written beside each and the notes on `BATCH_20260806_002` — is i
 
 ```yaml
 last_lint_type: LINT_AUTOMATIC
-last_lint_id: LINT_20261024_BATCH_20261019_016
+last_lint_id: LINT_20261024_BATCH_20261019_017
 last_lint_date: 2026-10-24
 last_lint_result: WARN
 ```

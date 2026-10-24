@@ -4,6 +4,26 @@
 > read receipt, registry full-text declaration or queue entry (UNREAD_PREMISE). It is a record of what that run
 > argued, not a live conclusion: nothing here may be leaned on until the cited papers are opened.
 
+> **R1 verdict annotation (2026-10-24, `BATCH_20261019_017`, from `CC-20261021-SCIENTIST-A-R1-PROTEOSTASIS-01` proposal 2).**
+> The verdict below was reached in `disease-models/wwox/research/repurposing_10h_scientist-a_20261021.md` §4
+> against seventeen **NOT WWOX EVIDENCE** primaries, and is landed here only now that the producer's
+> 2026-10-22 repairs have been audited blind by a second reader
+> (`disease-models/wwox/research/page_adjudications/locator_audit_R1_repairs_20261024.md`: exhaustive over
+> all 21 `contradicts_locator` entries of PMIDs 31402619, 32023956, 38378758, 38731820, 42157447 and
+> 42875792; 21 judged, 21 SUPPORTED, **0 adverse**).
+> **This annotation does not convert this historic record into a current conclusion.** The `UNREAD_PREMISE`
+> note above still holds. The verdict is class-level and about the experimental design, never about WWOX
+> biology, and carries **no dose, no administration and no statement of suitability**. Nothing here is
+> medical advice.
+>
+> | Proposal of this dossier | Verdict (2026-10-21, §4) | What carries it, and how far the audit reaches |
+> |---|---|---|
+> | `PC` — a proteostasis modulator rescues independently of tissue site (systemic rescue) | **INCONCLUSIVE, not addressable by the R1 lot** | No R1 primary tests a peripheral against a neuronal site of action; exposure was measured only for one eIF2B-modulator class, in blood and brain (31402619). The three repaired entries of that manifest were all judged **SUPPORTED**, and none of them bears on site, so the audit leaves the verdict exactly where the reader left it: a site-resolved design would reopen it. |
+>
+> The audit's two printed-value corroborations (32023956 Figure 1B r 0.8771 with R squared 0.7692 against a
+> body text of 0.9448; 38731820 Figure 6C six animals against a legend "N = 3 female") are recorded in the
+> two sibling dossiers. **No statement in this annotation rests on either value**, and none is used here.
+
 # The systemic rescue paradox — how a neuron-restricted vector rescues a death attributed to the periphery, and the smallest panel that could tell the mechanisms apart
 
 **Node:** `SYSTEMIC_RESCUE_MECHANISM` · **Actor:** Scientist C · **Date:** 2026-09-22

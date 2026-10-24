@@ -4,6 +4,31 @@
 > read receipt, registry full-text declaration or queue entry (UNREAD_PREMISE). It is a record of what that run
 > argued, not a live conclusion: nothing here may be leaned on until the cited papers are opened.
 
+> **R1 verdict annotation (2026-10-24, `BATCH_20261019_017`, from `CC-20261021-SCIENTIST-A-R1-PROTEOSTASIS-01` proposal 2).**
+> The verdicts below were reached in `disease-models/wwox/research/repurposing_10h_scientist-a_20261021.md` §4
+> against seventeen **NOT WWOX EVIDENCE** primaries, and are landed here only now that the producer's
+> 2026-10-22 repairs have been audited blind by a second reader
+> (`disease-models/wwox/research/page_adjudications/locator_audit_R1_repairs_20261024.md`: exhaustive over
+> all 21 `contradicts_locator` entries of PMIDs 31402619, 32023956, 38378758, 38731820, 42157447 and
+> 42875792; 21 judged, 21 SUPPORTED, **0 adverse**).
+> **This annotation does not convert this historic record into a current conclusion.** The `UNREAD_PREMISE`
+> note above still holds: nothing in this file may be leaned on until the papers it cites are opened. Every
+> verdict is class-level and about the experimental design, never about WWOX biology, and carries **no dose,
+> no administration and no statement of suitability**. Nothing here is medical advice.
+>
+> | Proposal of this dossier | Verdict (2026-10-21, §4) | What carries it, and how far the audit reaches |
+> |---|---|---|
+> | `PB-1` — run the inhibitor arm first and the chase second, because a chase from an undetectable baseline has almost no discriminating power | **KEEP** | Audited support: 38378758 entry 4 (**SUPPORTED**) — proteasome inhibition shifts the low-abundance population rightward, with the chloroquine traces coinciding; 38378758 entries 7 and 15 (**SUPPORTED**) — the inhibitor, the PSMD14 knock-down and the low-temperature arm were the probes that moved it; 42875792 entry 2 (**SUPPORTED**) — a recessive missense protein attributed to degradation and tested with proteasome inhibitors from a near-undetectable baseline. 30266908 and 33914734 are outside the audit scope. |
+> | `PB-2` — a permissive-temperature arm perturbs two variables at once and should be excluded | **KEEP (confirmed in a primary)** | The Parkin atlas's own hedge — "Presumably this effect is the result of both an increased thermodynamic stability of the Parkin variants and a general reduction of protein turnover at the lowered temperature" — with no separating control described. That entry (38378758 entry 5) carries no `contradicts_locator` and so was **not inside the repairs audit's scope**; its quote matches its artefact verbatim under `locator_audit.py`, and 38378758 entry 15, which places the 29 degree arm among the probes, was judged **SUPPORTED**. |
+> | `PB-3` — a two-epitope puromycin-PLA ratio is the one instrument that separates "during" from "before / after" | **INCONCLUSIVE (unqualified here)** | An absence over the seventeen readings: none uses puromycin-PLA or a ribosome-nascent-chain method, and the dossier's arithmetic rests on a uniform ribosome density that no primary here tests. No audited triple bears on it either way; the audit neither supports nor weakens the proposal. |
+> | `PB-4` — polysome profiling and nascent read-outs separate translation from decay | **INCONCLUSIVE for a protein-loss lesion** — the earlier **NARROW** verdict is withdrawn, all three of its narrowing triples having been judged OVERSHOOT by the audit of 2026-10-22 | What survives, and is now audited: 31402619 entry 3 (**SUPPORTED**) — the 176-mRNA headline analysis reads mRNA association, which the authors themselves read as altered synthesis, and **no mutant eIF2B protein level or solubility is read anywhere the auditor searched** (body, the ten supplementary figure captions, supplementary methods, antibody and primer workbooks); 31402619 entry 1 (**SUPPORTED**) — the paper's own separation of the 33-mRNA and 176-mRNA regimes. **Withdrawn and not restated anywhere:** that polysome profiling by itself cannot separate transcript from translational regulation (the paper's own fraction-resolved qPCR and its total-mRNA and product-protein read-outs do so for candidates), and that the lysate discards an insoluble pool (not in the source; the only pellets in its supplementary methods are RNA precipitations). What would reopen it: a polysome read paired with a mutant-protein read in the same material. |
+>
+> **Where a figure and its text disagree, the figure is what this annotation rests on.** For 38731820 the
+> audit's corroboration is adopted: Figure 6C draws **six** animals at baseline whose mean and standard
+> error reproduce the body's 15.58 plus or minus 4.987, so the legend's "N = 3 female" is the outlier. No
+> verdict in the table above rests on that sample size — it is recorded here so that any later use of this
+> dossier's mouse seizure endpoint takes six animals from the figure rather than three from the legend.
+
 # `Q230P` — is the deficit made **before**, **during**, or **after** the measurable mature-protein pool?
 
 **Actor:** Scientist A · **Date:** 2026-09-22 · **Reports to:** Orchestrator
