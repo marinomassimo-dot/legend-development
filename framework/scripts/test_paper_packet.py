@@ -1182,5 +1182,127 @@ class ABinaryCopyOfADeclaredContainerIsNotUndeclared(unittest.TestCase):
         self.assertIn("undeclared", row["reason"])
 
 
+class WhichFigureEachFileActuallyIs(unittest.TestCase):
+    """🔴 Measured on PMID 42157447 by a blind auditor, 2026-10-24.
+
+    The publisher's figure numbering does not follow its own filenames: Figure 1 is
+    `ACN3-9999-0-g005.jpg` and Figure 5 is `g004.jpg`. A reader who opens the file whose number
+    matches the figure lands on the wrong panel and has no way to notice — every existing check
+    matches TEXT. The JATS `<fig>` graphics carry the mapping, so `rank` reads it there; with no
+    JATS it says the question is undecided rather than letting the filename answer it.
+
+    Hermetic: a throwaway root with two rasters and an XML, so no local corpus and no PyMuPDF.
+    """
+
+    PMID = "42157447"
+    JATS = (
+        '<article xmlns:xlink="http://www.w3.org/1999/xlink"><body>'
+        '<fig id="fig-0001"><label>FIGURE 1</label>'
+        '<graphic xlink:href="ACN3-9999-0-g005.jpg"/></fig>'
+        '<fig id="fig-0005"><label>FIGURE 5</label>'
+        '<graphic xlink:href="ACN3-9999-0-g004.jpg"/></fig>'
+        "</body></article>")
+
+    def _root(self, with_jats: bool) -> Path:
+        root = Path(self._stack.name) / ("jats" if with_jats else "nojats")
+        figures = root / f"files/figures/PMID{self.PMID}"
+        if figures.is_dir():
+            return root                       # already built in this test
+        figures.mkdir(parents=True)
+        (figures / "ACN3-9999-0-g004.jpg").write_bytes(_solid_png(709, 611))
+        (figures / "ACN3-9999-0-g005.jpg").write_bytes(_solid_png(709, 990))
+        artefacts = [{"path": f"files/figures/PMID{self.PMID}/ACN3-9999-0-g004.jpg",
+                      "kind": "figure"},
+                     {"path": f"files/figures/PMID{self.PMID}/ACN3-9999-0-g005.jpg",
+                      "kind": "figure"}]
+        if with_jats:
+            xml = root / f"files/fulltext/PMID{self.PMID}_article.xml"
+            xml.parent.mkdir(parents=True)
+            xml.write_text(self.JATS, encoding="utf-8")
+            artefacts.insert(0, {"path": f"files/fulltext/PMID{self.PMID}_article.xml",
+                                 "kind": "article_text"})
+        manifests = root / "disease-models/wwox/research/deepdive_manifests"
+        manifests.mkdir(parents=True)
+        (manifests / f"PMID{self.PMID}.json").write_text(
+            json.dumps({"source_artifacts": artefacts}), encoding="utf-8")
+        return root
+
+    def setUp(self) -> None:
+        self._stack = tempfile.TemporaryDirectory()
+        self.addCleanup(self._stack.cleanup)
+
+    def _labels(self, report: dict) -> dict[str, str]:
+        return {Path(row["surface"]).name: row["figure_label"]
+                for row in report["candidates"] if row["route"] == "on_disk"}
+
+    def test_the_label_comes_from_the_jats_and_not_from_the_filename(self) -> None:
+        report = pp.rank_surfaces(self._root(True), "wwox", self.PMID)
+        self.assertEqual({"ACN3-9999-0-g004.jpg": "FIGURE 5",
+                          "ACN3-9999-0-g005.jpg": "FIGURE 1"}, self._labels(report))
+        rendered = pp.render_rank(report, 0)
+        self.assertIn("this file is FIGURE 5 (JATS)", rendered)
+        self.assertIn("not from the filename", rendered)
+        self.assertNotIn("UNDECIDED", rendered)
+        self.assertNotIn("WHICH FIGURE a surface actually carries", report["cannot_see"])
+
+    def test_with_no_jats_the_question_is_undecided_and_never_answered_by_the_filename(self) -> None:
+        report = pp.rank_surfaces(self._root(False), "wwox", self.PMID)
+        self.assertEqual({}, report["figure_labels"])
+        self.assertEqual("", report["figure_labels_from"])
+        self.assertEqual({"ACN3-9999-0-g004.jpg": "", "ACN3-9999-0-g005.jpg": ""},
+                         self._labels(report))
+        rendered = pp.render_rank(report, 0)
+        self.assertIn("UNDECIDED", rendered)
+        self.assertNotIn("this file is FIGURE", rendered)
+        self.assertIn("FILENAME IS NOT EVIDENCE", report["cannot_see"])
+
+    def test_the_labels_change_no_ranking_and_no_file(self) -> None:
+        """The case that must NOT change: the order is still measured ppi, and `rank` writes
+        nothing. A label is information about a surface, never a reason to prefer it."""
+        labelled = pp.rank_surfaces(self._root(True), "wwox", self.PMID)
+        plain = pp.rank_surfaces(self._root(False), "wwox", self.PMID)
+        for one, other in zip(labelled["candidates"], plain["candidates"]):
+            self.assertEqual(Path(one["surface"]).name, Path(other["surface"]).name)
+            self.assertEqual(one["score"], other["score"])
+            self.assertEqual(one["position"], other["position"])
+        root = self._root(True)
+        before = {path: path.read_bytes() for path in sorted(root.rglob("*")) if path.is_file()}
+        pp.render_rank(pp.rank_surfaces(root, "wwox", self.PMID), 0)
+        after = {path: path.read_bytes() for path in sorted(root.rglob("*")) if path.is_file()}
+        self.assertEqual(before, after)
+
+    def test_a_graphic_href_without_its_suffix_still_labels_the_file(self) -> None:
+        """PMC deposits both forms; a mapping that only worked for one would be a silent gap."""
+        root = self._root(True)
+        xml = root / f"files/fulltext/PMID{self.PMID}_article.xml"
+        xml.write_text(self.JATS.replace("ACN3-9999-0-g004.jpg", "ACN3-9999-0-g004"),
+                       encoding="utf-8")
+        report = pp.rank_surfaces(root, "wwox", self.PMID)
+        self.assertEqual("FIGURE 5", self._labels(report)["ACN3-9999-0-g004.jpg"])
+
+    def test_a_malformed_xml_leaves_the_question_undecided_rather_than_raising(self) -> None:
+        root = self._root(True)
+        (root / f"files/fulltext/PMID{self.PMID}_article.xml").write_text(
+            "<article><fig><label>FIGURE 1", encoding="utf-8")
+        report = pp.rank_surfaces(root, "wwox", self.PMID)
+        self.assertEqual({}, report["figure_labels"])
+        self.assertIn("UNDECIDED", pp.render_rank(report, 0))
+
+
+class TheMeasuredFigureMappingOfTheAuditedPaper(unittest.TestCase):
+    """The acceptance test on the corpus the defect was found in. Skips on a fresh clone."""
+
+    PMID = "42157447"
+
+    def test_figure_5_is_g004_and_figure_1_is_g005(self) -> None:
+        _needs_local_corpus(self, self.PMID)
+        labels, source = pp.jats_figure_labels(ROOT, "wwox", self.PMID)
+        if not labels:
+            self.skipTest("skipped: no JATS article XML for this PMID in this checkout")
+        self.assertTrue(source.endswith(".xml"), source)
+        self.assertEqual("FIGURE 5", labels["acn3-9999-0-g004.jpg"])
+        self.assertEqual("FIGURE 1", labels["acn3-9999-0-g005.jpg"])
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

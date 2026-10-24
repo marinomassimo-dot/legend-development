@@ -1,0 +1,33 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "TASK_ID": "PLAN-READING-TOOL-FIXES-20261024",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "plan",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Repair the two defects the blind auditor measured on 2026-10-24 in the path a reader uses to verify a locator: a false NOT FOUND from a .docx supplement locator_audit.py could not read, and figure filenames that do not track the figure labels. Lean: a mode of each existing tool, no new file in framework/scripts, no new gate.",
+ "assigned_on": "2026-10-24",
+ "worktree": ".claude/worktrees/reading-tool-fixes",
+ "branch": "task/plan-reading-tool-fixes",
+ "CURRENT_STATE": "DONE_PENDING_LANDING",
+ "STAGES": [
+  {
+   "stage": "one",
+   "defect": "locator_audit.py reported PMID 31402619 entry 2 as NOT FOUND although the quote is verbatim in ACN3-6-1407-s009.docx. Cause measured, not assumed: the declared-surface filter read only article_text / supplement_text / table, so the docx (declared supplement_binary) was never opened and the quote was matched against the article XML alone. deepdive_manifest._artifact_text already reads a .docx with the standard library.",
+   "what": "supplement_binary joins the declared text kinds; a surface whose suffix has no text branch is set aside WITH ITS FORMAT instead of refusing the whole manifest; a quote whose own declared artifact was set aside, or is absent from this tree, is reported NOT SEARCHED with the reason and is never --strict's business; the NOT SEARCHED total prints on its own line so the parsed summary line keeps its shape.",
+   "measured_full_corpus_run": "495 audited / 94 unauditable / 62 not found -> 511 audited / 78 unauditable / 0 not found + 94 NOT SEARCHED (all 94 because the surface is absent from this checkout). 11 manifests recovered from 'surface refused: text verification is unsupported for <format>'; false NOT FOUNDs cleared on 24456803, 28763065 (4), 31402619, 36828035 (4), 37296418, 40156289 (4), 40665325, 41378749 (2); 41345172 now reports its real cause (a SUSPECT C0 control) instead of the .xlsx it refused on first.",
+   "regression_caught_in_flight": "reading the supplement made three manifests auditable and turned their ARTICLE quotes into NOT FOUND (38074073 21, 33520443 14, 36530994 7) because those articles' XML is absent here. The unfetched_entries bucket was added for exactly that, and it is a test of its own."
+  },
+  {
+   "stage": "two",
+   "defect": "In PMID 42157447 the figure filenames do not track the figure labels: Figure 1 is ACN3-9999-0-g005.jpg and Figure 5 is g004.jpg; the order crosses in six of eight places. paper_packet.py rank listed the files and said in cannot_see that which figure a surface carries was unknowable.",
+   "what": "jats_figure_labels() reads the mapping from the <fig> label + <graphic> href of the article_text XML the manifest already declares (stdlib ElementTree, namespace-agnostic, href with or without suffix). rank carries figure_label on every FILE row (candidates and absent), figure_labels / figure_labels_from on the report, prints 'this file is FIGURE 5 (JATS)' per row, and with no JATS prints one red line saying the question is UNDECIDED and the filename is not evidence. cannot_see now names only what is still unseen (embedded rasters and page renders, which no <fig> names).",
+   "not_a_gate": "rank still writes nothing, exits 0, and the ordering is unchanged: a label is information about a surface, never a reason to prefer it (asserted)."
+  }
+ ],
+ "TESTS_ADDED": "framework/scripts/test_locator_audit.py: 7 new (docx supplement found; format named and not a missing quote; only-unreadable surfaces give cause format_unreadable; a quote whose surface is absent here is not missing; THE CASE THAT MUST NOT CHANGE - a genuinely absent quote beside an unreadable surface is still NOT FOUND; --strict fails on a finding and never on a silence). framework/scripts/test_paper_packet.py: 6 new (label from the JATS not the filename; no JATS leaves it UNDECIDED; THE CASE THAT MUST NOT CHANGE - labels alter no position, no score and write no file; href without suffix; malformed XML does not raise; plus a corpus acceptance test on 42157447 that skips on a fresh clone). All hermetic but the two acceptance tests; both files already enrolled in scripts/run_release_regressions.py and run with verbosity=2.",
+ "SUITES_RUN": "test_locator_audit.py 30 OK; test_paper_packet.py 98 OK (24 skipped, no local corpus in the worktree); scripts/test_tool_routing.py 7 OK; legend_lint.py . VERDICT WARN (pre-existing UNLINKED_SUPPORT warnings only, unchanged); scripts/public_release_gate.py exit 0 (REVIEW rows pre-existing). The two corpus acceptance paths were additionally run against the real files/ through a scratch tree, since files/ is gitignored and absent from every worktree.",
+ "NOT_BUILT": "no .docx reader of our own (deepdive_manifest._artifact_text already has one, and no dependency was added); no .xlsx / .pdf / .doc / .zip text extractor, so those formats are NAMED as unread rather than read; no derived-text-surface generator; no new gate and no --strict change; no figure-label mapping from the HTML surface or from a PDF bookmark, and none inferred from a caption when no JATS exists - the tool says UNDECIDED instead; no label for an embedded raster or a page render; no manifest, mechanism map or scientific current file touched, and no locator repaired - the three manifests whose article XML is absent here are an acquisition errand, not a reading defect.",
+ "CONSTRAINTS_HONOURED": "no personal e-mail address to any service and no network call at all; stdlib only; modes of two existing tools, no new file in framework/scripts; both routing-table rows updated; no gate added or loosened."
+}
