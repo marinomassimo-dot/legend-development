@@ -76,6 +76,23 @@ MISMATCH = "DIGEST_MISMATCH"
 ABSENT = "ABSENT"
 UNDECLARED = "NO_DIGEST_DECLARED"
 
+#: 🔴 An HTML page wearing a binary name. On 2026-10-23 two files under `files/figures/` named
+#: `.jpg` were publisher error pages, 48,716 bytes each and byte-identical; four more sit
+#: elsewhere in the corpus. None was declared by any manifest, so no reading rested on one — the
+#: trap is the NEXT reader, and twice in two days an agent wrote a figure value from something
+#: that was not the figure. `PRESENT` is the wrong answer for these bytes, so they get their own
+#: state. It is a fact about this disk, it never gates (`--fail-on-mismatch` is unmoved) and it
+#: fires only when the extension PROMISES a binary: a `.html` or `.xml` full text is a
+#: legitimate artefact and is untouched.
+MASQUERADE = "HTML_UNDER_A_BINARY_NAME"
+
+#: Extensions whose bytes cannot legitimately be an HTML document.
+_BINARY_SUFFIXES = frozenset(
+    {".pdf", ".jpg", ".jpeg", ".png", ".gif", ".tif", ".tiff", ".webp", ".bmp",
+     ".docx", ".xlsx", ".pptx", ".zip"}
+)
+_HTML_HEADS = (b"<!doctype html", b"<html", b"<?xml-stylesheet", b"<!doctype")
+
 _CHUNK = 1 << 20
 
 
@@ -85,6 +102,23 @@ def sha256_of(path: Path) -> str:
         for block in iter(lambda: fh.read(_CHUNK), b""):
             h.update(block)
     return h.hexdigest()
+
+
+def is_html_under_a_binary_name(path: Path) -> bool:
+    """True when the suffix promises a binary and the first bytes are an HTML document.
+
+    Leading whitespace and a UTF-8 BOM are skipped, because a served error page often carries
+    both. Anything unreadable is not a masquerade: absence and permission are other states.
+    """
+    if path.suffix.lower() not in _BINARY_SUFFIXES:
+        return False
+    try:
+        with path.open("rb") as handle:
+            head = handle.read(512)
+    except OSError:
+        return False
+    head = head.lstrip(b"\xef\xbb\xbf").lstrip()
+    return head[:40].lower().startswith(_HTML_HEADS)
 
 
 def manifest_paths(root: Path, disease: str | None) -> list[Path]:
@@ -121,10 +155,16 @@ def audit_manifest(path: Path, root: Path) -> dict:
         if not target.is_file():
             state, actual = ABSENT, None
         elif not declared:
-            state, actual = UNDECLARED, sha256_of(target)
+            actual = sha256_of(target)
+            state = MASQUERADE if is_html_under_a_binary_name(target) else UNDECLARED
         else:
             actual = sha256_of(target)
-            state = PRESENT if actual == declared else MISMATCH
+            if actual != declared:
+                state = MISMATCH          # changed bytes outrank what the bytes now are
+            elif is_html_under_a_binary_name(target):
+                state = MASQUERADE        # fingerprinted, and not the artefact it is named
+            else:
+                state = PRESENT
         rows.append(
             {
                 "index": index,
@@ -175,25 +215,28 @@ def availability(root: Path, disease: str, pmids) -> dict[str, dict]:
                          "undeclared": 0, "total": 0}
             continue
         report = audit_manifest(path, root)
-        counts = {PRESENT: 0, ABSENT: 0, MISMATCH: 0, UNDECLARED: 0}
+        counts = {PRESENT: 0, ABSENT: 0, MISMATCH: 0, UNDECLARED: 0, MASQUERADE: 0}
         for row in report["artifacts"]:
             counts[row["state"]] += 1
         total = sum(counts.values())
+        # A masquerading file is on disk but is not the artefact, so it cannot make a study
+        # ALL_PRESENT. It is counted with absence for the per-study state and reported apart.
+        missing = counts[ABSENT] + counts[MASQUERADE]
         if report.get("error"):
             state = UNREADABLE
         elif counts[MISMATCH]:
             state = MISMATCH
         elif total == 0:
             state = NO_ARTIFACTS
-        elif counts[ABSENT] == 0:
+        elif missing == 0:
             state = ALL_PRESENT
-        elif counts[ABSENT] == total:
+        elif missing == total:
             state = NONE_PRESENT
         else:
             state = PARTIAL
         out[pmid] = {"state": state, "present": counts[PRESENT], "absent": counts[ABSENT],
                      "mismatch": counts[MISMATCH], "undeclared": counts[UNDECLARED],
-                     "total": total}
+                     "masquerade": counts[MASQUERADE], "total": total}
     return out
 
 
@@ -291,7 +334,7 @@ def main(argv: list[str] | None = None) -> int:
             continue
         reports.append(report)
 
-    totals = {PRESENT: 0, MISMATCH: 0, ABSENT: 0, UNDECLARED: 0}
+    totals = {PRESENT: 0, MISMATCH: 0, ABSENT: 0, UNDECLARED: 0, MASQUERADE: 0}
     for report in reports:
         for row in report["artifacts"]:
             totals[row["state"]] = totals.get(row["state"], 0) + 1
@@ -332,8 +375,16 @@ def main(argv: list[str] | None = None) -> int:
     print(
         f"manifests: {len(reports)} | artifacts: {total_artifacts} | "
         f"present: {totals[PRESENT]} | absent: {totals[ABSENT]} | "
-        f"digest_mismatch: {totals[MISMATCH]} | no_digest: {totals[UNDECLARED]}"
+        f"digest_mismatch: {totals[MISMATCH]} | no_digest: {totals[UNDECLARED]} | "
+        f"html_under_a_binary_name: {totals[MASQUERADE]}"
     )
+
+    if totals[MASQUERADE]:
+        print(
+            f"NOTE: {totals[MASQUERADE]} declared artefact(s) are an HTML document under a binary "
+            "name — a served error page, not the figure or PDF. Do not read a value from one; "
+            "re-acquire. This never fails the run."
+        )
 
     if totals[MISMATCH]:
         print(
@@ -341,14 +392,16 @@ def main(argv: list[str] | None = None) -> int:
             "Every locator verified against them is in question until re-derived."
         )
         return 1 if args.fail_on_mismatch else 0
-    if totals[ABSENT] and not totals[PRESENT]:
+    unusable = totals[ABSENT] + totals[MASQUERADE]
+    if unusable and not totals[PRESENT]:
         print(
             "VERDICT: NO LOCAL EVIDENCE — this checkout carries manifests and none of the bytes "
             "they fingerprint. Expected in a fresh checkout; re-acquire before verifying a reading."
         )
         return 0
-    if totals[ABSENT]:
-        print("VERDICT: PARTIAL — some declared evidence is absent from this checkout.")
+    if unusable:
+        print("VERDICT: PARTIAL — some declared evidence is absent from this checkout "
+              "or is not the artefact its name promises.")
         return 0
     print("VERDICT: COMPLETE — every declared artifact is present and matches its digest.")
     return 0
