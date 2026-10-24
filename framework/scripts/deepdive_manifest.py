@@ -1251,8 +1251,15 @@ COUNT_CLAIM_RE = re.compile(
 # cannot see: a reader who overwrites a locator and declares nothing. That shape is a diff
 # against history, and lives in `locator_contradiction_audit.py --history` / `--working-tree`.
 CONTRADICTION_KEYS = ("manifest", "what_changed")
-CONTRADICTION_AUDIT_VERDICTS = {"CONFIRMED", "OVERSHOOT", "UNDERSHOOT", "UNSUPPORTED",
-                                "CORRECTED", "WITHDRAWN"}
+#: 🔴 `SUPPORTED` was missing until 2026-10-24, and the omission said something false about the
+#: practice: that an audit only ever reports a defect. A blind audit mostly CLEARS the triple it
+#: judges — 23 of 24 that day — and a cleared verdict must be recordable, because an auditor may
+#: not write a manifest and an unstamped clearance leaves `auditors: 0`, so every consumer keeps
+#: demanding the audit that already happened (14 stale AUDIT rows in the repurposing handoff).
+#: Nothing enforced this set when the gap was found, so no record was rejected; the set is the
+#: vocabulary the writers are told to use, and a vocabulary that cannot say "it held" is wrong.
+CONTRADICTION_AUDIT_VERDICTS = {"CONFIRMED", "SUPPORTED", "OVERSHOOT", "UNDERSHOOT",
+                                "UNSUPPORTED", "CORRECTED", "WITHDRAWN"}
 
 
 def contradiction_audit_is_structured(audit: Any) -> bool:

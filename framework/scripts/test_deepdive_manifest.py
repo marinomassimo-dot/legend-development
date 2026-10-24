@@ -2777,5 +2777,72 @@ class ACoupledRelationDeclaresTheSystemItWasMeasuredIn(unittest.TestCase):
         self.assertEqual([], errors)
 
 
+class TheAuditVerdictVocabulary(unittest.TestCase):
+    """The set the writers are told to use must be able to say that a triple HELD.
+
+    Measured 2026-10-24: a blind audit cleared 23 of 24 triples and the vocabulary had no word
+    for it, so a cleared verdict was unsayable while `auditors: 0` kept every consumer asking
+    for an audit that had already happened (14 stale AUDIT rows in the repurposing handoff).
+
+    Measuring that gap exposed a larger one. Nothing has ever enforced this set, and the practice
+    drifted: 135 entries carry a verdict the vocabulary does not define, in 30 distinct strings,
+    16 of which are longer than 80 characters because whole prose paragraphs were written into a
+    field meant to hold a word. Those records are not rewritten here — they are scientific
+    records, the prose in them is true, and a migration of 135 entries is not a safe incidental
+    act. Instead the drift becomes visible and may not grow: a falling ratchet, the pattern this
+    repository already uses for every debt it means to retire rather than hide.
+    """
+
+    #: Entries whose `verdicts` list holds at least one string the vocabulary does not define.
+    #: Measured 2026-10-24 over 589 manifests. LOWERED as records are normalised, never raised.
+    DRIFT_BASELINE = 135
+
+    def _drift(self):
+        unknown_entries, distinct = 0, set()
+        for path in sorted(MANIFESTS.glob("PMID*.json")):
+            try:
+                data = json.loads(path.read_text(encoding="utf-8"))
+            except (OSError, json.JSONDecodeError):
+                continue
+            for entry in (data.get("verbatim_locators") or {}).get("entries") or []:
+                declaration = entry.get("contradicts_locator")
+                if not isinstance(declaration, dict):
+                    continue
+                audit = declaration.get("audit")
+                if not isinstance(audit, dict):
+                    continue
+                unknown = [v for v in (audit.get("verdicts") or [])
+                           if isinstance(v, str) and v not in gate.CONTRADICTION_AUDIT_VERDICTS]
+                if unknown:
+                    unknown_entries += 1
+                    distinct.update(unknown)
+        return unknown_entries, distinct
+
+    def test_supported_is_a_verdict(self):
+        """A vocabulary that cannot say "it held" describes an audit that only ever finds fault."""
+        self.assertIn("SUPPORTED", gate.CONTRADICTION_AUDIT_VERDICTS)
+
+    def test_vocabulary_drift_does_not_grow(self):
+        if not sorted(MANIFESTS.glob("PMID*.json")):
+            self.skipTest("no manifests in this checkout")
+        unknown_entries, distinct = self._drift()
+        self.assertLessEqual(
+            unknown_entries, self.DRIFT_BASELINE,
+            f"a NEW out-of-vocabulary audit verdict: {unknown_entries} entries carry one, over a "
+            f"baseline of {self.DRIFT_BASELINE}. Use a word from "
+            f"CONTRADICTION_AUDIT_VERDICTS and put the narrative in `what_changed`, which is the "
+            f"field for prose. Distinct strings now: {len(distinct)}")
+
+    def test_a_verdict_is_a_word_and_not_a_paragraph(self):
+        """The shape that made the field useless: a paragraph where a token belongs."""
+        _, distinct = self._drift()
+        if not distinct:
+            return
+        self.assertLessEqual(
+            sum(1 for v in distinct if len(v) > 80), 16,
+            "a NEW paragraph-length verdict string. `verdicts` holds words; `what_changed` holds "
+            "the account of what moved.")
+
+
 if __name__ == "__main__":
     sys.exit(0 if unittest.main(exit=False, verbosity=2).result.wasSuccessful() else 1)
