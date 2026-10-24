@@ -139,7 +139,7 @@ reservation touched.
 | `scripts/public_release_gate.py` | PASS |
 | `fulltext_receipts.py verify` | OK, chain intact |
 | `candidate_tree_freshness.py` | derived surfaces fresh |
-| `locator_count_crosscheck.py --sweep` | run **last**, after merging `main`; result in the task record |
+| `locator_count_crosscheck.py --sweep` | run **last**, after merging `main` (which brought `BATCH_20261019_016` in): 250 assertions reached, agrees 188, **disagrees 0** against a ceiling of 0, manifest absent 0, unparsed 5 (declared 5) — AT OR BELOW BASELINE; `test_locator_count_crosscheck.py` 26 tests OK |
 
 ## Recommended next actions
 
