@@ -394,7 +394,7 @@
     "found_or_sought": "sought — 2026-08-09"
    },
    {
-    "proposition": "THE CENTRAL PHENOTYPE IS ALMOST ENTIRELY IN THE ENGINEERED KNOCKOUT, NOT IN THE PATIENT LINES. Figure 2F plots cell-fraction log2FC against WT: the WWOX-KO loses neurons at about -2.4 log2FC with radial glia up about +1.0, while SCAR12 (radial glia about -0.27, neurons about +0.18) and WOREE (radial glia about +0.08, neurons about -0.07) both sit within about 0.3 of WT on both populations. Panel E shows the same: WT, SCAR12 and WOREE carry a comparable neuronal fraction (about 0.45, 0.58 and 0.45), and only the KO is depleted (about 0.08). The paper is titled 'impairs neurogenesis in human brain organoids'; on composition, the two patient-derived genotypes are close to wild type. An earlier reading of this entry gave KO radial glia +0.55, KO neurons -2.6 and SCAR12 neurons -0.2 and is withdrawn.",
+    "proposition": "ON COMPOSITION, THE PHENOTYPE OF FIGURE 2D-F IS ALMOST ENTIRELY IN THE ENGINEERED KNOCKOUT, NOT IN THE PATIENT LINES. Figure 2F plots cell-fraction log2FC against WT: the WWOX-KO loses neurons at about -2.4 log2FC with radial glia up about +1.0, while SCAR12 (radial glia about -0.27, neurons about +0.18) and WOREE (radial glia about +0.08, neurons about -0.07) both sit within about 0.3 of WT on both populations. Panel E shows the same: WT, SCAR12 and WOREE carry a comparable neuronal fraction (about 0.45, 0.58 and 0.45), and only the KO is depleted (about 0.08). The paper is titled 'impairs neurogenesis in human brain organoids'; on the composition measure of this figure, the two patient-derived genotypes are close to wild type. 🔴 SCOPE, and it is what this entry must not exceed: Figure 2D-F measures COMPOSITION ONLY, and the same paper's Figure 5F cuts against any general 'no phenotype in the patient lines' reading — both patient lines invert the early/late neuronal balance against WT there (percentages in entry 4 of this manifest, not repeated here). Composition near-normal and maturation abnormal are two different measurements in two different figures. Two earlier readings are withdrawn: the numerals KO radial glia +0.55, KO neurons -2.6 and SCAR12 neurons -0.2, and the unqualified headline 'the central phenotype is almost entirely in the engineered knockout, not in the patient lines'.",
     "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 2F, 'RGs and Neu cell fraction changes', x-axis ticks -3 to +1 read at 125 px per unit on the 600 dpi render: WWOX-KO RGs bar to about +1.0 and Neu bar to about -2.38; SCAR12 RGs about -0.27 and Neu about +0.19; WOREE RGs about +0.08 and Neu about -0.06. Panel E neuronal fraction about 0.45 (WT), 0.08 (WWOX-KO), 0.58 (SCAR12), 0.45 (WOREE). Panel D cell counts: WT 5649, WWOX-KO 3020, SCAR12 3422, WOREE 5916.",
     "surface": "figure",
     "artifact": "files/fulltext/PMID42397075_Steinberg2026_assets/fig2F_600dpi.png",
@@ -404,12 +404,15 @@
     "contradicts_locator": {
      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42397075.json",
      "entry": 2,
-     "what_changed": "Own persisted entry corrected after the blind module-batch audit (OVERSHOOT, numerals): KO RGs +0.55 -> about +1.0, KO Neu -2.6 -> about -2.4, SCAR12 Neu -0.2 -> about +0.18, SCAR12 RGs -0.15 -> about -0.27, WOREE RGs and Neu restated; agrees with entry 35.",
+     "what_changed": "Own persisted entry corrected after the blind module-batch audit (OVERSHOOT, numerals): KO RGs +0.55 -> about +1.0, KO Neu -2.6 -> about -2.4, SCAR12 Neu -0.2 -> about +0.18, SCAR12 RGs -0.15 -> about -0.27, WOREE RGs and Neu restated; agrees with entry 35. SECOND CORRECTION (2026-10-24, third blind audit, OVERSHOOT of scope): the headline is qualified to the composition measure of Figure 2D-F and now names Figure 5F, where both patient lines invert the early/late balance, as cutting against a general reading; the numerals are unchanged and were confirmed exact at 600 dpi.",
      "audit": {
-      "auditors": 1,
+      "auditors": 2,
       "verdicts": [
+       "OVERSHOOT",
        "OVERSHOOT"
-      ]
+      ],
+      "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md",
+      "audited_on": "2026-10-24"
      }
     }
    },
