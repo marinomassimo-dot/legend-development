@@ -687,11 +687,27 @@ nor too much WWOX.**
 published homozygote; or discrimination of the missense allele's folding fate.
 
 ### N-06 — Lactate, and metabolic blood biomarkers generally, as WWOX readouts → **a biomarker that is not measuring the mechanism**
+**Source ids:** DL-BIO-008.
 **Failure mode:** *corrects/reports a biomarker, not the mechanism* — inverted: here the biomarker
-does not even report. Four independent human sources show normal metabolism; the single MRS outlier
-reports cerebral lactate *"extremely low"*, the **opposite** of what the Warburg model predicts, in a
-patient with a confounding HSPG2 variant. Serum lactate is Tier 3, distal, and must not enter the
-Tier 1/2 biomarker file.
+does not even report. **Counted from the record rather than asserted:** `DL-BIO-008` names **three**
+sources, of which **two are human and exactly one is a complete human metabolic screen** — a WWOX
+null/null patient whose screen (ammonia, lactate, amino acids, organic acids, VLCFA) was *"entirely
+normal"*. The second human source is the **single MRS case**, which reports cerebral lactate
+*"extremely low"* — the **opposite** of what the Warburg model predicts — in a patient with a
+confounding HSPG2 variant. The third source is a **mouse**: `Wwox`-KO serum lactate significantly
+raised, which is the direction the model predicts and the reason the record exists as an unresolved
+contradiction. Serum lactate is Tier 3, distal, and must not enter the Tier 1/2 biomarker file.
+⚠️ **The conclusion is unchanged and its support is smaller than this record claimed.** One normal
+human screen plus one opposite-direction human MRS case is enough to say the biomarker **does not
+report reliably**; it is not four concordant human sources, and the human direction of WWOX-deficient
+metabolism remains **unmeasured** (`DL-BIO-008`, operative consequence 3).
+*Count corrected 2026-10-24 by `scientist-b`, re-derived from `DL-BIO-008` as it now stands. The
+earlier wording — "four independent human sources show normal metabolism" — was an **unsourced
+count**: the record names one such screen and the other three sources are identified nowhere
+(measured independently by `scientist-c`,
+`research/module_linkage_and_replicate_scientist-c_20261024.md` §1). ⚠️ The same sentence is
+reproduced at row C10 of `analysis/therapeutic_translation_second_pass.md` and is **not** corrected
+there by this edit.*
 **`REVIVAL_TRIGGER`:** Seahorse/fluxomics showing a real bioenergetic shift in donor-derived cells.
 
 ### N-07 — Digoxin (HIF1α inhibition) → **right target validation, wrong clinical object**
@@ -705,11 +721,57 @@ likely a typographic error for µg/kg and remains unverified against the origina
 **Use correctly:** as target validation. The ketogenic diet **dominates** it — same axis,
 incomparably better safety.
 
-### N-08 — Dichloroacetate (PDK inhibition) → **dominated, and neurotoxic**
-**Failure mode:** *toxicity incompatible* + *two-hop inference*. Dose-dependent peripheral
-neurotoxicity (neuropathy) in a child with encephalopathy is an unfavourable ratio without proof of
-mechanism. R-05 achieves the same metabolic bypass with an incomparably better profile. Parked
-pending `legend-safety-triage`, and downstream of the falsification of R-05 anyway.
+### N-08 — Dichloroacetate (PDK inhibition) → **a peripheral-nerve signal that is asymptomatic in the paediatric series and symptomatic in an older cohort; and never measured in a WWOX system**
+**Source ids:** PAPER 557, PAPER 562 (both 🔴 **NOT WWOX EVIDENCE**, class-level), DL-MECH-020 (the
+WWOX-side Warburg/HIF1α rationale — the only WWOX anchor this row has).
+**Failure mode:** *two-hop inference* + *a safety margin that has never been measured in this
+disease*. **What the source says.** In the long open-label paediatric series in congenital lactic
+acidosis the nerve finding is **electrophysiological, not clinical**: *"Nerve conduction either did
+not change or decreased modestly and led to reduction or temporary discontinuation of DCA in 3
+patients, although symptomatic worsening of peripheral neuropathy did not occur"*; in the body,
+those three had the drug paused or halved *"because of periodic **asymptomatic** worsening of lower
+extremity nerve conduction velocity"*, and the change was *"not associated in any patient with
+changes in blood lactate or with any abnormalities in blood chemistries"*. The **symptomatic** cases
+are a different population: the same authors contrast their result with *"a RCT conducted in older
+adolescents and adults with mitochondrial encephalomyopathy, lactic acidosis and stroke-like
+episodes (MELAS) that ended prematurely because of symptomatic and electrical evidence of
+exacerbation or new onset of peripheral neuropathy"*, and attribute the age split to
+pharmacokinetics (*"DCA metabolism in humans is inversely proportional to age"*) and to GSTZ1
+haplotype. They also state the design's limit themselves: it *"cannot distinguish unequivocally
+between the relative impact of DCA exposure vs. underlying disease on the frequency or severity of
+peripheral neuropathy"*, because neuropathy is common in mitochondrial disease before any DCA.
+⇒ **Still parked, and for a reason that survives the narrowing.** The honest statement is *a drug
+whose paediatric nerve signal is asymptomatic and reversible but requires nerve-conduction
+monitoring, with exposure that rises as age rises and varies with GSTZ1 genotype, and with no proof
+of mechanism in this disease* — not *dose-dependent neurotoxicity in a child*. Parked pending
+`legend-safety-triage`, and downstream of the falsification of R-05 anyway.
+⚠️ **Not a denial, and two things are explicitly not measured.** (1) **No paper measures
+dichloroacetate in any WWOX system**, of any species — the row's intervention arm is non-WWOX
+throughout, so the *benefit* side of the ratio is unmeasured too, and nothing here says the compound
+is safe in this genotype (measured independently by `scientist-c`,
+`research/module_linkage_and_replicate_scientist-c_20261024.md` §1: attaching `PAPER 557` and
+`PAPER 562` closes a **linkage** gap and leaves the **evidence** gap exactly as wide). (2) The word
+**"dominated"** — kept in the body, dropped from the headline — is a portfolio judgement on the
+shared PDK axis: that R-05 reaches the same metabolic bypass with a profile that needs no nerve
+monitoring. It is **not a head-to-head comparison and is untested**: no paper compares them, none was
+found, and the one seizure-model paper read for this row argues the opposite sign for a dichloroacetate
+**combination** in an acquired-injury rat (`PAPER 562`: dichloroacetate **with pyruvate** reduced
+oxidative-stress and glial-activation readouts after pilocarpine seizure; groups of five and eight,
+one week, one sensorimotor test, and the paper states — *citing prior work, not measuring it* — that
+*"low doses of DCA or pyruvate alone do not significantly reduce neuronal cell death due to seizure"*.
+🔴 NOT WWOX EVIDENCE; adult male rats, an acquired injury, not a developmental model; the paper also
+records a high-dose neurotoxicity ceiling from other work).
+No dose, administration or suitability is stated or implied here; **not medical advice**.
+*Narrowed 2026-10-24 by `scientist-b`, re-derived first-hand from the paediatric long-term safety
+full text (Abdelmalak 2013, DOI `10.1016/j.ymgme.2013.03.019`, staged receipt
+`FTR-20261023-23611579-01`, whose `source_locator` names the artefact) and from that paper's own
+citation of the MELAS trial, which was not opened.
+The earlier wording — "dose-dependent peripheral neurotoxicity (neuropathy) in a child with
+encephalopathy" — had **no source in any registry record** when that was measured on 2026-10-23
+(`research/module_batch_selection_scientist-b_20261023.md` §1, §4.1); the registry ids above were
+created for this row on 2026-10-24. Sources are named by registry id, DOI and receipt id and **not
+by PMID**, because these readings are `partial_fulltext_read` and **staged, not yet recorded**, so a
+PMID citation in this layer would open an unread premise against a ratchet at zero headroom.*
 
 ### N-09 — pTyr33-WWOX peptide as functional restoration → **the direction is inverted**
 **Source ids:** DL-MOL-008, CLAIM 023.
@@ -721,14 +783,52 @@ commentary had over-interpreted its own primary source.
 does not inherit this rationale. The refutation rests on the abstract (full text paywalled); if the
 full text says otherwise it re-opens.
 
-### N-10 — Splice-switching ASO for a canonical acceptor allele → **the modality cannot do the job**
+### N-10 — Splice-switching ASO for a canonical acceptor allele → **"not eligible" by the field's own criteria — which is weaker than "cannot"**
 **Source ids:** DL-MOL-011.
-**Failure mode:** *derived from a mechanism that cannot work.* SSOs **mask** elements; they do not
-**create** splice sites. Masking the +8 cryptic site would shift splicing toward *another* aberrant
-product, not the wild type. In-frame skipping is impossible — exon 9 is the last exon and carries the
-stop codon and the final ~62 aa of the SDR; the rat *lde* model shows that losing the C-terminus
-destabilizes the protein. The *Milasen* precedent is **regulatory**, not proof of amenability.
-Status `stress-tested`, **not** `refuted`: no systematic counterexample search was run.
+**Failure mode:** *derived from a mechanism that does not do what the design needs.* SSOs **mask**
+elements; they do not **create** splice sites. Masking the +8 cryptic site would shift splicing
+toward *another* aberrant product, not the wild type. In-frame skipping is **not available here** —
+exon 9 is the last exon and carries the stop codon and the final ~62 aa of the SDR; the rat *lde*
+model shows that losing the C-terminus destabilizes the protein. The *Milasen* precedent is
+**regulatory**, not proof of amenability: it targeted a **gained** cryptic acceptor deep in an
+intron, in one patient, and its authors state that only a minority of patients carry mutations
+amenable to the strategy and that the drug is not transferable.
+**The counterexample search has now been run once, and it supports the direction in a weaker word
+than this record used.** The N=1 Collaborative expert-consensus guidelines put a variant of this
+class out of scope by **two separate routes, only one of which is experiment-free**:
+> *"Variants within 5 bp of the exon-intron/intron-exon boundary are considered 'not eligible' for
+> splice correction"* — a **positional** rule, which a canonical acceptor (−2) satisfies on sequence
+> alone, and the same document's figure note: *"Anything within 5 bp is considered not eligible for
+> targeting with an ASO"*;
+> *"if canonical splicing is destroyed … the variant is **most likely not eligible** for a splice
+> correction ASO treatment. Canonical splicing is considered destroyed if no wildtype
+> transcript/splicing at the canonical splice sites can be identified in the functional analysis."*
+⚠️ **Scope, stated so this is not read as more than it is — and this is where the record said more
+than its source.** (1) The guideline is **expert consensus, not an experiment**; it says of itself
+that there is *"no gold-standard evidence for many considerations"*. (2) Its strongest word on the
+functional route is *"most likely not eligible"*, **not "cannot"** — and *"destroyed"* is a
+**transcript measurement that has never been made on the reference acceptor allele**. Across the
+whole published WWOX literature exactly **three** *cis* splice-allele transcript measurements
+exist, **none** of them on this allele (`PREMISE: NOBODY_LOOKED`;
+[`splice_allele_rna_evidence_20260922.md`](splice_allele_rna_evidence_20260922.md), which also
+records that the "+8 cryptic ⇒ frameshift" arithmetic rests on an unstated coordinate convention
+whose two readings give **opposite** frame outcomes). (3) The guideline itself warns against taking
+a published absence of wild-type transcript at face value: *"some manuscripts claim there is no
+wildtype splicing left whereas faint wildtype bands can be identified in a gel, which might be
+sufficient to consider this a suitable case."*
+⇒ Status `stress-tested`, **not** `refuted`, and the headline is now the guideline's verdict rather
+than a mechanistic impossibility. **Reopening:** a transcript measurement on the reference acceptor
+allele that shows **residual wild-type splicing** would move it from the guideline's *destroyed* to
+its *weakened* class — *unlikely eligible*, not *not eligible* — and make an SSO a live question
+again. That measurement is the experiment `TX-001` was designed around, and it remains undone.
+*Narrowed 2026-10-24 by `scientist-b`, re-derived first-hand from the consensus guidelines
+(Cheerie 2025, DOI `10.1016/j.ajhg.2025.02.017`; the quoted rules are in Data S1, text layer digest
+`60abe3f4f1a846e068bc6384d2b2bef8c06b5e60a714c628c9489ac410f8affd`, re-verified today), from the
+milasen report (DOI `10.1056/NEJMoa1813279`) and from the ASO-amenability taxonomy (DOI
+`10.1038/s41586-023-06277-0`), staged receipts `FTR-20261023-40139194-01`,
+`FTR-20261023-31597037-01`, `FTR-20261023-37438524-01`; the "never measured" half re-verified in
+`analysis/splice_allele_rna_evidence_20260922.md`. Sources are named by DOI and receipt id because
+these readings are `partial_fulltext_read` and **staged, not yet recorded**.*
 
 ### N-11 — 4-PBA / TUDCA on the ER-chaperone rationale → **wrong compartment**
 **Source ids:** DIS-004, DL-MECH-036, DL-MECH-037.
@@ -737,11 +837,46 @@ is true **only for ER/secretory proteins**. WWOX is cytosolic; the route is lyso
 is dead, **the molecule is not**: 4-PBA is also an HDAC inhibitor and could act as an HSP co-inducer —
 **a different mechanism**, to be re-evaluated on that basis only if the lysosomal arm is confirmed.
 
-### N-12 — HSP70 co-inducers (e.g. arimoclomol) for an SDR missense → **may accelerate the damage**
-**Source ids:** DL-MECH-047, CLAIM 019.
-**Failure mode:** *wrong direction, hidden inside a plausible one.* "It is a chaperone, therefore it
-helps folding" is false: **the sign depends on which chaperone and which route.** HSC70 does not
-rescue — it **delivers to the lysosome**. Proposed and withdrawn on the same day.
+### N-12 — HSP70 co-inducers (e.g. arimoclomol) for an SDR missense → **a hypothesis of harm, and it is still only a hypothesis**
+**Source ids:** DL-MECH-047, CLAIM 019, D-03.
+**Failure mode:** *wrong direction, hidden inside a plausible one* — **as a prediction, not as a
+measurement.** "It is a chaperone, therefore it helps folding" is false **as a default**: the sign
+depends on which chaperone and which route. The record used to state the consequence flatly; the
+three layers behind it are of three different kinds, and separating them is the whole correction.
+- **`DATO`, in a WWOX allele, in vitro.** For **WWOX-P252A** the protein is restored by lysosomal
+  inhibitors (chloroquine, NH₄Cl) and **not** by MG-132, 3-MA has no effect, HSC70 co-precipitates
+  **only** the mutant, and LAMP1 co-localisation is present ⇒ HSC70-associated **lysosomal**
+  turnover. Limits as the source states them: overexpression in thyroid-cancer lines and HEK293T,
+  not neurons and not patient cells; **CMA is not distinguished** from other HSC70/endolysosomal
+  routes without LAMP2A dependence or degron epistasis; **Q230P was not tested**; and the human
+  P252A/P282A homozygotes have **no neurological disease**, so the mechanism may transfer while the
+  severity does not (`DL-MECH-047`).
+- **`IPOTESI`, and this is the record's headline.** That **amplifying** HSP70 would therefore
+  *accelerate* the degradation of a destabilized SDR missense. **No HSP70 co-inducer has ever been
+  applied to any WWOX allele, in any system.** Arimoclomol appears in these records only in a
+  full-text-queue entry and in `D-03`, which itself says *"could accelerate"* — a conditional that
+  this record had hardened into a statement.
+- **One non-WWOX comparator points the other way, and it was never in the record.** In Gaucher
+  patient fibroblasts and stem-cell-derived neuron-like cells the co-inducer *"dose-dependently
+  increased the amount of GCase … across all tested genotypes"*, including the EndoH-resistant pool
+  — i.e. it **raised** a misfolded lysosomal client. Limits: an **ER-synthesised, secretory-route**
+  client, which is exactly the compartment N-11 rules out for WWOX; **no cytosolic client tested**;
+  the authors could not resolve which HSP70 family member acts and could not demonstrate reduced
+  substrate storage; the compound belongs to the funder. **NOT WWOX EVIDENCE.**
+⇒ **Proposed and withdrawn on the same day, and it stays withdrawn — on an untested direction, not
+on a measured harm.** Symmetrically, nothing above licenses proposing it either: the comparator is
+in the wrong compartment to carry the sign across.
+**`REVIVAL_TRIGGER`:** any measurement of a destabilized WWOX SDR missense (Q230P or P252A) under
+HSP70 amplification, **in either direction**; or a LAMP2A-dependence / degron-epistasis result that
+establishes the route as CMA, which would make the acceleration prediction testable instead of
+assumed.
+*Hypothesis and finding separated 2026-10-24 by `scientist-b`: the `DATO` layer re-derived today
+from `DL-MECH-047` as it now stands (including its 2026-10-03 rectification that only P252A falls
+in the SDR), the comparator read first-hand (Fog 2018, DOI `10.1016/j.ebiom.2018.11.037`, staged
+receipt `FTR-20261023-30497978-01`; `partial_fulltext_read`, **staged, not yet recorded**). The
+earlier wording — "HSC70 does not rescue — it **delivers to the lysosome**" as a flat statement
+under the headline "may accelerate the damage" — carried no tag distinguishing the P252A measurement
+from the Q230P prediction (`research/module_batch_selection_scientist-b_20261023.md` §3, §4.2).*
 
 ### N-13 — Pro-myelinating agents (clemastine, benztropine, T3, quetiapine) → **wrong cell compartment, and a closing window**
 **Source ids:** CLAIM 003, DL-MECH-031.
@@ -770,15 +905,46 @@ wherever the claim is cited in support of NAC/CoQ10/creatine/KD logic.
 
 ### N-15 — Counting seizure control as developmental protection → **the most consequential negative in the whole portfolio**
 **Source ids:** CLAIM 031, DL-MECH-039.
-**Failure mode:** *corrects a biomarker (seizures) but not the mechanism (development)*. In published
-WWOX children, cognitive and psychomotor impairment **precedes** the onset of epileptic encephalopathy
-and **does not improve** when epileptic activity is controlled: *"the developmental outcome was
-unfavourable with profound impairment **despite improvement of epileptic activity**"*. In one case
-vigabatrin **resolved** the spasms and at two years the child was profoundly delayed. Converging: in
-another cohort the only **non**-drug-resistant patient died at 8 years.
+**Failure mode:** *corrects a biomarker (seizures) but not the mechanism (development)*. **Quoted
+with the qualifications the source attaches, both of which this record had dropped.** The authors
+offer the observation as support for their own reading, not as a measured regularity: *"We believe
+that, in these children, the underlying cause itself (mutations in WWOX) caused both the severe
+cognitive impairment and the epileptic encephalopathy. **In support of this hypothesis** is the fact
+that the cognitive and psychomotor impairment preceded the onset of epileptic encephalopathy and did
+not improve with achievement of better control of epileptic activity **in some of these cases**"* —
+and the outcome sentence carries its own restriction: *"The developmental outcome was unfavourable
+with profound impairment despite improvement of epileptic activity **(e.g. in the first child)**"*.
+In that first child vigabatrin **resolved** the spasms and at two years the child was profoundly
+delayed. Converging, and it is **one patient counted once**: in another cohort the only
+**non**-drug-resistant patient died at 8 years — the same single patient that `CLAIM 033` reserve (4)
+reports from the same source, so the two records are not two supports.
+⚠️ **What the qualifier costs, stated rather than absorbed.** *"In some of these cases"* is of
+**ambiguous scope in the source and this record does not resolve it**: it may attach to the
+non-improvement, or to the achievement of better seizure control (blind locator audit,
+`BATCH_20261003_003`, carried in `CLAIM 031`). And the **order of onset is not shown for both
+children**: in child 2 seizures began at five weeks while failure to reach milestones is recorded at
+four months. So "impairment precedes the epileptic encephalopathy, in every case, and never
+improves" is **not** what was observed; what was observed is that in at least one of two children
+profound developmental impairment persisted through resolved spasms, with the authors reading the
+sequence as support for a shared cause.
 ⇒ This is a **DEE, not an EE**. Seizure control remains fully indicated — quality of life, status
 epilepticus (a documented cause of death), SUDEP, sleep, manageability — but **must not be scored as
-disease modification**. Limits: N=2, observational, uncontrolled.
+disease modification**. Limits: N=2, observational, uncontrolled, and the load-bearing sentence is
+**qualified in the source**, as above. 🔵 **The conclusion survives the narrowing, and the headline
+is why it is worth saying so:** scoring seizure control as developmental protection would need the
+*opposite* observation — a WWOX child whose developmental trajectory **improved** when seizures came
+under control — and the qualifier does not supply one; it only limits how many of these two children
+the non-improvement covers. **`REVIVAL_TRIGGER`:** such a case, reported with a developmental
+measure before and after seizure control, in any WWOX series. Whether one already exists in the
+literature was **not** measured here.
+*Qualifier restored 2026-10-24 by `scientist-b`, re-derived first-hand from the source text layer
+(Shaukat 2018, [[paper_registry_current#PAPER 045]]; derived text digest
+`ae3103d907aceef77695534708bca43e6b476fca12b401ca0f8c0785842ade78`, re-verified today) and
+reconciled with `CLAIM 031`, which has carried *"in some of these cases"*, the scope ambiguity and
+the order-of-onset gap since 2026-10-03 (`CC-20261003W4-A-SHAUKAT-01`) while this record carried
+none of the three; the parenthesis *"(e.g. in the first child)"* was dropped from the quotation and
+is restored here. Drift measured in
+`research/module_batch_selection_scientist-b_20261023.md` §3, §4.2.*
 **Corollary, and it is the reason this file exists:** if the developmental outcome does not respond to
 symptom control, **only causal levers can change it** — which is why R-01 and the allele-level chains
 carry the weight, and why every downstream candidate in §4 is honestly labelled as symptomatic or

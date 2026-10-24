@@ -1,0 +1,150 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "_note": "Operator-authorised wording repair of four records of disease-models/wwox/analysis/mechanism_intervention_map.md that were measured on 2026-10-23 (MODULE-B-20261023) to state more than their sources, plus two further flags handed over mid-task by the coordinator from scientist-c's measurement of 2026-10-24. Ordinary scientific maintenance in the analysis layer: no canonical current file touched, no receipt recorded.",
+ "TASK_ID": "MAP-REPAIR-B-20261024",
+ "DIRECTIVE_VERSION": 2,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "scientist-b",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Re-verify each flagged record against its source before touching it, then narrow the overstatement to what the source supports, restore dropped qualifications and separate hypothesis from finding; preserve the underlying scientific question and every alternative hypothesis; say where the measurement was never made; mark each edit with the date and the source it was re-derived from.",
+ "SCOPE": {
+  "records": ["N-06", "N-08", "N-10", "N-12", "N-15"],
+  "file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
+  "inputs": [
+   "disease-models/wwox/research/module_batch_selection_scientist-b_20261023.md",
+   "disease-models/wwox/research/module_linkage_and_replicate_scientist-c_20261024.md"
+  ],
+  "out_of_scope": [
+   "the four scientific current files",
+   "receipt recording (the seven readings stay staged)",
+   "row C10 of analysis/therapeutic_translation_second_pass.md, which reproduces N-06's corrected sentence and is flagged in the record rather than edited"
+  ]
+ },
+ "ACCEPTANCE_CRITERIA": [
+  "per record: the source sentence quoted, what the record claimed, and a rewrite that goes no further",
+  "every edit dated and attributed to the artefact it was re-derived from",
+  "no narrowed claim turned into a denial; alternative hypotheses and revival triggers preserved or added",
+  "LINT, growth_anchors (unread_premises at zero), public_release_gate unchanged"
+ ],
+ "DEPENDENCIES": [
+  "MODULE-B-20261023 (the measurement being acted on; its receipts remain staged, not recorded)",
+  "scientist-c's identifier work of 2026-10-24, which created PAPER 557 / PAPER 562 for N-08"
+ ],
+ "REVIEW_REQUIREMENT": "Mirror ex post",
+ "INTERACTION_MODE": "AUTONOMOUS",
+ "RETRY_POLICY": "resume idempotently; each record's edit is independent",
+ "DELIVERABLE": "the five edited records, this task record, the report",
+ "CURRENT_STATE": "COMPLETE_PENDING_LANDING",
+ "assigned_on": "2026-10-24",
+ "TASK_ACK": {
+  "TASK_ID": "MAP-REPAIR-B-20261024",
+  "DIRECTIVE_VERSION": 2,
+  "GENERATION": 1,
+  "DECISION": "ACCEPTED",
+  "ACTOR_ID": "scientist-b",
+  "acked_at": "2026-10-24T00:00:00Z",
+  "reading_mode": "PRIMARY_EVIDENCE_READ (re-verification of already-read artefacts; no new acquisition)"
+ },
+ "TASK_CLAIM": {
+  "TASK_ID": "MAP-REPAIR-B-20261024",
+  "GENERATION": 1,
+  "ACTOR_ID": "scientist-b",
+  "claimed_at": "2026-10-24T00:00:00Z",
+  "durable_pointer": "ledger/tasks/scientist-b/MAP-REPAIR-B-20261024.json on branch task/map-overstatement-20261024"
+ },
+ "RE_VERIFICATION": [
+  {
+   "record": "N-08",
+   "source": "Abdelmalak 2013, DOI 10.1016/j.ymgme.2013.03.019, staged receipt FTR-20261023-23611579-01",
+   "verdict": "OVERSTATED — confirmed at source. The paediatric nerve finding is asymptomatic nerve-conduction worsening in 3 of 8, drug paused or reduced; the symptomatic cases are a separate older-adolescent/adult MELAS trial the authors only cite; the authors state the design cannot separate drug from disease.",
+   "action": "narrowed; headline rewritten; 'dominated' kept in the body and labelled untested; 'no paper measures dichloroacetate in any WWOX system' recorded"
+  },
+  {
+   "record": "N-10",
+   "source": "Cheerie 2025 Data S1 text layer, digest 60abe3f4f1a846e068bc6384d2b2bef8c06b5e60a714c628c9489ac410f8affd (re-hashed today); DOI 10.1016/j.ajhg.2025.02.017; plus DOI 10.1056/NEJMoa1813279 and DOI 10.1038/s41586-023-06277-0; and analysis/splice_allele_rna_evidence_20260922.md",
+   "verdict": "OVERSTATED IN STRENGTH, AND STRONGER THAN YESTERDAY'S NOTE SAID IN ONE DIRECTION — the guideline carries BOTH a hard positional rule ('variants within 5 bp ... are considered not eligible', which a canonical acceptor meets on sequence alone) AND a functional rule whose strongest word is 'most likely not eligible' and whose test ('destroyed' = no wild-type transcript in functional analysis) has never been run on the reference acceptor allele.",
+   "action": "headline changed from 'the modality cannot do the job' to the guideline's verdict; both routes quoted and separated; the never-measured transcript and the guideline's own faint-band warning recorded; reopening condition stated"
+  },
+  {
+   "record": "N-12",
+   "source": "DL-MECH-047 as it now stands (including its 2026-10-03 rectification), D-03, and Fog 2018, DOI 10.1016/j.ebiom.2018.11.037, staged receipt FTR-20261023-30497978-01",
+   "verdict": "HYPOTHESIS WRITTEN AS FINDING — confirmed. The measurement is HSC70-associated lysosomal turnover of WWOX-P252A in overexpression; the acceleration of a destabilized SDR missense under HSP70 amplification is untested in any WWOX allele, and D-03 itself says 'could accelerate'.",
+   "action": "DATO / IPOTESI / non-WWOX comparator separated into three labelled layers; the comparator (which points the other way, in the wrong compartment) added; REVIVAL_TRIGGER added in both directions"
+  },
+  {
+   "record": "N-15",
+   "source": "Shaukat 2018 derived text layer, digest ae3103d907aceef77695534708bca43e6b476fca12b401ca0f8c0785842ade78 (re-hashed today); PAPER 045; reconciled with CLAIM 031",
+   "verdict": "QUALIFIER DROPPED — confirmed, and a second dropped qualification found at source today: the quoted outcome sentence ends '(e.g. in the first child)', which the record had removed from inside the quotation. The authors also present the sequence as support for their own hypothesis, not as a measured regularity.",
+   "action": "both qualifications restored, the scope ambiguity and the order-of-onset gap carried over from CLAIM 031, the convergent cohort observation marked as one patient counted once; the conclusion (DEE not EE) left standing with a stated reason and a revival trigger"
+  },
+  {
+   "record": "N-06",
+   "source": "DL-BIO-008 as it now stands (coordinator hand-over; scientist-c's measurement of 2026-10-24)",
+   "verdict": "UNSOURCED COUNT — confirmed against the record: it names three sources, two human, of which exactly one is a complete human metabolic screen; the third is a mouse. 'Four independent human sources' is supported nowhere.",
+   "action": "count rewritten from the record; the conclusion (the biomarker does not report) kept with its smaller support; the duplicate sentence in therapeutic_translation_second_pass.md flagged, not edited"
+  }
+ ],
+ "DEFAULTS_TAKEN": [
+  {
+   "condition": "the coordinator attributed the complete human metabolic screen to PMID 30362252, while DL-BIO-008 attributes the entirely-normal screen to 24456803 and the 'extremely low' cerebral lactate MRS case to 30362252",
+   "default_taken": "followed the record, not the hand-over message, and wrote the roles as the record states them without naming either PMID in the analysis layer",
+   "why_safe": "the artefact outranks a day-old or second-hand measurement; the discrepancy is reported to the caller"
+  },
+  {
+   "condition": "a PMID literal cited in disease-models/wwox/analysis/ opens an unread premise unless cleared by a recorded complete_fulltext_read, a registry 'full text reviewed' declaration or a full-text-queue entry — and none of the six new readings clears it, since they are partial and staged, with the ratchet at zero headroom",
+   "default_taken": "cited the new sources by registry id, DOI, artefact digest and staged receipt id, and deliberately wrote no PMID literal for them; stated the reason in the record",
+   "why_safe": "measured both ways: unread_premises stays at 0; no reader loses the route to the artefact"
+  },
+  {
+   "condition": "two source statements in the Lee 2022 seizure paper are cited from prior work rather than measured in it",
+   "default_taken": "wrote 'citing prior work, not measuring it' into the record and named no dose",
+   "why_safe": "the attribution is the whole point of the sentence; the no-dose rule for this compound holds"
+  },
+  {
+   "condition": "N-15's narrowing could be read as a denial of the negative",
+   "default_taken": "stated explicitly that the qualifier limits how many of two children the non-improvement covers and does not supply the opposite observation, and added a REVIVAL_TRIGGER for that observation while declaring that whether one exists was not measured",
+   "why_safe": "it is the narrowing the operator authorised, with the asymmetry stated rather than assumed"
+  },
+  {
+   "condition": "N-06 and N-08 had no Source ids line while every neighbouring record had one",
+   "default_taken": "added them (DL-BIO-008; PAPER 557 / PAPER 562 / DL-MECH-020), as the pending identifier work proposed",
+   "why_safe": "the ids exist in the registries and were resolved today; a concurrent task landing the same lines is an ordinary integrator merge"
+  }
+ ],
+ "STOP_LOG": [
+  {
+   "class": "none",
+   "entry": "No stop taken. The mid-task hand-over from the coordinator was absorbed into scope as DIRECTIVE_VERSION 2 without interrupting the pass.",
+   "time_waited": "0"
+  }
+ ],
+ "GATES": {
+  "legend_lint": "WARN, 16 warnings — byte-identical to the pre-edit baseline on this branch",
+  "growth_anchors": "PASS; unread_premises 0 before and after",
+  "public_release_gate": "PASS",
+  "test_section_references": "PASS (census unchanged)"
+ },
+ "skills_considered": [
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED and not performable by the author: this pass narrows wording in the analysis layer and touches no consolidated baseline claim, but a blind audit of the four quote/proposition pairs is the right ex-post check and is named here so it is not lost."
+  },
+  {
+   "skill": "legend-session-self-eval",
+   "used": false,
+   "reason": "Declined for a scoped repair of five records; the diagnosis that drove it is section 4 of the 2026-10-23 selection note. Owed if the integrator wants a session_evaluations record."
+  },
+  {
+   "skill": "legend-capability-scout",
+   "used": false,
+   "reason": "CHANGE = NONE from this actor. The reusable gap is already recorded (selection note §4.3, receipts by premise); this pass adds one observation to it — a record's wording is never checked against the claim or ledger record it rests on, and all five defects here are that single failure mode."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional; the adversarial re-retrieval it would supply was already done for N-10 on 2026-10-23."
+  }
+ ]
+}
