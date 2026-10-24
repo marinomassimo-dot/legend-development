@@ -277,13 +277,29 @@
      "receipt": "FTR-20261021-42875792-01",
      "what_changed": "UNVERIFIABLE repaired: 'not measured here' is restated as 'not stated, not established here' because the paper runs bulk RNA-seq on these lines. Repair is UNAUDITED: it was written by the reader whose entry failed, and is not certified by that reader.",
      "audit": {
-      "auditors": 1,
+      "auditors": 2,
       "verdicts": [
-       "UNVERIFIABLE"
+       "UNVERIFIABLE",
+       "SUPPORTED (re-judged in the blind audit of the R1 repairs, disease-models/wwox/research/page_adjudications/locator_audit_R1_repairs_20261024.md, 2026-10-24: the rewritten wording was judged against the native artefacts, without the author's notes, the task record or the earlier audit's reasoning; 0 of 21 triples adverse)."
       ],
       "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_20261022.md",
       "triple": 2,
-      "audited_on": "2026-10-22"
+      "audited_on": "2026-10-22",
+      "audit_records": [
+       {
+        "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_20261022.md",
+        "triple": 2,
+        "audited_on": "2026-10-22",
+        "verdict": "UNVERIFIABLE"
+       },
+       {
+        "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_R1_repairs_20261024.md",
+        "triple": 2,
+        "audited_on": "2026-10-24",
+        "verdict": "SUPPORTED"
+       }
+      ],
+      "audit_file_note": "The scalar audit_file, triple and audited_on name the FIRST audit of this triple and are preserved unchanged; every audit of it, in order, is in audit_records."
      }
     }
    },
