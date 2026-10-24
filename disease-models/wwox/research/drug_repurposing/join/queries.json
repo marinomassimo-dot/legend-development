@@ -30884,22 +30884,231 @@
   "candidate": "mTOR inhibitors",
   "claims_named": [],
   "decisive_test": "a protein-level mTORC1 readout (pS6, p4E-BP1) in a WWOX-deficient neuronal",
-  "digest": "77653ff9d01331c5",
+  "digest": "3ea078daddd846ab",
   "intervention": "*`INSUFFICIENT` — mai misurato a livello proteico in alcun sistema WWOX.* The reflex move in genetic DEE, imported from TSC.",
   "kind": "mechanism_record",
-  "leads_named": [],
+  "leads_named": [
+   "DL-MECH-034"
+  ],
   "linkage": {
    "ids_in_registry_without_pmid": [],
-   "ids_named": [],
+   "ids_named": [
+    "DL-MECH-034",
+    "PAPER 039"
+   ],
    "ids_not_found_in_registry": [],
-   "ids_reaching_a_pmid": []
+   "ids_reaching_a_pmid": [
+    "DL-MECH-034",
+    "PAPER 039"
+   ]
   },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-01",
-  "origin_line": 630,
+  "origin_line": 635,
   "origin_title": "mTOR inhibitors (rapamycin / everolimus) → **`INSUFFICIENT` — mai misurato a livello proteico in alcun sistema WWOX**",
-  "papers_named": [],
-  "pmids": [],
+  "papers_named": [
+   "PAPER 039"
+  ],
+  "pmids": [
+   "15064722",
+   "17803050",
+   "17823927",
+   "19500159",
+   "22193544",
+   "24308844",
+   "24369382",
+   "24456803",
+   "24932569",
+   "25012504",
+   "25331887",
+   "25411445",
+   "25649963",
+   "25650666",
+   "26345274",
+   "26355344",
+   "26499798",
+   "26857392",
+   "27308416",
+   "27495153",
+   "27551439",
+   "29164763",
+   "29481666",
+   "29724996",
+   "29808465",
+   "30202070",
+   "30356099",
+   "30362252",
+   "30853297",
+   "31340538",
+   "32581702",
+   "33255508",
+   "33916893",
+   "34268881",
+   "35328751",
+   "35573960",
+   "35716775",
+   "35792847",
+   "36271927",
+   "36779245",
+   "36828035",
+   "36926521",
+   "36937954",
+   "38161429",
+   "39894307",
+   "40336300",
+   "41124647",
+   "42248868",
+   "42721537"
+  ],
+  "pmids_via_records": {
+   "15064722": [
+    "DL-MECH-034"
+   ],
+   "17803050": [
+    "DL-MECH-034"
+   ],
+   "17823927": [
+    "DL-MECH-034"
+   ],
+   "19500159": [
+    "DL-MECH-034"
+   ],
+   "22193544": [
+    "DL-MECH-034"
+   ],
+   "24308844": [
+    "DL-MECH-034"
+   ],
+   "24369382": [
+    "DL-MECH-034"
+   ],
+   "24456803": [
+    "DL-MECH-034"
+   ],
+   "24932569": [
+    "DL-MECH-034"
+   ],
+   "25012504": [
+    "DL-MECH-034"
+   ],
+   "25331887": [
+    "DL-MECH-034"
+   ],
+   "25411445": [
+    "DL-MECH-034"
+   ],
+   "25649963": [
+    "DL-MECH-034"
+   ],
+   "25650666": [
+    "DL-MECH-034"
+   ],
+   "26345274": [
+    "DL-MECH-034"
+   ],
+   "26355344": [
+    "DL-MECH-034"
+   ],
+   "26499798": [
+    "DL-MECH-034"
+   ],
+   "26857392": [
+    "DL-MECH-034"
+   ],
+   "27308416": [
+    "DL-MECH-034"
+   ],
+   "27495153": [
+    "DL-MECH-034"
+   ],
+   "27551439": [
+    "DL-MECH-034"
+   ],
+   "29164763": [
+    "DL-MECH-034"
+   ],
+   "29481666": [
+    "DL-MECH-034"
+   ],
+   "29724996": [
+    "DL-MECH-034"
+   ],
+   "29808465": [
+    "DL-MECH-034"
+   ],
+   "30202070": [
+    "DL-MECH-034"
+   ],
+   "30356099": [
+    "DL-MECH-034"
+   ],
+   "30362252": [
+    "DL-MECH-034"
+   ],
+   "30853297": [
+    "DL-MECH-034"
+   ],
+   "31340538": [
+    "DL-MECH-034"
+   ],
+   "32581702": [
+    "DL-MECH-034"
+   ],
+   "33255508": [
+    "DL-MECH-034"
+   ],
+   "33916893": [
+    "DL-MECH-034"
+   ],
+   "34268881": [
+    "PAPER 039"
+   ],
+   "35328751": [
+    "DL-MECH-034"
+   ],
+   "35573960": [
+    "DL-MECH-034"
+   ],
+   "35716775": [
+    "DL-MECH-034"
+   ],
+   "35792847": [
+    "DL-MECH-034"
+   ],
+   "36271927": [
+    "DL-MECH-034"
+   ],
+   "36779245": [
+    "DL-MECH-034"
+   ],
+   "36828035": [
+    "DL-MECH-034"
+   ],
+   "36926521": [
+    "DL-MECH-034"
+   ],
+   "36937954": [
+    "DL-MECH-034"
+   ],
+   "38161429": [
+    "DL-MECH-034"
+   ],
+   "39894307": [
+    "DL-MECH-034"
+   ],
+   "40336300": [
+    "DL-MECH-034"
+   ],
+   "41124647": [
+    "DL-MECH-034"
+   ],
+   "42248868": [
+    "DL-MECH-034"
+   ],
+   "42721537": [
+    "DL-MECH-034"
+   ]
+  },
   "query_id": "Q-N-01",
   "record_class": "negative_translation",
   "target": "UNKNOWN",
@@ -30910,24 +31119,49 @@
  {
   "axis": "all",
   "candidate": "Lithium as a WWOX-specific disease modifier",
-  "claims_named": [],
+  "claims_named": [
+   "CLAIM 016"
+  ],
   "decisive_test": "a PTZ arm with an explicit tested `−/−` vs `+/+` contrast, or a different",
-  "digest": "6934db1385a48924",
+  "digest": "d1bee0ba0eb11a76",
   "intervention": "*evidence transfer that was never genotype-controlled*, compounded by *wrong",
   "kind": "mechanism_record",
   "leads_named": [],
   "linkage": {
    "ids_in_registry_without_pmid": [],
-   "ids_named": [],
+   "ids_named": [
+    "CLAIM 016",
+    "PAPER 019"
+   ],
    "ids_not_found_in_registry": [],
-   "ids_reaching_a_pmid": []
+   "ids_reaching_a_pmid": [
+    "CLAIM 016",
+    "PAPER 019"
+   ]
   },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-02",
-  "origin_line": 641,
+  "origin_line": 647,
   "origin_title": "Lithium as a WWOX-specific disease modifier → **the evidence does not say what it was read as saying**",
-  "papers_named": [],
-  "pmids": [],
+  "papers_named": [
+   "PAPER 019"
+  ],
+  "pmids": [
+   "22193544",
+   "32000863",
+   "34831305"
+  ],
+  "pmids_via_records": {
+   "22193544": [
+    "CLAIM 016"
+   ],
+   "32000863": [
+    "PAPER 019"
+   ],
+   "34831305": [
+    "CLAIM 016"
+   ]
+  },
   "query_id": "Q-N-02",
   "record_class": "negative_translation",
   "target": "UNKNOWN",
@@ -30940,22 +31174,35 @@
   "candidate": "Sodium-channel blockers",
   "claims_named": [],
   "decisive_test": "documented Na-blocker response in WWOX-BS cases, or a Nav dependence measured",
-  "digest": "730942a85b225f49",
+  "digest": "943a0a0bf02fbd6b",
   "intervention": "*the target is not causally downstream of WWOX.* Precision therapy in",
   "kind": "mechanism_record",
-  "leads_named": [],
+  "leads_named": [
+   "DL-REPO-001"
+  ],
   "linkage": {
    "ids_in_registry_without_pmid": [],
-   "ids_named": [],
+   "ids_named": [
+    "DL-REPO-001"
+   ],
    "ids_not_found_in_registry": [],
-   "ids_reaching_a_pmid": []
+   "ids_reaching_a_pmid": [
+    "DL-REPO-001"
+   ]
   },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-03",
-  "origin_line": 649,
+  "origin_line": 656,
   "origin_title": "Sodium-channel blockers (carbamazepine, phenytoin, oxcarbazepine) → **target not causally downstream of WWOX**",
   "papers_named": [],
-  "pmids": [],
+  "pmids": [
+   "42190144"
+  ],
+  "pmids_via_records": {
+   "42190144": [
+    "DL-REPO-001"
+   ]
+  },
   "query_id": "Q-N-03",
   "record_class": "negative_translation",
   "target": "UNKNOWN",
@@ -30966,24 +31213,107 @@
  {
   "axis": "all",
   "candidate": "Broad GABAergic push",
-  "claims_named": [],
+  "claims_named": [
+   "CLAIM 001",
+   "CLAIM 031"
+  ],
   "decisive_test": "`E_GABA` measurement in a WWOX system; or a WWOX cohort with structured VABAM",
-  "digest": "f64cd1ecd61f2a7a",
+  "digest": "3f84015ede93f0e3",
   "intervention": "*corrects a marker, not the mechanism* — plus an unmeasured premise. VABAM is",
   "kind": "mechanism_record",
-  "leads_named": [],
+  "leads_named": [
+   "DL-MECH-035"
+  ],
   "linkage": {
    "ids_in_registry_without_pmid": [],
-   "ids_named": [],
+   "ids_named": [
+    "CLAIM 001",
+    "CLAIM 031",
+    "DL-MECH-035"
+   ],
    "ids_not_found_in_registry": [],
-   "ids_reaching_a_pmid": []
+   "ids_reaching_a_pmid": [
+    "CLAIM 001",
+    "CLAIM 031",
+    "DL-MECH-035"
+   ]
   },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-04",
-  "origin_line": 657,
+  "origin_line": 665,
   "origin_title": "Broad GABAergic push (chronic high-dose benzodiazepines; vigabatrin as a mechanism play) → **premise unmeasured, and a real safety signal**",
   "papers_named": [],
-  "pmids": [],
+  "pmids": [
+   "30361190",
+   "34268881",
+   "35573960",
+   "36537114",
+   "36686527",
+   "36779245",
+   "37583270",
+   "39101447",
+   "39570186",
+   "39641935",
+   "40875931",
+   "41442931",
+   "42092735",
+   "42422765"
+  ],
+  "pmids_via_records": {
+   "30361190": [
+    "CLAIM 001",
+    "CLAIM 031",
+    "DL-MECH-035"
+   ],
+   "34268881": [
+    "DL-MECH-035"
+   ],
+   "35573960": [
+    "CLAIM 001",
+    "DL-MECH-035"
+   ],
+   "36537114": [
+    "CLAIM 001",
+    "DL-MECH-035"
+   ],
+   "36686527": [
+    "CLAIM 031"
+   ],
+   "36779245": [
+    "CLAIM 031"
+   ],
+   "37583270": [
+    "CLAIM 001",
+    "DL-MECH-035"
+   ],
+   "39101447": [
+    "CLAIM 001",
+    "DL-MECH-035"
+   ],
+   "39570186": [
+    "CLAIM 001",
+    "DL-MECH-035"
+   ],
+   "39641935": [
+    "CLAIM 001",
+    "DL-MECH-035"
+   ],
+   "40875931": [
+    "CLAIM 001",
+    "DL-MECH-035"
+   ],
+   "41442931": [
+    "CLAIM 001",
+    "DL-MECH-035"
+   ],
+   "42092735": [
+    "CLAIM 001",
+    "DL-MECH-035"
+   ],
+   "42422765": [
+    "CLAIM 031"
+   ]
+  },
   "query_id": "Q-N-04",
   "record_class": "negative_translation",
   "target": "UNKNOWN",
@@ -30992,24 +31322,233 @@
  {
   "axis": "all",
   "candidate": "Boosting WWOX expression alone",
-  "claims_named": [],
+  "claims_named": [
+   "CLAIM 019"
+  ],
   "decisive_test": "evidence that a compound-heterozygous transcript behaves differently from the",
-  "digest": "ae4b6d4eee237e96",
+  "digest": "ab745624bbdce95b",
   "intervention": "*the target is not the bottleneck.* Normal transcript with protein not detected",
   "kind": "mechanism_record",
-  "leads_named": [],
+  "leads_named": [
+   "DL-MECH-069",
+   "DL-MOL-004"
+  ],
   "linkage": {
    "ids_in_registry_without_pmid": [],
-   "ids_named": [],
+   "ids_named": [
+    "CLAIM 019",
+    "DL-MECH-069",
+    "DL-MOL-004"
+   ],
    "ids_not_found_in_registry": [],
-   "ids_reaching_a_pmid": []
+   "ids_reaching_a_pmid": [
+    "CLAIM 019",
+    "DL-MECH-069",
+    "DL-MOL-004"
+   ]
   },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-05",
-  "origin_line": 666,
+  "origin_line": 675,
   "origin_title": "Boosting WWOX expression alone (CRISPRa, anti-miR-153, small-molecule activators) → **downstream bottleneck, and an allele-asymmetric amplifier**",
   "papers_named": [],
-  "pmids": [],
+  "pmids": [
+   "16223882",
+   "17803050",
+   "19465938",
+   "21964341",
+   "23030478",
+   "23583307",
+   "24369382",
+   "25331887",
+   "26857392",
+   "27495153",
+   "29808465",
+   "30202070",
+   "30356099",
+   "30361190",
+   "30619736",
+   "30853297",
+   "31340538",
+   "32368285",
+   "32581702",
+   "33195192",
+   "33916893",
+   "34015398",
+   "34268881",
+   "34747138",
+   "34831305",
+   "35573960",
+   "35792847",
+   "36499501",
+   "36779245",
+   "36926521",
+   "36937954",
+   "37324196",
+   "37519886",
+   "37781246",
+   "38161429",
+   "40336300",
+   "40377402",
+   "40524961",
+   "40875931",
+   "41124647",
+   "42128308",
+   "42190144",
+   "42248868",
+   "42395553",
+   "42422765"
+  ],
+  "pmids_via_records": {
+   "16223882": [
+    "DL-MOL-004"
+   ],
+   "17803050": [
+    "DL-MECH-069"
+   ],
+   "19465938": [
+    "DL-MOL-004"
+   ],
+   "21964341": [
+    "DL-MOL-004"
+   ],
+   "23030478": [
+    "DL-MOL-004"
+   ],
+   "23583307": [
+    "DL-MOL-004"
+   ],
+   "24369382": [
+    "CLAIM 019",
+    "DL-MECH-069"
+   ],
+   "25331887": [
+    "DL-MECH-069",
+    "DL-MOL-004"
+   ],
+   "26857392": [
+    "DL-MECH-069"
+   ],
+   "27495153": [
+    "DL-MECH-069"
+   ],
+   "29808465": [
+    "CLAIM 019",
+    "DL-MECH-069"
+   ],
+   "30202070": [
+    "DL-MECH-069",
+    "DL-MOL-004"
+   ],
+   "30356099": [
+    "CLAIM 019",
+    "DL-MECH-069"
+   ],
+   "30361190": [
+    "DL-MECH-069"
+   ],
+   "30619736": [
+    "DL-MECH-069"
+   ],
+   "30853297": [
+    "CLAIM 019",
+    "DL-MECH-069"
+   ],
+   "31340538": [
+    "DL-MECH-069"
+   ],
+   "32368285": [
+    "DL-MOL-004"
+   ],
+   "32581702": [
+    "DL-MECH-069"
+   ],
+   "33195192": [
+    "DL-MOL-004"
+   ],
+   "33916893": [
+    "CLAIM 019",
+    "DL-MECH-069"
+   ],
+   "34015398": [
+    "DL-MOL-004"
+   ],
+   "34268881": [
+    "DL-MOL-004"
+   ],
+   "34747138": [
+    "DL-MOL-004"
+   ],
+   "34831305": [
+    "DL-MOL-004"
+   ],
+   "35573960": [
+    "DL-MECH-069"
+   ],
+   "35792847": [
+    "DL-MECH-069"
+   ],
+   "36499501": [
+    "DL-MECH-069"
+   ],
+   "36779245": [
+    "CLAIM 019",
+    "DL-MECH-069"
+   ],
+   "36926521": [
+    "DL-MECH-069",
+    "DL-MOL-004"
+   ],
+   "36937954": [
+    "DL-MECH-069",
+    "DL-MOL-004"
+   ],
+   "37324196": [
+    "DL-MECH-069"
+   ],
+   "37519886": [
+    "DL-MECH-069"
+   ],
+   "37781246": [
+    "DL-MECH-069"
+   ],
+   "38161429": [
+    "DL-MECH-069"
+   ],
+   "40336300": [
+    "DL-MECH-069",
+    "DL-MOL-004"
+   ],
+   "40377402": [
+    "DL-MOL-004"
+   ],
+   "40524961": [
+    "DL-MOL-004"
+   ],
+   "40875931": [
+    "DL-MOL-004"
+   ],
+   "41124647": [
+    "DL-MECH-069",
+    "DL-MOL-004"
+   ],
+   "42128308": [
+    "DL-MOL-004"
+   ],
+   "42190144": [
+    "DL-MOL-004"
+   ],
+   "42248868": [
+    "DL-MECH-069",
+    "DL-MOL-004"
+   ],
+   "42395553": [
+    "DL-MOL-004"
+   ],
+   "42422765": [
+    "DL-MOL-004"
+   ]
+  },
   "query_id": "Q-N-05",
   "record_class": "negative_translation",
   "target": "UNKNOWN",
@@ -31022,7 +31561,7 @@
   "candidate": "Lactate, and metabolic blood biomarkers generally, as WWOX readouts",
   "claims_named": [],
   "decisive_test": "Seahorse/fluxomics showing a real bioenergetic shift in donor-derived cells.",
-  "digest": "7d220fa895f75e58",
+  "digest": "1aec36e15fcb515f",
   "intervention": "*corrects/reports a biomarker, not the mechanism* — inverted: here the biomarker",
   "kind": "mechanism_record",
   "leads_named": [],
@@ -31034,7 +31573,7 @@
   },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-06",
-  "origin_line": 679,
+  "origin_line": 689,
   "origin_title": "Lactate, and metabolic blood biomarkers generally, as WWOX readouts → **a biomarker that is not measuring the mechanism**",
   "papers_named": [],
   "pmids": [],
@@ -31048,24 +31587,45 @@
  {
   "axis": "all",
   "candidate": "Digoxin",
-  "claims_named": [],
+  "claims_named": [
+   "CLAIM 025"
+  ],
   "decisive_test": "UNKNOWN",
-  "digest": "8eb0334cb010afa7",
+  "digest": "aa4b5a0d7b641745",
   "intervention": "*toxicity incompatible* + *wrong endpoint*. The only approved drug that corrects a",
   "kind": "mechanism_record",
   "leads_named": [],
   "linkage": {
    "ids_in_registry_without_pmid": [],
-   "ids_named": [],
+   "ids_named": [
+    "CLAIM 025",
+    "PAPER 091"
+   ],
    "ids_not_found_in_registry": [],
-   "ids_reaching_a_pmid": []
+   "ids_reaching_a_pmid": [
+    "CLAIM 025",
+    "PAPER 091"
+   ]
   },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-07",
-  "origin_line": 687,
+  "origin_line": 697,
   "origin_title": "Digoxin (HIF1α inhibition) → **right target validation, wrong clinical object**",
-  "papers_named": [],
-  "pmids": [],
+  "papers_named": [
+   "PAPER 091"
+  ],
+  "pmids": [
+   "29724996",
+   "42589397"
+  ],
+  "pmids_via_records": {
+   "29724996": [
+    "PAPER 091"
+   ],
+   "42589397": [
+    "CLAIM 025"
+   ]
+  },
   "query_id": "Q-N-07",
   "record_class": "negative_translation",
   "target": "UNKNOWN",
@@ -31076,7 +31636,7 @@
   "candidate": "Dichloroacetate",
   "claims_named": [],
   "decisive_test": "UNKNOWN",
-  "digest": "59326f19cac3e386",
+  "digest": "1d2c37ff3c3c6d18",
   "intervention": "*toxicity incompatible* + *two-hop inference*. Dose-dependent peripheral",
   "kind": "mechanism_record",
   "leads_named": [],
@@ -31088,7 +31648,7 @@
   },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-08",
-  "origin_line": 697,
+  "origin_line": 708,
   "origin_title": "Dichloroacetate (PDK inhibition) → **dominated, and neurotoxic**",
   "papers_named": [],
   "pmids": [],
@@ -31102,24 +31662,61 @@
  {
   "axis": "all",
   "candidate": "pTyr33-WWOX peptide as functional restoration",
-  "claims_named": [],
+  "claims_named": [
+   "CLAIM 023"
+  ],
   "decisive_test": "UNKNOWN",
-  "digest": "82f73b67d1b78e4c",
+  "digest": "d9597f0810db42b6",
   "intervention": "*acts in the wrong direction.* Phospho-Tyr33 WOX1 is **pro-apoptotic**; the peptide",
   "kind": "mechanism_record",
-  "leads_named": [],
+  "leads_named": [
+   "DL-MOL-008"
+  ],
   "linkage": {
    "ids_in_registry_without_pmid": [],
-   "ids_named": [],
+   "ids_named": [
+    "CLAIM 023",
+    "DL-MOL-008"
+   ],
    "ids_not_found_in_registry": [],
-   "ids_reaching_a_pmid": []
+   "ids_reaching_a_pmid": [
+    "CLAIM 023",
+    "DL-MOL-008"
+   ]
   },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-09",
-  "origin_line": 703,
+  "origin_line": 714,
   "origin_title": "pTyr33-WWOX peptide as functional restoration → **the direction is inverted**",
   "papers_named": [],
-  "pmids": [],
+  "pmids": [
+   "12514174",
+   "15070730",
+   "18371080",
+   "21115974",
+   "26355344",
+   "32185845"
+  ],
+  "pmids_via_records": {
+   "12514174": [
+    "CLAIM 023"
+   ],
+   "15070730": [
+    "CLAIM 023"
+   ],
+   "18371080": [
+    "DL-MOL-008"
+   ],
+   "21115974": [
+    "CLAIM 023"
+   ],
+   "26355344": [
+    "DL-MOL-008"
+   ],
+   "32185845": [
+    "CLAIM 023"
+   ]
+  },
   "query_id": "Q-N-09",
   "record_class": "negative_translation",
   "target": "UNKNOWN",
@@ -31132,22 +31729,119 @@
   "candidate": "Splice-switching ASO for a canonical acceptor allele",
   "claims_named": [],
   "decisive_test": "UNKNOWN",
-  "digest": "60bccefef9b03297",
+  "digest": "fbcc3431159332be",
   "intervention": "*derived from a mechanism that cannot work.* SSOs **mask** elements; they do not",
   "kind": "mechanism_record",
-  "leads_named": [],
+  "leads_named": [
+   "DL-MOL-011"
+  ],
   "linkage": {
    "ids_in_registry_without_pmid": [],
-   "ids_named": [],
+   "ids_named": [
+    "DL-MOL-011"
+   ],
    "ids_not_found_in_registry": [],
-   "ids_reaching_a_pmid": []
+   "ids_reaching_a_pmid": [
+    "DL-MOL-011"
+   ]
   },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-10",
-  "origin_line": 712,
+  "origin_line": 724,
   "origin_title": "Splice-switching ASO for a canonical acceptor allele → **the modality cannot do the job**",
   "papers_named": [],
-  "pmids": [],
+  "pmids": [
+   "17803050",
+   "24369382",
+   "25331887",
+   "26857392",
+   "27495153",
+   "29808465",
+   "30202070",
+   "30356099",
+   "30361190",
+   "30853297",
+   "31340538",
+   "32581702",
+   "33916893",
+   "35573960",
+   "35792847",
+   "36779245",
+   "36926521",
+   "36937954",
+   "38161429",
+   "40336300",
+   "41124647",
+   "42248868"
+  ],
+  "pmids_via_records": {
+   "17803050": [
+    "DL-MOL-011"
+   ],
+   "24369382": [
+    "DL-MOL-011"
+   ],
+   "25331887": [
+    "DL-MOL-011"
+   ],
+   "26857392": [
+    "DL-MOL-011"
+   ],
+   "27495153": [
+    "DL-MOL-011"
+   ],
+   "29808465": [
+    "DL-MOL-011"
+   ],
+   "30202070": [
+    "DL-MOL-011"
+   ],
+   "30356099": [
+    "DL-MOL-011"
+   ],
+   "30361190": [
+    "DL-MOL-011"
+   ],
+   "30853297": [
+    "DL-MOL-011"
+   ],
+   "31340538": [
+    "DL-MOL-011"
+   ],
+   "32581702": [
+    "DL-MOL-011"
+   ],
+   "33916893": [
+    "DL-MOL-011"
+   ],
+   "35573960": [
+    "DL-MOL-011"
+   ],
+   "35792847": [
+    "DL-MOL-011"
+   ],
+   "36779245": [
+    "DL-MOL-011"
+   ],
+   "36926521": [
+    "DL-MOL-011"
+   ],
+   "36937954": [
+    "DL-MOL-011"
+   ],
+   "38161429": [
+    "DL-MOL-011"
+   ],
+   "40336300": [
+    "DL-MOL-011"
+   ],
+   "41124647": [
+    "DL-MOL-011"
+   ],
+   "42248868": [
+    "DL-MOL-011"
+   ]
+  },
   "query_id": "Q-N-10",
   "record_class": "negative_translation",
   "target": "UNKNOWN",
@@ -31160,22 +31854,227 @@
   "candidate": "4-PBA / TUDCA on the ER-chaperone rationale",
   "claims_named": [],
   "decisive_test": "UNKNOWN",
-  "digest": "84cea61ceefa4628",
+  "digest": "3a36f6446230d81e",
   "intervention": "*derived from a textbook default.* \"Misfolded protein → ERAD → chemical chaperone\"",
   "kind": "mechanism_record",
-  "leads_named": [],
+  "leads_named": [
+   "DL-MECH-036",
+   "DL-MECH-037"
+  ],
   "linkage": {
    "ids_in_registry_without_pmid": [],
-   "ids_named": [],
+   "ids_named": [
+    "DL-MECH-036",
+    "DL-MECH-037"
+   ],
    "ids_not_found_in_registry": [],
-   "ids_reaching_a_pmid": []
+   "ids_reaching_a_pmid": [
+    "DL-MECH-036",
+    "DL-MECH-037"
+   ]
   },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-11",
-  "origin_line": 720,
+  "origin_line": 733,
   "origin_title": "4-PBA / TUDCA on the ER-chaperone rationale → **wrong compartment**",
   "papers_named": [],
-  "pmids": [],
+  "pmids": [
+   "15064722",
+   "17803050",
+   "17823927",
+   "19500159",
+   "22193544",
+   "24308844",
+   "24369382",
+   "24456803",
+   "24932569",
+   "25012504",
+   "25331887",
+   "25411445",
+   "25649963",
+   "25650666",
+   "26345274",
+   "26355344",
+   "26499798",
+   "26857392",
+   "27308416",
+   "27495153",
+   "27551439",
+   "29808465",
+   "30202070",
+   "30356099",
+   "30853297",
+   "31340538",
+   "32581702",
+   "33255508",
+   "33916893",
+   "34268881",
+   "35328751",
+   "35573960",
+   "35716775",
+   "35792847",
+   "36271927",
+   "36779245",
+   "36828035",
+   "36926521",
+   "36937954",
+   "38161429",
+   "39894307",
+   "40126049",
+   "40217411",
+   "40336300",
+   "41124647",
+   "42068099",
+   "42248868",
+   "42721537"
+  ],
+  "pmids_via_records": {
+   "15064722": [
+    "DL-MECH-037"
+   ],
+   "17803050": [
+    "DL-MECH-037"
+   ],
+   "17823927": [
+    "DL-MECH-037"
+   ],
+   "19500159": [
+    "DL-MECH-037"
+   ],
+   "22193544": [
+    "DL-MECH-037"
+   ],
+   "24308844": [
+    "DL-MECH-037"
+   ],
+   "24369382": [
+    "DL-MECH-037"
+   ],
+   "24456803": [
+    "DL-MECH-037"
+   ],
+   "24932569": [
+    "DL-MECH-036",
+    "DL-MECH-037"
+   ],
+   "25012504": [
+    "DL-MECH-037"
+   ],
+   "25331887": [
+    "DL-MECH-037"
+   ],
+   "25411445": [
+    "DL-MECH-037"
+   ],
+   "25649963": [
+    "DL-MECH-037"
+   ],
+   "25650666": [
+    "DL-MECH-037"
+   ],
+   "26345274": [
+    "DL-MECH-037"
+   ],
+   "26355344": [
+    "DL-MECH-037"
+   ],
+   "26499798": [
+    "DL-MECH-037"
+   ],
+   "26857392": [
+    "DL-MECH-037"
+   ],
+   "27308416": [
+    "DL-MECH-037"
+   ],
+   "27495153": [
+    "DL-MECH-037"
+   ],
+   "27551439": [
+    "DL-MECH-037"
+   ],
+   "29808465": [
+    "DL-MECH-037"
+   ],
+   "30202070": [
+    "DL-MECH-037"
+   ],
+   "30356099": [
+    "DL-MECH-037"
+   ],
+   "30853297": [
+    "DL-MECH-037"
+   ],
+   "31340538": [
+    "DL-MECH-037"
+   ],
+   "32581702": [
+    "DL-MECH-037"
+   ],
+   "33255508": [
+    "DL-MECH-037"
+   ],
+   "33916893": [
+    "DL-MECH-037"
+   ],
+   "34268881": [
+    "DL-MECH-037"
+   ],
+   "35328751": [
+    "DL-MECH-037"
+   ],
+   "35573960": [
+    "DL-MECH-037"
+   ],
+   "35716775": [
+    "DL-MECH-037"
+   ],
+   "35792847": [
+    "DL-MECH-037"
+   ],
+   "36271927": [
+    "DL-MECH-037"
+   ],
+   "36779245": [
+    "DL-MECH-037"
+   ],
+   "36828035": [
+    "DL-MECH-037"
+   ],
+   "36926521": [
+    "DL-MECH-037"
+   ],
+   "36937954": [
+    "DL-MECH-037"
+   ],
+   "38161429": [
+    "DL-MECH-037"
+   ],
+   "39894307": [
+    "DL-MECH-037"
+   ],
+   "40126049": [
+    "DL-MECH-037"
+   ],
+   "40217411": [
+    "DL-MECH-037"
+   ],
+   "40336300": [
+    "DL-MECH-037"
+   ],
+   "41124647": [
+    "DL-MECH-037"
+   ],
+   "42068099": [
+    "DL-MECH-037"
+   ],
+   "42248868": [
+    "DL-MECH-037"
+   ],
+   "42721537": [
+    "DL-MECH-037"
+   ]
+  },
   "query_id": "Q-N-11",
   "record_class": "negative_translation",
   "target": "UNKNOWN",
@@ -31187,24 +32086,65 @@
  {
   "axis": "all",
   "candidate": "HSP70 co-inducers",
-  "claims_named": [],
+  "claims_named": [
+   "CLAIM 019"
+  ],
   "decisive_test": "UNKNOWN",
-  "digest": "b0fbe9b268b96676",
+  "digest": "1058fb5398b89960",
   "intervention": "*wrong direction, hidden inside a plausible one.* \"It is a chaperone, therefore it",
   "kind": "mechanism_record",
-  "leads_named": [],
+  "leads_named": [
+   "DL-MECH-047"
+  ],
   "linkage": {
    "ids_in_registry_without_pmid": [],
-   "ids_named": [],
+   "ids_named": [
+    "CLAIM 019",
+    "DL-MECH-047"
+   ],
    "ids_not_found_in_registry": [],
-   "ids_reaching_a_pmid": []
+   "ids_reaching_a_pmid": [
+    "CLAIM 019",
+    "DL-MECH-047"
+   ]
   },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-12",
-  "origin_line": 726,
+  "origin_line": 740,
   "origin_title": "HSP70 co-inducers (e.g. arimoclomol) for an SDR missense → **may accelerate the damage**",
   "papers_named": [],
-  "pmids": [],
+  "pmids": [
+   "24369382",
+   "29808465",
+   "30356099",
+   "30853297",
+   "33916893",
+   "36779245",
+   "41124647"
+  ],
+  "pmids_via_records": {
+   "24369382": [
+    "CLAIM 019"
+   ],
+   "29808465": [
+    "CLAIM 019"
+   ],
+   "30356099": [
+    "CLAIM 019"
+   ],
+   "30853297": [
+    "CLAIM 019"
+   ],
+   "33916893": [
+    "CLAIM 019"
+   ],
+   "36779245": [
+    "CLAIM 019"
+   ],
+   "41124647": [
+    "DL-MECH-047"
+   ]
+  },
   "query_id": "Q-N-12",
   "record_class": "negative_translation",
   "target": "UNKNOWN",
@@ -31216,24 +32156,153 @@
  {
   "axis": "all",
   "candidate": "Pro-myelinating agents",
-  "claims_named": [],
+  "claims_named": [
+   "CLAIM 003"
+  ],
   "decisive_test": "UNKNOWN",
-  "digest": "5417ef5ec69ad5e1",
+  "digest": "ac212c77ddfb89af",
   "intervention": "*the target is not causally downstream of WWOX in the cell being targeted* +",
   "kind": "mechanism_record",
-  "leads_named": [],
+  "leads_named": [
+   "DL-MECH-031"
+  ],
   "linkage": {
    "ids_in_registry_without_pmid": [],
-   "ids_named": [],
+   "ids_named": [
+    "CLAIM 003",
+    "DL-MECH-031"
+   ],
    "ids_not_found_in_registry": [],
-   "ids_reaching_a_pmid": []
+   "ids_reaching_a_pmid": [
+    "CLAIM 003",
+    "DL-MECH-031"
+   ]
   },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-13",
-  "origin_line": 731,
+  "origin_line": 746,
   "origin_title": "Pro-myelinating agents (clemastine, benztropine, T3, quetiapine) → **wrong cell compartment, and a closing window**",
   "papers_named": [],
-  "pmids": [],
+  "pmids": [
+   "16223882",
+   "17803050",
+   "24369382",
+   "25331887",
+   "27495153",
+   "29808465",
+   "30202070",
+   "30356099",
+   "30853297",
+   "31340538",
+   "32581702",
+   "33195192",
+   "33914858",
+   "33916893",
+   "34747138",
+   "34831305",
+   "35573960",
+   "35792847",
+   "36779245",
+   "36926521",
+   "36937954",
+   "37781246",
+   "38161429",
+   "40336300",
+   "41124647",
+   "42248868",
+   "42395553",
+   "42397075",
+   "42422765"
+  ],
+  "pmids_via_records": {
+   "16223882": [
+    "DL-MECH-031"
+   ],
+   "17803050": [
+    "DL-MECH-031"
+   ],
+   "24369382": [
+    "DL-MECH-031"
+   ],
+   "25331887": [
+    "DL-MECH-031"
+   ],
+   "27495153": [
+    "DL-MECH-031"
+   ],
+   "29808465": [
+    "DL-MECH-031"
+   ],
+   "30202070": [
+    "DL-MECH-031"
+   ],
+   "30356099": [
+    "DL-MECH-031"
+   ],
+   "30853297": [
+    "DL-MECH-031"
+   ],
+   "31340538": [
+    "DL-MECH-031"
+   ],
+   "32581702": [
+    "DL-MECH-031"
+   ],
+   "33195192": [
+    "DL-MECH-031"
+   ],
+   "33914858": [
+    "CLAIM 003"
+   ],
+   "33916893": [
+    "DL-MECH-031"
+   ],
+   "34747138": [
+    "CLAIM 003"
+   ],
+   "34831305": [
+    "CLAIM 003"
+   ],
+   "35573960": [
+    "DL-MECH-031"
+   ],
+   "35792847": [
+    "DL-MECH-031"
+   ],
+   "36779245": [
+    "DL-MECH-031"
+   ],
+   "36926521": [
+    "DL-MECH-031"
+   ],
+   "36937954": [
+    "DL-MECH-031"
+   ],
+   "37781246": [
+    "DL-MECH-031"
+   ],
+   "38161429": [
+    "DL-MECH-031"
+   ],
+   "40336300": [
+    "DL-MECH-031"
+   ],
+   "41124647": [
+    "DL-MECH-031"
+   ],
+   "42248868": [
+    "DL-MECH-031"
+   ],
+   "42395553": [
+    "DL-MECH-031"
+   ],
+   "42397075": [
+    "CLAIM 003"
+   ],
+   "42422765": [
+    "DL-MECH-031"
+   ]
+  },
   "query_id": "Q-N-13",
   "record_class": "negative_translation",
   "target": "UNKNOWN",
@@ -31242,24 +32311,75 @@
  {
   "axis": "all",
   "candidate": "Antioxidants",
-  "claims_named": [],
+  "claims_named": [
+   "CLAIM 009",
+   "CLAIM 034"
+  ],
   "decisive_test": "UNKNOWN",
-  "digest": "f5727116310401ee",
+  "digest": "61d80a3cb5783c7d",
   "intervention": "*the direction of the axis is context-dependent and was assumed.* Two independent",
   "kind": "mechanism_record",
   "leads_named": [],
   "linkage": {
    "ids_in_registry_without_pmid": [],
-   "ids_named": [],
+   "ids_named": [
+    "CLAIM 009",
+    "CLAIM 034",
+    "PAPER 054",
+    "PAPER 071"
+   ],
    "ids_not_found_in_registry": [],
-   "ids_reaching_a_pmid": []
+   "ids_reaching_a_pmid": [
+    "CLAIM 009",
+    "CLAIM 034",
+    "PAPER 054",
+    "PAPER 071"
+   ]
   },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-14",
-  "origin_line": 744,
+  "origin_line": 760,
   "origin_title": "Antioxidants (NAC, CoQ10, creatine) on the \"WWOX loss → ROS\" rationale → **the relationship is not monotonic**",
-  "papers_named": [],
-  "pmids": [],
+  "papers_named": [
+   "PAPER 054",
+   "PAPER 071"
+  ],
+  "pmids": [
+   "17567906",
+   "21075834",
+   "21901168",
+   "27339895",
+   "30755385",
+   "34214506",
+   "35328751",
+   "36537114"
+  ],
+  "pmids_via_records": {
+   "17567906": [
+    "CLAIM 009"
+   ],
+   "21075834": [
+    "PAPER 071"
+   ],
+   "21901168": [
+    "CLAIM 009"
+   ],
+   "27339895": [
+    "CLAIM 009"
+   ],
+   "30755385": [
+    "CLAIM 009"
+   ],
+   "34214506": [
+    "PAPER 054"
+   ],
+   "35328751": [
+    "CLAIM 009"
+   ],
+   "36537114": [
+    "CLAIM 009"
+   ]
+  },
   "query_id": "Q-N-14",
   "record_class": "negative_translation",
   "target": "UNKNOWN",
@@ -31272,24 +32392,243 @@
  {
   "axis": "all",
   "candidate": "Counting seizure control as developmental protection",
-  "claims_named": [],
+  "claims_named": [
+   "CLAIM 031"
+  ],
   "decisive_test": "UNKNOWN",
-  "digest": "e14cbc9b025da9ec",
+  "digest": "ae60842ceb522c91",
   "intervention": "*corrects a biomarker (seizures) but not the mechanism (development)*. In published",
   "kind": "mechanism_record",
-  "leads_named": [],
+  "leads_named": [
+   "DL-MECH-039"
+  ],
   "linkage": {
    "ids_in_registry_without_pmid": [],
-   "ids_named": [],
+   "ids_named": [
+    "CLAIM 031",
+    "DL-MECH-039"
+   ],
    "ids_not_found_in_registry": [],
-   "ids_reaching_a_pmid": []
+   "ids_reaching_a_pmid": [
+    "CLAIM 031",
+    "DL-MECH-039"
+   ]
   },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-15",
-  "origin_line": 754,
+  "origin_line": 771,
   "origin_title": "Counting seizure control as developmental protection → **the most consequential negative in the whole portfolio**",
   "papers_named": [],
-  "pmids": [],
+  "pmids": [
+   "15064722",
+   "17803050",
+   "17823927",
+   "19500159",
+   "22193544",
+   "24308844",
+   "24369382",
+   "24456803",
+   "24932569",
+   "25012504",
+   "25331887",
+   "25411445",
+   "25649963",
+   "25650666",
+   "26345274",
+   "26355344",
+   "26499798",
+   "26857392",
+   "27308416",
+   "27495153",
+   "27551439",
+   "29808465",
+   "30202070",
+   "30356099",
+   "30361190",
+   "30853297",
+   "31340538",
+   "32581702",
+   "33255508",
+   "33916893",
+   "34268881",
+   "35328751",
+   "35573960",
+   "35716775",
+   "35792847",
+   "36271927",
+   "36686527",
+   "36779245",
+   "36828035",
+   "36926521",
+   "36937954",
+   "38161429",
+   "39894307",
+   "40126049",
+   "40217411",
+   "40336300",
+   "41124647",
+   "42068099",
+   "42248868",
+   "42422765",
+   "42721537"
+  ],
+  "pmids_via_records": {
+   "15064722": [
+    "DL-MECH-039"
+   ],
+   "17803050": [
+    "DL-MECH-039"
+   ],
+   "17823927": [
+    "DL-MECH-039"
+   ],
+   "19500159": [
+    "DL-MECH-039"
+   ],
+   "22193544": [
+    "DL-MECH-039"
+   ],
+   "24308844": [
+    "DL-MECH-039"
+   ],
+   "24369382": [
+    "DL-MECH-039"
+   ],
+   "24456803": [
+    "DL-MECH-039"
+   ],
+   "24932569": [
+    "DL-MECH-039"
+   ],
+   "25012504": [
+    "DL-MECH-039"
+   ],
+   "25331887": [
+    "DL-MECH-039"
+   ],
+   "25411445": [
+    "DL-MECH-039"
+   ],
+   "25649963": [
+    "DL-MECH-039"
+   ],
+   "25650666": [
+    "DL-MECH-039"
+   ],
+   "26345274": [
+    "DL-MECH-039"
+   ],
+   "26355344": [
+    "DL-MECH-039"
+   ],
+   "26499798": [
+    "DL-MECH-039"
+   ],
+   "26857392": [
+    "DL-MECH-039"
+   ],
+   "27308416": [
+    "DL-MECH-039"
+   ],
+   "27495153": [
+    "DL-MECH-039"
+   ],
+   "27551439": [
+    "DL-MECH-039"
+   ],
+   "29808465": [
+    "DL-MECH-039"
+   ],
+   "30202070": [
+    "DL-MECH-039"
+   ],
+   "30356099": [
+    "DL-MECH-039"
+   ],
+   "30361190": [
+    "CLAIM 031",
+    "DL-MECH-039"
+   ],
+   "30853297": [
+    "DL-MECH-039"
+   ],
+   "31340538": [
+    "DL-MECH-039"
+   ],
+   "32581702": [
+    "DL-MECH-039"
+   ],
+   "33255508": [
+    "DL-MECH-039"
+   ],
+   "33916893": [
+    "DL-MECH-039"
+   ],
+   "34268881": [
+    "DL-MECH-039"
+   ],
+   "35328751": [
+    "DL-MECH-039"
+   ],
+   "35573960": [
+    "DL-MECH-039"
+   ],
+   "35716775": [
+    "DL-MECH-039"
+   ],
+   "35792847": [
+    "DL-MECH-039"
+   ],
+   "36271927": [
+    "DL-MECH-039"
+   ],
+   "36686527": [
+    "CLAIM 031"
+   ],
+   "36779245": [
+    "CLAIM 031",
+    "DL-MECH-039"
+   ],
+   "36828035": [
+    "DL-MECH-039"
+   ],
+   "36926521": [
+    "DL-MECH-039"
+   ],
+   "36937954": [
+    "DL-MECH-039"
+   ],
+   "38161429": [
+    "DL-MECH-039"
+   ],
+   "39894307": [
+    "DL-MECH-039"
+   ],
+   "40126049": [
+    "DL-MECH-039"
+   ],
+   "40217411": [
+    "DL-MECH-039"
+   ],
+   "40336300": [
+    "DL-MECH-039"
+   ],
+   "41124647": [
+    "DL-MECH-039"
+   ],
+   "42068099": [
+    "DL-MECH-039"
+   ],
+   "42248868": [
+    "DL-MECH-039"
+   ],
+   "42422765": [
+    "CLAIM 031"
+   ],
+   "42721537": [
+    "DL-MECH-039"
+   ]
+  },
   "query_id": "Q-N-15",
   "record_class": "negative_translation",
   "target": "UNKNOWN",
@@ -31302,7 +32641,7 @@
    "CLAIM 021"
   ],
   "decisive_test": "UNKNOWN",
-  "digest": "e241eb3afa06fad5",
+  "digest": "b163ba6e75fb3545",
   "intervention": "*a negative stated as an absence of effect, when what exists is an untested point estimate in the adverse direction.* In the only WWOX system in which a selective pannexin-1 blocker has ever been applied (`Wwox` S-KO neocortical slice, P13–P17), normalized burst frequency rose to **≈ 2.55 during treatment and ≈ 2.6 at washout against a baseline of 1.0**, carrying **no significance marker and no re",
   "kind": "mechanism_record",
   "leads_named": [],
@@ -31318,7 +32657,7 @@
   },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-16",
-  "origin_line": 769,
+  "origin_line": 787,
   "origin_title": "Pannexin-1 blockade (brilliant blue FCF and congeners) on the CLAIM 021 network node → **the only WWOX measurement points the wrong way, and it was never tested**",
   "papers_named": [],
   "pmids": [
@@ -31339,7 +32678,7 @@
    "CLAIM 035"
   ],
   "decisive_test": "UNKNOWN",
-  "digest": "59464d926da2e904",
+  "digest": "e50f38410e5ffd56",
   "intervention": "*importing a disease's dominant modality because the pathway diagram looks like that disease, without checking which way the arrow points.* CHAIN C reads like a tauopathy — WWOX loss → GSK3β de-repressed → pTau S396/S404 up (`CLAIM 035`, `DL-MECH-019`) — and tauopathy's dominant modality is **tau-lowering**. In the only system where the question was asked, tau-lowering **removes the benefit of bot",
   "kind": "mechanism_record",
   "leads_named": [
@@ -31362,7 +32701,7 @@
   },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-17",
-  "origin_line": 775,
+  "origin_line": 793,
   "origin_title": "Tau-lowering, imported from tauopathy into CHAIN C → 🔴 **the arrow points the other way: Tau is the EFFECTOR of the benefit, not the toxin**",
   "papers_named": [],
   "pmids": [
@@ -34475,24 +35814,55 @@
  {
   "axis": "all",
   "candidate": "Lithium",
-  "claims_named": [],
+  "claims_named": [
+   "CLAIM 016",
+   "CLAIM 035"
+  ],
   "decisive_test": "a PTZ + lithium arm with an **explicit, tested** `−/−` vs `+/+` comparison — or a different GSK3β inhibitor under the same design. Until then, no genotype-specific claim is available",
-  "digest": "f6c36ea1ed594783",
+  "digest": "865a497d97abe393",
   "intervention": "lithium carbonate",
   "kind": "mechanism_record",
   "leads_named": [],
   "linkage": {
    "ids_in_registry_without_pmid": [],
-   "ids_named": [],
+   "ids_named": [
+    "CLAIM 016",
+    "CLAIM 035",
+    "PAPER 019",
+    "PAPER 056"
+   ],
    "ids_not_found_in_registry": [],
-   "ids_reaching_a_pmid": []
+   "ids_reaching_a_pmid": [
+    "CLAIM 016",
+    "CLAIM 035",
+    "PAPER 019",
+    "PAPER 056"
+   ]
   },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "R-04",
   "origin_line": 476,
   "origin_title": "Lithium (GSK3β)",
-  "papers_named": [],
-  "pmids": [],
+  "papers_named": [
+   "PAPER 019",
+   "PAPER 056"
+  ],
+  "pmids": [
+   "22193544",
+   "32000863",
+   "34831305"
+  ],
+  "pmids_via_records": {
+   "22193544": [
+    "PAPER 056"
+   ],
+   "32000863": [
+    "PAPER 019"
+   ],
+   "34831305": [
+    "CLAIM 016"
+   ]
+  },
   "query_id": "Q-R-04",
   "record_class": "repurposing",
   "target": "GSK3β (among many)",
@@ -34503,24 +35873,236 @@
  {
   "axis": "all",
   "candidate": "Ketogenic diet",
-  "claims_named": [],
+  "claims_named": [
+   "CLAIM 020",
+   "CLAIM 042"
+  ],
   "decisive_test": "**Seahorse OCR/ECAR on donor-derived fibroblasts/LCL vs control** — the only remaining falsifier since lactate became ambiguous. Zero-cost second test: Seahorse on the existing WWOX-KO organoids, closing the transcriptome→flux gap",
-  "digest": "dbaa24425f89c422",
+  "digest": "da528bb277389e4e",
   "intervention": "ketogenic diet",
   "kind": "mechanism_record",
-  "leads_named": [],
+  "leads_named": [
+   "DL-MECH-020"
+  ],
   "linkage": {
    "ids_in_registry_without_pmid": [],
-   "ids_named": [],
+   "ids_named": [
+    "CLAIM 020",
+    "CLAIM 042",
+    "DL-MECH-020"
+   ],
    "ids_not_found_in_registry": [],
-   "ids_reaching_a_pmid": []
+   "ids_reaching_a_pmid": [
+    "CLAIM 020",
+    "CLAIM 042",
+    "DL-MECH-020"
+   ]
   },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "R-05",
-  "origin_line": 501,
+  "origin_line": 502,
   "origin_title": "Ketogenic diet",
   "papers_named": [],
-  "pmids": [],
+  "pmids": [
+   "15064722",
+   "17803050",
+   "17823927",
+   "19500159",
+   "22193544",
+   "24308844",
+   "24369382",
+   "24456803",
+   "24932569",
+   "25012504",
+   "25331887",
+   "25411445",
+   "25649963",
+   "25650666",
+   "26345274",
+   "26355344",
+   "26499798",
+   "26857392",
+   "27308416",
+   "27495153",
+   "27551439",
+   "29808465",
+   "30202070",
+   "30356099",
+   "30853297",
+   "31340538",
+   "32581702",
+   "33255508",
+   "33916893",
+   "34268881",
+   "35328751",
+   "35573960",
+   "35716775",
+   "35792847",
+   "36271927",
+   "36537114",
+   "36779245",
+   "36828035",
+   "36926521",
+   "36937954",
+   "38161429",
+   "39507621",
+   "39894307",
+   "40336300",
+   "40831798",
+   "41124647",
+   "41830506",
+   "42248868",
+   "42721537"
+  ],
+  "pmids_via_records": {
+   "15064722": [
+    "DL-MECH-020"
+   ],
+   "17803050": [
+    "DL-MECH-020"
+   ],
+   "17823927": [
+    "DL-MECH-020"
+   ],
+   "19500159": [
+    "DL-MECH-020"
+   ],
+   "22193544": [
+    "DL-MECH-020"
+   ],
+   "24308844": [
+    "DL-MECH-020"
+   ],
+   "24369382": [
+    "DL-MECH-020"
+   ],
+   "24456803": [
+    "DL-MECH-020"
+   ],
+   "24932569": [
+    "DL-MECH-020"
+   ],
+   "25012504": [
+    "DL-MECH-020"
+   ],
+   "25331887": [
+    "DL-MECH-020"
+   ],
+   "25411445": [
+    "DL-MECH-020"
+   ],
+   "25649963": [
+    "DL-MECH-020"
+   ],
+   "25650666": [
+    "DL-MECH-020"
+   ],
+   "26345274": [
+    "DL-MECH-020"
+   ],
+   "26355344": [
+    "DL-MECH-020"
+   ],
+   "26499798": [
+    "DL-MECH-020"
+   ],
+   "26857392": [
+    "DL-MECH-020"
+   ],
+   "27308416": [
+    "DL-MECH-020"
+   ],
+   "27495153": [
+    "DL-MECH-020"
+   ],
+   "27551439": [
+    "DL-MECH-020"
+   ],
+   "29808465": [
+    "DL-MECH-020"
+   ],
+   "30202070": [
+    "DL-MECH-020"
+   ],
+   "30356099": [
+    "DL-MECH-020"
+   ],
+   "30853297": [
+    "DL-MECH-020"
+   ],
+   "31340538": [
+    "DL-MECH-020"
+   ],
+   "32581702": [
+    "DL-MECH-020"
+   ],
+   "33255508": [
+    "DL-MECH-020"
+   ],
+   "33916893": [
+    "DL-MECH-020"
+   ],
+   "34268881": [
+    "DL-MECH-020"
+   ],
+   "35328751": [
+    "DL-MECH-020"
+   ],
+   "35573960": [
+    "DL-MECH-020"
+   ],
+   "35716775": [
+    "DL-MECH-020"
+   ],
+   "35792847": [
+    "DL-MECH-020"
+   ],
+   "36271927": [
+    "DL-MECH-020"
+   ],
+   "36537114": [
+    "CLAIM 042"
+   ],
+   "36779245": [
+    "DL-MECH-020"
+   ],
+   "36828035": [
+    "DL-MECH-020"
+   ],
+   "36926521": [
+    "DL-MECH-020"
+   ],
+   "36937954": [
+    "DL-MECH-020"
+   ],
+   "38161429": [
+    "DL-MECH-020"
+   ],
+   "39507621": [
+    "CLAIM 020"
+   ],
+   "39894307": [
+    "DL-MECH-020"
+   ],
+   "40336300": [
+    "DL-MECH-020"
+   ],
+   "40831798": [
+    "CLAIM 042"
+   ],
+   "41124647": [
+    "DL-MECH-020"
+   ],
+   "41830506": [
+    "CLAIM 042"
+   ],
+   "42248868": [
+    "DL-MECH-020"
+   ],
+   "42721537": [
+    "DL-MECH-020"
+   ]
+  },
   "query_id": "Q-R-05",
   "record_class": "repurposing",
   "target": "TCA entry, downstream of the PDK1→PDH block",
@@ -34533,24 +36115,186 @@
  {
   "axis": "all",
   "candidate": "Anti-neuroinflammatory",
-  "claims_named": [],
+  "claims_named": [
+   "CLAIM 006"
+  ],
   "decisive_test": "in the **existing, characterized Wwox^P47T mouse** (survives >1 year, vs ~1 month for the null): does the agent reduce astro-microgliosis, slow Purkinje loss, and improve motor coordination?",
-  "digest": "8331444eadcaa26a",
+  "digest": "90d37aed85c2b543",
   "intervention": "class: IL-1β/NLRP3, MAPK/NF-κB or microglia-targeting agent",
   "kind": "mechanism_record",
-  "leads_named": [],
+  "leads_named": [
+   "DL-REPO-002"
+  ],
   "linkage": {
    "ids_in_registry_without_pmid": [],
-   "ids_named": [],
+   "ids_named": [
+    "CLAIM 006",
+    "DL-REPO-002"
+   ],
    "ids_not_found_in_registry": [],
-   "ids_reaching_a_pmid": []
+   "ids_reaching_a_pmid": [
+    "CLAIM 006",
+    "DL-REPO-002"
+   ]
   },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "R-06",
-  "origin_line": 526,
+  "origin_line": 528,
   "origin_title": "Anti-neuroinflammatory (class-level; no compound named in the public record)",
   "papers_named": [],
-  "pmids": [],
+  "pmids": [
+   "14526170",
+   "15982416",
+   "16223882",
+   "16941225",
+   "19465938",
+   "21964341",
+   "23030478",
+   "23583307",
+   "25331887",
+   "28283473",
+   "30202070",
+   "30356099",
+   "32368285",
+   "33058734",
+   "33195192",
+   "34015398",
+   "34268881",
+   "34747138",
+   "34831305",
+   "36779245",
+   "36828035",
+   "36926521",
+   "36937954",
+   "37781246",
+   "38563965",
+   "39868255",
+   "40336300",
+   "40377402",
+   "40524961",
+   "40875931",
+   "41124647",
+   "41704776",
+   "42128308",
+   "42190144",
+   "42248868",
+   "42395553",
+   "42422765"
+  ],
+  "pmids_via_records": {
+   "14526170": [
+    "DL-REPO-002"
+   ],
+   "15982416": [
+    "DL-REPO-002"
+   ],
+   "16223882": [
+    "DL-REPO-002"
+   ],
+   "16941225": [
+    "DL-REPO-002"
+   ],
+   "19465938": [
+    "DL-REPO-002"
+   ],
+   "21964341": [
+    "DL-REPO-002"
+   ],
+   "23030478": [
+    "DL-REPO-002"
+   ],
+   "23583307": [
+    "DL-REPO-002"
+   ],
+   "25331887": [
+    "DL-REPO-002"
+   ],
+   "28283473": [
+    "DL-REPO-002"
+   ],
+   "30202070": [
+    "DL-REPO-002"
+   ],
+   "30356099": [
+    "DL-REPO-002"
+   ],
+   "32368285": [
+    "DL-REPO-002"
+   ],
+   "33058734": [
+    "DL-REPO-002"
+   ],
+   "33195192": [
+    "DL-REPO-002"
+   ],
+   "34015398": [
+    "DL-REPO-002"
+   ],
+   "34268881": [
+    "DL-REPO-002"
+   ],
+   "34747138": [
+    "DL-REPO-002"
+   ],
+   "34831305": [
+    "DL-REPO-002"
+   ],
+   "36779245": [
+    "DL-REPO-002"
+   ],
+   "36828035": [
+    "CLAIM 006",
+    "DL-REPO-002"
+   ],
+   "36926521": [
+    "DL-REPO-002"
+   ],
+   "36937954": [
+    "DL-REPO-002"
+   ],
+   "37781246": [
+    "DL-REPO-002"
+   ],
+   "38563965": [
+    "DL-REPO-002"
+   ],
+   "39868255": [
+    "DL-REPO-002"
+   ],
+   "40336300": [
+    "DL-REPO-002"
+   ],
+   "40377402": [
+    "DL-REPO-002"
+   ],
+   "40524961": [
+    "DL-REPO-002"
+   ],
+   "40875931": [
+    "DL-REPO-002"
+   ],
+   "41124647": [
+    "DL-REPO-002"
+   ],
+   "41704776": [
+    "DL-REPO-002"
+   ],
+   "42128308": [
+    "DL-REPO-002"
+   ],
+   "42190144": [
+    "DL-REPO-002"
+   ],
+   "42248868": [
+    "DL-REPO-002"
+   ],
+   "42395553": [
+    "DL-REPO-002"
+   ],
+   "42422765": [
+    "DL-REPO-002"
+   ]
+  },
   "query_id": "Q-R-06",
   "record_class": "repurposing",
   "target": "de-repressed neuroinflammatory signalling",
@@ -34563,7 +36307,7 @@
   "candidate": "Bumetanide",
   "claims_named": [],
   "decisive_test": "**gramicidin perforated-patch `E_GABA`** in WWOX-KO vs parental neurons/organoids, with NKCC1/KCC2 quantification and the GABA response itself. **This single experiment converts the entire M3 axis from T6 to T2 — or closes it**",
-  "digest": "84abe4e2498c9732",
+  "digest": "68309da26979282e",
   "intervention": "bumetanide",
   "kind": "mechanism_record",
   "leads_named": [],
@@ -34575,7 +36319,7 @@
   },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "R-07",
-  "origin_line": 550,
+  "origin_line": 553,
   "origin_title": "Bumetanide (NKCC1 / chloride gradient)",
   "papers_named": [],
   "pmids": [],
@@ -34592,25 +36336,28 @@
   "candidate": "Base / prime editing of a canonical splice-acceptor allele",
   "claims_named": [],
   "decisive_test": "**first**, characterize the real transcript: junction-spanning RT-PCR ± NMD block, amplicon sequencing, long-read if multiple isoforms appear. **No editing-vs-anything choice may precede this.** Then: PAM availability and bystander-cytosine survey at the locus",
-  "digest": "cd615c996918437d",
+  "digest": "d45cbbc91cc465cf",
   "intervention": "cytosine base editor (C→T on the antisense strand) or prime editor",
   "kind": "mechanism_record",
   "leads_named": [
+   "DL-MOL-011",
    "DL-MOL-013"
   ],
   "linkage": {
    "ids_in_registry_without_pmid": [],
    "ids_named": [
+    "DL-MOL-011",
     "DL-MOL-013"
    ],
    "ids_not_found_in_registry": [],
    "ids_reaching_a_pmid": [
+    "DL-MOL-011",
     "DL-MOL-013"
    ]
   },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "R-08",
-  "origin_line": 575,
+  "origin_line": 578,
   "origin_title": "Base / prime editing of a canonical splice-acceptor allele",
   "papers_named": [],
   "pmids": [
@@ -34674,6 +36421,7 @@
     "DL-MOL-013"
    ],
    "17803050": [
+    "DL-MOL-011",
     "DL-MOL-013"
    ],
    "17823927": [
@@ -34692,6 +36440,7 @@
     "DL-MOL-013"
    ],
    "24369382": [
+    "DL-MOL-011",
     "DL-MOL-013"
    ],
    "24456803": [
@@ -34725,42 +36474,52 @@
     "DL-MOL-013"
    ],
    "26857392": [
+    "DL-MOL-011",
     "DL-MOL-013"
    ],
    "27308416": [
     "DL-MOL-013"
    ],
    "27495153": [
+    "DL-MOL-011",
     "DL-MOL-013"
    ],
    "27551439": [
     "DL-MOL-013"
    ],
    "29808465": [
+    "DL-MOL-011",
     "DL-MOL-013"
    ],
    "30202070": [
+    "DL-MOL-011",
     "DL-MOL-013"
    ],
    "30356099": [
+    "DL-MOL-011",
     "DL-MOL-013"
    ],
    "30361190": [
+    "DL-MOL-011",
     "DL-MOL-013"
    ],
    "30853297": [
+    "DL-MOL-011",
     "DL-MOL-013"
    ],
    "31340538": [
+    "DL-MOL-011",
     "DL-MOL-013"
    ],
    "32581702": [
+    "DL-MOL-011",
     "DL-MOL-013"
    ],
    "33255508": [
     "DL-MOL-013"
    ],
    "33916893": [
+    "DL-MOL-011",
     "DL-MOL-013"
    ],
    "34268881": [
@@ -34770,30 +36529,36 @@
     "DL-MOL-013"
    ],
    "35573960": [
+    "DL-MOL-011",
     "DL-MOL-013"
    ],
    "35716775": [
     "DL-MOL-013"
    ],
    "35792847": [
+    "DL-MOL-011",
     "DL-MOL-013"
    ],
    "36271927": [
     "DL-MOL-013"
    ],
    "36779245": [
+    "DL-MOL-011",
     "DL-MOL-013"
    ],
    "36828035": [
     "DL-MOL-013"
    ],
    "36926521": [
+    "DL-MOL-011",
     "DL-MOL-013"
    ],
    "36937954": [
+    "DL-MOL-011",
     "DL-MOL-013"
    ],
    "38161429": [
+    "DL-MOL-011",
     "DL-MOL-013"
    ],
    "39894307": [
@@ -34806,15 +36571,18 @@
     "DL-MOL-013"
    ],
    "40336300": [
+    "DL-MOL-011",
     "DL-MOL-013"
    ],
    "41124647": [
+    "DL-MOL-011",
     "DL-MOL-013"
    ],
    "42068099": [
     "DL-MOL-013"
    ],
    "42248868": [
+    "DL-MOL-011",
     "DL-MOL-013"
    ],
    "42721537": [
@@ -34829,24 +36597,248 @@
  {
   "axis": "all",
   "candidate": "Proteostasis modulation for an SDR missense allele",
-  "claims_named": [],
+  "claims_named": [
+   "CLAIM 019"
+  ],
   "decisive_test": "the ordered sequence, each step informative alone: (1) WB + qRT-PCR on variant-carrying cells vs control; (2) **nascent synthesis + pulse-chase** with soluble/insoluble fractionation, to separate production from disappearance; (3) orthogonal turnover probes (proteasomal and lysosomal arms with viability) — HSC70/LAMP1 are associative, **LAMP2A-dependence is what CMA requires**; (4) only then a min",
-  "digest": "69a472d71cbf1646",
+  "digest": "e53a3fe7016d3cc4",
   "intervention": "conditional; **no molecule is design-ready**. Three families: site-specific pharmacological chaperone · kinetic stabilizer · indirect proteostasis regulator",
   "kind": "mechanism_record",
-  "leads_named": [],
+  "leads_named": [
+   "DL-BIO-001",
+   "DL-MECH-036",
+   "DL-MECH-037"
+  ],
   "linkage": {
    "ids_in_registry_without_pmid": [],
-   "ids_named": [],
+   "ids_named": [
+    "CLAIM 019",
+    "DL-BIO-001",
+    "DL-MECH-036",
+    "DL-MECH-037"
+   ],
    "ids_not_found_in_registry": [],
-   "ids_reaching_a_pmid": []
+   "ids_reaching_a_pmid": [
+    "CLAIM 019",
+    "DL-BIO-001",
+    "DL-MECH-036",
+    "DL-MECH-037"
+   ]
   },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "R-09",
-  "origin_line": 600,
+  "origin_line": 604,
   "origin_title": "Proteostasis modulation for an SDR missense allele",
   "papers_named": [],
-  "pmids": [],
+  "pmids": [
+   "15064722",
+   "17803050",
+   "17823927",
+   "19500159",
+   "22193544",
+   "24308844",
+   "24369382",
+   "24456803",
+   "24932569",
+   "25012504",
+   "25331887",
+   "25411445",
+   "25649963",
+   "25650666",
+   "26345274",
+   "26355344",
+   "26499798",
+   "26857392",
+   "27308416",
+   "27495153",
+   "27551439",
+   "29808465",
+   "30202070",
+   "30356099",
+   "30853297",
+   "31340538",
+   "32581702",
+   "33255508",
+   "33916893",
+   "34268881",
+   "35328751",
+   "35573960",
+   "35716775",
+   "35792847",
+   "36271927",
+   "36779245",
+   "36828035",
+   "36926521",
+   "36937954",
+   "38161429",
+   "39894307",
+   "40126049",
+   "40217411",
+   "40336300",
+   "41124647",
+   "42068099",
+   "42248868",
+   "42721537"
+  ],
+  "pmids_via_records": {
+   "15064722": [
+    "DL-MECH-037"
+   ],
+   "17803050": [
+    "DL-MECH-037"
+   ],
+   "17823927": [
+    "DL-MECH-037"
+   ],
+   "19500159": [
+    "DL-MECH-037"
+   ],
+   "22193544": [
+    "DL-MECH-037"
+   ],
+   "24308844": [
+    "DL-MECH-037"
+   ],
+   "24369382": [
+    "CLAIM 019",
+    "DL-MECH-037"
+   ],
+   "24456803": [
+    "DL-MECH-037"
+   ],
+   "24932569": [
+    "DL-MECH-036",
+    "DL-MECH-037"
+   ],
+   "25012504": [
+    "DL-MECH-037"
+   ],
+   "25331887": [
+    "DL-MECH-037"
+   ],
+   "25411445": [
+    "DL-MECH-037"
+   ],
+   "25649963": [
+    "DL-MECH-037"
+   ],
+   "25650666": [
+    "DL-MECH-037"
+   ],
+   "26345274": [
+    "DL-MECH-037"
+   ],
+   "26355344": [
+    "DL-MECH-037"
+   ],
+   "26499798": [
+    "DL-MECH-037"
+   ],
+   "26857392": [
+    "DL-MECH-037"
+   ],
+   "27308416": [
+    "DL-MECH-037"
+   ],
+   "27495153": [
+    "DL-MECH-037"
+   ],
+   "27551439": [
+    "DL-MECH-037"
+   ],
+   "29808465": [
+    "CLAIM 019",
+    "DL-MECH-037"
+   ],
+   "30202070": [
+    "DL-BIO-001",
+    "DL-MECH-037"
+   ],
+   "30356099": [
+    "CLAIM 019",
+    "DL-MECH-037"
+   ],
+   "30853297": [
+    "CLAIM 019",
+    "DL-MECH-037"
+   ],
+   "31340538": [
+    "DL-MECH-037"
+   ],
+   "32581702": [
+    "DL-MECH-037"
+   ],
+   "33255508": [
+    "DL-MECH-037"
+   ],
+   "33916893": [
+    "CLAIM 019",
+    "DL-MECH-037"
+   ],
+   "34268881": [
+    "DL-MECH-037"
+   ],
+   "35328751": [
+    "DL-MECH-037"
+   ],
+   "35573960": [
+    "DL-MECH-037"
+   ],
+   "35716775": [
+    "DL-MECH-037"
+   ],
+   "35792847": [
+    "DL-MECH-037"
+   ],
+   "36271927": [
+    "DL-MECH-037"
+   ],
+   "36779245": [
+    "CLAIM 019",
+    "DL-MECH-037"
+   ],
+   "36828035": [
+    "DL-MECH-037"
+   ],
+   "36926521": [
+    "DL-BIO-001",
+    "DL-MECH-037"
+   ],
+   "36937954": [
+    "DL-BIO-001",
+    "DL-MECH-037"
+   ],
+   "38161429": [
+    "DL-MECH-037"
+   ],
+   "39894307": [
+    "DL-MECH-037"
+   ],
+   "40126049": [
+    "DL-MECH-037"
+   ],
+   "40217411": [
+    "DL-MECH-037"
+   ],
+   "40336300": [
+    "DL-BIO-001",
+    "DL-MECH-037"
+   ],
+   "41124647": [
+    "DL-BIO-001",
+    "DL-MECH-037"
+   ],
+   "42068099": [
+    "DL-MECH-037"
+   ],
+   "42248868": [
+    "DL-BIO-001",
+    "DL-MECH-037"
+   ],
+   "42721537": [
+    "DL-MECH-037"
+   ]
+  },
   "query_id": "Q-R-09",
   "record_class": "repurposing",
   "target": "WWOX protein stability — *and its function*",
