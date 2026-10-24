@@ -438,8 +438,14 @@
      "entry": 4,
      "what_changed": "Approximate percentages re-read against the Figure 5F bars while re-checking the neighbouring panels of the entry 2 error class: WT about 33/67 and patient lines about 66 and 68 percent early, not 35/65 and 65/35; the proposition's direction is unchanged.",
      "audit": {
-      "auditors": 0,
-      "verdicts": []
+      "auditors": 1,
+      "verdicts": [
+       "SUPPORTED"
+      ],
+      "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md",
+      "triple": 4,
+      "audited_on": "2026-10-24",
+      "auditor_qualification": "Qualification recorded by the auditor, not scored adverse: panel F's own title is 'organoid composition', so the composition-versus-maturation separation is the reader's framing of two different measurements, not the paper's wording."
      }
     }
    },
@@ -465,12 +471,20 @@
      "entry": 6,
      "what_changed": "Figure 4C bar ends re-read against the printed axis (about 198 px per log2 unit): G1/G0 about -0.29 (was -0.2), M about -0.39 (was -0.35), S +0.77 and G2M +0.52 (was +0.78 and +0.5); direction of every bar unchanged.",
      "audit": {
-      "auditors": 1,
+      "auditors": 2,
       "verdicts": [
-       "OVERSHOOT"
+       "OVERSHOOT",
+       "SUPPORTED"
       ],
-      "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
-      "audited_on": "2026-10-23"
+      "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md",
+      "triple": 6,
+      "audited_on": "2026-10-24",
+      "prior_audit": {
+       "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
+       "audited_on": "2026-10-23",
+       "verdict": "OVERSHOOT",
+       "note": "the verdict that caused this repair; the 2026-10-24 audit judged the repaired entry SUPPORTED"
+      }
      }
     }
    },
@@ -543,8 +557,13 @@
      "entry": 13,
      "what_changed": "Snippet narrowed to one source line (the earlier span crossed interpolated line numbers); the sentence's tail 'approach.' is on the next line; proposition unchanged.",
      "audit": {
-      "auditors": 0,
-      "verdicts": []
+      "auditors": 1,
+      "verdicts": [
+       "SUPPORTED"
+      ],
+      "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md",
+      "triple": 13,
+      "audited_on": "2026-10-24"
      }
     }
    },
