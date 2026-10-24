@@ -237,15 +237,90 @@ class TheRealManifestsAreAudited(unittest.TestCase):
         self.assertEqual(record["manifest"], chosen.relative_to(self.ROOT).as_posix())
         for row in record["artifacts"]:
             self.assertIn(row["state"], ("PRESENT", "ABSENT", "DIGEST_MISMATCH", "NO_DIGEST",
-                                         "MISMATCH", "UNDECLARED"))
+                                         "MISMATCH", "UNDECLARED", "HTML_UNDER_A_BINARY_NAME"))
         self.assertRegex(machine.stdout, r"manifests: 1 \| artifacts: \d+ \| present: \d+ \| "
-                                         r"absent: \d+ \| digest_mismatch: \d+ \| no_digest: \d+")
+                                         r"absent: \d+ \| digest_mismatch: \d+ \| no_digest: \d+ \| "
+                                         r"html_under_a_binary_name: \d+")
         text = subprocess.run(
             [sys.executable, str(script), "--root", str(self.ROOT), "--disease", "wwox",
              "--pmid", pmid], capture_output=True, text=True, timeout=300)
         self.assertEqual(text.returncode, 0, text.stderr)
         self.assertIn("VERDICT:", text.stdout)
         self.assertEqual(chosen.read_bytes(), before, "the audit wrote a real manifest")
+
+
+class AnHtmlPageWearingABinaryName(unittest.TestCase):
+    """A served error page saved as `.jpg` must not read as PRESENT.
+
+    Measured on 2026-10-23: six files in the live corpus were HTML error pages under `.jpg` and
+    `.pdf` names. None was declared by a manifest, so nothing rested on one — but twice in two
+    days an agent wrote a figure value from something that was not the figure, and `PRESENT` is
+    the answer that invites it. The counter-case is the one that keeps this honest: an `.html`
+    full text is a legitimate artefact and must stay PRESENT.
+    """
+
+    ERROR_PAGE = b"<!DOCTYPE html>\n<html lang=\"en\"><head><title>403</title></head></html>\n"
+    REAL_JPEG = b"\xff\xd8\xff\xe0\x00\x10JFIF\x00\x01" + b"\x00" * 64
+
+    def setUp(self) -> None:
+        self._tmp = tempfile.TemporaryDirectory()
+        self.tmp = Path(self._tmp.name)
+
+    def tearDown(self) -> None:
+        self._tmp.cleanup()
+
+    def fixture(self, name: str, body: bytes) -> Path:
+        root = self.tmp / "repo"
+        subprocess.run(["git", "init", "-q", str(root)], check=True)
+        man = root / "disease-models" / "wwox" / "research" / "deepdive_manifests"
+        man.mkdir(parents=True)
+        art = root / "files" / "figures"
+        art.mkdir(parents=True)
+        (art / name).write_bytes(body)
+        (man / "PMID222.json").write_text(
+            json.dumps({
+                "schema_version": 2,
+                "pmid": "222",
+                "source_artifacts": [{"path": f"files/figures/{name}",
+                                      "sha256": hashlib.sha256(body).hexdigest(),
+                                      "kind": "figure"}],
+            }),
+            encoding="utf-8",
+        )
+        return root
+
+    def run_tool(self, root: Path, *extra: str) -> subprocess.CompletedProcess:
+        return subprocess.run(
+            [sys.executable, str(SCRIPT), "--root", str(root), *extra],
+            capture_output=True, text=True,
+        )
+
+    def test_html_under_a_jpg_name_is_its_own_state_and_not_present(self):
+        r = self.run_tool(self.fixture("fig1.jpg", self.ERROR_PAGE))
+        self.assertEqual(r.returncode, 0, r.stderr)
+        self.assertIn("html_under_a_binary_name: 1", r.stdout)
+        self.assertIn("present: 0", r.stdout)
+        self.assertNotIn("VERDICT: COMPLETE", r.stdout)
+        self.assertIn("HTML_UNDER_A_BINARY_NAME", r.stdout)
+
+    def test_a_real_jpeg_is_present_so_the_guard_does_not_over_fire(self):
+        r = self.run_tool(self.fixture("fig1.jpg", self.REAL_JPEG))
+        self.assertEqual(r.returncode, 0, r.stderr)
+        self.assertIn("present: 1", r.stdout)
+        self.assertIn("html_under_a_binary_name: 0", r.stdout)
+        self.assertIn("VERDICT: COMPLETE", r.stdout)
+
+    def test_an_html_full_text_under_an_html_name_stays_present(self):
+        """The counter-case: a legitimate HTML artefact is not a masquerade."""
+        r = self.run_tool(self.fixture("body.html", self.ERROR_PAGE))
+        self.assertEqual(r.returncode, 0, r.stderr)
+        self.assertIn("present: 1", r.stdout)
+        self.assertIn("html_under_a_binary_name: 0", r.stdout)
+
+    def test_it_never_gates_even_under_fail_on_mismatch(self):
+        r = self.run_tool(self.fixture("fig1.pdf", self.ERROR_PAGE), "--fail-on-mismatch")
+        self.assertEqual(r.returncode, 0, r.stderr)
+        self.assertIn("html_under_a_binary_name: 1", r.stdout)
 
 
 if __name__ == "__main__":
