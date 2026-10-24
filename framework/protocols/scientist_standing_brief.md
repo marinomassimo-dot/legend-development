@@ -75,7 +75,9 @@ Several of you read at once. These are the measured lessons of the waves of 2026
   `task_close.py` regenerates them on `main` after your landing. No `LEGEND_STALE_SURFACES_BECAUSE`
   is needed for that.
 - **Record hygiene that trips gates**: no PMID-looking 8-digit literal in orchestration or analysis
-  records outside `research/` tables; no e-mail-looking string; SHA-256 in full (64 hex); a pedigree
+  records outside `research/` tables; no e-mail-looking string, and none sent either — no personal
+  address goes to any service, header or query, so an index that demands a contact address
+  (Unpaywall and its kind) is not used and the route is recorded as blocked; SHA-256 in full (64 hex); a pedigree
   relative is "a family-N relative", never tied to an exact allele; patients at class level only.
   Stop your own processes by `PID:START` (`process_wait.py`), never `pkill -f` by name.
 
