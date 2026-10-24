@@ -83,3 +83,35 @@ the tankyrase-inhibitor family or the GSK3-inhibitor family; it only fixes the S
    instead of inferring it from transcript abundance, which composition also moves.
 The minimum evidence needed for a drug experiment is (1): without a rescue arm no pharmacological result in this
 organoid can be attributed to Wnt rather than to the maturation state.
+
+---
+
+# INDEPENDENT REANALYSIS (appended 2026-10-25) — it agrees on direction and sharpens the limit
+
+A second analyst, who was told not to read this file or its script, took the raw counts and chose her own panels
+(`independent_reanalysis_wnt_vs_maturation_20261025.md`). Verdict: **the data cannot decide** whether the Wnt
+change is independent of composition, with a weak lean away from "downstream marker" and low confidence in
+"independent". Same direction as above (all four readouts higher in all four KO libraries than in both WT); a
+different conclusion on independence from a reader who took the raw gene lists at face value, who would
+implicitly assume it is independent.
+
+## A limit of my own result that must travel with it
+My p = 0.0001 is a **gene-set** statistic: how unusual it is that four named genes all sit on the list and all go up,
+against random sets of genes from the same universe. It is **not** a test across libraries. With two WT and four KO
+libraries the smallest p any single gene can reach by permuting the genotype labels is 1/15 = 0.067, so no one gene
+can do better. The two statements are both true and answer different questions; only the first is mine.
+
+## Numbers from the second analysis worth keeping
+- Per-gene log2 difference KO minus WT: AXIN2 0.94 [0.65, 1.23], APCDD1 1.22 [0.40, 2.05], LEF1 1.15 [-0.46, 2.76],
+  NKD1 1.46 [-0.76, 3.67]. Two of four intervals include zero.
+- After adjusting for a composition score (n = 6, 3 df) the KO coefficient on the Wnt score falls from 1.75 to
+  1.0 to 1.4 depending on the adjuster and remains positive for three of four; per gene it is weaker, with APCDD1
+  falling to 0.3 to 0.6 and its interval spanning zero. A noisy panel under-adjusts and unmeasured states cannot be removed.
+- Inside the four KO libraries (the only variation not confounded with genotype) the Wnt score correlates -0.85
+  with a neuronal panel and +0.67 with a progenitor panel, at near-zero power (significance needs |r| about 0.95
+  at n = 4) and carried by one library: dropping cko3 gives -0.42.
+- Leaving out any one library keeps the direction.
+
+## What would decide it, agreed by both analyses
+Single-cell or sorted-population RNA-seq of KO versus isogenic wild-type organoids, at least three per genotype,
+comparing the four readouts WITHIN matched cell types; or the WWOX re-expression contrast specified above.
