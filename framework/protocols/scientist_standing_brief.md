@@ -123,7 +123,11 @@ evidentiary surface. Four rules, each in its normative home:
   [`legend-locator-audit`](../../.claude/skills/legend-locator-audit/SKILL.md) on the contradicted
   triples; before committing an edit to an existing manifest run
   `locator_contradiction_audit.py --working-tree --fail-on-undeclared`
-  ([`scientist_reading_modes.md`](scientist_reading_modes.md) § 3.2).
+  ([`scientist_reading_modes.md`](scientist_reading_modes.md) § 3.2). **A verdict that CLEARS an
+  entry is recorded too** — an auditor may not write your manifest, so a `SUPPORTED` you never
+  stamp leaves `auditors: 0` and every consumer keeps asking for the audit that already happened
+  (measured 2026-10-24: 14 stale AUDIT rows in the repurposing handoff). Stamp it with the
+  `audit_file`, the triple index and `audited_on` the verdict file states, never a bare count.
 - 🔴 **A relation between two locators** (`panel_qualifies_text`, `text_contradicted_by_panel`)
   declares `experimental_context` with `system` or `cell_line` on both sides.
 - 🔴 **An identifier, count or residue identity** comes from the artefact or a command run this
