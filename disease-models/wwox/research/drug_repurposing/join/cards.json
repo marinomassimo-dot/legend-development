@@ -168,7 +168,7 @@
       "complete_fulltext_read",
       "partial_fulltext_read"
      ],
-     "digest": "a45cd3cd476b5481",
+     "digest": "580df31180f62eda",
      "locators": 900,
      "origin_id": "N-01",
      "papers": 49,
@@ -322,7 +322,8 @@
        "adjudication_files": [
         "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
-        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
+        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
+        "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
        ],
        "audit_status": "AUDIT_FILE_PRESENT",
        "audited_entries": 0,
@@ -627,7 +628,8 @@
        "adjudication_files": [
         "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
-        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
+        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
+        "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
        ],
        "audit_status": "AUDIT_FILE_PRESENT",
        "audited_entries": 0,
@@ -860,7 +862,8 @@
         "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
-        "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
+        "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md",
+        "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
        ],
        "audit_status": "AUDIT_FILE_PRESENT",
        "audited_entries": 1,
@@ -1126,12 +1129,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*`INSUFFICIENT` — mai misurato a livello proteico in alcun sistema WWOX.* The reflex move in genetic DEE, imported from TSC.",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:635; evidence table digest a45cd3cd476b5481"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:635; evidence table digest 580df31180f62eda"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "b4eeb6604c9cf1753b012a7e8a0093b8203d9a7f221fb830e50934110b2e16b1",
+   "input_sha256": "e137347e2d056581049a884b85961bd2e7941763273bd68e4a8d505125614cb8",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -1158,7 +1161,7 @@
      "complete_fulltext_read",
      "partial_fulltext_read"
     ],
-    "digest": "a45cd3cd476b5481",
+    "digest": "580df31180f62eda",
     "locators": 900,
     "origin_id": "N-01",
     "papers": 49,
@@ -1312,7 +1315,8 @@
       "adjudication_files": [
        "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
-       "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
+       "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
+       "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
       ],
       "audit_status": "AUDIT_FILE_PRESENT",
       "audited_entries": 0,
@@ -1617,7 +1621,8 @@
       "adjudication_files": [
        "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
-       "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
+       "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
+       "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
       ],
       "audit_status": "AUDIT_FILE_PRESENT",
       "audited_entries": 0,
@@ -1850,7 +1855,8 @@
        "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
-       "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
+       "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md",
+       "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
       ],
       "audit_status": "AUDIT_FILE_PRESENT",
       "audited_entries": 1,
@@ -2899,7 +2905,7 @@
       "complete_fulltext_read",
       "partial_fulltext_read"
      ],
-     "digest": "cc8746046ebc6998",
+     "digest": "0156b20d4f1c02c4",
      "locators": 281,
      "origin_id": "N-04",
      "papers": 14,
@@ -2909,10 +2915,11 @@
        "adjudication_files": [
         "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
-        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
+        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
+        "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
        ],
        "audit_status": "AUDIT_FILE_PRESENT",
-       "audited_entries": 2,
+       "audited_entries": 3,
        "contradiction_verdicts": [
         {
          "auditors": 0,
@@ -2923,16 +2930,24 @@
          "verdict": "UNSTATED"
         },
         {
-         "auditors": 1,
-         "verdict": "third blind audit 2026-10-23: SUPPORTED on substance, anchor-level defect (page/column); the corrected anchor is not itself audited."
-        },
-        {
          "auditors": 0,
          "verdict": "UNSTATED"
         },
         {
          "auditors": 1,
          "verdict": "third blind audit 2026-10-23: SUPPORTED on substance, anchor-level defect (page/column); the corrected anchor is not itself audited."
+        },
+        {
+         "auditors": 1,
+         "verdict": "blind audit of the narrowed entries 2026-10-24: SUPPORTED on substance, anchor-level defect; the corrected anchor is not itself audited."
+        },
+        {
+         "auditors": 1,
+         "verdict": "third blind audit 2026-10-23: SUPPORTED on substance, anchor-level defect (page/column); the corrected anchor is not itself audited."
+        },
+        {
+         "auditors": 0,
+         "verdict": "UNSTATED"
         }
        ],
        "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -2942,7 +2957,7 @@
        "reading_depth": "complete_fulltext_read",
        "receipt_events": 3,
        "receipt_id": "FTR-20261003-30361190-01",
-       "unaudited_contradictions": 3
+       "unaudited_contradictions": 4
       },
       {
        "adjudication_files": [
@@ -3053,7 +3068,8 @@
         "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
-        "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
+        "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md",
+        "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
        ],
        "audit_status": "AUDIT_FILE_PRESENT",
        "audited_entries": 1,
@@ -3253,7 +3269,7 @@
        "unaudited_contradictions": 0
       }
      ],
-     "unaudited_contradictions": 11
+     "unaudited_contradictions": 12
     },
     "p4_fields": {
      "cellular_context": {
@@ -3268,12 +3284,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*corrects a marker, not the mechanism* — plus an unmeasured premise. VABAM is",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:665; evidence table digest cc8746046ebc6998"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:665; evidence table digest 0156b20d4f1c02c4"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "8430ba1de24bfd36524266b34915bfb07aaf6d8c459d25cb62dfdef465722356",
+   "input_sha256": "0881ed5e69a99970a328a42a66a8f4894d917329c7c721eb2d9256b87b3fbebf",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -3297,7 +3313,7 @@
      "complete_fulltext_read",
      "partial_fulltext_read"
     ],
-    "digest": "cc8746046ebc6998",
+    "digest": "0156b20d4f1c02c4",
     "locators": 281,
     "origin_id": "N-04",
     "papers": 14,
@@ -3307,10 +3323,11 @@
       "adjudication_files": [
        "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
-       "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
+       "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
+       "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
       ],
       "audit_status": "AUDIT_FILE_PRESENT",
-      "audited_entries": 2,
+      "audited_entries": 3,
       "contradiction_verdicts": [
        {
         "auditors": 0,
@@ -3321,16 +3338,24 @@
         "verdict": "UNSTATED"
        },
        {
-        "auditors": 1,
-        "verdict": "third blind audit 2026-10-23: SUPPORTED on substance, anchor-level defect (page/column); the corrected anchor is not itself audited."
-       },
-       {
         "auditors": 0,
         "verdict": "UNSTATED"
        },
        {
         "auditors": 1,
         "verdict": "third blind audit 2026-10-23: SUPPORTED on substance, anchor-level defect (page/column); the corrected anchor is not itself audited."
+       },
+       {
+        "auditors": 1,
+        "verdict": "blind audit of the narrowed entries 2026-10-24: SUPPORTED on substance, anchor-level defect; the corrected anchor is not itself audited."
+       },
+       {
+        "auditors": 1,
+        "verdict": "third blind audit 2026-10-23: SUPPORTED on substance, anchor-level defect (page/column); the corrected anchor is not itself audited."
+       },
+       {
+        "auditors": 0,
+        "verdict": "UNSTATED"
        }
       ],
       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -3340,7 +3365,7 @@
       "reading_depth": "complete_fulltext_read",
       "receipt_events": 3,
       "receipt_id": "FTR-20261003-30361190-01",
-      "unaudited_contradictions": 3
+      "unaudited_contradictions": 4
      },
      {
       "adjudication_files": [
@@ -3451,7 +3476,8 @@
        "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
-       "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
+       "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md",
+       "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
       ],
       "audit_status": "AUDIT_FILE_PRESENT",
       "audited_entries": 1,
@@ -3651,7 +3677,7 @@
       "unaudited_contradictions": 0
      }
     ],
-    "unaudited_contradictions": 11
+    "unaudited_contradictions": 12
    },
    "limits": [
     "Technical comparison is not efficacy, safety or experimental validation.",
@@ -3660,7 +3686,7 @@
     "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
    ],
    "measure_next": {
-    "dependence": "11_UNAUDITED_CONTRADICTIONS",
+    "dependence": "12_UNAUDITED_CONTRADICTIONS",
     "experiment_sketch": "legend-locator-audit over the declared triples",
     "external_hits": 0,
     "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
@@ -3834,7 +3860,7 @@
       "complete_fulltext_read",
       "partial_fulltext_read"
      ],
-     "digest": "e5da9bdcacc8b41b",
+     "digest": "3ccd08f85b825eb0",
      "locators": 747,
      "origin_id": "N-05",
      "papers": 45,
@@ -4035,10 +4061,11 @@
        "adjudication_files": [
         "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
-        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
+        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
+        "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
        ],
        "audit_status": "AUDIT_FILE_PRESENT",
-       "audited_entries": 2,
+       "audited_entries": 3,
        "contradiction_verdicts": [
         {
          "auditors": 0,
@@ -4049,16 +4076,24 @@
          "verdict": "UNSTATED"
         },
         {
-         "auditors": 1,
-         "verdict": "third blind audit 2026-10-23: SUPPORTED on substance, anchor-level defect (page/column); the corrected anchor is not itself audited."
-        },
-        {
          "auditors": 0,
          "verdict": "UNSTATED"
         },
         {
          "auditors": 1,
          "verdict": "third blind audit 2026-10-23: SUPPORTED on substance, anchor-level defect (page/column); the corrected anchor is not itself audited."
+        },
+        {
+         "auditors": 1,
+         "verdict": "blind audit of the narrowed entries 2026-10-24: SUPPORTED on substance, anchor-level defect; the corrected anchor is not itself audited."
+        },
+        {
+         "auditors": 1,
+         "verdict": "third blind audit 2026-10-23: SUPPORTED on substance, anchor-level defect (page/column); the corrected anchor is not itself audited."
+        },
+        {
+         "auditors": 0,
+         "verdict": "UNSTATED"
         }
        ],
        "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -4068,7 +4103,7 @@
        "reading_depth": "complete_fulltext_read",
        "receipt_events": 3,
        "receipt_id": "FTR-20261003-30361190-01",
-       "unaudited_contradictions": 3
+       "unaudited_contradictions": 4
       },
       {
        "adjudication_files": [
@@ -4317,7 +4352,8 @@
         "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
-        "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
+        "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md",
+        "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
        ],
        "audit_status": "AUDIT_FILE_PRESENT",
        "audited_entries": 1,
@@ -4629,7 +4665,7 @@
        "unaudited_contradictions": 0
       }
      ],
-     "unaudited_contradictions": 11
+     "unaudited_contradictions": 12
     },
     "p4_fields": {
      "cellular_context": {
@@ -4644,12 +4680,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*the target is not the bottleneck.* Normal transcript with protein not detected",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:675; evidence table digest e5da9bdcacc8b41b"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:675; evidence table digest 3ccd08f85b825eb0"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "b6b8a3b8b95f54b1fc8ad5f13c1ef13a0152775b680b710a44bfef56743d632a",
+   "input_sha256": "efed42a7b6506f6c1b613723171c4e3ca46fa7fb01d35fa978c71bf943c1d36f",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -4673,7 +4709,7 @@
      "complete_fulltext_read",
      "partial_fulltext_read"
     ],
-    "digest": "e5da9bdcacc8b41b",
+    "digest": "3ccd08f85b825eb0",
     "locators": 747,
     "origin_id": "N-05",
     "papers": 45,
@@ -4874,10 +4910,11 @@
       "adjudication_files": [
        "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
-       "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
+       "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
+       "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
       ],
       "audit_status": "AUDIT_FILE_PRESENT",
-      "audited_entries": 2,
+      "audited_entries": 3,
       "contradiction_verdicts": [
        {
         "auditors": 0,
@@ -4888,16 +4925,24 @@
         "verdict": "UNSTATED"
        },
        {
-        "auditors": 1,
-        "verdict": "third blind audit 2026-10-23: SUPPORTED on substance, anchor-level defect (page/column); the corrected anchor is not itself audited."
-       },
-       {
         "auditors": 0,
         "verdict": "UNSTATED"
        },
        {
         "auditors": 1,
         "verdict": "third blind audit 2026-10-23: SUPPORTED on substance, anchor-level defect (page/column); the corrected anchor is not itself audited."
+       },
+       {
+        "auditors": 1,
+        "verdict": "blind audit of the narrowed entries 2026-10-24: SUPPORTED on substance, anchor-level defect; the corrected anchor is not itself audited."
+       },
+       {
+        "auditors": 1,
+        "verdict": "third blind audit 2026-10-23: SUPPORTED on substance, anchor-level defect (page/column); the corrected anchor is not itself audited."
+       },
+       {
+        "auditors": 0,
+        "verdict": "UNSTATED"
        }
       ],
       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -4907,7 +4952,7 @@
       "reading_depth": "complete_fulltext_read",
       "receipt_events": 3,
       "receipt_id": "FTR-20261003-30361190-01",
-      "unaudited_contradictions": 3
+      "unaudited_contradictions": 4
      },
      {
       "adjudication_files": [
@@ -5156,7 +5201,8 @@
        "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
-       "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
+       "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md",
+       "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
       ],
       "audit_status": "AUDIT_FILE_PRESENT",
       "audited_entries": 1,
@@ -5468,7 +5514,7 @@
       "unaudited_contradictions": 0
      }
     ],
-    "unaudited_contradictions": 11
+    "unaudited_contradictions": 12
    },
    "limits": [
     "Technical comparison is not efficacy, safety or experimental validation.",
@@ -5477,7 +5523,7 @@
     "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
    ],
    "measure_next": {
-    "dependence": "11_UNAUDITED_CONTRADICTIONS",
+    "dependence": "12_UNAUDITED_CONTRADICTIONS",
     "experiment_sketch": "legend-locator-audit over the declared triples",
     "external_hits": 1,
     "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
@@ -6775,7 +6821,7 @@
       "complete_fulltext_read",
       "partial_fulltext_read"
      ],
-     "digest": "5b0ecb7cc4c49b3d",
+     "digest": "b5d2de7f6e2d4cd5",
      "locators": 383,
      "origin_id": "N-10",
      "papers": 22,
@@ -6906,10 +6952,11 @@
        "adjudication_files": [
         "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
-        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
+        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
+        "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
        ],
        "audit_status": "AUDIT_FILE_PRESENT",
-       "audited_entries": 2,
+       "audited_entries": 3,
        "contradiction_verdicts": [
         {
          "auditors": 0,
@@ -6920,16 +6967,24 @@
          "verdict": "UNSTATED"
         },
         {
-         "auditors": 1,
-         "verdict": "third blind audit 2026-10-23: SUPPORTED on substance, anchor-level defect (page/column); the corrected anchor is not itself audited."
-        },
-        {
          "auditors": 0,
          "verdict": "UNSTATED"
         },
         {
          "auditors": 1,
          "verdict": "third blind audit 2026-10-23: SUPPORTED on substance, anchor-level defect (page/column); the corrected anchor is not itself audited."
+        },
+        {
+         "auditors": 1,
+         "verdict": "blind audit of the narrowed entries 2026-10-24: SUPPORTED on substance, anchor-level defect; the corrected anchor is not itself audited."
+        },
+        {
+         "auditors": 1,
+         "verdict": "third blind audit 2026-10-23: SUPPORTED on substance, anchor-level defect (page/column); the corrected anchor is not itself audited."
+        },
+        {
+         "auditors": 0,
+         "verdict": "UNSTATED"
         }
        ],
        "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -6939,7 +6994,7 @@
        "reading_depth": "complete_fulltext_read",
        "receipt_events": 3,
        "receipt_id": "FTR-20261003-30361190-01",
-       "unaudited_contradictions": 3
+       "unaudited_contradictions": 4
       },
       {
        "adjudication_files": [],
@@ -7035,7 +7090,8 @@
         "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
-        "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
+        "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md",
+        "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
        ],
        "audit_status": "AUDIT_FILE_PRESENT",
        "audited_entries": 1,
@@ -7171,7 +7227,7 @@
        "unaudited_contradictions": 0
       }
      ],
-     "unaudited_contradictions": 11
+     "unaudited_contradictions": 12
     },
     "p4_fields": {
      "cellular_context": {
@@ -7186,12 +7242,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*derived from a mechanism that cannot work.* SSOs **mask** elements; they do not",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:724; evidence table digest 5b0ecb7cc4c49b3d"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:724; evidence table digest b5d2de7f6e2d4cd5"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "0283d207f75e6e5e23f70f668e13bc1d1a7dfb95ff2a62612315c9c148e494c4",
+   "input_sha256": "f5411047ca4971832317d711aaa04926f6635f29d774e049992de9f5f9ee1ccf",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -7214,7 +7270,7 @@
      "complete_fulltext_read",
      "partial_fulltext_read"
     ],
-    "digest": "5b0ecb7cc4c49b3d",
+    "digest": "b5d2de7f6e2d4cd5",
     "locators": 383,
     "origin_id": "N-10",
     "papers": 22,
@@ -7345,10 +7401,11 @@
       "adjudication_files": [
        "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
-       "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
+       "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
+       "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
       ],
       "audit_status": "AUDIT_FILE_PRESENT",
-      "audited_entries": 2,
+      "audited_entries": 3,
       "contradiction_verdicts": [
        {
         "auditors": 0,
@@ -7359,16 +7416,24 @@
         "verdict": "UNSTATED"
        },
        {
-        "auditors": 1,
-        "verdict": "third blind audit 2026-10-23: SUPPORTED on substance, anchor-level defect (page/column); the corrected anchor is not itself audited."
-       },
-       {
         "auditors": 0,
         "verdict": "UNSTATED"
        },
        {
         "auditors": 1,
         "verdict": "third blind audit 2026-10-23: SUPPORTED on substance, anchor-level defect (page/column); the corrected anchor is not itself audited."
+       },
+       {
+        "auditors": 1,
+        "verdict": "blind audit of the narrowed entries 2026-10-24: SUPPORTED on substance, anchor-level defect; the corrected anchor is not itself audited."
+       },
+       {
+        "auditors": 1,
+        "verdict": "third blind audit 2026-10-23: SUPPORTED on substance, anchor-level defect (page/column); the corrected anchor is not itself audited."
+       },
+       {
+        "auditors": 0,
+        "verdict": "UNSTATED"
        }
       ],
       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -7378,7 +7443,7 @@
       "reading_depth": "complete_fulltext_read",
       "receipt_events": 3,
       "receipt_id": "FTR-20261003-30361190-01",
-      "unaudited_contradictions": 3
+      "unaudited_contradictions": 4
      },
      {
       "adjudication_files": [],
@@ -7474,7 +7539,8 @@
        "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
-       "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
+       "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md",
+       "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
       ],
       "audit_status": "AUDIT_FILE_PRESENT",
       "audited_entries": 1,
@@ -7610,7 +7676,7 @@
       "unaudited_contradictions": 0
      }
     ],
-    "unaudited_contradictions": 11
+    "unaudited_contradictions": 12
    },
    "limits": [
     "Technical comparison is not efficacy, safety or experimental validation.",
@@ -7619,7 +7685,7 @@
     "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
    ],
    "measure_next": {
-    "dependence": "11_UNAUDITED_CONTRADICTIONS",
+    "dependence": "12_UNAUDITED_CONTRADICTIONS",
     "experiment_sketch": "legend-locator-audit over the declared triples",
     "external_hits": 0,
     "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
@@ -7842,7 +7908,7 @@
       "complete_fulltext_read",
       "partial_fulltext_read"
      ],
-     "digest": "b21b89ac306d61ad",
+     "digest": "84df7aee00158038",
      "locators": 879,
      "origin_id": "N-11",
      "papers": 48,
@@ -7996,7 +8062,8 @@
        "adjudication_files": [
         "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
-        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
+        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
+        "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
        ],
        "audit_status": "AUDIT_FILE_PRESENT",
        "audited_entries": 0,
@@ -8444,7 +8511,8 @@
         "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
-        "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
+        "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md",
+        "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
        ],
        "audit_status": "AUDIT_FILE_PRESENT",
        "audited_entries": 1,
@@ -8752,12 +8820,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*derived from a textbook default.* \"Misfolded protein → ERAD → chemical chaperone\"",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:733; evidence table digest b21b89ac306d61ad"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:733; evidence table digest 84df7aee00158038"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "388f19eb0141b5c5aeb729e6f4003151894dbb4c3d6a729ce5628c577a8cd84a",
+   "input_sha256": "8f030b2f61e35e3aa9a6c8955f9acc06ed2ff5f0d7aaaaa92328757e7794b8eb",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -8784,7 +8852,7 @@
      "complete_fulltext_read",
      "partial_fulltext_read"
     ],
-    "digest": "b21b89ac306d61ad",
+    "digest": "84df7aee00158038",
     "locators": 879,
     "origin_id": "N-11",
     "papers": 48,
@@ -8938,7 +9006,8 @@
       "adjudication_files": [
        "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
-       "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
+       "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
+       "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
       ],
       "audit_status": "AUDIT_FILE_PRESENT",
       "audited_entries": 0,
@@ -9386,7 +9455,8 @@
        "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
-       "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
+       "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md",
+       "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
       ],
       "audit_status": "AUDIT_FILE_PRESENT",
       "audited_entries": 1,
@@ -9926,7 +9996,7 @@
       "complete_fulltext_read",
       "partial_fulltext_read"
      ],
-     "digest": "84eef9b7a443738b",
+     "digest": "f409cdba1cba396c",
      "locators": 169,
      "origin_id": "N-12",
      "papers": 7,
@@ -10016,7 +10086,8 @@
         "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
-        "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
+        "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md",
+        "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
        ],
        "audit_status": "AUDIT_FILE_PRESENT",
        "audited_entries": 1,
@@ -10097,12 +10168,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*wrong direction, hidden inside a plausible one.* \"It is a chaperone, therefore it",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:740; evidence table digest 84eef9b7a443738b"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:740; evidence table digest f409cdba1cba396c"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "a9822d6f374274a190d3e6812793d6a9fb6d0ef5ee1e60cdb1325f2f885f3ea2",
+   "input_sha256": "5c48c18f830f3e18c9f34f39f8737aaa47d940d6e5b141fa42309daf8b5ef634",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -10128,7 +10199,7 @@
      "complete_fulltext_read",
      "partial_fulltext_read"
     ],
-    "digest": "84eef9b7a443738b",
+    "digest": "f409cdba1cba396c",
     "locators": 169,
     "origin_id": "N-12",
     "papers": 7,
@@ -10218,7 +10289,8 @@
        "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
-       "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
+       "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md",
+       "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
       ],
       "audit_status": "AUDIT_FILE_PRESENT",
       "audited_entries": 1,
@@ -10426,7 +10498,7 @@
       "complete_fulltext_read",
       "partial_fulltext_read"
      ],
-     "digest": "3d17f0b6bd4c0983",
+     "digest": "14f8de049515a72c",
      "locators": 604,
      "origin_id": "N-13",
      "papers": 29,
@@ -10620,8 +10692,10 @@
        "unaudited_contradictions": 0
       },
       {
-       "adjudication_files": [],
-       "audit_status": "UNAUDITED",
+       "adjudication_files": [
+        "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
+       ],
+       "audit_status": "AUDIT_FILE_PRESENT",
        "audited_entries": 0,
        "contradiction_verdicts": [],
        "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -10708,7 +10782,8 @@
         "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
-        "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
+        "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md",
+        "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
        ],
        "audit_status": "AUDIT_FILE_PRESENT",
        "audited_entries": 1,
@@ -10876,14 +10951,15 @@
         "disease-models/wwox/research/page_adjudications/locator_audit_deep_cards_20261022.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
-        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
+        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
+        "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
        ],
        "audit_status": "AUDIT_FILE_PRESENT",
        "audited_entries": 2,
        "contradiction_verdicts": [
         {
-         "auditors": 1,
-         "verdict": "OVERSHOOT"
+         "auditors": 2,
+         "verdict": "OVERSHOOT/OVERSHOOT"
         },
         {
          "auditors": 0,
@@ -10973,12 +11049,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*the target is not causally downstream of WWOX in the cell being targeted* +",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:746; evidence table digest 3d17f0b6bd4c0983"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:746; evidence table digest 14f8de049515a72c"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "aea792049679eb626c148449eed3247d3b27ff42f1fa97e95a62984d1c1d84b2",
+   "input_sha256": "aee2e83b4e099bd75086d1dae6ed42b08292ab246ea807dcb2ca4d538ea8457c",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -11001,7 +11077,7 @@
      "complete_fulltext_read",
      "partial_fulltext_read"
     ],
-    "digest": "3d17f0b6bd4c0983",
+    "digest": "14f8de049515a72c",
     "locators": 604,
     "origin_id": "N-13",
     "papers": 29,
@@ -11195,8 +11271,10 @@
       "unaudited_contradictions": 0
      },
      {
-      "adjudication_files": [],
-      "audit_status": "UNAUDITED",
+      "adjudication_files": [
+       "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
+      ],
+      "audit_status": "AUDIT_FILE_PRESENT",
       "audited_entries": 0,
       "contradiction_verdicts": [],
       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -11283,7 +11361,8 @@
        "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
-       "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
+       "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md",
+       "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
       ],
       "audit_status": "AUDIT_FILE_PRESENT",
       "audited_entries": 1,
@@ -11451,14 +11530,15 @@
        "disease-models/wwox/research/page_adjudications/locator_audit_deep_cards_20261022.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
-       "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
+       "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
+       "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
       ],
       "audit_status": "AUDIT_FILE_PRESENT",
       "audited_entries": 2,
       "contradiction_verdicts": [
        {
-        "auditors": 1,
-        "verdict": "OVERSHOOT"
+        "auditors": 2,
+        "verdict": "OVERSHOOT/OVERSHOOT"
        },
        {
         "auditors": 0,
@@ -12215,7 +12295,7 @@
       "complete_fulltext_read",
       "partial_fulltext_read"
      ],
-     "digest": "ba7de9608d7dc260",
+     "digest": "ac79c66a5117d735",
      "locators": 960,
      "origin_id": "N-15",
      "papers": 51,
@@ -12369,7 +12449,8 @@
        "adjudication_files": [
         "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
-        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
+        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
+        "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
        ],
        "audit_status": "AUDIT_FILE_PRESENT",
        "audited_entries": 0,
@@ -12623,10 +12704,11 @@
        "adjudication_files": [
         "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
-        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
+        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
+        "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
        ],
        "audit_status": "AUDIT_FILE_PRESENT",
-       "audited_entries": 2,
+       "audited_entries": 3,
        "contradiction_verdicts": [
         {
          "auditors": 0,
@@ -12637,16 +12719,24 @@
          "verdict": "UNSTATED"
         },
         {
-         "auditors": 1,
-         "verdict": "third blind audit 2026-10-23: SUPPORTED on substance, anchor-level defect (page/column); the corrected anchor is not itself audited."
-        },
-        {
          "auditors": 0,
          "verdict": "UNSTATED"
         },
         {
          "auditors": 1,
          "verdict": "third blind audit 2026-10-23: SUPPORTED on substance, anchor-level defect (page/column); the corrected anchor is not itself audited."
+        },
+        {
+         "auditors": 1,
+         "verdict": "blind audit of the narrowed entries 2026-10-24: SUPPORTED on substance, anchor-level defect; the corrected anchor is not itself audited."
+        },
+        {
+         "auditors": 1,
+         "verdict": "third blind audit 2026-10-23: SUPPORTED on substance, anchor-level defect (page/column); the corrected anchor is not itself audited."
+        },
+        {
+         "auditors": 0,
+         "verdict": "UNSTATED"
         }
        ],
        "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -12656,7 +12746,7 @@
        "reading_depth": "complete_fulltext_read",
        "receipt_events": 3,
        "receipt_id": "FTR-20261003-30361190-01",
-       "unaudited_contradictions": 3
+       "unaudited_contradictions": 4
       },
       {
        "adjudication_files": [],
@@ -12870,7 +12960,8 @@
         "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
-        "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
+        "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md",
+        "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
        ],
        "audit_status": "AUDIT_FILE_PRESENT",
        "audited_entries": 1,
@@ -13213,7 +13304,7 @@
        "unaudited_contradictions": 0
       }
      ],
-     "unaudited_contradictions": 12
+     "unaudited_contradictions": 13
     },
     "p4_fields": {
      "cellular_context": {
@@ -13228,12 +13319,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*corrects a biomarker (seizures) but not the mechanism (development)*. In published",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:771; evidence table digest ba7de9608d7dc260"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:771; evidence table digest ac79c66a5117d735"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "52f452f067f9187aa188e855edca780589ed3385ca6fa9324a34f92ff195b1ed",
+   "input_sha256": "c48c12379952be38b2bb0d3ce7b48675a70533393568a0386cc338227398e5d7",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -13257,7 +13348,7 @@
      "complete_fulltext_read",
      "partial_fulltext_read"
     ],
-    "digest": "ba7de9608d7dc260",
+    "digest": "ac79c66a5117d735",
     "locators": 960,
     "origin_id": "N-15",
     "papers": 51,
@@ -13411,7 +13502,8 @@
       "adjudication_files": [
        "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
-       "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
+       "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
+       "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
       ],
       "audit_status": "AUDIT_FILE_PRESENT",
       "audited_entries": 0,
@@ -13665,10 +13757,11 @@
       "adjudication_files": [
        "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
-       "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
+       "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
+       "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
       ],
       "audit_status": "AUDIT_FILE_PRESENT",
-      "audited_entries": 2,
+      "audited_entries": 3,
       "contradiction_verdicts": [
        {
         "auditors": 0,
@@ -13679,16 +13772,24 @@
         "verdict": "UNSTATED"
        },
        {
-        "auditors": 1,
-        "verdict": "third blind audit 2026-10-23: SUPPORTED on substance, anchor-level defect (page/column); the corrected anchor is not itself audited."
-       },
-       {
         "auditors": 0,
         "verdict": "UNSTATED"
        },
        {
         "auditors": 1,
         "verdict": "third blind audit 2026-10-23: SUPPORTED on substance, anchor-level defect (page/column); the corrected anchor is not itself audited."
+       },
+       {
+        "auditors": 1,
+        "verdict": "blind audit of the narrowed entries 2026-10-24: SUPPORTED on substance, anchor-level defect; the corrected anchor is not itself audited."
+       },
+       {
+        "auditors": 1,
+        "verdict": "third blind audit 2026-10-23: SUPPORTED on substance, anchor-level defect (page/column); the corrected anchor is not itself audited."
+       },
+       {
+        "auditors": 0,
+        "verdict": "UNSTATED"
        }
       ],
       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -13698,7 +13799,7 @@
       "reading_depth": "complete_fulltext_read",
       "receipt_events": 3,
       "receipt_id": "FTR-20261003-30361190-01",
-      "unaudited_contradictions": 3
+      "unaudited_contradictions": 4
      },
      {
       "adjudication_files": [],
@@ -13912,7 +14013,8 @@
        "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
-       "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
+       "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md",
+       "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
       ],
       "audit_status": "AUDIT_FILE_PRESENT",
       "audited_entries": 1,
@@ -14255,7 +14357,7 @@
       "unaudited_contradictions": 0
      }
     ],
-    "unaudited_contradictions": 12
+    "unaudited_contradictions": 13
    },
    "limits": [
     "Technical comparison is not efficacy, safety or experimental validation.",
@@ -14264,7 +14366,7 @@
     "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
    ],
    "measure_next": {
-    "dependence": "12_UNAUDITED_CONTRADICTIONS",
+    "dependence": "13_UNAUDITED_CONTRADICTIONS",
     "experiment_sketch": "legend-locator-audit over the declared triples",
     "external_hits": 0,
     "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
@@ -14838,7 +14940,7 @@
       "complete_fulltext_read",
       "partial_fulltext_read"
      ],
-     "digest": "000f089ffff3ac7c",
+     "digest": "ed92b1ece288e92c",
      "locators": 998,
      "origin_id": "N-17",
      "papers": 55,
@@ -14992,7 +15094,8 @@
        "adjudication_files": [
         "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
-        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
+        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
+        "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
        ],
        "audit_status": "AUDIT_FILE_PRESENT",
        "audited_entries": 0,
@@ -15246,10 +15349,11 @@
        "adjudication_files": [
         "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
-        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
+        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
+        "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
        ],
        "audit_status": "AUDIT_FILE_PRESENT",
-       "audited_entries": 2,
+       "audited_entries": 3,
        "contradiction_verdicts": [
         {
          "auditors": 0,
@@ -15260,16 +15364,24 @@
          "verdict": "UNSTATED"
         },
         {
-         "auditors": 1,
-         "verdict": "third blind audit 2026-10-23: SUPPORTED on substance, anchor-level defect (page/column); the corrected anchor is not itself audited."
-        },
-        {
          "auditors": 0,
          "verdict": "UNSTATED"
         },
         {
          "auditors": 1,
          "verdict": "third blind audit 2026-10-23: SUPPORTED on substance, anchor-level defect (page/column); the corrected anchor is not itself audited."
+        },
+        {
+         "auditors": 1,
+         "verdict": "blind audit of the narrowed entries 2026-10-24: SUPPORTED on substance, anchor-level defect; the corrected anchor is not itself audited."
+        },
+        {
+         "auditors": 1,
+         "verdict": "third blind audit 2026-10-23: SUPPORTED on substance, anchor-level defect (page/column); the corrected anchor is not itself audited."
+        },
+        {
+         "auditors": 0,
+         "verdict": "UNSTATED"
         }
        ],
        "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -15279,7 +15391,7 @@
        "reading_depth": "complete_fulltext_read",
        "receipt_events": 3,
        "receipt_id": "FTR-20261003-30361190-01",
-       "unaudited_contradictions": 3
+       "unaudited_contradictions": 4
       },
       {
        "adjudication_files": [
@@ -15528,7 +15640,8 @@
         "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
-        "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
+        "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md",
+        "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
        ],
        "audit_status": "AUDIT_FILE_PRESENT",
        "audited_entries": 1,
@@ -15863,7 +15976,7 @@
        "unaudited_contradictions": 0
       }
      ],
-     "unaudited_contradictions": 12
+     "unaudited_contradictions": 13
     },
     "p4_fields": {
      "cellular_context": {
@@ -15878,12 +15991,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*importing a disease's dominant modality because the pathway diagram looks like that disease, without checking which way the arrow points.* CHAIN C reads like a tauopathy — WWOX loss → GSK3β de-repressed → pTau S396/S404 up (`CLAIM 035`, `DL-MECH-019`) — and tauopathy's dominant modality is **tau-lowering**. In the only system where the question was asked, tau-lowering **removes the benefit of bot",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:793; evidence table digest 000f089ffff3ac7c"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:793; evidence table digest ed92b1ece288e92c"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "e72643b62cf03f0a7ebd9739e15a6ced28e50d53a01f81269167626c56682c42",
+   "input_sha256": "6335d5c9f528290bd508cee5a80653a155d016f2b36fa4ec987f91797588ee48",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -15910,7 +16023,7 @@
      "complete_fulltext_read",
      "partial_fulltext_read"
     ],
-    "digest": "000f089ffff3ac7c",
+    "digest": "ed92b1ece288e92c",
     "locators": 998,
     "origin_id": "N-17",
     "papers": 55,
@@ -16064,7 +16177,8 @@
       "adjudication_files": [
        "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
-       "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
+       "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
+       "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
       ],
       "audit_status": "AUDIT_FILE_PRESENT",
       "audited_entries": 0,
@@ -16318,10 +16432,11 @@
       "adjudication_files": [
        "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
-       "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
+       "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
+       "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
       ],
       "audit_status": "AUDIT_FILE_PRESENT",
-      "audited_entries": 2,
+      "audited_entries": 3,
       "contradiction_verdicts": [
        {
         "auditors": 0,
@@ -16332,16 +16447,24 @@
         "verdict": "UNSTATED"
        },
        {
-        "auditors": 1,
-        "verdict": "third blind audit 2026-10-23: SUPPORTED on substance, anchor-level defect (page/column); the corrected anchor is not itself audited."
-       },
-       {
         "auditors": 0,
         "verdict": "UNSTATED"
        },
        {
         "auditors": 1,
         "verdict": "third blind audit 2026-10-23: SUPPORTED on substance, anchor-level defect (page/column); the corrected anchor is not itself audited."
+       },
+       {
+        "auditors": 1,
+        "verdict": "blind audit of the narrowed entries 2026-10-24: SUPPORTED on substance, anchor-level defect; the corrected anchor is not itself audited."
+       },
+       {
+        "auditors": 1,
+        "verdict": "third blind audit 2026-10-23: SUPPORTED on substance, anchor-level defect (page/column); the corrected anchor is not itself audited."
+       },
+       {
+        "auditors": 0,
+        "verdict": "UNSTATED"
        }
       ],
       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -16351,7 +16474,7 @@
       "reading_depth": "complete_fulltext_read",
       "receipt_events": 3,
       "receipt_id": "FTR-20261003-30361190-01",
-      "unaudited_contradictions": 3
+      "unaudited_contradictions": 4
      },
      {
       "adjudication_files": [
@@ -16600,7 +16723,8 @@
        "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
-       "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
+       "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md",
+       "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
       ],
       "audit_status": "AUDIT_FILE_PRESENT",
       "audited_entries": 1,
@@ -16935,7 +17059,7 @@
       "unaudited_contradictions": 0
      }
     ],
-    "unaudited_contradictions": 12
+    "unaudited_contradictions": 13
    },
    "limits": [
     "Technical comparison is not efficacy, safety or experimental validation.",
@@ -16944,7 +17068,7 @@
     "NO_MATCH_FOUND is information not available for those queries and that coverage: it is not proof the label is absent, not DRUG_HAS_NO_LABEL, not biological counterevidence and not a reason to drop the candidate."
    ],
    "measure_next": {
-    "dependence": "12_UNAUDITED_CONTRADICTIONS",
+    "dependence": "13_UNAUDITED_CONTRADICTIONS",
     "experiment_sketch": "legend-locator-audit over the declared triples",
     "external_hits": 0,
     "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
@@ -17518,7 +17642,7 @@
      "depths": [
       "complete_fulltext_read"
      ],
-     "digest": "13ef280b876d93cf",
+     "digest": "4e29c284a6c6172b",
      "locators": 154,
      "origin_id": "R-02",
      "papers": 5,
@@ -17528,10 +17652,11 @@
        "adjudication_files": [
         "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
-        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
+        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
+        "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
        ],
        "audit_status": "AUDIT_FILE_PRESENT",
-       "audited_entries": 2,
+       "audited_entries": 3,
        "contradiction_verdicts": [
         {
          "auditors": 0,
@@ -17542,16 +17667,24 @@
          "verdict": "UNSTATED"
         },
         {
-         "auditors": 1,
-         "verdict": "third blind audit 2026-10-23: SUPPORTED on substance, anchor-level defect (page/column); the corrected anchor is not itself audited."
-        },
-        {
          "auditors": 0,
          "verdict": "UNSTATED"
         },
         {
          "auditors": 1,
          "verdict": "third blind audit 2026-10-23: SUPPORTED on substance, anchor-level defect (page/column); the corrected anchor is not itself audited."
+        },
+        {
+         "auditors": 1,
+         "verdict": "blind audit of the narrowed entries 2026-10-24: SUPPORTED on substance, anchor-level defect; the corrected anchor is not itself audited."
+        },
+        {
+         "auditors": 1,
+         "verdict": "third blind audit 2026-10-23: SUPPORTED on substance, anchor-level defect (page/column); the corrected anchor is not itself audited."
+        },
+        {
+         "auditors": 0,
+         "verdict": "UNSTATED"
         }
        ],
        "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -17561,7 +17694,7 @@
        "reading_depth": "complete_fulltext_read",
        "receipt_events": 3,
        "receipt_id": "FTR-20261003-30361190-01",
-       "unaudited_contradictions": 3
+       "unaudited_contradictions": 4
       },
       {
        "adjudication_files": [],
@@ -17596,7 +17729,8 @@
         "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
-        "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
+        "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md",
+        "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
        ],
        "audit_status": "AUDIT_FILE_PRESENT",
        "audited_entries": 1,
@@ -17698,7 +17832,7 @@
        "unaudited_contradictions": 0
       }
      ],
-     "unaudited_contradictions": 11
+     "unaudited_contradictions": 12
     },
     "p4_fields": {
      "cellular_context": {
@@ -17713,12 +17847,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "memantine (approved); MK-801 / APV as tools",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:427; evidence table digest 13ef280b876d93cf"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:427; evidence table digest 4e29c284a6c6172b"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "83970eba72c6d5c1e6046a16c0cb22ab6ea2910623714b1521e40e5b8206e5f1",
+   "input_sha256": "28f8231ee28092648f0ba43658958ccc3ec146ac69ee5cebf6072ef07332f254",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -17743,7 +17877,7 @@
     "depths": [
      "complete_fulltext_read"
     ],
-    "digest": "13ef280b876d93cf",
+    "digest": "4e29c284a6c6172b",
     "locators": 154,
     "origin_id": "R-02",
     "papers": 5,
@@ -17753,10 +17887,11 @@
       "adjudication_files": [
        "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
-       "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
+       "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
+       "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
       ],
       "audit_status": "AUDIT_FILE_PRESENT",
-      "audited_entries": 2,
+      "audited_entries": 3,
       "contradiction_verdicts": [
        {
         "auditors": 0,
@@ -17767,16 +17902,24 @@
         "verdict": "UNSTATED"
        },
        {
-        "auditors": 1,
-        "verdict": "third blind audit 2026-10-23: SUPPORTED on substance, anchor-level defect (page/column); the corrected anchor is not itself audited."
-       },
-       {
         "auditors": 0,
         "verdict": "UNSTATED"
        },
        {
         "auditors": 1,
         "verdict": "third blind audit 2026-10-23: SUPPORTED on substance, anchor-level defect (page/column); the corrected anchor is not itself audited."
+       },
+       {
+        "auditors": 1,
+        "verdict": "blind audit of the narrowed entries 2026-10-24: SUPPORTED on substance, anchor-level defect; the corrected anchor is not itself audited."
+       },
+       {
+        "auditors": 1,
+        "verdict": "third blind audit 2026-10-23: SUPPORTED on substance, anchor-level defect (page/column); the corrected anchor is not itself audited."
+       },
+       {
+        "auditors": 0,
+        "verdict": "UNSTATED"
        }
       ],
       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -17786,7 +17929,7 @@
       "reading_depth": "complete_fulltext_read",
       "receipt_events": 3,
       "receipt_id": "FTR-20261003-30361190-01",
-      "unaudited_contradictions": 3
+      "unaudited_contradictions": 4
      },
      {
       "adjudication_files": [],
@@ -17821,7 +17964,8 @@
        "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
-       "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
+       "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md",
+       "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
       ],
       "audit_status": "AUDIT_FILE_PRESENT",
       "audited_entries": 1,
@@ -17923,7 +18067,7 @@
       "unaudited_contradictions": 0
      }
     ],
-    "unaudited_contradictions": 11
+    "unaudited_contradictions": 12
    },
    "limits": [
     "Technical comparison is not efficacy, safety or experimental validation.",
@@ -17932,7 +18076,7 @@
     "A label exists for the product identified; presence certifies neither approval, currency, paediatric suitability nor WOREE relevance."
    ],
    "measure_next": {
-    "dependence": "11_UNAUDITED_CONTRADICTIONS",
+    "dependence": "12_UNAUDITED_CONTRADICTIONS",
     "experiment_sketch": "legend-locator-audit over the declared triples",
     "external_hits": 2,
     "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
@@ -18882,7 +19026,7 @@
       "complete_fulltext_read",
       "partial_fulltext_read"
      ],
-     "digest": "a7620664767adaae",
+     "digest": "6a1ad1c5f932c184",
      "locators": 933,
      "origin_id": "R-05",
      "papers": 49,
@@ -19036,7 +19180,8 @@
        "adjudication_files": [
         "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
-        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
+        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
+        "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
        ],
        "audit_status": "AUDIT_FILE_PRESENT",
        "audited_entries": 0,
@@ -19517,7 +19662,8 @@
         "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
-        "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
+        "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md",
+        "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
        ],
        "audit_status": "AUDIT_FILE_PRESENT",
        "audited_entries": 1,
@@ -19825,12 +19971,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "ketogenic diet",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:502; evidence table digest a7620664767adaae"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:502; evidence table digest 6a1ad1c5f932c184"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "4e9e8825fa10c41a23a98ebef87af016acc10337d9c6abdb2bd0db084d8c31b0",
+   "input_sha256": "6189542539fdd4fe61e5de1e60b59a5caae8aec57e4c00a105acb129f084356c",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -19854,7 +20000,7 @@
      "complete_fulltext_read",
      "partial_fulltext_read"
     ],
-    "digest": "a7620664767adaae",
+    "digest": "6a1ad1c5f932c184",
     "locators": 933,
     "origin_id": "R-05",
     "papers": 49,
@@ -20008,7 +20154,8 @@
       "adjudication_files": [
        "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
-       "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
+       "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
+       "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
       ],
       "audit_status": "AUDIT_FILE_PRESENT",
       "audited_entries": 0,
@@ -20489,7 +20636,8 @@
        "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
-       "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
+       "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md",
+       "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
       ],
       "audit_status": "AUDIT_FILE_PRESENT",
       "audited_entries": 1,
@@ -20965,7 +21113,7 @@
       "complete_fulltext_read",
       "partial_fulltext_read"
      ],
-     "digest": "c86cdf60762ec9b6",
+     "digest": "342343385bae6d02",
      "locators": 760,
      "origin_id": "R-06",
      "papers": 37,
@@ -21358,7 +21506,8 @@
         "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
-        "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
+        "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md",
+        "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
        ],
        "audit_status": "AUDIT_FILE_PRESENT",
        "audited_entries": 1,
@@ -21777,12 +21926,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "class: IL-1β/NLRP3, MAPK/NF-κB or microglia-targeting agent",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:528; evidence table digest c86cdf60762ec9b6"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:528; evidence table digest 342343385bae6d02"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "0a6287d7dcc4e9923ae7a09d25ecfe5fed638e0406ea573b3419f432d53b2173",
+   "input_sha256": "d54bad76cb88e9bc9009a46cb28d2077c37c6e94fd2d22ed5cae360780aac749",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -21806,7 +21955,7 @@
      "complete_fulltext_read",
      "partial_fulltext_read"
     ],
-    "digest": "c86cdf60762ec9b6",
+    "digest": "342343385bae6d02",
     "locators": 760,
     "origin_id": "R-06",
     "papers": 37,
@@ -22199,7 +22348,8 @@
        "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
-       "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
+       "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md",
+       "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
       ],
       "audit_status": "AUDIT_FILE_PRESENT",
       "audited_entries": 1,
@@ -22992,7 +23142,7 @@
       "complete_fulltext_read",
       "partial_fulltext_read"
      ],
-     "digest": "b151d339481bb688",
+     "digest": "2bbc1cb003f1c1ee",
      "locators": 948,
      "origin_id": "R-08",
      "papers": 51,
@@ -23174,7 +23324,8 @@
        "adjudication_files": [
         "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
-        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
+        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
+        "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
        ],
        "audit_status": "AUDIT_FILE_PRESENT",
        "audited_entries": 0,
@@ -23428,10 +23579,11 @@
        "adjudication_files": [
         "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
-        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
+        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
+        "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
        ],
        "audit_status": "AUDIT_FILE_PRESENT",
-       "audited_entries": 2,
+       "audited_entries": 3,
        "contradiction_verdicts": [
         {
          "auditors": 0,
@@ -23442,16 +23594,24 @@
          "verdict": "UNSTATED"
         },
         {
-         "auditors": 1,
-         "verdict": "third blind audit 2026-10-23: SUPPORTED on substance, anchor-level defect (page/column); the corrected anchor is not itself audited."
-        },
-        {
          "auditors": 0,
          "verdict": "UNSTATED"
         },
         {
          "auditors": 1,
          "verdict": "third blind audit 2026-10-23: SUPPORTED on substance, anchor-level defect (page/column); the corrected anchor is not itself audited."
+        },
+        {
+         "auditors": 1,
+         "verdict": "blind audit of the narrowed entries 2026-10-24: SUPPORTED on substance, anchor-level defect; the corrected anchor is not itself audited."
+        },
+        {
+         "auditors": 1,
+         "verdict": "third blind audit 2026-10-23: SUPPORTED on substance, anchor-level defect (page/column); the corrected anchor is not itself audited."
+        },
+        {
+         "auditors": 0,
+         "verdict": "UNSTATED"
         }
        ],
        "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -23461,7 +23621,7 @@
        "reading_depth": "complete_fulltext_read",
        "receipt_events": 3,
        "receipt_id": "FTR-20261003-30361190-01",
-       "unaudited_contradictions": 3
+       "unaudited_contradictions": 4
       },
       {
        "adjudication_files": [],
@@ -23661,7 +23821,8 @@
         "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
-        "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
+        "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md",
+        "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
        ],
        "audit_status": "AUDIT_FILE_PRESENT",
        "audited_entries": 1,
@@ -23954,7 +24115,7 @@
        "unaudited_contradictions": 0
       }
      ],
-     "unaudited_contradictions": 12
+     "unaudited_contradictions": 13
     },
     "p4_fields": {
      "cellular_context": {
@@ -23969,12 +24130,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "cytosine base editor (C→T on the antisense strand) or prime editor",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:578; evidence table digest b151d339481bb688"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:578; evidence table digest 2bbc1cb003f1c1ee"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "a644f4109072bd2ecfeca026a5f514b464bc30376a5790f29723a381854c7f49",
+   "input_sha256": "db71f504868bd79581031c32c8932a35f2963186b12865f00aeae6bdb549c4cd",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -23998,7 +24159,7 @@
      "complete_fulltext_read",
      "partial_fulltext_read"
     ],
-    "digest": "b151d339481bb688",
+    "digest": "2bbc1cb003f1c1ee",
     "locators": 948,
     "origin_id": "R-08",
     "papers": 51,
@@ -24180,7 +24341,8 @@
       "adjudication_files": [
        "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
-       "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
+       "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
+       "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
       ],
       "audit_status": "AUDIT_FILE_PRESENT",
       "audited_entries": 0,
@@ -24434,10 +24596,11 @@
       "adjudication_files": [
        "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
-       "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
+       "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
+       "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
       ],
       "audit_status": "AUDIT_FILE_PRESENT",
-      "audited_entries": 2,
+      "audited_entries": 3,
       "contradiction_verdicts": [
        {
         "auditors": 0,
@@ -24448,16 +24611,24 @@
         "verdict": "UNSTATED"
        },
        {
-        "auditors": 1,
-        "verdict": "third blind audit 2026-10-23: SUPPORTED on substance, anchor-level defect (page/column); the corrected anchor is not itself audited."
-       },
-       {
         "auditors": 0,
         "verdict": "UNSTATED"
        },
        {
         "auditors": 1,
         "verdict": "third blind audit 2026-10-23: SUPPORTED on substance, anchor-level defect (page/column); the corrected anchor is not itself audited."
+       },
+       {
+        "auditors": 1,
+        "verdict": "blind audit of the narrowed entries 2026-10-24: SUPPORTED on substance, anchor-level defect; the corrected anchor is not itself audited."
+       },
+       {
+        "auditors": 1,
+        "verdict": "third blind audit 2026-10-23: SUPPORTED on substance, anchor-level defect (page/column); the corrected anchor is not itself audited."
+       },
+       {
+        "auditors": 0,
+        "verdict": "UNSTATED"
        }
       ],
       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -24467,7 +24638,7 @@
       "reading_depth": "complete_fulltext_read",
       "receipt_events": 3,
       "receipt_id": "FTR-20261003-30361190-01",
-      "unaudited_contradictions": 3
+      "unaudited_contradictions": 4
      },
      {
       "adjudication_files": [],
@@ -24667,7 +24838,8 @@
        "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
-       "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
+       "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md",
+       "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
       ],
       "audit_status": "AUDIT_FILE_PRESENT",
       "audited_entries": 1,
@@ -24960,7 +25132,7 @@
       "unaudited_contradictions": 0
      }
     ],
-    "unaudited_contradictions": 12
+    "unaudited_contradictions": 13
    },
    "limits": [
     "Technical comparison is not efficacy, safety or experimental validation.",
@@ -24969,7 +25141,7 @@
     "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
    ],
    "measure_next": {
-    "dependence": "12_UNAUDITED_CONTRADICTIONS",
+    "dependence": "13_UNAUDITED_CONTRADICTIONS",
     "experiment_sketch": "legend-locator-audit over the declared triples",
     "external_hits": 0,
     "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
@@ -25208,7 +25380,7 @@
       "complete_fulltext_read",
       "partial_fulltext_read"
      ],
-     "digest": "fdef7090ac3e7971",
+     "digest": "46417510a70e44d5",
      "locators": 879,
      "origin_id": "R-09",
      "papers": 48,
@@ -25362,7 +25534,8 @@
        "adjudication_files": [
         "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
-        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
+        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
+        "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
        ],
        "audit_status": "AUDIT_FILE_PRESENT",
        "audited_entries": 0,
@@ -25810,7 +25983,8 @@
         "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
-        "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
+        "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md",
+        "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
        ],
        "audit_status": "AUDIT_FILE_PRESENT",
        "audited_entries": 1,
@@ -26118,12 +26292,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "conditional; **no molecule is design-ready**. Three families: site-specific pharmacological chaperone · kinetic stabilizer · indirect proteostasis regulator",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:604; evidence table digest fdef7090ac3e7971"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:604; evidence table digest 46417510a70e44d5"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "f2a09792b865276da81860475319fba8dd622b8e628dd6ee5efffc283349501f",
+   "input_sha256": "90519e8dc8dd0cb192a9359f283abf5101a631280662eb4b5459d53b93f32c78",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -26150,7 +26324,7 @@
      "complete_fulltext_read",
      "partial_fulltext_read"
     ],
-    "digest": "fdef7090ac3e7971",
+    "digest": "46417510a70e44d5",
     "locators": 879,
     "origin_id": "R-09",
     "papers": 48,
@@ -26304,7 +26478,8 @@
       "adjudication_files": [
        "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
-       "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
+       "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
+       "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
       ],
       "audit_status": "AUDIT_FILE_PRESENT",
       "audited_entries": 0,
@@ -26752,7 +26927,8 @@
        "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
-       "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
+       "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md",
+       "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
       ],
       "audit_status": "AUDIT_FILE_PRESENT",
       "audited_entries": 1,

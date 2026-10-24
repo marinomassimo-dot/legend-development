@@ -24,7 +24,7 @@
   "would_move": "N-03 (disease-models/wwox/analysis/mechanism_intervention_map.md:656)"
  },
  {
-  "dependence": "11_UNAUDITED_CONTRADICTIONS",
+  "dependence": "12_UNAUDITED_CONTRADICTIONS",
   "experiment_sketch": "legend-locator-audit over the declared triples",
   "external_hits": 0,
   "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
@@ -32,7 +32,7 @@
   "would_move": "N-04 (disease-models/wwox/analysis/mechanism_intervention_map.md:665)"
  },
  {
-  "dependence": "11_UNAUDITED_CONTRADICTIONS",
+  "dependence": "12_UNAUDITED_CONTRADICTIONS",
   "experiment_sketch": "legend-locator-audit over the declared triples",
   "external_hits": 1,
   "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
@@ -72,7 +72,7 @@
   "would_move": "N-09 (disease-models/wwox/analysis/mechanism_intervention_map.md:714)"
  },
  {
-  "dependence": "11_UNAUDITED_CONTRADICTIONS",
+  "dependence": "12_UNAUDITED_CONTRADICTIONS",
   "experiment_sketch": "legend-locator-audit over the declared triples",
   "external_hits": 0,
   "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
@@ -112,7 +112,7 @@
   "would_move": "N-14 (disease-models/wwox/analysis/mechanism_intervention_map.md:760)"
  },
  {
-  "dependence": "12_UNAUDITED_CONTRADICTIONS",
+  "dependence": "13_UNAUDITED_CONTRADICTIONS",
   "experiment_sketch": "legend-locator-audit over the declared triples",
   "external_hits": 0,
   "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
@@ -128,7 +128,7 @@
   "would_move": "N-16 (disease-models/wwox/analysis/mechanism_intervention_map.md:787)"
  },
  {
-  "dependence": "12_UNAUDITED_CONTRADICTIONS",
+  "dependence": "13_UNAUDITED_CONTRADICTIONS",
   "experiment_sketch": "legend-locator-audit over the declared triples",
   "external_hits": 0,
   "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
@@ -144,7 +144,7 @@
   "would_move": "R-01 (disease-models/wwox/analysis/mechanism_intervention_map.md:403)"
  },
  {
-  "dependence": "11_UNAUDITED_CONTRADICTIONS",
+  "dependence": "12_UNAUDITED_CONTRADICTIONS",
   "experiment_sketch": "legend-locator-audit over the declared triples",
   "external_hits": 2,
   "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
@@ -192,7 +192,7 @@
   "would_move": "R-07 (disease-models/wwox/analysis/mechanism_intervention_map.md:553)"
  },
  {
-  "dependence": "12_UNAUDITED_CONTRADICTIONS",
+  "dependence": "13_UNAUDITED_CONTRADICTIONS",
   "experiment_sketch": "legend-locator-audit over the declared triples",
   "external_hits": 0,
   "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
