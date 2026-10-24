@@ -780,11 +780,16 @@ shared PDK axis: that R-05 reaches the same metabolic bypass with a profile that
 monitoring. It is **not a head-to-head comparison and is untested**: no paper compares them, none was
 found, and the one seizure-model paper read for this row argues the opposite sign for a dichloroacetate
 **combination** in an acquired-injury rat (`PAPER 562`: dichloroacetate **with pyruvate** reduced
-oxidative-stress and glial-activation readouts after pilocarpine seizure; groups of five and eight,
-one week, one sensorimotor test, and the paper states — *citing prior work, not measuring it* — that
-*"low doses of DCA or pyruvate alone do not significantly reduce neuronal cell death due to seizure"*.
-🔴 NOT WWOX EVIDENCE; adult male rats, an acquired injury, not a developmental model; the paper also
-records a high-dose neurotoxicity ceiling from other work).
+oxidative-stress and glial-activation readouts after pilocarpine seizure, **and significantly reduced
+degenerating neurons**; groups of five and eight, one week, one sensorimotor test. The paper's seizure
+groups **did include** a dichloroacetate-alone and a pyruvate-alone arm, and it reports that
+*"administration of only DCA or pyruvate"* was ineffective on neuronal (NeuN) survival — so the
+single-agent negative is **measured in that paper**, not only cited from earlier work, and it is what makes
+the effect a property of the **combination**. 🔴 NOT WWOX EVIDENCE; adult male rats, an acquired injury, not
+a developmental model; the paper also records a high-dose neurotoxicity ceiling from other work.
+*Corrected 2026-10-25 after a blind audit of the 2026-10-24 rewrite found the earlier wording ("citing
+prior work, not measuring it") contradicted by the paper's own arms and the neuronal-loss result missing
+from the readout list.*)
 No dose, administration or suitability is stated or implied here; **not medical advice**.
 *Narrowed 2026-10-24 by `scientist-b`, re-derived first-hand from the paediatric long-term safety
 full text (Abdelmalak 2013, DOI `10.1016/j.ymgme.2013.03.019`, staged receipt
@@ -857,10 +862,20 @@ a published absence of wild-type transcript at face value: *"some manuscripts cl
 wildtype splicing left whereas faint wildtype bands can be identified in a gel, which might be
 sufficient to consider this a suitable case."*
 ⇒ Status `stress-tested`, **not** `refuted`: the guideline's verdict on the class is flat, and what
-is unmeasured is this allele's membership of it by the functional criterion. **Reopening:** a transcript measurement on the reference acceptor
-allele that shows **residual wild-type splicing** would move it from the guideline's *destroyed* to
-its *weakened* class — *unlikely eligible*, not *not eligible* — and make an SSO a live question
-again. That measurement is the experiment `TX-001` was designed around, and it remains undone.
+is unmeasured is this allele's membership of it by the functional criterion. **Reopening, stated
+exactly:** the guideline's *not eligible* column is **OR-joined** — canonical splice site destroyed, **or**
+a variant within 5 bp of the canonical splice site, among others. A canonical acceptor allele is at
+position −2, so it stays *not eligible* **on position alone, whatever a transcript test shows**. A
+measurement on the reference acceptor allele that shows **residual wild-type splicing** would move it
+from the guideline's *destroyed* to its *weakened* class on the **functional** criterion only, and so
+removes one of the routes to *not eligible*, not the other; it does not by itself make an SSO a live
+question. Three qualifications the guideline attaches and the earlier wording dropped: the 5-bp rule is
+framed as a **proxy** (variants there "most likely" destroy canonical splicing); the authors state the
+guidelines **will be adjusted** as evidence accrues; and a footnote gives **two exceptions** to the
+quoted sentence. Whether this allele falls under an exception is not established here. The
+transcript measurement is the experiment `TX-001` was designed around, and it remains undone.
+*Corrected 2026-10-25 after a blind audit of the 2026-10-24 rewrite found the earlier "unlikely
+eligible, not not eligible" reopening true of the functional criterion only.*
 *Narrowed 2026-10-24 by `scientist-b`, re-derived first-hand from the consensus guidelines
 (Cheerie 2025, DOI `10.1016/j.ajhg.2025.02.017`; the quoted rules are in Data S1, text layer digest
 `60abe3f4f1a846e068bc6384d2b2bef8c06b5e60a714c628c9489ac410f8affd`, re-verified today), from the
