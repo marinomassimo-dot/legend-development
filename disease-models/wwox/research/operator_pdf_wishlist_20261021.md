@@ -49,6 +49,7 @@ browser-like User-Agent. None was circumvented here.
 | 25331887 (supplement S1–S7) | Abu-Odeh 2014 *PNAS* | body free, supplement outside the OA subset | `FT-053`, `DL-MECH-083`; the only dosage-genetics panel and the ubiquitin-linkage discrimination |
 | 34015398 | Yang 2021 | publisher challenge, CC-BY | `FT-196`; the pharmacological-restoration leg of the discovery ledger |
 | 15548692 · 17909041 | Aqeilan 2004 · 2007 | publisher challenge, free PDF indexed | gene-direct debts; `FT-198` WWOX–ErbB4 |
+| 42397075 (supplementary figures volume) | Steinberg 2026 | **not a routing gap — the open-access route does not hold it.** Measured 2026-10-24: Europe PMC returns no PMCID, `isOpenAccess N`, `hasSuppl N`, `inEPMC N`, and the 14 declared SHA-256 digests match nothing on this host. Do not re-attempt the automated routes | ten locator entries of `PMID42397075.json` (15 and 21–29), declared `ABSENT_ON_HOST` and unverifiable until the volume arrives. The body and main-article figures are read and verified |
 | 40139278 | Yuan 2025 | open access, 403 to every automated route | `FT-197`; WWOX genotype in a dopamine-deficit population |
 | 21520031 | Cancemi 2011 | listed PDF returns 403 | the thyroid / endocrine axis, currently "only blocked rows" |
 | 25012504 (+2 supplements) | Abu-Remaileh 2014 | bronze-OA mislabel; publisher serves the paywalled page | its own PAPER depth line; the glucose/HIF1A primary. 🔴 a prior local PDF is **gone** — a digest search found nothing |
