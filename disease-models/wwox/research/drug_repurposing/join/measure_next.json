@@ -96,10 +96,10 @@
   "would_move": "N-12 (disease-models/wwox/analysis/mechanism_intervention_map.md:740)"
  },
  {
-  "dependence": "2_UNAUDITED_CONTRADICTIONS",
-  "experiment_sketch": "legend-locator-audit over the declared triples",
+  "dependence": "29_PAPERS_17_COMPLETE",
+  "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
   "external_hits": 0,
-  "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
+  "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
   "query_id": "Q-N-13",
   "would_move": "N-13 (disease-models/wwox/analysis/mechanism_intervention_map.md:746)"
  },

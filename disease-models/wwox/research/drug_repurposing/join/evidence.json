@@ -216,7 +216,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "b82c972fce664146",
+  "digest": "5bda2e1291da470c",
   "locators": 159,
   "origin_id": "CLAIM 002",
   "papers": 4,
@@ -302,23 +302,23 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 2,
+    "audited_entries": 4,
     "contradiction_verdicts": [
      {
       "auditors": 2,
       "verdict": "OVERSHOOT/OVERSHOOT"
      },
      {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
      },
      {
       "auditors": 1,
-      "verdict": "OVERSHOOT"
-     },
-     {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "verdict": "SUPPORTED"
      }
     ],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -328,10 +328,10 @@
     "reading_depth": "complete_fulltext_read",
     "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
-    "unaudited_contradictions": 2
+    "unaudited_contradictions": 0
    }
   ],
-  "unaudited_contradictions": 2
+  "unaudited_contradictions": 0
  },
  {
   "abstention": null,
@@ -340,7 +340,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "7897847592f26d9d",
+  "digest": "bb175269d57a0a3c",
   "locators": 131,
   "origin_id": "CLAIM 003",
   "papers": 4,
@@ -399,23 +399,23 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 2,
+    "audited_entries": 4,
     "contradiction_verdicts": [
      {
       "auditors": 2,
       "verdict": "OVERSHOOT/OVERSHOOT"
      },
      {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
      },
      {
       "auditors": 1,
-      "verdict": "OVERSHOOT"
-     },
-     {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "verdict": "SUPPORTED"
      }
     ],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -425,10 +425,10 @@
     "reading_depth": "complete_fulltext_read",
     "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
-    "unaudited_contradictions": 2
+    "unaudited_contradictions": 0
    }
   ],
-  "unaudited_contradictions": 2
+  "unaudited_contradictions": 0
  },
  {
   "abstention": null,
@@ -480,7 +480,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "2c0feac08586b5f2",
+  "digest": "1d06f822d821aee5",
   "locators": 455,
   "origin_id": "CLAIM 005",
   "papers": 12,
@@ -751,23 +751,23 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 2,
+    "audited_entries": 4,
     "contradiction_verdicts": [
      {
       "auditors": 2,
       "verdict": "OVERSHOOT/OVERSHOOT"
      },
      {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
      },
      {
       "auditors": 1,
-      "verdict": "OVERSHOOT"
-     },
-     {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "verdict": "SUPPORTED"
      }
     ],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -777,7 +777,7 @@
     "reading_depth": "complete_fulltext_read",
     "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
-    "unaudited_contradictions": 2
+    "unaudited_contradictions": 0
    },
    {
     "adjudication_files": [
@@ -844,7 +844,7 @@
     "unaudited_contradictions": 0
    }
   ],
-  "unaudited_contradictions": 2
+  "unaudited_contradictions": 0
  },
  {
   "abstention": null,
@@ -11089,7 +11089,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "24a18f389a12b044",
+  "digest": "5806cbf71671a584",
   "locators": 992,
   "origin_id": "DL-BIO-085",
   "papers": 37,
@@ -11819,23 +11819,23 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 2,
+    "audited_entries": 4,
     "contradiction_verdicts": [
      {
       "auditors": 2,
       "verdict": "OVERSHOOT/OVERSHOOT"
      },
      {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
      },
      {
       "auditors": 1,
-      "verdict": "OVERSHOOT"
-     },
-     {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "verdict": "SUPPORTED"
      }
     ],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -11845,7 +11845,7 @@
     "reading_depth": "complete_fulltext_read",
     "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
-    "unaudited_contradictions": 2
+    "unaudited_contradictions": 0
    },
    {
     "adjudication_files": [
@@ -11912,7 +11912,7 @@
     "unaudited_contradictions": 0
    }
   ],
-  "unaudited_contradictions": 2
+  "unaudited_contradictions": 0
  },
  {
   "abstention": null,
@@ -11922,7 +11922,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "8a64fca983d337b0",
+  "digest": "8747227cb6c5da19",
   "locators": 1444,
   "origin_id": "DL-BIO-090",
   "papers": 77,
@@ -13236,23 +13236,23 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 2,
+    "audited_entries": 4,
     "contradiction_verdicts": [
      {
       "auditors": 2,
       "verdict": "OVERSHOOT/OVERSHOOT"
      },
      {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
      },
      {
       "auditors": 1,
-      "verdict": "OVERSHOOT"
-     },
-     {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "verdict": "SUPPORTED"
      }
     ],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -13262,7 +13262,7 @@
     "reading_depth": "complete_fulltext_read",
     "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
-    "unaudited_contradictions": 2
+    "unaudited_contradictions": 0
    },
    {
     "adjudication_files": [
@@ -13343,7 +13343,7 @@
     "unaudited_contradictions": 0
    }
   ],
-  "unaudited_contradictions": 2
+  "unaudited_contradictions": 0
  },
  {
   "abstention": null,
@@ -13353,7 +13353,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "258544a04d305fba",
+  "digest": "85425fe65d43f8a2",
   "locators": 1592,
   "origin_id": "DL-BIO-095",
   "papers": 82,
@@ -14737,23 +14737,23 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 2,
+    "audited_entries": 4,
     "contradiction_verdicts": [
      {
       "auditors": 2,
       "verdict": "OVERSHOOT/OVERSHOOT"
      },
      {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
      },
      {
       "auditors": 1,
-      "verdict": "OVERSHOOT"
-     },
-     {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "verdict": "SUPPORTED"
      }
     ],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -14763,7 +14763,7 @@
     "reading_depth": "complete_fulltext_read",
     "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
-    "unaudited_contradictions": 2
+    "unaudited_contradictions": 0
    },
    {
     "adjudication_files": [
@@ -14844,7 +14844,7 @@
     "unaudited_contradictions": 0
    }
   ],
-  "unaudited_contradictions": 2
+  "unaudited_contradictions": 0
  },
  {
   "abstention": null,
@@ -47338,7 +47338,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "87c60cea178fb697",
+  "digest": "54ed3fe204face0b",
   "locators": 1300,
   "origin_id": "DL-MECH-070",
   "papers": 59,
@@ -48414,23 +48414,23 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 2,
+    "audited_entries": 4,
     "contradiction_verdicts": [
      {
       "auditors": 2,
       "verdict": "OVERSHOOT/OVERSHOOT"
      },
      {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
      },
      {
       "auditors": 1,
-      "verdict": "OVERSHOOT"
-     },
-     {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "verdict": "SUPPORTED"
      }
     ],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -48440,7 +48440,7 @@
     "reading_depth": "complete_fulltext_read",
     "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
-    "unaudited_contradictions": 2
+    "unaudited_contradictions": 0
    },
    {
     "adjudication_files": [
@@ -48507,7 +48507,7 @@
     "unaudited_contradictions": 0
    }
   ],
-  "unaudited_contradictions": 2
+  "unaudited_contradictions": 0
  },
  {
   "abstention": null,
@@ -49811,7 +49811,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "eba6386eda4503fc",
+  "digest": "84e0a82f4fbecc37",
   "locators": 479,
   "origin_id": "DL-MECH-072",
   "papers": 14,
@@ -50115,23 +50115,23 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 2,
+    "audited_entries": 4,
     "contradiction_verdicts": [
      {
       "auditors": 2,
       "verdict": "OVERSHOOT/OVERSHOOT"
      },
      {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
      },
      {
       "auditors": 1,
-      "verdict": "OVERSHOOT"
-     },
-     {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "verdict": "SUPPORTED"
      }
     ],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -50141,7 +50141,7 @@
     "reading_depth": "complete_fulltext_read",
     "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
-    "unaudited_contradictions": 2
+    "unaudited_contradictions": 0
    },
    {
     "adjudication_files": [
@@ -50208,7 +50208,7 @@
     "unaudited_contradictions": 0
    }
   ],
-  "unaudited_contradictions": 2
+  "unaudited_contradictions": 0
  },
  {
   "abstention": null,
@@ -50217,7 +50217,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "3615e59d5b66a0b7",
+  "digest": "4175ba2e0a166256",
   "locators": 479,
   "origin_id": "DL-MECH-073",
   "papers": 14,
@@ -50521,23 +50521,23 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 2,
+    "audited_entries": 4,
     "contradiction_verdicts": [
      {
       "auditors": 2,
       "verdict": "OVERSHOOT/OVERSHOOT"
      },
      {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
      },
      {
       "auditors": 1,
-      "verdict": "OVERSHOOT"
-     },
-     {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "verdict": "SUPPORTED"
      }
     ],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -50547,7 +50547,7 @@
     "reading_depth": "complete_fulltext_read",
     "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
-    "unaudited_contradictions": 2
+    "unaudited_contradictions": 0
    },
    {
     "adjudication_files": [
@@ -50614,7 +50614,7 @@
     "unaudited_contradictions": 0
    }
   ],
-  "unaudited_contradictions": 2
+  "unaudited_contradictions": 0
  },
  {
   "abstention": null,
@@ -50623,7 +50623,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "17efa89ede2a9bdf",
+  "digest": "0229ef4f54fddf51",
   "locators": 479,
   "origin_id": "DL-MECH-074",
   "papers": 14,
@@ -50927,23 +50927,23 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 2,
+    "audited_entries": 4,
     "contradiction_verdicts": [
      {
       "auditors": 2,
       "verdict": "OVERSHOOT/OVERSHOOT"
      },
      {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
      },
      {
       "auditors": 1,
-      "verdict": "OVERSHOOT"
-     },
-     {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "verdict": "SUPPORTED"
      }
     ],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -50953,7 +50953,7 @@
     "reading_depth": "complete_fulltext_read",
     "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
-    "unaudited_contradictions": 2
+    "unaudited_contradictions": 0
    },
    {
     "adjudication_files": [
@@ -51020,7 +51020,7 @@
     "unaudited_contradictions": 0
    }
   ],
-  "unaudited_contradictions": 2
+  "unaudited_contradictions": 0
  },
  {
   "abstention": null,
@@ -51029,7 +51029,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "553e07461562a45a",
+  "digest": "55ae6c0616f4b54d",
   "locators": 502,
   "origin_id": "DL-MECH-075",
   "papers": 15,
@@ -51347,23 +51347,23 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 2,
+    "audited_entries": 4,
     "contradiction_verdicts": [
      {
       "auditors": 2,
       "verdict": "OVERSHOOT/OVERSHOOT"
      },
      {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
      },
      {
       "auditors": 1,
-      "verdict": "OVERSHOOT"
-     },
-     {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "verdict": "SUPPORTED"
      }
     ],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -51373,7 +51373,7 @@
     "reading_depth": "complete_fulltext_read",
     "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
-    "unaudited_contradictions": 2
+    "unaudited_contradictions": 0
    },
    {
     "adjudication_files": [
@@ -51440,7 +51440,7 @@
     "unaudited_contradictions": 0
    }
   ],
-  "unaudited_contradictions": 2
+  "unaudited_contradictions": 0
  },
  {
   "abstention": null,
@@ -51449,7 +51449,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "f20b5974c046b904",
+  "digest": "0143da5b2aa56d06",
   "locators": 502,
   "origin_id": "DL-MECH-076",
   "papers": 15,
@@ -51767,23 +51767,23 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 2,
+    "audited_entries": 4,
     "contradiction_verdicts": [
      {
       "auditors": 2,
       "verdict": "OVERSHOOT/OVERSHOOT"
      },
      {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
      },
      {
       "auditors": 1,
-      "verdict": "OVERSHOOT"
-     },
-     {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "verdict": "SUPPORTED"
      }
     ],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -51793,7 +51793,7 @@
     "reading_depth": "complete_fulltext_read",
     "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
-    "unaudited_contradictions": 2
+    "unaudited_contradictions": 0
    },
    {
     "adjudication_files": [
@@ -51860,7 +51860,7 @@
     "unaudited_contradictions": 0
    }
   ],
-  "unaudited_contradictions": 2
+  "unaudited_contradictions": 0
  },
  {
   "abstention": null,
@@ -51869,7 +51869,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "fe70cad0e7b4316d",
+  "digest": "4ca143d6f30493c7",
   "locators": 502,
   "origin_id": "DL-MECH-077",
   "papers": 15,
@@ -52187,23 +52187,23 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 2,
+    "audited_entries": 4,
     "contradiction_verdicts": [
      {
       "auditors": 2,
       "verdict": "OVERSHOOT/OVERSHOOT"
      },
      {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
      },
      {
       "auditors": 1,
-      "verdict": "OVERSHOOT"
-     },
-     {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "verdict": "SUPPORTED"
      }
     ],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -52213,7 +52213,7 @@
     "reading_depth": "complete_fulltext_read",
     "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
-    "unaudited_contradictions": 2
+    "unaudited_contradictions": 0
    },
    {
     "adjudication_files": [
@@ -52280,7 +52280,7 @@
     "unaudited_contradictions": 0
    }
   ],
-  "unaudited_contradictions": 2
+  "unaudited_contradictions": 0
  },
  {
   "abstention": null,
@@ -52289,7 +52289,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "f0db46a07bd16448",
+  "digest": "4ff873e7c70a4dca",
   "locators": 502,
   "origin_id": "DL-MECH-078",
   "papers": 15,
@@ -52607,23 +52607,23 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 2,
+    "audited_entries": 4,
     "contradiction_verdicts": [
      {
       "auditors": 2,
       "verdict": "OVERSHOOT/OVERSHOOT"
      },
      {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
      },
      {
       "auditors": 1,
-      "verdict": "OVERSHOOT"
-     },
-     {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "verdict": "SUPPORTED"
      }
     ],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -52633,7 +52633,7 @@
     "reading_depth": "complete_fulltext_read",
     "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
-    "unaudited_contradictions": 2
+    "unaudited_contradictions": 0
    },
    {
     "adjudication_files": [
@@ -52700,7 +52700,7 @@
     "unaudited_contradictions": 0
    }
   ],
-  "unaudited_contradictions": 2
+  "unaudited_contradictions": 0
  },
  {
   "abstention": null,
@@ -52710,7 +52710,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "699fc7f7bc458467",
+  "digest": "d30e67f3b036b652",
   "locators": 902,
   "origin_id": "DL-MECH-083",
   "papers": 32,
@@ -53323,23 +53323,23 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 2,
+    "audited_entries": 4,
     "contradiction_verdicts": [
      {
       "auditors": 2,
       "verdict": "OVERSHOOT/OVERSHOOT"
      },
      {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
      },
      {
       "auditors": 1,
-      "verdict": "OVERSHOOT"
-     },
-     {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "verdict": "SUPPORTED"
      }
     ],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -53349,7 +53349,7 @@
     "reading_depth": "complete_fulltext_read",
     "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
-    "unaudited_contradictions": 2
+    "unaudited_contradictions": 0
    },
    {
     "adjudication_files": [
@@ -53416,7 +53416,7 @@
     "unaudited_contradictions": 0
    }
   ],
-  "unaudited_contradictions": 2
+  "unaudited_contradictions": 0
  },
  {
   "abstention": null,
@@ -53424,7 +53424,7 @@
   "depths": [
    "complete_fulltext_read"
   ],
-  "digest": "985e83fa34077ef9",
+  "digest": "886f02025920d65c",
   "locators": 74,
   "origin_id": "DL-MECH-086",
   "papers": 2,
@@ -53453,23 +53453,23 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 2,
+    "audited_entries": 4,
     "contradiction_verdicts": [
      {
       "auditors": 2,
       "verdict": "OVERSHOOT/OVERSHOOT"
      },
      {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
      },
      {
       "auditors": 1,
-      "verdict": "OVERSHOOT"
-     },
-     {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "verdict": "SUPPORTED"
      }
     ],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -53479,10 +53479,10 @@
     "reading_depth": "complete_fulltext_read",
     "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
-    "unaudited_contradictions": 2
+    "unaudited_contradictions": 0
    }
   ],
-  "unaudited_contradictions": 2
+  "unaudited_contradictions": 0
  },
  {
   "abstention": null,
@@ -53492,7 +53492,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "9b893ff46d4400d8",
+  "digest": "2795d6767a846245",
   "locators": 1444,
   "origin_id": "DL-MECH-092",
   "papers": 77,
@@ -54806,23 +54806,23 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 2,
+    "audited_entries": 4,
     "contradiction_verdicts": [
      {
       "auditors": 2,
       "verdict": "OVERSHOOT/OVERSHOOT"
      },
      {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
      },
      {
       "auditors": 1,
-      "verdict": "OVERSHOOT"
-     },
-     {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "verdict": "SUPPORTED"
      }
     ],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -54832,7 +54832,7 @@
     "reading_depth": "complete_fulltext_read",
     "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
-    "unaudited_contradictions": 2
+    "unaudited_contradictions": 0
    },
    {
     "adjudication_files": [
@@ -54913,7 +54913,7 @@
     "unaudited_contradictions": 0
    }
   ],
-  "unaudited_contradictions": 2
+  "unaudited_contradictions": 0
  },
  {
   "abstention": null,
@@ -54923,7 +54923,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "b6b609496b8d16a8",
+  "digest": "9d1e0f1337c5da0c",
   "locators": 1444,
   "origin_id": "DL-MECH-094",
   "papers": 77,
@@ -56237,23 +56237,23 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 2,
+    "audited_entries": 4,
     "contradiction_verdicts": [
      {
       "auditors": 2,
       "verdict": "OVERSHOOT/OVERSHOOT"
      },
      {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
      },
      {
       "auditors": 1,
-      "verdict": "OVERSHOOT"
-     },
-     {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "verdict": "SUPPORTED"
      }
     ],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -56263,7 +56263,7 @@
     "reading_depth": "complete_fulltext_read",
     "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
-    "unaudited_contradictions": 2
+    "unaudited_contradictions": 0
    },
    {
     "adjudication_files": [
@@ -56344,7 +56344,7 @@
     "unaudited_contradictions": 0
    }
   ],
-  "unaudited_contradictions": 2
+  "unaudited_contradictions": 0
  },
  {
   "abstention": null,
@@ -57261,7 +57261,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "c9cb8dbcc7ebc87b",
+  "digest": "691f038565f3936a",
   "locators": 1444,
   "origin_id": "DL-MECH-096",
   "papers": 77,
@@ -58575,23 +58575,23 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 2,
+    "audited_entries": 4,
     "contradiction_verdicts": [
      {
       "auditors": 2,
       "verdict": "OVERSHOOT/OVERSHOOT"
      },
      {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
      },
      {
       "auditors": 1,
-      "verdict": "OVERSHOOT"
-     },
-     {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "verdict": "SUPPORTED"
      }
     ],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -58601,7 +58601,7 @@
     "reading_depth": "complete_fulltext_read",
     "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
-    "unaudited_contradictions": 2
+    "unaudited_contradictions": 0
    },
    {
     "adjudication_files": [
@@ -58682,7 +58682,7 @@
     "unaudited_contradictions": 0
    }
   ],
-  "unaudited_contradictions": 2
+  "unaudited_contradictions": 0
  },
  {
   "abstention": null,
@@ -58692,7 +58692,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "f62e2d1d66c065c7",
+  "digest": "0e487e34b9f48f42",
   "locators": 1444,
   "origin_id": "DL-MECH-098",
   "papers": 77,
@@ -60006,23 +60006,23 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 2,
+    "audited_entries": 4,
     "contradiction_verdicts": [
      {
       "auditors": 2,
       "verdict": "OVERSHOOT/OVERSHOOT"
      },
      {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
      },
      {
       "auditors": 1,
-      "verdict": "OVERSHOOT"
-     },
-     {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "verdict": "SUPPORTED"
      }
     ],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -60032,7 +60032,7 @@
     "reading_depth": "complete_fulltext_read",
     "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
-    "unaudited_contradictions": 2
+    "unaudited_contradictions": 0
    },
    {
     "adjudication_files": [
@@ -60113,7 +60113,7 @@
     "unaudited_contradictions": 0
    }
   ],
-  "unaudited_contradictions": 2
+  "unaudited_contradictions": 0
  },
  {
   "abstention": null,
@@ -61598,7 +61598,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "0e9663bb7b906d2f",
+  "digest": "efad0772eb8e639c",
   "locators": 1503,
   "origin_id": "DL-MECH-104",
   "papers": 82,
@@ -62982,23 +62982,23 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 2,
+    "audited_entries": 4,
     "contradiction_verdicts": [
      {
       "auditors": 2,
       "verdict": "OVERSHOOT/OVERSHOOT"
      },
      {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
      },
      {
       "auditors": 1,
-      "verdict": "OVERSHOOT"
-     },
-     {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "verdict": "SUPPORTED"
      }
     ],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -63008,7 +63008,7 @@
     "reading_depth": "complete_fulltext_read",
     "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
-    "unaudited_contradictions": 2
+    "unaudited_contradictions": 0
    },
    {
     "adjudication_files": [
@@ -63089,7 +63089,7 @@
     "unaudited_contradictions": 0
    }
   ],
-  "unaudited_contradictions": 2
+  "unaudited_contradictions": 0
  },
  {
   "abstention": null,
@@ -63099,7 +63099,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "fd5c8463caeae8cd",
+  "digest": "22856cb85d424944",
   "locators": 1643,
   "origin_id": "DL-MECH-106",
   "papers": 84,
@@ -64511,23 +64511,23 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 2,
+    "audited_entries": 4,
     "contradiction_verdicts": [
      {
       "auditors": 2,
       "verdict": "OVERSHOOT/OVERSHOOT"
      },
      {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
      },
      {
       "auditors": 1,
-      "verdict": "OVERSHOOT"
-     },
-     {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "verdict": "SUPPORTED"
      }
     ],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -64537,7 +64537,7 @@
     "reading_depth": "complete_fulltext_read",
     "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
-    "unaudited_contradictions": 2
+    "unaudited_contradictions": 0
    },
    {
     "adjudication_files": [
@@ -64618,7 +64618,7 @@
     "unaudited_contradictions": 0
    }
   ],
-  "unaudited_contradictions": 2
+  "unaudited_contradictions": 0
  },
  {
   "abstention": null,
@@ -64801,7 +64801,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "3008445e32f8ca45",
+  "digest": "d89a52dd2aba5be4",
   "locators": 381,
   "origin_id": "DL-MECH-113",
   "papers": 12,
@@ -65109,23 +65109,23 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 2,
+    "audited_entries": 4,
     "contradiction_verdicts": [
      {
       "auditors": 2,
       "verdict": "OVERSHOOT/OVERSHOOT"
      },
      {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
      },
      {
       "auditors": 1,
-      "verdict": "OVERSHOOT"
-     },
-     {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "verdict": "SUPPORTED"
      }
     ],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -65135,10 +65135,10 @@
     "reading_depth": "complete_fulltext_read",
     "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
-    "unaudited_contradictions": 2
+    "unaudited_contradictions": 0
    }
   ],
-  "unaudited_contradictions": 2
+  "unaudited_contradictions": 0
  },
  {
   "abstention": null,
@@ -69817,7 +69817,7 @@
   "depths": [
    "complete_fulltext_read"
   ],
-  "digest": "a67667c523842a51",
+  "digest": "a30f3d91fe389524",
   "locators": 139,
   "origin_id": "DL-META-088",
   "papers": 4,
@@ -69860,23 +69860,23 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 2,
+    "audited_entries": 4,
     "contradiction_verdicts": [
      {
       "auditors": 2,
       "verdict": "OVERSHOOT/OVERSHOOT"
      },
      {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
      },
      {
       "auditors": 1,
-      "verdict": "OVERSHOOT"
-     },
-     {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "verdict": "SUPPORTED"
      }
     ],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -69886,7 +69886,7 @@
     "reading_depth": "complete_fulltext_read",
     "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
-    "unaudited_contradictions": 2
+    "unaudited_contradictions": 0
    },
    {
     "adjudication_files": [
@@ -69939,7 +69939,7 @@
     "unaudited_contradictions": 0
    }
   ],
-  "unaudited_contradictions": 2
+  "unaudited_contradictions": 0
  },
  {
   "abstention": null,
@@ -69949,7 +69949,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "b8898ca3cb1411b6",
+  "digest": "722b012a762c29dc",
   "locators": 1444,
   "origin_id": "DL-META-091",
   "papers": 77,
@@ -71263,23 +71263,23 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 2,
+    "audited_entries": 4,
     "contradiction_verdicts": [
      {
       "auditors": 2,
       "verdict": "OVERSHOOT/OVERSHOOT"
      },
      {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
      },
      {
       "auditors": 1,
-      "verdict": "OVERSHOOT"
-     },
-     {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "verdict": "SUPPORTED"
      }
     ],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -71289,7 +71289,7 @@
     "reading_depth": "complete_fulltext_read",
     "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
-    "unaudited_contradictions": 2
+    "unaudited_contradictions": 0
    },
    {
     "adjudication_files": [
@@ -71370,7 +71370,7 @@
     "unaudited_contradictions": 0
    }
   ],
-  "unaudited_contradictions": 2
+  "unaudited_contradictions": 0
  },
  {
   "abstention": null,
@@ -71380,7 +71380,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "2500af547044f505",
+  "digest": "d2fab5514ee29640",
   "locators": 1017,
   "origin_id": "DL-META-093",
   "papers": 38,
@@ -72124,23 +72124,23 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 2,
+    "audited_entries": 4,
     "contradiction_verdicts": [
      {
       "auditors": 2,
       "verdict": "OVERSHOOT/OVERSHOOT"
      },
      {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
      },
      {
       "auditors": 1,
-      "verdict": "OVERSHOOT"
-     },
-     {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "verdict": "SUPPORTED"
      }
     ],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -72150,7 +72150,7 @@
     "reading_depth": "complete_fulltext_read",
     "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
-    "unaudited_contradictions": 2
+    "unaudited_contradictions": 0
    },
    {
     "adjudication_files": [
@@ -72217,7 +72217,7 @@
     "unaudited_contradictions": 0
    }
   ],
-  "unaudited_contradictions": 2
+  "unaudited_contradictions": 0
  },
  {
   "abstention": null,
@@ -72292,7 +72292,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "453b044ab0125bc6",
+  "digest": "90aec5903b638b56",
   "locators": 548,
   "origin_id": "DL-METH-079",
   "papers": 17,
@@ -72647,23 +72647,23 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 2,
+    "audited_entries": 4,
     "contradiction_verdicts": [
      {
       "auditors": 2,
       "verdict": "OVERSHOOT/OVERSHOOT"
      },
      {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
      },
      {
       "auditors": 1,
-      "verdict": "OVERSHOOT"
-     },
-     {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "verdict": "SUPPORTED"
      }
     ],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -72673,7 +72673,7 @@
     "reading_depth": "complete_fulltext_read",
     "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
-    "unaudited_contradictions": 2
+    "unaudited_contradictions": 0
    },
    {
     "adjudication_files": [
@@ -72740,7 +72740,7 @@
     "unaudited_contradictions": 0
    }
   ],
-  "unaudited_contradictions": 2
+  "unaudited_contradictions": 0
  },
  {
   "abstention": null,
@@ -72749,7 +72749,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "1fdaa1e54b3a3d9f",
+  "digest": "678c2faac3c79c14",
   "locators": 548,
   "origin_id": "DL-METH-081",
   "papers": 17,
@@ -73104,23 +73104,23 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 2,
+    "audited_entries": 4,
     "contradiction_verdicts": [
      {
       "auditors": 2,
       "verdict": "OVERSHOOT/OVERSHOOT"
      },
      {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
      },
      {
       "auditors": 1,
-      "verdict": "OVERSHOOT"
-     },
-     {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "verdict": "SUPPORTED"
      }
     ],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -73130,7 +73130,7 @@
     "reading_depth": "complete_fulltext_read",
     "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
-    "unaudited_contradictions": 2
+    "unaudited_contradictions": 0
    },
    {
     "adjudication_files": [
@@ -73197,7 +73197,7 @@
     "unaudited_contradictions": 0
    }
   ],
-  "unaudited_contradictions": 2
+  "unaudited_contradictions": 0
  },
  {
   "abstention": null,
@@ -73206,7 +73206,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "ba0c103c9bf3bc66",
+  "digest": "44d92bfd1de18022",
   "locators": 612,
   "origin_id": "DL-METH-082",
   "papers": 19,
@@ -73589,23 +73589,23 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 2,
+    "audited_entries": 4,
     "contradiction_verdicts": [
      {
       "auditors": 2,
       "verdict": "OVERSHOOT/OVERSHOOT"
      },
      {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
      },
      {
       "auditors": 1,
-      "verdict": "OVERSHOOT"
-     },
-     {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "verdict": "SUPPORTED"
      }
     ],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -73615,7 +73615,7 @@
     "reading_depth": "complete_fulltext_read",
     "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
-    "unaudited_contradictions": 2
+    "unaudited_contradictions": 0
    },
    {
     "adjudication_files": [
@@ -73682,7 +73682,7 @@
     "unaudited_contradictions": 0
    }
   ],
-  "unaudited_contradictions": 2
+  "unaudited_contradictions": 0
  },
  {
   "abstention": null,
@@ -73692,7 +73692,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "0443dfb9bf0d92d6",
+  "digest": "ad8c72161fd01356",
   "locators": 902,
   "origin_id": "DL-METH-084",
   "papers": 32,
@@ -74305,23 +74305,23 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 2,
+    "audited_entries": 4,
     "contradiction_verdicts": [
      {
       "auditors": 2,
       "verdict": "OVERSHOOT/OVERSHOOT"
      },
      {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
      },
      {
       "auditors": 1,
-      "verdict": "OVERSHOOT"
-     },
-     {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "verdict": "SUPPORTED"
      }
     ],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -74331,7 +74331,7 @@
     "reading_depth": "complete_fulltext_read",
     "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
-    "unaudited_contradictions": 2
+    "unaudited_contradictions": 0
    },
    {
     "adjudication_files": [
@@ -74398,7 +74398,7 @@
     "unaudited_contradictions": 0
    }
   ],
-  "unaudited_contradictions": 2
+  "unaudited_contradictions": 0
  },
  {
   "abstention": null,
@@ -74408,7 +74408,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "87f08d4c86b83759",
+  "digest": "d0f2574a1fb2116a",
   "locators": 1475,
   "origin_id": "DL-METH-093",
   "papers": 79,
@@ -75750,23 +75750,23 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 2,
+    "audited_entries": 4,
     "contradiction_verdicts": [
      {
       "auditors": 2,
       "verdict": "OVERSHOOT/OVERSHOOT"
      },
      {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
      },
      {
       "auditors": 1,
-      "verdict": "OVERSHOOT"
-     },
-     {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "verdict": "SUPPORTED"
      }
     ],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -75776,7 +75776,7 @@
     "reading_depth": "complete_fulltext_read",
     "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
-    "unaudited_contradictions": 2
+    "unaudited_contradictions": 0
    },
    {
     "adjudication_files": [
@@ -75857,7 +75857,7 @@
     "unaudited_contradictions": 0
    }
   ],
-  "unaudited_contradictions": 2
+  "unaudited_contradictions": 0
  },
  {
   "abstention": null,
@@ -75867,7 +75867,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "f6b0662ad77d151b",
+  "digest": "5e169a9f273ed86b",
   "locators": 1551,
   "origin_id": "DL-METH-094",
   "papers": 81,
@@ -77237,23 +77237,23 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 2,
+    "audited_entries": 4,
     "contradiction_verdicts": [
      {
       "auditors": 2,
       "verdict": "OVERSHOOT/OVERSHOOT"
      },
      {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
      },
      {
       "auditors": 1,
-      "verdict": "OVERSHOOT"
-     },
-     {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "verdict": "SUPPORTED"
      }
     ],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -77263,7 +77263,7 @@
     "reading_depth": "complete_fulltext_read",
     "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
-    "unaudited_contradictions": 2
+    "unaudited_contradictions": 0
    },
    {
     "adjudication_files": [
@@ -77344,7 +77344,7 @@
     "unaudited_contradictions": 0
    }
   ],
-  "unaudited_contradictions": 2
+  "unaudited_contradictions": 0
  },
  {
   "abstention": null,
@@ -77354,7 +77354,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "898807de992b3806",
+  "digest": "61838e2cc2a82982",
   "locators": 916,
   "origin_id": "DL-METH-096",
   "papers": 33,
@@ -77981,23 +77981,23 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 2,
+    "audited_entries": 4,
     "contradiction_verdicts": [
      {
       "auditors": 2,
       "verdict": "OVERSHOOT/OVERSHOOT"
      },
      {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
      },
      {
       "auditors": 1,
-      "verdict": "OVERSHOOT"
-     },
-     {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "verdict": "SUPPORTED"
      }
     ],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -78007,7 +78007,7 @@
     "reading_depth": "complete_fulltext_read",
     "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
-    "unaudited_contradictions": 2
+    "unaudited_contradictions": 0
    },
    {
     "adjudication_files": [
@@ -78074,7 +78074,7 @@
     "unaudited_contradictions": 0
    }
   ],
-  "unaudited_contradictions": 2
+  "unaudited_contradictions": 0
  },
  {
   "abstention": null,
@@ -78084,7 +78084,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "9b52d5aaded9de7d",
+  "digest": "c8869ff025e3bc6b",
   "locators": 1458,
   "origin_id": "DL-METH-097",
   "papers": 78,
@@ -79412,23 +79412,23 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 2,
+    "audited_entries": 4,
     "contradiction_verdicts": [
      {
       "auditors": 2,
       "verdict": "OVERSHOOT/OVERSHOOT"
      },
      {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
      },
      {
       "auditors": 1,
-      "verdict": "OVERSHOOT"
-     },
-     {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "verdict": "SUPPORTED"
      }
     ],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -79438,7 +79438,7 @@
     "reading_depth": "complete_fulltext_read",
     "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
-    "unaudited_contradictions": 2
+    "unaudited_contradictions": 0
    },
    {
     "adjudication_files": [
@@ -79519,7 +79519,7 @@
     "unaudited_contradictions": 0
    }
   ],
-  "unaudited_contradictions": 2
+  "unaudited_contradictions": 0
  },
  {
   "abstention": null,
@@ -79529,7 +79529,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "65e8dc2b2bc688d4",
+  "digest": "940535a41c10958a",
   "locators": 1582,
   "origin_id": "DL-METH-098",
   "papers": 82,
@@ -80913,23 +80913,23 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 2,
+    "audited_entries": 4,
     "contradiction_verdicts": [
      {
       "auditors": 2,
       "verdict": "OVERSHOOT/OVERSHOOT"
      },
      {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
      },
      {
       "auditors": 1,
-      "verdict": "OVERSHOOT"
-     },
-     {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "verdict": "SUPPORTED"
      }
     ],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -80939,7 +80939,7 @@
     "reading_depth": "complete_fulltext_read",
     "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
-    "unaudited_contradictions": 2
+    "unaudited_contradictions": 0
    },
    {
     "adjudication_files": [
@@ -81020,7 +81020,7 @@
     "unaudited_contradictions": 0
    }
   ],
-  "unaudited_contradictions": 2
+  "unaudited_contradictions": 0
  },
  {
   "abstention": null,
@@ -81030,7 +81030,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "69241ca0c8d9eb62",
+  "digest": "dd58e03a55390688",
   "locators": 1582,
   "origin_id": "DL-METH-107",
   "papers": 82,
@@ -82414,23 +82414,23 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 2,
+    "audited_entries": 4,
     "contradiction_verdicts": [
      {
       "auditors": 2,
       "verdict": "OVERSHOOT/OVERSHOOT"
      },
      {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
      },
      {
       "auditors": 1,
-      "verdict": "OVERSHOOT"
-     },
-     {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "verdict": "SUPPORTED"
      }
     ],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -82440,7 +82440,7 @@
     "reading_depth": "complete_fulltext_read",
     "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
-    "unaudited_contradictions": 2
+    "unaudited_contradictions": 0
    },
    {
     "adjudication_files": [
@@ -82521,7 +82521,7 @@
     "unaudited_contradictions": 0
    }
   ],
-  "unaudited_contradictions": 2
+  "unaudited_contradictions": 0
  },
  {
   "abstention": null,
@@ -82564,7 +82564,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "07096ed95e743936",
+  "digest": "7a05f5c91d87fe39",
   "locators": 1681,
   "origin_id": "DL-METH-109",
   "papers": 87,
@@ -84018,23 +84018,23 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 2,
+    "audited_entries": 4,
     "contradiction_verdicts": [
      {
       "auditors": 2,
       "verdict": "OVERSHOOT/OVERSHOOT"
      },
      {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
      },
      {
       "auditors": 1,
-      "verdict": "OVERSHOOT"
-     },
-     {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "verdict": "SUPPORTED"
      }
     ],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -84044,7 +84044,7 @@
     "reading_depth": "complete_fulltext_read",
     "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
-    "unaudited_contradictions": 2
+    "unaudited_contradictions": 0
    },
    {
     "adjudication_files": [
@@ -84125,7 +84125,7 @@
     "unaudited_contradictions": 0
    }
   ],
-  "unaudited_contradictions": 2
+  "unaudited_contradictions": 0
  },
  {
   "abstention": null,
@@ -85156,7 +85156,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "cd9309fdfa27e120",
+  "digest": "0b514501c02986e0",
   "locators": 1704,
   "origin_id": "DL-METH-116",
   "papers": 96,
@@ -86761,23 +86761,23 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 2,
+    "audited_entries": 4,
     "contradiction_verdicts": [
      {
       "auditors": 2,
       "verdict": "OVERSHOOT/OVERSHOOT"
      },
      {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
      },
      {
       "auditors": 1,
-      "verdict": "OVERSHOOT"
-     },
-     {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "verdict": "SUPPORTED"
      }
     ],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -86787,7 +86787,7 @@
     "reading_depth": "complete_fulltext_read",
     "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
-    "unaudited_contradictions": 2
+    "unaudited_contradictions": 0
    },
    {
     "adjudication_files": [
@@ -86882,7 +86882,7 @@
     "unaudited_contradictions": 0
    }
   ],
-  "unaudited_contradictions": 4
+  "unaudited_contradictions": 2
  },
  {
   "abstention": null,
@@ -87188,7 +87188,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "f3094e9918f40983",
+  "digest": "89d25573f3b718e8",
   "locators": 1743,
   "origin_id": "DL-METH-119",
   "papers": 100,
@@ -88849,23 +88849,23 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 2,
+    "audited_entries": 4,
     "contradiction_verdicts": [
      {
       "auditors": 2,
       "verdict": "OVERSHOOT/OVERSHOOT"
      },
      {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
      },
      {
       "auditors": 1,
-      "verdict": "OVERSHOOT"
-     },
-     {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "verdict": "SUPPORTED"
      }
     ],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -88875,7 +88875,7 @@
     "reading_depth": "complete_fulltext_read",
     "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
-    "unaudited_contradictions": 2
+    "unaudited_contradictions": 0
    },
    {
     "adjudication_files": [
@@ -88970,7 +88970,7 @@
     "unaudited_contradictions": 0
    }
   ],
-  "unaudited_contradictions": 4
+  "unaudited_contradictions": 2
  },
  {
   "abstention": null,
@@ -96054,7 +96054,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "8ab1ade794819ab6",
+  "digest": "3d2cac438897e652",
   "locators": 559,
   "origin_id": "DL-THER-080",
   "papers": 18,
@@ -96409,23 +96409,23 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 2,
+    "audited_entries": 4,
     "contradiction_verdicts": [
      {
       "auditors": 2,
       "verdict": "OVERSHOOT/OVERSHOOT"
      },
      {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
      },
      {
       "auditors": 1,
-      "verdict": "OVERSHOOT"
-     },
-     {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "verdict": "SUPPORTED"
      }
     ],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -96435,7 +96435,7 @@
     "reading_depth": "complete_fulltext_read",
     "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
-    "unaudited_contradictions": 2
+    "unaudited_contradictions": 0
    },
    {
     "adjudication_files": [
@@ -96516,7 +96516,7 @@
     "unaudited_contradictions": 0
    }
   ],
-  "unaudited_contradictions": 2
+  "unaudited_contradictions": 0
  },
  {
   "abstention": null,
@@ -96524,7 +96524,7 @@
   "depths": [
    "complete_fulltext_read"
   ],
-  "digest": "2efc8f0d9fd61ecd",
+  "digest": "0c6b1e27cc5c7faa",
   "locators": 74,
   "origin_id": "DL-THER-087",
   "papers": 2,
@@ -96553,23 +96553,23 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 2,
+    "audited_entries": 4,
     "contradiction_verdicts": [
      {
       "auditors": 2,
       "verdict": "OVERSHOOT/OVERSHOOT"
      },
      {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
      },
      {
       "auditors": 1,
-      "verdict": "OVERSHOOT"
-     },
-     {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "verdict": "SUPPORTED"
      }
     ],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -96579,10 +96579,10 @@
     "reading_depth": "complete_fulltext_read",
     "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
-    "unaudited_contradictions": 2
+    "unaudited_contradictions": 0
    }
   ],
-  "unaudited_contradictions": 2
+  "unaudited_contradictions": 0
  },
  {
   "abstention": null,
@@ -96592,7 +96592,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "efe7b3fcad777d73",
+  "digest": "27b10f7475bf6bd8",
   "locators": 902,
   "origin_id": "DL-THER-089",
   "papers": 32,
@@ -97205,23 +97205,23 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 2,
+    "audited_entries": 4,
     "contradiction_verdicts": [
      {
       "auditors": 2,
       "verdict": "OVERSHOOT/OVERSHOOT"
      },
      {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
      },
      {
       "auditors": 1,
-      "verdict": "OVERSHOOT"
-     },
-     {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "verdict": "SUPPORTED"
      }
     ],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -97231,7 +97231,7 @@
     "reading_depth": "complete_fulltext_read",
     "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
-    "unaudited_contradictions": 2
+    "unaudited_contradictions": 0
    },
    {
     "adjudication_files": [
@@ -97298,7 +97298,7 @@
     "unaudited_contradictions": 0
    }
   ],
-  "unaudited_contradictions": 2
+  "unaudited_contradictions": 0
  },
  {
   "abstention": null,
@@ -97308,7 +97308,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "b6f729ebb0370b2f",
+  "digest": "f669c5427b47a18d",
   "locators": 1503,
   "origin_id": "DL-THER-095",
   "papers": 82,
@@ -98692,23 +98692,23 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 2,
+    "audited_entries": 4,
     "contradiction_verdicts": [
      {
       "auditors": 2,
       "verdict": "OVERSHOOT/OVERSHOOT"
      },
      {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
      },
      {
       "auditors": 1,
-      "verdict": "OVERSHOOT"
-     },
-     {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "verdict": "SUPPORTED"
      }
     ],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -98718,7 +98718,7 @@
     "reading_depth": "complete_fulltext_read",
     "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
-    "unaudited_contradictions": 2
+    "unaudited_contradictions": 0
    },
    {
     "adjudication_files": [
@@ -98799,7 +98799,7 @@
     "unaudited_contradictions": 0
    }
   ],
-  "unaudited_contradictions": 2
+  "unaudited_contradictions": 0
  },
  {
   "abstention": null,
@@ -98808,7 +98808,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "a87209240998a9eb",
+  "digest": "a6be2cf4ffd88b1b",
   "locators": 724,
   "origin_id": "DL-THER-105",
   "papers": 32,
@@ -99399,23 +99399,23 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 2,
+    "audited_entries": 4,
     "contradiction_verdicts": [
      {
       "auditors": 2,
       "verdict": "OVERSHOOT/OVERSHOOT"
      },
      {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
      },
      {
       "auditors": 1,
-      "verdict": "OVERSHOOT"
-     },
-     {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "verdict": "SUPPORTED"
      }
     ],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -99425,7 +99425,7 @@
     "reading_depth": "complete_fulltext_read",
     "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
-    "unaudited_contradictions": 2
+    "unaudited_contradictions": 0
    },
    {
     "adjudication_files": [
@@ -99492,7 +99492,7 @@
     "unaudited_contradictions": 0
    }
   ],
-  "unaudited_contradictions": 4
+  "unaudited_contradictions": 2
  },
  {
   "abstention": null,
@@ -99502,7 +99502,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "0070f1bb886f49b2",
+  "digest": "447525fb27ee0f1a",
   "locators": 1685,
   "origin_id": "DL-THER-106",
   "papers": 91,
@@ -101065,23 +101065,23 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 2,
+    "audited_entries": 4,
     "contradiction_verdicts": [
      {
       "auditors": 2,
       "verdict": "OVERSHOOT/OVERSHOOT"
      },
      {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
      },
      {
       "auditors": 1,
-      "verdict": "OVERSHOOT"
-     },
-     {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "verdict": "SUPPORTED"
      }
     ],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -101091,7 +101091,7 @@
     "reading_depth": "complete_fulltext_read",
     "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
-    "unaudited_contradictions": 2
+    "unaudited_contradictions": 0
    },
    {
     "adjudication_files": [
@@ -101172,7 +101172,7 @@
     "unaudited_contradictions": 0
    }
   ],
-  "unaudited_contradictions": 4
+  "unaudited_contradictions": 2
  },
  {
   "abstention": null,
@@ -105401,7 +105401,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "534607e7e6432998",
+  "digest": "fdad2ea22f9437b3",
   "locators": 604,
   "origin_id": "N-13",
   "papers": 29,
@@ -105858,23 +105858,23 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 2,
+    "audited_entries": 4,
     "contradiction_verdicts": [
      {
       "auditors": 2,
       "verdict": "OVERSHOOT/OVERSHOOT"
      },
      {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
      },
      {
       "auditors": 1,
-      "verdict": "OVERSHOOT"
-     },
-     {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "verdict": "SUPPORTED"
      }
     ],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -105884,7 +105884,7 @@
     "reading_depth": "complete_fulltext_read",
     "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
-    "unaudited_contradictions": 2
+    "unaudited_contradictions": 0
    },
    {
     "adjudication_files": [
@@ -105937,7 +105937,7 @@
     "unaudited_contradictions": 0
    }
   ],
-  "unaudited_contradictions": 2
+  "unaudited_contradictions": 0
  },
  {
   "abstention": null,
@@ -108206,7 +108206,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "5335a0ba0da528e2",
+  "digest": "c782654165a1c3d2",
   "locators": 1008,
   "origin_id": "CLAIM 002",
   "papers": 41,
@@ -108966,23 +108966,23 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 2,
+    "audited_entries": 4,
     "contradiction_verdicts": [
      {
       "auditors": 2,
       "verdict": "OVERSHOOT/OVERSHOOT"
      },
      {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
      },
      {
       "auditors": 1,
-      "verdict": "OVERSHOOT"
-     },
-     {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "verdict": "SUPPORTED"
      }
     ],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -108992,7 +108992,7 @@
     "reading_depth": "complete_fulltext_read",
     "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
-    "unaudited_contradictions": 2
+    "unaudited_contradictions": 0
    },
    {
     "adjudication_files": [
@@ -109073,7 +109073,7 @@
     "unaudited_contradictions": 0
    }
   ],
-  "unaudited_contradictions": 4
+  "unaudited_contradictions": 2
  },
  {
   "abstention": null,
@@ -109515,7 +109515,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "fe16ed30775b5a02",
+  "digest": "97bffd6af8d915e4",
   "locators": 267,
   "origin_id": "CLAIM 002",
   "papers": 9,
@@ -109671,23 +109671,23 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 2,
+    "audited_entries": 4,
     "contradiction_verdicts": [
      {
       "auditors": 2,
       "verdict": "OVERSHOOT/OVERSHOOT"
      },
      {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
      },
      {
       "auditors": 1,
-      "verdict": "OVERSHOOT"
-     },
-     {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "verdict": "SUPPORTED"
      }
     ],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -109697,10 +109697,10 @@
     "reading_depth": "complete_fulltext_read",
     "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
-    "unaudited_contradictions": 2
+    "unaudited_contradictions": 0
    }
   ],
-  "unaudited_contradictions": 2
+  "unaudited_contradictions": 0
  },
  {
   "abstention": null,
@@ -110867,7 +110867,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "be10104d17054cd4",
+  "digest": "89cd7524e84500fd",
   "locators": 235,
   "origin_id": "CLAIM 002",
   "papers": 7,
@@ -110995,23 +110995,23 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 2,
+    "audited_entries": 4,
     "contradiction_verdicts": [
      {
       "auditors": 2,
       "verdict": "OVERSHOOT/OVERSHOOT"
      },
      {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
      },
      {
       "auditors": 1,
-      "verdict": "OVERSHOOT"
-     },
-     {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "verdict": "SUPPORTED"
      }
     ],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -111021,10 +111021,10 @@
     "reading_depth": "complete_fulltext_read",
     "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
-    "unaudited_contradictions": 2
+    "unaudited_contradictions": 0
    }
   ],
-  "unaudited_contradictions": 2
+  "unaudited_contradictions": 0
  },
  {
   "abstention": null,
@@ -112020,7 +112020,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "72f4ae1a02e6ef0d",
+  "digest": "6593eb04a54b4342",
   "locators": 680,
   "origin_id": "CLAIM 003",
   "papers": 22,
@@ -112498,23 +112498,23 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 2,
+    "audited_entries": 4,
     "contradiction_verdicts": [
      {
       "auditors": 2,
       "verdict": "OVERSHOOT/OVERSHOOT"
      },
      {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
      },
      {
       "auditors": 1,
-      "verdict": "OVERSHOOT"
-     },
-     {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "verdict": "SUPPORTED"
      }
     ],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -112524,7 +112524,7 @@
     "reading_depth": "complete_fulltext_read",
     "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
-    "unaudited_contradictions": 2
+    "unaudited_contradictions": 0
    },
    {
     "adjudication_files": [
@@ -112577,7 +112577,7 @@
     "unaudited_contradictions": 0
    }
   ],
-  "unaudited_contradictions": 2
+  "unaudited_contradictions": 0
  },
  {
   "abstention": null,
@@ -113676,7 +113676,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "43a9cee3af472f9e",
+  "digest": "61b21cad9aa97cfb",
   "locators": 227,
   "origin_id": "CLAIM 002",
   "papers": 7,
@@ -113804,23 +113804,23 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 2,
+    "audited_entries": 4,
     "contradiction_verdicts": [
      {
       "auditors": 2,
       "verdict": "OVERSHOOT/OVERSHOOT"
      },
      {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
      },
      {
       "auditors": 1,
-      "verdict": "OVERSHOOT"
-     },
-     {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "verdict": "SUPPORTED"
      }
     ],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -113830,10 +113830,10 @@
     "reading_depth": "complete_fulltext_read",
     "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
-    "unaudited_contradictions": 2
+    "unaudited_contradictions": 0
    }
   ],
-  "unaudited_contradictions": 2
+  "unaudited_contradictions": 0
  },
  {
   "abstention": null,
@@ -115166,7 +115166,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "7f3ef08eb7a909f1",
+  "digest": "69f2ee79b844e6f8",
   "locators": 159,
   "origin_id": "CLAIM 002",
   "papers": 4,
@@ -115252,23 +115252,23 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 2,
+    "audited_entries": 4,
     "contradiction_verdicts": [
      {
       "auditors": 2,
       "verdict": "OVERSHOOT/OVERSHOOT"
      },
      {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
      },
      {
       "auditors": 1,
-      "verdict": "OVERSHOOT"
-     },
-     {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "verdict": "SUPPORTED"
      }
     ],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -115278,10 +115278,10 @@
     "reading_depth": "complete_fulltext_read",
     "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
-    "unaudited_contradictions": 2
+    "unaudited_contradictions": 0
    }
   ],
-  "unaudited_contradictions": 2
+  "unaudited_contradictions": 0
  },
  {
   "abstention": null,
@@ -115594,7 +115594,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "5ad392420e5342f0",
+  "digest": "6a5c2d8f44ddb0b5",
   "locators": 131,
   "origin_id": "CLAIM 003",
   "papers": 4,
@@ -115653,23 +115653,23 @@
      "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
     ],
     "audit_status": "AUDIT_FILE_PRESENT",
-    "audited_entries": 2,
+    "audited_entries": 4,
     "contradiction_verdicts": [
      {
       "auditors": 2,
       "verdict": "OVERSHOOT/OVERSHOOT"
      },
      {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
      },
      {
       "auditors": 1,
-      "verdict": "OVERSHOOT"
-     },
-     {
-      "auditors": 0,
-      "verdict": "UNSTATED"
+      "verdict": "SUPPORTED"
      }
     ],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -115679,10 +115679,10 @@
     "reading_depth": "complete_fulltext_read",
     "receipt_events": 6,
     "receipt_id": "FTR-20260810-42397075-04",
-    "unaudited_contradictions": 2
+    "unaudited_contradictions": 0
    }
   ],
-  "unaudited_contradictions": 2
+  "unaudited_contradictions": 0
  },
  {
   "abstention": null,

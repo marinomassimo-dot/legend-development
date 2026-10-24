@@ -10498,7 +10498,7 @@
       "complete_fulltext_read",
       "partial_fulltext_read"
      ],
-     "digest": "534607e7e6432998",
+     "digest": "fdad2ea22f9437b3",
      "locators": 604,
      "origin_id": "N-13",
      "papers": 29,
@@ -10955,23 +10955,23 @@
         "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
        ],
        "audit_status": "AUDIT_FILE_PRESENT",
-       "audited_entries": 2,
+       "audited_entries": 4,
        "contradiction_verdicts": [
         {
          "auditors": 2,
          "verdict": "OVERSHOOT/OVERSHOOT"
         },
         {
-         "auditors": 0,
-         "verdict": "UNSTATED"
+         "auditors": 1,
+         "verdict": "SUPPORTED"
+        },
+        {
+         "auditors": 2,
+         "verdict": "OVERSHOOT/SUPPORTED"
         },
         {
          "auditors": 1,
-         "verdict": "OVERSHOOT"
-        },
-        {
-         "auditors": 0,
-         "verdict": "UNSTATED"
+         "verdict": "SUPPORTED"
         }
        ],
        "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -10981,7 +10981,7 @@
        "reading_depth": "complete_fulltext_read",
        "receipt_events": 6,
        "receipt_id": "FTR-20260810-42397075-04",
-       "unaudited_contradictions": 2
+       "unaudited_contradictions": 0
       },
       {
        "adjudication_files": [
@@ -11034,7 +11034,7 @@
        "unaudited_contradictions": 0
       }
      ],
-     "unaudited_contradictions": 2
+     "unaudited_contradictions": 0
     },
     "p4_fields": {
      "cellular_context": {
@@ -11049,12 +11049,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*the target is not causally downstream of WWOX in the cell being targeted* +",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:746; evidence table digest 534607e7e6432998"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:746; evidence table digest fdad2ea22f9437b3"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "cc807731232f6637db5085e5167128d5dc31b1ed6d00e8424c463c005f8b4b4b",
+   "input_sha256": "606a77052db1da6b29c04d021e19a705e6dcafb57da8c4ae3ab82d46245510b2",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -11077,7 +11077,7 @@
      "complete_fulltext_read",
      "partial_fulltext_read"
     ],
-    "digest": "534607e7e6432998",
+    "digest": "fdad2ea22f9437b3",
     "locators": 604,
     "origin_id": "N-13",
     "papers": 29,
@@ -11534,23 +11534,23 @@
        "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
       ],
       "audit_status": "AUDIT_FILE_PRESENT",
-      "audited_entries": 2,
+      "audited_entries": 4,
       "contradiction_verdicts": [
        {
         "auditors": 2,
         "verdict": "OVERSHOOT/OVERSHOOT"
        },
        {
-        "auditors": 0,
-        "verdict": "UNSTATED"
+        "auditors": 1,
+        "verdict": "SUPPORTED"
+       },
+       {
+        "auditors": 2,
+        "verdict": "OVERSHOOT/SUPPORTED"
        },
        {
         "auditors": 1,
-        "verdict": "OVERSHOOT"
-       },
-       {
-        "auditors": 0,
-        "verdict": "UNSTATED"
+        "verdict": "SUPPORTED"
        }
       ],
       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
@@ -11560,7 +11560,7 @@
       "reading_depth": "complete_fulltext_read",
       "receipt_events": 6,
       "receipt_id": "FTR-20260810-42397075-04",
-      "unaudited_contradictions": 2
+      "unaudited_contradictions": 0
      },
      {
       "adjudication_files": [
@@ -11613,7 +11613,7 @@
       "unaudited_contradictions": 0
      }
     ],
-    "unaudited_contradictions": 2
+    "unaudited_contradictions": 0
    },
    "limits": [
     "Technical comparison is not efficacy, safety or experimental validation.",
@@ -11622,10 +11622,10 @@
     "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
    ],
    "measure_next": {
-    "dependence": "2_UNAUDITED_CONTRADICTIONS",
-    "experiment_sketch": "legend-locator-audit over the declared triples",
+    "dependence": "29_PAPERS_17_COMPLETE",
+    "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
     "external_hits": 0,
-    "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
+    "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
     "would_move": "N-13 (disease-models/wwox/analysis/mechanism_intervention_map.md:746)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
