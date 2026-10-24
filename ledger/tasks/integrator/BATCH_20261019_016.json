@@ -1,0 +1,74 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "_note": "Assigned by the Orchestrator in the session of 2026-10-24. One job: discharge the single written hold condition of the A51 attribution candidate and propagate what the two blind audits support into DL-THER-089, attribution and BLOCK-1 notes only. No claim created, reversed or narrowed; no dose, administration or suitability statement; not medical advice.",
+ "TASK_ID": "BATCH_20261019_016",
+ "ACTOR_ID": "integrator",
+ "OWNER": "orchestrator",
+ "CURRENT_STATE": "COMPLETE",
+ "assigned_on": "2026-10-24",
+ "OBJECTIVE": "Verify both audit files first-hand rather than on the assigning actor's word, then propagate CC-20261021-SCIENTIST-C-R3-A51-ATTRIBUTION-01 into discovery_ledger_current#DL-THER-089 (attribution and BLOCK-1 notes only, MINOR additive), carrying the caveats with the claims, recording the candidate's REVIVAL_TRIGGER, and updating the candidate's BATCH DISPOSITION to what was actually done and why.",
+ "TASK_CLAIM": {
+  "actor": "integrator",
+  "branch": "task/integrator-batch-016",
+  "worktree": ".claude/worktrees/int-016",
+  "snapshot": "backup/20261024_batch016 (not committed; plus a hand snapshot of the DL-THER-089 record and of the whole discovery ledger under backup/20261024_batch016/handsnap, because the append-only ledgers are outside the SNAPSHOT_DECLARATION by design)",
+  "base": "8050597d962f5881d4c16c0d7ff1d6f8fcc63d81"
+ },
+ "AUDIT_VERIFICATION": {
+  "_how": "Both files were read in full by the integrator, and the entries each proposed addition rests on were read in the manifests themselves, not only in the audit tables.",
+  "additions_1_and_2": {
+   "file": "disease-models/wwox/research/page_adjudications/locator_audit_R3_repairs_R3b_20261022.md",
+   "auditor": "a blind adversarial auditor other than the producer of the repairs",
+   "40156289": "all 11 of 11 repaired entries held; 23 of 23 entries SUPPORTED, 0 adverse; entry 18's variant-to-family conflict independently confirmed as real",
+   "38147624": "7 of 8 repaired entries held; 24 of 25 entries SUPPORTED; one minor OVERSHOOT (entry 21, lane reading)",
+   "40665325": "9 repaired entries, 8 held, 1 OVERSHOOT — the dose-proportionality table; nothing from this source is carried by the batch in any form",
+   "entry_21_handling": "the auditor confirmed the absence of a Myc band at the highest-burden lane and the bands at the four lanes the entry names, and flagged only that 'none visible' at two intermediate lanes was too strong; the confirmed part is carried, the entry's later restatement of those two lanes is the producer's own and unaudited, so no statement about them was written"
+  },
+  "addition_3": {
+   "file": "disease-models/wwox/research/page_adjudications/locator_audit_block1_sources_20261024.md",
+   "mode": "exhaustive over both manifests (100 percent of entries, against an about 40 percent weighted sample commissioned)",
+   "counts": "43 triples judged, 43 SUPPORTED, 0 adverse (0.0 percent), 0 UNVERIFIABLE, 2 anchor-level defects (4.7 percent counting those)",
+   "named_propositions": "both SUPPORTED AS WRITTEN (Cdk7-cKO morphology/behaviour with no EEG; the GSK3 inhibitor study's scope)",
+   "anchor_level_defects": "42154236 entry 22 mixes two supplementary numbering systems; 42401046 entry 18 states about 500 ppi for a file that is about 238 ppi — every content statement verified against the files named"
+  },
+  "addition_4": "not an evidential claim; landed as unblocking items, with no assertion that any of them is absent from the literature at large",
+  "held_additions": "none. All four proposed additions are supported by the two audit files and all four landed, two of them with a count corrected to the audited form (see DEFAULTS_TAKEN)."
+ },
+ "RESULT": {
+  "wm_version": "WM_v7.27 preserved (carried forward as batches 009 to 015)",
+  "candidates_propagated": 1,
+  "candidate": "CC-20261021-SCIENTIST-C-R3-A51-ATTRIBUTION-01 (MINOR additive, PROPAGATED)",
+  "discovery_ledger": "record-scoped, no FULL_FALLBACK: one dated additive block inside DL-THER-089 via record_scoped_edit.py replace --id 'DL-THER-089'; 14 insertions, 0 deletions, every byte outside the addressed record provably unchanged",
+  "discovery_ledger_history": "one change-log row appended (the table had carried no row since 2026-07-05; the gap is pre-existing and was not repaired)",
+  "caveats_carried": "Cdk7 morphology written with n = 3 per genotype under a one-sided Mann-Whitney whose floor is P = 0.05 and with one-sample-per-age-and-genotype blots, and with no EEG; the GSK3 arm written as histology and immunohistochemistry at day 14 only, one dose level, adult mice, no EEG and no spontaneous-seizure or seizure-burden endpoint",
+  "revival_trigger": "recorded verbatim in the landed block: a measurement of A51 in a neural system with an attribution control (a CDK7/9-selective arm and a CK1-alpha-selective arm)",
+  "not_written": "no dose, administration route, schedule or suitability statement anywhere; nothing at all from 40665325; every source labelled NOT WWOX EVIDENCE; the Wnt-versus-MYC-versus-CDK attribution left unresolved; the BLOCK-1 therapeutic-window question left open",
+  "claims_touched": "none — no claim created, reversed or narrowed, no consolidated baseline record touched, no Status, Type, Summary, block or baseline changed; no PAPER or LIT record created; no manifest edited; no receipt recorded or re-pointed",
+  "ledger_rewrites_in_place": "none in the discovery ledger (pure addition inside one record). Two in-place corrections outside it, both per prompt_batch_commit.md 7.2 with the superseded wording quoted in the line: the candidate's header STATUS and its BATCH DISPOSITION verdict, the earlier DEFERRED disposition kept below the new one.",
+  "batch_report": "disease-models/wwox/research/batch_report_BATCH_20261019_016.md",
+  "gates": {
+   "lint_pre": "WARN, 0 BLOCK (exit 0)",
+   "lint_post": "WARN, 0 BLOCK (exit 0)",
+   "growth_anchors": "PASS — claims=47, papers=556, corpus=376, literature=818, registry_only=4, unread_premises=0",
+   "receipts_verify": "OK, 866 chained receipts, tail anchored in the state manifest",
+   "public_release_gate": "PASS, BLOCKS 0",
+   "derived_surfaces": "all four regenerated inside Phase 4.7 with --inputs-dirty-because; no surface changed (no registry input changed); surface_census skipped, files/fulltext absent in this worktree (Phase 4.7 permits); DisMech sidecar NOT_AFFECTED, no sealed claim touched, no re-seal",
+   "candidate_tree_freshness": "FRESH",
+   "locator_count_crosscheck": "re-run LAST, after the landing, because main moves under a batch"
+  }
+ },
+ "DEFAULTS_TAKEN": [
+  {"condition": "The candidate declares no op structure (candidate_ops_reconcile.py: NO_OPS, ops_parsed=0, declared=none, exit 0)", "default": "the integrator wrote the ops: one record-scoped replace of DL-THER-089 whose text is the record as it stood plus an appended block, so the change is a pure addition and no existing sentence of the entry was reworded"},
+  {"condition": "The discovery ledger is outside the SNAPSHOT_DECLARATION by design (append-only carve-out)", "default": "hand-snapshotted the DL-THER-089 record and the whole ledger into backup/20261024_batch016/handsnap before the op, with the base-qualified restore route (git checkout 8050597d -- <path>) held ready; the op is an append inside one record, not an in-place rewrite of another actor's appends"},
+  {"condition": "Addition 1 says the A51 selectivity is seen at 'one of five concentrations'; the audited entry names four", "default": "the audited form written ('only one of the four concentrations the audited entry names, the highest of them'); the candidate's count not reproduced, the divergence declared inside the landed block and in the candidate's disposition"},
+  {"condition": "Addition 3 says 'two of four' remodelling markers fell in the unilateral epilepsy model; the audited entries carry three of four (dispersion, migration and the contralateral cell-count increase, the ipsilateral count unchanged)", "default": "the audited enumeration written instead of the count; conservative on the candidate's side, so not adverse to it, and declared in the block"},
+  {"condition": "38147624 entry 21's restatement of the two intermediate lanes was made after the audit and is itself unaudited", "default": "only the auditor-confirmed part carried (no band at the highest-burden lane, bands at the four lanes named); no statement about the two intermediate lanes written"},
+  {"condition": "40665325 carries the one OVERSHOOT of its manifest (the dose-proportionality table) and the commission forbids any dose statement", "default": "nothing from that source carried in any form, in any file of this batch, including this ledger record; no dose-proportionality sentence exists anywhere in the batch's output"},
+  {"condition": "This edition ships no legend_activity_log.md (state_manifest 3.x: 'not shipped')", "default": "Phase 8.1 discharged by the batch report plus this ledger record, which carry the snapshot path and the pre-batch commit SHA"},
+  {"condition": "WM version rule: no disease-model change", "default": "WM_v7.27 preserved, no bump, no working_model_history row, last_wm_update and last_wm_batch_commit_id preserved; current_state IN_BATCH_COMMIT not set (path-scoped landing, as batches 012 to 015)"},
+  {"condition": "The discovery-ledger history header asks every writer of the ledger to append a change-log row, and the table has carried none since 2026-07-05 although the ledger kept growing", "default": "one row appended for this batch; the pre-existing gap named in the row and in the report's next actions, and NOT retro-filled"},
+  {"condition": "CC-20261021-SCIENTIST-A-R1-PROTEOSTASIS-01 is still held on unaudited producer repairs", "default": "left deferred, evidence unchanged, and named only in the batch report — never in the manifest or state_history, because naming a candidate in a batch scope closes it whatever the sentence says (prompt_batch_commit.md 7)"}
+ ],
+ "STOP_LOG": [],
+ "HELD_UNCHANGED": ["CC-20261021-SCIENTIST-A-R1-PROTEOSTASIS-01 (deferred, evidence unchanged)", "everything carried by PMID 40665325 (nothing propagated from it)", "the Wnt-versus-MYC-versus-CDK attribution (unresolved, as the candidate's own first addition states)", "the BLOCK-1 therapeutic-window question of DL-THER-089 (open, unanswered)"]
+}
