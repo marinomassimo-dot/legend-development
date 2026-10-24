@@ -938,7 +938,15 @@
           "audit": {
             "auditors": 1,
             "verdicts": [
-              "blind locator audit, 2026-09-13, task ALDAZ-REPAIR-A-20260913: a separate agent with no session history received only (proposition, quote, anchor) triples plus the artefacts. It verified all six panels, all 18 bracket values and the group order from the pixels, confirmed the bracket-to-comparison mapping is exactly what the panels draw, and confirmed the layout genuinely differs from the main figures. Verdict SUPPORTED / EQUIVALENT on the repaired entry."
+              "SUPPORTED"
+            ],
+            "audit_records": [
+              {
+                "audit_run": "blind locator audit, task ALDAZ-REPAIR-A-20260913",
+                "audited_on": "2026-09-13",
+                "verdict": "SUPPORTED",
+                "note": "blind locator audit, 2026-09-13, task ALDAZ-REPAIR-A-20260913: a separate agent with no session history received only (proposition, quote, anchor) triples plus the artefacts. It verified all six panels, all 18 bracket values and the group order from the pixels, confirmed the bracket-to-comparison mapping is exactly what the panels draw, and confirmed the layout genuinely differs from the main figures. Verdict SUPPORTED / EQUIVALENT on the repaired entry."
+              }
             ]
           }
         }

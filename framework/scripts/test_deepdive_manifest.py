@@ -2785,17 +2785,35 @@ class TheAuditVerdictVocabulary(unittest.TestCase):
     for an audit that had already happened (14 stale AUDIT rows in the repurposing handoff).
 
     Measuring that gap exposed a larger one. Nothing has ever enforced this set, and the practice
-    drifted: 135 entries carry a verdict the vocabulary does not define, in 30 distinct strings,
-    16 of which are longer than 80 characters because whole prose paragraphs were written into a
-    field meant to hold a word. Those records are not rewritten here — they are scientific
-    records, the prose in them is true, and a migration of 135 entries is not a safe incidental
-    act. Instead the drift becomes visible and may not grow: a falling ratchet, the pattern this
-    repository already uses for every debt it means to retire rather than hide.
+    drifted: 135 entries carried a verdict the vocabulary does not define, in 30 distinct strings,
+    16 of which were longer than 80 characters because whole prose paragraphs were written into a
+    field meant to hold a word. Those records were not rewritten when the gap was found — they
+    are scientific records, the prose in them is true, and a migration of 135 entries was not a
+    safe incidental act. Instead the drift became visible and may not grow: a falling ratchet,
+    the pattern this repository already uses for every debt it means to retire rather than hide.
+
+    Lowered twice on 2026-10-24, after the 2026-10-24 stamping passes had briefly pushed the
+    entries to 154 and the paragraphs to 19. Both repairs were mechanical: a string that already
+    NAMES a vocabulary word is reduced to that word, and the whole original sentence is preserved
+    verbatim as the `note` of a per-audit record in `audit_records` — which also carries the audit
+    file (or the audit run, where the record names no file), the triple and the date. No verdict
+    is ever assigned by inference, so the entries whose strings name no vocabulary word are left
+    exactly as they are: PMID36828035 entries 0, 5, 17, 20, 21 and 23, whose 418- and
+    205-character strings describe the auditor's method and never state a verdict. Choosing one
+    for them is a reading act, not a field repair, and belongs to whoever re-reads the triple.
+
+    What remains under the baselines, therefore, is: those 6 method-paragraph entries, plus
+    entries whose out-of-vocabulary verdict is already a short word rather than a paragraph
+    (UNVERIFIABLE, SUPPORTS, SUPPORTED_WITH_FLAG, ANCHOR_MISMATCH and their kind) — a separate
+    debt, which a vocabulary decision retires, not an edit.
+
+    Nothing validates `audit_records`, and nothing needs to: the prose there is documentation,
+    and the ratchet on `verdicts` is the invariant that matters.
     """
 
     #: Entries whose `verdicts` list holds at least one string the vocabulary does not define.
     #: Measured 2026-10-24 over 589 manifests. LOWERED as records are normalised, never raised.
-    DRIFT_BASELINE = 135
+    DRIFT_BASELINE = 100
 
     def _drift(self):
         unknown_entries, distinct = 0, set()
@@ -2838,10 +2856,13 @@ class TheAuditVerdictVocabulary(unittest.TestCase):
         _, distinct = self._drift()
         if not distinct:
             return
+        #: LOWERED as records are normalised, never raised. The 2 that remain are the two
+        #: distinct PMID36828035 method paragraphs that state no verdict (see the class
+        #: docstring); every paragraph that named a word has been reduced to it.
         self.assertLessEqual(
-            sum(1 for v in distinct if len(v) > 80), 16,
+            sum(1 for v in distinct if len(v) > 80), 2,
             "a NEW paragraph-length verdict string. `verdicts` holds words; `what_changed` holds "
-            "the account of what moved.")
+            "the account of what moved, and `audit_records[].note` holds the audit's own prose.")
 
 
 if __name__ == "__main__":

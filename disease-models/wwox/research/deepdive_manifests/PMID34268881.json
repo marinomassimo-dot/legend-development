@@ -618,7 +618,15 @@
      "audit": {
       "auditors": 1,
       "verdicts": [
-       "blind locator audit of the module repairs, 2026-10-23: OVERSHOOT at quote level (proposition bundled facts outside the quote); the split applied afterwards is not itself audited."
+       "OVERSHOOT"
+      ],
+      "audit_records": [
+       {
+        "audit_run": "blind locator audit of the module repairs",
+        "audited_on": "2026-10-23",
+        "verdict": "OVERSHOOT",
+        "note": "blind locator audit of the module repairs, 2026-10-23: OVERSHOOT at quote level (proposition bundled facts outside the quote); the split applied afterwards is not itself audited."
+       }
       ]
      }
     }
@@ -645,7 +653,15 @@
      "audit": {
       "auditors": 1,
       "verdicts": [
-       "blind locator audit, 2026-10-21, task REPURP-10H-R2-B-20261021: one separate history-free read-only agent received only (proposition, quote, anchor) triples plus the source artefacts; verdict on this triple: SUPPORTED, wording fix. The wording repair applied afterwards is not itself audited."
+       "SUPPORTED"
+      ],
+      "audit_records": [
+       {
+        "audit_run": "blind locator audit, task REPURP-10H-R2-B-20261021",
+        "audited_on": "2026-10-21",
+        "verdict": "SUPPORTED",
+        "note": "blind locator audit, 2026-10-21, task REPURP-10H-R2-B-20261021: one separate history-free read-only agent received only (proposition, quote, anchor) triples plus the source artefacts; verdict on this triple: SUPPORTED, wording fix. The wording repair applied afterwards is not itself audited."
+       }
       ]
      }
     }
@@ -688,7 +704,15 @@
      "audit": {
       "auditors": 1,
       "verdicts": [
-       "blind locator audit of the module repairs, 2026-10-23: OVERSHOOT at quote level (proposition bundled facts outside the quote); the split applied afterwards is not itself audited."
+       "OVERSHOOT"
+      ],
+      "audit_records": [
+       {
+        "audit_run": "blind locator audit of the module repairs",
+        "audited_on": "2026-10-23",
+        "verdict": "OVERSHOOT",
+        "note": "blind locator audit of the module repairs, 2026-10-23: OVERSHOOT at quote level (proposition bundled facts outside the quote); the split applied afterwards is not itself audited."
+       }
       ]
      }
     }
@@ -723,7 +747,15 @@
      "audit": {
       "auditors": 1,
       "verdicts": [
-       "blind locator audit of the module repairs, 2026-10-23: OVERSHOOT at quote level (proposition bundled facts outside the quote); the split applied afterwards is not itself audited."
+       "OVERSHOOT"
+      ],
+      "audit_records": [
+       {
+        "audit_run": "blind locator audit of the module repairs",
+        "audited_on": "2026-10-23",
+        "verdict": "OVERSHOOT",
+        "note": "blind locator audit of the module repairs, 2026-10-23: OVERSHOOT at quote level (proposition bundled facts outside the quote); the split applied afterwards is not itself audited."
+       }
       ]
      }
     }
@@ -742,7 +774,15 @@
      "audit": {
       "auditors": 1,
       "verdicts": [
-       "blind locator audit of the module repairs, 2026-10-23: OVERSHOOT at quote level (proposition bundled facts outside the quote); the split applied afterwards is not itself audited."
+       "OVERSHOOT"
+      ],
+      "audit_records": [
+       {
+        "audit_run": "blind locator audit of the module repairs",
+        "audited_on": "2026-10-23",
+        "verdict": "OVERSHOOT",
+        "note": "blind locator audit of the module repairs, 2026-10-23: OVERSHOOT at quote level (proposition bundled facts outside the quote); the split applied afterwards is not itself audited."
+       }
       ]
      }
     }
@@ -761,7 +801,15 @@
      "audit": {
       "auditors": 1,
       "verdicts": [
-       "blind locator audit of the module batch, 2026-10-23: OVERSHOOT on this entry; the repair applied afterwards is not itself audited."
+       "OVERSHOOT"
+      ],
+      "audit_records": [
+       {
+        "audit_run": "blind locator audit of the module batch",
+        "audited_on": "2026-10-23",
+        "verdict": "OVERSHOOT",
+        "note": "blind locator audit of the module batch, 2026-10-23: OVERSHOOT on this entry; the repair applied afterwards is not itself audited."
+       }
       ]
      }
     }
