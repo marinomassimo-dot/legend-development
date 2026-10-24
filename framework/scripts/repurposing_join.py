@@ -383,6 +383,28 @@ def adjudication_files(pmid: str) -> list[str]:
     return hits
 
 
+#: Words that say a triple FAILED, and words that say one HELD. Matched as substrings because
+#: `verdicts` is not a controlled field in practice: 30 distinct strings are in use, 16 of them
+#: paragraphs (`deepdive_manifest.CONTRADICTION_AUDIT_VERDICTS` carries the ratchet that holds
+#: that drift from growing). Substring matching is the honest read of a field like that.
+_ADVERSE_WORDS = ("OVERSHOOT", "UNDERSHOOT", "UNSUPPORTED", "NOT_IN_SOURCE", "ANCHOR_MISMATCH")
+_CLEARING_WORDS = ("SUPPORTED", "SUPPORTS", "CONFIRMED", "CORRECTED", "WITHDRAWN")
+
+
+def adverse_and_not_cleared(verdict: str) -> bool:
+    """An audit condemned this entry and no later verdict says the repair holds.
+
+    `SUPPORTED` is checked before the adverse words because `UNSUPPORTED` contains neither it
+    nor the reverse cleanly: a verdict list reading OVERSHOOT then SUPPORTED is a repair that
+    was re-judged and held, which is not this state.
+    """
+    text = verdict.upper()
+    # UNSUPPORTED contains SUPPORTED, so it is removed before the clearing words are looked for.
+    without_unsupported = text.replace("UNSUPPORTED", "")
+    cleared = any(word in without_unsupported for word in _CLEARING_WORDS)
+    return any(word in text for word in _ADVERSE_WORDS) and not cleared
+
+
 def manifest_evidence(pmid: str) -> dict:
     """What the manifest for one paper evidences, with the audit status of its locators.
 
@@ -391,6 +413,7 @@ def manifest_evidence(pmid: str) -> dict:
     path = MANIFESTS / f"PMID{pmid}.json"
     row = {"pmid": pmid, "manifest": relative(path) if path.exists() else "",
            "locator_count": 0, "audited_entries": 0, "unaudited_contradictions": 0,
+           "repair_unverified": 0,
            "contradiction_verdicts": [], "adjudication_files": adjudication_files(pmid)}
     if not path.exists():
         row["audit_status"] = "NO_MANIFEST"
@@ -416,10 +439,16 @@ def manifest_evidence(pmid: str) -> dict:
             verdicts = [audit.get("verdict")] if audit.get("verdict") else []
         verdict = "/".join(str(v) for v in verdicts) or "UNSTATED"
         row["contradiction_verdicts"].append({"verdict": verdict, "auditors": count})
-        if count:
-            row["audited_entries"] += 1
-        else:
+        if not count:
             row["unaudited_contradictions"] += 1
+        elif adverse_and_not_cleared(verdict):
+            # Condemned, repaired, never re-judged. `auditors` is 1 because of the audit that
+            # found the defect, so this used to read as audited and the debt was invisible: a
+            # held research candidate sat three days on exactly this, and only a hand check
+            # found it (measured 2026-10-24: 178 entries across 71 manifests).
+            row["repair_unverified"] += 1
+        else:
+            row["audited_entries"] += 1
     row["audit_status"] = ("AUDIT_FILE_PRESENT" if row["adjudication_files"]
                            else "CONTRADICTIONS_AUDITED" if row["audited_entries"] and not row["unaudited_contradictions"]
                            else "UNAUDITED" if row["locator_count"]
@@ -935,7 +964,8 @@ def lead_spec(query_id: str, card: dict, query: dict) -> dict:
     }
 
 
-def render_handoff(rows: list[dict], date: str, axis: str) -> str:
+def render_handoff(rows: list[dict], date: str, axis: str,
+                   evidence: list[dict] | None = None) -> str:
     lines = [
         f"# Module handoff — rows for the next Scientist batch ({date}, axis {axis or 'all'})",
         "",
@@ -963,6 +993,22 @@ def render_handoff(rows: list[dict], date: str, axis: str) -> str:
     for row in rows:
         counts[row["kind"]] = counts.get(row["kind"], 0) + 1
     lines += ["", "Counts: " + " · ".join(f"{k} {v}" for k, v in sorted(counts.items())), ""]
+
+    # The debt that no row carries. An entry an audit CONDEMNED keeps `auditors: 1` from that
+    # audit, so a repair nobody re-judged reads as audited; a held candidate sat three days on
+    # exactly this. It is reported once, not as a row per query: half the queries touch one, and
+    # a queue that lists them all is a queue nobody reads.
+    unverified = {r.get("manifest") for q in (evidence or []) for r in q.get("rows") or []
+                  if (r.get("repair_unverified") or 0) and r.get("manifest")}
+    reached = sum(1 for q in (evidence or [])
+                  if any((r.get("repair_unverified") or 0) for r in q.get("rows") or []))
+    if unverified:
+        lines += [
+            f"**Repaired but not re-judged:** {len(unverified)} of the manifests these queries "
+            f"reach hold a locator an audit found adverse whose repair no later audit has judged; "
+            f"{reached} of {len(evidence or [])} queries reach one. They are not rows here, because "
+            "half the queue would be one row — an audit of them is owed, and a claim resting on one "
+            "rests on an unverified repair.", ""]
     specs = [row["lead_spec"] for row in rows if row.get("lead_spec")]
     if specs:
         lines += ["## Lead specs (for `discovery_lead.py check`; a Scientist stages them, the join never appends)", ""]
@@ -1027,7 +1073,9 @@ def main(argv: list[str] | None = None) -> int:
         queries = {q["query_id"]: q for q in json.loads((args.out / "queries.json").read_text(encoding="utf-8"))}
         state = json.loads((args.out / "state.json").read_text(encoding="utf-8")) if (args.out / "state.json").exists() else {}
         rows = handoff_rows(cards, queries)
-        text = render_handoff(rows, args.date, state.get("axis", ""))
+        ev_path = args.out / "evidence.json"
+        evidence = json.loads(ev_path.read_text(encoding="utf-8")) if ev_path.exists() else []
+        text = render_handoff(rows, args.date, state.get("axis", ""), evidence)
         if args.write:
             args.write.write_text(text, encoding="utf-8")
             print(f"written {relative(args.write)}: {len(rows)} row(s)")

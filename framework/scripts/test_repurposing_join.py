@@ -150,6 +150,43 @@ class Evidence(unittest.TestCase):
             rj.MANIFESTS = original
             shutil.rmtree(tmp, ignore_errors=True)
 
+    def test_a_condemned_entry_whose_repair_was_never_re_judged_is_its_own_state(self):
+        """`auditors: 1` from the audit that CONDEMNED an entry is not a repair anyone checked.
+
+        Measured 2026-10-24: 178 entries across 71 manifests sat in this state while reading as
+        audited, and a held research candidate waited three days on exactly that. The last case
+        is the one that keeps the rule honest: OVERSHOOT followed by SUPPORTED is a repair that
+        WAS re-judged and held, so it must not count here.
+        """
+        tmp = Path(tempfile.mkdtemp(prefix="join_"))
+        try:
+            def decl(verdicts, auditors=1):
+                return {"manifest": "PMID1.json", "entry": 1, "what_changed": "x",
+                        "audit": {"auditors": auditors, "verdicts": verdicts}}
+            manifest = {"verbatim_locators": {"entries": [
+                {"contradicts_locator": decl(["OVERSHOOT"])},
+                {"contradicts_locator": decl(["UNDERSHOOT"])},
+                {"contradicts_locator": decl(["OVERSHOOT", "SUPPORTED"])},
+                {"contradicts_locator": decl(["SUPPORTED"])},
+                {"contradicts_locator": decl(["OVERSHOOT"], auditors=0)}]}}
+            (tmp / "PMID888888.json").write_text(json.dumps(manifest), encoding="utf-8")
+            original = rj.MANIFESTS
+            rj.MANIFESTS = tmp
+            row = rj.manifest_evidence("888888")
+            self.assertEqual(row["repair_unverified"], 2, "OVERSHOOT and UNDERSHOOT alone")
+            self.assertEqual(row["audited_entries"], 2, "re-judged-and-held, and plain SUPPORTED")
+            self.assertEqual(row["unaudited_contradictions"], 1, "auditors 0 stays its own state")
+        finally:
+            rj.MANIFESTS = original
+
+    def test_unsupported_is_adverse_and_does_not_read_as_supported(self):
+        """UNSUPPORTED contains the letters of SUPPORTED; the distinction is the whole point."""
+        self.assertTrue(rj.adverse_and_not_cleared("UNSUPPORTED"))
+        self.assertFalse(rj.adverse_and_not_cleared("SUPPORTED"))
+        self.assertFalse(rj.adverse_and_not_cleared("OVERSHOOT/SUPPORTED"))
+        self.assertTrue(rj.adverse_and_not_cleared(
+            "blind locator audit 2026-10-23: OVERSHOOT at quote level, repaired at source"))
+
     def test_audit_block_read_nested_flat_and_absent(self):
         tmp = Path(tempfile.mkdtemp(prefix="join_"))
         try:
@@ -305,7 +342,8 @@ class Run(unittest.TestCase):
             if row["kind"] == "REPLICATE":
                 self.assertEqual(row["lead_spec"]["status"], "open")
                 self.assertEqual(row["lead_spec"]["tag"], "INFERENZA")
-        text = rj.render_handoff(rows, "2026-01-01", "wnt")
+        evidence = json.loads((self.tmp / "evidence.json").read_text(encoding="utf-8"))
+        text = rj.render_handoff(rows, "2026-01-01", "wnt", evidence)
         self.assertIn("NOT WWOX EVIDENCE", text)
         self.assertIn("Not medical advice", text)
         self.assertNotIn("2026-10-2", text.split("\n")[0].replace("2026-01-01", ""))  # the date is the argument, not the clock
