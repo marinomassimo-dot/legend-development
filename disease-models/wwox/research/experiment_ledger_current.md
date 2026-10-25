@@ -600,6 +600,16 @@ transcriptional Wnt-target elevation measured in bulk reports pathway activity a
 within matched populations. The 2026 paper performed single-cell RNA-seq; whether its deposited data permit
 this comparison is the cheapest thing to check first, and it is checked before this experiment is run.
 
+**State of that check, 2026-10-25.** The dataset is **ArrayExpress / BioStudies E-MTAB-14792** (read from the
+paper's Data availability statement, [[deepdive_manifests/PMID42397075.json]] entry 43 holds the sentence but
+its extraction was cut at a line break before the number). It covers WWOX-KO, WOREE and SCAR12 organoids with
+the AAV9-hSynI rescue, which is exactly what a matched-population comparison needs. Measured today: the
+BioStudies API returns 403 to this host; the legacy ArrayExpress URL returns a page shell with no content; two
+guessed FTP paths returned 404. **Not retrieved and not read.** Nothing is concluded from it. The next step is
+a listing of the study's files (their number and total size decide whether a download is a reasonable cost)
+from a browser or from the ArrayExpress file list, followed by a download of the processed count matrix and
+cell annotation only; the raw reads are not needed for this question. Do not guess further paths.
+
 **COST** — weeks. **MATERIAL** — `IN_VITRO`. **STATUS** — `PROPOSED`. **RESULT** — —
 
 ---
