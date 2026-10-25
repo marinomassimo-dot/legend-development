@@ -16,7 +16,7 @@
  "event_at": "2026-10-25T10:10:00Z",
  "event_id": "FTR-20261025-42397075-01",
  "evidence_basis": [
-  "🔴 THE ARTEFACT READ IS THE PREPRINT, NOT THE PUBLISHED ARTICLE THE PMID NAMES. `source_locator` is files/fulltext/PPR960425_Steinberg2025_bioRxiv-v2.full.pdf, bioRxiv v2 posted 2025-09-25, doi 10.1101/2024.12.22.630016, fingerprinted below; it is not peer reviewed. The PMID is carried in `study_id` for lineage only, because this is the same work. NOTHING in this receipt is a reading of the published article or of its Supplementary material, and no value below may be cited as the published supplement.",
+  "🔴 THE ARTEFACT READ IS THE PREPRINT, NOT THE PUBLISHED ARTICLE THE PMID NAMES. `source_locator` is files/fulltext/PPR960425_Steinberg2025_bioRxiv-v2.full.pdf, bioRxiv v2 posted 2025-09-25, doi 10.1101/2024.12.22.630016, fingerprinted below; it is not peer reviewed. `study_id` carries the PUBLISHED identifiers (pmid 42397075, doi 10.1093/brain/awag239) because study_id names the STUDY and the five earlier receipts for it do the same — the ledger refuses two DOIs for one study — while `source_locator`, `source_kind` and `source_fingerprint` name the ARTEFACT, which is the preprint at doi 10.1101/2024.12.22.630016. NOTHING in this receipt is a reading of the published article or of its Supplementary material, and no value below may be cited as the published supplement.",
   "🔴 THE PUBLISHED SUPPLEMENTARY VOLUME WAS NOT READ AND IS NOT HELD. All fourteen SHA-256 digests the deep-dive manifest declares for it (brain-2025-03809-File009.pdf and thirteen derived images) match nothing on this host: evidence_presence.py --search over /home/desktop and /tmp/claude-1000 on 2026-10-25 returned present 13, absent 14, digest_mismatch 0, recoverable 0. Hence coverage.supplementary = unavailable. The published Supplementary Fig. 6F has never been seen and may differ from what is read here.",
   "QUESTION_DRIVEN, single question carried over from the prior receipt FTR-20261023-42397075-01, which recorded this readout as unavailable: does TCF4 (TCF7L2) in the rescued WWOX-KO organoid return toward wild type. Scope read, and nothing else: the legend of preprint Fig. EV6 panel (F), the raster image of panel (F) itself, and — for identification only — the one Results sentence that cites it. No section of the preprint is claimed as read; coverage.figures = read refers to that single panel.",
   "Identification of the panel across the two versions: the citing sentence is word-for-word identical in the preprint (derived layout text, lines 302-307) and in the published accepted manuscript (p. 9, lines 7-9) except for the figure label — 'we assessed Wnt pathway activity in WWOX-KO, WOREE, SCAR12, and rescued WWOX-KO organoids (Fig. EV6F / Supplementary Fig. 6F). Western blot analysis revealed elevated levels of TCF4 (TCF7L2)'. Same experiment, two labels; that identity is an inference from the two sentences, not a statement of the publisher.",
@@ -34,7 +34,7 @@
  "source_kind": "fulltext_local",
  "source_locator": "files/fulltext/PPR960425_Steinberg2025_bioRxiv-v2.full.pdf",
  "study_id": {
-  "doi": "10.1101/2024.12.22.630016",
+  "doi": "10.1093/brain/awag239",
   "pmid": "42397075"
  },
  "workflow": "scientist-c, task SUPPL6F-RECEIPT-20261025, branch scientist-c/suppl6f-receipt-fix; context_policy QUESTION_DRIVEN; the artefact read is the PREPRINT version of the work published as the named PMID; prepared as JSON for the integrator, not appended by this actor."
