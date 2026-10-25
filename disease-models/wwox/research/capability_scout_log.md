@@ -1303,3 +1303,16 @@ assertions keyed by endpoint. Cost: hours. **Cost / API / privacy risk:** none.
 **Cost / API / privacy risk:** zero spend; six key-less public APIs with their rate limits honoured (PubTator 3 one request per query; openFDA under 1,000/day); no identifier of any person in any query; declined on terms: GtoPdb, CLUE, SemMedDB, Orphadata Products, AetherCell.
 
 **Next surgical micro-step:** the selector resolves the map's prose citations to `PAPER` ids (the 21 SELECT rows); on the next `run` the join inherits them with nothing else to change.
+
+
+## 2026-10-25 · orchestrator · Weekly WRITE intervention
+
+**Gap (repeated).** Scientist-resolved source identifiers still absent from map records caused false single-paper and linkage-gap tasks (Scientist C, module_linkage_and_replicate_scientist-c_20261024.md §§1–2). The October 20 cleanup proposal also identified the preserved VPS history misreported as overdue task work.
+
+**CHANGE (measured).** Three SOURCE_IDS rows and regeneration through the existing join: 339 queries, 26 cards; queue 8 AUDIT, 16 READ, 2 REPLICATE, zero SELECT. A PRESERVED_BACKUP class retains all divergence measurements without instructing a stale merge. Removed the capability-scout skill's contradictory compulsory-growth quota; its existing CHANGE = NONE procedure remains.
+
+**Validation.** Six adapters passed real calls; adapter and join suites passed; hygiene regression constructs both divergent and merged backup refs alongside ordinary task controls. Full outcomes are in weekly_write_intervention_20261025.md and the task record.
+
+**Cost / API / privacy risk:** zero spend, public key-less adapter calls only. No new source, dependency or scientific conclusion.
+
+**Next surgical micro-step:** refresh the same join after the next scientific batch. No additional harness control is needed.

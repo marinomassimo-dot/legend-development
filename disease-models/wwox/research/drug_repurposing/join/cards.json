@@ -83,7 +83,7 @@
      "endpoint": "UNKNOWN",
      "epistemic_status": "IPOTESI",
      "id": "DA-Q-N-01",
-     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:635",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:644",
      "reading_depth": "complete_fulltext_read",
      "receipt": "FTR-20260913-15064722-01",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-01",
@@ -168,8 +168,8 @@
       "complete_fulltext_read",
       "partial_fulltext_read"
      ],
-     "digest": "41de20ee81f96d8b",
-     "locators": 900,
+     "digest": "c1a0ba785cc24748",
+     "locators": 908,
      "origin_id": "N-01",
      "papers": 49,
      "query_id": "Q-N-01",
@@ -778,12 +778,13 @@
       },
       {
        "adjudication_files": [
+        "disease-models/wwox/research/page_adjudications/locator_audit_34268881_reread_20261025.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
        ],
        "audit_status": "AUDIT_FILE_PRESENT",
-       "audited_entries": 1,
+       "audited_entries": 2,
        "contradiction_verdicts": [
         {
          "auditors": 1,
@@ -808,16 +809,28 @@
         {
          "auditors": 1,
          "verdict": "OVERSHOOT"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT"
+        },
+        {
+         "auditors": 1,
+         "verdict": "SUPPORTED"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT"
         }
        ],
        "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
-       "locator_count": 59,
+       "locator_count": 67,
        "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
        "pmid": "34268881",
        "reading_depth": "partial_fulltext_read",
        "receipt_events": 9,
        "receipt_id": "FTR-20260726-34268881-01",
-       "repair_unverified": 5,
+       "repair_unverified": 7,
        "unaudited_contradictions": 0
       },
       {
@@ -1182,12 +1195,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*`INSUFFICIENT` — mai misurato a livello proteico in alcun sistema WWOX.* The reflex move in genetic DEE, imported from TSC.",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:635; evidence table digest 41de20ee81f96d8b"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:644; evidence table digest c1a0ba785cc24748"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "14cd8ae928db8560e1d8bdce92cc342396b007bf2713d78cdefabd3f67c135e3",
+   "input_sha256": "7d045973ee83bb979b6722d077ea6e58cf2ac7fdf8ba04db67fc91a02b317ab7",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -1214,8 +1227,8 @@
      "complete_fulltext_read",
      "partial_fulltext_read"
     ],
-    "digest": "41de20ee81f96d8b",
-    "locators": 900,
+    "digest": "c1a0ba785cc24748",
+    "locators": 908,
     "origin_id": "N-01",
     "papers": 49,
     "query_id": "Q-N-01",
@@ -1824,12 +1837,13 @@
      },
      {
       "adjudication_files": [
+       "disease-models/wwox/research/page_adjudications/locator_audit_34268881_reread_20261025.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
       ],
       "audit_status": "AUDIT_FILE_PRESENT",
-      "audited_entries": 1,
+      "audited_entries": 2,
       "contradiction_verdicts": [
        {
         "auditors": 1,
@@ -1854,16 +1868,28 @@
        {
         "auditors": 1,
         "verdict": "OVERSHOOT"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT"
+       },
+       {
+        "auditors": 1,
+        "verdict": "SUPPORTED"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT"
        }
       ],
       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
-      "locator_count": 59,
+      "locator_count": 67,
       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
       "pmid": "34268881",
       "reading_depth": "partial_fulltext_read",
       "receipt_events": 9,
       "receipt_id": "FTR-20260726-34268881-01",
-      "repair_unverified": 5,
+      "repair_unverified": 7,
       "unaudited_contradictions": 0
      },
      {
@@ -2226,7 +2252,7 @@
     "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
     "external_hits": 1,
     "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
-    "would_move": "N-01 (disease-models/wwox/analysis/mechanism_intervention_map.md:635)"
+    "would_move": "N-01 (disease-models/wwox/analysis/mechanism_intervention_map.md:644)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -2336,7 +2362,7 @@
      "endpoint": "UNKNOWN",
      "epistemic_status": "IPOTESI",
      "id": "DA-Q-N-02",
-     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:647",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:656",
      "reading_depth": "complete_fulltext_read",
      "receipt": "FTR-20260726-22193544-01",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-02",
@@ -2503,12 +2529,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*evidence transfer that was never genotype-controlled*, compounded by *wrong",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:647; evidence table digest bed2f25bdc2e581c"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:656; evidence table digest bed2f25bdc2e581c"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "6e41261fba9560ca5cca94615ed7b88eac4db9b7e290eb20f9452c4875a2c431",
+   "input_sha256": "d956423724c5ad1f1f4d24646a10399c5e738a970e356a08b6afbc4cc8e0f8b4",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -2615,7 +2641,7 @@
     "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
     "external_hits": 1,
     "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
-    "would_move": "N-02 (disease-models/wwox/analysis/mechanism_intervention_map.md:647)"
+    "would_move": "N-02 (disease-models/wwox/analysis/mechanism_intervention_map.md:656)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -2717,7 +2743,7 @@
      "endpoint": "UNKNOWN",
      "epistemic_status": "IPOTESI",
      "id": "DA-Q-N-03",
-     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:656",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:665",
      "reading_depth": "UNKNOWN",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-03",
      "target_id": "UNKNOWN"
@@ -2823,12 +2849,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*the target is not causally downstream of WWOX.* Precision therapy in",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:656; evidence table digest 5ba1ee6cec5a4756"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:665; evidence table digest 5ba1ee6cec5a4756"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "578bd7d0ba864f3dbb02d63683ca7e75cd378434746d16231aa2dcc20f6e4f34",
+   "input_sha256": "de4e3e77cc74c98feb5dc7ffb3fd54b6c714722b954d29288b16d6365d974e05",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -2889,7 +2915,7 @@
     "experiment_sketch": "replicate the one measurement this query stands on, changing the laboratory or the model but not the endpoint",
     "external_hits": 1,
     "measurement": "an independent measurement of the same endpoint in a second system, or the same system from a second laboratory: the query rests on one reading",
-    "would_move": "N-03 (disease-models/wwox/analysis/mechanism_intervention_map.md:656)"
+    "would_move": "N-03 (disease-models/wwox/analysis/mechanism_intervention_map.md:665)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -2971,7 +2997,7 @@
      "endpoint": "UNKNOWN",
      "epistemic_status": "IPOTESI",
      "id": "DA-Q-N-04",
-     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:665",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:674",
      "reading_depth": "complete_fulltext_read",
      "receipt": "FTR-20261003-30361190-01",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-04",
@@ -3019,8 +3045,8 @@
       "complete_fulltext_read",
       "partial_fulltext_read"
      ],
-     "digest": "320c5063cb56bfa5",
-     "locators": 281,
+     "digest": "827e14e79c393ab7",
+     "locators": 289,
      "origin_id": "N-04",
      "papers": 14,
      "query_id": "Q-N-04",
@@ -3077,12 +3103,13 @@
       },
       {
        "adjudication_files": [
+        "disease-models/wwox/research/page_adjudications/locator_audit_34268881_reread_20261025.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
        ],
        "audit_status": "AUDIT_FILE_PRESENT",
-       "audited_entries": 1,
+       "audited_entries": 2,
        "contradiction_verdicts": [
         {
          "auditors": 1,
@@ -3107,16 +3134,28 @@
         {
          "auditors": 1,
          "verdict": "OVERSHOOT"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT"
+        },
+        {
+         "auditors": 1,
+         "verdict": "SUPPORTED"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT"
         }
        ],
        "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
-       "locator_count": 59,
+       "locator_count": 67,
        "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
        "pmid": "34268881",
        "reading_depth": "partial_fulltext_read",
        "receipt_events": 9,
        "receipt_id": "FTR-20260726-34268881-01",
-       "repair_unverified": 5,
+       "repair_unverified": 7,
        "unaudited_contradictions": 0
       },
       {
@@ -3413,12 +3452,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*corrects a marker, not the mechanism* — plus an unmeasured premise. VABAM is",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:665; evidence table digest 320c5063cb56bfa5"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:674; evidence table digest 827e14e79c393ab7"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "ae60f67a896c0577968203bc0f6dc898b32798af6f0e215ee84fea1f19fa409e",
+   "input_sha256": "af75b24e29d0aca2ef3b97d98f24eca62f488c47fed7b9897e7b3a5af42a15b8",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -3442,8 +3481,8 @@
      "complete_fulltext_read",
      "partial_fulltext_read"
     ],
-    "digest": "320c5063cb56bfa5",
-    "locators": 281,
+    "digest": "827e14e79c393ab7",
+    "locators": 289,
     "origin_id": "N-04",
     "papers": 14,
     "query_id": "Q-N-04",
@@ -3500,12 +3539,13 @@
      },
      {
       "adjudication_files": [
+       "disease-models/wwox/research/page_adjudications/locator_audit_34268881_reread_20261025.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
       ],
       "audit_status": "AUDIT_FILE_PRESENT",
-      "audited_entries": 1,
+      "audited_entries": 2,
       "contradiction_verdicts": [
        {
         "auditors": 1,
@@ -3530,16 +3570,28 @@
        {
         "auditors": 1,
         "verdict": "OVERSHOOT"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT"
+       },
+       {
+        "auditors": 1,
+        "verdict": "SUPPORTED"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT"
        }
       ],
       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
-      "locator_count": 59,
+      "locator_count": 67,
       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
       "pmid": "34268881",
       "reading_depth": "partial_fulltext_read",
       "receipt_events": 9,
       "receipt_id": "FTR-20260726-34268881-01",
-      "repair_unverified": 5,
+      "repair_unverified": 7,
       "unaudited_contradictions": 0
      },
      {
@@ -3834,7 +3886,7 @@
     "experiment_sketch": "legend-locator-audit over the declared triples",
     "external_hits": 0,
     "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
-    "would_move": "N-04 (disease-models/wwox/analysis/mechanism_intervention_map.md:665)"
+    "would_move": "N-04 (disease-models/wwox/analysis/mechanism_intervention_map.md:674)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -3936,7 +3988,7 @@
      "endpoint": "UNKNOWN",
      "epistemic_status": "IPOTESI",
      "id": "DA-Q-N-05",
-     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:675",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:684",
      "reading_depth": "complete_fulltext_read",
      "receipt": "FTR-20260909-16223882-01",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-05",
@@ -4004,8 +4056,8 @@
       "complete_fulltext_read",
       "partial_fulltext_read"
      ],
-     "digest": "94a1fd57eca3b46c",
-     "locators": 747,
+     "digest": "447daa09fa90c93d",
+     "locators": 755,
      "origin_id": "N-05",
      "papers": 45,
      "query_id": "Q-N-05",
@@ -4403,12 +4455,13 @@
       },
       {
        "adjudication_files": [
+        "disease-models/wwox/research/page_adjudications/locator_audit_34268881_reread_20261025.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
        ],
        "audit_status": "AUDIT_FILE_PRESENT",
-       "audited_entries": 1,
+       "audited_entries": 2,
        "contradiction_verdicts": [
         {
          "auditors": 1,
@@ -4433,16 +4486,28 @@
         {
          "auditors": 1,
          "verdict": "OVERSHOOT"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT"
+        },
+        {
+         "auditors": 1,
+         "verdict": "SUPPORTED"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT"
         }
        ],
        "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
-       "locator_count": 59,
+       "locator_count": 67,
        "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
        "pmid": "34268881",
        "reading_depth": "partial_fulltext_read",
        "receipt_events": 9,
        "receipt_id": "FTR-20260726-34268881-01",
-       "repair_unverified": 5,
+       "repair_unverified": 7,
        "unaudited_contradictions": 0
       },
       {
@@ -4870,12 +4935,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*the target is not the bottleneck.* Normal transcript with protein not detected",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:675; evidence table digest 94a1fd57eca3b46c"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:684; evidence table digest 447daa09fa90c93d"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "a208b21c666c0bb64fa5c966709b50af6c980dadbb1d40348893f806284ad8c5",
+   "input_sha256": "0c827056451ff379f738a4e5ffa32e8a474fd9f3aefa576805a991f97e8542c9",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -4899,8 +4964,8 @@
      "complete_fulltext_read",
      "partial_fulltext_read"
     ],
-    "digest": "94a1fd57eca3b46c",
-    "locators": 747,
+    "digest": "447daa09fa90c93d",
+    "locators": 755,
     "origin_id": "N-05",
     "papers": 45,
     "query_id": "Q-N-05",
@@ -5298,12 +5363,13 @@
      },
      {
       "adjudication_files": [
+       "disease-models/wwox/research/page_adjudications/locator_audit_34268881_reread_20261025.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
       ],
       "audit_status": "AUDIT_FILE_PRESENT",
-      "audited_entries": 1,
+      "audited_entries": 2,
       "contradiction_verdicts": [
        {
         "auditors": 1,
@@ -5328,16 +5394,28 @@
        {
         "auditors": 1,
         "verdict": "OVERSHOOT"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT"
+       },
+       {
+        "auditors": 1,
+        "verdict": "SUPPORTED"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT"
        }
       ],
       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
-      "locator_count": 59,
+      "locator_count": 67,
       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
       "pmid": "34268881",
       "reading_depth": "partial_fulltext_read",
       "receipt_events": 9,
       "receipt_id": "FTR-20260726-34268881-01",
-      "repair_unverified": 5,
+      "repair_unverified": 7,
       "unaudited_contradictions": 0
      },
      {
@@ -5763,7 +5841,7 @@
     "experiment_sketch": "legend-locator-audit over the declared triples",
     "external_hits": 1,
     "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
-    "would_move": "N-05 (disease-models/wwox/analysis/mechanism_intervention_map.md:675)"
+    "would_move": "N-05 (disease-models/wwox/analysis/mechanism_intervention_map.md:684)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -5865,7 +5943,7 @@
      "endpoint": "UNKNOWN",
      "epistemic_status": "IPOTESI",
      "id": "DA-Q-N-06",
-     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:689",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:698",
      "reading_depth": "complete_fulltext_read",
      "receipt": "FTR-20260913-15064722-01",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-06",
@@ -5933,8 +6011,8 @@
       "complete_fulltext_read",
       "partial_fulltext_read"
      ],
-     "digest": "a1fb4a26b6585de9",
-     "locators": 900,
+     "digest": "ff1361cefb8e209b",
+     "locators": 908,
      "origin_id": "N-06",
      "papers": 49,
      "query_id": "Q-N-06",
@@ -6543,12 +6621,13 @@
       },
       {
        "adjudication_files": [
+        "disease-models/wwox/research/page_adjudications/locator_audit_34268881_reread_20261025.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
        ],
        "audit_status": "AUDIT_FILE_PRESENT",
-       "audited_entries": 1,
+       "audited_entries": 2,
        "contradiction_verdicts": [
         {
          "auditors": 1,
@@ -6573,16 +6652,28 @@
         {
          "auditors": 1,
          "verdict": "OVERSHOOT"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT"
+        },
+        {
+         "auditors": 1,
+         "verdict": "SUPPORTED"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT"
         }
        ],
        "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
-       "locator_count": 59,
+       "locator_count": 67,
        "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
        "pmid": "34268881",
        "reading_depth": "partial_fulltext_read",
        "receipt_events": 9,
        "receipt_id": "FTR-20260726-34268881-01",
-       "repair_unverified": 5,
+       "repair_unverified": 7,
        "unaudited_contradictions": 0
       },
       {
@@ -6947,12 +7038,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*corrects/reports a biomarker, not the mechanism* — inverted: here the biomarker",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:689; evidence table digest a1fb4a26b6585de9"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:698; evidence table digest ff1361cefb8e209b"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "3eb40486c4f60a8021b5e41308f66cc588ceccc807343967cc104a943befed9d",
+   "input_sha256": "4c83b516a23c642aeeb0fd8b3259d54fe89fe66c8c2938b9d9e37939b180f5f1",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -6976,8 +7067,8 @@
      "complete_fulltext_read",
      "partial_fulltext_read"
     ],
-    "digest": "a1fb4a26b6585de9",
-    "locators": 900,
+    "digest": "ff1361cefb8e209b",
+    "locators": 908,
     "origin_id": "N-06",
     "papers": 49,
     "query_id": "Q-N-06",
@@ -7586,12 +7677,13 @@
      },
      {
       "adjudication_files": [
+       "disease-models/wwox/research/page_adjudications/locator_audit_34268881_reread_20261025.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
       ],
       "audit_status": "AUDIT_FILE_PRESENT",
-      "audited_entries": 1,
+      "audited_entries": 2,
       "contradiction_verdicts": [
        {
         "auditors": 1,
@@ -7616,16 +7708,28 @@
        {
         "auditors": 1,
         "verdict": "OVERSHOOT"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT"
+       },
+       {
+        "auditors": 1,
+        "verdict": "SUPPORTED"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT"
        }
       ],
       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
-      "locator_count": 59,
+      "locator_count": 67,
       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
       "pmid": "34268881",
       "reading_depth": "partial_fulltext_read",
       "receipt_events": 9,
       "receipt_id": "FTR-20260726-34268881-01",
-      "repair_unverified": 5,
+      "repair_unverified": 7,
       "unaudited_contradictions": 0
      },
      {
@@ -7988,7 +8092,7 @@
     "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
     "external_hits": 1,
     "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
-    "would_move": "N-06 (disease-models/wwox/analysis/mechanism_intervention_map.md:689)"
+    "would_move": "N-06 (disease-models/wwox/analysis/mechanism_intervention_map.md:698)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -8070,7 +8174,7 @@
      "endpoint": "UNKNOWN",
      "epistemic_status": "IPOTESI",
      "id": "DA-Q-N-07",
-     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:720",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:729",
      "reading_depth": "complete_fulltext_read",
      "receipt": "FTR-20260909-29724996-01",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-07",
@@ -8183,12 +8287,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*toxicity incompatible* + *wrong endpoint*. The only approved drug that corrects a",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:720; evidence table digest 5bece276e7b1adf2"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:729; evidence table digest 5bece276e7b1adf2"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "a1eb0a79b153d693b44e35855a6bbe3c1f510d7303978457e862cd24bc4b1544",
+   "input_sha256": "26840b85f2c8c2a222a7865833ce45a8af6bb03018845af2257a94428dc6a111",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -8275,7 +8379,7 @@
     "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
     "external_hits": 0,
     "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
-    "would_move": "N-07 (disease-models/wwox/analysis/mechanism_intervention_map.md:720)"
+    "would_move": "N-07 (disease-models/wwox/analysis/mechanism_intervention_map.md:729)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -8391,7 +8495,7 @@
      "endpoint": "UNKNOWN",
      "epistemic_status": "IPOTESI",
      "id": "DA-Q-N-08",
-     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:731",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:740",
      "reading_depth": "complete_fulltext_read",
      "receipt": "FTR-20260913-15064722-01",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-08",
@@ -8473,8 +8577,8 @@
       "complete_fulltext_read",
       "partial_fulltext_read"
      ],
-     "digest": "33863a115b3e877d",
-     "locators": 868,
+     "digest": "0ace54b2e2078014",
+     "locators": 876,
      "origin_id": "N-08",
      "papers": 47,
      "query_id": "Q-N-08",
@@ -9012,12 +9116,13 @@
       },
       {
        "adjudication_files": [
+        "disease-models/wwox/research/page_adjudications/locator_audit_34268881_reread_20261025.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
        ],
        "audit_status": "AUDIT_FILE_PRESENT",
-       "audited_entries": 1,
+       "audited_entries": 2,
        "contradiction_verdicts": [
         {
          "auditors": 1,
@@ -9042,16 +9147,28 @@
         {
          "auditors": 1,
          "verdict": "OVERSHOOT"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT"
+        },
+        {
+         "auditors": 1,
+         "verdict": "SUPPORTED"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT"
         }
        ],
        "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
-       "locator_count": 59,
+       "locator_count": 67,
        "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
        "pmid": "34268881",
        "reading_depth": "partial_fulltext_read",
        "receipt_events": 9,
        "receipt_id": "FTR-20260726-34268881-01",
-       "repair_unverified": 5,
+       "repair_unverified": 7,
        "unaudited_contradictions": 0
       },
       {
@@ -9435,12 +9552,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*two-hop inference* + *a safety margin that has never been measured in this",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:731; evidence table digest 33863a115b3e877d"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:740; evidence table digest 0ace54b2e2078014"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "a24beb2417c729b81235b1b90c3b1ce3c59d5724d7bde3c3fe1f169eaa45a25b",
+   "input_sha256": "bafc44be6c64332b0de186e777de7c68a0dafbbc14f0254a8574fcfefd964f7c",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -9464,8 +9581,8 @@
      "complete_fulltext_read",
      "partial_fulltext_read"
     ],
-    "digest": "33863a115b3e877d",
-    "locators": 868,
+    "digest": "0ace54b2e2078014",
+    "locators": 876,
     "origin_id": "N-08",
     "papers": 47,
     "query_id": "Q-N-08",
@@ -10003,12 +10120,13 @@
      },
      {
       "adjudication_files": [
+       "disease-models/wwox/research/page_adjudications/locator_audit_34268881_reread_20261025.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
       ],
       "audit_status": "AUDIT_FILE_PRESENT",
-      "audited_entries": 1,
+      "audited_entries": 2,
       "contradiction_verdicts": [
        {
         "auditors": 1,
@@ -10033,16 +10151,28 @@
        {
         "auditors": 1,
         "verdict": "OVERSHOOT"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT"
+       },
+       {
+        "auditors": 1,
+        "verdict": "SUPPORTED"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT"
        }
       ],
       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
-      "locator_count": 59,
+      "locator_count": 67,
       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
       "pmid": "34268881",
       "reading_depth": "partial_fulltext_read",
       "receipt_events": 9,
       "receipt_id": "FTR-20260726-34268881-01",
-      "repair_unverified": 5,
+      "repair_unverified": 7,
       "unaudited_contradictions": 0
      },
      {
@@ -10424,7 +10554,7 @@
     "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
     "external_hits": 1,
     "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
-    "would_move": "N-08 (disease-models/wwox/analysis/mechanism_intervention_map.md:731)"
+    "would_move": "N-08 (disease-models/wwox/analysis/mechanism_intervention_map.md:740)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -10526,7 +10656,7 @@
      "endpoint": "UNKNOWN",
      "epistemic_status": "IPOTESI",
      "id": "DA-Q-N-09",
-     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:805",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:814",
      "reading_depth": "UNKNOWN",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-09",
      "target_id": "UNKNOWN"
@@ -10704,12 +10834,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*acts in the wrong direction.* Phospho-Tyr33 WOX1 is **pro-apoptotic**; the peptide",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:805; evidence table digest 1fb87711bcfb37eb"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:814; evidence table digest 1fb87711bcfb37eb"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "9d34113768511c12a396db511c46645cfba0ea9e0ebcac5d217b24338f1cd0f4",
+   "input_sha256": "9cf6855768da1aff4732c7efd33ee6855ad394e092095e0ed8966aaf597bd197",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -10842,7 +10972,7 @@
     "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
     "external_hits": 1,
     "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
-    "would_move": "N-09 (disease-models/wwox/analysis/mechanism_intervention_map.md:805)"
+    "would_move": "N-09 (disease-models/wwox/analysis/mechanism_intervention_map.md:814)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -10938,7 +11068,7 @@
      "endpoint": "UNKNOWN",
      "epistemic_status": "IPOTESI",
      "id": "DA-Q-N-10",
-     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:815",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:824",
      "reading_depth": "complete_fulltext_read",
      "receipt": "FTR-20260806-17803050-01",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-10",
@@ -11443,12 +11573,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*derived from a mechanism that does not do what the design needs.* SSOs **mask**",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:815; evidence table digest b5db15012a8bd181"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:824; evidence table digest b5db15012a8bd181"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "4f16597b54f3da6e0119f391ed2aab537e67c90afbc0e3047ef8cb415b7594a1",
+   "input_sha256": "9860bb410151f47be820f00e61b2a20952e95ad761a9344425b27e4fa1003f48",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -11913,7 +12043,7 @@
     "experiment_sketch": "legend-locator-audit over the declared triples",
     "external_hits": 0,
     "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
-    "would_move": "N-10 (disease-models/wwox/analysis/mechanism_intervention_map.md:815)"
+    "would_move": "N-10 (disease-models/wwox/analysis/mechanism_intervention_map.md:824)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -12035,7 +12165,7 @@
      "endpoint": "UNKNOWN",
      "epistemic_status": "IPOTESI",
      "id": "DA-Q-N-11",
-     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:888",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:897",
      "reading_depth": "complete_fulltext_read",
      "receipt": "FTR-20260913-15064722-01",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-11",
@@ -12132,8 +12262,8 @@
       "complete_fulltext_read",
       "partial_fulltext_read"
      ],
-     "digest": "45ff1d6545a78353",
-     "locators": 879,
+     "digest": "4db896e093c7a120",
+     "locators": 887,
      "origin_id": "N-11",
      "papers": 48,
      "query_id": "Q-N-11",
@@ -12646,12 +12776,13 @@
       },
       {
        "adjudication_files": [
+        "disease-models/wwox/research/page_adjudications/locator_audit_34268881_reread_20261025.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
        ],
        "audit_status": "AUDIT_FILE_PRESENT",
-       "audited_entries": 1,
+       "audited_entries": 2,
        "contradiction_verdicts": [
         {
          "auditors": 1,
@@ -12676,16 +12807,28 @@
         {
          "auditors": 1,
          "verdict": "OVERSHOOT"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT"
+        },
+        {
+         "auditors": 1,
+         "verdict": "SUPPORTED"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT"
         }
        ],
        "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
-       "locator_count": 59,
+       "locator_count": 67,
        "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
        "pmid": "34268881",
        "reading_depth": "partial_fulltext_read",
        "receipt_events": 9,
        "receipt_id": "FTR-20260726-34268881-01",
-       "repair_unverified": 5,
+       "repair_unverified": 7,
        "unaudited_contradictions": 0
       },
       {
@@ -13095,12 +13238,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*derived from a textbook default.* \"Misfolded protein → ERAD → chemical chaperone\"",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:888; evidence table digest 45ff1d6545a78353"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:897; evidence table digest 4db896e093c7a120"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "9c35267461bba6f587ec1f710abf481334ea50b6b7a80a708b4eab5ffe47f128",
+   "input_sha256": "34f2ac6578b2c779a83b60db1b24def8816e44dfc16e2f25700f65e7f753d492",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -13127,8 +13270,8 @@
      "complete_fulltext_read",
      "partial_fulltext_read"
     ],
-    "digest": "45ff1d6545a78353",
-    "locators": 879,
+    "digest": "4db896e093c7a120",
+    "locators": 887,
     "origin_id": "N-11",
     "papers": 48,
     "query_id": "Q-N-11",
@@ -13641,12 +13784,13 @@
      },
      {
       "adjudication_files": [
+       "disease-models/wwox/research/page_adjudications/locator_audit_34268881_reread_20261025.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
       ],
       "audit_status": "AUDIT_FILE_PRESENT",
-      "audited_entries": 1,
+      "audited_entries": 2,
       "contradiction_verdicts": [
        {
         "auditors": 1,
@@ -13671,16 +13815,28 @@
        {
         "auditors": 1,
         "verdict": "OVERSHOOT"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT"
+       },
+       {
+        "auditors": 1,
+        "verdict": "SUPPORTED"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT"
        }
       ],
       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
-      "locator_count": 59,
+      "locator_count": 67,
       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
       "pmid": "34268881",
       "reading_depth": "partial_fulltext_read",
       "receipt_events": 9,
       "receipt_id": "FTR-20260726-34268881-01",
-      "repair_unverified": 5,
+      "repair_unverified": 7,
       "unaudited_contradictions": 0
      },
      {
@@ -14088,7 +14244,7 @@
     "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
     "external_hits": 0,
     "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
-    "would_move": "N-11 (disease-models/wwox/analysis/mechanism_intervention_map.md:888)"
+    "would_move": "N-11 (disease-models/wwox/analysis/mechanism_intervention_map.md:897)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -14218,7 +14374,7 @@
      "endpoint": "UNKNOWN",
      "epistemic_status": "IPOTESI",
      "id": "DA-Q-N-12",
-     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:895",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:904",
      "reading_depth": "complete_fulltext_read",
      "receipt": "FTR-20260913-24369382-01",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-12",
@@ -14501,12 +14657,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*wrong direction, hidden inside a plausible one* — **as a prediction, not as a",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:895; evidence table digest ddcb82ec8f6e568e"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:904; evidence table digest ddcb82ec8f6e568e"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "ee9543c4d10e2b4dba9ee0a22cb1099ac3c63c81c563816827767371831fe800",
+   "input_sha256": "ff4b7cfe6788cdcff22cee943c85f225d158c050ec411287078d45770a012772",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -14709,7 +14865,7 @@
     "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
     "external_hits": 2,
     "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
-    "would_move": "N-12 (disease-models/wwox/analysis/mechanism_intervention_map.md:895)"
+    "would_move": "N-12 (disease-models/wwox/analysis/mechanism_intervention_map.md:904)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -14791,7 +14947,7 @@
      "endpoint": "UNKNOWN",
      "epistemic_status": "IPOTESI",
      "id": "DA-Q-N-13",
-     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:945",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:954",
      "reading_depth": "complete_fulltext_read",
      "receipt": "FTR-20260909-16223882-01",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-13",
@@ -14838,7 +14994,7 @@
       "complete_fulltext_read",
       "partial_fulltext_read"
      ],
-     "digest": "29be4203f252c0cd",
+     "digest": "a54ce260f85dd923",
      "locators": 604,
      "origin_id": "N-13",
      "papers": 29,
@@ -15346,7 +15502,7 @@
        "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42397075.json",
        "pmid": "42397075",
        "reading_depth": "complete_fulltext_read",
-       "receipt_events": 6,
+       "receipt_events": 7,
        "receipt_id": "FTR-20260810-42397075-04",
        "repair_unverified": 1,
        "unaudited_contradictions": 0
@@ -15418,12 +15574,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*the target is not causally downstream of WWOX in the cell being targeted* +",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:945; evidence table digest 29be4203f252c0cd"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:954; evidence table digest a54ce260f85dd923"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "41a0785e8783fca910882ff73a140d712b6fb281cc87f78ee8e210b1a86fc190",
+   "input_sha256": "6256d8c9e32f126b824a37438845ea0d90f8c79def61b7f51c85e15c1476e5da",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -15446,7 +15602,7 @@
      "complete_fulltext_read",
      "partial_fulltext_read"
     ],
-    "digest": "29be4203f252c0cd",
+    "digest": "a54ce260f85dd923",
     "locators": 604,
     "origin_id": "N-13",
     "papers": 29,
@@ -15954,7 +16110,7 @@
       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42397075.json",
       "pmid": "42397075",
       "reading_depth": "complete_fulltext_read",
-      "receipt_events": 6,
+      "receipt_events": 7,
       "receipt_id": "FTR-20260810-42397075-04",
       "repair_unverified": 1,
       "unaudited_contradictions": 0
@@ -16024,7 +16180,7 @@
     "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
     "external_hits": 0,
     "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
-    "would_move": "N-13 (disease-models/wwox/analysis/mechanism_intervention_map.md:945)"
+    "would_move": "N-13 (disease-models/wwox/analysis/mechanism_intervention_map.md:954)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -16140,7 +16296,7 @@
      "endpoint": "UNKNOWN",
      "epistemic_status": "IPOTESI",
      "id": "DA-Q-N-14",
-     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:959",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:968",
      "reading_depth": "complete_fulltext_read",
      "receipt": "FTR-20261019-17567906-01",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-14",
@@ -16387,12 +16543,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*the direction of the axis is context-dependent and was assumed.* Two independent",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:959; evidence table digest 798fe51eef8a3404"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:968; evidence table digest 798fe51eef8a3404"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "7bef5fb93390dde1d4b4d2ef11e1c7c24f54b4f6fa23028e3edf8f7f847a4cf9",
+   "input_sha256": "25aaa8e988273c122d427ffd20d972b203a27a029a152b60f0b03c58dbdbd027",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -16579,7 +16735,7 @@
     "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
     "external_hits": 1,
     "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
-    "would_move": "N-14 (disease-models/wwox/analysis/mechanism_intervention_map.md:959)"
+    "would_move": "N-14 (disease-models/wwox/analysis/mechanism_intervention_map.md:968)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -16661,7 +16817,7 @@
      "endpoint": "UNKNOWN",
      "epistemic_status": "IPOTESI",
      "id": "DA-Q-N-15",
-     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:970",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:979",
      "reading_depth": "complete_fulltext_read",
      "receipt": "FTR-20260913-15064722-01",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-15",
@@ -16709,8 +16865,8 @@
       "complete_fulltext_read",
       "partial_fulltext_read"
      ],
-     "digest": "287323d3c8ecb7da",
-     "locators": 994,
+     "digest": "a388354d5e64d99a",
+     "locators": 1002,
      "origin_id": "N-15",
      "papers": 54,
      "query_id": "Q-N-15",
@@ -17273,12 +17429,13 @@
       },
       {
        "adjudication_files": [
+        "disease-models/wwox/research/page_adjudications/locator_audit_34268881_reread_20261025.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
        ],
        "audit_status": "AUDIT_FILE_PRESENT",
-       "audited_entries": 1,
+       "audited_entries": 2,
        "contradiction_verdicts": [
         {
          "auditors": 1,
@@ -17303,16 +17460,28 @@
         {
          "auditors": 1,
          "verdict": "OVERSHOOT"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT"
+        },
+        {
+         "auditors": 1,
+         "verdict": "SUPPORTED"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT"
         }
        ],
        "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
-       "locator_count": 59,
+       "locator_count": 67,
        "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
        "pmid": "34268881",
        "reading_depth": "partial_fulltext_read",
        "receipt_events": 9,
        "receipt_id": "FTR-20260726-34268881-01",
-       "repair_unverified": 5,
+       "repair_unverified": 7,
        "unaudited_contradictions": 0
       },
       {
@@ -17833,12 +18002,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*corrects a biomarker (seizures) but not the mechanism (development)*. **Quoted",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:970; evidence table digest 287323d3c8ecb7da"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:979; evidence table digest a388354d5e64d99a"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "4cd1cb95e6f2c04062910e717a9961a4ef7b4e93923cacc652a2a0ee8fcf83f6",
+   "input_sha256": "80c7b116d8020ad3cd74cf134afd3abdb33bd97f8ae91b7ed20380280764d7d4",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -17862,8 +18031,8 @@
      "complete_fulltext_read",
      "partial_fulltext_read"
     ],
-    "digest": "287323d3c8ecb7da",
-    "locators": 994,
+    "digest": "a388354d5e64d99a",
+    "locators": 1002,
     "origin_id": "N-15",
     "papers": 54,
     "query_id": "Q-N-15",
@@ -18426,12 +18595,13 @@
      },
      {
       "adjudication_files": [
+       "disease-models/wwox/research/page_adjudications/locator_audit_34268881_reread_20261025.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
       ],
       "audit_status": "AUDIT_FILE_PRESENT",
-      "audited_entries": 1,
+      "audited_entries": 2,
       "contradiction_verdicts": [
        {
         "auditors": 1,
@@ -18456,16 +18626,28 @@
        {
         "auditors": 1,
         "verdict": "OVERSHOOT"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT"
+       },
+       {
+        "auditors": 1,
+        "verdict": "SUPPORTED"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT"
        }
       ],
       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
-      "locator_count": 59,
+      "locator_count": 67,
       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
       "pmid": "34268881",
       "reading_depth": "partial_fulltext_read",
       "receipt_events": 9,
       "receipt_id": "FTR-20260726-34268881-01",
-      "repair_unverified": 5,
+      "repair_unverified": 7,
       "unaudited_contradictions": 0
      },
      {
@@ -18984,7 +19166,7 @@
     "experiment_sketch": "legend-locator-audit over the declared triples",
     "external_hits": 0,
     "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
-    "would_move": "N-15 (disease-models/wwox/analysis/mechanism_intervention_map.md:970)"
+    "would_move": "N-15 (disease-models/wwox/analysis/mechanism_intervention_map.md:979)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -19110,7 +19292,7 @@
      "endpoint": "UNKNOWN",
      "epistemic_status": "IPOTESI",
      "id": "DA-Q-N-16",
-     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:1017",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:1026",
      "reading_depth": "complete_fulltext_read",
      "receipt": "FTR-20260810-34634460-02",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-16",
@@ -19259,12 +19441,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*a negative stated as an absence of effect, when what exists is an untested point estimate in the adverse direction.* In the only WWOX system in which a selective pannexin-1 blocker has ever been applied (`Wwox` S-KO neocortical slice, P13–P17), normalized burst frequency rose to **≈ 2.55 during treatment and ≈ 2.6 at washout against a baseline of 1.0**, carrying **no significance marker and no re",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:1017; evidence table digest 71afba2b6bd30522"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:1026; evidence table digest 71afba2b6bd30522"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "8fb570474bda666175427e79568aec22e3bc4ee783d37d109734f7652bc73c2c",
+   "input_sha256": "2c54e1b87af74529dc5bfb41499c397f9e25ef44d17443f0bfd660e31b76bf87",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -19337,7 +19519,7 @@
     "experiment_sketch": "replicate the one measurement this query stands on, changing the laboratory or the model but not the endpoint",
     "external_hits": 1,
     "measurement": "an independent measurement of the same endpoint in a second system, or the same system from a second laboratory: the query rests on one reading",
-    "would_move": "N-16 (disease-models/wwox/analysis/mechanism_intervention_map.md:1017)"
+    "would_move": "N-16 (disease-models/wwox/analysis/mechanism_intervention_map.md:1026)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -19459,7 +19641,7 @@
      "endpoint": "UNKNOWN",
      "epistemic_status": "IPOTESI",
      "id": "DA-Q-N-17",
-     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:1023",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:1032",
      "reading_depth": "complete_fulltext_read",
      "receipt": "FTR-20260913-15064722-01",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-17",
@@ -19556,8 +19738,8 @@
       "complete_fulltext_read",
       "partial_fulltext_read"
      ],
-     "digest": "ad60f1a064d48975",
-     "locators": 998,
+     "digest": "d03bd43132276ce2",
+     "locators": 1006,
      "origin_id": "N-17",
      "papers": 55,
      "query_id": "Q-N-17",
@@ -20142,12 +20324,13 @@
       },
       {
        "adjudication_files": [
+        "disease-models/wwox/research/page_adjudications/locator_audit_34268881_reread_20261025.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
        ],
        "audit_status": "AUDIT_FILE_PRESENT",
-       "audited_entries": 1,
+       "audited_entries": 2,
        "contradiction_verdicts": [
         {
          "auditors": 1,
@@ -20172,16 +20355,28 @@
         {
          "auditors": 1,
          "verdict": "OVERSHOOT"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT"
+        },
+        {
+         "auditors": 1,
+         "verdict": "SUPPORTED"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT"
         }
        ],
        "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
-       "locator_count": 59,
+       "locator_count": 67,
        "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
        "pmid": "34268881",
        "reading_depth": "partial_fulltext_read",
        "receipt_events": 9,
        "receipt_id": "FTR-20260726-34268881-01",
-       "repair_unverified": 5,
+       "repair_unverified": 7,
        "unaudited_contradictions": 0
       },
       {
@@ -20666,12 +20861,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*importing a disease's dominant modality because the pathway diagram looks like that disease, without checking which way the arrow points.* CHAIN C reads like a tauopathy — WWOX loss → GSK3β de-repressed → pTau S396/S404 up (`CLAIM 035`, `DL-MECH-019`) — and tauopathy's dominant modality is **tau-lowering**. In the only system where the question was asked, tau-lowering **removes the benefit of bot",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:1023; evidence table digest ad60f1a064d48975"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:1032; evidence table digest d03bd43132276ce2"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "c5c24d34e46f3a177eb01beef7b58106bfd54c05cb099a77dd0cca08aaa12897",
+   "input_sha256": "590f9f5e099c7b742197372f92c48257a57d802f3e80bfe5d7e3634c8a843b81",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -20698,8 +20893,8 @@
      "complete_fulltext_read",
      "partial_fulltext_read"
     ],
-    "digest": "ad60f1a064d48975",
-    "locators": 998,
+    "digest": "d03bd43132276ce2",
+    "locators": 1006,
     "origin_id": "N-17",
     "papers": 55,
     "query_id": "Q-N-17",
@@ -21284,12 +21479,13 @@
      },
      {
       "adjudication_files": [
+       "disease-models/wwox/research/page_adjudications/locator_audit_34268881_reread_20261025.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
       ],
       "audit_status": "AUDIT_FILE_PRESENT",
-      "audited_entries": 1,
+      "audited_entries": 2,
       "contradiction_verdicts": [
        {
         "auditors": 1,
@@ -21314,16 +21510,28 @@
        {
         "auditors": 1,
         "verdict": "OVERSHOOT"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT"
+       },
+       {
+        "auditors": 1,
+        "verdict": "SUPPORTED"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT"
        }
       ],
       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
-      "locator_count": 59,
+      "locator_count": 67,
       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
       "pmid": "34268881",
       "reading_depth": "partial_fulltext_read",
       "receipt_events": 9,
       "receipt_id": "FTR-20260726-34268881-01",
-      "repair_unverified": 5,
+      "repair_unverified": 7,
       "unaudited_contradictions": 0
      },
      {
@@ -21806,7 +22014,7 @@
     "experiment_sketch": "legend-locator-audit over the declared triples",
     "external_hits": 0,
     "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
-    "would_move": "N-17 (disease-models/wwox/analysis/mechanism_intervention_map.md:1023)"
+    "would_move": "N-17 (disease-models/wwox/analysis/mechanism_intervention_map.md:1032)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -21924,9 +22132,9 @@
      "endpoint": "UNKNOWN",
      "epistemic_status": "IPOTESI",
      "id": "DA-Q-R-01",
-     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:403",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:409",
      "reading_depth": "complete_fulltext_read",
-     "receipt": "FTR-20260810-42128308-02",
+     "receipt": "FTR-20260810-34747138-01",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md R-01",
      "target_id": "the WWOX locus product itself — neuronal WWOX protein"
     },
@@ -22002,42 +22210,35 @@
     },
     "legend_evidence": {
      "abstention": null,
-     "complete_reads": 1,
+     "complete_reads": 3,
      "depths": [
       "complete_fulltext_read"
      ],
-     "digest": "b58e9c57c35ba34e",
-     "locators": 25,
+     "digest": "41d24c2acb489d06",
+     "locators": 102,
      "origin_id": "R-01",
-     "papers": 1,
+     "papers": 3,
      "query_id": "Q-R-01",
      "rows": [
       {
        "adjudication_files": [],
        "audit_status": "UNAUDITED",
        "audited_entries": 0,
-       "bound_check": {
-        "binding": "UNVERIFIED",
-        "endpoint_words_found": [
-         "onset"
-        ],
-        "endpoint_words_missing": [
-         "delayed",
-         "post",
-         "hypomorphic",
-         "null",
-         "intermediate",
-         "10¹¹"
-        ],
-        "publication_types": [
-         "Journal Article",
-         "Review"
-        ],
-        "reason": "not a primary article (PubMed type: Review); endpoint words not in its title/abstract: delayed, post, hypomorphic, null, intermediate, 10¹¹",
-        "retrieved_at": "2026-10-23",
-        "source": "NCBI PubMed efetch",
-        "title": "WWOX in brain development and disease: Molecular mechanisms and therapeutic opportunities."
-       },
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 29,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34747138.json",
+       "pmid": "34747138",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 8,
+       "receipt_id": "FTR-20260810-34747138-01",
+       "repair_unverified": 0,
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
        "contradiction_verdicts": [],
        "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
        "locator_count": 25,
@@ -22047,6 +22248,57 @@
        "receipt_events": 2,
        "receipt_id": "FTR-20260810-42128308-02",
        "repair_unverified": 0,
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [
+        "disease-models/wwox/research/page_adjudications/locator_audit_PMID42422765_20261021.md",
+        "disease-models/wwox/research/page_adjudications/locator_audit_deep_cards_20261022.md",
+        "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
+        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
+        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
+        "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
+       ],
+       "audit_status": "AUDIT_FILE_PRESENT",
+       "audited_entries": 1,
+       "contradiction_verdicts": [
+        {
+         "auditors": 2,
+         "verdict": "OVERSHOOT/OVERSHOOT"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT"
+        },
+        {
+         "auditors": 1,
+         "verdict": "PARTIAL"
+        },
+        {
+         "auditors": 2,
+         "verdict": "UNDERSHOOT/OVERSHOOT"
+        },
+        {
+         "auditors": 2,
+         "verdict": "OVERSHOOT/OVERSHOOT"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT"
+        }
+       ],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 48,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json",
+       "pmid": "42422765",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 15,
+       "receipt_id": "FTR-20260814-42422765-06",
+       "repair_unverified": 6,
        "unaudited_contradictions": 0
       }
      ],
@@ -22065,12 +22317,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "AAV9, human Synapsin-I promoter, WWOX cDNA; ICV. ⚠️ **Corrected 2026-09-27 — the therapeutic configuration is WPRE-FREE.** The 2021 vector map (Appendix Fig S1A, read at 300 dpi) shows all three constructs WPRE-free, and the 2021 paper never mentions WPRE; the 2026 dose study removed WPRE deliberately (*“we removed WPRE as a proactive risk-mitigation step”*, receipted locator) and states the price",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:403; evidence table digest b58e9c57c35ba34e"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:409; evidence table digest 41d24c2acb489d06"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "a55241214751bf3a6536b5827459a4687862990312fc6736b5eaaf138148fc67",
+   "input_sha256": "3b44bc5209f82ea9578f484e72078434dad07bef1db56b71a8274d5b67ef6d3e",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -22088,42 +22340,35 @@
    },
    "legend_evidence": {
     "abstention": null,
-    "complete_reads": 1,
+    "complete_reads": 3,
     "depths": [
      "complete_fulltext_read"
     ],
-    "digest": "b58e9c57c35ba34e",
-    "locators": 25,
+    "digest": "41d24c2acb489d06",
+    "locators": 102,
     "origin_id": "R-01",
-    "papers": 1,
+    "papers": 3,
     "query_id": "Q-R-01",
     "rows": [
      {
       "adjudication_files": [],
       "audit_status": "UNAUDITED",
       "audited_entries": 0,
-      "bound_check": {
-       "binding": "UNVERIFIED",
-       "endpoint_words_found": [
-        "onset"
-       ],
-       "endpoint_words_missing": [
-        "delayed",
-        "post",
-        "hypomorphic",
-        "null",
-        "intermediate",
-        "10¹¹"
-       ],
-       "publication_types": [
-        "Journal Article",
-        "Review"
-       ],
-       "reason": "not a primary article (PubMed type: Review); endpoint words not in its title/abstract: delayed, post, hypomorphic, null, intermediate, 10¹¹",
-       "retrieved_at": "2026-10-23",
-       "source": "NCBI PubMed efetch",
-       "title": "WWOX in brain development and disease: Molecular mechanisms and therapeutic opportunities."
-      },
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 29,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34747138.json",
+      "pmid": "34747138",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 8,
+      "receipt_id": "FTR-20260810-34747138-01",
+      "repair_unverified": 0,
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
       "contradiction_verdicts": [],
       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
       "locator_count": 25,
@@ -22133,6 +22378,57 @@
       "receipt_events": 2,
       "receipt_id": "FTR-20260810-42128308-02",
       "repair_unverified": 0,
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [
+       "disease-models/wwox/research/page_adjudications/locator_audit_PMID42422765_20261021.md",
+       "disease-models/wwox/research/page_adjudications/locator_audit_deep_cards_20261022.md",
+       "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
+       "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
+       "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
+       "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
+      ],
+      "audit_status": "AUDIT_FILE_PRESENT",
+      "audited_entries": 1,
+      "contradiction_verdicts": [
+       {
+        "auditors": 2,
+        "verdict": "OVERSHOOT/OVERSHOOT"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT"
+       },
+       {
+        "auditors": 1,
+        "verdict": "PARTIAL"
+       },
+       {
+        "auditors": 2,
+        "verdict": "UNDERSHOOT/OVERSHOOT"
+       },
+       {
+        "auditors": 2,
+        "verdict": "OVERSHOOT/OVERSHOOT"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT"
+       }
+      ],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 48,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json",
+      "pmid": "42422765",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 15,
+      "receipt_id": "FTR-20260814-42422765-06",
+      "repair_unverified": 6,
       "unaudited_contradictions": 0
      }
     ],
@@ -22145,11 +22441,11 @@
     "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
    ],
    "measure_next": {
-    "dependence": "ONE_PAPER (42128308, depth complete_fulltext_read, 25 locators, audit UNAUDITED)",
-    "experiment_sketch": "replicate the one measurement this query stands on, changing the laboratory or the model but not the endpoint",
+    "dependence": "3_PAPERS_3_COMPLETE",
+    "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
     "external_hits": 1,
-    "measurement": "an independent measurement of the same endpoint in a second system, or the same system from a second laboratory: the query rests on one reading",
-    "would_move": "R-01 (disease-models/wwox/analysis/mechanism_intervention_map.md:403)"
+    "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
+    "would_move": "R-01 (disease-models/wwox/analysis/mechanism_intervention_map.md:409)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -22276,7 +22572,7 @@
      "endpoint": "UNKNOWN",
      "epistemic_status": "IPOTESI",
      "id": "DA-Q-R-02",
-     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:427",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:434",
      "reading_depth": "complete_fulltext_read",
      "receipt": "FTR-20261003-30361190-01",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md R-02",
@@ -22589,12 +22885,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "memantine (approved); MK-801 / APV as tools",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:427; evidence table digest 9b1c16044e917bca"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:434; evidence table digest 9b1c16044e917bca"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "5315ae59ea0e7c19862079e6a1cac9607d9101e9d10123ba973d591918902404",
+   "input_sha256": "818a90d940d34cb4beb422c7ebc3df20aae671a2a5f21a96d7d617ca1016021c",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -22828,7 +23124,7 @@
     "experiment_sketch": "legend-locator-audit over the declared triples",
     "external_hits": 2,
     "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
-    "would_move": "R-02 (disease-models/wwox/analysis/mechanism_intervention_map.md:427)"
+    "would_move": "R-02 (disease-models/wwox/analysis/mechanism_intervention_map.md:434)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -22958,9 +23254,9 @@
      "endpoint": "UNKNOWN",
      "epistemic_status": "IPOTESI",
      "id": "DA-Q-R-03",
-     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:452",
-     "reading_depth": "complete_fulltext_read",
-     "receipt": "FTR-20261019-38203337-01",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:459",
+     "reading_depth": "partial_fulltext_read",
+     "receipt": "FTR-20260726-34268881-01",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md R-03",
      "target_id": "Wnt/β-catenin"
     },
@@ -23059,34 +23355,76 @@
      "abstention": null,
      "complete_reads": 1,
      "depths": [
-      "complete_fulltext_read"
+      "complete_fulltext_read",
+      "partial_fulltext_read"
      ],
-     "digest": "59f320a567c364b8",
-     "locators": 30,
+     "digest": "131425087cd5c59a",
+     "locators": 97,
      "origin_id": "R-03",
-     "papers": 1,
+     "papers": 2,
      "query_id": "Q-R-03",
      "rows": [
+      {
+       "adjudication_files": [
+        "disease-models/wwox/research/page_adjudications/locator_audit_34268881_reread_20261025.md",
+        "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
+        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
+        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
+       ],
+       "audit_status": "AUDIT_FILE_PRESENT",
+       "audited_entries": 2,
+       "contradiction_verdicts": [
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT"
+        },
+        {
+         "auditors": 1,
+         "verdict": "SUPPORTED"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT"
+        },
+        {
+         "auditors": 1,
+         "verdict": "SUPPORTED"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT"
+        }
+       ],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 67,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
+       "pmid": "34268881",
+       "reading_depth": "partial_fulltext_read",
+       "receipt_events": 9,
+       "receipt_id": "FTR-20260726-34268881-01",
+       "repair_unverified": 7,
+       "unaudited_contradictions": 0
+      },
       {
        "adjudication_files": [],
        "audit_status": "UNAUDITED",
        "audited_entries": 0,
-       "bound_check": {
-        "binding": "UNVERIFIED",
-        "endpoint_words_found": [
-         "nuclear"
-        ],
-        "endpoint_words_missing": [
-         "catenin"
-        ],
-        "publication_types": [
-         "Journal Article"
-        ],
-        "reason": "endpoint words not in its title/abstract: catenin",
-        "retrieved_at": "2026-10-23",
-        "source": "NCBI PubMed efetch",
-        "title": "Mechanistic Investigation of WWOX Function in NF-kB-Induced Skin Inflammation in Psoriasis."
-       },
        "contradiction_verdicts": [],
        "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
        "locator_count": 30,
@@ -23114,12 +23452,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "tankyrase inhibitor (e.g. XAV939 as tool); no paediatric-profiled candidate identified",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:452; evidence table digest 59f320a567c364b8"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:459; evidence table digest 131425087cd5c59a"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "0b102ac07a88f4d1797517ad2733428737392c6946831303edf712699af7b9af",
+   "input_sha256": "148b1f842c9d393688cbd4e6ccb63e19056ffc6c62946819793e4db6592b03f7",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -23142,34 +23480,76 @@
     "abstention": null,
     "complete_reads": 1,
     "depths": [
-     "complete_fulltext_read"
+     "complete_fulltext_read",
+     "partial_fulltext_read"
     ],
-    "digest": "59f320a567c364b8",
-    "locators": 30,
+    "digest": "131425087cd5c59a",
+    "locators": 97,
     "origin_id": "R-03",
-    "papers": 1,
+    "papers": 2,
     "query_id": "Q-R-03",
     "rows": [
+     {
+      "adjudication_files": [
+       "disease-models/wwox/research/page_adjudications/locator_audit_34268881_reread_20261025.md",
+       "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
+       "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
+       "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
+      ],
+      "audit_status": "AUDIT_FILE_PRESENT",
+      "audited_entries": 2,
+      "contradiction_verdicts": [
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT"
+       },
+       {
+        "auditors": 1,
+        "verdict": "SUPPORTED"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT"
+       },
+       {
+        "auditors": 1,
+        "verdict": "SUPPORTED"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT"
+       }
+      ],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 67,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
+      "pmid": "34268881",
+      "reading_depth": "partial_fulltext_read",
+      "receipt_events": 9,
+      "receipt_id": "FTR-20260726-34268881-01",
+      "repair_unverified": 7,
+      "unaudited_contradictions": 0
+     },
      {
       "adjudication_files": [],
       "audit_status": "UNAUDITED",
       "audited_entries": 0,
-      "bound_check": {
-       "binding": "UNVERIFIED",
-       "endpoint_words_found": [
-        "nuclear"
-       ],
-       "endpoint_words_missing": [
-        "catenin"
-       ],
-       "publication_types": [
-        "Journal Article"
-       ],
-       "reason": "endpoint words not in its title/abstract: catenin",
-       "retrieved_at": "2026-10-23",
-       "source": "NCBI PubMed efetch",
-       "title": "Mechanistic Investigation of WWOX Function in NF-kB-Induced Skin Inflammation in Psoriasis."
-      },
       "contradiction_verdicts": [],
       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
       "locator_count": 30,
@@ -23191,11 +23571,11 @@
     "NO_MATCH_FOUND is information not available for those queries and that coverage: it is not proof the label is absent, not DRUG_HAS_NO_LABEL, not biological counterevidence and not a reason to drop the candidate."
    ],
    "measure_next": {
-    "dependence": "ONE_PAPER (38203337, depth complete_fulltext_read, 30 locators, audit UNAUDITED)",
-    "experiment_sketch": "replicate the one measurement this query stands on, changing the laboratory or the model but not the endpoint",
+    "dependence": "2_PAPERS_1_COMPLETE",
+    "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
     "external_hits": 2,
-    "measurement": "an independent measurement of the same endpoint in a second system, or the same system from a second laboratory: the query rests on one reading",
-    "would_move": "R-03 (disease-models/wwox/analysis/mechanism_intervention_map.md:452)"
+    "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
+    "would_move": "R-03 (disease-models/wwox/analysis/mechanism_intervention_map.md:459)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -23310,7 +23690,7 @@
      "endpoint": "UNKNOWN",
      "epistemic_status": "IPOTESI",
      "id": "DA-Q-R-04",
-     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:476",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:484",
      "reading_depth": "complete_fulltext_read",
      "receipt": "FTR-20260726-22193544-01",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md R-04",
@@ -23484,12 +23864,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "lithium carbonate",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:476; evidence table digest 4d43143da023a204"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:484; evidence table digest 4d43143da023a204"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "060e693a4c1883e3bc00e6f72f43b4a10c7c0f40e9a6ff6f558906a0cebcbe83",
+   "input_sha256": "81336d1ec12a1d74dafdbb2ca6f85ea1e8af841a3da9564409b59e67446a0e28",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -23596,7 +23976,7 @@
     "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
     "external_hits": 3,
     "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
-    "would_move": "R-04 (disease-models/wwox/analysis/mechanism_intervention_map.md:476)"
+    "would_move": "R-04 (disease-models/wwox/analysis/mechanism_intervention_map.md:484)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -23706,7 +24086,7 @@
      "endpoint": "UNKNOWN",
      "epistemic_status": "IPOTESI",
      "id": "DA-Q-R-05",
-     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:502",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:510",
      "reading_depth": "complete_fulltext_read",
      "receipt": "FTR-20260913-15064722-01",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md R-05",
@@ -23782,8 +24162,8 @@
       "complete_fulltext_read",
       "partial_fulltext_read"
      ],
-     "digest": "ceac801a1201bd6b",
-     "locators": 933,
+     "digest": "eb4700d16a4f2768",
+     "locators": 941,
      "origin_id": "R-05",
      "papers": 49,
      "query_id": "Q-R-05",
@@ -24296,12 +24676,13 @@
       },
       {
        "adjudication_files": [
+        "disease-models/wwox/research/page_adjudications/locator_audit_34268881_reread_20261025.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
        ],
        "audit_status": "AUDIT_FILE_PRESENT",
-       "audited_entries": 1,
+       "audited_entries": 2,
        "contradiction_verdicts": [
         {
          "auditors": 1,
@@ -24326,16 +24707,28 @@
         {
          "auditors": 1,
          "verdict": "OVERSHOOT"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT"
+        },
+        {
+         "auditors": 1,
+         "verdict": "SUPPORTED"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT"
         }
        ],
        "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
-       "locator_count": 59,
+       "locator_count": 67,
        "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
        "pmid": "34268881",
        "reading_depth": "partial_fulltext_read",
        "receipt_events": 9,
        "receipt_id": "FTR-20260726-34268881-01",
-       "repair_unverified": 5,
+       "repair_unverified": 7,
        "unaudited_contradictions": 0
       },
       {
@@ -24779,12 +25172,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "ketogenic diet",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:502; evidence table digest ceac801a1201bd6b"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:510; evidence table digest eb4700d16a4f2768"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "37ef4bdff988b2d51e41fe326ef52b8b8c159343538af2edfa5f645034a41183",
+   "input_sha256": "a5942775dc36f3518661c2d8ad95dbedf80c278612516caf29ff491d37a288de",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -24808,8 +25201,8 @@
      "complete_fulltext_read",
      "partial_fulltext_read"
     ],
-    "digest": "ceac801a1201bd6b",
-    "locators": 933,
+    "digest": "eb4700d16a4f2768",
+    "locators": 941,
     "origin_id": "R-05",
     "papers": 49,
     "query_id": "Q-R-05",
@@ -25322,12 +25715,13 @@
      },
      {
       "adjudication_files": [
+       "disease-models/wwox/research/page_adjudications/locator_audit_34268881_reread_20261025.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
       ],
       "audit_status": "AUDIT_FILE_PRESENT",
-      "audited_entries": 1,
+      "audited_entries": 2,
       "contradiction_verdicts": [
        {
         "auditors": 1,
@@ -25352,16 +25746,28 @@
        {
         "auditors": 1,
         "verdict": "OVERSHOOT"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT"
+       },
+       {
+        "auditors": 1,
+        "verdict": "SUPPORTED"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT"
        }
       ],
       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
-      "locator_count": 59,
+      "locator_count": 67,
       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
       "pmid": "34268881",
       "reading_depth": "partial_fulltext_read",
       "receipt_events": 9,
       "receipt_id": "FTR-20260726-34268881-01",
-      "repair_unverified": 5,
+      "repair_unverified": 7,
       "unaudited_contradictions": 0
      },
      {
@@ -25803,7 +26209,7 @@
     "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
     "external_hits": 0,
     "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
-    "would_move": "R-05 (disease-models/wwox/analysis/mechanism_intervention_map.md:502)"
+    "would_move": "R-05 (disease-models/wwox/analysis/mechanism_intervention_map.md:510)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -25905,7 +26311,7 @@
      "endpoint": "UNKNOWN",
      "epistemic_status": "IPOTESI",
      "id": "DA-Q-R-06",
-     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:528",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:536",
      "reading_depth": "complete_fulltext_read",
      "receipt": "FTR-20260913-14526170-01",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md R-06",
@@ -25973,8 +26379,8 @@
       "complete_fulltext_read",
       "partial_fulltext_read"
      ],
-     "digest": "24f66c72a4f42dce",
-     "locators": 760,
+     "digest": "38f87181ae616724",
+     "locators": 768,
      "origin_id": "R-06",
      "papers": 37,
      "query_id": "Q-R-06",
@@ -26308,12 +26714,13 @@
       },
       {
        "adjudication_files": [
+        "disease-models/wwox/research/page_adjudications/locator_audit_34268881_reread_20261025.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
        ],
        "audit_status": "AUDIT_FILE_PRESENT",
-       "audited_entries": 1,
+       "audited_entries": 2,
        "contradiction_verdicts": [
         {
          "auditors": 1,
@@ -26338,16 +26745,28 @@
         {
          "auditors": 1,
          "verdict": "OVERSHOOT"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT"
+        },
+        {
+         "auditors": 1,
+         "verdict": "SUPPORTED"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT"
         }
        ],
        "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
-       "locator_count": 59,
+       "locator_count": 67,
        "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
        "pmid": "34268881",
        "reading_depth": "partial_fulltext_read",
        "receipt_events": 9,
        "receipt_id": "FTR-20260726-34268881-01",
-       "repair_unverified": 5,
+       "repair_unverified": 7,
        "unaudited_contradictions": 0
       },
       {
@@ -26823,12 +27242,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "class: IL-1β/NLRP3, MAPK/NF-κB or microglia-targeting agent",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:528; evidence table digest 24f66c72a4f42dce"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:536; evidence table digest 38f87181ae616724"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "06c23f4ee1b34eb54f75ef6d7f35fe3446cb1e03aceff33ff46f0fd794b9c47a",
+   "input_sha256": "010684dfd008bb9382c5d2c29c31d5ab8c7957ac6f7b34a2e479578949e6d0ed",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -26852,8 +27271,8 @@
      "complete_fulltext_read",
      "partial_fulltext_read"
     ],
-    "digest": "24f66c72a4f42dce",
-    "locators": 760,
+    "digest": "38f87181ae616724",
+    "locators": 768,
     "origin_id": "R-06",
     "papers": 37,
     "query_id": "Q-R-06",
@@ -27187,12 +27606,13 @@
      },
      {
       "adjudication_files": [
+       "disease-models/wwox/research/page_adjudications/locator_audit_34268881_reread_20261025.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
       ],
       "audit_status": "AUDIT_FILE_PRESENT",
-      "audited_entries": 1,
+      "audited_entries": 2,
       "contradiction_verdicts": [
        {
         "auditors": 1,
@@ -27217,16 +27637,28 @@
        {
         "auditors": 1,
         "verdict": "OVERSHOOT"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT"
+       },
+       {
+        "auditors": 1,
+        "verdict": "SUPPORTED"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT"
        }
       ],
       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
-      "locator_count": 59,
+      "locator_count": 67,
       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
       "pmid": "34268881",
       "reading_depth": "partial_fulltext_read",
       "receipt_events": 9,
       "receipt_id": "FTR-20260726-34268881-01",
-      "repair_unverified": 5,
+      "repair_unverified": 7,
       "unaudited_contradictions": 0
      },
      {
@@ -27700,7 +28132,7 @@
     "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
     "external_hits": 1,
     "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
-    "would_move": "R-06 (disease-models/wwox/analysis/mechanism_intervention_map.md:528)"
+    "would_move": "R-06 (disease-models/wwox/analysis/mechanism_intervention_map.md:536)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -27810,8 +28242,9 @@
      "endpoint": "UNKNOWN",
      "epistemic_status": "IPOTESI",
      "id": "DA-Q-R-07",
-     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:553",
-     "reading_depth": "UNKNOWN",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:561",
+     "reading_depth": "complete_fulltext_read",
+     "receipt": "FTR-20261003-30361190-01",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md R-07",
      "target_id": "NKCC1"
     },
@@ -27878,16 +28311,282 @@
      "status": "NOT_ATTEMPTED"
     },
     "legend_evidence": {
-     "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
-     "complete_reads": 0,
-     "depths": [],
-     "digest": "ad39ca826922653c",
-     "locators": 0,
+     "abstention": null,
+     "complete_reads": 4,
+     "depths": [
+      "NO_RECEIPT",
+      "complete_fulltext_read",
+      "partial_fulltext_read"
+     ],
+     "digest": "42147dc0651da003",
+     "locators": 182,
      "origin_id": "R-07",
-     "papers": 0,
+     "papers": 11,
      "query_id": "Q-R-07",
-     "rows": [],
-     "unaudited_contradictions": 0
+     "rows": [
+      {
+       "adjudication_files": [
+        "disease-models/wwox/research/page_adjudications/locator_audit_map_repairs_20261024.md",
+        "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
+        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
+        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
+        "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
+       ],
+       "audit_status": "AUDIT_FILE_PRESENT",
+       "audited_entries": 5,
+       "contradiction_verdicts": [
+        {
+         "auditors": 1,
+         "verdict": "SUPPORTED"
+        },
+        {
+         "auditors": 1,
+         "verdict": "SUPPORTED"
+        },
+        {
+         "auditors": 0,
+         "verdict": "UNSTATED"
+        },
+        {
+         "auditors": 2,
+         "verdict": "SUPPORTED/SUPPORTED"
+        },
+        {
+         "auditors": 2,
+         "verdict": "SUPPORTED/CORRECTED"
+        },
+        {
+         "auditors": 2,
+         "verdict": "SUPPORTED/SUPPORTED"
+        },
+        {
+         "auditors": 0,
+         "verdict": "UNSTATED"
+        }
+       ],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 21,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID30361190.json",
+       "pmid": "30361190",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 3,
+       "receipt_id": "FTR-20261003-30361190-01",
+       "repair_unverified": 0,
+       "unaudited_contradictions": 2
+      },
+      {
+       "adjudication_files": [
+        "disease-models/wwox/research/page_adjudications/locator_audit_34268881_reread_20261025.md",
+        "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
+        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
+        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
+       ],
+       "audit_status": "AUDIT_FILE_PRESENT",
+       "audited_entries": 2,
+       "contradiction_verdicts": [
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT"
+        },
+        {
+         "auditors": 1,
+         "verdict": "SUPPORTED"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT"
+        },
+        {
+         "auditors": 1,
+         "verdict": "SUPPORTED"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT"
+        }
+       ],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 67,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
+       "pmid": "34268881",
+       "reading_depth": "partial_fulltext_read",
+       "receipt_events": 9,
+       "receipt_id": "FTR-20260726-34268881-01",
+       "repair_unverified": 7,
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 12,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35573960.json",
+       "pmid": "35573960",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 2,
+       "receipt_id": "FTR-20261003-35573960-01",
+       "repair_unverified": 0,
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [
+        "disease-models/wwox/research/page_adjudications/locator_audit_PMID36537114_20261021.md"
+       ],
+       "audit_status": "AUDIT_FILE_PRESENT",
+       "audited_entries": 1,
+       "contradiction_verdicts": [
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT"
+        },
+        {
+         "auditors": 1,
+         "verdict": "UNDERSHOOT"
+        },
+        {
+         "auditors": 1,
+         "verdict": "UNVERIFIABLE"
+        },
+        {
+         "auditors": 1,
+         "verdict": "UNDERSHOOT"
+        }
+       ],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 12,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36537114.json",
+       "pmid": "36537114",
+       "reading_depth": "partial_fulltext_read",
+       "receipt_events": 3,
+       "receipt_id": "FTR-20260726-36537114-01",
+       "repair_unverified": 3,
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 11,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID37583270.json",
+       "pmid": "37583270",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 2,
+       "receipt_id": "FTR-20261003-37583270-01",
+       "repair_unverified": 0,
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 11,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID39101447.json",
+       "pmid": "39101447",
+       "reading_depth": "complete_fulltext_read",
+       "receipt_events": 3,
+       "receipt_id": "FTR-20261003-39101447-01",
+       "repair_unverified": 0,
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 10,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID39570186.json",
+       "pmid": "39570186",
+       "reading_depth": "partial_fulltext_read",
+       "receipt_events": 1,
+       "receipt_id": "FTR-20261019-39570186-01",
+       "repair_unverified": 0,
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 10,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID39641935.json",
+       "pmid": "39641935",
+       "reading_depth": "partial_fulltext_read",
+       "receipt_events": 1,
+       "receipt_id": "FTR-20261019-39641935-01",
+       "repair_unverified": 0,
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 20,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID40875931.json",
+       "pmid": "40875931",
+       "reading_depth": "partial_fulltext_read",
+       "receipt_events": 2,
+       "receipt_id": "FTR-20260726-40875931-01",
+       "repair_unverified": 0,
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "NO_MANIFEST",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 0,
+       "manifest": "",
+       "pmid": "41442931",
+       "reading_depth": "NO_RECEIPT",
+       "receipt_events": 0,
+       "receipt_id": "",
+       "repair_unverified": 0,
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+       "locator_count": 8,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42092735.json",
+       "pmid": "42092735",
+       "reading_depth": "partial_fulltext_read",
+       "receipt_events": 2,
+       "receipt_id": "FTR-20260921-42092735-01",
+       "repair_unverified": 0,
+       "unaudited_contradictions": 0
+      }
+     ],
+     "unaudited_contradictions": 2
     },
     "p4_fields": {
      "cellular_context": {
@@ -27902,12 +28601,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "bumetanide",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:553; evidence table digest ad39ca826922653c"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:561; evidence table digest 42147dc0651da003"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "bc22ceda48003aa1be0d105629773c42261ef5a394d7246b532d625e54ebac1a",
+   "input_sha256": "624f385bcf671b256a0df1b59ab793b9fff18e3f77b1be0e84a4a410fb326cc3",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -27924,16 +28623,282 @@
     "status": "NOT_ATTEMPTED"
    },
    "legend_evidence": {
-    "abstention": "LINKAGE_GAP: the record names no PMID, PAPER, CLAIM or DL- id; missing datum: one identifier in the record that resolves to a PMID (the SOURCE_IDS line)",
-    "complete_reads": 0,
-    "depths": [],
-    "digest": "ad39ca826922653c",
-    "locators": 0,
+    "abstention": null,
+    "complete_reads": 4,
+    "depths": [
+     "NO_RECEIPT",
+     "complete_fulltext_read",
+     "partial_fulltext_read"
+    ],
+    "digest": "42147dc0651da003",
+    "locators": 182,
     "origin_id": "R-07",
-    "papers": 0,
+    "papers": 11,
     "query_id": "Q-R-07",
-    "rows": [],
-    "unaudited_contradictions": 0
+    "rows": [
+     {
+      "adjudication_files": [
+       "disease-models/wwox/research/page_adjudications/locator_audit_map_repairs_20261024.md",
+       "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
+       "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
+       "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
+       "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
+      ],
+      "audit_status": "AUDIT_FILE_PRESENT",
+      "audited_entries": 5,
+      "contradiction_verdicts": [
+       {
+        "auditors": 1,
+        "verdict": "SUPPORTED"
+       },
+       {
+        "auditors": 1,
+        "verdict": "SUPPORTED"
+       },
+       {
+        "auditors": 0,
+        "verdict": "UNSTATED"
+       },
+       {
+        "auditors": 2,
+        "verdict": "SUPPORTED/SUPPORTED"
+       },
+       {
+        "auditors": 2,
+        "verdict": "SUPPORTED/CORRECTED"
+       },
+       {
+        "auditors": 2,
+        "verdict": "SUPPORTED/SUPPORTED"
+       },
+       {
+        "auditors": 0,
+        "verdict": "UNSTATED"
+       }
+      ],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 21,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID30361190.json",
+      "pmid": "30361190",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 3,
+      "receipt_id": "FTR-20261003-30361190-01",
+      "repair_unverified": 0,
+      "unaudited_contradictions": 2
+     },
+     {
+      "adjudication_files": [
+       "disease-models/wwox/research/page_adjudications/locator_audit_34268881_reread_20261025.md",
+       "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
+       "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
+       "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
+      ],
+      "audit_status": "AUDIT_FILE_PRESENT",
+      "audited_entries": 2,
+      "contradiction_verdicts": [
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT"
+       },
+       {
+        "auditors": 1,
+        "verdict": "SUPPORTED"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT"
+       },
+       {
+        "auditors": 1,
+        "verdict": "SUPPORTED"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT"
+       }
+      ],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 67,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
+      "pmid": "34268881",
+      "reading_depth": "partial_fulltext_read",
+      "receipt_events": 9,
+      "receipt_id": "FTR-20260726-34268881-01",
+      "repair_unverified": 7,
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 12,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35573960.json",
+      "pmid": "35573960",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 2,
+      "receipt_id": "FTR-20261003-35573960-01",
+      "repair_unverified": 0,
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [
+       "disease-models/wwox/research/page_adjudications/locator_audit_PMID36537114_20261021.md"
+      ],
+      "audit_status": "AUDIT_FILE_PRESENT",
+      "audited_entries": 1,
+      "contradiction_verdicts": [
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT"
+       },
+       {
+        "auditors": 1,
+        "verdict": "UNDERSHOOT"
+       },
+       {
+        "auditors": 1,
+        "verdict": "UNVERIFIABLE"
+       },
+       {
+        "auditors": 1,
+        "verdict": "UNDERSHOOT"
+       }
+      ],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 12,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36537114.json",
+      "pmid": "36537114",
+      "reading_depth": "partial_fulltext_read",
+      "receipt_events": 3,
+      "receipt_id": "FTR-20260726-36537114-01",
+      "repair_unverified": 3,
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 11,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID37583270.json",
+      "pmid": "37583270",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 2,
+      "receipt_id": "FTR-20261003-37583270-01",
+      "repair_unverified": 0,
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 11,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID39101447.json",
+      "pmid": "39101447",
+      "reading_depth": "complete_fulltext_read",
+      "receipt_events": 3,
+      "receipt_id": "FTR-20261003-39101447-01",
+      "repair_unverified": 0,
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 10,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID39570186.json",
+      "pmid": "39570186",
+      "reading_depth": "partial_fulltext_read",
+      "receipt_events": 1,
+      "receipt_id": "FTR-20261019-39570186-01",
+      "repair_unverified": 0,
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 10,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID39641935.json",
+      "pmid": "39641935",
+      "reading_depth": "partial_fulltext_read",
+      "receipt_events": 1,
+      "receipt_id": "FTR-20261019-39641935-01",
+      "repair_unverified": 0,
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 20,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID40875931.json",
+      "pmid": "40875931",
+      "reading_depth": "partial_fulltext_read",
+      "receipt_events": 2,
+      "receipt_id": "FTR-20260726-40875931-01",
+      "repair_unverified": 0,
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "NO_MANIFEST",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 0,
+      "manifest": "",
+      "pmid": "41442931",
+      "reading_depth": "NO_RECEIPT",
+      "receipt_events": 0,
+      "receipt_id": "",
+      "repair_unverified": 0,
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+      "locator_count": 8,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42092735.json",
+      "pmid": "42092735",
+      "reading_depth": "partial_fulltext_read",
+      "receipt_events": 2,
+      "receipt_id": "FTR-20260921-42092735-01",
+      "repair_unverified": 0,
+      "unaudited_contradictions": 0
+     }
+    ],
+    "unaudited_contradictions": 2
    },
    "limits": [
     "Technical comparison is not efficacy, safety or experimental validation.",
@@ -27942,11 +28907,11 @@
     "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
    ],
    "measure_next": {
-    "dependence": "LINKAGE_GAP",
-    "experiment_sketch": "route the query to a Scientist batch as a reading row, not to a laboratory",
+    "dependence": "2_UNAUDITED_CONTRADICTIONS",
+    "experiment_sketch": "legend-locator-audit over the declared triples",
     "external_hits": 0,
-    "measurement": "the link from this record to a paper: one identifier in the record that resolves to a PMID (the SOURCE_IDS line); until then the external hits stand alone and are NOT WWOX EVIDENCE",
-    "would_move": "R-07 (disease-models/wwox/analysis/mechanism_intervention_map.md:553)"
+    "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
+    "would_move": "R-07 (disease-models/wwox/analysis/mechanism_intervention_map.md:561)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -28028,7 +28993,7 @@
      "endpoint": "UNKNOWN",
      "epistemic_status": "IPOTESI",
      "id": "DA-Q-R-08",
-     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:578",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:587",
      "reading_depth": "complete_fulltext_read",
      "receipt": "FTR-20260913-15064722-01",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md R-08",
@@ -28076,8 +29041,8 @@
       "complete_fulltext_read",
       "partial_fulltext_read"
      ],
-     "digest": "a3dc1766c8972a01",
-     "locators": 948,
+     "digest": "b762720f29caab97",
+     "locators": 956,
      "origin_id": "R-08",
      "papers": 51,
      "query_id": "Q-R-08",
@@ -28670,12 +29635,13 @@
       },
       {
        "adjudication_files": [
+        "disease-models/wwox/research/page_adjudications/locator_audit_34268881_reread_20261025.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
        ],
        "audit_status": "AUDIT_FILE_PRESENT",
-       "audited_entries": 1,
+       "audited_entries": 2,
        "contradiction_verdicts": [
         {
          "auditors": 1,
@@ -28700,16 +29666,28 @@
         {
          "auditors": 1,
          "verdict": "OVERSHOOT"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT"
+        },
+        {
+         "auditors": 1,
+         "verdict": "SUPPORTED"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT"
         }
        ],
        "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
-       "locator_count": 59,
+       "locator_count": 67,
        "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
        "pmid": "34268881",
        "reading_depth": "partial_fulltext_read",
        "receipt_events": 9,
        "receipt_id": "FTR-20260726-34268881-01",
-       "repair_unverified": 5,
+       "repair_unverified": 7,
        "unaudited_contradictions": 0
       },
       {
@@ -29119,12 +30097,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "cytosine base editor (C→T on the antisense strand) or prime editor",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:578; evidence table digest a3dc1766c8972a01"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:587; evidence table digest b762720f29caab97"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "46a28595fc58bae72165af87c24fe8df9e1ff07cbfe3081bf5313be6a1fdeedc",
+   "input_sha256": "27d13c71f7c6beb730357e9898f65b3408b72cba69337d558359d7c2bf3f2953",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -29148,8 +30126,8 @@
      "complete_fulltext_read",
      "partial_fulltext_read"
     ],
-    "digest": "a3dc1766c8972a01",
-    "locators": 948,
+    "digest": "b762720f29caab97",
+    "locators": 956,
     "origin_id": "R-08",
     "papers": 51,
     "query_id": "Q-R-08",
@@ -29742,12 +30720,13 @@
      },
      {
       "adjudication_files": [
+       "disease-models/wwox/research/page_adjudications/locator_audit_34268881_reread_20261025.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
       ],
       "audit_status": "AUDIT_FILE_PRESENT",
-      "audited_entries": 1,
+      "audited_entries": 2,
       "contradiction_verdicts": [
        {
         "auditors": 1,
@@ -29772,16 +30751,28 @@
        {
         "auditors": 1,
         "verdict": "OVERSHOOT"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT"
+       },
+       {
+        "auditors": 1,
+        "verdict": "SUPPORTED"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT"
        }
       ],
       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
-      "locator_count": 59,
+      "locator_count": 67,
       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
       "pmid": "34268881",
       "reading_depth": "partial_fulltext_read",
       "receipt_events": 9,
       "receipt_id": "FTR-20260726-34268881-01",
-      "repair_unverified": 5,
+      "repair_unverified": 7,
       "unaudited_contradictions": 0
      },
      {
@@ -30189,7 +31180,7 @@
     "experiment_sketch": "legend-locator-audit over the declared triples",
     "external_hits": 0,
     "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
-    "would_move": "R-08 (disease-models/wwox/analysis/mechanism_intervention_map.md:578)"
+    "would_move": "R-08 (disease-models/wwox/analysis/mechanism_intervention_map.md:587)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -30319,7 +31310,7 @@
      "endpoint": "UNKNOWN",
      "epistemic_status": "IPOTESI",
      "id": "DA-Q-R-09",
-     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:604",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:613",
      "reading_depth": "complete_fulltext_read",
      "receipt": "FTR-20260913-15064722-01",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md R-09",
@@ -30424,8 +31415,8 @@
       "complete_fulltext_read",
       "partial_fulltext_read"
      ],
-     "digest": "2938589e9ec1ecde",
-     "locators": 879,
+     "digest": "e7642809e8e6060b",
+     "locators": 887,
      "origin_id": "R-09",
      "papers": 48,
      "query_id": "Q-R-09",
@@ -30938,12 +31929,13 @@
       },
       {
        "adjudication_files": [
+        "disease-models/wwox/research/page_adjudications/locator_audit_34268881_reread_20261025.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
         "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
        ],
        "audit_status": "AUDIT_FILE_PRESENT",
-       "audited_entries": 1,
+       "audited_entries": 2,
        "contradiction_verdicts": [
         {
          "auditors": 1,
@@ -30968,16 +31960,28 @@
         {
          "auditors": 1,
          "verdict": "OVERSHOOT"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT"
+        },
+        {
+         "auditors": 1,
+         "verdict": "SUPPORTED"
+        },
+        {
+         "auditors": 1,
+         "verdict": "OVERSHOOT"
         }
        ],
        "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
-       "locator_count": 59,
+       "locator_count": 67,
        "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
        "pmid": "34268881",
        "reading_depth": "partial_fulltext_read",
        "receipt_events": 9,
        "receipt_id": "FTR-20260726-34268881-01",
-       "repair_unverified": 5,
+       "repair_unverified": 7,
        "unaudited_contradictions": 0
       },
       {
@@ -31387,12 +32391,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "conditional; **no molecule is design-ready**. Three families: site-specific pharmacological chaperone · kinetic stabilizer · indirect proteostasis regulator",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:604; evidence table digest 2938589e9ec1ecde"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:613; evidence table digest e7642809e8e6060b"
     },
     "route": "RECUPERO_PROFONDO",
     "schema_version": 1
    },
-   "input_sha256": "18f3747afaafafb40f33ae10eba47a672cb2e216123467a9444b61e9b025d680",
+   "input_sha256": "00a70c72c3b690cef699fa9b6151f3930c96cc3823cc8d692394ece8d39dcd80",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -31419,8 +32423,8 @@
      "complete_fulltext_read",
      "partial_fulltext_read"
     ],
-    "digest": "2938589e9ec1ecde",
-    "locators": 879,
+    "digest": "e7642809e8e6060b",
+    "locators": 887,
     "origin_id": "R-09",
     "papers": 48,
     "query_id": "Q-R-09",
@@ -31933,12 +32937,13 @@
      },
      {
       "adjudication_files": [
+       "disease-models/wwox/research/page_adjudications/locator_audit_34268881_reread_20261025.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
        "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
       ],
       "audit_status": "AUDIT_FILE_PRESENT",
-      "audited_entries": 1,
+      "audited_entries": 2,
       "contradiction_verdicts": [
        {
         "auditors": 1,
@@ -31963,16 +32968,28 @@
        {
         "auditors": 1,
         "verdict": "OVERSHOOT"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT"
+       },
+       {
+        "auditors": 1,
+        "verdict": "SUPPORTED"
+       },
+       {
+        "auditors": 1,
+        "verdict": "OVERSHOOT"
        }
       ],
       "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
-      "locator_count": 59,
+      "locator_count": 67,
       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
       "pmid": "34268881",
       "reading_depth": "partial_fulltext_read",
       "receipt_events": 9,
       "receipt_id": "FTR-20260726-34268881-01",
-      "repair_unverified": 5,
+      "repair_unverified": 7,
       "unaudited_contradictions": 0
      },
      {
@@ -32380,7 +33397,7 @@
     "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
     "external_hits": 2,
     "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
-    "would_move": "R-09 (disease-models/wwox/analysis/mechanism_intervention_map.md:604)"
+    "would_move": "R-09 (disease-models/wwox/analysis/mechanism_intervention_map.md:613)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
