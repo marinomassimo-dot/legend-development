@@ -579,6 +579,20 @@ sample size, because composition differs by genotype.
 | Raised within some populations and not others | 🟡 Names the compartment. The target question becomes compartment-specific delivery, not pathway direction |
 | Activity readout and transcript readout disagree | 🟡 The transcript panel is not measuring pathway activity. Every transcriptomic Wnt claim in this programme, including the 2021 tables, needs the reporter before it is used |
 
+**Amendment, 2026-10-25 (same day, three corrections; the original text above stays legible).**
+(1) *The two published rescues are not one experiment.* The 2021 rescue is AAVS1 safe-harbour integration with
+supraphysiological WWOX in **all** cell populations, read by qPCR at the transcript level (n = 4/4/4); the 2026
+rescue is AAV9-hSynI, a **neuronal** promoter, in a single knockout clone, whose WWOX level is uncontrolled (0.4
+to 7 times wild type depending on line), read by western at the protein level in one lane per condition. Their
+TCF7L2 readouts differ (2021: 1.7 knockout → 3.45 rescue; 2026 preprint: 1.3 → 0.3) but the difference cannot be
+assigned to any one of expression level, cell type or transcript-to-protein regulation. The design below must
+therefore **vary these separately**: a WWOX dose series at native-promoter control, restricted to neurons versus
+progenitors, and read at both transcript and protein level for the same gene in the same preparation.
+(2) *Identity checked.* The 2021 panel's "TCF4" is TCF7L2: its primer (Table EV5, `CGTAGACCCCAAAACAGGAA`) aligns
+to human TCF7L2 transcripts and not to bHLH TCF4. The antibody of the 2026 blot is unseen.
+(3) *Independence.* The two papers share a laboratory and a model family, and GSE156243 is the 2021 deposit; the
+experiment must not be motivated as resolving a conflict between independent studies.
+
 **FALSIFIER** — the assumption carried by every Wnt-directed repurposing hypothesis in this programme: that a
 transcriptional Wnt-target elevation measured in bulk reports pathway activity attributable to loss of WWOX.
 

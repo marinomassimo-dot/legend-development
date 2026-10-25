@@ -86,7 +86,15 @@ organoid can be attributed to Wnt rather than to the maturation state.
 
 ---
 
-# INDEPENDENT REANALYSIS (appended 2026-10-25) — it agrees on direction and sharpens the limit
+# SECOND ANALYST, SAME DATA (appended 2026-10-25) — it agrees on direction and sharpens the limit
+
+**Independent in the analyst, not in the data.** The second analysis chose its own marker panels and did not see
+this file, which protects against my choices and my bias. It used the same six libraries, so it is a second
+reading of one dataset and adds no biological replication. GSE156243 is the deposit of the 2021 organoid
+paper (PMID 34268881) and the 2026 paper comes from the same laboratory; none of the Wnt observations in this
+folder is a biologically independent confirmation of another. Agreement between two analysts of one dataset
+means the arithmetic is robust to who does it, and nothing about whether the biology replicates.
+
 
 A second analyst, who was told not to read this file or its script, took the raw counts and chose her own panels
 (`independent_reanalysis_wnt_vs_maturation_20261025.md`). Verdict: **the data cannot decide** whether the Wnt
