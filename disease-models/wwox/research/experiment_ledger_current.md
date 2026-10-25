@@ -622,8 +622,12 @@ its extraction was cut at a line break before the number). It covers WWOX-KO, WO
 the AAV9-hSynI rescue, which is exactly what a matched-population comparison needs. Measured today (and
 re-measured the same day, because the first reading looked like a tool failure and was not): the BioStudies API
 works from this host and returns 200 for a known study and for the neighbouring `E-MTAB-14791` and
-`E-MTAB-14793`; **only `E-MTAB-14792` returns 403**, which fits a study not yet publicly released or since
-removed, and the status code cannot tell which; a search by title words finds no WWOX organoid study of that
+`E-MTAB-14793`; **only `E-MTAB-14792` returns 403**, which on its own fits either
+an unreleased or a withdrawn study; the API's body then separates the cases further: a nonexistent accession returns
+404 "Study not found", this one returns 403 "Study not accessible", so the record **exists**. The article has been public
+since 2026-07-03, so an embargo held only to publication would have lapsed; whether release is pending, partial or
+suspended cannot be told from the API. A request to the archive or the authors is drafted, unsent
+(`drug_repurposing/ebi_access_request_E-MTAB-14792_draft.md`); a search by title words finds no WWOX organoid study of that
 accession; the legacy ArrayExpress URL returns an empty page shell; two guessed FTP paths returned 404.
 The retrieval gap is a missing tool, recorded in `drug_repurposing/tool_survey_20261022.md` § 2.
 **Not retrieved and not read.** Nothing is concluded from it. The next step is
