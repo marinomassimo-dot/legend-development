@@ -1,0 +1,40 @@
+{
+ "analysis_at": "2026-10-25T10:10:00Z",
+ "analysis_time_precision": "minute",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_read",
+  "discussion": "read",
+  "limitations": "not_read",
+  "supplementary": "read",
+  "references": "not_read"
+ },
+ "event_at": "2026-10-25T10:10:00Z",
+ "event_id": "FTR-20261025-42397075-01",
+ "evidence_basis": [
+  "QUESTION_DRIVEN, single question: does TCF4 (TCF7L2) in the rescued WWOX-KO organoid return toward wild type. Scope read, and nothing else: the Results paragraph that cites the panel (p. 9, lines 1-11 of the published accepted manuscript, and its preprint counterpart at lines 302-307 of the derived layout text), the legend of Fig. EV6 panel (F), and the raster image of panel (F) itself.",
+  "The panel was read on the PREPRINT, bioRxiv v2 posted 2025-09-25 (sha256 214a74ffaac665cd11acb7b4036eb8457bf1f6e97bf8d99f34fd8d042ae21268), page 53, the single embedded JPEG of the Fig. EV6 composite (858x885 px, embedded-image sha256 prefix e8ab1acc4e4894a9), re-rendered from the page at 1200 dpi over the panel-F clip. The preprint calls it Fig. EV6F; the published article calls the same readout Supplementary Fig. 6F and the two sentences citing it are word-for-word identical except for the figure label.",
+  "The PUBLISHED Supplementary Fig. 6F was NOT read and is not held: the published supplementary volume (brain-2025-03809-File009.pdf and its thirteen derived images) is absent from this host, re-confirmed on 2026-10-25 by SHA-256 search. What is recorded here is therefore a NON-EQUIVALENT VERSION of that panel: a preprint, not peer reviewed, which may differ from the published figure. No value below may be cited as the published supplement.",
+  "Panel (F) as read: immunoblot, week 16 cerebral organoids, rows TCF-4 (~56 kDa), WWOX (46 kDa), GAPDH (36 kDa); six lanes, one per line, left to right JH-WT, WKO-1C, WKO-2C, SCAR12, WOREE, WKO-1C AAV9. Printed quantification beneath the lanes, normalised to JH-WT = 1: 1 / 1.4 / 1.3 / 1.7 / 3.1 / 0.3. No error bars, no statistics and no replicate count are shown for this panel; the legend declares no n for (F), and the mean +/- SEM and ANOVA sentence of the Fig. EV6 legend belongs to panel (B). The rescue arm is AAV9-WWOX in one knockout clone (WKO-1C), a precision the published body sentence ('rescued WWOX-KO organoids') does not carry.",
+  "Reading limit stated rather than smoothed: the GAPDH band in the WOREE lane is visibly lighter than its neighbours, which bears on the 3.1 figure; the lanes are single, so the six numbers are one blot, not a measured distribution."
+ ],
+ "evidence_depth": "partial_fulltext_read",
+ "outputs": [
+  "disease-models/wwox/research/supplementary_6f_tcf4_acquisition_20261025.md"
+ ],
+ "prior_receipt": null,
+ "record_kind": "contemporaneous_receipt",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "source_fingerprint": "214a74ffaac665cd11acb7b4036eb8457bf1f6e97bf8d99f34fd8d042ae21268",
+ "source_kind": "fulltext_local",
+ "source_locator": "files/fulltext/PPR960425_Steinberg2025_bioRxiv-v2.full.pdf",
+ "study_id": {
+  "doi": "10.1101/2024.12.22.630016",
+  "pmid": "42397075"
+ },
+ "workflow": "scientist-c, task SUPPL6F-20261025, branch scientist-c/suppl6f-tcf4-20261025; context_policy QUESTION_DRIVEN; the artefact read is the PREPRINT version of the work published as the named PMID; prepared as JSON for the integrator, not appended by this actor."
+}
