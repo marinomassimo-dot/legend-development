@@ -536,6 +536,50 @@ consequences for two classes — which is why `-03` outranks every molecule ques
 
 ---
 
+## EXP-20261025-WNT-STAGE-DISCRIMINATOR-08
+
+**DECIDES** — Is the raised canonical Wnt readout in WWOX-deficient cerebral organoids a WWOX-dependent
+signalling change, or a transcriptional signature of a younger, differently-composed tissue? Until this is
+settled, the Wnt axis cannot be a drug target in either direction, because the two live candidate families
+(tankyrase inhibition, GSK3 inhibition) act on **opposite** signs and nothing selects between them.
+
+**Why the existing rescue arm cannot answer it.** This is the point that makes the experiment necessary, and
+it is an inference from two statements the 2026 organoid paper makes about itself: it localises the Wnt
+activation to **radial glia** ([[deepdive_manifests/PMID42397075.json]] entry 47, an enrichment analysis, not
+a pathway-activity assay), and it states that its AAV9 rescue *"rescued neuronal functional phenotypes
+without correcting RG abnormalities"* (entry 12). A rescue that does not reach the compartment the readout
+lives in cannot normalise that readout, so a null Wnt result under the existing rescue would be
+uninterpretable. The discriminator must be **cell-type-resolved**, or must use a perturbation that does reach
+the progenitor compartment — which in that paper is A51, and A51 is multi-target (entry 17), so it cannot
+attribute an effect to Wnt rather than MYC.
+
+**DESIGN** — Single-cell or sorted-population RNA-seq of WWOX-deficient against isogenic wild-type organoids,
+at least three per genotype, reading **within matched cell types**: AXIN2, LEF1, NKD1 and APCDD1 together
+with progenitor, neuronal and regional-identity markers, plus a direct activity readout (nuclear
+beta-catenin, or a TCF/LEF reporter) in the same preparation. The control that makes a null readable is the
+**matched-cell-type comparison itself**: a bulk contrast cannot distinguish the two explanations at any
+sample size, because composition differs by genotype.
+
+**BRANCHES**
+
+| Result | Consequence |
+|---|---|
+| Wnt readouts raised in KO **within** matched radial glia, with maturation markers matched | 🟢 WWOX-dependent, cell-autonomous. The sign is fixed and a direction-selective pharmacology becomes a real question |
+| Wnt readouts indistinguishable within matched cell types; bulk difference tracks the composition shift | 🔴 The bulk signal is a maturation signature. The Wnt axis is **not** a target on this evidence, and both drug families lose their rationale here |
+| Raised within some populations and not others | 🟡 Names the compartment. The target question becomes compartment-specific delivery, not pathway direction |
+| Activity readout and transcript readout disagree | 🟡 The transcript panel is not measuring pathway activity. Every transcriptomic Wnt claim in this programme, including the 2021 tables, needs the reporter before it is used |
+
+**FALSIFIER** — the assumption carried by every Wnt-directed repurposing hypothesis in this programme: that a
+transcriptional Wnt-target elevation measured in bulk reports pathway activity attributable to loss of WWOX.
+
+**UNNECESSARY_IF** — a published single-cell WWOX-loss organoid dataset already reports these four readouts
+within matched populations. The 2026 paper performed single-cell RNA-seq; whether its deposited data permit
+this comparison is the cheapest thing to check first, and it is checked before this experiment is run.
+
+**COST** — weeks. **MATERIAL** — `IN_VITRO`. **STATUS** — `PROPOSED`. **RESULT** — —
+
+---
+
 ## Independent corroboration — a blind external analysis, 2026-09-27
 
 A separate analysis of the same variant, built from a different tool set and without access to this
