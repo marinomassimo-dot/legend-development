@@ -570,6 +570,22 @@ beta-catenin, or a TCF/LEF reporter) in the same preparation. The control that m
 **matched-cell-type comparison itself**: a bulk contrast cannot distinguish the two explanations at any
 sample size, because composition differs by genotype.
 
+**Arm added 2026-10-25: separate WWOX LEVEL from vector, cell type, stage and assay.** The first design above answers
+the composition confound and not the hypothesis that now has the most direct support, that the sign of the TCF7L2
+response follows the WWOX level reached by the rescue (2021 supraphysiological in all cells, TCF7L2 transcript up
+to 3.45 times wild type; 2026 neuronal and near-physiological in the measured clone, 0.8 times wild type, TCF7L2
+protein 0.3 in a one-lane preprint blot). Those two studies differ in four things at once, so no analysis of them can separate the
+four. One matrix does, with one axis varied at a time and WWOX measured in **every** sample, because even one vector gave a
+0.4 to 7-fold spread (2026 Supplementary Fig. 1):
+- *Level:* one vector, one promoter, one clone; WWOX titrated below, around and above the physiological level; TCF7L2 read at every level.
+  This is the arm that falsifies the hypothesis: a response that is not non-monotonic in level, or that has one sign at every dose.
+- *Vector:* AAVS1 integration against AAV9 episomal at **matched measured** WWOX level.
+- *Cell type:* neuronal against ubiquitous promoter at matched level, with the read resolved by cell type.
+- *Stage:* the same clone at two or more times.
+- *Transcript against protein:* TCF7L2 mRNA and protein from the same preparation, since the two published readouts differ in assay.
+The smallest version that is already informative is the level arm alone in the existing neuronal-promoter system, which
+needs no new vector. The matched controls are what stop a level effect being read as a vector or cell-type effect.
+
 **BRANCHES**
 
 | Result | Consequence |
