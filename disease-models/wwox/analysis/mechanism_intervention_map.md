@@ -398,6 +398,12 @@ an NMD block (cycloheximide/SMG1i) to unmask the degraded transcript.
 Fifteen fields per candidate, as specified. `HUMAN_USE_STATUS` and `CLINICAL_MATURITY` describe the
 compound **in its approved indication**, never in WWOX.
 
+Source-link reconciliation (2026-10-25): the `SOURCE_IDS` rows of R-01, R-03 and R-07 carry the
+identifiers resolved by Scientist C in
+[`module_linkage_and_replicate_scientist-c_20261024.md`](../research/module_linkage_and_replicate_scientist-c_20261024.md)
+§§1–2. They identify the existing evidence; they do not establish an independent laboratory,
+measure the chloride premise or supply a drug-intervention result.
+
 ---
 
 ### R-01 — AAV9-hSynI-WWOX (gene addition)
@@ -406,6 +412,7 @@ compound **in its approved indication**, never in WWOX.
 |---|---|
 | **INTERVENTION** | AAV9, human Synapsin-I promoter, WWOX cDNA; ICV. ⚠️ **Corrected 2026-09-27 — the therapeutic configuration is WPRE-FREE.** The 2021 vector map (Appendix Fig S1A, read at 300 dpi) shows all three constructs WPRE-free, and the 2021 paper never mentions WPRE; the 2026 dose study removed WPRE deliberately (*“we removed WPRE as a proactive risk-mitigation step”*, receipted locator) and states the price: *“this reduction in expression necessitates the use of higher vector doses”*. A WPRE-bearing arm exists in the 2026 paper as a comparator, not as the lever |
 | **TARGET** | the WWOX locus product itself — neuronal WWOX protein |
+| **SOURCE_IDS** | PMID 34747138, PMID 42422765 (WWOX primary measurements; one laboratory); PMID 42128308 remains the class-level safety review, NOT WWOX EVIDENCE for ganglion toxicity |
 | **MECHANISM** | supplies full-length WWOX to neurons, bypassing every allele (gene addition) |
 | **EVIDENCE_LEVEL** | **T1** (Wwox-null mouse, WWOX-KO and WOREE-derived organoids) + **T6** for human efficacy |
 | **WWOX_DIRECT_EVIDENCE** | Yes — multi-domain rescue: survival, growth, glycaemia, behaviour, ataxia, myelination, gliosis, SWD/ECoG; durable to P300; organoid firing normalized (P=0.77 vs parental) |
@@ -455,6 +462,7 @@ platform to run it has existed for years.
 |---|---|
 | **INTERVENTION** | tankyrase inhibitor (e.g. XAV939 as tool); no paediatric-profiled candidate identified |
 | **TARGET** | Wnt/β-catenin |
+| **SOURCE_IDS** | PMID 34268881 (WWOX organoid endpoint); CLAIM 028 is context-dependence evidence, not the source of the β-catenin measurement |
 | **MECHANISM** | WWOX loss de-represses Wnt via loss of DVL2 sequestration; inhibition restores tone |
 | **EVIDENCE_LEVEL** | **T2** — direction measured in WWOX systems (organoids, human neural tissue); the intervention arm is oncological |
 | **WWOX_DIRECT_EVIDENCE** | nuclear β-catenin ~1.7×, WNT/LEF1/AXIN2 up in WWOX-KO cerebral organoids; **partially recovered by W-AAV** (which is itself the strongest evidence that the axis is WWOX-downstream) |
@@ -556,6 +564,7 @@ experiment closes.
 |---|---|
 | **INTERVENTION** | bumetanide |
 | **TARGET** | NKCC1 |
+| **SOURCE_IDS** | DL-MECH-035 (WWOX organoid marker pattern; no measured chloride premise or bumetanide intervention) |
 | **MECHANISM** | *if* GABA is still depolarizing, lowering intracellular chloride shifts GABA toward functional inhibition |
 | **EVIDENCE_LEVEL** | 🔴 **T6 — mechanistic hypothesis only.** Its load-bearing premise has **never been measured in any WWOX system**: no `E_GABA`, no intracellular chloride, no NKCC1/KCC2, no GABA response, no GABA pharmacology |
 | **WWOX_DIRECT_EVIDENCE** | **none.** "Depolarizing GABA" is the authors' `IPOTESI` read off a marker pattern (GAD67↑, VGLUT1 unchanged, GABRB2/GABRB3↓) against the developmental literature |

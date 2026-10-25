@@ -35,22 +35,9 @@ This skill produces no scientific claims. It produces a **map of missing capabil
 - methodological papers transformable into pipelines
 - resources for drug repurposing, ASO, chaperones, AAV, PBPK, BBB, safety, phenotype, mutations
 
-## The mother rule
+## Capability gap first. Tool second.
 
-**Learning by doing: every session must improve the capabilities at least a little.**
-
-The improvement can be small, but not null:
-- a new repo/DB/tool imported for a real gap
-- a new resource put on `MONITOR`
-- an audit of an already-imported skill/repo
-- a mini-procedure added to an existing skill
-- an operational link between two already-present tools
-- a "nothing more needed here" note with a new reusable exclusion criterion
-- an improvement to reasoning, workflow, safety, privacy, interpretation, visualization, operational memory or complexity management
-
-Then: **Capability gap first. Tool second.**
-
-Do not look for "interesting repos" in the abstract. Start from a gap that emerged in the session, but do not stall: if the session reveals no glaring gap, pick a proportional micro-upgrade.
+Do not look for "interesting repos" in the abstract. Start from a gap that emerged in the session.
 - what can we not yet infer?
 - which pipeline step is weak?
 - which question about the case can we not attack well?

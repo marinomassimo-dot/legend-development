@@ -16,6 +16,7 @@ with a verdict — Harness Engineering runs it every Monday and acts on the tabl
 Classes, one per branch:
 
   MAIN                          the integration branch itself
+  PRESERVED_BACKUP              backup/* history, visible but outside the task-landing rule
   LAND_OVERDUE                  ahead of main, and older than --max-age-days (default 1)
   IN_PROGRESS                   ahead of main, within the age limit
   DELETE_READY                  nothing ahead of main, not checked out anywhere
@@ -42,8 +43,10 @@ LAND_OVERDUE = "LAND_OVERDUE"
 IN_PROGRESS = "IN_PROGRESS"
 DELETE_READY = "DELETE_READY"
 DELETE_BLOCKED_CHECKED_OUT = "DELETE_BLOCKED_CHECKED_OUT"
+PRESERVED_BACKUP = "PRESERVED_BACKUP"
 
-CLASS_ORDER = (LAND_OVERDUE, IN_PROGRESS, DELETE_BLOCKED_CHECKED_OUT, DELETE_READY, MAIN)
+CLASS_ORDER = (LAND_OVERDUE, IN_PROGRESS, DELETE_BLOCKED_CHECKED_OUT, DELETE_READY,
+               PRESERVED_BACKUP, MAIN)
 
 
 class GitError(RuntimeError):
@@ -140,6 +143,10 @@ def classify(rows: List[Dict[str, object]], trees: List[Dict[str, object]],
         row["checked_out_at"] = checked_out.get(name)
         if name == main:
             row["class"] = MAIN
+        elif name.startswith("backup/"):
+            # Preserved history is not a task awaiting landing. Keep its divergence and
+            # worktree visible; neither age nor ancestry makes it safe to land or delete.
+            row["class"] = PRESERVED_BACKUP
         elif int(row["ahead"]) > 0:
             elapsed = float(row.get("age_seconds", float(row["age_days"]) * 86400))
             row["class"] = LAND_OVERDUE if elapsed > max_age_days * 86400 else IN_PROGRESS
@@ -157,8 +164,10 @@ def totals_line(rows: List[Dict[str, object]]) -> str:
     ahead = sum(int(r["ahead"]) for r in rows)
     overdue = sum(1 for r in rows if r["class"] == LAND_OVERDUE)
     ready = sum(1 for r in rows if r["class"] == DELETE_READY)
+    preserved = sum(1 for r in rows if r["class"] == PRESERVED_BACKUP)
     return (f"{n} branches · {ahead} ahead-of-main commits total · "
-            f"{overdue} LAND_OVERDUE · {ready} DELETE_READY")
+            f"{overdue} LAND_OVERDUE · {ready} DELETE_READY"
+            + (f" · {preserved} PRESERVED_BACKUP" if preserved else ""))
 
 
 def landing_recipe(root: Path) -> str:
@@ -192,6 +201,8 @@ def render_markdown(root: Path, rows: List[Dict[str, object]],
     lines = [f"# Branch hygiene — {root}", "",
              f"Rule: LEGEND_CORE §21e · a branch ahead of `main` for more than "
              f"{max_age_days} day(s) is LAND_OVERDUE.", "",
+             "`backup/*` refs preserve history: their divergence stays visible, but they are "
+             "not task branches to land or delete.", "",
              "| class | branch | ahead | behind | age (days) | last commit | checked out at |",
              "|---|---|---|---|---|---|---|"]
     for r in rows:

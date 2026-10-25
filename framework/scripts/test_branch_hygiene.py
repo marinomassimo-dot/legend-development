@@ -147,6 +147,24 @@ class TheReportClassifiesWhatItBuilt(unittest.TestCase):
 
 
 class TheHealthyCaseIsQuiet(unittest.TestCase):
+    def test_backup_history_stays_visible_without_a_landing_or_deletion_instruction(self) -> None:
+        fx = Fixture()
+        self.addCleanup(fx.close)
+        run(["branch", "backup/preserved", "old-work"], fx.repo)
+        run(["branch", "backup/already-landed", "main"], fx.repo)
+        report = bh.build_report(fx.repo, "main", 1, None, None)
+        rows = {r["branch"]: r for r in report["branches"]}
+        self.assertEqual(bh.PRESERVED_BACKUP, rows["backup/preserved"]["class"])
+        self.assertEqual(1, rows["backup/preserved"]["ahead"])
+        self.assertGreater(rows["backup/preserved"]["age_days"], 1)
+        self.assertEqual(bh.PRESERVED_BACKUP, rows["backup/already-landed"]["class"])
+        self.assertEqual(bh.LAND_OVERDUE, rows["old-work"]["class"])
+        self.assertEqual(bh.DELETE_READY, rows["merged-done"]["class"])
+        self.assertIn("2 PRESERVED_BACKUP", report["totals"])
+        markdown = bh.render_markdown(fx.repo, report["branches"], report["worktrees"], 1)
+        self.assertIn("| PRESERVED_BACKUP | `backup/preserved` | 1 |", markdown)
+        self.assertIn("not task branches to land or delete", markdown)
+
     def test_overdue_uses_elapsed_seconds_not_rounded_days(self) -> None:
         for seconds, expected in ((86399, bh.IN_PROGRESS), (86400, bh.IN_PROGRESS),
                                   (86401, bh.LAND_OVERDUE), (90000, bh.LAND_OVERDUE)):

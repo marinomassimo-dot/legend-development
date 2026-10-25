@@ -1,0 +1,109 @@
+{
+  "TASK_ID": "ORCH-WEEKLY-WRITE-20261025",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "OWNER": "orchestrator",
+  "ACTOR_ID": "orchestrator",
+  "GOVERNANCE_VERSION": "3.1.1",
+  "INTERACTION_MODE": "AUTONOMOUS_COMPLETE",
+  "CONTEXT_POLICY": "EXPLICIT_OPERATOR_REQUEST",
+  "CURRENT_STATE": "IN_PROGRESS",
+  "OBJECTIVE": "Verify the weekly intervention against fetched remote main; make only evidenced, reversible improvements, validate, land, push and clean up.",
+  "BASE_HEAD": "71515f651c7fa87c0f442bace9f8560a576ff844",
+  "TASK_ACK": "ACCEPTED",
+  "TASK_CLAIM": {
+    "actor": "orchestrator",
+    "date": "2026-10-25"
+  },
+  "AUTHORISED_QUEUE": {
+    "MANDATE_STATE": "OPEN",
+    "OBJ_VERIFY": {
+      "order": 1,
+      "steps": [
+        {
+          "step": "Reconcile mandate, weekly evidence changes and current downstream queue; execute adapters and join",
+          "status": "DONE",
+          "evidence": "disease-models/wwox/research/weekly_write_intervention_20261025.md; targeted regression battery PASS (6 targets), real adapter selftest 6/6, deterministic repeat zero changes"
+        }
+      ]
+    },
+    "OBJ_HYGIENE": {
+      "order": 2,
+      "steps": [
+        {
+          "step": "Inventory local worktrees and remote branches; classify preserved unique history; repair evidenced report false positive",
+          "status": "DONE",
+          "evidence": "disease-models/wwox/research/weekly_write_intervention_20261025.md; targeted regression battery PASS (6 targets), real adapter selftest 6/6, deterministic repeat zero changes"
+        }
+      ]
+    },
+    "OBJ_LAND": {
+      "order": 3,
+      "steps": [
+        {
+          "step": "Targeted checks, release battery, final report, validated integration and push, temporary worktree removal",
+          "status": "IN_PROGRESS"
+        }
+      ]
+    }
+  },
+  "DEFAULTS_TAKEN": [
+    "Original module mandate COMPLETE rather than PAUSED on fetched main: reuse C\u2013E; do not repeat implementation.",
+    "Preserve the entire VPS backup and historical scientific provenance; recover no stale tool without a demonstrated current need.",
+    "Generic skill-creator validation refuses the unchanged description as well: keep the repository package checks, record the incompatibility, do not weaken either validator."
+  ],
+  "DECISIONS_TAKEN": [
+    "Add only the three source links already resolved by Scientist C; preserve the original grades and propositions; revert by removing those rows and rerunning the join.",
+    "Use a visible PRESERVED_BACKUP report class rather than exclude the branch or add an approval mechanism; revert code/test diff if required.",
+    "Delete the contradictory growth quota from the existing capability skill; no replacement control.",
+    "Keep current join snapshots and add a dated handoff, using existing tools; no freshness gate."
+  ],
+  "STOP_LOG": [
+    {
+      "reason_class": 1,
+      "asked": "ACTOR_ID and role assignment required by AGENTS.md \u00a74 / CLAUDE.md \u00a70",
+      "waited": "Read-only verification continued while the operator replied",
+      "outcome": "Operator assigned Orchestrator; task continued. No permission request for already-authorised work."
+    }
+  ],
+  "WAVE_1_RESULT": {
+    "DEFAULTS_TAKEN": [
+      "Original module mandate COMPLETE rather than PAUSED on fetched main: reuse C\u2013E; do not repeat implementation.",
+      "Preserve the entire VPS backup and historical scientific provenance; recover no stale tool without a demonstrated current need.",
+      "Generic skill-creator validation refuses the unchanged description as well: keep the repository package checks, record the incompatibility, do not weaken either validator."
+    ],
+    "STOP_LOG": [
+      {
+        "reason_class": 1,
+        "asked": "ACTOR_ID and role assignment required by AGENTS.md \u00a74 / CLAUDE.md \u00a70",
+        "waited": "Read-only verification continued while the operator replied",
+        "outcome": "Operator assigned Orchestrator; task continued. No permission request for already-authorised work."
+      }
+    ],
+    "evidence": "disease-models/wwox/research/weekly_write_intervention_20261025.md",
+    "TARGETED_VERDICT": "PASS (6 targets)",
+    "LIVE_ADAPTERS": {
+      "count": 6,
+      "red": 0
+    },
+    "SOURCE_MAP_IDS": [
+      "R-01",
+      "R-03",
+      "R-07"
+    ],
+    "JOIN": {
+      "queries": 339,
+      "cards": 26,
+      "abstentions": 8,
+      "repeat_changed": 0
+    },
+    "QUEUE": {
+      "AUDIT": 8,
+      "READ": 16,
+      "REPLICATE": 2,
+      "SELECT": 0
+    },
+    "BASELINE_CI": "https://github.com/marinomassimo-dot/legend-development/actions/runs/40206791592",
+    "SELF_EVAL": "disease-models/wwox/research/session_evaluations/2026-10-25_weekly_write_orchestrator.md"
+  }
+}
