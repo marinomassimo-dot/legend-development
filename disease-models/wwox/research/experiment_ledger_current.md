@@ -570,21 +570,52 @@ beta-catenin, or a TCF/LEF reporter) in the same preparation. The control that m
 **matched-cell-type comparison itself**: a bulk contrast cannot distinguish the two explanations at any
 sample size, because composition differs by genotype.
 
-**Arm added 2026-10-25: separate WWOX LEVEL from vector, cell type, stage and assay.** The first design above answers
-the composition confound and not the hypothesis that now has the most direct support, that the sign of the TCF7L2
-response follows the WWOX level reached by the rescue (2021 supraphysiological in all cells, TCF7L2 transcript up
-to 3.45 times wild type; 2026 neuronal and near-physiological in the measured clone, 0.8 times wild type, TCF7L2
-protein 0.3 in a one-lane preprint blot). Those two studies differ in four things at once, so no analysis of them can separate the
-four. One matrix does, with one axis varied at a time and WWOX measured in **every** sample, because even one vector gave a
-0.4 to 7-fold spread (2026 Supplementary Fig. 1):
-- *Level:* one vector, one promoter, one clone; WWOX titrated below, around and above the physiological level; TCF7L2 read at every level.
-  This is the arm that falsifies the hypothesis: a response that is not non-monotonic in level, or that has one sign at every dose.
-- *Vector:* AAVS1 integration against AAV9 episomal at **matched measured** WWOX level.
-- *Cell type:* neuronal against ubiquitous promoter at matched level, with the read resolved by cell type.
-- *Stage:* the same clone at two or more times.
-- *Transcript against protein:* TCF7L2 mRNA and protein from the same preparation, since the two published readouts differ in assay.
-The smallest version that is already informative is the level arm alone in the existing neuronal-promoter system, which
-needs no new vector. The matched controls are what stop a level effect being read as a vector or cell-type effect.
+**Arm added 2026-10-25, refined the same cycle: separate WWOX LEVEL from vector load, transduction fraction, cell type,
+stage and assay.** The first design above answers the composition confound and not the hypothesis that now has the most
+direct support, that the sign of the TCF7L2 response follows the WWOX level reached by the rescue (2021: supraphysiological
+in all cells, TCF7L2 transcript up to 3.45 times wild type; 2026: neuronal and near-physiological in the measured clone, 0.8
+times wild type, TCF7L2 protein 0.3 in a one-lane preprint blot). Those studies differ in four things at once, so no analysis
+of them separates the four. This is a different matter from a viral-dose series, which looks like a level series and is not:
+
+**Why varying the viral dose does not isolate WWOX level.** A larger dose raises (i) the fraction of cells transduced, (ii) the
+WWOX amount per transduced cell, and (iii) the vector-associated load itself (capsid, genome copies, promoter activity, innate and
+stress responses) together. A bulk readout then averages a mixture of high-WWOX and untransduced cells, so a dose-dependent
+change in the bulk TCF7L2 can come from the changing mixture rather than from any cell's response to its own WWOX level. The
+unit of the experiment must therefore be **the cell**, with its own measured WWOX and its own TCF7L2.
+
+**DESIGN (level arm).** One clone, one vector backbone, one promoter. Level is varied by a route that does not change vector
+load, in this order of preference: (a) an inducible or titratable promoter (small-molecule dose) on a **fixed** vector copy number, so
+copy number and transduction fraction stay constant while expression moves; (b) a clonal series with different, measured
+integrated expression levels; (c) only if neither is possible, a viral-dose series **with the confounds measured and carried as
+covariates** (vector genome copies per cell, transduced fraction), never treated as level. The reference for "physiological" is the
+WWOX level of the isogenic unperturbed parental line **in the same cell type read by the same assay**, not a number from another
+study. The range must bracket it: at least one point clearly below, one at, and one clearly above, with enough spacing between
+points that the measurement error of WWOX cannot reorder them.
+
+**Per-cell measurements (mandatory, in the same cell).** WWOX protein (antibody validated on the KO and on the parental line, with
+the KO as the zero), TCF7L2 protein, and a reporter or nuclear beta-catenin readout of pathway activity; by single-cell or
+imaging or flow cytometry, so that TCF7L2 can be plotted against WWOX **cell by cell**. Cell type is identified in the same
+preparation by markers (progenitor, neuronal, regional), so the dose-response is read **within a matched cell type**. Bulk mRNA and bulk protein
+from the same preparation are additional, not replacements.
+
+**Matched controls, each answering one named confound.**
+- *Vector load and capsid/stress effects:* an empty-transgene vector (the same backbone, no WWOX) at **matched genome copies per cell**, in the KO and in the parental line. Any change that also appears here is vector, not WWOX.
+- *Transduction fraction:* the reporter-positive fraction reported for every sample; the analysis is restricted to the transduced cells and the untransduced cells in the same well serve as the internal zero.
+- *Promoter and cell type:* the neuronal promoter against an ubiquitous promoter at **matched per-cell WWOX**, to separate cell-type specificity from level; a transgene driven in cells that lack the neuronal programme is the contrast.
+- *Catalytic or interaction-dead WWOX at the same level:* distinguishes a response to WWOX activity from a response to the protein's mere abundance (the dead-mutant set already named in `EXP-20260927-DOMINANT-NEGATIVE-07`; never the residues that record forbids).
+- *Stage:* the same clone read at two or more times, with the cell-type composition recorded at each.
+- *Transcript against protein:* TCF7L2 mRNA and protein from the same cells (single-cell multiome, or matched aliquots), because the two published readouts differ in assay.
+
+**Falsifiable outcomes, stated so that each result decides something.**
+- *Supported:* within a matched cell type and a fixed vector load, TCF7L2 changes sign or magnitude as per-cell WWOX crosses the physiological reference, and the empty-vector control does not reproduce it.
+- *Falsified (monotonic):* within a matched cell type, TCF7L2 moves in the same direction at every WWOX level from below to above the reference. Then the 2021 and 2026 difference is not a level effect.
+- *Falsified (vector):* the empty-transgene vector at matched load reproduces the TCF7L2 change. Then it was vector load.
+- *Falsified (cell type):* the response differs between cell types at the same per-cell WWOX. Then cell type, not level, is the variable.
+- *Uninterpretable, and said so:* the WWOX range does not bracket the reference, or the per-cell WWOX distribution is bimodal with no cells in the middle.
+
+The smallest version that is already informative is the level arm alone in one cell type, with the empty-vector control and per-cell
+WWOX and TCF7L2: it needs no new vector architecture if the existing neuronal-promoter construct can be made titratable.
+Nothing here has been performed.
 
 **BRANCHES**
 
