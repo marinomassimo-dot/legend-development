@@ -892,8 +892,8 @@
     }
    },
    {
-    "proposition": "In Figure 4D the WWOX rescue lowers Wnt ligands and the ROR2 receptor toward or below wild type, but does NOT normalise the canonical beta-catenin/TCF readouts: AXIN2 and CCND1 are unmoved and LEF1, TCF7, TCF3 and TCF4 sit ABOVE the knockout, not between knockout and wild type.",
-    "snippet": "[figure attestation — pixels cannot be quote-matched] Reading WT/KO/W-AAV bar heights against the 0-2-4-6 axis: WNT1 1 / 4.1 / 1.35; WNT2B 1 / 1.25 / 1.85; WNT3 1 / 2.65 / 1.0; WNT3A 1 / 1.65 / 0.2; WNT5A 1 / 3.1 / 1.95; WNT8B 1 / 2.2 / 2.45; ROR2 1 / 2.65 / 1.15; AXIN2 1 / 1.75 / 1.6; CCND1 1 / 1.0 / 1.25; LEF1 1 / 2.3 / 2.6; TCF7 1 / 1.85 / 2.7; TCF3 1 / 1.2 / 1.8; TCF4 1 / 1.7 / 3.45.",
+    "proposition": "In Figure 4D the WWOX rescue brings five of the plotted Wnt genes back toward or below wild type — WNT1, WNT3, WNT3A, WNT5A and the receptor ROR2 — while WNT2B and WNT8B move FURTHER from wild type under rescue; and it does NOT normalise the canonical beta-catenin readouts at all: AXIN2 and CCND1 are unmoved and LEF1, TCF7, TCF3 and TCF4 sit ABOVE the knockout, not between knockout and wild type.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Reading WT/KO/W-AAV bar heights against the 0-2-4-6 axis: WNT1 1 / 4.1 / 1.35; WNT2B 1 / 1.25 / 1.85; WNT3 1 / 2.65 / 1.0; WNT3A 1 / 1.65 / 0.2; WNT5A 1 / 3.1 / 1.95; WNT8B 1 / 2.2 / 2.45; ROR2 1 / 2.65 / 1.15; AXIN2 1 / 1.75 / 1.6; CCND1 1 / 1.0 / 1.25; LEF1 1 / 2.3 / 2.6; TCF7 1 / 1.85 / 2.7; TCF3 1 / 1.2 / 1.8; TCF4 1 / 1.7 / 3.45. The two that rise under rescue are WNT2B (1.25 to 1.85) and WNT8B (2.2 to 2.45); neither carries a knockout-versus-rescue bracket.",
     "surface": "figure",
     "artifact": "files/fulltext/PMID34268881_Steinberg2021.pdf",
     "anchor": "Figure 4, panel D, bar heights read against the panel's own 0/2/4/6 y-axis ticks; page 8 embedded raster rendered with PyMuPDF at zoom 6 and 10",
@@ -904,7 +904,21 @@
      "cell_line": "CRISPR WWOX-KO hESC-derived COs, isogenic WT, and KO + AAVS1-integrated WWOX (W-AAV)"
     },
     "qualifies": "entries[62]",
-    "qualifies_needle": "downregulation of some of the Wnt"
+    "qualifies_needle": "downregulation of some of the Wnt",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
+     "entry": 60,
+     "what_changed": "The proposition as first written said the rescue lowers 'Wnt ligands and the ROR2 receptor toward or below wild type' without qualification. The entry's own numerals contradict that for two of the six plotted ligands: WNT2B rises from 1.25 in the knockout to 1.85 under rescue and WNT8B rises from 2.2 to 2.45, both away from wild type. The headline now names the five that do come back and the two that do not; the thirteen measured values and the second half of the proposition are unchanged, because the blind audit reproduced every one of them to within 0.04.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_34268881_reread_20261025.md",
+      "audited_on": "2026-10-25",
+      "note": "Scope defect in the headline only; the thirteen value triples and the rescue-failure half were SUPPORTED. Repair verified against the page-8 embedded raster before writing."
+     }
+    }
    },
    {
     "proposition": "The significance brackets drawn on Figure 4D locate the rescue failure precisely: a KO-versus-W-AAV bracket is drawn only on WNT3, WNT3A, ROR2 and TCF4, while LEF1, TCF7 and TCF4 carry a WT-versus-W-AAV bracket marked significant, and AXIN2 carries a WT-versus-KO bracket with no rescue bracket at all.",
@@ -946,7 +960,7 @@
     }
    },
    {
-    "proposition": "Within Figure 4 the Wnt readout and the maturation/regional readout are never measured on the same samples in the rescue arm: panels C and F share the WT n=2 / KO n=4 RNA-seq and carry no rescue, while the only three-genotype panels are D (qPCR, n=4/4/4, one batch) and H (immunofluorescence, n=9/16/4, three batches), two different assays with different sample counts.",
+    "proposition": "Within Figure 4 the Wnt readout and the maturation/regional readout are never measured on the same samples in the rescue arm: panels C and F share the WT n=2 / KO n=4 RNA-seq and carry no rescue, while the three-genotype panels are D (Wnt qPCR, WT/KO/W-AAV n = 4/4/4, one batch), G (immunofluorescence, WT n = 3, KO n = 4, W-AAV n = 4) and H, the quantification of G (WT n = 9 from 3 batches, KO n = 16 from 3 batches, W-AAV n = 4 organoids from 1 batch) — a different assay from D, on different samples, and no progenitor marker anywhere in the figure.",
     "snippet": "Statistical significance was determined using one‐way ANOVA with Tukey’s multiple comparisons test (WT: n = 4 from 1 batch; KO: n = 4 from 1 batch; and W‐AAV: n = 4 from 1 batch).",
     "surface": "body",
     "artifact": "files/fulltext/PMID34268881_Steinberg2021_PMC.xml",
@@ -956,11 +970,25 @@
     "experimental_context": {
      "system": "human ES-cell-derived cerebral organoids, week 15",
      "cell_line": "CRISPR WWOX-KO hESC-derived COs, isogenic WT, and KO + AAVS1-integrated WWOX (W-AAV)"
+    },
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
+     "entry": 64,
+     "what_changed": "The proposition as first written said 'the only three-genotype panels are D and H', which omitted panel G (the immunofluorescence of which H is the quantification, WT n = 3, KO n = 4, W-AAV n = 4), and compressed panel H's sample counts to 'n=9/16/4, three batches' when the legend gives three batches for WT and KO but one batch for the W-AAV arm. Both are now written as the legend gives them. The proposition's core is unchanged and was audited SUPPORTED.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "SUPPORTED"
+      ],
+      "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_34268881_reread_20261025.md",
+      "audited_on": "2026-10-25",
+      "note": "SUPPORTED with wording-level looseness; the omission of panel G and the batch count for the W-AAV arm are repaired here."
+     }
     }
    },
    {
     "proposition": "The matching maturation measurement in the same three-genotype qPCR design is Figure EV3D, not a Figure 4 panel, and it shows the rescue failing to normalise there too: BCL11B and RELN remain significantly different from wild type in W-AAV COs.",
-    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure EV3D, titled 'Cortical Layers qPCR / Cerebral Oranoids Week 15' with the same WT/KO/W-AAV key and a 0-8 'Relative Expression' axis, plots TBR1 1 / 0.7 / 1.0; BCL11B 1 / 0.25 / 0.4 with * on WT-KO and * on WT-W-AAV; SATB2 1 / 0.35 / 0.65 with * on WT-KO; POU3F2 1 / 0.4 / 0.45; CUX1 1 / 1.55 / 0.55; RELN 1 / 5.5 / 3.2 with *** on WT-KO and ** on WT-W-AAV.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure EV3D, titled 'Cortical Layers qPCR / Cerebral Oranoids Week 15' with the WT/KO/W-AAV key and a 0-2-4-6-8 'Relative Expression' axis, does NOT normalise its wild-type bars to 1. Measured against the panel's own ticks, WT / KO / W-AAV are: TBR1 0.99 / 0.75 / 0.99; BCL11B 0.80 / 0.21 / 0.37 with * on WT-KO and * on the longer WT-W-AAV span; SATB2 0.99 / 0.28 / 0.62 with * on WT-KO; POU3F2 0.80 / 0.40 / 0.43; CUX1 0.99 / 1.49 / 0.56; RELN 0.99 / 5.51 / 3.20 with *** on WT-KO and ** on the longer WT-W-AAV span. Bar tops were taken against tick centres measured on the panel itself (138.8 px per unit at zoom 12); an independent re-measurement by modal column top reproduced every bar to within 0.13, the two W-AAV bars of POU3F2 and CUX1 being the only ones where the choice of edge rule moves the figure by more than 0.05.",
     "surface": "figure",
     "artifact": "files/fulltext/PMID34268881_assets/EMMM-13-e13610-s001.pdf",
     "anchor": "Figure EV3, panel D (Figure EV3 is EMMM-13-e13610-g004.jpg by JATS; its higher-resolution surface is the embedded raster of page 6 of EMMM-13-e13610-s001.pdf, 1312x1764 at 200 ppi, rendered with PyMuPDF at zoom 4)",
@@ -969,6 +997,20 @@
     "experimental_context": {
      "system": "human ES-cell-derived cerebral organoids, week 15",
      "cell_line": "CRISPR WWOX-KO hESC-derived COs, isogenic WT, and KO + AAVS1-integrated WWOX (W-AAV)"
+    },
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
+     "entry": 65,
+     "what_changed": "The attestation as first written gave every gene a wild-type value of 1, assuming a normalisation the panel does not apply. The wild-type bars are TBR1 0.99, BCL11B 0.80, SATB2 0.99, POU3F2 0.80, CUX1 0.99, RELN 0.99, so BCL11B reads 0.80 / 0.21 / 0.37 and POU3F2 0.80 / 0.40 / 0.43, and SATB2's knockout bar is 0.28, not 0.35. The error inflated the apparent depth of the BCL11B deficit and erased the small POU3F2 recovery. The proposition is unchanged: it rests on the drawn WT-versus-W-AAV brackets on BCL11B and RELN, which the audit confirmed.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "audit_file": "disease-models/wwox/research/page_adjudications/locator_audit_34268881_reread_20261025.md",
+      "audited_on": "2026-10-25",
+      "note": "Values defect only; the panel identity, the brackets and the proposition were SUPPORTED. Values re-measured here against the panel's own 0-to-8 ticks before writing."
+     }
     }
    },
    {
@@ -1019,6 +1061,17 @@
    "reread_reason": "new_question_outside_prior_coverage",
    "prior_receipt": "FTR-20261004-34268881-07",
    "what_changed": "Appended entries 60-67: the Figure 4D Wnt-target qPCR panel, which no prior entry had recorded, read at 200 ppi from the page-8 embedded raster — its three-genotype design, its thirteen gene values, its drawn brackets, and the body sentence that reports only the ligands; the two-group, statistic-free character of the Figure 4C heatmap; the fact that no Figure 4 panel pairs Wnt with maturation on the same rescued samples; Figure EV3D as the matching three-genotype maturation qPCR; and the layer/regional markers that do and do not appear in Tables EV1/EV2. No existing entry was altered and no existing entry was contradicted.",
+   "outputs": [
+    "disease-models/wwox/research/deepdive_manifests/PMID34268881.json"
+   ]
+  },
+  {
+   "receipt": "FTR-20261025-34268881-11",
+   "reader": "scientist (Scientist A), repair after blind audit 2026-10-25",
+   "context_policy": "QUESTION_DRIVEN",
+   "reread_reason": "receipt_correction",
+   "prior_receipt": "FTR-20261025-34268881-10",
+   "what_changed": "Repaired entries 60, 64 and 65 against the two adverse findings and the one wording finding of the blind audit at disease-models/wwox/research/page_adjudications/locator_audit_34268881_reread_20261025.md, each declared as contradicts_locator with the audit verdict stamped. Entry 60's headline no longer generalises over ligands its own numerals contradict (WNT2B and WNT8B rise under rescue); entry 64 names panel G and gives panel H's W-AAV arm as one batch; entry 65 no longer assumes a wild-type normalisation the EV3D panel does not apply. No value triple of entry 60 and no bracket of entry 61 changed: the audit reproduced all thirteen to within 0.04 and every bracket as claimed. No other entry was altered.",
    "outputs": [
     "disease-models/wwox/research/deepdive_manifests/PMID34268881.json"
    ]
