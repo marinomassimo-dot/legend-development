@@ -5,6 +5,23 @@ TRANSFORMATION NOTICE: in the ten files listed in `uuid_transform_manifest.tsv` 
 Exploratory, class level, not medical advice. LINCS output is NOT WWOX EVIDENCE. The dataset is a WWOX
 knockout versus wild-type organoid contrast; it is not a Q230P, child or rescue signature.
 
+## Whose data this is, and the one rule this folder earned
+
+**Source and credit.** GSE156243 is the deposit of **PMID 34268881** (Repudi et al., *EMBO Molecular
+Medicine* 2021, DOI `10.15252/emmm.202013610`), who built the organoid model, ran the sequencing and made
+the data and the differential-expression tables public. Every result in this folder rests on their work and
+is theirs to be credited for; cite that paper wherever a result derived here is used. The series is used
+under NCBI GEO's public-data terms, and nothing here redistributes the raw files (they stay in the
+gitignored `files/geo/GSE156243/`, by digest).
+
+🔴 **Read the paper's own manifest before analysing its deposit.** On 2026-10-24 an analysis of this folder
+reported the raised canonical Wnt readout as a new finding. It was not new: entry 31 of
+`deepdive_manifests/PMID34268881.json` already carried the same genes with the same values, read from the
+authors' Table EV1, and entry 32 carried the complementary negative. The analysis still added a null model
+and a confound analysis, but a targeted look at the manifest first would have aimed it better and cost
+almost nothing. A deposited dataset in LEGEND usually has a paper, and that paper usually has a manifest —
+`registry_records.py` and the manifest come before the data.
+
 Order of work (the order matters): `qualify.py` -> `validate_symbols.py` -> `marker_sets_declared.tsv` and
 `thresholds_and_query_declaration.md` (committed first, b2daa702) -> `build_sets.py` -> `sigcom_map_entities.py`
 -> `sigcom_query.py` (S1, S2, S3, S0) -> `sigcom_summarise.py` -> `kg_lookup/` (kg_thin_slice.py).
