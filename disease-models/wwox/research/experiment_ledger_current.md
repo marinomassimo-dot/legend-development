@@ -543,15 +543,24 @@ signalling change, or a transcriptional signature of a younger, differently-comp
 settled, the Wnt axis cannot be a drug target in either direction, because the two live candidate families
 (tankyrase inhibition, GSK3 inhibition) act on **opposite** signs and nothing selects between them.
 
-**Why the existing rescue arm cannot answer it.** This is the point that makes the experiment necessary, and
-it is an inference from two statements the 2026 organoid paper makes about itself: it localises the Wnt
-activation to **radial glia** ([[deepdive_manifests/PMID42397075.json]] entry 47, an enrichment analysis, not
-a pathway-activity assay), and it states that its AAV9 rescue *"rescued neuronal functional phenotypes
-without correcting RG abnormalities"* (entry 12). A rescue that does not reach the compartment the readout
-lives in cannot normalise that readout, so a null Wnt result under the existing rescue would be
-uninterpretable. The discriminator must be **cell-type-resolved**, or must use a perturbation that does reach
-the progenitor compartment — which in that paper is A51, and A51 is multi-target (entry 17), so it cannot
-attribute an effect to Wnt rather than MYC.
+**Why the existing rescue arm cannot answer it — amended 2026-10-25, the same day, on better evidence.**
+This record first argued that the rescue cannot reach the readout, because the 2026 paper localises Wnt
+activation to **radial glia** ([[deepdive_manifests/PMID42397075.json]] entry 47) and states its AAV9 rescue
+*"rescued neuronal functional phenotypes without correcting RG abnormalities"* (entry 12). A targeted reread
+of the 2021 paper that same day showed the real situation is different and worse for the simple reading:
+**the rescue does reach the Wnt readout, and what it does there is not normalisation.** Figure 4D of
+PMID 34268881 is a thirteen-gene qPCR panel with wild type, knockout and W-AAV rescue arms (n = 4/4/4, one
+batch, one-way ANOVA with Tukey). The **ligands and the receptor come back** — WNT1 4.1 → 1.35, WNT3
+2.65 → 1.0, WNT3A 1.65 → 0.2, WNT5A 3.1 → 1.95, ROR2 2.65 → 1.15 — while the **canonical beta-catenin
+effectors do not**: AXIN2 1.75 → 1.6 with no knockout-versus-rescue bracket, CCND1 unmoved, and LEF1
+2.3 → 2.6, TCF7 1.85 → 2.7, TCF4 1.7 → 3.45, each **above the knockout** and each carrying a
+wild-type-versus-rescue bracket (`**`, `**`, `***`). So a rescue arm cannot serve as the discriminator, not
+because it misses the compartment but because it moves the two halves of the pathway in **opposite
+directions** — and the rescue is explicitly supraphysiological (manifest entry 6), so the effector rise may
+be a property of ectopic expression rather than of restored WWOX. The discriminator must therefore be
+**cell-type-resolved at native expression**, and A51, the one perturbation in that work which does reach the
+progenitor compartment, is multi-target (2026 manifest entry 17) and cannot attribute an effect to Wnt
+rather than MYC.
 
 **DESIGN** — Single-cell or sorted-population RNA-seq of WWOX-deficient against isogenic wild-type organoids,
 at least three per genotype, reading **within matched cell types**: AXIN2, LEF1, NKD1 and APCDD1 together
