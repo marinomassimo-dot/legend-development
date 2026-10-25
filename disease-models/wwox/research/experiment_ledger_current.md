@@ -603,9 +603,14 @@ this comparison is the cheapest thing to check first, and it is checked before t
 **State of that check, 2026-10-25.** The dataset is **ArrayExpress / BioStudies E-MTAB-14792** (read from the
 paper's Data availability statement, [[deepdive_manifests/PMID42397075.json]] entry 43 holds the sentence but
 its extraction was cut at a line break before the number). It covers WWOX-KO, WOREE and SCAR12 organoids with
-the AAV9-hSynI rescue, which is exactly what a matched-population comparison needs. Measured today: the
-BioStudies API returns 403 to this host; the legacy ArrayExpress URL returns a page shell with no content; two
-guessed FTP paths returned 404. **Not retrieved and not read.** Nothing is concluded from it. The next step is
+the AAV9-hSynI rescue, which is exactly what a matched-population comparison needs. Measured today (and
+re-measured the same day, because the first reading looked like a tool failure and was not): the BioStudies API
+works from this host and returns 200 for a known study and for the neighbouring `E-MTAB-14791` and
+`E-MTAB-14793`; **only `E-MTAB-14792` returns 403**, which fits a study not yet publicly released or since
+removed, and the status code cannot tell which; a search by title words finds no WWOX organoid study of that
+accession; the legacy ArrayExpress URL returns an empty page shell; two guessed FTP paths returned 404.
+The retrieval gap is a missing tool, recorded in `drug_repurposing/tool_survey_20261022.md` § 2.
+**Not retrieved and not read.** Nothing is concluded from it. The next step is
 a listing of the study's files (their number and total size decide whether a download is a reasonable cost)
 from a browser or from the ArrayExpress file list, followed by a download of the processed count matrix and
 cell annotation only; the raw reads are not needed for this question. Do not guess further paths.
