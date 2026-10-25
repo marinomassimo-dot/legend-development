@@ -42,13 +42,20 @@ the single door even though the files are where the architecture puts them.
 
 ### The module (added 2026-10-23, `PLAN-DRUGREPURPOSING-MODULE-20261022`)
 
+**Current refresh, 2026-10-25:** 339 queries, 26 derived cards, 8 evidence-table abstentions; the
+[current handoff](../repurposing_batch_selection_20261025_module.md) has 8 AUDIT, 16 READ and
+2 REPLICATE rows, with no SELECT. READ includes evidence comparison and does not cancel
+complete-read receipts. All 26 cards still abstain from drug assertions. The [weekly intervention](../weekly_write_intervention_20261025.md)
+records the source-link repairs, audit limits and real adapter checks. The original module
+mandate is COMPLETE; its permission-mode pause was resumed on 2026-10-23.
+
 | Piece | Path | How to run it |
 |---|---|---|
 | Survey of external sources, with measured dry calls | [`tool_survey_20261022.md`](tool_survey_20261022.md) · [`tool_survey_20261022_drycalls.json`](tool_survey_20261022_drycalls.json) | read |
 | One-file adapters (Open Targets, ChEMBL, PubTator 3, openFDA, Orphadata, iLINCS) | `framework/adapters/`; convention `framework/protocols/repurposing_adapter_convention.md` | `python3 framework/scripts/repurposing_adapter.py selftest --live` (offline without the flag) · `python3 framework/scripts/repurposing_adapter.py list` · `… query <name> '<json>'` · `… add <name>` · `… remove <name>` |
 | Acknowledgements and licences, rendered from the adapters | [`ACKNOWLEDGEMENTS.md`](ACKNOWLEDGEMENTS.md) | `… repurposing_adapter.py acknowledgements --write` |
 | The join: queries from the registries, receipted evidence table, derived cards, measure-next | [`join/`](join/) | `python3 framework/scripts/repurposing_join.py run [--axis …] [--live]` (prints what changed) |
-| The feedback loop: one assignment row per card for the next batch | `research/repurposing_batch_selection_20261023_module.md` | `… repurposing_join.py handoff --date <YYYY-MM-DD> --write <file>` |
+| The feedback loop: one assignment row per card for the next batch | [`repurposing_batch_selection_20261025_module.md`](../repurposing_batch_selection_20261025_module.md) | `… repurposing_join.py handoff --date <YYYY-MM-DD> --write <file>` |
 | Proof on the three live axes, both directions | [`module_proof_20261023.md`](module_proof_20261023.md) | read |
 
 ### Stage of the capability as a whole (re-measured 2026-10-23)
@@ -64,7 +71,7 @@ the single door even though the files are where the architecture puts them.
 | P6 signature reversal | **block lifted, query INCONCLUSIVE** (`gse156243/`); the iLINCS adapter gives the signature census, the universe is still unresolved |
 | P7 gold-set evaluation | **not started**; no gold set exists and none was invented |
 | P8 context / delegation | **not started** |
-| Feedback into research | **done**: 26 rows for the next batch (21 SELECT, 3 REPLICATE, 2 AUDIT) rendered from the cards, never typed |
+| Feedback into research | **done; refreshed 2026-10-25**: 26 rows (8 AUDIT, 16 READ, 2 REPLICATE), rendered from the current cards; the initial 2026-10-23 measurement remains in the dated proof |
 
 Nothing in this capability has produced a therapeutic recommendation, and no output of it is a
 `DATO`. The clinical census is a retrieval record; the bridge's cards would be `IPOTESI`.

@@ -12,7 +12,7 @@ the older week's state. Research layer only; the four scientific current files a
 | Verified problem | Evidence | Smallest intervention | Observable validation |
 |---|---|---|---|
 | Three resolved source bindings never reached the map | Scientist C's [24 October record](module_linkage_and_replicate_scientist-c_20261024.md) §§1–2 identifies the primary sources; R-01 still reached only a safety Review, R-03 reached a context paper through CLAIM 028, R-07 named no source | Add three SOURCE_IDS rows to the map, retaining the safety-review label, the chloride-premise gap and the original scientific grades | R-01 reaches the two WWOX primary papers plus the Review; R-03 reaches the organoid primary plus the context paper; R-07 resolves through DL-MECH-035. No SELECT remains; false single-paper requests for R-01/R-03 disappear |
-| The committed join predates the latest locator repairs | Before the source-link fix, a rerun on the baseline changed 125 evidence tables and 13 cards; PMID 34268881 had 67 locators on disk but 59 in the snapshot | Refresh the existing four JSON outputs plus state, then render the dated handoff with the existing CLI | 339 queries, 339 evidence tables, 26 IPOTESI cards, 8 abstentions; repeat run changes zero query/evidence/card records |
+| The committed join predates the latest locator repairs | Before the source-link fix, a rerun on the baseline changed 125 evidence tables and 13 cards; PMID 34268881 had 67 locators on disk but 59 in the snapshot | Refresh the existing four JSON outputs plus state, render the dated handoff and route the module entry page to it | 339 queries, 339 evidence tables, 26 IPOTESI cards, 8 evidence-table abstentions; all cards NO_DRUG_ASSERTIONS_SUPPLIED; repeat run changes zero query/evidence/card records |
 | Preserved VPS history is reported as overdue task work | The hygiene report called backup/vps-main-2026-09-25 LAND_OVERDUE; the cleanup design record explicitly says to preserve it | Add a visible PRESERVED_BACKUP report class; retain ahead/behind, age, checkout and dirty observations; no ref is hidden or mutated | Regression constructs both divergent and already-landed backup refs, while ordinary overdue and deletion-ready task branches keep their classes |
 | Capability scouting requires both NONE and a compulsory upgrade | The skill's opening/closing procedure accepts CHANGE = NONE, but its middle demanded a non-null improvement and a micro-upgrade even without a gap | Delete the contradictory growth quota and example list; retain the existing gap-first procedure | Repository skill-package suite; review of the narrowed diff. No new control or framework |
 
@@ -34,14 +34,23 @@ command. No adapter, harness layer, scalar candidate score or mandatory registry
   findings. Receipt verification: 867 chained events, tail anchored. Session self-evaluation:
   PASS, with legacy declared gaps still printed. Optional ffmpeg is absent; the other six
   preflight tools are present. No video reading was attempted here.
+- The complete remote-baseline battery ran all 156 targets and reported one failure: the clone's
+  symbolic evidence link caused a workspace-escape refusal in test_paper_packet. Replaced the
+  symbolic link with the documented hard-link setup; all 98 tests in the affected suite then
+  passed (6 explicit skips). Classification: environment/setup condition, resolved. The boundary
+  validator correctly refused the escape and was not changed.
 - The generic skill-creator validator refuses an angle bracket in the existing skill description
   (the prose arrow). It refuses the untouched remote-baseline skill identically. Classification:
   existing validator/convention incompatibility, not a regression in this deletion; the
   repository's own skill suite passes. Neither check was weakened.
 - Remote Public release gate on the baseline is successful:
   [run 40206791592](https://github.com/marinomassimo-dot/legend-development/actions/runs/40206791592).
-  Full baseline/candidate batteries, exact-commit gate and final push results are recorded at
-  closure in the task record and final operator report; an incomplete run is not called green.
+  The full candidate battery on integrated commit
+  `82c3702fdd7740806ea6be46eb5acc813357a519` is **PASS WITH SKIPS (156 targets, 12 skipped)**,
+  1,659.1 seconds, zero suite failures. Skips cover filesystem behavior, missing font/corpus
+  artefacts, three stale nothing-acquired fixture cases, and absent runtime-hook/live-fixture
+  conditions. They are not called verified. Final publication is recorded in the task record
+  and operator report.
 
 ## C. Scientific queue and weekly evidence reconciliation
 
@@ -52,12 +61,12 @@ reading in this intervention. No full-text read receipt is claimed or generated 
 |---|---|---|
 | Confirmed scientific correction | [Module-batch audit](page_adjudications/locator_audit_module_batch_20261023.md): WPRE removal reduced expression; the earlier proposition contradicted its own lane values. The asserted absence of mTOR/autophagy mentions in PMID 34268881 was also false | Carry the repaired scope, not the old negative or expression claim |
 | Confirmed scientific correction | [Third repair audit](page_adjudications/locator_audit_module_repairs3_20261023.md): the low-dose weight conclusion applied to the quoted time point, not every age; the survival staircase and S8 arm set must be read separately | Dose, endpoint and time remain separate. No therapeutic window or human conclusion is inferred |
-| Confirmed scientific correction | [R4b/R2b audit](page_adjudications/locator_audit_R4b_R2b_20261022.md): trimethadione's effect is weaker in the mutant, not wholly lost; transcript comparisons carry partial mapping and small groups | DL-MECH-170/171/172 and FT-115 retain opposing directions and the UNRECONCILED design differences, as recorded in BATCH_20261019_012 |
+| Confirmed scientific correction | [R4b/R2b audit](page_adjudications/locator_audit_R4b_R2b_20261022.md): trimethadione's effect is weaker in the mutant, not wholly lost; transcript comparisons carry partial mapping and small groups | DL-MECH-170/171/172 retain their open statuses; DL-MECH-170/171 and retired FT-115 retain the UNRECONCILED transcript comparison. DL-MECH-172 remains NOT WWOX EVIDENCE, a methodological comparator, as recorded in BATCH_20261019_012 |
 | Engineering/provenance correction | Registry locator totals, paper identities, receipt repoints, absent-artefact declarations and regenerated reading/pathograph surfaces | Counts and provenance improve; they do not strengthen a mechanism. The current join now reflects the 67-entry organoid manifest |
 | False positive | Initial join code read the audit block at the wrong nesting level and emitted two AUDIT rows; [module proof](drug_repurposing/module_proof_20261023.md) §2 records the repair | Do not resurrect those historic rows. Today's 8 AUDIT rows are newly derived from current declarations |
 | False positive | [R1 audit](page_adjudications/locator_audit_R1_20261022.md): a quote absent from article XML was present in its declared supplementary DOCX | Surface mismatch, not an invented quotation; no scientific reversal on that basis |
 | Unresolved scientific question | [Third repair audit](page_adjudications/locator_audit_module_repairs3_20261023.md): ten supplementary entries remain UNVERIFIABLE because the published volume is absent. Later preprint reading is explicitly non-equivalent | Do not upgrade published-supplement coverage or overwrite the version distinction |
-| Unresolved scientific question | [Independent Wnt reanalysis](drug_repurposing/gse156243/independent_reanalysis_wnt_vs_maturation_20261025.md) cannot separate genotype from composition with six libraries; later same-laboratory rescue readouts differ by endpoint | Raised readouts do not select a therapeutic target. Preserve Wnt as a research question, including the current parked hypothesis and the non-equivalent preprint evidence |
+| Unresolved scientific question | [Independent Wnt reanalysis](drug_repurposing/gse156243/independent_reanalysis_wnt_vs_maturation_20261025.md) cannot separate genotype from composition with six libraries; later same-laboratory rescue readouts differ by endpoint | Raised readouts do not select a therapeutic target. Preserve Wnt as a research question, including parked HYP-20261025-09 and the non-equivalent preprint evidence |
 | Confirmed repair, subsequent to the requested week | [25 October organoid audit](page_adjudications/locator_audit_34268881_reread_20261025.md) found a generalised rescue headline and two reference-bar values wrong; the subsequent Scientist repair is on the fetched baseline | Consume repaired entries and retain their adverse-audit history; an adverse verdict followed by a repair without re-judgement remains unverified |
 
 The original module mandate is **COMPLETE**, 13/13 steps evidenced. Its PAUSE_HISTORY says the
@@ -124,9 +133,15 @@ research constraints, not an instruction to reinterpret the evidence or create a
 
 ## G. Main status
 
-Integration must re-fetch remote main, validate the resulting commit, push fast-forward through
-safe_push and verify remote equality. Final SHA, battery result, residual reds and temporary
-worktree removal are reported at closure. The preserved VPS ref is the sole intended divergence.
+Implementation commit `202fd96e54eddc569b4889a7f8799332f29e18ee` landed as
+`82c3702fdd7740806ea6be46eb5acc813357a519` after a fresh remote fetch. It is published on
+development main: exact-SHA gate PASS, zero blocks, safe_push PUBLISHED, ls-remote equality
+verified. The full candidate battery is PASS WITH SKIPS (156 targets, 12 skipped); no release
+reds remain. LINT retains 15 advisory findings; the unchanged generic skill-validator
+compatibility failure is outside the release inventory. The original task branch/worktree is
+removed. The final closure extends the implementation with documentation and task status only;
+its final SHA, remote CI and final cleanup are in the operator report. The preserved VPS ref is
+the sole intended divergence.
 
 ## H. Next three actions
 

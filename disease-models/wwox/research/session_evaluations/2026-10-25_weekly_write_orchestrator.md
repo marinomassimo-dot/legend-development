@@ -10,8 +10,9 @@ Remote-baseline session_self_eval: PASS; 867 receipts verify with their tail anc
 with zero BLOCK and 15 advisory links. Declared legacy gaps remain in the diagnostic output;
 PASS is structural, not proof of scientific truth. Per-study manifest validation is not a new
 reading obligation here. Targeted candidate battery: PASS, 6 suites (adapter, join, hygiene,
-skill packages, scientific consistency, tool routing). Final full-battery results belong to
-the task record and operator report; they are not presumed from these targeted results.
+skill packages, scientific consistency, tool routing). Full candidate battery on 82c3702fdd7740806ea6be46eb5acc813357a519: PASS WITH SKIPS,
+156 targets, 12 skipped, zero suite failures. The baseline setup failure and affected-suite
+rerun are recorded separately; no skipped obligation is presented as verified.
 
 ## Content diagnosis
 
@@ -72,11 +73,14 @@ new scientific review; the scientific judgements cited were produced by the alre
 Scientist/auditor work. Executable connector, regression and deterministic-rerun observations
 support the engineering verdict. They do not validate therapeutic efficacy.
 
-Six process incident classes: sandbox startup refusal (machine); root-cwd battery launch (self,
+Nine process incident classes: sandbox startup refusal (machine); root-cwd battery launch (self,
 interrupted); oversized/truncated reads (machine, narrowed and reread); scratch syntax errors
 (machine, corrected); generic skill-validator incompatibility (machine, reproduced on baseline);
 an unverified backup identifier in the draft report (self, replaced with Git's measured value
-before commit). The last is the only record-level near-error in this intervention. The
+before commit); an unenrolled report-check path (machine, corrected to the enrolled path); the
+clone evidence symlink escape (machine, changed to hard links, affected 98-test suite then passed);
+a second task_close invocation after its branch was already deleted (machine, used the safe
+clean-worktree removal command). The last is the only record-level near-error in this intervention. The
 contradictory skill quota was removed; no instruction now requires fabricating a micro-upgrade.
 
 Residuals: legacy declared reading gaps, actual audit debt, missing published-supplement bytes,
@@ -84,8 +88,8 @@ one-laboratory evidence and unresolved endpoint/context dependence. No new appro
 
 ```
 ATTRIBUTION_CENSUS
-incidents: 6
-machine: 4   blind_auditor: 0   peer: 0   self: 2
+incidents: 9
+machine: 7   blind_auditor: 0   peer: 0   self: 2
 severity_high: 1   of which self: 1
 undetected_known: 0
 ```
