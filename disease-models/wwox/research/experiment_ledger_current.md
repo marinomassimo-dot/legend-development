@@ -550,9 +550,10 @@ activation to **radial glia** ([[deepdive_manifests/PMID42397075.json]] entry 47
 of the 2021 paper that same day showed the real situation is different and worse for the simple reading:
 **the rescue does reach the Wnt readout, and what it does there is not normalisation.** Figure 4D of
 PMID 34268881 is a thirteen-gene qPCR panel with wild type, knockout and W-AAV rescue arms (n = 4/4/4, one
-batch, one-way ANOVA with Tukey). The **ligands and the receptor come back** — WNT1 4.1 → 1.35, WNT3
-2.65 → 1.0, WNT3A 1.65 → 0.2, WNT5A 3.1 → 1.95, ROR2 2.65 → 1.15 — while the **canonical beta-catenin
-effectors do not**: AXIN2 1.75 → 1.6 with no knockout-versus-rescue bracket, CCND1 unmoved, and LEF1
+batch, one-way ANOVA with Tukey). **Five upstream genes come back** — WNT1 4.1 → 1.35, WNT3 2.65 → 1.0, WNT3A 1.65 → 0.2, WNT5A
+3.1 → 1.95 and the receptor ROR2 2.65 → 1.15 — though not every ligand does, since WNT2B rises
+1.27 → 1.87 and WNT8B 2.23 → 2.48 away from wild type, while the **canonical beta-catenin
+effectors do not come back at all**: AXIN2 1.75 → 1.6 with no knockout-versus-rescue bracket, CCND1 unmoved, and LEF1
 2.3 → 2.6, TCF7 1.85 → 2.7, TCF4 1.7 → 3.45, each **above the knockout** and each carrying a
 wild-type-versus-rescue bracket (`**`, `**`, `***`). So a rescue arm cannot serve as the discriminator, not
 because it misses the compartment but because it moves the two halves of the pathway in **opposite
