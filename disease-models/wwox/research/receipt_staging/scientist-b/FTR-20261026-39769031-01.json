@@ -1,0 +1,45 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261026-39769031-01",
+ "study_id": {
+  "pmid": "39769031",
+  "doi": "10.3390/ijms252413266"
+ },
+ "event_at": "2026-10-26T22:14:44Z",
+ "analysis_at": "2026-10-26T22:14:44Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-b (Scientist B), package P2a (LDH precedent, Sada 2015 and stiripentol analogues), task branch task/sci-b-p2a-sada2015, dispatched by the Orchestrator; context_policy QUESTION_DRIVEN (the reader held the ChEMBL measure of 2026-10-26 before reading). The 2015 target paper (PMID 25792327) could not be acquired lawfully (closed access in Europe PMC, OpenAlex, Semantic Scholar and the publisher; recorded in the operator PDF wishlist), so this receipt covers a different, open-access paper: the 2024 enzyme paper that re-measures stiripentol and synthesises analogues. Route: Europe PMC / NCBI efetch JATS body via pmc_bucket_fetch.py (PMC11675970), figures and the supplement zip from the PMC open-data bucket. Staged for the integrator, not appended.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID39769031_RicoMolina2024_PMC_r2.xml",
+ "source_fingerprint": "3824c6b26bbb37c6013c70820edc94a85e3a5aa2634c0f3bfb41cafbc7f36395",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "not_present",
+  "limitations": "not_present",
+  "supplementary": "captions_only",
+  "references": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID39769031.json",
+  "disease-models/wwox/research/drug_repurposing/sada_ldh_precedent_p2a_20261026.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261026-SCIENTIST-B-SADA-LDH-01.md",
+  "disease-models/wwox/research/drug_repurposing/cards/E02_ldh_inhibition.card.json"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "manifest",
+  "Whole JATS body read section by section (Introduction, Results and Discussion 2.1 to 2.4, Materials and Methods 3.1 to 3.10, Conclusions). The article has no separate Discussion or Limitations section (Results and Discussion are combined), hence not_present.",
+  "Figures 1 to 4 and Schemes 1 to 4 opened as images (structures and ECD spectra, chemistry only); Table 2 read from the XML and checked against the supplement; Supplementary Figures S65 to S67 (page 44 of the supplement) opened as a 110 dpi page render; S68 to S74 and the other supplement pages (NMR, HRMS, chiral HPLC, DFT conformers) read at caption level only, hence supplementary captions_only.",
+  "The reference list was consulted for references 8, 24 to 28, 33, 59 and 60 only; not read as a whole (references not_read).",
+  "Finding of the reading: stiripentol was measured at one concentration only (about a tenth inhibition of recombinant human LDHA; enantiomers about a third in the same assay), its IC50 entry is a bound, and the supplement has dose-response curves for the analogues only; the paper describes the 2015 report's number (about 40 percent at the same concentration) at second hand.",
+  "Before reading, the reader held the repository's ChEMBL stiripentol rows and E02 card (context QUESTION_DRIVEN) and had run registry_records.py get for the 2015 PMID, which returned only surface preambles (an empty answer to that query, not a statement that the laboratory does not know the paper). The comparison with those records is in sada_ldh_precedent_p2a_20261026.md, written after the observations."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}
