@@ -166,6 +166,7 @@ Run everything as `python3 <path> --help` first. Paths are repo-relative.
 | land a committed, verified task, detach its worktree, delete its branch (one cut from `origin/main` included), and name on stderr (`PUSH_NOTE`) any unpublished commit on main a push would also carry that the task did not make | `framework/scripts/task_close.py` |
 | what is not on `main` and how old it is — the weekly §21e sweep | `framework/scripts/branch_hygiene.py` |
 | local commits or dirty worktrees absent from development `main` — daily, read-only report | `framework/scripts/daily_push_check.py` |
+| what changed outside today — releases, licences, database versions, dataset accessibility, new WWOX papers — as cheap diffs against a cache in `~/.local/state/legend/`; silent when nothing changed (daily cron at 05:20 host/UTC; `--append-log` lands pending entries in the capability-scout log) | `framework/scripts/scout_daily.py` |
 | push a ref only when the gate PASSes on the EXACT commit being pushed | `framework/scripts/safe_push.py` |
 | wait for a job to finish — by PID, `PID:START`, pid file or completion file, **never by name**, and always with a `--timeout` | `framework/scripts/process_wait.py` |
 | refuse to derive a surface whose inputs are uncommitted, or state why it is safe | `framework/scripts/derived_inputs.py` |
