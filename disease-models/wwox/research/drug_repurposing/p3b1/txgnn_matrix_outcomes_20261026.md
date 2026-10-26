@@ -29,7 +29,7 @@ Neither outcome is an exclusion: both resources stay reachable for the reopening
 | Package | PyPI `TxGNN` 0.0.3 (MIT): `uv pip install` fails at the sdist build (`requirements.txt` missing from the sdist) | MEASURED |
 | Stack it demands | Python 3.8, DGL 0.5.2 (README). On this host (Python 3.12) DGL 0.5.2 has wheels only for `cp36m/cp37m/cp38`; no torch, no GPU (`nvidia-smi` absent), 4 CPU, 15 GB RAM | MEASURED |
 | Knowledge graph | PrimeKG, Harvard Dataverse (dataset record, version 2.1), file `kg.csv` — **the md5 of the stream read here equals the md5 Dataverse publishes** (`aac8191d4fbc5bf09cdf8c3c78b4e75f`), and equals the md5 of the file the TxGNN code downloads | MEASURED |
-| Pretrained weights | one Google Drive zip, about 199 MiB, reachable without login: 55 checkpoints = 11 splits × 5 seeds (`complex_disease`, `random`, nine disease-area splits). **There is no `full_graph` checkpoint**, which the README says is the setting for deployment on a specific disease | MEASURED (zip central directory read by range request, nothing extracted) |
+| Pretrained weights | the main README also links a second "example" weight file (Drive, not examined). The reproduce note links one Google Drive zip, about 199 MiB, reachable without login: 55 checkpoints = 11 splits × 5 seeds (`complex_disease`, `random`, nine disease-area splits). **There is no `full_graph` checkpoint**, which the README says is the setting for deployment on a specific disease | MEASURED (zip central directory read by range request, nothing extracted) |
 | Explorer | `txgnn.org` answered **HTTP 503** on 2026-10-26 (project page still points to it) | MEASURED |
 
 ### 1.2 Licences, kept separate
@@ -50,7 +50,7 @@ Neither outcome is an exclusion: both resources stay reachable for the reopening
 | **DEE28 = WOREE** (MONDO 0014533) | **only merged**: it is one of 87 member ids of the grouped node `developmental and epileptic encephalopathy` (node 28005) | The graph TxGNN trains on has no WOREE-specific disease node. The group carries `indication` edges to cannabidiol, stiripentol, vigabatrin and `off-label use` edges to eight corticosteroid/ACTH drugs, and a `disease_protein` edge to WWOX. A TxGNN output "for DEE28" is therefore an output for a 87-disease group |
 | **SCAR12** (MONDO 0013687) | **only merged**: one of 18 member ids of `autosomal recessive spinocerebellar ataxia`; no drug relation | same |
 | undetermined early-onset EE (MONDO 0018614) | own node (33095), no drug relation, no WWOX edge | |
-| the word "WOREE" | **absent** as a node name (also absent from the repository's `kg_grouped_diseases.csv`) | a synonym, not a node |
+| the word "WOREE" | **absent** as a node name (also absent from `txgnn/data_splits/kg_grouped_diseases.csv` at the pinned commit, and from the Dataverse PrimeKG `kg_grouped_diseases.tab`) | a synonym, not a node |
 | Neither group node is in any of the nine disease-area test lists (`data/disease_files`) | | they would be held out only by the random `complex_disease` split |
 | **PDK1-4** (5163-5166) | yes | `drug_protein` rows: PDK1 4, PDK2 6, PDK3 4, PDK4 4 (rows are directed; halve for edges). Dichloroacetate is linked to PDK1 |
 | **LDHA / LDHB / LDHC / PDHA1 / PDHB** | yes | LDHA 14, LDHB 10 drug rows (oxamic acid, stiripentol among them) |
@@ -65,7 +65,7 @@ separate WOREE from the other 86 DEEs.
 What was possible and done: identifier, coverage, licence and reproducibility audit above (no model run).
 
 What was **not** possible, and the missing proof:
-1. **No published predictions to compare.** The only public carrier of per-disease predictions is the explorer, offline.
+1. **No published predictions to compare.** The only public carrier of per-disease predictions is the explorer; `txgnn.org` returned 503 when tried here, while a verifier's single attempt got no HTTP response (curl 000) — the failure mode is uncertain, the conclusion (no retrievable per-disease predictions) is unchanged.
    The repository ships no prediction table. The paper's metrics were computed on held-out disease areas, none of which
    contains the DEE or AR-SCA group.
 2. **Checkpoints cannot answer the WOREE question.** They are evaluation-split models (the diseases of the test area
@@ -75,8 +75,8 @@ What was **not** possible, and the missing proof:
    in disk but a separate environment this task was told not to build.
 4. **The published metric is itself contested by third parties** (`THIRD-PARTY`, issues open on 2026-10-26, not
    reproduced here): issue 29 reports mean AUPRC 0.032 against the published 0.437 with the released checkpoints;
-   issues 25 and 23 report values 0.1-0.2 lower than the paper's and inconsistent between runs; issues 18 and 17 report
-   output that does not match the explorer. A reply in the thread suggests the paper's AUPRC pairs each positive with one
+   issues 25 and 23 report values 0.1-0.2 lower than the paper's and inconsistent between runs; issue 18 reports
+   output that does not match the explorer (its author later wrote that `full_graph` fixed his case; a later commenter says it did not for them); issue 17 is about access to zero-shot embeddings, not an explorer mismatch. A reply in the thread suggests the paper's AUPRC pairs each positive with one
    random negative; that is the reply's speculation, unverified.
 5. **No WOREE performance can be assumed from general results**: no evaluation of TxGNN on WWOX-DEE exists in what was
    found, and the structure in 1.3 says why it would not be a fair test of gene-level information.
@@ -144,7 +144,7 @@ raw treat score.
 | DEE28 vs genetic-DEE parent | 0.83 | 32 |
 | DEE28 vs SCAR12 | 0.82 | 29 |
 | DEE28 vs undetermined EOEE | 0.79 | 29 |
-| **baseline: DEE28 vs 86 other disease nodes** (deterministic hash sample, not matched) | median 0.66 (min 0.13, max 0.81) | median 8 (max 26) |
+| **baseline: DEE28 vs 86 other disease nodes** (deterministic hash sample of 100 nodes, keeping the 86 that share at least 1 000 drugs with the WOREE node; not matched) | median 0.66 (min 0.13, max 0.81) | median 8 (max 26) |
 
 `INFERENCE`, stated with its limit: the WOREE node's ordering matches its neurological siblings more closely than a
 typical unrelated node (top-50 overlap 29-32 against a median of 8), but it matches them about as well as they match each
@@ -194,7 +194,7 @@ two hours of which most was waiting on a rate-limited, unstable service. Nothing
 2. `drug-list` and `disease-list` are declared CC BY 4.0; `kg-nodes` / `kg-edges` carry the pass-through `LICENSE.md`.
 3. PrimeKG record on Dataverse declares CC0 1.0 and the PrimeKG README disclaims it for the dataset content; `kg.csv` md5 is
    `aac8191d4fbc5bf09cdf8c3c78b4e75f` on the record and from the stream.
-4. In `kg_grouped_diseases.csv` of the TxGNN commit and in PrimeKG `nodes.tab`, MONDO ids 14533 and 13687 are members of the
+4. In the Dataverse PrimeKG file `kg_grouped_diseases.tab` (which lists 14533 and 13687 as disease rows with their group names; a same-named `.csv` also sits at `txgnn/data_splits/` in the TxGNN commit, path in its git tree, which the first verifier did not find) and in PrimeKG `nodes.tab`, MONDO ids 14533 and 13687 are members of the
    grouped nodes 28005 and 27803; there is no node named WOREE; WWOX is node 602 with 0 `drug_protein` rows.
 5. `MONDO:0014533` and `MONDO:0013687` exist in `disease-list`; the five-node extract has no known-positive flag on the first
    four nodes and has 1 748 rows each in the shards of commit `d6b121bf…`; the Spearman / top-50 figures in 2.3 (recompute
