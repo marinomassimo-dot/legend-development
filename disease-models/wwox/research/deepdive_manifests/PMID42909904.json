@@ -1,0 +1,1090 @@
+{
+ "schema_version": 2,
+ "pmid": "42909904",
+ "doi": "10.1093/braincomms/fcag385",
+ "receipt": "FTR-20261026-42909904-01",
+ "landing": [
+  "PAPER 158",
+  "DL-MECH-020",
+  "DL-BIO-008",
+  "CLAIM 025",
+  "PMID42909904.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261026-SCIENTIST-A-LUCASCLARKE-01.md"
+ ],
+ "coverage_status": "complete_fulltext_read",
+ "declared_reading_gap": "No gap in the article text, the eight main figures, the eight supplementary figures, the supplementary methods or the seven supplementary tables read here. Not retrieved: the MetaboLights deposit MTBLS12344 (full 85 and 86 annotated metabolite tables, including any pyruvate row) and the ArrayExpress deposits E-MTAB-14948 and E-MTAB-14949; the supplementary tables carry only the significant metabolites, so whether pyruvate was tested is not established from the supplement. Table 2 (sleep correlation matrix) was read only for presence, not row by row.",
+ "skills_considered": [
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "The task was a bounded full-text reading with a fixed question list; no commit candidate pipeline was requested beyond the staged candidate."
+  },
+  {
+   "skill": "pdf",
+   "used": true,
+   "reason": "The 19-page typeset article was read page range by page range and every figure page was rendered at 300 dpi because the rank tool flagged vector-figure pages."
+  },
+  {
+   "skill": "docx",
+   "used": true,
+   "reason": "The supplementary Word file was unpacked, its text read and its eight embedded figures extracted and viewed."
+  },
+  {
+   "skill": "xlsx",
+   "used": true,
+   "reason": "The supplementary workbook was flattened with the repository xlsx_to_text tool and the metabolite and transcript rows were read."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 9,
+  "publications_on_gene": 1,
+  "counts_measured": "PubMed counts measured on 2026-10-26 through framework/scripts/eutils.py: Lucas-Clarke HJ as author 1 record; Smith GA with Cardiff and (Drosophila or amyloid) 9 records; Smith GA with Cardiff and Wwox 1 record (this paper).",
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "Alzheimer's disease and Drosophila genetics laboratory (Cardiff UK Dementia Research Institute; Bristol fly sleep group) first encounter with Wwox; strong for fly genetics, sleep and omics design, adjacent to the WWOX-DEE disease context.",
+  "note": "The correspondence group is not a WWOX developmental-encephalopathy group; the Wwox links cited come from the cancer and Drosophila WWOX literature."
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {
+    "query": "Wwox[Title/Abstract] AND Drosophila[Title/Abstract]",
+    "route": "PubMed esearch through framework/scripts/eutils.py, 2026-10-26",
+    "count": 12
+   },
+   {
+    "query": "(WWOX or Wwox) AND Alzheimer*, Title/Abstract",
+    "route": "PubMed esearch through framework/scripts/eutils.py, 2026-10-26",
+    "count": 27
+   },
+   {
+    "query": "Wwox AND (lactate or Ldh or lactate dehydrogenase), Title/Abstract",
+    "route": "PubMed esearch through framework/scripts/eutils.py, 2026-10-26",
+    "count": 3
+   }
+  ],
+  "note": "Thin literature: 12 Drosophila Wwox records, 27 WWOX-and-Alzheimer records and 3 Wwox-and-lactate records in PubMed Title/Abstract on 2026-10-26."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 71,
+  "gene_direct_refs_in_source": [
+   "Sze et al. 2004",
+   "Chang and Chang 2015",
+   "Sze et al. 2015",
+   "Wang et al. 2012",
+   "Abu-Remaileh et al. 2015",
+   "O'Keefe et al. 2011",
+   "Choo et al. 2015",
+   "Bednarek et al. 2001",
+   "Hsu et al.",
+   "Abu-Remaileh and Aqeilan 2014",
+   "Marcelo Aldaz and Hussain 2020",
+   "O'Keefe et al. 2015",
+   "Huang and Chang 2018",
+   "Kim et al. 2025",
+   "Baryla et al. 2022"
+  ],
+  "enumeration_method": "All 71 references were counted from the structured XML (71 ref elements) and the numbered list on PDF pages 18 to 19 was read, and the WWOX-direct and the Ldh/Atf4/lactate antecedents were listed.",
+  "resolved": [
+   {
+    "scope": "Niccoli et al. 2021 (Atf4-dependent Ldh activation as a protective response to amyloid toxicity in Drosophila), the antecedent of the Atf4 and Ldh route",
+    "status": "cited, not read in this reading",
+    "result": "The paper cites it for Atf4-dependent, sima-independent Ldh rise in Abeta42 flies; its description as protective is the authors' own contrast with their Ldh knockdown result."
+   }
+  ],
+  "queued": [],
+  "dedup_performed": "PMID 42909904 was checked through paper_packet.py packet before reading: no prior receipt, no manifest, no peer claim; the bioRxiv preprint PPR1015434 was kept as a separate identity.",
+  "reason": "References were enumerated and the Ldh antecedent identified; the hop to Niccoli 2021 is a named follow-up, not a debt on this reading."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Which LEGEND records rest on the preprint PPR1015434 or on the Wwox-Atf4-Ldh-lactate chain (PAPER 158, LIT-0447, DL-MECH-020, DL-BIO-008, CLAIM 025), and do the published text, supplementary tables and figures support their wording?",
+  "hits": 5,
+  "finding": "The preprint records carry two statements that the published article does not support as written: two independent RNAi constructs (the published assay rows use only the TRiP line) and OE-lowers-L-methionine (published: reduction only in the LacZ background, unaltered with Abeta42). The registry's HIF1alpha-independent wording for CLAIM 025 is the registry's, the paper says Atf4 rather than sima primarily, on one reporter pair. DL-MECH-020's HIF1A-PDK-PDH chain is untested here (no PDK, PDH, pyruvate or TCA flux), and DL-BIO-008 is neither supported nor contradicted because lactate rises only with Wwox reduction plus Abeta42."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-26",
+  "route": "PubMed ESummary through framework/scripts/eutils.py; dependency_integrity.py screen --doi --manifest-block",
+  "result": "ESummary for the PMID lists no CommentsCorrections entry (no erratum, correction, retraction or expression of concern); the 71-reference list screened clean (63 with DOI screened, 8 without DOI unscreenable).",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "cache",
+   "references_declared": 71,
+   "references_screened": 63,
+   "references_with_doi": 63,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 5,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 8
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42909904_LucasClarke2026_BrainComms_fcag385.pdf",
+   "sha256": "abab045e2403c2781a25ca7f2146de056fab081e4158e86a337066cfac8c4e1a",
+   "kind": "article_binary",
+   "note": "Typeset article PDF supplied by the operator (corrected version dated 2026-10-21; footer shows download on 26 October 2026), 19 pages; figure pages rendered at 300 dpi for inspection.",
+   "acquisition_recipe": {
+    "no_recipe": "Operator-supplied PDF placed in files/fulltext by the operator; no network route was run by this reader for the PDF itself."
+   }
+  },
+  {
+   "path": "files/fulltext/PMID42909904_PMC13684411.xml",
+   "sha256": "4e571e24a85342f2a72d92a18df1acdebd9efa89dcdf5754c092078d112a23a4",
+   "kind": "article_text",
+   "note": "Europe PMC full-text XML of the open-access article (PMC13684411), JATS; body-text locators are matched against this structured surface and checked to agree with the PDF text.",
+   "acquisition_recipe": {
+    "derived": false,
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13684411/fullTextXML",
+    "http_method": "GET",
+    "tier": "Europe PMC fullTextXML",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-26",
+    "result_sha256": "4e571e24a85342f2a72d92a18df1acdebd9efa89dcdf5754c092078d112a23a4"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID42909904_supplement/PMC13684411_supplementaryFiles.zip",
+   "sha256": "e26c35ea9ceafb2a345cf06fd913e18b8464329249b199270eea3fd8f8cd0cdd",
+   "kind": "supplement_binary",
+   "note": "Europe PMC supplementaryFiles package for PMC13684411: eight webp and eight gif figure files, graphical abstract, and a nested supplementary_data zip holding the two files below.",
+   "acquisition_recipe": {
+    "derived": false,
+    "resolved_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13684411/supplementaryFiles",
+    "http_method": "GET",
+    "tier": "Europe PMC supplementaryFiles",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-26",
+    "result_sha256": "e26c35ea9ceafb2a345cf06fd913e18b8464329249b199270eea3fd8f8cd0cdd"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID42909904_supplement/Supplementary_material.docx",
+   "sha256": "3b8328e3fbd3eca7fcba206df9c3802cec9a129a493a26598dba08e73f8b0702",
+   "kind": "supplement_text",
+   "note": "Supplementary_material.docx: supplementary methods (qPCR, Xbp1 imaging, ATP, roGFP2-Orp1), Supplementary Figures 1-8 as embedded images with legends. Images image1 to image8 were extracted and inspected.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID42909904_supplement/PMC13684411_supplementaryFiles.zip",
+    "extractor": {
+     "name": "python zipfile nested extraction",
+     "version": "python3 standard library, 2026-10-26",
+     "call": "zipfile extract of fcag385_supplementary_data.zip from the supplementaryFiles package, then Supplementary_material.docx unchanged"
+    },
+    "acquired_on": "2026-10-26",
+    "result_sha256": "3b8328e3fbd3eca7fcba206df9c3802cec9a129a493a26598dba08e73f8b0702"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID42909904_supplement/Supplementary_tables.xlsx",
+   "sha256": "5c484ef3a679fc2e1eea6c17903cb5cbc6863068fb7ec7ca71c6911f5e32a347",
+   "kind": "table",
+   "note": "Supplementary_tables.xlsx: Supplementary Tables 1A, 1B, 2 to 7 (stocks, assay genotypes, sleep statistics, knockdown and overexpression transcriptome and metabolome tables).",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID42909904_supplement/PMC13684411_supplementaryFiles.zip",
+    "extractor": {
+     "name": "python zipfile nested extraction",
+     "version": "python3 standard library, 2026-10-26",
+     "call": "zipfile extract of fcag385_supplementary_data.zip from the supplementaryFiles package, then Supplementary_tables.xlsx unchanged"
+    },
+    "acquired_on": "2026-10-26",
+    "result_sha256": "5c484ef3a679fc2e1eea6c17903cb5cbc6863068fb7ec7ca71c6911f5e32a347"
+   }
+  },
+  {
+   "path": "files/fulltext/PMID42909904_supplement/Supplementary_tables_derived.txt",
+   "sha256": "24859698ebb98a90b738970c91227a74b1348a9002cee003e9e1d684d9b029db",
+   "kind": "supplement_text",
+   "note": "Supplementary_tables.xlsx flattened to tab-separated text with framework/scripts/xlsx_to_text.py so that table rows can be quote-verified; the workbook stays the evidentiary surface.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/fulltext/PMID42909904_supplement/Supplementary_tables.xlsx",
+    "extractor": {
+     "name": "framework/scripts/xlsx_to_text.py",
+     "version": "repository tool at commit 1a5ece5e, 2026-10-26",
+     "call": "python3 -I -B framework/scripts/xlsx_to_text.py --max-rows 100000 Supplementary_tables.xlsx"
+    },
+    "acquired_on": "2026-10-26",
+    "result_sha256": "24859698ebb98a90b738970c91227a74b1348a9002cee003e9e1d684d9b029db"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Structured Europe PMC XML, typeset PDF, supplementary docx and xlsx are local and fingerprinted; all main figure pages were rendered at 300 dpi and Supplementary Figures 1, 3, 4, 5, 6, 7, 8 and 2 were inspected as extracted images.",
+  "abstract_anchoring_waived": "No textual locator is anchored to the abstract; the only abstract-level statements are cross-checked in the Introduction and Discussion.",
+  "entries": [
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: The authors state the Drosophila Wwox gene shares 65% sequence similarity with human WWOX and scores 16/16 on DIOPT; the relation is a sequence-similarity and ortholog-prediction statement, not a functional equivalence test.",
+    "snippet": "Drosophila Wwox sharing 65% sequence similarity with human WWOX, and a score of 16/16 using the DRC Integrative Ortholog Prediction Tool",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Results, first subsection, ortholog statement",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Wwox mRNA was detectable in both neuronal and glial cell types of the ageing fly brain by single-cell RNA-seq, as the authors state; the claim is detectability, not level.",
+    "snippet": "Wwox expression was detectable in both neuronal and glial cell-types (Fig. 1A)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Results, first subsection",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Figure 1A: the clusters with the highest percentage of cells expressing Wwox are glial (chiasm glia about 37 percent, ensheathing glia 2 about 28, cortex glia about 25, subperineurial glia 2 and ensheathing glia 1 about 22), then peptidergic neurons about 17 and dorsal clock neurons DN1 about 17; most neuronal clusters lie below 10 percent and no cluster exceeds about 40 percent. Values read from the bar axis; the dataset is 57,000 cells from N = 40 brains.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 1A: the clusters with the highest percentage of cells expressing Wwox are glial (chiasm glia about 37 percent, ensheathing glia 2 about 28, cortex glia about 25, subperineurial glia 2 and ensheathing glia 1 about 22), then peptidergic neurons about 17 and dorsal clock neurons DN1 about 17; most neuronal clusters lie below 10 percent and no cluster exceeds about 40 percent. Values read from the bar axis; the dataset is 57,000 cells from N = 40 brains.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID42909904_LucasClarke2026_BrainComms_fcag385.pdf",
+    "anchor": "Figure 1A, page 6 rendered at 300 dpi",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Neuronal knockdown used elav-GAL4 and glial knockdown repo-GAL4 with one Wwox RNAi line (TRiP HMC03298, BDSC 51747); a second Wwox RNAi line (VDRC KK) is listed in the stock table but appears in no assay row of the assay table.",
+    "snippet": "y[1]v[1];P{y[+t7.7] v[+t1.8]=TRiP.HMC03298}attP2\tWwoxTRiP RNAi\tBDSC 51747",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID42909904_supplement/Supplementary_tables_derived.txt",
+    "anchor": "Supplementary Table 1A, stock list",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Wwox knockdown and overexpression were achieved with RNAi and CRISPRa; the authors state the aim was to mimic subtle expression changes seen in Alzheimer's disease, not loss of function.",
+    "snippet": "we expressed a Wwox targeted RNAi construct under control of elav-GAL4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Results, first subsection",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: The authors report that CRISPRa gave a 2-fold increase in Wwox mRNA in the fly head (Supplementary Fig. 1); the knockdown efficiency of the RNAi is shown in the same supplementary figure.",
+    "snippet": "This was sufficient to achieve 2-fold increase in Wwox mRNA levels in the fly head (Supplementary Fig. 1)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Results, Upregulation of neuronal Wwox rescues Abeta42 related pathology",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Supplementary Figure 1: Wwox mRNA relative to RNAi control is about 0.55 after neuronal Wwox TRiP knockdown (three points, about 0.35 to 0.7, p<0.001) and about 1.77 after CRISPRa (three points, about 1.5 to 2.0, p<0.001); N = 3 replicates of 15 heads, newly eclosed females.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Supplementary Figure 1: Wwox mRNA relative to RNAi control is about 0.55 after neuronal Wwox TRiP knockdown (three points, about 0.35 to 0.7, p<0.001) and about 1.77 after CRISPRa (three points, about 1.5 to 2.0, p<0.001); N = 3 replicates of 15 heads, newly eclosed females.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID42909904_supplement/Supplementary_material.docx",
+    "anchor": "Supplementary Figure 1, image1.png embedded in the supplementary docx",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: The Abeta42 model is a secreted, aggregation-prone human Abeta42 carrying the Arctic mutation (E693G), expressed in neurons; it is a transgenic overexpression model and the readouts without Abeta42 use a LacZ control.",
+    "snippet": "neuronal overexpression of aggregate-prone human Aβ42 harbouring the Arctic mutation (E693G)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Results, Wwox knockdown modifies Abeta42-induced phenotypes",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Without Abeta42, neuronal Wwox knockdown shortened lifespan in females (median 57 versus 42 days, N = 91 to 105, chi-square 30.76, P < 0.0001).",
+    "snippet": "median lifespans = 57 and 42 days respectively, N = 91–105, χ2 = 30.76 P < 0.0001",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Results, Wwox knockdown in neurons or glia shortens lifespan",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Without Abeta42, glial Wwox knockdown shortened lifespan only mildly (median 70 versus 74 days, N = 98 to 101, P = 0.0003).",
+    "snippet": "median lifespan = 70 versus 74 days, N = 98–101, χ2 = 13.07 P = 0.0003",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Results, Wwox knockdown in neurons or glia shortens lifespan",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Without Abeta42, startle-induced climbing was unaffected by neuronal Wwox knockdown (genotype F = 0.018, P = 0.8942) or glial knockdown (F = 3.830, P = 0.0820) up to 28 days.",
+    "snippet": "unaffected by neuronal knockdown of Wwox (F = 0.018, P = 0.8942) or the interaction between the two (F = 2.316, P = 0.0982, Fig. 1C, N = 3–6). Glial knockdown of Wwox caused a reduction in lifespan in comparison to control (median lifespan = 70 versus 74 days, N = 98–101, χ2 = 13.07 P = 0.0003, Fig. 1D), albeit milder than that of neuronal knockdown. Like neuronal knockdown, age significantly worsened startle-induced locomotor activity (F = 7.454, P = 0.0033), however glial knockdown of Wwox had no effect (F = 3.830, P = 0.0820), nor was there an interaction (F = 0.7327, P = 0.5142, Fig. 1E, N = 4–6). These results suggest that both neuronal and glial Wwox play a role in longevity but are dispensable for startle-induced locomotor function up to 28",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Results, Wwox knockdown in neurons or glia shortens lifespan",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Without Abeta42, neuronal Wwox knockdown increased sleep pressure and mean sleep episode duration and reduced activity per time awake in male flies; this is a sleep result without any amyloid.",
+    "snippet": "increased sleep pressure (t = 7.146, Padj < 0.0001, Fig. 2B)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Results, Wwox knockdown in neurons or glia decreases wakefulness and increases sleep",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Without Abeta42, pan-glial Wwox knockdown also reduced activity per time awake and increased sleep pressure (light t = 7.268, Padj < 0.0001; dark t = 2.870, Padj = 0.0129) and mean sleep episode duration.",
+    "snippet": "increased sleep pressure in the light and dark phases (t = 7.268 Padj < 0.0001, t = 2.870 Padj = 0.0129, respectively",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Results, sleep section",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Sleep experiments used male flies aged 0 to 6 days (N = 31 to 80 per genotype), whereas lifespan, climbing and all Abeta42 work used females.",
+    "snippet": "rhythmsMales (0–6 days, Supplementary Table 1B) were individually housed within Drosophila activity monitors (DAM, Trikinetics Inc) and subjected to a 12-h light:dark (LD) cycle at 25°C for 5 days, followed by 5 days of 24-h darkness (DD). For each run (>2 runs), N = 31–80",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Methods, Assessment of sleep and circadian rhythms",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Neuronal or glial Wwox knockdown left circadian rhythmicity and period unchanged (neuronal RS t = 0.1766, P = 0.8606; glial RS P = 0.2955); a clock-neuron (tim-GAL4) knockdown slightly lengthened period.",
+    "snippet": "After neuronal knockdown of Wwox, all flies remained strongly rhythmic (t = 0.1766, P = 0.8606, Fig. 2G, N = 17–34) with circadian periods comparable to control (U = 178, P = 0.8329, Fig. 2H and I, N = 12–31). Glial knockdown of Wwox had no effect on rhythmicity (t = 1.058, P = 0.2955,",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Results, sleep section",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Mitochondrial hydrogen peroxide (roGFP2-Orp1) was higher after neuronal Wwox knockdown (t = 3.221, P = 0.0047); the authors conclude that sleep may increase at least in part through ROS.",
+    "snippet": "utilizing the roGFP2-Orp1 reporter for mitochondrial hydrogen peroxide, we witnessed an increase in ROS after neuronal Wwox knockdown (t = 3.221, P = 0.0047",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Results, sleep section, ROS paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: The ROS measurement was made in wings: the ratiometric roGFP2-Orp1 reporter was imaged in day-7 female wings (N = 9-11), not in brain.",
+    "snippet": "Mitochondrial hydrogen peroxide levels were measured using the ratiometric UAS-roGFP2-Orp1 reporter. Drosophila wings from day 7 females (N = 9-11) were dissected and mounted onto microscope slides.",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID42909904_supplement/Supplementary_material.docx",
+    "anchor": "Supplementary Methods, H2O2 measurements through roGFP2-Orp1 imaging",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: In the Abeta42 background neuronal Wwox knockdown shortened lifespan further (median 41 versus 26 days, N = 90 to 99) with a Cox interaction (Z = 4.815, P < 0.0001), which the authors read as synergistic rather than additive.",
+    "snippet": "(median lifespan = 41 versus 26 days, χ2 = 103.7, Padj < 0.0001, Fig. 3A, N = 90–99). Cox-proportional hazard modelling of the effects revealed a significant interaction between Aβ42 overexpression and Wwox knockdown (Z = 4.815,",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Results, Wwox knockdown modifies Abeta42-induced phenotypes",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "Drosophila melanogaster adult female head or brain, neuronal Wwox RNAi with transgenic Abeta42 (Alzheimer's disease model)"
+    }
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: The authors infer from the Cox interaction that Wwox knockdown modulates amyloid toxicity directly; this is an interpretation of a statistical interaction on lifespan.",
+    "snippet": "indicating that the decrease in lifespan is not simply the additive effect of the two variables but synergistic and that Wwox knockdown is modulating amyloid toxicity directly",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Results, Wwox knockdown modifies Abeta42-induced phenotypes",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Neuronal Wwox knockdown lowered climbing in Abeta42 flies (genotype F = 12.51, P = 0.0019) and the authors report no significant age-by-genotype interaction (F = 0.3165, P = 0.8133, N = 3-5 vials).",
+    "snippet": "Wwox knockdown led to a significant reduction in locomotion (F = 12.51, P = 0.0019, Fig. 3B), climbing just ∼0.5 cm by day 21 (representative images available in Supplementary Fig. 3B). We found no significant interaction between age and genotype (F = 0.3165, P = 0.8133, Fig. 3B, N = 3–5",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Results, Wwox knockdown modifies Abeta42-induced phenotypes",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Figure 3A legend gives N = 45 to 68 individual flies for the lifespan panel whereas the text gives N = 90 to 99; the two counts disagree. Figure 3B: Abeta42 climbing falls from about 3.5 cm (control, day 7) and about 2.1 cm (knockdown) toward about 0.7 and 0.2 cm at day 28.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 3A legend gives N = 45 to 68 individual flies for the lifespan panel whereas the text gives N = 90 to 99; the two counts disagree. Figure 3B: Abeta42 climbing falls from about 3.5 cm (control, day 7) and about 2.1 cm (knockdown) toward about 0.7 and 0.2 cm at day 28.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID42909904_LucasClarke2026_BrainComms_fcag385.pdf",
+    "anchor": "Figure 3A-B, page 9 rendered at 300 dpi",
+    "panel_text_relation": "panel_qualifies_text",
+    "experimental_context": {
+     "system": "Drosophila melanogaster adult female head or brain, neuronal Wwox RNAi with transgenic Abeta42 (Alzheimer's disease model)"
+    },
+    "qualifies": "entries[17]",
+    "qualifies_needle": "N = 90–99"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Glial Wwox knockdown in flies with neuronal Abeta42 (nSyb-QF2 driver) shortened lifespan mildly (median 22 versus 24 days, N = 100 to 115) and did not change climbing (t = 0.9876, P = 0.3491); the authors conclude neuronal Wwox matters more than glial Wwox for Abeta42 toxicity.",
+    "snippet": "decreased lifespan (median = 22 versus 24 days, χ2 = 6.720 P = 0.0095, Supplementary Fig. 3C, N = 100–115) but had no effect on startle-induced locomotion (t = 0.9876, P = 0.3491,",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Results, Wwox knockdown modifies Abeta42-induced phenotypes",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: The authors report no significant change in visible Abeta42 deposit number (U = 9, P = 0.2020) or median deposit size (t = 0.2313, P = 0.8218, N = 5-7 brains) after neuronal Wwox knockdown in the Abeta42 background.",
+    "snippet": "no significant changes in aggregate number (U = 9, P = 0.2020, Fig. 3C and D) or median size (t = 0.2313, P = 0.8218, Fig. 3C and E, N = 5–7)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Results, Wwox knockdown modifies Abeta42-induced phenotypes",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Abeta42 transcript level (qPCR, newly eclosed heads) was not different with Wwox knockdown (p = 0.2565) or overexpression (p = 0.3110) relative to their genetic background controls.",
+    "snippet": "reveals no differences in transcripts relative to rp49 in newly eclosed Wwox knockdown (p = 0.2565) and overexpressing (p = 0.3110) heads",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID42909904_supplement/Supplementary_material.docx",
+    "anchor": "Supplementary Figure 3 legend, panel A",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: By MSD immunoassay total Abeta42 rose with neuronal Wwox knockdown (q = 3.997, Padj = 0.0127) and soluble Abeta42 rose (q = 4.126, Padj = 0.011), with insoluble Abeta42 and the soluble/insoluble ratio not significantly changed (N = 3).",
+    "snippet": "Total Aβ42 was significantly increased upon neuronal Wwox knockdown (q = 3.997, Padj = 0.0127 Fig. 3G). Interestingly, this effect was led by an increase in soluble Aβ42 (q = 4.126, Padj = 0.011 Fig. 3H), whereas insoluble fractions were non-significantly changed (q = 1.666, Padj = 0.2412, Fig. 3I). However, the ratio between soluble/insoluble Aβ42 was not significantly changed (q = 2.131, Padj = 0.1307, Fig. 3J, N = 3)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Results, Wwox knockdown modifies Abeta42-induced phenotypes",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Figure 3G-J: total Abeta42 about 0.47 pg per microgram protein (RNAi control) versus about 0.94 (Wwox knockdown); soluble about 0.1 versus about 0.36; insoluble about 0.37 versus about 0.59 (not significant); LacZ control about 0; three pooled replicates per group with wide error bars; Figure 3D-E plaque number about 400 versus about 470 and median size about 1.8 versus about 1.7 square micrometres, not significant.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 3G-J: total Abeta42 about 0.47 pg per microgram protein (RNAi control) versus about 0.94 (Wwox knockdown); soluble about 0.1 versus about 0.36; insoluble about 0.37 versus about 0.59 (not significant); LacZ control about 0; three pooled replicates per group with wide error bars; Figure 3D-E plaque number about 400 versus about 470 and median size about 1.8 versus about 1.7 square micrometres, not significant.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID42909904_LucasClarke2026_BrainComms_fcag385.pdf",
+    "anchor": "Figure 3C-J, page 9 rendered at 300 dpi",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Bulk head RNA-seq (N = 4 pools of 10 female heads, day 14): neuronal Wwox knockdown in a LacZ background changed 54 genes down and 44 up; Abeta42 alone 23 down and 51 up; knockdown with Abeta42 58 down and 54 up (padj < 0.05, log2 fold-change threshold 0.58).",
+    "snippet": "10 pooled heads). Transcriptomics were performed at day 14, an age at which the flies showed a clear motor phenotype but before significant mortality. The effects of Wwox knockdown and Aβ42 expression could be clearly separated along PC1 and PC2, explaining 23% and 15% of variance respectively (Supplementary Fig. 4). Knockdown of Wwox in a control background significantly downregulated 54 genes and upregulated 44 (Fig. 4A, Supplementary Table 3). Overrepresentation analysis determined these genes were enriched for oxidoreductase activity and metabolism of ascorbate, aldarate, and porphyrins (Fig. 4B, Supplementary Table 3). Overexpressing human Aβ42 in neurons downregulated 23 genes and upregulated 51 (Fig. 4C, Supplementary Table 3); overrepresentation analysis revealed a significant association of these genes with fatty acid and pyruvate metabolism (Fig. 4D, Supplementary Table 3), suggesting amyloid expression induces metabolic changes. Knockdown of Wwox in neurons also overexpressing Aβ42, significantly downregulated 58 genes and upregulated 54 genes (Fig. 4E, Supplementary Table 3). These genes were enriched within pyruvate metabolism, lipid metabolism and pentose and glucuronate interconversion pathways (Fig. 4F, Supplementary Table 3), suggesting that knockdown of Wwox in the presence of Aβ42 may alter the metabolome further via transcriptional regulation.Figure 4 Neuronal Wwox knockdown in the presence of Aβ42 vastly alters the metabolic transcriptome. (A) Knockdown of Wwox in a control background differentially expressed (Padj < 0.05, log2 fold-change threshold of ±0.58)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Results, Neuronal Wwox knockdown in the presence of Abeta42 alters pyruvate metabolism",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Over-representation of the differentially expressed genes: Abeta42 alone, fatty acid and pyruvate metabolism; Wwox knockdown with Abeta42, pyruvate metabolism, lipid metabolism and pentose and glucuronate interconversion; knockdown alone, oxidoreductase activity and ascorbate, aldarate and porphyrin metabolism.",
+    "snippet": "These genes were enriched within pyruvate metabolism, lipid metabolism and pentose and glucuronate interconversion pathways",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Results, Neuronal Wwox knockdown in the presence of Abeta42 alters pyruvate metabolism",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Figure 4: volcano plots with Ldh labelled in panels A, C and E; in C and E the label sits among the upregulated (blue) genes, in A near the origin among non-significant genes. Enrichment panels D and F show a KEGG Pyruvate Metabolism term; no panel names pyruvate dehydrogenase, a pyruvate dehydrogenase kinase, or the TCA cycle as a term.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 4: volcano plots with Ldh labelled in panels A, C and E; in C and E the label sits among the upregulated (blue) genes, in A near the origin among non-significant genes. Enrichment panels D and F show a KEGG Pyruvate Metabolism term; no panel names pyruvate dehydrogenase, a pyruvate dehydrogenase kinase, or the TCA cycle as a term.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID42909904_LucasClarke2026_BrainComms_fcag385.pdf",
+    "anchor": "Figure 4A-F, page 10 rendered at 300 dpi",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Knockdown-experiment transcript table: Ldh is higher in Wwox knockdown plus Abeta42 than in Abeta42 alone, log2 fold-change 1.2902959819653399 (adjusted P 1.17949165133016e-11).",
+    "snippet": "FBgn0001258\tLdh\t200.63893464886499\t1.2902959819653399\t0.183349143049477\t1.64289857646507e-14\t1.17949165133016e-11\tRNAi Control Aß42 Vs WWOXtrip Aß42\t\t\t\t\t\t\t\t\t",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID42909904_supplement/Supplementary_tables_derived.txt",
+    "anchor": "Supplementary Table 3, differentially expressed genes, knockdown experiment, Ldh row for Abeta42 plus Wwox knockdown versus Abeta42 alone",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Knockdown-experiment transcript table: for Abeta42 versus LacZ the Ldh log2 fold-change is 1.10971735891117.",
+    "snippet": "FBgn0001258\tLdh\t200.63893464886499\t1.10971735891117\t0.188599840373919\t1.00040403535098e-10\t5.2831863635325e-08\tRNAi Control LacZ vs Aß42\t\t\t\t\t\t\t\t\t",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID42909904_supplement/Supplementary_tables_derived.txt",
+    "anchor": "Supplementary Table 3, Ldh row for Abeta42 versus LacZ",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: The text reports a 1.19 log2 fold-change upregulation of Ldh after Abeta42 overexpression in the knockdown experiment; the transcript-table row for the same comparison (previous entries) reads differently, a small disagreement between text and table.",
+    "snippet": "which revealed a 1.19 log2 fold-change upregulation of Ldh after overexpression of Aβ42",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Results, lactate section",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Knockdown-experiment transcript table: Pepck2 is lower with Wwox knockdown in the Abeta42 background, log2 fold-change -1.4572324418639899 (adjusted P 4.27466911660657e-10).",
+    "snippet": "FBgn0034356\tPepck2\t643.10769126922003\t-1.4572324418639899\t0.22165231839803001\t7.54189926785448e-13\t4.27466911660657e-10\tRNAi Control Aß42 Vs WWOXtrip Aß42\t\t\t\t\t\t\t\t\t",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID42909904_supplement/Supplementary_tables_derived.txt",
+    "anchor": "Supplementary Table 3, Pepck2 row",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Knockdown-experiment transcript table: Adh is lower with Wwox knockdown in the Abeta42 background, log2 fold-change -1.7892759373173299.",
+    "snippet": "FBgn0000055\tAdh\t97.257481875141096\t-1.7892759373173299\t0.203853889558541\t1.18513966726796e-19\t1.82325272525838e-16\tRNAi Control Aß42 Vs WWOXtrip Aß42\t\t\t\t\t\t\t\t\t",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID42909904_supplement/Supplementary_tables_derived.txt",
+    "anchor": "Supplementary Table 3, Adh row",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Knockdown-experiment transcript table: CG11052 is lower with Wwox knockdown in the Abeta42 background, log2 fold-change -1.9321238684927999.",
+    "snippet": "FBgn0040524\tCG11052\t11.985699678732599\t-1.9321238684927999\t0.79802876539770196\t1.19774096383151e-05\t1.3869325203765099E-3\tRNAi Control Aß42 Vs WWOXtrip Aß42\t\t\t\t\t\t\t\t\t",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID42909904_supplement/Supplementary_tables_derived.txt",
+    "anchor": "Supplementary Table 3, CG11052 row",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Statistics for the metabolomics: log-transformed intensities were analysed by two-way ANOVA on the top 200 features by variance, followed by 10% FDR correction, so metabolites outside the 200 highest-variance features were not tested.",
+    "snippet": "Log-transformed relative metabolite intensities were analysed via two-way ANOVAs on the top 200 features (based on variance) followed by multiple testing correction with 10% FDR",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Methods, Statistical analysis",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Metabolomics design: heads of 14-day old mated females, N = 5 replicates of n = 10, HILIC chromatography on a ZIC-pHILIC column with Orbitrap mass spectrometry.",
+    "snippet": "Heads of 14-day old, mated females were removed and separated into N = 5 replicates of n = 10",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Methods, Metabolomics",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Knockdown experiment: of 2355 LC-MS peaks 85 mapped to standards; neuronal Wwox knockdown (main effect, Padj < 0.1) changed eight standard-matched metabolites, lactate among them only at Padj = 0.0636 (F = 7.524) and itaconate at 0.0885.",
+    "snippet": "2355 LC-MS peaks, 85 compounds mapped to known standards by m/z and retention time. Neuronal knockdown of Wwox differentially expressed (Padj < 0.1) eight standard-mapped metabolites, namely, reduction of L-lysine (two peaks, F = 50.176 and F = 63.950 both Padj < 0.0001), orotate (F = 18.036, Padj = 0.0046) and 4-trimethylammoniobutanoate (F = 10.659, Padj = 0.0263) and upregulation of D-glucuronate (F = 15.385, Padj = 0.0069), 2-hydroxyglutarate (F = 10.672, Padj = 0.0263), L-lactate (F = 7.524, Padj = 0.0636) and itaconate (F = 6.310, Padj = 0.0885,",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Results, Wwox knockdown in the presence of Abeta42 increases lactate concentrations via Atf4",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Abeta42 main effect: 2-hydroxyglutarate (F = 49.551, Padj = 0.0006) and L-lactate (F = 27.846, Padj = 0.0050) rose.",
+    "snippet": "49.551, Padj = 0.0006) and L-lactate (F = 27.846, Padj = 0.0050, Fig. 5B, Supplementary Table 4). Both lactate and 2-hydroxyglutarate",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Results, lactate section",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: The Wwox-knockdown by Abeta42 interaction altered exactly one standard-mapped metabolite, L-lactate (F = 23.606, Padj = 0.0174, log2 fold-change 1.30); lactate rose with Wwox knockdown only when Abeta42 was present.",
+    "snippet": "differentially expressed just one standard-mapped metabolite, L-lactate (F = 23.606, Padj = 0.0174, 1.30 log2 fold-change",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Results, lactate section",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Knockdown-experiment metabolite table, L-lactate row (standard match): F = 7.524 for the Wwox knockdown main effect, F = 27.846 for the Abeta42 main effect and F = 23.606000000000002 for the interaction; the last two columns give the knockdown effect in the Abeta42 background (positive) and in the LacZ background (negative), so knockdown without Abeta42 did not raise lactate.",
+    "snippet": "L-Lactate\tExact Standard Match\t7.524\t1.4E-2\t6.3635999999999998E-2\t0.67870699701796\t27.846\t7.5199999999999998E-5\t5.0133E-3\t0.970258957946876\t23.606000000000002\t1.74E-4\t1.7399999999999999E-2\t1.30469465379412\t-0.42597961704293502",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID42909904_supplement/Supplementary_tables_derived.txt",
+    "anchor": "Supplementary Table 4, L-lactate row",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Knockdown-experiment metabolite table, 2-hydroxyglutarate row: F = 10.672000000000001 for Wwox knockdown, F = 49.551000000000002 for Abeta42 and F = 7.1909999999999998 for the interaction (not significant after correction).",
+    "snippet": "2-Hydroxyglutarate\tExact Standard Match\t10.672000000000001\t5.0000000000000001E-3\t2.6315999999999999E-2\t0.817491282779641\t49.551000000000002\t2.7999999999999999E-6\t5.5999999999999995E-4\t1.3266715340283199\t7.1909999999999998\t1.6E-2\t0.53332999999999997\t1.0955894406261699\t0.17067077238867201",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID42909904_supplement/Supplementary_tables_derived.txt",
+    "anchor": "Supplementary Table 4, 2-hydroxyglutarate row",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: The putative annotation of the standard-matched 2-hydroxyglutarate peak lists D- and L-2-hydroxyglutarate among its isomers; the stereoisomer is not resolved in the table.",
+    "snippet": "Citramalic acid;Citramalate;3-Hydroxyglutaric acid;D-2-Hydroxyglutaric acid;L-2-Hydroxyglutaric acid",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID42909904_supplement/Supplementary_tables_derived.txt",
+    "anchor": "Supplementary Table 4, PiMP annotation column of the 2-hydroxyglutarate row",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Figure 5C: L-lactate relative abundance (mean with SEM, five replicates) is about 5.0e5 in LacZ with control RNAi, about 3.5e5 in LacZ with Wwox knockdown, about 5.0e5 in Abeta42 with control RNAi, and about 1.2e6 in Abeta42 with Wwox knockdown; Abeta42 alone does not visibly raise lactate over LacZ in this panel, the rise is confined to the knockdown plus Abeta42 cell.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 5C: L-lactate relative abundance (mean with SEM, five replicates) is about 5.0e5 in LacZ with control RNAi, about 3.5e5 in LacZ with Wwox knockdown, about 5.0e5 in Abeta42 with control RNAi, and about 1.2e6 in Abeta42 with Wwox knockdown; Abeta42 alone does not visibly raise lactate over LacZ in this panel, the rise is confined to the knockdown plus Abeta42 cell.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID42909904_LucasClarke2026_BrainComms_fcag385.pdf",
+    "anchor": "Figure 5C, page 12 rendered at 300 dpi",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Figure 5D: the schematic draws pyruvate, oxaloacetate, a TCA cycle node, acetyl-phosphate, acetate, acetaldehyde, ethanol and phosphoenolpyruvate with arrows only on Pepck2 (down), Ldh (up), L-lactate (up), CG11052 (down) and Adh (down); there is no arrow, value or enzyme node for pyruvate itself, pyruvate dehydrogenase, a pyruvate dehydrogenase kinase or any TCA intermediate.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 5D: the schematic draws pyruvate, oxaloacetate, a TCA cycle node, acetyl-phosphate, acetate, acetaldehyde, ethanol and phosphoenolpyruvate with arrows only on Pepck2 (down), Ldh (up), L-lactate (up), CG11052 (down) and Adh (down); there is no arrow, value or enzyme node for pyruvate itself, pyruvate dehydrogenase, a pyruvate dehydrogenase kinase or any TCA intermediate.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID42909904_LucasClarke2026_BrainComms_fcag385.pdf",
+    "anchor": "Figure 5D, page 12 rendered at 300 dpi",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Citrate rose with Abeta42 in the overexpression-experiment metabolite list (F = 8.197, Padj = 0.0667), alongside 2-hydroxyglutarate (F = 47.94, Padj = 0.0001).",
+    "snippet": "2-hydroxyglutarate (F = 47.94, Padj = 0.0001) and citrate (F = 8.197, Padj = 0.0667",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Results, Neuronal upregulation of Wwox reverses transcriptional pathways dysregulated by Abeta42",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: The authors call the Ldh and lactate increase a Warburg effect-like shift towards glycolytic energy production, yet ATP did not differ with Wwox knockdown (F = 0.3376, P = 0.5720), Abeta42 (F = 0.3811, P = 0.5486) or their interaction (F = 2.206, P = 0.1633, N = 4).",
+    "snippet": "An increase in Ldh and lactate suggests a Warburg effect-like shift towards glycolytic energy production. Interestingly however, we observed no differences in ATP levels in the brain as a consequence of Wwox knockdown (F = 0.3376, P = 0.5720), Aβ42 overexpression (F = 0.3811, P = 0.5486) or their interaction (F = 2.206, P = 0.1633, Supplementary Fig. 5B, N = 4)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Results, lactate section",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: The authors interpret the unchanged ATP as the glycolytic shift being sufficient to maintain energy supply and possibly a protective response; this is their inference, not a tested statement.",
+    "snippet": "suggesting that the observed shift towards glycolytic metabolism is sufficient to maintain energy supply and may be a protective response",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Results, lactate section",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Supplementary Figure 5B: relative ATP luminescence has very wide spread (Abeta42 with Wwox knockdown mean about 1.25 with points from about 0.9 to 2.2; control about 0.8), four replicates of three brains each; the null is an underpowered non-significance. Supplementary Figure 5A: log2 fold-change scatter with L-lactate labelled at about -0.4 (LacZ background) and about +1.3 (Abeta42 background).",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Supplementary Figure 5B: relative ATP luminescence has very wide spread (Abeta42 with Wwox knockdown mean about 1.25 with points from about 0.9 to 2.2; control about 0.8), four replicates of three brains each; the null is an underpowered non-significance. Supplementary Figure 5A: log2 fold-change scatter with L-lactate labelled at about -0.4 (LacZ background) and about +1.3 (Abeta42 background).",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID42909904_supplement/Supplementary_material.docx",
+    "anchor": "Supplementary Figure 5A-B, image5.tiff embedded in the supplementary docx",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: No glycolytic flux, glucose uptake, oxygen consumption, extracellular acidification, NAD/NADH ratio or pyruvate measurement is reported in the paper; the energetic inference rests on lactate, Ldh transcript and one ATP assay.",
+    "snippet": "The metabolomics data have been deposited to MetaboLights repository with the study identifier MTBLS12344.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Data availability (absence of a pyruvate or flux readout is a reader finding)",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Assay table, genotype of the Ldh experiment: elav-GAL4 with an Abeta42 insertion (BDSC 33773) and Wwox TRiP together with Ldh RNAi (BDSC 33640) in female flies, climbing assay.",
+    "snippet": "elav-GAL4/Y;+;Wwox TRiP/TM3 (from BDSC 458 & BDSC 51747)\tw-;Aβ42/CyO;Ldh RNAi/TM3 (from BDSC 33773 & BDSC 33640)\telav-GAL4/w-;Aβ42/+;Wwox TRiP/Ldh RNAi\tFemale\t5E\tRING\t7, 14, 21, 28\t",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID42909904_supplement/Supplementary_tables_derived.txt",
+    "anchor": "Supplementary Table 1B, Figure 5E genotype row",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: The authors report that Ldh knockdown rescued climbing deficits of Abeta42 flies with downregulated Wwox at 14, 21 and 28 days (t = 3.182, Padj = 0.0081; t = 6.832, Padj < 0.0001; t = 5.198, Padj < 0.0001; N = 4-6 vials).",
+    "snippet": "Multiple comparisons testing revealed that Ldh knockdown rescued climbing deficits seen in Aβ42-transgenic flies with downregulated Wwox (at 14-, 21- and 28-days t = 3.182 Padj = 0.0081, t = 6.832 Padj < 0.0001 and t = 5.198 Padj < 0.0001, respectively, Fig. 5E, N = 4–6",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Results, lactate section",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: The authors infer that Wwox knockdown with Abeta42 elevates lactate via neuronal Ldh, which is sufficient to exacerbate locomotor defects; lactate was not measured in the double-RNAi flies, so this is an inference.",
+    "snippet": "These results suggest that Wwox knockdown in the presence of Aβ42 elevates lactate levels via neuronal Ldh, which is sufficient to exacerbate locomotor defects.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Results, lactate section",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Figure 5E: three genotypes only (Abeta42 with RNAi control, Abeta42 with Wwox knockdown, Abeta42 with Wwox knockdown plus Ldh RNAi). Climbing at day 28 is about 1.6 cm (control), about 0.5 cm (Wwox knockdown), about 2.6 cm (Wwox knockdown plus Ldh RNAi); at day 21 about 3.0, about 1.0, about 3.6. The double-RNAi line reaches or exceeds the control line. No arm carries Ldh RNAi without Wwox knockdown and no panel reports lactate or 2-hydroxyglutarate in the double-RNAi flies.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 5E: three genotypes only (Abeta42 with RNAi control, Abeta42 with Wwox knockdown, Abeta42 with Wwox knockdown plus Ldh RNAi). Climbing at day 28 is about 1.6 cm (control), about 0.5 cm (Wwox knockdown), about 2.6 cm (Wwox knockdown plus Ldh RNAi); at day 21 about 3.0, about 1.0, about 3.6. The double-RNAi line reaches or exceeds the control line. No arm carries Ldh RNAi without Wwox knockdown and no panel reports lactate or 2-hydroxyglutarate in the double-RNAi flies.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID42909904_LucasClarke2026_BrainComms_fcag385.pdf",
+    "anchor": "Figure 5E, page 12 rendered at 300 dpi",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Ldh knockdown efficiency was shown only by qPCR in newly eclosed heads of the double-RNAi flies (Ldh mRNA about 0.63 of LacZ control versus about 1.5 for Abeta42 alone, N = 3, p < 0.05); the Wwox mRNA level in the double-RNAi flies is not reported, and the comparator is Abeta42 alone, not Abeta42 with Wwox knockdown.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Supplementary Figure 5C: Ldh mRNA relative to LacZ control is about 1.0 (LacZ), about 1.5 (Abeta42) and about 0.63 (Abeta42 with Wwox TRiP and Ldh TRiP); N = 3 replicates; two asterisks bars compare LacZ to Abeta42 and Abeta42 to the double-RNAi group.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID42909904_supplement/Supplementary_material.docx",
+    "anchor": "Supplementary Figure 5C, image5.tiff embedded in the supplementary docx",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: The authors themselves state the Ldh rescue was partial and that the 2-hydroxyglutarate change is only partially controlled by Ldh, so other pathways may contribute.",
+    "snippet": "However, the rescue we witnessed was partial, suggesting that other alternative pathways may also be contributing to the phenotypes. The change observed in 2-hydroxyglutarate",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Discussion, Ldh paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: The authors write that Ldh knockdown has also been shown to be detrimental in fly Abeta42 models, suggesting that Ldh expression and lactate need to be tightly controlled.",
+    "snippet": "Interestingly, Ldh knockdown has also been shown to cause detrimental effects in fly Aβ42 models, suggesting that Ldh expression and lactate levels need to be tightly controlled.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Discussion, lactate paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Atf4 immunostaining rose with neuronal Wwox knockdown in the Abeta42 background (U = 0, P = 0.0022, N = 6) and was not seen in LacZ-expressing Wwox knockdown flies.",
+    "snippet": "immunocytochemistry revealed a significant upregulation of Atf4 levels in Aβ42 flies upon Wwox knockdown (U = 0 P = 0.0022, Fig. 5H and I, N = 6), which were not observed in LacZ-expressing Wwox knockdown flies",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Results, lactate section",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Supplementary legend: no Atf4 increase after Wwox knockdown without Abeta42 (t = 0.0894, p = 0.9305, N = 6 brains).",
+    "snippet": "demonstrated no upregulation of Atf4 in the brain after Wwox knockdown in the absence of A42 (mean ± SD, N = 6 brains, statistics = two-tailed unpaired t-test t = 0.0894 p = 0.9305)",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID42909904_supplement/Supplementary_material.docx",
+    "anchor": "Supplementary Figure 5 legend, panels D and E",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Figure 5H-I: Atf4 fluorescence intensity normalised to control is about 1.0 (RNAi control with Abeta42) versus about 1.28 (Wwox knockdown with Abeta42), six brains per group, Y axis starting at 0.5; Supplementary Figure 5E shows about 0.93 versus about 0.94 in the LacZ background. Atf4 is measured by one antibody in four small regions of interest, with neither pharmacological nor genetic manipulation of Atf4.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 5H-I: Atf4 fluorescence intensity normalised to control is about 1.0 (RNAi control with Abeta42) versus about 1.28 (Wwox knockdown with Abeta42), six brains per group, Y axis starting at 0.5; Supplementary Figure 5E shows about 0.93 versus about 0.94 in the LacZ background. Atf4 is measured by one antibody in four small regions of interest, with neither pharmacological nor genetic manipulation of Atf4.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID42909904_LucasClarke2026_BrainComms_fcag385.pdf",
+    "anchor": "Figure 5H-I, page 12 rendered at 300 dpi",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: The authors state that HIF1alpha and Atf4 are transcription factors known to promote Ldh expression and that they therefore examined the levels of these proteins after Wwox knockdown.",
+    "snippet": "Both HIF1α and Atf4 are transcription factors known to promote Ldh expression. We investigated the levels of these proteins upon Wwox knockdown to further understand Ldh regulation in our model.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Results, lactate section",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Xbp1 splicing was unchanged by neuronal Wwox knockdown in Abeta42 flies (t = 1.365, P = 0.1954), which the authors read as selectively implicating the PERK-Atf4 branch.",
+    "snippet": "we observed no differences in neuronal spliced Xbp1 because of Wwox knockdown in Aβ42 flies (t = 1.365, P = 0.1954, Supplementary Fig. 5F and G, N = 6–9). These data suggest that neuronal Wwox knockdown specifically upregulates the PERK-Atf4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Results, lactate section",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: The authors state they did not determine whether WWOX activates the PERK-Atf4 pathway directly.",
+    "snippet": "Atf4. Whilst we did not determine whether WWOX is activating this pathway directly in this study,",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Discussion, Atf4 paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: The authors infer that neuronal Wwox knockdown upregulates the PERK-Atf4 branch and that this 'could be' the mechanism raising Ldh and lactate; the wording is conditional.",
+    "snippet": "PERK-Atf4 branch of the ISR/UPR in Aβ42 flies and this could be the mechanism via which Ldh and lactate are upregulated, leading to exacerbated Aβ42-induced phenotypes (Fig. 5J).Upregulation",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Results, lactate section",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: The Discussion states the combined data place Wwox upstream of Atf4, Ldh and lactate and suggest the lactate increase may increase amyloid toxicity.",
+    "snippet": "Taken together these results place Wwox upstream of Atf4, Ldh and Lactate, and suggest it is this increase in lactate that may increase amyloid toxicity.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Discussion, Ldh paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: The Introduction states WWOX loss of function has been postulated to mediate a Warburg-like effect, a switch to glycolysis despite aerobic conditions, via modulation of HIF1alpha; this is the hypothesis the study sets out to test in a fly.",
+    "snippet": "WWOX loss of function has been postulated to mediate a Warburg-like effect, a switch to glycolysis despite aerobic conditions, via modulation of HIF1α",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Introduction",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: The sima:GFP reporter (the authors call sima the HIF1alpha homolog) showed no difference after neuronal Wwox knockdown in Abeta42 flies at day 14 (t = 0.6623, P = 0.5185, N = 7 to 9 brains); it was not measured without Abeta42, after overexpression, or under hypoxia.",
+    "snippet": "No changes in endogenously tagged sima:GFP (HIF1α homolog) levels were observed in the adult (day 14) fly brains after neuronal Wwox knockdown in Aβ42 overexpressing flies (t = 0.6623, P = 0.5185, Fig. 5F and G, N = 7–9).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Results, lactate section",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: The Methods describe the sima reporter as a genetically encoded reporter line UAS-sima:GFP, which differs from the Results and legend wording 'endogenously tagged' and from the stock table's PBac-insertion listing.",
+    "snippet": "Brain sima levels were measured using the genetically encoded reporter line UAS-sima:GFP in day 14 flies",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Methods, Imaging of sima:GFP fluorescent reporter",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Stock table entry for the sima reporter: a GFP-tagged sima PBac line (BDSC 42672).",
+    "snippet": "PBac{y[+mDint2]w[+mC]=sima-GFP.AC.FPTB}VK00037\tsima:GFP\tBDSC 42672\tGFP tagged sima (2nd chromosome)",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID42909904_supplement/Supplementary_tables_derived.txt",
+    "anchor": "Supplementary Table 1A, stock list",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Figure 5F-G: Sima:GFP fluorescence intensity is about 85 (RNAi control with Abeta42) and about 84 (Wwox knockdown with Abeta42), seven to nine brains per group, Y axis from 50 to 100; representative images show sparse faint puncta in a dark field.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 5F-G: Sima:GFP fluorescence intensity is about 85 (RNAi control with Abeta42) and about 84 (Wwox knockdown with Abeta42), seven to nine brains per group, Y axis from 50 to 100; representative images show sparse faint puncta in a dark field.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID42909904_LucasClarke2026_BrainComms_fcag385.pdf",
+    "anchor": "Figure 5F-G, page 12 rendered at 300 dpi",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: The Discussion concludes that Atf4, rather than the HIF1alpha orthologue sima, is primarily responsible for the Ldh upregulation in this fly model, citing a previous Atf4-dependent, sima-independent Ldh rise in Abeta42 flies; the wording is 'our data suggest' and 'primarily'.",
+    "snippet": "our data suggest that Atf4, rather than the HIF1α orthologue sima, is primarily responsible for the observed Ldh upregulation in this fly model",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Discussion, Atf4 and HIF1alpha paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: CRISPRa neuronal Wwox upregulation in the absence of Abeta42 had no significant effect on survival (median 60 versus 58 days, P = 0.1420, N = 76 to 86) or climbing (F = 0.02434, P = 0.8770).",
+    "snippet": "In the absence of Aβ42, Wwox upregulation had no significant effect on survival (median = 60 versus 58 days, c2 = 2.156, P = 0.1420, Supplementary Fig. 6A, N = 76–86) or startle-induced locomotion (F = 0.02434, P = 0.8770,",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Results, Upregulation of neuronal Wwox rescues Abeta42 related pathology",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: With neuronal Abeta42, Wwox upregulation improved lifespan (median 47.5 versus 29 days, chi-square 104.5, P < 0.0001, N = 78 to 91) and climbing (F = 42.33, P < 0.0001; days 14 and 21 t = 5.669 and 6.169, both Padj < 0.0001, N = 3 to 7 vials).",
+    "snippet": "upregulation of Wwox significantly improved lifespan (median = 47.5 versus 29 days, χ2 = 104.5, P < 0.0001, Fig. 6A, N = 78–91) and startle-induced locomotion (F = 42.33, P < 0.0001) at days 14 and 21 (t = 5.669 and t = 6.169 both Padj < 0.0001, Fig. 6B, N = 3–7",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Results, Upregulation of neuronal Wwox rescues Abeta42 related pathology",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: A UAS human WWOX cDNA in neurons improved lifespan in Abeta42 flies (median 41 versus 51 days, P = 0.0021) and a Drosophila Wwox cDNA rescued climbing better than human WWOX; the phosphomimic and phosphomutant human variants (Ser14, Tyr33) rescued climbing similarly to wild type.",
+    "snippet": "We observed a similar rescue of lifespan (median = 41 versus 51 days, χ2 = 9.493 P = 0.0021, Supplementary Fig. 6C, N = 85–106) when overexpressing a UAS-cDNA construct of human WWOX (hWWOX) in neurons. Since different posttranslational modifications to WWOX have been previously implicated in Tau pathology,46,49 we generated phosphomimic and phosphomutant cDNA variants of hWWOX at residues Ser14 and Tyr33.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Results, Upregulation of neuronal Wwox rescues Abeta42 related pathology",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Glial overexpression of Drosophila or human Wwox with neuronal Abeta42 did not change survival or climbing, which the authors read as neuronal rather than glial Wwox mattering for neuron-derived Abeta42 toxicity.",
+    "snippet": "Overexpression of Drosophila or hWWOX cDNA in glial cells whilst simultaneously overexpressing Aβ42 in neurons had no effect on survival",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Results, Upregulation of neuronal Wwox rescues Abeta42 related pathology",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Neuronal Wwox upregulation reduced median plaque size (t = 5.485, P = 0.0003) and number (t = 3.374, P = 0.0071, N = 5 to 7 brains) and total, soluble (t = 3.114, P = 0.0357) and insoluble (t = 2.975, P = 0.0409) Abeta42 by MSD (N = 3), without changing the insoluble/soluble ratio (t = 1.334, P = 0.2530).",
+    "snippet": "(t = 5.485, P = 0.0003, Fig. 6C and D) and number (t = 3.374, P = 0.0071, Fig. 6C and E, N = 5–7) of Aβ42 deposits with confocal microscopy. Similarly, by MSD assay, we found reduced total Aβ42 (t = 3.252, P = 0.0313, Supplementary Fig. 6G) in both soluble (t = 3.114, P = 0.0357, Fig. 6F) and insoluble (t = 2.975, P = 0.0409, Fig. 6G, N = 3) head lysate fractions of day 14 flies, without altering the ratio of insoluble/soluble Aβ42 (t = 1.334, P = 0.2530,",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Results, Upregulation of neuronal Wwox rescues Abeta42 related pathology",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Figure 6D-G: median plaque size about 1.45 versus about 0.55 square micrometres, plaque number about 205 versus about 70, soluble Abeta42 about 0.20 versus about 0.09 and insoluble about 1.08 versus about 0.22 pg per microgram protein (control gRNA versus Wwox gRNA); the MSD panels have three points per group. Figure 6A: median survival about 29 versus about 47 days.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 6D-G: median plaque size about 1.45 versus about 0.55 square micrometres, plaque number about 205 versus about 70, soluble Abeta42 about 0.20 versus about 0.09 and insoluble about 1.08 versus about 0.22 pg per microgram protein (control gRNA versus Wwox gRNA); the MSD panels have three points per group. Figure 6A: median survival about 29 versus about 47 days.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID42909904_LucasClarke2026_BrainComms_fcag385.pdf",
+    "anchor": "Figure 6A-G, page 13 rendered at 300 dpi",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: The supplementary legend for the total Abeta42 reduction after Wwox overexpression gives t = 2.352 (p = 0.0313), whereas the main text gives a different t for the same P; a typographical disagreement.",
+    "snippet": "G) The MSD assay for amyloid revealed decreased total amyloid after Wwox overexpression (statistics = unpaired two-tailed t-test t = 2.352, p = 0.0313)",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID42909904_supplement/Supplementary_material.docx",
+    "anchor": "Supplementary Figure 6 legend, panel G",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: In a LacZ background neuronal Wwox upregulation changed no up-regulated gene and down-regulated only six genes.",
+    "snippet": "no upregulated genes and downregulation of only six genes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Results, Neuronal upregulation of Wwox reverses the transcriptional profile induced by Abeta42",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Abeta42 alone down-regulated 51 and up-regulated 28 genes in the overexpression experiment, with Ldh the second most significantly upregulated gene at 2.85 log2 fold-change.",
+    "snippet": "Overexpression of Aβ42 significantly downregulated 51 genes and upregulated 28 (Fig. 7B, Supplementary Table 5), of which Ldh was the second most significantly upregulated gene with a 2.85 log2 fold-change compared with control",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Results, Neuronal upregulation of Wwox reverses the transcriptional profile induced by Abeta42",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Wwox upregulation with Abeta42 down-regulated 305 and up-regulated 59 genes, enriched for metabolic and immune terms including cysteine and methionine metabolism.",
+    "snippet": "Strikingly, upregulation of neuronal Wwox in the presence of Aβ42, downregulated 305 genes and upregulated 59 (Fig. 7C, Supplementary Table 5). Overrepresentation analysis revealed metabolic and immune enrichments, including a dysregulation of cysteine and methionine metabolism",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Results, Neuronal upregulation of Wwox reverses the transcriptional profile induced by Abeta42",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Genes common to the Abeta42-versus-LacZ and Wwox-upregulation comparisons had negatively correlated log2 fold-changes (r = -0.8341, P < 0.0001); the text adds that every gene differentially expressed in Abeta42 versus LacZ was opposed.",
+    "snippet": "the log2 fold-changes of these genes were significantly negatively correlated (r = −0.8341, P < 0.0001, Fig. 7E). Notably, every gene differentially expressed in Aβ42 versus LacZ comparison was differentially expressed in the opposing direction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Results, Neuronal upregulation of Wwox reverses the transcriptional profile induced by Abeta42",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: The authors state the rescue of amyloid load, lifespan and locomotion by Wwox upregulation occurs without a reduction in Ldh or 2-hydroxyglutarate.",
+    "snippet": "Surprisingly however, omics analyses show this rescue occurs without a reduction in Ldh or 2-hydroxyglutarate, suggesting a different mechanism of protection.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Discussion, overexpression paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Overexpression experiment metabolomics: of 2414 peaks 86 matched standards; Abeta42 changed sn-glycero-3-phosphocholine (down), betaine, 2-hydroxyglutarate (F = 47.94, Padj = 0.0001) and citrate (up); Wwox overexpression lowered L-leucine, sn-glycero-3-phosphocholine, L-methionine and a methyl-histidine isomer; the interaction altered only L-methionine (two peaks, Padj 0.0073 and 0.0133).",
+    "snippet": "2414 peaks, 86 compounds were exact matches to known standards by m/z and retention time. Expression of Aβ42 differentially altered four standard-matched metabolites (Padj < 0.1), including a reduction in sn-glycero-3-phosphocholine (F = 35.42, Padj = 0.0006) and an increase in betaine (F = 8.164, Padj = 0.0667), 2-hydroxyglutarate (F = 47.94, Padj = 0.0001) and citrate (F = 8.197, Padj = 0.0667, Fig. 8A, Supplementary Table 7). This increase in 2-hydroxyglutarate is consistent with our previous finding of a 2.85 log2 fold-change increase in Ldh transcripts in Aβ42 expressing flies compared with control—the second most significant differentially expressed gene in this comparison (Supplementary Table 5). Neuronal Wwox overexpression downregulated five standard-matched metabolites: L-leucine (F = 9.949, Padj = 0.0545), sn-glycero-3-phosphocholine (F = 9.311, Padj = 0.0667), L-methionine (F = 22.15 Padj = 0.0047 and F = 17.38 Padj = 0.0091) and a suspected isomer of methyl-L-histidine (N-pi) (F = 9.93 Padj = 0.0545, Fig. 8B, Supplementary Table 7). However, the interaction between Wwox overexpression and Aβ42 revealed just the L-methionine metabolite (F = 19.79 Padj = 0.0073 and F = 14.92 Padj = 0.0133,",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Results, Neuronal upregulation of Wwox reverses transcriptional pathways dysregulated by Abeta42",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: L-methionine fell after Wwox overexpression in the control (LacZ) background but was unaltered by overexpression in the presence of Abeta42.",
+    "snippet": "L-methionine levels were decreased after Wwox overexpression in the control background but were unaltered by overexpression of Wwox in the presence of Aβ42",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Results, final paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: The authors suggest reduced L-methionine may be a protective response to Abeta42-induced stress, which Wwox overexpression appears to maintain transcriptionally; this is their hypothesis.",
+    "snippet": "Reduced L-methionine levels may represent a protective response to Aβ42-induced stress, while Wwox overexpression appears to regulate the same pathway transcriptionally to maintain these low L-methionine levels.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Results, final paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Overexpression-experiment metabolite table, L-methionine row: F = 22.146000000000001 for the Wwox overexpression main effect and F = 19.79 for the interaction with Abeta42; the last two columns give the overexpression effect in the Abeta42 background (near zero) and in the LacZ background (negative).",
+    "snippet": "L-Methionine\tExact Standard Match\t22.146000000000001\t2.3800000000000001E-4\t4.6499999999999996E-3\t-0.88268544953046102\t1.4E-2\t0.90700000000000003\t0.96489000000000003\t-0.32233182265792998\t19.79\t4.0400000000000001E-4\t7.3454999999999996E-3\t-5.5181095166476797E-2\t-1.65794833247496",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID42909904_supplement/Supplementary_tables_derived.txt",
+    "anchor": "Supplementary Table 7, L-methionine row",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Figure 8A-B volcano plots label sn-glycerol-3-phosphocholine, betaine, 2-hydroxyglutarate and citrate for Abeta42 and L-leucine, L-methionine, sn-glycerol-3-phosphocholine and N(pi)-methyl-L-histidine for Wwox overexpression; L-lactate is not labelled in either panel. Figure 8D draws cysteine and methionine enzymes (Phgdh, Got1, Got2, Mdh1, Cbs, CG11134, SpdS) as downregulated transcripts and an arrow down on L-methionine.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 8A-B volcano plots label sn-glycerol-3-phosphocholine, betaine, 2-hydroxyglutarate and citrate for Abeta42 and L-leucine, L-methionine, sn-glycerol-3-phosphocholine and N(pi)-methyl-L-histidine for Wwox overexpression; L-lactate is not labelled in either panel. Figure 8D draws cysteine and methionine enzymes (Phgdh, Got1, Got2, Mdh1, Cbs, CG11134, SpdS) as downregulated transcripts and an arrow down on L-methionine.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID42909904_LucasClarke2026_BrainComms_fcag385.pdf",
+    "anchor": "Figure 8A-D, page 16 rendered at 300 dpi",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Supplementary Figure 8: L-methionine relative abundance (peak A) is about 2.85e6 (LacZ, control gRNA), about 0.9e6 (LacZ, Wwox gRNA), about 1.5e6 (Abeta42, control gRNA) and about 1.46e6 (Abeta42, Wwox gRNA); Abeta42 itself lowers L-methionine by about half in the control-gRNA arm, a simple effect that the table reports only as a non-significant main effect.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Supplementary Figure 8: L-methionine relative abundance (peak A) is about 2.85e6 (LacZ, control gRNA), about 0.9e6 (LacZ, Wwox gRNA), about 1.5e6 (Abeta42, control gRNA) and about 1.46e6 (Abeta42, Wwox gRNA); Abeta42 itself lowers L-methionine by about half in the control-gRNA arm, a simple effect that the table reports only as a non-significant main effect.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID42909904_supplement/Supplementary_material.docx",
+    "anchor": "Supplementary Figure 8A-B, image8.tiff embedded in the supplementary docx",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Wwox overexpression versus control left lactate unreported by any panel of the main figures; the abstract and introduction state overexpression 'did not alter lactate levels', which rests on lactate's absence from the significant-metabolite lists rather than on a displayed lactate panel, and the Abeta42 control cohort of that experiment did not itself show a lactate rise to be reversed.",
+    "snippet": "Strikingly, upregulation of Wwox in neurons significantly reduced amyloid load, rescuing lifespan and locomotor defects but did not alter lactate levels, instead altering L-methionine",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Introduction, last paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Stated limitation: startle-induced locomotor phenotypes from knockdown alone may emerge later in the flies' lifespan than the period assayed.",
+    "snippet": "startle-induced locomotor phenotypes may emerge later in the flies’ lifespan",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Discussion, first paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Stated limitation: protection by neuronal Wwox overexpression may act through glia, left for future research; the mechanism of overexpression rescue is not established.",
+    "snippet": "there is a potential that overexpressing neuronal Wwox, and thus altering neuronal metabolism, is conferring protection through glia—an area for future research",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Discussion, final paragraphs",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Stated limitation: the enantiomer and pathway origin of the 2-hydroxyglutarate change is open because it can be made by isocitrate dehydrogenase, malate dehydrogenase and phosphoglycerate dehydrogenase as well as Ldh.",
+    "snippet": "2-hydroxyglutarate has been extensively explored in the context of cancer and enantiomers can be generated via action of numerous enzymes including isocitrate dehydrogenase, malate dehydrogenase and phosphoglycerate dehydrogenase.67 Therefore, further research is needed to understand the contribution of several converging metabolic pathways in the context of amyloid pathology.In",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Discussion, Ldh paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: The conclusion states future studies should explore therapeutic implications; the Abstract states WWOX activation as a potential therapeutic strategy in Alzheimer's disease, a statement about a fly model and not a tested intervention.",
+    "snippet": "Future studies should explore the potential therapeutic implications of targeting these pathways",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Discussion, conclusion",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: The paper has no Limitations section; the caveats above are scattered through the Discussion and the article states no limitation on single RNAi line, sex, whole-head metabolomics, number of replicates, or the use of an overexpressed Arctic-mutant secreted Abeta42.",
+    "snippet": "In conclusion, our study provides new insights into the multifaceted relationship between Aβ42 expression and Wwox levels in neurons.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Discussion, conclusion (absence of a limitations section is a reader finding)",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: The claim that neuronal Wwox plays a cell-autonomous protective role against Abeta42 toxicity rests on glial-versus-neuronal driver comparisons; no neuron-specific rescue by a second driver or by a non-neuronal Wwox restoration was done.",
+    "snippet": "suggesting that neuronal Wwox plays a cell-autonomous protective role against Aβ42-mediated toxicity",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Discussion, second paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: The authors recapitulate human risk by knockdown and state that Wwox is a regulator of neuronal metabolic state and that genetic risk loci like WWOX may act upstream of transcriptional regulation of the metabolome; the source of the human link is GWAS eQTL and post-mortem expression citations, not tested here.",
+    "snippet": "Taken together, these data provide evidence that some genetic risk loci, like WWOX, may be acting upstream of transcriptional regulation of the metabolome to control pathology, thereby influencing disease progression.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Discussion, third paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Introduction: an intergenic SNP between WWOX and MAF is linked to late-onset Alzheimer's disease risk, WWOX is a brain eQTL with lower expression in carriers, and WWOX protein is decreased in post-mortem hippocampus of patients; these are cited human findings, not results of this paper.",
+    "snippet": "Genome-wide expression quantitative trait locus (eQTL) mapping between LOAD patients and controls identified WWOX as a significant eQTL in the brain with a negative β value",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Introduction",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Introduction: the authors state WWOX has so far been linked to glycolysis only in fibroblasts, cancer cells and peripheral metabolic tissues, and that whether a metabolic shift in Alzheimer's models is influenced by WWOX had not been explored.",
+    "snippet": "Thus far WWOX has only been linked to glycolysis in fibroblasts, cancer cells and peripheral metabolic tissues.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
+    "anchor": "Introduction",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Overexpression-experiment transcript table: the glycolytic enzyme transcript Gapdh1 is lower with Wwox upregulation in the Abeta42 background, log2 fold-change -0.70261481194295405 (adjusted P 1.5303503354626999E-3); the paper does not discuss this change.",
+    "snippet": "FBgn0001091\tGapdh1\t1673.8806584644799\t-0.70261481194295405\t0.22450088137138599\t3.37450846443321e-05\t1.5303503354626999E-3\tControl gRNA AB42 Vs. Wwox gRNA AB42\tKEGG\tOne carbon pool by folate\tKEGG:00670\t2.5477426094795402E",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID42909904_supplement/Supplementary_tables_derived.txt",
+    "anchor": "Supplementary Table 5, Gapdh1 row, Wwox gRNA plus Abeta42 versus control gRNA plus Abeta42",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Overexpression-experiment transcript table: the glycolytic enzyme transcript Eno is lower with Wwox upregulation in the Abeta42 background, log2 fold-change -0.58656202077973996 (adjusted P 3.10937856361192E-3); the paper does not discuss this change.",
+    "snippet": "FBgn0000579\tEno\t2955.8542072094301\t-0.58656202077973996\t0.18717811957665001\t1.27082747473465E-4\t3.10937856361192E-3\tControl gRNA AB42 Vs. Wwox gRNA AB42",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID42909904_supplement/Supplementary_tables_derived.txt",
+    "anchor": "Supplementary Table 5, Eno row, Wwox gRNA plus Abeta42 versus control gRNA plus Abeta42",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Overexpression-experiment transcript table: the glycolytic enzyme transcript Pgk is lower with Wwox upregulation in the Abeta42 background, log2 fold-change -0.66471624456695699 (adjusted P 1.8935802822665599E-3); the paper does not discuss this change.",
+    "snippet": "FBgn0250906\tPgk\t724.74945292399696\t-0.66471624456695699\t0.20966311802426099\t4.84033162040048e-05\t1.8935802822665599E-3\tControl gRNA AB42 Vs. Wwox gRNA AB42\t\t",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID42909904_supplement/Supplementary_tables_derived.txt",
+    "anchor": "Supplementary Table 5, Pgk row, Wwox gRNA plus Abeta42 versus control gRNA plus Abeta42",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Overexpression-experiment transcript table: the glycolytic enzyme transcript Pgi is lower with Wwox upregulation in the Abeta42 background, log2 fold-change -0.65282848508406199 (adjusted P 4.0009529884305001E-3); the paper does not discuss this change.",
+    "snippet": "FBgn0003074\tPgi\t1321.11296201099\t-0.65282848508406199\t0.246768369640919\t1.9761795955386901E-4\t4.0009529884305001E-3\tControl gRNA AB42 Vs. Wwox gRNA AB42\t",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID42909904_supplement/Supplementary_tables_derived.txt",
+    "anchor": "Supplementary Table 5, Pgi row, Wwox gRNA plus Abeta42 versus control gRNA plus Abeta42",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Overexpression-experiment transcript table: the glycolytic enzyme transcript Tpi is lower with Wwox upregulation in the Abeta42 background, log2 fold-change -0.59081139902495905 (adjusted P 7.7907871627497004E-3); the paper does not discuss this change.",
+    "snippet": "FBgn0086355\tTpi\t583.63951335402703\t-0.59081139902495905\t0.234731722264339\t5.5685891349103902E-4\t7.7907871627497004E-3\tControl gRNA AB42 Vs. Wwox gRNA AB42\t\t\t\t",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID42909904_supplement/Supplementary_tables_derived.txt",
+    "anchor": "Supplementary Table 5, Tpi row, Wwox gRNA plus Abeta42 versus control gRNA plus Abeta42",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "note": "2026-10-26 first reading of the published article (scientist-a, SOURCE_FIRST). Each proposition is labelled as a Drosophila Alzheimer's-disease model statement."
+ },
+ "reading_history": [
+  {
+   "receipt": "FTR-20261026-42909904-01",
+   "reader": "scientist-a, standing task 2026-10-26",
+   "context_policy": "SOURCE_FIRST",
+   "what_changed": "First reading of the published Brain Communications article, with its own identity and manifest, separate from the bioRxiv preprint PPR1015434.",
+   "outputs": [
+    "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "disease-models/wwox/research/fulltext_dossiers/PMID42909904.md",
+    "disease-models/wwox/research/commit_candidates/CC-20261026-SCIENTIST-A-LUCASCLARKE-01.md"
+   ]
+  }
+ ]
+}

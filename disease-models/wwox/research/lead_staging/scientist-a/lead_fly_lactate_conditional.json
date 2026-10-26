@@ -1,0 +1,13 @@
+{
+ "kind": "BIO",
+ "title": "In a Drosophila amyloid model brain lactate rises only when Wwox is reduced AND amyloid is present; Wwox reduction alone lowers it nominally (NOT WWOX-DEE evidence)",
+ "tag": "DATO + INFERENZA",
+ "status": "open",
+ "source": "scientist-a, task 2026-10-26, reading of the published Brain Communications 2026 article (receipt FTR-20261026-42909904-01); Supplementary Table 4 L-lactate row and Figure 5C",
+ "causal_statement": "DATO: in whole-head HILIC metabolomics (N = 5 pools of 10 day-14 female heads) the L-lactate Wwox-by-Abeta42 interaction is F = 23.606, adjusted P 0.0174, with the knockdown effect +1.30 log2 in the Abeta42 background and -0.43 log2 in the LacZ background (no significance is given for either simple effect); Figure 5C reads about 5.0e5 and about 3.5e5 in LacZ with control and knockdown, about 5.0e5 and about 1.2e6 in Abeta42. INFERENZA: lactate is a conditional readout of Wwox dose plus a proteotoxic stress, not a baseline marker of Wwox loss; this is compatible with DL-BIO-008, where the human brain spectroscopy lactate in a WWOX patient is reported extremely low.",
+ "falsifier": "Lactate measured with an isotope-resolved or enantiomer-resolved method in Wwox-reduced flies without amyloid at several ages showing a consistent rise, or the same interaction failing to replicate in a second Wwox RNAi line.",
+ "transfer_limit": "Drosophila head, partial RNAi (about 45 percent mRNA reduction by qPCR), whole head so neuronal origin of lactate is not established, one age for omics, simple effects not tested; different disease context from WWOX-DEE; no dose or administration implication, not medical advice.",
+ "links": [
+  "[[discovery_ledger_current#⚠️ DL-BIO-008 — Contraddizione sul lattato: alto nel siero del topo, **\"extremely low\" nell'MRS cerebrale umana**|DL-BIO-008]]"
+ ]
+}
