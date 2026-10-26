@@ -6,6 +6,11 @@ Why a script and not four hand-typed JSON files: the disease-side assertions are
 drifts. The packets and cards are still ordinary files in cards/ and check_cards.py treats them like the A-D series.
 Run from the repository root: python3 disease-models/wwox/research/drug_repurposing/lucas_clarke_followup_20261026/build_cards.py
 """
+import sys as _sys
+if any(a in ("-h", "--help") for a in _sys.argv[1:]):  # a documented command must answer --help without touching the network or any file
+    print(__doc__)
+    raise SystemExit(0)
+
 import copy
 import json
 import sys

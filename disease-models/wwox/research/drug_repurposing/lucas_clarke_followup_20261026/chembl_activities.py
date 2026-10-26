@@ -2,6 +2,11 @@
 """ChEMBL bioactivity measurements per resolved target (single-protein targets), top by pchembl_value, plus a name
 lookup for the named tool compounds. Key-less, same door as the adapters. Output chembl_activities.tsv.
 A pchembl value is a potency in a stated assay, not efficacy and not a statement about WWOX."""
+import sys as _sys
+if any(a in ("-h", "--help") for a in _sys.argv[1:]):  # a documented command must answer --help without touching the network or any file
+    print(__doc__)
+    raise SystemExit(0)
+
 import json, sys, time
 from urllib.parse import quote
 from pathlib import Path
