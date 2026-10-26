@@ -22425,3 +22425,27 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Note:** class-level record. Not medical advice.
 
 ---
+## LIT-0839
+**Short title:** Rico-Molina 2024 — stiripentol-related hLDHA inhibitors for primary hyperoxaluria (substitute, precedent; NOT WWOX EVIDENCE)
+**Authors:** Rico-Molina et al.
+**Year:** 2024
+**Source type:** primary research — medicinal chemistry and recombinant-enzyme assays
+**Journal/source:** *Int J Mol Sci* 2024;25(24):13266
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 39769031 / PMC11675970 / DOI 10.3390/ijms252413266
+**Date discovered:** 2026-10-26 (first receipt `FTR-20261026-39769031-01`)
+**Date processed:** 2026-10-26 (`FTR-20261026-39769031-01`)
+**Discovery source:** package P2a of `scientist-b` (the Sada 2015 precedent search)
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_022`; reading is `partial_fulltext_read`, never upgraded from its receipt.
+**Primary pathway:** none for this gene — pharmacology of human lactate dehydrogenase A inhibition
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `research/drug_repurposing/sada_ldh_precedent_p2a_20261026.md` · `CC-20261026-SCIENTIST-B-SADA-LDH-01`
+**Next action:** none — read and registered
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261026-39769031-01`; manifest `deepdive_manifests/PMID39769031.json`; landing [[paper_registry_current#PAPER 568]]
+**Note:** class-level record. Not medical advice.
+
+---

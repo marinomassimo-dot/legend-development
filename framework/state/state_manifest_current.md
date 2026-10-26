@@ -107,12 +107,12 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20261019_021
-last_batch_commit_date: 2026-10-26
+last_batch_commit_id: BATCH_20261019_022
+last_batch_commit_date: 2026-10-27
 last_batch_commit_type: MANUAL
-commit_candidates_propagated: 1
+commit_candidates_propagated: 2
 target_wm_version: WM_v7.27
-trigger: MANUAL (ACTOR_ID integrator, assigned by the Orchestrator). Research layer only, no disease-model change: the Lucas-Clarke 2026 follow-up of Scientist C landed as two exploratory hypotheses (HYP-20261026-10, HYP-20261026-11, status generated, no ranking, track and route as separate fields, the PDK-PDH chain kept apart from what the paper measured), two leads (DL-MECH-173, DL-REPO-004) and a consequence note on HYP-20260709-05; one HYP-20260709-01 bullet marked ledger statement, locator not traced. WM_v7.27 preserved.
+trigger: MANUAL (ACTOR_ID integrator, assigned by the Orchestrator). Research and registry layer, no disease-model change: the stiripentol-LDH precedent (HYP-20261026-11 reworded to an unresolved potency with Stage 0 and Stage 3, R-11 corrected, DL-REPO-004 updated, PAPER 568 and LIT-0839 added for the enzyme paper, receipt on card row DR-E02-004, the 2015 report kept UNREAD and second-hand) and the PDH-activity wording of HYP-20260709-01 replaced by the traced, non-significant reading (not confirmed, not refuted), with matching lines in DL-MECH-020 and PAPER 023 and the lactate statistics in PAPER 567. Exploratory; no score, status or ranking changed. WM_v7.27 preserved.
 ```
 
 Every batch's scope — the candidates it propagated, newest first back to `BATCH_20260810_001`,
@@ -126,8 +126,8 @@ with the keys written beside each and the notes on `BATCH_20260806_002` — is i
 
 ```yaml
 last_lint_type: LINT_AUTOMATIC
-last_lint_id: LINT_20261026_BATCH_20261019_021
-last_lint_date: 2026-10-26
+last_lint_id: LINT_20261027_BATCH_20261019_022
+last_lint_date: 2026-10-27
 last_lint_result: WARN
 ```
 
@@ -213,8 +213,8 @@ to make a suite green — the only way to move it is to have made the change you
 
 ```yaml
 growth_anchor_ledger: framework/state/growth_anchors.jsonl
-growth_anchor_events: 61
-growth_anchor_head: c603d4eae2a091523ce3017160ce0108043c3b58e890ab329ff4fa815d8cbcb4
+growth_anchor_events: 62
+growth_anchor_head: 834bf793df9ce7418fe2d431e9a3383854b3a52ac3df22e32a4643a1148e2067
 ```
 
 ```bash
