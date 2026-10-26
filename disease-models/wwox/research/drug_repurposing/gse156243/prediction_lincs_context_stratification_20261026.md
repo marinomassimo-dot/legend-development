@@ -31,3 +31,18 @@ So the predictions about context dominance are not blind for S1's top 40; the S0
 - Antiproliferative/cytotoxic or oncology-line signatures do not show neuronal recovery.
 - Outcome vocabulary: **USEFUL** (a stratum-replicated, non-cytotoxic, S0-distinct reverser set appears, which is still only a lead and never a drug claim) · **INCONCLUSIVE** (protocol or cytotoxic context dominates; the limit is named) · **DISCARD**.
 - No compound is chosen for fame or approval status; a compound absent from the result is "not returned in this query", never "ineffective".
+
+---
+
+# ADDENDUM A (declared 2026-10-26, after the stored-data stratification was read, BEFORE the one new request)
+
+## What the stored-data readout showed (so the addendum is not blind to it)
+P1, P4, P5 held; P2 and P3 did not (result section below). S1's top-100 reversers are 74 percent `MCLF*` signatures (61 percent at 4 uM / 6 h), S0's are 1 percent; the 4 uM / 6 h `MCLF*` signatures also fill 59 of the top-100 **mimickers**. A set whose reversers and mimickers come from the same signature family is not showing a direction-specific reversal: it may be matching the gene content that family measures.
+
+## The one new request: a direction-permuted control, S1P
+Same 834 genes as S1 (so the gene universe, the mapping and the gene content are identical); the labels "up" and "down" are shuffled at random (517 as "up", 317 as "down", seed 20261026), so the direction pattern is destroyed and the content is kept. One request, to the same service, same database, same limit, no re-run.
+- **P7.** In S1P the `MCLF*` 4 uM / 6 h share of the top-100 reversers plus top-100 mimickers is >= 40 percent (the family is selected by gene content, not by direction).
+- **P8.** The strongest |z-sum| in S1P reversers is >= 50 percent of S1's (S1 strongest: 16.65); i.e. the score is largely a property of the gene set, not of the up/down pattern.
+- **P9.** S1P's top-25 reverser compounds overlap S1's top-25 by fewer than 5 (the specific compounds are not preserved when direction is shuffled).
+- **Reading.** P7 and P8 true: the S1 output is a gene-content (coverage) match to one signature family, not a reversal, and the reversal list cannot be read as drug candidates; named limit = the service has no null that matches gene content, and a content-matched direction null is the minimum control any later reversal query must carry. P7 or P8 false: the direction pattern contributes and S1's output stays an exploratory lead, to be stratified further.
+- Outcome vocabulary as above. Labels: exploratory; NOT WWOX EVIDENCE.
