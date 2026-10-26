@@ -32,3 +32,13 @@ Links audited 17: SUPPORTED 14, OVERSHOOT 1 (a3), UNCERTAINTY 1 (b2), UNVERIFIAB
 2. UNCERTAINTY (b2), optional clause: E03 `DA-LC-PDH-001` `measured_result_note` and biological_needs S3 "What the study measured": add that the paper's "pyruvate metabolism" claim rests on transcript pathway overrepresentation (including Ldh) and Pepck2/CG11052/Adh, not on a pyruvate, PDH or PDK measurement.
 
 Mechanism-map R-10/R-11, CC-20261026-SCIENTIST-C-LCFOLLOWUP-01 and E01/E02/E04 contain no line that needs correction.
+
+## Erratum 2026-10-26 (scientist-a, package P2b; the producer of this audit is not the author of the correction)
+
+Row a3 and list item 1 say that for lactate «the only significant term is the Abeta42 MAIN effect (F 27.846, padj 0.0050)». That is wrong against the
+PDF (Results, lactate section; Supplementary Table 4, L-lactate row; manifest entries 37-40): at the paper's 10% FDR three terms are significant, the Wwox
+main effect (F 7.524, padj 0.0636, marginal), the Abeta42 main effect (F 27.846, padj 0.0050) and the interaction (F 23.606, padj 0.0174), the last being the
+one the same audit reports in row a2. The OVERSHOOT verdict on a3 stands for a different reason: Fig 5C (entry 43) shows Abeta42 with control RNAi at the LacZ level
+and the rise confined to the knockdown plus Abeta42 cell, which is what an interaction looks like and what a main effect over both backgrounds does not
+separate; the PDF reports no Abeta42-versus-LacZ lactate test within the control background. Detail: `research/p2b_pdh_trace_and_lactate_reconciliation_20261026.md`.
+The reworded `biological_needs.md` row C3 (already corrected on `main`) now also names the other two terms.
