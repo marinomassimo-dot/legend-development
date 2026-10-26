@@ -1,0 +1,14 @@
+{
+ "kind": "MECH",
+ "title": "In a Drosophila amyloid model, neuronal Wwox up-regulation lowers glycolytic-enzyme transcripts while Ldh is unchanged (NOT WWOX-DEE evidence)",
+ "tag": "DATO + IPOTESI",
+ "status": "open",
+ "source": "scientist-a, task 2026-10-26, reading of the published Brain Communications 2026 article (receipt FTR-20261026-42909904-01, manifest PMID42909904.json); the values come from Supplementary Table 5, comparison Wwox gRNA plus Abeta42 versus control gRNA plus Abeta42, which the authors do not discuss",
+ "causal_statement": "DATO: with transgenic Abeta42 present, CRISPRa up-regulation of neuronal Wwox lowered the transcripts of Gapdh1, Eno, Pgk, Pgi and Tpi by about 0.6 to 0.7 log2 (adjusted P 1.5e-3 to 7.8e-3, N = 4 pools of 10 female heads, day 14) and did not change Ldh. IPOTESI: the direction fits a role of Wwox in restraining glycolytic-gene expression, the direction LEGEND's Warburg-like hypothesis (DL-MECH-020) requires for loss of WWOX; nothing in the paper measures glycolytic flux, and the knockdown arm of the same paper shows no matching rise in these transcripts.",
+ "falsifier": "A flux, ECAR or labelled-glucose measurement in the same overexpression genotypes showing no change in glycolytic flux, or a second dataset (a null or a second RNAi line with Abeta42) in which these five transcripts do not move with Wwox dose; the retrievable MetaboLights deposit would also show whether pyruvate and TCA intermediates moved.",
+ "transfer_limit": "Drosophila adult head with an overexpressed secreted Arctic-mutant human Abeta42, a different disease context from WWOX loss-of-function developmental and epileptic encephalopathy; transcript levels only, whole head not neuron-specific, no flux, no protein, no dose or administration implication, not medical advice.",
+ "links": [
+  "[[paper_registry_current#PAPER 158]] (the preprint of the same study, a separate identity)",
+  "[[discovery_ledger_current#DL-MECH-020 — WWOX-loss induce un fenotipo Warburg-like via HIF1α: razionale meccanicistico WWOX-specifico per la dieta chetogenica|DL-MECH-020]]"
+ ]
+}
