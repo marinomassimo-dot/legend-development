@@ -21,3 +21,14 @@ The lactate statistics in these records are correct (interaction F 23.606 padj 0
 
 - A reader other than the producer to check the Fig 5b hand readings and the C3 clause against the source.
 - Replicate number and Fig S3b for `PMID 35328751` remain unread/unstated.
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED (wording only; `WM_v7.27` preserved)
+**Batch:** `BATCH_20261019_022` (2026-10-27, MINOR, MANUAL, ACTOR_ID `integrator`)
+
+- **Proposal 1 landed:** the `HYP-20260709-01` bullet on PDH activity carries the new wording (non-significant, n unstated, mislabel PDK for PDH, neither confirmed nor refuted; source `PMID 35328751` Results 2.5 and Fig 5b; independent read `research/locator_audits/2026-10-27_p2b_pdh_lactate_independent_read.md`), replacing the earlier «ledger statement, locator not traced» bracket; the review receipt is dropped as a source of that sentence. The same narrowing is carried as one dated line in `DL-MECH-020`, and as a reading update in `PAPER 023` naming `FTR-20261026-35328751-05`. The CLAIM 009 and mirror lines state no unchanged-activity claim in their own words and were not touched.
+- **Proposal 2:** no registry surface said «only the Abeta42 main effect»; `PAPER 567` now carries the three lactate statistics (Wwox main effect F 7.524 padj 0.0636; Abeta42 main effect F 27.846 padj 0.0050; interaction F 23.606 padj 0.0174) and names the later receipt `FTR-20261026-42909904-02`.
+- **Still owed:** a reader other than the producer for the Fig 5b hand readings.

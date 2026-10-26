@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "input_sha256": "f90a4bd2b37a375531956667118b5b0bcb2a4269967afcb13e350086a3351bf8",
+ "input_sha256": "5ad6b5587a3ce4d08410f3875f3f6de0a308ce5d3d4b4e94adf2b6a44b062c1d",
  "epistemic_status": "IPOTESI",
  "canonical": false,
  "assessment": "REQUIRES_QUALIFICATION",
@@ -285,6 +285,7 @@
      "developmental_stage": "not applicable"
     },
     "measured_result_note": "Stiripentol racemate about a tenth inhibition at one high-micromolar concentration; its enantiomers about a third each in the same assay (racemate below both of its enantiomers, undiscussed, and the same racemate-outside-enantiomers scatter, up to two-fold, recurs in the analogue table); iso-stiripentol about a fifth; the IC50 entry for stiripentol is a bound, not a fitted value, and no curve is reported for it (curves only for the analogues; that none was run is an inference). Four analogues reach 46 to 72 percent at that concentration with fitted IC50 between about 100 and about 214 micromolar, steep curves (slope unconstrained by one or two points), no detergent named, 5 percent DMSO, positive-control result not shown: a screen-grade analogue series, no cell, brain or animal datum.",
+    "receipt": "FTR-20261026-39769031-01",
     "evidence_scope": "OTHER_DISEASE_PRECEDENT"
    },
    {

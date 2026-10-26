@@ -50,3 +50,16 @@ See `sada_ldh_precedent_p2a_20261026.md` section 6: E-A (assay level, no WWOX; d
 ## What was NOT proposed
 - No claim, paper-registry or working-model edit; no change to `HYP-20261026-10`, `HYP-20260709-01` or the PDK/DCA position.
 - No inference from any result in tumour cells, liver, rat or mouse seizure models to WWOX-DEE; no statement that stiripentol is ineffective on LDH.
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED (research layer; `WM_v7.27` preserved)
+**Batch:** `BATCH_20261019_022` (2026-10-27, MINOR, MANUAL, ACTOR_ID `integrator`)
+
+- **Proposal 1:** the receipt `FTR-20261026-39769031-01` was already in the ledger (873 events); the row `DR-E02-004` of card `E02` now carries it (`build_cards.py` edited, only `E02` rebuilt, `check_cards.py` 16 packets 0 problems); `reading_depth` stays `partial_fulltext_read`. The receipt had no registry identity, so `PAPER 568` and `LIT-0839` were added.
+- **Proposal 2:** `HYP-20261026-11` title, Evidence PRO and CONTRA, the new Stage 0 and Stage 3 text and a new reopening condition; `generated`, no ranking, EXPLORATORY; Sada 2015 stays UNREAD (`UNVERIFIABLE_SURFACE`, second-hand), wishlist items 16 and 17.
+- **Proposal 3:** `R-11` NEAR_DISEASE_EVIDENCE and DECISIVE_PRECLINICAL_TEST corrected, the superseded wording quoted.
+- **Proposal 4:** one dated update in `DL-REPO-004`; status `open`.
+- **Audits:** the manifest entries were blind-audited three times (`research/locator_audits/2026-10-27_PMID39769031_*`); the INFERENZA lines of card rows `DR-E02-005` to `-007` remain owed.
