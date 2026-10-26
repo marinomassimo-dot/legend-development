@@ -107,12 +107,12 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20261019_017
-last_batch_commit_date: 2026-10-24
+last_batch_commit_id: BATCH_20261019_018
+last_batch_commit_date: 2026-10-26
 last_batch_commit_type: MANUAL
 commit_candidates_propagated: 1
 target_wm_version: WM_v7.27
-trigger: MANUAL (ACTOR_ID integrator, assigned by the Orchestrator). Research-layer only, no disease-model change: the blind audit of the 2026-10-22 R1 repairs (locator_audit_R1_repairs_20261024.md, 21 of 21 judged, 0 adverse) was verified by the integrator, and the proposal it had been holding back landed as verdict annotations on the three historic Q230P dossiers (PA-1, PA-3, PB-1, PB-2 and Premise 0 KEEP; PA-2, PB-3, PC INCONCLUSIVE; PB-4 INCONCLUSIVE for a protein-loss lesion, its NARROW verdict withdrawn). No claim, block, registry record or ledger row was written; the dossiers keep their UNREAD_PREMISE headers and everything landed is class-level NOT WWOX EVIDENCE with no dose, administration or suitability. WM_v7.27 preserved.
+trigger: MANUAL (ACTOR_ID integrator, assigned by the Orchestrator). Registry and research layer, no working-model change: the published Lucas-Clarke 2026 article (Brain Communications, PMID 42909904, a Drosophila amyloid model, NOT WWOX-DEE evidence) was registered as its own identity (PAPER 567, LIT-0838; complete_fulltext_read from receipt FTR-20261026-42909904-01), not merged with the preprint PAPER 158; the preprint record's second-RNAi-construct and L-methionine statements were corrected with the superseded wording quoted; the CLAIM 025 nuance (and its mirror in meta_metabolism) was re-sourced from the review to the paper's own text, Status, Type and Summary untouched; dated notes added to DL-MECH-020, DL-MECH-023 (tension with Janczar: PERK unchanged), DL-BIO-008, HYP-20260709-01 and HYP-20260709-05, exploratory and with no score changed. WM_v7.27 preserved.
 ```
 
 Every batch's scope — the candidates it propagated, newest first back to `BATCH_20260810_001`,
@@ -126,8 +126,8 @@ with the keys written beside each and the notes on `BATCH_20260806_002` — is i
 
 ```yaml
 last_lint_type: LINT_AUTOMATIC
-last_lint_id: LINT_20261024_BATCH_20261019_017
-last_lint_date: 2026-10-24
+last_lint_id: LINT_20261026_BATCH_20261019_018
+last_lint_date: 2026-10-26
 last_lint_result: WARN
 ```
 
@@ -213,8 +213,8 @@ to make a suite green — the only way to move it is to have made the change you
 
 ```yaml
 growth_anchor_ledger: framework/state/growth_anchors.jsonl
-growth_anchor_events: 60
-growth_anchor_head: 006b6b72d09573e61d263d0a01ec176adfddf4d1c6af910c75ad9ff8da36a5b2
+growth_anchor_events: 61
+growth_anchor_head: c603d4eae2a091523ce3017160ce0108043c3b58e890ab329ff4fa815d8cbcb4
 ```
 
 ```bash
@@ -262,7 +262,7 @@ baseline below must equal the live count, never preserve historical padding.
 
 ```yaml
 unread_premise_baseline: 0
-unread_premise_measured_on: 2026-10-23
+unread_premise_measured_on: 2026-10-26
 ```
 
 **It is a ratchet, not a wall.** Blocking on the whole legacy backlog would only teach sessions

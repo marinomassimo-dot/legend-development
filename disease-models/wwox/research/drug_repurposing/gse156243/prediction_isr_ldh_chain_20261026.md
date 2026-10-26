@@ -67,7 +67,7 @@ blind result; the set-level tests and the culture-time slopes were not looked at
 It is not evidence against the fly result. The fly effect is reported with an Abeta42 transgene, and this organoid carries none; a
 missing ISR signature here says only that the signature is not present WITHOUT that load. It also cannot see the phosphorylation of eIF2alpha
 or ATF4 protein, which are the actual steps of the integrated stress response. Six libraries; genotype and composition confounded; one
-laboratory; different species and different disease context. Across the two analyses nine sets were tested (five for the HIF1A-PDK chain, four here) and none is corrected for
+laboratory; different species and different disease context. Across the two analyses nine sets were tested (five for the HIF1A-PDK chain, four here) and none of the nine P values is corrected for
 multiplicity. Against the Bonferroni threshold for nine, 0.05/9 = 0.0056, two sets clear it, and they point in opposite directions: the HIF1A
 glycolytic targets (higher than chance, P = 0.0026) and the ATF4 / ISR targets (lower than chance, P = 0.0005). The earlier wording that the ISR set was the only one to clear it was wrong.
 

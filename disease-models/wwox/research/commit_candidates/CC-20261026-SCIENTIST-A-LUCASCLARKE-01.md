@@ -19,3 +19,18 @@
 - Blind locator audit of the narrowing items (3) and the second half of (2) before any propagation.
 - MetaboLights MTBLS12344 (pyruvate and PDH-adjacent rows) and the ArrayExpress deposits are not retrieved; if pyruvate or TCA intermediates are tested there, items 3 and 4 may need to be restated.
 - The preprint has no manifest, so no persisted locator is contradicted by this reading.
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED (registry and research layer; `WM_v7.27` preserved)
+**Batch:** `BATCH_20261019_018` (2026-10-26, MINOR, MANUAL, ACTOR_ID `integrator`, task `BATCH_20261019_018`)
+
+- **Proposal 1 landed:** `PAPER 567` and `LIT-0838`, a distinct identity for the published article, not merged with `PAPER 158` / `LIT-0447`; depth `complete_fulltext_read` and the coverage fields taken from `FTR-20261026-42909904-01`, locator count 104 re-derived from the manifest on disk.
+- **Proposal 2 landed (wording only):** `PAPER 158` Genotype/model line (second RNAi construct), Note (L-methionine and lactate) and a pointer paragraph (sima reporter qualification), each with the superseded wording quoted per `prompt_batch_commit.md` 7.2; the preprint dossier `PPR1015434.md` annotated at the two lines that carried them. `LIT-0447` points to `LIT-0838`. The registry record of `PAPER 158` did not itself carry the words «two independent RNAi»; they lived in the preprint dossier it cites, and the record now says what the published assay rows support.
+- **Proposal 3 landed:** `CLAIM 025` Nuance re-sourced to the paper's own text (the superseded wording quoted); the same correction in the mirror paragraph of `meta_metabolism_current.md`; `DL-MECH-020` qualification block. The integrator checked the quoted sentences against the Europe PMC JATS text (Discussion «Atf4, rather than the HIF1α orthologue sima, is primarily responsible … in this fly model»; Results sima:GFP; L-methionine sentence); the article contains no mouse experiment. `DL-MECH-023`: tension with Janczar 2017 (PERK unchanged) noted, not resolved.
+- **Proposal 4 landed:** a dated note in `DL-BIO-008`.
+- **Proposal 5 not landed here:** the two staged leads are not part of this batch. **Proposal 6 landed as a dated consequence note** in `HYP-20260709-01` and `HYP-20260709-05`, labelled exploratory; no score, status or ranking line was changed (no direct PDH support in the paper; the LDH/lactate branch logic is indirect).
+- **Still owed:** the blind locator audit of the narrowing items, by someone other than the producer; MetaboLights MTBLS12344 retrieval. The `CLAIM 025` text is written in the paper's own words, with the audit state stated inside it, and its Status, Type and Summary are untouched.
+- **Nothing else moved:** no ledger receipt, no working-model block; `WM_v7.27` is carried forward.
