@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "input_sha256": "3b2dc05f34960db3bfb7f3d3c0923c2d1903d996809e125e9512d1b9275b2fee",
+ "input_sha256": "49ebc326a099fcdf3c553bca6a1a41d22ab6feb1ff47e4303e2176d834781be2",
  "epistemic_status": "IPOTESI",
  "canonical": false,
  "assessment": "REQUIRES_QUALIFICATION",
@@ -122,7 +122,7 @@
      "cell_type": "adult fly head or brain (whole head for metabolomics and RNA-seq)",
      "developmental_stage": "adult, day 14 for omics and Atf4 imaging"
     },
-    "measured_result_note": "The study measured no pyruvate, PDH, PDK, flux, oxygen consumption or NAD/NADH. Whether pyruvate was tested is unknown; the MetaboLights deposit is not publicly retrievable (mtbls12344.md). Pdk, Pdha, Pdhb are absent from the significant gene lists, which is not a test.",
+    "measured_result_note": "The study measured no pyruvate, PDH, PDK, flux, oxygen consumption or NAD/NADH. Whether pyruvate was tested is unknown; the MetaboLights deposit is not publicly retrievable (mtbls12344.md). Pdk, Pdha, Pdhb are absent from the significant gene lists, which is not a test. The paper's own heading and abstract speak of pyruvate metabolism, but that rests on transcript pathway over-representation (KEGG, including Ldh itself; Pepck2, CG11052 and Adh lower), not on a pyruvate, PDH or PDK measurement.",
     "receipt": "FTR-20261026-42909904-01"
    }
   ],

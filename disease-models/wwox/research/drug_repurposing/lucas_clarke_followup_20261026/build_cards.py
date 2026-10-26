@@ -84,7 +84,7 @@ D_PDK_KO = d("DA-GSE-PDK-003", "human PDK1 transcript and the PDK/PDH transcript
 D_PDH_NONE = d("DA-LC-PDH-001", "fly PDH, PDK, pyruvate or pyruvate-to-TCA flux", "any measurement", "UNKNOWN", PAPER,
                f"{MAN}[44], [49]; dossier section 3 (pyruvate not reported; Fig 5D draws a TCA node with no data attached)", "DATO",
                "complete_fulltext_read", fly_ctx(ABETA),
-               "The study measured no pyruvate, PDH, PDK, flux, oxygen consumption or NAD/NADH. Whether pyruvate was tested is unknown; the MetaboLights deposit is not publicly retrievable (mtbls12344.md). Pdk, Pdha, Pdhb are absent from the significant gene lists, which is not a test.", RECEIPT)
+               "The study measured no pyruvate, PDH, PDK, flux, oxygen consumption or NAD/NADH. Whether pyruvate was tested is unknown; the MetaboLights deposit is not publicly retrievable (mtbls12344.md). Pdk, Pdha, Pdhb are absent from the significant gene lists, which is not a test. The paper's own heading and abstract speak of pyruvate metabolism, but that rests on transcript pathway over-representation (KEGG, including Ldh itself; Pepck2, CG11052 and Adh lower), not on a pyruvate, PDH or PDK measurement.", RECEIPT)
 D_MRS = d("DA-BIO008-001", "human brain lactate (MRS)", "brain lactate level in one WWOX patient", "DECREASE",
           "discovery_ledger_current DL-BIO-008 (one patient; reading depth not re-verified by this card)", "DL-BIO-008", "INFERENZA", "UNKNOWN",
           {"disease_id": "WWOX-DEE, one reported patient (class level)", "genotype": "UNKNOWN", "species": "human", "cell_type": "brain MRS voxel", "developmental_stage": "child"},
