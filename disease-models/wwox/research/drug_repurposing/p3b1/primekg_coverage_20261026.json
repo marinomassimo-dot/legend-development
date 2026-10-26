@@ -1,0 +1,560 @@
+{
+ "diseases": {
+  "autosomal recessive spinocerebellar ataxia": {
+   "drug_partners": {},
+   "edges_by_relation_directed_rows": {
+    "disease_disease": 18,
+    "disease_phenotype_negative": 2,
+    "disease_phenotype_positive": 412,
+    "disease_protein": 34
+   },
+   "member_ids": [
+    "12235",
+    "13645",
+    "32923",
+    "33115",
+    "14159",
+    "8943",
+    "14530",
+    "13905",
+    "32706",
+    "14339",
+    "14311",
+    "33116",
+    "14934",
+    "13687",
+    "13392",
+    "14503",
+    "14601",
+    "14845"
+   ],
+   "n_members": 18,
+   "node_index": "27803"
+  },
+  "developmental and epileptic encephalopathy": {
+   "drug_partners": {
+    "indication": [
+     "Cannabidiol",
+     "Stiripentol",
+     "Vigabatrin"
+    ],
+    "off-label use": [
+     "Betamethasone",
+     "Cortisone acetate",
+     "Dexamethasone",
+     "Methylprednisolone",
+     "Prednisolone",
+     "Prednisone",
+     "Tetracosactide",
+     "Triamcinolone"
+    ]
+   },
+   "edges_by_relation_directed_rows": {
+    "disease_disease": 82,
+    "disease_phenotype_positive": 806,
+    "disease_protein": 192,
+    "indication": 6,
+    "off-label use": 16
+   },
+   "member_ids": [
+    "10632",
+    "33369",
+    "33371",
+    "10472",
+    "14477",
+    "32598",
+    "10396",
+    "32768",
+    "33361",
+    "13389",
+    "14859",
+    "14392",
+    "33373",
+    "32752",
+    "32657",
+    "14593",
+    "32663",
+    "14947",
+    "13388",
+    "14377",
+    "32808",
+    "14895",
+    "30059",
+    "13387",
+    "32880",
+    "33363",
+    "32678",
+    "13989",
+    "33366",
+    "10375",
+    "13277",
+    "33362",
+    "14917",
+    "14921",
+    "14933",
+    "14942",
+    "30054",
+    "14607",
+    "14595",
+    "14133",
+    "33370",
+    "14201",
+    "32918",
+    "14949",
+    "32813",
+    "14533",
+    "14598",
+    "10246",
+    "33368",
+    "15025",
+    "14371",
+    "54845",
+    "14360",
+    "13056",
+    "13801",
+    "14718",
+    "14719",
+    "32812",
+    "32858",
+    "30072",
+    "14505",
+    "14199",
+    "14003",
+    "14328",
+    "15000",
+    "33367",
+    "33372",
+    "15002",
+    "12245",
+    "30856",
+    "32710",
+    "32725",
+    "33364",
+    "33365",
+    "14868",
+    "29138",
+    "32822",
+    "12812",
+    "32895",
+    "14625",
+    "34106",
+    "33374",
+    "100079",
+    "14916",
+    "14647",
+    "100062",
+    "25353"
+   ],
+   "n_members": 87,
+   "node_index": "28005"
+  },
+  "epileptic encephalopathy, infantile or early childhood": {
+   "drug_partners": {},
+   "edges_by_relation_directed_rows": {
+    "disease_disease": 4,
+    "disease_phenotype_positive": 66,
+    "disease_protein": 6
+   },
+   "member_ids": [
+    "20632",
+    "20631",
+    "20630",
+    "20627"
+   ],
+   "n_members": 4,
+   "node_index": "28025"
+  },
+  "undetermined early-onset epileptic encephalopathy": {
+   "drug_partners": {},
+   "edges_by_relation_directed_rows": {
+    "disease_disease": 6,
+    "disease_phenotype_positive": 88
+   },
+   "member_ids": [
+    "18614"
+   ],
+   "n_members": 1,
+   "node_index": "33095"
+  }
+ },
+ "diseases_absent": [
+  "WOREE syndrome"
+ ],
+ "genes": {
+  "ATF4": {
+   "drug_partners": {
+    "drug_protein": [
+     "Pseudoephedrine"
+    ]
+   },
+   "edges_by_relation_directed_rows": {
+    "anatomy_protein_present": 106,
+    "bioprocess_protein": 80,
+    "cellcomp_protein": 28,
+    "disease_protein": 22,
+    "drug_protein": 2,
+    "molfunc_protein": 32,
+    "pathway_protein": 10,
+    "phenotype_protein": 2,
+    "protein_protein": 212
+   },
+   "ncbi_gene_id": "468",
+   "node_index": "1970"
+  },
+  "ATF5": {
+   "drug_partners": {
+    "drug_protein": [
+     "Pseudoephedrine"
+    ]
+   },
+   "edges_by_relation_directed_rows": {
+    "anatomy_protein_present": 128,
+    "bioprocess_protein": 30,
+    "cellcomp_protein": 12,
+    "disease_protein": 4,
+    "drug_protein": 2,
+    "molfunc_protein": 20,
+    "pathway_protein": 2,
+    "protein_protein": 44
+   },
+   "ncbi_gene_id": "22809",
+   "node_index": "39"
+  },
+  "DDIT3": {
+   "drug_partners": {},
+   "edges_by_relation_directed_rows": {
+    "anatomy_protein_present": 244,
+    "bioprocess_protein": 92,
+    "cellcomp_protein": 20,
+    "disease_protein": 70,
+    "molfunc_protein": 28,
+    "pathway_protein": 10,
+    "protein_protein": 198
+   },
+   "ncbi_gene_id": "1649",
+   "node_index": "3078"
+  },
+  "EIF2AK1": {
+   "drug_partners": {
+    "drug_protein": [
+     "Fostamatinib"
+    ]
+   },
+   "edges_by_relation_directed_rows": {
+    "anatomy_protein_present": 260,
+    "bioprocess_protein": 28,
+    "cellcomp_protein": 2,
+    "disease_protein": 22,
+    "drug_protein": 2,
+    "molfunc_protein": 16,
+    "pathway_protein": 2,
+    "phenotype_protein": 2,
+    "protein_protein": 28
+   },
+   "ncbi_gene_id": "27102",
+   "node_index": "9173"
+  },
+  "EIF2AK2": {
+   "drug_partners": {
+    "drug_protein": [
+     "Fostamatinib"
+    ]
+   },
+   "edges_by_relation_directed_rows": {
+    "anatomy_protein_present": 268,
+    "bioprocess_protein": 56,
+    "cellcomp_protein": 12,
+    "disease_protein": 16,
+    "drug_protein": 2,
+    "molfunc_protein": 26,
+    "pathway_protein": 4,
+    "protein_protein": 302
+   },
+   "ncbi_gene_id": "5610",
+   "node_index": "4042"
+  },
+  "EIF2AK3": {
+   "drug_partners": {},
+   "edges_by_relation_directed_rows": {
+    "anatomy_protein_present": 256,
+    "bioprocess_protein": 64,
+    "cellcomp_protein": 14,
+    "disease_protein": 26,
+    "molfunc_protein": 22,
+    "pathway_protein": 2,
+    "phenotype_protein": 2,
+    "protein_protein": 108
+   },
+   "ncbi_gene_id": "9451",
+   "node_index": "8154"
+  },
+  "EIF2AK4": {
+   "drug_partners": {
+    "drug_protein": [
+     "Fostamatinib"
+    ]
+   },
+   "edges_by_relation_directed_rows": {
+    "anatomy_protein_present": 212,
+    "bioprocess_protein": 62,
+    "cellcomp_protein": 6,
+    "disease_protein": 16,
+    "drug_protein": 2,
+    "molfunc_protein": 14,
+    "pathway_protein": 2,
+    "phenotype_protein": 2,
+    "protein_protein": 68
+   },
+   "ncbi_gene_id": "440275",
+   "node_index": "11341"
+  },
+  "EIF2S1": {
+   "drug_partners": {},
+   "edges_by_relation_directed_rows": {
+    "anatomy_protein_present": 276,
+    "bioprocess_protein": 32,
+    "cellcomp_protein": 26,
+    "disease_protein": 20,
+    "molfunc_protein": 8,
+    "pathway_protein": 20,
+    "phenotype_protein": 2,
+    "protein_protein": 104
+   },
+   "ncbi_gene_id": "1965",
+   "node_index": "3316"
+  },
+  "LDHA": {
+   "drug_partners": {
+    "drug_protein": [
+     "Artenimol",
+     "Copper",
+     "Etheno-NAD",
+     "NADH",
+     "Nicotinamide",
+     "Oxamic Acid",
+     "Stiripentol"
+    ]
+   },
+   "edges_by_relation_directed_rows": {
+    "anatomy_protein_present": 110,
+    "bioprocess_protein": 26,
+    "cellcomp_protein": 8,
+    "disease_protein": 38,
+    "drug_protein": 14,
+    "molfunc_protein": 12,
+    "pathway_protein": 2,
+    "protein_protein": 96
+   },
+   "ncbi_gene_id": "3939",
+   "node_index": "2585"
+  },
+  "LDHB": {
+   "drug_partners": {
+    "drug_protein": [
+     "4-Hydroxy-1,2,5-oxadiazole-3-carboxylic acid",
+     "Artenimol",
+     "NADH",
+     "Oxamic Acid",
+     "Stiripentol"
+    ]
+   },
+   "edges_by_relation_directed_rows": {
+    "anatomy_protein_present": 274,
+    "bioprocess_protein": 4,
+    "cellcomp_protein": 12,
+    "disease_protein": 48,
+    "drug_protein": 10,
+    "molfunc_protein": 6,
+    "pathway_protein": 2,
+    "protein_protein": 64
+   },
+   "ncbi_gene_id": "3945",
+   "node_index": "4812"
+  },
+  "LDHC": {
+   "drug_partners": {
+    "drug_protein": [
+     "NADH"
+    ]
+   },
+   "edges_by_relation_directed_rows": {
+    "anatomy_protein_absent": 20,
+    "anatomy_protein_present": 66,
+    "bioprocess_protein": 12,
+    "cellcomp_protein": 8,
+    "drug_protein": 2,
+    "molfunc_protein": 2,
+    "pathway_protein": 2,
+    "phenotype_protein": 2,
+    "protein_protein": 16
+   },
+   "ncbi_gene_id": "3948",
+   "node_index": "11589"
+  },
+  "PDHA1": {
+   "drug_partners": {
+    "drug_protein": [
+     "NADH"
+    ]
+   },
+   "edges_by_relation_directed_rows": {
+    "anatomy_protein_present": 272,
+    "bioprocess_protein": 10,
+    "cellcomp_protein": 10,
+    "disease_protein": 32,
+    "drug_protein": 2,
+    "molfunc_protein": 6,
+    "pathway_protein": 8,
+    "phenotype_protein": 2,
+    "protein_protein": 526
+   },
+   "ncbi_gene_id": "5160",
+   "node_index": "2448"
+  },
+  "PDHB": {
+   "drug_partners": {
+    "drug_protein": [
+     "NADH",
+     "Pyruvic acid"
+    ]
+   },
+   "edges_by_relation_directed_rows": {
+    "anatomy_protein_present": 278,
+    "bioprocess_protein": 10,
+    "cellcomp_protein": 12,
+    "disease_protein": 28,
+    "drug_protein": 4,
+    "molfunc_protein": 6,
+    "pathway_protein": 8,
+    "protein_protein": 90
+   },
+   "ncbi_gene_id": "5162",
+   "node_index": "2936"
+  },
+  "PDK1": {
+   "drug_partners": {
+    "drug_protein": [
+     "4-[(3-CHLORO-4-{[(2R)-3,3,3-TRIFLUORO-2-HYDROXY-2-METHYLPROPANOYL]AMINO}PHENYL)SULFONYL]-N,N-DIMETHYLBENZAMIDE",
+     "Dichloroacetic acid"
+    ]
+   },
+   "edges_by_relation_directed_rows": {
+    "anatomy_protein_present": 220,
+    "bioprocess_protein": 14,
+    "cellcomp_protein": 6,
+    "drug_protein": 4,
+    "molfunc_protein": 8,
+    "pathway_protein": 4,
+    "protein_protein": 142
+   },
+   "ncbi_gene_id": "5163",
+   "node_index": "1081"
+  },
+  "PDK2": {
+   "drug_partners": {
+    "drug_protein": [
+     "(2R)-N-{4-[Ethyl(phenyl)sulfamoyl]-2-methylphenyl}-3,3,3-trifluoro-2-hydroxy-2-methylpropanamide",
+     "4-({(2R,5S)-2,5-DIMETHYL-4-[(2R)-3,3,3-TRIFLUORO-2-HYDROXY-2-METHYLPROPANOYL]PIPERAZIN-1-YL}CARBONYL)BENZONITRILE",
+     "N-(2-AMINOETHYL)-2-{3-CHLORO-4-[(4-ISOPROPYLBENZYL)OXY]PHENYL} ACETAMIDE"
+    ]
+   },
+   "edges_by_relation_directed_rows": {
+    "anatomy_protein_present": 250,
+    "bioprocess_protein": 26,
+    "cellcomp_protein": 10,
+    "disease_protein": 4,
+    "drug_protein": 6,
+    "molfunc_protein": 10,
+    "pathway_protein": 4,
+    "protein_protein": 50
+   },
+   "ncbi_gene_id": "5164",
+   "node_index": "2165"
+  },
+  "PDK3": {
+   "drug_partners": {
+    "drug_protein": [
+     "Dihydrolipoic Acid",
+     "Radicicol"
+    ]
+   },
+   "edges_by_relation_directed_rows": {
+    "anatomy_protein_absent": 4,
+    "anatomy_protein_present": 160,
+    "bioprocess_protein": 20,
+    "cellcomp_protein": 6,
+    "disease_protein": 2,
+    "drug_protein": 4,
+    "molfunc_protein": 10,
+    "pathway_protein": 4,
+    "protein_protein": 74
+   },
+   "ncbi_gene_id": "5165",
+   "node_index": "552"
+  },
+  "PDK4": {
+   "drug_partners": {
+    "drug_protein": [
+     "4-[4-(4-methoxyphenyl)-5-methyl-1H-pyrazol-3-yl]benzene-1,3-diol",
+     "Tretinoin"
+    ]
+   },
+   "edges_by_relation_directed_rows": {
+    "anatomy_protein_present": 236,
+    "bioprocess_protein": 32,
+    "cellcomp_protein": 4,
+    "disease_protein": 24,
+    "drug_protein": 4,
+    "molfunc_protein": 8,
+    "pathway_protein": 4,
+    "protein_protein": 26
+   },
+   "ncbi_gene_id": "5166",
+   "node_index": "9468"
+  },
+  "PPP1R15A": {
+   "drug_partners": {},
+   "edges_by_relation_directed_rows": {
+    "anatomy_protein_present": 258,
+    "bioprocess_protein": 28,
+    "cellcomp_protein": 18,
+    "molfunc_protein": 10,
+    "pathway_protein": 4,
+    "protein_protein": 94
+   },
+   "ncbi_gene_id": "23645",
+   "node_index": "10652"
+  },
+  "PPP1R15B": {
+   "drug_partners": {},
+   "edges_by_relation_directed_rows": {
+    "anatomy_protein_present": 216,
+    "bioprocess_protein": 16,
+    "cellcomp_protein": 4,
+    "disease_protein": 2,
+    "molfunc_protein": 4,
+    "protein_protein": 56
+   },
+   "ncbi_gene_id": "84919",
+   "node_index": "2196"
+  },
+  "WWOX": {
+   "drug_partners": {},
+   "edges_by_relation_directed_rows": {
+    "anatomy_protein_present": 268,
+    "bioprocess_protein": 22,
+    "cellcomp_protein": 18,
+    "disease_protein": 76,
+    "molfunc_protein": 8,
+    "pathway_protein": 6,
+    "protein_protein": 342
+   },
+   "ncbi_gene_id": "51741",
+   "node_index": "602"
+  }
+ },
+ "genes_absent": [],
+ "kg_md5_computed": "aac8191d4fbc5bf09cdf8c3c78b4e75f",
+ "kg_md5_match": true,
+ "kg_md5_published": "aac8191d4fbc5bf09cdf8c3c78b4e75f"
+}

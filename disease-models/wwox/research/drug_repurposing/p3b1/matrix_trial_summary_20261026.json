@@ -1,0 +1,230 @@
+{
+ "fetch_meta": {
+  "shards_route": {
+   "baseline": {
+    "n_other_nodes": 86,
+    "per_node": {
+     "MONDO:0010632": {
+      "n_compared": 86,
+      "rho_min_median_max": [
+       0.042,
+       0.59,
+       0.833
+      ],
+      "top50_overlap_min_median_max": [
+       0,
+       5,
+       34
+      ]
+     },
+     "MONDO:0013687": {
+      "n_compared": 86,
+      "rho_min_median_max": [
+       0.058,
+       0.58,
+       0.798
+      ],
+      "top50_overlap_min_median_max": [
+       0,
+       4,
+       31
+      ]
+     },
+     "MONDO:0014533": {
+      "n_compared": 86,
+      "rho_min_median_max": [
+       0.127,
+       0.658,
+       0.81
+      ],
+      "top50_overlap_min_median_max": [
+       0,
+       8,
+       26
+      ]
+     },
+     "MONDO:0018614": {
+      "n_compared": 86,
+      "rho_min_median_max": [
+       0.015,
+       0.54,
+       0.828
+      ],
+      "top50_overlap_min_median_max": [
+       0,
+       3,
+       30
+      ]
+     },
+     "MONDO:0100062": {
+      "n_compared": 86,
+      "rho_min_median_max": [
+       0.075,
+       0.626,
+       0.816
+      ],
+      "top50_overlap_min_median_max": [
+       2,
+       9,
+       28
+      ]
+     }
+    }
+   },
+   "dataset": "everycure/matrix-scores",
+   "dataset_commit_sha": "d6b121bf38112cf28e7c813d0a062651757c52a1",
+   "num_rows_total": {
+    "MONDO:0010632": 1748,
+    "MONDO:0013687": 1748,
+    "MONDO:0014533": 1748,
+    "MONDO:0018614": 1748,
+    "MONDO:0100062": 1748
+   },
+   "route": "local parquet shards",
+   "shard_sha256": {
+    "s0.parquet": "13b21426e7651c3b948ab0886c0768983216c3ba79cbee1e57655b326f71ac27",
+    "s1.parquet": "0a344447d1397070c758161bbe6c3fc27300e4bc4b70cbfb11f30e11f08c7e0c",
+    "s10.parquet": "0987b6aa12b7e9d34b6676e8e6b8a26b272d3cfdaa9950d1eb187f732da0c649",
+    "s2.parquet": "374e0206bcc4739c5b734e028dac36b82d22d3ee96b6d9e8c0ec4204ed53537b",
+    "s3.parquet": "8a99c09df365481b962133c55d0ec5484665e017afb58e6e0ee55a54f718f541",
+    "s4.parquet": "887a58c17cc8ba0afe6b3b0b146b9a241b2fcdb68780949c00050d5857d7f13a",
+    "s5.parquet": "fef9ea31ccf541fd3e4e12778f84476962d270559e0a079ad410c3e09337c31e",
+    "s6.parquet": "677de8f4f03936676a71965b00ff5c4b0fae2d96fad8694356c59be8699bf778",
+    "s7.parquet": "c1e141b3d1ffe36649210c2df81bdbf2578635ce9ffed86699c15b06565c07c2",
+    "s8.parquet": "b7f40c61223d01d93e2756b3ed5f35f893d31686c77e3d47aec3545c5b09be42",
+    "s9.parquet": "c8d7e79ce04379d83d8b65452479db92c06f10c0f8be883c292a66d5f39354a0"
+   },
+   "utc": "2026-10-26T23:08:40.278450+00:00"
+  }
+ },
+ "nodes": {
+  "MONDO:0010632": {
+   "drugs_scored": 1748,
+   "flag_counts": {
+    "ec_indications_list": 0,
+    "is_known_negative": 0,
+    "is_known_positive": 0,
+    "off_label": 0,
+    "trial_non_sig_better": 0,
+    "trial_non_sig_worse": 0,
+    "trial_sig_better": 0,
+    "trial_sig_worse": 0
+   }
+  },
+  "MONDO:0013687": {
+   "drugs_scored": 1748,
+   "flag_counts": {
+    "ec_indications_list": 0,
+    "is_known_negative": 0,
+    "is_known_positive": 0,
+    "off_label": 0,
+    "trial_non_sig_better": 0,
+    "trial_non_sig_worse": 0,
+    "trial_sig_better": 0,
+    "trial_sig_worse": 0
+   }
+  },
+  "MONDO:0014533": {
+   "drugs_scored": 1748,
+   "flag_counts": {
+    "ec_indications_list": 0,
+    "is_known_negative": 0,
+    "is_known_positive": 0,
+    "off_label": 0,
+    "trial_non_sig_better": 0,
+    "trial_non_sig_worse": 0,
+    "trial_sig_better": 0,
+    "trial_sig_worse": 0
+   }
+  },
+  "MONDO:0018614": {
+   "drugs_scored": 1748,
+   "flag_counts": {
+    "ec_indications_list": 0,
+    "is_known_negative": 0,
+    "is_known_positive": 0,
+    "off_label": 0,
+    "trial_non_sig_better": 0,
+    "trial_non_sig_worse": 0,
+    "trial_sig_better": 0,
+    "trial_sig_worse": 0
+   }
+  },
+  "MONDO:0100062": {
+   "drugs_scored": 1748,
+   "flag_counts": {
+    "ec_indications_list": 0,
+    "is_known_negative": 0,
+    "is_known_positive": 0,
+    "off_label": 6,
+    "trial_non_sig_better": 0,
+    "trial_non_sig_worse": 0,
+    "trial_sig_better": 0,
+    "trial_sig_worse": 0
+   }
+  }
+ },
+ "note": "Aggregates only. No per-drug score, rank or candidate is stored here. Source rows: everycure/matrix-scores commit d6b121bf38112cf28e7c813d0a062651757c52a1 (card declares no licence). Scores are the publisher's predictions, not probabilities of efficacy.",
+ "pairwise": {
+  "MONDO:0010632|MONDO:0013687": {
+   "common_drugs": 1748,
+   "spearman_rho": 0.8232,
+   "top50_overlap": 32,
+   "top50_union": 68
+  },
+  "MONDO:0010632|MONDO:0014533": {
+   "common_drugs": 1748,
+   "spearman_rho": 0.8424,
+   "top50_overlap": 30,
+   "top50_union": 70
+  },
+  "MONDO:0010632|MONDO:0018614": {
+   "common_drugs": 1748,
+   "spearman_rho": 0.825,
+   "top50_overlap": 34,
+   "top50_union": 66
+  },
+  "MONDO:0010632|MONDO:0100062": {
+   "common_drugs": 1748,
+   "spearman_rho": 0.8232,
+   "top50_overlap": 30,
+   "top50_union": 70
+  },
+  "MONDO:0013687|MONDO:0014533": {
+   "common_drugs": 1748,
+   "spearman_rho": 0.816,
+   "top50_overlap": 29,
+   "top50_union": 71
+  },
+  "MONDO:0013687|MONDO:0018614": {
+   "common_drugs": 1748,
+   "spearman_rho": 0.8283,
+   "top50_overlap": 34,
+   "top50_union": 66
+  },
+  "MONDO:0013687|MONDO:0100062": {
+   "common_drugs": 1748,
+   "spearman_rho": 0.8144,
+   "top50_overlap": 27,
+   "top50_union": 73
+  },
+  "MONDO:0014533|MONDO:0018614": {
+   "common_drugs": 1748,
+   "spearman_rho": 0.7937,
+   "top50_overlap": 29,
+   "top50_union": 71
+  },
+  "MONDO:0014533|MONDO:0100062": {
+   "common_drugs": 1748,
+   "spearman_rho": 0.8306,
+   "top50_overlap": 32,
+   "top50_union": 68
+  },
+  "MONDO:0018614|MONDO:0100062": {
+   "common_drugs": 1748,
+   "spearman_rho": 0.8045,
+   "top50_overlap": 30,
+   "top50_union": 70
+  }
+ }
+}
