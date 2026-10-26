@@ -100,7 +100,8 @@ class TheRealCheckoutIsRead(unittest.TestCase):
             self.assertNotIn("overdue_branches", payload)
         else:
             self.assertRegex(hygiene, r"^\d+ branches · \d+ ahead-of-main commits total · "
-                                      r"\d+ LAND_OVERDUE · \d+ DELETE_READY$")
+                                      r"\d+ LAND_OVERDUE · \d+ DELETE_READY"
+                                      r"( · \d+ PRESERVED_BACKUP)?$")
             self.assertIsInstance(payload["overdue_branches"], list)
 
 
