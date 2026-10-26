@@ -127,9 +127,62 @@ def set_level(draws: int = 10000, seed: int = 20261025) -> dict:
     return out
 
 
+def pyruvate_fate(draws: int = 10000, seed: int = 20261025) -> dict:
+    """log2[(LDHA+LDHB)/(PDHA1+PDHB+DLAT+DLD)] per library, the KO-minus-WT difference against random 2-gene/4-gene pairs, and the
+    culture-time slope of the same ratio in GSE150123.  A transcript ratio, not a flux: PDH is controlled by phosphorylation."""
+    fate_a, fate_b = ["LDHA", "LDHB"], ["PDHA1", "PDHB", "DLAT", "DLD"]
+    with gzip.open(mc.KO_COUNTS, "rt", encoding="utf-8") as handle:
+        reader = csv.reader(handle, delimiter="\t")
+        header = next(reader)
+        rows = {r[0]: [float(x) for x in r[1:]] for r in reader}
+    totals = [sum(rows[g][i] for g in rows) for i in range(6)]
+
+    def cpm(g, i):
+        return rows[g][i] / totals[i] * 1e6
+
+    def ratio(i, a, b):
+        return math.log2((sum(cpm(g, i) for g in a) + 1) / (sum(cpm(g, i) for g in b) + 1))
+
+    per_lib = [ratio(i, fate_a, fate_b) for i in range(6)]
+    obs = statistics.fmean(per_lib[:4]) - statistics.fmean(per_lib[4:])
+    universe = [g for g in rows if sum(rows[g]) >= 10]
+    rng = random.Random(seed)
+    ge = 0
+    for _ in range(draws):
+        a, b = rng.sample(universe, 2), rng.sample(universe, 4)
+        r = [ratio(i, a, b) for i in range(6)]
+        ge += abs(statistics.fmean(r[:4]) - statistics.fmean(r[4:])) >= abs(obs)
+    out = {"libraries": header[1:], "log2_ratio_per_library": [round(v, 3) for v in per_lib],
+           "ko_mean": round(statistics.fmean(per_lib[:4]), 3), "wt_mean": round(statistics.fmean(per_lib[4:]), 3),
+           "ko_minus_wt": round(obs, 3), "fraction_random_pairs_at_least_as_extreme": round((ge + 1) / (draws + 1), 4),
+           "draws": draws, "seed": seed}
+    # culture-time slope of the same ratio in GSE150123
+    mc.verify_inputs()
+    s2e = mc.symbol_to_ensg()
+    genes = fate_a + fate_b
+    wanted = {g: s2e[g] for g in genes}
+    meta, data = mc.calibration_matrix(wanted)
+    titles = sorted(data)
+    days = [float(meta[t]["differentiation day"]) for t in titles]
+    lines = [meta[t]["iPSc line"] for t in titles]
+    logd = [math.log10(d) for d in days]
+    y = []
+    for t in titles:
+        a = sum(data[t]["genes"].get(g, 0.0) for g in fate_a) / data[t]["total"] * 1e6
+        b = sum(data[t]["genes"].get(g, 0.0) for g in fate_b) / data[t]["total"] * 1e6
+        y.append(math.log2((a + 1) / (b + 1)))
+    sl = mc._line_slopes(lines, logd, y)
+    m, sd, k = statistics.fmean(sl.values()), statistics.stdev(sl.values()), len(sl)
+    half = mc._T975.get(k - 1, 1.96) * sd / math.sqrt(k)
+    out["culture_time_slope_of_ratio"] = {"mean_of_line_slopes": round(m, 3), "t_interval": [round(m - half, 3), round(m + half, 3)],
+                                          "lines": k, "excludes_zero": bool(m - half > 0 or m + half < 0)}
+    return out
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("--json", action="store_true")
+    ap.add_argument("--pyruvate-fate", action="store_true", help="LDH versus PDH expression ratio, KO versus WT, with a random-pair null and its culture-time slope")
     ap.add_argument("--set-level", action="store_true", help="set-level coherence test against random same-size sets")
     ap.add_argument("--sets", choices=("chain", "isr"), default="chain",
                     help="chain: HIF1A-PDK-PDH sets (prediction_hif1a_pdk_chain); isr: ATF4/ISR/LDH sets (prediction_isr_ldh_chain)")
@@ -137,6 +190,17 @@ def main() -> int:
     if args.sets == "isr":
         SETS.clear()
         SETS.update(ISR_SETS)
+    if args.pyruvate_fate:
+        res = pyruvate_fate()
+        if args.json:
+            print(json.dumps(res, indent=1))
+        else:
+            print("log2[(LDHA+LDHB)/(PDHA1+PDHB+DLAT+DLD)] per library:", dict(zip(res["libraries"], res["log2_ratio_per_library"])))
+            print(f"KO mean {res['ko_mean']:+.3f}  WT mean {res['wt_mean']:+.3f}  KO-WT {res['ko_minus_wt']:+.3f}")
+            print(f"fraction of random 2-gene/4-gene pairs with |KO-WT| >= observed: {res['fraction_random_pairs_at_least_as_extreme']}  ({res['draws']} draws, seed {res['seed']})")
+            t = res["culture_time_slope_of_ratio"]
+            print(f"culture-time slope of the ratio in GSE150123: {t['mean_of_line_slopes']:+.3f} per log10 day, between-line t interval {t['t_interval']} over {t['lines']} lines; excludes zero: {t['excludes_zero']}")
+        return 0
     if args.set_level:
         res = set_level()
         if args.json:
