@@ -35,8 +35,8 @@ annotations is reported below whatever it happens to be.
 | Deep-dive manifests read | 591 |
 | …of which bound to at least one claim | 107 |
 | Propositions scanned | 9473 |
-| …carrying a relational connective | 1975 |
-| …locator-backed candidates | 1935 |
+| …carrying a relational connective | 1976 |
+| …locator-backed candidates | 1936 |
 | …locator-backed and bound to a claim | 454 |
 
 The scanned population is three declared surfaces and no others: every claim
@@ -320,12 +320,12 @@ each side is a reading, and every record carries `endpoints_resolved: false`.
 | Source | Candidates |
 |---|---|
 | claim_title | 21 |
-| locator_proposition | 1935 |
+| locator_proposition | 1936 |
 | working_model_mirror_title | 19 |
 
 | Connective class (lexical) | Candidates |
 |---|---|
-| AMBIGUOUS_LEXICAL_FORM | 1413 |
+| AMBIGUOUS_LEXICAL_FORM | 1414 |
 | ARROW | 18 |
 | ASSOCIATIVE | 89 |
 | CAUSAL | 351 |
@@ -376,6 +376,6 @@ carried no connective from the lexicon.
 ## Provenance
 
 Derived from 594 input files; digest
-`0615ea521796bb01`. Sources: the claim, paper and
+`28fd1c7dffa7c54f`. Sources: the claim, paper and
 working-model registries, and every deep-dive work manifest.
 
