@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
 """The existing repurposing adapters, called through their own door for the Lucas-Clarke follow-up targets and compounds.
 Each result is kept whole in adapters_raw.json (status, requests_sent, hits). NOT WWOX EVIDENCE. Run from repo root."""
+import sys as _sys
+if any(a in ("-h", "--help") for a in _sys.argv[1:]):  # a documented command must answer --help without touching the network or any file
+    print(__doc__)
+    raise SystemExit(0)
+
 import json, sys, time
 from pathlib import Path
 ROOT = Path(__file__).resolve().parents[5]

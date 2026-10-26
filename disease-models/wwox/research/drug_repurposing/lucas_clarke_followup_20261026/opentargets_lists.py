@@ -3,6 +3,11 @@
 max clinical stage and diseases. The repository's opentargets adapter returns only the COUNT of candidates
 (`drug_and_clinical_candidates`), so the adapter is also called for the same targets and both numbers are written side by side.
 Output opentargets_lists.tsv and opentargets_adapter_counts.tsv. Key-less; no account."""
+import sys as _sys
+if any(a in ("-h", "--help") for a in _sys.argv[1:]):  # a documented command must answer --help without touching the network or any file
+    print(__doc__)
+    raise SystemExit(0)
+
 import json, sys, time
 from pathlib import Path
 ROOT = Path(__file__).resolve().parents[5]

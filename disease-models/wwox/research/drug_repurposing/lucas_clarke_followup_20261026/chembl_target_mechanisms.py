@@ -4,6 +4,11 @@ mechanism action and its references, then the compound's max_phase and name.
 The repository's chembl adapter answers per drug or per gene (targets, not compounds); this lists compounds
 per target, which the adapter does not. Same door (_http), key-less, no account. Writes chembl_mechanisms.tsv
 and the raw JSON per target under chembl_raw/. Run from the repository root."""
+import sys as _sys
+if any(a in ("-h", "--help") for a in _sys.argv[1:]):  # a documented command must answer --help without touching the network or any file
+    print(__doc__)
+    raise SystemExit(0)
+
 import json, sys, time
 from pathlib import Path
 ROOT = Path(__file__).resolve().parents[5]

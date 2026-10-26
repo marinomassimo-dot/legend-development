@@ -36,7 +36,7 @@
     ]
    },
    "returned_nodes": 17,
-   "original_response_path": "/home/desktop/legend-development/.claude/worktrees/sci-c-lc/disease-models/wwox/research/drug_repurposing/lucas_clarke_followup_20261026/dgidb_raw/dgidb_batch_0.json"
+   "original_response_path": "disease-models/wwox/research/drug_repurposing/lucas_clarke_followup_20261026/dgidb_raw/dgidb_batch_0.json"
   }
  ]
 }

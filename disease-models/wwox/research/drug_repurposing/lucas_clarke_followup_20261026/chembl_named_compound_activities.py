@@ -2,6 +2,11 @@
 """ChEMBL activity rows for NAMED candidate compounds (ids from chembl_name_lookup.tsv), all targets, pchembl or not:
 what ChEMBL actually holds as a measurement for stiripentol, GSK2837808A, FX11, oxamate, ISRIB, fosigotifator, DCA, trazodone.
 Output chembl_named_activities.tsv. Potency in a stated assay only."""
+import sys as _sys
+if any(a in ("-h", "--help") for a in _sys.argv[1:]):  # a documented command must answer --help without touching the network or any file
+    print(__doc__)
+    raise SystemExit(0)
+
 import json, sys, time
 from pathlib import Path
 from urllib.parse import quote
