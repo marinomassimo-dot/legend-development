@@ -8,7 +8,7 @@
  "event_at": "2026-10-25T00:00:00Z",
  "analysis_at": "2026-10-25T00:00:00Z",
  "analysis_time_precision": "date_only",
- "workflow": "scientist-a repair of entries 60, 64 and 65 after the blind locator audit of the 2026-10-25 targeted reread; each repair declared as contradicts_locator with the audit verdict stamped",
+ "workflow": "scientist-a re-analysis after the blind audit (a re-statement, no new content read; tables not re-read), repair of entries 60, 64 and 65 after the blind locator audit of the 2026-10-25 targeted reread; each repair declared as contradicts_locator with the audit verdict stamped",
  "evidence_depth": "partial_fulltext_read",
  "source_locator": "files/fulltext/PMID34268881_Steinberg2021.pdf",
  "source_fingerprint": "c1013c46520911ebc6b7281545c135d54bc1c941c9652818fe240a54425011ef",
@@ -34,5 +34,5 @@
   "disease-models/wwox/research/page_adjudications/locator_audit_34268881_reread_20261025.md (blind audit, 8 triples, 6 SUPPORTED, 2 OVERSHOOT)"
  ],
  "prior_receipt": "FTR-20261025-34268881-10",
- "reread_reason": "receipt_correction"
+ "reread_reason": "adversarial_reanalysis"
 }
