@@ -245,20 +245,46 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Potency claim and its limit: the analogues' IC50 values are 100 to 200 micromolar and stiripentol and iso-stiripentol are described as 'higher than 500 micromolar'. For stiripentol this is a bound, not a fitted value: only a single-concentration percentage was measured for it and the dose-response figures of the supplement (S65 to S74) cover analogues only. The word 'significantly' carries no statistical test in the text.",
+    "proposition": "Potency claim and its limit: the authors write that the analogues' IC50 values are 100 to 200 micromolar; Table 2 spans 101.7 to 213.7 (one value, 213.7, lies outside the rounded range) and the racemate-versus-enantiomer scatter inside the series is up to two-fold (see the Table 2 entries). Stiripentol and iso-stiripentol are described as 'higher than 500 micromolar': for stiripentol this is a bound, and no dose-response curve is reported for it (the supplement's curves S65 to S74 cover analogues only; the Results say the IC50 phase was run for compounds with notable activity, 3 to 5). That stiripentol had no curve run is an inference from those two places, because the Table 2 footnote b sits on the whole IC50 column. The word 'significantly' carries no statistical test in the text.",
     "snippet": "All these novel compounds showed IC50 values in the range of 100–200 µM, significantly improving the activity shown by 1 and 2 (with IC50 values higher than 500 µM)",
     "surface": "body",
     "anchor": "2.4 Inhibitory Activity, paragraph 2",
     "artifact": "files/fulltext/PMID39769031_RicoMolina2024_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID39769031.json",
+     "entry": 3,
+     "what_changed": "AUDIT (disease-models/wwox/research/locator_audits/2026-10-27_PMID39769031_blind_audit.md, scientist-d): range stated as 100-200 although Table 2 is 101.7-213.7; 'only a single-concentration percentage was measured' narrowed to 'no curve reported', an inference.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "OVERSHOOT"
+      ],
+      "audit_file": "disease-models/wwox/research/locator_audits/2026-10-27_PMID39769031_blind_audit.md",
+      "audited_on": "2026-10-27"
+     }
+    }
    },
    {
-    "proposition": "The strongest compound, (-)-(2R,5S)-4, has IC50 101.7 micromolar; the authors place it beside galloflavin (103.6) and luteolin-7-O-glucoside (139.2), i.e. a weak tool-grade LDHA inhibitor, not a potent one. Enantiomers differ little within a pair.",
+    "proposition": "The lowest IC50 in the series is (-)-(2R,5S)-4 at 101.7 micromolar; the authors place it beside galloflavin (103.6) and luteolin-7-O-glucoside (139.2), i.e. a weak tool-grade LDHA inhibitor. Its rank is inside the series scatter: its own racemate, (+/-)-(2S*,5R*)-4, is 199.8, about twice as weak, so it is not established as the best compound. Enantiomers within a pair are described by the authors as not remarkably different.",
     "snippet": "enantiomer (−)-(2R,5S)-4 showed the lowest IC50 value (101.7 µM)",
     "surface": "body",
     "anchor": "2.4 Inhibitory Activity, paragraph 2",
     "artifact": "files/fulltext/PMID39769031_RicoMolina2024_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID39769031.json",
+     "entry": 4,
+     "what_changed": "AUDIT (disease-models/wwox/research/locator_audits/2026-10-27_PMID39769031_blind_audit.md, scientist-d): quote supported; caveat added that the series racemate scatter equals the 100-200 band, so 'strongest' is not a ranking.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "SUPPORTED"
+      ],
+      "audit_file": "disease-models/wwox/research/locator_audits/2026-10-27_PMID39769031_blind_audit.md",
+      "audited_on": "2026-10-27"
+     }
+    }
    },
    {
     "proposition": "What this paper says of the 2015 report (secondary statement only): the authors write that Sada et al. measured stiripentol on purified mammalian LDH, found about 40 percent inhibition of both directions at 500 micromolar, and that this paper found about 10 percent at the same concentration, which they attribute to assay conditions. The 2015 article itself was not read; this sentence is the only description of its numbers in the reading.",
@@ -285,20 +311,46 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Replication: percentages are n = 4 at one concentration, IC50 values n = 3 over eight concentrations spanning 0.46 to 1000 micromolar; all measurements triplicate with mean and SD; no independent enzyme lot or second assay format.",
-    "snippet": "All measurements were made in triplicate and data were expressed as the mean ± SD.",
-    "surface": "body",
-    "anchor": "3.10 Human Lactate Dehydrogenase A Enzymatic Activity Assay",
+    "proposition": "Replication as printed in the Table 2 footnotes: percentages are n = 4 at a single concentration of 500 micromolar; IC50 values are n = 3 evaluated at eight concentrations spanning 0.46 to 1000 micromolar. The Methods say instead that all measurements were made in triplicate (an internal tension). No independent enzyme lot or second assay format is described (absence claim on Methods 3.10).",
+    "snippet": "a Percentage of inhibition values are presented as the mean ± SD of n = 4 replicates at a single concentration of 500 μM. b IC50 values are presented as the mean ± SD of n = 3 replicates, evaluated at eight different concentrations, in a range of 0.46–1000 μM.",
+    "surface": "table",
+    "anchor": "Table 2, footnotes a and b (and Methods 3.10 for the triplicate statement)",
     "artifact": "files/fulltext/PMID39769031_RicoMolina2024_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID39769031.json",
+     "entry": 8,
+     "what_changed": "AUDIT (disease-models/wwox/research/locator_audits/2026-10-27_PMID39769031_blind_audit.md, scientist-d): snippet did not carry n = 4, eight concentrations or the 0.46-1000 range; re-sourced to the Table 2 footnotes.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "SUPPORTED"
+      ],
+      "audit_file": "disease-models/wwox/research/locator_audits/2026-10-27_PMID39769031_blind_audit.md",
+      "audited_on": "2026-10-27"
+     }
+    }
    },
    {
-    "proposition": "Scope of the conclusion: the authors conclude the new compounds inhibit human LDHA more than stiripentol and call LDHA inhibition 'already validated as a safe therapeutic method' for primary hyperoxaluria (liver, a different disease and organ); they state that the analogues must still be compared in vivo and that hepatotoxicity is unassessed. No neuronal, brain, seizure, cell or animal datum exists in this paper.",
-    "snippet": "further efforts should be made to understand whether these analogues of STP increase, or do not increase, the proven ability of STP to reduce urinary oxalate levels in vivo",
+    "proposition": "Scope of the conclusion: the Conclusions describe inhibition of hLDHA as 'already validated as a safe therapeutic method' for primary hyperoxaluria (liver, a different disease and organ) and say the analogues must still be compared in vivo. No neuronal, brain, seizure, cell or animal experiment exists in this paper (absence claim; the words cell, in vivo and rats occur only in the Introduction, references and as cuvette 'quartz cells'). The hepatotoxicity caveat is a separate sentence in section 2.4 (next entry).",
+    "snippet": "the inhibition of hLDHA has already been validated as a safe therapeutic method to treat primary hyperoxaluria (PH)",
     "surface": "body",
     "anchor": "4. Conclusions",
     "artifact": "files/fulltext/PMID39769031_RicoMolina2024_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID39769031.json",
+     "entry": 9,
+     "what_changed": "AUDIT (disease-models/wwox/research/locator_audits/2026-10-27_PMID39769031_blind_audit.md, scientist-d): snippet carried only the in vivo clause; the 'validated as a safe' sentence is quoted and the hepatotoxicity clause moved to its true location in 2.4.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "SUPPORTED"
+      ],
+      "audit_file": "disease-models/wwox/research/locator_audits/2026-10-27_PMID39769031_blind_audit.md",
+      "audited_on": "2026-10-27"
+     }
+    }
    },
    {
     "proposition": "Table 2, stiripentol row: racemic stiripentol 9.9 plus or minus 2.3 percent inhibition at 500 micromolar and an IC50 entry of greater than 500.",
@@ -309,20 +361,46 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Table 2, enantiomer rows: (-)-(S)-stiripentol 34.0 plus or minus 2.1 and (+)-(R)-stiripentol 38.4 plus or minus 1.6 percent at 500 micromolar. The racemate (9.9) is far below both of its enantiomers (34.0 and 38.4) in the same assay, a discrepancy the text does not discuss; the racemate cannot inhibit less than the average of its two components unless the assay is noisy between preparations. Stiripentol's weakness in this assay is therefore itself of uncertain size (about 10 versus about 35 percent).",
+    "proposition": "Table 2, enantiomer rows: (-)-(S)-stiripentol 34.0 plus or minus 2.1 and (+)-(R)-stiripentol 38.4 plus or minus 1.6 percent at 500 micromolar (n = 4), against 9.9 for the racemate and 21.1 for iso-stiripentol. The racemate is below both enantiomers in the same assay and the text does not discuss it (the authors cite only 'ca. 10%' for stiripentol). INFERENCE, not quoted: for a 1:1 mixture of non-interacting equipotent inhibitors the mixture is expected between its components, so this suggests between-preparation or between-run variation. The same racemate-outside-enantiomers pattern recurs in the analogue IC50 data (next entries), in both directions. The enantiomer values (34 to 38) are close to the ~40 percent the authors attribute to the 2015 report; the 10 percent is the racemate only.",
     "snippet": "(−)-(S)-1 34.0 ± 2.1 >500 (+)-(R)-1 38.4 ± 1.6 >500 iso-Stiripentol ((±)-2) 21.1 ± 3.5 >500",
     "surface": "table",
     "anchor": "Table 2, row (+)-(R)-1",
     "artifact": "files/fulltext/PMID39769031_RicoMolina2024_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID39769031.json",
+     "entry": 11,
+     "what_changed": "AUDIT (disease-models/wwox/research/locator_audits/2026-10-27_PMID39769031_blind_audit.md, scientist-d): numbers exact; the anomaly is wider than stated (recurs in analogues) and the explanation is an inference; the ~10 percent is the racemate only.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "SUPPORTED"
+      ],
+      "audit_file": "disease-models/wwox/research/locator_audits/2026-10-27_PMID39769031_blind_audit.md",
+      "audited_on": "2026-10-27"
+     }
+    }
    },
    {
-    "proposition": "Table 2, best analogues: (-)-(2R,5S)-4 IC50 101.7 plus or minus 6.7 micromolar, R2 0.99; racemic compound 3 125.3 plus or minus 19.0.",
-    "snippet": "(−)-(2R,5S)-4 ND c 101.7 ± 6.7 0.99 (+)-(2S,5R)-4 ND c 128.4 ± 12.4 0.97",
+    "proposition": "Table 2, analogue rows: racemic compound 3 125.3 plus or minus 19.0 (more potent than both its enantiomers, 213.7 and 166.3); racemic (2S*,5R*)-4 199.8 plus or minus 23.8 (weaker than both its enantiomers, 101.7 plus or minus 6.7 and 128.4 plus or minus 12.4). Racemate and enantiomers differ by up to about two-fold in either direction, so IC50 scatter between preparations or runs is about as large as the 100-200 micromolar band separating best from worst analogue: the table reads as a screen, not a ranking.",
+    "snippet": "(±)-3 70.0 ± 3.0 125.3 ± 19.0 0.98 (−)-(S)-3 ND c 213.7 ± 13.9 0.96 (+)-(R)-3 ND c 166.3 ± 16.9 0.99 (±)-(2S*,5R*)-4 56.3 ± 8.2 199.8 ± 23.8 0.98 (−)-(2R,5S)-4 ND c 101.7 ± 6.7 0.99 (+)-(2S,5R)-4 ND c 128.4 ± 12.4 0.97",
     "surface": "table",
-    "anchor": "Table 2, row (−)-(2R,5S)-4",
+    "anchor": "Table 2, rows (+/-)-3 through (+)-(2S,5R)-4",
     "artifact": "files/fulltext/PMID39769031_RicoMolina2024_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID39769031.json",
+     "entry": 12,
+     "what_changed": "AUDIT (disease-models/wwox/research/locator_audits/2026-10-27_PMID39769031_blind_audit.md, scientist-d): snippet did not contain the racemic-3 row; re-sourced to the contiguous rows, which also carry the analogue racemate scatter.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "SUPPORTED"
+      ],
+      "audit_file": "disease-models/wwox/research/locator_audits/2026-10-27_PMID39769031_blind_audit.md",
+      "audited_on": "2026-10-27"
+     }
+    }
    },
    {
     "proposition": "Declared scope: the data availability statement says data are contained in the article and the supplement and the authors declare no conflict of interest; funding and sponsors were not read beyond this statement.",
@@ -349,11 +427,40 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "Supplementary Figures S65 to S67, page 44 of the supplement read as an image: dose-response curves of compound (+/-)-3, (-)-(S)-3 and (+)-(R)-3 against human LDHA with IC50 125.3, 213.7 and 166.3 micromolar. The curves are steep: activity stays near 100 percent up to about 30 to 40 micromolar and falls to about 10 percent by about 300 micromolar, i.e. over roughly one log unit, steeper than a one-site curve (Hill slope not reported). With 5 percent DMSO and no detergent named, a steep curve is a pattern that also occurs with non-specific or aggregating inhibitors; this is a flag for the analogue series, not a finding. The supplement carries no curve for stiripentol.",
+    "proposition": "Supplementary Figures S65 to S67, page 44 of the supplement read as an image: dose-response curves of compound (+/-)-3, (-)-(S)-3 and (+)-(R)-3 against human LDHA with IC50 125.3, 213.7 and 166.3 micromolar. The curves are steep: for S65 and S67 activity stays near 100 percent to about 30 to 40 micromolar and falls to about 10 percent by about 300, roughly one log unit; S66 falls from about 90 to about 18 percent in about half a log unit. One or two points define each slope, so the Hill slope is unconstrained by the data and is not reported. With 5 percent DMSO and no detergent named, a steep curve is a pattern that also occurs with non-specific or aggregating inhibitors; this is a flag for the analogue series, not a finding. The supplement carries no curve for stiripentol.",
     "snippet": "[figure attestation - pixels cannot be quote-matched] Figure S65 (+/-)-3 IC50 125.3 +/- 19.0 R2 0.98; S66 (-)-(S)-3 213.7 +/- 13.9, 0.96; S67 (+)-(R)-3 166.3 +/- 16.9, 0.99; points near 100 percent to about 1.5 log units, then about 10 percent at log 3.",
     "surface": "figure",
     "artifact": "files/figures/PMID39769031_r2/Supp_p44_110dpi.png",
     "anchor": "Supplement page 44 (ijms-3339511-supplementary.pdf), Figures S65 to S67, rendered at 110 dpi",
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID39769031.json",
+     "entry": 16,
+     "what_changed": "AUDIT (disease-models/wwox/research/locator_audits/2026-10-27_PMID39769031_blind_audit.md, scientist-d): S66 is steeper than 'one log unit' (about half a log); slope unconstrained by one or two points.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "SUPPORTED"
+      ],
+      "audit_file": "disease-models/wwox/research/locator_audits/2026-10-27_PMID39769031_blind_audit.md",
+      "audited_on": "2026-10-27"
+     }
+    }
+   },
+   {
+    "proposition": "The hepatotoxicity caveat: the authors state, in section 2.4 and not in the Conclusions, that the potential hepatotoxicity of the stiripentol analogues should be evaluated, and cite adverse hepatobiliary reports for stiripentol itself. No safety datum exists in the paper.",
+    "snippet": "the potential hepatotoxicity of these STP analogues should be evaluated",
+    "surface": "body",
+    "anchor": "2.4 Inhibitory Activity, paragraph 3",
+    "artifact": "files/fulltext/PMID39769031_RicoMolina2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 2, rows of racemic (2R*,5R*)-4 (129.6 plus or minus 15.3) and its enantiomers (+)-(2R,5R) 179.7 and (-)-(2S,5S) 149.3: here the racemate is more potent than both enantiomers, the opposite direction to the (2S*,5R*) series; the scatter is two-sided.",
+    "snippet": "(±)-(2R*,5R*)-4 71.7 ± 2.2 129.6 ± 15.3 0.98 (+)-(2R,5R)-4 ND c 179.7 ± 10.5 0.95 (−)-(2S,5S)-4 ND c 149.3 ± 10.4 0.97",
+    "surface": "table",
+    "anchor": "Table 2, rows (+/-)-(2R*,5R*)-4 and its enantiomers",
+    "artifact": "files/fulltext/PMID39769031_RicoMolina2024_PMC_r2.xml",
     "panel_text_relation": "text_only"
    }
   ],

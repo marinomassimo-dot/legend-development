@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "input_sha256": "70153fa98f3d3b57d9f2107bdd937938cb7791804f812d16331f4702ee784ded",
+ "input_sha256": "17d0bbf8c9e7b2a19f511cceeee78f26bde05206fa190ab8c1cc61ac52b24380",
  "epistemic_status": "IPOTESI",
  "canonical": false,
  "assessment": "REQUIRES_QUALIFICATION",
@@ -261,7 +261,7 @@
      "cell_type": "cell-free",
      "developmental_stage": "not applicable"
     },
-    "measured_result_note": "Single-digit percent inhibition at the highest concentration tested, which is in the millimolar range, and no value for the lower concentration row; no IC50. The article is not read (paywalled; abstract only): substrate level, enzyme source and replicates are unknown. The same document holds stiripentol rows for a GABA-A receptor and for mouse seizure and rotarod assays, so the LDH row is one weak measurement among several. It is the weakest of three independent single-concentration measurements (see DR-E02-004 and DR-E02-005) and is not evidence of inefficacy: the three disagree in size and no study reports a fitted potency for stiripentol.",
+    "measured_result_note": "Single-digit percent inhibition at the highest concentration tested, which is in the millimolar range, and no value for the lower concentration row; no IC50. The article is not read (paywalled; abstract only): substrate level, enzyme source and replicates are unknown. The same document holds stiripentol rows for a GABA-A receptor and for mouse seizure and rotarod assays, so the LDH row is one weak measurement among several. It is the lowest of three single-concentration measurements (see DR-E02-004 and DR-E02-005) at the highest concentration, and is not evidence of inefficacy: the stiripentol enantiomers in DR-E02-004 sit near the figure attributed to DR-E02-005, the racemate is lower, and no study reports a fitted potency for stiripentol.",
     "evidence_scope": "EXTERNAL_DATABASE_RECORD"
    },
    {
@@ -280,7 +280,7 @@
      "cell_type": "cell-free",
      "developmental_stage": "not applicable"
     },
-    "measured_result_note": "Stiripentol racemate about a tenth inhibition at one high-micromolar concentration; its enantiomers about a third each in the same assay (racemate below both of its enantiomers, undiscussed); iso-stiripentol about a fifth; the IC50 entry for stiripentol is a bound (above the highest single concentration), not a fitted value, and the supplement has curves only for the analogues. Four analogues reach 46 to 72 percent at that concentration with fitted IC50 of 100 to 200 micromolar, steep curves, no detergent named, 5 percent DMSO, positive-control result not shown: an analogue series with tool-grade potency, no cell, brain or animal datum.",
+    "measured_result_note": "Stiripentol racemate about a tenth inhibition at one high-micromolar concentration; its enantiomers about a third each in the same assay (racemate below both of its enantiomers, undiscussed, and the same racemate-outside-enantiomers scatter, up to two-fold, recurs in the analogue table); iso-stiripentol about a fifth; the IC50 entry for stiripentol is a bound, not a fitted value, and no curve is reported for it (curves only for the analogues; that none was run is an inference). Four analogues reach 46 to 72 percent at that concentration with fitted IC50 between about 100 and about 214 micromolar, steep curves (slope unconstrained by one or two points), no detergent named, 5 percent DMSO, positive-control result not shown: a screen-grade analogue series, no cell, brain or animal datum.",
     "evidence_scope": "OTHER_DISEASE_PRECEDENT"
    },
    {
@@ -293,7 +293,7 @@
     "epistemic_status": "DATO",
     "reading_depth": "abstract_only",
     "context": {
-     "disease_id": "epilepsy models (hippocampal and subthalamic neurons; a mouse seizure model; not WWOX)",
+     "disease_id": "epilepsy models (subthalamic neurons; a mouse seizure model; not WWOX)",
      "genotype": "UNKNOWN (the indexing terms list an inbred ICR mouse strain)",
      "species": "mouse",
      "cell_type": "neurons, purified enzyme",
@@ -308,7 +308,7 @@
     "endpoint": "cellular effect of stiripentol versus enzyme-level LDH inhibition",
     "direction": "DECREASE",
     "source": "Glioblastoma papers (PMID 42035940, 2026; PMID 36278433, 2022) and a complex I paper (PMID 41570991, 2026), targeted passages read, all open access; NOT WWOX EVIDENCE",
-    "locator": "sada_ldh_precedent_p2a_20261026.md section 3",
+    "locator": "sada_ldh_precedent_p2a_20261026.md sections 2.2 and 2.3",
     "epistemic_status": "DATO",
     "reading_depth": "queried_not_full_read",
     "context": {
@@ -318,7 +318,7 @@
      "cell_type": "tumour cell lines; heart and liver mitochondria",
      "developmental_stage": "not applicable"
     },
-    "measured_result_note": "Cell viability and extracellular acidification fall at tens of micromolar, but LDH activity in lysate falls significantly only at the highest, hundreds-of-micromolar concentrations, and oxygen consumption and complex I NADH oxidation are inhibited directly and immediately; the complex I paper reports no inhibition of malate dehydrogenase. Cellular effects of stiripentol are therefore not attributable to LDH on the available data. In a mouse glioblastoma xenograft stiripentol prolonged survival (log-rank P 0.002; legend and Methods disagree on the dose). Tumour models: no seizure, neurodevelopment or WWOX meaning.",
+    "measured_result_note": "Cell viability and extracellular acidification fall at tens of micromolar, but LDH activity in lysate falls significantly only at the highest, hundreds-of-micromolar concentrations, and oxygen consumption and complex I NADH oxidation are inhibited directly and immediately; the complex I paper reports no inhibition of malate dehydrogenase. Cellular effects of stiripentol are therefore not attributable to LDH on the available data. In a mouse glioblastoma xenograft stiripentol prolonged survival (log-rank P 0.002; the dose is given differently in the Results and the Methods, which may describe different cohorts). Tumour models: no seizure, neurodevelopment or WWOX meaning.",
     "evidence_scope": "OTHER_DISEASE_PRECEDENT"
    },
    {
@@ -327,7 +327,7 @@
     "endpoint": "total plasma, estimated free tissue and liver exposure compared with concentrations that inhibit LDH in vitro",
     "direction": "UNKNOWN",
     "source": "Bacq 2024, Adv Ther review (PMID 38443647, open access; targeted passages read); NOT WWOX EVIDENCE",
-    "locator": "sada_ldh_precedent_p2a_20261026.md section 3",
+    "locator": "sada_ldh_precedent_p2a_20261026.md section 2.4",
     "epistemic_status": "INFERENZA",
     "reading_depth": "queried_not_full_read",
     "context": {
@@ -427,7 +427,7 @@
     "against": [
      "The Ldh rescue lacks an Ldh-alone arm, a Wwox-mRNA check and a lactate readout, and the authors cite Ldh knockdown as detrimental in other fly amyloid models.",
      "Without amyloid lactate falls nominally and Ldh does not change.",
-     "Stiripentol inhibits LDH only weakly in the three single-concentration measurements held (they disagree in size and none gives a fitted potency), and it has other targets, including direct inhibition of mitochondrial complex I, that act at lower concentrations; any benefit would not be attributable to LDH.",
+     "Stiripentol inhibits LDH only weakly in the single-concentration measurements held (none gives a fitted potency, and the one at the highest concentration is the lowest), and it has other targets, including direct inhibition of mitochondrial complex I, that act at lower concentrations; any benefit would not be attributable to LDH.",
      "LDHA in the organoid is as consistent with immaturity as with WWOX loss.",
      "Human lactate in WWOX deficiency is reported normal or extremely low."
     ],
@@ -435,7 +435,7 @@
    },
    "time_to_access": "UNKNOWN for research use; stiripentol is marketed for another indication (label retrieved, openFDA 2026-04-27).",
    "time_to_benefit": "UNKNOWN.",
-   "pharmacology": "Stiripentol: marketed formulation with a paediatric label for Dravet syndrome with clobazam; weak and assay-dependent LDH inhibition in vitro (three laboratories, three sizes, no fitted potency), effective concentrations for LDH above total plasma levels and far above estimated free tissue levels in a review, other targets at lower concentrations; brain LDH engagement in vivo is asserted by secondary sources citing the 2015 report but not verified here. GSK2837808A: potent on LDHA in vitro, no in vivo or CNS datum retrieved. Nedosiran: liver-directed.",
+   "pharmacology": "Stiripentol: marketed formulation with a paediatric label for Dravet syndrome with clobazam; weak LDH inhibition in single-concentration enzyme measurements (no fitted potency; sizes differ between racemate, enantiomers and a database document), effective concentrations for LDH above total plasma levels and far above estimated free tissue levels in a review, other targets at lower concentrations; brain LDH engagement in vivo is asserted by secondary sources citing the 2015 report but not verified here. GSK2837808A: potent on LDHA in vitro, no in vivo or CNS datum retrieved. Nedosiran: liver-directed.",
    "paediatrics_and_interactions": "Stiripentol label: indicated for Dravet syndrome seizures in patients taking clobazam, from six months of age (openFDA label 2026-04-27); the same label means any use here would sit on top of clobazam co-therapy, an interaction this card does not assess. No paediatric suitability for WWOX-DEE is presumed.",
    "scope_of_checks": {
     "support_and_replication": "No independent replication of any fly row is held; the organoid rows are one laboratory's deposit.",
@@ -455,7 +455,7 @@
   "not_known": [
    "Whether lactate or LDH activity is altered in WWOX-deficient human neural cells, independent of maturity.",
    "Whether stiripentol engages LDH in brain at tolerated exposures (the 2015 report is the claimed source and was not readable; its exposure and enzyme numbers are unknown here).",
-   "What the real potency of stiripentol on LDH is: three single-concentration measurements disagree and no fitted value exists.",
+   "What the real potency of stiripentol on LDH is: only single-concentration measurements exist and no fitted value.",
    "Which of stiripentol's effects on tumour-cell metabolism and respiration are LDH-mediated and which act through complex I.",
    "Whether Ldh lowering is beneficial or harmful without the amyloid context.",
    "Why lactate falls nominally with Wwox reduction without amyloid."
