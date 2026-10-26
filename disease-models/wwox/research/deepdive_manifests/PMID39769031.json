@@ -332,7 +332,7 @@
     }
    },
    {
-    "proposition": "Scope of the conclusion: the Conclusions describe inhibition of hLDHA as 'already validated as a safe therapeutic method' for primary hyperoxaluria (liver, a different disease and organ) and say the analogues must still be compared in vivo. No neuronal, brain, seizure, cell or animal experiment exists in this paper (absence claim; the words cell, in vivo and rats occur only in the Introduction, references and as cuvette 'quartz cells'). The hepatotoxicity caveat is a separate sentence in section 2.4 (next entry).",
+    "proposition": "Scope of the conclusion: the Conclusions describe inhibition of hLDHA as 'already validated as a safe therapeutic method' for primary hyperoxaluria (liver, a different disease and organ) and say the analogues must still be compared in vivo. No neuronal, brain, seizure, cell or animal experiment exists in this paper (absence claim; the words cell, in vivo and rats also occur outside experiments: Introduction, references, 'quartz cells', 'in vivo' as future work in 2.4 and 4. Conclusions, and rats in 2.4 citing another study; none is an experiment of this paper). The hepatotoxicity caveat is a separate sentence in section 2.4 (next entry).",
     "snippet": "the inhibition of hLDHA has already been validated as a safe therapeutic method to treat primary hyperoxaluria (PH)",
     "surface": "body",
     "anchor": "4. Conclusions",
@@ -341,13 +341,13 @@
     "contradicts_locator": {
      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID39769031.json",
      "entry": 9,
-     "what_changed": "AUDIT (disease-models/wwox/research/locator_audits/2026-10-27_PMID39769031_blind_audit.md, scientist-d): snippet carried only the in vivo clause; the 'validated as a safe' sentence is quoted and the hepatotoxicity clause moved to its true location in 2.4.",
+     "what_changed": "RE-AUDIT (disease-models/wwox/research/locator_audits/2026-10-27_PMID39769031_reaudit.md, scientist-a): absence word list widened (in vivo and rats also occur in 2.4 and Conclusions, none experimental).",
      "audit": {
       "auditors": 1,
       "verdicts": [
        "SUPPORTED"
       ],
-      "audit_file": "disease-models/wwox/research/locator_audits/2026-10-27_PMID39769031_blind_audit.md",
+      "audit_file": "disease-models/wwox/research/locator_audits/2026-10-27_PMID39769031_reaudit.md",
       "audited_on": "2026-10-27"
      }
     }
@@ -382,7 +382,7 @@
     }
    },
    {
-    "proposition": "Table 2, analogue rows: racemic compound 3 125.3 plus or minus 19.0 (more potent than both its enantiomers, 213.7 and 166.3); racemic (2S*,5R*)-4 199.8 plus or minus 23.8 (weaker than both its enantiomers, 101.7 plus or minus 6.7 and 128.4 plus or minus 12.4). Racemate and enantiomers differ by up to about two-fold in either direction, so IC50 scatter between preparations or runs is about as large as the 100-200 micromolar band separating best from worst analogue: the table reads as a screen, not a ranking.",
+    "proposition": "Table 2, analogue rows: racemic compound 3 125.3 plus or minus 19.0 (more potent than both its enantiomers, 213.7 and 166.3); racemic (2S*,5R*)-4 199.8 plus or minus 23.8 (weaker than both its enantiomers, 101.7 plus or minus 6.7 and 128.4 plus or minus 12.4). Racemate and enantiomers differ by up to about two-fold in either direction, so unexplained racemate-versus-enantiomer differences (cause not determined) are about as large as the 100-200 micromolar band separating best from worst analogue: the table reads as a screen, not a ranking.",
     "snippet": "(±)-3 70.0 ± 3.0 125.3 ± 19.0 0.98 (−)-(S)-3 ND c 213.7 ± 13.9 0.96 (+)-(R)-3 ND c 166.3 ± 16.9 0.99 (±)-(2S*,5R*)-4 56.3 ± 8.2 199.8 ± 23.8 0.98 (−)-(2R,5S)-4 ND c 101.7 ± 6.7 0.99 (+)-(2S,5R)-4 ND c 128.4 ± 12.4 0.97",
     "surface": "table",
     "anchor": "Table 2, rows (+/-)-3 through (+)-(2S,5R)-4",
@@ -391,13 +391,13 @@
     "contradicts_locator": {
      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID39769031.json",
      "entry": 12,
-     "what_changed": "AUDIT (disease-models/wwox/research/locator_audits/2026-10-27_PMID39769031_blind_audit.md, scientist-d): snippet did not contain the racemic-3 row; re-sourced to the contiguous rows, which also carry the analogue racemate scatter.",
+     "what_changed": "RE-AUDIT (disease-models/wwox/research/locator_audits/2026-10-27_PMID39769031_reaudit.md, scientist-a): causal clause 'scatter between preparations or runs' replaced by 'cause not determined'.",
      "audit": {
       "auditors": 1,
       "verdicts": [
-       "SUPPORTED"
+       "OVERSHOOT"
       ],
-      "audit_file": "disease-models/wwox/research/locator_audits/2026-10-27_PMID39769031_blind_audit.md",
+      "audit_file": "disease-models/wwox/research/locator_audits/2026-10-27_PMID39769031_reaudit.md",
       "audited_on": "2026-10-27"
      }
     }
@@ -448,12 +448,25 @@
     }
    },
    {
-    "proposition": "The hepatotoxicity caveat: the authors state, in section 2.4 and not in the Conclusions, that the potential hepatotoxicity of the stiripentol analogues should be evaluated, and cite adverse hepatobiliary reports for stiripentol itself. No safety datum exists in the paper.",
+    "proposition": "The hepatotoxicity caveat: the authors state, in section 2.4 and not in the Conclusions, that the potential hepatotoxicity of the stiripentol analogues should be evaluated, and cite adverse hepatobiliary reports for stiripentol itself. No safety datum exists in the paper. The paper also cites a hepatoprotective effect of stiripentol on acetaminophen hepatotoxicity in rats (reference 60) and states that the stiripentol label does not currently indicate liver injury, so the caveat runs in both directions.",
     "snippet": "the potential hepatotoxicity of these STP analogues should be evaluated",
     "surface": "body",
     "anchor": "2.4 Inhibitory Activity, paragraph 3",
     "artifact": "files/fulltext/PMID39769031_RicoMolina2024_PMC_r2.xml",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID39769031.json",
+     "entry": 17,
+     "what_changed": "RE-AUDIT (disease-models/wwox/research/locator_audits/2026-10-27_PMID39769031_reaudit.md, scientist-a): balancing hepatoprotective-in-rats citation and the no-label-warning sentence added.",
+     "audit": {
+      "auditors": 1,
+      "verdicts": [
+       "UNDERSHOOT"
+      ],
+      "audit_file": "disease-models/wwox/research/locator_audits/2026-10-27_PMID39769031_reaudit.md",
+      "audited_on": "2026-10-27"
+     }
+    }
    },
    {
     "proposition": "Table 2, rows of racemic (2R*,5R*)-4 (129.6 plus or minus 15.3) and its enantiomers (+)-(2R,5R) 179.7 and (-)-(2S,5S) 149.3: here the racemate is more potent than both enantiomers, the opposite direction to the (2S*,5R*) series; the scatter is two-sided.",
