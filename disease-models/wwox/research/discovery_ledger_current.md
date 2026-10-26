@@ -4453,3 +4453,27 @@ Leads staged in the candidates of `BATCH_20261019_003` (groups H3, H4 and H5). A
 - **Audit note (appended 2026-10-22 by `BATCH_20261019_012`; `research/page_adjudications/locator_audit_R4b_R2b_20261022.md`, 8 of 8 triples SUPPORTED):** the printed values and the interaction recompute (trimethadione F(1,43) 20.37 against 20.43 printed; phenytoin 23.69 against 26.22 printed, a discrepancy that is not a rounding effect and does not change the direction or p below .0001). Both vehicle groups sit at stage 5, a ceiling for survivors, so vehicle equality does not show equal excitability. In the mutant the phenytoin group is not marked different from mutant vehicle and the trimethadione group carries one star (p below .05) against mutant vehicle: «drug works in wild type, much weaker in the mutant» is supported, «fails» fits phenytoin and only partly trimethadione. The T-type action of trimethadione is cited, not measured (no electrophysiology in the paper).
 - DL-MECH-170
 - **Not medical advice.**
+
+## Run 2026-10-26 — leads appended by the validated writer (discovery_lead.py)
+
+### DL-MECH-173 — Integrated stress response in WWOX loss: the fly Atf4 rise needs amyloid and the one human knockout transcriptome shows the ATF4/ISR target set LOWER than chance, so no signed human ISR readout exists (NOT WWOX-DEE evidence for the fly part)
+
+- **Tag:** DATO + INFERENZA
+- **Status:** open
+- **Created:** 2026-10-26 · scientist-c, task LC-FOLLOWUP 2026-10-26; PAPER 567 manifest entries 57-59 (receipt FTR-20261026-42909904-01); gse156243/prediction_isr_ldh_chain_20261026.md; card P4-E-01 in drug_repurposing/cards/E01_isr_modulators.card.json. Appended by `discovery_lead.py`. Staged as `disease-models/wwox/research/lead_staging/scientist-c/lead_isr_signed_readout_gap.json`.
+- **Causal statement:** DATO (fly, Drosophila amyloid model): Atf4 immunofluorescence rises with neuronal Wwox reduction only when Abeta42 is present (n 6, P 0.0022) and not without it (P 0.9305). DATO (exploratory, one human knockout organoid deposit, no amyloid): the 12-gene ATF4/ISR target set is lower than 10,000 random sets (mean shift -0.288, P 0.0005); ATF4 transcript is flat, which says nothing about ATF4 protein. INFERENZA: the Atf4-to-Ldh step is the authors' inference, since Atf4 is never perturbed. An ISR-attenuating drug therefore has no signed WWOX readout to be chosen on; the decisive first datum is eIF2 alpha phosphorylation and ATF4 protein in a WWOX-deficient human neural system, with and without a proteotoxic challenge.
+- **Falsifying experiment / counter:** eIF2 alpha phosphorylation and ATF4 protein NOT raised in WWOX-deficient human neural cells at matched maturity with or without a defined proteotoxic challenge falsifies the strand for WWOX-DEE; a raised signal that an eIF2B activator reverses, with a functional endpoint moving, would support it.
+- **Transfer limit to WWOX:** The fly effect is amyloid-conditional and partial-RNAi; the human transcript is six libraries with genotype and composition confounded and no protein-level readout; the adult-ALS trial of an eIF2B activator engaged the target without clinical benefit; nothing here transfers to a Q230P or splice-allele lesion. Not medical advice; no dose.
+- [[paper_registry_current#PAPER 567]]
+- **Not medical advice.**
+
+### DL-REPO-004 — LDH lowering rescued fly locomotion once in the amyloid-plus-Wwox-reduction genotype; the approved paediatric epilepsy drug usually linked to LDH inhibits it only weakly in the retrieved measurements (NOT WWOX-DEE evidence)
+
+- **Tag:** DATO + INFERENZA
+- **Status:** open
+- **Created:** 2026-10-26 · scientist-c, task LC-FOLLOWUP 2026-10-26; PAPER 567 manifest entries 50-56 (receipt FTR-20261026-42909904-01); ChEMBL activity rows of stiripentol (document CHEMBL4311969), 2024 and 2026 stiripentol abstracts; card P4-E-02 in drug_repurposing/cards/E02_ldh_inhibition.card.json. Appended by `discovery_lead.py`. Staged as `disease-models/wwox/research/lead_staging/scientist-c/lead_ldh_stiripentol_weak_link.json`.
+- **Causal statement:** DATO: Ldh RNAi added to Abeta42 plus Wwox RNAi raised climbing at 14, 21 and 28 days (t 3.182, 6.832, 5.198; N 4-6 vials) to or above the control line; no Ldh-alone arm, no Wwox-mRNA check, lactate not measured in the double line, and the authors cite Ldh knockdown as detrimental in other fly amyloid models. DATO (ChEMBL, abstract-level for the papers): stiripentol inhibits human LDH5 and LDH1 by single-digit percent at a single high millimolar-range concentration and about a tenth at a high micromolar concentration in a chemistry paper; a 2026 paper calls it moderate but not potent. INFERENZA: an LDH-directed lever for WWOX-DEE would need a more potent LDHA agent or proof of brain LDH engagement by stiripentol at tolerated exposure, and a separate control for stiripentol's other pharmacology.
+- **Falsifying experiment / counter:** Lactate and LDH activity not altered in WWOX-deficient human neural cells at matched maturity, or Ldh lowering failing in a second Wwox RNAi line or a null allele, or an Ldh-alone arm showing the same benefit with Wwox intact.
+- **Transfer limit to WWOX:** Fly amyloid model, partial RNAi, whole-head metabolomics; human lactate in WWOX deficiency is reported normal or extremely low (DL-BIO-008, DL-BIO-009); stiripentol's labelled use sits on clobazam co-therapy; no WWOX datum for any LDH agent. Not medical advice; no dose.
+- [[paper_registry_current#PAPER 567]]
+- **Not medical advice.**

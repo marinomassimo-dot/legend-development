@@ -46,3 +46,16 @@
 
 ## Harness change landed on the task branch (T0, §21e)
 `framework/adapters/orphadata.py` percent-encodes the name (a multi-word name raised an unhandled `InvalidURL` and aborted the caller); `framework/adapters/_http.py` returns `(0, error text)` for a `ValueError` such as `InvalidURL`, as its docstring promises for transport failures. Measured: the offline adapter selftest is green; the live query for a multi-word name now answers (see the lucas_clarke_followup record). A name-substring match by the Orphadata service for "vanishing white matter" returned an unrelated disorder: the adapter is not a disease-name lookup and must not be quoted as one.
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED (research layer; `WM_v7.27` preserved)
+**Batch:** `BATCH_20261019_021` (2026-10-26, MINOR, MANUAL, ACTOR_ID `integrator`)
+
+- **Proposal 1 landed:** the two drafts are `HYP-20261026-10` (ISR attenuation) and `HYP-20261026-11` (LDH lowering) in `therapeutic_hypotheses_ledger_current.md`, the placeholder ids being free on `main`. Track (A/B) and route (deep recovery / partial benefit) are separate fields; status `generated`, no ranking line, EXPLORATORY; a separate paragraph keeps the PDK-PDH chain apart from what the paper measured (no pyruvate, PDH or PDK measured; the «pyruvate metabolism» wording rests on KEGG transcript enrichment). The ledger editor refused a level-3 insert (`RESEGMENTATION`), so this one file was extended at its end by a direct append after its last record (a `FULL_FALLBACK` for the insert only; every other byte unchanged, checked by diff).
+- **Proposal 2 landed:** the two staged leads were appended by `discovery_lead.py append` (explicit specs, not `--staged`, which would have swept other actors' staged leads): `DL-MECH-173` and `DL-REPO-004`.
+- **Proposal 3 landed:** one consequence note in `HYP-20260709-05`, EXPLORATORY, no status or score change. Beyond the proposal, the `HYP-20260709-01` bullet «PDH activity unchanged» is marked «ledger statement, locator not traced».
+- **Proposal 4:** no edit, as proposed. **Proposal 5 still owed:** the blind audit of the compound statements and of the INFERENZA lines of the four cards (the independent verification file covers 14 of 17 supported, the error fixed in the producer's follow-up).
+

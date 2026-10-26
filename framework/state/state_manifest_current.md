@@ -107,12 +107,12 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20261019_020
+last_batch_commit_id: BATCH_20261019_021
 last_batch_commit_date: 2026-10-26
 last_batch_commit_type: MANUAL
-commit_candidates_propagated: 0
+commit_candidates_propagated: 1
 target_wm_version: WM_v7.27
-trigger: MANUAL (ACTOR_ID integrator, assigned by the Orchestrator). Correction batch after the preprint-versus-published reconciliation: the Ldh log2 figures of PAPER 567 are tied to their contrasts (1.29 text and 1.2903 table for knockdown added to amyloid; 1.19 text and 1.1097 table for amyloid alone, a pre-publication discordance), the preprint 1.33 recorded in the dossier, and the preprint-to-published changes written into PAPER 567 and PAPER 158. No claim, score or receipt touched. WM_v7.27 preserved.
+trigger: MANUAL (ACTOR_ID integrator, assigned by the Orchestrator). Research layer only, no disease-model change: the Lucas-Clarke 2026 follow-up of Scientist C landed as two exploratory hypotheses (HYP-20261026-10, HYP-20261026-11, status generated, no ranking, track and route as separate fields, the PDK-PDH chain kept apart from what the paper measured), two leads (DL-MECH-173, DL-REPO-004) and a consequence note on HYP-20260709-05; one HYP-20260709-01 bullet marked ledger statement, locator not traced. WM_v7.27 preserved.
 ```
 
 Every batch's scope — the candidates it propagated, newest first back to `BATCH_20260810_001`,
@@ -126,7 +126,7 @@ with the keys written beside each and the notes on `BATCH_20260806_002` — is i
 
 ```yaml
 last_lint_type: LINT_AUTOMATIC
-last_lint_id: LINT_20261026_BATCH_20261019_020
+last_lint_id: LINT_20261026_BATCH_20261019_021
 last_lint_date: 2026-10-26
 last_lint_result: WARN
 ```
