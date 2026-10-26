@@ -7,14 +7,14 @@
  "OBJECTIVE": "Roadmap iteration 1: (P1) link curated WWOX knowledge to the repurposing module; (P2) deepen the metabolic premises (Sada 2015 LDH, PDH activity unchanged, lactate wording); (P3) WWOX/external/combined comparison, outcomes for ToolUniverse, TxGNN, MATRIX, LINCS, and a verified daily scout. No efficacy claim, no wet-lab, no e-mail/contact.",
  "START_UTC": "2026-10-26T21:30:00Z",
  "AUTHORISED_QUEUE_20261026": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_P1": {
    "order": 1,
    "steps": [
     {
      "step": "Module consumes curated observations, scope and dimensions kept separate, target->compounds glue, Q-R-10/11 classified",
      "status": "DONE",
-     "evidence": "scientist-c b6d02d4d; independent verification by scientist-a pending"
+     "evidence": "b6d02d4d + 650eef07; verified a109248a-line (locator_audits/2026-10-27_p1_curated_links_verification.md)"
     }
    ]
   },
@@ -24,12 +24,12 @@
     {
      "step": "PDH-unchanged premise traced; lactate interaction wording reconciled",
      "status": "DONE",
-     "evidence": "scientist-a 324ae260; independent read scientist-b 64dacd1d: all SUPPORTED; HYP-01 bullet wording via integrator pending"
+     "evidence": "Sada 2015 not lawfully acquirable (wishlist 16,17); Rico-Molina read, 3 audits; PDH premise traced, independently read; BATCH_022"
     },
     {
      "step": "Sada 2015 (PMID 25792327) acquired, read, reconciled with ChEMBL",
-     "status": "IN_PROGRESS",
-     "evidence": "scientist-b dispatched"
+     "status": "DONE",
+     "evidence": "Sada 2015 not lawfully acquirable (wishlist 16,17); Rico-Molina read, 3 audits; PDH premise traced, independently read; BATCH_022"
     }
    ]
   },
@@ -38,8 +38,8 @@
    "steps": [
     {
      "step": "WWOX vs external vs combined comparison on real cases",
-     "status": "TODO",
-     "evidence": "after P1 verification and P2"
+     "status": "DONE",
+     "evidence": "knowledge_contribution_trial_20261027, verified, corrected (aeb7613f)"
     }
    ]
   },
@@ -48,13 +48,13 @@
    "steps": [
     {
      "step": "TxGNN and MATRIX outcomes",
-     "status": "IN_PROGRESS",
-     "evidence": "scientist-d dispatched"
+     "status": "DONE",
+     "evidence": "ToolUniverse narrow use, TxGNN wait, MATRIX inconclusive, LINCS inconclusive; each verified by another actor"
     },
     {
      "step": "LINCS and ToolUniverse capability outcomes",
-     "status": "IN_PROGRESS",
-     "evidence": "scientist-c dispatched"
+     "status": "DONE",
+     "evidence": "ToolUniverse narrow use, TxGNN wait, MATRIX inconclusive, LINCS inconclusive; each verified by another actor"
     }
    ]
   },
@@ -64,14 +64,15 @@
     {
      "step": "Daily scout operative with proof of next run",
      "status": "DONE",
-     "evidence": "plan ae08e419; cron 05:20 UTC; env -i run + diff run"
+     "evidence": "scout_daily.py + crontab 20 5 * * *; next run proven by env -i diff run"
     }
    ]
   }
  },
  "DECISIONS_TAKEN": [
   "2026-10-26: operator away 8 h; hourly session cron 006222c0 continues the mandate until 2026-10-27 06:30 UTC.",
-  "2026-10-26: integrator batch for the commit candidates is held until the scientist packages report, to avoid concurrent registry edits."
+  "2026-10-26: integrator batch for the commit candidates is held until the scientist packages report, to avoid concurrent registry edits.",
+  "2026-10-27: iteration closed after independent verification of every decisive conclusion; remaining work is operator-side (Sada 2015 copy, EBI request, 42397075 supplement) and scout triage."
  ],
  "DEFAULTS_TAKEN": [
   "daily scout at 05:20 UTC (host time), reversible by removing one crontab line"
