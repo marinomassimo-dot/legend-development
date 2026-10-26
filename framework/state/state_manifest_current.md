@@ -107,12 +107,12 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20261019_019
+last_batch_commit_id: BATCH_20261019_020
 last_batch_commit_date: 2026-10-26
 last_batch_commit_type: MANUAL
 commit_candidates_propagated: 0
 target_wm_version: WM_v7.27
-trigger: MANUAL (ACTOR_ID integrator, assigned by the Orchestrator). Scope-correction batch after the blind audit of manifest entries 31, 49, 89, 94 and 95 of the Lucas-Clarke 2026 article: absence statements in PAPER 567, PAPER 158, CLAIM 025, DL-MECH-020 and HYP-20260709-05 are scoped to the main text, figures and supplementary tables read (the MetaboLights deposit was not retrieved), and the limitations coverage line is reworded to the reader note it rests on. No claim Status, Type or Summary, no score and no ledger receipt touched. WM_v7.27 preserved.
+trigger: MANUAL (ACTOR_ID integrator, assigned by the Orchestrator). Correction batch after the preprint-versus-published reconciliation: the Ldh log2 figures of PAPER 567 are tied to their contrasts (1.29 text and 1.2903 table for knockdown added to amyloid; 1.19 text and 1.1097 table for amyloid alone, a pre-publication discordance), the preprint 1.33 recorded in the dossier, and the preprint-to-published changes written into PAPER 567 and PAPER 158. No claim, score or receipt touched. WM_v7.27 preserved.
 ```
 
 Every batch's scope — the candidates it propagated, newest first back to `BATCH_20260810_001`,
@@ -126,7 +126,7 @@ with the keys written beside each and the notes on `BATCH_20260806_002` — is i
 
 ```yaml
 last_lint_type: LINT_AUTOMATIC
-last_lint_id: LINT_20261026_BATCH_20261019_019
+last_lint_id: LINT_20261026_BATCH_20261019_020
 last_lint_date: 2026-10-26
 last_lint_result: WARN
 ```
