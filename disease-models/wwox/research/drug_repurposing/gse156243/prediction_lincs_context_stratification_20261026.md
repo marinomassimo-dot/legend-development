@@ -46,3 +46,28 @@ Same 834 genes as S1 (so the gene universe, the mapping and the gene content are
 - **P9.** S1P's top-25 reverser compounds overlap S1's top-25 by fewer than 5 (the specific compounds are not preserved when direction is shuffled).
 - **Reading.** P7 and P8 true: the S1 output is a gene-content (coverage) match to one signature family, not a reversal, and the reversal list cannot be read as drug candidates; named limit = the service has no null that matches gene content, and a content-matched direction null is the minimum control any later reversal query must carry. P7 or P8 false: the direction pattern contributes and S1's output stays an exploratory lead, to be stratified further.
 - Outcome vocabulary as above. Labels: exploratory; NOT WWOX EVIDENCE.
+
+---
+
+# RESULT (appended 2026-10-26; the predictions above are unchanged)
+
+Scripts: `lincs_context_stratification.py` (stored responses plus one key-less metadata call for the mimicker signatures; outputs `derived/lincs_context_stratification.json` and `.tsv`), `sigcom_permuted_direction_query.py` (addendum A, two requests: seeds 20261026 and 20261027 — the second is a **declared deviation**: the first returned an empty ranking, a repeat of the identical request was empty too, and a second shuffle was run to tell a seed accident from something systematic, not to improve an outcome). Responses are stored with UUID hyphens removed as elsewhere here (`uuid_transform_manifest.tsv`, LOSSLESS).
+
+| Prediction | Result | Verdict |
+|---|---|---|
+| P1 S0 vs S1 top-25 compound overlap <= 4 | **0** of 25 (top-100 signatures shared: 0; top-100 compounds shared: 3) | held: S1 is not read as non-specific by the declared rule |
+| P2 MCLF share >= 50 percent in S1 and within 15 points of S0 | S1 **74 percent** (61 percent at 4 uM / 6 h); S0 **1 percent** (1 percent) | **not held (the second half)**: the output depends strongly on the gene set; S0 is not a matched null |
+| P3 >= 30 percent of S1 reverser compounds also mimickers | **4 of 76** (5 percent: SB-225002, TWS-119, nutlin-3, rolipram) | **not held** at compound level — but see post hoc below |
+| P4 S3 top-25 shares >= 12 with S1 | **20** of 25 (S2: 15) | held: removing the declared composition/maturation markers barely moves the list |
+| P5 unmapped share of S0 within 2 points of S1 | S1 2.16 percent, S0 1.08 percent, S2 1.91, S3 2.20 | held; 43 symbols unmapped overall, 18 in S1 |
+| P6 non-MCLF reversers mainly antiproliferative | of 26 non-MCLF S1 reversers, 8 have an antiproliferative or targeted-oncology profile (cabazitaxel, GDC-0068, vandetanib, gefitinib, MK-1775, nutlin-3, indirubin, istaroxime), 7 are unidentified BRD codes, and 3 are in NPC lines annotated central nervous system (varenicline, ketamine, haloperidol, 24 h) | **not held** ("mainly" fails: 31 percent); the reader's classification is the one written here |
+| P7-P9 direction-permuted control S1P | **not evaluable**: both shuffles (503/313 and 509/307 mapped genes, no shared entity between arms) returned `reversers 0, mimickers 0, results []`, deterministic on repeat, while S0 (random expressed genes, 8 genes in both arms) returned a ranking of weak scores (strongest reverser z-sum -6.2 against S1's -16.7) | no reason is given by the service; a shuffled set of the same genes should behave like S0, so the empty answer is **unexplained**, not evidence for direction-specificity |
+
+## Post hoc (not pre-registered; labelled)
+- The 4 uM / 6 h MCLF signatures fill **both tails** of S1: 61 reversers and 59 mimickers among the top 100 each (S2 54/60; S3 60/59). A direction-specific reversal would not fill the mimicker tail equally; this pattern is what a **gene-content/coverage match to one signature family** produces.
+- Six compounds are top-100 reversers in >= 3 distinct MCLF lines at one dose and time and never a mimicker: BRD-K09398529 (5 lines), BRD-K52904470, BRD-K55591206, nimodipine, quiflapon, sildenafil (3 lines each). That is replication **inside one signature family** (donor lines of one project, tissue and disease fields not provided), never across tissues: the pre-registered cross-tissue replication rule finds **none**.
+- 74 of the 100 S1 reverser signatures carry no tissue annotation at all.
+
+## Reading, at the strength it has
+**INCONCLUSIVE, with the limit named.** (1) The S1 ranking is concentrated in one signature family (FIBR-batch MCLF lines, 4 uM, 6 h, a 2021 library) whose tails are balanced, so it cannot be read as a reversal list; (2) the S0 null is not matched on gene content, and the matched null that was meant to settle it (direction shuffle) returned nothing for an unexplained reason; (3) tissue and disease annotation is absent for most returned signatures, so "neural" is unknown, not assumed; (4) the non-MCLF stratum is small, oncology-line-weighted, and has no cross-tissue replicated compound. What it does establish: a knockout contrast produces a ranking that is not S0's, survives marker removal, and is not an artefact of unmapped genes. What a later reversal query must carry: a null matched on gene content (direction-shuffled, with the service's empty answer understood first) and stratified output by library, cell line, dose and time. **A knockout signature is not a rescue signature and not a Q230P signature; no compound here is a drug claim.** Reopening condition: the service documents why a shuffled set returns nothing, or an independent library (below) is queried with the same sets and agrees.
+Disclosure kept: the top-40 of S1 had been read before the predictions were written (see the declaration).
