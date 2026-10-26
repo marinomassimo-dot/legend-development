@@ -849,6 +849,7 @@ a developmental model; the paper also records a high-dose neurotoxicity ceiling 
 prior work, not measuring it") contradicted by the paper's own arms and the neuronal-loss result missing
 from the readout list.*)
 No dose, administration or suitability is stated or implied here; **not medical advice**.
+**Curated card (added 2026-10-26):** the qualified assertions and the target-level pharmacology for the PDK strand are in `research/drug_repurposing/cards/E03_pdk_inhibition_dca.card.json`; `repurposing_join.py` reads it for this record.
 *Narrowed 2026-10-24 by `scientist-b`, re-derived first-hand from the paediatric long-term safety
 full text (Abdelmalak 2013, DOI `10.1016/j.ymgme.2013.03.019`, staged receipt
 `FTR-20261023-23611579-01`, whose `source_locator` names the artefact) and from that paper's own

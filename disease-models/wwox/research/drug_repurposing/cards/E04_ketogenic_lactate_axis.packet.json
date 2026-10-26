@@ -32,7 +32,8 @@
     "developmental_stage": "adult, day 14 for omics and Atf4 imaging"
    },
    "measured_result_note": "Interaction F 23.606, adjusted P 0.0174; knockdown effect +1.30 log2 under Abeta42. 5 pools of 10 heads, two-way ANOVA on the top 200 features by variance, 10 percent FDR. No flux, no isotope tracing, no NAD/NADH.",
-   "receipt": "FTR-20261026-42909904-01"
+   "receipt": "FTR-20261026-42909904-01",
+   "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT"
   },
   {
    "id": "DA-LC-LAC-002",
@@ -51,7 +52,8 @@
     "developmental_stage": "adult, day 14 for omics and Atf4 imaging"
    },
    "measured_result_note": "Nominal -0.43 log2 without amyloid (simple effect not tested for significance). The lactate rise is conditional on amyloid.",
-   "receipt": "FTR-20261026-42909904-01"
+   "receipt": "FTR-20261026-42909904-01",
+   "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT"
   },
   {
    "id": "DA-BIO008-001",
@@ -69,7 +71,8 @@
     "cell_type": "brain MRS voxel",
     "developmental_stage": "child"
    },
-   "measured_result_note": "Reported extremely low in one patient; the same entry records raised mouse serum lactate. Not combined with the fly rows: different species, tissue and context."
+   "measured_result_note": "Reported extremely low in one patient; the same entry records raised mouse serum lactate. Not combined with the fly rows: different species, tissue and context.",
+   "evidence_scope": "UNQUALIFIED"
   },
   {
    "id": "DA-LC-PDH-001",
@@ -88,7 +91,8 @@
     "developmental_stage": "adult, day 14 for omics and Atf4 imaging"
    },
    "measured_result_note": "The study measured no pyruvate, PDH, PDK, flux, oxygen consumption or NAD/NADH. Whether pyruvate was tested is unknown; the MetaboLights deposit is not publicly retrievable (mtbls12344.md). Pdk, Pdha, Pdhb are absent from the significant gene lists, which is not a test. The paper's own heading and abstract speak of pyruvate metabolism, but that rests on transcript pathway over-representation (KEGG, including Ldh itself; Pepck2, CG11052 and Adh lower), not on a pyruvate, PDH or PDK measurement.",
-   "receipt": "FTR-20261026-42909904-01"
+   "receipt": "FTR-20261026-42909904-01",
+   "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT"
   }
  ],
  "drug_assertions": [],
@@ -191,5 +195,11 @@
    "fly lactate rows: up with Wwox reduction plus amyloid, nominally down without amyloid"
   ],
   "an_abstention_is_a_result": "The candidate stays where HYP-20260709-01 holds it; this card names what would end the abstention."
+ },
+ "target_census": {
+  "dir": "disease-models/wwox/research/drug_repurposing/lucas_clarke_followup_20261026",
+  "symbols": [
+   "SLC16A1"
+  ]
  }
 }

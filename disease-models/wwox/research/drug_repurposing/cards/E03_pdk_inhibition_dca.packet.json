@@ -32,7 +32,8 @@
     "developmental_stage": "adult, day 14 for omics and Atf4 imaging"
    },
    "measured_result_note": "The study measured no pyruvate, PDH, PDK, flux, oxygen consumption or NAD/NADH. Whether pyruvate was tested is unknown; the MetaboLights deposit is not publicly retrievable (mtbls12344.md). Pdk, Pdha, Pdhb are absent from the significant gene lists, which is not a test. The paper's own heading and abstract speak of pyruvate metabolism, but that rests on transcript pathway over-representation (KEGG, including Ldh itself; Pepck2, CG11052 and Adh lower), not on a pyruvate, PDH or PDK measurement.",
-   "receipt": "FTR-20261026-42909904-01"
+   "receipt": "FTR-20261026-42909904-01",
+   "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT"
   },
   {
    "id": "DA-GSE-PDK-003",
@@ -50,7 +51,8 @@
     "cell_type": "cerebral organoid, bulk RNA",
     "developmental_stage": "organoid, culture week 15"
    },
-   "measured_result_note": "PDK1 -0.34; the PDK/PDH set +0.17 (P 0.22, not different from chance); LDH-to-PDH ratio not shifted (inside the spread of the two wild-type libraries). EXPLORATORY NEGATIVES: transcripts are not PDH activity, flux or metabolite, and do not show that PDH or lactate are normal."
+   "measured_result_note": "PDK1 -0.34; the PDK/PDH set +0.17 (P 0.22, not different from chance); LDH-to-PDH ratio not shifted (inside the spread of the two wild-type libraries). EXPLORATORY NEGATIVES: transcripts are not PDH activity, flux or metabolite, and do not show that PDH or lactate are normal.",
+   "evidence_scope": "COMPUTATIONAL_RESULT"
   },
   {
    "id": "DA-GSE-LDH-002",
@@ -68,7 +70,8 @@
     "cell_type": "cerebral organoid, bulk RNA",
     "developmental_stage": "organoid, culture week 15"
    },
-   "measured_result_note": "LDHA +0.75 by the script's shift (+0.91 on the authors' list, padj 5e-6). LDHA also falls with elapsed culture time in WWOX-unperturbed spheroids, so the rise is as consistent with a less advanced tissue as with a WWOX effect. Transcript, not activity."
+   "measured_result_note": "LDHA +0.75 by the script's shift (+0.91 on the authors' list, padj 5e-6). LDHA also falls with elapsed culture time in WWOX-unperturbed spheroids, so the rise is as consistent with a less advanced tissue as with a WWOX effect. Transcript, not activity.",
+   "evidence_scope": "COMPUTATIONAL_RESULT"
   }
  ],
  "drug_assertions": [
@@ -88,7 +91,8 @@
     "cell_type": "enzyme and fibroblast",
     "developmental_stage": "UNKNOWN"
    },
-   "measured_result_note": "Curated PDK inhibitor. In the measurements retrieved the enzyme assay shows no half-maximal inhibition at the highest concentration tested and a fibroblast lactate-oxidation effect appears at a high micromolar concentration: weak in vitro. The repository's existing safety position (peripheral neuropathy, BLOCK-1) is unchanged by this card."
+   "measured_result_note": "Curated PDK inhibitor. In the measurements retrieved the enzyme assay shows no half-maximal inhibition at the highest concentration tested and a fibroblast lactate-oxidation effect appears at a high micromolar concentration: weak in vitro. The repository's existing safety position (peripheral neuropathy, BLOCK-1) is unchanged by this card.",
+   "evidence_scope": "EXTERNAL_DATABASE_RECORD"
   },
   {
    "id": "DR-E03-002",
@@ -106,7 +110,8 @@
     "cell_type": "cell-free",
     "developmental_stage": "not applicable"
    },
-   "measured_result_note": "Research tool compounds; no CNS, paediatric or clinical datum retrieved. The symbol PDK1 in DGIdb returns PDPK1 agents (collision documented in target_resolution.tsv); only PDK2-4 rows and UniProt-keyed ChEMBL rows are used."
+   "measured_result_note": "Research tool compounds; no CNS, paediatric or clinical datum retrieved. The symbol PDK1 in DGIdb returns PDPK1 agents (collision documented in target_resolution.tsv); only PDK2-4 rows and UniProt-keyed ChEMBL rows are used.",
+   "evidence_scope": "EXTERNAL_DATABASE_RECORD"
   }
  ],
  "p4_fields": {
@@ -211,5 +216,16 @@
   "label_lookup is NOT_ATTEMPTED in the bridge: the bridge has no network. The openFDA adapter was run separately and is recorded in lucas_clarke_followup_20261026/compounds_and_sources.md.",
   "No dose, route, schedule or paediatric suitability appears; assay concentrations of the sources are deliberately not reproduced."
  ],
- "no_new_reading": "No paper was newly read in full for these cards. The Lucas-Clarke reading is scientist-a's (receipt FTR-20261026-42909904-01); the compound statements are abstract-level PubMed reads and registry-database retrievals (lucas_clarke_followup_20261026/)."
+ "no_new_reading": "No paper was newly read in full for these cards. The Lucas-Clarke reading is scientist-a's (receipt FTR-20261026-42909904-01); the compound statements are abstract-level PubMed reads and registry-database retrievals (lucas_clarke_followup_20261026/).",
+ "target_census": {
+  "dir": "disease-models/wwox/research/drug_repurposing/lucas_clarke_followup_20261026",
+  "symbols": [
+   "PDK1",
+   "PDK2",
+   "PDK3",
+   "PDK4",
+   "PDPK1",
+   "PDHA1"
+  ]
+ }
 }
