@@ -489,7 +489,7 @@ Gli aggiornamenti storici sopra sono preservati, ma le loro conclusioni causali 
 - **Reopening condition after parking:** a raised ISR readout in a WWOX-deficient human neural system.
 - **Ranking:** not ranked: the ranking line is the Orchestrator's and every dimension would stand at 1 of 3 on today's evidence.
 - **Status:** `generated` (EXPLORATORY; initial status, no ranking line). Card `P4-E-01`.
-- **Leads:** [[discovery_ledger_current#DL-MECH-173]].
+- **Leads:** [[discovery_ledger_current#DL-MECH-173 — Integrated stress response in WWOX loss: the fly Atf4 rise needs amyloid and the one human knockout transcriptome shows the ATF4/ISR target set LOWER than chance, so no signed human ISR readout exists (NOT WWOX-DEE evidence for the fly part)]].
 - **Pyruvate branch, kept separate from what the paper measured (added by the integrator, `BATCH_20261019_021`):** the Lucas-Clarke 2026 article ([[paper_registry_current#PAPER 567]]) measures no pyruvate, PDH or PDK; its «dysregulated pyruvate metabolism» wording rests on KEGG pathway enrichment of transcripts (fatty acid and pyruvate metabolism terms), not on a pyruvate or flux measurement. The HIF1A-PDK-PDH chain of `HYP-20260709-01` and `HYP-20260709-05` is therefore a separate question from this hypothesis and is not supported or tested here.
 
 ### HYP-20261026-11 — LDH lowering as a partial-benefit lever: one fly precedent, a weak approved candidate, no human WWOX datum
@@ -503,5 +503,5 @@ Gli aggiornamenti storici sopra sono preservati, ma le loro conclusioni causali 
 - **Minimal falsifying experiment:** lactate (enantiomer- or isotope-resolved) in the double-RNAi fly genotype plus an Ldh-alone arm and Wwox mRNA in the double line; LDH activity and the lactate-to-pyruvate relationship in WWOX-deficient versus isogenic human neural cells at matched maturity; then stiripentol against a selective LDHA tool at matched exposure.
 - **Ranking:** not ranked: the ranking line is the Orchestrator's and every dimension would stand at 1 of 3 on today's evidence.
 - **Status:** `generated` (EXPLORATORY; initial status, no ranking line). Card `P4-E-02`.
-- **Leads:** [[discovery_ledger_current#DL-REPO-004]].
+- **Leads:** [[discovery_ledger_current#DL-REPO-004 — LDH lowering rescued fly locomotion once in the amyloid-plus-Wwox-reduction genotype; the approved paediatric epilepsy drug usually linked to LDH inhibits it only weakly in the retrieved measurements (NOT WWOX-DEE evidence)]].
 - **Pyruvate branch, kept separate from what the paper measured (added by the integrator, `BATCH_20261019_021`):** the Lucas-Clarke 2026 article ([[paper_registry_current#PAPER 567]]) measures no pyruvate, PDH or PDK; its «dysregulated pyruvate metabolism» wording rests on KEGG pathway enrichment of transcripts (fatty acid and pyruvate metabolism terms), not on a pyruvate or flux measurement. The HIF1A-PDK-PDH chain of `HYP-20260709-01` and `HYP-20260709-05` is therefore a separate question from this hypothesis and is not supported or tested here.
