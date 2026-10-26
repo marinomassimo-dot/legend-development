@@ -28,6 +28,13 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 import maturation_calibration as mc  # noqa: E402
 
+ISR_SETS = {
+    "ATF4_ISR_targets": ["ATF4", "ATF5", "DDIT3", "CHAC1", "TRIB3", "ASNS", "PSAT1", "PHGDH", "PCK2", "SLC7A11", "SESN2", "GADD45A"],
+    "UPR_branches": ["XBP1", "HSPA5", "HSP90B1", "DNAJB9", "EIF2AK3", "EIF2AK4", "EIF2S1", "PPP1R15A"],
+    "LDH": ["LDHA", "LDHB", "LDHC"],
+    "methionine_cysteine": ["MAT2A", "MAT2B", "AHCY", "CBS", "CTH", "GCLC", "GCLM", "GSS", "SLC7A11"],
+}
+
 SETS = {
     "HIF1A_glycolytic_targets": ["SLC2A1", "HK2", "PFKP", "ALDOA", "PGK1", "ENO1", "LDHA", "PKM", "BNIP3"],
     "PDK_axis": ["PDK1", "PDK2", "PDK3", "PDK4", "PDHA1", "PDHB", "DLAT", "DLD", "PDP1", "PDP2"],
@@ -124,7 +131,12 @@ def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("--json", action="store_true")
     ap.add_argument("--set-level", action="store_true", help="set-level coherence test against random same-size sets")
+    ap.add_argument("--sets", choices=("chain", "isr"), default="chain",
+                    help="chain: HIF1A-PDK-PDH sets (prediction_hif1a_pdk_chain); isr: ATF4/ISR/LDH sets (prediction_isr_ldh_chain)")
     args = ap.parse_args()
+    if args.sets == "isr":
+        SETS.clear()
+        SETS.update(ISR_SETS)
     if args.set_level:
         res = set_level()
         if args.json:
