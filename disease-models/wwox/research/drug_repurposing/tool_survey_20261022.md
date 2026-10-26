@@ -69,7 +69,7 @@ dose or a recommendation.
 
 | Item | Outcome | Where |
 |---|---|---|
-| LINCS / SigCom / iLINCS reversal of the GSE156243 signature | **INCONCLUSIVE, limit named.** The S1 ranking is 74 percent one signature family (MCLF lines, 4 uM, 6 h) that fills both tails; S0 is not a content-matched null; the direction-shuffled control returned an empty ranking for an unexplained reason; tissue and disease are absent for most signatures; no compound replicates across tissues. Held: S1 differs from S0 (0 of 25), survives marker removal (20 of 25), is not a mapping artefact. | `gse156243/prediction_lincs_context_stratification_20261026.md` |
+| LINCS / SigCom / iLINCS reversal of the GSE156243 signature | **INCONCLUSIVE, limit named.** The S1 top-100 reversers are 74 percent MCLF lines (61 percent MCLF at 4 uM and 6 h), one signature family that fills both tails; S0 is not a content-matched null; the direction-shuffled control returned an empty ranking for an unexplained reason; tissue and disease are absent for most signatures; no compound replicates across tissues. Held: S1 differs from S0 (0 of 25), survives marker removal (20 of 25), is not a mapping artefact. | `gse156243/prediction_lincs_context_stratification_20261026.md` |
 | ToolUniverse, one capability (a second reversal service) | **Useful use, narrow.** `L1000FWD_sig_search` works key-less and separates S1 (7 signatures at q < 0.05) from S0 and two shuffles (none); 50 returned for 100 requested, no totals, no compound names, no tissue. CLUE tool absent from 1.5.7. Not adopted as a dependency; isolated environment only. | `tooluniverse_capability_test_20261026.md` |
 | ToolUniverse, PDK2 compounds-for-target | WATCH (unchanged). | `lucas_clarke_followup_20261026/tooluniverse_trial.md` |
 

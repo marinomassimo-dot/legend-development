@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "input_sha256": "70153fa98f3d3b57d9f2107bdd937938cb7791804f812d16331f4702ee784ded",
+ "input_sha256": "57bf3e1410ed1c92d9bb88e4c52050233ae1c1be5dfc6805716d0d9aba1604ec",
  "epistemic_status": "IPOTESI",
  "canonical": false,
  "assessment": "REQUIRES_QUALIFICATION",
@@ -221,6 +221,10 @@
      "developmental_stage": "child"
     },
     "measured_result_note": "Reported extremely low in one patient; the same entry records raised mouse serum lactate. Not combined with the fly rows: different species, tissue and context.",
+    "sign_vs_contrast": {
+     "DA-LC-LAC-001": "OPPOSITE (DECREASE against INCREASE under Abeta42)",
+     "DA-LC-LAC-002": "SAME SIGN (DECREASE, nominal, without Abeta42); not a replication: other species, tissue and context"
+    },
     "evidence_scope": "UNQUALIFIED"
    }
   ],

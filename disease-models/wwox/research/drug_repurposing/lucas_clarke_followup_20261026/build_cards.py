@@ -94,6 +94,8 @@ D_MRS = d("DA-BIO008-001", "human brain lactate (MRS)", "brain lactate level in 
           "discovery_ledger_current DL-BIO-008 (one patient; reading depth not re-verified by this card)", "DL-BIO-008", "INFERENZA", "UNKNOWN",
           {"disease_id": "WWOX-DEE, one reported patient (class level)", "genotype": "UNKNOWN", "species": "human", "cell_type": "brain MRS voxel", "developmental_stage": "child"},
           "Reported extremely low in one patient; the same entry records raised mouse serum lactate. Not combined with the fly rows: different species, tissue and context.")
+D_MRS["sign_vs_contrast"] = {"DA-LC-LAC-001": "OPPOSITE (DECREASE against INCREASE under Abeta42)",
+                             "DA-LC-LAC-002": "SAME SIGN (DECREASE, nominal, without Abeta42); not a replication: other species, tissue and context"}
 
 
 def p4_fields(endpoint, functional, limit, ctx):
