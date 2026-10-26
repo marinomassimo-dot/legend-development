@@ -35,9 +35,9 @@ annotations is reported below whatever it happens to be.
 | Deep-dive manifests read | 590 |
 | …of which bound to at least one claim | 107 |
 | Propositions scanned | 9454 |
-| …carrying a relational connective | 1974 |
-| …locator-backed candidates | 1934 |
-| …locator-backed and bound to a claim | 455 |
+| …carrying a relational connective | 1973 |
+| …locator-backed candidates | 1933 |
+| …locator-backed and bound to a claim | 454 |
 
 The scanned population is three declared surfaces and no others: every claim
 `Title`, every row of the working model's BLOCK 2 mirror, and every
@@ -320,12 +320,12 @@ each side is a reading, and every record carries `endpoints_resolved: false`.
 | Source | Candidates |
 |---|---|
 | claim_title | 21 |
-| locator_proposition | 1934 |
+| locator_proposition | 1933 |
 | working_model_mirror_title | 19 |
 
 | Connective class (lexical) | Candidates |
 |---|---|
-| AMBIGUOUS_LEXICAL_FORM | 1412 |
+| AMBIGUOUS_LEXICAL_FORM | 1411 |
 | ARROW | 18 |
 | ASSOCIATIVE | 89 |
 | CAUSAL | 351 |
@@ -359,7 +359,7 @@ its sentence is a reading, and this tool does not perform readings.
 | CLAIM 016 | claim_title | `contribute to` | GSK3β hyperactivation may contribute to seizure susceptibility in WWOX deficiency |
 | CLAIM 018 | claim_title | `causes` | The exon 6 splice-site variant c.517-2A>G is pathogenic and causes exon 6 skipping in humans |
 
-Showing 12 of 495 bound candidates; the
+Showing 12 of 494 bound candidates; the
 complete set, with evidence and provenance, is in the export. The worklist
 in cost order — what needs an annotation, what needs a type, what needs a
 decomposition, what needs a reading — is printed by:
@@ -376,6 +376,6 @@ carried no connective from the lexicon.
 ## Provenance
 
 Derived from 593 input files; digest
-`afd962b66a014674`. Sources: the claim, paper and
+`76f1ed793f950bfd`. Sources: the claim, paper and
 working-model registries, and every deep-dive work manifest.
 
