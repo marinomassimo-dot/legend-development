@@ -1,0 +1,36 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_at": "2026-10-26T00:00:00Z",
+ "analysis_at": "2026-10-26T00:00:00Z",
+ "analysis_time_precision": "date_only",
+ "source_kind": "fulltext_local",
+ "reread_reason": "adversarial_reanalysis",
+ "event_id": "FTR-20261026-42909904-02",
+ "study_id": {
+  "pmid": "42909904",
+  "doi": "10.1093/braincomms/fcag385"
+ },
+ "workflow": "scientist-a package P2b, QUESTION_DRIVEN targeted re-inspection of the L-lactate statistics: Results lactate section by pdftotext without -layout, Figure 5A-C legend, and the embedded raster of page 12 (Fig 5C)",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID42909904_LucasClarke2026_BrainComms_fcag385.pdf",
+ "source_fingerprint": "abab045e2403c2781a25ca7f2146de056fab081e4158e86a337066cfac8c4e1a",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_present",
+  "supplementary": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/p2b_pdh_trace_and_lactate_reconciliation_20261026.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261026-SCIENTIST-A-P2B-01.md"
+ ],
+ "evidence_basis": [
+  "Results, lactate section: Wwox main F 7.524 padj 0.0636, Abeta42 main F 27.846 padj 0.0050, interaction F 23.606 padj 0.0174; Figure 5A-C panels and legend (10% FDR dotted line; five points per bar; no per-cell significance mark). Supplementary Table 4 was not re-opened; its values are taken from manifest entry 40. No manifest was edited by this reading."
+ ],
+ "prior_receipt": "FTR-20261026-42909904-01"
+}
