@@ -107,12 +107,12 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20261019_018
+last_batch_commit_id: BATCH_20261019_019
 last_batch_commit_date: 2026-10-26
 last_batch_commit_type: MANUAL
-commit_candidates_propagated: 1
+commit_candidates_propagated: 0
 target_wm_version: WM_v7.27
-trigger: MANUAL (ACTOR_ID integrator, assigned by the Orchestrator). Registry and research layer, no working-model change: the published Lucas-Clarke 2026 article (Brain Communications, PMID 42909904, a Drosophila amyloid model, NOT WWOX-DEE evidence) was registered as its own identity (PAPER 567, LIT-0838; complete_fulltext_read from receipt FTR-20261026-42909904-01), not merged with the preprint PAPER 158; the preprint record's second-RNAi-construct and L-methionine statements were corrected with the superseded wording quoted; the CLAIM 025 nuance (and its mirror in meta_metabolism) was re-sourced from the review to the paper's own text, Status, Type and Summary untouched; dated notes added to DL-MECH-020, DL-MECH-023 (tension with Janczar: PERK unchanged), DL-BIO-008, HYP-20260709-01 and HYP-20260709-05, exploratory and with no score changed. WM_v7.27 preserved.
+trigger: MANUAL (ACTOR_ID integrator, assigned by the Orchestrator). Scope-correction batch after the blind audit of manifest entries 31, 49, 89, 94 and 95 of the Lucas-Clarke 2026 article: absence statements in PAPER 567, PAPER 158, CLAIM 025, DL-MECH-020 and HYP-20260709-05 are scoped to the main text, figures and supplementary tables read (the MetaboLights deposit was not retrieved), and the limitations coverage line is reworded to the reader note it rests on. No claim Status, Type or Summary, no score and no ledger receipt touched. WM_v7.27 preserved.
 ```
 
 Every batch's scope — the candidates it propagated, newest first back to `BATCH_20260810_001`,
@@ -126,7 +126,7 @@ with the keys written beside each and the notes on `BATCH_20260806_002` — is i
 
 ```yaml
 last_lint_type: LINT_AUTOMATIC
-last_lint_id: LINT_20261026_BATCH_20261019_018
+last_lint_id: LINT_20261026_BATCH_20261019_019
 last_lint_date: 2026-10-26
 last_lint_result: WARN
 ```
