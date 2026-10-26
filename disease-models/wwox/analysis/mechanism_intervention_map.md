@@ -669,7 +669,7 @@ Fly content is NOT WWOX-DEE evidence. Not medical advice.
 | **MECHANISM** | if lactate or LDH activity is raised and harmful in WWOX-deficient neural cells, lowering LDH lowers lactate and improves function; in the fly, Ldh RNAi added to amyloid plus Wwox reduction improved climbing once |
 | **EVIDENCE_LEVEL** | **T6** for WWOX (fly, amyloid-conditional, missing controls); human LDHA transcript up in the knockout organoid but confounded with maturity |
 | **WWOX_DIRECT_EVIDENCE** | none at the activity or lactate level in a human WWOX system |
-| **NEAR_DISEASE_EVIDENCE** | stiripentol is approved for Dravet syndrome seizures with clobazam; its LDH inhibition is weak in the retrieved measurements (single-digit percent at a single high millimolar-range concentration; abstract-level papers: moderate but not potent); no source attributes its antiseizure action to LDH |
+| **NEAR_DISEASE_EVIDENCE** | stiripentol is approved for Dravet syndrome seizures with clobazam; its LDH inhibition is unresolved, with single-concentration measures only: about forty percent at one high-micromolar concentration (second-hand, from a 2015 report whose full text is not held and is UNREAD here), about a tenth (racemate) to a third (enantiomers) at the same concentration and a bound for the potency in a 2024 paper (partial full-text reading, PAPER 568), single-digit percent at a four-fold higher concentration in a database document (Bai 2019); the 2015 report attributes seizure suppression in epilepsy models to LDH inhibition (abstract-level) while a 2024 review argues, on exposure, that other mechanisms dominate its antiseizure action; stiripentol also inhibits mitochondrial complex I directly (2026) [corrected 2026-10-27 by `BATCH_20261019_022` from «its LDH inhibition is weak in the retrieved measurements (…); no source attributes its antiseizure action to LDH»; `CC-20261026-SCIENTIST-B-SADA-LDH-01`] |
 | **HUMAN_USE_STATUS** | approved in the US for seizures associated with Dravet syndrome in patients taking clobazam, from six months of age (openFDA label 2026-04-27) |
 | **CLINICAL_MATURITY** | marketed for another indication; 🔴 no WWOX rationale beyond a fly precedent |
 | **BBB_RELEVANCE** | acts on seizures in the brain; brain LDH engagement is unmeasured |
@@ -678,7 +678,7 @@ Fly content is NOT WWOX-DEE evidence. Not medical advice.
 | **KNOWN_MAJOR_SAFETY_CONSTRAINTS** | labelled use depends on co-therapy with another antiseizure drug; interactions are not assessed here; most-reported spontaneous-report terms include seizure, drug ineffective, decreased appetite, somnolence (counts, not rates); the source paper cites Ldh knockdown as detrimental in other fly amyloid models |
 | **EXPECTED_DIRECTION_OF_EFFECT** | lower lactate production; unmeasured |
 | **MAIN_TRANSLATIONAL_RISK** | 🔴 benefit would not be attributable to LDH (other pharmacology), and lactate in WWOX deficiency is reported normal or extremely low in humans (human readouts are listed in the card) |
-| **DECISIVE_PRECLINICAL_TEST** | **lactate** (enantiomer- or isotope-resolved) in the double-RNAi fly genotype with an Ldh-alone arm; **LDH activity** and the lactate-to-pyruvate relationship in WWOX-deficient versus isogenic human neural cells at matched maturity; then stiripentol against a selective LDHA tool at matched exposure |
+| **DECISIVE_PRECLINICAL_TEST** | an assay-level potency and mode determination of stiripentol on human LDHA and LDHB (with a selective LDHA positive control, detergent and substrate-level arms), then **lactate** (enantiomer- or isotope-resolved) in the double-RNAi fly genotype with an Ldh-alone arm; **LDH activity** and the lactate-to-pyruvate relationship in WWOX-deficient versus isogenic human neural cells at matched maturity; then stiripentol against a selective LDHA tool at matched exposure |
 | **SOURCE_IDS** | PAPER 567 (the single reading behind the fly rows; related records are listed in the card, not here, so that the join does not inherit unrelated families of papers) |
 
 **Class:** `READOUT_FIRST` — Track A, route BENEFICIO_PRECOCE. Fly content is NOT WWOX-DEE evidence. Not medical advice.
@@ -849,6 +849,7 @@ a developmental model; the paper also records a high-dose neurotoxicity ceiling 
 prior work, not measuring it") contradicted by the paper's own arms and the neuronal-loss result missing
 from the readout list.*)
 No dose, administration or suitability is stated or implied here; **not medical advice**.
+**Curated card (added 2026-10-26):** the qualified assertions and the target-level pharmacology for the PDK strand are in `research/drug_repurposing/cards/E03_pdk_inhibition_dca.card.json`; `repurposing_join.py` reads it for this record.
 *Narrowed 2026-10-24 by `scientist-b`, re-derived first-hand from the paediatric long-term safety
 full text (Abdelmalak 2013, DOI `10.1016/j.ymgme.2013.03.019`, staged receipt
 `FTR-20261023-23611579-01`, whose `source_locator` names the artefact) and from that paper's own

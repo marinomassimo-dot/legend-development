@@ -32,7 +32,8 @@
     "developmental_stage": "adult, day 14 for omics and Atf4 imaging"
    },
    "measured_result_note": "About 1.0 to about 1.2-1.3 normalised, n 6 brains, one antibody, four small regions of interest, y axis not at zero. Correlational. Atf4 is never knocked down or activated in the paper; PERK and eIF2 alpha phosphorylation are not measured.",
-   "receipt": "FTR-20261026-42909904-01"
+   "receipt": "FTR-20261026-42909904-01",
+   "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT"
   },
   {
    "id": "DA-LC-ATF4-002",
@@ -51,7 +52,8 @@
     "developmental_stage": "adult, day 14 for omics and Atf4 imaging"
    },
    "measured_result_note": "No change without amyloid (t 0.0894, P 0.9305, n 6 brains). A measured null in a different contrast, not an unmeasured cell.",
-   "receipt": "FTR-20261026-42909904-01"
+   "receipt": "FTR-20261026-42909904-01",
+   "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT"
   },
   {
    "id": "DA-GSE-ISR-003",
@@ -69,7 +71,8 @@
     "cell_type": "cerebral organoid, bulk RNA",
     "developmental_stage": "organoid, culture week 15"
    },
-   "measured_result_note": "Mean shift lower than 10,000 random same-size sets (P 0.0005); the gene-level direction of three genes had been seen before the sets were fixed; nine set tests across two analyses, none corrected for multiplicity; six libraries, genotype and composition confounded. Transcripts cannot see eIF2 alpha phosphorylation or ATF4 protein. EXPLORATORY NEGATIVE for the transcript signature without amyloid; not evidence that the ISR is normal."
+   "measured_result_note": "Mean shift lower than 10,000 random same-size sets (P 0.0005); the gene-level direction of three genes had been seen before the sets were fixed; nine set tests across two analyses, none corrected for multiplicity; six libraries, genotype and composition confounded. Transcripts cannot see eIF2 alpha phosphorylation or ATF4 protein. EXPLORATORY NEGATIVE for the transcript signature without amyloid; not evidence that the ISR is normal.",
+   "evidence_scope": "COMPUTATIONAL_RESULT"
   }
  ],
  "drug_assertions": [
@@ -89,7 +92,8 @@
     "cell_type": "peripheral blood mononuclear cells and CSF",
     "developmental_stage": "adult"
    },
-   "measured_result_note": "Target engagement shown for DNL343, a brain-penetrant eIF2B activator."
+   "measured_result_note": "Target engagement shown for DNL343, a brain-penetrant eIF2B activator.",
+   "evidence_scope": "OTHER_DISEASE_PRECEDENT"
   },
   {
    "id": "DR-E01-002",
@@ -107,7 +111,8 @@
     "cell_type": "whole organism, clinical endpoint",
     "developmental_stage": "adult"
    },
-   "measured_result_note": "Ratio 1.04 (95 percent credible interval 0.83 to 1.32) over a 24-week placebo-controlled period: no benefit despite target engagement and proof of mechanism in the earlier phase. Adults with ALS; says nothing about a developmental encephalopathy."
+   "measured_result_note": "Ratio 1.04 (95 percent credible interval 0.83 to 1.32) over a 24-week placebo-controlled period: no benefit despite target engagement and proof of mechanism in the earlier phase. Adults with ALS; says nothing about a developmental encephalopathy.",
+   "evidence_scope": "OTHER_DISEASE_PRECEDENT"
   },
   {
    "id": "DR-E01-003",
@@ -125,7 +130,8 @@
     "cell_type": "whole animal behaviour",
     "developmental_stage": "ten-month-old adult"
    },
-   "measured_result_note": "Better recognition memory and less microglial activation and tau; amyloid burden not reduced; p-eIF2 alpha lower. Mouse, adult, 23 days, one study."
+   "measured_result_note": "Better recognition memory and less microglial activation and tau; amyloid burden not reduced; p-eIF2 alpha lower. Mouse, adult, 23 days, one study.",
+   "evidence_scope": "OTHER_DISEASE_PRECEDENT"
   },
   {
    "id": "DR-E01-004",
@@ -143,7 +149,8 @@
     "cell_type": "whole organism, clinical endpoint",
     "developmental_stage": "children, onset at six years or younger"
    },
-   "measured_result_note": "Hazard ratio 0.33 (0.16 to 0.69) against matched registry controls, non-randomised; serious adverse events in three quarters of 33 children, hallucinations in over half, severe constipation in three. A paediatric tolerability dataset in a disease whose lesion IS the ISR regulator."
+   "measured_result_note": "Hazard ratio 0.33 (0.16 to 0.69) against matched registry controls, non-randomised; serious adverse events in three quarters of 33 children, hallucinations in over half, severe constipation in three. A paediatric tolerability dataset in a disease whose lesion IS the ISR regulator.",
+   "evidence_scope": "OTHER_DISEASE_PRECEDENT"
   }
  ],
  "p4_fields": {
@@ -251,5 +258,23 @@
   "label_lookup is NOT_ATTEMPTED in the bridge: the bridge has no network. The openFDA adapter was run separately and is recorded in lucas_clarke_followup_20261026/compounds_and_sources.md.",
   "No dose, route, schedule or paediatric suitability appears; assay concentrations of the sources are deliberately not reproduced."
  ],
- "no_new_reading": "No paper was newly read in full for these cards. The Lucas-Clarke reading is scientist-a's (receipt FTR-20261026-42909904-01); the compound statements are abstract-level PubMed reads and registry-database retrievals (lucas_clarke_followup_20261026/)."
+ "no_new_reading": "No paper was newly read in full for these cards. The Lucas-Clarke reading is scientist-a's (receipt FTR-20261026-42909904-01); the compound statements are abstract-level PubMed reads and registry-database retrievals (lucas_clarke_followup_20261026/).",
+ "target_census": {
+  "dir": "disease-models/wwox/research/drug_repurposing/lucas_clarke_followup_20261026",
+  "symbols": [
+   "EIF2B1",
+   "EIF2B2",
+   "EIF2B3",
+   "EIF2B4",
+   "EIF2B5",
+   "EIF2AK1",
+   "EIF2AK2",
+   "EIF2AK3",
+   "EIF2AK4",
+   "EIF2S1",
+   "ATF4",
+   "PPP1R15A",
+   "PPP1R15B"
+  ]
+ }
 }
