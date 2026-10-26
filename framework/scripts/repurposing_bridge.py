@@ -36,6 +36,14 @@ P4_TEXT = ("endpoint_pursued", "functional_evidence_available", "temporal_or_mod
 TRANSLATION = ("pediatric_suitability", "cns_exposure", "interactions", "access",
                "time_to_benefit", "functional_rescue")  # access = time to access
 ROADMAP_REQUIRED = ("indication_and_transfer", "verification_scope")
+# Scope of an assertion: what KIND of evidence it is, apart from how deeply it was read. A registered
+# reading documents the reading; it does not say the system read is WWOX-DEE. Optional on an
+# assertion; absent means UNQUALIFIED, which is reported and never inferred.
+EVIDENCE_SCOPES = ("WWOX_EXPERIMENT_IN_DEE_SYSTEM", "WWOX_BIOLOGY_OTHER_CONTEXT", "OTHER_DISEASE_PRECEDENT",
+                   "COMPUTATIONAL_RESULT", "EXTERNAL_DATABASE_RECORD", "UNQUALIFIED")
+# UNQUALIFIED = no curated card qualified the route; it is not a third research objective and is
+# never a favourable category. The two named objectives stay as they were.
+ROUTES = {"RECUPERO_PROFONDO", "BENEFICIO_PRECOCE", "UNQUALIFIED"}
 P4_CONTEXT = ("target_expression", "cells_tissue_stage", "coverage", "limits")
 
 
@@ -152,6 +160,8 @@ def validate_assertion(row: dict) -> None:
         raise ValueError("invalid epistemic_status")
     if row.get("reading_depth", "UNKNOWN") not in READING:
         raise ValueError("invalid reading_depth")
+    if row.get("evidence_scope", "UNQUALIFIED") not in EVIDENCE_SCOPES:
+        raise ValueError(f"evidence_scope must be one of {list(EVIDENCE_SCOPES)}")
     context = row.get("context")
     if not isinstance(context, dict) or any(
         not isinstance(context.get(key), str) or not context[key].strip() for key in CONTEXT
@@ -165,8 +175,8 @@ def build_card(payload: dict) -> dict:
     """Retain the input packet and compare signs without claiming efficacy."""
     if not isinstance(payload, dict) or payload.get("schema_version") != 1:
         raise ValueError("input schema_version must be 1")
-    if payload.get("route") not in {"RECUPERO_PROFONDO", "BENEFICIO_PRECOCE"}:
-        raise ValueError("route must name one of the two research objectives")
+    if payload.get("route") not in ROUTES:
+        raise ValueError("route must name one of the two research objectives, or UNQUALIFIED")
     if not isinstance(payload.get("candidate"), dict) or any(
         not isinstance(payload["candidate"].get(key), str) or not payload["candidate"][key].strip()
         for key in ("id", "name")

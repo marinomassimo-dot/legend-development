@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "input_sha256": "5216db8fe1b805d63df68264f2026cce0730f78ee9b5afe0460d1b017ab15fcd",
+ "input_sha256": "caf96ad2b99ba42e124550cdf8e4f121b907cee54daf5ac2e345598748e0748a",
  "epistemic_status": "IPOTESI",
  "canonical": false,
  "assessment": "REQUIRES_QUALIFICATION",
@@ -94,7 +94,8 @@
      "developmental_stage": "adult, day 14 for omics and Atf4 imaging"
     },
     "measured_result_note": "About +1.29 log2 over Abeta42 alone, 4 pools of 10 heads. Abeta42 alone also raises Ldh (+1.11 in the table, 1.19 in the text). Ldh is not among the genes changed by knockdown in the LacZ background.",
-    "receipt": "FTR-20261026-42909904-01"
+    "receipt": "FTR-20261026-42909904-01",
+    "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT"
    },
    {
     "id": "DA-LC-LAC-001",
@@ -113,7 +114,8 @@
      "developmental_stage": "adult, day 14 for omics and Atf4 imaging"
     },
     "measured_result_note": "Interaction F 23.606, adjusted P 0.0174; knockdown effect +1.30 log2 under Abeta42. 5 pools of 10 heads, two-way ANOVA on the top 200 features by variance, 10 percent FDR. No flux, no isotope tracing, no NAD/NADH.",
-    "receipt": "FTR-20261026-42909904-01"
+    "receipt": "FTR-20261026-42909904-01",
+    "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT"
    },
    {
     "id": "DA-LC-LAC-002",
@@ -132,7 +134,8 @@
      "developmental_stage": "adult, day 14 for omics and Atf4 imaging"
     },
     "measured_result_note": "Nominal -0.43 log2 without amyloid (simple effect not tested for significance). The lactate rise is conditional on amyloid.",
-    "receipt": "FTR-20261026-42909904-01"
+    "receipt": "FTR-20261026-42909904-01",
+    "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT"
    },
    {
     "id": "DA-LC-CLIMB-001",
@@ -151,7 +154,8 @@
      "developmental_stage": "adult, day 14 for omics and Atf4 imaging"
     },
     "measured_result_note": "Climbing is lower with Wwox knockdown plus Abeta42 than with control RNAi plus Abeta42; N 4-6 vials.",
-    "receipt": "FTR-20261026-42909904-01"
+    "receipt": "FTR-20261026-42909904-01",
+    "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT"
    },
    {
     "id": "DA-GSE-LDH-002",
@@ -169,7 +173,8 @@
      "cell_type": "cerebral organoid, bulk RNA",
      "developmental_stage": "organoid, culture week 15"
     },
-    "measured_result_note": "LDHA +0.75 by the script's shift (+0.91 on the authors' list, padj 5e-6). LDHA also falls with elapsed culture time in WWOX-unperturbed spheroids, so the rise is as consistent with a less advanced tissue as with a WWOX effect. Transcript, not activity."
+    "measured_result_note": "LDHA +0.75 by the script's shift (+0.91 on the authors' list, padj 5e-6). LDHA also falls with elapsed culture time in WWOX-unperturbed spheroids, so the rise is as consistent with a less advanced tissue as with a WWOX effect. Transcript, not activity.",
+    "evidence_scope": "COMPUTATIONAL_RESULT"
    },
    {
     "id": "DA-BIO008-001",
@@ -187,7 +192,8 @@
      "cell_type": "brain MRS voxel",
      "developmental_stage": "child"
     },
-    "measured_result_note": "Reported extremely low in one patient; the same entry records raised mouse serum lactate. Not combined with the fly rows: different species, tissue and context."
+    "measured_result_note": "Reported extremely low in one patient; the same entry records raised mouse serum lactate. Not combined with the fly rows: different species, tissue and context.",
+    "evidence_scope": "UNQUALIFIED"
    }
   ],
   "drug_assertions": [
@@ -208,7 +214,8 @@
      "developmental_stage": "adult, day 14 for omics and Atf4 imaging"
     },
     "measured_result_note": "Partial rescue to or above the control line at day 28; once; no Ldh-alone arm; Wwox mRNA not reported in the double-RNAi line; lactate not measured in it; lifespan and amyloid load not tested; the authors cite Ldh knockdown as detrimental in other fly amyloid models.",
-    "receipt": "FTR-20261026-42909904-01"
+    "receipt": "FTR-20261026-42909904-01",
+    "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT"
    },
    {
     "id": "DR-E02-001",
@@ -226,7 +233,8 @@
      "cell_type": "cell-free",
      "developmental_stage": "not applicable"
     },
-    "measured_result_note": "Single-digit percent inhibition at a single high millimolar-range concentration; a 2024 chemistry paper reports about a tenth at a high micromolar concentration and a 2026 glioblastoma paper calls the inhibition 'moderate but not potent' (PMID 39769031, PMID 42035940, abstract-level). Weak in vitro; brain LDH engagement at tolerated exposure: no datum."
+    "measured_result_note": "Single-digit percent inhibition at a single high millimolar-range concentration; a 2024 chemistry paper reports about a tenth at a high micromolar concentration and a 2026 glioblastoma paper calls the inhibition 'moderate but not potent' (PMID 39769031, PMID 42035940, abstract-level). Weak in vitro; brain LDH engagement at tolerated exposure: no datum.",
+    "evidence_scope": "EXTERNAL_DATABASE_RECORD"
    },
    {
     "id": "DR-E02-002",
@@ -244,7 +252,8 @@
      "cell_type": "cell-free",
      "developmental_stage": "not applicable"
     },
-    "measured_result_note": "Low-nanomolar potency on LDHA and about sixteen-fold selectivity over LDHB in the cited assays; a research tool with no CNS, paediatric or clinical datum."
+    "measured_result_note": "Low-nanomolar potency on LDHA and about sixteen-fold selectivity over LDHB in the cited assays; a research tool with no CNS, paediatric or clinical datum.",
+    "evidence_scope": "EXTERNAL_DATABASE_RECORD"
    },
    {
     "id": "DR-E02-003",
@@ -262,7 +271,8 @@
      "cell_type": "hepatocyte-directed",
      "developmental_stage": "children and adults"
     },
-    "measured_result_note": "Shows that lowering LDHA in humans is clinically tolerated in the liver; says nothing about brain exposure, and the route is liver-directed."
+    "measured_result_note": "Shows that lowering LDHA in humans is clinically tolerated in the liver; says nothing about brain exposure, and the route is liver-directed.",
+    "evidence_scope": "EXTERNAL_DATABASE_RECORD"
    }
   ],
   "p4_fields": {
@@ -372,7 +382,15 @@
    "label_lookup is NOT_ATTEMPTED in the bridge: the bridge has no network. The openFDA adapter was run separately and is recorded in lucas_clarke_followup_20261026/compounds_and_sources.md.",
    "No dose, route, schedule or paediatric suitability appears; assay concentrations of the sources are deliberately not reproduced."
   ],
-  "no_new_reading": "No paper was newly read in full for these cards. The Lucas-Clarke reading is scientist-a's (receipt FTR-20261026-42909904-01); the compound statements are abstract-level PubMed reads and registry-database retrievals (lucas_clarke_followup_20261026/)."
+  "no_new_reading": "No paper was newly read in full for these cards. The Lucas-Clarke reading is scientist-a's (receipt FTR-20261026-42909904-01); the compound statements are abstract-level PubMed reads and registry-database retrievals (lucas_clarke_followup_20261026/).",
+  "target_census": {
+   "dir": "disease-models/wwox/research/drug_repurposing/lucas_clarke_followup_20261026",
+   "symbols": [
+    "LDHA",
+    "LDHB",
+    "LDHC"
+   ]
+  }
  },
  "translation": {
   "pediatric_suitability": "Stiripentol paediatric label for another indication (Dravet, with clobazam); WWOX-DEE UNKNOWN.",

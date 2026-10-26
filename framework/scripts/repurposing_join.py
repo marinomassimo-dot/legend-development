@@ -31,6 +31,8 @@ never written.
 from __future__ import annotations
 
 import argparse
+import copy
+import csv
 import hashlib
 import json
 import re
@@ -52,6 +54,7 @@ DISEASE = "wwox"
 MODEL = ROOT / "disease-models" / DISEASE
 DEFAULT_OUT = MODEL / "research" / "drug_repurposing" / "join"
 MECHANISM_MAP = MODEL / "analysis" / "mechanism_intervention_map.md"
+CURATED_CARDS = MODEL / "research" / "drug_repurposing" / "cards"  # hand-made, qualified cards (the `<id>.packet.json` is read)
 PATHOGRAPH = MODEL / "analysis" / "data" / "pathograph_export.jsonl"
 MANIFESTS = MODEL / "research" / "deepdive_manifests"
 ADJUDICATIONS = MODEL / "research" / "page_adjudications"
@@ -88,6 +91,9 @@ CLAIM_IN_TEXT = re.compile(r"\bCLAIM[ _](\d{3})\b")
 LEAD_IN_TEXT = re.compile(r"\b(DL-[A-Z]+-\d{3})\b")
 PAPER_IN_TEXT = re.compile(r"\bPAPER[ _](\d{3})\b")
 MECHANISM_RECORD = re.compile(r"^### ([RN]-\d{2}) — (.+?)$", re.M)
+CARD_REF = re.compile(r"cards/([A-Za-z0-9_]+)\.card\.json")  # a map record names its curated card by path
+LOCATOR_ENTRIES = re.compile(r"PMID(\d+)\.json verbatim_locators\.entries((?:\s*\[\d+\],?)+)")
+RECEIPT_ID = re.compile(r"FTR-\d{8}-\d{8}-\d{2}")
 MAP_FIELD = re.compile(r"^\|\s*\*\*([A-Z_]+)\*\*\s*\|\s*(.+?)\s*\|\s*$", re.M)
 
 
@@ -213,6 +219,7 @@ def mechanism_queries(path: Path = MECHANISM_MAP) -> list[dict]:
                     "claims_named": sorted({f"CLAIM {n}" for n in CLAIM_IN_TEXT.findall(body)}),
                     "leads_named": sorted(set(LEAD_IN_TEXT.findall(body))),
                     "papers_named": sorted({f"PAPER {n}" for n in PAPER_IN_TEXT.findall(body)}),
+                    "curated_cards": sorted(set(CARD_REF.findall(body))),
                     "pmids": sorted(set(PMID_IN_TEXT.findall(body)))})
     return out
 
@@ -557,8 +564,41 @@ def abstention_for(query: dict) -> str:
             + "; missing datum: an identifier whose registry record cites a paper")
 
 
+def curated_packets(query: dict) -> list[dict]:
+    """The hand-made packets a map record names (`cards/<id>.card.json` in its own text). The curated
+    qualifications - target, endpoint, direction, context, source, depth, locator - are read as written."""
+    packets = []
+    for name in query.get("curated_cards") or []:
+        path = CURATED_CARDS / f"{name}.packet.json"
+        if path.exists():
+            packets.append(json.loads(path.read_text(encoding="utf-8")))
+    return packets
+
+
+def packet_assertions(packets: list[dict]) -> tuple[list[dict], list[dict]]:
+    """Disease-side and drug-side assertions of the packets, one row per id."""
+    out: list[list[dict]] = [[], []]
+    for packet in packets:
+        diseases = packet.get("disease_assertions") or [packet.get("disease_assertion")]
+        for side, rows in ((0, diseases), (1, packet.get("drug_assertions") or [])):
+            for row in rows:
+                if row and row["id"] not in {r["id"] for r in out[side]}:
+                    out[side].append(row)
+    return out[0], out[1]
+
+
+def cites_reading(assertion: dict, row: dict) -> bool:
+    """An assertion is about a reading when it carries that reading's receipt or names its PMID in its
+    source or locator. Nothing else binds an assertion to a paper."""
+    if assertion.get("receipt") and assertion["receipt"] == row.get("receipt_id"):
+        return True
+    text = f"{assertion.get('source', '')} {assertion.get('locator', '')}"
+    return bool(re.search(rf"PMID[\s_]?{re.escape(row['pmid'])}\b", text))
+
+
 def evidence_for(query: dict, receipts: dict[str, list[dict]], checks: dict[str, dict] | None = None) -> dict:
     rows = []
+    curated = [a for side in packet_assertions(curated_packets(query)) for a in side]
     for pmid in query.get("pmids", []):
         events = receipts.get(pmid, [])
         row = manifest_evidence(pmid)
@@ -568,7 +608,14 @@ def evidence_for(query: dict, receipts: dict[str, list[dict]], checks: dict[str,
         row["reading_depth"] = depth
         row["receipt_id"] = event_id
         row["receipt_events"] = len(events)
-        row["evidence_label"] = "WWOX EVIDENCE (receipted in this repository)"
+        # A receipt documents the READING. It says nothing about whether the system read is WWOX-DEE,
+        # WWOX biology elsewhere, a precedent in another disease or a computation: that scope comes from
+        # a curated assertion that cites the reading, and is UNQUALIFIED (said, not inferred) otherwise.
+        cited = [a for a in curated if cites_reading(a, row)]
+        row["evidence_scope"] = sorted({a.get("evidence_scope", "UNQUALIFIED") for a in cited}) or ["UNQUALIFIED"]
+        row["scope_basis"] = ([a["id"] for a in cited] if cited else
+                              "no curated assertion cites this reading; the system it studied is not qualified here")
+        row["evidence_label"] = "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied"
         rows.append(row)
     rows.sort(key=lambda row: row["pmid"])
     depths = {row["reading_depth"] for row in rows}
@@ -650,50 +697,214 @@ def first_hits(result: dict, limit: int = 3) -> list[str]:
     return names
 
 
+UNQUALIFIED_DIMENSIONS = {
+    "track": "UNQUALIFIED", "route": "UNQUALIFIED",
+    "route_note": ("no curated card is linked to this record: Track A (variant-independent) / Track B (variant- or "
+                   "lesion-specific) and deep recovery / partial benefit are NOT determined by its content, and the "
+                   "join assigns neither"),
+}
+
+
+def qualification(packets: list[dict]) -> tuple[str, dict]:
+    """Route and mission dimensions as the curated card(s) wrote them; UNQUALIFIED when none is linked or
+    when several disagree. Track and route are two independent fields and are never merged or defaulted."""
+    if not packets:
+        return "UNQUALIFIED", dict(UNQUALIFIED_DIMENSIONS)
+    if len(packets) == 1:
+        return packets[0]["route"], copy.deepcopy(packets[0]["mission_dimensions"])
+    routes = {p["route"] for p in packets}
+    tracks = {p["mission_dimensions"]["track"] for p in packets}
+    return (routes.pop() if len(routes) == 1 else "UNQUALIFIED",
+            {**copy.deepcopy(packets[0]["mission_dimensions"]),
+             "track": tracks.pop() if len(tracks) == 1 else "UNQUALIFIED",
+             "route": "UNQUALIFIED" if len(routes) > 1 else packets[0]["route"],
+             "route_note": "qualified by several curated cards: " + "; ".join(p["candidate"]["id"] for p in packets)})
+
+
+def ledger_receipt_ids() -> set[str]:
+    return set(RECEIPT_ID.findall(RECEIPT_LEDGER.read_text(encoding="utf-8"))) if RECEIPT_LEDGER.exists() else set()
+
+
+def curated_checks(assertions: list[dict]) -> list[dict]:
+    """Do the identifiers a curated assertion carries still resolve? The receipt must be in the ledger and
+    every manifest entry its locator names must exist. This checks that the link is live, not that the
+    assertion is true: that is the verifier's reading of the entry itself."""
+    ids, out = ledger_receipt_ids(), []
+    for row in assertions:
+        entry = {"assertion": row["id"], "receipt": row.get("receipt") or None,
+                 "receipt_in_ledger": (row["receipt"] in ids) if row.get("receipt") else None, "manifest_entries": []}
+        for pmid, raw in LOCATOR_ENTRIES.findall(row.get("locator", "")):
+            wanted = [int(n) for n in re.findall(r"\d+", raw)]
+            count = manifest_evidence(pmid)["locator_count"]
+            entry["manifest_entries"].append({"manifest": relative(MANIFESTS / f"PMID{pmid}.json"), "entries": wanted,
+                                              "locator_count": count, "resolved": all(n < count for n in wanted)})
+        if entry["receipt"] or entry["manifest_entries"]:
+            out.append(entry)
+    return out
+
+
+def tsv_rows(path: Path) -> list[dict] | None:
+    if not path.exists():
+        return None
+    with path.open(encoding="utf-8", newline="") as handle:
+        return list(csv.DictReader(handle, delimiter="\t"))
+
+
+CHEMBL_LIMIT = 100  # mechanisms requested per target in chembl_target_mechanisms.py; reaching it would be a truncation
+
+
+def target_compounds(census: dict) -> dict:
+    """TARGET -> COMPOUNDS from retrievals already run (DGIdb, ChEMBL curated mechanisms, Open Targets lists),
+    read from the census folder a curated packet names. This is a different operation from the adapters'
+    search BY NAME (`external_sources`): it answers 'what acts on this target', keyed by identity (HGNC symbol,
+    UniProt, Ensembl, ChEMBL target), and keeps per source the action, the source, the query status, the
+    coverage and the truncation. A source that was not asked says NOT_ATTEMPTED; one that does not know the
+    symbol says UNMATCHED; one that was asked and listed nothing says NO_MATCH_FOUND. None of these is absence
+    of pharmacology, and nothing here is WWOX evidence."""
+    folder = ROOT / census["dir"]
+    resolution = {r["hgnc_symbol"]: r for r in tsv_rows(folder / "target_resolution.tsv") or []}
+    dg_rows = tsv_rows(folder / "dgidb_interactions.tsv")
+    dg_path = folder / "dgidb_packet.json"
+    dg_pack = json.loads(dg_path.read_text(encoding="utf-8")) if dg_path.exists() else {}
+    dg_asked = {n for b in dg_pack.get("batches", []) for n in (b.get("variables") or {}).get("names", [])}
+    dg_unmatched = set(dg_pack.get("unmatched_symbols", []))
+    ch_rows = tsv_rows(folder / "chembl_mechanisms.tsv")
+    ch_path = folder / "chembl_target_log.json"
+    ch_log = json.loads(ch_path.read_text(encoding="utf-8")) if ch_path.exists() else {}
+    ot_rows = tsv_rows(folder / "opentargets_lists.tsv")
+    ot_counts = tsv_rows(folder / "opentargets_adapter_counts.tsv")
+    targets = []
+    for symbol in census["symbols"]:
+        ident = resolution.get(symbol)
+        entry = {"symbol": symbol,
+                 "identity": ({"hgnc_id": ident["hgnc_id"], "uniprot": ident["uniprot"], "ensembl_gene": ident["ensembl_gene"],
+                               "chembl_single_protein_target": ident["chembl_single_protein_target"] or "NONE_RESOLVED",
+                               "note": ident.get("collision_or_note", "")} if ident else "UNRESOLVED: symbol absent from target_resolution.tsv"),
+                 "sources": {}}
+        warn = ("IDENTITY COLLISION: " + ident["collision_or_note"][:200]) if ident and ident["collision_or_note"].startswith("COLLISION") else ""
+        # DGIdb, keyed by HGNC symbol
+        if dg_rows is None or symbol not in dg_asked:
+            dg = {"status": "NOT_ATTEMPTED", "compounds": []}
+        elif symbol in dg_unmatched:
+            dg = {"status": "UNMATCHED", "compounds": [], "note": "DGIdb does not know this symbol; that is not a gene with no drugs"}
+        else:
+            comps = [{"name": r["drug"], "action": r["action_types"], "sources": r["sources"], "approved": r["approved"],
+                      "n_publications": r["n_pubs"], **({"identity_warning": warn} if warn else {})}
+                     for r in dg_rows if r["gene"] == symbol]
+            dg = {"status": "MATCH_FOUND" if comps else "NO_MATCH_FOUND", "compounds": comps}
+        dg.update({"source": "DGIdb GraphQL via kg_thin_slice.drug_packet", "packet_status": dg_pack.get("status", "UNKNOWN"),
+                   "coverage": "UNKNOWN" if dg["status"] == "NOT_ATTEMPTED" else dg_pack.get("coverage_statement", "UNKNOWN"),
+                   "truncation": "NOT_RECORDED: interaction pagination is not kept per symbol in the census",
+                   "query": relative(dg_path)})
+        entry["sources"]["dgidb"] = dg
+        # ChEMBL curated mechanisms, keyed by UniProt accession
+        asked = any(symbol in key.split("_") or key == symbol for key in ch_log)
+        if ch_rows is None or not asked:
+            ch = {"status": "NOT_ATTEMPTED", "compounds": []}
+        else:
+            comps = [{"name": r["pref_name"] or r["molecule_chembl_id"], "molecule": r["molecule_chembl_id"], "action": r["action_type"],
+                      "mechanism": r["mechanism"], "max_phase": r["max_phase"], "target": r["target_chembl_id"],
+                      "target_type": r["target_type"], "references": r["refs"]}
+                     for r in ch_rows if ident and r["uniprot"] == ident["uniprot"]]
+            ch = {"status": "MATCH_FOUND" if comps else "NO_MATCH_FOUND", "compounds": comps}
+            ch["truncation"] = {"limit_per_target": CHEMBL_LIMIT, "truncated": len(comps) >= CHEMBL_LIMIT}
+        ch.update({"source": "ChEMBL REST, curated mechanisms of the target", "query": relative(ch_path),
+                   "coverage": "COMPLETE_FOR_QUERIES_RUN" if asked else "UNKNOWN",
+                   "note": "a PROTEIN FAMILY target is shared by its members: the action is the family's, not the isoform's"})
+        entry["sources"]["chembl_mechanisms"] = ch
+        # Open Targets lists, keyed by Ensembl gene id
+        ensembl = ident["ensembl_gene"] if ident else ""
+        counts = [r for r in ot_counts or [] if r["ensembl"] == ensembl]
+        if ot_rows is None or not counts:
+            ot = {"status": "NOT_ATTEMPTED", "compounds": []}
+        else:
+            listed = [r for r in ot_rows if r["ensembl"] == ensembl]
+            total = int(counts[0]["list_count"] or 0)
+            ot = {"status": "MATCH_FOUND" if listed else "NO_MATCH_FOUND",
+                  "compounds": [{"name": r["name"], "molecule": r["molecule"], "drug_type": r["drugType"],
+                                 "max_clinical_stage": r["maxClinicalStage"], "indications": r["diseases"], "action": "NOT_REPORTED"}
+                                for r in listed],
+                  "count_reported": total, "adapter_count": counts[0]["adapter_count"],
+                  "truncation": {"truncated": len(listed) < total, "listed": len(listed), "reported": total}}
+        ot.update({"source": "Open Targets Platform GraphQL, drugAndClinicalCandidates", "coverage": "COMPLETE_FOR_QUERIES_RUN" if ot["status"] != "NOT_ATTEMPTED" else "UNKNOWN",
+                   "query": relative(folder / "opentargets_lists.tsv")})
+        entry["sources"]["opentargets"] = ot
+        targets.append(entry)
+    return {"operation": "TARGET_TO_COMPOUNDS", "evidence_label": "NOT WWOX EVIDENCE", "census": census["dir"], "targets": targets,
+            "not_this": "a search by candidate name is in external_sources; the two answer different questions and neither stands for the other"}
+
+
 def card_for(query: dict, table: dict, hits: list[dict]) -> dict | None:
     """A bridge packet composed from the evidence table and the adapter hits, then built by the
-    bridge itself. Composed, never typed: every assertion names the record it came from."""
+    bridge itself. Composed, never typed: every assertion names the record it came from.
+
+    When the map record names a curated card, that card's QUALIFIED assertions (target, endpoint, direction,
+    context, source, depth, locator, receipt, scope), route and mission dimensions are the card's content, as
+    written; the join adds the live evidence table, the adapters' name lookups and the target -> compounds
+    census beside them and rewrites none. With no curated card there is one unqualified disease row and the
+    route is UNQUALIFIED: the join does not decide deep recovery vs partial benefit, or Track A vs B."""
     candidate = query.get("candidate")
     if not candidate:
         return None
-    disease_assertion = {
-        "id": f"DA-{query['query_id']}",
-        "target_id": query.get("target", "UNKNOWN")[:120] or "UNKNOWN",
-        "endpoint": "UNKNOWN",
-        "direction": "UNKNOWN",
-        "source": f"{query['origin_file']} {query['origin_id']}",
-        "locator": f"{query['origin_file']}:{query['origin_line']}",
-        "epistemic_status": "IPOTESI",
-        "reading_depth": (table["rows"][0]["reading_depth"] if table["rows"] else "UNKNOWN"),
-        "context": {key: "UNKNOWN" for key in bridge.CONTEXT},
-    }
-    if disease_assertion["reading_depth"] not in bridge.READING:
-        disease_assertion["reading_depth"] = "UNKNOWN"
-    if table["rows"] and table["rows"][0].get("receipt_id"):
-        disease_assertion["receipt"] = table["rows"][0]["receipt_id"]
+    packets = curated_packets(query)
+    route, dimensions = qualification(packets)
+    verification = (f"derived by repurposing_join.py from {query['origin_file']}:"
+                    f"{query['origin_line']}; evidence table digest {table['digest']}")
+    derived_roadmap = {"indication_and_transfer": query.get("intervention", "UNKNOWN")[:400],
+                       "verification_scope": verification}
+    if packets:
+        diseases, drugs = packet_assertions(packets)
+        packet = copy.deepcopy(packets[0])
+        packet.update({"disease_assertions": copy.deepcopy(diseases), "drug_assertions": copy.deepcopy(drugs)})
+        packet.pop("disease_assertion", None)
+        packet["curated_candidate"] = packet["candidate"]
+        packet["curated_from"] = [f"cards/{name}.packet.json" for name in query["curated_cards"]]
+        packet["curation_checks"] = curated_checks(diseases + drugs)
+        packet["p4_roadmap_fields"] = packet.get("p4_roadmap_fields") or derived_roadmap
+        census = [packet_.get("target_census") for packet_ in packets if packet_.get("target_census")]
+        if census:
+            packet["target_compounds"] = target_compounds(
+                {"dir": census[0]["dir"], "symbols": sorted({s for c in census for s in c["symbols"]})})
+    else:
+        disease_assertion = {
+            "id": f"DA-{query['query_id']}",
+            "target_id": query.get("target", "UNKNOWN")[:120] or "UNKNOWN",
+            "endpoint": "UNKNOWN",
+            "direction": "UNKNOWN",
+            "source": f"{query['origin_file']} {query['origin_id']}",
+            "locator": f"{query['origin_file']}:{query['origin_line']}",
+            "epistemic_status": "IPOTESI",
+            "evidence_scope": "UNQUALIFIED",
+            "reading_depth": (table["rows"][0]["reading_depth"] if table["rows"] else "UNKNOWN"),
+            "context": {key: "UNKNOWN" for key in bridge.CONTEXT},
+        }
+        if disease_assertion["reading_depth"] not in bridge.READING:
+            disease_assertion["reading_depth"] = "UNKNOWN"
+        if table["rows"] and table["rows"][0].get("receipt_id"):
+            disease_assertion["receipt"] = table["rows"][0]["receipt_id"]
+        packet = {
+            "schema_version": 1,
+            "disease_assertion": disease_assertion,
+            "drug_assertions": [],
+            "label_lookup": {"status": "NOT_ATTEMPTED"},
+            "p4_fields": {
+                "endpoint_pursued": "UNKNOWN",
+                "functional_evidence_available": "UNKNOWN",
+                "temporal_or_model_limit": "UNKNOWN",
+                "cellular_context": {key: "UNKNOWN" for key in bridge.P4_CONTEXT},
+            },
+            "p4_roadmap_fields": derived_roadmap,
+        }
     external = [hit for hit in hits if hit.get("status") == "MATCH_FOUND"]
-    packet = {
-        "schema_version": 1,
-        "route": "RECUPERO_PROFONDO",
+    packet.update({
+        "route": route,
+        "mission_dimensions": dimensions,
         "candidate": {"id": query["query_id"], "name": candidate},
-        "disease_assertion": disease_assertion,
-        "drug_assertions": [],
-        "label_lookup": {"status": "NOT_ATTEMPTED"},
-        "p4_fields": {
-            "endpoint_pursued": "UNKNOWN",
-            "functional_evidence_available": "UNKNOWN",
-            "temporal_or_model_limit": "UNKNOWN",
-            "cellular_context": {key: "UNKNOWN" for key in bridge.P4_CONTEXT},
-        },
-        "p4_roadmap_fields": {
-            "indication_and_transfer": query.get("intervention", "UNKNOWN")[:400],
-            "verification_scope": (f"derived by repurposing_join.py from {query['origin_file']}:"
-                                   f"{query['origin_line']}; evidence table digest {table['digest']}"),
-        },
         "derived_by": "framework/scripts/repurposing_join.py",
         "legend_evidence": table,
         "external_sources": [
             {"adapter": hit.get("adapter"), "status": hit.get("status"),
+             "operation": "SEARCH_BY_NAME_OR_IDENTIFIER",
              "retrieved_at": hit.get("retrieved_at"), "source_version": hit.get("source_version"),
              "licence": hit.get("licence"), "citation": hit.get("citation"),
              "requests_sent": hit.get("requests_sent"), "hit_count": len(hit.get("hits") or []),
@@ -702,7 +913,7 @@ def card_for(query: dict, table: dict, hits: list[dict]) -> dict | None:
              "evidence_label": "NOT WWOX EVIDENCE"}
             for hit in hits
         ],
-    }
+    })
     label = next((hit for hit in hits if hit.get("adapter") == "openfda"), None)
     if label and label.get("status") in bridge.LOOKUP_STATUS:
         packet["label_lookup"] = {
@@ -715,7 +926,7 @@ def card_for(query: dict, table: dict, hits: list[dict]) -> dict | None:
             "client_version": "framework/adapters/openfda.py",
         }
         if label["status"] == "NOT_ATTEMPTED":
-            packet["label_lookup"] = {"status": "NOT_ATTEMPTED"}
+            packet["label_lookup"] = {"status": "NOT_ATTEMPTED"} if not packets else packets[0]["label_lookup"]
         elif label["status"] == "MATCH_FOUND":
             first = next((h for h in label.get("hits") or [] if h.get("kind") == "label"), {})
             names = first.get("generic_name") or []
@@ -875,6 +1086,63 @@ def acquisition_state(table: dict) -> str:
     return f"{len(table['rows'])} paper(s): " + ", ".join(f"{n} {d}" for d, n in sorted(counts.items()))
 
 
+SPAN_STOP = GENERIC | {"and", "the", "with", "without", "only", "versus", "then"}
+MEASURED, MECHANISM, MISSING = ("MEASURED_OBSERVATION_TO_REPLICATE", "MECHANISM_STILL_TO_VERIFY",
+                                "READING_OR_QUALIFICATION_MISSING")
+
+
+def span_tokens(text: str) -> set[str]:
+    return {w for w in re.findall(r"\w{2,}", text.casefold()) if w not in SPAN_STOP}
+
+
+def endpoint_classes(query: dict, card: dict) -> list[dict]:
+    """Classify each endpoint the record's decisive test names (its bold spans), against the CURATED
+    observations bound to the record - never against the words of an abstract.
+
+      MEASURED_OBSERVATION_TO_REPLICATE - a curated, receipted full-text observation has this target and
+          endpoint (every word of the span is in its target_id/endpoint). Replication keeps endpoint and
+          changes laboratory or model; its context, locator, limits and the nulls/oppositions are listed.
+      MECHANISM_STILL_TO_VERIFY - the reading is qualified and complete but no observation measures this
+          endpoint: it is an experiment the study did not run, so doing it is a NEW experiment and never
+          a replication of the study. Observations that share the molecule but not the endpoint are listed.
+      READING_OR_QUALIFICATION_MISSING - no curated observation is linked, or the matching one is weaker
+          than a complete full-text read.
+
+    This is a screen over fields a Scientist already qualified, not an extractor: the verdict names the
+    assertions and locators it rests on so a verifier can open them."""
+    packet = card["input"]
+    disease = packet.get("disease_assertions") or []
+    spans = [m.strip() for m in BOLD.findall(query.get("decisive_test") or "")]
+    complete = [row for row in card["legend_evidence"]["rows"] if row["reading_depth"] == "complete_fulltext_read"]
+    out = []
+    for span in spans or ["(the record declares no endpoint)"]:
+        tokens = span_tokens(span)
+        matched = [a for a in disease if tokens and tokens <= span_tokens(f"{a['target_id']} {a['endpoint']}")]
+        related = [a for a in disease if a not in matched and tokens
+                   and next(iter(sorted(tokens, key=lambda t: span.casefold().find(t)))) in span_tokens(f"{a['target_id']} {a['endpoint']}")]
+        strong = [a for a in matched if a["reading_depth"] == "complete_fulltext_read" and a.get("receipt")]
+
+        def view(a):
+            return {"id": a["id"], "direction": a["direction"], "scope": a.get("evidence_scope", "UNQUALIFIED"),
+                    "reading_depth": a["reading_depth"], "species": a["context"]["species"],
+                    "genotype": a["context"]["genotype"], "locator": a["locator"], "limits": a.get("measured_result_note", "")}
+        if not disease:
+            kind, why = MISSING, "no curated observation is linked to this record"
+        elif strong:
+            kind, why = MEASURED, ("a full-text observation with this target and endpoint exists, in the context shown; "
+                                   "replicate the endpoint in an independent laboratory or model")
+        elif matched:
+            kind, why = MISSING, "the matching observation is weaker than a complete full-text read: read or qualify it first"
+        elif complete:
+            kind, why = MECHANISM, ("the bound reading is complete and does not measure this endpoint; measuring it is a new "
+                                    "experiment, not a replication of the study")
+        else:
+            kind, why = MISSING, "no complete full-text reading is bound to this record"
+        out.append({"endpoint": span, "class": kind, "why": why, "observations": [view(a) for a in matched],
+                    "same_molecule_other_endpoint": [view(a) for a in related]})
+    return out
+
+
 def handoff_rows(cards: list[dict], queries: dict[str, dict]) -> list[dict]:
     """The feedback loop into research: each card's measure-next becomes one row the next batch
     can act on. Four row kinds, decided by the dependence the join measured, never by hand:
@@ -897,17 +1165,31 @@ def handoff_rows(cards: list[dict], queries: dict[str, dict]) -> list[dict]:
         table, nxt = card["legend_evidence"], card["measure_next"]
         dep = nxt["dependence"]
         pmids = [row["pmid"] for row in table["rows"]]
-        binding = None
+        binding, classes = None, None
         if dep in ("LINKAGE_GAP", "NO_PAPER"):
             kind, who, pmid_list = "SELECT", "read-only selector", []
             act = nxt["measurement"]
         elif dep.startswith("ONE_PAPER"):
             kind, who, pmid_list = "REPLICATE", "read-only selector, then a Scientist", pmids
-            binding = (table["rows"][0].get("bound_check") or {"binding": "NOT_CHECKED", "reason": "no check recorded"})
-            act = ("find an independent measurement of the same endpoint; " + INDEPENDENT
-                   + ("" if binding["binding"] == "PRIMARY_WITH_ENDPOINT_WORDS"
-                      else f". BIND FIRST: {binding['binding']} — {binding.get('reason', '')}: replace the bound "
-                           "paper with a primary article that contains the endpoint before searching"))
+            binding = dict(table["rows"][0].get("bound_check") or {"binding": "NOT_CHECKED", "reason": "no check recorded"})
+            classes = endpoint_classes(query, card)
+            measured = [c for c in classes if c["class"] == MEASURED]
+            mech = [c for c in classes if c["class"] == MECHANISM]
+            missing = [c for c in classes if c["class"] == MISSING]
+            if measured:
+                # The link is a full-text locator. The abstract screen stays, labelled as what it is: words in
+                # an abstract do not make or unmake a link that a locator supports.
+                binding = {"binding": "BOUND_BY_FULLTEXT_LOCATOR",
+                           "reason": "; ".join(f"{c['endpoint']}: " + ", ".join(o["id"] for o in c["observations"]) for c in measured),
+                           "abstract_screen": binding}
+            act = ("; ".join(
+                [f"REPLICATE (same endpoint, other laboratory or model): {', '.join(c['endpoint'] for c in measured)}"] * bool(measured)
+                + [f"NOT a replication, a new experiment to verify the mechanism: {', '.join(c['endpoint'] for c in mech)}"] * bool(mech)
+                + [f"READING OR QUALIFICATION MISSING: {', '.join(c['endpoint'] for c in missing)}"] * bool(missing))
+                + "; " + INDEPENDENT)
+            if not measured and binding["binding"] != "PRIMARY_WITH_ENDPOINT_WORDS":
+                act += (f". BIND FIRST: {binding['binding']} - {binding.get('reason', '')} (abstract screen only): replace the "
+                        "bound paper with a primary article that contains the endpoint before searching")
         elif "NONE_READ_COMPLETE" in dep:
             kind, who, pmid_list = "READ", "Scientist", pmids
             act = "complete full-text read of the strongest of these papers, with its receipt and manifest"
@@ -927,13 +1209,14 @@ def handoff_rows(cards: list[dict], queries: dict[str, dict]) -> list[dict]:
                      "origin": nxt["would_move"], "dependence": dep, "pmids": pmid_list,
                      "ask": clause or act, "ask_source": "record open clause" if clause else "join act",
                      "act": act, "acquisition": acquisition_state(table), "binding": binding,
+                     "endpoint_classes": classes,
                      "external_sources": external,
-                     "lead_spec": lead_spec(item["query_id"], card, query) if kind == "REPLICATE" else None})
+                     "lead_spec": lead_spec(item["query_id"], card, query, classes) if kind == "REPLICATE" else None})
     rows.sort(key=lambda row: (row["kind"], row["query_id"]))
     return rows
 
 
-def lead_spec(query_id: str, card: dict, query: dict) -> dict:
+def lead_spec(query_id: str, card: dict, query: dict, classes: list[dict] | None = None) -> dict:
     """A discovery-ledger spec (the shape `discovery_lead.py check` validates) for a dependence
     worth remembering as a lead: the query stands on one reading. Status open; tag INFERENZA;
     falsifier and transfer limit are required fields, so they are written. It is staged by a
@@ -941,8 +1224,13 @@ def lead_spec(query_id: str, card: dict, query: dict) -> dict:
     row = card["legend_evidence"]["rows"][0]
     name = card["input"]["candidate"]["name"]
     check = row.get("bound_check") or {}
+    measured = [c for c in classes or [] if c["class"] == MEASURED]
     bound = ("bound paper screened: " + check["binding"] + (f" ({check['reason']})" if check.get("reason") else "")
              if check else "bound paper not screened")
+    if measured:  # the link is a full-text locator; the abstract screen is not the test of it
+        bound = ("bound by full-text locator: " + "; ".join(
+            f"{c['endpoint']} -> " + ", ".join(f"{o['id']} ({o['locator']})" for o in c["observations"]) for c in measured)
+            + "; abstract screen (not the test): " + (check.get("binding") or "not run"))
     return {
         "kind": "MECH", "status": "open", "tag": "INFERENZA",
         "title": f"{name}: the repurposing query rests on a single reading "
@@ -955,7 +1243,7 @@ def lead_spec(query_id: str, card: dict, query: dict) -> dict:
                              f"receipted reading; a second measurement of the same endpoint in a second "
                              f"system or laboratory is the single datum that would move {card['measure_next']['would_move']}"),
         "falsifier": (f"a primary article from an independent laboratory that measures the same endpoint "
-                      f"({', '.join(check.get('endpoint_words_found') or []) or 'endpoint to be named by the Scientist'}) "
+                      f"({', '.join(c['endpoint'] for c in classes or [] if c['class'] == MEASURED) or ', '.join(check.get('endpoint_words_found') or []) or 'endpoint to be named by the Scientist'}) "
                       f"refutes the single-reading dependence, and refutes the direction if it disagrees; "
                       f"{INDEPENDENT}"),
         "transfer_limit": ("a measurement in another system transfers to the reference genotype only for the "
@@ -993,6 +1281,24 @@ def render_handoff(rows: list[dict], date: str, axis: str,
     for row in rows:
         counts[row["kind"]] = counts.get(row["kind"], 0) + 1
     lines += ["", "Counts: " + " · ".join(f"{k} {v}" for k, v in sorted(counts.items())), ""]
+    classified = [row for row in rows if row.get("endpoint_classes") and row["binding"]["binding"] == "BOUND_BY_FULLTEXT_LOCATOR"]
+    if classified:
+        lines += ["## REPLICATE rows: what each endpoint is, against the curated observations",
+                  "", "`MEASURED_OBSERVATION_TO_REPLICATE` = a receipted full-text observation with this target and endpoint exists "
+                  "(its context and locator below); `MECHANISM_STILL_TO_VERIFY` = the reading does not measure it, so measuring it "
+                  "is a new experiment and not a replication; `READING_OR_QUALIFICATION_MISSING` = nothing curated or complete to "
+                  "stand on. Matching is on the curated target/endpoint fields, never on abstract words.", ""]
+        for row in classified:
+            lines.append(f"- `{row['query_id']}` {row['candidate'][:70]}")
+            for c in row["endpoint_classes"]:
+                lines.append(f"  - **{c['endpoint']}** - `{c['class']}`: {c['why']}")
+                for o in c["observations"]:
+                    lines.append(f"    - {o['id']} {o['direction']} ({o['scope']}; {o['reading_depth']}; {o['species']}; "
+                                 f"{o['genotype']}) - locator {o['locator']} - limits: {o['limits']}")
+                for o in c["same_molecule_other_endpoint"]:
+                    lines.append(f"    - same molecule, other endpoint (not a match): {o['id']} {o['direction']} ({o['scope']}; "
+                                 f"{o['reading_depth']}) - locator {o['locator']}")
+        lines.append("")
 
     # The debt that no row carries. An entry an audit CONDEMNED keeps `auditors: 1` from that
     # audit, so a repair nobody re-judged reads as audited; a held candidate sat three days on
@@ -1063,6 +1369,9 @@ def main(argv: list[str] | None = None) -> int:
     p_hand.add_argument("--date", required=True, help="YYYY-MM-DD written into the file (deterministic, never the clock)")
     p_hand.add_argument("--write", type=Path, default=None, help="write the Markdown here (e.g. research/repurposing_batch_selection_<date>_module.md)")
     p_hand.add_argument("--json", action="store_true")
+    p_tgt = sub.add_parser("targets", help="TARGET -> COMPOUNDS from a census folder of retrievals already run (no network)")
+    p_tgt.add_argument("--dir", required=True, help="repo-relative folder holding target_resolution.tsv, dgidb_*, chembl_*, opentargets_*")
+    p_tgt.add_argument("symbols", nargs="+", help="HGNC symbols as written in target_resolution.tsv")
     p_diff = sub.add_parser("diff", help="diff one derived card against a hand-made card in cards/")
     p_diff.add_argument("query_id")
     p_diff.add_argument("handmade", type=Path)
@@ -1083,6 +1392,9 @@ def main(argv: list[str] | None = None) -> int:
             print(json.dumps(rows, indent=1, ensure_ascii=False))
         else:
             print(text)
+        return 0
+    if args.command == "targets":
+        print(json.dumps(target_compounds({"dir": args.dir, "symbols": args.symbols}), indent=1, ensure_ascii=False))
         return 0
     if args.command == "diff":
         cards = json.loads((args.out / "cards.json").read_text(encoding="utf-8"))
