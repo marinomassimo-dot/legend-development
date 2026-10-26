@@ -9,7 +9,7 @@ Source for every row: dossier `research/fulltext_dossiers/PMID42909904.md` (PAPE
 manifest `research/deepdive_manifests/PMID42909904.json`, `verbatim_locators.entries[i]` (index in brackets), blind audits
 `research/locator_audits/2026-10-26_PMID42909904_*`. Entries 31, 49, 89, 94 are SUPPORTED, entry 95 was narrowed after an OVERSHOOT
 finding. Scientist A's preprint-versus-published comparison
-(`research/lucas_clarke_preprint_vs_published_20261026.md`) had not landed when this was written and is reused, not redone, when it does.
+(`research/lucas_clarke_preprint_vs_published_20261026.md`, landed on `main` while this was being written) is reused, not redone; its section 0 ties each Ldh log2 figure to its contrast and agrees with the figures quoted here (KD+A versus A 1.29; A versus control 1.11 in the table and 1.19 in the text).
 
 ## How to read a strand
 
