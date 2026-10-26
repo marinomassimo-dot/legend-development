@@ -1,0 +1,36 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_at": "2026-10-26T00:00:00Z",
+ "analysis_at": "2026-10-26T00:00:00Z",
+ "analysis_time_precision": "date_only",
+ "source_kind": "fulltext_local",
+ "reread_reason": "adversarial_reanalysis",
+ "event_id": "FTR-20261026-35328751-05",
+ "study_id": {
+  "pmid": "35328751",
+  "doi": "10.3390/ijms23063326"
+ },
+ "workflow": "scientist-a package P2b, QUESTION_DRIVEN targeted re-inspection: where does 'PDH activity unchanged' come from, which panel, method, conditions and comparison; Results 2.1, 2.4, 2.5, Discussion and Methods 4.10-4.11 of the persisted JATS re-read, Figure 5 opened as an image",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID35328751_Baryla2022_PMC.xml",
+ "source_fingerprint": "3610388f72848bd63c6084576b9d243589ffb44e0ef9169691b515a09b5b9de8",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "unavailable"
+ },
+ "outputs": [
+  "disease-models/wwox/research/p2b_pdh_trace_and_lactate_reconciliation_20261026.md",
+  "disease-models/wwox/research/commit_candidates/CC-20261026-SCIENTIST-A-P2B-01.md"
+ ],
+ "evidence_basis": [
+  "Results 2.5 enzyme-activity paragraph, four conditions, lysates; Methods 4.10 PDH kit; Figure 5b hand reading (no KO-vs-control bracket, wide error bars); Results 2.4 WWOX mRNA significantly lower only in NN, NH, HN; Results 2.5 overexpression sentence (PDH activity lower in both hypoxic conditions). No n stated. Figure S3 and the supplement were not re-opened. No manifest was edited by this reading."
+ ],
+ "prior_receipt": "FTR-20261019-35328751-04"
+}

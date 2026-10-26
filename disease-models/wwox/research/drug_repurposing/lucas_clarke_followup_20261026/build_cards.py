@@ -387,6 +387,33 @@ PACKETS["E04_ketogenic_lactate_axis"] = base(
           "adjacent_context_not_wwox_evidence": ["fly lactate rows: up with Wwox reduction plus amyloid, nominally down without amyloid"],
           "an_abstention_is_a_result": "The candidate stays where HYP-20260709-01 holds it; this card names what would end the abstention."})
 
+# ---- scope and target census: the two things a derived card needs from a curated one (join P1, 2026-10-26)
+# evidence_scope says what KIND of evidence an assertion is; it is not the reading depth, and a registered reading never implies
+# WWOX-DEE applicability. A source that none of these rules recognises stays UNQUALIFIED (reported, never inferred).
+def scope_of(row):
+    src = row["source"]
+    if src.startswith("PAPER 567"):
+        return "WWOX_BIOLOGY_OTHER_CONTEXT"      # neuronal Wwox RNAi in a fly amyloid model: WWOX biology, not WWOX-DEE
+    if src.startswith("GSE156243"):
+        return "COMPUTATIONAL_RESULT"            # our own set-level reanalysis of a WWOX knockout organoid deposit
+    if src.startswith(("ChEMBL", "DGIdb", "Open Targets")):
+        return "EXTERNAL_DATABASE_RECORD"
+    if "NOT WWOX EVIDENCE" in src and "PMID" in src:
+        return "OTHER_DISEASE_PRECEDENT"         # a trial or model in another disease, read at abstract level
+    return "UNQUALIFIED"
+
+
+# Symbols whose target -> compounds census (this folder's *.tsv) belongs to the card; HGNC symbols, as in target_resolution.tsv
+CENSUS = {"E01_isr_modulators": ["EIF2B1", "EIF2B2", "EIF2B3", "EIF2B4", "EIF2B5", "EIF2AK1", "EIF2AK2", "EIF2AK3", "EIF2AK4",
+                                 "EIF2S1", "ATF4", "PPP1R15A", "PPP1R15B"],
+          "E02_ldh_inhibition": ["LDHA", "LDHB", "LDHC"],
+          "E03_pdk_inhibition_dca": ["PDK1", "PDK2", "PDK3", "PDK4", "PDPK1", "PDHA1"],
+          "E04_ketogenic_lactate_axis": ["SLC16A1"]}
+for name, packet in PACKETS.items():
+    for row in packet.get("disease_assertions", []) + packet["drug_assertions"]:
+        row["evidence_scope"] = scope_of(row)
+    packet["target_census"] = {"dir": str(HERE.relative_to(ROOT)), "symbols": CENSUS[name]}
+
 for name, packet in PACKETS.items():
     # the bridge forbids both singular and plural; plural is used so every contrast keeps its own row
     card = bridge.build_card(packet)

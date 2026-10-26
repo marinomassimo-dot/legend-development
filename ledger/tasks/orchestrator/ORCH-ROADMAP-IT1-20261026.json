@@ -1,0 +1,79 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-ROADMAP-IT1-20261026",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Roadmap iteration 1: (P1) link curated WWOX knowledge to the repurposing module; (P2) deepen the metabolic premises (Sada 2015 LDH, PDH activity unchanged, lactate wording); (P3) WWOX/external/combined comparison, outcomes for ToolUniverse, TxGNN, MATRIX, LINCS, and a verified daily scout. No efficacy claim, no wet-lab, no e-mail/contact.",
+ "START_UTC": "2026-10-26T21:30:00Z",
+ "AUTHORISED_QUEUE_20261026": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_P1": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "Module consumes curated observations, scope and dimensions kept separate, target->compounds glue, Q-R-10/11 classified",
+     "status": "DONE",
+     "evidence": "scientist-c b6d02d4d; independent verification by scientist-a pending"
+    }
+   ]
+  },
+  "OBJ_P2": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "PDH-unchanged premise traced; lactate interaction wording reconciled",
+     "status": "DONE",
+     "evidence": "scientist-a 324ae260; independent read scientist-b 64dacd1d: all SUPPORTED; HYP-01 bullet wording via integrator pending"
+    },
+    {
+     "step": "Sada 2015 (PMID 25792327) acquired, read, reconciled with ChEMBL",
+     "status": "IN_PROGRESS",
+     "evidence": "scientist-b dispatched"
+    }
+   ]
+  },
+  "OBJ_P3A": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "WWOX vs external vs combined comparison on real cases",
+     "status": "TODO",
+     "evidence": "after P1 verification and P2"
+    }
+   ]
+  },
+  "OBJ_P3B": {
+   "order": 4,
+   "steps": [
+    {
+     "step": "TxGNN and MATRIX outcomes",
+     "status": "IN_PROGRESS",
+     "evidence": "scientist-d dispatched"
+    },
+    {
+     "step": "LINCS and ToolUniverse capability outcomes",
+     "status": "IN_PROGRESS",
+     "evidence": "scientist-c dispatched"
+    }
+   ]
+  },
+  "OBJ_P3C": {
+   "order": 5,
+   "steps": [
+    {
+     "step": "Daily scout operative with proof of next run",
+     "status": "DONE",
+     "evidence": "plan ae08e419; cron 05:20 UTC; env -i run + diff run"
+    }
+   ]
+  }
+ },
+ "DECISIONS_TAKEN": [
+  "2026-10-26: operator away 8 h; hourly session cron 006222c0 continues the mandate until 2026-10-27 06:30 UTC.",
+  "2026-10-26: integrator batch for the commit candidates is held until the scientist packages report, to avoid concurrent registry edits."
+ ],
+ "DEFAULTS_TAKEN": [
+  "daily scout at 05:20 UTC (host time), reversible by removing one crontab line"
+ ]
+}

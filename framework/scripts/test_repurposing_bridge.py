@@ -55,6 +55,17 @@ class BridgeTests(unittest.TestCase):
         data["route"] = "RECUPERO_PROFONDO"
         self.assertEqual(build_card(data)["input"]["route"], "RECUPERO_PROFONDO")
 
+    def test_an_unqualified_route_and_an_evidence_scope_are_kept_not_defaulted(self):
+        data = packet()
+        data["route"] = "UNQUALIFIED"
+        self.assertEqual(build_card(data)["input"]["route"], "UNQUALIFIED")
+        data["drug_assertions"][0]["evidence_scope"] = "OTHER_DISEASE_PRECEDENT"
+        self.assertEqual(build_card(data)["input"]["drug_assertions"][0]["evidence_scope"], "OTHER_DISEASE_PRECEDENT")
+        for bad in ("WWOX EVIDENCE", "", None):
+            data["drug_assertions"][0]["evidence_scope"] = bad
+            with self.assertRaises(ValueError):
+                build_card(data)
+
     def test_unknown_mismatch_empty_and_conflicting_sources(self):
         for dimension in ("direction", "target_id", "endpoint", "cell_type", "genotype"):
             data = packet()

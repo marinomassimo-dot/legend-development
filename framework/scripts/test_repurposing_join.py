@@ -358,7 +358,8 @@ class Run(unittest.TestCase):
         replicate = [r for r in rows if r["kind"] == "REPLICATE"]
         self.assertTrue(replicate)
         for row in replicate:
-            self.assertIn(row["binding"]["binding"], ("PRIMARY_WITH_ENDPOINT_WORDS", "UNVERIFIED", "NOT_CHECKED"))
+            self.assertIn(row["binding"]["binding"], ("PRIMARY_WITH_ENDPOINT_WORDS", "UNVERIFIED", "NOT_CHECKED",
+                                                      "BOUND_BY_FULLTEXT_LOCATOR"))
             self.assertIn("independent = a different laboratory", row["act"])
             self.assertEqual(dl.validate(row["lead_spec"]), [], row["lead_spec"])
             self.assertIn("NOT WWOX EVIDENCE", row["lead_spec"]["transfer_limit"])
@@ -405,6 +406,140 @@ class Run(unittest.TestCase):
         self.assertIn("only_in_derived", report)
         self.assertIn("only_in_handmade", report)
         self.assertTrue(report["same_value"] or report["different_value"])
+
+
+class CuratedLink(unittest.TestCase):
+    """P1 (2026-10-26): curated qualifications are consumed by the module, not replaced by fixed labels.
+    One offline full run over the real corpus; each test names the defect it pins."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.tmp = Path(tempfile.mkdtemp(prefix="joincur_"))
+        cache = ROOT / "disease-models" / "wwox" / "research" / "drug_repurposing" / "join" / "pubmed_cache"
+        if cache.exists():  # the recorded abstract screen of the bound paper, so a failing screen is part of the test
+            shutil.copytree(cache, cls.tmp / "pubmed_cache")
+        rj.run(cls.tmp, live=False)
+        cls.cards = {r["query_id"]: r["card"] for r in json.loads((cls.tmp / "cards.json").read_text(encoding="utf-8"))}
+        cls.evidence = {t["query_id"]: t for t in json.loads((cls.tmp / "evidence.json").read_text(encoding="utf-8"))}
+        cls.queries = {q["query_id"]: q for q in json.loads((cls.tmp / "queries.json").read_text(encoding="utf-8"))}
+        cls.rows = {r["query_id"]: r for r in rj.handoff_rows(
+            [{"query_id": k, "card": v} for k, v in cls.cards.items()], cls.queries)}
+
+    @classmethod
+    def tearDownClass(cls):
+        shutil.rmtree(cls.tmp, ignore_errors=True)
+
+    def packet(self, name):
+        return json.loads((HANDMADE / f"{name}.packet.json").read_text(encoding="utf-8"))
+
+    def test_a_registered_reading_is_not_labelled_wwox_evidence(self):
+        for table in self.evidence.values():
+            for row in table["rows"]:
+                self.assertFalse(row["evidence_label"].startswith("WWOX EVIDENCE"), row["evidence_label"])
+                self.assertIn("not implied", row["evidence_label"])
+                self.assertTrue(row["evidence_scope"])
+        # scope comes only from a curated assertion that cites the reading; otherwise it is said to be unqualified
+        self.assertEqual(self.evidence["Q-R-10"]["rows"][0]["evidence_scope"], ["WWOX_BIOLOGY_OTHER_CONTEXT"])
+        self.assertIn("DA-LC-ATF4-001", self.evidence["Q-R-10"]["rows"][0]["scope_basis"])
+        for row in self.evidence["Q-R-01"]["rows"]:
+            self.assertEqual(row["evidence_scope"], ["UNQUALIFIED"])
+            self.assertIn("not qualified", row["scope_basis"])
+
+    def test_route_and_track_are_the_curated_ones_or_unqualified_never_defaulted(self):
+        for query_id, card in self.cards.items():
+            curated = self.queries[query_id].get("curated_cards")
+            if not curated:
+                self.assertEqual(card["input"]["route"], "UNQUALIFIED", query_id)
+                self.assertEqual(card["input"]["mission_dimensions"]["track"], "UNQUALIFIED", query_id)
+                self.assertEqual(card["input"]["disease_assertion"]["evidence_scope"], "UNQUALIFIED")
+        packet = self.packet("E01_isr_modulators")
+        card = self.cards["Q-R-10"]["input"]
+        self.assertEqual(card["route"], packet["route"])  # BENEFICIO_PRECOCE, not RECUPERO_PROFONDO
+        self.assertEqual(card["mission_dimensions"], packet["mission_dimensions"])
+        self.assertEqual(card["mission_dimensions"]["track"], "A")
+        self.assertNotEqual(card["route"], "RECUPERO_PROFONDO")
+
+    def test_curated_observations_arrive_unchanged_with_context_limits_and_a_live_link(self):
+        for query_id, name in (("Q-R-10", "E01_isr_modulators"), ("Q-R-11", "E02_ldh_inhibition"), ("Q-N-08", "E03_pdk_inhibition_dca")):
+            packet, card = self.packet(name), self.cards[query_id]["input"]
+            self.assertEqual(card["disease_assertions"], packet["disease_assertions"], query_id)
+            self.assertEqual(card["drug_assertions"], packet["drug_assertions"], query_id)
+            for row in card["disease_assertions"] + card["drug_assertions"]:
+                for field in ("target_id", "endpoint", "direction", "context", "source", "locator", "reading_depth", "evidence_scope"):
+                    self.assertTrue(row.get(field), (query_id, row["id"], field))
+            self.assertTrue(self.cards[query_id]["comparisons"], query_id)
+            self.assertNotEqual(self.cards[query_id]["abstention"], "NO_DRUG_ASSERTIONS_SUPPLIED", query_id)
+        # an abstract-level drug observation keeps its depth: nothing was upgraded to a reading
+        depths = {r["id"]: r["reading_depth"] for r in self.cards["Q-R-10"]["input"]["drug_assertions"]}
+        self.assertEqual(set(depths.values()), {"abstract_only"})
+        checks = self.cards["Q-R-10"]["input"]["curation_checks"]
+        self.assertTrue(checks)
+        for check in checks:
+            self.assertTrue(check["receipt_in_ledger"], check)
+            self.assertTrue(all(m["resolved"] for m in check["manifest_entries"]), check)
+
+    def test_a_locator_pointing_past_the_manifest_is_reported_unresolved(self):
+        row = {"id": "X", "locator": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json "
+                                     "verbatim_locators.entries[57], [9999]", "receipt": "FTR-20990101-00000000-01"}
+        check = rj.curated_checks([row])[0]
+        self.assertFalse(check["receipt_in_ledger"])
+        self.assertFalse(check["manifest_entries"][0]["resolved"])
+
+    def test_replicate_rows_separate_measured_observation_from_mechanism_to_verify(self):
+        for query_id, measured, mechanism in (("Q-R-10", "ATF4 protein", "eIF2 alpha phosphorylation"),
+                                              ("Q-R-11", "lactate", "LDH activity")):
+            row = self.rows[query_id]
+            classes = {c["endpoint"]: c for c in row["endpoint_classes"]}
+            self.assertEqual(classes[measured]["class"], rj.MEASURED, query_id)
+            self.assertEqual(classes[mechanism]["class"], rj.MECHANISM, query_id)
+            self.assertTrue(classes[measured]["observations"])
+            self.assertEqual(classes[mechanism]["observations"], [])  # an experiment the study did not run
+            self.assertIn("NOT a replication", row["act"])
+            # the link is a full-text locator; the abstract screen is kept, and does not decide it
+            self.assertEqual(row["binding"]["binding"], "BOUND_BY_FULLTEXT_LOCATOR")
+            self.assertIn("abstract_screen", row["binding"])
+        # same molecule, other endpoint, is listed but is not a match
+        self.assertEqual([o["id"] for o in {c["endpoint"]: c for c in self.rows["Q-R-10"]["endpoint_classes"]}["ATF4 protein"]["same_molecule_other_endpoint"]],
+                         ["DA-GSE-ISR-003"])
+        # a null in another contrast is carried beside the increase, not dropped
+        directions = {o["id"]: o["direction"] for o in {c["endpoint"]: c for c in self.rows["Q-R-10"]["endpoint_classes"]}["ATF4 protein"]["observations"]}
+        self.assertEqual(directions, {"DA-LC-ATF4-001": "INCREASE", "DA-LC-ATF4-002": "NO_CHANGE"})
+
+    def test_without_a_curated_observation_the_class_is_missing_not_replicate(self):
+        for row in self.rows.values():
+            if row["kind"] == "REPLICATE" and not self.queries[row["query_id"]].get("curated_cards"):
+                self.assertTrue(all(c["class"] == rj.MISSING for c in row["endpoint_classes"]), row["query_id"])
+                self.assertNotEqual(row["binding"]["binding"], "BOUND_BY_FULLTEXT_LOCATOR")
+
+    def test_target_to_compounds_keeps_identity_status_coverage_and_truncation_apart_from_name_search(self):
+        census = self.cards["Q-N-08"]["input"]["target_compounds"]
+        self.assertEqual(census["operation"], "TARGET_TO_COMPOUNDS")
+        self.assertEqual(census["evidence_label"], "NOT WWOX EVIDENCE")
+        by = {t["symbol"]: t for t in census["targets"]}
+        self.assertEqual(by["PDK2"]["identity"]["uniprot"], "Q15119")
+        self.assertEqual(by["PDK2"]["sources"]["chembl_mechanisms"]["compounds"][0]["action"], "INHIBITOR")
+        self.assertTrue(all("COLLISION" in c["identity_warning"] for c in by["PDK1"]["sources"]["dgidb"]["compounds"]))
+        self.assertEqual(by["PDHA1"]["sources"]["dgidb"]["status"], "NOT_ATTEMPTED")
+        self.assertEqual(by["PDK2"]["sources"]["opentargets"]["truncation"]["truncated"], False)
+        isr = {t["symbol"]: t for t in self.cards["Q-R-10"]["input"]["target_compounds"]["targets"]}
+        self.assertEqual(isr["EIF2B3"]["sources"]["dgidb"]["status"], "UNMATCHED")        # DGIdb does not know the symbol
+        self.assertEqual(isr["EIF2B2"]["sources"]["dgidb"]["status"], "NO_MATCH_FOUND")   # known, listed nothing
+        self.assertTrue(all(s["operation"] == "SEARCH_BY_NAME_OR_IDENTIFIER" for s in self.cards["Q-R-10"]["external_sources"]))
+
+    def test_a_cut_list_is_reported_as_truncated(self):
+        folder = self.tmp / "census"
+        folder.mkdir()
+        (folder / "target_resolution.tsv").write_text(
+            "label\thgnc_id\thgnc_symbol\tuniprot\tensembl_gene\tchembl_single_protein_target\tcollision_or_note\n"
+            "T1\tHGNC:1\tT1\tP1\tENSG1\tCHEMBL1\t\n", encoding="utf-8")
+        (folder / "opentargets_lists.tsv").write_text("label\tensembl\tlist_count\tmolecule\tname\tdrugType\tmaxClinicalStage\tdiseases\n"
+                                                      "T1\tENSG1\t5\tM1\tdrugone\tSmall molecule\tPHASE_2\tx\n", encoding="utf-8")
+        (folder / "opentargets_adapter_counts.tsv").write_text("label\tensembl\tlist_count\tadapter_count\nT1\tENSG1\t5\t5\n", encoding="utf-8")
+        out = rj.target_compounds({"dir": str(folder), "symbols": ["T1"]})
+        ot = out["targets"][0]["sources"]["opentargets"]
+        self.assertTrue(ot["truncation"]["truncated"])
+        self.assertEqual((ot["truncation"]["listed"], ot["truncation"]["reported"]), (1, 5))
+        self.assertEqual(out["targets"][0]["sources"]["dgidb"]["status"], "NOT_ATTEMPTED")
 
 
 if __name__ == "__main__":

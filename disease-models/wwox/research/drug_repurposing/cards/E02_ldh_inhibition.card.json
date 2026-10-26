@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "input_sha256": "08f96e7b8fe3b613ac8485867f3311ec98e226fe92e13f6393525abeed3c8b4d",
+ "input_sha256": "70153fa98f3d3b57d9f2107bdd937938cb7791804f812d16331f4702ee784ded",
  "epistemic_status": "IPOTESI",
  "canonical": false,
  "assessment": "REQUIRES_QUALIFICATION",
@@ -122,7 +122,8 @@
      "developmental_stage": "adult, day 14 for omics and Atf4 imaging"
     },
     "measured_result_note": "About +1.29 log2 over Abeta42 alone, 4 pools of 10 heads. Abeta42 alone also raises Ldh (+1.11 in the table, 1.19 in the text). Ldh is not among the genes changed by knockdown in the LacZ background.",
-    "receipt": "FTR-20261026-42909904-01"
+    "receipt": "FTR-20261026-42909904-01",
+    "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT"
    },
    {
     "id": "DA-LC-LAC-001",
@@ -141,7 +142,8 @@
      "developmental_stage": "adult, day 14 for omics and Atf4 imaging"
     },
     "measured_result_note": "Interaction F 23.606, adjusted P 0.0174; knockdown effect +1.30 log2 under Abeta42. 5 pools of 10 heads, two-way ANOVA on the top 200 features by variance, 10 percent FDR. No flux, no isotope tracing, no NAD/NADH.",
-    "receipt": "FTR-20261026-42909904-01"
+    "receipt": "FTR-20261026-42909904-01",
+    "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT"
    },
    {
     "id": "DA-LC-LAC-002",
@@ -160,7 +162,8 @@
      "developmental_stage": "adult, day 14 for omics and Atf4 imaging"
     },
     "measured_result_note": "Nominal -0.43 log2 without amyloid (simple effect not tested for significance). The lactate rise is conditional on amyloid.",
-    "receipt": "FTR-20261026-42909904-01"
+    "receipt": "FTR-20261026-42909904-01",
+    "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT"
    },
    {
     "id": "DA-LC-CLIMB-001",
@@ -179,7 +182,8 @@
      "developmental_stage": "adult, day 14 for omics and Atf4 imaging"
     },
     "measured_result_note": "Climbing is lower with Wwox knockdown plus Abeta42 than with control RNAi plus Abeta42; N 4-6 vials.",
-    "receipt": "FTR-20261026-42909904-01"
+    "receipt": "FTR-20261026-42909904-01",
+    "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT"
    },
    {
     "id": "DA-GSE-LDH-002",
@@ -197,7 +201,8 @@
      "cell_type": "cerebral organoid, bulk RNA",
      "developmental_stage": "organoid, culture week 15"
     },
-    "measured_result_note": "LDHA +0.75 by the script's shift (+0.91 on the authors' list, padj 5e-6). LDHA also falls with elapsed culture time in WWOX-unperturbed spheroids, so the rise is as consistent with a less advanced tissue as with a WWOX effect. Transcript, not activity."
+    "measured_result_note": "LDHA +0.75 by the script's shift (+0.91 on the authors' list, padj 5e-6). LDHA also falls with elapsed culture time in WWOX-unperturbed spheroids, so the rise is as consistent with a less advanced tissue as with a WWOX effect. Transcript, not activity.",
+    "evidence_scope": "COMPUTATIONAL_RESULT"
    },
    {
     "id": "DA-BIO008-001",
@@ -215,7 +220,8 @@
      "cell_type": "brain MRS voxel",
      "developmental_stage": "child"
     },
-    "measured_result_note": "Reported extremely low in one patient; the same entry records raised mouse serum lactate. Not combined with the fly rows: different species, tissue and context."
+    "measured_result_note": "Reported extremely low in one patient; the same entry records raised mouse serum lactate. Not combined with the fly rows: different species, tissue and context.",
+    "evidence_scope": "UNQUALIFIED"
    }
   ],
   "drug_assertions": [
@@ -236,7 +242,8 @@
      "developmental_stage": "adult, day 14 for omics and Atf4 imaging"
     },
     "measured_result_note": "Partial rescue to or above the control line at day 28; once; no Ldh-alone arm; Wwox mRNA not reported in the double-RNAi line; lactate not measured in it; lifespan and amyloid load not tested; the authors cite Ldh knockdown as detrimental in other fly amyloid models.",
-    "receipt": "FTR-20261026-42909904-01"
+    "receipt": "FTR-20261026-42909904-01",
+    "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT"
    },
    {
     "id": "DR-E02-001",
@@ -254,7 +261,8 @@
      "cell_type": "cell-free",
      "developmental_stage": "not applicable"
     },
-    "measured_result_note": "Single-digit percent inhibition at the highest concentration tested, which is in the millimolar range, and no value for the lower concentration row; no IC50. The article is not read (paywalled; abstract only): substrate level, enzyme source and replicates are unknown. The same document holds stiripentol rows for a GABA-A receptor and for mouse seizure and rotarod assays, so the LDH row is one weak measurement among several. It is the weakest of three independent single-concentration measurements (see DR-E02-004 and DR-E02-005) and is not evidence of inefficacy: the three disagree in size and no study reports a fitted potency for stiripentol."
+    "measured_result_note": "Single-digit percent inhibition at the highest concentration tested, which is in the millimolar range, and no value for the lower concentration row; no IC50. The article is not read (paywalled; abstract only): substrate level, enzyme source and replicates are unknown. The same document holds stiripentol rows for a GABA-A receptor and for mouse seizure and rotarod assays, so the LDH row is one weak measurement among several. It is the weakest of three independent single-concentration measurements (see DR-E02-004 and DR-E02-005) and is not evidence of inefficacy: the three disagree in size and no study reports a fitted potency for stiripentol.",
+    "evidence_scope": "EXTERNAL_DATABASE_RECORD"
    },
    {
     "id": "DR-E02-004",
@@ -272,7 +280,8 @@
      "cell_type": "cell-free",
      "developmental_stage": "not applicable"
     },
-    "measured_result_note": "Stiripentol racemate about a tenth inhibition at one high-micromolar concentration; its enantiomers about a third each in the same assay (racemate below both of its enantiomers, undiscussed); iso-stiripentol about a fifth; the IC50 entry for stiripentol is a bound (above the highest single concentration), not a fitted value, and the supplement has curves only for the analogues. Four analogues reach 46 to 72 percent at that concentration with fitted IC50 of 100 to 200 micromolar, steep curves, no detergent named, 5 percent DMSO, positive-control result not shown: an analogue series with tool-grade potency, no cell, brain or animal datum."
+    "measured_result_note": "Stiripentol racemate about a tenth inhibition at one high-micromolar concentration; its enantiomers about a third each in the same assay (racemate below both of its enantiomers, undiscussed); iso-stiripentol about a fifth; the IC50 entry for stiripentol is a bound (above the highest single concentration), not a fitted value, and the supplement has curves only for the analogues. Four analogues reach 46 to 72 percent at that concentration with fitted IC50 of 100 to 200 micromolar, steep curves, no detergent named, 5 percent DMSO, positive-control result not shown: an analogue series with tool-grade potency, no cell, brain or animal datum.",
+    "evidence_scope": "OTHER_DISEASE_PRECEDENT"
    },
    {
     "id": "DR-E02-005",
@@ -290,7 +299,8 @@
      "cell_type": "neurons, purified enzyme",
      "developmental_stage": "UNKNOWN"
     },
-    "measured_result_note": "Abstract: LDH inhibition hyperpolarised neurons (reversed by pyruvate), suppressed seizures in a mouse model, stiripentol is an LDH inhibitor, and a chemical modification gave a more potent inhibitor that suppressed seizures in vivo. The article was NOT read: its enzyme and in vivo numbers, exposure, controls and the analogue's identity are UNKNOWN to this card. The about-forty-percent figure is another laboratory's description of it."
+    "measured_result_note": "Abstract: LDH inhibition hyperpolarised neurons (reversed by pyruvate), suppressed seizures in a mouse model, stiripentol is an LDH inhibitor, and a chemical modification gave a more potent inhibitor that suppressed seizures in vivo. The article was NOT read: its enzyme and in vivo numbers, exposure, controls and the analogue's identity are UNKNOWN to this card. The about-forty-percent figure is another laboratory's description of it.",
+    "evidence_scope": "OTHER_DISEASE_PRECEDENT"
    },
    {
     "id": "DR-E02-006",
@@ -308,7 +318,8 @@
      "cell_type": "tumour cell lines; heart and liver mitochondria",
      "developmental_stage": "not applicable"
     },
-    "measured_result_note": "Cell viability and extracellular acidification fall at tens of micromolar, but LDH activity in lysate falls significantly only at the highest, hundreds-of-micromolar concentrations, and oxygen consumption and complex I NADH oxidation are inhibited directly and immediately; the complex I paper reports no inhibition of malate dehydrogenase. Cellular effects of stiripentol are therefore not attributable to LDH on the available data. In a mouse glioblastoma xenograft stiripentol prolonged survival (log-rank P 0.002; legend and Methods disagree on the dose). Tumour models: no seizure, neurodevelopment or WWOX meaning."
+    "measured_result_note": "Cell viability and extracellular acidification fall at tens of micromolar, but LDH activity in lysate falls significantly only at the highest, hundreds-of-micromolar concentrations, and oxygen consumption and complex I NADH oxidation are inhibited directly and immediately; the complex I paper reports no inhibition of malate dehydrogenase. Cellular effects of stiripentol are therefore not attributable to LDH on the available data. In a mouse glioblastoma xenograft stiripentol prolonged survival (log-rank P 0.002; legend and Methods disagree on the dose). Tumour models: no seizure, neurodevelopment or WWOX meaning.",
+    "evidence_scope": "OTHER_DISEASE_PRECEDENT"
    },
    {
     "id": "DR-E02-007",
@@ -326,7 +337,8 @@
      "cell_type": "plasma and tissue",
      "developmental_stage": "children and adults"
     },
-    "measured_result_note": "The review states that concentrations inhibiting LDH in vitro (tens to hundreds of micromolar) lie at or above total plasma levels at effective antiseizure doses and well above the estimated free tissue level, that brain to plasma ratio in the rat is near one, and that a liver to plasma ratio of about thirty-five was measured once in the rat; it ranks LDH inhibition last in sensitivity among stiripentol's mechanisms. Secondary statement of other people's measurements; not re-derived."
+    "measured_result_note": "The review states that concentrations inhibiting LDH in vitro (tens to hundreds of micromolar) lie at or above total plasma levels at effective antiseizure doses and well above the estimated free tissue level, that brain to plasma ratio in the rat is near one, and that a liver to plasma ratio of about thirty-five was measured once in the rat; it ranks LDH inhibition last in sensitivity among stiripentol's mechanisms. Secondary statement of other people's measurements; not re-derived.",
+    "evidence_scope": "OTHER_DISEASE_PRECEDENT"
    },
    {
     "id": "DR-E02-002",
@@ -344,7 +356,8 @@
      "cell_type": "cell-free",
      "developmental_stage": "not applicable"
     },
-    "measured_result_note": "Low-nanomolar potency on LDHA and about sixteen-fold selectivity over LDHB in the cited assays; a research tool with no CNS, paediatric or clinical datum."
+    "measured_result_note": "Low-nanomolar potency on LDHA and about sixteen-fold selectivity over LDHB in the cited assays; a research tool with no CNS, paediatric or clinical datum.",
+    "evidence_scope": "EXTERNAL_DATABASE_RECORD"
    },
    {
     "id": "DR-E02-003",
@@ -362,7 +375,8 @@
      "cell_type": "hepatocyte-directed",
      "developmental_stage": "children and adults"
     },
-    "measured_result_note": "Shows that lowering LDHA in humans is clinically tolerated in the liver; says nothing about brain exposure, and the route is liver-directed."
+    "measured_result_note": "Shows that lowering LDHA in humans is clinically tolerated in the liver; says nothing about brain exposure, and the route is liver-directed.",
+    "evidence_scope": "EXTERNAL_DATABASE_RECORD"
    }
   ],
   "p4_fields": {
@@ -479,7 +493,15 @@
    "label_lookup is NOT_ATTEMPTED in the bridge: the bridge has no network. The openFDA adapter was run separately and is recorded in lucas_clarke_followup_20261026/compounds_and_sources.md.",
    "No dose, route, schedule or paediatric suitability appears; assay concentrations of the sources are deliberately not reproduced."
   ],
-  "no_new_reading": "E02 update 2026-10-26 (scientist-b, P2a): one open-access enzyme paper was read in part by receipt (PMID 39769031; receipt staged, id in CC-20261026-SCIENTIST-B-SADA-LDH-01), four more open-access papers were read at targeted passages without a receipt, and the 2015 Sada report could not be acquired lawfully (abstract only). The Lucas-Clarke rows keep scientist-a's reading (receipt FTR-20261026-42909904-01)."
+  "no_new_reading": "E02 update 2026-10-26 (scientist-b, P2a): one open-access enzyme paper was read in part by receipt (PMID 39769031; receipt staged, id in CC-20261026-SCIENTIST-B-SADA-LDH-01), four more open-access papers were read at targeted passages without a receipt, and the 2015 Sada report could not be acquired lawfully (abstract only). The Lucas-Clarke rows keep scientist-a's reading (receipt FTR-20261026-42909904-01).",
+  "target_census": {
+   "dir": "disease-models/wwox/research/drug_repurposing/lucas_clarke_followup_20261026",
+   "symbols": [
+    "LDHA",
+    "LDHB",
+    "LDHC"
+   ]
+  }
  },
  "translation": {
   "pediatric_suitability": "Stiripentol paediatric label for another indication (Dravet, with clobazam); WWOX-DEE UNKNOWN.",

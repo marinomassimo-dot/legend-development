@@ -22436,6 +22436,47 @@
  {
   "axis": "all",
   "claims_named": [],
+  "digest": "d9aaf55f1e7d18d4",
+  "kind": "lead",
+  "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 567"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 567"
+   ]
+  },
+  "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
+  "origin_id": "DL-MECH-173",
+  "origin_line": 4459,
+  "origin_title": "DL-MECH-173 — Integrated stress response in WWOX loss: the fly Atf4 rise needs amyloid and the one human knockout transcriptome shows the ATF4/ISR target set LOWER than chance, so no signed human ISR readout exists (NOT WWOX-DEE evidence for the fly part)",
+  "papers_named": [
+   "PAPER 567"
+  ],
+  "pmids": [
+   "42909904"
+  ],
+  "pmids_via_records": {
+   "42909904": [
+    "PAPER 567"
+   ]
+  },
+  "query_id": "Q-DL-MECH-173",
+  "terms": [
+   "MECH",
+   "WWOX",
+   "ATF4",
+   "ISR",
+   "LOWER",
+   "DEE"
+  ]
+ },
+ {
+  "axis": "all",
+  "claims_named": [],
   "digest": "5b29997df462bd32",
   "kind": "lead",
   "leads_named": [],
@@ -29993,6 +30034,261 @@
  {
   "axis": "all",
   "claims_named": [],
+  "digest": "61b42b2d84e34cf4",
+  "kind": "lead",
+  "leads_named": [
+   "DL-BIO-008",
+   "DL-BIO-009"
+  ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-BIO-008",
+    "DL-BIO-009",
+    "PAPER 567"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-BIO-008",
+    "DL-BIO-009",
+    "PAPER 567"
+   ]
+  },
+  "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
+  "origin_id": "DL-REPO-004",
+  "origin_line": 4470,
+  "origin_title": "DL-REPO-004 — LDH lowering rescued fly locomotion once in the amyloid-plus-Wwox-reduction genotype; the approved paediatric epilepsy drug usually linked to LDH inhibits it only weakly in the retrieved measurements (NOT WWOX-DEE evidence)",
+  "papers_named": [
+   "PAPER 567"
+  ],
+  "pmids": [
+   "15064722",
+   "17803050",
+   "17823927",
+   "19500159",
+   "22193544",
+   "24308844",
+   "24369382",
+   "24456803",
+   "24932569",
+   "25012504",
+   "25331887",
+   "25411445",
+   "25649963",
+   "25650666",
+   "26345274",
+   "26355344",
+   "26499798",
+   "26857392",
+   "27308416",
+   "27495153",
+   "27551439",
+   "29100284",
+   "29108237",
+   "29164763",
+   "29481666",
+   "29724996",
+   "29808465",
+   "30202070",
+   "30356099",
+   "30362252",
+   "30853297",
+   "31340538",
+   "32581702",
+   "33255508",
+   "33916893",
+   "34268881",
+   "35328751",
+   "35573960",
+   "35716775",
+   "35792847",
+   "36271927",
+   "36779245",
+   "36828035",
+   "36926521",
+   "36937954",
+   "38161429",
+   "39894307",
+   "40336300",
+   "41124647",
+   "42248868",
+   "42721537",
+   "42909904"
+  ],
+  "pmids_via_records": {
+   "15064722": [
+    "DL-BIO-008"
+   ],
+   "17803050": [
+    "DL-BIO-008"
+   ],
+   "17823927": [
+    "DL-BIO-008"
+   ],
+   "19500159": [
+    "DL-BIO-008"
+   ],
+   "22193544": [
+    "DL-BIO-008"
+   ],
+   "24308844": [
+    "DL-BIO-008"
+   ],
+   "24369382": [
+    "DL-BIO-008"
+   ],
+   "24456803": [
+    "DL-BIO-008"
+   ],
+   "24932569": [
+    "DL-BIO-008"
+   ],
+   "25012504": [
+    "DL-BIO-008"
+   ],
+   "25331887": [
+    "DL-BIO-008"
+   ],
+   "25411445": [
+    "DL-BIO-008"
+   ],
+   "25649963": [
+    "DL-BIO-008"
+   ],
+   "25650666": [
+    "DL-BIO-008"
+   ],
+   "26345274": [
+    "DL-BIO-008"
+   ],
+   "26355344": [
+    "DL-BIO-008"
+   ],
+   "26499798": [
+    "DL-BIO-008"
+   ],
+   "26857392": [
+    "DL-BIO-008"
+   ],
+   "27308416": [
+    "DL-BIO-008"
+   ],
+   "27495153": [
+    "DL-BIO-008"
+   ],
+   "27551439": [
+    "DL-BIO-008"
+   ],
+   "29100284": [
+    "DL-BIO-009"
+   ],
+   "29108237": [
+    "DL-BIO-009"
+   ],
+   "29164763": [
+    "DL-BIO-008",
+    "DL-BIO-009"
+   ],
+   "29481666": [
+    "DL-BIO-008",
+    "DL-BIO-009"
+   ],
+   "29724996": [
+    "DL-BIO-008",
+    "DL-BIO-009"
+   ],
+   "29808465": [
+    "DL-BIO-008"
+   ],
+   "30202070": [
+    "DL-BIO-008"
+   ],
+   "30356099": [
+    "DL-BIO-008"
+   ],
+   "30362252": [
+    "DL-BIO-008"
+   ],
+   "30853297": [
+    "DL-BIO-008"
+   ],
+   "31340538": [
+    "DL-BIO-008"
+   ],
+   "32581702": [
+    "DL-BIO-008"
+   ],
+   "33255508": [
+    "DL-BIO-008"
+   ],
+   "33916893": [
+    "DL-BIO-008"
+   ],
+   "34268881": [
+    "DL-BIO-008"
+   ],
+   "35328751": [
+    "DL-BIO-008"
+   ],
+   "35573960": [
+    "DL-BIO-008"
+   ],
+   "35716775": [
+    "DL-BIO-008"
+   ],
+   "35792847": [
+    "DL-BIO-008"
+   ],
+   "36271927": [
+    "DL-BIO-008"
+   ],
+   "36779245": [
+    "DL-BIO-008"
+   ],
+   "36828035": [
+    "DL-BIO-008"
+   ],
+   "36926521": [
+    "DL-BIO-008"
+   ],
+   "36937954": [
+    "DL-BIO-008"
+   ],
+   "38161429": [
+    "DL-BIO-008"
+   ],
+   "39894307": [
+    "DL-BIO-008"
+   ],
+   "40336300": [
+    "DL-BIO-008"
+   ],
+   "41124647": [
+    "DL-BIO-008"
+   ],
+   "42248868": [
+    "DL-BIO-008"
+   ],
+   "42721537": [
+    "DL-BIO-008"
+   ],
+   "42909904": [
+    "PAPER 567"
+   ]
+  },
+  "query_id": "Q-DL-REPO-004",
+  "terms": [
+   "REPO",
+   "LDH",
+   "WWOX",
+   "DEE",
+   "LDH5",
+   "LDH1"
+  ]
+ },
+ {
+  "axis": "all",
+  "claims_named": [],
   "digest": "314619b1b1694fc1",
   "kind": "lead",
   "leads_named": [
@@ -31475,8 +31771,9 @@
   "axis": "all",
   "candidate": "mTOR inhibitors",
   "claims_named": [],
+  "curated_cards": [],
   "decisive_test": "a protein-level mTORC1 readout (pS6, p4E-BP1) in a WWOX-deficient neuronal",
-  "digest": "62aac741ec223b64",
+  "digest": "9e5de101f6fe01e5",
   "intervention": "*`INSUFFICIENT` — mai misurato a livello proteico in alcun sistema WWOX.* The reflex move in genetic DEE, imported from TSC.",
   "kind": "mechanism_record",
   "leads_named": [
@@ -31718,8 +32015,9 @@
   "claims_named": [
    "CLAIM 016"
   ],
+  "curated_cards": [],
   "decisive_test": "a PTZ arm with an explicit tested `−/−` vs `+/+` contrast, or a different",
-  "digest": "69d599c94d9b20a7",
+  "digest": "14ba2ecb2441f87e",
   "intervention": "*evidence transfer that was never genotype-controlled*, compounded by *wrong",
   "kind": "mechanism_record",
   "leads_named": [],
@@ -31769,8 +32067,9 @@
   "axis": "all",
   "candidate": "Sodium-channel blockers",
   "claims_named": [],
+  "curated_cards": [],
   "decisive_test": "documented Na-blocker response in WWOX-BS cases, or a Nav dependence measured",
-  "digest": "308c73b6cf20c02d",
+  "digest": "2d9a623c044b00d9",
   "intervention": "*the target is not causally downstream of WWOX.* Precision therapy in",
   "kind": "mechanism_record",
   "leads_named": [
@@ -31813,8 +32112,9 @@
    "CLAIM 001",
    "CLAIM 031"
   ],
+  "curated_cards": [],
   "decisive_test": "`E_GABA` measurement in a WWOX system; or a WWOX cohort with structured VABAM",
-  "digest": "d4bca6275b9f4508",
+  "digest": "6960598b7150a366",
   "intervention": "*corrects a marker, not the mechanism* — plus an unmeasured premise. VABAM is",
   "kind": "mechanism_record",
   "leads_named": [
@@ -31921,8 +32221,9 @@
   "claims_named": [
    "CLAIM 019"
   ],
+  "curated_cards": [],
   "decisive_test": "evidence that a compound-heterozygous transcript behaves differently from the",
-  "digest": "37cb0d7033d32040",
+  "digest": "f5e641c8ce55b52a",
   "intervention": "*the target is not the bottleneck.* Normal transcript with protein not detected",
   "kind": "mechanism_record",
   "leads_named": [
@@ -32156,8 +32457,9 @@
   "axis": "all",
   "candidate": "Lactate, and metabolic blood biomarkers generally, as WWOX readouts",
   "claims_named": [],
+  "curated_cards": [],
   "decisive_test": "Seahorse/fluxomics showing a real bioenergetic shift in donor-derived cells.",
-  "digest": "55cf7834cd47aa5c",
+  "digest": "c41e43388935e069",
   "intervention": "*corrects/reports a biomarker, not the mechanism* — inverted: here the biomarker",
   "kind": "mechanism_record",
   "leads_named": [
@@ -32405,8 +32707,9 @@
   "claims_named": [
    "CLAIM 025"
   ],
+  "curated_cards": [],
   "decisive_test": "UNKNOWN",
-  "digest": "242db6b4799992ff",
+  "digest": "c6d9770908c39a43",
   "intervention": "*toxicity incompatible* + *wrong endpoint*. The only approved drug that corrects a",
   "kind": "mechanism_record",
   "leads_named": [],
@@ -32458,8 +32761,11 @@
   "axis": "all",
   "candidate": "Dichloroacetate",
   "claims_named": [],
+  "curated_cards": [
+   "E03_pdk_inhibition_dca"
+  ],
   "decisive_test": "UNKNOWN",
-  "digest": "245fe07ed354ba82",
+  "digest": "40ae485f19737200",
   "intervention": "*two-hop inference* + *a safety margin that has never been measured in this",
   "kind": "mechanism_record",
   "leads_named": [
@@ -32697,8 +33003,9 @@
   "claims_named": [
    "CLAIM 023"
   ],
+  "curated_cards": [],
   "decisive_test": "UNKNOWN",
-  "digest": "12228380908693bd",
+  "digest": "e0a3951f2aaac1b2",
   "intervention": "*acts in the wrong direction.* Phospho-Tyr33 WOX1 is **pro-apoptotic**; the peptide",
   "kind": "mechanism_record",
   "leads_named": [
@@ -32718,7 +33025,7 @@
   },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-09",
-  "origin_line": 863,
+  "origin_line": 864,
   "origin_title": "pTyr33-WWOX peptide as functional restoration → **the direction is inverted**",
   "papers_named": [],
   "pmids": [
@@ -32760,8 +33067,9 @@
   "axis": "all",
   "candidate": "Splice-switching ASO for a canonical acceptor allele",
   "claims_named": [],
+  "curated_cards": [],
   "decisive_test": "UNKNOWN",
-  "digest": "bf9e16ddf1e7f5d7",
+  "digest": "7220e48152124f4b",
   "intervention": "*derived from a mechanism that does not do what the design needs.* SSOs **mask**",
   "kind": "mechanism_record",
   "leads_named": [
@@ -32779,7 +33087,7 @@
   },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-10",
-  "origin_line": 873,
+  "origin_line": 874,
   "origin_title": "Splice-switching ASO for a canonical acceptor allele → **\"not eligible\" by the field's own criteria, which say it flatly; what is missing is the measurement that would place this allele in that class**",
   "papers_named": [],
   "pmids": [
@@ -32885,8 +33193,9 @@
   "axis": "all",
   "candidate": "4-PBA / TUDCA on the ER-chaperone rationale",
   "claims_named": [],
+  "curated_cards": [],
   "decisive_test": "UNKNOWN",
-  "digest": "be9baa255e4c342e",
+  "digest": "e5acb2b711fcba29",
   "intervention": "*derived from a textbook default.* \"Misfolded protein → ERAD → chemical chaperone\"",
   "kind": "mechanism_record",
   "leads_named": [
@@ -32907,7 +33216,7 @@
   },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-11",
-  "origin_line": 946,
+  "origin_line": 947,
   "origin_title": "4-PBA / TUDCA on the ER-chaperone rationale → **wrong compartment**",
   "papers_named": [],
   "pmids": [
@@ -33125,8 +33434,9 @@
   "claims_named": [
    "CLAIM 019"
   ],
+  "curated_cards": [],
   "decisive_test": "any measurement of a destabilized WWOX SDR missense (Q230P or P252A) under",
-  "digest": "9dd4ba212d475336",
+  "digest": "f8688697f5b51c3f",
   "intervention": "*wrong direction, hidden inside a plausible one* — **as a prediction, not as a",
   "kind": "mechanism_record",
   "leads_named": [
@@ -33146,7 +33456,7 @@
   },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-12",
-  "origin_line": 953,
+  "origin_line": 954,
   "origin_title": "HSP70 co-inducers (e.g. arimoclomol) for an SDR missense → **a hypothesis of harm, and it is still only a hypothesis**",
   "papers_named": [],
   "pmids": [
@@ -33195,8 +33505,9 @@
   "claims_named": [
    "CLAIM 003"
   ],
+  "curated_cards": [],
   "decisive_test": "UNKNOWN",
-  "digest": "eef814301820433c",
+  "digest": "1b9b617fcdefc671",
   "intervention": "*the target is not causally downstream of WWOX in the cell being targeted* +",
   "kind": "mechanism_record",
   "leads_named": [
@@ -33216,7 +33527,7 @@
   },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-13",
-  "origin_line": 1003,
+  "origin_line": 1004,
   "origin_title": "Pro-myelinating agents (clemastine, benztropine, T3, quetiapine) → **wrong cell compartment, and a closing window**",
   "papers_named": [],
   "pmids": [
@@ -33351,8 +33662,9 @@
    "CLAIM 009",
    "CLAIM 034"
   ],
+  "curated_cards": [],
   "decisive_test": "UNKNOWN",
-  "digest": "786c8e0b5b4ab78f",
+  "digest": "41073cc6d829b040",
   "intervention": "*the direction of the axis is context-dependent and was assumed.* Two independent",
   "kind": "mechanism_record",
   "leads_named": [],
@@ -33374,7 +33686,7 @@
   },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-14",
-  "origin_line": 1017,
+  "origin_line": 1018,
   "origin_title": "Antioxidants (NAC, CoQ10, creatine) on the \"WWOX loss → ROS\" rationale → **the relationship is not monotonic**",
   "papers_named": [
    "PAPER 054",
@@ -33432,8 +33744,9 @@
    "CLAIM 031",
    "CLAIM 033"
   ],
+  "curated_cards": [],
   "decisive_test": "such a case, reported with a developmental",
-  "digest": "20b2efbcb8e23c9c",
+  "digest": "3d41ea92e9ba80a0",
   "intervention": "*corrects a biomarker (seizures) but not the mechanism (development)*. **Quoted",
   "kind": "mechanism_record",
   "leads_named": [
@@ -33457,7 +33770,7 @@
   },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-15",
-  "origin_line": 1028,
+  "origin_line": 1029,
   "origin_title": "Counting seizure control as developmental protection → **the most consequential negative in the whole portfolio**",
   "papers_named": [
    "PAPER 045"
@@ -33705,8 +34018,9 @@
   "claims_named": [
    "CLAIM 021"
   ],
+  "curated_cards": [],
   "decisive_test": "UNKNOWN",
-  "digest": "ca7ad256db8b0077",
+  "digest": "f6a810d757367584",
   "intervention": "*a negative stated as an absence of effect, when what exists is an untested point estimate in the adverse direction.* In the only WWOX system in which a selective pannexin-1 blocker has ever been applied (`Wwox` S-KO neocortical slice, P13–P17), normalized burst frequency rose to **≈ 2.55 during treatment and ≈ 2.6 at washout against a baseline of 1.0**, carrying **no significance marker and no re",
   "kind": "mechanism_record",
   "leads_named": [],
@@ -33722,7 +34036,7 @@
   },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-16",
-  "origin_line": 1075,
+  "origin_line": 1076,
   "origin_title": "Pannexin-1 blockade (brilliant blue FCF and congeners) on the CLAIM 021 network node → **the only WWOX measurement points the wrong way, and it was never tested**",
   "papers_named": [],
   "pmids": [
@@ -33742,8 +34056,9 @@
   "claims_named": [
    "CLAIM 035"
   ],
+  "curated_cards": [],
   "decisive_test": "UNKNOWN",
-  "digest": "d2a7ef48ba8c73d7",
+  "digest": "41c8d38206e5ecb2",
   "intervention": "*importing a disease's dominant modality because the pathway diagram looks like that disease, without checking which way the arrow points.* CHAIN C reads like a tauopathy — WWOX loss → GSK3β de-repressed → pTau S396/S404 up (`CLAIM 035`, `DL-MECH-019`) — and tauopathy's dominant modality is **tau-lowering**. In the only system where the question was asked, tau-lowering **removes the benefit of bot",
   "kind": "mechanism_record",
   "leads_named": [
@@ -33766,7 +34081,7 @@
   },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-17",
-  "origin_line": 1081,
+  "origin_line": 1082,
   "origin_title": "Tau-lowering, imported from tauopathy into CHAIN C → 🔴 **the arrow points the other way: Tau is the EFFECTOR of the benefit, not the toxin**",
   "papers_named": [],
   "pmids": [
@@ -36749,8 +37064,9 @@
   "axis": "all",
   "candidate": "AAV9-hSynI-WWOX",
   "claims_named": [],
+  "curated_cards": [],
   "decisive_test": "**delayed, post-onset dosing in a hypomorphic (non-null) model**, with SWD/ECoG and myelin readouts; plus an **intermediate-dose arm between 1.23 and 2.63 × 10¹¹ vg** to localize the threshold",
-  "digest": "49a2f7e7c8ef9f75",
+  "digest": "dffacd03f204d659",
   "intervention": "AAV9, human Synapsin-I promoter, WWOX cDNA; ICV. ⚠️ **Corrected 2026-09-27 — the therapeutic configuration is WPRE-FREE.** The 2021 vector map (Appendix Fig S1A, read at 300 dpi) shows all three constructs WPRE-free, and the 2021 paper never mentions WPRE; the 2026 dose study removed WPRE deliberately (*“we removed WPRE as a proactive risk-mitigation step”*, receipted locator) and states the price",
   "kind": "mechanism_record",
   "leads_named": [],
@@ -36785,8 +37101,9 @@
    "CLAIM 021",
    "CLAIM 031"
   ],
+  "curated_cards": [],
   "decisive_test": "MEA on WWOX-null neurons/organoids: does memantine (or MK-801) reduce spontaneous burst frequency/amplitude and PAC, dose-dependently, **with the parental/rescue line as the internal comparator**?",
-  "digest": "a823055a3169a384",
+  "digest": "f4a1995988433c0b",
   "intervention": "memantine (approved); MK-801 / APV as tools",
   "kind": "mechanism_record",
   "leads_named": [],
@@ -36846,8 +37163,9 @@
   "claims_named": [
    "CLAIM 028"
   ],
+  "curated_cards": [],
   "decisive_test": "in WOREE organoids, **first measure nuclear β-catenin state**, then XAV939 **vs** CHIR99021 on cortical-layering rescue — the two-armed design is what fixes the sign in the right context",
-  "digest": "4da854fcf02a13a7",
+  "digest": "14dc332736b95c8d",
   "intervention": "tankyrase inhibitor (e.g. XAV939 as tool); no paediatric-profiled candidate identified",
   "kind": "mechanism_record",
   "leads_named": [],
@@ -36890,8 +37208,9 @@
    "CLAIM 016",
    "CLAIM 035"
   ],
+  "curated_cards": [],
   "decisive_test": "a PTZ + lithium arm with an **explicit, tested** `−/−` vs `+/+` comparison — or a different GSK3β inhibitor under the same design. Until then, no genotype-specific claim is available",
-  "digest": "415f4a56a05853ac",
+  "digest": "ed1a2e13e53f21c4",
   "intervention": "lithium carbonate",
   "kind": "mechanism_record",
   "leads_named": [],
@@ -36949,8 +37268,9 @@
    "CLAIM 020",
    "CLAIM 042"
   ],
+  "curated_cards": [],
   "decisive_test": "**Seahorse OCR/ECAR on donor-derived fibroblasts/LCL vs control** — the only remaining falsifier since lactate became ambiguous. Zero-cost second test: Seahorse on the existing WWOX-KO organoids, closing the transcriptome→flux gap",
-  "digest": "0ffd1900f2b25558",
+  "digest": "a8210880dad7b9e2",
   "intervention": "ketogenic diet",
   "kind": "mechanism_record",
   "leads_named": [
@@ -37194,8 +37514,9 @@
   "claims_named": [
    "CLAIM 006"
   ],
+  "curated_cards": [],
   "decisive_test": "in the **existing, characterized Wwox^P47T mouse** (survives >1 year, vs ~1 month for the null): does the agent reduce astro-microgliosis, slow Purkinje loss, and improve motor coordination?",
-  "digest": "d3d34fdb47a52ba8",
+  "digest": "0db91f894f58f91a",
   "intervention": "class: IL-1β/NLRP3, MAPK/NF-κB or microglia-targeting agent",
   "kind": "mechanism_record",
   "leads_named": [
@@ -37382,8 +37703,9 @@
   "axis": "all",
   "candidate": "Bumetanide",
   "claims_named": [],
+  "curated_cards": [],
   "decisive_test": "**gramicidin perforated-patch `E_GABA`** in WWOX-KO vs parental neurons/organoids, with NKCC1/KCC2 quantification and the GABA response itself. **This single experiment converts the entire M3 axis from T6 to T2 — or closes it**",
-  "digest": "60b67cef481cb083",
+  "digest": "2c81819c395e2b01",
   "intervention": "bumetanide",
   "kind": "mechanism_record",
   "leads_named": [
@@ -37464,8 +37786,9 @@
   "axis": "all",
   "candidate": "Base / prime editing of a canonical splice-acceptor allele",
   "claims_named": [],
+  "curated_cards": [],
   "decisive_test": "**first**, characterize the real transcript: junction-spanning RT-PCR ± NMD block, amplicon sequencing, long-read if multiple isoforms appear. **No editing-vs-anything choice may precede this.** Then: PAM availability and bystander-cytosine survey at the locus",
-  "digest": "03f65c3419e156cb",
+  "digest": "ff62b98e02e0e103",
   "intervention": "cytosine base editor (C→T on the antisense strand) or prime editor",
   "kind": "mechanism_record",
   "leads_named": [
@@ -37733,8 +38056,9 @@
   "claims_named": [
    "CLAIM 019"
   ],
+  "curated_cards": [],
   "decisive_test": "the ordered sequence, each step informative alone: (1) WB + qRT-PCR on variant-carrying cells vs control; (2) **nascent synthesis + pulse-chase** with soluble/insoluble fractionation, to separate production from disappearance; (3) orthogonal turnover probes (proteasomal and lysosomal arms with viability) — HSC70/LAMP1 are associative, **LAMP2A-dependence is what CMA requires**; (4) only then a min",
-  "digest": "8263f49b88f90e2b",
+  "digest": "afb6c94a147c478a",
   "intervention": "conditional; **no molecule is design-ready**. Three families: site-specific pharmacological chaperone · kinetic stabilizer · indirect proteostasis regulator",
   "kind": "mechanism_record",
   "leads_named": [
@@ -37988,8 +38312,11 @@
   "axis": "all",
   "candidate": "ISRIB-class eIF2B activators and other ISR attenuators",
   "claims_named": [],
+  "curated_cards": [
+   "E01_isr_modulators"
+  ],
   "decisive_test": "**eIF2 alpha phosphorylation** and **ATF4 protein** (with ATF4-target transcripts) in WWOX-deficient versus isogenic human neural cells at matched maturity, with and without a defined proteotoxic challenge; only if elevated, an eIF2B activator against vehicle on that readout and one functional endpoint",
-  "digest": "339a4228fe847f0a",
+  "digest": "a2e4b74440b3d013",
   "intervention": "class-level: eIF2B activators (ISRIB and clinical-stage successors), PERK-arm inhibitors, repurposed compounds that reverse eIF2 alpha-P translational repression; the card is `research/drug_repurposing/cards/E01_isr_modulators.card.json`",
   "kind": "mechanism_record",
   "leads_named": [],
@@ -38034,8 +38361,11 @@
   "axis": "all",
   "candidate": "Stiripentol",
   "claims_named": [],
+  "curated_cards": [
+   "E02_ldh_inhibition"
+  ],
   "decisive_test": "**lactate** (enantiomer- or isotope-resolved) in the double-RNAi fly genotype with an Ldh-alone arm; **LDH activity** and the lactate-to-pyruvate relationship in WWOX-deficient versus isogenic human neural cells at matched maturity; then stiripentol against a selective LDHA tool at matched exposure",
-  "digest": "072353e619317a08",
+  "digest": "6d1c76308c1c25f1",
   "intervention": "stiripentol as the approved paediatric epilepsy member of an LDH-lowering lever; LDHA tool compounds and an LDHA-directed oligonucleotide (approved for primary hyperoxaluria, liver-directed) are context; the card is `research/drug_repurposing/cards/E02_ldh_inhibition.card.json`",
   "kind": "mechanism_record",
   "leads_named": [],
