@@ -1105,8 +1105,9 @@ def endpoint_classes(query: dict, card: dict) -> list[dict]:
       MECHANISM_STILL_TO_VERIFY - the reading is qualified and complete but no observation measures this
           endpoint: it is an experiment the study did not run, so doing it is a NEW experiment and never
           a replication of the study. Observations that share the molecule but not the endpoint are listed.
-      READING_OR_QUALIFICATION_MISSING - no curated observation is linked, or the matching one is weaker
-          than a complete full-text read.
+      READING_OR_QUALIFICATION_MISSING - carries a `cause` field, one of NO_ENDPOINT_DECLARED (the record names
+          no bold endpoint), NO_CURATED_OBSERVATION, OBSERVATION_WEAKER_THAN_FULLTEXT (the matching one is
+          weaker than a complete full-text read), NO_COMPLETE_READING_BOUND.
 
     This is a screen over fields a Scientist already qualified, not an extractor: the verdict names the
     assertions and locators it rests on so a verifier can open them."""
@@ -1125,20 +1126,25 @@ def endpoint_classes(query: dict, card: dict) -> list[dict]:
         def view(a):
             return {"id": a["id"], "direction": a["direction"], "scope": a.get("evidence_scope", "UNQUALIFIED"),
                     "reading_depth": a["reading_depth"], "species": a["context"]["species"],
-                    "genotype": a["context"]["genotype"], "locator": a["locator"], "limits": a.get("measured_result_note", "")}
-        if not disease:
-            kind, why = MISSING, "no curated observation is linked to this record"
+                    "genotype": a["context"]["genotype"], "locator": a["locator"], "limits": a.get("measured_result_note", ""),
+                    "sign_vs_contrast": a.get("sign_vs_contrast", {})}
+        cause = ""
+        if not spans:
+            kind, cause, why = MISSING, "NO_ENDPOINT_DECLARED", ("the record names no endpoint (no bold span in its decisive test), "
+                                                                 "so no observation can be matched to it: name the readout and its unit")
+        elif not disease:
+            kind, cause, why = MISSING, "NO_CURATED_OBSERVATION", "no curated observation is linked to this record"
         elif strong:
             kind, why = MEASURED, ("a full-text observation with this target and endpoint exists, in the context shown; "
                                    "replicate the endpoint in an independent laboratory or model")
         elif matched:
-            kind, why = MISSING, "the matching observation is weaker than a complete full-text read: read or qualify it first"
+            kind, cause, why = MISSING, "OBSERVATION_WEAKER_THAN_FULLTEXT", "the matching observation is weaker than a complete full-text read: read or qualify it first"
         elif complete:
             kind, why = MECHANISM, ("the bound reading is complete and does not measure this endpoint; measuring it is a new "
                                     "experiment, not a replication of the study")
         else:
-            kind, why = MISSING, "no complete full-text reading is bound to this record"
-        out.append({"endpoint": span, "class": kind, "why": why, "observations": [view(a) for a in matched],
+            kind, cause, why = MISSING, "NO_COMPLETE_READING_BOUND", "no complete full-text reading is bound to this record"
+        out.append({"endpoint": span, "class": kind, "cause": cause, "why": why, "observations": [view(a) for a in matched],
                     "same_molecule_other_endpoint": [view(a) for a in related]})
     return out
 
@@ -1185,7 +1191,7 @@ def handoff_rows(cards: list[dict], queries: dict[str, dict]) -> list[dict]:
             act = ("; ".join(
                 [f"REPLICATE (same endpoint, other laboratory or model): {', '.join(c['endpoint'] for c in measured)}"] * bool(measured)
                 + [f"NOT a replication, a new experiment to verify the mechanism: {', '.join(c['endpoint'] for c in mech)}"] * bool(mech)
-                + [f"READING OR QUALIFICATION MISSING: {', '.join(c['endpoint'] for c in missing)}"] * bool(missing))
+                + [f"READING OR QUALIFICATION MISSING ({', '.join(sorted({c['cause'] for c in missing}))}): {', '.join(c['endpoint'] for c in missing)}"] * bool(missing))
                 + "; " + INDEPENDENT)
             if not measured and binding["binding"] != "PRIMARY_WITH_ENDPOINT_WORDS":
                 act += (f". BIND FIRST: {binding['binding']} - {binding.get('reason', '')} (abstract screen only): replace the "
@@ -1291,10 +1297,11 @@ def render_handoff(rows: list[dict], date: str, axis: str,
         for row in classified:
             lines.append(f"- `{row['query_id']}` {row['candidate'][:70]}")
             for c in row["endpoint_classes"]:
-                lines.append(f"  - **{c['endpoint']}** - `{c['class']}`: {c['why']}")
+                lines.append(f"  - **{c['endpoint']}** - `{c['class']}`" + (f" (cause `{c['cause']}`)" if c.get("cause") else "") + f": {c['why']}")
                 for o in c["observations"]:
+                    sign = "; ".join(f"{k}: {v}" for k, v in sorted((o.get("sign_vs_contrast") or {}).items()))
                     lines.append(f"    - {o['id']} {o['direction']} ({o['scope']}; {o['reading_depth']}; {o['species']}; "
-                                 f"{o['genotype']}) - locator {o['locator']} - limits: {o['limits']}")
+                                 f"{o['genotype']}) - locator {o['locator']} - limits: {o['limits']}" + (f" - sign relative to: {sign}" if sign else ""))
                 for o in c["same_molecule_other_endpoint"]:
                     lines.append(f"    - same molecule, other endpoint (not a match): {o['id']} {o['direction']} ({o['scope']}; "
                                  f"{o['reading_depth']}) - locator {o['locator']}")

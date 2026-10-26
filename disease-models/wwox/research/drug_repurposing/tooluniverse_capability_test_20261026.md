@@ -21,7 +21,7 @@ Asked for 100 results per set in `opposite` mode: S1, S0 (random expressed genes
 Overlap of the returned signature ids: S1 with S0 0, with S1P 1, with S1P2 5, S0 with the shuffles 0.
 
 ## What it gives, and what it loses
-- **Gives:** a direction-sensitive readout where SigCom returned nothing. In the original library S1 yields 7 opposite-direction signatures at q < 0.05, all in oncology-derived lines (HCC515, MCF7, SKB, HA1E, PC3), 6-24 h, and the same-gene, shuffled-direction controls yield none; this is the control that the SigCom run could not supply (its shuffles returned an empty ranking). It is the same LINCS data lineage, so it is **not an independent vote** on the biology, only on the query's behaviour; and it does not reproduce SigCom's list (of the 48 distinct perturbagen codes returned for S1, only 3 have a name in the SigCom metadata I hold, and 2 of those are among SigCom's S1 top-100 reversers, one of them itself a BRD code).
+- **Gives:** a direction-sensitive readout where SigCom returned nothing. In the original library S1 yields 7 opposite-direction signatures at q < 0.05, in HCC515, MCF7, SKB and PC3 (cancer-derived lines) and in HA1E (two of the seven; a non-cancer line), 6-24 h, and the same-gene, shuffled-direction controls yield none; this is the control that the SigCom run could not supply (its shuffles returned an empty ranking). It is the same LINCS data lineage, so it is **not an independent vote** on the biology, only on the query's behaviour; and it does not reproduce SigCom's list (of the 48 distinct perturbagen codes returned for S1, only 3 have a name in the SigCom metadata I hold, and 2 of those are among SigCom's S1 top-100 reversers, one of them itself a BRD code).
 - **Loses / hides:** (a) **truncation**: 100 requested, 50 returned, for every set, with no total and no flag (the call's own `n_results` field echoes the 50 that came back); (b) **no compound name**: the signature id carries a BRD code, batch, cell line, time and dose, so mapping to a compound needs a second source; (c) **no tissue or disease field**; (d) one summary score per hit (combined score, p, q, z), with no per-gene or per-arm breakdown.
 - **Cost saved:** no adapter written for this service; the discovery and one working call cost two short scripts. Cost added: an isolated environment of about 489 MB and 111 packages, kept out of the repository; the repository would still need the isolated-environment step to repeat this.
 
@@ -30,7 +30,7 @@ For this capability and this query: ToolUniverse supplies a working, key-less se
 Not tested: the CLUE route (absent from this version), `LINCS_search_signatures` (compound census, overlaps the iLINCS adapter), any of the other 2700 tools.
 
 ## Claims a verifier should check
-1. The scan found 8 matching names and no CLUE tool in 1.5.7 (`tooluniverse` 1.5.7, `all_tool_dict`).
+1. The scan found 8 matching names and no CLUE tool in 1.5.7; the listing is stored: command `<isolated venv>/bin/python -I gse156243/tooluniverse_tool_name_scan.py`, output `gse156243/tool_responses/tooluniverse_1.5.7_tool_name_scan.txt` (re-run 2026-10-26 in the same environment).
 2. For all four sets 100 results were requested and 50 returned, in the stored raw file.
 3. S1 has 7 results with q < 0.05; S0, S1P and S1P2 have none; no `MCLF` string in any returned signature id.
 4. The signature ids carry no compound name (BRD codes only).
