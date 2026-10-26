@@ -61,3 +61,12 @@ salubrinal. SUPPORTED.
 5. Explorer wording: "no HTTP response on a second day" is what I observed; keep "service state may change".
 
 Cleanup: scratch files (shards, KG-node shards, PrimeKG files, lists) remain only in the session scratchpad outside the repository; nothing from the scores table was committed.
+
+
+## Erratum (Orchestrator, 2026-10-27)
+
+The finding that the TxGNN note's source `kg_grouped_diseases.csv` "does not exist" at the pinned
+commit is itself wrong: `txgnn/data_splits/kg_grouped_diseases.csv` is present at commit
+0e0203c3939f (HTTP 200 on the raw file; the GitHub contents listing for that directory names it
+and `kg_grouped_diseases_bert_map.csv`). The producer's reading stands; the WRONG_SOURCE verdict
+for claim 4 is withdrawn. The Dataverse `.tab` remains an equivalent second source.
