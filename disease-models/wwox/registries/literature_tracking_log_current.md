@@ -13066,7 +13066,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Report mentions:** `research/intake_wave_20261003w4_B.md` · `CC-20261003W4-B-REGISTRY-01`
 **Next action:** none owed — figure panels and supplements still owed for a complete read
 **Evidence depth:** `partial_fulltext_read` — registry landing [[paper_registry_current#PAPER 158]]
-**Note:** The only source in the corpus that moves WWOX in **both** directions in the same model, with re-supply as a modest endogenous up-regulation (about 2× mRNA). The HIF1α-homologue reporter does **not** move — a direct negative on the WWOX/HIF1A axis in this system.
+**Note:** The only source in the corpus that moves WWOX in **both** directions in the same model, with re-supply as a modest endogenous up-regulation (about 2× mRNA). The HIF1α-homologue reporter does **not** move — a direct negative on the WWOX/HIF1A axis in this system. 🔵 **Published version, 2026-10-26:** the peer-reviewed article is the separate record [[literature_tracking_log_current#LIT-0838]] (PMID 42909904, `complete_fulltext_read`); the preprint-reading statements on the second RNAi construct and on L-methionine are corrected in [[paper_registry_current#PAPER 158]] by `CC-20261026-SCIENTIST-A-LUCASCLARKE-01`, `BATCH_20261019_018`.
 
 ## LIT-0448
 **Short title:** Fukai 2026 Mol Ther — a compact 410-bp mouse Gad1 promoter (cmGAD67) driving selective AAV expression in inhibitory neurons
@@ -22398,6 +22398,30 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Report mentions:** `research/module_batch_selection_scientist-c_20261023.md`
 **Next action:** none — read and registered
 **Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261023-42661025-01`; manifest `deepdive_manifests/PMID42661025.json`; landing [[paper_registry_current#PAPER 565]]
+**Note:** class-level record. Not medical advice.
+
+---
+## LIT-0838
+**Short title:** Lucas-Clarke 2026 — *Wwox* dose in a *Drosophila* amyloid model, in both directions (**PUBLISHED** article of the preprint `LIT-0447`; a distinct record)
+**Authors:** Lucas-Clarke HJ, Maddison DC, Amadio L, Buhl E, Regnault C, Peters OM, Hodge JJL, Smith GA
+**Year:** 2026
+**Source type:** primary research — *Drosophila melanogaster*, peer reviewed, open access
+**Journal/source:** *Brain Communications* 2026;8(5):fcag385 (advance access 2026-10-09)
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42909904 / PMC13684411 / DOI 10.1093/braincomms/fcag385
+**Date discovered:** 2026-10-26 (operator-supplied typeset PDF; first receipt `FTR-20261026-42909904-01`)
+**Date processed:** 2026-10-26 (`FTR-20261026-42909904-01`)
+**Discovery source:** operator-supplied PDF of the published version of the preprint `LIT-0447`; reader `scientist-a`
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_018`; reading is `complete_fulltext_read`, taken from the receipt, not declared. Not merged with `LIT-0447`.
+**Primary pathway:** P5 — metabolism (pyruvate / UPR)
+**Transferability:** T3 — NOT WWOX-DEE EVIDENCE (a transgenic-amyloid fly model)
+**clinical relevance:** LOW-MODERATE (class of lever, not clinical evidence). Not medical advice.
+**Claim links:** `CLAIM 025` — qualifying only; none founded
+**Working Model impact:** none — no block is redefined; `WM_v7.27` preserved
+**Report mentions:** `research/fulltext_dossiers/PMID42909904.md` · `research/lucas_clarke_2026_corpus_integration_20261026.md` · `CC-20261026-SCIENTIST-A-LUCASCLARKE-01`
+**Next action:** blind locator audit of the narrowing items; MetaboLights MTBLS12344 (pyruvate rows) not retrieved
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261026-42909904-01`; manifest `deepdive_manifests/PMID42909904.json` (104 locators); landing [[paper_registry_current#PAPER 567]]
 **Note:** class-level record. Not medical advice.
 
 ---

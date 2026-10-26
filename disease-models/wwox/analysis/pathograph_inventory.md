@@ -33,11 +33,11 @@ annotations is reported below whatever it happens to be.
 | Edges carrying a declared relation type | 0 |
 | Nodes carrying a biological scale | 0 |
 | Deep-dive manifests read | 590 |
-| …of which bound to at least one claim | 106 |
+| …of which bound to at least one claim | 107 |
 | Propositions scanned | 9454 |
 | …carrying a relational connective | 1974 |
 | …locator-backed candidates | 1934 |
-| …locator-backed and bound to a claim | 421 |
+| …locator-backed and bound to a claim | 455 |
 
 The scanned population is three declared surfaces and no others: every claim
 `Title`, every row of the working model's BLOCK 2 mirror, and every
@@ -74,7 +74,7 @@ regex sweep of one would produce fragments wearing an extraction's authority.
 | CLAIM 022 | Severe WWOX-null phenotypes can begin prenatally and may include detectable fetal brain abnormal | consolidated baseline | DATO | prenatal developmental architecture / se | NOT_ANNOTATED | 0 | 2 |
 | CLAIM 023 | WWOX controls partner-protein function not only by binding, but by subcellular rerouting that ch | consolidated baseline | DATO | signaling organization / routing / scaff | NOT_ANNOTATED | 0 | 2 |
 | CLAIM 024 | WWOX WW-domain function depends on WW1–WW2 tandem cooperativity, not only on isolated domain int | consolidated baseline | DATO | domain architecture / variant interpreta | NOT_ANNOTATED | 0 | 1 |
-| CLAIM 025 | The WWOX/HIF1A ratio may function as a systems-level marker of maladaptive biological state, lin | in observation | DATO + INFERENZA | P5 — metabolism / state transition / inf | NOT_ANNOTATED | 1 | 2 |
+| CLAIM 025 | The WWOX/HIF1A ratio may function as a systems-level marker of maladaptive biological state, lin | in observation | DATO + INFERENZA | P5 — metabolism / state transition / inf | NOT_ANNOTATED | 1 | 3 |
 | CLAIM 026 | WWOX co-associates with trafficking proteins; its co-purifying partners show metabolic pathway a | in observation | DATO (co-association and pathway annotat | P5 — trafficking / endomembrane systems  | NOT_ANNOTATED | 0 | 3 |
 | CLAIM 027 | WWOX may act as an ECM/membrane-to-nucleus signaling node through HYAL-2/SMAD4 complexes, with c | in observation | INFERENZA | ECM / membrane signaling / injury respon | NOT_ANNOTATED | 0 | 2 |
 | CLAIM 028 | WWOX biological output is strongly partner- and context-dependent; expression level alone is ins | flagged for review | INFERENZA — principio interpretativo tra | cross-pathway interpretive principle | NOT_ANNOTATED | 4 | 6 |
@@ -359,7 +359,7 @@ its sentence is a reading, and this tool does not perform readings.
 | CLAIM 016 | claim_title | `contribute to` | GSK3β hyperactivation may contribute to seizure susceptibility in WWOX deficiency |
 | CLAIM 018 | claim_title | `causes` | The exon 6 splice-site variant c.517-2A>G is pathogenic and causes exon 6 skipping in humans |
 
-Showing 12 of 461 bound candidates; the
+Showing 12 of 495 bound candidates; the
 complete set, with evidence and provenance, is in the export. The worklist
 in cost order — what needs an annotation, what needs a type, what needs a
 decomposition, what needs a reading — is printed by:
@@ -376,6 +376,6 @@ carried no connective from the lexicon.
 ## Provenance
 
 Derived from 593 input files; digest
-`2a510808e2642d63`. Sources: the claim, paper and
+`afd962b66a014674`. Sources: the claim, paper and
 working-model registries, and every deep-dive work manifest.
 
