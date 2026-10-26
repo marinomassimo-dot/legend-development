@@ -1,0 +1,642 @@
+{
+ "page_meta": {
+  "limit": 50,
+  "next": null,
+  "offset": 0,
+  "previous": null,
+  "total_count": 1
+ },
+ "targets": [
+  {
+   "cross_references": [],
+   "organism": "Homo sapiens",
+   "pref_name": "Cyclic AMP-dependent transcription factor ATF-4",
+   "species_group_flag": false,
+   "target_chembl_id": "CHEMBL6067624",
+   "target_components": [
+    {
+     "accession": "P18848",
+     "component_description": "Cyclic AMP-dependent transcription factor ATF-4",
+     "component_id": 24357,
+     "component_type": "PROTEIN",
+     "relationship": "SINGLE PROTEIN",
+     "target_component_synonyms": [
+      {
+       "component_synonym": "Activating transcription factor 4",
+       "syn_type": "UNIPROT"
+      },
+      {
+       "component_synonym": "ATF4",
+       "syn_type": "GENE_SYMBOL"
+      },
+      {
+       "component_synonym": "cAMP-dependent transcription factor ATF-4",
+       "syn_type": "UNIPROT"
+      },
+      {
+       "component_synonym": "cAMP-responsive element-binding protein 2",
+       "syn_type": "UNIPROT"
+      },
+      {
+       "component_synonym": "CREB-2",
+       "syn_type": "UNIPROT"
+      },
+      {
+       "component_synonym": "Cyclic AMP-dependent transcription factor ATF-4",
+       "syn_type": "UNIPROT"
+      },
+      {
+       "component_synonym": "Cyclic AMP-responsive element-binding protein 2",
+       "syn_type": "UNIPROT"
+      },
+      {
+       "component_synonym": "Synonyms=CREB2",
+       "syn_type": "GENE_SYMBOL_OTHER"
+      },
+      {
+       "component_synonym": "TaxREB67",
+       "syn_type": "UNIPROT"
+      },
+      {
+       "component_synonym": "Tax-responsive enhancer element-binding protein 67",
+       "syn_type": "UNIPROT"
+      },
+      {
+       "component_synonym": "TXREB GN  ",
+       "syn_type": "GENE_SYMBOL_OTHER"
+      }
+     ],
+     "target_component_xrefs": [
+      {
+       "xref_id": "P18848",
+       "xref_name": null,
+       "xref_src_db": "AlphaFoldDB"
+      },
+      {
+       "xref_id": "P18848",
+       "xref_name": null,
+       "xref_src_db": "ExpressionAtlas"
+      },
+      {
+       "xref_id": "GO:0000785",
+       "xref_name": "chromatin",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:0005634",
+       "xref_name": "nucleus",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:0005654",
+       "xref_name": "nucleoplasm",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:0005667",
+       "xref_name": "transcription regulator complex",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:0005737",
+       "xref_name": "cytoplasm",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:0005739",
+       "xref_name": "mitochondrion",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:0005813",
+       "xref_name": "centrosome",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:0005829",
+       "xref_name": "cytosol",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:0005856",
+       "xref_name": "cytoskeleton",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:0005886",
+       "xref_name": "plasma membrane",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:0016020",
+       "xref_name": "membrane",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:0016607",
+       "xref_name": "nuclear speck",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:0032590",
+       "xref_name": "dendrite membrane",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:0032991",
+       "xref_name": "protein-containing complex",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:0034399",
+       "xref_name": "nuclear periphery",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:0043005",
+       "xref_name": "neuron projection",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:0090575",
+       "xref_name": "RNA polymerase II transcription regulator complex",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:1990037",
+       "xref_name": "Lewy body core",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:1990589",
+       "xref_name": "ATF4-CREB1 transcription factor complex",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:1990590",
+       "xref_name": "ATF1-ATF4 transcription factor complex",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:1990617",
+       "xref_name": "CHOP-ATF4 complex",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:0000976",
+       "xref_name": "transcription cis-regulatory region binding",
+       "xref_src_db": "GoFunction"
+      },
+      {
+       "xref_id": "GO:0000977",
+       "xref_name": "RNA polymerase II transcription regulatory region sequence-specific DNA binding",
+       "xref_src_db": "GoFunction"
+      },
+      {
+       "xref_id": "GO:0000978",
+       "xref_name": "RNA polymerase II cis-regulatory region sequence-specific DNA binding",
+       "xref_src_db": "GoFunction"
+      },
+      {
+       "xref_id": "GO:0000981",
+       "xref_name": "DNA-binding transcription factor activity, RNA polymerase II-specific",
+       "xref_src_db": "GoFunction"
+      },
+      {
+       "xref_id": "GO:0001228",
+       "xref_name": "DNA-binding transcription activator activity, RNA polymerase II-specific",
+       "xref_src_db": "GoFunction"
+      },
+      {
+       "xref_id": "GO:0003677",
+       "xref_name": "DNA binding",
+       "xref_src_db": "GoFunction"
+      },
+      {
+       "xref_id": "GO:0003700",
+       "xref_name": "DNA-binding transcription factor activity",
+       "xref_src_db": "GoFunction"
+      },
+      {
+       "xref_id": "GO:0005515",
+       "xref_name": "protein binding",
+       "xref_src_db": "GoFunction"
+      },
+      {
+       "xref_id": "GO:0008140",
+       "xref_name": "cAMP response element binding protein binding",
+       "xref_src_db": "GoFunction"
+      },
+      {
+       "xref_id": "GO:0019901",
+       "xref_name": "protein kinase binding",
+       "xref_src_db": "GoFunction"
+      },
+      {
+       "xref_id": "GO:0042802",
+       "xref_name": "identical protein binding",
+       "xref_src_db": "GoFunction"
+      },
+      {
+       "xref_id": "GO:0043522",
+       "xref_name": "leucine zipper domain binding",
+       "xref_src_db": "GoFunction"
+      },
+      {
+       "xref_id": "GO:0043565",
+       "xref_name": "sequence-specific DNA binding",
+       "xref_src_db": "GoFunction"
+      },
+      {
+       "xref_id": "GO:0046982",
+       "xref_name": "protein heterodimerization activity",
+       "xref_src_db": "GoFunction"
+      },
+      {
+       "xref_id": "GO:0061629",
+       "xref_name": "RNA polymerase II-specific DNA-binding transcription factor binding",
+       "xref_src_db": "GoFunction"
+      },
+      {
+       "xref_id": "GO:0140296",
+       "xref_name": "general transcription initiation factor binding",
+       "xref_src_db": "GoFunction"
+      },
+      {
+       "xref_id": "GO:0140297",
+       "xref_name": "DNA-binding transcription factor binding",
+       "xref_src_db": "GoFunction"
+      },
+      {
+       "xref_id": "GO:1990837",
+       "xref_name": "sequence-specific double-stranded DNA binding",
+       "xref_src_db": "GoFunction"
+      },
+      {
+       "xref_id": "GO:1990841",
+       "xref_name": "promoter-specific chromatin binding",
+       "xref_src_db": "GoFunction"
+      },
+      {
+       "xref_id": "GO:0000122",
+       "xref_name": "negative regulation of transcription by RNA polymerase II",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0006094",
+       "xref_name": "gluconeogenesis",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0006355",
+       "xref_name": "regulation of DNA-templated transcription",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0006357",
+       "xref_name": "regulation of transcription by RNA polymerase II",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0006366",
+       "xref_name": "transcription by RNA polymerase II",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0006874",
+       "xref_name": "intracellular calcium ion homeostasis",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0007214",
+       "xref_name": "gamma-aminobutyric acid signaling pathway",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0007623",
+       "xref_name": "circadian rhythm",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0009636",
+       "xref_name": "response to toxic substance",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0010575",
+       "xref_name": "positive regulation of vascular endothelial growth factor production",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0010628",
+       "xref_name": "positive regulation of gene expression",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0030182",
+       "xref_name": "neuron differentiation",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0030282",
+       "xref_name": "bone mineralization",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0030968",
+       "xref_name": "endoplasmic reticulum unfolded protein response",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0031667",
+       "xref_name": "response to nutrient levels",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0032057",
+       "xref_name": "negative regulation of translational initiation in response to stress",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0032922",
+       "xref_name": "circadian regulation of gene expression",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0034198",
+       "xref_name": "cellular response to amino acid starvation",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0034599",
+       "xref_name": "cellular response to oxidative stress",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0034644",
+       "xref_name": "cellular response to UV",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0034976",
+       "xref_name": "response to endoplasmic reticulum stress",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0035162",
+       "xref_name": "embryonic hemopoiesis",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0036499",
+       "xref_name": "PERK-mediated unfolded protein response",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0042149",
+       "xref_name": "cellular response to glucose starvation",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0042789",
+       "xref_name": "mRNA transcription by RNA polymerase II",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0042981",
+       "xref_name": "regulation of apoptotic process",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0043065",
+       "xref_name": "positive regulation of apoptotic process",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0043267",
+       "xref_name": "negative regulation of potassium ion transport",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0043525",
+       "xref_name": "positive regulation of neuron apoptotic process",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0045667",
+       "xref_name": "regulation of osteoblast differentiation",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0045893",
+       "xref_name": "positive regulation of DNA-templated transcription",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0045943",
+       "xref_name": "positive regulation of transcription by RNA polymerase I",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0045944",
+       "xref_name": "positive regulation of transcription by RNA polymerase II",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0048167",
+       "xref_name": "regulation of synaptic plasticity",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0048511",
+       "xref_name": "rhythmic process",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0070059",
+       "xref_name": "intrinsic apoptotic signaling pathway in response to endoplasmic reticulum stress",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0070169",
+       "xref_name": "positive regulation of biomineral tissue development",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0070309",
+       "xref_name": "lens fiber cell morphogenesis",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0070982",
+       "xref_name": "L-asparagine metabolic process",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0071456",
+       "xref_name": "cellular response to hypoxia",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0097250",
+       "xref_name": "mitochondrial respirasome assembly",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0120163",
+       "xref_name": "negative regulation of cold-induced thermogenesis",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0140467",
+       "xref_name": "integrated stress response signaling",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0140468",
+       "xref_name": "HRI-mediated signaling",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0160144",
+       "xref_name": "GDF15-GFRAL signaling pathway",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:1903377",
+       "xref_name": "negative regulation of oxidative stress-induced neuron intrinsic apoptotic signaling pathway",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:1905461",
+       "xref_name": "positive regulation of vascular associated smooth muscle cell apoptotic process",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:1990253",
+       "xref_name": "cellular response to leucine starvation",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:1990737",
+       "xref_name": "response to manganese-induced endoplasmic reticulum stress",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:2000120",
+       "xref_name": "positive regulation of sodium-dependent phosphate transport",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "HGNC:786",
+       "xref_name": "ATF4",
+       "xref_src_db": "HGNC"
+      },
+      {
+       "xref_id": "P18848",
+       "xref_name": null,
+       "xref_src_db": "IntAct"
+      },
+      {
+       "xref_id": "IPR004827",
+       "xref_name": "bZIP",
+       "xref_src_db": "InterPro"
+      },
+      {
+       "xref_id": "IPR046347",
+       "xref_name": "bZIP_sf",
+       "xref_src_db": "InterPro"
+      },
+      {
+       "xref_id": "PTHR13044",
+       "xref_name": "ACTIVATING TRANSCRIPTION FACTOR ATF 4/5",
+       "xref_src_db": "PANTHER"
+      },
+      {
+       "xref_id": "PTHR13044:SF2",
+       "xref_name": "CYCLIC AMP-DEPENDENT TRANSCRIPTION FACTOR ATF-4",
+       "xref_src_db": "PANTHER"
+      },
+      {
+       "xref_id": "1CI6",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "1CI6",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "PF00170",
+       "xref_name": "bZIP_1",
+       "xref_src_db": "Pfam"
+      },
+      {
+       "xref_id": "PA25086",
+       "xref_name": "activating transcription factor 4",
+       "xref_src_db": "PharmGKB"
+      },
+      {
+       "xref_id": "P18848",
+       "xref_name": null,
+       "xref_src_db": "Pharos"
+      },
+      {
+       "xref_id": "R-HSA-380994",
+       "xref_name": "ATF4 activates genes in response to endoplasmic reticulum stress",
+       "xref_src_db": "Reactome"
+      },
+      {
+       "xref_id": "R-HSA-381042",
+       "xref_name": "PERK regulates gene expression",
+       "xref_src_db": "Reactome"
+      },
+      {
+       "xref_id": "R-HSA-381183",
+       "xref_name": "ATF6 (ATF6-alpha) activates chaperone genes",
+       "xref_src_db": "Reactome"
+      },
+      {
+       "xref_id": "R-HSA-9633012",
+       "xref_name": "Response of EIF2AK4 (GCN2) to amino acid deficiency",
+       "xref_src_db": "Reactome"
+      },
+      {
+       "xref_id": "R-HSA-9648895",
+       "xref_name": "Response of EIF2AK1 (HRI) to heme deficiency",
+       "xref_src_db": "Reactome"
+      },
+      {
+       "xref_id": "R-HSA-9818027",
+       "xref_name": "NFE2L2 regulating anti-oxidant/detoxification enzymes",
+       "xref_src_db": "Reactome"
+      },
+      {
+       "xref_id": "R-HSA-9818035",
+       "xref_name": "NFE2L2 regulating ER-stress associated genes",
+       "xref_src_db": "Reactome"
+      },
+      {
+       "xref_id": "P18848",
+       "xref_name": "Cyclic AMP-dependent transcription factor ATF-4",
+       "xref_src_db": "UniProt"
+      },
+      {
+       "xref_id": "Q96AQ3",
+       "xref_name": "Cyclic AMP-dependent transcription factor ATF-4",
+       "xref_src_db": "UniProt"
+      },
+      {
+       "xref_id": "Q9UH31",
+       "xref_name": "Cyclic AMP-dependent transcription factor ATF-4",
+       "xref_src_db": "UniProt"
+      }
+     ]
+    }
+   ],
+   "target_type": "SINGLE PROTEIN",
+   "tax_id": 9606
+  }
+ ]
+}

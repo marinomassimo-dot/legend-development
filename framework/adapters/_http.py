@@ -38,7 +38,7 @@ def get_json(url: str, params: dict | None = None, body: dict | None = None,
     except urllib.error.HTTPError as exc:
         status = exc.code
         text = exc.read().decode("utf-8", errors="replace") if exc.fp else ""
-    except (urllib.error.URLError, TimeoutError, OSError) as exc:
+    except (urllib.error.URLError, TimeoutError, OSError, ValueError) as exc:  # ValueError covers http.client.InvalidURL
         return 0, f"{type(exc).__name__}: {exc}"
     try:
         return status, json.loads(text) if text.strip() else {}

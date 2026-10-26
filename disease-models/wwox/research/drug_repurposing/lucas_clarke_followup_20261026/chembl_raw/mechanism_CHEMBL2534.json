@@ -1,0 +1,71 @@
+{
+ "mechanisms": [
+  {
+   "action_type": "INHIBITOR",
+   "binding_site_comment": null,
+   "direct_interaction": 1,
+   "disease_efficacy": 1,
+   "max_phase": 1,
+   "mec_id": 4111,
+   "mechanism_comment": null,
+   "mechanism_of_action": "3-phosphoinositide dependent protein kinase-1 inhibitor",
+   "mechanism_refs": [
+    {
+     "ref_id": "15205346",
+     "ref_type": "PubMed",
+     "ref_url": "http://europepmc.org/abstract/MED/15205346"
+    }
+   ],
+   "molecular_mechanism": 1,
+   "molecule_chembl_id": "CHEMBL1650595",
+   "parent_molecule_chembl_id": "CHEMBL1650595",
+   "record_id": 2472919,
+   "selectivity_comment": null,
+   "site_id": null,
+   "target_chembl_id": "CHEMBL2534",
+   "variant_sequence": null
+  },
+  {
+   "action_type": "INHIBITOR",
+   "binding_site_comment": null,
+   "direct_interaction": 1,
+   "disease_efficacy": 1,
+   "max_phase": 2,
+   "mec_id": 4840,
+   "mechanism_comment": null,
+   "mechanism_of_action": "3-phosphoinositide dependent protein kinase-1 inhibitor",
+   "mechanism_refs": [
+    {
+     "ref_id": "http://www.guidetopharmacology.org/GRAC/LigandDisplayForward?ligandId=7907",
+     "ref_type": "Other",
+     "ref_url": "http://www.guidetopharmacology.org/GRAC/LigandDisplayForward?ligandId=7907"
+    },
+    {
+     "ref_id": "12892559",
+     "ref_type": "PubMed",
+     "ref_url": "http://europepmc.org/abstract/MED/12892559"
+    },
+    {
+     "ref_id": "19568282",
+     "ref_type": "PubMed",
+     "ref_url": "http://europepmc.org/abstract/MED/19568282"
+    }
+   ],
+   "molecular_mechanism": 1,
+   "molecule_chembl_id": "CHEMBL574737",
+   "parent_molecule_chembl_id": "CHEMBL574737",
+   "record_id": 2473593,
+   "selectivity_comment": null,
+   "site_id": null,
+   "target_chembl_id": "CHEMBL2534",
+   "variant_sequence": null
+  }
+ ],
+ "page_meta": {
+  "limit": 100,
+  "next": null,
+  "offset": 0,
+  "previous": null,
+  "total_count": 2
+ }
+}

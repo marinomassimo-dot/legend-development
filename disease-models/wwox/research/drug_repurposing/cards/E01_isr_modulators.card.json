@@ -1,0 +1,336 @@
+{
+ "schema_version": 1,
+ "input_sha256": "29e72fc8ee696ccd64b60e32d856eee1139defc382b5abd8e17134bc9071a044",
+ "epistemic_status": "IPOTESI",
+ "canonical": false,
+ "assessment": "REQUIRES_QUALIFICATION",
+ "directional_summary": "UNRESOLVED",
+ "comparisons": [
+  {
+   "assertion_id": "DR-E01-001",
+   "status": "UNRESOLVED",
+   "reasons": [
+    "no disease assertion on this target and endpoint"
+   ]
+  },
+  {
+   "assertion_id": "DR-E01-002",
+   "status": "UNRESOLVED",
+   "reasons": [
+    "no disease assertion on this target and endpoint"
+   ]
+  },
+  {
+   "assertion_id": "DR-E01-003",
+   "status": "UNRESOLVED",
+   "reasons": [
+    "no disease assertion on this target and endpoint"
+   ]
+  },
+  {
+   "assertion_id": "DR-E01-004",
+   "status": "UNRESOLVED",
+   "reasons": [
+    "no disease assertion on this target and endpoint"
+   ]
+  }
+ ],
+ "abstention": null,
+ "label_lookup": {
+  "status": "NOT_ATTEMPTED",
+  "coverage": "UNKNOWN",
+  "method": "UNKNOWN",
+  "queries": [],
+  "source": "UNKNOWN",
+  "retrieved_at": "UNKNOWN",
+  "client_version": "UNKNOWN",
+  "product_name": "UNKNOWN",
+  "active_ingredient": "UNKNOWN",
+  "formulation": "UNKNOWN",
+  "spl_id": "UNKNOWN",
+  "error": "UNKNOWN",
+  "coverage_limit": "UNKNOWN"
+ },
+ "p4_fields": {
+  "endpoint_pursued": "A WWOX-linked ISR readout that a compound moves: ATF4 protein and eIF2 alpha phosphorylation (and ATF4-target transcripts) in WWOX-deficient human neural cells at matched maturity, with and without a defined proteotoxic challenge; then a functional endpoint (network, synaptic or myelin) after eIF2B activation.",
+  "functional_evidence_available": "None for WWOX. In the fly, Atf4 signal rises only with Wwox reduction plus amyloid and Atf4 is never perturbed. In the one human knockout transcriptome the ISR target set is lower than chance (exploratory).",
+  "temporal_or_model_limit": "Fly amyloid model with partial RNAi; one human knockout transcriptome without amyloid; every compound datum is from another disease, mostly adult.",
+  "cellular_context": {
+   "target_expression": "ISR genes are expressed in neural tissue generally; the WWOX-dependent state is UNKNOWN.",
+   "cells_tissue_stage": "fly neurons (Atf4 signal, whole-mount) and bulk organoid RNA; no cell-type resolution in either.",
+   "coverage": "UNKNOWN for any WWOX system at protein level.",
+   "limits": "The only signed human readout points the opposite way from the fly (ISR targets lower), and the fly readout needs amyloid."
+  }
+ },
+ "input": {
+  "schema_version": 1,
+  "axis": "E / Lucas-Clarke follow-up: integrated stress response",
+  "route": "BENEFICIO_PRECOCE",
+  "mission_dimensions": {
+   "track": "A",
+   "track_definition": "mission.md section 5: Track A = variant-independent WWOX loss of function; Track B = variant or allele-class specific (e.g. the Q230P missense class); Track C = repurposing, which is a method of reaching A or B, not a third lesion class",
+   "route": "BENEFICIO_PRECOCE",
+   "route_definition": "RECUPERO_PROFONDO = deep recovery of the lost function; BENEFICIO_PRECOCE = concrete partial benefit, symptomatic control or protection of function, with paediatric feasibility and time in view",
+   "route_note": "Downstream of an unresolved lesion: even a correct ISR readout would change a consequence, not restore WWOX function. Deep recovery would need WWOX restored (card C01). Track B (Q230P class): whether the missing mutant protein state engages the ISR is not measured; nothing here is lesion-specific.",
+   "the_two_dimensions_are_independent": "a card keeps both: a variant-independent lever can be a partial-benefit lever, and a lesion-specific one can aim at deep recovery"
+  },
+  "candidate": {
+   "id": "P4-E-01",
+   "name": "Integrated-stress-response modulators (eIF2B activators of the ISRIB class, PERK-arm inhibitors, repurposed translational-repression reversers)"
+  },
+  "disease_assertions": [
+   {
+    "id": "DA-LC-ATF4-001",
+    "target_id": "fly Atf4 protein signal (immunofluorescence, brain)",
+    "endpoint": "Atf4 fluorescence intensity",
+    "direction": "INCREASE",
+    "source": "PAPER 567 (published Lucas-Clarke 2026 article; Drosophila Alzheimer's-amyloid model; NOT WWOX EVIDENCE: a fly amyloid model, not WWOX-DEE)",
+    "locator": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json verbatim_locators.entries[57], [59]; Fig 5H-I",
+    "epistemic_status": "DATO",
+    "reading_depth": "complete_fulltext_read",
+    "context": {
+     "disease_id": "Drosophila model of Alzheimer's amyloid pathology (not WWOX-DEE)",
+     "genotype": "neuronal Wwox RNAi plus neuronal Abeta42 (Arctic) versus control RNAi plus Abeta42",
+     "species": "Drosophila melanogaster",
+     "cell_type": "adult fly head or brain (whole head for metabolomics and RNA-seq)",
+     "developmental_stage": "adult, day 14 for omics and Atf4 imaging"
+    },
+    "measured_result_note": "About 1.0 to about 1.2-1.3 normalised, n 6 brains, one antibody, four small regions of interest, y axis not at zero. Correlational. Atf4 is never knocked down or activated in the paper; PERK and eIF2 alpha phosphorylation are not measured.",
+    "receipt": "FTR-20261026-42909904-01"
+   },
+   {
+    "id": "DA-LC-ATF4-002",
+    "target_id": "fly Atf4 protein signal (immunofluorescence, brain)",
+    "endpoint": "Atf4 fluorescence intensity",
+    "direction": "NO_CHANGE",
+    "source": "PAPER 567 (published Lucas-Clarke 2026 article; Drosophila Alzheimer's-amyloid model; NOT WWOX EVIDENCE: a fly amyloid model, not WWOX-DEE)",
+    "locator": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json verbatim_locators.entries[58]; Supplementary Fig 5E",
+    "epistemic_status": "DATO",
+    "reading_depth": "complete_fulltext_read",
+    "context": {
+     "disease_id": "Drosophila model of Alzheimer's amyloid pathology (not WWOX-DEE)",
+     "genotype": "neuronal Wwox RNAi versus control RNAi in a LacZ (no amyloid) background",
+     "species": "Drosophila melanogaster",
+     "cell_type": "adult fly head or brain (whole head for metabolomics and RNA-seq)",
+     "developmental_stage": "adult, day 14 for omics and Atf4 imaging"
+    },
+    "measured_result_note": "No change without amyloid (t 0.0894, P 0.9305, n 6 brains). A measured null in a different contrast, not an unmeasured cell.",
+    "receipt": "FTR-20261026-42909904-01"
+   },
+   {
+    "id": "DA-GSE-ISR-003",
+    "target_id": "ATF4 / integrated-stress-response canonical target transcripts (12 genes, declared before the set test)",
+    "endpoint": "set-level transcript shift, knockout minus wild type",
+    "direction": "DECREASE",
+    "source": "GSE156243, the deposit of the 2021 organoid paper (PMID 34268881); exploratory set-level analysis by scientist-c",
+    "locator": "disease-models/wwox/research/drug_repurposing/gse156243/prediction_isr_ldh_chain_20261026.md, RESULT table",
+    "epistemic_status": "INFERENZA",
+    "reading_depth": "queried_not_full_read",
+    "context": {
+     "disease_id": "WWOX-deficient human cerebral organoid model (engineered knockout; NOT a patient allele; no amyloid)",
+     "genotype": "WWOX knockout versus wild type (4 versus 2 libraries, one laboratory)",
+     "species": "human",
+     "cell_type": "cerebral organoid, bulk RNA",
+     "developmental_stage": "organoid, culture week 15"
+    },
+    "measured_result_note": "Mean shift lower than 10,000 random same-size sets (P 0.0005); the gene-level direction of three genes had been seen before the sets were fixed; nine set tests across two analyses, none corrected for multiplicity; six libraries, genotype and composition confounded. Transcripts cannot see eIF2 alpha phosphorylation or ATF4 protein. EXPLORATORY NEGATIVE for the transcript signature without amyloid; not evidence that the ISR is normal."
+   }
+  ],
+  "drug_assertions": [
+   {
+    "id": "DR-E01-001",
+    "target_id": "ISR biomarkers (blood cells and cerebrospinal fluid)",
+    "endpoint": "ISR biomarker output under an eIF2B activator",
+    "direction": "DECREASE",
+    "source": "Nat Commun 2025 phase 1b abstract, PMID 40825784; NOT WWOX EVIDENCE",
+    "locator": "PubMed abstract (DOI 10.1038/s41467-025-63031-y)",
+    "epistemic_status": "DATO",
+    "reading_depth": "abstract_only",
+    "context": {
+     "disease_id": "amyotrophic lateral sclerosis (not WWOX)",
+     "genotype": "sporadic and familial ALS, not WWOX",
+     "species": "human",
+     "cell_type": "peripheral blood mononuclear cells and CSF",
+     "developmental_stage": "adult"
+    },
+    "measured_result_note": "Target engagement shown for DNL343, a brain-penetrant eIF2B activator."
+   },
+   {
+    "id": "DR-E01-002",
+    "target_id": "ALS functional rating and survival (joint model)",
+    "endpoint": "disease rate ratio relative to placebo",
+    "direction": "NO_CHANGE",
+    "source": "JAMA Netw Open 2026 randomised trial abstract, PMID 42771346; NOT WWOX EVIDENCE",
+    "locator": "PubMed abstract (DOI 10.1001/jamanetworkopen.2026.34809)",
+    "epistemic_status": "DATO",
+    "reading_depth": "abstract_only",
+    "context": {
+     "disease_id": "amyotrophic lateral sclerosis (not WWOX)",
+     "genotype": "sporadic and familial ALS, not WWOX",
+     "species": "human",
+     "cell_type": "whole organism, clinical endpoint",
+     "developmental_stage": "adult"
+    },
+    "measured_result_note": "Ratio 1.04 (95 percent credible interval 0.83 to 1.32) over a 24-week placebo-controlled period: no benefit despite target engagement and proof of mechanism in the earlier phase. Adults with ALS; says nothing about a developmental encephalopathy."
+   },
+   {
+    "id": "DR-E01-003",
+    "target_id": "object-recognition memory, microglial activation, tau and amyloid burden",
+    "endpoint": "recognition memory under an eIF2B activator (2BAct)",
+    "direction": "INCREASE",
+    "source": "J Alzheimers Dis 2026 abstract, PMID 42179084; NOT WWOX EVIDENCE",
+    "locator": "PubMed abstract (DOI 10.1177/13872877261450638)",
+    "epistemic_status": "DATO",
+    "reading_depth": "abstract_only",
+    "context": {
+     "disease_id": "5xFAD mouse model of Alzheimer's disease (not WWOX)",
+     "genotype": "5xFAD transgenic",
+     "species": "mouse",
+     "cell_type": "whole animal behaviour",
+     "developmental_stage": "ten-month-old adult"
+    },
+    "measured_result_note": "Better recognition memory and less microglial activation and tau; amyloid burden not reduced; p-eIF2 alpha lower. Mouse, adult, 23 days, one study."
+   },
+   {
+    "id": "DR-E01-004",
+    "target_id": "time to loss of walking with support in vanishing white matter (an eIF2B disease)",
+    "endpoint": "hazard of loss of walking under guanabenz",
+    "direction": "DECREASE",
+    "source": "Lancet Neurol 2026 single-arm phase 1/2 abstract, PMID 42586097; NOT WWOX EVIDENCE",
+    "locator": "PubMed abstract (DOI 10.1016/S1474-4422(26)00241-3)",
+    "epistemic_status": "DATO",
+    "reading_depth": "abstract_only",
+    "context": {
+     "disease_id": "vanishing white matter (eIF2B lesion, not WWOX)",
+     "genotype": "biallelic EIF2B variants, not WWOX",
+     "species": "human",
+     "cell_type": "whole organism, clinical endpoint",
+     "developmental_stage": "children, onset at six years or younger"
+    },
+    "measured_result_note": "Hazard ratio 0.33 (0.16 to 0.69) against matched registry controls, non-randomised; serious adverse events in three quarters of 33 children, hallucinations in over half, severe constipation in three. A paediatric tolerability dataset in a disease whose lesion IS the ISR regulator."
+   }
+  ],
+  "p4_fields": {
+   "endpoint_pursued": "A WWOX-linked ISR readout that a compound moves: ATF4 protein and eIF2 alpha phosphorylation (and ATF4-target transcripts) in WWOX-deficient human neural cells at matched maturity, with and without a defined proteotoxic challenge; then a functional endpoint (network, synaptic or myelin) after eIF2B activation.",
+   "functional_evidence_available": "None for WWOX. In the fly, Atf4 signal rises only with Wwox reduction plus amyloid and Atf4 is never perturbed. In the one human knockout transcriptome the ISR target set is lower than chance (exploratory).",
+   "temporal_or_model_limit": "Fly amyloid model with partial RNAi; one human knockout transcriptome without amyloid; every compound datum is from another disease, mostly adult.",
+   "cellular_context": {
+    "target_expression": "ISR genes are expressed in neural tissue generally; the WWOX-dependent state is UNKNOWN.",
+    "cells_tissue_stage": "fly neurons (Atf4 signal, whole-mount) and bulk organoid RNA; no cell-type resolution in either.",
+    "coverage": "UNKNOWN for any WWOX system at protein level.",
+    "limits": "The only signed human readout points the opposite way from the fly (ISR targets lower), and the fly readout needs amyloid."
+   }
+  },
+  "p4_card": {
+   "identity": "ISR attenuators: eIF2B activators (ISRIB and its clinical-stage successors), PERK-arm inhibitors, and repurposed compounds that reverse eIF2 alpha-P-mediated translational repression; guanabenz as the paediatric-experience member. Full per-compound table: lucas_clarke_followup_20261026/compounds_and_sources.md section 2.1.",
+   "indication_and_transfer": "WWOX-DEE only IF a WWOX-dependent ISR elevation is shown in a human neural system. Today the transfer rests on a fly amyloid model; the one human knockout transcriptome does not show the signature. No Q230P or null-allele datum exists.",
+   "novelty_for_woree": "NON_TROVATO_NELLA_RICERCA as a test: no source retrieved links an ISR modulator to WWOX deficiency; coverage is DGIdb, ChEMBL, Open Targets, PubTator 3 gene censuses and eight PubMed searches on 2026-10-26, and DGIdb, ChEMBL and Open Targets are themselves empty for the eIF2B activators. A zero is a statement about those queries.",
+   "state_of_known_roads": "not in the earlier hand-made series (A-D); first ISR card.",
+   "pathway_and_objective": "BENEFICIO_PRECOCE (partial benefit through a downstream lever); Track A (variant-independent), Track B conditional and unmeasured.",
+   "expected_contribution": "UNKNOWN. If the ISR were elevated and harmful, attenuation could protect function; if it is adaptive, attenuation could add harm. Neither is measured for WWOX.",
+   "mechanism": "Target: eIF2B (five-subunit complex, EIF2B1-5, HGNC:3257-3261) or the PERK arm (EIF2AK3, HGNC:3255); direction: attenuate the ISR; context: amyloid-stressed fly neurons in the paper; UNKNOWN in WWOX-DEE.",
+   "sources": {
+    "internal": [
+     "PAPER 567",
+     "CLAIM 025",
+     "DL-MECH-020",
+     "gse156243/prediction_isr_ldh_chain_20261026.md",
+     "lucas_clarke_followup_20261026/biological_needs.md S1"
+    ],
+    "external_not_wwox_evidence": [
+     "eIF2B-activator trial in ALS: target engaged, no clinical benefit (adults)",
+     "eIF2B activator in a mouse amyloid model: memory and tau improved, amyloid not",
+     "guanabenz in children with vanishing white matter: non-randomised benefit with frequent adverse events",
+     "PERK inhibitor in a Parkinson mouse model: neuroprotection with signs of pancreatic toxicity"
+    ]
+   },
+   "evidence_for_and_against": {
+    "for": [
+     "The fly reports a raised Atf4 signal with Wwox reduction plus amyloid (n 6, one antibody).",
+     "An eIF2B activator improved memory and tau in a mouse amyloid model.",
+     "A paediatric dataset for an ISR-attenuating drug exists in a different, eIF2B-driven disease."
+    ],
+    "against": [
+     "Without amyloid the fly Atf4 signal does not change.",
+     "In the human knockout organoid the ATF4/ISR target transcripts are lower than chance (exploratory, no amyloid).",
+     "The ALS trial engaged the target and showed no benefit.",
+     "Atf4 is not perturbed in the paper: the Atf4-to-Ldh step is the authors' inference.",
+     "The paper reports that Ldh knockdown is detrimental in other fly amyloid models, a reminder that attenuating a stress arm has a cost."
+    ],
+    "transfer_limits": "Amyloid load is the context of the fly effect; WWOX-DEE has no stated amyloid load. Adult neurodegeneration trials do not transfer to a developmental encephalopathy."
+   },
+   "time_to_access": "UNKNOWN. Compounds range from research tools to clinical-stage; availability for WWOX research is not assessed.",
+   "time_to_benefit": "UNKNOWN.",
+   "pharmacology": "Per compound in compounds_and_sources.md: no eIF2B activity in ChEMBL for ISRIB or fosigotifator; DGIdb and Open Targets empty for the eIF2B complex; PERK inhibitors have enzyme potency in ChEMBL.",
+   "paediatrics_and_interactions": "UNKNOWN. No paediatric suitability is presumed by this card, for the candidate or for any historical authorisation of it for another use.",
+   "scope_of_checks": {
+    "support_and_replication": "No independent replication of any fly row is held; the organoid rows are one laboratory's deposit.",
+    "formal_checks": "Disease-side fly rows carry verbatim locators in the manifest (104 entries; entries 31, 49, 89, 94 SUPPORTED by a blind audit, entry 95 narrowed after an OVERSHOOT finding); the compound statements are abstract-level and unaudited.",
+    "card_inferences_owed_audit": "Statements marked INFERENZA, including every statement about what a compound would do in WWOX-deficient tissue, are OWED a blind audit by another actor."
+   },
+   "question_history": [
+    "mandate 2026-10-26 (Lucas-Clarke follow-up)",
+    "prediction_isr_ldh_chain_20261026.md"
+   ],
+   "predictions": "None; no engine, no score.",
+   "next_measurement": "Stage 1 (decides everything after it): eIF2 alpha phosphorylation, ATF4 protein and ATF4-target transcripts in WWOX-deficient versus isogenic human neural cells at matched maturity, with and without a defined proteotoxic challenge. If not elevated, park with the reopening condition below. Stage 2 (only if elevated): an eIF2B activator versus vehicle on that readout and on one functional endpoint. In the fly: an Atf4 loss-of-function arm with the Ldh and lactate readouts.",
+   "status": "hypothesis",
+   "value_added": "Turns 'ATF4 raised' into a context-labelled need (amyloid-conditional, fly) and shows that the only signed human readout points the other way, so the first experiment is the readout, not a drug.",
+   "clinical_census": "Clinical census, ClinicalTrials.gov API v2, 2026-10-20 (drug_repurposing/clinical_census_20261020.md): seven queries returned no registered WOREE interventional study; it answers seven queries against one registry on one date and a missing hit does not prove that no study exists. Not re-run for this card."
+  },
+  "not_known": [
+   "Whether any WWOX-deficient human neural system has raised eIF2 alpha phosphorylation or ATF4 protein, with or without a proteotoxic load.",
+   "Whether the fly Atf4 rise is upstream of Ldh (no Atf4 perturbation in the paper).",
+   "Whether the PERK arm or another eIF2 kinase (the paper's Discussion names GCN1/GCN2) is the one engaged.",
+   "Whether attenuating the ISR would help or harm a WWOX-deficient developing brain."
+  ],
+  "evidence_against": [
+   "The organoid ISR target set is lower than chance (exploratory, uncorrected multiplicity across nine set tests).",
+   "No Atf4 perturbation in the source paper.",
+   "ALS trial: target engagement without benefit."
+  ],
+  "bridge_gaps_exposed": [
+   "The bridge compares fly and organoid rows only where target, endpoint and context match; none match, so the directional summary is UNRESOLVED by construction."
+  ],
+  "translation": {
+   "pediatric_suitability": "UNKNOWN for WWOX; guanabenz paediatric experience exists in vanishing white matter (abstract-level).",
+   "cns_exposure": "UNKNOWN",
+   "interactions": "UNKNOWN",
+   "access": "UNKNOWN",
+   "time_to_benefit": "UNKNOWN",
+   "functional_rescue": "UNKNOWN"
+  },
+  "p4_roadmap_fields": {
+   "indication_and_transfer": "WWOX-DEE only IF a WWOX-dependent ISR elevation is shown in a human neural system. Today the transfer rests on a fly amyloid model; the one human knockout transcriptome does not show the signature. No Q230P or null-allele datum exists.",
+   "verification_scope": "{\"support_and_replication\": \"No independent replication of any fly row is held; the organoid rows are one laboratory's deposit.\", \"formal_checks\": \"Disease-side fly rows carry verbatim locators in the manifest (104 entries; entries 31, 49, 89, 94 SUPPORTED by a blind audit, entry 95 narrowed after an OVERSHOOT finding); the compound statements are abstract-level and unaudited.\", \"card_inferences_owed_audit\": \"Statements marked INFERENZA, including every statement about what a compound would do in WWOX-deficient tissue, are OWED a blind audit by another actor.\"}"
+  },
+  "label_lookup": {
+   "status": "NOT_ATTEMPTED"
+  },
+  "card_conventions": [
+   "IPOTESI throughout; the bridge forces it. No score, rank, probability or blended index is carried.",
+   "directional_summary compares signs only where target, endpoint and every context dimension match; UNRESOLVED is a statement about the record, not about the biology.",
+   "Every disease-side row from the Drosophila article is NOT WWOX-DEE EVIDENCE; the organoid rows are exploratory transcript analyses of one deposit.",
+   "Abstract-level statements from PubMed are labelled abstract_only; none carries a receipt.",
+   "label_lookup is NOT_ATTEMPTED in the bridge: the bridge has no network. The openFDA adapter was run separately and is recorded in lucas_clarke_followup_20261026/compounds_and_sources.md.",
+   "No dose, route, schedule or paediatric suitability appears; assay concentrations of the sources are deliberately not reproduced."
+  ],
+  "no_new_reading": "No paper was newly read in full for these cards. The Lucas-Clarke reading is scientist-a's (receipt FTR-20261026-42909904-01); the compound statements are abstract-level PubMed reads and registry-database retrievals (lucas_clarke_followup_20261026/)."
+ },
+ "translation": {
+  "pediatric_suitability": "UNKNOWN for WWOX; guanabenz paediatric experience exists in vanishing white matter (abstract-level).",
+  "cns_exposure": "UNKNOWN",
+  "interactions": "UNKNOWN",
+  "access": "UNKNOWN",
+  "time_to_benefit": "UNKNOWN",
+  "functional_rescue": "UNKNOWN"
+ },
+ "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
+ "limits": [
+  "Technical comparison is not efficacy, safety or experimental validation.",
+  "Sources and receipt references are retained, not independently verified.",
+  "Shared sources are not independent confirmations; scores are not pooled.",
+  "NO_CHANGE is a reported null effect on that endpoint and context: it is not UNKNOWN (not measured), not evidence of safety, and not proof of futility; a null in a non-comparable cell stays UNRESOLVED.",
+  "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
+ ]
+}

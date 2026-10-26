@@ -1,0 +1,513 @@
+{
+ "page_meta": {
+  "limit": 50,
+  "next": null,
+  "offset": 0,
+  "previous": null,
+  "total_count": 1
+ },
+ "targets": [
+  {
+   "cross_references": [],
+   "organism": "Homo sapiens",
+   "pref_name": "Interferon-induced, double-stranded RNA-activated protein kinase",
+   "species_group_flag": false,
+   "target_chembl_id": "CHEMBL5785",
+   "target_components": [
+    {
+     "accession": "P19525",
+     "component_description": "Interferon-induced, double-stranded RNA-activated protein kinase",
+     "component_id": 4198,
+     "component_type": "PROTEIN",
+     "relationship": "SINGLE PROTEIN",
+     "target_component_synonyms": [
+      {
+       "component_synonym": "2.7.10.2",
+       "syn_type": "EC_NUMBER"
+      },
+      {
+       "component_synonym": "2.7.11.1",
+       "syn_type": "EC_NUMBER"
+      },
+      {
+       "component_synonym": "EIF2AK2",
+       "syn_type": "GENE_SYMBOL"
+      },
+      {
+       "component_synonym": "eIF-2A protein kinase 2",
+       "syn_type": "UNIPROT"
+      },
+      {
+       "component_synonym": "Eukaryotic translation initiation factor 2-alpha kinase 2",
+       "syn_type": "UNIPROT"
+      },
+      {
+       "component_synonym": "Interferon-induced, double-stranded RNA-activated protein kinase",
+       "syn_type": "UNIPROT"
+      },
+      {
+       "component_synonym": "Interferon-inducible RNA-dependent protein kinase",
+       "syn_type": "UNIPROT"
+      },
+      {
+       "component_synonym": "P1/eIF-2A protein kinase",
+       "syn_type": "UNIPROT"
+      },
+      {
+       "component_synonym": "p68 kinase",
+       "syn_type": "UNIPROT"
+      },
+      {
+       "component_synonym": "PKR",
+       "syn_type": "GENE_SYMBOL_OTHER"
+      },
+      {
+       "component_synonym": "PKR",
+       "syn_type": "UNIPROT"
+      },
+      {
+       "component_synonym": "PRKR",
+       "syn_type": "GENE_SYMBOL_OTHER"
+      },
+      {
+       "component_synonym": "Protein kinase R",
+       "syn_type": "UNIPROT"
+      },
+      {
+       "component_synonym": "Protein kinase RNA-activated",
+       "syn_type": "UNIPROT"
+      },
+      {
+       "component_synonym": "Tyrosine-protein kinase EIF2AK2",
+       "syn_type": "UNIPROT"
+      }
+     ],
+     "target_component_xrefs": [
+      {
+       "xref_id": "P19525",
+       "xref_name": null,
+       "xref_src_db": "AlphaFoldDB"
+      },
+      {
+       "xref_id": "GO:0005634",
+       "xref_name": "nucleus",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:0005654",
+       "xref_name": "nucleoplasm",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:0005737",
+       "xref_name": "cytoplasm",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:0005829",
+       "xref_name": "cytosol",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:0005840",
+       "xref_name": "ribosome",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:0016020",
+       "xref_name": "membrane",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:0048471",
+       "xref_name": "perinuclear region of cytoplasm",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:0003723",
+       "xref_name": "RNA binding",
+       "xref_src_db": "GoFunction"
+      },
+      {
+       "xref_id": "GO:0003725",
+       "xref_name": "double-stranded RNA binding",
+       "xref_src_db": "GoFunction"
+      },
+      {
+       "xref_id": "GO:0005515",
+       "xref_name": "protein binding",
+       "xref_src_db": "GoFunction"
+      },
+      {
+       "xref_id": "GO:0005524",
+       "xref_name": "ATP binding",
+       "xref_src_db": "GoFunction"
+      },
+      {
+       "xref_id": "GO:0016301",
+       "xref_name": "kinase activity",
+       "xref_src_db": "GoFunction"
+      },
+      {
+       "xref_id": "GO:0019888",
+       "xref_name": "protein phosphatase regulator activity",
+       "xref_src_db": "GoFunction"
+      },
+      {
+       "xref_id": "GO:0042802",
+       "xref_name": "identical protein binding",
+       "xref_src_db": "GoFunction"
+      },
+      {
+       "xref_id": "GO:0001819",
+       "xref_name": "positive regulation of cytokine production",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0006412",
+       "xref_name": "translation",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0006468",
+       "xref_name": "protein phosphorylation",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0008285",
+       "xref_name": "negative regulation of cell population proliferation",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0017148",
+       "xref_name": "negative regulation of translation",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0030968",
+       "xref_name": "endoplasmic reticulum unfolded protein response",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0032722",
+       "xref_name": "positive regulation of chemokine production",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0032874",
+       "xref_name": "positive regulation of stress-activated MAPK cascade",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0033689",
+       "xref_name": "negative regulation of osteoblast proliferation",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0034198",
+       "xref_name": "cellular response to amino acid starvation",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0043066",
+       "xref_name": "negative regulation of apoptotic process",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0043410",
+       "xref_name": "positive regulation of MAPK cascade",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0045071",
+       "xref_name": "negative regulation of viral genome replication",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0045087",
+       "xref_name": "innate immune response",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0046777",
+       "xref_name": "protein autophosphorylation",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0140374",
+       "xref_name": "antiviral innate immune response",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:1900225",
+       "xref_name": "regulation of NLRP3 inflammasome complex assembly",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:1901224",
+       "xref_name": "positive regulation of non-canonical NF-kappaB signal transduction",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:1901532",
+       "xref_name": "regulation of hematopoietic progenitor cell differentiation",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:1902033",
+       "xref_name": "regulation of hematopoietic stem cell proliferation",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:1902036",
+       "xref_name": "regulation of hematopoietic stem cell differentiation",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "HGNC:9437",
+       "xref_name": "EIF2AK2",
+       "xref_src_db": "HGNC"
+      },
+      {
+       "xref_id": "P19525",
+       "xref_name": null,
+       "xref_src_db": "IntAct"
+      },
+      {
+       "xref_id": "IPR000719",
+       "xref_name": "Prot_kinase_dom",
+       "xref_src_db": "InterPro"
+      },
+      {
+       "xref_id": "IPR008271",
+       "xref_name": "Ser/Thr_kinase_AS",
+       "xref_src_db": "InterPro"
+      },
+      {
+       "xref_id": "IPR011009",
+       "xref_name": "Kinase-like_dom_sf",
+       "xref_src_db": "InterPro"
+      },
+      {
+       "xref_id": "IPR014720",
+       "xref_name": "dsRBD_dom",
+       "xref_src_db": "InterPro"
+      },
+      {
+       "xref_id": "IPR017441",
+       "xref_name": "Protein_kinase_ATP_BS",
+       "xref_src_db": "InterPro"
+      },
+      {
+       "xref_id": "IPR044452",
+       "xref_name": "EIF2AK2_DSRM_1",
+       "xref_src_db": "InterPro"
+      },
+      {
+       "xref_id": "IPR044453",
+       "xref_name": "EIF2AK2_DSRM_2",
+       "xref_src_db": "InterPro"
+      },
+      {
+       "xref_id": "IPR050339",
+       "xref_name": "CC_SR_Kinase",
+       "xref_src_db": "InterPro"
+      },
+      {
+       "xref_id": "PTHR11042",
+       "xref_name": "EUKARYOTIC TRANSLATION INITIATION FACTOR 2-ALPHA KINASE EIF2-ALPHA KINASE -RELATED",
+       "xref_src_db": "PANTHER"
+      },
+      {
+       "xref_id": "PTHR11042:SF163",
+       "xref_name": "INTERFERON-INDUCED, DOUBLE-STRANDED RNA-ACTIVATED PROTEIN KINASE",
+       "xref_src_db": "PANTHER"
+      },
+      {
+       "xref_id": "1QU6",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "2A19",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "2A1A",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "3UIU",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "6D3K",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "6D3L",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "7OBK",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "7OBL",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "8BI7",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "8I9J",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "8IZN",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "2A19",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "2A1A",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "3UIU",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "6D3K",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "6D3L",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "7OBK",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "7OBL",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "8BI7",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "PF00035",
+       "xref_name": "dsrm",
+       "xref_src_db": "Pfam"
+      },
+      {
+       "xref_id": "PF00069",
+       "xref_name": "Pkinase",
+       "xref_src_db": "Pfam"
+      },
+      {
+       "xref_id": "PA33779",
+       "xref_name": "eukaryotic translation initiation factor 2 alpha kinase 2",
+       "xref_src_db": "PharmGKB"
+      },
+      {
+       "xref_id": "P19525",
+       "xref_name": null,
+       "xref_src_db": "Pharos"
+      },
+      {
+       "xref_id": "R-HSA-1169408",
+       "xref_name": "ISG15 antiviral mechanism",
+       "xref_src_db": "Reactome"
+      },
+      {
+       "xref_id": "R-HSA-169131",
+       "xref_name": "Inhibition of PKR",
+       "xref_src_db": "Reactome"
+      },
+      {
+       "xref_id": "R-HSA-4755510",
+       "xref_name": "SUMOylation of immune response proteins",
+       "xref_src_db": "Reactome"
+      },
+      {
+       "xref_id": "R-HSA-909733",
+       "xref_name": "Interferon alpha/beta signaling",
+       "xref_src_db": "Reactome"
+      },
+      {
+       "xref_id": "R-HSA-9833109",
+       "xref_name": "Evasion by RSV of host interferon responses",
+       "xref_src_db": "Reactome"
+      },
+      {
+       "xref_id": "R-HSA-9833482",
+       "xref_name": "PKR-mediated signaling",
+       "xref_src_db": "Reactome"
+      },
+      {
+       "xref_id": "A8K3P0",
+       "xref_name": "Interferon-induced, double-stranded RNA-activated protein kinase",
+       "xref_src_db": "UniProt"
+      },
+      {
+       "xref_id": "D6W584",
+       "xref_name": "Interferon-induced, double-stranded RNA-activated protein kinase",
+       "xref_src_db": "UniProt"
+      },
+      {
+       "xref_id": "E9PC80",
+       "xref_name": "Interferon-induced, double-stranded RNA-activated protein kinase",
+       "xref_src_db": "UniProt"
+      },
+      {
+       "xref_id": "P19525",
+       "xref_name": "Interferon-induced, double-stranded RNA-activated protein kinase",
+       "xref_src_db": "UniProt"
+      },
+      {
+       "xref_id": "Q52M43",
+       "xref_name": "Interferon-induced, double-stranded RNA-activated protein kinase",
+       "xref_src_db": "UniProt"
+      },
+      {
+       "xref_id": "Q7Z6F6",
+       "xref_name": "Interferon-induced, double-stranded RNA-activated protein kinase",
+       "xref_src_db": "UniProt"
+      },
+      {
+       "xref_id": "Q9UIR4",
+       "xref_name": "Interferon-induced, double-stranded RNA-activated protein kinase",
+       "xref_src_db": "UniProt"
+      }
+     ]
+    }
+   ],
+   "target_type": "SINGLE PROTEIN",
+   "tax_id": 9606
+  }
+ ]
+}

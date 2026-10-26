@@ -1,0 +1,864 @@
+compound	molecule	target_chembl_id	target_name	type	rel	value	units	assay_description	doc
+stiripentol	CHEMBL1983350	CHEMBL5567	Luciferin 4-monooxygenase	Potency	None	20314.8	nM	PUBCHEM_BIOASSAY: Biochemical firefly luciferase enzyme assay for NPC. (Class of assay: confirmatory) 	CHEMBL1201862
+stiripentol	CHEMBL1983350	CHEMBL1784	Glucagon-like peptide 1 receptor	Potency	None	35481.3	nM	PubChem BioAssay. qHTS of GLP-1 Receptor Agonists. (Class of assay: confirmatory) 	CHEMBL1201862
+stiripentol	CHEMBL1983350	CHEMBL375	Mus musculus	ED50	=	115.0	mg.kg-1	Anticonvulsant activity in ip dosed Swiss albino mouse assessed as protection against subcutaneous pentylenete	CHEMBL2163283
+stiripentol	CHEMBL1983350	CHEMBL375	Mus musculus	Activity	None	None	None	Neurotoxicity in Swiss albino mouse assessed as climbing response to inverted mesh at at 747 umol/kg, sc admin	CHEMBL2163283
+stiripentol	CHEMBL1983350	CHEMBL375	Mus musculus	Activity	None	None	None	Neurotoxicity in Swiss albino mouse assessed as effect on hindlimb grip strength at 747 umol/kg, sc administer	CHEMBL2163283
+stiripentol	CHEMBL1983350	CHEMBL375	Mus musculus	ED50	=	277.0	mg.kg-1	Anticonvulsant activity in ip dosed Swiss albino mouse assessed as maximal electroshock-induced seizures admin	CHEMBL2163283
+stiripentol	CHEMBL1983350	CHEMBL375	Mus musculus	Activity	=	100.0	%	Anticonvulsant activity in Swiss albino mouse assessed as protection against subcutaneous pentylenetetrazol-in	CHEMBL2163283
+stiripentol	CHEMBL1983350	CHEMBL375	Mus musculus	Activity	=	66.0	%	Anticonvulsant activity in Swiss albino mouse assessed as maximal electroshock-induced seizures at 640 umol/kg	CHEMBL2163283
+stiripentol	CHEMBL1983350	CHEMBL375	Mus musculus	Activity	=	83.0	%	Anticonvulsant activity in Swiss albino mouse assessed as protection against subcutaneous pentylenetetrazol-in	CHEMBL2163283
+stiripentol	CHEMBL1983350	CHEMBL375	Mus musculus	Activity	=	83.0	%	Anticonvulsant activity in Swiss albino mouse assessed as protection against subcutaneous pentylenetetrazol-in	CHEMBL2163283
+stiripentol	CHEMBL1983350	CHEMBL375	Mus musculus	Activity	=	66.0	%	Anticonvulsant activity in Swiss albino mouse assessed as protection against subcutaneous pentylenetetrazol-in	CHEMBL2163283
+stiripentol	CHEMBL1983350	CHEMBL375	Mus musculus	Activity	=	50.0	%	Anticonvulsant activity in Swiss albino mouse assessed as protection against subcutaneous pentylenetetrazol-in	CHEMBL2163283
+stiripentol	CHEMBL1983350	CHEMBL375	Mus musculus	Activity	=	33.0	%	Anticonvulsant activity in Swiss albino mouse assessed as protection against subcutaneous pentylenetetrazol-in	CHEMBL2163283
+stiripentol	CHEMBL1983350	CHEMBL375	Mus musculus	Activity	=	16.0	%	Anticonvulsant activity in Swiss albino mouse assessed as protection against subcutaneous pentylenetetrazol-in	CHEMBL2163283
+stiripentol	CHEMBL1983350	CHEMBL612545	Unchecked	Potency	None	28183.8	nM	PubChem BioAssay. qHTS for Inhibitors of binding or entry into cells for Marburg Virus.   (Class of assay: con	CHEMBL1201862
+stiripentol	CHEMBL1983350	CHEMBL612545	Unchecked	AC50	None	631.0	nM	PubChem BioAssay. qHTS Assay for Identifying Compounds that block Entry of Ebola Virus, Screen 2 ratio channel	CHEMBL1201862
+stiripentol	CHEMBL1983350	CHEMBL612545	Unchecked	AC50	None	630.96	nM	PubChem BioAssay. qHTS Assay for Identifying Compounds that block Entry of Ebola Virus: Screen2, ratio channel	CHEMBL1201862
+stiripentol	CHEMBL1983350	CHEMBL1795168	CDGSH iron-sulfur domain-containing protein 1	IC50	None	None	None	Displacement of [3H]rosiglitazone from recombinant human C-terminal His-tagged MitoNEET cytosolic domain (32 t	CHEMBL3862005
+stiripentol	CHEMBL1983350	CHEMBL1795168	CDGSH iron-sulfur domain-containing protein 1	Ki	None	None	None	Displacement of [3H]rosiglitazone from recombinant human C-terminal His-tagged MitoNEET cytosolic domain (32 t	CHEMBL3862005
+stiripentol	CHEMBL1983350	CHEMBL4303835	SARS-CoV-2	Inhibition index	=	0.1907	None	Inhibition of cell viability relative to arbidol control (inhibition index > 1 indicates higher activity) meas	CHEMBL4303097
+stiripentol	CHEMBL1983350	CHEMBL4303835	SARS-CoV-2	Inhibition	=	2.28	%	Antiviral activity determined as inhibition of SARS-CoV-2 induced cytotoxicity of Caco-2 cells at 10 uM after 	CHEMBL4303101
+stiripentol	CHEMBL1983350	CHEMBL375	Mus musculus	Activity	None	None	None	Anticonvulsant activity in Kunming mouse assessed as MES-induced hind limb extension at 100 mg/kg, ip administ	CHEMBL4311969
+stiripentol	CHEMBL1983350	CHEMBL2095172	GABA-A receptor; alpha-1/beta-2/gamma-2	%max	=	310.5	%	Agonist activity at GABA alpha1beta2gamma2 receptor in human HEK293T at 3.3 to 300 uM at -50 mV holding potent	CHEMBL4311969
+stiripentol	CHEMBL1983350	CHEMBL2095172	GABA-A receptor; alpha-1/beta-2/gamma-2	EC50	=	46000.0	nM	Agonist activity at GABA alpha1beta2gamma2 receptor in human HEK293T at -50 mV holding potential by whole cell	CHEMBL4311969
+stiripentol	CHEMBL1983350	CHEMBL612558	ADMET	Activity	None	None	None	Neurotoxicity against Kunming mouse assessed as time remained in rod at 100 mg/kg, ip administered 0.5 to 2 hr	CHEMBL4311969
+stiripentol	CHEMBL1983350	CHEMBL612545	Unchecked	Inhibition	=	7.0	%	Inhibition of human LDH5 at 2 mM using sodium pyruvate as substrate by UV-VIS spectrophotometry method relativ	CHEMBL4311969
+stiripentol	CHEMBL1983350	CHEMBL612545	Unchecked	Inhibition	=	7.0	%	Inhibition of human LDH1 at 2 mM using sodium pyruvate as substrate by UV-VIS spectrophotometry method relativ	CHEMBL4311969
+stiripentol	CHEMBL1983350	CHEMBL612545	Unchecked	Inhibition	None	None	%	Inhibition of human LDH5 at 0.5 mM using sodium pyruvate as substrate by UV-VIS spectrophotometry method relat	CHEMBL4311969
+stiripentol	CHEMBL1983350	CHEMBL612545	Unchecked	Inhibition	None	None	%	Inhibition of human LDH1 at 0.5 mM using sodium pyruvate as substrate by UV-VIS spectrophotometry method relat	CHEMBL4311969
+stiripentol	CHEMBL1983350	CHEMBL4523582	Replicase polyprotein 1ab	Inhibition	=	23.97	%	SARS-CoV-2 3CL-Pro protease inhibition percentage at 20µM  by FRET kind of response from peptide substrate	CHEMBL4495564
+stiripentol	CHEMBL1983350	CHEMBL4523582	Replicase polyprotein 1ab	Inhibition	=	1.548	%	SARS-CoV-2 3CL-Pro protease inhibition percentage at 20µM  by FRET kind of response from peptide substrate	CHEMBL4495564
+stiripentol	CHEMBL1983350	CHEMBL4303835	SARS-CoV-2	Inhibition	=	-0.27	%	Antiviral activity determined as inhibition of SARS-CoV-2 induced cytotoxicity of VERO-6 cells at 10 uM after 	CHEMBL4495565
+stiripentol	CHEMBL1983350	CHEMBL4303835	SARS-CoV-2	Inhibition	=	0.04	%	Antiviral activity determined as inhibition of SARS-CoV-2 induced cytotoxicity of VERO-6 cells at 10 uM after 	CHEMBL4495565
+stiripentol	CHEMBL1983350	CHEMBL366	Candida albicans	Inhibition	=	4.55	%	Antifungal activity against Candida albicans ATCC 90028 (CO-ADD:FG_001); MIC in YNB media using NBS plates, by	CHEMBL4513141
+stiripentol	CHEMBL1983350	CHEMBL365	Cryptococcus neoformans	Inhibition	=	2.5	%	Antifungal activity against Cryptococcus neoformans H99 ATCC 208821 (CO-ADD:FG_002); MIC in YNB media using NB	CHEMBL4513141
+stiripentol	CHEMBL1983350	CHEMBL354	Escherichia coli	Inhibition	=	6.07	%	Antibacterial activity against Escherichia coli ATCC 25922 (CO-ADD:GN_001); MIC in CAMBH media using NBS plate	CHEMBL4513141
+stiripentol	CHEMBL1983350	CHEMBL350	Klebsiella pneumoniae	Inhibition	=	6.61	%	Antibacterial activity against Klebsiella pneumoniae MDR ATCC 70063 (CO-ADD:GN_003); MIC in CAMBH media using 	CHEMBL4513141
+stiripentol	CHEMBL1983350	CHEMBL348	Pseudomonas aeruginosa	Inhibition	=	8.01	%	Antibacterial activity against Pseudomonas aeruginosa ATCC 27853 (CO-ADD:GN_042); MIC in CAMBH media using NBS	CHEMBL4513141
+stiripentol	CHEMBL1983350	CHEMBL614425	Acinetobacter baumannii	Inhibition	=	15.26	%	Antibacterial activity against Acinetobacter baumannii ATCC 19606 (CO-ADD:GN_034); MIC in CAMBH media using NB	CHEMBL4513141
+stiripentol	CHEMBL1983350	CHEMBL352	Staphylococcus aureus	Inhibition	=	0.92	%	Antibacterial activity against Staphylococcus aureus MRSA ATCC 43300 (CO-ADD:GP_020); MIC in CAMBH media, usin	CHEMBL4513141
+stiripentol	CHEMBL1983350	CHEMBL4303835	SARS-CoV-2	Inhibition	=	-0.27	%	Antiviral activity determined as inhibition of SARS-CoV-2 induced cytotoxicity of VERO-6 cells at 10 uM after 	CHEMBL4495565
+stiripentol	CHEMBL1983350	CHEMBL4303835	SARS-CoV-2	Inhibition	=	0.04	%	Antiviral activity determined as inhibition of SARS-CoV-2 induced cytotoxicity of VERO-6 cells at 10 uM after 	CHEMBL4495565
+stiripentol	CHEMBL1983350	CHEMBL4303835	SARS-CoV-2	IC50	>	20000.0	nM	Antiviral activity determined as inhibition of SARS-CoV-2 induced cytotoxicity of VERO-6 cells at 10 uM after 	CHEMBL4651402
+stiripentol	CHEMBL1983350	CHEMBL4303835	SARS-CoV-2	IC50	>	19952.62	nM	Antiviral activity determined as inhibition of SARS-CoV-2 induced cytotoxicity of VERO-6 cells at 10 uM after 	CHEMBL4651402
+stiripentol	CHEMBL1983350	CHEMBL1865	Protein deacetylase HDAC6	Inhibition	=	15.89	%	Enzymatic assay of human HDAC6 with commercial peptide substrate	CHEMBL4808148
+stiripentol	CHEMBL1983350	CHEMBL1865	Protein deacetylase HDAC6	Inhibition	=	8.28	%	Enzymatic assay of human HDAC6 with custom peptide substrate	CHEMBL4808148
+stiripentol	CHEMBL1983350	CHEMBL612545	Unchecked	FC	=	0.27	None	Inhibition of GO/LDHA in hyperoxaluric-primary hepatocyte isolated from Grhpr-knockdown PH2 C57BL/6 mouse asse	CHEMBL5120856
+stiripentol	CHEMBL1983350	CHEMBL612545	Unchecked	FC	=	0.33	None	Inhibition of GO/LDHA in hyperoxaluric-primary hepatocyte isolated from Grhpr-knockdown PH2 C57BL/6 mouse asse	CHEMBL5120856
+stiripentol	CHEMBL1983350	CHEMBL612545	Unchecked	FC	=	0.7	None	Inhibition of GO/LDHA in hyperoxaluric-primary hepatocyte isolated from Hoga1-knockdown PH3 C57BL/6 mouse asse	CHEMBL5120856
+stiripentol	CHEMBL1983350	CHEMBL612545	Unchecked	FC	=	0.49	None	Inhibition of GO/LDHA in hyperoxaluric-primary hepatocyte isolated from Hoga1-knockdown PH3 C57BL/6 mouse asse	CHEMBL5120856
+stiripentol	CHEMBL1983350	CHEMBL3140324	Hepatocyte	Activity	None	None	None	Cytotoxicity against hyperoxaluric-primary hepatocyte isolated from Hoga1-knockdown PH3 C57BL/6 mouse assessed	CHEMBL5120856
+stiripentol	CHEMBL1983350	CHEMBL3140324	Hepatocyte	Activity	None	None	None	Cytotoxicity against hyperoxaluric-primary hepatocyte isolated from Grhpr-knockdown PH2 C57BL/6 mouse assessed	CHEMBL5120856
+stiripentol	CHEMBL1983350	CHEMBL3140324	Hepatocyte	Activity	None	None	None	Cytotoxicity against hyperoxaluric-primary hepatocyte isolated from Agxt1-knockdown PH1 C57BL/6 mouse assessed	CHEMBL5120856
+stiripentol	CHEMBL1983350	CHEMBL2056	D(1A) dopamine receptor	AC50	>	30000.0	nM	Binding affinity towards human DRD1 in an in vitro assay with cellular components (NIBR assay) measured by sci	CHEMBL5291721
+stiripentol	CHEMBL1983350	CHEMBL240	Voltage-gated inwardly rectifying potassium channel KCNH2	AC50	>	30000.0	nM	Compound was evaluated for inhibition of human KCNH2 in an in vitro assay with cellular components measured by	CHEMBL5291721
+stiripentol	CHEMBL1983350	CHEMBL238	Sodium-dependent dopamine transporter	AC50	=	4646.7	nM	Binding affinity towards human SLC6A3 in an in vitro assay with cellular components measured by scintillation 	CHEMBL5291721
+stiripentol	CHEMBL1983350	CHEMBL206	Estrogen receptor	AC50	>	30000.0	nM	Binding affinity towards human ESR1 in an in vitro cell free assay (CRO assay) measured by membrane filtration	CHEMBL5291721
+stiripentol	CHEMBL1983350	CHEMBL220	Acetylcholinesterase	AC50	>	30000.0	nM	Compound was evaluated for inhibition of human ACHE in an vitro cell free assay measured by absorbance method	CHEMBL5291721
+stiripentol	CHEMBL1983350	CHEMBL222	Sodium-dependent noradrenaline transporter	AC50	=	3655.3	nM	Binding affinity towards human SLC6A2 in an in vitro assay with cellular components measured by scintillation 	CHEMBL5291721
+stiripentol	CHEMBL1983350	CHEMBL228	Sodium-dependent serotonin transporter	AC50	>	30000.0	nM	Binding affinity towards human SLC6A4 in an in vitro assay with cellular components measured by scintillation 	CHEMBL5291721
+stiripentol	CHEMBL1983350	CHEMBL1867	Alpha-2A adrenergic receptor	AC50	>	30000.0	nM	Binding affinity towards human ADRA2A in an in vitro assay with cellular components measured by scintillation 	CHEMBL5291721
+stiripentol	CHEMBL1983350	CHEMBL233	Mu-type opioid receptor	AC50	>	30000.0	nM	Binding affinity towards human OPRM1 in an in vitro assay with cellular components measured by scintillation c	CHEMBL5291721
+stiripentol	CHEMBL1983350	CHEMBL1951	Amine oxidase [flavin-containing] A	AC50	=	24370.3	nM	Compound was evaluated for inhibition of human MAOA in an in vitro cell free assay measured by fluorescence sp	CHEMBL5291721
+stiripentol	CHEMBL1983350	CHEMBL214	5-hydroxytryptamine receptor 1A	AC50	>	30000.0	nM	Binding affinity towards human HTR1A in an in vitro assay with cellular components measured by scintillation c	CHEMBL5291721
+stiripentol	CHEMBL1983350	CHEMBL279	Vascular endothelial growth factor receptor 2	AC50	=	21579.4	nM	Compound was evaluated for inhibition of human KDR in an in vitro cell free assay measured by time-resolved fl	CHEMBL5291721
+stiripentol	CHEMBL1983350	CHEMBL241	cGMP-inhibited 3',5'-cyclic phosphodiesterase 3A	AC50	>	30000.0	nM	Compound was evaluated for inhibition of human PDE3A in an in vitro cell free assay measured by time-resolved 	CHEMBL5291721
+stiripentol	CHEMBL1983350	CHEMBL234	D(3) dopamine receptor	AC50	>	30000.0	nM	Binding affinity towards human DRD3 in an in vitro assay with cellular components measured by scintillation co	CHEMBL5291721
+stiripentol	CHEMBL1983350	CHEMBL211	Muscarinic acetylcholine receptor M2	AC50	>	30000.0	nM	Binding affinity towards human CHRM2 in an in vitro assay with cellular components measured by scintillation c	CHEMBL5291721
+stiripentol	CHEMBL1983350	CHEMBL204	Prothrombin	AC50	>	30000.0	nM	Compound was evaluated for inhibition of human F2 in an in vitro cell free assay measured by fluorescence spec	CHEMBL5291721
+stiripentol	CHEMBL1983350	CHEMBL2069	Thromboxane A2 receptor	AC50	>	30000.0	nM	Antagonist activity at human TBXA2R in an in vitro cell-based assay measured by fluorescence spectroscopy	CHEMBL5291721
+stiripentol	CHEMBL1983350	CHEMBL256	Adenosine receptor A3	AC50	>	30000.0	nM	Binding affinity towards human ADORA3 (agonistic activity) in an in vitro assay with cellular components measu	CHEMBL5291721
+stiripentol	CHEMBL1983350	CHEMBL264	Histamine H3 receptor	AC50	>	30000.0	nM	Binding affinity towards human HRH3 in an in vitro assay with cellular components measured by scintillation co	CHEMBL5291721
+stiripentol	CHEMBL1983350	CHEMBL1833	5-hydroxytryptamine receptor 2B	AC50	>	30000.0	nM	Agonist activity at human HTR2B in an in vitro cell-based assay (CRO assay) measured by time-resolved fluoresc	CHEMBL5291721
+stiripentol	CHEMBL1983350	CHEMBL226	Adenosine receptor A1	AC50	>	30000.0	nM	Binding affinity towards human ADORA1 (agonistic activity) in an in vitro assay with cellular components measu	CHEMBL5291721
+stiripentol	CHEMBL1983350	CHEMBL1871	Androgen receptor	AC50	=	3009.8	nM	Binding affinity towards human AR in an in vitro assay with cellular components measured by scintillation coun	CHEMBL5291721
+stiripentol	CHEMBL1983350	CHEMBL208	Progesterone receptor	AC50	=	20654.3	nM	Binding affinity towards human PGR in an in vitro assay with cellular components measured by scintillation cou	CHEMBL5291721
+stiripentol	CHEMBL1983350	CHEMBL221	Prostaglandin G/H synthase 1	AC50	>	30000.0	nM	Compound was evaluated for inhibition of human PTGS1 in an in vitro cell free assay measured by time-resolved 	CHEMBL5291721
+stiripentol	CHEMBL1983350	CHEMBL221	Prostaglandin G/H synthase 1	AC50	>	30000.0	nM	Compound was evaluated for inhibition of human PTGS1 in an in vitro cell free assay measured by fluorescence m	CHEMBL5291721
+stiripentol	CHEMBL1983350	CHEMBL254	3',5'-cyclic-AMP phosphodiesterase 4A	AC50	=	14678.1	nM	Compound was evaluated for inhibition of human PDE4A in an in vitro cell free assay measured by time-resolved 	CHEMBL5291721
+stiripentol	CHEMBL1983350	CHEMBL343	Gamma-aminobutyric acid receptor subunit alpha-1	AC50	>	30000.0	nM	Binding affinity towards rat Gabra1 in an in vitro assay with cellular components measured by scintillation co	CHEMBL5291721
+stiripentol	CHEMBL1983350	CHEMBL229	Alpha-1A adrenergic receptor	AC50	>	30000.0	nM	Agonist activity at human ADRA1A in an in vitro cell-based assay (CRO assay) measured by fluorescence spectros	CHEMBL5291721
+stiripentol	CHEMBL1983350	CHEMBL216	Muscarinic acetylcholine receptor M1	AC50	>	30000.0	nM	Agonist activity at human CHRM1 in an in vitro cell-based assay (CRO assay) measured by fluorescence spectrosc	CHEMBL5291721
+stiripentol	CHEMBL1983350	CHEMBL216	Muscarinic acetylcholine receptor M1	AC50	>	30000.0	nM	Antagonist activity human CHRM1 in an in vitro cell-based assay measured by fluorescence spectroscopy	CHEMBL5291721
+stiripentol	CHEMBL1983350	CHEMBL2069	Thromboxane A2 receptor	AC50	>	30000.0	nM	Agonist activity at human TBXA2R in an in vitro cell-based assay (CRO assay) measured by fluorescence spectros	CHEMBL5291721
+stiripentol	CHEMBL1983350	CHEMBL229	Alpha-1A adrenergic receptor	AC50	>	30000.0	nM	Antagonist activity at human ADRA1A in an in vitro cell-based assay measured by fluorescence spectroscopy	CHEMBL5291721
+stiripentol	CHEMBL1983350	CHEMBL229	Alpha-1A adrenergic receptor	AC50	>	30000.0	nM	Binding affinity towards human ADRA1A in an in vitro assay (CRO assay) measured by scintillation counting	CHEMBL5291721
+stiripentol	CHEMBL1983350	CHEMBL2056	D(1A) dopamine receptor	AC50	>	30000.0	nM	Binding affinity towards human DRD1 in an in vitro assay (CRO assay) measured by scintillation counting	CHEMBL5291721
+stiripentol	CHEMBL1983350	CHEMBL216	Muscarinic acetylcholine receptor M1	AC50	>	30000.0	nM	Binding affinity towards human CHRM1 in an in vitro assay measured by scintillation counting	CHEMBL5291721
+GSK2837808A	CHEMBL3335794	CHEMBL4835	L-lactate dehydrogenase A chain	IC50	=	2.6	nM	Inhibition of LDHA (unknown origin)	CHEMBL3351282
+GSK2837808A	CHEMBL3335794	CHEMBL4835	L-lactate dehydrogenase A chain	Ki	=	4.8	nM	Inhibition of LDHA (unknown origin)	CHEMBL3351282
+GSK2837808A	CHEMBL3335794	CHEMBL612545	Unchecked	Ratio IC50	=	16.0	None	Selectivity index, ratio of IC50 for LDHB (unknown origin) to IC50 for LDHA (unknown origin)	CHEMBL3351282
+GSK2837808A	CHEMBL3335794	CHEMBL4835	L-lactate dehydrogenase A chain	IC50	=	2.6	nM	Competitive inhibition of human LDH5 in presence of NADH	CHEMBL3763153
+GSK2837808A	CHEMBL3335794	CHEMBL4940	L-lactate dehydrogenase B chain	IC50	=	43.0	nM	Competitive inhibition of human LDH1 in presence of NADH	CHEMBL3763153
+GSK2837808A	CHEMBL3335794	CHEMBL612545	Unchecked	Ratio IC50	=	16.0	None	Selectivity ratio of IC50 for human LDH1 to IC50 for human LDH5	CHEMBL3763153
+GSK2837808A	CHEMBL3335794	CHEMBL4835	L-lactate dehydrogenase A chain	IC50	=	38.0	nM	Inhibition of human liver LDHA using sodium pyruvate as substrate after 5 mins in presence of NAPDH and in abs	CHEMBL4028893
+GSK2837808A	CHEMBL3335794	CHEMBL4835	L-lactate dehydrogenase A chain	IC50	=	38.0	nM	Inhibition of human liver LDHA using sodium pyruvate as substrate after 5 mins in presence of NAPDH and EDTA b	CHEMBL4028893
+GSK2837808A	CHEMBL3335794	CHEMBL612545	Unchecked	IC50	=	37800.0	nM	Inhibition of pig heart MDH using malic acid as substrate preincubated for 10 mins followed by substrate addit	CHEMBL4028893
+GSK2837808A	CHEMBL3335794	CHEMBL4940	L-lactate dehydrogenase B chain	IC50	=	1150.0	nM	Inhibition of human erythrocytes LDHB using sodium pyruvate as substrate after 5 mins in presence of NAPDH by 	CHEMBL4028893
+GSK2837808A	CHEMBL3335794	CHEMBL2007625	Isocitrate dehydrogenase [NADP] cytoplasmic	IC50	>	57000.0	nM	Inhibition of wild type IDH1 (unknown origin) using isocitrate as substrate preincubated for 30 mins followed 	CHEMBL4028893
+GSK2837808A	CHEMBL3335794	CHEMBL4105929	L-lactate dehydrogenase	IC50	=	14500.0	nM	Inhibition of LDH in human A673 cells assessed as reduction in lactate production preincubated for 2 hrs measu	CHEMBL4028893
+GSK2837808A	CHEMBL3335794	CHEMBL614517	A673	IC50	>	57000.0	nM	Cytotoxicity against human A673 cells after 48 hrs by CellTiter-Glo assay	CHEMBL4028893
+GSK2837808A	CHEMBL3335794	CHEMBL614517	A673	IC50	=	840.0	nM	Cytotoxicity against human A673 cells assessed as long term cell growth inhibition measured every 4 hrs for 12	CHEMBL4028893
+GSK2837808A	CHEMBL3335794	CHEMBL4105929	L-lactate dehydrogenase	IC50	=	12600.0	nM	Inhibition of LDH in human MIAPaCa2 cells assessed as reduction in lactate production preincubated for 2 hrs m	CHEMBL4028893
+GSK2837808A	CHEMBL3335794	CHEMBL614725	MIA PaCa-2	IC50	=	28400.0	nM	Cytotoxicity against human MIAPaCa2 cells after 48 hrs by CellTiter-Glo assay	CHEMBL4028893
+GSK2837808A	CHEMBL3335794	CHEMBL614725	MIA PaCa-2	IC50	=	1370.0	nM	Cytotoxicity against human MIAPaCa2 cells assessed as long term cell growth inhibition measured every 4 hrs fo	CHEMBL4028893
+GSK2837808A	CHEMBL3335794	CHEMBL612558	ADMET	Drug uptake	None	None	None	Drug level in human A673 cells by LC-MS/MS analysis	CHEMBL4028893
+GSK2837808A	CHEMBL3335794	CHEMBL612558	ADMET	Drug uptake	None	None	None	Drug level in human MIAPaCa2 cells by LC-MS/MS analysis	CHEMBL4028893
+GSK2837808A	CHEMBL3335794	CHEMBL4835	L-lactate dehydrogenase A chain	Kd	=	59.0	nM	Binding affinity to human His-tagged LDHA in presence of NADH by SPR assay	CHEMBL4028893
+GSK2837808A	CHEMBL3335794	CHEMBL4835	L-lactate dehydrogenase A chain	Kd	=	1.7	nM	Binding affinity to human His-tagged LDHA in absence of NADH by SPR assay	CHEMBL4028893
+GSK2837808A	CHEMBL3335794	CHEMBL4835	L-lactate dehydrogenase A chain	TIME	=	0.002222	hr	Binding affinity to human His-tagged LDHA assessed as residence time in presence of NADH by SPR assay	CHEMBL4028893
+GSK2837808A	CHEMBL3335794	CHEMBL4105929	L-lactate dehydrogenase	Inhibition	None	None	%	Inhibition of LDH in human A673 cells assessed as reduction in glycolytic flux after 40 mins in presence of gl	CHEMBL4028893
+GSK2837808A	CHEMBL3335794	CHEMBL4105929	L-lactate dehydrogenase	Inhibition	None	None	%	Inhibition of LDH in human A673 cells assessed as reduction in maximal ECAR at 2 to 5 uM after 40 mins in pres	CHEMBL4028893
+GSK2837808A	CHEMBL3335794	CHEMBL4835	L-lactate dehydrogenase A chain	EC50	=	8180.0	nM	Stabilization of LDHA in human A673 cell lysate preincubated for 20 mins followed by incubation at 70 degreeC 	CHEMBL4028893
+GSK2837808A	CHEMBL3335794	CHEMBL4835	L-lactate dehydrogenase A chain	Activity	=	52.4	%	Stabilization of LDHA in human A673 cell lysate assessed as maximum amount of stabilized LDHA detected preincu	CHEMBL4028893
+GSK2837808A	CHEMBL3335794	CHEMBL4835	L-lactate dehydrogenase A chain	Activity	=	43.22	%	Stabilization of LDHA in human A673 cell lysate assessed as AUC causing stabilization of LDHA preincubated for	CHEMBL4028893
+GSK2837808A	CHEMBL3335794	CHEMBL4105929	L-lactate dehydrogenase	Inhibition	None	None	%	Inhibition of LDH in human A673 cells assessed as reduction in oligomycin-induced switch from oxidative phosph	CHEMBL4028893
+GSK2837808A	CHEMBL3335794	CHEMBL4303835	SARS-CoV-2	Inhibition	=	15.65	%	Antiviral activity determined as inhibition of SARS-CoV-2 induced cytotoxicity of Caco-2 cells at 10 uM after 	CHEMBL4303101
+GSK2837808A	CHEMBL3335794	CHEMBL4523582	Replicase polyprotein 1ab	Inhibition	=	11.84	%	SARS-CoV-2 3CL-Pro protease inhibition percentage at 20µM  by FRET kind of response from peptide substrate	CHEMBL4495564
+GSK2837808A	CHEMBL3335794	CHEMBL4523582	Replicase polyprotein 1ab	Inhibition	=	11.86	%	SARS-CoV-2 3CL-Pro protease inhibition percentage at 20µM  by FRET kind of response from peptide substrate	CHEMBL4495564
+GSK2837808A	CHEMBL3335794	CHEMBL4303835	SARS-CoV-2	Inhibition	=	0.0	%	Antiviral activity determined as inhibition of SARS-CoV-2 induced cytotoxicity of VERO-6 cells at 10 uM after 	CHEMBL4495565
+GSK2837808A	CHEMBL3335794	CHEMBL4303835	SARS-CoV-2	Inhibition	=	0.01	%	Antiviral activity determined as inhibition of SARS-CoV-2 induced cytotoxicity of VERO-6 cells at 10 uM after 	CHEMBL4495565
+GSK2837808A	CHEMBL3335794	CHEMBL4303835	SARS-CoV-2	Inhibition	=	0.0	%	Antiviral activity determined as inhibition of SARS-CoV-2 induced cytotoxicity of VERO-6 cells at 10 uM after 	CHEMBL4495565
+GSK2837808A	CHEMBL3335794	CHEMBL4303835	SARS-CoV-2	Inhibition	=	0.01	%	Antiviral activity determined as inhibition of SARS-CoV-2 induced cytotoxicity of VERO-6 cells at 10 uM after 	CHEMBL4495565
+GSK2837808A	CHEMBL3335794	CHEMBL1865	Protein deacetylase HDAC6	Inhibition	=	12.8	%	Enzymatic assay of human HDAC6 with commercial peptide substrate	CHEMBL4808148
+GSK2837808A	CHEMBL3335794	CHEMBL1865	Protein deacetylase HDAC6	Inhibition	=	3.12	%	Enzymatic assay of human HDAC6 with custom peptide substrate	CHEMBL4808148
+GSK2837808A	CHEMBL3335794	CHEMBL4835	L-lactate dehydrogenase A chain	IC50	=	2.6	nM	Competitive inhibition of recombinant human LDHA in the presence of NADH by resazurin dye reduction method	CHEMBL4825721
+GSK2837808A	CHEMBL3335794	CHEMBL5465226	von Hippel-Lindau disease tumor suppressor/L-lactate dehydrogenase A chain	Activity	None	None	None	Protac activity at VHL E3 ligase/LDHA in human PANC-1 cells assessed as induction of LDHA degradation at 1 to 	CHEMBL5316276
+GSK2837808A	CHEMBL3335794	CHEMBL4835	L-lactate dehydrogenase A chain	Activity	<	60.0	%	Inhibition of human recombinant LDHA assessed as enzyme activity by measuring conversion of NADH from NAD+ at 	CHEMBL6078686
+GSK2837808A	CHEMBL3335794	CHEMBL4940	L-lactate dehydrogenase B chain	Activity	<	60.0	%	Inhibition of human recombinant LDHB assessed as enzyme activity by measuring conversion of NADH from NAD+ at 	CHEMBL6078686
+FX11	CHEMBL126519	CHEMBL4940	L-lactate dehydrogenase B chain	Ki	=	50.0	nM	inhibitory activity against Human Lactate Dehydrogenase (LDH-M)	CHEMBL1131124
+FX11	CHEMBL126519	CHEMBL4940	L-lactate dehydrogenase B chain	Ki	=	1000.0	nM	inhibitory activity against Human Lactate Dehydrogenase (LDH-H)	CHEMBL1131124
+FX11	CHEMBL126519	CHEMBL4835	L-lactate dehydrogenase A chain	Ki	=	300.0	nM	inhibitory activity against Plasmodium falciparum LDH (pLDH)	CHEMBL1131124
+FX11	CHEMBL126519	CHEMBL4835	L-lactate dehydrogenase A chain	Ki	=	8000.0	nM	Inhibition of human LDH-A using pyruvate as substrate and NADH as cofactor at 125 uM after 5 mins by calorimet	CHEMBL1687923
+FX11	CHEMBL126519	CHEMBL612545	Unchecked	Ki	=	8000.0	nM	Inhibition of human LDH5	CHEMBL1909584
+FX11	CHEMBL126519	CHEMBL612545	Unchecked	Selectivity ratio	>	10.0	None	Selectivity for human LDH5 over human LDH1	CHEMBL1909584
+FX11	CHEMBL126519	CHEMBL612545	Unchecked	Ki	=	8000.0	nM	Inhibition of human Lactate dehydrogenase isoform 5	CHEMBL1921726
+FX11	CHEMBL126519	CHEMBL4835	L-lactate dehydrogenase A chain	IC50	>	500000.0	nM	Inhibition of full length human recombinant LDHA expressed in Escherichia coli BL21 (DE3) cells after 10 mins 	CHEMBL2057123
+FX11	CHEMBL126519	CHEMBL4940	L-lactate dehydrogenase B chain	IC50	None	None	None	Inhibition of human recombinant LDHB (2 to 334 amino acid residue) expressed in Escherichia coli BL21 (DE3) ce	CHEMBL2057123
+FX11	CHEMBL126519	CHEMBL4835	L-lactate dehydrogenase A chain	IC50	>	40000.0	nM	Inhibition of LDH-A (unknown origin) in absence of 0.1% Triton	CHEMBL2311513
+FX11	CHEMBL126519	CHEMBL4835	L-lactate dehydrogenase A chain	Inhibition	None	None	%	Inhibition of LDH-A (unknown origin) in presence of 0.1% Triton	CHEMBL2311513
+FX11	CHEMBL126519	CHEMBL4835	L-lactate dehydrogenase A chain	Ki	=	8000.0	nM	Inhibition of human LDHA4 using NADH as substrate	CHEMBL3217557
+FX11	CHEMBL126519	CHEMBL2362975	No relevant target	Solubility	None	204200.0	nM	ASTRAZENECA: Solubility in pH7.4 buffer using solid starting material using the method described in J. Assoc. 	CHEMBL3301361
+FX11	CHEMBL126519	CHEMBL2362975	No relevant target	LogD7.4	None	2.6	None	ASTRAZENECA: Octan-1-ol/water (pH7.4) distribution coefficent measured  by a shake flask method described in J	CHEMBL3301361
+FX11	CHEMBL126519	CHEMBL4835	L-lactate dehydrogenase A chain	Ki	=	8000.0	nM	Inhibition of human LDHA using pyruvate as substrate assessed as disappearance of NADH	CHEMBL3745616
+FX11	CHEMBL126519	CHEMBL4835	L-lactate dehydrogenase A chain	Ki	=	50.0	nM	Competitive inhibition of human LDH5 in presence of NADH	CHEMBL3763153
+FX11	CHEMBL126519	CHEMBL4940	L-lactate dehydrogenase B chain	Ki	=	1000.0	nM	Competitive inhibition of human LDH1 in presence of NADH	CHEMBL3763153
+FX11	CHEMBL126519	CHEMBL612545	Unchecked	IC50	=	900.0	nM	Inhibition of Toxoplasma gondii LDH2	CHEMBL5226345
+FX11	CHEMBL126519	CHEMBL612545	Unchecked	IC50	=	3500.0	nM	Inhibition of Toxoplasma gondii LDH1	CHEMBL5226345
+FX11	CHEMBL126519	CHEMBL612545	Unchecked	IC50	=	39500.0	nM	Inhibition of recombinant his tagged Cryptosporidium parvum LDH expressed in Escherichia coli by by spectropho	CHEMBL5226345
+FX11	CHEMBL126519	CHEMBL612545	Unchecked	IC50	=	140.0	nM	Inhibition of Plasmodium falciparum LDH	CHEMBL5226345
+oxamate	CHEMBL15976	CHEMBL3148	4-aminobutyrate aminotransferase, mitochondrial	Inhibition	=	60.0	%	In vivo inhibition of succinate formation in the synaptosomal Gamma-amino-N-butyrate transaminase assay at 100	CHEMBL1121999
+oxamate	CHEMBL15976	CHEMBL6071	Lactate dehydrogenase	IC50	=	92500.0	nM	Inhibition of Plasmodium falciparum LDH	CHEMBL1148717
+oxamate	CHEMBL15976	CHEMBL612545	Unchecked	IC50	=	123000.0	nM	Inhibition of bovine heart LDH	CHEMBL1148717
+oxamate	CHEMBL15976	CHEMBL6072	Malate dehydrogenase	IC50	>	2000000.0	nM	Inhibition of Plasmodium falciparum MDH	CHEMBL1148717
+oxamate	CHEMBL15976	CHEMBL3444	Malate dehydrogenase, mitochondrial	IC50	>	2000000.0	nM	Inhibition of pig heart mitochondrial MDH	CHEMBL1148717
+oxamate	CHEMBL15976	CHEMBL4048	Malate dehydrogenase, cytoplasmic	IC50	>	2000000.0	nM	Inhibition of pig cytosolic MDH	CHEMBL1148717
+oxamate	CHEMBL15976	CHEMBL4835	L-lactate dehydrogenase A chain	Ki	=	138000.0	nM	Inhibition of human LDH-A using pyruvate as substrate and NADH as cofactor at 125 uM after 5 mins by calorimet	CHEMBL1687923
+oxamate	CHEMBL15976	CHEMBL614818	HEK293	Potency	None	23099.9	nM	PUBCHEM_BIOASSAY: qHTS for Inhibitors of binding or entry into cells for Lassa Virus. (Class of assay: confirm	CHEMBL1201862
+oxamate	CHEMBL15976	CHEMBL612545	Unchecked	Potency	None	11220.2	nM	PUBCHEM_BIOASSAY: qHTS for inhibitors of binding or entry into cells for Marburg Virus. (Class of assay: confi	CHEMBL1201862
+oxamate	CHEMBL15976	CHEMBL2073663	Monocarboxylate transporter 4	Activity	None	None	None	TP_TRANSPORTER: uptake in Xenopus laevis oocytes	CHEMBL2074454
+oxamate	CHEMBL15976	CHEMBL4835	L-lactate dehydrogenase A chain	Inhibition	=	56.0	%	Inhibition of LDH-A in human Ramos cells assessed as cellular lactate level at 10 mM after 4 hrs	CHEMBL2311513
+oxamate	CHEMBL15976	CHEMBL4835	L-lactate dehydrogenase A chain	Inhibition	=	48.0	%	Inhibition of LDH-A in human Ramos cells assessed as cellular lactate level at 10 mM after 1 hr	CHEMBL2311513
+oxamate	CHEMBL15976	CHEMBL4835	L-lactate dehydrogenase A chain	Ki	=	26000.0	nM	Inhibition of human LDH-A	CHEMBL2311513
+oxamate	CHEMBL15976	CHEMBL4105929	L-lactate dehydrogenase	IC50	=	25000000.0	nM	Inhibition of LDH in human HCC1954 cells assessed as lactate accumulation after 6 hrs	CHEMBL2380202
+oxamate	CHEMBL15976	CHEMBL4940	L-lactate dehydrogenase B chain	IC50	=	33800.0	nM	Inhibition of human recombinant carboxy-terminal his-tagged LDHB (1 to 333) expressed in insect cells using py	CHEMBL2380202
+oxamate	CHEMBL15976	CHEMBL4835	L-lactate dehydrogenase A chain	IC50	=	57200.0	nM	Inhibition of human recombinant carboxy-terminal his-tagged LDHA (1 to 331) expressed in Escherichia coli usin	CHEMBL2380202
+oxamate	CHEMBL15976	CHEMBL2193	Arylsulfatase A	Potency	None	47.8	nM	PubChem BioAssay. qHTS screen for enhancers of Arylsulfatase A (ASA1): LOPAC Validation Assay.   (Class of ass	CHEMBL1201862
+oxamate	CHEMBL15976	CHEMBL4940	L-lactate dehydrogenase B chain	IC50	=	33800.0	nM	Inhibition of human recombinant carboxy-terminal His-tagged LDHB by UV endpoint assay	CHEMBL3352775
+oxamate	CHEMBL15976	CHEMBL4835	L-lactate dehydrogenase A chain	IC50	=	57200.0	nM	Inhibition of human recombinant carboxy-terminal His-tagged LDHA by UV endpoint assay	CHEMBL3352775
+oxamate	CHEMBL15976	CHEMBL1075459	HCC1954	IC50	=	25000000.0	nM	Inhibition of lactate production in human HCC1954 cells after 6 hrs by spectrophotometry	CHEMBL3352775
+oxamate	CHEMBL15976	CHEMBL4835	L-lactate dehydrogenase A chain	Ki	=	138000.0	nM	Inhibition of human LDHA using pyruvate as substrate assessed as disappearance of NADH	CHEMBL3745616
+oxamate	CHEMBL15976	CHEMBL4835	L-lactate dehydrogenase A chain	Ki	=	136000.0	nM	Competitive inhibition of human LDH5 in presence of NADH	CHEMBL3763153
+oxamate	CHEMBL15976	CHEMBL4940	L-lactate dehydrogenase B chain	Ki	=	94400.0	nM	Competitive inhibition of human LDH1 in presence of NADH	CHEMBL3763153
+oxamate	CHEMBL15976	CHEMBL4940	L-lactate dehydrogenase B chain	Ki	=	94400.0	nM	Inhibition of human LDHB	CHEMBL4257447
+oxamate	CHEMBL15976	CHEMBL2102	L-lactate dehydrogenase A chain	Ki	=	136000.0	nM	Inhibition of bovine heart LDHA	CHEMBL4257447
+oxamate	CHEMBL15976	CHEMBL612545	Unchecked	IC50	=	2660.0	nM	Inhibition of Plasmodium falciparum MDH	CHEMBL5226345
+ISRIB	CHEMBL4303573	CHEMBL4303835	SARS-CoV-2	Inhibition	=	-1.85	%	Antiviral activity determined as inhibition of SARS-CoV-2 induced cytotoxicity of Caco-2 cells at 10 uM after 	CHEMBL4303101
+ISRIB	CHEMBL4303573	CHEMBL4523582	Replicase polyprotein 1ab	Inhibition	=	19.42	%	SARS-CoV-2 3CL-Pro protease inhibition percentage at 20µM  by FRET kind of response from peptide substrate	CHEMBL4495564
+ISRIB	CHEMBL4303573	CHEMBL4303835	SARS-CoV-2	Inhibition	=	-0.12	%	Antiviral activity determined as inhibition of SARS-CoV-2 induced cytotoxicity of VERO-6 cells at 10 uM after 	CHEMBL4495565
+ISRIB	CHEMBL4303573	CHEMBL4303835	SARS-CoV-2	Inhibition	=	-0.12	%	Antiviral activity determined as inhibition of SARS-CoV-2 induced cytotoxicity of VERO-6 cells at 10 uM after 	CHEMBL4495565
+ISRIB	CHEMBL4303573	CHEMBL1865	Protein deacetylase HDAC6	Inhibition	=	-5.96	%	Enzymatic assay of human HDAC6 with commercial peptide substrate	CHEMBL4808148
+ISRIB	CHEMBL4303573	CHEMBL1865	Protein deacetylase HDAC6	Inhibition	=	-76.24	%	Enzymatic assay of human HDAC6 with custom peptide substrate	CHEMBL4808148
+ISRIB	CHEMBL4303573	CHEMBL2362975	No relevant target	LogD	=	3.7	None	Lipophilicity, log D of the compound at pH 7.4	CHEMBL5543116
+ISRIB	CHEMBL4303573	CHEMBL6067624	Cyclic AMP-dependent transcription factor ATF-4	IC50	=	2.7	nM	Activation of ATF4 ( unknown origin) expressed in human H4 cells incubated for 24 hrs by reporter gene assay	CHEMBL5543116
+ISRIB	CHEMBL4303573	CHEMBL2362975	No relevant target	Solubility	<	1000.0	nM	Kinetic solubility of compound	CHEMBL5543116
+DCA	CHEMBL306823	CHEMBL2096663	Pyruvate dehydrogenase kinase	IC50	>	1000000.0	nM	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.	CHEMBL1133665
+DCA	CHEMBL306823	CHEMBL372	Homo sapiens	EC50	=	130000.0	nM	Effective concentration required to increase the oxidation of lactate in cellular assay using Human Skin Fibro	CHEMBL1133665
+DCA	CHEMBL306823	CHEMBL376	Rattus norvegicus	Control	=	70.0	%	In vivo %control of lactate in normal Sprague-Dawley rats after 2 hr at a dose of 1 umol/Kg	CHEMBL1133665
+DCA	CHEMBL306823	CHEMBL2096665	Pyruvate dehydrogenase kinase	IC50	>	1000000.0	nM	Inhibitory activity against Pyruvate dehydrogenase kinase	CHEMBL1132309
+DCA	CHEMBL306823	CHEMBL2096665	Pyruvate dehydrogenase kinase	EC50	=	130000.0	nM	In vivo inhibion of pyruvate dehydrogenase kinase, increased oxidation of lactate	CHEMBL1132309
+DCA	CHEMBL306823	CHEMBL2096663	Pyruvate dehydrogenase kinase	Control	=	70.0	%	In vivo inhibition of pyruvate dehydrogenase kinase, reduced lactate level in normal 24 hr r fasted rats at 1 	CHEMBL1132309
+DCA	CHEMBL306823	CHEMBL2096665	Pyruvate dehydrogenase kinase	IC50	>	1000000.0	nM	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay	CHEMBL1133733
+DCA	CHEMBL306823	CHEMBL372	Homo sapiens	EC50	=	130000.0	nM	Effective concentration in human fibroblasts for increased oxidation of lactate	CHEMBL1133733
+DCA	CHEMBL306823	CHEMBL2096663	Pyruvate dehydrogenase kinase	Control	=	70.0	%	In vivo percent of control lactate in 24 hr fasted rats at 1 mM/kg oral dose	CHEMBL1133733
+DCA	CHEMBL306823	CHEMBL614526	BGC-823	IC50	=	1051000.0	nM	Anticancer activity against human BGC823 cells after 72 hrs by MTT assay	CHEMBL1240483
+DCA	CHEMBL306823	CHEMBL398	KB	IC50	=	1424000.0	nM	Anticancer activity against human KB cells after 72 hrs by MTT assay	CHEMBL1240483
+DCA	CHEMBL306823	CHEMBL392	A549	IC50	=	1011000.0	nM	Anticancer activity against human A549 cells after 72 hrs by MTT assay	CHEMBL1240483
+DCA	CHEMBL306823	CHEMBL614279	Bel-7402	IC50	=	860000.0	nM	Anticancer activity against human Bel7402 cells after 72 hrs by MTT assay	CHEMBL1240483
+DCA	CHEMBL306823	CHEMBL5365	DNA polymerase kappa	Potency	None	23778.1	nM	PUBCHEM_BIOASSAY: qHTS for Inhibitors of Polymerase Kappa. (Class of assay: confirmatory) [Related pubchem ass	CHEMBL1201862
+DCA	CHEMBL306823	CHEMBL392	A549	IC50	=	4286000.0	nM	Cytotoxicity against human A549 cells after 68 hrs by MTT assay	CHEMBL2203060
+DCA	CHEMBL306823	CHEMBL396	NCI-H460	IC50	=	3892000.0	nM	Cytotoxicity against human H460 cells after 68 hrs by MTT assay	CHEMBL2203060
+DCA	CHEMBL306823	CHEMBL3879801	NON-PROTEIN TARGET	IC50	=	5883000.0	nM	Cytotoxicity against human KB-3-1 cells after 68 hrs by MTT assay	CHEMBL2203060
+DCA	CHEMBL306823	CHEMBL392	A549	IC50	=	23580000.0	nM	Cytotoxicity against human A549 cells assessed as growth inhibition after 72 hrs by MTT assay	CHEMBL3813671
+DCA	CHEMBL306823	CHEMBL387	MCF7	IC50	=	12350000.0	nM	Cytotoxicity against human MCF7 cells assessed as growth inhibition after 72 hrs by MTT assay	CHEMBL3813671
+DCA	CHEMBL306823	CHEMBL612558	ADMET	GI	=	3.42	%	Cytotoxicity against human MCF10A cells assessed as growth inhibition at 20 uM after 72 hrs by MTT assay relat	CHEMBL3813671
+DCA	CHEMBL306823	CHEMBL612558	ADMET	GI	=	41.1	%	Cytotoxicity against human MCF10A cells assessed as growth inhibition at 10 mM after 72 hrs by MTT assay relat	CHEMBL3813671
+DCA	CHEMBL306823	CHEMBL387	MCF7	Activity	=	3.64	%	Induction of apoptosis in human MCF7 assessed as early apoptotic cells at 10 mM after 10 hrs by FITC-annexin V	CHEMBL3813671
+DCA	CHEMBL306823	CHEMBL387	MCF7	Activity	=	9.94	%	Induction of apoptosis in human MCF7 assessed as late apoptotic cells at 10 mM after 10 hrs by FITC-annexin V/	CHEMBL3813671
+DCA	CHEMBL306823	CHEMBL387	MCF7	Activity	=	3.09	%	Induction of apoptosis in human MCF7 assessed as necrotic cells at 10 mM after 10 hrs by FITC-annexin V/propid	CHEMBL3813671
+DCA	CHEMBL306823	CHEMBL387	MCF7	Activity	=	83.3	%	Induction of apoptosis in human MCF7 assessed as viable cells at 10 mM after 10 hrs by FITC-annexin V/propidiu	CHEMBL3813671
+DCA	CHEMBL306823	CHEMBL4766	[Pyruvate dehydrogenase (acetyl-transferring)] kinase isozyme 1, mitochondrial	Kd	>	1000000.0	nM	Binding affinity to recombinant N-terminal 6xHis-SUMO-tagged human PDK1 (29 to 436 residues) expressed in Esch	CHEMBL3813671
+DCA	CHEMBL306823	CHEMBL612545	Unchecked	Activity	None	None	None	Activation of pig heart PDC assessed as production of NADH at 10 mM in presence of ATP	CHEMBL3813671
+DCA	CHEMBL306823	CHEMBL4766	[Pyruvate dehydrogenase (acetyl-transferring)] kinase isozyme 1, mitochondrial	Inhibition	None	None	%	Inhibition of PDK1 in human MCF7 cells assessed as increase in oxygen consumption rate at 10 mM after 12 hrs	CHEMBL3813671
+DCA	CHEMBL306823	CHEMBL4766	[Pyruvate dehydrogenase (acetyl-transferring)] kinase isozyme 1, mitochondrial	Inhibition	None	None	%	Inhibition of PDK1 in human MCF7 cells assessed as decrease in extracellular acidification rate at 10 mM after	CHEMBL3813671
+DCA	CHEMBL306823	CHEMBL4766	[Pyruvate dehydrogenase (acetyl-transferring)] kinase isozyme 1, mitochondrial	Inhibition	None	None	%	Inhibition of PDK1 in human MCF7 cells assessed as decrease in proton production rate at 10 mM after 12 hrs	CHEMBL3813671
+DCA	CHEMBL306823	CHEMBL4766	[Pyruvate dehydrogenase (acetyl-transferring)] kinase isozyme 1, mitochondrial	Inhibition	None	None	%	Inhibition of PDK1 in human MCF7 cells assessed as decrease in lactate production at 10 mM after 12 hrs	CHEMBL3813671
+DCA	CHEMBL306823	CHEMBL387	MCF7	Activity	=	77.7	%	Reversal of hyperpolarized mitochondrial membrane potential in human MCF7 cells assessed as cells with vital a	CHEMBL3813671
+DCA	CHEMBL306823	CHEMBL387	MCF7	Activity	=	69.0	%	Reversal of hyperpolarized mitochondrial membrane potential in human MCF7 cells assessed as cells with vital a	CHEMBL3813671
+DCA	CHEMBL306823	CHEMBL4766	[Pyruvate dehydrogenase (acetyl-transferring)] kinase isozyme 1, mitochondrial	Inhibition	None	None	%	Inhibition of PDK1 in human MCF7 cells assessed as increase in ratio of oxygen consumption rate to extracellul	CHEMBL3813671
+DCA	CHEMBL306823	CHEMBL1795168	CDGSH iron-sulfur domain-containing protein 1	IC50	None	None	None	Displacement of [3H]rosiglitazone from recombinant human C-terminal His-tagged MitoNEET cytosolic domain (32 t	CHEMBL3862005
+DCA	CHEMBL306823	CHEMBL1795168	CDGSH iron-sulfur domain-containing protein 1	Ki	None	None	None	Displacement of [3H]rosiglitazone from recombinant human C-terminal His-tagged MitoNEET cytosolic domain (32 t	CHEMBL3862005
+DCA	CHEMBL306823	CHEMBL4766	[Pyruvate dehydrogenase (acetyl-transferring)] kinase isozyme 1, mitochondrial	Inhibition	=	64.2	%	Inhibition of PDK1 (unknown origin) at 10 mM using PDH E1 as substrate measured after 30 mins by kinase-glo as	CHEMBL4308888
+DCA	CHEMBL306823	CHEMBL4766	[Pyruvate dehydrogenase (acetyl-transferring)] kinase isozyme 1, mitochondrial	EC50	=	5700000.0	nM	Inhibition of PDK1 (unknown origin) using PDH E1 as substrate measured after 30 mins by kinase-glo assay	CHEMBL4308888
+DCA	CHEMBL306823	CHEMBL4766	[Pyruvate dehydrogenase (acetyl-transferring)] kinase isozyme 1, mitochondrial	Kd	None	None	None	Binding affinity to SUMO-fused/His-tagged PDK1 (unknown origin) expressed in Escherichia coli by isothermal ca	CHEMBL4308888
+DCA	CHEMBL306823	CHEMBL614348	NCI-H1975	Activity	None	None	None	Antiproliferative activity against human NCI-H1975 cells assessed as reduction in cell viability at 20 mM afte	CHEMBL4308888
+DCA	CHEMBL306823	CHEMBL392	A549	IC50	=	20100000.0	nM	Antiproliferative activity against human A549 cells assessed as reduction in cell viability after 72 hrs by MT	CHEMBL4308888
+DCA	CHEMBL306823	CHEMBL1075518	NCI-H1650	IC50	=	16300000.0	nM	Antiproliferative activity against human NCI-H1650 cells assessed as reduction in cell viability after 72 hrs 	CHEMBL4308888
+DCA	CHEMBL306823	CHEMBL5490	Rho-associated protein kinase 2	Inhibition	None	None	%	Inhibition of ROCK2 in rat PASMC assessed as inhibition of PGDF-BB-induced IL6 up regulation at 50 nM measured	CHEMBL4340557
+DCA	CHEMBL306823	CHEMBL5490	Rho-associated protein kinase 2	Inhibition	None	None	%	Inhibition of ROCK2 in rat PAEC assessed as inhibition of PGDF-BB-induced TNFalpha up regulation at 50 nM meas	CHEMBL4340557
+DCA	CHEMBL306823	CHEMBL5490	Rho-associated protein kinase 2	Inhibition	None	None	%	Inhibition of ROCK2 in rat PAEC assessed as inhibition of PGDF-BB-induced IL6 up regulation at 50 nM measured 	CHEMBL4340557
+DCA	CHEMBL306823	CHEMBL5490	Rho-associated protein kinase 2	Inhibition	None	None	%	Inhibition of ROCK2 in rat PASMC assessed as inhibition of PGDF-BB-induced TNFalpha up regulation at 50 nM mea	CHEMBL4340557
+DCA	CHEMBL306823	CHEMBL376	Rattus norvegicus	Activity	=	34.0	mmHg	Anti-hypersensitive activity in MCT-induced pulmonary arterial hypertension Sprague-Dawley rat model assessed 	CHEMBL4340557
+DCA	CHEMBL306823	CHEMBL376	Rattus norvegicus	Activity	=	57.4	mmHg	Anti-hypersensitive activity in MCT-induced pulmonary arterial hypertension Sprague-Dawley rat model assessed 	CHEMBL4340557
+DCA	CHEMBL306823	CHEMBL376	Rattus norvegicus	Activity_index	=	0.564	None	Anti-hypersensitive activity in MCT-induced pulmonary arterial hypertension Sprague-Dawley rat model assessed 	CHEMBL4340557
+DCA	CHEMBL306823	CHEMBL376	Rattus norvegicus	Activity	=	0.3	None	Anti-hypersensitive activity in MCT-induced pulmonary arterial hypertension Sprague-Dawley rat model assessed 	CHEMBL4340557
+DCA	CHEMBL306823	CHEMBL376	Rattus norvegicus	Activity	=	12.45	%	Anti-hypersensitive activity in MCT-induced pulmonary arterial hypertension Sprague-Dawley rat model assessed 	CHEMBL4340557
+DCA	CHEMBL306823	CHEMBL5490	Rho-associated protein kinase 2	Inhibition	None	None	%	Inhibition of ROCK2 in rat PAEC assessed as inhibition of hypoxia-induced IL6 up regulation at 50 nM measured 	CHEMBL4340557
+DCA	CHEMBL306823	CHEMBL5490	Rho-associated protein kinase 2	Inhibition	None	None	%	Inhibition of ROCK2 in rat PAEC assessed as inhibition of hypoxia-induced TNFalpha up regulation at 50 nM meas	CHEMBL4340557
+DCA	CHEMBL306823	CHEMBL5490	Rho-associated protein kinase 2	Inhibition	None	None	%	Inhibition of ROCK2 in rat PASMC assessed as inhibition of hypoxia-induced IL6 up regulation at 50 nM measured	CHEMBL4340557
+DCA	CHEMBL306823	CHEMBL5490	Rho-associated protein kinase 2	Inhibition	None	None	%	Inhibition of ROCK2 in rat PASMC assessed as inhibition of hypoxia-induced TNFalpha up regulation at 50 nM mea	CHEMBL4340557
+DCA	CHEMBL306823	CHEMBL376	Rattus norvegicus	Activity	None	None	None	Hemodynamic activity in Sprague-Dawley rat assessed as effect on mean systemic arterial pressure at 15.5 mg/kg	CHEMBL4340557
+DCA	CHEMBL306823	CHEMBL376	Rattus norvegicus	Activity	=	387.53	um2	Anti-hypersensitive activity in MCT-induced pulmonary arterial hypertension Sprague-Dawley rat model assessed 	CHEMBL4340557
+DCA	CHEMBL306823	CHEMBL376	Rattus norvegicus	Activity	=	8.47	%	Anti-hypersensitive activity in MCT-induced pulmonary arterial hypertension Sprague-Dawley rat model assessed 	CHEMBL4340557
+DCA	CHEMBL306823	CHEMBL4766	[Pyruvate dehydrogenase (acetyl-transferring)] kinase isozyme 1, mitochondrial	Inhibition	None	None	%	Inhibition of PDK1 (unknown origin) expressed in human MCF7 cells using PDK tide as substrate measured after 9	CHEMBL4354807
+DCA	CHEMBL306823	CHEMBL387	MCF7	Activity	None	None	None	Downregulation of PDK expression in human MCF7 cells at 2.5 to 10 uM after 48 hrs by Western blot analysis	CHEMBL4354807
+DCA	CHEMBL306823	CHEMBL387	MCF7	Activity	=	84.95	%	Induction of mitochondrial dysfunction in human MCF7 cells assessed as cell population with intact mitochondri	CHEMBL4354807
+DCA	CHEMBL306823	CHEMBL387	MCF7	Activity	=	14.63	%	Induction of mitochondrial dysfunction in human MCF7 cells assessed as cell population with mitochondrial memb	CHEMBL4354807
+DCA	CHEMBL306823	CHEMBL387	MCF7	Activity	=	15.13	%	Induction of ROS generation in human MCF7 cells assessed as ROS level at 30 uM after 24 hrs by DCFDA-fluoresce	CHEMBL4354807
+DCA	CHEMBL306823	CHEMBL387	MCF7	Inhibition	None	None	%	Inhibition of glycolysis in human MCF7 cells assessed as reduction in intracellular lactate level at 30 uM aft	CHEMBL4354807
+DCA	CHEMBL306823	CHEMBL387	MCF7	Inhibition	None	None	%	Inhibition of glycolysis in human MCF7 cells assessed as reduction in extracellular lactate level at 30 uM aft	CHEMBL4354807
+DCA	CHEMBL306823	CHEMBL612589	4T1	Inhibition	None	None	%	Inhibition of glycolysis in mouse 4T1 cells expressing PDK assessed as reduction in extracellular lactate leve	CHEMBL4354807
+DCA	CHEMBL306823	CHEMBL612589	4T1	Inhibition	None	None	%	Inhibition of glycolysis in mouse 4T1 cells expressing PDK assessed as reduction in intracellular lactate leve	CHEMBL4354807
+DCA	CHEMBL306823	CHEMBL387	MCF7	Activity	=	79.9	%	Induction of apoptosis in human MCF7 cells assessed as viable cells at 30 uM after 24 hrs by Annexin V-FITC/pr	CHEMBL4354807
+DCA	CHEMBL306823	CHEMBL387	MCF7	Activity	=	12.57	%	Induction of apoptosis in human MCF7 cells assessed as early apoptotic cells at 30 uM after 24 hrs by Annexin 	CHEMBL4354807
+DCA	CHEMBL306823	CHEMBL387	MCF7	Activity	=	5.86	%	Induction of apoptosis in human MCF7 cells assessed as late apoptotic cells at 30 uM after 24 hrs by Annexin V	CHEMBL4354807
+DCA	CHEMBL306823	CHEMBL387	MCF7	Activity	=	1.67	%	Induction of apoptosis in human MCF7 cells assessed as necrotic cells at 30 uM after 24 hrs by Annexin V-FITC/	CHEMBL4354807
+DCA	CHEMBL306823	CHEMBL387	MCF7	Activity	None	None	None	Cytotoxicity against human MCF7 cells assessed as cell death at 30 uM pretreated with Z-VAD-fmk followed by co	CHEMBL4354807
+DCA	CHEMBL306823	CHEMBL387	MCF7	IC50	>	100000.0	nM	Anticancer activity against human MCF7 cells overexpressing PDK assessed as reduction in cell viability after 	CHEMBL4354807
+DCA	CHEMBL306823	CHEMBL394	HCT-116	IC50	>	100000.0	nM	Anticancer activity against human HCT116 cells expressing PDK assessed as reduction in cell viability after 72	CHEMBL4354807
+DCA	CHEMBL306823	CHEMBL613859	A-375	IC50	>	100000.0	nM	Anticancer activity against human A375 cells expressing PDK assessed as reduction in cell viability after 72 h	CHEMBL4354807
+DCA	CHEMBL306823	CHEMBL612589	4T1	IC50	>	100000.0	nM	Anticancer activity against mouse 4T1 cells expressing PDK assessed as reduction in cell viability after 72 hr	CHEMBL4354807
+DCA	CHEMBL306823	CHEMBL612545	Unchecked	IC50	>	100000.0	nM	Cytotoxicity against human HBMEC cells assessed as reduction in cell viability after 72 hrs by MTT assay	CHEMBL4354807
+DCA	CHEMBL306823	CHEMBL4296457	L02	IC50	>	100000.0	nM	Cytotoxicity against human LO2 cells assessed as reduction in cell viability after 72 hrs by MTT assay	CHEMBL4354807
+DCA	CHEMBL306823	CHEMBL387	MCF7	Activity	None	None	None	Antitumor activity against human MCF7 cells xenografted in BALB/c nude mouse assessed as tumor growth inhibiti	CHEMBL4354807
+DCA	CHEMBL306823	CHEMBL612558	ADMET	Activity	None	None	None	Toxicity in BALB/c nude mouse xenografted with human MCF7 cells assessed as mouse death at 30 mg/kg, iv admini	CHEMBL4354807
+DCA	CHEMBL306823	CHEMBL612558	ADMET	Activity	None	None	None	Toxicity in BALB/c nude mouse xenografted with human MCF7 cells assessed as effect on body weight at 30 mg/kg,	CHEMBL4354807
+DCA	CHEMBL306823	CHEMBL387	MCF7	Activity	None	None	None	Induction of metabolic reversal from aerobic glycolysis to oxidative phosphorylation in human MCF7 cells asses	CHEMBL4354807
+DCA	CHEMBL306823	CHEMBL387	MCF7	Activity	None	None	None	Induction of metabolic reversal from aerobic glycolysis to oxidative phosphorylation in human MCF7 cells asses	CHEMBL4354807
+DCA	CHEMBL306823	CHEMBL387	MCF7	Activity	None	None	None	Induction of metabolic reversal from aerobic glycolysis to oxidative phosphorylation in human MCF7 cells asses	CHEMBL4354807
+DCA	CHEMBL306823	CHEMBL387	MCF7	Activity	None	None	None	Induction of metabolic reversal from aerobic glycolysis to oxidative phosphorylation in human MCF7 cells asses	CHEMBL4354807
+DCA	CHEMBL306823	CHEMBL394	HCT-116	IC50	=	14800.0	nM	Cytotoxicity against human HCT116 cells assessed as inhibition of cell growth	CHEMBL4610019
+DCA	CHEMBL306823	CHEMBL4296406	CCD-841CoN	IC50	=	12500.0	nM	Cytotoxicity against human CRL1790 cells assessed as inhibition of cell growth	CHEMBL4610019
+DCA	CHEMBL306823	CHEMBL612545	Unchecked	Ratio IC50	=	0.85	None	Selectivity index, ratio of IC50 for human CRL1790 cells assessed as inhibition of cell growth to IC50 for hum	CHEMBL4610019
+DCA	CHEMBL306823	CHEMBL392	A549	IC50	=	19500000.0	nM	Antiproliferative activity against human A549 cells assessed as growth inhibition after 72 hrs by MTT assay	CHEMBL4732185
+DCA	CHEMBL306823	CHEMBL387	MCF7	IC50	=	13400000.0	nM	Antiproliferative activity against human MCF7 cells assessed as growth inhibition after 72 hrs by MTT assay	CHEMBL4732185
+DCA	CHEMBL306823	CHEMBL614910	SH-SY5Y	IC50	=	17400000.0	nM	Antiproliferative activity against human SHSY-5Y cells assessed as growth inhibition after 72 hrs by MTT assay	CHEMBL4732185
+DCA	CHEMBL306823	CHEMBL394	HCT-116	IC50	=	9800000.0	nM	Antiproliferative activity against human HCT-116 cells assessed as growth inhibition after 72 hrs by MTT assay	CHEMBL4732185
+DCA	CHEMBL306823	CHEMBL613859	A-375	IC50	=	20100000.0	nM	Antiproliferative activity against human A375 cells assessed as growth inhibition after 72 hrs by MTT assay	CHEMBL4732185
+DCA	CHEMBL306823	CHEMBL390	PC-3	IC50	=	15700000.0	nM	Antiproliferative activity against human PC3 cells assessed as growth inhibition after 72 hrs by MTT assay	CHEMBL4732185
+DCA	CHEMBL306823	CHEMBL4296457	L02	IC50	=	21700000.0	nM	Cytotoxicity against human L02 cells assessed as reduction in cell viability after 72 hrs by MTT assay	CHEMBL4732185
+DCA	CHEMBL306823	CHEMBL612545	Unchecked	EC50	>	100000000.0	nM	Inhibition of PDK (unknown origin) using RYHGHSMSDP as substrate after 30 mins by Kinase-Glo luminescent assay	CHEMBL4732185
+DCA	CHEMBL306823	CHEMBL612545	Unchecked	EC50	=	180000.0	nM	Inhibition of PDK (unknown origin) incubated for 10 mins in presence of ATP	CHEMBL5370584
+trazodone	CHEMBL621	CHEMBL612558	ADMET	Vdss	=	1.0	L.kg-1	Volume of distribution in man (IV dose)	CHEMBL1135488
+trazodone	CHEMBL621	CHEMBL612558	ADMET	Fu	=	0.07	None	Unbound fraction (plasma)	CHEMBL1135488
+trazodone	CHEMBL621	CHEMBL612558	ADMET	Fu	=	0.03	None	Unbound fraction (tissues)	CHEMBL1135488
+trazodone	CHEMBL621	CHEMBL612558	ADMET	eLog D	=	2.97	None	HPLC capacity factor (k')	CHEMBL1135488
+trazodone	CHEMBL621	CHEMBL612558	ADMET	Fraction ionised	=	0.197	None	Fraction ionized (pH 7.4)	CHEMBL1135488
+trazodone	CHEMBL621	CHEMBL2362975	No relevant target	pKa	=	6.79	None	Ionisation constant (pKa)	CHEMBL1135488
+trazodone	CHEMBL621	CHEMBL1907610	Adrenergic receptor alpha-1	IC50	=	281.0	nM	Binding affinity by its ability to displace [3H]prazosin radioligand from Alpha-1 adrenergic receptor on rat c	CHEMBL1135045
+trazodone	CHEMBL621	CHEMBL2096682	Sodium channel alpha subunits; brain (Types I, II, III)	Inhibition	=	26.2	%	Inhibition of binding of Batrachotoxinin [3H]BTX-B to high affinity sites on voltage dependent sodium channels	CHEMBL1122963
+trazodone	CHEMBL621	CHEMBL2096682	Sodium channel alpha subunits; brain (Types I, II, III)	Inhibition	=	79.6	%	Inhibition of binding of Batrachotoxinin [3H]BTX-B to high-affinity sites on voltage-dependent sodium channels	CHEMBL1122963
+trazodone	CHEMBL621	CHEMBL612558	ADMET	Vdss	=	1.0	L.kg-1	Observed volume of distribution	CHEMBL1148291
+trazodone	CHEMBL621	CHEMBL612558	ADMET	Fu	=	0.07	None	Unbound fraction (plasma)	CHEMBL1148291
+trazodone	CHEMBL621	CHEMBL2362975	No relevant target	pKa	=	6.79	None	Ionization constant (pKa)	CHEMBL1148291
+trazodone	CHEMBL621	CHEMBL322	5-hydroxytryptamine receptor 2A	Inhibition	=	78.0	%	Displacement of [3H]ketanserin from rat cortical membrane 5-hydroxytryptamine 2A receptor at 10e-7 M	CHEMBL1132559
+trazodone	CHEMBL621	CHEMBL1907610	Adrenergic receptor alpha-1	Inhibition	=	49.0	%	Displacement of [3H]prazosin from Alpha-1 adrenergic receptor of rat cortical membrane at 10e-7 M	CHEMBL1132559
+trazodone	CHEMBL621	CHEMBL2094123	Serotonin (5-HT) receptor	Inhibition	=	38.0	%	Displacement of [3H]-citalopram from rat forebrain membrane 5-hydroxytryptamine receptor at 10e-7 M	CHEMBL1132559
+trazodone	CHEMBL621	CHEMBL339	D(2) dopamine receptor	Inhibition	=	12.0	%	Displacement of [3H]sulpiride from rat striatal membrane Dopamine receptor D2 at 10e-7 M	CHEMBL1132559
+trazodone	CHEMBL621	CHEMBL304	Norepinephrine transporter	Inhibition	=	0.0	%	Inhibition of [3H]desmethylimipramine binding to Norepinephrine receptor of rat cortical membrane at 10e-7 M	CHEMBL1132559
+trazodone	CHEMBL621	CHEMBL3573	Histamine H1 receptor	Inhibition	=	5.0	%	Inhibition of [3H]pyrilamine binding to Histamine H1 receptor of bovine cerebellar membrane at 10e-7 M	CHEMBL1132559
+trazodone	CHEMBL621	CHEMBL287	Sigma non-opioid intracellular receptor 1	Inhibition	=	29.0	%	Inhibition of [3H](+)-pentazocine binding to Sigma opioid receptor type 1 of pig brain membranes at 10e-7 M	CHEMBL1132559
+trazodone	CHEMBL621	CHEMBL322	5-hydroxytryptamine receptor 2A	IC50	=	17.0	nM	Compound was tested for the inhibition of [3H]ketanserin binding to 5-hydroxytryptamine 2A receptor	CHEMBL1132559
+trazodone	CHEMBL621	CHEMBL1907610	Adrenergic receptor alpha-1	IC50	=	281.0	nM	Compound was tested for the inhibition of [3H]-prazosin binding to Alpha-1 adrenergic receptor	CHEMBL1132559
+trazodone	CHEMBL621	CHEMBL273	5-hydroxytryptamine receptor 1A	Ki	=	223.87	nM	Binding affinity of a compound to rat brain 5-hydroxytryptamine 1A (serotonin) receptor assayed by radiolabele	CHEMBL1129278
+trazodone	CHEMBL621	CHEMBL2362975	No relevant target	LogD	=	2.54	None	Partition coefficient (logD7.4)	CHEMBL1134540
+trazodone	CHEMBL621	CHEMBL375	Mus musculus	ED50	>	50.0	mg.kg-1	Effective dose was evaluated for its antagonism to reserpine induced hypothermia in mice by intraperitoneal ad	CHEMBL1122941
+trazodone	CHEMBL621	CHEMBL2362975	No relevant target	LogD	=	1.47	None	Partition coefficient (logD6.5)	CHEMBL1133765
+trazodone	CHEMBL621	CHEMBL612558	ADMET	delta logD	=	-0.33	None	Delta logD (logD6.5 - logD7.4)	CHEMBL1133765
+trazodone	CHEMBL621	CHEMBL2362975	No relevant target	pKa	=	6.7	None	Ionization constant (pKa)	CHEMBL1133765
+trazodone	CHEMBL621	CHEMBL612558	ADMET	F	>	80.0	%	Oral bioavailability in human	CHEMBL1133765
+trazodone	CHEMBL621	CHEMBL2362975	No relevant target	Log Kmemb	=	1.2	None	Calculated membrane partition coefficient (Kmemb)	CHEMBL1149124
+trazodone	CHEMBL621	CHEMBL2362975	No relevant target	LogD	=	2.97	None	Lipophilicity, log D at pH7.4	CHEMBL1148791
+trazodone	CHEMBL621	CHEMBL2362975	No relevant target	pKa	=	6.73	None	Acid dissociation constant, pKa of the compound	CHEMBL1148791
+trazodone	CHEMBL621	CHEMBL2362975	No relevant target	pKa	=	6.73	None	Dissociation constant, pKa by capillary electrophoresis	CHEMBL1152804
+trazodone	CHEMBL621	CHEMBL2362975	No relevant target	LogP	=	2.92	None	Lipophilicity, log P by microemulsion electrokinetic chromatography	CHEMBL1152804
+trazodone	CHEMBL621	CHEMBL2362975	No relevant target	LogD	=	2.99	None	Lipophilicity, log D at pH 7.4 by liquid chromatography	CHEMBL1152804
+trazodone	CHEMBL621	CHEMBL372	Homo sapiens	CL	=	1.4	mL.min-1.kg-1	Total clearance in human	CHEMBL1156824
+trazodone	CHEMBL621	CHEMBL372	Homo sapiens	CL	=	1.4	mL.min-1.kg-1	Hepatic clearance in human	CHEMBL1156824
+trazodone	CHEMBL621	CHEMBL372	Homo sapiens	CL_renal	=	0.0018	mL.min-1.kg-1	Renal clearance in human	CHEMBL1156824
+trazodone	CHEMBL621	CHEMBL372	Homo sapiens	Vdss	=	0.52	L.kg-1	Volume of distribution at steady state in human	CHEMBL1156824
+trazodone	CHEMBL621	CHEMBL372	Homo sapiens	F_fraction	=	0.77	None	Oral bioavailability in human	CHEMBL1156824
+trazodone	CHEMBL621	CHEMBL372	Homo sapiens	Fg	=	0.82	None	Fraction escaping gut-wall elimination in human	CHEMBL1156824
+trazodone	CHEMBL621	CHEMBL372	Homo sapiens	Fh	=	0.94	None	Fraction escaping hepatic elimination in human	CHEMBL1156824
+trazodone	CHEMBL621	CHEMBL372	Homo sapiens	Fa	=	1.0	None	Fraction absorbed in human	CHEMBL1156824
+trazodone	CHEMBL621	CHEMBL2243	Fatty-acid amide hydrolase 1	Inhibition	=	13.75	%	Inhibition of human FAAH at 1 uM	CHEMBL1154381
+trazodone	CHEMBL621	CHEMBL2362975	No relevant target	Solubility	=	127.0	ug.mL-1	Intrinsic solubility of the compound in water	CHEMBL1250533
+trazodone	CHEMBL621	CHEMBL1293235	Prelamin-A/C	Potency	=	14125.4	nM	PUBCHEM_BIOASSAY: qHTS Assay for Modulators of Lamin A Splicing. (Class of assay: confirmatory) 	CHEMBL1201862
+trazodone	CHEMBL621	CHEMBL4159	3-hydroxyacyl-CoA dehydrogenase type-2	Potency	=	15848.9	nM	PUBCHEM_BIOASSAY: qHTS Assay for Inhibitors of HSD17B4, hydroxysteroid (17-beta) dehydrogenase 4. (Class of as	CHEMBL1201862
+trazodone	CHEMBL621	CHEMBL4159	3-hydroxyacyl-CoA dehydrogenase type-2	Potency	=	31622.8	nM	PUBCHEM_BIOASSAY: qHTS Assay for Inhibitors of HSD17B4, hydroxysteroid (17-beta) dehydrogenase 4. (Class of as	CHEMBL1201862
+trazodone	CHEMBL621	CHEMBL1293226	Lysine-specific demethylase 4E	Potency	=	14125.4	nM	PUBCHEM_BIOASSAY: qHTS Assay for Inhibitors of Human Jumonji Domain Containing 2E (JMJD2E). (Class of assay: c	CHEMBL1201862
+trazodone	CHEMBL621	CHEMBL4261	Hypoxia-inducible factor 1-alpha	Potency	=	12589.3	nM	PUBCHEM_BIOASSAY: qHTS Assay for Identification of Small Molecule Agonists for Hypoxia Response Element Signal	CHEMBL1201862
+trazodone	CHEMBL621	CHEMBL3577	Aldehyde dehydrogenase 1A1	Potency	=	15848.9	nM	PUBCHEM_BIOASSAY: qHTS Assay for Inhibitors of Aldehyde Dehydrogenase 1 (ALDH1A1). (Class of assay: confirmato	CHEMBL1201862
+trazodone	CHEMBL621	CHEMBL4261	Hypoxia-inducible factor 1-alpha	Potency	=	12589.3	nM	PUBCHEM_BIOASSAY: qHTS Assay for Identification of Small Molecule Antagonists for Hypoxia Response Element Sig	CHEMBL1201862
+trazodone	CHEMBL621	CHEMBL4040	Mitogen-activated protein kinase 1	Potency	=	39810.7	nM	PUBCHEM_BIOASSAY: qHTS Assay for Inhibitors of the ERK Signaling Pathway using a Homogeneous Screening Assay. 	CHEMBL1201862
+trazodone	CHEMBL621	CHEMBL276	Muscarinic acetylcholine receptor M1	Potency	=	22387.2	nM	PUBCHEM_BIOASSAY: qHTS Assay for Antagonists of Acetylcholine Muscarinic M1 Receptor: Kinetic Measurement of I	CHEMBL1201862
+trazodone	CHEMBL621	CHEMBL1293255	15-hydroxyprostaglandin dehydrogenase [NAD(+)]	Potency	=	12589.3	nM	PUBCHEM_BIOASSAY: qHTS Assay for Inhibitors of HPGD (15-Hydroxyprostaglandin Dehydrogenase). (Class of assay: 	CHEMBL1201862
+trazodone	CHEMBL621	CHEMBL4159	3-hydroxyacyl-CoA dehydrogenase type-2	Potency	=	31622.8	nM	PUBCHEM_BIOASSAY: qHTS Assay for Inhibitors of HADH2 (Hydroxyacyl-Coenzyme A Dehydrogenase, Type II). (Class o	CHEMBL1201862
+trazodone	CHEMBL621	CHEMBL289	Cytochrome P450 2D6	Potency	=	12589.3	nM	PUBCHEM_BIOASSAY: qHTS Assay for Inhibitors and Substrates of Cytochrome P450 2D6. (Class of assay: confirmato	CHEMBL1201862
+trazodone	CHEMBL621	CHEMBL612558	ADMET	Vdss	=	0.52	L.kg-1	Volume of distribution at steady state in human after iv administration	CHEMBL1614632
+trazodone	CHEMBL621	CHEMBL612558	ADMET	CL	=	1.4	mL.min-1.kg-1	Clearance in human after iv administration	CHEMBL1614632
+trazodone	CHEMBL621	CHEMBL612558	ADMET	MRT	=	6.2	hr	Mean residence time in human after iv administration	CHEMBL1614632
+trazodone	CHEMBL621	CHEMBL612558	ADMET	T1/2	=	7.3	hr	Half life in human after iv administration	CHEMBL1614632
+trazodone	CHEMBL621	CHEMBL1697861	Hepatotoxicity	Hepatotoxicity	None	None	None	Literature-mined compound from Fourches et al multi-species drug-induced liver injury (DILI) dataset, effect i	CHEMBL1697731
+trazodone	CHEMBL621	CHEMBL1697861	Hepatotoxicity	Hepatotoxicity	None	None	None	Literature-mined compound from Fourches et al multi-species drug-induced liver injury (DILI) dataset, effect i	CHEMBL1697731
+trazodone	CHEMBL621	CHEMBL1697861	Hepatotoxicity	Hepatotoxicity	None	None	None	Literature-mined compound from Fourches et al multi-species drug-induced liver injury (DILI) dataset, effect i	CHEMBL1697731
+trazodone	CHEMBL621	CHEMBL1697861	Hepatotoxicity	Composite Activity - Score	None	None	None	FDA HLAED, liver enzyme composite activity	CHEMBL1697781
+trazodone	CHEMBL621	CHEMBL1697861	Hepatotoxicity	Composite Activity - Active	=	0.0	None	FDA HLAED, liver enzyme composite activity	CHEMBL1697781
+trazodone	CHEMBL621	CHEMBL1697861	Hepatotoxicity	Composite Activity - Marginal	=	0.0	None	FDA HLAED, liver enzyme composite activity	CHEMBL1697781
+trazodone	CHEMBL621	CHEMBL1697861	Hepatotoxicity	Alkaline Phosphatase Increase - Activity Score	None	None	None	FDA HLAED, alkaline phosphatase increase	CHEMBL1697781
+trazodone	CHEMBL621	CHEMBL1697861	Hepatotoxicity	Alkaline Phosphatase Increase - Index Value	=	0.2	None	FDA HLAED, alkaline phosphatase increase	CHEMBL1697781
+trazodone	CHEMBL621	CHEMBL1697861	Hepatotoxicity	Alkaline Phosphatase Increase - Number of Reports	<	4.0	None	FDA HLAED, alkaline phosphatase increase	CHEMBL1697781
+trazodone	CHEMBL621	CHEMBL1697861	Hepatotoxicity	SGOT Increase - Activity Score	None	None	None	FDA HLAED, serum glutamic oxaloacetic transaminase (SGOT) increase	CHEMBL1697781
+trazodone	CHEMBL621	CHEMBL1697861	Hepatotoxicity	SGOT Increase - Index Value	=	0.3	None	FDA HLAED, serum glutamic oxaloacetic transaminase (SGOT) increase	CHEMBL1697781
+trazodone	CHEMBL621	CHEMBL1697861	Hepatotoxicity	SGOT Increase - Number of Reports	<	4.0	None	FDA HLAED, serum glutamic oxaloacetic transaminase (SGOT) increase	CHEMBL1697781
+trazodone	CHEMBL621	CHEMBL1697861	Hepatotoxicity	SGPT Increase - Activity Score	None	None	None	FDA HLAED, serum glutamic pyruvic transaminase (SGPT) increase	CHEMBL1697781
+trazodone	CHEMBL621	CHEMBL1697861	Hepatotoxicity	SGPT Increase - Index Value	=	0.0	None	FDA HLAED, serum glutamic pyruvic transaminase (SGPT) increase	CHEMBL1697781
+trazodone	CHEMBL621	CHEMBL1697861	Hepatotoxicity	SGPT Increase - Number of Reports	<	4.0	None	FDA HLAED, serum glutamic pyruvic transaminase (SGPT) increase	CHEMBL1697781
+trazodone	CHEMBL621	CHEMBL1697861	Hepatotoxicity	LDH Increase - Activity Score	None	None	None	FDA HLAED, lactate dehydrogenase (LDH) increase	CHEMBL1697781
+trazodone	CHEMBL621	CHEMBL1697861	Hepatotoxicity	LDH Increase - Index Value	=	0.3	None	FDA HLAED, lactate dehydrogenase (LDH) increase	CHEMBL1697781
+trazodone	CHEMBL621	CHEMBL1697861	Hepatotoxicity	LDH Increase - Number of Reports	<	4.0	None	FDA HLAED, lactate dehydrogenase (LDH) increase	CHEMBL1697781
+trazodone	CHEMBL621	CHEMBL1697861	Hepatotoxicity	GGT Increase - Activity Score	None	None	None	FDA HLAED, gamma-glutamyl transferase (GGT) increase	CHEMBL1697781
+trazodone	CHEMBL621	CHEMBL1697861	Hepatotoxicity	GGT Increase - Index Value	=	0.0	None	FDA HLAED, gamma-glutamyl transferase (GGT) increase	CHEMBL1697781
+trazodone	CHEMBL621	CHEMBL1697861	Hepatotoxicity	GGT Increase - Number of Reports	<	4.0	None	FDA HLAED, gamma-glutamyl transferase (GGT) increase	CHEMBL1697781
+trazodone	CHEMBL621	CHEMBL2056	D(1A) dopamine receptor	Potency	None	11220.2	nM	PUBCHEM_BIOASSAY: HTS Assay for Allosteric Agonists of the Human D1 Dopamine Receptor: Primary Screen for Anta	CHEMBL1201862
+trazodone	CHEMBL621	CHEMBL5501	Histone acetyltransferase KAT2A	Potency	None	11220.2	nM	PUBCHEM_BIOASSAY: qHTS Assay for Inhibitors of GCN5L2. (Class of assay: confirmatory) [Related pubchem assays 	CHEMBL1201862
+trazodone	CHEMBL621	CHEMBL2056	D(1A) dopamine receptor	Potency	None	1635.9	nM	PUBCHEM_BIOASSAY: HTS Assay for Allosteric Agonists of the Human D1 Dopamine Receptor: Primary Screen for Pote	CHEMBL1201862
+trazodone	CHEMBL621	CHEMBL5686	ATP-dependent 6-phosphofructokinase	Potency	None	8492.1	nM	PUBCHEM_BIOASSAY: qHTS Validation Assay to Find Inhibitors of T. brucei phosphofructokinase. (Class of assay: 	CHEMBL1201862
+trazodone	CHEMBL621	CHEMBL6032	Histone-lysine N-methyltransferase EHMT2	Potency	None	33587.5	nM	PUBCHEM_BIOASSAY: qHTS Assay for Inhibitors of Histone Lysine Methyltransferase G9a. (Class of assay: confirma	CHEMBL1201862
+trazodone	CHEMBL621	CHEMBL3397	Cytochrome P450 2C9	AC50	None	None	None	PUBCHEM_BIOASSAY: Cytochrome panel assay with activity outcomes. (Class of assay: other) Panel member name: p4	CHEMBL1201862
+trazodone	CHEMBL621	CHEMBL3397	Cytochrome P450 2C9	AC50	None	None	None	PUBCHEM_BIOASSAY: Cytochrome panel assay with activity outcomes. (Class of assay: other) Panel member name: p4	CHEMBL1201862
+trazodone	CHEMBL621	CHEMBL340	Cytochrome P450 3A4	AC50	None	None	None	PUBCHEM_BIOASSAY: Cytochrome panel assay with activity outcomes. (Class of assay: other) Panel member name: p4	CHEMBL1201862
+trazodone	CHEMBL621	CHEMBL3622	Cytochrome P450 2C19	AC50	None	None	None	PUBCHEM_BIOASSAY: Cytochrome panel assay with activity outcomes. (Class of assay: other) Panel member name: p4	CHEMBL1201862
+trazodone	CHEMBL621	CHEMBL289	Cytochrome P450 2D6	AC50	None	None	None	PUBCHEM_BIOASSAY: Cytochrome panel assay with activity outcomes. (Class of assay: other) Panel member name: p4	CHEMBL1201862
+trazodone	CHEMBL621	CHEMBL340	Cytochrome P450 3A4	AC50	None	None	None	PUBCHEM_BIOASSAY: Cytochrome panel assay with activity outcomes. (Class of assay: other) Panel member name: p4	CHEMBL1201862
+trazodone	CHEMBL621	CHEMBL3356	Cytochrome P450 1A2	AC50	None	None	None	PUBCHEM_BIOASSAY: Cytochrome panel assay with activity outcomes. (Class of assay: other) Panel member name: p4	CHEMBL1201862
+trazodone	CHEMBL621	CHEMBL3622	Cytochrome P450 2C19	AC50	None	None	None	PUBCHEM_BIOASSAY: Cytochrome panel assay with activity outcomes. (Class of assay: other) Panel member name: p4	CHEMBL1201862
+trazodone	CHEMBL621	CHEMBL3356	Cytochrome P450 1A2	AC50	None	None	None	PUBCHEM_BIOASSAY: Cytochrome panel assay with activity outcomes. (Class of assay: other) Panel member name: p4	CHEMBL1201862
+trazodone	CHEMBL621	CHEMBL289	Cytochrome P450 2D6	AC50	=	12589.25	nM	PUBCHEM_BIOASSAY: Cytochrome panel assay with activity outcomes. (Class of assay: other) Panel member name: p4	CHEMBL1201862
+trazodone	CHEMBL621	CHEMBL6035	Thioredoxin reductase 1, cytoplasmic	Potency	None	17782.8	nM	PUBCHEM_BIOASSAY: qHTS Assay for Inhibitors of Mammalian Selenoprotein Thioredoxin Reductase 1 (TrxR1): qHTS. 	CHEMBL1201862
+trazodone	CHEMBL621	CHEMBL1795087	Ubiquitin carboxyl-terminal hydrolase 1	Potency	None	31622.8	nM	PUBCHEM_BIOASSAY: Inhibitors of USP1/UAF1: Pilot qHTS. (Class of assay: confirmatory) [Related pubchem assays 	CHEMBL1201862
+trazodone	CHEMBL621	CHEMBL6035	Thioredoxin reductase 1, cytoplasmic	Potency	None	31622.8	nM	PUBCHEM_BIOASSAY: qHTS Assay for Substrates of Mammalian Selenoprotein Thioredoxin Reductase 1 (TrxR1): qHTS. 	CHEMBL1201862
+trazodone	CHEMBL621	CHEMBL220	Acetylcholinesterase	IC50	None	None	None	DRUGMATRIX: Acetylcholinesterase enzyme inhibition (substrate: acetylthiocholine)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL220	Acetylcholinesterase	Ki	None	None	None	DRUGMATRIX: Acetylcholinesterase enzyme inhibition (substrate: acetylthiocholine)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL226	Adenosine receptor A1	IC50	None	None	None	DRUGMATRIX: Adenosine A1 radioligand binding (ligand: DPCPX)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL226	Adenosine receptor A1	Ki	None	None	None	DRUGMATRIX: Adenosine A1 radioligand binding (ligand: DPCPX)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL251	Adenosine receptor A2a	IC50	None	None	None	DRUGMATRIX: Adenosine A2A radioligand binding (ligand: AB-MECA)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL251	Adenosine receptor A2a	Ki	None	None	None	DRUGMATRIX: Adenosine A2A radioligand binding (ligand: AB-MECA)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL256	Adenosine receptor A3	IC50	None	None	None	DRUGMATRIX: Adenosine A3 radioligand binding (ligand: AB-MECA)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL256	Adenosine receptor A3	Ki	None	None	None	DRUGMATRIX: Adenosine A3 radioligand binding (ligand: AB-MECA)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL612545	Unchecked	IC50	None	None	None	DRUGMATRIX: Sodium/nucleoside co-transporter radioligand binding (ligand: nitrobenzylthioinosine)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL612545	Unchecked	Ki	None	None	None	DRUGMATRIX: Sodium/nucleoside co-transporter radioligand binding (ligand: nitrobenzylthioinosine)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL319	Alpha-1A adrenergic receptor	IC50	=	117.0	nM	DRUGMATRIX: Alpha-1A adrenergic receptor radioligand binding (ligand: prazosin)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL319	Alpha-1A adrenergic receptor	Ki	=	47.0	nM	DRUGMATRIX: Alpha-1A adrenergic receptor radioligand binding (ligand: prazosin)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL315	Alpha-1B adrenergic receptor	IC50	=	111.0	nM	DRUGMATRIX: Alpha-1B adrenergic receptor radioligand binding (ligand: prazosin)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL315	Alpha-1B adrenergic receptor	Ki	=	61.0	nM	DRUGMATRIX: Alpha-1B adrenergic receptor radioligand binding (ligand: prazosin)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL223	Alpha-1D adrenergic receptor	IC50	=	265.0	nM	DRUGMATRIX: Alpha-1D adrenergic receptor radioligand binding (ligand: prazosin)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL223	Alpha-1D adrenergic receptor	Ki	=	130.0	nM	DRUGMATRIX: Alpha-1D adrenergic receptor radioligand binding (ligand: prazosin)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL1867	Alpha-2A adrenergic receptor	IC50	=	909.0	nM	DRUGMATRIX: Alpha-2A adrenergic receptor radioligand binding (ligand: MK-912)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL1867	Alpha-2A adrenergic receptor	Ki	=	341.0	nM	DRUGMATRIX: Alpha-2A adrenergic receptor radioligand binding (ligand: MK-912)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL1942	Alpha-2B adrenergic receptor	IC50	=	389.0	nM	DRUGMATRIX: Alpha-2B adrenergic receptor radioligand binding (ligand: Rauwolscine)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL1942	Alpha-2B adrenergic receptor	Ki	=	178.0	nM	DRUGMATRIX: Alpha-2B adrenergic receptor radioligand binding (ligand: Rauwolscine)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL1916	Alpha-2C adrenergic receptor	IC50	=	1942.0	nM	DRUGMATRIX: Adrenergic Alpha-2C radioligand binding (ligand: [3H] MK-912)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL1916	Alpha-2C adrenergic receptor	Ki	=	282.0	nM	DRUGMATRIX: Adrenergic Alpha-2C radioligand binding (ligand: [3H] MK-912)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL213	Beta-1 adrenergic receptor	IC50	None	None	None	DRUGMATRIX: Adrenergic beta1 radioligand binding (ligand: [125I] Cyanopindolol)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL213	Beta-1 adrenergic receptor	Ki	None	None	None	DRUGMATRIX: Adrenergic beta1 radioligand binding (ligand: [125I] Cyanopindolol)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL210	Beta-2 adrenergic receptor	IC50	None	None	None	DRUGMATRIX: Adrenergic beta2 radioligand binding (ligand: [3H] CGP-12177)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL210	Beta-2 adrenergic receptor	Ki	None	None	None	DRUGMATRIX: Adrenergic beta2 radioligand binding (ligand: [3H] CGP-12177)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL246	Beta-3 adrenergic receptor	IC50	None	None	None	DRUGMATRIX: Adrenergic beta3 radioligand binding (ligand: [125I] Cyanopindolol)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL246	Beta-3 adrenergic receptor	Ki	None	None	None	DRUGMATRIX: Adrenergic beta3 radioligand binding (ligand: [125I] Cyanopindolol)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL222	Sodium-dependent noradrenaline transporter	IC50	None	None	None	DRUGMATRIX: Norepinephrine Transporter radioligand binding (ligand: [125I] RTI-55)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL222	Sodium-dependent noradrenaline transporter	Ki	None	None	None	DRUGMATRIX: Norepinephrine Transporter radioligand binding (ligand: [125I] RTI-55)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL2622	Aldo-keto reductase family 1 member B1	IC50	None	None	None	DRUGMATRIX: Aldose Reductase enzyme inhibition (substrate: DL-Glyceraldehyde)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL2622	Aldo-keto reductase family 1 member B1	Ki	None	None	None	DRUGMATRIX: Aldose Reductase enzyme inhibition (substrate: DL-Glyceraldehyde)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL4607	Type-2 angiotensin II receptor	IC50	None	None	None	DRUGMATRIX: Angiotensin AT2 radioligand binding (ligand: [125I] CGP-42112A)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL4607	Type-2 angiotensin II receptor	Ki	None	None	None	DRUGMATRIX: Angiotensin AT2 radioligand binding (ligand: [125I] CGP-42112A)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL612545	Unchecked	IC50	None	None	None	DRUGMATRIX: ATPase, Na+/K+ enzyme inhibition (substrate: ATP)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL612545	Unchecked	Ki	None	None	None	DRUGMATRIX: ATPase, Na+/K+ enzyme inhibition (substrate: ATP)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL612545	Unchecked	IC50	None	None	None	DRUGMATRIX: Atrial Natriuretic Factor (ANF) radioligand binding (ligand: [125I] ANF (rat))	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL612545	Unchecked	Ki	None	None	None	DRUGMATRIX: Atrial Natriuretic Factor (ANF) radioligand binding (ligand: [125I] ANF (rat))	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL612545	Unchecked	IC50	None	None	None	DRUGMATRIX: beta-Lactamase enzyme inhibition (substrate: Nitrocefin)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL612545	Unchecked	Ki	None	None	None	DRUGMATRIX: beta-Lactamase enzyme inhibition (substrate: Nitrocefin)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL3157	B2 bradykinin receptor	IC50	None	None	None	DRUGMATRIX: Bradykinin B2 radioligand binding (ligand: [3H] Bradykinin)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL3157	B2 bradykinin receptor	Ki	None	None	None	DRUGMATRIX: Bradykinin B2 radioligand binding (ligand: [3H] Bradykinin)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL1832	Calcitonin receptor	IC50	None	None	None	DRUGMATRIX: Calcitonin radioligand binding (ligand: [125I] Calcitonin (salmon))	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL1832	Calcitonin receptor	Ki	None	None	None	DRUGMATRIX: Calcitonin radioligand binding (ligand: [125I] Calcitonin (salmon))	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL612545	Unchecked	IC50	None	None	None	DRUGMATRIX: Calcium Channel Type L, Benzothiazepine radioligand binding (ligand: [3H] Diltiazem)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL612545	Unchecked	Ki	None	None	None	DRUGMATRIX: Calcium Channel Type L, Benzothiazepine radioligand binding (ligand: [3H] Diltiazem)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL612545	Unchecked	IC50	None	None	None	DRUGMATRIX: Calcium Channel Type L, Dihydropyridine radioligand binding (ligand: [3H] Nitrendipine)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL612545	Unchecked	Ki	None	None	None	DRUGMATRIX: Calcium Channel Type L, Dihydropyridine radioligand binding (ligand: [3H] Nitrendipine)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL612545	Unchecked	IC50	None	None	None	DRUGMATRIX: Calcium Channel Type L, Phenylalkylamine radioligand binding (ligand: [3H] (-)-Desmethoxyverapamil	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL612545	Unchecked	Ki	None	None	None	DRUGMATRIX: Calcium Channel Type L, Phenylalkylamine radioligand binding (ligand: [3H] (-)-Desmethoxyverapamil	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL218	Cannabinoid receptor 1	IC50	None	None	None	DRUGMATRIX: Cannabinoid CB1 radioligand binding (ligand: [3H] SR141716A)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL218	Cannabinoid receptor 1	Ki	None	None	None	DRUGMATRIX: Cannabinoid CB1 radioligand binding (ligand: [3H] SR141716A)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL205	Carbonic anhydrase 2	IC50	None	None	None	DRUGMATRIX: Carbonic Anhydrase II enzyme inhibition (substrate: 4-Nitrophenyl acetate (4-NPA))	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL205	Carbonic anhydrase 2	Ki	None	None	None	DRUGMATRIX: Carbonic Anhydrase II enzyme inhibition (substrate: 4-Nitrophenyl acetate (4-NPA))	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL4015	C-C chemokine receptor type 2	IC50	None	None	None	DRUGMATRIX: Chemokine CCR2B radioligand binding (ligand: [125I] MCP-1)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL4015	C-C chemokine receptor type 2	Ki	None	None	None	DRUGMATRIX: Chemokine CCR2B radioligand binding (ligand: [125I] MCP-1)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL2414	C-C chemokine receptor type 4	IC50	None	None	None	DRUGMATRIX: Chemokine CCR4 radioligand binding (ligand: [125I] TARC)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL2414	C-C chemokine receptor type 4	Ki	None	None	None	DRUGMATRIX: Chemokine CCR4 radioligand binding (ligand: [125I] TARC)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL274	C-C chemokine receptor type 5	IC50	None	None	None	DRUGMATRIX: Chemokine CCR5 radioligand binding (ligand: [125I] MIP-1alpha)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL274	C-C chemokine receptor type 5	Ki	None	None	None	DRUGMATRIX: Chemokine CCR5 radioligand binding (ligand: [125I] MIP-1alpha)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL4029	C-X-C chemokine receptor type 1	IC50	None	None	None	DRUGMATRIX: Chemokine CXCR1 (IL-8A)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL4029	C-X-C chemokine receptor type 1	Ki	None	None	None	DRUGMATRIX: Chemokine CXCR1 (IL-8A)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL2434	C-X-C chemokine receptor type 2	IC50	None	None	None	DRUGMATRIX: Chemokine CXCR2 (IL-8B) radioligand binding (ligand: [125I] IL-8)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL2434	C-X-C chemokine receptor type 2	Ki	None	None	None	DRUGMATRIX: Chemokine CXCR2 (IL-8B) radioligand binding (ligand: [125I] IL-8)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL1901	Cholecystokinin receptor type A	IC50	None	None	None	DRUGMATRIX: Cholecystokinin CCKA radioligand binding (ligand: [3H] L-364,718)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL1901	Cholecystokinin receptor type A	Ki	None	None	None	DRUGMATRIX: Cholecystokinin CCKA radioligand binding (ligand: [3H] L-364,718)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL221	Prostaglandin G/H synthase 1	IC50	None	None	None	DRUGMATRIX: Cyclooxygenase COX-1 enzyme inhibition (substrate: Arachidonic acid)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL221	Prostaglandin G/H synthase 1	Ki	None	None	None	DRUGMATRIX: Cyclooxygenase COX-1 enzyme inhibition (substrate: Arachidonic acid)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL230	Prostaglandin G/H synthase 2	IC50	None	None	None	DRUGMATRIX: Cyclooxygenase COX-2 enzyme inhibition (substrate: Arachidonic acid)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL230	Prostaglandin G/H synthase 2	Ki	None	None	None	DRUGMATRIX: Cyclooxygenase COX-2 enzyme inhibition (substrate: Arachidonic acid)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL3356	Cytochrome P450 1A2	IC50	None	None	None	DRUGMATRIX: CYP450, 1A2 enzyme inhibition (substrate: 3-Cyano-7-ethoxycoumarin)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL3356	Cytochrome P450 1A2	Ki	None	None	None	DRUGMATRIX: CYP450, 1A2 enzyme inhibition (substrate: 3-Cyano-7-ethoxycoumarin)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL5282	Cytochrome P450 2A6	IC50	None	None	None	DRUGMATRIX: CYP450, 2A6 enzyme inhibition (substrate: 3-Cyano-7-ethoxycoumarin)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL5282	Cytochrome P450 2A6	Ki	None	None	None	DRUGMATRIX: CYP450, 2A6 enzyme inhibition (substrate: 3-Cyano-7-ethoxycoumarin)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL3622	Cytochrome P450 2C19	IC50	None	None	None	DRUGMATRIX: CYP450, 2C19 enzyme inhibition (substrate: 3-Cyano-7-ethoxycoumarin)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL3622	Cytochrome P450 2C19	Ki	None	None	None	DRUGMATRIX: CYP450, 2C19 enzyme inhibition (substrate: 3-Cyano-7-ethoxycoumarin)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL3397	Cytochrome P450 2C9	IC50	None	None	None	DRUGMATRIX: CYP450, 2C9 enzyme inhibition (substrate: 3-Cyano-7-ethoxycoumarin)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL3397	Cytochrome P450 2C9	Ki	None	None	None	DRUGMATRIX: CYP450, 2C9 enzyme inhibition (substrate: 3-Cyano-7-ethoxycoumarin)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL289	Cytochrome P450 2D6	IC50	None	None	None	DRUGMATRIX: CYP450, 2D6 enzyme inhibition (substrate: 3-Cyano-7-ethoxycoumarin)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL289	Cytochrome P450 2D6	Ki	None	None	None	DRUGMATRIX: CYP450, 2D6 enzyme inhibition (substrate: 3-Cyano-7-ethoxycoumarin)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL5281	Cytochrome P450 2E1	IC50	None	None	None	DRUGMATRIX: CYP450, 2E1 enzyme inhibition (substrate: 3-Cyano-7-ethoxycoumarin)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL5281	Cytochrome P450 2E1	Ki	None	None	None	DRUGMATRIX: CYP450, 2E1 enzyme inhibition (substrate: 3-Cyano-7-ethoxycoumarin)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL340	Cytochrome P450 3A4	IC50	None	None	None	DRUGMATRIX: CYP450, 3A4 enzyme inhibition (substrate: 7-Benzyloxy-4-(trifluoromethyl)-coumarin)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL340	Cytochrome P450 3A4	Ki	None	None	None	DRUGMATRIX: CYP450, 3A4 enzyme inhibition (substrate: 7-Benzyloxy-4-(trifluoromethyl)-coumarin)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL2056	D(1A) dopamine receptor	IC50	None	None	None	DRUGMATRIX: Dopamine D1 radioligand binding (ligand: [3H] SCH-23390)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL2056	D(1A) dopamine receptor	Ki	None	None	None	DRUGMATRIX: Dopamine D1 radioligand binding (ligand: [3H] SCH-23390)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL217	D(2) dopamine receptor	IC50	None	None	None	DRUGMATRIX: Dopamine D2L radioligand binding (ligand: [3H] Spiperone)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL217	D(2) dopamine receptor	Ki	None	None	None	DRUGMATRIX: Dopamine D2L radioligand binding (ligand: [3H] Spiperone)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL234	D(3) dopamine receptor	IC50	=	3743.0	nM	DRUGMATRIX: Dopamine D3 radioligand binding (ligand: [3H] Spiperone)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL234	D(3) dopamine receptor	Ki	=	1271.0	nM	DRUGMATRIX: Dopamine D3 radioligand binding (ligand: [3H] Spiperone)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL219	D(4) dopamine receptor	IC50	None	None	None	DRUGMATRIX: Dopamine D4.2 radioligand binding (ligand: [3H] Spiperone)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL219	D(4) dopamine receptor	Ki	None	None	None	DRUGMATRIX: Dopamine D4.2 radioligand binding (ligand: [3H] Spiperone)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL238	Sodium-dependent dopamine transporter	IC50	None	None	None	DRUGMATRIX: Dopamine Transporter radioligand binding (ligand: [125I] RTI-55)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL238	Sodium-dependent dopamine transporter	Ki	None	None	None	DRUGMATRIX: Dopamine Transporter radioligand binding (ligand: [125I] RTI-55)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL252	Endothelin-1 receptor	IC50	None	None	None	DRUGMATRIX: Endothelin ETA radioligand binding (ligand: [125I] Endothelin-1)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL252	Endothelin-1 receptor	Ki	None	None	None	DRUGMATRIX: Endothelin ETA radioligand binding (ligand: [125I] Endothelin-1)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL206	Estrogen receptor	IC50	None	None	None	DRUGMATRIX: Estrogen ERalpha radioligand binding (ligand: [3H] Estradiol)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL206	Estrogen receptor	Ki	None	None	None	DRUGMATRIX: Estrogen ERalpha radioligand binding (ligand: [3H] Estradiol)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL242	Estrogen receptor beta	IC50	None	None	None	DRUGMATRIX: Estrogen ERbeta radioligand binding (ligand: [3H] Estradiol)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL242	Estrogen receptor beta	Ki	None	None	None	DRUGMATRIX: Estrogen ERbeta radioligand binding (ligand: [3H] Estradiol)	CHEMBL1909046
+trazodone	CHEMBL621	CHEMBL612545	Unchecked	IC50	None	None	None	DRUGMATRIX: GABAA, Muscimol, Central radioligand binding (ligand: [3H] Muscimol)	CHEMBL1909046
+AZD7545	CHEMBL3392645	CHEMBL612545	Unchecked	Potency	None	7.4	nM	PubChem BioAssay. Cell Proliferation Assay against the HBL1 Cell Line. (Class of assay: confirmatory) 	CHEMBL1201862
+AZD7545	CHEMBL3392645	CHEMBL612545	Unchecked	Potency	None	5257.6	nM	PubChem BioAssay. Cell Proliferation Assay against a hMSC Cell Line. (Class of assay: confirmatory) 	CHEMBL1201862
+AZD7545	CHEMBL3392645	CHEMBL3879801	NON-PROTEIN TARGET	Potency	None	23485.0	nM	PubChem BioAssay. Cytotoxicity counterscreen for NFkB agonists and antagonists. (Class of assay: confirmatory)	CHEMBL1201862
+AZD7545	CHEMBL3392645	CHEMBL612545	Unchecked	Potency	None	117703.8	nM	PubChem BioAssay. Cell Proliferation Assay against the TMD8 Cell Line. (Class of assay: confirmatory) 	CHEMBL1201862
+AZD7545	CHEMBL3392645	CHEMBL3879801	NON-PROTEIN TARGET	Potency	None	9432.9	nM	PubChem BioAssay. qHTS profiling of the MIPE4 collection as inhibitors of Plasmodium falciparum (3D7) prolifer	CHEMBL1201862
+AZD7545	CHEMBL3392645	CHEMBL612545	Unchecked	Potency	None	331.7	nM	PubChem BioAssay. Cell Proliferation Assay Versus the ED40515 IL2 Dependent  ATL cell lines.   (Class of assay	CHEMBL1201862
+AZD7545	CHEMBL3392645	CHEMBL3879801	NON-PROTEIN TARGET	Potency	None	3.8	nM	PubChem BioAssay. qHTS profiling of the MIPE4 collection as inhibitors of Plasmodium falciparum (DD2) prolifer	CHEMBL1201862
+AZD7545	CHEMBL3392645	CHEMBL3879801	NON-PROTEIN TARGET	Potency	None	11875.4	nM	PubChem BioAssay. qHTS profiling for inhibitors of Plasmodium falciparum (3D7) proliferation.   (Class of assa	CHEMBL1201862
+AZD7545	CHEMBL3392645	CHEMBL612545	Unchecked	Potency	None	9349.5	nM	PubChem BioAssay. Cell Proliferation Assay Versus the ED40515 IL2 Independent  ATL cell lines.   (Class of ass	CHEMBL1201862
+AZD7545	CHEMBL3392645	CHEMBL3879801	NON-PROTEIN TARGET	Potency	None	13324.4	nM	PubChem BioAssay. qHTS profiling of the MIPE4 collection as inhibitors of Plasmodium falciparum (DD2) prolifer	CHEMBL1201862
+AZD7545	CHEMBL3392645	CHEMBL3879801	NON-PROTEIN TARGET	Potency	None	10583.9	nM	PubChem BioAssay. qHTS profiling of the MIPE4 collection as inhibitors of Plasmodium falciparum (HB3) prolifer	CHEMBL1201862
+AZD7545	CHEMBL3392645	CHEMBL3879801	NON-PROTEIN TARGET	Potency	None	1.3	nM	PubChem BioAssay. qHTS profiling for inhibitors of Plasmodium falciparum (DD2) proliferation.   (Class of assa	CHEMBL1201862
+AZD7545	CHEMBL3392645	CHEMBL612545	Unchecked	Potency	None	13206.6	nM	PubChem BioAssay. Immunotoxin (HA22) sensitization/mitigation study - treatment arm (low dose).   (Class of as	CHEMBL1201862
+AZD7545	CHEMBL3392645	CHEMBL612545	Unchecked	Potency	None	11770.4	nM	PubChem BioAssay. Immunotoxin (SS1P) sensitization/mitigation study - treatment arm.   (Class of assay: confir	CHEMBL1201862
+AZD7545	CHEMBL3392645	CHEMBL612545	Unchecked	Potency	None	1662.6	nM	PubChem BioAssay. Immunotoxin (HA22) sensitization/mitigation study. Vehicle arm (PBS).   (Class of assay: con	CHEMBL1201862
+AZD7545	CHEMBL3392645	CHEMBL4303835	SARS-CoV-2	Inhibition	=	82.42	%	Antiviral activity determined as inhibition of SARS-CoV-2 induced cytotoxicity of Caco-2 cells at 10 uM after 	CHEMBL4303101
+AZD7545	CHEMBL3392645	CHEMBL4523582	Replicase polyprotein 1ab	Inhibition	=	-1.45	%	SARS-CoV-2 3CL-Pro protease inhibition percentage at 20µM  by FRET kind of response from peptide substrate	CHEMBL4495564
+AZD7545	CHEMBL3392645	CHEMBL4303835	SARS-CoV-2	Inhibition	=	-0.23	%	Antiviral activity determined as inhibition of SARS-CoV-2 induced cytotoxicity of VERO-6 cells at 10 uM after 	CHEMBL4495565
+AZD7545	CHEMBL3392645	CHEMBL4303835	SARS-CoV-2	Inhibition	=	-0.23	%	Antiviral activity determined as inhibition of SARS-CoV-2 induced cytotoxicity of VERO-6 cells at 10 uM after 	CHEMBL4495565
+GSK2606414	CHEMBL2171124	CHEMBL376	Rattus norvegicus	CL	=	21.5	mL.min-1.kg-1	Blood clearance in Sprague-Dawley rat at 2 mg/kg, iv by LC/MS/MS analysis	CHEMBL2169840
+GSK2606414	CHEMBL2171124	CHEMBL6030	Eukaryotic translation initiation factor 2-alpha kinase 3	IC50	=	0.4	nM	Inhibition of GST tagged PERK cytoplasmic domain mediated EIF2alpha phosphorylation	CHEMBL2169840
+GSK2606414	CHEMBL2171124	CHEMBL375	Mus musculus	Activity	None	None	None	Toxicity in human BxPC3 cell xenografted nude mouse assessed as change in body weight at 50 to 150 mg/kg, po b	CHEMBL2169840
+GSK2606414	CHEMBL2171124	CHEMBL375	Mus musculus	Activity	None	None	None	Toxicity in human BxPC3 cell xenografted nude mouse assessed as overt signs of toxicity at 50 to 150 mg/kg, po	CHEMBL2169840
+GSK2606414	CHEMBL2171124	CHEMBL614530	BXPC-3	TGI	None	None	None	Antitumor activity against human BxPC3 cell xenografted in po dosed nude mouse assessed as tumor growth inhibi	CHEMBL2169840
+GSK2606414	CHEMBL2171124	CHEMBL612545	Unchecked	Ratio IC50	=	385.0	None	Selectivity ratio of IC50 for to IC50 for c-Kit to IC50 for GST tagged PERK cytoplasmic domain	CHEMBL2169840
+GSK2606414	CHEMBL2171124	CHEMBL612545	Unchecked	Ratio IC50	=	100.0	None	Selectivity ratio of IC50 for to IC50 for PKR to IC50 for GST tagged PERK cytoplasmic domain	CHEMBL2169840
+GSK2606414	CHEMBL2171124	CHEMBL612545	Unchecked	Ratio IC50	=	100.0	None	Selectivity ratio of IC50 for to IC50 for HRI to IC50 for GST tagged PERK cytoplasmic domain	CHEMBL2169840
+GSK2606414	CHEMBL2171124	CHEMBL614530	BXPC-3	TGI	=	59.0	%	Antitumor activity against human BxPC3 cell xenografted in nude mouse assessed as tumor growth inhibition at 1	CHEMBL2169840
+GSK2606414	CHEMBL2171124	CHEMBL614530	BXPC-3	TGI	=	20.0	%	Antitumor activity against human BxPC3 cell xenografted in nude mouse assessed as tumor growth inhibition at 5	CHEMBL2169840
+GSK2606414	CHEMBL2171124	CHEMBL376	Rattus norvegicus	F	=	100.0	%	Oral bioavailability in Sprague-Dawley rat at 4.2 mg/kg by LC/MS/MS analysis	CHEMBL2169840
+GSK2606414	CHEMBL2171124	CHEMBL376	Rattus norvegicus	AUC	=	6575.8	ng.hr.mL-1	AUC (0 to t) in Sprague-Dawley rat at 4.2 mg/kg, po by LC/MS/MS analysis	CHEMBL2169840
+GSK2606414	CHEMBL2171124	CHEMBL376	Rattus norvegicus	T1/2	=	2.5	hr	Half life state in Sprague-Dawley rat at 2.1 mg/kg, iv by LC/MS/MS analysis	CHEMBL2169840
+GSK2606414	CHEMBL2171124	CHEMBL376	Rattus norvegicus	Vdss	=	3.8	L.kg-1	Volume of distribution at steady state in Sprague-Dawley rat at 2.1 mg/kg, iv by LC/MS/MS analysis	CHEMBL2169840
+GSK2606414	CHEMBL2171124	CHEMBL376	Rattus norvegicus	CL	=	21.5	mL.min-1.kg-1	Blood clearance in Sprague-Dawley rat at 2.1 mg/kg, iv by LC/MS/MS analysis	CHEMBL2169840
+GSK2606414	CHEMBL2171124	CHEMBL376	Rattus norvegicus	AUC	=	1602.1	ng.hr.mL-1	AUC (0 to t) in Sprague-Dawley rat at 2.1 mg/kg, iv by LC/MS/MS analysis	CHEMBL2169840
+GSK2606414	CHEMBL2171124	CHEMBL373	Canis familiaris	F	=	72.0	%	Oral bioavailability in Beagle dog at 4.1 mg/kg by LC/MS/MS analysis	CHEMBL2169840
+GSK2606414	CHEMBL2171124	CHEMBL373	Canis familiaris	AUC	=	3848.5	ng.hr.mL-1	AUC (0 to t) in Beagle dog at 4.1 mg/kg, po by LC/MS/MS analysis	CHEMBL2169840
+GSK2606414	CHEMBL2171124	CHEMBL373	Canis familiaris	T1/2	=	10.6	hr	Half life in Beagle dog at 2.7 mg/kg, iv by LC/MS/MS analysis	CHEMBL2169840
+GSK2606414	CHEMBL2171124	CHEMBL373	Canis familiaris	Vdss	=	8.2	L.kg-1	Volume of distribution at steady state in Beagle dog at 2.7 mg/kg, iv by LC/MS/MS analysis	CHEMBL2169840
+GSK2606414	CHEMBL2171124	CHEMBL373	Canis familiaris	CL	=	12.5	mL.min-1.kg-1	Blood clearance in Beagle dog at 2.7 mg/kg, iv by LC/MS/MS analysis	CHEMBL2169840
+GSK2606414	CHEMBL2171124	CHEMBL373	Canis familiaris	AUC	=	3155.3	ng.hr.mL-1	AUC (0 to t) in Beagle dog at 2.7 mg/kg, iv by LC/MS/MS analysis	CHEMBL2169840
+GSK2606414	CHEMBL2171124	CHEMBL375	Mus musculus	F	=	62.0	%	Oral bioavailability in CD-1 mouse at 18.3 mg/kg by LC/MS/MS analysis	CHEMBL2169840
+GSK2606414	CHEMBL2171124	CHEMBL375	Mus musculus	AUC	=	6017.1	ng.hr.mL-1	AUC (0 to t) in CD-1 mouse at 18.3 mg/kg, po by LC/MS/MS analysis	CHEMBL2169840
+GSK2606414	CHEMBL2171124	CHEMBL375	Mus musculus	T1/2	=	2.5	hr	Half life in CD-1 mouse at 1.7 mg/kg, iv by LC/MS/MS analysis	CHEMBL2169840
+GSK2606414	CHEMBL2171124	CHEMBL375	Mus musculus	Vdss	=	5.1	L.kg-1	Volume of distribution at steady state in CD-1 mouse at 1.7 mg/kg, iv by LC/MS/MS analysis	CHEMBL2169840
+GSK2606414	CHEMBL2171124	CHEMBL375	Mus musculus	CL	=	31.8	mL.min-1.kg-1	Blood clearance in CD-1 mouse at 1.7 mg/kg, iv by LC/MS/MS analysis	CHEMBL2169840
+GSK2606414	CHEMBL2171124	CHEMBL375	Mus musculus	AUC	=	839.1	ng.hr.mL-1	AUC (0 to t) in CD-1 mouse at 1.7 mg/kg, iv by LC/MS/MS analysis	CHEMBL2169840
+GSK2606414	CHEMBL2171124	CHEMBL5639	Serine/threonine-protein kinase WNK2	IC50	=	3892.0	nM	Inhibition of WNK2	CHEMBL2169840
+GSK2606414	CHEMBL2171124	CHEMBL2073	Tyrosine-protein kinase Yes	IC50	=	3195.0	nM	Inhibition of YES1	CHEMBL2169840
+GSK2606414	CHEMBL2171124	CHEMBL4898	BDNF/NT-3 growth factors receptor	IC50	=	2962.0	nM	Inhibition of TRKB	CHEMBL2169840
+GSK2606414	CHEMBL2171124	CHEMBL4895	Tyrosine-protein kinase receptor UFO	IC50	=	2705.0	nM	Inhibition of AXL	CHEMBL2169840
+GSK2606414	CHEMBL2171124	CHEMBL2815	High affinity nerve growth factor receptor	IC50	=	1756.0	nM	Inhibition of TRKA	CHEMBL2169840
+GSK2606414	CHEMBL2171124	CHEMBL2872	Mitogen-activated protein kinase kinase kinase 9	IC50	=	1578.0	nM	Inhibition of MLK1	CHEMBL2169840
+GSK2606414	CHEMBL2171124	CHEMBL4852	Mitogen-activated protein kinase kinase kinase kinase 5	IC50	=	1569.0	nM	Inhibition of MAP4K5	CHEMBL2169840
+GSK2606414	CHEMBL2171124	CHEMBL5819	Serine/threonine-protein kinase Nek4	IC50	=	1402.0	nM	Inhibition of NEK4	CHEMBL2169840
+GSK2606414	CHEMBL2171124	CHEMBL258	Tyrosine-protein kinase Lck	IC50	=	1250.0	nM	Inhibition of LCK	CHEMBL2169840
+GSK2606414	CHEMBL2171124	CHEMBL2041	Proto-oncogene tyrosine-protein kinase receptor Ret	IC50	=	1215.0	nM	Inhibition of RET	CHEMBL2169840
+GSK2606414	CHEMBL2171124	CHEMBL2708	Mitogen-activated protein kinase kinase kinase 11	IC50	=	1140.0	nM	Inhibition of MLK3	CHEMBL2169840
+GSK2606414	CHEMBL2171124	CHEMBL5608	NT-3 growth factor receptor	IC50	=	1115.0	nM	Inhibition of TRKC	CHEMBL2169840
+GSK2606414	CHEMBL2171124	CHEMBL3529	Inhibitor of nuclear factor kappa-B kinase subunit epsilon	IC50	=	1064.0	nM	Inhibition of IKBKE	CHEMBL2169840
+GSK2606414	CHEMBL2171124	CHEMBL2777	Myosin light chain kinase 2, skeletal/cardiac muscle	IC50	=	701.0	nM	Inhibition of MLCK2	CHEMBL2169840
+GSK2606414	CHEMBL2171124	CHEMBL5122	Discoidin domain-containing receptor 2	IC50	=	524.0	nM	Inhibition of DDR2	CHEMBL2169840
+GSK2606414	CHEMBL2171124	CHEMBL5331	Tyrosine-protein kinase Mer	IC50	=	474.0	nM	Inhibition of c-MER	CHEMBL2169840
+GSK2606414	CHEMBL2171124	CHEMBL2873	Mitogen-activated protein kinase kinase kinase 10	IC50	=	452.0	nM	Inhibition of MLK2	CHEMBL2169840
+GSK2606414	CHEMBL2171124	CHEMBL4601	Protein-tyrosine kinase 6	IC50	=	412.0	nM	Inhibition of BRK	CHEMBL2169840
+GSK2606414	CHEMBL2171124	CHEMBL2185	Aurora kinase B	IC50	=	407.0	nM	Inhibition of Aurora B	CHEMBL2169840
+GSK2606414	CHEMBL2171124	CHEMBL1936	Mast/stem cell growth factor receptor Kit	IC50	=	154.0	nM	Inhibition of c-Kit	CHEMBL2169840
+GSK2606414	CHEMBL2171124	CHEMBL5785	Interferon-induced, double-stranded RNA-activated protein kinase	IC50	=	696.0	nM	Inhibition of PKR assessed as EIF2AK2 phosphorylation	CHEMBL2169840
+GSK2606414	CHEMBL2171124	CHEMBL6029	Eukaryotic translation initiation factor 2-alpha kinase 1	IC50	=	420.0	nM	Inhibition of HRI assessed as EIF2AK1 phosphorylation	CHEMBL2169840
+GSK2606414	CHEMBL2171124	CHEMBL6030	Eukaryotic translation initiation factor 2-alpha kinase 3	Inhibition	None	None	%	Inhibition of thapsigargin-induced autophosphorylation of PERK in human A549 cells at 0.03 uM after 2 hrs by W	CHEMBL2169840
+GSK2606414	CHEMBL2171124	CHEMBL6030	Eukaryotic translation initiation factor 2-alpha kinase 3	IC50	<	30.0	nM	Inhibition of thapsigargin-induced autophosphorylation of PERK in human A549 cells after 2 hrs by Western blot	CHEMBL2169840
+GSK2606414	CHEMBL2171124	CHEMBL3721	Cytochrome P450 2C8	IC50	=	890.0	nM	Inhibition of CYP2C8 in human liver microsomes using paclitaxel as substrate after 5 to 60 mins by LC-MS/MS an	CHEMBL2440009
+GSK2606414	CHEMBL2171124	CHEMBL340	Cytochrome P450 3A4	IC50	=	10000.0	nM	Inhibition of CYP3A4 in human liver microsomes using nifedipine as substrate after 5 to 60 mins by LC-MS/MS an	CHEMBL2440009
+GSK2606414	CHEMBL2171124	CHEMBL340	Cytochrome P450 3A4	IC50	=	13000.0	nM	Inhibition of CYP3A4 in human liver microsomes using midazolam as substrate after 5 to 60 mins by LC-MS/MS ana	CHEMBL2440009
+GSK2606414	CHEMBL2171124	CHEMBL289	Cytochrome P450 2D6	IC50	=	23000.0	nM	Inhibition of CYP2D6 in human liver microsomes using dextromethorphan as substrate after 5 to 60 mins by LC-MS	CHEMBL2440009
+GSK2606414	CHEMBL2171124	CHEMBL3622	Cytochrome P450 2C19	IC50	=	7000.0	nM	Inhibition of CYP2C19 in human liver microsomes using mephenytoin as substrate after 5 to 60 mins by LC-MS/MS 	CHEMBL2440009
+GSK2606414	CHEMBL2171124	CHEMBL3397	Cytochrome P450 2C9	IC50	=	4500.0	nM	Inhibition of CYP2C9 in human liver microsomes using diclofenac as substrate after 5 to 60 mins by LC-MS/MS an	CHEMBL2440009
+GSK2606414	CHEMBL2171124	CHEMBL3356	Cytochrome P450 1A2	IC50	=	21000.0	nM	Inhibition of CYP1A2 in human liver microsomes using phenacetin as substrate after 5 to 60 mins by LC-MS/MS an	CHEMBL2440009
+GSK2606414	CHEMBL2171124	CHEMBL376	Rattus norvegicus	CL	=	21.5	mL.min-1.kg-1	Blood clearance in Sprague-Dawley rat at 2.2 mg/kg, iv by LC-MS/MS analysis	CHEMBL2440009
+GSK2606414	CHEMBL2171124	CHEMBL6030	Eukaryotic translation initiation factor 2-alpha kinase 3	IC50	<	30.0	nM	Inhibition of thapsigargin-induced autophosphorylation of PERK in human A549 cells preincubated for 1 hr follo	CHEMBL2440009
+GSK2606414	CHEMBL2171124	CHEMBL6030	Eukaryotic translation initiation factor 2-alpha kinase 3	IC50	=	0.4	nM	Inhibition of GST-tagged PERK cytoplasmic domain (536 to 1116) (unknown origin) assessed as biotinylated His6-	CHEMBL2440009
+GSK2606414	CHEMBL2171124	CHEMBL612545	Unchecked	MOTILITY REDUCTION/CYTOTOXICITY	=	0.0	%	GSK PKIS2: Screen against O. lienalis microfilariae, single point, at 3.1uM to assess reduction in motility. C	CHEMBL3988181
+GSK2606414	CHEMBL2171124	CHEMBL4303835	SARS-CoV-2	Inhibition	=	85.4	%	Antiviral activity determined as inhibition of SARS-CoV-2 induced cytotoxicity of Caco-2 cells at 10 uM after 	CHEMBL4303101
+GSK2606414	CHEMBL2171124	CHEMBL4303835	SARS-CoV-2	IC50	=	250.0	nM	Determination of IC50 values for inhibition of SARS-CoV-2 induced cytotoxicity of Caco-2 cells after 48 hours 	CHEMBL4303101
+GSK2606414	CHEMBL2171124	CHEMBL614058	Caco-2	CC50	=	70350.0	nM	Toxicity against Caco-2 cells determined at 48 hours by intracellular ATP concentration using the CellTiter-Gl	CHEMBL4303101
+GSK2606414	CHEMBL2171124	CHEMBL612558	ADMET	Selectivity index	>	100.0	None	Cytotoxicity index (CI): selectivity for inhibition of SARS-CoV-2 induced cytotoxicity of Caco-2 cells versus 	CHEMBL4303101
+GSK2606414	CHEMBL2171124	CHEMBL5464	Receptor-interacting serine/threonine-protein kinase 1	IC50	=	18.0	nM	Inhibition of recombinant human GST-tagged RIPK1 (1 to 479 residues) incubated for 4 hrs by ADP-Glo assay	CHEMBL4376828
+GSK2606414	CHEMBL2171124	CHEMBL612267	L929	IC50	=	0.4	nM	Anti-neprotic activity in mouse L929 cells assessed as reduction in TNF-induced necroptosis and measured every	CHEMBL4376828
+GSK2606414	CHEMBL2171124	CHEMBL614342	MEF	IC50	=	7.3	nM	Anti-neprotic activity in mouse MEF cells assessed as reduction in TNF-induced necroptosis and measured every 	CHEMBL4376828
+GSK2606414	CHEMBL2171124	CHEMBL375	Mus musculus	Activity	=	100.0	%	Antiinflammatory Activity in C57BL/6 mouse TNFalpha-induced mouse model of SIRS assessed as reduction in TNF-i	CHEMBL4376828
+GSK2606414	CHEMBL2171124	CHEMBL4523582	Replicase polyprotein 1ab	Inhibition	=	2.39	%	SARS-CoV-2 3CL-Pro protease inhibition percentage at 20µM  by FRET kind of response from peptide substrate	CHEMBL4495564
+GSK2606414	CHEMBL2171124	CHEMBL4523582	Replicase polyprotein 1ab	Inhibition	=	18.85	%	SARS-CoV-2 3CL-Pro protease inhibition percentage at 20µM  by FRET kind of response from peptide substrate	CHEMBL4495564
+GSK2606414	CHEMBL2171124	CHEMBL4303835	SARS-CoV-2	Inhibition	=	0.7	%	Antiviral activity determined as inhibition of SARS-CoV-2 induced cytotoxicity of VERO-6 cells at 10 uM after 	CHEMBL4495565
+GSK2606414	CHEMBL2171124	CHEMBL4303835	SARS-CoV-2	Inhibition	=	1.67	%	Antiviral activity determined as inhibition of SARS-CoV-2 induced cytotoxicity of VERO-6 cells at 10 uM after 	CHEMBL4495565
+GSK2606414	CHEMBL2171124	CHEMBL4303835	SARS-CoV-2	Inhibition	=	1.67	%	Antiviral activity determined as inhibition of SARS-CoV-2 induced cytotoxicity of VERO-6 cells at 10 uM after 	CHEMBL4495565
+GSK2606414	CHEMBL2171124	CHEMBL4303835	SARS-CoV-2	Inhibition	=	0.7	%	Antiviral activity determined as inhibition of SARS-CoV-2 induced cytotoxicity of VERO-6 cells at 10 uM after 	CHEMBL4495565
+GSK2606414	CHEMBL2171124	CHEMBL1865	Protein deacetylase HDAC6	Inhibition	=	17.14	%	Enzymatic assay of human HDAC6 with commercial peptide substrate	CHEMBL4808148
+GSK2606414	CHEMBL2171124	CHEMBL1865	Protein deacetylase HDAC6	Inhibition	=	-3.01	%	Enzymatic assay of human HDAC6 with custom peptide substrate	CHEMBL4808148
+GSK2606414	CHEMBL2171124	CHEMBL5464	Receptor-interacting serine/threonine-protein kinase 1	IC50	=	18.2	nM	Inhibition of GST tagged human recombinant RIPK1 incubated for 4 hrs by ADP-Glo luminescence assay	CHEMBL5150038
+GSK2606414	CHEMBL2171124	CHEMBL612545	Unchecked	IC50	=	7.3	nM	Anti-necroptic activity in TNF mediated cell death in human MEF cells preincubated for 30 mins in presence of 	CHEMBL5150038
+GSK2606414	CHEMBL2171124	CHEMBL612545	Unchecked	IC50	=	0.4	nM	Anti-necroptic activity in TNF mediated cell death in mouse L929sAhFas cells preincubated for 30 mins in prese	CHEMBL5150038
+GSK2606414	CHEMBL2171124	CHEMBL612545	Unchecked	IC50	=	0.4	nM	Inhibition of Toxoplasma gondii GST-taggged IF2Kalpha in presence of ATP by ADP-Glo kinase assay	CHEMBL5230160
+GSK2606414	CHEMBL2171124	CHEMBL612888	Toxoplasma gondii	IC50	=	620.0	nM	Antiparasitic activity against Toxoplasma gondii RH tachyzoites infected in HFF cells in presence of CPRG by c	CHEMBL5230160
+GSK2606414	CHEMBL2171124	CHEMBL5855	Serine/threonine-protein kinase Nek1	Inhibition	=	0.0	%	Inhibition of NEK1 (unknown origin) at 1 uM relative to control	CHEMBL5252509
+GSK2606414	CHEMBL2171124	CHEMBL3835	Serine/threonine-protein kinase Nek2	Inhibition	=	15.0	%	Inhibition of NEK2 (unknown origin) at 1 uM relative to control	CHEMBL5252509
+GSK2606414	CHEMBL2171124	CHEMBL5679	Serine/threonine-protein kinase Nek3	Inhibition	=	0.0	%	Inhibition of NEK3 (unknown origin) at 1 uM relative to control	CHEMBL5252509
+GSK2606414	CHEMBL2171124	CHEMBL5819	Serine/threonine-protein kinase Nek4	Inhibition	=	7.0	%	Inhibition of NEK4 (unknown origin) at 1 uM relative to control	CHEMBL5252509
+GSK2606414	CHEMBL2171124	CHEMBL5044	Serine/threonine-protein kinase Nek5	Inhibition	=	0.0	%	Inhibition of NEK5 (unknown origin) at 1 uM relative to control	CHEMBL5252509
+GSK2606414	CHEMBL2171124	CHEMBL4309	Serine/threonine-protein kinase Nek6	Inhibition	=	0.0	%	Inhibition of NEK6 (unknown origin) at 1 uM relative to control	CHEMBL5252509
+GSK2606414	CHEMBL2171124	CHEMBL4849	Serine/threonine-protein kinase Nek7	Inhibition	=	11.0	%	Inhibition of NEK7 (unknown origin) at 1 uM relative to control	CHEMBL5252509
+GSK2606414	CHEMBL2171124	CHEMBL5257	Serine/threonine-protein kinase Nek9	Inhibition	=	8.0	%	Inhibition of NEK9 (unknown origin) at 1 uM relative to control	CHEMBL5252509
+GSK2606414	CHEMBL2171124	CHEMBL3108655	Serine/threonine-protein kinase Nek10	Inhibition	=	18.0	%	Inhibition of NEK10 (unknown origin) at 1 uM relative to control	CHEMBL5252509
+GSK2606414	CHEMBL2171124	CHEMBL5638	Serine/threonine-protein kinase Nek11	Inhibition	=	14.0	%	Inhibition of NEK11 (unknown origin) at 1 uM relative to control	CHEMBL5252509
+GSK2606414	CHEMBL2171124	CHEMBL5705882	Hepatocyte spheroids	Proliferation	=	0.03291	None	Cell viability is assessed by cellular ATP assay using CellTiter-Glo Luminescent kit. Viability is expressed a	CHEMBL5724564
+GSK2606414	CHEMBL2171124	CHEMBL612888	Toxoplasma gondii	IC50	<	1000.0	nM	Antiparasitic activity against Toxoplasma gondii RH infected in human HFF cells assessed as reduction in paras	CHEMBL6078659
+AZD3965	CHEMBL3335793	CHEMBL4360	Monocarboxylate transporter 1	Kd	=	1.6	nM	Binding affinity to MCT1 (unknown origin)	CHEMBL3351282
+AZD3965	CHEMBL3335793	CHEMBL4303835	SARS-CoV-2	Inhibition	=	3.03	%	Antiviral activity determined as inhibition of SARS-CoV-2 induced cytotoxicity of Caco-2 cells at 10 uM after 	CHEMBL4303101
+AZD3965	CHEMBL3335793	CHEMBL4523582	Replicase polyprotein 1ab	Inhibition	=	10.95	%	SARS-CoV-2 3CL-Pro protease inhibition percentage at 20µM  by FRET kind of response from peptide substrate	CHEMBL4495564
+AZD3965	CHEMBL3335793	CHEMBL4523582	Replicase polyprotein 1ab	Inhibition	=	16.23	%	SARS-CoV-2 3CL-Pro protease inhibition percentage at 20µM  by FRET kind of response from peptide substrate	CHEMBL4495564
+AZD3965	CHEMBL3335793	CHEMBL4303835	SARS-CoV-2	Inhibition	=	0.09	%	Antiviral activity determined as inhibition of SARS-CoV-2 induced cytotoxicity of VERO-6 cells at 10 uM after 	CHEMBL4495565
+AZD3965	CHEMBL3335793	CHEMBL4303835	SARS-CoV-2	Inhibition	=	-0.01	%	Antiviral activity determined as inhibition of SARS-CoV-2 induced cytotoxicity of VERO-6 cells at 10 uM after 	CHEMBL4495565
+AZD3965	CHEMBL3335793	CHEMBL4360	Monocarboxylate transporter 1	Inhibition	None	None	%	Inhibition of MCT1 in human A673 cells assessed as reduction in BrPA-induced cytotoxicity at 10 nM by SRB assa	CHEMBL4613254
+AZD3965	CHEMBL3335793	CHEMBL614517	A673	GI	None	None	None	Growth inhibition of human A673 cells assessed as reduction in cell viability up to 10 uM after 48 hrs by SRB 	CHEMBL4613254
+AZD3965	CHEMBL3335793	CHEMBL4303835	SARS-CoV-2	Inhibition	=	0.09	%	Antiviral activity determined as inhibition of SARS-CoV-2 induced cytotoxicity of VERO-6 cells at 10 uM after 	CHEMBL4495565
+AZD3965	CHEMBL3335793	CHEMBL4303835	SARS-CoV-2	Inhibition	=	-0.01	%	Antiviral activity determined as inhibition of SARS-CoV-2 induced cytotoxicity of VERO-6 cells at 10 uM after 	CHEMBL4495565
+AZD3965	CHEMBL3335793	CHEMBL4303835	SARS-CoV-2	IC50	>	20000.0	nM	Antiviral activity determined as inhibition of SARS-CoV-2 induced cytotoxicity of VERO-6 cells at 10 uM after 	CHEMBL4651402
+AZD3965	CHEMBL3335793	CHEMBL4303835	SARS-CoV-2	IC50	>	19952.62	nM	Antiviral activity determined as inhibition of SARS-CoV-2 induced cytotoxicity of VERO-6 cells at 10 uM after 	CHEMBL4651402
+AZD3965	CHEMBL3335793	CHEMBL364	Plasmodium falciparum	Activity	None	None	None	Antiplasmodial activity against Plasmodium falciparum 3D7 assessed as reduction in parasitemia incubated for 4	CHEMBL4725373
+AZD3965	CHEMBL3335793	CHEMBL1865	Protein deacetylase HDAC6	Inhibition	=	-33.66	%	Enzymatic assay of human HDAC6 with commercial peptide substrate	CHEMBL4808148
+AZD3965	CHEMBL3335793	CHEMBL1865	Protein deacetylase HDAC6	Inhibition	=	7.6	%	Enzymatic assay of human HDAC6 with custom peptide substrate	CHEMBL4808148
+AZD3965	CHEMBL3335793	CHEMBL4360	Monocarboxylate transporter 1	Ki	=	2.0	nM	Binding affinity to MCT1 (unknown origin) assessed as inhibition constant	CHEMBL5233245
+AZD3965	CHEMBL3335793	CHEMBL2073704	Monocarboxylate transporter 2	Ki	=	20.0	nM	Binding affinity to MCT2 (unknown origin) assessed as inhibition constant	CHEMBL5233245
+AZD3965	CHEMBL3335793	CHEMBL2073663	Monocarboxylate transporter 4	IC50	>	30000.0	nM	Inhibition of human MCT4 in human MDA-MB-231 cells assessed as inhibition of radioactive lactate efflux preinc	CHEMBL5241094
+AZD3965	CHEMBL3335793	CHEMBL2073663	Monocarboxylate transporter 4	IC50	=	7.1	nM	Inhibition of human MCT4 in human SNU-398 cells assessed as inhibition of radioactive lactate efflux preincuba	CHEMBL5241094
+AZD3965	CHEMBL3335793	CHEMBL2073663	Monocarboxylate transporter 4	IC50	=	22.0	nM	Inhibition of human MCT4 in human SNU-398 cells assessed as inhibition of lactate efflux preincubated for 30 m	CHEMBL5241094
+AZD3965	CHEMBL3335793	CHEMBL612821	MC-38	Activity	None	None	None	Cytotoxicity against mouse MC38 cells assessed as inhibition of cell growth incubated for 72 hrs by MTS assay	CHEMBL5241094
+AZD3965	CHEMBL3335793	CHEMBL612821	MC-38	Activity	None	None	None	Cytotoxicity against mouse MC38 cells assessed as reduction in intracellular lactate accumulation incubated fo	CHEMBL5241094
+AZD3965	CHEMBL3335793	CHEMBL612545	Unchecked	Inhibition	None	None	%	In vivo inhibition of lactate efflux in mouse MC38 cells xenografted in C57/BL6 mouse assessed as reduction in	CHEMBL5241094
+AZD3965	CHEMBL3335793	CHEMBL612821	MC-38	Activity	None	None	None	Antitumor activity in mouse MC38 cells xenografted in C57/BL6 mouse assessed as tumor growth inhibition at 100	CHEMBL5241094
+AZD3965	CHEMBL3335793	CHEMBL3706568	HEK-293T	Growth Rate	=	-0.63	None	Incucyte cell viability with HEK293T	CHEMBL5303304
+AZD3965	CHEMBL3335793	CHEMBL3706568	HEK-293T	Growth Rate	=	-0.81	None	Incucyte cell viability with HEK293T	CHEMBL5303304
+AZD3965	CHEMBL3335793	CHEMBL3706568	HEK-293T	Growth Rate	=	0.53	None	Incucyte cell viability with HEK293T	CHEMBL5303304
+AZD3965	CHEMBL3335793	CHEMBL3706568	HEK-293T	Growth Rate	=	0.43	None	Incucyte cell viability with HEK293T	CHEMBL5303304
+AZD3965	CHEMBL3335793	CHEMBL3706568	HEK-293T	Growth Rate	=	0.17	None	Incucyte cell viability with HEK293T	CHEMBL5303304
+AZD3965	CHEMBL3335793	CHEMBL3706568	HEK-293T	Growth Rate	=	0.22	None	Incucyte cell viability with HEK293T	CHEMBL5303304
+AZD3965	CHEMBL3335793	CHEMBL3706568	HEK-293T	Growth Rate	=	0.11	None	Incucyte cell viability with HEK293T	CHEMBL5303304
+AZD3965	CHEMBL3335793	CHEMBL3706568	HEK-293T	Growth Rate	=	0.21	None	Incucyte cell viability with HEK293T	CHEMBL5303304
+AZD3965	CHEMBL3335793	CHEMBL615023	U2OS	Growth Rate	=	0.92	None	Incucyte cell viability with U2OS	CHEMBL5303304
+AZD3965	CHEMBL3335793	CHEMBL615023	U2OS	Growth Rate	=	0.71	None	Incucyte cell viability with U2OS	CHEMBL5303304
+AZD3965	CHEMBL3335793	CHEMBL615023	U2OS	Growth Rate	=	0.69	None	Incucyte cell viability with U2OS	CHEMBL5303304
+AZD3965	CHEMBL3335793	CHEMBL615023	U2OS	Growth Rate	=	0.75	None	Incucyte cell viability with U2OS	CHEMBL5303304
+AZD3965	CHEMBL3335793	CHEMBL615023	U2OS	Growth Rate	=	0.83	None	Incucyte cell viability with U2OS	CHEMBL5303304
+AZD3965	CHEMBL3335793	CHEMBL5314315	Fibroblast	Growth Rate	=	0.69	None	Incucyte cell viability with human fibroblast	CHEMBL5303304
+AZD3965	CHEMBL3335793	CHEMBL5314315	Fibroblast	Growth Rate	=	0.97	None	Incucyte cell viability with human fibroblast	CHEMBL5303304
+AZD3965	CHEMBL3335793	CHEMBL5314315	Fibroblast	Growth Rate	=	0.9	None	Incucyte cell viability with human fibroblast	CHEMBL5303304
+AZD3965	CHEMBL3335793	CHEMBL5314315	Fibroblast	Growth Rate	=	0.8	None	Incucyte cell viability with human fibroblast	CHEMBL5303304
+AZD3965	CHEMBL3335793	CHEMBL5314315	Fibroblast	Growth Rate	=	0.95	None	Incucyte cell viability with human fibroblast	CHEMBL5303304
+AZD3965	CHEMBL3335793	CHEMBL5314315	Fibroblast	Growth Rate	=	0.69	None	Incucyte cell viability with human fibroblast	CHEMBL5303304
+AZD3965	CHEMBL3335793	CHEMBL5314315	Fibroblast	Growth Rate	=	0.97	None	Incucyte cell viability with human fibroblast	CHEMBL5303304
+AZD3965	CHEMBL3335793	CHEMBL5314315	Fibroblast	Growth Rate	=	0.9	None	Incucyte cell viability with human fibroblast	CHEMBL5303304
+AZD3965	CHEMBL3335793	CHEMBL5314315	Fibroblast	Growth Rate	=	0.8	None	Incucyte cell viability with human fibroblast	CHEMBL5303304
+AZD3965	CHEMBL3335793	CHEMBL2828	Casein kinase I isoform delta	Delta TM	=	-0.27	C	Thermal Shift Assay. Domain: start/stop: M1-K294	CHEMBL5308504
+AZD3965	CHEMBL3335793	CHEMBL301	Cyclin-dependent kinase 2	Delta TM	=	0.67	C	Thermal Shift Assay. Domain: start/stop: M1-L298	CHEMBL5308504
+AZD3965	CHEMBL3335793	CHEMBL262	Glycogen synthase kinase-3 beta	Delta TM	=	0.32	C	Thermal Shift Assay. Domain: start/stop: M26-R383	CHEMBL5308504
+AZD3965	CHEMBL3335793	CHEMBL4040	Mitogen-activated protein kinase 1	Delta TM	=	0.23	C	Thermal Shift Assay. Domain: start/stop: M1-S360	CHEMBL5308504
+AZD3965	CHEMBL3335793	CHEMBL4722	Aurora kinase A	Delta TM	=	-0.32	C	Thermal Shift Assay. Domain: start/stop: E122-S403	CHEMBL5308504
+AZD3965	CHEMBL3335793	CHEMBL1862	Tyrosine-protein kinase ABL1	Delta TM	=	0.24	C	Thermal Shift Assay. Domain: start/stop: S229-K512	CHEMBL5308504
+AZD3965	CHEMBL3335793	CHEMBL2742	Fibroblast growth factor receptor 3	Delta TM	=	0.52	C	Thermal Shift Assay. Domain: start/stop: P449-E759	CHEMBL5308504
+AZD3965	CHEMBL3335793	CHEMBL3132741	Peregrin	Delta TM	=	-1.85	C	Thermal Shift Assay. Domain start/stop: M626-G740	CHEMBL5308504
+AZD3965	CHEMBL3335793	CHEMBL3108638	Transcription intermediary factor 1-alpha	Delta TM	=	-0.8	C	Thermal Shift Assay. Domain: start/stop: G861-E979	CHEMBL5308504
+AZD3965	CHEMBL3335793	CHEMBL1163125	Bromodomain-containing protein 4	Delta TM	=	-1.28	C	Thermal Shift Assay. Domain: start/stop: N44-E168	CHEMBL5308504
+AZD3965	CHEMBL3335793	CHEMBL2828	Casein kinase I isoform delta	Delta TM	=	-0.46	C	Thermal Shift Assay. Domain: start/stop: M1-K294	CHEMBL5724796
+AZD3965	CHEMBL3335793	CHEMBL301	Cyclin-dependent kinase 2	Delta TM	=	1.15	C	Thermal Shift Assay. Domain: start/stop: M1-L298	CHEMBL5724796
+AZD3965	CHEMBL3335793	CHEMBL262	Glycogen synthase kinase-3 beta	Delta TM	=	-0.31	C	Thermal Shift Assay. Domain: start/stop: M26-R383	CHEMBL5724796
+AZD3965	CHEMBL3335793	CHEMBL4040	Mitogen-activated protein kinase 1	Delta TM	=	0.35	C	Thermal Shift Assay. Domain: start/stop: M1-S360	CHEMBL5724796
+AZD3965	CHEMBL3335793	CHEMBL4722	Aurora kinase A	Delta TM	=	-1.82	C	Thermal Shift Assay. Domain: start/stop: E122-S403	CHEMBL5724796
+AZD3965	CHEMBL3335793	CHEMBL1862	Tyrosine-protein kinase ABL1	Delta TM	=	0.25	C	Thermal Shift Assay. Domain: start/stop: S229-K512	CHEMBL5724796
+AZD3965	CHEMBL3335793	CHEMBL4142	Fibroblast growth factor receptor 2	Delta TM	=	1.06	C	Thermal Shift Assay. Domain: start/stop: T457-E768	CHEMBL5724796
+AZD3965	CHEMBL3335793	CHEMBL3132741	Peregrin	Delta TM	=	0.94	C	Thermal Shift Assay. Domain: start/stop: M626-G746	CHEMBL5724796
+AZD3965	CHEMBL3335793	CHEMBL3108638	Transcription intermediary factor 1-alpha	Delta TM	=	1.02	C	Thermal Shift Assay. Domain: start/stop: G861-E979	CHEMBL5724796
+AZD3965	CHEMBL3335793	CHEMBL1163125	Bromodomain-containing protein 4	Delta TM	=	1.76	C	Thermal Shift Assay. Domain: start/stop: N44-E168	CHEMBL5724796
+guanabenz	CHEMBL420	CHEMBL374	Oryctolagus cuniculus	pC60	=	0.93	uM kg-1	Hypertensive activity (increase in arterial pressure to 60 mmHg)) after i.v. administration to pithed rats.	CHEMBL1122788
+guanabenz	CHEMBL420	CHEMBL1907610	Adrenergic receptor alpha-1	IC50	=	450.0	nM	Binding affinity against alpha-1 adrenergic receptor is the ability to inhibit the specific [3H]prazosin bindi	CHEMBL1122788
+guanabenz	CHEMBL420	CHEMBL2093864	Adrenergic receptor alpha-2	IC50	=	1.7	nM	50% inhibition of specific [3H]clonidine binding (0.4 nM) to Alpha-2 adrenergic receptors in rat isolated brai	CHEMBL1122788
+guanabenz	CHEMBL420	CHEMBL612558	ADMET	Binding energy	=	12.3	kCal mol-1	Binding energy by using the equation deltaG obsd = -RT ln KD	CHEMBL1122538
+guanabenz	CHEMBL420	CHEMBL372	Homo sapiens	Absorption	=	75.0	%	Human absorption A (%)	CHEMBL1131302
+guanabenz	CHEMBL420	CHEMBL2362975	No relevant target	LogD	=	1.67	None	Partition coefficient (logD7.4)	CHEMBL1131302
+guanabenz	CHEMBL420	CHEMBL2026	Beta-lactamase	Inhibition	=	83.0	%	Inhibition of beta-lactamase at 100 uM	CHEMBL1145124
+guanabenz	CHEMBL420	CHEMBL2386	Chymotrypsin-C	Inhibition	<	5.0	%	Inhibition of chymotrypsin at 250 uM	CHEMBL1145124
+guanabenz	CHEMBL420	CHEMBL3560	Malate dehydrogenase, cytoplasmic	Inhibition	=	20.0	%	Inhibition of malate dehydrogenase (MDH) at 400 uM	CHEMBL1145124
+guanabenz	CHEMBL420	CHEMBL372	Homo sapiens	% absorbed	=	75.0	%	% absorbed in human GI-tract	CHEMBL1134374
+guanabenz	CHEMBL420	CHEMBL612558	ADMET	Log Pe	=	-5.0	cm s-1	Effective permeability (Pe) across a hexadecane membrane (pH 6.8)	CHEMBL1134374
+guanabenz	CHEMBL420	CHEMBL612558	ADMET	Log Pe	=	-4.4	cm s-1	Highest effective permeability across hexadecane membrane (pH 4-8)	CHEMBL1134374
+guanabenz	CHEMBL420	CHEMBL2362975	No relevant target	LogD	=	0.9	None	Partition coefficient (logD6.8)	CHEMBL1134374
+guanabenz	CHEMBL420	CHEMBL612558	ADMET	Log Pe,max	=	-4.9	None	Effective permeability corrected for ionization	CHEMBL1134374
+guanabenz	CHEMBL420	CHEMBL612558	ADMET	Log Po	=	-4.6	None	Intrinsic permeability of the compound	CHEMBL1134374
+guanabenz	CHEMBL420	CHEMBL2362975	No relevant target	LogP	=	-1.6	None	Partition coefficient (logP) (hexadecane)	CHEMBL1134374
+guanabenz	CHEMBL420	CHEMBL376	Rattus norvegicus	ID50	=	1.3	mg.kg-1	Inhibition of cholera toxin induced intestinal fluid secretion in rat	CHEMBL1123941
+guanabenz	CHEMBL420	CHEMBL374	Oryctolagus cuniculus	Inhibition	None	None	%	Inhibition of increase in intestine potential difference caused by diarrhea-inducing secretagogues in rabbits 	CHEMBL1123941
+guanabenz	CHEMBL420	CHEMBL2362975	No relevant target	Log PNalk	=	-1.6	None	Lipophilicity determined as logarithm of the partition coefficient in the alkane/water system	CHEMBL1143634
+guanabenz	CHEMBL420	CHEMBL613872	ScN2a	EC50	None	None	None	Reduction of PrPSC accumulation in ScN2a cells	CHEMBL1139220
+guanabenz	CHEMBL420	CHEMBL2362975	No relevant target	Solubility	=	0.0	nM	Solubility in phosphate buffer at pH 6.5 at 500 uM	CHEMBL1139220
+guanabenz	CHEMBL420	CHEMBL613872	ScN2a	LD50	None	None	None	Cytotoxicity against ScN2a cells	CHEMBL1139220
+guanabenz	CHEMBL420	CHEMBL612558	ADMET	log Pe	=	-6.0	None	Permeability across DOPC lipid membrane by PAMPA	CHEMBL1139220
+guanabenz	CHEMBL420	CHEMBL612545	Unchecked	Ki	=	1.933	nM	Displacement of [125I]PIC from human alpha2 adrenoceptors expressed in CHO cells	CHEMBL1155861
+guanabenz	CHEMBL420	CHEMBL3923	Nischarin	Ki	=	34.67	nM	Displacement of [125I]PIC from human imidazoline receptor 1 in human platelets analyzed under norepinephrine m	CHEMBL1155861
+guanabenz	CHEMBL420	CHEMBL3923	Nischarin	Ki	=	34.7	nM	Displacement of [125I]PIC from human imidazoline receptor 1 in human platelets analyzed under norepinephrine m	CHEMBL1155861
+guanabenz	CHEMBL420	CHEMBL612545	Unchecked	Ratio pKi	=	-1.254	None	Selectivity ratio of pKi for human imidazoline receptor 1 to pKi for human alpha2 adrenoceptors	CHEMBL1155861
+guanabenz	CHEMBL420	CHEMBL5952	Neuropeptide FF receptor 2	Activity	None	None	None	Agonist activity at human NPFF2 receptor expressed in cells assessed as beta-galactosidase levels at 10 mM aft	CHEMBL1154595
+guanabenz	CHEMBL420	CHEMBL5951	Neuropeptide FF receptor 1	Activity	None	None	None	Agonist activity at human NPFF1 receptor expressed in cells assessed as beta-galactosidase levels at 10 mM aft	CHEMBL1154595
+guanabenz	CHEMBL420	CHEMBL614058	Caco-2	logPapp	=	-4.5	None	Permeability across human Caco-2 cells	CHEMBL1152590
+guanabenz	CHEMBL420	CHEMBL372	Homo sapiens	Activity	=	0.8	%	Human intestinal absorption in po dosed human	CHEMBL1157012
+guanabenz	CHEMBL420	CHEMBL361	Saccharomyces cerevisiae	Potency	=	25929.0	nM	PUBCHEM_BIOASSAY: qHTS Assay for Small Molecule Inhibitors of Mitochondrial Division or Activators of Mitochon	CHEMBL1201862
+guanabenz	CHEMBL420	CHEMBL1293232	Survival motor neuron protein	Potency	=	19952.6	nM	PUBCHEM_BIOASSAY: qHTS Assay for Enhancers of SMN2 Splice Variant Expression. (Class of assay: confirmatory) 	CHEMBL1201862
+guanabenz	CHEMBL420	CHEMBL1293248	4'-phosphopantetheinyl transferase ffp	Potency	=	100000.0	nM	PUBCHEM_BIOASSAY: qHTS Assay for Inhibitors of Bacillus subtilis Sfp phosphopantetheinyl transferase (PPTase).	CHEMBL1201862
+guanabenz	CHEMBL420	CHEMBL2842	Serine/threonine-protein kinase mTOR	Potency	=	2074.9	nM	PUBCHEM_BIOASSAY: Cytometry Cell-Based qHTS for Inhibitors of the mTORC1 Signaling Pathway in MEF cells. (Clas	CHEMBL1201862
+guanabenz	CHEMBL420	CHEMBL612558	ADMET	log10(%HIA +10)	=	1.954	None	Drug absorption in human assessed as human intestinal absorption rate	CHEMBL1649380
+guanabenz	CHEMBL420	CHEMBL1697861	Hepatotoxicity	Composite Activity - Score	None	None	None	FDA HLAED, liver enzyme composite activity	CHEMBL1697781
+guanabenz	CHEMBL420	CHEMBL1697861	Hepatotoxicity	Composite Activity - Active	=	0.0	None	FDA HLAED, liver enzyme composite activity	CHEMBL1697781
+guanabenz	CHEMBL420	CHEMBL1697861	Hepatotoxicity	Composite Activity - Marginal	=	0.0	None	FDA HLAED, liver enzyme composite activity	CHEMBL1697781
+guanabenz	CHEMBL420	CHEMBL1697861	Hepatotoxicity	Alkaline Phosphatase Increase - Activity Score	None	None	None	FDA HLAED, alkaline phosphatase increase	CHEMBL1697781
+guanabenz	CHEMBL420	CHEMBL1697861	Hepatotoxicity	Alkaline Phosphatase Increase - Index Value	=	0.0	None	FDA HLAED, alkaline phosphatase increase	CHEMBL1697781
+guanabenz	CHEMBL420	CHEMBL1697861	Hepatotoxicity	Alkaline Phosphatase Increase - Number of Reports	<	4.0	None	FDA HLAED, alkaline phosphatase increase	CHEMBL1697781
+guanabenz	CHEMBL420	CHEMBL1697861	Hepatotoxicity	SGOT Increase - Activity Score	None	None	None	FDA HLAED, serum glutamic oxaloacetic transaminase (SGOT) increase	CHEMBL1697781
+guanabenz	CHEMBL420	CHEMBL1697861	Hepatotoxicity	SGOT Increase - Index Value	=	0.9	None	FDA HLAED, serum glutamic oxaloacetic transaminase (SGOT) increase	CHEMBL1697781
+guanabenz	CHEMBL420	CHEMBL1697861	Hepatotoxicity	SGOT Increase - Number of Reports	<	4.0	None	FDA HLAED, serum glutamic oxaloacetic transaminase (SGOT) increase	CHEMBL1697781
+guanabenz	CHEMBL420	CHEMBL1697861	Hepatotoxicity	SGPT Increase - Activity Score	None	None	None	FDA HLAED, serum glutamic pyruvic transaminase (SGPT) increase	CHEMBL1697781
+guanabenz	CHEMBL420	CHEMBL1697861	Hepatotoxicity	SGPT Increase - Index Value	=	0.6	None	FDA HLAED, serum glutamic pyruvic transaminase (SGPT) increase	CHEMBL1697781
+guanabenz	CHEMBL420	CHEMBL1697861	Hepatotoxicity	SGPT Increase - Number of Reports	<	4.0	None	FDA HLAED, serum glutamic pyruvic transaminase (SGPT) increase	CHEMBL1697781
+guanabenz	CHEMBL420	CHEMBL1697861	Hepatotoxicity	LDH Increase - Activity Score	None	None	None	FDA HLAED, lactate dehydrogenase (LDH) increase	CHEMBL1697781
+guanabenz	CHEMBL420	CHEMBL1697861	Hepatotoxicity	LDH Increase - Index Value	=	0.3	None	FDA HLAED, lactate dehydrogenase (LDH) increase	CHEMBL1697781
+guanabenz	CHEMBL420	CHEMBL1697861	Hepatotoxicity	LDH Increase - Number of Reports	<	4.0	None	FDA HLAED, lactate dehydrogenase (LDH) increase	CHEMBL1697781
+guanabenz	CHEMBL420	CHEMBL1697861	Hepatotoxicity	GGT Increase - Activity Score	None	None	None	FDA HLAED, gamma-glutamyl transferase (GGT) increase	CHEMBL1697781
+guanabenz	CHEMBL420	CHEMBL1697861	Hepatotoxicity	GGT Increase - Index Value	=	0.0	None	FDA HLAED, gamma-glutamyl transferase (GGT) increase	CHEMBL1697781
+guanabenz	CHEMBL420	CHEMBL1697861	Hepatotoxicity	GGT Increase - Number of Reports	<	4.0	None	FDA HLAED, gamma-glutamyl transferase (GGT) increase	CHEMBL1697781
+guanabenz	CHEMBL420	CHEMBL2179	Lysosomal acid glucosylceramidase	Potency	None	28183.8	nM	PUBCHEM_BIOASSAY: qHTS Assay for Inhibitors and Activators of N370S glucocerebrosidase as a Potential Chaperon	CHEMBL1201862
+guanabenz	CHEMBL420	CHEMBL2056	D(1A) dopamine receptor	Potency	None	14125.4	nM	PUBCHEM_BIOASSAY: HTS Assay for Allosteric Agonists of the Human D1 Dopamine Receptor: Primary Screen for Anta	CHEMBL1201862
+guanabenz	CHEMBL420	CHEMBL2056	D(1A) dopamine receptor	Potency	None	5804.5	nM	PUBCHEM_BIOASSAY: HTS Assay for Allosteric Agonists of the Human D1 Dopamine Receptor: Primary Screen for Pote	CHEMBL1201862
+guanabenz	CHEMBL420	CHEMBL614058	Caco-2	logPapp	=	-4.07	None	Apparent permeability across human Caco2 cell membrane after 2 hrs by LC-MS/MS analysis	CHEMBL1764994
+guanabenz	CHEMBL420	CHEMBL1795085	Ataxin-2	Potency	None	14125.4	nM	PUBCHEM_BIOASSAY: qHTS for Inhibitors of ATXN expression: Validation. (Class of assay: confirmatory) [Related 	CHEMBL1201862
+guanabenz	CHEMBL420	CHEMBL364	Plasmodium falciparum	Potency	None	3696.4	nM	PUBCHEM_BIOASSAY: Primary qHTS for delayed death inhibitors of the malarial parasite plastid, 96 hour incubati	CHEMBL1201862
+guanabenz	CHEMBL420	CHEMBL395	HepG2	Potency	None	35481.3	nM	PUBCHEM_BIOASSAY: qHTS for Inhibitors of TGF-b: Cytotox Counterscreen. (Class of assay: confirmatory) [Related	CHEMBL1201862
+guanabenz	CHEMBL420	CHEMBL364	Plasmodium falciparum	Potency	None	13459.1	nM	PUBCHEM_BIOASSAY: Primary qHTS for delayed death inhibitors of the malarial parasite plastid, 48 hour incubati	CHEMBL1201862
+guanabenz	CHEMBL420	CHEMBL364	Plasmodium falciparum	Potency	None	3696.4	nM	PUBCHEM_BIOASSAY: Primary qHTS for delayed death inhibitors of the malarial parasite plastid, 48 hour incubati	CHEMBL1201862
+guanabenz	CHEMBL420	CHEMBL614818	HEK293	Potency	None	259.2	nM	PUBCHEM_BIOASSAY: qHTS for Inhibitors of binding or entry into cells for Lassa Virus. (Class of assay: confirm	CHEMBL1201862
+guanabenz	CHEMBL420	CHEMBL614910	SH-SY5Y	Potency	None	14125.4	nM	PUBCHEM_BIOASSAY: qHTS for Inhibitors of ATXN expression: Validation of Cytotoxic Assay. (Class of assay: conf	CHEMBL1201862
+guanabenz	CHEMBL420	CHEMBL612545	Unchecked	Potency	None	18348.9	nM	PUBCHEM_BIOASSAY: qHTS for inhibitors of binding or entry into cells for Marburg Virus. (Class of assay: confi	CHEMBL1201862
+guanabenz	CHEMBL420	CHEMBL612545	Unchecked	Potency	None	18348.9	nM	PUBCHEM_BIOASSAY: qHTS for inhibitors of binding or entry into cells for Marburg Virus. (Class of assay: confi	CHEMBL1201862
+guanabenz	CHEMBL420	CHEMBL612545	Unchecked	Potency	None	18348.9	nM	PUBCHEM_BIOASSAY: qHTS for inhibitors of binding or entry into cells for Marburg Virus. (Class of assay: confi	CHEMBL1201862
+guanabenz	CHEMBL420	CHEMBL612545	Unchecked	Potency	None	18348.9	nM	PUBCHEM_BIOASSAY: qHTS for inhibitors of binding or entry into cells for Marburg Virus. (Class of assay: confi	CHEMBL1201862
+guanabenz	CHEMBL420	CHEMBL220	Acetylcholinesterase	IC50	None	None	None	DRUGMATRIX: Acetylcholinesterase enzyme inhibition (substrate: acetylthiocholine)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL220	Acetylcholinesterase	Ki	None	None	None	DRUGMATRIX: Acetylcholinesterase enzyme inhibition (substrate: acetylthiocholine)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL226	Adenosine receptor A1	IC50	None	None	None	DRUGMATRIX: Adenosine A1 radioligand binding (ligand: DPCPX)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL226	Adenosine receptor A1	Ki	None	None	None	DRUGMATRIX: Adenosine A1 radioligand binding (ligand: DPCPX)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL251	Adenosine receptor A2a	IC50	None	None	None	DRUGMATRIX: Adenosine A2A radioligand binding (ligand: AB-MECA)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL251	Adenosine receptor A2a	Ki	None	None	None	DRUGMATRIX: Adenosine A2A radioligand binding (ligand: AB-MECA)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL256	Adenosine receptor A3	IC50	None	None	None	DRUGMATRIX: Adenosine A3 radioligand binding (ligand: AB-MECA)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL256	Adenosine receptor A3	Ki	None	None	None	DRUGMATRIX: Adenosine A3 radioligand binding (ligand: AB-MECA)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL612545	Unchecked	IC50	None	None	None	DRUGMATRIX: Sodium/nucleoside co-transporter radioligand binding (ligand: nitrobenzylthioinosine)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL612545	Unchecked	Ki	None	None	None	DRUGMATRIX: Sodium/nucleoside co-transporter radioligand binding (ligand: nitrobenzylthioinosine)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL319	Alpha-1A adrenergic receptor	IC50	=	391.0	nM	DRUGMATRIX: Alpha-1A adrenergic receptor radioligand binding (ligand: prazosin)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL319	Alpha-1A adrenergic receptor	Ki	=	158.0	nM	DRUGMATRIX: Alpha-1A adrenergic receptor radioligand binding (ligand: prazosin)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL315	Alpha-1B adrenergic receptor	IC50	=	1365.0	nM	DRUGMATRIX: Alpha-1B adrenergic receptor radioligand binding (ligand: prazosin)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL315	Alpha-1B adrenergic receptor	Ki	=	755.0	nM	DRUGMATRIX: Alpha-1B adrenergic receptor radioligand binding (ligand: prazosin)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL223	Alpha-1D adrenergic receptor	IC50	=	472.0	nM	DRUGMATRIX: Alpha-1D adrenergic receptor radioligand binding (ligand: prazosin)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL223	Alpha-1D adrenergic receptor	Ki	=	232.0	nM	DRUGMATRIX: Alpha-1D adrenergic receptor radioligand binding (ligand: prazosin)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL1867	Alpha-2A adrenergic receptor	IC50	=	41.0	nM	DRUGMATRIX: Alpha-2A adrenergic receptor radioligand binding (ligand: MK-912)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL1867	Alpha-2A adrenergic receptor	Ki	=	15.0	nM	DRUGMATRIX: Alpha-2A adrenergic receptor radioligand binding (ligand: MK-912)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL1942	Alpha-2B adrenergic receptor	IC50	=	149.0	nM	DRUGMATRIX: Alpha-2B adrenergic receptor radioligand binding (ligand: Rauwolscine)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL1942	Alpha-2B adrenergic receptor	Ki	=	68.0	nM	DRUGMATRIX: Alpha-2B adrenergic receptor radioligand binding (ligand: Rauwolscine)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL1916	Alpha-2C adrenergic receptor	IC50	=	1106.0	nM	DRUGMATRIX: Adrenergic Alpha-2C radioligand binding (ligand: [3H] MK-912)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL1916	Alpha-2C adrenergic receptor	Ki	=	161.0	nM	DRUGMATRIX: Adrenergic Alpha-2C radioligand binding (ligand: [3H] MK-912)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL213	Beta-1 adrenergic receptor	IC50	None	None	None	DRUGMATRIX: Adrenergic beta1 radioligand binding (ligand: [125I] Cyanopindolol)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL213	Beta-1 adrenergic receptor	Ki	None	None	None	DRUGMATRIX: Adrenergic beta1 radioligand binding (ligand: [125I] Cyanopindolol)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL210	Beta-2 adrenergic receptor	IC50	None	None	None	DRUGMATRIX: Adrenergic beta2 radioligand binding (ligand: [3H] CGP-12177)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL210	Beta-2 adrenergic receptor	Ki	None	None	None	DRUGMATRIX: Adrenergic beta2 radioligand binding (ligand: [3H] CGP-12177)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL246	Beta-3 adrenergic receptor	IC50	None	None	None	DRUGMATRIX: Adrenergic beta3 radioligand binding (ligand: [125I] Cyanopindolol)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL246	Beta-3 adrenergic receptor	Ki	None	None	None	DRUGMATRIX: Adrenergic beta3 radioligand binding (ligand: [125I] Cyanopindolol)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL222	Sodium-dependent noradrenaline transporter	IC50	None	None	None	DRUGMATRIX: Norepinephrine Transporter radioligand binding (ligand: [125I] RTI-55)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL222	Sodium-dependent noradrenaline transporter	Ki	None	None	None	DRUGMATRIX: Norepinephrine Transporter radioligand binding (ligand: [125I] RTI-55)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL2622	Aldo-keto reductase family 1 member B1	IC50	None	None	None	DRUGMATRIX: Aldose Reductase enzyme inhibition (substrate: DL-Glyceraldehyde)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL2622	Aldo-keto reductase family 1 member B1	Ki	None	None	None	DRUGMATRIX: Aldose Reductase enzyme inhibition (substrate: DL-Glyceraldehyde)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL4607	Type-2 angiotensin II receptor	IC50	None	None	None	DRUGMATRIX: Angiotensin AT2 radioligand binding (ligand: [125I] CGP-42112A)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL4607	Type-2 angiotensin II receptor	Ki	None	None	None	DRUGMATRIX: Angiotensin AT2 radioligand binding (ligand: [125I] CGP-42112A)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL612545	Unchecked	IC50	None	None	None	DRUGMATRIX: ATPase, Na+/K+ enzyme inhibition (substrate: ATP)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL612545	Unchecked	Ki	None	None	None	DRUGMATRIX: ATPase, Na+/K+ enzyme inhibition (substrate: ATP)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL612545	Unchecked	IC50	None	None	None	DRUGMATRIX: Atrial Natriuretic Factor (ANF) radioligand binding (ligand: [125I] ANF (rat))	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL612545	Unchecked	Ki	None	None	None	DRUGMATRIX: Atrial Natriuretic Factor (ANF) radioligand binding (ligand: [125I] ANF (rat))	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL612545	Unchecked	IC50	None	None	None	DRUGMATRIX: beta-Lactamase enzyme inhibition (substrate: Nitrocefin)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL612545	Unchecked	Ki	None	None	None	DRUGMATRIX: beta-Lactamase enzyme inhibition (substrate: Nitrocefin)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL3157	B2 bradykinin receptor	IC50	None	None	None	DRUGMATRIX: Bradykinin B2 radioligand binding (ligand: [3H] Bradykinin)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL3157	B2 bradykinin receptor	Ki	None	None	None	DRUGMATRIX: Bradykinin B2 radioligand binding (ligand: [3H] Bradykinin)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL1832	Calcitonin receptor	IC50	None	None	None	DRUGMATRIX: Calcitonin radioligand binding (ligand: [125I] Calcitonin (salmon))	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL1832	Calcitonin receptor	Ki	None	None	None	DRUGMATRIX: Calcitonin radioligand binding (ligand: [125I] Calcitonin (salmon))	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL612545	Unchecked	IC50	None	None	None	DRUGMATRIX: Calcium Channel Type L, Benzothiazepine radioligand binding (ligand: [3H] Diltiazem)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL612545	Unchecked	Ki	None	None	None	DRUGMATRIX: Calcium Channel Type L, Benzothiazepine radioligand binding (ligand: [3H] Diltiazem)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL612545	Unchecked	IC50	None	None	None	DRUGMATRIX: Calcium Channel Type L, Dihydropyridine radioligand binding (ligand: [3H] Nitrendipine)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL612545	Unchecked	Ki	None	None	None	DRUGMATRIX: Calcium Channel Type L, Dihydropyridine radioligand binding (ligand: [3H] Nitrendipine)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL612545	Unchecked	IC50	None	None	None	DRUGMATRIX: Calcium Channel Type L, Phenylalkylamine radioligand binding (ligand: [3H] (-)-Desmethoxyverapamil	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL612545	Unchecked	Ki	None	None	None	DRUGMATRIX: Calcium Channel Type L, Phenylalkylamine radioligand binding (ligand: [3H] (-)-Desmethoxyverapamil	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL218	Cannabinoid receptor 1	IC50	None	None	None	DRUGMATRIX: Cannabinoid CB1 radioligand binding (ligand: [3H] SR141716A)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL218	Cannabinoid receptor 1	Ki	None	None	None	DRUGMATRIX: Cannabinoid CB1 radioligand binding (ligand: [3H] SR141716A)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL205	Carbonic anhydrase 2	IC50	None	None	None	DRUGMATRIX: Carbonic Anhydrase II enzyme inhibition (substrate: 4-Nitrophenyl acetate (4-NPA))	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL205	Carbonic anhydrase 2	Ki	None	None	None	DRUGMATRIX: Carbonic Anhydrase II enzyme inhibition (substrate: 4-Nitrophenyl acetate (4-NPA))	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL4015	C-C chemokine receptor type 2	IC50	None	None	None	DRUGMATRIX: Chemokine CCR2B radioligand binding (ligand: [125I] MCP-1)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL4015	C-C chemokine receptor type 2	Ki	None	None	None	DRUGMATRIX: Chemokine CCR2B radioligand binding (ligand: [125I] MCP-1)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL2414	C-C chemokine receptor type 4	IC50	None	None	None	DRUGMATRIX: Chemokine CCR4 radioligand binding (ligand: [125I] TARC)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL2414	C-C chemokine receptor type 4	Ki	None	None	None	DRUGMATRIX: Chemokine CCR4 radioligand binding (ligand: [125I] TARC)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL274	C-C chemokine receptor type 5	IC50	None	None	None	DRUGMATRIX: Chemokine CCR5 radioligand binding (ligand: [125I] MIP-1alpha)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL274	C-C chemokine receptor type 5	Ki	None	None	None	DRUGMATRIX: Chemokine CCR5 radioligand binding (ligand: [125I] MIP-1alpha)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL4029	C-X-C chemokine receptor type 1	IC50	None	None	None	DRUGMATRIX: Chemokine CXCR1 (IL-8A)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL4029	C-X-C chemokine receptor type 1	Ki	None	None	None	DRUGMATRIX: Chemokine CXCR1 (IL-8A)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL2434	C-X-C chemokine receptor type 2	IC50	None	None	None	DRUGMATRIX: Chemokine CXCR2 (IL-8B) radioligand binding (ligand: [125I] IL-8)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL2434	C-X-C chemokine receptor type 2	Ki	None	None	None	DRUGMATRIX: Chemokine CXCR2 (IL-8B) radioligand binding (ligand: [125I] IL-8)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL1901	Cholecystokinin receptor type A	IC50	None	None	None	DRUGMATRIX: Cholecystokinin CCKA radioligand binding (ligand: [3H] L-364,718)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL1901	Cholecystokinin receptor type A	Ki	None	None	None	DRUGMATRIX: Cholecystokinin CCKA radioligand binding (ligand: [3H] L-364,718)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL221	Prostaglandin G/H synthase 1	IC50	None	None	None	DRUGMATRIX: Cyclooxygenase COX-1 enzyme inhibition (substrate: Arachidonic acid)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL221	Prostaglandin G/H synthase 1	Ki	None	None	None	DRUGMATRIX: Cyclooxygenase COX-1 enzyme inhibition (substrate: Arachidonic acid)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL230	Prostaglandin G/H synthase 2	IC50	None	None	None	DRUGMATRIX: Cyclooxygenase COX-2 enzyme inhibition (substrate: Arachidonic acid)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL230	Prostaglandin G/H synthase 2	Ki	None	None	None	DRUGMATRIX: Cyclooxygenase COX-2 enzyme inhibition (substrate: Arachidonic acid)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL3356	Cytochrome P450 1A2	IC50	None	None	None	DRUGMATRIX: CYP450, 1A2 enzyme inhibition (substrate: 3-Cyano-7-ethoxycoumarin)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL3356	Cytochrome P450 1A2	Ki	None	None	None	DRUGMATRIX: CYP450, 1A2 enzyme inhibition (substrate: 3-Cyano-7-ethoxycoumarin)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL5282	Cytochrome P450 2A6	IC50	None	None	None	DRUGMATRIX: CYP450, 2A6 enzyme inhibition (substrate: 3-Cyano-7-ethoxycoumarin)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL5282	Cytochrome P450 2A6	Ki	None	None	None	DRUGMATRIX: CYP450, 2A6 enzyme inhibition (substrate: 3-Cyano-7-ethoxycoumarin)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL3622	Cytochrome P450 2C19	IC50	None	None	None	DRUGMATRIX: CYP450, 2C19 enzyme inhibition (substrate: 3-Cyano-7-ethoxycoumarin)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL3622	Cytochrome P450 2C19	Ki	None	None	None	DRUGMATRIX: CYP450, 2C19 enzyme inhibition (substrate: 3-Cyano-7-ethoxycoumarin)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL3397	Cytochrome P450 2C9	IC50	None	None	None	DRUGMATRIX: CYP450, 2C9 enzyme inhibition (substrate: 3-Cyano-7-ethoxycoumarin)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL3397	Cytochrome P450 2C9	Ki	None	None	None	DRUGMATRIX: CYP450, 2C9 enzyme inhibition (substrate: 3-Cyano-7-ethoxycoumarin)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL289	Cytochrome P450 2D6	IC50	None	None	None	DRUGMATRIX: CYP450, 2D6 enzyme inhibition (substrate: 3-Cyano-7-ethoxycoumarin)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL289	Cytochrome P450 2D6	Ki	None	None	None	DRUGMATRIX: CYP450, 2D6 enzyme inhibition (substrate: 3-Cyano-7-ethoxycoumarin)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL5281	Cytochrome P450 2E1	IC50	None	None	None	DRUGMATRIX: CYP450, 2E1 enzyme inhibition (substrate: 3-Cyano-7-ethoxycoumarin)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL5281	Cytochrome P450 2E1	Ki	None	None	None	DRUGMATRIX: CYP450, 2E1 enzyme inhibition (substrate: 3-Cyano-7-ethoxycoumarin)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL340	Cytochrome P450 3A4	IC50	None	None	None	DRUGMATRIX: CYP450, 3A4 enzyme inhibition (substrate: 7-Benzyloxy-4-(trifluoromethyl)-coumarin)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL340	Cytochrome P450 3A4	Ki	None	None	None	DRUGMATRIX: CYP450, 3A4 enzyme inhibition (substrate: 7-Benzyloxy-4-(trifluoromethyl)-coumarin)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL2056	D(1A) dopamine receptor	IC50	None	None	None	DRUGMATRIX: Dopamine D1 radioligand binding (ligand: [3H] SCH-23390)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL2056	D(1A) dopamine receptor	Ki	None	None	None	DRUGMATRIX: Dopamine D1 radioligand binding (ligand: [3H] SCH-23390)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL217	D(2) dopamine receptor	IC50	None	None	None	DRUGMATRIX: Dopamine D2L radioligand binding (ligand: [3H] Spiperone)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL217	D(2) dopamine receptor	Ki	None	None	None	DRUGMATRIX: Dopamine D2L radioligand binding (ligand: [3H] Spiperone)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL234	D(3) dopamine receptor	IC50	None	None	None	DRUGMATRIX: Dopamine D3 radioligand binding (ligand: [3H] Spiperone)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL234	D(3) dopamine receptor	Ki	None	None	None	DRUGMATRIX: Dopamine D3 radioligand binding (ligand: [3H] Spiperone)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL219	D(4) dopamine receptor	IC50	None	None	None	DRUGMATRIX: Dopamine D4.2 radioligand binding (ligand: [3H] Spiperone)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL219	D(4) dopamine receptor	Ki	None	None	None	DRUGMATRIX: Dopamine D4.2 radioligand binding (ligand: [3H] Spiperone)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL238	Sodium-dependent dopamine transporter	IC50	None	None	None	DRUGMATRIX: Dopamine Transporter radioligand binding (ligand: [125I] RTI-55)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL238	Sodium-dependent dopamine transporter	Ki	None	None	None	DRUGMATRIX: Dopamine Transporter radioligand binding (ligand: [125I] RTI-55)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL252	Endothelin-1 receptor	IC50	None	None	None	DRUGMATRIX: Endothelin ETA radioligand binding (ligand: [125I] Endothelin-1)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL252	Endothelin-1 receptor	Ki	None	None	None	DRUGMATRIX: Endothelin ETA radioligand binding (ligand: [125I] Endothelin-1)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL206	Estrogen receptor	IC50	None	None	None	DRUGMATRIX: Estrogen ERalpha radioligand binding (ligand: [3H] Estradiol)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL206	Estrogen receptor	Ki	None	None	None	DRUGMATRIX: Estrogen ERalpha radioligand binding (ligand: [3H] Estradiol)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL242	Estrogen receptor beta	IC50	None	None	None	DRUGMATRIX: Estrogen ERbeta radioligand binding (ligand: [3H] Estradiol)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL242	Estrogen receptor beta	Ki	None	None	None	DRUGMATRIX: Estrogen ERbeta radioligand binding (ligand: [3H] Estradiol)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL612545	Unchecked	IC50	None	None	None	DRUGMATRIX: GABAA, Muscimol, Central radioligand binding (ligand: [3H] Muscimol)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL612545	Unchecked	Ki	None	None	None	DRUGMATRIX: GABAA, Muscimol, Central radioligand binding (ligand: [3H] Muscimol)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL612545	Unchecked	IC50	None	None	None	DRUGMATRIX: GABAA, Flunitrazepam, Central radioligand binding (ligand: [3H] Flunitrazepam)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL612545	Unchecked	Ki	None	None	None	DRUGMATRIX: GABAA, Flunitrazepam, Central radioligand binding (ligand: [3H] Flunitrazepam)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL612545	Unchecked	IC50	None	None	None	DRUGMATRIX: GABAA, Chloride Channel, TBOB radioligand binding (ligand: [3H] TBOB)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL612545	Unchecked	Ki	None	None	None	DRUGMATRIX: GABAA, Chloride Channel, TBOB radioligand binding (ligand: [3H] TBOB)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL2034	Glucocorticoid receptor	IC50	None	None	None	DRUGMATRIX: Glucocorticoid radioligand binding (ligand: [3H] Dexamethasone)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL2034	Glucocorticoid receptor	Ki	None	None	None	DRUGMATRIX: Glucocorticoid radioligand binding (ligand: [3H] Dexamethasone)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL612545	Unchecked	IC50	None	None	None	DRUGMATRIX: Glutamate, AMPA radioligand binding (ligand: [3H] AMPA)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL612545	Unchecked	Ki	None	None	None	DRUGMATRIX: Glutamate, AMPA radioligand binding (ligand: [3H] AMPA)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL612545	Unchecked	IC50	None	None	None	DRUGMATRIX: Glutamate, Kainate radioligand binding (ligand: [3H] Kainic acid)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL612545	Unchecked	Ki	None	None	None	DRUGMATRIX: Glutamate, Kainate radioligand binding (ligand: [3H] Kainic acid)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL612545	Unchecked	IC50	None	None	None	DRUGMATRIX: Glutamate, NMDA, Agonism radioligand binding (ligand: [3H] CGP-39653)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL612545	Unchecked	Ki	None	None	None	DRUGMATRIX: Glutamate, NMDA, Agonism radioligand binding (ligand: [3H] CGP-39653)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL612545	Unchecked	IC50	None	None	None	DRUGMATRIX: Glutamate, NMDA, Phencyclidine radioligand binding (ligand: [3H] TCP)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL612545	Unchecked	Ki	None	None	None	DRUGMATRIX: Glutamate, NMDA, Phencyclidine radioligand binding (ligand: [3H] TCP)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL3392921	Glycine receptor	IC50	None	None	None	DRUGMATRIX: Glycine, Strychnine-Sensitive radioligand binding (ligand: [3H] Strychnine)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL3392921	Glycine receptor	Ki	None	None	None	DRUGMATRIX: Glycine, Strychnine-Sensitive radioligand binding (ligand: [3H] Strychnine)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL231	Histamine H1 receptor	IC50	None	None	None	DRUGMATRIX: Histamine H1, Central radioligand binding (ligand: [3H] Pyrilamine)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL231	Histamine H1 receptor	Ki	None	None	None	DRUGMATRIX: Histamine H1, Central radioligand binding (ligand: [3H] Pyrilamine)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL1941	Histamine H2 receptor	IC50	None	None	None	DRUGMATRIX: Histamine H2 radioligand binding (ligand: [125I] Aminopotentidine)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL1941	Histamine H2 receptor	Ki	None	None	None	DRUGMATRIX: Histamine H2 radioligand binding (ligand: [125I] Aminopotentidine)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL402	3-hydroxy-3-methylglutaryl-coenzyme A reductase	IC50	None	None	None	DRUGMATRIX: HMG-CoA Reductase enzyme inhibition (substrate: [14C]HMG-CoA)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL402	3-hydroxy-3-methylglutaryl-coenzyme A reductase	Ki	None	None	None	DRUGMATRIX: HMG-CoA Reductase enzyme inhibition (substrate: [14C]HMG-CoA)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL612545	Unchecked	IC50	=	18.0	nM	DRUGMATRIX: Imidazoline I2, Central radioligand binding (ligand: [3H] Idazoxan)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL612545	Unchecked	Ki	=	12.0	nM	DRUGMATRIX: Imidazoline I2, Central radioligand binding (ligand: [3H] Idazoxan)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL5486	Insulin receptor	IC50	None	None	None	DRUGMATRIX: Insulin radioligand binding (ligand: [125I] Insulin)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL5486	Insulin receptor	Ki	None	None	None	DRUGMATRIX: Insulin radioligand binding (ligand: [125I] Insulin)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL612545	Unchecked	IC50	None	None	None	DRUGMATRIX: Interleukin IL-1 radioligand binding (ligand: [125I] interleukin 1beta)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL612545	Unchecked	Ki	None	None	None	DRUGMATRIX: Interleukin IL-1 radioligand binding (ligand: [125I] interleukin 1beta)	CHEMBL1909046
+guanabenz	CHEMBL420	CHEMBL612545	Unchecked	IC50	None	None	None	DRUGMATRIX: Leukotriene, BLT (LTB4) radioligand binding (ligand: [3H]LTB4)	CHEMBL1909046

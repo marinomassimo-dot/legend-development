@@ -1,0 +1,395 @@
+{
+ "DGIdb_get_drug_gene_interactions": {
+  "status": "success",
+  "data": {
+   "genes": {
+    "nodes": [
+     {
+      "name": "PDK2",
+      "longName": "pyruvate dehydrogenase kinase 2",
+      "interactions": [
+       {
+        "drug": {
+         "name": "VER-246608",
+         "conceptId": "iuphar.ligand:9350"
+        },
+        "interactionTypes": [
+         {
+          "type": "inhibitor"
+         }
+        ],
+        "sources": [
+         {
+          "fullName": "Guide to Pharmacology"
+         }
+        ]
+       },
+       {
+        "drug": {
+         "name": "AZD7545",
+         "conceptId": "iuphar.ligand:9362"
+        },
+        "interactionTypes": [
+         {
+          "type": "inhibitor"
+         }
+        ],
+        "sources": [
+         {
+          "fullName": "Drug Repurposing Hub"
+         },
+         {
+          "fullName": "Guide to Pharmacology"
+         }
+        ]
+       },
+       {
+        "drug": {
+         "name": "SODIUM DICHLOROACETATE",
+         "conceptId": "chembl:CHEMBL306823"
+        },
+        "interactionTypes": [
+         {
+          "type": "inhibitor"
+         }
+        ],
+        "sources": [
+         {
+          "fullName": "The ChEMBL Bioactivity Database"
+         }
+        ]
+       },
+       {
+        "drug": {
+         "name": "DEVIMISTAT",
+         "conceptId": "ncit:C80039"
+        },
+        "interactionTypes": [],
+        "sources": [
+         {
+          "fullName": "The Druggable Genome: Evaluation of Drug Targets in Clinical Trials Suggests Major Shifts in Molecular Class and Indication (Rask-Andersen, Masuram, Schioth 2014)"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "metadata": {
+   "total": 1,
+   "genes_returned": 1,
+   "interactions_total": 4
+  }
+ },
+ "OpenTargets_get_associated_drugs_by_target_ensemblID": {
+  "status": "success",
+  "data": {
+   "target": {
+    "id": "ENSG00000005882",
+    "approvedSymbol": "PDK2",
+    "drugAndClinicalCandidates": {
+     "count": 1,
+     "rows": [
+      {
+       "drug": {
+        "id": "CHEMBL306823",
+        "name": "SODIUM DICHLOROACETATE",
+        "maximumClinicalStage": "PHASE_3"
+       },
+       "maxClinicalStage": "PHASE_3",
+       "diseases": [
+        {
+         "disease": {
+          "id": "HP_0004902",
+          "name": "Congenital lactic acidosis"
+         }
+        }
+       ]
+      }
+     ],
+     "returned": 1,
+     "truncated": false
+    }
+   }
+  }
+ },
+ "ChEMBL_search_activities": {
+  "status": "success",
+  "data": {
+   "activities": [
+    {
+     "action_type": null,
+     "activity_comment": null,
+     "activity_id": 3214002,
+     "activity_properties": [],
+     "assay_chembl_id": "CHEMBL1116750",
+     "assay_description": "Inhibition of PDHK2 at 5 uM",
+     "assay_type": "B",
+     "assay_variant_accession": null,
+     "assay_variant_mutation": null,
+     "bao_endpoint": "BAO_0000201",
+     "bao_format": "BAO_0000357",
+     "bao_label": "single protein format",
+     "canonical_smiles": "O=C(Nc1ccccc1Cl)c1cnc2ccc(C3CCNCC3)cn12.O=C(O)C(=O)O",
+     "data_validity_comment": null,
+     "data_validity_description": null,
+     "document_chembl_id": "CHEMBL1154316",
+     "document_journal": "Bioorg Med Chem Lett",
+     "document_year": 2009,
+     "ligand_efficiency": null,
+     "modality": null,
+     "molecule_chembl_id": "CHEMBL1077739",
+     "molecule_pref_name": null,
+     "parent_molecule_chembl_id": "CHEMBL1198514",
+     "pchembl_value": null,
+     "potential_duplicate": 0,
+     "qudt_units": "http://qudt.org/vocab/unit#Percent",
+     "record_id": 897686,
+     "relation": "=",
+     "src_id": 1,
+     "standard_flag": 1,
+     "standard_relation": "=",
+     "standard_text_value": null,
+     "standard_type": "Inhibition",
+     "standard_units": "%",
+     "standard_upper_value": null,
+     "standard_value": "1.0",
+     "target_chembl_id": "CHEMBL3861",
+     "target_organism": "Homo sapiens",
+     "target_pref_name": "[Pyruvate dehydrogenase (acetyl-transferring)] kinase isozyme 2, mitochondrial",
+     "target_tax_id": "9606",
+     "text_value": null,
+     "toid": null,
+     "type": "INH",
+     "units": "%",
+     "uo_units": "UO_0000187",
+     "upper_value": null,
+     "value": "1.0"
+    },
+    {
+     "action_type": null,
+     "activity_comment": null,
+     "activity_id": 10839442,
+     "activity_properties": [],
+     "assay_chembl_id": "CHEMBL2015473",
+     "assay_description": "Inhibition of PDHK2 at 10 uM",
+     "assay_type": "B",
+     "assay_variant_accession": null,
+     "assay_variant_mutation": null,
+     "bao_endpoint": "BAO_0000201",
+     "bao_format": "BAO_0000357",
+     "bao_label": "single protein format",
+     "canonical_smiles": "COc1ccc2c3ccnc(C(F)(F)F)c3n(CCCCN)c2c1",
+     "data_validity_comment": null,
+     "data_validity_description": null,
+     "document_chembl_id": "CHEMBL2010722",
+     "document_journal": "Bioorg Med Chem Lett",
+     "document_year": 2012,
+     "ligand_efficiency": null,
+     "modality": null,
+     "molecule_chembl_id": "CHEMBL2012574",
+     "molecule_pref_name": null,
+     "parent_molecule_chembl_id": "CHEMBL2012574",
+     "pchembl_value": null,
+     "potential_duplicate": 0,
+     "qudt_units": "http://qudt.org/vocab/unit#Percent",
+     "record_id": 1633209,
+     "relation": "=",
+     "src_id": 1,
+     "standard_flag": 1,
+     "standard_relation": "=",
+     "standard_text_value": null,
+     "standard_type": "Inhibition",
+     "standard_units": "%",
+     "standard_upper_value": null,
+     "standard_value": "0.0",
+     "target_chembl_id": "CHEMBL3861",
+     "target_organism": "Homo sapiens",
+     "target_pref_name": "[Pyruvate dehydrogenase (acetyl-transferring)] kinase isozyme 2, mitochondrial",
+     "target_tax_id": "9606",
+     "text_value": null,
+     "toid": null,
+     "type": "INH",
+     "units": "%",
+     "uo_units": "UO_0000187",
+     "upper_value": null,
+     "value": "0.0"
+    },
+    {
+     "action_type": null,
+     "activity_comment": null,
+     "activity_id": 15062602,
+     "activity_properties": [],
+     "assay_chembl_id": "CHEMBL3367926",
+     "assay_description": "Inhibition of human PDK2 by Off-chip mobility shift assay",
+     "assay_type": "B",
+     "assay_variant_accession": null,
+     "assay_variant_mutation": null,
+     "bao_endpoint": "BAO_0000201",
+     "bao_format": "BAO_0000357",
+     "bao_label": "single protein format",
+     "canonical_smiles": "O=C(Cc1c(F)cccc1Cl)Nc1onc(-c2ccc(F)cc2)c1-c1ccncn1",
+     "data_validity_comment": null,
+     "data_validity_description": null,
+     "document_chembl_id": "CHEMBL3351450",
+     "document_journal": "Bioorg Med Chem",
+     "document_year": 2014,
+     "ligand_efficiency": null,
+     "modality": null,
+     "molecule_chembl_id": "CHEMBL3310142",
+     "molecule_pref_name": null,
+     "parent_molecule_chembl_id": "CHEMBL3310142",
+     "pchembl_value": null,
+     "potential_duplicate": 0,
+     "qudt_units": "http://qudt.org/vocab/unit#Percent",
+     "record_id": 2263134,
+     "relation": null,
+     "src_id": 1,
+     "standard_flag": 0,
+     "standard_relation": null,
+     "standard_text_value": "Not active",
+     "standard_type": "Inhibition",
+     "standard_units": "%",
+     "standard_upper_value": null,
+     "standard_value": null,
+     "target_chembl_id": "CHEMBL3861",
+     "target_organism": "Homo sapiens",
+     "target_pref_name": "[Pyruvate dehydrogenase (acetyl-transferring)] kinase isozyme 2, mitochondrial",
+     "target_tax_id": "9606",
+     "text_value": "Not Active",
+     "toid": null,
+     "type": "INH",
+     "units": null,
+     "uo_units": "UO_0000187",
+     "upper_value": null,
+     "value": null
+    },
+    {
+     "action_type": null,
+     "activity_comment": null,
+     "activity_id": 15140342,
+     "activity_properties": [],
+     "assay_chembl_id": "CHEMBL3378294",
+     "assay_description": "Inhibition of recombinant PDHK2 (unknown origin) expressed in Escherichia coli incubated for 1 hr by ELISA",
+     "assay_type": "B",
+     "assay_variant_accession": null,
+     "assay_variant_mutation": null,
+     "bao_endpoint": "BAO_0000190",
+     "bao_format": "BAO_0000019",
+     "bao_label": "assay format",
+     "canonical_smiles": "COc1ccccc1N1CCN(C(=O)/C=C/c2noc(-c3cc(Cl)c(O)cc3O)c2-c2ccc(O)cc2)CC1",
+     "data_validity_comment": null,
+     "data_validity_description": null,
+     "document_chembl_id": "CHEMBL3352550",
+     "document_journal": "J Med Chem",
+     "document_year": 2014,
+     "ligand_efficiency": {
+      "bei": "10.85",
+      "le": "0.21",
+      "lle": "0.80",
+      "sei": "4.98"
+     },
+     "modality": null,
+     "molecule_chembl_id": "CHEMBL3354665",
+     "molecule_pref_name": null,
+     "parent_molecule_chembl_id": "CHEMBL3354665",
+     "pchembl_value": "5.95",
+     "potential_duplicate": 0,
+     "qudt_units": "http://www.openphacts.org/units/Nanomolar",
+     "record_id": 2247678,
+     "relation": "=",
+     "src_id": 1,
+     "standard_flag": 1,
+     "standard_relation": "=",
+     "standard_text_value": null,
+     "standard_type": "IC50",
+     "standard_units": "nM",
+     "standard_upper_value": null,
+     "standard_value": "1126.0",
+     "target_chembl_id": "CHEMBL3861",
+     "target_organism": "Homo sapiens",
+     "target_pref_name": "[Pyruvate dehydrogenase (acetyl-transferring)] kinase isozyme 2, mitochondrial",
+     "target_tax_id": "9606",
+     "text_value": null,
+     "toid": null,
+     "type": "IC50",
+     "units": "uM",
+     "uo_units": "UO_0000065",
+     "upper_value": null,
+     "value": "1.126"
+    },
+    {
+     "action_type": null,
+     "activity_comment": "271234",
+     "activity_id": 17653553,
+     "activity_properties": [],
+     "assay_chembl_id": "CHEMBL3705869",
+     "assay_description": "Inhibition Assay: The inhibitory action of PDHK activity was indirectly evaluated by performing a kinase reaction in the presence of a test compound and measuring the residual PDH activity. For expression of hPDHK2 activity, Escherichia coli strain BL21(DE3) cells (Novagen) were transformed with the pET17b vector containing modified hPDHK2 cDNA. Escherichia coli were grown to an optical density 0.6 (600 nmol/L) at 30C. Protein expression was induced by the addition of 500 umol/L isopropyl-beta-thiogalactopyranoside. Escherichia coli were cultured at 30 C. for 5 hr and harvested by centrifugation. Resuspension of the Escherichia coli paste was disrupted by a microfluidizer. FLAG-Tagged protein was separated using FLAG affinity gel (Sigma). The gel was washed with 20 mmol/L N-(2-hydroxyethyl)piperazine-N'-2-ethanesulfonic acid-sodium hydroxide (HEPES-NaOH), 500 mmol/L sodium chloride, 1% ethylene glycol, and 0.1% Pluronic F-68 (pH 8.0), and the binding protein was eluted with 20 mmol/L HEPES.",
+     "assay_type": "B",
+     "assay_variant_accession": null,
+     "assay_variant_mutation": null,
+     "bao_endpoint": "BAO_0000190",
+     "bao_format": "BAO_0000219",
+     "bao_label": "cell-based format",
+     "canonical_smiles": "OC1(C(F)(F)F)c2ccccc2-c2ncccc21",
+     "data_validity_comment": null,
+     "data_validity_description": null,
+     "document_chembl_id": "CHEMBL3638697",
+     "document_journal": null,
+     "document_year": 2014,
+     "ligand_efficiency": {
+      "bei": "22.52",
+      "le": "0.43",
+      "lle": "2.80",
+      "sei": "17.08"
+     },
+     "modality": null,
+     "molecule_chembl_id": "CHEMBL3671587",
+     "molecule_pref_name": null,
+     "parent_molecule_chembl_id": "CHEMBL3671587",
+     "pchembl_value": "5.66",
+     "potential_duplicate": 0,
+     "qudt_units": "http://www.openphacts.org/units/Nanomolar",
+     "record_id": 2546958,
+     "relation": "=",
+     "src_id": 37,
+     "standard_flag": 1,
+     "standard_relation": "=",
+     "standard_text_value": null,
+     "standard_type": "IC50",
+     "standard_units": "nM",
+     "standard_upper_value": null,
+     "standard_value": "2208.0",
+     "target_chembl_id": "CHEMBL3861",
+     "target_organism": "Homo sapiens",
+     "target_pref_name": "[Pyruvate dehydrogenase (acetyl-transferring)] kinase isozyme 2, mitochondrial",
+     "target_tax_id": "9606",
+     "text_value": null,
+     "toid": null,
+     "type": "IC50",
+     "units": "nM",
+     "uo_units": "UO_0000065",
+     "upper_value": null,
+     "value": "2208.0"
+    }
+   ],
+   "page_meta": {
+    "limit": 5,
+    "next": "/chembl/api/data/activity.json?limit=5&offset=5&target_chembl_id__exact=CHEMBL3861",
+    "offset": 0,
+    "previous": null,
+    "total_count": 2527
+   }
+  },
+  "url": "https://www.ebi.ac.uk/chembl/api/data/activity.json?limit=5&format=json&target_chembl_id__exact=CHEMBL3861",
+  "page_meta": {
+   "limit": 5,
+   "next": "/chembl/api/data/activity.json?limit=5&offset=5&target_chembl_id__exact=CHEMBL3861",
+   "offset": 0,
+   "previous": null,
+   "total_count": 2527
+  },
+  "count": 5
+ }
+}

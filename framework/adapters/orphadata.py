@@ -7,6 +7,8 @@ This is nosology: a code is not a precedent, and NO_MATCH_FOUND is never absence
 """
 from __future__ import annotations
 
+from urllib.parse import quote
+
 from . import _http
 
 INFO = {
@@ -50,7 +52,7 @@ def query(request: dict, fetch=_http.get_json) -> dict:
     if not name:
         out["error"] = "name is required"
         return out
-    url = BASE + name
+    url = BASE + quote(name)  # a multi-word disorder name is a valid query; unquoted it raised InvalidURL (found 2026-10-26)
     out["requests_sent"].append(url)
     status, payload = fetch(url)
     if status == 404:

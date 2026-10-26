@@ -1,0 +1,11 @@
+{
+ "tu_rows": 1000,
+ "tu_molecules": 864,
+ "tu_pchembl_molecules": 739,
+ "direct_rows": 1000,
+ "direct_total": 2527,
+ "direct_molecules": 864,
+ "direct_pchembl_molecules": 739,
+ "sets_equal": true,
+ "pchembl_sets_equal": true
+}

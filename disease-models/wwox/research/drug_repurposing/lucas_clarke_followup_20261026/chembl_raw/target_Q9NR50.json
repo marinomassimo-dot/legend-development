@@ -1,0 +1,345 @@
+{
+ "page_meta": {
+  "limit": 50,
+  "next": null,
+  "offset": 0,
+  "previous": null,
+  "total_count": 1
+ },
+ "targets": [
+  {
+   "cross_references": [],
+   "organism": "Homo sapiens",
+   "pref_name": "Translation initiation factor eIF2B subunit gamma",
+   "species_group_flag": false,
+   "target_chembl_id": "CHEMBL4295961",
+   "target_components": [
+    {
+     "accession": "Q9NR50",
+     "component_description": "Translation initiation factor eIF2B subunit gamma",
+     "component_id": 18380,
+     "component_type": "PROTEIN",
+     "relationship": "SINGLE PROTEIN",
+     "target_component_synonyms": [
+      {
+       "component_synonym": "EIF2B3",
+       "syn_type": "GENE_SYMBOL"
+      },
+      {
+       "component_synonym": "eIF2B GDP-GTP exchange factor subunit gamma",
+       "syn_type": "UNIPROT"
+      },
+      {
+       "component_synonym": "Translation initiation factor eIF2B subunit gamma",
+       "syn_type": "UNIPROT"
+      }
+     ],
+     "target_component_xrefs": [
+      {
+       "xref_id": "Q9NR50",
+       "xref_name": null,
+       "xref_src_db": "AlphaFoldDB"
+      },
+      {
+       "xref_id": "Q9NR50",
+       "xref_name": null,
+       "xref_src_db": "ExpressionAtlas"
+      },
+      {
+       "xref_id": "GO:0005737",
+       "xref_name": "cytoplasm",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:0005829",
+       "xref_name": "cytosol",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:0005851",
+       "xref_name": "eukaryotic translation initiation factor 2B complex",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:0032045",
+       "xref_name": "guanyl-nucleotide exchange factor complex",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:0003743",
+       "xref_name": "translation initiation factor activity",
+       "xref_src_db": "GoFunction"
+      },
+      {
+       "xref_id": "GO:0005085",
+       "xref_name": "guanyl-nucleotide exchange factor activity",
+       "xref_src_db": "GoFunction"
+      },
+      {
+       "xref_id": "GO:0005515",
+       "xref_name": "protein binding",
+       "xref_src_db": "GoFunction"
+      },
+      {
+       "xref_id": "GO:0008135",
+       "xref_name": "translation factor activity, RNA binding",
+       "xref_src_db": "GoFunction"
+      },
+      {
+       "xref_id": "GO:0002183",
+       "xref_name": "cytoplasmic translational initiation",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0006412",
+       "xref_name": "translation",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0006413",
+       "xref_name": "translational initiation",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0009058",
+       "xref_name": "biosynthetic process",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0009408",
+       "xref_name": "response to heat",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0014003",
+       "xref_name": "oligodendrocyte development",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0050852",
+       "xref_name": "T cell receptor signaling pathway",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "HGNC:3259",
+       "xref_name": "EIF2B3",
+       "xref_src_db": "HGNC"
+      },
+      {
+       "xref_id": "Q9NR50",
+       "xref_name": null,
+       "xref_src_db": "IntAct"
+      },
+      {
+       "xref_id": "IPR005835",
+       "xref_name": "NTP_transferase_dom",
+       "xref_src_db": "InterPro"
+      },
+      {
+       "xref_id": "IPR029044",
+       "xref_name": "Nucleotide-diphossugar_trans",
+       "xref_src_db": "InterPro"
+      },
+      {
+       "xref_id": "IPR051960",
+       "xref_name": "eIF2B_gamma",
+       "xref_src_db": "InterPro"
+      },
+      {
+       "xref_id": "IPR056764",
+       "xref_name": "LbH_EIF2B3/5",
+       "xref_src_db": "InterPro"
+      },
+      {
+       "xref_id": "PTHR45989",
+       "xref_name": "TRANSLATION INITIATION FACTOR EIF-2B SUBUNIT GAMMA",
+       "xref_src_db": "PANTHER"
+      },
+      {
+       "xref_id": "PTHR45989:SF1",
+       "xref_name": "TRANSLATION INITIATION FACTOR EIF-2B SUBUNIT GAMMA",
+       "xref_src_db": "PANTHER"
+      },
+      {
+       "xref_id": "6CAJ",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "6EZO",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "6K71",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "6K72",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "6O81",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "6O85",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "6O9Z",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "7D43",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "7D44",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "7D45",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "7D46",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "7F64",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "7F66",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "7F67",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "7KMF",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "7L70",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "7L7G",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "7RLO",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "7TRJ",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "7VLK",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "8TQO",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "8TQZ",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "PF00483",
+       "xref_name": "NTP_transferase",
+       "xref_src_db": "Pfam"
+      },
+      {
+       "xref_id": "PF25084",
+       "xref_name": "LbH_EIF2B",
+       "xref_src_db": "Pfam"
+      },
+      {
+       "xref_id": "PA27690",
+       "xref_name": "eukaryotic translation initiation factor 2B subunit gamma",
+       "xref_src_db": "PharmGKB"
+      },
+      {
+       "xref_id": "Q9NR50",
+       "xref_name": null,
+       "xref_src_db": "Pharos"
+      },
+      {
+       "xref_id": "R-HSA-72731",
+       "xref_name": "Recycling of eIF2:GDP",
+       "xref_src_db": "Reactome"
+      },
+      {
+       "xref_id": "B2RBH8",
+       "xref_name": "Translation initiation factor eIF2B subunit gamma",
+       "xref_src_db": "UniProt"
+      },
+      {
+       "xref_id": "D3DPZ2",
+       "xref_name": "Translation initiation factor eIF2B subunit gamma",
+       "xref_src_db": "UniProt"
+      },
+      {
+       "xref_id": "Q5QP89",
+       "xref_name": "Translation initiation factor eIF2B subunit gamma",
+       "xref_src_db": "UniProt"
+      },
+      {
+       "xref_id": "Q5QP90",
+       "xref_name": "Translation initiation factor eIF2B subunit gamma",
+       "xref_src_db": "UniProt"
+      },
+      {
+       "xref_id": "Q8NDB5",
+       "xref_name": "Translation initiation factor eIF2B subunit gamma",
+       "xref_src_db": "UniProt"
+      },
+      {
+       "xref_id": "Q8WV57",
+       "xref_name": "Translation initiation factor eIF2B subunit gamma",
+       "xref_src_db": "UniProt"
+      },
+      {
+       "xref_id": "Q9H850",
+       "xref_name": "Translation initiation factor eIF2B subunit gamma",
+       "xref_src_db": "UniProt"
+      },
+      {
+       "xref_id": "Q9NR50",
+       "xref_name": "Translation initiation factor eIF2B subunit gamma",
+       "xref_src_db": "UniProt"
+      }
+     ]
+    }
+   ],
+   "target_type": "SINGLE PROTEIN",
+   "tax_id": 9606
+  }
+ ]
+}

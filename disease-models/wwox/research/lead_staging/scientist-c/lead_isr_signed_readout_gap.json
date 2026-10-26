@@ -1,0 +1,13 @@
+{
+ "kind": "MECH",
+ "status": "open",
+ "tag": "DATO + INFERENZA",
+ "title": "Integrated stress response in WWOX loss: the fly Atf4 rise needs amyloid and the one human knockout transcriptome shows the ATF4/ISR target set LOWER than chance, so no signed human ISR readout exists (NOT WWOX-DEE evidence for the fly part)",
+ "source": "scientist-c, task LC-FOLLOWUP 2026-10-26; PAPER 567 manifest entries 57-59 (receipt FTR-20261026-42909904-01); gse156243/prediction_isr_ldh_chain_20261026.md; card P4-E-01 in drug_repurposing/cards/E01_isr_modulators.card.json",
+ "causal_statement": "DATO (fly, Drosophila amyloid model): Atf4 immunofluorescence rises with neuronal Wwox reduction only when Abeta42 is present (n 6, P 0.0022) and not without it (P 0.9305). DATO (exploratory, one human knockout organoid deposit, no amyloid): the 12-gene ATF4/ISR target set is lower than 10,000 random sets (mean shift -0.288, P 0.0005); ATF4 transcript is flat, which says nothing about ATF4 protein. INFERENZA: the Atf4-to-Ldh step is the authors' inference, since Atf4 is never perturbed. An ISR-attenuating drug therefore has no signed WWOX readout to be chosen on; the decisive first datum is eIF2 alpha phosphorylation and ATF4 protein in a WWOX-deficient human neural system, with and without a proteotoxic challenge.",
+ "falsifier": "eIF2 alpha phosphorylation and ATF4 protein NOT raised in WWOX-deficient human neural cells at matched maturity with or without a defined proteotoxic challenge falsifies the strand for WWOX-DEE; a raised signal that an eIF2B activator reverses, with a functional endpoint moving, would support it.",
+ "transfer_limit": "The fly effect is amyloid-conditional and partial-RNAi; the human transcript is six libraries with genotype and composition confounded and no protein-level readout; the adult-ALS trial of an eIF2B activator engaged the target without clinical benefit; nothing here transfers to a Q230P or splice-allele lesion. Not medical advice; no dose.",
+ "links": [
+  "[[paper_registry_current#PAPER 567]]"
+ ]
+}
