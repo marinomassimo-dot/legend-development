@@ -1,0 +1,19 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "_note": "Orchestrator-dispatched integration task; Scientist A reads the published full text in parallel. Product: one research note.",
+ "TASK_ID": "SCIB-LUCASCLARKE-INTEGRATION-20261026",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "scientist-b",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Integrate Lucas-Clarke 2026 (Brain Communications, fcag385) with what LEGEND already holds: preprint record, bearing records, directional question, adapter-answerable handles, honest scope.",
+ "SCOPE": {"deliverable": "disease-models/wwox/research/lucas_clarke_2026_corpus_integration_20261026.md"},
+ "ACCEPTANCE_CRITERIA": ["one note, five answers, summary at most 14 lines", "no ledger, registry or current-file edit", "adapter outputs labelled NOT WWOX EVIDENCE with retrieval date, no score"],
+ "CURRENT_STATE": "COMPLETE",
+ "assigned_on": "2026-10-26",
+ "TASK_ACK": {"TASK_ID": "SCIB-LUCASCLARKE-INTEGRATION-20261026", "DIRECTIVE_VERSION": 1, "GENERATION": 1, "DECISION": "ACCEPTED", "ACTOR_ID": "scientist-b", "acked_at": "2026-10-26T14:10:00Z", "reading_mode": "SECONDARY_INTEGRATION_NO_PRIMARY_READ", "note": "Branch task/scientist-b-lucas-clarke in .claude/worktrees/sb-lucas-clarke from main 1a5ece5e; the published paper was not read by this actor."},
+ "TASK_CLAIM": {"TASK_ID": "SCIB-LUCASCLARKE-INTEGRATION-20261026", "GENERATION": 1, "ACTOR_ID": "scientist-b", "claimed_at": "2026-10-26T14:10:00Z", "durable_pointer": "ledger/tasks/scientist-b/SCIB-LUCASCLARKE-INTEGRATION-20261026.json on branch task/scientist-b-lucas-clarke"},
+ "DEFAULTS_TAKEN": ["Published paper content taken from the dispatch statement and the preprint record, not read.", "Open Targets Ensembl identifiers mapped by hand; returned symbols checked against the queried symbols.", "PubTator3 reported as relation counts only."],
+ "STOP_LOG": []
+}
