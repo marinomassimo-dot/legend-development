@@ -20,21 +20,22 @@ still "not started" as a gold-set evaluation; this is a work-quality probe, not 
 4. The subagents are the same model family as the producer; A, B and C could not be made blind to general model knowledge (e.g. ISRIB, DCA neuropathy). Condition A is "external-tool only" for retrieval, not for prior knowledge.
 5. Producer scored; no independent scorer yet.
 
-## Results (case items max 26, total max 30)
+## Results (corrected 2026-10-27; see `scoring.md` Corrections)
 | | A external | B local | C both |
 |---|---|---|---|
-| Case items | 18.5 | 22.0 | 22.5 |
-| Total with cross-cutting | 22.5 | 26.0 | 26.5 |
+| Case items, corrected (max 25) | 18.0 | 21.0 | 21.5 |
+| Total, corrected (max 29, item 3.5 dropped) | 22.0 | 25.0 | 25.5 |
+| Pre-correction totals (max 30) | 22.5 | 26.0 | 26.5 |
 | Transfer errors (fly/mouse presented as WOREE efficacy) | 0 | 0 | 0 |
 | Recall of counter-evidence | lowest (generic) | high for local negatives and compound potency | high; plus live identifier traps |
 | Abstentions | present, correct | present, with reopening conditions | present, with reopening conditions |
 | Tool calls / tokens / time | 19 / 81k / 113 s | 18 / 145k / 162 s | 21 / 138k / 219 s |
 
-Where each condition lost: A missed the Abeta-dependence detail, the PDK1/PDPK1 collision and the stiripentol potency limit, and its counter-evidence stayed generic. B and C lost the same items (nobody retrieved the GSK-3 loss-of-function seizure papers 30237424 and 35253420, the lactate-may-be-adaptive point, or the GCN2/ISRIB-toxicity sources). B did not cite the WOREE ketogenic case series (36537114). C added the live checks (identifiers, KD series, a DCA safety paper) at the cost of a longer run and flagged three local-versus-external disagreements without resolving them.
+Where each condition lost: A missed the Abeta-dependence detail, the PDK1/PDPK1 collision and the stiripentol potency limit, and its counter-evidence stayed generic. B and C lost the same items (nobody retrieved the GSK-3 loss-of-function seizure papers 30237424 and 35253420, the lactate-may-be-adaptive point, or the GCN2/ISRIB-toxicity sources). B did not cite the WOREE ketogenic case series (36537114). C added the live checks (identifiers, KD series, a DCA safety paper); item 3.5 (identifier collision) is dropped as contaminated at the cost of a longer run and flagged three local-versus-external disagreements without resolving them.
 
 ## What this can and cannot support
-- Can: on these five cases, local knowledge added context fidelity, negatives and abstention reasons that external tools alone did not return, and external tools added identifier and compound checks and one primary clinical series that local alone did not carry. The reading is "complementary", with local the larger single contribution on this rubric (+3.5 case points of 26 for B over A).
-- Cannot: general superiority, efficacy, or ranking of candidates. n = 5 cases, one run per condition, one producer-scorer, a rubric built partly from the same paper the cards encode, same-model subagents, abstract-depth for seven of nine reference sources. Differences of a point or two are inside this noise; the C-over-B gap (0.5) is not a finding.
+- Can: on these five cases, local knowledge added context fidelity, negatives and abstention reasons that external tools alone did not return, and external tools added identifier and compound checks and one primary clinical series that local alone did not carry. The reading is "complementary", with local the larger single contribution on this rubric (B over A: +2 to +3.5 case points depending on variant; ranking A < B <= C in every variant).
+- Cannot: general superiority, efficacy, or ranking of candidates. n = 5 cases, one run per condition, one producer-scorer, a rubric built partly from the same paper the cards encode, same-model subagents, abstract-depth for seven of nine reference sources. Differences of a point or two are inside this noise; the C-versus-B gap is not a finding.
 
 ## Decisive judgements for the independent verifier (must not be the producer)
 1. Reference items resting on abstracts only: 1.4 (GC 24146979, SI 23741617), 2.2 (SA 25792327), 3.3 (DC 16476929), 4.1 (WO 36537114), 5.3 (G1 30237424, G2 35253420). Re-check the wording against full text where available.
@@ -45,3 +46,6 @@ Where each condition lost: A missed the Abeta-dependence detail, the PDK1/PDPK1 
 6. Stiripentol potency claim (B): Bacq 2024 (38443647) and the stiripentol complex I paper (41570991) say what B reports.
 
 Not repeated: this trial changed no card, registry or ledger. Records: line added to [`../README.md`](../README.md).
+
+## Post-verification corrections (2026-10-27)
+Applied from the independent verification: item 3.5 dropped (totals out of 29), reference 5.2 read as "specificity not demonstrated" (A 0.5), the ISRIB wording follows the abstract (reduces viability under chronic PERK activation), the ketogenic cohorts (36779245 vs 36537114) do not conflict, Fig. 7d shows PTZ+LiCl below PTZ in all three genotypes (figure reading), item 5.3/G2 unscored. `reference.md` is left as written before the answers; the amendments live in `scoring.md`. Verifier list items 2 and 4 are answered by the verification file.
