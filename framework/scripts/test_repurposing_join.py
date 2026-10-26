@@ -485,25 +485,45 @@ class CuratedLink(unittest.TestCase):
         self.assertFalse(check["receipt_in_ledger"])
         self.assertFalse(check["manifest_entries"][0]["resolved"])
 
-    def test_replicate_rows_separate_measured_observation_from_mechanism_to_verify(self):
-        for query_id, measured, mechanism in (("Q-R-10", "ATF4 protein", "eIF2 alpha phosphorylation"),
-                                              ("Q-R-11", "lactate", "LDH activity")):
-            row = self.rows[query_id]
-            classes = {c["endpoint"]: c for c in row["endpoint_classes"]}
-            self.assertEqual(classes[measured]["class"], rj.MEASURED, query_id)
-            self.assertEqual(classes[mechanism]["class"], rj.MECHANISM, query_id)
-            self.assertTrue(classes[measured]["observations"])
-            self.assertEqual(classes[mechanism]["observations"], [])  # an experiment the study did not run
-            self.assertIn("NOT a replication", row["act"])
-            # the link is a full-text locator; the abstract screen is kept, and does not decide it
-            self.assertEqual(row["binding"]["binding"], "BOUND_BY_FULLTEXT_LOCATOR")
-            self.assertIn("abstract_screen", row["binding"])
-        # same molecule, other endpoint, is listed but is not a match
-        self.assertEqual([o["id"] for o in {c["endpoint"]: c for c in self.rows["Q-R-10"]["endpoint_classes"]}["ATF4 protein"]["same_molecule_other_endpoint"]],
-                         ["DA-GSE-ISR-003"])
-        # a null in another contrast is carried beside the increase, not dropped
-        directions = {o["id"]: o["direction"] for o in {c["endpoint"]: c for c in self.rows["Q-R-10"]["endpoint_classes"]}["ATF4 protein"]["observations"]}
-        self.assertEqual(directions, {"DA-LC-ATF4-001": "INCREASE", "DA-LC-ATF4-002": "NO_CHANGE"})
+    def test_replicate_row_classes_follow_the_curated_packets_not_fixed_labels(self):
+        """Derived from the packets on disk: the expected class of every endpoint is recomputed here from the
+        curated observations (token subset of target+endpoint, complete read, receipt), then compared with the row."""
+        checked = 0
+        for query_id, row in self.rows.items():
+            curated = self.queries[query_id].get("curated_cards")
+            if row["kind"] != "REPLICATE" or not curated:
+                continue
+            observations = []
+            for name in curated:
+                observations += self.packet(name).get("disease_assertions", [])
+            for c in row["endpoint_classes"]:
+                tokens = rj.span_tokens(c["endpoint"])
+                matched = [a for a in observations if tokens and tokens <= rj.span_tokens(f"{a['target_id']} {a['endpoint']}")]
+                strong = [a for a in matched if a["reading_depth"] == "complete_fulltext_read" and a.get("receipt")]
+                if strong:
+                    self.assertEqual(c["class"], rj.MEASURED, (query_id, c["endpoint"]))
+                    self.assertEqual({o["id"] for o in c["observations"]}, {a["id"] for a in matched}, (query_id, c["endpoint"]))
+                else:
+                    self.assertNotEqual(c["class"], rj.MEASURED, (query_id, c["endpoint"]))
+                    self.assertTrue(c.get("cause") or c["class"] == rj.MECHANISM, (query_id, c["endpoint"]))
+                checked += 1
+            if any(c["class"] == rj.MECHANISM for c in row["endpoint_classes"]):
+                self.assertIn("NOT a replication", row["act"], query_id)
+            if any(c["class"] == rj.MEASURED for c in row["endpoint_classes"]):
+                self.assertEqual(row["binding"]["binding"], "BOUND_BY_FULLTEXT_LOCATOR", query_id)
+                self.assertIn("abstract_screen", row["binding"])
+        self.assertGreater(checked, 0)
+        # a null in another contrast is carried beside the increase, not dropped (Q-R-10 ATF4)
+        atf4 = {c["endpoint"]: c for c in self.rows["Q-R-10"]["endpoint_classes"]}["ATF4 protein"]
+        self.assertEqual({o["id"]: o["direction"] for o in atf4["observations"]}, {"DA-LC-ATF4-001": "INCREASE", "DA-LC-ATF4-002": "NO_CHANGE"})
+        self.assertEqual([o["id"] for o in atf4["same_molecule_other_endpoint"]], ["DA-GSE-ISR-003"])
+
+    def test_the_mrs_row_states_its_sign_relative_to_each_fly_contrast(self):
+        row = next(a for a in self.packet("E02_ldh_inhibition")["disease_assertions"] if a["id"] == "DA-BIO008-001")
+        signs = row["sign_vs_contrast"]
+        self.assertTrue(signs["DA-LC-LAC-001"].startswith("OPPOSITE"))
+        self.assertTrue(signs["DA-LC-LAC-002"].startswith("SAME SIGN"))
+        self.assertIn("not a replication", signs["DA-LC-LAC-002"])
 
     def test_without_a_curated_observation_the_class_is_missing_not_replicate(self):
         for row in self.rows.values():
@@ -540,6 +560,68 @@ class CuratedLink(unittest.TestCase):
         self.assertTrue(ot["truncation"]["truncated"])
         self.assertEqual((ot["truncation"]["listed"], ot["truncation"]["reported"]), (1, 5))
         self.assertEqual(out["targets"][0]["sources"]["dgidb"]["status"], "NOT_ATTEMPTED")
+
+
+class EndpointClassesOnSyntheticFixtures(unittest.TestCase):
+    """The classifier follows the observation, shown on invented fixtures (no corpus): an abstract-level or receiptless
+    match can never become MEASURED nor BOUND_BY_FULLTEXT_LOCATOR, another molecule never matches, and the cause of a
+    MISSING class is named."""
+
+    @staticmethod
+    def obs(id_, target, endpoint, depth="complete_fulltext_read", receipt="FTR-20990101-00000001-01", direction="INCREASE"):
+        row = {"id": id_, "target_id": target, "endpoint": endpoint, "direction": direction, "reading_depth": depth,
+               "locator": "fixture", "context": {"species": "fixture", "genotype": "fixture"}, "measured_result_note": ""}
+        if receipt:
+            row["receipt"] = receipt
+        return row
+
+    @staticmethod
+    def card(observations, depth="complete_fulltext_read"):
+        return {"input": {"disease_assertions": observations, "candidate": {"id": "X", "name": "fixture"}},
+                "legend_evidence": {"rows": [{"pmid": "0", "reading_depth": depth, "manifest": "fixture", "locator_count": 1,
+                                              "audit_status": "UNAUDITED", "receipt_id": "FTR-20990101-00000001-01",
+                                              "bound_check": {"binding": "UNVERIFIED", "reason": "fixture"}, "unaudited_contradictions": 0}],
+                                    "digest": "d", "query_id": "Q-X"},
+                "measure_next": {"dependence": "ONE_PAPER (0)", "measurement": "m", "would_move": "w"}, "external_sources": []}
+
+    @staticmethod
+    def query(test):
+        return {"query_id": "Q-X", "decisive_test": test, "origin_file": "fixture", "origin_line": 1}
+
+    def classes(self, observations, test, depth="complete_fulltext_read"):
+        return {c["endpoint"]: c for c in rj.endpoint_classes(self.query(test), self.card(observations, depth))}
+
+    def test_an_abstract_only_match_is_never_measured_nor_bound_by_a_locator(self):
+        weak = [self.obs("A1", "foo protein", "foo level", depth="abstract_only", receipt=None)]
+        c = self.classes(weak, "**foo protein**")["foo protein"]
+        self.assertNotEqual(c["class"], rj.MEASURED)
+        self.assertEqual((c["class"], c["cause"]), (rj.MISSING, "OBSERVATION_WEAKER_THAN_FULLTEXT"))
+        # complete read but no receipt: still not enough
+        c = self.classes([self.obs("A2", "foo protein", "foo level", receipt=None)], "**foo protein**")["foo protein"]
+        self.assertEqual(c["class"], rj.MISSING)
+        # through the handoff row: the binding stays the abstract screen
+        card = self.card(weak)
+        row = rj.handoff_rows([{"query_id": "Q-X", "card": card}], {"Q-X": self.query("**foo protein**")})[0]
+        self.assertNotEqual(row["binding"]["binding"], "BOUND_BY_FULLTEXT_LOCATOR")
+        self.assertNotIn("abstract_screen", row["binding"])
+        # the positive control: the same observation, read in full with a receipt, is measured and bound
+        strong = self.card([self.obs("A3", "foo protein", "foo level")])
+        row = rj.handoff_rows([{"query_id": "Q-X", "card": strong}], {"Q-X": self.query("**foo protein**")})[0]
+        self.assertEqual(row["endpoint_classes"][0]["class"], rj.MEASURED)
+        self.assertEqual(row["binding"]["binding"], "BOUND_BY_FULLTEXT_LOCATOR")
+
+    def test_another_molecule_does_not_match_and_a_complete_reading_makes_it_a_new_experiment(self):
+        other = [self.obs("B1", "pdh activity", "pdh activity")]
+        c = self.classes(other, "**lactate**")["lactate"]
+        self.assertEqual(c["class"], rj.MECHANISM)
+        self.assertEqual(c["observations"], [])
+
+    def test_the_cause_of_a_missing_class_is_named(self):
+        self.assertEqual(self.classes([], "**foo**")["foo"]["cause"], "NO_CURATED_OBSERVATION")
+        no_span = rj.endpoint_classes(self.query("no bold span here"), self.card([self.obs("C1", "foo", "foo")]))
+        self.assertEqual((no_span[0]["class"], no_span[0]["cause"]), (rj.MISSING, "NO_ENDPOINT_DECLARED"))
+        c = self.classes([self.obs("C2", "bar", "bar", depth="abstract_only", receipt=None)], "**zzz**", depth="partial_fulltext_read")["zzz"]
+        self.assertEqual((c["class"], c["cause"]), (rj.MISSING, "NO_COMPLETE_READING_BOUND"))
 
 
 if __name__ == "__main__":

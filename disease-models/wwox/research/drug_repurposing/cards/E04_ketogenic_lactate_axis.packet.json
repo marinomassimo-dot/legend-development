@@ -72,6 +72,10 @@
     "developmental_stage": "child"
    },
    "measured_result_note": "Reported extremely low in one patient; the same entry records raised mouse serum lactate. Not combined with the fly rows: different species, tissue and context.",
+   "sign_vs_contrast": {
+    "DA-LC-LAC-001": "OPPOSITE (DECREASE against INCREASE under Abeta42)",
+    "DA-LC-LAC-002": "SAME SIGN (DECREASE, nominal, without Abeta42); not a replication: other species, tissue and context"
+   },
    "evidence_scope": "UNQUALIFIED"
   },
   {
