@@ -490,12 +490,40 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: The text reports a 1.19 log2 fold-change upregulation of Ldh after Abeta42 overexpression in the knockdown experiment; the transcript-table row for the same comparison (previous entries) reads differently, a small disagreement between text and table.",
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: The text states a 1.19 log2 fold-change upregulation of Ldh after Abeta42 overexpression in the knockdown experiment.",
     "snippet": "which revealed a 1.19 log2 fold-change upregulation of Ldh after overexpression of Aβ42",
     "surface": "body",
     "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
     "anchor": "Results, lactate section",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+     "entry": 31,
+     "what_changed": "proposition narrowed to the text statement; the text-versus-table comparison (table row 1.10971735891117, a separate entry) moved to a reader note in the dossier outside the locators.",
+     "audit": {
+      "auditors": 2,
+      "verdicts": [
+       "OVERSHOOT",
+       "SUPPORTED"
+      ],
+      "audit_records": [
+       {
+        "audit_run": "blind locator audit of entries 27-99 of PMID 42909904",
+        "audit_file": "disease-models/wwox/research/locator_audits/2026-10-26_PMID42909904_narrowing_entries_blind_audit.md",
+        "audited_on": "2026-10-26",
+        "verdict": "OVERSHOOT",
+        "note": "OVERSHOOT at quote level; the rewording applied afterwards is re-audited in a second record."
+       },
+       {
+        "audit_run": "blind re-audit of the five OVERSHOOT triples",
+        "audit_file": "disease-models/wwox/research/locator_audits/2026-10-26_PMID42909904_five_overshoot_reaudit.md",
+        "audited_on": "2026-10-26",
+        "verdict": "SUPPORTED",
+        "note": "re-audit of the reworded proposition, 2026-10-26"
+       }
+      ]
+     }
+    }
    },
    {
     "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Knockdown-experiment transcript table: Pepck2 is lower with Wwox knockdown in the Abeta42 background, log2 fold-change -1.4572324418639899 (adjusted P 4.27466911660657e-10).",
@@ -634,12 +662,40 @@
     "panel_text_relation": "panel_only"
    },
    {
-    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: No glycolytic flux, glucose uptake, oxygen consumption, extracellular acidification, NAD/NADH ratio or pyruvate measurement is reported in the paper; the energetic inference rests on lactate, Ldh transcript and one ATP assay.",
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: The authors state the metabolomics data are deposited in the MetaboLights repository under study identifier MTBLS12344.",
     "snippet": "The metabolomics data have been deposited to MetaboLights repository with the study identifier MTBLS12344.",
     "surface": "body",
     "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
     "anchor": "Data availability (absence of a pyruvate or flux readout is a reader finding)",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+     "entry": 49,
+     "what_changed": "absence list (no flux, glucose uptake, oxygen consumption, acidification, NAD/NADH or pyruvate measurement) withdrawn from the locator; it is a reader note in dossier section 3, scoped to the main text, figures and supplementary tables read.",
+     "audit": {
+      "auditors": 2,
+      "verdicts": [
+       "OVERSHOOT",
+       "SUPPORTED"
+      ],
+      "audit_records": [
+       {
+        "audit_run": "blind locator audit of entries 27-99 of PMID 42909904",
+        "audit_file": "disease-models/wwox/research/locator_audits/2026-10-26_PMID42909904_narrowing_entries_blind_audit.md",
+        "audited_on": "2026-10-26",
+        "verdict": "OVERSHOOT",
+        "note": "OVERSHOOT at quote level; the rewording applied afterwards is re-audited in a second record."
+       },
+       {
+        "audit_run": "blind re-audit of the five OVERSHOOT triples",
+        "audit_file": "disease-models/wwox/research/locator_audits/2026-10-26_PMID42909904_five_overshoot_reaudit.md",
+        "audited_on": "2026-10-26",
+        "verdict": "SUPPORTED",
+        "note": "re-audit of the reworded proposition"
+       }
+      ]
+     }
+    }
    },
    {
     "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Assay table, genotype of the Ldh experiment: elav-GAL4 with an Abeta42 insertion (BDSC 33773) and Wwox TRiP together with Ldh RNAi (BDSC 33640) in female flies, climbing assay.",
@@ -954,12 +1010,40 @@
     "panel_text_relation": "panel_only"
    },
    {
-    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Wwox overexpression versus control left lactate unreported by any panel of the main figures; the abstract and introduction state overexpression 'did not alter lactate levels', which rests on lactate's absence from the significant-metabolite lists rather than on a displayed lactate panel, and the Abeta42 control cohort of that experiment did not itself show a lactate rise to be reversed.",
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: The Introduction states that upregulation of Wwox in neurons significantly reduced amyloid load, rescuing lifespan and locomotor defects, but did not alter lactate levels, instead altering L-methionine.",
     "snippet": "Strikingly, upregulation of Wwox in neurons significantly reduced amyloid load, rescuing lifespan and locomotor defects but did not alter lactate levels, instead altering L-methionine",
     "surface": "body",
     "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
     "anchor": "Introduction, last paragraph",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+     "entry": 89,
+     "what_changed": "reader inference about the basis of the lactate statement moved to the dossier (section 4) outside the locators; the proposition now states only what the authors write.",
+     "audit": {
+      "auditors": 2,
+      "verdicts": [
+       "OVERSHOOT",
+       "SUPPORTED"
+      ],
+      "audit_records": [
+       {
+        "audit_run": "blind locator audit of entries 27-99 of PMID 42909904",
+        "audit_file": "disease-models/wwox/research/locator_audits/2026-10-26_PMID42909904_narrowing_entries_blind_audit.md",
+        "audited_on": "2026-10-26",
+        "verdict": "OVERSHOOT",
+        "note": "OVERSHOOT at quote level; the rewording applied afterwards is re-audited in a second record."
+       },
+       {
+        "audit_run": "blind re-audit of the five OVERSHOOT triples",
+        "audit_file": "disease-models/wwox/research/locator_audits/2026-10-26_PMID42909904_five_overshoot_reaudit.md",
+        "audited_on": "2026-10-26",
+        "verdict": "SUPPORTED",
+        "note": "re-audit of the reworded proposition"
+       }
+      ]
+     }
+    }
    },
    {
     "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: Stated limitation: startle-induced locomotor phenotypes from knockdown alone may emerge later in the flies' lifespan than the period assayed.",
@@ -994,20 +1078,76 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: The paper has no Limitations section; the caveats above are scattered through the Discussion and the article states no limitation on single RNAi line, sex, whole-head metabolomics, number of replicates, or the use of an overexpressed Arctic-mutant secreted Abeta42.",
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: The Discussion closes with a conclusion stating that the study provides new insights into the relationship between Abeta42 expression and Wwox levels in neurons.",
     "snippet": "In conclusion, our study provides new insights into the multifaceted relationship between Aβ42 expression and Wwox levels in neurons.",
     "surface": "body",
     "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
     "anchor": "Discussion, conclusion (absence of a limitations section is a reader finding)",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+     "entry": 94,
+     "what_changed": "absence claims (no Limitations section; no stated limitation on single RNAi line, sex, whole-head metabolomics, replicate number, Arctic secreted Abeta42) withdrawn from the locator; they remain reader notes in dossier section 6.",
+     "audit": {
+      "auditors": 2,
+      "verdicts": [
+       "OVERSHOOT",
+       "SUPPORTED"
+      ],
+      "audit_records": [
+       {
+        "audit_run": "blind locator audit of entries 27-99 of PMID 42909904",
+        "audit_file": "disease-models/wwox/research/locator_audits/2026-10-26_PMID42909904_narrowing_entries_blind_audit.md",
+        "audited_on": "2026-10-26",
+        "verdict": "OVERSHOOT",
+        "note": "OVERSHOOT at quote level; the rewording applied afterwards is re-audited in a second record."
+       },
+       {
+        "audit_run": "blind re-audit of the five OVERSHOOT triples",
+        "audit_file": "disease-models/wwox/research/locator_audits/2026-10-26_PMID42909904_five_overshoot_reaudit.md",
+        "audited_on": "2026-10-26",
+        "verdict": "SUPPORTED",
+        "note": "re-audit of the reworded proposition"
+       }
+      ]
+     }
+    }
    },
    {
-    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: The claim that neuronal Wwox plays a cell-autonomous protective role against Abeta42 toxicity rests on glial-versus-neuronal driver comparisons; no neuron-specific rescue by a second driver or by a non-neuronal Wwox restoration was done.",
-    "snippet": "suggesting that neuronal Wwox plays a cell-autonomous protective role against Aβ42-mediated toxicity",
+    "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: The authors write that Wwox knockdown in glia had no effect on the toxicity of neuron-derived Abeta42 on startle-induced locomotion, suggesting that neuronal Wwox plays a cell-autonomous protective role against Abeta42-mediated toxicity.",
+    "snippet": "However, Wwox knockdown in glia had no effect on the toxicity of neuron-derived Aβ42, in the context of startle-induced locomotor function, suggesting that neuronal Wwox plays a cell-autonomous protective role against Aβ42-mediated toxicity",
     "surface": "body",
     "artifact": "files/fulltext/PMID42909904_PMC13684411.xml",
     "anchor": "Discussion, second paragraph",
-    "panel_text_relation": "text_only"
+    "panel_text_relation": "text_only",
+    "contradicts_locator": {
+     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+     "entry": 95,
+     "what_changed": "reader inference that no second driver or non-neuronal rescue was done moved to dossier section 6; the proposition states the authors' reasoning only.",
+     "audit": {
+      "auditors": 2,
+      "verdicts": [
+       "OVERSHOOT",
+       "OVERSHOOT"
+      ],
+      "audit_records": [
+       {
+        "audit_run": "blind locator audit of entries 27-99 of PMID 42909904",
+        "audit_file": "disease-models/wwox/research/locator_audits/2026-10-26_PMID42909904_narrowing_entries_blind_audit.md",
+        "audited_on": "2026-10-26",
+        "verdict": "OVERSHOOT",
+        "note": "OVERSHOOT at quote level; the rewording applied afterwards is re-audited in a second record."
+       },
+       {
+        "audit_run": "blind re-audit of the five OVERSHOOT triples",
+        "audit_file": "disease-models/wwox/research/locator_audits/2026-10-26_PMID42909904_five_overshoot_reaudit.md",
+        "audited_on": "2026-10-26",
+        "verdict": "OVERSHOOT",
+        "note": "re-audit found the first rewording turned 'suggesting' into 'because'; reworded to keep the hedge as the auditor specified; the second rewording is not itself re-audited"
+       }
+      ]
+     }
+    }
    },
    {
     "proposition": "DROSOPHILA AD MODEL, NOT HUMAN WWOX-DEE EVIDENCE: The authors recapitulate human risk by knockdown and state that Wwox is a regulator of neuronal metabolic state and that genetic risk loci like WWOX may act upstream of transcriptional regulation of the metabolome; the source of the human link is GWAS eQTL and post-mortem expression citations, not tested here.",
