@@ -1,0 +1,13 @@
+{
+ "kind": "REPO",
+ "status": "open",
+ "tag": "DATO + INFERENZA",
+ "title": "LDH lowering rescued fly locomotion once in the amyloid-plus-Wwox-reduction genotype; the approved paediatric epilepsy drug usually linked to LDH inhibits it only weakly in the retrieved measurements (NOT WWOX-DEE evidence)",
+ "source": "scientist-c, task LC-FOLLOWUP 2026-10-26; PAPER 567 manifest entries 50-56 (receipt FTR-20261026-42909904-01); ChEMBL activity rows of stiripentol (document CHEMBL4311969), 2024 and 2026 stiripentol abstracts; card P4-E-02 in drug_repurposing/cards/E02_ldh_inhibition.card.json",
+ "causal_statement": "DATO: Ldh RNAi added to Abeta42 plus Wwox RNAi raised climbing at 14, 21 and 28 days (t 3.182, 6.832, 5.198; N 4-6 vials) to or above the control line; no Ldh-alone arm, no Wwox-mRNA check, lactate not measured in the double line, and the authors cite Ldh knockdown as detrimental in other fly amyloid models. DATO (ChEMBL, abstract-level for the papers): stiripentol inhibits human LDH5 and LDH1 by single-digit percent at a single high millimolar-range concentration and about a tenth at a high micromolar concentration in a chemistry paper; a 2026 paper calls it moderate but not potent. INFERENZA: an LDH-directed lever for WWOX-DEE would need a more potent LDHA agent or proof of brain LDH engagement by stiripentol at tolerated exposure, and a separate control for stiripentol's other pharmacology.",
+ "falsifier": "Lactate and LDH activity not altered in WWOX-deficient human neural cells at matched maturity, or Ldh lowering failing in a second Wwox RNAi line or a null allele, or an Ldh-alone arm showing the same benefit with Wwox intact.",
+ "transfer_limit": "Fly amyloid model, partial RNAi, whole-head metabolomics; human lactate in WWOX deficiency is reported normal or extremely low (DL-BIO-008, DL-BIO-009); stiripentol's labelled use sits on clobazam co-therapy; no WWOX datum for any LDH agent. Not medical advice; no dose.",
+ "links": [
+  "[[paper_registry_current#PAPER 567]]"
+ ]
+}

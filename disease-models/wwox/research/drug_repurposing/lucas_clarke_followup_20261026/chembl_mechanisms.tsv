@@ -1,0 +1,7 @@
+label	uniprot	target_chembl_id	target_name	target_type	molecule_chembl_id	pref_name	max_phase	action_type	mechanism	refs
+PDK1	Q15118	CHEMBL2096665	Pyruvate dehydrogenase kinase	PROTEIN FAMILY	CHEMBL306823	SODIUM DICHLOROACETATE	3.0	INHIBITOR	Pyruvate dehydrogenase kinase inhibitor	PubMed:20533281;PubMed:27803917
+PDK2	Q15119	CHEMBL2096665	Pyruvate dehydrogenase kinase	PROTEIN FAMILY	CHEMBL306823	SODIUM DICHLOROACETATE	3.0	INHIBITOR	Pyruvate dehydrogenase kinase inhibitor	PubMed:20533281;PubMed:27803917
+PDK3	Q15120	CHEMBL2096665	Pyruvate dehydrogenase kinase	PROTEIN FAMILY	CHEMBL306823	SODIUM DICHLOROACETATE	3.0	INHIBITOR	Pyruvate dehydrogenase kinase inhibitor	PubMed:20533281;PubMed:27803917
+PDK4	Q16654	CHEMBL2096665	Pyruvate dehydrogenase kinase	PROTEIN FAMILY	CHEMBL306823	SODIUM DICHLOROACETATE	3.0	INHIBITOR	Pyruvate dehydrogenase kinase inhibitor	PubMed:20533281;PubMed:27803917
+PDPK1_collision_control	O15530	CHEMBL2534	3-phosphoinositide-dependent protein kinase 1	SINGLE PROTEIN	CHEMBL1650595	AR-12	1.0	INHIBITOR	3-phosphoinositide dependent protein kinase-1 inhibitor	PubMed:15205346
+PDPK1_collision_control	O15530	CHEMBL2534	3-phosphoinositide-dependent protein kinase 1	SINGLE PROTEIN	CHEMBL574737	UCN-01	2.0	INHIBITOR	3-phosphoinositide dependent protein kinase-1 inhibitor	Other:http://www.guidetopharmacology.org/GRAC/LigandDisplayForward?ligandId=7907;PubMed:12892559;PubMed:19568282

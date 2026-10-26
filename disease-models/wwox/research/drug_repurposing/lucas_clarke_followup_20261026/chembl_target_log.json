@@ -1,0 +1,246 @@
+{
+ "PDK1": {
+  "http": 200,
+  "targets": [
+   [
+    "CHEMBL4766",
+    "[Pyruvate dehydrogenase (acetyl-transferring)] kinase isozyme 1, mitochondrial",
+    "SINGLE PROTEIN"
+   ],
+   [
+    "CHEMBL2096665",
+    "Pyruvate dehydrogenase kinase",
+    "PROTEIN FAMILY"
+   ],
+   [
+    "CHEMBL3885616",
+    "Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit alpha isoform/[Pyruvate dehydrogenase (acetyl-transferring)] kinase isozyme 1, mitochondrial",
+    "PROTEIN FAMILY"
+   ]
+  ]
+ },
+ "PDK2": {
+  "http": 200,
+  "targets": [
+   [
+    "CHEMBL3861",
+    "[Pyruvate dehydrogenase (acetyl-transferring)] kinase isozyme 2, mitochondrial",
+    "SINGLE PROTEIN"
+   ],
+   [
+    "CHEMBL2096665",
+    "Pyruvate dehydrogenase kinase",
+    "PROTEIN FAMILY"
+   ]
+  ]
+ },
+ "PDK3": {
+  "http": 200,
+  "targets": [
+   [
+    "CHEMBL3893",
+    "[Pyruvate dehydrogenase (acetyl-transferring)] kinase isozyme 3, mitochondrial",
+    "SINGLE PROTEIN"
+   ],
+   [
+    "CHEMBL2096665",
+    "Pyruvate dehydrogenase kinase",
+    "PROTEIN FAMILY"
+   ]
+  ]
+ },
+ "PDK4": {
+  "http": 200,
+  "targets": [
+   [
+    "CHEMBL4141",
+    "[Pyruvate dehydrogenase (acetyl-transferring)] kinase isozyme 4, mitochondrial",
+    "SINGLE PROTEIN"
+   ],
+   [
+    "CHEMBL2096665",
+    "Pyruvate dehydrogenase kinase",
+    "PROTEIN FAMILY"
+   ]
+  ]
+ },
+ "PDPK1_collision_control": {
+  "http": 200,
+  "targets": [
+   [
+    "CHEMBL2534",
+    "3-phosphoinositide-dependent protein kinase 1",
+    "SINGLE PROTEIN"
+   ]
+  ]
+ },
+ "LDHA": {
+  "http": 200,
+  "targets": [
+   [
+    "CHEMBL4835",
+    "L-lactate dehydrogenase A chain",
+    "SINGLE PROTEIN"
+   ],
+   [
+    "CHEMBL5465226",
+    "von Hippel-Lindau disease tumor suppressor/L-lactate dehydrogenase A chain",
+    "PROTEIN-PROTEIN INTERACTION"
+   ]
+  ]
+ },
+ "LDHB": {
+  "http": 200,
+  "targets": [
+   [
+    "CHEMBL4940",
+    "L-lactate dehydrogenase B chain",
+    "SINGLE PROTEIN"
+   ],
+   [
+    "CHEMBL5465228",
+    "von Hippel-Lindau disease tumor suppressor/L-lactate dehydrogenase B chain",
+    "PROTEIN-PROTEIN INTERACTION"
+   ]
+  ]
+ },
+ "LDHC": {
+  "http": 200,
+  "targets": []
+ },
+ "ATF4": {
+  "http": 200,
+  "targets": [
+   [
+    "CHEMBL6067624",
+    "Cyclic AMP-dependent transcription factor ATF-4",
+    "SINGLE PROTEIN"
+   ]
+  ]
+ },
+ "PERK_EIF2AK3": {
+  "http": 200,
+  "targets": [
+   [
+    "CHEMBL6030",
+    "Eukaryotic translation initiation factor 2-alpha kinase 3",
+    "SINGLE PROTEIN"
+   ]
+  ]
+ },
+ "GCN2_EIF2AK4": {
+  "http": 200,
+  "targets": [
+   [
+    "CHEMBL5358",
+    "eIF-2-alpha kinase GCN2",
+    "SINGLE PROTEIN"
+   ]
+  ]
+ },
+ "HRI_EIF2AK1": {
+  "http": 200,
+  "targets": [
+   [
+    "CHEMBL6029",
+    "Eukaryotic translation initiation factor 2-alpha kinase 1",
+    "SINGLE PROTEIN"
+   ]
+  ]
+ },
+ "PKR_EIF2AK2": {
+  "http": 200,
+  "targets": [
+   [
+    "CHEMBL5785",
+    "Interferon-induced, double-stranded RNA-activated protein kinase",
+    "SINGLE PROTEIN"
+   ]
+  ]
+ },
+ "EIF2B1": {
+  "http": 200,
+  "targets": [
+   [
+    "CHEMBL6066508",
+    "Translation initiation factor eIF2B subunit alpha",
+    "SINGLE PROTEIN"
+   ]
+  ]
+ },
+ "EIF2B2": {
+  "http": 200,
+  "targets": [
+   [
+    "CHEMBL6067331",
+    "Translation initiation factor eIF2B subunit beta",
+    "SINGLE PROTEIN"
+   ]
+  ]
+ },
+ "EIF2B3": {
+  "http": 200,
+  "targets": [
+   [
+    "CHEMBL4295961",
+    "Translation initiation factor eIF2B subunit gamma",
+    "SINGLE PROTEIN"
+   ]
+  ]
+ },
+ "EIF2B4": {
+  "http": 200,
+  "targets": [
+   [
+    "CHEMBL6067328",
+    "Translation initiation factor eIF2B subunit delta",
+    "SINGLE PROTEIN"
+   ]
+  ]
+ },
+ "EIF2B5": {
+  "http": 200,
+  "targets": [
+   [
+    "CHEMBL5725120",
+    "Translation initiation factor eIF2B subunit epsilon",
+    "SINGLE PROTEIN"
+   ]
+  ]
+ },
+ "PPP1R15A": {
+  "http": 200,
+  "targets": [
+   [
+    "CHEMBL4630805",
+    "Protein phosphatase 1 regulatory subunit 15A",
+    "SINGLE PROTEIN"
+   ]
+  ]
+ },
+ "PPP1R15B": {
+  "http": 200,
+  "targets": [
+   [
+    "CHEMBL4630830",
+    "Protein phosphatase 1 regulatory subunit 15B",
+    "SINGLE PROTEIN"
+   ]
+  ]
+ },
+ "MCT1_SLC16A1": {
+  "http": 200,
+  "targets": [
+   [
+    "CHEMBL4360",
+    "Monocarboxylate transporter 1",
+    "SINGLE PROTEIN"
+   ],
+   [
+    "CHEMBL4802067",
+    "Monocarboxylate transporter 1/4",
+    "SELECTIVITY GROUP"
+   ]
+  ]
+ }
+}

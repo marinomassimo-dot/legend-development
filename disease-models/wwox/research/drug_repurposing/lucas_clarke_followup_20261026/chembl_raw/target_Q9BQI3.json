@@ -1,0 +1,326 @@
+{
+ "page_meta": {
+  "limit": 50,
+  "next": null,
+  "offset": 0,
+  "previous": null,
+  "total_count": 1
+ },
+ "targets": [
+  {
+   "cross_references": [],
+   "organism": "Homo sapiens",
+   "pref_name": "Eukaryotic translation initiation factor 2-alpha kinase 1",
+   "species_group_flag": false,
+   "target_chembl_id": "CHEMBL6029",
+   "target_components": [
+    {
+     "accession": "Q9BQI3",
+     "component_description": "Eukaryotic translation initiation factor 2-alpha kinase 1",
+     "component_id": 4550,
+     "component_type": "PROTEIN",
+     "relationship": "SINGLE PROTEIN",
+     "target_component_synonyms": [
+      {
+       "component_synonym": "2.7.11.1",
+       "syn_type": "EC_NUMBER"
+      },
+      {
+       "component_synonym": "EIF2AK1",
+       "syn_type": "GENE_SYMBOL"
+      },
+      {
+       "component_synonym": "Eukaryotic translation initiation factor 2-alpha kinase 1",
+       "syn_type": "UNIPROT"
+      },
+      {
+       "component_synonym": "HCR",
+       "syn_type": "UNIPROT"
+      },
+      {
+       "component_synonym": "Heme-controlled repressor",
+       "syn_type": "UNIPROT"
+      },
+      {
+       "component_synonym": "Heme-regulated eukaryotic initiation factor eIF-2-alpha kinase",
+       "syn_type": "UNIPROT"
+      },
+      {
+       "component_synonym": "Heme-regulated inhibitor",
+       "syn_type": "UNIPROT"
+      },
+      {
+       "component_synonym": "Hemin-sensitive initiation factor 2-alpha kinase",
+       "syn_type": "UNIPROT"
+      },
+      {
+       "component_synonym": "hHRI",
+       "syn_type": "UNIPROT"
+      },
+      {
+       "component_synonym": "HRI",
+       "syn_type": "GENE_SYMBOL_OTHER"
+      },
+      {
+       "component_synonym": "KIAA1369 ",
+       "syn_type": "GENE_SYMBOL_OTHER"
+      },
+      {
+       "component_synonym": "Synonyms=HRI",
+       "syn_type": "GENE_SYMBOL_OTHER"
+      }
+     ],
+     "target_component_xrefs": [
+      {
+       "xref_id": "Q9BQI3",
+       "xref_name": null,
+       "xref_src_db": "AlphaFoldDB"
+      },
+      {
+       "xref_id": "Q9BQI3",
+       "xref_name": null,
+       "xref_src_db": "ExpressionAtlas"
+      },
+      {
+       "xref_id": "GO:0005634",
+       "xref_name": "nucleus",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:0005737",
+       "xref_name": "cytoplasm",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:0005829",
+       "xref_name": "cytosol",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:0005515",
+       "xref_name": "protein binding",
+       "xref_src_db": "GoFunction"
+      },
+      {
+       "xref_id": "GO:0005524",
+       "xref_name": "ATP binding",
+       "xref_src_db": "GoFunction"
+      },
+      {
+       "xref_id": "GO:0042803",
+       "xref_name": "protein homodimerization activity",
+       "xref_src_db": "GoFunction"
+      },
+      {
+       "xref_id": "GO:0006909",
+       "xref_name": "phagocytosis",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0006950",
+       "xref_name": "response to stress",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0008285",
+       "xref_name": "negative regulation of cell population proliferation",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0017148",
+       "xref_name": "negative regulation of translation",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0030225",
+       "xref_name": "macrophage differentiation",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0045993",
+       "xref_name": "negative regulation of translational initiation by iron",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0046501",
+       "xref_name": "protoporphyrinogen IX metabolic process",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0046777",
+       "xref_name": "protein autophosphorylation",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0046986",
+       "xref_name": "negative regulation of hemoglobin biosynthetic process",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0060586",
+       "xref_name": "multicellular organismal-level iron ion homeostasis",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0070585",
+       "xref_name": "protein localization to mitochondrion",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0140467",
+       "xref_name": "integrated stress response signaling",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0140468",
+       "xref_name": "HRI-mediated signaling",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:1901526",
+       "xref_name": "positive regulation of mitophagy",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:1990641",
+       "xref_name": "response to iron ion starvation",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "HGNC:24921",
+       "xref_name": "EIF2AK1",
+       "xref_src_db": "HGNC"
+      },
+      {
+       "xref_id": "Q9BQI3",
+       "xref_name": null,
+       "xref_src_db": "IntAct"
+      },
+      {
+       "xref_id": "IPR000719",
+       "xref_name": "Prot_kinase_dom",
+       "xref_src_db": "InterPro"
+      },
+      {
+       "xref_id": "IPR008271",
+       "xref_name": "Ser/Thr_kinase_AS",
+       "xref_src_db": "InterPro"
+      },
+      {
+       "xref_id": "IPR011009",
+       "xref_name": "Kinase-like_dom_sf",
+       "xref_src_db": "InterPro"
+      },
+      {
+       "xref_id": "IPR017441",
+       "xref_name": "Protein_kinase_ATP_BS",
+       "xref_src_db": "InterPro"
+      },
+      {
+       "xref_id": "IPR050339",
+       "xref_name": "CC_SR_Kinase",
+       "xref_src_db": "InterPro"
+      },
+      {
+       "xref_id": "IPR054521",
+       "xref_name": "HRI2_3H",
+       "xref_src_db": "InterPro"
+      },
+      {
+       "xref_id": "PTHR11042",
+       "xref_name": "EUKARYOTIC TRANSLATION INITIATION FACTOR 2-ALPHA KINASE EIF2-ALPHA KINASE -RELATED",
+       "xref_src_db": "PANTHER"
+      },
+      {
+       "xref_id": "PTHR11042:SF160",
+       "xref_name": "EUKARYOTIC TRANSLATION INITIATION FACTOR 2-ALPHA KINASE 1",
+       "xref_src_db": "PANTHER"
+      },
+      {
+       "xref_id": "PF00069",
+       "xref_name": "Pkinase",
+       "xref_src_db": "Pfam"
+      },
+      {
+       "xref_id": "PF22949",
+       "xref_name": "HRI2_3H",
+       "xref_src_db": "Pfam"
+      },
+      {
+       "xref_id": "PA134919097",
+       "xref_name": "eukaryotic translation initiation factor 2 alpha kinase 1",
+       "xref_src_db": "PharmGKB"
+      },
+      {
+       "xref_id": "Q9BQI3",
+       "xref_name": null,
+       "xref_src_db": "Pharos"
+      },
+      {
+       "xref_id": "R-HSA-9648895",
+       "xref_name": "Response of EIF2AK1 (HRI) to heme deficiency",
+       "xref_src_db": "Reactome"
+      },
+      {
+       "xref_id": "R-HSA-9840373",
+       "xref_name": "Cellular response to mitochondrial stress",
+       "xref_src_db": "Reactome"
+      },
+      {
+       "xref_id": "A8K2R2",
+       "xref_name": "Eukaryotic translation initiation factor 2-alpha kinase 1",
+       "xref_src_db": "UniProt"
+      },
+      {
+       "xref_id": "Q549K6",
+       "xref_name": "Eukaryotic translation initiation factor 2-alpha kinase 1",
+       "xref_src_db": "UniProt"
+      },
+      {
+       "xref_id": "Q8NBW3",
+       "xref_name": "Eukaryotic translation initiation factor 2-alpha kinase 1",
+       "xref_src_db": "UniProt"
+      },
+      {
+       "xref_id": "Q9BQI3",
+       "xref_name": "Eukaryotic translation initiation factor 2-alpha kinase 1",
+       "xref_src_db": "UniProt"
+      },
+      {
+       "xref_id": "Q9HC02",
+       "xref_name": "Eukaryotic translation initiation factor 2-alpha kinase 1",
+       "xref_src_db": "UniProt"
+      },
+      {
+       "xref_id": "Q9NYE0",
+       "xref_name": "Eukaryotic translation initiation factor 2-alpha kinase 1",
+       "xref_src_db": "UniProt"
+      },
+      {
+       "xref_id": "Q9P0V6",
+       "xref_name": "Eukaryotic translation initiation factor 2-alpha kinase 1",
+       "xref_src_db": "UniProt"
+      },
+      {
+       "xref_id": "Q9P1J5",
+       "xref_name": "Eukaryotic translation initiation factor 2-alpha kinase 1",
+       "xref_src_db": "UniProt"
+      },
+      {
+       "xref_id": "Q9P2H8",
+       "xref_name": "Eukaryotic translation initiation factor 2-alpha kinase 1",
+       "xref_src_db": "UniProt"
+      },
+      {
+       "xref_id": "Q9UHG4",
+       "xref_name": "Eukaryotic translation initiation factor 2-alpha kinase 1",
+       "xref_src_db": "UniProt"
+      }
+     ]
+    }
+   ],
+   "target_type": "SINGLE PROTEIN",
+   "tax_id": 9606
+  }
+ ]
+}

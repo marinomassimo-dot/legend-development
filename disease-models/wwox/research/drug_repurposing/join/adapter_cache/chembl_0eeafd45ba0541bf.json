@@ -1,0 +1,33 @@
+{
+ "adapter": "chembl",
+ "citation": "Zdrazil B. et al. The ChEMBL Database in 2023: a drug discovery platform spanning multiple bioactivity data types and time periods. Nucleic Acids Res 2024;52(D1):D1180-D1192. https://doi.org/10.1093/nar/gkad1004; web services: Davies M. et al. 2015 (Nucleic Acids Res 43:W612)",
+ "error": "",
+ "evidence_label": "NOT WWOX EVIDENCE",
+ "hits": [],
+ "licence": "CC BY-SA 3.0; key-less, no payment",
+ "nearest": [
+  {
+   "molecule_chembl_id": "CHEMBL4303573",
+   "pref_name": null
+  },
+  {
+   "molecule_chembl_id": "CHEMBL4754894",
+   "pref_name": null
+  },
+  {
+   "molecule_chembl_id": "CHEMBL3527138",
+   "pref_name": null
+  }
+ ],
+ "note": "NO_MATCH_FOUND is an answer about this query on this date, never absence: no molecule's name or synonym equals the queried name; the nearest search hits are in `nearest` and are NOT the named substance",
+ "request": {
+  "drug": "ISRIB-class eIF2B activators and other ISR attenuators"
+ },
+ "requests_sent": [
+  "https://www.ebi.ac.uk/chembl/api/data/status.json",
+  "https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?q=ISRIB-class%20eIF2B%20activators%20and%20other%20ISR%20attenuators&limit=5"
+ ],
+ "retrieved_at": "2026-10-26T17:25:31Z",
+ "source_version": "ChEMBL_37 2026-05-01",
+ "status": "NO_MATCH_FOUND"
+}

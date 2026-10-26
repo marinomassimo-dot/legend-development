@@ -634,6 +634,55 @@ cannot be ranked at all until one measurement exists.
 **Class:** `PROMISING_BUT_MECHANISTIC_GAP` — the gap is causal, not pharmacological: the branch has
 not been discriminated.
 
+### R-10 — ISRIB-class eIF2B activators and other ISR attenuators (class-level; added 2026-10-26 from the Lucas-Clarke follow-up)
+
+| Field | Value |
+|---|---|
+| **INTERVENTION** | class-level: eIF2B activators (ISRIB and clinical-stage successors), PERK-arm inhibitors, repurposed compounds that reverse eIF2 alpha-P translational repression; the card is `research/drug_repurposing/cards/E01_isr_modulators.card.json` |
+| **TARGET** | the eIF2B complex (EIF2B1-5, HGNC:3257-3261) or the PERK arm (EIF2AK3, HGNC:3255); node: integrated stress response, ATF4 output |
+| **MECHANISM** | if a WWOX-dependent, harmful ISR elevation exists in WWOX-deficient neural cells, attenuating it protects function; the elevation is shown only in a Drosophila amyloid model (Atf4 signal, n 6) and only with amyloid |
+| **EVIDENCE_LEVEL** | **T6** for WWOX (fly, amyloid-conditional, correlational); the human knockout organoid transcriptome points the other way (exploratory) |
+| **WWOX_DIRECT_EVIDENCE** | none in any WWOX-deficient human system; ATF4/ISR target transcripts LOWER than chance in the one knockout organoid deposit (exploratory) |
+| **NEAR_DISEASE_EVIDENCE** | eIF2B activator: target engaged without benefit in adult ALS; memory and tau improved in a mouse amyloid model; guanabenz in children with vanishing white matter, a non-randomised benefit with frequent adverse events (abstract-level) |
+| **HUMAN_USE_STATUS** | family-dependent: clinical-stage (eIF2B activators), research tools (ISRIB, PERK inhibitors), licensed for other uses (trazodone, guanabenz) |
+| **CLINICAL_MATURITY** | 🔴 not design-ready for WWOX: no signed human readout |
+| **BBB_RELEVANCE** | brain-penetrant members exist (phase 1b CSF distribution reported for one eIF2B activator); not assessed for WWOX |
+| **PEDIATRIC_OR_DEVELOPMENTAL_RELEVANCE** | paediatric experience exists only for guanabenz in vanishing white matter; chronic ISR attenuation in a developing brain is an open safety question |
+| **REVERSIBILITY_REQUIREMENT** | pharmacological, reversible in principle |
+| **KNOWN_MAJOR_SAFETY_CONSTRAINTS** | PERK inhibition: signs of pancreatic toxicity in a mouse model; a research eIF2B activator stopped for cardiovascular effects in higher species; guanabenz: hallucinations in over half of 33 children and serious adverse events in three quarters (abstract-level); trazodone label: paediatric safety not established |
+| **EXPECTED_DIRECTION_OF_EFFECT** | lower ISR output; whether lower is better in WWOX-DEE is the unresolved question |
+| **MAIN_TRANSLATIONAL_RISK** | 🔴 the readout the lever needs does not exist in a human WWOX system, and the ISR may be adaptive |
+| **DECISIVE_PRECLINICAL_TEST** | **eIF2 alpha phosphorylation** and **ATF4 protein** (with ATF4-target transcripts) in WWOX-deficient versus isogenic human neural cells at matched maturity, with and without a defined proteotoxic challenge; only if elevated, an eIF2B activator against vehicle on that readout and one functional endpoint |
+| **SOURCE_IDS** | PAPER 567 (the single reading behind the fly rows; related records are listed in the card, not here, so that the join does not inherit unrelated families of papers) |
+
+**Class:** `READOUT_FIRST` — Track A, route BENEFICIO_PRECOCE; the first experiment is the readout, not a drug.
+Fly content is NOT WWOX-DEE evidence. Not medical advice.
+
+---
+
+### R-11 — Stiripentol (LDH-lowering rationale; added 2026-10-26 from the Lucas-Clarke follow-up)
+
+| Field | Value |
+|---|---|
+| **INTERVENTION** | stiripentol as the approved paediatric epilepsy member of an LDH-lowering lever; LDHA tool compounds and an LDHA-directed oligonucleotide (approved for primary hyperoxaluria, liver-directed) are context; the card is `research/drug_repurposing/cards/E02_ldh_inhibition.card.json` |
+| **TARGET** | LDHA (HGNC:6535, P00338) and LDHB (HGNC:6541, P07195); node: lactate production |
+| **MECHANISM** | if lactate or LDH activity is raised and harmful in WWOX-deficient neural cells, lowering LDH lowers lactate and improves function; in the fly, Ldh RNAi added to amyloid plus Wwox reduction improved climbing once |
+| **EVIDENCE_LEVEL** | **T6** for WWOX (fly, amyloid-conditional, missing controls); human LDHA transcript up in the knockout organoid but confounded with maturity |
+| **WWOX_DIRECT_EVIDENCE** | none at the activity or lactate level in a human WWOX system |
+| **NEAR_DISEASE_EVIDENCE** | stiripentol is approved for Dravet syndrome seizures with clobazam; its LDH inhibition is weak in the retrieved measurements (single-digit percent at a single high millimolar-range concentration; abstract-level papers: moderate but not potent); no source attributes its antiseizure action to LDH |
+| **HUMAN_USE_STATUS** | approved in the US for seizures associated with Dravet syndrome in patients taking clobazam, from six months of age (openFDA label 2026-04-27) |
+| **CLINICAL_MATURITY** | marketed for another indication; 🔴 no WWOX rationale beyond a fly precedent |
+| **BBB_RELEVANCE** | acts on seizures in the brain; brain LDH engagement is unmeasured |
+| **PEDIATRIC_OR_DEVELOPMENTAL_RELEVANCE** | paediatric label for the approved use; WWOX-DEE not assessed |
+| **REVERSIBILITY_REQUIREMENT** | pharmacological, reversible in principle |
+| **KNOWN_MAJOR_SAFETY_CONSTRAINTS** | labelled use depends on co-therapy with another antiseizure drug; interactions are not assessed here; most-reported spontaneous-report terms include seizure, drug ineffective, decreased appetite, somnolence (counts, not rates); the source paper cites Ldh knockdown as detrimental in other fly amyloid models |
+| **EXPECTED_DIRECTION_OF_EFFECT** | lower lactate production; unmeasured |
+| **MAIN_TRANSLATIONAL_RISK** | 🔴 benefit would not be attributable to LDH (other pharmacology), and lactate in WWOX deficiency is reported normal or extremely low in humans (human readouts are listed in the card) |
+| **DECISIVE_PRECLINICAL_TEST** | **lactate** (enantiomer- or isotope-resolved) in the double-RNAi fly genotype with an Ldh-alone arm; **LDH activity** and the lactate-to-pyruvate relationship in WWOX-deficient versus isogenic human neural cells at matched maturity; then stiripentol against a selective LDHA tool at matched exposure |
+| **SOURCE_IDS** | PAPER 567 (the single reading behind the fly rows; related records are listed in the card, not here, so that the join does not inherit unrelated families of papers) |
+
+**Class:** `READOUT_FIRST` — Track A, route BENEFICIO_PRECOCE. Fly content is NOT WWOX-DEE evidence. Not medical advice.
+
 ---
 
 ## 5. Negative translation — candidates that should be deprioritized, and why

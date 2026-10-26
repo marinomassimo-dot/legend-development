@@ -1,0 +1,283 @@
+{
+ "page_meta": {
+  "limit": 50,
+  "next": null,
+  "offset": 0,
+  "previous": null,
+  "total_count": 1
+ },
+ "targets": [
+  {
+   "cross_references": [],
+   "organism": "Homo sapiens",
+   "pref_name": "Protein phosphatase 1 regulatory subunit 15A",
+   "species_group_flag": false,
+   "target_chembl_id": "CHEMBL4630805",
+   "target_components": [
+    {
+     "accession": "O75807",
+     "component_description": "Protein phosphatase 1 regulatory subunit 15A",
+     "component_id": 19420,
+     "component_type": "PROTEIN",
+     "relationship": "SINGLE PROTEIN",
+     "target_component_synonyms": [
+      {
+       "component_synonym": "GADD34",
+       "syn_type": "GENE_SYMBOL_OTHER"
+      },
+      {
+       "component_synonym": "Growth arrest and DNA damage-inducible protein GADD34",
+       "syn_type": "UNIPROT"
+      },
+      {
+       "component_synonym": "Myeloid differentiation primary response protein MyD116 homolog",
+       "syn_type": "UNIPROT"
+      },
+      {
+       "component_synonym": "PPP1R15A",
+       "syn_type": "GENE_SYMBOL"
+      },
+      {
+       "component_synonym": "Protein phosphatase 1 regulatory subunit 15A",
+       "syn_type": "UNIPROT"
+      }
+     ],
+     "target_component_xrefs": [
+      {
+       "xref_id": "O75807",
+       "xref_name": null,
+       "xref_src_db": "AlphaFoldDB"
+      },
+      {
+       "xref_id": "O75807",
+       "xref_name": null,
+       "xref_src_db": "ExpressionAtlas"
+      },
+      {
+       "xref_id": "GO:0000164",
+       "xref_name": "protein phosphatase type 1 complex",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:0005737",
+       "xref_name": "cytoplasm",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:0005739",
+       "xref_name": "mitochondrion",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:0005741",
+       "xref_name": "mitochondrial outer membrane",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:0005783",
+       "xref_name": "endoplasmic reticulum",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:0005789",
+       "xref_name": "endoplasmic reticulum membrane",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:0005794",
+       "xref_name": "Golgi apparatus",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:0005829",
+       "xref_name": "cytosol",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:0016020",
+       "xref_name": "membrane",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:0005515",
+       "xref_name": "protein binding",
+       "xref_src_db": "GoFunction"
+      },
+      {
+       "xref_id": "GO:0008157",
+       "xref_name": "protein phosphatase 1 binding",
+       "xref_src_db": "GoFunction"
+      },
+      {
+       "xref_id": "GO:0019888",
+       "xref_name": "protein phosphatase regulator activity",
+       "xref_src_db": "GoFunction"
+      },
+      {
+       "xref_id": "GO:0019901",
+       "xref_name": "protein kinase binding",
+       "xref_src_db": "GoFunction"
+      },
+      {
+       "xref_id": "GO:0072542",
+       "xref_name": "protein phosphatase activator activity",
+       "xref_src_db": "GoFunction"
+      },
+      {
+       "xref_id": "GO:0006915",
+       "xref_name": "apoptotic process",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0006974",
+       "xref_name": "DNA damage response",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0032058",
+       "xref_name": "positive regulation of translational initiation in response to stress",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0034976",
+       "xref_name": "response to endoplasmic reticulum stress",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0051726",
+       "xref_name": "regulation of cell cycle",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0070059",
+       "xref_name": "intrinsic apoptotic signaling pathway in response to endoplasmic reticulum stress",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0070972",
+       "xref_name": "protein localization to endoplasmic reticulum",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:1903898",
+       "xref_name": "negative regulation of PERK-mediated unfolded protein response",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "HGNC:14375",
+       "xref_name": "PPP1R15A",
+       "xref_src_db": "HGNC"
+      },
+      {
+       "xref_id": "O75807",
+       "xref_name": null,
+       "xref_src_db": "IntAct"
+      },
+      {
+       "xref_id": "IPR019523",
+       "xref_name": "Prot_Pase1_reg-su15A/B_C",
+       "xref_src_db": "InterPro"
+      },
+      {
+       "xref_id": "IPR051254",
+       "xref_name": "PPP1R15",
+       "xref_src_db": "InterPro"
+      },
+      {
+       "xref_id": "PTHR16489",
+       "xref_name": "GH11727P",
+       "xref_src_db": "PANTHER"
+      },
+      {
+       "xref_id": "PTHR16489:SF14",
+       "xref_name": "PROTEIN PHOSPHATASE 1 REGULATORY SUBUNIT 15A",
+       "xref_src_db": "PANTHER"
+      },
+      {
+       "xref_id": "4XPN",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "7NXV",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "7NZM",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "8QZZ",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "4XPN",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "7NXV",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "8QZZ",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "PF10488",
+       "xref_name": "PP1c_bdg",
+       "xref_src_db": "Pfam"
+      },
+      {
+       "xref_id": "PA33632",
+       "xref_name": "protein phosphatase 1 regulatory subunit 15A",
+       "xref_src_db": "PharmGKB"
+      },
+      {
+       "xref_id": "O75807",
+       "xref_name": null,
+       "xref_src_db": "Pharos"
+      },
+      {
+       "xref_id": "R-HSA-2173788",
+       "xref_name": "Downregulation of TGF-beta receptor signaling",
+       "xref_src_db": "Reactome"
+      },
+      {
+       "xref_id": "R-HSA-9648895",
+       "xref_name": "Response of EIF2AK1 (HRI) to heme deficiency",
+       "xref_src_db": "Reactome"
+      },
+      {
+       "xref_id": "B4DKQ3",
+       "xref_name": "Protein phosphatase 1 regulatory subunit 15A",
+       "xref_src_db": "UniProt"
+      },
+      {
+       "xref_id": "O75807",
+       "xref_name": "Protein phosphatase 1 regulatory subunit 15A",
+       "xref_src_db": "UniProt"
+      },
+      {
+       "xref_id": "Q6IA96",
+       "xref_name": "Protein phosphatase 1 regulatory subunit 15A",
+       "xref_src_db": "UniProt"
+      },
+      {
+       "xref_id": "Q9NVU6",
+       "xref_name": "Protein phosphatase 1 regulatory subunit 15A",
+       "xref_src_db": "UniProt"
+      }
+     ]
+    }
+   ],
+   "target_type": "SINGLE PROTEIN",
+   "tax_id": 9606
+  }
+ ]
+}

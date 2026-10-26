@@ -1,0 +1,41 @@
+{
+ "mechanisms": [
+  {
+   "action_type": "INHIBITOR",
+   "binding_site_comment": null,
+   "direct_interaction": 1,
+   "disease_efficacy": 1,
+   "max_phase": 3,
+   "mec_id": 5904,
+   "mechanism_comment": "Stimulates oxidative phosphorylation through inhibition of pyruvate dehydrogenase kinase (PDK). By inhibiting PDK, piruvate dehydrogenase (PDH) is then maintained in a catalytically active state, mitochondrial pyruvate consumption is increased, the substrate pool available for glycolysis is lowered and lactic acid production is inhibited.  This agent may stimulate apoptosis in cancer cells by restoring normal mitochondrial-induced apoptotic signaling.",
+   "mechanism_of_action": "Pyruvate dehydrogenase kinase inhibitor",
+   "mechanism_refs": [
+    {
+     "ref_id": "20533281",
+     "ref_type": "PubMed",
+     "ref_url": "http://europepmc.org/abstract/MED/20533281"
+    },
+    {
+     "ref_id": "27803917",
+     "ref_type": "PubMed",
+     "ref_url": "http://europepmc.org/abstract/MED/27803917"
+    }
+   ],
+   "molecular_mechanism": 1,
+   "molecule_chembl_id": "CHEMBL306823",
+   "parent_molecule_chembl_id": "CHEMBL306823",
+   "record_id": 1700754,
+   "selectivity_comment": null,
+   "site_id": null,
+   "target_chembl_id": "CHEMBL2096665",
+   "variant_sequence": null
+  }
+ ],
+ "page_meta": {
+  "limit": 100,
+  "next": null,
+  "offset": 0,
+  "previous": null,
+  "total_count": 1
+ }
+}

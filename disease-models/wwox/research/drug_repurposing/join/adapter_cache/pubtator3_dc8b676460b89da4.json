@@ -1,0 +1,721 @@
+{
+ "adapter": "pubtator3",
+ "citation": "Wei C-H. et al. PubTator 3.0: an AI-powered literature resource for unlocking biomedical knowledge. Nucleic Acids Res 2024;52(W1):W540-W546. https://doi.org/10.1093/nar/gkae235",
+ "error": "",
+ "evidence_label": "NOT WWOX EVIDENCE",
+ "hits": [
+  {
+   "kind": "relation",
+   "publications": 360,
+   "source": "@DISEASE_Neoplasms",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 353,
+   "source": "@CHEMICAL_Lactic_Acid",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 113,
+   "source": "@CHEMICAL_Glucose",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 98,
+   "source": "@CHEMICAL_Pyruvic_Acid",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 86,
+   "source": "@DISEASE_Hypoxia",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 78,
+   "source": "@GENE_HIF1A",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 58,
+   "source": "@DISEASE_Breast_Neoplasms",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 55,
+   "source": "@CHEMICAL_Lactic_Acid",
+   "target": "@GENE_LDHA",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 52,
+   "source": "@DISEASE_Carcinoma_Hepatocellular",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 47,
+   "source": "@DISEASE_Pancreatic_Neoplasms",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 45,
+   "source": "@DISEASE_Hypoxia",
+   "target": "@GENE_LDHA",
+   "type": "stimulate"
+  },
+  {
+   "kind": "relation",
+   "publications": 43,
+   "source": "@DISEASE_Colorectal_Neoplasms",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 39,
+   "source": "@DISEASE_Adenocarcinoma_of_Lung",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 39,
+   "source": "@DISEASE_Neoplasm_Metastasis",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 36,
+   "source": "@DISEASE_Stomach_Neoplasms",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 32,
+   "source": "@GENE_LDHA",
+   "target": "@GENE_MYC",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 30,
+   "source": "@CHEMICAL_NAD",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 27,
+   "source": "@GENE_LDHA",
+   "target": "@GENE_MYC",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 26,
+   "source": "@DISEASE_Prostatic_Neoplasms",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 25,
+   "source": "@DISEASE_Carcinogenesis",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 24,
+   "source": "@DISEASE_Carcinoma_Non_Small_Cell_Lung",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 24,
+   "source": "@GENE_HIF1A",
+   "target": "@GENE_LDHA",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 21,
+   "source": "@DISEASE_Glioblastoma",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 21,
+   "source": "@DISEASE_Neoplasms",
+   "target": "@GENE_LDHA",
+   "type": "stimulate"
+  },
+  {
+   "kind": "relation",
+   "publications": 20,
+   "source": "@CHEMICAL_Lactic_Acid",
+   "target": "@GENE_LDHA",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 19,
+   "source": "@DISEASE_Glioma",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 19,
+   "source": "@DISEASE_Ovarian_Neoplasms",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 19,
+   "source": "@DISEASE_Urinary_Bladder_Neoplasms",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 18,
+   "source": "@DISEASE_Inflammation",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 18,
+   "source": "@DISEASE_Squamous_Cell_Carcinoma_of_Head_and_Neck",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 18,
+   "source": "@DISEASE_Uterine_Cervical_Neoplasms",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 16,
+   "source": "@DISEASE_Hypoxia_Brain",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 16,
+   "source": "@DISEASE_Triple_Negative_Breast_Neoplasms",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 15,
+   "source": "@CHEMICAL_Reactive_Oxygen_Species",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 15,
+   "source": "@DISEASE_Carcinoma_Pancreatic_Ductal",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 15,
+   "source": "@DISEASE_Carcinoma_Renal_Cell",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 15,
+   "source": "@DISEASE_Lung_Neoplasms",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 15,
+   "source": "@CHEMICAL_Glucose",
+   "target": "@GENE_LDHA",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 14,
+   "source": "@CHEMICAL_Adenosine_Triphosphate",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 13,
+   "source": "@CHEMICAL_Reactive_Oxygen_Species",
+   "target": "@GENE_LDHA",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 12,
+   "source": "@DISEASE_Osteosarcoma",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 12,
+   "source": "@CHEMICAL_Isoproterenol",
+   "target": "@GENE_LDHA",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 11,
+   "source": "@DISEASE_Thyroid_Cancer_Papillary",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 11,
+   "source": "@GENE_LDHA",
+   "target": "@GENE_PKM",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 10,
+   "source": "@CHEMICAL_6_methyladenine",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 10,
+   "source": "@CHEMICAL_Oxalates",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 10,
+   "source": "@GENE_AKT1",
+   "target": "@GENE_LDHA",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 9,
+   "source": "@DISEASE_Melanoma",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 9,
+   "source": "@CHEMICAL_Glucose",
+   "target": "@GENE_LDHA",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 9,
+   "source": "@CHEMICAL_Lipopolysaccharides",
+   "target": "@GENE_LDHA",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 9,
+   "source": "@GENE_CTNNB1",
+   "target": "@GENE_LDHA",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 9,
+   "source": "@DISEASE_Hypoxia_Brain",
+   "target": "@GENE_LDHA",
+   "type": "stimulate"
+  },
+  {
+   "kind": "relation",
+   "publications": 8,
+   "source": "@CHEMICAL_Lipids",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 8,
+   "source": "@CHEMICAL_Oxygen",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 8,
+   "source": "@DISEASE_Fibrosis",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 8,
+   "source": "@DISEASE_Heart_Diseases",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 8,
+   "source": "@DISEASE_Multiple_Myeloma",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 8,
+   "source": "@DISEASE_Nasopharyngeal_Carcinoma",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 8,
+   "source": "@DISEASE_Thyroid_Neoplasms",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 8,
+   "source": "@GENE_AKT1",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 8,
+   "source": "@GENE_FGFR1",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 8,
+   "source": "@GENE_LDHA",
+   "target": "@GENE_MIR34A",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 8,
+   "source": "@CHEMICAL_Cisplatin",
+   "target": "@GENE_LDHA",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 8,
+   "source": "@CHEMICAL_Deoxyglucose",
+   "target": "@GENE_LDHA",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 7,
+   "source": "@CHEMICAL_Fluorodeoxyglucose_F18",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 7,
+   "source": "@DISEASE_Cardiomyopathies",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 7,
+   "source": "@DISEASE_Diabetes_Mellitus",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 7,
+   "source": "@DISEASE_Neuroblastoma",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 7,
+   "source": "@GENE_LDHA",
+   "target": "@GENE_CSE",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 7,
+   "source": "@CHEMICAL_GSK2837808A",
+   "target": "@GENE_LDHA",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 7,
+   "source": "@CHEMICAL_Melatonin",
+   "target": "@GENE_LDHA",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 7,
+   "source": "@CHEMICAL_NAD",
+   "target": "@GENE_LDHA",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 7,
+   "source": "@GENE_LDHA",
+   "target": "@GENE_MIR34A",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 7,
+   "source": "@CHEMICAL_Oxygen",
+   "target": "@GENE_LDHA",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 7,
+   "source": "@GENE_LDHA",
+   "target": "@GENE_PKM",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 6,
+   "source": "@DISEASE_Cholangiocarcinoma",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 6,
+   "source": "@DISEASE_Colonic_Neoplasms",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 6,
+   "source": "@DISEASE_Drug_Related_Side_Effects_and_Adverse_Reactions",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 6,
+   "source": "@DISEASE_Endometrial_Neoplasms",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 6,
+   "source": "@DISEASE_Esophageal_Squamous_Cell_Carcinoma",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 6,
+   "source": "@DISEASE_Hyperoxaluria_Primary",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 6,
+   "source": "@GENE_ERBB2",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 6,
+   "source": "@GENE_HK2",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 6,
+   "source": "@GENE_LDHA",
+   "target": "@GENE_PDK1",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 6,
+   "source": "@CHEMICAL_Dichloroacetic_Acid",
+   "target": "@GENE_LDHA",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 6,
+   "source": "@CHEMICAL_Metformin",
+   "target": "@GENE_LDHA",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 6,
+   "source": "@CHEMICAL_Pyruvic_Acid",
+   "target": "@GENE_LDHA",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 6,
+   "source": "@CHEMICAL_Sirolimus",
+   "target": "@GENE_LDHA",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 6,
+   "source": "@CHEMICAL_Cyclic_AMP",
+   "target": "@GENE_LDHA",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 6,
+   "source": "@GENE_LDHA",
+   "target": "@GENE_TNF",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 5,
+   "source": "@CHEMICAL_Carbohydrates",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 5,
+   "source": "@CHEMICAL_Cisplatin",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 5,
+   "source": "@CHEMICAL_Doxorubicin",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 5,
+   "source": "@DISEASE_Alzheimer_Disease",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 5,
+   "source": "@DISEASE_Arthritis_Rheumatoid",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 5,
+   "source": "@DISEASE_Kidney_Diseases",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 5,
+   "source": "@DISEASE_Lactate_dehydrogenase_deficiency_type_A",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 5,
+   "source": "@DISEASE_Osteoarthritis",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 5,
+   "source": "@DISEASE_Polycystic_Ovary_Syndrome",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 5,
+   "source": "@DISEASE_Pre_Eclampsia",
+   "target": "@GENE_LDHA",
+   "type": "associate"
+  }
+ ],
+ "hits_cap": 100,
+ "hits_total_before_cap": 2099,
+ "licence": "NCBI public domain; key-less, no payment; 3 req/s limit",
+ "note": "NO_MATCH_FOUND is an answer about this query on this date, never absence",
+ "request": {
+  "gene": "LDHA"
+ },
+ "requests_sent": [
+  "https://www.ncbi.nlm.nih.gov/research/pubtator3-api/relations?e1=@GENE_LDHA"
+ ],
+ "retrieved_at": "2026-10-26T17:25:57Z",
+ "source_version": "UNKNOWN",
+ "status": "MATCH_FOUND"
+}

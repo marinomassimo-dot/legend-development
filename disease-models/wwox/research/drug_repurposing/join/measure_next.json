@@ -1,11 +1,11 @@
 [
  {
-  "dependence": "49_PAPERS_29_COMPLETE",
+  "dependence": "50_PAPERS_30_COMPLETE",
   "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
   "external_hits": 1,
   "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
   "query_id": "Q-N-01",
-  "would_move": "N-01 (disease-models/wwox/analysis/mechanism_intervention_map.md:644)"
+  "would_move": "N-01 (disease-models/wwox/analysis/mechanism_intervention_map.md:693)"
  },
  {
   "dependence": "3_PAPERS_3_COMPLETE",
@@ -13,7 +13,7 @@
   "external_hits": 1,
   "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
   "query_id": "Q-N-02",
-  "would_move": "N-02 (disease-models/wwox/analysis/mechanism_intervention_map.md:656)"
+  "would_move": "N-02 (disease-models/wwox/analysis/mechanism_intervention_map.md:705)"
  },
  {
   "dependence": "ONE_PAPER (42190144, depth NO_RECEIPT, 0 locators, audit NO_MANIFEST)",
@@ -21,7 +21,7 @@
   "external_hits": 1,
   "measurement": "an independent measurement of the same endpoint in a second system, or the same system from a second laboratory: the query rests on one reading",
   "query_id": "Q-N-03",
-  "would_move": "N-03 (disease-models/wwox/analysis/mechanism_intervention_map.md:665)"
+  "would_move": "N-03 (disease-models/wwox/analysis/mechanism_intervention_map.md:714)"
  },
  {
   "dependence": "2_UNAUDITED_CONTRADICTIONS",
@@ -29,7 +29,7 @@
   "external_hits": 0,
   "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
   "query_id": "Q-N-04",
-  "would_move": "N-04 (disease-models/wwox/analysis/mechanism_intervention_map.md:674)"
+  "would_move": "N-04 (disease-models/wwox/analysis/mechanism_intervention_map.md:723)"
  },
  {
   "dependence": "2_UNAUDITED_CONTRADICTIONS",
@@ -37,31 +37,31 @@
   "external_hits": 1,
   "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
   "query_id": "Q-N-05",
-  "would_move": "N-05 (disease-models/wwox/analysis/mechanism_intervention_map.md:684)"
+  "would_move": "N-05 (disease-models/wwox/analysis/mechanism_intervention_map.md:733)"
  },
  {
-  "dependence": "49_PAPERS_29_COMPLETE",
+  "dependence": "50_PAPERS_30_COMPLETE",
   "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
   "external_hits": 1,
   "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
   "query_id": "Q-N-06",
-  "would_move": "N-06 (disease-models/wwox/analysis/mechanism_intervention_map.md:698)"
+  "would_move": "N-06 (disease-models/wwox/analysis/mechanism_intervention_map.md:747)"
  },
  {
-  "dependence": "2_PAPERS_1_COMPLETE",
+  "dependence": "4_PAPERS_3_COMPLETE",
   "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
   "external_hits": 0,
   "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
   "query_id": "Q-N-07",
-  "would_move": "N-07 (disease-models/wwox/analysis/mechanism_intervention_map.md:729)"
+  "would_move": "N-07 (disease-models/wwox/analysis/mechanism_intervention_map.md:778)"
  },
  {
-  "dependence": "47_PAPERS_28_COMPLETE",
+  "dependence": "48_PAPERS_29_COMPLETE",
   "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
   "external_hits": 1,
   "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
   "query_id": "Q-N-08",
-  "would_move": "N-08 (disease-models/wwox/analysis/mechanism_intervention_map.md:740)"
+  "would_move": "N-08 (disease-models/wwox/analysis/mechanism_intervention_map.md:789)"
  },
  {
   "dependence": "6_PAPERS_3_COMPLETE",
@@ -69,7 +69,7 @@
   "external_hits": 1,
   "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
   "query_id": "Q-N-09",
-  "would_move": "N-09 (disease-models/wwox/analysis/mechanism_intervention_map.md:814)"
+  "would_move": "N-09 (disease-models/wwox/analysis/mechanism_intervention_map.md:863)"
  },
  {
   "dependence": "2_UNAUDITED_CONTRADICTIONS",
@@ -77,15 +77,15 @@
   "external_hits": 0,
   "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
   "query_id": "Q-N-10",
-  "would_move": "N-10 (disease-models/wwox/analysis/mechanism_intervention_map.md:824)"
+  "would_move": "N-10 (disease-models/wwox/analysis/mechanism_intervention_map.md:873)"
  },
  {
-  "dependence": "48_PAPERS_28_COMPLETE",
+  "dependence": "49_PAPERS_29_COMPLETE",
   "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
   "external_hits": 0,
   "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
   "query_id": "Q-N-11",
-  "would_move": "N-11 (disease-models/wwox/analysis/mechanism_intervention_map.md:897)"
+  "would_move": "N-11 (disease-models/wwox/analysis/mechanism_intervention_map.md:946)"
  },
  {
   "dependence": "7_PAPERS_4_COMPLETE",
@@ -93,7 +93,7 @@
   "external_hits": 2,
   "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
   "query_id": "Q-N-12",
-  "would_move": "N-12 (disease-models/wwox/analysis/mechanism_intervention_map.md:904)"
+  "would_move": "N-12 (disease-models/wwox/analysis/mechanism_intervention_map.md:953)"
  },
  {
   "dependence": "29_PAPERS_17_COMPLETE",
@@ -101,7 +101,7 @@
   "external_hits": 0,
   "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
   "query_id": "Q-N-13",
-  "would_move": "N-13 (disease-models/wwox/analysis/mechanism_intervention_map.md:954)"
+  "would_move": "N-13 (disease-models/wwox/analysis/mechanism_intervention_map.md:1003)"
  },
  {
   "dependence": "8_PAPERS_4_COMPLETE",
@@ -109,7 +109,7 @@
   "external_hits": 1,
   "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
   "query_id": "Q-N-14",
-  "would_move": "N-14 (disease-models/wwox/analysis/mechanism_intervention_map.md:968)"
+  "would_move": "N-14 (disease-models/wwox/analysis/mechanism_intervention_map.md:1017)"
  },
  {
   "dependence": "2_UNAUDITED_CONTRADICTIONS",
@@ -117,7 +117,7 @@
   "external_hits": 0,
   "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
   "query_id": "Q-N-15",
-  "would_move": "N-15 (disease-models/wwox/analysis/mechanism_intervention_map.md:979)"
+  "would_move": "N-15 (disease-models/wwox/analysis/mechanism_intervention_map.md:1028)"
  },
  {
   "dependence": "ONE_PAPER (34634460, depth complete_fulltext_read, 26 locators, audit UNAUDITED)",
@@ -125,7 +125,7 @@
   "external_hits": 1,
   "measurement": "an independent measurement of the same endpoint in a second system, or the same system from a second laboratory: the query rests on one reading",
   "query_id": "Q-N-16",
-  "would_move": "N-16 (disease-models/wwox/analysis/mechanism_intervention_map.md:1026)"
+  "would_move": "N-16 (disease-models/wwox/analysis/mechanism_intervention_map.md:1075)"
  },
  {
   "dependence": "2_UNAUDITED_CONTRADICTIONS",
@@ -133,7 +133,7 @@
   "external_hits": 0,
   "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
   "query_id": "Q-N-17",
-  "would_move": "N-17 (disease-models/wwox/analysis/mechanism_intervention_map.md:1032)"
+  "would_move": "N-17 (disease-models/wwox/analysis/mechanism_intervention_map.md:1081)"
  },
  {
   "dependence": "3_PAPERS_3_COMPLETE",
@@ -168,7 +168,7 @@
   "would_move": "R-04 (disease-models/wwox/analysis/mechanism_intervention_map.md:484)"
  },
  {
-  "dependence": "49_PAPERS_30_COMPLETE",
+  "dependence": "50_PAPERS_31_COMPLETE",
   "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
   "external_hits": 0,
   "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
@@ -200,11 +200,27 @@
   "would_move": "R-08 (disease-models/wwox/analysis/mechanism_intervention_map.md:587)"
  },
  {
-  "dependence": "48_PAPERS_28_COMPLETE",
+  "dependence": "49_PAPERS_29_COMPLETE",
   "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
   "external_hits": 2,
   "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
   "query_id": "Q-R-09",
   "would_move": "R-09 (disease-models/wwox/analysis/mechanism_intervention_map.md:613)"
+ },
+ {
+  "dependence": "ONE_PAPER (42909904, depth complete_fulltext_read, 104 locators, audit CONTRADICTIONS_AUDITED)",
+  "experiment_sketch": "replicate the one measurement this query stands on, changing the laboratory or the model but not the endpoint",
+  "external_hits": 0,
+  "measurement": "an independent measurement of the same endpoint in a second system, or the same system from a second laboratory: the query rests on one reading",
+  "query_id": "Q-R-10",
+  "would_move": "R-10 (disease-models/wwox/analysis/mechanism_intervention_map.md:637)"
+ },
+ {
+  "dependence": "ONE_PAPER (42909904, depth complete_fulltext_read, 104 locators, audit CONTRADICTIONS_AUDITED)",
+  "experiment_sketch": "replicate the one measurement this query stands on, changing the laboratory or the model but not the endpoint",
+  "external_hits": 4,
+  "measurement": "an independent measurement of the same endpoint in a second system, or the same system from a second laboratory: the query rests on one reading",
+  "query_id": "Q-R-11",
+  "would_move": "R-11 (disease-models/wwox/analysis/mechanism_intervention_map.md:663)"
  }
 ]

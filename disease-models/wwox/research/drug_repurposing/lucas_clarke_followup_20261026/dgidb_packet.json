@@ -1,0 +1,42 @@
+{
+ "status": "INCOMPLETE",
+ "unmatched_symbols": [
+  "EIF2B3",
+  "EIF2B4",
+  "EIF2B5",
+  "PPP1R15B"
+ ],
+ "coverage_statement": "17 of 21 requested symbols were returned by DGIdb; 4 were not. A symbol DGIdb does not know is UNMATCHED, which is not the same as a gene with no drugs.",
+ "batches": [
+  {
+   "endpoint": "https://dgidb.org/api/graphql",
+   "variables": {
+    "names": [
+     "ATF4",
+     "EIF2AK1",
+     "EIF2AK2",
+     "EIF2AK3",
+     "EIF2AK4",
+     "EIF2B1",
+     "EIF2B2",
+     "EIF2B3",
+     "EIF2B4",
+     "EIF2B5",
+     "EIF2S1",
+     "LDHA",
+     "LDHB",
+     "LDHC",
+     "PDK1",
+     "PDK2",
+     "PDK3",
+     "PDK4",
+     "PPP1R15A",
+     "PPP1R15B",
+     "SLC16A1"
+    ]
+   },
+   "returned_nodes": 17,
+   "original_response_path": "/home/desktop/legend-development/.claude/worktrees/sci-c-lc/disease-models/wwox/research/drug_repurposing/lucas_clarke_followup_20261026/dgidb_raw/dgidb_batch_0.json"
+  }
+ ]
+}

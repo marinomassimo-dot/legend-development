@@ -1,0 +1,1154 @@
+[
+ {
+  "adapter": "openfda",
+  "request": {
+   "drug": "stiripentol",
+   "sections": [
+    "indications_and_usage",
+    "pediatric_use",
+    "contraindications"
+   ],
+   "faers_limit": 5
+  },
+  "status": "MATCH_FOUND",
+  "error": "",
+  "requests_sent": [
+   "https://api.fda.gov/drug/label.json?{'search': 'openfda.generic_name:\"stiripentol\"', 'limit': 3}",
+   "https://api.fda.gov/drug/event.json?{'search': 'patient.drug.medicinalproduct:\"stiripentol\"', 'count': 'patient.reaction.reactionmeddrapt.exact', 'limit': 5}"
+  ],
+  "source_version": "label last_updated 2026-10-23",
+  "retrieved_at": "2026-10-26T17:10:35Z",
+  "n_hits": 2,
+  "hits": [
+   {
+    "kind": "label",
+    "set_id": "58304ba8-9779-4658-811e-94ffe08c3f16",
+    "effective_time": "20260427",
+    "brand_name": [
+     "Diacomit"
+    ],
+    "generic_name": [
+     "STIRIPENTOL"
+    ],
+    "sections": {
+     "indications_and_usage": "1 INDICATIONS AND USAGE DIACOMIT is indicated for the treatment of seizures associated with Dravet syndrome (DS) in patients taking clobazam who are 6 months of age and older and weighing 7 kg or more. There are no clinical data to support the use of DIACOMIT as monotherapy in Dravet syndrome. DIACOMIT is indicated for the treatment of seizures associated with Dravet syndrome in patients taking clobazam who are 6 months of age and older and weighing 7 kg or more . There are no clinical data to support the use of DIACOMIT as monotherapy in Dravet syndrome. ( 1 )",
+     "pediatric_use": "8.4 Pediatric Use The safety and effectiveness of DIACOMIT have been established for the treatment of seizures associated with Dravet syndrome in patients taking clobazam who are 6 months and older and weighing 7 kg or more. Use of DIACOMIT in this pediatric population is supported by 2 multicenter placebo-controlled, double-blind randomized studies in patients 3 to 18 years of age with additional pharmacokinetic and safety data in patients 6 months to less than 3 years of age [see Clinical Studies ( 14 )]. The safety and effectiveness of DIACOMIT have not been established in pediatric patients below the age of 6 months or who weigh less than 7 kg.",
+     "contraindications": "4 CONTRAINDICATIONS None. None ( 4 )"
+    }
+   },
+   {
+    "kind": "faers_counts",
+    "reports_by_reaction": [
+     {
+      "term": "SEIZURE",
+      "count": 153
+     },
+     {
+      "term": "DRUG INEFFECTIVE",
+      "count": 129
+     },
+     {
+      "term": "OFF LABEL USE",
+      "count": 125
+     },
+     {
+      "term": "DECREASED APPETITE",
+      "count": 75
+     },
+     {
+      "term": "SOMNOLENCE",
+      "count": 65
+     }
+    ],
+    "caveat": "spontaneous reports; not a rate, not causal"
+   }
+  ]
+ },
+ {
+  "adapter": "openfda",
+  "request": {
+   "drug": "trazodone",
+   "sections": [
+    "indications_and_usage",
+    "pediatric_use",
+    "contraindications"
+   ],
+   "faers_limit": 5
+  },
+  "status": "MATCH_FOUND",
+  "error": "",
+  "requests_sent": [
+   "https://api.fda.gov/drug/label.json?{'search': 'openfda.generic_name:\"trazodone\"', 'limit': 3}",
+   "https://api.fda.gov/drug/event.json?{'search': 'patient.drug.medicinalproduct:\"trazodone\"', 'count': 'patient.reaction.reactionmeddrapt.exact', 'limit': 5}"
+  ],
+  "source_version": "label last_updated 2026-10-23",
+  "retrieved_at": "2026-10-26T17:10:38Z",
+  "n_hits": 4,
+  "hits": [
+   {
+    "kind": "label",
+    "set_id": "007f38e0-653b-43e4-a1c1-b59997b2762a",
+    "effective_time": "20260714",
+    "brand_name": [
+     "Trazodone Hydrochloride"
+    ],
+    "generic_name": [
+     "TRAZODONE HYDROCHLORIDE"
+    ],
+    "sections": {
+     "indications_and_usage": "1 INDICATIONS AND USAGE Trazodone is a selective serotonin reuptake inhibitor indicated for the treatment of major depressive disorder (MDD) ( 1 ). Trazodone hydrochloride tablets are indicated for the treatment of major depressive disorder (MDD) in adults.",
+     "pediatric_use": "8.4 Pediatric Use Safety and effectiveness in the pediatric population have not been established. Antidepressants increased the risk of suicidal thoughts and behaviors in pediatric patients [ see Boxed Warning, Warnings and Precautions ( 5.1 ) ].",
+     "contraindications": "4 CONTRAINDICATIONS Concomitant use of monoamine oxidase inhibitors (MAOIs), or use within 14 days of stopping MAOIs ( 4 ). Trazodone hydrochloride tablets are contraindicated in: Patients taking, or within 14 days of stopping, monoamine oxidase inhibitors (MAOIs), including MAOIs such as linezolid or intravenous methylene blue, because of an increased risk of serotonin syndrome [see Warnings and Precautions ( 5.2 ), Drug Interactions ( 7.1 )]."
+    }
+   },
+   {
+    "kind": "label",
+    "set_id": "04a676ee-358e-484d-9de4-a9a88d908ba8",
+    "effective_time": "20240226",
+    "brand_name": [
+     "Trazodone Hydrochloride"
+    ],
+    "generic_name": [
+     "TRAZODONE HYDROCHLORIDE"
+    ],
+    "sections": {
+     "indications_and_usage": "1 INDICATIONS AND USAGE Trazodone is a selective serotonin reuptake inhibitor indicated for the treatment of major depressive disorder (MDD) ( 1 ). Trazodone hydrochloride tablets are indicated for the treatment of major depressive disorder (MDD) in adults.",
+     "pediatric_use": "8.4 Pediatric Use Safety and effectiveness in the pediatric population have not been established. Antidepressants increased the risk of suicidal thoughts and behaviors in pediatric patients [ see Boxed Warning, Warnings and Precautions ( 5.1 ) ].",
+     "contraindications": "4 CONTRAINDICATIONS None ( 4 ). Concomitant use of monoamine oxidase inhibitors (MAOIs), or use within 14 days of stopping MAOIs ( 4 ). Trazodone hydrochloride tablets are contraindicated in: Patients taking, or within 14 days of stopping, monoamine oxidase inhibitors (MAOIs), including MAOIs such as linezolid or intravenous methylene blue, because of an increased risk of serotonin syndrome [see Warnings and Precautions ( 5.2 ), Drug Interactions ( 7.1 )]."
+    }
+   },
+   {
+    "kind": "label",
+    "set_id": "04c287ca-5efa-469d-ab39-ff16d9b1e0b3",
+    "effective_time": "20260707",
+    "brand_name": [
+     "Trazodone Hydrochloride"
+    ],
+    "generic_name": [
+     "TRAZODONE HYDROCHLORIDE"
+    ],
+    "sections": {
+     "indications_and_usage": "1 INDICATIONS AND USAGE Trazodone is a selective serotonin reuptake inhibitor indicated for the treatment of major depressive disorder (MDD) ( 1 ). Trazodone hydrochloride tablets are indicated for the treatment of major depressive disorder (MDD) in adults.",
+     "pediatric_use": "8.4 Pediatric Use Safety and effectiveness in the pediatric population have not been established. Antidepressants increased the risk of suicidal thoughts and behaviors in pediatric patients [ see Boxed Warning, Warnings and Precautions ( 5.1 ) ].",
+     "contraindications": "4 CONTRAINDICATIONS Concomitant use of monoamine oxidase inhibitors (MAOIs), or use within 14 days of stopping MAOIs ( 4 ). Trazodone hydrochloride tablets are contraindicated in: Patients taking, or within 14 days of stopping, monoamine oxidase inhibitors (MAOIs), including MAOIs such as linezolid or intravenous methylene blue, because of an increased risk of serotonin syndrome [see Warnings and Precautions ( 5.2 ), Drug Interactions ( 7.1 )]."
+    }
+   },
+   {
+    "kind": "faers_counts",
+    "reports_by_reaction": [
+     {
+      "term": "DRUG INEFFECTIVE",
+      "count": 9173
+     },
+     {
+      "term": "NAUSEA",
+      "count": 8547
+     },
+     {
+      "term": "FATIGUE",
+      "count": 8538
+     },
+     {
+      "term": "HEADACHE",
+      "count": 6920
+     },
+     {
+      "term": "PAIN",
+      "count": 6609
+     }
+    ],
+    "caveat": "spontaneous reports; not a rate, not causal"
+   }
+  ]
+ },
+ {
+  "adapter": "openfda",
+  "request": {
+   "drug": "guanabenz",
+   "sections": [
+    "indications_and_usage",
+    "pediatric_use",
+    "contraindications"
+   ],
+   "faers_limit": 5
+  },
+  "status": "NO_MATCH_FOUND",
+  "error": "",
+  "requests_sent": [
+   "https://api.fda.gov/drug/label.json?{'search': 'openfda.generic_name:\"guanabenz\"', 'limit': 3}",
+   "https://api.fda.gov/drug/event.json?{'search': 'patient.drug.medicinalproduct:\"guanabenz\"', 'count': 'patient.reaction.reactionmeddrapt.exact', 'limit': 5}"
+  ],
+  "source_version": "UNKNOWN",
+  "retrieved_at": "2026-10-26T17:10:41Z",
+  "n_hits": 1,
+  "hits": [
+   {
+    "kind": "faers_counts",
+    "reports_by_reaction": [
+     {
+      "term": "HYPERTENSION",
+      "count": 5
+     },
+     {
+      "term": "BLOOD CREATININE INCREASED",
+      "count": 4
+     },
+     {
+      "term": "DIZZINESS",
+      "count": 4
+     },
+     {
+      "term": "NASOPHARYNGITIS",
+      "count": 4
+     },
+     {
+      "term": "RENAL FAILURE",
+      "count": 4
+     }
+    ],
+    "caveat": "spontaneous reports; not a rate, not causal"
+   }
+  ]
+ },
+ {
+  "adapter": "openfda",
+  "request": {
+   "drug": "sodium dichloroacetate",
+   "sections": [
+    "indications_and_usage",
+    "pediatric_use",
+    "contraindications"
+   ],
+   "faers_limit": 5
+  },
+  "status": "NO_MATCH_FOUND",
+  "error": "",
+  "requests_sent": [
+   "https://api.fda.gov/drug/label.json?{'search': 'openfda.generic_name:\"sodium dichloroacetate\"', 'limit': 3}",
+   "https://api.fda.gov/drug/event.json?{'search': 'patient.drug.medicinalproduct:\"sodium dichloroacetate\"', 'count': 'patient.reaction.reactionmeddrapt.exact', 'limit': 5}"
+  ],
+  "source_version": "UNKNOWN",
+  "retrieved_at": "2026-10-26T17:10:43Z",
+  "n_hits": 1,
+  "hits": [
+   {
+    "kind": "faers_counts",
+    "reports_by_reaction": [
+     {
+      "term": "AMNESIA",
+      "count": 1
+     },
+     {
+      "term": "ANXIETY",
+      "count": 1
+     },
+     {
+      "term": "BREAST SWELLING",
+      "count": 1
+     },
+     {
+      "term": "DIARRHOEA",
+      "count": 1
+     },
+     {
+      "term": "FATIGUE",
+      "count": 1
+     }
+    ],
+    "caveat": "spontaneous reports; not a rate, not causal"
+   }
+  ]
+ },
+ {
+  "adapter": "openfda",
+  "request": {
+   "drug": "valproic acid",
+   "sections": [
+    "indications_and_usage",
+    "pediatric_use",
+    "contraindications"
+   ],
+   "faers_limit": 5
+  },
+  "status": "MATCH_FOUND",
+  "error": "",
+  "requests_sent": [
+   "https://api.fda.gov/drug/label.json?{'search': 'openfda.generic_name:\"valproic acid\"', 'limit': 3}",
+   "https://api.fda.gov/drug/event.json?{'search': 'patient.drug.medicinalproduct:\"valproic acid\"', 'count': 'patient.reaction.reactionmeddrapt.exact', 'limit': 5}"
+  ],
+  "source_version": "label last_updated 2026-10-23",
+  "retrieved_at": "2026-10-26T17:10:45Z",
+  "n_hits": 4,
+  "hits": [
+   {
+    "kind": "label",
+    "set_id": "1286ab49-fa34-488e-e063-6394a90ad582",
+    "effective_time": "20240527",
+    "brand_name": [
+     "Valproic Acid"
+    ],
+    "generic_name": [
+     "VALPROIC ACID"
+    ],
+    "sections": {
+     "indications_and_usage": "1 INDICATIONS AND USAGE Valproic acid oral solution is indicated for: Monotherapy and adjunctive therapy of complex partial seizures; sole and adjunctive therapy of simple and complex absence seizures; adjunctive therapy in patients with multiple seizure types that include absence seizures ( 1 ) 1.1 Epilepsy Valproic acid oral solution is indicated as monotherapy and adjunctive therapy in the treatment of patients with complex partial seizures that occur either in isolation or in association with other types of seizures. Valproic acid oral solution is indicated for use as sole and adjunctive therapy in the treatment of simple and complex absence seizures, and adjunctively in patients with multiple seizure types which include absence seizures. Simple absence is defined as very brief clouding of the sensorium or loss of consciousness accompanied by certain generalized epileptic discharges without other detectable clinical signs. Complex absence is the term used when other signs are also present. See Warnings and Precautions ( 5.1 ) for statement regarding fatal hepatic dysfunction. 1.2 Important Limitations Because of the risk to the fetus of decreased IQ, neurodevelopmental disorders, neural tube defects, and other major congenital malformations, which may occur very early in pregnancy, valproate should not be used to treat women with epilepsy or bipolar disorder who are pregnant or who plan to become pregnant unless other medications have failed to provide adequate symptom control or are otherwise unacceptable. Valproate should not be administered to a woman of childbearing potential unless other medications have failed to provide adequate symptom control or are otherwise unacceptable [see Warnings and Precautions ( 5.2 , 5.3 , 5.4 ), Use in Specific Populations ( 8.1 ), and Patient Counseling Information ( 17 )] . For prophylaxis of migraine headaches, valproate is contraindicated in women who are pregnant and in women of childbearing potential who are not using ef",
+     "pediatric_use": "8.4 Pediatric Use Experience has indicated that pediatric patients under the age of two years are at a considerably increased risk of developing fatal hepatotoxicity, especially those with the aforementioned conditions [see Boxed Warning] . When valproic acid is used in this patient group, it should be used with extreme caution and as a sole agent. The benefits of therapy should be weighed against the risks. Above the age of 2 years, experience in epilepsy has indicated that the incidence of fatal hepatotoxicity decreases considerably in progressively older patient groups. Younger children, especially those receiving enzyme-inducing drugs, will require larger maintenance doses to attain targeted total and unbound valproate concentrations. Pediatric patients (i.e., between 3 months and 10 years) have 50% higher clearances expressed on weight (i.e., mL/min/kg) than do adults. Over the age of 10 years, children have pharmacokinetic parameters that approximate those of adults. The variability in free fraction limits the clinical usefulness of monitoring total serum valproic acid concentrations. Interpretation of valproic acid concentrations in children should include consideration of factors that affect hepatic metabolism and protein binding. Pediatric Clinical Trials Divalproex sodium was studied in seven pediatric clinical trials. Two of the pediatric studies were double-blinded placebo-controlled trials to evaluate the efficacy of divalproex sodium extended-release tablets for the indications of mania (150 patients aged 10 to 17 years, 76 of whom were on divalproex sodium extended-release tablets) and migraine (304 patients aged 12 to 17 years, 231 of whom were on divalproex sodium extended-release tablets). Efficacy was not established for either the treatment of migraine or the treatment of mania. The most common drug-related adverse reactions (reported >5% and twice the rate of placebo) reported in the controlled pediatric mania study were nausea, upper abdominal ",
+     "contraindications": "4 CONTRAINDICATIONS Valproic acid should not be administered to patients with hepatic disease or significant hepatic dysfunction [see Warnings and Precautions ( 5.1 )] . Valproic acid is contraindicated in patients known to have mitochondrial disorders caused by mutations in mitochondrial DNA polymerase γ (POLG; e.g., Alpers-Huttenlocher Syndrome) and children under two years of age who are suspected of having a POLG-related disorder [see Warnings and Precautions ( 5.1 )] . Valproic acid is contraindicated in patients with known hypersensitivity to the drug [see Warnings and Precautions ( 5.12 )] . Valproic acid is contraindicated in patients with known urea cycle disorders [see Warnings and Precautions ( 5.6 )] . For use in prophylaxis of migraine headaches: Valproic acid is contraindicated in women who are pregnant and in women of childbearing potential who are not using effective contraception [see Warnings and Precautions ( 5.2 , 5.3 , 5.4 ) and Use in Specific Populations ( 8.1 )] . Hepatic disease or significant hepatic dysfunction ( 4 , 5.1 ) Known mitochondrial disorders caused by mutations in mitochondrial DNA polymerase γ (POLG) ( 4 , 5.1 ) Suspected POLG-related disorder in children under two years of age ( 4 , 5.1 ) Known hypersensitivity to the drug ( 4 , 5.12 ) Urea cycle disorders ( 4 , 5.6 ) Prophylaxis of migraine headaches: Pregnant women, women of childbearing potential not using effective contraception ( 4 , 8.1 )"
+    }
+   },
+   {
+    "kind": "label",
+    "set_id": "1edd220d-d151-4177-9a29-9fee36489fb7",
+    "effective_time": "20260903",
+    "brand_name": [
+     "Valproic Acid"
+    ],
+    "generic_name": [
+     "VALPROIC ACID"
+    ],
+    "sections": {
+     "indications_and_usage": "1 INDICATIONS AND USAGE Valproic acid oral solution is indicated for: Monotherapy and adjunctive therapy of complex partial seizures; sole and adjunctive therapy of simple and complex absence seizures; adjunctive therapy in patients with multiple seizure types that include absence seizures ( 1 ) 1.1 Epilepsy Valproic acid oral solution is indicated as monotherapy and adjunctive therapy in the treatment of patients with complex partial seizures that occur either in isolation or in association with other types of seizures. Valproic acid oral solution is indicated for use as sole and adjunctive therapy in the treatment of simple and complex absence seizures, and adjunctively in patients with multiple seizure types which include absence seizures. Simple absence is defined as very brief clouding of the sensorium or loss of consciousness accompanied by certain generalized epileptic discharges without other detectable clinical signs. Complex absence is the term used when other signs are also present. See Warnings and Precautions ( 5.1 ) for statement regarding fatal hepatic dysfunction. 1.2 Important Limitations Because of the risk to the fetus of decreased IQ, neurodevelopmental disorders, neural tube defects, and other major congenital malformations, which may occur very early in pregnancy, valproate should not be used to treat women with epilepsy or bipolar disorder who are pregnant or who plan to become pregnant unless other medications have failed to provide adequate symptom control or are otherwise unacceptable. Valproate should not be administered to a woman of childbearing potential unless other medications have failed to provide adequate symptom control or are otherwise unacceptable [see Warnings and Precautions ( 5.2 , 5.3 , 5.4 ), Use in Specific Populations ( 8.1 ), and Patient Counseling Information ( 17 )] . For prophylaxis of migraine headaches, valproate is contraindicated in women who are pregnant and in women of childbearing potential who are not using ef",
+     "pediatric_use": "8.4 Pediatric Use Experience has indicated that pediatric patients under the age of two years are at a considerably increased risk of developing fatal hepatotoxicity, especially those with the aforementioned conditions [see Boxed Warning] . When valproic acid is used in this patient group, it should be used with extreme caution and as a sole agent. The benefits of therapy should be weighed against the risks. Above the age of 2 years, experience in epilepsy has indicated that the incidence of fatal hepatotoxicity decreases considerably in progressively older patient groups. Younger children, especially those receiving enzyme-inducing drugs, will require larger maintenance doses to attain targeted total and unbound valproate concentrations. Pediatric patients (i.e., between 3 months and 10 years) have 50% higher clearances expressed on weight (i.e., mL/min/kg) than do adults. Over the age of 10 years, children have pharmacokinetic parameters that approximate those of adults. The variability in free fraction limits the clinical usefulness of monitoring total serum valproic acid concentrations. Interpretation of valproic acid concentrations in children should include consideration of factors that affect hepatic metabolism and protein binding. Pediatric Clinical Trials Divalproex sodium was studied in seven pediatric clinical trials. Two of the pediatric studies were double-blinded placebo-controlled trials to evaluate the efficacy of divalproex sodium extended-release tablets for the indications of mania (150 patients aged 10 to 17 years, 76 of whom were on divalproex sodium extended-release tablets) and migraine (304 patients aged 12 to 17 years, 231 of whom were on divalproex sodium extended-release tablets). Efficacy was not established for either the treatment of migraine or the treatment of mania. The most common drug-related adverse reactions (reported >5% and twice the rate of placebo) reported in the controlled pediatric mania study were nausea, upper abdominal ",
+     "contraindications": "4 CONTRAINDICATIONS Valproic acid should not be administered to patients with hepatic disease or significant hepatic dysfunction [see Warnings and Precautions ( 5.1 )] . Valproic acid is contraindicated in patients known to have mitochondrial disorders caused by mutations in mitochondrial DNA polymerase γ (POLG; e.g., Alpers-Huttenlocher Syndrome) and children under two years of age who are suspected of having a POLG-related disorder [see Warnings and Precautions ( 5.1 )] . Valproic acid is contraindicated in patients with known hypersensitivity to the drug [see Warnings and Precautions ( 5.12 )] . Valproic acid is contraindicated in patients with known urea cycle disorders [see Warnings and Precautions ( 5.6 )] . For use in prophylaxis of migraine headaches: Valproic acid is contraindicated in women who are pregnant and in women of childbearing potential who are not using effective contraception [see Warnings and Precautions ( 5.2 , 5.3 , 5.4 ) and Use in Specific Populations ( 8.1 )] . Hepatic disease or significant hepatic dysfunction ( 4 , 5.1 ) Known mitochondrial disorders caused by mutations in mitochondrial DNA polymerase γ (POLG) ( 4 , 5.1 ) Suspected POLG-related disorder in children under two years of age ( 4 , 5.1 ) Known hypersensitivity to the drug ( 4 , 5.12 ) Urea cycle disorders ( 4 , 5.6 ) Prophylaxis of migraine headaches: Pregnant women, women of childbearing potential not using effective contraception ( 4 , 8.1 )"
+    }
+   },
+   {
+    "kind": "label",
+    "set_id": "2314af65-b928-42a9-91eb-6372909ab4f5",
+    "effective_time": "20260331",
+    "brand_name": [
+     "Valproic Acid"
+    ],
+    "generic_name": [
+     "VALPROIC ACID"
+    ],
+    "sections": {
+     "indications_and_usage": "1 INDICATIONS AND USAGE Valproic acid oral solution is indicated for: • Monotherapy and adjunctive therapy of complex partial seizures; sole and adjunctive therapy of simple and complex absence seizures; adjunctive therapy in patients with multiple seizure types that include absence seizures ( 1 ) 1.1 Epilepsy Valproic acid oral solution is indicated as monotherapy and adjunctive therapy in the treatment of patients with complex partial seizures that occur either in isolation or in association with other types of seizures. Valproic acid oral solution is indicated for use as sole and adjunctive therapy in the treatment of simple and complex absence seizures, and adjunctively in patients with multiple seizure types which include absence seizures. Simple absence is defined as very brief clouding of the sensorium or loss of consciousness accompanied by certain generalized epileptic discharges without other detectable clinical signs. Complex absence is the term used when other signs are also present. See Warnings and Precautions ( 5.1 ) for statement regarding fatal hepatic dysfunction. 1.2 Important Limitations Because of the risk to the fetus of decreased IQ, neurodevelopmental disorders, neural tube defects, and other major congenital malformations, which may occur very early in pregnancy, valproate should not be used to treat women with epilepsy or bipolar disorder who are pregnant or who plan to become pregnant unless other medications have failed to provide adequate symptom control or are otherwise unacceptable. Valproate should not be administered to a woman of childbearing potential unless other medications have failed to provide adequate symptom control or are otherwise unacceptable [see Warnings and Precautions ( 5.2 , 5.3 , 5.4 ), Use in Specific Populations ( 8.1 ), and Patient Counseling Information ( 17 )] . For prophylaxis of migraine headaches, valproate is contraindicated in women who are pregnant and in women of childbearing potential who are not using ",
+     "pediatric_use": "8.4 Pediatric Use Experience has indicated that pediatric patients under the age of two years are at a considerably increased risk of developing fatal hepatotoxicity, especially those with the aforementioned conditions [see Boxed Warning] . When valproic acid is used in this patient group, it should be used with extreme caution and as a sole agent. The benefits of therapy should be weighed against the risks. Above the age of 2 years, experience in epilepsy has indicated that the incidence of fatal hepatotoxicity decreases considerably in progressively older patient groups. Younger children, especially those receiving enzyme-inducing drugs, will require larger maintenance doses to attain targeted total and unbound valproate concentrations. Pediatric patients (i.e., between 3 months and 10 years) have 50% higher clearances expressed on weight (i.e., mL/min/kg) than do adults. Over the age of 10 years, children have pharmacokinetic parameters that approximate those of adults. The variability in free fraction limits the clinical usefulness of monitoring total serum valproic acid concentrations. Interpretation of valproic acid concentrations in children should include consideration of factors that affect hepatic metabolism and protein binding. Pediatric Clinical Trials Divalproex sodium was studied in seven pediatric clinical trials. Two of the pediatric studies were double-blinded placebo-controlled trials to evaluate the efficacy of divalproex sodium extended-release tablets for the indications of mania (150 patients aged 10 to 17 years, 76 of whom were on divalproex sodium extended-release tablets) and migraine (304 patients aged 12 to 17 years, 231 of whom were on divalproex sodium extended-release tablets). Efficacy was not established for either the treatment of migraine or the treatment of mania. The most common drug-related adverse reactions (reported >5% and twice the rate of placebo) reported in the controlled pediatric mania study were nausea, upper abdominal ",
+     "contraindications": "4 CONTRAINDICATIONS • Valproic acid should not be administered to patients with hepatic disease or significant hepatic dysfunction [see Warnings and Precautions ( 5.1 )] . • Valproic acid is contraindicated in patients known to have mitochondrial disorders caused by mutations in mitochondrial DNA polymerase γ (POLG; e.g., Alpers-Huttenlocher Syndrome) and children under two years of age who are suspected of having a POLG-related disorder [see Warnings and Precautions ( 5.1 )] . • Valproic acid is contraindicated in patients with known hypersensitivity to the drug [see Warnings and Precautions ( 5.12 )] . • Valproic acid is contraindicated in patients with known urea cycle disorders [see Warnings and Precautions ( 5.6 )] . • For use in prophylaxis of migraine headaches: Valproic acid is contraindicated in women who are pregnant and in women of childbearing potential who are not using effective contraception [see Warnings and Precautions ( 5.2 , 5.3 , 5.4 ) and Use in Specific Populations ( 8.1 )] . • Hepatic disease or significant hepatic dysfunction ( 4 , 5.1 ) • Known mitochondrial disorders caused by mutations in mitochondrial DNA polymerase γ (POLG) ( 4 , 5.1 ) • Suspected POLG-related disorder in children under two years of age ( 4 , 5.1 ) • Known hypersensitivity to the drug ( 4 , 5.12 ) • Urea cycle disorders ( 4 , 5.6 ) • Prophylaxis of migraine headaches: Pregnant women, women of childbearing potential not using effective contraception ( 4 , 8.1 )"
+    }
+   },
+   {
+    "kind": "faers_counts",
+    "reports_by_reaction": [
+     {
+      "term": "DRUG INEFFECTIVE",
+      "count": 3848
+     },
+     {
+      "term": "DRUG INTERACTION",
+      "count": 3642
+     },
+     {
+      "term": "OFF LABEL USE",
+      "count": 2217
+     },
+     {
+      "term": "TOXICITY TO VARIOUS AGENTS",
+      "count": 2064
+     },
+     {
+      "term": "SEIZURE",
+      "count": 2020
+     }
+    ],
+    "caveat": "spontaneous reports; not a rate, not causal"
+   }
+  ]
+ },
+ {
+  "adapter": "pubtator3",
+  "request": {
+   "gene": "LDHA"
+  },
+  "status": "MATCH_FOUND",
+  "error": "",
+  "requests_sent": [
+   "https://www.ncbi.nlm.nih.gov/research/pubtator3-api/relations?e1=@GENE_LDHA"
+  ],
+  "source_version": "UNKNOWN",
+  "retrieved_at": "2026-10-26T17:10:48Z",
+  "n_hits": 2099,
+  "hits": [
+   {
+    "kind": "relation",
+    "type": "associate",
+    "source": "@DISEASE_Neoplasms",
+    "target": "@GENE_LDHA",
+    "publications": 360
+   },
+   {
+    "kind": "relation",
+    "type": "associate",
+    "source": "@CHEMICAL_Lactic_Acid",
+    "target": "@GENE_LDHA",
+    "publications": 353
+   },
+   {
+    "kind": "relation",
+    "type": "associate",
+    "source": "@CHEMICAL_Glucose",
+    "target": "@GENE_LDHA",
+    "publications": 113
+   },
+   {
+    "kind": "relation",
+    "type": "associate",
+    "source": "@CHEMICAL_Pyruvic_Acid",
+    "target": "@GENE_LDHA",
+    "publications": 98
+   },
+   {
+    "kind": "relation",
+    "type": "associate",
+    "source": "@DISEASE_Hypoxia",
+    "target": "@GENE_LDHA",
+    "publications": 86
+   },
+   {
+    "kind": "relation",
+    "type": "associate",
+    "source": "@GENE_HIF1A",
+    "target": "@GENE_LDHA",
+    "publications": 78
+   },
+   {
+    "kind": "relation",
+    "type": "associate",
+    "source": "@DISEASE_Breast_Neoplasms",
+    "target": "@GENE_LDHA",
+    "publications": 58
+   },
+   {
+    "kind": "relation",
+    "type": "positive_correlate",
+    "source": "@CHEMICAL_Lactic_Acid",
+    "target": "@GENE_LDHA",
+    "publications": 55
+   },
+   {
+    "kind": "relation",
+    "type": "associate",
+    "source": "@DISEASE_Carcinoma_Hepatocellular",
+    "target": "@GENE_LDHA",
+    "publications": 52
+   },
+   {
+    "kind": "relation",
+    "type": "associate",
+    "source": "@DISEASE_Pancreatic_Neoplasms",
+    "target": "@GENE_LDHA",
+    "publications": 47
+   },
+   {
+    "kind": "relation",
+    "type": "stimulate",
+    "source": "@DISEASE_Hypoxia",
+    "target": "@GENE_LDHA",
+    "publications": 45
+   },
+   {
+    "kind": "relation",
+    "type": "associate",
+    "source": "@DISEASE_Colorectal_Neoplasms",
+    "target": "@GENE_LDHA",
+    "publications": 43
+   }
+  ]
+ },
+ {
+  "adapter": "pubtator3",
+  "request": {
+   "gene": "PDK2"
+  },
+  "status": "MATCH_FOUND",
+  "error": "",
+  "requests_sent": [
+   "https://www.ncbi.nlm.nih.gov/research/pubtator3-api/relations?e1=@GENE_PDK2"
+  ],
+  "source_version": "UNKNOWN",
+  "retrieved_at": "2026-10-26T17:10:51Z",
+  "n_hits": 288,
+  "hits": [
+   {
+    "kind": "relation",
+    "type": "associate",
+    "source": "@DISEASE_Neoplasms",
+    "target": "@GENE_PDK2",
+    "publications": 15
+   },
+   {
+    "kind": "relation",
+    "type": "associate",
+    "source": "@CHEMICAL_Pyruvic_Acid",
+    "target": "@GENE_PDK2",
+    "publications": 14
+   },
+   {
+    "kind": "relation",
+    "type": "associate",
+    "source": "@CHEMICAL_Glucose",
+    "target": "@GENE_PDK2",
+    "publications": 13
+   },
+   {
+    "kind": "relation",
+    "type": "negative_correlate",
+    "source": "@CHEMICAL_Dichloroacetic_Acid",
+    "target": "@GENE_PDK2",
+    "publications": 13
+   },
+   {
+    "kind": "relation",
+    "type": "associate",
+    "source": "@DISEASE_Diabetes_Mellitus",
+    "target": "@GENE_PDK2",
+    "publications": 10
+   },
+   {
+    "kind": "relation",
+    "type": "associate",
+    "source": "@GENE_AKT1",
+    "target": "@GENE_PDK2",
+    "publications": 10
+   },
+   {
+    "kind": "relation",
+    "type": "associate",
+    "source": "@CHEMICAL_Lactic_Acid",
+    "target": "@GENE_PDK2",
+    "publications": 9
+   },
+   {
+    "kind": "relation",
+    "type": "associate",
+    "source": "@DISEASE_Carcinoma_Hepatocellular",
+    "target": "@GENE_PDK2",
+    "publications": 8
+   },
+   {
+    "kind": "relation",
+    "type": "associate",
+    "source": "@DISEASE_Inflammation",
+    "target": "@GENE_PDK2",
+    "publications": 7
+   },
+   {
+    "kind": "relation",
+    "type": "associate",
+    "source": "@CHEMICAL_Adenosine_Triphosphate",
+    "target": "@GENE_PDK2",
+    "publications": 6
+   },
+   {
+    "kind": "relation",
+    "type": "associate",
+    "source": "@CHEMICAL_Dichloroacetic_Acid",
+    "target": "@GENE_PDK2",
+    "publications": 6
+   },
+   {
+    "kind": "relation",
+    "type": "associate",
+    "source": "@CHEMICAL_Adenosine_Diphosphate",
+    "target": "@GENE_PDK2",
+    "publications": 5
+   }
+  ]
+ },
+ {
+  "adapter": "pubtator3",
+  "request": {
+   "gene": "EIF2B5"
+  },
+  "status": "MATCH_FOUND",
+  "error": "",
+  "requests_sent": [
+   "https://www.ncbi.nlm.nih.gov/research/pubtator3-api/relations?e1=@GENE_EIF2B5"
+  ],
+  "source_version": "UNKNOWN",
+  "retrieved_at": "2026-10-26T17:10:54Z",
+  "n_hits": 204,
+  "hits": [
+   {
+    "kind": "relation",
+    "type": "associate",
+    "source": "@DISEASE_Leukoencephalopathies",
+    "target": "@GENE_EIF2B5",
+    "publications": 87
+   },
+   {
+    "kind": "relation",
+    "type": "associate",
+    "source": "@DISEASE_Vanishing_White_Matter_Leukodystrophy_with_Ovarian_Failure",
+    "target": "@GENE_EIF2B5",
+    "publications": 12
+   },
+   {
+    "kind": "relation",
+    "type": "interact",
+    "source": "@GENE_EIF2B5",
+    "target": "@GENE_EIF2S2",
+    "publications": 11
+   },
+   {
+    "kind": "relation",
+    "type": "associate",
+    "source": "@DISEASE_Neoplasms",
+    "target": "@GENE_EIF2B5",
+    "publications": 9
+   },
+   {
+    "kind": "relation",
+    "type": "associate",
+    "source": "@DISEASE_Leukodystrophy_Metachromatic",
+    "target": "@GENE_EIF2B5",
+    "publications": 8
+   },
+   {
+    "kind": "relation",
+    "type": "associate",
+    "source": "@DISEASE_Nervous_System_Diseases",
+    "target": "@GENE_EIF2B5",
+    "publications": 7
+   },
+   {
+    "kind": "relation",
+    "type": "associate",
+    "source": "@DISEASE_Demyelinating_Diseases",
+    "target": "@GENE_EIF2B5",
+    "publications": 6
+   },
+   {
+    "kind": "relation",
+    "type": "associate",
+    "source": "@DISEASE_Neoplasms_Cystic_Mucinous_and_Serous",
+    "target": "@GENE_EIF2B5",
+    "publications": 6
+   },
+   {
+    "kind": "relation",
+    "type": "associate",
+    "source": "@DISEASE_Cognition_Disorders",
+    "target": "@GENE_EIF2B5",
+    "publications": 5
+   },
+   {
+    "kind": "relation",
+    "type": "associate",
+    "source": "@DISEASE_Ovarian_Dysgenesis_2",
+    "target": "@GENE_EIF2B5",
+    "publications": 5
+   },
+   {
+    "kind": "relation",
+    "type": "associate",
+    "source": "@DISEASE_Ataxia",
+    "target": "@GENE_EIF2B5",
+    "publications": 4
+   },
+   {
+    "kind": "relation",
+    "type": "associate",
+    "source": "@DISEASE_Mental_Disorders",
+    "target": "@GENE_EIF2B5",
+    "publications": 4
+   }
+  ]
+ },
+ {
+  "adapter": "pubtator3",
+  "request": {
+   "gene": "EIF2AK3"
+  },
+  "status": "MATCH_FOUND",
+  "error": "",
+  "requests_sent": [
+   "https://www.ncbi.nlm.nih.gov/research/pubtator3-api/relations?e1=@GENE_EIF2AK3"
+  ],
+  "source_version": "UNKNOWN",
+  "retrieved_at": "2026-10-26T17:10:56Z",
+  "n_hits": 3602,
+  "hits": [
+   {
+    "kind": "relation",
+    "type": "associate",
+    "source": "@GENE_EIF2A",
+    "target": "@GENE_EIF2AK3",
+    "publications": 345
+   },
+   {
+    "kind": "relation",
+    "type": "associate",
+    "source": "@DISEASE_Neoplasms",
+    "target": "@GENE_EIF2AK3",
+    "publications": 210
+   },
+   {
+    "kind": "relation",
+    "type": "associate",
+    "source": "@GENE_DDIT3",
+    "target": "@GENE_EIF2AK3",
+    "publications": 205
+   },
+   {
+    "kind": "relation",
+    "type": "associate",
+    "source": "@GENE_ATF4",
+    "target": "@GENE_EIF2AK3",
+    "publications": 144
+   },
+   {
+    "kind": "relation",
+    "type": "associate",
+    "source": "@GENE_EIF2AK3",
+    "target": "@GENE_EIF2A",
+    "publications": 138
+   },
+   {
+    "kind": "relation",
+    "type": "negative_correlate",
+    "source": "@CHEMICAL_7_methyl_5_(1_((3_(trifluoromethyl)phenyl)acetyl)_2_3_dihydro_1H_indol_5_yl)_7H_pyrrolo(2_3_d)pyrimidin_4_amine",
+    "target": "@GENE_EIF2AK3",
+    "publications": 118
+   },
+   {
+    "kind": "relation",
+    "type": "associate",
+    "source": "@DISEASE_Wolcott_Rallison_syndrome",
+    "target": "@GENE_EIF2AK3",
+    "publications": 75
+   },
+   {
+    "kind": "relation",
+    "type": "associate",
+    "source": "@DISEASE_Inflammation",
+    "target": "@GENE_EIF2AK3",
+    "publications": 69
+   },
+   {
+    "kind": "relation",
+    "type": "positive_correlate",
+    "source": "@GENE_DDIT3",
+    "target": "@GENE_EIF2AK3",
+    "publications": 65
+   },
+   {
+    "kind": "relation",
+    "type": "associate",
+    "source": "@DISEASE_Diabetes_Mellitus",
+    "target": "@GENE_EIF2AK3",
+    "publications": 59
+   },
+   {
+    "kind": "relation",
+    "type": "associate",
+    "source": "@GENE_HSPA5",
+    "target": "@GENE_EIF2AK3",
+    "publications": 56
+   },
+   {
+    "kind": "relation",
+    "type": "positive_correlate",
+    "source": "@GENE_EIF2A",
+    "target": "@GENE_EIF2AK3",
+    "publications": 56
+   }
+  ]
+ },
+ {
+  "adapter": "orphadata",
+  "request": {
+   "name": "WWOX"
+  },
+  "status": "MATCH_FOUND",
+  "error": "",
+  "requests_sent": [
+   "https://api.orphadata.com/rd-cross-referencing/orphacodes/names/WWOX"
+  ],
+  "source_version": "2026-06-23 07:53:50",
+  "retrieved_at": "2026-10-26T17:10:59Z",
+  "n_hits": 1,
+  "hits": [
+   {
+    "kind": "disorder",
+    "orphacode": 284282,
+    "preferred_term": "Autosomal recessive cerebellar ataxia-epilepsy-intellectual disability syndrome due to WWOX deficiency",
+    "group": "Disorder",
+    "type": null,
+    "external_references": [
+     {
+      "source": "ICD-10",
+      "reference": "G11.1",
+      "relation": "NTBT (ORPHAcode is narrower than the targeted code used to represent it)"
+     },
+     {
+      "source": "MONDO",
+      "reference": "0013687",
+      "relation": "E (Exact mapping: the two concepts are equivalent)"
+     },
+     {
+      "source": "OMIM",
+      "reference": "614322",
+      "relation": "E (Exact mapping: the two concepts are equivalent)"
+     },
+     {
+      "source": "UMLS",
+      "reference": "C3280452",
+      "relation": "E (Exact mapping: the two concepts are equivalent)"
+     }
+    ],
+    "licence": "CC-BY-4.0"
+   }
+  ]
+ },
+ {
+  "adapter": "orphadata",
+  "request": {
+   "name": "vanishing white matter"
+  },
+  "status": "MATCH_FOUND",
+  "error": "",
+  "requests_sent": [
+   "https://api.orphadata.com/rd-cross-referencing/orphacodes/names/vanishing%20white%20matter"
+  ],
+  "source_version": "2026-06-23 07:53:50",
+  "retrieved_at": "2026-10-26T17:11:00Z",
+  "n_hits": 1,
+  "hits": [
+   {
+    "kind": "disorder",
+    "orphacode": 1877,
+    "preferred_term": "Muscular dystrophy-white matter spongiosis syndrome",
+    "group": "Disorder",
+    "type": null,
+    "external_references": [],
+    "licence": "CC-BY-4.0"
+   }
+  ]
+ },
+ {
+  "adapter": "orphadata",
+  "request": {
+   "name": "Dravet"
+  },
+  "status": "MATCH_FOUND",
+  "error": "",
+  "requests_sent": [
+   "https://api.orphadata.com/rd-cross-referencing/orphacodes/names/Dravet"
+  ],
+  "source_version": "2026-06-23 07:53:50",
+  "retrieved_at": "2026-10-26T17:11:01Z",
+  "n_hits": 1,
+  "hits": [
+   {
+    "kind": "disorder",
+    "orphacode": 33069,
+    "preferred_term": "Dravet syndrome",
+    "group": "Disorder",
+    "type": null,
+    "external_references": [
+     {
+      "source": "GARD",
+      "reference": "10430",
+      "relation": "E (Exact mapping: the two concepts are equivalent)"
+     },
+     {
+      "source": "ICD-10",
+      "reference": "G40.4",
+      "relation": "NTBT (ORPHAcode is narrower than the targeted code used to represent it)"
+     },
+     {
+      "source": "ICD-11",
+      "reference": "8A61.11",
+      "relation": "E (Exact mapping: the two concepts are equivalent)"
+     },
+     {
+      "source": "MONDO",
+      "reference": "0011794",
+      "relation": "E (Exact mapping: the two concepts are equivalent)"
+     },
+     {
+      "source": "MedDRA",
+      "reference": "10073677",
+      "relation": "E (Exact mapping: the two concepts are equivalent)"
+     },
+     {
+      "source": "OMIM",
+      "reference": "607208",
+      "relation": "E (Exact mapping: the two concepts are equivalent)"
+     },
+     {
+      "source": "OMIM",
+      "reference": "612164",
+      "relation": "BTNT (ORPHAcode is broader than the targeted code used to represent it)"
+     },
+     {
+      "source": "OMIM",
+      "reference": "615744",
+      "relation": "BTNT (ORPHAcode is broader than the targeted code used to represent it)"
+     },
+     {
+      "source": "UMLS",
+      "reference": "C0751122",
+      "relation": "E (Exact mapping: the two concepts are equivalent)"
+     }
+    ],
+    "licence": "CC-BY-4.0"
+   }
+  ]
+ },
+ {
+  "adapter": "ilincs",
+  "request": {
+   "where": {
+    "libraryid": "LIB_5",
+    "compound": "stiripentol"
+   },
+   "limit": 10
+  },
+  "status": "MATCH_FOUND",
+  "error": "",
+  "requests_sent": [
+   "https://www.ilincs.org/api/SignatureMeta?filter={\"where\": {\"libraryid\": \"LIB_5\", \"compound\": \"stiripentol\"}, \"limit\": 10}"
+  ],
+  "source_version": "UNKNOWN",
+  "retrieved_at": "2026-10-26T17:11:01Z",
+  "n_hits": 2,
+  "hits": [
+   {
+    "kind": "signature",
+    "signatureid": "LINCSCP_22141",
+    "libraryid": "LIB_5",
+    "compound": "Stiripentol",
+    "lincspertid": "LSM-43154",
+    "cellline": "HEPG2",
+    "tissue": "liver",
+    "concentration": "10uM",
+    "time": "6h",
+    "treatment": "Stiripentol",
+    "perturbagenID": "BRD-A72441487"
+   },
+   {
+    "kind": "signature",
+    "signatureid": "LINCSCP_293529",
+    "libraryid": "LIB_5",
+    "compound": "Stiripentol",
+    "lincspertid": "LSM-43154",
+    "cellline": "VCAP",
+    "tissue": "prostate",
+    "concentration": "10uM",
+    "time": "6h",
+    "treatment": "Stiripentol",
+    "perturbagenID": "BRD-A72441487"
+   }
+  ]
+ },
+ {
+  "adapter": "ilincs",
+  "request": {
+   "where": {
+    "libraryid": "LIB_5",
+    "compound": "ISRIB"
+   },
+   "limit": 10
+  },
+  "status": "NO_MATCH_FOUND",
+  "error": "",
+  "requests_sent": [
+   "https://www.ilincs.org/api/SignatureMeta?filter={\"where\": {\"libraryid\": \"LIB_5\", \"compound\": \"ISRIB\"}, \"limit\": 10}"
+  ],
+  "source_version": "UNKNOWN",
+  "retrieved_at": "2026-10-26T17:11:04Z",
+  "n_hits": 0,
+  "hits": []
+ },
+ {
+  "adapter": "ilincs",
+  "request": {
+   "where": {
+    "libraryid": "LIB_5",
+    "compound": "dichloroacetate"
+   },
+   "limit": 10
+  },
+  "status": "NO_MATCH_FOUND",
+  "error": "",
+  "requests_sent": [
+   "https://www.ilincs.org/api/SignatureMeta?filter={\"where\": {\"libraryid\": \"LIB_5\", \"compound\": \"dichloroacetate\"}, \"limit\": 10}"
+  ],
+  "source_version": "UNKNOWN",
+  "retrieved_at": "2026-10-26T17:11:05Z",
+  "n_hits": 0,
+  "hits": []
+ },
+ {
+  "adapter": "ilincs",
+  "request": {
+   "where": {
+    "libraryid": "LIB_5",
+    "compound": "GSK2606414"
+   },
+   "limit": 10
+  },
+  "status": "NO_MATCH_FOUND",
+  "error": "",
+  "requests_sent": [
+   "https://www.ilincs.org/api/SignatureMeta?filter={\"where\": {\"libraryid\": \"LIB_5\", \"compound\": \"GSK2606414\"}, \"limit\": 10}"
+  ],
+  "source_version": "UNKNOWN",
+  "retrieved_at": "2026-10-26T17:11:07Z",
+  "n_hits": 0,
+  "hits": []
+ },
+ {
+  "adapter": "ilincs",
+  "request": {
+   "where": {
+    "libraryid": "LIB_5",
+    "compound": "trazodone"
+   },
+   "limit": 10
+  },
+  "status": "MATCH_FOUND",
+  "error": "",
+  "requests_sent": [
+   "https://www.ilincs.org/api/SignatureMeta?filter={\"where\": {\"libraryid\": \"LIB_5\", \"compound\": \"trazodone\"}, \"limit\": 10}"
+  ],
+  "source_version": "UNKNOWN",
+  "retrieved_at": "2026-10-26T17:11:08Z",
+  "n_hits": 10,
+  "hits": [
+   {
+    "kind": "signature",
+    "signatureid": "LINCSCP_108805",
+    "libraryid": "LIB_5",
+    "compound": "Trazodone",
+    "lincspertid": "LSM-3580",
+    "cellline": "HELA",
+    "tissue": "large intestine",
+    "concentration": "1.11uM",
+    "time": "24h",
+    "treatment": "Trazodone",
+    "perturbagenID": "BRD-K70778732"
+   },
+   {
+    "kind": "signature",
+    "signatureid": "LINCSCP_108806",
+    "libraryid": "LIB_5",
+    "compound": "Trazodone",
+    "lincspertid": "LSM-3580",
+    "cellline": "HELA",
+    "tissue": "large intestine",
+    "concentration": "0.37uM",
+    "time": "24h",
+    "treatment": "Trazodone",
+    "perturbagenID": "BRD-K70778732"
+   },
+   {
+    "kind": "signature",
+    "signatureid": "LINCSCP_125602",
+    "libraryid": "LIB_5",
+    "compound": "Trazodone",
+    "lincspertid": "LSM-3580",
+    "cellline": "HT29",
+    "tissue": "large intestine",
+    "concentration": "10uM",
+    "time": "24h",
+    "treatment": "Trazodone",
+    "perturbagenID": "BRD-K70778732"
+   },
+   {
+    "kind": "signature",
+    "signatureid": "LINCSCP_142187",
+    "libraryid": "LIB_5",
+    "compound": "Trazodone",
+    "lincspertid": "LSM-3580",
+    "cellline": "MCF7",
+    "tissue": "breast",
+    "concentration": "10uM",
+    "time": "24h",
+    "treatment": "Trazodone",
+    "perturbagenID": "BRD-K70778732"
+   },
+   {
+    "kind": "signature",
+    "signatureid": "LINCSCP_142188",
+    "libraryid": "LIB_5",
+    "compound": "Trazodone",
+    "lincspertid": "LSM-3580",
+    "cellline": "MCF7",
+    "tissue": "breast",
+    "concentration": "3.33uM",
+    "time": "24h",
+    "treatment": "Trazodone",
+    "perturbagenID": "BRD-K70778732"
+   },
+   {
+    "kind": "signature",
+    "signatureid": "LINCSCP_142190",
+    "libraryid": "LIB_5",
+    "compound": "Trazodone",
+    "lincspertid": "LSM-3580",
+    "cellline": "MCF7",
+    "tissue": "breast",
+    "concentration": "0.37uM",
+    "time": "24h",
+    "treatment": "Trazodone",
+    "perturbagenID": "BRD-K70778732"
+   },
+   {
+    "kind": "signature",
+    "signatureid": "LINCSCP_14939",
+    "libraryid": "LIB_5",
+    "compound": "Trazodone",
+    "lincspertid": "LSM-3580",
+    "cellline": "HA1E",
+    "tissue": "kidney epithelial",
+    "concentration": "10uM",
+    "time": "6h",
+    "treatment": "Trazodone",
+    "perturbagenID": "BRD-K70778732"
+   },
+   {
+    "kind": "signature",
+    "signatureid": "LINCSCP_160389",
+    "libraryid": "LIB_5",
+    "compound": "Trazodone",
+    "lincspertid": "LSM-3580",
+    "cellline": "PC3",
+    "tissue": "prostate",
+    "concentration": "3.33uM",
+    "time": "24h",
+    "treatment": "Trazodone",
+    "perturbagenID": "BRD-K70778732"
+   },
+   {
+    "kind": "signature",
+    "signatureid": "LINCSCP_160390",
+    "libraryid": "LIB_5",
+    "compound": "Trazodone",
+    "lincspertid": "LSM-3580",
+    "cellline": "PC3",
+    "tissue": "prostate",
+    "concentration": "1.11uM",
+    "time": "24h",
+    "treatment": "Trazodone",
+    "perturbagenID": "BRD-K70778732"
+   },
+   {
+    "kind": "signature",
+    "signatureid": "LINCSCP_173983",
+    "libraryid": "LIB_5",
+    "compound": "Trazodone",
+    "lincspertid": "LSM-3580",
+    "cellline": "YAPC",
+    "tissue": "pancreas",
+    "concentration": "1.11uM",
+    "time": "24h",
+    "treatment": "Trazodone",
+    "perturbagenID": "BRD-K70778732"
+   }
+  ]
+ }
+]

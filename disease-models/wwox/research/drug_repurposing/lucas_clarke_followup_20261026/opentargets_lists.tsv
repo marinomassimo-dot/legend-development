@@ -1,0 +1,8 @@
+label	ensembl	list_count	molecule	name	drugType	maxClinicalStage	diseases
+PDK1	ENSG00000152256	1	CHEMBL306823	SODIUM DICHLOROACETATE	Small molecule	PHASE_3	Congenital lactic acidosis; congenital lactic acidemia; open-heart surgical procedures
+PDK2	ENSG00000005882	1	CHEMBL306823	SODIUM DICHLOROACETATE	Small molecule	PHASE_3	Congenital lactic acidosis; congenital lactic acidemia; open-heart surgical procedures
+PDK3	ENSG00000067992	1	CHEMBL306823	SODIUM DICHLOROACETATE	Small molecule	PHASE_3	Congenital lactic acidosis; congenital lactic acidemia; open-heart surgical procedures
+PDK4	ENSG00000004799	1	CHEMBL306823	SODIUM DICHLOROACETATE	Small molecule	PHASE_3	Congenital lactic acidosis; congenital lactic acidemia; open-heart surgical procedures
+PDPK1_control	ENSG00000140992	2	CHEMBL1650595	AR-12	Small molecule	PHASE_1	lymphoma; solid tumor
+PDPK1_control	ENSG00000140992	2	CHEMBL574737	UCN-01	Small molecule	PHASE_2	B-cell chronic lymphocytic leukemia; acute leukemia; acute myeloid leukemia; anaplastic large cell lymphoma; breast cancer; chronic lymphoproliferative disorders; chronic myeloid leukemia; exocrine pa
+LDHA	ENSG00000134333	1	CHEMBL4594338	NEDOSIRAN SODIUM	Oligonucleotide	APPROVAL	primary hyperoxaluria; renal impairment

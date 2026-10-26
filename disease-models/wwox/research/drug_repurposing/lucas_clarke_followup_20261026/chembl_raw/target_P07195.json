@@ -1,0 +1,2048 @@
+{
+ "page_meta": {
+  "limit": 50,
+  "next": null,
+  "offset": 0,
+  "previous": null,
+  "total_count": 2
+ },
+ "targets": [
+  {
+   "cross_references": [],
+   "organism": "Homo sapiens",
+   "pref_name": "L-lactate dehydrogenase B chain",
+   "species_group_flag": false,
+   "target_chembl_id": "CHEMBL4940",
+   "target_components": [
+    {
+     "accession": "P07195",
+     "component_description": "L-lactate dehydrogenase B chain",
+     "component_id": 3253,
+     "component_type": "PROTEIN",
+     "relationship": "SINGLE PROTEIN",
+     "target_component_synonyms": [
+      {
+       "component_synonym": "1.1.1.27",
+       "syn_type": "EC_NUMBER"
+      },
+      {
+       "component_synonym": "LDH-B",
+       "syn_type": "UNIPROT"
+      },
+      {
+       "component_synonym": "LDHB",
+       "syn_type": "GENE_SYMBOL"
+      },
+      {
+       "component_synonym": "LDH-H",
+       "syn_type": "UNIPROT"
+      },
+      {
+       "component_synonym": "LDH heart subunit",
+       "syn_type": "UNIPROT"
+      },
+      {
+       "component_synonym": "L-lactate dehydrogenase B chain",
+       "syn_type": "UNIPROT"
+      },
+      {
+       "component_synonym": "Renal carcinoma antigen NY-REN-46",
+       "syn_type": "UNIPROT"
+      }
+     ],
+     "target_component_xrefs": [
+      {
+       "xref_id": "1T2F",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "8QDE",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "8S88",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "1I0Z",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "7DBK",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "7DBJ",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "GO:0004457",
+       "xref_name": "lactate dehydrogenase activity",
+       "xref_src_db": "GoFunction"
+      },
+      {
+       "xref_id": "GO:0004459",
+       "xref_name": "L-lactate dehydrogenase activity",
+       "xref_src_db": "GoFunction"
+      },
+      {
+       "xref_id": "GO:0005515",
+       "xref_name": "protein binding",
+       "xref_src_db": "GoFunction"
+      },
+      {
+       "xref_id": "GO:0016491",
+       "xref_name": "oxidoreductase activity",
+       "xref_src_db": "GoFunction"
+      },
+      {
+       "xref_id": "GO:0019900",
+       "xref_name": "kinase binding",
+       "xref_src_db": "GoFunction"
+      },
+      {
+       "xref_id": "GO:0042802",
+       "xref_name": "identical protein binding",
+       "xref_src_db": "GoFunction"
+      },
+      {
+       "xref_id": "GO:0051287",
+       "xref_name": "NAD binding",
+       "xref_src_db": "GoFunction"
+      },
+      {
+       "xref_id": "GO:0006089",
+       "xref_name": "lactate metabolic process",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0006090",
+       "xref_name": "pyruvate metabolic process",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0019674",
+       "xref_name": "NAD metabolic process",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0019752",
+       "xref_name": "carboxylic acid metabolic process",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0005739",
+       "xref_name": "mitochondrion",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:0005737",
+       "xref_name": "cytoplasm",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:0005743",
+       "xref_name": "mitochondrial inner membrane",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:0005829",
+       "xref_name": "cytosol",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:0016020",
+       "xref_name": "membrane",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:0045121",
+       "xref_name": "membrane raft",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:0070062",
+       "xref_name": "extracellular exosome",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:1990204",
+       "xref_name": "oxidoreductase complex",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "PA30325",
+       "xref_name": "lactate dehydrogenase B",
+       "xref_src_db": "PharmGKB"
+      },
+      {
+       "xref_id": "P07195",
+       "xref_name": "L-lactate dehydrogenase B chain",
+       "xref_src_db": "UniProt"
+      },
+      {
+       "xref_id": "1I0Z",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "1T2F",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "7DBJ",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "7DBK",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "8QDE",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "8S88",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "P07195",
+       "xref_name": null,
+       "xref_src_db": "AlphaFoldDB"
+      },
+      {
+       "xref_id": "P07195",
+       "xref_name": null,
+       "xref_src_db": "IntAct"
+      },
+      {
+       "xref_id": "HGNC:6541",
+       "xref_name": "LDHB",
+       "xref_src_db": "HGNC"
+      },
+      {
+       "xref_id": "R-HSA-70268",
+       "xref_name": "Pyruvate metabolism",
+       "xref_src_db": "Reactome"
+      },
+      {
+       "xref_id": "P07195",
+       "xref_name": null,
+       "xref_src_db": "Pharos"
+      },
+      {
+       "xref_id": "P07195",
+       "xref_name": null,
+       "xref_src_db": "ExpressionAtlas"
+      },
+      {
+       "xref_id": "IPR001557",
+       "xref_name": "L-lactate/malate_DH",
+       "xref_src_db": "InterPro"
+      },
+      {
+       "xref_id": "IPR011304",
+       "xref_name": "L-lactate_DH",
+       "xref_src_db": "InterPro"
+      },
+      {
+       "xref_id": "IPR018177",
+       "xref_name": "L-lactate_DH_AS",
+       "xref_src_db": "InterPro"
+      },
+      {
+       "xref_id": "IPR022383",
+       "xref_name": "Lactate/malate_DH_C",
+       "xref_src_db": "InterPro"
+      },
+      {
+       "xref_id": "IPR001236",
+       "xref_name": "Lactate/malate_DH_N",
+       "xref_src_db": "InterPro"
+      },
+      {
+       "xref_id": "IPR015955",
+       "xref_name": "Lactate_DH/Glyco_Ohase_4_C",
+       "xref_src_db": "InterPro"
+      },
+      {
+       "xref_id": "IPR036291",
+       "xref_name": "NAD(P)-bd_dom_sf",
+       "xref_src_db": "InterPro"
+      },
+      {
+       "xref_id": "PTHR43128",
+       "xref_name": "L-2-HYDROXYCARBOXYLATE DEHYDROGENASE (NAD(P)(+))",
+       "xref_src_db": "PANTHER"
+      },
+      {
+       "xref_id": "PTHR43128:SF2",
+       "xref_name": "L-LACTATE DEHYDROGENASE B CHAIN",
+       "xref_src_db": "PANTHER"
+      },
+      {
+       "xref_id": "PF02866",
+       "xref_name": "Ldh_1_C",
+       "xref_src_db": "Pfam"
+      },
+      {
+       "xref_id": "PF00056",
+       "xref_name": "Ldh_1_N",
+       "xref_src_db": "Pfam"
+      }
+     ]
+    }
+   ],
+   "target_type": "SINGLE PROTEIN",
+   "tax_id": 9606
+  },
+  {
+   "cross_references": [],
+   "organism": "Homo sapiens",
+   "pref_name": "von Hippel-Lindau disease tumor suppressor/L-lactate dehydrogenase B chain",
+   "species_group_flag": false,
+   "target_chembl_id": "CHEMBL5465228",
+   "target_components": [
+    {
+     "accession": "P07195",
+     "component_description": "L-lactate dehydrogenase B chain",
+     "component_id": 3253,
+     "component_type": "PROTEIN",
+     "relationship": "INTERACTING PROTEIN",
+     "target_component_synonyms": [
+      {
+       "component_synonym": "1.1.1.27",
+       "syn_type": "EC_NUMBER"
+      },
+      {
+       "component_synonym": "LDH-B",
+       "syn_type": "UNIPROT"
+      },
+      {
+       "component_synonym": "LDHB",
+       "syn_type": "GENE_SYMBOL"
+      },
+      {
+       "component_synonym": "LDH-H",
+       "syn_type": "UNIPROT"
+      },
+      {
+       "component_synonym": "LDH heart subunit",
+       "syn_type": "UNIPROT"
+      },
+      {
+       "component_synonym": "L-lactate dehydrogenase B chain",
+       "syn_type": "UNIPROT"
+      },
+      {
+       "component_synonym": "Renal carcinoma antigen NY-REN-46",
+       "syn_type": "UNIPROT"
+      }
+     ],
+     "target_component_xrefs": [
+      {
+       "xref_id": "1T2F",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "8QDE",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "8S88",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "1I0Z",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "7DBK",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "7DBJ",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "GO:0004457",
+       "xref_name": "lactate dehydrogenase activity",
+       "xref_src_db": "GoFunction"
+      },
+      {
+       "xref_id": "GO:0004459",
+       "xref_name": "L-lactate dehydrogenase activity",
+       "xref_src_db": "GoFunction"
+      },
+      {
+       "xref_id": "GO:0005515",
+       "xref_name": "protein binding",
+       "xref_src_db": "GoFunction"
+      },
+      {
+       "xref_id": "GO:0016491",
+       "xref_name": "oxidoreductase activity",
+       "xref_src_db": "GoFunction"
+      },
+      {
+       "xref_id": "GO:0019900",
+       "xref_name": "kinase binding",
+       "xref_src_db": "GoFunction"
+      },
+      {
+       "xref_id": "GO:0042802",
+       "xref_name": "identical protein binding",
+       "xref_src_db": "GoFunction"
+      },
+      {
+       "xref_id": "GO:0051287",
+       "xref_name": "NAD binding",
+       "xref_src_db": "GoFunction"
+      },
+      {
+       "xref_id": "GO:0006089",
+       "xref_name": "lactate metabolic process",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0006090",
+       "xref_name": "pyruvate metabolic process",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0019674",
+       "xref_name": "NAD metabolic process",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0019752",
+       "xref_name": "carboxylic acid metabolic process",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0005739",
+       "xref_name": "mitochondrion",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:0005737",
+       "xref_name": "cytoplasm",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:0005743",
+       "xref_name": "mitochondrial inner membrane",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:0005829",
+       "xref_name": "cytosol",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:0016020",
+       "xref_name": "membrane",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:0045121",
+       "xref_name": "membrane raft",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:0070062",
+       "xref_name": "extracellular exosome",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:1990204",
+       "xref_name": "oxidoreductase complex",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "PA30325",
+       "xref_name": "lactate dehydrogenase B",
+       "xref_src_db": "PharmGKB"
+      },
+      {
+       "xref_id": "P07195",
+       "xref_name": "L-lactate dehydrogenase B chain",
+       "xref_src_db": "UniProt"
+      },
+      {
+       "xref_id": "1I0Z",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "1T2F",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "7DBJ",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "7DBK",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "8QDE",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "8S88",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "P07195",
+       "xref_name": null,
+       "xref_src_db": "AlphaFoldDB"
+      },
+      {
+       "xref_id": "P07195",
+       "xref_name": null,
+       "xref_src_db": "IntAct"
+      },
+      {
+       "xref_id": "HGNC:6541",
+       "xref_name": "LDHB",
+       "xref_src_db": "HGNC"
+      },
+      {
+       "xref_id": "R-HSA-70268",
+       "xref_name": "Pyruvate metabolism",
+       "xref_src_db": "Reactome"
+      },
+      {
+       "xref_id": "P07195",
+       "xref_name": null,
+       "xref_src_db": "Pharos"
+      },
+      {
+       "xref_id": "P07195",
+       "xref_name": null,
+       "xref_src_db": "ExpressionAtlas"
+      },
+      {
+       "xref_id": "IPR001557",
+       "xref_name": "L-lactate/malate_DH",
+       "xref_src_db": "InterPro"
+      },
+      {
+       "xref_id": "IPR011304",
+       "xref_name": "L-lactate_DH",
+       "xref_src_db": "InterPro"
+      },
+      {
+       "xref_id": "IPR018177",
+       "xref_name": "L-lactate_DH_AS",
+       "xref_src_db": "InterPro"
+      },
+      {
+       "xref_id": "IPR022383",
+       "xref_name": "Lactate/malate_DH_C",
+       "xref_src_db": "InterPro"
+      },
+      {
+       "xref_id": "IPR001236",
+       "xref_name": "Lactate/malate_DH_N",
+       "xref_src_db": "InterPro"
+      },
+      {
+       "xref_id": "IPR015955",
+       "xref_name": "Lactate_DH/Glyco_Ohase_4_C",
+       "xref_src_db": "InterPro"
+      },
+      {
+       "xref_id": "IPR036291",
+       "xref_name": "NAD(P)-bd_dom_sf",
+       "xref_src_db": "InterPro"
+      },
+      {
+       "xref_id": "PTHR43128",
+       "xref_name": "L-2-HYDROXYCARBOXYLATE DEHYDROGENASE (NAD(P)(+))",
+       "xref_src_db": "PANTHER"
+      },
+      {
+       "xref_id": "PTHR43128:SF2",
+       "xref_name": "L-LACTATE DEHYDROGENASE B CHAIN",
+       "xref_src_db": "PANTHER"
+      },
+      {
+       "xref_id": "PF02866",
+       "xref_name": "Ldh_1_C",
+       "xref_src_db": "Pfam"
+      },
+      {
+       "xref_id": "PF00056",
+       "xref_name": "Ldh_1_N",
+       "xref_src_db": "Pfam"
+      }
+     ]
+    },
+    {
+     "accession": "P40337",
+     "component_description": "von Hippel-Lindau disease tumor suppressor",
+     "component_id": 8306,
+     "component_type": "PROTEIN",
+     "relationship": "INTERACTING PROTEIN",
+     "target_component_synonyms": [
+      {
+       "component_synonym": "Protein G7",
+       "syn_type": "UNIPROT"
+      },
+      {
+       "component_synonym": "pVHL",
+       "syn_type": "UNIPROT"
+      },
+      {
+       "component_synonym": "VHL",
+       "syn_type": "GENE_SYMBOL"
+      },
+      {
+       "component_synonym": "von Hippel-Lindau disease tumor suppressor",
+       "syn_type": "UNIPROT"
+      }
+     ],
+     "target_component_xrefs": [
+      {
+       "xref_id": "8BDT",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "7Z6L",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "8BDS",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "8BDX",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "5N4W",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "4W9F",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "8BDL",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "4W9G",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "8BDM",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "4W9H",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "8BDJ",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "4W9I",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "4W9J",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "4W9K",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "4W9L",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "8BDN",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "8VLB",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "8BDO",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "1LM8",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "8VL9",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "7ZNT",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "6I7Q",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "4W9C",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "8BDI",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "4W9D",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "4W9E",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "6I7R",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "4WQO",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "5NVV",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "5NVX",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "5NVW",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "5NVZ",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "5NVY",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "6GMX",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "5NW1",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "5NW0",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "6GMN",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "6GMQ",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "9IPW",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "5NW2",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "3ZTC",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "9BJU",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "3ZTD",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "6GMR",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "4B95",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "8P0F",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "4AWJ",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "7Z76",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "8QJS",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "7Z77",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "8QJR",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "8BEB",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "7CJB",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "8CQE",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "8ZVJ",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "9EQM",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "4B9K",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "8ZV8",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "9EQJ",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "6BVB",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "6HR2",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "8YMB",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "5LLI",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "4BKS",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "4BKT",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "1VCB",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "6FMJ",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "6FMI",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "6FMK",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "8C13",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "3ZUN",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "5T35",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "6GFX",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "6GFZ",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "8CQL",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "6GFY",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "8PC2",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "8CQK",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "8QVU",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "8QW6",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "8QW7",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "4AJY",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "6HAX",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "6HAY",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "8G1P",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "8G1Q",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "7S4E",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "1LQB",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "8FY1",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "8FY2",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "8FY0",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "8BB2",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "8BB3",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "8BB4",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "8BB5",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "7JTO",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "7JTP",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "8EWV",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "6ZHC",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "7Q2J",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "8EI3",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "9GIO",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "9QE5",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "9BOL",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "9QE4",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "6SIS",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "7PI4",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "3ZRC",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "3ZRF",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "7KHH",
+       "xref_name": "A",
+       "xref_src_db": "PDBe"
+      },
+      {
+       "xref_id": "GO:0003714",
+       "xref_name": "transcription corepressor activity",
+       "xref_src_db": "GoFunction"
+      },
+      {
+       "xref_id": "GO:0004842",
+       "xref_name": "ubiquitin-protein transferase activity",
+       "xref_src_db": "GoFunction"
+      },
+      {
+       "xref_id": "GO:0005515",
+       "xref_name": "protein binding",
+       "xref_src_db": "GoFunction"
+      },
+      {
+       "xref_id": "GO:0019899",
+       "xref_name": "enzyme binding",
+       "xref_src_db": "GoFunction"
+      },
+      {
+       "xref_id": "GO:0140297",
+       "xref_name": "DNA-binding transcription factor binding",
+       "xref_src_db": "GoFunction"
+      },
+      {
+       "xref_id": "GO:1990756",
+       "xref_name": "ubiquitin-like ligase-substrate adaptor activity",
+       "xref_src_db": "GoFunction"
+      },
+      {
+       "xref_id": "GO:0000122",
+       "xref_name": "negative regulation of transcription by RNA polymerase II",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0000902",
+       "xref_name": "cell morphogenesis",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0006508",
+       "xref_name": "proteolysis",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0008285",
+       "xref_name": "negative regulation of cell population proliferation",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0009968",
+       "xref_name": "negative regulation of signal transduction",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0010507",
+       "xref_name": "negative regulation of autophagy",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0010629",
+       "xref_name": "negative regulation of gene expression",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0034244",
+       "xref_name": "negative regulation of transcription elongation by RNA polymerase II",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0043066",
+       "xref_name": "negative regulation of apoptotic process",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0043161",
+       "xref_name": "proteasome-mediated ubiquitin-dependent protein catabolic process",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0045597",
+       "xref_name": "positive regulation of cell differentiation",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0045893",
+       "xref_name": "positive regulation of DNA-templated transcription",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0046426",
+       "xref_name": "negative regulation of receptor signaling pathway via JAK-STAT",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0050821",
+       "xref_name": "protein stabilization",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0071456",
+       "xref_name": "cellular response to hypoxia",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:1900037",
+       "xref_name": "regulation of cellular response to hypoxia",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:1904262",
+       "xref_name": "negative regulation of TORC1 signaling",
+       "xref_src_db": "GoProcess"
+      },
+      {
+       "xref_id": "GO:0005783",
+       "xref_name": "endoplasmic reticulum",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:0005634",
+       "xref_name": "nucleus",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:0005654",
+       "xref_name": "nucleoplasm",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:0005737",
+       "xref_name": "cytoplasm",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:0005739",
+       "xref_name": "mitochondrion",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:0005829",
+       "xref_name": "cytosol",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "GO:0005886",
+       "xref_name": "plasma membrane",
+       "xref_src_db": "GoComponent"
+      },
+      {
+       "xref_id": "PA37307",
+       "xref_name": "von Hippel-Lindau tumor suppressor",
+       "xref_src_db": "PharmGKB"
+      },
+      {
+       "xref_id": "B2RE45",
+       "xref_name": "von Hippel-Lindau disease tumor suppressor",
+       "xref_src_db": "UniProt"
+      },
+      {
+       "xref_id": "Q13599",
+       "xref_name": "von Hippel-Lindau disease tumor suppressor",
+       "xref_src_db": "UniProt"
+      },
+      {
+       "xref_id": "Q6PDA9",
+       "xref_name": "von Hippel-Lindau disease tumor suppressor",
+       "xref_src_db": "UniProt"
+      },
+      {
+       "xref_id": "P40337",
+       "xref_name": "von Hippel-Lindau disease tumor suppressor",
+       "xref_src_db": "UniProt"
+      },
+      {
+       "xref_id": "1LM8",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "1LQB",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "1VCB",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "3ZRC",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "3ZRF",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "3ZTC",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "3ZTD",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "3ZUN",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "4AJY",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "4AWJ",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "4B95",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "4B9K",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "4BKS",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "4BKT",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "4W9C",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "4W9D",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "4W9E",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "4W9F",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "4W9G",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "4W9H",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "4W9I",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "4W9J",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "4W9K",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "4W9L",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "4WQO",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "5LLI",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "5N4W",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "5NVV",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "5NVW",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "5NVX",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "5NVY",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "5NVZ",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "5NW0",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "5NW1",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "5NW2",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "5T35",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "6BVB",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "6FMI",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "6FMJ",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "6FMK",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "6GFX",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "6GFY",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "6GFZ",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "6GMN",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "6GMQ",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "6GMR",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "6GMX",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "6HAX",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "6HAY",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "6HR2",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "6I7Q",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "6I7R",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "6R6H",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "6R7F",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "6SIS",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "6ZHC",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "7CJB",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "7JTO",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "7JTP",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "7KHH",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "7PI4",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "7Q2J",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "7S4E",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "7Z6L",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "7Z76",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "7Z77",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "7ZNT",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "8BB2",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "8BB3",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "8BB4",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "8BB5",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "8BDI",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "8BDJ",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "8BDL",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "8BDM",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "8BDN",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "8BDO",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "8BDS",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "8BDT",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "8BDX",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "8BEB",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "8C13",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "8CQE",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "8CQK",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "8CQL",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "8EI3",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "8EWV",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "8FY0",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "8FY1",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "8FY2",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "8G1P",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "8G1Q",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "8P0F",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "8PC2",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "8QJR",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "8QJS",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "8QU8",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "8QVU",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "8QW6",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "8QW7",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "8R5H",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "8RWZ",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "8RX0",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "8VL9",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "8VLB",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "8WDK",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "8YMB",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "8ZV8",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "8ZVJ",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "9BJU",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "9BOL",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "9EQJ",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "9EQM",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "9GIO",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "9IPW",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "9QE4",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "9QE5",
+       "xref_name": null,
+       "xref_src_db": "PDB"
+      },
+      {
+       "xref_id": "P40337",
+       "xref_name": null,
+       "xref_src_db": "AlphaFoldDB"
+      },
+      {
+       "xref_id": "P40337",
+       "xref_name": null,
+       "xref_src_db": "IntAct"
+      },
+      {
+       "xref_id": "HGNC:12687",
+       "xref_name": "VHL",
+       "xref_src_db": "HGNC"
+      },
+      {
+       "xref_id": "R-HSA-1234176",
+       "xref_name": "Oxygen-dependent proline hydroxylation of Hypoxia-inducible Factor Alpha",
+       "xref_src_db": "Reactome"
+      },
+      {
+       "xref_id": "R-HSA-3232142",
+       "xref_name": "SUMOylation of ubiquitinylation proteins",
+       "xref_src_db": "Reactome"
+      },
+      {
+       "xref_id": "R-HSA-8951664",
+       "xref_name": "Neddylation",
+       "xref_src_db": "Reactome"
+      },
+      {
+       "xref_id": "R-HSA-9682706",
+       "xref_name": "Replication of the SARS-CoV-1 genome",
+       "xref_src_db": "Reactome"
+      },
+      {
+       "xref_id": "R-HSA-9694686",
+       "xref_name": "Replication of the SARS-CoV-2 genome",
+       "xref_src_db": "Reactome"
+      },
+      {
+       "xref_id": "R-HSA-9706019",
+       "xref_name": "RHOBTB3 ATPase cycle",
+       "xref_src_db": "Reactome"
+      },
+      {
+       "xref_id": "R-HSA-983168",
+       "xref_name": "Antigen processing: Ubiquitination & Proteasome degradation",
+       "xref_src_db": "Reactome"
+      },
+      {
+       "xref_id": "P40337",
+       "xref_name": null,
+       "xref_src_db": "Pharos"
+      },
+      {
+       "xref_id": "P40337",
+       "xref_name": null,
+       "xref_src_db": "ExpressionAtlas"
+      },
+      {
+       "xref_id": "IPR024048",
+       "xref_name": "VHL_alpha_dom",
+       "xref_src_db": "InterPro"
+      },
+      {
+       "xref_id": "IPR037139",
+       "xref_name": "VHL_alpha_dom_sf",
+       "xref_src_db": "InterPro"
+      },
+      {
+       "xref_id": "IPR024053",
+       "xref_name": "VHL_beta_dom",
+       "xref_src_db": "InterPro"
+      },
+      {
+       "xref_id": "IPR037140",
+       "xref_name": "VHL_beta_dom_sf",
+       "xref_src_db": "InterPro"
+      },
+      {
+       "xref_id": "IPR036208",
+       "xref_name": "VHL_sf",
+       "xref_src_db": "InterPro"
+      },
+      {
+       "xref_id": "IPR022772",
+       "xref_name": "VHL_tumour_suppress_b/a_dom",
+       "xref_src_db": "InterPro"
+      },
+      {
+       "xref_id": "PF01847",
+       "xref_name": "VHL",
+       "xref_src_db": "Pfam"
+      },
+      {
+       "xref_id": "PF17211",
+       "xref_name": "VHL_C",
+       "xref_src_db": "Pfam"
+      }
+     ]
+    }
+   ],
+   "target_type": "PROTEIN-PROTEIN INTERACTION",
+   "tax_id": 9606
+  }
+ ]
+}

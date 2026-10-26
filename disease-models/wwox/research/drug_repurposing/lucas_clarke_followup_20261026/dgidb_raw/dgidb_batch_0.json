@@ -1,0 +1,1657 @@
+{
+  "data": {
+    "genes": {
+      "nodes": [
+        {
+          "conceptId": "hgnc:8809",
+          "interactions": [
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:214468",
+                "name": "DAUNORUBICIN LIPOSOMAL"
+              },
+              "interactionScore": 0.01819065055899546,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "PRISM",
+                  "sourceDbVersion": "20-Jan-2020"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "iuphar.ligand:4518",
+                "name": "DICHLOROACETATE"
+              },
+              "interactionScore": 3.601748810681102,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 25383915
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:2683",
+                "name": "COLCHICINE"
+              },
+              "interactionScore": 0.03215847152393841,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "PRISM",
+                  "sourceDbVersion": "20-Jan-2020"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "ncit:C74385",
+                "name": "INDIPLON"
+              },
+              "interactionScore": 0.2000971561489501,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "PRISM",
+                  "sourceDbVersion": "20-Jan-2020"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "iuphar.ligand:9350",
+                "name": "VER-246608"
+              },
+              "interactionScore": 0.4502186013351378,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "GuideToPharmacology",
+                  "sourceDbVersion": "2026.2"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "iuphar.ligand:8007",
+                "name": "BX-912"
+              },
+              "interactionScore": 0.1637158550309591,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "Drug Repurposing Hub",
+                  "sourceDbVersion": "20250818"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "ncit:C70650",
+                "name": "TOSEDOSTAT"
+              },
+              "interactionScore": 0.0545719516769864,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "PRISM",
+                  "sourceDbVersion": "20-Jan-2020"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "iuphar.ligand:2441",
+                "name": "SKF96365"
+              },
+              "interactionScore": 0.2000971561489501,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "PRISM",
+                  "sourceDbVersion": "20-Jan-2020"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "ncit:C80039",
+                "name": "DEVIMISTAT"
+              },
+              "interactionScore": 0.2251093006675689,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "TdgClinicalTrial",
+                  "sourceDbVersion": "Jan-2014"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:1424911",
+                "name": "DABRAFENIB"
+              },
+              "interactionScore": 0.03675253888450104,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "PRISM",
+                  "sourceDbVersion": "20-Jan-2020"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "drugbank:DB12756",
+                "name": "TAK-901"
+              },
+              "interactionScore": 0.1286338860957536,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "PRISM",
+                  "sourceDbVersion": "20-Jan-2020"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "iuphar.ligand:8006",
+                "name": "BX-795"
+              },
+              "interactionScore": 0.1800874405340551,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "Drug Repurposing Hub",
+                  "sourceDbVersion": "20250818"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:486610",
+                "name": "PACLITAXEL PROTEIN-BOUND"
+              },
+              "interactionScore": 0.0136429879192466,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "PRISM",
+                  "sourceDbVersion": "20-Jan-2020"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL257158",
+                "name": "CHEMBL:CHEMBL257158"
+              },
+              "interactionScore": 0.9004372026702756,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 20822912
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL445304",
+                "name": "CHEMBL:CHEMBL445304"
+              },
+              "interactionScore": 0.6002914684468504,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 18003900
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL306823",
+                "name": "SODIUM DICHLOROACETATE"
+              },
+              "interactionScore": 0.4502186013351378,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "drugbank:DB17046",
+                "name": "PI-103"
+              },
+              "interactionScore": 0.08575592406383577,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "PRISM",
+                  "sourceDbVersion": "20-Jan-2020"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL86416",
+                "name": "COSTUNOLIDE"
+              },
+              "interactionScore": 0.6002914684468504,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "PRISM",
+                  "sourceDbVersion": "20-Jan-2020"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "iuphar.ligand:8878",
+                "name": "AS1949490"
+              },
+              "interactionScore": 0.4502186013351378,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "PRISM",
+                  "sourceDbVersion": "20-Jan-2020"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "iuphar.ligand:9362",
+                "name": "AZD7545"
+              },
+              "interactionScore": 1.800874405340551,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "Drug Repurposing Hub",
+                  "sourceDbVersion": "20250818"
+                },
+                {
+                  "sourceDbName": "GuideToPharmacology",
+                  "sourceDbVersion": "2026.2"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "ncit:C71722",
+                "name": "EVOFOSFAMIDE"
+              },
+              "interactionScore": 0.9004372026702756,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "PRISM",
+                  "sourceDbVersion": "20-Jan-2020"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL39541",
+                "name": "DOLASTATIN-10"
+              },
+              "interactionScore": 0.09478286343897638,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "PRISM",
+                  "sourceDbVersion": "20-Jan-2020"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "ncit:C61587",
+                "name": "DANUSERTIB"
+              },
+              "interactionScore": 0.06002914684468503,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "PRISM",
+                  "sourceDbVersion": "20-Jan-2020"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:140587",
+                "name": "CELECOXIB"
+              },
+              "interactionScore": 0.0545719516769864,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 22336956
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "ClinPGx",
+                  "sourceDbVersion": "20260831"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "iuphar.ligand:8005",
+                "name": "OSU-03012"
+              },
+              "interactionScore": 0.6002914684468504,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "TdgClinicalTrial",
+                  "sourceDbVersion": "Jan-2014"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:10803",
+                "name": "TRIFLURIDINE"
+              },
+              "interactionScore": 0.09478286343897638,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "PRISM",
+                  "sourceDbVersion": "20-Jan-2020"
+                }
+              ]
+            }
+          ],
+          "longName": "pyruvate dehydrogenase kinase 1",
+          "name": "PDK1"
+        },
+        {
+          "conceptId": "hgnc:8811",
+          "interactions": [
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL306823",
+                "name": "SODIUM DICHLOROACETATE"
+              },
+              "interactionScore": 3.901894544904527,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "iuphar.ligand:9350",
+                "name": "VER-246608"
+              },
+              "interactionScore": 3.901894544904527,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "GuideToPharmacology",
+                  "sourceDbVersion": "2026.2"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "ncit:C80039",
+                "name": "DEVIMISTAT"
+              },
+              "interactionScore": 1.950947272452263,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "TdgClinicalTrial",
+                  "sourceDbVersion": "Jan-2014"
+                }
+              ]
+            }
+          ],
+          "longName": "pyruvate dehydrogenase kinase 3",
+          "name": "PDK3"
+        },
+        {
+          "conceptId": "hgnc:3255",
+          "interactions": [
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "iuphar.ligand:6740",
+                "name": "GSK2606414"
+              },
+              "interactionScore": 9.364546907770865,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "Drug Repurposing Hub",
+                  "sourceDbVersion": "20250818"
+                },
+                {
+                  "sourceDbName": "GuideToPharmacology",
+                  "sourceDbVersion": "2026.2"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "iuphar.ligand:9544",
+                "name": "GSK2656157"
+              },
+              "interactionScore": 4.682273453885433,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "GuideToPharmacology",
+                  "sourceDbVersion": "2026.2"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL2171124",
+                "name": "CHEMBL:CHEMBL2171124"
+              },
+              "interactionScore": 18.72909381554173,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 22827572
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "iuphar.ligand:13275",
+                "name": "HC-5404"
+              },
+              "interactionScore": 9.364546907770865,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "GuideToPharmacology",
+                  "sourceDbVersion": "2026.2"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:15657",
+                "name": "DECITABINE"
+              },
+              "interactionScore": 0.3344481038489594,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "PRISM",
+                  "sourceDbVersion": "20-Jan-2020"
+                }
+              ]
+            }
+          ],
+          "longName": "eukaryotic translation initiation factor 2 alpha kinase 3",
+          "name": "EIF2AK3"
+        },
+        {
+          "conceptId": "hgnc:10922",
+          "interactions": [
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "ncit:C2337",
+                "name": "SODIUM BUTYRATE"
+              },
+              "interactionScore": 0.5574135064149325,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 11882670
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "NCI",
+                  "sourceDbVersion": "14-September-2017"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "iuphar.ligand:10405",
+                "name": "BAY-8002"
+              },
+              "interactionScore": 6.688962076979189,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "Drug Repurposing Hub",
+                  "sourceDbVersion": "20250818"
+                },
+                {
+                  "sourceDbName": "GuideToPharmacology",
+                  "sourceDbVersion": "2026.2"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "iuphar.ligand:8813",
+                "name": "COMPOUND 30 [PMID: 16455256]"
+              },
+              "interactionScore": 6.688962076979189,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "GuideToPharmacology",
+                  "sourceDbVersion": "2026.2"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:11118",
+                "name": "VALPROIC ACID"
+              },
+              "interactionScore": 0.2267444771857352,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 39711059
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "ClinPGx",
+                  "sourceDbVersion": "20260831"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "iuphar.ligand:11302",
+                "name": "UK-5099"
+              },
+              "interactionScore": 2.22965402565973,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "Drug Repurposing Hub",
+                  "sourceDbVersion": "20250818"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "iuphar.ligand:10605",
+                "name": "AZD3965"
+              },
+              "interactionScore": 6.688962076979189,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "Drug Repurposing Hub",
+                  "sourceDbVersion": "20250818"
+                },
+                {
+                  "sourceDbName": "GuideToPharmacology",
+                  "sourceDbVersion": "2026.2"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "ncit:C866",
+                "name": "TETRADECANOYLPHORBOL ACETATE"
+              },
+              "interactionScore": 0.1938829587530199,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 14525727
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "NCI",
+                  "sourceDbVersion": "14-September-2017"
+                }
+              ]
+            }
+          ],
+          "longName": "solute carrier family 16 member 1",
+          "name": "SLC16A1"
+        },
+        {
+          "conceptId": "hgnc:8812",
+          "interactions": [
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL306823",
+                "name": "SODIUM DICHLOROACETATE"
+              },
+              "interactionScore": 3.901894544904527,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "ncit:C80039",
+                "name": "DEVIMISTAT"
+              },
+              "interactionScore": 1.950947272452263,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "TdgClinicalTrial",
+                  "sourceDbVersion": "Jan-2014"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "iuphar.ligand:9350",
+                "name": "VER-246608"
+              },
+              "interactionScore": 3.901894544904527,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "GuideToPharmacology",
+                  "sourceDbVersion": "2026.2"
+                }
+              ]
+            }
+          ],
+          "longName": "pyruvate dehydrogenase kinase 4",
+          "name": "PDK4"
+        },
+        {
+          "conceptId": "hgnc:6541",
+          "interactions": [],
+          "longName": "lactate dehydrogenase B",
+          "name": "LDHB"
+        },
+        {
+          "conceptId": "hgnc:6544",
+          "interactions": [],
+          "longName": "lactate dehydrogenase C",
+          "name": "LDHC"
+        },
+        {
+          "conceptId": "hgnc:3265",
+          "interactions": [
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "ncit:C1237",
+                "name": "STAUROSPORINE"
+              },
+              "interactionScore": 1.950947272452263,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 10400313
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "NCI",
+                  "sourceDbVersion": "14-September-2017"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "ncit:C222131",
+                "name": "SALUBRINAL"
+              },
+              "interactionScore": 11.70568363471358,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "Drug Repurposing Hub",
+                  "sourceDbVersion": "20250818"
+                }
+              ]
+            }
+          ],
+          "longName": "eukaryotic translation initiation factor 2 subunit alpha",
+          "name": "EIF2S1"
+        },
+        {
+          "conceptId": "hgnc:786",
+          "interactions": [
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "ncit:C74960",
+                "name": "ALPHA-TOCOPHEROL"
+              },
+              "interactionScore": 5.852841817356791,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 11043924
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "NCI",
+                  "sourceDbVersion": "14-September-2017"
+                }
+              ]
+            }
+          ],
+          "longName": "activating transcription factor 4",
+          "name": "ATF4"
+        },
+        {
+          "conceptId": "hgnc:14375",
+          "interactions": [
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "ncit:C82390",
+                "name": "AFURESERTIB"
+              },
+              "interactionScore": 1.734175353290901,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "PRISM",
+                  "sourceDbVersion": "20-Jan-2020"
+                }
+              ]
+            }
+          ],
+          "longName": "protein phosphatase 1 regulatory subunit 15A",
+          "name": "PPP1R15A"
+        },
+        {
+          "conceptId": "hgnc:8810",
+          "interactions": [
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "iuphar.ligand:9350",
+                "name": "VER-246608"
+              },
+              "interactionScore": 2.926420908678395,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "GuideToPharmacology",
+                  "sourceDbVersion": "2026.2"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "iuphar.ligand:9362",
+                "name": "AZD7545"
+              },
+              "interactionScore": 11.70568363471358,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "Drug Repurposing Hub",
+                  "sourceDbVersion": "20250818"
+                },
+                {
+                  "sourceDbName": "GuideToPharmacology",
+                  "sourceDbVersion": "2026.2"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL306823",
+                "name": "SODIUM DICHLOROACETATE"
+              },
+              "interactionScore": 2.926420908678395,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "ChEMBL",
+                  "sourceDbVersion": "37"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "ncit:C80039",
+                "name": "DEVIMISTAT"
+              },
+              "interactionScore": 1.463210454339197,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "TdgClinicalTrial",
+                  "sourceDbVersion": "Jan-2014"
+                }
+              ]
+            }
+          ],
+          "longName": "pyruvate dehydrogenase kinase 2",
+          "name": "PDK2"
+        },
+        {
+          "conceptId": "hgnc:9437",
+          "interactions": [
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "ncit:C588",
+                "name": "RECOMBINANT INTERLEUKIN-3"
+              },
+              "interactionScore": 1.486436017106486,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 7519779
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "NCI",
+                  "sourceDbVersion": "14-September-2017"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "ncit:C809",
+                "name": "RICIN"
+              },
+              "interactionScore": 6.688962076979189,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 18599499
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "NCI",
+                  "sourceDbVersion": "14-September-2017"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "ncit:C77178",
+                "name": "BACILLUS CALMETTE-GUERIN ANTIGEN"
+              },
+              "interactionScore": 1.114827012829865,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 16301626
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "NCI",
+                  "sourceDbVersion": "14-September-2017"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "iuphar.ligand:5949",
+                "name": "CDK2 INHIBITOR IV"
+              },
+              "interactionScore": 0.8361202596223987,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "GuideToPharmacology",
+                  "sourceDbVersion": "2026.2"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "iuphar.ligand:5988",
+                "name": "INDIRUBIN DERIVATIVE E804"
+              },
+              "interactionScore": 6.688962076979189,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "GuideToPharmacology",
+                  "sourceDbVersion": "2026.2"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "iuphar.ligand:6026",
+                "name": "PKR INHIBITOR"
+              },
+              "interactionScore": 6.688962076979189,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "GuideToPharmacology",
+                  "sourceDbVersion": "2026.2"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:5880",
+                "name": "INTERFERON ALFA-2B"
+              },
+              "interactionScore": 0.955566010997027,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 17501760
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "NCI",
+                  "sourceDbVersion": "14-September-2017"
+                }
+              ]
+            }
+          ],
+          "longName": "eukaryotic translation initiation factor 2 alpha kinase 2",
+          "name": "EIF2AK2"
+        },
+        {
+          "conceptId": "hgnc:6535",
+          "interactions": [
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "ncit:C1594",
+                "name": "ANTHRACYCLINE ANTINEOPLASTIC ANTIBIOTIC"
+              },
+              "interactionScore": 2.601263029936351,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 3458424
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "NCI",
+                  "sourceDbVersion": "14-September-2017"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:7393",
+                "name": "NIACIN"
+              },
+              "interactionScore": 0.7803789089809055,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "Drug Repurposing Hub",
+                  "sourceDbVersion": "20250818"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL2058994",
+                "name": "CHEMBL:CHEMBL2058994"
+              },
+              "interactionScore": 31.21515635923621,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 22417091
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            }
+          ],
+          "longName": "lactate dehydrogenase A",
+          "name": "LDHA"
+        },
+        {
+          "conceptId": "hgnc:19687",
+          "interactions": [
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "iuphar.ligand:13340",
+                "name": "HC-7366"
+              },
+              "interactionScore": 1.800874405340551,
+              "interactionTypes": [
+                {
+                  "directionality": "ACTIVATING",
+                  "type": "activator"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "GuideToPharmacology",
+                  "sourceDbVersion": "2026.2"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:35636",
+                "name": "RISPERIDONE"
+              },
+              "interactionScore": 0.1014577129769324,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 24751813
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "ClinPGx",
+                  "sourceDbVersion": "20260831"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "iuphar.ligand:12236",
+                "name": "COMPOUND 39 [PMID: 36127295]"
+              },
+              "interactionScore": 3.601748810681102,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "GuideToPharmacology",
+                  "sourceDbVersion": "2026.2"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "ncit:C61311",
+                "name": "B-RAF/VEGFR-2 INHIBITOR RAF265"
+              },
+              "interactionScore": 0.1715118481276715,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "PRISM",
+                  "sourceDbVersion": "20-Jan-2020"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "hemonc:120610",
+                "name": "OLVEREMBATINIB"
+              },
+              "interactionScore": 0.3601748810681102,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "PRISM",
+                  "sourceDbVersion": "20-Jan-2020"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:61381",
+                "name": "OLANZAPINE"
+              },
+              "interactionScore": 0.07915931452046378,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 24751813
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "ClinPGx",
+                  "sourceDbVersion": "20260831"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:26420",
+                "name": "HALOPERIDOL DECANOATE"
+              },
+              "interactionScore": 0.1460168436762609,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 27023437
+                },
+                {
+                  "pmid": 24751813
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "ClinPGx",
+                  "sourceDbVersion": "20260831"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "iuphar.ligand:14086",
+                "name": "NXP800"
+              },
+              "interactionScore": 3.601748810681102,
+              "interactionTypes": [
+                {
+                  "directionality": "ACTIVATING",
+                  "type": "activator"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "GuideToPharmacology",
+                  "sourceDbVersion": "2026.2"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:221153",
+                "name": "QUETIAPINE FUMARATE"
+              },
+              "interactionScore": 0.1500728671117126,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 24751813
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "ClinPGx",
+                  "sourceDbVersion": "20260831"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "iuphar.ligand:8354",
+                "name": "HESPERADIN"
+              },
+              "interactionScore": 0.09004372026702755,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [
+                {
+                  "pmid": 19035792
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": true,
+                "conceptId": "rxcui:115698",
+                "name": "ZIPRASIDONE"
+              },
+              "interactionScore": 0.1895657268779527,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 24751813
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "ClinPGx",
+                  "sourceDbVersion": "20260831"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "iuphar.ligand:8169",
+                "name": "COMPOUND A127 [WO2013110309]"
+              },
+              "interactionScore": 3.601748810681102,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "GuideToPharmacology",
+                  "sourceDbVersion": "2026.2"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL3407862",
+                "name": "CHEMBL:CHEMBL3407862"
+              },
+              "interactionScore": 3.601748810681102,
+              "interactionTypes": [],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "Drug Repurposing Hub",
+                  "sourceDbVersion": "20250818"
+                }
+              ]
+            }
+          ],
+          "longName": "eukaryotic translation initiation factor 2 alpha kinase 4",
+          "name": "EIF2AK4"
+        },
+        {
+          "conceptId": "hgnc:3258",
+          "interactions": [],
+          "longName": "eukaryotic translation initiation factor 2B subunit beta",
+          "name": "EIF2B2"
+        },
+        {
+          "conceptId": "hgnc:24921",
+          "interactions": [
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "iuphar.ligand:10155",
+                "name": "RIPK1 INHIBITOR 22B"
+              },
+              "interactionScore": 1.418870743601646,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "GuideToPharmacology",
+                  "sourceDbVersion": "2026.2"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "iuphar.ligand:8168",
+                "name": "COMPOUND 27 [PMID: 19854648]"
+              },
+              "interactionScore": 15.6075781796181,
+              "interactionTypes": [
+                {
+                  "directionality": "INHIBITORY",
+                  "type": "inhibitor"
+                }
+              ],
+              "publications": [],
+              "sources": [
+                {
+                  "sourceDbName": "GuideToPharmacology",
+                  "sourceDbVersion": "2026.2"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "chembl:CHEMBL534675",
+                "name": "CHEMBL:CHEMBL534675"
+              },
+              "interactionScore": 31.21515635923621,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 22153346
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "DTC",
+                  "sourceDbVersion": "2020-09-02"
+                }
+              ]
+            }
+          ],
+          "longName": "eukaryotic translation initiation factor 2 alpha kinase 1",
+          "name": "EIF2AK1"
+        },
+        {
+          "conceptId": "hgnc:3257",
+          "interactions": [
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "ncit:C548",
+                "name": "THERAPEUTIC HORMONE"
+              },
+              "interactionScore": 1.064153057701234,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 7893823
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "NCI",
+                  "sourceDbVersion": "14-September-2017"
+                }
+              ]
+            },
+            {
+              "drug": {
+                "approved": false,
+                "conceptId": "ncit:C1277",
+                "name": "WORTMANNIN"
+              },
+              "interactionScore": 1.560757817961811,
+              "interactionTypes": [],
+              "publications": [
+                {
+                  "pmid": 10764740
+                }
+              ],
+              "sources": [
+                {
+                  "sourceDbName": "NCI",
+                  "sourceDbVersion": "14-September-2017"
+                }
+              ]
+            }
+          ],
+          "longName": "eukaryotic translation initiation factor 2B subunit alpha",
+          "name": "EIF2B1"
+        }
+      ]
+    }
+  }
+}
