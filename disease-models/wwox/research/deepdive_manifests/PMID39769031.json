@@ -1,0 +1,362 @@
+{
+ "schema_version": 2,
+ "pmid": "39769031",
+ "doi": "10.3390/ijms252413266",
+ "receipt": "FTR-20261026-39769031-01",
+ "landing": [
+  "FTR-20261026-39769031-01",
+  "sada_ldh_precedent_p2a_scientist-b_20261026"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Run inline: Europe PMC search for the target (not open access), then pmc_bucket_fetch.py for this open-access secondary source; the XML was a full body."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline; locators were captured from the open document in the same pass."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED, not performed by the author. No consolidated baseline claim is touched; a blind audit becomes owed if a commit candidate narrows or reverses a claim. The two over-reach flags (a bound read as a value; the racemate below its enantiomers) are the propositions to hand an auditor first."
+  },
+  {
+   "skill": "legend-discovery-method",
+   "used": false,
+   "reason": "Optional toolkit; not needed, the question was fixed in advance (what exactly was measured for stiripentol and analogues, in what system)."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 54,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-26: 'Salido S[au]' 54; with (WWOX OR Wwox) 0; with (lactate dehydrogenase OR LDHA) 9. Initials-level string, may pool homonyms. The group is a medicinal-chemistry laboratory (University of Jaen, Spain) that has published several human LDHA inhibitor series for primary hyperoxaluria (the paper's own references 33 to 39). No WWOX output is known from this reading.",
+  "research_type": "experimental_lab",
+  "weighting": "Medicinal chemistry with a single in-house enzyme assay; no conflict declared; no independent replication of the stiripentol number. An enzyme-level measure only.",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false
+ },
+ "field_density": {
+  "wwox_directed": false,
+  "queries": [
+   {
+    "query": "occurrences of WWOX in the persisted PMC XML (case-insensitive)",
+    "route": "local count over files/fulltext/PMID39769031_RicoMolina2024_PMC_r2.xml",
+    "count": 0
+   }
+  ],
+  "note": "NOT WWOX EVIDENCE: a transferable-literature paper; the count is the measurement and it is the whole statement about WWOX content of this surface."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 68,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "Reference count of the persisted XML (68 ref elements); no reference classified by topic here except the two named in the queue.",
+  "queue": [
+   {
+    "id": "MH-39769031-01",
+    "target": "Reference 24 (Sada et al., Science 2015: the study that first measured stiripentol on purified LDH)",
+    "question": "What are the enzyme, neuron, in vivo and compound-design results of the 2015 report, and at which concentrations?",
+    "status": "open - paywalled, no lawful full text found (Europe PMC, OpenAlex, Semantic Scholar, publisher; recorded in the operator PDF wishlist)"
+   },
+   {
+    "id": "MH-39769031-02",
+    "target": "Reference 25 (Le Dudal et al., J Clin Invest 2019: stiripentol and hepatic oxalate in rats)",
+    "question": "At which stiripentol exposure does oxalate fall in hepatocytes and in rats, and is LDHA engagement shown by an LDHA readout?",
+    "status": "open - PMC record is a restricted stub in the open-access bucket; abstract only was read"
+   }
+  ]
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Does the shared files/ tree, the registries (registry_records.py get --pmid) or the receipt ledger already hold anything for PMID 39769031 or for the 2015 Sada report (PMID 25792327)?",
+  "hits": 0,
+  "finding": "paper_packet.py packet at claim time: none prior for either PMID; no peer claim. The existing repurposing record of 2026-10-26 cites this paper at abstract level only (compounds_and_sources.md, 10 percent at 500 micromolar) and carries no receipt for it."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-10-26",
+  "route": "PubMed esummary and efetch CommentsCorrections for 39769031 plus dependency_integrity.py screen against the Retraction Watch snapshot",
+  "result": "pubtype Journal Article; no CommentsCorrections list on the efetch record for this PMID; no retraction, expression of concern or erratum visible on that query.",
+  "hold": false,
+  "dependencies": {
+   "flagged": [],
+   "noted": [],
+   "paper_verdict": "SCREENED_CLEAN",
+   "reference_source": "network",
+   "references_declared": 68,
+   "references_screened": 61,
+   "references_with_doi": 61,
+   "schema": "retraction_check.dependencies/1",
+   "screened": true,
+   "snapshot": {
+    "date": "2026-10-21",
+    "days_since_fetch": 5,
+    "rows": 73329,
+    "sha256": "a2c4d15c45d5931fb994042eaab35448f5d5b9847efce9f06dc0e1efe7474c30"
+   },
+   "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+   "unscreenable": {
+    "UNSCREENABLE_NO_DOI": 7
+   }
+  }
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID39769031_RicoMolina2024_PMC_r2.xml",
+   "sha256": "3824c6b26bbb37c6013c70820edc94a85e3a5aa2634c0f3bfb41cafbc7f36395",
+   "kind": "article_text",
+   "acquisition_recipe": {
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=11675970&retmode=xml",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-26",
+    "derived": false,
+    "result_sha256": "3824c6b26bbb37c6013c70820edc94a85e3a5aa2634c0f3bfb41cafbc7f36395"
+   }
+  },
+  {
+   "path": "files/supplement/PMID39769031_r2/PMC11675970.1.pdf",
+   "sha256": "f3c6adedb24089e26e0990960a1eb55b7cdad0a04e80284d08536e03af53a9a4",
+   "kind": "article_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC11675970",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-26",
+    "derived": false,
+    "result_sha256": "f3c6adedb24089e26e0990960a1eb55b7cdad0a04e80284d08536e03af53a9a4"
+   }
+  },
+  {
+   "path": "files/supplement/PMID39769031_r2/ijms-25-13266-s001.zip",
+   "sha256": "bb20a5370e8b44a7b09dfe647e67c54a3710b5ee0d8ed8cbad2de3faed091964",
+   "kind": "supplement_binary",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC11675970",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-26",
+    "derived": false,
+    "result_sha256": "bb20a5370e8b44a7b09dfe647e67c54a3710b5ee0d8ed8cbad2de3faed091964"
+   }
+  },
+  {
+   "path": "files/supplement/PMID39769031_r2/ijms-3339511-supplementary.pdf",
+   "sha256": "5f6c0cb1c43eb3c0004f003be32a23034a99f71432a96ba021bfb0eca8b6407a",
+   "kind": "supplement_binary",
+   "note": "The single member of the supplement zip (47 pages: NMR, HRMS, chiral HPLC traces, DFT conformers, hLDHA dose-response curves S65 to S74).",
+   "acquisition_recipe": {
+    "derived": true,
+    "acquired_on": "2026-10-26",
+    "result_sha256": "5f6c0cb1c43eb3c0004f003be32a23034a99f71432a96ba021bfb0eca8b6407a",
+    "derived_from": "files/supplement/PMID39769031_r2/ijms-25-13266-s001.zip",
+    "extractor": {
+     "name": "python zipfile",
+     "version": "python3 standard library",
+     "call": "ZipFile.extractall on ijms-25-13266-s001.zip; the single member unchanged",
+     "join": ""
+    }
+   }
+  },
+  {
+   "path": "files/figures/PMID39769031_r2/ijms-25-13266-g001.jpg",
+   "sha256": "ac725e3be33aa308675cd0f7cf87cdf72026f7cd2aa75484a4dc130fb44712ce",
+   "kind": "figure",
+   "note": "Figure 1 jpg from the PMC open-data bucket, opened as an image (structure drawing).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC11675970",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-26",
+    "derived": false,
+    "result_sha256": "ac725e3be33aa308675cd0f7cf87cdf72026f7cd2aa75484a4dc130fb44712ce"
+   }
+  },
+  {
+   "path": "files/figures/PMID39769031_r2/ijms-25-13266-g002.jpg",
+   "sha256": "03a1fc972cfe31ac73f10a10d0d88c5c30f2f9346ff84bb985b82e3dbef2d4a9",
+   "kind": "figure",
+   "note": "Figure 2 jpg from the PMC open-data bucket, opened as an image (structure drawing).",
+   "acquisition_recipe": {
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC11675970",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-26",
+    "derived": false,
+    "result_sha256": "03a1fc972cfe31ac73f10a10d0d88c5c30f2f9346ff84bb985b82e3dbef2d4a9"
+   }
+  },
+  {
+   "path": "files/figures/PMID39769031_r2/Supp_p44_110dpi.png",
+   "sha256": "a0eb5f9fd493dc1662ae80df953c57787315e38f65ea0eaed22c21527e13e297",
+   "kind": "figure",
+   "note": "Supplement page 44 rendered at 110 dpi (dose-response panels S65 to S67); the panels are vector or low-resolution raster inside a PDF, rendered page used.",
+   "acquisition_recipe": {
+    "derived": true,
+    "acquired_on": "2026-10-26",
+    "result_sha256": "a0eb5f9fd493dc1662ae80df953c57787315e38f65ea0eaed22c21527e13e297",
+    "derived_from": "files/supplement/PMID39769031_r2/ijms-3339511-supplementary.pdf",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "page.get_pixmap(dpi=110) on page 44",
+     "join": ""
+    }
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC JATS XML with a full article body, fingerprinted; the two structure figures and the supplement dose-response page opened as images; every text and table snippet was machine-verified against the declared XML by deepdive_manifest.py --verify-artifacts.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored; every snippet sits in the body, a table or a figure image.",
+  "entries": [
+   {
+    "proposition": "Framing: the paper states, in its Introduction, that stiripentol is an inhibitor of lactate dehydrogenase, citing a review; the sentence is a statement of the literature and carries no measurement of this paper.",
+    "snippet": "inhibitor of the neoglucogenesis enzyme named lactate dehydrogenase (LDH), which is highly activated during seizures",
+    "surface": "body",
+    "anchor": "1. Introduction, paragraph 1",
+    "artifact": "files/fulltext/PMID39769031_RicoMolina2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Aim and design: the work set out to measure both stiripentol enantiomers against human LDHA for the first time and to test four newly made stiripentol-related compounds; the target is the recombinant human LDHA isoform, not a brain preparation.",
+    "snippet": "we have proposed, in the present work, the evaluation of the inhibitory activity of both STP enantiomers",
+    "surface": "body",
+    "anchor": "1. Introduction, last paragraph",
+    "artifact": "files/fulltext/PMID39769031_RicoMolina2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Screening result for stiripentol and iso-stiripentol: at a single concentration of 500 micromolar, racemic stiripentol, its two enantiomers and iso-stiripentol inhibited human LDHA by 10 to 38 percent, whereas the four analogues tested reached 46 to 72 percent. This is a single-concentration screen, not a potency.",
+    "snippet": "showed low percentages of inhibition (10–38%), whereas significant values (46–72% of inhibition) were achieved for compounds",
+    "surface": "body",
+    "anchor": "2.4 Inhibitory Activity, paragraph 2",
+    "artifact": "files/fulltext/PMID39769031_RicoMolina2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Potency claim and its limit: the analogues' IC50 values are 100 to 200 micromolar and stiripentol and iso-stiripentol are described as 'higher than 500 micromolar'. For stiripentol this is a bound, not a fitted value: only a single-concentration percentage was measured for it and the dose-response figures of the supplement (S65 to S74) cover analogues only. The word 'significantly' carries no statistical test in the text.",
+    "snippet": "All these novel compounds showed IC50 values in the range of 100–200 µM, significantly improving the activity shown by 1 and 2 (with IC50 values higher than 500 µM)",
+    "surface": "body",
+    "anchor": "2.4 Inhibitory Activity, paragraph 2",
+    "artifact": "files/fulltext/PMID39769031_RicoMolina2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The strongest compound, (-)-(2R,5S)-4, has IC50 101.7 micromolar; the authors place it beside galloflavin (103.6) and luteolin-7-O-glucoside (139.2), i.e. a weak tool-grade LDHA inhibitor, not a potent one. Enantiomers differ little within a pair.",
+    "snippet": "enantiomer (−)-(2R,5S)-4 showed the lowest IC50 value (101.7 µM)",
+    "surface": "body",
+    "anchor": "2.4 Inhibitory Activity, paragraph 2",
+    "artifact": "files/fulltext/PMID39769031_RicoMolina2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "What this paper says of the 2015 report (secondary statement only): the authors write that Sada et al. measured stiripentol on purified mammalian LDH, found about 40 percent inhibition of both directions at 500 micromolar, and that this paper found about 10 percent at the same concentration, which they attribute to assay conditions. The 2015 article itself was not read; this sentence is the only description of its numbers in the reading.",
+    "snippet": "They found that STP, at a concentration of 500 μM, inhibited the lactate-to-pyruvate conversion as well as the pyruvate-to-lactate conversion by approximately 40%.",
+    "surface": "body",
+    "anchor": "2.4 Inhibitory Activity, paragraph 3",
+    "artifact": "files/fulltext/PMID39769031_RicoMolina2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Assay conditions for human LDHA: recombinant human LDHA (Abcam), 0.041 units per mL, 155 micromolar NADH, 1 mM pyruvate described as saturating, compound in 5 percent DMSO, 28 degrees C, fluorescence of NADH, GSK2837808A at 1 micromolar as positive control. A saturating pyruvate level is a condition under which a non-competitive or weak inhibitor is detected differently from physiological substrate levels; no detergent is named in the Methods.",
+    "snippet": "0.041 units/mL LDHA, 155 μM β-NADH, 1 mM pyruvate (saturated conditions), and DMSO solutions (5%, v/v) of pure compounds",
+    "surface": "body",
+    "anchor": "3.10 Human Lactate Dehydrogenase A Enzymatic Activity Assay",
+    "artifact": "files/fulltext/PMID39769031_RicoMolina2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The positive control is named in the Methods but its measured inhibition is not reported in the Results text or Table 2, so the assay's dynamic range cannot be read from the paper.",
+    "snippet": "was used as a positive control at 1 μM in the well",
+    "surface": "body",
+    "anchor": "3.10 Human Lactate Dehydrogenase A Enzymatic Activity Assay",
+    "artifact": "files/fulltext/PMID39769031_RicoMolina2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Replication: percentages are n = 4 at one concentration, IC50 values n = 3 over eight concentrations spanning 0.46 to 1000 micromolar; all measurements triplicate with mean and SD; no independent enzyme lot or second assay format.",
+    "snippet": "All measurements were made in triplicate and data were expressed as the mean ± SD.",
+    "surface": "body",
+    "anchor": "3.10 Human Lactate Dehydrogenase A Enzymatic Activity Assay",
+    "artifact": "files/fulltext/PMID39769031_RicoMolina2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Scope of the conclusion: the authors conclude the new compounds inhibit human LDHA more than stiripentol and call LDHA inhibition 'already validated as a safe therapeutic method' for primary hyperoxaluria (liver, a different disease and organ); they state that the analogues must still be compared in vivo and that hepatotoxicity is unassessed. No neuronal, brain, seizure, cell or animal datum exists in this paper.",
+    "snippet": "further efforts should be made to understand whether these analogues of STP increase, or do not increase, the proven ability of STP to reduce urinary oxalate levels in vivo",
+    "surface": "body",
+    "anchor": "4. Conclusions",
+    "artifact": "files/fulltext/PMID39769031_RicoMolina2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 2, stiripentol row: racemic stiripentol 9.9 plus or minus 2.3 percent inhibition at 500 micromolar and an IC50 entry of greater than 500.",
+    "snippet": "Stiripentol ((±)-1) 9.9 ± 2.3 >500 (−)-(S)-1 34.0 ± 2.1 >500 (+)-(R)-1 38.4 ± 1.6 >500",
+    "surface": "table",
+    "anchor": "Table 2, row Stiripentol ((±)-1)",
+    "artifact": "files/fulltext/PMID39769031_RicoMolina2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 2, enantiomer rows: (-)-(S)-stiripentol 34.0 plus or minus 2.1 and (+)-(R)-stiripentol 38.4 plus or minus 1.6 percent at 500 micromolar. The racemate (9.9) is far below both of its enantiomers (34.0 and 38.4) in the same assay, a discrepancy the text does not discuss; the racemate cannot inhibit less than the average of its two components unless the assay is noisy between preparations. Stiripentol's weakness in this assay is therefore itself of uncertain size (about 10 versus about 35 percent).",
+    "snippet": "(−)-(S)-1 34.0 ± 2.1 >500 (+)-(R)-1 38.4 ± 1.6 >500 iso-Stiripentol ((±)-2) 21.1 ± 3.5 >500",
+    "surface": "table",
+    "anchor": "Table 2, row (+)-(R)-1",
+    "artifact": "files/fulltext/PMID39769031_RicoMolina2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 2, best analogues: (-)-(2R,5S)-4 IC50 101.7 plus or minus 6.7 micromolar, R2 0.99; racemic compound 3 125.3 plus or minus 19.0.",
+    "snippet": "(−)-(2R,5S)-4 ND c 101.7 ± 6.7 0.99 (+)-(2S,5R)-4 ND c 128.4 ± 12.4 0.97",
+    "surface": "table",
+    "anchor": "Table 2, row (−)-(2R,5S)-4",
+    "artifact": "files/fulltext/PMID39769031_RicoMolina2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Declared scope: the data availability statement says data are contained in the article and the supplement and the authors declare no conflict of interest; funding and sponsors were not read beyond this statement.",
+    "snippet": "The authors declare no conflicts of interest.",
+    "surface": "body",
+    "anchor": "Conflicts of Interest",
+    "artifact": "files/fulltext/PMID39769031_RicoMolina2024_PMC_r2.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1 read as an image: structures of stiripentol (1) with the aryl-vinyl-carbinol 3,4-methylenedioxyphenyl, its regioisomer iso-stiripentol (2, hydroxyl moved to the benzylic position) and three analogues (3, 4, 5) in which two or three carbons lengthen the chain between the ring and the allylic alcohol; all keep the benzodioxole ring and the tert-butyl group. Structure only; no data in the figure.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1: five structures 1 to 5; 3 has a CH2CH2 spacer, 4 a CH2-CH(CH3) spacer, 5 a CH2CH2 spacer with a methyl on the alkene; all with benzodioxole and tert-butyl.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39769031_r2/ijms-25-13266-g001.jpg",
+    "anchor": "Figure 1 (ijms-25-13266-g001.jpg, opened at native size)",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 2 read as an image: eight enantiomer structures drawn with stereochemistry, (+)-(R)-1 and (-)-(S)-1, (+)-(R)-3 and (-)-(S)-3, and the four enantiomers of 4. Structure only; confirms that the enantiomers tested are the ones named in Table 2.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2: (+)-(R)-1, (-)-(S)-1, (+)-(R)-3, (-)-(S)-3, (+)-(2S,5R)-4, (-)-(2R,5S)-4, (+)-(2R,5R)-4, (-)-(2S,5S)-4.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39769031_r2/ijms-25-13266-g002.jpg",
+    "anchor": "Figure 2 (ijms-25-13266-g002.jpg, opened at native size)",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Figures S65 to S67, page 44 of the supplement read as an image: dose-response curves of compound (+/-)-3, (-)-(S)-3 and (+)-(R)-3 against human LDHA with IC50 125.3, 213.7 and 166.3 micromolar. The curves are steep: activity stays near 100 percent up to about 30 to 40 micromolar and falls to about 10 percent by about 300 micromolar, i.e. over roughly one log unit, steeper than a one-site curve (Hill slope not reported). With 5 percent DMSO and no detergent named, a steep curve is a pattern that also occurs with non-specific or aggregating inhibitors; this is a flag for the analogue series, not a finding. The supplement carries no curve for stiripentol.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure S65 (+/-)-3 IC50 125.3 +/- 19.0 R2 0.98; S66 (-)-(S)-3 213.7 +/- 13.9, 0.96; S67 (+)-(R)-3 166.3 +/- 16.9, 0.99; points near 100 percent to about 1.5 log units, then about 10 percent at log 3.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID39769031_r2/Supp_p44_110dpi.png",
+    "anchor": "Supplement page 44 (ijms-3339511-supplementary.pdf), Figures S65 to S67, rendered at 110 dpi",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "note": "The stiripentol potency claim rests on one single-concentration number (about 10 percent at 500 micromolar), which the paper itself sets against about 40 percent reported by the 2015 study; this reading cannot resolve which is closer to the truth."
+ }
+}
