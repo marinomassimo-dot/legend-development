@@ -228,7 +228,7 @@
     "cell_type": "tumour cell lines; heart and liver mitochondria",
     "developmental_stage": "not applicable"
    },
-   "measured_result_note": "Cell viability and extracellular acidification fall at tens of micromolar, but LDH activity in lysate falls significantly only at the highest, hundreds-of-micromolar concentrations, and oxygen consumption and complex I NADH oxidation are inhibited directly and immediately; the complex I paper reports no inhibition of malate dehydrogenase. Cellular effects of stiripentol are therefore not attributable to LDH on the available data. In a mouse glioblastoma xenograft stiripentol prolonged survival (log-rank P 0.002; the dose is given differently in the Results and the Methods, which may describe different cohorts). Tumour models: no seizure, neurodevelopment or WWOX meaning.",
+   "measured_result_note": "Cell viability and extracellular acidification fall at tens of micromolar, but LDH activity in lysate falls significantly only at the highest, hundreds-of-micromolar concentrations, and oxygen consumption and complex I NADH oxidation are inhibited directly and immediately; the complex I paper reports no inhibition of malate dehydrogenase. Cellular effects of stiripentol are therefore not attributable to LDH alone on the available data (the 2026 glioblastoma paper itself reports 'at least a partial role' of LDH). In a mouse glioblastoma xenograft stiripentol prolonged survival (log-rank P 0.002; the dose is given differently in the Results and the Methods, which may describe different cohorts). Tumour models: no seizure, neurodevelopment or WWOX meaning.",
    "evidence_scope": "OTHER_DISEASE_PRECEDENT"
   },
   {
