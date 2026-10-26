@@ -1,0 +1,38 @@
+{
+ "event_id": "FTR-20261026-42909904-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "42909904",
+  "doi": "10.1093/braincomms/fcag385"
+ },
+ "event_at": "2026-10-26T00:00:00Z",
+ "analysis_at": "2026-10-26T00:00:00Z",
+ "analysis_time_precision": "date_only",
+ "workflow": "scientist-a full-text reading of the published Brain Communications article in PRIMARY_EVIDENCE_READ mode, SOURCE_FIRST, with every main and supplementary figure inspected as an image, the supplementary tables read from the flattened workbook, and no registry content consulted before the first-pass observations were fixed",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID42909904_LucasClarke2026_BrainComms_fcag385.pdf",
+ "source_fingerprint": "abab045e2403c2781a25ca7f2146de056fab081e4158e86a337066cfac8c4e1a",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID42909904.json"
+ ],
+ "evidence_basis": [
+  "files/fulltext/PMID42909904_LucasClarke2026_BrainComms_fcag385.pdf, all 19 pages read; pages 6, 7, 9, 10, 12, 13, 14 and 16 rendered at 300 dpi because the rank tool flagged them as vector-figure pages",
+  "files/fulltext/PMID42909904_PMC13684411.xml, structured text of the same article, used for exact quote matching",
+  "files/fulltext/PMID42909904_supplement/Supplementary_material.docx, eight supplementary figures extracted and viewed, methods and legends read",
+  "files/fulltext/PMID42909904_supplement/Supplementary_tables.xlsx, Tables 1A, 1B and 2 to 7 read through the flattened derived text"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}
