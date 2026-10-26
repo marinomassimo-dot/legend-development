@@ -1,0 +1,84 @@
+{
+ "adapter": "openfda",
+ "citation": "Data provided by the U.S. Food and Drug Administration (openFDA), https://open.fda.gov — the credit line the terms page asks for",
+ "error": "",
+ "evidence_label": "NOT WWOX EVIDENCE",
+ "hits": [
+  {
+   "brand_name": [
+    "Diacomit"
+   ],
+   "effective_time": "20260427",
+   "generic_name": [
+    "STIRIPENTOL"
+   ],
+   "kind": "label",
+   "sections": {
+    "contraindications": "4 CONTRAINDICATIONS None. None ( 4 )",
+    "drug_interactions": "7 DRUG INTERACTIONS DIACOMIT increases the plasma concentration of clobazam and its metabolite through metabolic inhibition of CYP3A4 and CYP2C19. Consider dose reduction of clobazam in case of adverse reactions. ( 7.1 ) Substrates of CYP2C8, CYP2C19, P-gp and BCRP may require a dose reduction. (7.1) Substrates of CYP1A2, CYP2B6 and CYP3A4 may require a dose adjustment. ( 7.1 ) Strong inducers of CYP1A2, CYP3A4 or CYP2C19: Consider dose increase of DIACOMIT. ( 7.2 ) 7.1 Effect of DIACOMIT on Other Drugs CYP1A2, CYP2B6, CYP3A4, CYP2C8, CYP2C19, P-glycoprotein (P-gp) and Breast Cancer Resistance Protein (BCRP) Substrates In vitro data show that stiripentol is both an inhibitor and inducer of CYP1A2, CYP2B6, and CYP3A4. Because of potential drug-drug interactions, consider dose adjustment of CYP1A2 substrates (e.g., theophylline, caffeine), CYP2B6 substrates (e.g., sertraline, thiotepa), and CYP3A4 substrates (e.g., midazolam, triazolam, quinidine), as clinically appropriate, when administered concomitantly with DIACOMIT. Because of potential inhibition of enzyme/transporter activity, consider a reduction in dosage of substrates of CYP2C8, CYP2C19 (e.g., diazepam, clopidogrel), P-gp (e.g., carbamazepine), and BCRP (e.g., methotrexate, prazosin, glyburide), if adverse reactions are experienced when administered concomitantly with DIACOMIT. Clobazam Co-administration of DIACOMIT (which inhibits CYP 3A4 and 2C19) with clobazam results in increased plasma concentrations of clobazam (a substrate of CYP3A4) and norclobazam, the active metabolite of clobazam (a substrate of CYP2C19) [see Clinical Pharmacology (12.3) ] . This may increase the risk of clobazam-related adverse reactions. Consider a reduction in dosage of clobazam if adverse reactions are experienced when co-administered with DIACOMIT [see Warnings and Precautions (5.1) ]. 7.2 Effect of Other Drugs on DIACOMIT Induction-based interactions leading to decreases in DIACOMIT concentrations are possible when co-admini",
+    "indications_and_usage": "1 INDICATIONS AND USAGE DIACOMIT is indicated for the treatment of seizures associated with Dravet syndrome (DS) in patients taking clobazam who are 6 months of age and older and weighing 7 kg or more. There are no clinical data to support the use of DIACOMIT as monotherapy in Dravet syndrome. DIACOMIT is indicated for the treatment of seizures associated with Dravet syndrome in patients taking clobazam who are 6 months of age and older and weighing 7 kg or more . There are no clinical data to support the use of DIACOMIT as monotherapy in Dravet syndrome. ( 1 )",
+    "mechanism_of_action": "12.1 Mechanism of Action The mechanism by which DIACOMIT exerts its anticonvulsant effect in humans is unknown. Possible mechanisms of action include direct effects mediated through the gamma-aminobutyric acid (GABA) A receptor and indirect effects involving inhibition of cytochrome P450 activity with resulting increase in blood levels of clobazam and its active metabolite.",
+    "pediatric_use": "8.4 Pediatric Use The safety and effectiveness of DIACOMIT have been established for the treatment of seizures associated with Dravet syndrome in patients taking clobazam who are 6 months and older and weighing 7 kg or more. Use of DIACOMIT in this pediatric population is supported by 2 multicenter placebo-controlled, double-blind randomized studies in patients 3 to 18 years of age with additional pharmacokinetic and safety data in patients 6 months to less than 3 years of age [see Clinical Studies ( 14 )]. The safety and effectiveness of DIACOMIT have not been established in pediatric patients below the age of 6 months or who weigh less than 7 kg."
+   },
+   "set_id": "58304ba8-9779-4658-811e-94ffe08c3f16"
+  },
+  {
+   "caveat": "spontaneous reports; not a rate, not causal",
+   "kind": "faers_counts",
+   "reports_by_reaction": [
+    {
+     "count": 153,
+     "term": "SEIZURE"
+    },
+    {
+     "count": 129,
+     "term": "DRUG INEFFECTIVE"
+    },
+    {
+     "count": 125,
+     "term": "OFF LABEL USE"
+    },
+    {
+     "count": 75,
+     "term": "DECREASED APPETITE"
+    },
+    {
+     "count": 65,
+     "term": "SOMNOLENCE"
+    },
+    {
+     "count": 59,
+     "term": "DRUG INTERACTION"
+    },
+    {
+     "count": 53,
+     "term": "GENERALISED TONIC-CLONIC SEIZURE"
+    },
+    {
+     "count": 51,
+     "term": "PYREXIA"
+    },
+    {
+     "count": 49,
+     "term": "STATUS EPILEPTICUS"
+    },
+    {
+     "count": 37,
+     "term": "MULTIPLE-DRUG RESISTANCE"
+    }
+   ]
+  }
+ ],
+ "licence": "US public domain (CC0); key-less, no payment (optional key not used)",
+ "note": "NO_MATCH_FOUND is an answer about this query on this date, never absence; FAERS counts are spontaneous reports, never a rate; openFDA: do not rely on it for medical care decisions",
+ "request": {
+  "drug": "Stiripentol"
+ },
+ "requests_sent": [
+  "https://api.fda.gov/drug/label.json?{'search': 'openfda.generic_name:\"Stiripentol\"', 'limit': 3}",
+  "https://api.fda.gov/drug/event.json?{'search': 'patient.drug.medicinalproduct:\"Stiripentol\"', 'count': 'patient.reaction.reactionmeddrapt.exact', 'limit': 10}"
+ ],
+ "retrieved_at": "2026-10-26T17:25:53Z",
+ "source_version": "label last_updated 2026-10-23",
+ "status": "MATCH_FOUND"
+}

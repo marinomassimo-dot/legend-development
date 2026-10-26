@@ -42,7 +42,9 @@ the single door even though the files are where the architecture puts them.
 
 ### The module (added 2026-10-23, `PLAN-DRUGREPURPOSING-MODULE-20261022`)
 
-**Current refresh, 2026-10-25:** 339 queries, 26 derived cards, 8 evidence-table abstentions; the
+**Follow-up of 2026-10-26** ([`lucas_clarke_followup_20261026/`](lucas_clarke_followup_20261026/README.md)): 341 queries, 28 cards, 28 handoff rows (adds the REPLICATE rows `Q-R-10`, `Q-R-11` from two new mechanism-map records), four E-series hand-made cards, the first measured source-coverage declaration of the join, and one ToolUniverse trial.
+
+**Refresh, 2026-10-25:** 339 queries, 26 derived cards, 8 evidence-table abstentions; the
 [current handoff](../repurposing_batch_selection_20261025_module.md) has 8 AUDIT, 16 READ and
 2 REPLICATE rows, with no SELECT. READ includes evidence comparison and does not cancel
 complete-read receipts. All 26 cards still abstain from drug assertions. The [weekly intervention](../weekly_write_intervention_20261025.md)

@@ -227,7 +227,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "ad64523b4dac35f6",
+  "digest": "a8bbe8bc3f97f473",
   "locators": 167,
   "origin_id": "CLAIM 002",
   "papers": 4,
@@ -285,7 +285,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -514,7 +514,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "23ed2e00c145114b",
+  "digest": "15f61a8731b99d7c",
   "locators": 463,
   "origin_id": "CLAIM 005",
   "papers": 12,
@@ -705,7 +705,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -2329,15 +2329,15 @@
  },
  {
   "abstention": null,
-  "complete_reads": 1,
+  "complete_reads": 3,
   "depths": [
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "1266be2640e78fde",
-  "locators": 48,
+  "digest": "3ed3dae99176f0f2",
+  "locators": 177,
   "origin_id": "CLAIM 025",
-  "papers": 2,
+  "papers": 4,
   "query_id": "Q-CLAIM025",
   "rows": [
    {
@@ -2368,6 +2368,21 @@
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
+    "contradiction_verdicts": [],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 25,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42128308.json",
+    "pmid": "42128308",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 2,
+    "receipt_id": "FTR-20260810-42128308-02",
+    "repair_unverified": 0,
+    "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "UNAUDITED",
+    "audited_entries": 0,
     "contradiction_verdicts": [
      {
       "auditors": 1,
@@ -2381,6 +2396,42 @@
     "reading_depth": "partial_fulltext_read",
     "receipt_events": 5,
     "receipt_id": "FTR-20260921-42589397-01",
+    "repair_unverified": 1,
+    "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
     "repair_unverified": 1,
     "unaudited_contradictions": 0
    }
@@ -2611,7 +2662,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "ba1eae70c90a93e5",
+  "digest": "190043dd526f34f1",
   "locators": 282,
   "origin_id": "CLAIM 030",
   "papers": 9,
@@ -2794,7 +2845,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -3606,7 +3657,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "5599f3370acac12f",
+  "digest": "cf6f6dbe577d1ca3",
   "locators": 253,
   "origin_id": "CLAIM 033",
   "papers": 10,
@@ -3718,7 +3769,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -5305,16 +5356,16 @@
  },
  {
   "abstention": null,
-  "complete_reads": 28,
+  "complete_reads": 29,
   "depths": [
    "NO_RECEIPT",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "b4f7974f6818f11b",
-  "locators": 887,
+  "digest": "3130b5bcc4df48e3",
+  "locators": 991,
   "origin_id": "DL-BIO-004",
-  "papers": 48,
+  "papers": 49,
   "query_id": "Q-DL-BIO-004",
   "rows": [
    {
@@ -5875,7 +5926,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -6270,6 +6321,42 @@
     "receipt_id": "",
     "repair_unverified": 0,
     "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
+    "unaudited_contradictions": 0
    }
   ],
   "unaudited_contradictions": 0
@@ -6391,16 +6478,16 @@
  },
  {
   "abstention": null,
-  "complete_reads": 28,
+  "complete_reads": 29,
   "depths": [
    "NO_RECEIPT",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "8068a30c804876df",
-  "locators": 860,
+  "digest": "b0f2f64e54c4c830",
+  "locators": 964,
   "origin_id": "DL-BIO-007",
-  "papers": 45,
+  "papers": 46,
   "query_id": "Q-DL-BIO-007",
   "rows": [
    {
@@ -6961,7 +7048,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -7311,22 +7398,58 @@
     "receipt_id": "",
     "repair_unverified": 0,
     "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
+    "unaudited_contradictions": 0
    }
   ],
   "unaudited_contradictions": 0
  },
  {
   "abstention": null,
-  "complete_reads": 29,
+  "complete_reads": 30,
   "depths": [
    "NO_RECEIPT",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "971cd0da2121e14a",
-  "locators": 908,
+  "digest": "311e33e0f82a788b",
+  "locators": 1012,
   "origin_id": "DL-BIO-008",
-  "papers": 49,
+  "papers": 50,
   "query_id": "Q-DL-BIO-008",
   "rows": [
    {
@@ -7983,7 +8106,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -8333,6 +8456,42 @@
     "receipt_id": "",
     "repair_unverified": 0,
     "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
+    "unaudited_contradictions": 0
    }
   ],
   "unaudited_contradictions": 0
@@ -8614,16 +8773,16 @@
  },
  {
   "abstention": null,
-  "complete_reads": 28,
+  "complete_reads": 29,
   "depths": [
    "NO_RECEIPT",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "0350e36905e025a8",
-  "locators": 887,
+  "digest": "35cc8b6a199d0ea2",
+  "locators": 991,
   "origin_id": "DL-BIO-011",
-  "papers": 48,
+  "papers": 49,
   "query_id": "Q-DL-BIO-011",
   "rows": [
    {
@@ -9184,7 +9343,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -9579,23 +9738,59 @@
     "receipt_id": "",
     "repair_unverified": 0,
     "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
+    "unaudited_contradictions": 0
    }
   ],
   "unaudited_contradictions": 0
  },
  {
   "abstention": null,
-  "complete_reads": 32,
+  "complete_reads": 33,
   "depths": [
    "NO_RECEIPT",
    "abstract_only",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "4e38ab1ab1765acf",
-  "locators": 975,
+  "digest": "b26ef42c8281e1e1",
+  "locators": 1079,
   "origin_id": "DL-BIO-012",
-  "papers": 54,
+  "papers": 55,
   "query_id": "Q-DL-BIO-012",
   "rows": [
    {
@@ -10233,7 +10428,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -10658,23 +10853,59 @@
     "receipt_id": "",
     "repair_unverified": 0,
     "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
+    "unaudited_contradictions": 0
    }
   ],
   "unaudited_contradictions": 0
  },
  {
   "abstention": null,
-  "complete_reads": 33,
+  "complete_reads": 34,
   "depths": [
    "NO_RECEIPT",
    "abstract_only",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "e29e44f5ebcb9601",
-  "locators": 1016,
+  "digest": "d4596460f0c2cf09",
+  "locators": 1120,
   "origin_id": "DL-BIO-013",
-  "papers": 55,
+  "papers": 56,
   "query_id": "Q-DL-BIO-013",
   "rows": [
    {
@@ -11312,7 +11543,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -11752,6 +11983,42 @@
     "receipt_id": "",
     "repair_unverified": 0,
     "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
+    "unaudited_contradictions": 0
    }
   ],
   "unaudited_contradictions": 0
@@ -11764,7 +12031,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "5d201753e5e4c414",
+  "digest": "9956fa2d659ca6b4",
   "locators": 1070,
   "origin_id": "DL-BIO-085",
   "papers": 40,
@@ -12242,7 +12509,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -12813,16 +13080,16 @@
  },
  {
   "abstention": null,
-  "complete_reads": 51,
+  "complete_reads": 52,
   "depths": [
    "NO_RECEIPT",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "572e7600908c2e74",
-  "locators": 1522,
+  "digest": "02b1351aacf7b619",
+  "locators": 1626,
   "origin_id": "DL-BIO-090",
-  "papers": 80,
+  "papers": 81,
   "query_id": "Q-DL-BIO-090",
   "rows": [
    {
@@ -13633,7 +13900,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -14503,22 +14770,58 @@
     "receipt_id": "",
     "repair_unverified": 0,
     "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
+    "unaudited_contradictions": 0
    }
   ],
   "unaudited_contradictions": 0
  },
  {
   "abstention": null,
-  "complete_reads": 55,
+  "complete_reads": 56,
   "depths": [
    "NO_RECEIPT",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "ce6d138545568682",
-  "locators": 1670,
+  "digest": "b9a8a61a3e679de3",
+  "locators": 1774,
   "origin_id": "DL-BIO-095",
-  "papers": 85,
+  "papers": 86,
   "query_id": "Q-DL-BIO-095",
   "rows": [
    {
@@ -15404,7 +15707,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -16274,21 +16577,57 @@
     "receipt_id": "",
     "repair_unverified": 0,
     "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
+    "unaudited_contradictions": 0
    }
   ],
   "unaudited_contradictions": 0
  },
  {
   "abstention": null,
-  "complete_reads": 6,
+  "complete_reads": 8,
   "depths": [
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "b22be0e7baad6d3a",
-  "locators": 187,
+  "digest": "1fa545b77599cf1d",
+  "locators": 316,
   "origin_id": "DL-BIOM-014",
-  "papers": 11,
+  "papers": 13,
   "query_id": "Q-DL-BIOM-014",
   "rows": [
    {
@@ -16478,6 +16817,21 @@
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
+    "contradiction_verdicts": [],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 25,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42128308.json",
+    "pmid": "42128308",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 2,
+    "receipt_id": "FTR-20260810-42128308-02",
+    "repair_unverified": 0,
+    "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "UNAUDITED",
+    "audited_entries": 0,
     "contradiction_verdicts": [
      {
       "auditors": 1,
@@ -16491,6 +16845,42 @@
     "reading_depth": "partial_fulltext_read",
     "receipt_events": 5,
     "receipt_id": "FTR-20260921-42589397-01",
+    "repair_unverified": 1,
+    "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
     "repair_unverified": 1,
     "unaudited_contradictions": 0
    }
@@ -16861,7 +17251,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "de3c882a982c8d7e",
+  "digest": "c3677b90611e6aac",
   "locators": 456,
   "origin_id": "DL-MECH-007",
   "papers": 28,
@@ -17089,7 +17479,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -17424,7 +17814,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "2e5ba9066a29997d",
+  "digest": "359589d04c008464",
   "locators": 456,
   "origin_id": "DL-MECH-008",
   "papers": 28,
@@ -17652,7 +18042,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -17987,7 +18377,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "4a29fa2cfa971b92",
+  "digest": "805066c6eeb0986d",
   "locators": 456,
   "origin_id": "DL-MECH-009",
   "papers": 28,
@@ -18215,7 +18605,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -18550,7 +18940,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "009ef5a214637a26",
+  "digest": "f2f86e42e8fc80ad",
   "locators": 456,
   "origin_id": "DL-MECH-010",
   "papers": 28,
@@ -18778,7 +19168,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -19113,7 +19503,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "a73419976abb3b18",
+  "digest": "b7cda64f69e928ac",
   "locators": 456,
   "origin_id": "DL-MECH-011",
   "papers": 28,
@@ -19341,7 +19731,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -19676,7 +20066,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "249ece187e8510fa",
+  "digest": "81e355823977e6d7",
   "locators": 768,
   "origin_id": "DL-MECH-012",
   "papers": 37,
@@ -20061,7 +20451,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -20580,7 +20970,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "a6c4d637b2c6063d",
+  "digest": "3a099b4a85e3a5a1",
   "locators": 768,
   "origin_id": "DL-MECH-014",
   "papers": 38,
@@ -20965,7 +21355,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -21453,7 +21843,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "d3f7f4f4f173cba3",
+  "digest": "202b12c7cb1cccc2",
   "locators": 790,
   "origin_id": "DL-MECH-015",
   "papers": 38,
@@ -21838,7 +22228,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -22365,16 +22755,16 @@
  },
  {
   "abstention": null,
-  "complete_reads": 28,
+  "complete_reads": 29,
   "depths": [
    "NO_RECEIPT",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "e24a73e3050296bf",
-  "locators": 887,
+  "digest": "d97f9bf7138c4e6d",
+  "locators": 991,
   "origin_id": "DL-MECH-017",
-  "papers": 48,
+  "papers": 49,
   "query_id": "Q-DL-MECH-017",
   "rows": [
    {
@@ -22935,7 +23325,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -23330,6 +23720,42 @@
     "receipt_id": "",
     "repair_unverified": 0,
     "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
+    "unaudited_contradictions": 0
    }
   ],
   "unaudited_contradictions": 0
@@ -23342,7 +23768,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "1f0646181d846cce",
+  "digest": "b563d4cd68537b66",
   "locators": 542,
   "origin_id": "DL-MECH-018",
   "papers": 30,
@@ -23607,7 +24033,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -23936,16 +24362,16 @@
  },
  {
   "abstention": null,
-  "complete_reads": 28,
+  "complete_reads": 29,
   "depths": [
    "NO_RECEIPT",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "f62df32c4b541b17",
-  "locators": 887,
+  "digest": "870c42037110939d",
+  "locators": 991,
   "origin_id": "DL-MECH-019",
-  "papers": 48,
+  "papers": 49,
   "query_id": "Q-DL-MECH-019",
   "rows": [
    {
@@ -24506,7 +24932,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -24901,22 +25327,58 @@
     "receipt_id": "",
     "repair_unverified": 0,
     "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
+    "unaudited_contradictions": 0
    }
   ],
   "unaudited_contradictions": 0
  },
  {
   "abstention": null,
-  "complete_reads": 28,
+  "complete_reads": 29,
   "depths": [
    "NO_RECEIPT",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "f3a80ef78f67f8a6",
-  "locators": 860,
+  "digest": "1810ba63ac3b115b",
+  "locators": 964,
   "origin_id": "DL-MECH-020",
-  "papers": 45,
+  "papers": 46,
   "query_id": "Q-DL-MECH-020",
   "rows": [
    {
@@ -25477,7 +25939,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -25827,22 +26289,58 @@
     "receipt_id": "",
     "repair_unverified": 0,
     "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
+    "unaudited_contradictions": 0
    }
   ],
   "unaudited_contradictions": 0
  },
  {
   "abstention": null,
-  "complete_reads": 28,
+  "complete_reads": 29,
   "depths": [
    "NO_RECEIPT",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "17c32d7805292d21",
-  "locators": 860,
+  "digest": "72158b6cd46a0542",
+  "locators": 964,
   "origin_id": "DL-MECH-021",
-  "papers": 45,
+  "papers": 46,
   "query_id": "Q-DL-MECH-021",
   "rows": [
    {
@@ -26403,7 +26901,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -26752,6 +27250,42 @@
     "receipt_events": 0,
     "receipt_id": "",
     "repair_unverified": 0,
+    "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
     "unaudited_contradictions": 0
    }
   ],
@@ -27112,24 +27646,21 @@
  },
  {
   "abstention": null,
-  "complete_reads": 0,
+  "complete_reads": 1,
   "depths": [
+   "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "beb544db621b51fd",
-  "locators": 9,
+  "digest": "e156aca5d28f2078",
+  "locators": 113,
   "origin_id": "DL-MECH-023",
-  "papers": 1,
+  "papers": 2,
   "query_id": "Q-DL-MECH-023",
   "rows": [
    {
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
-    "bound_check": {
-     "binding": "NOT_CHECKED",
-     "reason": "offline with no cached PubMed record"
-    },
     "contradiction_verdicts": [],
     "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
     "locator_count": 9,
@@ -27139,6 +27670,42 @@
     "receipt_events": 1,
     "receipt_id": "FTR-20261003-28749468-01",
     "repair_unverified": 0,
+    "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
     "unaudited_contradictions": 0
    }
   ],
@@ -27212,16 +27779,16 @@
  },
  {
   "abstention": null,
-  "complete_reads": 1,
+  "complete_reads": 3,
   "depths": [
    "NO_RECEIPT",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "cd9209c0125a8faf",
-  "locators": 48,
+  "digest": "68cb66161bc5bc42",
+  "locators": 177,
   "origin_id": "DL-MECH-025",
-  "papers": 4,
+  "papers": 6,
   "query_id": "Q-DL-MECH-025",
   "rows": [
    {
@@ -27282,6 +27849,21 @@
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
+    "contradiction_verdicts": [],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 25,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42128308.json",
+    "pmid": "42128308",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 2,
+    "receipt_id": "FTR-20260810-42128308-02",
+    "repair_unverified": 0,
+    "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "UNAUDITED",
+    "audited_entries": 0,
     "contradiction_verdicts": [
      {
       "auditors": 1,
@@ -27297,22 +27879,58 @@
     "receipt_id": "FTR-20260921-42589397-01",
     "repair_unverified": 1,
     "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
+    "unaudited_contradictions": 0
    }
   ],
   "unaudited_contradictions": 0
  },
  {
   "abstention": null,
-  "complete_reads": 28,
+  "complete_reads": 29,
   "depths": [
    "NO_RECEIPT",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "3e3c163bf0718266",
-  "locators": 860,
+  "digest": "54a26e59522ce2e6",
+  "locators": 964,
   "origin_id": "DL-MECH-026",
-  "papers": 45,
+  "papers": 46,
   "query_id": "Q-DL-MECH-026",
   "rows": [
    {
@@ -27873,7 +28491,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -28222,6 +28840,42 @@
     "receipt_events": 0,
     "receipt_id": "",
     "repair_unverified": 0,
+    "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
     "unaudited_contradictions": 0
    }
   ],
@@ -28602,16 +29256,16 @@
  },
  {
   "abstention": null,
-  "complete_reads": 28,
+  "complete_reads": 29,
   "depths": [
    "NO_RECEIPT",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "bfb0c3aea595e5a5",
-  "locators": 887,
+  "digest": "0ddd966754a8fce0",
+  "locators": 991,
   "origin_id": "DL-MECH-028",
-  "papers": 48,
+  "papers": 49,
   "query_id": "Q-DL-MECH-028",
   "rows": [
    {
@@ -29172,7 +29826,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -29567,22 +30221,58 @@
     "receipt_id": "",
     "repair_unverified": 0,
     "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
+    "unaudited_contradictions": 0
    }
   ],
   "unaudited_contradictions": 0
  },
  {
   "abstention": null,
-  "complete_reads": 28,
+  "complete_reads": 29,
   "depths": [
    "NO_RECEIPT",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "475c86cb720486b3",
-  "locators": 887,
+  "digest": "3a3be11e9a4e9e07",
+  "locators": 991,
   "origin_id": "DL-MECH-029",
-  "papers": 48,
+  "papers": 49,
   "query_id": "Q-DL-MECH-029",
   "rows": [
    {
@@ -30143,7 +30833,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -30538,22 +31228,58 @@
     "receipt_id": "",
     "repair_unverified": 0,
     "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
+    "unaudited_contradictions": 0
    }
   ],
   "unaudited_contradictions": 0
  },
  {
   "abstention": null,
-  "complete_reads": 28,
+  "complete_reads": 29,
   "depths": [
    "NO_RECEIPT",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "ce69956f1cb783bc",
-  "locators": 887,
+  "digest": "c52f1ce47f78d986",
+  "locators": 991,
   "origin_id": "DL-MECH-030",
-  "papers": 48,
+  "papers": 49,
   "query_id": "Q-DL-MECH-030",
   "rows": [
    {
@@ -31114,7 +31840,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -31508,6 +32234,42 @@
     "receipt_events": 0,
     "receipt_id": "",
     "repair_unverified": 0,
+    "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
     "unaudited_contradictions": 0
    }
   ],
@@ -32049,16 +32811,16 @@
  },
  {
   "abstention": null,
-  "complete_reads": 28,
+  "complete_reads": 29,
   "depths": [
    "NO_RECEIPT",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "25635e8c382e12f6",
-  "locators": 887,
+  "digest": "79e66256bbb9d9d8",
+  "locators": 991,
   "origin_id": "DL-MECH-033",
-  "papers": 48,
+  "papers": 49,
   "query_id": "Q-DL-MECH-033",
   "rows": [
    {
@@ -32619,7 +33381,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -33014,22 +33776,58 @@
     "receipt_id": "",
     "repair_unverified": 0,
     "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
+    "unaudited_contradictions": 0
    }
   ],
   "unaudited_contradictions": 0
  },
  {
   "abstention": null,
-  "complete_reads": 29,
+  "complete_reads": 30,
   "depths": [
    "NO_RECEIPT",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "21f3576835e3ea76",
-  "locators": 908,
+  "digest": "b96638a8323cdb9a",
+  "locators": 1012,
   "origin_id": "DL-MECH-034",
-  "papers": 49,
+  "papers": 50,
   "query_id": "Q-DL-MECH-034",
   "rows": [
    {
@@ -33686,7 +34484,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -34036,6 +34834,42 @@
     "receipt_id": "",
     "repair_unverified": 0,
     "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
+    "unaudited_contradictions": 0
    }
   ],
   "unaudited_contradictions": 0
@@ -34048,7 +34882,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "398746603dc288a9",
+  "digest": "aa083802856a26f1",
   "locators": 182,
   "origin_id": "DL-MECH-035",
   "papers": 11,
@@ -34156,7 +34990,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -34359,16 +35193,16 @@
  },
  {
   "abstention": null,
-  "complete_reads": 28,
+  "complete_reads": 29,
   "depths": [
    "NO_RECEIPT",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "55fd50c46d339256",
-  "locators": 887,
+  "digest": "6b63e13ba4b129ad",
+  "locators": 991,
   "origin_id": "DL-MECH-037",
-  "papers": 48,
+  "papers": 49,
   "query_id": "Q-DL-MECH-037",
   "rows": [
    {
@@ -34929,7 +35763,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -35324,6 +36158,42 @@
     "receipt_id": "",
     "repair_unverified": 0,
     "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
+    "unaudited_contradictions": 0
    }
   ],
   "unaudited_contradictions": 0
@@ -35336,7 +36206,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "445de7b5475d0f4b",
+  "digest": "d84cba9b977ec7a9",
   "locators": 182,
   "origin_id": "DL-MECH-038",
   "papers": 11,
@@ -35444,7 +36314,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -35608,16 +36478,16 @@
  },
  {
   "abstention": null,
-  "complete_reads": 29,
+  "complete_reads": 30,
   "depths": [
    "NO_RECEIPT",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "8550358b0f9ea894",
-  "locators": 908,
+  "digest": "ced9fbbb3158e1e1",
+  "locators": 1012,
   "origin_id": "DL-MECH-039",
-  "papers": 49,
+  "papers": 50,
   "query_id": "Q-DL-MECH-039",
   "rows": [
    {
@@ -36228,7 +37098,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -36623,22 +37493,58 @@
     "receipt_id": "",
     "repair_unverified": 0,
     "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
+    "unaudited_contradictions": 0
    }
   ],
   "unaudited_contradictions": 2
  },
  {
   "abstention": null,
-  "complete_reads": 30,
+  "complete_reads": 31,
   "depths": [
    "NO_RECEIPT",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "57ba343b8930bfc2",
-  "locators": 956,
+  "digest": "eb091f88e88950a7",
+  "locators": 1060,
   "origin_id": "DL-MECH-040",
-  "papers": 53,
+  "papers": 54,
   "query_id": "Q-DL-MECH-040",
   "rows": [
    {
@@ -37345,7 +38251,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -37740,6 +38646,42 @@
     "receipt_id": "",
     "repair_unverified": 0,
     "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
+    "unaudited_contradictions": 0
    }
   ],
   "unaudited_contradictions": 2
@@ -37814,16 +38756,16 @@
  },
  {
   "abstention": null,
-  "complete_reads": 29,
+  "complete_reads": 30,
   "depths": [
    "NO_RECEIPT",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "bee26d859dda6e7a",
-  "locators": 908,
+  "digest": "84fe1683303d8979",
+  "locators": 1012,
   "origin_id": "DL-MECH-043",
-  "papers": 49,
+  "papers": 50,
   "query_id": "Q-DL-MECH-043",
   "rows": [
    {
@@ -38480,7 +39422,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -38829,6 +39771,42 @@
     "receipt_events": 0,
     "receipt_id": "",
     "repair_unverified": 0,
+    "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
     "unaudited_contradictions": 0
    }
   ],
@@ -39552,16 +40530,16 @@
  },
  {
   "abstention": null,
-  "complete_reads": 31,
+  "complete_reads": 32,
   "depths": [
    "NO_RECEIPT",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "a1285cecef2f724a",
-  "locators": 956,
+  "digest": "4a7ac0f829de14dd",
+  "locators": 1060,
   "origin_id": "DL-MECH-046",
-  "papers": 51,
+  "papers": 52,
   "query_id": "Q-DL-MECH-046",
   "rows": [
    {
@@ -40202,7 +41180,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -40597,6 +41575,42 @@
     "receipt_id": "",
     "repair_unverified": 0,
     "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
+    "unaudited_contradictions": 0
    }
   ],
   "unaudited_contradictions": 2
@@ -40856,16 +41870,16 @@
  },
  {
   "abstention": null,
-  "complete_reads": 28,
+  "complete_reads": 29,
   "depths": [
    "NO_RECEIPT",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "103fe8c26517e89b",
-  "locators": 887,
+  "digest": "088cb80bb33e0231",
+  "locators": 991,
   "origin_id": "DL-MECH-049",
-  "papers": 49,
+  "papers": 50,
   "query_id": "Q-DL-MECH-049",
   "rows": [
    {
@@ -41441,7 +42455,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -41836,6 +42850,42 @@
     "receipt_id": "",
     "repair_unverified": 0,
     "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
+    "unaudited_contradictions": 0
    }
   ],
   "unaudited_contradictions": 0
@@ -41927,7 +42977,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "47f9811f0613ebbc",
+  "digest": "1303699f475a88dc",
   "locators": 504,
   "origin_id": "DL-MECH-053",
   "papers": 28,
@@ -42229,7 +43279,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -43525,16 +44575,16 @@
  },
  {
   "abstention": null,
-  "complete_reads": 29,
+  "complete_reads": 30,
   "depths": [
    "NO_RECEIPT",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "8979d6d5e7f063c1",
-  "locators": 917,
+  "digest": "08cc511d43379dff",
+  "locators": 1021,
   "origin_id": "DL-MECH-063",
-  "papers": 49,
+  "papers": 50,
   "query_id": "Q-DL-MECH-063",
   "rows": [
    {
@@ -44095,7 +45145,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -44505,23 +45555,59 @@
     "receipt_id": "",
     "repair_unverified": 0,
     "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
+    "unaudited_contradictions": 0
    }
   ],
   "unaudited_contradictions": 0
  },
  {
   "abstention": null,
-  "complete_reads": 32,
+  "complete_reads": 33,
   "depths": [
    "NO_RECEIPT",
    "abstract_only",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "9f9cee5458c6e068",
-  "locators": 975,
+  "digest": "b3ee185d25060e0f",
+  "locators": 1079,
   "origin_id": "DL-MECH-064",
-  "papers": 54,
+  "papers": 55,
   "query_id": "Q-DL-MECH-064",
   "rows": [
    {
@@ -45159,7 +46245,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -45584,23 +46670,59 @@
     "receipt_id": "",
     "repair_unverified": 0,
     "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
+    "unaudited_contradictions": 0
    }
   ],
   "unaudited_contradictions": 0
  },
  {
   "abstention": null,
-  "complete_reads": 32,
+  "complete_reads": 33,
   "depths": [
    "NO_RECEIPT",
    "abstract_only",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "7d44fc82305a0960",
-  "locators": 975,
+  "digest": "e9f15af3f2196a2d",
+  "locators": 1079,
   "origin_id": "DL-MECH-065",
-  "papers": 54,
+  "papers": 55,
   "query_id": "Q-DL-MECH-065",
   "rows": [
    {
@@ -46238,7 +47360,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -46663,23 +47785,59 @@
     "receipt_id": "",
     "repair_unverified": 0,
     "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
+    "unaudited_contradictions": 0
    }
   ],
   "unaudited_contradictions": 0
  },
  {
   "abstention": null,
-  "complete_reads": 32,
+  "complete_reads": 33,
   "depths": [
    "NO_RECEIPT",
    "abstract_only",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "62291ad73e3ed51c",
-  "locators": 975,
+  "digest": "ad1512a0a79f0e8b",
+  "locators": 1079,
   "origin_id": "DL-MECH-066",
-  "papers": 54,
+  "papers": 55,
   "query_id": "Q-DL-MECH-066",
   "rows": [
    {
@@ -47317,7 +48475,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -47742,23 +48900,59 @@
     "receipt_id": "",
     "repair_unverified": 0,
     "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
+    "unaudited_contradictions": 0
    }
   ],
   "unaudited_contradictions": 0
  },
  {
   "abstention": null,
-  "complete_reads": 32,
+  "complete_reads": 33,
   "depths": [
    "NO_RECEIPT",
    "abstract_only",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "1db78da381a67609",
-  "locators": 975,
+  "digest": "158fc6e8acb2e3ab",
+  "locators": 1079,
   "origin_id": "DL-MECH-067",
-  "papers": 54,
+  "papers": 55,
   "query_id": "Q-DL-MECH-067",
   "rows": [
    {
@@ -48396,7 +49590,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -48821,23 +50015,59 @@
     "receipt_id": "",
     "repair_unverified": 0,
     "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
+    "unaudited_contradictions": 0
    }
   ],
   "unaudited_contradictions": 0
  },
  {
   "abstention": null,
-  "complete_reads": 33,
+  "complete_reads": 34,
   "depths": [
    "NO_RECEIPT",
    "abstract_only",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "f87f4b35100cb88d",
-  "locators": 1016,
+  "digest": "f86fb8f22a00d914",
+  "locators": 1120,
   "origin_id": "DL-MECH-068",
-  "papers": 55,
+  "papers": 56,
   "query_id": "Q-DL-MECH-068",
   "rows": [
    {
@@ -49475,7 +50705,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -49914,6 +51144,42 @@
     "receipt_events": 0,
     "receipt_id": "",
     "repair_unverified": 0,
+    "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
     "unaudited_contradictions": 0
    }
   ],
@@ -50969,7 +52235,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "98ae7c58a18d57d3",
+  "digest": "fb98568dfd8a0ea7",
   "locators": 1308,
   "origin_id": "DL-MECH-070",
   "papers": 59,
@@ -51649,7 +52915,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -52214,16 +53480,16 @@
  },
  {
   "abstention": null,
-  "complete_reads": 41,
+  "complete_reads": 42,
   "depths": [
    "NO_RECEIPT",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "8ef330370b0e211c",
-  "locators": 1269,
+  "digest": "e3c4b534a6730706",
+  "locators": 1373,
   "origin_id": "DL-MECH-071",
-  "papers": 69,
+  "papers": 70,
   "query_id": "Q-DL-MECH-071",
   "rows": [
    {
@@ -53098,7 +54364,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -53589,6 +54855,42 @@
     "receipt_id": "FTR-20261004-42807679-01",
     "repair_unverified": 0,
     "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
+    "unaudited_contradictions": 0
    }
   ],
   "unaudited_contradictions": 2
@@ -53600,7 +54902,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "c9ef77fee9bc668a",
+  "digest": "7d266149ab6a8dcf",
   "locators": 487,
   "origin_id": "DL-MECH-072",
   "papers": 14,
@@ -53826,7 +55128,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -54033,7 +55335,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "90840bbc8f1b0c2c",
+  "digest": "df324774b5fcdc44",
   "locators": 487,
   "origin_id": "DL-MECH-073",
   "papers": 14,
@@ -54259,7 +55561,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -54466,7 +55768,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "3a3609983534157e",
+  "digest": "39e7db97cad1e490",
   "locators": 487,
   "origin_id": "DL-MECH-074",
   "papers": 14,
@@ -54692,7 +55994,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -54899,7 +56201,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "6027be4e95b2202c",
+  "digest": "25980493a3195b81",
   "locators": 510,
   "origin_id": "DL-MECH-075",
   "papers": 15,
@@ -55140,7 +56442,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -55347,7 +56649,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "981a3215416f176b",
+  "digest": "f11708d5b9ab5151",
   "locators": 510,
   "origin_id": "DL-MECH-076",
   "papers": 15,
@@ -55588,7 +56890,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -55795,7 +57097,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "bf452418b7546207",
+  "digest": "f158be07e3a65412",
   "locators": 510,
   "origin_id": "DL-MECH-077",
   "papers": 15,
@@ -56036,7 +57338,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -56243,7 +57545,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "8182b8aa0ea6ecf9",
+  "digest": "d5dadc05ed1de119",
   "locators": 510,
   "origin_id": "DL-MECH-078",
   "papers": 15,
@@ -56484,7 +57786,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -56692,7 +57994,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "bd7e40e91c254c2b",
+  "digest": "c225c63382d63811",
   "locators": 980,
   "origin_id": "DL-MECH-083",
   "papers": 35,
@@ -57062,7 +58364,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -57686,16 +58988,16 @@
  },
  {
   "abstention": null,
-  "complete_reads": 51,
+  "complete_reads": 52,
   "depths": [
    "NO_RECEIPT",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "3056fe04c3c872b9",
-  "locators": 1522,
+  "digest": "64fad7bdd2b94b1a",
+  "locators": 1626,
   "origin_id": "DL-MECH-092",
-  "papers": 80,
+  "papers": 81,
   "query_id": "Q-DL-MECH-092",
   "rows": [
    {
@@ -58506,7 +59808,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -59376,22 +60678,58 @@
     "receipt_id": "",
     "repair_unverified": 0,
     "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
+    "unaudited_contradictions": 0
    }
   ],
   "unaudited_contradictions": 0
  },
  {
   "abstention": null,
-  "complete_reads": 51,
+  "complete_reads": 52,
   "depths": [
    "NO_RECEIPT",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "211465ca9e474634",
-  "locators": 1522,
+  "digest": "8a31861a18753d67",
+  "locators": 1626,
   "origin_id": "DL-MECH-094",
-  "papers": 80,
+  "papers": 81,
   "query_id": "Q-DL-MECH-094",
   "rows": [
    {
@@ -60202,7 +61540,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -61072,22 +62410,58 @@
     "receipt_id": "",
     "repair_unverified": 0,
     "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
+    "unaudited_contradictions": 0
    }
   ],
   "unaudited_contradictions": 0
  },
  {
   "abstention": null,
-  "complete_reads": 28,
+  "complete_reads": 29,
   "depths": [
    "NO_RECEIPT",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "58934f2f679f1bcc",
-  "locators": 887,
+  "digest": "6aff318b852fe76a",
+  "locators": 991,
   "origin_id": "DL-MECH-095",
-  "papers": 48,
+  "papers": 49,
   "query_id": "Q-DL-MECH-095",
   "rows": [
    {
@@ -61648,7 +63022,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -62043,22 +63417,58 @@
     "receipt_id": "",
     "repair_unverified": 0,
     "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
+    "unaudited_contradictions": 0
    }
   ],
   "unaudited_contradictions": 0
  },
  {
   "abstention": null,
-  "complete_reads": 51,
+  "complete_reads": 52,
   "depths": [
    "NO_RECEIPT",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "6fa4677e3359caa0",
-  "locators": 1522,
+  "digest": "9403d4937684e133",
+  "locators": 1626,
   "origin_id": "DL-MECH-096",
-  "papers": 80,
+  "papers": 81,
   "query_id": "Q-DL-MECH-096",
   "rows": [
    {
@@ -62869,7 +64279,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -63739,22 +65149,58 @@
     "receipt_id": "",
     "repair_unverified": 0,
     "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
+    "unaudited_contradictions": 0
    }
   ],
   "unaudited_contradictions": 0
  },
  {
   "abstention": null,
-  "complete_reads": 51,
+  "complete_reads": 52,
   "depths": [
    "NO_RECEIPT",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "40eb7a450acb1763",
-  "locators": 1522,
+  "digest": "47f3229e0187d898",
+  "locators": 1626,
   "origin_id": "DL-MECH-098",
-  "papers": 80,
+  "papers": 81,
   "query_id": "Q-DL-MECH-098",
   "rows": [
    {
@@ -64565,7 +66011,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -65434,6 +66880,42 @@
     "receipt_events": 0,
     "receipt_id": "",
     "repair_unverified": 0,
+    "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
     "unaudited_contradictions": 0
    }
   ],
@@ -66995,16 +68477,16 @@
  },
  {
   "abstention": null,
-  "complete_reads": 53,
+  "complete_reads": 54,
   "depths": [
    "NO_RECEIPT",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "2075135412f0b2da",
-  "locators": 1581,
+  "digest": "c06bea56614c3d62",
+  "locators": 1685,
   "origin_id": "DL-MECH-104",
-  "papers": 85,
+  "papers": 86,
   "query_id": "Q-DL-MECH-104",
   "rows": [
    {
@@ -67890,7 +69372,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -68760,22 +70242,58 @@
     "receipt_id": "",
     "repair_unverified": 0,
     "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
+    "unaudited_contradictions": 0
    }
   ],
   "unaudited_contradictions": 0
  },
  {
   "abstention": null,
-  "complete_reads": 57,
+  "complete_reads": 58,
   "depths": [
    "NO_RECEIPT",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "557f266b96cec8b0",
-  "locators": 1721,
+  "digest": "74d9d3d2a68ec035",
+  "locators": 1825,
   "origin_id": "DL-MECH-106",
-  "papers": 87,
+  "papers": 88,
   "query_id": "Q-DL-MECH-106",
   "rows": [
    {
@@ -69691,7 +71209,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -70561,6 +72079,42 @@
     "receipt_id": "",
     "repair_unverified": 0,
     "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
+    "unaudited_contradictions": 0
    }
   ],
   "unaudited_contradictions": 0
@@ -70756,7 +72310,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "c1827f15def347fb",
+  "digest": "76d631cbcb5658f5",
   "locators": 389,
   "origin_id": "DL-MECH-113",
   "papers": 12,
@@ -70941,7 +72495,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -73999,7 +75553,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "62783f1cabb9ffb5",
+  "digest": "18bb82ef540bee0f",
   "locators": 409,
   "origin_id": "DL-MECH-170",
   "papers": 21,
@@ -74258,7 +75812,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -74674,7 +76228,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "8eba748b3798f87a",
+  "digest": "4ae15535352bfed8",
   "locators": 409,
   "origin_id": "DL-MECH-171",
   "papers": 21,
@@ -74933,7 +76487,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -75349,7 +76903,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "2dc4f5234c93d2c8",
+  "digest": "c9b570751c93784e",
   "locators": 409,
   "origin_id": "DL-MECH-172",
   "papers": 21,
@@ -75608,7 +77162,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -76153,16 +77707,16 @@
  },
  {
   "abstention": null,
-  "complete_reads": 51,
+  "complete_reads": 52,
   "depths": [
    "NO_RECEIPT",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "2658846e97146064",
-  "locators": 1522,
+  "digest": "21888c4ae51f18c8",
+  "locators": 1626,
   "origin_id": "DL-META-091",
-  "papers": 80,
+  "papers": 81,
   "query_id": "Q-DL-META-091",
   "rows": [
    {
@@ -76973,7 +78527,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -77843,6 +79397,42 @@
     "receipt_id": "",
     "repair_unverified": 0,
     "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
+    "unaudited_contradictions": 0
    }
   ],
   "unaudited_contradictions": 0
@@ -77855,7 +79445,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "9784e07626978ff5",
+  "digest": "2705f1693d8504b6",
   "locators": 1095,
   "origin_id": "DL-META-093",
   "papers": 41,
@@ -78348,7 +79938,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -78992,7 +80582,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "69b422db0b33713e",
+  "digest": "b1572b8951514b4c",
   "locators": 556,
   "origin_id": "DL-METH-079",
   "papers": 17,
@@ -79257,7 +80847,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -79479,7 +81069,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "b031c331bec3a459",
+  "digest": "df33655b5b5f6d1a",
   "locators": 556,
   "origin_id": "DL-METH-081",
   "papers": 17,
@@ -79744,7 +81334,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -79966,7 +81556,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "122fc9ee3e41fc8e",
+  "digest": "634b97cef3b65b42",
   "locators": 620,
   "origin_id": "DL-METH-082",
   "papers": 19,
@@ -80231,7 +81821,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -80484,7 +82074,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "69508b8107d06a87",
+  "digest": "86bc529bfd862094",
   "locators": 980,
   "origin_id": "DL-METH-084",
   "papers": 35,
@@ -80854,7 +82444,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -81410,16 +83000,16 @@
  },
  {
   "abstention": null,
-  "complete_reads": 52,
+  "complete_reads": 53,
   "depths": [
    "NO_RECEIPT",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "7e4d2416b351d3be",
-  "locators": 1553,
+  "digest": "e5074947caeaeba4",
+  "locators": 1657,
   "origin_id": "DL-METH-093",
-  "papers": 82,
+  "papers": 83,
   "query_id": "Q-DL-METH-093",
   "rows": [
    {
@@ -82260,7 +83850,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -83130,22 +84720,58 @@
     "receipt_id": "",
     "repair_unverified": 0,
     "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
+    "unaudited_contradictions": 0
    }
   ],
   "unaudited_contradictions": 0
  },
  {
   "abstention": null,
-  "complete_reads": 54,
+  "complete_reads": 55,
   "depths": [
    "NO_RECEIPT",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "d36394456af7c820",
-  "locators": 1629,
+  "digest": "a8c7e6bf5e08989d",
+  "locators": 1733,
   "origin_id": "DL-METH-094",
-  "papers": 84,
+  "papers": 85,
   "query_id": "Q-DL-METH-094",
   "rows": [
    {
@@ -84016,7 +85642,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -84886,6 +86512,42 @@
     "receipt_id": "",
     "repair_unverified": 0,
     "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
+    "unaudited_contradictions": 0
    }
   ],
   "unaudited_contradictions": 0
@@ -84898,7 +86560,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "c8b1f1e2a94a5e93",
+  "digest": "855d32f591910827",
   "locators": 994,
   "origin_id": "DL-METH-096",
   "papers": 36,
@@ -85283,7 +86945,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -85839,16 +87501,16 @@
  },
  {
   "abstention": null,
-  "complete_reads": 52,
+  "complete_reads": 53,
   "depths": [
    "NO_RECEIPT",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "476273b0f4f67265",
-  "locators": 1536,
+  "digest": "985432e394ed871d",
+  "locators": 1640,
   "origin_id": "DL-METH-097",
-  "papers": 81,
+  "papers": 82,
   "query_id": "Q-DL-METH-097",
   "rows": [
    {
@@ -86674,7 +88336,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -87544,22 +89206,58 @@
     "receipt_id": "",
     "repair_unverified": 0,
     "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
+    "unaudited_contradictions": 0
    }
   ],
   "unaudited_contradictions": 0
  },
  {
   "abstention": null,
-  "complete_reads": 55,
+  "complete_reads": 56,
   "depths": [
    "NO_RECEIPT",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "8f6a3caf7ad705ef",
-  "locators": 1660,
+  "digest": "aa907c718f71cce0",
+  "locators": 1764,
   "origin_id": "DL-METH-098",
-  "papers": 85,
+  "papers": 86,
   "query_id": "Q-DL-METH-098",
   "rows": [
    {
@@ -88445,7 +90143,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -89315,22 +91013,58 @@
     "receipt_id": "",
     "repair_unverified": 0,
     "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
+    "unaudited_contradictions": 0
    }
   ],
   "unaudited_contradictions": 0
  },
  {
   "abstention": null,
-  "complete_reads": 55,
+  "complete_reads": 56,
   "depths": [
    "NO_RECEIPT",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "38f903407cc1e01c",
-  "locators": 1660,
+  "digest": "e9f5cf115a972dd9",
+  "locators": 1764,
   "origin_id": "DL-METH-107",
-  "papers": 85,
+  "papers": 86,
   "query_id": "Q-DL-METH-107",
   "rows": [
    {
@@ -90216,7 +91950,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -91086,6 +92820,42 @@
     "receipt_id": "",
     "repair_unverified": 0,
     "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
+    "unaudited_contradictions": 0
    }
   ],
   "unaudited_contradictions": 0
@@ -91126,16 +92896,16 @@
  },
  {
   "abstention": null,
-  "complete_reads": 58,
+  "complete_reads": 59,
   "depths": [
    "NO_RECEIPT",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "dbaa8e2e8a60f73e",
-  "locators": 1759,
+  "digest": "0ace4103080cf26d",
+  "locators": 1863,
   "origin_id": "DL-METH-109",
-  "papers": 90,
+  "papers": 91,
   "query_id": "Q-DL-METH-109",
   "rows": [
    {
@@ -92096,7 +93866,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -92966,6 +94736,42 @@
     "receipt_id": "",
     "repair_unverified": 0,
     "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
+    "unaudited_contradictions": 0
    }
   ],
   "unaudited_contradictions": 0
@@ -93077,16 +94883,16 @@
  },
  {
   "abstention": null,
-  "complete_reads": 29,
+  "complete_reads": 30,
   "depths": [
    "NO_RECEIPT",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "ea616667ff609d3b",
-  "locators": 929,
+  "digest": "e6ea59be8cf2ffbf",
+  "locators": 1033,
   "origin_id": "DL-METH-114",
-  "papers": 49,
+  "papers": 50,
   "query_id": "Q-DL-METH-114",
   "rows": [
    {
@@ -93692,7 +95498,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -94057,22 +95863,58 @@
     "receipt_id": "",
     "repair_unverified": 0,
     "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
+    "unaudited_contradictions": 0
    }
   ],
   "unaudited_contradictions": 0
  },
  {
   "abstention": null,
-  "complete_reads": 61,
+  "complete_reads": 62,
   "depths": [
    "NO_RECEIPT",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "698c6deeab9ef640",
-  "locators": 1782,
+  "digest": "80116524d32d1959",
+  "locators": 1886,
   "origin_id": "DL-METH-116",
-  "papers": 99,
+  "papers": 100,
   "query_id": "Q-DL-METH-116",
   "rows": [
    {
@@ -95103,7 +96945,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -96078,6 +97920,42 @@
     "receipt_id": "FTR-20261004-42807679-01",
     "repair_unverified": 0,
     "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
+    "unaudited_contradictions": 0
    }
   ],
   "unaudited_contradictions": 2
@@ -96399,16 +98277,16 @@
  },
  {
   "abstention": null,
-  "complete_reads": 61,
+  "complete_reads": 62,
   "depths": [
    "NO_RECEIPT",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "a6909ab8eadb4327",
-  "locators": 1821,
+  "digest": "2e3132ce49e11926",
+  "locators": 1925,
   "origin_id": "DL-METH-119",
-  "papers": 103,
+  "papers": 104,
   "query_id": "Q-DL-METH-119",
   "rows": [
    {
@@ -97439,7 +99317,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -98474,6 +100352,42 @@
     "receipt_id": "FTR-20261004-42807679-01",
     "repair_unverified": 0,
     "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
+    "unaudited_contradictions": 0
    }
   ],
   "unaudited_contradictions": 2
@@ -98957,7 +100871,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "082c16ecb8202a7c",
+  "digest": "b7df0faf4824055f",
   "locators": 456,
   "origin_id": "DL-MOL-003",
   "papers": 28,
@@ -99185,7 +101099,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -99520,7 +101434,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "ba966c2fbed40686",
+  "digest": "f1be2837c8d56beb",
   "locators": 456,
   "origin_id": "DL-MOL-004",
   "papers": 28,
@@ -99748,7 +101662,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -100083,7 +101997,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "efb840b43c5dcf2d",
+  "digest": "dace8dacec9d3ac7",
   "locators": 456,
   "origin_id": "DL-MOL-005",
   "papers": 28,
@@ -100311,7 +102225,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -100790,16 +102704,16 @@
  },
  {
   "abstention": null,
-  "complete_reads": 28,
+  "complete_reads": 29,
   "depths": [
    "NO_RECEIPT",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "600ecbe163dce171",
-  "locators": 887,
+  "digest": "2f516bdbca36de0c",
+  "locators": 991,
   "origin_id": "DL-MOL-010",
-  "papers": 48,
+  "papers": 49,
   "query_id": "Q-DL-MOL-010",
   "rows": [
    {
@@ -101360,7 +103274,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -101754,6 +103668,42 @@
     "receipt_events": 0,
     "receipt_id": "",
     "repair_unverified": 0,
+    "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
     "unaudited_contradictions": 0
    }
   ],
@@ -102199,16 +104149,16 @@
  },
  {
   "abstention": null,
-  "complete_reads": 28,
+  "complete_reads": 29,
   "depths": [
    "NO_RECEIPT",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "3dd8040c274a1abd",
-  "locators": 887,
+  "digest": "85a2aa58486d27ea",
+  "locators": 991,
   "origin_id": "DL-MOL-012",
-  "papers": 48,
+  "papers": 49,
   "query_id": "Q-DL-MOL-012",
   "rows": [
    {
@@ -102769,7 +104719,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -103164,22 +105114,58 @@
     "receipt_id": "",
     "repair_unverified": 0,
     "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
+    "unaudited_contradictions": 0
    }
   ],
   "unaudited_contradictions": 0
  },
  {
   "abstention": null,
-  "complete_reads": 31,
+  "complete_reads": 32,
   "depths": [
    "NO_RECEIPT",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "d52b18275f4e0344",
-  "locators": 956,
+  "digest": "5ed828ed83970f88",
+  "locators": 1060,
   "origin_id": "DL-MOL-013",
-  "papers": 51,
+  "papers": 52,
   "query_id": "Q-DL-MOL-013",
   "rows": [
    {
@@ -103820,7 +105806,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -104215,6 +106201,42 @@
     "receipt_id": "",
     "repair_unverified": 0,
     "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
+    "unaudited_contradictions": 0
    }
   ],
   "unaudited_contradictions": 2
@@ -104261,7 +106283,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "de59208918ee0b49",
+  "digest": "0feeefc9cc455c0a",
   "locators": 768,
   "origin_id": "DL-REPO-002",
   "papers": 37,
@@ -104646,7 +106668,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -105119,7 +107141,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "aa0d82b903d70150",
+  "digest": "bf215435faa6b76c",
   "locators": 805,
   "origin_id": "DL-REPO-003",
   "papers": 41,
@@ -105549,7 +107571,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -106036,7 +108058,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "58a86b1f3f3dd754",
+  "digest": "bc8c188b26b40a0a",
   "locators": 567,
   "origin_id": "DL-THER-080",
   "papers": 18,
@@ -106301,7 +108323,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -106607,7 +108629,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "72e519b270880236",
+  "digest": "f9c03d29c59e49bc",
   "locators": 980,
   "origin_id": "DL-THER-089",
   "papers": 35,
@@ -106977,7 +108999,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -107533,16 +109555,16 @@
  },
  {
   "abstention": null,
-  "complete_reads": 53,
+  "complete_reads": 54,
   "depths": [
    "NO_RECEIPT",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "5ebeacd9c52b31af",
-  "locators": 1581,
+  "digest": "88934df800885666",
+  "locators": 1685,
   "origin_id": "DL-THER-095",
-  "papers": 85,
+  "papers": 86,
   "query_id": "Q-DL-THER-095",
   "rows": [
    {
@@ -108428,7 +110450,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -109298,6 +111320,42 @@
     "receipt_id": "",
     "repair_unverified": 0,
     "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
+    "unaudited_contradictions": 0
    }
   ],
   "unaudited_contradictions": 0
@@ -109309,7 +111367,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "35abd08a1d090ada",
+  "digest": "9281748c9eaa20d2",
   "locators": 732,
   "origin_id": "DL-THER-105",
   "papers": 32,
@@ -109722,7 +111780,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -110044,16 +112102,16 @@
  },
  {
   "abstention": null,
-  "complete_reads": 58,
+  "complete_reads": 59,
   "depths": [
    "NO_RECEIPT",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "1a21b362fd0299d2",
-  "locators": 1763,
+  "digest": "8f4fef56572e34d9",
+  "locators": 1867,
   "origin_id": "DL-THER-106",
-  "papers": 94,
+  "papers": 95,
   "query_id": "Q-DL-THER-106",
   "rows": [
    {
@@ -110989,7 +113047,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -111998,6 +114056,42 @@
     "receipt_id": "",
     "repair_unverified": 0,
     "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
+    "unaudited_contradictions": 0
    }
   ],
   "unaudited_contradictions": 2
@@ -112009,7 +114103,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "0a3e2622311df6c6",
+  "digest": "ec47328ecfefc218",
   "locators": 115,
   "origin_id": "DL-THER-115",
   "papers": 4,
@@ -112112,7 +114206,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -112332,16 +114426,16 @@
  },
  {
   "abstention": null,
-  "complete_reads": 29,
+  "complete_reads": 30,
   "depths": [
    "NO_RECEIPT",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "c1a0ba785cc24748",
-  "locators": 908,
+  "digest": "ace1904b62cc9a30",
+  "locators": 1012,
   "origin_id": "N-01",
-  "papers": 49,
+  "papers": 50,
   "query_id": "Q-N-01",
   "rows": [
    {
@@ -112998,7 +115092,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -113348,6 +115442,42 @@
     "receipt_id": "",
     "repair_unverified": 0,
     "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
+    "unaudited_contradictions": 0
    }
   ],
   "unaudited_contradictions": 0
@@ -113471,7 +115601,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "827e14e79c393ab7",
+  "digest": "b489c35e33516c25",
   "locators": 289,
   "origin_id": "N-04",
   "papers": 14,
@@ -113579,7 +115709,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -113873,7 +116003,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "447daa09fa90c93d",
+  "digest": "e18881707c639b46",
   "locators": 755,
   "origin_id": "N-05",
   "papers": 45,
@@ -114322,7 +116452,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -114741,16 +116871,16 @@
  },
  {
   "abstention": null,
-  "complete_reads": 29,
+  "complete_reads": 30,
   "depths": [
    "NO_RECEIPT",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "ff1361cefb8e209b",
-  "locators": 908,
+  "digest": "8fd28cae2e793a24",
+  "locators": 1012,
   "origin_id": "N-06",
-  "papers": 49,
+  "papers": 50,
   "query_id": "Q-N-06",
   "rows": [
    {
@@ -115407,7 +117537,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -115757,21 +117887,57 @@
     "receipt_id": "",
     "repair_unverified": 0,
     "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
+    "unaudited_contradictions": 0
    }
   ],
   "unaudited_contradictions": 0
  },
  {
   "abstention": null,
-  "complete_reads": 1,
+  "complete_reads": 3,
   "depths": [
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "5bece276e7b1adf2",
-  "locators": 48,
+  "digest": "ada2c52b8eb4eeba",
+  "locators": 177,
   "origin_id": "N-07",
-  "papers": 2,
+  "papers": 4,
   "query_id": "Q-N-07",
   "rows": [
    {
@@ -115802,6 +117968,21 @@
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
     "audited_entries": 0,
+    "contradiction_verdicts": [],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 25,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42128308.json",
+    "pmid": "42128308",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 2,
+    "receipt_id": "FTR-20260810-42128308-02",
+    "repair_unverified": 0,
+    "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "UNAUDITED",
+    "audited_entries": 0,
     "contradiction_verdicts": [
      {
       "auditors": 1,
@@ -115817,22 +117998,58 @@
     "receipt_id": "FTR-20260921-42589397-01",
     "repair_unverified": 1,
     "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
+    "unaudited_contradictions": 0
    }
   ],
   "unaudited_contradictions": 0
  },
  {
   "abstention": null,
-  "complete_reads": 28,
+  "complete_reads": 29,
   "depths": [
    "NO_RECEIPT",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "0ace54b2e2078014",
-  "locators": 876,
+  "digest": "71146b94f60e43e9",
+  "locators": 980,
   "origin_id": "N-08",
-  "papers": 47,
+  "papers": 48,
   "query_id": "Q-N-08",
   "rows": [
    {
@@ -116418,7 +118635,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -116786,6 +119003,42 @@
     "receipt_events": 0,
     "receipt_id": "",
     "repair_unverified": 0,
+    "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
     "unaudited_contradictions": 0
    }
   ],
@@ -117337,16 +119590,16 @@
  },
  {
   "abstention": null,
-  "complete_reads": 28,
+  "complete_reads": 29,
   "depths": [
    "NO_RECEIPT",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "4db896e093c7a120",
-  "locators": 887,
+  "digest": "013ced83886043fe",
+  "locators": 991,
   "origin_id": "N-11",
-  "papers": 48,
+  "papers": 49,
   "query_id": "Q-N-11",
   "rows": [
    {
@@ -117907,7 +120160,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -118301,6 +120554,42 @@
     "receipt_events": 0,
     "receipt_id": "",
     "repair_unverified": 0,
+    "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
     "unaudited_contradictions": 0
    }
   ],
@@ -119215,16 +121504,16 @@
  },
  {
   "abstention": null,
-  "complete_reads": 31,
+  "complete_reads": 32,
   "depths": [
    "NO_RECEIPT",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "a388354d5e64d99a",
-  "locators": 1002,
+  "digest": "c690b8708a402311",
+  "locators": 1106,
   "origin_id": "N-15",
-  "papers": 54,
+  "papers": 55,
   "query_id": "Q-N-15",
   "rows": [
    {
@@ -119835,7 +122124,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -120341,6 +122630,42 @@
     "receipt_id": "",
     "repair_unverified": 0,
     "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
+    "unaudited_contradictions": 0
    }
   ],
   "unaudited_contradictions": 2
@@ -120390,16 +122715,16 @@
  },
  {
   "abstention": null,
-  "complete_reads": 32,
+  "complete_reads": 33,
   "depths": [
    "NO_RECEIPT",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "d03bd43132276ce2",
-  "locators": 1006,
+  "digest": "62658ca07b0a97dc",
+  "locators": 1110,
   "origin_id": "N-17",
-  "papers": 55,
+  "papers": 56,
   "query_id": "Q-N-17",
   "rows": [
    {
@@ -121032,7 +123357,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -121502,6 +123827,42 @@
     "receipt_id": "",
     "repair_unverified": 0,
     "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
+    "unaudited_contradictions": 0
    }
   ],
   "unaudited_contradictions": 2
@@ -121514,7 +123875,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "d96d1e14436103cb",
+  "digest": "c59681689aff2b20",
   "locators": 1016,
   "origin_id": "CLAIM 002",
   "papers": 41,
@@ -122076,7 +124437,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -122900,7 +125261,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "1b97aee921358f50",
+  "digest": "2efe634f7deb657f",
   "locators": 275,
   "origin_id": "CLAIM 002",
   "papers": 9,
@@ -123003,7 +125364,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -123767,7 +126128,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "999afa1ce4d11c99",
+  "digest": "1440958981684a0c",
   "locators": 367,
   "origin_id": "CLAIM 016",
   "papers": 13,
@@ -123997,7 +126358,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -124339,7 +126700,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "9fa8ca234fdb168b",
+  "digest": "0a81b5307170a472",
   "locators": 243,
   "origin_id": "CLAIM 002",
   "papers": 7,
@@ -124412,7 +126773,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -124912,7 +127273,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "77647aa029821479",
+  "digest": "ee865915f6096345",
   "locators": 647,
   "origin_id": "CLAIM 007",
   "papers": 25,
@@ -125284,7 +127645,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -125572,7 +127933,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "bf4c1355c07d8c31",
+  "digest": "8715224addd42a6b",
   "locators": 688,
   "origin_id": "CLAIM 003",
   "papers": 22,
@@ -125894,7 +128255,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -126401,7 +128762,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "3c2f11741c489259",
+  "digest": "a9fe0a0de3e457ef",
   "locators": 647,
   "origin_id": "CLAIM 007",
   "papers": 25,
@@ -126773,7 +129134,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -127324,7 +129685,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "e587795879863db9",
+  "digest": "a3eb30e35c1e4bdc",
   "locators": 235,
   "origin_id": "CLAIM 002",
   "papers": 7,
@@ -127397,7 +129758,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -128886,7 +131247,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "72a1da6583f455fe",
+  "digest": "ef07a54b23f027d6",
   "locators": 167,
   "origin_id": "CLAIM 002",
   "papers": 4,
@@ -128944,7 +131305,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -129814,7 +132175,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "131425087cd5c59a",
+  "digest": "0dd0601a926ebea3",
   "locators": 97,
   "origin_id": "R-03",
   "papers": 2,
@@ -129872,7 +132233,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -129974,16 +132335,16 @@
  },
  {
   "abstention": null,
-  "complete_reads": 30,
+  "complete_reads": 31,
   "depths": [
    "NO_RECEIPT",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "eb4700d16a4f2768",
-  "locators": 941,
+  "digest": "8914e70f361fa09b",
+  "locators": 1045,
   "origin_id": "R-05",
-  "papers": 49,
+  "papers": 50,
   "query_id": "Q-R-05",
   "rows": [
    {
@@ -130544,7 +132905,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -130973,6 +133334,42 @@
     "receipt_id": "",
     "repair_unverified": 0,
     "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
+    "unaudited_contradictions": 0
    }
   ],
   "unaudited_contradictions": 0
@@ -130985,7 +133382,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "38f87181ae616724",
+  "digest": "39c359fd89c9a1bc",
   "locators": 768,
   "origin_id": "R-06",
   "papers": 37,
@@ -131370,7 +133767,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -131843,7 +134240,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "42147dc0651da003",
+  "digest": "e0820592a2f771cd",
   "locators": 182,
   "origin_id": "R-07",
   "papers": 11,
@@ -131951,7 +134348,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -132115,16 +134512,16 @@
  },
  {
   "abstention": null,
-  "complete_reads": 31,
+  "complete_reads": 32,
   "depths": [
    "NO_RECEIPT",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "b762720f29caab97",
-  "locators": 956,
+  "digest": "66f20b32c7a6b2e8",
+  "locators": 1060,
   "origin_id": "R-08",
-  "papers": 51,
+  "papers": 52,
   "query_id": "Q-R-08",
   "rows": [
    {
@@ -132765,7 +135162,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -133160,22 +135557,58 @@
     "receipt_id": "",
     "repair_unverified": 0,
     "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
+    "unaudited_contradictions": 0
    }
   ],
   "unaudited_contradictions": 2
  },
  {
   "abstention": null,
-  "complete_reads": 28,
+  "complete_reads": 29,
   "depths": [
    "NO_RECEIPT",
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "e7642809e8e6060b",
-  "locators": 887,
+  "digest": "9a9460a24e715dbb",
+  "locators": 991,
   "origin_id": "R-09",
-  "papers": 48,
+  "papers": 49,
   "query_id": "Q-R-09",
   "rows": [
    {
@@ -133736,7 +136169,7 @@
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
     "pmid": "34268881",
     "reading_depth": "partial_fulltext_read",
-    "receipt_events": 9,
+    "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
     "unaudited_contradictions": 0
@@ -134130,6 +136563,179 @@
     "receipt_events": 0,
     "receipt_id": "",
     "repair_unverified": 0,
+    "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
+    "unaudited_contradictions": 0
+   }
+  ],
+  "unaudited_contradictions": 0
+ },
+ {
+  "abstention": null,
+  "complete_reads": 1,
+  "depths": [
+   "complete_fulltext_read"
+  ],
+  "digest": "ce4338873a10b7ae",
+  "locators": 104,
+  "origin_id": "R-10",
+  "papers": 1,
+  "query_id": "Q-R-10",
+  "rows": [
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "bound_check": {
+     "binding": "UNVERIFIED",
+     "endpoint_words_found": [
+      "atf4"
+     ],
+     "endpoint_words_missing": [
+      "eif2",
+      "alpha",
+      "phosphorylation",
+      "protein"
+     ],
+     "publication_types": [
+      "Journal Article"
+     ],
+     "reason": "endpoint words not in its title/abstract: eif2, alpha, phosphorylation, protein",
+     "retrieved_at": "2026-10-26",
+     "source": "NCBI PubMed efetch",
+     "title": "Alzheimer's disease risk gene Wwox controls amyloid pathology through metabolic reprogramming."
+    },
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
+    "unaudited_contradictions": 0
+   }
+  ],
+  "unaudited_contradictions": 0
+ },
+ {
+  "abstention": null,
+  "complete_reads": 1,
+  "depths": [
+   "complete_fulltext_read"
+  ],
+  "digest": "bd838eaebb83a94c",
+  "locators": 104,
+  "origin_id": "R-11",
+  "papers": 1,
+  "query_id": "Q-R-11",
+  "rows": [
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "bound_check": {
+     "binding": "UNVERIFIED",
+     "endpoint_words_found": [
+      "lactate"
+     ],
+     "endpoint_words_missing": [
+      "activity"
+     ],
+     "publication_types": [
+      "Journal Article"
+     ],
+     "reason": "endpoint words not in its title/abstract: activity",
+     "retrieved_at": "2026-10-26",
+     "source": "NCBI PubMed efetch",
+     "title": "Alzheimer's disease risk gene Wwox controls amyloid pathology through metabolic reprogramming."
+    },
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "WWOX EVIDENCE (receipted in this repository)",
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
     "unaudited_contradictions": 0
    }
   ],

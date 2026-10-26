@@ -1053,16 +1053,23 @@
  },
  {
   "axis": "all",
-  "digest": "504e1a4cd16a7469",
+  "digest": "2840ca03536b29de",
   "kind": "claim",
   "linkage": {
-   "ids_in_registry_without_pmid": [],
+   "ids_in_registry_without_pmid": [
+    "PAPER 158"
+   ],
    "ids_named": [
-    "PAPER 091"
+    "PAPER 029",
+    "PAPER 091",
+    "PAPER 158",
+    "PAPER 567"
    ],
    "ids_not_found_in_registry": [],
    "ids_reaching_a_pmid": [
-    "PAPER 091"
+    "PAPER 029",
+    "PAPER 091",
+    "PAPER 567"
    ]
   },
   "origin_file": "disease-models/wwox/registries/claim_registry_current.md",
@@ -1070,12 +1077,22 @@
   "origin_line": 501,
   "origin_title": "The WWOX/HIF1A ratio may function as a systems-level marker of maladaptive biological state, linking glycolysis, inflammatory tone and Wnt-related signaling",
   "papers_named": [
-   "PAPER 091"
+   "PAPER 029",
+   "PAPER 091",
+   "PAPER 158",
+   "PAPER 567"
   ],
   "pmids": [
    "29724996",
-   "42589397"
+   "42128308",
+   "42589397",
+   "42909904"
   ],
+  "pmids_via_records": {
+   "42128308": [
+    "PAPER 029"
+   ]
+  },
   "query_id": "Q-CLAIM025",
   "terms": [
    "WWOX",
@@ -2217,7 +2234,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "e8b13930bfcc283e",
+  "digest": "96a3c2c6b3fb86c7",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-002"
@@ -2234,7 +2251,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-BIO-003",
-  "origin_line": 501,
+  "origin_line": 504,
   "origin_title": "DL-BIO-003 — Assay qPCR region-specifico esone 8–9 vs core (esoni 4–6): misura diretta dell'effetto dell'allele di sito accettore",
   "papers_named": [],
   "pmids": [
@@ -2278,7 +2295,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "3f2e712561b66713",
+  "digest": "ddacd6bbaa2de2d6",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-001",
@@ -2298,7 +2315,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-BIO-004",
-  "origin_line": 509,
+  "origin_line": 512,
   "origin_title": "DL-BIO-004 — pTyr33-WWOX come readout dello stato funzionale, con batteria a valle di aggregati",
   "papers_named": [],
   "pmids": [
@@ -2349,7 +2366,8 @@
    "41124647",
    "42068099",
    "42248868",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "15064722": [
@@ -2498,6 +2516,9 @@
    ],
    "42721537": [
     "DL-MECH-019"
+   ],
+   "42909904": [
+    "DL-MECH-019"
    ]
   },
   "query_id": "Q-DL-BIO-004",
@@ -2567,7 +2588,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "7d6d6af433066e6a",
+  "digest": "613136cca9556c2c",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-020"
@@ -2584,7 +2605,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-BIO-007",
-  "origin_line": 652,
+  "origin_line": 655,
   "origin_title": "DL-BIO-007 — Lattato sierico, glicemia e insulina come biomarcatori metabolici in vivo del deficit di WWOX",
   "papers_named": [],
   "pmids": [
@@ -2632,7 +2653,8 @@
    "40336300",
    "41124647",
    "42248868",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "15064722": [
@@ -2766,6 +2788,9 @@
    ],
    "42721537": [
     "DL-MECH-020"
+   ],
+   "42909904": [
+    "DL-MECH-020"
    ]
   },
   "query_id": "Q-DL-BIO-007",
@@ -2777,7 +2802,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "1bbb86eb090f0a37",
+  "digest": "8e899b027a30efa7",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-005",
@@ -2789,20 +2814,24 @@
    "ids_named": [
     "DL-BIO-005",
     "DL-BIO-007",
-    "DL-MECH-034"
+    "DL-MECH-034",
+    "PAPER 567"
    ],
    "ids_not_found_in_registry": [],
    "ids_reaching_a_pmid": [
     "DL-BIO-005",
     "DL-BIO-007",
-    "DL-MECH-034"
+    "DL-MECH-034",
+    "PAPER 567"
    ]
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-BIO-008",
-  "origin_line": 797,
+  "origin_line": 800,
   "origin_title": "⚠️ DL-BIO-008 — Contraddizione sul lattato: alto nel siero del topo, **\"extremely low\" nell'MRS cerebrale umana**",
-  "papers_named": [],
+  "papers_named": [
+   "PAPER 567"
+  ],
   "pmids": [
    "15064722",
    "17803050",
@@ -2852,7 +2881,8 @@
    "40336300",
    "41124647",
    "42248868",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "15064722": [
@@ -3034,6 +3064,9 @@
    "42721537": [
     "DL-BIO-007",
     "DL-MECH-034"
+   ],
+   "42909904": [
+    "PAPER 567"
    ]
   },
   "query_id": "Q-DL-BIO-008",
@@ -3045,7 +3078,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "43c9cb17f65e7445",
+  "digest": "4b2bd24ce9df65af",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-005",
@@ -3065,7 +3098,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-BIO-009",
-  "origin_line": 946,
+  "origin_line": 950,
   "origin_title": "DL-BIO-009 — Il metabolismo umano nel deficit di WWOX è, per quanto misurato, **normale**. Il modello murino non si trasferisce.",
   "papers_named": [],
   "pmids": [
@@ -3167,7 +3200,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "b4e3275edd4d7ebc",
+  "digest": "f26d576cfd8cf676",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-017"
@@ -3184,7 +3217,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-BIO-011",
-  "origin_line": 1573,
+  "origin_line": 1577,
   "origin_title": "DL-BIO-011 — Pannello multivalente PPxY come endpoint prossimale di rescue funzionale WWOX",
   "papers_named": [],
   "pmids": [
@@ -3235,7 +3268,8 @@
    "41124647",
    "42068099",
    "42248868",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "15064722": [
@@ -3378,6 +3412,9 @@
    ],
    "42721537": [
     "DL-MECH-017"
+   ],
+   "42909904": [
+    "DL-MECH-017"
    ]
   },
   "query_id": "Q-DL-BIO-011",
@@ -3391,7 +3428,7 @@
   "claims_named": [
    "CLAIM 030"
   ],
-  "digest": "061134ff7c3b3f76",
+  "digest": "07f147bac2097e9c",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-001",
@@ -3416,7 +3453,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-BIO-012",
-  "origin_line": 1798,
+  "origin_line": 1802,
   "origin_title": "DL-BIO-012 — Il pull-down GSK3β come **readout di integrità del fold SDR** per gli alleli missense",
   "papers_named": [],
   "pmids": [
@@ -3473,7 +3510,8 @@
    "41124647",
    "42068099",
    "42248868",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "12065620": [
@@ -3696,6 +3734,10 @@
    "42721537": [
     "DL-MECH-019",
     "DL-MECH-064"
+   ],
+   "42909904": [
+    "DL-MECH-019",
+    "DL-MECH-064"
    ]
   },
   "query_id": "Q-DL-BIO-012",
@@ -3710,7 +3752,7 @@
    "CLAIM 017",
    "CLAIM 030"
   ],
-  "digest": "1c81bf51d156e498",
+  "digest": "9a03058c96e01451",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-066",
@@ -3734,7 +3776,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-BIO-013",
-  "origin_line": 1790,
+  "origin_line": 1794,
   "origin_title": "DL-BIO-013 — Il rapporto di splicing **β1:β2** di GSK3B come candidato modificatore genetico della severità",
   "papers_named": [],
   "pmids": [
@@ -3792,7 +3834,8 @@
    "41124647",
    "42068099",
    "42248868",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "12065620": [
@@ -4019,6 +4062,10 @@
    "42721537": [
     "DL-MECH-066",
     "DL-MECH-067"
+   ],
+   "42909904": [
+    "DL-MECH-066",
+    "DL-MECH-067"
    ]
   },
   "query_id": "Q-DL-BIO-013",
@@ -4034,7 +4081,7 @@
    "CLAIM 007",
    "CLAIM 030"
   ],
-  "digest": "4fffd5ff645f9df5",
+  "digest": "2d31ed7d66da0caa",
   "kind": "lead",
   "leads_named": [
    "DL-THER-089"
@@ -4057,7 +4104,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-BIO-085",
-  "origin_line": 2421,
+  "origin_line": 2425,
   "origin_title": "DL-BIO-085 — L'abbondanza di proteina WWOX non è una lettura della funzione di WWOX, e le due misure che lo chiudono vengono da lati opposti",
   "papers_named": [],
   "pmids": [
@@ -4231,7 +4278,7 @@
   "claims_named": [
    "CLAIM 030"
   ],
-  "digest": "0c60e949a3ddeaf1",
+  "digest": "744dc60f0e9280aa",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-001",
@@ -4293,7 +4340,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-BIO-090",
-  "origin_line": 2501,
+  "origin_line": 2505,
   "origin_title": "DL-BIO-090 — «Missenso» non è una classe funzionale: la premessa sotto la traccia ipomorfi/ASO va riscritta, non difesa con un controesempio",
   "papers_named": [],
   "pmids": [
@@ -4376,7 +4423,8 @@
    "42397075",
    "42422765",
    "42558002",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "15064722": [
@@ -4646,6 +4694,10 @@
    "42721537": [
     "DL-MECH-017",
     "DL-META-091"
+   ],
+   "42909904": [
+    "DL-MECH-017",
+    "DL-META-091"
    ]
   },
   "query_id": "Q-DL-BIO-090",
@@ -4657,7 +4709,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "21a58df70e7fb5dc",
+  "digest": "74d6aa3d4724b6da",
   "kind": "lead",
   "leads_named": [
    "DL-METH-094"
@@ -4674,7 +4726,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-BIO-095",
-  "origin_line": 3421,
+  "origin_line": 3425,
   "origin_title": "DL-BIO-095 — **Il primo fenotipo umano quantitativo di WWOX fuori dal cancro e fuori dal neurosviluppo — ed è dominante, piccolo, e non codificante**",
   "papers_named": [],
   "pmids": [
@@ -4762,7 +4814,8 @@
    "42397075",
    "42422765",
    "42558002",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "15064722": [
@@ -5016,6 +5069,9 @@
    ],
    "42721537": [
     "DL-METH-094"
+   ],
+   "42909904": [
+    "DL-METH-094"
    ]
   },
   "query_id": "Q-DL-BIO-095",
@@ -5030,7 +5086,7 @@
    "CLAIM 009",
    "CLAIM 025"
   ],
-  "digest": "367aebc681f35331",
+  "digest": "84714c42539b06b7",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -5051,7 +5107,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-BIOM-014",
-  "origin_line": 3478,
+  "origin_line": 3482,
   "origin_title": "DL-BIOM-014 — **Il set di geni glicolitici che riporta la perdita di WWOX non è fisso: cambia fra due contesti dello stesso tessuto, e il gene di punta è quello che cade**",
   "papers_named": [
    "PAPER 061",
@@ -5068,7 +5124,9 @@
    "34214506",
    "35328751",
    "36537114",
-   "42589397"
+   "42128308",
+   "42589397",
+   "42909904"
   ],
   "pmids_via_records": {
    "17567906": [
@@ -5092,7 +5150,13 @@
    "36537114": [
     "CLAIM 009"
    ],
+   "42128308": [
+    "CLAIM 025"
+   ],
    "42589397": [
+    "CLAIM 025"
+   ],
+   "42909904": [
     "CLAIM 025"
    ]
   },
@@ -6870,7 +6934,7 @@
   "claims_named": [
    "CLAIM 007"
   ],
-  "digest": "1c1e197709fb27c3",
+  "digest": "ae2cf56cf04793c1",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-033"
@@ -6940,7 +7004,8 @@
    "41124647",
    "42068099",
    "42248868",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "15064722": [
@@ -7082,6 +7147,9 @@
     "DL-MECH-033"
    ],
    "42721537": [
+    "DL-MECH-033"
+   ],
+   "42909904": [
     "DL-MECH-033"
    ]
   },
@@ -7290,7 +7358,7 @@
   "claims_named": [
    "CLAIM 030"
   ],
-  "digest": "b17677d2d57277e0",
+  "digest": "7aa8359615aa5a2f",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-001",
@@ -7314,7 +7382,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-019",
-  "origin_line": 453,
+  "origin_line": 454,
   "origin_title": "DL-MECH-019 — Q230 cade nel dominio SDR che media il binding a tau/GSK3β/TPC6AΔ: catalisi intatta ≠ funzione conservata",
   "papers_named": [
    "PAPER 056"
@@ -7367,7 +7435,8 @@
    "41124647",
    "42068099",
    "42248868",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "15064722": [
@@ -7505,6 +7574,9 @@
    ],
    "42721537": [
     "DL-MECH-017"
+   ],
+   "42909904": [
+    "DL-MECH-017"
    ]
   },
   "query_id": "Q-DL-MECH-019",
@@ -7517,7 +7589,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "194739eb2d79fda2",
+  "digest": "773c842a8c263dda",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-021",
@@ -7527,19 +7599,23 @@
    "ids_in_registry_without_pmid": [],
    "ids_named": [
     "DL-MECH-021",
-    "DL-MECH-095"
+    "DL-MECH-095",
+    "PAPER 567"
    ],
    "ids_not_found_in_registry": [],
    "ids_reaching_a_pmid": [
     "DL-MECH-021",
-    "DL-MECH-095"
+    "DL-MECH-095",
+    "PAPER 567"
    ]
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-020",
-  "origin_line": 471,
+  "origin_line": 472,
   "origin_title": "DL-MECH-020 — WWOX-loss induce un fenotipo Warburg-like via HIF1α: razionale meccanicistico WWOX-specifico per la dieta chetogenica",
-  "papers_named": [],
+  "papers_named": [
+   "PAPER 567"
+  ],
   "pmids": [
    "15064722",
    "17803050",
@@ -7585,7 +7661,8 @@
    "40336300",
    "41124647",
    "42248868",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "15064722": [
@@ -7698,6 +7775,9 @@
    ],
    "42248868": [
     "DL-MECH-095"
+   ],
+   "42909904": [
+    "PAPER 567"
    ]
   },
   "query_id": "Q-DL-MECH-020",
@@ -7709,7 +7789,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "3a6424132c5eadb0",
+  "digest": "e814670f60f2373e",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-020"
@@ -7726,7 +7806,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-021",
-  "origin_line": 530,
+  "origin_line": 533,
   "origin_title": "DL-MECH-021 — Perdita di wwox altera in vivo le dinamiche del Ca²⁺; il rescue riesce col solo dominio SDR/ADH",
   "papers_named": [],
   "pmids": [
@@ -7774,7 +7854,8 @@
    "40336300",
    "41124647",
    "42248868",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "15064722": [
@@ -7908,6 +7989,9 @@
    ],
    "42721537": [
     "DL-MECH-020"
+   ],
+   "42909904": [
+    "DL-MECH-020"
    ]
   },
   "query_id": "Q-DL-MECH-021",
@@ -7923,7 +8007,7 @@
    "CLAIM 019",
    "CLAIM 039"
   ],
-  "digest": "7c033219fa8db83b",
+  "digest": "d6863d2e68eb366d",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-002",
@@ -7951,7 +8035,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-022",
-  "origin_line": 552,
+  "origin_line": 555,
   "origin_title": "DL-MECH-022 — Posizionamento genotipo-fenotipo: il genotipo di riferimento sta tra il null puro (WOREE) e l'ipomorfo (SCAR12)",
   "papers_named": [
    "PAPER 042",
@@ -8038,23 +8122,35 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "808be99513295ac6",
+  "digest": "5455896ab838328f",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
    "ids_in_registry_without_pmid": [],
-   "ids_named": [],
+   "ids_named": [
+    "PAPER 567"
+   ],
    "ids_not_found_in_registry": [],
-   "ids_reaching_a_pmid": []
+   "ids_reaching_a_pmid": [
+    "PAPER 567"
+   ]
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-023",
   "origin_line": 412,
   "origin_title": "DL-MECH-023 — WWOX orienta UPR adattativa-vs-terminale sotto stress ER ⚠️ (qualificato 2026-10-03, CC-20261003-C-APOPTOSIS-DIRECTION-01: le Figure 5c-5e di Janczar 2017, che portano la tesi su IRE-1, non recano alcun marcatore di significativita', e l'incremento assoluto di vitalita' prodotto da KIR",
-  "papers_named": [],
-  "pmids": [
-   "28749468"
+  "papers_named": [
+   "PAPER 567"
   ],
+  "pmids": [
+   "28749468",
+   "42909904"
+  ],
+  "pmids_via_records": {
+   "42909904": [
+    "PAPER 567"
+   ]
+  },
   "query_id": "Q-DL-MECH-023",
   "terms": [
    "MECH",
@@ -8068,7 +8164,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "ef36e298169e5e90",
+  "digest": "49a2a78d249b7c00",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -8079,7 +8175,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-024",
-  "origin_line": 419,
+  "origin_line": 420,
   "origin_title": "DL-MECH-024 — WWOX–BRCA1/WW1 regola end-resection e scelta della riparazione DSB",
   "papers_named": [],
   "pmids": [
@@ -8101,7 +8197,7 @@
   "claims_named": [
    "CLAIM 025"
   ],
-  "digest": "1a533ef592091379",
+  "digest": "ab05c4a59f3c7c43",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -8116,20 +8212,28 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-025",
-  "origin_line": 427,
+  "origin_line": 428,
   "origin_title": "DL-MECH-025 — Retraction-dependency cluster WWOX/HIF/Met nelle metastasi ossee",
   "papers_named": [],
   "pmids": [
    "28045433",
    "28151481",
    "29724996",
-   "42589397"
+   "42128308",
+   "42589397",
+   "42909904"
   ],
   "pmids_via_records": {
    "29724996": [
     "CLAIM 025"
    ],
+   "42128308": [
+    "CLAIM 025"
+   ],
    "42589397": [
+    "CLAIM 025"
+   ],
+   "42909904": [
     "CLAIM 025"
    ]
   },
@@ -8143,7 +8247,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "1a81456d9154a630",
+  "digest": "f9fddef3136ee487",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-002",
@@ -8166,7 +8270,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-026",
-  "origin_line": 614,
+  "origin_line": 617,
   "origin_title": "DL-MECH-026 — Il ratto *lde* è il proxy animale dell'allele di sito accettore del genotipo di riferimento: lesione dell'esone 9 → proteina assente + epilessia audiogenica nel 95%",
   "papers_named": [],
   "pmids": [
@@ -8214,7 +8318,8 @@
    "40336300",
    "41124647",
    "42248868",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "15064722": [
@@ -8353,6 +8458,9 @@
    ],
    "42721537": [
     "DL-MECH-021"
+   ],
+   "42909904": [
+    "DL-MECH-021"
    ]
   },
   "query_id": "Q-DL-MECH-026",
@@ -8363,7 +8471,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "4430d487ea501466",
+  "digest": "6098b7279c5cc7c0",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-022"
@@ -8380,7 +8488,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-027",
-  "origin_line": 625,
+  "origin_line": 628,
   "origin_title": "DL-MECH-027 — Nel *lde*: ipomielinizzazione con oligodendrociti maturi ridotti e **neuroni intatti**. Il substrato è salvabile",
   "papers_named": [],
   "pmids": [
@@ -8474,7 +8582,7 @@
   "claims_named": [
    "CLAIM 019"
   ],
-  "digest": "d9054c91ce05db8b",
+  "digest": "9d888e3af7170039",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-019",
@@ -8498,7 +8606,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-028",
-  "origin_line": 643,
+  "origin_line": 646,
   "origin_title": "DL-MECH-028 — WWOX lega HIF1α via **WW1**, non via SDR: l'asse metabolico potrebbe essere parzialmente preservato in Q230P",
   "papers_named": [
    "PAPER 007"
@@ -8551,7 +8659,8 @@
    "41124647",
    "42068099",
    "42248868",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "15064722": [
@@ -8710,6 +8819,9 @@
    ],
    "42721537": [
     "DL-MECH-019"
+   ],
+   "42909904": [
+    "DL-MECH-019"
    ]
   },
   "query_id": "Q-DL-MECH-028",
@@ -8726,7 +8838,7 @@
   "claims_named": [
    "CLAIM 019"
   ],
-  "digest": "842ad5097a7d404c",
+  "digest": "d1f198c2f42d1026",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-001",
@@ -8754,7 +8866,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-029",
-  "origin_line": 685,
+  "origin_line": 688,
   "origin_title": "🔴 DL-MECH-029 — Q230P: trascritto normale, **proteina non rilevata**; causa traduttiva versus degradativa non risolta",
   "papers_named": [],
   "pmids": [
@@ -8805,7 +8917,8 @@
    "41124647",
    "42068099",
    "42248868",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "15064722": [
@@ -8962,6 +9075,9 @@
    ],
    "42721537": [
     "DL-MECH-019"
+   ],
+   "42909904": [
+    "DL-MECH-019"
    ]
   },
   "query_id": "Q-DL-MECH-029",
@@ -8975,7 +9091,7 @@
   "claims_named": [
    "CLAIM 019"
   ],
-  "digest": "4f60a2f09fd5ebe2",
+  "digest": "f1e972b8272903bf",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-022",
@@ -8999,7 +9115,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-030",
-  "origin_line": 711,
+  "origin_line": 714,
   "origin_title": "DL-MECH-030 — Genotipo e mortalità in WWOX-DEE: il dato prognostico più diretto che esista per il genotipo di riferimento (e i suoi limiti)",
   "papers_named": [
    "PAPER 018"
@@ -9052,7 +9168,8 @@
    "41124647",
    "42068099",
    "42248868",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "15064722": [
@@ -9202,6 +9319,9 @@
    ],
    "42721537": [
     "DL-MECH-029"
+   ],
+   "42909904": [
+    "DL-MECH-029"
    ]
   },
   "query_id": "Q-DL-MECH-030",
@@ -9216,7 +9336,7 @@
   "claims_named": [
    "CLAIM 011"
   ],
-  "digest": "5b96d880caf80218",
+  "digest": "8bbab1a9d11e1b5f",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-027"
@@ -9235,7 +9355,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-031",
-  "origin_line": 729,
+  "origin_line": 732,
   "origin_title": "DL-MECH-031 — L'ipomielinizzazione WWOX è **secondaria al neurone**, non un difetto autonomo dell'oligodendrocita. E la finestra della terapia genica è neonatale",
   "papers_named": [],
   "pmids": [
@@ -9394,7 +9514,7 @@
    "CLAIM 019",
    "CLAIM 030"
   ],
-  "digest": "0a7e4d7a98afba9a",
+  "digest": "c73329656f3df775",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-026",
@@ -9425,7 +9545,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-033",
-  "origin_line": 756,
+  "origin_line": 759,
   "origin_title": "⭐ DL-MECH-033 — La serie allelica di WWOX: **la quantità di proteina non predice la severità. Conta la funzione residua.**",
   "papers_named": [
    "PAPER 098"
@@ -9478,7 +9598,8 @@
    "41124647",
    "42068099",
    "42248868",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "15064722": [
@@ -9614,6 +9735,9 @@
    ],
    "42721537": [
     "DL-MECH-026"
+   ],
+   "42909904": [
+    "DL-MECH-026"
    ]
   },
   "query_id": "Q-DL-MECH-033",
@@ -9625,7 +9749,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "5073057da14a4424",
+  "digest": "f078d1bfeadb89a1",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-008",
@@ -9645,7 +9769,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-034",
-  "origin_line": 785,
+  "origin_line": 788,
   "origin_title": "🎯 DL-MECH-034 — Il fenotipo Warburg è confermato **in tessuto neurale umano**: chiude il gap che indeboliva l'ipotesi chetogenica",
   "papers_named": [],
   "pmids": [
@@ -9697,7 +9821,8 @@
    "40336300",
    "41124647",
    "42248868",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "15064722": [
@@ -9844,6 +9969,10 @@
    ],
    "42721537": [
     "DL-MECH-020"
+   ],
+   "42909904": [
+    "DL-BIO-008",
+    "DL-MECH-020"
    ]
   },
   "query_id": "Q-DL-MECH-034",
@@ -9856,7 +9985,7 @@
   "claims_named": [
    "CLAIM 001"
   ],
-  "digest": "a348a206342a7213",
+  "digest": "9298c1bd3ac53841",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -9871,7 +10000,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-035",
-  "origin_line": 808,
+  "origin_line": 812,
   "origin_title": "DL-MECH-035 — GABA depolarizzante negli organoidi WWOX-KO: perché gli antiepilettici standard sottoperformano",
   "papers_named": [],
   "pmids": [
@@ -9929,7 +10058,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "52db1dcec3b91070",
+  "digest": "b0858af1eee45280",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -9940,7 +10069,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-036",
-  "origin_line": 826,
+  "origin_line": 830,
   "origin_title": "DL-MECH-036 — Vie di degradazione di WWOX già note e druggabili (ma probabilmente non quelle giuste)",
   "papers_named": [],
   "pmids": [
@@ -9958,7 +10087,7 @@
    "CLAIM 019",
    "CLAIM 030"
   ],
-  "digest": "332c1da6f315fe48",
+  "digest": "382dd984505b4f60",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-026",
@@ -9985,7 +10114,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-037",
-  "origin_line": 847,
+  "origin_line": 851,
   "origin_title": "⭐ DL-MECH-037 — Q230P è **l'unica delle tre varianti a essere una lesione di ripiegamento del core**. Il ΔΔG non lo diceva; la sepoltura sì.",
   "papers_named": [],
   "pmids": [
@@ -10036,7 +10165,8 @@
    "41124647",
    "42068099",
    "42248868",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "15064722": [
@@ -10227,6 +10357,10 @@
    "42721537": [
     "DL-MECH-026",
     "DL-MOL-010"
+   ],
+   "42909904": [
+    "DL-MECH-026",
+    "DL-MOL-010"
    ]
   },
   "query_id": "Q-DL-MECH-037",
@@ -10240,7 +10374,7 @@
   "claims_named": [
    "CLAIM 001"
   ],
-  "digest": "828252adf5486331",
+  "digest": "d4328d346b1e89f9",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-035"
@@ -10259,7 +10393,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-038",
-  "origin_line": 894,
+  "origin_line": 898,
   "origin_title": "🔴 DL-MECH-038 — Il vigabatrin **ha funzionato** in due bambini WWOX-null. Il razionale GABA-depolarizzante non predice la risposta clinica.",
   "papers_named": [],
   "pmids": [
@@ -10326,7 +10460,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "ede296bbe046a06b",
+  "digest": "c9fc2cdd5e811a99",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-030"
@@ -10343,7 +10477,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-039",
-  "origin_line": 907,
+  "origin_line": 911,
   "origin_title": "🔴 DL-MECH-039 — È una **DEE, non una EE**: controllare le crisi non salva lo sviluppo. E questo tocca la logica stessa di \"guadagnare tempo\".",
   "papers_named": [],
   "pmids": [
@@ -10395,7 +10529,8 @@
    "41124647",
    "42068099",
    "42248868",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "15064722": [
@@ -10541,6 +10676,9 @@
    ],
    "42721537": [
     "DL-MECH-030"
+   ],
+   "42909904": [
+    "DL-MECH-030"
    ]
   },
   "query_id": "Q-DL-MECH-039",
@@ -10552,7 +10690,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "9e4b5b437d8f3713",
+  "digest": "c935e35d70ad0961",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-034",
@@ -10572,7 +10710,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-040",
-  "origin_line": 918,
+  "origin_line": 922,
   "origin_title": "🟢 DL-MECH-040 — Un **fenotipo intermedio** esiste, ed è documentato proprio nella classe genotipica del genotipo di riferimento (null + missense)",
   "papers_named": [],
   "pmids": [
@@ -10628,7 +10766,8 @@
    "41124647",
    "42068099",
    "42248868",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "15064722": [
@@ -10802,6 +10941,10 @@
    "42721537": [
     "DL-MECH-034",
     "DL-MECH-037"
+   ],
+   "42909904": [
+    "DL-MECH-034",
+    "DL-MECH-037"
    ]
   },
   "query_id": "Q-DL-MECH-040",
@@ -10812,7 +10955,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "89bddb4808468ce2",
+  "digest": "42a80d4b169f73e5",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-042"
@@ -10829,7 +10972,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-041",
-  "origin_line": 927,
+  "origin_line": 931,
   "origin_title": "DL-MECH-041 — Polimicrogiria: WWOX tocca anche la **migrazione neuronale** (e una review recente lo nega)",
   "papers_named": [],
   "pmids": [
@@ -10849,7 +10992,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "1151a5e6ac772a56",
+  "digest": "94ce4c0033fe9b10",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -10860,7 +11003,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-042",
-  "origin_line": 934,
+  "origin_line": 938,
   "origin_title": "DL-MECH-042 — Il quadro di neuroimaging del WOREE: cosa è costante, cosa progredisce, cosa non sappiamo misurare",
   "papers_named": [],
   "pmids": [
@@ -10877,7 +11020,7 @@
   "claims_named": [
    "CLAIM 030"
   ],
-  "digest": "dd7b360f76288c77",
+  "digest": "6445af491c5a641d",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-034"
@@ -10896,7 +11039,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-043",
-  "origin_line": 987,
+  "origin_line": 991,
   "origin_title": "DL-MECH-043 — `null` vs `missense` classifica la **sintassi della variante**, non la **funzione residua della proteina**",
   "papers_named": [],
   "pmids": [
@@ -10948,7 +11091,8 @@
    "40336300",
    "41124647",
    "42248868",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "15064722": [
@@ -11096,6 +11240,9 @@
    ],
    "42721537": [
     "DL-MECH-034"
+   ],
+   "42909904": [
+    "DL-MECH-034"
    ]
   },
   "query_id": "Q-DL-MECH-043",
@@ -11108,7 +11255,7 @@
   "claims_named": [
    "CLAIM 019"
   ],
-  "digest": "d06d5f9b13837fd0",
+  "digest": "2a0603b44f3259dc",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-002",
@@ -11130,7 +11277,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-044",
-  "origin_line": 1000,
+  "origin_line": 1004,
   "origin_title": "DL-MECH-044 — Il caso del genotipo di riferimento è **doppiamente fuori scala** rispetto alla classificazione",
   "papers_named": [],
   "pmids": [
@@ -11208,7 +11355,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "fc647a6f62c7b562",
+  "digest": "e2c8c8ebfe4978ff",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-003",
@@ -11228,7 +11375,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-045",
-  "origin_line": 1021,
+  "origin_line": 1025,
   "origin_title": "🔴 DL-MECH-045 — L'esone 9 è **l'ultimo esone**: l'allele di sito accettore del genotipo di riferimento non è un \"null silente\", ma probabilmente produce una **proteina tronca instabile**",
   "papers_named": [],
   "pmids": [
@@ -11335,7 +11482,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "6f1963610fc6c46b",
+  "digest": "1b06607df9f9d326",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-039",
@@ -11359,7 +11506,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-046",
-  "origin_line": 1068,
+  "origin_line": 1072,
   "origin_title": "🥇 DL-MECH-046 — **L'aploinsufficienza di WWOX non è deleteria.** Il bersaglio non è il 100%: è molto meno.",
   "papers_named": [
    "PAPER 098",
@@ -11416,7 +11563,8 @@
    "41124647",
    "42068099",
    "42248868",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "15064722": [
@@ -11582,6 +11730,9 @@
    ],
    "42721537": [
     "DL-MECH-039"
+   ],
+   "42909904": [
+    "DL-MECH-039"
    ]
   },
   "query_id": "Q-DL-MECH-046",
@@ -11593,7 +11744,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "517e41cb100659f2",
+  "digest": "6d3cab416b20a8f8",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -11604,7 +11755,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-047",
-  "origin_line": 1108,
+  "origin_line": 1112,
   "origin_title": "DL-MECH-047 — P252A mostra degradazione lisosomiale HSC70-associata; **CMA e trasferimento a Q230P non dimostrati**",
   "papers_named": [],
   "pmids": [
@@ -11624,7 +11775,7 @@
   "claims_named": [
    "CLAIM 019"
   ],
-  "digest": "b6a0add2873df283",
+  "digest": "79065d2ce9944971",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-047"
@@ -11645,7 +11796,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-048",
-  "origin_line": 1143,
+  "origin_line": 1147,
   "origin_title": "DL-MECH-048 — **SUPERSEDED:** possibile convergenza ACK1/ITCH/HSC70, non cascata assegnata a Q230P",
   "papers_named": [
    "PAPER 030"
@@ -11697,7 +11848,7 @@
    "CLAIM 019",
    "CLAIM 030"
   ],
-  "digest": "39bda968a12f8fe2",
+  "digest": "de7f9374ba9d574e",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-017",
@@ -11721,7 +11872,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-049",
-  "origin_line": 1187,
+  "origin_line": 1191,
   "origin_title": "DL-MECH-049 — In WWOX **stabilità e funzione sono in TENSIONE STRUTTURALE**: la stabilità si compra con l'occlusione. Vincolo di progetto per qualunque stabilizzatore di Q230P.",
   "papers_named": [],
   "pmids": [
@@ -11773,7 +11924,8 @@
    "41124647",
    "42068099",
    "42248868",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "15064722": [
@@ -11922,6 +12074,9 @@
    ],
    "42721537": [
     "DL-MECH-017"
+   ],
+   "42909904": [
+    "DL-MECH-017"
    ]
   },
   "query_id": "Q-DL-MECH-049",
@@ -11935,7 +12090,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "c26a2cb46d5660b5",
+  "digest": "35bff2b462408ee0",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-047"
@@ -11952,7 +12107,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-050",
-  "origin_line": 1231,
+  "origin_line": 1235,
   "origin_title": "DL-MECH-050 — Il motivo KFERQ-like di WWOX è **CRIPTICO**, e **Q230 ci impacchetta direttamente contro (3,9 Å)**. La vicinanza prioritizza il test dinamico, ma non ne predice l'esito.",
   "papers_named": [],
   "pmids": [
@@ -11975,7 +12130,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "ee8105efdf78ffa3",
+  "digest": "5f317bb1fa6c2fac",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-050"
@@ -11992,7 +12147,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-051",
-  "origin_line": 1278,
+  "origin_line": 1282,
   "origin_title": "DL-MECH-051 — ⚠️ **SUPERSEDED:** il modello a due vie e C299R catalitico non superano l'audit strutturale",
   "papers_named": [],
   "pmids": [
@@ -12012,7 +12167,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "a009d63d37d5db76",
+  "digest": "67a1a257fcc65b67",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -12023,7 +12178,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-052",
-  "origin_line": 1325,
+  "origin_line": 1329,
   "origin_title": "DL-MECH-052 — **WEAKENED:** ipotesi di packing elica/degron, non catena meccanicistica Q230P",
   "papers_named": [],
   "pmids": [],
@@ -12040,7 +12195,7 @@
    "CLAIM 019",
    "CLAIM 033"
   ],
-  "digest": "a4466cc151622436",
+  "digest": "4edcf639e3372f95",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-045"
@@ -12063,7 +12218,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-053",
-  "origin_line": 1372,
+  "origin_line": 1376,
   "origin_title": "DL-MECH-053 — Una chiamata exon-level corretta puo' nascondere un'architettura WWOX allelica diversa",
   "papers_named": [
    "PAPER 134"
@@ -12197,7 +12352,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "4067c70a3d34cc6d",
+  "digest": "4aeeee71235241e7",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -12208,7 +12363,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-054",
-  "origin_line": 1395,
+  "origin_line": 1399,
   "origin_title": "DL-MECH-054 — Espressione WWOX alta non identifica da sola uno stato funzionale benefico",
   "papers_named": [],
   "pmids": [
@@ -12224,7 +12379,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "be44a2ead0c9e3d0",
+  "digest": "570724242a4bf3a0",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -12235,7 +12390,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-055",
-  "origin_line": 1414,
+  "origin_line": 1418,
   "origin_title": "DL-MECH-055 — LINC01137/miR-186/WWOX e' un circuito predetto, non un asse causale dimostrato",
   "papers_named": [],
   "pmids": [
@@ -12251,7 +12406,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "1972dd03da30cebc",
+  "digest": "e06b062c93e43479",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -12262,7 +12417,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-056",
-  "origin_line": 1433,
+  "origin_line": 1437,
   "origin_title": "DL-MECH-056 — Un'associazione SNP nominale non e' ancora funzione WWOX né predizione clinica",
   "papers_named": [],
   "pmids": [
@@ -12280,7 +12435,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "0ce8eb0ec384fdb1",
+  "digest": "12bbee6c697dced4",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -12291,7 +12446,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-057",
-  "origin_line": 1451,
+  "origin_line": 1455,
   "origin_title": "DL-MECH-057 — Predizione terapeutica richiede interazione trattamento×genotipo",
   "papers_named": [],
   "pmids": [
@@ -12306,7 +12461,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "3539d531fdee3099",
+  "digest": "4623365dbeb1feba",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -12317,7 +12472,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-058",
-  "origin_line": 1469,
+  "origin_line": 1473,
   "origin_title": "DL-MECH-058 — pY33→pS14 e' un modello di stato, non uno switch molecolare dimostrato",
   "papers_named": [],
   "pmids": [
@@ -12334,7 +12489,7 @@
   "claims_named": [
    "CLAIM 031"
   ],
-  "digest": "462017127fb2a8a4",
+  "digest": "67077678f1ee4222",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -12351,7 +12506,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-059",
-  "origin_line": 1487,
+  "origin_line": 1491,
   "origin_title": "DL-MECH-059 — Una doppia diagnosi impedisce attribuzioni WWOX-specifiche",
   "papers_named": [
    "PAPER 173"
@@ -12389,7 +12544,7 @@
   "claims_named": [
    "CLAIM 031"
   ],
-  "digest": "ce14018f7a966212",
+  "digest": "c504b8a130f5d123",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -12404,7 +12559,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-060",
-  "origin_line": 1507,
+  "origin_line": 1511,
   "origin_title": "DL-MECH-060 — La composizione dei positivi genetici non e' resa diagnostica né prevalenza",
   "papers_named": [],
   "pmids": [
@@ -12440,7 +12595,7 @@
    "CLAIM 009",
    "CLAIM 028"
   ],
-  "digest": "70e55b862d29312f",
+  "digest": "26cde414d180eef8",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -12457,7 +12612,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-061",
-  "origin_line": 1527,
+  "origin_line": 1531,
   "origin_title": "DL-MECH-061 — Ca²⁺→calpaina come regolatore dell'ABBONDANZA di WWOX in un neurone eccitabile (NON come via di degradazione)",
   "papers_named": [],
   "pmids": [
@@ -12507,7 +12662,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "43bbc07a7136f0e0",
+  "digest": "4f854303a6099423",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-061"
@@ -12524,7 +12679,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-062",
-  "origin_line": 1547,
+  "origin_line": 1551,
   "origin_title": "DL-MECH-062 — Neuroligina-3 nello stesso set proteomico calpaina-sensibile",
   "papers_named": [],
   "pmids": [
@@ -12575,7 +12730,7 @@
    "CLAIM 024",
    "CLAIM 028"
   ],
-  "digest": "0e0e5d5ac14aaffc",
+  "digest": "ae7ccb48c0d0c0b4",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-011"
@@ -12596,7 +12751,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-063",
-  "origin_line": 1586,
+  "origin_line": 1590,
   "origin_title": "DL-MECH-063 — La topologia del partner è parte dello stato funzionale di WWOX",
   "papers_named": [],
   "pmids": [
@@ -12648,7 +12803,8 @@
    "41124647",
    "42068099",
    "42248868",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "15064722": [
@@ -12791,6 +12947,9 @@
    ],
    "42721537": [
     "DL-BIO-011"
+   ],
+   "42909904": [
+    "DL-BIO-011"
    ]
   },
   "query_id": "Q-DL-MECH-063",
@@ -12806,7 +12965,7 @@
    "CLAIM 028",
    "CLAIM 030"
   ],
-  "digest": "b32542f8b3cef999",
+  "digest": "5d6577cbd44c2e3a",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-012",
@@ -12838,7 +12997,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-064",
-  "origin_line": 1623,
+  "origin_line": 1627,
   "origin_title": "DL-MECH-064 — WWOX è un inibitore diretto di GSK3β via motivo Axin-like 388–407/L404, **S9-indipendente**, con Tau come effettore",
   "papers_named": [],
   "pmids": [
@@ -12895,7 +13054,8 @@
    "41124647",
    "42068099",
    "42248868",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "12065620": [
@@ -13065,6 +13225,9 @@
    ],
    "42721537": [
     "DL-MECH-019"
+   ],
+   "42909904": [
+    "DL-MECH-019"
    ]
   },
   "query_id": "Q-DL-MECH-064",
@@ -13077,7 +13240,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "acdc5b0ab5217e0d",
+  "digest": "623e3db92484d5a1",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-019",
@@ -13097,7 +13260,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-065",
-  "origin_line": 1635,
+  "origin_line": 1639,
   "origin_title": "DL-MECH-065 — Il degrone ERLIQ e la funzione GSK3β potrebbero essere **lo stesso evento conformazionale**",
   "papers_named": [],
   "pmids": [
@@ -13154,7 +13317,8 @@
    "41124647",
    "42068099",
    "42248868",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "12065620": [
@@ -13362,6 +13526,10 @@
    "42721537": [
     "DL-MECH-019",
     "DL-MECH-064"
+   ],
+   "42909904": [
+    "DL-MECH-019",
+    "DL-MECH-064"
    ]
   },
   "query_id": "Q-DL-MECH-065",
@@ -13373,7 +13541,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "7c9a67674da5adf4",
+  "digest": "5e62624b892a4435",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-064"
@@ -13390,7 +13558,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-066",
-  "origin_line": 1646,
+  "origin_line": 1650,
   "origin_title": "DL-MECH-066 — L'**isoforma GSK3β2 neurone-specifica** potrebbe risolvere la contraddizione storica GSK3β↔neurite (e cambia la lettura del litio)",
   "papers_named": [],
   "pmids": [
@@ -13447,7 +13615,8 @@
    "41124647",
    "42068099",
    "42248868",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "15064722": [
@@ -13599,6 +13768,9 @@
    ],
    "42721537": [
     "DL-MECH-064"
+   ],
+   "42909904": [
+    "DL-MECH-064"
    ]
   },
   "query_id": "Q-DL-MECH-066",
@@ -13609,7 +13781,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "65a213e6b9fcf6e6",
+  "digest": "8f72e1012576543f",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-064",
@@ -13629,7 +13801,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-067",
-  "origin_line": 1714,
+  "origin_line": 1718,
   "origin_title": "DL-MECH-067 — 🔑 WWOX lega **il sito di Axin**, ed è quindi la classe di inibitore che la letteratura raccomanda per **risparmiare** l'isoforma neuronale",
   "papers_named": [],
   "pmids": [
@@ -13686,7 +13858,8 @@
    "41124647",
    "42068099",
    "42248868",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "12065620": [
@@ -13896,6 +14069,10 @@
    "42721537": [
     "DL-MECH-064",
     "DL-MECH-066"
+   ],
+   "42909904": [
+    "DL-MECH-064",
+    "DL-MECH-066"
    ]
   },
   "query_id": "Q-DL-MECH-067",
@@ -13909,7 +14086,7 @@
   "claims_named": [
    "CLAIM 016"
   ],
-  "digest": "2b8b392cedd2c6ed",
+  "digest": "c24a8ac358eef2a6",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-013",
@@ -13937,7 +14114,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-068",
-  "origin_line": 1726,
+  "origin_line": 1730,
   "origin_title": "DL-MECH-068 — 🔑 **tau è un substrato SFAVORITO per β2**, e il discrimine è la coda C-terminale: un inibitore ATP-competitivo **non può** separare le isoforme, un ligando del sito di Axin sì",
   "papers_named": [],
   "pmids": [
@@ -13995,7 +14172,8 @@
    "41124647",
    "42068099",
    "42248868",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "12065620": [
@@ -14270,6 +14448,11 @@
     "DL-MECH-064",
     "DL-MECH-066",
     "DL-MECH-067"
+   ],
+   "42909904": [
+    "DL-MECH-064",
+    "DL-MECH-066",
+    "DL-MECH-067"
    ]
   },
   "query_id": "Q-DL-MECH-068",
@@ -14281,7 +14464,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "d32013588969e8a0",
+  "digest": "4028b8d5d974a505",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-002",
@@ -14307,7 +14490,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-069",
-  "origin_line": 1827,
+  "origin_line": 1831,
   "origin_title": "DL-MECH-069 — 🔑 L'efficienza dell'NMD potrebbe essere **WWOX-dipendente**, e questo tocca sia l'allele di sito accettore sia l'esperimento disegnato per caratterizzarlo",
   "papers_named": [],
   "pmids": [
@@ -14430,7 +14613,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "0a3684e654f40a02",
+  "digest": "9203279b15244d8a",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-054",
@@ -14450,7 +14633,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-069b",
-  "origin_line": 1845,
+  "origin_line": 1849,
   "origin_title": "DL-MECH-069b — Il 3′UTR di WWOX è un elemento regolato, e quindi una **scelta di progetto** in qualunque cassetta terapeutica",
   "papers_named": [],
   "pmids": [
@@ -14576,7 +14759,7 @@
    "CLAIM 005",
    "CLAIM 026"
   ],
-  "digest": "f64a925aeea86eb9",
+  "digest": "228e635ba6150853",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-010",
@@ -14610,7 +14793,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-070",
-  "origin_line": 1860,
+  "origin_line": 1864,
   "origin_title": "DL-MECH-070 — Il ponte WWOX–lipidi/traffico–mielina è una sintesi plausibile, non una catena causale dimostrata",
   "papers_named": [],
   "pmids": [
@@ -14921,7 +15104,7 @@
    "CLAIM 015",
    "CLAIM 032"
   ],
-  "digest": "f3dbbb831c12a6d6",
+  "digest": "594934851d884693",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-026",
@@ -14950,7 +15133,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-071",
-  "origin_line": 1896,
+  "origin_line": 1900,
   "origin_title": "DL-MECH-071 — Il ratto *lde* separa numero neuronale da maturazione neurite/mielina, ma non dimostra prenatalità, autonomia gliale o reversibilità",
   "papers_named": [],
   "pmids": [
@@ -15022,7 +15205,8 @@
    "42395553",
    "42422765",
    "42721537",
-   "42807679"
+   "42807679",
+   "42909904"
   ],
   "pmids_via_records": {
    "15064722": [
@@ -15252,6 +15436,9 @@
    ],
    "42807679": [
     "CLAIM 032"
+   ],
+   "42909904": [
+    "DL-MECH-026"
    ]
   },
   "query_id": "Q-DL-MECH-071",
@@ -15264,7 +15451,7 @@
   "claims_named": [
    "CLAIM 005"
   ],
-  "digest": "95e545e1e8da23c4",
+  "digest": "a2ba9a88e6dc21be",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-073",
@@ -15288,7 +15475,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-072",
-  "origin_line": 1936,
+  "origin_line": 1940,
   "origin_title": "DL-MECH-072 — Il KO murino definisce vulnerabilità PV pan-ippocampale e NPY regionale, con reattività gliale, ma non misura GABA, E/I, morte interneuronale o causalità infiammazione→crisi",
   "papers_named": [
    "PAPER 006"
@@ -15361,7 +15548,7 @@
   "claims_named": [
    "CLAIM 005"
   ],
-  "digest": "bf99e8cc30998889",
+  "digest": "3c487132c74208ca",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-072",
@@ -15383,7 +15570,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-073",
-  "origin_line": 1999,
+  "origin_line": 2003,
   "origin_title": "DL-MECH-073 — La catena \"epilettogenesi\" del KO murino non termina in un topo: attraversa PMID 19936220 e atterra nel ratto *lde*",
   "papers_named": [],
   "pmids": [
@@ -15453,7 +15640,7 @@
   "claims_named": [
    "CLAIM 005"
   ],
-  "digest": "6b3a59c80a0d3fc3",
+  "digest": "cffd61e2e132e250",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-072",
@@ -15475,7 +15662,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-074",
-  "origin_line": 2042,
+  "origin_line": 2046,
   "origin_title": "DL-MECH-074 — Il null sistemico di Wwox a 2–3 settimane è un animale metabolicamente scompensato: il confondente non è plausibile, è misurato",
   "papers_named": [],
   "pmids": [
@@ -15571,7 +15758,7 @@
    "CLAIM 005",
    "CLAIM 037"
   ],
-  "digest": "5e642e17fe79a575",
+  "digest": "851585f794182607",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-072",
@@ -15600,7 +15787,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-075",
-  "origin_line": 2085,
+  "origin_line": 2089,
   "origin_title": "DL-MECH-075 — La catena non finisce in assenza di prova: finisce in una prova contraria. Il terminale dichiara che i topi Wwox-null NON hanno epilessia",
   "papers_named": [
    "PAPER 042"
@@ -15688,7 +15875,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "c68fb1e490a83638",
+  "digest": "923258af9dcef181",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-073",
@@ -15717,7 +15904,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-076",
-  "origin_line": 2151,
+  "origin_line": 2155,
   "origin_title": "DL-MECH-076 — \"Clearly excluded\": l'esclusione della causa metabolica sistemica nel ratto poggia su una fonte non letta il cui abstract la contraddice in parte",
   "papers_named": [],
   "pmids": [
@@ -15811,7 +15998,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "24faebed2e790e45",
+  "digest": "08833c30e6b44ed8",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-074",
@@ -15834,7 +16021,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-077",
-  "origin_line": 2193,
+  "origin_line": 2197,
   "origin_title": "DL-MECH-077 — Il ratto è uremico senza essere ipoglicemico: il confondente non si esclude, si sposta — e gli autori offrono una spiegazione che nessuno ha mai testato",
   "papers_named": [],
   "pmids": [
@@ -15921,7 +16108,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "b2325131ec8bf562",
+  "digest": "601925ecf1e318c7",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-075",
@@ -15944,7 +16131,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-078",
-  "origin_line": 2236,
+  "origin_line": 2240,
   "origin_title": "DL-MECH-078 — Un abstract che sovradichiara il proprio corpo, e la citazione che ci si è appoggiata: il nanismo *lde* NON è spiegato dal GH",
   "papers_named": [],
   "pmids": [
@@ -16040,7 +16227,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "c4b7f460253b70a1",
+  "digest": "506929c2ab2d4e55",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-048",
@@ -16060,7 +16247,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-083",
-  "origin_line": 2316,
+  "origin_line": 2320,
   "origin_title": "DL-MECH-083 — **La catena K63 su WWOX-K274 lo stabilizza: il default che ci aveva morso, misurato al contrario sul gene stesso**",
   "papers_named": [],
   "pmids": [
@@ -16212,7 +16399,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "b44fcb5ebe823528",
+  "digest": "8f5b072b3155a5b6",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-087"
@@ -16229,7 +16416,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-086",
-  "origin_line": 2442,
+  "origin_line": 2446,
   "origin_title": "DL-MECH-086 — La review dice «restored» dove il suo stesso primario mostra dieci volte il wild type, e la parentesi che lo falsificherebbe non è disegnata",
   "papers_named": [],
   "pmids": [
@@ -16244,7 +16431,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "33821b41fc13e2b5",
+  "digest": "d307ebeba1f9e654",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-090",
@@ -16264,7 +16451,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-092",
-  "origin_line": 2846,
+  "origin_line": 2850,
   "origin_title": "🔴 DL-MECH-092 — `p.R264Ter` non è un null finché qualcuno non misura: tronca **dopo** l'MTS e **prima** del sito catalitico",
   "papers_named": [],
   "pmids": [
@@ -16347,7 +16534,8 @@
    "42397075",
    "42422765",
    "42558002",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "15064722": [
@@ -16638,6 +16826,9 @@
    ],
    "42721537": [
     "DL-META-091"
+   ],
+   "42909904": [
+    "DL-META-091"
    ]
   },
   "query_id": "Q-DL-MECH-092",
@@ -16649,7 +16840,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "855ae93e056bfcb0",
+  "digest": "e47d62de0e113f45",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-008",
@@ -16678,7 +16869,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-094",
-  "origin_line": 2904,
+  "origin_line": 2908,
   "origin_title": "🔴 DL-MECH-094 — La firma «Warburg» degli organoidi è confusa con il difetto di differenziamento che il paper stesso dichiara nel titolo della figura",
   "papers_named": [],
   "pmids": [
@@ -16761,7 +16952,8 @@
    "42397075",
    "42422765",
    "42558002",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "15064722": [
@@ -17080,6 +17272,12 @@
     "DL-MECH-020",
     "DL-MECH-034",
     "DL-META-091"
+   ],
+   "42909904": [
+    "DL-BIO-008",
+    "DL-MECH-020",
+    "DL-MECH-034",
+    "DL-META-091"
    ]
   },
   "query_id": "Q-DL-MECH-094",
@@ -17090,7 +17288,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "a633b90fa17e7fce",
+  "digest": "9b2d12265dcbefec",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-007",
@@ -17116,7 +17314,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-095",
-  "origin_line": 3296,
+  "origin_line": 3300,
   "origin_title": "🔴 DL-MECH-095 — Abu-Remaileh 2014 regge sull’asse WWOX–HIF1α, ma la digossina era stata raccontata più forte dei suoi pannelli",
   "papers_named": [],
   "pmids": [
@@ -17167,7 +17365,8 @@
    "41124647",
    "42068099",
    "42248868",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "15064722": [
@@ -17320,6 +17519,10 @@
    "42721537": [
     "DL-BIO-007",
     "DL-MECH-020"
+   ],
+   "42909904": [
+    "DL-BIO-007",
+    "DL-MECH-020"
    ]
   },
   "query_id": "Q-DL-MECH-095",
@@ -17331,7 +17534,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "7fdcff4fab381339",
+  "digest": "c3cc793901a920fb",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-094"
@@ -17348,7 +17551,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-096",
-  "origin_line": 3163,
+  "origin_line": 3167,
   "origin_title": "🔴 DL-MECH-096 — `RUNX2` a valle di `WWOX` non ha *un* segno: ne ha uno per preparazione, ed è un vincolo per la Track C",
   "papers_named": [],
   "pmids": [
@@ -17431,7 +17634,8 @@
    "42397075",
    "42422765",
    "42558002",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "15064722": [
@@ -17670,6 +17874,9 @@
    ],
    "42721537": [
     "DL-MECH-094"
+   ],
+   "42909904": [
+    "DL-MECH-094"
    ]
   },
   "query_id": "Q-DL-MECH-096",
@@ -17682,7 +17889,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "6b82e7893b1c8b5e",
+  "digest": "a8a102175c2b338a",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-034",
@@ -17704,7 +17911,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-098",
-  "origin_line": 3312,
+  "origin_line": 3316,
   "origin_title": "🔴 DL-MECH-098 — Steinberg 2021 sostiene il modello-organoide, non dimostra né GABA depolarizzante né un programma metabolico separato dalla maturazione",
   "papers_named": [
    "PAPER 039"
@@ -17789,7 +17996,8 @@
    "42397075",
    "42422765",
    "42558002",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "15064722": [
@@ -18042,6 +18250,10 @@
    "42721537": [
     "DL-MECH-034",
     "DL-MECH-094"
+   ],
+   "42909904": [
+    "DL-MECH-034",
+    "DL-MECH-094"
    ]
   },
   "query_id": "Q-DL-MECH-098",
@@ -18055,7 +18267,7 @@
   "claims_named": [
    "CLAIM 036"
   ],
-  "digest": "cbe3231872e6086d",
+  "digest": "a1f00e9f3e135f23",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -18070,7 +18282,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-099",
-  "origin_line": 3358,
+  "origin_line": 3362,
   "origin_title": "🔴 DL-MECH-099 — Un allele condizionale non è un fenotipo condizionale: EIIA-Cre ricrea la crisi sistemica del nullo",
   "papers_named": [],
   "pmids": [
@@ -18118,7 +18330,7 @@
   "claims_named": [
    "CLAIM 036"
   ],
-  "digest": "871a7da347057180",
+  "digest": "239218ff495b9737",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -18133,7 +18345,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-100",
-  "origin_line": 3367,
+  "origin_line": 3371,
   "origin_title": "🔴 DL-MECH-100 — Il fenotipo steroideo del nullo ha almeno quattro cause compatibili, e il paper non le separa",
   "papers_named": [],
   "pmids": [
@@ -18180,7 +18392,7 @@
   "claims_named": [
    "CLAIM 032"
   ],
-  "digest": "83fbbe3fd04ef0fe",
+  "digest": "7749a3f040021667",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -18195,7 +18407,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-101",
-  "origin_line": 3377,
+  "origin_line": 3381,
   "origin_title": "🔴 DL-MECH-101 — Eterozigote fisiologicamente silente e suscettibilità a NMBA non sono affermazioni opposte",
   "papers_named": [],
   "pmids": [
@@ -18307,7 +18519,7 @@
    "CLAIM 032",
    "CLAIM 036"
   ],
-  "digest": "887c621370f6c53a",
+  "digest": "18615272cf92adb2",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -18324,7 +18536,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-102",
-  "origin_line": 3387,
+  "origin_line": 3391,
   "origin_title": "🔴 DL-MECH-102 — Il 4/13 che fonda l'osteosarcoma Wwox-nullo è morfologico e resta in conflitto con lo 0/9 multimodale",
   "papers_named": [],
   "pmids": [
@@ -18461,7 +18673,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "da4b96cddabc4a6e",
+  "digest": "dcaf7e86b4de0ba6",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -18472,7 +18684,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-103",
-  "origin_line": 3329,
+  "origin_line": 3333,
   "origin_title": "🔴 DL-MECH-103 — Abu-Odeh 2016 sostiene la competenza DDR di WWOX, ma la catena ATM–ITCH–K63–ATR non è tutta dimostrata nello stesso paper",
   "papers_named": [],
   "pmids": [
@@ -18491,7 +18703,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "b5bf55509ff5f4c3",
+  "digest": "e085c171f73c62ae",
   "kind": "lead",
   "leads_named": [
    "DL-THER-095"
@@ -18508,7 +18720,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-104",
-  "origin_line": 3346,
+  "origin_line": 3350,
   "origin_title": "🔴 DL-MECH-104 — Salah 2013 stabilizza **ΔNp63α**, non WWOX: l’attribuzione ITCH ereditata aveva invertito l’oggetto",
   "papers_named": [],
   "pmids": [
@@ -18596,7 +18808,8 @@
    "42397075",
    "42422765",
    "42558002",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "12514174": [
@@ -18847,6 +19060,9 @@
    ],
    "42721537": [
     "DL-THER-095"
+   ],
+   "42909904": [
+    "DL-THER-095"
    ]
   },
   "query_id": "Q-DL-MECH-104",
@@ -18861,7 +19077,7 @@
   "claims_named": [
    "CLAIM 019"
   ],
-  "digest": "f8b527c18140d764",
+  "digest": "ae997fc6d3711755",
   "kind": "lead",
   "leads_named": [
    "DL-METH-094",
@@ -18883,7 +19099,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-106",
-  "origin_line": 3498,
+  "origin_line": 3502,
   "origin_title": "DL-MECH-106 — **In SAOS-2 WWOX mRNA sits at ~45% of normal while WWOX protein is barely detectable: an mRNA-preserved / protein-lost signature the paper never connects to its own discussion of degradation**",
   "papers_named": [],
   "pmids": [
@@ -18973,7 +19189,8 @@
    "42397075",
    "42422765",
    "42558002",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "15064722": [
@@ -19233,6 +19450,9 @@
    ],
    "42721537": [
     "DL-METH-094"
+   ],
+   "42909904": [
+    "DL-METH-094"
    ]
   },
   "query_id": "Q-DL-MECH-106",
@@ -19245,7 +19465,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "dce4164f13cefa05",
+  "digest": "65e36f737903c6fb",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -19256,7 +19476,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-107",
-  "origin_line": 3529,
+  "origin_line": 3533,
   "origin_title": "DL-MECH-107 — **WWOX has a regulatory architecture in intron 8, and after 68 deep dives this corpus has opened it exactly once**",
   "papers_named": [],
   "pmids": [
@@ -19277,7 +19497,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "d4affdf860379404",
+  "digest": "ad14bc3a26abe11d",
   "kind": "lead",
   "leads_named": [
    "DL-METH-108"
@@ -19294,7 +19514,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-111",
-  "origin_line": 3580,
+  "origin_line": 3584,
   "origin_title": "DL-MECH-111 — **Una minireview di Tier C definisce l'ubiquitinazione come rotta al proteasoma, cita ACK1, e così consegna a `DIS-001` la provenienza primaria che le mancava — restando essa stessa un'istanza della premessa falsa che l'aveva chiusa**",
   "papers_named": [],
   "pmids": [
@@ -19321,7 +19541,7 @@
    "CLAIM 007",
    "CLAIM 024"
   ],
-  "digest": "74867e52aa8c2765",
+  "digest": "96996d8bd3722f00",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-111"
@@ -19344,7 +19564,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-113",
-  "origin_line": 3608,
+  "origin_line": 3612,
   "origin_title": "DL-MECH-113 — **WWOX → Smad4 a livello proteico regge una densitometria ostile; il meccanismo «post-trascrizionale» che gli è attaccato poggia invece interamente su un «data not shown»**",
   "papers_named": [],
   "pmids": [
@@ -19405,7 +19625,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "e0cfbbbabd4ca06e",
+  "digest": "0379c9a72ef3253f",
   "kind": "lead",
   "leads_named": [
    "DL-METH-120"
@@ -19424,7 +19644,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-114",
-  "origin_line": 3757,
+  "origin_line": 3761,
   "origin_title": "DL-MECH-114 — A muscle-restricted AAV9 given into CSF reached the dorsal root ganglion as genomes only: no transgene RNA, no reported DRG lesion in mouse; the macaque DRG-specific grading is not printed in the paper or its supplement",
   "papers_named": [
    "PAPER 216"
@@ -19499,7 +19719,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "b675e843b325058f",
+  "digest": "9a1e283073341b35",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-116"
@@ -19518,7 +19738,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-115",
-  "origin_line": 3801,
+  "origin_line": 3805,
   "origin_title": "DL-MECH-115 — The SDR region of WWOX carries a measured protein-binding determinant, from a laboratory independent of the three that built the corpus's WWOX enzymology",
   "papers_named": [
    "PAPER 245"
@@ -19574,7 +19794,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "2154b6aa062f8c31",
+  "digest": "501ce7579843af29",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-001",
@@ -19594,7 +19814,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-116",
-  "origin_line": 3813,
+  "origin_line": 3817,
   "origin_title": "DL-MECH-116 — Assay specification for any future WWOX domain-binding measurement (method-only lead; no WWOX datum)",
   "papers_named": [],
   "pmids": [
@@ -19644,7 +19864,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "423ceb7ec2264914",
+  "digest": "ee5bc6005309cb76",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -19661,7 +19881,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-117",
-  "origin_line": 3827,
+  "origin_line": 3831,
   "origin_title": "DL-MECH-117 — Where WWOX and HIF1A transcripts are uncorrelated, the WWOX/HIF1A ratio's correlations with HIF1A-induced genes are carried by HIF1A, not by WWOX",
   "papers_named": [
    "PAPER 262",
@@ -19690,7 +19910,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "745f11900716ae3b",
+  "digest": "8882bf5ca668191d",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -19707,7 +19927,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-118",
-  "origin_line": 3837,
+  "origin_line": 3841,
   "origin_title": "DL-MECH-118 — The effect-allele convention at rs17797882 conflicts between the Han Chinese and the Japanese reports, and the Japanese older-control odds ratios fall below 1",
   "papers_named": [
    "PAPER 263",
@@ -19734,7 +19954,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "c5ca4630f296f819",
+  "digest": "849746feb9509d5e",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -19753,7 +19973,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-119",
-  "origin_line": 3847,
+  "origin_line": 3851,
   "origin_title": "DL-MECH-119 — A citation chain ends in an unreproduced datum: 'WWOX is related to HOMA-beta' rests on one nominal control-only coefficient",
   "papers_named": [
    "PAPER 263",
@@ -19786,7 +20006,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "32ce9fd0fa9c5018",
+  "digest": "86a1daabe79877c9",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -19801,7 +20021,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-120",
-  "origin_line": 3857,
+  "origin_line": 3861,
   "origin_title": "DL-MECH-120 — The sign of the metabolic target in WWOX loss must be fixed by a brain measurement before any dietary rationale is chosen",
   "papers_named": [
    "PAPER 273"
@@ -19825,7 +20045,7 @@
   "claims_named": [
    "CLAIM 042"
   ],
-  "digest": "6e58481b782fa591",
+  "digest": "0e7fee23dcc84b3d",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -19844,7 +20064,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-121",
-  "origin_line": 3867,
+  "origin_line": 3871,
   "origin_title": "DL-MECH-121 — A ketogenic-diet response does not identify the mechanism of a lesion",
   "papers_named": [
    "PAPER 268",
@@ -19877,7 +20097,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "9f83b959c1286ba6",
+  "digest": "6a9bc99ccf4e1a97",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -19892,7 +20112,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-122",
-  "origin_line": 3877,
+  "origin_line": 3881,
   "origin_title": "DL-MECH-122 — Timing reverses the sign of a HIF1A intervention in hypoxic brain",
   "papers_named": [
    "PAPER 275"
@@ -19916,7 +20136,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "062fb4e3e70cfcd2",
+  "digest": "7dc8251e19b492df",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -19931,7 +20151,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-123",
-  "origin_line": 3887,
+  "origin_line": 3891,
   "origin_title": "DL-MECH-123 — A diet exposure alone raises neonatal brain lactate about 2.7-fold, so a lactate difference in a Wwox-null brain is not by itself a HIF1A-driven glycolytic shift",
   "papers_named": [
    "PAPER 276"
@@ -19954,7 +20174,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "58e5abe6dd3fd81a",
+  "digest": "8b3d79c557c9fd85",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -19971,7 +20191,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-124",
-  "origin_line": 3897,
+  "origin_line": 3901,
   "origin_title": "DL-MECH-124 — Two microglial fructose routes disagree: hexokinase to F6P in neonatal hypo-phagocytic microglia against KHK to NOX4-ROS in activated adult microglia",
   "papers_named": [
    "PAPER 276",
@@ -20002,7 +20222,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "bbb0d0f20dbdcad1",
+  "digest": "54d830af7e3d4f24",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -20017,7 +20237,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-125",
-  "origin_line": 3907,
+  "origin_line": 3911,
   "origin_title": "DL-MECH-125 — PUFA-triglyceride and lipid-droplet bridge: if WWOX deficiency limits oxidative phosphorylation even mildly, a lipid-droplet and PUFA-TG signature with higher GPX4 would follow",
   "papers_named": [
    "PAPER 283"
@@ -20042,7 +20262,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "1d25d536b33b8c7a",
+  "digest": "2e2e8f6d8d85e62b",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -20057,7 +20277,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-126",
-  "origin_line": 3917,
+  "origin_line": 3921,
   "origin_title": "DL-MECH-126 — Replication-stress hypomorph dose: chronic low-dose replication stress lowers WWOX transcript by about 40 percent in a dividing non-cancer human cell type",
   "papers_named": [
    "PAPER 280"
@@ -20082,7 +20302,7 @@
   "claims_named": [
    "CLAIM 029"
   ],
-  "digest": "be53411190793c7c",
+  "digest": "87fefa45cec5205c",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -20099,7 +20319,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-127",
-  "origin_line": 3927,
+  "origin_line": 3931,
   "origin_title": "DL-MECH-127 — Junction microhomology of human WWOX copy-number alleles scored against a chance model, with PARK2 as comparator",
   "papers_named": [
    "PAPER 288"
@@ -20140,7 +20360,7 @@
   "claims_named": [
    "CLAIM 010"
   ],
-  "digest": "df99f47feb31ccb6",
+  "digest": "1dbf0dea4372807c",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -20158,7 +20378,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-128",
-  "origin_line": 3937,
+  "origin_line": 3941,
   "origin_title": "DL-MECH-128 — BNIP3 and BNIP3L under WWOX loss: transcript plus LC3/TOMM20 colocalisation in the WWOX-deficient lines",
   "papers_named": [
    "PAPER 289"
@@ -20184,7 +20404,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "889e58273e6d4494",
+  "digest": "0cb6b52a0805cf61",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -20199,7 +20419,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-129",
-  "origin_line": 3947,
+  "origin_line": 3951,
   "origin_title": "DL-MECH-129 — Iron observables in WWOX case reports: scan reports already in the repository for ferritin, haemoglobin or susceptibility imaging; record 'none stated' per report",
   "papers_named": [
    "PAPER 290"
@@ -20221,7 +20441,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "4b48f412a677f806",
+  "digest": "b3d55c7ea721328a",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -20236,7 +20456,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-130",
-  "origin_line": 3957,
+  "origin_line": 3961,
   "origin_title": "DL-MECH-130 — MAM terms against the WWOX interactome: look up the seven tether and channel proteins in the interactome paper already receipted",
   "papers_named": [
    "PAPER 285"
@@ -20259,7 +20479,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "898628c09034784b",
+  "digest": "beca300d32184b6a",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -20274,7 +20494,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-131",
-  "origin_line": 3967,
+  "origin_line": 3971,
   "origin_title": "DL-MECH-131 — Total WWOX beside pTyr33-WWOX with an inactive-peptide arm would separate peptide inhibition from WWOX consumption",
   "papers_named": [
    "PAPER 097"
@@ -20296,7 +20516,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "373b6b5d50ca4efc",
+  "digest": "d23196595025fb0d",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -20311,7 +20531,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-132",
-  "origin_line": 3977,
+  "origin_line": 3981,
   "origin_title": "DL-MECH-132 — Wwox-null brain HO-1, ferritin or labile iron under a registry-held HIF1A rise, independently of seizure-driven accumulation",
   "papers_named": [
    "PAPER 279"
@@ -20334,7 +20554,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "ecd47b9a3b504c7d",
+  "digest": "d77344c63d6e1157",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -20353,7 +20573,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-133",
-  "origin_line": 3987,
+  "origin_line": 3991,
   "origin_title": "DL-MECH-133 — Retrieve the WWOX VABAM anchor and read its treatment histories for co-administered hormonal therapy",
   "papers_named": [
    "PAPER 003",
@@ -20386,7 +20606,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "41752e5b09644adf",
+  "digest": "e3169e39da541b3a",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -20403,7 +20623,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-134",
-  "origin_line": 3997,
+  "origin_line": 4001,
   "origin_title": "DL-MECH-134 — ACTH-responsiveness and neurosteroid readouts (adrenal and brain DHEA, androstenedione, pregnenolone) in Wwox-null mice",
   "papers_named": [
    "PAPER 076",
@@ -20431,7 +20651,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "da7cf08e61aaac71",
+  "digest": "bd4724b10b3d144f",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -20452,7 +20672,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-135",
-  "origin_line": 4007,
+  "origin_line": 4011,
   "origin_title": "DL-MECH-135 — A single CSF monoamine panel (HVA, 5-HIAA, ratio, pterins, 3-O-methyldopa) with event EEG in a WWOX child with hypokinetic-rigid features, logged with drug and seizure state",
   "papers_named": [
    "PAPER 145",
@@ -20492,7 +20712,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "4dc53665ccacd1bc",
+  "digest": "db2d9b19ed874de0",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -20515,7 +20735,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-136",
-  "origin_line": 4051,
+  "origin_line": 4055,
   "origin_title": "DL-MECH-136 — The class label \"adrenergic\" has no direction: across five readings the same receptor family is beneficial, harmful or both",
   "papers_named": [
    "PAPER 311",
@@ -20557,7 +20777,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "285194ed6a642ca2",
+  "digest": "a1c60c8c251f395a",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -20572,7 +20792,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-137",
-  "origin_line": 4061,
+  "origin_line": 4065,
   "origin_title": "DL-MECH-137 — A post-injury alpha-adrenergic effect on lactate and glucose exists in a developing-brain model; it is the only measured adrenergic effect on a metabolic readout in this wave",
   "papers_named": [
    "PAPER 314"
@@ -20594,7 +20814,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "6b0b467656e6159f",
+  "digest": "c795266c5021c6e2",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -20609,7 +20829,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-138",
-  "origin_line": 4071,
+  "origin_line": 4075,
   "origin_title": "DL-MECH-138 — A Wwox-null monoamine measurement (CSF or brain HVA, MHPG, 5-HIAA, 3-OMD) would be the cheapest first adrenergic datum",
   "papers_named": [
    "PAPER 299"
@@ -20635,7 +20855,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "9546f4bf361c7795",
+  "digest": "a0865898888ba966",
   "kind": "lead",
   "leads_named": [
    "DL-METH-125"
@@ -20658,7 +20878,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-139",
-  "origin_line": 4081,
+  "origin_line": 4085,
   "origin_title": "DL-MECH-139 — A resuscitation or metabolic surrogate can move without the patient-relevant outcome: any adrenergic hypothesis for WWOX must name its outcome first",
   "papers_named": [
    "PAPER 316",
@@ -20691,7 +20911,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "f780095ba10b21f2",
+  "digest": "ae05feb6826ed048",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -20710,7 +20930,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-140",
-  "origin_line": 4101,
+  "origin_line": 4105,
   "origin_title": "DL-MECH-140 — The measurement panel a WWOX hypoglycaemia or movement-disorder case would need: glucose with insulin, glucagon, epinephrine, growth hormone, cortisol, free fatty acids and ketones at one time point, and CSF HVA, 5-HIAA, MHPG and 3-OMD with age-matched ranges",
   "papers_named": [
    "PAPER 299",
@@ -20746,7 +20966,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "71f6166dfd56349a",
+  "digest": "dd040550151fe77a",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -20763,7 +20983,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-141",
-  "origin_line": 4111,
+  "origin_line": 4115,
   "origin_title": "DL-MECH-141 — Counter-regulation versus energy failure in the Wwox-null mouse cannot be separated with a glucose value alone",
   "papers_named": [
    "PAPER 005",
@@ -20789,7 +21009,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "f4a5874e4385f9d2",
+  "digest": "fe74099b701a529b",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -20804,7 +21024,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-142",
-  "origin_line": 4121,
+  "origin_line": 4125,
   "origin_title": "DL-MECH-142 — Blood-pressure or autonomic data in WWOX-DEE cohorts are an open question; a gene-level association in one ancestry group is a reason to ask, not an answer",
   "papers_named": [
    "PAPER 324"
@@ -20828,7 +21048,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "a939910b47522158",
+  "digest": "5835f50b9a6beb1b",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -20843,7 +21063,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-143",
-  "origin_line": 4131,
+  "origin_line": 4135,
   "origin_title": "DL-MECH-143 — WWOX case-report oximetry scan: reports already in the repository can be scanned for overnight oximetry, polysomnography or breathing-pattern statements, recording \"none stated\" per report",
   "papers_named": [
    "PAPER 015"
@@ -20865,7 +21085,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "bcc97221aacb3868",
+  "digest": "20ba46bce30e2953",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -20880,7 +21100,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-144",
-  "origin_line": 4141,
+  "origin_line": 4145,
   "origin_title": "DL-MECH-144 — Incubator-oxygen control for WWOX-null oligodendrocyte cultures: culture at 2 versus 20 percent oxygen",
   "papers_named": [
    "PAPER 336"
@@ -20903,7 +21123,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "2c0dab73825e6256",
+  "digest": "30c08c0164743f6b",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -20920,7 +21140,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-145",
-  "origin_line": 4151,
+  "origin_line": 4155,
   "origin_title": "DL-MECH-145 — Tissue oxygen in a WWOX-null brain: the hyperoxia rationale of hypoxia therapy needs a measured tissue oxygen or iron-sulfur protein proxy",
   "papers_named": [
    "PAPER 325",
@@ -20948,7 +21168,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "35ce19f9bfc8f582",
+  "digest": "ed5f45ab8a0bb808",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -20963,7 +21183,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-146",
-  "origin_line": 4161,
+  "origin_line": 4165,
   "origin_title": "DL-MECH-146 — Task fNIRS feasibility: cortical oxygenation by fNIRS is feasible at a patient conference in older, higher-functioning patients, but its own headline conflicts with its figures, so it is a feasibility datum and not a biomarker",
   "papers_named": [
    "PAPER 333"
@@ -20984,7 +21204,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "9bd9f11b1c97eb14",
+  "digest": "b7982ab371cf698a",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -20999,7 +21219,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-147",
-  "origin_line": 4171,
+  "origin_line": 4175,
   "origin_title": "DL-MECH-147 — Neonatal oxygen-window caution: the only trial-derived numbers in the oxygen group are preterm saturation targets, and they do not apply to a genetic encephalopathy without a stated gap",
   "papers_named": [
    "PAPER 334"
@@ -21020,7 +21240,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "1ec2e8fe90d44487",
+  "digest": "f74b6e9c2f01e913",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -21039,7 +21259,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-148",
-  "origin_line": 4181,
+  "origin_line": 4185,
   "origin_title": "DL-MECH-148 — A fasting seizure-threshold experiment in a Wwox-deficient mouse, prediction fixed before data",
   "papers_named": [
    "PAPER 148",
@@ -21072,7 +21292,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "774bff4e62a15588",
+  "digest": "aa1789f0dff9c0ec",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -21083,7 +21303,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-149",
-  "origin_line": 4191,
+  "origin_line": 4195,
   "origin_title": "DL-MECH-149 — Resolve the cell-versus-organism polarity of nutrient stress in WWOX loss: a glucose-withdrawal experiment in Wwox-null neurons",
   "papers_named": [],
   "pmids": [],
@@ -21098,7 +21318,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "78fb745b23768dc3",
+  "digest": "6312fb83f4645bdc",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -21109,7 +21329,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-150",
-  "origin_line": 4201,
+  "origin_line": 4205,
   "origin_title": "DL-MECH-150 — pWWOX and mitochondrial readouts in a WWOX-deficient neuron exposed to 10 and 25 mM glucose, with a genetic control for the peptide",
   "papers_named": [],
   "pmids": [],
@@ -21122,7 +21342,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "01631ce1191b2a9d",
+  "digest": "1cdaf6644dc99c7b",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -21137,7 +21357,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-151",
-  "origin_line": 4213,
+  "origin_line": 4217,
   "origin_title": "DL-MECH-151 — Normalised redox readout in WWOX-depleted human neural progenitors: repeat resazurin with cell-number or protein normalisation plus a second mitochondrial readout in the same knockdown cells",
   "papers_named": [
    "PAPER 022"
@@ -21160,7 +21380,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "30a65c59e9eef1bb",
+  "digest": "21853fbeadf9c9a1",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -21175,7 +21395,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-152",
-  "origin_line": 4223,
+  "origin_line": 4227,
   "origin_title": "DL-MECH-152 — Weight-matched or pair-fed controls for the Wwox-null fat and temperature phenotype: compare subcutaneous fat, FABP4 and core temperature in null pups against weight-matched wild-type pups or pair-fed littermates",
   "papers_named": [
    "PAPER 129"
@@ -21197,7 +21417,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "67817fd6d7581e77",
+  "digest": "e1f984d70b594c4f",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -21214,7 +21434,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-153",
-  "origin_line": 4233,
+  "origin_line": 4237,
   "origin_title": "DL-MECH-153 — Direction of the G6PD and NFE2L2 contribution in the hNPC data against the mouse fibroblast redox heatmap: obtain the fold changes behind Supplementary Table 1 and compare with the early-passage Wwox-null redox set",
   "papers_named": [
    "PAPER 022",
@@ -21245,7 +21465,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "22e351daf3a6ced9",
+  "digest": "b22d4bc1d9045db7",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -21260,7 +21480,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-154",
-  "origin_line": 4243,
+  "origin_line": 4247,
   "origin_title": "DL-MECH-154 — ROS re-measurement under NAC in Wwox-null fibroblasts: DHE flow in NAC-treated null MEFs and p53 sequencing in NAC-treated clones",
   "papers_named": [
    "PAPER 130"
@@ -21285,7 +21505,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "df66e4152917161c",
+  "digest": "09697addb3ea95f1",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -21300,7 +21520,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-155",
-  "origin_line": 4253,
+  "origin_line": 4257,
   "origin_title": "DL-MECH-155 — Serum-replete glucose uptake in WWOX-depleted cells: repeat the 2-deoxyglucose assay in the four oxygen and glucose conditions with and without serum and with a dose series of WWOX depletion",
   "papers_named": [
    "PAPER 023"
@@ -21322,7 +21542,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "f19d6f1d77f47f00",
+  "digest": "65b68c2c5deccf35",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -21339,7 +21559,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-156",
-  "origin_line": 4263,
+  "origin_line": 4267,
   "origin_title": "DL-MECH-156 — Antibody specificity for the pS14 model: blot the laboratory-made phospho-site antibodies on a WWOX-null lysate",
   "papers_named": [
    "PAPER 359",
@@ -21366,7 +21586,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "3c115242db7a7874",
+  "digest": "07cf0d34c058894c",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -21381,7 +21601,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-157",
-  "origin_line": 4273,
+  "origin_line": 4277,
   "origin_title": "DL-MECH-157 — Drosophila-style enhancement in mammalian cells: test whether WWOX-null cells are more sensitive to a respiratory-chain inhibitor than matched controls at equal passage",
   "papers_named": [
    "PAPER 363"
@@ -21403,7 +21623,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "ee1b63ee0cedc67c",
+  "digest": "be1e60c56caede42",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -21418,7 +21638,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-158",
-  "origin_line": 4283,
+  "origin_line": 4287,
   "origin_title": "DL-MECH-158 — eQTL allele orientation: resolve whether the GTEx \"Alt\" allele of rs12918952 is the rare A allele of the Taiwanese series",
   "papers_named": [
    "PAPER 360"
@@ -21439,7 +21659,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "407156b5d9767de2",
+  "digest": "4ac7da4de8c07e03",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -21456,7 +21676,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-159",
-  "origin_line": 4293,
+  "origin_line": 4297,
   "origin_title": "DL-MECH-159 — Mitochondrial purity controls for WWOX fractions: re-run the MOLT-4 and Jurkat fractionations with a mitochondrial matrix and a cytosolic marker row and a protease-protection step",
   "papers_named": [
    "PAPER 361",
@@ -21484,7 +21704,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "204f58a09e010e16",
+  "digest": "5f83a62bbb5f480b",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -21495,7 +21715,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-160",
-  "origin_line": 4303,
+  "origin_line": 4307,
   "origin_title": "DL-MECH-160 — Flux control for the Wwox MEF LC3 arm: LC3-II in Wwox +/+, +/- and -/- fibroblasts with and without a lysosomal inhibitor, three biological replicates",
   "papers_named": [],
   "pmids": [],
@@ -21509,7 +21729,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "3d0075a5d52f569f",
+  "digest": "66aabd46e5c12791",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -21526,7 +21746,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-161",
-  "origin_line": 4313,
+  "origin_line": 4317,
   "origin_title": "DL-MECH-161 — Same-tissue test of the Kozak variant: measure WWOX mRNA and protein by rs11545028 genotype in one tissue type with the allele frequency known",
   "papers_named": [
    "PAPER 368",
@@ -21553,7 +21773,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "b72302d63e8933d5",
+  "digest": "aba298f6e5666e27",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -21568,7 +21788,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-162",
-  "origin_line": 4323,
+  "origin_line": 4327,
   "origin_title": "DL-MECH-162 — Heterozygous Wwox tumour incidence in an untreated cohort with the same strain and a stated onset age, before any peptide effect is cited",
   "papers_named": [
    "PAPER 366"
@@ -21589,7 +21809,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "1d063db3752551c2",
+  "digest": "a18c72f01484bb81",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -21604,7 +21824,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-163",
-  "origin_line": 4333,
+  "origin_line": 4337,
   "origin_title": "DL-MECH-163 — WWOX expression against alkylator sensitivity in the NCI-60 panel: test the weak negative correlation per cell line against copy number and methylation",
   "papers_named": [
    "PAPER 414"
@@ -21628,7 +21848,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "5e07489eaca524dc",
+  "digest": "82c69ab2b0411c80",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -21643,7 +21863,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-164",
-  "origin_line": 4343,
+  "origin_line": 4347,
   "origin_title": "DL-MECH-164 — Count WWOX loss properly in the NASH-associated hepatocellular carcinoma series: per-case loss percentages at a stated threshold",
   "papers_named": [
    "PAPER 412"
@@ -21666,7 +21886,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "a27096310b99268d",
+  "digest": "9e3ea348968cf015",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -21681,7 +21901,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-165",
-  "origin_line": 4353,
+  "origin_line": 4357,
   "origin_title": "DL-MECH-165 — Temperature as an in vivo variable in Wwox-null pups: core temperature against body weight in weight-matched controls",
   "papers_named": [
    "PAPER 411"
@@ -21702,7 +21922,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "1d6a87cdb17f1fc0",
+  "digest": "061356480c80be84",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -21719,7 +21939,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-166",
-  "origin_line": 4363,
+  "origin_line": 4367,
   "origin_title": "DL-MECH-166 — Share of WWOX among early-infantile epileptic encephalopathy: about 4 percent of an unselected-by-gene series",
   "papers_named": [
    "PAPER 117",
@@ -21746,7 +21966,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "9e46933c8c3868a9",
+  "digest": "4c9dd5b84961672b",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -21761,7 +21981,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-167",
-  "origin_line": 4373,
+  "origin_line": 4377,
   "origin_title": "DL-MECH-167 — An intragenic WWOX deletion can be missed by exome-based testing and found by array",
   "papers_named": [
    "PAPER 425"
@@ -21783,7 +22003,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "56eaa13e49e63a7a",
+  "digest": "03d2a72e5572e566",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -21798,7 +22018,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-168",
-  "origin_line": 4383,
+  "origin_line": 4387,
   "origin_title": "DL-MECH-168 — A normal neuroimaging entry is listed for one early-onset WWOX case in one series (a single table entry)",
   "papers_named": [
    "PAPER 425"
@@ -21820,7 +22040,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "a9032ce236055f00",
+  "digest": "fba0303e9b8a7cd9",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -21847,7 +22067,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-169",
-  "origin_line": 4393,
+  "origin_line": 4397,
   "origin_title": "DL-MECH-169 — No WWOX-null amino-acid, folate, carnitine or bile-acid measurement exists: the measurement that would turn a substitute axis into evidence",
   "papers_named": [
    "PAPER 416",
@@ -21902,7 +22122,7 @@
   "claims_named": [
    "CLAIM 016"
   ],
-  "digest": "bcadd0066b96590e",
+  "digest": "68005d1e6d788b8a",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-171",
@@ -21924,7 +22144,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-170",
-  "origin_line": 4405,
+  "origin_line": 4409,
   "origin_title": "DL-MECH-170 — Ethosuximide suppressed a provoked seizure genotype-specifically in the one assay that ran all three Wwox genotypes, and no follow-up exists",
   "papers_named": [],
   "pmids": [
@@ -21973,7 +22193,7 @@
   "claims_named": [
    "CLAIM 016"
   ],
-  "digest": "a050fde6a1a85b28",
+  "digest": "0cc17bc3435087ac",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-170"
@@ -21992,7 +22212,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-171",
-  "origin_line": 4428,
+  "origin_line": 4432,
   "origin_title": "DL-MECH-171 — Wwox-null and neuronal-deletion hippocampus at P17 shows LOWER T-type transcripts (Cacna1i in all four comparisons; Cacna1h not consistently) [corrected 2026-10-22 from «LOWER T-type transcripts (Cacna1h, Cacna1i), not higher» by `BATCH_20261019_012` on the strength of the blind table ",
   "papers_named": [],
   "pmids": [
@@ -22099,7 +22319,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "ae37696d5d05f5a5",
+  "digest": "49a79b364cdd1b7a",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-170"
@@ -22116,7 +22336,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-172",
-  "origin_line": 4441,
+  "origin_line": 4445,
   "origin_title": "DL-MECH-172 — A direct genotype-by-treatment test of a T-type blocker exists in one mouse mutant and runs opposite to the DL-MECH-170 direction: trimethadione's effect was much weaker in the hyperexcitable mutant [corrected 2026-10-22 from «trimethadione lost its effect in the hyperexcitable mutant»",
   "papers_named": [],
   "pmids": [
@@ -22216,7 +22436,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "39a00828a3ca226f",
+  "digest": "5b29997df462bd32",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -22227,7 +22447,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-META-088",
-  "origin_line": 2468,
+  "origin_line": 2472,
   "origin_title": "DL-META-088 — Due fonti non referate, lo stesso statuto, due trattamenti diversi a due pagine di distanza",
   "papers_named": [],
   "pmids": [
@@ -22246,7 +22466,7 @@
   "claims_named": [
    "CLAIM 019"
   ],
-  "digest": "fdff72ac5e0f93ff",
+  "digest": "bb6e2aca6abd4e7b",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-085",
@@ -22277,7 +22497,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-META-091",
-  "origin_line": 2718,
+  "origin_line": 2722,
   "origin_title": "🔴 DL-META-091 — Johannsen 2018 non è mai stato letto, e il modello ci poggia sopra 21 volte",
   "papers_named": [],
   "pmids": [
@@ -22360,7 +22580,8 @@
    "42397075",
    "42422765",
    "42558002",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "15064722": [
@@ -22712,6 +22933,10 @@
    "42721537": [
     "DL-MECH-034",
     "DL-MECH-037"
+   ],
+   "42909904": [
+    "DL-MECH-034",
+    "DL-MECH-037"
    ]
   },
   "query_id": "Q-DL-META-091",
@@ -22722,7 +22947,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "82d306748dd35414",
+  "digest": "46b43dcfa376eb3a",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-085"
@@ -22739,7 +22964,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-META-093",
-  "origin_line": 2877,
+  "origin_line": 2881,
   "origin_title": "DL-META-093 — Tre modi in cui il riassunto di un paper non è il suo dato, tutti e tre nello stesso articolo",
   "papers_named": [],
   "pmids": [
@@ -22915,7 +23140,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "66f43da8492ae127",
+  "digest": "bd2274add0601a27",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -22926,7 +23151,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-META-097",
-  "origin_line": 3210,
+  "origin_line": 3214,
   "origin_title": "🔴 DL-META-097 — L'eterozigote è silente sull'organismo e dimezzato sul tessuto, **nello stesso paper**: «portatore non affetto» è un'affermazione sullo strumento",
   "papers_named": [],
   "pmids": [
@@ -22940,7 +23165,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "6b0118bd12da4d77",
+  "digest": "480fab926682714e",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -22951,7 +23176,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-META-098",
-  "origin_line": 3249,
+  "origin_line": 3253,
   "origin_title": "🔴 DL-META-098 — Un nullo senza test nominato che regge un intero fenotipo, e la legenda che inverte i genotipi",
   "papers_named": [],
   "pmids": [
@@ -22965,7 +23190,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "df3af64714eb3960",
+  "digest": "7273c099a53c53f8",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-078"
@@ -22982,7 +23207,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-METH-079",
-  "origin_line": 2268,
+  "origin_line": 2272,
   "origin_title": "DL-METH-079 — Un **titolo** che afferma il contrario del proprio paper, e viaggia più lontano di qualunque altra superficie",
   "papers_named": [],
   "pmids": [
@@ -23059,7 +23284,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "7536078aadbac2be",
+  "digest": "8f750ba8e8db5de5",
   "kind": "lead",
   "leads_named": [
    "DL-METH-079"
@@ -23076,7 +23301,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-METH-081",
-  "origin_line": 2290,
+  "origin_line": 2294,
   "origin_title": "DL-METH-081 — **Le superfici-titolo si invertono, la scienza no**: seconda occorrenza consecutiva, e adesso è una classe",
   "papers_named": [],
   "pmids": [
@@ -23159,7 +23384,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "5801eaaa4c281d6b",
+  "digest": "52a58a7bd90481e2",
   "kind": "lead",
   "leads_named": [
    "DL-METH-079",
@@ -23179,7 +23404,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-METH-082",
-  "origin_line": 2302,
+  "origin_line": 2306,
   "origin_title": "DL-METH-082 — **Una coppia è una contraddizione solo se il pannello che falsifica è quello che la frase cita**",
   "papers_named": [],
   "pmids": [
@@ -23277,7 +23502,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "8466d03a52948e88",
+  "digest": "c83f20b3a3b350e0",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-083",
@@ -23307,7 +23532,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-METH-084",
-  "origin_line": 2338,
+  "origin_line": 2342,
   "origin_title": "DL-METH-084 — **Due paper dello stesso laboratorio si contraddicono sulla direzione dell'HDR, lo dicono in stampa, e la spiegazione pubblicata è incompleta**",
   "papers_named": [],
   "pmids": [
@@ -23473,7 +23698,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "b57b062a7c2f5092",
+  "digest": "1e282a815a53ca14",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-096",
@@ -23506,7 +23731,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-METH-093",
-  "origin_line": 3129,
+  "origin_line": 3133,
   "origin_title": "DL-METH-093 — **La catena a tre: l'affermazione è più ferma dove la provenienza è più sottile, e attraversa laboratori diversi**",
   "papers_named": [],
   "pmids": [
@@ -23591,7 +23816,8 @@
    "42397075",
    "42422765",
    "42558002",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "15064722": [
@@ -23910,6 +24136,10 @@
    "42721537": [
     "DL-MECH-096",
     "DL-METH-097"
+   ],
+   "42909904": [
+    "DL-MECH-096",
+    "DL-METH-097"
    ]
   },
   "query_id": "Q-DL-METH-093",
@@ -23920,7 +24150,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "cff4a9ac94f7c91b",
+  "digest": "52568029a2b2ef1f",
   "kind": "lead",
   "leads_named": [
    "DL-METH-084",
@@ -23947,7 +24177,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-METH-094",
-  "origin_line": 3397,
+  "origin_line": 3401,
   "origin_title": "DL-METH-094 — **L'autorialità non è condizione sufficiente dell'erosione: la prova è interna a un solo paper. Sulla figura-modello resta un'ipotesi replicata due volte**",
   "papers_named": [],
   "pmids": [
@@ -24034,7 +24264,8 @@
    "42397075",
    "42422765",
    "42558002",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "15064722": [
@@ -24310,6 +24541,9 @@
    ],
    "42721537": [
     "DL-METH-093"
+   ],
+   "42909904": [
+    "DL-METH-093"
    ]
   },
   "query_id": "Q-DL-METH-094",
@@ -24320,7 +24554,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "cfa98c3ab2c9b4b5",
+  "digest": "44a8185e0c30fefc",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-083",
@@ -24340,7 +24574,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-METH-096",
-  "origin_line": 2591,
+  "origin_line": 2595,
   "origin_title": "DL-METH-096 — **Il commentary di un autore sul proprio paper non è un riassunto: la modalità epistemica si degrada, e in modo asimmetrico**",
   "papers_named": [],
   "pmids": [
@@ -24505,7 +24739,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "337b05cdfcf26b81",
+  "digest": "2aea41be7a3b0b4f",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-092",
@@ -24532,7 +24766,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-METH-097",
-  "origin_line": 2605,
+  "origin_line": 2609,
   "origin_title": "DL-METH-097 — **In nove superfici su trentaquattro le didascalie stanno FUORI dal `<body>`, e chi legge col `<body>` non le vede mai**",
   "papers_named": [],
   "pmids": [
@@ -24616,7 +24850,8 @@
    "42397075",
    "42422765",
    "42558002",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "15064722": [
@@ -24908,6 +25143,10 @@
    "42721537": [
     "DL-MECH-092",
     "DL-META-091"
+   ],
+   "42909904": [
+    "DL-MECH-092",
+    "DL-META-091"
    ]
   },
   "query_id": "Q-DL-METH-097",
@@ -24919,7 +25158,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "4e966cfb9287bc7a",
+  "digest": "3550f974d8eda77b",
   "kind": "lead",
   "leads_named": [
    "DL-METH-091",
@@ -24940,7 +25179,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-METH-098",
-  "origin_line": 3440,
+  "origin_line": 3444,
   "origin_title": "DL-METH-098 — **Non solo la modalità: anche l'AMPIEZZA. Un titolo di figura generalizza a «in osteosarcoma» ciò che il paper stesso dichiara non evidente nell'umano**",
   "papers_named": [],
   "pmids": [
@@ -25028,7 +25267,8 @@
    "42397075",
    "42422765",
    "42558002",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "15064722": [
@@ -25282,6 +25522,9 @@
    ],
    "42721537": [
     "DL-METH-094"
+   ],
+   "42909904": [
+    "DL-METH-094"
    ]
   },
   "query_id": "Q-DL-METH-098",
@@ -25293,7 +25536,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "73581e8551686b60",
+  "digest": "78cd3f0384fb7a40",
   "kind": "lead",
   "leads_named": [
    "DL-METH-094"
@@ -25310,7 +25553,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-METH-107",
-  "origin_line": 3511,
+  "origin_line": 3515,
   "origin_title": "DL-METH-107 — a scope failure that modality screens cannot catch, plus the supplement rule it demonstrates",
   "papers_named": [],
   "pmids": [
@@ -25398,7 +25641,8 @@
    "42397075",
    "42422765",
    "42558002",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "15064722": [
@@ -25652,6 +25896,9 @@
    ],
    "42721537": [
     "DL-METH-094"
+   ],
+   "42909904": [
+    "DL-METH-094"
    ]
   },
   "query_id": "Q-DL-METH-107",
@@ -25662,7 +25909,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "aa55a0ae96820635",
+  "digest": "ab23736cb01e6bc3",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -25673,7 +25920,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-METH-108",
-  "origin_line": 3542,
+  "origin_line": 3546,
   "origin_title": "DL-METH-108 — **An Elsevier PDF text layer substitutes `¼` for `=` and the digit `3` for `×`, and only its control characters stand between it and a surface that would verify quotes nobody wrote**",
   "papers_named": [],
   "pmids": [
@@ -25690,7 +25937,7 @@
   "claims_named": [
    "CLAIM 023"
   ],
-  "digest": "b59ae1ea6fa32aa5",
+  "digest": "c77417df322f5292",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-106",
@@ -25712,7 +25959,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-METH-109",
-  "origin_line": 3553,
+  "origin_line": 3557,
   "origin_title": "DL-METH-109 — **Il dato clinico c'è, il driver non è mai misurato, e l'unico trascritto virale misurato sta in una figura supplementare che il testo non cita mai**",
   "papers_named": [],
   "pmids": [
@@ -25805,7 +26052,8 @@
    "42397075",
    "42422765",
    "42558002",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "12514174": [
@@ -26091,6 +26339,9 @@
    ],
    "42721537": [
     "DL-MECH-106"
+   ],
+   "42909904": [
+    "DL-MECH-106"
    ]
   },
   "query_id": "Q-DL-METH-109",
@@ -26101,7 +26352,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "34e584d147f5f998",
+  "digest": "8dc771241327ead4",
   "kind": "lead",
   "leads_named": [
    "DL-METH-108"
@@ -26118,7 +26369,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-METH-110",
-  "origin_line": 3567,
+  "origin_line": 3571,
   "origin_title": "DL-METH-110 — **Un archivio open-access può distribuire le figure a 532 px e insieme depositarne gli stream a 4× nel proprio PDF di rendering: la risoluzione «nativa» è una proprietà della rotta, non dell'articolo**",
   "papers_named": [],
   "pmids": [
@@ -26139,7 +26390,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "273c13632b05153e",
+  "digest": "c74734b789b00efa",
   "kind": "lead",
   "leads_named": [
    "DL-METH-108",
@@ -26159,7 +26410,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-METH-112",
-  "origin_line": 3595,
+  "origin_line": 3599,
   "origin_title": "DL-METH-112 — **Una didascalia annuncia l'istologia dei tumori dell'esperimento e mostra due pannelli che sono **entrambi** bracci di controllo: il braccio sperimentale occupa zero pixel, e l'assenza è visibile solo aprendo l'immagine**",
   "papers_named": [],
   "pmids": [
@@ -26184,7 +26435,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "e3ad362d4b7e7da3",
+  "digest": "6c8bcb16433998d2",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-021"
@@ -26201,7 +26452,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-METH-114",
-  "origin_line": 3621,
+  "origin_line": 3625,
   "origin_title": "DL-METH-114 — Which WWOX-loss endpoints are rescue READOUTS, and which are descriptions of the defect",
   "papers_named": [],
   "pmids": [
@@ -26253,7 +26504,8 @@
    "40336300",
    "41124647",
    "42248868",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "15064722": [
@@ -26384,6 +26636,9 @@
    ],
    "42721537": [
     "DL-MECH-021"
+   ],
+   "42909904": [
+    "DL-MECH-021"
    ]
   },
   "query_id": "Q-DL-METH-114",
@@ -26399,7 +26654,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "9f764421de74c3eb",
+  "digest": "4cd3c7abfa4119e6",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-098",
@@ -26421,7 +26676,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-METH-116",
-  "origin_line": 3642,
+  "origin_line": 3646,
   "origin_title": "DL-METH-116 — Sei disaccordi testo-contro-pannello in Steinberg 2021, e cosa cambiano per chi lo cita",
   "papers_named": [
    "PAPER 039"
@@ -26525,7 +26780,8 @@
    "42422765",
    "42558002",
    "42721537",
-   "42807679"
+   "42807679",
+   "42909904"
   ],
   "pmids_via_records": {
    "15064722": [
@@ -26831,6 +27087,9 @@
    ],
    "42807679": [
     "DL-THER-105"
+   ],
+   "42909904": [
+    "DL-MECH-098"
    ]
   },
   "query_id": "Q-DL-METH-116",
@@ -26841,7 +27100,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "abb8ab2e2cf8cb4e",
+  "digest": "d74c0fa963b670a7",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -26866,7 +27125,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-METH-117",
-  "origin_line": 3655,
+  "origin_line": 3659,
   "origin_title": "DL-METH-117 — A CSF-route dose carried without its scalar is not a dose, and no published scalar yet converts an adult or primate dose to an infant one",
   "papers_named": [
    "PAPER 177",
@@ -26908,7 +27167,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "d10fddc785ecb240",
+  "digest": "6ff2b5dda1a9a656",
   "kind": "lead",
   "leads_named": [
    "DL-METH-120",
@@ -26942,7 +27201,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-METH-118",
-  "origin_line": 3675,
+  "origin_line": 3679,
   "origin_title": "DL-METH-118 — A primate dorsal-root-ganglion finding without a concurrent-control incidence is not an attribution",
   "papers_named": [
    "PAPER 178",
@@ -27010,7 +27269,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "e9b197e065ed0c4c",
+  "digest": "1a46562b9f0e862b",
   "kind": "lead",
   "leads_named": [
    "DL-METH-116"
@@ -27035,7 +27294,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-METH-119",
-  "origin_line": 3697,
+  "origin_line": 3701,
   "origin_title": "DL-METH-119 — A carried quantity is not verified until it has been read in the form the publisher rendered it",
   "papers_named": [
    "PAPER 177",
@@ -27146,7 +27405,8 @@
    "42422765",
    "42558002",
    "42721537",
-   "42807679"
+   "42807679",
+   "42909904"
   ],
   "pmids_via_records": {
    "15064722": [
@@ -27457,6 +27717,9 @@
    ],
    "42807679": [
     "DL-METH-116"
+   ],
+   "42909904": [
+    "DL-METH-116"
    ]
   },
   "query_id": "Q-DL-METH-119",
@@ -27468,7 +27731,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "cddbf3047cbb9789",
+  "digest": "1201bedae673738c",
   "kind": "lead",
   "leads_named": [
    "DL-METH-118",
@@ -27494,7 +27757,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-METH-120",
-  "origin_line": 3728,
+  "origin_line": 3732,
   "origin_title": "DL-METH-120 — A nonclinical tolerability statement is not readable without its Methods: read the immunosuppression regimen before carrying the safety sentence",
   "papers_named": [
    "PAPER 184",
@@ -27562,7 +27825,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "aa75a299aad77268",
+  "digest": "8e11c73a14cca47d",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -27577,7 +27840,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-METH-121",
-  "origin_line": 3777,
+  "origin_line": 3781,
   "origin_title": "DL-METH-121 — A dorsal-root-ganglion imaging endpoint exists only for storage enlargement; whether it could register vector-associated DRG degeneration is untested",
   "papers_named": [
    "PAPER 215"
@@ -27597,7 +27860,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "9dfae8bfd76200fd",
+  "digest": "f6f3fbe55cf2581d",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -27614,7 +27877,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-METH-122",
-  "origin_line": 4017,
+  "origin_line": 4021,
   "origin_title": "DL-METH-122 — Method: canonical splice-site alleles are classified likely pathogenic on predicted loss of function without an RNA study in the two SLC18A2 case reports; the same evidential step exists for a WWOX canonical splice-acceptor allele",
   "papers_named": [
    "PAPER 306",
@@ -27642,7 +27905,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "72dd1b9347bcdf58",
+  "digest": "52f3b5cf6ed38611",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -27659,7 +27922,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-METH-123",
-  "origin_line": 4027,
+  "origin_line": 4031,
   "origin_title": "DL-METH-123 — Method note for question 1 of the metabolic batch: species to read if a Wwox-null or P47T brain lipidomics is ever run",
   "papers_named": [
    "PAPER 252",
@@ -27690,7 +27953,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "bb532cf1ef5ab412",
+  "digest": "4e0fa11978691be4",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -27705,7 +27968,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-METH-124",
-  "origin_line": 4037,
+  "origin_line": 4041,
   "origin_title": "DL-METH-124 — Method note: if brain sterol is ever measured in Wwox-null or P47T brain, a post-lanosterol profile by GC- or LC-MS; plasma cholesterol is not a proxy",
   "papers_named": [
    "PAPER 258"
@@ -27727,7 +27990,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "42c4f4d4a0aab19a",
+  "digest": "5db38a1f2e25f3e3",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -27742,7 +28005,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-METH-125",
-  "origin_line": 4091,
+  "origin_line": 4095,
   "origin_title": "DL-METH-125 — Method rule: an epinephrine arm needs an epinephrine-alone control and a time-matched disease-only control before a respiratory or lactate change is read as a drug effect",
   "papers_named": [
    "PAPER 318"
@@ -28389,7 +28652,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "90175411f0577c80",
+  "digest": "3914b8f5fde0ba4e",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -28400,7 +28663,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MOL-008",
-  "origin_line": 576,
+  "origin_line": 579,
   "origin_title": "DL-MOL-008 — Peptide pTyr33-WWOX: un candidato di \"restoration\" già testato in vivo su un modello neurologico",
   "papers_named": [],
   "pmids": [
@@ -28416,7 +28679,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "cf5dff7cdaf78bda",
+  "digest": "648efdb57ed79c58",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -28427,7 +28690,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MOL-009",
-  "origin_line": 663,
+  "origin_line": 666,
   "origin_title": "DL-MOL-009 — Digossina reverte in vivo il fenotipo metabolico Wwox-dipendente. Farmaco approvato — e proprio per questo pericoloso",
   "papers_named": [],
   "pmids": [
@@ -28441,7 +28704,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "1557fad4a0731a44",
+  "digest": "97ae0735c11c6ba0",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-033"
@@ -28458,7 +28721,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MOL-010",
-  "origin_line": 817,
+  "origin_line": 821,
   "origin_title": "DL-MOL-010 — Il banco per testare HYP-08 esiste già. Manca un solo reagente, e il genotipo di riferimento lo possiede.",
   "papers_named": [],
   "pmids": [
@@ -28509,7 +28772,8 @@
    "41124647",
    "42068099",
    "42248868",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "15064722": [
@@ -28652,6 +28916,9 @@
    ],
    "42721537": [
     "DL-MECH-033"
+   ],
+   "42909904": [
+    "DL-MECH-033"
    ]
   },
   "query_id": "Q-DL-MOL-010",
@@ -28663,7 +28930,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "b7e28f1a45a56d5f",
+  "digest": "b7a94dabe44d6344",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-003",
@@ -28683,7 +28950,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MOL-011",
-  "origin_line": 1036,
+  "origin_line": 1040,
   "origin_title": "🔴 DL-MOL-011 — Un ASO **non può ripristinare un sito accettore canonico distrutto**. `TX-001` va riclassificato; la leva corretta è l'editing.",
   "papers_named": [],
   "pmids": [
@@ -28797,7 +29064,7 @@
   "claims_named": [
    "CLAIM 019"
   ],
-  "digest": "58d6d914e6260842",
+  "digest": "c32f7d261d364696",
   "kind": "lead",
   "leads_named": [
    "DL-MOL-010"
@@ -28816,7 +29083,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MOL-012",
-  "origin_line": 1050,
+  "origin_line": 1054,
   "origin_title": "🟢 DL-MOL-012 — **Q230P è un hotspot ricorrente (8 casi)**: una soluzione \"per il genotipo di riferimento\" è una soluzione per una sotto-popolazione",
   "papers_named": [],
   "pmids": [
@@ -28867,7 +29134,8 @@
    "41124647",
    "42068099",
    "42248868",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "15064722": [
@@ -29016,6 +29284,9 @@
    ],
    "42721537": [
     "DL-MOL-010"
+   ],
+   "42909904": [
+    "DL-MOL-010"
    ]
   },
   "query_id": "Q-DL-MOL-012",
@@ -29027,7 +29298,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "0080e1cf5c6623f9",
+  "digest": "c099ed258fea5dd3",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-046",
@@ -29047,7 +29318,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MOL-013",
-  "origin_line": 1086,
+  "origin_line": 1090,
   "origin_title": "DL-MOL-013 — VERDETTO sulla tesi ASO: **regge**, con una via RNA che non avevo considerato",
   "papers_named": [],
   "pmids": [
@@ -29101,7 +29372,8 @@
    "41124647",
    "42068099",
    "42248868",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "15064722": [
@@ -29276,6 +29548,9 @@
     "DL-MOL-011"
    ],
    "42721537": [
+    "DL-MECH-046"
+   ],
+   "42909904": [
     "DL-MECH-046"
    ]
   },
@@ -29525,7 +29800,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "d7a6fdc404c67446",
+  "digest": "41f9cfd3cee86a6e",
   "kind": "lead",
   "leads_named": [
    "DL-REPO-001",
@@ -29547,7 +29822,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-REPO-003",
-  "origin_line": 3742,
+  "origin_line": 3746,
   "origin_title": "DL-REPO-003 — A curated database says valproate LOWERS WWOX expression in human cells, and the paper that carries the row states the opposite: the direction is a reading debt, not a lead",
   "papers_named": [
    "PAPER 222"
@@ -29718,7 +29993,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "15f078765b0032e7",
+  "digest": "314619b1b1694fc1",
   "kind": "lead",
   "leads_named": [
    "DL-METH-079"
@@ -29735,7 +30010,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-THER-080",
-  "origin_line": 2279,
+  "origin_line": 2283,
   "origin_title": "DL-THER-080 — Simvastatina→MCM7 in osteosarcoma *Wwox/Trp53*-null: seme di repurposing, con i suoi limiti attaccati",
   "papers_named": [],
   "pmids": [
@@ -29820,7 +30095,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "7e325242404cea51",
+  "digest": "b8fdc135960cc3dc",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-086"
@@ -29837,7 +30112,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-THER-087",
-  "origin_line": 2452,
+  "origin_line": 2456,
   "origin_title": "DL-THER-087 — L'anello WPRE si chiude dentro un solo documento, e nessuno dei due capi cita l'altro",
   "papers_named": [],
   "pmids": [
@@ -29855,7 +30130,7 @@
   "claims_named": [
    "CLAIM 003"
   ],
-  "digest": "db614777b138f703",
+  "digest": "20ba816d6908db5b",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-078",
@@ -29884,7 +30159,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-THER-089",
-  "origin_line": 2370,
+  "origin_line": 2374,
   "origin_title": "DL-THER-089 — A51, primo intervento farmacologico su un modello neurale umano WWOX-deficiente: recupera i progenitori e non i neuroni di strato",
   "papers_named": [],
   "pmids": [
@@ -30045,7 +30320,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "62f8218e4005f831",
+  "digest": "c5e0347810c98982",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-001",
@@ -30083,7 +30358,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-THER-095",
-  "origin_line": 2977,
+  "origin_line": 2981,
   "origin_title": "🔴 DL-THER-095 — ITCH **alza** l'abbondanza di WWOX, e nessun file canonico lo dice: `DIS-003` ha una maniglia a valle che non ha mai nominato",
   "papers_named": [],
   "pmids": [
@@ -30171,7 +30446,8 @@
    "42397075",
    "42422765",
    "42558002",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "15064722": [
@@ -30471,6 +30747,9 @@
    ],
    "42721537": [
     "DL-META-091"
+   ],
+   "42909904": [
+    "DL-META-091"
    ]
   },
   "query_id": "Q-DL-THER-095",
@@ -30488,7 +30767,7 @@
    "CLAIM 011",
    "CLAIM 032"
   ],
-  "digest": "95feadbff734dcf6",
+  "digest": "94c6806ab81b4439",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -30507,7 +30786,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-THER-105",
-  "origin_line": 3459,
+  "origin_line": 3463,
   "origin_title": "DL-THER-105 — **Il rescue di WWOX non è monotòno su tutti gli endpoint: normalizza due marcatori di strato corticale su tre e SUPERA il wild type sul terzo**",
   "papers_named": [],
   "pmids": [
@@ -30648,7 +30927,7 @@
   "claims_named": [
    "CLAIM 001"
   ],
-  "digest": "c180dd0124760cbd",
+  "digest": "24ad3d65a901d007",
   "kind": "lead",
   "leads_named": [
    "DL-METH-107"
@@ -30669,7 +30948,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-THER-106",
-  "origin_line": 3517,
+  "origin_line": 3521,
   "origin_title": "DL-THER-106 — **A responder subset to antiepileptic therapy exists in the published WOREE cohort, is visible only in the supplement, and the review's running text states the opposite as a flat negative**",
   "papers_named": [
    "PAPER 040"
@@ -30768,7 +31047,8 @@
    "42397075",
    "42422765",
    "42558002",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "15064722": [
@@ -31046,6 +31326,9 @@
    ],
    "42721537": [
     "DL-METH-107"
+   ],
+   "42909904": [
+    "DL-METH-107"
    ]
   },
   "query_id": "Q-DL-THER-106",
@@ -31057,7 +31340,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "abe4159356c49e8e",
+  "digest": "0ad3b447f1450937",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -31068,7 +31351,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-THER-115",
-  "origin_line": 3631,
+  "origin_line": 3635,
   "origin_title": "DL-THER-115 — Tre organismi, una direzione: il restauro di WWOX ALZA la sensibilita apoptotica sotto stress",
   "papers_named": [],
   "pmids": [
@@ -31090,7 +31373,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "f7d77ec937f5697e",
+  "digest": "d7eae42da5bfa442",
   "kind": "lead",
   "leads_named": [
    "DL-METH-118",
@@ -31126,7 +31409,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-THER-116",
-  "origin_line": 3716,
+  "origin_line": 3720,
   "origin_title": "DL-THER-116 — Two endpoints, two dials: a CSF-route AAV programme may be able to treat the ganglion infiltrate and the ganglion neuron loss as separately controllable",
   "papers_named": [
    "PAPER 183",
@@ -31193,7 +31476,7 @@
   "candidate": "mTOR inhibitors",
   "claims_named": [],
   "decisive_test": "a protein-level mTORC1 readout (pS6, p4E-BP1) in a WWOX-deficient neuronal",
-  "digest": "24fe135fead64af8",
+  "digest": "62aac741ec223b64",
   "intervention": "*`INSUFFICIENT` — mai misurato a livello proteico in alcun sistema WWOX.* The reflex move in genetic DEE, imported from TSC.",
   "kind": "mechanism_record",
   "leads_named": [
@@ -31213,7 +31496,7 @@
   },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-01",
-  "origin_line": 644,
+  "origin_line": 693,
   "origin_title": "mTOR inhibitors (rapamycin / everolimus) → **`INSUFFICIENT` — mai misurato a livello proteico in alcun sistema WWOX**",
   "papers_named": [
    "PAPER 039"
@@ -31267,7 +31550,8 @@
    "40336300",
    "41124647",
    "42248868",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "15064722": [
@@ -31416,6 +31700,9 @@
    ],
    "42721537": [
     "DL-MECH-034"
+   ],
+   "42909904": [
+    "DL-MECH-034"
    ]
   },
   "query_id": "Q-N-01",
@@ -31432,7 +31719,7 @@
    "CLAIM 016"
   ],
   "decisive_test": "a PTZ arm with an explicit tested `−/−` vs `+/+` contrast, or a different",
-  "digest": "40ec9910ad07c8f2",
+  "digest": "69d599c94d9b20a7",
   "intervention": "*evidence transfer that was never genotype-controlled*, compounded by *wrong",
   "kind": "mechanism_record",
   "leads_named": [],
@@ -31450,7 +31737,7 @@
   },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-02",
-  "origin_line": 656,
+  "origin_line": 705,
   "origin_title": "Lithium as a WWOX-specific disease modifier → **the evidence does not say what it was read as saying**",
   "papers_named": [
    "PAPER 019"
@@ -31483,7 +31770,7 @@
   "candidate": "Sodium-channel blockers",
   "claims_named": [],
   "decisive_test": "documented Na-blocker response in WWOX-BS cases, or a Nav dependence measured",
-  "digest": "ac79a91db832c909",
+  "digest": "308c73b6cf20c02d",
   "intervention": "*the target is not causally downstream of WWOX.* Precision therapy in",
   "kind": "mechanism_record",
   "leads_named": [
@@ -31501,7 +31788,7 @@
   },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-03",
-  "origin_line": 665,
+  "origin_line": 714,
   "origin_title": "Sodium-channel blockers (carbamazepine, phenytoin, oxcarbazepine) → **target not causally downstream of WWOX**",
   "papers_named": [],
   "pmids": [
@@ -31527,7 +31814,7 @@
    "CLAIM 031"
   ],
   "decisive_test": "`E_GABA` measurement in a WWOX system; or a WWOX cohort with structured VABAM",
-  "digest": "2b7108dc7863ad98",
+  "digest": "d4bca6275b9f4508",
   "intervention": "*corrects a marker, not the mechanism* — plus an unmeasured premise. VABAM is",
   "kind": "mechanism_record",
   "leads_named": [
@@ -31549,7 +31836,7 @@
   },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-04",
-  "origin_line": 674,
+  "origin_line": 723,
   "origin_title": "Broad GABAergic push (chronic high-dose benzodiazepines; vigabatrin as a mechanism play) → **premise unmeasured, and a real safety signal**",
   "papers_named": [],
   "pmids": [
@@ -31635,7 +31922,7 @@
    "CLAIM 019"
   ],
   "decisive_test": "evidence that a compound-heterozygous transcript behaves differently from the",
-  "digest": "c3ea899f604baa6b",
+  "digest": "37cb0d7033d32040",
   "intervention": "*the target is not the bottleneck.* Normal transcript with protein not detected",
   "kind": "mechanism_record",
   "leads_named": [
@@ -31658,7 +31945,7 @@
   },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-05",
-  "origin_line": 684,
+  "origin_line": 733,
   "origin_title": "Boosting WWOX expression alone (CRISPRa, anti-miR-153, small-molecule activators) → **downstream bottleneck, and an allele-asymmetric amplifier**",
   "papers_named": [],
   "pmids": [
@@ -31870,7 +32157,7 @@
   "candidate": "Lactate, and metabolic blood biomarkers generally, as WWOX readouts",
   "claims_named": [],
   "decisive_test": "Seahorse/fluxomics showing a real bioenergetic shift in donor-derived cells.",
-  "digest": "20b4519193a16e08",
+  "digest": "55cf7834cd47aa5c",
   "intervention": "*corrects/reports a biomarker, not the mechanism* — inverted: here the biomarker",
   "kind": "mechanism_record",
   "leads_named": [
@@ -31894,7 +32181,7 @@
   },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-06",
-  "origin_line": 698,
+  "origin_line": 747,
   "origin_title": "Lactate, and metabolic blood biomarkers generally, as WWOX readouts → **a biomarker that is not measuring the mechanism**",
   "papers_named": [
    "PAPER 024",
@@ -31950,7 +32237,8 @@
    "40336300",
    "41124647",
    "42248868",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "15064722": [
@@ -32099,6 +32387,9 @@
    ],
    "42721537": [
     "DL-BIO-008"
+   ],
+   "42909904": [
+    "DL-BIO-008"
    ]
   },
   "query_id": "Q-N-06",
@@ -32115,7 +32406,7 @@
    "CLAIM 025"
   ],
   "decisive_test": "UNKNOWN",
-  "digest": "f8bf7b170589922f",
+  "digest": "242db6b4799992ff",
   "intervention": "*toxicity incompatible* + *wrong endpoint*. The only approved drug that corrects a",
   "kind": "mechanism_record",
   "leads_named": [],
@@ -32133,20 +32424,28 @@
   },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-07",
-  "origin_line": 729,
+  "origin_line": 778,
   "origin_title": "Digoxin (HIF1α inhibition) → **right target validation, wrong clinical object**",
   "papers_named": [
    "PAPER 091"
   ],
   "pmids": [
    "29724996",
-   "42589397"
+   "42128308",
+   "42589397",
+   "42909904"
   ],
   "pmids_via_records": {
    "29724996": [
     "PAPER 091"
    ],
+   "42128308": [
+    "CLAIM 025"
+   ],
    "42589397": [
+    "CLAIM 025"
+   ],
+   "42909904": [
     "CLAIM 025"
    ]
   },
@@ -32160,7 +32459,7 @@
   "candidate": "Dichloroacetate",
   "claims_named": [],
   "decisive_test": "UNKNOWN",
-  "digest": "b3bb783b54c683eb",
+  "digest": "245fe07ed354ba82",
   "intervention": "*two-hop inference* + *a safety margin that has never been measured in this",
   "kind": "mechanism_record",
   "leads_named": [
@@ -32182,7 +32481,7 @@
   },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-08",
-  "origin_line": 740,
+  "origin_line": 789,
   "origin_title": "Dichloroacetate (PDK inhibition) → **a peripheral-nerve signal that was asymptomatic throughout the one long-term cohort, symptomatic in a separate trial; and never measured in a WWOX system**",
   "papers_named": [
    "PAPER 557",
@@ -32235,7 +32534,8 @@
    "40336300",
    "41124647",
    "42248868",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "15064722": [
@@ -32378,6 +32678,9 @@
    ],
    "42721537": [
     "DL-MECH-020"
+   ],
+   "42909904": [
+    "DL-MECH-020"
    ]
   },
   "query_id": "Q-N-08",
@@ -32395,7 +32698,7 @@
    "CLAIM 023"
   ],
   "decisive_test": "UNKNOWN",
-  "digest": "7c65ed2256a6d9d7",
+  "digest": "12228380908693bd",
   "intervention": "*acts in the wrong direction.* Phospho-Tyr33 WOX1 is **pro-apoptotic**; the peptide",
   "kind": "mechanism_record",
   "leads_named": [
@@ -32415,7 +32718,7 @@
   },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-09",
-  "origin_line": 814,
+  "origin_line": 863,
   "origin_title": "pTyr33-WWOX peptide as functional restoration → **the direction is inverted**",
   "papers_named": [],
   "pmids": [
@@ -32458,7 +32761,7 @@
   "candidate": "Splice-switching ASO for a canonical acceptor allele",
   "claims_named": [],
   "decisive_test": "UNKNOWN",
-  "digest": "f36cf079652bb403",
+  "digest": "bf9e16ddf1e7f5d7",
   "intervention": "*derived from a mechanism that does not do what the design needs.* SSOs **mask**",
   "kind": "mechanism_record",
   "leads_named": [
@@ -32476,7 +32779,7 @@
   },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-10",
-  "origin_line": 824,
+  "origin_line": 873,
   "origin_title": "Splice-switching ASO for a canonical acceptor allele → **\"not eligible\" by the field's own criteria, which say it flatly; what is missing is the measurement that would place this allele in that class**",
   "papers_named": [],
   "pmids": [
@@ -32583,7 +32886,7 @@
   "candidate": "4-PBA / TUDCA on the ER-chaperone rationale",
   "claims_named": [],
   "decisive_test": "UNKNOWN",
-  "digest": "98dc7669b274343c",
+  "digest": "be9baa255e4c342e",
   "intervention": "*derived from a textbook default.* \"Misfolded protein → ERAD → chemical chaperone\"",
   "kind": "mechanism_record",
   "leads_named": [
@@ -32604,7 +32907,7 @@
   },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-11",
-  "origin_line": 897,
+  "origin_line": 946,
   "origin_title": "4-PBA / TUDCA on the ER-chaperone rationale → **wrong compartment**",
   "papers_named": [],
   "pmids": [
@@ -32655,7 +32958,8 @@
    "41124647",
    "42068099",
    "42248868",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "15064722": [
@@ -32802,6 +33106,9 @@
    ],
    "42721537": [
     "DL-MECH-037"
+   ],
+   "42909904": [
+    "DL-MECH-037"
    ]
   },
   "query_id": "Q-N-11",
@@ -32819,7 +33126,7 @@
    "CLAIM 019"
   ],
   "decisive_test": "any measurement of a destabilized WWOX SDR missense (Q230P or P252A) under",
-  "digest": "bfe892dfc492b954",
+  "digest": "9dd4ba212d475336",
   "intervention": "*wrong direction, hidden inside a plausible one* — **as a prediction, not as a",
   "kind": "mechanism_record",
   "leads_named": [
@@ -32839,7 +33146,7 @@
   },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-12",
-  "origin_line": 904,
+  "origin_line": 953,
   "origin_title": "HSP70 co-inducers (e.g. arimoclomol) for an SDR missense → **a hypothesis of harm, and it is still only a hypothesis**",
   "papers_named": [],
   "pmids": [
@@ -32889,7 +33196,7 @@
    "CLAIM 003"
   ],
   "decisive_test": "UNKNOWN",
-  "digest": "12586886fb51c370",
+  "digest": "eef814301820433c",
   "intervention": "*the target is not causally downstream of WWOX in the cell being targeted* +",
   "kind": "mechanism_record",
   "leads_named": [
@@ -32909,7 +33216,7 @@
   },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-13",
-  "origin_line": 954,
+  "origin_line": 1003,
   "origin_title": "Pro-myelinating agents (clemastine, benztropine, T3, quetiapine) → **wrong cell compartment, and a closing window**",
   "papers_named": [],
   "pmids": [
@@ -33045,7 +33352,7 @@
    "CLAIM 034"
   ],
   "decisive_test": "UNKNOWN",
-  "digest": "43a753f37946cf57",
+  "digest": "786c8e0b5b4ab78f",
   "intervention": "*the direction of the axis is context-dependent and was assumed.* Two independent",
   "kind": "mechanism_record",
   "leads_named": [],
@@ -33067,7 +33374,7 @@
   },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-14",
-  "origin_line": 968,
+  "origin_line": 1017,
   "origin_title": "Antioxidants (NAC, CoQ10, creatine) on the \"WWOX loss → ROS\" rationale → **the relationship is not monotonic**",
   "papers_named": [
    "PAPER 054",
@@ -33126,7 +33433,7 @@
    "CLAIM 033"
   ],
   "decisive_test": "such a case, reported with a developmental",
-  "digest": "adad04625b3f9be6",
+  "digest": "20b2efbcb8e23c9c",
   "intervention": "*corrects a biomarker (seizures) but not the mechanism (development)*. **Quoted",
   "kind": "mechanism_record",
   "leads_named": [
@@ -33150,7 +33457,7 @@
   },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-15",
-  "origin_line": 979,
+  "origin_line": 1028,
   "origin_title": "Counting seizure control as developmental protection → **the most consequential negative in the whole portfolio**",
   "papers_named": [
    "PAPER 045"
@@ -33209,7 +33516,8 @@
    "42068099",
    "42248868",
    "42422765",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "15064722": [
@@ -33381,6 +33689,9 @@
    ],
    "42721537": [
     "DL-MECH-039"
+   ],
+   "42909904": [
+    "DL-MECH-039"
    ]
   },
   "query_id": "Q-N-15",
@@ -33395,7 +33706,7 @@
    "CLAIM 021"
   ],
   "decisive_test": "UNKNOWN",
-  "digest": "4f2c320de6cd63b2",
+  "digest": "ca7ad256db8b0077",
   "intervention": "*a negative stated as an absence of effect, when what exists is an untested point estimate in the adverse direction.* In the only WWOX system in which a selective pannexin-1 blocker has ever been applied (`Wwox` S-KO neocortical slice, P13–P17), normalized burst frequency rose to **≈ 2.55 during treatment and ≈ 2.6 at washout against a baseline of 1.0**, carrying **no significance marker and no re",
   "kind": "mechanism_record",
   "leads_named": [],
@@ -33411,7 +33722,7 @@
   },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-16",
-  "origin_line": 1026,
+  "origin_line": 1075,
   "origin_title": "Pannexin-1 blockade (brilliant blue FCF and congeners) on the CLAIM 021 network node → **the only WWOX measurement points the wrong way, and it was never tested**",
   "papers_named": [],
   "pmids": [
@@ -33432,7 +33743,7 @@
    "CLAIM 035"
   ],
   "decisive_test": "UNKNOWN",
-  "digest": "b6562cfd3f82d058",
+  "digest": "d2a7ef48ba8c73d7",
   "intervention": "*importing a disease's dominant modality because the pathway diagram looks like that disease, without checking which way the arrow points.* CHAIN C reads like a tauopathy — WWOX loss → GSK3β de-repressed → pTau S396/S404 up (`CLAIM 035`, `DL-MECH-019`) — and tauopathy's dominant modality is **tau-lowering**. In the only system where the question was asked, tau-lowering **removes the benefit of bot",
   "kind": "mechanism_record",
   "leads_named": [
@@ -33455,7 +33766,7 @@
   },
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-17",
-  "origin_line": 1032,
+  "origin_line": 1081,
   "origin_title": "Tau-lowering, imported from tauopathy into CHAIN C → 🔴 **the arrow points the other way: Tau is the EFFECTOR of the benefit, not the toxin**",
   "papers_named": [],
   "pmids": [
@@ -33513,7 +33824,8 @@
    "41124647",
    "42068099",
    "42248868",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "15064722": [
@@ -33683,6 +33995,9 @@
     "DL-MECH-069"
    ],
    "42721537": [
+    "DL-MECH-019"
+   ],
+   "42909904": [
     "DL-MECH-019"
    ]
   },
@@ -36635,7 +36950,7 @@
    "CLAIM 042"
   ],
   "decisive_test": "**Seahorse OCR/ECAR on donor-derived fibroblasts/LCL vs control** — the only remaining falsifier since lactate became ambiguous. Zero-cost second test: Seahorse on the existing WWOX-KO organoids, closing the transcriptome→flux gap",
-  "digest": "b1b842262103461d",
+  "digest": "0ffd1900f2b25558",
   "intervention": "ketogenic diet",
   "kind": "mechanism_record",
   "leads_named": [
@@ -36709,7 +37024,8 @@
    "41124647",
    "41830506",
    "42248868",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "15064722": [
@@ -36857,6 +37173,9 @@
     "DL-MECH-020"
    ],
    "42721537": [
+    "DL-MECH-020"
+   ],
+   "42909904": [
     "DL-MECH-020"
    ]
   },
@@ -37146,7 +37465,7 @@
   "candidate": "Base / prime editing of a canonical splice-acceptor allele",
   "claims_named": [],
   "decisive_test": "**first**, characterize the real transcript: junction-spanning RT-PCR ± NMD block, amplicon sequencing, long-read if multiple isoforms appear. **No editing-vs-anything choice may precede this.** Then: PAM availability and bystander-cytosine survey at the locus",
-  "digest": "494be822773bcbf4",
+  "digest": "03f65c3419e156cb",
   "intervention": "cytosine base editor (C→T on the antisense strand) or prime editor",
   "kind": "mechanism_record",
   "leads_named": [
@@ -37221,7 +37540,8 @@
    "41124647",
    "42068099",
    "42248868",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "15064722": [
@@ -37397,6 +37717,9 @@
    ],
    "42721537": [
     "DL-MOL-013"
+   ],
+   "42909904": [
+    "DL-MOL-013"
    ]
   },
   "query_id": "Q-R-08",
@@ -37411,7 +37734,7 @@
    "CLAIM 019"
   ],
   "decisive_test": "the ordered sequence, each step informative alone: (1) WB + qRT-PCR on variant-carrying cells vs control; (2) **nascent synthesis + pulse-chase** with soluble/insoluble fractionation, to separate production from disappearance; (3) orthogonal turnover probes (proteasomal and lysosomal arms with viability) — HSC70/LAMP1 are associative, **LAMP2A-dependence is what CMA requires**; (4) only then a min",
-  "digest": "cd430632524c88ad",
+  "digest": "8263f49b88f90e2b",
   "intervention": "conditional; **no molecule is design-ready**. Three families: site-specific pharmacological chaperone · kinetic stabilizer · indirect proteostasis regulator",
   "kind": "mechanism_record",
   "leads_named": [
@@ -37488,7 +37811,8 @@
    "41124647",
    "42068099",
    "42248868",
-   "42721537"
+   "42721537",
+   "42909904"
   ],
   "pmids_via_records": {
    "15064722": [
@@ -37647,6 +37971,9 @@
    ],
    "42721537": [
     "DL-MECH-037"
+   ],
+   "42909904": [
+    "DL-MECH-037"
    ]
   },
   "query_id": "Q-R-09",
@@ -37655,6 +37982,98 @@
   "terms": [
    "SDR",
    "WWOX"
+  ]
+ },
+ {
+  "axis": "all",
+  "candidate": "ISRIB-class eIF2B activators and other ISR attenuators",
+  "claims_named": [],
+  "decisive_test": "**eIF2 alpha phosphorylation** and **ATF4 protein** (with ATF4-target transcripts) in WWOX-deficient versus isogenic human neural cells at matched maturity, with and without a defined proteotoxic challenge; only if elevated, an eIF2B activator against vehicle on that readout and one functional endpoint",
+  "digest": "339a4228fe847f0a",
+  "intervention": "class-level: eIF2B activators (ISRIB and clinical-stage successors), PERK-arm inhibitors, repurposed compounds that reverse eIF2 alpha-P translational repression; the card is `research/drug_repurposing/cards/E01_isr_modulators.card.json`",
+  "kind": "mechanism_record",
+  "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 567"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 567"
+   ]
+  },
+  "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
+  "origin_id": "R-10",
+  "origin_line": 637,
+  "origin_title": "ISRIB-class eIF2B activators and other ISR attenuators (class-level; added 2026-10-26 from the Lucas-Clarke follow-up)",
+  "papers_named": [
+   "PAPER 567"
+  ],
+  "pmids": [
+   "42909904"
+  ],
+  "pmids_via_records": {
+   "42909904": [
+    "PAPER 567"
+   ]
+  },
+  "query_id": "Q-R-10",
+  "record_class": "repurposing",
+  "target": "the eIF2B complex (EIF2B1-5, HGNC:3257-3261) or the PERK arm (EIF2AK3, HGNC:3255); node: integrated stress response, ATF4 output",
+  "terms": [
+   "ISRIB",
+   "ISR",
+   "EIF2B1",
+   "HGNC",
+   "PERK",
+   "EIF2AK3"
+  ]
+ },
+ {
+  "axis": "all",
+  "candidate": "Stiripentol",
+  "claims_named": [],
+  "decisive_test": "**lactate** (enantiomer- or isotope-resolved) in the double-RNAi fly genotype with an Ldh-alone arm; **LDH activity** and the lactate-to-pyruvate relationship in WWOX-deficient versus isogenic human neural cells at matched maturity; then stiripentol against a selective LDHA tool at matched exposure",
+  "digest": "072353e619317a08",
+  "intervention": "stiripentol as the approved paediatric epilepsy member of an LDH-lowering lever; LDHA tool compounds and an LDHA-directed oligonucleotide (approved for primary hyperoxaluria, liver-directed) are context; the card is `research/drug_repurposing/cards/E02_ldh_inhibition.card.json`",
+  "kind": "mechanism_record",
+  "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "PAPER 567"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "PAPER 567"
+   ]
+  },
+  "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
+  "origin_id": "R-11",
+  "origin_line": 663,
+  "origin_title": "Stiripentol (LDH-lowering rationale; added 2026-10-26 from the Lucas-Clarke follow-up)",
+  "papers_named": [
+   "PAPER 567"
+  ],
+  "pmids": [
+   "42909904"
+  ],
+  "pmids_via_records": {
+   "42909904": [
+    "PAPER 567"
+   ]
+  },
+  "query_id": "Q-R-11",
+  "record_class": "repurposing",
+  "target": "LDHA (HGNC:6535, P00338) and LDHB (HGNC:6541, P07195); node: lactate production",
+  "terms": [
+   "LDH",
+   "LDHA",
+   "HGNC",
+   "P00338",
+   "LDHB",
+   "P07195"
   ]
  }
 ]

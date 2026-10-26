@@ -1,0 +1,721 @@
+{
+ "adapter": "pubtator3",
+ "citation": "Wei C-H. et al. PubTator 3.0: an AI-powered literature resource for unlocking biomedical knowledge. Nucleic Acids Res 2024;52(W1):W540-W546. https://doi.org/10.1093/nar/gkae235",
+ "error": "",
+ "evidence_label": "NOT WWOX EVIDENCE",
+ "hits": [
+  {
+   "kind": "relation",
+   "publications": 13,
+   "source": "@DISEASE_Mastitis",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 13,
+   "source": "@CHEMICAL_Lipopolysaccharides",
+   "target": "@GENE_LDH",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 10,
+   "source": "@CHEMICAL_Lactic_Acid",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 9,
+   "source": "@CHEMICAL_Hydrogen_Peroxide",
+   "target": "@GENE_LDH",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 7,
+   "source": "@DISEASE_Drug_Related_Side_Effects_and_Adverse_Reactions",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 6,
+   "source": "@CHEMICAL_NAD",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 6,
+   "source": "@CHEMICAL_Pyruvic_Acid",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 5,
+   "source": "@DISEASE_Infections",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 4,
+   "source": "@CHEMICAL_Glucose",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 3,
+   "source": "@CHEMICAL_Oxygen",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 3,
+   "source": "@DISEASE_Chemical_and_Drug_Induced_Liver_Injury",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 3,
+   "source": "@DISEASE_Inflammation",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 3,
+   "source": "@CHEMICAL_Dimethyl_Sulfoxide",
+   "target": "@GENE_LDH",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 3,
+   "source": "@CHEMICAL_N_methyl_valyl_amiclenomycin",
+   "target": "@GENE_LDH",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 3,
+   "source": "@CHEMICAL_Vitamin_E",
+   "target": "@GENE_LDH",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 3,
+   "source": "@CHEMICAL_deoxynivalenol",
+   "target": "@GENE_LDH",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 3,
+   "source": "@DISEASE_Drug_Related_Side_Effects_and_Adverse_Reactions",
+   "target": "@GENE_LDH",
+   "type": "stimulate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@CHEMICAL_Adenosine_Triphosphate",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@CHEMICAL_Carbohydrates",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@DISEASE_Alzheimer_Disease",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@DISEASE_Ataxia_Telangiectasia",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@DISEASE_Corneal_Endothelial_Cell_Loss",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@DISEASE_Hip_Dislocation",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@DISEASE_Hypoxia",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@DISEASE_Necrosis",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@DISEASE_Neoplasms",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@DISEASE_White_Muscle_Disease",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@CHEMICAL_Allopurinol",
+   "target": "@GENE_LDH",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@CHEMICAL_Bucladesine",
+   "target": "@GENE_LDH",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@CHEMICAL_Vitamin_E",
+   "target": "@GENE_LDH",
+   "type": "negative_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@CHEMICAL_Aflatoxin_B1",
+   "target": "@GENE_LDH",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@CHEMICAL_Ecdysterone",
+   "target": "@GENE_LDH",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@CHEMICAL_Hyaluronic_Acid",
+   "target": "@GENE_LDH",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@CHEMICAL_Lactic_Acid",
+   "target": "@GENE_LDH",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@CHEMICAL_Lysophosphatidylcholines",
+   "target": "@GENE_LDH",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@CHEMICAL_Oxygen",
+   "target": "@GENE_LDH",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@CHEMICAL_Veratridine",
+   "target": "@GENE_LDH",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@CHEMICAL_lipoteichoic_acid",
+   "target": "@GENE_LDH",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@CHEMICAL_monocrotaline_pyrrole",
+   "target": "@GENE_LDH",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@CHEMICAL_tert_Butylhydroperoxide",
+   "target": "@GENE_LDH",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@GENE_LDH",
+   "target": "@GENE_TNF",
+   "type": "positive_correlate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@DISEASE_Hyperoxia",
+   "target": "@GENE_LDH",
+   "type": "stimulate"
+  },
+  {
+   "kind": "relation",
+   "publications": 2,
+   "source": "@DISEASE_Hypoxia",
+   "target": "@GENE_LDH",
+   "type": "stimulate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_6_Ketoprostaglandin_F1_alpha",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_Arachidonic_Acid",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_Cellulose",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_Epoprostenol",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_Ethanol",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_Fatty_Acids_Nonesterified",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_Folic_Acid",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_Lipids",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_Molybdenum",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_Monensin",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_Oxytocin",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_Polyamines",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_Reactive_Oxygen_Species",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_Sodium_Chloride",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_Tropolone",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_Tryptophan",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_alpha_glycerophosphoric_acid",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_biochar",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_chromium_hexavalent_ion",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_methylmercuric_chloride",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@CHEMICAL_propiverine",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_3_Hydroxy_3_Methylglutaryl_CoA_Lyase_Deficiency",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Anaplasmosis",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Anodontia",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Arthritis_Psoriatic",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Bovine_Respiratory_Disease_Complex",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Brain_Death",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Cardiomyopathies",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Crisponi_syndrome",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Cysts",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Echinococcosis",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Heart_Diseases",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Heavy_Metal_Poisoning",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Hematologic_Diseases",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Hyperplasia",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Immunologic_Deficiency_Syndromes",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Lactate_dehydrogenase_deficiency_type_A",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Lactic_Aciduria_due_to_D_Lactic_Acid",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Leukemia",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Liver_Abscess",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Lymphoma",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Malaria",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Malnutrition",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Mastocytosis_Systemic",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Metabolic_Diseases",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Milk_Hypersensitivity",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Neoplasm_Metastasis",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Neoplasms_Glandular_and_Epithelial",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Neurodegenerative_Diseases",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Pneumonia",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Pyruvate_Carboxylase_Deficiency_Disease",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Respiratory_Tract_Diseases",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Ring_Chromosome_20_Syndrome",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Rumination_Syndrome",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Soft_Tissue_Injuries",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Theileriasis",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  },
+  {
+   "kind": "relation",
+   "publications": 1,
+   "source": "@DISEASE_Trismus",
+   "target": "@GENE_LDH",
+   "type": "associate"
+  }
+ ],
+ "hits_cap": 100,
+ "hits_total_before_cap": 246,
+ "licence": "NCBI public domain; key-less, no payment; 3 req/s limit",
+ "note": "NO_MATCH_FOUND is an answer about this query on this date, never absence",
+ "request": {
+  "gene": "LDH"
+ },
+ "requests_sent": [
+  "https://www.ncbi.nlm.nih.gov/research/pubtator3-api/relations?e1=@GENE_LDH"
+ ],
+ "retrieved_at": "2026-10-26T17:25:55Z",
+ "source_version": "UNKNOWN",
+ "status": "MATCH_FOUND"
+}
