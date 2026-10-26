@@ -1,0 +1,801 @@
+set	kind	rank	pert	cell	tissue	dose	time	pert_type	batch	z_sum
+S1	reverser	1	estradiol	MCLF015CN	NOT_PROVIDED	0.37 uM	6 h	Chemical	FIBR012	-16.652
+S1	reverser	2	clozapine	MCLF100SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR034	-16.238
+S1	reverser	3	TWS-119	MCLF135CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR019	-16.168
+S1	reverser	4	quetiapine	MCLF056CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR039	-16.070
+S1	reverser	5	alda-1	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	-15.841
+S1	reverser	6	BRD-K10882151	MCLF0067SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR042	-15.664
+S1	reverser	7	BRD-K09398529	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	-15.187
+S1	reverser	8	BRD-K76188144	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	-14.979
+S1	reverser	9	quiflapon	MCLF100SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR034	-14.783
+S1	reverser	10	sildenafil	MCLF141SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR026	-14.668
+S1	reverser	11	gallic-acid	MCLF056CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR039	-14.615
+S1	reverser	12	BRD-K09398529	MCLF100SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR034	-14.370
+S1	reverser	13	BRD-K35716340	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	-14.341
+S1	reverser	14	tipifarnib	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	-14.274
+S1	reverser	15	quiflapon	MCLF035SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR038	-14.262
+S1	reverser	16	BRD-K19216856	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	-14.156
+S1	reverser	17	BRD-K09398529	MCLF027CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR004	-14.124
+S1	reverser	18	sildenafil	MCLF100SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR034	-14.122
+S1	reverser	19	BRD-K76188144	MCLF033SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR005	-14.090
+S1	reverser	20	rolipram	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	-14.026
+S1	reverser	21	BRD-K19826330	VCAP	prostate gland	4 uM	24 h	Chemical	DOS012	-13.948
+S1	reverser	22	norethindrone	PC3	prostate gland	0.01 uM	24 h	Chemical	REP.B005	-13.788
+S1	reverser	23	LY-2183240	MCLF100SZ	NOT_PROVIDED	0.74 uM	6 h	Chemical	FIBR034	-13.733
+S1	reverser	24	fumonisin-b1	MCLF027CN	NOT_PROVIDED	0.04 uM	6 h	Chemical	FIBR003	-13.732
+S1	reverser	25	istaroxime	PC3	prostate gland	1.11 uM	24 h	Chemical	MOAR001	-13.702
+S1	reverser	26	CI-976	MCLF040SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR029	-13.643
+S1	reverser	27	cabazitaxel	A375	skin of body	3.33 uM	24 h	Chemical	REP.A011	-13.616
+S1	reverser	28	GDC-0068	TMD8	lymphoid system	0.01 uM	4 h	Chemical	AICHI002	-13.511
+S1	reverser	29	BRD-K52904470	MCLF033SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR005	-13.479
+S1	reverser	30	PF-3845	MCLF027CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR004	-13.432
+S1	reverser	31	oxybenzone	MELHO	skin of body	10 uM	24 h	Chemical	MOAR010	-13.344
+S1	reverser	32	PF-3845	MCLF100SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR034	-13.338
+S1	reverser	33	BRD-K09398529	MCLF076SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR018	-13.328
+S1	reverser	34	theobromine	MCF10A	breast	0.25 uM	24 h	Chemical	REP.B009	-13.320
+S1	reverser	35	clomipramine	MCLF135CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR020	-13.305
+S1	reverser	36	IWP-2	MCLF100SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR034	-13.245
+S1	reverser	37	7-nitroindazole	MCLF033SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR005	-13.241
+S1	reverser	38	ramelteon	MCLF130CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR027	-13.211
+S1	reverser	39	glipizide	MCF10A	breast	0.03 uM	24 h	Chemical	REP.B010	-13.208
+S1	reverser	40	BRD-K86574132	MCLF123SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR009	-13.202
+S1	reverser	41	sildenafil	MCLF130CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR027	-13.198
+S1	reverser	42	isradipine	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	-13.191
+S1	reverser	43	NU-1025	MCLF162SZ	NOT_PROVIDED	2.22 uM	6 h	Chemical	FIBR014	-13.127
+S1	reverser	44	SB-225002	MCLF0067SZ	NOT_PROVIDED	0.74 uM	6 h	Chemical	FIBR041	-13.094
+S1	reverser	45	vandetanib	XC.P033	epithelium	1.11 uM	24 h	Chemical	ASG003	-13.073
+S1	reverser	46	BMS-191011	MCLF056CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR039	-13.011
+S1	reverser	47	BRD-K52904470	MCLF123SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR009	-13.009
+S1	reverser	48	lenalidomide	MCLF123SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR009	-13.001
+S1	reverser	49	Gly-Gly-PALO	MCLF035SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR037	-12.974
+S1	reverser	50	BRD-K55591206	MCLF027CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR004	-12.966
+S1	reverser	51	clozapine	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	-12.958
+S1	reverser	52	BRD-K80672993	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	-12.942
+S1	reverser	53	APO-866	MCLF137CN	NOT_PROVIDED	0.08 uM	6 h	Chemical	FIBR036	-12.890
+S1	reverser	54	BRD-K28112517	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR011	-12.886
+S1	reverser	55	dalcetrapib	MCLF015CN	NOT_PROVIDED	20 uM	6 h	Chemical	FIBR011	-12.875
+S1	reverser	56	BRD-K92980438	MCLF130CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR027	-12.851
+S1	reverser	57	modafinil	MCLF135CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR020	-12.838
+S1	reverser	58	UNC-669	MCF10A	breast	0.12 uM	24 h	Chemical	LJP008	-12.832
+S1	reverser	59	nimodipine	MCLF033SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR005	-12.798
+S1	reverser	60	indinavir	XC.P092	epithelium	0.12 uM	24 h	Chemical	ASG003	-12.781
+S1	reverser	61	BRD-K52904470	MCLF100SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR034	-12.768
+S1	reverser	62	EX-527	MCLF123SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR010	-12.723
+S1	reverser	63	BRD-K38865695	VCAP	prostate gland	4 uM	24 h	Chemical	DOS012	-12.721
+S1	reverser	64	Ro-28-1675	MCLF051CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR007	-12.720
+S1	reverser	65	BRD-K90826279	MCLF035SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR037	-12.697
+S1	reverser	66	Gly-Gly-PALO	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	-12.690
+S1	reverser	67	navitoclax	MCLF162SZ	NOT_PROVIDED	2.22 uM	6 h	Chemical	FIBR014	-12.614
+S1	reverser	68	BRD-A94451536	MCLF037SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR021	-12.605
+S1	reverser	69	FK-866	MCLF015CN	NOT_PROVIDED	0.01 uM	6 h	Chemical	FIBR011	-12.565
+S1	reverser	70	imipramine	MCLF130CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR027	-12.546
+S1	reverser	71	BRD-K49668410	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	-12.544
+S1	reverser	72	BRD-A28105619	HEPG2	liver	10 uM	24 h	Chemical	POL001	-12.544
+S1	reverser	73	BRD-K23875128	MCF10A	breast	0.25 uM	24 h	Chemical	REP.B016	-12.523
+S1	reverser	74	IWP-2	MCLF054CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR032	-12.485
+S1	reverser	75	BRD-K09398529	MCLF137CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR036	-12.482
+S1	reverser	76	nutlin-3	HEK293	kidney	1.11 uM	24 h	Chemical	REP.A010	-12.457
+S1	reverser	77	7-nitroindazole	MCLF040SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR029	-12.450
+S1	reverser	78	varenicline	NPC	central nervous system	12.5 uM	24 h	Chemical	CEGS001	-12.422
+S1	reverser	79	BRD-K95286989	VCAP	prostate gland	4 uM	24 h	Chemical	DOS015	-12.420
+S1	reverser	80	quiflapon	MCLF0067SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR041	-12.405
+S1	reverser	81	linoleic-acid	MCLF162SZ	NOT_PROVIDED	40 uM	6 h	Chemical	FIBR013	-12.391
+S1	reverser	82	BRD-K55591206	MCLF135CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR019	-12.387
+S1	reverser	83	BRD-K19216856	MCLF0067SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR042	-12.383
+S1	reverser	84	ketamine	NPC	central nervous system	1.67 uM	24 h	Chemical	CEGS001	-12.383
+S1	reverser	85	estradiol	MCLF033SZ	NOT_PROVIDED	0.37 uM	6 h	Chemical	FIBR006	-12.235
+S1	reverser	86	troglitazone	A375	skin of body	0.04 uM	24 h	Chemical	REP.A010	-12.232
+S1	reverser	87	BRD-K92980438	MCLF035SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR038	-12.168
+S1	reverser	88	pirfenidone	MCF10A	breast	0.01 uM	24 h	Chemical	REP.B028	-12.167
+S1	reverser	89	nimodipine	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	-12.159
+S1	reverser	90	BRD-K55460824	PC3	prostate gland	10 uM	24 h	Chemical	DOSVAL005	-12.159
+S1	reverser	91	BRD-A85739295	MCLF027CN	NOT_PROVIDED	0.37 uM	6 h	Chemical	FIBR004	-12.153
+S1	reverser	92	BRD-K55591206	MCLF056CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR040	-12.148
+S1	reverser	93	estradiol	MCLF033SZ	NOT_PROVIDED	0.37 uM	6 h	Chemical	FIBR005	-12.133
+S1	reverser	94	BRD-K82794234	VCAP	prostate gland	4 uM	6 h	Chemical	DOS016	-12.131
+S1	reverser	95	indirubin	MCF10A	breast	12 uM	24 h	Chemical	CRCGN016	-12.131
+S1	reverser	96	nimodipine	MCLF100SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR033	-12.130
+S1	reverser	97	gefitinib	THP1	blood	0.66 uM	6 h	Chemical	EMU001	-12.129
+S1	reverser	98	MK-1775	MDAMB231	breast	0.04 uM	24 h	Chemical	LJP008	-12.113
+S1	reverser	99	TGX-115	MCLF130CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR027	-12.097
+S1	reverser	100	haloperidol	NPC	central nervous system	3.33 uM	24 h	Chemical	CEGS001	-12.082
+S1	mimicker	1	PP-30	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR011	16.617
+S1	mimicker	2	UNC-0638	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	15.320
+S1	mimicker	3	purpurogallin	MCLF0067SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR041	14.851
+S1	mimicker	4	BRD-K05649647	MCLF162SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR014	14.661
+S1	mimicker	5	KIN-001-220	PHH	liver	1.11 uM	24 h	Chemical	LRS001	14.616
+S1	mimicker	6	zileuton	MCLF137CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR036	14.465
+S1	mimicker	7	nutlin-3	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	14.253
+S1	mimicker	8	etomoxir	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	14.176
+S1	mimicker	9	SJ-172550	MCLF0067SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR042	14.174
+S1	mimicker	10	sonidegib	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	14.143
+S1	mimicker	11	PF-04217903	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	14.096
+S1	mimicker	12	PK-11195	MCLF027CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR004	14.010
+S1	mimicker	13	pregnenolone	MCLF100SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR034	14.004
+S1	mimicker	14	wortmannin	A549	lung	10 uM	24 h	Chemical	HOG001	13.893
+S1	mimicker	15	entinostat	MCLF135CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR020	13.885
+S1	mimicker	16	salvinorin-a	HA1E	kidney	2.22 uM	24 h	Chemical	REP.B004	13.842
+S1	mimicker	17	quercetin	MCLF0067SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR041	13.822
+S1	mimicker	18	emetine	MCLF130CN	NOT_PROVIDED	0.08 uM	6 h	Chemical	FIBR027	13.590
+S1	mimicker	19	entinostat	MCLF130CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR028	13.566
+S1	mimicker	20	entinostat	MCLF137CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR036	13.533
+S1	mimicker	21	cytosporone-b	MCLF027CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR003	13.528
+S1	mimicker	22	LY-2365109	NPC	central nervous system	12.5 uM	24 h	Chemical	CEGS001	13.431
+S1	mimicker	23	entinostat	MCLF130CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR027	13.416
+S1	mimicker	24	oligomycin-a	MCLF100SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR034	13.395
+S1	mimicker	25	fluoropyruvate	MCLF130CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR027	13.357
+S1	mimicker	26	entinostat	MCLF054CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR032	13.200
+S1	mimicker	27	BRD-A42966393	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	13.152
+S1	mimicker	28	oligomycin-a	MCLF056CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR039	13.142
+S1	mimicker	29	entinostat	MCLF0067SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR041	13.138
+S1	mimicker	30	triacsin-c	MCLF0067SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR041	13.110
+S1	mimicker	31	prima-1-met	MCLF076SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR018	12.949
+S1	mimicker	32	antimycin-a	MCLF100SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR034	12.937
+S1	mimicker	33	LE-135	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	12.882
+S1	mimicker	34	CHEMBL-1222381	MCLF137CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR036	12.878
+S1	mimicker	35	entinostat	MCLF033SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR005	12.859
+S1	mimicker	36	GSK-1070916	MCF7	breast	0.37 uM	24 h	Chemical	REP.A008	12.816
+S1	mimicker	37	BMS-536924	MCLF051CN	NOT_PROVIDED	0.37 uM	6 h	Chemical	FIBR007	12.803
+S1	mimicker	38	pifithrin-alpha	MCLF123SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR010	12.755
+S1	mimicker	39	BRD-K89329876	MCLF135CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR019	12.738
+S1	mimicker	40	PTB1	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	12.689
+S1	mimicker	41	tanespimycin	XC.L10	epithelium	10 uM	24 h	Chemical	PBIOA012	12.680
+S1	mimicker	42	geldanamycin	A549	lung	3.33 uM	24 h	Chemical	HOG001	12.678
+S1	mimicker	43	purpurogallin	MCLF027CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR003	12.656
+S1	mimicker	44	rociletinib	A549	lung	10 uM	24 h	Chemical	REP.A009	12.603
+S1	mimicker	45	entinostat	MCLF137CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR036	12.571
+S1	mimicker	46	oligomycin-a	MCLF0067SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR041	12.499
+S1	mimicker	47	BI-2536	MCLF130CN	NOT_PROVIDED	0.08 uM	6 h	Chemical	FIBR027	12.477
+S1	mimicker	48	BRD-K92317137	MCLF027CN	NOT_PROVIDED	0.74 uM	6 h	Chemical	FIBR003	12.475
+S1	mimicker	49	benzbromarone	PC3	prostate gland	0.01 uM	24 h	Chemical	REP.B005	12.460
+S1	mimicker	50	enzalutamide	MCLF027CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR004	12.439
+S1	mimicker	51	BRD-A42966393	MCLF137CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR036	12.392
+S1	mimicker	52	BRD-K30064966	MCLF141SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR026	12.380
+S1	mimicker	53	quercetin	MCLF0067SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR042	12.375
+S1	mimicker	54	BRD-A42966393	MCLF123SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR010	12.300
+S1	mimicker	55	geldanamycin	A549	lung	10 uM	24 h	Chemical	DOSBIO002	12.270
+S1	mimicker	56	entinostat	MCLF100SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR033	12.250
+S1	mimicker	57	lomerizine	XC.P091	epithelium	1.11 uM	24 h	Chemical	ASG003	12.224
+S1	mimicker	58	entinostat	MCLF100SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR033	12.200
+S1	mimicker	59	geldanamycin	A549	lung	3.33 uM	24 h	Chemical	DOSBIO002	12.166
+S1	mimicker	60	CHEMBL-1222381	MCLF100SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR034	12.149
+S1	mimicker	61	geldanamycin	A549	lung	10 uM	24 h	Chemical	HOG001	12.148
+S1	mimicker	62	balicatib	HELA	uterine cervix	2.22 uM	24 h	Chemical	REP.B004	12.133
+S1	mimicker	63	tianeptine	MCLF100SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR034	12.042
+S1	mimicker	64	entinostat	MCLF027CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR003	12.033
+S1	mimicker	65	AMG-517	A375	skin of body	0.08 uM	24 h	Chemical	REP.B009	12.014
+S1	mimicker	66	everolimus	MCF7	breast	0.12 uM	48 h	Chemical	LKCP001	11.993
+S1	mimicker	67	rolipram	NPC	central nervous system	4 uM	24 h	Chemical	CEGS001	11.988
+S1	mimicker	68	entinostat	MCLF051CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR007	11.985
+S1	mimicker	69	BRD-K72204100	VCAP	prostate gland	4 uM	24 h	Chemical	DOS012	11.975
+S1	mimicker	70	BRD-K30064966	MCLF040SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR029	11.931
+S1	mimicker	71	batimastat	MCLF056CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR039	11.918
+S1	mimicker	72	triacsin-c	MCLF054CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR032	11.909
+S1	mimicker	73	entinostat	MCLF123SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR010	11.891
+S1	mimicker	74	copanlisib	TMD8	lymphoid system	0.125 uM	4 h	Chemical	AICHI002	11.885
+S1	mimicker	75	purpurogallin	MCLF162SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR013	11.846
+S1	mimicker	76	prednisone	MCLF130CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR027	11.803
+S1	mimicker	77	FGIN-1-27	MCLF027CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR004	11.754
+S1	mimicker	78	17-AAG	NPC	central nervous system	2.5 uM	24 h	Chemical	CEGS001	11.737
+S1	mimicker	79	palbociclib	XC.L100	epithelium	10 uM	120 h	Chemical	LGR001	11.735
+S1	mimicker	80	formoterol	MCF10A	breast	0.08 uM	24 h	Chemical	REP.B016	11.726
+S1	mimicker	81	BRD-K78716413	MCLF126CN	NOT_PROVIDED	0.04 uM	6 h	Chemical	FIBR024	11.701
+S1	mimicker	82	nutlin-3	MCLF033SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR005	11.687
+S1	mimicker	83	CYT-387	MCF7	breast	10 uM	24 h	Chemical	PBIOA021	11.677
+S1	mimicker	84	SB-2343	THP1	blood	2.5 uM	3 h	Chemical	EMU001	11.677
+S1	mimicker	85	tanespimycin	A549	lung	1.11 uM	24 h	Chemical	HOG001	11.663
+S1	mimicker	86	SB-225002	MCLF135CN	NOT_PROVIDED	0.74 uM	6 h	Chemical	FIBR019	11.643
+S1	mimicker	87	TWS-119	NKDBA	kidney	4 uM	24 h	Chemical	MUC.CP002	11.637
+S1	mimicker	88	melatonin	MCLF126CN	NOT_PROVIDED	40 uM	6 h	Chemical	FIBR023	11.611
+S1	mimicker	89	geldanamycin	MCF7	breast	10 uM	24 h	Chemical	CPD003	11.581
+S1	mimicker	90	PF-750	MCLF123SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR010	11.570
+S1	mimicker	91	myriocin	MCLF056CN	NOT_PROVIDED	0.74 uM	6 h	Chemical	FIBR039	11.564
+S1	mimicker	92	amineptine	PC3	prostate gland	0.74 uM	24 h	Chemical	REP.B006	11.550
+S1	mimicker	93	prednisone	MCLF100SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR034	11.543
+S1	mimicker	94	tanespimycin	A549	lung	0.37 uM	24 h	Chemical	HOG001	11.537
+S1	mimicker	95	BMS-754807	MCLF135CN	NOT_PROVIDED	2.22 uM	6 h	Chemical	FIBR020	11.528
+S1	mimicker	96	gemcitabine	MCLF137CN	NOT_PROVIDED	0.02 uM	6 h	Chemical	FIBR036	11.476
+S1	mimicker	97	amsacrine	HUVEC	umbilical cord	0.08 uM	24 h	Chemical	REP.B023	11.456
+S1	mimicker	98	quercetin	MCLF130CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR027	11.428
+S1	mimicker	99	thalidomide	MCLF033SZ	NOT_PROVIDED	10 uM	6 h	Chemical	FIBR005	11.424
+S1	mimicker	100	entinostat	MCLF126CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR024	11.366
+S2	reverser	1	quetiapine	MCLF056CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR039	-24.985
+S2	reverser	2	BRD-K76188144	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	-22.895
+S2	reverser	3	estradiol	MCLF015CN	NOT_PROVIDED	0.37 uM	6 h	Chemical	FIBR012	-22.816
+S2	reverser	4	TWS-119	MCLF135CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR019	-22.721
+S2	reverser	5	fumonisin-b1	MCLF027CN	NOT_PROVIDED	0.04 uM	6 h	Chemical	FIBR003	-22.019
+S2	reverser	6	alda-1	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	-21.882
+S2	reverser	7	sildenafil	MCLF141SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR026	-21.718
+S2	reverser	8	norethindrone	PC3	prostate gland	0.01 uM	24 h	Chemical	REP.B005	-21.439
+S2	reverser	9	clozapine	MCLF100SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR034	-21.041
+S2	reverser	10	gallic-acid	MCLF056CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR039	-20.904
+S2	reverser	11	BRD-K10882151	MCLF0067SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR042	-20.616
+S2	reverser	12	oxybenzone	MELHO	skin of body	10 uM	24 h	Chemical	MOAR010	-20.484
+S2	reverser	13	BRD-K76188144	MCLF033SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR005	-20.166
+S2	reverser	14	sildenafil	MCLF100SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR034	-20.094
+S2	reverser	15	AR-C133057XX	MCLF037SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR021	-20.002
+S2	reverser	16	Gly-Gly-PALO	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	-19.957
+S2	reverser	17	rolipram	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	-19.839
+S2	reverser	18	tipifarnib	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	-19.788
+S2	reverser	19	clomipramine	MCLF135CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR020	-19.707
+S2	reverser	20	BRD-K09398529	MCLF100SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR034	-19.512
+S2	reverser	21	quiflapon	MCLF100SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR034	-19.485
+S2	reverser	22	BRD-K09398529	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	-19.383
+S2	reverser	23	BRD-K09398529	MCLF027CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR004	-19.254
+S2	reverser	24	BRD-K49668410	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	-19.232
+S2	reverser	25	estradiol	MCLF033SZ	NOT_PROVIDED	0.37 uM	6 h	Chemical	FIBR005	-19.118
+S2	reverser	26	vandetanib	XC.P033	epithelium	1.11 uM	24 h	Chemical	ASG003	-19.112
+S2	reverser	27	BRD-K38865695	VCAP	prostate gland	4 uM	24 h	Chemical	DOS012	-19.106
+S2	reverser	28	BRD-K82794234	VCAP	prostate gland	4 uM	6 h	Chemical	DOS016	-19.069
+S2	reverser	29	clozapine	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	-18.896
+S2	reverser	30	BRD-K35716340	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	-18.871
+S2	reverser	31	BRD-K55591206	MCLF135CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR019	-18.833
+S2	reverser	32	quiflapon	MCLF0067SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR041	-18.828
+S2	reverser	33	LY-2183240	MCLF100SZ	NOT_PROVIDED	0.74 uM	6 h	Chemical	FIBR034	-18.782
+S2	reverser	34	BMS-191011	MCLF056CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR039	-18.748
+S2	reverser	35	BRD-K19216856	MCLF0067SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR042	-18.674
+S2	reverser	36	BRD-K09907482	MCLF076SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR018	-18.670
+S2	reverser	37	BRD-K80171496	VCAP	prostate gland	4 uM	24 h	Chemical	DOS013	-18.611
+S2	reverser	38	BRD-K19826330	VCAP	prostate gland	4 uM	24 h	Chemical	DOS012	-18.600
+S2	reverser	39	NPK76-II-72-1	MCF10A	breast	0.04 uM	24 h	Chemical	LJP008	-18.550
+S2	reverser	40	BRD-K19216856	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	-18.474
+S2	reverser	41	EX-527	MCLF123SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR010	-18.424
+S2	reverser	42	CI-976	MCLF040SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR029	-18.413
+S2	reverser	43	BRD-K52904470	MCLF100SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR034	-18.407
+S2	reverser	44	ramelteon	MCLF130CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR027	-18.392
+S2	reverser	45	ketamine	NPC	central nervous system	3.33 uM	24 h	Chemical	CEGS001	-18.352
+S2	reverser	46	modafinil	MCLF135CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR020	-18.330
+S2	reverser	47	BRD-K23875128	MCF10A	breast	0.25 uM	24 h	Chemical	REP.B016	-18.317
+S2	reverser	48	indinavir	XC.P092	epithelium	0.12 uM	24 h	Chemical	ASG003	-18.273
+S2	reverser	49	FCCP	MCLF100SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR034	-18.261
+S2	reverser	50	troglitazone	A375	skin of body	0.04 uM	24 h	Chemical	REP.A010	-18.259
+S2	reverser	51	PJ-34	MCLF056CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR039	-18.193
+S2	reverser	52	BRD-K09398529	MCLF076SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR018	-18.138
+S2	reverser	53	UNC-669	MCF10A	breast	0.12 uM	24 h	Chemical	LJP008	-18.137
+S2	reverser	54	Y-27632	JURKAT	blood	0.37 uM	24 h	Chemical	LJP008	-18.125
+S2	reverser	55	BRD-K89009594	HT29	intestine	10 uM	6 h	Chemical	CPC007	-18.124
+S2	reverser	56	GDC-0068	TMD8	lymphoid system	0.01 uM	4 h	Chemical	AICHI002	-18.100
+S2	reverser	57	BRD-K52904470	MCLF033SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR005	-18.075
+S2	reverser	58	BRD-K86574132	MCLF123SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR009	-18.066
+S2	reverser	59	Ro-28-1675	MCLF051CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR007	-18.004
+S2	reverser	60	doxazosin	A549	lung	0.25 uM	24 h	Chemical	REP.B010	-18.003
+S2	reverser	61	dacarbazine	A375	skin of body	0.125 uM	24 h	Chemical	REP.A003	-18.001
+S2	reverser	62	BRD-K31999759	VCAP	prostate gland	4 uM	24 h	Chemical	DOS030	-17.951
+S2	reverser	63	troglitazone	MCLF056CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR039	-17.941
+S2	reverser	64	istaroxime	PC3	prostate gland	1.11 uM	24 h	Chemical	MOAR001	-17.940
+S2	reverser	65	etoposide	YAPC	pancreas	2.22 uM	24 h	Chemical	REP.B011	-17.906
+S2	reverser	66	navitoclax	MCLF162SZ	NOT_PROVIDED	2.22 uM	6 h	Chemical	FIBR014	-17.744
+S2	reverser	67	terreic-acid	MCLF0067SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR042	-17.700
+S2	reverser	68	BRD-K51490254	PC3	prostate gland	0.125 uM	24 h	Chemical	HDAC001	-17.694
+S2	reverser	69	CHIR-99021	NPC	central nervous system	2.5 uM	24 h	Chemical	CEGS001	-17.691
+S2	reverser	70	diphenidol	MCF10A	breast	0.03 uM	24 h	Chemical	REP.B012	-17.682
+S2	reverser	71	nutlin-3	HEK293	kidney	1.11 uM	24 h	Chemical	REP.A010	-17.659
+S2	reverser	72	indinavir	XC.P033	epithelium	1.11 uM	24 h	Chemical	ASG003	-17.656
+S2	reverser	73	BRD-K55591206	MCLF027CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR004	-17.650
+S2	reverser	74	vorinostat	NPC	central nervous system	4 uM	24 h	Chemical	CEGS001	-17.646
+S2	reverser	75	isradipine	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	-17.637
+S2	reverser	76	thioridazine	XC.P091	epithelium	1.11 uM	24 h	Chemical	ASG003	-17.634
+S2	reverser	77	BRD-K55460824	PC3	prostate gland	10 uM	24 h	Chemical	DOSVAL005	-17.550
+S2	reverser	78	rimonabant	MCF10A	breast	0.04 uM	24 h	Chemical	REP.A010	-17.524
+S2	reverser	79	GMX-1778	MCLF0067SZ	NOT_PROVIDED	0.004 uM	6 h	Chemical	FIBR041	-17.488
+S2	reverser	80	inhibitor-BEC	MCLF123SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR010	-17.482
+S2	reverser	81	K-02288	PC3	prostate gland	1.11 uM	24 h	Chemical	MOAR002	-17.467
+S2	reverser	82	BRD-K24277661	VCAP	prostate gland	4 uM	24 h	Chemical	DOS015	-17.465
+S2	reverser	83	CHIR-99021	NPC	central nervous system	0.66 uM	24 h	Chemical	CEGS001	-17.465
+S2	reverser	84	erastin	MCLF051CN	NOT_PROVIDED	2.22 uM	6 h	Chemical	FIBR007	-17.462
+S2	reverser	85	7-nitroindazole	MCLF040SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR029	-17.450
+S2	reverser	86	BMS-641988	MCLF130CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR027	-17.416
+S2	reverser	87	BRD-K95286989	VCAP	prostate gland	4 uM	24 h	Chemical	DOS015	-17.410
+S2	reverser	88	lenalidomide	MCLF123SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR009	-17.409
+S2	reverser	89	RS-23597-190	MCLF123SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR010	-17.399
+S2	reverser	90	IWP-2	MCLF100SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR034	-17.370
+S2	reverser	91	FK-866	MCLF015CN	NOT_PROVIDED	0.01 uM	6 h	Chemical	FIBR011	-17.363
+S2	reverser	92	CEP-32496	HA1E	kidney	0.37 uM	24 h	Chemical	REP.A006	-17.360
+S2	reverser	93	imipramine	MCLF130CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR027	-17.359
+S2	reverser	94	BRD-K90826279	MCLF035SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR037	-17.351
+S2	reverser	95	indirubin	MCF10A	breast	12 uM	24 h	Chemical	CRCGN016	-17.342
+S2	reverser	96	ofloxacin	HELA	uterine cervix	10 uM	3 h	Chemical	REP.A004	-17.328
+S2	reverser	97	RITA	XC.P905	epithelium	0.12 uM	24 h	Chemical	ASG003	-17.315
+S2	reverser	98	quiflapon	MCLF035SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR038	-17.303
+S2	reverser	99	PF-3845	MCLF100SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR034	-17.208
+S2	reverser	100	TWS-119	MCLF100SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR034	-17.175
+S2	mimicker	1	PP-30	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR011	22.872
+S2	mimicker	2	SJ-172550	MCLF0067SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR042	21.215
+S2	mimicker	3	PF-04217903	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	21.140
+S2	mimicker	4	KIN-001-220	PHH	liver	1.11 uM	24 h	Chemical	LRS001	20.780
+S2	mimicker	5	cytosporone-b	MCLF027CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR003	20.477
+S2	mimicker	6	zileuton	MCLF137CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR036	20.437
+S2	mimicker	7	quercetin	MCLF0067SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR041	20.354
+S2	mimicker	8	purpurogallin	MCLF0067SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR041	20.349
+S2	mimicker	9	etomoxir	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	20.295
+S2	mimicker	10	sonidegib	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	20.188
+S2	mimicker	11	UNC-0638	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	20.008
+S2	mimicker	12	entinostat	MCLF130CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR027	19.941
+S2	mimicker	13	pifithrin-alpha	MCLF123SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR010	19.763
+S2	mimicker	14	PK-11195	MCLF027CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR004	19.671
+S2	mimicker	15	entinostat	MCLF0067SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR041	19.631
+S2	mimicker	16	pregnenolone	MCLF100SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR034	19.444
+S2	mimicker	17	BRD-K05649647	MCLF162SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR014	19.442
+S2	mimicker	18	nutlin-3	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	19.211
+S2	mimicker	19	tianeptine	MCLF100SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR034	19.179
+S2	mimicker	20	LY-2365109	NPC	central nervous system	12.5 uM	24 h	Chemical	CEGS001	19.169
+S2	mimicker	21	triacsin-c	MCLF0067SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR041	18.987
+S2	mimicker	22	PTB1	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	18.966
+S2	mimicker	23	BRD-K30064966	MCLF141SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR026	18.801
+S2	mimicker	24	emetine	MCLF130CN	NOT_PROVIDED	0.08 uM	6 h	Chemical	FIBR027	18.784
+S2	mimicker	25	BRD-A42966393	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	18.718
+S2	mimicker	26	quercetin	MCLF0067SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR042	18.542
+S2	mimicker	27	BRD-K30064966	MCLF040SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR029	18.456
+S2	mimicker	28	oligomycin-a	MCLF056CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR039	18.388
+S2	mimicker	29	wortmannin	A549	lung	10 uM	24 h	Chemical	HOG001	18.375
+S2	mimicker	30	BRD-A42966393	MCLF137CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR036	18.360
+S2	mimicker	31	entinostat	MCLF033SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR005	18.337
+S2	mimicker	32	tretinoin	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	18.322
+S2	mimicker	33	entinostat	MCLF137CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR036	18.277
+S2	mimicker	34	enzalutamide	MCLF027CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR004	18.265
+S2	mimicker	35	prima-1-met	MCLF076SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR018	18.235
+S2	mimicker	36	oligomycin-a	MCLF100SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR034	18.068
+S2	mimicker	37	LE-135	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	17.912
+S2	mimicker	38	entinostat	MCLF130CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR028	17.847
+S2	mimicker	39	entinostat	MCLF135CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR020	17.833
+S2	mimicker	40	BRD-K72204100	VCAP	prostate gland	4 uM	24 h	Chemical	DOS012	17.833
+S2	mimicker	41	BMS-536924	MCLF051CN	NOT_PROVIDED	0.37 uM	6 h	Chemical	FIBR007	17.811
+S2	mimicker	42	CYT-387	MCF7	breast	10 uM	24 h	Chemical	PBIOA021	17.797
+S2	mimicker	43	formoterol	MCF10A	breast	0.08 uM	24 h	Chemical	REP.B016	17.744
+S2	mimicker	44	BRD-A42966393	MCLF123SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR010	17.735
+S2	mimicker	45	antimycin-a	MCLF100SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR034	17.666
+S2	mimicker	46	fluoropyruvate	MCLF130CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR027	17.660
+S2	mimicker	47	GSK-1070916	MCF7	breast	0.37 uM	24 h	Chemical	REP.A008	17.584
+S2	mimicker	48	anecortave-acetate	MCF10A	breast	0.25 uM	24 h	Chemical	REP.B016	17.535
+S2	mimicker	49	AMG-517	A375	skin of body	0.08 uM	24 h	Chemical	REP.B009	17.532
+S2	mimicker	50	lomerizine	XC.P092	epithelium	0.12 uM	24 h	Chemical	ASG003	17.516
+S2	mimicker	51	SJ-172550	MCLF0067SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR041	17.416
+S2	mimicker	52	BRD-K95606637	MCLF100SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR034	17.400
+S2	mimicker	53	BRD-K92317137	MCLF027CN	NOT_PROVIDED	0.74 uM	6 h	Chemical	FIBR003	17.390
+S2	mimicker	54	salvinorin-a	HA1E	kidney	2.22 uM	24 h	Chemical	REP.B004	17.377
+S2	mimicker	55	rociletinib	A549	lung	10 uM	24 h	Chemical	REP.A009	17.328
+S2	mimicker	56	BRD-K78716413	MCLF126CN	NOT_PROVIDED	0.04 uM	6 h	Chemical	FIBR024	17.264
+S2	mimicker	57	enzalutamide	MCLF027CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR003	17.167
+S2	mimicker	58	rolipram	NPC	central nervous system	4 uM	24 h	Chemical	CEGS001	17.147
+S2	mimicker	59	BRD-K89329876	MCLF135CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR019	17.043
+S2	mimicker	60	CHEMBL-1222381	MCLF137CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR036	16.965
+S2	mimicker	61	BRD-K95606637	MCLF0067SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR041	16.948
+S2	mimicker	62	balicatib	HELA	uterine cervix	2.22 uM	24 h	Chemical	REP.B004	16.944
+S2	mimicker	63	BRD-K79944151	VCAP	prostate gland	4 uM	24 h	Chemical	DOS013	16.905
+S2	mimicker	64	APD-668	A375	skin of body	0.04 uM	24 h	Chemical	REP.A005	16.903
+S2	mimicker	65	FGIN-1-27	MCLF027CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR004	16.863
+S2	mimicker	66	entinostat	MCLF027CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR003	16.850
+S2	mimicker	67	purpurogallin	MCLF027CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR003	16.795
+S2	mimicker	68	mycophenolate-mofetil	MCF7	breast	3.33 uM	24 h	Chemical	REP.A028	16.788
+S2	mimicker	69	tretinoin	MCLF056CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR039	16.780
+S2	mimicker	70	entinostat	XC.L10	epithelium	1.11 uM	24 h	Chemical	ASG003	16.707
+S2	mimicker	71	entinostat	MCLF100SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR033	16.645
+S2	mimicker	72	BI-2536	MCLF130CN	NOT_PROVIDED	0.08 uM	6 h	Chemical	FIBR027	16.619
+S2	mimicker	73	L-690330	A375	skin of body	0.01 uM	24 h	Chemical	REP.B009	16.603
+S2	mimicker	74	serotonin	MCLF040SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR029	16.582
+S2	mimicker	75	PF-750	MCLF123SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR010	16.563
+S2	mimicker	76	triacsin-c	MCLF054CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR032	16.560
+S2	mimicker	77	CHEMBL-1222381	MCLF100SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR034	16.547
+S2	mimicker	78	gemcitabine	MCLF137CN	NOT_PROVIDED	0.02 uM	6 h	Chemical	FIBR036	16.494
+S2	mimicker	79	batimastat	MCLF056CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR039	16.393
+S2	mimicker	80	entinostat	XC.P033	epithelium	1.11 uM	24 h	Chemical	ASG003	16.354
+S2	mimicker	81	17-AAG	NPC	central nervous system	2.5 uM	24 h	Chemical	CEGS001	16.339
+S2	mimicker	82	entinostat	XC.P931	epithelium	10 uM	24 h	Chemical	ASG003	16.338
+S2	mimicker	83	neostigmine	JHH5	liver	10 uM	24 h	Chemical	MOAR010	16.334
+S2	mimicker	84	lomerizine	XC.P091	epithelium	1.11 uM	24 h	Chemical	ASG003	16.293
+S2	mimicker	85	entinostat	MCLF123SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR010	16.280
+S2	mimicker	86	BRD-K45466167	VCAP	prostate gland	4 uM	24 h	Chemical	DOS028	16.208
+S2	mimicker	87	LGX-818	A375	skin of body	0.01 uM	24 h	Chemical	REP.B014	16.200
+S2	mimicker	88	quercetin	MCLF130CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR027	16.199
+S2	mimicker	89	BMS-299897	HT29	intestine	3.33 uM	24 h	Chemical	REP.A012	16.160
+S2	mimicker	90	triacsin-c	MCLF054CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR031	16.147
+S2	mimicker	91	crizotinib	XC.L100	epithelium	0.37 uM	48 h	Chemical	LGR001	16.124
+S2	mimicker	92	entinostat	MCLF100SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR033	16.124
+S2	mimicker	93	oligomycin-a	MCLF0067SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR041	16.111
+S2	mimicker	94	GSK-2334470	MCLF123SZ	NOT_PROVIDED	0.37 uM	6 h	Chemical	FIBR010	16.097
+S2	mimicker	95	UK-383367	A375	skin of body	10 uM	24 h	Chemical	REP.A011	16.077
+S2	mimicker	96	tranylcypromine	MCF10A	breast	1.11 uM	24 h	Chemical	LJP008	16.059
+S2	mimicker	97	latrunculin-b	A375	skin of body	10 uM	6 h	Chemical	CPC012	16.047
+S2	mimicker	98	AGK-2	MCLF0067SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR041	16.040
+S2	mimicker	99	AZ-3146	XC.L100	epithelium	3.33 uM	48 h	Chemical	LGR001	16.032
+S2	mimicker	100	entinostat	NPC	central nervous system	2.5 uM	24 h	Chemical	CEGS001	16.005
+S3	reverser	1	estradiol	MCLF015CN	NOT_PROVIDED	0.37 uM	6 h	Chemical	FIBR012	-17.041
+S3	reverser	2	TWS-119	MCLF135CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR019	-16.353
+S3	reverser	3	clozapine	MCLF100SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR034	-16.180
+S3	reverser	4	alda-1	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	-16.040
+S3	reverser	5	quetiapine	MCLF056CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR039	-15.676
+S3	reverser	6	BRD-K10882151	MCLF0067SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR042	-15.671
+S3	reverser	7	BRD-K76188144	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	-15.209
+S3	reverser	8	BRD-K09398529	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	-15.186
+S3	reverser	9	quiflapon	MCLF100SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR034	-14.746
+S3	reverser	10	gallic-acid	MCLF056CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR039	-14.490
+S3	reverser	11	tipifarnib	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	-14.349
+S3	reverser	12	sildenafil	MCLF141SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR026	-14.308
+S3	reverser	13	BRD-K19826330	VCAP	prostate gland	4 uM	24 h	Chemical	DOS012	-14.230
+S3	reverser	14	BRD-K35716340	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	-14.220
+S3	reverser	15	quiflapon	MCLF035SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR038	-14.210
+S3	reverser	16	rolipram	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	-14.192
+S3	reverser	17	BRD-K19216856	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	-14.088
+S3	reverser	18	BRD-K09398529	MCLF100SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR034	-14.035
+S3	reverser	19	norethindrone	PC3	prostate gland	0.01 uM	24 h	Chemical	REP.B005	-14.013
+S3	reverser	20	BRD-K76188144	MCLF033SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR005	-13.915
+S3	reverser	21	BRD-K09398529	MCLF027CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR004	-13.914
+S3	reverser	22	LY-2183240	MCLF100SZ	NOT_PROVIDED	0.74 uM	6 h	Chemical	FIBR034	-13.822
+S3	reverser	23	sildenafil	MCLF100SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR034	-13.806
+S3	reverser	24	fumonisin-b1	MCLF027CN	NOT_PROVIDED	0.04 uM	6 h	Chemical	FIBR003	-13.708
+S3	reverser	25	istaroxime	PC3	prostate gland	1.11 uM	24 h	Chemical	MOAR001	-13.668
+S3	reverser	26	cabazitaxel	A375	skin of body	3.33 uM	24 h	Chemical	REP.A011	-13.620
+S3	reverser	27	oxybenzone	MELHO	skin of body	10 uM	24 h	Chemical	MOAR010	-13.529
+S3	reverser	28	PF-3845	MCLF027CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR004	-13.499
+S3	reverser	29	BRD-K52904470	MCLF033SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR005	-13.403
+S3	reverser	30	GDC-0068	TMD8	lymphoid system	0.01 uM	4 h	Chemical	AICHI002	-13.356
+S3	reverser	31	Gly-Gly-PALO	MCLF035SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR037	-13.356
+S3	reverser	32	BRD-K09398529	MCLF076SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR018	-13.347
+S3	reverser	33	vandetanib	XC.P033	epithelium	1.11 uM	24 h	Chemical	ASG003	-13.329
+S3	reverser	34	theobromine	MCF10A	breast	0.25 uM	24 h	Chemical	REP.B009	-13.306
+S3	reverser	35	CI-976	MCLF040SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR029	-13.279
+S3	reverser	36	7-nitroindazole	MCLF033SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR005	-13.278
+S3	reverser	37	NU-1025	MCLF162SZ	NOT_PROVIDED	2.22 uM	6 h	Chemical	FIBR014	-13.234
+S3	reverser	38	BRD-K52904470	MCLF123SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR009	-13.176
+S3	reverser	39	IWP-2	MCLF100SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR034	-13.166
+S3	reverser	40	BRD-K86574132	MCLF123SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR009	-13.148
+S3	reverser	41	glipizide	MCF10A	breast	0.03 uM	24 h	Chemical	REP.B010	-13.057
+S3	reverser	42	SB-225002	MCLF0067SZ	NOT_PROVIDED	0.74 uM	6 h	Chemical	FIBR041	-13.042
+S3	reverser	43	BRD-K28112517	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR011	-13.033
+S3	reverser	44	BRD-K80672993	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	-13.000
+S3	reverser	45	ramelteon	MCLF130CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR027	-12.961
+S3	reverser	46	PF-3845	MCLF100SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR034	-12.961
+S3	reverser	47	UNC-669	MCF10A	breast	0.12 uM	24 h	Chemical	LJP008	-12.960
+S3	reverser	48	isradipine	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	-12.949
+S3	reverser	49	clozapine	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	-12.943
+S3	reverser	50	BRD-K49668410	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	-12.906
+S3	reverser	51	BRD-K38865695	VCAP	prostate gland	4 uM	24 h	Chemical	DOS012	-12.866
+S3	reverser	52	BRD-A94451536	MCLF037SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR021	-12.844
+S3	reverser	53	BMS-191011	MCLF056CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR039	-12.842
+S3	reverser	54	sildenafil	MCLF130CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR027	-12.830
+S3	reverser	55	indinavir	XC.P092	epithelium	0.12 uM	24 h	Chemical	ASG003	-12.829
+S3	reverser	56	lenalidomide	MCLF123SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR009	-12.827
+S3	reverser	57	dalcetrapib	MCLF015CN	NOT_PROVIDED	20 uM	6 h	Chemical	FIBR011	-12.818
+S3	reverser	58	BRD-K52904470	MCLF100SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR034	-12.813
+S3	reverser	59	BRD-K90826279	MCLF035SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR037	-12.767
+S3	reverser	60	clomipramine	MCLF135CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR020	-12.755
+S3	reverser	61	nutlin-3	HEK293	kidney	1.11 uM	24 h	Chemical	REP.A010	-12.687
+S3	reverser	62	BRD-K55591206	MCLF027CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR004	-12.679
+S3	reverser	63	7-nitroindazole	MCLF040SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR029	-12.654
+S3	reverser	64	BRD-K23875128	MCF10A	breast	0.25 uM	24 h	Chemical	REP.B016	-12.637
+S3	reverser	65	Ro-28-1675	MCLF051CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR007	-12.616
+S3	reverser	66	BRD-K92980438	MCLF130CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR027	-12.610
+S3	reverser	67	modafinil	MCLF135CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR020	-12.587
+S3	reverser	68	nimodipine	MCLF033SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR005	-12.520
+S3	reverser	69	APO-866	MCLF137CN	NOT_PROVIDED	0.08 uM	6 h	Chemical	FIBR036	-12.518
+S3	reverser	70	BRD-A28105619	HEPG2	liver	10 uM	24 h	Chemical	POL001	-12.510
+S3	reverser	71	navitoclax	MCLF162SZ	NOT_PROVIDED	2.22 uM	6 h	Chemical	FIBR014	-12.478
+S3	reverser	72	gefitinib	THP1	blood	0.66 uM	6 h	Chemical	EMU001	-12.471
+S3	reverser	73	FK-866	MCLF015CN	NOT_PROVIDED	0.01 uM	6 h	Chemical	FIBR011	-12.460
+S3	reverser	74	EX-527	MCLF123SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR010	-12.442
+S3	reverser	75	troglitazone	A375	skin of body	0.04 uM	24 h	Chemical	REP.A010	-12.438
+S3	reverser	76	quiflapon	MCLF0067SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR041	-12.423
+S3	reverser	77	Gly-Gly-PALO	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	-12.404
+S3	reverser	78	imipramine	MCLF130CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR027	-12.387
+S3	reverser	79	ketamine	NPC	central nervous system	1.67 uM	24 h	Chemical	CEGS001	-12.346
+S3	reverser	80	GSK-256066	HEK293	kidney	0.25 uM	24 h	Chemical	REP.B013	-12.289
+S3	reverser	81	terreic-acid	MCLF0067SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR042	-12.260
+S3	reverser	82	primaquine	MDAMB231	breast	0.04 uM	24 h	Chemical	REP.A015	-12.252
+S3	reverser	83	BRD-K55591206	MCLF135CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR019	-12.236
+S3	reverser	84	IWP-2	MCLF054CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR032	-12.227
+S3	reverser	85	varenicline	NPC	central nervous system	12.5 uM	24 h	Chemical	CEGS001	-12.221
+S3	reverser	86	BRD-K09398529	MCLF137CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR036	-12.212
+S3	reverser	87	FCCP	MCLF100SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR034	-12.209
+S3	reverser	88	nimodipine	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	-12.194
+S3	reverser	89	estradiol	MCLF033SZ	NOT_PROVIDED	0.37 uM	6 h	Chemical	FIBR006	-12.192
+S3	reverser	90	camicinal	A375	skin of body	0.25 uM	24 h	Chemical	REP.B004	-12.164
+S3	reverser	91	indirubin	MCF10A	breast	12 uM	24 h	Chemical	CRCGN016	-12.149
+S3	reverser	92	nimodipine	MCLF100SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR033	-12.146
+S3	reverser	93	tranilast	MCF10A	breast	12 uM	24 h	Chemical	CRCGN015	-12.136
+S3	reverser	94	BRD-K89009594	HT29	intestine	10 uM	6 h	Chemical	CPC007	-12.126
+S3	reverser	95	BRD-K95286989	VCAP	prostate gland	4 uM	24 h	Chemical	DOS015	-12.115
+S3	reverser	96	RITA	XC.P905	epithelium	0.12 uM	24 h	Chemical	ASG003	-12.105
+S3	reverser	97	clemizole	YAPC	pancreas	0.03 uM	24 h	Chemical	REP.B011	-12.100
+S3	reverser	98	MK-1775	MDAMB231	breast	0.04 uM	24 h	Chemical	LJP008	-12.099
+S3	reverser	99	linoleic-acid	MCLF162SZ	NOT_PROVIDED	40 uM	6 h	Chemical	FIBR013	-12.083
+S3	reverser	100	BRD-K19216856	MCLF0067SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR042	-12.076
+S3	mimicker	1	PP-30	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR011	16.716
+S3	mimicker	2	UNC-0638	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	15.343
+S3	mimicker	3	purpurogallin	MCLF0067SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR041	14.743
+S3	mimicker	4	KIN-001-220	PHH	liver	1.11 uM	24 h	Chemical	LRS001	14.474
+S3	mimicker	5	nutlin-3	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	14.391
+S3	mimicker	6	zileuton	MCLF137CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR036	14.321
+S3	mimicker	7	BRD-K05649647	MCLF162SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR014	14.320
+S3	mimicker	8	SJ-172550	MCLF0067SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR042	14.179
+S3	mimicker	9	sonidegib	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	14.142
+S3	mimicker	10	pregnenolone	MCLF100SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR034	14.054
+S3	mimicker	11	PK-11195	MCLF027CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR004	14.029
+S3	mimicker	12	PF-04217903	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	13.955
+S3	mimicker	13	etomoxir	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	13.872
+S3	mimicker	14	wortmannin	A549	lung	10 uM	24 h	Chemical	HOG001	13.789
+S3	mimicker	15	entinostat	MCLF135CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR020	13.787
+S3	mimicker	16	LY-2365109	NPC	central nervous system	12.5 uM	24 h	Chemical	CEGS001	13.707
+S3	mimicker	17	salvinorin-a	HA1E	kidney	2.22 uM	24 h	Chemical	REP.B004	13.661
+S3	mimicker	18	entinostat	MCLF130CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR028	13.590
+S3	mimicker	19	quercetin	MCLF0067SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR041	13.585
+S3	mimicker	20	oligomycin-a	MCLF100SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR034	13.503
+S3	mimicker	21	entinostat	MCLF137CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR036	13.496
+S3	mimicker	22	BRD-A42966393	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	13.422
+S3	mimicker	23	fluoropyruvate	MCLF130CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR027	13.396
+S3	mimicker	24	cytosporone-b	MCLF027CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR003	13.362
+S3	mimicker	25	entinostat	MCLF130CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR027	13.362
+S3	mimicker	26	emetine	MCLF130CN	NOT_PROVIDED	0.08 uM	6 h	Chemical	FIBR027	13.276
+S3	mimicker	27	GSK-1070916	MCF7	breast	0.37 uM	24 h	Chemical	REP.A008	13.086
+S3	mimicker	28	BMS-536924	MCLF051CN	NOT_PROVIDED	0.37 uM	6 h	Chemical	FIBR007	13.084
+S3	mimicker	29	entinostat	MCLF054CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR032	13.041
+S3	mimicker	30	triacsin-c	MCLF0067SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR041	13.000
+S3	mimicker	31	oligomycin-a	MCLF056CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR039	12.942
+S3	mimicker	32	PTB1	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	12.898
+S3	mimicker	33	benzbromarone	PC3	prostate gland	0.01 uM	24 h	Chemical	REP.B005	12.893
+S3	mimicker	34	entinostat	MCLF0067SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR041	12.821
+S3	mimicker	35	entinostat	MCLF033SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR005	12.791
+S3	mimicker	36	CHEMBL-1222381	MCLF137CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR036	12.784
+S3	mimicker	37	prima-1-met	MCLF076SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR018	12.770
+S3	mimicker	38	LE-135	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	12.671
+S3	mimicker	39	antimycin-a	MCLF100SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR034	12.645
+S3	mimicker	40	BI-2536	MCLF130CN	NOT_PROVIDED	0.08 uM	6 h	Chemical	FIBR027	12.619
+S3	mimicker	41	BRD-K89329876	MCLF135CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR019	12.592
+S3	mimicker	42	tanespimycin	XC.L10	epithelium	10 uM	24 h	Chemical	PBIOA012	12.532
+S3	mimicker	43	purpurogallin	MCLF027CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR003	12.490
+S3	mimicker	44	enzalutamide	MCLF027CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR004	12.482
+S3	mimicker	45	rociletinib	A549	lung	10 uM	24 h	Chemical	REP.A009	12.463
+S3	mimicker	46	oligomycin-a	MCLF0067SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR041	12.436
+S3	mimicker	47	entinostat	MCLF137CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR036	12.434
+S3	mimicker	48	geldanamycin	A549	lung	3.33 uM	24 h	Chemical	HOG001	12.413
+S3	mimicker	49	BRD-K92317137	MCLF027CN	NOT_PROVIDED	0.74 uM	6 h	Chemical	FIBR003	12.406
+S3	mimicker	50	BRD-K30064966	MCLF141SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR026	12.332
+S3	mimicker	51	quercetin	MCLF0067SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR042	12.305
+S3	mimicker	52	lomerizine	XC.P091	epithelium	1.11 uM	24 h	Chemical	ASG003	12.253
+S3	mimicker	53	AMG-517	A375	skin of body	0.08 uM	24 h	Chemical	REP.B009	12.250
+S3	mimicker	54	pifithrin-alpha	MCLF123SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR010	12.235
+S3	mimicker	55	BRD-A42966393	MCLF137CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR036	12.200
+S3	mimicker	56	CHEMBL-1222381	MCLF100SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR034	12.200
+S3	mimicker	57	balicatib	HELA	uterine cervix	2.22 uM	24 h	Chemical	REP.B004	12.176
+S3	mimicker	58	entinostat	MCLF100SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR033	12.126
+S3	mimicker	59	geldanamycin	A549	lung	10 uM	24 h	Chemical	DOSBIO002	12.118
+S3	mimicker	60	geldanamycin	A549	lung	3.33 uM	24 h	Chemical	DOSBIO002	12.094
+S3	mimicker	61	entinostat	MCLF100SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR033	12.091
+S3	mimicker	62	BRD-K30064966	MCLF040SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR029	12.085
+S3	mimicker	63	everolimus	MCF7	breast	0.12 uM	48 h	Chemical	LKCP001	12.024
+S3	mimicker	64	geldanamycin	A549	lung	10 uM	24 h	Chemical	HOG001	11.993
+S3	mimicker	65	melatonin	MCLF126CN	NOT_PROVIDED	40 uM	6 h	Chemical	FIBR023	11.979
+S3	mimicker	66	PF-750	MCLF123SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR010	11.953
+S3	mimicker	67	BRD-A42966393	MCLF123SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR010	11.918
+S3	mimicker	68	tianeptine	MCLF100SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR034	11.918
+S3	mimicker	69	entinostat	MCLF027CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR003	11.914
+S3	mimicker	70	formoterol	MCF10A	breast	0.08 uM	24 h	Chemical	REP.B016	11.894
+S3	mimicker	71	entinostat	MCLF123SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR010	11.861
+S3	mimicker	72	entinostat	MCLF051CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR007	11.834
+S3	mimicker	73	purpurogallin	MCLF162SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR013	11.774
+S3	mimicker	74	17-AAG	NPC	central nervous system	2.5 uM	24 h	Chemical	CEGS001	11.746
+S3	mimicker	75	geldanamycin	MCF7	breast	10 uM	24 h	Chemical	CPD003	11.741
+S3	mimicker	76	BRD-K72204100	VCAP	prostate gland	4 uM	24 h	Chemical	DOS012	11.739
+S3	mimicker	77	SB-225002	MCLF135CN	NOT_PROVIDED	0.74 uM	6 h	Chemical	FIBR019	11.694
+S3	mimicker	78	CYT-387	MCF7	breast	10 uM	24 h	Chemical	PBIOA021	11.693
+S3	mimicker	79	palbociclib	XC.L100	epithelium	10 uM	120 h	Chemical	LGR001	11.688
+S3	mimicker	80	rolipram	NPC	central nervous system	4 uM	24 h	Chemical	CEGS001	11.687
+S3	mimicker	81	amineptine	PC3	prostate gland	0.74 uM	24 h	Chemical	REP.B006	11.632
+S3	mimicker	82	copanlisib	TMD8	lymphoid system	0.125 uM	4 h	Chemical	AICHI002	11.622
+S3	mimicker	83	batimastat	MCLF056CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR039	11.556
+S3	mimicker	84	nutlin-3	MCLF033SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR005	11.555
+S3	mimicker	85	prednisone	MCLF130CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR027	11.519
+S3	mimicker	86	TWS-119	NKDBA	kidney	4 uM	24 h	Chemical	MUC.CP002	11.505
+S3	mimicker	87	tanespimycin	A549	lung	1.11 uM	24 h	Chemical	HOG001	11.503
+S3	mimicker	88	gemcitabine	MCLF137CN	NOT_PROVIDED	0.02 uM	6 h	Chemical	FIBR036	11.499
+S3	mimicker	89	SJ-172550	MCLF0067SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR041	11.493
+S3	mimicker	90	tretinoin	MCLF015CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR012	11.492
+S3	mimicker	91	BRD-K78716413	MCLF126CN	NOT_PROVIDED	0.04 uM	6 h	Chemical	FIBR024	11.475
+S3	mimicker	92	etacrynic-acid	PC3	prostate gland	10 uM	24 h	Chemical	REP.A017	11.462
+S3	mimicker	93	APD-668	A375	skin of body	0.04 uM	24 h	Chemical	REP.A005	11.457
+S3	mimicker	94	anecortave-acetate	MCF10A	breast	0.25 uM	24 h	Chemical	REP.B016	11.454
+S3	mimicker	95	FGIN-1-27	MCLF027CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR004	11.452
+S3	mimicker	96	triacsin-c	MCLF054CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR032	11.447
+S3	mimicker	97	prednisone	MCLF100SZ	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR034	11.391
+S3	mimicker	98	tanespimycin	A549	lung	0.37 uM	24 h	Chemical	HOG001	11.372
+S3	mimicker	99	SB-2343	THP1	blood	2.5 uM	3 h	Chemical	EMU001	11.369
+S3	mimicker	100	berberine	A549	lung	0.37 uM	24 h	Chemical	REP.A010	11.359
+S0	reverser	1	thiothixene	THP1	blood	0.74 uM	24 h	Chemical	REP.B027	-6.226
+S0	reverser	2	PI-103	MCF7	breast	0.03 uM	24 h	Chemical	REP.B007	-6.212
+S0	reverser	3	calcipotriol	U2OS	bone tissue	0.12 uM	48 h	Chemical	ASG003	-6.109
+S0	reverser	4	BRD-K91047982	HT29	intestine	10 uM	6 h	Chemical	CPC014	-6.079
+S0	reverser	5	fluvoxamine	HA1E	kidney	2.22 uM	24 h	Chemical	REP.B016	-5.901
+S0	reverser	6	triacsin-c	THP1	blood	10 uM	6 h	Chemical	CPC006	-5.890
+S0	reverser	7	prochlorperazine	MCF7	breast	1.11 uM	6 h	Chemical	LKCP002	-5.864
+S0	reverser	8	BRD-K36614862	MCF7	breast	1.11 uM	24 h	Chemical	ENR001	-5.853
+S0	reverser	9	bendroflumethiazide	CAL29	urinary bladder	10 uM	24 h	Chemical	MOAR010	-5.844
+S0	reverser	10	tonabersat	YAPC	pancreas	0.25 uM	24 h	Chemical	REP.B008	-5.825
+S0	reverser	11	moracizine	PC3	prostate gland	0.01 uM	24 h	Chemical	REP.B006	-5.813
+S0	reverser	12	cobimetinib	MCF10A	breast	0.03 uM	24 h	Chemical	REP.B012	-5.791
+S0	reverser	13	AM-580	XC.P914	epithelium	10 uM	24 h	Chemical	ASG003	-5.775
+S0	reverser	14	ibrutinib	MDAMB468	breast	0.12 uM	24 h	Chemical	ASG002	-5.774
+S0	reverser	15	trioxsalen	ASC	adipose tissue	10 uM	24 h	Chemical	CPC015	-5.749
+S0	reverser	16	biperiden	HELA	uterine cervix	0.125 uM	24 h	Chemical	REP.A012	-5.746
+S0	reverser	17	AZD-8330	HA1E	kidney	2.22 uM	24 h	Chemical	REP.B014	-5.744
+S0	reverser	18	BRD-K95913445	A549	lung	4 uM	24 h	Chemical	DOS033	-5.726
+S0	reverser	19	BRD-K00640357	HT29	intestine	0.66 uM	24 h	Chemical	PCLB001	-5.713
+S0	reverser	20	tyrphostin-1	THP1	blood	0.03 uM	24 h	Chemical	REP.B027	-5.702
+S0	reverser	21	SB-2343	TMD8	lymphoid system	0.04 uM	6 h	Chemical	EMU001	-5.655
+S0	reverser	22	BRD-M66672790	A549	lung	4 uM	24 h	Chemical	DOS051	-5.645
+S0	reverser	23	nandrolone	MCF7	breast	2.22 uM	24 h	Chemical	REP.B007	-5.599
+S0	reverser	24	BRD-K60850838	PC3	prostate gland	4 uM	24 h	Chemical	DOS056	-5.578
+S0	reverser	25	Y-27632	A549	lung	1.11 uM	24 h	Chemical	REP.A016	-5.578
+S0	reverser	26	acivicin	MCF10A	breast	0.37 uM	24 h	Chemical	REP.A010	-5.568
+S0	reverser	27	FPL-62064	MCF10A	breast	0.08 uM	24 h	Chemical	REP.B015	-5.529
+S0	reverser	28	dexfenfluramine	MCF7	breast	10 uM	24 h	Chemical	REP.A015	-5.524
+S0	reverser	29	oxandrolone	JURKAT	blood	0.25 uM	24 h	Chemical	REP.B028	-5.507
+S0	reverser	30	pindolol	MCF10A	breast	0.03 uM	24 h	Chemical	REP.B025	-5.504
+S0	reverser	31	BRD-K54573313	NEU	central nervous system	10 uM	24 h	Chemical	CPC013	-5.491
+S0	reverser	32	epothilone-b	HUVEC	umbilical cord	0.04 uM	24 h	Chemical	REP.A022	-5.477
+S0	reverser	33	BRD-K36852845	A549	lung	4 uM	24 h	Chemical	DOSVAL001	-5.470
+S0	reverser	34	otilonium	HT29	intestine	0.74 uM	24 h	Chemical	REP.B021	-5.470
+S0	reverser	35	BRD-K82712246	HEPG2	liver	3.33 uM	24 h	Chemical	PBIOA016	-5.466
+S0	reverser	36	BRD-K55976165	XC.L10	epithelium	10 uM	24 h	Chemical	PBIOA007	-5.455
+S0	reverser	37	volasertib	THP1	blood	0.04 uM	24 h	Chemical	REP.A023	-5.452
+S0	reverser	38	danazol	MCF10A	breast	2.22 uM	24 h	Chemical	REP.B028	-5.443
+S0	reverser	39	zonisamide	HEK293	kidney	0.25 uM	24 h	Chemical	REP.B019	-5.434
+S0	reverser	40	terbinafine	HT29	intestine	0.08 uM	24 h	Chemical	REP.B022	-5.428
+S0	reverser	41	AT-9283	HEPG2	liver	0.04 uM	24 h	Chemical	PCLB003	-5.408
+S0	reverser	42	D-serine	HA1E	kidney	1.11 uM	24 h	Chemical	REP.A023	-5.408
+S0	reverser	43	fosinopril	HA1E	kidney	0.03 uM	24 h	Chemical	REP.B007	-5.392
+S0	reverser	44	fingolimod	MCF7	breast	0.12 uM	6 h	Chemical	LKCP002	-5.390
+S0	reverser	45	tobramycin	U2OS	bone tissue	0.12 uM	6 h	Chemical	LKCP001	-5.386
+S0	reverser	46	AG-14361	MCF7	breast	25 uM	24 h	Chemical	CPC006	-5.380
+S0	reverser	47	ursodiol	MCF10A	breast	0.37 uM	24 h	Chemical	REP.A026	-5.380
+S0	reverser	48	PD-0325901	XC.P901	epithelium	0.12 uM	24 h	Chemical	ASG003	-5.376
+S0	reverser	49	estradiol	HCC515	lung	10 uM	6 h	Chemical	CPC003	-5.376
+S0	reverser	50	lorazepam	MCF10A	breast	0.74 uM	24 h	Chemical	REP.B010	-5.357
+S0	reverser	51	nobiletin	NPC	connective tissue	10 uM	24 h	Chemical	CPC018	-5.355
+S0	reverser	52	ruxolitinib	K562	bone marrow	0.04 uM	24 h	Chemical	EMU001	-5.354
+S0	reverser	53	AZD-1480	OCILY3	lymphoid system	0.66 uM	24 h	Chemical	AICHI001	-5.348
+S0	reverser	54	AM-24	YAPC	pancreas	0.74 uM	24 h	Chemical	REP.B015	-5.342
+S0	reverser	55	GDC-0941	K562	bone marrow	2.5 uM	24 h	Chemical	AICHI001	-5.337
+S0	reverser	56	BAY-11-7082	HT115	large intestine	10 uM	6 h	Chemical	CPC006	-5.328
+S0	reverser	57	NVP-BEZ235	K562	bone marrow	0.66 uM	24 h	Chemical	AICHI002	-5.325
+S0	reverser	58	norethindrone	HELA	uterine cervix	0.03 uM	24 h	Chemical	REP.B005	-5.324
+S0	reverser	59	PRX-08066	HELA	uterine cervix	0.25 uM	24 h	Chemical	REP.B002	-5.295
+S0	reverser	60	rotigotine	HT29	intestine	0.03 uM	24 h	Chemical	REP.B026	-5.290
+S0	reverser	61	BRD-K10785504	A375	skin of body	10 uM	24 h	Chemical	DOSVAL002	-5.290
+S0	reverser	62	isogedunin	VCAP	prostate gland	10 uM	24 h	Chemical	CPC005	-5.286
+S0	reverser	63	meclizine	JURKAT	blood	0.37 uM	24 h	Chemical	REP.A017	-5.273
+S0	reverser	64	lasalocid	THP1	blood	0.01 uM	24 h	Chemical	REP.B023	-5.271
+S0	reverser	65	GSK-461364	OCILY3	lymphoid system	0.66 uM	24 h	Chemical	AICHI001	-5.263
+S0	reverser	66	MBX-2982	HUVEC	umbilical cord	0.37 uM	24 h	Chemical	REP.A009	-5.260
+S0	reverser	67	lorcaserin	HELA	uterine cervix	2.22 uM	24 h	Chemical	REP.B016	-5.260
+S0	reverser	68	BIX-01294	NPC	central nervous system	4 uM	24 h	Chemical	CEGS001	-5.254
+S0	reverser	69	fluorouracil	MCF7	breast	10 uM	6 h	Chemical	LKCP002	-5.246
+S0	reverser	70	probucol	MDAMB231	breast	0.74 uM	24 h	Chemical	REP.B023	-5.243
+S0	reverser	71	navarixin	GI1	brain	10 uM	24 h	Chemical	MOAR009	-5.240
+S0	reverser	72	bortezomib	MDAMB231	breast	20 uM	24 h	Chemical	REP.A011	-5.240
+S0	reverser	73	KIN001-266	MCF7	breast	0.37 uM	24 h	Chemical	LJP002	-5.237
+S0	reverser	74	BRD-K75903201	HA1E	kidney	1.11 uM	24 h	Chemical	PBIOA017	-5.231
+S0	reverser	75	labetalol	HEK293	kidney	0.04 uM	24 h	Chemical	REP.A011	-5.229
+S0	reverser	76	FGIN-1-27	MCLF130CN	NOT_PROVIDED	4 uM	6 h	Chemical	FIBR028	-5.226
+S0	reverser	77	dofetilide	NCIH2110	lung	10 uM	24 h	Chemical	MOAR012	-5.225
+S0	reverser	78	BRD-K59058766	MCF7	breast	10 uM	24 h	Chemical	REP.A014	-5.220
+S0	reverser	79	epirubicin	PC3	prostate gland	1.11 uM	24 h	Chemical	REP.A015	-5.219
+S0	reverser	80	BRD-K22321414	HEPG2	liver	0.37 uM	24 h	Chemical	PCLB003	-5.217
+S0	reverser	81	CTB	HA1E	kidney	10 uM	24 h	Chemical	LJP008	-5.213
+S0	reverser	82	bumetanide	HELA	uterine cervix	0.37 uM	24 h	Chemical	REP.A014	-5.211
+S0	reverser	83	AZD-5438	PC3	prostate gland	10 uM	24 h	Chemical	LJP006	-5.206
+S0	reverser	84	cefoperazone	THP1	blood	1.11 uM	24 h	Chemical	REP.A012	-5.202
+S0	reverser	85	mibefradil	XC.L10	epithelium	1.11 uM	24 h	Chemical	REP.A005	-5.196
+S0	reverser	86	ZM-241385	HCC95	lung	10 uM	24 h	Chemical	MOAR008	-5.195
+S0	reverser	87	amuvatinib	U2OS	bone tissue	1.11 uM	24 h	Chemical	LKCP002	-5.186
+S0	reverser	88	mitoxantrone	BT20	breast	0.12 uM	3 h	Chemical	LJP006	-5.182
+S0	reverser	89	motesanib	VCAP	prostate gland	10 uM	6 h	Chemical	CPC013	-5.181
+S0	reverser	90	lonidamine	A549	lung	3.33 uM	24 h	Chemical	REP.A024	-5.180
+S0	reverser	91	menadione	MCF10A	breast	0.08 uM	24 h	Chemical	REP.B025	-5.169
+S0	reverser	92	ercalcitriol	HT29	intestine	0.37 uM	24 h	Chemical	REP.A021	-5.166
+S0	reverser	93	clozapine	NPC	central nervous system	1.67 uM	24 h	Chemical	CEGS001	-5.166
+S0	reverser	94	oxymetazoline	HT29	intestine	0.74 uM	24 h	Chemical	REP.B002	-5.163
+S0	reverser	95	SB-242235	PC3	prostate gland	0.04 uM	24 h	Chemical	REP.A006	-5.156
+S0	reverser	96	2-aminopurine	NPC	connective tissue	10 uM	24 h	Chemical	CPC014	-5.155
+S0	reverser	97	raltegravir	HT29	intestine	0.37 uM	24 h	Chemical	REP.A012	-5.152
+S0	reverser	98	PX-12	HA1E	kidney	0.08 uM	24 h	Chemical	REP.B014	-5.143
+S0	reverser	99	wortmannin	A375	skin of body	3.33 uM	24 h	Chemical	PCLB003	-5.141
+S0	reverser	100	eugenol	HELA	uterine cervix	1.11 uM	24 h	Chemical	REP.A009	-5.137
+S0	mimicker	1	sulfacetamide	VCAP	prostate gland	10 uM	6 h	Chemical	CPC020	6.661
+S0	mimicker	2	amlexanox	MCF10A	breast	0.74 uM	24 h	Chemical	REP.B009	6.384
+S0	mimicker	3	bisoprolol	A375	skin of body	0.03 uM	24 h	Chemical	REP.B025	6.292
+S0	mimicker	4	doxifluridine	THP1	blood	1.11 uM	24 h	Chemical	REP.A021	6.264
+S0	mimicker	5	SB-225002	DV90	lung	12 uM	6 h	Chemical	CPC006	6.182
+S0	mimicker	6	MG-132	PC3	prostate gland	20 uM	24 h	Chemical	REP.A014	6.169
+S0	mimicker	7	BAY-11-7082	HAP1	bone marrow	3.33 uM	24 h	Chemical	MOAR016	6.073
+S0	mimicker	8	umeclidinium	HT29	intestine	0.37 uM	24 h	Chemical	REP.A019	6.049
+S0	mimicker	9	BMY-14802	T47D	breast	3.33 uM	24 h	Chemical	MOAR009	5.988
+S0	mimicker	10	MG-132	HUVEC	umbilical cord	20 uM	24 h	Chemical	REP.A026	5.933
+S0	mimicker	11	MG-132	A375	skin of body	20 uM	24 h	Chemical	REP.A027	5.911
+S0	mimicker	12	metergoline	HEK293	kidney	3.33 uM	24 h	Chemical	REP.A022	5.855
+S0	mimicker	13	JW-7-24-1	BT20	breast	10 uM	24 h	Chemical	LJP006	5.793
+S0	mimicker	14	dequalinium	HAP1	bone marrow	3.33 uM	24 h	Chemical	MOAR017	5.756
+S0	mimicker	15	duloxetine	THP1	blood	0.74 uM	24 h	Chemical	REP.B023	5.748
+S0	mimicker	16	BRD-K74931283	NPC	connective tissue	10 uM	24 h	Chemical	CPC013	5.728
+S0	mimicker	17	tacrolimus	MCF10A	breast	3.33 uM	24 h	Chemical	REP.A028	5.695
+S0	mimicker	18	pimozide	HELA	uterine cervix	0.04 uM	24 h	Chemical	REP.A012	5.682
+S0	mimicker	19	alvocidib	HT29	intestine	1.11 uM	24 h	Chemical	ASG002	5.663
+S0	mimicker	20	mesalazine	A375	skin of body	10 uM	6 h	Chemical	CPC011	5.641
+S0	mimicker	21	bortezomib	YAPC	pancreas	20 uM	24 h	Chemical	REP.B019	5.639
+S0	mimicker	22	BRD-K48505079	MCF7	breast	0.125 uM	24 h	Chemical	PBIOA020	5.639
+S0	mimicker	23	mepyramine	THP1	blood	0.74 uM	24 h	Chemical	REP.B027	5.638
+S0	mimicker	24	3-deazaadenosine	HUVEC	umbilical cord	0.25 uM	24 h	Chemical	REP.B024	5.630
+S0	mimicker	25	withaferin-a	PC3	prostate gland	10 uM	24 h	Chemical	POL001	5.627
+S0	mimicker	26	seocalcitol	MDAMB231	breast	2.22 uM	24 h	Chemical	REP.B009	5.625
+S0	mimicker	27	BRD-K56411643	RKO	intestine	10 uM	6 h	Chemical	CPC006	5.611
+S0	mimicker	28	SRT-1720	NOMO1	blood	12 uM	6 h	Chemical	CPC006	5.573
+S0	mimicker	29	salmeterol	GP2D	colon	10 uM	24 h	Chemical	ASG002	5.570
+S0	mimicker	30	BX-795	MCF10A	breast	3.33 uM	24 h	Chemical	LJP009	5.562
+S0	mimicker	31	perhexiline	NCIH1573	lung	10 uM	24 h	Chemical	MOAR011	5.557
+S0	mimicker	32	cobicistat	MCF7	breast	0.74 uM	24 h	Chemical	REP.B007	5.528
+S0	mimicker	33	glycitein	HEC1A	endometrium	1.11 uM	24 h	Chemical	MOAR009	5.510
+S0	mimicker	34	tramadol	MCF7	breast	0.08 uM	24 h	Chemical	REP.B007	5.499
+S0	mimicker	35	trifluoperazine	U2OS	bone tissue	1.11 uM	24 h	Chemical	ASG003	5.486
+S0	mimicker	36	floxuridine	PC3	prostate gland	1.11 uM	24 h	Chemical	ASG002	5.480
+S0	mimicker	37	piperidolate	MCF10A	breast	0.74 uM	24 h	Chemical	REP.B028	5.478
+S0	mimicker	38	eptifibatide	HEC251	endometrium	3.33 uM	24 h	Chemical	MOAR011	5.478
+S0	mimicker	39	ursodiol	MCF7	breast	0.37 uM	24 h	Chemical	REP.A026	5.470
+S0	mimicker	40	XL-888	U2OS	bone tissue	1.11 uM	24 h	Chemical	ASG003	5.469
+S0	mimicker	41	methylprednisolone	HT29	intestine	0.37 uM	24 h	Chemical	REP.A016	5.468
+S0	mimicker	42	oxaprozin	NPC	connective tissue	10 uM	24 h	Chemical	CPC015	5.463
+S0	mimicker	43	XMD-16144	HCC515	lung	0.12 uM	24 h	Chemical	LJP005	5.460
+S0	mimicker	44	geldanamycin	SKBR3	breast	0.04 uM	24 h	Chemical	LJP006	5.453
+S0	mimicker	45	ONO-4059	K562	bone marrow	0.01 uM	24 h	Chemical	EMU001	5.444
+S0	mimicker	46	naproxen	PC3	prostate gland	3.33 uM	24 h	Chemical	REP.A014	5.444
+S0	mimicker	47	MG-132	A375	skin of body	20 uM	24 h	Chemical	REP.A020	5.439
+S0	mimicker	48	fluvoxamine	MCF10A	breast	0.37 uM	24 h	Chemical	REP.A016	5.427
+S0	mimicker	49	BRD-K95805172	HT29	intestine	20 uM	24 h	Chemical	DOSVAL002	5.425
+S0	mimicker	50	BRD-K12862164	PC3	prostate gland	4 uM	24 h	Chemical	DOS055	5.410
+S0	mimicker	51	MG-132	MCF10A	breast	20 uM	24 h	Chemical	REP.B020	5.399
+S0	mimicker	52	almorexant	HELA	uterine cervix	0.03 uM	24 h	Chemical	REP.B021	5.377
+S0	mimicker	53	IB-MECA	MCF7	breast	0.37 uM	24 h	Chemical	REP.A003	5.376
+S0	mimicker	54	clotrimazole	HA1E	kidney	0.08 uM	24 h	Chemical	REP.B002	5.376
+S0	mimicker	55	ivabradine	YAPC	pancreas	0.74 uM	24 h	Chemical	REP.B003	5.375
+S0	mimicker	56	ixazomib	HEC108	endometrium	1.11 uM	24 h	Chemical	ASG002	5.372
+S0	mimicker	57	defactinib	JURKAT	blood	3.33 uM	24 h	Chemical	REP.A013	5.369
+S0	mimicker	58	BRD-K78921480	HEPG2	liver	20 uM	24 h	Chemical	DOSVAL006	5.360
+S0	mimicker	59	betulinic-acid	YAPC	pancreas	3.33 uM	24 h	Chemical	REP.A013	5.352
+S0	mimicker	60	CX-5461	MDAMB231	breast	1.11 uM	24 h	Chemical	LJP008	5.352
+S0	mimicker	61	LY-215490	HELA	uterine cervix	0.37 uM	24 h	Chemical	REP.A009	5.336
+S0	mimicker	62	altrenogest	HELA	uterine cervix	2.22 uM	24 h	Chemical	REP.B010	5.331
+S0	mimicker	63	malotilate	MDAMB231	breast	0.01 uM	24 h	Chemical	REP.B027	5.324
+S0	mimicker	64	levofloxacin	HELA	uterine cervix	0.03 uM	24 h	Chemical	REP.B005	5.321
+S0	mimicker	65	bortezomib	A549	lung	20 uM	24 h	Chemical	REP.B009	5.318
+S0	mimicker	66	deferasirox	HA1E	kidney	0.125 uM	24 h	Chemical	REP.A028	5.318
+S0	mimicker	67	ipriflavone	HEK293	kidney	2.22 uM	24 h	Chemical	REP.B028	5.316
+S0	mimicker	68	BRD-K82492171	NPC	connective tissue	10 uM	24 h	Chemical	CPC013	5.316
+S0	mimicker	69	amodiaquine	HEK293	kidney	0.03 uM	24 h	Chemical	REP.B008	5.305
+S0	mimicker	70	BRD-K92980438	THP1	blood	150 uM	6 h	Chemical	CPC006	5.299
+S0	mimicker	71	nicaraven	A549	lung	0.03 uM	24 h	Chemical	REP.B021	5.297
+S0	mimicker	72	MRS-1220	CJM	urinary bladder	10 uM	24 h	Chemical	MOAR012	5.295
+S0	mimicker	73	SA-425500	MCF7	breast	10 uM	6 h	Chemical	CPC013	5.277
+S0	mimicker	74	cutamesine	NCIH838	lung	10 uM	24 h	Chemical	MOAR009	5.273
+S0	mimicker	75	medrysone	PC3	prostate gland	10 uM	24 h	Chemical	REP.A004	5.250
+S0	mimicker	76	2-cyanopyrimidine	T47D	breast	1.11 uM	24 h	Chemical	MOAR009	5.250
+S0	mimicker	77	etoricoxib	CJM	urinary bladder	1.11 uM	24 h	Chemical	MOAR008	5.246
+S0	mimicker	78	carbimazole	HT29	intestine	2.22 uM	24 h	Chemical	REP.B026	5.246
+S0	mimicker	79	lacitol	A549	lung	2.22 uM	24 h	Chemical	REP.B003	5.240
+S0	mimicker	80	BRD-K48823327	ASC	adipose tissue	10 uM	24 h	Chemical	CPC012	5.229
+S0	mimicker	81	BRD-K33385950	HT29	intestine	4 uM	24 h	Chemical	DOS049	5.221
+S0	mimicker	82	flutrimazole	PC3	prostate gland	0.37 uM	24 h	Chemical	REP.A012	5.218
+S0	mimicker	83	bithionol	ASC	adipose tissue	10 uM	24 h	Chemical	CPC015	5.217
+S0	mimicker	84	gatifloxacin	OVTOKO	ovary	0.12 uM	24 h	Chemical	ASG002	5.215
+S0	mimicker	85	MK-1775	CD34	bone marrow	3.33 uM	24 h	Chemical	LJP008	5.207
+S0	mimicker	86	orlistat	HEK293	kidney	3.33 uM	24 h	Chemical	REP.A018	5.200
+S0	mimicker	87	flufenamic-acid	ASC	adipose tissue	10 uM	24 h	Chemical	CPC018	5.199
+S0	mimicker	88	seneciphylline	HCC515	lung	10 uM	6 h	Chemical	CPC003	5.196
+S0	mimicker	89	novobiocin	MCF7	breast	0.74 uM	24 h	Chemical	REP.B021	5.193
+S0	mimicker	90	tetracaine	JURKAT	blood	2.22 uM	24 h	Chemical	REP.B020	5.190
+S0	mimicker	91	tanespimycin	MCF7	breast	0.125 uM	24 h	Chemical	HOG001	5.186
+S0	mimicker	92	niclosamide	A549	lung	10 uM	6 h	Chemical	CPC018	5.183
+S0	mimicker	93	MG-132	HELA	uterine cervix	20 uM	24 h	Chemical	REP.A016	5.176
+S0	mimicker	94	alectinib	A375	skin of body	0.08 uM	24 h	Chemical	REP.B005	5.174
+S0	mimicker	95	BRD-K97808269	JURKAT	blood	10 uM	24 h	Chemical	POL001	5.173
+S0	mimicker	96	ingenol-mebutate	THP1	blood	2.22 uM	24 h	Chemical	REP.B027	5.170
+S0	mimicker	97	loratadine	HA1E	kidney	0.08 uM	24 h	Chemical	REP.B021	5.168
+S0	mimicker	98	manumycin-a	CORL23	lung	10 uM	6 h	Chemical	CPC006	5.162
+S0	mimicker	99	regadenoson	MDAMB231	breast	0.01 uM	24 h	Chemical	REP.B024	5.162
+S0	mimicker	100	RAN-05	MCF7	breast	10 uM	24 h	Chemical	CPC012	5.157

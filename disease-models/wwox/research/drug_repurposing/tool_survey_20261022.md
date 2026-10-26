@@ -62,3 +62,14 @@ instruction of 2026-10-22: lean, no rigid contracts, no registry to keep in sync
 the API or data version it was measured against as a value in its output, not as a schema field;
 each stamps retrieval date and query; none emits a score. Nothing in this note is a candidate, a
 dose or a recommendation.
+
+---
+
+## Update 2026-10-26 (scientist-c, package P3B-2): two outcomes, no new plan
+
+| Item | Outcome | Where |
+|---|---|---|
+| LINCS / SigCom / iLINCS reversal of the GSE156243 signature | **INCONCLUSIVE, limit named.** The S1 ranking is 74 percent one signature family (MCLF lines, 4 uM, 6 h) that fills both tails; S0 is not a content-matched null; the direction-shuffled control returned an empty ranking for an unexplained reason; tissue and disease are absent for most signatures; no compound replicates across tissues. Held: S1 differs from S0 (0 of 25), survives marker removal (20 of 25), is not a mapping artefact. | `gse156243/prediction_lincs_context_stratification_20261026.md` |
+| ToolUniverse, one capability (a second reversal service) | **Useful use, narrow.** `L1000FWD_sig_search` works key-less and separates S1 (7 signatures at q < 0.05) from S0 and two shuffles (none); 50 returned for 100 requested, no totals, no compound names, no tissue. CLUE tool absent from 1.5.7. Not adopted as a dependency; isolated environment only. | `tooluniverse_capability_test_20261026.md` |
+| ToolUniverse, PDK2 compounds-for-target | WATCH (unchanged). | `lucas_clarke_followup_20261026/tooluniverse_trial.md` |
+

@@ -1,0 +1,12 @@
+{
+ "utc": "2026-10-26T22:20:27.526244+00:00",
+ "status": 200,
+ "database": "l1000_cp",
+ "limit": 100,
+ "request_body_counts": {
+  "up": 503,
+  "down": 313
+ },
+ "verbatim_sha256": "014484ad1b24aa7671193b3ee43e2e283b606d9d7528997c1bc3e7d7d32ffd9f",
+ "verbatim_bytes": 96
+}
