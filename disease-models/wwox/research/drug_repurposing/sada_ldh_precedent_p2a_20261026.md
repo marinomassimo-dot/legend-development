@@ -10,7 +10,7 @@ proposed for anyone, and not a suitability statement. No wet-lab or clinical act
 | Source | What was obtained | Depth | Receipt |
 |---|---|---|---|
 | Sada 2015, *Science* (PMID 25792327) | **Not acquired.** Abstract and PubMed record only. | `abstract_only` (discovery, not reading) | none possible |
-| Rico-Molina 2024, *Int J Mol Sci* (PMID 39769031; open access, CC BY) | JATS body, 8 figure files, supplement (47 pages) | `partial_fulltext_read` (figures read, supplement captions-only apart from page 44, references not read) | `FTR-20261026-39769031-01`, staged; manifest `PMID39769031.json` PASS |
+| Rico-Molina 2024, *Int J Mol Sci* (PMID 39769031; open access, CC BY) | JATS body, 8 figure files, supplement (47 pages) | `partial_fulltext_read` (figures read, supplement captions-only apart from page 44, references not read) | `FTR-20261026-39769031-01`, staged; manifest `PMID39769031.json` PASS; blind audit 2026-10-27 (scientist-d) 15 of 17 supported, six narrowed in this revision |
 | Yadav 2026, *Eur J Pharmacol* glioblastoma (PMID 42035940) | JATS body | targeted passages (Methods for the LDH assay, Results 3.1, Discussion) | none |
 | Guyon 2022, *EMBO Mol Med* (PMID 36278433) | JATS body | targeted passages naming stiripentol (Results, legends, Methods in vivo) | none |
 | Bouchez 2026, complex I (PMID 41570991) | JATS body | abstract, Introduction, Results on concentrations, INT/duroquinone and malate dehydrogenase, Discussion | none |
@@ -29,8 +29,8 @@ What the repository holds on the 2015 report is therefore its abstract, plus the
 ## 1 · FIRST-PASS OBSERVATIONS (Rico-Molina 2024, read as a source, before the comparison)
 
 - **Design.** One enzyme assay: recombinant human LDHA, fluorescence of NADH, 1 mM pyruvate called saturating, 5 percent DMSO, 28 degrees C, 0.041 U/mL enzyme. A selective LDHA tool compound is named as positive control; **its measured inhibition is not reported**. No detergent is named.
-- **Stiripentol.** At one concentration (500 micromolar, n = 4): racemate 9.9 +/- 2.3 percent, (-)-(S) 34.0 +/- 2.1, (+)-(R) 38.4 +/- 1.6, iso-stiripentol 21.1 +/- 3.5. The IC50 column reads ">500" for all four. **That is a bound, not a fitted potency: the supplement's dose-response curves (S65 to S74) exist only for analogues.** The racemate sits far below both of its enantiomers in the same assay, which the text does not discuss; the stiripentol figure is therefore itself uncertain (about 10 versus about 35 percent).
-- **Analogues.** Four synthetic compounds (3, 4a, 4b, 5) reach 46 to 72 percent at that concentration; fitted IC50 100 to 200 micromolar (best 101.7 +/- 6.7, n = 3). The authors place that beside galloflavin and luteolin glucoside: tool-grade potency. The supplement curves (read: page 44) are steep (about one log unit from near 100 to near 10 percent), under 5 percent DMSO and with no detergent named; that is a pattern shared with non-specific or aggregating inhibitors, a **flag, not a finding**.
+- **Stiripentol.** At one concentration (500 micromolar, n = 4): racemate 9.9 +/- 2.3 percent, (-)-(S) 34.0 +/- 2.1, (+)-(R) 38.4 +/- 1.6, iso-stiripentol 21.1 +/- 3.5. The IC50 column reads ">500" for all four. **That is a bound, not a fitted potency: no curve is reported for stiripentol (the supplement's curves S65 to S74 cover analogues only and the Results say the IC50 phase was run for compounds with notable activity); that no curve was run is an inference, because Table 2 footnote b sits on the whole IC50 column.** The racemate (9.9) sits below both of its enantiomers (34.0 and 38.4) in the same assay, which the text does not discuss; the text's 'ca. 10%' is the racemate only, and the enantiomer values are close to the ~40 percent the authors attribute to the 2015 report, a comparison the authors do not make. The racemate-outside-enantiomers pattern recurs in the analogue IC50 data in both directions (compound 3: racemate 125.3 against 213.7 and 166.3; (2S*,5R*)-4: 199.8 against 101.7 and 128.4; (2R*,5R*)-4: 129.6 against 179.7 and 149.3), i.e. up to two-fold scatter between preparations or runs (an inference).
+- **Analogues.** Four synthetic compounds (3, 4a, 4b, 5) reach 46 to 72 percent at that concentration; fitted IC50 101.7 to 213.7 micromolar (the authors write 100 to 200; best 101.7 +/- 6.7, n = 3, but its own racemate is 199.8, so the ranking sits inside the scatter). The authors place the best value beside galloflavin and luteolin glucoside: tool-grade potency. The supplement curves (read: page 44) are steep (S65 and S67 about one log unit from near 100 to near 10 percent, S66 about half a log unit; one or two points define each slope, no Hill slope reported), under 5 percent DMSO and with no detergent named; that is a pattern shared with non-specific or aggregating inhibitors, a **flag, not a finding**.
 - **About the 2015 report.** The authors state, at second hand, that Sada et al. found about 40 percent inhibition of both directions at the same concentration on purified mammalian LDH and attribute the difference from their 10 percent to assay conditions.
 - **Scope.** No neuron, brain, seizure, cell or animal datum. The authors' purpose is primary hyperoxaluria (liver). They state that in vivo comparison and hepatotoxicity remain to be done.
 - **Possible errors in the source that matter here.** (i) a bound read as a value ("IC50 higher than 500" for stiripentol); (ii) "significantly" with no test; (iii) racemate below both enantiomers; (iv) positive-control result absent. None changes the weak-in-this-assay reading of stiripentol; all limit how far the paper can anchor a potency.
@@ -39,19 +39,17 @@ What the repository holds on the 2015 report is therefore its abstract, plus the
 
 ## 2 · Stiripentol and its analogues, four layers kept apart
 
-### 2.1 Enzyme activity (cell-free) — the three single-concentration measurements disagree and none gives a potency
+### 2.1 Enzyme activity (cell-free) — single-concentration measures only, none gives a potency
 
 | Measurement | System and conditions | Stiripentol result | Analogue result | Depth here |
 |---|---|---|---|---|
 | Sada 2015, as described by Rico-Molina 2024 | purified mammalian LDH, both directions | about 40 percent at 500 uM | "a stiripentol analog" more potent, identity and numbers unknown | second-hand |
 | Sada 2015, as described by Bouchez 2026, Bacq 2024, Guyon 2022 | LDH1 and LDH5; non-competitive; "specificity among 20 other anticonvulsants"; brain-penetrant with cerebral LDH inhibition in mice | no numbers given | - | second-hand; each source cites it for a different point |
-| Rico-Molina 2024 | recombinant human LDHA, 1 mM pyruvate, fluorescence | 9.9 percent (racemate), 34 and 38 percent (enantiomers) at 500 uM; IC50 ">500" (bound) | 46 to 72 percent; IC50 100 to 200 uM | partial full read, receipt |
+| Rico-Molina 2024 | recombinant human LDHA, 1 mM pyruvate, fluorescence | 9.9 percent (racemate), 34 and 38 percent (enantiomers) at 500 uM; IC50 ">500" (bound, no curve reported) | 46 to 72 percent; IC50 101.7 to 213.7 uM | partial full read, receipt |
 | Bai 2019 = ChEMBL `CHEMBL4311969` | human LDH5 and LDH1, UV-vis, sodium pyruvate | **7 percent at 2 mM on both isoforms** (identical values); the 0.5 mM rows hold **no value** in ChEMBL | compounds 68 to 70 "more potent than stiripentol", non-competitive (abstract) | database + abstract |
 | Yadav 2026 glioblastoma | U87 cell lysate, kinetic NADH assay, Triton X-100 in the mix | "moderate": significant inhibition only at 250 and 500 uM | - | targeted passage |
 
-Reading: the four numbers share a compound and nothing else (enzyme source, isoform, substrate level, detergent, readout, concentration). 7 percent at the **highest** concentration (2 mM) does not
-contradict 40 percent at 0.5 mM only if the assays differ in sensitivity; it is not a dose-response. **No source here fits a stiripentol IC50.** Hence the ChEMBL 7 percent is one weak
-datum from a different laboratory and assay, and is not a general verdict on stiripentol; equally, the 2015 "about 40 percent" is a second-hand figure and cannot be used as strong inhibition.
+Reading (corrected after the blind audit): within the Rico-Molina assay the stiripentol enantiomers (34 and 38 percent at 500 uM) are close to the ~40 percent attributed to the 2015 report at the same concentration; the ~10 percent is the racemate alone, and the racemate-below-enantiomers scatter recurs in the analogue table, so the paper's own spread (10 to 38) is a within-assay preparation/run scatter, not a disagreement with the 2015 figure. The one clear outlier is the ChEMBL document (Bai 2019): 7 percent at the four-fold higher concentration of 2 mM, identical for LDH5 and LDH1, with the 0.5 mM rows empty. The measurements share a compound and little else (enzyme source, isoform, substrate level, detergent, readout), none is a dose-response, and **no source here fits a stiripentol IC50**. So the potency is unresolved because no fitted value exists and the ChEMBL point differs in size, not because three measurements contradict each other; the ChEMBL 7 percent is one weak datum from another laboratory and assay and is not a verdict on stiripentol, and the 2015 "about 40 percent" is second-hand.
 
 ### 2.2 Cellular effects — they occur below the concentrations that inhibit LDH in lysate, and complex I is a direct target
 
@@ -73,7 +71,7 @@ argument for an LDHA component; it is one experiment, n = 4, with an indirect re
 |---|---|---|---|
 | Sada 2015 (abstract; second-hand) | mouse seizure model | LDH inhibition and an analogue suppressed seizures; stiripentol described as brain-penetrant LDH inhibitor | UNKNOWN here |
 | Le Dudal 2019 | rats: oral, 2 days; ethylene glycol; hydroxyproline nephropathy | urine oxalate down (0.16 to 0.11 mmol/mmol creatinine, n = 6), glycolate **up** in the nephropathy model (consistent with a block of glyoxylate-to-oxalate conversion), crystalluria and renal function better | 200 to 300 mg/kg/day, against about 50 mg/kg/day in children in the review's Table 1; no species scaling applied |
-| Guyon 2022 | mouse glioblastoma xenograft | survival longer (log-rank P 0.002, n 15 to 16) | 150 mg/kg in the figure legend, 100 mg/kg in the Methods: **the paper disagrees with itself** |
+| Guyon 2022 | mouse glioblastoma xenograft | survival longer (log-rank P 0.002, n 15 to 16) | 150 mg/kg in the Results and figure legend; the Methods print 100 mg/kg inside the sentence on the bevacizumab-combination schedule, which may describe another cohort, so a discrepancy is possible, not established |
 | ChEMBL (several documents) | mouse MES and PTZ seizure assays, rotarod | anticonvulsant activity with ED50 values, neurotoxicity rows | database rows; not read |
 
 Reading: no animal result in these sources measures **brain LDH activity or lactate** after stiripentol. The one pathway-specific in vivo readout (oxalate down, glycolate up) is hepatic and at
@@ -89,8 +87,8 @@ metabolism, and states that 500 uM was needed for seizure cessation by LDH inhib
 ## 3 · What the readings support, and what they do not
 
 **Supported (DATO at the stated depth):**
-1. Stiripentol inhibits recombinant human LDHA weakly in the one assay read in part (about 10 percent at 500 uM; about 35 percent for its enantiomers), and no study held here fits a potency.
-2. Synthetic analogues of stiripentol inhibit human LDHA more strongly in that assay (IC50 100 to 200 uM); they are tool-grade, with no cell or animal datum in the paper.
+1. Stiripentol inhibits recombinant human LDHA at one concentration by about 10 percent (racemate) to about 35 percent (enantiomers) at 500 uM in the one assay read in part, within a two-fold preparation scatter seen across that table; no study held here fits a potency.
+2. Synthetic analogues of stiripentol inhibit human LDHA more strongly in that assay (IC50 101.7 to 213.7 uM, with the series racemate scatter as large as that band); they are tool-grade, with no cell or animal datum in the paper.
 3. Stiripentol reduces tumour-cell and liver-cell lactate, respiration or viability at concentrations in the tens to hundreds of micromolar, and inhibits mitochondrial complex I directly.
 4. In rats at high doses it lowers urine oxalate and raises glycolate in a hyperoxaluria model.
 
@@ -109,7 +107,7 @@ metabolism, and states that 500 uM was needed for seizure cessation by LDH inhib
 - `HYP-20260709-01` (ketogenic) and the PDK/DCA position: unchanged.
 
 ## 5 · Analogues versus stiripentol, summarised without ranking
-Analogues from Rico-Molina (3, 4a, 4b, 5): enzyme IC50 100 to 200 uM, tool-grade, steep curves flagged, no cell, brain, animal or safety datum. Analogues from Bai 2019 (68 to 70): LDH1/LDH5 inhibition said to exceed stiripentol's, non-competitive, anticonvulsant in three mouse models with low neurotoxicity, GABA-A modulation (abstract only). The 2015 analogue: unknown here. None of them has any datum in a WWOX system. Nothing here ranks them.
+Analogues from Rico-Molina (3, 4a, 4b, 5): enzyme IC50 101.7 to 213.7 uM, tool-grade, steep curves flagged, no cell, brain, animal or safety datum. Analogues from Bai 2019 (68 to 70): LDH1/LDH5 inhibition said to exceed stiripentol's, non-competitive, anticonvulsant in three mouse models with low neurotoxicity, GABA-A modulation (abstract only). The 2015 analogue: unknown here. None of them has any datum in a WWOX system. Nothing here ranks them.
 
 ## 6 · Discriminating experiments (PROPOSALS ONLY; nothing authorised to run)
 
@@ -117,7 +115,7 @@ The readings change one thing: a **stiripentol arm in a WWOX experiment would no
 experiment (`HYP-20261026-11`, stage three: "stiripentol against a selective LDHA tool at matched exposure") must be preceded by an assay-level stage.
 
 **E-A (no WWOX; decides whether stiripentol is an LDH tool at all).**
-- *Question:* what is stiripentol's fitted potency and mode on human LDHA and LDHB, and is the 7/10/40 percent spread an assay artefact?
+- *Question:* what is stiripentol's fitted potency and mode on human LDHA and LDHB, and is the spread (about 10 to 40 percent at 500 uM across racemate, enantiomers and the 2015 figure; 7 percent at 2 mM in the ChEMBL document) an assay or preparation artefact?
 - *Model:* recombinant human LDHA and LDHB, plus a lysate of a human neural cell line.
 - *Controls:* a selective LDHA inhibitor with a published curve (positive); oxamate; vehicle matched for DMSO; each stiripentol enantiomer separately; **with and without a non-ionic detergent** (aggregation test); pyruvate at sub-Km and saturating; both reaction directions; pre-incubation time varied; at least two independent enzyme lots.
 - *Endpoint:* fitted IC50, Hill slope, substrate dependence, detergent sensitivity.
@@ -133,6 +131,6 @@ experiment (`HYP-20261026-11`, stage three: "stiripentol against a selective LDH
 
 ## 7 · Limits, owed work, and verification
 - The 2015 report is **unread**. Every statement about it is second-hand and labelled so; the analogue is not named because its identity is not known here.
-- Only one paper has a receipt (partial). The other five open-access sources were read at targeted passages; their figures were not opened (Le Dudal 2019, Bouchez 2026, Yadav 2026 and Guyon 2022 carry the cellular and animal rows). A blind audit of the propositions in `PMID39769031.json` is owed to someone other than the producer; the two over-reach flags (a bound read as a value; racemate below its enantiomers) go to the auditor first.
+- Only one paper has a receipt (partial). The other five open-access sources were read at targeted passages; their figures were not opened (Le Dudal 2019, Bouchez 2026, Yadav 2026 and Guyon 2022 carry the cellular and animal rows). The blind audit of `PMID39769031.json` was done (scientist-d, 2026-10-27) and its six narrowings applied; a re-audit of the narrowed entries by someone other than the producer is owed. Entries 15 and 16 (structure figures) stay unverifiable by the auditor.
 - Concentration and dose figures in sections 2.2 and 2.3 are experimental conditions as printed by the sources, not re-derived and not recommendations.
 - No e-mail, registration, author contact or paid service was used; Unpaywall-type indexes were not queried.
