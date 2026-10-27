@@ -1,0 +1,27 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-ROADMAP-IT2-20261027",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Drug repurposing iteration 2, linked to ORCH-ROADMAP-IT1-20261026 (not reopened): W1 cards and hypothesis current-reading and LDH reading debt; W2 therapeutic research beyond the metabolic thread (partial benefit and broad functional recovery); W3 LINCS made interpretable; W4 radar visibility, external discovery, value/cost trial. No efficacy claim, no wet-lab, no e-mail/contact, zero spend.",
+ "START_UTC": "2026-10-27T09:00:00Z",
+ "BASELINE": "d85d6a55 = development/main, 873 receipts, measured 2026-10-27 before any change",
+ "AUTHORISED_QUEUE_20261027": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_W1": {"order": 1, "steps": [
+   {"step": "Triage the 25 UNQUALIFIED derived cards; link a small high-value batch to curated cards", "status": "TODO", "owner": "scientist-a"},
+   {"step": "Current-reading of HYP-20260709-01 (12/15 vs 13/15) and the other involved hypotheses, independently verified", "status": "TODO", "owner": "scientist-b; verifier scientist-d"},
+   {"step": "LDH note: five targeted-passage reads, receipt state resolved honestly", "status": "TODO", "owner": "scientist-d"}]},
+  "OBJ_W2": {"order": 2, "steps": [
+   {"step": "One partial-benefit thread and one broad-recovery thread, target->compounds, decisive deepening", "status": "TODO", "owner": "scientist-c"}]},
+  "OBJ_W3": {"order": 3, "steps": [
+   {"step": "LINCS: query quality, wrapper vs service, BRD identities, context, return to WWOX", "status": "TODO", "owner": "scientist-d then verifier scientist-a"}]},
+  "OBJ_W4": {"order": 4, "steps": [
+   {"step": "Radar visible at session start; stale wording removed; probes on the right resource; first real external discovery search", "status": "TODO", "owner": "plan"},
+   {"step": "Small value/cost trial on new cases, references fixed before answers", "status": "TODO", "owner": "orchestrator with scientist-b"}]}
+ },
+ "DECISIONS_TAKEN": [],
+ "DEFAULTS_TAKEN": [],
+ "STOP_LOG": []
+}
