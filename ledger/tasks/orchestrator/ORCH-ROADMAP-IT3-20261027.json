@@ -14,17 +14,17 @@
    "steps": [
     {
      "step": "AAV9 CONFLICTING semantics per endpoint + regressions",
-     "status": "PENDING",
+     "status": "TODO",
      "owner": "plan"
     },
     {
      "step": "Guyon 2022 receipt: real targeted read linked to previous, consumers checked",
-     "status": "PENDING",
+     "status": "TODO",
      "owner": "scientist-d"
     },
     {
      "step": "ChEMBL parent-id fallback regression; HYP-01 Seahorse wording; skip classification by id and cause; roadmap section updated",
-     "status": "PENDING",
+     "status": "TODO",
      "owner": "plan"
     }
    ]
@@ -34,27 +34,27 @@
    "steps": [
     {
      "step": "Compound catalogue from public sources (deterministic, cached, provenance, access categories)",
-     "status": "PENDING",
+     "status": "TODO",
      "owner": "scientist-a"
     },
     {
      "step": "WWOX biological needs table with locators and rationale for direction",
-     "status": "PENDING",
+     "status": "TODO",
      "owner": "scientist-b"
     },
     {
      "step": "Both-direction search + coverage matrix + selection (reversible)",
-     "status": "PENDING",
+     "status": "TODO",
      "owner": "scientist-a"
     },
     {
      "step": "Regenerable first view, counts from data",
-     "status": "PENDING",
+     "status": "TODO",
      "owner": "plan"
     },
     {
      "step": "Closed-loop proof incl. one new question; queue consumption; independent verification",
-     "status": "PENDING",
+     "status": "TODO",
      "owner": "orchestrator"
     }
    ]
@@ -64,22 +64,22 @@
    "steps": [
     {
      "step": "PMID 41380592 PARS2/GCN2/ATF4 + complex I propagation into LDH/PDH design",
-     "status": "PENDING",
+     "status": "TODO",
      "owner": "scientist-c"
     },
     {
      "step": "LINCS GSE92742 offline feasibility and minimal-extract decision",
-     "status": "PENDING",
+     "status": "TODO",
      "owner": "scientist-d"
     },
     {
      "step": "Radar: real run consumed, catalogue-update probes, small discovery search, opportunity notes",
-     "status": "PENDING",
+     "status": "TODO",
      "owner": "plan"
     },
     {
      "step": "12 UNQUALIFIED cards: link or curate where truly matched; WWOX-value observations",
-     "status": "PENDING",
+     "status": "TODO",
      "owner": "scientist-b"
     }
    ]
@@ -89,7 +89,7 @@
    "steps": [
     {
      "step": "Battery on final SHA, integration, push, cleanup, final report",
-     "status": "PENDING",
+     "status": "TODO",
      "owner": "orchestrator"
     }
    ]
