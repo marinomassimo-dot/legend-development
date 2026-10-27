@@ -1,0 +1,18 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "TASK_ID": "VERIFY-VALUETRIALREF-20261027",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "NORMAL",
+ "OBJECTIVE": "Independent verification of the value trial IT2 answer key (reference.md, scoring.md) before any answer is run.",
+ "SCOPE": {"file": "disease-models/wwox/research/locator_audits/2026-10-27_value_trial_reference_verification.md"},
+ "ACCEPTANCE_CRITERIA": ["verdict per item with exact proposed corrections", "reference.md and scoring.md not edited"],
+ "CURRENT_STATE": "DONE - verdicts written",
+ "assigned_on": "2026-10-27",
+ "TASK_ACK": {"TASK_ID": "VERIFY-VALUETRIALREF-20261027", "DECISION": "ACCEPTED", "ACTOR_ID": "orchestrator", "acked_at": "2026-10-27T15:30:00Z"},
+ "TASK_CLAIM": {"TASK_ID": "VERIFY-VALUETRIALREF-20261027", "ACTOR_ID": "orchestrator", "claimed_at": "2026-10-27T15:30:00Z", "durable_pointer": "ledger/tasks/orchestrator/VERIFY-VALUETRIALREF-20261027.json on branch task/verify-trialref"},
+ "DEFAULTS_TAKEN": [{"condition": "full text of NI24, MO19, WA25, YA25 not obtainable", "default_taken": "abstract depth declared per source; no bypass", "why_safe": "understates"}],
+ "STOP_LOG": []
+}
