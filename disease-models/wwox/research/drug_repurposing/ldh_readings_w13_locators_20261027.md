@@ -52,7 +52,7 @@ Artefacts (shared checkout `files/fulltext/`, SHA-256 of the file read):
 | # | Proposition | Verbatim quote | Anchor |
 |---|---|---|---|
 | B1 | Concentrations used in cells: 500 uM human, 250 uM mouse lines. | "We used different concentrations for mammalian cells: 500 μM for human cells and 250 μM for mouse cell lines." | Discussion, paragraph 1 |
-| B2 | Text says respiration fell about 70 percent at 100 uM and 90 percent at 200 uM in the two mouse lines (the figure shows about 50 to 60 percent at 100 uM when the antimycin level is subtracted: reader estimate). | "The respiratory rate was inhibited by approximately 70% for each cell line with 100 μM of stiripentol and by 90% with 200 μM of stiripentol (Fig. S2, A–B)." | Results, section on respiratory capacity |
+| B2 | Text says respiration fell about 70 percent at 100 uM and 90 percent at 200 uM in the two mouse lines (the figure shows 51 to 53 percent raw, 57 to 58 net of antimycin, at 100 uM: auditor pixel reading). | "The respiratory rate was inhibited by approximately 70% for each cell line with 100 μM of stiripentol and by 90% with 200 μM of stiripentol (Fig. S2, A–B)." | Results, section on respiratory capacity |
 | B3 | Inhibition of oxygen consumption is immediate on adding 500 uM in intact and permeabilised cells. | "the inhibition of the respiratory rate was observed immediately after injecting 500 μM of stiripentol" | Results, instantaneous inhibition |
 | B4 | Heart and liver mitochondria: stiripentol inhibits complex I driven respiration, not complex II driven. | "However, stiripentol was not able to inhibit the respiratory rate when it was only driven by complex II activity (Fig. 5, C and D)." | Results, complex I inhibitor |
 | B5 | The same Results section ends with a sentence that conflicts with its heading and the Discussion. | "Unlike rotenone, stiripentol does not directly or specifically inhibit complex I." | Results, Stiripentol is a complex I inhibitor, last sentence |
@@ -75,7 +75,7 @@ Artefacts (shared checkout `files/fulltext/`, SHA-256 of the file read):
 | Q4 | Liver to plasma ratio 35, single report. | "a liver/plasma ratio of 35 was measured 1 h after intravenous injection of STP in rats" | same |
 | Q5 | Sensitivity ranking puts LDH last. | "allosteric GABAA receptor potentiation > inhibition of ionic (Na+ and Ca2+) channels ≫ attenuation of energy metabolism or LDH activity" | Discussion, same |
 | Q6 | Inhibition of LDH as seizure cessation cause needed 500 uM in rodents, per the review. | "high concentrations (500 µM) of STP were needed, suggesting that other MoAs were involved in its in vivo antiepileptic effects" | Discussion, Antiepileptic Activity |
-| Q7 | Table 2 lists LDHA/B 500 uM (Sada) and oxalate synthesis 42 to 427 uM (Le Dudal), the source of the 42 to 500 range. | "500LDHA/B[69]42–427Oxalate synthesis (LDHA)[74]500Lactate production (LDHA/B)[70]" | Table 2 |
+| Q7 | Table 2 lists three LDH rows: LDHA/B 500 uM (Sada), oxalate synthesis 42 to 427 uM (Le Dudal) and lactate production LDHA/B 500 uM (Guyon 2022), the source of the 42 to 500 range. | "500LDHA/B[69]42–427Oxalate synthesis (LDHA)[74]500Lactate production (LDHA/B)[70]" | Table 2 |
 | Q8 | A second-hand report of reduced LDHA levels in ischemic rat brain tissue (Dhir). | "Dhir et al. found that STP reduced in vivo LDHA levels in the ischemic rat brain tissue" | Section: STP Regulates Glucose Energy Metabolism and Lactate Dehydrogenase |
 | Q9 | Review is a narrative review with no new data; authors include Biocodex employees (affiliation record). | "This is a narrative review of the literature including the new data on the MoAs of STP" | Methods |
 
@@ -92,7 +92,7 @@ Artefacts (shared checkout `files/fulltext/`, SHA-256 of the file read):
 | L7 | Human data: 8 Dravet children versus 40 cystinuria controls, urine oxalate; one 17-year-old with type I hyperoxaluria. | "children affected by Dravet syndrome who required stiripentol treatment (n = 8, median age 6 years) and in children of similar age affected by cystinuria" | Results, humans |
 | L8 | Declared conflict of interest: two authors filed a patent on stiripentol for nephrolithiasis and ethylene glycol poisoning. | "EL and MD have filed a patent related to the use of stiripentol as a treatment against nephrolithiasis" | Footnotes |
 | L9 | Authors attribute the 2015 LDH5 finding to neurons in vitro. | "Sada et al. demonstrated that stiripentol targets lactate production by LDH5 isoenzymes in neurons in vitro" | Introduction |
-| L10 | The in vitro concentration called therapeutic exceeds the serum level the same paper cites for Dravet children. | "giving serum levels of 4–22 μg/ml" | Discussion |
+| L10 | The in vitro concentration called therapeutic extends above the serum level the same paper cites for Dravet children (low end overlaps). | "giving serum levels of 4–22 μg/ml" | Discussion |
 
 ## Figure and supplement readings (images opened; READER ESTIMATES from the plotted points, not quotations; +/- a few percentage points)
 
