@@ -1,0 +1,12 @@
+{
+ "TASK_ID": "SD-IT2-VERIFY-HYPCURRENT-20261027",
+ "ACTOR_ID": "scientist-d",
+ "OWNER": "orchestrator",
+ "OBJECTIVE": "Independent verification of package SB-IT2-HYPCURRENT-20261027 against sources.",
+ "CURRENT_STATE": "COMPLETE",
+ "TASK_ACK": {"DECISION": "ACCEPTED", "reading_mode": "VERIFIER_PARTIAL_SOURCE", "note": "Branch task/verify-hypcurrent; audit note only."},
+ "TASK_CLAIM": {"claimed_at": "2026-10-27", "durable_pointer": "branch task/verify-hypcurrent"},
+ "DEFAULTS_TAKEN": [],
+ "STOP_LOG": [],
+ "RESULT": "disease-models/wwox/research/locator_audits/2026-10-27_hypcurrent_independent_verification.md"
+}
