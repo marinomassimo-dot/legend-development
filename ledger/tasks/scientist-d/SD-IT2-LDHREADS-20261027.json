@@ -1,0 +1,68 @@
+{
+ "_schema": "LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT",
+ "_note": "Opened by scientist-d from the Orchestrator's message of 2026-10-27 (package W1.3 of mandate ORCH-ROADMAP-IT2-20261027); no separate contract file.",
+ "TASK_ID": "SD-IT2-LDHREADS-20261027",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "scientist-d",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Close the reading debt of sada_ldh_precedent_p2a_20261026.md for PMIDs 42035940, 36278433, 41570991, 38443647, 30946030: verify identities and traceability, stage honest receipts with verbatim locators, state remaining debt, report changes to card E02 and HYP-20261026-11.",
+ "SCOPE": {
+  "brief": "framework/protocols/scientist_standing_brief.md; context_policy QUESTION_DRIVEN"
+ },
+ "ACCEPTANCE_CRITERIA": [
+  "identities verified",
+  "no prior trace confirmed",
+  "five staged receipts pass staged_receipt_check",
+  "locators exact-matched",
+  "note updated with debt",
+  "commit candidate listing verifier needs"
+ ],
+ "DEPENDENCIES": [],
+ "REVIEW_REQUIREMENT": "independent verifier named in the candidate",
+ "INTERACTION_MODE": "AUTONOMOUS",
+ "RETRY_POLICY": "resume idempotently",
+ "MILESTONE_PLAN": [
+  "identity and trace search",
+  "read",
+  "locators and receipts",
+  "note",
+  "candidate",
+  "land"
+ ],
+ "DELIVERABLE": "note, locators file, receipts, candidate",
+ "CURRENT_STATE": "COMPLETE",
+ "assigned_on": "2026-10-27",
+ "TASK_ACK": {
+  "TASK_ID": "SD-IT2-LDHREADS-20261027",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "decision": "ACCEPTED",
+  "at": "2026-10-27T18:00:00Z"
+ },
+ "TASK_CLAIM": {
+  "TASK_ID": "SD-IT2-LDHREADS-20261027",
+  "GENERATION": 1,
+  "ACTOR_ID": "scientist-d",
+  "timestamp": "2026-10-27T18:00:00Z",
+  "durable_pointer": "branch task/sd-it2-ldhreads, worktree .claude/worktrees/sd-it2-ldhreads",
+  "note": "scientist-d is a stated assumption of the Orchestrator"
+ },
+ "DEFAULTS_TAKEN": [
+  {
+   "condition": "Fig 1E of Yadav and the figures of Le Dudal could not be retrieved",
+   "default": "declared figures unavailable after one attempt, no retry, no bypass; depth stays partial",
+   "why_safe": "coverage states only what was seen"
+  },
+  {
+   "condition": "selected-passage reads of Guyon and Bacq",
+   "default": "used queried_not_full_read rather than partial",
+   "why_safe": "understate rather than overstate"
+  }
+ ],
+ "STOP_LOG": [],
+ "RESULT": {
+  "summary": "5 receipts staged, 54 locators, note section 8, candidate CC-20261027-SCIENTIST-D-LDHREADS-01"
+ }
+}

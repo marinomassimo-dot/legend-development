@@ -1,0 +1,40 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261027-30946030-01",
+ "study_id": {
+  "pmid": "30946030",
+  "doi": "10.1172/JCI99822"
+ },
+ "event_at": "2026-10-27T19:20:00Z",
+ "analysis_at": "2026-10-27T19:20:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-d (Scientist D), package W1.3 of mandate ORCH-ROADMAP-IT2-20261027, task SD-IT2-LDHREADS-20261027; context_policy QUESTION_DRIVEN (the reader held card E02, HYP-20261026-11 and the P2a note, and read to settle what their stiripentol and LDH numbers rest on). Acquisition: PMC JATS body persisted on 2026-10-26 by a previous package (files/fulltext, digest below), reopened and re-read from that artefact on 2026-10-27; not re-acquired. This receipt REPLACES NO earlier trace: before this package the five readings listed in the P2a note had receipt 'none' and no ledger event. Staged for the integrator, not appended. ",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID30946030_LeDudal2019_PMC_page.html",
+ "source_fingerprint": "4f14b1e81b24c8197c06607c801d110cc9ca7593ec1a941ba4119aecc3350736",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "not_read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "unavailable",
+  "references": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/ldh_readings_w13_locators_20261027.md",
+  "disease-models/wwox/research/drug_repurposing/sada_ldh_precedent_p2a_20261026.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "Public PMC article page (HTML) text read whole: Abstract, Introduction, Results, Discussion, Methods, footnotes (conflict of interest, funding). The PMC XML for this article is a restricted stub (companion file PMID30946030_LeDudal2019_PMC_r2.xml, 13 KB) and the open-data bucket holds no files for it.",
+  "Figures: captions read, images not opened; Table 1 (serum parameters) not read; no supplement was identified.",
+  "Verbatim locators L1 to L10 in ldh_readings_w13_locators_20261027.md (all found by exact match in the HTML text)."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

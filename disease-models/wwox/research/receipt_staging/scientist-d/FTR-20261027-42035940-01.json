@@ -1,0 +1,41 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261027-42035940-01",
+ "study_id": {
+  "pmid": "42035940",
+  "doi": "10.1016/j.ejphar.2026.178893"
+ },
+ "event_at": "2026-10-27T19:20:00Z",
+ "analysis_at": "2026-10-27T19:20:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-d (Scientist D), package W1.3 of mandate ORCH-ROADMAP-IT2-20261027, task SD-IT2-LDHREADS-20261027; context_policy QUESTION_DRIVEN (the reader held card E02, HYP-20261026-11 and the P2a note, and read to settle what their stiripentol and LDH numbers rest on). Acquisition: PMC JATS body persisted on 2026-10-26 by a previous package (files/fulltext, digest below), reopened and re-read from that artefact on 2026-10-27; not re-acquired. This receipt REPLACES NO earlier trace: before this package the five readings listed in the P2a note had receipt 'none' and no ledger event. Staged for the integrator, not appended. ",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID42035940_GBM2026_PMC_r2.xml",
+ "source_fingerprint": "719d7ac38df3d00d1e98e8ff72ae17569b1772bcff6569c785c6b41d824a841c",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "unavailable",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "unavailable",
+  "references": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/ldh_readings_w13_locators_20261027.md",
+  "disease-models/wwox/research/drug_repurposing/sada_ldh_precedent_p2a_20261026.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "Body read section by section: Introduction, all Methods subsections, all Results subsections, Discussion (the Discussion carries the limitations paragraph).",
+  "Figures: all eleven figure files unavailable (Europe PMC image route HTTP 403 on one attempt; the PMC open-data bucket holds the manuscript XML, text and JSON only); the size of the LDH inhibition in Fig 1E was therefore not seen. Supplement (a TIFF and two DOCX) not retrieved. No table-wrap in the XML.",
+  "Reading output: verbatim locators Y1 to Y12 in ldh_readings_w13_locators_20261027.md, checked by exact match against the artefact (all found).",
+  "The enzyme-activity Methods paragraph says 'LDH was then added per well': whether the assay measured the lysate's own LDH or an added enzyme is not clear from the text."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}
