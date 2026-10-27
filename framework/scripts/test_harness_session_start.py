@@ -105,5 +105,27 @@ class TheRealCheckoutIsRead(unittest.TestCase):
             self.assertIsInstance(payload["overdue_branches"], list)
 
 
+class Radar(unittest.TestCase):
+    """The daily radar is shown to harness and triage actors as information, never as a gate."""
+
+    def test_orchestrator_sees_the_radar_line_and_a_missing_report_is_not_an_error(self):
+        import os
+        with tempfile.TemporaryDirectory() as tmp:
+            os.environ["LEGEND_SCOUT_DIR"] = tmp
+            try:
+                code, out = run_main("--actor", "orchestrator", "--root", tmp)
+                self.assertEqual(code, 0)
+                self.assertIn("RADAR no report yet", out)
+                self.assertNotIn("HARNESS_SCOUT", out, "no weekly-scout duty for a triage actor")
+                Path(tmp, "scout_daily.json").write_text(json.dumps(
+                    {"run_at": "2026-10-27T05:20:01+00:00", "verdict": "SELECTED", "errors": [], "selected": [{"id": "X"}]}))
+                code, out = run_main("--actor", "plan", "--root", tmp, "--json")
+                payload = json.loads(out)
+                self.assertEqual(["X"], payload["radar"]["to_examine"])
+                self.assertEqual("SCOUT_DUE", payload["status"])
+            finally:
+                del os.environ["LEGEND_SCOUT_DIR"]
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
