@@ -1,0 +1,101 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-ROADMAP-IT3-20261027",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Drug repurposing iteration 3, linked to ORCH-ROADMAP-IT2-20261027 (closed, not reopened): wide compound catalogue, WWOX biological needs, both-direction search, coverage matrix, regenerable first view, loop closed into the scientific queue; plus phase-1 residual fixes, research (ISR/PARS2, LDH/complex I, LINCS offline), radar. No efficacy claim, no wet-lab, no e-mail/contact/registration, zero spend, no personal data.",
+ "START_UTC": "2026-10-27T18:00:00Z",
+ "BASELINE": "ea16c3b6 = development/main (verified equal after fetch), 878 receipts",
+ "AUTHORISED_QUEUE_20261027B": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_PH1": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "AAV9 CONFLICTING semantics per endpoint + regressions",
+     "status": "PENDING",
+     "owner": "plan"
+    },
+    {
+     "step": "Guyon 2022 receipt: real targeted read linked to previous, consumers checked",
+     "status": "PENDING",
+     "owner": "scientist-d"
+    },
+    {
+     "step": "ChEMBL parent-id fallback regression; HYP-01 Seahorse wording; skip classification by id and cause; roadmap section updated",
+     "status": "PENDING",
+     "owner": "plan"
+    }
+   ]
+  },
+  "OBJ_PH2": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "Compound catalogue from public sources (deterministic, cached, provenance, access categories)",
+     "status": "PENDING",
+     "owner": "scientist-a"
+    },
+    {
+     "step": "WWOX biological needs table with locators and rationale for direction",
+     "status": "PENDING",
+     "owner": "scientist-b"
+    },
+    {
+     "step": "Both-direction search + coverage matrix + selection (reversible)",
+     "status": "PENDING",
+     "owner": "scientist-a"
+    },
+    {
+     "step": "Regenerable first view, counts from data",
+     "status": "PENDING",
+     "owner": "plan"
+    },
+    {
+     "step": "Closed-loop proof incl. one new question; queue consumption; independent verification",
+     "status": "PENDING",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_PH3": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "PMID 41380592 PARS2/GCN2/ATF4 + complex I propagation into LDH/PDH design",
+     "status": "PENDING",
+     "owner": "scientist-c"
+    },
+    {
+     "step": "LINCS GSE92742 offline feasibility and minimal-extract decision",
+     "status": "PENDING",
+     "owner": "scientist-d"
+    },
+    {
+     "step": "Radar: real run consumed, catalogue-update probes, small discovery search, opportunity notes",
+     "status": "PENDING",
+     "owner": "plan"
+    },
+    {
+     "step": "12 UNQUALIFIED cards: link or curate where truly matched; WWOX-value observations",
+     "status": "PENDING",
+     "owner": "scientist-b"
+    }
+   ]
+  },
+  "OBJ_PH4": {
+   "order": 4,
+   "steps": [
+    {
+     "step": "Battery on final SHA, integration, push, cleanup, final report",
+     "status": "PENDING",
+     "owner": "orchestrator"
+    }
+   ]
+  }
+ },
+ "DECISIONS_TAKEN": [],
+ "DEFAULTS_TAKEN": [],
+ "STOP_LOG": []
+}
