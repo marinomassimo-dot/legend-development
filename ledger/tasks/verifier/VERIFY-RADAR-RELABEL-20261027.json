@@ -1,0 +1,12 @@
+{
+ "TASK_ID": "VERIFY-RADAR-RELABEL-20261027",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "verifier",
+ "OBJECTIVE": "Independent check of plan's radar discovery decisions and scientist-a's F01/F02 scope relabel.",
+ "CURRENT_STATE": "COMPLETED",
+ "TASK_ACK": {"state": "ACCEPTED", "accepted_on": "2026-10-27", "interaction_mode": "AUTONOMOUS_COMPLETE"},
+ "TASK_CLAIM": {"claimed_by": "verifier", "claimed_on": "2026-10-27", "branch": "task/verify-radar-relabel", "worktree": ".claude/worktrees/verify-radar-relabel"},
+ "RESULTS": {"files": ["disease-models/wwox/research/locator_audits/2026-10-27_radar_and_relabel_verification.md"]},
+ "DEFAULTS_TAKEN": [],
+ "STOP_LOG": {"class_1_reserved_act": 0, "class_2_no_safe_default": 0, "class_3_hindsight_defaults_appended_to_SAFE_DEFAULTS": 0, "narrative": "Empty."}
+}
