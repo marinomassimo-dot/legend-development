@@ -461,7 +461,7 @@ measure the chloride premise or supply a drug-intervention result.
 **Class:** `PROMISING_BUT_MECHANISTIC_GAP` — the gap is that nobody has run the conjunction, and the
 platform to run it has existed for years.
 
-**Curated card (added 2026-10-27):** the NMDA-receptor dependence measured with a tool antagonist, and the statement that memantine itself was never given, are in `research/drug_repurposing/cards/F02_memantine_nmda.card.json`; `repurposing_join.py` reads it for this record.
+**Curated card (added 2026-10-27):** the NMDA-receptor dependence measured with a tool antagonist, and the statement that memantine itself was never given, are in `research/drug_repurposing/cards/G02_memantine_nmda.card.json`; `repurposing_join.py` reads it for this record.
 
 ---
 
@@ -516,7 +516,7 @@ platform to run it has existed for years.
 **Class:** `DEPRIORITIZE` — not for toxicity, but because **the evidence that made it the strongest
 signal does not say what it was read as saying**, and its direction is wrong on a second axis.
 
-**Curated card (added 2026-10-27):** the qualified rows, including the three-genotype specificity failure, are in `research/drug_repurposing/cards/F01_lithium_gsk3.card.json` (also linked from N-02); `repurposing_join.py` reads it for this record.
+**Curated card (added 2026-10-27):** the qualified rows, including the three-genotype specificity failure, are in `research/drug_repurposing/cards/G01_lithium_gsk3.card.json` (also linked from N-02); `repurposing_join.py` reads it for this record.
 
 ---
 
@@ -726,7 +726,7 @@ is not a WWOX-mechanism drug.
 **`REVIVAL_TRIGGER`:** a PTZ arm with an explicit tested `−/−` vs `+/+` contrast, or a different
 GSK3β inhibitor under the same design.
 
-**Curated card (added 2026-10-27):** the qualified rows are in `research/drug_repurposing/cards/F01_lithium_gsk3.card.json` (the same candidate as R-04); `repurposing_join.py` reads it for this record.
+**Curated card (added 2026-10-27):** the qualified rows are in `research/drug_repurposing/cards/G01_lithium_gsk3.card.json` (the same candidate as R-04); `repurposing_join.py` reads it for this record.
 
 ### N-03 — Sodium-channel blockers (carbamazepine, phenytoin, oxcarbazepine) → **target not causally downstream of WWOX**
 **Source ids:** DL-REPO-001.

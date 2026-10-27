@@ -299,7 +299,7 @@ class Run(unittest.TestCase):
             self.assertEqual(card["epistemic_status"], "IPOTESI")
             self.assertFalse(card["canonical"])
             # an abstention is what a card without drug-side rows says; a linked curated card that carries
-            # drug-side rows (e.g. lithium, F01) is a card with comparisons and no abstention
+            # drug-side rows (e.g. lithium, G01) is a card with comparisons and no abstention
             self.assertEqual(card["abstention"],
                              None if card["input"]["drug_assertions"] else "NO_DRUG_ASSERTIONS_SUPPLIED")
             self.assertEqual(card["directional_summary"], "UNRESOLVED")
@@ -517,13 +517,13 @@ class CuratedLink(unittest.TestCase):
             linked = bool(self.cards[query_id]["input"].get("curated_from"))
             self.assertEqual(bool(row["qualification"]), linked, query_id)
         view = self.rows["Q-R-04"]["qualification"]
-        self.assertEqual(view["cards"], ["cards/F01_lithium_gsk3.packet.json"])
+        self.assertEqual(view["cards"], ["cards/G01_lithium_gsk3.packet.json"])
         self.assertEqual((view["route"], view["track"]), ("BENEFICIO_PRECOCE", "A"))
         self.assertEqual(view["comparisons"], {"OPPOSES_DISEASE_CHANGE": 1, "UNRESOLVED": 2})  # the specificity failure stays visible
         self.assertEqual(self.rows["Q-N-02"]["qualification"]["cards"], view["cards"])  # one candidate, two map records, one card
         text = rj.render_handoff(list(self.rows.values()), "2026-01-01", "all")
         self.assertIn("Records already qualified by a curated card", text)
-        self.assertIn("cards/F01_lithium_gsk3.packet.json", text)
+        self.assertIn("cards/G01_lithium_gsk3.packet.json", text)
 
     def test_a_locator_pointing_past_the_manifest_is_reported_unresolved(self):
         row = {"id": "X", "locator": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json "

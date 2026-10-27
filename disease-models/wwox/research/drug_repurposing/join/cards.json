@@ -87,7 +87,7 @@
      "epistemic_status": "IPOTESI",
      "evidence_scope": "UNQUALIFIED",
      "id": "DA-Q-N-01",
-     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:703",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:708",
      "reading_depth": "complete_fulltext_read",
      "receipt": "FTR-20260913-15064722-01",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-01",
@@ -1443,12 +1443,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*`INSUFFICIENT` — mai misurato a livello proteico in alcun sistema WWOX.* The reflex move in genetic DEE, imported from TSC.",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:703; evidence table digest 57aae638065a4150"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:708; evidence table digest 57aae638065a4150"
     },
     "route": "UNQUALIFIED",
     "schema_version": 1
    },
-   "input_sha256": "22a667e9e1d7d1f4d37c90ba7c413623fc1df4cdf4a06b49e58cdd74980f6a4e",
+   "input_sha256": "1546af758c0a23d60a37e3c25573243f43ec7363ed46f6005a6dc7bcbc29f7ac",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -2736,7 +2736,7 @@
     "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
     "external_hits": 1,
     "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
-    "would_move": "N-01 (disease-models/wwox/analysis/mechanism_intervention_map.md:703)"
+    "would_move": "N-01 (disease-models/wwox/analysis/mechanism_intervention_map.md:708)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -2852,7 +2852,7 @@
     }
    ],
    "input": {
-    "axis": "F / partial benefit: GSK3beta inhibition (lithium)",
+    "axis": "G / partial benefit: GSK3beta inhibition (lithium)",
     "bridge_gaps_exposed": [
      "The bridge compares a null-genotype row against the null disease row (a sign comparison only); the wild-type and heterozygote rows differ in genotype and are therefore reported as not comparable. That non-comparability is the specificity failure, and no summary field expresses it: read the assertion notes.",
      "The Ser9 disease row has no drug-side row: lithium's effect on Ser9 was not measured."
@@ -2870,11 +2870,11 @@
      "Every adjacent source is labelled NOT WWOX EVIDENCE at class level."
     ],
     "curated_candidate": {
-     "id": "P4-F-01",
+     "id": "P4-G-01",
      "name": "Lithium (GSK3beta inhibition as the tool rationale)"
     },
     "curated_from": [
-     "cards/F01_lithium_gsk3.packet.json"
+     "cards/G01_lithium_gsk3.packet.json"
     ],
     "curation_checks": [
      {
@@ -3344,7 +3344,7 @@
      "time_to_benefit": "UNKNOWN"
     }
    },
-   "input_sha256": "bdca88a770fff23555afebee632e3e7b7bdaec3100bbdd2457e9e12a3cb02a8a",
+   "input_sha256": "9e667968e53d883429f6a35f23642689672e05012c66ddebd97b57eb01988b38",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -3469,7 +3469,7 @@
     "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
     "external_hits": 1,
     "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
-    "would_move": "N-02 (disease-models/wwox/analysis/mechanism_intervention_map.md:715)"
+    "would_move": "N-02 (disease-models/wwox/analysis/mechanism_intervention_map.md:720)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -3575,7 +3575,7 @@
      "epistemic_status": "IPOTESI",
      "evidence_scope": "UNQUALIFIED",
      "id": "DA-Q-N-03",
-     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:726",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:731",
      "reading_depth": "UNKNOWN",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-03",
      "target_id": "UNKNOWN"
@@ -3693,12 +3693,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*the target is not causally downstream of WWOX.* Precision therapy in",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:726; evidence table digest f46a4df74f9cc899"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:731; evidence table digest f46a4df74f9cc899"
     },
     "route": "UNQUALIFIED",
     "schema_version": 1
    },
-   "input_sha256": "ff9427752a709eea67237695962204e445fa0aca763d3d56f33b86d4c53c9839",
+   "input_sha256": "90a89644b3b1d76e867c3041a0873707d9cb0be94fedda2922f67fea31d1fa58",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -3763,7 +3763,7 @@
     "experiment_sketch": "replicate the one measurement this query stands on, changing the laboratory or the model but not the endpoint",
     "external_hits": 1,
     "measurement": "an independent measurement of the same endpoint in a second system, or the same system from a second laboratory: the query rests on one reading",
-    "would_move": "N-03 (disease-models/wwox/analysis/mechanism_intervention_map.md:726)"
+    "would_move": "N-03 (disease-models/wwox/analysis/mechanism_intervention_map.md:731)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -3848,7 +3848,7 @@
      "epistemic_status": "IPOTESI",
      "evidence_scope": "UNQUALIFIED",
      "id": "DA-Q-N-04",
-     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:735",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:740",
      "reading_depth": "complete_fulltext_read",
      "receipt": "FTR-20261003-30361190-01",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-04",
@@ -4366,12 +4366,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*corrects a marker, not the mechanism* — plus an unmeasured premise. VABAM is",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:735; evidence table digest 71501b50de65a15c"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:740; evidence table digest 71501b50de65a15c"
     },
     "route": "UNQUALIFIED",
     "schema_version": 1
    },
-   "input_sha256": "daaf21a8a949229f998a1ca11776b057f3964ea865d77d938c50948fc1e23614",
+   "input_sha256": "1456e28feae4ce0aa71b5b75d3fb9d2ba44bdba2d1f9c6c79ae508e1e78da576",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -4856,7 +4856,7 @@
     "experiment_sketch": "legend-locator-audit over the declared triples",
     "external_hits": 0,
     "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
-    "would_move": "N-04 (disease-models/wwox/analysis/mechanism_intervention_map.md:735)"
+    "would_move": "N-04 (disease-models/wwox/analysis/mechanism_intervention_map.md:740)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -4962,7 +4962,7 @@
      "epistemic_status": "IPOTESI",
      "evidence_scope": "UNQUALIFIED",
      "id": "DA-Q-N-05",
-     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:745",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:750",
      "reading_depth": "complete_fulltext_read",
      "receipt": "FTR-20260909-16223882-01",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-05",
@@ -6097,12 +6097,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*the target is not the bottleneck.* Normal transcript with protein not detected",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:745; evidence table digest 0f399d1da94a3dc0"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:750; evidence table digest 0f399d1da94a3dc0"
     },
     "route": "UNQUALIFIED",
     "schema_version": 1
    },
-   "input_sha256": "cf411eb2e87f439868aa51ee2ef4f865f8bcf91b0cd62cb758e6ca6de5ede7d8",
+   "input_sha256": "bb673c0b2ccce828c16de485f56ccf189b2432e0426f5ae7197d59c84044f434",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -7183,7 +7183,7 @@
     "experiment_sketch": "legend-locator-audit over the declared triples",
     "external_hits": 1,
     "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
-    "would_move": "N-05 (disease-models/wwox/analysis/mechanism_intervention_map.md:745)"
+    "would_move": "N-05 (disease-models/wwox/analysis/mechanism_intervention_map.md:750)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -7289,7 +7289,7 @@
      "epistemic_status": "IPOTESI",
      "evidence_scope": "UNQUALIFIED",
      "id": "DA-Q-N-06",
-     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:759",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:764",
      "reading_depth": "complete_fulltext_read",
      "receipt": "FTR-20260913-15064722-01",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-06",
@@ -8628,12 +8628,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*corrects/reports a biomarker, not the mechanism* — inverted: here the biomarker",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:759; evidence table digest 08d24a41ebfe3e12"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:764; evidence table digest 08d24a41ebfe3e12"
     },
     "route": "UNQUALIFIED",
     "schema_version": 1
    },
-   "input_sha256": "9b2df608f0682af387f4f8e306dadf386d5aaf6cf200bc4821b731b2240fd3c7",
+   "input_sha256": "093549196143c6086542100814e2706d38cfa82cba55350a3dc889412f4515e5",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -9918,7 +9918,7 @@
     "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
     "external_hits": 1,
     "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
-    "would_move": "N-06 (disease-models/wwox/analysis/mechanism_intervention_map.md:759)"
+    "would_move": "N-06 (disease-models/wwox/analysis/mechanism_intervention_map.md:764)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -10003,7 +10003,7 @@
      "epistemic_status": "IPOTESI",
      "evidence_scope": "UNQUALIFIED",
      "id": "DA-Q-N-07",
-     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:790",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:795",
      "reading_depth": "complete_fulltext_read",
      "receipt": "FTR-20260909-29724996-01",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-07",
@@ -10190,12 +10190,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*toxicity incompatible* + *wrong endpoint*. The only approved drug that corrects a",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:790; evidence table digest 51268d028dfc4b04"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:795; evidence table digest 51268d028dfc4b04"
     },
     "route": "UNQUALIFIED",
     "schema_version": 1
    },
-   "input_sha256": "d41b6bd57cd6bc435ec08b59581198baf97ea35e11a9f9058536906b64a67922",
+   "input_sha256": "0aec4036b35cd5075b506a3b174709c97dd1f291ed6bbd875a85de6ef361a723",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -10349,7 +10349,7 @@
     "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
     "external_hits": 0,
     "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
-    "would_move": "N-07 (disease-models/wwox/analysis/mechanism_intervention_map.md:790)"
+    "would_move": "N-07 (disease-models/wwox/analysis/mechanism_intervention_map.md:795)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -13903,7 +13903,7 @@
     "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
     "external_hits": 1,
     "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
-    "would_move": "N-08 (disease-models/wwox/analysis/mechanism_intervention_map.md:801)"
+    "would_move": "N-08 (disease-models/wwox/analysis/mechanism_intervention_map.md:806)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -14009,7 +14009,7 @@
      "epistemic_status": "IPOTESI",
      "evidence_scope": "UNQUALIFIED",
      "id": "DA-Q-N-09",
-     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:876",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:881",
      "reading_depth": "UNKNOWN",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-09",
      "target_id": "UNKNOWN"
@@ -14219,12 +14219,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*acts in the wrong direction.* Phospho-Tyr33 WOX1 is **pro-apoptotic**; the peptide",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:876; evidence table digest df5ccd07c21f46dc"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:881; evidence table digest df5ccd07c21f46dc"
     },
     "route": "UNQUALIFIED",
     "schema_version": 1
    },
-   "input_sha256": "e89846b1963a51c44fc6835d86be94d2ab18a3510bcc267643471f2ee1f7fc54",
+   "input_sha256": "437cc30672a0eebcf9cd72a6c99776dc384e3c34928cc1b909876a4b58032e47",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -14381,7 +14381,7 @@
     "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
     "external_hits": 1,
     "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
-    "would_move": "N-09 (disease-models/wwox/analysis/mechanism_intervention_map.md:876)"
+    "would_move": "N-09 (disease-models/wwox/analysis/mechanism_intervention_map.md:881)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -14481,7 +14481,7 @@
      "epistemic_status": "IPOTESI",
      "evidence_scope": "UNQUALIFIED",
      "id": "DA-Q-N-10",
-     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:886",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:891",
      "reading_depth": "complete_fulltext_read",
      "receipt": "FTR-20260806-17803050-01",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-10",
@@ -15082,12 +15082,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*derived from a mechanism that does not do what the design needs.* SSOs **mask**",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:886; evidence table digest dcae4ad3f10b44cd"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:891; evidence table digest dcae4ad3f10b44cd"
     },
     "route": "UNQUALIFIED",
     "schema_version": 1
    },
-   "input_sha256": "28620a81e1ded5c4f56850735d986b261d44ec6cdd7951335e752c9f2a0edf6f",
+   "input_sha256": "d1d05c93f016f719e6d9a12aeec4602f5a71ec917d15fd387cf6a6bf466e1a0f",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -15640,7 +15640,7 @@
     "experiment_sketch": "legend-locator-audit over the declared triples",
     "external_hits": 0,
     "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
-    "would_move": "N-10 (disease-models/wwox/analysis/mechanism_intervention_map.md:886)"
+    "would_move": "N-10 (disease-models/wwox/analysis/mechanism_intervention_map.md:891)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -15767,7 +15767,7 @@
      "epistemic_status": "IPOTESI",
      "evidence_scope": "UNQUALIFIED",
      "id": "DA-Q-N-11",
-     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:959",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:964",
      "reading_depth": "complete_fulltext_read",
      "receipt": "FTR-20260913-15064722-01",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-11",
@@ -17081,12 +17081,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*derived from a textbook default.* \"Misfolded protein → ERAD → chemical chaperone\"",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:959; evidence table digest bad23671d28b008f"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:964; evidence table digest bad23671d28b008f"
     },
     "route": "UNQUALIFIED",
     "schema_version": 1
    },
-   "input_sha256": "b4c9fb86efb75dd49f8f12fb985de412f2b7bb924d2842d12a8f37fc5f976eea",
+   "input_sha256": "bc811901514665b37c886ab4d27da58a6895cc6769f2e603e00842073c89835d",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -18319,7 +18319,7 @@
     "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
     "external_hits": 0,
     "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
-    "would_move": "N-11 (disease-models/wwox/analysis/mechanism_intervention_map.md:959)"
+    "would_move": "N-11 (disease-models/wwox/analysis/mechanism_intervention_map.md:964)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -18454,7 +18454,7 @@
      "epistemic_status": "IPOTESI",
      "evidence_scope": "UNQUALIFIED",
      "id": "DA-Q-N-12",
-     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:966",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:971",
      "reading_depth": "complete_fulltext_read",
      "receipt": "FTR-20260913-24369382-01",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-12",
@@ -18774,12 +18774,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*wrong direction, hidden inside a plausible one* — **as a prediction, not as a",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:966; evidence table digest dd5121e395651abb"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:971; evidence table digest dd5121e395651abb"
     },
     "route": "UNQUALIFIED",
     "schema_version": 1
    },
-   "input_sha256": "9abc12939343b9e896d11a0e8da75b11b979901e16d1280bdd0cce14345034d2",
+   "input_sha256": "8dc066791dd22407d2c0a2f0593b328d9fe90910fc2de173def8c57d485b162b",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -19010,7 +19010,7 @@
     "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
     "external_hits": 2,
     "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
-    "would_move": "N-12 (disease-models/wwox/analysis/mechanism_intervention_map.md:966)"
+    "would_move": "N-12 (disease-models/wwox/analysis/mechanism_intervention_map.md:971)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -19095,7 +19095,7 @@
      "epistemic_status": "IPOTESI",
      "evidence_scope": "UNQUALIFIED",
      "id": "DA-Q-N-13",
-     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:1016",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:1021",
      "reading_depth": "complete_fulltext_read",
      "receipt": "FTR-20260909-16223882-01",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-13",
@@ -19845,12 +19845,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*the target is not causally downstream of WWOX in the cell being targeted* +",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:1016; evidence table digest 63824fbd51101450"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:1021; evidence table digest 63824fbd51101450"
     },
     "route": "UNQUALIFIED",
     "schema_version": 1
    },
-   "input_sha256": "65b96c8d7eca0df4e6796a5a18a1f83a0fd4aaa423ae5815c358627f219f14d5",
+   "input_sha256": "be721cbad30545cbc23fe2f4f9c5a6a5f18d3dc9b158c8f76f1c1632456ad0d1",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -20567,7 +20567,7 @@
     "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
     "external_hits": 0,
     "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
-    "would_move": "N-13 (disease-models/wwox/analysis/mechanism_intervention_map.md:1016)"
+    "would_move": "N-13 (disease-models/wwox/analysis/mechanism_intervention_map.md:1021)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -20688,7 +20688,7 @@
      "epistemic_status": "IPOTESI",
      "evidence_scope": "UNQUALIFIED",
      "id": "DA-Q-N-14",
-     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:1030",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:1035",
      "reading_depth": "complete_fulltext_read",
      "receipt": "FTR-20261019-17567906-01",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-14",
@@ -20976,12 +20976,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*the direction of the axis is context-dependent and was assumed.* Two independent",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:1030; evidence table digest 2a373e5e71946f0f"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:1035; evidence table digest 2a373e5e71946f0f"
     },
     "route": "UNQUALIFIED",
     "schema_version": 1
    },
-   "input_sha256": "bdff3f1cdf429a85ab60e835fb764f9a34a6e43968015e41ac06fe7ff642511b",
+   "input_sha256": "3002e121b38efae4658cb118340986d8ef34db57143b5e819b97c8c33d68aa84",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -21200,7 +21200,7 @@
     "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
     "external_hits": 1,
     "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
-    "would_move": "N-14 (disease-models/wwox/analysis/mechanism_intervention_map.md:1030)"
+    "would_move": "N-14 (disease-models/wwox/analysis/mechanism_intervention_map.md:1035)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -21285,7 +21285,7 @@
      "epistemic_status": "IPOTESI",
      "evidence_scope": "UNQUALIFIED",
      "id": "DA-Q-N-15",
-     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:1041",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:1046",
      "reading_depth": "complete_fulltext_read",
      "receipt": "FTR-20260913-15064722-01",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-15",
@@ -22733,12 +22733,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*corrects a biomarker (seizures) but not the mechanism (development)*. **Quoted",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:1041; evidence table digest 3d9b96dc594f0a18"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:1046; evidence table digest 3d9b96dc594f0a18"
     },
     "route": "UNQUALIFIED",
     "schema_version": 1
    },
-   "input_sha256": "7ac37c8dcef50ecd0deb1601947e910e351da744a5beb9009545e5f3e88e1fb4",
+   "input_sha256": "5019a3337bb7c289468960a91cbb25e775728744393782cd66f6905d390fc8d9",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -24153,7 +24153,7 @@
     "experiment_sketch": "legend-locator-audit over the declared triples",
     "external_hits": 0,
     "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
-    "would_move": "N-15 (disease-models/wwox/analysis/mechanism_intervention_map.md:1041)"
+    "would_move": "N-15 (disease-models/wwox/analysis/mechanism_intervention_map.md:1046)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -24284,7 +24284,7 @@
      "epistemic_status": "IPOTESI",
      "evidence_scope": "UNQUALIFIED",
      "id": "DA-Q-N-16",
-     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:1088",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:1093",
      "reading_depth": "complete_fulltext_read",
      "receipt": "FTR-20260810-34634460-02",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-16",
@@ -24446,12 +24446,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*a negative stated as an absence of effect, when what exists is an untested point estimate in the adverse direction.* In the only WWOX system in which a selective pannexin-1 blocker has ever been applied (`Wwox` S-KO neocortical slice, P13–P17), normalized burst frequency rose to **≈ 2.55 during treatment and ≈ 2.6 at washout against a baseline of 1.0**, carrying **no significance marker and no re",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:1088; evidence table digest 45b479869cdbc0a5"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:1093; evidence table digest 45b479869cdbc0a5"
     },
     "route": "UNQUALIFIED",
     "schema_version": 1
    },
-   "input_sha256": "644a620468553d49c2692e255d97ca6532fbde4d9062da6e7ae134c90024e646",
+   "input_sha256": "2a98e76df200689162b3a6e0bcb57a0455cc16c6e78d09abfee4838363fc1c2d",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -24528,7 +24528,7 @@
     "experiment_sketch": "replicate the one measurement this query stands on, changing the laboratory or the model but not the endpoint",
     "external_hits": 1,
     "measurement": "an independent measurement of the same endpoint in a second system, or the same system from a second laboratory: the query rests on one reading",
-    "would_move": "N-16 (disease-models/wwox/analysis/mechanism_intervention_map.md:1088)"
+    "would_move": "N-16 (disease-models/wwox/analysis/mechanism_intervention_map.md:1093)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -24655,7 +24655,7 @@
      "epistemic_status": "IPOTESI",
      "evidence_scope": "UNQUALIFIED",
      "id": "DA-Q-N-17",
-     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:1094",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:1099",
      "reading_depth": "complete_fulltext_read",
      "receipt": "FTR-20260913-15064722-01",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-17",
@@ -26144,12 +26144,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*importing a disease's dominant modality because the pathway diagram looks like that disease, without checking which way the arrow points.* CHAIN C reads like a tauopathy — WWOX loss → GSK3β de-repressed → pTau S396/S404 up (`CLAIM 035`, `DL-MECH-019`) — and tauopathy's dominant modality is **tau-lowering**. In the only system where the question was asked, tau-lowering **removes the benefit of bot",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:1094; evidence table digest 1b846088c1156da7"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:1099; evidence table digest 1b846088c1156da7"
     },
     "route": "UNQUALIFIED",
     "schema_version": 1
    },
-   "input_sha256": "639c928c35f16161f2aec9e005e1daf41fa3811529388bfec6838ec0a63277be",
+   "input_sha256": "c64ca6407bcb3480b1aa8c2c58c9938d72f1d6b35f9fd3440fb2b2f18830da2e",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -27557,7 +27557,7 @@
     "experiment_sketch": "legend-locator-audit over the declared triples",
     "external_hits": 0,
     "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
-    "would_move": "N-17 (disease-models/wwox/analysis/mechanism_intervention_map.md:1094)"
+    "would_move": "N-17 (disease-models/wwox/analysis/mechanism_intervention_map.md:1099)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -29087,7 +29087,7 @@
     "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
     "external_hits": 1,
     "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
-    "would_move": "R-01 (disease-models/wwox/analysis/mechanism_intervention_map.md:409)"
+    "would_move": "R-01 (disease-models/wwox/analysis/mechanism_intervention_map.md:414)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -29212,7 +29212,7 @@
     }
    ],
    "input": {
-    "axis": "F / partial benefit: NMDA-receptor-dependent network bursting (memantine)",
+    "axis": "G / partial benefit: NMDA-receptor-dependent network bursting (memantine)",
     "bridge_gaps_exposed": [
      "The tool compound is written as the drug-side row because the bridge has no slot for 'drug not tested'; its source field says it is not memantine, and no comparison made on it is a comparison for memantine."
     ],
@@ -29229,11 +29229,11 @@
      "Every adjacent source is labelled NOT WWOX EVIDENCE at class level."
     ],
     "curated_candidate": {
-     "id": "P4-F-02",
+     "id": "P4-G-02",
      "name": "Memantine (NMDA-receptor blockade), represented by the tool compound d-APV"
     },
     "curated_from": [
-     "cards/F02_memantine_nmda.packet.json"
+     "cards/G02_memantine_nmda.packet.json"
     ],
     "curation_checks": [
      {
@@ -29810,7 +29810,7 @@
      "time_to_benefit": "UNKNOWN"
     }
    },
-   "input_sha256": "a0a412a0656eb1b50d2f14964ab7f0d77e48adf28503996ddd6a9d5ce3abcc3f",
+   "input_sha256": "119028972033e3a2b132af31187e4222b43b323663083aab322e1568aa084005",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -30069,7 +30069,7 @@
     "experiment_sketch": "legend-locator-audit over the declared triples",
     "external_hits": 2,
     "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
-    "would_move": "R-02 (disease-models/wwox/analysis/mechanism_intervention_map.md:436)"
+    "would_move": "R-02 (disease-models/wwox/analysis/mechanism_intervention_map.md:441)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -30632,7 +30632,7 @@
     "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
     "external_hits": 2,
     "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
-    "would_move": "R-03 (disease-models/wwox/analysis/mechanism_intervention_map.md:463)"
+    "would_move": "R-03 (disease-models/wwox/analysis/mechanism_intervention_map.md:468)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -30753,7 +30753,7 @@
     }
    ],
    "input": {
-    "axis": "F / partial benefit: GSK3beta inhibition (lithium)",
+    "axis": "G / partial benefit: GSK3beta inhibition (lithium)",
     "bridge_gaps_exposed": [
      "The bridge compares a null-genotype row against the null disease row (a sign comparison only); the wild-type and heterozygote rows differ in genotype and are therefore reported as not comparable. That non-comparability is the specificity failure, and no summary field expresses it: read the assertion notes.",
      "The Ser9 disease row has no drug-side row: lithium's effect on Ser9 was not measured."
@@ -30771,11 +30771,11 @@
      "Every adjacent source is labelled NOT WWOX EVIDENCE at class level."
     ],
     "curated_candidate": {
-     "id": "P4-F-01",
+     "id": "P4-G-01",
      "name": "Lithium (GSK3beta inhibition as the tool rationale)"
     },
     "curated_from": [
-     "cards/F01_lithium_gsk3.packet.json"
+     "cards/G01_lithium_gsk3.packet.json"
     ],
     "curation_checks": [
      {
@@ -31252,7 +31252,7 @@
      "time_to_benefit": "UNKNOWN"
     }
    },
-   "input_sha256": "e9f6acc133e87923112b29d096ab0f6e3600330e3a83c1cf298ad83adb23b451",
+   "input_sha256": "1cf5a6a0c7e2d79a61a02524f1489f5ccde6359785991c4e497e05411b3fcb5a",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -31377,7 +31377,7 @@
     "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
     "external_hits": 3,
     "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
-    "would_move": "R-04 (disease-models/wwox/analysis/mechanism_intervention_map.md:490)"
+    "would_move": "R-04 (disease-models/wwox/analysis/mechanism_intervention_map.md:495)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -34520,7 +34520,7 @@
     "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
     "external_hits": 0,
     "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
-    "would_move": "R-05 (disease-models/wwox/analysis/mechanism_intervention_map.md:518)"
+    "would_move": "R-05 (disease-models/wwox/analysis/mechanism_intervention_map.md:523)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -34626,7 +34626,7 @@
      "epistemic_status": "IPOTESI",
      "evidence_scope": "UNQUALIFIED",
      "id": "DA-Q-R-06",
-     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:546",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:551",
      "reading_depth": "complete_fulltext_read",
      "receipt": "FTR-20260913-14526170-01",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md R-06",
@@ -35713,12 +35713,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "class: IL-1β/NLRP3, MAPK/NF-κB or microglia-targeting agent",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:546; evidence table digest d3646c04f09e9832"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:551; evidence table digest d3646c04f09e9832"
     },
     "route": "UNQUALIFIED",
     "schema_version": 1
    },
-   "input_sha256": "d4f66ab3bedb5762fe35ac7af14c84fdf916b6cd1ca3dfc4f8e7a5adc077812a",
+   "input_sha256": "e0450d3ac605c85c33ca6a7f9286699d09dc1eedfb7c00e80cda281aa5c61b0e",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -36751,7 +36751,7 @@
     "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
     "external_hits": 1,
     "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
-    "would_move": "R-06 (disease-models/wwox/analysis/mechanism_intervention_map.md:546)"
+    "would_move": "R-06 (disease-models/wwox/analysis/mechanism_intervention_map.md:551)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -36866,7 +36866,7 @@
      "epistemic_status": "IPOTESI",
      "evidence_scope": "UNQUALIFIED",
      "id": "DA-Q-R-07",
-     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:571",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:576",
      "reading_depth": "complete_fulltext_read",
      "receipt": "FTR-20261003-30361190-01",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md R-07",
@@ -37278,12 +37278,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "bumetanide",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:571; evidence table digest 2ef9fd41a42cddb9"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:576; evidence table digest 2ef9fd41a42cddb9"
     },
     "route": "UNQUALIFIED",
     "schema_version": 1
    },
-   "input_sha256": "cebe0f1a869b5ce55399b191de25e2a07496034f51732d9408a22d85402a3982",
+   "input_sha256": "7f052ba57bce55395fbca0c31434a6030ade56ef2818425284d52b3934ea70cd",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -37632,7 +37632,7 @@
     "experiment_sketch": "legend-locator-audit over the declared triples",
     "external_hits": 0,
     "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
-    "would_move": "R-07 (disease-models/wwox/analysis/mechanism_intervention_map.md:571)"
+    "would_move": "R-07 (disease-models/wwox/analysis/mechanism_intervention_map.md:576)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -37717,7 +37717,7 @@
      "epistemic_status": "IPOTESI",
      "evidence_scope": "UNQUALIFIED",
      "id": "DA-Q-R-08",
-     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:597",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:602",
      "reading_depth": "complete_fulltext_read",
      "receipt": "FTR-20260913-15064722-01",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md R-08",
@@ -39072,12 +39072,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "cytosine base editor (C→T on the antisense strand) or prime editor",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:597; evidence table digest 812ddd4155c2c49d"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:602; evidence table digest 812ddd4155c2c49d"
     },
     "route": "UNQUALIFIED",
     "schema_version": 1
    },
-   "input_sha256": "5349209b65b39804bd34407433a08e2e969fb465803386a0180687895e8b05d4",
+   "input_sha256": "5c1bbcf067f0649f7da95d319cb667e20c22a9cd76c5ecb1a25c5a3c65d38616",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -40399,7 +40399,7 @@
     "experiment_sketch": "legend-locator-audit over the declared triples",
     "external_hits": 0,
     "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
-    "would_move": "R-08 (disease-models/wwox/analysis/mechanism_intervention_map.md:597)"
+    "would_move": "R-08 (disease-models/wwox/analysis/mechanism_intervention_map.md:602)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -40534,7 +40534,7 @@
      "epistemic_status": "IPOTESI",
      "evidence_scope": "UNQUALIFIED",
      "id": "DA-Q-R-09",
-     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:623",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:628",
      "reading_depth": "complete_fulltext_read",
      "receipt": "FTR-20260913-15064722-01",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md R-09",
@@ -41856,12 +41856,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "conditional; **no molecule is design-ready**. Three families: site-specific pharmacological chaperone · kinetic stabilizer · indirect proteostasis regulator",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:623; evidence table digest c1b8cf6f49cb4448"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:628; evidence table digest c1b8cf6f49cb4448"
     },
     "route": "UNQUALIFIED",
     "schema_version": 1
    },
-   "input_sha256": "76249021831931a862cd7fdf6dc0fdd2ec608afcad670949401a2e6946df492b",
+   "input_sha256": "74be66b3846e00b50e2b66fab9fdb6e5ff2452db5c60110c1b03b63c94665dfe",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -43094,7 +43094,7 @@
     "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
     "external_hits": 2,
     "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
-    "would_move": "R-09 (disease-models/wwox/analysis/mechanism_intervention_map.md:623)"
+    "would_move": "R-09 (disease-models/wwox/analysis/mechanism_intervention_map.md:628)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -44685,7 +44685,7 @@
     "experiment_sketch": "replicate the one measurement this query stands on, changing the laboratory or the model but not the endpoint",
     "external_hits": 0,
     "measurement": "an independent measurement of the same endpoint in a second system, or the same system from a second laboratory: the query rests on one reading",
-    "would_move": "R-10 (disease-models/wwox/analysis/mechanism_intervention_map.md:647)"
+    "would_move": "R-10 (disease-models/wwox/analysis/mechanism_intervention_map.md:652)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -45921,7 +45921,7 @@
     "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
     "external_hits": 4,
     "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
-    "would_move": "R-11 (disease-models/wwox/analysis/mechanism_intervention_map.md:673)"
+    "would_move": "R-11 (disease-models/wwox/analysis/mechanism_intervention_map.md:678)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {

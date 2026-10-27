@@ -62,7 +62,7 @@
    "evidence": "drug_repurposing/README.md section 'Roadmap iteration 2, package W1.1'"
   },
   {
-   "milestone": "curated cards F01 lithium, F02 memantine, C04 AAV9 endpoint families",
+   "milestone": "curated cards G01 lithium, G02 memantine, C04 AAV9 endpoint families",
    "state": "done",
    "evidence": "drug_repurposing/cards/ (check_cards.py: 19 packets, 0 problems)"
   },
