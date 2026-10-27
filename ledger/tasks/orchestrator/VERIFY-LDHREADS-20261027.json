@@ -1,0 +1,16 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "_note": "Independent verifier (locator-auditor role) delegated by the Orchestrator under mandate ORCH-ROADMAP-IT2-20261027; not the producer of the package audited.",
+ "TASK_ID": "VERIFY-LDHREADS-20261027",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "OBJECTIVE": "Blind locator audit of ldh_readings_w13_locators_20261027.md and note sections 0, 2.2, 2.3, 7, 8 and CC-20261027-SCIENTIST-D-LDHREADS-01; independent re-read of Bouchez Fig 5 and Supp Fig 2; judge the complex-I-versus-LDH potency inference.",
+ "DELIVERABLE": "disease-models/wwox/research/locator_audits/2026-10-27_ldh_readings_blind_audit.md",
+ "CURRENT_STATE": "DONE",
+ "TASK_ACK": {"DECISION": "ACCEPTED", "ACTOR_ID": "orchestrator", "acked_at": "2026-10-27T18:40:00Z"},
+ "TASK_CLAIM": {"ACTOR_ID": "orchestrator", "durable_pointer": "branch task/verify-ldhreads"},
+ "DEFAULTS_TAKEN": [],
+ "STOP_LOG": []
+}
