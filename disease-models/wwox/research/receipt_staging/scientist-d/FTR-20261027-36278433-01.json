@@ -1,0 +1,40 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261027-36278433-01",
+ "study_id": {
+  "pmid": "36278433",
+  "doi": "10.15252/emmm.202115343"
+ },
+ "event_at": "2026-10-27T19:20:00Z",
+ "analysis_at": "2026-10-27T19:20:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-d (Scientist D), package W1.3 of mandate ORCH-ROADMAP-IT2-20261027, task SD-IT2-LDHREADS-20261027; context_policy QUESTION_DRIVEN (the reader held card E02, HYP-20261026-11 and the P2a note, and read to settle what their stiripentol and LDH numbers rest on). Acquisition: PMC JATS body persisted on 2026-10-26 by a previous package (files/fulltext, digest below), reopened and re-read from that artefact on 2026-10-27; not re-acquired. This receipt REPLACES NO earlier trace: before this package the five readings listed in the P2a note had receipt 'none' and no ledger event. Staged for the integrator, not appended. ",
+ "evidence_depth": "queried_not_full_read",
+ "source_locator": "files/fulltext/PMID36278433_Guyon2022_PMC_r2.xml",
+ "source_fingerprint": "8ee5f4a95e8dd82b79c8da45dff82acfca1387968c6acb938d591b99445a7d54",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "figures": "not_read",
+  "tables": "not_present",
+  "discussion": "not_read",
+  "limitations": "not_present",
+  "supplementary": "not_read",
+  "references": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/ldh_readings_w13_locators_20261027.md",
+  "disease-models/wwox/research/drug_repurposing/sada_ldh_precedent_p2a_20261026.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "Selected passages only (hence queried_not_full_read, the closed-vocabulary value for 'selected passages inspected'; the per-section coverage values are all stated as not_read because no section was read whole): the paragraph of the Introduction that names stiripentol, the Results section 'The use of anti-epileptic drug targeting LDH activity', the Fig 6 legend, the mitochondrial KO Results paragraph, three Discussion paragraphs, and the in vivo Methods paragraph.",
+  "Figure images opened: Fig 6 (g012) and Fig 2 (g006). All other figures, Expanded View, Appendix and source data not opened.",
+  "Verbatim locators G1 to G10 in ldh_readings_w13_locators_20261027.md (all found by exact match)."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

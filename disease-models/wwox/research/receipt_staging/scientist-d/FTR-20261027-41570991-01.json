@@ -1,0 +1,41 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261027-41570991-01",
+ "study_id": {
+  "pmid": "41570991",
+  "doi": "10.1016/j.jbc.2026.111179"
+ },
+ "event_at": "2026-10-27T19:20:00Z",
+ "analysis_at": "2026-10-27T19:20:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-d (Scientist D), package W1.3 of mandate ORCH-ROADMAP-IT2-20261027, task SD-IT2-LDHREADS-20261027; context_policy QUESTION_DRIVEN (the reader held card E02, HYP-20261026-11 and the P2a note, and read to settle what their stiripentol and LDH numbers rest on). Acquisition: PMC JATS body persisted on 2026-10-26 by a previous package (files/fulltext, digest below), reopened and re-read from that artefact on 2026-10-27; not re-acquired. This receipt REPLACES NO earlier trace: before this package the five readings listed in the P2a note had receipt 'none' and no ledger event. Staged for the integrator, not appended. ",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID41570991_Bouchez2026_PMC_r2.xml",
+ "source_fingerprint": "9331555a2b4cf6746033e4bb477da3d8979170c85e61fc1e05a964ae593f963a",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "not_read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "captions_only",
+  "references": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/ldh_readings_w13_locators_20261027.md",
+  "disease-models/wwox/research/drug_repurposing/sada_ldh_precedent_p2a_20261026.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "Read whole: Introduction, all Results subsections (including every figure legend), Discussion; Methods read only for the respiration of permeabilised and intact mitochondria, NADH dehydrogenase, NADH activity, MDH activity and statistics (the other Methods subsections not read, hence methods not_read).",
+  "Images opened: Fig 5 (gr5), Fig 6 (gr6) and Supplementary Fig 2 (mmc1.pdf page 2, rendered at 80 dpi); the other figures captions_only. Tables 1 and 2 not read (Table 1 skimmed).",
+  "Verbatim locators B1 to B13 and reader-estimate readings F1 to F6 in ldh_readings_w13_locators_20261027.md.",
+  "Source-internal inconsistencies found: Results last sentence of 'Stiripentol is a complex I inhibitor' versus its heading and the Discussion; stiripentol concentration in the NADH-activity assays 150 uM (legend) versus 50 uM (Methods); '200 mM' in two legends; about 70 percent at 100 uM in the text versus about 55 to 60 percent in Supplementary Fig 2."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}
