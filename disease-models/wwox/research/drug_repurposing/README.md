@@ -237,3 +237,20 @@ the manifests' own text, no new reading).
 
 Nothing in this capability has produced a therapeutic recommendation, and no output of it is a
 `DATO`. The clinical census is a retrieval record; the bridge's cards would be `IPOTESI`.
+
+### Skip classification (iteration 3)
+
+Source: the iteration-2 release battery (verdict `PASS WITH SKIPS (157 targets, 12 skipped)`, log in the session scratch, run from a `--no-hardlinks` clone with `files/` hard-linked). The count is test cases, not suites. Nothing was weakened; where a skip rested on an obsolete assumption it was repaired on the iteration-3 branch (last column).
+
+| Skipped test (suite) | Actual cause | Class | What would unskip it / action in iteration 3 |
+|---|---|---|---|
+| `test_repository_surface_determinism` (the `.GIT` case) | the filesystem is case-sensitive, so `.GIT` cannot impersonate `.git` | environment | only a case-insensitive filesystem (macOS default); not a defect, stays a declared skip |
+| `test_deepdive_manifest` (embedded-font CMap test), 1 | the fixture hard-coded a macOS font path (`/System/Library/Fonts/Supplemental/Arial.ttf`); the Linux host has DejaVu | obsolete assumption | **repaired**: the test now picks the first installed TrueType font (macOS or Linux) and still skips only when none exists; it now runs and passes |
+| `test_paper_packet`, 3 (nothing-acquired procedures, 2 tests; no-surface report, 1) | the fixture PMID 33914858 was read on 2026-10-03, so "nothing acquired" became false | obsolete assumption | **repaired**: the fixture is now a reserved synthetic identifier (99999903) that can never be acquired; the premise check is kept and the assertions are unchanged; the three tests run and pass |
+| `test_paper_packet`, 2 (PMID 16223882 crops) and 1 (PMID 28373548 crops) | the page-adjudication PNG crops are gitignored (`disease-models/*/research/page_adjudications/**/*.png`) and a clone does not carry them | environment (battery clone) / missing corpus | copy the gitignored crops into the battery clone next to `files/` (they exist in the root checkout); not done, the battery recipe is unchanged |
+| `test_surface_census` (pinned `PMID17803050_Suzuki2007.html`) | the file is absent from `files/fulltext/` in the root checkout as well, not only in the clone | missing corpus | acquire that full text (a deposit the laboratory does not hold); not searched by hash in this iteration |
+| `test_derive_dismech_sidecar` (`--audit-local-sources`) | the audit reports PAPER 055 and PAPER 056 `artefact_absent`, also in the root checkout | missing corpus | the two artefacts present in `files/`; not searched by hash in this iteration (`evidence_presence.py --search` is the route) |
+| `test_mandate_continuity`, Stop hook | `.claude/settings.json` carries no Stop hook; the file is operator-owned (the deployment snippet is tested separately) | environment (operator-owned configuration) | the operator merging `deployment/claude_settings_mandate_hook.json`; not done here, actors may not write it |
+| `test_mandate_continuity`, live record | the test pinned `ALDAZ-EXEC-20260913.json`, withdrawn into the recovery inventory (commit d626cde2) and not in the public edition | obsolete assumption | **repaired**: the test now parses every `ORCH-*.json` record that holds a queue (8 in this checkout, as sub-tests); it skips only when none exists |
+
+After the repairs 5 of the 12 skipped cases run (font 1, nothing-acquired fixture 3, live record 1) and 7 remain declared skips (case-sensitive filesystem 1, page crops 3, Suzuki 1, dismech audit 1, Stop hook 1), none of them a code defect. Measured on this branch for the touched suites only; the full battery has not been re-run.
