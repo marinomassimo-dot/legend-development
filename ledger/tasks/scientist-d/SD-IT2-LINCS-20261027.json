@@ -1,0 +1,54 @@
+{
+ "_schema": "LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT",
+ "_note": "Opened by scientist-d from the Orchestrator's message of 2026-10-27 (package W3 of mandate ORCH-ROADMAP-IT2-20261027); no separate contract file.",
+ "TASK_ID": "SD-IT2-LINCS-20261027",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "scientist-d",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Turn the iteration-1 LINCS result into interpretable information: query/control quality, wrapper versus service, compound identity, context stratification, return to WWOX mechanisms.",
+ "SCOPE": {
+  "brief": "framework/protocols/scientist_standing_brief.md; drug_repurposing/gse156243/"
+ },
+ "ACCEPTANCE_CRITERIA": [
+  "controls matched on content and size",
+  "wrapper/service limits separated",
+  "compound identity from versioned public tables with failures kept",
+  "strata kept separate",
+  "WWOX comparison with verdict hypothesis/counter-evidence/none",
+  "verifier needs listed"
+ ],
+ "DEPENDENCIES": [],
+ "REVIEW_REQUIREMENT": "independent verifier (scientist-a) named in the candidate",
+ "INTERACTION_MODE": "AUTONOMOUS",
+ "RETRY_POLICY": "resume idempotently",
+ "MILESTONE_PLAN": [
+  "offline input quality and nulls",
+  "bounded live controls",
+  "wrapper vs service",
+  "compound identity",
+  "context and WWOX",
+  "note, candidate, land"
+ ],
+ "DELIVERABLE": "one note in gse156243/, commit candidate if warranted",
+ "CURRENT_STATE": "IN_PROGRESS",
+ "assigned_on": "2026-10-27",
+ "TASK_ACK": {
+  "TASK_ID": "SD-IT2-LINCS-20261027",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "decision": "ACCEPTED",
+  "at": "2026-10-27T18:45:00Z"
+ },
+ "TASK_CLAIM": {
+  "TASK_ID": "SD-IT2-LINCS-20261027",
+  "GENERATION": 1,
+  "ACTOR_ID": "scientist-d",
+  "timestamp": "2026-10-27T18:45:00Z",
+  "durable_pointer": "branch task/sd-it2-lincs, worktree .claude/worktrees/sd-it2-lincs",
+  "note": "scientist-d is a stated assumption of the Orchestrator"
+ },
+ "DEFAULTS_TAKEN": [],
+ "STOP_LOG": []
+}
