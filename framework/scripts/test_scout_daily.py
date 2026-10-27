@@ -177,5 +177,37 @@ class Discovery(unittest.TestCase):
             self.assertIn("RADAR STALE", sd.status_line(stale))
 
 
+class CatalogueProbes(unittest.TestCase):
+    """Release/date/hash probes: changed vs unchanged, and a failure is an error, never 'no change'."""
+    W = [{"id": "Ftp", "kind": "regex", "url": "https://x/ftp", "pattern": r'href="(chembl_\d+_sqlite\.tar\.gz)"', "q": "q", "vs": "v"},
+         {"id": "Dg", "kind": "json", "method": "POST", "digest": True, "url": "https://x/g",
+          "path": ["data", "nodes"], "q": "q", "vs": "v"}]
+
+    @staticmethod
+    def opener(listing='<a href="chembl_37_sqlite.tar.gz">', nodes=(("A", "1"),), code=200):
+        def opener(url, method="GET", body=None, etag=None):
+            if code != 200:
+                return code, {}, b""
+            if url.endswith("ftp"):
+                return 200, {}, listing.encode()
+            return 200, {}, json.dumps({"data": {"nodes": [{"n": a, "v": b} for a, b in nodes]}}).encode()
+        return opener
+
+    def test_change_unchanged_and_failure(self):
+        _, st = sd.run({}, self.W, [], self.opener(), pm([]))
+        r, st2 = sd.run(st, self.W, [], self.opener(), pm([]))
+        self.assertEqual(["UNCHANGED"] * 2, [x["result"] for x in r["watch"]])
+        r, _ = sd.run(st2, self.W, [], self.opener(listing='<a href="chembl_38_sqlite.tar.gz">', nodes=(("A", "2"),)), pm([]))
+        self.assertEqual(["CHANGED"] * 2, [x["result"] for x in r["watch"]])
+        r, st3 = sd.run(st2, self.W, [], self.opener(code=503), pm([]))
+        self.assertEqual(["ERROR"] * 2, [x["result"] for x in r["watch"]])
+        self.assertEqual(2, len(r["errors"]))
+        self.assertEqual(st2["watch"], st3["watch"], "last good fingerprint kept")
+
+    def test_a_listing_without_the_pattern_is_an_error_not_unchanged(self):
+        r, _ = sd.run({}, self.W[:1], [], self.opener(listing="<html>moved</html>"), pm([]))
+        self.assertEqual("ERROR", r["watch"][0]["result"])
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
