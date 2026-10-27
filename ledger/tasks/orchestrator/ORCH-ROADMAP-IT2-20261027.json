@@ -1,0 +1,83 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-ROADMAP-IT2-20261027",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Drug repurposing iteration 2, linked to ORCH-ROADMAP-IT1-20261026 (not reopened): W1 cards and hypothesis current-reading and LDH reading debt; W2 therapeutic research beyond the metabolic thread (partial benefit and broad functional recovery); W3 LINCS made interpretable; W4 radar visibility, external discovery, value/cost trial. No efficacy claim, no wet-lab, no e-mail/contact, zero spend.",
+ "START_UTC": "2026-10-27T09:00:00Z",
+ "BASELINE": "d85d6a55 = development/main, 873 receipts, measured 2026-10-27 before any change",
+ "AUTHORISED_QUEUE_20261027": {
+  "MANDATE_STATE": "COMPLETE",
+  "OBJ_W1": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "Triage the 25 UNQUALIFIED derived cards; link a small high-value batch to curated cards",
+     "status": "DONE",
+     "owner": "scientist-a",
+     "evidence": "cards 16/28 linked (verified, corrected); hypotheses current-reading (verified); LDH reads receipted (blind audit); BATCH_023"
+    },
+    {
+     "step": "Current-reading of HYP-20260709-01 (12/15 vs 13/15) and the other involved hypotheses, independently verified",
+     "status": "DONE",
+     "owner": "scientist-b; verifier scientist-d",
+     "evidence": "cards 16/28 linked (verified, corrected); hypotheses current-reading (verified); LDH reads receipted (blind audit); BATCH_023"
+    },
+    {
+     "step": "LDH note: five targeted-passage reads, receipt state resolved honestly",
+     "status": "DONE",
+     "owner": "scientist-d",
+     "evidence": "cards 16/28 linked (verified, corrected); hypotheses current-reading (verified); LDH reads receipted (blind audit); BATCH_023"
+    }
+   ]
+  },
+  "OBJ_W2": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "One partial-benefit thread and one broad-recovery thread, target->compounds, decisive deepening",
+     "status": "DONE",
+     "owner": "scientist-c",
+     "evidence": "F01-F03 cards, HYP-20261027-01 (verified, 5 errors corrected)"
+    }
+   ]
+  },
+  "OBJ_W3": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "LINCS: query quality, wrapper vs service, BRD identities, context, return to WWOX",
+     "status": "DONE",
+     "owner": "scientist-d then verifier scientist-a",
+     "evidence": "LINCS iteration 2 (verified; request-defect finding)"
+    }
+   ]
+  },
+  "OBJ_W4": {
+   "order": 4,
+   "steps": [
+    {
+     "step": "Radar visible at session start; stale wording removed; probes on the right resource; first real external discovery search",
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "radar + probes + discovery (verified); value trial scored blind, no distinguishable difference"
+    },
+    {
+     "step": "Small value/cost trial on new cases, references fixed before answers",
+     "status": "DONE",
+     "owner": "orchestrator with scientist-b",
+     "evidence": "radar + probes + discovery (verified); value trial scored blind, no distinguishable difference"
+    }
+   ]
+  }
+ },
+ "DECISIONS_TAKEN": [
+  "2026-10-27: iteration 1 not reopened; sequence chosen by value/cost: linkage + hypothesis reading + LDH debt first, then W2/W3/W4 in parallel, each decisive conclusion verified by a different actor and corrected before integration.",
+  "2026-10-27: value-trial runs done in a clone with the key removed from files and history; labels X/Y/Z blinded from the scorer."
+ ],
+ "DEFAULTS_TAKEN": [
+  "Guyon 2022 receipt declares less coverage than the locators quote; ledger is append-only, understated coverage left as is and disclosed."
+ ],
+ "STOP_LOG": []
+}
