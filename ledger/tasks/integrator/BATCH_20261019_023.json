@@ -1,0 +1,37 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "_note": "Assigned by the Orchestrator, mandate ORCH-ROADMAP-IT2-20261027. Integration of the four iteration-2 commit candidates, each already independently verified by another actor. No claim added or modified; not medical advice.",
+ "TASK_ID": "BATCH_20261019_023",
+ "ALIAS": "INT-IT2-BATCH-20261027",
+ "ACTOR_ID": "integrator",
+ "OWNER": "orchestrator",
+ "CURRENT_STATE": "COMPLETE",
+ "assigned_on": "2026-10-27",
+ "OBJECTIVE": "Integrate in event-ID order CC-20261027-SCIENTIST-B-HYPCURRENT-01 (19 ledger edits plus the verifier residuals), CC-20261027-SCIENTIST-D-LDHREADS-01 (five staged receipts), CC-20261027-SCIENTIST-C-W2-THERAPEUTIC-01 and CC-20261027-SCIENTIST-D-LINCS-IT2-01, applying the corrections recorded in locator_audits/2026-10-27_*; rewrite the LINCS row of the drug_repurposing README; update the WWOX_EXPERIMENT_IN_DEE_SYSTEM label definition.",
+ "TASK_CLAIM": {
+  "actor": "integrator",
+  "branch": "task/int-it2-batch",
+  "worktree": ".claude/worktrees/int-it2",
+  "base": "97952314"
+ },
+ "RESULT": {
+  "wm_version": "WM_v7.27 preserved",
+  "candidates_propagated": 4,
+  "receipts": "five scientist-d receipts recorded via record_staged_receipts.py (trial, then --apply); ledger 873 to 878 events",
+  "registries": "none of the four scientific current files touched; discovery and therapeutic ledgers, mechanism map, one deep-dive manifest entry, cards E02 and E04 (regenerated), README, repurposing_bridge.py label comment"
+ },
+ "DEFAULTS_TAKEN": [
+  {"condition": "files/ is gitignored and absent from a worktree, so the receipt trial clone failed", "default": "a hard-linked copy of the root files/ tree was made inside the worktree for the trial and removed afterwards"},
+  {"condition": "check_cards.py forbids numbers adjacent to concentration units in cards", "default": "E02 row DR-E02-006 states the concentration ordering in words (tens and hundreds of micromolar); numbers kept in HYP-20261026-11"},
+  {"condition": "Row DR-E02-006 cites three papers but the receipt field takes one string", "default": "two receipt ids joined for the papers that carry the numbers; the Guyon receipt declares abstract-only coverage so it is not cited as a read"},
+  {"condition": "verifier residual on PAPER 567 (1.19 versus 1.29) was already corrected by BATCH_20261019_020", "default": "no edit"}
+ ],
+ "STOP_LOG": [],
+ "VERIFICATION": {
+  "legend_lint": "WARN, 0 BLOCK",
+  "growth_anchors_check": "PASS",
+  "fulltext_receipts_verify": "OK, 878 receipts",
+  "check_cards": "21 packets, 0 problems",
+  "test_repurposing_join": "44 tests OK"
+ }
+}

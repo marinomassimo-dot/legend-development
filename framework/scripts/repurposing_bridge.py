@@ -39,7 +39,7 @@ ROADMAP_REQUIRED = ("indication_and_transfer", "verification_scope")
 # Scope of an assertion: what KIND of evidence it is, apart from how deeply it was read. A registered
 # reading documents the reading; it does not say the system read is WWOX-DEE. Optional on an
 # assertion; absent means UNQUALIFIED, which is reported and never inferred.
-# WWOX_EXPERIMENT_IN_DEE_SYSTEM = measured in a WWOX-deficient system that models the disease (patient case, patient-derived or engineered knockout cells, organoids, animals); WWOX_BIOLOGY_OTHER_CONTEXT = WWOX outside such a model (e.g. a fly amyloid model).
+# WWOX_EXPERIMENT_IN_DEE_SYSTEM = measured in a WWOX-deficient system that models the disease (patient case, patient-derived or engineered knockout cells, organoids, mouse animals); it says what kind of system, never that the result transfers to patients or to the clinic (species stays in `context`). WWOX_BIOLOGY_OTHER_CONTEXT = WWOX outside such a model (e.g. a fly amyloid model, or neuronal Wwox RNAi in the fly: invertebrate knockdown is OTHER_CONTEXT). Precedence: the scope is assigned by the kind of evidence first, so a re-analysed third-party deposit (e.g. the knockout organoid transcripts) is COMPUTATIONAL_RESULT whatever the system.
 EVIDENCE_SCOPES = ("WWOX_EXPERIMENT_IN_DEE_SYSTEM", "WWOX_BIOLOGY_OTHER_CONTEXT", "OTHER_DISEASE_PRECEDENT",
                    "COMPUTATIONAL_RESULT", "EXTERNAL_DATABASE_RECORD", "UNQUALIFIED")
 # UNQUALIFIED = no curated card qualified the route; it is not a third research objective and is

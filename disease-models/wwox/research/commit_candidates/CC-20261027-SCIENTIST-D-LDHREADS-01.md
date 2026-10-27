@@ -25,3 +25,16 @@ Changed or added:
 - A blind `legend-locator-audit` of `ldh_readings_w13_locators_20261027.md` (54 triples); first the five that carry the corrections: B2, B5, G4, L4, Q7.
 - The Fig 5 and Supplementary Fig 2 readings (F1 to F6): they are plot estimates by one reader; a second reader, ideally measuring points on the PDF page at higher resolution.
 - Item 1 (ordering of effective concentrations only; blind-audited 2026-10-27 and reworded as above).
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED (research layer; `WM_v7.27` preserved)
+**Batch:** `BATCH_20261019_023` (2026-10-27, MINOR, MANUAL, ACTOR_ID `integrator`, task `INT-IT2-BATCH-20261027`)
+
+- **Proposal 1:** the five staged receipts recorded in event-ID order after a trial in a throwaway clone (ledger 873 to 878 events; staged JSON unchanged by the stamp).
+- **Proposal 2:** card `E02` rows `DR-E02-006` (receipts `FTR-20261027-42035940-01` and `-41570991-01`; `partial_fulltext_read`; quantified wording with the Guyon respiration dissociation) and `-007` (receipt `-38443647-01`; manufacturer-authored review) in `build_cards.py`; the card checker forbids numbers adjacent to concentration units, so the concentrations are written as "tens" and "hundreds of micromolar" in the card and kept numerically in `HYP-20261026-11`.
+- **Proposal 3:** `HYP-20261026-11` Stage 0 gains the complex I arm (25 to 150 uM), the CONTRA sentence carries the plot estimate, and the "no animal source" sentence is reworded. No ranking change.
+- **Proposal 4:** `R-11` and `DL-REPO-004` unchanged.
+- **Still owed:** a second reader for the Fig 5 and Supplementary Fig 2 plot readings. The receipt for `36278433` declares only the abstract as read although the locator file quotes its Methods and Results: not edited (ledger is append-only); a correction receipt is owed by the author if the coverage is wrong.

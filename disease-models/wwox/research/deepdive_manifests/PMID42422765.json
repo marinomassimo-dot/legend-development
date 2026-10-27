@@ -946,7 +946,7 @@
    },
    {
     "proposition": "THE ONLY MBP QUANTIFICATION IN THE PAPER HAS NO TREATED ARM, AND THE PANEL THAT HAS THE TREATED ARMS HAS NO UNTREATED-KO COLUMN - re-confirmed at 300 dpi and sharpened. The second half is new: Figure 6F's three columns are WT, LD and HD, so within that panel the treated arms are compared to wild type only and the disease baseline sits in 6A/6B at a different age and magnification. No age is stated for panel F anywhere in its caption or in the Results paragraph that cites it.",
-    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 6E, the sole MBP quantification, prints KO relative to WT as 48 percent (corpus callosum), 30 percent (cortex), 50 percent (striatum) and 70 percent (anterior commissure), WT versus KO only; 6C brain weight WT ~465 mg versus KO ~247 mg (****); 6D CC thickness WT ~322 versus KO ~230 (**). Figure 6F is a 3x3 grid of representative micrographs, columns WT / LD / HD and rows corpus callosum / striatum / cortex, with no axis, no bar, no significance marker and no untreated-KO column.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 6E, the sole MBP quantification, prints the labels 48 (corpus callosum), 30 (cortex), 50 (striatum) and 70 (anterior commissure) percent, WT versus KO only [corrected 2026-10-27: these are the size of the REDUCTION, not the remaining fraction; see snippet_note]; 6C brain weight WT ~465 mg versus KO ~247 mg (****); 6D CC thickness WT ~322 versus KO ~230 (**). Figure 6F is a 3x3 grid of representative micrographs, columns WT / LD / HD and rows corpus callosum / striatum / cortex, with no axis, no bar, no significance marker and no untreated-KO column.",
     "surface": "figure",
     "artifact": "files/figures/PMID42422765_r2/native_renders_20261021/fig6_PMC13343157_p10_embedded_1744x1617.png",
     "anchor": "Figure 6, panels C, D, E and F, 300 dpi raster embedded on page 10 of the publisher PDF (1744x1617)",
@@ -959,7 +959,8 @@
      "endpoint": "survival to 300 days, body weight, blood glucose, MBP immunostaining, Iba1/GFAP area, ECoG spike and spike-wave discharge rate"
     },
     "qualifies": "entries[7]",
-    "qualifies_needle": "whereas LD treatment produced only partial recovery relative to HD"
+    "qualifies_needle": "whereas LD treatment produced only partial recovery relative to HD",
+    "snippet_note": "Correction 2026-10-27 (CC-20261027-SCIENTIST-C-W2-THERAPEUTIC-01; independent verification research/locator_audits/2026-10-27_w2_therapeutic_independent_verification.md, item 3b): the earlier reading of the printed Fig 6E labels as KO relative to WT was inverted. Reading the bars, KO/WT is about 50 percent (corpus callosum), 72 percent (cortex), 49 percent (striatum) and 30 percent (anterior commissure); the printed labels 48, 30, 50 and 70 percent match the reduction. The range is about right, the region mapping was inverted for cortex and anterior commissure. The legend wording 'relative MBP intensity compared with WT' is ambiguous. Not decision-changing; the entry's proposition (no treated arm in the only quantified panel) is unaffected."
    },
    {
     "proposition": "THE GLIOSIS PANELS CANNOT BE READ ACROSS ONE ANOTHER, WHICH IS A STRONGER LIMIT THAN 'no untreated-KO arm in S7E-S7H' ALONE. At 400 dpi the wild-type reference value itself moves about two-fold between the disease-baseline panels and the treated-arm panels of the same supplementary figure, on different axis ranges, so the text's 'significantly reduced ... in a dose-responsive manner' has neither a comparator inside the treated panels nor a defensible one outside them. The only significant treated-arm result is the LOW dose being worse than wild type.",

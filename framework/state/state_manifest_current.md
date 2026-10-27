@@ -107,12 +107,12 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20261019_022
+last_batch_commit_id: BATCH_20261019_023
 last_batch_commit_date: 2026-10-27
 last_batch_commit_type: MANUAL
-commit_candidates_propagated: 2
+commit_candidates_propagated: 4
 target_wm_version: WM_v7.27
-trigger: MANUAL (ACTOR_ID integrator, assigned by the Orchestrator). Research and registry layer, no disease-model change: the stiripentol-LDH precedent (HYP-20261026-11 reworded to an unresolved potency with Stage 0 and Stage 3, R-11 corrected, DL-REPO-004 updated, PAPER 568 and LIT-0839 added for the enzyme paper, receipt on card row DR-E02-004, the 2015 report kept UNREAD and second-hand) and the PDH-activity wording of HYP-20260709-01 replaced by the traced, non-significant reading (not confirmed, not refuted), with matching lines in DL-MECH-020 and PAPER 023 and the lactate statistics in PAPER 567. Exploratory; no score, status or ranking changed. WM_v7.27 preserved.
+trigger: MANUAL (ACTOR_ID integrator, assigned by the Orchestrator). Research layer, no disease-model change, WM_v7.27 preserved: iteration-2 candidates propagated in event-ID order after independent verification (hypothesis-ledger current-reading pointers and the verifier's PDH/count residuals, the LDH re-read with five receipts, HYP-20261027-01 with consequence notes and the Fig 6E manifest fix, the LINCS iteration-2 reading with the README row rewritten), plus the WWOX_EXPERIMENT_IN_DEE_SYSTEM label definition.
 ```
 
 Every batch's scope — the candidates it propagated, newest first back to `BATCH_20260810_001`,
@@ -126,7 +126,7 @@ with the keys written beside each and the notes on `BATCH_20260806_002` — is i
 
 ```yaml
 last_lint_type: LINT_AUTOMATIC
-last_lint_id: LINT_20261027_BATCH_20261019_022
+last_lint_id: LINT_20261027_BATCH_20261019_023
 last_lint_date: 2026-10-27
 last_lint_result: WARN
 ```
@@ -164,8 +164,8 @@ and a mismatch is `BLOCK_SYSTEM` — reading history you cannot trust is worse t
 
 ```yaml
 fulltext_ledger_path: disease-models/wwox/registries/fulltext_read_receipts.jsonl
-fulltext_ledger_events: 873
-fulltext_ledger_head: 73b26c815162593851aaa9f6b68abdb3632b828d0f30e122d4e6d50896c074bb
+fulltext_ledger_events: 878
+fulltext_ledger_head: 9422c50468d1695656dcb584cca189f70936955ca2ad85fc53627da6b7a9ea18
 ```
 
 Maintained automatically — `fulltext_receipts.py record` re-anchors after every append.

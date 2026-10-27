@@ -152,7 +152,7 @@
    "mandate 2026-10-26 (Lucas-Clarke follow-up)"
   ],
   "predictions": "None; no engine, no score.",
-  "next_measurement": "Seahorse OCR/ECAR on donor-derived WWOX-deficient cells (or the existing knockout organoids), as already specified in HYP-20260709-01.",
+  "next_measurement": "PDH-specific readouts in donor-derived WWOX-deficient cells or the existing knockout organoids against isogenic controls: PDH activity in a lysate that preserves phosphorylation, phospho-PDHA1 (Ser293, UniProt P08559 precursor numbering; Ser232 and Ser300 are also PDK sites), 13C-glucose or ketone tracing, pyruvate-to-lactate ratio, NADH/NAD+. Seahorse OCR/ECAR is a general screen of respiration and acidification, not a PDH measure, and a normal result in non-neural cells is non-significance, not equivalence; it is useful but not the only discriminating test (HYP-20260709-01, verification 2026-10-27).",
   "status": "abstention",
   "value_added": "Records that this paper changes nothing for the ketogenic hypothesis and names the one measurement that still decides it.",
   "clinical_census": "Clinical census, ClinicalTrials.gov API v2, 2026-10-20 (drug_repurposing/clinical_census_20261020.md): seven queries returned no registered WOREE interventional study; it answers seven queries against one registry on one date and a missing hit does not prove that no study exists. Not re-run for this card."
