@@ -463,6 +463,8 @@ platform to run it has existed for years.
 
 **Curated card (added 2026-10-27):** the NMDA-receptor dependence measured with the tool antagonist d-APV (memantine itself never given to a WWOX system), the human GRIN precedent and the adverse wild-type rat datum are in `research/drug_repurposing/cards/F01_glutamate_receptor_node.card.json`; `repurposing_join.py` reads it for this record.
 
+**Consequence note (2026-10-27, `CC-20261027-SCIENTIST-C-W2-THERAPEUTIC-01`, EXPLORATORY, no status change):** the GRIN2A convergence corroborates the node, not the sign of intervention (memantine benefit tracks gain-of-function GRIN variants in another disease, 14 of 19 with 4 transient versus 3 of 15; retrospective, unblinded); the GRIN2A variant class in the cohort abstract is not stated (abstract only, `NO_RECEIPT`). Derived hypothesis: `HYP-20261027-01`.
+
 ---
 
 ### R-03 — Wnt / tankyrase inhibition
@@ -598,6 +600,8 @@ experiment closes.
 cannot be ranked at all until one measurement exists.
 
 **Curated card (added 2026-10-27):** the abstention and the experiment that would end it are in `research/drug_repurposing/cards/F03_bumetanide_chloride_gradient.card.json`; `repurposing_join.py` reads it for this record.
+
+**Consequence note (2026-10-27, `CC-20261027-SCIENTIST-C-W2-THERAPEUTIC-01`, verified against ChEMBL_37):** ChEMBL curates bumetanide's mechanism as NKCC2 only (SLC12A1); NKCC1 is an activity-table fact (three rows, none a curated mechanism). The experiment specification is in card `F03`. No status change.
 
 ---
 
@@ -771,7 +775,7 @@ published homozygote; or discrimination of the missense allele's folding fate.
 **Source ids:** DL-BIO-008.
 **Failure mode:** *corrects/reports a biomarker, not the mechanism* — inverted: here the biomarker
 does not even report. **Counted from the record rather than asserted:** `DL-BIO-008` names **three**
-sources, of which **two are human and exactly one is a complete human metabolic screen** — a WWOX
+sources, of which **two are human and one is a complete human metabolic screen** — a WWOX
 null/null patient of whom the paper itself writes *"Normal results were found in metabolic screening
 including liver and renal function tests, complete blood count, blood gas analyses, ammonia, serum
 lactate, plasma urea, electrolytes, urine and serum amino and organic acids, and very long chain
@@ -782,8 +786,7 @@ is the **single MRS case** (`PAPER 044`), which reports cerebral lactate
 confounding HSPG2 variant. The third source is a **mouse** (`PAPER 024`): `Wwox`-KO serum lactate significantly
 raised, which is the direction the model predicts and the reason the record exists as an unresolved
 contradiction. Serum lactate is Tier 3, distal, and must not enter the Tier 1/2 biomarker file.
-⚠️ **The conclusion is unchanged and its support is smaller than this record claimed.** One normal
-human screen plus one opposite-direction human MRS case is enough to say the biomarker **does not
+⚠️ **The conclusion is unchanged and its support is smaller than this record claimed.** *Count revised 2026-10-27 by independent verification (`research/locator_audits/2026-10-27_hypcurrent_independent_verification.md`): the count of ONE screen above is also an undercount. `DL-BIO-009` names a second primary human source, Shaukat 2018 (`PAPER 045`, two children, lactate, ammonia, acylcarnitines, amino and organic acids all normal), which `DL-BIO-008` omits; the best statement is **two primary sources (3 patients) with normal blood and urine screens, one secondary normal MRS, and one opposite-direction MRS case**, none of them a mitochondrial or muscle study.* Two normal screens plus one opposite-direction human MRS case is enough to say the biomarker **does not
 report reliably**; it is not four concordant human sources, and the human direction of WWOX-deficient
 metabolism remains **unmeasured** (`DL-BIO-008`, operative consequence 3).
 *Count corrected 2026-10-24 by `scientist-b`, re-derived from `DL-BIO-008` as it now stands. The

@@ -15,3 +15,14 @@ H-ENC (hyphenless S1 empty, hyphenated S1P/S1P2 full) from the stored IT2 files 
 
 ## Not verified / next bounded step
 Identity of five BRD codes (the 2021 library's compound table needs a key); what the `MCLF*` lines are; a local permutation-null analysis of S1 against the GSE92742 level 5 signatures (several GB, not downloaded) is the route that no service limit touches. Reopening condition for any LINCS-derived lead: a second independent genotype contrast, absent from matched controls and KO splits, not a frequent hitter.
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED (research layer; `WM_v7.27` preserved)
+**Batch:** `BATCH_20261019_023` (2026-10-27, MINOR, MANUAL, ACTOR_ID `integrator`, task `INT-IT2-BATCH-20261027`)
+
+- **Verification:** `locator_audits/2026-10-27_lincs_it2_independent_verification.md` (SUPPORTED; no error changes a conclusion). Wording corrections applied: "most top reversers are frequent hitters" now reads 33 of 76 distinct reversers (43 percent; "most" holds for mimickers, 39 of 68); "129 resolved" means 97 with a compound name and 32 structure-only; the join suite has 44 tests, not 42.
+- **README:** the LINCS row (and the P6 row) of `drug_repurposing/README.md` rewritten to the verified finding: the iteration-1 empty shuffled control was our request defect (hyphen-stripped ids); the 50-signature cap belongs to the L1000FWD endpoint; the content-match reading is not supported by the matched controls; no WWOX hypothesis or counter-evidence added; next step offline GSE92742. The interpretation note (`gse156243/lincs_iteration2_interpretation_20261027.md`) carries the two wording corrections.
+- **Not applied:** no test yet exercises the new ChEMBL parent-id fallback branch, and a salt-form id would still miss (verifier gap, unverified); left to the author.

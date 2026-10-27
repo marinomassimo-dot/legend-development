@@ -30,3 +30,15 @@
 ## What was NOT proposed
 - No change to N-02, N-12, N-13, N-10 or R-04/R-08 status: no executable datum moved them; abstentions with reasons are in README section 1.
 - No claim, paper or working-model edit.
+
+---
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED (research layer; `WM_v7.27` preserved)
+**Batch:** `BATCH_20261019_023` (2026-10-27, MINOR, MANUAL, ACTOR_ID `integrator`, task `INT-IT2-BATCH-20261027`)
+
+- **Proposal 1:** `HYP-20261027-01` added at the end of the therapeutic hypotheses ledger (status `generated`, no ranking, EXPLORATORY). Per `locator_audits/2026-10-27_w2_therapeutic_independent_verification.md` the Karnstedt cohort is placed under context, not Evidence PRO: 14 of 19 benefited, 4 of them faded (10 sustained; variant-level sustained-only P = 0.0698); the mEPSC frequency wording follows the verifier.
+- **Proposals 2 to 4:** one consequence note each on map `R-02` and `R-07` and ledger `DL-MECH-002`; precision note on `DL-MECH-031` (including point 2 as an assumption with the Knowles counter-precedent); manifest `PMID42422765` entry 43 corrected (the printed Fig 6E labels are the size of the reduction: about 50, 72, 49 and 30 percent remaining; `snippet_note` added).
+- **Already on `main` before this batch:** the card and README corrections for the verifier's errors (transient benefit, Breton animals and frequency, rat ChEMBL rows, GRIA1 wording) landed in `8f60414d`.
+- **Still owed:** the blind audit of README section 7 items and of the INFERENZA lines of cards `F01` to `F03`.
