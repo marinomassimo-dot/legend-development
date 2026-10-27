@@ -1,0 +1,16 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "TASK_ID": "SA-VERIFY-LINCS-IT2-20261027",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "scientist-a",
+ "OBJECTIVE": "Independent verification of scientist-d W3 (LINCS iteration 2, commit ced7227d).",
+ "CURRENT_STATE": "COMPLETE",
+ "assigned_on": "2026-10-27",
+ "TASK_ACK": {"actor": "scientist-a", "at": "2026-10-27T19:30:00Z", "directive_version": 1, "generation": 1, "understanding": "Recompute from raw stored files and public tables; verdict per claim."},
+ "TASK_CLAIM": {"actor": "scientist-a", "at": "2026-10-27T19:30:00Z", "branch": "task/verify-lincs-it2", "worktree": ".claude/worktrees/verify-lincs-it2", "reading_claims": [], "note": "No paper read."},
+ "DEFAULTS_TAKEN": [],
+ "STOP_LOG": [],
+ "RESULT": {"summary": "All five checks SUPPORTED; wording overshoots: 'most reversers frequent hitters' (43 percent), '129 resolve to a name' (97 named, 32 structure only); fallback branch untested. Report: disease-models/wwox/research/locator_audits/2026-10-27_lincs_it2_independent_verification.md"}
+}
