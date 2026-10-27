@@ -1,0 +1,30 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "TASK_ID": "SC-IT2-THERAPEUTIC-20261027",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "scientist-c",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Package W2 of mandate ORCH-ROADMAP-IT2-20261027: therapeutic research beyond the metabolic (E01-E04) thread; one partial-benefit/protection thread and one broad functional-recovery thread where a feasible question exists; cards, hypothesis candidate and queue through existing paths.",
+ "SCOPE": {"mandate": "ORCH-ROADMAP-IT2-20261027", "package": "W2", "baseline": "d85d6a55", "dir": "disease-models/wwox/research/drug_repurposing/w2_therapeutic_it2_20261027"},
+ "ACCEPTANCE_CRITERIA": ["cards pass check_cards.py", "commit candidate staged, not applied", "abstentions carry reasons", "decisive conclusions flagged for an independent verifier"],
+ "CURRENT_STATE": "COMPLETED",
+ "TASK_ACK": {"actor": "scientist-c", "at": "2026-10-27", "directive_version": 1, "generation": 1},
+ "TASK_CLAIM": {"actor": "scientist-c", "branch": "task/sc-it2-therapeutic", "worktree": ".claude/worktrees/sc-it2-ther", "mode": "RESEARCH"},
+ "DEFAULTS_TAKEN": [
+  "threads chosen from the map and handoff rather than by historical score: F01 glutamate-receptor node (partial benefit), F02 myelination (broad recovery, abstention), F03 bumetanide (single-experiment ask, abstention)",
+  "Karnstedt 2026 read through the PMC API without a receipt; declared partial_fulltext_read in the card, no receipt staged",
+  "no ToolUniverse, no DGIdb run (nothing they would save); ChEMBL REST and the repurposing adapters only, key-less",
+  "organoid analysis kept descriptive (CPM, no test) because 4 vs 2 libraries are composition-confounded",
+  "branch named task/sc-it2-therapeutic and worktree sc-it2-ther"
+ ],
+ "STOP_LOG": [],
+ "RESULT": {
+  "cards": ["P4-F-01 hypothesis", "P4-F-02 abstention", "P4-F-03 abstention"],
+  "commit_candidate": "CC-20261027-SCIENTIST-C-W2-THERAPEUTIC-01 (staged, not applied)",
+  "record": "disease-models/wwox/research/drug_repurposing/w2_therapeutic_it2_20261027/README.md",
+  "receipts": "none staged",
+  "independent_verification_owed": "README section 7"
+ }
+}

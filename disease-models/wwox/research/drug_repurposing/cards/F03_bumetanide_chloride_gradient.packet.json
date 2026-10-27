@@ -1,0 +1,170 @@
+{
+ "schema_version": 1,
+ "axis": "F / W2 therapeutic: GABA polarity",
+ "route": "BENEFICIO_PRECOCE",
+ "mission_dimensions": {
+  "track": "A",
+  "track_definition": "mission.md section 5: Track A = variant-independent WWOX loss of function; Track B = variant or allele-class specific (e.g. the Q230P missense class); Track C = repurposing, which is a method of reaching A or B, not a third lesion class",
+  "route": "BENEFICIO_PRECOCE",
+  "route_definition": "RECUPERO_PROFONDO = deep recovery of the lost function; BENEFICIO_PRECOCE = concrete partial benefit, symptomatic control or protection of function, with paediatric feasibility and time in view",
+  "route_note": "Symptomatic network lever on an unmeasured premise; the single decisive experiment is specified, not run.",
+  "the_two_dimensions_are_independent": "a card keeps both: a variant-independent lever can be a partial-benefit lever, and a lesion-specific one can aim at deep recovery"
+ },
+ "candidate": {
+  "id": "P4-F-03",
+  "name": "Bumetanide and the chloride gradient (E_GABA premise)"
+ },
+ "disease_assertions": [
+  {
+   "id": "DA-W2-020",
+   "target_id": "SLC12A2 (NKCC1) over SLC12A5 (KCC2) transcript ratio",
+   "endpoint": "ratio per library",
+   "direction": "UNKNOWN",
+   "source": "GSE156243 (PMID 34268881 deposit); descriptive panel by scientist-c, disease-models/wwox/research/drug_repurposing/w2_therapeutic_it2_20261027/README.md",
+   "locator": "disease-models/wwox/research/drug_repurposing/w2_therapeutic_it2_20261027/organoid_panel_cpm.tsv",
+   "epistemic_status": "INFERENZA",
+   "reading_depth": "queried_not_full_read",
+   "context": {
+    "disease_id": "WWOX-deficient human cerebral organoid model (engineered knockout; NOT a patient allele; no amyloid)",
+    "genotype": "WWOX knockout versus wild type (4 versus 2 libraries, one laboratory)",
+    "species": "human",
+    "cell_type": "cerebral organoid, bulk RNA",
+    "developmental_stage": "organoid, culture week 15"
+   },
+   "measured_result_note": "Ratio 0.24, 0.29, 0.13, 0.14 in the four knockouts and 0.29, 0.30 in the two wild types: not higher in knockouts, so no transcript-level hint of a more depolarising chloride gradient; SLC12A2 is flat and SLC12A5 is higher in two knockouts. Composition-confounded (GAD1 about ten-fold different), transcript not function, direction left UNKNOWN.",
+   "evidence_scope": "COMPUTATIONAL_RESULT"
+  },
+  {
+   "id": "DA-W2-021",
+   "target_id": "GABRB2 and GABRB3 transcripts",
+   "endpoint": "CPM, knockout minus wild type",
+   "direction": "DECREASE",
+   "source": "GSE156243 descriptive panel by scientist-c (the marker pattern behind DL-MECH-035)",
+   "locator": "disease-models/wwox/research/drug_repurposing/w2_therapeutic_it2_20261027/organoid_panel_cpm.tsv",
+   "epistemic_status": "INFERENZA",
+   "reading_depth": "queried_not_full_read",
+   "context": {
+    "disease_id": "WWOX-deficient human cerebral organoid model (engineered knockout; NOT a patient allele; no amyloid)",
+    "genotype": "WWOX knockout versus wild type (4 versus 2 libraries, one laboratory)",
+    "species": "human",
+    "cell_type": "cerebral organoid, bulk RNA",
+    "developmental_stage": "organoid, culture week 15"
+   },
+   "measured_result_note": "GABRB2 about a quarter and GABRB3 about half of wild type; the same libraries carry more GABAergic-lineage transcripts. Reduced receptor transcript is not a chloride gradient.",
+   "evidence_scope": "COMPUTATIONAL_RESULT"
+  }
+ ],
+ "drug_assertions": [],
+ "p4_fields": {
+  "endpoint_pursued": "Perforated-patch GABA reversal potential in Wwox-deficient versus isogenic neurons or slices at matched maturity, with NKCC1 and KCC2 protein and the GABA response itself; only if depolarising, a bumetanide effect on bursting.",
+  "functional_evidence_available": "None: no chloride, E_GABA, NKCC1 or KCC2 protein, or GABA pharmacology has been measured in any Wwox system.",
+  "temporal_or_model_limit": "Depolarising GABA is an early developmental state; the window may be closed in the juvenile slice.",
+  "cellular_context": {
+   "target_expression": "SLC12A2 and SLC12A5 transcripts are present in the week-15 organoid.",
+   "cells_tissue_stage": "bulk organoid.",
+   "coverage": "UNKNOWN.",
+   "limits": "Transcript ratio is not E_GABA."
+  }
+ },
+ "p4_card": {
+  "identity": "Bumetanide (approved loop diuretic). Identity check 2026-10-27: ChEMBL_37 curates its mechanism as inhibition of the NKCC2 transporter only; NKCC1 appears in three activity rows (two single-concentration inhibition readings in HEK cells and one fitted value in HT-29 cells by rubidium uptake), so the NKCC1 target of the repurposing idea is an activity-table fact, not a curated mechanism.",
+  "indication_and_transfer": "Only IF GABA is depolarising in Wwox-deficient neurons at the relevant age; unmeasured. The CNS penetration of bumetanide is a known limitation (map R-07).",
+  "novelty_for_woree": "Map R-07 stands as INSUFFICIENT_EVIDENCE. New: (1) the transcript-level ratio in the one human knockout deposit does not point to a depolarising gradient (descriptive, confounded); (2) the target-identity note above; (3) the single experiment is written out with controls. Neonatal-seizure and autism trials exist (titles retrieved: NEMO open-label dose-finding in newborn hypoxic-ischaemic seizures, PMID 25765333; a phase 3 autism programme, PMID 35292925; a phase 2 autism trial, PMID 32730977); their outcomes were NOT read here.",
+  "state_of_known_roads": "map R-07, Chain M3, DL-MECH-035.",
+  "pathway_and_objective": "BENEFICIO_PRECOCE; Track A.",
+  "expected_contribution": "UNKNOWN.",
+  "mechanism": "Target NKCC1 (SLC12A2); wanted direction: lower intracellular chloride so GABA hyperpolarises; sign depends on an unmeasured quantity.",
+  "sources": {
+   "internal": [
+    "map R-07",
+    "DL-MECH-035",
+    "PMID 30361190 reading (receipt FTR-20261003-30361190-01)"
+   ],
+   "external_not_wwox_evidence": [
+    "ChEMBL_37 mechanism and activity rows for CHEMBL1072",
+    "PubMed titles PMID 25765333, 35292925, 32730977 (outcomes not read)"
+   ]
+  },
+  "evidence_for_and_against": {
+   "for": [
+    "GABAergic-lineage and receptor-subunit transcripts differ in the knockout organoid."
+   ],
+   "against": [
+    "No transcript-level hint of a raised NKCC1:KCC2 ratio in the knockout organoid.",
+    "Poor CNS penetration is a known limitation.",
+    "Window may be closed.",
+    "No measurement of the premise."
+   ],
+   "transfer_limits": "Bulk organoid transcripts; juvenile slice."
+  },
+  "time_to_access": "UNKNOWN.",
+  "time_to_benefit": "UNKNOWN.",
+  "pharmacology": "NKCC1 activity: one fitted value and two single-concentration readings in ChEMBL (values in the README). Brain exposure not verified here.",
+  "paediatrics_and_interactions": "Not assessed.",
+  "scope_of_checks": {
+   "support_and_replication": "One laboratory for every WWOX row used here; no independent replication.",
+   "formal_checks": "Breton rows carry verbatim locators in the manifest (receipt FTR-20260810-34634460-02); the n values of the d-APV arm and the mEPSC text were re-read first-hand from the shared full-text XML on 2026-10-27 without a new receipt. GRIN and rat rows are at the reading depth stated per row.",
+   "card_inferences_owed_audit": "Every statement marked INFERENZA, and every card-level synthesis, is owed a blind audit by someone other than the producer."
+  },
+  "question_history": [
+   "map R-07",
+   "mandate 2026-10-27 (W2: note the single-experiment ask)"
+  ],
+  "predictions": "Registered: if GABA is hyperpolarising in the knockout at the age studied, the card closes; if depolarising, bumetanide at a brain-relevant exposure lowers burst frequency, and a negative result at that exposure does not refute the premise.",
+  "next_measurement": "Gramicidin perforated-patch E_GABA in Wwox-deficient versus parental neurons or slices at three ages (including the earliest culturable), NKCC1 and KCC2 protein by immunoblot or immunostaining, GABA puff response; controls: wild type and heterozygote, bicuculline or gabazine sensitivity, an NKCC1 knockdown arm in place of the drug; discriminating result: a depolarised E_GABA specific to the knockout that an NKCC1 manipulation shifts.",
+  "status": "abstention",
+  "value_added": "Names the premise measurement, corrects the target identity record, adds a transcript-level negative hint.",
+  "clinical_census": "Clinical census, ClinicalTrials.gov API v2, 2026-10-20 (drug_repurposing/clinical_census_20261020.md): seven queries returned no registered WOREE interventional study; it answers seven queries against one registry on one date and a missing hit does not prove that no study exists. Not re-run for this card."
+ },
+ "not_known": [
+  "E_GABA in any Wwox system.",
+  "NKCC1 and KCC2 protein levels.",
+  "Brain exposure of bumetanide at a relevant dose."
+ ],
+ "evidence_against": [
+  "No transcript-level hint of a raised NKCC1:KCC2 ratio in the knockout organoid.",
+  "Poor CNS penetration is a known limitation.",
+  "Window may be closed.",
+  "No measurement of the premise."
+ ],
+ "bridge_gaps_exposed": [
+  "No drug assertion exists, so no comparison is formed."
+ ],
+ "translation": {
+  "pediatric_suitability": "UNKNOWN",
+  "cns_exposure": "UNKNOWN",
+  "interactions": "UNKNOWN",
+  "access": "UNKNOWN",
+  "time_to_benefit": "UNKNOWN",
+  "functional_rescue": "UNKNOWN"
+ },
+ "p4_roadmap_fields": {
+  "indication_and_transfer": "Only IF GABA is depolarising in Wwox-deficient neurons at the relevant age; unmeasured. The CNS penetration of bumetanide is a known limitation (map R-07).",
+  "verification_scope": "{\"support_and_replication\": \"One laboratory for every WWOX row used here; no independent replication.\", \"formal_checks\": \"Breton rows carry verbatim locators in the manifest (receipt FTR-20260810-34634460-02); the n values of the d-APV arm and the mEPSC text were re-read first-hand from the shared full-text XML on 2026-10-27 without a new receipt. GRIN and rat rows are at the reading depth stated per row.\", \"card_inferences_owed_audit\": \"Every statement marked INFERENZA, and every card-level synthesis, is owed a blind audit by someone other than the producer.\"}"
+ },
+ "label_lookup": {
+  "status": "NOT_ATTEMPTED"
+ },
+ "card_conventions": [
+  "IPOTESI throughout; the bridge forces it. No score, rank, probability or blended index is carried.",
+  "directional_summary compares signs only where target, endpoint and every context dimension match; UNRESOLVED is a statement about the record, not about the biology.",
+  "Every disease-side row from the Drosophila article is NOT WWOX-DEE EVIDENCE; the organoid rows are exploratory transcript analyses of one deposit.",
+  "Abstract-level statements from PubMed are labelled abstract_only; none carries a receipt.",
+  "label_lookup is NOT_ATTEMPTED in the bridge: the bridge has no network. The openFDA adapter was run separately and is recorded in lucas_clarke_followup_20261026/compounds_and_sources.md.",
+  "No dose, route, schedule or paediatric suitability appears; assay concentrations of the sources are deliberately not reproduced."
+ ],
+ "abstention_card": {
+  "kind": "ABSTENTION",
+  "missing_datum": "E_GABA, NKCC1 and KCC2 protein in any Wwox system; never measured.",
+  "search_record": "Map R-07 and DL-MECH-035 searches; ChEMBL and an organoid transcript panel on 2026-10-27. Reopening condition: an E_GABA measurement, in either direction.",
+  "adjacent_context_not_wwox_evidence": [
+   "neonatal-seizure and autism bumetanide trials (titles only)"
+  ],
+  "an_abstention_is_a_result": "R-07 stays INSUFFICIENT_EVIDENCE with the experiment written out."
+ },
+ "target_census": {
+  "dir": "disease-models/wwox/research/drug_repurposing/w2_therapeutic_it2_20261027",
+  "symbols": []
+ },
+ "no_new_reading": "W2 (scientist-c, 2026-10-27): no new full-text receipt; first-hand re-reads of already-receipted papers and of open PubMed Central text are described in the W2 record."
+}
