@@ -1,0 +1,94 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "_note": "Iteration 2 of the repurposing roadmap, package W1.1, under mandate ORCH-ROADMAP-IT2-20261027 (linked to iteration 1). Extends the curated-card linkage of the repurposing module; no paper is newly read.",
+ "TASK_ID": "SA-IT2-CARDLINK-20261027",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "scientist-a",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Measure which derived cards in drug_repurposing/join/cards.json remain UNQUALIFIED, classify each (pertinent card unlinked / content needs qualification / insufficient observations / linking would be wrong), link a small high-value batch through the existing mechanism, write the curated cards that are missing where the evidence is already in the repository, regenerate the join outputs and the handoff.",
+ "SCOPE": {
+  "lot": "drug_repurposing/ cards, join, mechanism_intervention_map card references; no new reading, no live adapter call",
+  "forbidden": "the four scientific current files; registries; ledgers; receipts"
+ },
+ "ACCEPTANCE_CRITERIA": [
+  "28-row classification table in the module README",
+  "new curated cards pass cards/check_cards.py",
+  "before/after diff of cards.json and of the handoff",
+  "decisive links listed for an independent verifier"
+ ],
+ "DEPENDENCIES": [],
+ "REVIEW_REQUIREMENT": "independent verifier (scientist-d) on the decisive links",
+ "INTERACTION_MODE": "AUTONOMOUS",
+ "RETRY_POLICY": "resume idempotently",
+ "MILESTONE_PLAN": [
+  "TASK_ACK/CLAIM",
+  "measure and classify",
+  "batch selection and cards",
+  "linkage code",
+  "regenerate join and handoff",
+  "tests",
+  "README table",
+  "report"
+ ],
+ "DELIVERABLE": "curated cards, links, regenerated join outputs and handoff, README classification table",
+ "CURRENT_STATE": "COMPLETE",
+ "assigned_on": "2026-10-27",
+ "TASK_ACK": {
+  "actor": "scientist-a",
+  "at": "2026-10-27T09:00:00Z",
+  "directive_version": 1,
+  "generation": 1,
+  "understanding": "Link curated cards to the UNQUALIFIED derived cards only where candidate, endpoint, context, direction and limits match; write the missing cards from evidence already held; UNQUALIFIED may be correct and lowering the count is not the goal."
+ },
+ "TASK_CLAIM": {
+  "actor": "scientist-a",
+  "at": "2026-10-27T09:00:00Z",
+  "branch": "task/sa-it2-cardlink",
+  "worktree": ".claude/worktrees/sa-cardlink",
+  "reading_claims": [],
+  "note": "No paper is read; no reading claim taken."
+ },
+ "MILESTONE_LOG": [
+  {
+   "milestone": "TASK_ACK/CLAIM",
+   "state": "done",
+   "evidence": "this record"
+  },
+  {
+   "milestone": "measure and classify the 28 derived cards",
+   "state": "done",
+   "evidence": "drug_repurposing/README.md section 'Roadmap iteration 2, package W1.1'"
+  },
+  {
+   "milestone": "curated cards F01 lithium, F02 memantine, C04 AAV9 endpoint families",
+   "state": "done",
+   "evidence": "drug_repurposing/cards/ (check_cards.py: 19 packets, 0 problems)"
+  },
+  {
+   "milestone": "linkage code and links (map records R-01..R-05, N-02)",
+   "state": "done",
+   "evidence": "framework/scripts/repurposing_join.py; test_repurposing_join.py 44 tests OK"
+  },
+  {
+   "milestone": "regenerated join outputs and handoff",
+   "state": "done",
+   "evidence": "drug_repurposing/join/; research/repurposing_batch_selection_20261027_module.md"
+  },
+  {
+   "milestone": "independent verification of the decisive links",
+   "state": "owed",
+   "evidence": "six items listed in the README section; verifier is not the producer"
+  }
+ ],
+ "DEFAULTS_TAKEN": [
+  "Track for the early-benefit and A-D cards is left UNQUALIFIED (read as silent) instead of written into those audited cards.",
+  "Scope WWOX_EXPERIMENT_IN_DEE_SYSTEM used for engineered-null and neuron-specific-deletion mouse results; flagged for the verifier.",
+  "The (a)-class rows other than the chosen batch were classified, not linked; their cards are mostly abstentions that add a route and one row."
+ ],
+ "STOP_LOG": [],
+ "DECISIONS_TAKEN": [
+  "No paper opened, no live adapter call, no receipt recorded: the new cards cite existing manifest entries and receipts only."
+ ]
+}

@@ -55,6 +55,7 @@ MODEL = ROOT / "disease-models" / DISEASE
 DEFAULT_OUT = MODEL / "research" / "drug_repurposing" / "join"
 MECHANISM_MAP = MODEL / "analysis" / "mechanism_intervention_map.md"
 CURATED_CARDS = MODEL / "research" / "drug_repurposing" / "cards"  # hand-made, qualified cards (the `<id>.packet.json` is read)
+CURATED_CARDS_EARLY = MODEL / "research" / "drug_repurposing" / "cards_early"  # the early-benefit cards (ids carry a hyphen)
 PATHOGRAPH = MODEL / "analysis" / "data" / "pathograph_export.jsonl"
 MANIFESTS = MODEL / "research" / "deepdive_manifests"
 ADJUDICATIONS = MODEL / "research" / "page_adjudications"
@@ -91,7 +92,7 @@ CLAIM_IN_TEXT = re.compile(r"\bCLAIM[ _](\d{3})\b")
 LEAD_IN_TEXT = re.compile(r"\b(DL-[A-Z]+-\d{3})\b")
 PAPER_IN_TEXT = re.compile(r"\bPAPER[ _](\d{3})\b")
 MECHANISM_RECORD = re.compile(r"^### ([RN]-\d{2}) — (.+?)$", re.M)
-CARD_REF = re.compile(r"cards/([A-Za-z0-9_]+)\.card\.json")  # a map record names its curated card by path
+CARD_REF = re.compile(r"cards(?:_early)?/([A-Za-z0-9_-]+)\.card\.json")  # a map record names its curated card by path
 LOCATOR_ENTRIES = re.compile(r"PMID(\d+)\.json verbatim_locators\.entries((?:\s*\[\d+\],?)+)")
 RECEIPT_ID = re.compile(r"FTR-\d{8}-\d{8}-\d{2}")
 MAP_FIELD = re.compile(r"^\|\s*\*\*([A-Z_]+)\*\*\s*\|\s*(.+?)\s*\|\s*$", re.M)
@@ -569,10 +570,19 @@ def curated_packets(query: dict) -> list[dict]:
     qualifications - target, endpoint, direction, context, source, depth, locator - are read as written."""
     packets = []
     for name in query.get("curated_cards") or []:
-        path = CURATED_CARDS / f"{name}.packet.json"
-        if path.exists():
+        path = curated_packet_path(name)
+        if path is not None:
             packets.append(json.loads(path.read_text(encoding="utf-8")))
     return packets
+
+
+def curated_packet_path(name: str) -> Path | None:
+    """`cards/` first, then `cards_early/`; the two directories never share an id."""
+    for folder in (CURATED_CARDS, CURATED_CARDS_EARLY):
+        path = folder / f"{name}.packet.json"
+        if path.exists():
+            return path
+    return None
 
 
 def packet_assertions(packets: list[dict]) -> tuple[list[dict], list[dict]]:
@@ -707,18 +717,26 @@ UNQUALIFIED_DIMENSIONS = {
 
 def qualification(packets: list[dict]) -> tuple[str, dict]:
     """Route and mission dimensions as the curated card(s) wrote them; UNQUALIFIED when none is linked or
-    when several disagree. Track and route are two independent fields and are never merged or defaulted."""
+    when several disagree. Track and route are two independent fields and are never merged or defaulted.
+    A card written before Track was qualified (the early-benefit cards, the A-D series) carries a route and
+    no `mission_dimensions` block: its route is read as written, its Track is not guessed, and the note names it."""
     if not packets:
         return "UNQUALIFIED", dict(UNQUALIFIED_DIMENSIONS)
-    if len(packets) == 1:
+    stated = [p for p in packets if p.get("mission_dimensions")]
+    silent = [p["candidate"]["id"] for p in packets if not p.get("mission_dimensions")]
+    if len(packets) == 1 and stated:
         return packets[0]["route"], copy.deepcopy(packets[0]["mission_dimensions"])
     routes = {p["route"] for p in packets}
-    tracks = {p["mission_dimensions"]["track"] for p in packets}
-    return (routes.pop() if len(routes) == 1 else "UNQUALIFIED",
-            {**copy.deepcopy(packets[0]["mission_dimensions"]),
-             "track": tracks.pop() if len(tracks) == 1 else "UNQUALIFIED",
-             "route": "UNQUALIFIED" if len(routes) > 1 else packets[0]["route"],
-             "route_note": "qualified by several curated cards: " + "; ".join(p["candidate"]["id"] for p in packets)})
+    route = routes.pop() if len(routes) == 1 else "UNQUALIFIED"
+    tracks = {p["mission_dimensions"]["track"] for p in stated}
+    track = tracks.pop() if len(tracks) == 1 else "UNQUALIFIED"
+    base = copy.deepcopy(stated[0]["mission_dimensions"]) if stated else {}
+    note = ("qualified by several curated cards: " + "; ".join(p["candidate"]["id"] for p in packets)
+            if len(packets) > 1 else f"qualified by one curated card: {packets[0]['candidate']['id']}")
+    if silent:
+        note += ("; Track is read only from the card(s) that state it - " + ", ".join(silent)
+                 + (" state(s) a route and no Track (written before Track was qualified)"))
+    return route, {**base, "track": track, "route": route, "route_note": note}
 
 
 def ledger_receipt_ids() -> set[str]:
@@ -858,7 +876,8 @@ def card_for(query: dict, table: dict, hits: list[dict]) -> dict | None:
         packet.update({"disease_assertions": copy.deepcopy(diseases), "drug_assertions": copy.deepcopy(drugs)})
         packet.pop("disease_assertion", None)
         packet["curated_candidate"] = packet["candidate"]
-        packet["curated_from"] = [f"cards/{name}.packet.json" for name in query["curated_cards"]]
+        packet["curated_from"] = [relative(curated_packet_path(name)).split("drug_repurposing/", 1)[-1]
+                                  for name in query["curated_cards"] if curated_packet_path(name) is not None]
         packet["curation_checks"] = curated_checks(diseases + drugs)
         packet["p4_roadmap_fields"] = packet.get("p4_roadmap_fields") or derived_roadmap
         census = [packet_.get("target_census") for packet_ in packets if packet_.get("target_census")]
@@ -1216,10 +1235,28 @@ def handoff_rows(cards: list[dict], queries: dict[str, dict]) -> list[dict]:
                      "ask": clause or act, "ask_source": "record open clause" if clause else "join act",
                      "act": act, "acquisition": acquisition_state(table), "binding": binding,
                      "endpoint_classes": classes,
+                     "qualification": qualification_view(card),
                      "external_sources": external,
                      "lead_spec": lead_spec(item["query_id"], card, query, classes) if kind == "REPLICATE" else None})
     rows.sort(key=lambda row: (row["kind"], row["query_id"]))
     return rows
+
+
+def qualification_view(card: dict) -> dict | None:
+    """What the linked curated card(s) already say about this record, read from the derived card: the next batch
+    starts from the card, not from the record's papers. None when no curated card is linked."""
+    packet = card["input"]
+    if not packet.get("curated_from"):
+        return None
+    comparisons: dict[str, int] = {}
+    for item in card["comparisons"]:
+        comparisons[item["status"]] = comparisons.get(item["status"], 0) + 1
+    dims = packet.get("mission_dimensions") or {}
+    return {"cards": list(packet["curated_from"]), "route": packet.get("route"), "track": dims.get("track"),
+            "disease_rows": len(packet.get("disease_assertions") or []),
+            "drug_rows": len(packet.get("drug_assertions") or []), "comparisons": comparisons,
+            "summary": card["directional_summary"],
+            "card_next_measurement": ((packet.get("p4_card") or {}).get("next_measurement") or "")[:300]}
 
 
 def lead_spec(query_id: str, card: dict, query: dict, classes: list[dict] | None = None) -> dict:
@@ -1287,6 +1324,22 @@ def render_handoff(rows: list[dict], date: str, axis: str,
     for row in rows:
         counts[row["kind"]] = counts.get(row["kind"], 0) + 1
     lines += ["", "Counts: " + " · ".join(f"{k} {v}" for k, v in sorted(counts.items())), ""]
+    qualified = [row for row in rows if row.get("qualification")]
+    if qualified:
+        lines += ["## Records already qualified by a curated card (start from the card, not from the papers)",
+                  "", "A curated card carries target, endpoint, direction, context, source, depth, locator and limits as a Scientist "
+                  "wrote them; the join reads them and adds nothing. `route` and `track` are two independent fields (Track is read only "
+                  "from the card that states it). Comparison statuses are sign comparisons on equal target, endpoint and context: "
+                  "`UNRESOLVED` means no matched comparison exists, not that the biology is unresolved. The card's own next measurement "
+                  "is shown; it is not a recommendation.", "",
+                  "| Query | Candidate | Curated card(s) | Route | Track | Disease / drug rows | Comparisons | Summary | Card's next measurement |",
+                  "|---|---|---|---|---|---|---|---|---|"]
+        for row in qualified:
+            q = row["qualification"]
+            comp = ", ".join(f"{k} {v}" for k, v in sorted(q["comparisons"].items())) or "none (no drug-side row)"
+            lines.append(f"| `{row['query_id']}` | {row['candidate'][:50]} | {', '.join(q['cards'])} | {q['route']} | {q['track']} | "
+                         f"{q['disease_rows']} / {q['drug_rows']} | {comp} | {q['summary']} | {q['card_next_measurement'] or 'UNKNOWN'} |")
+        lines.append("")
     classified = [row for row in rows if row.get("endpoint_classes") and row["binding"]["binding"] == "BOUND_BY_FULLTEXT_LOCATOR"]
     if classified:
         lines += ["## REPLICATE rows: what each endpoint is, against the curated observations",

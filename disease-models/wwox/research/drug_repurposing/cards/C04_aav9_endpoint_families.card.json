@@ -1,0 +1,716 @@
+{
+  "schema_version": 1,
+  "input_sha256": "13d2fd1aecd56ae08e242c3a0de43a55b89edf989bb13c7ec8395f6d24af2c13",
+  "epistemic_status": "IPOTESI",
+  "canonical": false,
+  "assessment": "REQUIRES_QUALIFICATION",
+  "directional_summary": "CONFLICTING",
+  "comparisons": [
+    {
+      "assertion_id": "DR-AAV-SURV-HD",
+      "status": "OPPOSES_DISEASE_CHANGE",
+      "reasons": []
+    },
+    {
+      "assertion_id": "DR-AAV-SURV-LD",
+      "status": "OPPOSES_DISEASE_CHANGE",
+      "reasons": []
+    },
+    {
+      "assertion_id": "DR-AAV-WT-HD",
+      "status": "OPPOSES_DISEASE_CHANGE",
+      "reasons": []
+    },
+    {
+      "assertion_id": "DR-AAV-WT-LD",
+      "status": "OPPOSES_DISEASE_CHANGE",
+      "reasons": []
+    },
+    {
+      "assertion_id": "DR-AAV-GLU10-HD",
+      "status": "NO_EFFECT_REPORTED",
+      "reasons": []
+    },
+    {
+      "assertion_id": "DR-AAV-GLU10-LD",
+      "status": "NO_EFFECT_REPORTED",
+      "reasons": []
+    },
+    {
+      "assertion_id": "DR-AAV-GLU20-LD",
+      "status": "UNRESOLVED",
+      "reasons": [
+        "no disease assertion on this target and endpoint"
+      ]
+    },
+    {
+      "assertion_id": "DR-AAV-GLU20-HD",
+      "status": "UNRESOLVED",
+      "reasons": [
+        "no disease assertion on this target and endpoint"
+      ]
+    },
+    {
+      "assertion_id": "DR-AAV-MOTOR-HD",
+      "status": "OPPOSES_DISEASE_CHANGE",
+      "reasons": []
+    },
+    {
+      "assertion_id": "DR-AAV-MOTOR-LD",
+      "status": "OPPOSES_DISEASE_CHANGE",
+      "reasons": []
+    },
+    {
+      "assertion_id": "DR-AAV-GFAP-P5HD",
+      "status": "OPPOSES_DISEASE_CHANGE",
+      "reasons": []
+    },
+    {
+      "assertion_id": "DR-AAV-GFAPAREA-LD",
+      "status": "UNRESOLVED",
+      "reasons": [
+        "direction unknown"
+      ]
+    },
+    {
+      "assertion_id": "DR-AAV-GFAPAREA-HD",
+      "status": "UNRESOLVED",
+      "reasons": [
+        "direction unknown"
+      ]
+    },
+    {
+      "assertion_id": "DR-AAV-MBP-HD",
+      "status": "UNRESOLVED",
+      "reasons": [
+        "direction unknown"
+      ]
+    },
+    {
+      "assertion_id": "DR-AAV-MBP-LD",
+      "status": "UNRESOLVED",
+      "reasons": [
+        "direction unknown"
+      ]
+    }
+  ],
+  "abstention": null,
+  "label_lookup": {
+    "status": "NOT_ATTEMPTED",
+    "coverage": "UNKNOWN",
+    "method": "UNKNOWN",
+    "queries": [],
+    "source": "UNKNOWN",
+    "retrieved_at": "UNKNOWN",
+    "client_version": "UNKNOWN",
+    "product_name": "UNKNOWN",
+    "active_ingredient": "UNKNOWN",
+    "formulation": "UNKNOWN",
+    "spl_id": "UNKNOWN",
+    "error": "UNKNOWN",
+    "coverage_limit": "UNKNOWN"
+  },
+  "p4_fields": {
+    "endpoint_pursued": "Restoration of WWOX function by neuron-directed replacement, read as a set of separate endpoint families, none of which stands for the others.",
+    "functional_evidence_available": "In the Wwox-null mouse, one laboratory: survival to 300 days at the higher level and postponed death at the lower; body weight not graded; glucose partial and age-dependent; motor score graded; gliosis binary against wild type; myelination unquantified in treated arms.",
+    "temporal_or_model_limit": "Constitutive null, not Q230P; one laboratory (the two papers share senior author and institution); no replication; earliest postnatal treatment ages only and NOT_MEASURED is not SMALLER; no tumour surveillance or overexpression-toxicity endpoint; SWD recorded over one week starting about two weeks after birth; threshold not located.",
+    "cellular_context": {
+      "target_expression": "Neuron-directed construct; WWOX protein graded by vector level and regionally uneven, supraphysiological in survivors and survivor-selected (PREMISE: NOBODY_LOOKED on the upper bound).",
+      "cells_tissue_stage": "Mouse brain regions; the cerebellum, the organ of the ataxic phenotype, is the region the vector reaches least and no efficacy endpoint was measured there; protein also reaches the sciatic nerve while liver stays at background.",
+      "coverage": "Oligodendrocyte-directed construct produced essentially no detectable protein, so the oligodendrocyte question is unanswered, not answered negatively.",
+      "limits": "Residual partial function in a missense context is a reason to expect a DIFFERENT result, not a larger one; the expected level of rescue in the reference genotype does not follow from this study in either direction."
+    }
+  },
+  "input": {
+    "schema_version": 1,
+    "axis": "C / restoration of WWOX expression: endpoint families of the dose study",
+    "route": "RECUPERO_PROFONDO",
+    "mission_dimensions": {
+      "track": "A",
+      "track_definition": "mission.md section 5: Track A = variant-independent WWOX loss of function; Track B = variant or allele-class specific (e.g. the Q230P missense class); Track C = repurposing, which is a method of reaching A or B, not a third lesion class",
+      "route": "RECUPERO_PROFONDO",
+      "route_definition": "RECUPERO_PROFONDO = deep recovery of the lost function; BENEFICIO_PRECOCE = concrete partial benefit, symptomatic control or protection of function, with paediatric feasibility and time in view",
+      "route_note": "Gene addition is allele-blind (Track A) and aims at the lost function itself. In a missense context with residual partial function a DIFFERENT result is expected, not a larger one: the expected level of rescue in the reference genotype does not follow from this null-mouse study in either direction. Several endpoint families here are partial, non-graded or unquantified.",
+      "the_two_dimensions_are_independent": "a card keeps both: a variant-independent lever can be a partial-benefit lever, and a lesion-specific one can aim at deep recovery"
+    },
+    "candidate": {
+      "id": "P4-C-04",
+      "name": "AAV9-delivered human WWOX: endpoint families other than spike-wave discharges (survival, weight, glucose, motor score, gliosis, myelination)"
+    },
+    "disease_assertions": [
+      {
+        "id": "DA-AAV-SURV-001",
+        "target_id": "survival",
+        "endpoint": "proportion of animals alive over time",
+        "direction": "DECREASE",
+        "source": "Obeid 2026 (PAPER 011, CLAIM 011; PMID 42422765; same laboratory as the 2021 vector paper; Wwox-null mouse, neuron-directed AAV9, WPRE-free dose study)",
+        "locator": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json verbatim_locators.entries[40], [46]; Figure 3B, 300 dpi, measured against the printed axes; scaffold rows are bound in woree_rescue_reference_scaffold.md section 2; re-inspection receipt FTR-20261021-42422765-01",
+        "epistemic_status": "DATO",
+        "reading_depth": "complete_fulltext_read",
+        "context": {
+          "disease_id": "Wwox-null mouse model of WOREE (engineered null; NOT the Q230P class)",
+          "genotype": "constitutive Wwox deletion (targeted-deletion allele, FVB)",
+          "species": "mouse",
+          "cell_type": "whole animal, Kaplan-Meier survival",
+          "developmental_stage": "birth to day 300 (ICV injection at P0-P1)"
+        },
+        "measured_result_note": "Untreated knockouts (n = 10) first die about day 9 and are at zero by about days 13 to 21; the wild-type control arm itself stands at about 71 to 72 percent from about day 126 to day 300. Entries 40 and 46 carry a repaired adverse blind-audit finding (UNDERSHOOT and OVERSHOOT) whose repair has not been re-judged.",
+        "receipt": "FTR-20260814-42422765-06",
+        "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
+      },
+      {
+        "id": "DA-AAV-WT-001",
+        "target_id": "body weight",
+        "endpoint": "body weight series from birth",
+        "direction": "DECREASE",
+        "source": "Obeid 2026 (PAPER 011, CLAIM 011; PMID 42422765; same laboratory as the 2021 vector paper; Wwox-null mouse, neuron-directed AAV9, WPRE-free dose study)",
+        "locator": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json verbatim_locators.entries[41]; Figure 3C and 3D",
+        "epistemic_status": "DATO",
+        "reading_depth": "complete_fulltext_read",
+        "context": {
+          "disease_id": "Wwox-null mouse model of WOREE (engineered null; NOT the Q230P class)",
+          "genotype": "constitutive Wwox deletion (targeted-deletion allele, FVB)",
+          "species": "mouse",
+          "cell_type": "whole animal, body weight series",
+          "developmental_stage": "postnatal day 0 to 30 (untreated knockouts die by about day 17)"
+        },
+        "measured_result_note": "The untreated-knockout weight series ends by about day 15 near 4.7 g (Figure 3C), against about 17.5 g for wild type at day 30. Entry 41 carries a repaired adverse audit not re-judged.",
+        "receipt": "FTR-20260814-42422765-06",
+        "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
+      },
+      {
+        "id": "DA-AAV-GLU10-001",
+        "target_id": "blood glucose",
+        "endpoint": "blood glucose at postnatal day 10",
+        "direction": "DECREASE",
+        "source": "Obeid 2026 (PAPER 011, CLAIM 011; PMID 42422765; same laboratory as the 2021 vector paper; Wwox-null mouse, neuron-directed AAV9, WPRE-free dose study)",
+        "locator": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json verbatim_locators.entries[37]; Figure 3E",
+        "epistemic_status": "DATO",
+        "reading_depth": "complete_fulltext_read",
+        "context": {
+          "disease_id": "Wwox-null mouse model of WOREE (engineered null; NOT the Q230P class)",
+          "genotype": "constitutive Wwox deletion (targeted-deletion allele, FVB)",
+          "species": "mouse",
+          "cell_type": "whole animal, blood glucose",
+          "developmental_stage": "postnatal day 10"
+        },
+        "measured_result_note": "Untreated knockout about 95 against wild type about 130, one star against wild type; the only glucose panel that still has an untreated-knockout arm beside the treated ones.",
+        "receipt": "FTR-20260814-42422765-06",
+        "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
+      },
+      {
+        "id": "DA-AAV-MOTOR-001",
+        "target_id": "composite motor score",
+        "endpoint": "composite motor score (higher is worse)",
+        "direction": "INCREASE",
+        "source": "Obeid 2026 (PAPER 011, CLAIM 011; PMID 42422765; same laboratory as the 2021 vector paper; Wwox-null mouse, neuron-directed AAV9, WPRE-free dose study)",
+        "locator": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json verbatim_locators.entries[27]; Supplementary Figure S4A-S4E",
+        "epistemic_status": "DATO",
+        "reading_depth": "complete_fulltext_read",
+        "context": {
+          "disease_id": "Wwox-null mouse model of WOREE (engineered null; NOT the Q230P class)",
+          "genotype": "constitutive Wwox deletion (targeted-deletion allele, FVB)",
+          "species": "mouse",
+          "cell_type": "whole animal, composite motor score",
+          "developmental_stage": "UNKNOWN (the panel states no age)"
+        },
+        "measured_result_note": "Wild type about 0, knockout about 3.6. The panel states no age; fertility panels in the same figure rest on about three observations per group.",
+        "receipt": "FTR-20260814-42422765-06",
+        "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
+      },
+      {
+        "id": "DA-AAV-GFAP-001",
+        "target_id": "astrocytes",
+        "endpoint": "GFAP-positive cells in the timing experiment",
+        "direction": "INCREASE",
+        "source": "Obeid 2026 (PAPER 011, CLAIM 011; PMID 42422765; same laboratory as the 2021 vector paper; Wwox-null mouse, neuron-directed AAV9, WPRE-free dose study)",
+        "locator": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json verbatim_locators.entries[9]; Supplementary Figure S8I",
+        "epistemic_status": "DATO",
+        "reading_depth": "complete_fulltext_read",
+        "context": {
+          "disease_id": "Wwox-null mouse model of WOREE (engineered null; NOT the Q230P class)",
+          "genotype": "constitutive Wwox deletion (targeted-deletion allele, FVB)",
+          "species": "mouse",
+          "cell_type": "brain, GFAP-positive astrocytes (cells counted)",
+          "developmental_stage": "UNKNOWN (the timing-experiment panel states no age)"
+        },
+        "measured_result_note": "Wild type about 5, knockout about 44, three-star bracket; the only gliosis panel that holds wild type, untreated knockout and a treated arm together.",
+        "receipt": "FTR-20260814-42422765-06",
+        "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
+      },
+      {
+        "id": "DA-AAV-GFAPAREA-001",
+        "target_id": "astrocytes",
+        "endpoint": "GFAP-positive area, percent",
+        "direction": "INCREASE",
+        "source": "Obeid 2026 (PAPER 011, CLAIM 011; PMID 42422765; same laboratory as the 2021 vector paper; Wwox-null mouse, neuron-directed AAV9, WPRE-free dose study)",
+        "locator": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json verbatim_locators.entries[44]; Supplementary Figure S7C-S7D",
+        "epistemic_status": "DATO",
+        "reading_depth": "complete_fulltext_read",
+        "context": {
+          "disease_id": "Wwox-null mouse model of WOREE (engineered null; NOT the Q230P class)",
+          "genotype": "constitutive Wwox deletion (targeted-deletion allele, FVB)",
+          "species": "mouse",
+          "cell_type": "brain, GFAP-positive area (percent)",
+          "developmental_stage": "postnatal day 20 (disease-baseline panels S7C-D); UNKNOWN for the treated-arm panels S7G-H"
+        },
+        "measured_result_note": "Wild type about 3.7, knockout about 23.7, three-star bracket at postnatal day 20. The wild-type value moves between S7 panels (about 3.7 in S7D, about 1.75 in S7H): panels cannot be read across.",
+        "receipt": "FTR-20260814-42422765-06",
+        "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
+      },
+      {
+        "id": "DA-AAV-MBP-001",
+        "target_id": "myelination",
+        "endpoint": "MBP immunostaining intensity relative to wild type",
+        "direction": "DECREASE",
+        "source": "Obeid 2026 (PAPER 011, CLAIM 011; PMID 42422765; same laboratory as the 2021 vector paper; Wwox-null mouse, neuron-directed AAV9, WPRE-free dose study)",
+        "locator": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json verbatim_locators.entries[6], [43]; Figure 6C-6F",
+        "epistemic_status": "DATO",
+        "reading_depth": "complete_fulltext_read",
+        "context": {
+          "disease_id": "Wwox-null mouse model of WOREE (engineered null; NOT the Q230P class)",
+          "genotype": "constitutive Wwox deletion (targeted-deletion allele, FVB)",
+          "species": "mouse",
+          "cell_type": "brain, MBP immunostaining intensity",
+          "developmental_stage": "UNKNOWN for the treated panels (postnatal day 18 for the disease baseline; about day 90 for S7I)"
+        },
+        "measured_result_note": "Knockout MBP intensity relative to wild type about 48 percent in corpus callosum, 30 cortex, 50 striatum and 70 anterior commissure (Figure 6E, postnatal day 18); the only MBP quantification in the paper has no treated arm.",
+        "receipt": "FTR-20260814-42422765-06",
+        "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
+      }
+    ],
+    "drug_assertions": [
+      {
+        "id": "DR-AAV-SURV-HD",
+        "target_id": "survival",
+        "endpoint": "proportion of animals alive over time",
+        "direction": "INCREASE",
+        "source": "Obeid 2026 (PAPER 011, CLAIM 011; PMID 42422765; same laboratory as the 2021 vector paper; Wwox-null mouse, neuron-directed AAV9, WPRE-free dose study)",
+        "locator": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json verbatim_locators.entries[40], [46], [11]; Figure 3B; scaffold rows are bound in woree_rescue_reference_scaffold.md section 2; re-inspection receipt FTR-20261021-42422765-01",
+        "epistemic_status": "DATO",
+        "reading_depth": "complete_fulltext_read",
+        "context": {
+          "disease_id": "Wwox-null mouse model of WOREE (engineered null; NOT the Q230P class)",
+          "genotype": "constitutive Wwox deletion (targeted-deletion allele, FVB)",
+          "species": "mouse",
+          "cell_type": "whole animal, Kaplan-Meier survival",
+          "developmental_stage": "birth to day 300 (ICV injection at P0-P1)"
+        },
+        "measured_result_note": "High-dose arm (n = 30): 100 percent to about day 50, then a plateau at 76 to 77 percent from about day 80 to day 300; caption statistic high dose versus wild type p = 0.78, high versus low p < 0.0001. The plateau sits at or marginally above the wild-type control's own survival. Read the duration of the effect, not the survival of the cohort. Repaired adverse audit on entries 40 and 46, not re-judged.",
+        "receipt": "FTR-20260814-42422765-06",
+        "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
+      },
+      {
+        "id": "DR-AAV-SURV-LD",
+        "target_id": "survival",
+        "endpoint": "proportion of animals alive over time",
+        "direction": "INCREASE",
+        "source": "Obeid 2026 (PAPER 011, CLAIM 011; PMID 42422765; same laboratory as the 2021 vector paper; Wwox-null mouse, neuron-directed AAV9, WPRE-free dose study)",
+        "locator": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json verbatim_locators.entries[40], [46], [11]; Figure 3B",
+        "epistemic_status": "DATO",
+        "reading_depth": "complete_fulltext_read",
+        "context": {
+          "disease_id": "Wwox-null mouse model of WOREE (engineered null; NOT the Q230P class)",
+          "genotype": "constitutive Wwox deletion (targeted-deletion allele, FVB)",
+          "species": "mouse",
+          "cell_type": "whole animal, Kaplan-Meier survival",
+          "developmental_stage": "birth to day 300 (ICV injection at P0-P1)"
+        },
+        "measured_result_note": "Low-dose arm (n = 20): a staircase decline, median about day 48, extinct at about day 77; low dose postpones death and does not produce animals that reach three months (entry 11). A sign comparison alone would read this as the same direction as the high dose; it is a postponement, not a rescue. Repaired adverse audit on entry 40, not re-judged.",
+        "receipt": "FTR-20260814-42422765-06",
+        "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
+      },
+      {
+        "id": "DR-AAV-WT-HD",
+        "target_id": "body weight",
+        "endpoint": "body weight series from birth",
+        "direction": "INCREASE",
+        "source": "Obeid 2026 (PAPER 011, CLAIM 011; PMID 42422765; same laboratory as the 2021 vector paper; Wwox-null mouse, neuron-directed AAV9, WPRE-free dose study)",
+        "locator": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json verbatim_locators.entries[41]; Figure 3C and 3D",
+        "epistemic_status": "DATO",
+        "reading_depth": "complete_fulltext_read",
+        "context": {
+          "disease_id": "Wwox-null mouse model of WOREE (engineered null; NOT the Q230P class)",
+          "genotype": "constitutive Wwox deletion (targeted-deletion allele, FVB)",
+          "species": "mouse",
+          "cell_type": "whole animal, body weight series",
+          "developmental_stage": "postnatal day 0 to 30 (untreated knockouts die by about day 17)"
+        },
+        "measured_result_note": "High dose about 15.6 g at day 30 against wild type about 17.5; no significance marker is printed on panel C at all. The two doses are superimposed at day 30.",
+        "receipt": "FTR-20260814-42422765-06",
+        "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
+      },
+      {
+        "id": "DR-AAV-WT-LD",
+        "target_id": "body weight",
+        "endpoint": "body weight series from birth",
+        "direction": "INCREASE",
+        "source": "Obeid 2026 (PAPER 011, CLAIM 011; PMID 42422765; same laboratory as the 2021 vector paper; Wwox-null mouse, neuron-directed AAV9, WPRE-free dose study)",
+        "locator": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json verbatim_locators.entries[41]; Figure 3C and 3D",
+        "epistemic_status": "DATO",
+        "reading_depth": "complete_fulltext_read",
+        "context": {
+          "disease_id": "Wwox-null mouse model of WOREE (engineered null; NOT the Q230P class)",
+          "genotype": "constitutive Wwox deletion (targeted-deletion allele, FVB)",
+          "species": "mouse",
+          "cell_type": "whole animal, body weight series",
+          "developmental_stage": "postnatal day 0 to 30 (untreated knockouts die by about day 17)"
+        },
+        "measured_result_note": "Low dose about 15.3 g at day 30, equal to the high dose: NOT dose-graded, and the comparison is survivor-conditioned on the low-dose side (about 79 percent alive at day 30 against 100 percent), so the equality is between unequal denominators. The low-dose series is truncated at about day 60 without a stated cause. Repaired adverse audit on entry 41, not re-judged.",
+        "receipt": "FTR-20260814-42422765-06",
+        "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
+      },
+      {
+        "id": "DR-AAV-GLU10-HD",
+        "target_id": "blood glucose",
+        "endpoint": "blood glucose at postnatal day 10",
+        "direction": "NO_CHANGE",
+        "source": "Obeid 2026 (PAPER 011, CLAIM 011; PMID 42422765; same laboratory as the 2021 vector paper; Wwox-null mouse, neuron-directed AAV9, WPRE-free dose study)",
+        "locator": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json verbatim_locators.entries[36], [37]; Figure 3E",
+        "epistemic_status": "DATO",
+        "reading_depth": "complete_fulltext_read",
+        "context": {
+          "disease_id": "Wwox-null mouse model of WOREE (engineered null; NOT the Q230P class)",
+          "genotype": "constitutive Wwox deletion (targeted-deletion allele, FVB)",
+          "species": "mouse",
+          "cell_type": "whole animal, blood glucose",
+          "developmental_stage": "postnatal day 10"
+        },
+        "measured_result_note": "High dose about 113: not significant against wild type and not significant against the untreated knockout. The text says both doses partially corrected hypoglycaemia; the panel qualifies the text (entries 36, 37).",
+        "receipt": "FTR-20260814-42422765-06",
+        "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
+      },
+      {
+        "id": "DR-AAV-GLU10-LD",
+        "target_id": "blood glucose",
+        "endpoint": "blood glucose at postnatal day 10",
+        "direction": "NO_CHANGE",
+        "source": "Obeid 2026 (PAPER 011, CLAIM 011; PMID 42422765; same laboratory as the 2021 vector paper; Wwox-null mouse, neuron-directed AAV9, WPRE-free dose study)",
+        "locator": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json verbatim_locators.entries[36], [37]; Figure 3E",
+        "epistemic_status": "DATO",
+        "reading_depth": "complete_fulltext_read",
+        "context": {
+          "disease_id": "Wwox-null mouse model of WOREE (engineered null; NOT the Q230P class)",
+          "genotype": "constitutive Wwox deletion (targeted-deletion allele, FVB)",
+          "species": "mouse",
+          "cell_type": "whole animal, blood glucose",
+          "developmental_stage": "postnatal day 10"
+        },
+        "measured_result_note": "Low dose about 105: not significant against wild type and not significant against the untreated knockout.",
+        "receipt": "FTR-20260814-42422765-06",
+        "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
+      },
+      {
+        "id": "DR-AAV-GLU20-LD",
+        "target_id": "blood glucose",
+        "endpoint": "blood glucose at postnatal day 20",
+        "direction": "UNKNOWN",
+        "source": "Obeid 2026 (PAPER 011, CLAIM 011; PMID 42422765; same laboratory as the 2021 vector paper; Wwox-null mouse, neuron-directed AAV9, WPRE-free dose study)",
+        "locator": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json verbatim_locators.entries[37]; Figure 3F",
+        "epistemic_status": "DATO",
+        "reading_depth": "complete_fulltext_read",
+        "context": {
+          "disease_id": "Wwox-null mouse model of WOREE (engineered null; NOT the Q230P class)",
+          "genotype": "constitutive Wwox deletion (targeted-deletion allele, FVB)",
+          "species": "mouse",
+          "cell_type": "whole animal, blood glucose",
+          "developmental_stage": "postnatal day 20"
+        },
+        "measured_result_note": "Low dose about 128, one star against wild type about 145. No untreated-knockout arm exists at this age (those animals are dead), so no direction against the disease state can be written. This is the family's graded dose-response, treated against wild type only.",
+        "receipt": "FTR-20260814-42422765-06",
+        "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
+      },
+      {
+        "id": "DR-AAV-GLU20-HD",
+        "target_id": "blood glucose",
+        "endpoint": "blood glucose at postnatal day 20",
+        "direction": "UNKNOWN",
+        "source": "Obeid 2026 (PAPER 011, CLAIM 011; PMID 42422765; same laboratory as the 2021 vector paper; Wwox-null mouse, neuron-directed AAV9, WPRE-free dose study)",
+        "locator": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json verbatim_locators.entries[37]; Figure 3F",
+        "epistemic_status": "DATO",
+        "reading_depth": "complete_fulltext_read",
+        "context": {
+          "disease_id": "Wwox-null mouse model of WOREE (engineered null; NOT the Q230P class)",
+          "genotype": "constitutive Wwox deletion (targeted-deletion allele, FVB)",
+          "species": "mouse",
+          "cell_type": "whole animal, blood glucose",
+          "developmental_stage": "postnatal day 20"
+        },
+        "measured_result_note": "High dose about 147, not different from wild type and two stars against the low dose. By postnatal day 30 the separation has closed (Figure 3G).",
+        "receipt": "FTR-20260814-42422765-06",
+        "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
+      },
+      {
+        "id": "DR-AAV-MOTOR-HD",
+        "target_id": "composite motor score",
+        "endpoint": "composite motor score (higher is worse)",
+        "direction": "DECREASE",
+        "source": "Obeid 2026 (PAPER 011, CLAIM 011; PMID 42422765; same laboratory as the 2021 vector paper; Wwox-null mouse, neuron-directed AAV9, WPRE-free dose study)",
+        "locator": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json verbatim_locators.entries[27]; Supplementary Figure S4",
+        "epistemic_status": "DATO",
+        "reading_depth": "complete_fulltext_read",
+        "context": {
+          "disease_id": "Wwox-null mouse model of WOREE (engineered null; NOT the Q230P class)",
+          "genotype": "constitutive Wwox deletion (targeted-deletion allele, FVB)",
+          "species": "mouse",
+          "cell_type": "whole animal, composite motor score",
+          "developmental_stage": "UNKNOWN (the panel states no age)"
+        },
+        "measured_result_note": "High dose about 0.3, not significantly different from wild type; the clearest graded dose-response of the study and it sits in a supplement.",
+        "receipt": "FTR-20260814-42422765-06",
+        "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
+      },
+      {
+        "id": "DR-AAV-MOTOR-LD",
+        "target_id": "composite motor score",
+        "endpoint": "composite motor score (higher is worse)",
+        "direction": "DECREASE",
+        "source": "Obeid 2026 (PAPER 011, CLAIM 011; PMID 42422765; same laboratory as the 2021 vector paper; Wwox-null mouse, neuron-directed AAV9, WPRE-free dose study)",
+        "locator": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json verbatim_locators.entries[27]; Supplementary Figure S4",
+        "epistemic_status": "DATO",
+        "reading_depth": "complete_fulltext_read",
+        "context": {
+          "disease_id": "Wwox-null mouse model of WOREE (engineered null; NOT the Q230P class)",
+          "genotype": "constitutive Wwox deletion (targeted-deletion allele, FVB)",
+          "species": "mouse",
+          "cell_type": "whole animal, composite motor score",
+          "developmental_stage": "UNKNOWN (the panel states no age)"
+        },
+        "measured_result_note": "Low dose about 1.8: genuinely intermediate between knockout and high dose, three stars between low and high dose.",
+        "receipt": "FTR-20260814-42422765-06",
+        "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
+      },
+      {
+        "id": "DR-AAV-GFAP-P5HD",
+        "target_id": "astrocytes",
+        "endpoint": "GFAP-positive cells in the timing experiment",
+        "direction": "DECREASE",
+        "source": "Obeid 2026 (PAPER 011, CLAIM 011; PMID 42422765; same laboratory as the 2021 vector paper; Wwox-null mouse, neuron-directed AAV9, WPRE-free dose study)",
+        "locator": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json verbatim_locators.entries[9], [10]; Supplementary Figure S8I",
+        "epistemic_status": "DATO",
+        "reading_depth": "complete_fulltext_read",
+        "context": {
+          "disease_id": "Wwox-null mouse model of WOREE (engineered null; NOT the Q230P class)",
+          "genotype": "constitutive Wwox deletion (targeted-deletion allele, FVB)",
+          "species": "mouse",
+          "cell_type": "brain, GFAP-positive astrocytes (cells counted)",
+          "developmental_stage": "UNKNOWN (the timing-experiment panel states no age)"
+        },
+        "measured_result_note": "High dose injected at postnatal day 5: about 5 against knockout about 44, not different from wild type. A different experiment from the dose study: it varies timing at one dose and supplies no low-dose arm. Entry 10 carries a repaired adverse audit not re-judged. A glial change after a neuronal rescue does not identify a glial target.",
+        "receipt": "FTR-20260814-42422765-06",
+        "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
+      },
+      {
+        "id": "DR-AAV-GFAPAREA-LD",
+        "target_id": "astrocytes",
+        "endpoint": "GFAP-positive area, percent",
+        "direction": "UNKNOWN",
+        "source": "Obeid 2026 (PAPER 011, CLAIM 011; PMID 42422765; same laboratory as the 2021 vector paper; Wwox-null mouse, neuron-directed AAV9, WPRE-free dose study)",
+        "locator": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json verbatim_locators.entries[8], [44], [47]; Supplementary Figure S7G-S7H",
+        "epistemic_status": "DATO",
+        "reading_depth": "complete_fulltext_read",
+        "context": {
+          "disease_id": "Wwox-null mouse model of WOREE (engineered null; NOT the Q230P class)",
+          "genotype": "constitutive Wwox deletion (targeted-deletion allele, FVB)",
+          "species": "mouse",
+          "cell_type": "brain, GFAP-positive area (percent)",
+          "developmental_stage": "postnatal day 20 (disease-baseline panels S7C-D); UNKNOWN for the treated-arm panels S7G-H"
+        },
+        "measured_result_note": "Low dose about 3.05, two stars WORSE than wild type about 1.75; no untreated-knockout arm in this panel, so no direction against the disease state is written. The text's 'significantly reduced' has no baseline in the panel (entries 44, 47).",
+        "receipt": "FTR-20260814-42422765-06",
+        "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
+      },
+      {
+        "id": "DR-AAV-GFAPAREA-HD",
+        "target_id": "astrocytes",
+        "endpoint": "GFAP-positive area, percent",
+        "direction": "UNKNOWN",
+        "source": "Obeid 2026 (PAPER 011, CLAIM 011; PMID 42422765; same laboratory as the 2021 vector paper; Wwox-null mouse, neuron-directed AAV9, WPRE-free dose study)",
+        "locator": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json verbatim_locators.entries[8], [44]; Supplementary Figure S7G-S7H",
+        "epistemic_status": "DATO",
+        "reading_depth": "complete_fulltext_read",
+        "context": {
+          "disease_id": "Wwox-null mouse model of WOREE (engineered null; NOT the Q230P class)",
+          "genotype": "constitutive Wwox deletion (targeted-deletion allele, FVB)",
+          "species": "mouse",
+          "cell_type": "brain, GFAP-positive area (percent)",
+          "developmental_stage": "postnatal day 20 (disease-baseline panels S7C-D); UNKNOWN for the treated-arm panels S7G-H"
+        },
+        "measured_result_note": "High dose about 1.9, not different from wild type; same missing baseline. The family's clearest low-dose-fails, high-dose-passes result, and it is a comparison against wild type only.",
+        "receipt": "FTR-20260814-42422765-06",
+        "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
+      },
+      {
+        "id": "DR-AAV-MBP-HD",
+        "target_id": "myelination",
+        "endpoint": "MBP immunostaining intensity relative to wild type",
+        "direction": "UNKNOWN",
+        "source": "Obeid 2026 (PAPER 011, CLAIM 011; PMID 42422765; same laboratory as the 2021 vector paper; Wwox-null mouse, neuron-directed AAV9, WPRE-free dose study)",
+        "locator": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json verbatim_locators.entries[6], [43]; Figure 6F and Supplementary Figure S7I",
+        "epistemic_status": "DATO",
+        "reading_depth": "complete_fulltext_read",
+        "context": {
+          "disease_id": "Wwox-null mouse model of WOREE (engineered null; NOT the Q230P class)",
+          "genotype": "constitutive Wwox deletion (targeted-deletion allele, FVB)",
+          "species": "mouse",
+          "cell_type": "brain, MBP immunostaining intensity",
+          "developmental_stage": "UNKNOWN for the treated panels (postnatal day 18 for the disease baseline; about day 90 for S7I)"
+        },
+        "measured_result_note": "Representative micrographs only, no axis, bar or marker: the authors read 'near-complete rescue' at the high dose; that is their interpretation of an unquantified image, and the panel has no untreated-knockout column.",
+        "receipt": "FTR-20260814-42422765-06",
+        "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
+      },
+      {
+        "id": "DR-AAV-MBP-LD",
+        "target_id": "myelination",
+        "endpoint": "MBP immunostaining intensity relative to wild type",
+        "direction": "UNKNOWN",
+        "source": "Obeid 2026 (PAPER 011, CLAIM 011; PMID 42422765; same laboratory as the 2021 vector paper; Wwox-null mouse, neuron-directed AAV9, WPRE-free dose study)",
+        "locator": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json verbatim_locators.entries[6], [43]; Figure 6F and Supplementary Figure S7I",
+        "epistemic_status": "DATO",
+        "reading_depth": "complete_fulltext_read",
+        "context": {
+          "disease_id": "Wwox-null mouse model of WOREE (engineered null; NOT the Q230P class)",
+          "genotype": "constitutive Wwox deletion (targeted-deletion allele, FVB)",
+          "species": "mouse",
+          "cell_type": "brain, MBP immunostaining intensity",
+          "developmental_stage": "UNKNOWN for the treated panels (postnatal day 18 for the disease baseline; about day 90 for S7I)"
+        },
+        "measured_result_note": "The authors read 'partial recovery' at the low dose from the same unquantified micrographs; the dose-dependence of myelination is never quantified (entry 6).",
+        "receipt": "FTR-20260814-42422765-06",
+        "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
+      }
+    ],
+    "p4_fields": {
+      "endpoint_pursued": "Restoration of WWOX function by neuron-directed replacement, read as a set of separate endpoint families, none of which stands for the others.",
+      "functional_evidence_available": "In the Wwox-null mouse, one laboratory: survival to 300 days at the higher level and postponed death at the lower; body weight not graded; glucose partial and age-dependent; motor score graded; gliosis binary against wild type; myelination unquantified in treated arms.",
+      "temporal_or_model_limit": "Constitutive null, not Q230P; one laboratory (the two papers share senior author and institution); no replication; earliest postnatal treatment ages only and NOT_MEASURED is not SMALLER; no tumour surveillance or overexpression-toxicity endpoint; SWD recorded over one week starting about two weeks after birth; threshold not located.",
+      "cellular_context": {
+        "target_expression": "Neuron-directed construct; WWOX protein graded by vector level and regionally uneven, supraphysiological in survivors and survivor-selected (PREMISE: NOBODY_LOOKED on the upper bound).",
+        "cells_tissue_stage": "Mouse brain regions; the cerebellum, the organ of the ataxic phenotype, is the region the vector reaches least and no efficacy endpoint was measured there; protein also reaches the sciatic nerve while liver stays at background.",
+        "coverage": "Oligodendrocyte-directed construct produced essentially no detectable protein, so the oligodendrocyte question is unanswered, not answered negatively.",
+        "limits": "Residual partial function in a missense context is a reason to expect a DIFFERENT result, not a larger one; the expected level of rescue in the reference genotype does not follow from this study in either direction."
+      }
+    },
+    "p4_card": {
+      "identity": "AAV9-hSynI-WWOX in the dose study (WPRE-free), as in card P4-C-01. This card carries the endpoint families other than the spike-wave discharge row (which lives in P4-C-01 and is linked beside this card): survival, body weight, glucose, composite motor score, gliosis and myelination, each with its untreated or wild-type comparator and its limit. No vector quantity is reproduced; map record R-01.",
+      "indication_and_transfer": "WOREE (all genotypes carry some level of WWOX deficit) as target; origin: a constitutive-null mouse and human knockout and patient-derived organoids. Transfer to a Q230P-class missense or compound context is not established.",
+      "novelty_for_woree": "Already studied (two mouse papers, one laboratory). A gene-therapy programme for WOREE is recorded at grant level (census § 3); that is not a registered study.",
+      "state_of_known_roads": "partial: the only measured rescue in the corpus, complete on several R-class endpoints, with no S, C or D datum.",
+      "pathway_and_objective": "RECUPERO_PROFONDO.",
+      "expected_contribution": "Recovery of function by replacement (R-class demonstrated in the null mouse); nothing is stated for clinical benefit.",
+      "mechanism": "Target: WWOX gene dosage in neurons; type: replacement; direction: protein up; context: null mouse brain.",
+      "sources": {
+        "internal": [
+          "CLAIM 002, CLAIM 004, CLAIM 011 (flagged for review, NOT consolidated), CLAIM 040, TX-007, DL-MOL-005, DIS-021, DIS-023",
+          "disease-models/wwox/research/drug_repurposing/woree_rescue_reference_scaffold.md §§ 2, 3",
+          "disease-models/wwox/research/repurposing_known_roads_20261020_scientist-a.md § 2.1"
+        ],
+        "external_not_wwox_evidence": [],
+        "note": "Here the sources ARE WWOX evidence in the null mouse; the transfer to the reference genotype is the gap."
+      },
+      "evidence_for_and_against": {
+        "for": [
+          "SWD to a level not distinguishable from wild type in the strongest causal design of the corpus (blinded; single vector level).",
+          "Durable survival to 300 days at the higher vector level, comparable to the wild-type arm (which itself lost about 29 percent).",
+          "Graded WWOX protein, glycaemia at one age and motor score."
+        ],
+        "against": [
+          "Not independently replicated within the repository; the source's mouse-versus-human construct comparison is an intra-study control, and the human-organoid source was not tested here.",
+          "SURVIVAL IS A STEP IN THESE DATA, BUT A STEP AND A STEEP CONTINUUM ARE INDISTINGUISHABLE: the lower level postpones death and reaches extinction; two dose points cannot locate a threshold; the adjudication in CLAIM 011 reads the step as strengthened, not established.",
+          "Body weight is equal at the two levels at one age and the weight comparison is survivor-conditioned on the lower side: an equality between unequal denominators is not evidence of grading.",
+          "Myelination dose relation never quantified; gliosis result binary against wild type with no untreated-null comparator; SWD has no low-level arm.",
+          "No tumour surveillance of any kind in a pro-apoptotic tumour suppressor delivered irreversibly; no measured ceiling.",
+          "Treatment age window tested only at the earliest postnatal ages; later NOT_MEASURED.",
+          "Behaviour at 3 months has no untreated-null arm by construction and a text-versus-panel conflict, not adjudicated."
+        ],
+        "transfer_limits": "Null versus missense or compound context; mouse absence-type SWD versus human convulsive repertoire."
+      },
+      "time_to_access": "UNKNOWN. The census records a programme with a gene-therapy objective at grant level; no registered WOREE study; sponsor-declared authorisation, enrolment and first dose UNKNOWN.",
+      "time_to_benefit": "UNKNOWN in humans. In the mouse the SWD effect was recorded over one week starting about two weeks after birth; no earlier ECoG timepoint exists.",
+      "pharmacology": "Not applicable in the small-molecule sense: biodistribution regionally uneven; potency, selectivity and CNS exposure of a human product: UNKNOWN. The absolute vector quantity is uncertain by exactly a factor of two in the source and no figure is reproduced.",
+      "paediatrics_and_interactions": "UNKNOWN. No paediatric suitability is presumed by this card, for the candidate or for any historical authorisation of it for another use.",
+      "scope_of_checks": {
+        "support_and_replication": "One laboratory; no replication; support is intra-study.",
+        "formal_checks": "Values are those bound in woree_rescue_reference_scaffold.md section 2 and in manifest PMID42422765.json; entries 40, 41, 10, 14, 15 and 45 carry adverse blind-audit findings that were repaired at source and whose repairs have not been re-judged; entries 27, 6, 43, 36, 37, 9, 44, 47 carry none.",
+        "card_inferences_owed_audit": "The choice to write the low-dose survival and weight rows with the same sign as the high-dose rows (a sign comparison) and to name them a postponement and a non-graded equality is the card's reading and is owed a blind audit by another actor."
+      },
+      "question_history": [
+        "CLAIM 011 flag of 2026-08-10 (dose-dependent over a threshold) -> NARROW adjudication CC-20261021-SCIENTIST-C-CLAIM011-DOSE-ADJUDICATION-01",
+        "DL-MOL-005, DIS-021, DIS-023",
+        "TX-007"
+      ],
+      "predictions": "None; no engine, no score.",
+      "next_measurement": "An intermediate-level arm, defined as a fraction of the primary's higher level (never in absolute quantity), carried to 300 days with survival, weight, glucose, ECoG and quantified myelin and gliosis with an untreated-knockout arm in the same panel; and an independent replication.",
+      "status": "hypothesis",
+      "status_reason": "Transfer to the reference genotype not established; no replication; several endpoint families are not dose-graded or not quantified.",
+      "value_added": "Puts the study's other endpoint families into assertion rows, with the comparator actually run, so the join reads them and so a partial or non-graded endpoint is not collapsed into 'rescue'. The prose of P4-C-01 held them only as text.",
+      "clinical_census": "Clinical census, ClinicalTrials.gov API v2, 2026-10-20 (disease-models/wwox/research/drug_repurposing/clinical_census_20261020.md): seven separate queries returned no registered WOREE interventional study; the only synonym-driven record is one observational natural-history registry. Carried with the census's own caution: \"A missing hit does not prove that no study exists.\" It answers seven queries against one registry on one date; unregistered, differently worded, non-NLM or later-registered studies are not excluded."
+    },
+    "not_known": [
+      "Whether a missense or compound context with partial residual function would respond more, less or differently.",
+      "The upper bound of safe expression and any tumour risk.",
+      "Whether treatment after the earliest postnatal ages helps less, equally or more.",
+      "The shape of the dose relation between the two tested vector levels.",
+      "Whether the source's result is reproduced by an independent laboratory.",
+      "Whether the endpoints that are not dose-graded (weight, glucose at postnatal day 10 and 30, gliosis, myelination) would separate with an intermediate level.",
+      "Cognition: no cognitive endpoint is measured anywhere in the study; behaviour at three months has no untreated-null arm by construction.",
+      "Whether an oligodendrocyte-directed construct that produces measurable WWOX protein would add to a neuronal one: the MBP-promoter arm produced no benefit and essentially no detectable protein (entry 45; repaired adverse audit), so the question is unanswered, not answered negatively."
+    ],
+    "evidence_against": [
+      "Survival: a step and a steep continuum are indistinguishable; threshold not located.",
+      "No replication within the repository (two papers, one senior author and institution); the human-organoid AAV9-WWOX source was not tested for this claim.",
+      "No tumour surveillance.",
+      "Body weight is equal at the two levels and survivor-conditioned on the low-dose side (entry 41, repaired adverse audit not re-judged).",
+      "Glucose at postnatal day 10 is not significantly corrected by either level against the untreated knockout (the text says partially); the dose separation at day 20 is gone by day 30.",
+      "Gliosis: the two quantified treated-arm panels have no untreated-knockout comparator and the low dose is significantly worse than wild type on astrocyte area.",
+      "Myelination of the treated arms is never quantified."
+    ],
+    "bridge_gaps_exposed": [
+      "The bridge compares signs on equal target, endpoint and context. Low-dose rows share the sign of the high-dose rows on survival and weight; the difference (postponement, non-graded equality, survivor conditioning) is in the assertion notes, not in any summary field.",
+      "Where the treated-arm panel has no untreated-knockout arm (glucose at day 20, gliosis area, myelination) the direction is written UNKNOWN: the comparison is against wild type only and the bridge cannot express that.",
+      "Dose is not a context dimension: low-dose and high-dose rows differ only in their ids and notes."
+    ],
+    "translation": {
+      "pediatric_suitability": "UNKNOWN. No paediatric suitability is presumed by this card, for the candidate or for any historical authorisation of it for another use.",
+      "cns_exposure": "Not applicable in the small-molecule sense; biodistribution in the null mouse is regionally uneven. Human product: UNKNOWN.",
+      "interactions": "UNKNOWN",
+      "access": "UNKNOWN. A programme with a gene-therapy objective for WOREE is recorded at grant level; no registered WOREE interventional study on that registry on 2026-10-20 (a missing hit does not prove that none exists); authorisation, enrolment and first dose UNKNOWN.",
+      "time_to_benefit": "UNKNOWN in humans. In the null mouse the discharge effect was recorded over one week starting about two weeks after birth.",
+      "functional_rescue": "Demonstrated in the Wwox-null mouse on several endpoints by one laboratory (R-class), not replicated; in humans UNKNOWN."
+    },
+    "p4_roadmap_fields": {
+      "indication_and_transfer": "WOREE (all genotypes carry some level of WWOX deficit) as target; origin: a constitutive-null mouse and human knockout and patient-derived organoids. Transfer to a Q230P-class missense or compound context is not established.",
+      "verification_scope": "{\"support_and_replication\": \"One laboratory; no replication; support is intra-study.\", \"formal_checks\": \"Values are those bound in woree_rescue_reference_scaffold.md section 2 and in manifest PMID42422765.json; entries 40, 41, 10, 14, 15 and 45 carry adverse blind-audit findings that were repaired at source and whose repairs have not been re-judged; entries 27, 6, 43, 36, 37, 9, 44, 47 carry none.\", \"card_inferences_owed_audit\": \"The choice to write the low-dose survival and weight rows with the same sign as the high-dose rows (a sign comparison) and to name them a postponement and a non-graded equality is the card's reading and is owed a blind audit by another actor.\"}"
+    },
+    "reading_guard": "CONFLICTING reflects endpoints that move differently (several OPPOSES, one measured null, several not comparable); no row is a rescue verdict. Low-dose and high-dose rows share a sign on survival and weight but are a postponement and a non-graded equality. Everything is the Wwox-null mouse of one laboratory: nothing is said about the Q230P class, dose-dependence beyond the graded endpoints named, tumour risk, efficacy or safety in any person.",
+    "label_lookup": {
+      "status": "NOT_ATTEMPTED"
+    },
+    "card_conventions": [
+      "IPOTESI throughout; the bridge forces it. No score, rank, probability or blended index is carried, and none may be derived from this card.",
+      "directional_summary compares signs only where target, endpoint and every context dimension match; UNRESOLVED means no matched comparison exists, which is a statement about the record, not about the biology.",
+      "A genetic or tool-compound row is not a row for the named drug: the identity of what was given is written in each assertion.",
+      "label_lookup is NOT_ATTEMPTED on every card: the bridge has no network and no pharmacological-label search was run. It is not NO_MATCH_FOUND.",
+      "No dose, route, schedule or paediatric suitability appears; concentrations and vector quantities of the sources are deliberately not reproduced.",
+      "Every adjacent source is labelled NOT WWOX EVIDENCE at class level."
+    ],
+    "no_new_reading": "No paper was opened for this card. Every value is bound in woree_rescue_reference_scaffold.md section 2 (filled 2026-10-21) and in the deep-dive manifest PMID42422765.json; the spike-wave discharge row is in P4-C-01."
+  },
+  "translation": {
+    "pediatric_suitability": "UNKNOWN. No paediatric suitability is presumed by this card, for the candidate or for any historical authorisation of it for another use.",
+    "cns_exposure": "Not applicable in the small-molecule sense; biodistribution in the null mouse is regionally uneven. Human product: UNKNOWN.",
+    "interactions": "UNKNOWN",
+    "access": "UNKNOWN. A programme with a gene-therapy objective for WOREE is recorded at grant level; no registered WOREE interventional study on that registry on 2026-10-20 (a missing hit does not prove that none exists); authorisation, enrolment and first dose UNKNOWN.",
+    "time_to_benefit": "UNKNOWN in humans. In the null mouse the discharge effect was recorded over one week starting about two weeks after birth.",
+    "functional_rescue": "Demonstrated in the Wwox-null mouse on several endpoints by one laboratory (R-class), not replicated; in humans UNKNOWN."
+  },
+  "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
+  "limits": [
+    "Technical comparison is not efficacy, safety or experimental validation.",
+    "Sources and receipt references are retained, not independently verified.",
+    "Shared sources are not independent confirmations; scores are not pooled.",
+    "NO_CHANGE is a reported null effect on that endpoint and context: it is not UNKNOWN (not measured), not evidence of safety, and not proof of futility; a null in a non-comparable cell stays UNRESOLVED.",
+    "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
+  ]
+}

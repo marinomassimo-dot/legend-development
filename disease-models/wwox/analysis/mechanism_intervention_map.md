@@ -429,6 +429,8 @@ measure the chloride premise or supply a drug-intervention result.
 
 **Class:** `SPLIT` — written into the record itself on 2026-09-27 (`BATCH_20260927_004`, `CC-20260826-AAV9-ENDPOINT-SPLIT-01` Part 2, op 4), because one class label over nine endpoints was the defect. **`READY_FOR_WWOX_PRECLINICAL_CONSIDERATION`** for **survival · spike-wave discharges · gliosis**, at **high dose**, in the **P0–P5** window. **`PROMISING_BUT_GAP`** for **cognition · developmental trajectory · myelination-in-the-dose-study · cerebellum · post-neonatal administration** — none of these is measured, quantified in a treated arm, or reached by the vector at a level any efficacy endpoint tested. ⚠️ **Motor/locomotor behaviour is in neither list:** the source's running text asserts no locomotor difference (*«showed no significant differences between groups (Figures 4B, 4D–4G)»*) and in its own voice asserts one exceedance outside that set (*«Treated KO mice exhibited significantly higher motor coordination and learning compared with WT mice (Figure 4K).»*), while the panel-level count that would adjudicate the conflict is a **declared attestation over absent bytes**. `NOT_IMPAIRED_AND_NOT_NORMALISED`, and the conflict is recorded rather than resolved. It remains the only entry in the ready class for the three endpoints named.
 
+**Curated card (added 2026-10-27):** the qualified endpoint rows are in `research/drug_repurposing/cards/C01_aav9_wwox.card.json` (spike-wave discharges) and `research/drug_repurposing/cards/C04_aav9_endpoint_families.card.json` (survival, weight, glucose, motor score, gliosis, myelination, each with its comparator and limit); `repurposing_join.py` reads it for this record.
+
 ---
 
 ### R-02 — Memantine (NMDAR antagonism)
@@ -454,6 +456,8 @@ measure the chloride premise or supply a drug-intervention result.
 **Class:** `PROMISING_BUT_MECHANISTIC_GAP` — the gap is that nobody has run the conjunction, and the
 platform to run it has existed for years.
 
+**Curated card (added 2026-10-27):** the NMDA-receptor dependence measured with a tool antagonist, and the statement that memantine itself was never given, are in `research/drug_repurposing/cards/F02_memantine_nmda.card.json`; `repurposing_join.py` reads it for this record.
+
 ---
 
 ### R-03 — Wnt / tankyrase inhibition
@@ -478,6 +482,8 @@ platform to run it has existed for years.
 | **DECISIVE_PRECLINICAL_TEST** | in WOREE organoids, **first measure nuclear β-catenin state**, then XAV939 **vs** CHIR99021 on cortical-layering rescue — the two-armed design is what fixes the sign in the right context |
 
 **Class:** `TRANSFER_HYPOTHESIS` — direction resolved, modality not viable for this population today.
+
+**Curated card (added 2026-10-27):** the qualified disease-side row and the abstention are in `research/drug_repurposing/cards/D02_wnt_tankyrase.card.json`; `repurposing_join.py` reads it for this record.
 
 ---
 
@@ -505,6 +511,8 @@ platform to run it has existed for years.
 **Class:** `DEPRIORITIZE` — not for toxicity, but because **the evidence that made it the strongest
 signal does not say what it was read as saying**, and its direction is wrong on a second axis.
 
+**Curated card (added 2026-10-27):** the qualified rows, including the three-genotype specificity failure, are in `research/drug_repurposing/cards/F01_lithium_gsk3.card.json` (also linked from N-02); `repurposing_join.py` reads it for this record.
+
 ---
 
 ### R-05 — Ketogenic diet
@@ -530,6 +538,8 @@ signal does not say what it was read as saying**, and its direction is wrong on 
 
 **Class:** `PROMISING_BUT_MECHANISTIC_GAP` — the gap being **transcriptome vs flux**, which one
 experiment closes.
+
+**Curated card (added 2026-10-27):** the clinical seizure-control rows are in `research/drug_repurposing/cards_early/EB-KD-01.card.json` and the lactate and PDH rows of the metabolic rationale in `research/drug_repurposing/cards/E04_ketogenic_lactate_axis.card.json`; `repurposing_join.py` reads it for this record.
 
 ---
 
@@ -710,6 +720,8 @@ type**; and lithium activates Wnt, which is already hyperactivated. It remains a
 is not a WWOX-mechanism drug.
 **`REVIVAL_TRIGGER`:** a PTZ arm with an explicit tested `−/−` vs `+/+` contrast, or a different
 GSK3β inhibitor under the same design.
+
+**Curated card (added 2026-10-27):** the qualified rows are in `research/drug_repurposing/cards/F01_lithium_gsk3.card.json` (the same candidate as R-04); `repurposing_join.py` reads it for this record.
 
 ### N-03 — Sodium-channel blockers (carbamazepine, phenytoin, oxcarbazepine) → **target not causally downstream of WWOX**
 **Source ids:** DL-REPO-001.

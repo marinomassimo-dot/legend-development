@@ -71,5 +71,9 @@ sign comparison inside an engineered-null mouse on one endpoint; its packet carr
 - Not carded, deliberately: candidates of the other path (BENEFICIO_PRECOCE: ethosuximide,
   lithium, pro-myelinating, mTOR and symptomatic agents), because this task is
   RECUPERO_PROFONDO only. They are not discarded and their absence here is not a verdict.
+  *(2026-10-27, package W1.1: lithium (`F01_lithium_gsk3`), memantine (`F02_memantine_nmda`) and the AAV9
+  endpoint families (`C04_aav9_endpoint_families`) were carded from evidence already in the repository; the
+  classification of every derived card against the curated set is in the module README, section "Roadmap
+  iteration 2, package W1.1".)*
 
 Regression: `python3 disease-models/wwox/research/drug_repurposing/cards/check_cards.py`.
