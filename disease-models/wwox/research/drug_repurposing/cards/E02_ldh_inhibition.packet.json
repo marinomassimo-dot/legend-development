@@ -222,10 +222,10 @@
    "target_id": "LDH activity in glioblastoma cell lysate and cell viability, and NADH-oxidising enzymes (complex I, malate dehydrogenase)",
    "endpoint": "cellular effect of stiripentol versus enzyme-level LDH inhibition",
    "direction": "DECREASE",
-   "source": "Glioblastoma papers (PMID 42035940, 2026; PMID 36278433, 2022) and a complex I paper (PMID 41570991, 2026), all open access; read in part and re-read at 54 verbatim locators (ldh_readings_w13_locators_20261027.md), blind-audited 2026-10-27; NOT WWOX EVIDENCE",
+   "source": "Glioblastoma papers (PMID 42035940, 2026; PMID 36278433, 2022) and a complex I paper (PMID 41570991, 2026), all open access; read in part and re-read at 54 verbatim locators (ldh_readings_w13_locators_20261027.md), blind-audited 2026-10-27; the receipt on file for PMID 36278433 declares passages inspected and the abstract only, so the row is held at that depth until a fuller receipt for it is recorded; NOT WWOX EVIDENCE",
    "locator": "sada_ldh_precedent_p2a_20261026.md sections 2.2 and 2.3; ldh_readings_w13_locators_20261027.md",
    "epistemic_status": "DATO",
-   "reading_depth": "partial_fulltext_read",
+   "reading_depth": "queried_not_full_read",
    "context": {
     "disease_id": "glioblastoma and small-cell lung cancer cell lines, isolated mitochondria (not WWOX)",
     "genotype": "cancer cell lines",
@@ -234,7 +234,7 @@
     "developmental_stage": "not applicable"
    },
    "measured_result_note": "Cell viability and extracellular acidification fall at tens of micromolar. LDH activity in a lysate of treated cells and on recombinant enzyme falls only at hundreds of micromolar (the size of the lysate inhibition is not in the text and no LDH IC50 exists). Complex I NADH oxidation by isolated mouse heart and liver mitochondria is inhibited from tens of micromolar (plot readings, auditor-confirmed, about 3 points of uncertainty: heart about 48, 5 and 1 percent remaining across the three lowest-to-highest concentrations tested; liver about 67, 36 and 23); no assay compares the two, so potencies are not comparable (INFERENZA: the effective concentrations are ordered complex I below LDH). The text figure of about 70 percent inhibition at the middle concentration is 51 to 53 percent raw in Supplementary Fig 2. The complex I paper reports no inhibition of malate dehydrogenase. Genetic LDHA/B double knockout raises respiratory capacity whereas stiripentol lowers it, so the drug does not phenocopy LDH ablation on respiration (INFERENZA). Cellular effects of stiripentol are therefore not attributable to LDH alone on the available data (the 2026 glioblastoma paper itself reports 'at least a partial role' of LDH). In a mouse glioblastoma xenograft stiripentol prolonged survival (log-rank P 0.002; median survival 80 versus 97 days, human stem-like cells in immunodeficient mice; the dose stated in the Results and legend is not stated in the Methods). None of the sources states which stereoisomer was used. Tumour models: no seizure, neurodevelopment or WWOX meaning.",
-   "receipt": "FTR-20261027-42035940-01; FTR-20261027-41570991-01",
+   "receipt": "FTR-20261027-42035940-01; FTR-20261027-41570991-01; FTR-20261027-36278433-01",
    "evidence_scope": "OTHER_DISEASE_PRECEDENT"
   },
   {
