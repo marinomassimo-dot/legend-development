@@ -1,0 +1,13 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "TASK_ID": "SCORE-VALUETRIAL-IT2-20261027",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "scorer-vt",
+ "OBJECTIVE": "Independent blind scoring of value trial IT2 answers X/Y/Z against reference.md and scoring.md.",
+ "CURRENT_STATE": "COMPLETE",
+ "assigned_on": "2026-10-27",
+ "DEFAULTS_TAKEN": [],
+ "STOP_LOG": []
+}
