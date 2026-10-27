@@ -1,4 +1,4 @@
-molecule	target	type	relation	value	units	assay	document
+molecule	target	organism	type	relation	value	units	assay	document
 memantine	Glutamate receptor ionotropic, NMDA 2C	Rattus norvegicus	Ki	=	700.0	nM	Compound with the N-methyl-D-aspartate glutamate receptor blocking activity	CHEMBL1132713
 memantine	Glutamate [NMDA] receptor	Homo sapiens	Ki	=	540.0	nM	The compound was tested for its ability to block PCP N-methyl-D-aspartate glutamate receptor at the PCP (phenc	CHEMBL1131462
 memantine	Glutamate NMDA receptor; GRIN1/GRIN2B	Homo sapiens	IC50	=	1020.0	nM	Antagonist activity at recombinant NR1/NR2B receptor expressed in Xenopus laevis oocytes	CHEMBL1146243
@@ -39,6 +39,3 @@ memantine	Ionotropic glutamate receptor NMDA 1/2D	Homo sapiens	IC50	=	10000.0	nM
 bumetanide	Solute carrier family 12 member 2	Homo sapiens	Inhibition	=	58.8	%	Inhibition of NKCC1 (unknown origin) transfected in HEK293 cells expressing mbYFPQS plasmid assessed as reduct	CHEMBL5038596
 bumetanide	Solute carrier family 12 member 2	Homo sapiens	Inhibition	=	71.7	%	Inhibition of NKCC1 (unknown origin) transfected in HEK293 cells expressing mbYFPQS plasmid assessed as reduct	CHEMBL5038596
 bumetanide	Solute carrier family 12 member 2	Homo sapiens	IC50	=	1540.0	nM	Inhibition of NKCC1 in human HT-29 cells assessed as inhibition of rubidium uptake incubated for 20 min by ato	CHEMBL5230131
-# mechanism rows for CHEMBL807: []
-# mechanism rows for CHEMBL1072: [["Sodium-(potassium)-chloride cotransporter 2 inhibitor", "CHEMBL1874"]]
-# mechanism rows for CHEMBL1214124: [["Glutamate receptor ionotropic AMPA antagonist", "CHEMBL2096670"]]

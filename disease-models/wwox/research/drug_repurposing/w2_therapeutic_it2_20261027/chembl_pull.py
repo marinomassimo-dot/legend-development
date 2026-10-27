@@ -14,13 +14,14 @@ def get(u):
     with urllib.request.urlopen(B + u, timeout=60) as r:
         return json.load(r)
 with open(out + "/chembl_w2_rows.tsv", "w") as o:
-    o.write("molecule\ttarget\ttype\trelation\tvalue\tunits\tassay\tdocument\n")
+    o.write("molecule\ttarget\torganism\ttype\trelation\tvalue\tunits\tassay\tdocument\n")
     for mol, q in (("memantine", "activity.json?molecule_chembl_id=CHEMBL807&standard_type__in=IC50,Ki&limit=200"),
                    ("bumetanide", "activity.json?molecule_chembl_id=CHEMBL1072&target_chembl_id=CHEMBL1615383&limit=50")):
         for a in get(q)["activities"]:
             if mol == "memantine" and not (a["standard_value"] and "NMDA" in (a["target_pref_name"] or "") or "N-methyl" in (a["target_pref_name"] or "")):
                 continue
             o.write("\t".join(str(x) for x in (mol, a["target_pref_name"], a.get("target_organism"), a["standard_type"], a["standard_relation"], a["standard_value"], a["standard_units"], (a["assay_description"] or "")[:110], a.get("document_chembl_id"))) + "\n")
+    mo = open(out + "/chembl_w2_mechanisms.txt", "w")
     for mol in ("CHEMBL807", "CHEMBL1072", "CHEMBL1214124"):
         m = get("mechanism.json?molecule_chembl_id=" + mol)["mechanisms"]
-        o.write(f"# mechanism rows for {mol}: " + json.dumps([(x["mechanism_of_action"], x["target_chembl_id"]) for x in m]) + "\n")
+        mo.write(f"mechanism rows for {mol}: " + json.dumps([(x["mechanism_of_action"], x["target_chembl_id"]) for x in m]) + "\n")

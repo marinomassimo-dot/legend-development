@@ -5,7 +5,7 @@ Non-canonical research material. Every non-WWOX source is **NOT WWOX EVIDENCE**.
 statement, no efficacy claim, no score. Nothing here is medical advice. Statements tagged INFERENZA or IPOTESI
 are **owed a blind audit by someone other than the producer** (section 7 lists the decisive ones).
 
-Files: `organoid_panel.py` -> `organoid_panel_cpm.tsv`; `chembl_pull.py` -> `chembl_w2_rows.tsv`;
+Files: `organoid_panel.py` -> `organoid_panel_cpm.tsv`; `chembl_pull.py` -> `chembl_w2_rows.tsv` (+ `chembl_w2_mechanisms.txt`);
 `build_cards.py` writes cards `F01`, `F02`, `F03` into `../cards/` (`check_cards.py`: 19 packets, 0 problems).
 Commit candidate: `../../commit_candidates/CC-20261027-SCIENTIST-C-W2-THERAPEUTIC-01.md`.
 

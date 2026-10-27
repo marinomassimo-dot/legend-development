@@ -1,0 +1,3 @@
+mechanism rows for CHEMBL807: []
+mechanism rows for CHEMBL1072: [["Sodium-(potassium)-chloride cotransporter 2 inhibitor", "CHEMBL1874"]]
+mechanism rows for CHEMBL1214124: [["Glutamate receptor ionotropic AMPA antagonist", "CHEMBL2096670"]]
