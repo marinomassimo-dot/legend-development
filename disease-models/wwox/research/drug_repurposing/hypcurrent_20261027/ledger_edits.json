@@ -1,0 +1,78 @@
+[
+ {
+  "old_str": "(non solo antiepilettico empirico)\n- **Leva:** 2 (compensazione-pathway) + 4 (protezione-finestra)",
+  "new_str": "(non solo antiepilettico empirico)\n- **CURRENT READING (2026-10-27, `CC-20261027-SCIENTIST-B-HYPCURRENT-01`; EXPLORATORY; a pointer, not a ranking, and the dated bullets below are HISTORY).** Status `proposed-to-L9` = an item to discuss with the treating team, not a recommendation. Score **12/15** (evidence 1/3): the line `Ranking (aggiornato 2026-09-21)`; **13/15 is the superseded 2026-07-10c value.** Why evidence is 1/3: the HIF1A-to-PDK1 step is a transcript in Wwox-null MEFs (mouse, non-neural; PMID 25012504, DL-MECH-095); the PDK-to-PDH step is not measured in any human system; the one human PDH-activity measure (non-neural fibroblast line, PMID 35328751 Fig 5b) shows no significant difference with n unstated, which is neither confirmation nor refutation; the one neural datum (organoid transcripts, GSE156243) supports a glycolytic arm and not PDK up, and is not flux. Human metabolic screens are reported normal where done (count disputed, see map N-06). Proposed test: a PDH-specific or flux readout in donor-derived and in neural cells: PDH activity in a phosphorylation-preserving lysate, phospho-PDHA1 (Ser293; ESPANSIONE, numbering to be checked), 13C-glucose or ketone tracing, pyruvate/lactate ratio, NADH/NAD+; Seahorse OCR/ECAR is a general bioenergetic screen, not a PDH measure and not the only falsifier (the mouse MEF already shows reduced OCR). Safety line and Note L9 concern the generic paediatric protocol, not suitability for WWOX-DEE.\n- **Leva:** 2 (compensazione-pathway) + 4 (protezione-finestra)"
+ },
+ {
+  "old_str": "- **🔺 UPGRADE 2026-07-10 — il caveat principale è caduto.**",
+  "new_str": "- **[HISTORICAL 2026-07-10; its 'strengthened' is superseded by the 07-10c, 09-21 and 10-25 bullets below] 🔺 UPGRADE 2026-07-10 — il caveat principale è caduto.**"
+ },
+ {
+  "old_str": "(Quel paper era in corpus, Tier A, mai letto — vedi [[discovery_ledger_current#^fm-015|FM-015]].)",
+  "new_str": "(Quel paper era in corpus, Tier A, mai letto — vedi [[discovery_ledger_current#^fm-015|FM-015]].) [Qualifier 2026-10-27: the organoid datum is a transcriptome (four KO against two WT libraries, one laboratory), not a flux or a PDH measurement; 'strengthened' is not a current reading.]"
+ },
+ {
+  "old_str": "- **🔺 UPGRADE 2026-07-09b (dati primari acquisiti, PMID 25012504 / PMC4211377):**",
+  "new_str": "- **[HISTORICAL 2026-07-09b; qualified at the end of this bullet and by the 09-21 bullet] 🔺 UPGRADE 2026-07-09b (dati primari acquisiti, PMID 25012504 / PMC4211377):**"
+ },
+ {
+  "old_str": "L'inibizione farmacologica di HIF1α (**digossina**) reverte il fenotipo nei KO.",
+  "new_str": "L'inibizione farmacologica di HIF1α (**digossina**) reverte il fenotipo nei KO. [Qualifier 2026-10-27, DL-MECH-095: the in-vivo readout is acute blood glucose 40 minutes after one injection, the transcript panel has n=2 and shows GLUT1 and PHD3 (not PDK1), and the dose is reported ambiguously; digoxin is target validation, not a candidate.]"
+ },
+ {
+  "old_str": "→ La catena `WWOX↓ → HIF1α↑ → PDK1↑ → ⊣PDH` **non è più un'inferenza a due salti: l'enzima-chiave è misurato come sovraespresso.**",
+  "new_str": "→ La catena `WWOX↓ → HIF1α↑ → PDK1↑ → ⊣PDH` **non è più un'inferenza a due salti: l'enzima-chiave è misurato come sovraespresso.** [Qualifier 2026-10-27, dossier of PMID 25012504 and DL-MECH-095: PDK1 is measured as a TRANSCRIPT in mouse MEFs and tissues; PDH phosphorylation, PDK activity and carbon flux through PDH were not measured, so the last link ⊣PDH remains inferred. The 09-21 bullet below is the current reading of this step.]"
+ },
+ {
+  "old_str": "— ora l'unico endpoint valido, dato che il lattato è ambiguo.",
+  "new_str": "— ora l'unico endpoint valido, dato che il lattato è ambiguo. [Qualifier 2026-10-27: 'unico' is withdrawn. Seahorse OCR/ECAR reads respiration and acidification in general, not PDH; the discriminating readouts are PDH-specific (see CURRENT READING). Cells from skin or blood are non-neural.]"
+ },
+ {
+  "old_str": "L'unico test che può falsificare l'ipotesi resta il **Seahorse OCR/ECAR su cellule donor-derived**. Se anche quello risultasse normale, l'ipotesi cade.",
+  "new_str": "L'unico test che può falsificare l'ipotesi resta il **Seahorse OCR/ECAR su cellule donor-derived**. Se anche quello risultasse normale, l'ipotesi cade. [Qualifier 2026-10-27: not 'the only test' and 'falls' is too strong. A normal general bioenergetic profile in non-neural donor cells is non-significance, not equivalence, and does not exclude a neural PDH block; it would lower the rationale further.]"
+ },
+ {
+  "old_str": "Quattro fonti indipendenti: Shaukat 2018",
+  "new_str": "[Count not reconciled 2026-10-27: DL-BIO-008 and map N-06 (adjudicated 2026-10-24) name one complete human screen plus one MRS case with the opposite direction; the contributions of the other named sources have no locator traced in this package.] Quattro fonti indipendenti: Shaukat 2018"
+ },
+ {
+  "old_str": "(the immortalised skin-fibroblast line 1BR.3.N;",
+  "new_str": "(the immortalised skin-fibroblast line 1BR.3.N, NON-NEURAL, so it neither supports nor excludes a neural block;"
+ },
+ {
+  "old_str": "il che lo rende anche il primo, non solo il decisivo.",
+  "new_str": "il che lo rende anche il primo, non solo il decisivo. [Qualifier 2026-10-27: 'resta l'unico falsificatore' is withdrawn; see CURRENT READING for the PDH-specific alternatives, which this entry already asked for under 'PDH phosphorylation, flux' and which the 2026-09-21 bullet does not carry.]"
+ },
+ {
+  "old_str": "- **Ranking (precedente, 2026-07-10c):**",
+  "new_str": "- **[HISTORICAL, SUPERSEDED 2026-09-21: DO NOT SELECT] Ranking (precedente, 2026-07-10c):**"
+ },
+ {
+  "old_str": "- **Ranking (aggiornato 2026-09-21):**",
+  "new_str": "- **CURRENT Ranking (aggiornato 2026-09-21; unchanged on 2026-10-27):**"
+ },
+ {
+  "old_str": "Il rischio è gestito da un protocollo esistente, non da noi.\n- **Traslabilità al modello di malattia:** alta.",
+  "new_str": "Il rischio è gestito da un protocollo esistente, non da noi. [Qualifier 2026-10-27: 'verde' describes the generic, monitored paediatric protocol in epilepsy. It is not an assessment of suitability for WWOX-DEE or for any individual (no WWOX-specific safety datum exists), and the existence of a paediatric protocol is not evidence of benefit.]\n- **Traslabilità al modello di malattia:** alta. [Qualifier 2026-10-27: translatability of the protocol, not of the WWOX-specific rationale (evidence 1/3).]"
+ },
+ {
+  "old_str": "### HYP-20260709-05 — Dicloroacetato (DCA) per riattivare PDH a valle del blocco HIF1α→PDK\n- **Leva:** 3 (repurposing)",
+  "new_str": "### HYP-20260709-05 — Dicloroacetato (DCA) per riattivare PDH a valle del blocco HIF1α→PDK\n- **CURRENT READING (2026-10-27, `CC-20261027-SCIENTIST-B-HYPCURRENT-01`; EXPLORATORY; a pointer, not a ranking).** Status `parked`; no ranking line exists and none is added. The premise is the HIF1A-PDK-PDH chain of HYP-20260709-01 (PDK1 transcript only; PDH step unmeasured in any human system; see that CURRENT READING), and no paper measures dichloroacetate in any WWOX system. Safety: the supportable statement is the map N-08 wording (an electrophysiological nerve-conduction signal, asymptomatic in the one long-term cohort of 8 patients with mitochondrial disease, symptomatic in a separate adult trial; exposure rises with age and GSTZ1 genotype; nothing measured in WWOX), not 'dose-dependent neurotoxicity in a child' below. Proposed test: the PDH-specific readout named in HYP-20260709-01; dichloroacetate itself waits on `legend-safety-triage` and on that readout.\n- **Leva:** 3 (repurposing)"
+ },
+ {
+  "old_str": "In un bambino con encefalopatia, il rapporto rischio/beneficio è sfavorevole senza prova del meccanismo.",
+  "new_str": "In un bambino con encefalopatia, il rapporto rischio/beneficio è sfavorevole senza prova del meccanismo. [HISTORICAL wording, narrowed 2026-10-24 in map N-08 (first-hand partial reading of the long-term paediatric-to-adult safety study; the earlier phrase had no registry source): see CURRENT READING above.]"
+ },
+ {
+  "old_str": "HYP-01 domina HYP-05",
+  "new_str": "HYP-01 domina HYP-05 [qualifier 2026-10-27: 'domina' is a portfolio judgement on the shared PDK axis, not a head-to-head comparison, and is untested (map N-08)]"
+ },
+ {
+  "old_str": "\n- **Traccia (Track):** A (variant-independent); Track B (Q230P class) unmeasured.",
+  "new_str": "\n- **CURRENT READING (2026-10-27, `CC-20261027-SCIENTIST-B-HYPCURRENT-01`; EXPLORATORY; a pointer, not a ranking).** Status `generated`, not ranked. No signed human ISR readout exists: the fly Atf4 rise needs amyloid and is not WWOX-DEE evidence; the one human knockout organoid deposit shows the ATF4/ISR target SET LOWER than chance at transcript level (not eIF2 alpha phosphorylation or ATF4 protein, which are unmeasured). A paediatric tolerability dataset in a disease of eIF2B itself (abstract-level) is not suitability for WWOX-DEE. Proposed test: Stage 1 below (eIF2 alpha phosphorylation, ATF4 protein and targets, human neural cells at matched maturity); reopening only on a raised ISR readout.\n- **Traccia (Track):** A (variant-independent); Track B (Q230P class) unmeasured."
+ },
+ {
+  "old_str": "\n- **Traccia (Track):** A; Track B untested.",
+  "new_str": "\n- **CURRENT READING (2026-10-27, `CC-20261027-SCIENTIST-B-HYPCURRENT-01`; EXPLORATORY; a pointer, not a ranking).** Status `generated`, not ranked. One fly precedent (Ldh RNAi improved climbing in the amyloid-plus-Wwox-reduction genotype, missing controls); no human WWOX datum; human lactate reported normal or extremely low. Stiripentol's LDH potency is UNRESOLVED (single-concentration measures, no fitted potency), and its effects on lactate and respiration are not an LDH effect; a weak enzyme measure is not general inefficacy. Proposed test: Stage 0 (fitted potency on human LDHA/LDHB) before any WWOX arm, then lactate and LDH activity in WWOX-deficient human neural cells at matched maturity. Non-neural and non-human data here are not neural evidence.\n- **Traccia (Track):** A; Track B untested."
+ }
+]

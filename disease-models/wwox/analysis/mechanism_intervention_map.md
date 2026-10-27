@@ -300,7 +300,8 @@ WWOX loss
   → HIF1alpha de-repressed in normoxia                  [measured, MEF + cancer]
   → PDK1 up (with GLUT1, HK2, PKM2)                     [qRT-PCR, Wwox-KO — the key enzyme is
                                                          MEASURED, not inferred]
-  → PDK1 inhibits PDH -> pyruvate blocked at the TCA entry
+  → PDK1 inhibits PDH -> pyruvate blocked at the TCA entry   [INFERRED: PDK1 is a transcript; PDH
+                                                         phosphorylation, activity and flux are not measured in any WWOX system]
   → human WWOX-KO cerebral organoids: OXPHOS/ATP-synthesis inhibited, glycolysis enriched
                                                         [RNA-seq, GSE156243 — transcriptome, NOT flux]
   → ACTIONABLE NODE: TCA entry, DOWNSTREAM of PDH
@@ -311,13 +312,13 @@ WWOX loss
 ⚠️ **Three brakes, all canonical, all pointing the same way:**
 - **The transcriptome is not the flux.** `n=2` WT vs `n=4` KO; EV tables select on raw `P<0.01`. No
   Seahorse, no fluxomics, in any WWOX system.
-- **Human metabolism is normal, and it was checked four times.** Lactate, ammonia, acylcarnitines,
+- **Human metabolism is reported normal where it was checked; "four times" is a count NOT reconciled with N-06 (2026-10-24: one complete screen plus one MRS case in the opposite direction).** Lactate, ammonia, acylcarnitines,
   uric acid, homocysteine, plasma amino acids, urinary organic acids, transferrin isoforms — normal;
   a complete metabolic and mitochondrial screen including muscle biopsy — normal; MRS — normal. The
   single outlier (cerebral lactate *"extremely low"*, the opposite of the Warburg prediction) carries
   a confounding second variant in HSPG2 ([[discovery_ledger_current#DL-BIO-009 — Il metabolismo umano nel deficit di WWOX è, per quanto misurato, **normale**. Il modello murino non si trasferisce.|DL-BIO-009]],
   [[discovery_ledger_current#⚠️ DL-BIO-008 — Contraddizione sul lattato: alto nel siero del topo, **"extremely low" nell'MRS cerebrale umana**|DL-BIO-008]]). **Do not look for confirmation in blood: it has been
-  looked for four times and it is normal.**
+  looked for and, in the cases reported, it is normal (count: see N-06).**
 - **The real-world continuation signal runs against the rationale.** Ketogenic diet was tried in 3
   WWOX-DEE patients and continued in 1; cannabidiol was continued in 4/4 who started it. In a severe
   WOREE case the ketogenic diet is listed among the *ineffective* interventions alongside eleven
@@ -325,8 +326,12 @@ WWOX loss
 
 ⇒ The KD rationale is **not falsified** — it rests on the PDK1→PDH block and depressed OXPHOS, not on
 lactate — but the easiest endpoint for verifying it has been lost, and the expectation of benefit
-must be calibrated **down**. The only test that can still falsify it is **Seahorse OCR/ECAR on
-donor-derived cells**; if that is normal, the hypothesis falls (HYP-20260709-01).
+must be calibrated **down**. Seahorse OCR/ECAR on donor-derived cells is the cheapest general
+bioenergetic screen, **not a PDH-specific measure and not the only possible falsifier**: PDH-specific
+readouts (PDH activity in a phosphorylation-preserving lysate, phospho-PDHA1, 13C-glucose or ketone tracing,
+pyruvate/lactate ratio, NADH/NAD+) are the discriminating ones. A normal Seahorse in non-neural donor cells
+would weaken the rationale; it would not by itself refute a neural block, and a normal result is non-significance,
+not equivalence (HYP-20260709-01, correction 2026-10-27). Current reading of the hypothesis: `therapeutic_hypotheses_ledger_current.md` HYP-20260709-01, line `CURRENT READING` (score 12/15, evidence 1/3).
 
 ### CHAIN F — allele-level protein rescue (M7), and CHAIN G — allele-level sequence correction (M8)
 
@@ -515,7 +520,7 @@ signal does not say what it was read as saying**, and its direction is wrong on 
 | **TARGET** | TCA entry, downstream of the PDK1→PDH block |
 | **MECHANISM** | ketone bodies enter as acetyl-CoA **below** the block, without needing PDH reactivation |
 | **EVIDENCE_LEVEL** | **T3/T4** empirically (standard of care in DEE; GLUT1-deficiency is treated with it) + **T2** for the WWOX-specific rationale |
-| **WWOX_DIRECT_EVIDENCE** | PDK1/GLUT1/HK2/PKM2 measured up in Wwox-KO; OXPHOS↓/glycolysis↑ in human WWOX-KO cerebral organoids (transcriptome). Clinically: seizure improvement in 3/5 WOREE patients in one report |
+| **WWOX_DIRECT_EVIDENCE** | PDK1/GLUT1/HK2/PKM2 measured up in Wwox-KO; OXPHOS↓/glycolysis↑ in human WWOX-KO cerebral organoids (transcriptome). Clinically: improved seizure control reported for 3 patients of a 5-patient WOREE series (CLAIM 042: uncontrolled; the number of patients exposed to the diet is not stated, so 3/5 is not a response rate; responders carry splice-region or deletion alleles, none missense) |
 | **NEAR_DISEASE_EVIDENCE** | strong across genetic DEE generally |
 | **HUMAN_USE_STATUS** | established paediatric intervention |
 | **CLINICAL_MATURITY** | highest in the file — an existing protocol with existing monitoring |
@@ -524,8 +529,8 @@ signal does not say what it was read as saying**, and its direction is wrong on 
 | **REVERSIBILITY_REQUIREMENT** | ✅ fully — stoppable immediately |
 | **KNOWN_MAJOR_SAFETY_CONSTRAINTS** | 🟢 the lowest-risk entry: no new molecule, no BBB problem, risk managed by an existing protocol |
 | **EXPECTED_DIRECTION_OF_EFFECT** | restore oxidative flux; **NOT** a demonstrated developmental modification |
-| **MAIN_TRANSLATIONAL_RISK** | 🔴 the rationale rests on models; **human WWOX metabolism is normal across four independent sources**, and the real-world continuation signal is poor (1/3 continued; listed among ineffective interventions in a severe case) |
-| **DECISIVE_PRECLINICAL_TEST** | **Seahorse OCR/ECAR on donor-derived fibroblasts/LCL vs control** — the only remaining falsifier since lactate became ambiguous. Zero-cost second test: Seahorse on the existing WWOX-KO organoids, closing the transcriptome→flux gap |
+| **MAIN_TRANSLATIONAL_RISK** | 🔴 the rationale rests on models; **human WWOX metabolism is reported normal in the cases screened (the count "four independent sources" is not reconciled with N-06)**, and the real-world continuation signal is poor (1/3 continued; listed among ineffective interventions in a severe case) |
+| **DECISIVE_PRECLINICAL_TEST** | **Seahorse OCR/ECAR on donor-derived fibroblasts/LCL vs control** — a general bioenergetic screen, NOT PDH-specific and not the only possible falsifier (correction 2026-10-27: add PDH activity in a phosphorylation-preserving lysate, phospho-PDHA1, 13C-glucose/ketone tracing, pyruvate/lactate ratio, NADH/NAD+). Second test: Seahorse on the existing WWOX-KO organoids (human neural, but a different maturity than the donor cells), narrowing the transcriptome→flux gap |
 | **SOURCE_IDS** | CLAIM 042, CLAIM 020, DL-MECH-020 |
 
 **Class:** `PROMISING_BUT_MECHANISTIC_GAP` — the gap being **transcriptome vs flux**, which one
@@ -1176,7 +1181,7 @@ Ordered by *information gained per unit cost*, not by ambition.
 |---|---|---|---|
 | **E-1** | **Re-read PMID 34634460 with verbatim locators**: was the NMDAR/gap-junction dependence established pharmacologically? | Whether Chain B is T1 or T2 — i.e. whether R-02 is a translation gap or an untested conjunction | ~zero (one reading) |
 | **E-2** | **Gramicidin perforated-patch `E_GABA`** in WWOX-KO vs parental neurons/organoids + NKCC1/KCC2 + GABA response | Converts the whole M3 axis from T6 to T2, **or closes it**. Also decides bumetanide, and retro-validates or retires the depolarizing-GABA reading of a decade of interpretation | low — the platform exists |
-| **E-3** | **Seahorse OCR/ECAR** on donor-derived cells (and on the existing WWOX-KO organoids) | The only remaining falsifier of R-05; closes the transcriptome→flux gap that weakens all of M6 | low |
+| **E-3** | **Seahorse OCR/ECAR** on donor-derived cells (and on the existing WWOX-KO organoids) | The cheapest general screen for R-05, not PDH-specific and not the only falsifier (see R-05); narrows, does not close, the transcriptome→flux gap that weakens all of M6 | low |
 | **E-4** | **Junction-spanning RT-PCR ± NMD block + amplicon (and long-read) sequencing** on splice-allele-carrying cells | The mandatory gate before **any** correction-modality choice; and supplies the efficacy endpoint (exon8–9/core ratio) | low |
 | **E-5** | **Nascent synthesis + pulse-chase with soluble/insoluble fractionation** on SDR-missense cells | Discriminates translation vs solubility vs turnover — the branch on which the entire R-09 programme depends | medium |
 | **E-6** | **Intermediate-dose AAV arm between 1.23 and 2.63 × 10¹¹ vg** | Localizes the survival **threshold** — the most informative experiment the gene-therapy paper implies and did not run | medium |
@@ -1251,7 +1256,7 @@ Ordered by *information gained per unit cost*, not by ambition.
 | **Exon 8→9 vs core RT-qPCR** | acceptor-allele state and correction efficacy | published, validated at n=381/89 LCL; needs junction-spanning primers plus an NMD block |
 | **GS-1 peptide phosphorylation assay** | GSK3β docking-site occupancy — the assay that **refuted** the substrate-selectivity argument | reusable to test H-1 |
 | **Gramicidin perforated patch** | `E_GABA` — the missing measurement of the entire M3 axis | standard technique, never applied to a WWOX model |
-| **Seahorse OCR/ECAR** | the transcriptome→flux gap across all of M6 | the single falsifier of R-05 |
+| **Seahorse OCR/ECAR** | the transcriptome→flux gap across all of M6 | a general screen for R-05, not the single falsifier (PDH-specific readouts are listed in R-05) |
 | **MEA burst frequency/amplitude + phase-amplitude coupling; LFP 0.25–1 Hz band power; GAD67/VGLUT1 ratio** | reusable network endpoints, already quantified in WWOX systems | usable as pre-specified endpoints rather than post-hoc |
 
 **Comparator therapeutic programmes** (paradigms, **not** transferable evidence): migalastat/Fabry

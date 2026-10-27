@@ -4,7 +4,7 @@ Declared 2026-10-25 by the Orchestrator. Exploratory. Not medical advice; no dos
 Everything below that is not WWOX data is NOT WWOX EVIDENCE.
 
 ## Why this and not another candidate
-The hypotheses ledger ranks HYP-20260709-01 (ketogenic diet with a WWOX-specific rationale) 13/15 and `proposed-to-L9`, the highest
+The hypotheses ledger ranks HYP-20260709-01 (ketogenic diet with a WWOX-specific rationale) 13/15 [ERRATUM 2026-10-27: 13/15 is the superseded 2026-07-10c value; the current line is 12/15, evidence 1/3, since 2026-09-21] and `proposed-to-L9`, the highest
 of the drug-like, variant-independent entries; the two above it are an endpoint and an allele-specific assay. It is a Track A
 candidate (the rationale is not tied to a variant). Its chain is: loss of WWOX de-represses HIF1A, which raises PDK, which inhibits
 PDH, which shifts glycolysis over oxidative phosphorylation, which ketone bodies bypass by entering the TCA cycle downstream of PDH.
@@ -104,3 +104,6 @@ Monte Carlo noise, no change in meaning).
 The universe mean shift is +0.086, so a set at +0.17 is barely above the background. The two sets not discussed in the result text
 are reported here so that only the favourable ones do not appear: HIF1A-and-regulators and ketone-use enzymes are mildly up and neither
 exceeds chance. Five sets were tested; with one set at P = 0.003, the other four are not corrected for multiplicity and none is claimed.
+
+## Erratum (2026-10-27, scientist-b, package SB-IT2-HYPCURRENT-20261027)
+The 13/15 quoted in "Why this and not another candidate" is the historical 2026-07-10c ranking of HYP-20260709-01. The ledger's current ranking line is 12/15 (evidence 2/3 lowered to 1/3 on 2026-09-21 because the PDK-to-PDH step is unmeasured in any human system). The choice of this candidate for the prediction does not depend on the value, and the prediction, the gene sets and the results are unchanged. Declared in advance text above is left as written except for the bracketed marker.

@@ -1,0 +1,40 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "_note": "Orchestrator-dispatched iteration-2 package W1.2 (mandate ORCH-ROADMAP-IT2-20261027). Product: current-reading markers for the repurposing hypotheses, delivered as a commit candidate for the ledger plus direct corrections in analysis and research notes.",
+ "TASK_ID": "SB-IT2-HYPCURRENT-20261027",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "scientist-b",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Make the CURRENT conclusion of HYP-20260709-01, -05, HYP-20261026-10, -11 recognisable beside their historical formulations, without a second ranking and without duplicating the ledger.",
+ "SCOPE": {
+  "deliverable": "disease-models/wwox/research/commit_candidates/CC-20261027-SCIENTIST-B-HYPCURRENT-01.md (+ applied-edit proof) and direct corrections in analysis/mechanism_intervention_map.md and the iteration-1 prediction note"
+ },
+ "CURRENT_STATE": "COMPLETE",
+ "assigned_on": "2026-10-27",
+ "TASK_ACK": {
+  "TASK_ID": "SB-IT2-HYPCURRENT-20261027",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "DECISION": "ACCEPTED",
+  "ACTOR_ID": "scientist-b",
+  "acked_at": "2026-10-27T18:42:00Z",
+  "reading_mode": "SECONDARY_INTEGRATION_NO_PRIMARY_READ",
+  "note": "Branch task/sb-it2-hyp in .claude/worktrees/sb-it2-hyp from main d85d6a55. Reads: the ledger records, the 25012504 dossier and DL-MECH-095, the two Lucas-Clarke reconciliation notes, map records N-06/N-08/R-05, CLAIM 042. No primary paper was re-read."
+ },
+ "TASK_CLAIM": {
+  "TASK_ID": "SB-IT2-HYPCURRENT-20261027",
+  "GENERATION": 1,
+  "ACTOR_ID": "scientist-b",
+  "claimed_at": "2026-10-27T18:42:00Z",
+  "durable_pointer": "ledger/tasks/scientist-b/SB-IT2-HYPCURRENT-20261027.json on branch task/sb-it2-hyp"
+ },
+ "DEFAULTS_TAKEN": [
+  "Ledger edits go through a commit candidate (the ledger is the integrator's surface); the analysis map and the iteration-1 prediction note are corrected directly.",
+  "No tiny deterministic check added: no existing tool parses hypothesis scores, so none can host it.",
+  "Timestamps are real UTC at the time of writing."
+ ],
+ "STOP_LOG": [],
+ "RESULT": "CC-20261027-SCIENTIST-B-HYPCURRENT-01 (+ hypcurrent_20261027/ edits), map corrections, erratum in the iteration-1 prediction note"
+}
