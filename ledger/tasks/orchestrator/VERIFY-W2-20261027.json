@@ -1,0 +1,16 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "_note": "Independent verifier delegated by the Orchestrator under mandate ORCH-ROADMAP-IT2-20261027; not the producer of the package audited.",
+ "TASK_ID": "VERIFY-W2-20261027",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "OBJECTIVE": "Independent verification of scientist-c W2 (main 7c48c528): Karnstedt numbers, Breton section 2.3 reading, F02 manifest entries 6/7/43, ChEMBL_37 identity statements, organoid panel rerun, overreach in cards F01-F03 and the CC.",
+ "DELIVERABLE": "disease-models/wwox/research/locator_audits/2026-10-27_w2_therapeutic_independent_verification.md",
+ "CURRENT_STATE": "DONE",
+ "TASK_ACK": {"DECISION": "ACCEPTED", "ACTOR_ID": "orchestrator", "acked_at": "2026-10-27T18:50:00Z"},
+ "TASK_CLAIM": {"ACTOR_ID": "orchestrator", "durable_pointer": "branch task/verify-w2"},
+ "DEFAULTS_TAKEN": [],
+ "STOP_LOG": []
+}
