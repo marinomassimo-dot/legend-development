@@ -1,0 +1,13 @@
+{
+ "_schema": "LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT",
+ "TASK_ID": "SB-IT2-VALUETRIAL-FIX-20261027",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "scientist-b",
+ "OBJECTIVE": "Apply the independent verification corrections to the value trial IT2 design and re-hash before any answer exists.",
+ "CURRENT_STATE": "COMPLETE - answers not run",
+ "assigned_on": "2026-10-27",
+ "DEFAULTS_TAKEN": [],
+ "STOP_LOG": []
+}
