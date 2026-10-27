@@ -32,7 +32,7 @@
     "developmental_stage": "about P90 (as printed; panel F age not stated)"
    },
    "measured_result_note": "Knockout MBP reduced relative to wild type; the printed Fig 6E labels (48 percent corpus callosum, 30 cortex, 50 striatum, 70 anterior commissure) were read by the independent verifier as the size of the REDUCTION, not the remaining fraction (bars give about 50, 72, 49 and 30 percent remaining); the only MBP quantification in the paper.",
-   "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT",
+   "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
    "receipt": "FTR-20261019-42422765-01"
   },
   {
@@ -52,7 +52,7 @@
     "developmental_stage": "about P90"
    },
    "measured_result_note": "The 'near-complete rescue at high dose, partial at low dose' is the authors' sentence on representative micrographs; no treated-arm quantification, no untreated-knockout column in that panel, no g-ratio or electron microscopy. The oligodendrocyte-promoter vector gave no detectable WWOX, so that arm does not test oligodendroglial relevance.",
-   "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT",
+   "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
    "receipt": "FTR-20261019-42422765-01"
   },
   {

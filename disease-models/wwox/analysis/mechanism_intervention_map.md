@@ -461,7 +461,7 @@ measure the chloride premise or supply a drug-intervention result.
 **Class:** `PROMISING_BUT_MECHANISTIC_GAP` — the gap is that nobody has run the conjunction, and the
 platform to run it has existed for years.
 
-**Curated card (added 2026-10-27):** the NMDA-receptor dependence measured with a tool antagonist, and the statement that memantine itself was never given, are in `research/drug_repurposing/cards/G02_memantine_nmda.card.json`; `repurposing_join.py` reads it for this record.
+**Curated card (added 2026-10-27):** the NMDA-receptor dependence measured with the tool antagonist d-APV (memantine itself never given to a WWOX system), the human GRIN precedent and the adverse wild-type rat datum are in `research/drug_repurposing/cards/F01_glutamate_receptor_node.card.json`; `repurposing_join.py` reads it for this record.
 
 ---
 
@@ -597,6 +597,8 @@ experiment closes.
 **Class:** `INSUFFICIENT_EVIDENCE` — and it is the cleanest example in the file of a candidate that
 cannot be ranked at all until one measurement exists.
 
+**Curated card (added 2026-10-27):** the abstention and the experiment that would end it are in `research/drug_repurposing/cards/F03_bumetanide_chloride_gradient.card.json`; `repurposing_join.py` reads it for this record.
+
 ---
 
 ### R-08 — Base / prime editing of a canonical splice-acceptor allele
@@ -717,6 +719,8 @@ directional datum is unfavourable*.
 **`REVIVAL_TRIGGER`:** a protein-level mTORC1 readout (pS6, p4E-BP1) in a WWOX-deficient neuronal
 system; or any WWOX model showing mTORC1 **hyper**activation.
 
+**Curated card (added 2026-10-27):** the abstention (mTOR activity in a WWOX system is unmeasured) is in `research/drug_repurposing/cards_early/EB-MTOR-AX-01.card.json`; `repurposing_join.py` reads it for this record.
+
 ### N-02 — Lithium as a WWOX-specific disease modifier → **the evidence does not say what it was read as saying**
 **Source ids:** CLAIM 016, PAPER 019.
 **Failure mode:** *evidence transfer that was never genotype-controlled*, compounded by *wrong
@@ -760,6 +764,8 @@ shows both proliferation with DNA damage and loss of the apoptotic checkpoint. *
 nor too much WWOX.**
 **`REVIVAL_TRIGGER`:** evidence that a compound-heterozygous transcript behaves differently from the
 published homozygote; or discrimination of the missense allele's folding fate.
+
+**Curated card (added 2026-10-27):** the abstention is in `research/drug_repurposing/cards/C03_crispra_boost.card.json`; `repurposing_join.py` reads it for this record.
 
 ### N-06 — Lactate, and metabolic blood biomarkers generally, as WWOX readouts → **a biomarker that is not measuring the mechanism**
 **Source ids:** DL-BIO-008.
@@ -961,12 +967,16 @@ milasen report (DOI `10.1056/NEJMoa1813279`) and from the ASO-amenability taxono
 `analysis/splice_allele_rna_evidence_20260922.md`. Sources are named by DOI and receipt id because
 these readings are `partial_fulltext_read` and **staged, not yet recorded**.*
 
+**Curated card (added 2026-10-27):** the abstention (no aberrant-to-normal transcript ratio exists) is in `research/drug_repurposing/cards/C02_splice_aso.card.json`; `repurposing_join.py` reads it for this record.
+
 ### N-11 — 4-PBA / TUDCA on the ER-chaperone rationale → **wrong compartment**
 **Source ids:** DIS-004, DL-MECH-036, DL-MECH-037.
 **Failure mode:** *derived from a textbook default.* "Misfolded protein → ERAD → chemical chaperone"
 is true **only for ER/secretory proteins**. WWOX is cytosolic; the route is lysosomal. The rationale
 is dead, **the molecule is not**: 4-PBA is also an HDAC inhibitor and could act as an HSP co-inducer —
 **a different mechanism**, to be re-evaluated on that basis only if the lysosomal arm is confirmed.
+
+**Curated card (added 2026-10-27):** the class card is `research/drug_repurposing/cards/A01_pba_class.card.json`; it is a RECUPERO_PROFONDO class card whose assertions carry NO evidence-scope labels, and this record's verdict (wrong compartment) is not that card's route; `repurposing_join.py` reads it for this record.
 
 ### N-12 — HSP70 co-inducers (e.g. arimoclomol) for an SDR missense → **a hypothesis of harm, and it is still only a hypothesis**
 **Source ids:** DL-MECH-047, CLAIM 019, D-03.
@@ -1018,6 +1028,8 @@ earlier wording — "HSC70 does not rescue — it **delivers to the lysosome**" 
 under the headline "may accelerate the damage" — carried no tag distinguishing the P252A measurement
 from the Q230P prediction (`research/module_batch_selection_scientist-b_20261023.md` §3, §4.2).*
 
+**Curated card (added 2026-10-27):** the abstention is in `research/drug_repurposing/cards/A05_hsp70_axis.card.json`; `repurposing_join.py` reads it for this record.
+
 ### N-13 — Pro-myelinating agents (clemastine, benztropine, T3, quetiapine) → **wrong cell compartment, and a closing window**
 **Source ids:** CLAIM 003, DL-MECH-031.
 **Failure mode:** *the target is not causally downstream of WWOX in the cell being targeted* +
@@ -1031,6 +1043,8 @@ oligodendroglial tropism by neonatal ICV), the neuron-only rescue is **incomplet
 gap attributed by the authors — as their `IPOTESI` — to an oligodendrocyte-autonomous WWOX function,
 and a cell-autonomous oligodendroglial role under remyelination stress is in observation from a
 review-sourced primary still queued. **Partial benefit is not excluded.**
+
+**Curated card (added 2026-10-27):** the compartment content (oligodendrocyte versus astrocyte) is in `research/drug_repurposing/cards/F02_myelination_activity_sign.card.json`; its separate activity-manipulation question is not this record's; `repurposing_join.py` reads it for this record.
 
 ### N-14 — Antioxidants (NAC, CoQ10, creatine) on the "WWOX loss → ROS" rationale → **the relationship is not monotonic**
 **Source ids:** CLAIM 009, CLAIM 034, PAPER 054, PAPER 071.
