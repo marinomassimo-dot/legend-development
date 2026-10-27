@@ -1,0 +1,39 @@
+{
+ "_schema": "LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT",
+ "TASK_ID": "SB-IT2-VALUETRIAL-REF-20261027",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "scientist-b",
+ "PRIORITY": "NORMAL",
+ "OBJECTIVE": "Package W4.6 step 1: design a small value/cost trial (EXT vs LOCAL vs COMBINED) on three new cases; fix references, questions, scoring before any answer exists.",
+ "SCOPE": {
+  "dir": "disease-models/wwox/research/drug_repurposing/value_trial_it2_20261027/"
+ },
+ "ACCEPTANCE_CRITERIA": [
+  "reference.md, scoring.md, questions_{ext,local,combined}.md, README with SHA-256",
+  "landed before any answer exists"
+ ],
+ "CURRENT_STATE": "DESIGN_COMPLETE - answers not run",
+ "assigned_on": "2026-10-27",
+ "TASK_ACK": {
+  "TASK_ID": "SB-IT2-VALUETRIAL-REF-20261027",
+  "DECISION": "ACCEPTED",
+  "ACTOR_ID": "scientist-b",
+  "acked_at": "2026-10-27T19:03:29Z"
+ },
+ "TASK_CLAIM": {
+  "TASK_ID": "SB-IT2-VALUETRIAL-REF-20261027",
+  "ACTOR_ID": "scientist-b",
+  "claimed_at": "2026-10-27T19:03:29Z",
+  "durable_pointer": "ledger/tasks/scientist-b/SB-IT2-VALUETRIAL-REF-20261027.json on branch task/sb-it2-valuetrial"
+ },
+ "DEFAULTS_TAKEN": [
+  {
+   "condition": "no full text read for the references",
+   "default_taken": "abstract-depth declared per source; verifier asked to open four full texts",
+   "why_safe": "understates, no full-text claim"
+  }
+ ],
+ "STOP_LOG": []
+}
