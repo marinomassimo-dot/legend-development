@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "input_sha256": "6e8d4548f0198d9cc422ea04150512e9b8663c430ebfb83e512f7d03a7a599a5",
+ "input_sha256": "6ad48a8c5d76a95cf096c94b95b71ceba937876e67c077999546bdeeadaea8ca",
  "epistemic_status": "IPOTESI",
  "canonical": false,
  "assessment": "REQUIRES_QUALIFICATION",
@@ -66,7 +66,7 @@
      "cell_type": "white and grey matter regions",
      "developmental_stage": "about P90 (as printed; panel F age not stated)"
     },
-    "measured_result_note": "Knockout MBP reduced to 30-70 percent of wild type depending on region (the only MBP quantification in the paper).",
+    "measured_result_note": "Knockout MBP reduced relative to wild type; the printed Fig 6E labels (48 percent corpus callosum, 30 cortex, 50 striatum, 70 anterior commissure) were read by the independent verifier as the size of the REDUCTION, not the remaining fraction (bars give about 50, 72, 49 and 30 percent remaining); the only MBP quantification in the paper.",
     "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT",
     "receipt": "FTR-20261019-42422765-01"
    },

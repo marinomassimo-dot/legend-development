@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "input_sha256": "7758f97b684637fb5c1d52f9c810a4a45ca37dd097a60ee82d3eb8f44aeed142",
+ "input_sha256": "3855235fa72056662648e9bd4288907e818244b1e5df8958b76401064a74f43a",
  "epistemic_status": "IPOTESI",
  "canonical": false,
  "assessment": "REQUIRES_QUALIFICATION",
@@ -74,10 +74,10 @@
  },
  "p4_fields": {
   "endpoint_pursued": "In Wwox-deficient neocortical slices or human neurons at matched maturity: spontaneous burst frequency, duration, amplitude and phase-amplitude coupling under a graded memantine exposure versus a perampanel exposure versus the full NMDAR block, with the wild-type and heterozygous slices as internal comparators; then a developmental endpoint (myelin, synaptic maturation), because burst control alone is not recovery.",
-  "functional_evidence_available": "d-APV abolishes bursting in the knockout slice (5 slices, 3 animals); the AMPAR-weighted mEPSC amplitude is raised; a delayed evoked response is NMDAR-dependent. No memantine or perampanel has been given to any Wwox system. Seven antiseizure drugs including perampanel gave no sustained benefit in one adult human case.",
+  "functional_evidence_available": "d-APV abolishes bursting in the knockout slice (5 slices, 3 animals); the mEPSC amplitude (probably AMPAR-weighted, an inference) is raised; a delayed evoked response is NMDAR-dependent. No memantine or perampanel has been given to any Wwox system. Seven antiseizure drugs including perampanel gave no sustained benefit in one adult human case.",
   "temporal_or_model_limit": "Juvenile mouse slices, one laboratory, acute pharmacology; the authors themselves bound the age window; human organoid and clinical rows do not test the node.",
   "cellular_context": {
-   "target_expression": "GRIN1, GRIN2B and GRIN2D transcripts are present in the week-15 organoid (counts per million in the W2 table); GRIA1 is present and nominally higher in knockouts.",
+   "target_expression": "GRIN1, GRIN2B and GRIN2D transcripts are present in the week-15 organoid (counts per million in the W2 table); GRIA1 is present; higher in two of four knockouts, overlapping wild type in the other two.",
    "cells_tissue_stage": "layer II/III neocortical pyramidal neurons for the slice rows; bulk organoid for transcripts.",
    "coverage": "UNKNOWN.",
    "limits": "No receptor-level measurement of NMDAR or AMPAR current, subunit composition or surface level exists for any WWOX system."
@@ -136,7 +136,7 @@
      "cell_type": "layer II/III neocortex, local field potential and pyramidal-cell patch",
      "developmental_stage": "juvenile, about two weeks of age (as printed; not re-derived here)"
     },
-    "measured_result_note": "Amplitude shifted up in knockout (cumulative distributions, KS test on pooled events; 10 cells from 5 animals per genotype), frequency not; decay time constant not different, which the authors read as no overt change of the NMDAR:AMPA proportion. At a hyperpolarised holding potential NMDAR current is magnesium-blocked, so the recording is AMPAR-weighted and does not measure NMDAR current.",
+    "measured_result_note": "Amplitude shifted up in knockout (cumulative distributions, KS test on pooled events; 10 cells per genotype from 4 wild-type, 5 heterozygote and 5 knockout animals); frequency is not different from the heterozygote but does differ from wild type (KS P about 2.4e-4; direction not stated in the text); decay time constant not different, which the authors read as no overt change of the NMDAR:AMPA proportion. INFERENZA (the producer's, not the paper's): at the -70 mV holding potential NMDAR current is largely magnesium-blocked, so the recording is probably AMPAR-weighted; a residual NMDAR component is not excluded and no NMDAR current was measured.",
     "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT",
     "receipt": "FTR-20260810-34634460-02"
    },
@@ -176,7 +176,7 @@
      "cell_type": "cerebral organoid, bulk RNA",
      "developmental_stage": "organoid, culture week 15"
     },
-    "measured_result_note": "No GRIN2B or GRIN2D shift; GRIN2A and GRIN3A are low-count; GRIA1 is nominally higher in all four knockouts than in either wild type but the libraries differ in composition (GAD1 and regional-patterning transcripts differ ten-fold). Transcript is not receptor function; direction left UNKNOWN on purpose.",
+    "measured_result_note": "No consistent GRIN2B or GRIN2D shift at 4 versus 2 libraries; GRIN2A and GRIN3A are low-count; GRIA1 is higher in two knockouts (cko1, cko2) and overlaps wild type in the other two, and the libraries differ in composition (GAD1 and regional-patterning transcripts differ ten-fold). Transcript is not receptor function; direction left UNKNOWN on purpose.",
     "evidence_scope": "COMPUTATIONAL_RESULT"
    }
   ],
@@ -217,12 +217,12 @@
      "cell_type": "individuals, mostly children",
      "developmental_stage": "median age 9 years (as reported)"
     },
-    "measured_result_note": "Benefit in 14 of 19 individuals with gain-of-function variants (behaviour 12 of 17, development 6 of 12, seizure frequency reduced in 7 of 18); three gain-of-function individuals worsened. Retrospective, unblinded, clinician or parent rated.",
+    "measured_result_note": "Benefit in 14 of 19 individuals with gain-of-function variants, of whom 4 had an effect that faded (10 sustained; at variant level counting sustained effect only the authors report P = 0.0698, not significant) (behaviour 12 of 17, development 6 of 12, seizure frequency reduced in 7 of 18); three gain-of-function individuals worsened. Retrospective, unblinded, clinician or parent rated.",
     "evidence_scope": "OTHER_DISEASE_PRECEDENT"
    },
    {
     "id": "DR-W2-003",
-    "target_id": "NMDAR pore blocker memantine; GRIN loss-of-function, indeterminate or no-effect variants",
+    "target_id": "NMDAR pore blocker memantine; GRIN loss-of-function, indeterminate or no-effect variants (the comparator group also holds 4 variants the authors call non-pathogenic)",
     "endpoint": "clinical improvement",
     "direction": "NO_CHANGE",
     "source": "Karnstedt 2026, Epilepsia (PMID 41489401; NOT WWOX EVIDENCE; other disease)",
@@ -236,7 +236,7 @@
      "cell_type": "individuals, mostly children",
      "developmental_stage": "median age 9 years (as reported)"
     },
-    "measured_result_note": "Benefit in 3 of 15, mild and parent-reported only; seizure reduction 2 of 10, not different from the gain-of-function group. The direction of the receptor lesion, not the presence of an NMDAR gene, separated responders.",
+    "measured_result_note": "Benefit in 3 of 15 (group of 15 includes 4 non-pathogenic variants), mild and parent-reported only; seizure reduction 2 of 10, not different from the gain-of-function group. The direction of the receptor lesion, not the presence of an NMDAR gene, separated responders.",
     "evidence_scope": "OTHER_DISEASE_PRECEDENT"
    },
    {
@@ -270,8 +270,8 @@
     "reading_depth": "queried_not_full_read",
     "context": {
      "disease_id": "recombinant NMDAR in oocytes, HEK and CHO cells (database aggregate)",
-     "genotype": "human or unknown-origin GluN1 with GluN2A/2B/2C/2D",
-     "species": "mixed",
+     "genotype": "GluN1 with GluN2A/2B/2C/2D; 22 of the 37 rows are human targets and 15 are Rattus norvegicus targets (the rest of the label is unknown-origin where ChEMBL says so)",
+     "species": "human and rat",
      "cell_type": "heterologous cells",
      "developmental_stage": "not applicable"
     },
@@ -320,10 +320,10 @@
   ],
   "p4_fields": {
    "endpoint_pursued": "In Wwox-deficient neocortical slices or human neurons at matched maturity: spontaneous burst frequency, duration, amplitude and phase-amplitude coupling under a graded memantine exposure versus a perampanel exposure versus the full NMDAR block, with the wild-type and heterozygous slices as internal comparators; then a developmental endpoint (myelin, synaptic maturation), because burst control alone is not recovery.",
-   "functional_evidence_available": "d-APV abolishes bursting in the knockout slice (5 slices, 3 animals); the AMPAR-weighted mEPSC amplitude is raised; a delayed evoked response is NMDAR-dependent. No memantine or perampanel has been given to any Wwox system. Seven antiseizure drugs including perampanel gave no sustained benefit in one adult human case.",
+   "functional_evidence_available": "d-APV abolishes bursting in the knockout slice (5 slices, 3 animals); the mEPSC amplitude (probably AMPAR-weighted, an inference) is raised; a delayed evoked response is NMDAR-dependent. No memantine or perampanel has been given to any Wwox system. Seven antiseizure drugs including perampanel gave no sustained benefit in one adult human case.",
    "temporal_or_model_limit": "Juvenile mouse slices, one laboratory, acute pharmacology; the authors themselves bound the age window; human organoid and clinical rows do not test the node.",
    "cellular_context": {
-    "target_expression": "GRIN1, GRIN2B and GRIN2D transcripts are present in the week-15 organoid (counts per million in the W2 table); GRIA1 is present and nominally higher in knockouts.",
+    "target_expression": "GRIN1, GRIN2B and GRIN2D transcripts are present in the week-15 organoid (counts per million in the W2 table); GRIA1 is present; higher in two of four knockouts, overlapping wild type in the other two.",
     "cells_tissue_stage": "layer II/III neocortical pyramidal neurons for the slice rows; bulk organoid for transcripts.",
     "coverage": "UNKNOWN.",
     "limits": "No receptor-level measurement of NMDAR or AMPAR current, subunit composition or surface level exists for any WWOX system."

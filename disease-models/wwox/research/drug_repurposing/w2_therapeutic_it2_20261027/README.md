@@ -48,9 +48,9 @@ graded drug exposure, then a maturation endpoint. Burst control is **not** devel
 (`FTR-20260810-34634460-02`):
 
 - d-APV 50 uM, a *competitive full* NMDAR block, eliminated bursting; n = 5 slices, 3 animals (Fig 3D legend).
-- mEPSC amplitude is raised in the knockout (10 cells, 5 animals per genotype; KS test on pooled events), frequency not;
-  decay unchanged. At the hyperpolarised holding potential NMDAR current is Mg-blocked, so this is an AMPAR-weighted
-  recording; it does **not** measure NMDAR current.
+- mEPSC amplitude is raised in the knockout (10 cells per genotype from 4 wild-type, 5 heterozygote, 5 knockout animals; KS test on pooled events); frequency
+  is not different from the heterozygote but does differ from wild type (KS P about 2.4e-4); decay unchanged. INFERENZA
+  (mine, not the paper's): at -70 mV NMDAR current is largely Mg-blocked, so the recording is probably AMPAR-weighted; it does **not** measure NMDAR current.
 - A knockout-specific delayed evoked response is NMDAR-dependent (Supplementary S3, attested in the manifest).
 
 **Slip found in the source wording (not in the repository's wording):** the paper calls d-APV "a glutamatergic blocker"
@@ -61,8 +61,9 @@ is untested.
 **INFERENZA (new).** The convergence argument DL-MECH-002 ("GRIN2A causes the same burst-suppression phenotype, so the NMDAR
 is a shared node") establishes the node, **not the sign of an intervention on it**. Evidence: Karnstedt 2026, *Epilepsia*
 (PMID 41489401, PMC13075606; PMC full text retrieved through the PMC API, results and Table 1 read, supplements not read,
-**no receipt**): memantine benefited 14 of 19 individuals with gain-of-function GRIN variants versus 3 of 15 with
-loss-of-function, indeterminate or no-effect variants (Fisher P = 0.0049); behaviour 12/17 vs 3/15, development 6/12 vs 1/14;
+**no receipt**): memantine benefited 14 of 19 individuals with gain-of-function GRIN variants (4 of the 14 faded, 10 sustained; variant-level
+sustained-only analysis P = 0.0698, not significant) versus 3 of 15 with loss-of-function, indeterminate or no-effect
+variants (the 15 include 4 non-pathogenic variants) (Fisher P = 0.0049); behaviour 12/17 vs 3/15, development 6/12 vs 1/14;
 seizure-frequency reduction 7/18 vs 2/10 **not** different (P = 0.417); three gain-of-function individuals worsened. A
 retrospective, unblinded, clinician- or parent-rated series. The Riccardi cohort abstract (PMID 42190144) retrieved here has
 its gene symbols stripped and does not state the GRIN2A variant class, so which side of that divide the burst-suppression
@@ -86,12 +87,12 @@ seizures from 12 years (openFDA effective 2025-12-19). **The adapter label secti
 labelled safety profile was not assessed.**
 
 **Executable deepening (6).** Public-data analysis `organoid_panel.py` on GSE156243 (4 knockout vs 2 wild type, week 15,
-one laboratory; descriptive CPM, no test): no GRIN2B/GRIN2D shift; GRIN2A (0.7-5 CPM) and GRIN3A are low-count; GRIA1 is
-higher in all four knockouts (98-162 vs 90-105 CPM) but composition (GAD1, regional markers) differs ten-fold, so this is
+one laboratory; descriptive CPM, no test): no consistent GRIN2B/GRIN2D shift; GRIN2A (0.7-5 CPM) and GRIN3A are low-count; GRIA1 is
+higher in two knockouts (150, 162 vs 90-105 CPM in wild type) and overlaps wild type in the other two (103, 98); and composition (GAD1, regional markers) differs ten-fold, so this is
 at most a prompt, not evidence; direction recorded UNKNOWN in the card. Transcript is not receptor function.
 
 **ChEMBL identity and pharmacology (4, 5).** Memantine (CHEMBL807): no curated mechanism row in ChEMBL_37 (the adapter
-returns "molecule without mechanism"); 37 NMDAR IC50/Ki rows on human or unknown-origin NMDAR in `chembl_w2_rows.tsv`,
+returns "molecule without mechanism"); 37 NMDAR IC50/Ki rows (22 human, 15 Rattus norvegicus targets; organism column added) in `chembl_w2_rows.tsv`,
 spanning 0.95 nM to 100000 nM across assays (the lowest looks like an outlier or unit error and is not used). Potency is
 assay-, voltage- and Mg-dependent; Karnstedt's own wild-type table gives low-micromolar values for GluN2A/2B and sub-
 micromolar for GluN2D under voltage clamp. No value is carried as a target exposure.
@@ -114,7 +115,7 @@ strand closes).
    receptors support axonal energy metabolism: chronic NMDAR block in F01 carries an unmeasured myelin-side cost.
 2. **Precision on the neuronal-rescue myelin claim.** Manifest `PMID42422765` entries 6, 7 and 43 (receipt
    `FTR-20261019-42422765-01`): the "near-complete rescue at high dose, partial at low dose" is the authors' sentence on
-   representative micrographs; the only MBP quantification in the paper is knockout vs wild type (30-70 percent of wild type by
+   representative micrographs; the only MBP quantification in the paper is knockout vs wild type (printed labels 48/30/50/70 percent read as the size of the reduction, i.e. about 50/72/49/30 percent remaining, by
    region); the panel with the treated arms has no untreated-knockout column and no stated age; no g-ratio or electron
    microscopy. DL-MECH-031 records "MBP intensity only" but not that the treated-arm rescue is image-level. Not a wrong
    record, an under-qualified one; it matters because the "secondary to the neuron" inference leans on neuronal rescue.
@@ -165,7 +166,7 @@ gabazine, an NKCC1 knockdown arm; discriminating result a depolarised E_GABA tha
 ## 7 · Conclusions that need an independent verifier
 
 1. The Karnstedt numbers (14/19, 3/15, P values) transcribed into F01 and this note.
-2. The reading of Breton section 2.3 (AMPAR-weighted recording; decay-time inference) and the "d-APV is not a glutamate-wide blocker" point.
+2. The reading of Breton section 2.3 (AMPAR-weighted recording is an inference; decay-time reading) and the "d-APV is not a glutamate-wide blocker" point.
 3. The statement that DL-MECH-002 corroborates the node but not the sign (depends on the unknown GRIN2A variant class in the cohort; check the full text of PMID 42190144 once a lawful copy is held).
 4. The F02 precision point on `PMID42422765` entries 6, 7, 43.
 5. ChEMBL identity statements (bumetanide NKCC2-only curated mechanism; memantine no curated mechanism) as of release 37.
