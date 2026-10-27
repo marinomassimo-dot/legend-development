@@ -144317,7 +144317,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "63824fbd51101450",
+  "digest": "29813b3c1075e68f",
   "locators": 604,
   "origin_id": "N-13",
   "papers": 29,
@@ -144985,7 +144985,7 @@
     ],
     "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
     "evidence_scope": [
-     "UNQUALIFIED"
+     "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
     ],
     "locator_count": 48,
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json",
@@ -144994,7 +144994,10 @@
     "receipt_events": 15,
     "receipt_id": "FTR-20260814-42422765-06",
     "repair_unverified": 6,
-    "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
+    "scope_basis": [
+     "DA-W2-010",
+     "DA-W2-011"
+    ],
     "unaudited_contradictions": 0
    }
   ],
@@ -157451,7 +157454,7 @@
   "depths": [
    "complete_fulltext_read"
   ],
-  "digest": "c398e519df9ac092",
+  "digest": "08b21a6e28179a1a",
   "locators": 154,
   "origin_id": "R-02",
   "papers": 5,
@@ -157528,10 +157531,10 @@
     "receipt_id": "FTR-20260810-34634460-02",
     "repair_unverified": 0,
     "scope_basis": [
-     "DA-MEM-BURST-001",
-     "DA-MEM-EVOKED-001",
-     "DR-MEM-001",
-     "DR-MEM-002"
+     "DA-W2-001",
+     "DA-W2-002",
+     "DA-W2-003",
+     "DR-W2-001"
     ],
     "unaudited_contradictions": 0
    },
@@ -160124,7 +160127,7 @@
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "2ef9fd41a42cddb9",
+  "digest": "7b4201b72dd6c209",
   "locators": 182,
   "origin_id": "R-07",
   "papers": 11,
@@ -160233,7 +160236,7 @@
     ],
     "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
     "evidence_scope": [
-     "UNQUALIFIED"
+     "COMPUTATIONAL_RESULT"
     ],
     "locator_count": 67,
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
@@ -160242,7 +160245,9 @@
     "receipt_events": 11,
     "receipt_id": "FTR-20260726-34268881-01",
     "repair_unverified": 7,
-    "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
+    "scope_basis": [
+     "DA-W2-020"
+    ],
     "unaudited_contradictions": 0
    },
    {

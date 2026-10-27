@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "input_sha256": "3855235fa72056662648e9bd4288907e818244b1e5df8958b76401064a74f43a",
+ "input_sha256": "12a37d196e569729f9b0e47851956e6996b8e47e3ba98f7faafc23b178a6bf2f",
  "epistemic_status": "IPOTESI",
  "canonical": false,
  "assessment": "REQUIRES_QUALIFICATION",
@@ -117,7 +117,7 @@
      "developmental_stage": "juvenile, about two weeks of age (as printed; not re-derived here)"
     },
     "measured_result_note": "Wild type 0 of 11 slices, heterozygote 4 of 23, knockout 36 of 42 (the heterozygote fraction is about a sixth of the knockout's).",
-    "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT",
+    "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
     "receipt": "FTR-20260810-34634460-02"
    },
    {
@@ -137,7 +137,7 @@
      "developmental_stage": "juvenile, about two weeks of age (as printed; not re-derived here)"
     },
     "measured_result_note": "Amplitude shifted up in knockout (cumulative distributions, KS test on pooled events; 10 cells per genotype from 4 wild-type, 5 heterozygote and 5 knockout animals); frequency is not different from the heterozygote but does differ from wild type (KS P about 2.4e-4; direction not stated in the text); decay time constant not different, which the authors read as no overt change of the NMDAR:AMPA proportion. INFERENZA (the producer's, not the paper's): at the -70 mV holding potential NMDAR current is largely magnesium-blocked, so the recording is probably AMPAR-weighted; a residual NMDAR component is not excluded and no NMDAR current was measured.",
-    "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT",
+    "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
     "receipt": "FTR-20260810-34634460-02"
    },
    {
@@ -157,7 +157,7 @@
      "developmental_stage": "juvenile, about two weeks of age (as printed; not re-derived here)"
     },
     "measured_result_note": "Present in knockout and absent in wild type, reversibly suppressed by d-APV; the authors read it as dysregulated NMDAR-mediated signalling. A circuit-level NMDAR dependence, not a receptor-level gain.",
-    "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT",
+    "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
     "receipt": "FTR-20260810-34634460-02"
    },
    {

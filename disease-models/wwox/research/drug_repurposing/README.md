@@ -122,31 +122,31 @@ a link adds, not by ease.
 | Q-R-11 | Stiripentol | linked (iteration 1) | E02 |
 | Q-N-02 | Lithium as a WWOX-specific modifier | (b), **linked now** | G01 (new): the same candidate as R-04 |
 | Q-R-04 | Lithium (GSK3beta) | (b), **linked now** | G01 (new) |
-| Q-R-02 | Memantine | (b), **linked now** | G02 (new): tool compound d-APV only; memantine itself untested |
+| Q-R-02 | Memantine | (b), **linked now** | ~~G02~~ retired 2026-10-27 (follow-up): folded into W2's `F01_glutamate_receptor_node`, which carries the same Breton rows plus the human GRIN precedent and the adverse wild-type rat datum; tool compound d-APV only, memantine itself untested |
 | Q-R-01 | AAV9-hSynI-WWOX | (a)+(b), **linked now** | C01 (existing, spike-wave discharges) + C04 (new, six other endpoint families) |
 | Q-R-03 | Wnt / tankyrase inhibition | (a), **linked now** | D02 (existing, abstention; carries a route and no Track) |
 | Q-R-05 | Ketogenic diet | (a), **linked now** | EB-KD-01 (existing, seizure rows; early-benefit directory) + E04 (existing, lactate/PDH) |
-| Q-N-01 | mTOR inhibitors | (a) | EB-MTOR-AX-01 (abstention: mTOR activity in a WWOX system is unmeasured, as the record says) |
+| Q-N-01 | mTOR inhibitors | (a), **linked 2026-10-27 follow-up** | EB-MTOR-AX-01 (abstention: mTOR activity in a WWOX system is unmeasured, as the record says) |
 | Q-N-04 | Broad GABAergic push | (a), partial | EB-VGB-01 covers the vigabatrin limb only; benzodiazepines are uncovered, so a link would qualify half the record |
-| Q-N-05 | Boosting WWOX expression alone | (a) | C03 (abstention) |
-| Q-N-10 | Splice-switching ASO, canonical acceptor allele | (a) | C02 (abstention: no aberrant-to-normal transcript ratio exists) |
+| Q-N-05 | Boosting WWOX expression alone | (a), **linked 2026-10-27 follow-up** | C03 (abstention) |
+| Q-N-10 | Splice-switching ASO, canonical acceptor allele | (a), **linked 2026-10-27 follow-up** | C02 (abstention: no aberrant-to-normal transcript ratio exists) |
 | Q-R-08 | Base / prime editing, splice-acceptor allele | (a), caution | C02 names editing and shares the missing transcript baseline; the modality differs, so the verifier decides |
-| Q-N-11 | 4-PBA / TUDCA | (a) | A01 |
-| Q-N-12 | HSP70 co-inducers (arimoclomol) | (a) | A05 (abstention) |
+| Q-N-11 | 4-PBA / TUDCA | (a), **linked 2026-10-27 follow-up** | A01 (a RECUPERO_PROFONDO class card; its assertions carry no scope labels, which the handoff now states) |
+| Q-N-12 | HSP70 co-inducers (arimoclomol) | (a), **linked 2026-10-27 follow-up** | A05 (abstention) |
 | Q-R-09 | Proteostasis modulation, SDR missense | (a), umbrella | A01-A05 are sub-levers of this record; linking all five would put three families' not-WWOX drug rows on one record, so the set is for the verifier to choose |
 | Q-N-15 | Counting seizure control as developmental protection | (a), caution | EB-DEV-AX-01 (axis, no candidate); the record is an inference error, not an intervention |
 | Q-N-07 | Digoxin (HIF1alpha) | (b) | none; four papers, three complete reads; a card is writable from the repository |
 | Q-N-09 | pTyr33-WWOX peptide | (b) | none; three complete reads, three without a receipt |
-| Q-N-13 | Pro-myelinating agents | (b) at measurement; **(a) since** | none when measured; 29 papers. A concurrent package (scientist-c, W2) landed `F02_myelination_activity_sign` the same day; not linked, pertinence to be checked |
+| Q-N-13 | Pro-myelinating agents | (b) at measurement, **linked 2026-10-27 follow-up** | F02 (W2, scientist-c); its separate activity-manipulation question is not this record's |
 | Q-N-14 | Antioxidants | (b) | none; eight papers, four complete |
 | Q-N-16 | Pannexin-1 blockade | (b) | none; one complete reading, and its one datum (a point estimate in the adverse direction, never tested) is manifest entry 2 of the Breton 2021 reading |
 | Q-N-17 | Tau-lowering | (b) | none; 56 papers; the WWOX/GSK3beta/Tau rows sit in the Wang 2012 manifest |
 | Q-N-03 | Sodium-channel blockers | (c) | none; one paper, no receipt. EB-ETX-01 (a T-type blocker) must NOT be linked: different candidate |
 | Q-R-06 | Anti-neuroinflammatory, class level | (c) | none; no compound and no endpoint named, so a card could only abstain |
-| Q-R-07 | Bumetanide | (c) at measurement; **(a) since** | none when measured (the chloride premise is unmeasured in any WWOX system). The concurrent W2 package landed `F03_bumetanide_chloride_gradient` as an abstention; not linked |
+| Q-R-07 | Bumetanide | (c) at measurement, **linked 2026-10-27 follow-up** | F03 (W2 abstention) |
 | Q-N-06 | Lactate and blood biomarkers as readouts | (d) | E02/E04 hold the lactate observations but their route and candidate are interventions; this record is a biomarker, so a route would be wrong. Left `UNQUALIFIED` |
 
-Classes: (a) a pertinent curated card exists and is not linked; (b) content is present in the repository and needs a card;
+Classes: (a) a pertinent curated card exists and is not linked (eleven rows at measurement, counting Q-N-13 and Q-R-07 whose W2 cards landed meanwhile); (b) content is present in the repository and needs a card;
 (c) the observations are insufficient to qualify anything beyond an abstention; (d) candidate, endpoint or context differ,
 so a link would be wrong. For (a) rows the pertinence is judged from the record heading against the card's candidate and
 disease assertion; the link has not been run or verified for them, and only the six queries above are linked.
@@ -202,7 +202,18 @@ collided with the first names chosen here; the lithium and memantine cards were 
 together with perampanel on the same bursting node as `G02`: the two overlap and no record links the W2 cards yet. If both are linked to
 Q-R-02 the merged derived card will carry both sets of rows; whoever links the second one decides whether to merge them.
 
-**Not verified.** The (a)-class pertinence of the 9 unlinked rows; the Q-R-08 and Q-R-09 judgements; whether the early-benefit
+**Follow-up after the independent verification** (`locator_audits/2026-10-27_cardlink_independent_verification.md`). (1) C04: body
+weight is equal at the two levels at P30 only (the low dose lags P15-P25; entry 41 withdrew "not graded at any age"); the P5 GFAP row no
+longer cites entry 10 (a different panel); the MBP row now records that the printed Figure 6E labels may be the size of the reduction, not
+the remaining fraction. (2) G02 was folded into F01: the label question is settled by a one-line definition in `repurposing_bridge.py`
+(`WWOX_EXPERIMENT_IN_DEE_SYSTEM` = measured in a WWOX-deficient system that models the disease: patient case, patient-derived or engineered
+knockout cells, organoids, animals; `WWOX_BIOLOGY_OTHER_CONTEXT` = outside such a model), under which the Breton neuron-specific
+knockout rows and the Wwox-null mouse rows are `WWOX_EXPERIMENT_IN_DEE_SYSTEM`; F01 and F02 rows were relabelled accordingly in their
+generator. Q-R-02 now links F01. (3) Seven further records linked: Q-R-07 to F03, Q-N-13 to F02, Q-N-10 to C02, Q-N-05 to C03,
+Q-N-01 to EB-MTOR-AX-01, Q-N-12 to A05, Q-N-11 to A01 (its 5 rows carry no scope label; the handoff prints "without a scope label").
+Not linked, by the verifier's reasons: Q-N-15, Q-R-09, Q-N-04, Q-R-08. Measured after regeneration: 12 derived cards remain UNQUALIFIED (16 are linked).
+
+**Not verified.** The (a)-class pertinence of the remaining unlinked rows; the Q-R-08 and Q-R-09 judgements; whether the early-benefit
 cards' silent Track should be written into those cards instead of read as silent; the new cards' figure readings (they carry
 the manifests' own text, no new reading).
 

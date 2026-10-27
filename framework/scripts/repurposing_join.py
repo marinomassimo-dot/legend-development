@@ -1256,6 +1256,8 @@ def qualification_view(card: dict) -> dict | None:
             "disease_rows": len(packet.get("disease_assertions") or []),
             "drug_rows": len(packet.get("drug_assertions") or []), "comparisons": comparisons,
             "summary": card["directional_summary"],
+            "rows_without_scope_label": sum(1 for a in (packet.get("disease_assertions") or []) + (packet.get("drug_assertions") or [])
+                                            if not a.get("evidence_scope")),
             "card_next_measurement": ((packet.get("p4_card") or {}).get("next_measurement") or "")[:300]}
 
 
@@ -1338,7 +1340,8 @@ def render_handoff(rows: list[dict], date: str, axis: str,
             q = row["qualification"]
             comp = ", ".join(f"{k} {v}" for k, v in sorted(q["comparisons"].items())) or "none (no drug-side row)"
             lines.append(f"| `{row['query_id']}` | {row['candidate'][:50]} | {', '.join(q['cards'])} | {q['route']} | {q['track']} | "
-                         f"{q['disease_rows']} / {q['drug_rows']} | {comp} | {q['summary']} | {q['card_next_measurement'] or 'UNKNOWN'} |")
+                         f"{q['disease_rows']} / {q['drug_rows']}"
+                         + (f" ({q['rows_without_scope_label']} without a scope label)" if q["rows_without_scope_label"] else "") + f" | {comp} | {q['summary']} | {q['card_next_measurement'] or 'UNKNOWN'} |")
         lines.append("")
     classified = [row for row in rows if row.get("endpoint_classes") and row["binding"]["binding"] == "BOUND_BY_FULLTEXT_LOCATOR"]
     if classified:

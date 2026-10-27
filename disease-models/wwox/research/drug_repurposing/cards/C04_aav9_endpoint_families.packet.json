@@ -151,7 +151,7 @@
         "cell_type": "brain, MBP immunostaining intensity",
         "developmental_stage": "UNKNOWN for the treated panels (postnatal day 18 for the disease baseline; about day 90 for S7I)"
       },
-      "measured_result_note": "Knockout MBP intensity relative to wild type about 48 percent in corpus callosum, 30 cortex, 50 striatum and 70 anterior commissure (Figure 6E, postnatal day 18); the only MBP quantification in the paper has no treated arm.",
+      "measured_result_note": "Printed labels 48 percent corpus callosum, 30 cortex, 50 striatum, 70 anterior commissure (Figure 6E, postnatal day 18): the scaffold reads them as knockout intensity relative to wild type; an independent verifier (scientist-c W2) read them as the size of the REDUCTION (bars about 50, 72, 49 and 30 percent remaining). The reading is unsettled and no magnitude should be taken from this row; the only MBP quantification in the paper has no treated arm.",
       "receipt": "FTR-20260814-42422765-06",
       "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
     }
@@ -213,7 +213,7 @@
         "cell_type": "whole animal, body weight series",
         "developmental_stage": "postnatal day 0 to 30 (untreated knockouts die by about day 17)"
       },
-      "measured_result_note": "High dose about 15.6 g at day 30 against wild type about 17.5; no significance marker is printed on panel C at all. The two doses are superimposed at day 30.",
+      "measured_result_note": "High dose about 15.6 g at day 30 against wild type about 17.5; no significance marker is printed on panel C at all. The two doses are superimposed at day 30 only; the low dose lags from P15 to P25.",
       "receipt": "FTR-20260814-42422765-06",
       "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
     },
@@ -233,7 +233,7 @@
         "cell_type": "whole animal, body weight series",
         "developmental_stage": "postnatal day 0 to 30 (untreated knockouts die by about day 17)"
       },
-      "measured_result_note": "Low dose about 15.3 g at day 30, equal to the high dose: NOT dose-graded, and the comparison is survivor-conditioned on the low-dose side (about 79 percent alive at day 30 against 100 percent), so the equality is between unequal denominators. The low-dose series is truncated at about day 60 without a stated cause. Repaired adverse audit on entry 41, not re-judged.",
+      "measured_result_note": "Low dose about 15.3 g at day 30, equal to the high dose at P30 ONLY; the low-dose arm sits below the high-dose arm from P15 to P25 (about 9.5 against 12.5 g at P25; entry 41 withdrew any 'not dose-graded at any age'). The comparison is survivor-conditioned on the low-dose side (about 79 percent alive at day 30 against 100 percent), so any equality is between unequal denominators. The low-dose series is truncated at about day 60 without a stated cause. Repaired adverse audit on entry 41, not re-judged.",
       "receipt": "FTR-20260814-42422765-06",
       "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
     },
@@ -373,7 +373,7 @@
         "cell_type": "brain, GFAP-positive astrocytes (cells counted)",
         "developmental_stage": "UNKNOWN (the timing-experiment panel states no age)"
       },
-      "measured_result_note": "High dose injected at postnatal day 5: about 5 against knockout about 44, not different from wild type. A different experiment from the dose study: it varies timing at one dose and supplies no low-dose arm. Entry 10 carries a repaired adverse audit not re-judged. A glial change after a neuronal rescue does not identify a glial target.",
+      "measured_result_note": "High dose injected at postnatal day 5: about 5 against knockout about 44, not different from wild type. A different experiment from the dose study: it varies timing at one dose and supplies no low-dose arm. The high-dose identity of the arm rests on the supplement caption (the timing experiment, entry 10, concerns survival, weight and glucose panels S8A-D, not this panel). A glial change after a neuronal rescue does not identify a glial target.",
       "receipt": "FTR-20260814-42422765-06",
       "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
     },
@@ -460,7 +460,7 @@
   ],
   "p4_fields": {
     "endpoint_pursued": "Restoration of WWOX function by neuron-directed replacement, read as a set of separate endpoint families, none of which stands for the others.",
-    "functional_evidence_available": "In the Wwox-null mouse, one laboratory: survival to 300 days at the higher level and postponed death at the lower; body weight not graded; glucose partial and age-dependent; motor score graded; gliosis binary against wild type; myelination unquantified in treated arms.",
+    "functional_evidence_available": "In the Wwox-null mouse, one laboratory: survival to 300 days at the higher level and postponed death at the lower; body weight equal only at P30 (low dose lags earlier); glucose partial and age-dependent; motor score graded; gliosis binary against wild type; myelination unquantified in treated arms.",
     "temporal_or_model_limit": "Constitutive null, not Q230P; one laboratory (the two papers share senior author and institution); no replication; earliest postnatal treatment ages only and NOT_MEASURED is not SMALLER; no tumour surveillance or overexpression-toxicity endpoint; SWD recorded over one week starting about two weeks after birth; threshold not located.",
     "cellular_context": {
       "target_expression": "Neuron-directed construct; WWOX protein graded by vector level and regionally uneven, supraphysiological in survivors and survivor-selected (PREMISE: NOBODY_LOOKED on the upper bound).",
@@ -495,7 +495,7 @@
       "against": [
         "Not independently replicated within the repository; the source's mouse-versus-human construct comparison is an intra-study control, and the human-organoid source was not tested here.",
         "SURVIVAL IS A STEP IN THESE DATA, BUT A STEP AND A STEEP CONTINUUM ARE INDISTINGUISHABLE: the lower level postpones death and reaches extinction; two dose points cannot locate a threshold; the adjudication in CLAIM 011 reads the step as strengthened, not established.",
-        "Body weight is equal at the two levels at one age and the weight comparison is survivor-conditioned on the lower side: an equality between unequal denominators is not evidence of grading.",
+        "Body weight is equal at the two levels at P30 only and the weight comparison is survivor-conditioned on the lower side: an equality between unequal denominators is not evidence of grading.",
         "Myelination dose relation never quantified; gliosis result binary against wild type with no untreated-null comparator; SWD has no low-level arm.",
         "No tumour surveillance of any kind in a pro-apoptotic tumour suppressor delivered irreversibly; no measured ceiling.",
         "Treatment age window tested only at the earliest postnatal ages; later NOT_MEASURED.",
@@ -510,7 +510,7 @@
     "scope_of_checks": {
       "support_and_replication": "One laboratory; no replication; support is intra-study.",
       "formal_checks": "Values are those bound in woree_rescue_reference_scaffold.md section 2 and in manifest PMID42422765.json; entries 40, 41, 10, 14, 15 and 45 carry adverse blind-audit findings that were repaired at source and whose repairs have not been re-judged; entries 27, 6, 43, 36, 37, 9, 44, 47 carry none.",
-      "card_inferences_owed_audit": "The choice to write the low-dose survival and weight rows with the same sign as the high-dose rows (a sign comparison) and to name them a postponement and a non-graded equality is the card's reading and is owed a blind audit by another actor."
+      "card_inferences_owed_audit": "The choice to write the low-dose survival and weight rows with the same sign as the high-dose rows (a sign comparison) and to name them a postponement and an equality at one age is the card's reading and is owed a blind audit by another actor."
     },
     "question_history": [
       "CLAIM 011 flag of 2026-08-10 (dose-dependent over a threshold) -> NARROW adjudication CC-20261021-SCIENTIST-C-CLAIM011-DOSE-ADJUDICATION-01",
@@ -538,13 +538,13 @@
     "Survival: a step and a steep continuum are indistinguishable; threshold not located.",
     "No replication within the repository (two papers, one senior author and institution); the human-organoid AAV9-WWOX source was not tested for this claim.",
     "No tumour surveillance.",
-    "Body weight is equal at the two levels and survivor-conditioned on the low-dose side (entry 41, repaired adverse audit not re-judged).",
+    "Body weight is equal at the two levels at P30 only (the low dose lags P15-P25) and survivor-conditioned on the low-dose side (entry 41, repaired adverse audit not re-judged).",
     "Glucose at postnatal day 10 is not significantly corrected by either level against the untreated knockout (the text says partially); the dose separation at day 20 is gone by day 30.",
     "Gliosis: the two quantified treated-arm panels have no untreated-knockout comparator and the low dose is significantly worse than wild type on astrocyte area.",
     "Myelination of the treated arms is never quantified."
   ],
   "bridge_gaps_exposed": [
-    "The bridge compares signs on equal target, endpoint and context. Low-dose rows share the sign of the high-dose rows on survival and weight; the difference (postponement, non-graded equality, survivor conditioning) is in the assertion notes, not in any summary field.",
+    "The bridge compares signs on equal target, endpoint and context. Low-dose rows share the sign of the high-dose rows on survival and weight; the difference (postponement, equality at one age, survivor conditioning) is in the assertion notes, not in any summary field.",
     "Where the treated-arm panel has no untreated-knockout arm (glucose at day 20, gliosis area, myelination) the direction is written UNKNOWN: the comparison is against wild type only and the bridge cannot express that.",
     "Dose is not a context dimension: low-dose and high-dose rows differ only in their ids and notes."
   ],
@@ -558,9 +558,9 @@
   },
   "p4_roadmap_fields": {
     "indication_and_transfer": "WOREE (all genotypes carry some level of WWOX deficit) as target; origin: a constitutive-null mouse and human knockout and patient-derived organoids. Transfer to a Q230P-class missense or compound context is not established.",
-    "verification_scope": "{\"support_and_replication\": \"One laboratory; no replication; support is intra-study.\", \"formal_checks\": \"Values are those bound in woree_rescue_reference_scaffold.md section 2 and in manifest PMID42422765.json; entries 40, 41, 10, 14, 15 and 45 carry adverse blind-audit findings that were repaired at source and whose repairs have not been re-judged; entries 27, 6, 43, 36, 37, 9, 44, 47 carry none.\", \"card_inferences_owed_audit\": \"The choice to write the low-dose survival and weight rows with the same sign as the high-dose rows (a sign comparison) and to name them a postponement and a non-graded equality is the card's reading and is owed a blind audit by another actor.\"}"
+    "verification_scope": "{\"support_and_replication\": \"One laboratory; no replication; support is intra-study.\", \"formal_checks\": \"Values are those bound in woree_rescue_reference_scaffold.md section 2 and in manifest PMID42422765.json; entries 40, 41, 10, 14, 15 and 45 carry adverse blind-audit findings that were repaired at source and whose repairs have not been re-judged; entries 27, 6, 43, 36, 37, 9, 44, 47 carry none.\", \"card_inferences_owed_audit\": \"The choice to write the low-dose survival and weight rows with the same sign as the high-dose rows (a sign comparison) and to name them a postponement and an equality at one age is the card's reading and is owed a blind audit by another actor.\"}"
   },
-  "reading_guard": "CONFLICTING reflects endpoints that move differently (several OPPOSES, one measured null, several not comparable); no row is a rescue verdict. Low-dose and high-dose rows share a sign on survival and weight but are a postponement and a non-graded equality. Everything is the Wwox-null mouse of one laboratory: nothing is said about the Q230P class, dose-dependence beyond the graded endpoints named, tumour risk, efficacy or safety in any person.",
+  "reading_guard": "CONFLICTING reflects endpoints that move differently (several OPPOSES, one measured null, several not comparable); no row is a rescue verdict. Low-dose and high-dose rows share a sign on survival and weight but are a postponement and an equality at one age. Everything is the Wwox-null mouse of one laboratory: nothing is said about the Q230P class, dose-dependence beyond the graded endpoints named, tumour risk, efficacy or safety in any person.",
   "label_lookup": {
     "status": "NOT_ATTEMPTED"
   },
