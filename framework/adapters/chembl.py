@@ -102,7 +102,19 @@ def query(request: dict, fetch=_http.get_json) -> dict:
         if status != 200 or not isinstance(payload, dict):
             out["error"] = f"HTTP {status}: {str(payload)[:300]}"
             return out
-        for m in payload.get("mechanisms") or []:
+        mechanisms = payload.get("mechanisms") or []
+        if not mechanisms:
+            # Measured 2026-10-27: for some molecules (e.g. CHEMBL192, sildenafil) `molecule_chembl_id=` returns 0 rows while
+            # `parent_molecule_chembl_id=` returns the curated mechanism; without this second request such a drug was reported as
+            # `molecule_without_mechanism`, a false negative of the lookup.
+            url = f"{BASE}/mechanism.json?parent_molecule_chembl_id={mid}&limit=20"
+            out["requests_sent"].append(url)
+            status, payload = fetch(url)
+            if status != 200 or not isinstance(payload, dict):
+                out["error"] = f"HTTP {status}: {str(payload)[:300]}"
+                return out
+            mechanisms = payload.get("mechanisms") or []
+        for m in mechanisms:
             out["hits"].append({"kind": "mechanism", "molecule_chembl_id": mid,
                                 "pref_name": mol.get("pref_name"), "max_phase": mol.get("max_phase"),
                                 "action_type": m.get("action_type"),

@@ -1,0 +1,109 @@
+{
+ "S1": {
+  "n_up": 517,
+  "n_down": 317,
+  "dup_up": 0,
+  "dup_down": 0,
+  "in_both_arms": 0,
+  "mapped_up": 505,
+  "mapped_down": 311,
+  "entity_collisions": 0,
+  "in_L1000_space_up": 372,
+  "in_L1000_space_down": 215,
+  "median_mean_log2cpm": 5.09
+ },
+ "S2": {
+  "n_up": 1067,
+  "n_down": 821,
+  "dup_up": 0,
+  "dup_down": 0,
+  "in_both_arms": 0,
+  "mapped_up": 1044,
+  "mapped_down": 808,
+  "entity_collisions": 0,
+  "in_L1000_space_up": 768,
+  "in_L1000_space_down": 576,
+  "median_mean_log2cpm": 5.02
+ },
+ "S3": {
+  "n_up": 505,
+  "n_down": 313,
+  "dup_up": 0,
+  "dup_down": 0,
+  "in_both_arms": 0,
+  "mapped_up": 493,
+  "mapped_down": 307,
+  "entity_collisions": 0,
+  "in_L1000_space_up": 362,
+  "in_L1000_space_down": 212,
+  "median_mean_log2cpm": 5.1
+ },
+ "S0": {
+  "n_up": 517,
+  "n_down": 317,
+  "dup_up": 0,
+  "dup_down": 0,
+  "in_both_arms": 8,
+  "mapped_up": 513,
+  "mapped_down": 312,
+  "entity_collisions": 8,
+  "in_L1000_space_up": 313,
+  "in_L1000_space_down": 196,
+  "median_mean_log2cpm": 3.65
+ },
+ "N1": {
+  "n_up": 517,
+  "n_down": 317,
+  "dup_up": 0,
+  "dup_down": 0,
+  "in_both_arms": 0,
+  "in_L1000_space_up": 372,
+  "in_L1000_space_down": 215,
+  "median_mean_log2cpm": 5.03,
+  "overlap_with_S1_genes": 0
+ },
+ "N2": {
+  "n_up": 517,
+  "n_down": 317,
+  "dup_up": 0,
+  "dup_down": 0,
+  "in_both_arms": 0,
+  "in_L1000_space_up": 372,
+  "in_L1000_space_down": 215,
+  "median_mean_log2cpm": 5.05,
+  "overlap_with_S1_genes": 0
+ },
+ "N3": {
+  "n_up": 517,
+  "n_down": 317,
+  "dup_up": 0,
+  "dup_down": 0,
+  "in_both_arms": 0,
+  "in_L1000_space_up": 372,
+  "in_L1000_space_down": 215,
+  "median_mean_log2cpm": 5.02,
+  "overlap_with_S1_genes": 0
+ },
+ "K1": {
+  "n_up": 517,
+  "n_down": 317,
+  "dup_up": 0,
+  "dup_down": 0,
+  "in_both_arms": 0,
+  "in_L1000_space_up": 359,
+  "in_L1000_space_down": 188,
+  "median_mean_log2cpm": 4.79,
+  "overlap_with_S1_genes": 27
+ },
+ "K2": {
+  "n_up": 517,
+  "n_down": 317,
+  "dup_up": 0,
+  "dup_down": 0,
+  "in_both_arms": 0,
+  "in_L1000_space_up": 344,
+  "in_L1000_space_down": 181,
+  "median_mean_log2cpm": 3.72,
+  "overlap_with_S1_genes": 26
+ }
+}

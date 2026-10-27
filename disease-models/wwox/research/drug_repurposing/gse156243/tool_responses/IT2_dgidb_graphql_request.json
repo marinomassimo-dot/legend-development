@@ -1,0 +1,1 @@
+{"query":"{ drugs(names: [\"DIGITOXIGENIN\",\"XL-147\",\"PILARALISIB\",\"TW-37\",\"PAC-1\",\"MOCETINOSTAT\",\"IWP-2\",\"TWS-119\",\"ENTINOSTAT\",\"ISTAROXIME\",\"DG-041\",\"QUIFLAPON\"]) { nodes { name conceptId interactions { gene { name } interactionTypes { type directionality } sources { sourceDbName } } } } }"}

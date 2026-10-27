@@ -1,0 +1,340 @@
+{
+ "n_null_rankings": 8,
+ "S1_compound_to_null_rankings_containing_it_in_either_tail": {
+  "reversers": {
+   "7-nitroindazole": [],
+   "APO-866": [
+    "K2"
+   ],
+   "BMS-191011": [],
+   "BRD-A28105619": [
+    "K2"
+   ],
+   "BRD-A85739295": [],
+   "BRD-A94451536": [
+    "K2",
+    "N1"
+   ],
+   "BRD-K09398529": [],
+   "BRD-K10882151": [
+    "K2",
+    "N1"
+   ],
+   "BRD-K19216856": [],
+   "BRD-K19826330": [],
+   "BRD-K23875128": [],
+   "BRD-K28112517": [],
+   "BRD-K35716340": [],
+   "BRD-K38865695": [],
+   "BRD-K49668410": [],
+   "BRD-K52904470": [],
+   "BRD-K55460824": [],
+   "BRD-K55591206": [
+    "N2"
+   ],
+   "BRD-K76188144": [],
+   "BRD-K80672993": [],
+   "BRD-K82794234": [],
+   "BRD-K86574132": [],
+   "BRD-K90826279": [],
+   "BRD-K92980438": [
+    "K2",
+    "S0"
+   ],
+   "BRD-K95286989": [],
+   "CI-976": [
+    "K2"
+   ],
+   "EX-527": [],
+   "FK-866": [],
+   "GDC-0068": [],
+   "Gly-Gly-PALO": [],
+   "IWP-2": [],
+   "LY-2183240": [
+    "K2"
+   ],
+   "MK-1775": [
+    "S0",
+    "S1P2"
+   ],
+   "NU-1025": [
+    "K1"
+   ],
+   "PF-3845": [],
+   "Ro-28-1675": [],
+   "SB-225002": [
+    "S0"
+   ],
+   "TGX-115": [
+    "K1"
+   ],
+   "TWS-119": [],
+   "UNC-669": [],
+   "alda-1": [
+    "S1P"
+   ],
+   "cabazitaxel": [
+    "S1P2"
+   ],
+   "clomipramine": [
+    "S1P2"
+   ],
+   "clozapine": [
+    "K1",
+    "S0"
+   ],
+   "dalcetrapib": [],
+   "estradiol": [
+    "N3",
+    "S0"
+   ],
+   "fumonisin-b1": [
+    "N1"
+   ],
+   "gallic-acid": [],
+   "gefitinib": [
+    "N2"
+   ],
+   "glipizide": [],
+   "haloperidol": [],
+   "imipramine": [],
+   "indinavir": [
+    "S1P"
+   ],
+   "indirubin": [
+    "S1P"
+   ],
+   "isradipine": [
+    "N1",
+    "N3"
+   ],
+   "istaroxime": [],
+   "ketamine": [],
+   "lenalidomide": [],
+   "linoleic-acid": [],
+   "modafinil": [
+    "K2"
+   ],
+   "navitoclax": [
+    "K2"
+   ],
+   "nimodipine": [
+    "N1"
+   ],
+   "norethindrone": [
+    "S0"
+   ],
+   "nutlin-3": [],
+   "oxybenzone": [
+    "S1P"
+   ],
+   "pirfenidone": [],
+   "quetiapine": [],
+   "quiflapon": [
+    "N1"
+   ],
+   "ramelteon": [],
+   "rolipram": [
+    "K1",
+    "N1",
+    "N2",
+    "S1P2"
+   ],
+   "sildenafil": [
+    "S1P"
+   ],
+   "theobromine": [],
+   "tipifarnib": [
+    "N1"
+   ],
+   "troglitazone": [
+    "N1"
+   ],
+   "vandetanib": [
+    "N1",
+    "S1P2"
+   ],
+   "varenicline": []
+  },
+  "mimickers": {
+   "17-AAG": [],
+   "AMG-517": [
+    "N2"
+   ],
+   "BI-2536": [
+    "K1",
+    "K2",
+    "S1P"
+   ],
+   "BMS-536924": [
+    "S1P"
+   ],
+   "BMS-754807": [],
+   "BRD-A42966393": [
+    "K2",
+    "N1"
+   ],
+   "BRD-K05649647": [
+    "S1P"
+   ],
+   "BRD-K30064966": [
+    "K1",
+    "N3"
+   ],
+   "BRD-K72204100": [],
+   "BRD-K78716413": [],
+   "BRD-K89329876": [
+    "K1"
+   ],
+   "BRD-K92317137": [],
+   "CHEMBL-1222381": [
+    "K2"
+   ],
+   "CYT-387": [],
+   "FGIN-1-27": [
+    "K1",
+    "K2",
+    "S0"
+   ],
+   "GSK-1070916": [
+    "K2"
+   ],
+   "KIN-001-220": [
+    "S1P"
+   ],
+   "LE-135": [],
+   "LY-2365109": [
+    "K1",
+    "K2"
+   ],
+   "PF-04217903": [
+    "N1",
+    "S1P2"
+   ],
+   "PF-750": [],
+   "PK-11195": [],
+   "PP-30": [
+    "K1"
+   ],
+   "PTB1": [
+    "K2"
+   ],
+   "SB-225002": [
+    "S0"
+   ],
+   "SB-2343": [
+    "N2",
+    "S0"
+   ],
+   "SJ-172550": [
+    "K1"
+   ],
+   "TWS-119": [],
+   "UNC-0638": [],
+   "amineptine": [],
+   "amsacrine": [
+    "K1"
+   ],
+   "antimycin-a": [
+    "K1",
+    "K2"
+   ],
+   "balicatib": [],
+   "batimastat": [],
+   "benzbromarone": [],
+   "copanlisib": [],
+   "cytosporone-b": [],
+   "emetine": [
+    "K1",
+    "K2"
+   ],
+   "entinostat": [
+    "K1",
+    "K2",
+    "N2"
+   ],
+   "enzalutamide": [],
+   "etomoxir": [
+    "N2"
+   ],
+   "everolimus": [
+    "N3",
+    "S1P2"
+   ],
+   "fluoropyruvate": [
+    "K1"
+   ],
+   "formoterol": [],
+   "geldanamycin": [
+    "N1",
+    "N2",
+    "N3",
+    "S0",
+    "S1P",
+    "S1P2"
+   ],
+   "gemcitabine": [],
+   "lomerizine": [
+    "N3"
+   ],
+   "melatonin": [
+    "N1"
+   ],
+   "myriocin": [],
+   "nutlin-3": [],
+   "oligomycin-a": [
+    "K1",
+    "K2"
+   ],
+   "palbociclib": [
+    "K1",
+    "K2",
+    "N1",
+    "N3"
+   ],
+   "pifithrin-alpha": [
+    "K1",
+    "K2"
+   ],
+   "prednisone": [],
+   "pregnenolone": [],
+   "prima-1-met": [],
+   "purpurogallin": [],
+   "quercetin": [],
+   "rociletinib": [
+    "S1P2"
+   ],
+   "rolipram": [
+    "K1",
+    "N1",
+    "N2",
+    "S1P2"
+   ],
+   "salvinorin-a": [],
+   "sonidegib": [
+    "K1",
+    "N3"
+   ],
+   "tanespimycin": [
+    "S0",
+    "S1P2"
+   ],
+   "thalidomide": [
+    "N3"
+   ],
+   "tianeptine": [
+    "K2"
+   ],
+   "triacsin-c": [
+    "S0"
+   ],
+   "wortmannin": [
+    "N2",
+    "N3",
+    "S0",
+    "S1P2"
+   ],
+   "zileuton": []
+  }
+ }
+}

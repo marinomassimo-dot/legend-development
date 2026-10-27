@@ -1,0 +1,73 @@
+{
+ "_schema": "LEGEND governance v3.1.1 \u00b7 Annex A.1 TASK_ASSIGNMENT",
+ "_note": "Opened by scientist-d from the Orchestrator's message of 2026-10-27 (package W3 of mandate ORCH-ROADMAP-IT2-20261027); no separate contract file.",
+ "TASK_ID": "SD-IT2-LINCS-20261027",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "scientist-d",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Turn the iteration-1 LINCS result into interpretable information: query/control quality, wrapper versus service, compound identity, context stratification, return to WWOX mechanisms.",
+ "SCOPE": {
+  "brief": "framework/protocols/scientist_standing_brief.md; drug_repurposing/gse156243/"
+ },
+ "ACCEPTANCE_CRITERIA": [
+  "controls matched on content and size",
+  "wrapper/service limits separated",
+  "compound identity from versioned public tables with failures kept",
+  "strata kept separate",
+  "WWOX comparison with verdict hypothesis/counter-evidence/none",
+  "verifier needs listed"
+ ],
+ "DEPENDENCIES": [],
+ "REVIEW_REQUIREMENT": "independent verifier (scientist-a) named in the candidate",
+ "INTERACTION_MODE": "AUTONOMOUS",
+ "RETRY_POLICY": "resume idempotently",
+ "MILESTONE_PLAN": [
+  "offline input quality and nulls",
+  "bounded live controls",
+  "wrapper vs service",
+  "compound identity",
+  "context and WWOX",
+  "note, candidate, land"
+ ],
+ "DELIVERABLE": "one note in gse156243/, commit candidate if warranted",
+ "CURRENT_STATE": "COMPLETE",
+ "assigned_on": "2026-10-27",
+ "TASK_ACK": {
+  "TASK_ID": "SD-IT2-LINCS-20261027",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "decision": "ACCEPTED",
+  "at": "2026-10-27T18:45:00Z"
+ },
+ "TASK_CLAIM": {
+  "TASK_ID": "SD-IT2-LINCS-20261027",
+  "GENERATION": 1,
+  "ACTOR_ID": "scientist-d",
+  "timestamp": "2026-10-27T18:45:00Z",
+  "durable_pointer": "branch task/sd-it2-lincs, worktree .claude/worktrees/sd-it2-lincs",
+  "note": "scientist-d is a stated assumption of the Orchestrator"
+ },
+ "DEFAULTS_TAKEN": [
+  {
+   "condition": "CLUE beta compound table not reachable without a key",
+   "default": "five BRD codes left unresolved and reported; no bypass",
+   "why_safe": "identity stated only where a public versioned table supports it"
+  },
+  {
+   "condition": "first L1000FWD call used the old path and wrong body keys (307, HTTP 500)",
+   "default": "corrected once from the service's own error text, no further retry",
+   "why_safe": "a format fix, not a retry of an answered request"
+  },
+  {
+   "condition": "GSE92742 level 5 matrices (several GB) not needed to answer the declared questions",
+   "default": "not downloaded; named as the next bounded step",
+   "why_safe": "no claim rests on them"
+  }
+ ],
+ "STOP_LOG": [],
+ "RESULT": {
+  "summary": "S1P empty answer explained (hyphen-stripped ids); matched nulls and KO splits run; direct L1000FWD vs wrapper separated; 129/134 BRD codes resolved, 5 failed; ChEMBL adapter false negative repaired; adds no WWOX hypothesis; candidate CC-20261027-SCIENTIST-D-LINCS-IT2-01"
+ }
+}
