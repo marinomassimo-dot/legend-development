@@ -32023,10 +32023,10 @@
    "CLAIM 016"
   ],
   "curated_cards": [
-   "F01_lithium_gsk3"
+   "G01_lithium_gsk3"
   ],
   "decisive_test": "a PTZ arm with an explicit tested `−/−` vs `+/+` contrast, or a different",
-  "digest": "68fae610a94d82c0",
+  "digest": "4f274b3ef3fadb2d",
   "intervention": "*evidence transfer that was never genotype-controlled*, compounded by *wrong",
   "kind": "mechanism_record",
   "leads_named": [],
@@ -37114,10 +37114,10 @@
    "CLAIM 031"
   ],
   "curated_cards": [
-   "F02_memantine_nmda"
+   "G02_memantine_nmda"
   ],
   "decisive_test": "MEA on WWOX-null neurons/organoids: does memantine (or MK-801) reduce spontaneous burst frequency/amplitude and PAC, dose-dependently, **with the parental/rescue line as the internal comparator**?",
-  "digest": "59b962f34671b208",
+  "digest": "149949ccf96160f4",
   "intervention": "memantine (approved); MK-801 / APV as tools",
   "kind": "mechanism_record",
   "leads_named": [],
@@ -37225,10 +37225,10 @@
    "CLAIM 035"
   ],
   "curated_cards": [
-   "F01_lithium_gsk3"
+   "G01_lithium_gsk3"
   ],
   "decisive_test": "a PTZ + lithium arm with an **explicit, tested** `−/−` vs `+/+` comparison — or a different GSK3β inhibitor under the same design. Until then, no genotype-specific claim is available",
-  "digest": "82b382d9aa1b22ba",
+  "digest": "1b1f8d2108313af6",
   "intervention": "lithium carbonate",
   "kind": "mechanism_record",
   "leads_named": [],

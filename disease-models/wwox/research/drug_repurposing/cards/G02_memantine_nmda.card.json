@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "54a8a7705039ce8aa4dfa6313396afce5f8c8a2c20c171e113e7061539abc670",
+  "input_sha256": "fbf4db791a66a38c6ff288124de2441e9d7b9bcfd104c325d15713319734625c",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "DIRECTIONAL_COMPARISON_ONLY",
@@ -46,7 +46,7 @@
   },
   "input": {
     "schema_version": 1,
-    "axis": "F / partial benefit: NMDA-receptor-dependent network bursting (memantine)",
+    "axis": "G / partial benefit: NMDA-receptor-dependent network bursting (memantine)",
     "route": "BENEFICIO_PRECOCE",
     "mission_dimensions": {
       "track": "A",
@@ -57,7 +57,7 @@
       "the_two_dimensions_are_independent": "a card keeps both: a variant-independent lever can be a partial-benefit lever, and a lesion-specific one can aim at deep recovery"
     },
     "candidate": {
-      "id": "P4-F-02",
+      "id": "P4-G-02",
       "name": "Memantine (NMDA-receptor blockade), represented by the tool compound d-APV"
     },
     "disease_assertions": [

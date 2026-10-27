@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "axis": "F / partial benefit: GSK3beta inhibition (lithium)",
+  "axis": "G / partial benefit: GSK3beta inhibition (lithium)",
   "route": "BENEFICIO_PRECOCE",
   "mission_dimensions": {
     "track": "A",
@@ -11,7 +11,7 @@
     "the_two_dimensions_are_independent": "a card keeps both: a variant-independent lever can be a partial-benefit lever, and a lesion-specific one can aim at deep recovery"
   },
   "candidate": {
-    "id": "P4-F-01",
+    "id": "P4-G-01",
     "name": "Lithium (GSK3beta inhibition as the tool rationale)"
   },
   "disease_assertions": [

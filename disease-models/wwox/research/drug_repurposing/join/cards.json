@@ -2852,7 +2852,7 @@
     }
    ],
    "input": {
-    "axis": "F / partial benefit: GSK3beta inhibition (lithium)",
+    "axis": "G / partial benefit: GSK3beta inhibition (lithium)",
     "bridge_gaps_exposed": [
      "The bridge compares a null-genotype row against the null disease row (a sign comparison only); the wild-type and heterozygote rows differ in genotype and are therefore reported as not comparable. That non-comparability is the specificity failure, and no summary field expresses it: read the assertion notes.",
      "The Ser9 disease row has no drug-side row: lithium's effect on Ser9 was not measured."
@@ -2870,11 +2870,11 @@
      "Every adjacent source is labelled NOT WWOX EVIDENCE at class level."
     ],
     "curated_candidate": {
-     "id": "P4-F-01",
+     "id": "P4-G-01",
      "name": "Lithium (GSK3beta inhibition as the tool rationale)"
     },
     "curated_from": [
-     "cards/F01_lithium_gsk3.packet.json"
+     "cards/G01_lithium_gsk3.packet.json"
     ],
     "curation_checks": [
      {
@@ -3344,7 +3344,7 @@
      "time_to_benefit": "UNKNOWN"
     }
    },
-   "input_sha256": "bdca88a770fff23555afebee632e3e7b7bdaec3100bbdd2457e9e12a3cb02a8a",
+   "input_sha256": "9e667968e53d883429f6a35f23642689672e05012c66ddebd97b57eb01988b38",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -29212,7 +29212,7 @@
     }
    ],
    "input": {
-    "axis": "F / partial benefit: NMDA-receptor-dependent network bursting (memantine)",
+    "axis": "G / partial benefit: NMDA-receptor-dependent network bursting (memantine)",
     "bridge_gaps_exposed": [
      "The tool compound is written as the drug-side row because the bridge has no slot for 'drug not tested'; its source field says it is not memantine, and no comparison made on it is a comparison for memantine."
     ],
@@ -29229,11 +29229,11 @@
      "Every adjacent source is labelled NOT WWOX EVIDENCE at class level."
     ],
     "curated_candidate": {
-     "id": "P4-F-02",
+     "id": "P4-G-02",
      "name": "Memantine (NMDA-receptor blockade), represented by the tool compound d-APV"
     },
     "curated_from": [
-     "cards/F02_memantine_nmda.packet.json"
+     "cards/G02_memantine_nmda.packet.json"
     ],
     "curation_checks": [
      {
@@ -29810,7 +29810,7 @@
      "time_to_benefit": "UNKNOWN"
     }
    },
-   "input_sha256": "a0a412a0656eb1b50d2f14964ab7f0d77e48adf28503996ddd6a9d5ce3abcc3f",
+   "input_sha256": "119028972033e3a2b132af31187e4222b43b323663083aab322e1568aa084005",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -30753,7 +30753,7 @@
     }
    ],
    "input": {
-    "axis": "F / partial benefit: GSK3beta inhibition (lithium)",
+    "axis": "G / partial benefit: GSK3beta inhibition (lithium)",
     "bridge_gaps_exposed": [
      "The bridge compares a null-genotype row against the null disease row (a sign comparison only); the wild-type and heterozygote rows differ in genotype and are therefore reported as not comparable. That non-comparability is the specificity failure, and no summary field expresses it: read the assertion notes.",
      "The Ser9 disease row has no drug-side row: lithium's effect on Ser9 was not measured."
@@ -30771,11 +30771,11 @@
      "Every adjacent source is labelled NOT WWOX EVIDENCE at class level."
     ],
     "curated_candidate": {
-     "id": "P4-F-01",
+     "id": "P4-G-01",
      "name": "Lithium (GSK3beta inhibition as the tool rationale)"
     },
     "curated_from": [
-     "cards/F01_lithium_gsk3.packet.json"
+     "cards/G01_lithium_gsk3.packet.json"
     ],
     "curation_checks": [
      {
@@ -31252,7 +31252,7 @@
      "time_to_benefit": "UNKNOWN"
     }
    },
-   "input_sha256": "e9f6acc133e87923112b29d096ab0f6e3600330e3a83c1cf298ad83adb23b451",
+   "input_sha256": "1cf5a6a0c7e2d79a61a02524f1489f5ccde6359785991c4e497e05411b3fcb5a",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",

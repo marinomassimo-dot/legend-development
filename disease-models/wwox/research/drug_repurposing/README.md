@@ -120,9 +120,9 @@ a link adds, not by ease.
 | Q-N-08 | Dichloroacetate | linked (iteration 1) | E03 |
 | Q-R-10 | ISRIB-class ISR attenuators | linked (iteration 1) | E01 |
 | Q-R-11 | Stiripentol | linked (iteration 1) | E02 |
-| Q-N-02 | Lithium as a WWOX-specific modifier | (b), **linked now** | F01 (new): the same candidate as R-04 |
-| Q-R-04 | Lithium (GSK3beta) | (b), **linked now** | F01 (new) |
-| Q-R-02 | Memantine | (b), **linked now** | F02 (new): tool compound d-APV only; memantine itself untested |
+| Q-N-02 | Lithium as a WWOX-specific modifier | (b), **linked now** | G01 (new): the same candidate as R-04 |
+| Q-R-04 | Lithium (GSK3beta) | (b), **linked now** | G01 (new) |
+| Q-R-02 | Memantine | (b), **linked now** | G02 (new): tool compound d-APV only; memantine itself untested |
 | Q-R-01 | AAV9-hSynI-WWOX | (a)+(b), **linked now** | C01 (existing, spike-wave discharges) + C04 (new, six other endpoint families) |
 | Q-R-03 | Wnt / tankyrase inhibition | (a), **linked now** | D02 (existing, abstention; carries a route and no Track) |
 | Q-R-05 | Ketogenic diet | (a), **linked now** | EB-KD-01 (existing, seizure rows; early-benefit directory) + E04 (existing, lactate/PDH) |
@@ -137,13 +137,13 @@ a link adds, not by ease.
 | Q-N-15 | Counting seizure control as developmental protection | (a), caution | EB-DEV-AX-01 (axis, no candidate); the record is an inference error, not an intervention |
 | Q-N-07 | Digoxin (HIF1alpha) | (b) | none; four papers, three complete reads; a card is writable from the repository |
 | Q-N-09 | pTyr33-WWOX peptide | (b) | none; three complete reads, three without a receipt |
-| Q-N-13 | Pro-myelinating agents | (b) | none; 29 papers; the oligodendrocyte-boundary rows already sit in C04 and the scaffold |
+| Q-N-13 | Pro-myelinating agents | (b) at measurement; **(a) since** | none when measured; 29 papers. A concurrent package (scientist-c, W2) landed `F02_myelination_activity_sign` the same day; not linked, pertinence to be checked |
 | Q-N-14 | Antioxidants | (b) | none; eight papers, four complete |
 | Q-N-16 | Pannexin-1 blockade | (b) | none; one complete reading, and its one datum (a point estimate in the adverse direction, never tested) is manifest entry 2 of the Breton 2021 reading |
 | Q-N-17 | Tau-lowering | (b) | none; 56 papers; the WWOX/GSK3beta/Tau rows sit in the Wang 2012 manifest |
 | Q-N-03 | Sodium-channel blockers | (c) | none; one paper, no receipt. EB-ETX-01 (a T-type blocker) must NOT be linked: different candidate |
 | Q-R-06 | Anti-neuroinflammatory, class level | (c) | none; no compound and no endpoint named, so a card could only abstain |
-| Q-R-07 | Bumetanide | (c) | none; the chloride premise is unmeasured in any WWOX system; a card would be an abstention |
+| Q-R-07 | Bumetanide | (c) at measurement; **(a) since** | none when measured (the chloride premise is unmeasured in any WWOX system). The concurrent W2 package landed `F03_bumetanide_chloride_gradient` as an abstention; not linked |
 | Q-N-06 | Lactate and blood biomarkers as readouts | (d) | E02/E04 hold the lactate observations but their route and candidate are interventions; this record is a biomarker, so a route would be wrong. Left `UNQUALIFIED` |
 
 Classes: (a) a pertinent curated card exists and is not linked; (b) content is present in the repository and needs a card;
@@ -180,11 +180,11 @@ reading; every `wnt`-axis card an abstention) and were updated, not loosened: th
 record (Q-N-07) and the per-reading scope of a linked one.
 
 **Decisive links, for an independent verifier** (the producer cannot verify itself):
-1. **Q-N-02 / Q-R-04 to F01.** The three genotype panels of Figure 7d (manifest PMID32000863 entries 0, 22, 27, 28): lithium
+1. **Q-N-02 / Q-R-04 to G01.** The three genotype panels of Figure 7d (manifest PMID32000863 entries 0, 22, 27, 28): lithium
    suppressed the provoked seizure in wild type and heterozygote as in the null; the card must not read as a WWOX-specific
    signal. Also entries 2, 4, 23 (Ser9 dephosphorylation; heterozygote not intermediate). One trap: manifest PMID22193544
    entry 5 ("Ser9 unchanged") is a retinoic-acid differentiation context, not WWOX loss; the card says so and does not use it as a disease row.
-2. **Q-R-02 to F02.** d-APV is a tool; the card says memantine was never given. Check that no field reads as a memantine result
+2. **Q-R-02 to G02.** d-APV is a tool; the card says memantine was never given. Check that no field reads as a memantine result
    (`OPPOSES_DISEASE_CHANGE` is a sign comparison for the tool). The d-APV Results sentence is quoted from the article text, not a manifest entry; manifest PMID34634460 entry 2 reads the panel (bar absent, i.e. zero; washout about 1.85 times baseline).
 3. **Q-R-01 to C01 + C04.** Each C04 row against `woree_rescue_reference_scaffold.md` section 2 and the manifest entries it names
    (40, 41, 10 carry repaired adverse audits not re-judged). Check that low-dose rows are written as a postponement or a non-graded
@@ -194,6 +194,13 @@ record (Q-N-07) and the per-reading scope of a linked one.
    (opposite direction on beta-catenin) into this record: lithium is deliberately NOT linked to D02.
 6. **Scope vocabulary.** Mouse results (null, neuron-specific deletion) are marked `WWOX_EXPERIMENT_IN_DEE_SYSTEM`; confirm that is the
    intended reading of that label for an engineered-null mouse that is not a patient allele.
+
+**Concurrent work, noticed at landing.** Package W2 (scientist-c) landed `F01_glutamate_receptor_node`, `F02_myelination_activity_sign` and
+`F03_bumetanide_chloride_gradient` in `cards/` while this package ran. Their file prefix `F` and the candidate ids `P4-F-01`/`P4-F-02`
+collided with the first names chosen here; the lithium and memantine cards were therefore renamed `G01_lithium_gsk3` and
+`G02_memantine_nmda` (candidate ids `P4-G-01`, `P4-G-02`) in a follow-up commit. `F01_glutamate_receptor_node` covers memantine
+together with perampanel on the same bursting node as `G02`: the two overlap and no record links the W2 cards yet. If both are linked to
+Q-R-02 the merged derived card will carry both sets of rows; whoever links the second one decides whether to merge them.
 
 **Not verified.** The (a)-class pertinence of the 9 unlinked rows; the Q-R-08 and Q-R-09 judgements; whether the early-benefit
 cards' silent Track should be written into those cards instead of read as silent; the new cards' figure readings (they carry
