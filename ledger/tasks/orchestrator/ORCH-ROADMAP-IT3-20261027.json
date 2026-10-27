@@ -14,17 +14,17 @@
    "steps": [
     {
      "step": "AAV9 CONFLICTING semantics per endpoint + regressions",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "plan"
     },
     {
      "step": "Guyon 2022 receipt: real targeted read linked to previous, consumers checked",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "scientist-d"
     },
     {
      "step": "ChEMBL parent-id fallback regression; HYP-01 Seahorse wording; skip classification by id and cause; roadmap section updated",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "plan"
     }
    ]
@@ -34,12 +34,12 @@
    "steps": [
     {
      "step": "Compound catalogue from public sources (deterministic, cached, provenance, access categories)",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "scientist-a"
     },
     {
      "step": "WWOX biological needs table with locators and rationale for direction",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "scientist-b"
     },
     {
@@ -64,17 +64,17 @@
    "steps": [
     {
      "step": "PMID 41380592 PARS2/GCN2/ATF4 + complex I propagation into LDH/PDH design",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "scientist-c"
     },
     {
      "step": "LINCS GSE92742 offline feasibility and minimal-extract decision",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "scientist-d"
     },
     {
      "step": "Radar: real run consumed, catalogue-update probes, small discovery search, opportunity notes",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "plan"
     },
     {
