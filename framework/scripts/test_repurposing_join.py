@@ -298,7 +298,10 @@ class Run(unittest.TestCase):
             card = row["card"]
             self.assertEqual(card["epistemic_status"], "IPOTESI")
             self.assertFalse(card["canonical"])
-            self.assertEqual(card["abstention"], "NO_DRUG_ASSERTIONS_SUPPLIED")
+            # an abstention is what a card without drug-side rows says; a linked curated card that carries
+            # drug-side rows (e.g. lithium, F01) is a card with comparisons and no abstention
+            self.assertEqual(card["abstention"],
+                             None if card["input"]["drug_assertions"] else "NO_DRUG_ASSERTIONS_SUPPLIED")
             self.assertEqual(card["directional_summary"], "UNRESOLVED")
             text = json.dumps(card, ensure_ascii=False).lower()
             for word in ("\"score\"", "\"rank\"", "\"probability\""):
@@ -441,9 +444,14 @@ class CuratedLink(unittest.TestCase):
         # scope comes only from a curated assertion that cites the reading; otherwise it is said to be unqualified
         self.assertEqual(self.evidence["Q-R-10"]["rows"][0]["evidence_scope"], ["WWOX_BIOLOGY_OTHER_CONTEXT"])
         self.assertIn("DA-LC-ATF4-001", self.evidence["Q-R-10"]["rows"][0]["scope_basis"])
-        for row in self.evidence["Q-R-01"]["rows"]:
+        # a record with no curated card: every row is said to be unqualified, none is inferred
+        for row in self.evidence["Q-N-07"]["rows"]:
             self.assertEqual(row["evidence_scope"], ["UNQUALIFIED"])
             self.assertIn("not qualified", row["scope_basis"])
+        # a record whose curated card cites one reading qualifies THAT reading only (Q-R-01, linked 2026-10-27)
+        by_pmid = {row["pmid"]: row for row in self.evidence["Q-R-01"]["rows"]}
+        self.assertEqual(by_pmid["42422765"]["evidence_scope"], ["WWOX_EXPERIMENT_IN_DEE_SYSTEM"])
+        self.assertEqual(by_pmid["42128308"]["evidence_scope"], ["UNQUALIFIED"])
 
     def test_route_and_track_are_the_curated_ones_or_unqualified_never_defaulted(self):
         for query_id, card in self.cards.items():
@@ -458,6 +466,30 @@ class CuratedLink(unittest.TestCase):
         self.assertEqual(card["mission_dimensions"], packet["mission_dimensions"])
         self.assertEqual(card["mission_dimensions"]["track"], "A")
         self.assertNotEqual(card["route"], "RECUPERO_PROFONDO")
+
+    def test_a_card_written_before_track_was_qualified_links_without_a_guessed_track(self):
+        """Defects found 2026-10-27 (package W1.1): qualification() raised KeyError on a packet with no
+        `mission_dimensions` (the A-D series and the early-benefit cards), and CARD_REF could not name a
+        `cards_early/` card (hyphenated id), so those cards could not be linked at all."""
+        self.assertEqual(rj.CARD_REF.findall("`research/drug_repurposing/cards_early/EB-KD-01.card.json`"), ["EB-KD-01"])
+        self.assertEqual(rj.CARD_REF.findall("`research/drug_repurposing/cards/E04_ketogenic_lactate_axis.card.json`"),
+                         ["E04_ketogenic_lactate_axis"])
+        old = json.loads(rj.curated_packet_path("D02_wnt_tankyrase").read_text(encoding="utf-8"))
+        route, dims = rj.qualification([old])
+        self.assertEqual((route, dims["track"]), (old["route"], "UNQUALIFIED"))  # the route as written, the Track not guessed
+        self.assertIn(old["candidate"]["id"], dims["route_note"])
+        early = json.loads(rj.curated_packet_path("EB-KD-01").read_text(encoding="utf-8"))
+        stated = self.packet("E04_ketogenic_lactate_axis")
+        route, dims = rj.qualification([early, stated])
+        self.assertEqual((route, dims["track"]), ("BENEFICIO_PRECOCE", "A"))  # Track from the card that states it, said in the note
+        self.assertIn("EB-KD-01", dims["route_note"])
+        # a record naming a card that cannot be found would be skipped silently: none may
+        for query_id, query in self.queries.items():
+            for name in query.get("curated_cards") or []:
+                self.assertIsNotNone(rj.curated_packet_path(name), (query_id, name))
+        linked = self.cards["Q-R-05"]["input"]
+        self.assertEqual(sorted(linked["curated_from"]), ["cards/E04_ketogenic_lactate_axis.packet.json",
+                                                         "cards_early/EB-KD-01.packet.json"])
 
     def test_curated_observations_arrive_unchanged_with_context_limits_and_a_live_link(self):
         for query_id, name in (("Q-R-10", "E01_isr_modulators"), ("Q-R-11", "E02_ldh_inhibition"), ("Q-N-08", "E03_pdk_inhibition_dca")):
@@ -477,6 +509,21 @@ class CuratedLink(unittest.TestCase):
         for check in checks:
             self.assertTrue(check["receipt_in_ledger"], check)
             self.assertTrue(all(m["resolved"] for m in check["manifest_entries"]), check)
+
+    def test_the_handoff_names_the_card_a_record_is_already_qualified_by(self):
+        """Package W1.1: a row of a linked record points the next batch at the curated card (with its route, Track,
+        row counts, comparison statuses and its own next measurement); an unlinked record carries no such block."""
+        for query_id, row in self.rows.items():
+            linked = bool(self.cards[query_id]["input"].get("curated_from"))
+            self.assertEqual(bool(row["qualification"]), linked, query_id)
+        view = self.rows["Q-R-04"]["qualification"]
+        self.assertEqual(view["cards"], ["cards/F01_lithium_gsk3.packet.json"])
+        self.assertEqual((view["route"], view["track"]), ("BENEFICIO_PRECOCE", "A"))
+        self.assertEqual(view["comparisons"], {"OPPOSES_DISEASE_CHANGE": 1, "UNRESOLVED": 2})  # the specificity failure stays visible
+        self.assertEqual(self.rows["Q-N-02"]["qualification"]["cards"], view["cards"])  # one candidate, two map records, one card
+        text = rj.render_handoff(list(self.rows.values()), "2026-01-01", "all")
+        self.assertIn("Records already qualified by a curated card", text)
+        self.assertIn("cards/F01_lithium_gsk3.packet.json", text)
 
     def test_a_locator_pointing_past_the_manifest_is_reported_unresolved(self):
         row = {"id": "X", "locator": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json "

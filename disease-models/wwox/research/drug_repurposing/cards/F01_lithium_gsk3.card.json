@@ -1,0 +1,304 @@
+{
+  "schema_version": 1,
+  "input_sha256": "3de369f384b605ff08ab96fe35f5de137a0fee6cb243b0d5c50ce5d61cb6a46d",
+  "epistemic_status": "IPOTESI",
+  "canonical": false,
+  "assessment": "REQUIRES_QUALIFICATION",
+  "directional_summary": "UNRESOLVED",
+  "comparisons": [
+    {
+      "assertion_id": "DR-LI-001",
+      "status": "OPPOSES_DISEASE_CHANGE",
+      "reasons": []
+    },
+    {
+      "assertion_id": "DR-LI-002",
+      "status": "UNRESOLVED",
+      "reasons": [
+        "context.genotype: mismatch or unknown"
+      ]
+    },
+    {
+      "assertion_id": "DR-LI-003",
+      "status": "UNRESOLVED",
+      "reasons": [
+        "context.genotype: mismatch or unknown"
+      ]
+    }
+  ],
+  "abstention": null,
+  "label_lookup": {
+    "status": "NOT_ATTEMPTED",
+    "coverage": "UNKNOWN",
+    "method": "UNKNOWN",
+    "queries": [],
+    "source": "UNKNOWN",
+    "retrieved_at": "UNKNOWN",
+    "client_version": "UNKNOWN",
+    "product_name": "UNKNOWN",
+    "active_ingredient": "UNKNOWN",
+    "formulation": "UNKNOWN",
+    "spl_id": "UNKNOWN",
+    "error": "UNKNOWN",
+    "coverage_limit": "UNKNOWN"
+  },
+  "p4_fields": {
+    "endpoint_pursued": "Seizure suppression with a genotype-specific effect: a tested drug-by-genotype interaction on a provoked-seizure score; then Ser9 phosphorylation or substrate phosphorylation after lithium in a Wwox-null system.",
+    "functional_evidence_available": "Null-genotype suppression of a provoked-seizure score, equally present in wild type and heterozygote: non-specific.",
+    "temporal_or_model_limit": "Preweaning pups, engineered null, one provoking dose, one laboratory; the two controls of the figure are not shown to be separate cohorts.",
+    "cellular_context": {
+      "target_expression": "GSK3beta is broadly expressed; total protein unchanged between genotypes in the printed densitometry.",
+      "cells_tissue_stage": "Whole-animal behaviour; Ser9 blot from cerebellum, hippocampus and cortex at postnatal day 20.",
+      "coverage": "UNKNOWN.",
+      "limits": "A seizure score integrates many targets of lithium; the blot reads one phosphorylation site."
+    }
+  },
+  "input": {
+    "schema_version": 1,
+    "axis": "F / partial benefit: GSK3beta inhibition (lithium)",
+    "route": "BENEFICIO_PRECOCE",
+    "mission_dimensions": {
+      "track": "A",
+      "track_definition": "mission.md section 5: Track A = variant-independent WWOX loss of function; Track B = variant or allele-class specific (e.g. the Q230P missense class); Track C = repurposing, which is a method of reaching A or B, not a third lesion class",
+      "route": "BENEFICIO_PRECOCE",
+      "route_definition": "RECUPERO_PROFONDO = deep recovery of the lost function; BENEFICIO_PRECOCE = concrete partial benefit, symptomatic control or protection of function, with paediatric feasibility and time in view",
+      "route_note": "Symptomatic seizure suppression in a provoked-seizure assay; not WWOX-specific (wild type responds). Not deep recovery; WWOX function would remain lost. Track B: no allele-specific datum.",
+      "the_two_dimensions_are_independent": "a card keeps both: a variant-independent lever can be a partial-benefit lever, and a lesion-specific one can aim at deep recovery"
+    },
+    "candidate": {
+      "id": "P4-F-01",
+      "name": "Lithium (GSK3beta inhibition as the tool rationale)"
+    },
+    "disease_assertions": [
+      {
+        "id": "DA-LI-PTZ-001",
+        "target_id": "PTZ-provoked seizure severity (Racine stage over time)",
+        "endpoint": "behavioural seizure stage after one provoking injection, preweaning mice",
+        "direction": "INCREASE",
+        "source": "Cheng 2020 (PAPER 019, CLAIM 016; PMID 32000863; one laboratory; Wwox-null mouse, preweaning)",
+        "locator": "disease-models/wwox/research/deepdive_manifests/PMID32000863.json verbatim_locators.entries[27], [28], [30]; Figure 7b/7d null versus wild-type panels",
+        "epistemic_status": "DATO",
+        "reading_depth": "complete_fulltext_read",
+        "context": {
+          "disease_id": "Wwox-null mouse model (engineered Wwox knockout; NOT the Q230P class)",
+          "genotype": "Wwox-/- (homozygous null) versus Wwox+/+ littermates",
+          "species": "mouse",
+          "cell_type": "whole animal, behavioural seizure scoring after a provoking injection (Racine stage, scored each minute for 60 minutes)",
+          "developmental_stage": "preweaning pups"
+        },
+        "measured_result_note": "The same provoking dose was used in all three genotypes (entry 30). In the lithium experiment's own PTZ-alone groups the null group peaks at about 3.5 stage (N = 6) and the wild-type group at about 1.2 (N = 12) (entries 27, 28; read from the figure, pixels cannot be quote-matched). Hypersusceptibility sits on top of a structurally malformed brain (entry 6): an amplifier, not necessarily the driver. Engineered null, not a patient allele.",
+        "receipt": "FTR-20260804-32000863-01",
+        "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
+      },
+      {
+        "id": "DA-LI-S9-001",
+        "target_id": "GSK3beta inhibitory Ser9 phosphorylation (western densitometry, total GSK3beta blotted alongside)",
+        "endpoint": "pGSK3beta(Ser9) signal in cerebellum, hippocampus and cortex",
+        "direction": "DECREASE",
+        "source": "Cheng 2020 (PAPER 019, CLAIM 016; PMID 32000863; one laboratory; Wwox-null mouse, preweaning)",
+        "locator": "disease-models/wwox/research/deepdive_manifests/PMID32000863.json verbatim_locators.entries[2], [4], [23]; Figure 7c, densitometry row re-read at 3x",
+        "epistemic_status": "DATO",
+        "reading_depth": "complete_fulltext_read",
+        "context": {
+          "disease_id": "Wwox-null mouse model (engineered Wwox knockout; NOT the Q230P class)",
+          "genotype": "Wwox-/- (homozygous null) versus Wwox+/+ littermates",
+          "species": "mouse",
+          "cell_type": "brain tissue lysate: cerebellum, hippocampus, cerebral cortex",
+          "developmental_stage": "postnatal day 20"
+        },
+        "measured_result_note": "Printed densitometry, +/+ then +/- then -/-: pSer9 2.7, 3.1, 1.3 (cerebellum); 3.6, 3.5, 2.0 (hippocampus); 3.9, 3.8, 2.5 (cortex). Total GSK3beta 2.2-2.6 in every lane. GSK3beta is dis-inhibited, not more abundant; the heterozygote is not intermediate (at or above wild type in every region). One blot, one site; no statistical test is reported in the locators held (map record R-04 tags it NOT_TESTED). This is a phosphorylation datum, not a kinase-activity assay.",
+        "receipt": "FTR-20260804-32000863-01",
+        "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
+      }
+    ],
+    "drug_assertions": [
+      {
+        "id": "DR-LI-001",
+        "target_id": "PTZ-provoked seizure severity (Racine stage over time)",
+        "endpoint": "behavioural seizure stage after one provoking injection, preweaning mice",
+        "direction": "DECREASE",
+        "source": "Cheng 2020 (PAPER 019, CLAIM 016; PMID 32000863; one laboratory; Wwox-null mouse, preweaning); the intervention is lithium chloride pretreatment",
+        "locator": "disease-models/wwox/research/deepdive_manifests/PMID32000863.json verbatim_locators.entries[0], [5], [22], [27]; Figure 7d lower (null) panel",
+        "epistemic_status": "DATO",
+        "reading_depth": "complete_fulltext_read",
+        "context": {
+          "disease_id": "Wwox-null mouse model (engineered Wwox knockout; NOT the Q230P class)",
+          "genotype": "Wwox-/- (homozygous null) versus Wwox+/+ littermates",
+          "species": "mouse",
+          "cell_type": "whole animal, behavioural seizure scoring after a provoking injection (Racine stage, scored each minute for 60 minutes)",
+          "developmental_stage": "preweaning pups"
+        },
+        "measured_result_note": "Null panel: PTZ-alone N = 6 against PTZ plus lithium N = 7; a significance bracket is printed (entry 22: each of the three genotype panels carries its own four-star bracket). The paper states this null-only result in its text (entry 5) and never states the other two panels. The PTZ-alone null group of this experiment differs in late values from the PTZ-alone null group of the ethosuximide experiment (Figure 7b) by a comparable order to the ethosuximide effect (entry 27); whether the two control groups are separate cohorts is not stated.",
+        "receipt": "FTR-20260804-32000863-01",
+        "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
+      },
+      {
+        "id": "DR-LI-002",
+        "target_id": "PTZ-provoked seizure severity (Racine stage over time)",
+        "endpoint": "behavioural seizure stage after one provoking injection, preweaning mice",
+        "direction": "DECREASE",
+        "source": "Cheng 2020 (PAPER 019, CLAIM 016; PMID 32000863; one laboratory; Wwox-null mouse, preweaning); wild-type littermate arm; lithium suppressed the provoked seizure as significantly as in the null; NOT WWOX EVIDENCE of a disease-specific effect",
+        "locator": "disease-models/wwox/research/deepdive_manifests/PMID32000863.json verbatim_locators.entries[0], [22], [28]; Figure 7d upper (wild-type) panel",
+        "epistemic_status": "DATO",
+        "reading_depth": "complete_fulltext_read",
+        "context": {
+          "disease_id": "Wwox-null mouse model (engineered Wwox knockout; NOT the Q230P class)",
+          "genotype": "Wwox+/+ (wild-type littermates)",
+          "species": "mouse",
+          "cell_type": "whole animal, behavioural seizure scoring after a provoking injection (Racine stage, scored each minute for 60 minutes)",
+          "developmental_stage": "preweaning pups"
+        },
+        "measured_result_note": "Wild-type panel: PTZ-alone N = 12 against PTZ plus lithium N = 8, four-star bracket. The separation is confined to roughly the first 5 to 10 minutes of a floor-limited wild-type response (entry 28). The experiment therefore failed its specificity test: lithium is an anticonvulsant in an animal that has seizures; it does not show a Wwox-specific rescue (entry 22). The genotype context differs from the disease row, so the bridge reports this cell as not comparable; the wild-type result is the point.",
+        "receipt": "FTR-20260804-32000863-01",
+        "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
+      },
+      {
+        "id": "DR-LI-003",
+        "target_id": "PTZ-provoked seizure severity (Racine stage over time)",
+        "endpoint": "behavioural seizure stage after one provoking injection, preweaning mice",
+        "direction": "DECREASE",
+        "source": "Cheng 2020 (PAPER 019, CLAIM 016; PMID 32000863; one laboratory; Wwox-null mouse, preweaning); heterozygous arm; NOT WWOX EVIDENCE of a disease-specific effect",
+        "locator": "disease-models/wwox/research/deepdive_manifests/PMID32000863.json verbatim_locators.entries[0], [22]; Figure 7d middle (heterozygote) panel",
+        "epistemic_status": "DATO",
+        "reading_depth": "complete_fulltext_read",
+        "context": {
+          "disease_id": "Wwox-null mouse model (engineered Wwox knockout; NOT the Q230P class)",
+          "genotype": "Wwox+/- (heterozygous littermates)",
+          "species": "mouse",
+          "cell_type": "whole animal, behavioural seizure scoring after a provoking injection (Racine stage, scored each minute for 60 minutes)",
+          "developmental_stage": "preweaning pups"
+        },
+        "measured_result_note": "The heterozygote panel carries its own significance bracket (entry 22); group sizes are not carried by the locators held.",
+        "receipt": "FTR-20260804-32000863-01",
+        "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
+      }
+    ],
+    "p4_fields": {
+      "endpoint_pursued": "Seizure suppression with a genotype-specific effect: a tested drug-by-genotype interaction on a provoked-seizure score; then Ser9 phosphorylation or substrate phosphorylation after lithium in a Wwox-null system.",
+      "functional_evidence_available": "Null-genotype suppression of a provoked-seizure score, equally present in wild type and heterozygote: non-specific.",
+      "temporal_or_model_limit": "Preweaning pups, engineered null, one provoking dose, one laboratory; the two controls of the figure are not shown to be separate cohorts.",
+      "cellular_context": {
+        "target_expression": "GSK3beta is broadly expressed; total protein unchanged between genotypes in the printed densitometry.",
+        "cells_tissue_stage": "Whole-animal behaviour; Ser9 blot from cerebellum, hippocampus and cortex at postnatal day 20.",
+        "coverage": "UNKNOWN.",
+        "limits": "A seizure score integrates many targets of lithium; the blot reads one phosphorylation site."
+      }
+    },
+    "p4_card": {
+      "identity": "Lithium (the salt used in the mouse experiment: lithium chloride; the clinical compound class is lithium carbonate), used in the one WWOX experiment as a tool inhibitor of GSK3beta. Map records R-04 (repurposing) and N-02 (negative translation) describe the same candidate and are linked to this one card.",
+      "indication_and_transfer": "Symptomatic seizure suppression is the only endpoint ever tested in a WWOX system; it is non-specific (wild type responds equally). A WWOX-specific disease-modifying rationale is not supported by the primary data. Transfer to the reference genotype: not established.",
+      "novelty_for_woree": "Already studied once (Cheng 2020, one laboratory, one experiment). Not new; the question is whether the result means what it was read as meaning.",
+      "state_of_known_roads": "Map R-04 class DEPRIORITIZE; N-02 negative translation; CLAIM 016, CLAIM 035, PAPER 019, PAPER 056; known-roads reconnaissance of 2026-10-20.",
+      "pathway_and_objective": "BENEFICIO_PRECOCE; Track A (allele-blind); not deep recovery.",
+      "expected_contribution": "UNKNOWN beyond non-specific seizure suppression; direction on the Wnt axis possibly adverse (INFERENZA).",
+      "mechanism": "Target: GSK3beta (among many); claimed: inhibits a kinase de-repressed by WWOX loss; the de-repression is read from a single Ser9 phosphorylation blot; the attribution of the seizure effect to GSK3beta rests on lithium alone.",
+      "sources": {
+        "internal": [
+          "R-04",
+          "N-02",
+          "CLAIM 016",
+          "CLAIM 035",
+          "PAPER 019",
+          "PAPER 056",
+          "PMID 32000863 manifest entries 0, 2, 4, 5, 6, 22, 23, 27, 28, 30",
+          "PMID 22193544 manifest entries 5, 8"
+        ],
+        "external_not_wwox_evidence": []
+      },
+      "evidence_for_and_against": {
+        "for": [
+          "Lithium suppressed the provoked seizure score in the null genotype (Figure 7d, null panel)."
+        ],
+        "against": [
+          "SPECIFICITY FAILED: lithium suppressed the provoked seizure in all three genotypes, wild type included (Figure 7d; entries 0, 22).",
+          "The causal attribution to GSK3beta rests on lithium alone; the paper's own Discussion names lithium's other documented actions, including Wnt/beta-catenin-dependent effects (entry 3). Lithium acts on many targets besides GSK3beta.",
+          "The only cell-line source (Wang 2012, PMID 22193544) reports Ser9 phosphorylation unchanged during retinoic-acid differentiation of SH-SY5Y cells, while WWOX rose (entry 5): that is a WWOX-gain, differentiation context, not a WWOX-loss measurement, and must not be read as a knockdown result; the knockdown experiment of that paper measured Tau phosphorylation (entry 8), not Ser9.",
+          "Direction conflict (INFERENZA): beta-catenin stabilisation by lithium would push an axis that is already raised in WWOX-loss organoids (map record R-04, axis M5; card P4-D-02).",
+          "Different control groups and schedules for lithium and ethosuximide inside one figure (entries 27, 28): the two drugs are not compared on equal terms.",
+          "A clinical anticonvulsant effect would be symptomatic: CLAIM 031 states that seizure control does not buy development."
+        ],
+        "transfer_limits": "Engineered null mouse versus a missense or compound human context; a provoked-seizure score in preweaning pups versus a human epilepsy; one laboratory."
+      },
+      "time_to_access": "UNKNOWN.",
+      "time_to_benefit": "UNKNOWN.",
+      "pharmacology": "Approved compound (class level, from map record R-04) with a narrow therapeutic index and monitoring needs; CNS exposure is not in doubt. Nothing here is a statement about exposure in WWOX-DEE.",
+      "paediatrics_and_interactions": "UNKNOWN. No paediatric suitability is presumed by this card, for the candidate or for any historical authorisation of it for another use.",
+      "scope_of_checks": {
+        "support_and_replication": "One laboratory, one experiment; no replication.",
+        "formal_checks": "The lithium figure panels were read from the image; the 2026-10-21 R2 figure readings (entries 27, 28) carry a blind locator audit (SUPPORTED) and a recorded softening of wording; the null-only wording of the Results text against the three-panel figure is a recorded text-versus-panel finding.",
+        "card_inferences_owed_audit": "The direction-conflict statement on the Wnt axis and the amplifier-not-driver reading are INFERENZA and are owed a blind audit by another actor."
+      },
+      "question_history": [
+        "map R-04 and N-02",
+        "mandate ORCH-ROADMAP-IT2-20261027 (package W1.1)"
+      ],
+      "predictions": "None; no engine, no score.",
+      "next_measurement": "A provoked-seizure arm with an explicit, tested null versus wild-type contrast and the interaction reported, or a different GSK3beta inhibitor under the same design; and a kinase-activity or substrate-phosphorylation readout in a Wwox-null system. Until then no genotype-specific claim is available.",
+      "status": "controversial",
+      "status_reason": "The one experiment failed its specificity test and the Wnt-axis direction may be adverse.",
+      "value_added": "Keeps the lithium result as what it is (non-specific symptomatic suppression, specificity failed) so it is not read as a WWOX-specific signal, and names the contrast that would change that.",
+      "clinical_census": "Clinical census, ClinicalTrials.gov API v2, 2026-10-20 (disease-models/wwox/research/drug_repurposing/clinical_census_20261020.md): seven separate queries returned no registered WOREE interventional study; it answers seven queries against one registry on one date and a missing hit does not prove that no study exists. Not re-run for this card."
+    },
+    "not_known": [
+      "Whether lithium does anything in a Wwox-deficient system that it does not do in a wild-type one (the one experiment that tested it answered no).",
+      "Whether lithium moves GSK3beta Ser9 phosphorylation or kinase activity in a Wwox-null brain: lithium's effect on the Ser9 readout was not measured in this system.",
+      "Whether GSK3beta abundance or Ser9 state tracks activity here: abundance and activity are dissociable in this very system (S9-independent inhibition), and no kinase-activity assay exists in a WWOX system.",
+      "Whether the null-genotype hypersusceptibility is a driver of the developmental phenotype or an amplifier on a malformed brain (entry 6).",
+      "Whether the wild-type response is floor-limited in a way that hides a genotype difference.",
+      "Any allele-specific datum (Q230P class or splice allele): none exists for lithium.",
+      "Net direction on the Wnt axis: lithium stabilises beta-catenin, and WWOX-loss organoids show nuclear beta-catenin already raised (card P4-D-02)."
+    ],
+    "evidence_against": [
+      "SPECIFICITY FAILED: lithium suppressed the provoked seizure in all three genotypes, wild type included (Figure 7d; entries 0, 22).",
+      "The causal attribution to GSK3beta rests on lithium alone; the paper's own Discussion names lithium's other documented actions, including Wnt/beta-catenin-dependent effects (entry 3). Lithium acts on many targets besides GSK3beta.",
+      "The only cell-line source (Wang 2012, PMID 22193544) reports Ser9 phosphorylation unchanged during retinoic-acid differentiation of SH-SY5Y cells, while WWOX rose (entry 5): that is a WWOX-gain, differentiation context, not a WWOX-loss measurement, and must not be read as a knockdown result; the knockdown experiment of that paper measured Tau phosphorylation (entry 8), not Ser9.",
+      "Direction conflict (INFERENZA): beta-catenin stabilisation by lithium would push an axis that is already raised in WWOX-loss organoids (map record R-04, axis M5; card P4-D-02).",
+      "Different control groups and schedules for lithium and ethosuximide inside one figure (entries 27, 28): the two drugs are not compared on equal terms.",
+      "A clinical anticonvulsant effect would be symptomatic: CLAIM 031 states that seizure control does not buy development."
+    ],
+    "bridge_gaps_exposed": [
+      "The bridge compares a null-genotype row against the null disease row (a sign comparison only); the wild-type and heterozygote rows differ in genotype and are therefore reported as not comparable. That non-comparability is the specificity failure, and no summary field expresses it: read the assertion notes.",
+      "The Ser9 disease row has no drug-side row: lithium's effect on Ser9 was not measured."
+    ],
+    "translation": {
+      "pediatric_suitability": "UNKNOWN. No paediatric suitability is presumed by this card, for the candidate or for any historical authorisation of it for another use.",
+      "cns_exposure": "Not in doubt for the class; WWOX-DEE exposure UNKNOWN.",
+      "interactions": "UNKNOWN",
+      "access": "UNKNOWN. An approved compound; no registered WOREE interventional study on the census registry on 2026-10-20 (a missing hit does not prove that none exists).",
+      "time_to_benefit": "UNKNOWN",
+      "functional_rescue": "None demonstrated: the one experiment shows non-specific seizure suppression."
+    },
+    "p4_roadmap_fields": {
+      "indication_and_transfer": "Symptomatic seizure suppression is the only endpoint ever tested in a WWOX system; it is non-specific (wild type responds equally). A WWOX-specific disease-modifying rationale is not supported by the primary data. Transfer to the reference genotype: not established.",
+      "verification_scope": "{\"support_and_replication\": \"One laboratory, one experiment; no replication.\", \"formal_checks\": \"The lithium figure panels were read from the image; the 2026-10-21 R2 figure readings (entries 27, 28) carry a blind locator audit (SUPPORTED) and a recorded softening of wording; the null-only wording of the Results text against the three-panel figure is a recorded text-versus-panel finding.\", \"card_inferences_owed_audit\": \"The direction-conflict statement on the Wnt axis and the amplifier-not-driver reading are INFERENZA and are owed a blind audit by another actor.\"}"
+    },
+    "reading_guard": "OPPOSES_DISEASE_CHANGE on DR-LI-001 is a sign comparison inside the null genotype on one provoked-seizure score. The same suppression is present in wild type and heterozygote (DR-LI-002, DR-LI-003), so it says nothing specific to WWOX loss, nothing about the Q230P class, and nothing about efficacy or safety in any person.",
+    "label_lookup": {
+      "status": "NOT_ATTEMPTED"
+    },
+    "card_conventions": [
+      "IPOTESI throughout; the bridge forces it. No score, rank, probability or blended index is carried, and none may be derived from this card.",
+      "directional_summary compares signs only where target, endpoint and every context dimension match; UNRESOLVED means no matched comparison exists, which is a statement about the record, not about the biology.",
+      "A genetic or tool-compound row is not a row for the named drug: the identity of what was given is written in each assertion.",
+      "label_lookup is NOT_ATTEMPTED on every card: the bridge has no network and no pharmacological-label search was run. It is not NO_MATCH_FOUND.",
+      "No dose, route, schedule or paediatric suitability appears; concentrations and vector quantities of the sources are deliberately not reproduced.",
+      "Every adjacent source is labelled NOT WWOX EVIDENCE at class level."
+    ],
+    "no_new_reading": "No paper was opened for this card. Every locator is an existing entry of the deep-dive manifests PMID32000863.json and PMID22193544.json; the figure statements are those entries' own."
+  },
+  "translation": {
+    "pediatric_suitability": "UNKNOWN. No paediatric suitability is presumed by this card, for the candidate or for any historical authorisation of it for another use.",
+    "cns_exposure": "Not in doubt for the class; WWOX-DEE exposure UNKNOWN.",
+    "interactions": "UNKNOWN",
+    "access": "UNKNOWN. An approved compound; no registered WOREE interventional study on the census registry on 2026-10-20 (a missing hit does not prove that none exists).",
+    "time_to_benefit": "UNKNOWN",
+    "functional_rescue": "None demonstrated: the one experiment shows non-specific seizure suppression."
+  },
+  "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
+  "limits": [
+    "Technical comparison is not efficacy, safety or experimental validation.",
+    "Sources and receipt references are retained, not independently verified.",
+    "Shared sources are not independent confirmations; scores are not pooled.",
+    "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
+  ]
+}

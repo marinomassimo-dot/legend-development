@@ -94,5 +94,110 @@ other than its producer (`../locator_audits/2026-10-27_*`). None is therapeutic 
 | LINCS / SigCom / iLINCS | **inconclusive, limit named**: one signature family fills both tails (61 reversers vs 59 mimickers), no content-matched null, shuffled control empty; a KO signature is not a rescue signature | `gse156243/prediction_lincs_context_stratification_20261026.md`, `../locator_audits/2026-10-27_lincs_toolu_verification.md` | content-matched null and per-library, cell line, dose and time strata |
 | Daily scout | **operative**: `framework/scripts/scout_daily.py`, user crontab `20 5 * * *` (05:20 UTC, the only scheduler); silent when nothing changes; report `~/.local/state/legend/scout_daily.json`. 2026-10-27: probes now observe the resource that matters (data card for the MATRIX scores' licence, explorer URL status for TxGNN, latest commit for repositories without releases; availability changes are labelled as such) and a small rotating external search over WWOX gap themes was added (first real search: three opportunities examined, none adopted — decisions in the capability scout log) | `framework/scripts/test_scout_daily.py`, capability scout log | `harness_session_start.py --actor <id>` now prints the radar line (last run, errors, items to examine, pending entries) for plan, junior-harness, the Orchestrator, the integrator and the Scientists; a session lands pending entries with `--append-log` on a task branch |
 
+### Roadmap iteration 2, package W1.1 — curated-card linkage (2026-10-27)
+
+Actor `scientist-a`, task `SA-IT2-CARDLINK-20261027`. No paper was opened and no live adapter was called: the three new
+cards are written from manifests, receipts and the rescue-reference scaffold already in the repository. **Linking is
+done by the map record naming the card by path** (as for E01-E04); the join then reads the card's qualified
+assertions, route and Track as written. Nothing is linked by name similarity; a link is made only where the card's
+candidate, target, endpoint, context, direction and limits are the record's. `UNQUALIFIED` stays where that is not so.
+
+**Measured.** Of the 28 derived cards, 25 were `UNQUALIFIED` (route and Track) before this package; 19 are after it. Three
+were linked in iteration 1 (E01, E02, E03) and six queries (five candidates) are linked now. Lowering the count was not
+the goal: the other 19 are classified below, and two of the four classes (c, d) are a correct reason to stay unlinked.
+
+**Batch chosen, and why.** (1) Lithium and (2) memantine are the two partial-benefit candidates whose records had
+three and five complete readings and *no* curated card, and whose read-outs are easy to over-read (lithium's one WWOX
+experiment failed its specificity test; memantine was never given, only a competitive antagonist as a tool). (3) AAV9 is
+the broad-functional-recovery case: card C01 holds one endpoint (spike-wave discharges) as an assertion and the other
+families only as prose, so the join could see one row of a study with several. (4) Wnt/tankyrase (D02) and (5) the
+ketogenic diet (EB-KD-01 for the clinical seizure rows, E04 for the lactate and PDH rationale) already had pertinent
+cards that were simply not linked; E04's own text names R-05 as its record. Rows chosen by value of the information
+a link adds, not by ease.
+
+| Query | Candidate (map record) | Class | Curated card, or why not |
+|---|---|---|---|
+| Q-N-08 | Dichloroacetate | linked (iteration 1) | E03 |
+| Q-R-10 | ISRIB-class ISR attenuators | linked (iteration 1) | E01 |
+| Q-R-11 | Stiripentol | linked (iteration 1) | E02 |
+| Q-N-02 | Lithium as a WWOX-specific modifier | (b), **linked now** | F01 (new): the same candidate as R-04 |
+| Q-R-04 | Lithium (GSK3beta) | (b), **linked now** | F01 (new) |
+| Q-R-02 | Memantine | (b), **linked now** | F02 (new): tool compound d-APV only; memantine itself untested |
+| Q-R-01 | AAV9-hSynI-WWOX | (a)+(b), **linked now** | C01 (existing, spike-wave discharges) + C04 (new, six other endpoint families) |
+| Q-R-03 | Wnt / tankyrase inhibition | (a), **linked now** | D02 (existing, abstention; carries a route and no Track) |
+| Q-R-05 | Ketogenic diet | (a), **linked now** | EB-KD-01 (existing, seizure rows; early-benefit directory) + E04 (existing, lactate/PDH) |
+| Q-N-01 | mTOR inhibitors | (a) | EB-MTOR-AX-01 (abstention: mTOR activity in a WWOX system is unmeasured, as the record says) |
+| Q-N-04 | Broad GABAergic push | (a), partial | EB-VGB-01 covers the vigabatrin limb only; benzodiazepines are uncovered, so a link would qualify half the record |
+| Q-N-05 | Boosting WWOX expression alone | (a) | C03 (abstention) |
+| Q-N-10 | Splice-switching ASO, canonical acceptor allele | (a) | C02 (abstention: no aberrant-to-normal transcript ratio exists) |
+| Q-R-08 | Base / prime editing, splice-acceptor allele | (a), caution | C02 names editing and shares the missing transcript baseline; the modality differs, so the verifier decides |
+| Q-N-11 | 4-PBA / TUDCA | (a) | A01 |
+| Q-N-12 | HSP70 co-inducers (arimoclomol) | (a) | A05 (abstention) |
+| Q-R-09 | Proteostasis modulation, SDR missense | (a), umbrella | A01-A05 are sub-levers of this record; linking all five would put three families' not-WWOX drug rows on one record, so the set is for the verifier to choose |
+| Q-N-15 | Counting seizure control as developmental protection | (a), caution | EB-DEV-AX-01 (axis, no candidate); the record is an inference error, not an intervention |
+| Q-N-07 | Digoxin (HIF1alpha) | (b) | none; four papers, three complete reads; a card is writable from the repository |
+| Q-N-09 | pTyr33-WWOX peptide | (b) | none; three complete reads, three without a receipt |
+| Q-N-13 | Pro-myelinating agents | (b) | none; 29 papers; the oligodendrocyte-boundary rows already sit in C04 and the scaffold |
+| Q-N-14 | Antioxidants | (b) | none; eight papers, four complete |
+| Q-N-16 | Pannexin-1 blockade | (b) | none; one complete reading, and its one datum (a point estimate in the adverse direction, never tested) is manifest entry 2 of the Breton 2021 reading |
+| Q-N-17 | Tau-lowering | (b) | none; 56 papers; the WWOX/GSK3beta/Tau rows sit in the Wang 2012 manifest |
+| Q-N-03 | Sodium-channel blockers | (c) | none; one paper, no receipt. EB-ETX-01 (a T-type blocker) must NOT be linked: different candidate |
+| Q-R-06 | Anti-neuroinflammatory, class level | (c) | none; no compound and no endpoint named, so a card could only abstain |
+| Q-R-07 | Bumetanide | (c) | none; the chloride premise is unmeasured in any WWOX system; a card would be an abstention |
+| Q-N-06 | Lactate and blood biomarkers as readouts | (d) | E02/E04 hold the lactate observations but their route and candidate are interventions; this record is a biomarker, so a route would be wrong. Left `UNQUALIFIED` |
+
+Classes: (a) a pertinent curated card exists and is not linked; (b) content is present in the repository and needs a card;
+(c) the observations are insufficient to qualify anything beyond an abstention; (d) candidate, endpoint or context differ,
+so a link would be wrong. For (a) rows the pertinence is judged from the record heading against the card's candidate and
+disease assertion; the link has not been run or verified for them, and only the six queries above are linked.
+
+**What the links changed (cards).** Route and Track: `UNQUALIFIED` to `BENEFICIO_PRECOCE` Track A for lithium, memantine
+and the ketogenic record; `RECUPERO_PROFONDO` Track A for AAV9; `RECUPERO_PROFONDO` with Track left `UNQUALIFIED` for
+Wnt (D02 states a route and no Track). Curated assertions arrive with their comparators and limits: 2 disease and 3 drug
+rows for lithium (one `OPPOSES_DISEASE_CHANGE`, two `UNRESOLVED`, which *is* the specificity failure: wild type and
+heterozygote responded as the null did), 2 and 2 for memantine, 8 and 16 for AAV9 (headline moves from the single-endpoint
+`OPPOSES_DISEASE_CHANGE` of C01 to `CONFLICTING` once the study's other endpoints are rows: eight sign oppositions, two
+measured nulls at day 10 glucose, six cells that cannot be compared), 5 and 3 for the ketogenic record. Evidence
+scope is stated per reading only where a card cites it. The regenerated outputs are `join/` and the handoff
+`repurposing_batch_selection_20261027_module.md`. Because the map gained one line per linked record, every later record's
+`origin_line` moved: that is why all 28 derived cards report CHANGED in the run; the substantive differences are the six above.
+
+**What the links changed (queue).** Honest measurement: the handoff's row kinds (SELECT / READ / REPLICATE / AUDIT) are decided
+by the *dependence* (papers reached, depth, unaudited contradictions), and curated observations were consumed only in
+REPLICATE rows; for these six records the row kinds and asks did not move (all six are AUDIT or READ for reasons the link does
+not touch). What changed is a new section, "Records already qualified by a curated card", listing each linked record with its
+cards, route, Track, row counts, comparison statuses and the card's own next measurement, so a batch starts from the card and
+not from the records' papers. The committed `join/` outputs were also stale by two records (Q-R-11 and Q-DL-REPO-004 changed
+by the 2026-10-27 batch commit without a regeneration); the regeneration absorbs that.
+
+**Defects found and repaired (regression tests added).** (1) `qualification()` raised `KeyError` on any packet without a
+`mission_dimensions` block, i.e. on every A-D and early-benefit card: they could not be linked. It now reads such a card's
+route as written, leaves Track `UNQUALIFIED` unless a linked card states it, and names the silent card in `route_note`.
+(2) `CARD_REF` could not name a `cards_early/` card (hyphenated ids) and `curated_packets` looked only in `cards/`: the
+early-benefit cards were unreachable. (3) A record naming a card that cannot be found was skipped silently; the test now
+fails on it. Two existing test fixtures encoded the old state of linked records (Q-R-01 as the example of an unqualified
+reading; every `wnt`-axis card an abstention) and were updated, not loosened: the first now asserts both an unlinked
+record (Q-N-07) and the per-reading scope of a linked one.
+
+**Decisive links, for an independent verifier** (the producer cannot verify itself):
+1. **Q-N-02 / Q-R-04 to F01.** The three genotype panels of Figure 7d (manifest PMID32000863 entries 0, 22, 27, 28): lithium
+   suppressed the provoked seizure in wild type and heterozygote as in the null; the card must not read as a WWOX-specific
+   signal. Also entries 2, 4, 23 (Ser9 dephosphorylation; heterozygote not intermediate). One trap: manifest PMID22193544
+   entry 5 ("Ser9 unchanged") is a retinoic-acid differentiation context, not WWOX loss; the card says so and does not use it as a disease row.
+2. **Q-R-02 to F02.** d-APV is a tool; the card says memantine was never given. Check that no field reads as a memantine result
+   (`OPPOSES_DISEASE_CHANGE` is a sign comparison for the tool). The d-APV Results sentence is quoted from the article text, not a manifest entry; manifest PMID34634460 entry 2 reads the panel (bar absent, i.e. zero; washout about 1.85 times baseline).
+3. **Q-R-01 to C01 + C04.** Each C04 row against `woree_rescue_reference_scaffold.md` section 2 and the manifest entries it names
+   (40, 41, 10 carry repaired adverse audits not re-judged). Check that low-dose rows are written as a postponement or a non-graded
+   equality, and that no row states a dose.
+4. **Q-R-05 to EB-KD-01 + E04** (and E04's `target_census` of SLC16A1 now appears on the ketogenic card: confirm it does not mislead).
+5. **Q-R-03 to D02.** Only a route and one disease-side row arrive; confirm D02's "GSK3 modulation" wording does not drag lithium
+   (opposite direction on beta-catenin) into this record: lithium is deliberately NOT linked to D02.
+6. **Scope vocabulary.** Mouse results (null, neuron-specific deletion) are marked `WWOX_EXPERIMENT_IN_DEE_SYSTEM`; confirm that is the
+   intended reading of that label for an engineered-null mouse that is not a patient allele.
+
+**Not verified.** The (a)-class pertinence of the 9 unlinked rows; the Q-R-08 and Q-R-09 judgements; whether the early-benefit
+cards' silent Track should be written into those cards instead of read as silent; the new cards' figure readings (they carry
+the manifests' own text, no new reading).
+
 Nothing in this capability has produced a therapeutic recommendation, and no output of it is a
 `DATO`. The clinical census is a retrieval record; the bridge's cards would be `IPOTESI`.
