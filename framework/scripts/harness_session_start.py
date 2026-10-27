@@ -10,6 +10,21 @@ from pathlib import Path
 
 from branch_hygiene import GitError, LAND_OVERDUE, build_report
 
+HARNESS_ACTORS = ("plan", "junior-harness")
+# Actors that triage or route work also see the daily radar; none of this gates anything.
+TRIAGE_ACTORS = ("orchestrator", "integrator", "scientist-a", "scientist-b", "scientist-c", "scientist-d")
+
+
+def radar(directory: Path | None = None) -> dict:
+    """The daily radar's last run as information (never an error, never a gate)."""
+    try:
+        import scout_daily
+        info = scout_daily.radar_status(directory)
+        info["line"] = scout_daily.status_line(info)
+        return info
+    except Exception as exc:  # noqa: BLE001 - session start must not fail on an observation
+        return {"status": "UNAVAILABLE", "line": f"RADAR unavailable: {exc}"}
+
 
 def scout_status(root: Path, today: dt.date | None = None) -> dict:
     today = today or dt.date.today()
@@ -37,6 +52,8 @@ def scout_status(root: Path, today: dt.date | None = None) -> dict:
 
 
 def startup(root: Path, actor: str, today: dt.date | None = None) -> dict:
+    if actor in TRIAGE_ACTORS:  # no weekly-scout duty for these actors: only the radar line
+        return {"actor": actor, "radar": radar(), "action": "Radar is information; triage pending entries when it fits your task."}
     result = scout_status(root, today)
     result["actor"] = actor
     result["action"] = {
@@ -45,6 +62,7 @@ def startup(root: Path, actor: str, today: dt.date | None = None) -> dict:
         "TRIAGE_DUE": "Plan: fill HE verdicts, implement ADOPT/TRIAL, record landed commits.",
         "CURRENT": "Weekly report triaged; follow recorded ADOPT/TRIAL outcomes.",
     }[result["status"]]
+    result["radar"] = radar()
     if actor == "plan":
         try:
             report = build_report(root, "main", 1, None, None)
@@ -58,7 +76,7 @@ def startup(root: Path, actor: str, today: dt.date | None = None) -> dict:
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--actor", required=True, choices=("plan", "junior-harness"))
+    parser.add_argument("--actor", required=True, choices=HARNESS_ACTORS + TRIAGE_ACTORS)
     parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[2])
     parser.add_argument("--json", action="store_true")
     args = parser.parse_args(argv)
@@ -66,8 +84,10 @@ def main(argv: list[str] | None = None) -> int:
     if args.json:
         print(json.dumps(result, indent=2))
     else:
-        print(f"HARNESS_SCOUT {result['week']} {result['status']} — {result['report']}")
+        if "week" in result:
+            print(f"HARNESS_SCOUT {result['week']} {result['status']} — {result['report']}")
         print(result["action"])
+        print(result["radar"]["line"])
         if "branch_hygiene" in result:
             print(result["branch_hygiene"])
     return 0

@@ -20,6 +20,9 @@ Paths are relative to the repo root.
    This reports the current ISO week's scout status and, for Plan, branch hygiene.
    `SCOUT_DUE` invokes `legend-harness-scout` for Junior; `TRIAGE_DUE` sends Plan to
    the named weekly report. Missing or invalid reports stay visible; they are not gates.
+   The same command prints the daily radar's last run (time, probe errors, items to examine,
+   pending log entries) and accepts `--actor orchestrator|integrator|scientist-a..d`: run it
+   for any actor who triages. The radar is information, never a gate.
 4. If the operator provided studies/papers/PMIDs/DOIs/titles:
    - if they want to start the process, use `.claude/skills/legend/SKILL.md` as autopilot;
    - if they ask only for dedup/screening, activate `.claude/skills/legend-study-intake-triage/SKILL.md`.

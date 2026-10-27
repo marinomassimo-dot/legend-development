@@ -1316,3 +1316,115 @@ assertions keyed by endpoint. Cost: hours. **Cost / API / privacy risk:** none.
 **Cost / API / privacy risk:** zero spend, public key-less adapter calls only. No new source, dependency or scientific conclusion.
 
 **Next surgical micro-step:** refresh the same join after the next scientific batch. No additional harness control is needed.
+
+## 2026-10-27 · scout_daily · SigCom-LINCS
+
+**WWOX question.** Transcriptional-reversal signatures for a WWOX-loss signature
+
+**Contribution vs existing.** LINCS/CLUE declined on terms (module_proof_20261023); SigCom/iLINCS not yet reached
+
+**Detected.** etag: '"70q5lh78i1i18z"' -> '"xw53wy0h2ri18z"'
+
+**Cost / licence.** reading the change: minutes; any adoption: unestimated until triaged; see source.
+
+**Proof.** https://maayanlab.cloud/sigcom-lincs/
+
+**Outcome.** TRIAGED 2026-10-27 (plan): no action. A landing-page ETag changes when the web app is redeployed; it says nothing about the signature libraries. The probe now reads the library count (metadata-api, 431 at baseline), so only a content change selects.
+
+## 2026-10-27 · scout_daily · Discovery:sdr-enzyme-assay
+
+**WWOX question.** WWOX SDR domain: no activity assay or substrate known
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [paper] Structural and mechanistic basis for the heterotetrameric benzaldehyde synthase from petunia. (2026-07-29) https://europepmc.org/article/MED/42525737; [paper] Engineering a Novel Cofactor-Versatile Short-Chain Dehydrogenase for Efficient Synthesis of Chiral Alcohols. (2026-05-13) https://europepmc.org/article/MED/42130227; [paper] Cloning, expression and molecular evolution of Komagataella phaffii ketoreductase with enhanced catalytic activity. (2025-07-04) https://europepmc.org/article/MED/40614109
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item (shown where a repository states one).
+
+**Proof.** Europe PMC / GitHub search, public endpoints, no key
+
+**Outcome.** TRIAGED 2026-10-27 (plan): no useful opportunity. Three enzyme-engineering papers on unrelated plant/yeast ketoreductases, none about WWOX or an orphan SDR substrate. GitHub half was rate-limited (HTTP 403) and re-rotates.
+
+## 2026-10-27 · scout_daily · Discovery:isr-atf4-epilepsy
+
+**WWOX question.** ISR/ATF4 modulators in epilepsy or DEE (candidate-class evidence is thin)
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [paper] The dual role of ATF4 in neurons: from stress adaptation to therapeutic intervention. (2026-06-11) https://europepmc.org/article/MED/42370203; [paper] Activation of the integrated stress response contributes to developmental delay and seizures caused by mitochondrial prolyl-tRNA synthetase  (2025-12-09) https://europepmc.org/article/MED/41380592; [paper] Inhibition of the Integrated Stress Response Prevents Natural Forgetting and Corrects Accelerated Forgetting Associated with Epilepsy. (2024-12-21) https://europepmc.org/article/MED/39708234
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item (shown where a repository states one).
+
+**Proof.** Europe PMC / GitHub search, public endpoints, no key
+
+**Outcome.** TRIAGED 2026-10-27 (plan), examined at discovery depth (Europe PMC record + open text skim, NOT a reading). (1) 41380592, Redox Biol 2026, PMC12754399, CC BY-NC: Drosophila PARS2 (mitochondrial tRNA synthetase) deficiency shows seizures; GENETIC suppression of GCN2 or ATF4 prevents them. Fills the 'ISR in epilepsy' gap only as an external invertebrate, genetic precedent: not WWOX, not pharmacological, not human neural. Not in the registries (git grep). Decision: READ candidate for a Scientist (full text is open; needs FULLTEXT_READ_RECEIPT). (2) 39708234, mouse, ISRIB corrects PTZ-accelerated forgetting: drug-in-seizure-model precedent about memory, not seizures or DEE; no full text (OA=N); WATCH. (3) 42370203 review of ATF4 in neurons: background only.
+
+## 2026-10-27 · scout_daily · Discovery:residual-function-chaperone
+
+**WWOX question.** residual-function / chaperone rescue of missense alleles
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [paper] Rett Syndrome: Specific MECP2 Variants are Associated With Elevated Serum Neurofilament Light Chain. (2025-08-05) https://europepmc.org/article/MED/40845725
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item (shown where a repository states one).
+
+**Proof.** Europe PMC / GitHub search, public endpoints, no key
+
+**Outcome.** TRIAGED 2026-10-27 (plan): no useful opportunity (Rett MECP2 serum NfL biomarker; no chaperone or residual-function content). GitHub half rate-limited (HTTP 403) and re-rotates.
+
+## 2026-10-27 · scout_daily · Discovery:dee-drug-response-data
+
+**WWOX question.** paediatric DEE drug-response datasets (a gold set does not exist)
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [paper] Developmental and Epileptic Encephalopathy due to Cyclin-Dependent Kinase-Like 5 Deficiency: A Single-Center Experience Across Sex Differenc (2026-01-09) https://europepmc.org/article/MED/41619470; [paper] SLC6A1-Related Neurodevelopmental Disorder: A Scoping Review of Clinical Features and Emerging Therapeutic Strategies. (2026-05-05) https://europepmc.org/article/MED/42173049; [paper] Longitudinal analyses of electronic medical records reveal dynamic developmental trajectories for patients with SCN8A-related disorders. (2025-12-20) https://europepmc.org/article/MED/41420531
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item (shown where a repository states one).
+
+**Proof.** Europe PMC / GitHub search, public endpoints, no key
+
+**Outcome.** TRIAGED 2026-10-27 (plan): no useful opportunity at title depth: a CDKL5 single-centre series, an SLC6A1 scoping review, an SCN8A EMR trajectory analysis (41420531) that describes a cohort and releases no dataset. No paediatric DEE drug-response dataset surfaced. GitHub half rate-limited and re-rotates.
+
+## 2026-10-27 · scout_daily · Discovery:pdh-assay
+
+**WWOX question.** a PDH-specific measure (activity, phosphorylation or flux) is missing
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [paper] Thalamic PDK-PDHA1 Signaling is Associated with Opioid-Induced Loss-of-Righting-Reflex Sensitivity: Evidence from Phosphoproteomic Profiling (2026-10-20) https://europepmc.org/article/MED/42900260; [paper] Targeting the Lcn2/Lcn2R-Grb2 cascade ameliorates mitochondrial bioenergetic failure and neuronal death in hepatic encephalopathy. (2026-10-06) https://europepmc.org/article/MED/42838378; [paper] Hyperpolarized 13C-bicarbonate production correlates with excitatory neuron distribution in the human brain. (2026-09-01) https://europepmc.org/article/MED/42689174
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item (shown where a repository states one).
+
+**Proof.** Europe PMC / GitHub search, public endpoints, no key
+
+**Outcome.** TRIAGED 2026-10-27 (plan), discovery depth. 42689174, Imaging Neuroscience 2026, PMC13537045, CC BY: hyperpolarized 13C-pyruvate MRI in 40 healthy adults, bicarbonate/pyruvate ratio read as PDH flux, correlated with excitatory-neuron expression. A method precedent for PDH flux in vivo; a healthy-adult imaging study with no patient, WWOX or cell-assay content, so it does not fill the cell/tissue PDH-assay gap. WATCH, no read now. The other two (opioid thalamic phosphoproteomics, hepatic encephalopathy) are off-topic.
+
+## 2026-10-27 · scout_daily · Discovery:assertion-extraction
+
+**WWOX question.** module blind spot: typed drug assertions from papers and name-to-compound linking
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [repository] dphatIT1911/vn-biomedical-ner-llm-hybrid-icd10-rxnorm (2026-08-18, none stated) https://github.com/dphatIT1911/vn-biomedical-ner-llm-hybrid-icd10-rxnorm; [repository] Ineichen-Group/ClinicalTrials_DrugDisease_Pipeline (2026-04-08, none stated) https://github.com/Ineichen-Group/ClinicalTrials_DrugDisease_Pipeline; [repository] rtx4070-m4/Clinical-Scribe-AI-v4 (2026-03-20, MIT) https://github.com/rtx4070-m4/Clinical-Scribe-AI-v4
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item (shown where a repository states one).
+
+**Proof.** Europe PMC / GitHub search, public endpoints, no key
+
+**Outcome.** TRIAGED 2026-10-27 (plan), examined: Ineichen-Group/ClinicalTrials_DrugDisease_Pipeline (README read; pushed 2026-04-08; 0 stars). Code carries NO licence (default all rights reserved): not adopted, not run. Its output is trial-level drug-disease pairs linked to UMLS/MONDO, Zenodo 10.5281/zenodo.19351891 (CC BY-4.0, 122 MB, AACT snapshot 2025-12-01), not typed assertions from papers, and we already hold a ClinicalTrials.gov census. Decision: REJECT the code; WATCH the CC-BY data only if drug-name normalization (blind spot F6) becomes a work item. The other two hits (Vietnamese NER, a scribe app) are off-topic.
+
+## 2026-10-27 · scout_daily · Discovery:neuron-perturbation-signatures
+
+**WWOX question.** context-matched neuronal perturbation signatures for reversal queries
+
+**Contribution vs existing.** unchecked: a search hit is the first look (no relevance scoring)
+
+**Detected.** [paper] Modeling myeloid cell development in health and disease using induced pluripotent stem cells. (2026-07-15) https://europepmc.org/article/MED/42528516; [preprint] Integrating genetically predicted transcriptomic signatures with longitudinal real-world data enables scalable drug repurposing for Alzheime (2026-05-15) https://europepmc.org/article/PPR/PPR1208319; [preprint] Ropinirole hydrochloride mitigates oxidative stress and neuroinflammation via the PI3K–mTOR pathway in TDP-43 hiPSC-derived microglial-like  (2026-03-10) https://europepmc.org/article/PPR/PPR1220571; [repository] EricSpencer00/als-signature-reversal (2026-08-19, MIT) https://github.com/EricSpencer00/als-signature-reversal; [repository] dralperenuysal/reinvent_geroprotector (2026-08-06, MIT) https://github.com/dralperenuysal/reinvent_geroprotector; [repository] sorrymaker330/drug_prediction (2026-04-10, none stated) https://github.com/sorrymaker330/drug_prediction
+
+**Cost / licence.** screening: minutes; adoption: unestimated until read (licence, version, provenance); per item (shown where a repository states one).
+
+**Proof.** Europe PMC / GitHub search, public endpoints, no key
+
+**Outcome.** TRIAGED 2026-10-27 (plan): no useful opportunity at title/description depth (myeloid iPSC review, an Alzheimer EHR preprint, a TDP-43 microglia preprint; three small ALS/geroprotector repositories with 0 stars). Nothing offers a content-matched neuronal null.
