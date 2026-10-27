@@ -1,0 +1,349 @@
+{
+ "S1": {
+  "n_rev": 100,
+  "n_mim": 100,
+  "reversers_total": 358840,
+  "mimickers_total": 334375,
+  "MCLF_share_rev": 74.0,
+  "MCLF_share_mim": 70.0,
+  "MCLF_4uM_6h_share_rev": 61.0,
+  "MCLF_4uM_6h_share_mim": 59.0,
+  "MCLF_4uM_6h_share_both_tails": 60.0,
+  "strongest_rev_z": -16.6519319650045,
+  "strongest_mim_z": 16.61708739936286,
+  "top25_rev_compound_overlap_with_S1": 20,
+  "distinct_cell_lines_rev": 31,
+  "top_cell_lines_rev": [
+   [
+    "MCLF015CN",
+    17
+   ],
+   [
+    "MCLF100SZ",
+    9
+   ],
+   [
+    "MCLF033SZ",
+    6
+   ],
+   [
+    "MCF10A",
+    6
+   ],
+   [
+    "MCLF027CN",
+    5
+   ]
+  ],
+  "no_metadata": 0
+ },
+ "S0": {
+  "n_rev": 100,
+  "n_mim": 100,
+  "reversers_total": 344548,
+  "mimickers_total": 348667,
+  "MCLF_share_rev": 1.0,
+  "MCLF_share_mim": 0.0,
+  "MCLF_4uM_6h_share_rev": 1.0,
+  "MCLF_4uM_6h_share_mim": 0.0,
+  "MCLF_4uM_6h_share_both_tails": 0.5,
+  "strongest_rev_z": -6.226009839091649,
+  "strongest_mim_z": 6.661281930667229,
+  "top25_rev_compound_overlap_with_S1": 0,
+  "distinct_cell_lines_rev": 35,
+  "top_cell_lines_rev": [
+   [
+    "MCF7",
+    10
+   ],
+   [
+    "HT29",
+    8
+   ],
+   [
+    "MCF10A",
+    8
+   ],
+   [
+    "HA1E",
+    7
+   ],
+   [
+    "THP1",
+    6
+   ]
+  ],
+  "no_metadata": 0
+ },
+ "DIAG_S1_STRIPPED": {
+  "EMPTY": true,
+  "reversers": 0,
+  "mimickers": 0
+ },
+ "K1": {
+  "n_rev": 100,
+  "n_mim": 100,
+  "reversers_total": 327385,
+  "mimickers_total": 365830,
+  "MCLF_share_rev": 1.0,
+  "MCLF_share_mim": 21.0,
+  "MCLF_4uM_6h_share_rev": 0.0,
+  "MCLF_4uM_6h_share_mim": 16.0,
+  "MCLF_4uM_6h_share_both_tails": 8.0,
+  "strongest_rev_z": -16.322678987772985,
+  "strongest_mim_z": 14.177156663944123,
+  "top25_rev_compound_overlap_with_S1": 0,
+  "distinct_cell_lines_rev": 29,
+  "top_cell_lines_rev": [
+   [
+    "MCF7",
+    17
+   ],
+   [
+    "PC3",
+    11
+   ],
+   [
+    "A375",
+    10
+   ],
+   [
+    "SHSY5Y",
+    7
+   ],
+   [
+    "VCAP",
+    5
+   ]
+  ],
+  "no_metadata": 0
+ },
+ "K2": {
+  "n_rev": 100,
+  "n_mim": 100,
+  "reversers_total": 352861,
+  "mimickers_total": 340354,
+  "MCLF_share_rev": 23.0,
+  "MCLF_share_mim": 11.0,
+  "MCLF_4uM_6h_share_rev": 16.0,
+  "MCLF_4uM_6h_share_mim": 10.0,
+  "MCLF_4uM_6h_share_both_tails": 13.0,
+  "strongest_rev_z": -11.601292813821708,
+  "strongest_mim_z": 12.661073042702213,
+  "top25_rev_compound_overlap_with_S1": 2,
+  "distinct_cell_lines_rev": 34,
+  "top_cell_lines_rev": [
+   [
+    "MCF7",
+    13
+   ],
+   [
+    "MCF10A",
+    10
+   ],
+   [
+    "NPC",
+    8
+   ],
+   [
+    "VCAP",
+    5
+   ],
+   [
+    "MCLF015CN",
+    5
+   ]
+  ],
+  "no_metadata": 0
+ },
+ "N1": {
+  "n_rev": 100,
+  "n_mim": 100,
+  "reversers_total": 348466,
+  "mimickers_total": 344749,
+  "MCLF_share_rev": 2.0,
+  "MCLF_share_mim": 7.0,
+  "MCLF_4uM_6h_share_rev": 2.0,
+  "MCLF_4uM_6h_share_mim": 5.0,
+  "MCLF_4uM_6h_share_both_tails": 3.5,
+  "strongest_rev_z": -6.855187355976519,
+  "strongest_mim_z": 7.071756840532133,
+  "top25_rev_compound_overlap_with_S1": 2,
+  "distinct_cell_lines_rev": 40,
+  "top_cell_lines_rev": [
+   [
+    "MCF7",
+    18
+   ],
+   [
+    "HEK293",
+    7
+   ],
+   [
+    "HELA",
+    7
+   ],
+   [
+    "VCAP",
+    6
+   ],
+   [
+    "YAPC",
+    6
+   ]
+  ],
+  "no_metadata": 0
+ },
+ "N2": {
+  "n_rev": 100,
+  "n_mim": 100,
+  "reversers_total": 339827,
+  "mimickers_total": 353388,
+  "MCLF_share_rev": 0.0,
+  "MCLF_share_mim": 3.0,
+  "MCLF_4uM_6h_share_rev": 0.0,
+  "MCLF_4uM_6h_share_mim": 3.0,
+  "MCLF_4uM_6h_share_both_tails": 1.5,
+  "strongest_rev_z": -6.482492327362515,
+  "strongest_mim_z": 6.6534054144502095,
+  "top25_rev_compound_overlap_with_S1": 0,
+  "distinct_cell_lines_rev": 35,
+  "top_cell_lines_rev": [
+   [
+    "HT29",
+    10
+   ],
+   [
+    "HEK293",
+    8
+   ],
+   [
+    "A549",
+    8
+   ],
+   [
+    "A375",
+    7
+   ],
+   [
+    "MCF7",
+    7
+   ]
+  ],
+  "no_metadata": 0
+ },
+ "N3": {
+  "n_rev": 100,
+  "n_mim": 100,
+  "reversers_total": 351269,
+  "mimickers_total": 341946,
+  "MCLF_share_rev": 1.0,
+  "MCLF_share_mim": 2.0,
+  "MCLF_4uM_6h_share_rev": 0.0,
+  "MCLF_4uM_6h_share_mim": 2.0,
+  "MCLF_4uM_6h_share_both_tails": 1.0,
+  "strongest_rev_z": -6.81338522452627,
+  "strongest_mim_z": 6.584820581497139,
+  "top25_rev_compound_overlap_with_S1": 0,
+  "distinct_cell_lines_rev": 34,
+  "top_cell_lines_rev": [
+   [
+    "A549",
+    12
+   ],
+   [
+    "YAPC",
+    11
+   ],
+   [
+    "MCF7",
+    11
+   ],
+   [
+    "VCAP",
+    7
+   ],
+   [
+    "HA1E",
+    6
+   ]
+  ],
+  "no_metadata": 0
+ },
+ "S1P2": {
+  "n_rev": 100,
+  "n_mim": 100,
+  "reversers_total": 353190,
+  "mimickers_total": 340025,
+  "MCLF_share_rev": 0.0,
+  "MCLF_share_mim": 0.0,
+  "MCLF_4uM_6h_share_rev": 0.0,
+  "MCLF_4uM_6h_share_mim": 0.0,
+  "MCLF_4uM_6h_share_both_tails": 0.0,
+  "strongest_rev_z": -7.581189054363744,
+  "strongest_mim_z": 7.45447694636473,
+  "top25_rev_compound_overlap_with_S1": 0,
+  "distinct_cell_lines_rev": 28,
+  "top_cell_lines_rev": [
+   [
+    "PC3",
+    12
+   ],
+   [
+    "MCF7",
+    12
+   ],
+   [
+    "A375",
+    11
+   ],
+   [
+    "A549",
+    8
+   ],
+   [
+    "HELA",
+    6
+   ]
+  ],
+  "no_metadata": 0
+ },
+ "S1P": {
+  "n_rev": 100,
+  "n_mim": 100,
+  "reversers_total": 345394,
+  "mimickers_total": 347821,
+  "MCLF_share_rev": 1.0,
+  "MCLF_share_mim": 1.0,
+  "MCLF_4uM_6h_share_rev": 0.0,
+  "MCLF_4uM_6h_share_mim": 1.0,
+  "MCLF_4uM_6h_share_both_tails": 0.5,
+  "strongest_rev_z": -7.3889697443263405,
+  "strongest_mim_z": 8.352005255407828,
+  "top25_rev_compound_overlap_with_S1": 0,
+  "distinct_cell_lines_rev": 30,
+  "top_cell_lines_rev": [
+   [
+    "A375",
+    12
+   ],
+   [
+    "MCF7",
+    11
+   ],
+   [
+    "HT29",
+    9
+   ],
+   [
+    "PC3",
+    9
+   ],
+   [
+    "A549",
+    8
+   ]
+  ],
+  "no_metadata": 0
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "utc": "2026-10-27T18:53:14.405678+00:00",
+ "status": 200,
+ "hyphens_in_request_ids": true,
+ "headers": {
+  "Content-Range": "0-200/693215",
+  "Date": "Tue, 27 Oct 2026 18:53:24 GMT",
+  "X-Duration": "9.73"
+ },
+ "request_body_counts": {
+  "up": 512,
+  "down": 315
+ },
+ "database": "l1000_cp",
+ "limit": 100,
+ "verbatim_sha256": "a2fef71d086e5b1eb885bd19488516635295a12b4e9ddb2f4de29b3ac9f03c39",
+ "verbatim_bytes": 83433
+}

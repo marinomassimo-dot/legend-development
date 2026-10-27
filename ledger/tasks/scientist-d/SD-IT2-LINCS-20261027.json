@@ -32,7 +32,7 @@
   "note, candidate, land"
  ],
  "DELIVERABLE": "one note in gse156243/, commit candidate if warranted",
- "CURRENT_STATE": "IN_PROGRESS",
+ "CURRENT_STATE": "COMPLETE",
  "assigned_on": "2026-10-27",
  "TASK_ACK": {
   "TASK_ID": "SD-IT2-LINCS-20261027",
@@ -49,6 +49,25 @@
   "durable_pointer": "branch task/sd-it2-lincs, worktree .claude/worktrees/sd-it2-lincs",
   "note": "scientist-d is a stated assumption of the Orchestrator"
  },
- "DEFAULTS_TAKEN": [],
- "STOP_LOG": []
+ "DEFAULTS_TAKEN": [
+  {
+   "condition": "CLUE beta compound table not reachable without a key",
+   "default": "five BRD codes left unresolved and reported; no bypass",
+   "why_safe": "identity stated only where a public versioned table supports it"
+  },
+  {
+   "condition": "first L1000FWD call used the old path and wrong body keys (307, HTTP 500)",
+   "default": "corrected once from the service's own error text, no further retry",
+   "why_safe": "a format fix, not a retry of an answered request"
+  },
+  {
+   "condition": "GSE92742 level 5 matrices (several GB) not needed to answer the declared questions",
+   "default": "not downloaded; named as the next bounded step",
+   "why_safe": "no claim rests on them"
+  }
+ ],
+ "STOP_LOG": [],
+ "RESULT": {
+  "summary": "S1P empty answer explained (hyphen-stripped ids); matched nulls and KO splits run; direct L1000FWD vs wrapper separated; 129/134 BRD codes resolved, 5 failed; ChEMBL adapter false negative repaired; adds no WWOX hypothesis; candidate CC-20261027-SCIENTIST-D-LINCS-IT2-01"
+ }
 }

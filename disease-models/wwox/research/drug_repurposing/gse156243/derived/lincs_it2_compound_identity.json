@@ -1,0 +1,5840 @@
+{
+ "verified_geo_checksums": {
+  "GSE92742_Broad_LINCS_pert_info.txt.gz": true,
+  "GSE70138_Broad_LINCS_pert_info_2017-03-06.txt.gz": true,
+  "GSE92742_Broad_LINCS_cell_info.txt.gz": true,
+  "GSE70138_Broad_LINCS_cell_info_2017-04-28.txt.gz": true
+ },
+ "codes": {
+  "BRD-A12230535": {
+   "brd": "BRD-A12230535",
+   "resolved": true,
+   "inames": [
+    "nutlin-3"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "BDUHCSBCVGXTJM-UHFFFAOYSA-N",
+   "pubchem_cid": "216345",
+   "sources": [
+    "GSE92742",
+    "GSE70138"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL211045",
+    "pref_name": null,
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-A16332958": {
+   "brd": "BRD-A16332958",
+   "resolved": true,
+   "inames": [
+    "modafinil"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "YFGHCGITMMYXAQ-UHFFFAOYSA-N",
+   "pubchem_cid": "4236",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL1373",
+    "pref_name": "MODAFINIL",
+    "max_phase": "4.0",
+    "mechanism_query_molecule_id_empty": false,
+    "mechanisms": [
+     "INHIBITOR|Dopamine transporter inhibitor"
+    ]
+   }
+  },
+  "BRD-A17883755": {
+   "brd": "BRD-A17883755",
+   "resolved": true,
+   "inames": [
+    "lenalidomide"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "GOTYRUGSSMKFNF-UHFFFAOYSA-N",
+   "pubchem_cid": "216326",
+   "sources": [
+    "GSE92742",
+    "GSE70138"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL848",
+    "pref_name": "LENALIDOMIDE",
+    "max_phase": "4.0",
+    "mechanism_query_molecule_id_empty": false,
+    "mechanisms": [
+     "INHIBITOR|CRL4(CRBN) E3 ubiquitin ligase inhibitor"
+    ]
+   }
+  },
+  "BRD-A18917088": {
+   "brd": "BRD-A18917088",
+   "resolved": true,
+   "inames": [
+    "estradiol"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "VOXZDWNPVJITMN-PAOLREHBSA-N",
+   "pubchem_cid": "-666",
+   "sources": [
+    "GSE92742",
+    "GSE70138"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL6386",
+    "pref_name": null,
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-A19500257": {
+   "brd": "BRD-A19500257",
+   "resolved": true,
+   "inames": [
+    "geldanamycin"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "QTQAWLPCGQOSGP-VDYWNIEOSA-N",
+   "pubchem_cid": "-666",
+   "sources": [
+    "GSE92742",
+    "GSE70138"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": "NO_MATCH_BY_INCHIKEY"
+  },
+  "BRD-A27640568": {
+   "brd": "BRD-A27640568",
+   "resolved": true,
+   "inames": [
+    "BRD-A27640568"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "RCLKJIVDBWUALW-UHFFFAOYSA-N",
+   "pubchem_cid": "2872362",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": "NO_MATCH_BY_INCHIKEY"
+  },
+  "BRD-A34255068": {
+   "brd": "BRD-A34255068",
+   "resolved": true,
+   "inames": [
+    "rolipram"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "HJORMJIFDVBMOB-UHFFFAOYSA-N",
+   "pubchem_cid": "-666",
+   "sources": [
+    "GSE92742",
+    "GSE70138"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL63",
+    "pref_name": "ROLIPRAM",
+    "max_phase": "2.0",
+    "mechanism_query_molecule_id_empty": false,
+    "mechanisms": [
+     "INHIBITOR|Phosphodiesterase 4 inhibitor"
+    ]
+   }
+  },
+  "BRD-A35054627": {
+   "brd": "BRD-A35054627",
+   "resolved": false,
+   "inames": [],
+   "ambiguous_names": false,
+   "inchi_key": "",
+   "pubchem_cid": "",
+   "sources": [],
+   "pert_type": ""
+  },
+  "BRD-A41451487": {
+   "brd": "BRD-A41451487",
+   "resolved": true,
+   "inames": [
+    "PK-11195"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "RAVIZVQZGXBOQO-UHFFFAOYSA-N",
+   "pubchem_cid": "1345",
+   "sources": [
+    "GSE92742",
+    "GSE70138"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL481537",
+    "pref_name": "PK-11195",
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-A42966393": {
+   "brd": "BRD-A42966393",
+   "resolved": false,
+   "inames": [],
+   "ambiguous_names": false,
+   "inchi_key": "",
+   "pubchem_cid": "",
+   "sources": [],
+   "pert_type": ""
+  },
+  "BRD-A43126523": {
+   "brd": "BRD-A43126523",
+   "resolved": true,
+   "inames": [
+    "BRD-A43126523"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "MWBPUFDYIDUJIE-UHFFFAOYSA-N",
+   "pubchem_cid": "44142346",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL1406616",
+    "pref_name": null,
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-A53077924": {
+   "brd": "BRD-A53077924",
+   "resolved": true,
+   "inames": [
+    "tianeptine"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "JICJBGPOMZQUBB-UHFFFAOYSA-N",
+   "pubchem_cid": "-666",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL1289110",
+    "pref_name": "TIANEPTINE",
+    "max_phase": "3.0",
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-A56359832": {
+   "brd": "BRD-A56359832",
+   "resolved": true,
+   "inames": [
+    "zileuton"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "MWLSOWXNZPKENC-UHFFFAOYSA-N",
+   "pubchem_cid": "60490",
+   "sources": [
+    "GSE92742",
+    "GSE70138"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL93",
+    "pref_name": "ZILEUTON",
+    "max_phase": "4.0",
+    "mechanism_query_molecule_id_empty": false,
+    "mechanisms": [
+     "INHIBITOR|Arachidonate 5-lipoxygenase inhibitor"
+    ]
+   }
+  },
+  "BRD-A58048407": {
+   "brd": "BRD-A58048407",
+   "resolved": true,
+   "inames": [
+    "nimodipine"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "UIAGMCDKSXEBJQ-UHFFFAOYSA-N",
+   "pubchem_cid": "-666",
+   "sources": [
+    "GSE92742",
+    "GSE70138"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL1428",
+    "pref_name": "NIMODIPINE",
+    "max_phase": "4.0",
+    "mechanism_query_molecule_id_empty": false,
+    "mechanisms": [
+     "ANTAGONIST|Mineralocorticoid receptor antagonist",
+     "BLOCKER|Voltage-gated L-type calcium channel blocker"
+    ]
+   }
+  },
+  "BRD-A61304759": {
+   "brd": "BRD-A61304759",
+   "resolved": true,
+   "inames": [
+    "tanespimycin"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "AYUNIORJHRXIBJ-ZGQRYRSUSA-N",
+   "pubchem_cid": "73707384",
+   "sources": [
+    "GSE92742",
+    "GSE70138"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": "NO_MATCH_BY_INCHIKEY"
+  },
+  "BRD-A61825514": {
+   "brd": "BRD-A61825514",
+   "resolved": true,
+   "inames": [
+    "BRD-A61825514"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "RPXPIKPBDXXDBD-UHFFFAOYSA-N",
+   "pubchem_cid": "44142081",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL1709779",
+    "pref_name": null,
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-A62525898": {
+   "brd": "BRD-A62525898",
+   "resolved": true,
+   "inames": [
+    "prednisone"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "XOFYZVNMUHMLCC-BDQMTFAOSA-N",
+   "pubchem_cid": "-666",
+   "sources": [
+    "GSE92742",
+    "GSE70138"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL3039452",
+    "pref_name": null,
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-A63646118": {
+   "brd": "BRD-A63646118",
+   "resolved": true,
+   "inames": [
+    "fumonisin-b1"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "UVBUBMSSQKOIBE-YPCSWJJOSA-N",
+   "pubchem_cid": "73707380",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": "NO_MATCH_BY_INCHIKEY"
+  },
+  "BRD-A75409952": {
+   "brd": "BRD-A75409952",
+   "resolved": true,
+   "inames": [
+    "wortmannin"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "QDLHCMPXEPAAMD-UHFFFAOYSA-N",
+   "pubchem_cid": "-666",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": "NO_MATCH_BY_INCHIKEY"
+  },
+  "BRD-A76279427": {
+   "brd": "BRD-A76279427",
+   "resolved": true,
+   "inames": [
+    "myriocin"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "ZZIKIHCNFWXKDY-QAJVWVOBSA-N",
+   "pubchem_cid": "73707382",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": "NO_MATCH_BY_INCHIKEY"
+  },
+  "BRD-A85739295": {
+   "brd": "BRD-A85739295",
+   "resolved": false,
+   "inames": [],
+   "ambiguous_names": false,
+   "inchi_key": "",
+   "pubchem_cid": "",
+   "sources": [],
+   "pert_type": ""
+  },
+  "BRD-A90799790": {
+   "brd": "BRD-A90799790",
+   "resolved": true,
+   "inames": [
+    "isradipine"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "HMJIYCCIJYRONP-UHFFFAOYSA-N",
+   "pubchem_cid": "-666",
+   "sources": [
+    "GSE92742",
+    "GSE70138"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL1648",
+    "pref_name": "ISRADIPINE",
+    "max_phase": "4.0",
+    "mechanism_query_molecule_id_empty": false,
+    "mechanisms": [
+     "BLOCKER|Voltage-gated L-type calcium channel blocker"
+    ]
+   }
+  },
+  "BRD-A93255169": {
+   "brd": "BRD-A93255169",
+   "resolved": true,
+   "inames": [
+    "thalidomide"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "UEJJHQNACJXSKW-UHFFFAOYSA-N",
+   "pubchem_cid": "-666",
+   "sources": [
+    "GSE92742",
+    "GSE70138"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL468",
+    "pref_name": "THALIDOMIDE",
+    "max_phase": "4.0",
+    "mechanism_query_molecule_id_empty": false,
+    "mechanisms": [
+     "INHIBITOR|CRL4(CRBN) E3 ubiquitin ligase inhibitor"
+    ]
+   }
+  },
+  "BRD-A94451536": {
+   "brd": "BRD-A94451536",
+   "resolved": true,
+   "inames": [
+    "2-fluoropalmitic-acid"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "JGRIJJOLCNCSNX-UHFFFAOYSA-N",
+   "pubchem_cid": "1560",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL1373832",
+    "pref_name": null,
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K01779529": {
+   "brd": "BRD-K01779529",
+   "resolved": true,
+   "inames": [
+    "fluoropyruvate"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "CXABZTLXNODUTD-UHFFFAOYSA-N",
+   "pubchem_cid": "67946",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL1162543",
+    "pref_name": null,
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K01976263": {
+   "brd": "BRD-K01976263",
+   "resolved": true,
+   "inames": [
+    "emetine"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "ASBJGPTTYPEMLP-REOHCLBHSA-N",
+   "pubchem_cid": "11957493",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL51989",
+    "pref_name": null,
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K04430056": {
+   "brd": "BRD-K04430056",
+   "resolved": true,
+   "inames": [
+    "7-nitroindazole"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "PQCAUHUKTBHUSA-UHFFFAOYSA-N",
+   "pubchem_cid": "1893",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL247378",
+    "pref_name": "7-NITROINDAZOLE",
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K05649647": {
+   "brd": "BRD-K05649647",
+   "resolved": true,
+   "inames": [
+    "BRD-K05649647"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "OMUJNJUHZHOBJY-UHFFFAOYSA-N",
+   "pubchem_cid": "1242560",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": "NO_MATCH_BY_INCHIKEY"
+  },
+  "BRD-K06593056": {
+   "brd": "BRD-K06593056",
+   "resolved": true,
+   "inames": [
+    "LE-135"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "YZZAIQOVMHVWBS-UHFFFAOYSA-N",
+   "pubchem_cid": "10410894",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL37708",
+    "pref_name": null,
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K06765193": {
+   "brd": "BRD-K06765193",
+   "resolved": true,
+   "inames": [
+    "BRD-K06765193"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "LISLUXJODLGWGJ-VQHVLOKHSA-N",
+   "pubchem_cid": "5904441",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL117966",
+    "pref_name": null,
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K06890060": {
+   "brd": "BRD-K06890060",
+   "resolved": true,
+   "inames": [
+    "alda-1"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "NMKJFZCBCIUYHI-UHFFFAOYSA-N",
+   "pubchem_cid": "831629",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL465952",
+    "pref_name": null,
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K08307026": {
+   "brd": "BRD-K08307026",
+   "resolved": true,
+   "inames": [
+    "BRD-K08307026"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "FTHAFMYRINDSEL-UHFFFAOYSA-N",
+   "pubchem_cid": "44631783",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL2130568",
+    "pref_name": null,
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K08973992": {
+   "brd": "BRD-K08973992",
+   "resolved": true,
+   "inames": [
+    "linoleic-acid"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "OYHQOLUKZRVURQ-HZJYTTRNSA-N",
+   "pubchem_cid": "-666",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL267476",
+    "pref_name": "LINOLEIC ACID",
+    "max_phase": "2.0",
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K09398529": {
+   "brd": "BRD-K09398529",
+   "resolved": false,
+   "inames": [],
+   "ambiguous_names": false,
+   "inchi_key": "",
+   "pubchem_cid": "",
+   "sources": [],
+   "pert_type": ""
+  },
+  "BRD-K09778810": {
+   "brd": "BRD-K09778810",
+   "resolved": true,
+   "inames": [
+    "FGIN-1-27"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "VUWXAQFLTSBUDB-UHFFFAOYSA-N",
+   "pubchem_cid": "-666",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL63154",
+    "pref_name": null,
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K10882151": {
+   "brd": "BRD-K10882151",
+   "resolved": true,
+   "inames": [
+    "BO2-inhibits-RAD51"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "GEKDQXSPTHHANP-OUKQBFOZSA-N",
+   "pubchem_cid": "5738263",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL1567670",
+    "pref_name": null,
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K13049116": {
+   "brd": "BRD-K13049116",
+   "resolved": true,
+   "inames": [
+    "BMS-754807"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "LQVXSNNAFNGRAH-QHCPKHFHSA-N",
+   "pubchem_cid": "24785538",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL575448",
+    "pref_name": "BMS-754807",
+    "max_phase": "2.0",
+    "mechanism_query_molecule_id_empty": false,
+    "mechanisms": [
+     "INHIBITOR|Insulin receptor inhibitor",
+     "INHIBITOR|Insulin-like growth factor I receptor inhibitor"
+    ]
+   }
+  },
+  "BRD-K14441456": {
+   "brd": "BRD-K14441456",
+   "resolved": true,
+   "inames": [
+    "tyrphostin-AG-556"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "GWCNJMUSWLTSCW-UHFFFAOYSA-N",
+   "pubchem_cid": "-666",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": "NO_MATCH_BY_INCHIKEY"
+  },
+  "BRD-K14788918": {
+   "brd": "BRD-K14788918",
+   "resolved": true,
+   "inames": [
+    "BRD-K14788918"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "YNILLUHNRZOTAV-UHFFFAOYSA-N",
+   "pubchem_cid": "53338822",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL1551506",
+    "pref_name": null,
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K15108141": {
+   "brd": "BRD-K15108141",
+   "resolved": true,
+   "inames": [
+    "gemcitabine"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "SDUQYLNIPVEERB-QPPQHZFASA-N",
+   "pubchem_cid": "60749",
+   "sources": [
+    "GSE92742",
+    "GSE70138"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL888",
+    "pref_name": "GEMCITABINE",
+    "max_phase": "4.0",
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": [
+     "INHIBITOR|DNA polymerase (alpha/delta/epsilon) inhibitor",
+     "INHIBITOR|Ribonucleoside-diphosphate reductase RR1 inhibitor"
+    ]
+   }
+  },
+  "BRD-K16485616": {
+   "brd": "BRD-K16485616",
+   "resolved": true,
+   "inames": [
+    "mocetinostat"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "HRNLUBSXIHFDHP-UHFFFAOYSA-N",
+   "pubchem_cid": "9865515",
+   "sources": [
+    "GSE92742",
+    "GSE70138"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL272980",
+    "pref_name": "MOCETINOSTAT",
+    "max_phase": "2.0",
+    "mechanism_query_molecule_id_empty": false,
+    "mechanisms": [
+     "INHIBITOR|Histone deacetylase 1 inhibitor",
+     "INHIBITOR|Histone deacetylase 11 inhibitor",
+     "INHIBITOR|Histone deacetylase 2 inhibitor",
+     "INHIBITOR|Histone deacetylase 3 inhibitor",
+     "INHIBITOR|Histone deacetylase 8 inhibitor"
+    ]
+   }
+  },
+  "BRD-K16554956": {
+   "brd": "BRD-K16554956",
+   "resolved": true,
+   "inames": [
+    "PTB1"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "BWJOQFMMTKEZGA-UHFFFAOYSA-N",
+   "pubchem_cid": "24857885",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL259628",
+    "pref_name": null,
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K16701932": {
+   "brd": "BRD-K16701932",
+   "resolved": true,
+   "inames": [
+    "Gly-Gly-PALO"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "AVSPMOKNUVRQBF-ZETCQYMHSA-N",
+   "pubchem_cid": "172813",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": "NO_MATCH_BY_INCHIKEY"
+  },
+  "BRD-K17894950": {
+   "brd": "BRD-K17894950",
+   "resolved": true,
+   "inames": [
+    "indirubin"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "CRDNMYFJWFXOCH-YPKPFQOOSA-N",
+   "pubchem_cid": "-666",
+   "sources": [
+    "GSE92742",
+    "GSE70138"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL1276127",
+    "pref_name": "INDIRUBIN",
+    "max_phase": "2.0",
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K18518344": {
+   "brd": "BRD-K18518344",
+   "resolved": true,
+   "inames": [
+    "digitoxigenin"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "XZTUSOXSLKTKJQ-CESUGQOBSA-N",
+   "pubchem_cid": "-666",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL1453",
+    "pref_name": "DIGITOXIGENIN",
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K18849474": {
+   "brd": "BRD-K18849474",
+   "resolved": true,
+   "inames": [
+    "dalcetrapib"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "YZQLWPMZQVHJED-UHFFFAOYSA-N",
+   "pubchem_cid": "6918540",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL313006",
+    "pref_name": "DALCETRAPIB",
+    "max_phase": "3.0",
+    "mechanism_query_molecule_id_empty": false,
+    "mechanisms": [
+     "INHIBITOR|Cholesteryl ester transfer protein inhibitor"
+    ]
+   }
+  },
+  "BRD-K19216856": {
+   "brd": "BRD-K19216856",
+   "resolved": true,
+   "inames": [
+    "epigallocatechin"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "WMBWREPUVVBILR-NQIIRXRSSA-N",
+   "pubchem_cid": "199472",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL264938",
+    "pref_name": "GALLOCATECHIN GALLATE",
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K19796430": {
+   "brd": "BRD-K19796430",
+   "resolved": true,
+   "inames": [
+    "sonidegib"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "VZZJRYRQSPEMTK-CALCHBBNSA-N",
+   "pubchem_cid": "24775005",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL2105737",
+    "pref_name": "SONIDEGIB",
+    "max_phase": "4.0",
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": [
+     "INHIBITOR|Smoothened homolog inhibitor"
+    ]
+   }
+  },
+  "BRD-K19826330": {
+   "brd": "BRD-K19826330",
+   "resolved": true,
+   "inames": [
+    "BRD-K19826330"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "ICBPOKCISFMJKJ-BSRJHKFKSA-N",
+   "pubchem_cid": "56835561",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": "NO_MATCH_BY_INCHIKEY"
+  },
+  "BRD-K21672174": {
+   "brd": "BRD-K21672174",
+   "resolved": true,
+   "inames": [
+    "Ro-28-1675"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "NEQSWPCDHDQINX-MRXNPFEDSA-N",
+   "pubchem_cid": "9886086",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL1096435",
+    "pref_name": "Ro-281675",
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K22134346": {
+   "brd": "BRD-K22134346",
+   "resolved": true,
+   "inames": [
+    "simvastatin"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "RYMZZMVNJRMUDD-HGQWONQESA-N",
+   "pubchem_cid": "-666",
+   "sources": [
+    "GSE92742",
+    "GSE70138"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL1064",
+    "pref_name": "SIMVASTATIN",
+    "max_phase": "4.0",
+    "mechanism_query_molecule_id_empty": false,
+    "mechanisms": [
+     "INHIBITOR|HMG-CoA reductase inhibitor"
+    ]
+   }
+  },
+  "BRD-K28112517": {
+   "brd": "BRD-K28112517",
+   "resolved": true,
+   "inames": [
+    "BRD-K28112517"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "MMKXHTDCKLZHIM-UHFFFAOYSA-N",
+   "pubchem_cid": "976135",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL1452805",
+    "pref_name": null,
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K28360340": {
+   "brd": "BRD-K28360340",
+   "resolved": true,
+   "inames": [
+    "TW-37"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "PQAPVTKIEGUPRN-UHFFFAOYSA-N",
+   "pubchem_cid": "11455910",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL217354",
+    "pref_name": null,
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K28761891": {
+   "brd": "BRD-K28761891",
+   "resolved": true,
+   "inames": [
+    "ramelteon"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "YLXDSYKOBKBWJQ-LBPRGKRZSA-N",
+   "pubchem_cid": "",
+   "sources": [
+    "GSE70138"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL1218",
+    "pref_name": "RAMELTEON",
+    "max_phase": "4.0",
+    "mechanism_query_molecule_id_empty": false,
+    "mechanisms": [
+     "AGONIST|Melatonin receptor agonist"
+    ]
+   }
+  },
+  "BRD-K30064966": {
+   "brd": "BRD-K30064966",
+   "resolved": true,
+   "inames": [
+    "BRD-K30064966"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "FCODPGUEFHCCIA-UHFFFAOYSA-N",
+   "pubchem_cid": "44197249",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL5409247",
+    "pref_name": null,
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K30677119": {
+   "brd": "BRD-K30677119",
+   "resolved": true,
+   "inames": [
+    "PP-30"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "RWRBSEISHUTNQL-UHFFFAOYSA-N",
+   "pubchem_cid": "73707372",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": "NO_MATCH_BY_INCHIKEY"
+  },
+  "BRD-K31023358": {
+   "brd": "BRD-K31023358",
+   "resolved": true,
+   "inames": [
+    "purpurogallin"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "WDGFFVCWBZVLCE-UHFFFAOYSA-N",
+   "pubchem_cid": "5281571",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL66953",
+    "pref_name": "PURPUROGALLIN",
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K32405725": {
+   "brd": "BRD-K32405725",
+   "resolved": true,
+   "inames": [
+    "etomoxir"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "DZLOHEOHWICNIL-QGZVFWFLSA-N",
+   "pubchem_cid": "9840324",
+   "sources": [
+    "GSE92742",
+    "GSE70138"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL2051959",
+    "pref_name": "ETOMOXIR",
+    "max_phase": "2.0",
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K33272502": {
+   "brd": "BRD-K33272502",
+   "resolved": true,
+   "inames": [
+    "DG-041"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "BFBTVZNKWXWKNZ-HWKANZROSA-N",
+   "pubchem_cid": "11296282",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL565591",
+    "pref_name": null,
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K34581968": {
+   "brd": "BRD-K34581968",
+   "resolved": true,
+   "inames": [
+    "BMS-536924"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "FDBVBFZVZLTNFJ-KKPVDXMRSA-N",
+   "pubchem_cid": "11353973",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": "NO_MATCH_BY_INCHIKEY"
+  },
+  "BRD-K35716340": {
+   "brd": "BRD-K35716340",
+   "resolved": true,
+   "inames": [
+    "BRD-K35716340"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "JOYQBQFJPLXICC-UHFFFAOYSA-N",
+   "pubchem_cid": "1641662",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": "NO_MATCH_BY_INCHIKEY"
+  },
+  "BRD-K37289225": {
+   "brd": "BRD-K37289225",
+   "resolved": true,
+   "inames": [
+    "clozapine"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "QZUDBNBUXVUHMW-UHFFFAOYSA-N",
+   "pubchem_cid": "-666",
+   "sources": [
+    "GSE92742",
+    "GSE70138"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL42",
+    "pref_name": "CLOZAPINE",
+    "max_phase": "4.0",
+    "mechanism_query_molecule_id_empty": false,
+    "mechanisms": [
+     "ANTAGONIST|Dopamine D2 receptor antagonist",
+     "ANTAGONIST|Serotonin 2a (5-HT2a) receptor antagonist"
+    ]
+   }
+  },
+  "BRD-K37865504": {
+   "brd": "BRD-K37865504",
+   "resolved": true,
+   "inames": [
+    "LY-2183240"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "GZNIYOXWFCDBBJ-UHFFFAOYSA-N",
+   "pubchem_cid": "11507802",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL509860",
+    "pref_name": null,
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K38436528": {
+   "brd": "BRD-K38436528",
+   "resolved": true,
+   "inames": [
+    "imipramine"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "BCGWQEUPMDMJNV-UHFFFAOYSA-N",
+   "pubchem_cid": "-666",
+   "sources": [
+    "GSE92742",
+    "GSE70138"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL11",
+    "pref_name": "IMIPRAMINE",
+    "max_phase": "4.0",
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": [
+     "INHIBITOR|Norepinephrine transporter inhibitor",
+     "INHIBITOR|Serotonin transporter inhibitor"
+    ]
+   }
+  },
+  "BRD-K38865695": {
+   "brd": "BRD-K38865695",
+   "resolved": true,
+   "inames": [
+    "BRD-K38865695"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "ICBPOKCISFMJKJ-IXFSTUDKSA-N",
+   "pubchem_cid": "54637987",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": "NO_MATCH_BY_INCHIKEY"
+  },
+  "BRD-K39503511": {
+   "brd": "BRD-K39503511",
+   "resolved": true,
+   "inames": [
+    "quiflapon"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "NZOONKHCNQFYCI-UHFFFAOYSA-N",
+   "pubchem_cid": "60923",
+   "sources": [
+    "GSE92742",
+    "GSE70138"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL16596",
+    "pref_name": "QUIFLAPON",
+    "max_phase": "2.0",
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K43068349": {
+   "brd": "BRD-K43068349",
+   "resolved": true,
+   "inames": [
+    "AMG-9810"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "GZTFUVZVLYUPRG-UHFFFAOYSA-N",
+   "pubchem_cid": "-666",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": "NO_MATCH_BY_INCHIKEY"
+  },
+  "BRD-K44432556": {
+   "brd": "BRD-K44432556",
+   "resolved": true,
+   "inames": [
+    "VU-0418946-1"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "QNRODODTMXCRKU-UHFFFAOYSA-N",
+   "pubchem_cid": "46742353",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL2144958",
+    "pref_name": null,
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K48692744": {
+   "brd": "BRD-K48692744",
+   "resolved": true,
+   "inames": [
+    "NU-1025"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "YJDAOHJWLUNFLX-UHFFFAOYSA-N",
+   "pubchem_cid": "63306",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL123904",
+    "pref_name": null,
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K49456190": {
+   "brd": "BRD-K49456190",
+   "resolved": true,
+   "inames": [
+    "prima-1-met"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "BGBNULCRKBVAKL-JTQLQIEISA-N",
+   "pubchem_cid": "73707386",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": "NO_MATCH_BY_INCHIKEY"
+  },
+  "BRD-K49668410": {
+   "brd": "BRD-K49668410",
+   "resolved": true,
+   "inames": [
+    "clarithromycin"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "AGOYDEPGAOXOCK-KCBOHYOISA-N",
+   "pubchem_cid": "84029",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL1741",
+    "pref_name": "CLARITHROMYCIN",
+    "max_phase": "4.0",
+    "mechanism_query_molecule_id_empty": false,
+    "mechanisms": [
+     "INHIBITOR|Bacterial 70S ribosome inhibitor"
+    ]
+   }
+  },
+  "BRD-K50128260": {
+   "brd": "BRD-K50128260",
+   "resolved": true,
+   "inames": [
+    "sildenafil"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "BNRNXUUZRGQAQC-UHFFFAOYSA-N",
+   "pubchem_cid": "5212",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL192",
+    "pref_name": "SILDENAFIL",
+    "max_phase": "4.0",
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": [
+     "INHIBITOR|Phosphodiesterase 5A inhibitor"
+    ]
+   }
+  },
+  "BRD-K52904470": {
+   "brd": "BRD-K52904470",
+   "resolved": true,
+   "inames": [
+    "BRD-K52904470"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "XVWCAOUMDSZQPB-WOJGMQOQSA-N",
+   "pubchem_cid": "2294212",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": "NO_MATCH_BY_INCHIKEY"
+  },
+  "BRD-K52989797": {
+   "brd": "BRD-K52989797",
+   "resolved": true,
+   "inames": [
+    "clomipramine"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "GDLIGKIOYRNHDA-UHFFFAOYSA-N",
+   "pubchem_cid": "-666",
+   "sources": [
+    "GSE92742",
+    "GSE70138"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL415",
+    "pref_name": "CLOMIPRAMINE",
+    "max_phase": "4.0",
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": [
+     "INHIBITOR|Serotonin transporter inhibitor"
+    ]
+   }
+  },
+  "BRD-K53308430": {
+   "brd": "BRD-K53308430",
+   "resolved": true,
+   "inames": [
+    "SA-1017940"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "ZBLCOVKAEUNWGN-LWPQGVMLSA-N",
+   "pubchem_cid": "44507247",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL2132717",
+    "pref_name": null,
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K53903639": {
+   "brd": "BRD-K53903639",
+   "resolved": true,
+   "inames": [
+    "CHEMBL-1222381"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "SYENTKHGMVKGAQ-UHFFFAOYSA-N",
+   "pubchem_cid": "19582717",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL1222381",
+    "pref_name": null,
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K55460824": {
+   "brd": "BRD-K55460824",
+   "resolved": false,
+   "inames": [],
+   "ambiguous_names": false,
+   "inchi_key": "",
+   "pubchem_cid": "",
+   "sources": [],
+   "pert_type": ""
+  },
+  "BRD-K55591206": {
+   "brd": "BRD-K55591206",
+   "resolved": true,
+   "inames": [
+    "epigallocatechin-gallate-(-)"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "WMBWREPUVVBILR-WIYYLYMNSA-N",
+   "pubchem_cid": "65064",
+   "sources": [
+    "GSE92742",
+    "GSE70138"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL297453",
+    "pref_name": "EPIGALOCATECHIN GALLATE",
+    "max_phase": "3.0",
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K56001384": {
+   "brd": "BRD-K56001384",
+   "resolved": true,
+   "inames": [
+    "antimycin-a"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "ZVYMCLIDNNTNCL-GFRRLMGDSA-N",
+   "pubchem_cid": "5702199",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL3039461",
+    "pref_name": null,
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K56851771": {
+   "brd": "BRD-K56851771",
+   "resolved": true,
+   "inames": [
+    "enzalutamide"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "WXCXUHSOUPDCQV-UHFFFAOYSA-N",
+   "pubchem_cid": "15951529",
+   "sources": [
+    "GSE92742",
+    "GSE70138"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL1082407",
+    "pref_name": "ENZALUTAMIDE",
+    "max_phase": "4.0",
+    "mechanism_query_molecule_id_empty": false,
+    "mechanisms": [
+     "ANTAGONIST|Androgen Receptor antagonist"
+    ]
+   }
+  },
+  "BRD-K57080016": {
+   "brd": "BRD-K57080016",
+   "resolved": true,
+   "inames": [
+    "selumetinib"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "CYOHGALHFOKKQC-UHFFFAOYSA-N",
+   "pubchem_cid": "10127622",
+   "sources": [
+    "GSE92742",
+    "GSE70138"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL1614701",
+    "pref_name": "SELUMETINIB",
+    "max_phase": "4.0",
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": [
+     "INHIBITOR|Dual specificity mitogen-activated protein kinase kinase 1 inhibitor",
+     "INHIBITOR|Dual specificity mitogen-activated protein kinase kinase 2 inhibitor"
+    ]
+   }
+  },
+  "BRD-K58550667": {
+   "brd": "BRD-K58550667",
+   "resolved": true,
+   "inames": [
+    "FK-866"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "KPBNHDGDUADAGP-VAWYXSNFSA-N",
+   "pubchem_cid": "6914657",
+   "sources": [
+    "GSE92742",
+    "GSE70138"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL566757",
+    "pref_name": "DAPORINAD",
+    "max_phase": "2.0",
+    "mechanism_query_molecule_id_empty": false,
+    "mechanisms": [
+     "INHIBITOR|Nicotinamide phosphoribosyltransferase inhibitor"
+    ]
+   }
+  },
+  "BRD-K61323504": {
+   "brd": "BRD-K61323504",
+   "resolved": true,
+   "inames": [
+    "SB-225002"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "MQBZVUNNWUIPMK-UHFFFAOYSA-N",
+   "pubchem_cid": "3854666",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL239767",
+    "pref_name": null,
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K61717269": {
+   "brd": "BRD-K61717269",
+   "resolved": true,
+   "inames": [
+    "BRD-K61717269"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "XXSFXQLMBCXBAH-UHFFFAOYSA-N",
+   "pubchem_cid": "44602352",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL2139663",
+    "pref_name": null,
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K63195589": {
+   "brd": "BRD-K63195589",
+   "resolved": true,
+   "inames": [
+    "tipifarnib"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "PLHJCIYEEKOWNM-MHZLTWQESA-N",
+   "pubchem_cid": "9935249",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL243659",
+    "pref_name": "(S)-TIPIFARNIB",
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K64890080": {
+   "brd": "BRD-K64890080",
+   "resolved": true,
+   "inames": [
+    "BI-2536"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "XQVVPGYIWAGRNI-JOCHJYFZSA-N",
+   "pubchem_cid": "11364421",
+   "sources": [
+    "GSE92742",
+    "GSE70138"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL513909",
+    "pref_name": "BI-2536",
+    "max_phase": "2.0",
+    "mechanism_query_molecule_id_empty": false,
+    "mechanisms": [
+     "INHIBITOR|Serine/threonine-protein kinase PLK1 inhibitor"
+    ]
+   }
+  },
+  "BRD-K66874953": {
+   "brd": "BRD-K66874953",
+   "resolved": true,
+   "inames": [
+    "pifithrin-alpha"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "OLTZHXYLLRJLST-UHFFFAOYSA-N",
+   "pubchem_cid": "4817",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL198759",
+    "pref_name": null,
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K67075780": {
+   "brd": "BRD-K67075780",
+   "resolved": true,
+   "inames": [
+    "TGX-115"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "FWYYZGLCNUZWPF-UHFFFAOYSA-N",
+   "pubchem_cid": "9902311",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": "NO_MATCH_BY_INCHIKEY"
+  },
+  "BRD-K68313733": {
+   "brd": "BRD-K68313733",
+   "resolved": true,
+   "inames": [
+    "BRD-K68313733"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "QQPZDSQLEDTJRI-UHFFFAOYSA-N",
+   "pubchem_cid": "2449454",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL1469676",
+    "pref_name": null,
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K68867920": {
+   "brd": "BRD-K68867920",
+   "resolved": true,
+   "inames": [
+    "quetiapine"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "URKOMYMAXPYINW-UHFFFAOYSA-N",
+   "pubchem_cid": "-666",
+   "sources": [
+    "GSE92742",
+    "GSE70138"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL716",
+    "pref_name": "QUETIAPINE",
+    "max_phase": "4.0",
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": [
+     "ANTAGONIST|Dopamine D2 receptor antagonist",
+     "ANTAGONIST|Serotonin 2a (5-HT2a) receptor antagonist",
+     "ANTAGONIST|Serotonin 2c (5-HT2c) receptor antagonist"
+    ]
+   }
+  },
+  "BRD-K68997413": {
+   "brd": "BRD-K68997413",
+   "resolved": true,
+   "inames": [
+    "PF-3845"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "NBOJHRYUGLRASX-UHFFFAOYSA-N",
+   "pubchem_cid": "25154867",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL1651524",
+    "pref_name": null,
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K69097969": {
+   "brd": "BRD-K69097969",
+   "resolved": true,
+   "inames": [
+    "VU-0418939-2"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "SKLXOVZCZWTTRY-UHFFFAOYSA-N",
+   "pubchem_cid": "46742345",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL2138065",
+    "pref_name": null,
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K70555272": {
+   "brd": "BRD-K70555272",
+   "resolved": true,
+   "inames": [
+    "oligomycin-a"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "MNULEGDCPYONBU-WMBHJXFZSA-N",
+   "pubchem_cid": "44634687",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL3039432",
+    "pref_name": null,
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K71935468": {
+   "brd": "BRD-K71935468",
+   "resolved": true,
+   "inames": [
+    "BRD-K71935468"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "SIAMCPDTZJAYRI-XDWJUNQNSA-N",
+   "pubchem_cid": "6729245",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": "NO_MATCH_BY_INCHIKEY"
+  },
+  "BRD-K72204100": {
+   "brd": "BRD-K72204100",
+   "resolved": true,
+   "inames": [
+    "BRD-K72204100"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "HSJIFMVKIOATEF-GTNJKRJXSA-N",
+   "pubchem_cid": "54637867",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": "NO_MATCH_BY_INCHIKEY"
+  },
+  "BRD-K72615639": {
+   "brd": "BRD-K72615639",
+   "resolved": true,
+   "inames": [
+    "BRD-K72615639"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "FWCLTYYMXFHMFZ-REZTVBANSA-N",
+   "pubchem_cid": "6711315",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL2130570",
+    "pref_name": null,
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K73319509": {
+   "brd": "BRD-K73319509",
+   "resolved": true,
+   "inames": [
+    "PF-04217903"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "PDMUGYOXRHVNMO-UHFFFAOYSA-N",
+   "pubchem_cid": "17754438",
+   "sources": [
+    "GSE92742",
+    "GSE70138"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL2001019",
+    "pref_name": "PF-04217903",
+    "max_phase": "1.0",
+    "mechanism_query_molecule_id_empty": false,
+    "mechanisms": [
+     "INHIBITOR|Hepatocyte growth factor receptor inhibitor"
+    ]
+   }
+  },
+  "BRD-K73610817": {
+   "brd": "BRD-K73610817",
+   "resolved": true,
+   "inames": [
+    "BRD-K73610817"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "LTGLGIQQZXSLLF-UHFFFAOYSA-N",
+   "pubchem_cid": "3426979",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL1527537",
+    "pref_name": null,
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K74710236": {
+   "brd": "BRD-K74710236",
+   "resolved": true,
+   "inames": [
+    "VU-0410183-2"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "VZQQBRATUAQGEU-UHFFFAOYSA-N",
+   "pubchem_cid": "44631784",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL2141722",
+    "pref_name": null,
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K76188144": {
+   "brd": "BRD-K76188144",
+   "resolved": true,
+   "inames": [
+    "BRD-K76188144"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "ULQWGBCNOHBNDB-MRVPVSSYSA-N",
+   "pubchem_cid": "5288998",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL486146",
+    "pref_name": null,
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K76907295": {
+   "brd": "BRD-K76907295",
+   "resolved": true,
+   "inames": [
+    "VU-0418947-2"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "MWRDNBONCUGSBY-UHFFFAOYSA-N",
+   "pubchem_cid": "46742354",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL2135309",
+    "pref_name": null,
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K76964878": {
+   "brd": "BRD-K76964878",
+   "resolved": true,
+   "inames": [
+    "EX-527"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "FUZYTVDVLBBXDL-VIFPVBQESA-N",
+   "pubchem_cid": "707029",
+   "sources": [
+    "GSE92742",
+    "GSE70138"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL597477",
+    "pref_name": null,
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K77345217": {
+   "brd": "BRD-K77345217",
+   "resolved": true,
+   "inames": [
+    "gallic-acid"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "LNTHITQWFMADLM-UHFFFAOYSA-N",
+   "pubchem_cid": "370",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL288114",
+    "pref_name": "GALLIC ACID",
+    "max_phase": "2.0",
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K77908580": {
+   "brd": "BRD-K77908580",
+   "resolved": true,
+   "inames": [
+    "entinostat"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "INVTYAOGFAGBOE-UHFFFAOYSA-N",
+   "pubchem_cid": "4261",
+   "sources": [
+    "GSE92742",
+    "GSE70138"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL27759",
+    "pref_name": "ENTINOSTAT",
+    "max_phase": "3.0",
+    "mechanism_query_molecule_id_empty": false,
+    "mechanisms": [
+     "INHIBITOR|Histone deacetylase inhibitor"
+    ]
+   }
+  },
+  "BRD-K78385490": {
+   "brd": "BRD-K78385490",
+   "resolved": true,
+   "inames": [
+    "BRD-K78385490"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "BPJXTVCIZAREGR-UHFFFAOYSA-N",
+   "pubchem_cid": "56643206",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL1356034",
+    "pref_name": null,
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K78716413": {
+   "brd": "BRD-K78716413",
+   "resolved": true,
+   "inames": [
+    "BRD-K78716413"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "GAJKVTDZIAHPIA-UHFFFAOYSA-N",
+   "pubchem_cid": "952391",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": "NO_MATCH_BY_INCHIKEY"
+  },
+  "BRD-K80527266": {
+   "brd": "BRD-K80527266",
+   "resolved": true,
+   "inames": [
+    "triacsin-c"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "DQMOSRDZWQSBHC-YLEPRARLSA-N",
+   "pubchem_cid": "73707378",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": "NO_MATCH_BY_INCHIKEY"
+  },
+  "BRD-K80672993": {
+   "brd": "BRD-K80672993",
+   "resolved": true,
+   "inames": [
+    "M2-PK-activator"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "GMHIOMMKSMSRLY-UHFFFAOYSA-N",
+   "pubchem_cid": "60138087",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL1089334",
+    "pref_name": null,
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K81795824": {
+   "brd": "BRD-K81795824",
+   "resolved": true,
+   "inames": [
+    "BRD-K81795824"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "SFLIDSZKPUWPJR-UHFFFAOYSA-N",
+   "pubchem_cid": "45099945",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL2142877",
+    "pref_name": null,
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K82746043": {
+   "brd": "BRD-K82746043",
+   "resolved": true,
+   "inames": [
+    "navitoclax"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "JLYAXFNOILIKPP-KXQOOQHDSA-N",
+   "pubchem_cid": "24978538",
+   "sources": [
+    "GSE92742",
+    "GSE70138"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL443684",
+    "pref_name": "NAVITOCLAX",
+    "max_phase": "3.0",
+    "mechanism_query_molecule_id_empty": false,
+    "mechanisms": [
+     "INHIBITOR|Apoptosis regulator Bcl-2 inhibitor",
+     "INHIBITOR|Apoptosis regulator Bcl-W inhibitor",
+     "INHIBITOR|Apoptosis regulator Bcl-X inhibitor"
+    ]
+   }
+  },
+  "BRD-K82794234": {
+   "brd": "BRD-K82794234",
+   "resolved": true,
+   "inames": [
+    "BRD-K82794234"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "SUQCIPRCFCPKOO-KMTUSBKWSA-N",
+   "pubchem_cid": "54645946",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": "NO_MATCH_BY_INCHIKEY"
+  },
+  "BRD-K82818427": {
+   "brd": "BRD-K82818427",
+   "resolved": true,
+   "inames": [
+    "batimastat"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "XFILPEOLDIKJHX-QYZOEREBSA-N",
+   "pubchem_cid": "5362422",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL279786",
+    "pref_name": "BATIMASTAT",
+    "max_phase": "2.0",
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K82837433": {
+   "brd": "BRD-K82837433",
+   "resolved": true,
+   "inames": [
+    "BRD-K82837433"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "PMJGWWMIDKKJOA-REZTVBANSA-N",
+   "pubchem_cid": "5386755",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL1971609",
+    "pref_name": null,
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K82924899": {
+   "brd": "BRD-K82924899",
+   "resolved": true,
+   "inames": [
+    "IWP-2"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "WRKPZSMRWPJJDH-UHFFFAOYSA-N",
+   "pubchem_cid": "2155128",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL1257064",
+    "pref_name": null,
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K83213911": {
+   "brd": "BRD-K83213911",
+   "resolved": true,
+   "inames": [
+    "PF-750"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "BIODYGOZWZNCAG-UHFFFAOYSA-N",
+   "pubchem_cid": "25154868",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL560590",
+    "pref_name": null,
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K85493820": {
+   "brd": "BRD-K85493820",
+   "resolved": true,
+   "inames": [
+    "KM-00927"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "VAUYKIRTPDSWGR-MHWRWJLKSA-N",
+   "pubchem_cid": "2819152",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": "NO_MATCH_BY_INCHIKEY"
+  },
+  "BRD-K85563610": {
+   "brd": "BRD-K85563610",
+   "resolved": true,
+   "inames": [
+    "APO-866"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "UKQGSFUTDYQJST-UHFFFAOYSA-N",
+   "pubchem_cid": "9543513",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": "NO_MATCH_BY_INCHIKEY"
+  },
+  "BRD-K86191271": {
+   "brd": "BRD-K86191271",
+   "resolved": true,
+   "inames": [
+    "cytosporone-b"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "UVVWQQKSNZLUQA-UHFFFAOYSA-N",
+   "pubchem_cid": "10687292",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL1221517",
+    "pref_name": "CYTOSPORONE B",
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K86574132": {
+   "brd": "BRD-K86574132",
+   "resolved": true,
+   "inames": [
+    "BRD-K86574132"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "PMGRYRIPEBUYKR-NTEUORMPSA-N",
+   "pubchem_cid": "7326481",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL1300397",
+    "pref_name": null,
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K86856088": {
+   "brd": "BRD-K86856088",
+   "resolved": true,
+   "inames": [
+    "UNC-0638"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "QOECJCJVIMVJGX-UHFFFAOYSA-N",
+   "pubchem_cid": "",
+   "sources": [
+    "GSE70138"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL1231795",
+    "pref_name": null,
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K88544581": {
+   "brd": "BRD-K88544581",
+   "resolved": true,
+   "inames": [
+    "CI-976"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "WAFNZAURAWBNDZ-UHFFFAOYSA-N",
+   "pubchem_cid": "122327",
+   "sources": [
+    "GSE92742",
+    "GSE70138"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL22373",
+    "pref_name": "CL-976",
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K89329876": {
+   "brd": "BRD-K89329876",
+   "resolved": true,
+   "inames": [
+    "BRD-K89329876"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "MKILROQBJOOZKC-UHFFFAOYSA-N",
+   "pubchem_cid": "613000",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL4303295",
+    "pref_name": null,
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K90826279": {
+   "brd": "BRD-K90826279",
+   "resolved": true,
+   "inames": [
+    "BRD-K90826279"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "FSHFRKKIBVABAJ-UHFFFAOYSA-N",
+   "pubchem_cid": "664279",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL1574971",
+    "pref_name": null,
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K92317137": {
+   "brd": "BRD-K92317137",
+   "resolved": true,
+   "inames": [
+    "BRD-K92317137"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "CYSOFAOLQAYKGU-UHFFFAOYSA-N",
+   "pubchem_cid": "659101",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL428064",
+    "pref_name": null,
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K92980438": {
+   "brd": "BRD-K92980438",
+   "resolved": true,
+   "inames": [
+    "BRD-K92980438"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "PRRZDZJYSJLDBS-UHFFFAOYSA-N",
+   "pubchem_cid": "70684",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL177837",
+    "pref_name": "BROMOPYRUVATE",
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K92991072": {
+   "brd": "BRD-K92991072",
+   "resolved": true,
+   "inames": [
+    "PAC-1"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "YQNRVGJCPCNMKT-LFVJCYFKSA-N",
+   "pubchem_cid": "6851947",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL591429",
+    "pref_name": "PAC-1",
+    "max_phase": "1.0",
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K93095519": {
+   "brd": "BRD-K93095519",
+   "resolved": true,
+   "inames": [
+    "SJ-172550"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "RKKFQJXGAQWHBZ-YVLHZVERSA-N",
+   "pubchem_cid": "1317466",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL3347643",
+    "pref_name": null,
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K94176593": {
+   "brd": "BRD-K94176593",
+   "resolved": true,
+   "inames": [
+    "TWS-119"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "VPVLEBIVXZSOMQ-UHFFFAOYSA-N",
+   "pubchem_cid": "9549289",
+   "sources": [
+    "GSE92742",
+    "GSE70138"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL405759",
+    "pref_name": null,
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K95138506": {
+   "brd": "BRD-K95138506",
+   "resolved": true,
+   "inames": [
+    "BRD-K95138506"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "BQZMRISVTJDRJE-UHFFFAOYSA-N",
+   "pubchem_cid": "53338817",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL1535686",
+    "pref_name": null,
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K95286989": {
+   "brd": "BRD-K95286989",
+   "resolved": true,
+   "inames": [
+    "BRD-K95286989"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "PLQUATFCVTZMJC-SDDRHHMPSA-N",
+   "pubchem_cid": "54639110",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": "NO_MATCH_BY_INCHIKEY"
+  },
+  "BRD-K95609758": {
+   "brd": "BRD-K95609758",
+   "resolved": true,
+   "inames": [
+    "BMS-191011"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "QKOWACXSXTXRKA-UHFFFAOYSA-N",
+   "pubchem_cid": "-666",
+   "sources": [
+    "GSE92742"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL45349",
+    "pref_name": null,
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K95901403": {
+   "brd": "BRD-K95901403",
+   "resolved": true,
+   "inames": [
+    "XL-147"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "MQMKRQLTIWPEDM-UHFFFAOYSA-N",
+   "pubchem_cid": "1893730",
+   "sources": [
+    "GSE92742",
+    "GSE70138"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL3218575",
+    "pref_name": null,
+    "max_phase": null,
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K97399794": {
+   "brd": "BRD-K97399794",
+   "resolved": true,
+   "inames": [
+    "quercetin"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "REFJWTPEDVJJIY-UHFFFAOYSA-N",
+   "pubchem_cid": "16212154",
+   "sources": [
+    "GSE92742",
+    "GSE70138"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL50",
+    "pref_name": "QUERCETIN",
+    "max_phase": "3.0",
+    "mechanism_query_molecule_id_empty": true,
+    "mechanisms": []
+   }
+  },
+  "BRD-K97530723": {
+   "brd": "BRD-K97530723",
+   "resolved": true,
+   "inames": [
+    "melatonin"
+   ],
+   "ambiguous_names": false,
+   "inchi_key": "DRLFMBDRBRZALE-UHFFFAOYSA-N",
+   "pubchem_cid": "896",
+   "sources": [
+    "GSE92742",
+    "GSE70138"
+   ],
+   "pert_type": "trt_cp",
+   "chembl": {
+    "id": "CHEMBL45",
+    "pref_name": "MELATONIN",
+    "max_phase": "4.0",
+    "mechanism_query_molecule_id_empty": false,
+    "mechanisms": [
+     "AGONIST|Melatonin receptor agonist"
+    ]
+   }
+  },
+  "_chembl_release": "ChEMBL_37"
+ },
+ "n_codes": 134,
+ "hits": [
+  [
+   "L1000FWD_direct",
+   "similar",
+   "S1",
+   "CPC006_HA1E_24H:BRD-K28360340-001-01-8:10",
+   "BRD-K28360340",
+   "HA1E",
+   "24H",
+   "10",
+   0.00117573594187971
+  ],
+  [
+   "L1000FWD_direct",
+   "similar",
+   "S1",
+   "CPC008_VCAP_24H:BRD-K74710236-001-04-8:10",
+   "BRD-K74710236",
+   "VCAP",
+   "24H",
+   "10",
+   0.00128355885065711
+  ],
+  [
+   "L1000FWD_direct",
+   "similar",
+   "S1",
+   "CPC006_VCAP_24H:BRD-K28360340-001-01-8:10",
+   "BRD-K28360340",
+   "VCAP",
+   "24H",
+   "10",
+   0.00128355885065711
+  ],
+  [
+   "L1000FWD_direct",
+   "similar",
+   "S1",
+   "CPC008_A375_24H:BRD-K76907295-001-03-8:10",
+   "BRD-K76907295",
+   "A375",
+   "24H",
+   "10",
+   0.00133126360768773
+  ],
+  [
+   "L1000FWD_direct",
+   "similar",
+   "S1",
+   "CPC008_MCF7_24H:BRD-K44432556-001-03-0:10",
+   "BRD-K44432556",
+   "MCF7",
+   "24H",
+   "10",
+   0.0022670272952381
+  ],
+  [
+   "L1000FWD_direct",
+   "similar",
+   "S1",
+   "CPC008_PC3_24H:BRD-K44432556-001-03-0:10",
+   "BRD-K44432556",
+   "PC3",
+   "24H",
+   "10",
+   0.00506654720405078
+  ],
+  [
+   "L1000FWD_direct",
+   "similar",
+   "S1",
+   "CPC006_A375_24H:BRD-K92991072-001-02-3:10",
+   "BRD-K92991072",
+   "A375",
+   "24H",
+   "10",
+   0.00128355885065711
+  ],
+  [
+   "L1000FWD_direct",
+   "similar",
+   "S1",
+   "CPC007_PC3_24H:BRD-A43126523-001-06-4:10",
+   "BRD-A43126523",
+   "PC3",
+   "24H",
+   "10",
+   0.00195481554418156
+  ],
+  [
+   "L1000FWD_direct",
+   "similar",
+   "S1",
+   "CPC008_MCF7_6H:BRD-K74710236-001-04-8:10",
+   "BRD-K74710236",
+   "MCF7",
+   "6H",
+   "10",
+   0.00310314103961113
+  ],
+  [
+   "L1000FWD_direct",
+   "similar",
+   "S1",
+   "CPC006_PC3_24H:BRD-K28360340-001-01-8:10",
+   "BRD-K28360340",
+   "PC3",
+   "24H",
+   "10",
+   0.00184050479650038
+  ],
+  [
+   "L1000FWD_direct",
+   "similar",
+   "S1",
+   "CPC012_PC3_24H:BRD-K08307026-001-01-4:10",
+   "BRD-K08307026",
+   "PC3",
+   "24H",
+   "10",
+   0.00911748519954892
+  ],
+  [
+   "L1000FWD_direct",
+   "similar",
+   "S1",
+   "CPC012_MCF7_6H:BRD-K08307026-001-01-4:10",
+   "BRD-K08307026",
+   "MCF7",
+   "6H",
+   "10",
+   0.00128355885065711
+  ],
+  [
+   "L1000FWD_direct",
+   "similar",
+   "S1",
+   "CPC012_MCF7_6H:BRD-K81795824-001-01-4:10",
+   "BRD-K81795824",
+   "MCF7",
+   "6H",
+   "10",
+   0.0037195491618792
+  ],
+  [
+   "L1000FWD_direct",
+   "similar",
+   "S1",
+   "CPC014_PC3_6H:BRD-K16485616-001-03-0:10",
+   "BRD-K16485616",
+   "PC3",
+   "6H",
+   "10",
+   0.0147965981682559
+  ],
+  [
+   "L1000FWD_direct",
+   "similar",
+   "S1",
+   "CPC006_HA1E_6H:BRD-K28360340-001-01-8:10",
+   "BRD-K28360340",
+   "HA1E",
+   "6H",
+   "10",
+   0.0102763969984954
+  ],
+  [
+   "L1000FWD_direct",
+   "similar",
+   "S1",
+   "CPC017_NPC_24H:BRD-K14441456-001-01-2:10",
+   "BRD-K14441456",
+   "NPC",
+   "24H",
+   "10",
+   0.0239268172123312
+  ],
+  [
+   "L1000FWD_direct",
+   "similar",
+   "S1",
+   "CPC006_A549_6H:BRD-K28360340-001-01-8:10",
+   "BRD-K28360340",
+   "A549",
+   "6H",
+   "10",
+   0.0102763969984954
+  ],
+  [
+   "L1000FWD_direct",
+   "similar",
+   "S1",
+   "CPC012_A549_24H:BRD-K82837433-001-01-6:10",
+   "BRD-K82837433",
+   "A549",
+   "24H",
+   "10",
+   0.0245843827844405
+  ],
+  [
+   "L1000FWD_direct",
+   "similar",
+   "S1",
+   "CPC010_PC3_24H:BRD-A61825514-001-06-9:10",
+   "BRD-A61825514",
+   "PC3",
+   "24H",
+   "10",
+   0.0122648709022781
+  ],
+  [
+   "L1000FWD_direct",
+   "similar",
+   "S1",
+   "CPC012_VCAP_24H:BRD-K81795824-001-01-4:10",
+   "BRD-K81795824",
+   "VCAP",
+   "24H",
+   "10",
+   0.0122648709022781
+  ],
+  [
+   "L1000FWD_direct",
+   "similar",
+   "S1",
+   "CPC006_VCAP_6H:BRD-K92991072-001-02-3:10",
+   "BRD-K92991072",
+   "VCAP",
+   "6H",
+   "10",
+   0.0152664646416045
+  ],
+  [
+   "L1000FWD_direct",
+   "similar",
+   "S1",
+   "CPC006_HCC515_24H:BRD-K57080016-001-04-3:80",
+   "BRD-K57080016",
+   "HCC515",
+   "24H",
+   "80",
+   0.0317814643547939
+  ],
+  [
+   "L1000FWD_direct",
+   "similar",
+   "S1",
+   "CPC004_HA1E_24H:BRD-K43068349-001-01-9:10",
+   "BRD-K43068349",
+   "HA1E",
+   "24H",
+   "10",
+   0.020460148981712
+  ],
+  [
+   "L1000FWD_direct",
+   "similar",
+   "S1",
+   "CPC012_PC3_24H:BRD-K72615639-001-01-0:10",
+   "BRD-K72615639",
+   "PC3",
+   "24H",
+   "10",
+   0.0155573637136748
+  ],
+  [
+   "L1000FWD_direct",
+   "similar",
+   "S1",
+   "CPC012_PC3_24H:BRD-K61717269-001-01-4:10",
+   "BRD-K61717269",
+   "PC3",
+   "24H",
+   "10",
+   0.0214611595823341
+  ],
+  [
+   "L1000FWD_direct",
+   "similar",
+   "S1",
+   "CPC006_A549_6H:BRD-K92991072-001-02-3:10",
+   "BRD-K92991072",
+   "A549",
+   "6H",
+   "10",
+   0.0128580719737198
+  ],
+  [
+   "L1000FWD_direct",
+   "similar",
+   "S1",
+   "CPC008_HCC515_6H:BRD-K74710236-001-04-8:10",
+   "BRD-K74710236",
+   "HCC515",
+   "6H",
+   "10",
+   0.0110590607037455
+  ],
+  [
+   "L1000FWD_direct",
+   "similar",
+   "S1",
+   "CPC012_MCF7_6H:BRD-A27640568-001-01-1:10",
+   "BRD-A27640568",
+   "MCF7",
+   "6H",
+   "10",
+   0.0122648709022781
+  ],
+  [
+   "L1000FWD_direct",
+   "similar",
+   "S1",
+   "CPC009_MCF7_6H:BRD-K95138506-019-01-8:10",
+   "BRD-K95138506",
+   "MCF7",
+   "6H",
+   "10",
+   0.0161748392906429
+  ],
+  [
+   "L1000FWD_direct",
+   "similar",
+   "S1",
+   "CPC010_PC3_24H:BRD-K78385490-019-02-2:10",
+   "BRD-K78385490",
+   "PC3",
+   "24H",
+   "10",
+   0.0250123765141441
+  ],
+  [
+   "L1000FWD_direct",
+   "similar",
+   "S1",
+   "CPC009_A549_6H:BRD-K14788918-019-01-0:10",
+   "BRD-K14788918",
+   "A549",
+   "6H",
+   "10",
+   0.0317493914280681
+  ],
+  [
+   "L1000FWD_direct",
+   "similar",
+   "S1",
+   "CPC004_HA1E_24H:BRD-K22134346-001-11-6:10",
+   "BRD-K22134346",
+   "HA1E",
+   "24H",
+   "10",
+   0.015979429122465
+  ],
+  [
+   "L1000FWD_direct",
+   "similar",
+   "S1",
+   "CPC006_HCC515_24H:BRD-K92317137-001-04-0:10",
+   "BRD-K92317137",
+   "HCC515",
+   "24H",
+   "10",
+   0.0275910650582093
+  ],
+  [
+   "L1000FWD_direct",
+   "similar",
+   "S1",
+   "CPC007_PC3_24H:BRD-K73610817-001-06-3:10",
+   "BRD-K73610817",
+   "PC3",
+   "24H",
+   "10",
+   0.0317814643547939
+  ],
+  [
+   "L1000FWD_direct",
+   "similar",
+   "S1",
+   "CPC007_VCAP_6H:BRD-K73610817-001-06-3:10",
+   "BRD-K73610817",
+   "VCAP",
+   "6H",
+   "10",
+   0.0422346140918391
+  ],
+  [
+   "L1000FWD_direct",
+   "similar",
+   "S1",
+   "CPC008_VCAP_6H:BRD-K69097969-001-03-2:10",
+   "BRD-K69097969",
+   "VCAP",
+   "6H",
+   "10",
+   0.0323484183444229
+  ],
+  [
+   "L1000FWD_direct",
+   "similar",
+   "S1",
+   "CPC010_MCF7_24H:BRD-A61825514-001-06-9:10",
+   "BRD-A61825514",
+   "MCF7",
+   "24H",
+   "10",
+   0.0486758914983269
+  ],
+  [
+   "L1000FWD_direct",
+   "similar",
+   "S1",
+   "CPC007_A549_6H:BRD-K73610817-001-06-3:10",
+   "BRD-K73610817",
+   "A549",
+   "6H",
+   "10",
+   0.0445139560636024
+  ],
+  [
+   "L1000FWD_direct",
+   "similar",
+   "S1",
+   "MUC.CP003_NKDBA_24H:BRD-K53308430-001-02-4:10",
+   "BRD-K53308430",
+   "NKDBA",
+   "24H",
+   "10",
+   0.0421470506877864
+  ],
+  [
+   "L1000FWD_direct",
+   "similar",
+   "S1",
+   "CPC006_HCC515_6H:BRD-K28360340-001-01-8:10",
+   "BRD-K28360340",
+   "HCC515",
+   "6H",
+   "10",
+   0.0128580719737198
+  ],
+  [
+   "L1000FWD_direct",
+   "opposite",
+   "S1",
+   "CPC012_HCC515_6H:BRD-K71935468-001-01-9:10",
+   "BRD-K71935468",
+   "HCC515",
+   "6H",
+   "10",
+   0.00117573594187971
+  ],
+  [
+   "L1000FWD_direct",
+   "opposite",
+   "S1",
+   "CPC007_MCF7_6H:BRD-K68313733-001-11-2:10",
+   "BRD-K68313733",
+   "MCF7",
+   "6H",
+   "10",
+   0.00117573594187971
+  ],
+  [
+   "L1000FWD_direct",
+   "opposite",
+   "S1",
+   "CPC014_SKB_24H:BRD-K85493820-001-01-6:10",
+   "BRD-K85493820",
+   "SKB",
+   "24H",
+   "10",
+   0.0355150106334184
+  ],
+  [
+   "L1000FWD_direct",
+   "opposite",
+   "S1",
+   "CPC006_HCC515_6H:BRD-K33272502-001-01-2:40",
+   "BRD-K33272502",
+   "HCC515",
+   "6H",
+   "40",
+   0.0102763969984954
+  ],
+  [
+   "L1000FWD_direct",
+   "opposite",
+   "S1",
+   "CPC005_HA1E_24H:BRD-K18518344-001-03-5:10",
+   "BRD-K18518344",
+   "HA1E",
+   "24H",
+   "10",
+   0.0232576726341563
+  ],
+  [
+   "L1000FWD_direct",
+   "opposite",
+   "S1",
+   "CPC014_PC3_6H:BRD-K95901403-001-01-1:10",
+   "BRD-K95901403",
+   "PC3",
+   "6H",
+   "10",
+   0.0373051381693288
+  ],
+  [
+   "L1000FWD_direct",
+   "opposite",
+   "S1",
+   "CPC010_HA1E_6H:BRD-K06765193-001-08-7:10",
+   "BRD-K06765193",
+   "HA1E",
+   "6H",
+   "10",
+   0.0457903743464776
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank1",
+   "BRD-A18917088",
+   "MCLF015CN",
+   "6 h",
+   "0.37 uM",
+   -16.65,
+   "estradiol",
+   5757
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank2",
+   "BRD-K37289225",
+   "MCLF100SZ",
+   "6 h",
+   "4 uM",
+   -16.24,
+   "clozapine",
+   135398737
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank3",
+   "BRD-K94176593",
+   "MCLF135CN",
+   "6 h",
+   "4 uM",
+   -16.17,
+   "TWS-119",
+   9549289
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank4",
+   "BRD-K68867920",
+   "MCLF056CN",
+   "6 h",
+   "4 uM",
+   -16.07,
+   "quetiapine",
+   5002
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank5",
+   "BRD-K06890060",
+   "MCLF015CN",
+   "6 h",
+   "4 uM",
+   -15.84,
+   "alda-1",
+   831629
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank6",
+   "BRD-K10882151",
+   "MCLF0067SZ",
+   "6 h",
+   "4 uM",
+   -15.66,
+   "BRD-K10882151",
+   ""
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank7",
+   "BRD-K09398529",
+   "MCLF015CN",
+   "6 h",
+   "4 uM",
+   -15.19,
+   "BRD-K09398529",
+   ""
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank8",
+   "BRD-K76188144",
+   "MCLF015CN",
+   "6 h",
+   "4 uM",
+   -14.98,
+   "BRD-K76188144",
+   ""
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank9",
+   "BRD-K39503511",
+   "MCLF100SZ",
+   "6 h",
+   "4 uM",
+   -14.78,
+   "quiflapon",
+   60923
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank10",
+   "BRD-K50128260",
+   "MCLF141SZ",
+   "6 h",
+   "4 uM",
+   -14.67,
+   "sildenafil",
+   135398744
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank11",
+   "BRD-K77345217",
+   "MCLF056CN",
+   "6 h",
+   "4 uM",
+   -14.61,
+   "gallic-acid",
+   370
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank12",
+   "BRD-K09398529",
+   "MCLF100SZ",
+   "6 h",
+   "4 uM",
+   -14.37,
+   "BRD-K09398529",
+   ""
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank13",
+   "BRD-K35716340",
+   "MCLF015CN",
+   "6 h",
+   "4 uM",
+   -14.34,
+   "BRD-K35716340",
+   ""
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank14",
+   "BRD-K63195589",
+   "MCLF015CN",
+   "6 h",
+   "4 uM",
+   -14.27,
+   "tipifarnib",
+   159324
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank15",
+   "BRD-K39503511",
+   "MCLF035SZ",
+   "6 h",
+   "4 uM",
+   -14.26,
+   "quiflapon",
+   60923
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank16",
+   "BRD-K19216856",
+   "MCLF015CN",
+   "6 h",
+   "4 uM",
+   -14.16,
+   "BRD-K19216856",
+   ""
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank17",
+   "BRD-K09398529",
+   "MCLF027CN",
+   "6 h",
+   "4 uM",
+   -14.12,
+   "BRD-K09398529",
+   ""
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank18",
+   "BRD-K50128260",
+   "MCLF100SZ",
+   "6 h",
+   "4 uM",
+   -14.12,
+   "sildenafil",
+   135398744
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank19",
+   "BRD-K76188144",
+   "MCLF033SZ",
+   "6 h",
+   "4 uM",
+   -14.09,
+   "BRD-K76188144",
+   ""
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank20",
+   "BRD-A34255068",
+   "MCLF015CN",
+   "6 h",
+   "4 uM",
+   -14.03,
+   "rolipram",
+   5092
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank21",
+   "BRD-K19826330",
+   "VCAP",
+   "24 h",
+   "4 uM",
+   -13.95,
+   "BRD-K19826330",
+   ""
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank22",
+   "",
+   "PC3",
+   "24 h",
+   "0.01 uM",
+   -13.79,
+   "norethindrone",
+   6230
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank23",
+   "BRD-K37865504",
+   "MCLF100SZ",
+   "6 h",
+   "0.74 uM",
+   -13.73,
+   "LY-2183240",
+   11507802
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank24",
+   "BRD-A63646118",
+   "MCLF027CN",
+   "6 h",
+   "0.04 uM",
+   -13.73,
+   "fumonisin-b1",
+   2733487
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank25",
+   "",
+   "PC3",
+   "24 h",
+   "1.11 uM",
+   -13.7,
+   "istaroxime",
+   9841834
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank26",
+   "BRD-K88544581",
+   "MCLF040SZ",
+   "6 h",
+   "4 uM",
+   -13.64,
+   "CI-976",
+   122327
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank27",
+   "",
+   "A375",
+   "24 h",
+   "3.33 uM",
+   -13.62,
+   "cabazitaxel",
+   9854073
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank28",
+   "",
+   "TMD8",
+   "4 h",
+   "0.01 uM",
+   -13.51,
+   "GDC-0068",
+   24788740
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank29",
+   "BRD-K52904470",
+   "MCLF033SZ",
+   "6 h",
+   "4 uM",
+   -13.48,
+   "BRD-K52904470",
+   ""
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank30",
+   "BRD-K68997413",
+   "MCLF027CN",
+   "6 h",
+   "4 uM",
+   -13.43,
+   "PF-3845",
+   25154867
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank31",
+   "",
+   "MELHO",
+   "24 h",
+   "10 uM",
+   -13.34,
+   "oxybenzone",
+   4632
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank32",
+   "BRD-K68997413",
+   "MCLF100SZ",
+   "6 h",
+   "4 uM",
+   -13.34,
+   "PF-3845",
+   25154867
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank33",
+   "BRD-K09398529",
+   "MCLF076SZ",
+   "6 h",
+   "4 uM",
+   -13.33,
+   "BRD-K09398529",
+   ""
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank34",
+   "",
+   "MCF10A",
+   "24 h",
+   "0.25 uM",
+   -13.32,
+   "theobromine",
+   5429
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank35",
+   "BRD-K52989797",
+   "MCLF135CN",
+   "6 h",
+   "4 uM",
+   -13.31,
+   "clomipramine",
+   2801
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank36",
+   "BRD-K82924899",
+   "MCLF100SZ",
+   "6 h",
+   "4 uM",
+   -13.25,
+   "IWP-2",
+   2155128
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank37",
+   "BRD-K04430056",
+   "MCLF033SZ",
+   "6 h",
+   "4 uM",
+   -13.24,
+   "7-nitroindazole",
+   1893
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank38",
+   "BRD-K28761891",
+   "MCLF130CN",
+   "6 h",
+   "4 uM",
+   -13.21,
+   "ramelteon",
+   208902
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank39",
+   "",
+   "MCF10A",
+   "24 h",
+   "0.03 uM",
+   -13.21,
+   "glipizide",
+   3478
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank40",
+   "BRD-K86574132",
+   "MCLF123SZ",
+   "6 h",
+   "4 uM",
+   -13.2,
+   "BRD-K86574132",
+   ""
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank41",
+   "BRD-K50128260",
+   "MCLF130CN",
+   "6 h",
+   "4 uM",
+   -13.2,
+   "sildenafil",
+   135398744
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank42",
+   "BRD-A90799790",
+   "MCLF015CN",
+   "6 h",
+   "4 uM",
+   -13.19,
+   "isradipine",
+   3784
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank43",
+   "BRD-K48692744",
+   "MCLF162SZ",
+   "6 h",
+   "2.22 uM",
+   -13.13,
+   "NU-1025",
+   135398517
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank44",
+   "BRD-K61323504",
+   "MCLF0067SZ",
+   "6 h",
+   "0.74 uM",
+   -13.09,
+   "SB-225002",
+   3854666
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank45",
+   "",
+   "XC.P033",
+   "24 h",
+   "1.11 uM",
+   -13.07,
+   "vandetanib",
+   3081361
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank46",
+   "BRD-K95609758",
+   "MCLF056CN",
+   "6 h",
+   "4 uM",
+   -13.01,
+   "BMS-191011",
+   10474339
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank47",
+   "BRD-K52904470",
+   "MCLF123SZ",
+   "6 h",
+   "4 uM",
+   -13.01,
+   "BRD-K52904470",
+   ""
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank48",
+   "BRD-A17883755",
+   "MCLF123SZ",
+   "6 h",
+   "4 uM",
+   -13.0,
+   "lenalidomide",
+   216326
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank49",
+   "BRD-K16701932",
+   "MCLF035SZ",
+   "6 h",
+   "4 uM",
+   -12.97,
+   "Gly-Gly-PALO",
+   172813
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank50",
+   "BRD-K55591206",
+   "MCLF027CN",
+   "6 h",
+   "4 uM",
+   -12.97,
+   "BRD-K55591206",
+   ""
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank51",
+   "BRD-K37289225",
+   "MCLF015CN",
+   "6 h",
+   "4 uM",
+   -12.96,
+   "clozapine",
+   135398737
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank52",
+   "BRD-K80672993",
+   "MCLF015CN",
+   "6 h",
+   "4 uM",
+   -12.94,
+   "BRD-K80672993",
+   ""
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank53",
+   "BRD-K85563610",
+   "MCLF137CN",
+   "6 h",
+   "0.08 uM",
+   -12.89,
+   "APO-866",
+   6914657
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank54",
+   "BRD-K28112517",
+   "MCLF015CN",
+   "6 h",
+   "4 uM",
+   -12.89,
+   "BRD-K28112517",
+   ""
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank55",
+   "BRD-K18849474",
+   "MCLF015CN",
+   "6 h",
+   "20 uM",
+   -12.88,
+   "dalcetrapib",
+   6918540
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank56",
+   "BRD-K92980438",
+   "MCLF130CN",
+   "6 h",
+   "4 uM",
+   -12.85,
+   "BRD-K92980438",
+   ""
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank57",
+   "BRD-A16332958",
+   "MCLF135CN",
+   "6 h",
+   "4 uM",
+   -12.84,
+   "modafinil",
+   4236
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank58",
+   "",
+   "MCF10A",
+   "24 h",
+   "0.12 uM",
+   -12.83,
+   "UNC-669",
+   46931242
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank59",
+   "BRD-A58048407",
+   "MCLF033SZ",
+   "6 h",
+   "4 uM",
+   -12.8,
+   "nimodipine",
+   4497
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank60",
+   "",
+   "XC.P092",
+   "24 h",
+   "0.12 uM",
+   -12.78,
+   "indinavir",
+   5362440
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank61",
+   "BRD-K52904470",
+   "MCLF100SZ",
+   "6 h",
+   "4 uM",
+   -12.77,
+   "BRD-K52904470",
+   ""
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank62",
+   "BRD-K76964878",
+   "MCLF123SZ",
+   "6 h",
+   "4 uM",
+   -12.72,
+   "EX-527",
+   5113032
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank63",
+   "BRD-K38865695",
+   "VCAP",
+   "24 h",
+   "4 uM",
+   -12.72,
+   "BRD-K38865695",
+   ""
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank64",
+   "BRD-K21672174",
+   "MCLF051CN",
+   "6 h",
+   "4 uM",
+   -12.72,
+   "Ro-28-1675",
+   9886086
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank65",
+   "BRD-K90826279",
+   "MCLF035SZ",
+   "6 h",
+   "4 uM",
+   -12.7,
+   "BRD-K90826279",
+   ""
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank66",
+   "BRD-K16701932",
+   "MCLF015CN",
+   "6 h",
+   "4 uM",
+   -12.69,
+   "Gly-Gly-PALO",
+   172813
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank67",
+   "BRD-K82746043",
+   "MCLF162SZ",
+   "6 h",
+   "2.22 uM",
+   -12.61,
+   "navitoclax",
+   24978538
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank68",
+   "BRD-A94451536",
+   "MCLF037SZ",
+   "6 h",
+   "4 uM",
+   -12.6,
+   "BRD-A94451536",
+   ""
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank69",
+   "BRD-K58550667",
+   "MCLF015CN",
+   "6 h",
+   "0.01 uM",
+   -12.57,
+   "FK-866",
+   6914657
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank70",
+   "BRD-K38436528",
+   "MCLF130CN",
+   "6 h",
+   "4 uM",
+   -12.55,
+   "imipramine",
+   3696
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank71",
+   "BRD-K49668410",
+   "MCLF015CN",
+   "6 h",
+   "4 uM",
+   -12.54,
+   "BRD-K49668410",
+   ""
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank72",
+   "",
+   "HEPG2",
+   "24 h",
+   "10 uM",
+   -12.54,
+   "BRD-A28105619",
+   ""
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank73",
+   "",
+   "MCF10A",
+   "24 h",
+   "0.25 uM",
+   -12.52,
+   "BRD-K23875128",
+   ""
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank74",
+   "BRD-K82924899",
+   "MCLF054CN",
+   "6 h",
+   "4 uM",
+   -12.48,
+   "IWP-2",
+   2155128
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank75",
+   "BRD-K09398529",
+   "MCLF137CN",
+   "6 h",
+   "4 uM",
+   -12.48,
+   "BRD-K09398529",
+   ""
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank76",
+   "",
+   "HEK293",
+   "24 h",
+   "1.11 uM",
+   -12.46,
+   "nutlin-3",
+   216345
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank77",
+   "BRD-K04430056",
+   "MCLF040SZ",
+   "6 h",
+   "4 uM",
+   -12.45,
+   "7-nitroindazole",
+   1893
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank78",
+   "",
+   "NPC",
+   "24 h",
+   "12.5 uM",
+   -12.42,
+   "varenicline",
+   170361
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank79",
+   "BRD-K95286989",
+   "VCAP",
+   "24 h",
+   "4 uM",
+   -12.42,
+   "BRD-K95286989",
+   ""
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank80",
+   "BRD-K39503511",
+   "MCLF0067SZ",
+   "6 h",
+   "4 uM",
+   -12.4,
+   "quiflapon",
+   60923
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank81",
+   "BRD-K08973992",
+   "MCLF162SZ",
+   "6 h",
+   "40 uM",
+   -12.39,
+   "linoleic-acid",
+   5280450
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank82",
+   "BRD-K55591206",
+   "MCLF135CN",
+   "6 h",
+   "4 uM",
+   -12.39,
+   "BRD-K55591206",
+   ""
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank83",
+   "BRD-K19216856",
+   "MCLF0067SZ",
+   "6 h",
+   "4 uM",
+   -12.38,
+   "BRD-K19216856",
+   ""
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank84",
+   "",
+   "NPC",
+   "24 h",
+   "1.67 uM",
+   -12.38,
+   "ketamine",
+   3821
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank85",
+   "BRD-A18917088",
+   "MCLF033SZ",
+   "6 h",
+   "0.37 uM",
+   -12.23,
+   "estradiol",
+   5757
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank86",
+   "",
+   "A375",
+   "24 h",
+   "0.04 uM",
+   -12.23,
+   "troglitazone",
+   5591
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank87",
+   "BRD-K92980438",
+   "MCLF035SZ",
+   "6 h",
+   "4 uM",
+   -12.17,
+   "BRD-K92980438",
+   ""
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank88",
+   "",
+   "MCF10A",
+   "24 h",
+   "0.01 uM",
+   -12.17,
+   "pirfenidone",
+   40632
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank89",
+   "BRD-A58048407",
+   "MCLF015CN",
+   "6 h",
+   "4 uM",
+   -12.16,
+   "nimodipine",
+   4497
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank90",
+   "BRD-K55460824",
+   "PC3",
+   "24 h",
+   "10 uM",
+   -12.16,
+   "BRD-K55460824",
+   ""
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank91",
+   "BRD-A85739295",
+   "MCLF027CN",
+   "6 h",
+   "0.37 uM",
+   -12.15,
+   "BRD-A85739295",
+   ""
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank92",
+   "BRD-K55591206",
+   "MCLF056CN",
+   "6 h",
+   "4 uM",
+   -12.15,
+   "BRD-K55591206",
+   ""
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank93",
+   "BRD-A18917088",
+   "MCLF033SZ",
+   "6 h",
+   "0.37 uM",
+   -12.13,
+   "estradiol",
+   5757
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank94",
+   "BRD-K82794234",
+   "VCAP",
+   "6 h",
+   "4 uM",
+   -12.13,
+   "BRD-K82794234",
+   ""
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank95",
+   "BRD-K17894950",
+   "MCF10A",
+   "24 h",
+   "12 uM",
+   -12.13,
+   "indirubin",
+   10177
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank96",
+   "BRD-A58048407",
+   "MCLF100SZ",
+   "6 h",
+   "4 uM",
+   -12.13,
+   "nimodipine",
+   4497
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank97",
+   "",
+   "THP1",
+   "6 h",
+   "0.66 uM",
+   -12.13,
+   "gefitinib",
+   123631
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank98",
+   "",
+   "MDAMB231",
+   "24 h",
+   "0.04 uM",
+   -12.11,
+   "MK-1775",
+   24856436
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank99",
+   "BRD-K67075780",
+   "MCLF130CN",
+   "6 h",
+   "4 uM",
+   -12.1,
+   "TGX-115",
+   9902311
+  ],
+  [
+   "SigCom_S1_top100",
+   "reversers",
+   "S1",
+   "rank100",
+   "",
+   "NPC",
+   "24 h",
+   "3.33 uM",
+   -12.08,
+   "haloperidol",
+   3559
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank1",
+   "BRD-K30677119",
+   "MCLF015CN",
+   "6 h",
+   "4 uM",
+   16.62,
+   "PP-30",
+   67535
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank2",
+   "BRD-K86856088",
+   "MCLF015CN",
+   "6 h",
+   "4 uM",
+   15.32,
+   "UNC-0638",
+   46224516
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank3",
+   "BRD-K31023358",
+   "MCLF0067SZ",
+   "6 h",
+   "4 uM",
+   14.85,
+   "purpurogallin",
+   135403797
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank4",
+   "BRD-K05649647",
+   "MCLF162SZ",
+   "6 h",
+   "4 uM",
+   14.66,
+   "BRD-K05649647",
+   ""
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank5",
+   "",
+   "PHH",
+   "24 h",
+   "1.11 uM",
+   14.62,
+   "KIN-001-220",
+   ""
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank6",
+   "BRD-A56359832",
+   "MCLF137CN",
+   "6 h",
+   "4 uM",
+   14.46,
+   "zileuton",
+   60490
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank7",
+   "BRD-A12230535",
+   "MCLF015CN",
+   "6 h",
+   "4 uM",
+   14.25,
+   "nutlin-3",
+   216345
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank8",
+   "BRD-K32405725",
+   "MCLF015CN",
+   "6 h",
+   "4 uM",
+   14.18,
+   "etomoxir",
+   9840324
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank9",
+   "BRD-K93095519",
+   "MCLF0067SZ",
+   "6 h",
+   "4 uM",
+   14.17,
+   "SJ-172550",
+   1317464
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank10",
+   "BRD-K19796430",
+   "MCLF015CN",
+   "6 h",
+   "4 uM",
+   14.14,
+   "sonidegib",
+   24775005
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank11",
+   "BRD-K73319509",
+   "MCLF015CN",
+   "6 h",
+   "4 uM",
+   14.1,
+   "PF-04217903",
+   17754438
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank12",
+   "BRD-A41451487",
+   "MCLF027CN",
+   "6 h",
+   "4 uM",
+   14.01,
+   "PK-11195",
+   1345
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank13",
+   "BRD-A35054627",
+   "MCLF100SZ",
+   "6 h",
+   "4 uM",
+   14.0,
+   "pregnenolone",
+   8955
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank14",
+   "BRD-A75409952",
+   "A549",
+   "24 h",
+   "10 uM",
+   13.89,
+   "wortmannin",
+   312145
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank15",
+   "BRD-K77908580",
+   "MCLF135CN",
+   "6 h",
+   "4 uM",
+   13.88,
+   "entinostat",
+   4261
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank16",
+   "",
+   "HA1E",
+   "24 h",
+   "2.22 uM",
+   13.84,
+   "salvinorin-a",
+   128563
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank17",
+   "BRD-K97399794",
+   "MCLF0067SZ",
+   "6 h",
+   "4 uM",
+   13.82,
+   "quercetin",
+   5280343
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank18",
+   "BRD-K01976263",
+   "MCLF130CN",
+   "6 h",
+   "0.08 uM",
+   13.59,
+   "emetine",
+   10219
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank19",
+   "BRD-K77908580",
+   "MCLF130CN",
+   "6 h",
+   "4 uM",
+   13.57,
+   "entinostat",
+   4261
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank20",
+   "BRD-K77908580",
+   "MCLF137CN",
+   "6 h",
+   "4 uM",
+   13.53,
+   "entinostat",
+   4261
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank21",
+   "BRD-K86191271",
+   "MCLF027CN",
+   "6 h",
+   "4 uM",
+   13.53,
+   "cytosporone-b",
+   10687292
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank22",
+   "",
+   "NPC",
+   "24 h",
+   "12.5 uM",
+   13.43,
+   "LY-2365109",
+   11552757
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank23",
+   "BRD-K77908580",
+   "MCLF130CN",
+   "6 h",
+   "4 uM",
+   13.42,
+   "entinostat",
+   4261
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank24",
+   "BRD-K70555272",
+   "MCLF100SZ",
+   "6 h",
+   "4 uM",
+   13.39,
+   "oligomycin-a",
+   52947716
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank25",
+   "BRD-K01779529",
+   "MCLF130CN",
+   "6 h",
+   "4 uM",
+   13.36,
+   "fluoropyruvate",
+   67946
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank26",
+   "BRD-K77908580",
+   "MCLF054CN",
+   "6 h",
+   "4 uM",
+   13.2,
+   "entinostat",
+   4261
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank27",
+   "BRD-A42966393",
+   "MCLF015CN",
+   "6 h",
+   "4 uM",
+   13.15,
+   "BRD-A42966393",
+   ""
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank28",
+   "BRD-K70555272",
+   "MCLF056CN",
+   "6 h",
+   "4 uM",
+   13.14,
+   "oligomycin-a",
+   52947716
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank29",
+   "BRD-K77908580",
+   "MCLF0067SZ",
+   "6 h",
+   "4 uM",
+   13.14,
+   "entinostat",
+   4261
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank30",
+   "BRD-K80527266",
+   "MCLF0067SZ",
+   "6 h",
+   "4 uM",
+   13.11,
+   "triacsin-c",
+   9576787
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank31",
+   "BRD-K49456190",
+   "MCLF076SZ",
+   "6 h",
+   "4 uM",
+   12.95,
+   "prima-1-met",
+   ""
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank32",
+   "BRD-K56001384",
+   "MCLF100SZ",
+   "6 h",
+   "4 uM",
+   12.94,
+   "antimycin-a",
+   14957
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank33",
+   "BRD-K06593056",
+   "MCLF015CN",
+   "6 h",
+   "4 uM",
+   12.88,
+   "LE-135",
+   10410894
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank34",
+   "BRD-K53903639",
+   "MCLF137CN",
+   "6 h",
+   "4 uM",
+   12.88,
+   "CHEMBL-1222381",
+   ""
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank35",
+   "BRD-K77908580",
+   "MCLF033SZ",
+   "6 h",
+   "4 uM",
+   12.86,
+   "entinostat",
+   4261
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank36",
+   "",
+   "MCF7",
+   "24 h",
+   "0.37 uM",
+   12.82,
+   "GSK-1070916",
+   46885626
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank37",
+   "BRD-K34581968",
+   "MCLF051CN",
+   "6 h",
+   "0.37 uM",
+   12.8,
+   "BMS-536924",
+   135440466
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank38",
+   "BRD-K66874953",
+   "MCLF123SZ",
+   "6 h",
+   "4 uM",
+   12.75,
+   "pifithrin-alpha",
+   9929138
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank39",
+   "BRD-K89329876",
+   "MCLF135CN",
+   "6 h",
+   "4 uM",
+   12.74,
+   "BRD-K89329876",
+   ""
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank40",
+   "BRD-K16554956",
+   "MCLF015CN",
+   "6 h",
+   "4 uM",
+   12.69,
+   "PTB1",
+   ""
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank41",
+   "",
+   "XC.L10",
+   "24 h",
+   "10 uM",
+   12.68,
+   "tanespimycin",
+   6505803
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank42",
+   "BRD-A19500257",
+   "A549",
+   "24 h",
+   "3.33 uM",
+   12.68,
+   "geldanamycin",
+   5288382
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank43",
+   "BRD-K31023358",
+   "MCLF027CN",
+   "6 h",
+   "4 uM",
+   12.66,
+   "purpurogallin",
+   135403797
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank44",
+   "",
+   "A549",
+   "24 h",
+   "10 uM",
+   12.6,
+   "rociletinib",
+   57335384
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank45",
+   "BRD-K77908580",
+   "MCLF137CN",
+   "6 h",
+   "4 uM",
+   12.57,
+   "entinostat",
+   4261
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank46",
+   "BRD-K70555272",
+   "MCLF0067SZ",
+   "6 h",
+   "4 uM",
+   12.5,
+   "oligomycin-a",
+   52947716
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank47",
+   "BRD-K64890080",
+   "MCLF130CN",
+   "6 h",
+   "0.08 uM",
+   12.48,
+   "BI-2536",
+   11364421
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank48",
+   "BRD-K92317137",
+   "MCLF027CN",
+   "6 h",
+   "0.74 uM",
+   12.47,
+   "BRD-K92317137",
+   ""
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank49",
+   "",
+   "PC3",
+   "24 h",
+   "0.01 uM",
+   12.46,
+   "benzbromarone",
+   2333
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank50",
+   "BRD-K56851771",
+   "MCLF027CN",
+   "6 h",
+   "4 uM",
+   12.44,
+   "enzalutamide",
+   15951529
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank51",
+   "BRD-A42966393",
+   "MCLF137CN",
+   "6 h",
+   "4 uM",
+   12.39,
+   "BRD-A42966393",
+   ""
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank52",
+   "BRD-K30064966",
+   "MCLF141SZ",
+   "6 h",
+   "4 uM",
+   12.38,
+   "BRD-K30064966",
+   ""
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank53",
+   "BRD-K97399794",
+   "MCLF0067SZ",
+   "6 h",
+   "4 uM",
+   12.38,
+   "quercetin",
+   5280343
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank54",
+   "BRD-A42966393",
+   "MCLF123SZ",
+   "6 h",
+   "4 uM",
+   12.3,
+   "BRD-A42966393",
+   ""
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank55",
+   "BRD-A19500257",
+   "A549",
+   "24 h",
+   "10 uM",
+   12.27,
+   "geldanamycin",
+   5288382
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank56",
+   "BRD-K77908580",
+   "MCLF100SZ",
+   "6 h",
+   "4 uM",
+   12.25,
+   "entinostat",
+   4261
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank57",
+   "",
+   "XC.P091",
+   "24 h",
+   "1.11 uM",
+   12.22,
+   "lomerizine",
+   3949
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank58",
+   "BRD-K77908580",
+   "MCLF100SZ",
+   "6 h",
+   "4 uM",
+   12.2,
+   "entinostat",
+   4261
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank59",
+   "BRD-A19500257",
+   "A549",
+   "24 h",
+   "3.33 uM",
+   12.17,
+   "geldanamycin",
+   5288382
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank60",
+   "BRD-K53903639",
+   "MCLF100SZ",
+   "6 h",
+   "4 uM",
+   12.15,
+   "CHEMBL-1222381",
+   ""
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank61",
+   "BRD-A19500257",
+   "A549",
+   "24 h",
+   "10 uM",
+   12.15,
+   "geldanamycin",
+   5288382
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank62",
+   "",
+   "HELA",
+   "24 h",
+   "2.22 uM",
+   12.13,
+   "balicatib",
+   10201696
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank63",
+   "BRD-A53077924",
+   "MCLF100SZ",
+   "6 h",
+   "4 uM",
+   12.04,
+   "tianeptine",
+   68870
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank64",
+   "BRD-K77908580",
+   "MCLF027CN",
+   "6 h",
+   "4 uM",
+   12.03,
+   "entinostat",
+   4261
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank65",
+   "",
+   "A375",
+   "24 h",
+   "0.08 uM",
+   12.01,
+   "AMG-517",
+   16007367
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank66",
+   "",
+   "MCF7",
+   "48 h",
+   "0.12 uM",
+   11.99,
+   "everolimus",
+   6442177
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank67",
+   "",
+   "NPC",
+   "24 h",
+   "4 uM",
+   11.99,
+   "rolipram",
+   5092
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank68",
+   "BRD-K77908580",
+   "MCLF051CN",
+   "6 h",
+   "4 uM",
+   11.99,
+   "entinostat",
+   4261
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank69",
+   "BRD-K72204100",
+   "VCAP",
+   "24 h",
+   "4 uM",
+   11.97,
+   "BRD-K72204100",
+   ""
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank70",
+   "BRD-K30064966",
+   "MCLF040SZ",
+   "6 h",
+   "4 uM",
+   11.93,
+   "BRD-K30064966",
+   ""
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank71",
+   "BRD-K82818427",
+   "MCLF056CN",
+   "6 h",
+   "4 uM",
+   11.92,
+   "batimastat",
+   5362422
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank72",
+   "BRD-K80527266",
+   "MCLF054CN",
+   "6 h",
+   "4 uM",
+   11.91,
+   "triacsin-c",
+   9576787
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank73",
+   "BRD-K77908580",
+   "MCLF123SZ",
+   "6 h",
+   "4 uM",
+   11.89,
+   "entinostat",
+   4261
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank74",
+   "",
+   "TMD8",
+   "4 h",
+   "0.125 uM",
+   11.89,
+   "copanlisib",
+   135565596
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank75",
+   "BRD-K31023358",
+   "MCLF162SZ",
+   "6 h",
+   "4 uM",
+   11.85,
+   "purpurogallin",
+   135403797
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank76",
+   "BRD-A62525898",
+   "MCLF130CN",
+   "6 h",
+   "4 uM",
+   11.8,
+   "prednisone",
+   5865
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank77",
+   "BRD-K09778810",
+   "MCLF027CN",
+   "6 h",
+   "4 uM",
+   11.75,
+   "FGIN-1-27",
+   132496
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank78",
+   "",
+   "NPC",
+   "24 h",
+   "2.5 uM",
+   11.74,
+   "17-AAG",
+   6505803
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank79",
+   "",
+   "XC.L100",
+   "120 h",
+   "10 uM",
+   11.74,
+   "palbociclib",
+   5330286
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank80",
+   "",
+   "MCF10A",
+   "24 h",
+   "0.08 uM",
+   11.73,
+   "formoterol",
+   3410
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank81",
+   "BRD-K78716413",
+   "MCLF126CN",
+   "6 h",
+   "0.04 uM",
+   11.7,
+   "BRD-K78716413",
+   ""
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank82",
+   "BRD-A12230535",
+   "MCLF033SZ",
+   "6 h",
+   "4 uM",
+   11.69,
+   "nutlin-3",
+   216345
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank83",
+   "",
+   "MCF7",
+   "24 h",
+   "10 uM",
+   11.68,
+   "CYT-387",
+   25062766
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank84",
+   "",
+   "THP1",
+   "3 h",
+   "2.5 uM",
+   11.68,
+   "SB-2343",
+   46912230
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank85",
+   "BRD-A61304759",
+   "A549",
+   "24 h",
+   "1.11 uM",
+   11.66,
+   "tanespimycin",
+   6505803
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank86",
+   "BRD-K61323504",
+   "MCLF135CN",
+   "6 h",
+   "0.74 uM",
+   11.64,
+   "SB-225002",
+   3854666
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank87",
+   "",
+   "NKDBA",
+   "24 h",
+   "4 uM",
+   11.64,
+   "TWS-119",
+   9549289
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank88",
+   "BRD-K97530723",
+   "MCLF126CN",
+   "6 h",
+   "40 uM",
+   11.61,
+   "melatonin",
+   896
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank89",
+   "",
+   "MCF7",
+   "24 h",
+   "10 uM",
+   11.58,
+   "geldanamycin",
+   5288382
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank90",
+   "BRD-K83213911",
+   "MCLF123SZ",
+   "6 h",
+   "4 uM",
+   11.57,
+   "PF-750",
+   25154868
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank91",
+   "BRD-A76279427",
+   "MCLF056CN",
+   "6 h",
+   "0.74 uM",
+   11.56,
+   "myriocin",
+   6438394
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank92",
+   "",
+   "PC3",
+   "24 h",
+   "0.74 uM",
+   11.55,
+   "amineptine",
+   34870
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank93",
+   "BRD-A62525898",
+   "MCLF100SZ",
+   "6 h",
+   "4 uM",
+   11.54,
+   "prednisone",
+   5865
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank94",
+   "BRD-A61304759",
+   "A549",
+   "24 h",
+   "0.37 uM",
+   11.54,
+   "tanespimycin",
+   6505803
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank95",
+   "BRD-K13049116",
+   "MCLF135CN",
+   "6 h",
+   "2.22 uM",
+   11.53,
+   "BMS-754807",
+   24785538
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank96",
+   "BRD-K15108141",
+   "MCLF137CN",
+   "6 h",
+   "0.02 uM",
+   11.48,
+   "gemcitabine",
+   60750
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank97",
+   "",
+   "HUVEC",
+   "24 h",
+   "0.08 uM",
+   11.46,
+   "amsacrine",
+   2179
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank98",
+   "BRD-K97399794",
+   "MCLF130CN",
+   "6 h",
+   "4 uM",
+   11.43,
+   "quercetin",
+   5280343
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank99",
+   "BRD-A93255169",
+   "MCLF033SZ",
+   "6 h",
+   "10 uM",
+   11.42,
+   "thalidomide",
+   5426
+  ],
+  [
+   "SigCom_S1_top100",
+   "mimickers",
+   "S1",
+   "rank100",
+   "BRD-K77908580",
+   "MCLF126CN",
+   "6 h",
+   "4 uM",
+   11.37,
+   "entinostat",
+   4261
+  ]
+ ]
+}

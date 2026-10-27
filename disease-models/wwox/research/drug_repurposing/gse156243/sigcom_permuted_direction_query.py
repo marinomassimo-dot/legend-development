@@ -22,6 +22,9 @@ up, down = shuffled[:len(s1["up"])], shuffled[len(s1["up"]):]
 sets = {TAG: {"up": up, "down": down}}
 json.dump(sets, open(f"derived/query_sets_{TAG}.json", "w"), indent=1)
 body = {"up_entities": [mp[g] for g in up if g in mp], "down_entities": [mp[g] for g in down if g in mp], "limit": limit, "database": db}
+# 2026-10-27 correction (scientist-d, SD-IT2-LINCS-20261027): the tracked entity map is hyphen-stripped (publication-gate transform); the service needs the
+# hyphenated ids, so the two runs of 2026-10-26 sent unrecognised ids and got an empty ranking. Restore the hyphens before sending.
+body = json.loads(tu.restore(json.dumps(body).encode()))
 req = urllib.request.Request("https://data-api.sigcom-lincs.k8s.maayanlab.cloud/v1/api/v1/enrich/ranktwosided", json.dumps(body).encode(), {"Content-Type": "application/json"})
 t = datetime.datetime.now(datetime.timezone.utc).isoformat()
 r = urllib.request.urlopen(req, timeout=600)
