@@ -1,7 +1,7 @@
 # Value trial IT2 - questions, condition COMBINED (repository + external)
 
 ## Allowed inputs (the only part that differs between conditions)
-You may use BOTH: the repository (registries through framework/scripts/registry_records.py, never grep the two large registries; repurposing_join.py; cards, dossiers, ledgers) AND external public sources (PubMed MCP tools, ToolUniverse including ChEMBL and Open Targets, the external-query adapters, public web pages). Where repository and external sources disagree, say so and say which you trust and why.
+You may use BOTH: the repository (registries through framework/scripts/registry_records.py, never grep the two large registries; repurposing_join.py; cards, dossiers, ledgers) AND external public sources (PubMed MCP tools, ToolUniverse including ChEMBL and Open Targets, the external-query adapters, public web pages). Where repository and external sources disagree, say so and say which you trust and why. Any file named value_trial_it2_*, any task JSON named *VALUETRIAL* or *VALUETRIALREF*, or any audit file named *value_trial_reference_verification* is off limits; a run that reads, greps into or lists them is void.
 
 Context for every case: the disease of interest is WWOX-related developmental and epileptic
 encephalopathy (WOREE; biallelic WWOX loss of function, human, paediatric). The question is about

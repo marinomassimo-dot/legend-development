@@ -1,7 +1,7 @@
 # Value trial IT2 - questions, condition LOCAL (repository only)
 
 ## Allowed inputs (the only part that differs between conditions)
-You may use ONLY the WWOX repository: registries through framework/scripts/registry_records.py (never grep the two large registries), repurposing_join.py, cards and packets under disease-models/wwox/research/drug_repurposing/, dossiers, ledgers and full texts already stored in the repository. You must NOT make any network call, use any MCP tool, ToolUniverse, a web page or an external-query adapter. If you make an external call the run is void.
+You may use ONLY the WWOX repository: registries through framework/scripts/registry_records.py (never grep the two large registries), repurposing_join.py, cards and packets under disease-models/wwox/research/drug_repurposing/, dossiers, ledgers and full texts already stored in the repository. You must NOT make any network call, use any MCP tool, ToolUniverse, a web page or an external-query adapter. If you make an external call the run is void. Any file named value_trial_it2_*, any task JSON named *VALUETRIAL* or *VALUETRIALREF*, or any audit file named *value_trial_reference_verification* is off limits; a run that reads, greps into or lists them is void.
 
 Context for every case: the disease of interest is WWOX-related developmental and epileptic
 encephalopathy (WOREE; biallelic WWOX loss of function, human, paediatric). The question is about
