@@ -22,6 +22,9 @@ from pathlib import Path
 
 
 CONTEXT = ("disease_id", "genotype", "species", "cell_type", "developmental_stage")
+# Optional per-assertion discriminators of an experimental question: two readings that differ in any
+# of them are different questions, not a discordance. Absent => comparability is not declared.
+DISCRIMINATORS = ("timepoint", "intervention_level", "comparison")
 # NO_CHANGE is a REPORTED null effect on the cell; UNKNOWN is a cell nobody measured.
 SIGNS = {"INCREASE": 1, "DECREASE": -1, "NO_CHANGE": 0, "UNKNOWN": None}
 TAGS = {"DATO", "INFERENZA", "IPOTESI", "ESPANSIONE"}
@@ -209,6 +212,7 @@ def build_card(payload: dict) -> dict:
     check_roadmap_rows(payload.get("p4_roadmap_fields"))
     results = []
     questions: dict[str, list] = {}
+    declared: dict[str, bool] = {}
     for row in assertions:
         reasons = []
         same = [d for d in diseases if not plural or (
@@ -237,7 +241,9 @@ def build_card(payload: dict) -> dict:
             "OPPOSES_DISEASE_CHANGE" if SIGNS[disease["direction"]] != SIGNS[row["direction"]]
             else "REINFORCES_DISEASE_CHANGE")
         results.append({"assertion_id": row["id"], "status": status, "reasons": reasons})
-        questions[row["id"]] = [row["target_id"], row["endpoint"]] + [row["context"][key] for key in CONTEXT]
+        questions[row["id"]] = ([row["target_id"], row["endpoint"]] + [row["context"][key] for key in CONTEXT]
+                                + [str(row.get(key, "")) for key in DISCRIMINATORS])
+        declared[row["id"]] = any(row.get(key) for key in DISCRIMINATORS)
     known = {row["status"] for row in results} - {"UNRESOLVED"}
     # One experimental question = same target, endpoint and context. Outcomes that differ WITHIN a
     # question are a discordance (CONFLICTING); outcomes that differ only ACROSS questions are
@@ -247,7 +253,17 @@ def build_card(payload: dict) -> dict:
         if row["status"] != "UNRESOLVED":
             by_question.setdefault(tuple(questions[row["assertion_id"]]), set()).add(row["status"])
     discordant = any(len(v) > 1 for v in by_question.values())
-    endpoint_outcomes = [{"question": list(k), "statuses": sorted(v)}
+    # A discordance inside one question is only as firm as the question is declared: without any
+    # discriminator (timepoint, intervention level, comparison) on its rows, differing timepoints or
+    # doses cannot be told apart from a real contradiction.
+    ids_by_question: dict[tuple, list] = {}
+    for row in results:
+        if row["status"] == "UNRESOLVED":
+            continue
+        ids_by_question.setdefault(tuple(questions[row["assertion_id"]]), []).append(row["assertion_id"])
+    endpoint_outcomes = [{"question": list(k), "statuses": sorted(v),
+                          "discriminators_declared": all(declared[i] for i in ids_by_question[k]),
+                          "assertion_ids": ids_by_question[k]}
                          for k, v in sorted(by_question.items())]
     unresolved = not results or any(row["status"] == "UNRESOLVED" for row in results)
     summary = ("CONFLICTING" if discordant else "MIXED_ACROSS_ENDPOINTS" if len(known) > 1

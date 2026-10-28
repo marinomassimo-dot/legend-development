@@ -110,6 +110,20 @@ class BridgeTests(unittest.TestCase):
         self.assertEqual(card["directional_summary"], "CONFLICTING")
         self.assertEqual(len(card["endpoint_outcomes"]), 1)
         self.assertEqual(len(card["endpoint_outcomes"][0]["statuses"]), 2)
+        # No timepoint/level/comparison declared: the discordance is flagged as not firmly comparable.
+        self.assertFalse(card["endpoint_outcomes"][0]["discriminators_declared"])
+
+    def test_different_timepoints_are_different_questions(self):
+        data = packet()
+        first = data["drug_assertions"][0]
+        first["timepoint"] = "day 10"
+        second = copy.deepcopy(first)
+        second.update(id="drug-2", direction="NO_CHANGE", timepoint="day 30")
+        data["drug_assertions"].append(second)
+        card = build_card(data)
+        self.assertEqual(card["directional_summary"], "MIXED_ACROSS_ENDPOINTS")
+        self.assertEqual(len(card["endpoint_outcomes"]), 2)
+        self.assertTrue(all(e["discriminators_declared"] for e in card["endpoint_outcomes"]))
 
     def test_invalid_packets_and_unbacked_read_declarations_fail(self):
         for mutate in (
