@@ -1114,11 +1114,36 @@
       }
      ],
      "locator_status": "MANIFEST"
+    },
+    {
+     "id": "O5",
+     "pmid": "41380592",
+     "statement": "Drosophila with pan-neuronal RNAi of the mitochondrial prolyl-tRNA synthetase (PARS2 ortholog): co-RNAi of GCN2 lowered the bang-sensitive seizure-like fraction (about 87 to about 30 percent) and shortened recovery; co-RNAi of ATF4 did so partly (about 93 to about 46 percent); phospho-GCN2 and phospho-eIF2alpha were up with phospho-PERK unchanged. Genetic suppression only; no compound was tested.",
+     "model_type": "drosophila_rnai_mitochondrial_translation_model",
+     "species": "Drosophila melanogaster",
+     "genotype": "elav-GAL4 dPARS2 RNAi with and without GCN2 or ATF4 RNAi (not WWOX)",
+     "tissue_or_cells": "adult fly head and whole animal",
+     "age_stage": "adult 4-7 days; larval development",
+     "comparison": "double RNAi against dPARS2 RNAi alone",
+     "readout": "bang sensitivity, recovery time, pupariation; phospho-eIF2alpha and puromycin incorporation by blot",
+     "readout_level": "functional",
+     "direction_observed": "phenotype lower when the ISR kinase or effector is suppressed (rescue direction, partial)",
+     "evidence_scope": "OTHER_DISEASE_PRECEDENT",
+     "limits": "Not WWOX; genetic knockdown is not pharmacology (a kinase inhibitor or activator is a different perturbation, with off-target actions and a different degree of loss); knockdown efficiency measured in single-RNAi lines only; seizure-like behaviour and developmental delay move together; panel and text defects are listed in the reading; the article reports no WWOX link.",
+     "locators": [
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/isr_pars2_reading_it3_20261027.md",
+       "anchor": "Direction: suppression of the ISR kinase"
+      }
+     ],
+     "locator_status": "DOCUMENT"
     }
    ],
    "inferred": [
     "That a WWOX-dependent ISR elevation exists in human neural cells is not shown in the sources read; the only human readout points the opposite way at transcript level.",
-    "That any ISR elevation is harmful rather than adaptive is unmeasured; Atf4 never perturbed."
+    "That any ISR elevation is harmful rather than adaptive is unmeasured; Atf4 never perturbed.",
+    "That GCN2, rather than PERK or the eIF2B complex, is the ISR node relevant to WWOX loss: the only GCN2 datum is a fly mitochondrial-translation model, and no GCN2 measurement exists in any Wwox system."
    ],
    "intervention_direction": {
     "direction": "uncertain",
@@ -1217,6 +1242,14 @@
      "hgnc_id": "HGNC:2726",
      "hgnc_name": "DNA damage inducible transcript 3",
      "target_kind": "readout_marker"
+    },
+    {
+     "symbol": "EIF2AK4",
+     "role": "GCN2, stress kinase; named by a fly mitochondrial-tRNA-synthetase genetic precedent, not by a WWOX observation",
+     "hgnc_id": "HGNC:19687",
+     "hgnc_name": "eukaryotic translation initiation factor 2 alpha kinase 4",
+     "target_kind": "intervention_target",
+     "collision_note": "alias GCN2; not EIF2AK3 (PERK) and not EIF2AK1 (HRI, HGNC:24921); search by HGNC id"
     }
    ],
    "pathways": [

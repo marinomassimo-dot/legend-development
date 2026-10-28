@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "axis": "H / closed-loop it3: T-type calcium channel blockade",
+  "route": "BENEFICIO_PRECOCE",
+  "mission_dimensions": {
+    "track": "A",
+    "track_definition": "mission.md section 5: Track A = variant-independent WWOX loss of function; Track B = variant or allele-class specific (e.g. the Q230P missense class); Track C = repurposing, which is a method of reaching A or B, not a third lesion class",
+    "route": "BENEFICIO_PRECOCE",
+    "route_definition": "RECUPERO_PROFONDO = deep recovery of the lost function; BENEFICIO_PRECOCE = concrete partial benefit, symptomatic control or protection of function, with paediatric feasibility and time in view",
+    "route_note": "Mechanism discriminator on the one drug result of NEED-T-TYPE-CALCIUM; not a treatment proposal.",
+    "the_two_dimensions_are_independent": "a card keeps both: a variant-independent lever can be a partial-benefit lever, and a lesion-specific one can aim at deep recovery"
+  },
+  "candidate": {
+    "id": "P4-H-01",
+    "name": "Apinocaltamide (triple T-type calcium channel blocker) as a discriminator of the ethosuximide result"
+  },
+  "disease_assertions": [
+    {
+      "id": "DA-H01-001",
+      "target_id": "PTZ_provoked_seizure_response_late_phase",
+      "endpoint": "PTZ-provoked behavioural seizure score, late phase of the hour (graphical reading)",
+      "direction": "INCREASE",
+      "source": "Cheng 2020 (PMID 32000863) Figure 7b, as carried by cards_early/EB-ETX-01 (assertion D-ETX-1); one laboratory, one experiment",
+      "locator": "R2 note repurposing_10h_scientist-b_20261021.md section 9, point 2: the null arm has a sustained late phase that the wild type does not",
+      "epistemic_status": "INFERENZA",
+      "reading_depth": "partial_fulltext_read",
+      "context": {
+        "disease_id": "Wwox loss (murine)",
+        "genotype": "Wwox -/- constitutive null",
+        "species": "mouse",
+        "cell_type": "NOT_APPLICABLE_WHOLE_ORGANISM",
+        "developmental_stage": "preweaning mouse (as the R2 note describes the Wwox PTZ assay; the exact age is not carried)"
+      },
+      "note": "Graphical reading from a moderate-resolution time course, N = 6 in the null arm. The R2 note twice describes this assay as a preweaning mouse; the exact age is not carried.",
+      "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
+    }
+  ],
+  "drug_assertions": [
+    {
+      "id": "DR-H01-001",
+      "target_id": "spike-and-wave discharges (absence-type EEG events)",
+      "endpoint": "spike-and-wave discharge burden",
+      "direction": "DECREASE",
+      "source": "Epilepsia 2025 abstract, PMID 40165594 (sponsor-affiliated authors); NOT WWOX EVIDENCE",
+      "locator": "PubMed abstract (DOI 10.1111/epi.18386)",
+      "epistemic_status": "DATO",
+      "reading_depth": "abstract_only",
+      "context": {
+        "disease_id": "genetic absence-epilepsy rat models (not WWOX)",
+        "genotype": "WAG/Rij and GAERS rats, not WWOX",
+        "species": "rat",
+        "cell_type": "whole animal EEG",
+        "developmental_stage": "adult"
+      },
+      "measured_result_note": "Oral apinocaltamide (ACT-709478, a triple T-type blocker) suppressed spike-and-wave discharges with efficacy stated as equivalent or superior to first-line monotherapy. Abstract-level; no effect size or n read.",
+      "evidence_scope": "OTHER_DISEASE_PRECEDENT"
+    },
+    {
+      "id": "DR-H01-002",
+      "target_id": "generalized convulsive seizure severity (audiogenic seizure mouse; electroshock threshold)",
+      "endpoint": "convulsive seizure severity / threshold",
+      "direction": "DECREASE",
+      "source": "Epilepsia 2025 abstract, PMID 40165594; NOT WWOX EVIDENCE",
+      "locator": "PubMed abstract (DOI 10.1111/epi.18386)",
+      "epistemic_status": "DATO",
+      "reading_depth": "abstract_only",
+      "context": {
+        "disease_id": "audiogenic-seizure-sensitive mouse and maximal-electroshock threshold test (not WWOX)",
+        "genotype": "audiogenic-sensitive mice and wild-type mice, not WWOX",
+        "species": "mouse",
+        "cell_type": "whole animal behaviour",
+        "developmental_stage": "not stated in the abstract"
+      },
+      "measured_result_note": "Reduced severity of generalized convulsive seizures in both tests, 'albeit at higher concentration' than for absence-type discharges (the abstract's words). A pentylenetetrazol test in a Wwox model is not among them.",
+      "evidence_scope": "OTHER_DISEASE_PRECEDENT"
+    },
+    {
+      "id": "DR-H01-003",
+      "target_id": "focal-onset seizure (amygdala kindling)",
+      "endpoint": "kindled focal seizure",
+      "direction": "NO_CHANGE",
+      "source": "Epilepsia 2025 abstract, PMID 40165594; NOT WWOX EVIDENCE",
+      "locator": "PubMed abstract (DOI 10.1111/epi.18386)",
+      "epistemic_status": "DATO",
+      "reading_depth": "abstract_only",
+      "context": {
+        "disease_id": "rat amygdala-kindling model of focal seizures (not WWOX)",
+        "genotype": "kindled rats, not WWOX",
+        "species": "rat",
+        "cell_type": "whole animal",
+        "developmental_stage": "adult"
+      },
+      "measured_result_note": "'No effect on focal onset seizures' (abstract). A measured null in a seizure type that is not the WWOX provoked-seizure phenotype; shown so that the class is not read as broad-spectrum.",
+      "evidence_scope": "OTHER_DISEASE_PRECEDENT"
+    },
+    {
+      "id": "DR-H01-004",
+      "target_id": "neural_progenitor_viability",
+      "endpoint": "viability of embryonic cortical progenitors in vitro",
+      "direction": "DECREASE",
+      "source": "Kim 2018 as read in the R2 note section 7 and carried by cards_early/EB-ETX-01 (assertion A-ETX-3); NOT WWOX EVIDENCE",
+      "locator": "cards_early/EB-ETX-01.packet.json assertion A-ETX-3",
+      "epistemic_status": "DATO",
+      "reading_depth": "complete_fulltext_read",
+      "context": {
+        "disease_id": "none (NOT WWOX EVIDENCE)",
+        "genotype": "wild-type rat embryonic cortical culture",
+        "species": "rat",
+        "cell_type": "embryonic cortical progenitor",
+        "developmental_stage": "embryonic day 14"
+      },
+      "measured_result_note": "Two research T-type blockers lowered progenitor viability in vitro. Class-level signal only: neither compound is apinocaltamide, the model is a culture, and the in vivo meaning is unknown. Carried because the intended population is developing.",
+      "receipt": "FTR-20261021-29463073-01 (staged, scientist-b)",
+      "evidence_scope": "OTHER_DISEASE_PRECEDENT"
+    }
+  ],
+  "p4_fields": {
+    "endpoint_pursued": "Late-phase PTZ-provoked behavioural seizure score in the Wwox-null pup, three genotypes, same-day PTZ-alone control, drug-by-genotype interaction test, with exposure measured.",
+    "functional_evidence_available": "One WWOX experiment with ethosuximide (Cheng 2020, Figure 7b); none with any other T-type blocker; nothing for apinocaltamide in any Wwox system.",
+    "temporal_or_model_limit": "Preweaning pup assay; the age at which the effect could matter in a human is unknown; rodent absence-type models are not the WWOX phenotype.",
+    "cellular_context": {
+      "target_expression": "UNKNOWN in the Wwox-null brain.",
+      "cells_tissue_stage": "whole animal.",
+      "coverage": "UNKNOWN.",
+      "limits": "A behavioural score does not locate the channel."
+    }
+  },
+  "p4_card": {
+    "identity": "Apinocaltamide (ACT-709478, NBI-827104), a small-molecule triple T-type calcium channel blocker (CACNA1G, CACNA1H, CACNA1I). Catalogue identity: CHEMBL4217292 (ChEMBL_37 curated mechanism: 'Voltage-gated T-type calcium channel blocker'; max phase 2; no approval statement in any source used); a DGIdb-only record (CAT:DGIDB:b811c040b8a4) repeats the same three targets from the same ChEMBL claim and is not an independent confirmation.",
+    "indication_and_transfer": "Only as a mechanistic discriminator of the ethosuximide result in the Wwox-null mouse (need NEED-T-TYPE-CALCIUM). Not an indication, not a treatment proposal. The sources are healthy adult volunteers and adult rodent seizure models; nothing is known in a developing brain or in any Wwox system.",
+    "novelty_for_woree": "NON_TROVATO_NELLA_RICERCA in the repository: no record, card or claim names apinocaltamide. It entered through the reverse path (compound -> targets -> needs), not from a paper on WWOX. Not 'never tried': no search beyond PubMed titles and the catalogue was run.",
+    "state_of_known_roads": "EB-ETX-01 (ethosuximide, same need), DL-MECH-170, map record N-03; need NEED-T-TYPE-CALCIUM.",
+    "pathway_and_objective": "BENEFICIO_PRECOCE; Track A.",
+    "expected_contribution": "UNKNOWN. If it reproduces the ethosuximide pattern it would support T-type dependence of the provoked seizure; if not, it would make the ethosuximide result less likely to be T-type mediated. Neither outcome says anything about benefit in WWOX-DEE.",
+    "mechanism": "Block of Cav3.1, Cav3.2 and Cav3.3 (the abstracts call it selective and highly potent with 'no relevant activity on other targets'; that is the sponsor's statement, not an independent selectivity panel). Wanted direction: T-type current down (need direction 'down', coupling 'same').",
+    "sources": {
+      "internal": [
+        "need NEED-T-TYPE-CALCIUM",
+        "cards_early/EB-ETX-01 (D-ETX-1, A-ETX-1..3)",
+        "coverage/priorities.json row FAM:CAT:CHEMBL4217292 x NEED-T-TYPE-CALCIUM",
+        "closed_loop_it3_20261028/case_a_apinocaltamide.md"
+      ],
+      "external_not_wwox_evidence": [
+        "ChEMBL_37 mechanism row CHEMBL4217292 (reference ids PubMed 29116786, PubMed 31004346)",
+        "PubMed abstracts 29116786, 31004346, 31994022, 40165594, 38605177 (abstract level; none carries a receipt)"
+      ]
+    },
+    "evidence_for_and_against": {
+      "for": [
+        "The same target class as ethosuximide, which was the only drug that suppressed the late phase of the provoked seizure score in the null mouse and not (significantly) in wild type or heterozygote.",
+        "A structurally unrelated, brain-penetrant, three-subtype blocker (abstract-level) lets the question 'is it the T-type channel' be asked without ethosuximide's other actions.",
+        "Healthy-adult tolerability data exist (abstracts of two phase 1 studies; transient mild-to-moderate events including dizziness, somnolence and headache)."
+      ],
+      "against": [
+        "Genotype specificity of the ethosuximide result rests on one experiment without an interaction test and a possible floor effect in wild type.",
+        "Rodent efficacy is stated for absence-type discharges and generalized convulsive tests, at higher concentration for the latter, and not for focal-onset seizures; the Wwox model is a pentylenetetrazol-provoked score.",
+        "A class-level in vitro signal: T-type blockers lowered embryonic cortical progenitor viability (other compounds).",
+        "All apinocaltamide sources are sponsor-affiliated; no independent replication is read.",
+        "The catalogue holds no potency or exposure; brain exposure in a pup is unknown."
+      ],
+      "transfer_limits": "Species (rat, mouse, human adult), age (pup versus adult), seizure type and provoking agent all differ from the Wwox-null pup."
+    },
+    "time_to_access": "UNKNOWN. ChEMBL records a clinical-candidate statement only; how a research supply could be obtained is not established here and no contact was made.",
+    "time_to_benefit": "UNKNOWN.",
+    "pharmacology": "Triple T-type blocker; abstract-level human pharmacokinetics in healthy adults (slow absorption and a long half-life are reported); multiple-dose tolerability reported with an up-titration scheme. No pup or brain-exposure datum. Doses and concentrations are deliberately not reproduced.",
+    "paediatrics_and_interactions": "Not assessed. A weak gastrointestinal CYP3A4 induction signal is reported in the multiple-dose abstract; interaction with valproate is reported as synergistic in a mouse test (abstract).",
+    "scope_of_checks": {
+      "support_and_replication": "One laboratory for the WWOX row; the apinocaltamide rows come from the sponsor's laboratories.",
+      "formal_checks": "Abstract level only for every apinocaltamide row; the full texts were not read and no FULLTEXT_READ_RECEIPT exists for them. The catalogue row was read from catalog.jsonl.gz.",
+      "card_inferences_owed_audit": "Every statement marked INFERENZA, and every card-level synthesis, is owed a blind audit by someone other than the producer."
+    },
+    "question_history": [
+      "need NEED-T-TYPE-CALCIUM; reverse search 'compound apinocaltamide' (2026-10-28, closed-loop case a)"
+    ],
+    "predictions": "Registered before any such experiment: if the late-phase suppression in the null is T-type mediated, a structurally unrelated T-type blocker at a brain-relevant exposure should reduce it in the null and at most weakly in wild type and heterozygote; if the suppression is not reproduced at confirmed exposure, the ethosuximide result is not supported as T-type mediated. A negative result at an unconfirmed exposure refutes nothing.",
+    "next_measurement": "In the Wwox-/- preweaning pup, a same-day concurrent PTZ-alone control in all three genotypes, ethosuximide and apinocaltamide as separate arms with plasma and brain exposure measured, blind scoring, and a drug-by-genotype interaction test planned in advance; discriminating result: both T-type blockers reduce the late phase specifically in the null (interaction supported), against ethosuximide-only reduction (off-target or non-specific) or reduction in all genotypes (a general antiseizure effect, as with lithium).",
+    "status": "hypothesis",
+    "value_added": "A new compound reached from the catalogue with no card; adds a mechanism-level discriminator for the only drug result in the need, carries the class-level developing-cortex caution from the repository's own reading, and states that the sources are abstract-level.",
+    "clinical_census": "Clinical census, ClinicalTrials.gov API v2, 2026-10-20 (drug_repurposing/clinical_census_20261020.md): seven queries returned no registered WOREE interventional study; it answers seven queries against one registry on one date and a missing hit does not prove that no study exists. Not re-run for this card."
+  },
+  "not_known": [
+    "Whether the ethosuximide late-phase effect in the null is mediated by T-type channels.",
+    "Brain exposure of apinocaltamide in a pup.",
+    "Any apinocaltamide effect in a Wwox system.",
+    "Effect on progenitor viability in vivo."
+  ],
+  "evidence_against": [
+    "Genotype specificity of the ethosuximide result rests on one experiment without an interaction test and a possible floor effect in wild type.",
+    "Rodent efficacy is stated for absence-type discharges and generalized convulsive tests, at higher concentration for the latter, and not for focal-onset seizures; the Wwox model is a pentylenetetrazol-provoked score.",
+    "A class-level in vitro signal: T-type blockers lowered embryonic cortical progenitor viability (other compounds).",
+    "All apinocaltamide sources are sponsor-affiliated; no independent replication is read.",
+    "The catalogue holds no potency or exposure; brain exposure in a pup is unknown."
+  ],
+  "bridge_gaps_exposed": [
+    "The apinocaltamide rows are in other models and endpoints, so no comparison with the WWOX row is formed (UNRESOLVED is a statement about the record)."
+  ],
+  "translation": {
+    "pediatric_suitability": "UNKNOWN",
+    "cns_exposure": "UNKNOWN",
+    "interactions": "UNKNOWN",
+    "access": "UNKNOWN",
+    "time_to_benefit": "UNKNOWN",
+    "functional_rescue": "UNKNOWN"
+  },
+  "p4_roadmap_fields": {
+    "indication_and_transfer": "Only as a mechanistic discriminator of the ethosuximide result in the Wwox-null mouse (need NEED-T-TYPE-CALCIUM). Not an indication, not a treatment proposal. The sources are healthy adult volunteers and adult rodent seizure models; nothing is known in a developing brain or in any Wwox system.",
+    "verification_scope": "{\"support_and_replication\": \"One laboratory for the WWOX row; the apinocaltamide rows come from the sponsor's laboratories.\", \"formal_checks\": \"Abstract level only for every apinocaltamide row; the full texts were not read and no FULLTEXT_READ_RECEIPT exists for them. The catalogue row was read from catalog.jsonl.gz.\", \"card_inferences_owed_audit\": \"Every statement marked INFERENZA, and every card-level synthesis, is owed a blind audit by someone other than the producer.\"}"
+  },
+  "label_lookup": {
+    "status": "NOT_ATTEMPTED"
+  },
+  "card_conventions": [
+    "IPOTESI throughout; the bridge forces it. No score, rank, probability or blended index is carried.",
+    "directional_summary compares signs only where target, endpoint and every context dimension match; UNRESOLVED is a statement about the record, not about the biology.",
+    "Every apinocaltamide row is NOT WWOX EVIDENCE and abstract-only; none carries a receipt.",
+    "label_lookup is NOT_ATTEMPTED: the bridge has no network.",
+    "No dose, route, schedule or paediatric suitability appears."
+  ],
+  "target_census": {
+    "dir": "disease-models/wwox/research/drug_repurposing/closed_loop_it3_20261028",
+    "symbols": []
+  },
+  "no_new_reading": "Closed-loop case a (scientist-b, 2026-10-28): PubMed abstracts only; no full text read, no receipt."
+}

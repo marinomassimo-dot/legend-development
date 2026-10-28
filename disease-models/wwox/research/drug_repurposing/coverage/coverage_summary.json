@@ -4,40 +4,40 @@
    "1": 1446,
    "17": 1,
    "2": 263,
-   "3": 21,
+   "3": 23,
    "4": 5,
    "5": 2,
    "6": 1,
    "8": 1
   },
-  "families_touching_a_need_if_name_twins_were_collapsed_SENSITIVITY_ONLY": 1608,
-  "families_touching_at_least_one_need_counted_once": 1740,
-  "families_with_documented_link_to_a_need": 1740,
+  "families_touching_a_need_if_name_twins_were_collapsed_SENSITIVITY_ONLY": 1610,
+  "families_touching_at_least_one_need_counted_once": 1742,
+  "families_with_documented_link_to_a_need": 1742,
   "overlap_warning": "needs share targets (e.g. CACNA1G, ABAT); per-need family counts must not be added: use the union above",
   "pct_records_with_link": {
    "denominator": 44211,
-   "numerator": 1770,
+   "numerator": 1772,
    "percent": 4.0,
    "what": "catalogue records with at least one documented link to a link-type target of any of the needs / all catalogue records; links are source statements, not relevance"
   },
   "pct_records_with_target_row_that_link": {
    "denominator": 24423,
-   "numerator": 1770,
-   "percent": 7.2,
+   "numerator": 1772,
+   "percent": 7.3,
    "what": "records linked to some need / records carrying any target row"
   },
   "records_examined": 44211,
   "records_touching_only_readout_markers": 351,
   "records_with_any_target_row": 24423,
-  "records_with_documented_link_to_a_need": 1770,
-  "touched_families_with_a_name_twin_in_another_family_not_merged": 914
+  "records_with_documented_link_to_a_need": 1772,
+  "touched_families_with_a_name_twin_in_another_family_not_merged": 915
  },
  "evaluated_vs_records": {
   "meaning": "'examined' = target-matched against the 22 needs; 'evaluated with observation' = card interventions with at least one data assertion on a need citing the card",
   "records_evaluated_against_wwox_needs_with_any_observation": 14,
   "records_examined_by_target_match": 44211,
   "records_in_catalogue": 44211,
-  "records_with_a_link_to_a_need_target": 1770,
+  "records_with_a_link_to_a_need_target": 1772,
   "records_with_target_data_at_all": 24423
  },
  "inputs_status": {
@@ -54,27 +54,27 @@
   "needs' own WWOX observations are not interventions and fill no compound cell"
  ],
  "matrix": {
-  "L1_documented": 2096,
+  "L1_documented": 2102,
   "L1_none_found": 430,
   "L1_not_evaluable": 17,
   "L2_coherent": 201,
   "L2_direction_unresolved": 324,
-  "L2_not_evaluable": 1857,
+  "L2_not_evaluable": 1863,
   "L2_opposed": 63,
   "L3_inference_only": 0,
   "L3_measured_null_only": 0,
-  "L3_none_in_cards": 2523,
+  "L3_none_in_cards": 2529,
   "L3_observed": 20,
   "L4_observed": 10,
-  "cells_nonempty": 2543,
-  "cells_possible_rows_x_needs": 46134,
+  "cells_nonempty": 2549,
+  "cells_possible_rows_x_needs": 46178,
   "levels_are_never_summed": true,
   "row_kinds": {
    "intervention_without_catalogue_identity": 8,
-   "molecule_family": 2083,
+   "molecule_family": 2085,
    "non_molecule_intervention": 6
   },
-  "rows": 2097
+  "rows": 2099
  },
  "needs": {
   "count": 22,
@@ -172,13 +172,13 @@
     "exploration_only": true,
     "families_consistent": 0,
     "families_opposed": 0,
-    "families_with_documented_link": 36,
+    "families_with_documented_link": 42,
     "identity_guard_hits": 0,
-    "link_targets": 8,
+    "link_targets": 9,
     "nonhuman_chembl_rows_set_aside": 0,
     "readout_marker_only_records": 41,
-    "records_with_documented_link": 36,
-    "targets": 9,
+    "records_with_documented_link": 42,
+    "targets": 10,
     "wwox_system_observations": 0
    },
    "NEED-LACTATE-LDH": {
@@ -523,7 +523,7 @@
    "wwox_clinical_report": 5,
    "wwox_experimental": 12
   },
-  "card_interventions": 24,
+  "card_interventions": 25,
   "data_assertions_with_readout_change_on_cited_needs": 43,
   "note": "an assertion counts once however many needs cite its card; L3/L4 cells count (row, need) pairs",
   "of_which_wwox_system_opposing_disease_change": 13
@@ -540,17 +540,17 @@
   ],
   "by_disposition": {
    "consistent_mechanism_candidate": 201,
-   "exploration_candidate": 393,
+   "exploration_candidate": 398,
    "insufficient_data": 209,
    "not_relevant": 245,
    "opposite_mechanism": 4,
    "source_queried_without_result": 1
   },
-  "exploration_flagged": 604,
+  "exploration_flagged": 609,
   "pairs_not_prioritised": {
-   "not_prioritised_no_card_no_coherence_no_approval_or_access": 1490
+   "not_prioritised_no_card_no_coherence_no_approval_or_access": 1491
   },
-  "records": 1053
+  "records": 1058
  },
  "schema": "legend.wwox.coverage/1",
  "source_states": {
