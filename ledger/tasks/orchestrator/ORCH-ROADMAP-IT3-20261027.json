@@ -43,25 +43,27 @@
     },
     {
      "step": "WWOX biological needs table with locators and rationale for direction",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "scientist-b",
-     "evidence": "needs draft merged; independent verification running"
+     "evidence": "needs.json 22/63, two independent audits, corrections applied (main 6db0b444..)"
     },
     {
      "step": "Both-direction search + coverage matrix + selection (reversible)",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "scientist-a",
-     "evidence": "phase B search/matrix/selection dispatched to scientist-a"
+     "evidence": "coverage layer: 3 rounds of independent recount/correction; final check 2026-10-28 (verify-cov3)"
     },
     {
      "step": "Regenerable first view, counts from data",
-     "status": "TODO",
-     "owner": "plan"
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "view/index.html regenerated; headless Chromium; 23 tests"
     },
     {
      "step": "Closed-loop proof incl. one new question; queue consumption; independent verification",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "closed loop: apinocaltamide + 4 reasoned endings; handoff section; independent verification, C1-C7 applied"
     }
    ]
   },
@@ -76,9 +78,9 @@
     },
     {
      "step": "LINCS GSE92742 offline feasibility and minimal-extract decision",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "scientist-d",
-     "evidence": "LINCS run negative; independent partial rebuild running"
+     "evidence": "LINCS level 5 local run negative; independent partial rebuild reproduced; wording corrected"
     },
     {
      "step": "Radar: real run consumed, catalogue-update probes, small discovery search, opportunity notes",
@@ -88,8 +90,9 @@
     },
     {
      "step": "12 UNQUALIFIED cards: link or curate where truly matched; WWOX-value observations",
-     "status": "TODO",
-     "owner": "scientist-b"
+     "status": "DONE",
+     "owner": "scientist-b",
+     "evidence": "12 UNQUALIFIED cards: none linked, reasons in closed_loop README; WWOX-value observations recorded as stated-and-recorded"
     }
    ]
   },
@@ -98,7 +101,7 @@
    "steps": [
     {
      "step": "Battery on final SHA, integration, push, cleanup, final report",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator"
     }
    ]
@@ -106,8 +109,12 @@
  },
  "DECISIONS_TAKEN": [
   "2026-10-28: DGIdb-derived rows kept in the development repo but flagged licence-not-cleared for any public release (public release is operator-owned); catalogue cache copied into main's gitignored catalog/cache so the worktree can be removed.",
-  "2026-10-28: AAV9 comparability: optional timepoint/intervention_level/comparison discriminators join the question key; discordance without declared discriminators is flagged discriminators_declared=false rather than silently treated as firm."
+  "2026-10-28: AAV9 comparability: optional timepoint/intervention_level/comparison discriminators join the question key; discordance without declared discriminators is flagged discriminators_declared=false rather than silently treated as firm.",
+  "2026-10-28: scope labels follow the bridge definition (patient-derived/engineered knockout cells = WWOX_EXPERIMENT_IN_DEE_SYSTEM, non-neural stated in limits), overriding a stricter private rule in the first needs draft.",
+  "2026-10-28: round-3 coverage residuals (per-need detector drops, wild-type-only naming, guard test for early-alphabet symbols) recorded as known limits, not fixed: none changes a headline figure."
  ],
- "DEFAULTS_TAKEN": [],
+ "DEFAULTS_TAKEN": [
+  "BATCH_024 applied DL-MECH-173 with record_scoped_edit.py because batch_commit.py propagate accepts only the four scientific current files."
+ ],
  "STOP_LOG": []
 }
