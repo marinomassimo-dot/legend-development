@@ -1,0 +1,230 @@
+{
+ "seed": 20261029,
+ "ndraw": 10000,
+ "inputs": {
+  "GSE126075_TPMexpression_all_genes_all_samples_merged.txt.gz": "7e51e3cffa7491a7778a23516fd6e8bbe601b62cb5223536885a401219a392c2",
+  "GSE126075_TSScoordinates_TPMexpression_all_samples_F5mapped.txt.gz": "8f93a12c9a4fdc7c8ceef08dd44f4723ea00d97948b352ddd7d3dbf121ce1970",
+  "markers": "77d9329cf2d2c6c134bdbc79d9965de33493b2e6bc0dfe5d3dc271604dd246e3"
+ },
+ "library_tags": {
+  "hNSC": 31702049,
+  "Neurons": 32686868,
+  "hNSC_WWOX_del": 14332108,
+  "Neurons_WWOX_del": 40730002
+ },
+ "matrix_colsum": {
+  "hNSC": 609159.7122598371,
+  "Neurons": 264496.2190932464,
+  "hNSC_WWOX_del": 606893.8358544334,
+  "Neurons_WWOX_del": 89581.48344800151
+ },
+ "n_genes_matrix": 9427,
+ "WWOX_control": {
+  "tss_clusters": [
+   {
+    "name": "p1@WWOX,0.4391",
+    "chr": "chr16",
+    "start": "78099640",
+    "strand": "+",
+    "hNSC": 2.90151560079262,
+    "hNSC_WWOX_del": 3.34912352042002,
+    "neurons": 2.53924603605338,
+    "neurons_WWOX_del": 0.515590448534719
+   }
+  ],
+  "C_hNPC": {
+   "tpm_kd": 3.34912352042002,
+   "tpm_ctl": 2.90151560079262,
+   "tags_kd": 47.999999999999936,
+   "tags_ctl": 91.98398975059209,
+   "R_centred": -0.015953160006861145,
+   "R_uncentred": 0.17835226280632255,
+   "R_B": -0.007900477848239718,
+   "fraction_of_measurable_genes_lower": 0.49078167115902965,
+   "measurable": true
+  },
+  "C_neuron": {
+   "tpm_kd": 0.515590448534719,
+   "tpm_ctl": 2.53924603605338,
+   "tags_kd": 21.000000000000004,
+   "tags_ctl": 83.00000000000007,
+   "R_centred": -0.261921993928649,
+   "R_uncentred": -1.5813947382182827,
+   "R_B": -0.786781971381052,
+   "fraction_of_measurable_genes_lower": 0.3129644921552436,
+   "measurable": true
+  }
+ },
+ "WWOX_silenced_all_three_normalisations_both_stages": false,
+ "stage_positive_control": {
+  "Mk_neuronal_pan": 0.745,
+  "Mk_radial_glia_progenitor": 0.233,
+  "Mk_cell_cycle_proliferation": -1.407
+ },
+ "stage_positive_control_ok": false,
+ "global_distribution": {
+  "C_hNPC": {
+   "n_measurable": 9275,
+   "median_uncentred_R": 0.1943054228131837,
+   "sd_centred_R": 0.8245797462176426,
+   "frac_abs_centred_R_ge_1": 0.19741239892183288,
+   "stage_fit_slope_intercept_r_n": [
+    0.18037010592690825,
+    0.02683855709091766,
+    0.26401018541958104,
+    8858
+   ]
+  },
+  "C_neuron": {
+   "n_measurable": 8477,
+   "median_uncentred_R": -1.3194727442896337,
+   "sd_centred_R": 0.6526604481622487,
+   "frac_abs_centred_R_ge_1": 0.12008965435885337,
+   "stage_fit_slope_intercept_r_n": [
+    -0.10604023147566313,
+    0.03111706032069397,
+    -0.18813739398400778,
+    8422
+   ]
+  },
+  "S_ctrl": {
+   "n_measurable": 8912,
+   "median_uncentred_R": -0.8485648580640188,
+   "sd_centred_R": 1.177230886289042,
+   "frac_abs_centred_R_ge_1": 0.29275134649910234
+  },
+  "S_kd": {
+   "n_measurable": 8529,
+   "median_uncentred_R": -2.4003782663316566,
+   "sd_centred_R": 1.122862812557256,
+   "frac_abs_centred_R_ge_1": 0.2790479540391605,
+   "stage_fit_slope_intercept_r_n": [
+    0.7275658863200791,
+    0.055082973962606495,
+    0.7373359663307513,
+    8376
+   ]
+  }
+ },
+ "decisions": {
+  "ATF4_gene": "too few measurable members",
+  "ISR_targets": "inconsistent or confounded (outside the matched null in one or both stages; criteria i-iii: True/False/True)",
+  "UPR_branches": "inconsistent or confounded (outside the matched null in one or both stages; criteria i-iii: False/False/None)",
+  "OXPHOS_nuclear": "inconsistent or confounded (outside the matched null in one or both stages; criteria i-iii: False/False/None)",
+  "Mito_translation": "inconsistent or confounded (outside the matched null in one or both stages; criteria i-iii: False/True/None)",
+  "Mito_import": "inconsistent or confounded (outside the matched null in one or both stages; criteria i-iii: False/False/None)",
+  "Glycolysis_lactate": "inconsistent or confounded (outside the matched null in one or both stages; criteria i-iii: True/False/False)",
+  "PDK_family": "not distinguishable from matched random sets (not evidence of absence)",
+  "Lactate_transporters": "too few measurable members",
+  "Ctl_cytosolic_ribosome": "inconsistent or confounded (outside the matched null in one or both stages; criteria i-iii: False/True/None)",
+  "Ctl_housekeeping": "not distinguishable from matched random sets (not evidence of absence)",
+  "Mk_radial_glia_progenitor": "inconsistent or confounded (outside the matched null in one or both stages; criteria i-iii: True/True/True)",
+  "Mk_cell_cycle_proliferation": "not distinguishable from matched random sets (not evidence of absence)",
+  "Mk_neuronal_pan": "inconsistent or confounded (outside the matched null in one or both stages; criteria i-iii: False/True/None)",
+  "Mk_glutamatergic": "too few measurable members",
+  "Mk_GABAergic": "too few measurable members",
+  "Mk_astrocyte_glia": "too few measurable members",
+  "Mk_regional_patterning_non_cortical": "too few measurable members",
+  "Mk_wnt_pathway": "not distinguishable from matched random sets (not evidence of absence)"
+ },
+ "unresolved_symbols": {
+  "ISR_targets": [
+   "SLC7A11"
+  ],
+  "UPR_branches": [
+   "PPP1R15A"
+  ],
+  "OXPHOS_nuclear": [
+   "NDUFA11"
+  ],
+  "Mito_translation": [
+   "MTIF2",
+   "MTIF3"
+  ],
+  "Mito_import": [
+   "TOMM70",
+   "TIMM23"
+  ],
+  "Glycolysis_lactate": [
+   "PKM"
+  ],
+  "PDK_family": [
+   "PDK4"
+  ],
+  "Lactate_transporters": [
+   "SLC16A3"
+  ],
+  "Mk_radial_glia_progenitor": [
+   "HOPX",
+   "CRYAB"
+  ],
+  "Mk_neuronal_pan": [
+   "DCX",
+   "RBFOX3",
+   "NEUROD2",
+   "NEUROD6"
+  ],
+  "Mk_glutamatergic": [
+   "SLC17A6",
+   "SLC17A7",
+   "SATB2",
+   "TBR1",
+   "BCL11B",
+   "CUX2",
+   "RELN",
+   "FEZF2",
+   "EMX1",
+   "EMX2"
+  ],
+  "Mk_GABAergic": [
+   "GAD1",
+   "GAD2",
+   "SLC32A1",
+   "DLX1",
+   "DLX5",
+   "DLX6",
+   "LHX6",
+   "NKX2-1",
+   "SST",
+   "NPY"
+  ],
+  "Mk_astrocyte_glia": [
+   "GFAP",
+   "S100B",
+   "AQP4",
+   "ALDH1L1",
+   "SLC1A2",
+   "AGT",
+   "S100A1",
+   "OLIG1",
+   "OLIG2",
+   "PDGFRA"
+  ],
+  "Mk_regional_patterning_non_cortical": [
+   "OTX2",
+   "GATA3",
+   "EN1",
+   "EN2",
+   "HOXA2",
+   "HOXB2",
+   "SHH",
+   "FOXG1",
+   "LHX2",
+   "WNT3",
+   "WNT3A",
+   "WNT7B",
+   "ATOH1",
+   "DRGX",
+   "HOXA1",
+   "HOXB1"
+  ],
+  "Mk_wnt_pathway": [
+   "LEF1",
+   "WNT3",
+   "WNT5A",
+   "WNT7B",
+   "DKK1",
+   "DACT2"
+  ]
+ }
+}
