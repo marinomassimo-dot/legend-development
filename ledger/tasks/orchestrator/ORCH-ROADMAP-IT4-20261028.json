@@ -117,9 +117,9 @@
    "steps": [
     {
      "step": "E1 two high-information questions, one for broad durable recovery and one for partial benefit, chosen from needs, catalogue, priorities and gaps; premise, WWOX knowledge and counter-evidence, pharmacology sources, decisive passages only, comparable card or reasoned abstention; regenerate module, queue, view",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "scientist-b",
-     "evidence": "question A (deep recovery) done and verified: PTC read-through, reasoned abstention + sequence enumeration (32 nonsense alleles, 23/1/8), LD-006; question B running"
+     "evidence": "question A (deep recovery): PTC read-through abstention + enumeration, verified independently (LD-006, e9c2ffba); question B (partial benefit): card H02 vigabatrin/CPP-115 myelin exposure, blind audit passed after repair (no HIGH defect), landed 92de4dd7, receipt FTR-20261028-27668180-01 recorded (883 chain); working-model sentence proposal left in the cycle README for a later BATCH_COMMIT"
     },
     {
      "step": "E2 PMID 31543760 against a roadmap question; supplements of PMID 42397075 and others via local corpus, public official routes, browser tools; no e-mail, registration, author contact",
