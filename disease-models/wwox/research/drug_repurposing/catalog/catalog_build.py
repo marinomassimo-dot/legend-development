@@ -6,7 +6,10 @@ and scope; it never says a compound is suitable, safe, effective or obtainable b
 
   catalog_build.py fetch  [--refresh] [--only SRC[,SRC]]   download into cache/ (skips fresh sources)
   catalog_build.py probe-dsld [--limit N] [--refresh]       supplement-label probe (name-only; see README)
-  catalog_build.py build                                    cache -> catalog.jsonl.gz + stats + links
+  catalog_build.py inputs                                   which cached files the declared version needs; present / missing / mismatching, and how to get each
+  catalog_build.py build                                    cache -> catalog.jsonl.gz + stats + links; REFUSES on an incomplete or mismatching cache
+  catalog_build.py build --check                            rebuild in memory, write nothing, compare with the committed catalog.jsonl.gz
+  catalog_build.py build --partial                          declared-partial output next to (never over) the complete one: *.PARTIAL.* files
   catalog_build.py all [--refresh]                          fetch + build
   catalog_build.py query (--id X | --name X | --target X | --access X | --status X) [--limit N]
   catalog_build.py verify                                   reconcile counts of the written outputs
@@ -27,6 +30,7 @@ import json
 import os
 import re
 import sys
+import tempfile
 import time
 import urllib.error
 import urllib.parse
@@ -155,14 +159,19 @@ def record(m: dict, src: str, status: str, detail: str, data: dict | None = None
         e["data"] = data
 
 
-def write_gz_jsonl(path: Path, rows) -> str:
+def write_gz_jsonl(path: Path, rows, stage: Path | None = None) -> str:
+    """Deterministic gzip JSONL.  The gzip header carries the basename of `<path>.tmp` (historical, and part of the
+    pinned bytes), so a `stage` file keeps that header name: staging elsewhere must not change a single byte."""
     path.parent.mkdir(parents=True, exist_ok=True)
     tmp = path.with_suffix(path.suffix + ".tmp")
-    with gzip.GzipFile(tmp, "wb", mtime=0) as fh:
+    target = stage or tmp
+    with open(target, "wb") as raw, gzip.GzipFile(filename=tmp.name, mode="wb", fileobj=raw, mtime=0) as fh:
         for r in rows:
             fh.write((json.dumps(r, sort_keys=True, ensure_ascii=False) + "\n").encode())
-    tmp.replace(path)
-    return sha256_file(path)
+    if stage is None:
+        tmp.replace(path)
+        return sha256_file(path)
+    return sha256_file(stage)
 
 
 def read_gz_jsonl(path: Path):
@@ -663,14 +672,18 @@ def claim_symbol_anomaly(ir: dict) -> str | None:
     return None
 
 
-def build_catalog(cache: Path | None = None) -> tuple[list[dict], dict]:
-    """Pure function of the cache and manifest.  Returns (entries, stats)."""
+def build_catalog(cache: Path | None = None, exclude: dict | None = None) -> tuple[list[dict], dict]:
+    """Pure function of the cache and manifest.  Returns (entries, stats).
+    `exclude` = {source: reason}: sources whose declared input is missing or mismatching, left out on purpose (partial build only)."""
     cache = cache or CACHE
+    exclude = exclude or {}
     manifest = load_manifest()
     src_status = {}
     for s in ("chembl", "unichem", "dgidb", "gtopdb", "matrix", "openfda_ndc", "dsld"):
         e = manifest["sources"].get(s)
-        if not e:
+        if s in exclude:
+            src_status[s] = {"state": "EXCLUDED_MISSING_OR_MISMATCHING_INPUT", "detail": exclude[s]}
+        elif not e:
             src_status[s] = {"state": "NOT_FETCHED"}
         elif "data" in e:
             d = e["data"]
@@ -1232,7 +1245,7 @@ def verify_sources(manifest: dict) -> dict:
 
 def dgidb_age(manifest: dict, src_status: dict) -> dict:
     d = manifest["sources"].get("dgidb", {}).get("data")
-    if not d:
+    if not d or src_status.get("dgidb", {}).get("state") not in ("OK", "STALE_AFTER_FAILED_REFRESH"):
         return {"state": "NOT_AVAILABLE"}
     lm = re.search(r"Last-Modified ([^;]+)", d.get("version", ""))
     chembl_date = (manifest["sources"].get("chembl", {}).get("data", {}).get("version") or "").split(" ")[-1]
@@ -1343,13 +1356,29 @@ def write_modalities() -> int:
 
 
 # ----------------------------------------------------------------------------- outputs, verify, query
-def write_outputs(entries, stats, links) -> None:
-    write_gz_jsonl(OUT_CATALOG, entries)
-    stats["catalog_file"] = {"path": "catalog.jsonl.gz", "sha256": sha256_file(OUT_CATALOG), "bytes": OUT_CATALOG.stat().st_size}
+def partial_path(p: Path) -> Path:
+    """catalog.jsonl.gz -> catalog.PARTIAL.jsonl.gz (a different name, so a partial can never be mistaken for, or overwrite, the complete file)."""
+    name = p.name
+    for ext in (".jsonl.gz", ".json"):
+        if name.endswith(ext):
+            return p.with_name(name[: -len(ext)] + ".PARTIAL" + ext)
+    return p.with_name(name + ".PARTIAL")
+
+
+def write_outputs(entries, stats, links, partial: bool = False) -> None:
+    """Everything is staged under *.stage first; only then moved over the targets, so a failure while computing
+    or writing leaves the previous valid outputs untouched."""
+    oc, ost, ol = (partial_path(p) for p in (OUT_CATALOG, OUT_STATS, OUT_LINKS)) if partial else (OUT_CATALOG, OUT_STATS, OUT_LINKS)
+    stage = lambda p: p.with_name(p.name + ".stage")  # noqa: E731
+    write_gz_jsonl(oc, entries, stage=stage(oc))
+    stats["catalog_file"] = {"path": oc.name, "sha256": sha256_file(stage(oc)), "bytes": stage(oc).stat().st_size}
     stats["card_links"] = {k: links[k] for k in ("cards_considered", "cards_with_at_least_one_link")} | {"unmatched": len(links["unmatched_cards"])}
-    stats["non_molecule_modalities_listed_separately"] = write_modalities()
-    OUT_STATS.write_text(json.dumps(stats, indent=1, ensure_ascii=False) + "\n")
-    OUT_LINKS.write_text(json.dumps(links, indent=1, ensure_ascii=False, sort_keys=True) + "\n")
+    if not partial:
+        stats["non_molecule_modalities_listed_separately"] = write_modalities()  # static, curator-declared file
+    stage(ost).write_text(json.dumps(stats, indent=1, ensure_ascii=False) + "\n")
+    stage(ol).write_text(json.dumps(links, indent=1, ensure_ascii=False, sort_keys=True) + "\n")
+    for p in (oc, ost, ol):
+        stage(p).replace(p)
 
 
 def reconcile(entries: list[dict], stats: dict) -> list[str]:
@@ -1365,15 +1394,133 @@ def reconcile(entries: list[dict], stats: dict) -> list[str]:
     return bad
 
 
+# ----------------------------------------------------------------------------- declared inputs
+# Files a build reads that the manifest does not hash: produced by `fetch` / `probe-dsld`, checked for presence only.
+AUX_INPUTS = (
+    ("chembl", "chembl/id_lookup.json", "fetch --only chembl", "entity type of CHEMBL ids named in cards; without it every card id stays UNRESOLVED and card_links.json differs"),
+    ("dgidb", "dgidb/live_sources.json", "fetch --only dgidb", "live DGIdb source versions for the dgidb_age block of the stats; without it that block loses its comparison"),
+)
+
+
+def root_cache_hint() -> Path | None:
+    """Inside .claude/worktrees/<name>/ the gitignored cache lives in the ROOT checkout: its location, if it exists."""
+    for p in HERE.parents:
+        if p.name == "worktrees" and p.parent.name == ".claude":
+            c = p.parent.parent / HERE.relative_to(next(q for q in HERE.parents if q.parent == p))
+            c = c / "cache"
+            return c if c.is_dir() else None
+    return None
+
+
+def required_inputs(manifest: dict) -> list[dict]:
+    """Every file the declared version (the manifest's last complete retrieval per source) needs, with its pin."""
+    out = []
+    for src, e in sorted(manifest["sources"].items()):
+        d = e.get("data")
+        if not d:
+            continue  # never retrieved: not part of the declared version
+        for f in d.get("files", []):
+            out.append({"source": src, "path": f["path"], "sha256": f.get("sha256"), "bytes": f.get("bytes"), "kind": "declared",
+                        "version": d.get("version"), "origin": f.get("url") or d.get("url") or "fetch",
+                        "how": "probe-dsld" if src == "dsld" else f"fetch --only {src}"})
+        for s2, rel, how, why in AUX_INPUTS:
+            if s2 == src:
+                out.append({"source": src, "path": rel, "sha256": None, "bytes": None, "kind": "auxiliary", "version": d.get("version"),
+                            "origin": "fetch", "how": how, "why": why})
+    return out
+
+
+def check_inputs(cache: Path, manifest: dict) -> list[dict]:
+    rows = required_inputs(manifest)
+    for r in rows:
+        p = cache / r["path"]
+        if not p.is_file():
+            r["status"] = "MISSING"
+        elif r["sha256"] and sha256_file(p) != r["sha256"]:
+            r["status"] = "HASH_MISMATCH"
+        else:
+            r["status"] = "OK" if r["sha256"] else "PRESENT_UNHASHED"
+    return rows
+
+
+def input_problems(rows: list[dict]) -> list[dict]:
+    return [r for r in rows if r["status"] in ("MISSING", "HASH_MISMATCH")]
+
+
+def explain_problems(rows: list[dict], cache: Path) -> str:
+    bad = input_problems(rows)
+    lines = [f"cache in use: {cache}", f"{len(bad)} required input(s) missing or not matching the declared version (cache_manifest.json):"]
+    for r in bad:
+        pin = f"sha256 {r['sha256'][:12]}..." if r["sha256"] else "presence only"
+        lines.append(f"  - {r['source']}: {r['path']}  [{r['status']}; declared {str(r['version'])[:48]}; {pin}]  get it: catalog_build.py {r['how']}")
+    hint = root_cache_hint()
+    lines.append("How to proceed:")
+    if hint and hint.resolve() != cache.resolve():
+        lines.append(f"  * this looks like a git worktree; the gitignored cache of the root checkout is {hint}\n"
+                     f"    run:  LEGEND_CATALOG_CACHE={hint} python3 -B catalog_build.py build")
+    lines.append("  * or restore the exact files from any cache that holds them (the sha256 pins them) and point LEGEND_CATALOG_CACHE at it")
+    lines.append("  * or re-download with the `fetch` command shown above (keyless public downloads): note that `fetch` retrieves what is served NOW;")
+    lines.append("    for sources served as 'latest' that may differ from the declared version, which then defines a new catalogue version")
+    lines.append("  * or build a declared-partial result kept apart from the complete one: catalog_build.py build --partial  (writes *.PARTIAL.* only)")
+    lines.append("Nothing was written; the existing catalog.jsonl.gz, catalog_stats.json and card_links.json are untouched.")
+    return "\n".join(lines)
+
+
+def cmd_inputs(_a) -> int:
+    m = load_manifest()
+    rows = check_inputs(CACHE, m)
+    print(f"cache: {CACHE}  (override: LEGEND_CATALOG_CACHE)")
+    hint = root_cache_hint()
+    if hint:
+        print(f"worktree detected; root-checkout cache: {hint}")
+    for r in rows:
+        pin = (r["sha256"] or "-")[:12]
+        print(f"{r['status']:<16} {r['source']:<12} {r['path']:<44} {pin:<12} {r['kind']:<9} acquire: catalog_build.py {r['how']}")
+    bad = input_problems(rows)
+    print("COMPLETE: the cache reproduces the declared version" if not bad else "INCOMPLETE:\n" + explain_problems(rows, CACHE))
+    return 1 if bad else 0
+
+
 def cmd_build(args) -> int:
-    entries, stats = build_catalog()
+    m = load_manifest()
+    rows = check_inputs(CACHE, m)
+    bad = input_problems(rows)
+    partial = bool(getattr(args, "partial", False))
+    check = bool(getattr(args, "check", False))
+    if bad and (check or not partial):
+        print("BUILD REFUSED: " + explain_problems(rows, CACHE), file=sys.stderr)
+        return 3
+    exclude = {r["source"]: f"{r['path']}: {r['status']}" for r in bad if r["kind"] == "declared"}
+    if "chembl" in exclude:
+        print("BUILD REFUSED even as partial: the ChEMBL backbone is not usable.\n" + explain_problems(rows, CACHE), file=sys.stderr)
+        return 3
+    entries, stats = build_catalog(exclude=exclude)
     links = cmd_cards(entries)
-    bad = reconcile(entries, stats)
-    write_outputs(entries, stats, links)
-    print(json.dumps({k: stats[k] for k in ("entries_total", "by_origin", "by_status_class", "access_signature_sums_to_total")}, indent=1))
-    if bad:
-        print("RECONCILIATION FAILED:", bad, file=sys.stderr)
+    badrec = reconcile(entries, stats)
+    if badrec:
+        print("RECONCILIATION FAILED, nothing written:", badrec, file=sys.stderr)
         return 2
+    if partial and bad:
+        stats["PARTIAL_BUILD"] = {"declared": "this output was built from an incomplete cache and is NOT equivalent to catalog.jsonl.gz",
+                                  "missing_or_mismatching_inputs": [{k: r[k] for k in ("source", "path", "status", "kind")} for r in bad],
+                                  "sources_excluded": sorted(exclude)}
+    if check:
+        tmp = Path(tempfile.mkdtemp(prefix="catalog_check_")) / "catalog.jsonl.gz"
+        got = None
+        try:
+            write_gz_jsonl(tmp, entries)
+            got = sha256_file(tmp)
+        finally:
+            tmp.unlink(missing_ok=True)
+            tmp.parent.rmdir()
+        want = sha256_file(OUT_CATALOG) if OUT_CATALOG.exists() else None
+        print(f"rebuilt  catalog.jsonl.gz sha256 {got}\ncommitted catalog.jsonl.gz sha256 {want}")
+        print("MATCH: byte-identical" if got == want else "DIFFER: the rebuild is not byte-identical to the committed file")
+        return 0 if got == want else 4
+    write_outputs(entries, stats, links, partial=partial and bool(bad))
+    print(json.dumps({k: stats[k] for k in ("entries_total", "by_origin", "by_status_class", "access_signature_sums_to_total")}, indent=1))
+    if partial and bad:
+        print("PARTIAL build written as *.PARTIAL.* (sources excluded: " + ", ".join(sorted(exclude)) + "); catalog.jsonl.gz untouched", file=sys.stderr)
     return 0
 
 
@@ -1407,7 +1554,10 @@ def main(argv=None) -> int:
     p.add_argument("--limit", type=int)
     p.add_argument("--refresh", action="store_true")
     p.add_argument("--retry-errors", action="store_true", help="re-query only the names whose latest probe errored")
-    sub.add_parser("build")
+    sub.add_parser("inputs")
+    b = sub.add_parser("build")
+    b.add_argument("--partial", action="store_true", help="if inputs are missing, write a declared-partial result as *.PARTIAL.* files instead of refusing")
+    b.add_argument("--check", action="store_true", help="rebuild in memory, write nothing, compare with the committed catalog.jsonl.gz")
     al = sub.add_parser("all")
     al.add_argument("--refresh", action="store_true")
     sub.add_parser("verify")
@@ -1421,6 +1571,8 @@ def main(argv=None) -> int:
         return cmd_fetch(a)
     if a.cmd == "probe-dsld":
         return cmd_probe(a)
+    if a.cmd == "inputs":
+        return cmd_inputs(a)
     if a.cmd == "build":
         return cmd_build(a)
     if a.cmd == "all":
