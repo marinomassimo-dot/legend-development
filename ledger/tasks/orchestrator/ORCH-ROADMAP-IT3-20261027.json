@@ -8,7 +8,7 @@
  "START_UTC": "2026-10-27T18:00:00Z",
  "BASELINE": "ea16c3b6 = development/main (verified equal after fetch), 878 receipts",
  "AUTHORISED_QUEUE_20261027B": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_PH1": {
    "order": 1,
    "steps": [
@@ -101,8 +101,9 @@
    "steps": [
     {
      "step": "Battery on final SHA, integration, push, cleanup, final report",
-     "status": "IN_PROGRESS",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "battery on c2218fec: PASS WITH SKIPS (161 targets, 7 skipped; first run on 1ec68db2 FAIL on 3 suites = README command-flags guard, bare unittest.main, consequent surface-determinism; fixed). Record-only commit after that SHA."
     }
    ]
   }
