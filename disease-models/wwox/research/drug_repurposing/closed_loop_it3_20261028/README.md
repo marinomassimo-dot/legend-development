@@ -8,9 +8,9 @@ The loop exercised: study or question -> qualified observation -> need (`needs/n
 ## Case a - a compound with no card, entered from the reverse path <a id="case-a"></a>
 
 **Question.** Is the one drug result of `NEED-T-TYPE-CALCIUM` (ethosuximide suppresses the late phase of the PTZ score in the Wwox-null mouse only, one experiment, no interaction test) mediated by T-type channels?
-**Entry.** `repurposing_search.py compound apinocaltamide` (no card, no record names it). Chosen by informational value, not annotation count: among the 201 consistent candidates it is the one that is structurally unrelated to ethosuximide, brain-penetrant by the sponsor's description, a three-subtype blocker and a clinical candidate, so it can split "T-type" from "ethosuximide-specific". Mibefradil (withdrawn, non-selective), ABT-639 (peripheral-pain programme, CACNA1H only) and the other ethosuximide-class succinimides add less.
+**Entry.** `repurposing_search.py compound apinocaltamide` (no card, no record names it). Chosen by informational value, not annotation count: it is structurally unrelated to ethosuximide, described by its sponsor as brain-penetrant, a three-subtype blocker and a clinical candidate, so it can help split "T-type" from "ethosuximide-specific". It is not claimed to be the only such compound. Set aside, with the reason: suvecaltamide (ChEMBL action MODULATOR, not BLOCKER, so the direction is unresolved); Z944 / ulixacaltamide (clinical, but the ChEMBL record has no mechanism row and it is reached only through DGIdb; it has an independent academic literature, so it is a reasonable second arm); TTA-A2 and ML218 (research tools, DGIdb only); mibefradil (withdrawn, non-selective); ABT-639 (CACNA1H only); the other succinimides (same class as ethosuximide, so no independent split). Access and independence were not established for any of them, so these are choices of ordering, not exclusions.
 **Catalogue returned.** ChEMBL curated mechanism: T-type blocker on CACNA1G/H/I (reference ids PubMed 29116786, 31004346), max phase 2, no approval statement. A DGIdb-only record repeats the same three targets from the same ChEMBL claim (not an independent confirmation). Failures: the ChEMBL records for ulixacaltamide (Z944) and for mibefradil (parent) carry no mechanism row; Z944 reaches the need only through a DGIdb record that also lists unrelated V-ATPase "blocker" rows. A catalogue gap, not a negative.
-**Literature (abstract level only).** PubMed abstracts 29116786 (discovery), 31004346 and 31994022 (healthy-adult phase 1, tolerability), 40165594 (rodent: absence-type discharges suppressed; generalized convulsive tests reduced at higher concentration; no effect on focal-onset kindling), 38605177 (cryo-EM of Cav3.2 binding). All sponsor-affiliated except the structure paper.
+**Literature (abstract level only).** PubMed abstracts 29116786 (discovery), 31004346 and 31994022 (healthy-volunteer phase 1, tolerability), 40165594 (rodent: absence-type discharges suppressed; generalized convulsive tests reduced at higher concentration; no effect on focal-onset kindling), 38605177 (cryo-EM of Cav3.2 binding). All sponsor-affiliated except the structure paper (Cav3.2 only).
 **Decision: candidate, mechanism-level discriminator only** (not a treatment proposal). Card `cards/H01_apinocaltamide_ttype.packet.json` (+ `.card.json`, `check_cards.py` passes), identity declared in `catalog/card_identity_declarations.tsv`.
 **Why.** The class-level cortical-progenitor viability signal for T-type blockers (Kim 2018, read in the R2 note, carried from `cards_early/EB-ETX-01`) is on the card as counter-evidence, because the intended population is developing.
 **Reopening / closing.** Closes if a same-day-controlled null-pup assay with measured exposure fails to reproduce the effect; weakens if full texts show no brain exposure.
@@ -32,7 +32,7 @@ Side effect on coverage: exploration candidates rose from 393 to 398 (the five a
 
 ## The queue now consumes the result
 
-`repurposing_join.py` gained `catalogue_leads()` / `render_catalogue_leads()` and a `Catalogue-derived leads` section in `handoff` (card-attached coverage pairs with a mechanism-candidate, exploration, opposite or no-result disposition, plus `coverage/lead_dispositions.json`, validated: required fields, decision vocabulary, need exists). Five regressions in `test_repurposing_join.py` (class `CatalogueLeadsTest`).
+`repurposing_join.py` gained `catalogue_leads()` / `render_catalogue_leads()` and a `Catalogue-derived leads` section in `handoff` (revised after the independent audit: a card may restrict the needs it is listed for with a top-level `leads_needs`, which H01 uses to drop the seizure-control pair it disclaims; card rows carry a Next act and Who column, "no next measurement defined" instead of UNKNOWN; an invalid or inconsistent disposition file is reported as problems, with card paths, catalogue ids and id uniqueness validated; nothing is truncated) (card-attached coverage pairs with a mechanism-candidate, exploration, opposite or no-result disposition, plus `coverage/lead_dispositions.json`, validated: required fields, decision vocabulary, need exists). Five regressions in `test_repurposing_join.py` (class `CatalogueLeadsTest`).
 - Before: `join run` reports 28 cards, 0 changed; the new card H01 is invisible to the queue because no mechanism-map record names it (the handoff of the same date rendered before the change: 28 rows, no catalogue content).
 - After: `repurposing_batch_selection_20261028_module.md` carries the same 28 rows plus a section with 10 card-attached pairs (ethosuximide, vigabatrin, memantine, perampanel, dichloroacetate, lithium, apinocaltamide) and five dispositions LD-001..LD-005, each with owner, reopening condition and next experiment. Rows with L3/L4 "observed" for memantine, perampanel, dichloroacetate and lithium inherit the over-claim the audit found and must be re-read after the correction lands.
 
@@ -42,16 +42,16 @@ None was linked. Checked against the catalogue where it could help: Q-N-07 (digo
 
 ## WWOX-value observations (observations, not a benchmark)
 
-| Observation | Artefact |
-|---|---|
-| Counter-evidence retrieved: a class-level developing-cortex viability signal for T-type blockers, from the repository's own earlier reading, attached to a new compound that has none of its own | `cards/H01_apinocaltamide_ttype.packet.json` DR-H01-004 |
-| Candidate reinterpreted as a discriminator, new discriminating question: apinocaltamide is useful because it could show whether ethosuximide's null-specific effect is T-type mediated | LD-001, card `next_measurement` |
-| Wrong transfer avoided: five approved antipsychotics appear as GCN2 "hits" but are PharmGKB associations with unknown interaction type | LD-004 |
-| Direction not assumed: genetic suppression of GCN2 in a fly does not give a drug direction for a need whose direction is uncertain | needs.json O5 limits; LD-004 |
-| New discriminating question: which ISR kinase (GCN2 versus PERK) is engaged; it changes which lever card E01 should test | LD-004 |
-| False "opposite" avoided: adenosine / regadenoson flagged opposed through one ligand-database row | LD-003 |
-| Loop gap found: the need omitted GCN2, so the forward search was blind to it until the observation was written in | needs.json diff |
-| Work saved: not measurable here; no advantage observed claimed | - |
+| Observation (stated and recorded, not discovered) | Artefact | Prior art |
+|---|---|---|
+| Counter-evidence carried onto a new compound by hand: the developing-cortex viability signal (Cav3.1-dependent, other compounds) | `cards/H01_apinocaltamide_ttype.packet.json` DR-H01-004 and 'against' | earlier ethosuximide packet A-ETX-3; nothing in the loop retrieves it automatically |
+| A two-blocker arm for the ethosuximide result is proposed; the question itself (is it T-type mediated) is not new | LD-001, card `next_measurement` | needs audit C10 and the need's own limits |
+| The five antipsychotic "GCN2 hits" are recorded with the reason they are associations | LD-004 | the coverage layer already flagged them exploration-only, direction unresolved |
+| Genetic GCN2 suppression is recorded as giving no drug direction | needs.json O5 limits; LD-004 | the need's direction was already uncertain |
+| The GCN2 versus PERK kinase question is restated for the ISR need | LD-004 | card E01 already asks for phospho-GCN2 and phospho-PERK separately |
+| The adenosine / regadenoson "opposed" flag is recorded as a source artefact | LD-003 | the coordinator's audit reached it first; this is confirmation |
+| Loop gap found and closed: the need omitted GCN2, so the forward search could not return it | needs.json diff | - |
+| Work saved | - | no advantage observed claimed |
 
 ## What was not read, and what was not verified
 

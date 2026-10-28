@@ -680,7 +680,7 @@ class CatalogueLeadsTest(unittest.TestCase):
         cov.mkdir()
         cards.mkdir()
         (cov / "coverage_matrix.json").write_text(json.dumps({"rows": [
-            {"row_id": "FAM:A", "cards": [{"card_id": "H99_x"}]}, {"row_id": "FAM:B", "cards": []}]}))
+            {"row_id": "FAM:A", "representative": "CAT:A", "cards": [{"card_id": "H99_x"}]}, {"row_id": "FAM:B", "representative": "CAT:B", "cards": []}]}))
         lev = {"L1": "documented", "L2": "coherent", "L3": "none", "L4": "none"}
         pr = lambda row, disp: {"row_id": row, "name": row, "need": "NEED-X", "disposition": disp, "levels": lev}
         (cov / "priorities.json").write_text(json.dumps({"priorities": [
@@ -701,6 +701,38 @@ class CatalogueLeadsTest(unittest.TestCase):
             leads = rj.catalogue_leads(cov, Path(d) / "cards")
         self.assertEqual([(r["card"], r["disposition"], r["next_measurement"]) for r in leads["cards"]],
                          [("H99_x", "consistent_mechanism_candidate", "the discriminating assay")])
+        self.assertEqual(leads["cards"][0]["owner"], "Scientist (card owner)")
+
+    def test_card_without_next_measurement_names_who_must_define_it(self):
+        with tempfile.TemporaryDirectory() as d:
+            cov = self.build(Path(d), [])
+            (Path(d) / "cards" / "H99_x.packet.json").write_text(json.dumps({"p4_card": {}}))
+            row = rj.catalogue_leads(cov, Path(d) / "cards")["cards"][0]
+        self.assertEqual(row["next_measurement"], "no next measurement defined")
+        self.assertIn("must define", row["owner"])
+
+    def test_leads_needs_omits_the_pairs_a_card_disclaims(self):
+        with tempfile.TemporaryDirectory() as d:
+            cov = self.build(Path(d), [])
+            (Path(d) / "cards" / "H99_x.packet.json").write_text(json.dumps({"leads_needs": ["NEED-OTHER"], "p4_card": {"next_measurement": "m"}}))
+            self.assertEqual(rj.catalogue_leads(cov, Path(d) / "cards")["cards"], [])
+
+    def test_invalid_file_duplicate_ids_bad_card_and_unknown_catalogue_id_are_reported(self):
+        with tempfile.TemporaryDirectory() as d:
+            cov = self.build(Path(d), [self.disp(), self.disp(), self.disp(id="LD-C", card="cards/NOPE.packet.json", catalogue_ids=["CAT:ZZZ"])])
+            problems = " | ".join(rj.catalogue_leads(cov, Path(d) / "cards")["problems"])
+            (cov / "lead_dispositions.json").write_text("{not json")
+            broken = rj.catalogue_leads(cov, Path(d) / "cards")
+        self.assertIn("duplicate id", problems)
+        self.assertIn("card path", problems)
+        self.assertIn("catalogue ids not in the coverage matrix", problems)
+        self.assertTrue(any("invalid" in p for p in broken["problems"]))
+
+    def test_long_text_is_not_truncated(self):
+        with tempfile.TemporaryDirectory() as d:
+            cov = self.build(Path(d), [self.disp(why="w" * 500)])
+            text = rj.render_handoff([], "2026-01-01", "all", None, rj.catalogue_leads(cov, Path(d) / "cards"))
+        self.assertIn("w" * 500, text)
 
     def test_dispositions_render_with_reopening_and_next_experiment(self):
         with tempfile.TemporaryDirectory() as d:
@@ -727,6 +759,7 @@ class CatalogueLeadsTest(unittest.TestCase):
         leads = rj.catalogue_leads()
         self.assertEqual(leads["problems"], [])
         self.assertTrue(any(r["decision"] == "candidate" for r in leads["dispositions"]))
+        self.assertFalse([r for r in leads["cards"] if r["card"].startswith("H01") and r["need"] != "NEED-T-TYPE-CALCIUM"])
 
 
 if __name__ == "__main__":

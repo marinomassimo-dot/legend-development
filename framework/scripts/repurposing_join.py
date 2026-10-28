@@ -1307,58 +1307,104 @@ def catalogue_leads(coverage_dir: Path | None = None, cards_dir: Path | None = N
 
     Two kinds, both limited to something a Scientist can act on: (1) `cards`: coverage priority pairs whose compound family has a
     curated card attached and whose disposition is a mechanism candidate, an exploration or an opposite (a pair with no card is
-    not listed: there are hundreds and no decisive step); (2) `dispositions`: reasoned endings recorded in
+    not listed: there are hundreds and no decisive step). Rule: a card may declare a top-level `leads_needs` list in its packet;
+    pairs for any other need are then omitted (the card disclaims them). A card without a stated next measurement is listed with
+    "no next measurement defined" and the card's author as owner. (2) `dispositions`: reasoned endings recorded in
     coverage/lead_dispositions.json (candidate, abstention, opposite mechanism, insufficient), each with a reopening condition and
-    a next experiment. Nothing is scored or ordered by evidence volume. Missing files give empty lists, never an error."""
+    a next experiment. Nothing is scored or ordered by evidence volume, and no text is truncated. Invalid input is reported in
+    `problems`, never raised."""
     cov = coverage_dir or (MODEL / "research" / "drug_repurposing" / "coverage")
     folders = [cards_dir] if cards_dir else [CURATED_CARDS, CURATED_CARDS_EARLY]
     out = {"cards": [], "dispositions": [], "problems": []}
     try:
         matrix = json.loads((cov / "coverage_matrix.json").read_text(encoding="utf-8"))["rows"]
         priorities = json.loads((cov / "priorities.json").read_text(encoding="utf-8"))["priorities"]
-    except (OSError, KeyError, ValueError):
+    except (OSError, KeyError, ValueError) as exc:
         matrix, priorities = [], []
+        if (cov / "priorities.json").exists() or (cov / "coverage_matrix.json").exists():
+            out["problems"].append(f"coverage files unreadable: {type(exc).__name__}: {exc}")
     attached = {r["row_id"]: [c["card_id"] for c in r.get("cards") or []] for r in matrix}
+    catalogue_ids = {r.get("representative") for r in matrix} | {r["row_id"] for r in matrix}
+
+    def packet(card_id: str) -> dict | None:
+        for folder in folders:
+            path = folder / f"{card_id}.packet.json"
+            if path.exists():
+                return json.loads(path.read_text(encoding="utf-8"))
+        return None
+
     for pr in priorities:
         if pr["disposition"] not in LEAD_AUTO_DISPOSITIONS:
             continue
         for card_id in attached.get(pr["row_id"], []):
-            nxt = ""
-            for folder in folders:
-                path = folder / f"{card_id}.packet.json"
-                if path.exists():
-                    nxt = (json.loads(path.read_text(encoding="utf-8")).get("p4_card") or {}).get("next_measurement", "")
-                    break
+            pk = packet(card_id) or {}
+            if pk.get("leads_needs") and pr["need"] not in pk["leads_needs"]:
+                continue
+            nxt = (pk.get("p4_card") or {}).get("next_measurement")
             out["cards"].append({"card": card_id, "compound": pr["name"], "need": pr["need"], "disposition": pr["disposition"],
-                                 "levels": "/".join(str(v) for v in pr["levels"].values()), "next_measurement": nxt or "UNKNOWN"})
+                                 "levels": "/".join(str(v) for v in pr["levels"].values()),
+                                 "next_measurement": nxt or "no next measurement defined",
+                                 "owner": "Scientist (card owner)" if nxt else "the card's author must define a next measurement"})
     out["cards"].sort(key=lambda r: (r["card"], r["need"], r["compound"]))
     path = cov / "lead_dispositions.json"
     if path.exists():
-        rows = json.loads(path.read_text(encoding="utf-8")).get("dispositions", [])
-        known = {p["need"] for p in priorities}
+        try:
+            rows = json.loads(path.read_text(encoding="utf-8")).get("dispositions", [])
+            if not isinstance(rows, list):
+                raise ValueError("'dispositions' is not a list")
+        except (OSError, ValueError, AttributeError) as exc:
+            out["problems"].append(f"lead_dispositions.json invalid: {type(exc).__name__}: {exc}")
+            rows = []
+        known = {p["need"] for p in priorities} | set(_need_ids(cov))
+        seen: set[str] = set()
         for r in rows:
-            missing = [f for f in LEAD_FIELDS if f not in r or (r[f] in ("", None))]
+            if not isinstance(r, dict):
+                out["problems"].append(f"disposition is not an object: {str(r)[:60]}")
+                continue
+            rid = r.get("id", "?")
+            if rid in seen:
+                out["problems"].append(f"{rid}: duplicate id")
+            seen.add(rid)
+            missing = [f for f in LEAD_FIELDS if f not in r or (r[f] in ("", None) and f != "catalogue_ids")]
             if missing:
-                out["problems"].append(f"{r.get('id', '?')}: missing {missing}")
-            elif r["decision"] not in LEAD_DECISIONS:
-                out["problems"].append(f"{r['id']}: decision {r['decision']!r} outside {list(LEAD_DECISIONS)}")
-            elif known and r["need"] not in known:
-                out["problems"].append(f"{r['id']}: need {r['need']} is not a need of the coverage layer")
-        out["dispositions"] = rows
+                out["problems"].append(f"{rid}: missing {missing}")
+                continue
+            if r["decision"] not in LEAD_DECISIONS:
+                out["problems"].append(f"{rid}: decision {r['decision']!r} outside {list(LEAD_DECISIONS)}")
+            if known and r["need"] not in known:
+                out["problems"].append(f"{rid}: need {r['need']} is not a need of the coverage layer")
+            if not isinstance(r["catalogue_ids"], list):
+                out["problems"].append(f"{rid}: catalogue_ids is not a list")
+            elif catalogue_ids - {None} and [c for c in r["catalogue_ids"] if c not in catalogue_ids and f"FAM:{c}" not in catalogue_ids]:
+                bad = [c for c in r["catalogue_ids"] if c not in catalogue_ids and f"FAM:{c}" not in catalogue_ids]
+                out["problems"].append(f"{rid}: catalogue ids not in the coverage matrix: {bad}")
+            if r.get("card"):
+                rel = str(r["card"]).replace("cards/", "").replace("cards_early/", "")
+                if not any((fo / rel).exists() for fo in folders):
+                    out["problems"].append(f"{rid}: card path {r['card']} not found")
+        out["dispositions"] = [r for r in rows if isinstance(r, dict)]
     return out
 
 
+def _need_ids(cov: Path) -> list[str]:
+    try:
+        return [n["id"] for n in json.loads((cov.parent / "needs" / "needs.json").read_text(encoding="utf-8"))["needs"]]
+    except (OSError, KeyError, ValueError):
+        return []
+
+
 def render_catalogue_leads(leads: dict) -> list[str]:
-    if not (leads.get("cards") or leads.get("dispositions")):
+    if not (leads.get("cards") or leads.get("dispositions") or leads.get("problems")):
         return []
     lines = ["## Catalogue-derived leads (from coverage/ and lead_dispositions.json; not from the mechanism map)", "",
              "A catalogue link is a source statement, not a recommendation; the levels are never summed. First table: coverage pairs "
-             "whose compound has a curated card. Second: reasoned endings of searches, including abstentions and opposite mechanisms, "
-             "each with what would reopen it and the next discriminating experiment. Not medical advice.", ""]
+             "whose compound has a curated card (a card may restrict the needs it is listed for via `leads_needs`). Second: reasoned "
+             "endings of searches, including abstentions and opposite mechanisms, each with what would reopen it and the next "
+             "discriminating experiment. Not medical advice.", ""]
     if leads["cards"]:
-        lines += ["| Card | Compound | Need | Disposition | L1/L2/L3/L4 | Card's next measurement |", "|---|---|---|---|---|---|"]
+        lines += ["| Card | Compound | Need | Disposition | L1/L2/L3/L4 | Next act | Who |", "|---|---|---|---|---|---|---|"]
         for r in leads["cards"]:
-            lines.append(f"| {r['card']} | {r['compound'][:40]} | {r['need']} | {r['disposition']} | {r['levels']} | {r['next_measurement'][:160]} |")
+            lines.append(f"| {r['card']} | {r['compound']} | {r['need']} | {r['disposition']} | {r['levels']} | {r['next_measurement']} | {r['owner']} |")
         lines.append("")
     if leads["dispositions"]:
         lines += ["| Id | Need | Subject | Decision | Why | Reopen if | Next experiment | Who | Card |", "|---|---|---|---|---|---|---|---|---|"]
