@@ -376,6 +376,231 @@ class OfflineBuildAndHook(Base):
         self.assertEqual(cc.find(entries, access="supplement"), [])  # no evidence is an empty list, not a negative claim
 
 
+class LigandReconciliation(Base):
+    """DGIdb-only records with an IUPHAR ligand id -> GtoPdb ligand -> ChEMBL id -> ChEMBL record.  Identifiers and structure decide, never a name."""
+
+    LIG_COLS = ["Ligand ID", "Name", "Species", "Type", "Approved", "Withdrawn", "Labelled", "Radioactive", "ChEMBL ID", "InChIKey"]
+
+    def world(self, mols, ligands, drugs, lookup=None, ligands_file=True):
+        """ligands = [(id, name, chembl, inchikey, {extra column: value})]; drugs = [(drug_name, [ligand ids], extra concept ids)]"""
+        self.chembl(mols)
+        d = self.cache / "gtopdb"
+        d.mkdir(parents=True, exist_ok=True)
+        for f, hdr in (("targets_and_families.csv", ["Type", "Family id", "Target id", "Subunit id", "Target name", "HGNC id", "HGNC symbol"]),
+                       ("interactions.csv", ["Target ID", "Target Species", "Ligand ID", "Type", "Selectivity", "Primary Target"])):
+            with open(d / f, "w", newline="", encoding="utf-8") as fh:
+                w = csv.writer(fh)
+                w.writerow(["# GtoPdb Version: T"])
+                w.writerow(hdr)
+        if ligands_file:
+            with open(d / "ligands.csv", "w", newline="", encoding="utf-8") as fh:
+                w = csv.writer(fh)
+                w.writerow(["# GtoPdb Version: T"])
+                w.writerow(self.LIG_COLS)
+                for lid, name, ch, ik, extra in ligands:
+                    row = {"Ligand ID": lid, "Name": name, "Type": "Synthetic organic", "ChEMBL ID": ch, "InChIKey": ik} | extra
+                    w.writerow([row.get(c, "") for c in self.LIG_COLS])
+        if lookup is not None:
+            (self.cache / cb.GTOPDB_REF_LOOKUP).write_text(json.dumps({"status_by_id": lookup}))
+        self.src("gtopdb", "T")
+        rows = []
+        for name, lids, extra in drugs:
+            for lid in lids:
+                rows.append([name, "n", f"iuphar.ligand:{lid}", name, "FALSE", "FALSE", "FALSE", "GuideToPharmacology", "2024.1"])
+            for c in extra:
+                rows.append([name, "n", c, name, "FALSE", "FALSE", "FALSE", "DrugBank", "5"])
+        self.dgidb(rows)
+        self.write_manifest()
+        return self.build()
+
+    @staticmethod
+    def m(cid, name, ik, parent=None, **kw):
+        r = mol(cid, name, 4.0, parent=parent, ik=ik)
+        r.update(kw)
+        return r
+
+    def rels(self, entries):
+        return {e["ids"]["dgidb_drug_name"]: e["relations"] for e in entries if e["origin"] == "dgidb_only"}
+
+    def dec(self, entries):
+        return {k: [(r["ligand_id"], r["decision"], r["reason"]) for r in v.get("gtopdb_reconciliation", [])] for k, v in self.rels(entries).items()}
+
+    def test_merge_on_equal_inchikey_keeps_the_record_and_adds_a_tagged_relation(self):
+        K = "AAAAAAAAAAAAAA-BBBBBBBBSA-N"
+        entries, stats = self.world([self.m("CHEMBL1", "Drugine", K)], [("11", "Drugine", "CHEMBL1", K, {})], [("DRUGINE-X", ["11"], [])])
+        by = {e["id"]: e for e in entries}
+        rec = [e for e in entries if e["origin"] == "dgidb_only"][0]
+        self.assertEqual(len(entries), 2)                                       # nothing fused or deleted
+        self.assertEqual(rec["relations"]["reconciled_via"], "gtopdb_ligand_chembl_ref")
+        self.assertEqual(rec["relations"]["family_join"], ["CAT:CHEMBL1"])
+        self.assertEqual(by["CAT:CHEMBL1"]["relations"]["reconciled_source_records"], [rec["id"]])
+        r = rec["relations"]["gtopdb_reconciliation"][0]
+        self.assertEqual((r["decision"], r["chembl_ref"], r["source_tag"]), ("merged", "CHEMBL1", "gtopdb_ligand_chembl_ref"))
+        self.assertIn("share-alike", r["terms"]["chembl"] + r["terms"]["gtopdb"])  # licence terms travel with the relation
+        self.assertIn("GtoPdb Version: T", r["asserted_by"]["chembl_ref"])
+        self.assertEqual(stats["gtopdb_ligand_reconciliation"]["decisions_all_pairs_with_a_relation"]["merged"], 1)
+        self.assertEqual(stats["merge_report"]["entries_merged_away"], 0)
+
+    def test_family_follows_a_merged_relation_only(self):
+        sys.path.insert(0, str(HERE.parents[4] / "framework/scripts"))
+        import repurposing_search as rs  # noqa: PLC0415
+        K, K2 = "AAAAAAAAAAAAAA-BBBBBBBBSA-N", "CCCCCCCCCCCCCC-BBBBBBBBSA-N"
+        entries, _ = self.world([self.m("CHEMBL1", "Drugine", K), self.m("CHEMBL2", "Other", K2)],
+                                [("11", "Drugine", "CHEMBL1", K, {}), ("12", "Other", "CHEMBL2", "CCCCCCCCCCCCCC-DDDDDDDDSA-N", {})],
+                                [("DRUGINE-X", ["11"], []), ("OTHER-X", ["12"], [])])
+        fam = rs.families(entries)
+        ids = {e["ids"]["dgidb_drug_name"]: e["id"] for e in entries if e["origin"] == "dgidb_only"}
+        self.assertEqual(fam[ids["DRUGINE-X"]], fam["CAT:CHEMBL1"])
+        self.assertNotEqual(fam[ids["OTHER-X"]], fam["CAT:CHEMBL2"])             # related_not_merged: relation kept, family not joined
+        self.assertEqual(self.dec(entries)["OTHER-X"][0][1], "related_not_merged")
+
+    def test_parent_and_salt_forms(self):
+        P, S = "AAAAAAAAAAAAAA-BBBBBBBBSA-N", "ZZZZZZZZZZZZZZ-BBBBBBBBSA-M"
+        mols = [self.m("CHEMBL10", "Drugine", P), self.m("CHEMBL11", "Drugine sodium", S, parent="CHEMBL10")]
+        entries, _ = self.world(mols, [("1", "d parent", "CHEMBL10", P, {}), ("2", "d salt as given", "CHEMBL11", S, {}), ("3", "d parent id on a salt ref", "CHEMBL11", P, {})],
+                                [("D-PARENT", ["1"], []), ("D-SALT", ["2"], []), ("D-AMBIGUOUS", ["3"], [])])
+        d = self.dec(entries)
+        self.assertEqual(d["D-PARENT"][0][1:], ("merged", "full_inchikey_equal"))
+        self.assertEqual(d["D-SALT"][0][1:], ("merged", "full_inchikey_equal"))   # the salt record itself, by its own key
+        self.assertEqual(d["D-AMBIGUOUS"][0][1], "related_not_merged")            # structure of the parent, reference to the salt: form not settled
+        self.assertIn("parent_form", d["D-AMBIGUOUS"][0][2])
+
+    def test_stereoisomer_racemate_and_undefined_stereo_are_not_merged(self):
+        K = "AAAAAAAAAAAAAA-BBBBBBBBSA-N"
+        entries, _ = self.world([self.m("CHEMBL20", "Single enantiomer", K)],
+                                [("21", "other enantiomer", "CHEMBL20", "AAAAAAAAAAAAAA-CCCCCCCCSA-N", {}), ("22", "racemate or flat drawing", "CHEMBL20", "AAAAAAAAAAAAAA-UHFFFAOYSA-N", {}),
+                                 ("23", "protonated form", "CHEMBL20", "AAAAAAAAAAAAAA-BBBBBBBBSA-M", {})],
+                                [("ENANTIOMER", ["21"], []), ("RACEMATE", ["22"], []), ("CHARGE", ["23"], [])])
+        d = self.dec(entries)
+        self.assertEqual(d["ENANTIOMER"][0][1:], ("related_not_merged", "stereoisomers_or_isotopologues_differ"))
+        self.assertEqual(d["RACEMATE"][0][1:], ("related_not_merged", "stereo_or_isotopes_undefined_in_gtopdb_defined_in_chembl"))
+        self.assertEqual(d["CHARGE"][0][1], "related_not_merged")
+        self.assertFalse(any("family_join" in v for v in self.rels(entries).values()))
+
+    def test_one_to_many_in_both_directions(self):
+        K, K2 = "AAAAAAAAAAAAAA-BBBBBBBBSA-N", "CCCCCCCCCCCCCC-BBBBBBBBSA-N"
+        mols = [self.m("CHEMBL1", "One", K), self.m("CHEMBL2", "Two", K2)]
+        lig = [("1", "a", "CHEMBL1", K, {}), ("2", "b", "CHEMBL1", K, {}), ("3", "c", "CHEMBL1", K, {"Radioactive": "yes"}), ("4", "d", "CHEMBL2", K2, {})]
+        entries, stats = self.world(mols, lig, [("MANY-A", ["1"], []), ("MANY-B", ["2"], []), ("LABELLED", ["3"], []), ("BRIDGE", ["1", "4"], [])])
+        d = self.dec(entries)
+        self.assertEqual(d["MANY-A"][0][1], "merged")
+        self.assertEqual(d["MANY-B"][0][1], "merged")                            # several ligands -> one ChEMBL id: each decided on its own structure
+        self.assertEqual(d["LABELLED"][0][2], "labelled_or_radioactive_form_of_the_ligand")
+        ev = [e for e in entries if e["ids"].get("dgidb_drug_name") == "MANY-A"][0]["relations"]["gtopdb_reconciliation"][0]["evidence"]
+        self.assertEqual(ev["gtopdb_ligands_sharing_this_chembl_ref"], 3)
+        self.assertEqual({x[1:] for x in d["BRIDGE"]}, {("unresolved", "one_dgidb_record_would_join_several_chembl_families")})   # one record, two families
+        self.assertNotIn("family_join", self.rels(entries)["BRIDGE"])
+        self.assertEqual(stats["gtopdb_ligand_reconciliation"]["records_refused_for_bridging_several_chembl_families"], 1)
+
+    def test_one_record_with_two_ligands_in_one_family_is_not_a_bridge(self):
+        P, S = "AAAAAAAAAAAAAA-BBBBBBBBSA-N", "ZZZZZZZZZZZZZZ-BBBBBBBBSA-M"
+        mols = [self.m("CHEMBL10", "Drugine", P), self.m("CHEMBL11", "Drugine sodium", S, parent="CHEMBL10")]
+        entries, _ = self.world(mols, [("1", "p", "CHEMBL10", P, {}), ("2", "s", "CHEMBL11", S, {})], [("BOTH", ["1", "2"], [])])
+        self.assertEqual(self.rels(entries)["BOTH"]["family_join"], ["CAT:CHEMBL10", "CAT:CHEMBL11"])
+
+    def test_chembl_id_outside_the_selection_is_kept_as_a_reference_not_dropped(self):
+        K = "AAAAAAAAAAAAAA-BBBBBBBBSA-N"
+        lookup = {"CHEMBL900": {"entity_type": "COMPOUND", "status": "ACTIVE"}, "CHEMBL901": {"entity_type": "COMPOUND", "status": "INACTIVE"},
+                  "CHEMBL902": {"entity_type": None, "status": "NOT_RETURNED"}, "CHEMBL903": {"entity_type": "DOCUMENT", "status": "ACTIVE"}}
+        lig = [(str(i), f"x{i}", f"CHEMBL{900 + i - 1}", K, {}) for i in range(1, 5)]
+        entries, stats = self.world([self.m("CHEMBL1", "In", "QQQQQQQQQQQQQQ-BBBBBBBBSA-N")], lig,
+                                    [("OUT-ACTIVE", ["1"], []), ("OUT-INACTIVE", ["2"], []), ("OUT-UNKNOWN", ["3"], []), ("OUT-DOC", ["4"], [])], lookup=lookup)
+        d = self.dec(entries)
+        self.assertEqual(d["OUT-ACTIVE"][0][1:], ("out_of_selection", "chembl_id_active_but_not_in_catalogue_selection"))
+        self.assertEqual(d["OUT-INACTIVE"][0][1:], ("unresolved", "chembl_id_obsolete_or_inactive"))
+        self.assertEqual(d["OUT-UNKNOWN"][0][1:], ("unresolved", "chembl_id_unknown_to_chembl_lookup"))
+        self.assertEqual(d["OUT-DOC"][0][1:], ("unresolved", "chembl_id_is_not_a_compound_record"))
+        rec = [e for e in entries if e["ids"].get("dgidb_drug_name") == "OUT-ACTIVE"][0]["relations"]["gtopdb_reconciliation"][0]
+        self.assertEqual((rec["chembl_ref"], rec["chembl_ref_in_catalogue"]), ("CHEMBL900", False))
+        self.assertFalse(any("family_join" in v for v in self.rels(entries).values()))
+        self.assertEqual(stats["gtopdb_ligand_reconciliation"]["decisions_all_pairs_with_a_relation"]["out_of_selection"], 1)
+        # without the lookup file the status is not known: said so, still not dropped
+        (self.cache / cb.GTOPDB_REF_LOOKUP).unlink()
+        entries2, _ = self.world([self.m("CHEMBL1", "In", "QQQQQQQQQQQQQQ-BBBBBBBBSA-N")], lig[:1], [("OUT-ACTIVE", ["1"], [])])
+        self.assertEqual(self.dec(entries2)["OUT-ACTIVE"][0][1:], ("out_of_selection", "chembl_id_not_in_selection_status_not_checked"))
+
+    def test_identifier_structure_conflict_is_rejected_even_with_the_same_name(self):
+        entries, _ = self.world([self.m("CHEMBL1", "Lx2931", "AAAAAAAAAAAAAA-BBBBBBBBSA-N")],
+                                [("5", "LX2931", "CHEMBL1", "MMMMMMMMMMMMMM-BBBBBBBBSA-N", {})], [("LX2931", ["5"], [])])
+        r = self.rels(entries)["LX2931"]
+        self.assertEqual(r["gtopdb_reconciliation"][0]["decision"], "rejected_conflict")
+        self.assertTrue(r["gtopdb_reconciliation"][0]["evidence"]["name_agrees_not_a_basis"])   # the name agreed; it decided nothing
+        self.assertNotIn("family_join", r)
+
+    def test_withdrawn_is_an_annotation_not_an_identity_change_but_a_contradicting_drugbank_id_blocks(self):
+        K = "AAAAAAAAAAAAAA-BBBBBBBBSA-N"
+        mols = [self.m("CHEMBL1", "Gone", K, withdrawn_flag=True)]
+        entries, _ = self.world(mols, [("7", "Gone", "CHEMBL1", K, {"Withdrawn": "yes"})], [("GONE", ["7"], [])])
+        r = [e for e in entries if e["origin"] == "dgidb_only"][0]["relations"]["gtopdb_reconciliation"][0]
+        self.assertEqual(r["decision"], "merged")
+        self.assertEqual((r["evidence"]["gtopdb_withdrawn"], r["evidence"]["chembl_withdrawn_flag"]), ("yes", True))
+        for n in (2, 7, 14):
+            unichem(self.cache / f"unichem/src1src{n}.txt.gz", [("CHEMBL1", "DB99999")] if n == 2 else [])
+        self.src("unichem", "T")
+        entries, _ = self.world(mols, [("7", "Gone", "CHEMBL1", K, {})], [("GONE", ["7"], ["drugbank:DB00001"])])
+        self.assertEqual(self.dec(entries)["GONE"][0][1:], ("unresolved", "drugbank_ids_disjoint_between_dgidb_and_chembl_unichem"))
+        self.assertNotIn("family_join", self.rels(entries)["GONE"])
+
+    def test_unresolved_cases_are_preserved_with_a_reason_and_listed_in_the_tables(self):
+        mols = [self.m("CHEMBL1", "Antibody", None), self.m("CHEMBL2", "Peptide", "AAAAAAAAAAAAAA-BBBBBBBBSA-N")]
+        lig = [("31", "ab", "CHEMBL1", "", {"Type": "Antibody"}), ("32", "pep", "CHEMBL2", "", {}), ("33", "nochembl", "", "", {})]
+        entries, stats = self.world(mols, lig, [("AB", ["31"], []), ("PEP", ["32"], []), ("NOCHEMBL", ["33"], []), ("ABSENT", ["999"], [])])
+        d = self.dec(entries)
+        self.assertEqual(d["AB"][0][1:], ("unresolved", "structure_unavailable_both_sides"))
+        self.assertEqual(d["PEP"][0][1:], ("unresolved", "structure_unavailable_gtopdb_side"))
+        self.assertEqual(d["ABSENT"][0][1:], ("unresolved", "ligand_id_absent_from_gtopdb_release"))
+        self.assertEqual(d["NOCHEMBL"], [])                                  # no ChEMBL id in GtoPdb: no relation, but counted
+        s = stats["gtopdb_ligand_reconciliation"]
+        self.assertEqual((s["pairs_ligand_without_chembl_id_in_gtopdb_no_relation_made"], s["pairs_ligand_absent_from_release"]), (1, 1))
+        self.assertFalse(any("family_join" in v for v in self.rels(entries).values()))
+        rows = cb.reconciliation_rows(entries)
+        self.assertEqual(sorted((r["candidate"] != "", r["decision"]) for r in rows), [(True, "unresolved")] * 3)
+
+    def test_without_ligands_csv_the_step_is_absent_not_zero(self):
+        entries, stats = self.world([self.m("CHEMBL1", "A", "AAAAAAAAAAAAAA-BBBBBBBBSA-N")], [], [("A-X", ["1"], [])], ligands_file=False)
+        self.assertEqual(stats["gtopdb_ligand_reconciliation"]["state"], "NOT_AVAILABLE")
+        self.assertFalse(any("gtopdb_reconciliation" in e["relations"] for e in entries))
+
+    def test_counts_reconcile_and_tables_are_written_and_deterministic(self):
+        K = "AAAAAAAAAAAAAA-BBBBBBBBSA-N"
+        old = (cb.OUT_RECON, cb.OUT_RECON_OPEN)
+        cb.OUT_RECON, cb.OUT_RECON_OPEN = self.root / "r.tsv", self.root / "ro.tsv"
+        try:
+            entries, stats = self.world([self.m("CHEMBL1", "A", K)], [("1", "a", "CHEMBL1", K, {}), ("2", "b", "CHEMBL1", "AAAAAAAAAAAAAA-CCCCCCCCSA-N", {})],
+                                        [("A-OK", ["1"], []), ("A-REL", ["2"], [])])
+            info = cb.write_reconciliation_tables(entries)
+            lines = cb.OUT_RECON.read_text().splitlines()
+            first = cb.OUT_RECON.read_bytes()
+            cb.write_reconciliation_tables(entries)
+            self.assertEqual(first, cb.OUT_RECON.read_bytes())
+            self.assertEqual((info["rows_all"], info["rows_not_merged"]), (2, 1))
+            self.assertEqual(len(lines), 3)
+            self.assertEqual(len(cb.OUT_RECON_OPEN.read_text().splitlines()), 2)
+        finally:
+            cb.OUT_RECON, cb.OUT_RECON_OPEN = old
+        s = stats["gtopdb_ligand_reconciliation"]
+        self.assertEqual(sum(s["decisions_all_pairs_with_a_relation"].values()), s["pairs_with_a_chembl_reference_all"] + s["pairs_ligand_absent_from_release"])
+
+    def test_compare_structures_layers(self):
+        self.assertEqual(cb.compare_structures("A" * 14 + "-" + "B" * 8 + "SA-N", "A" * 14 + "-" + "B" * 8 + "SA-N"), ("equal", "full_inchikey_equal"))
+        self.assertEqual(cb.compare_structures("A" * 14 + "-UHFFFAOYSA-N", "B" * 14 + "-UHFFFAOYSA-N")[0], "conflict")
+        self.assertEqual(cb.compare_structures(None, None)[0], "unavailable")
+        self.assertEqual(cb.compare_structures("", "A" * 14 + "-UHFFFAOYSA-N"), ("unavailable", "structure_unavailable_gtopdb_side"))
+
+    def test_reconciled_build_is_independent_of_hash_randomisation(self):
+        import subprocess
+        K = "AAAAAAAAAAAAAA-BBBBBBBBSA-N"
+        self.world([self.m("CHEMBL1", "A", K), self.m("CHEMBL2", "B", "CCCCCCCCCCCCCC-BBBBBBBBSA-N")],
+                   [("1", "a", "CHEMBL1", K, {}), ("2", "b", "CHEMBL1", K, {}), ("3", "c", "CHEMBL2", "CCCCCCCCCCCCCC-DDDDDDDDSA-N", {})],
+                   [("A1", ["1"], []), ("A2", ["2"], []), ("B3", ["3"], [])])
+        code = ("import importlib.util,sys,json,hashlib;"
+                f"s=importlib.util.spec_from_file_location('cb',{str(HERE / 'catalog_build.py')!r});m=importlib.util.module_from_spec(s);sys.modules['cb']=m;s.loader.exec_module(m);"
+                f"m.CACHE=m.Path({str(self.cache)!r});m.MANIFEST=m.Path({str(cb.MANIFEST)!r});"
+                "e,st=m.build_catalog();print(hashlib.sha256(json.dumps([e,st['gtopdb_ligand_reconciliation']],sort_keys=True).encode()).hexdigest())")
+        seen = {subprocess.run([sys.executable, "-B", "-c", code], capture_output=True, text=True, check=True, env={"PYTHONHASHSEED": h, "PATH": "/usr/bin:/bin"}).stdout for h in ("1", "2", "777")}
+        self.assertEqual(len(seen), 1)
+
+
 class DeclaredInputsAndSafeRebuild(Base):
     """The build must know which inputs reproduce the declared version, refuse (or declare partial) otherwise,
     and never replace the last valid outputs with an impoverished result."""
