@@ -5,6 +5,7 @@
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
   "directional_summary": "UNRESOLVED",
+  "endpoint_outcomes": [],
   "comparisons": [
     {
       "assertion_id": "DR-A01-001",

@@ -1,460 +1,461 @@
 {
- "schema_version": 1,
- "input_sha256": "12a37d196e569729f9b0e47851956e6996b8e47e3ba98f7faafc23b178a6bf2f",
- "epistemic_status": "IPOTESI",
- "canonical": false,
- "assessment": "REQUIRES_QUALIFICATION",
- "directional_summary": "UNRESOLVED",
- "comparisons": [
-  {
-   "assertion_id": "DR-W2-001",
-   "status": "UNRESOLVED",
-   "reasons": [
-    "no disease assertion on this target and endpoint"
-   ]
-  },
-  {
-   "assertion_id": "DR-W2-002",
-   "status": "UNRESOLVED",
-   "reasons": [
-    "no disease assertion on this target and endpoint"
-   ]
-  },
-  {
-   "assertion_id": "DR-W2-003",
-   "status": "UNRESOLVED",
-   "reasons": [
-    "no disease assertion on this target and endpoint"
-   ]
-  },
-  {
-   "assertion_id": "DR-W2-004",
-   "status": "UNRESOLVED",
-   "reasons": [
-    "no disease assertion on this target and endpoint"
-   ]
-  },
-  {
-   "assertion_id": "DR-W2-005",
-   "status": "UNRESOLVED",
-   "reasons": [
-    "no disease assertion on this target and endpoint"
-   ]
-  },
-  {
-   "assertion_id": "DR-W2-006",
-   "status": "UNRESOLVED",
-   "reasons": [
-    "no disease assertion on this target and endpoint"
-   ]
-  },
-  {
-   "assertion_id": "DR-W2-007",
-   "status": "UNRESOLVED",
-   "reasons": [
-    "no disease assertion on this target and endpoint"
-   ]
-  }
- ],
- "abstention": null,
- "label_lookup": {
-  "status": "NOT_ATTEMPTED",
-  "coverage": "UNKNOWN",
-  "method": "UNKNOWN",
-  "queries": [],
-  "source": "UNKNOWN",
-  "retrieved_at": "UNKNOWN",
-  "client_version": "UNKNOWN",
-  "product_name": "UNKNOWN",
-  "active_ingredient": "UNKNOWN",
-  "formulation": "UNKNOWN",
-  "spl_id": "UNKNOWN",
-  "error": "UNKNOWN",
-  "coverage_limit": "UNKNOWN"
- },
- "p4_fields": {
-  "endpoint_pursued": "In Wwox-deficient neocortical slices or human neurons at matched maturity: spontaneous burst frequency, duration, amplitude and phase-amplitude coupling under a graded memantine exposure versus a perampanel exposure versus the full NMDAR block, with the wild-type and heterozygous slices as internal comparators; then a developmental endpoint (myelin, synaptic maturation), because burst control alone is not recovery.",
-  "functional_evidence_available": "d-APV abolishes bursting in the knockout slice (5 slices, 3 animals); the mEPSC amplitude (probably AMPAR-weighted, an inference) is raised; a delayed evoked response is NMDAR-dependent. No memantine or perampanel has been given to any Wwox system. Seven antiseizure drugs including perampanel gave no sustained benefit in one adult human case.",
-  "temporal_or_model_limit": "Juvenile mouse slices, one laboratory, acute pharmacology; the authors themselves bound the age window; human organoid and clinical rows do not test the node.",
-  "cellular_context": {
-   "target_expression": "GRIN1, GRIN2B and GRIN2D transcripts are present in the week-15 organoid (counts per million in the W2 table); GRIA1 is present; higher in two of four knockouts, overlapping wild type in the other two.",
-   "cells_tissue_stage": "layer II/III neocortical pyramidal neurons for the slice rows; bulk organoid for transcripts.",
-   "coverage": "UNKNOWN.",
-   "limits": "No receptor-level measurement of NMDAR or AMPAR current, subunit composition or surface level exists for any WWOX system."
-  }
- },
- "input": {
   "schema_version": 1,
-  "axis": "F / W2 therapeutic: postsynaptic glutamatergic gain",
-  "route": "BENEFICIO_PRECOCE",
-  "mission_dimensions": {
-   "track": "A",
-   "track_definition": "mission.md section 5: Track A = variant-independent WWOX loss of function; Track B = variant or allele-class specific (e.g. the Q230P missense class); Track C = repurposing, which is a method of reaching A or B, not a third lesion class",
-   "route": "BENEFICIO_PRECOCE",
-   "route_definition": "RECUPERO_PROFONDO = deep recovery of the lost function; BENEFICIO_PRECOCE = concrete partial benefit, symptomatic control or protection of function, with paediatric feasibility and time in view",
-   "route_note": "Partial benefit / protection of function at best (network state); WWOX function stays lost. Variant-independent (Track A); Track B (missense class) unmeasured. Seizure or burst control is not developmental recovery (N-15).",
-   "the_two_dimensions_are_independent": "a card keeps both: a variant-independent lever can be a partial-benefit lever, and a lesion-specific one can aim at deep recovery"
-  },
-  "candidate": {
-   "id": "P4-F-01",
-   "name": "Glutamate-receptor node of the neuron-specific Wwox bursting phenotype: memantine (NMDAR pore blocker) and perampanel (AMPAR antagonist)"
-  },
-  "disease_assertions": [
-   {
-    "id": "DA-W2-001",
-    "target_id": "neocortical spontaneous bursting (local field potential)",
-    "endpoint": "fraction of slices with bursts",
-    "direction": "INCREASE",
-    "source": "PAPER 031 (Breton 2021, neuron-specific Wwox knockout mouse slices)",
-    "locator": "disease-models/wwox/research/deepdive_manifests/PMID34634460.json verbatim_locators.entries[0]",
-    "epistemic_status": "DATO",
-    "reading_depth": "complete_fulltext_read",
-    "context": {
-     "disease_id": "Wwox-null neuron-specific knockout mouse neocortex (ex vivo slice)",
-     "genotype": "Synapsin-Cre Wwox knockout versus wild type and heterozygote",
-     "species": "mouse",
-     "cell_type": "layer II/III neocortex, local field potential and pyramidal-cell patch",
-     "developmental_stage": "juvenile, about two weeks of age (as printed; not re-derived here)"
+  "input_sha256": "12a37d196e569729f9b0e47851956e6996b8e47e3ba98f7faafc23b178a6bf2f",
+  "epistemic_status": "IPOTESI",
+  "canonical": false,
+  "assessment": "REQUIRES_QUALIFICATION",
+  "directional_summary": "UNRESOLVED",
+  "endpoint_outcomes": [],
+  "comparisons": [
+    {
+      "assertion_id": "DR-W2-001",
+      "status": "UNRESOLVED",
+      "reasons": [
+        "no disease assertion on this target and endpoint"
+      ]
     },
-    "measured_result_note": "Wild type 0 of 11 slices, heterozygote 4 of 23, knockout 36 of 42 (the heterozygote fraction is about a sixth of the knockout's).",
-    "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
-    "receipt": "FTR-20260810-34634460-02"
-   },
-   {
-    "id": "DA-W2-002",
-    "target_id": "postsynaptic miniature excitatory current (mEPSC, clamp at a hyperpolarised potential)",
-    "endpoint": "mEPSC amplitude",
-    "direction": "INCREASE",
-    "source": "PAPER 031 (Breton 2021, neuron-specific Wwox knockout mouse slices)",
-    "locator": "PMC XML files/fulltext/PMID34634460_Breton2021_PMC.xml, section 2.3 and Fig 4 legend (re-read first-hand 2026-10-27; not a manifest entry)",
-    "epistemic_status": "DATO",
-    "reading_depth": "complete_fulltext_read",
-    "context": {
-     "disease_id": "Wwox-null neuron-specific knockout mouse neocortex (ex vivo slice)",
-     "genotype": "Synapsin-Cre Wwox knockout versus wild type and heterozygote",
-     "species": "mouse",
-     "cell_type": "layer II/III neocortex, local field potential and pyramidal-cell patch",
-     "developmental_stage": "juvenile, about two weeks of age (as printed; not re-derived here)"
+    {
+      "assertion_id": "DR-W2-002",
+      "status": "UNRESOLVED",
+      "reasons": [
+        "no disease assertion on this target and endpoint"
+      ]
     },
-    "measured_result_note": "Amplitude shifted up in knockout (cumulative distributions, KS test on pooled events; 10 cells per genotype from 4 wild-type, 5 heterozygote and 5 knockout animals); frequency is not different from the heterozygote but does differ from wild type (KS P about 2.4e-4; direction not stated in the text); decay time constant not different, which the authors read as no overt change of the NMDAR:AMPA proportion. INFERENZA (the producer's, not the paper's): at the -70 mV holding potential NMDAR current is largely magnesium-blocked, so the recording is probably AMPAR-weighted; a residual NMDAR component is not excluded and no NMDAR current was measured.",
-    "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
-    "receipt": "FTR-20260810-34634460-02"
-   },
-   {
-    "id": "DA-W2-003",
-    "target_id": "delayed evoked response (layer V stimulation, layer II/III recording)",
-    "endpoint": "amplitude of the delayed negative deflection",
-    "direction": "INCREASE",
-    "source": "PAPER 031 (Breton 2021, neuron-specific Wwox knockout mouse slices)",
-    "locator": "disease-models/wwox/research/deepdive_manifests/PMID34634460.json verbatim_locators.entries[25] (Supplementary Fig S3; supplement figure attested, the PMC bin document was not served)",
-    "epistemic_status": "DATO",
-    "reading_depth": "complete_fulltext_read",
-    "context": {
-     "disease_id": "Wwox-null neuron-specific knockout mouse neocortex (ex vivo slice)",
-     "genotype": "Synapsin-Cre Wwox knockout versus wild type and heterozygote",
-     "species": "mouse",
-     "cell_type": "layer II/III neocortex, local field potential and pyramidal-cell patch",
-     "developmental_stage": "juvenile, about two weeks of age (as printed; not re-derived here)"
+    {
+      "assertion_id": "DR-W2-003",
+      "status": "UNRESOLVED",
+      "reasons": [
+        "no disease assertion on this target and endpoint"
+      ]
     },
-    "measured_result_note": "Present in knockout and absent in wild type, reversibly suppressed by d-APV; the authors read it as dysregulated NMDAR-mediated signalling. A circuit-level NMDAR dependence, not a receptor-level gain.",
-    "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
-    "receipt": "FTR-20260810-34634460-02"
-   },
-   {
-    "id": "DA-W2-004",
-    "target_id": "human GRIA1 and GRIN-subunit transcripts",
-    "endpoint": "CPM, knockout minus wild type",
-    "direction": "UNKNOWN",
-    "source": "GSE156243 (PMID 34268881 deposit); descriptive panel by scientist-c, disease-models/wwox/research/drug_repurposing/w2_therapeutic_it2_20261027/README.md",
-    "locator": "disease-models/wwox/research/drug_repurposing/w2_therapeutic_it2_20261027/organoid_panel_cpm.tsv",
-    "epistemic_status": "INFERENZA",
-    "reading_depth": "queried_not_full_read",
-    "context": {
-     "disease_id": "WWOX-deficient human cerebral organoid model (engineered knockout; NOT a patient allele; no amyloid)",
-     "genotype": "WWOX knockout versus wild type (4 versus 2 libraries, one laboratory)",
-     "species": "human",
-     "cell_type": "cerebral organoid, bulk RNA",
-     "developmental_stage": "organoid, culture week 15"
+    {
+      "assertion_id": "DR-W2-004",
+      "status": "UNRESOLVED",
+      "reasons": [
+        "no disease assertion on this target and endpoint"
+      ]
     },
-    "measured_result_note": "No consistent GRIN2B or GRIN2D shift at 4 versus 2 libraries; GRIN2A and GRIN3A are low-count; GRIA1 is higher in two knockouts (cko1, cko2) and overlaps wild type in the other two, and the libraries differ in composition (GAD1 and regional-patterning transcripts differ ten-fold). Transcript is not receptor function; direction left UNKNOWN on purpose.",
-    "evidence_scope": "COMPUTATIONAL_RESULT"
-   }
+    {
+      "assertion_id": "DR-W2-005",
+      "status": "UNRESOLVED",
+      "reasons": [
+        "no disease assertion on this target and endpoint"
+      ]
+    },
+    {
+      "assertion_id": "DR-W2-006",
+      "status": "UNRESOLVED",
+      "reasons": [
+        "no disease assertion on this target and endpoint"
+      ]
+    },
+    {
+      "assertion_id": "DR-W2-007",
+      "status": "UNRESOLVED",
+      "reasons": [
+        "no disease assertion on this target and endpoint"
+      ]
+    }
   ],
-  "drug_assertions": [
-   {
-    "id": "DR-W2-001",
-    "target_id": "NMDAR (tool compound d-APV, competitive, full block)",
-    "endpoint": "burst frequency",
-    "direction": "DECREASE",
-    "source": "PAPER 031 (Breton 2021, neuron-specific Wwox knockout mouse slices)",
-    "locator": "disease-models/wwox/research/deepdive_manifests/PMID34634460.json verbatim_locators.entries[2]; first-hand: Results 2.2 sentence 'eliminated the spontaneous bursting events'",
-    "epistemic_status": "DATO",
-    "reading_depth": "complete_fulltext_read",
-    "context": {
-     "disease_id": "Wwox-null neuron-specific knockout mouse neocortex (ex vivo slice)",
-     "genotype": "Synapsin-Cre Wwox knockout versus wild type and heterozygote",
-     "species": "mouse",
-     "cell_type": "layer II/III neocortex, local field potential and pyramidal-cell patch",
-     "developmental_stage": "juvenile, about two weeks of age (as printed; not re-derived here)"
-    },
-    "measured_result_note": "Bursting eliminated and recovered on washout; n of the d-APV arm is 5 slices from 3 animals (legend). The authors call d-APV 'a glutamatergic blocker' but d-APV is NMDAR-selective: the AMPAR contribution was never tested in this paper. A full competitive block does not predict the effect of a partial use-dependent pore blocker.",
-    "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
-    "receipt": "FTR-20260810-34634460-02"
-   },
-   {
-    "id": "DR-W2-002",
-    "target_id": "NMDAR pore blocker memantine; GRIN gain-of-function variants",
-    "endpoint": "clinical improvement (behaviour, development, seizure frequency)",
-    "direction": "DECREASE",
-    "source": "Karnstedt 2026, Epilepsia (PMID 41489401, PMC13075606; NOT WWOX EVIDENCE; other disease)",
-    "locator": "PMC full text retrieved through the PMC API on 2026-10-27, results and Table 1 read; supplements not; no receipt",
-    "epistemic_status": "DATO",
-    "reading_depth": "partial_fulltext_read",
-    "context": {
-     "disease_id": "GRIN-related developmental and epileptic encephalopathy (not WWOX)",
-     "genotype": "pathogenic GRIN1/GRIN2A/GRIN2B/GRIN2D variants classified by in-vitro assays as gain of function",
-     "species": "human",
-     "cell_type": "individuals, mostly children",
-     "developmental_stage": "median age 9 years (as reported)"
-    },
-    "measured_result_note": "Benefit in 14 of 19 individuals with gain-of-function variants, of whom 4 had an effect that faded (10 sustained; at variant level counting sustained effect only the authors report P = 0.0698, not significant) (behaviour 12 of 17, development 6 of 12, seizure frequency reduced in 7 of 18); three gain-of-function individuals worsened. Retrospective, unblinded, clinician or parent rated.",
-    "evidence_scope": "OTHER_DISEASE_PRECEDENT"
-   },
-   {
-    "id": "DR-W2-003",
-    "target_id": "NMDAR pore blocker memantine; GRIN loss-of-function, indeterminate or no-effect variants (the comparator group also holds 4 variants the authors call non-pathogenic)",
-    "endpoint": "clinical improvement",
-    "direction": "NO_CHANGE",
-    "source": "Karnstedt 2026, Epilepsia (PMID 41489401; NOT WWOX EVIDENCE; other disease)",
-    "locator": "same reading as DR-W2-002; Fisher test reported 14 of 19 versus 3 of 15",
-    "epistemic_status": "DATO",
-    "reading_depth": "partial_fulltext_read",
-    "context": {
-     "disease_id": "GRIN-related developmental and epileptic encephalopathy (not WWOX)",
-     "genotype": "GRIN variants classified loss of function, indeterminate or no effect",
-     "species": "human",
-     "cell_type": "individuals, mostly children",
-     "developmental_stage": "median age 9 years (as reported)"
-    },
-    "measured_result_note": "Benefit in 3 of 15 (group of 15 includes 4 non-pathogenic variants), mild and parent-reported only; seizure reduction 2 of 10, not different from the gain-of-function group. The direction of the receptor lesion, not the presence of an NMDAR gene, separated responders.",
-    "evidence_scope": "OTHER_DISEASE_PRECEDENT"
-   },
-   {
-    "id": "DR-W2-004",
-    "target_id": "NMDAR pore blocker memantine",
-    "endpoint": "progression of oxygen-induced seizure stages",
-    "direction": "INCREASE",
-    "source": "Alekseeva 2026, Biomedicines (PMID 42652189; NOT WWOX EVIDENCE; adult rat, acute provoked seizures), as recorded in the repository",
-    "locator": "disease-models/wwox/research/interventions_wave_20261019_scientist-c.md section 14; receipt FTR-20261019-42652189-01",
-    "epistemic_status": "DATO",
-    "reading_depth": "complete_fulltext_read",
-    "context": {
-     "disease_id": "hyperbaric-oxygen seizure model in adult rats (not WWOX, not a genetic epilepsy)",
-     "genotype": "wild-type adult male rats",
-     "species": "rat",
-     "cell_type": "whole animal",
-     "developmental_stage": "adult"
-    },
-    "measured_result_note": "Memantine accelerated every seizure stage; perampanel delayed stage 4 but did not prevent seizures. The reading carries unresolved internal inconsistencies noted in that record. A safety-direction datum for a non-genetic model, not WWOX.",
-    "evidence_scope": "OTHER_DISEASE_PRECEDENT",
-    "receipt": "FTR-20261019-42652189-01"
-   },
-   {
-    "id": "DR-W2-005",
-    "target_id": "NMDAR (GluN1/GluN2A and GluN1/GluN2B), memantine",
-    "endpoint": "inhibitory potency across recorded assays",
-    "direction": "DECREASE",
-    "source": "ChEMBL_37 (2026-05-01), activity table for CHEMBL807; NOT WWOX EVIDENCE",
-    "locator": "disease-models/wwox/research/drug_repurposing/w2_therapeutic_it2_20261027/README.md section 4",
-    "epistemic_status": "DATO",
-    "reading_depth": "queried_not_full_read",
-    "context": {
-     "disease_id": "recombinant NMDAR in oocytes, HEK and CHO cells (database aggregate)",
-     "genotype": "GluN1 with GluN2A/2B/2C/2D; 22 of the 37 rows are human targets and 15 are Rattus norvegicus targets (the rest of the label is unknown-origin where ChEMBL says so)",
-     "species": "human and rat",
-     "cell_type": "heterologous cells",
-     "developmental_stage": "not applicable"
-    },
-    "measured_result_note": "The recorded IC50 values spread across more than four orders of magnitude between assays (voltage, magnesium, agonist level, read-out). Potency is context-dependent; no value is carried as a target exposure. ChEMBL carries no curated mechanism row for memantine in this release (the adapter returns the molecule without mechanism).",
-    "evidence_scope": "EXTERNAL_DATABASE_RECORD"
-   },
-   {
-    "id": "DR-W2-006",
-    "target_id": "AMPAR, perampanel",
-    "endpoint": "mechanism and label",
-    "direction": "DECREASE",
-    "source": "ChEMBL_37 mechanism row CHEMBL1214124; openFDA label 2026-10-27 (NOT WWOX EVIDENCE)",
-    "locator": "framework/scripts/repurposing_adapter.py query chembl / openfda, run 2026-10-27",
-    "epistemic_status": "DATO",
-    "reading_depth": "queried_not_full_read",
-    "context": {
-     "disease_id": "approved drug label (partial-onset seizures from 4 years of age; adjunct in primary generalised tonic-clonic seizures from 12 years of age)",
-     "genotype": "not applicable",
-     "species": "human",
-     "cell_type": "not applicable",
-     "developmental_stage": "paediatric label as retrieved"
-    },
-    "measured_result_note": "Non-competitive AMPA-receptor antagonist; the label sections returned by the adapter do not include warnings, so the labelled safety profile is NOT assessed here.",
-    "evidence_scope": "EXTERNAL_DATABASE_RECORD"
-   },
-   {
-    "id": "DR-W2-007",
-    "target_id": "AMPAR (perampanel) among seven antiseizure drugs",
-    "endpoint": "seizure response",
-    "direction": "NO_CHANGE",
-    "source": "Teplyshova 2024, Front Genet (PMID 39507621), as recorded in analysis/downstream_wwox_independent_rescue_census_20260921.md W2.5; the drug effect is NOT WWOX EVIDENCE (n = 1, polytherapy)",
-    "locator": "that file section W2.5; receipt FTR-20261019-39507621-01",
-    "epistemic_status": "DATO",
-    "reading_depth": "complete_fulltext_read",
-    "context": {
-     "disease_id": "WWOX-DEE adult case report (one individual, long disease course)",
-     "genotype": "WWOX-DEE; allele per the source",
-     "species": "human",
-     "cell_type": "individual",
-     "developmental_stage": "adult, decades after onset"
-    },
-    "measured_result_note": "'No sustained positive effect of treatment was detected' for the whole list taken over decades in one adult; the drug is not isolated, the exposure and timing are unknown. n = 1 supports no statement about the drug in this genotype.",
-    "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
-    "receipt": "FTR-20261019-39507621-01"
-   }
-  ],
-  "p4_fields": {
-   "endpoint_pursued": "In Wwox-deficient neocortical slices or human neurons at matched maturity: spontaneous burst frequency, duration, amplitude and phase-amplitude coupling under a graded memantine exposure versus a perampanel exposure versus the full NMDAR block, with the wild-type and heterozygous slices as internal comparators; then a developmental endpoint (myelin, synaptic maturation), because burst control alone is not recovery.",
-   "functional_evidence_available": "d-APV abolishes bursting in the knockout slice (5 slices, 3 animals); the mEPSC amplitude (probably AMPAR-weighted, an inference) is raised; a delayed evoked response is NMDAR-dependent. No memantine or perampanel has been given to any Wwox system. Seven antiseizure drugs including perampanel gave no sustained benefit in one adult human case.",
-   "temporal_or_model_limit": "Juvenile mouse slices, one laboratory, acute pharmacology; the authors themselves bound the age window; human organoid and clinical rows do not test the node.",
-   "cellular_context": {
-    "target_expression": "GRIN1, GRIN2B and GRIN2D transcripts are present in the week-15 organoid (counts per million in the W2 table); GRIA1 is present; higher in two of four knockouts, overlapping wild type in the other two.",
-    "cells_tissue_stage": "layer II/III neocortical pyramidal neurons for the slice rows; bulk organoid for transcripts.",
-    "coverage": "UNKNOWN.",
-    "limits": "No receptor-level measurement of NMDAR or AMPAR current, subunit composition or surface level exists for any WWOX system."
-   }
-  },
-  "p4_card": {
-   "identity": "Memantine (approved, uncompetitive NMDAR pore blocker; paediatric safety and effectiveness not established on its label) and perampanel (approved, non-competitive AMPAR antagonist; paediatric label for partial-onset seizures). Tool compounds: d-APV. Both are symptomatic-network levers on one measured phenotype, not WWOX restoration.",
-   "indication_and_transfer": "Only IF the neuron-specific Wwox bursting phenotype is driven by a measurable gain in glutamatergic transmission that a partial block of NMDAR or AMPAR corrects without harming activity-dependent maturation. Transfer to the reference genotype is unmeasured for both alleles: the slice model is a Synapsin-Cre knockout, not a missense or splice allele.",
-   "novelty_for_woree": "Memantine on the NMDAR node is already map record R-02 (class PROMISING_BUT_MECHANISTIC_GAP). New here: (1) the sign of the receptor lesion decides memantine's response in the one genetic-NMDAR cohort that stratified by function, so the 'GRIN2A corroborates the node' argument (DL-MECH-002) corroborates the node, not the sign; (2) the AMPAR arm, never carried as a node, rests on the only direct synaptic measurement in the knockout (raised mEPSC amplitude), and is untested. Coverage: PubMed searches of 2026-10-27 (GRIN-memantine, neonatal memantine, WWOX myelin), the Karnstedt full text, the repository's perampanel notes; NON_TROVATO_NELLA_RICERCA for any memantine or perampanel arm in a Wwox model, not MAI_TENTATO.",
-   "state_of_known_roads": "map R-02 (memantine), Chain B, N-15 (seizure control is not development), DL-MECH-002, DL-MOL-001; perampanel appears only in cohort notes (repurposing_10h_scientist-d_20261022c.md, parked item) and the adult case.",
-   "pathway_and_objective": "BENEFICIO_PRECOCE; Track A; Track B untested.",
-   "expected_contribution": "UNKNOWN. At best a reduction of a network state; no developmental benefit is implied.",
-   "mechanism": "Targets: NMDAR (GRIN1 with GRIN2A/2B/2D) and AMPAR (GRIA1-4). Direction wanted: lower excitatory gain. Context: juvenile neocortical slice, neuron-specific knockout. Memantine is a use-dependent pore blocker with subunit-dependent, assay-dependent potency; d-APV is a competitive full block: the tool result does not transfer quantitatively to the drug.",
-   "sources": {
-    "internal": [
-     "PAPER 031",
-     "CLAIM 021",
-     "CLAIM 031",
-     "DL-MECH-002",
-     "DL-MOL-001",
-     "R-02",
-     "Chain B",
-     "N-15",
-     "analysis/downstream_wwox_independent_rescue_census_20260921.md W2.5",
-     "interventions_wave_20261019_scientist-c.md section 14"
-    ],
-    "external_not_wwox_evidence": [
-     "Karnstedt 2026 Epilepsia (PMID 41489401), PMC full text",
-     "ChEMBL_37 activity and mechanism rows",
-     "openFDA labels (memantine, perampanel) 2026-10-27",
-     "PubMed abstract of PMID 42190144 (gene names are stripped in the retrieved text; the GRIN2A variant class is not stated there)"
-    ]
-   },
-   "evidence_for_and_against": {
-    "for": [
-     "d-APV abolishes bursting in the knockout slice and suppresses a knockout-specific delayed response.",
-     "Postsynaptic mEPSC amplitude is raised in the knockout.",
-     "Memantine benefited most individuals with gain-of-function GRIN variants (precedent in a channelopathy, other disease)."
-    ],
-    "against": [
-     "The only memantine-responsive genetic NMDAR group is defined by receptor gain of function; loss-of-function and indeterminate GRIN variants did not respond, so 'an NMDAR gene causes the same phenotype' (DL-MECH-002) does not give the sign.",
-     "Dependence of bursting on NMDAR activity is permissive: it does not show that NMDAR function is raised; no NMDAR current or subunit was measured.",
-     "A full competitive block (d-APV) eliminated bursting; a partial pore block at tolerable exposure may not; potency spans orders of magnitude across assays.",
-     "Memantine accelerated provoked seizures in an adult rat oxygen model; its paediatric effectiveness is not established on its label.",
-     "One adult WWOX case on perampanel plus six other drugs showed no sustained benefit (n = 1, not interpretable).",
-     "Suppressing a network state is not correcting a developmental lesion (N-15)."
-    ],
-    "transfer_limits": "Juvenile slice, one laboratory, knockout not allele; chronic NMDAR or AMPAR blockade in a developing brain also acts on activity-dependent maturation, including myelination (see F02)."
-   },
-   "time_to_access": "UNKNOWN for research use; both are marketed drugs (labels retrieved 2026-10-27).",
-   "time_to_benefit": "UNKNOWN.",
-   "pharmacology": "Memantine: use-dependent channel blocker; recorded potency depends on voltage, magnesium and agonist level and spans several orders of magnitude across assays (README section 4). Perampanel: non-competitive AMPAR antagonist. CNS exposure for both is expected from their indications but is not verified here for the slice-relevant free fraction.",
-   "paediatrics_and_interactions": "Memantine label: paediatric safety and effectiveness not established; two controlled paediatric autism studies failed. Perampanel label: partial-onset seizures from 4 years of age. Interactions and labelled warnings were NOT assessed (adapter sections lacked them). No paediatric suitability for WWOX-DEE is presumed.",
-   "scope_of_checks": {
-    "support_and_replication": "One laboratory for every WWOX row used here; no independent replication.",
-    "formal_checks": "Breton rows carry verbatim locators in the manifest (receipt FTR-20260810-34634460-02); the n values of the d-APV arm and the mEPSC text were re-read first-hand from the shared full-text XML on 2026-10-27 without a new receipt. GRIN and rat rows are at the reading depth stated per row.",
-    "card_inferences_owed_audit": "Every statement marked INFERENZA, and every card-level synthesis, is owed a blind audit by someone other than the producer."
-   },
-   "question_history": [
-    "map R-02 and Chain B",
-    "DL-MECH-002 (GRIN2A corroboration)",
-    "mandate 2026-10-27 (W2, iteration 2)"
-   ],
-   "predictions": "Registered before any experiment: (a) if bursting reflects raised NMDAR function, a partial memantine exposure lowers burst frequency in knockout slices dose-dependently and not in wild type; (b) if it reflects raised AMPAR gain, perampanel does and memantine less; (c) if both are permissive routes of a network that recruits NMDAR, only the full block works and neither drug is a lever. Result (c) closes the strand.",
-   "next_measurement": "Wet-lab, not done: Wwox-deficient versus parental or isogenic neurons or slices; graded memantine versus perampanel versus d-APV; controls: wild type, heterozygote, vehicle, washout, an NMDAR-selective and an AMPAR-selective evoked-current check to define which receptor is raised (NMDA:AMPA ratio under voltage control, not the mEPSC decay); endpoints: burst frequency, duration, amplitude, phase-amplitude coupling, then a maturation endpoint; discriminating result: a partial block that abolishes bursting in knockout and spares wild-type activity versus one that does not.",
-   "status": "hypothesis",
-   "value_added": "Separates two things the record had fused: the node (NMDAR-dependent network) and the sign of an intervention on it, and adds the one untested receptor with a direct measurement behind it.",
-   "clinical_census": "Clinical census, ClinicalTrials.gov API v2, 2026-10-20 (drug_repurposing/clinical_census_20261020.md): seven queries returned no registered WOREE interventional study; it answers seven queries against one registry on one date and a missing hit does not prove that no study exists. Not re-run for this card."
-  },
-  "not_known": [
-   "Whether NMDAR current, subunit composition or surface level is raised in any WWOX system.",
-   "Whether the raised mEPSC amplitude is AMPAR-mediated.",
-   "Whether a partial pore block reproduces the full block's effect on bursting.",
-   "Whether either drug affects maturation in a developing Wwox-deficient brain.",
-   "The GRIN2A variant class behind the burst-suppression association in the cohort abstract."
-  ],
-  "evidence_against": [
-   "The only memantine-responsive genetic NMDAR group is defined by receptor gain of function; loss-of-function and indeterminate GRIN variants did not respond, so 'an NMDAR gene causes the same phenotype' (DL-MECH-002) does not give the sign.",
-   "Dependence of bursting on NMDAR activity is permissive: it does not show that NMDAR function is raised; no NMDAR current or subunit was measured.",
-   "A full competitive block (d-APV) eliminated bursting; a partial pore block at tolerable exposure may not; potency spans orders of magnitude across assays.",
-   "Memantine accelerated provoked seizures in an adult rat oxygen model; its paediatric effectiveness is not established on its label.",
-   "One adult WWOX case on perampanel plus six other drugs showed no sustained benefit (n = 1, not interpretable).",
-   "Suppressing a network state is not correcting a developmental lesion (N-15)."
-  ],
-  "bridge_gaps_exposed": [
-   "Tool-compound and drug rows share the target but differ in block type, so the bridge's sign comparison for d-APV is not a statement about memantine.",
-   "GRIN cohort rows are a different disease; no sign comparison is formed with the slice rows."
-  ],
-  "translation": {
-   "pediatric_suitability": "Memantine: not established on its label. Perampanel: labelled from 4 years of age for partial-onset seizures. WWOX-DEE: UNKNOWN.",
-   "cns_exposure": "UNKNOWN for the slice-relevant exposure.",
-   "interactions": "UNKNOWN",
-   "access": "UNKNOWN",
-   "time_to_benefit": "UNKNOWN",
-   "functional_rescue": "UNKNOWN"
-  },
-  "p4_roadmap_fields": {
-   "indication_and_transfer": "Only IF the neuron-specific Wwox bursting phenotype is driven by a measurable gain in glutamatergic transmission that a partial block of NMDAR or AMPAR corrects without harming activity-dependent maturation. Transfer to the reference genotype is unmeasured for both alleles: the slice model is a Synapsin-Cre knockout, not a missense or splice allele.",
-   "verification_scope": "{\"support_and_replication\": \"One laboratory for every WWOX row used here; no independent replication.\", \"formal_checks\": \"Breton rows carry verbatim locators in the manifest (receipt FTR-20260810-34634460-02); the n values of the d-APV arm and the mEPSC text were re-read first-hand from the shared full-text XML on 2026-10-27 without a new receipt. GRIN and rat rows are at the reading depth stated per row.\", \"card_inferences_owed_audit\": \"Every statement marked INFERENZA, and every card-level synthesis, is owed a blind audit by someone other than the producer.\"}"
-  },
+  "abstention": null,
   "label_lookup": {
-   "status": "NOT_ATTEMPTED"
+    "status": "NOT_ATTEMPTED",
+    "coverage": "UNKNOWN",
+    "method": "UNKNOWN",
+    "queries": [],
+    "source": "UNKNOWN",
+    "retrieved_at": "UNKNOWN",
+    "client_version": "UNKNOWN",
+    "product_name": "UNKNOWN",
+    "active_ingredient": "UNKNOWN",
+    "formulation": "UNKNOWN",
+    "spl_id": "UNKNOWN",
+    "error": "UNKNOWN",
+    "coverage_limit": "UNKNOWN"
   },
-  "card_conventions": [
-   "IPOTESI throughout; the bridge forces it. No score, rank, probability or blended index is carried.",
-   "directional_summary compares signs only where target, endpoint and every context dimension match; UNRESOLVED is a statement about the record, not about the biology.",
-   "Every disease-side row from the Drosophila article is NOT WWOX-DEE EVIDENCE; the organoid rows are exploratory transcript analyses of one deposit.",
-   "Abstract-level statements from PubMed are labelled abstract_only; none carries a receipt.",
-   "label_lookup is NOT_ATTEMPTED in the bridge: the bridge has no network. The openFDA adapter was run separately and is recorded in lucas_clarke_followup_20261026/compounds_and_sources.md.",
-   "No dose, route, schedule or paediatric suitability appears; assay concentrations of the sources are deliberately not reproduced."
-  ],
-  "target_census": {
-   "dir": "disease-models/wwox/research/drug_repurposing/w2_therapeutic_it2_20261027",
-   "symbols": []
+  "p4_fields": {
+    "endpoint_pursued": "In Wwox-deficient neocortical slices or human neurons at matched maturity: spontaneous burst frequency, duration, amplitude and phase-amplitude coupling under a graded memantine exposure versus a perampanel exposure versus the full NMDAR block, with the wild-type and heterozygous slices as internal comparators; then a developmental endpoint (myelin, synaptic maturation), because burst control alone is not recovery.",
+    "functional_evidence_available": "d-APV abolishes bursting in the knockout slice (5 slices, 3 animals); the mEPSC amplitude (probably AMPAR-weighted, an inference) is raised; a delayed evoked response is NMDAR-dependent. No memantine or perampanel has been given to any Wwox system. Seven antiseizure drugs including perampanel gave no sustained benefit in one adult human case.",
+    "temporal_or_model_limit": "Juvenile mouse slices, one laboratory, acute pharmacology; the authors themselves bound the age window; human organoid and clinical rows do not test the node.",
+    "cellular_context": {
+      "target_expression": "GRIN1, GRIN2B and GRIN2D transcripts are present in the week-15 organoid (counts per million in the W2 table); GRIA1 is present; higher in two of four knockouts, overlapping wild type in the other two.",
+      "cells_tissue_stage": "layer II/III neocortical pyramidal neurons for the slice rows; bulk organoid for transcripts.",
+      "coverage": "UNKNOWN.",
+      "limits": "No receptor-level measurement of NMDAR or AMPAR current, subunit composition or surface level exists for any WWOX system."
+    }
   },
-  "no_new_reading": "W2 (scientist-c, 2026-10-27): no new full-text receipt; first-hand re-reads of already-receipted papers and of open PubMed Central text are described in the W2 record."
- },
- "translation": {
-  "pediatric_suitability": "Memantine: not established on its label. Perampanel: labelled from 4 years of age for partial-onset seizures. WWOX-DEE: UNKNOWN.",
-  "cns_exposure": "UNKNOWN for the slice-relevant exposure.",
-  "interactions": "UNKNOWN",
-  "access": "UNKNOWN",
-  "time_to_benefit": "UNKNOWN",
-  "functional_rescue": "UNKNOWN"
- },
- "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
- "limits": [
-  "Technical comparison is not efficacy, safety or experimental validation.",
-  "Sources and receipt references are retained, not independently verified.",
-  "Shared sources are not independent confirmations; scores are not pooled.",
-  "NO_CHANGE is a reported null effect on that endpoint and context: it is not UNKNOWN (not measured), not evidence of safety, and not proof of futility; a null in a non-comparable cell stays UNRESOLVED.",
-  "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
- ]
+  "input": {
+    "schema_version": 1,
+    "axis": "F / W2 therapeutic: postsynaptic glutamatergic gain",
+    "route": "BENEFICIO_PRECOCE",
+    "mission_dimensions": {
+      "track": "A",
+      "track_definition": "mission.md section 5: Track A = variant-independent WWOX loss of function; Track B = variant or allele-class specific (e.g. the Q230P missense class); Track C = repurposing, which is a method of reaching A or B, not a third lesion class",
+      "route": "BENEFICIO_PRECOCE",
+      "route_definition": "RECUPERO_PROFONDO = deep recovery of the lost function; BENEFICIO_PRECOCE = concrete partial benefit, symptomatic control or protection of function, with paediatric feasibility and time in view",
+      "route_note": "Partial benefit / protection of function at best (network state); WWOX function stays lost. Variant-independent (Track A); Track B (missense class) unmeasured. Seizure or burst control is not developmental recovery (N-15).",
+      "the_two_dimensions_are_independent": "a card keeps both: a variant-independent lever can be a partial-benefit lever, and a lesion-specific one can aim at deep recovery"
+    },
+    "candidate": {
+      "id": "P4-F-01",
+      "name": "Glutamate-receptor node of the neuron-specific Wwox bursting phenotype: memantine (NMDAR pore blocker) and perampanel (AMPAR antagonist)"
+    },
+    "disease_assertions": [
+      {
+        "id": "DA-W2-001",
+        "target_id": "neocortical spontaneous bursting (local field potential)",
+        "endpoint": "fraction of slices with bursts",
+        "direction": "INCREASE",
+        "source": "PAPER 031 (Breton 2021, neuron-specific Wwox knockout mouse slices)",
+        "locator": "disease-models/wwox/research/deepdive_manifests/PMID34634460.json verbatim_locators.entries[0]",
+        "epistemic_status": "DATO",
+        "reading_depth": "complete_fulltext_read",
+        "context": {
+          "disease_id": "Wwox-null neuron-specific knockout mouse neocortex (ex vivo slice)",
+          "genotype": "Synapsin-Cre Wwox knockout versus wild type and heterozygote",
+          "species": "mouse",
+          "cell_type": "layer II/III neocortex, local field potential and pyramidal-cell patch",
+          "developmental_stage": "juvenile, about two weeks of age (as printed; not re-derived here)"
+        },
+        "measured_result_note": "Wild type 0 of 11 slices, heterozygote 4 of 23, knockout 36 of 42 (the heterozygote fraction is about a sixth of the knockout's).",
+        "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+        "receipt": "FTR-20260810-34634460-02"
+      },
+      {
+        "id": "DA-W2-002",
+        "target_id": "postsynaptic miniature excitatory current (mEPSC, clamp at a hyperpolarised potential)",
+        "endpoint": "mEPSC amplitude",
+        "direction": "INCREASE",
+        "source": "PAPER 031 (Breton 2021, neuron-specific Wwox knockout mouse slices)",
+        "locator": "PMC XML files/fulltext/PMID34634460_Breton2021_PMC.xml, section 2.3 and Fig 4 legend (re-read first-hand 2026-10-27; not a manifest entry)",
+        "epistemic_status": "DATO",
+        "reading_depth": "complete_fulltext_read",
+        "context": {
+          "disease_id": "Wwox-null neuron-specific knockout mouse neocortex (ex vivo slice)",
+          "genotype": "Synapsin-Cre Wwox knockout versus wild type and heterozygote",
+          "species": "mouse",
+          "cell_type": "layer II/III neocortex, local field potential and pyramidal-cell patch",
+          "developmental_stage": "juvenile, about two weeks of age (as printed; not re-derived here)"
+        },
+        "measured_result_note": "Amplitude shifted up in knockout (cumulative distributions, KS test on pooled events; 10 cells per genotype from 4 wild-type, 5 heterozygote and 5 knockout animals); frequency is not different from the heterozygote but does differ from wild type (KS P about 2.4e-4; direction not stated in the text); decay time constant not different, which the authors read as no overt change of the NMDAR:AMPA proportion. INFERENZA (the producer's, not the paper's): at the -70 mV holding potential NMDAR current is largely magnesium-blocked, so the recording is probably AMPAR-weighted; a residual NMDAR component is not excluded and no NMDAR current was measured.",
+        "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+        "receipt": "FTR-20260810-34634460-02"
+      },
+      {
+        "id": "DA-W2-003",
+        "target_id": "delayed evoked response (layer V stimulation, layer II/III recording)",
+        "endpoint": "amplitude of the delayed negative deflection",
+        "direction": "INCREASE",
+        "source": "PAPER 031 (Breton 2021, neuron-specific Wwox knockout mouse slices)",
+        "locator": "disease-models/wwox/research/deepdive_manifests/PMID34634460.json verbatim_locators.entries[25] (Supplementary Fig S3; supplement figure attested, the PMC bin document was not served)",
+        "epistemic_status": "DATO",
+        "reading_depth": "complete_fulltext_read",
+        "context": {
+          "disease_id": "Wwox-null neuron-specific knockout mouse neocortex (ex vivo slice)",
+          "genotype": "Synapsin-Cre Wwox knockout versus wild type and heterozygote",
+          "species": "mouse",
+          "cell_type": "layer II/III neocortex, local field potential and pyramidal-cell patch",
+          "developmental_stage": "juvenile, about two weeks of age (as printed; not re-derived here)"
+        },
+        "measured_result_note": "Present in knockout and absent in wild type, reversibly suppressed by d-APV; the authors read it as dysregulated NMDAR-mediated signalling. A circuit-level NMDAR dependence, not a receptor-level gain.",
+        "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+        "receipt": "FTR-20260810-34634460-02"
+      },
+      {
+        "id": "DA-W2-004",
+        "target_id": "human GRIA1 and GRIN-subunit transcripts",
+        "endpoint": "CPM, knockout minus wild type",
+        "direction": "UNKNOWN",
+        "source": "GSE156243 (PMID 34268881 deposit); descriptive panel by scientist-c, disease-models/wwox/research/drug_repurposing/w2_therapeutic_it2_20261027/README.md",
+        "locator": "disease-models/wwox/research/drug_repurposing/w2_therapeutic_it2_20261027/organoid_panel_cpm.tsv",
+        "epistemic_status": "INFERENZA",
+        "reading_depth": "queried_not_full_read",
+        "context": {
+          "disease_id": "WWOX-deficient human cerebral organoid model (engineered knockout; NOT a patient allele; no amyloid)",
+          "genotype": "WWOX knockout versus wild type (4 versus 2 libraries, one laboratory)",
+          "species": "human",
+          "cell_type": "cerebral organoid, bulk RNA",
+          "developmental_stage": "organoid, culture week 15"
+        },
+        "measured_result_note": "No consistent GRIN2B or GRIN2D shift at 4 versus 2 libraries; GRIN2A and GRIN3A are low-count; GRIA1 is higher in two knockouts (cko1, cko2) and overlaps wild type in the other two, and the libraries differ in composition (GAD1 and regional-patterning transcripts differ ten-fold). Transcript is not receptor function; direction left UNKNOWN on purpose.",
+        "evidence_scope": "COMPUTATIONAL_RESULT"
+      }
+    ],
+    "drug_assertions": [
+      {
+        "id": "DR-W2-001",
+        "target_id": "NMDAR (tool compound d-APV, competitive, full block)",
+        "endpoint": "burst frequency",
+        "direction": "DECREASE",
+        "source": "PAPER 031 (Breton 2021, neuron-specific Wwox knockout mouse slices)",
+        "locator": "disease-models/wwox/research/deepdive_manifests/PMID34634460.json verbatim_locators.entries[2]; first-hand: Results 2.2 sentence 'eliminated the spontaneous bursting events'",
+        "epistemic_status": "DATO",
+        "reading_depth": "complete_fulltext_read",
+        "context": {
+          "disease_id": "Wwox-null neuron-specific knockout mouse neocortex (ex vivo slice)",
+          "genotype": "Synapsin-Cre Wwox knockout versus wild type and heterozygote",
+          "species": "mouse",
+          "cell_type": "layer II/III neocortex, local field potential and pyramidal-cell patch",
+          "developmental_stage": "juvenile, about two weeks of age (as printed; not re-derived here)"
+        },
+        "measured_result_note": "Bursting eliminated and recovered on washout; n of the d-APV arm is 5 slices from 3 animals (legend). The authors call d-APV 'a glutamatergic blocker' but d-APV is NMDAR-selective: the AMPAR contribution was never tested in this paper. A full competitive block does not predict the effect of a partial use-dependent pore blocker.",
+        "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+        "receipt": "FTR-20260810-34634460-02"
+      },
+      {
+        "id": "DR-W2-002",
+        "target_id": "NMDAR pore blocker memantine; GRIN gain-of-function variants",
+        "endpoint": "clinical improvement (behaviour, development, seizure frequency)",
+        "direction": "DECREASE",
+        "source": "Karnstedt 2026, Epilepsia (PMID 41489401, PMC13075606; NOT WWOX EVIDENCE; other disease)",
+        "locator": "PMC full text retrieved through the PMC API on 2026-10-27, results and Table 1 read; supplements not; no receipt",
+        "epistemic_status": "DATO",
+        "reading_depth": "partial_fulltext_read",
+        "context": {
+          "disease_id": "GRIN-related developmental and epileptic encephalopathy (not WWOX)",
+          "genotype": "pathogenic GRIN1/GRIN2A/GRIN2B/GRIN2D variants classified by in-vitro assays as gain of function",
+          "species": "human",
+          "cell_type": "individuals, mostly children",
+          "developmental_stage": "median age 9 years (as reported)"
+        },
+        "measured_result_note": "Benefit in 14 of 19 individuals with gain-of-function variants, of whom 4 had an effect that faded (10 sustained; at variant level counting sustained effect only the authors report P = 0.0698, not significant) (behaviour 12 of 17, development 6 of 12, seizure frequency reduced in 7 of 18); three gain-of-function individuals worsened. Retrospective, unblinded, clinician or parent rated.",
+        "evidence_scope": "OTHER_DISEASE_PRECEDENT"
+      },
+      {
+        "id": "DR-W2-003",
+        "target_id": "NMDAR pore blocker memantine; GRIN loss-of-function, indeterminate or no-effect variants (the comparator group also holds 4 variants the authors call non-pathogenic)",
+        "endpoint": "clinical improvement",
+        "direction": "NO_CHANGE",
+        "source": "Karnstedt 2026, Epilepsia (PMID 41489401; NOT WWOX EVIDENCE; other disease)",
+        "locator": "same reading as DR-W2-002; Fisher test reported 14 of 19 versus 3 of 15",
+        "epistemic_status": "DATO",
+        "reading_depth": "partial_fulltext_read",
+        "context": {
+          "disease_id": "GRIN-related developmental and epileptic encephalopathy (not WWOX)",
+          "genotype": "GRIN variants classified loss of function, indeterminate or no effect",
+          "species": "human",
+          "cell_type": "individuals, mostly children",
+          "developmental_stage": "median age 9 years (as reported)"
+        },
+        "measured_result_note": "Benefit in 3 of 15 (group of 15 includes 4 non-pathogenic variants), mild and parent-reported only; seizure reduction 2 of 10, not different from the gain-of-function group. The direction of the receptor lesion, not the presence of an NMDAR gene, separated responders.",
+        "evidence_scope": "OTHER_DISEASE_PRECEDENT"
+      },
+      {
+        "id": "DR-W2-004",
+        "target_id": "NMDAR pore blocker memantine",
+        "endpoint": "progression of oxygen-induced seizure stages",
+        "direction": "INCREASE",
+        "source": "Alekseeva 2026, Biomedicines (PMID 42652189; NOT WWOX EVIDENCE; adult rat, acute provoked seizures), as recorded in the repository",
+        "locator": "disease-models/wwox/research/interventions_wave_20261019_scientist-c.md section 14; receipt FTR-20261019-42652189-01",
+        "epistemic_status": "DATO",
+        "reading_depth": "complete_fulltext_read",
+        "context": {
+          "disease_id": "hyperbaric-oxygen seizure model in adult rats (not WWOX, not a genetic epilepsy)",
+          "genotype": "wild-type adult male rats",
+          "species": "rat",
+          "cell_type": "whole animal",
+          "developmental_stage": "adult"
+        },
+        "measured_result_note": "Memantine accelerated every seizure stage; perampanel delayed stage 4 but did not prevent seizures. The reading carries unresolved internal inconsistencies noted in that record. A safety-direction datum for a non-genetic model, not WWOX.",
+        "evidence_scope": "OTHER_DISEASE_PRECEDENT",
+        "receipt": "FTR-20261019-42652189-01"
+      },
+      {
+        "id": "DR-W2-005",
+        "target_id": "NMDAR (GluN1/GluN2A and GluN1/GluN2B), memantine",
+        "endpoint": "inhibitory potency across recorded assays",
+        "direction": "DECREASE",
+        "source": "ChEMBL_37 (2026-05-01), activity table for CHEMBL807; NOT WWOX EVIDENCE",
+        "locator": "disease-models/wwox/research/drug_repurposing/w2_therapeutic_it2_20261027/README.md section 4",
+        "epistemic_status": "DATO",
+        "reading_depth": "queried_not_full_read",
+        "context": {
+          "disease_id": "recombinant NMDAR in oocytes, HEK and CHO cells (database aggregate)",
+          "genotype": "GluN1 with GluN2A/2B/2C/2D; 22 of the 37 rows are human targets and 15 are Rattus norvegicus targets (the rest of the label is unknown-origin where ChEMBL says so)",
+          "species": "human and rat",
+          "cell_type": "heterologous cells",
+          "developmental_stage": "not applicable"
+        },
+        "measured_result_note": "The recorded IC50 values spread across more than four orders of magnitude between assays (voltage, magnesium, agonist level, read-out). Potency is context-dependent; no value is carried as a target exposure. ChEMBL carries no curated mechanism row for memantine in this release (the adapter returns the molecule without mechanism).",
+        "evidence_scope": "EXTERNAL_DATABASE_RECORD"
+      },
+      {
+        "id": "DR-W2-006",
+        "target_id": "AMPAR, perampanel",
+        "endpoint": "mechanism and label",
+        "direction": "DECREASE",
+        "source": "ChEMBL_37 mechanism row CHEMBL1214124; openFDA label 2026-10-27 (NOT WWOX EVIDENCE)",
+        "locator": "framework/scripts/repurposing_adapter.py query chembl / openfda, run 2026-10-27",
+        "epistemic_status": "DATO",
+        "reading_depth": "queried_not_full_read",
+        "context": {
+          "disease_id": "approved drug label (partial-onset seizures from 4 years of age; adjunct in primary generalised tonic-clonic seizures from 12 years of age)",
+          "genotype": "not applicable",
+          "species": "human",
+          "cell_type": "not applicable",
+          "developmental_stage": "paediatric label as retrieved"
+        },
+        "measured_result_note": "Non-competitive AMPA-receptor antagonist; the label sections returned by the adapter do not include warnings, so the labelled safety profile is NOT assessed here.",
+        "evidence_scope": "EXTERNAL_DATABASE_RECORD"
+      },
+      {
+        "id": "DR-W2-007",
+        "target_id": "AMPAR (perampanel) among seven antiseizure drugs",
+        "endpoint": "seizure response",
+        "direction": "NO_CHANGE",
+        "source": "Teplyshova 2024, Front Genet (PMID 39507621), as recorded in analysis/downstream_wwox_independent_rescue_census_20260921.md W2.5; the drug effect is NOT WWOX EVIDENCE (n = 1, polytherapy)",
+        "locator": "that file section W2.5; receipt FTR-20261019-39507621-01",
+        "epistemic_status": "DATO",
+        "reading_depth": "complete_fulltext_read",
+        "context": {
+          "disease_id": "WWOX-DEE adult case report (one individual, long disease course)",
+          "genotype": "WWOX-DEE; allele per the source",
+          "species": "human",
+          "cell_type": "individual",
+          "developmental_stage": "adult, decades after onset"
+        },
+        "measured_result_note": "'No sustained positive effect of treatment was detected' for the whole list taken over decades in one adult; the drug is not isolated, the exposure and timing are unknown. n = 1 supports no statement about the drug in this genotype.",
+        "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+        "receipt": "FTR-20261019-39507621-01"
+      }
+    ],
+    "p4_fields": {
+      "endpoint_pursued": "In Wwox-deficient neocortical slices or human neurons at matched maturity: spontaneous burst frequency, duration, amplitude and phase-amplitude coupling under a graded memantine exposure versus a perampanel exposure versus the full NMDAR block, with the wild-type and heterozygous slices as internal comparators; then a developmental endpoint (myelin, synaptic maturation), because burst control alone is not recovery.",
+      "functional_evidence_available": "d-APV abolishes bursting in the knockout slice (5 slices, 3 animals); the mEPSC amplitude (probably AMPAR-weighted, an inference) is raised; a delayed evoked response is NMDAR-dependent. No memantine or perampanel has been given to any Wwox system. Seven antiseizure drugs including perampanel gave no sustained benefit in one adult human case.",
+      "temporal_or_model_limit": "Juvenile mouse slices, one laboratory, acute pharmacology; the authors themselves bound the age window; human organoid and clinical rows do not test the node.",
+      "cellular_context": {
+        "target_expression": "GRIN1, GRIN2B and GRIN2D transcripts are present in the week-15 organoid (counts per million in the W2 table); GRIA1 is present; higher in two of four knockouts, overlapping wild type in the other two.",
+        "cells_tissue_stage": "layer II/III neocortical pyramidal neurons for the slice rows; bulk organoid for transcripts.",
+        "coverage": "UNKNOWN.",
+        "limits": "No receptor-level measurement of NMDAR or AMPAR current, subunit composition or surface level exists for any WWOX system."
+      }
+    },
+    "p4_card": {
+      "identity": "Memantine (approved, uncompetitive NMDAR pore blocker; paediatric safety and effectiveness not established on its label) and perampanel (approved, non-competitive AMPAR antagonist; paediatric label for partial-onset seizures). Tool compounds: d-APV. Both are symptomatic-network levers on one measured phenotype, not WWOX restoration.",
+      "indication_and_transfer": "Only IF the neuron-specific Wwox bursting phenotype is driven by a measurable gain in glutamatergic transmission that a partial block of NMDAR or AMPAR corrects without harming activity-dependent maturation. Transfer to the reference genotype is unmeasured for both alleles: the slice model is a Synapsin-Cre knockout, not a missense or splice allele.",
+      "novelty_for_woree": "Memantine on the NMDAR node is already map record R-02 (class PROMISING_BUT_MECHANISTIC_GAP). New here: (1) the sign of the receptor lesion decides memantine's response in the one genetic-NMDAR cohort that stratified by function, so the 'GRIN2A corroborates the node' argument (DL-MECH-002) corroborates the node, not the sign; (2) the AMPAR arm, never carried as a node, rests on the only direct synaptic measurement in the knockout (raised mEPSC amplitude), and is untested. Coverage: PubMed searches of 2026-10-27 (GRIN-memantine, neonatal memantine, WWOX myelin), the Karnstedt full text, the repository's perampanel notes; NON_TROVATO_NELLA_RICERCA for any memantine or perampanel arm in a Wwox model, not MAI_TENTATO.",
+      "state_of_known_roads": "map R-02 (memantine), Chain B, N-15 (seizure control is not development), DL-MECH-002, DL-MOL-001; perampanel appears only in cohort notes (repurposing_10h_scientist-d_20261022c.md, parked item) and the adult case.",
+      "pathway_and_objective": "BENEFICIO_PRECOCE; Track A; Track B untested.",
+      "expected_contribution": "UNKNOWN. At best a reduction of a network state; no developmental benefit is implied.",
+      "mechanism": "Targets: NMDAR (GRIN1 with GRIN2A/2B/2D) and AMPAR (GRIA1-4). Direction wanted: lower excitatory gain. Context: juvenile neocortical slice, neuron-specific knockout. Memantine is a use-dependent pore blocker with subunit-dependent, assay-dependent potency; d-APV is a competitive full block: the tool result does not transfer quantitatively to the drug.",
+      "sources": {
+        "internal": [
+          "PAPER 031",
+          "CLAIM 021",
+          "CLAIM 031",
+          "DL-MECH-002",
+          "DL-MOL-001",
+          "R-02",
+          "Chain B",
+          "N-15",
+          "analysis/downstream_wwox_independent_rescue_census_20260921.md W2.5",
+          "interventions_wave_20261019_scientist-c.md section 14"
+        ],
+        "external_not_wwox_evidence": [
+          "Karnstedt 2026 Epilepsia (PMID 41489401), PMC full text",
+          "ChEMBL_37 activity and mechanism rows",
+          "openFDA labels (memantine, perampanel) 2026-10-27",
+          "PubMed abstract of PMID 42190144 (gene names are stripped in the retrieved text; the GRIN2A variant class is not stated there)"
+        ]
+      },
+      "evidence_for_and_against": {
+        "for": [
+          "d-APV abolishes bursting in the knockout slice and suppresses a knockout-specific delayed response.",
+          "Postsynaptic mEPSC amplitude is raised in the knockout.",
+          "Memantine benefited most individuals with gain-of-function GRIN variants (precedent in a channelopathy, other disease)."
+        ],
+        "against": [
+          "The only memantine-responsive genetic NMDAR group is defined by receptor gain of function; loss-of-function and indeterminate GRIN variants did not respond, so 'an NMDAR gene causes the same phenotype' (DL-MECH-002) does not give the sign.",
+          "Dependence of bursting on NMDAR activity is permissive: it does not show that NMDAR function is raised; no NMDAR current or subunit was measured.",
+          "A full competitive block (d-APV) eliminated bursting; a partial pore block at tolerable exposure may not; potency spans orders of magnitude across assays.",
+          "Memantine accelerated provoked seizures in an adult rat oxygen model; its paediatric effectiveness is not established on its label.",
+          "One adult WWOX case on perampanel plus six other drugs showed no sustained benefit (n = 1, not interpretable).",
+          "Suppressing a network state is not correcting a developmental lesion (N-15)."
+        ],
+        "transfer_limits": "Juvenile slice, one laboratory, knockout not allele; chronic NMDAR or AMPAR blockade in a developing brain also acts on activity-dependent maturation, including myelination (see F02)."
+      },
+      "time_to_access": "UNKNOWN for research use; both are marketed drugs (labels retrieved 2026-10-27).",
+      "time_to_benefit": "UNKNOWN.",
+      "pharmacology": "Memantine: use-dependent channel blocker; recorded potency depends on voltage, magnesium and agonist level and spans several orders of magnitude across assays (README section 4). Perampanel: non-competitive AMPAR antagonist. CNS exposure for both is expected from their indications but is not verified here for the slice-relevant free fraction.",
+      "paediatrics_and_interactions": "Memantine label: paediatric safety and effectiveness not established; two controlled paediatric autism studies failed. Perampanel label: partial-onset seizures from 4 years of age. Interactions and labelled warnings were NOT assessed (adapter sections lacked them). No paediatric suitability for WWOX-DEE is presumed.",
+      "scope_of_checks": {
+        "support_and_replication": "One laboratory for every WWOX row used here; no independent replication.",
+        "formal_checks": "Breton rows carry verbatim locators in the manifest (receipt FTR-20260810-34634460-02); the n values of the d-APV arm and the mEPSC text were re-read first-hand from the shared full-text XML on 2026-10-27 without a new receipt. GRIN and rat rows are at the reading depth stated per row.",
+        "card_inferences_owed_audit": "Every statement marked INFERENZA, and every card-level synthesis, is owed a blind audit by someone other than the producer."
+      },
+      "question_history": [
+        "map R-02 and Chain B",
+        "DL-MECH-002 (GRIN2A corroboration)",
+        "mandate 2026-10-27 (W2, iteration 2)"
+      ],
+      "predictions": "Registered before any experiment: (a) if bursting reflects raised NMDAR function, a partial memantine exposure lowers burst frequency in knockout slices dose-dependently and not in wild type; (b) if it reflects raised AMPAR gain, perampanel does and memantine less; (c) if both are permissive routes of a network that recruits NMDAR, only the full block works and neither drug is a lever. Result (c) closes the strand.",
+      "next_measurement": "Wet-lab, not done: Wwox-deficient versus parental or isogenic neurons or slices; graded memantine versus perampanel versus d-APV; controls: wild type, heterozygote, vehicle, washout, an NMDAR-selective and an AMPAR-selective evoked-current check to define which receptor is raised (NMDA:AMPA ratio under voltage control, not the mEPSC decay); endpoints: burst frequency, duration, amplitude, phase-amplitude coupling, then a maturation endpoint; discriminating result: a partial block that abolishes bursting in knockout and spares wild-type activity versus one that does not.",
+      "status": "hypothesis",
+      "value_added": "Separates two things the record had fused: the node (NMDAR-dependent network) and the sign of an intervention on it, and adds the one untested receptor with a direct measurement behind it.",
+      "clinical_census": "Clinical census, ClinicalTrials.gov API v2, 2026-10-20 (drug_repurposing/clinical_census_20261020.md): seven queries returned no registered WOREE interventional study; it answers seven queries against one registry on one date and a missing hit does not prove that no study exists. Not re-run for this card."
+    },
+    "not_known": [
+      "Whether NMDAR current, subunit composition or surface level is raised in any WWOX system.",
+      "Whether the raised mEPSC amplitude is AMPAR-mediated.",
+      "Whether a partial pore block reproduces the full block's effect on bursting.",
+      "Whether either drug affects maturation in a developing Wwox-deficient brain.",
+      "The GRIN2A variant class behind the burst-suppression association in the cohort abstract."
+    ],
+    "evidence_against": [
+      "The only memantine-responsive genetic NMDAR group is defined by receptor gain of function; loss-of-function and indeterminate GRIN variants did not respond, so 'an NMDAR gene causes the same phenotype' (DL-MECH-002) does not give the sign.",
+      "Dependence of bursting on NMDAR activity is permissive: it does not show that NMDAR function is raised; no NMDAR current or subunit was measured.",
+      "A full competitive block (d-APV) eliminated bursting; a partial pore block at tolerable exposure may not; potency spans orders of magnitude across assays.",
+      "Memantine accelerated provoked seizures in an adult rat oxygen model; its paediatric effectiveness is not established on its label.",
+      "One adult WWOX case on perampanel plus six other drugs showed no sustained benefit (n = 1, not interpretable).",
+      "Suppressing a network state is not correcting a developmental lesion (N-15)."
+    ],
+    "bridge_gaps_exposed": [
+      "Tool-compound and drug rows share the target but differ in block type, so the bridge's sign comparison for d-APV is not a statement about memantine.",
+      "GRIN cohort rows are a different disease; no sign comparison is formed with the slice rows."
+    ],
+    "translation": {
+      "pediatric_suitability": "Memantine: not established on its label. Perampanel: labelled from 4 years of age for partial-onset seizures. WWOX-DEE: UNKNOWN.",
+      "cns_exposure": "UNKNOWN for the slice-relevant exposure.",
+      "interactions": "UNKNOWN",
+      "access": "UNKNOWN",
+      "time_to_benefit": "UNKNOWN",
+      "functional_rescue": "UNKNOWN"
+    },
+    "p4_roadmap_fields": {
+      "indication_and_transfer": "Only IF the neuron-specific Wwox bursting phenotype is driven by a measurable gain in glutamatergic transmission that a partial block of NMDAR or AMPAR corrects without harming activity-dependent maturation. Transfer to the reference genotype is unmeasured for both alleles: the slice model is a Synapsin-Cre knockout, not a missense or splice allele.",
+      "verification_scope": "{\"support_and_replication\": \"One laboratory for every WWOX row used here; no independent replication.\", \"formal_checks\": \"Breton rows carry verbatim locators in the manifest (receipt FTR-20260810-34634460-02); the n values of the d-APV arm and the mEPSC text were re-read first-hand from the shared full-text XML on 2026-10-27 without a new receipt. GRIN and rat rows are at the reading depth stated per row.\", \"card_inferences_owed_audit\": \"Every statement marked INFERENZA, and every card-level synthesis, is owed a blind audit by someone other than the producer.\"}"
+    },
+    "label_lookup": {
+      "status": "NOT_ATTEMPTED"
+    },
+    "card_conventions": [
+      "IPOTESI throughout; the bridge forces it. No score, rank, probability or blended index is carried.",
+      "directional_summary compares signs only where target, endpoint and every context dimension match; UNRESOLVED is a statement about the record, not about the biology.",
+      "Every disease-side row from the Drosophila article is NOT WWOX-DEE EVIDENCE; the organoid rows are exploratory transcript analyses of one deposit.",
+      "Abstract-level statements from PubMed are labelled abstract_only; none carries a receipt.",
+      "label_lookup is NOT_ATTEMPTED in the bridge: the bridge has no network. The openFDA adapter was run separately and is recorded in lucas_clarke_followup_20261026/compounds_and_sources.md.",
+      "No dose, route, schedule or paediatric suitability appears; assay concentrations of the sources are deliberately not reproduced."
+    ],
+    "target_census": {
+      "dir": "disease-models/wwox/research/drug_repurposing/w2_therapeutic_it2_20261027",
+      "symbols": []
+    },
+    "no_new_reading": "W2 (scientist-c, 2026-10-27): no new full-text receipt; first-hand re-reads of already-receipted papers and of open PubMed Central text are described in the W2 record."
+  },
+  "translation": {
+    "pediatric_suitability": "Memantine: not established on its label. Perampanel: labelled from 4 years of age for partial-onset seizures. WWOX-DEE: UNKNOWN.",
+    "cns_exposure": "UNKNOWN for the slice-relevant exposure.",
+    "interactions": "UNKNOWN",
+    "access": "UNKNOWN",
+    "time_to_benefit": "UNKNOWN",
+    "functional_rescue": "UNKNOWN"
+  },
+  "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
+  "limits": [
+    "Technical comparison is not efficacy, safety or experimental validation.",
+    "Sources and receipt references are retained, not independently verified.",
+    "Shared sources are not independent confirmations; scores are not pooled.",
+    "NO_CHANGE is a reported null effect on that endpoint and context: it is not UNKNOWN (not measured), not evidence of safety, and not proof of futility; a null in a non-comparable cell stays UNRESOLVED.",
+    "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
+  ]
 }

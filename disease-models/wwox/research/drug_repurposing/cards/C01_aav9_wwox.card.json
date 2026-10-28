@@ -5,6 +5,29 @@
   "canonical": false,
   "assessment": "DIRECTIONAL_COMPARISON_ONLY",
   "directional_summary": "OPPOSES_DISEASE_CHANGE",
+  "endpoint_outcomes": [
+    {
+      "question": [
+        "electrographic spike-wave discharges",
+        "spike-wave discharge rate per hour on continuous ECoG",
+        "Wwox-null mouse model of WOREE (engineered null; NOT the Q230P class)",
+        "constitutive Wwox deletion (targeted-deletion allele, FVB)",
+        "mouse",
+        "cortical electrocorticography, single epidural channel",
+        "about two to three weeks after birth",
+        "",
+        "",
+        ""
+      ],
+      "statuses": [
+        "OPPOSES_DISEASE_CHANGE"
+      ],
+      "discriminators_declared": false,
+      "assertion_ids": [
+        "DR-C01-001"
+      ]
+    }
+  ],
   "comparisons": [
     {
       "assertion_id": "DR-C01-001",

@@ -4,7 +4,118 @@
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
-  "directional_summary": "CONFLICTING",
+  "directional_summary": "MIXED_ACROSS_ENDPOINTS",
+  "endpoint_outcomes": [
+    {
+      "question": [
+        "astrocytes",
+        "GFAP-positive cells in the timing experiment",
+        "Wwox-null mouse model of WOREE (engineered null; NOT the Q230P class)",
+        "constitutive Wwox deletion (targeted-deletion allele, FVB)",
+        "mouse",
+        "brain, GFAP-positive astrocytes (cells counted)",
+        "UNKNOWN (the timing-experiment panel states no age)",
+        "",
+        "",
+        ""
+      ],
+      "statuses": [
+        "OPPOSES_DISEASE_CHANGE"
+      ],
+      "discriminators_declared": false,
+      "assertion_ids": [
+        "DR-AAV-GFAP-P5HD"
+      ]
+    },
+    {
+      "question": [
+        "blood glucose",
+        "blood glucose at postnatal day 10",
+        "Wwox-null mouse model of WOREE (engineered null; NOT the Q230P class)",
+        "constitutive Wwox deletion (targeted-deletion allele, FVB)",
+        "mouse",
+        "whole animal, blood glucose",
+        "postnatal day 10",
+        "",
+        "",
+        ""
+      ],
+      "statuses": [
+        "NO_EFFECT_REPORTED"
+      ],
+      "discriminators_declared": false,
+      "assertion_ids": [
+        "DR-AAV-GLU10-HD",
+        "DR-AAV-GLU10-LD"
+      ]
+    },
+    {
+      "question": [
+        "body weight",
+        "body weight series from birth",
+        "Wwox-null mouse model of WOREE (engineered null; NOT the Q230P class)",
+        "constitutive Wwox deletion (targeted-deletion allele, FVB)",
+        "mouse",
+        "whole animal, body weight series",
+        "postnatal day 0 to 30 (untreated knockouts die by about day 17)",
+        "",
+        "",
+        ""
+      ],
+      "statuses": [
+        "OPPOSES_DISEASE_CHANGE"
+      ],
+      "discriminators_declared": false,
+      "assertion_ids": [
+        "DR-AAV-WT-HD",
+        "DR-AAV-WT-LD"
+      ]
+    },
+    {
+      "question": [
+        "composite motor score",
+        "composite motor score (higher is worse)",
+        "Wwox-null mouse model of WOREE (engineered null; NOT the Q230P class)",
+        "constitutive Wwox deletion (targeted-deletion allele, FVB)",
+        "mouse",
+        "whole animal, composite motor score",
+        "UNKNOWN (the panel states no age)",
+        "",
+        "",
+        ""
+      ],
+      "statuses": [
+        "OPPOSES_DISEASE_CHANGE"
+      ],
+      "discriminators_declared": false,
+      "assertion_ids": [
+        "DR-AAV-MOTOR-HD",
+        "DR-AAV-MOTOR-LD"
+      ]
+    },
+    {
+      "question": [
+        "survival",
+        "proportion of animals alive over time",
+        "Wwox-null mouse model of WOREE (engineered null; NOT the Q230P class)",
+        "constitutive Wwox deletion (targeted-deletion allele, FVB)",
+        "mouse",
+        "whole animal, Kaplan-Meier survival",
+        "birth to day 300 (ICV injection at P0-P1)",
+        "",
+        "",
+        ""
+      ],
+      "statuses": [
+        "OPPOSES_DISEASE_CHANGE"
+      ],
+      "discriminators_declared": false,
+      "assertion_ids": [
+        "DR-AAV-SURV-HD",
+        "DR-AAV-SURV-LD"
+      ]
+    }
+  ],
   "comparisons": [
     {
       "assertion_id": "DR-AAV-SURV-HD",

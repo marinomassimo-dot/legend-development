@@ -5,6 +5,29 @@
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
   "directional_summary": "UNRESOLVED",
+  "endpoint_outcomes": [
+    {
+      "question": [
+        "PTZ-provoked seizure severity (Racine stage over time)",
+        "behavioural seizure stage after one provoking injection, preweaning mice",
+        "Wwox-null mouse model (engineered Wwox knockout; NOT the Q230P class)",
+        "Wwox-/- (homozygous null) versus Wwox+/+ littermates",
+        "mouse",
+        "whole animal, behavioural seizure scoring after a provoking injection (Racine stage, scored each minute for 60 minutes)",
+        "preweaning pups",
+        "",
+        "",
+        ""
+      ],
+      "statuses": [
+        "OPPOSES_DISEASE_CHANGE"
+      ],
+      "discriminators_declared": false,
+      "assertion_ids": [
+        "DR-LI-001"
+      ]
+    }
+  ],
   "comparisons": [
     {
       "assertion_id": "DR-LI-001",
