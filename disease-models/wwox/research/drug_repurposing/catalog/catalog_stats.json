@@ -19,7 +19,7 @@
    "state": "OK",
    "version": "latest as served; Last-Modified Mon, 10 Jun 2024 16:04:52 GMT",
    "retrieved_utc": "2026-10-27T22:41:58Z",
-   "licence": "LICENCE NOT CLEARED FOR PUBLIC RELEASE (decision 2026-10-28: DGIdb-derived rows stay in this development repository; the public release is the operator's decision). UNVERIFIED in this task: dgidb.org pages are script-rendered and showed no licence text; DGIdb aggregates claims from other databases whose own terms apply per claim (e.g. TTD, DrugBank, Drugs@FDA); redistribution of claim-derived rows is NOT cleared"
+   "licence": "NOT CLEARED FOR PUBLIC RELEASE as a whole. DGIdb applies no data licence of its own (its software is MIT; the dgidb-data README of 2026-10-14 states that the claims of each source remain subject to that source's licence and that DGIdb applies no additional terms); the export of 2024-06-10 therefore carries 21 source databases with different terms (see catalog/README.md, section 'Licence reconciliation'). The repository is public, so rows from non-commercial, share-alike or unclear sources (for example DTC, CKB-CORE, CGI, TTD, ChEMBL, GuideToPharmacology, PharmGKB) are an exposure to be decided by the operator, not a held-back item"
   },
   "gtopdb": {
    "state": "OK",

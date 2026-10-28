@@ -12,7 +12,7 @@ Nothing here is medical advice and nothing changes the four scientific current f
 | File | What it is | In git (once the task branch is landed) |
 |---|---|---|
 | `catalog_build.py` | fetch (cached, incremental) + build + query + verify; standard library only | yes |
-| `test_catalog_build.py` | 17 offline regressions on a synthetic cache | yes |
+| `test_catalog_build.py` | offline regressions on a synthetic cache, including the refusal and partial-build guarantees below | yes |
 | `catalog.jsonl.gz` | the catalogue, one entry per line, deterministic (sorted, `mtime=0`) | yes (about 6 MB) |
 | `catalog_stats.json` | every count the later view reads, with the reconciliation | yes |
 | `card_links.json` | link of the curated cards to catalogue ids, with rule and an unmatched list | yes |
@@ -27,11 +27,67 @@ Nothing here is medical advice and nothing changes the four scientific current f
 |---|---|---|---|
 | ChEMBL (REST, `ChEMBL_37`, 2026-05-01) | backbone: molecule records with `max_phase`, `first_approval`, `molecule_type`, parent/child hierarchy, InChIKey, synonyms; all curated mechanisms (`action_type`, reference ids); targets | molecules with `max_phase>=0.5`, `max_phase=-1` (unknown phase), or `chemical_probe=1`, plus parents of selected salts; 7 561 mechanisms | CC BY-SA 3.0, re-verified 2026-10-28 (chembl.gitbook.io About). **Share-alike effect:** the ChEMBL-derived part of `catalog.jsonl.gz` (names, hierarchy, mechanisms, status records) is an adaptation and must be redistributed under CC BY-SA 3.0 with EMBL-EBI attribution; the file is a composite whose ChEMBL part keeps that licence |
 | UniChem whole-source mappings (FTP, 3 small files) | identifier cross-references ChEMBL to DrugBank, ChEBI and FDA UNII | 3 files, under 1 MB | EMBL-EBI Terms of Use (the UniChem documentation points to them; **no CC0 statement was found, so none is claimed**); attribution expected |
-| DGIdb `drugs.tsv` / `interactions.tsv` | approval flag per claim, gene-drug interaction type, claim source | **export of 2024-06-10** (the newest `/data/latest` serves; its ChEMBL claims are from ChEMBL 33); 81 572 claims, 98 239 interactions | **LICENCE NOT CLEARED FOR PUBLIC RELEASE** (decision 2026-10-28: the DGIdb-derived rows stay in this development repository; the public release is the operator's). Not verified in this task either (dgidb.org pages are script-rendered and showed none). The claims come from other databases whose own terms apply per claim (TTD, DrugBank, Drugs@FDA, ...). The DGIdb-derived rows are therefore **not cleared for redistribution**: the integrator decides whether `catalog.jsonl.gz` ships with them |
+| DGIdb `drugs.tsv` / `interactions.tsv` | approval flag per claim, gene-drug interaction type, claim source | **export of 2024-06-10** (the newest `/data/latest` serves; its ChEMBL claims are from ChEMBL 33); 81 572 claims, 98 239 interactions | **NOT CLEARED FOR PUBLIC RELEASE as a whole.** DGIdb states no data licence of its own: its software is MIT, and each claim keeps the terms of its source database (dgidb-data README, read 2026-10-28; DGIdb 5.0 paper: "We aggregate content from 44 sources with varying content licenses"). The repository is **public** (GitHub, `visibility: public`, checked 2026-10-28), so the earlier wording "the DGIdb-derived rows stay in this development repository" was wrong and has been withdrawn: the rows are published and the question is the operator's. Per-source terms for the 21 sources present in our rows: section below |
 | GtoPdb `interactions.csv` + `targets_and_families.csv` (guidetopharmacology.org/DATA, release 2026.3.1) | verification and correction of the gene named by DGIdb Guide-to-Pharmacology rows (target id, species, type, selectivity statement); not a target source of its own | 2 files, 24,968 interactions | database ODbL, contents CC BY-SA 4.0 (about.jsp, download.jsp, read 2026-10-28); public download, no registration. Share-alike applies to the GtoPdb-derived fields of `catalog.jsonl.gz`. The web-services API needs a key and is not used |
 | Every Cure MATRIX drug list (Hugging Face, via datasets-server rows) | `approved_usa`, `gras_usa`, ATC, DrugBank and ChEBI ids for 1 927 live rows | HF commit `dc75f85…`, 1 935 rows declared = 1 935 received | CC BY 4.0, from the drug-list dataset-card metadata. The MATRIX knowledge graph and the **scores** table are separate artefacts: nothing is transferred to them from this licence; the scores have no declared licence and are not used |
 | openFDA `drug/ndc` bulk zip | the only open source of a US access category: `product_type` (prescription vs OTC), `marketing_category`, UNII | 138 143 products, export 2026-10-27 | CC0 / public domain (verified 2026-10-28 at open.fda.gov/license; the third-party GMDN notice on that site concerns device content, not the NDC fields used); openFDA disclaimer applies |
-| NIH ODS DSLD API v9 (per-query) | dietary-supplement label evidence | 1 005 name probes OK, 0 errors (981 of the 4 697 bulk-list names, interrupted; 24 targeted) | CC0 (API documentation licence block) |
+| NIH ODS DSLD API v9 (per-query) | dietary-supplement label evidence | 1 005 name probes OK, 0 errors (981 of the 4 697 bulk-list names, interrupted; 24 targeted) | reported as CC0 on 2026-10-27 (API documentation licence block); the page returned 403 on 2026-10-28 and the statement is **not re-verified**; counts only |
+
+## Licence reconciliation (IT5 P1, read 2026-10-28)
+
+Not legal advice. "Verified" means the sentence was read on the source's own page or code on that date;
+"declared by DGIdb" means only DGIdb's own metadata says so. The DGIdb software state of 2024-06-07
+(importer code, commit `a35759a` of `dgidb/dgidb-v5`, the last before our 2024-06-10 export) declares
+the same licence strings as the live service for every source below, so the 2026 reading holds for the
+version we hold. A container's licence does not clarify the content's: DGIdb's own manifest
+(`dgidb/dgidb-data`, `dgidb_source_licensing.xlsx`, 2026-10-14) even lists DoCM as "no public dataset
+license identified" while DoCM's own page says CC BY 4.0; the source's own page decides.
+
+| claim_source (rows in `catalog.jsonl.gz`) | Terms | Reference | Verified at the content's own source? | Class |
+|---|---|---|---|---|
+| DTC (23,879) | CC BY-NC-SA 3.0 | declared by DGIdb (importer, API) | no (site unreachable today) | C |
+| ChEMBL (16,947) | CC BY-SA 3.0 Unported; attribution must give the ChEMBL URL and the release version | chembl.github.io/chembl-licensing: "The required attribution should contain the url of the ChEMBL resource, and also the release version"; gitbook "about" | yes | B |
+| GuideToPharmacology (16,070) | database ODbL, contents CC BY-SA 4.0 | guidetopharmacology.org/about.jsp: "licensed under the Open Data Commons Open Database License (ODbL) ... Its contents are licensed under a Creative Commons Attribution-ShareAlike 4.0 International License" | yes | B |
+| TTD (15,246) | unclear ("All Rights Reserved" vs open access) | declared by DGIdb | no | C |
+| NCI Cancer Gene Index (6,231) | declared public domain; the CGI wiki page named in DGIdb's importer is gone ("Page Not Found") and cancer.gov's reuse policy covers cancer.gov text only | cancer.gov/policies/copyright-reuse | **no** | C until verified |
+| PharmGKB / ClinPGx (5,976) | CC BY-SA 4.0 | pharmgkb.org / clinpgx.org pages show it; the data-usage-policy page is script-rendered and its text was not read | partly | B |
+| TdgClinicalTrial (5,072), TEND (2,242), TALC (602) | rights in a publisher's supplementary table | declared by DGIdb | no | C |
+| JAX-CKB / CKB-CORE (2,148) | CC BY-NC-SA 4.0 (2024 importer and live) | declared by DGIdb | no | C |
+| CIViC (1,120) | CC0 1.0 | docs.civicdb.org FAQ: "released under the Creative Commons Public Domain Dedication (CC0 1.0 Universal)" | yes | A |
+| MyCancerGenome (829) + ClinicalTrial (317), OncoKB (148), CancerCommons (109), COSMIC (37) | restrictive / non-commercial custom terms | declared by DGIdb | no | C |
+| FDA PGx biomarkers (427) | public domain | fda.gov website policies: "not copyrighted ... in the public domain and may be republished, reprinted and otherwise used freely"; credit appreciated | yes (FDA site policy, "unless otherwise noted") | A |
+| CGI (368) | CC BY-NC 4.0 | declared by DGIdb | no (403) | C |
+| Clearity (240 + 163) | unknown, data no longer available | declared by DGIdb | no | C |
+| DoCM (76) | CC BY 4.0 | DoCM about page in the commit DGIdb links: "licensed under a Creative Commons Attribution 4.0 International License" | yes | A |
+
+Other components. "Class" proposals are for the view allowlist (another worker owns the builder): **A** redistribute
+with attribution; **B** share-alike, separate file with its own licence and credit; **C** identifiers and counts only;
+**D** local only.
+
+| Source | Content reused | Terms and reference | Conditions | Class and alternative |
+|---|---|---|---|---|
+| ChEMBL release `ChEMBL_37` (2026-05-01; DGIdb claims carry ChEMBL 33) | names, hierarchy, status, mechanisms, reference ids | CC BY-SA 3.0 (above) | attribution with URL and release; adaptations redistributed under the same licence (CC legal code 4(b)) | B; or ChEMBL ids plus our own annotations only |
+| GtoPdb 2026.3.1 (public download) | target id, species, selectivity used to verify and correct DGIdb GtoPdb rows; GtoPdb-derived claim rows | ODbL database, CC BY-SA 4.0 contents (about.jsp, download.jsp) | ODbL 4.4: a Derivative Database that is publicly used stays under ODbL or a compatible licence, with notice; BY-SA 4.0 3(b): adapted material under BY-SA or a listed compatible licence | B (two licences: do not merge into one file); or target ids and gene symbols |
+| PharmGKB / ClinPGx | claim rows via DGIdb | CC BY-SA 4.0 | as above | B; or ids and "see ClinPGx" |
+| openFDA NDC (export 2026-10-27) | product type, marketing category, UNII | open.fda.gov/terms: "public domain and made available with a Creative Commons CC0 1.0 Universal dedication"; credit asked, not required: "Data provided by the U.S. Food and Drug Administration (https://open.fda.gov)"; works to which CC0 does not apply are marked | do not imply endorsement; openFDA disclaimer | A |
+| Every Cure MATRIX drug list (HF commit `dc75f85`) | approval flags, ATC, ids, names | HF dataset-card licence field `cc-by-4.0` (card prose not rendered; read 2026-10-28). The scores table is a separate artefact with no declared licence and is not used | CC BY 4.0 attribution, indicate changes | A |
+| UniChem mappings | ChEMBL to DrugBank / ChEBI / UNII identifier pairs | UniChem docs point to EMBL-EBI Terms of Use: "EMBL-EBI itself places no additional restrictions on the use or redistribution of the data ... other than those provided by the original data owners"; "expects attribution". No CC0 statement exists and none is claimed | attribution | A for identifiers; DrugBank content beyond the id is not carried |
+| DrugBank | identifiers only | DGIdb: custom non-commercial | no DrugBank text or tables | ids only |
+| NIH DSLD | 1,005 name probes, counts only | documentation page returned 403 today; "CC0" is the repo's earlier reading (2026-10-27), not re-verified | none shipped beyond counts | C |
+| Open Targets | one cached API response | platform-docs.opentargets.org/licence: "dedicates the data to the public domain"; upstream sources keep their terms | none beyond citation | A (counts, ids) |
+| HGNC | symbols and ids | genenames.org/about/license: "all data is released under the Creative Commons Public Domain (CC0) License"; attribution not mandatory | none | A |
+| DailyMed | `DailyMed:id` strings inside ChEMBL references; no label text | NLM policy: government works not copyrighted; manufacturer content may be; DailyMed page states no reuse terms | do not ship label text | ids only |
+| ClinicalTrials.gov | NCT ids and counts in the census | terms page is script-rendered; no sentence read | ids only | ids only |
+| PubMed / PMC | PMIDs, titles in `join/pubmed_cache`, locator pointers; no abstracts or passages found in `cards/`, `join/` or the views | NLM policy: article and abstract rights stay with rights holders | keep it so; quote only briefly with citation | A for bibliographic facts; D for any passage |
+| PubTator3 | 43 empty or tiny cached responses | NCBI policies page | none | A |
+
+Proposed `shareable_sources.json` changes (not applied here): move **NCI** from `dgidb_claim_sources` to
+counts-only until the Cancer Gene Index terms are read at NCI; keep FDA, CIViC, DoCM (all three verified at
+their own source today); keep ChEMBL, GtoPdb, PharmGKB/ClinPGx counts-only in the single shareable file, and
+if they are wanted, add class B files `catalog_chembl_cc-by-sa-3.0.jsonl.gz`, `gtopdb_odbl.jsonl.gz`,
+`clinpgx_cc-by-sa-4.0.jsonl.gz`, each with its licence text and credit line; add UniChem, HGNC and Open Targets
+as identifier-only sources with credit; keep DSLD counts-only. Until a component is verified, new results use
+a projection with compatible terms and the uncertain rows are not widened.
 
 Not obtained, stated plainly: **no open bulk list of dietary supplements** exists that carries
 identifiers (the NDC directory has no supplement product type; DSLD labels carry no UNII, so
@@ -154,16 +210,63 @@ backbone.
 ```bash
 python3 -B catalog_build.py fetch                 # NETWORK. Skips sources newer than 30 days; --refresh / --only chembl,dgidb to force
 python3 -B catalog_build.py probe-dsld [--names a,b] [--retry-errors] [--limit N]   # NETWORK, optional, resumable, 3 parallel requests
-python3 -B catalog_build.py build                 # OFFLINE. cache -> catalog.jsonl.gz, stats, card links (about 25 s)
+python3 -B catalog_build.py inputs                # OFFLINE. what the declared version needs: present / missing / mismatching, and how to get each
+python3 -B catalog_build.py build                 # OFFLINE. cache -> catalog.jsonl.gz, stats, card links (about 25 s); REFUSES on an incomplete cache
 python3 -B catalog_build.py verify                # OFFLINE. counts reconcile
-python3 -B test_catalog_build.py                  # OFFLINE. 17 regressions on a synthetic cache
+python3 -B test_catalog_build.py                  # OFFLINE. regressions on a synthetic cache
 python3 -B catalog_build.py all                   # fetch then build
 ```
 
 `build` never touches the network (a regression test forbids it); the ChEMBL entity-type lookup
-for ids mentioned in cards is part of `fetch`. Rebuilding from the cache was verified offline on
-2026-10-28 and produced the same counts. To remove: `git rm -r` this directory and
-`framework/scripts/compound_catalog.py` (plus its row in the scripts README); nothing else imports them.
+for ids mentioned in cards is part of `fetch`.
+
+## Reproducing the declared version (and what a build refuses to do)
+
+The **declared version** is what `cache_manifest.json` records as the last complete retrieval of
+each source: version string, URL, and the sha256 of every file. The cache is the gitignored
+`cache/` of the **root checkout**; a git worktree does not have it. A build therefore starts by
+checking every file the declared version needs: it must exist, and its sha256 must equal the
+manifest. Two files the manifest does not hash are checked for presence only:
+`chembl/id_lookup.json` (written by `fetch`; without it every card id stays `UNRESOLVED` and
+`card_links.json` changes) and `dgidb/live_sources.json` (the `dgidb_age` comparison).
+`dsld/probes.jsonl` is append-only and has no hash either.
+
+Reproduce, in a worktree or anywhere else, with separate commands:
+
+```bash
+LEGEND_CATALOG_CACHE=/path/to/root/disease-models/wwox/research/drug_repurposing/catalog/cache python3 -B catalog_build.py inputs
+LEGEND_CATALOG_CACHE=/path/to/root/disease-models/wwox/research/drug_repurposing/catalog/cache python3 -B catalog_build.py build --check
+LEGEND_CATALOG_CACHE=/path/to/root/disease-models/wwox/research/drug_repurposing/catalog/cache python3 -B catalog_build.py build
+```
+
+* `inputs` lists each required file with its status (`OK`, `PRESENT_UNHASHED`, `MISSING`,
+  `HASH_MISMATCH`), source, pinned hash and the acquisition command; exit 1 if anything is
+  missing. In a worktree it also prints the root checkout's cache path.
+* `build --check` rebuilds in memory, writes nothing and compares the result with the committed
+  `catalog.jsonl.gz`; exit 0 and `MATCH: byte-identical` if the cache reproduces it, exit 4 otherwise.
+* `build` replaces the outputs only from a complete, matching cache. The files are staged as
+  `*.stage` and moved over the targets only after the build and the count reconciliation passed, so a
+  failed build leaves the last valid `catalog.jsonl.gz`, `catalog_stats.json` and `card_links.json`
+  as they were.
+* On a missing or mismatching input, `build` **refuses** (exit 3), names each file, and says how to
+  proceed: point `LEGEND_CATALOG_CACHE` at a cache that holds it, or `fetch --only <source>`.
+  `fetch` downloads what is served now (keyless public downloads only: EBI/ChEMBL, UniChem FTP,
+  DGIdb, guidetopharmacology.org, Hugging Face, api.fda.gov). The DGIdb and GtoPdb URLs serve
+  "latest", so a re-download can differ from the declared files; the build then reports
+  `HASH_MISMATCH` until the manifest is updated by that fetch, at which point it is a **new
+  catalogue version**, not a reproduction. Exact reproduction needs the original cache files.
+* Missing the ChEMBL backbone is always refused. Otherwise an explicit, separate
+  `python3 -B catalog_build.py build --partial` builds without the sources whose input is missing
+  and writes **only** `catalog.PARTIAL.jsonl.gz`, `catalog_stats.PARTIAL.json` and
+  `card_links.PARTIAL.json`; the stats carry `PARTIAL_BUILD` (the missing inputs, the excluded
+  sources, "NOT equivalent to catalog.jsonl.gz") and each excluded source shows state
+  `EXCLUDED_MISSING_OR_MISMATCHING_INPUT`. The complete files are never touched by it.
+
+The build is deterministic: sorted output, `mtime=0`, no dependence on hash randomisation
+(verified by two builds with different `PYTHONHASHSEED`, byte-identical to the committed file).
+Rebuilding from the complete cache was verified offline on 2026-10-28 and produced the same counts.
+To remove: `git rm -r` this directory and `framework/scripts/compound_catalog.py` (plus its row in
+the scripts README); nothing else imports them.
 
 ## Hook for the rest of the module
 
