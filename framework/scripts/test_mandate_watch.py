@@ -61,6 +61,15 @@ class Watch(unittest.TestCase):
         self.e = Env(*a, **k)
         return self.e
 
+    def test_claude_is_found_without_a_path_in_cron(self):
+        old = os.environ.get("PATH")
+        os.environ["PATH"] = "/usr/bin:/bin"          # what cron provides
+        try:
+            self.assertTrue(mw.claude_bin().endswith("claude"))
+            self.assertTrue(os.path.isabs(mw.claude_bin()))
+        finally:
+            os.environ["PATH"] = old
+
     def test_busy_session_is_running_and_never_asked(self):
         e = self.env(record())
         r = e.check([{"sessionId": SID, "status": "busy"}], deliver="resume")
@@ -94,7 +103,7 @@ class Watch(unittest.TestCase):
         run = lambda c, cwd=None: (calls.append(c), SimpleNamespace(returncode=0, stdout="ok", stderr=""))[1]
         r = e.check([], deliver="resume", runner=run)
         self.assertEqual(r["delivery"], "sent")
-        self.assertEqual(calls[0][:4], ["claude", "--bg", "--resume", SID])
+        self.assertEqual([os.path.basename(calls[0][0])] + calls[0][1:4], ["claude", "--bg", "--resume", SID])
         self.assertEqual(mw.transcript_cwd(e.tr), "/work/dir")
         r2 = e.check([], deliver="resume", runner=run)            # same queue state: request still pending
         self.assertEqual(r2["action"], "NONE")
