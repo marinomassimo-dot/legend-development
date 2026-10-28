@@ -1,0 +1,39 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261028-38106446-01",
+ "study_id": {
+  "pmid": "38106446",
+  "doi": "10.2147/IJN.S439728"
+ },
+ "analysis_at": "2026-10-28T23:07:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-d, mandate IT5 step P9, task branch task/it5-p9; context_policy QUESTION_DRIVEN (held: the PDK-inhibition strand, what primary sources the open review points to for dichloroacetate in epilepsy models, hypoglycaemia-induced injury and the thiamine and oxalate observations). Route: Europe PMC fullTextXML for PMC10725694 saved unmodified. Targeted passages were read: the abstract, the table row for epilepsy, the subsection on hypoglycaemic brain injury, traumatic brain injury and epilepsy, the paragraphs on peripheral neuropathy, thiamine and oxalate, and the reference entries 45 and 46. The review is a secondary source; every primary claim it carries was traced to PubMed and not taken from the review. NOT WWOX EVIDENCE.",
+ "evidence_depth": "queried_not_full_read",
+ "source_locator": "files/fulltext/PMID38106446_Zhang2023_PMC10725694.xml",
+ "source_fingerprint": "cb121e2e610de40d04fc242dde46e894a7421d734953e592deb27bdbe013341a",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_present",
+  "results": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "supplementary": "not_present",
+  "references": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/cards/I01_pdk_inhibition_dca_premise_seizure_glycaemia.packet.json",
+  "disease-models/wwox/research/drug_repurposing/closed_loop_it5_p9_20261029/README.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "targeted passages only (table row for epilepsy, the epilepsy and hypoglycaemic-injury subsection, neuropathy and thiamine paragraphs, reference entries 45 and 46); no section read in full, so depth is queried_not_full_read",
+  "secondary source used as a pointer to Durie 2018 (PMID 29913407), Lee 2022 (PMID 36432491) and a hypoglycaemia-injury paper (PMID 31052436); none of the card's claims rests on the review alone"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read",
+ "event_at": "2026-10-28T23:07:00Z"
+}

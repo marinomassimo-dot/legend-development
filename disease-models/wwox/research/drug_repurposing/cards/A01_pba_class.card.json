@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "fee0d4182182def90571a1ef183decdb1722165c746792489f838c4d2d173560",
+  "input_sha256": "97f9c792d8f0c6c426f4fdb4eb9daaa105b9368bd43bdf821f4924d3019e81c6",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -249,7 +249,7 @@
           "cell_type": "HEK293 and fly astrocytes",
           "developmental_stage": "adult flies and cell line"
         },
-        "measured_result_note": "MEASURED NO RESCUE (behaviour unchanged). Encoded NO_CHANGE: a reported null, not an unmeasured cell.",
+        "measured_result_note": "MEASURED NO RESCUE (behaviour unchanged). Encoded NO_CHANGE: a reported null, not an unmeasured cell. In the same paper glycerol, an osmolyte-type chemical chaperone, did rescue G443D in vitro: the partly trafficked branch was outside the reach of this class, not of every chemical chaperone.",
         "receipt": "FTR-20261021-40485335-01"
       },
       {
@@ -325,7 +325,7 @@
           "cell_type": "HEK293T",
           "developmental_stage": "not applicable"
         },
-        "measured_result_note": "Mutant total protein about 1.05 of untreated control, no significance mark (three experiments); the text lists only the phenylbutyrate class and two osmolytes as stabilising. On wild type the same comparator gave a scattered, unmarked value near 1.95. The comparator is more potent than the phenylbutyrate class on class-I HDAC enzymes and does not engage HDAC6 at the applied level; no pan-HDAC or HDAC6-selective arm exists in this paper. A measured null in a cell that is not comparable.",
+        "measured_result_note": "Mutant total protein about 1.05 of untreated control, no significance mark (three experiments); the text lists only the phenylbutyrate class and two osmolytes as stabilising. On wild type the same comparator gave a scattered, unmarked value near 1.95. The comparator was more potent than the phenylbutyrate class on class-I HDAC enzymes in one ChEMBL document but weaker on HDAC1 in a third that also lists the sodium salt, so that premise is document-dependent; it does not engage HDAC6 at the applied level; no pan-HDAC or HDAC6-selective arm exists in this paper. A measured null in a cell that is not comparable.",
         "receipt": "FTR-20261021-30266908-01"
       },
       {
@@ -363,7 +363,7 @@
           "cell_type": "primary cortical neurons",
           "developmental_stage": "in culture"
         },
-        "measured_result_note": "Mutant total protein sits at about 4 to 8 percent of wild type in four of five variants and rises only about 1.05 to 1.65 fold with the class; the soluble fraction roughly doubles (soluble pool about 2 to 4 fold, reader arithmetic); function reaches or exceeds the untreated wild-type range for four of five. Quantity and function are not proportional (read-out saturation or wild-type over-expression not excluded); a steady-state deficit of about 12 to 25 fold is only about 1.5 to 3 fold explained by the measured turnover.",
+        "measured_result_note": "Mutant total protein sits at about 4 to 8 percent of wild type in four of five variants and rises only about 1.05 to 1.65 fold with the class; the soluble fraction roughly doubles (soluble pool about 2 to 4 fold, reader arithmetic); function reaches or exceeds the untreated wild-type range for three of the four low-protein variants (R406H about 44 against about 55 does not; the fifth variant, P335L, has about 65 percent protein and little baseline deficit). The soluble-pool figures combine panels with different loading normalisers and carry a reader error of about plus or minus 10 percent of axis, and fold values near 1.05 are not separable from 1.0. Quantity and function are not proportional (read-out saturation not excluded; the authors report near-wild-type expression in neurons, not overexpression, and a pixel-threshold read-out); a steady-state deficit of about 12 to 25 fold is only about 1.5 to 3 fold explained by the measured turnover.",
         "receipt": "FTR-20261021-30266908-01"
       },
       {
@@ -404,7 +404,7 @@
       "state_of_known_roads": "inconclusive, narrowed in IT5 P8 (rationale withdrawn once, not refuted; compartment objection not established for a soluble client; no WWOX test; HDAC6 role open).",
       "pathway_and_objective": "RECUPERO_PROFONDO.",
       "expected_contribution": "Function recovery of residual WWOX protein is the only contribution hypothesised; compensation, symptom and protection are not claimed. The branch (retained, cleared, insoluble) must be placed before any contribution can be stated.",
-      "mechanism": "Target: the folding or trafficking fate of a destabilised client; type of action debated among three non-exclusive classes: physical chemical chaperoning (the class and HDAC-free osmolytes both raised a soluble mutant), HDAC6/HSP90-linked acetylation (open for the class: the class engages HDAC6 at applied levels, butyrate does not, one cytosolic enzyme precedent responds to an HDAC6 lever), and class-I HDAC-mediated transcription of the cDNA (a class-I inhibitor did not reproduce the soluble mutant gain; promoter and mRNA-under-treatment controls absent). No source curates a chaperone target or potency for the class; its HDAC potencies are quantified at enzyme level and the applied levels sit well above them. Direction: up in protein; context: ER-retained membrane clients and one soluble cytosolic client.",
+      "mechanism": "Target: the folding or trafficking fate of a destabilised client; type of action debated among three non-exclusive classes: physical chemical chaperoning (the class and HDAC-free osmolytes both raised a soluble mutant), HDAC6/HSP90-linked acetylation (open for the class: the class engages HDAC6 at applied levels, butyrate does not, one cytosolic enzyme precedent responds to an HDAC6 lever), and class-I HDAC-mediated transcription of the cDNA (a class-I inhibitor did not reproduce the soluble mutant gain, a contrast that assumes butyrate is at least as strong as the class on class-I enzymes, which is document-dependent; promoter and mRNA-under-treatment controls absent). No source curates a chaperone target or potency for the class; its HDAC potencies are quantified at enzyme level and the applied levels sit well above them. Direction: up in protein; context: ER-retained membrane clients and one soluble cytosolic client.",
       "sources": {
         "internal": [
           "claim_registry_current CLAIM 019, CLAIM 030, CLAIM 032",
@@ -423,7 +423,7 @@
         "for": [
           "Allele-specific rescue of a fully ER-retained variant with protein and function read together (GAT-1 G443V, fly seizure-like episodes down).",
           "Total and surface protein rise in other missense lesions with the class.",
-          "In the soluble cytosolic client, the class and two HDAC-free osmolytes raised the mutant while a class-I HDAC inhibitor did not, and the soluble fraction roughly doubled with a vesicle-recycling read-out at or above the untreated wild-type range for four of five variants (partial dissociation of quantity from function in the favourable direction; NOT WWOX EVIDENCE)."
+          "In the soluble cytosolic client, the class and two HDAC-free osmolytes raised the mutant while a class-I HDAC inhibitor did not, and the soluble fraction roughly doubled with a vesicle-recycling read-out at or above the untreated wild-type range for three of the four low-protein variants (partial dissociation of quantity from function in the favourable direction; NOT WWOX EVIDENCE)."
         ],
         "against": [
           "Wild type is raised in every target: the effect is not mutant-specific.",
@@ -434,11 +434,11 @@
           "A required-fold limit: a boost multiplies the mutant's residual function and does not change it; parity needs the reciprocal of (amount times function per molecule), which is unmeasured for every WWOX allele, and observed gains (about 1.05 to 9 fold) also apply to wild type.",
           "The measured turnover difference (about 1.5 to 3 fold) explains only a small part of a 12 to 25 fold steady-state deficit in the soluble precedent, so the 'made then cleared' branch is not the only candidate even where turnover is measured."
         ],
-        "transfer_limits": "Soluble monomeric client with a dominant-negative mechanism, or ER-retained membrane client, versus a recessive cytosolic SDR enzyme; overexpression (CMV-promoter plasmid or lentivirus) versus own promoter; wild type raised alike; the in vitro and in vivo gains are protein quantity, not WWOX function."
+        "transfer_limits": "Soluble monomeric client with a dominant-negative mechanism, or ER-retained membrane client, versus a recessive cytosolic SDR enzyme; CMV-promoter plasmid overexpression in cell lines, or lentiviral expression near wild-type level in neurons (authors' statement; saturation or excess not excluded), versus own promoter; wild type raised alike; the in vitro and in vivo gains are protein quantity, not WWOX function."
       },
       "time_to_access": "UNKNOWN. Not documented in the repository.",
       "time_to_benefit": "UNKNOWN. Not documented; no WWOX datum exists from which to estimate it.",
-      "pharmacology": "Potency, relevant exposure and selectivity in a WWOX system: UNKNOWN. In the sources: class not selective for the mutant; brain exposure not measured in any R1 paper. Keyless sources (IT5 P8): no folding, binding or thermal-shift datum for the class or for TUDCA in ChEMBL, GtoPdb or DGIdb (ChEMBL mechanism of record is ammonia scavenging for the sodium salt and 'Unknown' for TUDCA; GtoPdb holds no curated interaction for either); HDAC enzyme potencies of the class are in the micromolar to sub-millimolar range and the levels applied in cells were about 8 to 78 times those (enzyme-level arithmetic, not occupancy); butyrate is 4 to 29 times more potent against class I and does not engage HDAC6.",
+      "pharmacology": "Potency, relevant exposure and selectivity in a WWOX system: UNKNOWN. Re-examined in IT5 (pharmacology_it5_20261029/proteostasis_pba_a01.tsv): the only measured potency for the class is HDAC inhibition, at micromolar to sub-millimolar values (one HeLa extract study: low micromolar; recombinant enzymes: tens to hundreds of micromolar, with butyrate more potent than phenylbutyrate in the same assay and the order reversed in the HeLa study), while the cell experiments in the cited papers applied roughly half a millimolar to ten millimolar for a day (a toxicity ceiling at four millimolar in one paper) and the bile acid one hundred micromolar; so HDAC inhibition is quantitatively available at the concentrations used and cannot be excluded as the operating mechanism, and there is no numeric value for the chaperone mechanism of either compound, although qualitative active records exist for phenylbutyric acid alone (model-protein aggregation suppression and ER-stress cell protection, each at a single concentration and neither on a disease client); the bile acid has no folding or aggregation record In the sources: class not selective for the mutant; brain exposure not measured in any R1 paper. Keyless sources, IT5 P8 re-pull: no folding, binding or thermal-shift datum for the class or TUDCA in ChEMBL, GtoPdb or DGIdb (ChEMBL mechanism of record: ammonia scavenging for the sodium salt, Unknown for TUDCA; GtoPdb no curated interaction for either); the levels applied in cells were about 8 to 78 times the class's HDAC enzyme IC50 (arithmetic, not occupancy); butyrate is 4 to 29 times more potent than the acid on class I in one document (its low values recur in another that lists no phenylbutyrate) but weaker on HDAC1 than the sodium salt in a third, so the relative class-I strength is document-dependent; butyrate does not engage HDAC6 in the one document that tests it.",
       "paediatrics_and_interactions": "UNKNOWN. No paediatric suitability is presumed by this card, for the candidate or for any historical authorisation of it for another use.",
       "scope_of_checks": {
         "support_and_replication": "Rescue of the retained branch seen in two papers of one target family (GAT-1 variants); no replication in an enzyme-class or WWOX system.",
@@ -473,7 +473,7 @@
     "evidence_against": [
       "Wild-type protein is raised too.",
       "Null zebrafish negative (protein not measured).",
-      "Partly trafficked variant not rescued.",
+      "Partly trafficked variant not rescued by the class (glycerol rescued it in vitro).",
       "Rationale withdrawn once in this repository.",
       "Class-I HDAC action does not reproduce the soluble mutant gain, but that does not exclude HDAC6 or transcription-linked effects.",
       "Observed gains also apply to wild type and are small against a deficit of tens of fold."

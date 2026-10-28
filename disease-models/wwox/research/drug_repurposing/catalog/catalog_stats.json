@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_utc": "2026-10-28T19:43:44Z",
+ "generated_utc": "2026-10-28T23:19:38Z",
  "unit": "one catalogue entry = one source-level substance record (ChEMBL molecule record incl. salts and stereoisomers; or one source-only substance); NOT a unique chemical entity",
  "sources": {
   "chembl": {
@@ -24,7 +24,7 @@
   "gtopdb": {
    "state": "OK",
    "version": "GtoPdb Version: 2026.3.1 - published: 2026-10-12",
-   "retrieved_utc": "2026-10-28T19:01:32Z",
+   "retrieved_utc": "2026-10-28T22:46:53Z",
    "licence": "database under ODbL; contents under CC BY-SA 4.0 (guidetopharmacology.org/about.jsp and /download.jsp, read 2026-10-28); public download, no registration"
   },
   "matrix": {
@@ -182,6 +182,68 @@
   "queries_with_exact_name_in_sample": 72,
   "match_strength": "name_only: DSLD labels carry no identifier; US labels only (not an Italian or EU classification)"
  },
+ "gtopdb_ligand_reconciliation": {
+  "state": "OK",
+  "gtopdb_release": "GtoPdb Version: 2026.3.1 - published: 2026-10-12",
+  "dgidb_export": "latest as served; Last-Modified Mon, 10 Jun 2024 16:04:52 GMT",
+  "chembl_version": "ChEMBL_37 2026-05-01",
+  "source_tag": "gtopdb_ligand_chembl_ref",
+  "rule": "DGIdb iuphar.ligand concept id -> GtoPdb ligand -> its ChEMBL id -> ChEMBL record of the catalogue; decided on ACTIVE status, standard InChIKey layers, labelled/radioactive flags and contradicting identifiers; names are recorded as evidence and never decide",
+  "terms": {
+   "gtopdb": "GtoPdb ligands.csv: ODbL (database) / CC BY-SA 4.0 (contents), share-alike + attribution",
+   "chembl": "ChEMBL molecule record: CC BY-SA 3.0, share-alike + attribution",
+   "dgidb": "DGIdb export: per-claim source terms (README, Licence reconciliation); the iuphar.ligand concept id is a GuideToPharmacology claim"
+  },
+  "dgidb_only_records_with_an_iuphar_ligand_id": 6567,
+  "record_ligand_pairs": 6597,
+  "pairs_ligand_absent_from_release": 2,
+  "pairs_ligand_without_chembl_id_in_gtopdb_no_relation_made": 3567,
+  "pairs_with_a_chembl_reference_all": 3028,
+  "decisions_all_pairs_with_a_relation": {
+   "merged": 485,
+   "related_not_merged": 14,
+   "rejected_conflict": 4,
+   "out_of_selection": 2472,
+   "unresolved": 55
+  },
+  "decisions_by_reason": {
+   "merged|full_inchikey_equal": 485,
+   "out_of_selection|chembl_id_active_but_not_in_catalogue_selection": 2472,
+   "rejected_conflict|inchikey_connectivity_differs": 4,
+   "related_not_merged|labelled_or_radioactive_form_of_the_ligand": 7,
+   "related_not_merged|ligand_structure_is_the_parent_form_but_chembl_ref_is_a_salt_or_derived_form": 1,
+   "related_not_merged|stereo_or_isotopes_undefined_in_gtopdb_defined_in_chembl": 3,
+   "related_not_merged|stereoisomers_or_isotopologues_differ": 3,
+   "unresolved|chembl_id_is_not_a_compound_record": 1,
+   "unresolved|chembl_id_obsolete_or_inactive": 44,
+   "unresolved|chembl_id_unknown_to_chembl_lookup": 1,
+   "unresolved|drugbank_ids_disjoint_between_dgidb_and_chembl_unichem": 1,
+   "unresolved|ligand_id_absent_from_gtopdb_release": 2,
+   "unresolved|structure_unavailable_both_sides": 4,
+   "unresolved|structure_unavailable_chembl_side": 1,
+   "unresolved|structure_unavailable_gtopdb_side": 1
+  },
+  "candidates_chembl_ref_in_catalogue": 510,
+  "decisions_candidates_chembl_ref_in_catalogue": {
+   "merged": 485,
+   "related_not_merged": 14,
+   "rejected_conflict": 4,
+   "out_of_selection": 0,
+   "unresolved": 7
+  },
+  "records_that_joined_a_chembl_family": 485,
+  "chembl_records_receiving_a_joined_record": 485,
+  "records_with_several_ligand_ids": 0,
+  "pairs_whose_chembl_id_is_named_by_several_gtopdb_ligands": 78,
+  "records_refused_for_bridging_several_chembl_families": 0,
+  "records_unchanged": "no record is created, deleted or fused: a joined record keeps its own targets, status, access and provenance; only the family grouping changes",
+  "tables": {
+   "all_relations_file": "ligand_reconciliation.tsv",
+   "rows_all": 3030,
+   "not_merged_file": "ligand_reconciliation_not_merged.tsv",
+   "rows_not_merged": 2545
+  }
+ },
  "entries_with_targets": 24423,
  "entries_with_chembl_curated_mechanism": 6328,
  "not_obtained": [
@@ -203,11 +265,14 @@
    "records_in_families_of_size_gt_1": 6423,
    "families_of_size_gt_1": 2965,
    "largest_family": 13,
-   "not_demonstrable_for": "source-only records (no structure, no identifier tying them to a ChEMBL record); they are listed under possible_duplicates"
+   "not_demonstrable_for": "source-only records (no structure, no identifier tying them to a ChEMBL record); they are listed under possible_duplicates",
+   "source_only_records_joined_to_a_chembl_family_by_gtopdb_ligand_reconciliation": 485,
+   "joined_records_note": "these records are NOT counted in the families above (ChEMBL records only) and are not counted as unlinked below; the all-record family count of the coverage tool treats each joined record as a member of the ChEMBL family it was reconciled to (relations.reconciled_via)"
   },
   "possible_duplicates_and_unresolved_identities": {
-   "source_only_records_without_identifier_link_to_chembl": 24278,
-   "of_which_normalised_name_equals_a_chembl_name_or_synonym_NOT_MERGED": 9197,
+   "source_only_records_without_identifier_link_to_chembl": 23793,
+   "source_only_records_excluded_from_the_previous_because_a_gtopdb_ligand_reconciliation_joined_them": 485,
+   "of_which_normalised_name_equals_a_chembl_name_or_synonym_NOT_MERGED": 8751,
    "meaning": "the name coincidence is a flag for human review; identity is unresolved until an identifier says so",
    "chembl_child_records_with_missing_parent": 0
   },
@@ -292,9 +357,9 @@
   "gtopdb": {
    "complete_and_coherent": true,
    "version": "GtoPdb Version: 2026.3.1 - published: 2026-10-12",
-   "retrieved_utc": "2026-10-28T19:01:32Z",
+   "retrieved_utc": "2026-10-28T22:46:53Z",
    "counts_checked": {},
-   "files_hash_checked": 2,
+   "files_hash_checked": 4,
    "problems": [],
    "last_attempt_status": "OK"
   },
@@ -382,12 +447,12 @@
  },
  "catalog_file": {
   "path": "catalog.jsonl.gz",
-  "sha256": "4dfcaab247a642838721d87addc112e123d002e76dc5e697a3317fc1fa6c508c",
-  "bytes": 7923225
+  "sha256": "b351c94d3e8beb262b9caab850e919f63cd997ba55b2333e644c8b938f06f7ec",
+  "bytes": 8729862
  },
  "card_links": {
-  "cards_considered": 60,
-  "cards_with_at_least_one_link": 20,
+  "cards_considered": 61,
+  "cards_with_at_least_one_link": 21,
   "unmatched": 40
  },
  "non_molecule_modalities_listed_separately": 6

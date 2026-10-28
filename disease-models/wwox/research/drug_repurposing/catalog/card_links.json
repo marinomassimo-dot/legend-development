@@ -432,6 +432,30 @@
     "CHEMBL89598"
    ]
   },
+  "I01_pdk_inhibition_dca_premise_seizure_glycaemia": {
+   "card_files": [
+    "cards/I01_pdk_inhibition_dca_premise_seizure_glycaemia.card.json",
+    "cards/I01_pdk_inhibition_dca_premise_seizure_glycaemia.packet.json"
+   ],
+   "compound_ids_outside_catalogue": [
+    "CHEMBL13960"
+   ],
+   "links": [
+    {
+     "catalogue_id": "CAT:CHEMBL306823",
+     "rule": "chembl_id_mentioned_in_card_text; entity_type COMPOUND per ChEMBL id lookup; a mention, not an identity declaration"
+    },
+    {
+     "catalogue_id": "CAT:CHEMBL306823",
+     "chembl_id": "CHEMBL306823",
+     "role": "identity",
+     "rule": "curator_declared_identifier (card_identity_declarations.tsv); curator (scientist-d, 2026-10-29) read the compound name in the card packet and took the ChEMBL id whose pref_name equals it exactly in catalog.jsonl.gz [SODIUM DICHLOROACETATE (the acid CHEMBL13960 and the DGIdb records are not asserted)]; ChEMBL id of the record, not a name-similarity score"
+    }
+   ],
+   "non_compound_ids_ignored": [
+    "CHEMBL13960"
+   ]
+  },
   "Q-N-01": {
    "card_files": [
     "join/cards.json"
@@ -761,9 +785,9 @@
    ]
   }
  },
- "cards_considered": 60,
- "cards_with_at_least_one_link": 20,
- "generated_utc": "2026-10-28T19:45:36Z",
+ "cards_considered": 61,
+ "cards_with_at_least_one_link": 21,
+ "generated_utc": "2026-10-28T23:19:40Z",
  "unmatched_cards": [
   "A02_proteasome_inhibitor_class",
   "A03_client_binding_chaperone",

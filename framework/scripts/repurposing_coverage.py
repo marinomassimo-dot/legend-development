@@ -32,7 +32,8 @@ Concordant and opposed actions on one need are both kept (L2 `mixed_consistent_a
 Observations against wild type only are not effects in the disease model: see observation_levels.
 
 Units: a coverage statement counts compound FAMILIES (ChEMBL records joined by parent link or InChIKey connectivity block;
-every source-only record is its own family, flagged as possibly duplicate when a name coincides, never merged). Each
+every source-only record is its own family unless a verified identifier chain joined it, flagged as possibly duplicate when a name coincides, never merged on name;
+the one joining rule is relations.family_join, set by catalog_build.py for a `merged` gtopdb_ligand_chembl_ref reconciliation). Each
 (family, need) cell counts once however many targets, pathways or records produce it. Needs share targets (CACNA1G, ABAT),
 so cell counts across needs are not independent; unions are reported next to them.
 """
@@ -687,7 +688,7 @@ def make_summary(entries, idx, rows, cells, per_need, priorities, need_by, cards
         "schema": SCHEMA,
         "units": {"catalogue_records": len(entries), "records_are": "source-level substance records, not distinct drugs",
                   "families": len(fam_all), "chembl_families": len(chembl_fams), "source_only_families_unresolved_identity": len(fam_all - chembl_fams),
-                  "family_rule": "ChEMBL parent link or identical InChIKey connectivity block; source-only records stay singletons; nothing merged on name",
+                  "family_rule": "ChEMBL parent link or identical InChIKey connectivity block; a source-only record joins a family only through relations.family_join (a merged gtopdb_ligand_chembl_ref reconciliation: GtoPdb ligand -> ChEMBL id, equal InChIKey, active id); otherwise it stays a singleton; nothing merged on name",
                   "coverage_unit": "compound families (each counted once per need); card interventions and tool subjects are separate rows"},
         "plain_statement": ("None of the interventions in this matrix is a catalogued repurposing candidate with a controlled recovery in a WWOX system. The only "
                             "experimental L4 cells are an AAV9 gene therapy (high dose, n 5 for spike-wave discharges; for growth, body weight only, blood glucose unchanged); "

@@ -47,12 +47,16 @@ OUT_CATALOG = HERE / "catalog.jsonl.gz"
 OUT_STATS = HERE / "catalog_stats.json"
 OUT_LINKS = HERE / "card_links.json"
 OUT_MODALITIES = HERE / "non_molecule_modalities.tsv"
+OUT_RECON = HERE / "ligand_reconciliation.tsv"
+OUT_RECON_OPEN = HERE / "ligand_reconciliation_not_merged.tsv"
 DECLARATIONS = HERE / "card_identity_declarations.tsv"
 MODULE = HERE.parent
 UA = "LEGEND-compound-catalog/1 (research; key-less; no contact string)"
 SCHEMA = 1
 TTL_DAYS = 30
-GTOPDB_FILES = ("interactions.csv", "targets_and_families.csv")
+GTOPDB_FILES = ("interactions.csv", "targets_and_families.csv", "ligands.csv")
+GTOPDB_REF_LOOKUP = "chembl/gtopdb_ref_lookup.json"   # ChEMBL id_lookup status of the ChEMBL ids named by GtoPdb ligands that the molecule selection does not hold
+RECON_TAG = "gtopdb_ligand_chembl_ref"
 
 CHEMBL = "https://www.ebi.ac.uk/chembl/api/data"
 UNICHEM = "https://ftp.ebi.ac.uk/pub/databases/chembl/UniChem/data/wholeSourceMapping/src_id1/src1src{n}.txt.gz"
@@ -68,8 +72,8 @@ SOURCES = {
         name="DGIdb (drugs.tsv, interactions.tsv)", licence="NOT CLEARED FOR PUBLIC RELEASE as a whole. DGIdb applies no data licence of its own (its software is MIT; the dgidb-data README of 2026-10-14 states that the claims of each source remain subject to that source's licence and that DGIdb applies no additional terms); the export of 2024-06-10 therefore carries 21 source databases with different terms (see catalog/README.md, section 'Licence reconciliation'). The repository is public, so rows from non-commercial, share-alike or unclear sources (for example DTC, CKB-CORE, CGI, TTD, ChEMBL, GuideToPharmacology, PharmGKB) are an exposure to be decided by the operator, not a held-back item",
         terms="https://dgidb.org/downloads", note="the TSV release of 2024-06-10 is the newest the site serves at /data/latest"),
     "gtopdb": dict(
-        name="IUPHAR/BPS Guide to PHARMACOLOGY (GtoPdb) interactions.csv + targets_and_families.csv", licence="database under ODbL; contents under CC BY-SA 4.0 (guidetopharmacology.org/about.jsp and /download.jsp, read 2026-10-28); public download, no registration",
-        terms="https://www.guidetopharmacology.org/download.jsp", note="used ONLY to verify and correct the identity of the DGIdb Guide-to-Pharmacology rows (see README, 'Target identity'); share-alike: the GtoPdb-derived fields (target ids, names, types) of catalog.jsonl.gz must carry CC BY-SA 4.0 and attribution"),
+        name="IUPHAR/BPS Guide to PHARMACOLOGY (GtoPdb) interactions.csv + targets_and_families.csv + ligands.csv", licence="database under ODbL; contents under CC BY-SA 4.0 (guidetopharmacology.org/about.jsp and /download.jsp, read 2026-10-28); public download, no registration",
+        terms="https://www.guidetopharmacology.org/download.jsp", note="used ONLY to verify and correct the identity of the DGIdb Guide-to-Pharmacology rows (see README, 'Target identity') and, through ligands.csv (ChEMBL ID, InChIKey, Type, Withdrawn, Labelled, Radioactive), to reconcile DGIdb-only records carrying an IUPHAR ligand id with ChEMBL records (README, 'Ligand reconciliation'); share-alike: the GtoPdb-derived fields (target ids, names, types) of catalog.jsonl.gz must carry CC BY-SA 4.0 and attribution"),
     "matrix": dict(
         name="Every Cure MATRIX drug list", licence="CC BY 4.0 (dataset-card metadata of everycure/drug-list, read 2026-10-27, HF API)",
         terms="https://huggingface.co/datasets/everycure/drug-list", note="applies to the drug list only; the knowledge graph and the scores table are separate artefacts with their own (or no declared) terms and nothing is transferred to them; the scores table is not used"),
@@ -324,6 +328,37 @@ def fetch_gtopdb(m, refresh):
     if d and (CACHE / "gtopdb/interactions.csv").exists():
         with open(CACHE / "gtopdb/interactions.csv", encoding="utf-8") as fh:
             d["version"] = fh.readline().strip().strip('"').lstrip("# ").strip()
+    if d and not any(f["path"] == GTOPDB_REF_LOOKUP for f in d["files"]) and (CACHE / "chembl/molecules.jsonl.gz").exists():
+        fetch_gtopdb_ref_lookup(m)
+
+
+def fetch_gtopdb_ref_lookup(m) -> None:
+    """ChEMBL id_lookup (keyless public API) for every ChEMBL id that a GtoPdb ligand names and the molecule selection does not hold:
+    status ACTIVE / OBSOLETE / INACTIVE (or no row returned).  The file is pinned in the manifest like a download."""
+    d = m["sources"]["gtopdb"]["data"]
+    held = {r["molecule_chembl_id"] for r in read_gz_jsonl(CACHE / "chembl/molecules.jsonl.gz")}
+    with open(CACHE / "gtopdb/ligands.csv", encoding="utf-8", newline="") as fh:
+        rows = list(csv.reader(fh))
+    need = sorted({r[rows[1].index("ChEMBL ID")] for r in rows[2:] if r[rows[1].index("ChEMBL ID")]} - held)
+    got, problems = {}, []
+    for i in range(0, len(need), 50):
+        batch = need[i:i + 50]
+        st, js = jget(f"{CHEMBL}/chembl_id_lookup.json?chembl_id__in={','.join(batch)}&limit=100")
+        if st != 200 or not isinstance(js, dict):
+            problems.append(f"batch {i}: HTTP {st}")
+            continue
+        for r in js.get("chembl_id_lookups", []):
+            got[r["chembl_id"]] = {"entity_type": r.get("entity_type"), "status": r.get("status")}
+        time.sleep(0.15)
+    if problems:
+        m["sources"]["gtopdb"]["ref_lookup_incomplete"] = problems
+        return
+    out = {"ids_asked": len(need), "retrieved_utc": now(), "source": CHEMBL + "/chembl_id_lookup",
+           "status_by_id": {i: got.get(i, {"entity_type": None, "status": "NOT_RETURNED"}) for i in need}}
+    p = CACHE / GTOPDB_REF_LOOKUP
+    p.parent.mkdir(parents=True, exist_ok=True)
+    p.write_text(json.dumps(out, sort_keys=True, indent=0) + "\n")
+    d["files"].append({"path": GTOPDB_REF_LOOKUP, "url": CHEMBL + "/chembl_id_lookup", "bytes": p.stat().st_size, "sha256": sha256_file(p)})
 
 
 def fetch_ndc(m, refresh):
@@ -569,6 +604,16 @@ def load_gtopdb(cache: Path):
             e["hgnc"], e["symbol"] = "hgnc:" + t["HGNC id"], t["HGNC symbol"]
         if t["Subunit id"]:
             e["subunits"] = t["Subunit id"].split("|")
+    ligands = None
+    dl = cache / "gtopdb/ligands.csv"
+    if dl.exists():
+        rel_l, rows_l = rd(dl)
+        if rows_l and "ChEMBL ID" in rows_l[0]:
+            ligands = {r["Ligand ID"]: r for r in rows_l if r.get("Ligand ID")}
+    ref_lookup = None
+    pl = cache / GTOPDB_REF_LOOKUP
+    if pl.exists():
+        ref_lookup = json.loads(pl.read_text())["status_by_id"]
     pairs = collections.defaultdict(list)
     lig_targets = collections.defaultdict(set)
     for r in inter:
@@ -576,7 +621,7 @@ def load_gtopdb(cache: Path):
             pairs[(r["Ligand ID"], r["Target ID"])].append(r)
             if r["Target Species"] == "Human":
                 lig_targets[r["Ligand ID"]].add(r["Target ID"])
-    return {"release": release, "targets": T, "pairs": pairs, "ligand_human_targets": lig_targets}
+    return {"release": release, "targets": T, "pairs": pairs, "ligand_human_targets": lig_targets, "ligands": ligands, "ref_lookup": ref_lookup}
 
 
 def gtopdb_genes(gt: dict, tid: str) -> list[tuple[str, str]]:
@@ -670,6 +715,268 @@ def claim_symbol_anomaly(ir: dict) -> str | None:
         what = "a UniProt accession" if UNIPROT_ACC_RE.match(claim) else "claim"
         return f"{what} {ir['gene_claim_name']} resolved to {ir['gene_name']}, an endogenous-retrovirus locus; the claim is not retrovirus-named (a viral protein name is not a human gene symbol)"
     return None
+
+
+# ----------------------------------------------------------------------------- GtoPdb ligand -> ChEMBL reference reconciliation
+RECON_DECISIONS = ("merged", "related_not_merged", "rejected_conflict", "out_of_selection", "unresolved")
+RECON_TERMS = {"gtopdb": "GtoPdb ligands.csv: ODbL (database) / CC BY-SA 4.0 (contents), share-alike + attribution",
+               "chembl": "ChEMBL molecule record: CC BY-SA 3.0, share-alike + attribution",
+               "dgidb": "DGIdb export: per-claim source terms (README, Licence reconciliation); the iuphar.ligand concept id is a GuideToPharmacology claim"}
+_HTML = re.compile(r"<[^>]+>")
+
+
+def _key_layers(k: str | None):
+    """InChIKey -> (connectivity block, stereo/isotope/version block, protonation block) or None."""
+    if not k:
+        return None
+    p = k.split("-")
+    return tuple(p) if len(p) == 3 else None
+
+
+def compare_structures(g: str | None, c: str | None) -> tuple[str, str]:
+    """(state, code) comparing two standard InChIKeys layer by layer.  state in equal | related | conflict | unavailable.
+    Block 1 = connectivity; block 2 = stereo + isotopes (+ flags); block 3 = protonation.  UHFFFAOYSA = no stereo and no isotopes defined."""
+    a, b = _key_layers(g), _key_layers(c)
+    if a is None and b is None:
+        return "unavailable", "structure_unavailable_both_sides"
+    if a is None or b is None:
+        return "unavailable", "structure_unavailable_gtopdb_side" if a is None else "structure_unavailable_chembl_side"
+    if a == b:
+        return "equal", "full_inchikey_equal"
+    if a[0] != b[0]:
+        return "conflict", "inchikey_connectivity_differs"
+    flat = "UHFFFAOYSA"
+    if a[1] != b[1]:
+        if a[1].startswith(flat):
+            return "related", "stereo_or_isotopes_undefined_in_gtopdb_defined_in_chembl"
+        if b[1].startswith(flat):
+            return "related", "stereo_or_isotopes_defined_in_gtopdb_undefined_in_chembl"
+        return "related", "stereoisomers_or_isotopologues_differ"
+    return "related", "protonation_or_charge_state_differs"
+
+
+def reconcile_gtopdb_ligands(E: dict, gt: dict | None, dgidb_version, chembl_v) -> dict:
+    """DGIdb-only records carrying an IUPHAR ligand id -> GtoPdb ligand -> its ChEMBL id -> a ChEMBL record of the catalogue.
+
+    Rule (identifiers and structure only; a name coincidence is evidence recorded, never a basis):
+      merged              the ChEMBL id is a record of the catalogue, ACTIVE, the GtoPdb and ChEMBL standard InChIKeys are EQUAL (all three blocks),
+                          the ligand is not a labelled/radioactive form, no other identifier contradicts, and the record does not bridge two
+                          chemical families.  Effect: relations.reconciled_via = 'gtopdb_ligand_chembl_ref'; the record joins the family of the
+                          ChEMBL record.  Nothing is deleted or fused: the record stays, with its own targets, status and provenance.
+      related_not_merged  same connectivity but a different stereo/isotope or protonation layer (stereoisomer, racemate vs enantiomer, charge form),
+                          a labelled/radioactive ligand, or a structure equal to the PARENT of a salt-form ChEMBL id: a pharmacological
+                          distinction may be lost, so the relation is kept and the family is not joined.
+      rejected_conflict   the connectivity blocks differ: the two identifiers do not describe the same structure.
+      out_of_selection    the ChEMBL id is ACTIVE in ChEMBL but is not a record of the catalogue's selection: kept as a reference, nothing joined.
+      unresolved          anything that cannot be decided from identifiers and structure: no structure on one side, an obsolete/unknown ChEMBL
+                          id, a ligand id absent from the release, a contradicting DrugBank or DGIdb ChEMBL concept id, one record that would
+                          bridge two families.  Preserved as a relation with its reason code.
+    A ligand without a ChEMBL id in GtoPdb makes no relation (counted in the stats)."""
+    if gt is None or not gt.get("ligands"):
+        return {"state": "NOT_AVAILABLE", "reason": "GtoPdb ligands.csv is not in the cache: no ligand reconciliation was attempted (absent, not zero)"}
+    lig, ref = gt["ligands"], gt.get("ref_lookup")
+    by_chembl_ligs = collections.defaultdict(list)
+    for lid, r in lig.items():
+        if r["ChEMBL ID"]:
+            by_chembl_ligs[r["ChEMBL ID"]].append(lid)
+    # chemical family root of ChEMBL records (parent link or identical connectivity block): used only to refuse bridging two families
+    root: dict[str, str] = {}
+
+    def find(x):
+        while root.setdefault(x, x) != x:
+            root[x] = root[root[x]]
+            x = root[x]
+        return x
+    first = {}
+    for c, e in E.items():
+        if not e["origin"].startswith("chembl"):
+            continue
+        find(c)
+        p = e["relations"].get("parent")
+        if p and p != c and p in E:
+            root[find(c)] = find(p)
+        sk = e["ids"].get("skeleton_key")
+        if sk:
+            if sk in first:
+                root[find(c)] = find(first[sk])
+            else:
+                first[sk] = c
+    release = gt["release"]
+    n_no_ref = n_absent = 0
+    pairs = 0
+    per_entry: dict[str, list[dict]] = {}
+    for cid in sorted(E):
+        e = E[cid]
+        if e["origin"] != "dgidb_only":
+            continue
+        for lid in e["ids"].get("iuphar_ligand") or []:
+            pairs += 1
+            l = lig.get(lid)
+            rec = {"source_tag": RECON_TAG, "ligand_id": lid, "chembl_ref": None, "chembl_ref_in_catalogue": None, "decision": None, "reason": None,
+                   "evidence": {}, "asserted_by": {"iuphar_ligand_id": f"DGIdb concept_id iuphar.ligand:{lid} on drug_name {e['ids'].get('dgidb_drug_name')} (export: {dgidb_version})"},
+                   "terms": RECON_TERMS}
+            if l is None:
+                n_absent += 1
+                rec.update(decision="unresolved", reason="ligand_id_absent_from_gtopdb_release")
+                rec["evidence"] = {"gtopdb_release": release}
+                per_entry.setdefault(cid, []).append(rec)
+                continue
+            r_id = l["ChEMBL ID"]
+            if not r_id:
+                n_no_ref += 1
+                continue
+            rec["chembl_ref"] = r_id
+            rec["asserted_by"]["chembl_ref"] = f"{release}, ligands.csv, ligand {lid}, column 'ChEMBL ID'"
+            ev = rec["evidence"]
+            ev.update({"gtopdb_ligand_name": _HTML.sub("", l["Name"]), "gtopdb_type": l["Type"], "gtopdb_inchikey": l["InChIKey"] or None,
+                       "gtopdb_withdrawn": l["Withdrawn"] or None, "gtopdb_labelled": l["Labelled"] or None, "gtopdb_radioactive": l["Radioactive"] or None,
+                       "gtopdb_ligands_sharing_this_chembl_ref": len(by_chembl_ligs[r_id])})
+            dg_chembl = [x for x in e["ids"].get("chembl_from_dgidb_concept_not_enumerated") or []]
+            ev["dgidb_chembl_concept_ids"] = dg_chembl
+            m = E.get("CAT:" + r_id)
+            rec["chembl_ref_in_catalogue"] = m is not None and m["origin"].startswith("chembl")
+            if not rec["chembl_ref_in_catalogue"]:
+                st = (ref or {}).get(r_id)
+                ev["chembl_id_status"] = st["status"] if st else ("NOT_CHECKED_LOOKUP_ABSENT" if ref is None else "NOT_IN_LOOKUP")
+                if ref is None:
+                    rec.update(decision="out_of_selection", reason="chembl_id_not_in_selection_status_not_checked")
+                elif st and st["status"] == "ACTIVE" and st.get("entity_type") != "COMPOUND":
+                    rec.update(decision="unresolved", reason="chembl_id_is_not_a_compound_record")
+                elif st and st["status"] == "ACTIVE":
+                    rec.update(decision="out_of_selection", reason="chembl_id_active_but_not_in_catalogue_selection")
+                elif st and st["status"] == "NOT_RETURNED" or not st:
+                    rec.update(decision="unresolved", reason="chembl_id_unknown_to_chembl_lookup")
+                else:
+                    rec.update(decision="unresolved", reason="chembl_id_obsolete_or_inactive")
+                if dg_chembl and r_id not in dg_chembl:
+                    rec.update(decision="unresolved", reason="dgidb_chembl_concept_differs_from_gtopdb_reference")
+                elif dg_chembl:
+                    ev["dgidb_concept_agrees"] = True
+                per_entry.setdefault(cid, []).append(rec)
+                continue
+            ck = m["ids"].get("inchikey")
+            par = m["relations"].get("parent")
+            ev.update({"chembl_name": m["name"], "chembl_inchikey": ck, "chembl_molecule_type": m.get("molecule_type"), "chembl_is_parent": m["relations"].get("is_parent"),
+                       "chembl_parent": par, "chembl_chirality_code": (m.get("chemistry") or {}).get("chirality_code_chembl"),
+                       "chembl_withdrawn_flag": next((s.get("withdrawn_flag") for s in m["status_records"] if s["source"] == "ChEMBL"), None),
+                       "chembl_id_status": "ACTIVE (molecule record present in " + str(chembl_v) + ")",
+                       "name_agrees_not_a_basis": bool(norm(ev["gtopdb_ligand_name"]) and norm(ev["gtopdb_ligand_name"]) in {norm(x) for x in [m["name"], e["name"]] + m["synonyms"] if x})})
+            state, code = compare_structures(l["InChIKey"], ck)
+            ev["structure_check"] = code
+            if state == "conflict" and par and par != m["id"] and par in E:
+                st2, code2 = compare_structures(l["InChIKey"], E[par]["ids"].get("inchikey"))
+                ev["structure_check_against_parent"] = code2
+                if st2 == "equal":
+                    state, code = "related", "ligand_structure_is_the_parent_form_but_chembl_ref_is_a_salt_or_derived_form"
+                elif st2 == "related":
+                    state, code = "related", "ligand_structure_shares_parent_connectivity_but_chembl_ref_is_a_salt_or_derived_form"
+            if state == "conflict":
+                rec.update(decision="rejected_conflict", reason=code)
+            elif state == "unavailable":
+                rec.update(decision="unresolved", reason=code)
+            elif state == "related":
+                rec.update(decision="related_not_merged", reason=code)
+            elif l["Labelled"] == "yes" or l["Radioactive"] == "yes":
+                rec.update(decision="related_not_merged", reason="labelled_or_radioactive_form_of_the_ligand")
+            elif e["ids"]["drugbank"] and m["ids"]["drugbank"] and not set(e["ids"]["drugbank"]) & set(m["ids"]["drugbank"]):
+                ev["drugbank_dgidb"], ev["drugbank_chembl_unichem"] = e["ids"]["drugbank"], m["ids"]["drugbank"]
+                rec.update(decision="unresolved", reason="drugbank_ids_disjoint_between_dgidb_and_chembl_unichem")
+            elif dg_chembl and r_id not in dg_chembl:
+                rec.update(decision="unresolved", reason="dgidb_chembl_concept_differs_from_gtopdb_reference")
+            else:
+                rec.update(decision="merged", reason=code)
+            per_entry.setdefault(cid, []).append(rec)
+    # one record that would join two different chemical families is not decided by this rule
+    bridged = 0
+    for cid, recs in per_entry.items():
+        fams = {find("CAT:" + r["chembl_ref"]) for r in recs if r["decision"] == "merged"}
+        if len(fams) > 1:
+            bridged += 1
+            for r in recs:
+                if r["decision"] == "merged":
+                    r.update(decision="unresolved", reason="one_dgidb_record_would_join_several_chembl_families")
+    # apply: relations on both sides, provenance; counts
+    count = collections.Counter()
+    by_reason = collections.Counter()
+    in_cat = collections.Counter()
+    for cid, recs in sorted(per_entry.items()):
+        e = E[cid]
+        e["relations"]["gtopdb_reconciliation"] = recs
+        joined = sorted({"CAT:" + r["chembl_ref"] for r in recs if r["decision"] == "merged"})
+        if joined:
+            e["relations"]["reconciled_via"] = RECON_TAG
+            e["relations"]["family_join"] = joined
+            e["ids"]["chembl_via_gtopdb"] = [j[4:] for j in joined]
+            e["provenance"].append({"source": "GtoPdb ligands.csv", "version": release, "use": "ligand -> ChEMBL id reconciliation (relation " + RECON_TAG + ")"})
+            for j in joined:
+                E[j]["relations"].setdefault("reconciled_source_records", []).append(cid)
+                E[j]["provenance"].append({"source": "GtoPdb ligands.csv", "version": release, "use": "ChEMBL record reached from a DGIdb-only record through a GtoPdb ligand (relation " + RECON_TAG + ")"})
+        for r in recs:
+            count[r["decision"]] += 1
+            by_reason[(r["decision"], r["reason"])] += 1
+            if r["chembl_ref_in_catalogue"]:
+                in_cat[r["decision"]] += 1
+    for e in E.values():
+        if e["relations"].get("reconciled_source_records"):
+            e["relations"]["reconciled_source_records"] = sorted(set(e["relations"]["reconciled_source_records"]))
+    cand_pairs = sum(1 for recs in per_entry.values() for r in recs if r["chembl_ref_in_catalogue"])
+    many_to_one = sum(1 for recs in per_entry.values() for r in recs if r["evidence"].get("gtopdb_ligands_sharing_this_chembl_ref", 1) > 1)
+    multi_lig_entries = sum(1 for recs in per_entry.values() if len({r["ligand_id"] for r in recs}) > 1)
+    return {
+        "state": "OK", "gtopdb_release": release, "dgidb_export": dgidb_version, "chembl_version": chembl_v, "source_tag": RECON_TAG,
+        "rule": "DGIdb iuphar.ligand concept id -> GtoPdb ligand -> its ChEMBL id -> ChEMBL record of the catalogue; decided on ACTIVE status, standard InChIKey layers, labelled/radioactive flags and contradicting identifiers; names are recorded as evidence and never decide",
+        "terms": RECON_TERMS,
+        "dgidb_only_records_with_an_iuphar_ligand_id": sum(1 for e in E.values() if e["origin"] == "dgidb_only" and e["ids"].get("iuphar_ligand")),
+        "record_ligand_pairs": pairs,
+        "pairs_ligand_absent_from_release": n_absent,
+        "pairs_ligand_without_chembl_id_in_gtopdb_no_relation_made": n_no_ref,
+        "pairs_with_a_chembl_reference_all": sum(count.values()) - n_absent,
+        "decisions_all_pairs_with_a_relation": {k: count.get(k, 0) for k in RECON_DECISIONS},
+        "decisions_by_reason": {f"{a}|{b}": n for (a, b), n in sorted(by_reason.items())},
+        "candidates_chembl_ref_in_catalogue": cand_pairs,
+        "decisions_candidates_chembl_ref_in_catalogue": {k: in_cat.get(k, 0) for k in RECON_DECISIONS},
+        "records_that_joined_a_chembl_family": sum(1 for e in E.values() if e["relations"].get("family_join")),
+        "chembl_records_receiving_a_joined_record": sum(1 for e in E.values() if e["relations"].get("reconciled_source_records")),
+        "records_with_several_ligand_ids": multi_lig_entries,
+        "pairs_whose_chembl_id_is_named_by_several_gtopdb_ligands": many_to_one,
+        "records_refused_for_bridging_several_chembl_families": bridged,
+        "records_unchanged": "no record is created, deleted or fused: a joined record keeps its own targets, status, access and provenance; only the family grouping changes",
+    }
+
+
+def reconciliation_rows(entries: list[dict]) -> list[dict]:
+    """One flat row per (DGIdb-only record, GtoPdb ligand) relation: the sampling-ready table."""
+    out = []
+    for e in entries:
+        for r in (e.get("relations") or {}).get("gtopdb_reconciliation", []):
+            ev = r["evidence"]
+            out.append({"candidate": e["id"], "dgidb_drug_name": e["ids"].get("dgidb_drug_name"), "gtopdb_ligand_id": r["ligand_id"],
+                        "chembl_ref": r["chembl_ref"] or "", "chembl_ref_in_catalogue": {True: "yes", False: "no", None: ""}[r["chembl_ref_in_catalogue"]],
+                        "decision": r["decision"], "reason": r["reason"], "gtopdb_inchikey": ev.get("gtopdb_inchikey") or "", "chembl_inchikey": ev.get("chembl_inchikey") or "",
+                        "structure_check": ev.get("structure_check", ""), "gtopdb_type": ev.get("gtopdb_type", ""), "chembl_molecule_type": ev.get("chembl_molecule_type") or "",
+                        "chembl_is_parent": {True: "yes", False: "no", None: ""}[ev.get("chembl_is_parent")], "chembl_chirality_code": "" if ev.get("chembl_chirality_code") is None else ev["chembl_chirality_code"],
+                        "gtopdb_withdrawn": ev.get("gtopdb_withdrawn") or "", "chembl_withdrawn_flag": "" if ev.get("chembl_withdrawn_flag") is None else ev["chembl_withdrawn_flag"],
+                        "chembl_id_status": ev.get("chembl_id_status", ""), "gtopdb_ligands_sharing_chembl_ref": ev.get("gtopdb_ligands_sharing_this_chembl_ref", ""),
+                        "name_agrees_not_a_basis": ev.get("name_agrees_not_a_basis", "")})
+    return sorted(out, key=lambda r: (r["candidate"], int(r["gtopdb_ligand_id"])))
+
+
+RECON_COLUMNS = ["candidate", "dgidb_drug_name", "gtopdb_ligand_id", "chembl_ref", "chembl_ref_in_catalogue", "decision", "reason", "gtopdb_inchikey", "chembl_inchikey",
+                 "structure_check", "gtopdb_type", "chembl_molecule_type", "chembl_is_parent", "chembl_chirality_code", "gtopdb_withdrawn", "chembl_withdrawn_flag",
+                 "chembl_id_status", "gtopdb_ligands_sharing_chembl_ref", "name_agrees_not_a_basis"]
+
+
+def write_reconciliation_tables(entries: list[dict]) -> dict:
+    rows = reconciliation_rows(entries)
+    for path, sel in ((OUT_RECON, rows), (OUT_RECON_OPEN, [r for r in rows if r["decision"] != "merged"])):
+        tmp = path.with_name(path.name + ".stage")
+        with open(tmp, "w", encoding="utf-8", newline="") as fh:
+            w = csv.writer(fh, delimiter="\t", lineterminator="\n")
+            w.writerow(RECON_COLUMNS)
+            for r in sel:
+                w.writerow([r[c] for c in RECON_COLUMNS])
+        tmp.replace(path)
+    return {"all_relations_file": OUT_RECON.name, "rows_all": len(rows), "not_merged_file": OUT_RECON_OPEN.name, "rows_not_merged": sum(1 for r in rows if r["decision"] != "merged")}
 
 
 def build_catalog(cache: Path | None = None, exclude: dict | None = None) -> tuple[list[dict], dict]:
@@ -839,6 +1146,7 @@ def build_catalog(cache: Path | None = None, exclude: dict | None = None) -> tup
                     if cc.startswith("drugbank:"):
                         e["ids"]["drugbank"].append(cc.split(":", 1)[1])
                 e["ids"]["drugbank"] = sorted(set(e["ids"]["drugbank"]))
+                e["ids"]["iuphar_ligand"] = sorted({r["concept_id"].split(":", 1)[1] for r in g if r["concept_id"].lower().startswith("iuphar.ligand:")})
                 e["status_records"].append(status_rec)
                 e["provenance"].append({"source": "DGIdb", "version": src_status["dgidb"].get("version")})
                 e["source_records"].append(dict(rec, source="dgidb"))
@@ -877,6 +1185,9 @@ def build_catalog(cache: Path | None = None, exclude: dict | None = None) -> tup
                     "claim_chembl_versions": dgv,
                     "target_identity_by_claim_source_and_state": {f"{a}|{b}": n for (a, b), n in sorted(id_counts.items()) if a == "GuideToPharmacology" or b != "as_served"},
                     "gtopdb_release_used_to_verify": None if gt is None else gt["release"]}
+
+    # ---- GtoPdb ligand -> ChEMBL reference: identity reconciliation of DGIdb-only records (relations, never a name match)
+    recon_stats = reconcile_gtopdb_ligands(E, gt, src_status["dgidb"].get("version") if avail["dgidb"] else None, chembl_v) if avail["dgidb"] else {}
 
     # ---- MATRIX drug list
     mx_stats = {}
@@ -1068,11 +1379,11 @@ def build_catalog(cache: Path | None = None, exclude: dict | None = None) -> tup
         e["synonyms_note"] = "capped at 40 per entry; n_synonyms_total is the real count"
 
     entries = [E[k] for k in sorted(E)]
-    stats = compute_stats(entries, src_status, unresolved_parents, dg_stats, mx_stats, ndc_stats, dsld_stats, manifest)
+    stats = compute_stats(entries, src_status, unresolved_parents, dg_stats, mx_stats, ndc_stats, dsld_stats, manifest, recon_stats)
     return entries, stats
 
 
-def compute_stats(entries, src_status, unresolved_parents, dg, mx, ndc, dsld, manifest) -> dict:
+def compute_stats(entries, src_status, unresolved_parents, dg, mx, ndc, dsld, manifest, recon=None) -> dict:
     n = len(entries)
     by = lambda f: dict(sorted(collections.Counter(f(e) for e in entries).items(), key=lambda kv: (-kv[1], str(kv[0]))))
     cat_overlap = collections.Counter(c for e in entries for c in e["access_categories"])
@@ -1122,6 +1433,7 @@ def compute_stats(entries, src_status, unresolved_parents, dg, mx, ndc, dsld, ma
             "possible_cross_source_duplicates": "source-only entries (DGIdb, MATRIX, openFDA) that no identifier connects to a ChEMBL entry may describe the same substance as a ChEMBL entry; the entry count is an upper bound for distinct substances",
         },
         "dgidb": dg, "matrix": mx, "openfda_ndc": ndc, "dsld": dsld,
+        "gtopdb_ligand_reconciliation": recon or {"state": "NOT_AVAILABLE", "reason": "DGIdb not available"},
         "entries_with_targets": sum(1 for e in entries if e["targets"]),
         "entries_with_chembl_curated_mechanism": sum(1 for e in entries if any(t["source"] == "ChEMBL curated mechanism" for t in e["targets"])),
         "not_obtained": [
@@ -1152,6 +1464,7 @@ def units_block(entries: list[dict], ch_total) -> dict:
         parent[find(a)] = find(b)
 
     chem = [e for e in entries if e["origin"].startswith("chembl")]
+    chem_ids = {x["id"] for x in chem}
     first = {}
     for e in chem:
         find(e["id"])
@@ -1169,7 +1482,8 @@ def units_block(entries: list[dict], ch_total) -> dict:
         for nm in [e["name"]] + e["synonyms"]:
             if nm:
                 names[norm(nm)].add(e["id"])
-    src_only = [e for e in entries if not e["origin"].startswith("chembl")]
+    joined = [e for e in entries if (e.get("relations") or {}).get("family_join")]
+    src_only = [e for e in entries if not e["origin"].startswith("chembl") and not (e.get("relations") or {}).get("family_join")]
     coincide = [e for e in src_only if e["name"] and norm(e["name"]) in names]
     genes, tids = set(), set()
     for e in entries:
@@ -1189,12 +1503,15 @@ def units_block(entries: list[dict], ch_total) -> dict:
             "rule": "ChEMBL records joined by parent/child hierarchy or by identical InChIKey first block (connectivity layer); reconciliation shown, nothing merged",
             "families": len(fam), "records_in_families_of_size_gt_1": sum(v for v in fam.values() if v > 1),
             "families_of_size_gt_1": sum(1 for v in fam.values() if v > 1), "largest_family": max(fam.values()) if fam else 0,
-            "not_demonstrable_for": "source-only records (no structure, no identifier tying them to a ChEMBL record); they are listed under possible_duplicates"},
+            "not_demonstrable_for": "source-only records (no structure, no identifier tying them to a ChEMBL record); they are listed under possible_duplicates",
+            "source_only_records_joined_to_a_chembl_family_by_gtopdb_ligand_reconciliation": len(joined),
+            "joined_records_note": "these records are NOT counted in the families above (ChEMBL records only) and are not counted as unlinked below; the all-record family count of the coverage tool treats each joined record as a member of the ChEMBL family it was reconciled to (relations.reconciled_via)"},
         "possible_duplicates_and_unresolved_identities": {
             "source_only_records_without_identifier_link_to_chembl": len(src_only),
+            "source_only_records_excluded_from_the_previous_because_a_gtopdb_ligand_reconciliation_joined_them": len(joined),
             "of_which_normalised_name_equals_a_chembl_name_or_synonym_NOT_MERGED": len(coincide),
             "meaning": "the name coincidence is a flag for human review; identity is unresolved until an identifier says so",
-            "chembl_child_records_with_missing_parent": len([e for e in chem if e["relations"].get("parent") and e["relations"]["parent"] not in {x["id"] for x in chem}])},
+            "chembl_child_records_with_missing_parent": len([e for e in chem if e["relations"].get("parent") and e["relations"]["parent"] not in chem_ids])},
         "modalities": dict(collections.Counter(e["modality"] for e in entries).most_common()),
         "modality_unknown_meaning": "source-only rows carry no molecule type; unknown is not small molecule",
         "pharmacological_data": {
@@ -1375,6 +1692,8 @@ def write_outputs(entries, stats, links, partial: bool = False) -> None:
     stats["card_links"] = {k: links[k] for k in ("cards_considered", "cards_with_at_least_one_link")} | {"unmatched": len(links["unmatched_cards"])}
     if not partial:
         stats["non_molecule_modalities_listed_separately"] = write_modalities()  # static, curator-declared file
+        if (stats.get("gtopdb_ligand_reconciliation") or {}).get("state") == "OK":
+            stats["gtopdb_ligand_reconciliation"]["tables"] = write_reconciliation_tables(entries)
     stage(ost).write_text(json.dumps(stats, indent=1, ensure_ascii=False) + "\n")
     stage(ol).write_text(json.dumps(links, indent=1, ensure_ascii=False, sort_keys=True) + "\n")
     for p in (oc, ost, ol):

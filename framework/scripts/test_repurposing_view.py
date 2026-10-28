@@ -320,22 +320,106 @@ class Curated(unittest.TestCase):
         self.assertIn("Track (a separate field)", self.full)
         self.assertIn("2026-", re.search(r'data-k="meta.data_date" data-v="([^"]+)"', self.full).group(1))
 
-    def test_groups_are_reasoned_and_unscored(self):
+    def test_positions_are_reasoned_and_unscored(self):
         cur = self.PF["cur"]
         ids = {g["id"] for g in cur["groups"]}
-        self.assertEqual(ids, {"G1", "G2", "G3", "G4"})
+        self.assertEqual(ids, {"F1", "F2", "F3", "C1", "C2", "C3", "P1", "P2", "P3"})
         for c in cur["cands"]:
             for nid, l in c["links"].items():
                 self.assertIn(l["group"], ids)
-                self.assertEqual(len(l["reasons"]), 6)
-                if l["group"] == "G1":
+                self.assertEqual(len(l["reasons"]), 8)
+                self.assertTrue(l["criteria"])
+                self.assertIn("Criteria", [r[0] for r in l["reasons"]])
+                if l["group"] == "F1":
                     self.assertGreater(l["n_w"], 0)
                 if c["abstention"]:
-                    self.assertEqual(l["group"], "G4")
+                    self.assertEqual(l["group"], "P1")
         blob = json.dumps(cur)
         for bad in ('"score"', '"rank"', '"probability"', '"cure'):
             self.assertNotIn(bad, blob)
         self.assertIn("no score, no probability and no cure ranking", self.full)
+
+    def test_overview_position_is_the_set_of_need_positions_never_best_of(self):
+        """(a) a card has no single/global group; its overview entry is the set of its need-level positions."""
+        cur = self.PF["cur"]
+        multi = 0
+        for c in cur["cands"]:
+            self.assertNotIn("group", c)
+            self.assertEqual(c["positions"], rv.overview_positions(c["links"]))
+            self.assertEqual(set(c["positions"]), {l["group"] for l in c["links"].values()})
+            multi += len(c["positions"]) > 1
+        self.assertGreaterEqual(multi, 3)
+        by = {c["id"]: c for c in cur["cands"]}
+        # real cases whose needs differ: neither position may be dropped in favour of the other
+        self.assertEqual(by["C04_aav9_endpoint_families"]["positions"], ["F1", "C2"])
+        self.assertEqual(by["EB-VGB-01"]["positions"], ["C2", "P3"])
+        self.assertEqual(by["H02_gabaat_inactivator_myelin_exposure"]["positions"], ["F3", "C3", "P3"])
+        # synthetic: best-of would say F1; the set keeps the counter-evidence position visible
+        self.assertEqual(rv.overview_positions({"n1": {"group": "F1"}, "n2": {"group": "C2"}, "n3": {"group": "F1"}}), ["F1", "C2"])
+        self.assertIn("never the best of them", self.full)
+
+    def test_null_or_unfavourable_wwox_result_is_never_promoted_as_favourable(self):
+        """(b) on real data and on synthetic facts."""
+        for c in self.PF["cur"]["cands"]:
+            for nid, l in c["links"].items():
+                if l["result"] in ("null", "unfavourable", "mixed"):
+                    self.assertTrue(l["group"].startswith("C"), (c["id"], nid, l["group"]))
+                if l["group"].startswith("F"):
+                    self.assertIn(l["result"], ("favourable", "none"))
+        by = {c["id"]: c for c in self.PF["cur"]["cands"]}
+        myc = [l for nid, l in by["D01_a51"]["links"].items() if "MYC" in nid]
+        self.assertEqual(len(myc), 1)
+        if myc:
+            self.assertEqual(myc[0]["group"], "C2")   # old rule: G1 because a readout in a WWOX system exists
+        row = lambda kind, sign, comp="untreated_same_genotype", flags="": {"assertion_id": "a" + sign, "evidence_kind": kind, "sign": sign, "comparator": comp, "flags": flags}
+        deep = {"anull": "complete_fulltext_read", "aharm": "complete_fulltext_read", "abenefit": "complete_fulltext_read", "amixed": "complete_fulltext_read"}
+        for sign, exp in (("null", "C1"), ("harm", "C1"), ("mixed", "C2")):
+            f = rv.classify_rows([row("readout_in_wwox_system", sign)], deep)
+            self.assertEqual(rv.assign_need_position(f, False, True, True)[0], exp)
+        f = rv.classify_rows([row("readout_in_wwox_system", "benefit"), row("readout_in_wwox_system", "null")], deep)
+        self.assertEqual(rv.assign_need_position(f, False, True, True)[0], "C2")
+        f = rv.classify_rows([row("readout_in_wwox_system", "benefit")], deep)
+        self.assertEqual(rv.assign_need_position(f, False, True, True)[0], "F1")
+        f = rv.classify_rows([row("readout_in_wwox_system", "benefit", comp="none_uncontrolled_case_report")], deep)
+        self.assertEqual(rv.assign_need_position(f, False, True, True)[0], "F2")
+        # a depth-unknown favourable reading is thin, never firm
+        f = rv.classify_rows([row("readout_in_wwox_system", "benefit")], {})
+        self.assertEqual(rv.assign_need_position(f, False, True, True)[0], "F2")
+        # an outside-WWOX harm signal with no favourable signal is counter-evidence, not a favourable hypothesis
+        f = rv.classify_rows([row("safety_signal", "harm")], {})
+        self.assertEqual(rv.assign_need_position(f, False, True, True)[0], "C3")
+        # abstention and missing next step beat everything
+        f = rv.classify_rows([row("readout_in_wwox_system", "benefit")], deep)
+        self.assertEqual(rv.assign_need_position(f, True, True, True)[0], "P1")
+        self.assertEqual(rv.assign_need_position(f, False, False, True)[0], "P2")
+
+    def test_counter_evidence_clarification_and_favourable_hypothesis_have_distinct_labels(self):
+        """(c) two reasons, two visibly different labels, colours and kinds."""
+        gs = rv.GROUPS
+        fav = [g for g in gs if g["kind"] == rv.KIND_FAV]
+        con = [g for g in gs if g["kind"] == rv.KIND_COUNTER]
+        self.assertTrue(fav and con)
+        for g in fav:
+            self.assertIn("Favourable hypothesis", g["label"])
+            self.assertNotIn("ounter", g["label"])
+        for g in con:
+            self.assertIn("Counter-evidence to clarify", g["label"])
+            self.assertNotIn("avourable hypothesis", g["label"])
+        self.assertEqual(len({g["label"].split(":")[1] for g in gs}), len(gs))
+        self.assertFalse({g["id"] for g in fav} & {g["id"] for g in con})
+        css = (DR / "view/assets/curated.css").read_text(encoding="utf-8")
+        for g in gs:
+            self.assertIn(".grp." + g["id"].lower(), css)
+        for c in self.PF["cur"]["cands"]:
+            for l in c["links"].values():
+                self.assertEqual(l["kind"], rv.POS_BY_ID[l["group"]]["kind"])
+
+    def test_every_position_prints_criteria_met_and_not_met(self):
+        for c in self.PF["cur"]["cands"]:
+            for l in c["links"].values():
+                txt = dict(l["reasons"])["Criteria"]
+                self.assertTrue(txt.startswith("met: "))
+                self.assertIn(". Not met: ", txt)
 
     def test_scope_labels_distinct_and_known(self):
         cur = self.PF["cur"]
@@ -455,8 +539,8 @@ class CuratedBrowser(Browser):
 
     def test_ranking_groups_rendered_with_reasons(self):
         d = self.dom("#c=need:NEED-WWOX-GENE-ADDITION")
-        self.assertIn('data-group="G1"', d)
-        self.assertIn("reasons for this position (six criteria)", d)
+        self.assertIn('data-group="F1"', d)
+        self.assertIn("criteria met and not met", d)
 
     def test_comparison_shows_opposed_actions_and_no_synergy(self):
         page = (Path(self.tmp.name) / "v.html").read_text(encoding="utf-8")
