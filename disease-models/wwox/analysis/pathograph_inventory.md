@@ -34,10 +34,10 @@ annotations is reported below whatever it happens to be.
 | Nodes carrying a biological scale | 0 |
 | Deep-dive manifests read | 592 |
 | …of which bound to at least one claim | 107 |
-| Propositions scanned | 9522 |
-| …carrying a relational connective | 2004 |
-| …locator-backed candidates | 1964 |
-| …locator-backed and bound to a claim | 454 |
+| Propositions scanned | 9527 |
+| …carrying a relational connective | 2008 |
+| …locator-backed candidates | 1968 |
+| …locator-backed and bound to a claim | 458 |
 
 The scanned population is three declared surfaces and no others: every claim
 `Title`, every row of the working model's BLOCK 2 mirror, and every
@@ -320,12 +320,12 @@ each side is a reading, and every record carries `endpoints_resolved: false`.
 | Source | Candidates |
 |---|---|
 | claim_title | 21 |
-| locator_proposition | 1964 |
+| locator_proposition | 1968 |
 | working_model_mirror_title | 19 |
 
 | Connective class (lexical) | Candidates |
 |---|---|
-| AMBIGUOUS_LEXICAL_FORM | 1435 |
+| AMBIGUOUS_LEXICAL_FORM | 1439 |
 | ARROW | 18 |
 | ASSOCIATIVE | 89 |
 | CAUSAL | 358 |
@@ -359,7 +359,7 @@ its sentence is a reading, and this tool does not perform readings.
 | CLAIM 016 | claim_title | `contribute to` | GSK3β hyperactivation may contribute to seizure susceptibility in WWOX deficiency |
 | CLAIM 018 | claim_title | `causes` | The exon 6 splice-site variant c.517-2A>G is pathogenic and causes exon 6 skipping in humans |
 
-Showing 12 of 494 bound candidates; the
+Showing 12 of 498 bound candidates; the
 complete set, with evidence and provenance, is in the export. The worklist
 in cost order — what needs an annotation, what needs a type, what needs a
 decomposition, what needs a reading — is printed by:
@@ -376,6 +376,6 @@ carried no connective from the lexicon.
 ## Provenance
 
 Derived from 595 input files; digest
-`f12966a27e071e87`. Sources: the claim, paper and
+`3b8a507e4df2395a`. Sources: the claim, paper and
 working-model registries, and every deep-dive work manifest.
 

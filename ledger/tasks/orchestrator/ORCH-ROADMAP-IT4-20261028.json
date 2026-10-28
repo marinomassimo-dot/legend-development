@@ -14,13 +14,15 @@
    "steps": [
     {
      "step": "A1 trace the identity chain on an informative sample (source record -> source target id -> DGIdb normalisation -> import -> need): GRIN1/STING, ATF4/nicotinic, CTNNB1/p38, EIF4EBP1/CDK, GRIN2A/B suspects, GRIA4, ABAT second source; one collision not on the listed symbols",
-     "status": "IN_PROGRESS",
-     "owner": "scientist-a"
+     "status": "DONE",
+     "owner": "scientist-a",
+     "evidence": "root cause found: DGIdb GuideToPharmacology gene_claim_name NCBIGENE:<GtoPdb target id> resolved as Entrez id; landed b8005820; independent verification running (A4)"
     },
     {
      "step": "A2 correct at import/with stable source ids, represent unresolved relations explicitly, consolidate duplicate rules, GRIN2A/B class-vs-subunit semantics, GRIA4 reopened, ABAT pharmacology of second-source records; targeted regressions (confirmed false link, genuine link same gene/family, complex-level not subunit selectivity, non-listed collision, unresolved not promoted); regenerate catalogue, associations, coverage, priorities, queue, view",
-     "status": "IN_PROGRESS",
-     "owner": "plan"
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "identity verification via GtoPdb ids in catalog_build, symbol rules removed, regressions; landed b8005820; independent verification running (A4)"
     },
     {
      "step": "A3 module behaviours: concordant and opposed actions in one family shown together not summed; a failing source changes only the dispositions that depend on it, not a verified mechanism; regressions",
@@ -52,9 +54,9 @@
     },
     {
      "step": "B3 ISR: supplementary figures already in corpus first, Hussain supplement for GCN1, meaning of the WWOX row in the PERK interactome, exact Atf4 with/without Abeta42 reconciliation (interaction vs two separate tests, unit and n), review of the discriminating-experiment design with a Scientist, propagate to needs, cards, hypotheses, priorities, queue",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "scientist-c",
-     "evidence": "landed 6c6ae560 (notes, needs, card E01, HYP text applied 744b583f); independent verification of Hussain/Sassano/Atf4 facts running"
+     "evidence": "notes+needs+card E01+HYP text landed (6c6ae560, 744b583f); verified independently from sources (P1-P4 supported, locator_audits/2026-10-28_it4_isr_independent_verification.md)"
     }
    ]
   },

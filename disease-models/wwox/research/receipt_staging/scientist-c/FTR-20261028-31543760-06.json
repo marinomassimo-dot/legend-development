@@ -1,0 +1,38 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261028-31543760-06",
+ "study_id": {
+  "pmid": "31543760",
+  "doi": "10.3389/fncel.2019.00391"
+ },
+ "event_at": "2026-10-28T19:26:31Z",
+ "analysis_at": "2026-10-28T00:00:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-c (Scientist C), mandate ORCH-ROADMAP-IT4-20261028 step E2, branch task/it4-e2, context_policy QUESTION_DRIVEN. Held before reading: the manifest reading history (receipts 01 to 05), the needs table and the 2026-10-28 GCN2/PERK note. Stated question: does the WWOX-silenced human neural progenitor transcriptome carry any gene-level or gene-set-level evidence on ATF4 targets, mitochondrial or OXPHOS genes, MYC, Wnt, GSK3B, lactate/LDH or myelination, and which of the roadmap needs can this paper therefore inform. Route: Europe PMC JATS body (Materials and Methods in full, Results from the first paragraph through the PCA paragraph, Discussion through the metabolism paragraph), and Supplementary Tables 2 and 3 of Data_Sheet_1 read row by row from the text layer (44 and 108 gene-set rows parsed by regular expression and classified by keyword); symbol searches of the body and of the text layers of Data_Sheets 1, 2 and 4 for ATF4, CHAC1, TRIB3, DDIT3, ASNS, PHGDH, PSAT1, MYC, CTNNB1, AXIN2, WNT, GSK3B and SFRP1; Data_Sheet_3 (raster) not re-opened. No download was needed and none was made; the raw deposit GSE126075 was not fetched and no statistic beyond the paper's own was computed. Receipt prepared as staged JSON for the integrator and was not appended at preparation time.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID31543760_Kosla2019_EPMC.xml",
+ "source_fingerprint": "9deafe306e891ec7eae9e4e6d46a8238f0e4233a85ae6e5af9091d7c22301647",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID31543760.json",
+  "disease-models/wwox/research/drug_repurposing/needs/needs.json"
+ ],
+ "evidence_basis": [
+  "Question-driven re-read; reason: new question outside prior coverage (earlier receipts counted the rows of Supplementary Tables 2 and 3 and read Supplementary Table 1, but did not read the gene-set names against the integrated-stress-response, mitochondrial, Wnt, MYC and GSK3B questions).",
+  "Sections actually read in this session: the Materials and Methods subsections on cell line, silencing, Western blot, redox assay, statistics, CAGE, data processing, gene-set enrichment, PCA; the Results from the Figure 1 paragraph to the PCA paragraph including the GSEA leading-edge paragraph; the Discussion paragraphs on 3D growth, adhesion and mitochondrial redox potential; Supplementary Tables 2 and 3 in full (all rows) and Supplementary Table 1 by symbol; figure images were not re-opened in this session (Figures 2 and 11 are attested by FTR-20261019-31543760-05).",
+  "Derived counts recorded in the manifest entries 26 to 30: 44 control-side and 108 knockdown-side gene-set rows; 18 rRNA/tRNA/ribosome rows, 6 amino-acid rows, 3 ERAD/folding rows, 7 mitochondrial rows, 0 oxidative-phosphorylation, Wnt, GSK3, MYC, myelin, glycolysis or oxidative-stress rows by regular expression over the text layer."
+ ],
+ "prior_receipt": "FTR-20261019-31543760-05",
+ "reread_reason": "new_question_outside_prior_coverage"
+}
