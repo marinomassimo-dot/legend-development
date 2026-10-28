@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 """Offline regressions for repurposing_view.py: headline counts equal the module's source JSON,
+the shareable build embeds no row outside view/shareable_sources.json, units are never conflated,
+exported cards carry public identifiers, opposed actions are visible in a comparison,
 the build is deterministic, failed / stale / truncated / not-fetched source states are displayed
 distinct from OK and from empty, and (when a Chromium binary exists) the rendered page's filter
 counts equal a Python reference filter.
@@ -132,16 +134,21 @@ class RealData(unittest.TestCase):
 
     def test_size_and_self_contained(self):
         self.assertLess(len(self.page.encode()), rv.MAX_BYTES)
-        self.assertNotRegex(self.page, r'(src|href)="https?://')
+        self.assertNotRegex(self.page, r'src="https?://')
+        self.assertNotRegex(self.page, r"@import|url\(\s*https?:")
         self.assertNotIn("<link ", self.page)
+        hosts = set(re.findall(r'href="https?://([^/"]+)', self.page))
+        self.assertLessEqual(hosts, {"dgidb.org", "civicdb.org", "www.docm.info", "open.fda.gov", "huggingface.co", "www.ebi.ac.uk", "dsld.od.nih.gov", "pubmed.ncbi.nlm.nih.gov", "doi.org"} | {h for h in hosts if h.endswith(".nih.gov") or h.endswith("ebi.ac.uk") or h.endswith("docm.info")})
 
     def test_determinism(self):
         self.assertEqual(rv.build(DR), self.page)
+        self.assertEqual(rv.build(DR, "shareable"), rv.build(DR, "shareable"))
 
-    def test_committed_view_is_current(self):
-        out = DR / "view/index.html"
-        if out.exists():
-            self.assertEqual(out.read_text(encoding="utf-8"), self.page, "run repurposing_view.py run")
+    def test_committed_views_are_current(self):
+        for src, name in rv.OUT_NAME.items():
+            out = DR / "view" / name
+            if out.exists():
+                self.assertEqual(out.read_text(encoding="utf-8"), rv.build(DR, src), f"run repurposing_view.py run{' --source shareable' if src == 'shareable' else ''}")
 
     def test_no_personal_or_contact_data(self):
         self.assertNotRegex(self.page, r"[\w.+-]+@[\w-]+\.[\w.]+")
@@ -208,9 +215,11 @@ class Browser(unittest.TestCase):
     def tearDownClass(cls):
         cls.tmp.cleanup()
 
-    def dom(self, frag=""):
-        r = subprocess.run([self.bin, "--headless=new", "--disable-gpu", "--no-sandbox", f"--user-data-dir={self.tmp.name}/p",
-                            "--virtual-time-budget=5000", "--dump-dom", f"file://{self.html}{frag}"], capture_output=True, text=True, timeout=120)
+    def dom(self, frag="", html=None, width=None):
+        cmd = [self.bin, "--headless=new", "--disable-gpu", f"--user-data-dir={self.tmp.name}/p", "--virtual-time-budget=5000"]
+        if width:
+            cmd.append(f"--window-size={width},900")
+        r = subprocess.run(cmd + ["--dump-dom", f"file://{html or self.html}{frag}"], capture_output=True, text=True, timeout=120)
         if "data-ready" not in r.stdout:
             self.skipTest("browser could not run the page: " + r.stderr[-200:])
         return r.stdout
@@ -268,6 +277,199 @@ class Browser(unittest.TestCase):
         self.assertIn("Discriminating experiment named", d)
         d2 = self.dom("#f=q:bumetanide&openall:1")
         self.assertRegex(d2, r'href="\.\./cards/[A-Za-z0-9_-]+\.card\.json"')
+
+
+@unittest.skipUnless(HAVE_DATA, "module data absent")
+class Curated(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.full = rv.build(DR, "full")
+        cls.share = rv.build(DR, "shareable")
+        cls.PF, cls.PS = embedded(cls.full), embedded(cls.share)
+        cls.allow = json.loads((DR / "view/shareable_sources.json").read_text())
+
+    def test_units_never_conflated(self):
+        n = static_numbers(self.full)
+        cur = self.PF["cur"]
+        self.assertEqual(n["cur.needs"], "22")
+        self.assertEqual(n["cur.cards"], str(len(cur["cands"])))
+        self.assertNotEqual(n["cur.cards"], n["funnel.records"])
+        for key, unit in (("cur.needs", "needs"), ("cur.cards", "candidate cards"), ("funnel.records", "catalogue records"), ("funnel.families", "catalogue families"),
+                          ("funnel.evaluated_records", "records evaluated against WWOX"), ("funnel.families_with_link", "families with a documented link")):
+            self.assertRegex(self.full, rf'data-k="{re.escape(key)}"[^<]*</b></span><span class="u">{re.escape(unit)}<')
+        self.assertIn("never added or compared as one number", self.full)
+        self.assertIn("a family is not a distinct drug and not a candidate", self.full)
+
+    def test_two_goals_and_track_are_separate_dimensions(self):
+        n = static_numbers(self.full)
+        d, p = n["cur.goal.deep_recovery.cards"], n["cur.goal.partial_benefit.cards"]
+        self.assertEqual(int(d) + int(p), len([c for c in self.PF["cur"]["cands"] if c["goal"]]))
+        self.assertEqual(int(n["cur.goal.deep_recovery.needs"]) + int(n["cur.goal.partial_benefit.needs"]), 22)
+        self.assertEqual(self.full.count('class="goal '), 2)
+        self.assertIn("Track (a separate field)", self.full)
+        self.assertIn("2026-", re.search(r'data-k="meta.data_date" data-v="([^"]+)"', self.full).group(1))
+
+    def test_groups_are_reasoned_and_unscored(self):
+        cur = self.PF["cur"]
+        ids = {g["id"] for g in cur["groups"]}
+        self.assertEqual(ids, {"G1", "G2", "G3", "G4"})
+        for c in cur["cands"]:
+            for nid, l in c["links"].items():
+                self.assertIn(l["group"], ids)
+                self.assertEqual(len(l["reasons"]), 6)
+                if l["group"] == "G1":
+                    self.assertGreater(l["n_w"], 0)
+                if c["abstention"]:
+                    self.assertEqual(l["group"], "G4")
+        blob = json.dumps(cur)
+        for bad in ('"score"', '"rank"', '"probability"', '"cure'):
+            self.assertNotIn(bad, blob)
+        self.assertIn("no score, no probability and no cure ranking", self.full)
+
+    def test_scope_labels_distinct_and_known(self):
+        cur = self.PF["cur"]
+        labels = [s["label"] for s in cur["scopes"]]
+        self.assertEqual(len(labels), len(set(labels)))
+        codes = {s["code"] for s in cur["scopes"]}
+        for c in cur["cands"]:
+            self.assertLessEqual({a["scope"] for a in c["asserts"]}, codes)
+        for want in ("WWOX experiment in a DEE system", "WWOX biology in another context", "Other-disease precedent", "Computational result", "Unverified hypothesis"):
+            self.assertIn(want, labels)
+
+    def test_public_identifiers_attached(self):
+        cur = self.PF["cur"]
+        etx = next(c for c in cur["cands"] if c["id"] == "EB-ETX-01")
+        self.assertIn("32000863", [p["id"] for p in etx["pmids"]])
+        self.assertIn("CHEMBL696", etx["chembl"])
+        for c in cur["cands"]:
+            for p in c["pmids"]:
+                self.assertRegex(p["id"], r"^\d{6,8}$")
+
+    def test_allowlist_is_the_initial_policy(self):
+        self.assertEqual(set(self.allow["dgidb_claim_sources"]), {"NCI", "FDA", "CIViC", "DoCM"})
+        self.assertEqual(set(self.allow["name_sources"]), {"MATRIX list name", "openFDA NDC single-ingredient active_ingredient name"})
+        for v in list(self.allow["dgidb_claim_sources"].values()) + list(self.allow["name_sources"].values()):
+            self.assertTrue(v["licence"] and v["attribution"])
+
+    def test_shareable_embeds_no_non_allowlisted_row(self):
+        ok = {"DGIdb:" + k for k in self.allow["dgidb_claim_sources"]}
+        for p in self.PS["pairs"]:
+            for t in p["l1"][3]:
+                self.assertIn(t, ok)
+            if "p" in p:
+                for t in p["p"]["cr"]["dir"][1]:
+                    self.assertIn(t, ok)
+        for e in self.PS["excluded_detail"]:
+            self.assertEqual(e["genes"], [])
+            self.assertIn("detail withheld", e["reason"])
+        withheld = [r for r in self.PS["rows"] if r.get("w")]
+        self.assertGreater(len(withheld), 1000)
+        allowed_names = {c["short"] for c in self.PS["cur"]["cands"]}
+        for r in withheld:
+            self.assertEqual(r["st"], [])
+            self.assertEqual(r["mod"], [])
+            self.assertTrue(r["name"] in allowed_names or re.fullmatch(r"(CHEMBL\d+|DGIDB:[0-9a-f]+|[A-Za-z0-9_.:-]+)", r["name"]), r["name"])
+        # compound names that only third-party rows carry must be absent from the shareable page and present in the full one
+        cm = json.loads((DR / "coverage/coverage_matrix.json").read_text())
+        names = [r["name"] for r in cm["rows"] if r.get("origin") == ["dgidb_only"] and r["name"].isalpha() and len(r["name"]) > 7 and not r.get("cards")][:40]
+        self.assertTrue(names)
+        for nm in names:
+            self.assertNotIn(f'"name":"{nm}"', self.share)
+        self.assertTrue(any(f'"name":"{nm}"' in self.full for nm in names))
+        sources = set()
+        for a in rv.read_associations(DR):
+            if rv.tag_allowed(rv.assoc_tag(a), self.allow):
+                sources.add(rv.assoc_tag(a))
+        foot = self.PS["cur"]["footer"]
+        for e in foot["embedded"]:
+            self.assertTrue(e["licence"] and e["attribution"])
+        embedded_labels = " ".join(e["label"] for e in foot["embedded"])
+        self.assertNotIn("ChEMBL", embedded_labels)
+        self.assertIn("ChEMBL", " ".join(e["label"] for e in foot["counts_only"]))
+        self.assertIn('id="attribution"', self.share)
+        self.assertIn("CC BY-SA 3.0", self.share)
+
+    def test_shareable_footer_lists_what_is_embedded(self):
+        labels = [e["label"] for e in self.PS["cur"]["footer"]["embedded"]]
+        self.assertTrue(any("NCI" in x for x in labels))
+        for e in self.PS["cur"]["footer"]["embedded"]:
+            if e.get("rows"):
+                self.assertGreater(e["rows"], 0)
+        self.assertEqual(self.PS["source"], "shareable")
+        self.assertEqual(self.PF["source"], "full")
+
+    def test_check_covers_both_sources(self):
+        self.assertEqual(rv.main(["check"]), 0)
+        with tempfile.TemporaryDirectory() as td:
+            out = Path(td) / "x.html"
+            out.write_text("stale", encoding="utf-8")
+            self.assertEqual(rv.main(["check", "--source", "shareable", "--out", str(out)]), 1)
+            self.assertEqual(rv.main(["run", "--source", "shareable", "--out", str(out)]), 0)
+            self.assertEqual(rv.main(["check", "--source", "shareable", "--out", str(out)]), 0)
+            self.assertEqual(rv.main(["check", "--source", "full", "--out", str(out)]), 1)
+
+    def test_no_third_party_name_in_full_only_fields_of_shareable_actions(self):
+        for c in self.PS["cur"]["cands"]:
+            for a in c["actions"]:
+                self.assertIn("target", a)
+
+
+@unittest.skipUnless(HAVE_DATA, "module data absent")
+class CuratedBrowser(Browser):
+    def test_export_card_has_public_identifiers(self):
+        d = self.dom("#export=EB-ETX-01")
+        area = d[d.index('id="export-area"'):]
+        self.assertIn("exporting", d)
+        self.assertIn("https://pubmed.ncbi.nlm.nih.gov/32000863/", area)
+        self.assertIn("PMID 32000863", area)
+        self.assertIn("CHEMBL696", area)
+        self.assertIn("Data date:", area)
+        self.assertIn("Perimeter:", area)
+        self.assertNotIn("deepdive_manifests", area)
+        self.assertNotRegex(area, r'href="\.\./')
+
+    def test_candidate_profile_five_answers_and_scope_labels(self):
+        d = self.dom("#c=need:NEED-T-TYPE-CALCIUM")
+        for q in ("1. Why are we studying it?", "2. What was observed in WWOX?", "3. What comes from other diseases or predictions?", "4. Counter-evidence", "5. What proof is missing"):
+            self.assertIn(q, d)
+        self.assertIn("WWOX experiment in a DEE system", d)
+        self.assertIn("Other-disease precedent", d)
+
+    def test_filters_narrow_the_curated_views(self):
+        d = self.dom("#c=goal:deep_recovery")
+        m = re.search(r'id="c-count"[^>]*>(\d+) of (\d+) needs and (\d+) of (\d+) candidate', d)
+        needs = [n for n in self.P["cur"]["needs"] if n["goal"] == "deep_recovery"]
+        cands = [c for c in self.P["cur"]["cands"] if c["goal"] == "deep_recovery"]
+        self.assertEqual((int(m.group(1)), int(m.group(3))), (len(needs), len(cands)))
+
+    def test_ranking_groups_rendered_with_reasons(self):
+        d = self.dom("#c=need:NEED-WWOX-GENE-ADDITION")
+        self.assertIn('data-group="G1"', d)
+        self.assertIn("reasons for this position (six criteria)", d)
+
+    def test_comparison_shows_opposed_actions_and_no_synergy(self):
+        page = (Path(self.tmp.name) / "v.html").read_text(encoding="utf-8")
+        m = re.search(r'(<script id="data" type="application/json">)(.*?)(</script>)', page, re.S)
+        P = json.loads(m.group(2).replace("<\\/", "</").replace("<\\!--", "<!--"))
+        by = {c["id"]: c for c in P["cur"]["cands"]}
+        by["EB-ETX-01"]["actions"].append({"need": "NEED-T-TYPE-CALCIUM", "target": "CACNA1G", "action": "down", "cons": "opposed", "n": 1})
+        by["H01_apinocaltamide_ttype"]["actions"].append({"need": "NEED-T-TYPE-CALCIUM", "target": "CACNA1G", "action": "up", "cons": "consistent", "n": 1})
+        j = json.dumps(P, ensure_ascii=False, sort_keys=True, separators=(",", ":")).replace("</", "<\\/").replace("<!--", "<\\!--")
+        h2 = Path(self.tmp.name) / "opp.html"
+        h2.write_text(page[: m.start(2)] + j + page[m.end(2):], encoding="utf-8")
+        d = self.dom("#compare=EB-ETX-01,H01_apinocaltamide_ttype", html=h2)
+        self.assertRegex(d, r'data-opposed="[2-9]"')
+        self.assertIn("OPPOSED to the wanted direction", d)
+        self.assertIn("raises while", d)
+        self.assertIn("No synergy is inferred", d)
+
+    def test_no_horizontal_overflow_at_phone_width(self):
+        page = (Path(self.tmp.name) / "v.html").read_text(encoding="utf-8")
+        h2 = Path(self.tmp.name) / "sw.html"
+        h2.write_text(page.replace("</body>", "<script>setTimeout(function(){document.body.setAttribute('data-sw',document.documentElement.scrollWidth+'/'+window.innerWidth)},400)</script></body>"), encoding="utf-8")
+        d = self.dom("", html=h2, width=390)
+        a, b = map(int, re.search(r'data-sw="(\d+)/(\d+)"', d).group(1, 2))
+        self.assertLessEqual(a, b)
 
 
 if __name__ == "__main__":
