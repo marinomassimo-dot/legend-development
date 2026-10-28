@@ -31,6 +31,8 @@ The earlier note's statement that GCN1 "is not in ref 56's main text" is correct
 
 **Link between the two lists, stated with its limit.** GCN1 is in the WWOX TAP-MS (score 0.133) and the PERK BioID (10 spectra); WWOX is in the PERK BioID (3 spectra). Three weak, non-validated, same-cell-line co-occurrences do not form a complex; they are what a ribosome-adjacent cluster would also produce. Neither paper tests a WWOX-PERK, WWOX-GCN1 or WWOX-GCN2 functional effect.
 
+Two further points from the independent verification (2026-10-28, `locator_audits/2026-10-28_it4_isr_independent_verification.md`): the Table 1 caption says every hit is absent from the control, yet some rows carry control spectra of 1 (for example MTDH, 24 versus 1), so the control statement is only approximately true (the WWOX row is in the control-zero block); and AMOT and DVL2, both known WW1 partners of WWOX, appear in the same list (2 spectra each, control 0), which shows that the list holds real WWOX neighbours but still says nothing about activation or direction of an eIF2 kinase.
+
 ## 4. The Atf4 comparisons, reconciled (task 4)
 
 Source: fly paper Results section "Wwox knockdown in the presence of Abeta42 increases lactate concentrations via Atf4", Figure 5H-I legend, Supplementary Fig 5D-G legend, Supplementary Table 1B, Methods "Statistical analysis". Genotypes: pan-neuronal elav-GAL4; Wwox TRiP RNAi versus the RNAi control (BDSC 8622); females, day 14; Atf4 immunocytochemistry (rat antibody gifted by a laboratory, ref 26), mean grey value over four ROIs per brain; the unit of analysis is the brain.
