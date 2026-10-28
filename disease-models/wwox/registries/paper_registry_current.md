@@ -93,7 +93,7 @@ The canonical P1–P7 codes follow the WWOX working model and claim registry. **
 **clinical relevance:** HIGH
 **Claim links:** 001
 **Role:** safety anchor paper
-**Note:** direct human safety signal; CLAIM 001 now conflicting evidence due to You 2024 / Chong 2023 — safety position for the reference genotype unchanged
+**Note:** two case-selected WWOX-DEE children, abstract level, no denominator of vigabatrin-exposed WWOX children, so no rate and no enrichment claim (wave note of `BATCH_20261019_025` on CLAIM 001); CLAIM 001 now conflicting evidence due to You 2024 / Chong 2023 — safety position for the reference genotype unchanged
 
 ---
 

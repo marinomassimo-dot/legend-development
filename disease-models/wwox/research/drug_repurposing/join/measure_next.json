@@ -26,7 +26,7 @@
  {
   "dependence": "2_UNAUDITED_CONTRADICTIONS",
   "experiment_sketch": "legend-locator-audit over the declared triples",
-  "external_hits": 0,
+  "external_hits": 1,
   "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
   "query_id": "Q-N-04",
   "would_move": "N-04 (disease-models/wwox/analysis/mechanism_intervention_map.md:748)"

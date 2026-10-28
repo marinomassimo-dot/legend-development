@@ -32323,7 +32323,7 @@
   ],
   "curated_cards": [],
   "decisive_test": "`E_GABA` measurement in a WWOX system; or a WWOX cohort with structured VABAM",
-  "digest": "c87bdca1eaa6b56b",
+  "digest": "22032abb97729b79",
   "intervention": "*corrects a marker, not the mechanism* — plus an unmeasured premise. VABAM is",
   "kind": "mechanism_record",
   "leads_named": [
@@ -32346,7 +32346,7 @@
   "origin_file": "disease-models/wwox/analysis/mechanism_intervention_map.md",
   "origin_id": "N-04",
   "origin_line": 748,
-  "origin_title": "Broad GABAergic push (chronic high-dose benzodiazepines; vigabatrin as a mechanism play) → **premise unmeasured, and a real safety signal**",
+  "origin_title": "Broad GABAergic push (chronic high-dose benzodiazepines; vigabatrin as a mechanism play) → **premise unmeasured; a documented MRI-abnormality liability whose WWOX excess is not shown**",
   "papers_named": [],
   "pmids": [
    "30361190",
@@ -32422,7 +32422,9 @@
   "query_id": "Q-N-04",
   "record_class": "negative_translation",
   "target": "UNKNOWN",
-  "terms": []
+  "terms": [
+   "WWOX"
+  ]
  },
  {
   "axis": "all",
