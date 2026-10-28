@@ -436,7 +436,7 @@
      "readout_marker": 1
     },
     "targets": 10,
-    "wwox_system_observations": 0
+    "wwox_system_observations": 1
    },
    "NEED-LACTATE-LDH": {
     "by_target_kind_records_families": {
@@ -545,7 +545,7 @@
      "readout_marker": 2
     },
     "targets": 6,
-    "wwox_system_observations": 2
+    "wwox_system_observations": 4
    },
    "NEED-MTOR-AUTOPHAGY": {
     "by_target_kind_records_families": {
