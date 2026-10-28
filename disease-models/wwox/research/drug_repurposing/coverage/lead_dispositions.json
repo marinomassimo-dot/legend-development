@@ -1,0 +1,70 @@
+{
+ "_note": "Curated, reasoned endings of catalogue searches (iteration 3, closed-loop demonstration, scientist-b, 2026-10-28). Read by repurposing_join.py handoff. A disposition is a decision about a search, not a claim about biology and not a ranking. Coverage version used: main 315cd50c (before the ABAT / GtoPdb artefact correction of task/it3-search2).",
+ "dispositions": [
+  {
+   "id": "LD-001",
+   "need": "NEED-T-TYPE-CALCIUM",
+   "subject": "apinocaltamide (reverse path: compound without a card -> CACNA1G/H/I -> need)",
+   "catalogue_ids": ["CAT:CHEMBL4217292"],
+   "decision": "candidate",
+   "why": "ChEMBL curated mechanism (T-type blocker, three subtypes) coherent with a direction-evaluable need; structurally unrelated to ethosuximide, the only drug result of the need. Mechanism-level discriminator only; apinocaltamide sources are abstract-level, adult rodents and healthy adults.",
+   "reopening_condition": "closes if a same-day-controlled Wwox-null pup assay with measured exposure does not reproduce the ethosuximide late-phase effect; weakens if a full-text read shows no brain exposure at pup-relevant conditions",
+   "next_experiment": "Wwox-null pup PTZ late-phase score, three genotypes, concurrent PTZ-alone control, ethosuximide and apinocaltamide arms, exposure measured, pre-planned drug-by-genotype interaction test",
+   "owner": "Scientist (wet-lab design; not done here)",
+   "card": "cards/H01_apinocaltamide_ttype.packet.json",
+   "record": "closed_loop_it3_20261028/README.md#case-a"
+  },
+  {
+   "id": "LD-002",
+   "need": "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR",
+   "subject": "glycine and aspartic acid (NMDA-receptor agonists)",
+   "catalogue_ids": ["CAT:DGIDB:cc0e62936d06", "CAT:DGIDB:34eebcba2b28"],
+   "decision": "opposite_mechanism",
+   "why": "Stated action is agonism of GRIN2A/GRIN2B, the opposite sign to a need whose direction is down; ChEMBL holds no mechanism row for either (DGIdb / Guide to Pharmacology ligand statements only). They are dietary amino acids: no repurposing question follows.",
+   "reopening_condition": "a Wwox-deficient system showing NMDA-receptor hypofunction (the need's sign would then be up)",
+   "next_experiment": "none for these compounds; the sign of the need is decided by the MEA / d-APV experiment already named on card F01_glutamate_receptor_node",
+   "owner": "none (ended)",
+   "card": null,
+   "record": "closed_loop_it3_20261028/README.md#case-b"
+  },
+  {
+   "id": "LD-003",
+   "need": "NEED-SEIZURE-CONTROL-SYMPTOMATIC",
+   "subject": "adenosine and regadenoson flagged 'opposed' through ABAT",
+   "catalogue_ids": ["CAT:DGIDB:00b678d594e4", "CAT:DGIDB:bf428fbfbaa3"],
+   "decision": "abstention",
+   "why": "The 'opposed' flag rests on one Guide-to-Pharmacology ligand row 'ABAT agonist' beside a run of unrelated ABC-transporter rows; the compounds' real pharmacology is at adenosine receptors, which are not targets of this need. Neither an opposite nor a consistent mechanism is established.",
+   "reopening_condition": "a ChEMBL curated mechanism row or a primary paper stating an action on GABA transaminase",
+   "next_experiment": "none; correct the coverage layer (coordinator task it3-search2)",
+   "owner": "coverage maintainer",
+   "card": null,
+   "record": "closed_loop_it3_20261028/README.md#case-b"
+  },
+  {
+   "id": "LD-004",
+   "need": "NEED-ISR-ATTENUATION",
+   "subject": "GCN2 (EIF2AK4), from the fly PARS2 reading",
+   "catalogue_ids": ["CAT:DGIDB:2e47bd118e87"],
+   "decision": "insufficient",
+   "why": "Need direction is uncertain, so exploration only. The catalogue holds no ChEMBL mechanism row for EIF2AK4; DGIdb returns five antipsychotics through PharmGKB with interaction type unknown (pharmacogenomic association, not modulation) and one multi-kinase research inhibitor. The only GCN2 datum is genetic suppression in a fly model: genetic suppression is not pharmacology.",
+   "reopening_condition": "(i) phospho-GCN2 / ATF4 elevation in a Wwox-deficient neural system, or (ii) a catalogued compound with a stated GCN2 action",
+   "next_experiment": "in a Wwox-deficient neural system measure phospho-GCN2 versus phospho-PERK with eIF2alpha phosphorylation and ATF4 protein (stage 1 of card E01, plus the kinase question), before any compound",
+   "owner": "Scientist (wet-lab; not done here)",
+   "card": "cards/E01_isr_modulators.packet.json",
+   "record": "closed_loop_it3_20261028/README.md#case-c"
+  },
+  {
+   "id": "LD-005",
+   "need": "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR",
+   "subject": "pannexin-1 blockers (record Q-N-16) via PANX1",
+   "catalogue_ids": [],
+   "decision": "insufficient",
+   "why": "PANX1 is an intervention target of the need, but the catalogue returns no compound for it (no ChEMBL mechanism row, no DGIdb row). Probenecid, carbenoxolone and brilliant blue G exist in the catalogue under other targets and are not linked by name. The only WWOX datum (one slice, one blocker) is a rise in burst frequency, never tested.",
+   "reopening_condition": "a source row linking a catalogue compound to PANX1, or an independent measurement of a pannexin blocker in a Wwox-deficient network",
+   "next_experiment": "independent replication of the slice experiment with a second pannexin-1 blocker and a significance test (record Q-N-16, REPLICATE row)",
+   "owner": "Scientist (replication; not done here)",
+   "card": null,
+   "record": "closed_loop_it3_20261028/README.md#case-d"
+  }
+ ]
+}

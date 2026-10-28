@@ -11,17 +11,19 @@ Inputs (read at run time, never copied): needs/needs.json, catalog/catalog.jsonl
 card_links.json), cards/*.card.json + *.packet.json, cards_early/*, join/measure_next.json, coverage/target_roles.tsv.
 
 FOUR levels, never a score and never summed:
-  L1 documented_link        the catalogue links a compound family to a target of the need (ChEMBL mechanism by human
-                            gene symbol, DGIdb by HGNC id); readout-marker and identity-guard targets do not count
-  L2 mechanistic_coherence  the stated action on an intervention target is direction-consistent with a need whose
-                            direction is up/down and whose target coupling is explicit; never evaluated for an
-                            `uncertain` need (that is an exploration list)
-  L3 observed_effect        a card assertion (data, not inference) on the intervention reports a readout change; the
-                            card is cited by the need; endpoint-level pertinence is NOT checked
-  L4 observed_recovery_in_WWOX_system  a card assertion in a WWOX system whose bridge comparison is
-                            OPPOSES_DISEASE_CHANGE (the module's own technical comparison: not efficacy)
-Scopes stay visible: wwox_experimental | wwox_clinical_report | other_disease_precedent | unverified_hypothesis
-(computational and other-WWOX-context scopes belong to the need's observations, not to a compound's assertions).
+  L1 documented_link        the catalogue links a compound family to an INTERVENTION target (or disease gene product) of the need
+                            (ChEMBL mechanism by human gene symbol, DGIdb by HGNC id). Pathway members are counted apart; effector
+                            constraints and readout markers are listed beside and never links; source-artefact rows (source_artefacts.tsv),
+                            alias-risk rows and the DGIdb placeholder 'Null' are excluded and listed
+  L2 mechanistic_coherence  direction-consistent action on an intervention target, only for needs whose direction is up/down/restore AND
+                            an explicit role row (target_roles.tsv, with its certainty qualifier); never for an `uncertain` need
+  L3 observed_effect        an assertion on THIS compound whose endpoint is listed as pertinent to THIS need in assertion_pertinence.tsv:
+                            a readout in a WWOX system or a WWOX case report, with its SIGN. Other-disease precedents, target-engagement
+                            assays, safety signals and label statements are separate states, never 'observed'
+  L4 observed_recovery      an L3 assertion whose bridge comparison is OPPOSES_DISEASE_CHANGE, reading depth known, one dose arm at a time;
+                            experimental and case-level kept apart (a technical comparison, not efficacy)
+Source states: OK | STALE_EXPORT (DGIdb 2024-06-10) | STALE_AFTER_FAILED_REFRESH | PARTIAL | FAILED | INCOMPLETE | NOT_FETCHED. A hard problem
+of ANY source makes every disposition incomplete_or_failed_query; a stale source caveats every absence-type result.
 
 Units: a coverage statement counts compound FAMILIES (ChEMBL records joined by parent link or InChIKey connectivity block;
 every source-only record is its own family, flagged as possibly duplicate when a name coincides, never merged). Each
@@ -271,7 +273,7 @@ def build(needs_path=rs.DEFAULT_NEEDS, catalog_dir: Path = cc.DEFAULT_DIR, dr: P
                     st = "pathway_member_only"
                 else:
                     st = "none_found"
-                L1 = {"state": st, "targets": sorted({a["target"] for a in link}), "target_kinds": sorted({a["target_kind"] for a in link}),
+                L1 = {"readout_marker_only_links": 0, "state": st, "targets": sorted({a["target"] for a in link}), "target_kinds": sorted({a["target_kind"] for a in link}),
                       "link_sources": sorted({a["link_source"] for a in link}), "associations": len(link),
                       "pathway_member_targets_listed_apart": sorted({a["target"] for a in pw}) if not link else sorted({a["target"] for a in pw})}
                 if st in ("none_found", "pathway_member_only"):
@@ -350,7 +352,9 @@ def observation_levels(obs: list[dict]) -> tuple[dict, dict]:
         st = "safety_signal_only"
     else:
         st = "none_in_cards"
-    L3 = {"state": st, "signs_wwox_system_readouts": sg(wx), "signs_case_reports": sg(cl), "signs_other_disease_precedent_not_observed_here": sg(oth),
+    scope_counts = dict(collections.Counter(("wwox_experimental" if o["kind"] == "readout_in_wwox_system" else "wwox_clinical_report") for o in wx + cl))
+    L3 = {"by_scope": scope_counts, "measured_null_assertions": sum(1 for o in wx + cl if o["sign"] == "null"), "inference_assertions": 0,
+          "state": st, "signs_wwox_system_readouts": sg(wx), "signs_case_reports": sg(cl), "signs_other_disease_precedent_not_observed_here": sg(oth),
           "target_engagement_assays_not_readouts": len(te), "safety_signals_kept_apart": sg(saf), "label_statements_not_observations": len(lab),
           "assertion_ids": sorted({o["id"] for o in wx + cl}), "cards": sorted({o["card_id"] for o in obs}),
           "flags": sorted({f for o in wx + cl for f in o["flags"].split(";") if f}),
@@ -360,7 +364,8 @@ def observation_levels(obs: list[dict]) -> tuple[dict, dict]:
     rec = [o for o in wx + cl if o["counts_L4"] and o["comparison"] == "OPPOSES_DISEASE_CHANGE" and o["reading_depth"] != "UNKNOWN"]
     exp = [o for o in rec if o["kind"] == "readout_in_wwox_system"]
     case = [o for o in rec if o["kind"] == "case_report_wwox_clinical"]
-    L4 = {"state": "observed_experimental" if exp else ("observed_case_level" if case else "none_in_record"),
+    L4 = {"by_scope": {k: v for k, v in (("wwox_experimental", len(exp)), ("wwox_clinical_report", len(case))) if v}, "via_class_card": False,
+          "state": "observed_experimental" if exp else ("observed_case_level" if case else "none_in_record"),
           "assertion_ids": sorted(o["id"] for o in rec), "experimental_assertions": len(exp), "case_level_assertions": len(case),
           "definition": "WWOX-system assertion judged by the bridge as opposing the disease change, endpoint pertinent to the need, reading depth known, high-dose arm only for dose-arm designs; a technical comparison, not efficacy or safety. case_level = uncontrolled clinical report"}
     return L3, L4
@@ -527,7 +532,7 @@ def make_summary(entries, idx, rows, cells, per_need, priorities, need_by, cards
     alias_rows = sorted({(a["catalogue_id"], a["compound"], a["target"]) for a in assoc_all if a["excluded_from_counts"] and a["excluded_from_counts"].startswith("alias_risk")})
     cell_states = lambda key: dict(sorted(collections.Counter(c[key]["state"] for c in cells.values()).items()))
     pend = sum(1 for _ in cells)
-    return {
+    out = {
         "schema": SCHEMA,
         "units": {"catalogue_records": len(entries), "records_are": "source-level substance records, not distinct drugs",
                   "families": len(fam_all), "chembl_families": len(chembl_fams), "source_only_families_unresolved_identity": len(fam_all - chembl_fams),
@@ -580,6 +585,35 @@ def make_summary(entries, idx, rows, cells, per_need, priorities, need_by, cards
                    "L4 is a technical bridge comparison, not efficacy; case_level = uncontrolled clinical report", "needs' own WWOX observations are not interventions and fill no compound cell",
                    "seizure-need cells are symptom-level inferences, not mechanism-linked to WWOX; GRIN and T-type couplings rest on one experiment each"],
     }
+    legacy_aliases(out)
+    return out
+
+
+def legacy_aliases(sm: dict) -> None:
+    """Keys of the first schema revision, kept so existing consumers (the view) keep reading. They carry the NEW definitions:
+    'documented link' = headline intervention-target link; 'observed' = a pertinent WWOX-system readout or case report."""
+    cc_ = sm["catalogue_coverage"]
+    cc_["records_with_documented_link_to_a_need"] = cc_["union_headline_records"]
+    cc_["families_with_documented_link_to_a_need"] = cc_["union_headline_families"]
+    cc_["families_touching_at_least_one_need_counted_once"] = cc_["union_headline_families"]
+    cc_["pct_records_with_link"] = cc_["pct_records_with_headline_link"]
+    cc_["records_touching_only_readout_markers"] = cc_["records_touching_only_effector_constraints_or_readout_markers"]
+    cc_["touched_families_with_a_name_twin_in_another_family_not_merged"] = cc_["touched_headline_families_with_a_name_twin_not_merged"]
+    cc_["families_touching_a_need_if_name_twins_were_collapsed_SENSITIVITY_ONLY"] = cc_["headline_families_if_name_twins_collapsed_SENSITIVITY_ONLY"]
+    sm["evaluated_vs_records"]["records_evaluated_against_wwox_needs_with_any_observation"] = sm["evaluated_vs_records"]["interventions_with_a_listed_pertinent_readout_assertion"]
+    sm["priorities"]["by_disposition"] = sm["priorities"]["by_disposition_cells"]
+    for v in sm["needs"]["per_need"].values():
+        v["families_with_documented_link"] = v["headline_families_intervention_targets"]
+        v["records_with_documented_link"] = v["headline_records_intervention_targets"]
+        v["link_targets"] = sum(v["target_kinds"].get(k, 0) for k in ("intervention_target", "disease_gene_product"))
+        v["cells_L3_observed"] = v["cells_L3_observed_wwox_system"] + v["cells_L3_observed_case_level_only"]
+    m = sm["matrix"]
+    m["L1_documented"] = m["L1_states"].get("documented", 0)
+    m["L1_none_found"] = m["L1_states"].get("none_found", 0)
+    m["L1_not_evaluable"] = m["L1_states"].get("not_evaluable", 0)
+    m["L2_coherent"] = m["L2_states"].get("coherent", 0)
+    m["L3_observed"] = m["L3_states"].get("observed_wwox_system", 0) + m["L3_states"].get("observed_case_level_only", 0)
+    m["L4_observed"] = m["L4_states"].get("observed_experimental", 0) + m["L4_states"].get("observed_case_level", 0)
 
 
 # ----------------------------------------------------------------------------- IO
