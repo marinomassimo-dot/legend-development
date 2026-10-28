@@ -67,9 +67,9 @@
     },
     {
      "step": "P9 partial benefit thread distinct from the VABAM re-examination: need->compounds and compound->WWOX profile, mechanism/context/counter-evidence, source of the result, transfer limit, next measure; drugs, supplements and diets on rationale (diet kept as an intervention with its endpoints); card feeding priorities and queue, or an abstention with research done, missing datum and reopening condition",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "scientist-d",
-     "evidence": "card I01 (PDK inhibition by DCA: premise, seizure, glycaemia) landed; blind audit found one HIGH (cirrhosis glucose sign) + 2 MEDIUM defects; repair in progress; receipt FTR-20261028-38106446-01 recorded"
+     "evidence": "card I01 (PDK inhibition by DCA: premise, seizure endpoint, glycaemia sign; closing condition PDH-phosphorylation genotype-by-inhibitor interaction in WWOX-deficient neural cells) landed; blind audit: HIGH (cirrhosis glucose sign) + 2 MEDIUM repaired and re-verified by tests (check_cards 24/0); receipt FTR-20261028-38106446-01 recorded; compounds handed to P10"
     },
     {
      "step": "P10 supplements and access categories: incremental, resumable, rate-respecting DSLD advance prioritising compounds/families in cards; ingredient vs product, synonyms, forms and mixtures, name vs identifier link, country and date, source state, ambiguity; name-only stays name-only; no-match is not unavailability; an Italian/European public source if accessible without registration and within terms; measurable increase of pertinent coverage; filters and cards updated; no efficacy/safety implication",
