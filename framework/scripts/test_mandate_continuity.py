@@ -686,9 +686,10 @@ class Wiring(unittest.TestCase):
         records = sorted((ROOT / "ledger/tasks/orchestrator").glob("ORCH-*.json"))
         checked = 0
         for live in records:
-            v = mc.verdict(json.loads(live.read_text(encoding="utf-8")))
-            if v["verdict"] == "NO_QUEUE":
+            text = live.read_text(encoding="utf-8")
+            if "AUTHORISED_QUEUE" not in text:   # a record with no queue at all is legitimately NO_QUEUE
                 continue
+            v = mc.verdict(json.loads(text))   # a record that names a queue must NOT read as NO_QUEUE
             checked += 1
             with self.subTest(record=live.name):
                 self.assertIn(v["verdict"], ("CONTINUE", "ALL_BLOCKED", "COMPLETE_PENDING", "RELEASED",
