@@ -85,6 +85,43 @@ class RealData(unittest.TestCase):
         self.assertEqual(len(uncertain), self.sm["needs"]["exploration_only"])
         self.assertTrue(all(n["explore"] for n in uncertain))
 
+    def test_link_split_and_excluded_rows_match_source(self):
+        cc = self.sm["catalogue_coverage"]
+        n = self.nums
+        self.assertEqual(n["funnel.union_headline_records"], str(cc["union_headline_records"]))
+        self.assertEqual(n["funnel.union_headline_families"], str(cc["union_headline_families"]))
+        self.assertEqual(n["funnel.union_pm_records"], str(cc["union_with_pathway_members_records"]))
+        self.assertEqual(n["funnel.excluded_records"], str(cc["excluded_rows"]["records"]))
+        for k, v in cc["excluded_rows"]["by_reason"].items():
+            self.assertEqual(n["funnel.excluded." + k], str(v))
+        # the headline never includes the pathway-member union
+        self.assertLessEqual(cc["union_headline_records"], cc["union_with_pathway_members_records"])
+        self.assertGreater(len(self.P["excluded_detail"]), 0)
+        self.assertEqual(len(self.P["excluded_detail"]), cc["excluded_rows"]["records"])
+
+    def test_cells_and_distinct_families_both_shown(self):
+        by = self.sm["priorities"]["by_disposition_distinct_families_or_rows"]
+        for d in self.P["dispositions"]:
+            self.assertEqual(d["fam"], by.get(d["id"]))
+            if d["fam"] is not None:
+                self.assertEqual(self.nums["dispfam." + d["id"]], str(d["fam"]))
+        self.assertIn("Distinct families or rows", self.page)
+
+    def test_leads_match_source(self):
+        leads = json.loads((DR / "coverage/lead_dispositions.json").read_text())["dispositions"]
+        self.assertEqual(self.nums["leads.n"], str(len(leads)))
+        for d in leads:
+            self.assertIn(f'data-lead="{d["id"]}"', self.page)
+            self.assertIn(d["decision"], self.page)
+
+    def test_non_ok_sources_flagged_prominently(self):
+        notok = {k: v for k, v in self.sm["source_states"].items() if isinstance(v, dict) and v.get("state") != "OK"}
+        self.assertEqual(self.nums["sources.not_ok"], str(len(notok)) if notok else "0")
+        for k in notok:
+            self.assertIn(f'data-banner="{k}"', self.page)
+        if not notok:
+            self.assertNotIn('id="source-banner"', self.page)
+
     def test_levels_never_summed(self):
         self.assertNotRegex(self.page, r"L1\s*\+\s*L2")
         self.assertTrue(self.P["tech"]["never_summed"])
@@ -116,12 +153,12 @@ class States(unittest.TestCase):
                                 "data": {"retrieved_utc": "2026-01-01T00:00:00Z", "version": "v1"}, "licence": "L"} for k, s in statuses.items()}}
 
     def test_states_distinct_from_ok_and_each_other(self):
-        sts = {"a": "OK", "b": "FAILED", "c": "STALE", "d": "TRUNCATED", "e": "NOT_FETCHED", "f": "weird"}
+        sts = {"a": "OK", "b": "FAILED", "c": "STALE_EXPORT", "d": "PARTIAL", "e": "NOT_FETCHED", "f": "weird", "g": "INCOMPLETE", "h": "STALE_AFTER_FAILED_REFRESH"}
         rows = rv.source_rows(self.manifest(sts), {}, {"source_states": sts})
         classes = {r["id"]: r["state_class"] for r in rows}
-        self.assertEqual(classes, {"a": "ok", "b": "failed", "c": "stale", "d": "truncated", "e": "not_fetched", "f": "other"})
+        self.assertEqual(classes, {"a": "ok", "b": "failed", "c": "stale", "d": "truncated", "e": "not_fetched", "f": "other", "g": "incomplete", "h": "stale"})
         page = rv.render_sources(rows)
-        for c in ("failed", "stale", "truncated", "not_fetched", "other"):
+        for c in ("failed", "incomplete", "stale", "truncated", "not_fetched", "other"):
             self.assertIn(f'class="st st-{c}"', page)
         self.assertIn("NOT FETCHED", page)
         self.assertEqual(len(re.findall(r'class="st st-ok"', page)), 1)
@@ -137,8 +174,14 @@ class States(unittest.TestCase):
         self.assertNotEqual(rows[0]["state_class"], "ok")
 
     def test_summary_stale_overrides_manifest_ok(self):
-        rows = rv.source_rows(self.manifest({"dgidb": "OK"}), {}, {"source_states": {"dgidb": "stale"}})
+        rows = rv.source_rows(self.manifest({"dgidb": "OK"}), {}, {"source_states": {"dgidb": {"state": "STALE_EXPORT", "detail": "old export"}}})
         self.assertEqual(rows[0]["state_class"], "stale")
+        self.assertEqual(rows[0]["detail"], "old export")
+
+    def test_partial_shows_its_detail(self):
+        rows = rv.source_rows(self.manifest({"dsld": "OK"}), {}, {"source_states": {"dsld": {"state": "PARTIAL", "detail": "981 of 4697 names"}}})
+        self.assertEqual(rows[0]["state_class"], "truncated")
+        self.assertIn("981 of 4697", rv.render_sources(rows))
 
     def test_classify(self):
         self.assertEqual(rv.classify_state("PARTIAL"), "truncated")
@@ -208,6 +251,17 @@ class Browser(unittest.TestCase):
         for disp in self.P["dispositions"]:
             self.assertRegex(d, rf'data-dn="{disp["id"]}"')
         self.assertEqual(len(self.P["dispositions"]), 7)
+
+    def test_new_disposition_filter_and_stale_badge(self):
+        ids = [d["id"] for d in self.P["dispositions"]]
+        self.assertIn("no_catalogue_link_found", ids)
+        exp = self.ref(disp="no_catalogue_link_found")
+        self.assertEqual(self.counts(self.dom("#f=disp:no_catalogue_link_found")), (len(exp), len(exp)))
+        d = self.dom()
+        notok = [x for x in self.P["tech"]["sources"] if x["state_class"] != "ok"]
+        for x in notok:
+            self.assertRegex(d, rf'data-banner="{x["id"]}"')
+            self.assertIn(f'st-{x["state_class"]}', d)
 
     def test_criteria_and_card_link_navigation(self):
         d = self.dom("#f=need:NEED-T-TYPE-CALCIUM&disp:consistent_mechanism_candidate&openall:1")

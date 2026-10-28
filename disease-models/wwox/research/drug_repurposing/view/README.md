@@ -15,6 +15,8 @@ Reads `coverage/` (summary, matrix, priorities), `catalog/` (stats, cache manife
 and the card files (for relative links). Every displayed count is derived from those files; headline
 numbers carry `data-k` / `data-v` attributes that the test compares with the source JSON.
 
+Revision 2 (corrected coverage layer): headline links are intervention targets only, with pathway members, effector constraints (MAPT) and readout markers shown apart; excluded rows are listed with reasons; L3/L4 use the new state vocabulary (observed in a WWOX system, case-level, measured null, other-disease precedent, enzyme or cell-free engagement, safety signal) and are never summed; dispositions show cells and distinct families; the source-state vocabulary (OK, STALE_EXPORT, STALE_AFTER_FAILED_REFRESH, PARTIAL, FAILED, INCOMPLETE, NOT_FETCHED) is shown with a banner whenever a source is not OK (today DGIdb STALE_EXPORT and DSLD PARTIAL); a section lists the catalogue-derived leads and lead dispositions (`coverage/lead_dispositions.json`) with links to cards and records. All of it is read generically from the JSON.
+
 Sections: funnel with explicit units (records, families, pairs, interventions; "evaluated against
 WWOX" has its own definition), access categories with the unknown share and scope note, needs panel,
 matrix (four levels side by side, never summed), priorities with the seven distinct dispositions and
