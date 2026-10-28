@@ -1,0 +1,4439 @@
+{
+ "schema": "legend.wwox.needs/1",
+ "title": "Biological needs supported by the WWOX record, for the repurposing module",
+ "status": "Non-canonical research material. A need is a place where the record observed something and a pharmacological or other intervention could be aimed. It is not a hypothesis, a ranking, a claim of benefit or medical advice. Nothing here changes the four scientific current files.",
+ "built_on": "2026-10-27",
+ "vocabularies": {
+  "track": {
+   "A": "variant-independent (acts whatever the WWOX allele)",
+   "B": "variant- or lesion-specific (an allele class, a splice site, a stop codon)"
+  },
+  "goal": {
+   "deep_recovery": "aims to restore the lost WWOX function itself",
+   "partial_benefit": "aims at a concrete partial benefit, symptom control or protection of function"
+  },
+  "track_and_goal_note": "The two fields are independent: gene addition is Track A with goal deep_recovery; a splice correction is Track B with goal deep_recovery; an ISR lever is Track A with goal partial_benefit.",
+  "evidence_scope": {
+   "WWOX_EXPERIMENT_IN_DEE_SYSTEM": "measured in a WWOX-deficient system that models the disease (the bridge's definition): patient case, patient-derived or engineered knockout cells, organoids, mouse animals. The model_type field of each observation says which; model_type human_clinical_report marks an uncontrolled case or series",
+   "WWOX_BIOLOGY_OTHER_CONTEXT": "WWOX studied in another context (fly amyloid model, non-neural cell line, cancer, other allele)",
+   "OTHER_DISEASE_PRECEDENT": "a precedent from another disease (never WWOX evidence)",
+   "COMPUTATIONAL_RESULT": "an analysis of deposited data or a prediction made inside this repository (transcript, not flux; exploratory)",
+   "UNVERIFIED_HYPOTHESIS": "no observation: a premise or a placeholder (the bridge's UNQUALIFIED is the nearest label; the other five values are the bridge's own EVIDENCE_SCOPES)"
+  },
+  "direction": {
+   "up": "raise the target level or activity",
+   "down": "lower it",
+   "restore": "return a lost function or level toward normal",
+   "modulate": "adjust without a stated sign",
+   "uncertain": "a direction is proposed in the record but its sign is unresolved or context-dependent"
+  },
+  "certainty": "free text beginning with one of: supported_in_WWOX_mouse_model, supported_as_clinical_report_only, inferred, context_dependent, unknown (a trailing clause may qualify it)",
+  "readout_level": [
+   "transcript",
+   "protein",
+   "phospho",
+   "activity",
+   "flux",
+   "functional",
+   "clinical",
+   "computational",
+   "none"
+  ],
+  "locator_status": {
+   "MANIFEST": "points at an entry of a deepdive manifest; the checker verifies the entry exists and that the anchor text occurs in it",
+   "DOCUMENT": "points at a repository document by path; the checker verifies the file exists",
+   "REGISTRY_ONLY": "names registry record ids only; the checker verifies the ids resolve",
+   "GAP": "no locator exists; the gap is explicit"
+  },
+  "coverage.status": [
+   "NOT_ASSESSED",
+   "COVERED",
+   "PARTIALLY_COVERED",
+   "UNCOVERED"
+  ],
+  "target_kind": {
+   "intervention_target": "a protein a drug or modality named in the record would act on (class-level where no compound is named)",
+   "pathway_member": "a pathway member or substrate that explains the mechanism but is not itself the proposed point of action",
+   "readout_marker": "a marker or differentially expressed gene used as a readout; being differentially expressed does not make it a therapeutic target",
+   "disease_gene_product": "the WWOX gene or its product, the lesion itself",
+   "effector_constraint": "a gene whose manipulation the record argues against (e.g. Tau is the effector of the benefit)",
+   "identity_guard": "listed to prevent a symbol or naming confusion, not as a target"
+  },
+  "basis": {
+   "observed": "at least one observation is a WWOX measurement (in a DEE-relevant system or in another context)",
+   "exploratory_question": "no WWOX measurement: only a premise, a placeholder or a repository-computed result; read as a question to measure, not as a need with evidence"
+  }
+ },
+ "reading_rules": [
+  "An observation is what a source measured; INFERRED lists what the record does not measure.",
+  "Association is not modulation, and modulation is not rescue. A readout level (transcript, protein, phospho, activity, flux) is stated per observation and never promoted.",
+  "intervention_direction never assumes that reversing an observed change is beneficial. certainty and do_not_assume say so.",
+  "A need with only UNVERIFIED_HYPOTHESIS or COMPUTATIONAL_RESULT scope is a question, not an established need; scope is carried so a consumer can filter.",
+  "Hypothesis ids are references. Status and ranking live in the hypothesis ledger only."
+ ],
+ "provenance": {
+  "built_from": [
+   "disease-models/wwox/research/drug_repurposing/cards/*.card.json",
+   "disease-models/wwox/research/drug_repurposing/cards_early/*.card.json",
+   "disease-models/wwox/research/drug_repurposing/join/cards.json and join/queries.json",
+   "disease-models/wwox/research/therapeutic_hypotheses_ledger_current.md",
+   "disease-models/wwox/analysis/mechanism_intervention_map.md",
+   "disease-models/wwox/registries/working_model_current.md (via framework/scripts/registry_records.py)",
+   "disease-models/wwox/research/drug_repurposing/w2_therapeutic_it2_20261027/",
+   "disease-models/wwox/research/drug_repurposing/gse156243/",
+   "disease-models/wwox/research/drug_repurposing/early_benefit_map_records_candidate_20261023.md",
+   "disease-models/wwox/research/drug_repurposing/typed_assertions_20261023.tsv",
+   "disease-models/wwox/research/deepdive_manifests/PMID*.json (verbatim locators)"
+  ],
+  "no_new_reading": "No paper was newly read for this table. Each observation is carried from a card, a manifest entry, a registry record or a repository analysis, and says which.",
+  "hgnc_snapshot": {
+   "file": "hgnc_complete_set_20261022.json, present on the authoring host under the untracked shared files tree (not in git)",
+   "sha256": "72bfe0c05800163c040a2cf663c70501f9ac9236469fbd0b552f2cd37a4d7f67",
+   "use": "Symbol approval, HGNC ids and the alias or previous-symbol collisions recorded under targets were taken from it. The file is not in git, so these fields cannot be re-derived from a clean clone."
+  },
+  "pathway_ids": "Gene Ontology identifiers; each id and label was looked up against the EBI QuickGO term service on 2026-10-28 (key-less, read-only). GO:0030433, first entered, is obsolete and was replaced by GO:0036503. A pathway id is a search hint for the term, not a statement that WWOX acts in that process."
+ },
+ "needs": [
+  {
+   "id": "NEED-WWOX-GENE-ADDITION",
+   "label": "Restore WWOX protein in neurons by gene addition (AAV-type vector)",
+   "family": "WWOX restoration",
+   "track": {
+    "value": "A",
+    "basis": "Gene addition is lesion-independent: it supplies a working copy whatever the allele (map CHAIN A: 'genotype-agnostic'). Track A is stated on that ground, not on the depth of the aim."
+   },
+   "goal": {
+    "value": "deep_recovery",
+    "basis": "Aims to restore the lost function itself (survival, growth, glycaemia, behaviour, myelin, gliosis and spike-wave discharges were measured as endpoints in the Wwox-null mouse)."
+   },
+   "observed": [
+    {
+     "id": "O1",
+     "statement": "Neonatal intracerebroventricular neuron-promoter AAV9-WWOX in the Wwox-null mouse: the high-dose arm reaches a survival plateau of about 76-77 percent to day 300 (wild-type control arm itself ends near 71-72 percent), the low-dose arm falls to 0 percent by about day 77; low dose is nonetheless better than untreated knockout.",
+     "model_type": "mouse_constitutive_knockout",
+     "species": "mouse",
+     "genotype": "constitutive Wwox deletion (FVB), treated versus untreated knockout and wild type",
+     "tissue_or_cells": "whole animal",
+     "age_stage": "neonatal injection (efficacious window stated as P0 to P5), follow-up to day 300",
+     "comparison": "high-dose versus low-dose versus untreated knockout versus wild type",
+     "readout": "Kaplan-Meier survival",
+     "readout_level": "functional",
+     "direction_observed": "improved by treatment (threshold-like, not graded)",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "limits": "Two doses only; a step and a steep continuum are indistinguishable; the dose unit convention is not declared by the source; observations at P300 are survivor-selected.",
+     "pmid": "42422765",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json",
+       "entry": 40,
+       "anchor": "low-dose arm"
+      },
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json",
+       "entry": 46,
+       "anchor": "high dose is not distinguishable from wild type"
+      }
+     ],
+     "locator_status": "MANIFEST"
+    },
+    {
+     "id": "O2",
+     "statement": "The same study: high-dose spike-wave discharges per hour fall from about 0.635 (knockout) to about 0.13 (treated), not different from wild type (about 0.03); no low-dose arm exists for this endpoint.",
+     "model_type": "mouse_constitutive_knockout",
+     "species": "mouse",
+     "genotype": "constitutive Wwox deletion (FVB)",
+     "tissue_or_cells": "cortical electrocorticography, single epidural channel",
+     "age_stage": "about two to three weeks after birth, 7 days of recording",
+     "comparison": "treated high dose versus untreated knockout versus wild type (n 5 per group)",
+     "readout": "spike-wave discharges per hour",
+     "readout_level": "functional",
+     "direction_observed": "decreased by treatment",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "limits": "High dose only; n 5; panel read at 400 dpi.",
+     "pmid": "42422765",
+     "locators": [
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/woree_rescue_reference_scaffold.md",
+       "anchor": "section 2.1, row E1"
+      }
+     ],
+     "locator_status": "DOCUMENT"
+    },
+    {
+     "id": "O3",
+     "statement": "Neuron-specific (Synapsin-Cre) deletion reproduces the phenotype, myelin deficit included, whereas oligodendrocyte-specific and astrocyte-specific deletions show no evident anomaly; the myelin deficit is about 3.3 times fewer myelinated axons in the corpus callosum at P17 (authors' own counts).",
+     "model_type": "mouse_neuron_specific_knockout",
+     "species": "mouse",
+     "genotype": "Synapsin-Cre Wwox deletion versus oligodendrocyte (Olig2-Cre) and astrocyte (GFAP-Cre) deletions",
+     "tissue_or_cells": "corpus callosum, optic nerve",
+     "age_stage": "P17",
+     "comparison": "neuronal deletion versus control",
+     "readout": "myelinated axon counts (electron microscopy)",
+     "readout_level": "functional",
+     "direction_observed": "decreased",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "limits": "Powered at the axon/field level, three mice per genotype; the oligodendrocyte and astrocyte result is a flat negative that the paper turns into its central inference.",
+     "pmid": "33914858",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID33914858.json",
+       "entry": 0,
+       "anchor": "myelinated axons"
+      },
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID33914858.json",
+       "entry": 29,
+       "anchor": "flat negative"
+      }
+     ],
+     "locator_status": "MANIFEST"
+    }
+   ],
+   "inferred": [
+    "That gene addition would act in humans at the stage a patient is treated (the efficacious window in mouse is perinatal, and the stated reason is model survival).",
+    "That the survival threshold has a lower safe dose than the high-dose arm; the figure refuses linear interpolation, and no expression difference was measured between the two doses in seven of eight regional comparisons (entry 12).",
+    "Partial restoration may suffice in genotype classes that retain a missense allele (inference from a human genotype-phenotype series; not tested)."
+   ],
+   "intervention_direction": {
+    "direction": "restore",
+    "on": "WWOX protein level in neurons",
+    "rationale": "Neuron-restricted loss reproduces the phenotype and neuron-restricted restoration rescued several endpoints in the Wwox-null mouse.",
+    "certainty": "supported_in_WWOX_mouse_model",
+    "do_not_assume": "No ceiling is measured. Ectopic WWOX moved some readouts beyond wild type in organoids, and applied recombinant WWOX lowered viability of human ESC-derived cortical neurons in disease and isogenic control lines (preprint). More is not safer."
+   },
+   "counter_evidence": [
+    "Rescue is not normalisation: unmyelinated axons per field remain about 52 versus about 26 in wild type; motor coordination exceeds wild type on one panel (map CHAIN A, CLAIM 004, CLAIM 011).",
+    "The neuron-promoter vector corrected neuronal function without correcting radial-glia abnormalities (organoid arm), and layer-marker SATB2 mRNA overshoots wild type up to about eleven-fold in treated organoids.",
+    "Survival is a threshold between two doses; no intermediate dose was run; low dose does not reach the plateau.",
+    "The post-natal window is untested in the source; progenitor/radial-glia defects are largely prenatal (CLAIM 014)."
+   ],
+   "sources": {
+    "cards": [
+     "C01_aav9_wwox",
+     "C04_aav9_endpoint_families"
+    ],
+    "hypotheses": [
+     "HYP-20261025-09"
+    ],
+    "hypotheses_note": "HYP-20261025-09 is referenced only for its gene-therapy signal (Wnt effectors overshoot under rescue); there is no hypothesis whose subject is gene addition.",
+    "map_records": [
+     "CHAIN A",
+     "R-01",
+     "M1"
+    ],
+    "documents": [],
+    "registry_ids": [
+     "CLAIM 003",
+     "CLAIM 004",
+     "CLAIM 011",
+     "CLAIM 032"
+    ],
+    "papers": [
+     {
+      "pmid": "42422765",
+      "paper_registry_ids": [
+       "PAPER 011"
+      ]
+     },
+     {
+      "pmid": "33914858",
+      "paper_registry_ids": [
+       "CORPUS-STUB-087",
+       "PAPER 004"
+      ]
+     },
+     {
+      "pmid": "34747138",
+      "paper_registry_ids": [
+       "CORPUS-STUB-048",
+       "PAPER 005"
+      ]
+     },
+     {
+      "pmid": "42397075",
+      "paper_registry_ids": [
+       "PAPER 094"
+      ]
+     },
+     {
+      "pmid": "40875931",
+      "paper_registry_ids": [
+       "PAPER 014"
+      ]
+     }
+    ]
+   },
+   "targets": [
+    {
+     "symbol": "WWOX",
+     "role": "gene to be restored (cDNA payload)",
+     "hgnc_id": "HGNC:12799",
+     "hgnc_name": "WW domain containing oxidoreductase",
+     "target_kind": "disease_gene_product"
+    }
+   ],
+   "pathways": [],
+   "evidence_scope": [
+    "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
+   ],
+   "coverage": {
+    "status": "NOT_ASSESSED",
+    "note": "Coverage of this need by catalogue compounds is not computed here; the repurposing module sets it."
+   },
+   "notes": "Gene addition is a modality, not a repurposing-catalogue compound class; kept as a need so that restoration-level comparators exist for every downstream need.",
+   "basis": "observed"
+  },
+  {
+   "id": "NEED-WWOX-SPLICE-CORRECTION",
+   "label": "Restore correct WWOX transcript from a canonical splice-acceptor allele (splice-switching, editing)",
+   "family": "WWOX restoration",
+   "track": {
+    "value": "B",
+    "basis": "Allele-class specific: the lesion is a canonical splice-acceptor variant; the strategy only applies to that class."
+   },
+   "goal": {
+    "value": "deep_recovery",
+    "basis": "Would restore the transcript and so the protein."
+   },
+   "observed": [
+    {
+     "id": "O1",
+     "statement": "Human blood cDNA across exon 6: the c.517-2A>G homozygote yields only the shorter product (504 bp, interpreted as an 89 bp exon-6 deletion); patients of another genotype class in the same source show two products (593 and 504 bp). Products were sequenced per the Methods.",
+     "model_type": "human_patient_derived_cells",
+     "species": "human",
+     "genotype": "c.517-2A>G, homozygous patients; other genotype classes in the same source",
+     "tissue_or_cells": "blood-derived cDNA (not neural tissue)",
+     "age_stage": "UNKNOWN",
+     "comparison": "patient genotype classes against each other",
+     "readout": "RT-PCR product size across exon 6",
+     "readout_level": "transcript",
+     "direction_observed": "exon skipping",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "limits": "Blood, not brain; the Results frame the shorter product as consistent with prediction, not as a displayed junction read; a different acceptor allele from the c.1057-2A>G worked example.",
+     "pmid": "30853297",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID30853297.json",
+       "entry": 1,
+       "anchor": "504 bp product"
+      }
+     ],
+     "locator_status": "MANIFEST"
+    },
+    {
+     "id": "O2",
+     "statement": "For the c.1057-2A>G reference-class worked example the record holds a sequence-based prediction only (SpliceAI 0.96; MaxEntScan 7.28 to -0.67; cryptic acceptor gain at +8); no transcript measurement of this allele exists in the record.",
+     "model_type": "not_applicable",
+     "species": "human",
+     "genotype": "c.1057-2A>G (decoupled worked example)",
+     "tissue_or_cells": "in silico",
+     "age_stage": "not applicable",
+     "comparison": "prediction against reference sequence",
+     "readout": "splice-site strength scores",
+     "readout_level": "computational",
+     "direction_observed": "acceptor abolished (predicted)",
+     "evidence_scope": "COMPUTATIONAL_RESULT",
+     "limits": "A prediction, not a measurement; transcript of this allele unmeasured (see the splice-allele RNA note).",
+     "pmid": null,
+     "locators": [
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/analysis/splice_allele_rna_evidence_20260922.md",
+       "anchor": "whole note"
+      },
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/analysis/variant_triage_rescuability.md",
+       "anchor": "mechanism to lever note"
+      },
+      {
+       "kind": "registry",
+       "ids": [
+        "CLAIM 018"
+       ]
+      }
+     ],
+     "locator_status": "DOCUMENT"
+    }
+   ],
+   "inferred": [
+    "That the reference acceptor allele is null-like at transcript level (no wild-type transcript) is a prediction-based inference.",
+    "Which exon-skipped product is made, whether it escapes nonsense-mediated decay, and whether it is translated, is unmeasured for the reference allele."
+   ],
+   "intervention_direction": {
+    "direction": "restore",
+    "on": "aberrant-to-normal transcript ratio for the acceptor allele",
+    "rationale": "A null-like splice allele predicts that normal splicing restores function; the direction is not in doubt, the feasibility is.",
+    "certainty": "inferred",
+    "do_not_assume": "Splice-switching oligonucleotides mask elements and do not create splice sites; expert guidance classifies variants within 5 bp of the boundary or with destroyed canonical splicing as not eligible (map N-10). Base or prime editing is the open arm and is gene editing, not repurposing."
+   },
+   "counter_evidence": [
+    "N-10: positional rule (within 5 bp of the boundary) places a -2 acceptor allele out of scope for splice correction regardless of a transcript test.",
+    "Exon 9 is the last exon and carries the stop codon and the last residues of the SDR domain; in-frame skipping is not available."
+   ],
+   "sources": {
+    "cards": [
+     "C02_splice_aso"
+    ],
+    "hypotheses": [
+     "HYP-20260709-06"
+    ],
+    "hypotheses_note": "HYP-20260709-06 is the exon-9 inclusion assay (biomarker and ASO endpoint); referenced by id only.",
+    "map_records": [
+     "CHAIN G",
+     "R-08",
+     "N-10",
+     "M8"
+    ],
+    "documents": [],
+    "registry_ids": [
+     "CLAIM 018",
+     "DL-MOL-011"
+    ],
+    "papers": [
+     {
+      "pmid": "30853297",
+      "paper_registry_ids": [
+       "PAPER 025"
+      ]
+     }
+    ]
+   },
+   "targets": [
+    {
+     "symbol": "WWOX",
+     "role": "pre-mRNA / transcript target (exon 6 and exon 9 as named in the map)",
+     "hgnc_id": "HGNC:12799",
+     "hgnc_name": "WW domain containing oxidoreductase",
+     "target_kind": "disease_gene_product"
+    }
+   ],
+   "pathways": [
+    {
+     "id": "GO:0008380",
+     "label": "RNA splicing"
+    }
+   ],
+   "evidence_scope": [
+    "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+    "COMPUTATIONAL_RESULT"
+   ],
+   "coverage": {
+    "status": "NOT_ASSESSED",
+    "note": "Coverage of this need by catalogue compounds is not computed here; the repurposing module sets it."
+   },
+   "notes": "Oligonucleotide and editing modalities are outside a small-molecule repurposing catalogue; the need is kept so that a transcript-level comparator exists.",
+   "basis": "observed"
+  },
+  {
+   "id": "NEED-WWOX-PTC-READTHROUGH",
+   "label": "Read-through of a premature stop codon in a WWOX nonsense allele",
+   "family": "WWOX restoration",
+   "track": {
+    "value": "B",
+    "basis": "Allele-class specific: only applies to alleles with a premature stop codon."
+   },
+   "goal": {
+    "value": "deep_recovery",
+    "basis": "Would restore full-length protein from the affected allele."
+   },
+   "observed": [
+    {
+     "id": "O1",
+     "statement": "No WWOX measurement exists: no read-through experiment, and no enumeration of nonsense alleles, in the record. The reference genotype class (destabilising SDR missense plus canonical splice-acceptor allele) carries no premature stop in the stated analysis.",
+     "model_type": "not_applicable",
+     "species": "UNKNOWN",
+     "genotype": "UNKNOWN",
+     "tissue_or_cells": "UNKNOWN",
+     "age_stage": "UNKNOWN",
+     "comparison": "not applicable",
+     "readout": "not applicable",
+     "readout_level": "none",
+     "direction_observed": "not observed",
+     "evidence_scope": "UNVERIFIED_HYPOTHESIS",
+     "limits": "Placeholder need: kept explicit so that the gap is a recorded gap and not a silence.",
+     "pmid": null,
+     "locators": [
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/w2_therapeutic_it2_20261027/README.md",
+       "anchor": "section 1, 'Readthrough' row"
+      },
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/cards/B02_readthrough_class.card.json",
+       "anchor": "disease_assertion DA-PTC-001"
+      }
+     ],
+     "locator_status": "DOCUMENT"
+    }
+   ],
+   "inferred": [
+    "Whether any WWOX-DEE patient allele class is read-through-amenable is not established by anything in the record."
+   ],
+   "intervention_direction": {
+    "direction": "restore",
+    "on": "full-length WWOX protein from a premature-stop allele",
+    "rationale": "Conditional: only if such an allele is present; nothing observed.",
+    "certainty": "unknown",
+    "do_not_assume": "A candidate (amlexanox) was qualified and not promoted; no repurposing claim follows."
+   },
+   "counter_evidence": [
+    "No WWOX read-through datum exists in either direction."
+   ],
+   "sources": {
+    "cards": [
+     "B01_amlexanox",
+     "B02_readthrough_class"
+    ],
+    "hypotheses": [],
+    "hypotheses_note": "No hypothesis in the ledger has read-through as its subject.",
+    "map_records": [],
+    "documents": [],
+    "registry_ids": [],
+    "papers": []
+   },
+   "targets": [
+    {
+     "symbol": "WWOX",
+     "role": "nonsense-allele product",
+     "hgnc_id": "HGNC:12799",
+     "hgnc_name": "WW domain containing oxidoreductase",
+     "target_kind": "disease_gene_product"
+    }
+   ],
+   "pathways": [
+    {
+     "id": "GO:0006412",
+     "label": "translation"
+    }
+   ],
+   "evidence_scope": [
+    "UNVERIFIED_HYPOTHESIS"
+   ],
+   "coverage": {
+    "status": "NOT_ASSESSED",
+    "note": "Coverage of this need by catalogue compounds is not computed here; the repurposing module sets it."
+   },
+   "notes": "NO_LOCATOR: there is no source observation to locate. Status in the catalogue should be read as 'open question', not 'need with evidence'.",
+   "basis": "exploratory_question"
+  },
+  {
+   "id": "NEED-WWOX-MISSENSE-PROTEIN-RESCUE",
+   "label": "Rescue a destabilised SDR-domain missense WWOX protein (folding, quality control, degradation)",
+   "family": "WWOX restoration",
+   "track": {
+    "value": "B",
+    "basis": "Lesion-specific: concerns an SDR missense allele class (p.Gln230Pro is the worked example); a null or splice allele has no protein to rescue."
+   },
+   "goal": {
+    "value": "deep_recovery",
+    "basis": "Aims to return functional WWOX from the mutant allele."
+   },
+   "observed": [
+    {
+     "id": "O1",
+     "statement": "Patient-derived fibroblast line homozygous for p.Gln230Pro: WWOX transcript is comparable to reference lines, but no WWOX band is detected on one western membrane at one exposure (confirmed on a second harvest of the same line).",
+     "model_type": "human_patient_derived_cells",
+     "species": "human",
+     "genotype": "p.Gln230Pro homozygous",
+     "tissue_or_cells": "fibroblast line from one donor",
+     "age_stage": "UNKNOWN",
+     "comparison": "patient line against three non-fibroblast reference lines (two cancer lines, HEK293); no control fibroblast",
+     "readout": "WWOX protein (western blot) and transcript (qRT-PCR)",
+     "readout_level": "protein",
+     "direction_observed": "protein not detected; transcript comparable",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "limits": "One donor line, one membrane, one exposure, no error bars; lysate fraction not separated; the cause (synthesis, solubility or turnover) is unresolved.",
+     "pmid": "29808465",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID29808465.json",
+       "entry": 6,
+       "anchor": "no band in three knockout clones and in the patient fibroblast lane"
+      },
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID29808465.json",
+       "entry": 7,
+       "anchor": "second harvest"
+      }
+     ],
+     "locator_status": "MANIFEST"
+    },
+    {
+     "id": "O2",
+     "statement": "A different SDR missense (P252A) shows loss that is lysosome-sensitive and proteasome-inhibitor-insensitive in non-neural cells, with HSC70 co-immunoprecipitation; abundance and function are confounded, and a proband homozygous for both missense alleles had no WWOX-related neurological disease.",
+     "model_type": "cell_line",
+     "species": "human",
+     "genotype": "P252A variant constructs",
+     "tissue_or_cells": "non-neural cell lines",
+     "age_stage": "not applicable",
+     "comparison": "variant against wild type",
+     "readout": "protein abundance under inhibitors; co-immunoprecipitation",
+     "readout_level": "protein",
+     "direction_observed": "decreased abundance (P252A)",
+     "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT",
+     "limits": "Another allele; non-neural; chaperone-mediated autophagy is the authors' speculation.",
+     "pmid": "41124647",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID41124647.json",
+       "entry": 2,
+       "anchor": "abundance and function are confounded"
+      },
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID41124647.json",
+       "entry": 1,
+       "anchor": "authors' speculation"
+      },
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID41124647.json",
+       "entry": 0,
+       "anchor": "had no wwox-related neurological disease"
+      },
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/cards/A05_hsp70_axis.card.json",
+       "anchor": "p4_card.novelty_for_woree: repository reading of the HSC70 co-immunoprecipitation and the lysosome/proteasome sensitivity (the manifest entries cited do not carry those two details)"
+      }
+     ],
+     "locator_status": "MANIFEST"
+    }
+   ],
+   "inferred": [
+    "That the Q230P lesion is a degradation problem rather than a synthesis or solubility problem is not known; every proteostasis route below inherits that.",
+    "That raising abundance raises function: severity tracks residual function, not abundance (CLAIM 030), and 'stable but inert' is a demonstrated phenotype for some variants."
+   ],
+   "intervention_direction": {
+    "direction": "up",
+    "on": "functional (not merely detectable) mutant WWOX protein",
+    "rationale": "The protein is absent while the transcript is present; stabilising it is the only route that restores the product.",
+    "certainty": "inferred",
+    "do_not_assume": "Direction is conditional on the unresolved bottleneck. Chemical chaperones were judged to act in the wrong compartment (map N-11); HSP70 co-induction carries a hypothesis of harm (N-12); proteasome inhibition is a probe-derived rescue idea that also stabilises misfolded protein. ER/UPR modulators have no stated target because WWOX is a cytosolic enzyme and no measurement places the variant in ER quality control."
+   },
+   "counter_evidence": [
+    "Q230P is not P47T and not P252A; no read-across between missense alleles (MECHANISM_TRANSFER_FIREWALL).",
+    "Abundance restored without function would be neutral at best (CLAIM 030).",
+    "N-11: 4-phenylbutyrate/TUDCA act on an ER-chaperone rationale and WWOX is cytosolic. N-12: HSP70 co-induction could stabilise an insoluble protein (adjacent-protein precedent: stabilisation gave insoluble protein without activity)."
+   ],
+   "sources": {
+    "cards": [
+     "A01_pba_class",
+     "A02_proteasome_inhibitor_class",
+     "A03_client_binding_chaperone",
+     "A04_er_proteostasis_regulators",
+     "A05_hsp70_axis"
+    ],
+    "hypotheses": [
+     "HYP-20260709-08"
+    ],
+    "hypotheses_note": "HYP-20260709-08 holds the missense-allele rescue question (history and repair sections are dated; use the repair 2026-07-14 as the current reading).",
+    "map_records": [
+     "CHAIN F",
+     "R-09",
+     "N-11",
+     "N-12",
+     "M7"
+    ],
+    "documents": [
+     "disease-models/wwox/research/drug_repurposing/typed_assertions_20261023.tsv"
+    ],
+    "registry_ids": [
+     "CLAIM 019",
+     "CLAIM 030",
+     "DIS-004"
+    ],
+    "papers": [
+     {
+      "pmid": "29808465",
+      "paper_registry_ids": [
+       "CORPUS P383",
+       "PAPER 041"
+      ]
+     },
+     {
+      "pmid": "41124647",
+      "paper_registry_ids": [
+       "CORPUS P348"
+      ]
+     }
+    ]
+   },
+   "targets": [
+    {
+     "symbol": "WWOX",
+     "role": "mutant protein",
+     "hgnc_id": "HGNC:12799",
+     "hgnc_name": "WW domain containing oxidoreductase",
+     "target_kind": "disease_gene_product"
+    },
+    {
+     "symbol": "HSPA8",
+     "role": "HSC70, the chaperone co-immunoprecipitated with P252A",
+     "hgnc_id": "HGNC:5241",
+     "hgnc_name": "heat shock protein family A (Hsp70) member 8",
+     "target_kind": "pathway_member"
+    },
+    {
+     "symbol": "HSPA1A",
+     "role": "HSP70 (inducible) family member; HSP70 is a family, see HSPA1B",
+     "family_note": "HSP70 is a gene family; the symbol names one member.",
+     "hgnc_id": "HGNC:5232",
+     "hgnc_name": "heat shock protein family A (Hsp70) member 1A",
+     "target_kind": "pathway_member"
+    },
+    {
+     "symbol": "HSPA1B",
+     "role": "HSP70 (inducible) family member",
+     "hgnc_id": "HGNC:5233",
+     "hgnc_name": "heat shock protein family A (Hsp70) member 1B",
+     "target_kind": "pathway_member"
+    },
+    {
+     "symbol": "XBP1",
+     "role": "UPR arm named by the ER-proteostasis card (no WWOX target stated)",
+     "hgnc_id": "HGNC:12801",
+     "hgnc_name": "X-box binding protein 1",
+     "also_alias_or_previous_symbol_of": [
+      "XBP1P1 (prev_symbol)"
+     ],
+     "target_kind": "pathway_member"
+    },
+    {
+     "symbol": "ERN1",
+     "role": "IRE1, UPR sensor (same caveat)",
+     "hgnc_id": "HGNC:3449",
+     "hgnc_name": "endoplasmic reticulum to nucleus signaling 1",
+     "target_kind": "pathway_member"
+    }
+   ],
+   "pathways": [
+    {
+     "id": "GO:0006457",
+     "label": "protein folding"
+    },
+    {
+     "id": "GO:0036503",
+     "label": "ERAD quality control pathway"
+    }
+   ],
+   "evidence_scope": [
+    "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+    "WWOX_BIOLOGY_OTHER_CONTEXT",
+    "OTHER_DISEASE_PRECEDENT"
+   ],
+   "coverage": {
+    "status": "NOT_ASSESSED",
+    "note": "Coverage of this need by catalogue compounds is not computed here; the repurposing module sets it."
+   },
+   "notes": "The adjacent-disease precedents behind cards A01-A05 (other SLC6A1/GABRA1/ASPA variants, ISR-independent proteostasis work) are NOT WWOX EVIDENCE and sit only in the cards.",
+   "basis": "observed"
+  },
+  {
+   "id": "NEED-WWOX-ENDOGENOUS-BOOST",
+   "label": "Raise endogenous WWOX expression (CRISPRa, anti-miR, small-molecule activators)",
+   "family": "WWOX restoration",
+   "track": {
+    "value": "B",
+    "basis": "Which lesion is treated decides whether this can work. With a null or splice-null allele there is little template to raise. With a missense allele whose protein is not made despite normal transcript (Q230P in the one measured line) the bottleneck is downstream of transcription and a boost could amplify a non-functional product. Only an allele that yields residual functional protein is a plausible substrate. The effect is allele-dependent, so Track B; it is not variant-independent."
+   },
+   "goal": {
+    "value": "deep_recovery",
+    "basis": "Aims to raise functional WWOX."
+   },
+   "observed": [
+    {
+     "id": "O1",
+     "statement": "Neuronal CRISPRa Wwox upregulation in the Drosophila amyloid model improved lifespan (median 47.5 versus 29 days) and climbing, and had no significant effect without amyloid.",
+     "model_type": "drosophila_rnai_amyloid_model",
+     "species": "Drosophila melanogaster",
+     "genotype": "neuronal CRISPRa Wwox with neuronal Abeta42 versus Abeta42 alone",
+     "tissue_or_cells": "neurons (whole fly, adult)",
+     "age_stage": "adult, days 14-28",
+     "comparison": "upregulation against control with and without Abeta42",
+     "readout": "lifespan, climbing",
+     "readout_level": "functional",
+     "direction_observed": "improved (amyloid background only)",
+     "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT",
+     "limits": "A fly Alzheimer's-amyloid model, not WWOX-DEE; wild-type Wwox allele; benefit occurred without a reduction in Ldh or 2-hydroxyglutarate.",
+     "pmid": "42909904",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+       "entry": 72,
+       "anchor": "improved lifespan"
+      },
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+       "entry": 71,
+       "anchor": "no significant effect on survival"
+      },
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+       "entry": 82,
+       "anchor": "without a reduction in ldh"
+      }
+     ],
+     "locator_status": "MANIFEST"
+    },
+    {
+     "id": "O2",
+     "statement": "In the one measured Q230P system (fibroblast line) the transcript is present and the protein is not detected: the bottleneck is downstream of transcription.",
+     "model_type": "human_patient_derived_cells",
+     "species": "human",
+     "genotype": "p.Gln230Pro homozygous",
+     "tissue_or_cells": "fibroblast line from one donor",
+     "age_stage": "UNKNOWN",
+     "comparison": "patient line against reference lines",
+     "readout": "WWOX protein and transcript",
+     "readout_level": "protein",
+     "direction_observed": "protein not detected; transcript comparable",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "limits": "One donor line; see NEED-WWOX-MISSENSE-PROTEIN-RESCUE.",
+     "pmid": "29808465",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID29808465.json",
+       "entry": 6,
+       "anchor": "patient fibroblast lane"
+      }
+     ],
+     "locator_status": "MANIFEST"
+    }
+   ],
+   "inferred": [
+    "That a non-allele-specific boost would amplify the missense allele and push more aberrant transcript toward nonsense-mediated decay on the splice allele is inferred (map N-05)."
+   ],
+   "intervention_direction": {
+    "direction": "up",
+    "on": "WWOX transcript/protein from a functional allele",
+    "rationale": "Only where a functional or partly functional allele exists.",
+    "certainty": "context_dependent",
+    "do_not_assume": "Neither too little nor too much WWOX: WWOX is pro-apoptotic in some contexts, and the record carries no ceiling measurement."
+   },
+   "counter_evidence": [
+    "N-05: the target is not the bottleneck for Q230P; a boost is an allele-asymmetric amplifier.",
+    "Fly benefit does not transfer to DEE or to a mammalian allele."
+   ],
+   "sources": {
+    "cards": [
+     "C03_crispra_boost"
+    ],
+    "hypotheses": [
+     "HYP-20260709-02",
+     "HYP-20260709-03"
+    ],
+    "hypotheses_note": "HYP-20260709-02 (boost alone has an uncertain sign) and -03 (anti-miR-153) are referenced by id.",
+    "map_records": [
+     "N-05"
+    ],
+    "documents": [],
+    "registry_ids": [
+     "CLAIM 019",
+     "DL-MOL-004",
+     "DL-MECH-069"
+    ],
+    "papers": [
+     {
+      "pmid": "42909904",
+      "paper_registry_ids": [
+       "PAPER 567"
+      ]
+     },
+     {
+      "pmid": "29808465",
+      "paper_registry_ids": [
+       "CORPUS P383",
+       "PAPER 041"
+      ]
+     }
+    ]
+   },
+   "targets": [
+    {
+     "symbol": "WWOX",
+     "role": "gene to be upregulated",
+     "hgnc_id": "HGNC:12799",
+     "hgnc_name": "WW domain containing oxidoreductase",
+     "target_kind": "disease_gene_product"
+    }
+   ],
+   "pathways": [],
+   "evidence_scope": [
+    "WWOX_BIOLOGY_OTHER_CONTEXT",
+    "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
+   ],
+   "coverage": {
+    "status": "NOT_ASSESSED",
+    "note": "Coverage of this need by catalogue compounds is not computed here; the repurposing module sets it."
+   },
+   "notes": "Allele-dependent need; do not list under Track A on the ground that the aim is restoration.",
+   "basis": "observed"
+  },
+  {
+   "id": "NEED-ISR-ATTENUATION",
+   "label": "Integrated stress response (eIF2alpha-ATF4) activity: attenuate a possible over-activation",
+   "family": "Stress signalling and metabolism",
+   "track": {
+    "value": "A",
+    "basis": "Downstream and allele-blind; Track B (Q230P class) is unmeasured."
+   },
+   "goal": {
+    "value": "partial_benefit",
+    "basis": "A downstream lever cannot restore WWOX function; deep recovery stays with WWOX restoration."
+   },
+   "observed": [
+    {
+     "id": "O1",
+     "statement": "Neuronal Wwox knockdown raises Atf4 immunofluorescence (about 1.0 to about 1.28, six brains per group) only in the presence of neuronal Abeta42; without amyloid there is no change.",
+     "model_type": "drosophila_rnai_amyloid_model",
+     "species": "Drosophila melanogaster",
+     "genotype": "neuronal Wwox RNAi plus neuronal Abeta42 versus control RNAi plus Abeta42; LacZ background for the no-amyloid contrast",
+     "tissue_or_cells": "adult fly brain, four small regions of interest",
+     "age_stage": "adult, day 14",
+     "comparison": "knockdown against control, with and without Abeta42",
+     "readout": "Atf4 protein signal (one antibody)",
+     "readout_level": "protein",
+     "direction_observed": "up (amyloid background only)",
+     "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT",
+     "limits": "Not WWOX-DEE evidence; n 6; y axis not at zero; Atf4 is never perturbed in the paper; PERK and eIF2alpha phosphorylation are not measured.",
+     "pmid": "42909904",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+       "entry": 57,
+       "anchor": "atf4 immunostaining rose"
+      },
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+       "entry": 58,
+       "anchor": "no atf4 increase"
+      },
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+       "entry": 59,
+       "anchor": "y axis starting at 0.5"
+      }
+     ],
+     "locator_status": "MANIFEST"
+    },
+    {
+     "id": "O2",
+     "statement": "Human WWOX-knockout cerebral organoid transcriptome: the canonical ATF4/ISR target set is LOWER than 10,000 random sets (P 0.0005; exploratory, six libraries, uncorrected across nine set tests); 12 canonical targets, mean shift -0.288; CHAC1, TRIB3 and PHGDH are individually down, while ATF4, ATF5, DDIT3, ASNS and others are not individually significant and ATF4 transcript is flat; the UPR-branch set does not differ from chance.",
+     "model_type": "human_cerebral_organoid_knockout",
+     "species": "human",
+     "genotype": "WWOX knockout (4 libraries) versus wild type (2 libraries)",
+     "tissue_or_cells": "bulk organoid RNA",
+     "age_stage": "culture week 15",
+     "comparison": "knockout against wild type, set-level against random sets",
+     "readout": "ATF4-target transcript set",
+     "readout_level": "transcript",
+     "direction_observed": "set lower than chance",
+     "evidence_scope": "COMPUTATIONAL_RESULT",
+     "limits": "Transcript, not eIF2alpha phosphorylation or ATF4 protein; no amyloid; the shift is as consistent with a less advanced tissue as with a WWOX effect.",
+     "pmid": null,
+     "locators": [
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/gse156243/prediction_isr_ldh_chain_20261026.md",
+       "anchor": "RESULT section"
+      }
+     ],
+     "locator_status": "DOCUMENT"
+    }
+   ],
+   "inferred": [
+    "That a WWOX-dependent ISR elevation exists in human neural cells is not shown; the only human readout points the opposite way at transcript level.",
+    "That any ISR elevation is harmful rather than adaptive is unmeasured; Atf4 never perturbed."
+   ],
+   "intervention_direction": {
+    "direction": "uncertain",
+    "on": "eIF2B / PERK-arm output",
+    "rationale": "The proposal is to attenuate a presumed over-activation; the sign of the human readout is unknown and the only signed human datum points down.",
+    "certainty": "context_dependent",
+    "do_not_assume": "Do not read an ISR-attenuating compound as a reversal of an observed WWOX change: no WWOX-dependent ISR increase is observed in a human system."
+   },
+   "counter_evidence": [
+    "Without amyloid the fly signal does not change; the organoid ISR set is lower than chance.",
+    "Adult ALS trial: eIF2B activation engaged its target with no clinical benefit (abstract-level, other disease); PERK inhibition showed pancreatic toxicity signs in a mouse model (other context).",
+    "A paediatric tolerability dataset exists only in vanishing white matter, a disease of eIF2B itself (abstract-level); that is not suitability for WWOX-DEE."
+   ],
+   "sources": {
+    "cards": [
+     "E01_isr_modulators"
+    ],
+    "hypotheses": [
+     "HYP-20261026-10"
+    ],
+    "hypotheses_note": "HYP-20261026-10 (status generated, not ranked); its Stage 1 is the first measurement.",
+    "map_records": [
+     "R-10"
+    ],
+    "documents": [],
+    "registry_ids": [],
+    "papers": [
+     {
+      "pmid": "42909904",
+      "paper_registry_ids": [
+       "PAPER 567"
+      ]
+     }
+    ]
+   },
+   "targets": [
+    {
+     "symbol": "ATF4",
+     "role": "ISR effector transcription factor",
+     "hgnc_id": "HGNC:786",
+     "hgnc_name": "activating transcription factor 4",
+     "target_kind": "pathway_member"
+    },
+    {
+     "symbol": "EIF2AK3",
+     "role": "PERK, stress kinase",
+     "hgnc_id": "HGNC:3255",
+     "hgnc_name": "eukaryotic translation initiation factor 2 alpha kinase 3",
+     "target_kind": "intervention_target"
+    },
+    {
+     "symbol": "EIF2S1",
+     "role": "eIF2 alpha, phosphorylation site",
+     "hgnc_id": "HGNC:3265",
+     "hgnc_name": "eukaryotic translation initiation factor 2 subunit alpha",
+     "target_kind": "pathway_member"
+    },
+    {
+     "symbol": "EIF2B1",
+     "role": "eIF2B complex subunit",
+     "hgnc_id": "HGNC:3257",
+     "hgnc_name": "eukaryotic translation initiation factor 2B subunit alpha",
+     "target_kind": "intervention_target"
+    },
+    {
+     "symbol": "EIF2B2",
+     "role": "eIF2B complex subunit",
+     "hgnc_id": "HGNC:3258",
+     "hgnc_name": "eukaryotic translation initiation factor 2B subunit beta",
+     "target_kind": "intervention_target"
+    },
+    {
+     "symbol": "EIF2B3",
+     "role": "eIF2B complex subunit",
+     "hgnc_id": "HGNC:3259",
+     "hgnc_name": "eukaryotic translation initiation factor 2B subunit gamma",
+     "target_kind": "intervention_target"
+    },
+    {
+     "symbol": "EIF2B4",
+     "role": "eIF2B complex subunit",
+     "hgnc_id": "HGNC:3260",
+     "hgnc_name": "eukaryotic translation initiation factor 2B subunit delta",
+     "target_kind": "intervention_target"
+    },
+    {
+     "symbol": "EIF2B5",
+     "role": "eIF2B complex subunit",
+     "hgnc_id": "HGNC:3261",
+     "hgnc_name": "eukaryotic translation initiation factor 2B subunit epsilon",
+     "target_kind": "intervention_target"
+    },
+    {
+     "symbol": "DDIT3",
+     "role": "CHOP, ISR target",
+     "hgnc_id": "HGNC:2726",
+     "hgnc_name": "DNA damage inducible transcript 3",
+     "target_kind": "readout_marker"
+    }
+   ],
+   "pathways": [
+    {
+     "id": "GO:0034976",
+     "label": "response to endoplasmic reticulum stress"
+    },
+    {
+     "id": "GO:0006446",
+     "label": "regulation of translational initiation"
+    }
+   ],
+   "evidence_scope": [
+    "WWOX_BIOLOGY_OTHER_CONTEXT",
+    "COMPUTATIONAL_RESULT",
+    "OTHER_DISEASE_PRECEDENT"
+   ],
+   "coverage": {
+    "status": "NOT_ASSESSED",
+    "note": "Coverage of this need by catalogue compounds is not computed here; the repurposing module sets it."
+   },
+   "notes": "ISRIB-class compounds target the eIF2B complex (five genes); they act downstream of eIF2alpha phosphorylation, so 'ATF4 up' is not the compound's direct target.",
+   "basis": "observed"
+  },
+  {
+   "id": "NEED-PDH-PYRUVATE-AXIS",
+   "label": "Pyruvate entry into the TCA cycle (HIF1A-PDK-PDH axis; glycolytic shift)",
+   "family": "Stress signalling and metabolism",
+   "track": {
+    "value": "A",
+    "basis": "Downstream metabolic lever, allele-blind in design; WWOX binds HIF1A through WW1, not the SDR, so the axis may be partly preserved in an SDR missense allele (inference, map CHAIN D)."
+   },
+   "goal": {
+    "value": "partial_benefit",
+    "basis": "Aims to correct a metabolic consequence, not to restore WWOX."
+   },
+   "observed": [
+    {
+     "id": "O1",
+     "statement": "Wwox-null mouse embryonic fibroblasts: HIF1alpha protein is raised under normoxia, PDK1 is raised at transcript level, and a glycolytic/respiratory shift is measured; the HIF1alpha difference disappears under hypoxia.",
+     "model_type": "mouse_embryonic_fibroblast",
+     "species": "mouse",
+     "genotype": "Wwox knockout versus wild type",
+     "tissue_or_cells": "mouse embryonic fibroblasts (non-neural)",
+     "age_stage": "not applicable",
+     "comparison": "knockout against wild type",
+     "readout": "HIF1alpha protein; PDK1 mRNA; oxygen consumption and glycolysis",
+     "readout_level": "protein",
+     "direction_observed": "HIF1alpha up; PDK1 transcript up",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "limits": "Mouse, non-neural, not a DEE-specific system; PDK1 is a transcript: PDH phosphorylation, activity and flux are not measured; PHD2 mechanism left open.",
+     "pmid": "25012504",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID25012504.json",
+       "entry": 4,
+       "anchor": "wwox loss raises hif1alpha protein"
+      },
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID25012504.json",
+       "entry": 2,
+       "anchor": "pdk1"
+      },
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID25012504.json",
+       "entry": 1,
+       "anchor": "glycolytic/respiratory shift"
+      },
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID25012504.json",
+       "entry": 5,
+       "anchor": "disappears under hypoxia"
+      }
+     ],
+     "locator_status": "MANIFEST"
+    },
+    {
+     "id": "O2",
+     "statement": "Human knockout fibroblast line: pyruvate dehydrogenase activity shows no knockout-versus-control difference in any oxygen x glucose condition, while lactate is higher in the knockout in all four conditions; no PDK activity or protein is measured.",
+     "model_type": "cell_line",
+     "species": "human",
+     "genotype": "WWOX knockdown (the figure's knockout arm) versus control",
+     "tissue_or_cells": "non-neural human fibroblast line (per the HYP-20260709-01 current reading)",
+     "age_stage": "not applicable",
+     "comparison": "knockout against control in four oxygen x glucose conditions",
+     "readout": "PDH activity (Figure 5b); lactate",
+     "readout_level": "activity",
+     "direction_observed": "PDH no difference (n unstated); lactate up",
+     "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT",
+     "limits": "Non-neural; n of the PDH panel not stated; non-significance is neither confirmation nor refutation.",
+     "pmid": "35328751",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35328751.json",
+       "entry": 7,
+       "anchor": "pyruvate dehydrogenase activity (5b) shows no knockout-versus-control bracket"
+      },
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35328751.json",
+       "entry": 8,
+       "anchor": "no pdk activity or pdk protein is measured"
+      }
+     ],
+     "locator_status": "MANIFEST"
+    },
+    {
+     "id": "O3",
+     "statement": "Human WWOX-knockout cerebral organoid transcriptome: glycolytic HIF1A targets are higher (SLC2A1 +1.40, HK2 +2.18, LDHA +0.75), PDK1 is LOWER, PDHA1 is higher and the oxidative-arm panel is flat. The glycolytic genes also fall with elapsed culture time in an unrelated spheroid series, so the shift is as consistent with a less advanced tissue as with a metabolic block.",
+     "model_type": "human_cerebral_organoid_knockout",
+     "species": "human",
+     "genotype": "WWOX knockout (4 libraries) versus wild type (2 libraries)",
+     "tissue_or_cells": "bulk organoid RNA",
+     "age_stage": "culture week 15",
+     "comparison": "knockout against wild type",
+     "readout": "transcripts of HIF1A-PDK-PDH-glycolysis genes",
+     "readout_level": "transcript",
+     "direction_observed": "glycolytic targets up; PDK1 down",
+     "evidence_scope": "COMPUTATIONAL_RESULT",
+     "limits": "Transcript, not flux; PDH is phosphorylation-controlled; six libraries; the PDK-to-PDH step is not observed in any human system.",
+     "pmid": null,
+     "locators": [
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/gse156243/prediction_hif1a_pdk_chain_20261025.md",
+       "anchor": "RESULT section"
+      }
+     ],
+     "locator_status": "DOCUMENT"
+    }
+   ],
+   "inferred": [
+    "That PDK1 inhibits PDH in WWOX-deficient neurons (the middle link of the chain) is inferred and is not supported at transcript level in the one neural datum.",
+    "That ketone bodies, entering below PDH, restore oxidative flux without reactivating PDH is a mechanistic prediction, not an observation."
+   ],
+   "intervention_direction": {
+    "direction": "uncertain",
+    "on": "PDH flux / pyruvate entry into the TCA cycle",
+    "rationale": "The chain predicts PDK-mediated PDH inhibition, so raising PDH flux (PDK inhibition) or bypassing it (ketones) would follow; but PDK1 transcript is DOWN in the organoid and PDH activity shows no difference in the one human cell measurement.",
+    "certainty": "context_dependent",
+    "do_not_assume": "Do not treat a glycolytic signature as proof of a PDH block, and do not treat dichloroacetate as evidence-backed: the PDK-to-PDH link has no WWOX observation."
+   },
+   "counter_evidence": [
+    "PDK1 down in human knockout organoid; PDH activity unchanged in a human cell line; human metabolic screens reported normal where done (count disputed, map N-06).",
+    "Dichloroacetate carries a peripheral-nerve signal in other settings (map N-08); digoxin (HIF1A inhibition) was judged the wrong clinical object (N-07).",
+    "The one severe WOREE case lists the ketogenic diet among ineffective interventions (DL-MOL-007)."
+   ],
+   "sources": {
+    "cards": [
+     "E03_pdk_inhibition_dca",
+     "E04_ketogenic_lactate_axis",
+     "EB-KD-01 (cards_early)"
+    ],
+    "hypotheses": [
+     "HYP-20260709-01",
+     "HYP-20260709-05"
+    ],
+    "hypotheses_note": "HYP-20260709-01 current reading (2026-10-27): status proposed-to-L9, score 12/15 with evidence 1/3, exploratory; 13/15 is the superseded 2026-07-10c value. Not re-ranked here.",
+    "map_records": [
+     "CHAIN E",
+     "M6",
+     "R-05",
+     "N-06",
+     "N-07",
+     "N-08"
+    ],
+    "documents": [],
+    "registry_ids": [
+     "DL-MECH-020",
+     "DL-MECH-034",
+     "DL-MECH-095",
+     "DL-BIO-007",
+     "DL-BIO-008",
+     "DL-BIO-009"
+    ],
+    "papers": [
+     {
+      "pmid": "25012504",
+      "paper_registry_ids": [
+       "PAPER 024"
+      ]
+     },
+     {
+      "pmid": "35328751",
+      "paper_registry_ids": [
+       "PAPER 023"
+      ]
+     }
+    ]
+   },
+   "targets": [
+    {
+     "symbol": "HIF1A",
+     "role": "HIF1alpha, de-repressed in Wwox-null MEFs",
+     "hgnc_id": "HGNC:4910",
+     "hgnc_name": "hypoxia inducible factor 1 subunit alpha",
+     "target_kind": "pathway_member"
+    },
+    {
+     "symbol": "PDK1",
+     "role": "pyruvate dehydrogenase kinase 1",
+     "collision_note": "PDK1 is the approved symbol for pyruvate dehydrogenase kinase 1 but is also an alias of PDPK1 (3-phosphoinositide-dependent protein kinase 1, an AKT-pathway kinase). Searches keyed on 'PDK1' text return both; use the HGNC id, not the string.",
+     "hgnc_id": "HGNC:8809",
+     "hgnc_name": "pyruvate dehydrogenase kinase 1",
+     "also_alias_or_previous_symbol_of": [
+      "PDPK1 (alias_symbol)"
+     ],
+     "target_kind": "intervention_target"
+    },
+    {
+     "symbol": "PDK2",
+     "role": "PDK paralog (a DCA target family member)",
+     "hgnc_id": "HGNC:8810",
+     "hgnc_name": "pyruvate dehydrogenase kinase 2",
+     "target_kind": "intervention_target"
+    },
+    {
+     "symbol": "PDK3",
+     "role": "PDK paralog",
+     "hgnc_id": "HGNC:8811",
+     "hgnc_name": "pyruvate dehydrogenase kinase 3",
+     "target_kind": "intervention_target"
+    },
+    {
+     "symbol": "PDK4",
+     "role": "PDK paralog",
+     "hgnc_id": "HGNC:8812",
+     "hgnc_name": "pyruvate dehydrogenase kinase 4",
+     "target_kind": "intervention_target"
+    },
+    {
+     "symbol": "PDHA1",
+     "role": "PDH E1 alpha",
+     "hgnc_id": "HGNC:8806",
+     "hgnc_name": "pyruvate dehydrogenase E1 subunit alpha 1",
+     "target_kind": "pathway_member"
+    },
+    {
+     "symbol": "PDHB",
+     "role": "PDH E1 beta",
+     "hgnc_id": "HGNC:8808",
+     "hgnc_name": "pyruvate dehydrogenase E1 subunit beta",
+     "target_kind": "pathway_member"
+    },
+    {
+     "symbol": "SLC2A1",
+     "role": "GLUT1, HIF1A target",
+     "hgnc_id": "HGNC:11005",
+     "hgnc_name": "solute carrier family 2 member 1",
+     "target_kind": "readout_marker"
+    },
+    {
+     "symbol": "HK2",
+     "role": "hexokinase 2, HIF1A target",
+     "hgnc_id": "HGNC:4923",
+     "hgnc_name": "hexokinase 2",
+     "also_alias_or_previous_symbol_of": [
+      "HOOK2 (alias_symbol)",
+      "KCNA5 (alias_symbol)",
+      "KIF2A (alias_symbol)"
+     ],
+     "target_kind": "readout_marker"
+    }
+   ],
+   "pathways": [
+    {
+     "id": "GO:0006090",
+     "label": "pyruvate metabolic process"
+    },
+    {
+     "id": "GO:0006096",
+     "label": "glycolysis"
+    },
+    {
+     "id": "GO:0001666",
+     "label": "response to hypoxia"
+    }
+   ],
+   "evidence_scope": [
+    "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+    "WWOX_BIOLOGY_OTHER_CONTEXT",
+    "COMPUTATIONAL_RESULT",
+    "UNVERIFIED_HYPOTHESIS"
+   ],
+   "coverage": {
+    "status": "NOT_ASSESSED",
+    "note": "Coverage of this need by catalogue compounds is not computed here; the repurposing module sets it."
+   },
+   "notes": "Collision flagged: PDK1 vs PDPK1 (see targets). The need is the PDH node, not any one compound class (DCA, ketogenic diet, HIF1A inhibitors are routes).",
+   "basis": "observed"
+  },
+  {
+   "id": "NEED-LACTATE-LDH",
+   "label": "Lactate and lactate dehydrogenase activity: lower an elevated LDH/lactate state",
+   "family": "Stress signalling and metabolism",
+   "track": {
+    "value": "A",
+    "basis": "Allele-blind and downstream; Track B untested."
+   },
+   "goal": {
+    "value": "partial_benefit",
+    "basis": "Partial by construction; does not restore WWOX function."
+   },
+   "observed": [
+    {
+     "id": "O1",
+     "statement": "Neuronal Wwox knockdown plus Abeta42 raises Ldh transcript (log2 fold-change about 1.29, adjusted P 1e-11) and L-lactate (about 1.2e6 versus about 5.0e5); without Abeta42 lactate is nominally lower (about 3.5e5 versus 5.0e5).",
+     "model_type": "drosophila_rnai_amyloid_model",
+     "species": "Drosophila melanogaster",
+     "genotype": "neuronal Wwox RNAi plus Abeta42 versus Abeta42 alone; LacZ contrast",
+     "tissue_or_cells": "whole adult head (RNA-seq, HILIC LC-MS)",
+     "age_stage": "adult, day 14",
+     "comparison": "knockdown against control, with and without Abeta42",
+     "readout": "Ldh transcript; L-lactate abundance",
+     "readout_level": "transcript",
+     "direction_observed": "up (amyloid background); down nominal without amyloid",
+     "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT",
+     "limits": "Not WWOX-DEE; whole head, five replicates; ATP did not differ with knockdown.",
+     "pmid": "42909904",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+       "entry": 29,
+       "anchor": "ldh is higher in wwox knockdown plus abeta42"
+      },
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+       "entry": 43,
+       "anchor": "l-lactate relative abundance"
+      },
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+       "entry": 46,
+       "anchor": "atp did not differ"
+      }
+     ],
+     "locator_status": "MANIFEST"
+    },
+    {
+     "id": "O2",
+     "statement": "Ldh RNAi improved climbing in Abeta42 flies with Wwox knockdown at days 14, 21 and 28 (partial rescue).",
+     "model_type": "drosophila_rnai_amyloid_model",
+     "species": "Drosophila melanogaster",
+     "genotype": "Abeta42 + Wwox RNAi + Ldh RNAi versus Abeta42 + Wwox RNAi",
+     "tissue_or_cells": "whole fly",
+     "age_stage": "adult, days 14-28",
+     "comparison": "double knockdown against single knockdown (three genotypes only)",
+     "readout": "climbing height",
+     "readout_level": "functional",
+     "direction_observed": "improved",
+     "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT",
+     "limits": "No Ldh-alone arm, no Wwox-mRNA check in the double-RNAi flies, lactate not measured in the double knockdown; authors cite Ldh knockdown as detrimental in other fly amyloid models.",
+     "pmid": "42909904",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+       "entry": 51,
+       "anchor": "ldh knockdown rescued climbing deficits"
+      },
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+       "entry": 52,
+       "anchor": "lactate was not measured in the double-rnai flies"
+      },
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+       "entry": 56,
+       "anchor": "detrimental"
+      }
+     ],
+     "locator_status": "MANIFEST"
+    },
+    {
+     "id": "O3",
+     "statement": "Human WWOX-knockout cerebral organoid: LDHA transcript is higher (log2 shift positive), but LDHA also falls with elapsed culture time in an unrelated spheroid series.",
+     "model_type": "human_cerebral_organoid_knockout",
+     "species": "human",
+     "genotype": "WWOX knockout versus wild type",
+     "tissue_or_cells": "bulk organoid RNA",
+     "age_stage": "culture week 15",
+     "comparison": "knockout against wild type",
+     "readout": "LDHA transcript",
+     "readout_level": "transcript",
+     "direction_observed": "up",
+     "evidence_scope": "COMPUTATIONAL_RESULT",
+     "limits": "Transcript, not activity; confounded with maturity; lactate not measured.",
+     "pmid": null,
+     "locators": [
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/gse156243/prediction_isr_ldh_chain_20261026.md",
+       "anchor": "RESULT section"
+      }
+     ],
+     "locator_status": "DOCUMENT"
+    },
+    {
+     "id": "O4",
+     "statement": "Human brain MRS in one WWOX patient reports cerebral lactate 'extremely low' (opposite of the Warburg prediction); a confounding second variant is recorded.",
+     "model_type": "human_clinical_report",
+     "species": "human",
+     "genotype": "one patient with a confounding second variant",
+     "tissue_or_cells": "brain MRS voxel",
+     "age_stage": "child",
+     "comparison": "single patient",
+     "readout": "brain lactate (MRS)",
+     "readout_level": "functional",
+     "direction_observed": "down",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "limits": "n 1; unqualified; confounded.",
+     "pmid": null,
+     "locators": [
+      {
+       "kind": "registry",
+       "ids": [
+        "DL-BIO-008"
+       ]
+      }
+     ],
+     "locator_status": "REGISTRY_ONLY"
+    }
+   ],
+   "inferred": [
+    "That lactate or LDH activity is raised in WWOX-deficient human neural cells independent of maturity is not shown.",
+    "Stiripentol's LDH potency is unresolved (single-concentration measures, no fitted potency); its lactate/respiration effects are not an LDH effect (complex I is inhibited at lower concentrations in isolated mitochondria)."
+   ],
+   "intervention_direction": {
+    "direction": "uncertain",
+    "on": "LDH activity / lactate",
+    "rationale": "The only functional datum is a fly rescue by Ldh knockdown in an amyloid background; the human WWOX-specific lactate data point the other way or are normal.",
+    "certainty": "context_dependent",
+    "do_not_assume": "Lactate lowering is not established as beneficial: tight control of Ldh/lactate is the authors' own caveat; the fly CRISPRa Wwox rescue occurred without any reduction in Ldh or 2-hydroxyglutarate."
+   },
+   "counter_evidence": [
+    "Human lactate reported normal or extremely low; lactate falls nominally without amyloid; LDHA in the organoid is as consistent with immaturity as with WWOX loss (HYP-20261026-11).",
+    "Stiripentol inhibits mitochondrial complex I at concentrations at or below those that inhibit LDH in lysate (see NEED-MITOCHONDRIAL-RESPIRATION).",
+    "Wwox CRISPRa rescue in flies happened without lowering Ldh (entry 82)."
+   ],
+   "sources": {
+    "cards": [
+     "E02_ldh_inhibition"
+    ],
+    "hypotheses": [
+     "HYP-20261026-11"
+    ],
+    "hypotheses_note": "HYP-20261026-11 (status generated, not ranked); Stage 0 is a fitted potency on human LDHA/LDHB before any WWOX arm.",
+    "map_records": [
+     "R-11",
+     "N-06"
+    ],
+    "documents": [],
+    "registry_ids": [
+     "DL-BIO-007",
+     "DL-BIO-008"
+    ],
+    "papers": [
+     {
+      "pmid": "42909904",
+      "paper_registry_ids": [
+       "PAPER 567"
+      ]
+     }
+    ]
+   },
+   "targets": [
+    {
+     "symbol": "LDHA",
+     "role": "lactate dehydrogenase A",
+     "hgnc_id": "HGNC:6535",
+     "hgnc_name": "lactate dehydrogenase A",
+     "target_kind": "intervention_target"
+    },
+    {
+     "symbol": "LDHB",
+     "role": "lactate dehydrogenase B",
+     "hgnc_id": "HGNC:6541",
+     "hgnc_name": "lactate dehydrogenase B",
+     "target_kind": "intervention_target"
+    },
+    {
+     "symbol": "LDHC",
+     "role": "LDH C (testis-restricted; paralog noted for specificity searches)",
+     "hgnc_id": "HGNC:6544",
+     "hgnc_name": "lactate dehydrogenase C",
+     "target_kind": "identity_guard"
+    },
+    {
+     "symbol": "SLC16A1",
+     "role": "MCT1, lactate transport (card E04 route)",
+     "hgnc_id": "HGNC:10922",
+     "hgnc_name": "solute carrier family 16 member 1",
+     "target_kind": "intervention_target"
+    },
+    {
+     "symbol": "SLC16A7",
+     "role": "MCT2, lactate transport",
+     "hgnc_id": "HGNC:10928",
+     "hgnc_name": "solute carrier family 16 member 7",
+     "target_kind": "intervention_target"
+    }
+   ],
+   "pathways": [
+    {
+     "id": "GO:0006090",
+     "label": "pyruvate metabolic process"
+    }
+   ],
+   "evidence_scope": [
+    "WWOX_BIOLOGY_OTHER_CONTEXT",
+    "COMPUTATIONAL_RESULT",
+    "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
+   ],
+   "coverage": {
+    "status": "NOT_ASSESSED",
+    "note": "Coverage of this need by catalogue compounds is not computed here; the repurposing module sets it."
+   },
+   "notes": "",
+   "basis": "observed"
+  },
+  {
+   "id": "NEED-MITOCHONDRIAL-RESPIRATION",
+   "label": "Mitochondrial respiration / OXPHOS capacity (including complex I) as a possible WWOX-dependent deficit",
+   "family": "Stress signalling and metabolism",
+   "track": {
+    "value": "A",
+    "basis": "Downstream metabolic lever, allele-blind in design."
+   },
+   "goal": {
+    "value": "partial_benefit",
+    "basis": "Supports energy handling; does not restore WWOX."
+   },
+   "observed": [
+    {
+     "id": "O1",
+     "statement": "Wwox-null mouse embryonic fibroblasts: a respiratory/glycolytic shift is reported (direct measurement), with succinate only a non-significant trend.",
+     "model_type": "mouse_embryonic_fibroblast",
+     "species": "mouse",
+     "genotype": "Wwox knockout versus wild type",
+     "tissue_or_cells": "mouse embryonic fibroblasts (non-neural)",
+     "age_stage": "not applicable",
+     "comparison": "knockout against wild type",
+     "readout": "respiration and glycolysis (Figure 2)",
+     "readout_level": "flux",
+     "direction_observed": "shift toward glycolysis",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "limits": "Mouse, non-neural; the extent of the respiration deficit per complex is not resolved.",
+     "pmid": "25012504",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID25012504.json",
+       "entry": 1,
+       "anchor": "glycolytic/respiratory shift"
+      },
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID25012504.json",
+       "entry": 11,
+       "anchor": "succinate is only a non-significant trend"
+      }
+     ],
+     "locator_status": "MANIFEST"
+    },
+    {
+     "id": "O2",
+     "statement": "Human WWOX-knockout cerebral organoid transcripts: the oxidative-arm panel is flat (a deliberately broad panel of oxidative-phosphorylation genes); the map records an OXPHOS-inhibited/glycolysis-enriched signature from the same deposit.",
+     "model_type": "human_cerebral_organoid_knockout",
+     "species": "human",
+     "genotype": "WWOX knockout versus wild type",
+     "tissue_or_cells": "bulk organoid RNA",
+     "age_stage": "culture week 15",
+     "comparison": "knockout against wild type",
+     "readout": "transcript panel; gene-set enrichment (map)",
+     "readout_level": "transcript",
+     "direction_observed": "flat (panel) versus inhibited (map enrichment): discordant",
+     "evidence_scope": "COMPUTATIONAL_RESULT",
+     "limits": "The two readings differ in method (panel mean versus enrichment); neither is flux; maturity confound.",
+     "pmid": null,
+     "locators": [
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/gse156243/prediction_hif1a_pdk_chain_20261025.md",
+       "anchor": "RESULT section, oxidative arm"
+      },
+      {
+       "kind": "registry",
+       "ids": [
+        "DL-MECH-034"
+       ]
+      }
+     ],
+     "locator_status": "DOCUMENT"
+    },
+    {
+     "id": "O3",
+     "statement": "Whole-head ATP did not differ with neuronal Wwox knockdown in the fly amyloid model despite the 'Warburg-like' wording; human metabolic and mitochondrial screens, including a muscle biopsy, are reported normal where done (count disputed).",
+     "model_type": "drosophila_rnai_amyloid_model",
+     "species": "Drosophila melanogaster / human clinical",
+     "genotype": "neuronal Wwox RNAi; human WWOX patients",
+     "tissue_or_cells": "whole head; muscle biopsy",
+     "age_stage": "adult fly; human age not carried",
+     "comparison": "knockdown against control; screens against normal ranges",
+     "readout": "ATP; screen panels",
+     "readout_level": "flux",
+     "direction_observed": "no difference / normal",
+     "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT",
+     "limits": "Two different systems in one row; human screen count disputed (map N-06).",
+     "pmid": "42909904",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+       "entry": 46,
+       "anchor": "atp did not differ"
+      },
+      {
+       "kind": "registry",
+       "ids": [
+        "DL-BIO-009"
+       ]
+      }
+     ],
+     "locator_status": "MANIFEST"
+    }
+   ],
+   "inferred": [
+    "That oxidative-phosphorylation capacity (and complex I in particular) is reduced in WWOX-deficient neurons: no complex-I-specific measurement exists in any WWOX system in the record.",
+    "That raising oxidative capacity benefits function."
+   ],
+   "intervention_direction": {
+    "direction": "uncertain",
+    "on": "oxidative-phosphorylation capacity",
+    "rationale": "A support-oxidation direction follows only if capacity is reduced; the evidence is a non-neural mouse shift and discordant organoid transcripts.",
+    "certainty": "context_dependent",
+    "do_not_assume": "Complex I inhibitors (including the off-target action of some candidate drugs, e.g. of stiripentol in isolated mitochondria) would push the opposite way from a support-oxidation need; flag them wherever this need is used to screen compounds."
+   },
+   "counter_evidence": [
+    "Organoid oxidative panel flat; fly ATP unchanged; human screens normal where done.",
+    "No complex I readout in any WWOX system."
+   ],
+   "sources": {
+    "cards": [
+     "E02_ldh_inhibition"
+    ],
+    "hypotheses": [
+     "HYP-20260709-01"
+    ],
+    "hypotheses_note": "HYP-20260709-01 is the energy-metabolism hypothesis (see NEED-PDH-PYRUVATE-AXIS for its current reading).",
+    "map_records": [
+     "CHAIN E",
+     "M6"
+    ],
+    "documents": [],
+    "registry_ids": [
+     "CLAIM 009",
+     "DL-MECH-034",
+     "DL-BIO-009"
+    ],
+    "papers": [
+     {
+      "pmid": "25012504",
+      "paper_registry_ids": [
+       "PAPER 024"
+      ]
+     },
+     {
+      "pmid": "42909904",
+      "paper_registry_ids": [
+       "PAPER 567"
+      ]
+     }
+    ]
+   },
+   "targets": [
+    {
+     "symbol": "NDUFS1",
+     "role": "complex I core subunit (representative)",
+     "hgnc_id": "HGNC:7707",
+     "hgnc_name": "NADH:ubiquinone oxidoreductase core subunit S1",
+     "target_kind": "pathway_member"
+    },
+    {
+     "symbol": "NDUFS2",
+     "role": "complex I core subunit (representative)",
+     "hgnc_id": "HGNC:7708",
+     "hgnc_name": "NADH:ubiquinone oxidoreductase core subunit S2",
+     "target_kind": "pathway_member"
+    },
+    {
+     "symbol": "NDUFV1",
+     "role": "complex I core subunit (representative)",
+     "hgnc_id": "HGNC:7716",
+     "hgnc_name": "NADH:ubiquinone oxidoreductase core subunit V1",
+     "target_kind": "pathway_member"
+    },
+    {
+     "symbol": "COX4I1",
+     "role": "complex IV subunit (oxidative-arm panel member)",
+     "hgnc_id": "HGNC:2265",
+     "hgnc_name": "cytochrome c oxidase subunit 4I1",
+     "target_kind": "readout_marker"
+    },
+    {
+     "symbol": "ATP5F1A",
+     "role": "ATP synthase subunit (panel member)",
+     "hgnc_id": "HGNC:823",
+     "hgnc_name": "ATP synthase F1 subunit alpha",
+     "target_kind": "readout_marker"
+    },
+    {
+     "symbol": "COXFA4",
+     "role": "formerly NDUFA4; panel files still say NDUFA4",
+     "collision_note": "NDUFA4 is no longer an approved HGNC symbol: it was renamed COXFA4 and is a complex IV (not complex I) assembly/subunit factor. The organoid 'oxidative arm' panel lists NDUFA4; do not read it as a complex I gene.",
+     "hgnc_id": "HGNC:7687",
+     "hgnc_name": "cytochrome c oxidase associated subunit FA4",
+     "target_kind": "identity_guard"
+    }
+   ],
+   "pathways": [
+    {
+     "id": "GO:0006119",
+     "label": "oxidative phosphorylation"
+    }
+   ],
+   "evidence_scope": [
+    "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+    "COMPUTATIONAL_RESULT",
+    "WWOX_BIOLOGY_OTHER_CONTEXT"
+   ],
+   "coverage": {
+    "status": "NOT_ASSESSED",
+    "note": "Coverage of this need by catalogue compounds is not computed here; the repurposing module sets it."
+   },
+   "notes": "Kept because the record's own candidate-drug evidence (stiripentol) shows complex I engagement; the need exists to prevent a wrong-direction compound from being scored as helpful.",
+   "basis": "observed"
+  },
+  {
+   "id": "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR",
+   "label": "Excitatory network gain and bursting: glutamate-receptor node (NMDAR, AMPAR); gap-junction/pannexin untested",
+   "family": "Network excitability",
+   "track": {
+    "value": "A",
+    "basis": "Network-state lever in neuron-specific loss; allele-blind; Track B unmeasured."
+   },
+   "goal": {
+    "value": "partial_benefit",
+    "basis": "A network-state lever; WWOX function stays lost, and burst control is not developmental recovery (map N-15)."
+   },
+   "observed": [
+    {
+     "id": "O1",
+     "statement": "Neuron-specific (Synapsin-Cre) Wwox knockout neocortical slices burst spontaneously: 36 of 42 knockout slices, 4 of 23 heterozygote slices, 0 of 11 wild-type slices.",
+     "model_type": "mouse_neuron_specific_knockout",
+     "species": "mouse",
+     "genotype": "Synapsin-Cre Wwox knockout versus heterozygote versus wild type",
+     "tissue_or_cells": "neocortical slices, layer II/III, local field potential",
+     "age_stage": "juvenile, about two weeks (P13-P17)",
+     "comparison": "genotypes against each other",
+     "readout": "fraction of slices with bursts",
+     "readout_level": "functional",
+     "direction_observed": "increased",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "limits": "The heterozygote incidence is one sixth of the knockout's, which the Discussion describes as similar.",
+     "pmid": "34634460",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34634460.json",
+       "entry": 0,
+       "anchor": "36 of 42"
+      }
+     ],
+     "locator_status": "MANIFEST"
+    },
+    {
+     "id": "O2",
+     "statement": "Bursting is abolished by d-APV, a competitive NMDAR antagonist (normalised burst frequency 1.0 to zero), n 5 slices from 3 animals; a knockout-specific delayed evoked response is also suppressed by d-APV.",
+     "model_type": "mouse_neuron_specific_knockout",
+     "species": "mouse",
+     "genotype": "Synapsin-Cre Wwox knockout",
+     "tissue_or_cells": "neocortical slices",
+     "age_stage": "juvenile, about two weeks",
+     "comparison": "before versus during d-APV",
+     "readout": "burst frequency; delayed evoked response amplitude",
+     "readout_level": "functional",
+     "direction_observed": "abolished by NMDAR block",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "limits": "d-APV is NMDAR-selective: the source's phrase 'glutamatergic blocker' overstates it; the AMPAR contribution was never tested; permissive dependence, not a gain.",
+     "pmid": "34634460",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34634460.json",
+       "entry": 25,
+       "anchor": "suppressed by d-apv"
+      },
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/w2_therapeutic_it2_20261027/README.md",
+       "anchor": "section 2, measured (DATO) list"
+      },
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34634460.json",
+       "entry": 2,
+       "anchor": "zero under d-apv"
+      }
+     ],
+     "locator_status": "MANIFEST"
+    },
+    {
+     "id": "O3",
+     "statement": "Spontaneous excitatory current amplitude differs little (control 23.3 pA versus knockout 24.7 pA, within the spread), whereas miniature excitatory current amplitude is raised in the knockout (10 cells per genotype; KS test on pooled events).",
+     "model_type": "mouse_neuron_specific_knockout",
+     "species": "mouse",
+     "genotype": "Synapsin-Cre Wwox knockout versus control",
+     "tissue_or_cells": "layer II/III pyramidal neurons",
+     "age_stage": "juvenile",
+     "comparison": "knockout against control",
+     "readout": "sEPSC and mEPSC amplitude",
+     "readout_level": "functional",
+     "direction_observed": "sEPSC small; mEPSC up",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "limits": "Pooled events, not animals; the AMPAR reading of the mEPSC (holding at -70 mV) is the card's inference, not the authors' statement.",
+     "pmid": "34634460",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34634460.json",
+       "entry": 6,
+       "anchor": "excitatory effect is six per cent"
+      },
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/cards/F01_glutamate_receptor_node.card.json",
+       "anchor": "disease_assertions DA-W2-002"
+      }
+     ],
+     "locator_status": "MANIFEST"
+    },
+    {
+     "id": "O4",
+     "statement": "The only selective pannexin-1 blocker applied in a WWOX system raised normalised burst frequency to about 2.55 during treatment with no significance marker (a point estimate in the adverse direction, never tested); carbenoxolone suppressed bursts but is not attributable to gap junctions.",
+     "model_type": "mouse_neuron_specific_knockout",
+     "species": "mouse",
+     "genotype": "Synapsin-Cre Wwox knockout",
+     "tissue_or_cells": "neocortical slices",
+     "age_stage": "P13-P17",
+     "comparison": "before versus during blocker",
+     "readout": "normalised burst frequency",
+     "readout_level": "functional",
+     "direction_observed": "increased with pannexin-1 blocker (untested)",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "limits": "No significance test; stated as 'no effect' by the source; carbenoxolone has no washout reversal and may block NMDAR.",
+     "pmid": "34634460",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34634460.json",
+       "entry": 2,
+       "anchor": "pannexin blocker raised burst frequency"
+      }
+     ],
+     "locator_status": "MANIFEST"
+    }
+   ],
+   "inferred": [
+    "That bursting reflects a gain of NMDAR or AMPAR function rather than a permissive dependence (the sign of a partial block is untested).",
+    "That the same node is shared with GRIN-variant epilepsies (convergence argument); in a retrospective GRIN-variant series, memantine benefit split by variant class (14 of 19 gain-of-function versus 3 of 15 loss-of-function/indeterminate), so a shared node does not give the sign."
+   ],
+   "intervention_direction": {
+    "direction": "down",
+    "on": "postsynaptic glutamatergic gain (NMDAR, possibly AMPAR)",
+    "rationale": "A perturbation result, not a reversal inference: blocking NMDAR with d-APV abolished the burst in the WWOX-deficient slice.",
+    "certainty": "supported_in_WWOX_mouse_model for the tool compound; unknown for any clinically used antagonist",
+    "do_not_assume": "Full competitive block is not a partial block. Memantine and perampanel have never been given to a WWOX system. Chronic NMDAR block may cost activity-dependent myelination (unmeasured)."
+   },
+   "counter_evidence": [
+    "NMDAR dependence is permissive; only the full block works so far.",
+    "Memantine accelerated provoked seizures in an adult rat model; paediatric effectiveness of memantine is not established on its label (card F01).",
+    "One adult WWOX case on perampanel plus six drugs had no sustained benefit (n 1).",
+    "Pannexin-1 blocker arm went the wrong way untested (map N-16); gap-junction node withdrawn pending occlusion."
+   ],
+   "sources": {
+    "cards": [
+     "F01_glutamate_receptor_node"
+    ],
+    "hypotheses": [
+     "HYP-20261027-01"
+    ],
+    "hypotheses_note": "HYP-20261027-01 (generated, exploratory): graded partial block by memantine or perampanel against knockout and wild-type slices.",
+    "map_records": [
+     "CHAIN B",
+     "R-02",
+     "N-03",
+     "N-15",
+     "N-16",
+     "M2"
+    ],
+    "documents": [],
+    "registry_ids": [
+     "CLAIM 021",
+     "CLAIM 002",
+     "DL-MECH-002"
+    ],
+    "papers": [
+     {
+      "pmid": "34634460",
+      "paper_registry_ids": [
+       "CORPUS P210",
+       "PAPER 031"
+      ]
+     }
+    ]
+   },
+   "targets": [
+    {
+     "symbol": "GRIN1",
+     "role": "NMDAR obligatory subunit",
+     "collision_note": "GRIN1 is also an alias of GPRIN1 (G protein regulated inducer of neurite outgrowth 1); string searches on 'GRIN1' can return GPRIN1.",
+     "hgnc_id": "HGNC:4584",
+     "hgnc_name": "glutamate ionotropic receptor NMDA type subunit 1",
+     "also_alias_or_previous_symbol_of": [
+      "GPRIN1 (alias_symbol)"
+     ],
+     "target_kind": "intervention_target"
+    },
+    {
+     "symbol": "GRIN2A",
+     "role": "NMDAR subunit (GRIN2A human genetics: burst-suppression)",
+     "hgnc_id": "HGNC:4585",
+     "hgnc_name": "glutamate ionotropic receptor NMDA type subunit 2A",
+     "target_kind": "intervention_target"
+    },
+    {
+     "symbol": "GRIN2B",
+     "role": "NMDAR subunit",
+     "hgnc_id": "HGNC:4586",
+     "hgnc_name": "glutamate ionotropic receptor NMDA type subunit 2B",
+     "target_kind": "intervention_target"
+    },
+    {
+     "symbol": "GRIA1",
+     "role": "AMPAR subunit",
+     "hgnc_id": "HGNC:4571",
+     "hgnc_name": "glutamate ionotropic receptor AMPA type subunit 1",
+     "target_kind": "intervention_target"
+    },
+    {
+     "symbol": "GRIA2",
+     "role": "AMPAR subunit",
+     "hgnc_id": "HGNC:4572",
+     "hgnc_name": "glutamate ionotropic receptor AMPA type subunit 2",
+     "target_kind": "intervention_target"
+    },
+    {
+     "symbol": "GRIA3",
+     "role": "AMPAR subunit",
+     "hgnc_id": "HGNC:4573",
+     "hgnc_name": "glutamate ionotropic receptor AMPA type subunit 3",
+     "target_kind": "intervention_target"
+    },
+    {
+     "symbol": "GRIA4",
+     "role": "AMPAR subunit",
+     "hgnc_id": "HGNC:4574",
+     "hgnc_name": "glutamate ionotropic receptor AMPA type subunit 4",
+     "target_kind": "intervention_target"
+    },
+    {
+     "symbol": "PANX1",
+     "role": "pannexin 1 (blocker arm went the wrong way)",
+     "hgnc_id": "HGNC:8599",
+     "hgnc_name": "pannexin 1",
+     "target_kind": "intervention_target"
+    },
+    {
+     "symbol": "GJA1",
+     "role": "connexin 43 (gap-junction node withdrawn)",
+     "hgnc_id": "HGNC:4274",
+     "hgnc_name": "gap junction protein alpha 1",
+     "target_kind": "pathway_member"
+    }
+   ],
+   "pathways": [
+    {
+     "id": "GO:0035235",
+     "label": "ionotropic glutamate receptor signaling pathway"
+    },
+    {
+     "id": "GO:0007268",
+     "label": "chemical synaptic transmission"
+    }
+   ],
+   "evidence_scope": [
+    "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+    "OTHER_DISEASE_PRECEDENT"
+   ],
+   "coverage": {
+    "status": "NOT_ASSESSED",
+    "note": "Coverage of this need by catalogue compounds is not computed here; the repurposing module sets it."
+   },
+   "notes": "Evidence ladder tier for the chain is T1 for the tool compound d-APV only (map CHAIN B re-read).",
+   "basis": "observed"
+  },
+  {
+   "id": "NEED-INHIBITORY-HYPOFUNCTION",
+   "label": "Inhibitory drive: reduced spontaneous inhibition and PV/GABAergic marker deficit",
+   "family": "Network excitability",
+   "track": {
+    "value": "A",
+    "basis": "Network lever in neuron-specific and systemic loss; allele-blind."
+   },
+   "goal": {
+    "value": "partial_benefit",
+    "basis": "Network stabilisation; not restoration of WWOX."
+   },
+   "observed": [
+    {
+     "id": "O1",
+     "statement": "Spontaneous inhibitory current amplitude is more than halved in knockout layer II/III pyramidal neurons (control 57.3 pA versus knockout 27.5 pA).",
+     "model_type": "mouse_neuron_specific_knockout",
+     "species": "mouse",
+     "genotype": "Synapsin-Cre Wwox knockout versus control",
+     "tissue_or_cells": "neocortical layer II/III pyramidal neurons",
+     "age_stage": "juvenile",
+     "comparison": "knockout against control",
+     "readout": "sIPSC amplitude",
+     "readout_level": "functional",
+     "direction_observed": "decreased",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "limits": "Pooled events; amplitude, not GABA concentration or reversal potential.",
+     "pmid": "34634460",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34634460.json",
+       "entry": 7,
+       "anchor": "the amplitude is more than halved"
+      }
+     ],
+     "locator_status": "MANIFEST"
+    },
+    {
+     "id": "O2",
+     "statement": "Systemic constitutive knockout hippocampus: PV-positive counts are reduced across the whole hippocampus by 44 percent and GAD65/67 protein is lower (five lanes per genotype, combined densitometry).",
+     "model_type": "mouse_constitutive_knockout",
+     "species": "mouse",
+     "genotype": "mixed-background systemic knockout versus wild type",
+     "tissue_or_cells": "hippocampus (dentate gyrus, CA1, whole)",
+     "age_stage": "two weeks (map)",
+     "comparison": "knockout against wild type",
+     "readout": "PV-positive cell counts; GAD65/67 protein",
+     "readout_level": "protein",
+     "direction_observed": "decreased",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "limits": "The systemic null is metabolically decompensated at this age (hypoglycaemia, acidosis): cell-autonomous and secondary injury are not separable (CLAIM 036).",
+     "pmid": "30290271",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID30290271.json",
+       "entry": 2,
+       "anchor": "reduced across the whole hippocampus by 44 percent"
+      },
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID30290271.json",
+       "entry": 7,
+       "anchor": "not gaba concentration or flux"
+      }
+     ],
+     "locator_status": "MANIFEST"
+    },
+    {
+     "id": "O3",
+     "statement": "Human WWOX-knockout cerebral organoids show the opposite pattern for GABAergic markers: the rescue holds at protein level and not at transcript level; NPY transcript is strongly reduced; GABRB2 and GABRB3 transcripts are lower in the knockout.",
+     "model_type": "human_cerebral_organoid_knockout",
+     "species": "human",
+     "genotype": "WWOX knockout versus wild type",
+     "tissue_or_cells": "cerebral organoids",
+     "age_stage": "culture weeks 8-15",
+     "comparison": "knockout against wild type",
+     "readout": "GABAergic marker protein and transcripts",
+     "readout_level": "transcript",
+     "direction_observed": "protein up / transcripts down: discordant",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "limits": "Marker pattern in organoids; no functional inhibition readout; the GABRB2/3 values come from this repository's own panel on the same deposit (computational).",
+     "pmid": "34268881",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
+       "entry": 30,
+       "anchor": "protein level and not at transcript level"
+      },
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
+       "entry": 34,
+       "anchor": "npy transcript"
+      },
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/cards/F03_bumetanide_chloride_gradient.card.json",
+       "anchor": "disease_assertion DA-W2-021"
+      }
+     ],
+     "locator_status": "MANIFEST"
+    },
+    {
+     "id": "O4",
+     "statement": "P47T missense mouse hippocampus: the GO term 'inhibitory postsynaptic potential' sits in the ACTIVATED column while the KEGG analysis of the same tissue is read by the text as suppression of inhibitory synapses; in cortex both GABAergic and glutamatergic synapse terms are suppressed.",
+     "model_type": "mouse_missense_knockin",
+     "species": "mouse",
+     "genotype": "P47T/P47T versus wild type",
+     "tissue_or_cells": "hippocampus and cortex (RNA-seq enrichment)",
+     "age_stage": "80 to 250 days",
+     "comparison": "mutant against wild type",
+     "readout": "pathway enrichment (GO, KEGG)",
+     "readout_level": "transcript",
+     "direction_observed": "mixed: GO activated, KEGG suppressed (hippocampus)",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "limits": "Enrichment of transcripts, not a physiological inhibition readout; a different allele from the null.",
+     "pmid": "36828035",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36828035.json",
+       "entry": 40,
+       "anchor": "inhibitory postsynaptic potential"
+      },
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36828035.json",
+       "entry": 32,
+       "anchor": "gabaergic synapse"
+      }
+     ],
+     "locator_status": "MANIFEST"
+    }
+   ],
+   "inferred": [
+    "'Depolarizing GABA' as the reading of the organoid marker pattern is the authors' interpretation, not a measurement (see NEED-GABA-CHLORIDE-GRADIENT).",
+    "That raising GABAergic tone would help: mechanism is not outcome here (vigabatrin resolved spasms in one child and carries a brain-imaging safety signal)."
+   ],
+   "intervention_direction": {
+    "direction": "uncertain",
+    "on": "inhibitory drive onto pyramidal neurons",
+    "rationale": "A measured loss of spontaneous inhibition names a deficit, not an intervention. Whether raising GABAergic tone helps is unresolved: marker abundance, amplitude, reversal potential and circuit function are separate questions, and vigabatrin resolved spasms in published cases while carrying a brain-imaging signal.",
+    "certainty": "unknown",
+    "do_not_assume": "Marker abundance, transmitter concentration, reversal potential and circuit function are four separate questions (MARKER_TO_FUNCTION_GATE). Broad GABAergic pushes carry a safety signal (map N-04)."
+   },
+   "counter_evidence": [
+    "Organoid GABAergic markers are up at protein level; a hippocampal GO term for inhibitory postsynaptic potential is ACTIVATED in a P47T dataset while KEGG reads suppression.",
+    "Vigabatrin: efficacy reports on spasms versus a brain-imaging abnormality in WWOX-DEE (CLAIM 001); position cautionary in the working model.",
+    "The systemic-null confounder (CLAIM 036)."
+   ],
+   "sources": {
+    "cards": [
+     "F03_bumetanide_chloride_gradient",
+     "EB-VGB-01 (cards_early)"
+    ],
+    "hypotheses": [],
+    "hypotheses_note": "No hypothesis in the ledger has inhibitory hypofunction as its subject (the unmeasured chloride premise is NEED-GABA-CHLORIDE-GRADIENT).",
+    "map_records": [
+     "M3",
+     "N-04",
+     "R-07"
+    ],
+    "documents": [],
+    "registry_ids": [
+     "CLAIM 005",
+     "CLAIM 021",
+     "CLAIM 001",
+     "DL-MECH-035"
+    ],
+    "papers": [
+     {
+      "pmid": "34634460",
+      "paper_registry_ids": [
+       "CORPUS P210",
+       "PAPER 031"
+      ]
+     },
+     {
+      "pmid": "30290271",
+      "paper_registry_ids": [
+       "CORPUS-STUB-085",
+       "PAPER 006"
+      ]
+     },
+     {
+      "pmid": "34268881",
+      "paper_registry_ids": [
+       "CORPUS P365",
+       "PAPER 039"
+      ]
+     },
+     {
+      "pmid": "36828035",
+      "paper_registry_ids": [
+       "CORPUS-STUB-053",
+       "PAPER 007",
+       "PAPER 112"
+      ]
+     }
+    ]
+   },
+   "targets": [
+    {
+     "symbol": "PVALB",
+     "role": "parvalbumin (marker)",
+     "collision_note": "PVALB has the alias symbol MB (myoglobin's approved symbol); alias-based searches can collide.",
+     "hgnc_id": "HGNC:9704",
+     "hgnc_name": "parvalbumin",
+     "also_alias_or_previous_symbol_of": [
+      "MB (alias_symbol)"
+     ],
+     "target_kind": "readout_marker"
+    },
+    {
+     "symbol": "GAD1",
+     "role": "GAD67 (marker/synthesis)",
+     "hgnc_id": "HGNC:4092",
+     "hgnc_name": "glutamate decarboxylase 1",
+     "target_kind": "readout_marker"
+    },
+    {
+     "symbol": "GAD2",
+     "role": "GAD65 (marker/synthesis)",
+     "hgnc_id": "HGNC:4093",
+     "hgnc_name": "glutamate decarboxylase 2",
+     "target_kind": "readout_marker"
+    },
+    {
+     "symbol": "GABRB2",
+     "role": "GABA-A receptor beta2 subunit",
+     "hgnc_id": "HGNC:4082",
+     "hgnc_name": "gamma-aminobutyric acid type A receptor subunit beta2",
+     "target_kind": "readout_marker"
+    },
+    {
+     "symbol": "GABRB3",
+     "role": "GABA-A receptor beta3 subunit",
+     "hgnc_id": "HGNC:4083",
+     "hgnc_name": "gamma-aminobutyric acid type A receptor subunit beta3",
+     "target_kind": "readout_marker"
+    },
+    {
+     "symbol": "ABAT",
+     "role": "GABA transaminase (vigabatrin target)",
+     "hgnc_id": "HGNC:23",
+     "hgnc_name": "4-aminobutyrate aminotransferase",
+     "target_kind": "intervention_target"
+    },
+    {
+     "symbol": "NPY",
+     "role": "neuropeptide Y (transcript reduced in organoid)",
+     "hgnc_id": "HGNC:7955",
+     "hgnc_name": "neuropeptide Y",
+     "target_kind": "readout_marker"
+    }
+   ],
+   "pathways": [
+    {
+     "id": "GO:0007214",
+     "label": "gamma-aminobutyric acid signaling pathway"
+    }
+   ],
+   "evidence_scope": [
+    "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
+   ],
+   "coverage": {
+    "status": "NOT_ASSESSED",
+    "note": "Coverage of this need by catalogue compounds is not computed here; the repurposing module sets it."
+   },
+   "notes": "Direction for any compound class must be argued separately; the record forbids collapsing 'GABA axis' into a single sign.",
+   "basis": "observed"
+  },
+  {
+   "id": "NEED-GABA-CHLORIDE-GRADIENT",
+   "label": "Chloride gradient and GABA polarity (NKCC1/KCC2): premise unmeasured",
+   "family": "Network excitability",
+   "track": {
+    "value": "A",
+    "basis": "Allele-blind network premise."
+   },
+   "goal": {
+    "value": "partial_benefit",
+    "basis": "Partial, network-level."
+   },
+   "observed": [
+    {
+     "id": "O1",
+     "statement": "No WWOX system has a measurement of E_GABA, intracellular chloride, NKCC1/KCC2 or a GABA response. The depolarizing-GABA reading is an interpretation of a marker pattern against the developmental literature.",
+     "model_type": "not_applicable",
+     "species": "UNKNOWN",
+     "genotype": "UNKNOWN",
+     "tissue_or_cells": "UNKNOWN",
+     "age_stage": "UNKNOWN",
+     "comparison": "not applicable",
+     "readout": "E_GABA / chloride",
+     "readout_level": "none",
+     "direction_observed": "not measured",
+     "evidence_scope": "UNVERIFIED_HYPOTHESIS",
+     "limits": "Placeholder observation: the absence is the datum.",
+     "pmid": "34268881",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
+       "entry": 1,
+       "anchor": "depolarizing gaba as an interpretation"
+      },
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
+       "entry": 8,
+       "anchor": "does not measure gaba reversal potential"
+      }
+     ],
+     "locator_status": "MANIFEST"
+    },
+    {
+     "id": "O2",
+     "statement": "Human WWOX-knockout organoid transcripts: SLC12A2 (NKCC1) over SLC12A5 (KCC2) ratio has no signed direction (composition and maturity confounded); GABRB2 and GABRB3 are lower.",
+     "model_type": "human_cerebral_organoid_knockout",
+     "species": "human",
+     "genotype": "WWOX knockout (4) versus wild type (2)",
+     "tissue_or_cells": "bulk organoid RNA",
+     "age_stage": "culture week 15",
+     "comparison": "knockout against wild type",
+     "readout": "transcript ratio",
+     "readout_level": "transcript",
+     "direction_observed": "no signed direction",
+     "evidence_scope": "COMPUTATIONAL_RESULT",
+     "limits": "Transcript ratio is not E_GABA; six libraries.",
+     "pmid": null,
+     "locators": [
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/w2_therapeutic_it2_20261027/organoid_panel_cpm.tsv",
+       "anchor": "rows SLC12A2, SLC12A5"
+      },
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/cards/F03_bumetanide_chloride_gradient.card.json",
+       "anchor": "disease_assertions DA-W2-020, DA-W2-021"
+      }
+     ],
+     "locator_status": "DOCUMENT"
+    }
+   ],
+   "inferred": [
+    "That GABA is depolarizing in WWOX-deficient neurons (load-bearing premise for bumetanide) is DEFAULT_FROM_TEXTBOOK, not measured."
+   ],
+   "intervention_direction": {
+    "direction": "uncertain",
+    "on": "NKCC1 (SLC12A2) / KCC2 (SLC12A5) balance",
+    "rationale": "A chloride-gradient lever follows only if GABA is depolarizing; that premise has no WWOX datum.",
+    "certainty": "unknown",
+    "do_not_assume": "Mechanism does not predict outcome: the depolarizing-GABA rationale predicts GABAergic drugs underperform, and vigabatrin nonetheless resolved spasms in published cases."
+   },
+   "counter_evidence": [
+    "Premise unmeasured; the one functional inhibitory measurement is amplitude hypofunction, a competing account (working model, 2026-09-27).",
+    "Marker-level data cut both ways (see NEED-INHIBITORY-HYPOFUNCTION)."
+   ],
+   "sources": {
+    "cards": [
+     "F03_bumetanide_chloride_gradient"
+    ],
+    "hypotheses": [],
+    "hypotheses_note": "No hypothesis; research candidate RC-001 is the open item.",
+    "map_records": [
+     "R-07",
+     "N-04",
+     "M3"
+    ],
+    "documents": [],
+    "registry_ids": [
+     "DL-MECH-035",
+     "CLAIM 001",
+     "CLAIM 031"
+    ],
+    "papers": [
+     {
+      "pmid": "34268881",
+      "paper_registry_ids": [
+       "CORPUS P365",
+       "PAPER 039"
+      ]
+     }
+    ]
+   },
+   "targets": [
+    {
+     "symbol": "SLC12A2",
+     "role": "NKCC1 (bumetanide target)",
+     "hgnc_id": "HGNC:10911",
+     "hgnc_name": "solute carrier family 12 member 2",
+     "target_kind": "intervention_target"
+    },
+    {
+     "symbol": "SLC12A5",
+     "role": "KCC2",
+     "hgnc_id": "HGNC:13818",
+     "hgnc_name": "solute carrier family 12 member 5",
+     "target_kind": "pathway_member"
+    }
+   ],
+   "pathways": [
+    {
+     "id": "GO:0007214",
+     "label": "gamma-aminobutyric acid signaling pathway"
+    }
+   ],
+   "evidence_scope": [
+    "UNVERIFIED_HYPOTHESIS",
+    "COMPUTATIONAL_RESULT"
+   ],
+   "coverage": {
+    "status": "NOT_ASSESSED",
+    "note": "Coverage of this need by catalogue compounds is not computed here; the repurposing module sets it."
+   },
+   "notes": "NO_OBSERVATION in a WWOX system: a need kept to prevent a textbook premise from being used as if observed.",
+   "basis": "exploratory_question"
+  },
+  {
+   "id": "NEED-SEIZURE-CONTROL-SYMPTOMATIC",
+   "label": "Seizure and spasm control as a symptom-level need (distinct from developmental protection)",
+   "family": "Symptom-level",
+   "track": {
+    "value": "A",
+    "basis": "A symptom-level need independent of lesion class; whether response depends on allele class is unmeasured (the diet series' three responders carry splice-region or exon-deletion alleles; the one carrier of the missense worked-example allele has no diet entry)."
+   },
+   "goal": {
+    "value": "partial_benefit",
+    "basis": "Symptomatic control only: in one series symptomatic response and developmental outcome did not move together (CLAIM 031, map N-15)."
+   },
+   "observed": [
+    {
+     "id": "O1",
+     "statement": "Clinician-reported improvement in seizure control on the ketogenic diet in three named patients of a five-patient WOREE series; no count, score or instrument; two of the three had died at the time of writing; developmental status identical across all five.",
+     "model_type": "human_clinical_report",
+     "species": "human",
+     "genotype": "WWOX-related, recessive genotypes, five-patient series (responder allele classes are in the card)",
+     "tissue_or_cells": "whole organism",
+     "age_stage": "UNKNOWN (not carried in the card)",
+     "comparison": "responders against non-responders, no comparator",
+     "readout": "clinician-reported seizure control",
+     "readout_level": "clinical",
+     "direction_observed": "improved in 3 of 5 (denominator: the five series patients; exposed number not stated)",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "limits": "Two of the three responders are previously published individuals, so pooled counts double-count them.",
+     "pmid": "36537114",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36537114.json",
+       "entry": 0,
+       "anchor": "clinician-reported improvement in seizure control in three named patients"
+      },
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36537114.json",
+       "entry": 2,
+       "anchor": "developmental status is identical across all five columns"
+      },
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36537114.json",
+       "entry": 3,
+       "anchor": "two patients of the series had died"
+      }
+     ],
+     "locator_status": "MANIFEST"
+    },
+    {
+     "id": "O2",
+     "statement": "Vigabatrin resolved spasms in published WWOX-null children, against a brain-MRI abnormality signal in WWOX-DEE (VABAM) in a separate cohort.",
+     "model_type": "human_clinical_report",
+     "species": "human",
+     "genotype": "WWOX-null class children with West syndrome",
+     "tissue_or_cells": "whole organism",
+     "age_stage": "infancy",
+     "comparison": "single-case reports",
+     "readout": "clinical cessation of epileptic spasms",
+     "readout_level": "clinical",
+     "direction_observed": "resolved (case level)",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "limits": "Two cases; conflicting cohort evidence on the safety side.",
+     "pmid": "30361190",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID30361190.json",
+       "entry": 12,
+       "anchor": "vigabatrin resolved the spasms in child 1"
+      },
+      {
+       "kind": "registry",
+       "ids": [
+        "CLAIM 001"
+       ]
+      }
+     ],
+     "locator_status": "MANIFEST"
+    },
+    {
+     "id": "O3",
+     "statement": "Cannabidiol (class level) and ACTH/corticosteroid/phenobarbital regimens: clinician-reported control in heterogeneous curated reports; no genotype stratification, no comparator, reading depth queried not read.",
+     "model_type": "human_clinical_report",
+     "species": "human",
+     "genotype": "WWOX-related epilepsy, heterogeneous reports",
+     "tissue_or_cells": "whole organism",
+     "age_stage": "mixed",
+     "comparison": "none",
+     "readout": "clinician-reported control",
+     "readout_level": "clinical",
+     "direction_observed": "reported controlled / continued",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "limits": "Queried-not-read; 'Yes' undefined in the curation; West syndrome frequent in the cohort, so a WWOX-genotype effect cannot be separated.",
+     "pmid": null,
+     "locators": [
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/cards_early/EB-CBD-AX-01.packet.json",
+       "anchor": "disease_assertion D-CBD-1"
+      },
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/cards_early/EB-HORM-AX-01.packet.json",
+       "anchor": "disease_assertion D-HORM-1"
+      }
+     ],
+     "locator_status": "DOCUMENT"
+    }
+   ],
+   "inferred": [
+    "That any of these responses is mechanism-linked to WWOX loss is not established (map N-15: seizure control corrects a biomarker, not the mechanism).",
+    "That the response generalises beyond the few reported patients."
+   ],
+   "intervention_direction": {
+    "direction": "down",
+    "on": "seizure/spasm burden",
+    "rationale": "Symptom-level; the direction is the clinical aim and is not derived from a pathway.",
+    "certainty": "supported_as_clinical_report_only",
+    "do_not_assume": "Seizure control is not developmental protection and must not be reported as such. Paediatric protocol use is not suitability for WWOX-DEE; no dose or regimen is carried."
+   },
+   "counter_evidence": [
+    "CLAIM 031: cognitive and psychomotor impairment preceded epileptic encephalopathy and did not improve with better seizure control in some cases.",
+    "Real-world continuation signal for the ketogenic diet is mixed (3 tried, 1 continued; listed as ineffective in a severe case)."
+   ],
+   "sources": {
+    "cards": [
+     "EB-KD-01 (cards_early)",
+     "EB-VGB-01 (cards_early)",
+     "EB-CBD-AX-01 (cards_early)",
+     "EB-HORM-AX-01 (cards_early)",
+     "EB-DEV-AX-01 (cards_early)"
+    ],
+    "hypotheses": [],
+    "hypotheses_note": "No hypothesis in the ledger; the early-benefit map records are the source (early_benefit_map_records_candidate_20261023.md).",
+    "map_records": [
+     "R-05",
+     "N-04",
+     "N-15"
+    ],
+    "documents": [
+     "disease-models/wwox/research/drug_repurposing/early_benefit_map_records_candidate_20261023.md",
+     "disease-models/wwox/research/drug_repurposing/typed_assertions_20261023.tsv"
+    ],
+    "registry_ids": [
+     "CLAIM 001",
+     "CLAIM 031",
+     "CLAIM 042",
+     "DL-MOL-007"
+    ],
+    "papers": [
+     {
+      "pmid": "36537114",
+      "paper_registry_ids": [
+       "PAPER 017"
+      ]
+     },
+     {
+      "pmid": "30361190",
+      "paper_registry_ids": [
+       "CORPUS P356",
+       "PAPER 045"
+      ]
+     }
+    ]
+   },
+   "targets": [
+    {
+     "symbol": "ABAT",
+     "role": "GABA transaminase (vigabatrin target)",
+     "hgnc_id": "HGNC:23",
+     "hgnc_name": "4-aminobutyrate aminotransferase",
+     "target_kind": "intervention_target"
+    },
+    {
+     "symbol": "CACNA1G",
+     "role": "T-type calcium channel (see NEED-T-TYPE-CALCIUM)",
+     "hgnc_id": "HGNC:1394",
+     "hgnc_name": "calcium voltage-gated channel subunit alpha1 G",
+     "target_kind": "intervention_target"
+    }
+   ],
+   "pathways": [],
+   "evidence_scope": [
+    "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
+   ],
+   "coverage": {
+    "status": "NOT_ASSESSED",
+    "note": "Coverage of this need by catalogue compounds is not computed here; the repurposing module sets it."
+   },
+   "notes": "Target list is deliberately short: most seizure-control drugs act on targets unrelated to WWOX biology; this need is a clinical endpoint, and the catalogue should match drug-to-endpoint here, not drug-to-pathway.",
+   "basis": "observed"
+  },
+  {
+   "id": "NEED-T-TYPE-CALCIUM",
+   "label": "T-type calcium channel dependence of provoked seizure in Wwox loss",
+   "family": "Network excitability",
+   "track": {
+    "value": "A",
+    "basis": "Allele-blind pharmacology in the null mouse."
+   },
+   "goal": {
+    "value": "partial_benefit",
+    "basis": "Seizure-susceptibility lever in a provoked model."
+   },
+   "observed": [
+    {
+     "id": "O1",
+     "statement": "In the Wwox-null mouse, ethosuximide suppressed the late phase of the PTZ-provoked seizure score significantly only in the null genotype (non-significant in wild type and heterozygote); the drug-by-genotype interaction was not tested and the same PTZ dose gave a larger response in the null.",
+     "model_type": "mouse_constitutive_knockout",
+     "species": "mouse",
+     "genotype": "Wwox -/- versus +/- versus +/+",
+     "tissue_or_cells": "whole animal, behavioural seizure stage (Racine) over one hour",
+     "age_stage": "preweaning pups",
+     "comparison": "drug versus PTZ alone within each genotype",
+     "readout": "PTZ-provoked behavioural seizure stage",
+     "readout_level": "functional",
+     "direction_observed": "decreased with drug in null only",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "limits": "Small groups (null PTZ-alone N 6, drug N 6), no interaction test; lithium suppressed in all three genotypes in the same paper.",
+     "pmid": "32000863",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID32000863.json",
+       "entry": 1,
+       "anchor": "ethosuximide, by contrast, is genotype-specific"
+      },
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID32000863.json",
+       "entry": 30,
+       "anchor": "the same ptz dose was used in all three genotypes"
+      },
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/cards_early/EB-ETX-01.packet.json",
+       "anchor": "disease_assertion D-ETX-1 (late-phase graphical reading; interaction not tested)"
+      }
+     ],
+     "locator_status": "MANIFEST"
+    }
+   ],
+   "inferred": [
+    "That the T-type channel is a WWOX-downstream node: genotype specificity rests on one experiment; a late-phase graphical reading is the card's.",
+    "Human T-type involvement in WWOX-DEE is not measured."
+   ],
+   "intervention_direction": {
+    "direction": "down",
+    "on": "T-type calcium current",
+    "rationale": "A perturbation result: a T-type blocker suppressed the late phase of the provoked seizure score in the null mouse; genotype specificity was not tested by an interaction.",
+    "certainty": "inferred",
+    "do_not_assume": "Genotype specificity not established by an interaction test; sodium-channel blockers were assigned to other channelopathies, not WWOX (map N-03)."
+   },
+   "counter_evidence": [
+    "Lithium also suppressed in wild-type mice, so a drug effect in a seizing animal is not a WWOX-specific rescue.",
+    "No drug-by-genotype interaction test and no concurrent same-day PTZ-alone control in the card's reading."
+   ],
+   "sources": {
+    "cards": [
+     "EB-ETX-01 (cards_early)"
+    ],
+    "hypotheses": [],
+    "hypotheses_note": "Lead DL-MECH-170 (ledger), no hypothesis id.",
+    "map_records": [
+     "N-03"
+    ],
+    "documents": [
+     "disease-models/wwox/research/drug_repurposing/early_benefit_map_records_candidate_20261023.md"
+    ],
+    "registry_ids": [
+     "DL-MECH-170",
+     "CLAIM 016"
+    ],
+    "papers": [
+     {
+      "pmid": "32000863",
+      "paper_registry_ids": [
+       "PAPER 019"
+      ]
+     }
+    ]
+   },
+   "targets": [
+    {
+     "symbol": "CACNA1G",
+     "role": "T-type channel alpha1G",
+     "hgnc_id": "HGNC:1394",
+     "hgnc_name": "calcium voltage-gated channel subunit alpha1 G",
+     "target_kind": "intervention_target"
+    },
+    {
+     "symbol": "CACNA1H",
+     "role": "T-type channel alpha1H",
+     "hgnc_id": "HGNC:1395",
+     "hgnc_name": "calcium voltage-gated channel subunit alpha1 H",
+     "target_kind": "intervention_target"
+    },
+    {
+     "symbol": "CACNA1I",
+     "role": "T-type channel alpha1I",
+     "hgnc_id": "HGNC:1396",
+     "hgnc_name": "calcium voltage-gated channel subunit alpha1 I",
+     "target_kind": "intervention_target"
+    }
+   ],
+   "pathways": [
+    {
+     "id": "GO:0070588",
+     "label": "calcium ion transmembrane transport"
+    }
+   ],
+   "evidence_scope": [
+    "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
+   ],
+   "coverage": {
+    "status": "NOT_ASSESSED",
+    "note": "Coverage of this need by catalogue compounds is not computed here; the repurposing module sets it."
+   },
+   "notes": "Id collision to avoid: the early-benefit candidate file proposes a record R-10 for ethosuximide, while the map's own R-10 is the ISRIB class. Cite the candidate by file, not by id.",
+   "basis": "observed"
+  },
+  {
+   "id": "NEED-MYELINATION",
+   "label": "Hypomyelination: restore myelin / white-matter development",
+   "family": "Development and glia",
+   "track": {
+    "value": "A",
+    "basis": "Allele-blind; secondary to neuronal WWOX loss."
+   },
+   "goal": {
+    "value": "partial_benefit",
+    "basis": "Broad functional-recovery endpoint; partial by the data (rescue is incomplete)."
+   },
+   "observed": [
+    {
+     "id": "O1",
+     "statement": "Neuron-specific deletion gives about 3.3 times fewer myelinated axons in the corpus callosum at P17; oligodendrocyte- and astrocyte-specific deletions give no evident anomaly.",
+     "model_type": "mouse_neuron_specific_knockout",
+     "species": "mouse",
+     "genotype": "Synapsin-Cre versus Olig2-Cre versus GFAP-Cre Wwox deletion",
+     "tissue_or_cells": "corpus callosum, optic nerve",
+     "age_stage": "P17",
+     "comparison": "neuronal deletion against control",
+     "readout": "myelinated and unmyelinated axon counts",
+     "readout_level": "functional",
+     "direction_observed": "decreased",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "limits": "Field-level pseudoreplication, three mice per genotype.",
+     "pmid": "33914858",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID33914858.json",
+       "entry": 0,
+       "anchor": "myelinated axons"
+      }
+     ],
+     "locator_status": "MANIFEST"
+    },
+    {
+     "id": "O2",
+     "statement": "Neuronal AAV9 rescue improves myelin (g-ratio normalises; CC1+ and PDGFRa+ counts move toward wild type) but leaves unmyelinated axons about two-fold above wild type; oligodendrocytes are never transduced.",
+     "model_type": "mouse_constitutive_knockout",
+     "species": "mouse",
+     "genotype": "Wwox-null treated versus untreated versus wild type",
+     "tissue_or_cells": "brain, electron microscopy and immunostaining",
+     "age_stage": "treated neonatally; read age UNKNOWN per this source",
+     "comparison": "treated against wild type and knockout",
+     "readout": "unmyelinated axons per field; CC1+, PDGFRa+ cells",
+     "readout_level": "functional",
+     "direction_observed": "partial rescue",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "limits": "The only MBP quantification (42422765) has no treated arm and the treated-arm panel has no knockout column.",
+     "pmid": "34747138",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34747138.json",
+       "entry": 5,
+       "anchor": "oligodendrocytes are never transduced"
+      },
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34747138.json",
+       "entry": 9,
+       "anchor": "significant against the rescue"
+      },
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json",
+       "entry": 43,
+       "anchor": "only mbp quantification"
+      }
+     ],
+     "locator_status": "MANIFEST"
+    },
+    {
+     "id": "O3",
+     "statement": "Human WWOX-knockout organoid oligodendrocyte-lineage transcripts have no signed direction: organoids contain no annotated oligodendrocyte population, so the measurement cannot exist in this system.",
+     "model_type": "human_cerebral_organoid_knockout",
+     "species": "human",
+     "genotype": "WWOX knockout versus wild type",
+     "tissue_or_cells": "bulk organoid RNA (no oligodendrocyte cluster)",
+     "age_stage": "culture week 15",
+     "comparison": "knockout against wild type",
+     "readout": "OLIG1, OLIG2, SOX10, PDGFRA, MBP, PLP1 transcripts",
+     "readout_level": "transcript",
+     "direction_observed": "no signed direction",
+     "evidence_scope": "COMPUTATIONAL_RESULT",
+     "limits": "Absent population; stated as a limit, not a result.",
+     "pmid": "42397075",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42397075.json",
+       "entry": 30,
+       "anchor": "no annotated oligodendrocyte"
+      },
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/cards/F02_myelination_activity_sign.card.json",
+       "anchor": "disease_assertion DA-W2-012"
+      }
+     ],
+     "locator_status": "MANIFEST"
+    }
+   ],
+   "inferred": [
+    "That a pro-myelinating agent acts on a compartment that receives the axonal signal: oligodendrocyte-directed pushing may find the signal absent (map N-13).",
+    "That a residual oligodendrocyte-autonomous WWOX function explains the incomplete rescue is the authors' IPOTESI."
+   ],
+   "intervention_direction": {
+    "direction": "restore",
+    "on": "myelin formation / maturation",
+    "rationale": "A structural deficit that partly recovers after the causal (neuronal) rescue, so recovery is achievable in principle. Whether a pharmacological pro-myelinating route works is unresolved: the axonal signal may be absent and activity-dependent myelination may be harmed by NMDAR block.",
+    "certainty": "supported_in_WWOX_mouse_model for recovery after the causal rescue; unknown for any pharmacological route",
+    "do_not_assume": "Activity-dependent myelination may be worsened by chronic NMDAR block (unmeasured); the myelin window is early (PND5-21 rat); a pro-myelinating agent may not be able to act if the neuron does not signal."
+   },
+   "counter_evidence": [
+    "N-13: the target is not causally downstream of WWOX in the cell targeted; window closing.",
+    "Oligodendrocyte arm of the AAV experiment produced no benefit and no detectable protein, so it is not a negative result about oligodendrocytes (entry 45)."
+   ],
+   "sources": {
+    "cards": [
+     "F02_myelination_activity_sign"
+    ],
+    "hypotheses": [
+     "HYP-20260709-07"
+    ],
+    "hypotheses_note": "HYP-20260709-07 (pro-myelinating agents conditional on an experiment not yet run).",
+    "map_records": [
+     "M9",
+     "N-13"
+    ],
+    "documents": [],
+    "registry_ids": [
+     "CLAIM 003",
+     "CLAIM 004",
+     "DL-MECH-031"
+    ],
+    "papers": [
+     {
+      "pmid": "33914858",
+      "paper_registry_ids": [
+       "CORPUS-STUB-087",
+       "PAPER 004"
+      ]
+     },
+     {
+      "pmid": "34747138",
+      "paper_registry_ids": [
+       "CORPUS-STUB-048",
+       "PAPER 005"
+      ]
+     },
+     {
+      "pmid": "42422765",
+      "paper_registry_ids": [
+       "PAPER 011"
+      ]
+     },
+     {
+      "pmid": "42397075",
+      "paper_registry_ids": [
+       "PAPER 094"
+      ]
+     }
+    ]
+   },
+   "targets": [
+    {
+     "symbol": "MBP",
+     "role": "myelin basic protein (marker)",
+     "collision_note": "MBP is also the common abbreviation for maltose-binding protein (a fusion tag) and an alias of MBL2/PRG2 in HGNC alias tables: use the HGNC symbol MBP with its HGNC id, not the string.",
+     "hgnc_id": "HGNC:6925",
+     "hgnc_name": "myelin basic protein",
+     "also_alias_or_previous_symbol_of": [
+      "MBL2 (alias_symbol)",
+      "PRG2 (alias_symbol)"
+     ],
+     "target_kind": "readout_marker"
+    },
+    {
+     "symbol": "PLP1",
+     "role": "proteolipid protein 1",
+     "hgnc_id": "HGNC:9086",
+     "hgnc_name": "proteolipid protein 1",
+     "target_kind": "readout_marker"
+    },
+    {
+     "symbol": "OLIG2",
+     "role": "oligodendrocyte lineage transcription factor",
+     "hgnc_id": "HGNC:9398",
+     "hgnc_name": "oligodendrocyte transcription factor 2",
+     "target_kind": "readout_marker"
+    },
+    {
+     "symbol": "SOX10",
+     "role": "oligodendrocyte lineage transcription factor",
+     "hgnc_id": "HGNC:11190",
+     "hgnc_name": "SRY-box transcription factor 10",
+     "target_kind": "readout_marker"
+    },
+    {
+     "symbol": "PDGFRA",
+     "role": "OPC marker",
+     "hgnc_id": "HGNC:8803",
+     "hgnc_name": "platelet derived growth factor receptor alpha",
+     "target_kind": "readout_marker"
+    },
+    {
+     "symbol": "CHRM1",
+     "role": "muscarinic receptor (clemastine/benztropine-class pro-myelinating route in the card)",
+     "hgnc_id": "HGNC:1950",
+     "hgnc_name": "cholinergic receptor muscarinic 1",
+     "target_kind": "intervention_target"
+    }
+   ],
+   "pathways": [
+    {
+     "id": "GO:0042552",
+     "label": "myelination"
+    }
+   ],
+   "evidence_scope": [
+    "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+    "COMPUTATIONAL_RESULT"
+   ],
+   "coverage": {
+    "status": "NOT_ASSESSED",
+    "note": "Coverage of this need by catalogue compounds is not computed here; the repurposing module sets it."
+   },
+   "notes": "",
+   "basis": "observed"
+  },
+  {
+   "id": "NEED-GSK3B-DEREPRESSION",
+   "label": "GSK3beta de-repression (loss of WWOX docking inhibition)",
+   "family": "Signalling",
+   "track": {
+    "value": "A",
+    "basis": "Allele-blind in design; the docking inhibition is a WW-scaffold/tail interaction whose preservation by an SDR missense allele is not measured."
+   },
+   "goal": {
+    "value": "partial_benefit",
+    "basis": "Pathway correction downstream of WWOX loss."
+   },
+   "observed": [
+    {
+     "id": "O1",
+     "statement": "GSK3beta is dis-inhibited in all three brain regions of the Wwox-null mouse: total GSK3beta protein is unchanged and inhibitory Ser9 phosphorylation falls.",
+     "model_type": "mouse_constitutive_knockout",
+     "species": "mouse",
+     "genotype": "Wwox -/- versus +/+",
+     "tissue_or_cells": "cerebellum, hippocampus, cortex lysates",
+     "age_stage": "postnatal day 20",
+     "comparison": "knockout against wild type",
+     "readout": "pSer9-GSK3beta (western)",
+     "readout_level": "phospho",
+     "direction_observed": "pSer9 decreased; total unchanged",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "limits": "Systemic-null confounder; the phospho-S9 readout is not the docking mechanism.",
+     "pmid": "32000863",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID32000863.json",
+       "entry": 2,
+       "anchor": "dis-inhibited"
+      },
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID32000863.json",
+       "entry": 4,
+       "anchor": "ser9 dephosphorylation"
+      }
+     ],
+     "locator_status": "MANIFEST"
+    },
+    {
+     "id": "O2",
+     "statement": "WWOX residues 388-407 (L404 strictly required) bind GSK3beta through an Axin-like motif; WWOX loss raises GSK3beta output on Tau, S9-independently; Tau is the effector (Tau knockdown abolishes the WWOX effect).",
+     "model_type": "cell_line",
+     "species": "human",
+     "genotype": "WWOX overexpression/knockdown; GSK3beta siRNA; Tau siRNA",
+     "tissue_or_cells": "SH-SY5Y, retinoic-acid differentiated",
+     "age_stage": "not applicable",
+     "comparison": "perturbation against control",
+     "readout": "Tau phosphorylation at S396/S404; neurite outgrowth",
+     "readout_level": "phospho",
+     "direction_observed": "WWOX inhibits; loss de-represses",
+     "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT",
+     "limits": "RNAi in a neuroblastoma line; not DEE.",
+     "pmid": "22193544",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID22193544.json",
+       "entry": 2,
+       "anchor": "l404 is strictly required"
+      },
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID22193544.json",
+       "entry": 6,
+       "anchor": "tau knockdown abolishes the wwox effect"
+      }
+     ],
+     "locator_status": "MANIFEST"
+    }
+   ],
+   "inferred": [
+    "That a docking-site (Axin-site) ligand could separate GSK3 isoforms is an isoform-selectivity argument from adjacent literature, untested for WWOX.",
+    "CLAIM 016 (pSer9 falls) and CLAIM 035 (S9-independent docking) exclude each other on the S9 axis; which reading carries the disease is unresolved."
+   ],
+   "intervention_direction": {
+    "direction": "uncertain",
+    "on": "GSK3beta output",
+    "rationale": "GSK3beta output is raised (Ser9 readout in mouse; docking mechanism in cells), but the only pharmacology (lithium) is not WWOX-specific and acts the opposite way on Wnt; whether lowering GSK3beta helps is unresolved.",
+    "certainty": "context_dependent",
+    "do_not_assume": "Lithium is a non-selective GSK3 inhibitor that also stabilises beta-catenin and so ACTIVATES Wnt, the opposite of the Wnt need; and tau-lowering would remove the effector (map N-17)."
+   },
+   "counter_evidence": [
+    "Lithium suppressed PTZ-induced seizures in all three genotypes, wild type included: no WWOX-specific rescue (CLAIM 016 evidence boundary).",
+    "Direction conflicts with NEED-WNT-BETA-CATENIN: one compound cannot be scored on its best axis.",
+    "Tau is the effector of the benefit in the one system tested (N-17)."
+   ],
+   "sources": {
+    "cards": [
+     "G01_lithium_gsk3"
+    ],
+    "hypotheses": [],
+    "hypotheses_note": "No hypothesis; map H-1 (Axin-site ligand) is the open idea.",
+    "map_records": [
+     "CHAIN C",
+     "R-04",
+     "N-02",
+     "N-17",
+     "M4"
+    ],
+    "documents": [],
+    "registry_ids": [
+     "CLAIM 016",
+     "CLAIM 035",
+     "DL-MECH-067",
+     "DL-MECH-068"
+    ],
+    "papers": [
+     {
+      "pmid": "32000863",
+      "paper_registry_ids": [
+       "PAPER 019"
+      ]
+     },
+     {
+      "pmid": "22193544",
+      "paper_registry_ids": [
+       "PAPER 056"
+      ]
+     }
+    ]
+   },
+   "targets": [
+    {
+     "symbol": "GSK3B",
+     "role": "GSK3beta (docking site is the proposed node, not the ATP pocket)",
+     "hgnc_id": "HGNC:4617",
+     "hgnc_name": "glycogen synthase kinase 3 beta",
+     "target_kind": "intervention_target"
+    },
+    {
+     "symbol": "GSK3A",
+     "role": "GSK3alpha paralog (selectivity)",
+     "hgnc_id": "HGNC:4616",
+     "hgnc_name": "glycogen synthase kinase 3 alpha",
+     "target_kind": "pathway_member"
+    },
+    {
+     "symbol": "MAPT",
+     "role": "Tau, the effector (do not lower)",
+     "hgnc_id": "HGNC:6893",
+     "hgnc_name": "microtubule associated protein tau",
+     "target_kind": "effector_constraint"
+    },
+    {
+     "symbol": "AXIN1",
+     "role": "docking-motif partner",
+     "hgnc_id": "HGNC:903",
+     "hgnc_name": "axin 1",
+     "target_kind": "pathway_member"
+    }
+   ],
+   "pathways": [
+    {
+     "id": "GO:0016055",
+     "label": "Wnt signaling pathway"
+    }
+   ],
+   "evidence_scope": [
+    "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+    "WWOX_BIOLOGY_OTHER_CONTEXT"
+   ],
+   "coverage": {
+    "status": "NOT_ASSESSED",
+    "note": "Coverage of this need by catalogue compounds is not computed here; the repurposing module sets it."
+   },
+   "notes": "",
+   "basis": "observed"
+  },
+  {
+   "id": "NEED-WNT-BETA-CATENIN",
+   "label": "Wnt/beta-catenin readout elevated in WWOX-deficient organoids (direction observed; confounded by maturity)",
+   "family": "Signalling",
+   "track": {
+    "value": "A",
+    "basis": "Allele-blind pathway lever; the anti-Wnt function is WW-scaffold (DVL2), possibly preserved in an SDR missense allele."
+   },
+   "goal": {
+    "value": "partial_benefit",
+    "basis": "Pathway modulation; not restoration."
+   },
+   "observed": [
+    {
+     "id": "O1",
+     "statement": "In the authors' deposited differential-expression tables, canonical Wnt/beta-catenin targets are up in WWOX-knockout cerebral organoids (NKD1 +1.23, AXIN2 +0.79, LEF1 +1.00, TCF7L2 +1.04, CTNNB1 +0.56, WNT8B +3.17; padj at most 1.6e-2).",
+     "model_type": "human_cerebral_organoid_knockout",
+     "species": "human",
+     "genotype": "WWOX knockout (4 libraries) versus wild type (2 libraries)",
+     "tissue_or_cells": "cerebral organoids, bulk RNA",
+     "age_stage": "culture weeks 8-15",
+     "comparison": "knockout against wild type",
+     "readout": "Wnt target transcripts (Table EV1)",
+     "readout_level": "transcript",
+     "direction_observed": "up",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "limits": "One dataset, one laboratory; with 4 versus 2 libraries the minimum single-gene permutation p is 1/15; selected after looking.",
+     "pmid": "34268881",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
+       "entry": 31,
+       "anchor": "canonical wnt/beta-catenin target genes are up"
+      }
+     ],
+     "locator_status": "MANIFEST"
+    },
+    {
+     "id": "O2",
+     "statement": "Wnt rescue arm: AAV-WWOX brings five upstream genes toward wild type (WNT1, WNT3, WNT3A, WNT5A, ROR2) but does not normalise the beta-catenin effectors; LEF1, TCF7 and TCF4 sit above the knockout.",
+     "model_type": "human_cerebral_organoid_knockout",
+     "species": "human",
+     "genotype": "knockout versus knockout plus WWOX integration into the AAVS1 locus versus wild type",
+     "tissue_or_cells": "cerebral organoids",
+     "age_stage": "culture weeks 8-15",
+     "comparison": "three arms, n 4/4/4, one batch",
+     "readout": "13-gene qPCR (Figure 4D)",
+     "readout_level": "transcript",
+     "direction_observed": "mixed: ligands toward wild type, effectors not",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "limits": "Supraphysiological ectopic WWOX in all cell types; a neuron-promoter rescue in the 2026 work gave a different TCF4 reading in a single-lane western.",
+     "pmid": "34268881",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
+       "entry": 60,
+       "anchor": "does not normalise the canonical beta-catenin readouts"
+      },
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
+       "entry": 62,
+       "anchor": "silent on the beta-catenin effectors"
+      }
+     ],
+     "locator_status": "MANIFEST"
+    },
+    {
+     "id": "O3",
+     "statement": "The same group's single-cell data contrast late against early cells (a developmental-stage contrast, not a genotype contrast): canonical Wnt is higher in the early cells. Separately, the knockout organoids lose neurons (about -2.4 log2 fold-change) with radial glia up, a less advanced composition.",
+     "model_type": "human_cerebral_organoid_knockout",
+     "species": "human",
+     "genotype": "stage contrast (not genotype); knockout versus wild type for composition",
+     "tissue_or_cells": "cerebral organoid cell states (single-cell RNA-seq)",
+     "age_stage": "late versus early cells; organoid",
+     "comparison": "late against early stage",
+     "readout": "GO enrichment (Figure 5E); cell fractions (Figure 2F)",
+     "readout_level": "transcript",
+     "direction_observed": "Wnt higher in early cells; knockout composition less mature",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "limits": "Nothing about WWOX follows from the stage panel itself; it gives a published reason why an elevation can be an immaturity signature.",
+     "pmid": "42397075",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42397075.json",
+       "entry": 5,
+       "anchor": "guard against a false inference"
+      },
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42397075.json",
+       "entry": 2,
+       "anchor": "loses neurons"
+      }
+     ],
+     "locator_status": "MANIFEST"
+    },
+    {
+     "id": "O4",
+     "statement": "A calibration on 62 human cortical spheroid samples not perturbed for WWOX (six iPSC lines, about 25 to more than 650 days in culture) shows Wnt readouts move with elapsed culture time; a blind permutation reanalysis of the knockout contrast (4 versus 2 libraries) could not separate a WWOX effect from composition/maturity (minimum single-gene permutation p 1/15).",
+     "model_type": "human_cerebral_organoid_knockout",
+     "species": "human",
+     "genotype": "unperturbed spheroids (calibration); WWOX knockout versus wild type (reanalysis)",
+     "tissue_or_cells": "bulk RNA",
+     "age_stage": "culture about 25 to 650 days (calibration)",
+     "comparison": "culture time (calibration); label permutation (reanalysis)",
+     "readout": "Wnt-target transcript sets",
+     "readout_level": "transcript",
+     "direction_observed": "readouts move with culture time; knockout elevation not separable",
+     "evidence_scope": "COMPUTATIONAL_RESULT",
+     "limits": "Elapsed culture time is not cellular maturation; the calibration is not WWOX evidence; samples are repeated measures on lines, not 62 replicates.",
+     "pmid": null,
+     "locators": [
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/gse156243/prediction_maturation_calibration_20261025.md",
+       "anchor": "setup and result sections"
+      },
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/gse156243/independent_reanalysis_wnt_vs_maturation_20261025.md",
+       "anchor": "whole note"
+      }
+     ],
+     "locator_status": "DOCUMENT"
+    }
+   ],
+   "inferred": [
+    "That the elevation reflects WWOX-dependent pathway activity rather than composition/maturity is the open question; an independent blind reanalysis could not separate them.",
+    "That correcting the direction would improve any functional endpoint: none is measured under Wnt modulation in a WWOX system."
+   ],
+   "intervention_direction": {
+    "direction": "uncertain",
+    "on": "canonical Wnt/beta-catenin activity",
+    "rationale": "An observed elevation suggests lowering it, but the elevation is confounded with maturity, is not normalised by the causal rescue, and Wnt builds the developing tissue.",
+    "certainty": "context_dependent",
+    "do_not_assume": "Do not treat reversal of a Wnt readout as beneficial; reversal of the whole organoid signature includes both Wnt activators and inhibitors among the top reversers."
+   },
+   "counter_evidence": [
+    "Four constraints on HYP-20261025-09 (maturity confound; blind reanalysis; signature reversal selects no axis; rescue arm cannot reach the compartment).",
+    "Paediatric safety flag red in both directions (Wnt governs patterning)."
+   ],
+   "sources": {
+    "cards": [
+     "D02_wnt_tankyrase",
+     "D01_a51"
+    ],
+    "hypotheses": [
+     "HYP-20261025-09"
+    ],
+    "hypotheses_note": "HYP-20261025-09 is status parked (6/15) with a stated reopening condition; not ranked again here.",
+    "map_records": [
+     "CHAIN D",
+     "R-03",
+     "M5"
+    ],
+    "documents": [],
+    "registry_ids": [
+     "DL-MOL-003",
+     "DL-MECH-008",
+     "DL-MECH-034"
+    ],
+    "papers": [
+     {
+      "pmid": "34268881",
+      "paper_registry_ids": [
+       "CORPUS P365",
+       "PAPER 039"
+      ]
+     },
+     {
+      "pmid": "42397075",
+      "paper_registry_ids": [
+       "PAPER 094"
+      ]
+     }
+    ]
+   },
+   "targets": [
+    {
+     "symbol": "CTNNB1",
+     "role": "beta-catenin",
+     "hgnc_id": "HGNC:2514",
+     "hgnc_name": "catenin beta 1",
+     "target_kind": "pathway_member"
+    },
+    {
+     "symbol": "LEF1",
+     "role": "TCF/LEF target and effector",
+     "hgnc_id": "HGNC:6551",
+     "hgnc_name": "lymphoid enhancer binding factor 1",
+     "target_kind": "readout_marker"
+    },
+    {
+     "symbol": "AXIN2",
+     "role": "Wnt target",
+     "hgnc_id": "HGNC:904",
+     "hgnc_name": "axin 2",
+     "target_kind": "readout_marker"
+    },
+    {
+     "symbol": "TNKS",
+     "role": "tankyrase 1 (the tankyrase-inhibitor node)",
+     "hgnc_id": "HGNC:11941",
+     "hgnc_name": "tankyrase",
+     "target_kind": "intervention_target"
+    },
+    {
+     "symbol": "TNKS2",
+     "role": "tankyrase 2",
+     "hgnc_id": "HGNC:15677",
+     "hgnc_name": "tankyrase 2",
+     "target_kind": "intervention_target"
+    },
+    {
+     "symbol": "DVL2",
+     "role": "dishevelled 2, sequestered by WWOX",
+     "hgnc_id": "HGNC:3086",
+     "hgnc_name": "dishevelled segment polarity protein 2",
+     "target_kind": "pathway_member"
+    },
+    {
+     "symbol": "TCF7L2",
+     "role": "TCF7L2, the factor the papers call TCF4",
+     "collision_note": "The papers write 'TCF4 (TCF7L2)'. In current HGNC, TCF4 is a different gene (E2-2) and TCF7L2 carries TCF4 only as a previous symbol: a search on 'TCF4' returns the wrong gene.",
+     "hgnc_id": "HGNC:11641",
+     "hgnc_name": "transcription factor 7 like 2",
+     "target_kind": "readout_marker"
+    },
+    {
+     "symbol": "TCF4",
+     "role": "HGNC TCF4 = transcription factor 4 (E2-2); not the Wnt factor",
+     "collision_note": "See TCF7L2: confusable previous-symbol collision.",
+     "hgnc_id": "HGNC:11634",
+     "hgnc_name": "transcription factor 4",
+     "also_alias_or_previous_symbol_of": [
+      "TCF7L2 (prev_symbol)"
+     ],
+     "target_kind": "identity_guard"
+    }
+   ],
+   "pathways": [
+    {
+     "id": "GO:0016055",
+     "label": "Wnt signaling pathway"
+    },
+    {
+     "id": "GO:0060070",
+     "label": "canonical Wnt signaling pathway"
+    }
+   ],
+   "evidence_scope": [
+    "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+    "COMPUTATIONAL_RESULT"
+   ],
+   "coverage": {
+    "status": "NOT_ASSESSED",
+    "note": "Coverage of this need by catalogue compounds is not computed here; the repurposing module sets it."
+   },
+   "notes": "Parked hypothesis, open biology. Kept as a need because the observation and its direction exist; the intervention direction is deliberately 'uncertain'.",
+   "basis": "observed"
+  },
+  {
+   "id": "NEED-MYC-PROGENITOR-PROLIFERATION",
+   "label": "MYC elevation and progenitor-state shift in WWOX-deficient radial glia (prenatal developmental substrate)",
+   "family": "Development and glia",
+   "track": {
+    "value": "A",
+    "basis": "Observed in the engineered knockout and in both patient-derived lines for MYC co-localisation; allele-class dependence of the composition phenotype differs."
+   },
+   "goal": {
+    "value": "partial_benefit",
+    "basis": "Window protection; the aim would be to protect development, not to restore WWOX."
+   },
+   "observed": [
+    {
+     "id": "O1",
+     "statement": "MYC is the top significantly upregulated gene in WWOX-deficient radial glia; radial glia shift toward S and G2M and MYC correlates with S/G2M in the knockout (G1/G0 in wild type).",
+     "model_type": "human_cerebral_organoid_knockout",
+     "species": "human",
+     "genotype": "WWOX knockout versus wild type",
+     "tissue_or_cells": "cerebral organoid radial glia (single-cell RNA-seq)",
+     "age_stage": "organoid (week not carried)",
+     "comparison": "knockout against wild type",
+     "readout": "MYC transcript; cell-cycle phase fractions",
+     "readout_level": "transcript",
+     "direction_observed": "up",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "limits": "The three experiments carrying the thesis (single-cell, MYC inhibition, ChIP-seq) have no independent differentiations; ChIP-seq panel: wild-type outside null, knockout inside it.",
+     "pmid": "42397075",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42397075.json",
+       "entry": 0,
+       "anchor": "myc is the top significantly upregulated gene"
+      },
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42397075.json",
+       "entry": 6,
+       "anchor": "s and g2m"
+      }
+     ],
+     "locator_status": "MANIFEST"
+    },
+    {
+     "id": "O2",
+     "statement": "MYC nuclear co-localisation is raised in all three mutant genotypes including both patient-derived lines; the composition phenotype is almost entirely in the engineered knockout.",
+     "model_type": "human_cerebral_organoid_knockout",
+     "species": "human",
+     "genotype": "WWOX knockout, WOREE-derived and SCAR12-derived lines versus wild type",
+     "tissue_or_cells": "cerebral organoids",
+     "age_stage": "organoid",
+     "comparison": "each line against wild type",
+     "readout": "MYC nuclear co-localisation; cell fractions",
+     "readout_level": "protein",
+     "direction_observed": "up in all three mutant lines",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "limits": "n is organoids, single-digit in three of four arms.",
+     "pmid": "42397075",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42397075.json",
+       "entry": 37,
+       "anchor": "raised in all three mutant genotypes"
+      }
+     ],
+     "locator_status": "MANIFEST"
+    },
+    {
+     "id": "O3",
+     "statement": "A51 (multi-kinase inhibitor suppressing Wnt and MYC) reduces SOX2+ cells from about 60 to about 33 percent in knockout organoids but does nothing for the layer markers; the effect is not MYC-selective.",
+     "model_type": "human_cerebral_organoid_knockout",
+     "species": "human",
+     "genotype": "WWOX knockout treated with A51 versus untreated",
+     "tissue_or_cells": "cerebral organoids",
+     "age_stage": "weeks 8-15",
+     "comparison": "treated against untreated and wild type",
+     "readout": "SOX2+ and SOX2+MYC+ progenitor fractions",
+     "readout_level": "functional",
+     "direction_observed": "progenitor compartment normalised; layer markers not",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "limits": "Single compound; not MYC-selective; first pharmacological intervention in a human WWOX neural model.",
+     "pmid": "42397075",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42397075.json",
+       "entry": 23,
+       "anchor": "partial and selective"
+      },
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42397075.json",
+       "entry": 17,
+       "anchor": "not myc-selective"
+      }
+     ],
+     "locator_status": "MANIFEST"
+    }
+   ],
+   "inferred": [
+    "That the progenitor shift is causally downstream of WWOX loss in vivo (the radial-glia defect is largely prenatal) is inferred.",
+    "Neuron-promoter rescue corrects neuronal function without correcting radial-glia abnormalities (authors' statement)."
+   ],
+   "intervention_direction": {
+    "direction": "uncertain",
+    "on": "MYC activity / progenitor cycling",
+    "rationale": "A raised MYC with a progenitor shift suggests lowering it; the only compound used is non-selective, and a developing brain is the setting.",
+    "certainty": "context_dependent",
+    "do_not_assume": "Restoring checkpoint competence or suppressing proliferation pharmacologically in a developing compartment has no safe formulation in the record (map section 2.2)."
+   },
+   "counter_evidence": [
+    "Phenotype in composition is largely knockout-specific; MYC lesion shared; A51 not selective.",
+    "Refused admission in the map for the DNA-damage/checkpoint framing."
+   ],
+   "sources": {
+    "cards": [
+     "D01_a51"
+    ],
+    "hypotheses": [],
+    "hypotheses_note": "No hypothesis; lead DL-THER-089 (A51).",
+    "map_records": [
+     "M5",
+     "section 2.2"
+    ],
+    "documents": [],
+    "registry_ids": [
+     "DL-THER-089",
+     "CLAIM 014",
+     "CLAIM 015"
+    ],
+    "papers": [
+     {
+      "pmid": "42397075",
+      "paper_registry_ids": [
+       "PAPER 094"
+      ]
+     }
+    ]
+   },
+   "targets": [
+    {
+     "symbol": "MYC",
+     "role": "MYC proto-oncogene",
+     "hgnc_id": "HGNC:7553",
+     "hgnc_name": "MYC proto-oncogene, bHLH transcription factor",
+     "target_kind": "pathway_member"
+    },
+    {
+     "symbol": "SOX2",
+     "role": "progenitor marker",
+     "hgnc_id": "HGNC:11195",
+     "hgnc_name": "SRY-box transcription factor 2",
+     "target_kind": "readout_marker"
+    }
+   ],
+   "pathways": [
+    {
+     "id": "GO:0008283",
+     "label": "cell population proliferation"
+    },
+    {
+     "id": "GO:0021987",
+     "label": "cerebral cortex development"
+    }
+   ],
+   "evidence_scope": [
+    "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
+   ],
+   "coverage": {
+    "status": "NOT_ASSESSED",
+    "note": "Coverage of this need by catalogue compounds is not computed here; the repurposing module sets it."
+   },
+   "notes": "Developmental window need: protective timing matters more than the target; see NEED-WWOX-GENE-ADDITION counter-evidence on the window.",
+   "basis": "observed"
+  },
+  {
+   "id": "NEED-MTOR-AUTOPHAGY",
+   "label": "mTOR signalling and autophagy: direction unmeasured at protein level",
+   "family": "Signalling",
+   "track": {
+    "value": "A",
+    "basis": "No allele-specific data; a pathway question."
+   },
+   "goal": {
+    "value": "partial_benefit",
+    "basis": "Partial by construction."
+   },
+   "observed": [
+    {
+     "id": "O1",
+     "statement": "WWOX-knockout organoid transcripts (padj-filtered tables): EIF4EBP1 is down (log2 -0.87, adjusted P 5.8e-4), RB1CC1 (autophagy initiation) is down (log2 -0.99), MTOR itself is marginally up (+0.4, adjusted P 0.0498) and DEPTOR is up (+1.16). Nothing at the protein or phosphorylation level.",
+     "model_type": "human_cerebral_organoid_knockout",
+     "species": "human",
+     "genotype": "WWOX knockout (4) versus wild type (2)",
+     "tissue_or_cells": "bulk organoid RNA",
+     "age_stage": "culture weeks 8-15",
+     "comparison": "knockout against wild type",
+     "readout": "transcripts of mTOR-axis and autophagy genes",
+     "readout_level": "transcript",
+     "direction_observed": "mixed (EIF4EBP1 and RB1CC1 down; MTOR and DEPTOR up)",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "limits": "Transcripts are not mTORC1 signalling; no flux; the map's shorthand 'mTOR/EIF4EBP1 down' is not what the table shows for MTOR.",
+     "pmid": "34268881",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
+       "entry": 43,
+       "anchor": "mtor transcript itself"
+      },
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
+       "entry": 44,
+       "anchor": "eif4ebp1"
+      },
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
+       "entry": 47,
+       "anchor": "rb1cc1"
+      }
+     ],
+     "locator_status": "MANIFEST"
+    }
+   ],
+   "inferred": [
+    "That mTORC1 activity is changed in a WWOX-deficient neuron: unmeasured; revival trigger is a protein-level readout (pS6, p4E-BP1) or any model with hyperactivation."
+   ],
+   "intervention_direction": {
+    "direction": "uncertain",
+    "on": "mTORC1 activity / autophagic flux",
+    "rationale": "No direction can be derived: the only datum is transcript-level and mixed.",
+    "certainty": "unknown",
+    "do_not_assume": "The reflex import from TSC (mTOR inhibition) is refused: an mTOR inhibitor would push the same way as the only (weak) directional datum."
+   },
+   "counter_evidence": [
+    "Map N-01 INSUFFICIENT: never measured at protein level; the same record's autophagy direction contradicts it.",
+    "Three paper-registry stubs name WWOX and autophagy in two opposite directions; none has been read (map stress-test table)."
+   ],
+   "sources": {
+    "cards": [
+     "EB-MTOR-AX-01 (cards_early)"
+    ],
+    "hypotheses": [],
+    "hypotheses_note": "No hypothesis.",
+    "map_records": [
+     "N-01",
+     "section 2.2"
+    ],
+    "documents": [],
+    "registry_ids": [
+     "DL-MECH-034",
+     "DIS-37"
+    ],
+    "papers": [
+     {
+      "pmid": "34268881",
+      "paper_registry_ids": [
+       "CORPUS P365",
+       "PAPER 039"
+      ]
+     }
+    ]
+   },
+   "targets": [
+    {
+     "symbol": "MTOR",
+     "role": "mechanistic target of rapamycin kinase",
+     "hgnc_id": "HGNC:3942",
+     "hgnc_name": "mechanistic target of rapamycin kinase",
+     "target_kind": "intervention_target"
+    },
+    {
+     "symbol": "EIF4EBP1",
+     "role": "4E-BP1 (phospho readout)",
+     "hgnc_id": "HGNC:3288",
+     "hgnc_name": "eukaryotic translation initiation factor 4E binding protein 1",
+     "target_kind": "readout_marker"
+    },
+    {
+     "symbol": "RB1CC1",
+     "role": "FIP200, autophagy initiation",
+     "hgnc_id": "HGNC:15574",
+     "hgnc_name": "RB1 inducible coiled-coil 1",
+     "target_kind": "readout_marker"
+    },
+    {
+     "symbol": "DEPTOR",
+     "role": "mTOR inhibitory partner",
+     "hgnc_id": "HGNC:22953",
+     "hgnc_name": "DEP domain containing MTOR interacting protein",
+     "target_kind": "pathway_member"
+    }
+   ],
+   "pathways": [
+    {
+     "id": "GO:0031929",
+     "label": "TOR signaling"
+    },
+    {
+     "id": "GO:0006914",
+     "label": "autophagy"
+    }
+   ],
+   "evidence_scope": [
+    "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+    "UNVERIFIED_HYPOTHESIS"
+   ],
+   "coverage": {
+    "status": "NOT_ASSESSED",
+    "note": "Coverage of this need by catalogue compounds is not computed here; the repurposing module sets it."
+   },
+   "notes": "Included to stop a reflex repurposing move; infant-safety record exists for sirolimus (card), and is not suitability for WWOX-DEE.",
+   "basis": "observed"
+  },
+  {
+   "id": "NEED-NEUROINFLAMMATION-GLIA",
+   "label": "Neuroinflammation and gliosis (microglia/astrocytes, IL-1beta/TNF/NF-kB signalling)",
+   "family": "Development and glia",
+   "track": {
+    "value": "A",
+    "basis": "Allele-blind, downstream."
+   },
+   "goal": {
+    "value": "partial_benefit",
+    "basis": "Symptomatic or slowing; not curative (map R-06)."
+   },
+   "observed": [
+    {
+     "id": "O1",
+     "statement": "Systemic knockout hippocampus: IBA1 and GFAP area fractions are increased in CA1, CA3 and whole hippocampus (dentate unmarked); Il6, not Tnf-a, is significant by qPCR.",
+     "model_type": "mouse_constitutive_knockout",
+     "species": "mouse",
+     "genotype": "mixed-background systemic knockout versus wild type",
+     "tissue_or_cells": "hippocampus",
+     "age_stage": "two weeks",
+     "comparison": "knockout against wild type",
+     "readout": "IBA1/GFAP area fraction; cytokine qPCR",
+     "readout_level": "protein",
+     "direction_observed": "increased",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "limits": "Area fraction, not cell number; the systemic-null confounder.",
+     "pmid": "30290271",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID30290271.json",
+       "entry": 16,
+       "anchor": "increased iba1 area fraction"
+      },
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID30290271.json",
+       "entry": 17,
+       "anchor": "il6 but not tnf-a"
+      }
+     ],
+     "locator_status": "MANIFEST"
+    },
+    {
+     "id": "O2",
+     "statement": "Wwox P47T missense homozygous mouse: astrogliosis is progressive in number and area; IL1beta and TNFalpha transcripts are at least twofold up in mutant cerebellum (n 6 per group; distributions overlap the wild-type range); inflammatory upstream regulators are activated in three forebrain regions.",
+     "model_type": "mouse_missense_knockin",
+     "species": "mouse",
+     "genotype": "P47T/P47T versus wild type",
+     "tissue_or_cells": "hippocampus, cortex, cerebellum",
+     "age_stage": "80 to 250 days",
+     "comparison": "mutant against wild type",
+     "readout": "astrocyte/microglia morphometry; cytokine qRT-PCR; pathway analysis",
+     "readout_level": "protein",
+     "direction_observed": "increased and progressive",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "limits": "P47T is a different allele and a longer-lived model; the microglial abundance is not shown to change with age.",
+     "pmid": "36828035",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36828035.json",
+       "entry": 22,
+       "anchor": "astrogliosis is genuinely progressive"
+      },
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36828035.json",
+       "entry": 42,
+       "anchor": "twofold up in mutant cerebellum"
+      },
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36828035.json",
+       "entry": 41,
+       "anchor": "region-wide"
+      },
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36828035.json",
+       "entry": 43,
+       "anchor": "overlap the wild-type range"
+      }
+     ],
+     "locator_status": "MANIFEST"
+    },
+    {
+     "id": "O3",
+     "statement": "Neuron-restricted AAV9 rescue lowers GFAP-positive cells (knockout about 44 versus wild type about 5 versus treated about 5 at the P5-treated arm).",
+     "model_type": "mouse_constitutive_knockout",
+     "species": "mouse",
+     "genotype": "Wwox-null treated versus untreated",
+     "tissue_or_cells": "brain",
+     "age_stage": "treated at P5; read age not carried",
+     "comparison": "treated against knockout and wild type",
+     "readout": "GFAP-positive cell counts",
+     "readout_level": "protein",
+     "direction_observed": "decreased by neuronal rescue",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "limits": "The other gliosis panels cannot be read across one another; no untreated-knockout arm in S7E-S7H.",
+     "pmid": "42422765",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json",
+       "entry": 9,
+       "anchor": "gfap-positive cells wt about 5"
+      },
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json",
+       "entry": 44,
+       "anchor": "cannot be read across one another"
+      }
+     ],
+     "locator_status": "MANIFEST"
+    }
+   ],
+   "inferred": [
+    "That the glial signal is a consequence of neuronal dysfunction rather than an independent driver (neuron-restricted rescue lowers it)."
+   ],
+   "intervention_direction": {
+    "direction": "uncertain",
+    "on": "glial activation / inflammatory signalling",
+    "rationale": "Glial activation is increased in two models, but part of it is a consequence of neuronal dysfunction (neuron-restricted rescue lowers it), so whether dampening it benefits function is untested.",
+    "certainty": "unknown",
+    "do_not_assume": "The target is downstream of the target: treating it treats an effect; many anti-neuroinflammatory agents failed in neurodegeneration; no compound is identified in the public record."
+   },
+   "counter_evidence": [
+    "Treats an effect (neuron-restricted rescue reduces gliosis); paediatric immunosuppression concerns; class-level only.",
+    "Many anti-inflammatories failed in neurodegenerative disease (other-disease precedent, T4)."
+   ],
+   "sources": {
+    "cards": [],
+    "hypotheses": [
+     "HYP-20260705-02"
+    ],
+    "hypotheses_note": "HYP-20260705-02 (JAK2/STAT3 bridge from WWOX-low to neuroinflammation) is referenced by id only.",
+    "map_records": [
+     "R-06",
+     "M10"
+    ],
+    "documents": [],
+    "registry_ids": [
+     "CLAIM 005",
+     "CLAIM 006",
+     "DL-MECH-012",
+     "DL-REPO-002"
+    ],
+    "papers": [
+     {
+      "pmid": "30290271",
+      "paper_registry_ids": [
+       "CORPUS-STUB-085",
+       "PAPER 006"
+      ]
+     },
+     {
+      "pmid": "36828035",
+      "paper_registry_ids": [
+       "CORPUS-STUB-053",
+       "PAPER 007",
+       "PAPER 112"
+      ]
+     },
+     {
+      "pmid": "42422765",
+      "paper_registry_ids": [
+       "PAPER 011"
+      ]
+     }
+    ]
+   },
+   "targets": [
+    {
+     "symbol": "IL1B",
+     "role": "interleukin 1 beta",
+     "hgnc_id": "HGNC:5992",
+     "hgnc_name": "interleukin 1 beta",
+     "target_kind": "intervention_target"
+    },
+    {
+     "symbol": "NLRP3",
+     "role": "inflammasome sensor",
+     "hgnc_id": "HGNC:16400",
+     "hgnc_name": "NLR family pyrin domain containing 3",
+     "target_kind": "intervention_target"
+    },
+    {
+     "symbol": "TNF",
+     "role": "tumour necrosis factor",
+     "hgnc_id": "HGNC:11892",
+     "hgnc_name": "tumor necrosis factor",
+     "target_kind": "intervention_target"
+    },
+    {
+     "symbol": "IL6",
+     "role": "interleukin 6",
+     "hgnc_id": "HGNC:6018",
+     "hgnc_name": "interleukin 6",
+     "target_kind": "readout_marker"
+    },
+    {
+     "symbol": "NFKB1",
+     "role": "NF-kappaB subunit",
+     "hgnc_id": "HGNC:7794",
+     "hgnc_name": "nuclear factor kappa B subunit 1",
+     "target_kind": "intervention_target"
+    },
+    {
+     "symbol": "RELA",
+     "role": "NF-kappaB subunit",
+     "hgnc_id": "HGNC:9955",
+     "hgnc_name": "RELA proto-oncogene, NF-kB subunit",
+     "target_kind": "intervention_target"
+    },
+    {
+     "symbol": "JAK2",
+     "role": "JAK-STAT arm (HYP-20260705-02)",
+     "hgnc_id": "HGNC:6192",
+     "hgnc_name": "Janus kinase 2",
+     "target_kind": "intervention_target"
+    },
+    {
+     "symbol": "STAT3",
+     "role": "JAK-STAT arm",
+     "hgnc_id": "HGNC:11364",
+     "hgnc_name": "signal transducer and activator of transcription 3",
+     "target_kind": "intervention_target"
+    },
+    {
+     "symbol": "GFAP",
+     "role": "astrocyte marker",
+     "hgnc_id": "HGNC:4235",
+     "hgnc_name": "glial fibrillary acidic protein",
+     "target_kind": "readout_marker"
+    },
+    {
+     "symbol": "AIF1",
+     "role": "IBA1 (microglia marker)",
+     "hgnc_id": "HGNC:352",
+     "hgnc_name": "allograft inflammatory factor 1",
+     "target_kind": "readout_marker"
+    }
+   ],
+   "pathways": [
+    {
+     "id": "GO:0006954",
+     "label": "inflammatory response"
+    }
+   ],
+   "evidence_scope": [
+    "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+    "OTHER_DISEASE_PRECEDENT"
+   ],
+   "coverage": {
+    "status": "NOT_ASSESSED",
+    "note": "Coverage of this need by catalogue compounds is not computed here; the repurposing module sets it."
+   },
+   "notes": "No card exists for this need; the join's query Q-R-06 is the only machine route.",
+   "basis": "observed"
+  },
+  {
+   "id": "NEED-REDOX-OXIDATIVE-STRESS",
+   "label": "Redox balance / reactive oxygen species: sign is context-dependent",
+   "family": "Stress signalling and metabolism",
+   "track": {
+    "value": "A",
+    "basis": "Allele-blind pathway premise."
+   },
+   "goal": {
+    "value": "partial_benefit",
+    "basis": "Protective/supportive."
+   },
+   "observed": [
+    {
+     "id": "O1",
+     "statement": "Mitochondrial hydrogen peroxide (roGFP2-Orp1) is higher after neuronal Wwox knockdown in the fly; the reporter was imaged in day-7 female wings, not brain.",
+     "model_type": "drosophila_rnai_amyloid_model",
+     "species": "Drosophila melanogaster",
+     "genotype": "neuronal Wwox RNAi versus control",
+     "tissue_or_cells": "wing (reporter imaged in wings, not brain)",
+     "age_stage": "adult day 7, female",
+     "comparison": "knockdown against control",
+     "readout": "roGFP2-Orp1 ratio",
+     "readout_level": "functional",
+     "direction_observed": "increased",
+     "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT",
+     "limits": "Wing, not brain; reported in the sleep section of the paper; the opposite direction is reported in other systems (next observation).",
+     "pmid": "42909904",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+       "entry": 15,
+       "anchor": "mitochondrial hydrogen peroxide"
+      },
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+       "entry": 16,
+       "anchor": "wings"
+      }
+     ],
+     "locator_status": "MANIFEST"
+    },
+    {
+     "id": "O2",
+     "statement": "In the map's two independent primary systems the sign runs counter-directionally: in diabetic mouse photoreceptors WWOX is up-regulated and knockdown reduces superoxide; in the fly, Wwox loss lowers and overexpression raises thresholded CM-H2DCFDA fluorescence.",
+     "model_type": "other_animal_model",
+     "species": "mouse / Drosophila",
+     "genotype": "WWOX perturbations",
+     "tissue_or_cells": "photoreceptors; fly tissue",
+     "age_stage": "not applicable",
+     "comparison": "perturbation against control",
+     "readout": "ROS fluorescence",
+     "readout_level": "functional",
+     "direction_observed": "opposite signs in two systems",
+     "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT",
+     "limits": "Systems not comparable; the canonical claim is held at 'in observation'.",
+     "pmid": null,
+     "locators": [
+      {
+       "kind": "registry",
+       "ids": [
+        "CLAIM 009",
+        "CLAIM 034"
+       ]
+      }
+     ],
+     "locator_status": "REGISTRY_ONLY"
+    }
+   ],
+   "inferred": [
+    "That oxidative stress contributes to WWOX-DEE pathology in neurons: not measured in any DEE system."
+   ],
+   "intervention_direction": {
+    "direction": "uncertain",
+    "on": "reactive oxygen species",
+    "rationale": "Sign differs by context: WWOX up-regulation is pro-oxidant under metabolic stress, WWOX loss raises ROS in a fly, and the two do not reconcile.",
+    "certainty": "context_dependent",
+    "do_not_assume": "Antioxidants (NAC, CoQ10, creatine) rest on an assumed monotonic loss-to-ROS relation that the record refutes as an assumption."
+   },
+   "counter_evidence": [
+    "N-14: relationship is not monotonic; sign is context-dependent."
+   ],
+   "sources": {
+    "cards": [],
+    "hypotheses": [],
+    "hypotheses_note": "No hypothesis.",
+    "map_records": [
+     "N-14"
+    ],
+    "documents": [],
+    "registry_ids": [
+     "CLAIM 009",
+     "CLAIM 034"
+    ],
+    "papers": [
+     {
+      "pmid": "42909904",
+      "paper_registry_ids": [
+       "PAPER 567"
+      ]
+     }
+    ]
+   },
+   "targets": [
+    {
+     "symbol": "SOD1",
+     "role": "superoxide dismutase 1 (Wwox x Sod interaction in the fly)",
+     "hgnc_id": "HGNC:11179",
+     "hgnc_name": "superoxide dismutase 1",
+     "target_kind": "pathway_member"
+    }
+   ],
+   "pathways": [
+    {
+     "id": "GO:0006979",
+     "label": "response to oxidative stress"
+    }
+   ],
+   "evidence_scope": [
+    "WWOX_BIOLOGY_OTHER_CONTEXT"
+   ],
+   "coverage": {
+    "status": "NOT_ASSESSED",
+    "note": "Coverage of this need by catalogue compounds is not computed here; the repurposing module sets it."
+   },
+   "notes": "Direction is uncertain by design; this need exists to block a wrong-sign antioxidant rationale, not to propose one.",
+   "basis": "observed"
+  },
+  {
+   "id": "NEED-SYSTEMIC-GLYCAEMIA-GROWTH",
+   "label": "Systemic metabolic decompensation: hypoglycaemia and failure to thrive (endpoint and confounder)",
+   "family": "Symptom-level",
+   "track": {
+    "value": "A",
+    "basis": "Whole-organism endpoint in constitutive loss."
+   },
+   "goal": {
+    "value": "partial_benefit",
+    "basis": "Supportive; an endpoint and a confounder for every brain readout in the systemic null."
+   },
+   "observed": [
+    {
+     "id": "O1",
+     "statement": "Constitutive Wwox-null mouse: blood glucose at P10 is lower (KO untreated about 95 versus wild type about 130); body weight lower from birth; at P20 the high-dose neuronal AAV9 arm is near wild type and the low-dose arm is below it (asterisk).",
+     "model_type": "mouse_constitutive_knockout",
+     "species": "mouse",
+     "genotype": "Wwox -/- untreated versus wild type, treated arms",
+     "tissue_or_cells": "whole animal",
+     "age_stage": "P10 to P30",
+     "comparison": "treated against untreated and wild type",
+     "readout": "blood glucose, body weight",
+     "readout_level": "functional",
+     "direction_observed": "decreased",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "limits": "The partial correction at P10 is not significant against untreated; the weight equality of low and high dose is survivor-conditioned.",
+     "pmid": "42422765",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json",
+       "entry": 37,
+       "anchor": "p10 glucose"
+      },
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json",
+       "entry": 41,
+       "anchor": "body weight in figure 3c"
+      },
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/cards/C04_aav9_endpoint_families.card.json",
+       "anchor": "disease_assertions DA-AAV-WT-001 (body weight from birth), DA-AAV-GLU10-001"
+      }
+     ],
+     "locator_status": "MANIFEST"
+    },
+    {
+     "id": "O2",
+     "statement": "Failure to thrive is recorded in all five patients of one WOREE series (values pending); no growth intervention is proposed.",
+     "model_type": "human_clinical_report",
+     "species": "human",
+     "genotype": "WWOX-related, recessive genotypes, five-patient series",
+     "tissue_or_cells": "whole organism",
+     "age_stage": "infant/child",
+     "comparison": "none",
+     "readout": "head circumference, height, weight (clinical label)",
+     "readout_level": "clinical",
+     "direction_observed": "decreased",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "limits": "Partial read; values pending.",
+     "pmid": "36537114",
+     "locators": [
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/cards_early/EB-GROWTH-AX-01.packet.json",
+       "anchor": "disease_assertion D-GR-1"
+      }
+     ],
+     "locator_status": "DOCUMENT"
+    }
+   ],
+   "inferred": [
+    "That glucose and growth endpoints are WWOX-dependent in neurons rather than secondary to systemic loss is unresolved (CLAIM 036)."
+   ],
+   "intervention_direction": {
+    "direction": "restore",
+    "on": "glycaemia and growth",
+    "rationale": "Supportive endpoint correction.",
+    "certainty": "supported_in_WWOX_mouse_model as an endpoint",
+    "do_not_assume": "An endpoint is not an intervention; no compound class is proposed by the record."
+   },
+   "counter_evidence": [
+    "Constitutive-null decompensation (hypoglycaemia, acidosis, uraemia) confounds every brain readout (CLAIM 036)."
+   ],
+   "sources": {
+    "cards": [
+     "C04_aav9_endpoint_families",
+     "EB-GROWTH-AX-01 (cards_early)"
+    ],
+    "hypotheses": [],
+    "hypotheses_note": "No hypothesis.",
+    "map_records": [
+     "M1"
+    ],
+    "documents": [],
+    "registry_ids": [
+     "CLAIM 036",
+     "CLAIM 011"
+    ],
+    "papers": [
+     {
+      "pmid": "42422765",
+      "paper_registry_ids": [
+       "PAPER 011"
+      ]
+     },
+     {
+      "pmid": "36537114",
+      "paper_registry_ids": [
+       "PAPER 017"
+      ]
+     }
+    ]
+   },
+   "targets": [],
+   "pathways": [
+    {
+     "id": "GO:0006006",
+     "label": "glucose metabolic process"
+    }
+   ],
+   "evidence_scope": [
+    "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
+   ],
+   "coverage": {
+    "status": "NOT_ASSESSED",
+    "note": "Coverage of this need by catalogue compounds is not computed here; the repurposing module sets it."
+   },
+   "notes": "search_use: endpoint and confounder only. A catalogue search keyed on this need should return no compounds by design.",
+   "basis": "observed"
+  }
+ ],
+ "not_included": [
+  {
+   "label": "DNA-damage response / ATM / apoptotic checkpoint",
+   "reason": "Refused admission in the mechanism map (section 2.2): the therapeutic direction is inverted for a developing brain; knockout mouse brain shows excess apoptosis while the organoid work shows proliferation with loss of the apoptotic checkpoint, so the sign is context-dependent and there is no safe formulation.",
+   "sources": [
+    "mechanism_intervention_map.md section 2.2",
+    "DL-MOL-010",
+    "CLAIM 029"
+   ]
+  },
+  {
+   "label": "Senolytics",
+   "reason": "CLAIM 010 is background-only with no WWOX model and no CNS anchor.",
+   "sources": [
+    "mechanism_intervention_map.md section 2.2",
+    "CLAIM 010"
+   ]
+  },
+  {
+   "label": "ECM / HYAL-2 / SMAD4",
+   "reason": "CLAIM 027 explicitly not promoted to a central pathway.",
+   "sources": [
+    "mechanism_intervention_map.md section 2.2",
+    "CLAIM 027"
+   ]
+  },
+  {
+   "label": "Calpain-mediated WWOX turnover",
+   "reason": "Rejected as an established turnover route (DIS-008): no proteolysis measured.",
+   "sources": [
+    "mechanism_intervention_map.md section 2.2",
+    "DIS-008"
+   ]
+  },
+  {
+   "label": "Sleep / network-state as a distal endpoint",
+   "reason": "An endpoint hypothesis (HYP-20260705-01), not a pharmacological need; covered by NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR where a network readout is meant.",
+   "sources": [
+    "HYP-20260705-01"
+   ]
+  },
+  {
+   "label": "SCD5/oleic-acid/macrophage axis; Bcl-XL/Mcl-1 lysosomal turnover; Zfra peptide; folate/neural-tube bridge",
+   "reason": "Hypotheses HYP-20260705-03 to -07 are monitor-only or background (per their own titles); no WWOX-DEE observation in the cards or the map supports a need yet.",
+   "sources": [
+    "HYP-20260705-03",
+    "HYP-20260705-04",
+    "HYP-20260705-05",
+    "HYP-20260705-07"
+   ]
+  },
+  {
+   "label": "pTyr33-WWOX peptide as functional restoration",
+   "reason": "Map N-09: the direction is inverted; a restoration modality, not a need.",
+   "sources": [
+    "N-09",
+    "HYP-20260709-04"
+   ]
+  },
+  {
+   "label": "Tau-lowering",
+   "reason": "Map N-17: Tau is the effector of benefit in the one system tested; kept as a direction constraint inside NEED-GSK3B-DEREPRESSION, not as a need.",
+   "sources": [
+    "N-17"
+   ]
+  },
+  {
+   "label": "Sodium-channel blockers",
+   "reason": "Map N-03: assigned to other channelopathies; the WWOX node is different.",
+   "sources": [
+    "N-03",
+    "DL-REPO-001"
+   ]
+  },
+  {
+   "label": "Pharmacodynamic anchor and developmental-benefit axes (early-benefit cards)",
+   "reason": "Endpoints, not interventions: EB-PDANCHOR-AX-01 and EB-DEV-AX-01 name read-outs the module needs; EB-GROWTH-AX-01 is carried by NEED-SYSTEMIC-GLYCAEMIA-GROWTH.",
+   "sources": [
+    "cards_early/EB-PDANCHOR-AX-01",
+    "cards_early/EB-DEV-AX-01"
+   ]
+  }
+ ],
+ "extension_path": {
+  "summary": "A new study enters as an observation; it either amends an existing need or opens a new one. Editing a need is an ordinary revision of the file.",
+  "steps": [
+   "1. The study has a manifest in disease-models/wwox/research/deepdive_manifests/ with verbatim locators (a full-text read with a receipt). A study without a manifest may enter only as a document or registry locator, and its locator_status says so.",
+   "2. Write the observation with the six-part context (system, genotype, tissue, age/stage, comparison, readout), its readout_level, the direction observed, the evidence_scope and the limits the source itself states.",
+   "3. Decide: does it fit an existing need's target or pathway? If yes, append it to that need's observed list, and re-read that need's inferred, intervention_direction and counter_evidence: a new observation can move any of them. If no, open a new need with the full field set.",
+   "4. Keep track and goal as two fields. Keep hypothesis ids as references; never copy a hypothesis ranking into this table.",
+   "5. Add HGNC symbols and ids and say when a symbol collides with another gene or a former symbol. Add pathway ids only after looking them up.",
+   "6. Run: python3 disease-models/wwox/research/drug_repurposing/needs/check_needs.py   (offline) and the test in the same directory."
+  ]
+ }
+}
