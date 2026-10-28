@@ -204,6 +204,49 @@ class ThreeStates(unittest.TestCase):
         self.assertEqual(named["status"], "MATCH_FOUND")
         self.assertEqual({h["molecule_chembl_id"] for h in named["hits"]}, {"CHEMBL2"})
 
+    def _chembl_fallback_fetch(self, parent_reply):
+        """Mocked HTTP layer (no network): molecule-id lookup returns 0 rows; the parent lookup answers `parent_reply`."""
+        def fetch(url, params=None, body=None, timeout=20):
+            if "molecule/search" in url:
+                return 200, {"molecules": [{"molecule_chembl_id": "CHEMBL192", "pref_name": "SILDENAFIL",
+                                            "max_phase": 4, "molecule_synonyms": []}]}
+            if "parent_molecule_chembl_id=" in url:
+                return parent_reply
+            if "mechanism.json" in url:
+                return 200, {"mechanisms": []}
+            return 200, {"chembl_db_version": "ChEMBL_T", "chembl_release_date": "2026-01-01"}
+        return fetch
+
+    def test_chembl_parent_fallback_keeps_identity_provenance_and_status(self):
+        module = ra.load("chembl", ADAPTERS)
+        reply = (200, {"mechanisms": [{"action_type": "INHIBITOR", "mechanism_of_action": "PDE5 inhibitor",
+                                       "target_chembl_id": "CHEMBL1827",
+                                       "mechanism_refs": [{"ref_type": "DailyMed", "ref_id": "setid=x"}]}]})
+        out = module.query({"drug": "sildenafil"}, fetch=self._chembl_fallback_fetch(reply))
+        self.assertEqual(out["status"], "MATCH_FOUND")
+        self.assertEqual(out["error"], "")
+        self.assertEqual([h["kind"] for h in out["hits"]], ["mechanism"])
+        hit = out["hits"][0]
+        self.assertEqual((hit["molecule_chembl_id"], hit["pref_name"], hit["max_phase"]), ("CHEMBL192", "SILDENAFIL", 4))
+        self.assertEqual(hit["references"], ["DailyMed:setid=x"])
+        self.assertEqual(out["source_version"], "ChEMBL_T 2026-01-01")
+        self.assertTrue(any("mechanism.json?molecule_chembl_id=CHEMBL192" in u for u in out["requests_sent"]))
+        self.assertTrue(any("parent_molecule_chembl_id=CHEMBL192" in u for u in out["requests_sent"]))
+        self.assertEqual(out["evidence_label"], "NOT WWOX EVIDENCE")
+
+    def test_chembl_parent_fallback_error_is_an_error_never_no_mechanism(self):
+        module = ra.load("chembl", ADAPTERS)
+        for reply in ((500, "server error"), (0, "timeout"), (200, "not a dict")):
+            with self.subTest(reply=reply):
+                out = module.query({"drug": "sildenafil"}, fetch=self._chembl_fallback_fetch(reply))
+                self.assertEqual(out["status"], "QUERY_ERROR")
+                self.assertTrue(out["error"])
+                self.assertEqual(out["hits"], [])  # no molecule_without_mechanism hit is manufactured
+        # a genuine empty parent answer is the only route to molecule_without_mechanism
+        empty = module.query({"drug": "sildenafil"}, fetch=self._chembl_fallback_fetch((200, {"mechanisms": []})))
+        self.assertEqual(empty["status"], "MATCH_FOUND")
+        self.assertEqual([h["kind"] for h in empty["hits"]], ["molecule_without_mechanism"])
+
     def test_openfda_404_is_no_match_not_error(self):
         module = ra.load("openfda", ADAPTERS)
         result = module.query({"drug": "amlexanox"}, fetch=lambda *a, **k: (404, {"error": {"code": "NOT_FOUND"}}))

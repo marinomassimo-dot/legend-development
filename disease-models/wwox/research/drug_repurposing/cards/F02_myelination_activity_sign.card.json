@@ -1,250 +1,251 @@
 {
- "schema_version": 1,
- "input_sha256": "ed7a058bd9d0b197eaccaa80f5c67b33a0d078e9c72125055c9816081487b575",
- "epistemic_status": "IPOTESI",
- "canonical": false,
- "assessment": "REQUIRES_QUALIFICATION",
- "directional_summary": "UNRESOLVED",
- "comparisons": [],
- "abstention": "NO_DRUG_ASSERTIONS_SUPPLIED",
- "label_lookup": {
-  "status": "NOT_ATTEMPTED",
-  "coverage": "UNKNOWN",
-  "method": "UNKNOWN",
-  "queries": [],
-  "source": "UNKNOWN",
-  "retrieved_at": "UNKNOWN",
-  "client_version": "UNKNOWN",
-  "product_name": "UNKNOWN",
-  "active_ingredient": "UNKNOWN",
-  "formulation": "UNKNOWN",
-  "spl_id": "UNKNOWN",
-  "error": "UNKNOWN",
-  "coverage_limit": "UNKNOWN"
- },
- "p4_fields": {
-  "endpoint_pursued": "A myelin endpoint with a quantified treated arm in a Wwox-deficient system (MBP or g-ratio by electron microscopy, oligodendrocyte counts) after a pro-myelinating agent, after chronic activity suppression, and after an activity-raising manipulation, each against a Wwox-deficient vehicle arm.",
-  "functional_evidence_available": "Neuron-specific, not oligodendrocyte-specific, Wwox loss reproduces the hypomyelination (genetic evidence of the earlier mouse work, PMID 34268881 manifest); neuronal gene replacement is reported to restore MBP by image. No pro-myelinating compound has been given to any Wwox system.",
-  "temporal_or_model_limit": "Mouse, early postnatal window; the AAV rescue works to the earliest days tested and later ages were not testable in the null.",
-  "cellular_context": {
-   "target_expression": "Oligodendrocyte-lineage transcripts are barely detectable in the week-15 organoid.",
-   "cells_tissue_stage": "in-vivo mouse white matter for the disease rows.",
-   "coverage": "UNKNOWN.",
-   "limits": "Myelin is measured as MBP image intensity; the treated-arm quantification does not exist."
-  }
- },
- "input": {
   "schema_version": 1,
-  "axis": "F / W2 therapeutic: myelination as broad functional recovery",
-  "route": "BENEFICIO_PRECOCE",
-  "mission_dimensions": {
-   "track": "A",
-   "track_definition": "mission.md section 5: Track A = variant-independent WWOX loss of function; Track B = variant or allele-class specific (e.g. the Q230P missense class); Track C = repurposing, which is a method of reaching A or B, not a third lesion class",
-   "route": "BENEFICIO_PRECOCE",
-   "route_definition": "RECUPERO_PROFONDO = deep recovery of the lost function; BENEFICIO_PRECOCE = concrete partial benefit, symptomatic control or protection of function, with paediatric feasibility and time in view",
-   "route_note": "Broad functional recovery would need a developmental endpoint; the strand is held at abstention because no drug has been applied to a Wwox system for any myelin endpoint and the sign of the activity-myelin relationship in this genotype is unmeasured.",
-   "the_two_dimensions_are_independent": "a card keeps both: a variant-independent lever can be a partial-benefit lever, and a lesion-specific one can aim at deep recovery"
-  },
-  "candidate": {
-   "id": "P4-F-02",
-   "name": "Pro-myelinating agents and the activity-dependent myelination sign problem"
-  },
-  "disease_assertions": [
-   {
-    "id": "DA-W2-010",
-    "target_id": "MBP immunostaining intensity",
-    "endpoint": "KO relative to WT, corpus callosum, cortex, striatum, anterior commissure",
-    "direction": "DECREASE",
-    "source": "Obeid 2026 (PMID 42422765)",
-    "locator": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json verbatim_locators.entries[43]",
-    "epistemic_status": "DATO",
-    "reading_depth": "complete_fulltext_read",
-    "context": {
-     "disease_id": "Wwox-null full knockout mouse brain",
-     "genotype": "Wwox -/- (FVB) versus wild type",
-     "species": "mouse",
-     "cell_type": "white and grey matter regions",
-     "developmental_stage": "about P90 (as printed; panel F age not stated)"
-    },
-    "measured_result_note": "Knockout MBP reduced relative to wild type; the printed Fig 6E labels (48 percent corpus callosum, 30 cortex, 50 striatum, 70 anterior commissure) were read by the independent verifier as the size of the REDUCTION, not the remaining fraction (bars give about 50, 72, 49 and 30 percent remaining); the only MBP quantification in the paper.",
-    "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
-    "receipt": "FTR-20261019-42422765-01"
-   },
-   {
-    "id": "DA-W2-011",
-    "target_id": "MBP after neuronal AAV9-hSynI-WWOX",
-    "endpoint": "MBP immunostaining (representative images only)",
-    "direction": "INCREASE",
-    "source": "Obeid 2026 (PMID 42422765)",
-    "locator": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json verbatim_locators.entries[6], [7], [43]",
-    "epistemic_status": "DATO",
-    "reading_depth": "complete_fulltext_read",
-    "context": {
-     "disease_id": "Wwox-null full knockout mouse brain, neonatal intracerebroventricular AAV9",
-     "genotype": "Wwox -/- treated with a low or a high vector dose versus wild type",
-     "species": "mouse",
-     "cell_type": "corpus callosum, striatum, cortex",
-     "developmental_stage": "about P90"
-    },
-    "measured_result_note": "The 'near-complete rescue at high dose, partial at low dose' is the authors' sentence on representative micrographs; no treated-arm quantification, no untreated-knockout column in that panel, no g-ratio or electron microscopy. The oligodendrocyte-promoter vector gave no detectable WWOX, so that arm does not test oligodendroglial relevance.",
-    "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
-    "receipt": "FTR-20261019-42422765-01"
-   },
-   {
-    "id": "DA-W2-012",
-    "target_id": "human oligodendrocyte-lineage transcripts",
-    "endpoint": "CPM, knockout minus wild type",
-    "direction": "UNKNOWN",
-    "source": "GSE156243 (PMID 34268881 deposit); descriptive panel by scientist-c, disease-models/wwox/research/drug_repurposing/w2_therapeutic_it2_20261027/README.md",
-    "locator": "disease-models/wwox/research/drug_repurposing/w2_therapeutic_it2_20261027/organoid_panel_cpm.tsv",
-    "epistemic_status": "INFERENZA",
-    "reading_depth": "queried_not_full_read",
-    "context": {
-     "disease_id": "WWOX-deficient human cerebral organoid model (engineered knockout; NOT a patient allele; no amyloid)",
-     "genotype": "WWOX knockout versus wild type (4 versus 2 libraries, one laboratory)",
-     "species": "human",
-     "cell_type": "cerebral organoid, bulk RNA",
-     "developmental_stage": "organoid, culture week 15"
-    },
-    "measured_result_note": "PDGFRA and OLIG1 are nominally higher in knockouts, SOX10, MOG and OLIG2 are not; counts are very low and composition differs; a week-15 organoid has no compact myelin. Not myelin evidence.",
-    "evidence_scope": "COMPUTATIONAL_RESULT"
-   }
-  ],
-  "drug_assertions": [],
-  "p4_fields": {
-   "endpoint_pursued": "A myelin endpoint with a quantified treated arm in a Wwox-deficient system (MBP or g-ratio by electron microscopy, oligodendrocyte counts) after a pro-myelinating agent, after chronic activity suppression, and after an activity-raising manipulation, each against a Wwox-deficient vehicle arm.",
-   "functional_evidence_available": "Neuron-specific, not oligodendrocyte-specific, Wwox loss reproduces the hypomyelination (genetic evidence of the earlier mouse work, PMID 34268881 manifest); neuronal gene replacement is reported to restore MBP by image. No pro-myelinating compound has been given to any Wwox system.",
-   "temporal_or_model_limit": "Mouse, early postnatal window; the AAV rescue works to the earliest days tested and later ages were not testable in the null.",
-   "cellular_context": {
-    "target_expression": "Oligodendrocyte-lineage transcripts are barely detectable in the week-15 organoid.",
-    "cells_tissue_stage": "in-vivo mouse white matter for the disease rows.",
-    "coverage": "UNKNOWN.",
-    "limits": "Myelin is measured as MBP image intensity; the treated-arm quantification does not exist."
-   }
-  },
-  "p4_card": {
-   "identity": "Pro-myelinating agents (muscarinic-antagonist class such as clemastine and benztropine, thyroid-hormone and antipsychotic routes) and, as a separate question, activity manipulation as a myelin lever.",
-   "indication_and_transfer": "Only IF the Wwox-deficient oligodendrocyte lineage is itself the limiting compartment, which the neuron-versus-oligodendrocyte genetic arms argue against. Transfer unmeasured.",
-   "novelty_for_woree": "N-13 stands. New: the earlier record (DL-MECH-031 point 2) proposed that reducing seizure load might itself improve myelination because myelination is activity-dependent. The best-matched non-WWOX datum points the other way for a seizing network: Knowles 2022, Nat Neurosci (PMID 35501379, abstract read; absence-seizure models, not WWOX) reports that seizure-driven activity increases oligodendrogenesis and myelination in the seizure network, is prevented by seizure suppression, and that blocking activity-dependent myelination lowers seizure burden. The Wwox-null brain is hypomyelinated despite bursting, so neither simple sign is established. Also found: the 'near-complete MBP rescue' of the neuronal AAV is image-only (DA-W2-011).",
-   "state_of_known_roads": "map N-13, DL-MECH-031, HYP-20260709-07, N-15.",
-   "pathway_and_objective": "BENEFICIO_PRECOCE if ever; broad recovery needs the developmental endpoint.",
-   "expected_contribution": "UNKNOWN.",
-   "mechanism": "Target (if pursued): oligodendrocyte differentiation or the axon-oligodendrocyte activity signal. Direction wanted: more compact myelin. The causal compartment is neuronal, so a drug acting on oligodendrocytes alone is not expected to reach the cause.",
-   "sources": {
-    "internal": [
-     "CLAIM 003",
-     "DL-MECH-031",
-     "N-13",
-     "N-15",
-     "HYP-20260709-07",
-     "PMID 42422765 manifest",
-     "PMID 34268881 manifest"
-    ],
-    "external_not_wwox_evidence": [
-     "Knowles 2022 Nat Neurosci (PMID 35501379), abstract only",
-     "Saab 2016 Neuron (PMID 27292539), title only: oligodendroglial NMDA receptors and axonal energy metabolism"
-    ]
-   },
-   "evidence_for_and_against": {
-    "for": [
-     "Myelin is reduced in the knockout and activity-dependent myelination exists in other systems."
-    ],
-    "against": [
-     "Oligodendrocyte-lineage deletion shows no anomaly while neuronal deletion reproduces it.",
-     "The oligodendrocyte-promoter AAV arm gave no detectable protein, so it neither supports nor refutes oligodendroglial relevance.",
-     "In a seizure network, activity drives maladaptive myelination in the other-disease precedent: suppressing activity may lower or raise myelin depending on the system; the sign here is unmeasured.",
-     "Oligodendroglial NMDA receptors support axonal energy metabolism in the other-disease precedent, so chronic NMDAR block (F01) has a myelin-side cost that is unmeasured.",
-     "The myelin window closes early."
-    ],
-    "transfer_limits": "Absence-seizure and healthy-brain systems; adult versus neonatal; no Wwox arm."
-   },
-   "time_to_access": "UNKNOWN.",
-   "time_to_benefit": "UNKNOWN.",
-   "pharmacology": "Not assessed: no compound is carded.",
-   "paediatrics_and_interactions": "Not assessed.",
-   "scope_of_checks": {
-    "support_and_replication": "One laboratory for every WWOX row used here; no independent replication.",
-    "formal_checks": "Breton rows carry verbatim locators in the manifest (receipt FTR-20260810-34634460-02); the n values of the d-APV arm and the mEPSC text were re-read first-hand from the shared full-text XML on 2026-10-27 without a new receipt. GRIN and rat rows are at the reading depth stated per row.",
-    "card_inferences_owed_audit": "Every statement marked INFERENZA, and every card-level synthesis, is owed a blind audit by someone other than the producer."
-   },
-   "question_history": [
-    "map N-13",
-    "DL-MECH-031",
-    "mandate 2026-10-27 (W2)"
-   ],
-   "predictions": "Registered: if hypomyelination is driven by loss of an axonal signal, an oligodendrocyte-directed compound leaves it unchanged in Wwox-deficient neurons and corrects it only after neuronal restoration; if activity raises myelin in this genotype, chronic suppression lowers MBP; if activity suppression helps, MBP rises. The three outcomes are separable by one chronic-suppression arm and one activity-raising arm against vehicle.",
-   "next_measurement": "Wet-lab, not done: Wwox-null (or conditional neuronal) mice or co-cultures; arms: vehicle, chronic activity suppression, activity-raising manipulation, one pro-myelinating agent; controls: wild type with the same arms, neuronal-restoration positive control; endpoints: quantified MBP and g-ratio by electron microscopy, oligodendrocyte counts; discriminating result: the direction of the myelin change under suppression versus under activity.",
-   "status": "abstention",
-   "value_added": "Records that the seizure-load-improves-myelin inference was an assumption with a counter-precedent, and that the neuronal rescue's myelin evidence is image-level.",
-   "clinical_census": "Clinical census, ClinicalTrials.gov API v2, 2026-10-20 (drug_repurposing/clinical_census_20261020.md): seven queries returned no registered WOREE interventional study; it answers seven queries against one registry on one date and a missing hit does not prove that no study exists. Not re-run for this card."
-  },
-  "not_known": [
-   "Whether activity raises or lowers myelin in the Wwox-deficient brain.",
-   "Whether any pro-myelinating agent acts on Wwox-deficient oligodendrocytes.",
-   "The quantified MBP or g-ratio after neuronal AAV rescue.",
-   "Whether an oligodendroglial WWOX function exists under remyelination stress."
-  ],
-  "evidence_against": [
-   "Oligodendrocyte-lineage deletion shows no anomaly while neuronal deletion reproduces it.",
-   "The oligodendrocyte-promoter AAV arm gave no detectable protein, so it neither supports nor refutes oligodendroglial relevance.",
-   "In a seizure network, activity drives maladaptive myelination in the other-disease precedent: suppressing activity may lower or raise myelin depending on the system; the sign here is unmeasured.",
-   "Oligodendroglial NMDA receptors support axonal energy metabolism in the other-disease precedent, so chronic NMDAR block (F01) has a myelin-side cost that is unmeasured.",
-   "The myelin window closes early."
-  ],
-  "bridge_gaps_exposed": [
-   "No drug assertion exists, so no comparison is formed."
-  ],
-  "translation": {
-   "pediatric_suitability": "UNKNOWN",
-   "cns_exposure": "UNKNOWN",
-   "interactions": "UNKNOWN",
-   "access": "UNKNOWN",
-   "time_to_benefit": "UNKNOWN",
-   "functional_rescue": "UNKNOWN"
-  },
-  "p4_roadmap_fields": {
-   "indication_and_transfer": "Only IF the Wwox-deficient oligodendrocyte lineage is itself the limiting compartment, which the neuron-versus-oligodendrocyte genetic arms argue against. Transfer unmeasured.",
-   "verification_scope": "{\"support_and_replication\": \"One laboratory for every WWOX row used here; no independent replication.\", \"formal_checks\": \"Breton rows carry verbatim locators in the manifest (receipt FTR-20260810-34634460-02); the n values of the d-APV arm and the mEPSC text were re-read first-hand from the shared full-text XML on 2026-10-27 without a new receipt. GRIN and rat rows are at the reading depth stated per row.\", \"card_inferences_owed_audit\": \"Every statement marked INFERENZA, and every card-level synthesis, is owed a blind audit by someone other than the producer.\"}"
-  },
+  "input_sha256": "ed7a058bd9d0b197eaccaa80f5c67b33a0d078e9c72125055c9816081487b575",
+  "epistemic_status": "IPOTESI",
+  "canonical": false,
+  "assessment": "REQUIRES_QUALIFICATION",
+  "directional_summary": "UNRESOLVED",
+  "endpoint_outcomes": [],
+  "comparisons": [],
+  "abstention": "NO_DRUG_ASSERTIONS_SUPPLIED",
   "label_lookup": {
-   "status": "NOT_ATTEMPTED"
+    "status": "NOT_ATTEMPTED",
+    "coverage": "UNKNOWN",
+    "method": "UNKNOWN",
+    "queries": [],
+    "source": "UNKNOWN",
+    "retrieved_at": "UNKNOWN",
+    "client_version": "UNKNOWN",
+    "product_name": "UNKNOWN",
+    "active_ingredient": "UNKNOWN",
+    "formulation": "UNKNOWN",
+    "spl_id": "UNKNOWN",
+    "error": "UNKNOWN",
+    "coverage_limit": "UNKNOWN"
   },
-  "card_conventions": [
-   "IPOTESI throughout; the bridge forces it. No score, rank, probability or blended index is carried.",
-   "directional_summary compares signs only where target, endpoint and every context dimension match; UNRESOLVED is a statement about the record, not about the biology.",
-   "Every disease-side row from the Drosophila article is NOT WWOX-DEE EVIDENCE; the organoid rows are exploratory transcript analyses of one deposit.",
-   "Abstract-level statements from PubMed are labelled abstract_only; none carries a receipt.",
-   "label_lookup is NOT_ATTEMPTED in the bridge: the bridge has no network. The openFDA adapter was run separately and is recorded in lucas_clarke_followup_20261026/compounds_and_sources.md.",
-   "No dose, route, schedule or paediatric suitability appears; assay concentrations of the sources are deliberately not reproduced."
-  ],
-  "abstention_card": {
-   "kind": "ABSTENTION",
-   "missing_datum": "A quantified myelin endpoint in a Wwox-deficient system after any pro-myelinating compound or any chronic activity manipulation; never done.",
-   "search_record": "PubMed 2026-10-27: WWOX with oligodendrocyte and remyelination returned nothing; WWOX with myelin returned nine records, none a pro-myelinating drug arm; Knowles 2022 found by a targeted query. Reopening condition: a Wwox-system myelin result under activity or compound manipulation, or evidence of a cell-autonomous oligodendroglial WWOX function (the residual gap the neuronal rescue left, which the authors attribute to it as their hypothesis).",
-   "adjacent_context_not_wwox_evidence": [
-    "activity-dependent maladaptive myelination in absence-seizure models (Knowles 2022, abstract)"
-   ],
-   "an_abstention_is_a_result": "N-13 stays deprioritised; the added content is the unresolved sign and the image-level qualification."
+  "p4_fields": {
+    "endpoint_pursued": "A myelin endpoint with a quantified treated arm in a Wwox-deficient system (MBP or g-ratio by electron microscopy, oligodendrocyte counts) after a pro-myelinating agent, after chronic activity suppression, and after an activity-raising manipulation, each against a Wwox-deficient vehicle arm.",
+    "functional_evidence_available": "Neuron-specific, not oligodendrocyte-specific, Wwox loss reproduces the hypomyelination (genetic evidence of the earlier mouse work, PMID 34268881 manifest); neuronal gene replacement is reported to restore MBP by image. No pro-myelinating compound has been given to any Wwox system.",
+    "temporal_or_model_limit": "Mouse, early postnatal window; the AAV rescue works to the earliest days tested and later ages were not testable in the null.",
+    "cellular_context": {
+      "target_expression": "Oligodendrocyte-lineage transcripts are barely detectable in the week-15 organoid.",
+      "cells_tissue_stage": "in-vivo mouse white matter for the disease rows.",
+      "coverage": "UNKNOWN.",
+      "limits": "Myelin is measured as MBP image intensity; the treated-arm quantification does not exist."
+    }
   },
-  "target_census": {
-   "dir": "disease-models/wwox/research/drug_repurposing/w2_therapeutic_it2_20261027",
-   "symbols": []
+  "input": {
+    "schema_version": 1,
+    "axis": "F / W2 therapeutic: myelination as broad functional recovery",
+    "route": "BENEFICIO_PRECOCE",
+    "mission_dimensions": {
+      "track": "A",
+      "track_definition": "mission.md section 5: Track A = variant-independent WWOX loss of function; Track B = variant or allele-class specific (e.g. the Q230P missense class); Track C = repurposing, which is a method of reaching A or B, not a third lesion class",
+      "route": "BENEFICIO_PRECOCE",
+      "route_definition": "RECUPERO_PROFONDO = deep recovery of the lost function; BENEFICIO_PRECOCE = concrete partial benefit, symptomatic control or protection of function, with paediatric feasibility and time in view",
+      "route_note": "Broad functional recovery would need a developmental endpoint; the strand is held at abstention because no drug has been applied to a Wwox system for any myelin endpoint and the sign of the activity-myelin relationship in this genotype is unmeasured.",
+      "the_two_dimensions_are_independent": "a card keeps both: a variant-independent lever can be a partial-benefit lever, and a lesion-specific one can aim at deep recovery"
+    },
+    "candidate": {
+      "id": "P4-F-02",
+      "name": "Pro-myelinating agents and the activity-dependent myelination sign problem"
+    },
+    "disease_assertions": [
+      {
+        "id": "DA-W2-010",
+        "target_id": "MBP immunostaining intensity",
+        "endpoint": "KO relative to WT, corpus callosum, cortex, striatum, anterior commissure",
+        "direction": "DECREASE",
+        "source": "Obeid 2026 (PMID 42422765)",
+        "locator": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json verbatim_locators.entries[43]",
+        "epistemic_status": "DATO",
+        "reading_depth": "complete_fulltext_read",
+        "context": {
+          "disease_id": "Wwox-null full knockout mouse brain",
+          "genotype": "Wwox -/- (FVB) versus wild type",
+          "species": "mouse",
+          "cell_type": "white and grey matter regions",
+          "developmental_stage": "about P90 (as printed; panel F age not stated)"
+        },
+        "measured_result_note": "Knockout MBP reduced relative to wild type; the printed Fig 6E labels (48 percent corpus callosum, 30 cortex, 50 striatum, 70 anterior commissure) were read by the independent verifier as the size of the REDUCTION, not the remaining fraction (bars give about 50, 72, 49 and 30 percent remaining); the only MBP quantification in the paper.",
+        "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+        "receipt": "FTR-20261019-42422765-01"
+      },
+      {
+        "id": "DA-W2-011",
+        "target_id": "MBP after neuronal AAV9-hSynI-WWOX",
+        "endpoint": "MBP immunostaining (representative images only)",
+        "direction": "INCREASE",
+        "source": "Obeid 2026 (PMID 42422765)",
+        "locator": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json verbatim_locators.entries[6], [7], [43]",
+        "epistemic_status": "DATO",
+        "reading_depth": "complete_fulltext_read",
+        "context": {
+          "disease_id": "Wwox-null full knockout mouse brain, neonatal intracerebroventricular AAV9",
+          "genotype": "Wwox -/- treated with a low or a high vector dose versus wild type",
+          "species": "mouse",
+          "cell_type": "corpus callosum, striatum, cortex",
+          "developmental_stage": "about P90"
+        },
+        "measured_result_note": "The 'near-complete rescue at high dose, partial at low dose' is the authors' sentence on representative micrographs; no treated-arm quantification, no untreated-knockout column in that panel, no g-ratio or electron microscopy. The oligodendrocyte-promoter vector gave no detectable WWOX, so that arm does not test oligodendroglial relevance.",
+        "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+        "receipt": "FTR-20261019-42422765-01"
+      },
+      {
+        "id": "DA-W2-012",
+        "target_id": "human oligodendrocyte-lineage transcripts",
+        "endpoint": "CPM, knockout minus wild type",
+        "direction": "UNKNOWN",
+        "source": "GSE156243 (PMID 34268881 deposit); descriptive panel by scientist-c, disease-models/wwox/research/drug_repurposing/w2_therapeutic_it2_20261027/README.md",
+        "locator": "disease-models/wwox/research/drug_repurposing/w2_therapeutic_it2_20261027/organoid_panel_cpm.tsv",
+        "epistemic_status": "INFERENZA",
+        "reading_depth": "queried_not_full_read",
+        "context": {
+          "disease_id": "WWOX-deficient human cerebral organoid model (engineered knockout; NOT a patient allele; no amyloid)",
+          "genotype": "WWOX knockout versus wild type (4 versus 2 libraries, one laboratory)",
+          "species": "human",
+          "cell_type": "cerebral organoid, bulk RNA",
+          "developmental_stage": "organoid, culture week 15"
+        },
+        "measured_result_note": "PDGFRA and OLIG1 are nominally higher in knockouts, SOX10, MOG and OLIG2 are not; counts are very low and composition differs; a week-15 organoid has no compact myelin. Not myelin evidence.",
+        "evidence_scope": "COMPUTATIONAL_RESULT"
+      }
+    ],
+    "drug_assertions": [],
+    "p4_fields": {
+      "endpoint_pursued": "A myelin endpoint with a quantified treated arm in a Wwox-deficient system (MBP or g-ratio by electron microscopy, oligodendrocyte counts) after a pro-myelinating agent, after chronic activity suppression, and after an activity-raising manipulation, each against a Wwox-deficient vehicle arm.",
+      "functional_evidence_available": "Neuron-specific, not oligodendrocyte-specific, Wwox loss reproduces the hypomyelination (genetic evidence of the earlier mouse work, PMID 34268881 manifest); neuronal gene replacement is reported to restore MBP by image. No pro-myelinating compound has been given to any Wwox system.",
+      "temporal_or_model_limit": "Mouse, early postnatal window; the AAV rescue works to the earliest days tested and later ages were not testable in the null.",
+      "cellular_context": {
+        "target_expression": "Oligodendrocyte-lineage transcripts are barely detectable in the week-15 organoid.",
+        "cells_tissue_stage": "in-vivo mouse white matter for the disease rows.",
+        "coverage": "UNKNOWN.",
+        "limits": "Myelin is measured as MBP image intensity; the treated-arm quantification does not exist."
+      }
+    },
+    "p4_card": {
+      "identity": "Pro-myelinating agents (muscarinic-antagonist class such as clemastine and benztropine, thyroid-hormone and antipsychotic routes) and, as a separate question, activity manipulation as a myelin lever.",
+      "indication_and_transfer": "Only IF the Wwox-deficient oligodendrocyte lineage is itself the limiting compartment, which the neuron-versus-oligodendrocyte genetic arms argue against. Transfer unmeasured.",
+      "novelty_for_woree": "N-13 stands. New: the earlier record (DL-MECH-031 point 2) proposed that reducing seizure load might itself improve myelination because myelination is activity-dependent. The best-matched non-WWOX datum points the other way for a seizing network: Knowles 2022, Nat Neurosci (PMID 35501379, abstract read; absence-seizure models, not WWOX) reports that seizure-driven activity increases oligodendrogenesis and myelination in the seizure network, is prevented by seizure suppression, and that blocking activity-dependent myelination lowers seizure burden. The Wwox-null brain is hypomyelinated despite bursting, so neither simple sign is established. Also found: the 'near-complete MBP rescue' of the neuronal AAV is image-only (DA-W2-011).",
+      "state_of_known_roads": "map N-13, DL-MECH-031, HYP-20260709-07, N-15.",
+      "pathway_and_objective": "BENEFICIO_PRECOCE if ever; broad recovery needs the developmental endpoint.",
+      "expected_contribution": "UNKNOWN.",
+      "mechanism": "Target (if pursued): oligodendrocyte differentiation or the axon-oligodendrocyte activity signal. Direction wanted: more compact myelin. The causal compartment is neuronal, so a drug acting on oligodendrocytes alone is not expected to reach the cause.",
+      "sources": {
+        "internal": [
+          "CLAIM 003",
+          "DL-MECH-031",
+          "N-13",
+          "N-15",
+          "HYP-20260709-07",
+          "PMID 42422765 manifest",
+          "PMID 34268881 manifest"
+        ],
+        "external_not_wwox_evidence": [
+          "Knowles 2022 Nat Neurosci (PMID 35501379), abstract only",
+          "Saab 2016 Neuron (PMID 27292539), title only: oligodendroglial NMDA receptors and axonal energy metabolism"
+        ]
+      },
+      "evidence_for_and_against": {
+        "for": [
+          "Myelin is reduced in the knockout and activity-dependent myelination exists in other systems."
+        ],
+        "against": [
+          "Oligodendrocyte-lineage deletion shows no anomaly while neuronal deletion reproduces it.",
+          "The oligodendrocyte-promoter AAV arm gave no detectable protein, so it neither supports nor refutes oligodendroglial relevance.",
+          "In a seizure network, activity drives maladaptive myelination in the other-disease precedent: suppressing activity may lower or raise myelin depending on the system; the sign here is unmeasured.",
+          "Oligodendroglial NMDA receptors support axonal energy metabolism in the other-disease precedent, so chronic NMDAR block (F01) has a myelin-side cost that is unmeasured.",
+          "The myelin window closes early."
+        ],
+        "transfer_limits": "Absence-seizure and healthy-brain systems; adult versus neonatal; no Wwox arm."
+      },
+      "time_to_access": "UNKNOWN.",
+      "time_to_benefit": "UNKNOWN.",
+      "pharmacology": "Not assessed: no compound is carded.",
+      "paediatrics_and_interactions": "Not assessed.",
+      "scope_of_checks": {
+        "support_and_replication": "One laboratory for every WWOX row used here; no independent replication.",
+        "formal_checks": "Breton rows carry verbatim locators in the manifest (receipt FTR-20260810-34634460-02); the n values of the d-APV arm and the mEPSC text were re-read first-hand from the shared full-text XML on 2026-10-27 without a new receipt. GRIN and rat rows are at the reading depth stated per row.",
+        "card_inferences_owed_audit": "Every statement marked INFERENZA, and every card-level synthesis, is owed a blind audit by someone other than the producer."
+      },
+      "question_history": [
+        "map N-13",
+        "DL-MECH-031",
+        "mandate 2026-10-27 (W2)"
+      ],
+      "predictions": "Registered: if hypomyelination is driven by loss of an axonal signal, an oligodendrocyte-directed compound leaves it unchanged in Wwox-deficient neurons and corrects it only after neuronal restoration; if activity raises myelin in this genotype, chronic suppression lowers MBP; if activity suppression helps, MBP rises. The three outcomes are separable by one chronic-suppression arm and one activity-raising arm against vehicle.",
+      "next_measurement": "Wet-lab, not done: Wwox-null (or conditional neuronal) mice or co-cultures; arms: vehicle, chronic activity suppression, activity-raising manipulation, one pro-myelinating agent; controls: wild type with the same arms, neuronal-restoration positive control; endpoints: quantified MBP and g-ratio by electron microscopy, oligodendrocyte counts; discriminating result: the direction of the myelin change under suppression versus under activity.",
+      "status": "abstention",
+      "value_added": "Records that the seizure-load-improves-myelin inference was an assumption with a counter-precedent, and that the neuronal rescue's myelin evidence is image-level.",
+      "clinical_census": "Clinical census, ClinicalTrials.gov API v2, 2026-10-20 (drug_repurposing/clinical_census_20261020.md): seven queries returned no registered WOREE interventional study; it answers seven queries against one registry on one date and a missing hit does not prove that no study exists. Not re-run for this card."
+    },
+    "not_known": [
+      "Whether activity raises or lowers myelin in the Wwox-deficient brain.",
+      "Whether any pro-myelinating agent acts on Wwox-deficient oligodendrocytes.",
+      "The quantified MBP or g-ratio after neuronal AAV rescue.",
+      "Whether an oligodendroglial WWOX function exists under remyelination stress."
+    ],
+    "evidence_against": [
+      "Oligodendrocyte-lineage deletion shows no anomaly while neuronal deletion reproduces it.",
+      "The oligodendrocyte-promoter AAV arm gave no detectable protein, so it neither supports nor refutes oligodendroglial relevance.",
+      "In a seizure network, activity drives maladaptive myelination in the other-disease precedent: suppressing activity may lower or raise myelin depending on the system; the sign here is unmeasured.",
+      "Oligodendroglial NMDA receptors support axonal energy metabolism in the other-disease precedent, so chronic NMDAR block (F01) has a myelin-side cost that is unmeasured.",
+      "The myelin window closes early."
+    ],
+    "bridge_gaps_exposed": [
+      "No drug assertion exists, so no comparison is formed."
+    ],
+    "translation": {
+      "pediatric_suitability": "UNKNOWN",
+      "cns_exposure": "UNKNOWN",
+      "interactions": "UNKNOWN",
+      "access": "UNKNOWN",
+      "time_to_benefit": "UNKNOWN",
+      "functional_rescue": "UNKNOWN"
+    },
+    "p4_roadmap_fields": {
+      "indication_and_transfer": "Only IF the Wwox-deficient oligodendrocyte lineage is itself the limiting compartment, which the neuron-versus-oligodendrocyte genetic arms argue against. Transfer unmeasured.",
+      "verification_scope": "{\"support_and_replication\": \"One laboratory for every WWOX row used here; no independent replication.\", \"formal_checks\": \"Breton rows carry verbatim locators in the manifest (receipt FTR-20260810-34634460-02); the n values of the d-APV arm and the mEPSC text were re-read first-hand from the shared full-text XML on 2026-10-27 without a new receipt. GRIN and rat rows are at the reading depth stated per row.\", \"card_inferences_owed_audit\": \"Every statement marked INFERENZA, and every card-level synthesis, is owed a blind audit by someone other than the producer.\"}"
+    },
+    "label_lookup": {
+      "status": "NOT_ATTEMPTED"
+    },
+    "card_conventions": [
+      "IPOTESI throughout; the bridge forces it. No score, rank, probability or blended index is carried.",
+      "directional_summary compares signs only where target, endpoint and every context dimension match; UNRESOLVED is a statement about the record, not about the biology.",
+      "Every disease-side row from the Drosophila article is NOT WWOX-DEE EVIDENCE; the organoid rows are exploratory transcript analyses of one deposit.",
+      "Abstract-level statements from PubMed are labelled abstract_only; none carries a receipt.",
+      "label_lookup is NOT_ATTEMPTED in the bridge: the bridge has no network. The openFDA adapter was run separately and is recorded in lucas_clarke_followup_20261026/compounds_and_sources.md.",
+      "No dose, route, schedule or paediatric suitability appears; assay concentrations of the sources are deliberately not reproduced."
+    ],
+    "abstention_card": {
+      "kind": "ABSTENTION",
+      "missing_datum": "A quantified myelin endpoint in a Wwox-deficient system after any pro-myelinating compound or any chronic activity manipulation; never done.",
+      "search_record": "PubMed 2026-10-27: WWOX with oligodendrocyte and remyelination returned nothing; WWOX with myelin returned nine records, none a pro-myelinating drug arm; Knowles 2022 found by a targeted query. Reopening condition: a Wwox-system myelin result under activity or compound manipulation, or evidence of a cell-autonomous oligodendroglial WWOX function (the residual gap the neuronal rescue left, which the authors attribute to it as their hypothesis).",
+      "adjacent_context_not_wwox_evidence": [
+        "activity-dependent maladaptive myelination in absence-seizure models (Knowles 2022, abstract)"
+      ],
+      "an_abstention_is_a_result": "N-13 stays deprioritised; the added content is the unresolved sign and the image-level qualification."
+    },
+    "target_census": {
+      "dir": "disease-models/wwox/research/drug_repurposing/w2_therapeutic_it2_20261027",
+      "symbols": []
+    },
+    "no_new_reading": "W2 (scientist-c, 2026-10-27): no new full-text receipt; first-hand re-reads of already-receipted papers and of open PubMed Central text are described in the W2 record."
   },
-  "no_new_reading": "W2 (scientist-c, 2026-10-27): no new full-text receipt; first-hand re-reads of already-receipted papers and of open PubMed Central text are described in the W2 record."
- },
- "translation": {
-  "pediatric_suitability": "UNKNOWN",
-  "cns_exposure": "UNKNOWN",
-  "interactions": "UNKNOWN",
-  "access": "UNKNOWN",
-  "time_to_benefit": "UNKNOWN",
-  "functional_rescue": "UNKNOWN"
- },
- "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
- "limits": [
-  "Technical comparison is not efficacy, safety or experimental validation.",
-  "Sources and receipt references are retained, not independently verified.",
-  "Shared sources are not independent confirmations; scores are not pooled.",
-  "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
- ]
+  "translation": {
+    "pediatric_suitability": "UNKNOWN",
+    "cns_exposure": "UNKNOWN",
+    "interactions": "UNKNOWN",
+    "access": "UNKNOWN",
+    "time_to_benefit": "UNKNOWN",
+    "functional_rescue": "UNKNOWN"
+  },
+  "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
+  "limits": [
+    "Technical comparison is not efficacy, safety or experimental validation.",
+    "Sources and receipt references are retained, not independently verified.",
+    "Shared sources are not independent confirmations; scores are not pooled.",
+    "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
+  ]
 }

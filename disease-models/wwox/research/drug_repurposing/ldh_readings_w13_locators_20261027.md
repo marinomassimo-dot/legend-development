@@ -34,6 +34,8 @@ Artefacts (shared checkout `files/fulltext/`, SHA-256 of the file read):
 
 ## Guyon 2022, EMBO Mol Med 14:e15343 (PMID 36278433)
 
+*Coverage note (iteration 3, 2026-10-27).* The ledger event `FTR-20261027-36278433-01` declares `queried_not_full_read` with the abstract as the only section read, although G1 to G10 quote Methods, Results, legends and Discussion. A fresh Europe PMC body (`files/fulltext/PMID36278433_Guyon2022_EPMC_20261027.xml`, SHA-256 `2bd021df5e4f5c19e0b24f87ed7689a648cb286a3747fba6caf1b3d29f01ff05`; body text identical to the artefact in the table above) was read whole and G1 to G10 were re-matched (10 of 10). The supplementing event `FTR-20261027-36278433-02` (`partial_fulltext_read`: abstract, Introduction, Methods, Results, Discussion read; figures by legend; Appendix, datasets, references not read) is staged for the integrator. The blind audit sampled G1, G4, G5, G8, G9, G10 and left G2, G3, G6, G7 at a mechanical match.
+
 | # | Proposition | Verbatim quote | Anchor |
 |---|---|---|---|
 | G1 | Lactate production in P3 cells fell by 50 percent after 24 h at 500 uM; in vivo dose 150 mg/kg intraperitoneal; median survival 80 versus 97 days. | "its production was inhibited by 50% after 24 h treatment with 500 μM of stiripentol" | Results, section on anti-epileptic drug (Fig 6B) |
@@ -110,6 +112,6 @@ Artefacts (shared checkout `files/fulltext/`, SHA-256 of the file read):
 ## Not opened (declared)
 - Yadav 2026: all eleven figures including Fig 1E (the LDH-activity bars) and the supplement. Retrieval attempted once from Europe PMC (HTTP 403), the PMC open-data bucket holds only the XML/text/JSON for this manuscript; not retried and no bypass sought. The size of the "moderate" LDH inhibition is therefore **unquantified here**.
 - Le Dudal 2019: figures and Table 1 not opened; the PMC XML is a restricted stub and the bucket holds no files; the public page text was read.
-- Guyon 2022: Figures 1, 3 to 5, the Expanded View figures, Appendix and source-data workbooks; Methods other than the in vivo paragraph and the Laconic paragraph.
+- Guyon 2022: figure images other than Figs 2 and 6, the Appendix, the Expanded View datasets and the source-data workbooks, and the reference list (the Methods and the legends were read as text in iteration 3).
 - Bouchez 2026: Figures 1 to 4, 7 to 9, Supplementary Figs 1 and 3 to 6, Methods for cell culture, western blot, RNA sequencing, heart/liver isolation; references.
 - Bacq 2024: the GABA, ion-channel and CYP sections, figures 1, 2, 4, 5, references.

@@ -1198,6 +1198,17 @@ class AFileCanBeWellFormedAndDeclareTheFalse(unittest.TestCase):
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name)
 
+    @staticmethod
+    def _system_font() -> str:
+        """First installed TrueType font (macOS Arial, or a common Linux one); raises when none exists,
+        which the caller turns into the declared skip."""
+        for candidate in ("/System/Library/Fonts/Supplemental/Arial.ttf",
+                          "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+                          "/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf"):
+            if Path(candidate).is_file():
+                return candidate
+        raise FileNotFoundError("no embeddable system font")
+
     def _pdf(self, name: str, *, embedded: bool) -> Path:
         import fitz  # noqa: PLC0415
 
@@ -1206,8 +1217,7 @@ class AFileCanBeWellFormedAndDeclareTheFalse(unittest.TestCase):
         page = document.new_page()
         if embedded:
             page.insert_text((72, 72), "P < 0.05",
-                             fontfile="/System/Library/Fonts/Supplemental/Arial.ttf",
-                             fontname="ari")
+                             fontfile=self._system_font(), fontname="ari")
         else:
             page.insert_text((72, 72), "P < 0.05", fontname="helv")
         document.save(path)

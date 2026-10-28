@@ -1,0 +1,41 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261027-36278433-02",
+ "study_id": {
+  "pmid": "36278433",
+  "doi": "10.15252/emmm.202115343"
+ },
+ "event_at": "2026-10-27T22:35:00Z",
+ "analysis_at": "2026-10-27T22:35:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-d (Scientist D), iteration 3 package it3-guyon of mandate ORCH-ROADMAP-IT3-20261027; context_policy QUESTION_DRIVEN (the reader held the locator file, the blind audit and the earlier receipt, and read to establish what coverage the ten Guyon locators actually rest on). Route: Europe PMC fullTextXML for PMC9728051, a public open-access route, fetched on 2026-10-27 with no e-mail address, no key and no custom header (HTTP 200, 267974 bytes); persisted under the shared checkout files/fulltext. The body text of this download is identical, after whitespace normalisation, to the body text of the artefact read by the earlier event (PMID36278433_Guyon2022_PMC_r2.xml, SHA-256 8ee5f4a95e8dd82b79c8da45dff82acfca1387968c6acb938d591b99445a7d54); the files differ only in non-body markup. The body was then read straight through as plain text rendered from the JATS: abstract, Introduction, every Results subsection, Discussion, every Methods subsection and every figure and Expanded View legend. All ten locators G1 to G10 were re-matched against that rendering (10 of 10 found). This event supplements the earlier event of the same study, which declared a narrower coverage than the passages its outputs quote; it does not edit it.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID36278433_Guyon2022_EPMC_20261027.xml",
+ "source_fingerprint": "2bd021df5e4f5c19e0b24f87ed7689a648cb286a3747fba6caf1b3d29f01ff05",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_read",
+  "references": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/ldh_readings_w13_locators_20261027.md",
+  "disease-models/wwox/research/drug_repurposing/sada_ldh_precedent_p2a_20261026.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "Sections read whole, in this event: abstract, Introduction (4 paragraphs), Results (all subsections including the stiripentol section), Discussion (5 paragraphs), Materials and Methods (all subsections, including the intracranial implantation paragraph and the intracellular lactate paragraph).",
+  "Figures: captions of Figures 1 to 6 and Expanded View Figures 1 to 5 read in full as text; no figure image was opened in this event (the earlier event opened Figures 2 and 6 and is not repeated here), so panel values are not attested here. Tables: none in the body. Limitations: the paper has no limitations section or paragraph. Not read in this event: Appendix (Figs S1 to S10), Expanded View datasets, source-data workbooks, the reference list.",
+  "Observations that bear on the consumers, all from the text read: (1) the stiripentol dose 150 mg/kg stands in the Results and in the Fig 6F legend, while the Methods print 100 mg/kg ip three times a week in the sentence that also gives the bevacizumab and phenformin schedule, inside the intracranial-implantation paragraph whose cohort size is n = 8, against n = 15 to 16 in the Fig 6F legend; (2) no Methods paragraph describes the stiripentol in vitro treatment, its vehicle or its preparation; (3) the Ethical issues paragraph says mice were randomly allocated to treatment groups, whereas the Statistical analysis paragraph says the experiments were not randomized and investigators were not blinded; (4) the blood-brain-barrier crossing and cerebral LDHA/B inhibition are attributed to Sada et al, 2015 and are not shown in this paper; (5) a sentence of the Results on basal lactate in the knockout cells cites Fig 6C where the content belongs to Fig 3C.",
+  "Verbatim locators G1 to G10 in ldh_readings_w13_locators_20261027.md matched by exact string against the rendered text of this artefact: 10 of 10."
+ ],
+ "prior_receipt": "FTR-20261027-36278433-01",
+ "reread_reason": "inadequate_prior_coverage"
+}

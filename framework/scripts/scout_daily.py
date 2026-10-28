@@ -61,7 +61,8 @@ TIMEOUT = 25
 UA = "legend-scout-daily"  # no contact address, by rule
 
 # Static context per entry: why it matters for WWOX and what it adds over what the repo has.
-# kind: gh (GitHub repo), url (status+ETag+Last-Modified), json (a version string out of a JSON answer).
+# kind: gh (GitHub repo), hf (dataset card + commit sha), url (status+ETag+Last-Modified), json (a version string, or
+# with digest=True the hash of a record list), regex (file names in a plain listing), avail (reachability).
 # `vs` points at the measuring tool or the dated record; it never restates an inventory (that goes stale).
 # `signal`: "availability" = a change in reachability/ETag, reported as such and never as a capability.
 # `reopen`: the condition whose observation this probe stands for (one line, from the dated outcome).
@@ -99,6 +100,32 @@ WATCH = [
     {"id": "ChEMBL", "kind": "json", "url": "https://www.ebi.ac.uk/chembl/api/data/status.json",
      "path": ["chembl_db_version"],
      "q": "New ChEMBL release (bioactivity for candidate drugs)", "vs": "framework/adapters/chembl.py"},
+    {"id": "ChEMBL-FTP", "kind": "regex", "url": "https://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/latest/",
+     "pattern": r'href="(chembl_\d+_sqlite\.tar\.gz)"',
+     "q": "Which release file does the FTP `latest/` directory carry (cross-check of the API status version)?",
+     "vs": "framework/adapters/chembl.py reads the API; a disagreement between the two probes is itself a finding"},
+    {"id": "DGIdb-data", "kind": "json", "method": "POST", "digest": True, "url": "https://dgidb.org/api/graphql",
+     "body": '{"query":"{sources{nodes{sourceDbName sourceDbVersion}}}"}', "path": ["data", "sources", "nodes"],
+     "q": "Did any DGIdb source database change version (the repository probe above sees only code)?",
+     "vs": "framework/adapters + kg_thin_slice.py read DGIdb; fingerprint = count + hash of the (source, version) records"},
+    {"id": "openFDA-NDC", "kind": "json", "url": "https://api.fda.gov/drug/ndc.json?limit=1", "path": ["meta", "last_updated"],
+     "q": "Date of the last openFDA NDC refresh (drug product / marketed-status catalogue)",
+     "vs": "access-category and product lookups; one call, key-less, far below the 1,000/day limit"},
+    {"id": "EveryCure-drug-list", "kind": "hf", "repo": "everycure/drug-list",
+     "q": "Did the MATRIX drug list (CC BY 4.0 on its card) change content or terms? Lists are judged apart from scores, graph and code",
+     "vs": "p3b1/txgnn_matrix_outcomes_20261026.md section 2.1 (1 935 rows, commit dc75f85 at 2026-10-13)"},
+    {"id": "EveryCure-kg-nodes", "kind": "hf", "repo": "everycure/kg-nodes",
+     "q": "Did the MATRIX knowledge-graph nodes change content or terms (graph terms are separate; upstream licences stay in force)?",
+     "vs": "p3b1/txgnn_matrix_outcomes_20261026.md section 2.1"},
+    {"id": "EveryCure-kg-edges", "kind": "hf", "repo": "everycure/kg-edges",
+     "q": "Did the MATRIX knowledge-graph edges change content or terms (separate from nodes, scores, code)?",
+     "vs": "p3b1/txgnn_matrix_outcomes_20261026.md section 2.1"},
+    {"id": "GEO-LINCS-L1000", "kind": "json", "signal": "content",
+     "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=gds&retmode=json&retmax=0&term="
+            "LINCS%5BAll+Fields%5D+AND+L1000%5BAll+Fields%5D",
+     "path": ["esearchresult", "count"],
+     "q": "New GEO records mentioning LINCS L1000 (count of matching GEO DataSets records; a count is not a signature)",
+     "vs": "complements the SigCom library count: raw deposits versus processed libraries"},
     {"id": "MTBLS12344", "kind": "url", "signal": "availability",
      "url": "https://www.ebi.ac.uk/metabolights/ws/studies/public/study/MTBLS12344",
      "q": "Is the metabolomics dataset openly accessible (metabolic-signature question)?",
@@ -182,7 +209,7 @@ def probe(entry: dict, previous: dict, opener=http) -> dict:
         by_path = {f.get("path"): f.get("oid") for f in files if isinstance(f, dict)}
         fp = {"license": card.get("license") or (tags[0][8:] if tags else None), "gated": info.get("gated"),
               "licence_file": any(str(n).upper().startswith(("LICENSE", "LICENCE")) for n in by_path),
-              "card_oid": by_path.get("README.md")}
+              "card_oid": by_path.get("README.md"), "sha": info.get("sha")}
         return {"fp": fp}
     if kind == "avail":  # reachability of one URL: one attempt, status only, an outage is not a change
         code, _, _ = opener(entry["url"], "GET", None)
@@ -194,7 +221,17 @@ def probe(entry: dict, previous: dict, opener=http) -> dict:
         value = json.loads(body)
         for key in entry["path"]:
             value = value[key]
+        if entry.get("digest"):  # a record list: fingerprint = count + hash of its canonical form
+            return {"fp": {"n": len(value), "digest": digest(json.dumps(value, sort_keys=True))}}
         return {"fp": {"version": value}}
+    if kind == "regex":  # names found in a plain listing; no match is an error (page changed), never "unchanged"
+        code, _, body = opener(entry["url"], "GET", None)
+        if code != 200:
+            return {"error": f"HTTP {code}"}
+        found = sorted(set(re.findall(entry["pattern"], body.decode("utf-8", "replace"))))
+        if not found:
+            return {"error": "pattern matched nothing (listing format changed?)"}
+        return {"fp": {"match": ",".join(found)}}
     code, hdr, body = opener(entry["url"], "GET", None)
     if code == 0 or code >= 500:  # an outage is not a change
         return {"error": f"HTTP {code}"}

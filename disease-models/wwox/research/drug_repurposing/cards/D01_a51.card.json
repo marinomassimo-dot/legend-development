@@ -5,6 +5,29 @@
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
   "directional_summary": "UNRESOLVED",
+  "endpoint_outcomes": [
+    {
+      "question": [
+        "SOX2+MYC+ progenitor fraction",
+        "fraction of SOX2+MYC+ progenitors in organoid sections",
+        "WWOX-deficient human cerebral organoid model (engineered knockout; NOT a patient allele)",
+        "WWOX knockout (constitutive engineered null)",
+        "human",
+        "cerebral organoid progenitors (SOX2+ MYC+)",
+        "organoid, culture weeks 8 to 15",
+        "",
+        "",
+        ""
+      ],
+      "statuses": [
+        "OPPOSES_DISEASE_CHANGE"
+      ],
+      "discriminators_declared": false,
+      "assertion_ids": [
+        "DR-D01-001"
+      ]
+    }
+  ],
   "comparisons": [
     {
       "assertion_id": "DR-D01-001",

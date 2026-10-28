@@ -267,13 +267,16 @@ class ThePacketNamesTheTreeItDescribes(unittest.TestCase):
 # counts, `files/` contents — before the selector ran on them. The selector is never the oracle.
 #
 #   29724996  XML+PDF present, 15 artefacts, ErratumIn (Fig 3A, 3D), 38 entries, supplement PDF
-#   33914858  no manifest, no artefact on disk, three failed routes in the retrieval ledger
+#   99999903  synthetic: no manifest, no artefact on disk (replaces real PMID 33914858, since read)
 #   18460020  PDF+TXT only (no XML/HTML), CLEAN retraction_check, 34 entries
 #   38499540  XML present, three .pptx on disk UNDECLARED, .docx declared, no notice
 #   34268881  XML present, six binary containers ALL declared (xlsx as table, docx as text)
 #   16223882  PDF only, 12 crops under page_adjudications/, ExpressionOfConcernIn, 26 entries
 
-ERRATUM_PMID, ABSENT_PMID, PDF_ONLY_PMID = "29724996", "33914858", "18460020"
+# ABSENT_PMID is a reserved synthetic identifier (99999903, outside the PubMed range in use), not a
+# real paper: the 'nothing acquired' premise cannot be falsified by a later reading, which is what
+# retired the real fixture PMID 33914858 (read on 2026-10-03; three tests then skipped for months).
+ERRATUM_PMID, ABSENT_PMID, PDF_ONLY_PMID = "29724996", "99999903", "18460020"
 PPTX_PMID, DECLARED_BINARY_PMID, EOC_PMID = "38499540", "34268881", "16223882"
 
 
@@ -615,7 +618,7 @@ class TheVerifierFoundThese(unittest.TestCase):
 THIN_PMID = "29724996"     # Fig2 667x340, Fig6 667x385, Fig7 667x296; article PDF on disk
 CROPPED_PMID = "16223882"  # PDF-only, page-adjudication crops already on disk
 FAILED_ROUTE_PMID = "20146584"   # two NIHMS figures, no PDF, FAILED_HTTP_404 recorded
-NO_SURFACE_PMID = "33914858"     # nothing acquired at all
+NO_SURFACE_PMID = ABSENT_PMID    # nothing acquired at all (synthetic, see ABSENT_PMID)
 
 
 def png_or_jpeg_size(path: Path) -> tuple[int, int]:
