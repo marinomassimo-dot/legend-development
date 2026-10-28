@@ -107,12 +107,12 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20261019_023
-last_batch_commit_date: 2026-10-27
+last_batch_commit_id: BATCH_20261019_024
+last_batch_commit_date: 2026-10-28
 last_batch_commit_type: MANUAL
-commit_candidates_propagated: 4
+commit_candidates_propagated: 1
 target_wm_version: WM_v7.27
-trigger: MANUAL (ACTOR_ID integrator, assigned by the Orchestrator). Research layer, no disease-model change, WM_v7.27 preserved: iteration-2 candidates propagated in event-ID order after independent verification (hypothesis-ledger current-reading pointers and the verifier's PDH/count residuals, the LDH re-read with five receipts, HYP-20261027-01 with consequence notes and the Fig 6E manifest fix, the LINCS iteration-2 reading with the README row rewritten), plus the WWOX_EXPERIMENT_IN_DEE_SYSTEM label definition.
+trigger: MANUAL (ACTOR_ID integrator, assigned by the Orchestrator). Research layer, no disease-model change, WM_v7.27 preserved: one sentence appended to DL-MECH-173 (CC-20261027-SCIENTIST-C-ISR-01 proposal 3). Previous batch BATCH_20261019_023: iteration-2 candidates propagated in event-ID order after independent verification (hypothesis-ledger current-reading pointers and the verifier's PDH/count residuals, the LDH re-read with five receipts, HYP-20261027-01 with consequence notes and the Fig 6E manifest fix, the LINCS iteration-2 reading with the README row rewritten), plus the WWOX_EXPERIMENT_IN_DEE_SYSTEM label definition.
 ```
 
 Every batch's scope — the candidates it propagated, newest first back to `BATCH_20260810_001`,
@@ -126,8 +126,8 @@ with the keys written beside each and the notes on `BATCH_20260806_002` — is i
 
 ```yaml
 last_lint_type: LINT_AUTOMATIC
-last_lint_id: LINT_20261027_BATCH_20261019_023
-last_lint_date: 2026-10-27
+last_lint_id: LINT_20261028_BATCH_20261019_024
+last_lint_date: 2026-10-28
 last_lint_result: WARN
 ```
 

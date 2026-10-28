@@ -1,0 +1,36 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "_note": "Single-candidate integration. No claim added or modified; not medical advice.",
+ "TASK_ID": "BATCH_20261019_024",
+ "ALIAS": "INT-IT3-ISR-20261028",
+ "ACTOR_ID": "integrator",
+ "OWNER": "orchestrator",
+ "CURRENT_STATE": "COMPLETE",
+ "assigned_on": "2026-10-28",
+ "OBJECTIVE": "Apply proposal 3 of CC-20261027-SCIENTIST-C-ISR-01: append one sentence to DL-MECH-173 citing the PARS2 fly precedent (genetic, partial, non-WWOX).",
+ "TASK_CLAIM": {
+  "actor": "integrator",
+  "branch": "task/it3-batch",
+  "worktree": ".claude/worktrees/it3-batch",
+  "base": "42915427"
+ },
+ "RESULT": {
+  "wm_version": "WM_v7.27 preserved (WM unchanged)",
+  "candidates_propagated": 1,
+  "proposals_already_done_on_main": "1: receipt FTR-20261027-41380592-01 present in registries/fulltext_read_receipts.jsonl; 2: HYP-20261026-10/-11 precedent and readout text present in therapeutic_hypotheses_ledger_current.md",
+  "edit": "disease-models/wwox/research/discovery_ledger_current.md, DL-MECH-173, one replace-within op via record_scoped_edit.py (dry run, then --apply); status, tag and falsifying experiment unchanged",
+  "audit": "locator_audits/2026-10-28_it3_pars2_blind_audit.md: 29 of 30 body locators supported, 19 figure readings agreeing; wording fixes already applied",
+  "registries": "none of the four scientific current files touched"
+ },
+ "DEFAULTS_TAKEN": [
+  {"condition": "batch_commit.py propagate accepts only the four scientific current files and refuses the discovery ledger (exit 4)", "default": "same editor called directly (record_scoped_edit.py replace-within --id DL-MECH-173), dry run then --apply, outside-record bytes proven unchanged; no FULL_FALLBACK"},
+  {"condition": "snapshot declaration omits append-only ledgers by design", "default": "snapshot taken (backup/20261028_it3_batch, gitignored) for the declared files; the ledger edit is reversible by git checkout 42915427 -- <path>"}
+ ],
+ "STOP_LOG": [],
+ "VERIFICATION": {
+  "drift": "FRESH",
+  "legend_lint": "WARN before and after, 0 BLOCK, output identical",
+  "growth_anchors_check": "PASS",
+  "fulltext_receipts_verify": "OK, 880 receipts"
+ }
+}
