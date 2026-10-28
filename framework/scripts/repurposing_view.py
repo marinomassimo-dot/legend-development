@@ -16,6 +16,7 @@ or medical advice. Public disease and reference-genotype level only.
 from __future__ import annotations
 
 import argparse
+import gzip
 import html
 import json
 import sys
@@ -31,17 +32,19 @@ MAX_BYTES = 6_000_000
 LEVELS = ["L1_documented_link", "L2_mechanistic_coherence", "L3_observed_effect", "L4_observed_recovery_in_wwox_system"]
 
 # Source-state vocabulary. Each class is displayed distinctly; none is ever rendered as "empty".
-STATE_CLASSES = ["ok", "failed", "stale", "truncated", "not_fetched", "other"]
+STATE_CLASSES = ["ok", "failed", "incomplete", "stale", "truncated", "not_fetched", "other"]
 
 
 def classify_state(status) -> str:
     s = str(status or "").strip().upper()
     if s == "OK":
         return "ok"
+    if "STALE" in s:  # STALE_EXPORT, STALE_AFTER_FAILED_REFRESH: tested before FAIL on purpose
+        return "stale"
     if any(w in s for w in ("FAIL", "ERROR")):
         return "failed"
-    if "STALE" in s:
-        return "stale"
+    if "INCOMPLETE" in s:
+        return "incomplete"
     if any(w in s for w in ("TRUNC", "PARTIAL", "INTERRUPT")):
         return "truncated"
     if any(w in s for w in ("NOT_FETCHED", "NEVER", "UNTRIED", "NOT_ATTEMPTED", "ABSENT", "MISSING")):
@@ -68,39 +71,33 @@ def card_path(dr: Path, card_id: str):
 def source_rows(manifest: dict, stats: dict, summary: dict) -> list[dict]:
     """One row per catalogue source: state class, raw status, detail, retrieval time, version, licence."""
     out = []
+
+    def sstate(k):
+        v = (summary.get("source_states") or {}).get(k)
+        if isinstance(v, dict):
+            return v.get("state"), v.get("detail")
+        return v, None
+
     ver = (stats.get("source_verification") or {})
-    names = sorted(set((manifest.get("sources") or {}).keys()) | set((summary.get("source_states") or {}).keys()) - {"dgidb_note"})
+    names = sorted((set((manifest.get("sources") or {}).keys()) | set((summary.get("source_states") or {}).keys())) - {"dgidb_note"})
     for k in names:
         m = (manifest.get("sources") or {}).get(k, {})
         la = m.get("last_attempt") or {}
         data = m.get("data") or {}
-        sum_status = (summary.get("source_states") or {}).get(k)
+        sum_status, sum_detail = sstate(k)
         status = la.get("status") or sum_status or "NOT_RECORDED"
         if sum_status and classify_state(sum_status) != "ok" and classify_state(status) == "ok":
             status = sum_status  # the module's own summary says not OK: never display OK
         out.append({
             "id": k, "name": m.get("name", k), "status": status, "state_class": classify_state(status),
-            "summary_status": (summary.get("source_states") or {}).get(k),
-            "detail": la.get("detail"), "attempt_utc": la.get("utc"),
+            "summary_status": sum_status, "summary_detail": sum_detail,
+            "detail": sum_detail if (sum_detail and classify_state(sum_status) != "ok") else la.get("detail"), "attempt_utc": la.get("utc"),
             "retrieved_utc": data.get("retrieved_utc") or (((stats.get("sources") or {}).get(k) or {}).get("retrieved_utc")),
             "version": data.get("version") or (((stats.get("sources") or {}).get(k) or {}).get("version")),
             "licence": m.get("licence") or (((stats.get("sources") or {}).get(k) or {}).get("licence")),
             "terms": m.get("terms"),
             "problems": (ver.get(k) or {}).get("problems") or data.get("problems") or [],
         })
-    return out
-
-
-def find_target_kind(o, path=""):
-    """Generic: every dict in the summary whose key mentions target_kind (the split the module reports)."""
-    out = {}
-    if isinstance(o, dict):
-        for k, v in o.items():
-            p = f"{path}.{k}" if path else str(k)
-            if "target_kind" in str(k) and isinstance(v, (dict, list, int, float, str)):
-                out[p] = v
-            else:
-                out.update(find_target_kind(v, p))
     return out
 
 
@@ -117,7 +114,7 @@ def build_payload(dr: Path = DEFAULT_DR) -> dict:
     need_ids = [n["id"] for n in needs]
     nidx = {n: i for i, n in enumerate(need_ids)}
     per_need = summary["needs"]["per_need"]
-    no_link = set(summary["needs"].get("needs_without_any_link_target") or [])
+    no_link = set(summary["needs"].get("needs_without_any_intervention_target_link") or summary["needs"].get("needs_without_any_link_target") or [])
 
     # ---- rows referenced by cells, compact
     rows_by_id = {r["row_id"]: r for r in matrix["rows"]}
@@ -179,9 +176,14 @@ def build_payload(dr: Path = DEFAULT_DR) -> dict:
         o = {"r": ridx[k[0]], "n": nidx[k[1]]}
         if c:
             l1, l2, l3, l4 = (c[x] for x in LEVELS)
-            o["l1"] = [l1.get("state"), l1.get("associations"), l1.get("targets") or [], l1.get("link_sources") or [], l1.get("readout_marker_only_links") or 0, l1.get("why")]
-            o["l2"] = [l2.get("state"), l2.get("consistent_associations"), l2.get("opposed_associations"), l2.get("unresolved_associations")]
-            o["l3"] = [l3.get("state"), l3.get("assertion_ids") or [], l3.get("by_scope") or {}, l3.get("cards") or [], l3.get("measured_null_assertions") or 0, l3.get("inference_assertions") or 0]
+            o["l1"] = [l1.get("state"), l1.get("associations"), l1.get("targets") or [], l1.get("link_sources") or [], l1.get("readout_marker_only_links") or 0, l1.get("why"),
+                       l1.get("pathway_member_targets_listed_apart") or [], bool(l1.get("source_caveat_stale"))]
+            o["l2"] = [l2.get("state"), l2.get("consistent_associations"), l2.get("opposed_associations"), l2.get("unresolved_associations"),
+                       [S(json.dumps(q, sort_keys=True) if not isinstance(q, str) else q) for q in (l2.get("certainty_qualifiers") or [])]]
+            sg = {k: l3[k] for k in ("signs_wwox_system_readouts", "signs_case_reports", "signs_other_disease_precedent_not_observed_here", "safety_signals_kept_apart")
+                  if l3.get(k)}
+            o["l3"] = [l3.get("state"), l3.get("assertion_ids") or [], l3.get("by_scope") or {}, l3.get("cards") or [], l3.get("measured_null_assertions") or 0, l3.get("inference_assertions") or 0, sg,
+                       l3.get("target_engagement_assays_not_readouts") or 0]
             o["l4"] = [l4.get("state"), l4.get("assertion_ids") or [], l4.get("by_scope") or {}, bool(l4.get("via_class_card"))]
             o["x"] = bool(c.get("exploration_only"))
         if p:
@@ -189,9 +191,9 @@ def build_payload(dr: Path = DEFAULT_DR) -> dict:
                       "cr": trim_criteria(p["criteria"]), "dup": p.get("possible_duplicates_not_merged") or 0}
             if "l1" not in o:
                 lv = p["levels"]
-                o["l1"] = [lv.get("L1_documented_link"), None, [], [], 0, None]
-                o["l2"] = [lv.get("L2_mechanistic_coherence"), None, None, None]
-                o["l3"] = [lv.get("L3_observed_effect"), [], {}, [], 0, 0]
+                o["l1"] = [lv.get("L1_documented_link"), None, [], [], 0, None, [], False]
+                o["l2"] = [lv.get("L2_mechanistic_coherence"), None, None, None, []]
+                o["l3"] = [lv.get("L3_observed_effect"), [], {}, [], 0, 0, {}, 0]
                 o["l4"] = [lv.get("L4_observed_recovery_in_wwox_system"), [], {}, False]
                 o["x"] = bool(p.get("exploration_only"))
         pairs.append(o)
@@ -209,11 +211,11 @@ def build_payload(dr: Path = DEFAULT_DR) -> dict:
         src = n.get("sources") or {}
         gaps = []
         if n["id"] in no_link:
-            gaps.append("no link-type target in the catalogue for this need: no compound family can be linked")
+            gaps.append("no headline (intervention-target) link in the catalogue for this need: no compound family can be linked")
         if pn.get("exploration_only"):
             gaps.append("direction uncertain: L2 mechanistic coherence is not evaluable; the family list is an exploration list")
         if pn.get("families_with_documented_link") and not pn.get("cells_L3_observed"):
-            gaps.append("no observed effect (L3) in any card for a linked family")
+            gaps.append("no observed effect (L3) for a linked family in the listed card assertions")
         if not pn.get("cells_L4_observed"):
             gaps.append("no observed recovery in a WWOX system (L4) for any intervention on this need")
         if not pn.get("wwox_system_observations"):
@@ -230,6 +232,10 @@ def build_payload(dr: Path = DEFAULT_DR) -> dict:
             "fam_link": pn.get("families_with_documented_link"), "rec_link": pn.get("records_with_documented_link"),
             "fam_cons": pn.get("families_consistent"), "fam_opp": pn.get("families_opposed"),
             "link_targets": pn.get("link_targets"), "wwox_obs": pn.get("wwox_system_observations"),
+            "by_kind": pn.get("by_target_kind_records_families") or {}, "excluded_by_reason": pn.get("excluded_records_by_reason") or {},
+            "fam_incl_pm": pn.get("families_incl_pathway_members"), "rec_incl_pm": pn.get("records_incl_pathway_members"),
+            "fam_headline": pn.get("headline_families_intervention_targets", pn.get("families_with_documented_link")),
+            "rec_headline": pn.get("headline_records_intervention_targets", pn.get("records_with_documented_link")),
             "levels": {lv: dict(sorted(lvl_counts[n["id"]][lv].items())) for lv in LEVELS},
             "n_pairs": n_pairs.get(n["id"], 0), "n_prio": n_prio.get(n["id"], 0),
             "gaps": gaps, "counter": n.get("counter_evidence") or [], "inferred": n.get("inferred") or [],
@@ -262,7 +268,13 @@ def build_payload(dr: Path = DEFAULT_DR) -> dict:
         "families_if_twins_collapsed": cc["families_touching_a_need_if_name_twins_were_collapsed_SENSITIVITY_ONLY"],
         "readout_only_records": cc["records_touching_only_readout_markers"],
         "by_number_of_needs": cc["families_by_number_of_needs_touched"],
-        "target_kind_split": find_target_kind(summary),
+        "headline_definition": cc.get("headline_definition"),
+        "union_headline_records": cc.get("union_headline_records", cc["records_with_documented_link_to_a_need"]),
+        "union_headline_families": cc.get("union_headline_families", cc["families_with_documented_link_to_a_need"]),
+        "union_pm_records": cc.get("union_with_pathway_members_records"), "union_pm_families": cc.get("union_with_pathway_members_families"),
+        "pct_incl_pm": cc.get("pct_records_incl_pathway_members"),
+        "effector_readout_only_records": cc.get("records_touching_only_effector_constraints_or_readout_markers", cc["records_touching_only_readout_markers"]),
+        "excluded_rows": cc.get("excluded_rows") or {},
         "unit_records": u["records_are"], "unit_coverage": u["coverage_unit"], "unit_family_rule": u["family_rule"],
         "overlap_warning": cc["overlap_warning"],
     }
@@ -274,6 +286,26 @@ def build_payload(dr: Path = DEFAULT_DR) -> dict:
         "by_status": stats["by_status_class"], "by_modality": stats["by_modality"], "by_origin": stats["by_origin"],
         "rows_access_in_matrix": dict(sorted(Counter(a for r in matrix["rows"] for a in (r.get("access_categories") or ["(none)"])).items())),
     }
+    excl = {}
+    ap = cov / "associations.jsonl.gz"
+    if ap.exists():
+        with gzip.open(ap, "rt", encoding="utf-8") as fh:
+            for line in fh:
+                a = json.loads(line)
+                if a.get("excluded_from_counts"):
+                    e = excl.setdefault(a["catalogue_id"], {"id": a["catalogue_id"], "name": a.get("compound"), "reason": a["excluded_from_counts"], "genes": set(), "needs": set(), "src": a.get("link_source")})
+                    e["genes"].add(a.get("gene") or a.get("hgnc_id") or "?")
+                    e["needs"].add(a["need"])
+    excluded_detail = sorted(({"id": e["id"], "name": e["name"], "reason": e["reason"], "genes": sorted(map(str, e["genes"])), "n_needs": len(e["needs"]), "src": e["src"]} for e in excl.values()),
+                             key=lambda e: (e["reason"].split(":")[0], e["id"]))
+    leads_path = cov / "lead_dispositions.json"
+    leads = jload(leads_path) if leads_path.exists() else {"_note": None, "dispositions": []}
+    card_leads = []
+    for k, p in sorted(prio_by_key.items(), key=lambda kv: (kv[0][1], kv[0][0])):
+        r = rows_by_id[k[0]]
+        if r.get("cards") and p["disposition"] in ("consistent_mechanism_candidate", "exploration_candidate", "opposite_mechanism", "source_queried_without_result", "incomplete_or_failed_query"):
+            card_leads.append({"row": r["name"], "need": k[1], "disp": p["disposition"], "levels": [p["levels"].get(x) for x in LEVELS],
+                               "cards": [{"id": c["card_id"], "path": card_path(dr, c["card_id"])} for c in r["cards"]]})
     srcs = source_rows(manifest, stats, summary)
     tech = {
         "schema": summary["schema"], "view_schema": SCHEMA, "matrix_schema": matrix.get("schema"),
@@ -286,9 +318,11 @@ def build_payload(dr: Path = DEFAULT_DR) -> dict:
     }
     return {
         "schema": SCHEMA, "funnel": funnel, "access": access, "matrix_summary": mx, "observations": ob,
-        "dispositions": [{"id": d, "n": pr["by_disposition"].get(d, 0), "def": (prios.get("dispositions") or {}).get(d)} for d in disp_list],
+        "dispositions": [{"id": d, "n": pr["by_disposition"].get(d, 0), "cells": (pr.get("by_disposition_cells") or {}).get(d, pr["by_disposition"].get(d, 0)),
+                          "fam": (pr.get("by_disposition_distinct_families_or_rows") or {}).get(d), "def": (prios.get("dispositions") or {}).get(d)} for d in disp_list],
+        "has_distinct": bool(pr.get("by_disposition_distinct_families_or_rows")),
         "exploration_flagged": pr["exploration_flagged"], "needs": need_out, "rows": rows, "pairs": pairs, "strings": strings,
-        "tech": tech, "orphan_priorities": len(orphan), "ranking_note": prios.get("ranking"), "no_probability": prios.get("no_probability"),
+        "tech": tech, "excluded_detail": excluded_detail, "leads": leads.get("dispositions") or [], "leads_note": leads.get("_note"), "card_leads": card_leads, "orphan_priorities": len(orphan), "ranking_note": prios.get("ranking"), "no_probability": prios.get("no_probability"),
         "level_defs": dict(matrix.get("levels") or {}), "pair_unit": matrix.get("unit"),
     }
 
@@ -312,7 +346,7 @@ def render_sources(srcs: list[dict]) -> str:
     out = ['<table class="tbl"><thead><tr><th>Source</th><th>State</th><th>Detail</th><th>Retrieved (UTC)</th><th>Version</th><th>Licence</th></tr></thead><tbody>']
     for s in srcs:
         c = s["state_class"]
-        label = {"ok": "OK", "failed": "FAILED", "stale": "STALE", "truncated": "TRUNCATED", "not_fetched": "NOT FETCHED", "other": "UNRECOGNISED"}[c]
+        label = {"ok": "OK", "failed": "FAILED", "incomplete": "INCOMPLETE", "stale": "STALE", "truncated": "TRUNCATED/PARTIAL", "not_fetched": "NOT FETCHED", "other": "UNRECOGNISED"}[c]
         if c == "other":
             label += f" ({s['status']})"
         elif c != "ok":
@@ -342,9 +376,9 @@ def render_static(P: dict) -> dict[str, str]:
          f'{E(f["unit_family_rule"])}. {fmt(f["chembl_families"])} ChEMBL families and {fmt(f["source_only_families"])} source-only families whose identity is unresolved. A family is not a distinct drug.', 100),
         ("records_with_target_data", "3", "Records with target data", num("funnel.records_with_target_data", f["records_with_target_data"]), "records",
          f'{pct(f["records_with_target_data"], rec)}% of {fmt(rec)} records carry any target row (ChEMBL mechanism or DGIdb).', pct(f["records_with_target_data"], rec)),
-        ("records_with_link", "4", "Records with a documented link to a need target", num("funnel.records_with_link", f["records_with_link"]), "records",
+        ("records_with_link", "4", "Records with a headline link to an intervention target of a need", num("funnel.records_with_link", f["records_with_link"]), "records",
          f'{f["pct_records_with_link"]["percent"]}% of {fmt(f["pct_records_with_link"]["denominator"])} records; {f["pct_link_of_target_rows"]["percent"]}% of the {fmt(f["pct_link_of_target_rows"]["denominator"])} records with target data. '
-         f'In families: {num("funnel.families_with_link", f["families_with_link"])} of {fmt(fam)}. A link is a source statement, not modulation and not rescue.', pct(f["records_with_link"], rec)),
+         f'In families: {num("funnel.families_with_link", f["families_with_link"])} of {fmt(fam)}. Headline = intervention targets only (pathway members, effector constraints and readout markers are not headline; see the split below). A link is a source statement, not modulation and not rescue.', pct(f["records_with_link"], rec)),
         ("priority_pairs", "5", "Priorities", num("funnel.priority_pairs", f["priority_pairs"]), "(family, need) pairs",
          f'On {num("funnel.priority_rows", f["priority_rows"])} distinct families or interventions; a disposition, not a ranking. A further {num("funnel.pairs_not_prioritised", f["pairs_not_prioritised"])} pairs stay in the matrix only. Out of {fmt(f["cells"])} non-empty pairs.', pct(f["priority_pairs"], f["cells"])),
         ("card_rows", "6", "Card-attached", num("funnel.card_rows", f["card_rows"]), "families or interventions with a card",
@@ -358,7 +392,22 @@ def render_static(P: dict) -> dict[str, str]:
     fun.append("</ol>")
     fun.append(f'<p class="mut">Units differ between steps (records, families, pairs, interventions): compare a bar only with its own unit. Needs share targets, so per-need family counts must not be added: {E(f["overlap_warning"])}. '
                f'{num("funnel.name_twin_families", f["name_twin_families"])} touched families have a name twin in another family (not merged; {num("funnel.families_if_twins_collapsed", f["families_if_twins_collapsed"])} families would touch a need if twins were collapsed: sensitivity only). '
-               f'{num("funnel.readout_only_records", f["readout_only_records"])} records touch only readout markers and are not links.</p>')
+               f'{num("funnel.readout_only_records", f["readout_only_records"])} records touch only readout markers or effector constraints and are not links.</p>')
+    fun.append('<h3>Link counts by target kind (unions, each counted once)</h3><table class="tbl" data-table="link-split"><thead><tr><th>Counted</th><th>Records</th><th>Families</th><th>Share of records</th></tr></thead><tbody>'
+               f'<tr><td><b>Headline</b>: intervention targets and disease gene products</td><td>{num("funnel.union_headline_records", f["union_headline_records"])}</td><td>{num("funnel.union_headline_families", f["union_headline_families"])}</td><td>{pct(f["union_headline_records"], rec)}%</td></tr>'
+               + (f'<tr><td>Headline plus pathway members (not headline; shown apart)</td><td>{num("funnel.union_pm_records", f["union_pm_records"])}</td><td>{num("funnel.union_pm_families", f["union_pm_families"])}</td><td>{pct(f["union_pm_records"], rec)}%</td></tr>' if f.get("union_pm_records") is not None else "")
+               + f'<tr><td>Kept out of links: touch only effector constraints (e.g. MAPT) or readout markers</td><td>{num("funnel.effector_readout_only_records", f["effector_readout_only_records"])}</td><td></td><td>{pct(f["effector_readout_only_records"], rec)}%</td></tr>'
+               '</tbody></table>' + (f'<p class="mut">{E(f["headline_definition"])}</p>' if f.get("headline_definition") else ""))
+    ex = f.get("excluded_rows") or {}
+    if ex:
+        det = P["excluded_detail"]
+        fun.append(f'<h3>Excluded from counts, with reasons</h3><p>{num("funnel.excluded_records", ex.get("records", 0))} catalogue records carry a row kept out of every count: '
+                   + ", ".join(f'{E(k.replace("_", " "))} {num("funnel.excluded." + k, v)}' for k, v in sorted((ex.get("by_reason") or {}).items()))
+                   + '. Rules: a <b>source artefact</b> is a lone Guide-to-Pharmacology row from a gene list that also holds unrelated targets (rule: a second source is required); '
+                   'a <b>placeholder</b> is a drug literally named NULL; an <b>alias risk</b> is a PDK1 row on a record that also carries PDPK1 with no ChEMBL PDK1 mechanism (unresolved, listed, not counted).</p>'
+                   '<details><summary>list the excluded records (' + str(len(det)) + ')</summary><table class="tbl" data-table="excluded"><thead><tr><th>Record</th><th>Reason</th><th>Genes</th><th>Needs</th></tr></thead><tbody>'
+                   + "".join(f'<tr><td>{E(str(e["name"]))}<div class="mut">{E(e["id"])}</div></td><td>{E(e["reason"])}</td><td>{E(", ".join(e["genes"]))}</td><td>{e["n_needs"]}</td></tr>' for e in det)
+                   + '</tbody></table></details>')
 
     tk = f.get("target_kind_split") or {}
     if tk:
@@ -387,30 +436,61 @@ def render_static(P: dict) -> dict[str, str]:
     ac.append('<p class="mut">Not obtained: ' + E("; ".join(a["not_obtained"])) + "</p>")
 
     # dispositions
-    dp = ['<table class="tbl"><thead><tr><th>Disposition</th><th>Pairs</th><th>Meaning</th></tr></thead><tbody>']
+    hd = P.get("has_distinct")
+    dp = ['<table class="tbl"><thead><tr><th>Disposition</th><th>Pairs (cells)</th>' + ('<th>Distinct families or rows</th>' if hd else "") + '<th>Meaning</th></tr></thead><tbody>']
     for d in P["dispositions"]:
-        dp.append(f'<tr data-disp="{E(d["id"])}"><td><span class="dp dp-{E(d["id"])}">{E(d["id"].replace("_", " "))}</span></td><td>{num("disp." + d["id"], d["n"])}</td><td>{E(d["def"] or "")}</td></tr>')
+        dp.append(f'<tr data-disp="{E(d["id"])}"><td><span class="dp dp-{E(d["id"])}">{E(d["id"].replace("_", " "))}</span></td><td>{num("disp." + d["id"], d["n"])}</td>'
+                  + (f'<td>{num("dispfam." + d["id"], d["fam"])}</td>' if hd and d["fam"] is not None else ("<td>0</td>" if hd else "")) + f'<td>{E(d["def"] or "")}</td></tr>')
     dp.append("</tbody></table>")
+    if hd:
+        dp.append('<p class="mut">Cells and distinct families are different units: one family can hold several cells (one per need). A count of cells is not a count of compounds.</p>')
     dp.append(f'<p class="mut">{E(str(P["ranking_note"]))}. {num("disp.exploration_flagged", P["exploration_flagged"])} priority pairs are flagged exploration (need direction uncertain).</p>')
 
     # levels summary
     ms = P["matrix_summary"]
     lv = ['<table class="tbl"><thead><tr><th>Level</th><th>State</th><th>Cells</th></tr></thead><tbody>']
     for lvl in ("L1", "L2", "L3", "L4"):
-        for k in sorted(k for k in ms if k.startswith(lvl + "_")):
-            lv.append(f'<tr><td>{lvl}</td><td>{E(k[3:].replace("_", " "))}</td><td>{num("matrix." + k, ms[k])}</td></tr>')
-    lv.append("</tbody></table>")
+        if isinstance(ms.get(lvl + "_states"), dict):
+            items = [(k, v) for k, v in sorted(ms[lvl + "_states"].items())]
+        else:
+            items = [(k[3:], ms[k]) for k in sorted(ms) if k.startswith(lvl + "_") and isinstance(ms[k], int)]
+        for k, v in items:
+            lv.append(f'<tr><td>{lvl}</td><td>{E(k.replace("_", " "))}</td><td>{num("matrix." + lvl + "." + k, v)}</td></tr>')
+    lv.append("</tbody></table><p class='mut'>Each level is a separate partition of the same cells; the rows are never added across levels.</p>")
+
+    # leads
+    ld = [f'<p class="mut">{E(str(P.get("leads_note") or ""))}</p>' if P.get("leads_note") else ""]
+    ld.append('<p>A catalogue link is a source statement, not a recommendation. Reasoned endings of searches, including abstentions and opposite mechanisms, each with what would reopen it. Same content as the section "Catalogue-derived leads" of <a href="../../repurposing_batch_selection_20261028_module.md">the handoff</a> (<code>../../repurposing_batch_selection_20261028_module.md</code>). Sources: <code>coverage/lead_dispositions.json</code>.</p>')
+    ld.append(f'<h3>Lead dispositions ({num("leads.n", len(P["leads"]))})</h3>')
+    for d in P["leads"]:
+        card = f'<a href="../{E(d["card"])}">{E(d["card"])}</a>' if d.get("card") else "no card"
+        rec = d.get("record")
+        reca = f'<a href="../{E(rec)}">{E(rec)}</a>' if rec else "none"
+        ld.append(f'<div class="item" data-lead="{E(d["id"])}"><div class="top"><span class="nm">{E(d["id"])}</span><span class="chip">decision: {E(d["decision"])}</span><span class="mut">{E(d["need"])}</span></div>'
+                  f'<div>{E(d["subject"])}</div><dl class="crit"><dt>Why</dt><dd>{E(d["why"])}</dd><dt>Reopening condition</dt><dd>{E(d["reopening_condition"])}</dd>'
+                  f'<dt>Next experiment</dt><dd>{E(d["next_experiment"])}</dd><dt>Owner</dt><dd>{E(d["owner"])}</dd><dt>Card</dt><dd>{card}</dd><dt>Record</dt><dd>{reca}</dd>'
+                  f'<dt>Catalogue ids</dt><dd>{E(", ".join(d.get("catalogue_ids") or []) or "none")}</dd></dl></div>')
+    ld.append(f'<h3>Card-attached catalogue pairs ({num("leads.card_pairs", len(P["card_leads"]))})</h3><table class="tbl" data-table="card-leads"><thead><tr><th>Compound or intervention</th><th>Need</th><th>Disposition</th><th>L1</th><th>L2</th><th>L3</th><th>L4</th><th>Card</th></tr></thead><tbody>')
+    for c in P["card_leads"]:
+        cl = ", ".join(f'<a href="{E(x["path"])}">{E(x["id"])}</a>' if x["path"] else E(x["id"]) for x in c["cards"])
+        ld.append(f'<tr><td>{E(c["row"])}</td><td>{E(c["need"])}</td><td><span class="dp dp-{E(c["disp"])}">{E(c["disp"].replace("_", " "))}</span></td>' + "".join(f"<td>{E(str(x).replace('_', ' '))}</td>" for x in c["levels"]) + f"<td>{cl}</td></tr>")
+    ld.append("</tbody></table>")
 
     # technical
+    bad = [x for x in t["sources"] if x["state_class"] != "ok"]
+    banner = ""
+    if bad:
+        banner = ('<div class="warnbar" id="source-banner" role="alert"><b>Source states are not all OK:</b> ' + "; ".join(
+            f'<span class="st st-{x["state_class"]}" data-banner="{E(x["id"])}">{E(x["name"])}: {E(str(x["status"]))}</span> {E(str(x["detail"] or ""))}' for x in bad)
+            + ' Every absence-type result below ("no catalogue link found", "source queried without result") carries this caveat, and none is a negative finding about biology.</div>')
     tc = [f'<p>Data generated (catalogue): {E(str(t["catalog_generated_utc"]))}. This view reads no clock; the build is deterministic from the inputs below.</p>',
           f'<p>Regenerate: <code>{E(t["regeneration"])}</code></p>']
     tc.append("<h3>Sources, versions, licences, states</h3>" + render_sources(t["sources"]))
-    bad = [s for s in t["sources"] if s["state_class"] != "ok"]
     tc.append(f'<p data-k="sources.not_ok" data-v="{len(bad)}">Sources not in state OK: {len(bad)}. ' +
               ("A source not in state OK turns every disposition into <i>incomplete or failed query</i>; that is not a negative." if bad else "None: no disposition is currently demoted to incomplete or failed query.") + "</p>")
     ins = t["inputs_status"]
     tc.append("<h3>Input checks</h3><ul>" + "".join(
-        f'<li>{E(k.replace("_", " "))}: ' + (f'<span class="st st-failed">{len(v)} listed</span> {E(", ".join(map(str, v)))}' if v else '<span class="st st-ok">none</span>') + "</li>"
+        f'<li>{E(k.replace("_", " "))}: ' + (f'<span class="st st-{"stale" if k.startswith("stale") else "failed"}">{len(v)} listed</span> {E(", ".join(map(str, v)))}' if v else '<span class="st st-ok">none</span>') + "</li>"
         for k, v in sorted(ins.items())) + "</ul>")
     d = t.get("dgidb_age") or {}
     if d:
@@ -420,17 +500,17 @@ def render_static(P: dict) -> dict[str, str]:
     tc.append(f'<p class="mut">Schemas: {E(str(t["schema"]))}, matrix {E(str(t["matrix_schema"]))}, needs {E(str(t["needs_schema"]))}, view {E(t["view_schema"])}. Catalogue file: {E(json.dumps(t.get("catalog_file")))}</p>')
 
     limits = ("<ul>"
-              "<li><b>Association is not modulation, and modulation is not rescue.</b> A documented link (L1) is a source statement about a target; it says nothing about a change in a WWOX-deficient system.</li>"
-              "<li><b>No efficacy is shown or implied.</b> L3 is a card-level observed readout change; L4 is a technical comparison against the disease change in a WWOX system, not efficacy and not safety.</li>"
+              "<li><b>Association is not modulation, and modulation is not rescue.</b> A headline link (L1) is a source statement about a target; it says nothing about a change in a WWOX-deficient system.</li>"
+              "<li><b>No efficacy is shown or implied.</b> L3 is an assertion listed as pertinent to the need, with its sign and scope (other-disease precedent, enzyme or cell-free engagement and safety signals are separate states); L4 is a technical comparison against the disease change in a WWOX system, not efficacy and not safety.</li>"
               "<li><b>Scores are not probabilities.</b> There is no score or probability in this view. Dispositions are reasoned categories; the order is need id then row id, not evidence volume. Any model score elsewhere in the module is not a probability.</li>"
               "<li><b>Combinations are not inferred.</b> No synergy, complementarity or joint effect is computed; sets of compounds are not scored.</li>"
               "<li><b>Exploration lists.</b> For the " + num("funnel.needs_exploration", f["needs_exploration"]) + " needs whose direction is uncertain, L2 is not evaluable and the compound list is for exploration, not a list of favourable treatments.</li>"
               "<li><b>Access is US evidence, dated;</b> not approval, appropriateness or safety. Unknown is not negative. Safety is NOT_ASSESSED for every family; potency is not carried.</li>"
               "<li><b>A family is not a drug.</b> Records are source-level substance records (salts, stereoisomers and source-only rows count once each); name twins are not merged.</li>"
-              "<li><b>Card pertinence is card-level;</b> endpoint-level pertinence is not checked. Absence in cards (none in cards) is not a negative finding.</li>"
+              "<li><b>Pertinence is listed by hand per assertion;</b> an assertion not in the pertinence table is not counted. Absence in cards (none in cards) is not a negative finding. Seizure-need cells are symptom-level inferences. Role rows carry certainty qualifiers.</li>"
               "<li>Public disease and reference-genotype level only. Nothing here is medical advice.</li>"
               "</ul>" + "<p class='mut'>Source limits recorded by the module: " + E("; ".join(t["limits_summary"])) + "</p>")
-    return {"FUNNEL": "".join(fun), "ACCESS": "".join(ac), "DISPOSITIONS": "".join(dp), "LEVELS": "".join(lv), "TECH": "".join(tc), "LIMITS": limits,
+    return {"LEADS": "".join(ld), "BANNER": banner, "FUNNEL": "".join(fun), "ACCESS": "".join(ac), "DISPOSITIONS": "".join(dp), "LEVELS": "".join(lv), "TECH": "".join(tc), "LIMITS": limits,
             "NNEEDS": fmt(f["needs"]), "NPAIRS": fmt(f["cells"]), "NPRIO": fmt(f["priority_pairs"])}
 
 
@@ -454,10 +534,10 @@ a{color:var(--acc)}code{font-size:.85em;background:var(--accbg);padding:1px 4px;
 .ft{font-weight:600}.funnel .num{font-size:1.2rem}.unit{font-size:.8rem;background:var(--accbg);color:var(--acc);padding:1px 8px;border-radius:99px}
 .bar{display:block;height:7px;background:var(--line);border-radius:4px;margin:4px 0;overflow:hidden}.bar i{display:block;height:100%;background:var(--bar)}
 .chip,.st,.dp,.lv{display:inline-block;padding:1px 8px;border-radius:99px;font-size:.78rem;border:1px solid var(--line);margin:1px 2px;white-space:nowrap}
-.chips{line-height:2}
+.chips{line-height:2}#lvl-now .chip,#disp-now .chip{white-space:normal}
 .st-ok{background:var(--okbg);color:var(--ok)}.st-failed{background:var(--badbg);color:var(--bad);font-weight:700}.st-stale{background:var(--warnbg);color:var(--warn);font-weight:700}
 .st-truncated{background:var(--warnbg);color:var(--warn);border-style:dashed;font-weight:700}.st-not_fetched{background:transparent;color:var(--mut);border-style:dotted;font-weight:700}.st-other{background:var(--badbg);color:var(--bad);border-style:dashed}
-.lic-warn{color:var(--bad);font-weight:600}.state-none{background:var(--warnbg);padding:6px 10px;border-radius:6px}
+.warnbar{background:var(--warnbg);border-bottom:3px solid var(--warn);padding:8px 16px;font-size:.9rem}.st-incomplete{background:var(--badbg);color:var(--bad);border-style:dashed;font-weight:700}.lic-warn{color:var(--bad);font-weight:600}.state-none{background:var(--warnbg);padding:6px 10px;border-radius:6px}
 .dp-consistent_mechanism_candidate{background:var(--okbg);color:var(--ok)}.dp-exploration_candidate{background:var(--accbg);color:var(--acc);border-style:dashed}
 .dp-opposite_mechanism{background:var(--badbg);color:var(--bad)}.dp-not_relevant,.dp-no_catalogue_link_found{color:var(--mut)}.dp-insufficient_data{color:var(--mut);border-style:dashed}
 .dp-source_queried_without_result{background:var(--warnbg);color:var(--warn);border-style:dotted}.dp-incomplete_or_failed_query{background:var(--badbg);color:var(--bad);border-style:double;border-width:3px;font-weight:700}
@@ -468,7 +548,7 @@ button{width:auto;cursor:pointer}.bar-actions{display:flex;gap:8px;align-items:c
 .item{border:1px solid var(--line);border-radius:8px;padding:8px 10px;margin:8px 0;background:var(--card)}
 .item .top{display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline}.item .nm{font-weight:600}.lvls{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:4px 10px;margin-top:6px;font-size:.84rem}
 .lvls div{border-left:3px solid var(--line);padding-left:6px}.lvls .k{color:var(--mut);font-size:.74rem;display:block}
-.v-documented,.v-coherent,.v-observed{color:var(--ok);font-weight:600}.v-opposed{color:var(--bad);font-weight:600}.v-none_found,.v-none,.v-none_in_cards,.v-none_in_record{color:var(--mut)}.v-not_evaluable,.v-direction_unresolved{color:var(--warn)}
+.v-documented,.v-coherent,.v-observed,.v-observed_wwox_system,.v-observed_experimental{color:var(--ok);font-weight:600}.v-observed_case_level,.v-observed_case_level_only,.v-pathway_member_only,.v-measured_null_only,.v-precedent_other_disease_only,.v-target_engagement_only,.v-safety_signal_only,.v-source_incomplete{color:var(--warn);font-weight:600}.v-opposed{color:var(--bad);font-weight:600}.v-none_found,.v-none,.v-none_in_cards,.v-none_in_record{color:var(--mut)}.v-not_evaluable,.v-direction_unresolved{color:var(--warn)}
 details{margin-top:6px}summary{cursor:pointer;color:var(--acc)}.crit{display:grid;grid-template-columns:minmax(120px,max-content) 1fr;gap:3px 12px;font-size:.84rem;margin-top:6px}.crit dt{color:var(--mut)}.crit dd{margin:0;word-break:break-word}
 .pager{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:8px 0}.needs{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,420px),1fr));gap:10px}
 .ncard{border:1px solid var(--line);border-radius:8px;padding:10px;background:var(--card)}.ncard.explore{border-style:dashed}.ncard h3{margin-top:0;font-size:.95rem}
@@ -482,7 +562,7 @@ JS = r"""
 'use strict';
 var D=JSON.parse(document.getElementById('data').textContent);
 var NEEDS=D.needs,ROWS=D.rows,PAIRS=D.pairs,STR=D.strings,DISP=D.dispositions;
-var LBL={documented:'documented link',none_found:'queried, none found',not_evaluable:'not evaluable',coherent:'coherent',opposed:'opposed',direction_unresolved:'direction unresolved',none:'none',none_in_cards:'none in cards (not a negative)',observed:'observed',none_in_record:'none in record (not a negative)'};
+var LBL={documented:'headline link (intervention target)',pathway_member_only:'pathway member only (not headline)',source_incomplete:'source incomplete (not a negative)',observed_wwox_system:'observed in a WWOX system',observed_case_level_only:'observed in a clinical case report only',measured_null_only:'measured null only',precedent_other_disease_only:'precedent in another disease only',target_engagement_only:'enzyme or cell-free engagement only',safety_signal_only:'safety signal only',observed_experimental:'recovery, experimental WWOX system',observed_case_level:'recovery, case-level (uncontrolled report)',none_found:'queried, none found',not_evaluable:'not evaluable',coherent:'coherent',opposed:'opposed',direction_unresolved:'direction unresolved',none:'none',none_in_cards:'none in cards (not a negative)',observed:'observed',none_in_record:'none in record (not a negative)'};
 function lbl(s){return LBL[s]||String(s).replace(/_/g,' ');}
 function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
 function $(id){return document.getElementById(id);}
@@ -515,6 +595,7 @@ function pairOk(p){var n=NEEDS[p.n],r=ROWS[p.r];if(!needOk(n))return false;
  return true;}
 // ---- rendering helpers
 function lv(k,v,extra){return '<div><span class="k">'+k+'</span><span class="v-'+esc(v)+'">'+esc(lbl(v))+'</span>'+(extra?' <span class="mut">'+extra+'</span>':'')+'</div>';}
+function signs(o){var k=Object.keys(o||{});return k.length?' signs: '+k.map(function(a){return esc(a.replace(/^signs_/,'').replace(/_/g,' '))+' '+esc(JSON.stringify(o[a]));}).join('; '):'';}
 function scopes(o){var k=Object.keys(o||{});return k.length?k.map(function(s){return esc(s)+' x'+o[s];}).join(', '):'';}
 function cardLinks(cs){return cs.map(function(c){return c.path?'<a href="'+esc(c.path)+'">'+esc(c.id)+'</a>':esc(c.id)+' (file not found)';}).join(', ');}
 function pairHtml(p,withCrit){
@@ -526,7 +607,7 @@ function pairHtml(p,withCrit){
  if(p.p){var d=DISP[p.p.d].id;h+='<span class="dp dp-'+esc(d)+'">'+esc(d.replace(/_/g,' '))+'</span>';}else h+='<span class="chip">matrix only (not prioritised)</span>';
  h+='</div>';
  var l1=p.l1,l2=p.l2,l3=p.l3,l4=p.l4;
- h+='<div class="lvls">'+lv('L1 documented link',l1[0],l1[1]!=null?l1[1]+' assoc.; '+esc((l1[2]||[]).join(', ')):'')+lv('L2 mechanistic coherence',l2[0],l2[1]!=null?(l2[1]+' consistent, '+l2[2]+' opposed, '+l2[3]+' unresolved'):'')+lv('L3 observed effect',l3[0],scopes(l3[2]))+lv('L4 recovery in a WWOX system',l4[0],scopes(l4[2]))+'</div>';
+ h+='<div class="lvls">'+lv('L1 headline link',l1[0],(l1[1]!=null?l1[1]+' assoc.; '+esc((l1[2]||[]).join(', ')):'')+((l1[6]&&l1[6].length)?' pathway members listed apart: '+esc(l1[6].join(', ')):'')+(l1[7]?' [DGIdb export is stale: absence is not a negative]':''))+lv('L2 mechanistic coherence',l2[0],l2[1]!=null?(l2[1]+' consistent, '+l2[2]+' opposed, '+l2[3]+' unresolved'):'')+lv('L3 observed effect',l3[0],scopes(l3[2])+signs(l3[6]))+lv('L4 recovery in a WWOX system',l4[0],scopes(l4[2]))+'</div>';
  if(p.x)h+='<div class="mut">exploration: this need\'s direction is uncertain; L2 not evaluable.</div>';
  if(withCrit&&p.p)h+='<details data-crit="1"><summary>reasons, criteria, links</summary><div class="dd"></div></details>';
  h+='</div>';return h;}
@@ -537,6 +618,8 @@ function critHtml(p){
  row('Direction / mechanism','L2 '+esc(lbl(c.dir[0]))+'; sources: '+esc(c.dir[1].join(', ')||'none')+'; targets: '+esc(c.dir[2].join(', ')||'none'));
  row('Evidence quality and independence',esc(c.evq[0])+' card assertion(s), '+esc(c.evq[1])+' distinct source string(s); reading depth: '+(scopes(c.evq[2])||'none')+'. Shared sources are not independent confirmations.');
  row('Counter-evidence',esc(c.ctr[0])+' measured-null assertion(s) for this intervention; '+esc(c.ctr[1])+' counter-evidence item(s) on the need (text in the need panel)');
+ if(p.l2&&p.l2[4]&&p.l2[4].length)row('Certainty qualifiers of the role rows',esc(p.l2[4].map(function(i){return STR[i];}).join(' | ')));
+ if(p.l3&&p.l3[7])row('Enzyme or cell-free assays (not readouts)',esc(p.l3[7]));
  row('Potency and assay context',esc(c.pot));
  row('Transferability (a stated distance, not a score)','scopes: '+esc(c.tra[0].join(', ')||'none')+'; species: '+esc(c.tra[1].join(', ')||'none')+'; target system: WWOX-DEE reference genotype class');
  row('Pharmacology / safety info',esc(c.pha[0])+'; status: '+esc(c.pha[1].join(', ')||'none'));
@@ -575,7 +658,10 @@ function drawNeeds(){var ns=NEEDS.filter(needOk);$('cnt-needs').textContent=ns.l
   +'<div class="kv"><b>Desired direction:</b> '+esc(n.dir)+(n.explore?' <span class="dp dp-exploration_candidate">uncertain: exploration</span>':'')+' on '+esc(n.dir_on)+' <span class="mut">('+esc(n.dir_cert)+')</span></div>'
   +'<div class="kv"><b>Track</b> '+esc(n.track)+' - <b>goal</b> '+esc(n.goal)+'</div>'
   +'<div class="kv"><b>Evidence scopes:</b> '+n.scopes.map(function(s){return '<span class="chip">'+esc(s)+'</span>';}).join('')+'</div>'
-  +'<div class="kv"><b>Families with a documented link:</b> '+n.fam_link+' families ('+n.rec_link+' records), '+n.link_targets+' link target(s); not additive across needs</div>'
+  +'<div class="kv"><b>Headline link (intervention targets):</b> '+n.fam_headline+' families ('+n.rec_headline+' records), '+n.link_targets+' link target(s); not additive across needs</div>'
+  +(n.fam_incl_pm!=null?'<div class="kv"><b>Incl. pathway members:</b> '+n.fam_incl_pm+' families ('+n.rec_incl_pm+' records)</div>':'')
+  +'<div class="kv"><b>By target kind (records / families):</b> '+(Object.keys(n.by_kind).map(function(k){return '<span class="chip">'+esc(k.replace(/_/g,' '))+': '+n.by_kind[k].records+' / '+n.by_kind[k].families+'</span>';}).join('')||'none')+'</div>'
+  +(Object.keys(n.excluded_by_reason).length?'<div class="kv"><b>Excluded from counts:</b> '+esc(JSON.stringify(n.excluded_by_reason))+'</div>':'')
   +'<div class="kv"><b>Levels (cells, never summed):</b></div>'+lvlChips(n)
   +'<div class="kv"><b>Pairs here:</b> '+n.n_pairs+' in the matrix, '+n.n_prio+' prioritised; '+np+' match the current filters</div>'
   +'<div class="kv"><b>Gaps:</b></div><ul>'+n.gaps.map(function(g){return '<li>'+esc(g)+'</li>';}).join('')+'</ul>'
@@ -608,7 +694,7 @@ TEMPLATE = """<!doctype html>
 <style>__CSS__</style></head><body>
 <header><div class="in"><h1>WWOX drug-repurposing module: exploration view</h1>
 <div class="mut">Local, regenerable, non-canonical research material. Public disease and reference-genotype level only. Not a ranking of treatments, not a probability of benefit, not medical advice. __NNEEDS__ needs, __NPAIRS__ (family, need) pairs in the matrix.</div></div></header>
-<nav><div class="in"><a href="#funnel">Funnel</a><a href="#access">Access</a><a href="#needs">Needs</a><a href="#matrix">Matrix</a><a href="#priorities">Priorities</a><a href="#limits">Limits</a><a href="#technical">Technical details</a></div></nav>
+__BANNER__<nav><div class="in"><a href="#funnel">Funnel</a><a href="#access">Access</a><a href="#needs">Needs</a><a href="#matrix">Matrix</a><a href="#priorities">Priorities</a><a href="#leads">Leads</a><a href="#limits">Limits</a><a href="#technical">Technical details</a></div></nav>
 <main>
 <section id="funnel"><h2>1. From catalogue to evaluated: what is counted, in which unit</h2>__FUNNEL__</section>
 <section id="access"><h2>2. Distribution by access category</h2>__ACCESS__</section>
@@ -631,6 +717,7 @@ __LEVELS__
 __DISPOSITIONS__
 <div class="note">Dispositions are distinct: <b>source queried without result</b> (the sources were asked and returned no row for the record), <b>incomplete or failed query</b> (a source was not in state OK; this is never a negative) and <b>not relevant / no catalogue link found</b> and <b>insufficient data</b> (a decision from the data that exist) are different statements and are not merged.</div>
 <div class="pager" id="pg-p"></div><div id="prio-list"></div></section>
+<section id="leads"><h2>6. Catalogue-derived leads and lead dispositions</h2>__LEADS__</section>
 <section id="limits"><h2>8. Honest limits</h2>__LIMITS__</section>
 <section id="technical"><h2>9. Technical details (separate from the exploration above)</h2>__TECH__</section>
 </main>
