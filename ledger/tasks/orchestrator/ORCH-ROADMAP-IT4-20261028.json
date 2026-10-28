@@ -32,9 +32,9 @@
     },
     {
      "step": "A4 independent verification of the A1-A3 conclusions from the sources (producer != verifier)",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "scientist-b",
-     "evidence": "independent verification done: Q1-Q6 supported (assoc_verification); follow-up defects D3 (selectivity label), D4 (anomaly detector too narrow), D5 (headline wording: 588 of 1,218 records state no action)"
+     "evidence": "assoc_verification (independent, from sources): Q1-Q6 supported; defects D1-D6 repaired in A5 (landed 6c115af6)"
     }
    ]
   },
@@ -66,27 +66,27 @@
    "steps": [
     {
      "step": "C1 evolve view/index.html for a physician: first screen (goal, WWOX perimeter, biological threads, deep recovery and partial benefit, compounds to study, decisive gaps, data date), need->mechanism->compounds->evidence->next-question navigation, candidate profile in five answers with progressive detail, filters, few-candidate comparison with opposed actions visible, no synergy inference",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "scientist-d",
-     "evidence": "landed 014804b5: curated view, 6 threads, 31 profiles, 9 filters, comparison"
+     "evidence": "landed 014804b5 + A5 wording: first screen, 6 threads, navigation, 31 profiles, filters, comparison; previews 01-08 reviewed by the Orchestrator"
     },
     {
      "step": "C2 transparent research-priority ordering per need and goal (reason visible, full list reachable, alternative sorts, groups where numbers are not defensible); no global efficacy score",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "scientist-d",
-     "evidence": "landed: rule-based groups G1-G4, no score"
+     "evidence": "rule-based groups G1-G4, reasons printed, no score; group rules are the builder's own and are documented as such"
     },
     {
      "step": "C3 exportable/printable summary cards with date, scope, rationale, evidence and counter-evidence, limits, next experiment, verifiable sources that still work off the local folder; browser proof of five paths at desktop and narrow width; saved reviewable preview",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "scientist-d",
-     "evidence": "landed: #export= A4 print layout, standalone download, previews 01-08"
+     "evidence": "#export= print layout + standalone download, headless Chromium desktop and 500px (390 viewport screenshot), PDF export text-extracted; previews saved"
     },
     {
      "step": "C4 distribution perimeter and licences: repository visibility, data embedded in the HTML, terms of the components really used (DGIdb and its sources, ChEMBL, others); shareable projection from permissive sources if needed, attributions kept",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "scientist-a",
-     "evidence": "licence report in scratchpad: repo is public and contains DGIdb rows with NC/unclear terms; projection pending"
+     "evidence": "licence report (scratchpad) + view --source shareable with allowlist and attribution footer; the repo is ALREADY public with DGIdb-derived rows in git history: decision for the operator (visibility/history), listed in HUMAN_REQUIRED"
     }
    ]
   },
