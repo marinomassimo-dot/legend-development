@@ -1,0 +1,336 @@
+LOCUS       NM_016373               2241 bp    mRNA    linear   PRI 20-NOV-2025
+DEFINITION  Homo sapiens WW domain containing oxidoreductase (WWOX), transcript
+            variant 1, mRNA.
+ACCESSION   NM_016373 NM_004916
+VERSION     NM_016373.4
+KEYWORDS    RefSeq; MANE Select.
+SOURCE      Homo sapiens (human)
+  ORGANISM  Homo sapiens
+            Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+            Mammalia; Eutheria; Euarchontoglires; Primates; Haplorrhini;
+            Catarrhini; Hominidae; Homo.
+REFERENCE   1  (bases 1 to 2241)
+  AUTHORS   Schaffer,L.V., Hu,M., Qian,G., Moon,K.M., Pal,A., Soni,N.,
+            Latham,A.P., Pontano Vaites,L., Tsai,D., Mattson,N.M., Licon,K.,
+            Bachelder,R., Cesnik,A., Gaur,I., Le,T., Leineweber,W., Palar,A.,
+            Pulido,E., Qin,Y., Zhao,X., Churas,C., Lenkiewicz,J., Chen,J.,
+            Ono,K., Pratt,D., Zage,P., Echeverria,I., Sali,A., Harper,J.W.,
+            Gygi,S.P., Foster,L.J., Huttlin,E.L., Lundberg,E. and Ideker,T.
+  TITLE     Multimodal cell maps as a foundation for structural and functional
+            genomics
+  JOURNAL   Nature 642 (8066), 222-231 (2025)
+   PUBMED   40205054
+  REMARK    Erratum:[Nature. 2025 Oct;646(8086):E16. doi:
+            10.1038/s41586-025-09648-x. PMID: 41039152]
+REFERENCE   2  (bases 1 to 2241)
+  AUTHORS   Cheng,L., Chang,Y., Xia,Z., Liu,Y., Liu,X., Xiong,L., Liu,C.,
+            Zhu,X., Wang,M. and Qiu,L.
+  TITLE     Remote modulation of WWOX by an intronic variant associated with
+            survival of Chinese gastric cancer patients
+  JOURNAL   Int J Cancer 154 (2), 307-319 (2024)
+   PUBMED   37615513
+  REMARK    GeneRIF: Remote modulation of WWOX by an intronic variant
+            associated with survival of Chinese gastric cancer patients.
+REFERENCE   3  (bases 1 to 2241)
+  AUTHORS   Shin,M.J., Kim,H.S., Lee,P., Yang,N.G., Kim,J.Y., Eun,Y.S., Lee,W.,
+            Kim,D., Lee,Y., Jung,K.E., Hong,D., Shin,J.M., Lee,S.H., Lee,S.Y.,
+            Kim,C.D. and Kim,J.E.
+  TITLE     Mechanistic Investigation of WWOX Function in NF-kB-Induced Skin
+            Inflammation in Psoriasis
+  JOURNAL   Int J Mol Sci 25 (1), 167 (2023)
+   PUBMED   38203337
+  REMARK    GeneRIF: Mechanistic Investigation of WWOX Function in
+            NF-kB-Induced Skin Inflammation in Psoriasis.
+REFERENCE   4  (bases 1 to 2241)
+  AUTHORS   Dong,X.S., Wen,X.J., Zhang,S., Wang,D.G., Xiong,Y. and Li,Z.M.
+  TITLE     Identification of compound heterozygous deletion of the WWOX gene
+            in WOREE syndrome
+  JOURNAL   BMC Med Genomics 16 (1), 291 (2023)
+   PUBMED   37974179
+  REMARK    GeneRIF: Identification of compound heterozygous deletion of the
+            WWOX gene in WOREE syndrome.
+REFERENCE   5  (bases 1 to 2241)
+  AUTHORS   Cheng,H.C., Huang,P.H., Lai,F.J., Jan,M.S., Chen,Y.L., Chen,S.Y.,
+            Chen,W.L., Hsu,C.K., Huang,W. and Hsu,L.J.
+  TITLE     Loss of fragile WWOX gene leads to senescence escape and genome
+            instability
+  JOURNAL   Cell Mol Life Sci 80 (11), 338 (2023)
+   PUBMED   37897534
+  REMARK    GeneRIF: Loss of fragile WWOX gene leads to senescence escape and
+            genome instability.
+REFERENCE   6  (bases 1 to 2241)
+  AUTHORS   Bednarek,A.K., Keck-Waggoner,C.L., Daniel,R.L., Laflin,K.J.,
+            Bergsagel,P.L., Kiguchi,K., Brenner,A.J. and Aldaz,C.M.
+  TITLE     WWOX, the FRA16D gene, behaves as a suppressor of tumor growth
+  JOURNAL   Cancer Res 61 (22), 8068-8073 (2001)
+   PUBMED   11719429
+  REMARK    GeneRIF: WWOX, the FRA16D gene, behaves as a suppressor of tumor
+            growth.
+REFERENCE   7  (bases 1 to 2241)
+  AUTHORS   Paige,A.J., Taylor,K.J., Taylor,C., Hillier,S.G., Farrington,S.,
+            Scott,D., Porteous,D.J., Smyth,J.F., Gabra,H. and Watson,J.E.
+  TITLE     WWOX: a candidate tumor suppressor gene involved in multiple tumor
+            types
+  JOURNAL   Proc Natl Acad Sci U S A 98 (20), 11417-11422 (2001)
+   PUBMED   11572989
+REFERENCE   8  (bases 1 to 2241)
+  AUTHORS   Chang,N.S., Pratt,N., Heath,J., Schultz,L., Sleve,D., Carey,G.B.
+            and Zevotek,N.
+  TITLE     Hyaluronidase induction of a WW domain-containing oxidoreductase
+            that enhances tumor necrosis factor cytotoxicity
+  JOURNAL   J Biol Chem 276 (5), 3361-3370 (2001)
+   PUBMED   11058590
+REFERENCE   9  (bases 1 to 2241)
+  AUTHORS   Ried,K., Finnis,M., Hobson,L., Mangelsdorf,M., Dayan,S.,
+            Nancarrow,J.K., Woollatt,E., Kremmidiotis,G., Gardner,A.,
+            Venter,D., Baker,E. and Richards,R.I.
+  TITLE     Common chromosomal fragile site FRA16D sequence: identification of
+            the FOR gene spanning FRA16D and homozygous deletions and
+            translocation breakpoints in cancer cells
+  JOURNAL   Hum Mol Genet 9 (11), 1651-1663 (2000)
+   PUBMED   10861292
+REFERENCE   10 (bases 1 to 2241)
+  AUTHORS   Bednarek,A.K., Laflin,K.J., Daniel,R.L., Liao,Q., Hawkins,K.A. and
+            Aldaz,C.M.
+  TITLE     WWOX, a novel WW domain-containing protein mapping to human
+            chromosome 16q23.3-24.1, a region frequently affected in breast
+            cancer
+  JOURNAL   Cancer Res 60 (8), 2140-2145 (2000)
+   PUBMED   10786676
+COMMENT     REVIEWED REFSEQ: This record has been curated by NCBI staff. The
+            reference sequence was derived from AF211943.1.
+            This sequence is a reference standard in the RefSeqGene project.
+            
+            On Nov 22, 2018 this sequence version replaced NM_016373.3.
+            
+            Summary: This gene encodes a member of the short-chain
+            dehydrogenases/reductases (SDR) protein family. This gene spans the
+            FRA16D common chromosomal fragile site and appears to function as a
+            tumor suppressor gene. Expression of the encoded protein is able to
+            induce apoptosis, while defects in this gene are associated with
+            multiple types of cancer. Disruption of this gene is also
+            associated with autosomal recessive spinocerebellar ataxia 12.
+            Disruption of a similar gene in mouse results in impaired
+            steroidogenesis, additionally suggesting a metabolic function for
+            the protein. Alternative splicing results in multiple transcript
+            variants. [provided by RefSeq, May 2014].
+            
+            Transcript Variant: This variant (1) represents the longest
+            transcript and encodes the longest isoform (1).
+            
+            Publication Note:  This RefSeq record includes a subset of the
+            publications that are available for this gene. Please see the Gene
+            record to access additional publications.
+            
+            ##Evidence-Data-START##
+            Transcript exon combination :: AF211943.1, SRR1803614.118508.1
+                                           [ECO:0000332]
+            RNAseq introns              :: single sample supports all introns
+                                           SAMEA1965299, SAMEA1966682
+                                           [ECO:0000348]
+            ##Evidence-Data-END##
+            
+            ##RefSeq-Attributes-START##
+            MANE Ensembl match     :: ENST00000566780.6/ ENSP00000457230.1
+            RefSeq Select criteria :: based on conservation, expression,
+                                      longest protein
+            ##RefSeq-Attributes-END##
+            COMPLETENESS: full length.
+PRIMARY     REFSEQ_SPAN         PRIMARY_IDENTIFIER PRIMARY_SPAN        COMP
+            1-2241              AF211943.1         1-2241
+FEATURES             Location/Qualifiers
+     source          1..2241
+                     /organism="Homo sapiens"
+                     /mol_type="mRNA"
+                     /db_xref="taxon:9606"
+                     /chromosome="16"
+                     /map="16q23.1-q23.2"
+     gene            1..2241
+                     /gene="WWOX"
+                     /gene_synonym="D16S432E; DEE28; EIEE28; FOR; FRA16D;
+                     HHCMA56; PRO0128; SCAR12; SDR41C1; WOX1"
+                     /note="WW domain containing oxidoreductase"
+                     /db_xref="GeneID:51741"
+                     /db_xref="HGNC:HGNC:12799"
+                     /db_xref="MIM:605131"
+     exon            1..232
+                     /gene="WWOX"
+                     /gene_synonym="D16S432E; DEE28; EIEE28; FOR; FRA16D;
+                     HHCMA56; PRO0128; SCAR12; SDR41C1; WOX1"
+                     /inference="alignment:Splign:2.1.0"
+     misc_feature    96..98
+                     /gene="WWOX"
+                     /gene_synonym="D16S432E; DEE28; EIEE28; FOR; FRA16D;
+                     HHCMA56; PRO0128; SCAR12; SDR41C1; WOX1"
+                     /note="upstream in-frame stop codon"
+     CDS             126..1370
+                     /gene="WWOX"
+                     /gene_synonym="D16S432E; DEE28; EIEE28; FOR; FRA16D;
+                     HHCMA56; PRO0128; SCAR12; SDR41C1; WOX1"
+                     /EC_number="1.1.1.-"
+                     /note="isoform 1 is encoded by transcript variant 1; WW
+                     domain-containing protein WWOX; fragile site FRA16D
+                     oxidoreductase; short chain dehydrogenase/reductase family
+                     41C member 1"
+                     /codon_start=1
+                     /product="WW domain-containing oxidoreductase isoform 1"
+                     /protein_id="NP_057457.1"
+                     /db_xref="CCDS:CCDS42196.1"
+                     /db_xref="GeneID:51741"
+                     /db_xref="HGNC:HGNC:12799"
+                     /db_xref="MIM:605131"
+                     /translation="MAALRYAGLDDTDSEDELPPGWEERTTKDGWVYYANHTEEKTQW
+                     EHPKTGKRKRVAGDLPYGWEQETDENGQVFFVDHINKRTTYLDPRLAFTVDDNPTKPT
+                     TRQRYDGSTTAMEILQGRDFTGKVVVVTGANSGIGFETAKSFALHGAHVILACRNMAR
+                     ASEAVSRILEEWHKAKVEAMTLDLALLRSVQHFAEAFKAKNVPLHVLVCNAATFALPW
+                     SLTKDGLETTFQVNHLGHFYLVQLLQDVLCRSAPARVIVVSSESHRFTDINDSLGKLD
+                     FSRLSPTKNDYWAMLAYNRSKLCNILFSNELHRRLSPRGVTSNAVHPGNMMYSNIHRS
+                     WWVYTLLFTLARPFTKSMQQGAATTVYCAAVPELEGLGGMYFNNCCRCMPSPEAQSEE
+                     TARTLWALSERLIQERLGSQSG"
+     misc_feature    126..194
+                     /gene="WWOX"
+                     /gene_synonym="D16S432E; DEE28; EIEE28; FOR; FRA16D;
+                     HHCMA56; PRO0128; SCAR12; SDR41C1; WOX1"
+                     /note="propagated from UniProtKB/Swiss-Prot (Q9NZC7.1);
+                     Region: Disordered. /evidence=ECO:0000256|SAM:MobiDB-lite"
+     misc_feature    159..161
+                     /gene="WWOX"
+                     /gene_synonym="D16S432E; DEE28; EIEE28; FOR; FRA16D;
+                     HHCMA56; PRO0128; SCAR12; SDR41C1; WOX1"
+                     /note="Phosphothreonine.
+                     /evidence=ECO:0007744|PubMed:19690332; propagated from
+                     UniProtKB/Swiss-Prot (Q9NZC7.1); phosphorylation site"
+     misc_feature    165..167
+                     /gene="WWOX"
+                     /gene_synonym="D16S432E; DEE28; EIEE28; FOR; FRA16D;
+                     HHCMA56; PRO0128; SCAR12; SDR41C1; WOX1"
+                     /note="Phosphoserine.
+                     /evidence=ECO:0007744|PubMed:19690332; propagated from
+                     UniProtKB/Swiss-Prot (Q9NZC7.1); phosphorylation site"
+     misc_feature    222..224
+                     /gene="WWOX"
+                     /gene_synonym="D16S432E; DEE28; EIEE28; FOR; FRA16D;
+                     HHCMA56; PRO0128; SCAR12; SDR41C1; WOX1"
+                     /note="Phosphotyrosine.
+                     /evidence=ECO:0000269|PubMed:15070730,
+                     ECO:0000269|PubMed:19366691; propagated from
+                     UniProtKB/Swiss-Prot (Q9NZC7.1); phosphorylation site"
+     misc_feature    273..290
+                     /gene="WWOX"
+                     /gene_synonym="D16S432E; DEE28; EIEE28; FOR; FRA16D;
+                     HHCMA56; PRO0128; SCAR12; SDR41C1; WOX1"
+                     /note="propagated from UniProtKB/Swiss-Prot (Q9NZC7.1);
+                     Region: Nuclear localization signal.
+                     /evidence=ECO:0000250"
+     misc_feature    498..1367
+                     /gene="WWOX"
+                     /gene_synonym="D16S432E; DEE28; EIEE28; FOR; FRA16D;
+                     HHCMA56; PRO0128; SCAR12; SDR41C1; WOX1"
+                     /note="propagated from UniProtKB/Swiss-Prot (Q9NZC7.1);
+                     Region: Interaction with MAPT. /evidence=ECO:0000250"
+     misc_feature    750..944
+                     /gene="WWOX"
+                     /gene_synonym="D16S432E; DEE28; EIEE28; FOR; FRA16D;
+                     HHCMA56; PRO0128; SCAR12; SDR41C1; WOX1"
+                     /note="propagated from UniProtKB/Swiss-Prot (Q9NZC7.1);
+                     Region: Mediates targeting to the mitochondria.
+                     /evidence=ECO:0000250"
+     misc_feature    984..986
+                     /gene="WWOX"
+                     /gene_synonym="D16S432E; DEE28; EIEE28; FOR; FRA16D;
+                     HHCMA56; PRO0128; SCAR12; SDR41C1; WOX1"
+                     /note="Phosphotyrosine, by TNK2.
+                     /evidence=ECO:0000269|PubMed:16288044; propagated from
+                     UniProtKB/Swiss-Prot (Q9NZC7.1); phosphorylation site"
+     exon            233..297
+                     /gene="WWOX"
+                     /gene_synonym="D16S432E; DEE28; EIEE28; FOR; FRA16D;
+                     HHCMA56; PRO0128; SCAR12; SDR41C1; WOX1"
+                     /inference="alignment:Splign:2.1.0"
+     exon            298..355
+                     /gene="WWOX"
+                     /gene_synonym="D16S432E; DEE28; EIEE28; FOR; FRA16D;
+                     HHCMA56; PRO0128; SCAR12; SDR41C1; WOX1"
+                     /inference="alignment:Splign:2.1.0"
+     exon            356..534
+                     /gene="WWOX"
+                     /gene_synonym="D16S432E; DEE28; EIEE28; FOR; FRA16D;
+                     HHCMA56; PRO0128; SCAR12; SDR41C1; WOX1"
+                     /inference="alignment:Splign:2.1.0"
+     exon            535..641
+                     /gene="WWOX"
+                     /gene_synonym="D16S432E; DEE28; EIEE28; FOR; FRA16D;
+                     HHCMA56; PRO0128; SCAR12; SDR41C1; WOX1"
+                     /inference="alignment:Splign:2.1.0"
+     exon            642..730
+                     /gene="WWOX"
+                     /gene_synonym="D16S432E; DEE28; EIEE28; FOR; FRA16D;
+                     HHCMA56; PRO0128; SCAR12; SDR41C1; WOX1"
+                     /inference="alignment:Splign:2.1.0"
+     exon            731..916
+                     /gene="WWOX"
+                     /gene_synonym="D16S432E; DEE28; EIEE28; FOR; FRA16D;
+                     HHCMA56; PRO0128; SCAR12; SDR41C1; WOX1"
+                     /inference="alignment:Splign:2.1.0"
+     exon            917..1181
+                     /gene="WWOX"
+                     /gene_synonym="D16S432E; DEE28; EIEE28; FOR; FRA16D;
+                     HHCMA56; PRO0128; SCAR12; SDR41C1; WOX1"
+                     /inference="alignment:Splign:2.1.0"
+     exon            1182..2241
+                     /gene="WWOX"
+                     /gene_synonym="D16S432E; DEE28; EIEE28; FOR; FRA16D;
+                     HHCMA56; PRO0128; SCAR12; SDR41C1; WOX1"
+                     /inference="alignment:Splign:2.1.0"
+     regulatory      2217..2222
+                     /regulatory_class="polyA_signal_sequence"
+                     /gene="WWOX"
+                     /gene_synonym="D16S432E; DEE28; EIEE28; FOR; FRA16D;
+                     HHCMA56; PRO0128; SCAR12; SDR41C1; WOX1"
+                     /note="hexamer: AATAAA"
+     polyA_site      2241
+                     /gene="WWOX"
+                     /gene_synonym="D16S432E; DEE28; EIEE28; FOR; FRA16D;
+                     HHCMA56; PRO0128; SCAR12; SDR41C1; WOX1"
+                     /note="major polyA site"
+ORIGIN      
+        1 gcagtgcgca ggcgtgagcg gtcgggcccc gacgcgcgcg ggtctcgttt ggagcgggag
+       61 tgagttcctg agcgagtgga cccggcagcg ggcgataggg gggccaggtg cctccacagt
+      121 cagccatggc agcgctgcgc tacgcggggc tggacgacac ggacagtgag gacgagctgc
+      181 ctccgggctg ggaggagaga accaccaagg acggctgggt ttactacgcc aatcacaccg
+      241 aggagaagac tcagtgggaa catccaaaaa ctggaaaaag aaaacgagtg gcaggagatt
+      301 tgccatacgg atgggaacaa gaaactgatg agaacggaca agtgtttttt gttgaccata
+      361 taaataaaag aaccacctac ttggacccaa gactggcgtt tactgtggat gataatccga
+      421 ccaagccaac cacccggcaa agatacgacg gcagcaccac tgccatggaa attctccagg
+      481 gccgggattt cactggcaaa gtggttgtgg tcactggagc taattcagga atagggttcg
+      541 aaaccgccaa gtcttttgcc ctccatggtg cacatgtgat cttggcctgc aggaacatgg
+      601 caagggcgag tgaagcagtg tcacgcattt tagaagaatg gcataaagcc aaggtagaag
+      661 caatgaccct ggacctcgct ctgctccgta gcgtgcagca ttttgctgaa gcattcaagg
+      721 ccaagaatgt gcctcttcat gtgcttgtgt gcaacgcagc aacttttgct ctaccctgga
+      781 gtctcaccaa agatggcctg gagaccacct ttcaagtgaa tcatctgggg cacttctacc
+      841 ttgtccagct cctccaggat gttttgtgcc gctcagctcc tgcccgtgtc attgtggtct
+      901 cctcagagtc ccatcgattt acagatatta acgactcctt gggaaaactg gacttcagtc
+      961 gcctctctcc aacaaaaaac gactattggg cgatgctggc ttataacagg tccaagctct
+     1021 gcaacatcct cttctccaac gagctgcacc gtcgcctctc cccacgcggg gtcacgtcga
+     1081 acgcagtgca tcctggaaat atgatgtact ccaacattca tcgcagctgg tgggtgtaca
+     1141 cactgctgtt taccttggcg aggcctttca ccaagtccat gcaacaggga gctgccacca
+     1201 ccgtgtactg tgctgctgtc ccagaactgg agggtctggg agggatgtac ttcaacaact
+     1261 gctgccgctg catgccctca ccagaagctc agagcgaaga gacggcccgg accctgtggg
+     1321 cgctcagcga gaggctgatc caagaacggc ttggcagcca gtccggctaa gtggagctca
+     1381 gagcggatgg gcacacacac ccgccctgtg tgtgtcccct cacgcaagtg ccagggctgg
+     1441 gccccttcca aatgtccctc caacacagat ccgcaagagt aaaggaaata agagcagtca
+     1501 caacagagtg aaaaatctta agtaccaatg ggaagcaggg aattcctggg gtaaagtatc
+     1561 acttttctgg ggctgggcta ggcataggtc tctttgcttt ctggtggtgg cctgtttgaa
+     1621 agtaaaaacc tgcttggtgt gtaggttccg tatctccctg gagaagcacc agcaattctc
+     1681 tttcttttac tgttatagaa tagcctgagg tcccctcgtc ccatccagct accaccacgg
+     1741 ccaccactgc agccgggggc tggccttctc ctacttaggg aagaaaaagc aagtgttcac
+     1801 tgctccttgc tgcattgatc caggagataa ttgtttcatt catcctgacc aagactgagc
+     1861 cagcttagca actgctgggg agacaaatct cagaaccttg tcccagccag tgaggatgac
+     1921 agtgacaccc agagggagta gaatacgcag aactaccagg tggcaaagta cttgtcatag
+     1981 actcctttgc taatgctatg caaaaaattc tttagagatt ataacaaatt tttcaaatca
+     2041 ttccttagat accttgaaag gcaggaaggg aagcgtatat acttaagaat acacaggata
+     2101 ttttgggggg cagagaataa aacgttagtt aatccctttg tctgtcaatc acagtctcag
+     2161 ttctcttgct ttcacattgt acttaaacct cctgctgtgc ctcgcatcct atgcttaata
+     2221 aaagaacatg cttgaatatc a
+//
+
