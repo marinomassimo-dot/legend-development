@@ -29,11 +29,14 @@
    "5": 1,
    "6": 2
   },
+  "families_target_listed": 1189,
   "families_touching_a_need_if_name_twins_were_collapsed_SENSITIVITY_ONLY": 1065,
   "families_touching_at_least_one_need_counted_once": 1189,
   "families_with_documented_link_to_a_need": 1189,
-  "headline_definition": "a documented link = a catalogue row on an INTERVENTION target (or disease gene product) of a need, excluding source-artefact rows, alias-risk rows and the DGIdb placeholder; pathway members counted apart; effector constraints and readout markers are never links",
+  "families_with_stated_action_on_a_need_target": 603,
+  "headline_definition": "TARGET LISTED (record count, not an action count) = a catalogue row on an INTERVENTION target (or disease gene product) of a need, excluding source-artefact rows, alias-risk rows and the DGIdb placeholder; pathway members counted apart; effector constraints and readout markers are never links",
   "headline_families_if_name_twins_collapsed_SENSITIVITY_ONLY": 1065,
+  "headline_order": "action-stated records first (records_with_stated_action_on_a_need_target), then target-listed records (union_headline_records = all headline records, with or without a stated action); both are record/family counts and neither is an evidence-of-effect count",
   "headline_records_by_strongest_relation": {
    "action_stated_by_curated_source": 618,
    "action_stated_by_other_source_only": 12,
@@ -65,10 +68,13 @@
    "what": "records with a headline link / records carrying any target row"
   },
   "records_examined": 44211,
+  "records_target_listed": 1218,
+  "records_target_listed_without_stated_action": 588,
   "records_touching_only_effector_constraints_or_readout_markers": 702,
   "records_touching_only_readout_markers": 702,
   "records_with_any_target_row": 24423,
   "records_with_documented_link_to_a_need": 1218,
+  "records_with_stated_action_on_a_need_target": 630,
   "touched_families_with_a_name_twin_in_another_family_not_merged": 715,
   "touched_headline_families_with_a_name_twin_not_merged": 715,
   "union_headline_families": 1189,
@@ -436,7 +442,7 @@
      "readout_marker": 1
     },
     "targets": 10,
-    "wwox_system_observations": 0
+    "wwox_system_observations": 1
    },
    "NEED-LACTATE-LDH": {
     "by_target_kind_records_families": {
@@ -545,7 +551,7 @@
      "readout_marker": 2
     },
     "targets": 6,
-    "wwox_system_observations": 2
+    "wwox_system_observations": 4
    },
    "NEED-MTOR-AUTOPHAGY": {
     "by_target_kind_records_families": {

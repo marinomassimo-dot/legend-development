@@ -14,13 +14,15 @@
    "steps": [
     {
      "step": "A1 trace the identity chain on an informative sample (source record -> source target id -> DGIdb normalisation -> import -> need): GRIN1/STING, ATF4/nicotinic, CTNNB1/p38, EIF4EBP1/CDK, GRIN2A/B suspects, GRIA4, ABAT second source; one collision not on the listed symbols",
-     "status": "IN_PROGRESS",
-     "owner": "scientist-a"
+     "status": "DONE",
+     "owner": "scientist-a",
+     "evidence": "root cause found: DGIdb GuideToPharmacology gene_claim_name NCBIGENE:<GtoPdb target id> resolved as Entrez id; landed b8005820; independent verification running (A4)"
     },
     {
      "step": "A2 correct at import/with stable source ids, represent unresolved relations explicitly, consolidate duplicate rules, GRIN2A/B class-vs-subunit semantics, GRIA4 reopened, ABAT pharmacology of second-source records; targeted regressions (confirmed false link, genuine link same gene/family, complex-level not subunit selectivity, non-listed collision, unresolved not promoted); regenerate catalogue, associations, coverage, priorities, queue, view",
-     "status": "IN_PROGRESS",
-     "owner": "plan"
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "identity verification via GtoPdb ids in catalog_build, symbol rules removed, regressions; landed b8005820; independent verification running (A4)"
     },
     {
      "step": "A3 module behaviours: concordant and opposed actions in one family shown together not summed; a failing source changes only the dispositions that depend on it, not a verified mechanism; regressions",
@@ -30,8 +32,9 @@
     },
     {
      "step": "A4 independent verification of the A1-A3 conclusions from the sources (producer != verifier)",
-     "status": "TODO",
-     "owner": "scientist-b"
+     "status": "IN_PROGRESS",
+     "owner": "scientist-b",
+     "evidence": "independent verification done: Q1-Q6 supported (assoc_verification); follow-up defects D3 (selectivity label), D4 (anomaly detector too narrow), D5 (headline wording: 588 of 1,218 records state no action)"
     }
    ]
   },
@@ -52,9 +55,9 @@
     },
     {
      "step": "B3 ISR: supplementary figures already in corpus first, Hussain supplement for GCN1, meaning of the WWOX row in the PERK interactome, exact Atf4 with/without Abeta42 reconciliation (interaction vs two separate tests, unit and n), review of the discriminating-experiment design with a Scientist, propagate to needs, cards, hypotheses, priorities, queue",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "scientist-c",
-     "evidence": "landed 6c6ae560 (notes, needs, card E01, HYP text applied 744b583f); independent verification of Hussain/Sassano/Atf4 facts running"
+     "evidence": "notes+needs+card E01+HYP text landed (6c6ae560, 744b583f); verified independently from sources (P1-P4 supported, locator_audits/2026-10-28_it4_isr_independent_verification.md)"
     }
    ]
   },
@@ -63,18 +66,21 @@
    "steps": [
     {
      "step": "C1 evolve view/index.html for a physician: first screen (goal, WWOX perimeter, biological threads, deep recovery and partial benefit, compounds to study, decisive gaps, data date), need->mechanism->compounds->evidence->next-question navigation, candidate profile in five answers with progressive detail, filters, few-candidate comparison with opposed actions visible, no synergy inference",
-     "status": "TODO",
-     "owner": "scientist-d"
+     "status": "IN_PROGRESS",
+     "owner": "scientist-d",
+     "evidence": "landed 014804b5: curated view, 6 threads, 31 profiles, 9 filters, comparison"
     },
     {
      "step": "C2 transparent research-priority ordering per need and goal (reason visible, full list reachable, alternative sorts, groups where numbers are not defensible); no global efficacy score",
-     "status": "TODO",
-     "owner": "scientist-d"
+     "status": "IN_PROGRESS",
+     "owner": "scientist-d",
+     "evidence": "landed: rule-based groups G1-G4, no score"
     },
     {
      "step": "C3 exportable/printable summary cards with date, scope, rationale, evidence and counter-evidence, limits, next experiment, verifiable sources that still work off the local folder; browser proof of five paths at desktop and narrow width; saved reviewable preview",
-     "status": "TODO",
-     "owner": "scientist-d"
+     "status": "IN_PROGRESS",
+     "owner": "scientist-d",
+     "evidence": "landed: #export= A4 print layout, standalone download, previews 01-08"
     },
     {
      "step": "C4 distribution perimeter and licences: repository visibility, data embedded in the HTML, terms of the components really used (DGIdb and its sources, ChEMBL, others); shareable projection from permissive sources if needed, attributions kept",
@@ -111,13 +117,15 @@
    "steps": [
     {
      "step": "E1 two high-information questions, one for broad durable recovery and one for partial benefit, chosen from needs, catalogue, priorities and gaps; premise, WWOX knowledge and counter-evidence, pharmacology sources, decisive passages only, comparable card or reasoned abstention; regenerate module, queue, view",
-     "status": "TODO",
-     "owner": "scientist-b"
+     "status": "IN_PROGRESS",
+     "owner": "scientist-b",
+     "evidence": "question A (deep recovery) done and verified: PTC read-through, reasoned abstention + sequence enumeration (32 nonsense alleles, 23/1/8), LD-006; question B running"
     },
     {
      "step": "E2 PMID 31543760 against a roadmap question; supplements of PMID 42397075 and others via local corpus, public official routes, browser tools; no e-mail, registration, author contact",
-     "status": "TODO",
-     "owner": "scientist-c"
+     "status": "DONE",
+     "owner": "scientist-c",
+     "evidence": "31543760 read against needs (O5-O7 added, receipt -06 recorded, 882 chain); 42397075 supplement limit documented (publisher 403, Europe PMC none)"
     },
     {
      "step": "E3 latest real daily scout run: consume only relevant differences; small scan for gaps (identity quality, assay selectivity, perturbations, supplement catalogues, reading/presentation tools); ToolUniverse only where it fills a concrete gap; TxGNN/MATRIX only on a changed condition",

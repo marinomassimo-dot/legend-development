@@ -1138,13 +1138,45 @@
       }
      ],
      "locator_status": "DOCUMENT"
+    },
+    {
+     "model_type": "human_neural_progenitor_shrna_knockdown",
+     "species": "human",
+     "genotype": "lentiviral shRNA WWOX knockdown (extent not quantified; one unreplicated blot shows a residual band) versus scrambled shRNA, puromycin-selected stable lines",
+     "tissue_or_cells": "H9 embryonic-stem-cell-derived neural progenitors (commercial line), 2D culture, undifferentiated",
+     "age_stage": "in vitro, growth-factor-maintained progenitors",
+     "pmid": "31543760",
+     "locator_status": "MANIFEST",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "id": "O7",
+     "statement": "Human neural progenitors with WWOX silenced by shRNA (CAGE transcriptome, GSE126075): the authors' gene-set report (GSEA on 9,427 genes, GO biological process, their threshold FDR q below 0.25) lists on the knockdown side 108 sets, among them amino-acid biosynthesis and metabolism (alpha-amino acid biosynthetic process q 0.065, serine family q 0.098, amino acid activation q 0.173, amino-acid transmembrane transport q 0.175), 18 rRNA, tRNA and ribosome sets (ribosome biogenesis q 0.055) and regulation of the ERAD pathway (q 0.091). No set in either supplementary table (44 control-side, 108 knockdown-side rows) names the unfolded-protein response, the ER-stress response, the integrated stress response or amino-acid starvation, and ATF4, CHAC1, TRIB3, DDIT3, ASNS, PHGDH and EIF2 symbols occur on no readable surface of the paper or its supplements. Member genes and fold changes are not printed.",
+     "comparison": "knockdown against scrambled control, gene-set enrichment (rank-based, phenotype permutation)",
+     "readout": "GO biological-process gene-set names, enrichment scores and FDR q-values (Supplementary Tables 2 and 3)",
+     "readout_level": "transcript",
+     "direction_observed": "set names of amino-acid biosynthesis and translation machinery on the knockdown side (nominal q 0.06 to 0.2); no ISR or UPR set on either side; ATF4-target genes not reported",
+     "limits": "Engineered partial loss of function (a knockdown), not a knockout or patient allele; knockdown depth is unquantified and the one blot shown has a residual WWOX band; commercial hESC-derived line that the authors say differentiates only to neurons. A gene-set name is not an ATF4-target result: the same biosynthetic and ribosomal sets are produced by MYC- or mTORC1-type growth programs, and the member genes are not printed. Threshold is permissive (FDR 0.25; 17 of 108 knockdown-side rows have q below 0.1); replicate number is not stated; GSEA sign convention is read from the table captions. Not a PERK or GCN2 measurement. It is not comparable one-to-one with the organoid ATF4 set (O2): different system, method and level.",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID31543760.json",
+       "entry": 26,
+       "anchor": "alpha-amino acid biosynthetic process"
+      },
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID31543760.json",
+       "entry": 30,
+       "anchor": "9,427 genes"
+      }
+     ]
     }
    ],
    "inferred": [
     "That a WWOX-dependent ISR elevation exists in human neural cells is not shown in the sources read; the only human readout points the opposite way at transcript level.",
     "That any ISR elevation is harmful rather than adaptive is unmeasured; Atf4 never perturbed.",
     "That GCN2, rather than PERK or the eIF2B complex, is the ISR node relevant to WWOX loss: the only GCN2 datum is a fly mitochondrial-translation model, and no GCN2 measurement exists in any Wwox system.",
-    "That WWOX acts on PERK or GCN2 through a physical association: the fly paper's two cited interactome entries are a low-score, unvalidated GCN1 prey (interaction score 0.133, 10 spectra, HEK293T tandem affinity purification, no empty-vector control described; below the authors' 0.2 candidate line) and a three-spectrum WWOX hit in a PERK proximity-biotinylation list (HEK293-T, mock-cell control), in which GCN1 is a stronger hit (10 spectra) than WWOX; neither shows binding, activation or direction (read 2026-10-28, isr_kinase_interactome_atf4_reconciliation_it4_20261028.md)."
+    "That WWOX acts on PERK or GCN2 through a physical association: the fly paper's two cited interactome entries are a low-score, unvalidated GCN1 prey (interaction score 0.133, 10 spectra, HEK293T tandem affinity purification, no empty-vector control described; below the authors' 0.2 candidate line) and a three-spectrum WWOX hit in a PERK proximity-biotinylation list (HEK293-T, mock-cell control), in which GCN1 is a stronger hit (10 spectra) than WWOX; neither shows binding, activation or direction (read 2026-10-28, isr_kinase_interactome_atf4_reconciliation_it4_20261028.md).",
+    "That the amino-acid and translation-machinery gene-set names on the knockdown side of the shRNA progenitor transcriptome (O7) reflect ATF4 activity: the member genes are not printed, ATF4 targets are not named anywhere in the paper, and the same sets arise from MYC- or mTORC1-type growth programs; the gene-level test needs a re-analysis of the deposit GSE126075 (replicate structure not stated)."
    ],
    "intervention_direction": {
     "direction": "uncertain",
@@ -1170,14 +1202,20 @@
      "R-10"
     ],
     "documents": [
-    "disease-models/wwox/research/drug_repurposing/isr_kinase_interactome_atf4_reconciliation_it4_20261028.md"
-   ],
+     "disease-models/wwox/research/drug_repurposing/isr_kinase_interactome_atf4_reconciliation_it4_20261028.md"
+    ],
     "registry_ids": [],
     "papers": [
      {
       "pmid": "42909904",
       "paper_registry_ids": [
        "PAPER 567"
+      ]
+     },
+     {
+      "pmid": "31543760",
+      "paper_registry_ids": [
+       "PAPER 022"
       ]
      }
     ]
@@ -1924,11 +1962,74 @@
       }
      ],
      "locator_status": "REGISTRY_ONLY"
+    },
+    {
+     "model_type": "human_neural_progenitor_shrna_knockdown",
+     "species": "human",
+     "genotype": "lentiviral shRNA WWOX knockdown (extent not quantified; one unreplicated blot shows a residual band) versus scrambled shRNA, puromycin-selected stable lines",
+     "tissue_or_cells": "H9 embryonic-stem-cell-derived neural progenitors (commercial line), 2D culture, undifferentiated",
+     "age_stage": "in vitro, growth-factor-maintained progenitors",
+     "pmid": "31543760",
+     "locator_status": "MANIFEST",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "id": "O5",
+     "statement": "Resazurin (PrestoBlue) reduction, which the authors call mitochondrial redox activity, is lower in the WWOX-silenced progenitors at every one of five time points over 270 min (about 6,800 against about 10,000 raw fluorescence units at 270 min, about 32 percent lower; per-time-point unpaired t-tests, all starred).",
+     "comparison": "knockdown against scrambled control over time",
+     "readout": "resorufin fluorescence (Figure 2)",
+     "readout_level": "functional",
+     "direction_observed": "lower",
+     "limits": "Resazurin reduction reports whole-cell NAD(P)H-linked reducing capacity, not oxygen consumption, membrane potential or complex activity; raw fluorescence with no normalisation to cell number or protein, and the same cells adhere and grow differently, so a cell-number difference is not excluded; no n printed; engineered partial knockdown of unquantified depth.",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID31543760.json",
+       "entry": 22,
+       "anchor": "6,800"
+      },
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID31543760.json",
+       "entry": 21,
+       "anchor": "mitochondrial redox activity"
+      }
+     ]
+    },
+    {
+     "model_type": "human_neural_progenitor_shrna_knockdown",
+     "species": "human",
+     "genotype": "lentiviral shRNA WWOX knockdown (extent not quantified; one unreplicated blot shows a residual band) versus scrambled shRNA, puromycin-selected stable lines",
+     "tissue_or_cells": "H9 embryonic-stem-cell-derived neural progenitors (commercial line), 2D culture, undifferentiated",
+     "age_stage": "in vitro, growth-factor-maintained progenitors",
+     "pmid": "31543760",
+     "locator_status": "MANIFEST",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "id": "O6",
+     "statement": "In the same knockdown transcriptome, mitochondrial gene sets are on the knockdown side and concern mitochondrial gene expression and import, not respiration: mitochondrial RNA metabolic process (q 0.110), mitochondrial translation (q 0.119), protein targeting to mitochondrion (q 0.179), mitochondrial transport (q 0.212). No oxidative-phosphorylation, respiratory-chain or ATP-synthesis set occurs in either supplementary table (0 of 152 rows). The oxidative-stress PCA (Figure 11) has one point per group and Supplementary Table 1 gives contribution values without direction (NDUFS4 0.555, CYCS 0.664).",
+     "comparison": "knockdown against scrambled control, gene-set enrichment; PCA",
+     "readout": "GO biological-process gene-set names and q-values; PCA gene contributions",
+     "readout_level": "transcript",
+     "direction_observed": "mitochondrial translation and import sets on the knockdown side (nominal); OXPHOS direction not reported",
+     "limits": "Set names only, permissive threshold (FDR 0.25), member genes unprinted, replicate number not stated; a mitochondrial-translation or import set does not imply higher or lower respiratory capacity; knockdown not knockout.",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID31543760.json",
+       "entry": 27,
+       "anchor": "mitochondrial translation"
+      },
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID31543760.json",
+       "entry": 25,
+       "anchor": "NDUFS4"
+      }
+     ]
     }
    ],
    "inferred": [
     "That oxidative-phosphorylation capacity (and complex I in particular) is reduced in WWOX-deficient neurons: no complex-I-specific measurement was found in a WWOX system in the sources read.",
-    "That raising oxidative capacity benefits function."
+    "That raising oxidative capacity benefits function.",
+    "That the lower resazurin signal in WWOX-silenced human neural progenitors (O5) is a respiration deficit: it is a raw whole-cell reducing-capacity readout, and no oxygen consumption or complex I measurement exists in that system."
    ],
    "intervention_direction": {
     "direction": "uncertain",
@@ -1970,6 +2071,12 @@
       "pmid": "42909904",
       "paper_registry_ids": [
        "PAPER 567"
+      ]
+     },
+     {
+      "pmid": "31543760",
+      "paper_registry_ids": [
+       "PAPER 022"
       ]
      }
     ]

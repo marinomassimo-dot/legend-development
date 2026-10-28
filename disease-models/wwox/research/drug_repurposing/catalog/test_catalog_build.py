@@ -196,6 +196,13 @@ class TargetIdentity(Base):
         self.assertIsNone(cb.claim_symbol_anomaly({"gene_claim_name": "IL8", "gene_name": "CXCL8", "interaction_source_db_name": "NCI"}))   # a renamed symbol is not an anomaly
         self.assertIsNone(cb.claim_symbol_anomaly({"gene_claim_name": "TP53", "gene_name": "TP53", "interaction_source_db_name": "NCI"}))
 
+    def test_uniprot_accession_and_viral_protein_claims_resolved_to_noncoding_or_retroelement_loci_are_flagged(self):
+        for claim, gene, src, word in (("UNIPROT:Q07820", "ADAMTSL4-AS1", "TdgClinicalTrial", "UniProt accession"), ("UNIPROT:Q9Y233", "LINC00473", "TEND", "UniProt accession"),
+                                       ("POL", "ERVW-4", "ChEMBL", "retrovirus"), ("ENV", "ERVK-20", "ChEMBL", "retrovirus"), ("PROTEASE", "ERVK-10", "ChEMBL", "retrovirus")):
+            self.assertIn(word, cb.claim_symbol_anomaly({"gene_claim_name": claim, "gene_name": gene, "interaction_source_db_name": src}), claim)
+        for claim, gene in (("UNIPROT:P08588", "ADRB1"), ("UNIPROT:Q9Y5Y9", "SCN10A"), ("ERVW-1", "ERVW-1"), ("HERV-K", "ERVK-6"), ("NCBIGENE:2902", "GRIN1")):   # an accession served as its own protein gene is not flagged
+            self.assertIsNone(cb.claim_symbol_anomaly({"gene_claim_name": claim, "gene_name": gene, "interaction_source_db_name": "TEND"}), claim)
+
 
 class UnknownIsNotNegative(Base):
     def test_no_evidence_is_unknown_not_none(self):

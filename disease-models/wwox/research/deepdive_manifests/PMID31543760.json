@@ -546,6 +546,81 @@
      "endpoint": "PCA contribution values, 35 genes"
     },
     "found_or_sought": "sought - the HIF1A/glycolysis genes the text names"
+   },
+   {
+    "proposition": "Supplementary Table 3 (the shWWOX side of the hNPC GSEA, negative enrichment scores, 108 rows by regular-expression count) is dominated by biosynthetic and translation-machinery sets: 18 rows name rRNA, tRNA, ribosome or ncRNA processes (e.g. ribosome biogenesis ES -0.429, q 0.055; tRNA metabolic process q 0.068), 6 name amino-acid biosynthesis, metabolism, activation or transport (alpha-amino acid biosynthetic process ES -0.549, q 0.065; serine family amino acid metabolic process q 0.098; amino acid activation q 0.173; amino acid transmembrane transport q 0.175) and 3 name ER-associated degradation or protein folding (regulation of ERAD pathway q 0.091). These are gene-set names only; the member genes are not printed, so the table cannot say that ATF4 targets (ASNS, PHGDH, PSAT1, aminoacyl-tRNA synthetases) drive them, and the same sets are what a MYC- or mTORC1-type growth program also gives. No set is named for the unfolded-protein response, the response to ER stress, the integrated stress response or amino-acid starvation. 17 of the 108 rows have q below 0.1; the paper's own threshold is q below 0.25, and the permutation replicate number is not stated anywhere.",
+    "snippet": "GO_ALPHA_AMINO_ACID_BIOSYNTHETIC_PROCESS",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID31543760_assets/Data_Sheet_1_pdftotext.txt",
+    "anchor": "Data_Sheet_1 pages 7-10, Supplementary Table 3 (Enrichment in phenotype hNPC_WWOX_del); rows classified by keyword over the text layer, counts reproducible by regular expression",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human neural progenitor cell line (hNPC, H9-derived), in vitro, 2D culture, CAGE transcriptome",
+     "cell_line": "hNPC",
+     "genotype": "lentiviral shWWOX knockdown (extent unquantified) versus scrambled shRNA",
+     "endpoint": "GSEA gene-set report, GO biological process, FDR q < 0.25"
+    },
+    "found_or_sought": "sought - ATF4-target, ISR and amino-acid sets for the integrated-stress-response need (IT4 step E2)"
+   },
+   {
+    "proposition": "Mitochondrial gene sets in Supplementary Table 3 are on the shWWOX side and are about mitochondrial gene expression and protein import, not respiration: mitochondrial RNA metabolic process (ES -0.586, q 0.110), mitochondrial translation (ES -0.437, q 0.119), negative regulation of mitochondrion organization (q 0.171), protein targeting to mitochondrion (q 0.179), protein localization to mitochondrion (q 0.184), mitochondrial transport (q 0.212) and regulation of mitochondrion organization (q 0.246). No oxidative-phosphorylation, respiratory-chain, electron-transport or ATP-synthesis set appears in either supplementary GSEA table (0 of 152 rows). The single functional readout in the paper that points the other way is the lowered resorufin signal of Figure 2, a raw fluorescence curve already recorded; the transcript sets do not show an OXPHOS-gene decrease or increase.",
+    "snippet": "GO_MITOCHONDRIAL_RNA_METABOLIC_PROCESS",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID31543760_assets/Data_Sheet_1_pdftotext.txt",
+    "anchor": "Data_Sheet_1 page 8, Supplementary Table 3",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human neural progenitor cell line (hNPC, H9-derived), in vitro, 2D culture, CAGE transcriptome",
+     "cell_line": "hNPC",
+     "genotype": "lentiviral shWWOX knockdown (extent unquantified) versus scrambled shRNA",
+     "endpoint": "GSEA gene-set report, GO biological process, FDR q < 0.25"
+    },
+    "found_or_sought": "sought - mitochondrial and OXPHOS sets for the mitochondrial-respiration need (IT4 step E2)"
+   },
+   {
+    "proposition": "A keyword census of the two supplementary GSEA tables (Table 2, 44 rows, control side; Table 3, 108 rows, shWWOX side; both parsed by regular expression) finds no set naming Wnt, beta-catenin, GSK3, MYC, myelin, oligodendrocyte, glia, glycolysis, lactate, pyruvate, hypoxia, reactive oxygen species or oxidative stress. The only proliferation-type rows are 'regulation of neural precursor cell proliferation' on the control side (ES 0.396, q 0.236) and three DNA-replication rows on the shWWOX side (negative regulation of DNA replication q 0.177, DNA replication initiation q 0.183, DNA-dependent DNA replication q 0.199). Carbohydrate rows on the shWWOX side (glucose-6-phosphate metabolic process q 0.181, cellular glucose homeostasis q 0.180, carbohydrate homeostasis q 0.235) are generic and carry no direction for glycolysis or lactate. This is a negative for what the tables print, not for the transcriptome, whose per-gene results are not in the paper.",
+    "snippet": "Supplementary Table 3 GSEA report. Enrichment in phenotype hNPC_WWOX_del.",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID31543760_assets/Data_Sheet_1_pdftotext.txt",
+    "anchor": "Data_Sheet_1 pages 6-10, Supplementary Tables 2 and 3, whole-table keyword census",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human neural progenitor cell line (hNPC, H9-derived), in vitro, 2D culture, CAGE transcriptome",
+     "cell_line": "hNPC",
+     "genotype": "lentiviral shWWOX knockdown (extent unquantified) versus scrambled shRNA",
+     "endpoint": "GSEA gene-set report, GO biological process, FDR q < 0.25"
+    },
+    "found_or_sought": "sought - Wnt, MYC, GSK3B, myelin, lactate/LDH sets (IT4 step E2); absence is the finding"
+   },
+   {
+    "proposition": "The only gene-level direction the paper prints for the roadmap genes is the GSEA leading edge of GO_Stem_Cell_Differentiation, and it is on the control side: GSK3B and SFRP1 (a Wnt antagonist) sit in the hNPC/shScrambled leading edge together with ERBB4, WWTR1, RUNX2, JAG1 and others, that is they rank higher in cells with WWOX than in the silenced cells; the shWWOX leading edge lists HHEX, FGFR2, GBX2, SNAI1, GREM1, MSX2 and MSX1. A leading-edge member is a rank-metric contributor inside one set, not a significantly differentially expressed gene with a stated fold change, and no CTNNB1, AXIN2, MYC or ATF4-target gene is named anywhere in the body text.",
+    "snippet": "the leading edge subset (considered as the most upregulated and promising genes) included LOXL3, JAG1, SOX21, ERBB4",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31543760_Kosla2019_EPMC.xml",
+    "anchor": "Results, 'Functional Enrichment Analysis', paragraph after Figure 8",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human neural progenitor cell line (hNPC, H9-derived), in vitro, 2D culture, CAGE transcriptome",
+     "cell_line": "hNPC",
+     "genotype": "lentiviral shWWOX knockdown (extent unquantified) versus scrambled shRNA",
+     "endpoint": "GSEA gene-set report, GO biological process, FDR q < 0.25"
+    },
+    "found_or_sought": "sought - GSK3B and Wnt genes for the GSK3B and Wnt needs (IT4 step E2)"
+   },
+   {
+    "proposition": "The transcriptome object behind every statement above is a CAGE data set of four arms (hNPC and 14-day neurons, each shScrambled and shWWOX), deposited as GSE126075; the gene-set enrichment was run on 9,427 genes with a t-test metric and phenotype permutation and the paper's significance threshold is FDR below 0.25. The differential-expression gene list (2,282 genes in hNPC, 7,392 in neurons, log2 fold change beyond plus or minus 1, P below 0.05) is not printed in the paper or its supplements, and no replicate number is stated; so a gene-level test of ATF4 targets, OXPHOS or Wnt/MYC genes is not possible from the paper and would need a re-analysis of the deposit.",
+    "snippet": "Enrichment analysis was performed for 9427 genes between shWWOX and shScrambled",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31543760_Kosla2019_EPMC.xml",
+    "anchor": "Materials and Methods, 'Global Biological Differentiation - Gene Set Enrichment Analysis'; deposit sentence under 'CAGE Gene Expression Analysis'",
+    "panel_text_relation": "text_only",
+    "experimental_context": {
+     "system": "human neural progenitor cell line (hNPC, H9-derived), in vitro, 2D culture, CAGE transcriptome",
+     "cell_line": "hNPC",
+     "genotype": "lentiviral shWWOX knockdown (extent unquantified) versus scrambled shRNA",
+     "endpoint": "GSEA gene-set report, GO biological process, FDR q < 0.25"
+    },
+    "found_or_sought": "sought - whether per-gene results exist for a gene-level test (IT4 step E2)"
    }
   ]
  },
@@ -579,6 +654,16 @@
    "what_changed": "Opened Figures 2 and 11 (the two metabolic panels no earlier locator covered) as images and re-read Supplementary Table 1 with ranks; appended 5 entries. Findings: the only redox readout is a raw-RFU PrestoBlue curve with no normalisation; the oxidative-gene PCA has four points; Table S1 gives contributions not directions, ranks HK2 29th and HIF1A last of 35.",
    "outputs": [
     "disease-models/wwox/research/held_wave_20261019_scientist-c.md"
+   ]
+  },
+  {
+   "receipt": "FTR-20261028-31543760-06",
+   "reader": "scientist-c, mandate ORCH-ROADMAP-IT4-20261028 step E2",
+   "context_policy": "QUESTION_DRIVEN",
+   "what_changed": "Re-read Supplementary Tables 2 and 3 (gene-set names, scores and q-values, not only row counts), the Results GSEA leading-edge paragraph and the GSEA methods against the roadmap needs for the integrated stress response, mitochondrial respiration, Wnt, MYC, GSK3B, lactate and myelination; appended 5 entries (indices 26-30). Findings: shWWOX-side sets are translation-machinery, amino-acid biosynthesis and mitochondrial import/translation sets at nominal q, no UPR, OXPHOS, Wnt, MYC or myelin set in either table, GSK3B and SFRP1 on the control side of one leading edge, and no per-gene table exists in the paper. No earlier entry altered.",
+   "outputs": [
+    "disease-models/wwox/research/drug_repurposing/needs/needs.json",
+    "disease-models/wwox/research/receipt_staging/scientist-c/FTR-20261028-31543760-06.json"
    ]
   }
  ]

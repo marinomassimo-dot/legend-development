@@ -659,7 +659,7 @@ for an entirely unprocessed record.
 | [33520443](https://pubmed.ncbi.nlm.nih.gov/33520443/) | 2021 | ✅ | partial full text | PAPER 262 | Identification of a novel association for the WWOX/HIF1A axis with gestational diabetes mellitus (GDM). |
 | [32389029](https://pubmed.ncbi.nlm.nih.gov/32389029/) | 2020 | ✅ | partial full text | PAPER 153 | The WWOX gene in brain development and pathology. |
 | [32368285](https://pubmed.ncbi.nlm.nih.gov/32368285/) | 2020 | ✅ | partial full text | PAPER 201 | Silencing of Wwox Increases Nuclear Import of Dvl proteins in Head and Neck Cancer. |
-| [31543760](https://pubmed.ncbi.nlm.nih.gov/31543760/) | 2019 | ✅ | partial full text | receipt FTR-20261019-31543760-05 | The WWOX Gene Influences Cellular Pathways in the Neuronal Differentiation of Human Neural Progenitor Cells. |
+| [31543760](https://pubmed.ncbi.nlm.nih.gov/31543760/) | 2019 | ✅ | partial full text | receipt FTR-20261028-31543760-06 | The WWOX Gene Influences Cellular Pathways in the Neuronal Differentiation of Human Neural Progenitor Cells. |
 | [30356099](https://pubmed.ncbi.nlm.nih.gov/30356099/) | 2019 | ✅ | partial full text | PAPER 117 | ✎ corrected — The phenotypic spectrum of WWOX-related disorders: 20 additional cases of WOREE syndrome and review of the literature. |
 | [30158849](https://pubmed.ncbi.nlm.nih.gov/30158849/) | 2018 | ✅ | partial full text | PAPER 150 | WWOX Phosphorylation, Signaling, and Role in Neurodegeneration. |
 | [29581896](https://pubmed.ncbi.nlm.nih.gov/29581896/) | 2018 | ✅ | partial full text | PAPER 403 | Chasing the signaling run by tri-molecular time-lapse FRET microscopy. |

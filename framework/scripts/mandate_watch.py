@@ -42,6 +42,7 @@ import argparse
 import hashlib
 import json
 import os
+import shutil
 import subprocess
 import sys
 import time
@@ -56,6 +57,11 @@ QUIET_MINUTES = 25            # idle and silent for this long before a session c
 REREQUEST_MINUTES = 180       # a pending request with no progress is repeated no sooner than this
 EVENTS_FILE = "events.jsonl"
 EVENTS_MAX_BYTES = 256 * 1024
+
+
+def claude_bin() -> str:
+    """cron runs with a minimal PATH, so `claude` (installed under ~/.local/bin) is not found by name."""
+    return shutil.which("claude") or os.path.expanduser("~/.local/bin/claude")
 
 
 def state_dir() -> Path:
@@ -99,7 +105,7 @@ def _save(task: str, data: dict) -> None:
 def list_sessions() -> list[dict] | None:
     """Live sessions from the runtime's own listing; None when it cannot be read."""
     try:
-        out = subprocess.run(["claude", "agents", "--json"], capture_output=True, text=True, timeout=60)
+        out = subprocess.run([claude_bin(), "agents", "--json"], capture_output=True, text=True, timeout=60)
         data = json.loads(out.stdout)
         return data if isinstance(data, list) else None
     except (OSError, ValueError, subprocess.SubprocessError):
@@ -230,7 +236,7 @@ def check(task: str, *, root: Path = ROOT, deliver: str = "none", quiet_minutes:
         if session is not None:
             out["delivery"] = "not sent: the session is alive; the in-session cron delivers to a live session"
         else:
-            cmd = ["claude", "--bg", *resume_args, "--resume", sid, request_text(task, status, str(root / rec_rel) if rec_rel else "")]
+            cmd = [claude_bin(), "--bg", *resume_args, "--resume", sid, request_text(task, status, str(root / rec_rel) if rec_rel else "")]
             try:
                 cwd = transcript_cwd(transcript)
                 res = (runner or (lambda c, cwd=None: subprocess.run(c, capture_output=True, text=True, timeout=120, cwd=cwd)))(cmd, cwd=cwd)
