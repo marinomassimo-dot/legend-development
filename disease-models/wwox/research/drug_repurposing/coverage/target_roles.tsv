@@ -1,0 +1,18 @@
+need_id	symbol	coupling	basis
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN1	same	the need's own quantity is this target's activity (need 'on' field names it); coupling same: a change of the target's activity in a direction changes the quantity in that direction
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN2A	same	the need's own quantity is this target's activity (need 'on' field names it); coupling same: a change of the target's activity in a direction changes the quantity in that direction
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN2B	same	the need's own quantity is this target's activity (need 'on' field names it); coupling same: a change of the target's activity in a direction changes the quantity in that direction
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIA1	same	the need's own quantity is this target's activity (need 'on' field names it); coupling same: a change of the target's activity in a direction changes the quantity in that direction
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIA2	same	the need's own quantity is this target's activity (need 'on' field names it); coupling same: a change of the target's activity in a direction changes the quantity in that direction
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIA3	same	the need's own quantity is this target's activity (need 'on' field names it); coupling same: a change of the target's activity in a direction changes the quantity in that direction
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIA4	same	the need's own quantity is this target's activity (need 'on' field names it); coupling same: a change of the target's activity in a direction changes the quantity in that direction
+NEED-T-TYPE-CALCIUM	CACNA1G	same	the need's own quantity is this target's activity (need 'on' field names it); coupling same: a change of the target's activity in a direction changes the quantity in that direction
+NEED-T-TYPE-CALCIUM	CACNA1H	same	the need's own quantity is this target's activity (need 'on' field names it); coupling same: a change of the target's activity in a direction changes the quantity in that direction
+NEED-T-TYPE-CALCIUM	CACNA1I	same	the need's own quantity is this target's activity (need 'on' field names it); coupling same: a change of the target's activity in a direction changes the quantity in that direction
+NEED-SEIZURE-CONTROL-SYMPTOMATIC	CACNA1G	same	T-type current down is the stated route to lower seizure/spasm burden in the need record; coupling same on current, a symptom-level inference
+NEED-SEIZURE-CONTROL-SYMPTOMATIC	ABAT	same	ABAT activity down raises GABA and is the stated route to lower seizure/spasm burden (vigabatrin class); coupling same on target activity toward lowering burden; a symptom-level inference, not a WWOX result
+NEED-WWOX-GENE-ADDITION	WWOX	same	the need restores or raises WWOX protein or transcript: more functional WWOX = up
+NEED-WWOX-SPLICE-CORRECTION	WWOX	same	the need restores or raises WWOX protein or transcript: more functional WWOX = up
+NEED-WWOX-PTC-READTHROUGH	WWOX	same	the need restores or raises WWOX protein or transcript: more functional WWOX = up
+NEED-WWOX-MISSENSE-PROTEIN-RESCUE	WWOX	same	the need restores or raises WWOX protein or transcript: more functional WWOX = up
+NEED-WWOX-ENDOGENOUS-BOOST	WWOX	same	the need restores or raises WWOX protein or transcript: more functional WWOX = up
