@@ -1297,7 +1297,7 @@ def lead_spec(query_id: str, card: dict, query: dict, classes: list[dict] | None
     }
 
 
-LEAD_AUTO_DISPOSITIONS = ("consistent_mechanism_candidate", "exploration_candidate", "opposite_mechanism", "source_queried_without_result")
+LEAD_AUTO_DISPOSITIONS = ("consistent_mechanism_candidate", "exploration_candidate", "opposite_mechanism", "mixed_consistent_and_opposed_actions", "source_queried_without_result")
 LEAD_DECISIONS = ("candidate", "abstention", "opposite_mechanism", "insufficient")
 LEAD_FIELDS = ("id", "need", "subject", "catalogue_ids", "decision", "why", "reopening_condition", "next_experiment", "owner", "record")
 
