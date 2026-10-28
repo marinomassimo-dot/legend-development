@@ -1,0 +1,38 @@
+{
+ "event_id": "FTR-20261028-30266908-02",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "30266908",
+  "doi": "10.1038/s41467-018-06507-4"
+ },
+ "event_at": "2026-10-28T23:10:00Z",
+ "analysis_at": "2026-10-28T22:40:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-b, IT5 step P8 (broad recovery, missense protein rescue). Question-driven re-read of the locally held article XML (results on destabilisation, aggregation and chemical chaperones; discussion; the methods blocks on expression vectors, transfection, qPCR, total-protein lysis, Triton fractionation, cycloheximide chase and rescue experiments) with Figure 3, Figure 6 and the rendered Supplementary Figure 12 page opened as images. The new question was which of the three chaperone-class compounds act on a soluble cytosolic client without HDAC-inhibitor activity, and the mutant panel of Supplementary Figure 12a (previously read for the wild-type panel only) was read. Class-level substitute, NOT WWOX EVIDENCE. Prepared as JSON for the integrator and staged.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID30266908_Guiberson2018_PMC6162227.xml",
+ "source_fingerprint": "ce24646e70385a7a7c962a99cb62bdb48c41a69ccfc2154166ef414c4ac72dfd",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "captions_only"
+ },
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/missense_recovery_it5_p8_20261029/README.md",
+  "disease-models/wwox/research/drug_repurposing/missense_recovery_it5_p8_20261029/munc18_cytosolic_precedent_panel_readings_20261029.tsv"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "Of the eight main figures only Figure 3 and Figure 6 were opened as images in this act, and of the supplement only the rendered page 19 (Supplementary Figure 12); the coverage values for figures and supplementary are therefore captions_only for the remainder, not a claim of full image reading. Panel values are reader estimates from bar heights and carry no stated uncertainty beyond about plus or minus 10 percent of the printed axis; no densitometry was redone. The reference list was not read, so the optional references key is omitted."
+ ],
+ "prior_receipt": "FTR-20261021-30266908-01",
+ "reread_reason": "new_question_outside_prior_coverage"
+}

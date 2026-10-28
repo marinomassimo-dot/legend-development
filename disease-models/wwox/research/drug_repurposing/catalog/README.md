@@ -206,8 +206,8 @@ Measured on GtoPdb 2026.3.1, the DGIdb export of 2024-06-10 and ChEMBL_37 (all 6
 | `merged` | 485 | 485 |
 | `related_not_merged` | 14 (7 labelled/radioactive, 3 stereo defined in ChEMBL only, 3 stereoisomers differ, 1 parent form named through a salt id) | 14 |
 | `rejected_conflict` (connectivity differs) | 4 | 4 |
-| `out_of_selection` (ACTIVE compound, not in the selection) | 2 473 | 0 |
-| `unresolved` | 54 (44 ChEMBL id INACTIVE, 1 unknown to the lookup, 6 structure unavailable, 1 disjoint DrugBank ids, 2 ligand id absent) | 7 |
+| `out_of_selection` (ACTIVE compound, not in the selection) | 2 472 | 0 |
+| `unresolved` | 55 (44 ChEMBL id INACTIVE, 1 unknown to the lookup [PBF-509: its GtoPdb id is not a compound record], 6 structure unavailable, 1 disjoint DrugBank ids [ADL5859: identical full InChIKey, held back only by the disjoint ids], 2 ligand ids absent, 1 other) | 7 |
 
 Not a basis for a decision, recorded as evidence: the name, the GtoPdb `Withdrawn` flag and ChEMBL
 `withdrawn_flag` (a market withdrawal is a status, not an identity statement; both are in the evidence
@@ -427,3 +427,5 @@ acid 9, all "Non-authorised"; carnitine 17, all "Non-authorised"; thiamine 7 "Au
 cannabidiol and benfotiamine each 1 Novel Food catalogue entry with status "Novel food"; "pyruvate" matches only creatine pyruvate (a different substance); dichloroacetate,
 triheptanoin, phenylbutyrate, lithium: 0 in both. A claim status is a statement about wording of a health claim, not
 about the substance; a Novel Food catalogue status is a non-binding orientation (the catalogue says so). Neither says anything about a WWOX use.
+
+Independent verification (2026-10-29, `locator_audits/2026-10-29_it5_p4_independent_verification.md`): 485 of 485 merged pairs agree with an independent InChIKey comparison and no false merge was found; two `rejected_conflict` pairs (LX2931, GNE-7883) are tautomer depictions of the same molecule rather than structural conflicts, and two `unresolved` pairs are recoverable by InChIKey (5-hydroxymethyl-2-furfural, whose GtoPdb id is mis-cased, and PBF-509, whose GtoPdb id is not a compound record but whose structure equals CHEMBL3694769). These are recorded as known low-severity limits; the recoverable ones are not merged by the rule today.
