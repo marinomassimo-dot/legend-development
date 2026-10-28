@@ -112,20 +112,28 @@
    "data": {
     "files": [
      {
+      "bytes": 182844,
+      "path": "dsld/groups.jsonl",
+      "rows": 107,
+      "sha256": "72bb1614a4325f86a6bf78aa64c388aedfbc179f1c6e422b4da2252c8833e446"
+     },
+     {
+      "bytes": 246238,
       "path": "dsld/probes.jsonl",
-      "rows": 1048
+      "rows": 1152,
+      "sha256": "4896d5f8563dbef19f6b66b6c5373bcc7680c4302b5595b17fae9d16819d1824"
      }
     ],
     "problems": [],
-    "retrieved_utc": "2026-10-28T07:28:15Z",
+    "retrieved_utc": "2026-10-28T23:39:55Z",
     "status": "OK",
-    "url": "https://api.ods.od.nih.gov/dsld/v9/search-filter",
+    "url": "https://api.ods.od.nih.gov/dsld/v9/",
     "version": "API v9.4.0"
    },
    "last_attempt": {
-    "detail": "1048 probes OK, 0 errors",
+    "detail": "groups file: 107 lookups OK",
     "status": "OK",
-    "utc": "2026-10-28T07:28:15Z"
+    "utc": "2026-10-28T23:39:55Z"
    },
    "licence": "CC0 1.0 (API documentation licence block, read 2026-10-27; the documentation page also lists a contact address, which this tool never uses)",
    "name": "NIH ODS Dietary Supplement Label Database API v9",

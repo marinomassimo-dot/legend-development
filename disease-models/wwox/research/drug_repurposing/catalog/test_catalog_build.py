@@ -601,6 +601,75 @@ class LigandReconciliation(Base):
         self.assertEqual(len(seen), 1)
 
 
+class DsldProbes(Base):
+    """DSLD evidence is name-only: label probes (detail fields), ingredient-group lookups, pins, homonym guard."""
+
+    def hit(self, ingredients, _id="1", off=0, date="2020-01-01"):
+        return {"_id": _id, "_source": {"allIngredients": ingredients, "offMarket": off, "entryDate": date}}
+
+    def test_probe_record_separates_name_group_and_partial_matches(self):
+        hits = [self.hit([{"name": "Alpha-Lipoic Acid", "ingredientGroup": "Alpha Lipoic Acid"}], "1"),
+                self.hit([{"name": "R-Alpha Lipoic Acid", "ingredientGroup": "Alpha Lipoic Acid"}], "2"),
+                self.hit([{"name": "Lipoic Acid Complex", "ingredientGroup": "Lipoic Acid"}], "3", off=1)]
+        orig = cb.jget
+        cb.jget = lambda url, **kw: (200, {"hits": hits, "stats": {"count": 3}})
+        self.addCleanup(lambda: setattr(cb, "jget", orig))
+        r = cb.dsld_probe_one("Alpha lipoic acid")
+        self.assertEqual((r["exact_ingredient_in_sample"], r["exact_by_ingredient_name"], r["exact_by_ingredient_group"]), (2, 1, 2))
+        self.assertEqual(r["partial_only_in_sample"], 0)
+        r2 = cb.dsld_probe_one("Lipoic acid")
+        self.assertEqual((r2["exact_by_ingredient_name"], r2["exact_by_ingredient_group"], r2["off_market_in_sample"]), (0, 1, 1))
+        self.assertGreater(r2["partial_only_in_sample"], 0)  # the longer names are partial, not equal
+
+    def world(self, probes, groups):
+        self.chembl([mol("CHEMBL1", "THIOCTIC ACID", 4.0), mol("CHEMBL2", "ALA", 4.0), mol("CHEMBL3", "NOGROUP", 4.0)])
+        self.src("dsld", "API T")
+        d = self.cache / "dsld"
+        d.mkdir(parents=True, exist_ok=True)
+        (d / "probes.jsonl").write_text("".join(json.dumps(r) + "\n" for r in probes))
+        (d / "groups.jsonl").write_text("".join(json.dumps(r) + "\n" for r in groups))
+        self.write_manifest()
+
+    def group_row(self, query, gid, gname, syn):
+        return {"query": query, "retrieved_utc": "2026-10-28T00:00:00Z", "status": "OK", "total_groups": 1,
+                "groups": [{"group_id": gid, "group_name": gname, "category": ["x"], "n_synonyms": len(syn), "name_equals_query": False,
+                            "synonym_equals_query": True, "synonyms": syn}]}
+
+    def test_group_synonym_gives_name_only_supplement_with_group_id_and_short_keys_are_never_matched(self):
+        self.world([], [self.group_row("thioctic acid", "6878", "Alpha-Lipoic Acid", ["ala", "thioctic acid", "alpha lipoic acid"])])
+        entries, stats = self.build()
+        by = {e["id"]: e for e in entries}
+        a = [x for x in by["CAT:CHEMBL1"]["access"] if x["category"] == "supplement"]
+        self.assertEqual(len(a), 1)
+        self.assertEqual(a[0]["strength"], "name_only")
+        self.assertEqual(a[0]["dsld_group_ids"], {"6878": "Alpha-Lipoic Acid"})
+        self.assertIn("NAME-ONLY", a[0]["scope"])
+        self.assertNotIn("supplement", by["CAT:CHEMBL2"]["access_categories"])  # 'ala' (3 letters) is a homonym key
+        self.assertNotIn("supplement", by["CAT:CHEMBL3"]["access_categories"])
+        self.assertEqual(stats["dsld"]["ingredient_group_lookups"], 1)
+
+    def test_no_match_probe_gives_no_supplement_and_is_not_a_negative(self):
+        self.world([{"query": "NOGROUP", "retrieved_utc": "2026-10-28T00:00:00Z", "status": "OK", "total_fulltext_hits": 0, "sample_size": 0,
+                     "exact_ingredient_in_sample": 0, "example_label_ids": [], "set": "targeted"}], [])
+        entries, _ = self.build()
+        e = {x["id"]: x for x in entries}["CAT:CHEMBL3"]
+        self.assertEqual(e["access_categories"], ["unknown/unverified"])
+        self.assertIn("not a negative", e["access"][0]["scope"])
+
+    def test_probes_and_groups_are_pinned_and_a_changed_file_is_refused(self):
+        self.world([], [])
+        pin = [cb.file_pin(self.cache / "dsld/probes.jsonl"), cb.file_pin(self.cache / "dsld/groups.jsonl")]
+        self.manifest["sources"]["dsld"]["data"]["files"] = pin
+        self.write_manifest()
+        rows = {r["path"]: r for r in cb.check_inputs(self.cache, cb.load_manifest())}
+        self.assertEqual(rows["dsld/groups.jsonl"]["status"], "OK")
+        self.assertEqual(rows["dsld/groups.jsonl"]["how"], "probe-dsld-groups")
+        with open(self.cache / "dsld/probes.jsonl", "a") as fh:
+            fh.write("{}\n")
+        rows = {r["path"]: r for r in cb.check_inputs(self.cache, cb.load_manifest())}
+        self.assertEqual(rows["dsld/probes.jsonl"]["status"], "HASH_MISMATCH")
+
+
 class DeclaredInputsAndSafeRebuild(Base):
     """The build must know which inputs reproduce the declared version, refuse (or declare partial) otherwise,
     and never replace the last valid outputs with an impoverished result."""

@@ -6,6 +6,7 @@ and scope; it never says a compound is suitable, safe, effective or obtainable b
 
   catalog_build.py fetch  [--refresh] [--only SRC[,SRC]]   download into cache/ (skips fresh sources)
   catalog_build.py probe-dsld [--limit N] [--refresh]       supplement-label probe (name-only; see README)
+  catalog_build.py probe-dsld-groups --names a,b             DSLD ingredient-group lookup (group id + DSLD's own synonyms; still name-based)
   catalog_build.py inputs                                   which cached files the declared version needs; present / missing / mismatching, and how to get each
   catalog_build.py build                                    cache -> catalog.jsonl.gz + stats + links; REFUSES on an incomplete or mismatching cache
   catalog_build.py build --check                            rebuild in memory, write nothing, compare with the committed catalog.jsonl.gz
@@ -468,14 +469,144 @@ def dsld_probe_one(name: str) -> dict:
         return dict(base, status="ERROR", detail=f"HTTP {st} {str(js)[:100]}")
     n = norm(name)
     exact, ids = 0, []
+    by_name, by_group, partial, off = 0, 0, 0, 0
+    names, groups, partial_groups = collections.Counter(), collections.Counter(), collections.Counter()
+    years = []
     for h in js["hits"]:
         s = h.get("_source", {})
-        if any(norm(i.get("ingredientGroup", "")) == n or norm(i.get("name", "")) == n for i in s.get("allIngredients", [])):
+        ing = s.get("allIngredients", [])
+        hit_name = any(norm(i.get("name", "")) == n for i in ing)
+        hit_group = any(norm(i.get("ingredientGroup", "")) == n for i in ing)
+        if hit_name or hit_group:
             exact += 1
+            by_name += hit_name
+            by_group += hit_group
             if len(ids) < 3:
                 ids.append(h.get("_id"))
-    return dict(base, status="OK", total_fulltext_hits=js.get("stats", {}).get("count"), sample_size=len(js["hits"]),
-                exact_ingredient_in_sample=exact, example_label_ids=ids)
+            for i in ing:
+                if n in (norm(i.get("name", "")), norm(i.get("ingredientGroup", ""))):
+                    names[i.get("name", "")] += 1
+                    groups[i.get("ingredientGroup", "")] += 1
+        elif any(n in norm(i.get("name", "")) or n in norm(i.get("ingredientGroup", "")) for i in ing):
+            partial += 1
+            for i in ing:
+                if n in norm(i.get("name", "")) or n in norm(i.get("ingredientGroup", "")):
+                    partial_groups[i.get("ingredientGroup", "")] += 1
+        off += 1 if s.get("offMarket") == 1 else 0
+        if s.get("entryDate"):
+            years.append(s["entryDate"][:4])
+    rec = dict(base, status="OK", total_fulltext_hits=js.get("stats", {}).get("count"), sample_size=len(js["hits"]),
+               exact_ingredient_in_sample=exact, example_label_ids=ids)
+    # detail fields (added in IT5 P10; absent from earlier rows, which stay valid)
+    rec.update(exact_by_ingredient_name=by_name, exact_by_ingredient_group=by_group, partial_only_in_sample=partial,
+               off_market_in_sample=off, entry_years_in_sample=[min(years), max(years)] if years else [],
+               matched_ingredient_names=[k for k, _ in names.most_common(6)], matched_ingredient_groups=[k for k, _ in groups.most_common(6)],
+               partial_ingredient_groups=[k for k, _ in partial_groups.most_common(6)])
+    return rec
+
+
+def file_pin(path: Path) -> dict:
+    return {"path": str(path.relative_to(CACHE)), "rows": len(path.read_text().splitlines()), "sha256": sha256_file(path), "bytes": path.stat().st_size}
+
+
+def dsld_group_one(term: str) -> dict:
+    """DSLD ingredient-group lookup (factsheet method: matches the term against group names and group synonyms)."""
+    q = urllib.parse.quote(term)
+    st, js = jget(f"https://api.ods.od.nih.gov/dsld/v9/ingredient-groups?term={q}&method=factsheet&size=50", timeout=60)
+    base = {"query": term, "retrieved_utc": now()}
+    if st != 200 or not isinstance(js, dict) or "hits" not in js:
+        return dict(base, status="ERROR", detail=f"HTTP {st} {str(js)[:100]}")
+    n = norm(term)
+    groups = []
+    for h in js["hits"]:
+        s = h.get("_source", {})
+        syn = [x for x in s.get("synonyms", []) if isinstance(x, str)]
+        rel = n in norm(s.get("groupName", "")) or any(n in norm(x) for x in syn)
+        groups.append({"group_id": s.get("groupId"), "group_name": s.get("groupName"), "category": s.get("category"),
+                       "n_synonyms": len(syn), "name_equals_query": norm(s.get("groupName", "")) == n,
+                       "synonym_equals_query": any(norm(x) == n for x in syn),
+                       "synonyms": sorted(set(norm(x) for x in syn))[:120] if rel else []})
+    return dict(base, status="OK", total_groups=(js.get("total") or {}).get("value"), groups=groups)
+
+
+def cmd_report(_args) -> int:
+    """Offline: dsld_probe_results.tsv = latest label probe + group lookup per annotated query (annotations are hand-written)."""
+    ann = list(csv.DictReader((HERE / "dsld_probe_annotations.tsv").open(), delimiter="\t"))
+    probes, groups = {}, {}
+    for line in (CACHE / "dsld/probes.jsonl").read_text().splitlines():
+        r = json.loads(line)
+        probes[r["query"]] = r
+    gp = CACHE / "dsld/groups.jsonl"
+    if gp.exists():
+        for line in gp.read_text().splitlines():
+            r = json.loads(line)
+            groups[norm(r["query"])] = r
+    out = HERE / "dsld_probe_results.tsv"
+    cols = ["query", "family", "catalogue_target", "label_match_type", "total_fulltext_hits", "labels_sampled", "labels_with_exact_ingredient_in_sample",
+            "by_ingredient_name", "by_ingredient_group", "partial_only_in_sample", "matched_ingredient_names", "group_match_type", "dsld_group_ids",
+            "retrieved_utc", "ambiguity_note"]
+    rows = []
+    for a in ann:
+        r = probes.get(a["query"])
+        if not r or r["status"] != "OK" or "exact_by_ingredient_name" not in r:
+            raise SystemExit(f"no detailed OK probe for {a['query']!r}")
+        if r["exact_ingredient_in_sample"] and r["exact_by_ingredient_name"]:
+            mt = "exact_ingredient_name"
+        elif r["exact_ingredient_in_sample"]:
+            mt = "exact_ingredient_group_only"
+        elif r["partial_only_in_sample"]:
+            mt = "partial_only"
+        elif r["total_fulltext_hits"]:
+            mt = "text_hits_no_ingredient_match"
+        else:
+            mt = "no_match"
+        g = groups.get(norm(a["query"]))
+        if not g:
+            gm, gids = "not_looked_up", ""
+        elif not g["groups"]:
+            gm, gids = "no_group", ""
+        else:
+            ne = [x for x in g["groups"] if x["name_equals_query"]]
+            se = [x for x in g["groups"] if x["synonym_equals_query"]]
+            gm = "group_name_equal" if ne else ("group_synonym_equal" if se else "related_groups_only")
+            gids = ";".join(f"{x['group_id']}:{x['group_name']}" for x in (ne or se or g["groups"])[:6])
+        rows.append([a["query"], a["family"], a["catalogue_target"], mt, r["total_fulltext_hits"], r["sample_size"], r["exact_ingredient_in_sample"],
+                     r["exact_by_ingredient_name"], r["exact_by_ingredient_group"], r["partial_only_in_sample"], ";".join(r["matched_ingredient_names"][:3]),
+                     gm, gids, r["retrieved_utc"], a["ambiguity_note"]])
+    with out.open("w", newline="") as fh:
+        w = csv.writer(fh, delimiter="\t", lineterminator="\n")
+        w.writerow(cols)
+        w.writerows(rows)
+    print(f"wrote {out.name}: {len(rows)} rows")
+    return 0
+
+
+def cmd_groups(args) -> int:
+    p = CACHE / "dsld/groups.jsonl"
+    p.parent.mkdir(parents=True, exist_ok=True)
+    done = {}
+    if p.exists():
+        for line in p.read_text().splitlines():
+            r = json.loads(line)
+            done[r["query"]] = r
+    names = [x.strip() for x in (args.names or "").split(",") if x.strip()]
+    todo = [n for n in names if args.refresh or n not in done or done[n]["status"] != "OK"]
+    print(f"groups: {len(names)} names, {len(todo)} to query")
+    with open(p, "a") as fh:
+        for n in todo:
+            r = dsld_group_one(n)
+            fh.write(json.dumps(r, sort_keys=True) + "\n")
+            fh.flush()
+            time.sleep(1.0)
+    m = load_manifest()
+    d = dict(m["sources"].get("dsld", {}).get("data") or {})
+    files = [f for f in d.get("files", []) if f["path"] != "dsld/groups.jsonl"]
+    files.append(file_pin(p))
+    d.update(files=sorted(files, key=lambda f: f["path"]), retrieved_utc=now(), status="OK", url="https://api.ods.od.nih.gov/dsld/v9/")
+    ok = sum(1 for line in p.read_text().splitlines() if json.loads(line)["status"] == "OK")
+    record(m, "dsld", "OK", f"groups file: {ok} lookups OK", d)
+    save_manifest(m)
+    return 0
 
 
 def cmd_probe(args) -> int:
@@ -497,11 +628,20 @@ def cmd_probe(args) -> int:
     if args.limit:
         todo = todo[: args.limit]
     print(f"probe: {len(names)} names, {len(todo)} to query")
-    with ThreadPoolExecutor(max_workers=3) as ex, open(p, "a") as fh:
-        for r in ex.map(dsld_probe_one, todo):
-            r["set"] = tag
-            fh.write(json.dumps(r, sort_keys=True) + "\n")
-            fh.flush()
+    if args.names:  # targeted probes: one request at a time with a pause (service limits)
+        with open(p, "a") as fh:
+            for n_ in todo:
+                r = dsld_probe_one(n_)
+                r["set"] = tag
+                fh.write(json.dumps(r, sort_keys=True) + "\n")
+                fh.flush()
+                time.sleep(1.0)
+    else:
+        with ThreadPoolExecutor(max_workers=3) as ex, open(p, "a") as fh:
+            for r in ex.map(dsld_probe_one, todo):
+                r["set"] = tag
+                fh.write(json.dumps(r, sort_keys=True) + "\n")
+                fh.flush()
     m = load_manifest()
     rows = {}
     for line in p.read_text().splitlines():
@@ -510,7 +650,9 @@ def cmd_probe(args) -> int:
     ok = sum(1 for r in rows.values() if r["status"] == "OK")
     record(m, "dsld", "OK" if ok else "FAILED", f"{'PARTIAL: ' if ok != len(rows) else ''}{ok} probes OK, {len(rows) - ok} errors",
            {"status": "OK", "retrieved_utc": now(), "version": "API v9.4.0",
-            "url": "https://api.ods.od.nih.gov/dsld/v9/search-filter", "files": [{"path": "dsld/probes.jsonl", "rows": len(rows)}], "problems": []})
+            "url": "https://api.ods.od.nih.gov/dsld/v9/search-filter",
+            "files": sorted([file_pin(p)] + [f for f in (m["sources"].get("dsld", {}).get("data") or {}).get("files", []) if f["path"] != "dsld/probes.jsonl"], key=lambda f: f["path"]),
+            "problems": []})
     save_manifest(m)
     return 0
 
@@ -1314,6 +1456,20 @@ def build_catalog(cache: Path | None = None, exclude: dict | None = None) -> tup
         for line in pp.read_text().splitlines():
             r = json.loads(line)
             probes[norm(r["query"])] = r
+    gindex: dict[str, dict] = {}  # normalised group name / group synonym -> {group_id: group_name}
+    gp = cache / "dsld/groups.jsonl"
+    groups_looked_up, groups_date = 0, None
+    if avail["dsld"] and gp.exists():
+        for line in gp.read_text().splitlines():
+            r = json.loads(line)
+            if r["status"] != "OK":
+                continue
+            groups_looked_up += 1
+            groups_date = max(groups_date or "", r["retrieved_utc"])
+            for g in r["groups"]:
+                for k in {norm(g["group_name"] or "")} | set(g.get("synonyms", [])):
+                    if k:
+                        gindex.setdefault(k, {})[g["group_id"]] = g["group_name"]
     bulk_planned = len(probe_names())
     dsld_stats = {"probes_ok": sum(1 for r in probes.values() if r["status"] == "OK"), "probes_error": sum(1 for r in probes.values() if r["status"] != "OK"),
                   "probes_by_set": dict(collections.Counter(r.get("set", "bulk") for r in probes.values())),
@@ -1321,7 +1477,9 @@ def build_catalog(cache: Path | None = None, exclude: dict | None = None) -> tup
                   "bulk_list_probed": sum(1 for r in probes.values() if r.get("set", "bulk") == "bulk"),
                   "bulk_list_coverage_note": "the bulk probe was interrupted; names not probed have NO supplement evidence either way (unknown, not negative)",
                   "queries_with_exact_name_in_sample": sum(1 for r in probes.values() if r["status"] == "OK" and r["exact_ingredient_in_sample"] > 0),
-                  "match_strength": "name_only: DSLD labels carry no identifier; US labels only (not an Italian or EU classification)"}
+                  "ingredient_group_lookups": groups_looked_up,
+                  "ingredient_group_index_keys": len(gindex),
+                  "match_strength": "name_only: DSLD labels carry no chemical identifier (no UNII); a DSLD ingredient-group id is DSLD's own name curation, not a chemical identity; US labels only (not an Italian or EU classification)"}
 
     # ---- derived fields: status class, access
     for e in E.values():
@@ -1363,9 +1521,27 @@ def build_catalog(cache: Path | None = None, exclude: dict | None = None) -> tup
                 probe, matched_on = pr, nm
                 if pr["status"] == "OK" and pr["exact_ingredient_in_sample"] > 0:
                     break
-        if probe and probe["status"] == "OK" and probe["exact_ingredient_in_sample"] > 0:
-            acc.append({"category": "supplement", "scope": "US, NIH ODS DSLD v9: a label lists an ingredient whose name equals this entry's name (normalised); DSLD has no identifiers, so this is NAME-ONLY evidence",
-                        "strength": "name_only", "matched_on": matched_on, "label_ids_example": probe["example_label_ids"], "retrieved_utc": probe["retrieved_utc"]})
+        label_hit = bool(probe and probe["status"] == "OK" and probe["exact_ingredient_in_sample"] > 0)
+        gmatch: dict = {}
+        gvia = None
+        for nm in [e["name"]] + e["synonyms"]:
+            k = norm(nm) if nm else ""
+            if len(k) >= 4 and k in gindex:  # 3-letter keys ("ala", "dca", "pcp") are homonyms of other things: never matched
+                for gid, gname in gindex[k].items():
+                    gmatch[gid] = gname
+                gvia = gvia or nm
+        if label_hit or gmatch:
+            item = {"category": "supplement", "scope": "US, NIH ODS DSLD v9: " + (
+                        "a label lists an ingredient whose name equals this entry's name (normalised)" if label_hit else
+                        "this entry's name or a synonym equals a DSLD ingredient-group name or DSLD-listed group synonym (normalised)")
+                    + "; DSLD labels have no chemical identifier, so this is NAME-ONLY evidence (a group id is DSLD's own name curation); not the compound's availability, dose, form or safety",
+                    "strength": "name_only", "retrieved_utc": probe["retrieved_utc"] if label_hit else None}
+            if label_hit:
+                item.update(matched_on=matched_on, label_ids_example=probe["example_label_ids"])
+            if gmatch:
+                item.update(dsld_group_ids=dict(sorted(gmatch.items(), key=lambda kv: int(kv[0]))[:6]), dsld_group_matched_on=gvia, dsld_groups_total=len(gmatch))
+                item["retrieved_utc"] = item["retrieved_utc"] or groups_date
+            acc.append(item)
         if not (rx or otc) and not approved and (any(p in (0.5, 1.0, 2.0, 3.0) for p in phases) or any(s.get("chemical_probe") for s in chem)):
             acc.append({"category": "experimental", "scope": f"ChEMBL {chembl_v}: clinical-candidate or chemical-probe statement and no approval statement in any source used; says nothing about whether anyone can obtain it",
                         "strength": "source_statement"})
@@ -1741,7 +1917,7 @@ def required_inputs(manifest: dict) -> list[dict]:
         for f in d.get("files", []):
             out.append({"source": src, "path": f["path"], "sha256": f.get("sha256"), "bytes": f.get("bytes"), "kind": "declared",
                         "version": d.get("version"), "origin": f.get("url") or d.get("url") or "fetch",
-                        "how": "probe-dsld" if src == "dsld" else f"fetch --only {src}"})
+                        "how": ("probe-dsld-groups" if f["path"].endswith("groups.jsonl") else "probe-dsld") if src == "dsld" else f"fetch --only {src}"})
         for s2, rel, how, why in AUX_INPUTS:
             if s2 == src:
                 out.append({"source": src, "path": rel, "sha256": None, "bytes": None, "kind": "auxiliary", "version": d.get("version"),
@@ -1873,6 +2049,10 @@ def main(argv=None) -> int:
     p.add_argument("--limit", type=int)
     p.add_argument("--refresh", action="store_true")
     p.add_argument("--retry-errors", action="store_true", help="re-query only the names whose latest probe errored")
+    g = sub.add_parser("probe-dsld-groups")
+    g.add_argument("--names", required=True, help="comma-separated terms looked up in the DSLD ingredient-group index (names and synonyms)")
+    g.add_argument("--refresh", action="store_true")
+    sub.add_parser("dsld-report")
     sub.add_parser("inputs")
     b = sub.add_parser("build")
     b.add_argument("--partial", action="store_true", help="if inputs are missing, write a declared-partial result as *.PARTIAL.* files instead of refusing")
@@ -1890,6 +2070,10 @@ def main(argv=None) -> int:
         return cmd_fetch(a)
     if a.cmd == "probe-dsld":
         return cmd_probe(a)
+    if a.cmd == "dsld-report":
+        return cmd_report(a)
+    if a.cmd == "probe-dsld-groups":
+        return cmd_groups(a)
     if a.cmd == "inputs":
         return cmd_inputs(a)
     if a.cmd == "build":

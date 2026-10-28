@@ -20,6 +20,9 @@ Nothing here is medical advice and nothing changes the four scientific current f
 | `ligand_reconciliation.tsv` | every GtoPdb-ligand relation of a DGIdb-only record (3 030 rows): candidate, ligand id, ChEMBL id, decision, reason code and the evidence fields; the sampling table for a verifier. Written by `build` | yes |
 | `ligand_reconciliation_not_merged.tsv` | the same rows without `merged`: related-not-merged, rejected-conflict, out-of-selection, unresolved, each with its reason (2 545 rows) | yes |
 | `non_molecule_modalities.tsv` | diets, gene replacement and other non-molecule modalities named by the cards, kept **out** of the molecule counts | yes |
+| `dsld_probe_annotations.tsv` | hand-written (IT5 P10): per probed string, family, catalogue target and the ambiguity note (homonym, salt, form, mixture) | yes |
+| `dsld_probe_results.tsv` | written by `catalog_build.py dsld-report`: per probed string, match type, text hits, sampled labels, equal-name and equal-group counts, DSLD group match and ids, date, ambiguity note | yes |
+| `eu_context_probe.py`, `eu_context_probe.tsv` | European context probe (below): the two EU registers as published on the EU Open Data Portal, name counts only | yes |
 | `cache_manifest.json` | per source: URL, retrieval date, version, sha256, bytes, licence, terms, last attempt status | yes |
 | `cache/` | raw downloads (about 100 MB: ChEMBL pages, NDC zip, DGIdb TSVs) | **no** (gitignored); override with `LEGEND_CATALOG_CACHE` |
 
@@ -33,7 +36,7 @@ Nothing here is medical advice and nothing changes the four scientific current f
 | GtoPdb `interactions.csv` + `targets_and_families.csv` + `ligands.csv` (guidetopharmacology.org/DATA, release 2026.3.1) | verification and correction of the gene named by DGIdb Guide-to-Pharmacology rows (target id, species, type, selectivity statement); not a target source of its own. `ligands.csv` (ChEMBL ID, InChIKey, Type, Withdrawn, Labelled, Radioactive) is used only to reconcile DGIdb-only records that carry an IUPHAR ligand id with ChEMBL records (section "Ligand reconciliation"). The ChEMBL `chembl_id_lookup` status of the ChEMBL ids that GtoPdb names and the selection does not hold is cached as `chembl/gtopdb_ref_lookup.json` and pinned in the manifest | 3 files, 24,968 interactions, 14,029 ligands (7,227 with a ChEMBL id); 3,708 ChEMBL ids looked up | database ODbL, contents CC BY-SA 4.0 (about.jsp, download.jsp, read 2026-10-28); public download, no registration. Share-alike applies to the GtoPdb-derived fields of `catalog.jsonl.gz`. The web-services API needs a key and is not used |
 | Every Cure MATRIX drug list (Hugging Face, via datasets-server rows) | `approved_usa`, `gras_usa`, ATC, DrugBank and ChEBI ids for 1 927 live rows | HF commit `dc75f85…`, 1 935 rows declared = 1 935 received | CC BY 4.0, from the drug-list dataset-card metadata. The MATRIX knowledge graph and the **scores** table are separate artefacts: nothing is transferred to them from this licence; the scores have no declared licence and are not used | **Independent verification 2026-10-29:** class A applies only to the fields the MATRIX authors own (approval flags, names); the ATC, DrugBank and ChEBI identifiers inside are third-party and are identifiers-only (class C), because a dataset-card licence cannot grant rights in third-party content.
 | openFDA `drug/ndc` bulk zip | the only open source of a US access category: `product_type` (prescription vs OTC), `marketing_category`, UNII | 138 143 products, export 2026-10-27 | CC0 / public domain (verified 2026-10-28 at open.fda.gov/license; the third-party GMDN notice on that site concerns device content, not the NDC fields used); openFDA disclaimer applies |
-| NIH ODS DSLD API v9 (per-query) | dietary-supplement label evidence | 1 005 name probes OK, 0 errors (981 of the 4 697 bulk-list names, interrupted; 24 targeted) | reported as CC0 on 2026-10-27 (API documentation licence block); the page returned 403 on 2026-10-28 and the statement is **not re-verified**; counts only |
+| NIH ODS DSLD API v9 (per-query) | dietary-supplement label evidence | 1 046 label probes OK, 0 errors (971 bulk-list names, interrupted, and 75 targeted: IT5 P10 added 51 compound-family strings and 68 ingredient-group lookups) | the API root page (`api.ods.od.nih.gov/dsld/v9/`, HTTP 200 on 2026-10-28) carries a licence block "CC0 1.0 Universal" and a version 9.4.0; the website `dsld.od.nih.gov` terms page returned 403 on 2026-10-28, so the terms are **not verified** for anything beyond counts, probes and DSLD's own ingredient-group ids and names; no label text is stored |
 
 ## Licence reconciliation (IT5 P1, read 2026-10-28)
 
@@ -260,6 +263,9 @@ backbone.
 ```bash
 python3 -B catalog_build.py fetch                 # NETWORK. Skips sources newer than 30 days; --refresh / --only chembl,dgidb to force
 python3 -B catalog_build.py probe-dsld [--names a,b] [--retry-errors] [--limit N]   # NETWORK, optional, resumable, 3 parallel requests
+python3 -B catalog_build.py probe-dsld --names "a,b" --refresh   # NETWORK, targeted: one request per second, appends detail fields (name/group/partial counts)
+python3 -B catalog_build.py probe-dsld-groups --names "a,b"      # NETWORK, DSLD ingredient-group index (group id, DSLD's own synonyms), one request per second
+python3 -B catalog_build.py dsld-report                          # OFFLINE. writes dsld_probe_results.tsv from the cache and dsld_probe_annotations.tsv
 python3 -B catalog_build.py inputs                # OFFLINE. what the declared version needs: present / missing / mismatching, and how to get each
 python3 -B catalog_build.py build                 # OFFLINE. cache -> catalog.jsonl.gz, stats, card links (about 25 s); REFUSES on an incomplete cache
 python3 -B catalog_build.py verify                # OFFLINE. counts reconcile
@@ -279,7 +285,7 @@ checking every file the declared version needs: it must exist, and its sha256 mu
 manifest. Two files the manifest does not hash are checked for presence only:
 `chembl/id_lookup.json` (written by `fetch`; without it every card id stays `UNRESOLVED` and
 `card_links.json` changes) and `dgidb/live_sources.json` (the `dgidb_age` comparison).
-`dsld/probes.jsonl` is append-only and has no hash either.
+`dsld/probes.jsonl` and `dsld/groups.jsonl` are append-only; since IT5 P10 the manifest pins their sha256 (the pin moves with each probe run, by design: `probe-dsld` and `probe-dsld-groups` rewrite it), so a build against a probes file that differs from the declared one is refused like any other mismatch.
 
 Reproduce, in a worktree or anywhere else, with separate commands:
 
@@ -349,5 +355,77 @@ with no cached lookup stays `UNRESOLVED` and unused. (2) Ten curated declaration
 `card_identity_declarations.tsv`, each naming role (`identity` or `named_member`) and basis. Name
 similarity is never used. Most unmatched cards are class-level or modality-level and have no
 single compound by design.
+
+## Supplements and access categories, IT5 P10 (2026-10-28)
+
+**"Supplement" is a category of access, not an indication of efficacy or safety.** It records that a US
+dietary-supplement label in DSLD names an ingredient whose name (or a name DSLD itself lists as a synonym of an
+ingredient group) equals the catalogue entry's name. It does not say that the compound is available in Italy
+or the EU, in what form, dose or quality, that it is appropriate for anyone, or that it does anything in a
+WWOX-deficient system. A DSLD hit is a **product label listing an ingredient**, not the compound's
+availability or safety.
+
+What was added: 68 probe strings (51 of them new to the targeted set) for the compounds that came out of the research cycles and are in cards
+(dichloroacetate and its spellings, thiamine and its salts, alpha-lipoic acid, pyruvate and its salts, beta-hydroxybutyrate
+and its salts, carnitine forms, coenzyme Q10 forms, decanoic and neighbouring fatty acids, triheptanoin, phenylbutyrate,
+UDCA/TUDCA, ethosuximide, vigabatrin, lithium forms, apinocaltamide, stiripentol, bumetanide, amlexanox, metformin,
+valproic acid, riboflavin, biotin, cannabidiol, and the nonsense control), each re-queried with `--refresh` so the
+record carries the new detail fields, plus 68 lookups in the DSLD **ingredient-group index** (`/v9/ingredient-groups`,
+`method=factsheet`, which matches a term against group names and DSLD's own group synonyms). Results per string:
+[`dsld_probe_results.tsv`](dsld_probe_results.tsv); the ambiguity notes are in
+[`dsld_probe_annotations.tsv`](dsld_probe_annotations.tsv).
+
+How the evidence is read (all of it `strength: name_only`):
+
+* **Label probe.** First 50 results of a phrase search; `total_fulltext_hits` is a text match count (it counts labels that
+  merely contain the words anywhere, so it overstates ingredient presence: "decanoic acid" 7 241 hits, 0 ingredient equal
+  names). The ingredient counts are limited to the 50-label sample and are lower bounds, not product counts. Equal
+  ingredient **name** and equal ingredient **group** are counted separately, and labels that contain the string only inside
+  a longer name ("partial") are kept apart.
+* **Ingredient group.** DSLD curates "ingredient groups" with an internal numeric id and a synonym list (the group "Alpha-Lipoic
+  Acid" id 6878 lists thioctic acid, lipoic acid and many spelling variants). The id is DSLD's own name curation: it is **not** a chemical
+  identifier (no UNII, no InChIKey, no CAS in the response), so a group match is a name match that carries an id and the entry
+  stays `name_only`. Where several groups match, up to six ids are kept with `dsld_groups_total`.
+* **Rule added to `build`.** An entry gets `supplement` if a label probe of its name (or a targeted synonym) found an equal
+  ingredient, or if its name or one of its synonyms (normalised, at least four characters) equals a DSLD group name or
+  group synonym that a lookup returned. Three-letter keys (ALA, DCA, PCP) are never matched: "ala" is also alanine. A no
+  match is "no match in DSLD on 2026-10-28 under these query strings".
+
+Measured effect on the catalogue (before the probes -> after): entries with the `supplement` category 126 -> 238; entries
+with `unknown/unverified` 28 296 -> 28 234; label probes OK 1 005 -> 1 046; targeted probes 24 -> 75; ingredient-group
+lookups 0 -> 107 (some of the first 39 were repeated). Not everything new is a card compound: lookups of "thiamine"
+and "riboflavin" also returned the vitamin B family groups (and the pyridoxine lookup the B6 groups), which attached `supplement` to pyridoxine, cobalamin and
+niacin entries by their own names; the count rise is coverage of the probed families, not a statement about the cards.
+
+Per compound (card context in `closed_loop_it5_p9_20261029`): dichloroacetate, sodium dichloroacetate, dichloroacetic
+acid and "DCA": 0 text hits and no group, still `experimental` or `unknown/unverified`. Thiamine, alpha-lipoic acid,
+pyruvate, beta-hydroxybutyrate, carnitine, coenzyme Q10 and decanoic acid carry `supplement` by name with group ids;
+decanoic acid only through DSLD's synonym (group "Capric Acid" 2486), not through a label ingredient name; triheptanoin
+0 hits (prescription by NDC identifier, a separate category); phenylbutyrate, ursodeoxycholic acid, ethosuximide,
+vigabatrin, apinocaltamide, stiripentol, bumetanide, amlexanox: 0 hits; tauroursodeoxycholic acid 46 labels (name only).
+
+**Bulk-list note.** Re-labelling ten bulk-list names as targeted lowered `bulk_list_probed` from 981 to 971; the union did not change.
+
+## European context probe, IT5 P10 (2026-10-28)
+
+What was tried, in order. (1) Italian Ministry of Health, the register of notified supplements
+("Registro nazionale degli integratori", `salute.gov.it`): the page URLs answered HTTP 200 with a 12.8 kB page
+titled "Gcore" (an anti-bot challenge), not the register; it was not worked around. The open-data portal
+`dati.salute.gov.it` answered 301/HTTP 000 for the root and served an application shell for `www.dati.salute.gov.it`; a search
+of the EU Open Data Portal for Italian supplement registers returned no Ministry dataset. **Not usable: no download,
+no API reached.** (2) The EU register of nutrition and health claims and (3) the EU Novel Food status catalogue: the
+Commission pages are search applications without a download link, but the EU Open Data Portal lists both as datasets
+(DG Health and Food Safety, last modified 2024-08-13) with documented download URLs on
+`api.datalake.sante.service.ec.europa.eu`; both answered HTTP 200 without a key, a registration or a contact string
+(Novel Food 6 570 records, 11.0 MB; health claims 3 342 records, 4.4 MB). Reuse terms: the Commission legal notice
+(`commission.europa.eu/legal-notice_en`, read 2026-10-28) says content owned by the EU is licensed under CC BY 4.0 under the
+Commission Decision of 12 December 2011, "unless otherwise indicated"; the dataset records carry no licence field of their own, so
+CC BY 4.0 is the **default reading, not a dataset-specific statement**; attribution is given here. `eu_context_probe.py`
+downloads both files (gitignored `cache/eu/`) and writes name-match counts to `eu_context_probe.tsv` (whole-word
+normalised match; EU level, not Italian national). Examples: coenzyme Q10 8 health-claim entries, all "Non-authorised"; alpha-lipoic
+acid 9, all "Non-authorised"; carnitine 17, all "Non-authorised"; thiamine 7 "Authorised" (nutrient-function claims); tauroursodeoxycholic acid and
+cannabidiol and benfotiamine each 1 Novel Food catalogue entry with status "Novel food"; "pyruvate" matches only creatine pyruvate (a different substance); dichloroacetate,
+triheptanoin, phenylbutyrate, lithium: 0 in both. A claim status is a statement about wording of a health claim, not
+about the substance; a Novel Food catalogue status is a non-binding orientation (the catalogue says so). Neither says anything about a WWOX use.
 
 Independent verification (2026-10-29, `locator_audits/2026-10-29_it5_p4_independent_verification.md`): 485 of 485 merged pairs agree with an independent InChIKey comparison and no false merge was found; two `rejected_conflict` pairs (LX2931, GNE-7883) are tautomer depictions of the same molecule rather than structural conflicts, and two `unresolved` pairs are recoverable by InChIKey (5-hydroxymethyl-2-furfural, whose GtoPdb id is mis-cased, and PBF-509, whose GtoPdb id is not a compound record but whose structure equals CHEMBL3694769). These are recorded as known low-severity limits; the recoverable ones are not merged by the rule today.

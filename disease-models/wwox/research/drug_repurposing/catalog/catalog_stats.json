@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_utc": "2026-10-28T23:19:38Z",
+ "generated_utc": "2026-10-28T23:40:16Z",
  "unit": "one catalogue entry = one source-level substance record (ChEMBL molecule record incl. salts and stereoisomers; or one source-only substance); NOT a unique chemical entity",
  "sources": {
   "chembl": {
@@ -42,7 +42,7 @@
   "dsld": {
    "state": "OK",
    "version": "API v9.4.0",
-   "retrieved_utc": "2026-10-28T07:28:15Z",
+   "retrieved_utc": "2026-10-28T23:39:55Z",
    "licence": "CC0 1.0 (API documentation licence block, read 2026-10-27; the documentation page also lists a contact address, which this tool never uses)"
   }
  },
@@ -77,31 +77,31 @@
   "oligosaccharide": 72
  },
  "access_signature_sums_to_total": {
-  "unknown/unverified": 28296,
-  "experimental": 13014,
-  "prescription": 1893,
-  "OTC": 705,
-  "OTC+prescription": 177,
-  "supplement": 82,
-  "OTC+prescription+supplement": 18,
-  "prescription+supplement": 13,
-  "experimental+supplement": 7,
-  "OTC+supplement": 6
+  "unknown/unverified": 28234,
+  "experimental": 12996,
+  "prescription": 1876,
+  "OTC": 702,
+  "OTC+prescription": 165,
+  "supplement": 144,
+  "OTC+prescription+supplement": 30,
+  "prescription+supplement": 30,
+  "experimental+supplement": 25,
+  "OTC+supplement": 9
  },
  "access_category_overlapping_counts": {
   "OTC": 906,
   "experimental": 13021,
   "prescription": 2101,
-  "supplement": 126,
-  "unknown/unverified": 28296
+  "supplement": 238,
+  "unknown/unverified": 28234
  },
- "access_unknown_unverified_entries": 28296,
+ "access_unknown_unverified_entries": 28234,
  "universe": {
   "chembl_distinct_compounds_in_release": 2921148,
   "chembl_entries_enumerated_in_catalogue": 19933,
   "chembl_compounds_not_enumerated_bioactive_only": 2901215,
   "meaning": "the bioactive-molecule universe is the ChEMBL total; the catalogue enumerates only compounds with a clinical-phase statement, a probe flag, or a source row; the rest is counted here and not listed",
-  "entries_with_access_evidence_prescription_or_OTC_or_supplement": 2901,
+  "entries_with_access_evidence_prescription_or_OTC_or_supplement": 2981,
   "meaning_of_the_previous": "evidence of access in at least one US listing on a date, scoped per entry; not approval, appropriateness or safety, and not access for a given person or country"
  },
  "relations_kept": {
@@ -170,17 +170,19 @@
   "unii_to_entry_links": 2974
  },
  "dsld": {
-  "probes_ok": 1005,
+  "probes_ok": 1046,
   "probes_error": 0,
   "probes_by_set": {
-   "bulk": 981,
-   "targeted": 24
+   "bulk": 971,
+   "targeted": 75
   },
   "bulk_list_planned_names": 4697,
-  "bulk_list_probed": 981,
+  "bulk_list_probed": 971,
   "bulk_list_coverage_note": "the bulk probe was interrupted; names not probed have NO supplement evidence either way (unknown, not negative)",
-  "queries_with_exact_name_in_sample": 72,
-  "match_strength": "name_only: DSLD labels carry no identifier; US labels only (not an Italian or EU classification)"
+  "queries_with_exact_name_in_sample": 94,
+  "ingredient_group_lookups": 107,
+  "ingredient_group_index_keys": 1154,
+  "match_strength": "name_only: DSLD labels carry no chemical identifier (no UNII); a DSLD ingredient-group id is DSLD's own name curation, not a chemical identity; US labels only (not an Italian or EU classification)"
  },
  "gtopdb_ligand_reconciliation": {
   "state": "OK",
@@ -348,9 +350,9 @@
   "dsld": {
    "complete_and_coherent": true,
    "version": "API v9.4.0",
-   "retrieved_utc": "2026-10-28T07:28:15Z",
+   "retrieved_utc": "2026-10-28T23:39:55Z",
    "counts_checked": {},
-   "files_hash_checked": 0,
+   "files_hash_checked": 2,
    "problems": [],
    "last_attempt_status": "OK"
   },
@@ -447,8 +449,8 @@
  },
  "catalog_file": {
   "path": "catalog.jsonl.gz",
-  "sha256": "b351c94d3e8beb262b9caab850e919f63cd997ba55b2333e644c8b938f06f7ec",
-  "bytes": 8729862
+  "sha256": "75652786013b931d2482ae40b2b563a02ef3e05eff43832722cc002e3ccf72fb",
+  "bytes": 8765091
  },
  "card_links": {
   "cards_considered": 61,
