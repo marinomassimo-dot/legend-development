@@ -14,17 +14,17 @@
    "steps": [
     {
      "step": "A1 trace the identity chain on an informative sample (source record -> source target id -> DGIdb normalisation -> import -> need): GRIN1/STING, ATF4/nicotinic, CTNNB1/p38, EIF4EBP1/CDK, GRIN2A/B suspects, GRIA4, ABAT second source; one collision not on the listed symbols",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "scientist-a"
     },
     {
      "step": "A2 correct at import/with stable source ids, represent unresolved relations explicitly, consolidate duplicate rules, GRIN2A/B class-vs-subunit semantics, GRIA4 reopened, ABAT pharmacology of second-source records; targeted regressions (confirmed false link, genuine link same gene/family, complex-level not subunit selectivity, non-listed collision, unresolved not promoted); regenerate catalogue, associations, coverage, priorities, queue, view",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "plan"
     },
     {
      "step": "A3 module behaviours: concordant and opposed actions in one family shown together not summed; a failing source changes only the dispositions that depend on it, not a verified mechanism; regressions",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "plan"
     },
     {
@@ -39,7 +39,7 @@
    "steps": [
     {
      "step": "B1 wild-type-only comparisons no longer named observed_wwox_system: reference/control, wild-type drug effect, WWOX-model result, direct genotype comparison, recovery comparison; propagate to labels, priorities, view; L3/L4 keep subject, comparator, endpoint, time, sign, depth, controlled/uncontrolled; no d-APV transfer to memantine/perampanel",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "plan"
     },
     {
@@ -49,7 +49,7 @@
     },
     {
      "step": "B3 ISR: supplementary figures already in corpus first, Hussain supplement for GCN1, meaning of the WWOX row in the PERK interactome, exact Atf4 with/without Abeta42 reconciliation (interaction vs two separate tests, unit and n), review of the discriminating-experiment design with a Scientist, propagate to needs, cards, hypotheses, priorities, queue",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "scientist-c"
     }
    ]
@@ -74,8 +74,9 @@
     },
     {
      "step": "C4 distribution perimeter and licences: repository visibility, data embedded in the HTML, terms of the components really used (DGIdb and its sources, ChEMBL, others); shareable projection from permissive sources if needed, attributions kept",
-     "status": "TODO",
-     "owner": "scientist-a"
+     "status": "IN_PROGRESS",
+     "owner": "scientist-a",
+     "evidence": "licence report in scratchpad: repo is public and contains DGIdb rows with NC/unclear terms; projection pending"
     }
    ]
   },
@@ -84,17 +85,19 @@
    "steps": [
     {
      "step": "D1 discover what exists (host scheduler, app automations, mandate-continuity tools, supported channels to reach the right session); reuse, one control only",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "claude agents --json (live status), claude --bg --resume, in-session CronCreate, mandate_continuity markers examined; host revival of a dead session needs CLI workspace trust (hasTrustDialogAccepted false), live idle session reached by the in-session cron; commit d5d2d167"
     },
     {
      "step": "D2 hourly monitor: states running / stopped-resumable / explicit pause / complete / blocked / unknown, session identified by record not by process name, silent when unchanged, deduplicated; install the schedule",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "mandate_watch.py + 9 tests; host crontab line 37 * * * * installed (backup crontab_backup_20261028.txt); in-session cron b249fa95 hourly :17; d5d2d167"
     },
     {
      "step": "D3 non-invasive proof: stopped state detected -> request delivered -> Orchestrator resumes authorised work; negative proofs (active, paused, duplicate, complete); or the exact technical limit",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator"
     }
    ]
