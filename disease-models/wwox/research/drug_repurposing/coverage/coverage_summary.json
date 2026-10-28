@@ -217,7 +217,7 @@
     "readout_marker_only_records": 6,
     "records_with_documented_link": 5,
     "targets": 6,
-    "wwox_system_observations": 1
+    "wwox_system_observations": 2
    },
    "NEED-MTOR-AUTOPHAGY": {
     "cards_citing_need": [
@@ -312,7 +312,7 @@
     "readout_marker_only_records": 19,
     "records_with_documented_link": 156,
     "targets": 9,
-    "wwox_system_observations": 0
+    "wwox_system_observations": 2
    },
    "NEED-REDOX-OXIDATIVE-STRESS": {
     "cards_citing_need": [],
@@ -430,7 +430,7 @@
     "readout_marker_only_records": 0,
     "records_with_documented_link": 4,
     "targets": 1,
-    "wwox_system_observations": 0
+    "wwox_system_observations": 1
    },
    "NEED-WWOX-GENE-ADDITION": {
     "cards_citing_need": [
@@ -473,7 +473,7 @@
     "readout_marker_only_records": 0,
     "records_with_documented_link": 46,
     "targets": 6,
-    "wwox_system_observations": 0
+    "wwox_system_observations": 1
    },
    "NEED-WWOX-PTC-READTHROUGH": {
     "cards_citing_need": [
@@ -512,7 +512,7 @@
     "readout_marker_only_records": 0,
     "records_with_documented_link": 4,
     "targets": 1,
-    "wwox_system_observations": 0
+    "wwox_system_observations": 1
    }
   }
  },
