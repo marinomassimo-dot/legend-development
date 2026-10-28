@@ -1,337 +1,793 @@
 {
  "catalogue_coverage": {
-  "families_by_number_of_needs_touched": {
-   "1": 1446,
-   "17": 1,
-   "2": 263,
-   "3": 21,
-   "4": 5,
-   "5": 2,
-   "6": 1,
-   "8": 1
+  "excluded_rows": {
+   "alias_risk_rows_unresolved": [
+    {
+     "catalogue_id": "CAT:DGIDB:27b4cd9ba342",
+     "compound": "Osu-03012",
+     "gene": "PDK1"
+    },
+    {
+     "catalogue_id": "CAT:DGIDB:f9aa3ade458c",
+     "compound": "Celecoxib",
+     "gene": "PDK1"
+    }
+   ],
+   "by_reason": {
+    "alias_risk": 2,
+    "placeholder": 33,
+    "source_artefact": 154
+   },
+   "records": 80
   },
-  "families_touching_a_need_if_name_twins_were_collapsed_SENSITIVITY_ONLY": 1608,
-  "families_touching_at_least_one_need_counted_once": 1740,
-  "families_with_documented_link_to_a_need": 1740,
-  "overlap_warning": "needs share targets (e.g. CACNA1G, ABAT); per-need family counts must not be added: use the union above",
-  "pct_records_with_link": {
+  "families_by_number_of_needs_touched": {
+   "1": 909,
+   "2": 78,
+   "3": 5,
+   "5": 1,
+   "6": 2
+  },
+  "headline_definition": "a documented link = a catalogue row on an INTERVENTION target (or disease gene product) of a need, excluding source-artefact rows, alias-risk rows and the DGIdb placeholder; pathway members counted apart; effector constraints and readout markers are never links",
+  "headline_families_if_name_twins_collapsed_SENSITIVITY_ONLY": 871,
+  "overlap_warning": "needs share targets (e.g. CACNA1G, ABAT); per-need counts must not be added: use the unions above",
+  "pct_records_incl_pathway_members": {
    "denominator": 44211,
-   "numerator": 1770,
-   "percent": 4.0,
-   "what": "catalogue records with at least one documented link to a link-type target of any of the needs / all catalogue records; links are source statements, not relevance"
+   "numerator": 1335,
+   "percent": 3.0,
+   "what": "records with a headline OR pathway-member link / all catalogue records"
+  },
+  "pct_records_with_headline_link": {
+   "denominator": 44211,
+   "numerator": 1024,
+   "percent": 2.3,
+   "what": "catalogue records with at least one headline link to any of the needs / all catalogue records; links are source statements, not relevance"
   },
   "pct_records_with_target_row_that_link": {
    "denominator": 24423,
-   "numerator": 1770,
-   "percent": 7.2,
-   "what": "records linked to some need / records carrying any target row"
+   "numerator": 1024,
+   "percent": 4.2,
+   "what": "records with a headline link / records carrying any target row"
   },
   "records_examined": 44211,
-  "records_touching_only_readout_markers": 351,
+  "records_touching_only_effector_constraints_or_readout_markers": 710,
   "records_with_any_target_row": 24423,
-  "records_with_documented_link_to_a_need": 1770,
-  "touched_families_with_a_name_twin_in_another_family_not_merged": 914
+  "touched_headline_families_with_a_name_twin_not_merged": 654,
+  "union_headline_families": 995,
+  "union_headline_records": 1024,
+  "union_with_pathway_members_families": 1306,
+  "union_with_pathway_members_records": 1335
  },
  "evaluated_vs_records": {
-  "meaning": "'examined' = target-matched against the 22 needs; 'evaluated with observation' = card interventions with at least one data assertion on a need citing the card",
-  "records_evaluated_against_wwox_needs_with_any_observation": 14,
+  "interventions_with_a_listed_pertinent_readout_assertion": 9,
+  "meaning": "'examined' = target-matched against the needs; the last figure counts matrix rows (families or card interventions) with a pertinent WWOX-system readout or case report",
   "records_examined_by_target_match": 44211,
   "records_in_catalogue": 44211,
-  "records_with_a_link_to_a_need_target": 1770,
+  "records_with_a_headline_link": 1024,
   "records_with_target_data_at_all": 24423
  },
  "inputs_status": {
   "cards_cited_by_needs_but_missing": [],
-  "catalogue_sources_not_ok": [],
-  "stale_role_rows": []
+  "hard_problem_sources": [],
+  "stale_pertinence_rows": [],
+  "stale_role_rows": [],
+  "stale_sources": [
+   "dgidb"
+  ]
  },
  "limits": [
   "catalogue links are source statements; no potency is carried",
-  "DGIdb is the 2024-06-10 export",
+  "DGIdb is a STALE export (2024-06-10); current service coverage not ingested",
   "ChEMBL non-human target rows are set aside, not matched",
-  "card pertinence to a need is card-level",
-  "L4 is a technical bridge comparison, not efficacy",
-  "needs' own WWOX observations are not interventions and fill no compound cell"
+  "pertinence of an assertion to a need is judged in assertion_pertinence.tsv (a curated input, reviewable); unlisted assertions are not counted",
+  "L4 is a technical bridge comparison, not efficacy; case_level = uncontrolled clinical report",
+  "needs' own WWOX observations are not interventions and fill no compound cell",
+  "seizure-need cells are symptom-level inferences, not mechanism-linked to WWOX; GRIN and T-type couplings rest on one experiment each"
  ],
  "matrix": {
-  "L1_documented": 2096,
-  "L1_none_found": 430,
-  "L1_not_evaluable": 17,
-  "L2_coherent": 201,
-  "L2_direction_unresolved": 324,
-  "L2_not_evaluable": 1857,
-  "L2_opposed": 63,
-  "L3_inference_only": 0,
-  "L3_measured_null_only": 0,
-  "L3_none_in_cards": 2523,
-  "L3_observed": 20,
-  "L4_observed": 10,
-  "cells_nonempty": 2543,
-  "cells_possible_rows_x_needs": 46134,
+  "L1_states": {
+   "documented": 1097,
+   "none_found": 9,
+   "not_evaluable": 25,
+   "pathway_member_only": 383
+  },
+  "L2_states": {
+   "coherent": 125,
+   "direction_unresolved": 302,
+   "none": 58,
+   "not_evaluable": 1007,
+   "opposed": 22
+  },
+  "L3_states": {
+   "measured_null_only": 1,
+   "none_in_cards": 1494,
+   "observed_case_level_only": 2,
+   "observed_wwox_system": 8,
+   "precedent_other_disease_only": 6,
+   "target_engagement_only": 3
+  },
+  "L4_states": {
+   "none_in_record": 1509,
+   "observed_case_level": 2,
+   "observed_experimental": 3
+  },
+  "cells_nonempty": 1514,
+  "cells_possible_rows_x_needs": 29348,
   "levels_are_never_summed": true,
   "row_kinds": {
-   "intervention_without_catalogue_identity": 8,
-   "molecule_family": 2083,
-   "non_molecule_intervention": 6
+   "intervention_without_catalogue_identity": 12,
+   "molecule_family": 1313,
+   "non_molecule_intervention": 6,
+   "tool_compound_or_genetic_precedent_not_in_catalogue": 3
   },
-  "rows": 2097
+  "rows": 1334
  },
  "needs": {
   "count": 22,
   "direction_evaluable": 10,
   "exploration_only": 12,
-  "needs_with_documented_link_families": 21,
-  "needs_without_any_link_target": [
+  "needs_with_headline_link_families": 18,
+  "needs_without_any_intervention_target_link": [
+   "NEED-MITOCHONDRIAL-RESPIRATION",
+   "NEED-MYC-PROGENITOR-PROLIFERATION",
+   "NEED-REDOX-OXIDATIVE-STRESS",
    "NEED-SYSTEMIC-GLYCAEMIA-GROWTH"
   ],
   "per_need": {
    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR": {
+    "by_target_kind_records_families": {
+     "disease_gene_product": {
+      "families": 0,
+      "records": 0
+     },
+     "effector_constraint": {
+      "families": 0,
+      "records": 0
+     },
+     "intervention_target": {
+      "families": 191,
+      "records": 197
+     },
+     "pathway_member": {
+      "families": 11,
+      "records": 11
+     },
+     "readout_marker": {
+      "families": 0,
+      "records": 0
+     }
+    },
     "cards_citing_need": [
      "F01_glutamate_receptor_node"
     ],
-    "cells_L3_observed": 2,
+    "cells_L3_observed_case_level_only": 0,
+    "cells_L3_observed_wwox_system": 1,
     "cells_L4_observed": 0,
     "direction": "down",
+    "excluded_records_by_reason": {
+     "placeholder": 1
+    },
     "exploration_only": false,
-    "families_consistent": 96,
-    "families_opposed": 34,
-    "families_with_documented_link": 203,
+    "families_consistent": 66,
+    "families_incl_pathway_members": 202,
+    "families_opposed": 22,
+    "headline_families_intervention_targets": 191,
+    "headline_records_intervention_targets": 197,
     "identity_guard_hits": 0,
-    "link_targets": 9,
     "nonhuman_chembl_rows_set_aside": 0,
-    "readout_marker_only_records": 0,
-    "records_with_documented_link": 209,
+    "records_incl_pathway_members": 208,
+    "target_kinds": {
+     "intervention_target": 8,
+     "pathway_member": 1
+    },
     "targets": 9,
     "wwox_system_observations": 4
    },
    "NEED-GABA-CHLORIDE-GRADIENT": {
+    "by_target_kind_records_families": {
+     "disease_gene_product": {
+      "families": 0,
+      "records": 0
+     },
+     "effector_constraint": {
+      "families": 0,
+      "records": 0
+     },
+     "intervention_target": {
+      "families": 1,
+      "records": 1
+     },
+     "pathway_member": {
+      "families": 1,
+      "records": 1
+     },
+     "readout_marker": {
+      "families": 0,
+      "records": 0
+     }
+    },
     "cards_citing_need": [
      "F03_bumetanide_chloride_gradient"
     ],
-    "cells_L3_observed": 0,
+    "cells_L3_observed_case_level_only": 0,
+    "cells_L3_observed_wwox_system": 0,
     "cells_L4_observed": 0,
     "direction": "uncertain",
+    "excluded_records_by_reason": {},
     "exploration_only": true,
     "families_consistent": 0,
+    "families_incl_pathway_members": 1,
     "families_opposed": 0,
-    "families_with_documented_link": 1,
+    "headline_families_intervention_targets": 1,
+    "headline_records_intervention_targets": 1,
     "identity_guard_hits": 0,
-    "link_targets": 2,
     "nonhuman_chembl_rows_set_aside": 0,
-    "readout_marker_only_records": 0,
-    "records_with_documented_link": 1,
+    "records_incl_pathway_members": 1,
+    "target_kinds": {
+     "intervention_target": 1,
+     "pathway_member": 1
+    },
     "targets": 2,
     "wwox_system_observations": 0
    },
    "NEED-GSK3B-DEREPRESSION": {
+    "by_target_kind_records_families": {
+     "disease_gene_product": {
+      "families": 0,
+      "records": 0
+     },
+     "effector_constraint": {
+      "families": 444,
+      "records": 444
+     },
+     "intervention_target": {
+      "families": 51,
+      "records": 51
+     },
+     "pathway_member": {
+      "families": 30,
+      "records": 30
+     },
+     "readout_marker": {
+      "families": 0,
+      "records": 0
+     }
+    },
     "cards_citing_need": [
      "G01_lithium_gsk3"
     ],
-    "cells_L3_observed": 1,
-    "cells_L4_observed": 1,
+    "cells_L3_observed_case_level_only": 0,
+    "cells_L3_observed_wwox_system": 0,
+    "cells_L4_observed": 0,
     "direction": "uncertain",
+    "excluded_records_by_reason": {},
     "exploration_only": true,
     "families_consistent": 0,
+    "families_incl_pathway_members": 54,
     "families_opposed": 0,
-    "families_with_documented_link": 498,
+    "headline_families_intervention_targets": 51,
+    "headline_records_intervention_targets": 51,
     "identity_guard_hits": 0,
-    "link_targets": 4,
     "nonhuman_chembl_rows_set_aside": 0,
-    "readout_marker_only_records": 0,
-    "records_with_documented_link": 498,
+    "records_incl_pathway_members": 54,
+    "target_kinds": {
+     "effector_constraint": 1,
+     "intervention_target": 1,
+     "pathway_member": 2
+    },
     "targets": 4,
     "wwox_system_observations": 1
    },
    "NEED-INHIBITORY-HYPOFUNCTION": {
+    "by_target_kind_records_families": {
+     "disease_gene_product": {
+      "families": 0,
+      "records": 0
+     },
+     "effector_constraint": {
+      "families": 0,
+      "records": 0
+     },
+     "intervention_target": {
+      "families": 11,
+      "records": 11
+     },
+     "pathway_member": {
+      "families": 0,
+      "records": 0
+     },
+     "readout_marker": {
+      "families": 162,
+      "records": 169
+     }
+    },
     "cards_citing_need": [
      "F03_bumetanide_chloride_gradient",
      "EB-VGB-01"
     ],
-    "cells_L3_observed": 1,
-    "cells_L4_observed": 1,
+    "cells_L3_observed_case_level_only": 0,
+    "cells_L3_observed_wwox_system": 0,
+    "cells_L4_observed": 0,
     "direction": "uncertain",
+    "excluded_records_by_reason": {
+     "placeholder": 1,
+     "source_artefact": 77
+    },
     "exploration_only": true,
     "families_consistent": 0,
+    "families_incl_pathway_members": 11,
     "families_opposed": 0,
-    "families_with_documented_link": 89,
+    "headline_families_intervention_targets": 11,
+    "headline_records_intervention_targets": 11,
     "identity_guard_hits": 0,
-    "link_targets": 1,
     "nonhuman_chembl_rows_set_aside": 2,
-    "readout_marker_only_records": 169,
-    "records_with_documented_link": 89,
+    "records_incl_pathway_members": 11,
+    "target_kinds": {
+     "intervention_target": 1,
+     "readout_marker": 6
+    },
     "targets": 7,
     "wwox_system_observations": 4
    },
    "NEED-ISR-ATTENUATION": {
+    "by_target_kind_records_families": {
+     "disease_gene_product": {
+      "families": 0,
+      "records": 0
+     },
+     "effector_constraint": {
+      "families": 0,
+      "records": 0
+     },
+     "intervention_target": {
+      "families": 3,
+      "records": 3
+     },
+     "pathway_member": {
+      "families": 32,
+      "records": 32
+     },
+     "readout_marker": {
+      "families": 43,
+      "records": 43
+     }
+    },
     "cards_citing_need": [
      "E01_isr_modulators"
     ],
-    "cells_L3_observed": 1,
+    "cells_L3_observed_case_level_only": 0,
+    "cells_L3_observed_wwox_system": 0,
     "cells_L4_observed": 0,
     "direction": "uncertain",
+    "excluded_records_by_reason": {
+     "placeholder": 1
+    },
     "exploration_only": true,
     "families_consistent": 0,
+    "families_incl_pathway_members": 35,
     "families_opposed": 0,
-    "families_with_documented_link": 36,
+    "headline_families_intervention_targets": 3,
+    "headline_records_intervention_targets": 3,
     "identity_guard_hits": 0,
-    "link_targets": 8,
     "nonhuman_chembl_rows_set_aside": 0,
-    "readout_marker_only_records": 41,
-    "records_with_documented_link": 36,
+    "records_incl_pathway_members": 35,
+    "target_kinds": {
+     "intervention_target": 6,
+     "pathway_member": 2,
+     "readout_marker": 1
+    },
     "targets": 9,
     "wwox_system_observations": 0
    },
    "NEED-LACTATE-LDH": {
+    "by_target_kind_records_families": {
+     "disease_gene_product": {
+      "families": 0,
+      "records": 0
+     },
+     "effector_constraint": {
+      "families": 0,
+      "records": 0
+     },
+     "intervention_target": {
+      "families": 6,
+      "records": 6
+     },
+     "pathway_member": {
+      "families": 0,
+      "records": 0
+     },
+     "readout_marker": {
+      "families": 0,
+      "records": 0
+     }
+    },
     "cards_citing_need": [
      "E02_ldh_inhibition"
     ],
-    "cells_L3_observed": 1,
+    "cells_L3_observed_case_level_only": 0,
+    "cells_L3_observed_wwox_system": 0,
     "cells_L4_observed": 0,
     "direction": "uncertain",
+    "excluded_records_by_reason": {},
     "exploration_only": true,
     "families_consistent": 0,
+    "families_incl_pathway_members": 6,
     "families_opposed": 0,
-    "families_with_documented_link": 6,
+    "headline_families_intervention_targets": 6,
+    "headline_records_intervention_targets": 6,
     "identity_guard_hits": 0,
-    "link_targets": 4,
     "nonhuman_chembl_rows_set_aside": 0,
-    "readout_marker_only_records": 0,
-    "records_with_documented_link": 6,
+    "records_incl_pathway_members": 6,
+    "target_kinds": {
+     "identity_guard": 1,
+     "intervention_target": 4
+    },
     "targets": 5,
     "wwox_system_observations": 1
    },
    "NEED-MITOCHONDRIAL-RESPIRATION": {
+    "by_target_kind_records_families": {
+     "disease_gene_product": {
+      "families": 0,
+      "records": 0
+     },
+     "effector_constraint": {
+      "families": 0,
+      "records": 0
+     },
+     "intervention_target": {
+      "families": 0,
+      "records": 0
+     },
+     "pathway_member": {
+      "families": 5,
+      "records": 5
+     },
+     "readout_marker": {
+      "families": 6,
+      "records": 6
+     }
+    },
     "cards_citing_need": [
      "E02_ldh_inhibition"
     ],
-    "cells_L3_observed": 1,
+    "cells_L3_observed_case_level_only": 0,
+    "cells_L3_observed_wwox_system": 0,
     "cells_L4_observed": 0,
     "direction": "uncertain",
+    "excluded_records_by_reason": {},
     "exploration_only": true,
     "families_consistent": 0,
+    "families_incl_pathway_members": 5,
     "families_opposed": 0,
-    "families_with_documented_link": 5,
+    "headline_families_intervention_targets": 0,
+    "headline_records_intervention_targets": 0,
     "identity_guard_hits": 6,
-    "link_targets": 3,
     "nonhuman_chembl_rows_set_aside": 0,
-    "readout_marker_only_records": 6,
-    "records_with_documented_link": 5,
+    "records_incl_pathway_members": 5,
+    "target_kinds": {
+     "identity_guard": 1,
+     "pathway_member": 3,
+     "readout_marker": 2
+    },
     "targets": 6,
     "wwox_system_observations": 2
    },
    "NEED-MTOR-AUTOPHAGY": {
+    "by_target_kind_records_families": {
+     "disease_gene_product": {
+      "families": 0,
+      "records": 0
+     },
+     "effector_constraint": {
+      "families": 0,
+      "records": 0
+     },
+     "intervention_target": {
+      "families": 161,
+      "records": 162
+     },
+     "pathway_member": {
+      "families": 3,
+      "records": 3
+     },
+     "readout_marker": {
+      "families": 22,
+      "records": 22
+     }
+    },
     "cards_citing_need": [
      "EB-MTOR-AX-01"
     ],
-    "cells_L3_observed": 0,
+    "cells_L3_observed_case_level_only": 0,
+    "cells_L3_observed_wwox_system": 0,
     "cells_L4_observed": 0,
     "direction": "uncertain",
+    "excluded_records_by_reason": {
+     "placeholder": 1
+    },
     "exploration_only": true,
     "families_consistent": 0,
+    "families_incl_pathway_members": 161,
     "families_opposed": 0,
-    "families_with_documented_link": 162,
+    "headline_families_intervention_targets": 161,
+    "headline_records_intervention_targets": 162,
     "identity_guard_hits": 0,
-    "link_targets": 2,
     "nonhuman_chembl_rows_set_aside": 0,
-    "readout_marker_only_records": 22,
-    "records_with_documented_link": 163,
+    "records_incl_pathway_members": 162,
+    "target_kinds": {
+     "intervention_target": 1,
+     "pathway_member": 1,
+     "readout_marker": 2
+    },
     "targets": 4,
     "wwox_system_observations": 1
    },
    "NEED-MYC-PROGENITOR-PROLIFERATION": {
+    "by_target_kind_records_families": {
+     "disease_gene_product": {
+      "families": 0,
+      "records": 0
+     },
+     "effector_constraint": {
+      "families": 0,
+      "records": 0
+     },
+     "intervention_target": {
+      "families": 0,
+      "records": 0
+     },
+     "pathway_member": {
+      "families": 70,
+      "records": 70
+     },
+     "readout_marker": {
+      "families": 0,
+      "records": 0
+     }
+    },
     "cards_citing_need": [
      "D01_a51"
     ],
-    "cells_L3_observed": 1,
-    "cells_L4_observed": 1,
+    "cells_L3_observed_case_level_only": 0,
+    "cells_L3_observed_wwox_system": 1,
+    "cells_L4_observed": 0,
     "direction": "uncertain",
+    "excluded_records_by_reason": {
+     "placeholder": 1
+    },
     "exploration_only": true,
     "families_consistent": 0,
+    "families_incl_pathway_members": 70,
     "families_opposed": 0,
-    "families_with_documented_link": 71,
+    "headline_families_intervention_targets": 0,
+    "headline_records_intervention_targets": 0,
     "identity_guard_hits": 0,
-    "link_targets": 1,
     "nonhuman_chembl_rows_set_aside": 0,
-    "readout_marker_only_records": 0,
-    "records_with_documented_link": 71,
+    "records_incl_pathway_members": 70,
+    "target_kinds": {
+     "pathway_member": 1,
+     "readout_marker": 1
+    },
     "targets": 2,
     "wwox_system_observations": 3
    },
    "NEED-MYELINATION": {
+    "by_target_kind_records_families": {
+     "disease_gene_product": {
+      "families": 0,
+      "records": 0
+     },
+     "effector_constraint": {
+      "families": 0,
+      "records": 0
+     },
+     "intervention_target": {
+      "families": 127,
+      "records": 137
+     },
+     "pathway_member": {
+      "families": 0,
+      "records": 0
+     },
+     "readout_marker": {
+      "families": 96,
+      "records": 103
+     }
+    },
     "cards_citing_need": [
      "F02_myelination_activity_sign"
     ],
-    "cells_L3_observed": 0,
+    "cells_L3_observed_case_level_only": 0,
+    "cells_L3_observed_wwox_system": 0,
     "cells_L4_observed": 0,
     "direction": "restore",
+    "excluded_records_by_reason": {
+     "placeholder": 1
+    },
     "exploration_only": false,
     "families_consistent": 0,
+    "families_incl_pathway_members": 127,
     "families_opposed": 0,
-    "families_with_documented_link": 128,
+    "headline_families_intervention_targets": 127,
+    "headline_records_intervention_targets": 137,
     "identity_guard_hits": 0,
-    "link_targets": 1,
     "nonhuman_chembl_rows_set_aside": 0,
-    "readout_marker_only_records": 103,
-    "records_with_documented_link": 138,
+    "records_incl_pathway_members": 137,
+    "target_kinds": {
+     "intervention_target": 1,
+     "readout_marker": 5
+    },
     "targets": 6,
     "wwox_system_observations": 2
    },
    "NEED-NEUROINFLAMMATION-GLIA": {
+    "by_target_kind_records_families": {
+     "disease_gene_product": {
+      "families": 0,
+      "records": 0
+     },
+     "effector_constraint": {
+      "families": 0,
+      "records": 0
+     },
+     "intervention_target": {
+      "families": 404,
+      "records": 414
+     },
+     "pathway_member": {
+      "families": 0,
+      "records": 0
+     },
+     "readout_marker": {
+      "families": 96,
+      "records": 96
+     }
+    },
     "cards_citing_need": [],
-    "cells_L3_observed": 0,
+    "cells_L3_observed_case_level_only": 0,
+    "cells_L3_observed_wwox_system": 0,
     "cells_L4_observed": 0,
     "direction": "uncertain",
+    "excluded_records_by_reason": {
+     "placeholder": 1
+    },
     "exploration_only": true,
     "families_consistent": 0,
+    "families_incl_pathway_members": 404,
     "families_opposed": 0,
-    "families_with_documented_link": 405,
+    "headline_families_intervention_targets": 404,
+    "headline_records_intervention_targets": 414,
     "identity_guard_hits": 0,
-    "link_targets": 7,
     "nonhuman_chembl_rows_set_aside": 0,
-    "readout_marker_only_records": 74,
-    "records_with_documented_link": 415,
+    "records_incl_pathway_members": 414,
+    "target_kinds": {
+     "intervention_target": 7,
+     "readout_marker": 3
+    },
     "targets": 10,
     "wwox_system_observations": 3
    },
    "NEED-PDH-PYRUVATE-AXIS": {
+    "by_target_kind_records_families": {
+     "disease_gene_product": {
+      "families": 0,
+      "records": 0
+     },
+     "effector_constraint": {
+      "families": 0,
+      "records": 0
+     },
+     "intervention_target": {
+      "families": 8,
+      "records": 8
+     },
+     "pathway_member": {
+      "families": 146,
+      "records": 146
+     },
+     "readout_marker": {
+      "families": 20,
+      "records": 20
+     }
+    },
     "cards_citing_need": [
      "E03_pdk_inhibition_dca",
      "E04_ketogenic_lactate_axis",
      "EB-KD-01"
     ],
-    "cells_L3_observed": 2,
-    "cells_L4_observed": 1,
+    "cells_L3_observed_case_level_only": 0,
+    "cells_L3_observed_wwox_system": 0,
+    "cells_L4_observed": 0,
     "direction": "uncertain",
+    "excluded_records_by_reason": {
+     "alias_risk": 2,
+     "placeholder": 1
+    },
     "exploration_only": true,
     "families_consistent": 0,
+    "families_incl_pathway_members": 153,
     "families_opposed": 0,
-    "families_with_documented_link": 156,
+    "headline_families_intervention_targets": 8,
+    "headline_records_intervention_targets": 8,
     "identity_guard_hits": 0,
-    "link_targets": 7,
     "nonhuman_chembl_rows_set_aside": 0,
-    "readout_marker_only_records": 19,
-    "records_with_documented_link": 156,
+    "records_incl_pathway_members": 153,
+    "target_kinds": {
+     "intervention_target": 4,
+     "pathway_member": 3,
+     "readout_marker": 2
+    },
     "targets": 9,
     "wwox_system_observations": 2
    },
    "NEED-REDOX-OXIDATIVE-STRESS": {
+    "by_target_kind_records_families": {
+     "disease_gene_product": {
+      "families": 0,
+      "records": 0
+     },
+     "effector_constraint": {
+      "families": 0,
+      "records": 0
+     },
+     "intervention_target": {
+      "families": 0,
+      "records": 0
+     },
+     "pathway_member": {
+      "families": 4,
+      "records": 4
+     },
+     "readout_marker": {
+      "families": 0,
+      "records": 0
+     }
+    },
     "cards_citing_need": [],
-    "cells_L3_observed": 0,
+    "cells_L3_observed_case_level_only": 0,
+    "cells_L3_observed_wwox_system": 0,
     "cells_L4_observed": 0,
     "direction": "uncertain",
+    "excluded_records_by_reason": {},
     "exploration_only": true,
     "families_consistent": 0,
+    "families_incl_pathway_members": 4,
     "families_opposed": 0,
-    "families_with_documented_link": 4,
+    "headline_families_intervention_targets": 0,
+    "headline_records_intervention_targets": 0,
     "identity_guard_hits": 0,
-    "link_targets": 1,
     "nonhuman_chembl_rows_set_aside": 0,
-    "readout_marker_only_records": 0,
-    "records_with_documented_link": 4,
+    "records_incl_pathway_members": 4,
+    "target_kinds": {
+     "pathway_member": 1
+    },
     "targets": 1,
     "wwox_system_observations": 0
    },
    "NEED-SEIZURE-CONTROL-SYMPTOMATIC": {
+    "by_target_kind_records_families": {
+     "disease_gene_product": {
+      "families": 0,
+      "records": 0
+     },
+     "effector_constraint": {
+      "families": 0,
+      "records": 0
+     },
+     "intervention_target": {
+      "families": 52,
+      "records": 54
+     },
+     "pathway_member": {
+      "families": 0,
+      "records": 0
+     },
+     "readout_marker": {
+      "families": 0,
+      "records": 0
+     }
+    },
     "cards_citing_need": [
      "EB-KD-01",
      "EB-VGB-01",
@@ -339,120 +795,294 @@
      "EB-HORM-AX-01",
      "EB-DEV-AX-01"
     ],
-    "cells_L3_observed": 2,
+    "cells_L3_observed_case_level_only": 2,
+    "cells_L3_observed_wwox_system": 2,
     "cells_L4_observed": 2,
     "direction": "down",
+    "excluded_records_by_reason": {
+     "placeholder": 1,
+     "source_artefact": 77
+    },
     "exploration_only": false,
-    "families_consistent": 70,
-    "families_opposed": 29,
-    "families_with_documented_link": 130,
+    "families_consistent": 24,
+    "families_incl_pathway_members": 52,
+    "families_opposed": 0,
+    "headline_families_intervention_targets": 52,
+    "headline_records_intervention_targets": 54,
     "identity_guard_hits": 0,
-    "link_targets": 2,
     "nonhuman_chembl_rows_set_aside": 0,
-    "readout_marker_only_records": 0,
-    "records_with_documented_link": 132,
+    "records_incl_pathway_members": 54,
+    "target_kinds": {
+     "intervention_target": 2
+    },
     "targets": 2,
     "wwox_system_observations": 3
    },
    "NEED-SYSTEMIC-GLYCAEMIA-GROWTH": {
+    "by_target_kind_records_families": {
+     "disease_gene_product": {
+      "families": 0,
+      "records": 0
+     },
+     "effector_constraint": {
+      "families": 0,
+      "records": 0
+     },
+     "intervention_target": {
+      "families": 0,
+      "records": 0
+     },
+     "pathway_member": {
+      "families": 0,
+      "records": 0
+     },
+     "readout_marker": {
+      "families": 0,
+      "records": 0
+     }
+    },
     "cards_citing_need": [
      "C04_aav9_endpoint_families",
      "EB-GROWTH-AX-01"
     ],
-    "cells_L3_observed": 1,
+    "cells_L3_observed_case_level_only": 0,
+    "cells_L3_observed_wwox_system": 1,
     "cells_L4_observed": 1,
     "direction": "restore",
+    "excluded_records_by_reason": {},
     "exploration_only": false,
     "families_consistent": 0,
+    "families_incl_pathway_members": 0,
     "families_opposed": 0,
-    "families_with_documented_link": 0,
+    "headline_families_intervention_targets": 0,
+    "headline_records_intervention_targets": 0,
     "identity_guard_hits": 0,
-    "link_targets": 0,
     "nonhuman_chembl_rows_set_aside": 0,
-    "readout_marker_only_records": 0,
-    "records_with_documented_link": 0,
+    "records_incl_pathway_members": 0,
+    "target_kinds": {},
     "targets": 0,
     "wwox_system_observations": 2
    },
    "NEED-T-TYPE-CALCIUM": {
+    "by_target_kind_records_families": {
+     "disease_gene_product": {
+      "families": 0,
+      "records": 0
+     },
+     "effector_constraint": {
+      "families": 0,
+      "records": 0
+     },
+     "intervention_target": {
+      "families": 64,
+      "records": 66
+     },
+     "pathway_member": {
+      "families": 0,
+      "records": 0
+     },
+     "readout_marker": {
+      "families": 0,
+      "records": 0
+     }
+    },
     "cards_citing_need": [
      "EB-ETX-01"
     ],
-    "cells_L3_observed": 1,
+    "cells_L3_observed_case_level_only": 0,
+    "cells_L3_observed_wwox_system": 1,
     "cells_L4_observed": 0,
     "direction": "down",
+    "excluded_records_by_reason": {
+     "placeholder": 1
+    },
     "exploration_only": false,
     "families_consistent": 35,
+    "families_incl_pathway_members": 64,
     "families_opposed": 0,
-    "families_with_documented_link": 65,
+    "headline_families_intervention_targets": 64,
+    "headline_records_intervention_targets": 66,
     "identity_guard_hits": 0,
-    "link_targets": 3,
     "nonhuman_chembl_rows_set_aside": 0,
-    "readout_marker_only_records": 0,
-    "records_with_documented_link": 67,
+    "records_incl_pathway_members": 66,
+    "target_kinds": {
+     "intervention_target": 3
+    },
     "targets": 3,
     "wwox_system_observations": 1
    },
    "NEED-WNT-BETA-CATENIN": {
+    "by_target_kind_records_families": {
+     "disease_gene_product": {
+      "families": 0,
+      "records": 0
+     },
+     "effector_constraint": {
+      "families": 0,
+      "records": 0
+     },
+     "intervention_target": {
+      "families": 3,
+      "records": 3
+     },
+     "pathway_member": {
+      "families": 71,
+      "records": 71
+     },
+     "readout_marker": {
+      "families": 5,
+      "records": 5
+     }
+    },
     "cards_citing_need": [
      "D02_wnt_tankyrase",
      "D01_a51"
     ],
-    "cells_L3_observed": 1,
-    "cells_L4_observed": 1,
+    "cells_L3_observed_case_level_only": 0,
+    "cells_L3_observed_wwox_system": 0,
+    "cells_L4_observed": 0,
     "direction": "uncertain",
+    "excluded_records_by_reason": {
+     "placeholder": 1
+    },
     "exploration_only": true,
     "families_consistent": 0,
+    "families_incl_pathway_members": 74,
     "families_opposed": 0,
-    "families_with_documented_link": 75,
+    "headline_families_intervention_targets": 3,
+    "headline_records_intervention_targets": 3,
     "identity_guard_hits": 0,
-    "link_targets": 4,
     "nonhuman_chembl_rows_set_aside": 0,
-    "readout_marker_only_records": 5,
-    "records_with_documented_link": 75,
+    "records_incl_pathway_members": 74,
+    "target_kinds": {
+     "identity_guard": 1,
+     "intervention_target": 2,
+     "pathway_member": 2,
+     "readout_marker": 3
+    },
     "targets": 8,
     "wwox_system_observations": 2
    },
    "NEED-WWOX-ENDOGENOUS-BOOST": {
+    "by_target_kind_records_families": {
+     "disease_gene_product": {
+      "families": 3,
+      "records": 3
+     },
+     "effector_constraint": {
+      "families": 0,
+      "records": 0
+     },
+     "intervention_target": {
+      "families": 0,
+      "records": 0
+     },
+     "pathway_member": {
+      "families": 0,
+      "records": 0
+     },
+     "readout_marker": {
+      "families": 0,
+      "records": 0
+     }
+    },
     "cards_citing_need": [
      "C03_crispra_boost"
     ],
-    "cells_L3_observed": 0,
+    "cells_L3_observed_case_level_only": 0,
+    "cells_L3_observed_wwox_system": 0,
     "cells_L4_observed": 0,
     "direction": "up",
+    "excluded_records_by_reason": {
+     "placeholder": 1
+    },
     "exploration_only": false,
     "families_consistent": 0,
+    "families_incl_pathway_members": 3,
     "families_opposed": 0,
-    "families_with_documented_link": 4,
+    "headline_families_intervention_targets": 3,
+    "headline_records_intervention_targets": 3,
     "identity_guard_hits": 0,
-    "link_targets": 1,
     "nonhuman_chembl_rows_set_aside": 0,
-    "readout_marker_only_records": 0,
-    "records_with_documented_link": 4,
+    "records_incl_pathway_members": 3,
+    "target_kinds": {
+     "disease_gene_product": 1
+    },
     "targets": 1,
     "wwox_system_observations": 1
    },
    "NEED-WWOX-GENE-ADDITION": {
+    "by_target_kind_records_families": {
+     "disease_gene_product": {
+      "families": 3,
+      "records": 3
+     },
+     "effector_constraint": {
+      "families": 0,
+      "records": 0
+     },
+     "intervention_target": {
+      "families": 0,
+      "records": 0
+     },
+     "pathway_member": {
+      "families": 0,
+      "records": 0
+     },
+     "readout_marker": {
+      "families": 0,
+      "records": 0
+     }
+    },
     "cards_citing_need": [
      "C01_aav9_wwox",
      "C04_aav9_endpoint_families"
     ],
-    "cells_L3_observed": 2,
+    "cells_L3_observed_case_level_only": 0,
+    "cells_L3_observed_wwox_system": 2,
     "cells_L4_observed": 2,
     "direction": "restore",
+    "excluded_records_by_reason": {
+     "placeholder": 1
+    },
     "exploration_only": false,
     "families_consistent": 0,
+    "families_incl_pathway_members": 3,
     "families_opposed": 0,
-    "families_with_documented_link": 4,
+    "headline_families_intervention_targets": 3,
+    "headline_records_intervention_targets": 3,
     "identity_guard_hits": 0,
-    "link_targets": 1,
     "nonhuman_chembl_rows_set_aside": 0,
-    "readout_marker_only_records": 0,
-    "records_with_documented_link": 4,
+    "records_incl_pathway_members": 3,
+    "target_kinds": {
+     "disease_gene_product": 1
+    },
     "targets": 1,
     "wwox_system_observations": 3
    },
    "NEED-WWOX-MISSENSE-PROTEIN-RESCUE": {
+    "by_target_kind_records_families": {
+     "disease_gene_product": {
+      "families": 3,
+      "records": 3
+     },
+     "effector_constraint": {
+      "families": 0,
+      "records": 0
+     },
+     "intervention_target": {
+      "families": 0,
+      "records": 0
+     },
+     "pathway_member": {
+      "families": 42,
+      "records": 42
+     },
+     "readout_marker": {
+      "families": 0,
+      "records": 0
+     }
+    },
     "cards_citing_need": [
      "A01_pba_class",
      "A02_proteasome_inhibitor_class",
@@ -460,73 +1090,150 @@
      "A04_er_proteostasis_regulators",
      "A05_hsp70_axis"
     ],
-    "cells_L3_observed": 2,
+    "cells_L3_observed_case_level_only": 0,
+    "cells_L3_observed_wwox_system": 0,
     "cells_L4_observed": 0,
     "direction": "up",
+    "excluded_records_by_reason": {
+     "placeholder": 1
+    },
     "exploration_only": false,
     "families_consistent": 0,
+    "families_incl_pathway_members": 45,
     "families_opposed": 0,
-    "families_with_documented_link": 46,
+    "headline_families_intervention_targets": 3,
+    "headline_records_intervention_targets": 3,
     "identity_guard_hits": 0,
-    "link_targets": 6,
     "nonhuman_chembl_rows_set_aside": 0,
-    "readout_marker_only_records": 0,
-    "records_with_documented_link": 46,
+    "records_incl_pathway_members": 45,
+    "target_kinds": {
+     "disease_gene_product": 1,
+     "pathway_member": 5
+    },
     "targets": 6,
     "wwox_system_observations": 1
    },
    "NEED-WWOX-PTC-READTHROUGH": {
+    "by_target_kind_records_families": {
+     "disease_gene_product": {
+      "families": 3,
+      "records": 3
+     },
+     "effector_constraint": {
+      "families": 0,
+      "records": 0
+     },
+     "intervention_target": {
+      "families": 0,
+      "records": 0
+     },
+     "pathway_member": {
+      "families": 0,
+      "records": 0
+     },
+     "readout_marker": {
+      "families": 0,
+      "records": 0
+     }
+    },
     "cards_citing_need": [
      "B01_amlexanox",
      "B02_readthrough_class"
     ],
-    "cells_L3_observed": 1,
+    "cells_L3_observed_case_level_only": 0,
+    "cells_L3_observed_wwox_system": 0,
     "cells_L4_observed": 0,
     "direction": "restore",
+    "excluded_records_by_reason": {
+     "placeholder": 1
+    },
     "exploration_only": false,
     "families_consistent": 0,
+    "families_incl_pathway_members": 3,
     "families_opposed": 0,
-    "families_with_documented_link": 4,
+    "headline_families_intervention_targets": 3,
+    "headline_records_intervention_targets": 3,
     "identity_guard_hits": 0,
-    "link_targets": 1,
     "nonhuman_chembl_rows_set_aside": 0,
-    "readout_marker_only_records": 0,
-    "records_with_documented_link": 4,
+    "records_incl_pathway_members": 3,
+    "target_kinds": {
+     "disease_gene_product": 1
+    },
     "targets": 1,
     "wwox_system_observations": 0
    },
    "NEED-WWOX-SPLICE-CORRECTION": {
+    "by_target_kind_records_families": {
+     "disease_gene_product": {
+      "families": 3,
+      "records": 3
+     },
+     "effector_constraint": {
+      "families": 0,
+      "records": 0
+     },
+     "intervention_target": {
+      "families": 0,
+      "records": 0
+     },
+     "pathway_member": {
+      "families": 0,
+      "records": 0
+     },
+     "readout_marker": {
+      "families": 0,
+      "records": 0
+     }
+    },
     "cards_citing_need": [
      "C02_splice_aso"
     ],
-    "cells_L3_observed": 0,
+    "cells_L3_observed_case_level_only": 0,
+    "cells_L3_observed_wwox_system": 0,
     "cells_L4_observed": 0,
     "direction": "restore",
+    "excluded_records_by_reason": {
+     "placeholder": 1
+    },
     "exploration_only": false,
     "families_consistent": 0,
+    "families_incl_pathway_members": 3,
     "families_opposed": 0,
-    "families_with_documented_link": 4,
+    "headline_families_intervention_targets": 3,
+    "headline_records_intervention_targets": 3,
     "identity_guard_hits": 0,
-    "link_targets": 1,
     "nonhuman_chembl_rows_set_aside": 0,
-    "readout_marker_only_records": 0,
-    "records_with_documented_link": 4,
+    "records_incl_pathway_members": 3,
+    "target_kinds": {
+     "disease_gene_product": 1
+    },
     "targets": 1,
     "wwox_system_observations": 1
    }
   }
  },
  "observations": {
-  "axis_cards_not_interventions": 6,
-  "by_scope": {
-   "other_disease_precedent": 26,
-   "wwox_clinical_report": 5,
-   "wwox_experimental": 12
+  "assertions_listed_in_pertinence_table": 51,
+  "assertions_not_assessed_for_pertinence_not_counted": 16,
+  "axis_cards_not_interventions": 3,
+  "card_interventions": 27,
+  "data_assertions_in_intervention_cards": 67,
+  "listed_by_evidence_kind": {
+   "case_report_wwox_clinical": 6,
+   "label_statement": 1,
+   "readout_in_wwox_system": 15,
+   "readout_other_disease": 19,
+   "safety_signal": 2,
+   "target_engagement_assay": 9
   },
-  "card_interventions": 24,
-  "data_assertions_with_readout_change_on_cited_needs": 43,
-  "note": "an assertion counts once however many needs cite its card; L3/L4 cells count (row, need) pairs",
-  "of_which_wwox_system_opposing_disease_change": 13
+  "listed_by_sign": {
+   "benefit": 36,
+   "harm": 3,
+   "mixed": 3,
+   "null": 9,
+   "partial_benefit": 1
+  },
+  "note": "an assertion is counted per (assertion, need) row of the pertinence table; L3/L4 cells count (row, need) pairs"
  },
  "priorities": {
   "all_dispositions_listed": [
@@ -534,38 +1241,64 @@
    "exploration_candidate",
    "incomplete_or_failed_query",
    "insufficient_data",
-   "not_relevant",
+   "no_catalogue_link_found",
    "opposite_mechanism",
    "source_queried_without_result"
   ],
-  "by_disposition": {
-   "consistent_mechanism_candidate": 201,
-   "exploration_candidate": 393,
-   "insufficient_data": 209,
-   "not_relevant": 245,
-   "opposite_mechanism": 4,
+  "by_disposition_cells": {
+   "consistent_mechanism_candidate": 125,
+   "exploration_candidate": 211,
+   "insufficient_data": 327,
+   "no_catalogue_link_found": 7,
+   "opposite_mechanism": 2,
+   "source_queried_without_result": 2
+  },
+  "by_disposition_distinct_families_or_rows": {
+   "consistent_mechanism_candidate": 103,
+   "exploration_candidate": 205,
+   "insufficient_data": 290,
+   "no_catalogue_link_found": 6,
+   "opposite_mechanism": 2,
    "source_queried_without_result": 1
   },
-  "exploration_flagged": 604,
+  "exploration_flagged": 332,
   "pairs_not_prioritised": {
-   "not_prioritised_no_card_no_coherence_no_approval_or_access": 1490
+   "not_prioritised_no_card_no_coherence_no_approval_or_access": 840
   },
-  "records": 1053
+  "records": 674
  },
  "schema": "legend.wwox.coverage/1",
+ "source_state_vocabulary": "OK | STALE_EXPORT | STALE_AFTER_FAILED_REFRESH | PARTIAL | FAILED | INCOMPLETE | NOT_FETCHED; hard problems (FAILED, INCOMPLETE, NOT_FETCHED) of ANY source turn dispositions into incomplete_or_failed_query; stale states add a caveat to every absence-type result",
  "source_states": {
-  "chembl": "OK",
-  "dgidb": "OK",
-  "dgidb_note": "export of 2024-06-10; current service coverage not ingested",
-  "dsld": "OK",
-  "matrix": "OK",
-  "openfda_ndc": "OK",
-  "unichem": "OK"
+  "chembl": {
+   "detail": null,
+   "state": "OK"
+  },
+  "dgidb": {
+   "detail": "DGIdb TSV export of Mon, 10 Jun 2024 16:04:52 GMT (claims from ChEMBL 33); the live service reports newer source versions; current coverage not ingested",
+   "state": "STALE_EXPORT"
+  },
+  "dsld": {
+   "detail": "981 of 4697 bulk-list names probed (name-only evidence); affects access categories only",
+   "state": "PARTIAL"
+  },
+  "matrix": {
+   "detail": null,
+   "state": "OK"
+  },
+  "openfda_ndc": {
+   "detail": null,
+   "state": "OK"
+  },
+  "unichem": {
+   "detail": null,
+   "state": "OK"
+  }
  },
  "units": {
   "catalogue_records": 44211,
   "chembl_families": 16475,
-  "coverage_unit": "compound families (each counted once per need); card interventions are separate rows",
+  "coverage_unit": "compound families (each counted once per need); card interventions and tool subjects are separate rows",
   "families": 40753,
   "family_rule": "ChEMBL parent link or identical InChIKey connectivity block; source-only records stay singletons; nothing merged on name",
   "records_are": "source-level substance records, not distinct drugs",

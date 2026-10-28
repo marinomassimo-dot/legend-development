@@ -52,10 +52,10 @@ DISPOSITIONS = {
     "consistent_mechanism_candidate": "direction-consistent action on an intervention target of a direction-evaluable need (a mechanism candidate, not a treatment)",
     "exploration_candidate": "a documented link to a need whose direction is unresolved (or an action with no stated sign): exploration only",
     "opposite_mechanism": "the stated action opposes the need's direction (and no consistent action is catalogued)",
-    "not_relevant": "identity resolved and targets catalogued, none of them a target of this need",
+    "no_catalogue_link_found": "identity resolved and targets catalogued, none an intervention target of this need (a statement about the catalogue and its possibly stale sources, not about relevance)",
     "insufficient_data": "a link or an intervention exists but the sign, the identity or the observation needed to decide is missing",
     "source_queried_without_result": "the sources were queried and returned no target or mechanism row for this record",
-    "incomplete_or_failed_query": "a source is not in state OK (failed, truncated, stale or never fetched): this is NOT a negative",
+    "incomplete_or_failed_query": "a source is FAILED, INCOMPLETE or NOT_FETCHED: this is NOT a negative (a stale source adds a caveat instead)",
 }
 
 
@@ -97,7 +97,7 @@ def load_cards(dr: Path = DR) -> dict[str, dict]:
                             "source": a.get("source"), "receipt": a.get("receipt"), "endpoint": a.get("endpoint")})
             out[stem] = {"card_id": stem, "dir": sub, "candidate": p.get("candidate", {}), "route": p.get("route"), "assertions": ass,
                          "endpoint_pursued": (c.get("p4_fields") or {}).get("endpoint_pursued"), "next_step": c.get("next_step"),
-                         "limits": c.get("limits", []), "is_axis": str(p.get("candidate", {}).get("id", "")).startswith("AXIS:") or "-AX-" in stem}
+                         "limits": c.get("limits", []), "is_axis": str(p.get("candidate", {}).get("id", "")).startswith("AXIS:")}
     return out
 
 
@@ -114,35 +114,77 @@ def card_attachments(card_links: Path, modalities: Path) -> tuple[dict, dict]:
     return att, mods
 
 
+# ----------------------------------------------------------------------------- inputs
+PERT_COLS = ("card_id", "assertion_id", "need_id", "subject", "evidence_kind", "sign", "counts_L3", "counts_L4", "flags", "basis")
+READOUT_KINDS = ("readout_in_wwox_system", "case_report_wwox_clinical")
+HARD_STATES = {"FAILED", "INCOMPLETE", "NOT_FETCHED"}
+STALE_STATES = {"STALE_EXPORT", "STALE_AFTER_FAILED_REFRESH"}
+TOOL_SUBJECTS = {"tool_no_catalogue_identity", "genetic_precedent_not_a_compound"}
+
+
+def load_pertinence(path: Path) -> list[dict]:
+    p = Path(path)
+    if not p.exists():
+        return []
+    with open(p, encoding="utf-8", newline="") as fh:
+        return [r for r in csv.DictReader(fh, delimiter="\t")]
+
+
+def effective_states(cstats: dict) -> dict:
+    """Source states with `stale` as a state of its own. The raw catalogue state OK stays OK unless the evidence says old export / partial."""
+    out = {}
+    for k, v in cstats["sources"].items():
+        out[k] = {"state": v.get("state"), "detail": None}
+    age = cstats.get("dgidb_age") or {}
+    lm = ((age.get("export_in_use") or {}).get("last_modified")) or ""
+    m = re.search(r"(\d{4})", lm)
+    gen = (cstats.get("generated_utc") or "")[:4]
+    if "dgidb" in out and out["dgidb"]["state"] == "OK" and m and gen.isdigit() and int(gen) - int(m.group(1)) >= 1:
+        out["dgidb"] = {"state": "STALE_EXPORT", "detail": f"DGIdb TSV export of {lm.strip()} (claims from ChEMBL 33); the live service reports newer source versions; current coverage not ingested"}
+    d = cstats.get("dsld") or {}
+    if out.get("dsld", {}).get("state") == "OK" and d.get("bulk_list_probed", 0) < d.get("bulk_list_planned_names", 0):
+        out["dsld"] = {"state": "PARTIAL", "detail": f"{d.get('bulk_list_probed')} of {d.get('bulk_list_planned_names')} bulk-list names probed (name-only evidence); affects access categories only"}
+    return out
+
+
 # ----------------------------------------------------------------------------- build
-def build(needs_path=rs.DEFAULT_NEEDS, catalog_dir: Path = cc.DEFAULT_DIR, dr: Path = DR, roles_path=rs.DEFAULT_ROLES) -> dict:
+def build(needs_path=rs.DEFAULT_NEEDS, catalog_dir: Path = cc.DEFAULT_DIR, dr: Path = DR, roles_path=rs.DEFAULT_ROLES,
+          artefacts_path=rs.DEFAULT_ARTEFACTS, pertinence_path=None) -> dict:
+    pertinence_path = pertinence_path or (Path(roles_path).parent / "assertion_pertinence.tsv")
     nd = rs.load_needs(needs_path)
     needs = nd["needs"]
     entries = cc.load(catalog_dir / "catalog.jsonl.gz")
     cstats = json.loads((catalog_dir / "catalog_stats.json").read_text())
-    idx, roles = rs.Index(entries), rs.load_roles(roles_path)
+    arte = rs.load_artefacts(artefacts_path)
+    idx, roles = rs.Index(entries, arte), rs.load_roles(roles_path)
     cards = load_cards(dr)
     att, mods = card_attachments(catalog_dir / "card_links.json", catalog_dir / "non_molecule_modalities.tsv")
+    pert = load_pertinence(pertinence_path)
     need_ids = {n["id"] for n in needs}
     stale_roles = sorted(f"{n}/{s}" for (n, s) in roles if n not in need_ids or s not in {t["symbol"].upper() for x in needs if x["id"] == n for t in x["targets"]})
-    src = {k: v for k, v in cstats["sources"].items()}
-    src_problem = sorted(k for k in ("chembl", "dgidb") if src.get(k, {}).get("state") != "OK")
+    eff = effective_states(cstats)
+    hard = sorted(k for k, v in eff.items() if v["state"] in HARD_STATES)
+    stale = sorted(k for k, v in eff.items() if v["state"] in STALE_STATES)
     measure_next = json.loads((dr / "join/measure_next.json").read_text()) if (dr / "join/measure_next.json").exists() else []
 
-    # need -> cards
     need_cards = {n["id"]: [c for c in (_stem(r) for r in n["sources"].get("cards", [])) if c in cards] for n in needs}
     missing_cards = sorted({_stem(r) for n in needs for r in n["sources"].get("cards", [])} - set(cards))
+    ass_index = {(cid, a["id"]): a for cid, c in cards.items() for a in c["assertions"]}
+    stale_pert = sorted(f"{r['card_id']}/{r['assertion_id']}/{r['need_id']}" for r in pert
+                        if (r["card_id"], r["assertion_id"]) not in ass_index or r["need_id"] not in need_ids
+                        or (r["subject"].startswith("CHEMBL") and f"CAT:{r['subject']}" not in idx.by_id))
+    pert = [r for r in pert if f"{r['card_id']}/{r['assertion_id']}/{r['need_id']}" not in stale_pert]
 
-    # associations
     per_need = {n["id"]: rs.associations_for_need(n, idx, roles) for n in needs}
     assoc_all = [a for r in per_need.values() for a in r["associations"]]
+    counted = lambda a: not a["excluded_from_counts"] and a["target_kind"] in rs.LINK_KINDS           # headline
+    pathway = lambda a: not a["excluded_from_counts"] and a["target_kind"] in rs.PATHWAY_KINDS
 
-    # rows: families touched by an association or a card attachment; card interventions without identity
     rows: dict[str, dict] = {}
 
     def row(fid: str) -> dict:
         if fid not in rows:
-            mem = idx.members.get(fid.replace("FAM:", "FAM:"), [])
+            mem = idx.members.get(fid, [])
             rep = sorted(mem, key=lambda e: (not (e["relations"] or {}).get("is_parent", False), e["id"]))[0] if mem else None
             rows[fid] = {"row_id": fid, "kind": "molecule_family", "name": rep["name"] if rep else None, "representative": rep["id"] if rep else None,
                          "records": len(mem), "origin": sorted({e["origin"] for e in mem}), "cards": [], "modality": sorted({e["modality"] for e in mem}),
@@ -154,88 +196,101 @@ def build(needs_path=rs.DEFAULT_NEEDS, catalog_dir: Path = cc.DEFAULT_DIR, dr: P
 
     cell_assoc = collections.defaultdict(list)
     for a in assoc_all:
-        cell_assoc[(a["family"], a["need"])].append(a)
-        row(a["family"])
-    card_rows = {}
+        if counted(a) or pathway(a):
+            cell_assoc[(a["family"], a["need"])].append(a)
+            row(a["family"])
+
+    # card rows: only DECLARED identities (identity / named_member) attach a card to a family. A mention in the card text never does.
+    card_rows: dict[str, list] = {}
     for cid, c in sorted(cards.items()):
         if c["is_axis"]:
             continue
-        links = [l for l in att.get(cid, []) if l["role"] in ("identity", "named_member", "mentioned_in_text")]
-        decl = [l for l in links if l["role"] in ("identity", "named_member")]
-        use = decl or [l for l in links]  # declarations win; mentions only when nothing is declared
-        if use and cid not in mods:
+        decl = [l for l in att.get(cid, []) if l["role"] in ("identity", "named_member")]
+        if decl and cid not in mods:
             card_rows[cid] = []
-            for l in use:
+            for l in decl:
                 fid = idx.family[l["catalogue_id"]]
                 row(fid)["cards"].append({"card_id": cid, "attachment": l["role"], "rule": l["rule"]})
                 card_rows[cid].append((fid, l["role"]))
         else:
             rid = "INT:" + cid
             rows[rid] = {"row_id": rid, "kind": "non_molecule_intervention" if cid in mods else "intervention_without_catalogue_identity",
-                         "name": c["candidate"].get("name"), "modality": mods.get(cid, "class_level_or_unmatched"),
+                         "name": c["candidate"].get("name"), "modality": mods.get(cid, "class_level_or_no_declared_identity"),
                          "cards": [{"card_id": cid, "attachment": "own_identity", "rule": "the card is the intervention"}]}
             card_rows[cid] = [(rid, "own_identity")]
 
-    # cells
+    # observations: one record per (assertion, need) listed in assertion_pertinence.tsv, attached to its SUBJECT
+    obs_by_cell = collections.defaultdict(list)
+    for r in pert:
+        cid, aid, nid = r["card_id"], r["assertion_id"], r["need_id"]
+        a = ass_index[(cid, aid)]
+        subj = r["subject"]
+        targets_ = []
+        if subj == "card":
+            targets_ = card_rows.get(cid, [])
+        elif subj.startswith("CHEMBL"):
+            fid = idx.family["CAT:" + subj]
+            row(fid)["cards"].append({"card_id": cid, "attachment": "assertion_subject", "rule": "per-assertion subject in assertion_pertinence.tsv"}) if not any(x["card_id"] == cid and x["attachment"] == "assertion_subject" for x in rows[fid]["cards"]) else None
+            targets_ = [(fid, "assertion_subject")]
+        else:
+            rid = f"INT:{cid}:tool"
+            rows.setdefault(rid, {"row_id": rid, "kind": "tool_compound_or_genetic_precedent_not_in_catalogue", "name": f"{cards[cid]['candidate'].get('name')} [tool or genetic subject]",
+                                  "modality": subj, "cards": [{"card_id": cid, "attachment": "tool_subject", "rule": "assertion subject has no catalogue identity"}]})
+            targets_ = [(rid, "tool_subject")]
+        for (rid, attach) in targets_:
+            obs_by_cell[(rid, nid)].append(dict(a, card_id=cid, attachment=attach, kind=r["evidence_kind"], sign=r["sign"], counts_L3=r["counts_L3"] == "yes",
+                                               counts_L4=r["counts_L4"] == "yes", flags=r["flags"], pert_basis=r["basis"]))
+    # a card-cited need gets a cell for the card's own row even when no assertion is listed (so 'none in cards' is visible)
+    cited_cells = {(rid, n) for cid, rl in card_rows.items() for (rid, _a) in rl for n, cs in need_cards.items() if cid in cs}
+
     cells = {}
     need_by = {n["id"]: n for n in needs}
-
-    def obs_for(rid, nid):
-        out = []
-        for cid, rl in card_rows.items():
-            if nid not in [n for n, cs in need_cards.items() if cid in cs]:
-                continue
-            for (r, attach) in rl:
-                if r == rid:
-                    for a in cards[cid]["assertions"]:
-                        out.append(dict(a, card_id=cid, attachment=attach))
-        return out
-
-    for rid, r in rows.items():
+    stale_caveat = [f"{k}: {eff[k]['detail']}" for k in stale if eff[k].get("detail")]
+    for rid in sorted(rows):
+        r = rows[rid]
         for nid, need in need_by.items():
             assoc = cell_assoc.get((rid, nid), [])
-            obs = obs_for(rid, nid)
-            if not assoc and not obs and not (r["kind"] != "molecule_family" and any(rid == x[0] for cid in card_rows for x in card_rows[cid] if nid in [n for n, cs in need_cards.items() if cid in cs])):
+            obs = obs_by_cell.get((rid, nid), [])
+            if not assoc and not obs and (rid, nid) not in cited_cells:
                 continue
-            link = [a for a in assoc if a["target_kind"] in rs.LINK_KINDS]
-            marker = [a for a in assoc if a["target_kind"] not in rs.LINK_KINDS]
+            link = [a for a in assoc if counted(a)]
+            pw = [a for a in assoc if pathway(a)]
             cons = [a for a in link if a["consistency"] == "consistent"]
             opp = [a for a in link if a["consistency"] == "opposed"]
             no_id = r["kind"] != "molecule_family"
+            nd_dir = rs.need_direction(need)
             if no_id:
-                L1 = {"state": "not_evaluable", "why": "no catalogue identity (non-molecule modality or class-level card): not zero, not a negative"}
+                L1 = {"state": "not_evaluable", "why": "no catalogue identity (non-molecule modality, class-level card or tool/genetic subject): not zero, not a negative"}
                 L2 = {"state": "not_evaluable", "why": L1["why"]}
             else:
-                L1 = {"state": "documented" if link else ("source_incomplete" if src_problem else "none_found"),
-                      "targets": sorted({a["target"] for a in link}), "link_sources": sorted({a["link_source"] for a in link}),
-                      "associations": len(link), "readout_marker_only_links": len(marker) if not link else 0}
-                if L1["state"] == "none_found":
-                    L1["why"] = "ChEMBL mechanisms and DGIdb queried (both state OK); no row on this need's link targets"
-                if nd_dir := rs.need_direction(need_by[nid]):
-                    if nd_dir in ("uncertain", "modulate"):
-                        L2 = {"state": "not_evaluable", "why": "need direction is 'uncertain': coherence cannot be evaluated; exploration only",
-                              "actions_present": sorted({a["action_on_target"] for a in link})}
-                    else:
-                        L2 = {"state": "coherent" if cons else ("opposed" if opp else ("direction_unresolved" if link else "none")),
-                              "consistent_associations": len(cons), "opposed_associations": len(opp),
-                              "unresolved_associations": len([a for a in link if a["consistency"] in ("direction_unresolved", "not_evaluable")])}
-            decl_obs = [o for o in obs if o["epistemic_status"] == "DATO"]
-            changed = [o for o in decl_obs if o["direction"] in ("INCREASE", "DECREASE")]
-            nulls = [o for o in decl_obs if o["direction"] == "NO_CHANGE"]
-            L3 = {"state": "observed" if changed else ("measured_null_only" if nulls else ("inference_only" if obs else "none_in_cards")),
-                  "assertions": len(changed), "measured_null_assertions": len(nulls), "inference_assertions": len([o for o in obs if o["epistemic_status"] != "DATO"]),
-                  "by_scope": dict(collections.Counter(o["scope"] for o in changed)), "cards": sorted({o["card_id"] for o in obs}),
-                  "assertion_ids": sorted(o["id"] for o in changed),
-                  "pertinence": "card-level: the card is cited by the need; endpoint-level pertinence not checked",
-                  "absence_note": "none_in_cards is not a negative: cards cover a few dozen interventions" if not obs else None}
-            rec = [o for o in changed if o["scope"] in ("wwox_experimental", "wwox_clinical_report") and o["comparison"] == "OPPOSES_DISEASE_CHANGE"]
-            L4 = {"state": "observed" if rec else "none_in_record", "assertions": len(rec), "by_scope": dict(collections.Counter(o["scope"] for o in rec)),
-                  "assertion_ids": sorted(o["id"] for o in rec), "via_class_card": any(o["attachment"] != "identity" and o["attachment"] != "own_identity" for o in rec),
-                  "definition": "WWOX-system assertion whose bridge comparison is OPPOSES_DISEASE_CHANGE on target, endpoint and context: a technical comparison, not efficacy or safety"}
+                if link:
+                    st = "documented"
+                elif hard:
+                    st = "source_incomplete"
+                elif pw:
+                    st = "pathway_member_only"
+                else:
+                    st = "none_found"
+                L1 = {"state": st, "targets": sorted({a["target"] for a in link}), "target_kinds": sorted({a["target_kind"] for a in link}),
+                      "link_sources": sorted({a["link_source"] for a in link}), "associations": len(link),
+                      "pathway_member_targets_listed_apart": sorted({a["target"] for a in pw}) if not link else sorted({a["target"] for a in pw})}
+                if st in ("none_found", "pathway_member_only"):
+                    L1["why"] = "ChEMBL mechanisms and DGIdb queried; no row on this need's intervention targets"
+                    if stale_caveat:
+                        L1["source_caveat_stale"] = stale_caveat
+                if nd_dir in ("uncertain", "modulate"):
+                    L2 = {"state": "not_evaluable", "why": "need direction is 'uncertain': coherence cannot be evaluated; exploration only",
+                          "actions_present": sorted({a["action_on_target"] for a in link})}
+                else:
+                    L2 = {"state": "coherent" if cons else ("opposed" if opp else ("direction_unresolved" if link else "none")),
+                          "consistent_associations": len(cons), "opposed_associations": len(opp),
+                          "unresolved_associations": len([a for a in link if a["consistency"] in ("direction_unresolved", "not_evaluable")]),
+                          "certainty_qualifiers": sorted({a["certainty_qualifier"] for a in cons + opp if a.get("certainty_qualifier")})}
+            L3, L4 = observation_levels(obs)
             cells[(rid, nid)] = {"row_id": rid, "need": nid, "L1_documented_link": L1, "L2_mechanistic_coherence": L2, "L3_observed_effect": L3,
-                                 "L4_observed_recovery_in_wwox_system": L4, "exploration_only": rs.need_direction(need_by[nid]) in ("uncertain", "modulate")}
+                                 "L4_observed_recovery_in_wwox_system": L4, "exploration_only": nd_dir in ("uncertain", "modulate")}
 
-    # possible duplicates: source-only rows whose normalised name equals a record of another family
+    # possible duplicates and name-prefix hints
     byname = collections.defaultdict(set)
     for e in entries:
         for nm in [e["name"]] + e["synonyms"][:5]:
@@ -246,9 +301,7 @@ def build(needs_path=rs.DEFAULT_NEEDS, catalog_dir: Path = cc.DEFAULT_DIR, dr: P
             others = sorted(byname.get(cc._norm(r["name"]), set()) - {rid})
             r["possible_duplicate_families_by_name_not_merged"] = others[:6]
             r["n_possible_duplicates"] = len(others)
-            r["name_is_source_artifact"] = r["name"].strip().lower() in ("null", "none", "unknown", "")
-
-    # name-prefix siblings (salt/form records of "the same substance" that are separate families): a HINT for review, never evidence, never merged
+            r["name_is_source_artifact"] = r["name"].strip().lower() in rs.PLACEHOLDER_NAMES
     for (rid, nid), c in cells.items():
         r = rows[rid]
         if r["kind"] == "molecule_family" and c["L1_documented_link"]["state"] != "documented" and r["name"] and not r.get("name_is_source_artifact"):
@@ -257,80 +310,131 @@ def build(needs_path=rs.DEFAULT_NEEDS, catalog_dir: Path = cc.DEFAULT_DIR, dr: P
                          and (o, nid) in cells and cells[(o, nid)]["L1_documented_link"]["state"] == "documented")
             if sib:
                 c["L1_documented_link"]["name_prefix_sibling_families_with_link_HINT_not_evidence"] = sib[:5]
-    priorities = make_priorities(rows, cells, need_by, cards, card_rows, need_cards, src, src_problem, measure_next, idx)
-    summary = make_summary(entries, idx, rows, cells, per_need, priorities, need_by, cards, card_rows, need_cards, src, cstats, stale_roles, missing_cards, assoc_all)
-    matrix = {"schema": SCHEMA, "generated_from": inputs_digest(needs_path, catalog_dir, dr, roles_path),
-              "levels": {"L1_documented_link": "catalogue link to a target of the need", "L2_mechanistic_coherence": "direction-consistent action, only for direction-evaluable needs with an explicit role row",
-                         "L3_observed_effect": "card assertion reports a readout change (card-level pertinence)", "L4_observed_recovery_in_wwox_system": "WWOX-system assertion with bridge comparison OPPOSES_DISEASE_CHANGE"},
-              "never_summed": True, "unit": "rows are compound FAMILIES or card interventions; a cell counts once per (row, need)",
+
+    priorities = make_priorities(rows, cells, need_by, cards, card_rows, need_cards, eff, hard, stale, measure_next, idx)
+    summary = make_summary(entries, idx, rows, cells, per_need, priorities, need_by, cards, need_cards, eff, hard, stale, cstats, stale_roles, stale_pert,
+                           missing_cards, assoc_all, pert, ass_index, counted, pathway)
+    matrix = {"schema": SCHEMA, "generated_from": inputs_digest(needs_path, catalog_dir, dr, roles_path, artefacts_path, pertinence_path),
+              "levels": {"L1_documented_link": "catalogue link to an INTERVENTION target (or disease gene product) of the need; pathway members, effector constraints and readout markers are not L1",
+                         "L2_mechanistic_coherence": "direction-consistent action, only for direction-evaluable needs with an explicit role row; certainty qualifiers carried",
+                         "L3_observed_effect": "assertion on THIS compound, endpoint listed as pertinent to THIS need (assertion_pertinence.tsv), a readout in a WWOX system or a WWOX clinical case report; sign carried; other-disease precedents, target-engagement assays and safety signals are separate states",
+                         "L4_observed_recovery_in_wwox_system": "L3 assertion with bridge comparison OPPOSES_DISEASE_CHANGE, reading depth known, high-dose arm only; experimental vs case level kept apart"},
+              "never_summed": True, "unit": "rows are compound FAMILIES, card interventions, or tool/genetic subjects; a cell counts once per (row, need)",
               "need_directions": {n["id"]: rs.need_direction(n) for n in needs},
               "exploration_needs": sorted(n["id"] for n in needs if rs.need_direction(n) in ("uncertain", "modulate")),
+              "source_states": {k: v for k, v in eff.items()},
               "rows": [rows[k] for k in sorted(rows)], "cells": [cells[k] for k in sorted(cells)]}
     return {"matrix": matrix, "priorities": priorities, "summary": summary, "associations": assoc_all}
 
 
-def inputs_digest(needs_path, catalog_dir, dr, roles_path) -> dict:
+def observation_levels(obs: list[dict]) -> tuple[dict, dict]:
+    wx = [o for o in obs if o["kind"] == "readout_in_wwox_system" and o["counts_L3"]]
+    cl = [o for o in obs if o["kind"] == "case_report_wwox_clinical" and o["counts_L3"]]
+    oth = [o for o in obs if o["kind"] == "readout_other_disease"]
+    te = [o for o in obs if o["kind"] == "target_engagement_assay"]
+    saf = [o for o in obs if o["kind"] == "safety_signal"]
+    lab = [o for o in obs if o["kind"] == "label_statement"]
+    sg = lambda L: dict(collections.Counter(o["sign"] for o in L))
+    nonnull = lambda L: [o for o in L if o["sign"] != "null"]
+    if wx and nonnull(wx):
+        st = "observed_wwox_system"
+    elif cl and nonnull(cl):
+        st = "observed_case_level_only"
+    elif wx or cl:
+        st = "measured_null_only"
+    elif oth:
+        st = "precedent_other_disease_only"
+    elif te:
+        st = "target_engagement_only"
+    elif saf:
+        st = "safety_signal_only"
+    else:
+        st = "none_in_cards"
+    L3 = {"state": st, "signs_wwox_system_readouts": sg(wx), "signs_case_reports": sg(cl), "signs_other_disease_precedent_not_observed_here": sg(oth),
+          "target_engagement_assays_not_readouts": len(te), "safety_signals_kept_apart": sg(saf), "label_statements_not_observations": len(lab),
+          "assertion_ids": sorted({o["id"] for o in wx + cl}), "cards": sorted({o["card_id"] for o in obs}),
+          "flags": sorted({f for o in wx + cl for f in o["flags"].split(";") if f}),
+          "pertinence": "endpoint-level: each assertion is listed for this need in assertion_pertinence.tsv; unlisted assertions are not counted",
+          "harm_and_benefit_are_not_pooled": True,
+          "absence_note": "none_in_cards is not a negative: cards cover a few dozen interventions" if st == "none_in_cards" and not obs else None}
+    rec = [o for o in wx + cl if o["counts_L4"] and o["comparison"] == "OPPOSES_DISEASE_CHANGE" and o["reading_depth"] != "UNKNOWN"]
+    exp = [o for o in rec if o["kind"] == "readout_in_wwox_system"]
+    case = [o for o in rec if o["kind"] == "case_report_wwox_clinical"]
+    L4 = {"state": "observed_experimental" if exp else ("observed_case_level" if case else "none_in_record"),
+          "assertion_ids": sorted(o["id"] for o in rec), "experimental_assertions": len(exp), "case_level_assertions": len(case),
+          "definition": "WWOX-system assertion judged by the bridge as opposing the disease change, endpoint pertinent to the need, reading depth known, high-dose arm only for dose-arm designs; a technical comparison, not efficacy or safety. case_level = uncontrolled clinical report"}
+    return L3, L4
+
+
+def inputs_digest(needs_path, catalog_dir, dr, roles_path, artefacts_path, pertinence_path) -> dict:
     def h(p):
         p = Path(p)
         return hashlib.sha256(p.read_bytes()).hexdigest()[:16] if p.exists() else "ABSENT"
     cards = hashlib.sha256(b"".join(f.read_bytes() for sub in ("cards", "cards_early") for f in sorted((dr / sub).glob("*.json")))).hexdigest()[:16]
     return {"needs.json": h(needs_path), "catalog.jsonl.gz": h(catalog_dir / "catalog.jsonl.gz"), "catalog_stats.json": h(catalog_dir / "catalog_stats.json"),
-            "card_links.json": h(catalog_dir / "card_links.json"), "target_roles.tsv": h(roles_path), "cards_and_packets": cards, "measure_next.json": h(dr / "join/measure_next.json")}
+            "card_links.json": h(catalog_dir / "card_links.json"), "target_roles.tsv": h(roles_path), "source_artefacts.tsv": h(artefacts_path),
+            "assertion_pertinence.tsv": h(pertinence_path), "cards_and_packets": cards, "measure_next.json": h(dr / "join/measure_next.json")}
 
 
 # ----------------------------------------------------------------------------- priorities
-def make_priorities(rows, cells, need_by, cards, card_rows, need_cards, src, src_problem, measure_next, idx) -> dict:
+def make_priorities(rows, cells, need_by, cards, card_rows, need_cards, eff, hard, stale, measure_next, idx) -> dict:
     out, skipped = [], collections.Counter()
+    stale_note = [f"{k}: stale ({eff[k]['detail']})" for k in stale if eff[k].get("detail")]
     for (rid, nid), c in sorted(cells.items()):
         r, need = rows[rid], need_by[nid]
         card_ids = sorted({x["card_id"] for x in r["cards"]})
-        interesting = bool(card_ids) or c["L2_mechanistic_coherence"]["state"] == "coherent" or (r["kind"] == "molecule_family" and
-                                                                                                     ("approved_any_source" in r["status_class"] or {"prescription", "OTC", "supplement"} & set(r["access_categories"])))
-        if not interesting:
-            skipped["not_prioritised_no_card_no_coherence_no_approval_or_access"] += 1
+        interesting = bool(card_ids) or c["L2_mechanistic_coherence"]["state"] == "coherent" or (
+            r["kind"] == "molecule_family" and ("approved_any_source" in r["status_class"] or {"prescription", "OTC", "supplement"} & set(r["access_categories"])))
+        if not interesting or r.get("name_is_source_artifact"):
+            skipped["not_prioritised_no_card_no_coherence_no_approval_or_access" if not r.get("name_is_source_artifact") else "placeholder_record"] += 1
             continue
         L1, L2, L3, L4 = (c[k] for k in ("L1_documented_link", "L2_mechanistic_coherence", "L3_observed_effect", "L4_observed_recovery_in_wwox_system"))
         nd = rs.need_direction(need)
-        if src_problem:
-            disp, why = "incomplete_or_failed_query", f"catalogue source(s) {src_problem} not in state OK"
+        qual = L2.get("certainty_qualifiers", []) if isinstance(L2, dict) else []
+        if hard:
+            disp, why = "incomplete_or_failed_query", f"catalogue source(s) {hard} in a failed, truncated or never-fetched state"
         elif r["kind"] != "molecule_family":
-            disp, why = "insufficient_data", "no catalogue identity (non-molecule modality or class-level card): links to targets cannot be evaluated"
+            disp, why = "insufficient_data", "no catalogue identity (non-molecule modality, class-level card or tool subject): links to targets cannot be evaluated"
         elif L1["state"] == "documented":
             if L2.get("state") == "coherent":
-                disp, why = "consistent_mechanism_candidate", "direction-consistent action on an intervention target with explicit coupling"
+                disp, why = "consistent_mechanism_candidate", "direction-consistent action on an intervention target with explicit coupling" + (f" [qualifier: {'; '.join(qual)}]" if qual else "")
             elif L2.get("state") == "opposed":
-                disp, why = "opposite_mechanism", "the stated action opposes the need's direction; no consistent action catalogued"
+                disp, why = "opposite_mechanism", "the stated action opposes the need's direction; no consistent action catalogued" + (f" [qualifier: {'; '.join(qual)}]" if qual else "")
             elif nd in ("uncertain", "modulate"):
                 disp, why = "exploration_candidate", EXPLORATION_NOTE
             else:
-                disp, why = "insufficient_data", "link documented but no stated up/down action or no coupling row"
+                disp, why = "insufficient_data", "link documented but no stated up/down action or the role row is unresolved (inferred, not measured)"
+        elif L1["state"] == "pathway_member_only":
+            disp, why = "insufficient_data", "only pathway-member links (not intervention targets): the catalogue offers no direct point of action"
         elif r["target_rows_total"] == 0:
             disp, why = "source_queried_without_result", "ChEMBL mechanism and DGIdb queried; no target row for any record of this family"
-            if L1.get("name_prefix_sibling_families_with_link_HINT_not_evidence"):
-                why += "; other records with the same leading name word do link (salt/form families, separate identities, review hint only)"
         else:
-            disp, why = "not_relevant", "by catalogued targets only: this family has target rows and none is a link target of this need"
+            disp, why = "no_catalogue_link_found", "by catalogued targets only: this family has target rows and none is an intervention target of this need"
             if card_ids:
                 why += "; a card cites it for this need through a mechanism the catalogue does not describe as a target (the card's rationale is not overridden)"
-            if L1.get("name_prefix_sibling_families_with_link_HINT_not_evidence"):
-                why += "; other records with the same leading name word do link (salt/form families, separate identities, review hint only)"
+        if disp in ("no_catalogue_link_found", "source_queried_without_result") and L1.get("name_prefix_sibling_families_with_link_HINT_not_evidence"):
+            why += "; other records with the same leading name word do link (salt/form families, separate identities, review hint only)"
+        if disp in ("no_catalogue_link_found", "source_queried_without_result", "insufficient_data") and stale_note and r["kind"] == "molecule_family":
+            why += "; absence holds for a STALE source: " + "; ".join(stale_note)
         crs = [cards[c_] for c_ in card_ids]
-        assertions = [a for c_ in crs for a in c_["assertions"]]
-        independent = len({a["source"] for a in assertions if a["source"]})
-        mn = [m for m in measure_next]  # pointer only; per-card query ids are not recorded in measure_next
+        sel = [a for c_ in crs for a in c_["assertions"]]
         out.append({
             "row_id": rid, "name": r["name"], "kind": r["kind"], "need": nid, "need_direction": nd,
             "exploration_only": nd in ("uncertain", "modulate"), "disposition": disp, "disposition_reason": why,
+            "source_caveats": stale_note,
             "levels": {k: c[k].get("state") for k in ("L1_documented_link", "L2_mechanistic_coherence", "L3_observed_effect", "L4_observed_recovery_in_wwox_system")},
+            "certainty_qualifiers": qual,
             "criteria": {
                 "wwox_relevance": {"need_evidence_scopes": need["evidence_scope"], "n_wwox_system_observations_in_need": sum(1 for o in need["observed"] if o["evidence_scope"] == "WWOX_EXPERIMENT_IN_DEE_SYSTEM"),
-                                   "intervention_assertion_scopes": L3["by_scope"] or {}},
+                                   "intervention_L3_state": L3["state"]},
                 "direction_mechanism": {"L2": L2.get("state"), "targets": L1.get("targets", []), "link_sources": L1.get("link_sources", [])},
-                "evidence_quality_independence": {"card_assertions": len(assertions), "reading_depths": dict(collections.Counter(a["reading_depth"] for a in assertions)),
-                                                  "distinct_source_strings": independent, "note": "shared sources are not independent confirmations; nothing is pooled"},
-                "counter_evidence": {"need_counter_evidence_items": len(need["counter_evidence"]), "intervention_measured_null_assertions": L3["measured_null_assertions"]},
-                "potency_and_assay_context": "NOT_CARRIED: the catalogue holds no potency; card measured-result notes are free text in the cards",
-                "transferability": {"species_of_assertions": sorted({a["species"] for a in assertions if a["species"]}), "scopes": sorted({a["scope"] for a in assertions}),
+                "evidence_quality_independence": {"listed_pertinent_assertions": len(L3["assertion_ids"]), "signs": {"wwox_system": L3["signs_wwox_system_readouts"], "case_reports": L3["signs_case_reports"]},
+                                                  "reading_depths_in_cards": dict(collections.Counter(a["reading_depth"] for a in sel)),
+                                                  "note": "shared sources are not independent confirmations; nothing is pooled; harm and benefit stay separate"},
+                "counter_evidence": {"need_counter_evidence_items": len(need["counter_evidence"]), "intervention_signs_harm": L3["safety_signals_kept_apart"],
+                                     "intervention_measured_null": (L3["signs_wwox_system_readouts"].get("null", 0) + L3["signs_case_reports"].get("null", 0))},
+                "potency_and_assay_context": "NOT_CARRIED: the catalogue holds no potency; target-engagement assays are counted apart (" + str(L3["target_engagement_assays_not_readouts"]) + ")",
+                "transferability": {"species_of_assertions": sorted({a["species"] for a in sel if a["species"]}), "scopes": sorted({a["scope"] for a in sel}),
                                     "system_of_interest": "WWOX-DEE reference genotype class; transfer is a stated distance, not a score"},
                 "pharmacology_safety_info": {"status_class": r.get("status_class"), "access_categories": r.get("access_categories"),
                                              "safety_assessment": "NOT_ASSESSED (catalogue); safety triage is a separate step"},
@@ -339,7 +443,7 @@ def make_priorities(rows, cells, need_by, cards, card_rows, need_cards, src, src
             },
             "next_deepening": deepening(disp, c, nd, crs),
             "possible_duplicates_not_merged": r.get("n_possible_duplicates", 0),
-            "reversible": "a disposition is a function of the inputs; change a role row, a card or the catalogue and regenerate",
+            "reversible": "a disposition is a function of the inputs; change a role row, a pertinence row, a card or the catalogue and regenerate",
         })
     return {"schema": SCHEMA, "dispositions": DISPOSITIONS, "ranking": "none: no score, no ordering by evidence volume; filter by disposition, need or criterion. Order is need id then row id.",
             "no_probability": "nothing here is a probability of benefit or cure", "priorities": out, "pairs_not_prioritised": dict(skipped)}
@@ -349,12 +453,12 @@ def deepening(disp, c, nd, crs) -> list[str]:
     d = []
     if nd in ("uncertain", "modulate"):
         d.append("resolve the sign of the need before reading any mechanism as supportive")
-    if c["L4_observed_recovery_in_wwox_system"]["state"] != "observed":
-        d.append("no WWOX-system observation recorded: a discriminating measurement in a WWOX-deficient system is the missing step")
+    if c["L4_observed_recovery_in_wwox_system"]["state"] == "none_in_record":
+        d.append("no WWOX-system recovery observation recorded: a discriminating measurement in a WWOX-deficient system is the missing step")
     if disp in ("consistent_mechanism_candidate", "exploration_candidate"):
         d.append("fitted potency and selectivity on the linked target (not carried by the catalogue)")
-    if disp == "not_relevant":
-        d.append("none for this need; the compound may belong to other needs")
+    if disp == "no_catalogue_link_found":
+        d.append("none for this need by catalogued targets; the compound may belong to other needs")
     if disp == "source_queried_without_result":
         d.append("identify the targets by another source before deciding")
     for c_ in crs:
@@ -378,87 +482,103 @@ def pct(num, den, what) -> dict:
     return {"numerator": num, "denominator": den, "percent": round(100.0 * num / den, 1) if den else None, "what": what}
 
 
-def make_summary(entries, idx, rows, cells, per_need, priorities, need_by, cards, card_rows, need_cards, src, cstats, stale_roles, missing_cards, assoc_all) -> dict:
+def make_summary(entries, idx, rows, cells, per_need, priorities, need_by, cards, need_cards, eff, hard, stale, cstats, stale_roles, stale_pert, missing_cards, assoc_all, pert, ass_index, counted, pathway) -> dict:
     fam_all = set(idx.family.values())
     chembl_fams = {idx.family[e["id"]] for e in entries if e["origin"].startswith("chembl")}
-    source_only = len(fam_all - chembl_fams)
-    link_assoc = [a for a in assoc_all if a["target_kind"] in rs.LINK_KINDS]
-    touched_rec = {a["catalogue_id"] for a in link_assoc}
-    touched_fam = {a["family"] for a in link_assoc}
-    marker_rec = {a["catalogue_id"] for a in assoc_all if a["target_kind"] not in rs.LINK_KINDS}
+    head = [a for a in assoc_all if counted(a)]
+    pw = [a for a in assoc_all if pathway(a)]
+    excl = [a for a in assoc_all if a["excluded_from_counts"] and a["target_kind"] in (rs.LINK_KINDS | rs.PATHWAY_KINDS)]
+    head_rec, head_fam = {a["catalogue_id"] for a in head}, {a["family"] for a in head}
+    wide_rec, wide_fam = head_rec | {a["catalogue_id"] for a in pw}, head_fam | {a["family"] for a in pw}
+    beside_rec = {a["catalogue_id"] for a in assoc_all if a["target_kind"] in rs.BESIDE_KINDS and not a["excluded_from_counts"]}
     recs_with_targets = sum(1 for e in entries if e["targets"])
     lv = lambda key, st: sum(1 for c in cells.values() if c[key]["state"] == st)
+    reason_class = lambda a: "alias_risk" if a["excluded_from_counts"].startswith("alias_risk") else ("placeholder" if a["excluded_from_counts"].startswith("placeholder") else "source_artefact")
     per = {}
+    kinds = ("intervention_target", "disease_gene_product", "pathway_member", "effector_constraint", "readout_marker")
     for nid, n in need_by.items():
-        a = [x for x in per_need[nid]["associations"] if x["target_kind"] in rs.LINK_KINDS]
+        a_all = per_need[nid]["associations"]
+        ok = lambda a: not a["excluded_from_counts"]
+        by_kind = {k: {"records": len({a["catalogue_id"] for a in a_all if a["target_kind"] == k and ok(a)}), "families": len({a["family"] for a in a_all if a["target_kind"] == k and ok(a)})} for k in kinds}
+        h = [a for a in a_all if counted(a)]
+        wd = h + [a for a in a_all if pathway(a)]
         cs = [c for (r, k), c in cells.items() if k == nid]
         per[nid] = {"direction": rs.need_direction(n), "exploration_only": rs.need_direction(n) in ("uncertain", "modulate"),
-                    "targets": len(n["targets"]), "link_targets": sum(1 for t in n["targets"] if t["target_kind"] in rs.LINK_KINDS),
-                    "records_with_documented_link": len({x["catalogue_id"] for x in a}), "families_with_documented_link": len({x["family"] for x in a}),
-                    "families_consistent": len({x["family"] for x in a if x["consistency"] == "consistent"}),
-                    "families_opposed": len({x["family"] for x in a if x["consistency"] == "opposed"}),
-                    "readout_marker_only_records": len({x["catalogue_id"] for x in per_need[nid]["associations"] if x["target_kind"] not in rs.LINK_KINDS} - {x["catalogue_id"] for x in a}),
+                    "targets": len(n["targets"]), "target_kinds": dict(collections.Counter(t["target_kind"] for t in n["targets"])),
+                    "headline_records_intervention_targets": len({x["catalogue_id"] for x in h}), "headline_families_intervention_targets": len({x["family"] for x in h}),
+                    "records_incl_pathway_members": len({x["catalogue_id"] for x in wd}), "families_incl_pathway_members": len({x["family"] for x in wd}),
+                    "by_target_kind_records_families": by_kind,
+                    "families_consistent": len({x["family"] for x in h if x["consistency"] == "consistent"}),
+                    "families_opposed": len({x["family"] for x in h if x["consistency"] == "opposed"}),
+                    "excluded_records_by_reason": dict(collections.Counter(reason_class(a) for a in {x["catalogue_id"]: x for x in a_all if x["excluded_from_counts"] and x["target_kind"] in (rs.LINK_KINDS | rs.PATHWAY_KINDS)}.values())),
                     "identity_guard_hits": len(per_need[nid]["identity_guard_hits"]), "nonhuman_chembl_rows_set_aside": per_need[nid]["nonhuman_chembl_rows_set_aside"],
-                    "cells_L3_observed": sum(1 for c in cs if c["L3_observed_effect"]["state"] == "observed"),
-                    "cells_L4_observed": sum(1 for c in cs if c["L4_observed_recovery_in_wwox_system"]["state"] == "observed"),
+                    "cells_L3_observed_wwox_system": sum(1 for c in cs if c["L3_observed_effect"]["state"] == "observed_wwox_system"),
+                    "cells_L3_observed_case_level_only": sum(1 for c in cs if c["L3_observed_effect"]["state"] == "observed_case_level_only"),
+                    "cells_L4_observed": sum(1 for c in cs if c["L4_observed_recovery_in_wwox_system"]["state"] != "none_in_record"),
                     "cards_citing_need": need_cards[nid], "wwox_system_observations": sum(1 for o in n["observed"] if o["evidence_scope"] == "WWOX_EXPERIMENT_IN_DEE_SYSTEM")}
     fam_needs = collections.defaultdict(set)
-    for a in link_assoc:
+    for a in head:
         fam_needs[a["family"]].add(a["need"])
     dist = collections.Counter(len(v) for v in fam_needs.values())
-    all_assertions = {(cid, a["id"]): a for cid, c in cards.items() for a in c["assertions"]}
-    obs_assertions = {(cid, a["id"]) for cid, c in cards.items() if not c["is_axis"] for a in c["assertions"]
-                      if a["epistemic_status"] == "DATO" and a["direction"] in ("INCREASE", "DECREASE") and any(cid in v for v in need_cards.values())}
-    rec_assertions = {k for k in obs_assertions if all_assertions[k]["scope"] in ("wwox_experimental", "wwox_clinical_report") and all_assertions[k]["comparison"] == "OPPOSES_DISEASE_CHANGE"}
     disp = collections.Counter(p["disposition"] for p in priorities["priorities"])
-    n_cells_possible = len([r for r in rows.values()]) * len(need_by)
+    disp_fam = {d: len({p["row_id"] for p in priorities["priorities"] if p["disposition"] == d}) for d in disp}
+    listed = {(r["card_id"], r["assertion_id"]) for r in pert}
+    all_a = {k for k, a in ass_index.items() if not cards[k[0]]["is_axis"] and a["epistemic_status"] == "DATO"}
+    alias_rows = sorted({(a["catalogue_id"], a["compound"], a["target"]) for a in assoc_all if a["excluded_from_counts"] and a["excluded_from_counts"].startswith("alias_risk")})
+    cell_states = lambda key: dict(sorted(collections.Counter(c[key]["state"] for c in cells.values()).items()))
+    pend = sum(1 for _ in cells)
     return {
         "schema": SCHEMA,
         "units": {"catalogue_records": len(entries), "records_are": "source-level substance records, not distinct drugs",
-                  "families": len(fam_all), "chembl_families": len(chembl_fams), "source_only_families_unresolved_identity": source_only,
+                  "families": len(fam_all), "chembl_families": len(chembl_fams), "source_only_families_unresolved_identity": len(fam_all - chembl_fams),
                   "family_rule": "ChEMBL parent link or identical InChIKey connectivity block; source-only records stay singletons; nothing merged on name",
-                  "coverage_unit": "compound families (each counted once per need); card interventions are separate rows"},
-        "source_states": {k: v.get("state") for k, v in src.items()} | {"dgidb_note": "export of 2024-06-10; current service coverage not ingested"},
-        "inputs_status": {"catalogue_sources_not_ok": sorted(k for k, v in src.items() if v.get("state") not in ("OK",)),
-                          "stale_role_rows": stale_roles, "cards_cited_by_needs_but_missing": missing_cards},
+                  "coverage_unit": "compound families (each counted once per need); card interventions and tool subjects are separate rows"},
+        "source_states": {k: {"state": v["state"], "detail": v["detail"]} for k, v in eff.items()},
+        "source_state_vocabulary": "OK | STALE_EXPORT | STALE_AFTER_FAILED_REFRESH | PARTIAL | FAILED | INCOMPLETE | NOT_FETCHED; hard problems (FAILED, INCOMPLETE, NOT_FETCHED) of ANY source turn dispositions into incomplete_or_failed_query; stale states add a caveat to every absence-type result",
+        "inputs_status": {"hard_problem_sources": hard, "stale_sources": stale, "stale_role_rows": stale_roles, "stale_pertinence_rows": stale_pert,
+                          "cards_cited_by_needs_but_missing": missing_cards},
         "needs": {"count": len(need_by), "direction_evaluable": sum(1 for n in need_by.values() if rs.need_direction(n) not in ("uncertain", "modulate")),
                   "exploration_only": sum(1 for n in need_by.values() if rs.need_direction(n) in ("uncertain", "modulate")),
-                  "needs_without_any_link_target": sorted(k for k, v in per.items() if v["link_targets"] == 0),
-                  "needs_with_documented_link_families": sum(1 for v in per.values() if v["families_with_documented_link"] > 0),
+                  "needs_without_any_intervention_target_link": sorted(k for k, v in per.items() if v["headline_records_intervention_targets"] == 0),
+                  "needs_with_headline_link_families": sum(1 for v in per.values() if v["headline_families_intervention_targets"] > 0),
                   "per_need": per},
         "catalogue_coverage": {
+            "headline_definition": "a documented link = a catalogue row on an INTERVENTION target (or disease gene product) of a need, excluding source-artefact rows, alias-risk rows and the DGIdb placeholder; pathway members counted apart; effector constraints and readout markers are never links",
             "records_examined": len(entries), "records_with_any_target_row": recs_with_targets,
-            "records_with_documented_link_to_a_need": len(touched_rec), "families_with_documented_link_to_a_need": len(touched_fam),
-            "records_touching_only_readout_markers": len(marker_rec - touched_rec),
-            "pct_records_with_link": pct(len(touched_rec), len(entries), "catalogue records with at least one documented link to a link-type target of any of the needs / all catalogue records; links are source statements, not relevance"),
-            "pct_records_with_target_row_that_link": pct(len(touched_rec), recs_with_targets, "records linked to some need / records carrying any target row"),
-            "touched_families_with_a_name_twin_in_another_family_not_merged": sum(1 for f in touched_fam if rows.get(f, {}).get("n_possible_duplicates", 0) > 0),
-            "families_touching_a_need_if_name_twins_were_collapsed_SENSITIVITY_ONLY": collapsed_count(touched_fam, rows),
+            "union_headline_records": len(head_rec), "union_headline_families": len(head_fam),
+            "union_with_pathway_members_records": len(wide_rec), "union_with_pathway_members_families": len(wide_fam),
+            "records_touching_only_effector_constraints_or_readout_markers": len(beside_rec - wide_rec),
+            "pct_records_with_headline_link": pct(len(head_rec), len(entries), "catalogue records with at least one headline link to any of the needs / all catalogue records; links are source statements, not relevance"),
+            "pct_records_with_target_row_that_link": pct(len(head_rec), recs_with_targets, "records with a headline link / records carrying any target row"),
+            "pct_records_incl_pathway_members": pct(len(wide_rec), len(entries), "records with a headline OR pathway-member link / all catalogue records"),
+            "excluded_rows": {"records": len({a["catalogue_id"] for a in excl}), "by_reason": dict(collections.Counter(reason_class(a) for a in {(a["catalogue_id"], a["need"], a["target"]): a for a in excl}.values())),
+                              "alias_risk_rows_unresolved": [{"catalogue_id": c, "compound": n, "gene": g} for c, n, g in alias_rows]},
+            "touched_headline_families_with_a_name_twin_not_merged": sum(1 for f in head_fam if rows.get(f, {}).get("n_possible_duplicates", 0) > 0),
+            "headline_families_if_name_twins_collapsed_SENSITIVITY_ONLY": collapsed_count(head_fam, rows),
             "families_by_number_of_needs_touched": {str(k): v for k, v in sorted(dist.items())},
-            "families_touching_at_least_one_need_counted_once": len(touched_fam),
-            "overlap_warning": "needs share targets (e.g. CACNA1G, ABAT); per-need family counts must not be added: use the union above"},
+            "overlap_warning": "needs share targets (e.g. CACNA1G, ABAT); per-need counts must not be added: use the unions above"},
         "evaluated_vs_records": {"records_in_catalogue": len(entries), "records_examined_by_target_match": len(entries),
-                                 "records_with_target_data_at_all": recs_with_targets, "records_with_a_link_to_a_need_target": len(touched_rec),
-                                 "records_evaluated_against_wwox_needs_with_any_observation": len({a for a in {cid for cid, _ in obs_assertions}}),
-                                 "meaning": "'examined' = target-matched against the 22 needs; 'evaluated with observation' = card interventions with at least one data assertion on a need citing the card"},
+                                 "records_with_target_data_at_all": recs_with_targets, "records_with_a_headline_link": len(head_rec),
+                                 "interventions_with_a_listed_pertinent_readout_assertion": len({rid for (rid, _n), c in cells.items() if c["L3_observed_effect"]["state"] in ("observed_wwox_system", "observed_case_level_only", "measured_null_only")}),
+                                 "meaning": "'examined' = target-matched against the needs; the last figure counts matrix rows (families or card interventions) with a pertinent WWOX-system readout or case report"},
         "matrix": {"rows": len(rows), "row_kinds": dict(collections.Counter(r["kind"] for r in rows.values())), "cells_nonempty": len(cells),
-                   "cells_possible_rows_x_needs": n_cells_possible,
-                   "L1_documented": lv("L1_documented_link", "documented"), "L1_none_found": lv("L1_documented_link", "none_found"), "L1_not_evaluable": lv("L1_documented_link", "not_evaluable"),
-                   "L2_coherent": lv("L2_mechanistic_coherence", "coherent"), "L2_opposed": lv("L2_mechanistic_coherence", "opposed"),
-                   "L2_direction_unresolved": lv("L2_mechanistic_coherence", "direction_unresolved"), "L2_not_evaluable": lv("L2_mechanistic_coherence", "not_evaluable"),
-                   "L3_observed": lv("L3_observed_effect", "observed"), "L3_measured_null_only": lv("L3_observed_effect", "measured_null_only"),
-                   "L3_inference_only": lv("L3_observed_effect", "inference_only"), "L3_none_in_cards": lv("L3_observed_effect", "none_in_cards"),
-                   "L4_observed": lv("L4_observed_recovery_in_wwox_system", "observed"),
+                   "cells_possible_rows_x_needs": len(rows) * len(need_by),
+                   "L1_states": cell_states("L1_documented_link"), "L2_states": cell_states("L2_mechanistic_coherence"),
+                   "L3_states": cell_states("L3_observed_effect"), "L4_states": cell_states("L4_observed_recovery_in_wwox_system"),
                    "levels_are_never_summed": True},
         "observations": {"card_interventions": len([c for c in cards.values() if not c["is_axis"]]), "axis_cards_not_interventions": len([c for c in cards.values() if c["is_axis"]]),
-                         "data_assertions_with_readout_change_on_cited_needs": len(obs_assertions), "of_which_wwox_system_opposing_disease_change": len(rec_assertions),
-                         "by_scope": dict(collections.Counter(all_assertions[k]["scope"] for k in obs_assertions)),
-                         "note": "an assertion counts once however many needs cite its card; L3/L4 cells count (row, need) pairs"},
-        "priorities": {"records": len(priorities["priorities"]), "by_disposition": dict(sorted(disp.items())),
+                         "data_assertions_in_intervention_cards": len(all_a), "assertions_listed_in_pertinence_table": len(listed & all_a),
+                         "assertions_not_assessed_for_pertinence_not_counted": len(all_a - listed),
+                         "listed_by_evidence_kind": dict(collections.Counter(r["evidence_kind"] for r in pert)),
+                         "listed_by_sign": dict(collections.Counter(r["sign"] for r in pert)),
+                         "note": "an assertion is counted per (assertion, need) row of the pertinence table; L3/L4 cells count (row, need) pairs"},
+        "priorities": {"records": len(priorities["priorities"]), "by_disposition_cells": dict(sorted(disp.items())), "by_disposition_distinct_families_or_rows": dict(sorted(disp_fam.items())),
                        "all_dispositions_listed": sorted(DISPOSITIONS), "pairs_not_prioritised": priorities["pairs_not_prioritised"],
                        "exploration_flagged": sum(1 for p in priorities["priorities"] if p["exploration_only"])},
-        "limits": ["catalogue links are source statements; no potency is carried", "DGIdb is the 2024-06-10 export", "ChEMBL non-human target rows are set aside, not matched",
-                   "card pertinence to a need is card-level", "L4 is a technical bridge comparison, not efficacy", "needs' own WWOX observations are not interventions and fill no compound cell"],
+        "limits": ["catalogue links are source statements; no potency is carried", "DGIdb is a STALE export (2024-06-10); current service coverage not ingested", "ChEMBL non-human target rows are set aside, not matched",
+                   "pertinence of an assertion to a need is judged in assertion_pertinence.tsv (a curated input, reviewable); unlisted assertions are not counted",
+                   "L4 is a technical bridge comparison, not efficacy; case_level = uncontrolled clinical report", "needs' own WWOX observations are not interventions and fill no compound cell",
+                   "seizure-need cells are symptom-level inferences, not mechanism-linked to WWOX; GRIN and T-type couplings rest on one experiment each"],
     }
 
 
@@ -496,7 +616,7 @@ def main(argv=None) -> int:
     if a.cmd == "run":
         h = write_all(res, a.out)
         sm = res["summary"]
-        print(json.dumps({"files": h, "matrix": sm["matrix"], "priorities": sm["priorities"]["by_disposition"]}, indent=1))
+        print(json.dumps({"files": h, "matrix": sm["matrix"], "priorities": sm["priorities"]["by_disposition_cells"]}, indent=1))
         return 0
     if a.cmd == "check":
         want = {"coverage_matrix.json": dump(res["matrix"], True), "priorities.json": dump(res["priorities"], True), "coverage_summary.json": dump(res["summary"])}
