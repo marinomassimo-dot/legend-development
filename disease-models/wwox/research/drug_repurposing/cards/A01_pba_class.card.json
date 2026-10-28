@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "d32d590f3311c28c753c96e86fe02883fada99999161015d8e6d7664cbe20c73",
+  "input_sha256": "bc3e3c62d8a7a2cea214d127cd98e213ac656a296bd5d320b47ef93aa4889cdf",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -273,7 +273,7 @@
       },
       "time_to_access": "UNKNOWN. Not documented in the repository.",
       "time_to_benefit": "UNKNOWN. Not documented; no WWOX datum exists from which to estimate it.",
-      "pharmacology": "Potency, relevant exposure and selectivity in a WWOX system: UNKNOWN. Re-examined in IT5 (pharmacology_it5_20261029/proteostasis_pba_a01.tsv): the only measured potency for the class is HDAC inhibition, at micromolar to sub-millimolar values (one HeLa extract study: low micromolar; recombinant enzymes: tens to hundreds of micromolar, with butyrate more potent than phenylbutyrate in the same assay and the order reversed in the HeLa study), while the cell experiments in the cited papers applied roughly half a millimolar to ten millimolar for a day (a toxicity ceiling at four millimolar in one paper) and the bile acid one hundred micromolar; so HDAC inhibition is quantitatively available at the concentrations used and cannot be excluded as the operating mechanism, and no binding, folding or aggregation measurement exists for the chaperone attribution of either compound In the sources: class not selective for the mutant; brain exposure not measured in any R1 paper.",
+      "pharmacology": "Potency, relevant exposure and selectivity in a WWOX system: UNKNOWN. Re-examined in IT5 (pharmacology_it5_20261029/proteostasis_pba_a01.tsv): the only measured potency for the class is HDAC inhibition, at micromolar to sub-millimolar values (one HeLa extract study: low micromolar; recombinant enzymes: tens to hundreds of micromolar, with butyrate more potent than phenylbutyrate in the same assay and the order reversed in the HeLa study), while the cell experiments in the cited papers applied roughly half a millimolar to ten millimolar for a day (a toxicity ceiling at four millimolar in one paper) and the bile acid one hundred micromolar; so HDAC inhibition is quantitatively available at the concentrations used and cannot be excluded as the operating mechanism, and there is no numeric value for the chaperone mechanism of either compound, although qualitative active records exist for phenylbutyric acid alone (model-protein aggregation suppression and ER-stress cell protection, each at a single concentration and neither on a disease client); the bile acid has no folding or aggregation record In the sources: class not selective for the mutant; brain exposure not measured in any R1 paper.",
       "paediatrics_and_interactions": "UNKNOWN. No paediatric suitability is presumed by this card, for the candidate or for any historical authorisation of it for another use.",
       "scope_of_checks": {
         "support_and_replication": "Rescue of the retained branch seen in two papers of one target family (GAT-1 variants); no replication in an enzyme-class or WWOX system.",

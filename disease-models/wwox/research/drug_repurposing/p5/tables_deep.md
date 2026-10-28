@@ -44,7 +44,7 @@ Candidates first (5), then abstentions (7); within each group the order is the c
 | BLOCK-1 status | **UNKNOWN** (no BLOCK-1 field or statement on this card; UNKNOWN is not a pass) | `(none)` |
 | Time to ACCESS | UNKNOWN. | `input.p4_card.time_to_access` |
 | Time to BENEFIT | UNKNOWN. | `input.p4_card.time_to_benefit` |
-| Feasibility: what must exist to test it | For PTC alleles: the enumeration of WWOX PTC alleles with stop identity and +4 nucleotide, then a function measurement on any protein produced. For the missense class: none, the mechanism does not apply. | `input.p4_card.next_measurement` |
+| Feasibility: what must exist to test it | For PTC alleles: a transcript-level NMD measurement on a recorded nonsense allele (the sequence-based enumeration exists since 2026-10-28 as a prediction only), then a function measurement on any protein produced. [cut: the card's field continues] | `input.p4_card.next_measurement` |
 
 ### P4-C-01 · AAV9-delivered human WWOX · CANDIDATE · bridge `directional_summary` = OPPOSES_DISEASE_CHANGE
 
@@ -132,8 +132,8 @@ Candidates first (5), then abstentions (7); within each group the order is the c
 | BLOCK-1 status | **UNKNOWN** (no BLOCK-1 field or statement on this card; UNKNOWN is not a pass) | `(none)` |
 | Time to ACCESS | **UNKNOWN** | `input.p4_card.time_to_access` |
 | Time to BENEFIT | **UNKNOWN** | `input.p4_card.time_to_benefit` |
-| Feasibility: what must exist to test it | Make the PTC-allele enumeration with context annotation; it would populate or empty the class. | `input.p4_card.next_measurement` |
-| ABSTENTION: the missing datum | The enumeration: a count of WWOX nonsense alleles with stop-codon identity and the +4 nucleotide, which govern read-through efficiency. No published cohort separates splice from nonsense from frameshift from CNV; [cut: the card's field continues] | `input.abstention_card.missing_datum` |
+| Feasibility: what must exist to test it | A transcript-level NMD assay on a recorded nonsense allele; the sequence-based enumeration (prediction only) is done. | `input.p4_card.next_measurement` |
+| ABSTENTION: the missing datum | A transcript-level NMD measurement on a recorded WWOX nonsense allele (with and without an NMD-discriminating arm). [cut: the card's field continues] | `input.abstention_card.missing_datum` |
 
 ### P4-C-02 · splice-correcting ASO / editing · ABSTENTION · bridge `directional_summary` = UNRESOLVED
 

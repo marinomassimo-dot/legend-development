@@ -512,8 +512,7 @@ the moment a fifth non-existent rule is cited from a live surface.
   exposure, by any agent. Every other pharmacological action of the molecule — NMD inhibition,
   TBK1/IKKε inhibition, anti-inflammatory activity — is a **separate hypothesis requiring its own
   evidence**, and none has been tested in a WWOX system. The nonsense alleles the repository does hold
-  are a different, **unenumerated** class: there is no count of WWOX PTC alleles and no PTC-context
-  annotation (stop-codon identity, +4 nucleotide), and no published cohort separates nonsense from
+  are a different class, **enumerated only as a prediction** (update of `BATCH_20261019_025`, 2026-10-29: 32 single-nucleotide stop-gained alleles of NM_016373.4 in the repository ClinVar snapshot, undated; 23 predicted NMD-sensitive, 1 borderline, 8 predicted to escape; the classes are predictions by the 50-55 nt rule, never measurements, and no WWOX NMD or read-through measurement exists). No published cohort separates nonsense from
   splice from frameshift from CNV.
 - 🔴 **And where it HAS been tested against a comparator, the protein gain did not become a phenotype
   gain.** In patient-derived cells: *«On the contrary, we observed no effect on FANCF protein levels
@@ -550,8 +549,8 @@ the moment a fifth non-existent rule is cited from a live surface.
   functional readout; (b) a formally published protocol or case report of the reported individual
   experience, carrying variant, endpoint, exposure, concomitant therapy and follow-up; (c) a
   demonstration that amlexanox produces functional rescue — not protein quantity — at a WWOX PTC
-  allele in any system; (d) an enumeration of WWOX PTC alleles with stop-codon identity and the +4
-  nucleotide, which would at least make the eligible class countable.
+  allele in any system; (d) a transcript-level NMD measurement on a recorded WWOX nonsense allele (the enumeration with stop-codon identity and the +4
+  nucleotide exists since 2026-10-28 as a sequence prediction only), which would at least make the eligible class measurable.
 - **Re-audit hook:** rejection of a **therapeutic transfer**. Re-examine on any new `DATO` about
   nonsense-allele rescue in WWOX, about NMD in a WWOX allele, or about TBK1/IKKε in a WWOX system.
 - **Record provenance:** created by `CC-20261020-SCIENTIST-A-AMLEXANOX-01` (Scientist A, task `REPURP-P3-KNOWNROADS-A-20261020`) at `BATCH_20261019_008`; `DIS-` number and the `D-39` id minted by the integrator. Sources land as [[paper_registry_current#PAPER 427]] and [[paper_registry_current#PAPER 428]].

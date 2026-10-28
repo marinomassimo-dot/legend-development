@@ -745,10 +745,10 @@ class and redirects attention to R-02.
 **`REVIVAL_TRIGGER`:** documented Na-blocker response in WWOX-BS cases, or a Nav dependence measured
 in a WWOX model.
 
-### N-04 — Broad GABAergic push (chronic high-dose benzodiazepines; vigabatrin as a mechanism play) → **premise unmeasured, and a real safety signal**
+### N-04 — Broad GABAergic push (chronic high-dose benzodiazepines; vigabatrin as a mechanism play) → **premise unmeasured; a documented MRI-abnormality liability whose WWOX excess is not shown**
 **Source ids:** CLAIM 001, CLAIM 031, DL-MECH-035.
 **Failure mode:** *corrects a marker, not the mechanism* — plus an unmeasured premise. VABAM is
-documented in WWOX-DEE; and the depolarizing-GABA rationale **failed as a clinical predictor**
+documented in two WWOX-DEE children (case-selected, no denominator of exposed WWOX children; the label's 22 against 4 percent concerns non-WWOX infants, so enrichment in WWOX is not supported); and the depolarizing-GABA rationale **failed as a clinical predictor**
 (vigabatrin resolved spasms in a WWOX-null child). Both directions of the conflict are live: efficacy
 on spasms (n=2) against MRI toxicity (n=2). **Neither closes the question.** The canonical position
 is unchanged: caution / avoid unless alternatives are exhausted, with the risk explicitly documented.
@@ -1192,7 +1192,7 @@ programme:
 | Component | Status | Verdict |
 |---|---|---|
 | **PV / interneuron** | Marker-level `DATO` in **one** systemic constitutive KO at two weeks (PV⁺ −44% whole hippocampus; NPY⁺ DG only), with a **measured systemic confounder** (that animal is hypoglycaemic, acidotic, uraemic at P18) and `MARKER_TO_FUNCTION_GATE` unmet — no pan-GABA lineage count, no birthdating, no fate mapping, no apoptosis assay | **Mechanism: admitted. Target: not yet.** No PV-directed intervention is scorable |
-| **GABA / E-I balance** | The **functional** inhibitory deficit is real and independently measured (reduced spontaneous inhibition, L2/3, neuron-specific loss). The **directional paradox** is unresolved — GABAergic markers ↑ in organoids, ↓ in the mouse. `E_GABA`, chloride, NKCC1/KCC2 and the GABA response are **unmeasured in every WWOX system** | **T6.** Bumetanide unrankable; broad GABAergic push carries a real safety signal and a falsified clinical prediction |
+| **GABA / E-I balance** | The **functional** inhibitory deficit is real and independently measured (reduced spontaneous inhibition, L2/3, neuron-specific loss). The **directional paradox** is unresolved — GABAergic markers ↑ in organoids, ↓ in the mouse. `E_GABA`, chloride, NKCC1/KCC2 and the GABA response are **unmeasured in every WWOX system** | **T6.** Bumetanide unrankable; broad GABAergic push carries a documented MRI-abnormality liability (two case-selected WWOX reports, no denominator) and a falsified clinical prediction |
 | **mTOR** | 🔴 **Does not qualify for admission.** The only WWOX-specific datum shows mTOR/EIF4EBP1 **down** and autophagy **down** | **Deprioritized on direction**, with the weakness of the single dataset stated |
 | **Circuit-targeted** | ✅ **This is where the programme is real** — but the actionable node is **NMDAR/gap-junction**, not GABA. It is the one downstream dependence established inside a WWOX model | `PROMISING_BUT_MECHANISTIC_GAP` (R-02) |
 
