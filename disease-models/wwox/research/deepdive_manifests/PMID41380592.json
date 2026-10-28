@@ -601,7 +601,7 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "FLY PARS2 (MITOCHONDRIAL tRNA-SYNTHETASE) MODEL, NOT WWOX EVIDENCE: The only sex named anywhere is for the RNA-seq heads (5-day-old females).",
+    "proposition": "FLY PARS2 (MITOCHONDRIAL tRNA-SYNTHETASE) MODEL, NOT WWOX EVIDENCE: No sex is stated for any behavioural or developmental assay; sex is named only for the RNA-seq heads (5-day-old females) and in the genetics crosses (virgin female F1, male F2-F4).",
     "snippet": "thirty snap-frozen fly heads from 5-day-old females were used",
     "surface": "body",
     "artifact": "files/fulltext/PMID41380592_Xu2026_PMC_r2.xml",
