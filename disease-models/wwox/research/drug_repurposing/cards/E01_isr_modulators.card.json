@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "input_sha256": "7973074790a6861a29be1e42e0dc290819590ec2aea47fb8e859d4aaff04cefd",
+ "input_sha256": "81782329c9149aad1a262868b25e74158cd17b5696572d95776f8ffebffb6e5b",
  "epistemic_status": "IPOTESI",
  "canonical": false,
  "assessment": "REQUIRES_QUALIFICATION",
@@ -116,7 +116,7 @@
      "cell_type": "adult fly head or brain (whole head for metabolomics and RNA-seq)",
      "developmental_stage": "adult, day 14 for omics and Atf4 imaging"
     },
-    "measured_result_note": "No change without amyloid (t 0.0894, P 0.9305, n 6 brains). A measured null in a different contrast, not an unmeasured cell.",
+    "measured_result_note": "Not significant without amyloid (t 0.0894, P 0.9305, n 6 brains; 95% interval about plus or minus 1.3 pooled SD). A measured non-significant result in a different contrast, not an unmeasured cell and not a demonstrated absence; no interaction test between the two backgrounds is reported (re-read 2026-10-28).",
     "receipt": "FTR-20261026-42909904-01",
     "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT"
    },
@@ -260,7 +260,7 @@
      "GENETIC precedent in another disease (Xu 2026, PMID 41380592; read in full, manifest PMID41380592.json entries 1, 3, 30, 33, 34, 35; receipt FTR-20261027-41380592-01): in a fly model of the mitochondrial prolyl-tRNA synthetase lesion behind a developmental and epileptic encephalopathy in people, pan-neuronal RNAi against GCN2 lowered the bang-sensitive fraction from about 87 to about 30 percent and RNAi against ATF4 from about 93 to about 46 percent (three vials of ten flies each; ATF4 spread about 30 to 62), and both shortened the developmental delay. Partial rescues, partial knockdowns measured in the single-RNAi lines only, seizure-like behaviour and developmental timing not separable, no compound and no ISRIB-class agent tested, no mitochondrial readout after suppression, sex not stated for the behavioural assay. It is a question-generating precedent for the ISR need, not a WWOX experiment and not a pharmacological result."
     ],
     "against": [
-     "Without amyloid the fly Atf4 signal does not change.",
+     "Without amyloid the fly Atf4 comparison was not significant (6 vs 6; no interaction test between backgrounds; not a demonstrated absence).",
      "In the human knockout organoid the ATF4/ISR target transcripts are lower than chance (exploratory, no amyloid).",
      "The ALS trial engaged the target and showed no benefit.",
      "Atf4 is not perturbed in the paper: the Atf4-to-Ldh step is the authors' inference.",
@@ -290,7 +290,7 @@
   "not_known": [
    "Whether any WWOX-deficient human neural system has raised eIF2 alpha phosphorylation or ATF4 protein, with or without a proteotoxic load.",
    "Whether the fly Atf4 rise is upstream of Ldh (no Atf4 perturbation in the paper).",
-   "Whether the PERK arm or another eIF2 kinase (the paper's Discussion names GCN1/GCN2) is the one engaged. In the one fly PARS2 precedent the engaged kinase was GCN2, with phospho-PERK unchanged, so a PERK-arm inhibitor would not be the matched tool there; which kinase, if any, is engaged in WWOX-deficient neural cells is unmeasured.",
+   "Whether the PERK arm or another eIF2 kinase (the paper's Discussion names GCN1/GCN2) is the one engaged; the two interactome entries behind that naming are a low-score unvalidated GCN1 prey (score 0.133, HEK293T) and a three-spectrum WWOX hit in a PERK proximity list (HEK293-T), neither showing binding or activation. In the one fly PARS2 precedent the engaged kinase was GCN2, with phospho-PERK unchanged, so a PERK-arm inhibitor would not be the matched tool there; which kinase, if any, is engaged in WWOX-deficient neural cells is unmeasured.",
    "Whether an eIF2B activator, which acts downstream of eIF2 alpha phosphorylation and restores translation, would reproduce the genetic GCN2 or ATF4 suppression: the fly precedent does not separate the ATF4-dependent limb from the translation-repression limb and tested no compound.",
    "Whether attenuating the ISR would help or harm a WWOX-deficient developing brain."
   ],
