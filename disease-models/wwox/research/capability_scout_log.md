@@ -1478,4 +1478,4 @@ assertions keyed by endpoint. Cost: hours. **Cost / API / privacy risk:** none.
 
 **Not verified.** Licence version of DrugCentral; primary licence page of ChEMBL and BindingDB; Chemical Probes Portal terms and API; DSLD data terms and bulk route; Italian register and EU claims register reuse terms; GtoPdb download files; poppler licence; the SigCom library count. No adapter written, nothing installed, no key requested, no address sent to any service.
 
-**Observed cost of this scouting.** 7 web searches, 10 page fetches (3 returned nothing usable: 404, 403, JavaScript shell), about 16 key-less HTTP probes, 4 repository reads; about 8 minutes wall time (clock start at worktree creation).
+**Observed cost of this scouting.** 7 web searches, 10 page fetches (3 returned nothing usable: 404, 403, JavaScript shell), about 16 key-less HTTP probes, 4 repository reads; about 2 minutes by the shell clock since worktree creation (model thinking time not included).
