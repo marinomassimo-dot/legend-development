@@ -30,7 +30,9 @@ P4_KEYS = ("identity", "indication_and_transfer", "novelty_for_woree", "state_of
 STATUS = {"hypothesis", "controversial", "deferred with reason", "abstention"}
 FORBIDDEN_KEY = re.compile(r"score|rank|probab|index|weight", re.I)
 FORBIDDEN_TEXT = re.compile(
-    r"\d\s?(nM|uM|µM|mM|mg|µg|ug|vg|mL|kg)\b|mg/kg|\bq\d+h\b|e-?mail|@|…|\.\.\.", re.I)
+    r"\d\s?(nM|uM|µM|mM|mg|µg|ug|vg|mL|kg)\b|mg/kg|\bq\d+h\b|\be-?mails?\b|@|…|\.\.\.", re.I)
+# The e-mail pattern must still catch the word and must not match inside a surname (a citation of a 2014 WWOX paper by its first author).
+assert FORBIDDEN_TEXT.search("write to the e-mail address") and FORBIDDEN_TEXT.search("an email") and not FORBIDDEN_TEXT.search("Abu-Remaileh 2014")
 RECEIPT = re.compile(r"FTR-\d{8}-\d{8}-\d{2}")
 
 
