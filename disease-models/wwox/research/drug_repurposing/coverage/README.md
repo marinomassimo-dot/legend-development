@@ -2,15 +2,21 @@
 
 Non-canonical research material (iteration 3). Generated; do not edit the JSON files by hand. Nothing
 here is a ranking of treatments, a probability of benefit or cure, or medical advice.
-Revision 2 (2026-10-28) applies the independent audit of revision 1
-(`../locator_audits/2026-10-28_it3_coverage_independent_verification.md`).
+Revision 3 (2026-10-28) applies the independent audit of revision 1 and its re-verification
+(`../locator_audits/2026-10-28_it3_coverage_independent_verification.md`, `…_reverification.md`).
+
+**Plain statement (also in `coverage_summary.json` key `plain_statement`):** none of the interventions in this matrix is a catalogued
+repurposing candidate with a controlled recovery in a WWOX system. The only experimental L4 cells are an AAV9 gene therapy (high dose,
+n 5 for spike-wave discharges; for growth, **body weight only**, blood glucose unchanged); the other L4 cells are uncontrolled case-level
+clinical reports (vigabatrin, ketogenic diet). Ethosuximide, lithium and a tool compound (d-APV) have single WWOX-system readouts without
+recovery status; A51 has one readout with reading depth UNKNOWN (state `observed_depth_unknown`).
 
 ## One command
 
 ```bash
 python3 -B framework/scripts/repurposing_coverage.py run      # about 6 s, offline, deterministic
 python3 -B framework/scripts/repurposing_coverage.py check    # exit 1 if the files differ from a fresh regeneration
-python3 -B framework/scripts/test_repurposing_coverage.py     # 26 offline regressions on a synthetic fixture
+python3 -B framework/scripts/test_repurposing_coverage.py     # 35 offline tests: a synthetic fixture plus negative tests on the real files
 python3 -B framework/scripts/repurposing_search.py need NEED-T-TYPE-CALCIUM
 python3 -B framework/scripts/repurposing_search.py compound memantine      # works for a compound with no card
 ```
@@ -28,7 +34,7 @@ After `needs.json` or a card changes: regenerate, then regenerate the view (`rep
 | `associations.jsonl.gz` | every need -> target -> catalogue-record row with link source, raw action, consistency, `excluded_from_counts` and limits |
 | `target_roles.tsv` | coupling between a target's activity and a direction-evaluable need's quantity, each with a certainty `qualifier`; GRIA1-4 are `unresolved` (the need says only "possibly AMPAR"; no datum) |
 | `source_artefacts.tsv` | rules that keep known upstream artefacts out of the counts (below) |
-| `assertion_pertinence.tsv` | for each card assertion: the need whose endpoint it measures, its subject, evidence kind, sign, and whether it counts for L3/L4 (52 rows). Unlisted assertions are not counted and are reported as `assertions_not_assessed_for_pertinence_not_counted` |
+| `assertion_pertinence.tsv` | for each card assertion: the need whose endpoint it measures, its subject, evidence kind, sign, and whether it counts for L3/L4 (72 rows covering all 71 data assertions of the intervention cards). An assertion judged uninformative, out of scope, a control arm of the same experiment or unquantified is listed with `counts_L3=no` so it stays visible under `listed_not_counted`; any assertion left unlisted shows in the per-cell `unassessed_assertions_on_card` |
 
 ## What counts as a link (headline) and what does not
 
@@ -38,11 +44,17 @@ After `needs.json` or a card changes: regenerate, then regenerate the view (`rep
   `readout_marker` targets are **never** links; identity-guard targets are listed beside.
 * Excluded and listed (`excluded_from_counts` on the association; counts under `catalogue_coverage.excluded_rows`):
   * **source artefact**: 77 DGIdb Guide-to-Pharmacology records carry ABAT only from a gene list that also holds ABCA1-3
-    (adenosine-receptor ligands: caffeine, theophylline, istradefylline ...). Rule `require_second_source`: the lone
-    Guide-to-Pharmacology row does not count; genuine ABAT records (vigabatrin, valproate, tiagabine ...) have a second source;
+    (adenosine-receptor ligands: caffeine, theophylline, istradefylline ...). Two rules, both in `source_artefacts.tsv`:
+    the verified explicit row (`require_second_source` for ABAT and ABCA1-3) and a **generic detector** for alphabetical-prefix
+    gene-list expansions in Guide-to-Pharmacology (a record holding 3 or more symbols from the first 8 percent of the DGIdb symbol list:
+    A12M3, A1BG, AAMP, ABAT ...; a row on such a symbol with no second source does not count). The detector flags 2,229 rows catalogue-wide;
+    of the need genes it touches only ABAT (55 of the 77 records; the other 22 are ABAT-only records that the run test cannot see and the
+    explicit row covers), so the headline counts are identical to the explicit-rule outcome. Genuine ABAT records (vigabatrin, valproate,
+    tiagabine ...) have a second source;
   * **alias risk**: DGIdb `PDK1` rows on records that also carry `PDPK1` and no ChEMBL PDK1 mechanism (Osu-03012/AR-12,
     celecoxib) are listed as unresolved alias-risk rows;
   * **placeholder**: the DGIdb drug literally named `NULL`.
+  * Every excluded association carries an explicit `excluded_reason` (`source_artefact`, `alias_risk`, `placeholder`).
 * Per-need counts are given by target kind and the unions are given both ways (headline only; headline plus pathway members).
 
 ## Four levels, never summed, never a score
@@ -54,7 +66,11 @@ After `needs.json` or a card changes: regenerate, then regenerate the view (`rep
    qualifier travels with the label: the seizure-need cells are "symptom-level inference, not mechanism-linked to WWOX";
    GRIN rows rest on "ONE full competitive block (d-APV)"; T-type rows on "ONE ethosuximide experiment".
 3. **L3 observed effect**: an assertion on this compound whose endpoint is listed as pertinent to this need, a readout in a WWOX
-   system or a WWOX clinical case report, **with its sign** (benefit, partial, mixed, null, harm; never pooled). Other-disease
+   system or a WWOX clinical case report, **with its sign** (benefit, partial, mixed, null, harm, normalised or not normalised against
+   wild type when no knockout arm exists; never pooled). **An assertion whose reading depth is UNKNOWN never reaches
+   `observed_wwox_system`** (state `observed_depth_unknown`). Control arms of the same experiment (wild type, heterozygote), uninformative
+   case reports (n=1 on seven drugs) and out-of-scope endpoints are not observations and are listed apart. Each cell carries
+   `unassessed_assertions_on_card` so it cannot read observed while a null of the same experiment is unlisted. Other-disease
    precedents (`precedent_other_disease_only`), enzyme or cell-free assays (`target_engagement_only`) and safety signals
    (`safety_signal_only`) are separate states. A tool compound (d-APV) or a genetic precedent (Ldh RNAi) is its own row and is
    never attached to a named drug; a mention of a compound id in card text attaches nothing.
@@ -87,6 +103,11 @@ potency and assay context, transferability, pharmacology/safety information pres
 `PARTIAL`, `FAILED`, `INCOMPLETE`, `NOT_FETCHED`): a hard problem of any source makes every disposition
 `incomplete_or_failed_query`; the stale DGIdb export (2024-06-10) adds a caveat to every absence-type result. No combination or
 synergy is inferred.
+
+## Access caveat
+
+DSLD is `PARTIAL` (981 of 4,697 bulk-list names probed, name-only matching): every family row and every priority record carries an
+`access_caveat`, and the summary lists it under `access_caveats`. For supplements `unknown/unverified` is not a negative.
 
 ## Limits
 

@@ -5,8 +5,8 @@ C04_aav9_endpoint_families	DR-AAV-MOTOR-HD	NEED-WWOX-GENE-ADDITION	card	readout_
 C04_aav9_endpoint_families	DR-AAV-GFAP-P5HD	NEED-WWOX-GENE-ADDITION	card	readout_in_wwox_system	benefit	yes	yes	high_dose_arm	GFAP cells, high dose
 C04_aav9_endpoint_families	DR-AAV-SURV-LD	NEED-WWOX-GENE-ADDITION	card	readout_in_wwox_system	mixed	yes	no	low_dose_arm;dose_arms_not_pooled	survival, low dose: ends at 0 percent by about day 77, better than untreated knockout (need observation O1); not counted as recovery
 C04_aav9_endpoint_families	DR-AAV-MOTOR-LD	NEED-WWOX-GENE-ADDITION	card	readout_in_wwox_system	mixed	yes	no	low_dose_arm;dose_arms_not_pooled	motor score, low dose; not counted as recovery
-C04_aav9_endpoint_families	DR-AAV-WT-HD	NEED-SYSTEMIC-GLYCAEMIA-GROWTH	card	readout_in_wwox_system	benefit	yes	yes	high_dose_arm	body weight is the growth endpoint of this need
-C04_aav9_endpoint_families	DR-AAV-WT-LD	NEED-SYSTEMIC-GLYCAEMIA-GROWTH	card	readout_in_wwox_system	mixed	yes	no	low_dose_arm	body weight, low dose
+C04_aav9_endpoint_families	DR-AAV-WT-HD	NEED-SYSTEMIC-GLYCAEMIA-GROWTH	card	readout_in_wwox_system	benefit	yes	yes	high_dose_arm;growth=body_weight_only	body weight is the growth endpoint of this need
+C04_aav9_endpoint_families	DR-AAV-WT-LD	NEED-SYSTEMIC-GLYCAEMIA-GROWTH	card	readout_in_wwox_system	mixed	yes	no	low_dose_arm;growth=body_weight_only	body weight, low dose
 C04_aav9_endpoint_families	DR-AAV-GLU10-HD	NEED-SYSTEMIC-GLYCAEMIA-GROWTH	card	readout_in_wwox_system	null	yes	no		blood glucose at postnatal day 10: no change reported
 C04_aav9_endpoint_families	DR-AAV-GLU10-LD	NEED-SYSTEMIC-GLYCAEMIA-GROWTH	card	readout_in_wwox_system	null	yes	no		blood glucose at postnatal day 10: no change reported
 EB-VGB-01	A-VGB-1	NEED-SEIZURE-CONTROL-SYMPTOMATIC	card	case_report_wwox_clinical	benefit	yes	yes	case_level;reading_depth_queried_not_full_read;concomitant_drugs_possible	reported spasm cessation/response in case reports; no comparator
@@ -19,8 +19,8 @@ EB-KD-01	A-KD-1	NEED-SEIZURE-CONTROL-SYMPTOMATIC	card	case_report_wwox_clinical	
 EB-ETX-01	A-ETX-1	NEED-T-TYPE-CALCIUM	card	readout_in_wwox_system	benefit	yes	no	one_experiment;graphical_reading;no_drug_by_genotype_test	one ethosuximide experiment in Wwox-loss mice (PTZ seizure score)
 EB-ETX-01	A-ETX-1	NEED-SEIZURE-CONTROL-SYMPTOMATIC	card	readout_in_wwox_system	benefit	yes	no	one_experiment;graphical_reading	same experiment, seizure readout
 G01_lithium_gsk3	DR-LI-001	NEED-SEIZURE-CONTROL-SYMPTOMATIC	card	readout_in_wwox_system	benefit	yes	no	nonspecific_also_in_wild_type	seizure stage in Wwox-null pups; the same card shows lowering in wild-type littermates, so not counted as recovery
-G01_lithium_gsk3	DR-LI-002	NEED-SEIZURE-CONTROL-SYMPTOMATIC	card	readout_other_disease	benefit	no	no	control_arm_wild_type	wild-type or comparison arm of the same experiment; not a WWOX-deficient readout
-G01_lithium_gsk3	DR-LI-003	NEED-SEIZURE-CONTROL-SYMPTOMATIC	card	readout_other_disease	benefit	no	no	control_arm_wild_type	wild-type or comparison arm of the same experiment; not a WWOX-deficient readout
+G01_lithium_gsk3	DR-LI-002	NEED-SEIZURE-CONTROL-SYMPTOMATIC	card	control_arm_same_experiment	benefit	no	no	control_arm_wild_type	wild-type / comparison arm of the same Wwox experiment as DR-LI-001: shows the lithium effect is not specific to the knockout; not an other-disease precedent
+G01_lithium_gsk3	DR-LI-003	NEED-SEIZURE-CONTROL-SYMPTOMATIC	card	control_arm_same_experiment	benefit	no	no	control_arm_wild_type	wild-type / comparison arm of the same Wwox experiment as DR-LI-001: shows the lithium effect is not specific to the knockout; not an other-disease precedent
 D01_a51	DR-D01-001	NEED-MYC-PROGENITOR-PROLIFERATION	card	readout_in_wwox_system	benefit	yes	no	reading_depth_UNKNOWN;multi_kinase_inhibitor;SOX2_is_a_readout_marker	fraction of SOX2+MYC+ progenitors in WWOX-deficient organoids; not counted as recovery
 E02_ldh_inhibition	DR-E02-001	NEED-LACTATE-LDH	CHEMBL1983350	target_engagement_assay	benefit	no	no	not_a_readout_in_a_WWOX_system	enzyme-level or non-WWOX cellular evidence of LDH engagement
 E02_ldh_inhibition	DR-E02-004	NEED-LACTATE-LDH	CHEMBL1983350	target_engagement_assay	benefit	no	no	not_a_readout_in_a_WWOX_system	enzyme-level or non-WWOX cellular evidence of LDH engagement
@@ -37,7 +37,7 @@ F01_glutamate_receptor_node	DR-W2-003	NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	CH
 F01_glutamate_receptor_node	DR-W2-004	NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	CHEMBL807	readout_other_disease	harm	no	no	adult_rat_oxygen_seizure_model;not_WWOX	memantine accelerated seizure stages: a harm datum kept apart from benefit
 F01_glutamate_receptor_node	DR-W2-005	NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	CHEMBL807	target_engagement_assay	benefit	no	no	IC50_spread_over_4_orders	NMDAR inhibition assays
 F01_glutamate_receptor_node	DR-W2-006	NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	CHEMBL1214124	label_statement	benefit	no	no	not_an_observation	mechanism and label of perampanel
-F01_glutamate_receptor_node	DR-W2-007	NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	CHEMBL1214124	case_report_wwox_clinical	null	yes	no	case_level;n=1;drug_not_isolated	one adult, seven drugs over decades: supports no statement about the drug
+F01_glutamate_receptor_node	DR-W2-007	NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	CHEMBL1214124	case_report_uninformative	null	no	no	case_level;n=1;drug_not_isolated	one adult on seven antiseizure drugs over decades: supports no statement about the drug; listed so that it cannot be read as a null for perampanel
 A01_pba_class	DR-A01-001	NEED-WWOX-MISSENSE-PROTEIN-RESCUE	card	readout_other_disease	benefit	no	no	not_WWOX;class_level	precedent in a non-WWOX variant system
 A01_pba_class	DR-A01-002	NEED-WWOX-MISSENSE-PROTEIN-RESCUE	card	readout_other_disease	benefit	no	no	not_WWOX;class_level	precedent in a non-WWOX variant system
 A01_pba_class	DR-A01-003	NEED-WWOX-MISSENSE-PROTEIN-RESCUE	card	readout_other_disease	null	no	no	not_WWOX;class_level	precedent in a non-WWOX variant system
@@ -51,3 +51,23 @@ E01_isr_modulators	DR-E01-001	NEED-ISR-ATTENUATION	card	readout_other_disease	be
 E01_isr_modulators	DR-E01-002	NEED-ISR-ATTENUATION	card	readout_other_disease	null	no	no	not_WWOX;abstract_only	precedent in a non-WWOX disease
 E01_isr_modulators	DR-E01-003	NEED-ISR-ATTENUATION	card	readout_other_disease	benefit	no	no	not_WWOX;abstract_only	precedent in a non-WWOX disease
 E01_isr_modulators	DR-E01-004	NEED-ISR-ATTENUATION	card	readout_other_disease	benefit	no	no	not_WWOX;abstract_only	precedent in a non-WWOX disease
+C04_aav9_endpoint_families	DR-AAV-GLU20-HD	NEED-SYSTEMIC-GLYCAEMIA-GROWTH	card	readout_in_wwox_system	normalised_vs_wild_type	yes	no	no_knockout_arm;high_dose_arm;growth_need_glycaemia_part	blood glucose day 20 high dose not different from wild type; no untreated-knockout arm, so no direction against the disease is written
+C04_aav9_endpoint_families	DR-AAV-GLU20-LD	NEED-SYSTEMIC-GLYCAEMIA-GROWTH	card	readout_in_wwox_system	not_normalised_vs_wild_type	yes	no	no_knockout_arm;low_dose_arm	blood glucose day 20 low dose one star below wild type
+C04_aav9_endpoint_families	DR-AAV-GFAPAREA-HD	NEED-WWOX-GENE-ADDITION	card	readout_in_wwox_system	normalised_vs_wild_type	yes	no	no_knockout_arm;high_dose_arm	GFAP-positive area, high dose not different from wild type; baseline missing
+C04_aav9_endpoint_families	DR-AAV-GFAPAREA-LD	NEED-WWOX-GENE-ADDITION	card	readout_in_wwox_system	not_normalised_vs_wild_type	yes	no	no_knockout_arm;low_dose_arm	GFAP-positive area, low dose two stars WORSE than wild type: low-dose failure kept visible
+C04_aav9_endpoint_families	DR-AAV-MBP-HD	NEED-WWOX-GENE-ADDITION	card	readout_in_wwox_system	unquantified	no	no	micrographs_only;authors_interpretation	MBP: representative micrographs, no axis; the authors read near-complete rescue; not counted
+C04_aav9_endpoint_families	DR-AAV-MBP-LD	NEED-WWOX-GENE-ADDITION	card	readout_in_wwox_system	unquantified	no	no	micrographs_only;authors_interpretation	MBP low dose: authors read partial recovery from unquantified micrographs; not counted
+D01_a51	DR-D01-002	NEED-MYC-PROGENITOR-PROLIFERATION	card	readout_in_wwox_system	null	yes	no	reading_depth_UNKNOWN;same_organoid_experiment_as_DR-D01-001	layer-neuron markers: no recovery measured, CTIP2 far below wild type; the split that DR-D01-001 hides
+EB-VGB-01	A-VGB-4	NEED-SEIZURE-CONTROL-SYMPTOMATIC	card	case_report_wwox_clinical	unresolved	no	no	case_level;clinical_not_electrographic	reported freedom is clinical, not electrographic: an unmeasured cell for the pursued endpoint
+EB-VGB-01	A-VGB-5	NEED-SEIZURE-CONTROL-SYMPTOMATIC	card	case_report_wwox_clinical	null	yes	no	case_level;reported_null;WWOX-DEE_without_West	reported null effect on spasms
+EB-VGB-01	A-VGB-6	NEED-SEIZURE-CONTROL-SYMPTOMATIC	card	case_report_wwox_clinical	null	yes	no	case_level;reported_null;missense_genotype	reported null effect on spasms in a missense genotype
+EB-VGB-01	A-VGB-9	NEED-SEIZURE-CONTROL-SYMPTOMATIC	card	out_of_scope_endpoint	unresolved	no	no	developmental_outcome;CLAIM_031	symptomatic outcome is not disease modification; not a seizure readout
+EB-VGB-01	A-VGB-11	NEED-SEIZURE-CONTROL-SYMPTOMATIC	card	case_report_uninformative	unresolved	no	no	combined_with_ketogenic_diet	two concurrent interventions: the response cannot be attributed to the drug
+EB-KD-01	A-KD-2	NEED-SEIZURE-CONTROL-SYMPTOMATIC	card	case_report_uninformative	unresolved	no	no	unmeasured_cell	neither response nor non-response recorded for this class
+EB-KD-01	A-KD-3	NEED-SEIZURE-CONTROL-SYMPTOMATIC	card	out_of_scope_endpoint	unresolved	no	no	developmental_delay_label_one_timepoint	between-patient label, not a change under treatment
+EB-ETX-01	A-ETX-3	NEED-T-TYPE-CALCIUM	tool_no_catalogue_identity	readout_other_disease	harm	no	no	not_WWOX;progenitor_viability_in_vitro	embryonic cortical progenitor viability in culture; not a WWOX system
+H01_apinocaltamide_ttype	DR-H01-001	NEED-T-TYPE-CALCIUM	card	readout_other_disease	benefit	no	no	not_WWOX;abstract_only;GAERS_rat	apinocaltamide, spike-and-wave discharges in a genetic absence rat
+H01_apinocaltamide_ttype	DR-H01-002	NEED-T-TYPE-CALCIUM	card	readout_other_disease	benefit	no	no	not_WWOX;abstract_only	audiogenic seizures; a PTZ test in a Wwox model is not among them
+H01_apinocaltamide_ttype	DR-H01-003	NEED-T-TYPE-CALCIUM	card	readout_other_disease	null	no	no	not_WWOX;abstract_only	no effect on focal-onset kindled seizures
+H01_apinocaltamide_ttype	DR-H01-004	NEED-T-TYPE-CALCIUM	tool_no_catalogue_identity	readout_other_disease	harm	no	no	not_apinocaltamide;progenitor_viability_in_vitro	other T-type blockers lowered progenitor viability in vitro: class-level signal only
+A02_proteasome_inhibitor_class	DR-A02-003	NEED-WWOX-MISSENSE-PROTEIN-RESCUE	card	readout_other_disease	unresolved	no	no	not_WWOX;direction_UNKNOWN	ASPA C152W stabilised-protein activity; direction not written

@@ -71,7 +71,13 @@ def load_artefacts(path: Path = DEFAULT_ARTEFACTS) -> list[dict]:
         return [{**r, "symbol": r["symbol"].upper()} for r in csv.DictReader(fh, delimiter="\t")]
 
 
-def artefact_reason(e: dict, t: dict, rules: list[dict]) -> str | None:
+def early_alphabet_genes(entries: list[dict], top: float) -> set[str]:
+    """The first `top` fraction of the sorted distinct DGIdb gene symbols (A12M3, A1BG, AAMP, ... ABAT, ABCA1 ...)."""
+    syms = sorted({(t.get("gene") or "").upper() for e in entries for t in e["targets"] if t["source"] == "DGIdb interaction" and t.get("gene")})
+    return set(syms[: int(len(syms) * top) + 1])
+
+
+def artefact_reason(e: dict, t: dict, rules: list[dict], early: dict | None = None) -> str | None:
     """Why a catalogue target row must not count as a link, or None.
     require_second_source: the DGIdb row from `claim_source` on `symbol` stands alone (no other source on that gene for this record).
     alias_risk:<PARTNER>: a DGIdb row on `symbol` while the same record carries PARTNER and no ChEMBL row on `symbol`
@@ -90,9 +96,17 @@ def artefact_reason(e: dict, t: dict, rules: list[dict]) -> str | None:
                 return True
         return False
     for r in rules:
-        if r["symbol"] != gene:
-            continue
         if r["claim_source"] not in ("*", t.get("claim_source")):
+            continue
+        if r["rule"].startswith("early_alphabet_run"):
+            k = r["rule"]
+            if early and k in early and gene in early[k] and t.get("claim_source") == r["claim_source"]:
+                minn = int(k.split("min=")[1].split(":")[0])
+                run = {(u.get("gene") or "").upper() for u in e["targets"] if u["source"] == "DGIdb interaction" and u.get("claim_source") == r["claim_source"]} & early[k]
+                if len(run) >= minn and not others(gene, exclude_src=t.get("claim_source")):
+                    return f"source_artefact: {t.get('claim_source')} alphabetical-prefix gene-list expansion ({len(run)} early-alphabet symbols on this record) and no second source for {gene} (generic detector, source_artefacts.tsv)"
+            continue
+        if r["symbol"] != gene:
             continue
         if r["rule"] == "require_second_source" and not others(gene, exclude_src=t.get("claim_source")):
             return f"source_artefact: {t.get('claim_source')} row on {gene} without a second source (see source_artefacts.tsv)"
@@ -122,6 +136,10 @@ class Index:
     def __init__(self, entries: list[dict], artefacts: list[dict] | None = None):
         self.entries = entries
         self.artefacts = artefacts or []
+        self.early = {}
+        for r in self.artefacts:
+            if r["rule"].startswith("early_alphabet_run"):
+                self.early[r["rule"]] = early_alphabet_genes(entries, float(r["rule"].split("top=")[1]))
         self.by_id = {e["id"]: e for e in entries}
         self.chembl_human = collections.defaultdict(list)   # SYMBOL -> [(entry, target)]
         self.chembl_nonhuman = collections.defaultdict(list)
@@ -218,7 +236,7 @@ def associations_for_need(need: dict, idx: Index, roles: dict) -> dict:
             raw = t.get("action_type") if src.startswith("ChEMBL") else t.get("interaction_type")
             ad = action_direction(raw)
             label, why = consistency(need, tgt, ad, roles)
-            excl = artefact_reason(e, t, idx.artefacts)
+            excl = artefact_reason(e, t, idx.artefacts, idx.early)
             placeholder = (e["name"] or "").strip().lower() in PLACEHOLDER_NAMES
             if placeholder:
                 excl = excl or "placeholder: DGIdb drug_name literally NULL/none, not a compound"
@@ -246,7 +264,8 @@ def associations_for_need(need: dict, idx: Index, roles: dict) -> dict:
                 "need_direction": nd, "consistency": label, "consistency_why": why,
                 "list_label": "exploration list: the need's direction is unresolved; this is not a list of favourable treatments" if nd in ("uncertain", "modulate") else "direction-evaluable need",
                 "reference_ids": t.get("reference_ids", []), "mechanism_of_action": t.get("mechanism_of_action"),
-                "excluded_from_counts": excl, "certainty_qualifier": (roles.get((need["id"], tgt["symbol"].upper())) or {}).get("qualifier") if label in ("consistent", "opposed") else None,
+                "excluded_from_counts": excl,
+                "excluded_reason": (None if not excl else ("alias_risk" if excl.startswith("alias_risk") else ("placeholder" if excl.startswith("placeholder") else "source_artefact"))), "certainty_qualifier": (roles.get((need["id"], tgt["symbol"].upper())) or {}).get("qualifier") if label in ("consistent", "opposed") else None,
                 "limits": limits,
                 "pharmacology": {"status_class": e["status_class"], "potency": "NOT_CARRIED (catalogue holds ids and direction only)",
                                  "chembl_max_phase": next((s.get("max_phase") for s in e["status_records"] if s["source"] == "ChEMBL"), None)},
@@ -295,10 +314,10 @@ def compound_to_needs(entry: dict, needs: list[dict], idx: Index, roles: dict, f
                     continue
                 ad = action_direction(raw)
                 label, why = consistency(need, tgt, ad, roles)
-                excl = artefact_reason(own, t, idx.artefacts)
+                excl = artefact_reason(own, t, idx.artefacts, idx.early)
                 if excl:
                     label, why = "not_evaluable", excl
-                out.append({"excluded_from_counts": excl, "need": need["id"], "target": tgt["symbol"], "target_kind": tgt["target_kind"], "link_source": t["source"],
+                out.append({"excluded_from_counts": excl, "excluded_reason": (None if not excl else ("alias_risk" if excl.startswith("alias_risk") else ("placeholder" if excl.startswith("placeholder") else "source_artefact"))), "need": need["id"], "target": tgt["symbol"], "target_kind": tgt["target_kind"], "link_source": t["source"],
                             "action_raw": raw, "action_on_target": ad, "need_direction": nd, "consistency": label, "consistency_why": why,
                             "exploration_only": nd in ("uncertain", "modulate"), "via_family_member": via})
     seen, uniq = set(), []

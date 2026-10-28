@@ -1,4 +1,7 @@
 {
+ "access_caveats": [
+  "dsld: 981 of 4697 bulk-list names probed (name-only evidence); affects access categories only"
+ ],
  "catalogue_coverage": {
   "excluded_rows": {
    "alias_risk_rows_unresolved": [
@@ -70,9 +73,9 @@
   "union_with_pathway_members_records": 1337
  },
  "evaluated_vs_records": {
-  "interventions_with_a_listed_pertinent_readout_assertion": 9,
+  "interventions_with_a_listed_pertinent_readout_assertion": 7,
   "meaning": "'examined' = target-matched against the needs; the last figure counts matrix rows (families or card interventions) with a pertinent WWOX-system readout or case report",
-  "records_evaluated_against_wwox_needs_with_any_observation": 9,
+  "records_evaluated_against_wwox_needs_with_any_observation": 7,
   "records_examined_by_target_match": 44211,
   "records_in_catalogue": 44211,
   "records_with_a_headline_link": 1026,
@@ -99,11 +102,11 @@
  "matrix": {
   "L1_documented": 1103,
   "L1_none_found": 9,
-  "L1_not_evaluable": 25,
+  "L1_not_evaluable": 27,
   "L1_states": {
    "documented": 1103,
    "none_found": 9,
-   "not_evaluable": 25,
+   "not_evaluable": 27,
    "pathway_member_only": 383
   },
   "L2_coherent": 125,
@@ -111,34 +114,34 @@
    "coherent": 125,
    "direction_unresolved": 302,
    "none": 58,
-   "not_evaluable": 1013,
+   "not_evaluable": 1015,
    "opposed": 22
   },
-  "L3_observed": 10,
+  "L3_observed": 9,
   "L3_states": {
-   "measured_null_only": 1,
    "none_in_cards": 1500,
    "observed_case_level_only": 2,
-   "observed_wwox_system": 8,
-   "precedent_other_disease_only": 6,
+   "observed_depth_unknown": 1,
+   "observed_wwox_system": 7,
+   "precedent_other_disease_only": 9,
    "target_engagement_only": 3
   },
   "L4_observed": 5,
   "L4_states": {
-   "none_in_record": 1515,
+   "none_in_record": 1517,
    "observed_case_level": 2,
    "observed_experimental": 3
   },
-  "cells_nonempty": 1520,
-  "cells_possible_rows_x_needs": 29392,
+  "cells_nonempty": 1522,
+  "cells_possible_rows_x_needs": 29436,
   "levels_are_never_summed": true,
   "row_kinds": {
    "intervention_without_catalogue_identity": 12,
    "molecule_family": 1315,
    "non_molecule_intervention": 6,
-   "tool_compound_or_genetic_precedent_not_in_catalogue": 3
+   "tool_compound_or_genetic_precedent_not_in_catalogue": 5
   },
-  "rows": 1336
+  "rows": 1338
  },
  "needs": {
   "count": 22,
@@ -600,9 +603,9 @@
     "cards_citing_need": [
      "D01_a51"
     ],
-    "cells_L3_observed": 1,
+    "cells_L3_observed": 0,
     "cells_L3_observed_case_level_only": 0,
-    "cells_L3_observed_wwox_system": 1,
+    "cells_L3_observed_wwox_system": 0,
     "cells_L4_observed": 0,
     "direction": "uncertain",
     "excluded_records_by_reason": {
@@ -1320,28 +1323,36 @@
   }
  },
  "observations": {
-  "assertions_listed_in_pertinence_table": 51,
-  "assertions_not_assessed_for_pertinence_not_counted": 20,
+  "assertions_listed_in_pertinence_table": 71,
+  "assertions_not_assessed_for_pertinence_not_counted": 0,
   "axis_cards_not_interventions": 3,
   "card_interventions": 28,
   "data_assertions_in_intervention_cards": 71,
   "listed_by_evidence_kind": {
-   "case_report_wwox_clinical": 6,
+   "case_report_uninformative": 3,
+   "case_report_wwox_clinical": 8,
+   "control_arm_same_experiment": 2,
    "label_statement": 1,
-   "readout_in_wwox_system": 15,
-   "readout_other_disease": 19,
+   "out_of_scope_endpoint": 2,
+   "readout_in_wwox_system": 22,
+   "readout_other_disease": 23,
    "safety_signal": 2,
    "target_engagement_assay": 9
   },
   "listed_by_sign": {
-   "benefit": 36,
-   "harm": 3,
+   "benefit": 38,
+   "harm": 5,
    "mixed": 3,
-   "null": 9,
-   "partial_benefit": 1
+   "normalised_vs_wild_type": 2,
+   "not_normalised_vs_wild_type": 2,
+   "null": 13,
+   "partial_benefit": 1,
+   "unquantified": 2,
+   "unresolved": 6
   },
   "note": "an assertion is counted per (assertion, need) row of the pertinence table; L3/L4 cells count (row, need) pairs"
  },
+ "plain_statement": "None of the interventions in this matrix is a catalogued repurposing candidate with a controlled recovery in a WWOX system. The only experimental L4 cells are an AAV9 gene therapy (high dose, n 5 for spike-wave discharges; for growth, body weight only, blood glucose unchanged); the other L4 cells are uncontrolled case-level clinical reports (vigabatrin, ketogenic diet). Ethosuximide, lithium and a tool compound (d-APV) have single WWOX-system readouts without recovery status. Compound-target links are source statements, not evidence of effect.",
  "priorities": {
   "all_dispositions_listed": [
    "consistent_mechanism_candidate",
@@ -1355,7 +1366,7 @@
   "by_disposition": {
    "consistent_mechanism_candidate": 125,
    "exploration_candidate": 216,
-   "insufficient_data": 327,
+   "insufficient_data": 329,
    "no_catalogue_link_found": 7,
    "opposite_mechanism": 2,
    "source_queried_without_result": 2
@@ -1363,7 +1374,7 @@
   "by_disposition_cells": {
    "consistent_mechanism_candidate": 125,
    "exploration_candidate": 216,
-   "insufficient_data": 327,
+   "insufficient_data": 329,
    "no_catalogue_link_found": 7,
    "opposite_mechanism": 2,
    "source_queried_without_result": 2
@@ -1371,7 +1382,7 @@
   "by_disposition_distinct_families_or_rows": {
    "consistent_mechanism_candidate": 103,
    "exploration_candidate": 208,
-   "insufficient_data": 290,
+   "insufficient_data": 292,
    "no_catalogue_link_found": 6,
    "opposite_mechanism": 2,
    "source_queried_without_result": 1
@@ -1380,7 +1391,7 @@
   "pairs_not_prioritised": {
    "not_prioritised_no_card_no_coherence_no_approval_or_access": 841
   },
-  "records": 679
+  "records": 681
  },
  "schema": "legend.wwox.coverage/1",
  "source_state_vocabulary": "OK | STALE_EXPORT | STALE_AFTER_FAILED_REFRESH | PARTIAL | FAILED | INCOMPLETE | NOT_FETCHED; hard problems (FAILED, INCOMPLETE, NOT_FETCHED) of ANY source turn dispositions into incomplete_or_failed_query; stale states add a caveat to every absence-type result",
