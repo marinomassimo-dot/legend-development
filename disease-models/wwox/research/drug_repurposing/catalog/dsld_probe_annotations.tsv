@@ -16,7 +16,7 @@ Lipoic acid	alpha-lipoic acid	none	Ambiguous: DSLD has a separate group 'Lipoic 
 Thioctic acid	alpha-lipoic acid	DGIDB:e95b02c97cde	Synonym of the ALA groups in DSLD's own list; only 1 of the sampled labels uses the word.
 R-alpha lipoic acid	alpha-lipoic acid	none	Enantiomer-specific; form not separable from racemate in the catalogue.
 Pyruvate	pyruvate	CHEMBL1162144	Homonym family: 'Pyruvate' (group 1576, 3 synonyms) versus calcium, sodium, potassium and creatine pyruvate (separate groups); the sample mixes them.
-Calcium pyruvate	pyruvate	none	Salt form; commonly sold; 146 text hits.
+Calcium pyruvate	pyruvate	none	Salt form; 146 text hits.
 Sodium pyruvate	pyruvate	DGIDB:b0abe63ebe7b	Salt form; 16 text hits.
 Pyruvic acid	pyruvate	DGIDB:3a65595da504	Acid form; 42 text hits, 3 sampled labels name it.
 Beta-hydroxybutyrate	beta-hydroxybutyrate	CAT:EC:01821	Two DSLD groups (6978 'Beta Hydroxybutyrate' with 56 synonyms, 6987); salts are separate groups (calcium, magnesium, potassium, sodium, creatine); partial matches in the sample are salts. Stereochemistry (D versus L versus racemic) is not carried by the name.
