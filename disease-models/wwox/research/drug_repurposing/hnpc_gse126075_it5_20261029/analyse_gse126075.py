@@ -17,11 +17,17 @@ GSM = {"hNSC": "GSM3590948", "hNSC_WWOX_del": "GSM3590949", "Neurons": "GSM35909
 F_MAT = "GSE126075_TPMexpression_all_genes_all_samples_merged.txt.gz"
 F_TSS = "GSE126075_TSScoordinates_TPMexpression_all_samples_F5mapped.txt.gz"
 sha = lambda p: hashlib.sha256(open(p, "rb").read()).hexdigest()
-N = {}
+# Library size (tags) is recovered from the deposited TSS table: every non-zero TPM is an integer multiple of 1e6/N, so N = 1e6 / smallest non-zero TPM
+# (the hNSC total is 51,007,825, NOT its BED line count of 31,702,049; the other three arms equal their BED line counts).
+_t = list(csv.reader(gzip.open(f"{geo}/{F_TSS}", "rt")))
+_h = _t[0]; _c0 = _h.index("consensus.cluster")
+Ntags = {}
+for a in ARMS:
+    j = _h.index(a.replace("Neurons", "neurons"), _c0); v = [float(x[j]) for x in _t[1:] if float(x[j]) > 0]
+    m = min(v); Ntags[a] = int(round(1e6 / m)); assert all(abs(x / m - round(x / m)) < 1e-6 for x in v), a
+BEDLINES = {}
 for l in open(f"{geo}/bed_streamed_tagcounts_and_sha256.tsv"):
-    g, n, _ = l.split(); N[g] = int(n)
-Ntags = {a: N[GSM[a]] for a in ARMS}
-
+    g, n, _ = l.split(); BEDLINES[g] = int(n)
 rows = list(csv.reader(gzip.open(f"{geo}/{F_MAT}", "rt"), delimiter="\t"))
 assert rows[0] == ["Gene"] + ARMS, rows[0]
 genes = [r[0] for r in rows[1:]]
@@ -189,7 +195,7 @@ def wtsv(name, recs):
         f.write("\t".join(keys) + "\n")
         for r in recs: f.write("\t".join(str(r.get(k, "")) for k in keys) + "\n")
 wtsv("set_summary.tsv", summ); wtsv("per_gene_in_sets.tsv", pergene)
-params = dict(seed=SEED, ndraw=NDRAW, inputs={F_MAT: sha(f"{geo}/{F_MAT}"), F_TSS: sha(f"{geo}/{F_TSS}"), "markers": sha(markers)},
+params = dict(bed_line_counts={a: BEDLINES[GSM[a]] for a in ARMS}, seed=SEED, ndraw=NDRAW, inputs={F_MAT: sha(f"{geo}/{F_MAT}"), F_TSS: sha(f"{geo}/{F_TSS}"), "markers": sha(markers)},
               library_tags=Ntags, matrix_colsum=dict(zip(ARMS, colsum.tolist())), n_genes_matrix=len(genes),
               WWOX_control=wwox, WWOX_silenced_all_three_normalisations_both_stages=wwox_ok, stage_positive_control=pos, stage_positive_control_ok=pos_ok,
               global_distribution=glob, decisions=decision,

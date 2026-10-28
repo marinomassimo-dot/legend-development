@@ -7,10 +7,10 @@ p7_organoid_key_genes.tsv, p7_params.json. No LINCS analysis was repeated and no
 
 ## 0. Rules that govern this comparison
 - Replicates are never pooled across studies; no combined statistic exists here. Each system keeps its own universe of measurable genes (organoid
-  RNA-seq 15,841 genes with mean count at least 10 per arm; CAGE hNPC 9,275 and neurons 8,477 genes with estimated tags at least 10 in both arms).
+  RNA-seq 15,841 genes with mean count at least 10 per arm; CAGE hNPC 9,297 and neurons 8,477 genes with estimated tags at least 10 in both arms).
 - The same method was applied to both datasets so a set is read the same way (per-arm library-normalised mean, log2 ratio, median-centred, expression-decile-matched
   random sets, 10,000 draws, seed 20261029); a set "outside the null" is a rank among matched random sets of ONE comparison, never a p value for WWOX.
-- P6 has ONE library per arm: every statement about the CAGE systems is descriptive. The organoid has 4 knockout vs 2 wild-type libraries (minimum single-gene
+- P6 has ONE library per arm (library totals recovered from the TSS table: control hNPC 51.0M tags, silenced 14.3M): every statement about the CAGE systems is descriptive. The organoid has 4 knockout vs 2 wild-type libraries (minimum single-gene
   permutation p 1/15). The two organoid analyses (earlier ones and this one) are re-analyses of the same libraries and are ONE system, not two.
 - Concordance means: same sign AND each system outside its own matched null. It never goes beyond transcript; it is not flux, enzyme activity, protein or rescue.
 - What differs and stays different: knockout (exon deletion; WWOX mRNA not lower, +0.42, so the transcript is not a knockout check there) versus knockdown of unquantified depth
@@ -35,9 +35,9 @@ Limit: the sign is derived from the GSEA convention and the paper's own sentence
 
 | Programme | Organoid KO (4 v 2, RNA-seq) | shWWOX hNPC (n=1, CAGE) | shWWOX neurons (n=1, CAGE) | Verdict |
 |---|---|---|---|---|
-| ATF4 mRNA | flat (-0.23) | flat (-0.15) | not measurable | concordant but uninformative (ATF4 is translationally controlled) |
+| ATF4 mRNA | flat (-0.23) | flat (-0.15) | sparse (6 vs 41 tags; below the 10-tag rule, centred about +2.5) | concordant in hNPC only, uninformative (ATF4 is translationally controlled) |
 | ISR target set (12; ATF4, XBP1 excluded) | LOWER -0.33 (outside null); CHAC1 -0.76, TRIB3 -0.68, SESN2 -0.39 | HIGHER +0.64 (outside); CHAC1 +2.6, TRIB3 +1.2, SESN2 +1.0 | HIGHER +1.32 (outside) | DISCORDANT in sign. Only PSAT1 is up in all (+0.39, +1.3, +1.6) |
-| UPR branches | flat | weakly higher (rank 0.040) | flat | one system only, weak |
+| UPR branches | flat | flat (rank 0.051) | flat | no signal in any system |
 | OXPHOS nuclear transcripts (73) | -0.20 (outside) but the unrelated cytosolic-ribosome control is -0.26 | 0.00 (null edge); control -0.25 | -0.33 (outside); control -0.47 | not specific: moves with an unrelated abundant class; NOT comparable as a respiratory signal |
 | Mitochondrial translation (MRPL/MRPS) | LOWER -0.15 (outside) | HIGHER +0.28 (outside) | -0.11 (inside) | DISCORDANT organoid versus hNPC |
 | Mitochondrial import | -0.10 (inside) | HIGHER +0.54 (outside) | +0.12 (inside) | one system only |
@@ -82,3 +82,6 @@ sets are author-chosen and about a dozen were examined without correction; centr
 - Discovery/dismissal ledger line (suggested): "GSE126075 holds one CAGE library per arm (4 libraries): the paper's DE and GSEA statistics cannot be re-derived from the deposit, and WWOX is not lower in the hNPC library at tag level
   (3.35 versus 2.90 TPM); descriptive P6 results (ISR targets higher, mito translation/import higher in hNPC) are discordant with the WWOX-knockout organoid (ISR targets lower, mito translation lower); not independent validation of anything."
 - Hypothesis text (HIF1A-PDK-PDH chain): "PDK1 is lower, not higher, in the two human neural WWOX-deficient transcript systems held (organoid -0.39; shWWOX hNPC -0.67, n=1); glycolytic targets and LDHA are higher in both; the middle link is unsupported at transcript level."
+
+## 6. Correction note
+The P6 numbers used here follow the corrected P6 run (library totals recovered from the deposited TSS table, hNSC control 51,007,825 tags, after the Orchestrator's independent verification). Eight of the 11 measurable ISR members are higher at both CAGE stages (not five); ATF4 in neurons is sparse, not absent; neuron-stage values carry the global composition shift of about -1.3 log2; the control-arm identity (shScrambled versus untransduced) and the 9,427-gene equivalence to the paper's GSEA universe are paper-sourced and consistent with, not proven by, GEO. P6 remains n=1 per arm and descriptive.
