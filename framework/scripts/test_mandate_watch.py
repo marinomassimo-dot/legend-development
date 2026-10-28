@@ -156,5 +156,82 @@ class Watch(unittest.TestCase):
         self.assertEqual(e.check([{"sessionId": SID, "status": "busy"}], self_call=True)["state"], "STOPPED_RESUMABLE")   # (the request is already pending: dedupe)
 
 
+class Jobs(unittest.TestCase):
+    """Background jobs are judged by their own process identity, not by output recency."""
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        os.environ["LEGEND_MANDATE_WATCH_STATE"] = self.tmp.name
+        self.cont = {"verdict": "CONTINUE", "message": "work remains"}
+
+    def tearDown(self):
+        for j in mw.load_jobs(TASK):
+            if j["state"] == "ALIVE":
+                try:
+                    os.kill(j["pid"], 9)
+                except OSError:
+                    pass
+        os.environ.pop("LEGEND_MANDATE_WATCH_STATE", None)
+        self.tmp.cleanup()
+
+    def wait_state(self, want, secs=8):
+        end = time.time() + secs
+        while time.time() < end:
+            js = mw.load_jobs(TASK)
+            if js and js[-1]["state"] == want:
+                return js[-1]
+            time.sleep(0.1)
+        self.fail(f"job never reached {want}: {mw.load_jobs(TASK)}")
+
+    def classify(self, **kw):
+        return mw.classify(self.cont, None, True, True, 99999, {}, "sig", NOW, jobs=mw.summarise_jobs(mw.load_jobs(TASK)), **kw)
+
+    def test_silent_long_job_is_running_even_when_the_session_is_idle_and_silent(self):
+        mw.job_run(TASK, "battery", ["sleep", "30"])
+        r = self.classify()
+        self.assertEqual((r["state"], r["action"]), ("RUNNING", "NONE"))
+        self.assertIn("alive", r["why"])
+
+    def test_same_label_is_not_started_twice(self):
+        a = mw.job_run(TASK, "battery", ["sleep", "30"])
+        b = mw.job_run(TASK, "battery", ["sleep", "30"])
+        self.assertTrue(a["started"])
+        self.assertFalse(b["started"])
+        self.assertEqual(a["pid"], b["pid"])
+
+    def test_finished_job_is_collected_once(self):
+        mw.job_run(TASK, "quick", ["true"])
+        j = self.wait_state("DONE")
+        r = self.classify()
+        self.assertEqual(r["action"], "RESUME")
+        self.assertIn("finished job", r["why"])
+        self.assertTrue(mw.job_collect(TASK, j["id"]))
+        self.assertNotIn("finished job", self.classify()["why"])
+
+    def test_job_killed_without_an_exit_status_is_dead_not_finished(self):
+        j = mw.job_run(TASK, "doomed", ["sleep", "30"])
+        os.kill(j["pid"], 9)
+        self.wait_state("DEAD")
+        r = self.classify()
+        self.assertEqual(r["action"], "RESUME")
+        self.assertIn("DIED", r["why"])
+
+    def test_reused_pid_with_another_start_time_is_not_alive(self):
+        j = mw.job_run(TASK, "reuse", ["sleep", "30"])
+        job = mw.load_jobs(TASK)[-1]
+        job["start_ticks"] += 1                       # the recorded start time no longer matches the process
+        self.assertEqual(mw.job_state(job), "DEAD")
+
+    def test_complete_record_without_the_push_is_not_complete(self):
+        done = {"verdict": "RELEASED", "message": "MANDATE_STATE COMPLETE"}
+        r = mw.classify(done, None, True, True, 99999, {}, "sig", NOW, push_missing="the closing commit is not on development/main")
+        self.assertEqual((r["state"], r["action"]), ("STOPPED_RESUMABLE", "RESUME"))
+        self.assertIn("COMPLETE but", r["why"])
+        ok = mw.classify(done, None, True, True, 99999, {}, "sig", NOW)
+        self.assertEqual((ok["state"], ok["action"]), ("COMPLETE", "NONE"))
+        paused = mw.classify({"verdict": "RELEASED", "message": "MANDATE_STATE PAUSED"}, None, True, True, 99999, {}, "sig", NOW, push_missing="x")
+        self.assertEqual((paused["state"], paused["action"]), ("PAUSED", "NONE"))
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
