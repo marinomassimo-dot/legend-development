@@ -1,0 +1,39 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261028-27668180-01",
+ "study_id": {
+  "pmid": "27668180",
+  "doi": "10.1016/j.ebcr.2016.08.002"
+ },
+ "analysis_at": "2026-10-28T19:40:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-d (stated assumption of the Orchestrator), mandate IT4 step E1 question B, task branch task/it4-e1b; context_policy QUESTION_DRIVEN (held: the GABA-aminotransferase inactivator exposure-limit question, the vigabatrin brain-MRI abnormality record CLAIM 001, and the catalogue split of CPP-115 into two families). Route: Europe PMC fullTextXML for PMC5024311 (CC BY-NC-ND) saved unmodified; the article body was read paragraph by paragraph from the JATS and the Figure 1 caption read; the figure image was not opened and the reference list was not read. Every statement is about CPP-115 in one non-WWOX child and is not WWOX evidence.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID27668180_Doumlele2016_PMC5024311.xml",
+ "source_fingerprint": "213b74bc44cd82251e482acd03bfe9c67242335f04a10958f76363479a1ccea7",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_present",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "not_present",
+  "references": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/cards/H02_gabaat_inactivator_myelin_exposure.packet.json",
+  "disease-models/wwox/research/drug_repurposing/closed_loop_it4_e1b_20261028/README.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "card assertion DR-H02-009 with its locator",
+  "Figure 1 caption only; figure image and reference list not read (declared debt)"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read",
+ "event_at": "2026-10-28T19:40:00Z"
+}

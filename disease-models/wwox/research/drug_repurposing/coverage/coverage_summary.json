@@ -105,11 +105,11 @@
  ],
  "matrix": {
   "L1_documented": 1307,
-  "L1_none_found": 9,
+  "L1_none_found": 12,
   "L1_not_evaluable": 27,
   "L1_states": {
    "documented": 1307,
-   "none_found": 9,
+   "none_found": 12,
    "not_evaluable": 27,
    "pathway_member_only": 327
   },
@@ -117,8 +117,8 @@
   "L2_states": {
    "coherent": 103,
    "direction_unresolved": 402,
-   "none": 60,
-   "not_evaluable": 1092,
+   "none": 62,
+   "not_evaluable": 1093,
    "opposed": 13
   },
   "L3_observed": 9,
@@ -127,25 +127,25 @@
    "observed_case_level_only": 2,
    "observed_depth_unknown": 1,
    "observed_wwox_system": 7,
-   "precedent_other_disease_only": 9,
-   "target_engagement_only": 3
+   "precedent_other_disease_only": 11,
+   "target_engagement_only": 4
   },
   "L4_observed": 4,
   "L4_states": {
-   "none_in_record": 1666,
+   "none_in_record": 1669,
    "observed_case_level": 1,
    "observed_experimental": 3
   },
-  "cells_nonempty": 1670,
-  "cells_possible_rows_x_needs": 32384,
+  "cells_nonempty": 1673,
+  "cells_possible_rows_x_needs": 32406,
   "levels_are_never_summed": true,
   "row_kinds": {
    "intervention_without_catalogue_identity": 12,
-   "molecule_family": 1449,
+   "molecule_family": 1450,
    "non_molecule_intervention": 6,
    "tool_compound_or_genetic_precedent_not_in_catalogue": 5
   },
-  "rows": 1472
+  "rows": 1473
  },
  "needs": {
   "count": 22,
@@ -1391,33 +1391,33 @@
   }
  },
  "observations": {
-  "assertions_listed_in_pertinence_table": 71,
+  "assertions_listed_in_pertinence_table": 82,
   "assertions_not_assessed_for_pertinence_not_counted": 0,
   "axis_cards_not_interventions": 3,
-  "card_interventions": 28,
-  "data_assertions_in_intervention_cards": 71,
+  "card_interventions": 29,
+  "data_assertions_in_intervention_cards": 82,
   "listed_by_evidence_kind": {
    "case_report_uninformative": 3,
    "case_report_wwox_clinical": 8,
    "effect_in_wild_type_arm": 2,
    "genotype_comparison_vs_wild_type": 5,
-   "label_statement": 1,
-   "out_of_scope_endpoint": 2,
+   "label_statement": 2,
+   "out_of_scope_endpoint": 3,
    "readout_in_wwox_system": 17,
-   "readout_other_disease": 23,
-   "safety_signal": 2,
-   "target_engagement_assay": 9
+   "readout_other_disease": 29,
+   "safety_signal": 4,
+   "target_engagement_assay": 10
   },
   "listed_by_sign": {
-   "benefit": 37,
-   "harm": 5,
+   "benefit": 39,
+   "harm": 12,
    "mixed": 1,
    "normalised_vs_wild_type": 3,
    "not_normalised_vs_wild_type": 2,
    "null": 13,
    "partial_benefit": 3,
    "unquantified": 2,
-   "unresolved": 6
+   "unresolved": 8
   },
   "note": "an assertion is counted per (assertion, need) row of the pertinence table; L3/L4 cells count (row, need) pairs"
  },
@@ -1437,31 +1437,31 @@
    "consistent_mechanism_candidate": 103,
    "exploration_candidate": 220,
    "insufficient_data": 356,
-   "no_catalogue_link_found": 7,
+   "no_catalogue_link_found": 8,
    "opposite_mechanism": 2,
-   "source_queried_without_result": 2
+   "source_queried_without_result": 4
   },
   "by_disposition_cells": {
    "consistent_mechanism_candidate": 103,
    "exploration_candidate": 220,
    "insufficient_data": 356,
-   "no_catalogue_link_found": 7,
+   "no_catalogue_link_found": 8,
    "opposite_mechanism": 2,
-   "source_queried_without_result": 2
+   "source_queried_without_result": 4
   },
   "by_disposition_distinct_families_or_rows": {
    "consistent_mechanism_candidate": 103,
    "exploration_candidate": 212,
    "insufficient_data": 317,
-   "no_catalogue_link_found": 6,
+   "no_catalogue_link_found": 7,
    "opposite_mechanism": 2,
-   "source_queried_without_result": 1
+   "source_queried_without_result": 2
   },
-  "exploration_flagged": 338,
+  "exploration_flagged": 339,
   "pairs_not_prioritised": {
    "not_prioritised_no_card_no_coherence_no_approval_or_access": 980
   },
-  "records": 690
+  "records": 693
  },
  "schema": "legend.wwox.coverage/1",
  "search_completeness": {

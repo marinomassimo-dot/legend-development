@@ -110,7 +110,8 @@ def main() -> int:
 
 
 def NW_MISSING(row, packet):
-    wwox_ctx = ("Wwox-null" in row["context"]["disease_id"]) or ("organoid" in row["context"]["disease_id"])
+    wwox_ctx = ("Wwox-null" in row["context"]["disease_id"]) or ("organoid" in row["context"]["disease_id"]) \
+        or row.get("evidence_scope") == "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
     return (not wwox_ctx) and "NOT WWOX EVIDENCE" not in row["source"]
 
 

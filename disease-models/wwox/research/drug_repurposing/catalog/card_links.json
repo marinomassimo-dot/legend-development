@@ -402,6 +402,36 @@
     "CHEMBL4217292"
    ]
   },
+  "H02_gabaat_inactivator_myelin_exposure": {
+   "card_files": [
+    "cards/H02_gabaat_inactivator_myelin_exposure.card.json",
+    "cards/H02_gabaat_inactivator_myelin_exposure.packet.json"
+   ],
+   "compound_ids_outside_catalogue": [
+    "CHEMBL146927",
+    "CHEMBL4297273",
+    "CHEMBL89598"
+   ],
+   "links": [
+    {
+     "catalogue_id": "CAT:CHEMBL89598",
+     "chembl_id": "CHEMBL89598",
+     "role": "named_member",
+     "rule": "curator_declared_identifier (card_identity_declarations.tsv); curator (scientist-d, 2026-10-28) read the compound name in the card packet and took the ChEMBL id whose pref_name equals it exactly in catalog.jsonl.gz [VIGABATRIN]; ChEMBL id of the record, not a name-similarity score"
+    },
+    {
+     "catalogue_id": "CAT:CHEMBL146927",
+     "chembl_id": "CHEMBL146927",
+     "role": "named_member",
+     "rule": "curator_declared_identifier (card_identity_declarations.tsv); curator (scientist-d, 2026-10-28) took the ChEMBL parent id that Guide to Pharmacology ligands.csv (release 2026.3.1) gives for ligand 8284 (CPP-115) and checked that the InChIKey of catalogue record CAT:CHEMBL146927 (CBSRETZPFOBWNG-UCORVYFPSA-N) equals the one in that file; the salt CHEMBL4297273 is its child record; identifier and structure match, not a name-similarity score"
+    }
+   ],
+   "non_compound_ids_ignored": [
+    "CHEMBL146927",
+    "CHEMBL4297273",
+    "CHEMBL89598"
+   ]
+  },
   "Q-N-01": {
    "card_files": [
     "join/cards.json"
@@ -731,9 +761,9 @@
    ]
   }
  },
- "cards_considered": 59,
- "cards_with_at_least_one_link": 19,
- "generated_utc": "2026-10-28T19:06:41Z",
+ "cards_considered": 60,
+ "cards_with_at_least_one_link": 20,
+ "generated_utc": "2026-10-28T19:31:59Z",
  "unmatched_cards": [
   "A02_proteasome_inhibitor_class",
   "A03_client_binding_chaperone",
