@@ -229,6 +229,7 @@ class Index:
 
 def families(entries: list[dict]) -> dict[str, str]:
     """entry id -> family id. ChEMBL records join by parent link or identical InChIKey first block (connectivity layer);
+    a source-only record joins only through `relations.family_join` (a merged gtopdb_ligand_chembl_ref reconciliation);
     every other record is its own family (identity unresolved, never merged on name)."""
     parent: dict[str, str] = {}
 
@@ -244,6 +245,10 @@ def families(entries: list[dict]) -> dict[str, str]:
         p = (e.get("relations") or {}).get("parent")
         if p and p != e["id"]:
             parent[find(e["id"])] = find(p)
+        for j in (e.get("relations") or {}).get("family_join") or []:
+            # identity reconciled through a verifiable identifier chain (relations.reconciled_via, e.g. gtopdb_ligand_chembl_ref): the record
+            # is a member of the family of the ChEMBL record it was joined to.  A relation that was not merged never reaches this key.
+            parent[find(e["id"])] = find(j)
         sk = (e.get("ids") or {}).get("skeleton_key")
         if sk:
             if sk in first:

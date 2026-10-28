@@ -145,20 +145,32 @@
       "path": "gtopdb/targets_and_families.csv",
       "sha256": "9e91ae4eed1e147f0c5b01dd2e0645c2d57edb39442114d3128c70232b0d39fb",
       "url": "https://www.guidetopharmacology.org/DATA/targets_and_families.csv"
+     },
+     {
+      "bytes": 6880425,
+      "path": "gtopdb/ligands.csv",
+      "sha256": "f8e9f6959d563e49ccc2fb65652c17c3d93e345997e26f99a1a7924361d6d8b7",
+      "url": "https://www.guidetopharmacology.org/DATA/ligands.csv"
+     },
+     {
+      "bytes": 249709,
+      "path": "chembl/gtopdb_ref_lookup.json",
+      "sha256": "2776c25022c5f1fba727312152629d1dd566503c1dcadb82c9d7fb89d9736df4",
+      "url": "https://www.ebi.ac.uk/chembl/api/data/chembl_id_lookup"
      }
     ],
     "problems": [],
-    "retrieved_utc": "2026-10-28T19:01:32Z",
+    "retrieved_utc": "2026-10-28T22:46:53Z",
     "status": "OK",
     "version": "GtoPdb Version: 2026.3.1 - published: 2026-10-12"
    },
    "last_attempt": {
     "detail": "complete",
     "status": "OK",
-    "utc": "2026-10-28T19:01:32Z"
+    "utc": "2026-10-28T22:46:53Z"
    },
    "licence": "database under ODbL; contents under CC BY-SA 4.0 (guidetopharmacology.org/about.jsp and /download.jsp, read 2026-10-28); public download, no registration",
-   "name": "IUPHAR/BPS Guide to PHARMACOLOGY (GtoPdb) interactions.csv + targets_and_families.csv",
+   "name": "IUPHAR/BPS Guide to PHARMACOLOGY (GtoPdb) interactions.csv + targets_and_families.csv + ligands.csv",
    "terms": "https://www.guidetopharmacology.org/download.jsp"
   },
   "matrix": {

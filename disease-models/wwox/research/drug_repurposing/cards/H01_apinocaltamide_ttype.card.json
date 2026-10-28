@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "832b48550d1125a168462f676d8944fbf7b704b7b162d8dca7d8c6a27e957e40",
+  "input_sha256": "dbc204a7bbe6753a00ad0e50e19c6e03faf88dd4bb4f5617c794f01861efd801",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -197,7 +197,7 @@
       "state_of_known_roads": "EB-ETX-01 (ethosuximide, same need), DL-MECH-170, map record N-03; need NEED-T-TYPE-CALCIUM.",
       "pathway_and_objective": "BENEFICIO_PRECOCE; Track A.",
       "expected_contribution": "UNKNOWN. If it reproduces the ethosuximide pattern it would support T-type dependence of the provoked seizure; if not, it would make the ethosuximide result less likely to be T-type mediated. Neither outcome says anything about benefit in WWOX-DEE.",
-      "mechanism": "Block of Cav3.1, Cav3.2 and Cav3.3 (the abstracts call it selective and highly potent with 'no relevant activity on other targets'; that is the sponsor's statement, not an independent selectivity panel). Wanted direction: T-type current down (need direction 'down', coupling 'same').",
+      "mechanism": "Block of Cav3.1, Cav3.2 and Cav3.3 (the abstracts call it selective and highly potent with 'no relevant activity on other targets'; that is the sponsor's statement, not an independent selectivity panel). Quantitative record re-examined in IT5 (pharmacology_it5_20261029/ttype_cav3_h01.tsv): in the one sponsor discovery paper the flux IC50 is in the low nanomolar range at all three human isoforms (a span of under three-fold) and at the rat, mouse and dog orthologues, with an L-type Cav1.2 flux IC50 in the micromolar range (a margin of roughly 130 to 380-fold, one assay, one laboratory); patch-clamp affinity for the inactivated state of Cav3.3 is about 75-fold higher than for the resting state, so effective potency depends on membrane potential and on the age-dependent resting potential of the neurons. Ethosuximide is in a different regime: sub-millimolar to millimolar, state dependent, abstract-level for the cloned human channels and a persistent-current figure only (the lower inactivated-state constants in that abstract belong to a methsuximide metabolite, not ethosuximide), a flux IC50 above the top of a five-millimolar screen for Cav3.3 in one assay, and no concentration of it was measured in the Wwox pups. A concordant apinocaltamide result therefore tests the T-type reading across a nominal potency gap of about four and a half to five orders of magnitude against the persistent-current figure and at least five and a half against the flux bound (the endpoints differ, patch-clamp persistent current against calcium flux), with brain exposure of both drugs the open variable. Wanted direction: T-type current down (need direction 'down', coupling 'same').",
       "sources": {
         "internal": [
           "need NEED-T-TYPE-CALCIUM",
