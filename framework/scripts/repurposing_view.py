@@ -23,6 +23,8 @@ import sys
 from collections import Counter
 from pathlib import Path
 
+COUNTED_KINDS = {"intervention_target", "disease_gene_product", "pathway_member"}   # = LINK_KINDS | PATHWAY_KINDS of repurposing_search.py
+
 ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_DR = ROOT / "disease-models/wwox/research/drug_repurposing"
 REGEN_CMD = "python3 -B framework/scripts/repurposing_coverage.py run && python3 -B framework/scripts/repurposing_view.py run"
@@ -292,7 +294,7 @@ def build_payload(dr: Path = DEFAULT_DR) -> dict:
         with gzip.open(ap, "rt", encoding="utf-8") as fh:
             for line in fh:
                 a = json.loads(line)
-                if a.get("excluded_from_counts"):
+                if a.get("excluded_from_counts") and a.get("target_kind") in COUNTED_KINDS:   # same perimeter as the coverage summary
                     e = excl.setdefault(a["catalogue_id"], {"id": a["catalogue_id"], "name": a.get("compound"), "reason": a["excluded_from_counts"], "genes": set(), "needs": set(), "src": a.get("link_source")})
                     e["genes"].add(a.get("gene") or a.get("hgnc_id") or "?")
                     e["needs"].add(a["need"])
