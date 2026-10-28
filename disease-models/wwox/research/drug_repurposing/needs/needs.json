@@ -14,8 +14,8 @@
   },
   "track_and_goal_note": "The two fields are independent: gene addition is Track A with goal deep_recovery; a splice correction is Track B with goal deep_recovery; an ISR lever is Track A with goal partial_benefit.",
   "evidence_scope": {
-   "WWOX_EXPERIMENT_IN_DEE_SYSTEM": "measured in a WWOX-deficient system that models the disease (the bridge's definition): patient case, patient-derived or engineered knockout cells, organoids, mouse animals. The model_type field of each observation says which; model_type human_clinical_report marks an uncontrolled case or series",
-   "WWOX_BIOLOGY_OTHER_CONTEXT": "WWOX studied outside a neural or DEE-relevant model: a fly amyloid model, a non-neural cell (including patient-derived fibroblasts or blood and mouse embryonic fibroblasts), a cancer line, or a genotype-independent contrast in a WWOX study. Model type is on each observation.",
+   "WWOX_EXPERIMENT_IN_DEE_SYSTEM": "measured in a WWOX-deficient system that models the disease (the bridge's definition): patient case, patient-derived or engineered knockout cells (including non-neural cells such as fibroblasts and mouse embryonic fibroblasts), organoids, mouse animals. A non-neural system carries no implied transfer to neurons; the observation's limits say so. model_type human_clinical_report marks an uncontrolled case or series.",
+   "WWOX_BIOLOGY_OTHER_CONTEXT": "WWOX outside a model of the disease (the bridge's definition): a fly amyloid model or other invertebrate knockdown, a cancer line, a construct expressed in unrelated cells, or a contrast that carries no genotype comparison. Model type is on each observation.",
    "OTHER_DISEASE_PRECEDENT": "a precedent from another disease (never WWOX evidence)",
    "COMPUTATIONAL_RESULT": "an analysis of deposited data or a prediction made inside this repository (transcript, not flux; exploratory)",
    "UNVERIFIED_HYPOTHESIS": "no observation: a premise or a placeholder (the bridge's UNQUALIFIED is the nearest label; the other five values are the bridge's own EVIDENCE_SCOPES)"
@@ -307,14 +307,14 @@
      "model_type": "human_patient_derived_cells",
      "species": "human",
      "genotype": "c.517-2A>G, homozygous patients; other genotype classes in the same source",
-     "tissue_or_cells": "blood-derived cDNA (not neural tissue)",
+     "tissue_or_cells": "blood-derived cDNA (not neural tissue) (non-neural)",
      "age_stage": "UNKNOWN",
      "comparison": "patient genotype classes against each other",
      "readout": "RT-PCR product size across exon 6",
      "readout_level": "transcript",
      "direction_observed": "exon skipping",
-     "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT",
-     "limits": "Blood, not brain; the Results frame the shorter product as consistent with prediction, not as a displayed junction read; a different acceptor allele from the c.1057-2A>G worked example. Non-neural patient-derived cells, hence labelled as another context.",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "limits": "Blood, not brain; the Results frame the shorter product as consistent with prediction, not as a displayed junction read; a different acceptor allele from the c.1057-2A>G worked example. Non-neural (non-brain) cells: no transfer to neurons is implied.",
      "pmid": "30853297",
      "locators": [
       {
@@ -421,7 +421,7 @@
     }
    ],
    "evidence_scope": [
-    "WWOX_BIOLOGY_OTHER_CONTEXT",
+    "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
     "COMPUTATIONAL_RESULT"
    ],
    "coverage": {
@@ -554,14 +554,14 @@
      "model_type": "human_patient_derived_cells",
      "species": "human",
      "genotype": "p.Gln230Pro homozygous",
-     "tissue_or_cells": "fibroblast line from one donor",
+     "tissue_or_cells": "fibroblast line from one donor (non-neural)",
      "age_stage": "UNKNOWN",
      "comparison": "patient line against three non-fibroblast reference lines (two cancer lines, HEK293); no control fibroblast",
      "readout": "WWOX protein (western blot) and transcript (qRT-PCR)",
      "readout_level": "protein",
      "direction_observed": "protein not detected; transcript comparable",
-     "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT",
-     "limits": "One donor line, one membrane, one exposure, no healthy fibroblast lane; the transcript comparison is against non-fibroblast lines with one bar per line, no n and no error bars; non-neural cells (labelled another context although patient-derived); lysate fraction not separated; the cause (synthesis, solubility or turnover) is unresolved.",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "limits": "One donor line, one membrane, one exposure, no healthy fibroblast lane; the transcript comparison is against non-fibroblast lines with one bar per line, no n and no error bars; non-neural cells; lysate fraction not separated; the cause (synthesis, solubility or turnover) is unresolved. Non-neural (non-brain) cells: no transfer to neurons is implied.",
      "pmid": "29808465",
      "locators": [
       {
@@ -745,6 +745,7 @@
     }
    ],
    "evidence_scope": [
+    "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
     "WWOX_BIOLOGY_OTHER_CONTEXT"
    ],
    "coverage": {
@@ -810,14 +811,14 @@
      "model_type": "human_patient_derived_cells",
      "species": "human",
      "genotype": "p.Gln230Pro homozygous",
-     "tissue_or_cells": "fibroblast line from one donor",
+     "tissue_or_cells": "fibroblast line from one donor (non-neural)",
      "age_stage": "UNKNOWN",
      "comparison": "patient line against reference lines",
      "readout": "WWOX protein and transcript",
      "readout_level": "protein",
      "direction_observed": "protein not detected; transcript comparable",
-     "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT",
-     "limits": "One donor line; see NEED-WWOX-MISSENSE-PROTEIN-RESCUE.",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "limits": "One donor line; see NEED-WWOX-MISSENSE-PROTEIN-RESCUE. Non-neural (non-brain) cells: no transfer to neurons is implied.",
      "pmid": "29808465",
      "locators": [
       {
@@ -889,6 +890,7 @@
    ],
    "pathways": [],
    "evidence_scope": [
+    "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
     "WWOX_BIOLOGY_OTHER_CONTEXT"
    ],
    "coverage": {
@@ -1231,8 +1233,8 @@
      "readout": "HIF1alpha protein; PDK1 mRNA; oxygen consumption and glycolysis",
      "readout_level": "protein",
      "direction_observed": "HIF1alpha up; PDK1 transcript up",
-     "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT",
-     "limits": "Mouse, non-neural, not a DEE-specific system; PDK1 is reported as higher levels without the level being named in the cited sentence; PDH phosphorylation, activity and flux are not measured; PHD2 mechanism left open.",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "limits": "Mouse, non-neural, not a DEE-specific system; PDK1 is reported as higher levels without the level being named in the cited sentence; PDH phosphorylation, activity and flux are not measured; PHD2 mechanism left open. Non-neural (non-brain) cells: no transfer to neurons is implied.",
      "pmid": "25012504",
      "locators": [
       {
@@ -1274,8 +1276,8 @@
      "readout": "PDH activity (Figure 5b); lactate; HIF1alpha by fraction (Figure 6)",
      "readout_level": "activity",
      "direction_observed": "PDH no difference (n unstated); lactate up in all four conditions; cytoplasmic HIF1alpha down in two of four conditions",
-     "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT",
-     "limits": "Non-neural; n of the PDH panel not stated; non-significance is neither confirmation nor refutation.",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "limits": "Non-neural; n of the PDH panel not stated; non-significance is neither confirmation nor refutation. Non-neural (non-brain) cells: no transfer to neurons is implied.",
      "pmid": "35328751",
      "locators": [
       {
@@ -1485,7 +1487,7 @@
     }
    ],
    "evidence_scope": [
-    "WWOX_BIOLOGY_OTHER_CONTEXT",
+    "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
     "COMPUTATIONAL_RESULT"
    ],
    "coverage": {
@@ -1754,8 +1756,8 @@
      "readout": "respiration and glycolysis (Figure 2)",
      "readout_level": "flux",
      "direction_observed": "shift toward glycolysis",
-     "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT",
-     "limits": "Mouse, non-neural; the extent of the respiration deficit per complex is not resolved.",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "limits": "Mouse, non-neural; the extent of the respiration deficit per complex is not resolved. Non-neural (non-brain) cells: no transfer to neurons is implied.",
      "pmid": "25012504",
      "locators": [
       {

@@ -32,7 +32,7 @@ Per need: `id`, `label`, `family`, `track` and `goal` (two separate objects, eac
 - `evidence_scope` (per observation; the need-level list is the union of its observations): the bridge's labels (`WWOX_EXPERIMENT_IN_DEE_SYSTEM`, `WWOX_BIOLOGY_OTHER_CONTEXT`,
   `OTHER_DISEASE_PRECEDENT`, `COMPUTATIONAL_RESULT`) plus `UNVERIFIED_HYPOTHESIS`; the model type (mouse null, neuron-specific
   deletion, organoid, patient cells, case report, fly) is on each observation. Computational results are repository analyses of
-  deposited data, not experiments. Non-neural cells, even patient-derived ones (fibroblasts, blood), mouse embryonic fibroblasts and genotype-independent contrasts are labelled `WWOX_BIOLOGY_OTHER_CONTEXT` here, which is stricter than the bridge's wording for patient-derived cells.
+  deposited data, not experiments. Scope labels follow the bridge's definition; non-neural systems (fibroblasts, mouse embryonic fibroblasts, blood) are labelled `WWOX_EXPERIMENT_IN_DEE_SYSTEM` where they are patient-derived or engineered knockout cells, and the observation says they are non-neural.
 - `coverage`: `NOT_ASSESSED` everywhere; the module sets it.
 
 **Track** A = variant-independent, B = variant- or lesion-specific. **Goal** = `deep_recovery` (restore the lost function) or
@@ -45,12 +45,12 @@ residual functional protein); downstream levers are A + partial benefit.
 | Need | Label | Track | Goal | Direction | Basis | Scope(s) present | Intervention targets (first five) |
 |---|---|---|---|---|---|---|---|
 | `WWOX-GENE-ADDITION` | Restore WWOX protein in neurons by gene addition (AAV-type vector) | A | deep | restore | observed | WWOX in DEE-relevant system | - |
-| `WWOX-SPLICE-CORRECTION` | Restore correct WWOX transcript from a canonical splice-acceptor allele (splice-switching, editing) | B | deep | restore | observed | WWOX other context; computational | - |
+| `WWOX-SPLICE-CORRECTION` | Restore correct WWOX transcript from a canonical splice-acceptor allele (splice-switching, editing) | B | deep | restore | observed | WWOX in DEE-relevant system; computational | - |
 | `WWOX-PTC-READTHROUGH` | Read-through of a premature stop codon in a WWOX nonsense allele | B | deep | restore | exploratory question | unverified | - |
-| `WWOX-MISSENSE-PROTEIN-RESCUE` | Rescue a destabilised SDR-domain missense WWOX protein (folding, quality control, degradation) | B | deep | up | observed | WWOX other context | - |
-| `WWOX-ENDOGENOUS-BOOST` | Raise endogenous WWOX expression (CRISPRa, anti-miR, small-molecule activators) | B | deep | up | observed | WWOX other context | - |
+| `WWOX-MISSENSE-PROTEIN-RESCUE` | Rescue a destabilised SDR-domain missense WWOX protein (folding, quality control, degradation) | B | deep | up | observed | WWOX in DEE-relevant system; WWOX other context | - |
+| `WWOX-ENDOGENOUS-BOOST` | Raise endogenous WWOX expression (CRISPRa, anti-miR, small-molecule activators) | B | deep | up | observed | WWOX in DEE-relevant system; WWOX other context | - |
 | `ISR-ATTENUATION` | Integrated stress response (eIF2alpha-ATF4) activity: attenuate a possible over-activation | A | partial | uncertain | observed | WWOX other context; other-disease precedent; computational | EIF2AK3, EIF2B1, EIF2B2, EIF2B3, EIF2B4 ... |
-| `PDH-PYRUVATE-AXIS` | Pyruvate entry into the TCA cycle (HIF1A-PDK-PDH axis; glycolytic shift) | A | partial | uncertain | observed | WWOX other context; computational | PDK1, PDK2, PDK3, PDK4 |
+| `PDH-PYRUVATE-AXIS` | Pyruvate entry into the TCA cycle (HIF1A-PDK-PDH axis; glycolytic shift) | A | partial | uncertain | observed | WWOX in DEE-relevant system; computational | PDK1, PDK2, PDK3, PDK4 |
 | `LACTATE-LDH` | Lactate and lactate dehydrogenase activity: lower an elevated LDH/lactate state | A | partial | uncertain | observed | WWOX in DEE-relevant system; WWOX other context; computational | LDHA, LDHB, SLC16A1, SLC16A7 |
 | `MITOCHONDRIAL-RESPIRATION` | Mitochondrial respiration / OXPHOS capacity (including complex I) as a possible WWOX-dependent deficit | A | partial | uncertain | observed | WWOX in DEE-relevant system; WWOX other context; computational | - |
 | `EXCITATORY-GAIN-GLUTAMATE-RECEPTOR` | Excitatory network gain and bursting: glutamate-receptor node (NMDAR, AMPAR); gap-junction/pannexin untested | A | partial | down | observed | WWOX in DEE-relevant system; other-disease precedent | GRIN1, GRIN2A, GRIN2B, GRIA1, GRIA2 ... |
