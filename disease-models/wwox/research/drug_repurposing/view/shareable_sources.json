@@ -1,0 +1,60 @@
+{
+  "schema": "legend.wwox.repurposing_view.shareable_sources/1",
+  "policy": "The shareable build (repurposing_view.py run --source shareable) embeds a third-party row only when its provenance is listed here. Every other third-party row is represented by an identifier and by counts. An attribution is never removed to make data look distributable: the footer of the output lists the sources actually embedded, and separately the sources that contributed counts or identifiers only. Policy conclusions are those of the licence analysis of 2026-10-28 (IT4 C4); this file implements the mechanism and decides nothing new. It is not legal advice.",
+  "own_text": {
+    "allowed": true,
+    "what": "text and computations produced in this repository: candidate cards, needs, priorities and dispositions, counts",
+    "licence": "repository licence for original text; third-party rows are not covered by it",
+    "attribution": "LEGEND WWOX repurposing module (this repository)"
+  },
+  "dgidb_claim_sources": {
+    "NCI": {
+      "label": "NCI Cancer Gene Index (via DGIdb)",
+      "licence": "Public domain (licence field reported by the DGIdb service on 2026-10-28)",
+      "url": "https://dgidb.org/",
+      "attribution": "National Cancer Institute, Cancer Gene Index, obtained through DGIdb (export of 2024-06-10)"
+    },
+    "FDA": {
+      "label": "FDA pharmacogenomic biomarkers (via DGIdb)",
+      "licence": "Public domain (licence field reported by the DGIdb service on 2026-10-28)",
+      "url": "https://dgidb.org/",
+      "attribution": "U.S. Food and Drug Administration, obtained through DGIdb (export of 2024-06-10)"
+    },
+    "CIViC": {
+      "label": "CIViC (via DGIdb)",
+      "licence": "CC0 1.0 Universal (licence field reported by the DGIdb service on 2026-10-28)",
+      "url": "https://civicdb.org/",
+      "attribution": "CIViC, obtained through DGIdb (export of 2024-06-10); credit given as a courtesy"
+    },
+    "DoCM": {
+      "label": "DoCM (via DGIdb)",
+      "licence": "CC BY 4.0 (licence field reported by the DGIdb service on 2026-10-28)",
+      "url": "http://www.docm.info/",
+      "attribution": "Database of Curated Mutations (DoCM), CC BY 4.0, obtained through DGIdb (export of 2024-06-10)"
+    }
+  },
+  "name_sources": {
+    "MATRIX list name": {
+      "label": "Every Cure MATRIX drug list",
+      "licence": "CC BY 4.0 (dataset-card licence field of everycure/drug-list)",
+      "url": "https://huggingface.co/datasets/everycure/drug-list",
+      "attribution": "Every Cure MATRIX drug list, CC BY 4.0; fields used: names, identifiers, approval flags; changes: grouped into families by this repository"
+    },
+    "openFDA NDC single-ingredient active_ingredient name": {
+      "label": "openFDA NDC",
+      "licence": "Public domain (openFDA licence page)",
+      "url": "https://open.fda.gov/license/",
+      "attribution": "Data provided by the U.S. Food and Drug Administration. Do not rely on openFDA to make decisions regarding medical care. No FDA endorsement is implied."
+    }
+  },
+  "access_scope_prefixes": {
+    "openFDA": "openFDA NDC",
+    "MATRIX": "Every Cure MATRIX drug list"
+  },
+  "counts_and_identifiers_only": {
+    "ChEMBL": "CC BY-SA 3.0 (EMBL-EBI); content withheld, identifiers and counts kept; credit stays in the footer",
+    "DGIdb": "per-source terms; claim sources outside the allowlist are counted, never embedded",
+    "NIH DSLD": "probe counts only",
+    "UniChem": "cross-reference identifiers only"
+  }
+}
