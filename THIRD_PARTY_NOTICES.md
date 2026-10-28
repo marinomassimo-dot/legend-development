@@ -16,6 +16,7 @@ records, and derived assets remain subject to their original terms.
 | ThermoMPNN | MIT | PUBLIC |
 | Monarch Initiative / Monarch KG | BSD-3-Clause application code; source-specific terms for integrated KG data | MIXED — citation/interoperability only |
 | DisMech | BSD-3-Clause declared by the public repository | PUBLIC — citation/audit only |
+| Drug-repurposing module sources (DGIdb claim sources, ChEMBL, Guide to PHARMACOLOGY, ClinPGx, openFDA, MATRIX drug list, UniChem, others) | per source; see `DATA_SOURCES.md` and `disease-models/wwox/research/drug_repurposing/catalog/README.md` ("Licence reconciliation") | MIXED — share-alike (ChEMBL CC BY-SA 3.0, GtoPdb ODbL / CC BY-SA 4.0, ClinPGx CC BY-SA 4.0) and non-commercial (DTC, CKB-CORE, CGI and others, inside DGIdb rows) terms apply to parts of the tracked data; the MIT licence does not cover those parts |
 | NumPy 1.26.4 / 2.0.2 | BSD-3-Clause | PUBLIC — optional MD / release-analysis dependency, not redistributed |
 | OpenMM 8.1.1 | MIT for most source; LGPL for CUDA/OpenCL platforms; additional bundled notices may apply | MIXED — optional dependency, not redistributed |
 | PDBFixer 1.12 | MIT in the retained package metadata | PUBLIC — optional dependency, not redistributed |

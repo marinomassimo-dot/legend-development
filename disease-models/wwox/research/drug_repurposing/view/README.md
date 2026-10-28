@@ -30,7 +30,7 @@ Each profile has "Export this card (print / PDF)"; the URL `#export=<card id>` (
 
 ## Data boundary
 
-`run --source full` (default) embeds every row and writes `index.html`; DGIdb-derived rows are not cleared for public release and ChEMBL content is CC BY-SA 3.0, so this file is for local use.
+`run --source full` (default) embeds every row and writes `index.html`; DGIdb-derived rows are not cleared for public release and ChEMBL content is CC BY-SA 3.0, so this file is for local use. It is nevertheless tracked in the public repository (checked 2026-10-28), which is an open exposure for the operator.
 `run --source shareable` writes `index_shareable.html` and embeds a third-party row only when its provenance is on the allowlist `shareable_sources.json`: our own cards, needs and priority text; DGIdb rows whose claim source is NCI, FDA, CIViC or DoCM; openFDA; the MATRIX drug list. Everything else (ChEMBL, other DGIdb claim sources, DSLD, UniChem) appears as identifiers and counts: withheld compound names are replaced by the catalogue identifier, per-row status and modality are dropped, excluded-row details keep reasons only. The footer of the output lists the sources actually embedded with licence and attribution, and separately the sources that contributed counts or identifiers only. No attribution is removed to make data look distributable. The licence analysis behind the allowlist is a separate record; this mechanism does not change its conclusions and is not legal advice. Note that the full file is already tracked in the repository.
 
 ## Inputs and layout
@@ -55,4 +55,4 @@ Track, recovery goal, disposition, text. Filters can be set through the URL hash
 
 Size: about 1.5 MB; matrix and priorities are embedded as a trimmed projection, lists are paginated
 (30 per page). A failed, stale, truncated or never-fetched source is shown with its own badge and is
-never rendered as an empty or OK result. DGIdb-derived rows are not cleared for public release.
+never rendered as an empty or OK result. DGIdb-derived rows are not cleared for public release (per-source terms: `catalog/README.md`, "Licence reconciliation").
