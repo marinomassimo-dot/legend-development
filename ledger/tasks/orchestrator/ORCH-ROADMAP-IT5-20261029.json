@@ -24,8 +24,9 @@
     },
     {
      "step": "P3 reproducible catalogue rebuild: build knows which inputs are required (versions, hashes, dependencies, lawful acquisition, local presence, offline mode); incomplete cache must not silently replace a verified catalogue (refuse with the missing input, or a declared partial output kept apart); last valid output preserved; error proof on missing input; reproducible instruction",
-     "status": "IN_PROGRESS",
-     "owner": "plan"
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "landed (merge of ab1bfd93): inputs command, build refuses on missing/mismatching inputs (exit 3) leaving outputs untouched, --partial separate, build --check; verified by the Orchestrator on the root cache: inputs COMPLETE, build --check MATCH byte-identical (sha256 4dfcaab2...), 33 tests, hash-seed test"
     },
     {
      "step": "P4 reconcile identities through GtoPdb ligands (GtoPdb ligand -> ChEMBL reference -> identity and chemical relations; parent/salt, stereoisomers, one-to-many, ids outside the selection, id-structure conflicts, withdrawn ids; no merge on name or connectivity when a pharmacological distinction would be lost); 510 candidates in closed_loop_it4_e1b_20261028/ligand_identity_merge_candidates.tsv are candidates not validated; independent verifier on normal and edge cases and totals; catalogue, families, access, targets, coverage, priorities, cards regenerated; count changes explained",
