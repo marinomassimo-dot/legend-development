@@ -48,6 +48,7 @@ MODULE = HERE.parent
 UA = "LEGEND-compound-catalog/1 (research; key-less; no contact string)"
 SCHEMA = 1
 TTL_DAYS = 30
+GTOPDB_FILES = ("interactions.csv", "targets_and_families.csv")
 
 CHEMBL = "https://www.ebi.ac.uk/chembl/api/data"
 UNICHEM = "https://ftp.ebi.ac.uk/pub/databases/chembl/UniChem/data/wholeSourceMapping/src_id1/src1src{n}.txt.gz"
@@ -62,6 +63,9 @@ SOURCES = {
     "dgidb": dict(
         name="DGIdb (drugs.tsv, interactions.tsv)", licence="LICENCE NOT CLEARED FOR PUBLIC RELEASE (decision 2026-10-28: DGIdb-derived rows stay in this development repository; the public release is the operator's decision). UNVERIFIED in this task: dgidb.org pages are script-rendered and showed no licence text; DGIdb aggregates claims from other databases whose own terms apply per claim (e.g. TTD, DrugBank, Drugs@FDA); redistribution of claim-derived rows is NOT cleared",
         terms="https://dgidb.org/downloads", note="the TSV release of 2024-06-10 is the newest the site serves at /data/latest"),
+    "gtopdb": dict(
+        name="IUPHAR/BPS Guide to PHARMACOLOGY (GtoPdb) interactions.csv + targets_and_families.csv", licence="database under ODbL; contents under CC BY-SA 4.0 (guidetopharmacology.org/about.jsp and /download.jsp, read 2026-10-28); public download, no registration",
+        terms="https://www.guidetopharmacology.org/download.jsp", note="used ONLY to verify and correct the identity of the DGIdb Guide-to-Pharmacology rows (see README, 'Target identity'); share-alike: the GtoPdb-derived fields (target ids, names, types) of catalog.jsonl.gz must carry CC BY-SA 4.0 and attribution"),
     "matrix": dict(
         name="Every Cure MATRIX drug list", licence="CC BY 4.0 (dataset-card metadata of everycure/drug-list, read 2026-10-27, HF API)",
         terms="https://huggingface.co/datasets/everycure/drug-list", note="applies to the drug list only; the knowledge graph and the scores table are separate artefacts with their own (or no declared) terms and nothing is transferred to them; the scores table is not used"),
@@ -303,6 +307,16 @@ def fetch_dgidb(m, refresh):
         m["sources"]["dgidb"]["live_service_sources"] = {"retrieved_utc": now(), "status": "FAILED", "detail": f"{type(e).__name__}: {e}"}
 
 
+def fetch_gtopdb(m, refresh):
+    base = "https://www.guidetopharmacology.org/DATA/"
+    jobs = [(base + f, "gtopdb/" + f) for f in GTOPDB_FILES]
+    fetch_file(m, "gtopdb", jobs, lambda v: "latest download as served", refresh)
+    d = m["sources"].get("gtopdb", {}).get("data")
+    if d and (CACHE / "gtopdb/interactions.csv").exists():
+        with open(CACHE / "gtopdb/interactions.csv", encoding="utf-8") as fh:
+            d["version"] = fh.readline().strip().strip('"').lstrip("# ").strip()
+
+
 def fetch_ndc(m, refresh):
     if not refresh and fresh(m, "openfda_ndc"):
         return
@@ -369,7 +383,7 @@ def fetch_chembl_lookup(m, ids: set[str]) -> None:
     p.write_text(json.dumps(have, sort_keys=True, indent=0))
 
 
-FETCHERS = {"chembl": fetch_chembl, "unichem": fetch_unichem, "dgidb": fetch_dgidb,
+FETCHERS = {"chembl": fetch_chembl, "unichem": fetch_unichem, "dgidb": fetch_dgidb, "gtopdb": fetch_gtopdb,
             "openfda_ndc": fetch_ndc, "matrix": fetch_matrix}
 
 
@@ -514,12 +528,132 @@ STATUS_ORDER = ["approved_any_source", "marketed_otc_monograph", "marketed_unapp
 NDA_LIKE = {"NDA", "ANDA", "BLA", "NDA AUTHORIZED GENERIC"}
 
 
+# ----------------------------------------------------------------------------- target identity (GtoPdb rows of DGIdb)
+# DGIdb's Guide-to-Pharmacology rows carry gene_claim_name "NCBIGENE:<n>" where <n> is the GtoPdb TARGET ID (an internal
+# number), not an NCBI Gene id; DGIdb then resolved the number to a gene (a different gene for most rows).  The stable
+# identifiers survive in the claim (drug_claim_name IUPHAR.LIGAND:<id>, gene_claim_name number = GtoPdb target id), so the
+# link is verified through them against the GtoPdb release, never by symbol.
+GTOPDB_TYPE_TO_DGIDB = {"Inhibitor": "inhibitor", "Antagonist": "inhibitor", "Gating inhibitor": "inhibitor", "Agonist": "agonist",
+                        "Activator": "activator", "Channel blocker": "blocker", "Allosteric modulator": "modulator", "Antibody": "antibody"}
+
+
+def load_gtopdb(cache: Path):
+    """None when the release is not in the cache.  Otherwise a dict of plain lookups (a pure function of two CSV files)."""
+    di, dt = cache / "gtopdb/interactions.csv", cache / "gtopdb/targets_and_families.csv"
+    if not (di.exists() and dt.exists()):
+        return None
+
+    def rd(path):
+        with open(path, encoding="utf-8", newline="") as fh:
+            rows = list(csv.reader(fh))
+        return rows[0][0].lstrip("# ").strip(), [dict(zip(rows[1], r)) for r in rows[2:]]
+    release, inter = rd(di)
+    _, tgt = rd(dt)
+    T: dict[str, dict] = {}
+    for t in tgt:
+        tid = t["Target id"]
+        if not tid:
+            continue
+        e = T.setdefault(tid, {"name": t["Target name"], "type": t["Type"], "families": set(), "hgnc": "", "symbol": "", "subunits": []})
+        e["families"].add(t["Family id"])
+        if t["HGNC id"]:
+            e["hgnc"], e["symbol"] = "hgnc:" + t["HGNC id"], t["HGNC symbol"]
+        if t["Subunit id"]:
+            e["subunits"] = t["Subunit id"].split("|")
+    pairs = collections.defaultdict(list)
+    lig_targets = collections.defaultdict(set)
+    for r in inter:
+        if r["Ligand ID"] and r["Target ID"]:
+            pairs[(r["Ligand ID"], r["Target ID"])].append(r)
+            if r["Target Species"] == "Human":
+                lig_targets[r["Ligand ID"]].add(r["Target ID"])
+    return {"release": release, "targets": T, "pairs": pairs, "ligand_human_targets": lig_targets}
+
+
+def gtopdb_genes(gt: dict, tid: str) -> list[tuple[str, str]]:
+    """[(hgnc concept id, symbol)] of a GtoPdb target: its own gene, or the genes of its subunits (a complex)."""
+    t = gt["targets"].get(tid)
+    if not t:
+        return []
+    if t["hgnc"]:
+        return [(t["hgnc"], t["symbol"])]
+    return [(gt["targets"][u]["hgnc"], gt["targets"][u]["symbol"]) for u in t["subunits"] if u in gt["targets"] and gt["targets"][u]["hgnc"]]
+
+
+def identity_gtopdb(gt: dict | None, ir: dict) -> list[dict]:
+    """Rows replacing one DGIdb Guide-to-Pharmacology interaction row: [{identity..., gene, gene_concept_id, ...}].
+    states: confirmed (served gene is a gene of the GtoPdb target), corrected (served gene is not; the GtoPdb target's genes
+    replace it, the served gene is kept as `dgidb_served_gene`), unverified (pair or gene not recoverable: the relation stays visible
+    but is not counted)."""
+    lig = ir["drug_claim_name"].split(":", 1)[-1]
+    tid = ir["gene_claim_name"].split(":", 1)[-1]
+    served = {"gene": ir["gene_name"], "gene_concept_id": ir["gene_concept_id"]}
+    base = {"gene_claim_name": ir["gene_claim_name"], "iuphar_ligand_id": lig, "iuphar_target_id": tid}
+    if gt is None:
+        return [dict(served, **base, identity={"state": "unverified", "method": "none",
+                                                "note": "the GtoPdb release is not in the cache: the DGIdb gene could not be verified through the GtoPdb target id"})]
+    rows = gt["pairs"].get((lig, tid), [])
+    genes = gtopdb_genes(gt, tid)
+    t = gt["targets"].get(tid, {})
+    if not rows or not genes:
+        why = ("this (ligand, target id) pair is not in the GtoPdb release " + gt["release"] + " (DGIdb used 2024.1)") if not rows else \
+              f"GtoPdb target {tid} ({t.get('name')}) has no human gene in the release"
+        return [dict(served, **base, identity={"state": "unverified", "method": "gtopdb_pair_lookup", "note": why})]
+    species = sorted({r["Target Species"] for r in rows})
+    stated = sorted({GTOPDB_TYPE_TO_DGIDB.get(r["Type"], r["Type"]) for r in rows if r["Type"] and r["Type"] != "None"})
+    served_type = None if ir["interaction_type"] in ("NULL", "") else ir["interaction_type"]
+    if len(stated) == 1 and served_type in (None, stated[0]):
+        itype, tstate = served_type, "agrees_with_source" if served_type else "UNKNOWN"
+    elif not stated:
+        itype, tstate = served_type, "UNKNOWN" if served_type is None else "source_states_no_type"
+    else:
+        itype, tstate = None, f"CONFLICT_WITH_SOURCE: DGIdb '{served_type}' vs GtoPdb {sorted({r['Type'] for r in rows})}"
+    sibs = {x for x in gt["ligand_human_targets"].get(lig, ()) if x != tid and (gt["targets"].get(x, {}).get("families", set()) & t.get("families", set()))}
+    complex_ = len(genes) > 1 or (not t.get("hgnc") and bool(t.get("subunits")))
+    extra = {"iuphar_target_name": t.get("name"), "iuphar_target_class": t.get("type"), "target_level": "complex" if complex_ else "single_protein",
+             "species_of_evidence": species, "selectivity_stated": sorted({r["Selectivity"] for r in rows if r["Selectivity"]}),
+             "primary_target_stated": sorted({r["Primary Target"] for r in rows if r["Primary Target"]}),
+             "same_family_targets_of_this_ligand": len(sibs), "gtopdb_types": sorted({r["Type"] for r in rows}),
+             "gtopdb_release": gt["release"]}
+    out = []
+    for hg, sym in genes:
+        state = "confirmed" if hg == served["gene_concept_id"] else "corrected"
+        row = dict(base, gene=sym, gene_concept_id=hg, interaction_type=itype, interaction_type_state=tstate, **extra,
+                   identity={"state": state, "method": "gtopdb_target_id",
+                             "note": ("served gene is a gene of the GtoPdb target" if state == "confirmed" else
+                                      f"DGIdb served {served['gene']} ({served['gene_concept_id']}) for GtoPdb target id {tid} = {t.get('name')}: the number was read as an NCBI Gene id")})
+        if state == "corrected":
+            row["dgidb_served_gene"] = served
+        out.append(row)
+    if not any(r["identity"]["state"] == "confirmed" for r in out):
+        for r in out:
+            r["dgidb_served_gene"] = served
+    return out
+
+
+PSEUDO_RE = re.compile(r"^(?P<root>.+?)(P\d*|-AS\d+|-IT\d+|-OT\d+)$")
+
+
+def claim_symbol_anomaly(ir: dict) -> str | None:
+    """A heuristic FLAG (not proof): a symbol claim that DGIdb resolved to a pseudogene or antisense/lncRNA locus built on that
+    symbol (MCL1 -> ADAMTSL4-AS1, HSP90AA2 -> HSP90AA2P): drugs act on proteins, so the resolved gene is not trusted."""
+    claim, gene = ir["gene_claim_name"].upper(), ir["gene_name"].upper()
+    if ir["interaction_source_db_name"] == "GuideToPharmacology" or ":" in claim or claim == gene:
+        return None
+    m = PSEUDO_RE.match(gene)
+    if m and m.group("root") == claim:
+        return f"symbol claim {ir['gene_claim_name']} resolved to {ir['gene_name']}, a pseudogene/antisense locus built on that symbol"
+    if re.search(r"-AS\d+$|^LINC\d+|-IT\d+$|-OT\d+$", gene) and not re.search(r"-AS\d+$|^LINC\d+|-IT\d+$|-OT\d+$", claim):
+        return f"symbol claim {ir['gene_claim_name']} resolved to {ir['gene_name']}, a non-coding/pseudogene locus"
+    return None
+
+
 def build_catalog(cache: Path | None = None) -> tuple[list[dict], dict]:
     """Pure function of the cache and manifest.  Returns (entries, stats)."""
     cache = cache or CACHE
     manifest = load_manifest()
     src_status = {}
-    for s in ("chembl", "unichem", "dgidb", "matrix", "openfda_ndc", "dsld"):
+    for s in ("chembl", "unichem", "dgidb", "gtopdb", "matrix", "openfda_ndc", "dsld"):
         e = manifest["sources"].get(s)
         if not e:
             src_status[s] = {"state": "NOT_FETCHED"}
@@ -626,6 +760,7 @@ def build_catalog(cache: Path | None = None) -> tuple[list[dict], dict]:
 
     # ---- DGIdb: groups by DGIdb's own drug_name; identifier links only through chembl:ID concepts
     dg_stats = {}
+    gt = load_gtopdb(cache) if avail["gtopdb"] else None
     if avail["dgidb"]:
         rows = read_tsv(cache / "dgidb/drugs.tsv")
         groups = collections.defaultdict(list)
@@ -637,6 +772,12 @@ def build_catalog(cache: Path | None = None) -> tuple[list[dict], dict]:
         dgv = sorted({r["source_db_version"] for r in rows if r["source_db_name"] == "ChEMBL"})
         linked_groups = only_groups = multi = 0
         interactions_attached = 0
+        id_counts = collections.Counter()
+        exact_symbol = collections.defaultdict(set)    # claim symbol -> {(concept id, symbol)} where DGIdb resolved it to the identical symbol
+        for rows_ in inter.values():
+            for ir in rows_:
+                if ir["interaction_source_db_name"] != "GuideToPharmacology" and ir["gene_claim_name"].upper() == ir["gene_name"].upper() and ir["gene_concept_id"] != "NULL":
+                    exact_symbol[ir["gene_claim_name"].upper()].add((ir["gene_concept_id"], ir["gene_name"]))
         for gname in sorted(groups):
             g = groups[gname]
             flags = collections.Counter(r["approved"] for r in g)
@@ -676,19 +817,38 @@ def build_catalog(cache: Path | None = None) -> tuple[list[dict], dict]:
                 E[cid] = e
                 owners = {cid}
             for ir in inter.get(gname, []):
-                tr = {"source": "DGIdb interaction", "gene": ir["gene_name"], "gene_concept_id": ir["gene_concept_id"],
-                      "interaction_type": None if ir["interaction_type"] in ("NULL", "") else ir["interaction_type"],
-                      "interaction_type_state": "UNKNOWN" if ir["interaction_type"] in ("NULL", "") else "stated",
-                      "claim_source": ir["interaction_source_db_name"], "action_direction": "see interaction_type; DGIdb carries no potency here",
-                      "multiplicity": len(owners)}
-                for c in owners:
-                    E[c]["targets"].append(tr)
-                    interactions_attached += 1
+                if ir["interaction_source_db_name"] == "GuideToPharmacology":
+                    variants = identity_gtopdb(gt, ir)
+                else:
+                    flag = claim_symbol_anomaly(ir)
+                    exact = exact_symbol.get(ir["gene_claim_name"].upper())
+                    if flag and exact and len(exact) == 1:
+                        (hg, sym), = exact
+                        variants = [{"gene": sym, "gene_concept_id": hg, "gene_claim_name": ir["gene_claim_name"],
+                                     "dgidb_served_gene": {"gene": ir["gene_name"], "gene_concept_id": ir["gene_concept_id"]},
+                                     "identity": {"state": "corrected", "method": "claim_symbol_equals_an_exactly_resolved_symbol_in_the_same_export",
+                                                  "note": flag + f"; the identical claim symbol resolves exactly to {sym} ({hg}) on other rows of the same export"}}]
+                    else:
+                        variants = [{"gene": ir["gene_name"], "gene_concept_id": ir["gene_concept_id"], "gene_claim_name": ir["gene_claim_name"],
+                                     "identity": {"state": "unverified", "method": "claim_symbol_heuristic", "note": flag} if flag else
+                                                 {"state": "as_served", "method": "none", "note": "claim symbol/id as DGIdb served it; no independent id check available for this source"}}]
+                for v in variants:
+                    id_counts[(ir["interaction_source_db_name"], v["identity"]["state"])] += 1
+                    itype = v.pop("interaction_type") if "interaction_type" in v else (None if ir["interaction_type"] in ("NULL", "") else ir["interaction_type"])
+                    ist = v.pop("interaction_type_state") if "interaction_type_state" in v else ("UNKNOWN" if ir["interaction_type"] in ("NULL", "") else "stated")
+                    tr = dict(v, **{"source": "DGIdb interaction", "interaction_type": itype, "interaction_type_state": ist,
+                                    "claim_source": ir["interaction_source_db_name"], "action_direction": "see interaction_type; DGIdb carries no potency here",
+                                    "multiplicity": len(owners)})
+                    for c in owners:
+                        E[c]["targets"].append(tr)
+                        interactions_attached += 1
         dg_stats = {"drug_names": len(groups), "claims": len(rows), "groups_linked_to_chembl_by_identifier": linked_groups,
                     "groups_linked_to_more_than_one_chembl_entry": multi, "groups_without_enumerated_chembl_entry_became_entries": only_groups,
                     "of_which_carry_a_chembl_concept_id_outside_the_enumerated_set": sum(1 for g in groups.values() if any(r["concept_id"].lower().startswith("chembl:") for r in g)) - linked_groups,
                     "interaction_rows": sum(len(v) for v in inter.values()), "interaction_rows_attached_to_entries": interactions_attached,
-                    "claim_chembl_versions": dgv}
+                    "claim_chembl_versions": dgv,
+                    "target_identity_by_claim_source_and_state": {f"{a}|{b}": n for (a, b), n in sorted(id_counts.items()) if a == "GuideToPharmacology" or b != "as_served"},
+                    "gtopdb_release_used_to_verify": None if gt is None else gt["release"]}
 
     # ---- MATRIX drug list
     mx_stats = {}

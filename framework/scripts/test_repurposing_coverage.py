@@ -13,6 +13,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import compound_catalog as cc  # noqa: E402
 import repurposing_coverage as cov  # noqa: E402
 import repurposing_search as rs  # noqa: E402
 
@@ -522,6 +523,55 @@ class WildTypeEvidence(unittest.TestCase):
         self.assertEqual(next(x for x in l3["observations"] if x["id"] == "C")["character"], "clinical_uncontrolled_report")
 
 
+class TargetIdentityRegressions(unittest.TestCase):
+    """Rows are classified through the identifiers the catalogue kept (GtoPdb target id, ChEMBL target type), not through a hand-listed gene set."""
+
+    def gt(self, hgnc, gene, itype, state, level="single_protein", sibs=0, **kw):
+        t = {"source": "DGIdb interaction", "gene": gene, "gene_concept_id": hgnc, "interaction_type": itype, "claim_source": "GuideToPharmacology",
+             "multiplicity": 1, "iuphar_target_id": "456", "iuphar_ligand_id": "4168", "gene_claim_name": "NCBIGENE:456", "target_level": level,
+             "same_family_targets_of_this_ligand": sibs, "identity": {"state": state, "method": "gtopdb_target_id" if state != "unverified" else "gtopdb_pair_lookup", "note": "n"}}
+        t.update(kw)
+        return t
+
+    def run_need(self, entries, direction="down", syms=("GRIN2A",)):
+        n = need("N", direction, [tgt(s, {"GRIN2A": "hgnc:4585", "GRIN1": "hgnc:4584"}[s]) for s in syms])
+        roles = {("N", s): {"coupling": "same", "qualifier": "q"} for s in syms}
+        return rs.associations_for_need(n, rs.Index(entries, []), roles)["associations"]
+
+    def test_unverified_relation_stays_visible_and_is_not_counted(self):
+        e = entry("CAT:DGIDB:u", "Ghostine", origin="dgidb_only", targets=[self.gt("hgnc:4585", "GRIN2A", "inhibitor", "unverified")])
+        a, = self.run_need([e])
+        self.assertTrue(a["excluded_from_counts"].startswith("unconfirmed_identity"))
+        self.assertEqual((a["excluded_reason"], a["consistency"]), ("unconfirmed_identity", "not_evaluable"))   # listed, never promoted to consistent
+
+    def test_confirmed_row_on_the_same_gene_is_counted_and_is_not_subunit_selectivity(self):
+        e = entry("CAT:DGIDB:c", "Dapfive", origin="dgidb_only", targets=[self.gt("hgnc:4585", "GRIN2A", "inhibitor", "confirmed", sibs=3)])
+        a, = self.run_need([e])
+        self.assertIsNone(a["excluded_from_counts"])
+        self.assertEqual(a["consistency"], "consistent")
+        self.assertEqual((a["target_scope"], a["subunit_selectivity"]), ("single_protein_among_siblings", "not_established"))
+        self.assertIn("subunit selectivity not established", a["consistency_why"])
+
+    def test_complex_level_chembl_relation_does_not_become_subunit_selectivity(self):
+        t = chembl_t("GRIN2A", "NEGATIVE ALLOSTERIC MODULATOR", ttype="PROTEIN COMPLEX GROUP")
+        a, = self.run_need([entry("CAT:CHEMBL9", "Channelblockine", targets=[t])])
+        self.assertEqual((a["target_scope"], a["subunit_selectivity"]), ("complex_or_group", "not_established"))
+        self.assertEqual(a["consistency"], "consistent")      # NMDAR-level effect toward the class-level need; the subunit is not resolved
+        self.assertTrue(any("not subunit-specific" in x for x in a["limits"]))
+
+    def test_corrected_row_lands_on_the_verified_gene_not_the_served_one(self):
+        e = entry("CAT:DGIDB:k", "Sting agonist", origin="dgidb_only", targets=[self.gt("hgnc:27962", "STING1", "agonist", "corrected", dgidb_served_gene={"gene": "GRIN1", "gene_concept_id": "hgnc:4584"})])
+        self.assertEqual(self.run_need([e], syms=("GRIN1",)), [])      # the ligand no longer touches GRIN1
+
+    def test_listing_row_with_curated_mechanism_elsewhere_is_flagged_not_dropped(self):
+        listing = dg_t2("hgnc:4585", "GRIN2A", None, "TdgClinicalTrial")
+        e = entry("CAT:CHEMBL8", "Tiagabinish", targets=[chembl_t("SLC6A1", "INHIBITOR"), listing])
+        a, = self.run_need([e])
+        self.assertTrue(a["curated_mechanism_elsewhere"])
+        self.assertFalse(a["excluded_from_counts"])
+        self.assertEqual((a["relation_kind"], a["action_stated"], a["consistency"]), ("target_review_listing", False, "direction_unresolved"))
+
+
 class Detector(Fixture):
     def test_generic_alphabetical_prefix_expansion_is_flagged_and_a_lone_early_gene_is_not(self):
         idx, _ = self.idx()
@@ -606,8 +656,8 @@ class RealFiles(unittest.TestCase):
 
     def test_real_outcomes_of_the_audit_corrections(self):
         per = self.base["summary"]["needs"]["per_need"]
-        self.assertEqual(per["NEED-INHIBITORY-HYPOFUNCTION"]["headline_records_intervention_targets"], 11)
-        self.assertEqual(per["NEED-GSK3B-DEREPRESSION"]["headline_records_intervention_targets"], 50)   # 51 before relatlimab (anti-LAG3) was removed as a GtoPdb collision
+        self.assertEqual(per["NEED-INHIBITORY-HYPOFUNCTION"]["headline_records_intervention_targets"], 12)   # 11 before the GtoPdb rows were re-identified through their target ids (GtoPdb rows re-identified through their target ids)
+        self.assertEqual(per["NEED-GSK3B-DEREPRESSION"]["headline_records_intervention_targets"], 81)   # 50 when GtoPdb rows on GSK3B were dropped by a symbol rule; 31 GSK3B inhibitors recovered through the GtoPdb target id
         cells = {(c["row_id"], c["need"]): c for c in self.base["matrix"]["cells"]}
         a51 = cells[("INT:D01_a51", "NEED-MYC-PROGENITOR-PROLIFERATION")]
         self.assertEqual(a51["L3_observed_effect"]["state"], "observed_depth_unknown")
@@ -651,22 +701,24 @@ class RealFiles(unittest.TestCase):
                 self.assertNotEqual(c["L3_observed_effect"]["state"], "observed_wwox_system")
                 self.assertEqual(c["L4_observed_recovery_in_wwox_system"]["state"], "none_in_record")
 
-    def test_artefact_symbols_that_are_need_targets_are_second_source_only_and_reported(self):
-        """A source-artefact row on a symbol that a need really targets (ABAT) must never be a blanket drop: it
-        has to be require_second_source, genuine rows must survive, and the per-need drop count must be reported.
-        Any other artefact symbol that appears among need targets without a documented decision fails here."""
+    def test_gtopdb_identity_is_checked_through_ids_not_through_a_hand_listed_set(self):
+        """No symbol list: every Guide-to-Pharmacology row of the real catalogue carries the id check, a row counted on ANY need gene
+        is confirmed/corrected through the GtoPdb target id, and a row that could not be checked is excluded as unconfirmed."""
+        entries = {e["id"]: e for e in cc.load(REAL / "catalog" / "catalog.jsonl.gz")}
+        gt = [t for e in entries.values() for t in e["targets"] if t["source"] == "DGIdb interaction" and t.get("claim_source") == "GuideToPharmacology"]
+        self.assertGreater(len(gt), 10000)
+        self.assertTrue(all((t.get("identity") or {}).get("method") in ("gtopdb_target_id", "gtopdb_pair_lookup", "none") for t in gt))
+        self.assertTrue(all(t["identity"]["state"] in ("confirmed", "corrected", "unverified") for t in gt))
+        self.assertTrue(all(t.get("iuphar_target_id") and t.get("gene_claim_name", "").endswith(t["iuphar_target_id"]) for t in gt if t["identity"]["state"] != "unverified"))
+        for a in self.base["associations"]:
+            if a["link_source"].startswith("DGIdb") and a["iuphar_target_id"]:
+                if not a["excluded_from_counts"]:
+                    self.assertIn(a["identity_state"], ("source_ids_checked_confirmed", "source_ids_checked_corrected"))
         art = rs.load_artefacts()
-        need_syms = {t["symbol"].upper() for n in json.loads((REAL / "needs" / "needs.json").read_text())["needs"] for t in n["targets"]}
-        overlap = [a for a in art if a["symbol"].upper() in need_syms]
-        reviewed = {g: "require_second_source" for g in ("ABAT", "GRIN1", "GRIA1", "GRIA2", "GRIA4", "GSK3B", "ATF4", "CTNNB1", "EIF4EBP1", "EIF2S1")}
-        reviewed["PDK1"] = "alias_risk:PDPK1"      # the only reviewed overlaps
-        for a in overlap:
-            self.assertEqual(a["rule"], reviewed.get(a["symbol"].upper()), f"unreviewed or blanket artefact rule on need target {a['symbol']}")
-        self.assertEqual({a["symbol"].upper() for a in overlap}, set(reviewed), "a new artefact/need-target overlap needs a reviewed decision")
+        self.assertEqual({(a["claim_source"], a["rule"].split(":")[0]) for a in art}, {("*", "alias_risk")})   # symbol rules for GtoPdb are gone
         per = self.base["summary"]["needs"]["per_need"]
         for nid, v in per.items():
             self.assertIn("excluded_records_by_reason", v, nid)
-        self.assertGreater(per["NEED-SEIZURE-CONTROL-SYMPTOMATIC"]["excluded_records_by_reason"].get("source_artefact", 0), 0)
         survivors = [x for x in self.base["associations"] if x["need"] == "NEED-SEIZURE-CONTROL-SYMPTOMATIC" and x["target"] == "ABAT" and not x["excluded_from_counts"]]
         self.assertGreaterEqual(len(survivors), 5, "genuine ABAT rows (vigabatrin class) were dropped")
 

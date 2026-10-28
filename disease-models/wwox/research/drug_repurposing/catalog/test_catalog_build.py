@@ -130,6 +130,73 @@ class IdentityAndDedup(Base):
         self.assertNotIn("score", json.dumps(t))  # no potency/score is copied
 
 
+class TargetIdentity(Base):
+    """DGIdb Guide-to-Pharmacology rows: gene_claim_name NCBIGENE:<n> is a GtoPdb TARGET id; identity is checked against the release."""
+
+    def gtopdb(self):
+        d = self.cache / "gtopdb"
+        d.mkdir(parents=True, exist_ok=True)
+        with open(d / "targets_and_families.csv", "w", newline="", encoding="utf-8") as fh:
+            w = csv.writer(fh)
+            w.writerow(["# GtoPdb Version: T"])
+            w.writerow(["Type", "Family id", "Target id", "Subunit id", "Target name", "HGNC id", "HGNC symbol"])
+            w.writerows([["lgic", "75", "456", "", "GluN2A", "4585", "GRIN2A"], ["lgic", "75", "457", "", "GluN2B", "4586", "GRIN2B"],
+                         ["enzyme", "9", "2893", "", "BCAT2", "977", "BCAT2"], ["enzyme", "10", "2464", "", "ABAT", "23", "ABAT"],
+                         ["lgic", "68", "373", "", "5-HT3A", "5297", "HTR3A"], ["lgic", "68", "374", "", "5-HT3B", "5298", "HTR3B"],
+                         ["lgic", "68", "378", "373|374", "5-HT3AB", "", ""]])
+        with open(d / "interactions.csv", "w", newline="", encoding="utf-8") as fh:
+            w = csv.writer(fh)
+            w.writerow(["# GtoPdb Version: T"])
+            w.writerow(["Target ID", "Target Species", "Ligand ID", "Type", "Selectivity", "Primary Target"])
+            w.writerows([["456", "Human", "4168", "Antagonist", "Selective", "false"], ["457", "Human", "4168", "Antagonist", "Selective", "false"],
+                         ["2893", "Human", "777", "Inhibitor", "Not Determined", "false"], ["378", "Human", "888", "Agonist", "", "true"]])
+        self.src("gtopdb", "T")
+
+    def row(self, claim_n, gene, hgnc, lig):
+        return [f"NCBIGENE:{claim_n}", hgnc, gene, "GuideToPharmacology", "2024.1", "inhibitor", "1", f"IUPHAR.LIGAND:{lig}", f"iuphar.ligand:{lig}", "LIGX", "FALSE", "FALSE", "FALSE"]
+
+    def targets(self, rows):
+        self.chembl([mol("CHEMBL1", "Ligx", 4.0)])
+        self.dgidb([["LIGX", "n", "chembl:CHEMBL1", "LIGX", "FALSE", "FALSE", "FALSE", "ChEMBL", "33"]], [[*r] for r in rows])
+        self.write_manifest()
+        entries, stats = self.build()
+        return [t for t in entries[0]["targets"] if t["source"] == "DGIdb interaction"], stats
+
+    def test_collision_independent_of_any_listed_symbol_is_corrected_through_the_target_id(self):
+        self.gtopdb()
+        # BCAT2 inhibitor served by DGIdb as GRIA4 because 2893 was read as an NCBI Gene id
+        t, stats = self.targets([self.row(2893, "GRIA4", "hgnc:4574", 777)])
+        self.assertEqual([(x["gene"], x["identity"]["state"], x["dgidb_served_gene"]["gene"]) for x in t], [("BCAT2", "corrected", "GRIA4")])
+        self.assertEqual(stats["dgidb"]["target_identity_by_claim_source_and_state"], {"GuideToPharmacology|corrected": 1})
+
+    def test_genuine_link_on_a_receptor_family_is_confirmed_and_siblings_are_counted(self):
+        self.gtopdb()
+        t, _ = self.targets([self.row(456, "GRIN2A", "hgnc:4585", 4168)])
+        self.assertEqual((t[0]["gene"], t[0]["identity"]["state"], t[0]["same_family_targets_of_this_ligand"], t[0]["target_level"]), ("GRIN2A", "confirmed", 1, "single_protein"))
+
+    def test_complex_target_expands_to_subunits_without_selectivity(self):
+        self.gtopdb()
+        t, _ = self.targets([self.row(378, "HTR3A", "hgnc:5297", 888)])
+        self.assertEqual(sorted(x["gene"] for x in t), ["HTR3A", "HTR3B"])
+        self.assertTrue(all(x["target_level"] == "complex" for x in t))
+
+    def test_unresolvable_pair_is_unverified_not_confirmed_and_without_the_release_nothing_is_confirmed(self):
+        self.gtopdb()
+        t, _ = self.targets([self.row(2464, "ABAT", "hgnc:23", 999)])       # pair absent from the release
+        self.assertEqual(t[0]["identity"]["state"], "unverified")
+        import shutil
+        shutil.rmtree(self.cache / "gtopdb")
+        self.manifest["sources"].pop("gtopdb")
+        t, _ = self.targets([self.row(456, "GRIN2A", "hgnc:4585", 4168)])
+        self.assertEqual(t[0]["identity"]["state"], "unverified")
+
+    def test_pseudogene_or_antisense_resolution_of_a_symbol_claim_is_flagged_not_trusted(self):
+        r = {"gene_claim_name": "MCL1", "gene_name": "ADAMTSL4-AS1", "interaction_source_db_name": "DTC"}
+        self.assertIn("non-coding", cb.claim_symbol_anomaly(r))
+        self.assertIsNone(cb.claim_symbol_anomaly({"gene_claim_name": "IL8", "gene_name": "CXCL8", "interaction_source_db_name": "NCI"}))   # a renamed symbol is not an anomaly
+        self.assertIsNone(cb.claim_symbol_anomaly({"gene_claim_name": "TP53", "gene_name": "TP53", "interaction_source_db_name": "NCI"}))
+
+
 class UnknownIsNotNegative(Base):
     def test_no_evidence_is_unknown_not_none(self):
         self.chembl([mol("CHEMBL9", None, None)])
