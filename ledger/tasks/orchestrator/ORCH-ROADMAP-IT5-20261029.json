@@ -73,9 +73,9 @@
     },
     {
      "step": "P10 supplements and access categories: incremental, resumable, rate-respecting DSLD advance prioritising compounds/families in cards; ingredient vs product, synonyms, forms and mixtures, name vs identifier link, country and date, source state, ambiguity; name-only stays name-only; no-match is not unavailability; an Italian/European public source if accessible without registration and within terms; measurable increase of pertinent coverage; filters and cards updated; no efficacy/safety implication",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "scientist-d",
-     "evidence": "landed 2acda4cc: DSLD probes 1,005->1,046, targeted 24->75, group lookups 107, supplement category 126->238 entries (name-only), EU health-claims and Novel Food probes (EU level; Italian register unreachable behind a bot challenge, not bypassed); manifest pins the new cache files; independent verification running"
+     "evidence": "landed 2acda4cc; independently verified against live DSLD v9 and the EU portal files (counts reproduce; low defects fixed/recorded); supplement category 126->238 entries is name-only catalogue-wide coverage and touches no card-linked compound; DCA: no DSLD match on 2026-10-28; Italian register behind a bot challenge (not bypassed), EU register of health claims and Novel Food catalogue probed (CC BY 4.0 declared by the portal records); not efficacy/safety/availability"
     }
    ]
   },
