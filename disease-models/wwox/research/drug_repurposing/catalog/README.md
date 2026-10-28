@@ -17,6 +17,8 @@ Nothing here is medical advice and nothing changes the four scientific current f
 | `catalog_stats.json` | every count the later view reads, with the reconciliation | yes |
 | `card_links.json` | link of the curated cards to catalogue ids, with rule and an unmatched list | yes |
 | `card_identity_declarations.tsv` | ten curator declarations (card -> ChEMBL id) used by the link rule `curator_declared_identifier` | yes |
+| `ligand_reconciliation.tsv` | every GtoPdb-ligand relation of a DGIdb-only record (3 030 rows): candidate, ligand id, ChEMBL id, decision, reason code and the evidence fields; the sampling table for a verifier. Written by `build` | yes |
+| `ligand_reconciliation_not_merged.tsv` | the same rows without `merged`: related-not-merged, rejected-conflict, out-of-selection, unresolved, each with its reason (2 545 rows) | yes |
 | `non_molecule_modalities.tsv` | diets, gene replacement and other non-molecule modalities named by the cards, kept **out** of the molecule counts | yes |
 | `cache_manifest.json` | per source: URL, retrieval date, version, sha256, bytes, licence, terms, last attempt status | yes |
 | `cache/` | raw downloads (about 100 MB: ChEMBL pages, NDC zip, DGIdb TSVs) | **no** (gitignored); override with `LEGEND_CATALOG_CACHE` |
@@ -28,7 +30,7 @@ Nothing here is medical advice and nothing changes the four scientific current f
 | ChEMBL (REST, `ChEMBL_37`, 2026-05-01) | backbone: molecule records with `max_phase`, `first_approval`, `molecule_type`, parent/child hierarchy, InChIKey, synonyms; all curated mechanisms (`action_type`, reference ids); targets | molecules with `max_phase>=0.5`, `max_phase=-1` (unknown phase), or `chemical_probe=1`, plus parents of selected salts; 7 561 mechanisms | CC BY-SA 3.0, re-verified 2026-10-28 (chembl.gitbook.io About). **Share-alike effect:** the ChEMBL-derived part of `catalog.jsonl.gz` (names, hierarchy, mechanisms, status records) is an adaptation and must be redistributed under CC BY-SA 3.0 with EMBL-EBI attribution; the file is a composite whose ChEMBL part keeps that licence |
 | UniChem whole-source mappings (FTP, 3 small files) | identifier cross-references ChEMBL to DrugBank, ChEBI and FDA UNII | 3 files, under 1 MB | EMBL-EBI Terms of Use (the UniChem documentation points to them; **no CC0 statement was found, so none is claimed**); attribution expected |
 | DGIdb `drugs.tsv` / `interactions.tsv` | approval flag per claim, gene-drug interaction type, claim source | **export of 2024-06-10** (the newest `/data/latest` serves; its ChEMBL claims are from ChEMBL 33); 81 572 claims, 98 239 interactions | **NOT CLEARED FOR PUBLIC RELEASE as a whole.** DGIdb states no data licence of its own: its software is MIT, and each claim keeps the terms of its source database (dgidb-data README, read 2026-10-28; DGIdb 5.0 paper: "We aggregate content from 44 sources with varying content licenses"). The repository is **public** (GitHub, `visibility: public`, checked 2026-10-28), so the earlier wording "the DGIdb-derived rows stay in this development repository" was wrong and has been withdrawn: the rows are published and the question is the operator's. Per-source terms for the 21 sources present in our rows: section below |
-| GtoPdb `interactions.csv` + `targets_and_families.csv` (guidetopharmacology.org/DATA, release 2026.3.1) | verification and correction of the gene named by DGIdb Guide-to-Pharmacology rows (target id, species, type, selectivity statement); not a target source of its own | 2 files, 24,968 interactions | database ODbL, contents CC BY-SA 4.0 (about.jsp, download.jsp, read 2026-10-28); public download, no registration. Share-alike applies to the GtoPdb-derived fields of `catalog.jsonl.gz`. The web-services API needs a key and is not used |
+| GtoPdb `interactions.csv` + `targets_and_families.csv` + `ligands.csv` (guidetopharmacology.org/DATA, release 2026.3.1) | verification and correction of the gene named by DGIdb Guide-to-Pharmacology rows (target id, species, type, selectivity statement); not a target source of its own. `ligands.csv` (ChEMBL ID, InChIKey, Type, Withdrawn, Labelled, Radioactive) is used only to reconcile DGIdb-only records that carry an IUPHAR ligand id with ChEMBL records (section "Ligand reconciliation"). The ChEMBL `chembl_id_lookup` status of the ChEMBL ids that GtoPdb names and the selection does not hold is cached as `chembl/gtopdb_ref_lookup.json` and pinned in the manifest | 3 files, 24,968 interactions, 14,029 ligands (7,227 with a ChEMBL id); 3,708 ChEMBL ids looked up | database ODbL, contents CC BY-SA 4.0 (about.jsp, download.jsp, read 2026-10-28); public download, no registration. Share-alike applies to the GtoPdb-derived fields of `catalog.jsonl.gz`. The web-services API needs a key and is not used |
 | Every Cure MATRIX drug list (Hugging Face, via datasets-server rows) | `approved_usa`, `gras_usa`, ATC, DrugBank and ChEBI ids for 1 927 live rows | HF commit `dc75f85…`, 1 935 rows declared = 1 935 received | CC BY 4.0, from the drug-list dataset-card metadata. The MATRIX knowledge graph and the **scores** table are separate artefacts: nothing is transferred to them from this licence; the scores have no declared licence and are not used |
 | openFDA `drug/ndc` bulk zip | the only open source of a US access category: `product_type` (prescription vs OTC), `marketing_category`, UNII | 138 143 products, export 2026-10-27 | CC0 / public domain (verified 2026-10-28 at open.fda.gov/license; the third-party GMDN notice on that site concerns device content, not the NDC fields used); openFDA disclaimer applies |
 | NIH ODS DSLD API v9 (per-query) | dietary-supplement label evidence | 1 005 name probes OK, 0 errors (981 of the 4 697 bulk-list names, interrupted; 24 targeted) | reported as CC0 on 2026-10-27 (API documentation licence block); the page returned 403 on 2026-10-28 and the statement is **not re-verified**; counts only |
@@ -68,6 +70,7 @@ with attribution; **B** share-alike, separate file with its own licence and cred
 |---|---|---|---|---|
 | ChEMBL release `ChEMBL_37` (2026-05-01; DGIdb claims carry ChEMBL 33) | names, hierarchy, status, mechanisms, reference ids | CC BY-SA 3.0 (above) | attribution with URL and release; adaptations redistributed under the same licence (CC legal code 4(b)) | B; or ChEMBL ids plus our own annotations only |
 | GtoPdb 2026.3.1 (public download) | target id, species, selectivity used to verify and correct DGIdb GtoPdb rows; GtoPdb-derived claim rows | ODbL database, CC BY-SA 4.0 contents (about.jsp, download.jsp) | ODbL 4.4: a Derivative Database that is publicly used stays under ODbL or a compatible licence, with notice; BY-SA 4.0 3(b): adapted material under BY-SA or a listed compatible licence | B (two licences: do not merge into one file); or target ids and gene symbols |
+| GtoPdb 2026.3.1 `ligands.csv` + ChEMBL `chembl_id_lookup` (status of ids outside the selection) | ligand ChEMBL id, InChIKey, type and withdrawn/labelled flags, used to decide and to record `relations.gtopdb_reconciliation` (tag `gtopdb_ligand_chembl_ref`) on DGIdb-only records; ChEMBL id status | ODbL database, CC BY-SA 4.0 contents (GtoPdb); CC BY-SA 3.0 (ChEMBL); each relation carries both terms in its `terms` field and the asserting source and release in `asserted_by` | the relation is an adaptation of both: share-alike with attribution; the identifier chain is a fact about the sources and is kept with its provenance, not an untraceable merge | B; or counts and decision codes only |
 | PharmGKB / ClinPGx | claim rows via DGIdb | CC BY-SA 4.0 | as above | B; or ids and "see ClinPGx" |
 | openFDA NDC (export 2026-10-27) | product type, marketing category, UNII | open.fda.gov/terms: "public domain and made available with a Creative Commons CC0 1.0 Universal dedication"; credit asked, not required: "Data provided by the U.S. Food and Drug Administration (https://open.fda.gov)"; works to which CC0 does not apply are marked | do not imply endorsement; openFDA disclaimer | A |
 | Every Cure MATRIX drug list (HF commit `dc75f85`) | approval flags, ATC, ids, names | HF dataset-card licence field `cc-by-4.0` (card prose not rendered; read 2026-10-28). The scores table is a separate artefact with no declared licence and is not used | CC BY 4.0 attribution, indicate changes | A |
@@ -171,6 +174,52 @@ that no identifier connects to a ChEMBL entry becomes its own entry, so **the en
 upper bound on distinct substances**: a DGIdb or openFDA entry can describe a substance that a
 ChEMBL entry also describes. One-to-many links are flagged `multiplicity`.
 
+### Ligand reconciliation (IT5 P4): the one exception to "never merged on anything but a ChEMBL id", and why it is not a merge
+
+DGIdb-only records that carry an IUPHAR/GtoPdb ligand id (`iuphar.ligand:N`; 6 567 records, 6 597
+record-ligand pairs) can be reached from a ChEMBL record through GtoPdb's own ChEMBL id. The rule,
+in `catalog_build.py` (`reconcile_gtopdb_ligands`), decides every pair on **identifiers and structure
+only**; a name coincidence is stored as evidence (`name_agrees_not_a_basis`) and decides nothing:
+
+```
+DGIdb concept iuphar.ligand:L  ->  GtoPdb ligands.csv row L  ->  its "ChEMBL ID" R  ->  ChEMBL record R of the catalogue
+```
+
+| decision | when | effect |
+|---|---|---|
+| `merged` | R is a record of the catalogue (ACTIVE: the molecule record is present), the GtoPdb and ChEMBL standard InChIKeys are **equal in all three blocks**, the ligand is not labelled/radioactive, no contradicting identifier (a DrugBank id of the record disjoint from the UniChem DrugBank ids of R; a DGIdb `chembl:` concept id other than R), and the record does not join two different chemical families | `relations.reconciled_via = "gtopdb_ligand_chembl_ref"`, `relations.family_join = [CAT:R]`; the record joins R's family (`repurposing_search.families`). **No record is created, deleted or fused**: it keeps its own targets, status, access and provenance; R gains `relations.reconciled_source_records` |
+| `related_not_merged` | same connectivity block but a different stereo/isotope block (enantiomer vs the other, single enantiomer vs racemate or a flat drawing, isotopologue) or protonation/charge block; or a labelled/radioactive ligand (`[3H]...`); or the ligand's structure equals the **parent** of a salt/derived form that GtoPdb names (parent vs salt not settled) | relation kept with the code; **family not joined**, because a pharmacological distinction may be lost |
+| `rejected_conflict` | the connectivity blocks of the two InChIKeys differ: the identifiers do not describe the same structure (a shared or similar name does not help) | relation kept with the code; nothing joined |
+| `out_of_selection` | R is ACTIVE and a compound in ChEMBL but not a record of the catalogue's selection | relation kept with R as a reference (`chembl_ref_in_catalogue: false`); nothing joined, nothing dropped; becomes a candidate if a later selection enumerates R |
+| `unresolved` | structure unavailable on one or both sides (antibodies, oligonucleotides, inorganic); R INACTIVE/obsolete, not a compound, or unknown to the ChEMBL lookup; the ligand id absent from the GtoPdb release; a contradicting DrugBank or DGIdb ChEMBL id; one record that would join two chemical families | relation kept with the reason code; nothing joined |
+
+Measured on GtoPdb 2026.3.1, the DGIdb export of 2024-06-10 and ChEMBL_37 (all 6 597 pairs; `catalog_stats.json`, key
+`gtopdb_ligand_reconciliation`):
+
+| | pairs | of which ChEMBL id in the catalogue (the 510 candidates of IT4) |
+|---|---|---|
+| ligand id absent from the release | 2 | - |
+| ligand without a ChEMBL id in GtoPdb (no relation) | 3 567 | - |
+| `merged` | 485 | 485 |
+| `related_not_merged` | 14 (7 labelled/radioactive, 3 stereo defined in ChEMBL only, 3 stereoisomers differ, 1 parent form named through a salt id) | 14 |
+| `rejected_conflict` (connectivity differs) | 4 | 4 |
+| `out_of_selection` (ACTIVE compound, not in the selection) | 2 473 | 0 |
+| `unresolved` | 54 (44 ChEMBL id INACTIVE, 1 unknown to the lookup, 6 structure unavailable, 1 disjoint DrugBank ids, 2 ligand id absent) | 7 |
+
+Not a basis for a decision, recorded as evidence: the name, the GtoPdb `Withdrawn` flag and ChEMBL
+`withdrawn_flag` (a market withdrawal is a status, not an identity statement; both are in the evidence
+and the status records are untouched), the ChEMBL chirality code. A ligand with no ChEMBL id in
+GtoPdb makes no relation (3 567 pairs, counted). One-to-many: several GtoPdb ligands naming one ChEMBL
+id are each decided on their own structure (the count is in the evidence); one record with several
+ligand ids joins at most one chemical family, and is left `unresolved` if two would be needed.
+Provenance: every relation names the asserting sources (`asserted_by`: DGIdb concept id and export, GtoPdb
+release and column, ChEMBL release) and carries the licence terms (`terms`): the relation is an adaptation of
+GtoPdb (ODbL / CC BY-SA 4.0) and ChEMBL (CC BY-SA 3.0) content, share-alike with attribution.
+`ligand_reconciliation.tsv` (every relation, sampling-ready) and `ligand_reconciliation_not_merged.tsv`
+(everything but `merged`) are written by `build`. The family effect is the only count effect: the number
+of **records** does not change; the number of **families** of the coverage tool falls by the number of
+joined records (a joined record no longer counts as a family of its own).
+
 ## Units: what each number counts (`catalog_stats.json`, key `units`)
 
 | Unit | Count | Reading |
@@ -179,7 +228,8 @@ ChEMBL entry also describes. One-to-many links are flagged `multiplicity`.
 | ... by origin | ChEMBL selected 19 926, ChEMBL parents added 7, DGIdb-only 22 557, MATRIX-only 502, openFDA-UNII-only 1 219 | the entry that created the record |
 | External declared total | ChEMBL: 2 921 148 distinct compounds | the database's own figure; **not** records acquired, never added to them |
 | Chemical families reconciled (ChEMBL records only) | 16 475 families; 2 965 with more than one record (6 423 records); largest 13 | parent/child hierarchy or identical InChIKey first block; shown, nothing merged |
-| Possible duplicates / unresolved identities | 24 278 source-only records have no identifier link to a ChEMBL record; 9 197 of them have a normalised name equal to a ChEMBL name or synonym | **not merged**; the coincidence is a review flag, identity is unresolved |
+| Source-only records joined to a ChEMBL family by ligand reconciliation | 485 DGIdb-only records | `relations.reconciled_via = gtopdb_ligand_chembl_ref`: GtoPdb ligand to ChEMBL id with an equal standard InChIKey; the records stay (the record count does not change), only the family grouping of the coverage tool does (section "Ligand reconciliation") |
+| Possible duplicates / unresolved identities | 23 793 source-only records have no identifier link to a ChEMBL record (24 278 before the 485 joins); 8 751 of them have a normalised name equal to a ChEMBL name or synonym | **not merged**; the coincidence is a review flag, identity is unresolved |
 | Modalities | small molecule 15 053, antibody 1 032, protein/peptide 986, oligonucleotide 209, other biologic classes, **unknown 26 235** (source-only rows) | unknown is not small molecule |
 | With pharmacological data | 6 328 with a ChEMBL curated mechanism; 18 855 with a DGIdb interaction; 24 423 with any target link; 1 518 distinct ChEMBL target ids, 5 302 gene symbols | a source statement with action type and reference ids; not potency, not relevance to WWOX |
 | **Evaluated against WWOX needs** | **0** | no needs matrix exists yet; nothing in the catalogue is scored or ranked for the disease |
