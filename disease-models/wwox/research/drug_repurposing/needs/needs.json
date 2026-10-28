@@ -1068,13 +1068,13 @@
      "species": "mouse",
      "genotype": "5xFAD (not WWOX)",
      "tissue_or_cells": "adult mouse brain",
-     "age_stage": "adult, 23 days of treatment",
+     "age_stage": "adult; Results state 5-7 days and Methods 4-6 days (the source is inconsistent); larval development",
      "comparison": "treated against control",
      "readout": "memory; microglia; tau; p-eIF2alpha",
      "readout_level": "functional",
      "direction_observed": "improved",
      "evidence_scope": "OTHER_DISEASE_PRECEDENT",
-     "limits": "Abstract-level, one study, adult mouse, Alzheimer model.",
+     "limits": "Abstract-level, one study, adult mouse, Alzheimer model. Figure 6B key assignment is inverted relative to the text (bar identity is resolved by the text, not the panel); no second RNAi line for either gene; no statistics on the residual phenotype of the double knockdown against control; no titration control for the two-construct arms; ATF4 RNAi alone shifts pupariation; no mitochondrial readout after suppression.",
      "locators": [
       {
        "kind": "document",
