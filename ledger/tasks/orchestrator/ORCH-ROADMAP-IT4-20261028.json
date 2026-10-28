@@ -8,7 +8,7 @@
  "START_UTC": "2026-10-28T23:00:00Z",
  "BASELINE": "e2177a50c3d988a6df7b508242c0aaa82f325989 = development/main (verified equal after fetch); battery PASS WITH SKIPS 161/7 ran on fcfff315, later commits documentary",
  "AUTHORISED_QUEUE_20261028": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_A_ASSOCIATIONS": {
    "order": 1,
    "steps": [
@@ -153,18 +153,31 @@
     },
     {
      "step": "F3 checks that cover the final SHA (battery on the implementation SHA, gate, LINT, receipts, growth), push validated, remote rechecked before integrating and publishing",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "release battery on c5ec0589 (implementation SHA before the record-only commits): PASS WITH SKIPS 162 targets, 7 skipped (environment/corpus, same as iteration 3); previous battery on 12a69bbf also PASS WITH SKIPS; gate, LINT (WARN, no BLOCK), receipts verify (883), growth_anchors PASS run on the final SHA; push via safe_push"
     },
     {
      "step": "F4 session closings once (self-eval, capability scout, takeaways) and the final report in Italian",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "self-evaluation note session_evaluations/2026-10-28_it4_orchestrator.md (session_self_eval PASS), capability gap recorded in capability_scout_log.md, takeaways in the final report"
     }
    ]
   }
  },
- "DECISIONS_TAKEN": [],
- "DEFAULTS_TAKEN": [],
+ "DECISIONS_TAKEN": [
+  "2026-10-28: Guide-to-Pharmacology identity is verified through (ligand id, target id) against the public GtoPdb downloads (keyless, ODbL/CC BY-SA); the hand-listed symbol rules were removed; rows that cannot be verified stay visible as unconfirmed and only leave the counts. Alternatives rejected: a longer manual exclusion list; deleting the whole GtoPdb source from DGIdb. Consulted: Scientist (A1/A2) and an independent verifier (A4). Reversible by restoring source_artefacts.tsv and the previous catalogue.",
+  "2026-10-28: GRIN2A/GRIN2B kept at class-level coupling 'same' (glutamate site sits on GluN2); subunit selectivity is never inferred (not_established; source text carried separately). The decision was independently re-examined by the identity verifier.",
+  "2026-10-28: headline presentation: 630 action-stated records / 603 families first, within 1,218 / 1,189 target-listed; consistent/opposed labels need a stated action.",
+  "2026-10-28: priority groups in the view are rule-based (G1-G4), no score; the rules are the builder's own and are printed on the page.",
+  "2026-10-28: working-model sentence on VABAM (card H02) is left as a proposal in the cycle README; the four scientific current files were not changed (BATCH_COMMIT is the path).",
+  "2026-10-28: hourly continuity = one script, in-session cron for a live session, host cron for a dead one; quiet threshold 25 minutes; dead-session revival is not claimed operational (CLI workspace trust).",
+  "2026-10-28: the licence finding (repository is public and holds DGIdb-derived rows in history) was notified to the operator by push notification; no history rewrite, no visibility change was made."
+ ],
+ "DEFAULTS_TAKEN": [
+  "2026-10-28: the host crontab line was installed even though revival of a dead session currently fails on workspace trust: it logs and acts on nothing otherwise, so it is harmless and works the moment trust is accepted.",
+  "One worktree was removed with --force after task_close had detached it clean (no data lost); later removals used the ordinary command."
+ ],
  "STOP_LOG": []
 }
