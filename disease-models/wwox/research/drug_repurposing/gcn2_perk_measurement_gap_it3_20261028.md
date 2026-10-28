@@ -10,9 +10,21 @@ Research layer. NOT WWOX EVIDENCE of a mechanism. Question carried from the ISR 
 
 | Source | System | What was measured | Reading depth |
 |---|---|---|---|
-| Lucas-Clarke 2026 (PMID 42909904, Drosophila) | neuronal wwox knockdown plus Abeta42 | Atf4 immunostaining up; an Ire1-Xbp1 splicing reporter flat; PERK-Atf4 is inferred by exclusion, the authors state they did not determine how WWOX acts on the pathway | repository receipts FTR-20261026-42909904-01 and -02 (existing); this session: full text of the Discussion and reference list searched by keyword, not re-read line by line |
+| Lucas-Clarke 2026 (PMID 42909904, Drosophila) | neuronal wwox knockdown plus Abeta42 | Atf4 immunostaining up; an Ire1-Xbp1 splicing reporter flat; PERK-Atf4 is inferred by exclusion, the authors state they did not determine how WWOX acts on the pathway | repository receipts FTR-20261026-42909904-01 and -02 (existing); re-read line by line on 2026-10-28 for this question (section below) |
 | PMID 28749468 (ovarian cancer cells, paclitaxel) | WWOX re-expression, WWOX siRNA | ER-stress apoptosis with IRE1 and PERK activation; siRNA reverses it | abstract only; not neural, not WWOX-null at baseline |
 | GSE156243 reanalysis (repository) | WWOX-KO organoids, transcripts | ISR target transcripts (CHAC1, TRIB3) lower than chance: a transcript-level negative in one tissue | repository record |
+
+## Line-by-line re-read of the fly paper for this question (2026-10-28)
+
+Targeted re-read of the Results section "Wwox knockdown in the presence of Abeta42 increases lactate concentrations via Atf4", the Figure 5 legend and the Discussion paragraphs on Atf4, PERK and GCN2, from the Europe PMC open full text. It adds no new receipt: the paper already carries two full-text receipts, and this is a question-specific re-read of the same text, not a new coverage claim. Findings:
+
+- **No western blot, no phospho-eIF2alpha, no phospho-PERK, no phospho-GCN2, no puromycin incorporation, no ISRIB or kinase inhibitor, and no Gcn2 or Perk manipulation appear anywhere in the text.** The only ISR readout is Atf4 immunocytochemistry in dissected brains (Figure 5H-I): Mann-Whitney U = 0, P = 0.0022, six brains.
+- **The Atf4 rise needs the amyloid context.** It was seen after Wwox knockdown in Abeta42-expressing flies and was "not observed" in LacZ-expressing Wwox knockdown flies (Supplementary Figure 5D-E, not opened). It is not a Wwox-loss effect on its own in this system.
+- **"PERK-Atf4 branch" is an inference by exclusion.** The only other arm tested is an Ire1-Xbp1 splicing reporter (t = 1.365, P = 0.1954, six to nine animals): a non-significant result at that size, which does not exclude an Ire1 effect. PERK itself was not measured, and neither was GCN2.
+- **The authors say so.** The Discussion: "we did not determine whether WWOX is activating this pathway directly in this study"; it then offers both PERK (by proximity) and GCN2 (by GCN1 binding) as candidate routes, which is the open question of this note.
+- The Atf4-over-HIF1alpha preference rests on an unchanged Sima:GFP reporter (Figure 5F-G) and on prior literature, not on an Atf4 loss-of-function experiment in this paper.
+
+Net: the fly paper cannot discriminate PERK from GCN2, and the Atf4 signal is context-dependent. Both statements are within what the authors claim; the point is that nothing downstream should treat PERK as measured.
 
 ## The two interaction claims in the fly paper's Discussion, traced
 
