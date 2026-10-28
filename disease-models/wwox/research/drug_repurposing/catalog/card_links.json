@@ -382,6 +382,26 @@
    ],
    "non_compound_ids_ignored": []
   },
+  "H01_apinocaltamide_ttype": {
+   "card_files": [
+    "cards/H01_apinocaltamide_ttype.card.json",
+    "cards/H01_apinocaltamide_ttype.packet.json"
+   ],
+   "compound_ids_outside_catalogue": [
+    "CHEMBL4217292"
+   ],
+   "links": [
+    {
+     "catalogue_id": "CAT:CHEMBL4217292",
+     "chembl_id": "CHEMBL4217292",
+     "role": "identity",
+     "rule": "curator_declared_identifier (card_identity_declarations.tsv); curator (scientist-b, 2026-10-28) read the compound name in the card packet and took the ChEMBL id whose pref_name equals it exactly in catalog.jsonl.gz [APINOCALTAMIDE]; ChEMBL id of the record, not a name-similarity score"
+    }
+   ],
+   "non_compound_ids_ignored": [
+    "CHEMBL4217292"
+   ]
+  },
   "Q-N-01": {
    "card_files": [
     "join/cards.json"
@@ -711,9 +731,9 @@
    ]
   }
  },
- "cards_considered": 58,
- "cards_with_at_least_one_link": 18,
- "generated_utc": "2026-10-28T07:34:09Z",
+ "cards_considered": 59,
+ "cards_with_at_least_one_link": 19,
+ "generated_utc": "2026-10-28T07:56:50Z",
  "unmatched_cards": [
   "A02_proteasome_inhibitor_class",
   "A03_client_binding_chaperone",

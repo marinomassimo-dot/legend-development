@@ -1297,8 +1297,82 @@ def lead_spec(query_id: str, card: dict, query: dict, classes: list[dict] | None
     }
 
 
+LEAD_AUTO_DISPOSITIONS = ("consistent_mechanism_candidate", "exploration_candidate", "opposite_mechanism", "source_queried_without_result")
+LEAD_DECISIONS = ("candidate", "abstention", "opposite_mechanism", "insufficient")
+LEAD_FIELDS = ("id", "need", "subject", "catalogue_ids", "decision", "why", "reopening_condition", "next_experiment", "owner", "record")
+
+
+def catalogue_leads(coverage_dir: Path | None = None, cards_dir: Path | None = None) -> dict:
+    """Leads the catalogue/coverage layer has produced, for the handoff.
+
+    Two kinds, both limited to something a Scientist can act on: (1) `cards`: coverage priority pairs whose compound family has a
+    curated card attached and whose disposition is a mechanism candidate, an exploration or an opposite (a pair with no card is
+    not listed: there are hundreds and no decisive step); (2) `dispositions`: reasoned endings recorded in
+    coverage/lead_dispositions.json (candidate, abstention, opposite mechanism, insufficient), each with a reopening condition and
+    a next experiment. Nothing is scored or ordered by evidence volume. Missing files give empty lists, never an error."""
+    cov = coverage_dir or (MODEL / "research" / "drug_repurposing" / "coverage")
+    folders = [cards_dir] if cards_dir else [CURATED_CARDS, CURATED_CARDS_EARLY]
+    out = {"cards": [], "dispositions": [], "problems": []}
+    try:
+        matrix = json.loads((cov / "coverage_matrix.json").read_text(encoding="utf-8"))["rows"]
+        priorities = json.loads((cov / "priorities.json").read_text(encoding="utf-8"))["priorities"]
+    except (OSError, KeyError, ValueError):
+        matrix, priorities = [], []
+    attached = {r["row_id"]: [c["card_id"] for c in r.get("cards") or []] for r in matrix}
+    for pr in priorities:
+        if pr["disposition"] not in LEAD_AUTO_DISPOSITIONS:
+            continue
+        for card_id in attached.get(pr["row_id"], []):
+            nxt = ""
+            for folder in folders:
+                path = folder / f"{card_id}.packet.json"
+                if path.exists():
+                    nxt = (json.loads(path.read_text(encoding="utf-8")).get("p4_card") or {}).get("next_measurement", "")
+                    break
+            out["cards"].append({"card": card_id, "compound": pr["name"], "need": pr["need"], "disposition": pr["disposition"],
+                                 "levels": "/".join(str(v) for v in pr["levels"].values()), "next_measurement": nxt or "UNKNOWN"})
+    out["cards"].sort(key=lambda r: (r["card"], r["need"], r["compound"]))
+    path = cov / "lead_dispositions.json"
+    if path.exists():
+        rows = json.loads(path.read_text(encoding="utf-8")).get("dispositions", [])
+        known = {p["need"] for p in priorities}
+        for r in rows:
+            missing = [f for f in LEAD_FIELDS if f not in r or (r[f] in ("", None))]
+            if missing:
+                out["problems"].append(f"{r.get('id', '?')}: missing {missing}")
+            elif r["decision"] not in LEAD_DECISIONS:
+                out["problems"].append(f"{r['id']}: decision {r['decision']!r} outside {list(LEAD_DECISIONS)}")
+            elif known and r["need"] not in known:
+                out["problems"].append(f"{r['id']}: need {r['need']} is not a need of the coverage layer")
+        out["dispositions"] = rows
+    return out
+
+
+def render_catalogue_leads(leads: dict) -> list[str]:
+    if not (leads.get("cards") or leads.get("dispositions")):
+        return []
+    lines = ["## Catalogue-derived leads (from coverage/ and lead_dispositions.json; not from the mechanism map)", "",
+             "A catalogue link is a source statement, not a recommendation; the levels are never summed. First table: coverage pairs "
+             "whose compound has a curated card. Second: reasoned endings of searches, including abstentions and opposite mechanisms, "
+             "each with what would reopen it and the next discriminating experiment. Not medical advice.", ""]
+    if leads["cards"]:
+        lines += ["| Card | Compound | Need | Disposition | L1/L2/L3/L4 | Card's next measurement |", "|---|---|---|---|---|---|"]
+        for r in leads["cards"]:
+            lines.append(f"| {r['card']} | {r['compound'][:40]} | {r['need']} | {r['disposition']} | {r['levels']} | {r['next_measurement'][:160]} |")
+        lines.append("")
+    if leads["dispositions"]:
+        lines += ["| Id | Need | Subject | Decision | Why | Reopen if | Next experiment | Who | Card |", "|---|---|---|---|---|---|---|---|---|"]
+        for r in leads["dispositions"]:
+            lines.append(f"| {r['id']} | {r['need']} | {r['subject']} | **{r['decision']}** | {r['why']} | {r['reopening_condition']} | "
+                         f"{r['next_experiment']} | {r['owner']} | {r.get('card') or '-'} |")
+        lines.append("")
+    for p in leads.get("problems") or []:
+        lines.append(f"- DISPOSITION PROBLEM: {p}")
+    return lines
+
+
 def render_handoff(rows: list[dict], date: str, axis: str,
-                   evidence: list[dict] | None = None) -> str:
+                   evidence: list[dict] | None = None, leads: dict | None = None) -> str:
     lines = [
         f"# Module handoff — rows for the next Scientist batch ({date}, axis {axis or 'all'})",
         "",
@@ -1343,6 +1417,7 @@ def render_handoff(rows: list[dict], date: str, axis: str,
                          f"{q['disease_rows']} / {q['drug_rows']}"
                          + (f" ({q['rows_without_scope_label']} without a scope label)" if q["rows_without_scope_label"] else "") + f" | {comp} | {q['summary']} | {q['card_next_measurement'] or 'UNKNOWN'} |")
         lines.append("")
+    lines += render_catalogue_leads(leads or {})
     classified = [row for row in rows if row.get("endpoint_classes") and row["binding"]["binding"] == "BOUND_BY_FULLTEXT_LOCATOR"]
     if classified:
         lines += ["## REPLICATE rows: what each endpoint is, against the curated observations",
@@ -1447,7 +1522,7 @@ def main(argv: list[str] | None = None) -> int:
         rows = handoff_rows(cards, queries)
         ev_path = args.out / "evidence.json"
         evidence = json.loads(ev_path.read_text(encoding="utf-8")) if ev_path.exists() else []
-        text = render_handoff(rows, args.date, state.get("axis", ""), evidence)
+        text = render_handoff(rows, args.date, state.get("axis", ""), evidence, catalogue_leads(args.out.parent / "coverage"))
         if args.write:
             args.write.write_text(text, encoding="utf-8")
             print(f"written {relative(args.write)}: {len(rows)} row(s)")

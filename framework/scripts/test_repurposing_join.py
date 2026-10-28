@@ -671,5 +671,63 @@ class EndpointClassesOnSyntheticFixtures(unittest.TestCase):
         self.assertEqual((c["class"], c["cause"]), (rj.MISSING, "NO_COMPLETE_READING_BOUND"))
 
 
+class CatalogueLeadsTest(unittest.TestCase):
+    """The handoff consumes the catalogue/coverage layer: card-attached pairs and reasoned dispositions become rows."""
+
+    def build(self, tmp: Path, dispositions: list[dict]) -> Path:
+        cov = tmp / "coverage"
+        cards = tmp / "cards"
+        cov.mkdir()
+        cards.mkdir()
+        (cov / "coverage_matrix.json").write_text(json.dumps({"rows": [
+            {"row_id": "FAM:A", "cards": [{"card_id": "H99_x"}]}, {"row_id": "FAM:B", "cards": []}]}))
+        lev = {"L1": "documented", "L2": "coherent", "L3": "none", "L4": "none"}
+        pr = lambda row, disp: {"row_id": row, "name": row, "need": "NEED-X", "disposition": disp, "levels": lev}
+        (cov / "priorities.json").write_text(json.dumps({"priorities": [
+            pr("FAM:A", "consistent_mechanism_candidate"), pr("FAM:A", "not_relevant"), pr("FAM:B", "consistent_mechanism_candidate")]}))
+        (cards / "H99_x.packet.json").write_text(json.dumps({"p4_card": {"next_measurement": "the discriminating assay"}}))
+        (cov / "lead_dispositions.json").write_text(json.dumps({"dispositions": dispositions}))
+        return cov
+
+    def disp(self, **kw):
+        row = {"id": "LD-T", "need": "NEED-X", "subject": "s", "catalogue_ids": [], "decision": "abstention", "why": "w",
+               "reopening_condition": "r", "next_experiment": "n", "owner": "o", "record": "rec"}
+        row.update(kw)
+        return row
+
+    def test_only_card_attached_candidate_pairs_are_rows(self):
+        with tempfile.TemporaryDirectory() as d:
+            cov = self.build(Path(d), [])
+            leads = rj.catalogue_leads(cov, Path(d) / "cards")
+        self.assertEqual([(r["card"], r["disposition"], r["next_measurement"]) for r in leads["cards"]],
+                         [("H99_x", "consistent_mechanism_candidate", "the discriminating assay")])
+
+    def test_dispositions_render_with_reopening_and_next_experiment(self):
+        with tempfile.TemporaryDirectory() as d:
+            cov = self.build(Path(d), [self.disp(decision="opposite_mechanism")])
+            leads = rj.catalogue_leads(cov, Path(d) / "cards")
+        text = rj.render_handoff([], "2026-01-01", "all", None, leads)
+        self.assertIn("## Catalogue-derived leads", text)
+        self.assertIn("**opposite_mechanism**", text)
+        self.assertIn("| r | n | o |", text)
+        self.assertEqual(leads["problems"], [])
+
+    def test_bad_dispositions_are_reported_not_hidden(self):
+        with tempfile.TemporaryDirectory() as d:
+            cov = self.build(Path(d), [self.disp(decision="maybe"), self.disp(id="LD-U", need="NEED-NOPE"), self.disp(id="LD-V", why="")])
+            leads = rj.catalogue_leads(cov, Path(d) / "cards")
+        self.assertEqual(len(leads["problems"]), 3)
+        self.assertIn("DISPOSITION PROBLEM", rj.render_handoff([], "2026-01-01", "all", None, leads))
+
+    def test_no_leads_leaves_the_handoff_unchanged(self):
+        self.assertNotIn("Catalogue-derived", rj.render_handoff([], "2026-01-01", "all"))
+        self.assertEqual(rj.render_catalogue_leads({"cards": [], "dispositions": []}), [])
+
+    def test_shipped_dispositions_are_valid(self):
+        leads = rj.catalogue_leads()
+        self.assertEqual(leads["problems"], [])
+        self.assertTrue(any(r["decision"] == "candidate" for r in leads["dispositions"]))
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
