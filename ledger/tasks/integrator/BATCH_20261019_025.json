@@ -1,0 +1,59 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "_note": "Single-candidate integration, MINOR working-model change (WM_v7.28). Not medical advice; no individual-level data; no re-identifying variant combination.",
+ "TASK_ID": "BATCH_20261019_025",
+ "ALIAS": "INT-IT5-P2-20261029",
+ "ACTOR_ID": "orchestrator",
+ "OWNER": "orchestrator",
+ "CURRENT_STATE": "COMPLETE_ON_BRANCH",
+ "assigned_on": "2026-10-29",
+ "OBJECTIVE": "Mandate IT5 step P2: propagate the verified iteration-4 material (VABAM wording, nonsense-allele enumeration with NMD predictions and limits, read-through applicability by lesion class) to every consumer, regenerate the derived surfaces, and prove the module no longer uses the superseded wording.",
+ "TASK_CLAIM": {
+  "actor": "orchestrator (Integrator worker)",
+  "branch": "task/it5-p2",
+  "worktree": ".claude/worktrees/it5-p2",
+  "base": "97b328f9"
+ },
+ "RESULT": {
+  "wm_version": "WM_v7.27 -> WM_v7.28_2026-10-29 (MINOR: no baseline claim reversed, no Status/Type/Summary changed; the working-model sentence is narrowed, the BLOCK 1 caution is untouched)",
+  "candidates_propagated": 1,
+  "candidate": "CC-20261029-INTEGRATOR-IT5-P2-01",
+  "registries": "working_model_current (Version, Last update, BLOCK 1 DATA VABAM bullet: 3 ops), working_model_history (Last update note, Changelog row: 2 ops), claim_registry_current CLAIM 001 wave note (1 op), paper_registry_current PAPER 003 note (1 op), literature_tracking_log_current LIT-003 note (1 op); dry run then --apply",
+  "ledger": "dismissal_ledger_current.md DIS-41, 2 replace-within ops via record_scoped_edit.py (unenumerated-class sentence, revival condition d); outside-record bytes proven unchanged by the editor; no discovery-ledger or hypothesis-ledger record carried the superseded wording",
+  "consumers_reached": "narrative view disease_model.md; mechanism_intervention_map.md N-04 (heading, body, summary row); census and ft116 triage notes; cards B01, B02, H02, EB-VGB-01 (packets edited, cards rebuilt by the bridge, EB-VGB-01 card edited in the one string because the other eight early cards already differ from the bridge on main); needs.json (PTC O1, inferred, VGB statement); two cycle READMEs; dated analysis note anchor_papers_without_readings_20260921 annotated, not rewritten",
+  "derived": "repurposing_join run (queries Q-N-04; evidence also carries a sixth receipt event for the ISR paper, upstream drift), repurposing_coverage run and check, p5 build and check, repurposing_view run full and shareable and check, repurposing_join handoff 2026-10-29, pathograph surfaces; coverage_report, batch_queue and reading_state unchanged",
+  "proof": "framework/scripts/test_repurposing_join.py::SupersededWordingGone (3 tests, existing file) plus git grep over the tree: remaining hits of the two phrases are dated historical notes and the identifier patch record, listed in the report",
+  "not_touched": "paper_registry/literature log records other than PAPER 003 and LIT-003; discovery_ledger; therapeutic_hypotheses_ledger; fulltext_read_receipts.jsonl (no receipt recorded)"
+ },
+ "DEFAULTS_TAKEN": [
+  {
+   "condition": "batch_commit.py propagate accepts only the four scientific current files",
+   "default": "working_model_history.md and DIS-41 edited with record_scoped_edit.py apply (dry run, then --apply); no FULL_FALLBACK"
+  },
+  {
+   "condition": "the snapshot declaration omits append-only ledgers by design",
+   "default": "base-qualified route held ready for DIS-41: git show 97b328f9:disease-models/wwox/research/dismissal_ledger_current.md; snapshot backup/20261029_it5_p2 (gitignored) for the declared files"
+  },
+  {
+   "condition": "cards_early checker fails on main for eight early cards (stored card differs from the bridge)",
+   "default": "EB-VGB-01 card not regenerated (would add unrelated endpoint_outcomes); the one string was edited in packet and card; the pre-existing failure is not widened"
+  },
+  {
+   "condition": "repurposing_join run carries upstream drift unrelated to this batch (receipt_events 5 to 6 on 11 evidence tables)",
+   "default": "regenerated and committed as derived output of the current ledger, named in the report"
+  },
+  {
+   "condition": "a relative link to working_model_history.md inside a candidate under research/ breaks the publication gate",
+   "default": "the candidate shows the link as inline code; the working-model files keep their links except the new note, which names the history file without a link"
+  }
+ ],
+ "STOP_LOG": [],
+ "VERIFICATION": {
+  "drift": "FRESH (origin/main 5f81d12b; branch base 97b328f9)",
+  "legend_lint": "WARN before and after, 0 BLOCK; output identical except the EVIDENCE_AVAILABILITY disk fact (worktree has no files/fulltext)",
+  "growth_anchors_check": "PASS",
+  "fulltext_receipts_verify": "OK, 883 chained receipts",
+  "public_release_gate": "PASS, 0 BLOCKS",
+  "tests": "test_repurposing_join 58 OK, test_repurposing_coverage 54 OK, test_repurposing_view 44 OK, test_repurposing_bridge 16 OK, test_check_needs 12 OK, check_needs OK, cards/check_cards 23 packets 0 problems, p5_check 0 problems"
+ }
+}
