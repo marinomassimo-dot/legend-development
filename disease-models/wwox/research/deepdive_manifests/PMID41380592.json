@@ -1,0 +1,847 @@
+{
+ "schema_version": 2,
+ "pmid": "41380592",
+ "doi": "10.1016/j.redox.2025.103966",
+ "pmcid": "PMC12754399",
+ "receipt": "FTR-20261027-41380592-01",
+ "landing": [
+  "FTR-20261027-41380592-01",
+  "disease-models/wwox/research/drug_repurposing/isr_pars2_reading_it3_20261027.md"
+ ],
+ "landing_note": "Scientist-c reading for the ISR need (iteration 3): a fly PARS2 (mitochondrial prolyl-tRNA synthetase) model in which GENETIC suppression of GCN2 or ATF4 reduces developmental delay and bang sensitivity. NOT WWOX EVIDENCE; no compound was tested. The article was found in PMC and the PMC open-data bucket under CC BY-NC.",
+ "declared_reading_gap": "No gap in the article body, the nine main figures, Table S1 or the nine supplementary figures (images extracted from the DOCX and inspected). Not read: the 60 references beyond identification of refs 27, 31, 48 and 49 (titles) and the absence of any WWOX reference; no raw data deposit exists in the article. The supplementary figure legends are not in the file (the images carry titles only).",
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not needed: PMC and the PMC open-data bucket held the XML, nine figures and the supplement; the shared pmc_bucket_fetch.py tool did the acquisition."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Not used: the reading answers a named ISR-need question and feeds a hypothesis qualifier; no claim-promoting pipeline is run over a non-WWOX paper."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "research_type": "experimental_lab",
+  "total_publications": 39,
+  "publications_on_gene": 0,
+  "counts_measured": "PubMed esearch 2026-10-27: 'Ge Wanzhong[Author]' = 39; with AND Drosophila = 27; with AND WWOX = 0. The last author's name is ambiguous in PubMed; the counts are an order of magnitude, not an identification.",
+  "output_kind": "primary_research",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "OBSERVATION: the Drosophila genetics, the western blots and the behavioural assays are first-hand work of a laboratory with a Drosophila publication record (27 of 39 PubMed hits carry Drosophila), so the method class is within the group's competence. INTERPRETATION: the group has no WWOX publication (0), so any statement about WWOX in this reading is mine, not theirs; the causal sentences (ISR is detrimental, ATF4 is the effector) are the authors' reading of partial genetic rescues and are weighted as interpretation, not as observation."
+ },
+ "field_density": {
+  "measured_on": "2026-10-27",
+  "source": "PubMed E-utilities esearch",
+  "queries": [
+   {
+    "query": "PARS2",
+    "count": 33,
+    "measured_on": "2026-10-27"
+   },
+   {
+    "query": "PARS2 AND seizure",
+    "count": 7,
+    "measured_on": "2026-10-27"
+   },
+   {
+    "query": "\"integrated stress response\" AND (seizure OR epilepsy)",
+    "count": 20,
+    "measured_on": "2026-10-27"
+   },
+   {
+    "query": "\"integrated stress response\" AND Drosophila AND seizure",
+    "count": 1,
+    "measured_on": "2026-10-27"
+   }
+  ],
+  "note": "Counts are of PubMed records matching a text query on one date; they do not say how many are primary studies. The last query returns one record (this article is a candidate for it), which makes a genetic ISR-suppression-in-fly-seizure precedent a sparse literature."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 60,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "60 ref elements counted from the structured XML; searched for WWOX or Wwox: none. Refs 27 (Han 2023, mitochondrial ISR), 31 (Ryan 2021, TCA cycle disruption and ATF4), 48 (Lee 2015, Drosophila ATF4 regulates glycolysis during ER stress) and 49 (Keller 2012, halofuginone and prolyl-tRNA synthetase) identified by title only.",
+  "resolved": [
+   {
+    "scope": "Lee 2015 G3 (ref 48), the source for the ATF4-to-glycolysis/Ldh step",
+    "status": "cited, not read in this reading",
+    "result": "Cited by the authors for ATF4-induced glycolytic enzymes and Ldh under ER stress in S2 cells; the Ldh step in this article rests on it."
+   }
+  ],
+  "queued": [],
+  "dedup_performed": "fulltext_receipts.py status and paper_packet.py packet for 41380592 before reading: no receipt, no manifest; git grep of research/ found only a scout-log triage line and a locator-audit identity check.",
+  "reason": "Reference list enumerated for WWOX content (none) and the ATF4-Ldh antecedents identified; no hop is owed by this reading."
+ },
+ "corpus_crossquery": {
+  "query": "Does LEGEND hold a registry or ledger record of PMID 41380592, a GCN2/ATF4 suppression precedent, or a measurement of Ldh downstream of ATF4 in a mitochondrial-dysfunction model?",
+  "hits": 3,
+  "hits_note": "git grep over disease-models/ and research/: capability_scout_log.md (a triage line, not a reading), a locator-audit identity check, and the iteration-3 roadmap record. registry_records.py index over the registries for 'integrated stress response' and ATF4 found only the existing HYP-20261026-10 and DL-MECH-173 line and PAPER 567 context.",
+  "answered": "Not previously read; no receipt or manifest existed."
+ },
+ "retraction_check": {
+  "checked_on": "2026-10-27",
+  "source": "PubMed esummary for PMID 41380592 (no key, no contact address)",
+  "result": "esummary returned publication types Journal Article and Research Support, Non-U.S. Gov't and no correction or retraction record; the dependency screen of the reference list (dependency_integrity.py screen --pmid 41380592 --manifest-block) was attempted on 2026-10-27 and failed closed: the expected Retraction Watch snapshot retractionwatch_20261021.csv is absent from files/retraction_watch/ (only 20260910 and 20261002 are present); nothing is reported clean and the retraction_check.dependencies slot stays undeclared, a non-blocking ratchet.",
+  "note": "Publication date 2026 Feb in PubMed, first published 2025-12-09 in Europe PMC; one identity."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41380592_Xu2026_PMC_r2.xml",
+   "sha256": "5c7fffb1f44fd45d89d1e43ffef3462823f6f92333c2f9f5fb6d505dce86b11a",
+   "kind": "article_text",
+   "note": "PMC JATS full text of PMC12754399 (Redox Biol 2026;89:103966), CC BY-NC; efetch XML, structured surface against which all body locators are matched. Retrieved with framework/scripts/pmc_bucket_fetch.py on 2026-10-27.",
+   "acquisition_recipe": {
+    "derived": false,
+    "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=PMC12754399&rettype=xml",
+    "http_method": "GET",
+    "tier": "ncbi_efetch_pmc_xml",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-27",
+    "result_sha256": "5c7fffb1f44fd45d89d1e43ffef3462823f6f92333c2f9f5fb6d505dce86b11a"
+   }
+  },
+  {
+   "path": "files/figures/PMID41380592_r2/gr1.jpg",
+   "sha256": "ffef06392990d1874f1e0dadcdd1d0b3760fb34d3f7467a07730285f106d950a",
+   "kind": "figure",
+   "note": "Main figure 1 JPEG from the PMC open-data bucket; opened and inspected as an image.",
+   "acquisition_recipe": {
+    "derived": false,
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12754399.1/gr1.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-27",
+    "result_sha256": "ffef06392990d1874f1e0dadcdd1d0b3760fb34d3f7467a07730285f106d950a"
+   }
+  },
+  {
+   "path": "files/figures/PMID41380592_r2/gr2.jpg",
+   "sha256": "62aa8438adc3083476026edec42a11446525c53835f79c94965e1c415593a892",
+   "kind": "figure",
+   "note": "Main figure 2 JPEG from the PMC open-data bucket; opened and inspected as an image.",
+   "acquisition_recipe": {
+    "derived": false,
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12754399.1/gr2.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-27",
+    "result_sha256": "62aa8438adc3083476026edec42a11446525c53835f79c94965e1c415593a892"
+   }
+  },
+  {
+   "path": "files/figures/PMID41380592_r2/gr3.jpg",
+   "sha256": "778da590613f822f70c31aa983bb58e709aa72bc0b8f4cd6bb2d2801f5ee6ed5",
+   "kind": "figure",
+   "note": "Main figure 3 JPEG from the PMC open-data bucket; opened and inspected as an image.",
+   "acquisition_recipe": {
+    "derived": false,
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12754399.1/gr3.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-27",
+    "result_sha256": "778da590613f822f70c31aa983bb58e709aa72bc0b8f4cd6bb2d2801f5ee6ed5"
+   }
+  },
+  {
+   "path": "files/figures/PMID41380592_r2/gr4.jpg",
+   "sha256": "537df1b7d51af8a7657efa6de8e8b26387d2cece71f643a26580ce2862bc0672",
+   "kind": "figure",
+   "note": "Main figure 4 JPEG from the PMC open-data bucket; opened and inspected as an image.",
+   "acquisition_recipe": {
+    "derived": false,
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12754399.1/gr4.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-27",
+    "result_sha256": "537df1b7d51af8a7657efa6de8e8b26387d2cece71f643a26580ce2862bc0672"
+   }
+  },
+  {
+   "path": "files/figures/PMID41380592_r2/gr5.jpg",
+   "sha256": "4edbb8b4db5419c1ca9c854ca16df40cad9fd634be9b61f32e35f3228bbbb14d",
+   "kind": "figure",
+   "note": "Main figure 5 JPEG from the PMC open-data bucket; opened and inspected as an image.",
+   "acquisition_recipe": {
+    "derived": false,
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12754399.1/gr5.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-27",
+    "result_sha256": "4edbb8b4db5419c1ca9c854ca16df40cad9fd634be9b61f32e35f3228bbbb14d"
+   }
+  },
+  {
+   "path": "files/figures/PMID41380592_r2/gr6.jpg",
+   "sha256": "56737168e61fb2544bc0312f2c1b98e9a1091c7051bebcb6d59e309ca8ed9188",
+   "kind": "figure",
+   "note": "Main figure 6 JPEG from the PMC open-data bucket; opened and inspected as an image.",
+   "acquisition_recipe": {
+    "derived": false,
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12754399.1/gr6.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-27",
+    "result_sha256": "56737168e61fb2544bc0312f2c1b98e9a1091c7051bebcb6d59e309ca8ed9188"
+   }
+  },
+  {
+   "path": "files/figures/PMID41380592_r2/gr7.jpg",
+   "sha256": "a8a66687bf53d28ff5c91676b2e976357ec9a4a715338adc96356fe9070fb6ec",
+   "kind": "figure",
+   "note": "Main figure 7 JPEG from the PMC open-data bucket; opened and inspected as an image.",
+   "acquisition_recipe": {
+    "derived": false,
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12754399.1/gr7.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-27",
+    "result_sha256": "a8a66687bf53d28ff5c91676b2e976357ec9a4a715338adc96356fe9070fb6ec"
+   }
+  },
+  {
+   "path": "files/figures/PMID41380592_r2/gr8.jpg",
+   "sha256": "36dbc286b7f7fb9b381c8d62fb1e01c3bea20752278606a72e44e5d150135442",
+   "kind": "figure",
+   "note": "Main figure 8 JPEG from the PMC open-data bucket; opened and inspected as an image.",
+   "acquisition_recipe": {
+    "derived": false,
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12754399.1/gr8.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-27",
+    "result_sha256": "36dbc286b7f7fb9b381c8d62fb1e01c3bea20752278606a72e44e5d150135442"
+   }
+  },
+  {
+   "path": "files/figures/PMID41380592_r2/gr9.jpg",
+   "sha256": "3c375374be45cad2042620dfabea8ee1aac14d7d9802982b9e6ff0585b3785d1",
+   "kind": "figure",
+   "note": "Main figure 9 JPEG from the PMC open-data bucket; opened and inspected as an image.",
+   "acquisition_recipe": {
+    "derived": false,
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12754399.1/gr9.jpg",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-27",
+    "result_sha256": "3c375374be45cad2042620dfabea8ee1aac14d7d9802982b9e6ff0585b3785d1"
+   }
+  },
+  {
+   "path": "files/supplement/PMID41380592_r2/mmc1.docx",
+   "sha256": "e37fbb4b45ac571a49b6105737df02503df22c31e494840a12c396a06659cfcd",
+   "kind": "supplement_text",
+   "note": "mmc1.docx: Table S1 (primer sequences) as text and Supplementary Figures S1 to S9 as embedded TIFF images with no legends in the file; the images were extracted and inspected.",
+   "acquisition_recipe": {
+    "derived": false,
+    "resolved_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC12754399.1/mmc1.docx",
+    "http_method": "GET",
+    "tier": "pmc_oa_opendata_s3",
+    "user_agent_policy": "none",
+    "acquired_on": "2026-10-27",
+    "result_sha256": "e37fbb4b45ac571a49b6105737df02503df22c31e494840a12c396a06659cfcd"
+   }
+  },
+  {
+   "path": "files/supplement/PMID41380592_r2/extracted/S1.png",
+   "sha256": "8e72e3773c193190f8cd8f33a2e2b65a38c3507cd4bf36938c48ac3b40f083b5",
+   "kind": "figure",
+   "note": "Supplementary Figure S1: TIFF image word/media/image1.tiff of mmc1.docx converted to PNG; opened and inspected.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID41380592_r2/mmc1.docx",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(zip.read('word/media/image1.tiff')).save('S1.png')",
+     "join": ""
+    },
+    "acquired_on": "2026-10-27",
+    "result_sha256": "8e72e3773c193190f8cd8f33a2e2b65a38c3507cd4bf36938c48ac3b40f083b5"
+   }
+  },
+  {
+   "path": "files/supplement/PMID41380592_r2/extracted/S2.png",
+   "sha256": "49114dfccc96b5007a5fe70a15eba09063aed7d1be8c8664231c6321f7628848",
+   "kind": "figure",
+   "note": "Supplementary Figure S2: TIFF image word/media/image2.tiff of mmc1.docx converted to PNG; opened and inspected.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID41380592_r2/mmc1.docx",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(zip.read('word/media/image2.tiff')).save('S2.png')",
+     "join": ""
+    },
+    "acquired_on": "2026-10-27",
+    "result_sha256": "49114dfccc96b5007a5fe70a15eba09063aed7d1be8c8664231c6321f7628848"
+   }
+  },
+  {
+   "path": "files/supplement/PMID41380592_r2/extracted/S3.png",
+   "sha256": "134d37e9ceecb45f5f068c81b4bf0bbcd3272e99257cb4b053232719b588b422",
+   "kind": "figure",
+   "note": "Supplementary Figure S3: TIFF image word/media/image3.tiff of mmc1.docx converted to PNG; opened and inspected.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID41380592_r2/mmc1.docx",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(zip.read('word/media/image3.tiff')).save('S3.png')",
+     "join": ""
+    },
+    "acquired_on": "2026-10-27",
+    "result_sha256": "134d37e9ceecb45f5f068c81b4bf0bbcd3272e99257cb4b053232719b588b422"
+   }
+  },
+  {
+   "path": "files/supplement/PMID41380592_r2/extracted/S4.png",
+   "sha256": "1f1f5866e87e018ad046de75ac72942163c9727fb1390a68d589fe53fa19233e",
+   "kind": "figure",
+   "note": "Supplementary Figure S4: TIFF image word/media/image4.tiff of mmc1.docx converted to PNG; opened and inspected.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID41380592_r2/mmc1.docx",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(zip.read('word/media/image4.tiff')).save('S4.png')",
+     "join": ""
+    },
+    "acquired_on": "2026-10-27",
+    "result_sha256": "1f1f5866e87e018ad046de75ac72942163c9727fb1390a68d589fe53fa19233e"
+   }
+  },
+  {
+   "path": "files/supplement/PMID41380592_r2/extracted/S5.png",
+   "sha256": "80f08a7c391b8244581e977209a4a5e742ade939a563745912945f057fb86540",
+   "kind": "figure",
+   "note": "Supplementary Figure S5: TIFF image word/media/image5.tiff of mmc1.docx converted to PNG; opened and inspected.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID41380592_r2/mmc1.docx",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(zip.read('word/media/image5.tiff')).save('S5.png')",
+     "join": ""
+    },
+    "acquired_on": "2026-10-27",
+    "result_sha256": "80f08a7c391b8244581e977209a4a5e742ade939a563745912945f057fb86540"
+   }
+  },
+  {
+   "path": "files/supplement/PMID41380592_r2/extracted/S6.png",
+   "sha256": "16abf88e0a033ad38915bd730d69fd3c9fac142ebbdc9243fef421868b69f11f",
+   "kind": "figure",
+   "note": "Supplementary Figure S6: TIFF image word/media/image6.tiff of mmc1.docx converted to PNG; opened and inspected.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID41380592_r2/mmc1.docx",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(zip.read('word/media/image6.tiff')).save('S6.png')",
+     "join": ""
+    },
+    "acquired_on": "2026-10-27",
+    "result_sha256": "16abf88e0a033ad38915bd730d69fd3c9fac142ebbdc9243fef421868b69f11f"
+   }
+  },
+  {
+   "path": "files/supplement/PMID41380592_r2/extracted/S7.png",
+   "sha256": "5c1a19dafdda79946b787ac58b6c0927d03c13a42464006588750165145dde97",
+   "kind": "figure",
+   "note": "Supplementary Figure S7: TIFF image word/media/image7.tiff of mmc1.docx converted to PNG; opened and inspected.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID41380592_r2/mmc1.docx",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(zip.read('word/media/image7.tiff')).save('S7.png')",
+     "join": ""
+    },
+    "acquired_on": "2026-10-27",
+    "result_sha256": "5c1a19dafdda79946b787ac58b6c0927d03c13a42464006588750165145dde97"
+   }
+  },
+  {
+   "path": "files/supplement/PMID41380592_r2/extracted/S8.png",
+   "sha256": "09898c2c069e3e1039463673239f2df35f8f453e58f7cda05c54c6cdc369397d",
+   "kind": "figure",
+   "note": "Supplementary Figure S8: TIFF image word/media/image8.tiff of mmc1.docx converted to PNG; opened and inspected.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID41380592_r2/mmc1.docx",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(zip.read('word/media/image8.tiff')).save('S8.png')",
+     "join": ""
+    },
+    "acquired_on": "2026-10-27",
+    "result_sha256": "09898c2c069e3e1039463673239f2df35f8f453e58f7cda05c54c6cdc369397d"
+   }
+  },
+  {
+   "path": "files/supplement/PMID41380592_r2/extracted/S9.png",
+   "sha256": "5e29618fbe856abccd3e81bed9b6d991557182889e6cd8eb83943f60f3e73213",
+   "kind": "figure",
+   "note": "Supplementary Figure S9: TIFF image word/media/image9.tiff of mmc1.docx converted to PNG; opened and inspected.",
+   "acquisition_recipe": {
+    "derived": true,
+    "derived_from": "files/supplement/PMID41380592_r2/mmc1.docx",
+    "extractor": {
+     "name": "PyMuPDF",
+     "version": "1.28.2",
+     "call": "pymupdf.Pixmap(zip.read('word/media/image9.tiff')).save('S9.png')",
+     "join": ""
+    },
+    "acquired_on": "2026-10-27",
+    "result_sha256": "5e29618fbe856abccd3e81bed9b6d991557182889e6cd8eb83943f60f3e73213"
+   }
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "The structured JATS body (all Results, Discussion, Methods) was converted to plain text and read section by section; the nine main and nine supplementary figure images were opened individually.",
+  "abstract_anchoring_waived": true,
+  "abstract_anchoring_waiver_reason": "No locator quotes the abstract; every evidentiary locator is a body, Methods, figure or supplementary-image locator.",
+  "entries": [
+   {
+    "proposition": "FLY PARS2 (MITOCHONDRIAL tRNA-SYNTHETASE) MODEL, NOT WWOX EVIDENCE: Genetic (RNAi) suppression of GCN2 in the neuronal dPARS2-knockdown fly largely suppresses the developmental delay; the claim is 'largely', and the pupariation curve in Fig 6H still lags the control.",
+    "snippet": "Depletion of GCN2 in dPARS2-deficient animals largely suppressed developmental delay (Fig. 6G, H and I).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41380592_Xu2026_PMC_r2.xml",
+    "anchor": "Results, 'Inhibition of the GCN2 branch of the ISR suppresses pathological changes caused by dPARS2 deficiency'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "FLY PARS2 (MITOCHONDRIAL tRNA-SYNTHETASE) MODEL, NOT WWOX EVIDENCE: Genetic suppression of GCN2 reduces the seizure-like phenotype (bang sensitivity, recovery time) in the neuronal dPARS2-knockdown fly; text says 'largely reduced or suppressed'.",
+    "snippet": "the seizure phenotype was largely reduced or suppressed in dPARS2-deficient flies lacking GCN2, as revealed by the reduced number of flies showing bang sensitivity and decreased recovery time compared with dPARS2-deficient flies alone",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41380592_Xu2026_PMC_r2.xml",
+    "anchor": "Results, same subsection (Fig 6J, K)",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "FLY PARS2 (MITOCHONDRIAL tRNA-SYNTHETASE) MODEL, NOT WWOX EVIDENCE: The authors attribute the developmental AND behavioural impairment to the GCN2 branch; this is the authors' causal reading of a partial genetic rescue.",
+    "snippet": "Thus, the impairment at both the developmental and behavior levels in dPARS2-deficient flies is caused by activation of the GCN2 branch of the ISR.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41380592_Xu2026_PMC_r2.xml",
+    "anchor": "Results, same subsection",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "FLY PARS2 (MITOCHONDRIAL tRNA-SYNTHETASE) MODEL, NOT WWOX EVIDENCE: Genetic knockdown of ATF4 in the neuronal dPARS2-knockdown fly 'largely' rescues developmental delay and seizure-like behaviour; the knockdown efficiency measure (qRT-PCR) is cited to Supplementary Fig S8.",
+    "snippet": "downregulation of ATF4 largely rescued the developmental delay and seizure induction defects caused by dPARS2 deficiency",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41380592_Xu2026_PMC_r2.xml",
+    "anchor": "Results, 'ISR activation triggers developmental delay and seizure through ATF4' (Fig 7D-H)",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "FLY PARS2 (MITOCHONDRIAL tRNA-SYNTHETASE) MODEL, NOT WWOX EVIDENCE: Kinase resolution in the fly head: phosphorylation of GCN2 rises, PERK phosphorylation does not, total GCN2 unchanged.",
+    "snippet": "Phosphorylation of GCN2, but not of PERK, was increased in the head of dPARS2-deficient flies (Fig. 6A and B).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41380592_Xu2026_PMC_r2.xml",
+    "anchor": "Results, 'The GCN2 branch of the ISR is activated in dPARS2 deficiency flies'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "FLY PARS2 (MITOCHONDRIAL tRNA-SYNTHETASE) MODEL, NOT WWOX EVIDENCE: Phospho-eIF2 alpha is raised in the dPARS2-knockdown fly head and global protein synthesis (puromycin incorporation) is reduced.",
+    "snippet": "The ISR was indeed activated in dPARS2-deficient fly heads, as determined by the increased P-eIF2α levels in elav-Gal4 driven dPARS2 knockdown fly heads compared with the control (Fig. 5A and B).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41380592_Xu2026_PMC_r2.xml",
+    "anchor": "Results, 'Activation of the integrated stress response in dPARS2 deficiency'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "FLY PARS2 (MITOCHONDRIAL tRNA-SYNTHETASE) MODEL, NOT WWOX EVIDENCE: The ISR target-gene list was annotated manually from a mouse study, not defined independently; it is the basis of the 'ISR target genes increased' statement.",
+    "snippet": "Moreover, we manually annotated potential Drosophila ISR target genes based on a previous study in mice and observed an increase in the expression of many ISR target genes in dPARS2 knockdown fly heads compared with the control (Fig. 5E) [27].",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41380592_Xu2026_PMC_r2.xml",
+    "anchor": "Results, 'Activation of the integrated stress response in dPARS2 deficiency'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "FLY PARS2 (MITOCHONDRIAL tRNA-SYNTHETASE) MODEL, NOT WWOX EVIDENCE: Ldh (and most glycolytic genes) rise at the TRANSCRIPT level in dPARS2-deficient heads, and Ldh PROTEIN rises by Western blot (abundance); no Ldh activity, lactate, pyruvate or flux is measured, and the Ldh rise is interpreted as ATF4 activity.",
+    "snippet": "Our RNA-seq results showed that expression of most glycolytic genes and Ldh were upregulated in dPARS2-deficient flies compared with the control, indicating activation of ATF4 in response to dPARS2 knockdown in our fly model (Fig. 7A). Upregulation of Ldh was also confirmed by Western blot analysis (Fig. 7B and C).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41380592_Xu2026_PMC_r2.xml",
+    "anchor": "Results, 'ISR activation triggers developmental delay and seizure through ATF4'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "FLY PARS2 (MITOCHONDRIAL tRNA-SYNTHETASE) MODEL, NOT WWOX EVIDENCE: The ATF4-to-glycolysis/Ldh step is borrowed from a previous S2-cell study under ER stress; in this paper Ldh is not measured after ATF4 or GCN2 knockdown (no sentence of the Results reports it).",
+    "snippet": "Previous studies have shown that Drosophila ATF4 (also named as crc) was able to induce glycolytic enzymes and Lactate dehydrogenase (Ldh) upon ER stress in S2 cells [48].",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41380592_Xu2026_PMC_r2.xml",
+    "anchor": "Results, 'ISR activation triggers developmental delay and seizure through ATF4'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "FLY PARS2 (MITOCHONDRIAL tRNA-SYNTHETASE) MODEL, NOT WWOX EVIDENCE: The mitochondrial lesion: OXPHOS subunit PROTEIN abundance is reduced for complex I (MT-ND1, NDUFS1, NDUFS3), II (SDHB), III (UQCRFS1) and IV (MT-CO2) in neuronal dPARS2-knockdown heads; complex V ATP5A is not reduced.",
+    "snippet": "Western blot analysis revealed that the levels of mitochondrial DNA-encoded complex I subunit MT-ND1 and complex IV subunit MT-CO2 were reduced (Fig. 2B and C).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41380592_Xu2026_PMC_r2.xml",
+    "anchor": "Results, 'Impaired mitochondrial function in dPARS2 deficiency'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "FLY PARS2 (MITOCHONDRIAL tRNA-SYNTHETASE) MODEL, NOT WWOX EVIDENCE: Complex I activity is read by in-gel activity staining (NADH/NBT), not by an NADH-oxidation or respiration (flux) assay; reduced in heads and larvae.",
+    "snippet": "A decrease in the activity of complexes I, II and IV was observed in dPARS2 knockdown fly heads as well as dPARS2 knockdown larvae (Fig. 4A and B).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41380592_Xu2026_PMC_r2.xml",
+    "anchor": "Results, 'Impaired mitochondrial function in dPARS2 deficiency'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "FLY PARS2 (MITOCHONDRIAL tRNA-SYNTHETASE) MODEL, NOT WWOX EVIDENCE: Complex I in-gel activity assay method: native gel stained with NADH and nitrotetrazolium blue (an activity stain on a gel, not a respiration measurement).",
+    "snippet": "For Complex I, native gels were incubated in 1 mg/ml NADH, 2.5 mg/ml Nitrotetrazolium Blue Chloride (NBT), and 2 mM Tris-HCl (pH 7.4) for 45 min at room temperature.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41380592_Xu2026_PMC_r2.xml",
+    "anchor": "Methods, In-gel CI, CII, and CIV activity",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "FLY PARS2 (MITOCHONDRIAL tRNA-SYNTHETASE) MODEL, NOT WWOX EVIDENCE: Mitochondrial lesion is not shown to be upstream-only: the authors hypothesise that ISR activity rather than the mitochondrial defect itself drives the disease; the mitochondrial readouts are NOT measured after GCN2 or ATF4 suppression in the Results.",
+    "snippet": "raises an interesting hypothesis that dysfunctional mitochondria in dPARS2 deficiency activate ISR, and that ISR activity, rather than mitochondria-autonomous defects, triggers the progressive disease development",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41380592_Xu2026_PMC_r2.xml",
+    "anchor": "Discussion, paragraph on adaptive versus detrimental ISR",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "FLY PARS2 (MITOCHONDRIAL tRNA-SYNTHETASE) MODEL, NOT WWOX EVIDENCE: The authors state ISR activation is detrimental in this model on the basis of genetic inhibition of GCN2 alone (paired with ATF4).",
+    "snippet": "Our results indicate that ISR activation is detrimental in the dPARS2-deficient model, as we found that genetic inhibition of GCN2 suppresses developmental delay and seizures.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41380592_Xu2026_PMC_r2.xml",
+    "anchor": "Discussion, paragraph on adaptive versus detrimental ISR",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "FLY PARS2 (MITOCHONDRIAL tRNA-SYNTHETASE) MODEL, NOT WWOX EVIDENCE: How the mitochondrial tRNA defect reaches GCN2 is unknown; the discussion proposes uncharged tRNA export, ROS or a mitochondrial protease, and cites the OMA1-DELE1-HRI axis as an alternative relay in other cells.",
+    "snippet": "It remains unknown how defective mt-tRNAPro aminoacylation activates GCN2 in the cytosol.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41380592_Xu2026_PMC_r2.xml",
+    "anchor": "Discussion, paragraph 3",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "FLY PARS2 (MITOCHONDRIAL tRNA-SYNTHETASE) MODEL, NOT WWOX EVIDENCE: The mechanism between ISR and seizure is not determined; ATF4 is named only as a clue.",
+    "snippet": "we have yet to determine the exact mechanism by which ISR activation causes developmental delay and seizures",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41380592_Xu2026_PMC_r2.xml",
+    "anchor": "Discussion, paragraph on adaptive versus detrimental ISR",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "FLY PARS2 (MITOCHONDRIAL tRNA-SYNTHETASE) MODEL, NOT WWOX EVIDENCE: Authors' own limit: the fly models are not complete phenocopies.",
+    "snippet": "they should not be interpreted as complete phenocopies of the disease",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41380592_Xu2026_PMC_r2.xml",
+    "anchor": "Discussion, paragraph 1",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "FLY PARS2 (MITOCHONDRIAL tRNA-SYNTHETASE) MODEL, NOT WWOX EVIDENCE: The therapeutic statement is prospective: the fly models 'can be used to screen' agents; no compound was tested in this article.",
+    "snippet": "We believe that our Drosophila dPARS2 deficiency models can be used to more clearly elucidate the molecular pathogenic mechanisms of PARS2 deficiency and to effectively screen potential therapeutic agents for the treatment of PARS2 deficiency related disease.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41380592_Xu2026_PMC_r2.xml",
+    "anchor": "Discussion, final paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "FLY PARS2 (MITOCHONDRIAL tRNA-SYNTHETASE) MODEL, NOT WWOX EVIDENCE: RNAi lines used for the suppression arms (stock identifiers).",
+    "snippet": "UAS-GCN2RNAi (BDSC, 35355), UAS-ATF4RNAi (THFC, THU5856)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41380592_Xu2026_PMC_r2.xml",
+    "anchor": "Methods, Drosophila stocks and genetics",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "FLY PARS2 (MITOCHONDRIAL tRNA-SYNTHETASE) MODEL, NOT WWOX EVIDENCE: Seizure assay age: Results give 5 to 7 days, Methods give about 4 to 6 days; sex of the flies in the bang-sensitivity assay is not stated in either place.",
+    "snippet": "Five to seven-day old elav-Gal4 driven dPARS2 knockdown and control flies were used for the examination of seizure susceptibility.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41380592_Xu2026_PMC_r2.xml",
+    "anchor": "Results, 'dPARS2 deficiency leads to developmental delay and seizure'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "FLY PARS2 (MITOCHONDRIAL tRNA-SYNTHETASE) MODEL, NOT WWOX EVIDENCE: Seizure assay age in Methods (4 to 6 days), at odds with the Results (5 to 7 days); no sex is given.",
+    "snippet": "Flies about 4–6 days of age were collected in batches of 10 flies under brief CO2 anesthesia (1–2 min) and maintained at least 18 h at 25 °C prior to the assay.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41380592_Xu2026_PMC_r2.xml",
+    "anchor": "Methods, Bang-sensitivity assay",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "FLY PARS2 (MITOCHONDRIAL tRNA-SYNTHETASE) MODEL, NOT WWOX EVIDENCE: Bang-sensitivity protocol: a 5-second maximum-speed vortex of vials of 10 flies; readouts are fraction of flies bang-sensitive and righting time.",
+    "snippet": "Vials were stimulated with a vortex mixer (Kylin-Bell, vortex-2) at maximum speed for 5 s.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41380592_Xu2026_PMC_r2.xml",
+    "anchor": "Methods, Bang-sensitivity assay",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "FLY PARS2 (MITOCHONDRIAL tRNA-SYNTHETASE) MODEL, NOT WWOX EVIDENCE: The only sex named anywhere is for the RNA-seq heads (5-day-old females).",
+    "snippet": "thirty snap-frozen fly heads from 5-day-old females were used",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41380592_Xu2026_PMC_r2.xml",
+    "anchor": "Methods, RNA sequencing and analysis",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "FLY PARS2 (MITOCHONDRIAL tRNA-SYNTHETASE) MODEL, NOT WWOX EVIDENCE: Statistics for the seizure proportions: Fisher's exact test between control and experimental group (figure replicates are 3 vials of 10).",
+    "snippet": "To compare the percentage of flies that displayed seizure-like behavior between the control and the experimental group, we performed a Fisher's exact test.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41380592_Xu2026_PMC_r2.xml",
+    "anchor": "Methods, Statistical analyses",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "FLY PARS2 (MITOCHONDRIAL tRNA-SYNTHETASE) MODEL, NOT WWOX EVIDENCE: Titration (GAL4-dilution) control exists for the dPARS2 transgene rescue: an independent GFP transgene did not reduce the bang-sensitivity of the dPARS2 knockdown. No sentence of the Results reports an equivalent control for the GCN2 or ATF4 double-knockdown arms.",
+    "snippet": "Importantly, the presence of an independent GFP transgene did not reduce these defects in dPARS2 knockdown flies, ruling out the possibility that the rescue may be due to the titration of the GAL4 protein (Supplementary Fig. S4D and E).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41380592_Xu2026_PMC_r2.xml",
+    "anchor": "Results, 'dPARS2 deficiency leads to developmental delay and seizure'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "FLY PARS2 (MITOCHONDRIAL tRNA-SYNTHETASE) MODEL, NOT WWOX EVIDENCE: Human cell finding: the homozygous PARS2 V95I HEK293T clone shows raised P-eIF2 alpha, lower puromycin incorporation, higher ATF4 protein and raised P-GCN2 with unchanged P-PERK (HEK293T is a non-neural kidney line; a single clone).",
+    "snippet": "Increased GCN2 phosphorylation was observed in PARS2 V95I cells, indicating robust activation of GCN2 (Fig. 8N and O). In contrast, PERK phosphorylation was not altered (Fig. 8P and Q).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41380592_Xu2026_PMC_r2.xml",
+    "anchor": "Results, 'PARS2 V95I mutation causes ISR activation in human cells'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "FLY PARS2 (MITOCHONDRIAL tRNA-SYNTHETASE) MODEL, NOT WWOX EVIDENCE: The human-cell clone is a single homozygous knock-in clone from a low-efficiency edit.",
+    "snippet": "Even the efficiency of the knock-in was low, we were able to obtain the single cell derived clone homozygous for the PARS2 V95I mutation (Supplementary Fig. S9).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41380592_Xu2026_PMC_r2.xml",
+    "anchor": "Results, 'PARS2 V95I mutation causes ISR activation in human cells'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "FLY PARS2 (MITOCHONDRIAL tRNA-SYNTHETASE) MODEL, NOT WWOX EVIDENCE: Complex I activity is reduced and complex II is not obviously altered in the human V95I cells (in-gel activity), unlike the fly.",
+    "snippet": "The PARS2 V95I variant in human cells causes no effect on the activity of complex II, which is different from our Drosophila models",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41380592_Xu2026_PMC_r2.xml",
+    "anchor": "Discussion, paragraph on the V95I variant",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "FLY PARS2 (MITOCHONDRIAL tRNA-SYNTHETASE) MODEL, NOT WWOX EVIDENCE: Licence: open access under CC BY-NC.",
+    "snippet": "This is an open access article under the CC BY-NC license (http://creativecommons.org/licenses/by-nc/4.0/).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41380592_Xu2026_PMC_r2.xml",
+    "anchor": "Front matter, permissions",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "FLY PARS2 (MITOCHONDRIAL tRNA-SYNTHETASE) MODEL, NOT WWOX EVIDENCE: No conflict of interest declared; funding is public (National Key R&D Programme of China; NSFC).",
+    "snippet": "The authors declare no conflict of interest.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41380592_Xu2026_PMC_r2.xml",
+    "anchor": "Declaration of competing interest",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "FLY PARS2 (MITOCHONDRIAL tRNA-SYNTHETASE) MODEL, NOT WWOX EVIDENCE: Fig 6H-K, GCN2 suppression: bang sensitivity about 0 percent (control), about 87 (dPARS2 RNAi), about 30 (dPARS2 plus GCN2 RNAi), about 4 (GCN2 RNAi alone); recovery time mean about 100 s (dPARS2 RNAi) versus about 10 s (double). The seizure rescue is PARTIAL (about 30 percent remain bang-sensitive). Three points per bar (vials of 10 flies); recovery time n 30 flies.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 6H-K, GCN2 suppression: bang sensitivity about 0 percent (control), about 87 (dPARS2 RNAi), about 30 (dPARS2 plus GCN2 RNAi), about 4 (GCN2 RNAi alone); recovery time mean about 100 s (dPARS2 RNAi) versus about 10 s (double). The seizure rescue is PARTIAL (about 30 percent remain bang-sensitive). Three points per bar (vials of 10 flies); recovery time n 30 flies.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41380592_r2/gr6.jpg",
+    "anchor": "Figure 6J-K (gr6.jpg)",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "FLY PARS2 (MITOCHONDRIAL tRNA-SYNTHETASE) MODEL, NOT WWOX EVIDENCE: Fig 6H-I: pupariation of the dPARS2 plus GCN2 double knockdown is about 33 percent at day 5 (control about 62) and about 95 percent at day 6 (control 100; dPARS2 RNAi alone about 2 at day 6 and about 75 at day 7); GCN2 RNAi alone overlaps control. Eclosion similar: double near control by day 10 to 11. The developmental rescue is therefore a shift of about a day, not full identity with control.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 6H-I: pupariation of the dPARS2 plus GCN2 double knockdown is about 33 percent at day 5 (control about 62) and about 95 percent at day 6 (control 100; dPARS2 RNAi alone about 2 at day 6 and about 75 at day 7); GCN2 RNAi alone overlaps control. Eclosion similar: double near control by day 10 to 11. The developmental rescue is therefore a shift of about a day, not full identity with control.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41380592_r2/gr6.jpg",
+    "anchor": "Figure 6H-I (gr6.jpg)",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "FLY PARS2 (MITOCHONDRIAL tRNA-SYNTHETASE) MODEL, NOT WWOX EVIDENCE: Fig 6C-F: P-eIF2 alpha relative to control about 100 (control), about 140 (dPARS2 RNAi), about 109 (double) and about 55 (GCN2 RNAi alone, below control); puromycin incorporation about 100, 28 and 60 percent (control, dPARS2 RNAi, double). GCN2 suppression restores translation only partly. N = 3 per bar.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 6C-F: P-eIF2 alpha relative to control about 100 (control), about 140 (dPARS2 RNAi), about 109 (double) and about 55 (GCN2 RNAi alone, below control); puromycin incorporation about 100, 28 and 60 percent (control, dPARS2 RNAi, double). GCN2 suppression restores translation only partly. N = 3 per bar.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41380592_r2/gr6.jpg",
+    "anchor": "Figure 6C-F (gr6.jpg)",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "FLY PARS2 (MITOCHONDRIAL tRNA-SYNTHETASE) MODEL, NOT WWOX EVIDENCE: Fig 6A-B: P-GCN2 about 155 versus 100 (the key printed in the panel assigns solid orange to dPARS2 RNAi and hatched to control, the reverse of the key in Fig 2, so read literally the control bar is the higher one, while the text states that P-GCN2 rises in the dPARS2-deficient head; a labelling inconsistency in the panel that the text resolves), P-PERK and total GCN2 unchanged; N 3 to 4.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 6A-B: P-GCN2 about 155 versus 100 (the key printed in the panel assigns solid orange to dPARS2 RNAi and hatched to control, the reverse of the key in Fig 2, so read literally the control bar is the higher one, while the text states that P-GCN2 rises in the dPARS2-deficient head; a labelling inconsistency in the panel that the text resolves), P-PERK and total GCN2 unchanged; N 3 to 4.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41380592_r2/gr6.jpg",
+    "anchor": "Figure 6B (gr6.jpg)",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "FLY PARS2 (MITOCHONDRIAL tRNA-SYNTHETASE) MODEL, NOT WWOX EVIDENCE: Fig 7D-H, ATF4 suppression: bang sensitivity about 93 percent (dPARS2 RNAi), about 46 percent (double, three vials spread from about 30 to about 62), about 10 percent (ATF4 RNAi alone), control 0; recovery time about 100 s versus about 15 s. Seizure rescue by ATF4 knockdown is PARTIAL and variable. Pupariation: the double is about 0 percent at day 5 and about 100 percent at day 6 (control about 62 percent at day 5, 100 at day 6; dPARS2 RNAi alone 0 at day 6, about 82 at day 7), a lag of under one day.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 7D-H, ATF4 suppression: bang sensitivity about 93 percent (dPARS2 RNAi), about 46 percent (double, three vials spread from about 30 to about 62), about 10 percent (ATF4 RNAi alone), control 0; recovery time about 100 s versus about 15 s. Seizure rescue by ATF4 knockdown is PARTIAL and variable. Pupariation: the double is about 0 percent at day 5 and about 100 percent at day 6 (control about 62 percent at day 5, 100 at day 6; dPARS2 RNAi alone 0 at day 6, about 82 at day 7), a lag of under one day.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41380592_r2/gr7.jpg",
+    "anchor": "Figure 7E-H (gr7.jpg)",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "FLY PARS2 (MITOCHONDRIAL tRNA-SYNTHETASE) MODEL, NOT WWOX EVIDENCE: Fig 7A-C: Ldh and 14 other glycolytic transcripts are up in the dPARS2 RNAi head heatmap (three libraries per group); Ldh protein by Western about 1030 percent of control (N = 3, ***), a roughly ten-fold abundance rise measured with a single anti-LDH antibody. No Ldh activity assay, lactate or pyruvate measurement and no Ldh readout in the GCN2 or ATF4 knockdown arms.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 7A-C: Ldh and 14 other glycolytic transcripts are up in the dPARS2 RNAi head heatmap (three libraries per group); Ldh protein by Western about 1030 percent of control (N = 3, ***), a roughly ten-fold abundance rise measured with a single anti-LDH antibody. No Ldh activity assay, lactate or pyruvate measurement and no Ldh readout in the GCN2 or ATF4 knockdown arms.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41380592_r2/gr7.jpg",
+    "anchor": "Figure 7A-C (gr7.jpg)",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "FLY PARS2 (MITOCHONDRIAL tRNA-SYNTHETASE) MODEL, NOT WWOX EVIDENCE: Fig 5A-E: P-eIF2 alpha about 142 percent of control (N 4); puromycin incorporation about 21 percent (N 3); the heatmap lists Ldh, Pfk, Gadd45, TrpRS, Pgi, vri, Gapdh2, Cbs, SerRS, pug, Tpi, ldh, Got1, Eno, GlyRS, CysRS, Shmt, ThrRS and crc (the ATF4 ortholog) as up and SdhA, CG6770, Herp, kdn, AsnS, CG34347, scyl, aay as down; three libraries per genotype. crc (Atf4) transcript is up in this heatmap.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 5A-E: P-eIF2 alpha about 142 percent of control (N 4); puromycin incorporation about 21 percent (N 3); the heatmap lists Ldh, Pfk, Gadd45, TrpRS, Pgi, vri, Gapdh2, Cbs, SerRS, pug, Tpi, ldh, Got1, Eno, GlyRS, CysRS, Shmt, ThrRS and crc (the ATF4 ortholog) as up and SdhA, CG6770, Herp, kdn, AsnS, CG34347, scyl, aay as down; three libraries per genotype. crc (Atf4) transcript is up in this heatmap.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41380592_r2/gr5.jpg",
+    "anchor": "Figure 5 (gr5.jpg)",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "FLY PARS2 (MITOCHONDRIAL tRNA-SYNTHETASE) MODEL, NOT WWOX EVIDENCE: Fig 1: dPARS2 knockout is larval lethal; neuronal (elav) knockdown delays pupariation and eclosion by about 1 to 2 days but flies reach adulthood; bang sensitivity about 90 percent in knockdown versus about 0 in control, about 3 percent in the heterozygous-like RNAi/+ arm; recovery time about 110 s (n = 30).",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 1: dPARS2 knockout is larval lethal; neuronal (elav) knockdown delays pupariation and eclosion by about 1 to 2 days but flies reach adulthood; bang sensitivity about 90 percent in knockdown versus about 0 in control, about 3 percent in the heterozygous-like RNAi/+ arm; recovery time about 110 s (n = 30).",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41380592_r2/gr1.jpg",
+    "anchor": "Figure 1E-K (gr1.jpg)",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "FLY PARS2 (MITOCHONDRIAL tRNA-SYNTHETASE) MODEL, NOT WWOX EVIDENCE: Fig 2 and Fig 3: neuronal knockdown reduces MT-ND1 to about 74 and MT-CO2 to about 65 percent of control (heads), NDUFS1 about 62, NDUFS3 about 65, SDHB about 78, UQCRFS1 about 50, ATP5A not reduced; BN-PAGE assembled complexes I to V reduced (complex I about 52 percent, complex III about 43 percent). Western blot abundance, N = 3 to 5 per bar.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 2 and Fig 3: neuronal knockdown reduces MT-ND1 to about 74 and MT-CO2 to about 65 percent of control (heads), NDUFS1 about 62, NDUFS3 about 65, SDHB about 78, UQCRFS1 about 50, ATP5A not reduced; BN-PAGE assembled complexes I to V reduced (complex I about 52 percent, complex III about 43 percent). Western blot abundance, N = 3 to 5 per bar.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41380592_r2/gr2.jpg",
+    "anchor": "Figures 2 and 3 (gr2.jpg, gr3.jpg)",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "FLY PARS2 (MITOCHONDRIAL tRNA-SYNTHETASE) MODEL, NOT WWOX EVIDENCE: Fig 4A-D: in-gel activity bands for complexes I, II and IV in the neuronal knockdown head are visibly only modestly weaker than control (qualitative, no quantification plotted for panels A and B); the larval (ubiquitous) knockdown bands are clearly weaker; the TEM quantification shows about 93 percent abnormal mitochondria versus about 12 percent in control (control n 14, knockdown n 23 images).",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 4A-D: in-gel activity bands for complexes I, II and IV in the neuronal knockdown head are visibly only modestly weaker than control (qualitative, no quantification plotted for panels A and B); the larval (ubiquitous) knockdown bands are clearly weaker; the TEM quantification shows about 93 percent abnormal mitochondria versus about 12 percent in control (control n 14, knockdown n 23 images).",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41380592_r2/gr4.jpg",
+    "anchor": "Figure 4 (gr4.jpg)",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "FLY PARS2 (MITOCHONDRIAL tRNA-SYNTHETASE) MODEL, NOT WWOX EVIDENCE: Fig 8: PARS2 V95I homozygous HEK293T: endogenous PARS2 about 58 percent of control; MT-CO2 about 32, NDUFS1 about 59, UQCRFS1 about 44; ATP5A unchanged; P-eIF2 alpha about 172, ATF4 about 163, P-GCN2/GCN2 about 158 percent, puromycin about 8 percent; P-PERK unchanged. Single clone, N 3 to 7 lanes per bar.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 8: PARS2 V95I homozygous HEK293T: endogenous PARS2 about 58 percent of control; MT-CO2 about 32, NDUFS1 about 59, UQCRFS1 about 44; ATP5A unchanged; P-eIF2 alpha about 172, ATF4 about 163, P-GCN2/GCN2 about 158 percent, puromycin about 8 percent; P-PERK unchanged. Single clone, N 3 to 7 lanes per bar.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41380592_r2/gr8.jpg",
+    "anchor": "Figure 8 (gr8.jpg)",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "FLY PARS2 (MITOCHONDRIAL tRNA-SYNTHETASE) MODEL, NOT WWOX EVIDENCE: Fig 9 is a cartoon model (mitochondrial dysfunction to GCN2-P to eIF2 alpha-P to ATF4 translation and reduced protein synthesis, to seizure and developmental delay); it carries no data.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 9 is a cartoon model (mitochondrial dysfunction to GCN2-P to eIF2 alpha-P to ATF4 translation and reduced protein synthesis, to seizure and developmental delay); it carries no data.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID41380592_r2/gr9.jpg",
+    "anchor": "Figure 9 (gr9.jpg)",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "FLY PARS2 (MITOCHONDRIAL tRNA-SYNTHETASE) MODEL, NOT WWOX EVIDENCE: Supp Fig S4: independent UAS-GFP did not alter the dPARS2-knockdown phenotype (bang sensitivity about 97 versus about 100 percent; recovery time about 135 versus about 130 s; pupariation and eclosion overlapping); this is the GAL4-titration control for the dPARS2 transgene rescue.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Supp Fig S4: independent UAS-GFP did not alter the dPARS2-knockdown phenotype (bang sensitivity about 97 versus about 100 percent; recovery time about 135 versus about 130 s; pupariation and eclosion overlapping); this is the GAL4-titration control for the dPARS2 transgene rescue.",
+    "surface": "figure",
+    "artifact": "files/supplement/PMID41380592_r2/extracted/S4.png",
+    "anchor": "Supplementary Figure S4 (embedded image in mmc1.docx, extracted)",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "FLY PARS2 (MITOCHONDRIAL tRNA-SYNTHETASE) MODEL, NOT WWOX EVIDENCE: Supp Fig S7 and S8: GCN2 mRNA in elav>GCN2 RNAi is about 48 (larva), 43 (pupa) and 63 percent (adult) of control; ATF4 mRNA in elav>ATF4 RNAi is about 58, 59 and 73 percent. The knockdowns are partial (27 to 57 percent loss) and were measured in the single-RNAi lines, not in the dPARS2-plus-RNAi double lines.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Supp Fig S7 and S8: GCN2 mRNA in elav>GCN2 RNAi is about 48 (larva), 43 (pupa) and 63 percent (adult) of control; ATF4 mRNA in elav>ATF4 RNAi is about 58, 59 and 73 percent. The knockdowns are partial (27 to 57 percent loss) and were measured in the single-RNAi lines, not in the dPARS2-plus-RNAi double lines.",
+    "surface": "figure",
+    "artifact": "files/supplement/PMID41380592_r2/extracted/S7.png",
+    "anchor": "Supplementary Figures S7 and S8 (S7 shown; S8 is the ATF4 counterpart, extracted S8.png)",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "FLY PARS2 (MITOCHONDRIAL tRNA-SYNTHETASE) MODEL, NOT WWOX EVIDENCE: Supp Fig S2: neuronal dPARS2 mRNA about 20 percent (larva) and about 30 percent (pupa) of control; Supp Fig S1D-E: ubiquitous about 15 and neuronal about 9 percent in heads/whole body; knockdown is strong, not complete.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Supp Fig S2: neuronal dPARS2 mRNA about 20 percent (larva) and about 30 percent (pupa) of control; Supp Fig S1D-E: ubiquitous about 15 and neuronal about 9 percent in heads/whole body; knockdown is strong, not complete.",
+    "surface": "figure",
+    "artifact": "files/supplement/PMID41380592_r2/extracted/S2.png",
+    "anchor": "Supplementary Figure S2 (extracted S2.png)",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "FLY PARS2 (MITOCHONDRIAL tRNA-SYNTHETASE) MODEL, NOT WWOX EVIDENCE: Supp Fig S3: wild-type dPARS2 transgene rescues pupariation, eclosion and bang sensitivity (about 3 percent) in the neuronal knockdown, which establishes that the phenotypes are due to dPARS2 loss, not to an off-target effect.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Supp Fig S3: wild-type dPARS2 transgene rescues pupariation, eclosion and bang sensitivity (about 3 percent) in the neuronal knockdown, which establishes that the phenotypes are due to dPARS2 loss, not to an off-target effect.",
+    "surface": "figure",
+    "artifact": "files/supplement/PMID41380592_r2/extracted/S3.png",
+    "anchor": "Supplementary Figure S3 (extracted S3.png)",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "FLY PARS2 (MITOCHONDRIAL tRNA-SYNTHETASE) MODEL, NOT WWOX EVIDENCE: Supp Fig S5: transcripts of NDUFS1, NDUFS3 and SDHB are unchanged and UQCRFS1 is about 148 percent in the Da-GAL4 knockdown larvae, so lower OXPHOS protein is not explained by lower transcripts.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Supp Fig S5: transcripts of NDUFS1, NDUFS3 and SDHB are unchanged and UQCRFS1 is about 148 percent in the Da-GAL4 knockdown larvae, so lower OXPHOS protein is not explained by lower transcripts.",
+    "surface": "figure",
+    "artifact": "files/supplement/PMID41380592_r2/extracted/S5.png",
+    "anchor": "Supplementary Figure S5 (extracted S5.png)",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "FLY PARS2 (MITOCHONDRIAL tRNA-SYNTHETASE) MODEL, NOT WWOX EVIDENCE: Supp Fig S6: KEGG enrichment of up-regulated head genes lists glycolysis/gluconeogenesis, carbon metabolism, biosynthesis of amino acids, lysosome; down-regulated lists neuroactive ligand-receptor interaction and longevity regulating pathway. No pyruvate-metabolism or PDH/PDK term appears.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Supp Fig S6: KEGG enrichment of up-regulated head genes lists glycolysis/gluconeogenesis, carbon metabolism, biosynthesis of amino acids, lysosome; down-regulated lists neuroactive ligand-receptor interaction and longevity regulating pathway. No pyruvate-metabolism or PDH/PDK term appears.",
+    "surface": "figure",
+    "artifact": "files/supplement/PMID41380592_r2/extracted/S6.png",
+    "anchor": "Supplementary Figure S6 (extracted S6.png)",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "FLY PARS2 (MITOCHONDRIAL tRNA-SYNTHETASE) MODEL, NOT WWOX EVIDENCE: Supp Fig S9: Sanger confirmation of the c.283G>A (p.Val95Ile) homozygous knock-in in the HEK293T clone.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Supp Fig S9: Sanger confirmation of the c.283G>A (p.Val95Ile) homozygous knock-in in the HEK293T clone.",
+    "surface": "figure",
+    "artifact": "files/supplement/PMID41380592_r2/extracted/S9.png",
+    "anchor": "Supplementary Figure S9 (extracted S9.png)",
+    "panel_text_relation": "panel_only"
+   }
+  ]
+ },
+ "coverage_map": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "discussion": "read",
+  "figures": "read",
+  "tables": "read — only the Key resources table (reagents and antibodies) and Supplementary Table S1 (primers); the article reports no results table",
+  "limitations": "read — the authors' limitations are the 'should not be interpreted as complete phenocopies' sentence and the 'yet to determine the exact mechanism' sentence; there is no limitations section",
+  "references": "not_read — 60 counted and searched for WWOX (none); refs 27, 31, 48, 49 titles looked at; no cited paper read",
+  "supplement": "read — Table S1 and Supplementary Figures S1 to S9 as images"
+ },
+ "coverage_status": "complete_fulltext_read",
+ "coverage_status_reason": "Structured XML read section by section; all nine main figures and nine supplementary figure images opened; the supplementary file has no legends and no raw-data tables.",
+ "reading_history": [
+  {
+   "receipt": "FTR-20261027-41380592-01",
+   "reader": "scientist-c, iteration 3 package ISR",
+   "context_policy": "SOURCE_FIRST",
+   "what_changed": "First reading of this article.",
+   "outputs": [
+    "disease-models/wwox/research/deepdive_manifests/PMID41380592.json",
+    "disease-models/wwox/research/drug_repurposing/isr_pars2_reading_it3_20261027.md"
+   ]
+  }
+ ]
+}
