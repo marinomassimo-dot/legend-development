@@ -208,6 +208,7 @@ def build_card(payload: dict) -> dict:
     translation = normalise_translation(payload.get("translation"))
     check_roadmap_rows(payload.get("p4_roadmap_fields"))
     results = []
+    questions: dict[str, list] = {}
     for row in assertions:
         reasons = []
         same = [d for d in diseases if not plural or (
@@ -236,10 +237,21 @@ def build_card(payload: dict) -> dict:
             "OPPOSES_DISEASE_CHANGE" if SIGNS[disease["direction"]] != SIGNS[row["direction"]]
             else "REINFORCES_DISEASE_CHANGE")
         results.append({"assertion_id": row["id"], "status": status, "reasons": reasons})
+        questions[row["id"]] = [row["target_id"], row["endpoint"]] + [row["context"][key] for key in CONTEXT]
     known = {row["status"] for row in results} - {"UNRESOLVED"}
+    # One experimental question = same target, endpoint and context. Outcomes that differ WITHIN a
+    # question are a discordance (CONFLICTING); outcomes that differ only ACROSS questions are
+    # different results on different endpoints (MIXED_ACROSS_ENDPOINTS), not a contradiction.
+    by_question: dict[tuple, set] = {}
+    for row in results:
+        if row["status"] != "UNRESOLVED":
+            by_question.setdefault(tuple(questions[row["assertion_id"]]), set()).add(row["status"])
+    discordant = any(len(v) > 1 for v in by_question.values())
+    endpoint_outcomes = [{"question": list(k), "statuses": sorted(v)}
+                         for k, v in sorted(by_question.items())]
     unresolved = not results or any(row["status"] == "UNRESOLVED" for row in results)
-    summary = ("CONFLICTING" if len(known) > 1 else "UNRESOLVED" if unresolved
-               else next(iter(known)))
+    summary = ("CONFLICTING" if discordant else "MIXED_ACROSS_ENDPOINTS" if len(known) > 1
+               else "UNRESOLVED" if unresolved else next(iter(known)))
     limits = ["Technical comparison is not efficacy, safety or experimental validation.",
               "Sources and receipt references are retained, not independently verified.",
               "Shared sources are not independent confirmations; scores are not pooled."]
@@ -269,7 +281,8 @@ def build_card(payload: dict) -> dict:
         "epistemic_status": "IPOTESI", "canonical": False,
         "assessment": "REQUIRES_QUALIFICATION" if unresolved or len(known) > 1
         else "DIRECTIONAL_COMPARISON_ONLY",
-        "directional_summary": summary, "comparisons": results,
+        "directional_summary": summary, "endpoint_outcomes": endpoint_outcomes,
+        "comparisons": results,
         "abstention": "NO_DRUG_ASSERTIONS_SUPPLIED" if not results else None,
         "label_lookup": lookup, "p4_fields": p4_fields,
         "input": copy.deepcopy(payload),

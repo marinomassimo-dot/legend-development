@@ -1,0 +1,10 @@
+[
+ {
+  "old_str": "(Seahorse: ECAR↑, OCR↓) e i corpi chetonici,",
+  "new_str": "(Seahorse: ECAR↑, OCR↓) [Qualifier 2026-10-27 (iteration 3): Seahorse reads respiration and acidification in general, not PDH specifically; a PDH-specific discriminator is a PDH activity assay in a phosphorylation-preserving lysate, phospho-PDHA1 Ser293 (UniProt P08559 numbering), 13C-glucose or ketone tracing, or the pyruvate/lactate ratio; Seahorse is one general screen among them, not the only discriminator] e i corpi chetonici,"
+ },
+ {
+  "old_str": "insieme all'esperimento (Seahorse) che lo può falsificare prima di qualunque decisione.",
+  "new_str": "insieme all'esperimento (Seahorse) che lo può falsificare prima di qualunque decisione. [Qualifier 2026-10-27 (iteration 3): Seahorse is a general bioenergetic screen, not a PDH measure and not the only discriminating experiment; PDH activity assay, phospho-PDHA1 Ser293 (UniProt P08559 numbering), 13C tracing and the pyruvate/lactate ratio are the PDH-specific alternatives (see CURRENT READING). Still an item for the treating team to discuss, not a recommendation.]"
+ }
+]

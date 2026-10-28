@@ -680,12 +680,21 @@ class Wiring(unittest.TestCase):
         self.assertIn("MANDATE_STATE", annex)
 
     def test_the_live_orchestrator_record_parses_under_the_schema(self) -> None:
-        live = ROOT / "ledger/tasks/orchestrator/ALDAZ-EXEC-20260913.json"
-        if not live.exists():
+        # The record this test once pinned (ALDAZ-EXEC-20260913) was withdrawn into the recovery
+        # inventory (commit d626cde2) and is not in the public edition. The live records are whatever
+        # ORCH-*.json mandate records the checkout carries; every one that holds a queue must parse.
+        records = sorted((ROOT / "ledger/tasks/orchestrator").glob("ORCH-*.json"))
+        checked = 0
+        for live in records:
+            v = mc.verdict(json.loads(live.read_text(encoding="utf-8")))
+            if v["verdict"] == "NO_QUEUE":
+                continue
+            checked += 1
+            with self.subTest(record=live.name):
+                self.assertIn(v["verdict"], ("CONTINUE", "ALL_BLOCKED", "COMPLETE_PENDING", "RELEASED",
+                                             "EVIDENCE_PENDING", "INCONSISTENT_COMPLETE"))
+        if not checked:
             self.skipTest("no live record in this checkout")
-        v = mc.verdict(json.loads(live.read_text(encoding="utf-8")))
-        self.assertIn(v["verdict"], ("CONTINUE", "ALL_BLOCKED", "COMPLETE_PENDING", "RELEASED",
-                                     "EVIDENCE_PENDING", "INCONSISTENT_COMPLETE"))
         # The record is the orchestrator's; converting its prose queue to statuses is that
         # actor's act (roles/orchestrator.md, step 1). Unreconciled strings still count TODO.
 

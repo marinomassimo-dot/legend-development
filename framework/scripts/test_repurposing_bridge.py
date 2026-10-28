@@ -81,6 +81,36 @@ class BridgeTests(unittest.TestCase):
         data["drug_assertions"] = []
         self.assertEqual(build_card(data)["assessment"], "REQUIRES_QUALIFICATION")
 
+    def test_benefit_plus_null_on_other_endpoint_is_not_a_contradiction(self):
+        data = packet()
+        first = data.pop("disease_assertion")
+        second = copy.deepcopy(first)
+        second.update(id="disease-2", endpoint="other endpoint", direction="DECREASE")
+        data["disease_assertions"] = [first, second]
+        other = copy.deepcopy(data["drug_assertions"][0])
+        other.update(id="drug-2", endpoint="other endpoint", direction="NO_CHANGE")
+        data["drug_assertions"].append(other)
+        card = build_card(data)
+        by_id = {c["assertion_id"]: c["status"] for c in card["comparisons"]}
+        self.assertEqual(by_id["drug-1"], "OPPOSES_DISEASE_CHANGE")
+        self.assertEqual(by_id["drug-2"], "NO_EFFECT_REPORTED")
+        self.assertEqual(card["directional_summary"], "MIXED_ACROSS_ENDPOINTS")
+        self.assertEqual(card["assessment"], "REQUIRES_QUALIFICATION")
+        # The per-endpoint results, nulls included, are retained, one entry per question.
+        self.assertEqual(len(card["endpoint_outcomes"]), 2)
+        self.assertEqual(sorted(s for e in card["endpoint_outcomes"] for s in e["statuses"]),
+                         ["NO_EFFECT_REPORTED", "OPPOSES_DISEASE_CHANGE"])
+
+    def test_same_endpoint_same_context_discordance_stays_conflicting(self):
+        data = packet()
+        second = copy.deepcopy(data["drug_assertions"][0])
+        second.update(id="drug-2", direction="NO_CHANGE")
+        data["drug_assertions"].append(second)
+        card = build_card(data)
+        self.assertEqual(card["directional_summary"], "CONFLICTING")
+        self.assertEqual(len(card["endpoint_outcomes"]), 1)
+        self.assertEqual(len(card["endpoint_outcomes"][0]["statuses"]), 2)
+
     def test_invalid_packets_and_unbacked_read_declarations_fail(self):
         for mutate in (
             lambda p: p.update(route="clinical"),
@@ -267,7 +297,8 @@ class BridgeTests(unittest.TestCase):
         self.assertEqual(by_id["drug-2"]["status"], "REINFORCES_DISEASE_CHANGE")
         self.assertEqual(by_id["drug-3"]["status"], "UNRESOLVED")
         self.assertIn("no disease assertion", by_id["drug-3"]["reasons"][0])
-        self.assertEqual(build_card(data)["directional_summary"], "CONFLICTING")
+        # Different outcomes on DIFFERENT endpoints are not a contradiction.
+        self.assertEqual(build_card(data)["directional_summary"], "MIXED_ACROSS_ENDPOINTS")
         # Singular and plural spellings of one endpoint give the same comparison.
         single = packet()
         plural = packet()
