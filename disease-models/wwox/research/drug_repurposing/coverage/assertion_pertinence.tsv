@@ -1,0 +1,53 @@
+card_id	assertion_id	need_id	subject	evidence_kind	sign	counts_L3	counts_L4	flags	basis
+C01_aav9_wwox	DR-C01-001	NEED-WWOX-GENE-ADDITION	card	readout_in_wwox_system	benefit	yes	yes	high_dose_only;n=5	spike-wave discharges per hour, high-dose arm; no low-dose arm for this endpoint
+C04_aav9_endpoint_families	DR-AAV-SURV-HD	NEED-WWOX-GENE-ADDITION	card	readout_in_wwox_system	benefit	yes	yes	high_dose_arm	survival, high dose
+C04_aav9_endpoint_families	DR-AAV-MOTOR-HD	NEED-WWOX-GENE-ADDITION	card	readout_in_wwox_system	benefit	yes	yes	high_dose_arm	motor score, high dose
+C04_aav9_endpoint_families	DR-AAV-GFAP-P5HD	NEED-WWOX-GENE-ADDITION	card	readout_in_wwox_system	benefit	yes	yes	high_dose_arm	GFAP cells, high dose
+C04_aav9_endpoint_families	DR-AAV-SURV-LD	NEED-WWOX-GENE-ADDITION	card	readout_in_wwox_system	mixed	yes	no	low_dose_arm;dose_arms_not_pooled	survival, low dose: ends at 0 percent by about day 77, better than untreated knockout (need observation O1); not counted as recovery
+C04_aav9_endpoint_families	DR-AAV-MOTOR-LD	NEED-WWOX-GENE-ADDITION	card	readout_in_wwox_system	mixed	yes	no	low_dose_arm;dose_arms_not_pooled	motor score, low dose; not counted as recovery
+C04_aav9_endpoint_families	DR-AAV-WT-HD	NEED-SYSTEMIC-GLYCAEMIA-GROWTH	card	readout_in_wwox_system	benefit	yes	yes	high_dose_arm	body weight is the growth endpoint of this need
+C04_aav9_endpoint_families	DR-AAV-WT-LD	NEED-SYSTEMIC-GLYCAEMIA-GROWTH	card	readout_in_wwox_system	mixed	yes	no	low_dose_arm	body weight, low dose
+C04_aav9_endpoint_families	DR-AAV-GLU10-HD	NEED-SYSTEMIC-GLYCAEMIA-GROWTH	card	readout_in_wwox_system	null	yes	no		blood glucose at postnatal day 10: no change reported
+C04_aav9_endpoint_families	DR-AAV-GLU10-LD	NEED-SYSTEMIC-GLYCAEMIA-GROWTH	card	readout_in_wwox_system	null	yes	no		blood glucose at postnatal day 10: no change reported
+EB-VGB-01	A-VGB-1	NEED-SEIZURE-CONTROL-SYMPTOMATIC	card	case_report_wwox_clinical	benefit	yes	yes	case_level;reading_depth_queried_not_full_read;concomitant_drugs_possible	reported spasm cessation/response in case reports; no comparator
+EB-VGB-01	A-VGB-3	NEED-SEIZURE-CONTROL-SYMPTOMATIC	card	case_report_wwox_clinical	benefit	yes	yes	case_level;reading_depth_queried_not_full_read;concomitant_drugs_possible	reported spasm cessation/response in case reports; no comparator
+EB-VGB-01	A-VGB-2	NEED-SEIZURE-CONTROL-SYMPTOMATIC	card	case_report_wwox_clinical	partial_benefit	yes	no	case_level;reading_depth_queried_not_full_read;concomitant_drugs_possible	reported spasm cessation/response in case reports; no comparator
+EB-VGB-01	A-VGB-10	NEED-SEIZURE-CONTROL-SYMPTOMATIC	card	case_report_wwox_clinical	null	yes	no	case_level	seizure control on vigabatrin, criterion not carried
+EB-VGB-01	A-VGB-7	NEED-SEIZURE-CONTROL-SYMPTOMATIC	card	safety_signal	harm	no	no	case_level	vigabatrin-associated MRI abnormality: a safety signal kept apart from the benefit readout
+EB-VGB-01	A-VGB-8	NEED-SEIZURE-CONTROL-SYMPTOMATIC	card	safety_signal	harm	no	no	other_disease	tuberous sclerosis precedent, not WWOX
+EB-KD-01	A-KD-1	NEED-SEIZURE-CONTROL-SYMPTOMATIC	card	case_report_wwox_clinical	benefit	yes	yes	case_level;partial_read;no_instrument	clinician-reported seizure control in named patients; this is a seizure readout, not a PDH-axis readout
+EB-ETX-01	A-ETX-1	NEED-T-TYPE-CALCIUM	card	readout_in_wwox_system	benefit	yes	no	one_experiment;graphical_reading;no_drug_by_genotype_test	one ethosuximide experiment in Wwox-loss mice (PTZ seizure score)
+EB-ETX-01	A-ETX-1	NEED-SEIZURE-CONTROL-SYMPTOMATIC	card	readout_in_wwox_system	benefit	yes	no	one_experiment;graphical_reading	same experiment, seizure readout
+G01_lithium_gsk3	DR-LI-001	NEED-SEIZURE-CONTROL-SYMPTOMATIC	card	readout_in_wwox_system	benefit	yes	no	nonspecific_also_in_wild_type	seizure stage in Wwox-null pups; the same card shows lowering in wild-type littermates, so not counted as recovery
+G01_lithium_gsk3	DR-LI-002	NEED-SEIZURE-CONTROL-SYMPTOMATIC	card	readout_other_disease	benefit	no	no	control_arm_wild_type	wild-type or comparison arm of the same experiment; not a WWOX-deficient readout
+G01_lithium_gsk3	DR-LI-003	NEED-SEIZURE-CONTROL-SYMPTOMATIC	card	readout_other_disease	benefit	no	no	control_arm_wild_type	wild-type or comparison arm of the same experiment; not a WWOX-deficient readout
+D01_a51	DR-D01-001	NEED-MYC-PROGENITOR-PROLIFERATION	card	readout_in_wwox_system	benefit	yes	no	reading_depth_UNKNOWN;multi_kinase_inhibitor;SOX2_is_a_readout_marker	fraction of SOX2+MYC+ progenitors in WWOX-deficient organoids; not counted as recovery
+E02_ldh_inhibition	DR-E02-001	NEED-LACTATE-LDH	CHEMBL1983350	target_engagement_assay	benefit	no	no	not_a_readout_in_a_WWOX_system	enzyme-level or non-WWOX cellular evidence of LDH engagement
+E02_ldh_inhibition	DR-E02-004	NEED-LACTATE-LDH	CHEMBL1983350	target_engagement_assay	benefit	no	no	not_a_readout_in_a_WWOX_system	enzyme-level or non-WWOX cellular evidence of LDH engagement
+E02_ldh_inhibition	DR-E02-005	NEED-LACTATE-LDH	CHEMBL1983350	target_engagement_assay	benefit	no	no	not_a_readout_in_a_WWOX_system	enzyme-level or non-WWOX cellular evidence of LDH engagement
+E02_ldh_inhibition	DR-E02-006	NEED-LACTATE-LDH	CHEMBL1983350	target_engagement_assay	benefit	no	no	not_a_readout_in_a_WWOX_system	enzyme-level or non-WWOX cellular evidence of LDH engagement
+E02_ldh_inhibition	DR-E02-002	NEED-LACTATE-LDH	tool_no_catalogue_identity	target_engagement_assay	benefit	no	no	tool_compound_GSK2837808A	enzyme assay
+E02_ldh_inhibition	DR-E02-003	NEED-LACTATE-LDH	tool_no_catalogue_identity	target_engagement_assay	benefit	no	no	oligonucleotide_nedosiran_other_disease	LDHA lowering in hyperoxaluria
+E02_ldh_inhibition	DR-E02-GEN-001	NEED-LACTATE-LDH	genetic_precedent_not_a_compound	readout_other_disease	benefit	no	no	fly_amyloid_model;Ldh_RNAi_not_stiripentol	Ldh knockdown rescue in a Drosophila amyloid plus Wwox-reduction genotype: a genetic precedent, not a compound result
+E03_pdk_inhibition_dca	DR-E03-001	NEED-PDH-PYRUVATE-AXIS	CHEMBL306823	target_engagement_assay	benefit	no	no	enzyme_assays_and_lactic_acidosis_indication	PDK inhibition by dichloroacetate in enzyme assays
+E03_pdk_inhibition_dca	DR-E03-002	NEED-PDH-PYRUVATE-AXIS	tool_no_catalogue_identity	target_engagement_assay	benefit	no	no	tool_compounds_AZD7545_VER246608	PDK2 enzyme assay
+F01_glutamate_receptor_node	DR-W2-001	NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	tool_no_catalogue_identity	readout_in_wwox_system	benefit	yes	no	tool_compound_d-APV;full_competitive_block_only;n=5_slices_3_animals;AMPAR_untested	burst frequency in neuron-specific Wwox-null slices; NOT attached to memantine or perampanel
+F01_glutamate_receptor_node	DR-W2-002	NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	CHEMBL807	readout_other_disease	benefit	no	no	GRIN_encephalopathy;sign_depends_on_variant	memantine in GRIN gain-of-function variants: other-disease clinical series
+F01_glutamate_receptor_node	DR-W2-003	NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	CHEMBL807	readout_other_disease	null	no	no	GRIN_loss_of_function	memantine in GRIN loss-of-function variants
+F01_glutamate_receptor_node	DR-W2-004	NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	CHEMBL807	readout_other_disease	harm	no	no	adult_rat_oxygen_seizure_model;not_WWOX	memantine accelerated seizure stages: a harm datum kept apart from benefit
+F01_glutamate_receptor_node	DR-W2-005	NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	CHEMBL807	target_engagement_assay	benefit	no	no	IC50_spread_over_4_orders	NMDAR inhibition assays
+F01_glutamate_receptor_node	DR-W2-006	NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	CHEMBL1214124	label_statement	benefit	no	no	not_an_observation	mechanism and label of perampanel
+F01_glutamate_receptor_node	DR-W2-007	NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	CHEMBL1214124	case_report_wwox_clinical	null	yes	no	case_level;n=1;drug_not_isolated	one adult, seven drugs over decades: supports no statement about the drug
+A01_pba_class	DR-A01-001	NEED-WWOX-MISSENSE-PROTEIN-RESCUE	card	readout_other_disease	benefit	no	no	not_WWOX;class_level	precedent in a non-WWOX variant system
+A01_pba_class	DR-A01-002	NEED-WWOX-MISSENSE-PROTEIN-RESCUE	card	readout_other_disease	benefit	no	no	not_WWOX;class_level	precedent in a non-WWOX variant system
+A01_pba_class	DR-A01-003	NEED-WWOX-MISSENSE-PROTEIN-RESCUE	card	readout_other_disease	null	no	no	not_WWOX;class_level	precedent in a non-WWOX variant system
+A01_pba_class	DR-A01-004	NEED-WWOX-MISSENSE-PROTEIN-RESCUE	card	readout_other_disease	null	no	no	not_WWOX;class_level	precedent in a non-WWOX variant system
+A01_pba_class	DR-A01-005	NEED-WWOX-MISSENSE-PROTEIN-RESCUE	card	readout_other_disease	benefit	no	no	not_WWOX;class_level	precedent in a non-WWOX variant system
+A02_proteasome_inhibitor_class	DR-A02-001	NEED-WWOX-MISSENSE-PROTEIN-RESCUE	card	readout_other_disease	benefit	no	no	not_WWOX;class_level	precedent in a non-WWOX variant system
+A02_proteasome_inhibitor_class	DR-A02-002	NEED-WWOX-MISSENSE-PROTEIN-RESCUE	card	readout_other_disease	benefit	no	no	not_WWOX;class_level	precedent in a non-WWOX variant system
+B01_amlexanox	DR-B01-001	NEED-WWOX-PTC-READTHROUGH	card	readout_other_disease	benefit	no	no	other_gene_nonsense_alleles	TP53/DMD/CFTR nonsense alleles: other-gene precedent, not WWOX
+B01_amlexanox	DR-B01-002	NEED-WWOX-PTC-READTHROUGH	card	readout_other_disease	null	no	no	other_disease	Fanconi anaemia comparison
+E01_isr_modulators	DR-E01-001	NEED-ISR-ATTENUATION	card	readout_other_disease	benefit	no	no	not_WWOX;abstract_only	precedent in a non-WWOX disease
+E01_isr_modulators	DR-E01-002	NEED-ISR-ATTENUATION	card	readout_other_disease	null	no	no	not_WWOX;abstract_only	precedent in a non-WWOX disease
+E01_isr_modulators	DR-E01-003	NEED-ISR-ATTENUATION	card	readout_other_disease	benefit	no	no	not_WWOX;abstract_only	precedent in a non-WWOX disease
+E01_isr_modulators	DR-E01-004	NEED-ISR-ATTENUATION	card	readout_other_disease	benefit	no	no	not_WWOX;abstract_only	precedent in a non-WWOX disease

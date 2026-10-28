@@ -43,6 +43,12 @@ def tgt(sym, hgnc, kind="intervention_target"):
     return {"symbol": sym, "hgnc_id": hgnc, "target_kind": kind}
 
 
+def dg_t2(hgnc, gene, itype, claim):
+    t = dg_t(hgnc, gene, itype)
+    t["claim_source"] = claim
+    return t
+
+
 class Fixture(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
@@ -52,10 +58,11 @@ class Fixture(unittest.TestCase):
         (self.root / "dr/cards").mkdir(parents=True)
         (self.root / "dr/cards_early").mkdir()
         self.needs = [
-            need("N-DOWN", "down", [tgt("GRIN1", "HGNC:4584"), tgt("LDHC", "HGNC:6544", "identity_guard")], cards=["C-DRUG"]),
+            need("N-DOWN", "down", [tgt("GRIN1", "HGNC:4584"), tgt("GRIA1", "HGNC:4571"), tgt("LDHC", "HGNC:6544", "identity_guard")], cards=["C-DRUG"]),
             need("N-UNC", "uncertain", [tgt("PDK1", "HGNC:8809"), tgt("HK2", "HGNC:4923", "readout_marker")]),
             need("N-SHARE", "down", [tgt("GRIN1", "HGNC:4584")]),
             need("N-GENE", "restore", [tgt("WWOX", "HGNC:12799", "disease_gene_product")], cards=["C-AAV"]),
+            need("N-KIND", "uncertain", [tgt("PDK1", "HGNC:8809"), tgt("MAPT", "HGNC:6893", "effector_constraint"), tgt("HIF1A", "HGNC:4910", "pathway_member"), tgt("HK2", "HGNC:4923", "readout_marker")]),
         ]
         self.entries = [
             entry("CAT:CHEMBL1", "Blockerine", skel="AAA", targets=[chembl_t("GRIN1", "NEGATIVE ALLOSTERIC MODULATOR"), chembl_t("PDPK1", "INHIBITOR")]),
@@ -66,43 +73,63 @@ class Fixture(unittest.TestCase):
             entry("CAT:CHEMBL6", "Guardine", skel="EEE", targets=[chembl_t("LDHC", "INHIBITOR")]),
             entry("CAT:DGIDB:aa", "Dgonly", origin="dgidb_only", targets=[dg_t("hgnc:4584", "GRIN1", None), dg_t("hgnc:8816", "PDPK1", "inhibitor")]),
             entry("CAT:DGIDB:bb", "Blockerine", origin="dgidb_only", targets=[dg_t("hgnc:4584", "GRIN1", "antagonist")]),
+            entry("CAT:DGIDB:art", "Adenoish", origin="dgidb_only", targets=[dg_t2("hgnc:4584", "GRIN1", "agonist", "GuideToPharmacology")]),
+            entry("CAT:DGIDB:ok2", "Realish", origin="dgidb_only", targets=[dg_t2("hgnc:4584", "GRIN1", "inhibitor", "GuideToPharmacology"), dg_t2("hgnc:4584", "GRIN1", "inhibitor", "TTD")]),
+            entry("CAT:DGIDB:null", "Null", origin="dgidb_only", targets=[dg_t2("hgnc:4584", "GRIN1", "inhibitor", "TTD")]),
+            entry("CAT:DGIDB:alias", "Aliasine", origin="dgidb_only", targets=[dg_t2("hgnc:8809", "PDK1", "inhibitor", "TdgClinicalTrial"), dg_t2("hgnc:8816", "PDPK1", "inhibitor", "DTC")]),
+            entry("CAT:DGIDB:tau", "Tauish", origin="dgidb_only", targets=[dg_t2("hgnc:6893", "MAPT", None, "TTD"), dg_t2("hgnc:4923", "HK2", None, "TTD")]),
+            entry("CAT:DGIDB:hif", "Hifish", origin="dgidb_only", targets=[dg_t2("hgnc:4910", "HIF1A", None, "TTD")]),
         ]
         self.write()
 
-    def write(self, src_state="OK"):
+    def write(self, src_state="OK", extra_stats=None):
         with gzip.open(self.root / "cat/catalog.jsonl.gz", "wt") as fh:
             for e in self.entries:
                 fh.write(json.dumps(e) + "\n")
-        (self.root / "cat/catalog_stats.json").write_text(json.dumps({"generated_utc": "t", "sources": {k: {"state": src_state} for k in ("chembl", "dgidb", "unichem", "matrix", "openfda_ndc", "dsld")}}))
+        st = {"generated_utc": "2026-10-28T00:00:00Z", "sources": {k: {"state": src_state} for k in ("chembl", "dgidb", "unichem", "matrix", "openfda_ndc", "dsld")}}
+        st.update(extra_stats or {})
+        (self.root / "cat/catalog_stats.json").write_text(json.dumps(st))
         (self.root / "cat/card_links.json").write_text(json.dumps({"cards": {
             "C-DRUG": {"links": [{"catalogue_id": "CAT:CHEMBL1", "role": "identity", "rule": "declared"}]},
             "C-AAV": {"links": []}}}))
         (self.root / "cat/non_molecule_modalities.tsv").write_text("card_id\tmodality\twhy\tsource\nC-AAV\tgene_replacement_vector\tvector\tt\n")
         (self.root / "needs.json").write_text(json.dumps({"needs": self.needs}))
-        (self.root / "roles.tsv").write_text("need_id\tsymbol\tcoupling\tbasis\nN-DOWN\tGRIN1\tsame\tb\nN-SHARE\tGRIN1\tsame\tb\nN-GENE\tWWOX\tsame\tb\nN-GONE\tXXX\tsame\tstale\n")
+        (self.root / "roles.tsv").write_text("need_id\tsymbol\tcoupling\tbasis\tqualifier\nN-DOWN\tGRIN1\tsame\tb\tone full block only\nN-DOWN\tGRIA1\tunresolved\tb\tguess\nN-SHARE\tGRIN1\tsame\tb\t\nN-GENE\tWWOX\tsame\tb\t\nN-GONE\tXXX\tsame\tstale\t\n")
+        (self.root / "artefacts.tsv").write_text("claim_source\tsymbol\trule\tevidence\nGuideToPharmacology\tGRIN1\trequire_second_source\ttest\n*\tPDK1\talias_risk:PDPK1\ttest\n")
+        P = [("C-DRUG", "A1", "N-DOWN", "card", "readout_in_wwox_system", "benefit", "yes", "yes", "high_dose_arm", "b"),
+             ("C-DRUG", "A2", "N-DOWN", "CHEMBL3", "readout_other_disease", "harm", "no", "no", "", "b"),
+             ("C-DRUG", "A3", "N-DOWN", "card", "target_engagement_assay", "benefit", "no", "no", "", "b"),
+             ("C-DRUG", "A4", "N-DOWN", "card", "readout_in_wwox_system", "mixed", "yes", "no", "low_dose_arm", "b"),
+             ("C-DRUG", "A5", "N-DOWN", "tool_no_catalogue_identity", "readout_in_wwox_system", "benefit", "yes", "no", "", "b")]
+        (self.root / "pert.tsv").write_text("\t".join(cov.PERT_COLS) + "\n" + "\n".join("\t".join(x) for x in P) + "\n")
         for stem, sub, cand, assertions, comps in (
             ("C-DRUG", "cards", "Blockerine", [
                 {"id": "A1", "direction": "DECREASE", "epistemic_status": "DATO", "reading_depth": "complete_fulltext_read", "source": "s1", "context": {"disease_id": "Wwox-null mouse WOREE", "species": "mouse"}},
                 {"id": "A2", "direction": "DECREASE", "epistemic_status": "DATO", "reading_depth": "abstract_only", "source": "s2", "context": {"disease_id": "epilepsy (not WWOX)", "species": "rat"}},
-                {"id": "A3", "direction": "UNKNOWN", "epistemic_status": "INFERENZA", "reading_depth": "x", "source": "s3", "context": {"disease_id": "WWOX-DEE", "species": "human"}}],
-             {"A1": "OPPOSES_DISEASE_CHANGE", "A2": "UNRESOLVED", "A3": "UNRESOLVED"}),
+                {"id": "A3", "direction": "DECREASE", "epistemic_status": "DATO", "reading_depth": "x", "source": "s3", "context": {"disease_id": "enzyme assay (not WWOX)", "species": "human"}},
+                {"id": "A4", "direction": "INCREASE", "epistemic_status": "DATO", "reading_depth": "complete_fulltext_read", "source": "s4", "context": {"disease_id": "Wwox-null mouse WOREE", "species": "mouse"}},
+                {"id": "A5", "direction": "DECREASE", "epistemic_status": "DATO", "reading_depth": "complete_fulltext_read", "source": "s5", "context": {"disease_id": "Wwox-null slices", "species": "mouse"}}],
+             {"A1": "OPPOSES_DISEASE_CHANGE", "A2": "UNRESOLVED", "A3": "UNRESOLVED", "A4": "OPPOSES_DISEASE_CHANGE", "A5": "UNRESOLVED"}),
             ("C-AAV", "cards", "AAV", [], {})):
             (self.root / "dr" / sub / f"{stem}.packet.json").write_text(json.dumps({"candidate": {"id": stem, "name": cand}, "route": "r", "drug_assertions": assertions}))
             (self.root / "dr" / sub / f"{stem}.card.json").write_text(json.dumps({"comparisons": [{"assertion_id": k, "status": v} for k, v in comps.items()], "p4_fields": {"endpoint_pursued": "E"}, "next_step": "n", "limits": []}))
 
     def run_build(self):
-        return cov.build(needs_path=self.root / "needs.json", catalog_dir=self.root / "cat", dr=self.root / "dr", roles_path=self.root / "roles.tsv")
+        return cov.build(needs_path=self.root / "needs.json", catalog_dir=self.root / "cat", dr=self.root / "dr", roles_path=self.root / "roles.tsv",
+                         artefacts_path=self.root / "artefacts.tsv", pertinence_path=self.root / "pert.tsv")
 
     def idx(self):
-        return rs.Index(self.entries), rs.load_roles(self.root / "roles.tsv")
+        return rs.Index(self.entries, rs.load_artefacts(self.root / "artefacts.tsv")), rs.load_roles(self.root / "roles.tsv")
 
 
 class Identity(Fixture):
     def test_pdk1_is_not_pdpk1_by_symbol_or_hgnc(self):
         idx, roles = self.idx()
         r = rs.associations_for_need(self.needs[1], idx, roles)
-        ids = {a["catalogue_id"] for a in r["associations"] if a["target"] == "PDK1"}
+        ids = {a["catalogue_id"] for a in r["associations"] if a["target"] == "PDK1" and not a["excluded_from_counts"]}
         self.assertEqual(ids, {"CAT:CHEMBL5"})  # CHEMBL1 (PDPK1 inhibitor) and DGIdb PDPK1 (hgnc:8816) are not PDK1
+        alias = [a for a in r["associations"] if a["catalogue_id"] == "CAT:DGIDB:alias"]
+        self.assertTrue(alias and all(a["excluded_from_counts"].startswith("alias_risk") for a in alias))   # PDK1 row on a PDPK1 record: unresolved, listed, not counted
 
     def test_identity_guard_is_reported_not_linked_and_nonhuman_set_aside(self):
         idx, roles = self.idx()
@@ -127,7 +154,7 @@ class Direction(Fixture):
         idx, roles = self.idx()
         r = rs.associations_for_need(self.needs[1], idx, roles)
         self.assertTrue(r["exploration_only"])
-        self.assertTrue(all(a["consistency"] == "direction_unresolved" for a in r["associations"]))
+        self.assertTrue(all(a["consistency"] == "direction_unresolved" for a in r["associations"] if not a["excluded_from_counts"]))
         self.assertTrue(all("exploration" in a["list_label"] for a in r["associations"]))
         res = self.run_build()
         self.assertTrue(all(p["exploration_only"] for p in res["priorities"]["priorities"] if p["need"] == "N-UNC"))
@@ -165,7 +192,7 @@ class UnknownVsFailed(Fixture):
         self.needs[0]["sources"]["cards"] = ["C-DRUG"]
         self.write()
         res = self.run_build()
-        self.assertEqual(res["summary"]["source_states"]["chembl"], "OK")
+        self.assertEqual(res["summary"]["source_states"]["chembl"]["state"], "OK")
         # a card-cited record with no target rows
         self.entries[0]["targets"] = []
         self.entries[1]["targets"] = []
@@ -181,7 +208,7 @@ class UnknownVsFailed(Fixture):
         self.entries[1]["targets"] = []
         self.write()
         d = {p["row_id"]: p["disposition"] for p in self.run_build()["priorities"]["priorities"] if p["need"] == "N-DOWN"}
-        self.assertEqual(d["FAM:CAT:CHEMBL1"], "not_relevant")
+        self.assertEqual(d["FAM:CAT:CHEMBL1"], "no_catalogue_link_found")
 
     def test_opposite_mechanism_and_insufficient_data_are_reachable(self):
         self.entries[0]["targets"] = [chembl_t("GRIN1", "AGONIST")]
@@ -199,18 +226,45 @@ class LevelsAndCounts(Fixture):
     def cell(self, res, rid, nid):
         return next(c for c in res["matrix"]["cells"] if c["row_id"] == rid and c["need"] == nid)
 
-    def test_levels_are_separate(self):
+    def test_levels_are_separate_and_signs_are_carried(self):
         res = self.run_build()
         c = self.cell(res, "FAM:CAT:CHEMBL1", "N-DOWN")
         self.assertEqual(c["L1_documented_link"]["state"], "documented")
         self.assertEqual(c["L2_mechanistic_coherence"]["state"], "coherent")
-        self.assertEqual(c["L3_observed_effect"]["by_scope"], {"other_disease_precedent": 1, "wwox_experimental": 1})
-        self.assertEqual(c["L4_observed_recovery_in_wwox_system"]["assertion_ids"], ["A1"])   # only the WWOX one with OPPOSES
-        self.assertEqual(c["L3_observed_effect"]["inference_assertions"], 1)                   # the inference is not an observation
-        # a link without any card is not an observation
+        self.assertIn("one full block only", c["L2_mechanistic_coherence"]["certainty_qualifiers"])
+        l3 = c["L3_observed_effect"]
+        self.assertEqual(l3["state"], "observed_wwox_system")
+        self.assertEqual(l3["signs_wwox_system_readouts"], {"benefit": 1, "mixed": 1})       # dose arms: benefit and mixed, never pooled into one sign
+        self.assertEqual(l3["target_engagement_assays_not_readouts"], 1)                      # an enzyme assay is not an observed effect
+        self.assertEqual(l3["assertion_ids"], ["A1", "A4"])
+        l4 = c["L4_observed_recovery_in_wwox_system"]
+        self.assertEqual((l4["state"], l4["assertion_ids"]), ("observed_experimental", ["A1"]))   # the low-dose-arm assertion A4 is not recovery
+        # a link without any pertinent assertion is not an observation
         c2 = self.cell(res, "FAM:CAT:CHEMBL3", "N-DOWN")
-        self.assertEqual((c2["L1_documented_link"]["state"], c2["L3_observed_effect"]["state"], c2["L4_observed_recovery_in_wwox_system"]["state"]), ("documented", "none_in_cards", "none_in_record"))
-        self.assertIn("never", json.dumps(res["matrix"]["never_summed"]).lower() + "never")
+        self.assertEqual((c2["L1_documented_link"]["state"], c2["L3_observed_effect"]["state"], c2["L4_observed_recovery_in_wwox_system"]["state"]), ("documented", "precedent_other_disease_only", "none_in_record"))
+
+    def test_harm_is_attached_to_its_subject_and_not_pooled_with_benefit(self):
+        res = self.run_build()
+        c = self.cell(res, "FAM:CAT:CHEMBL3", "N-DOWN")                      # A2 (harm) has subject CHEMBL3, not the card's declared CHEMBL1
+        self.assertEqual(c["L3_observed_effect"]["signs_other_disease_precedent_not_observed_here"], {"harm": 1})
+        self.assertEqual(self.cell(res, "FAM:CAT:CHEMBL1", "N-DOWN")["L3_observed_effect"]["signs_other_disease_precedent_not_observed_here"], {})
+
+    def test_tool_subject_is_its_own_row_and_never_attached_to_a_named_drug(self):
+        res = self.run_build()
+        r = next(r for r in res["matrix"]["rows"] if r["row_id"] == "INT:C-DRUG:tool")
+        self.assertEqual(r["kind"], "tool_compound_or_genetic_precedent_not_in_catalogue")
+        c = self.cell(res, "INT:C-DRUG:tool", "N-DOWN")
+        self.assertEqual(c["L3_observed_effect"]["assertion_ids"], ["A5"])
+        self.assertEqual(c["L1_documented_link"]["state"], "not_evaluable")
+        self.assertNotIn("A5", self.cell(res, "FAM:CAT:CHEMBL1", "N-DOWN")["L3_observed_effect"]["assertion_ids"])
+
+    def test_mention_in_card_text_does_not_attach_observations(self):
+        links = json.loads((self.root / "cat/card_links.json").read_text())
+        links["cards"]["C-DRUG"]["links"].append({"catalogue_id": "CAT:CHEMBL3", "rule": "chembl_id_mentioned_in_card_text"})   # no role = a mention
+        (self.root / "cat/card_links.json").write_text(json.dumps(links))
+        res = self.run_build()
+        r = next(r for r in res["matrix"]["rows"] if r["row_id"] == "FAM:CAT:CHEMBL3")
+        self.assertFalse([c for c in r["cards"] if c["attachment"] not in ("assertion_subject",)])
 
     def test_non_molecule_intervention_has_own_row_and_is_not_evaluable_not_zero(self):
         res = self.run_build()
@@ -220,6 +274,59 @@ class LevelsAndCounts(Fixture):
         c = self.cell(res, "INT:C-AAV", "N-GENE")
         self.assertEqual(c["L1_documented_link"]["state"], "not_evaluable")
 
+    def test_source_artefact_rows_are_excluded_but_listed(self):
+        res = self.run_build()
+        ass = {a["catalogue_id"]: a for a in res["associations"] if a["need"] == "N-DOWN" and a["target"] == "GRIN1" and a["link_source"].startswith("DGIdb")}
+        self.assertTrue(ass["CAT:DGIDB:art"]["excluded_from_counts"].startswith("source_artefact"))     # lone Guide-to-Pharmacology row
+        self.assertIsNone(ass["CAT:DGIDB:ok2"]["excluded_from_counts"])                                  # same source corroborated by TTD
+        self.assertTrue(ass["CAT:DGIDB:null"]["excluded_from_counts"].startswith("placeholder"))
+        cells = {(c["row_id"], c["need"]) for c in res["matrix"]["cells"]}
+        self.assertNotIn(("FAM:CAT:DGIDB:art", "N-DOWN"), cells)
+        self.assertNotIn(("FAM:CAT:DGIDB:null", "N-DOWN"), cells)
+        self.assertIn(("FAM:CAT:DGIDB:ok2", "N-DOWN"), cells)
+        by_reason = res["summary"]["catalogue_coverage"]["excluded_rows"]["by_reason"]
+        self.assertGreaterEqual(by_reason.get("source_artefact", 0), 1)
+        self.assertGreaterEqual(by_reason.get("placeholder", 0), 1)
+
+    def test_only_intervention_targets_are_headline_links(self):
+        res = self.run_build()
+        per = res["summary"]["needs"]["per_need"]["N-KIND"]
+        kinds = per["by_target_kind_records_families"]
+        self.assertEqual(kinds["effector_constraint"]["records"], 1)      # MAPT: listed, counted by kind
+        self.assertEqual(kinds["pathway_member"]["records"], 1)
+        self.assertEqual(per["headline_records_intervention_targets"], 1)  # PDK1 (CHEMBL5) only
+        self.assertEqual(per["records_incl_pathway_members"], 2)           # pathway members counted apart
+        self.assertNotIn(("FAM:CAT:DGIDB:tau", "N-KIND"), {(c["row_id"], c["need"]) for c in res["matrix"]["cells"]})   # MAPT/readout-only: no cell
+        hif = self.cell(res, "FAM:CAT:DGIDB:hif", "N-KIND")
+        self.assertEqual(hif["L1_documented_link"]["state"], "pathway_member_only")
+        cov_ = res["summary"]["catalogue_coverage"]
+        self.assertLess(cov_["union_headline_records"], cov_["union_with_pathway_members_records"])
+
+    def test_gria_role_unresolved_never_consistent(self):
+        idx, roles = self.idx()
+        n = self.needs[0]
+        label, why = rs.consistency(n, tgt("GRIA1", "HGNC:4571"), "down", roles)
+        self.assertEqual(label, "direction_unresolved")
+        self.assertIn("inferred, not measured", why)
+
+    def test_stale_export_is_a_state_and_caveats_absence(self):
+        self.entries[0]["targets"] = [chembl_t("ZZZ1", "INHIBITOR")]
+        self.entries[1]["targets"] = []
+        self.write(extra_stats={"dgidb_age": {"export_in_use": {"last_modified": "Mon, 10 Jun 2024 16:04:52 GMT"}}})
+        res = self.run_build()
+        self.assertEqual(res["summary"]["source_states"]["dgidb"]["state"], "STALE_EXPORT")
+        self.assertEqual(res["summary"]["inputs_status"]["stale_sources"], ["dgidb"])
+        p = next(p for p in res["priorities"]["priorities"] if p["row_id"] == "FAM:CAT:CHEMBL1" and p["need"] == "N-DOWN")
+        self.assertEqual(p["disposition"], "no_catalogue_link_found")
+        self.assertIn("STALE", p["disposition_reason"])                      # absence on a stale source says so
+        self.assertTrue(p["source_caveats"])
+
+    def test_any_source_failure_blocks_dispositions(self):
+        raw = json.loads((self.root / "cat/catalog_stats.json").read_text())
+        raw["sources"]["openfda_ndc"] = {"state": "FAILED"}
+        (self.root / "cat/catalog_stats.json").write_text(json.dumps(raw))
+        self.assertEqual({p["disposition"] for p in self.run_build()["priorities"]["priorities"]}, {"incomplete_or_failed_query"})
+
     def test_each_family_counts_once_per_need_and_shared_targets_do_not_double_count(self):
         res = self.run_build()
         cells = [c for c in res["matrix"]["cells"] if c["row_id"] == "FAM:CAT:CHEMBL1"]
@@ -227,22 +334,30 @@ class LevelsAndCounts(Fixture):
         c = self.cell(res, "FAM:CAT:CHEMBL1", "N-DOWN")
         self.assertEqual(c["L1_documented_link"]["targets"], ["GRIN1"])                  # the two records of the family collapse into one cell
         cc_ = res["summary"]["catalogue_coverage"]
-        self.assertEqual(cc_["families_touching_at_least_one_need_counted_once"], len({a["family"] for a in res["associations"] if a["target_kind"] in rs.LINK_KINDS}))
-        self.assertEqual(sum(int(k) * v for k, v in cc_["families_by_number_of_needs_touched"].items()), len({(a["family"], a["need"]) for a in res["associations"] if a["target_kind"] in rs.LINK_KINDS}))
+        head = [a for a in res["associations"] if not a["excluded_from_counts"] and a["target_kind"] in rs.LINK_KINDS]
+        self.assertEqual(cc_["union_headline_families"], len({a["family"] for a in head}))
+        self.assertEqual(sum(int(k) * v for k, v in cc_["families_by_number_of_needs_touched"].items()), len({(a["family"], a["need"]) for a in head}))
+
+    def test_cells_vs_distinct_families_are_both_reported(self):
+        res = self.run_build()
+        pr = res["summary"]["priorities"]
+        self.assertGreaterEqual(pr["by_disposition_cells"]["consistent_mechanism_candidate"], pr["by_disposition_distinct_families_or_rows"]["consistent_mechanism_candidate"])
 
     def test_summary_reconciles_with_matrix_and_priorities(self):
         res = self.run_build()
         m, cells = res["summary"]["matrix"], res["matrix"]["cells"]
         self.assertEqual(m["cells_nonempty"], len(cells))
-        self.assertEqual(m["L1_documented"] + m["L1_none_found"] + m["L1_not_evaluable"] + sum(1 for c in cells if c["L1_documented_link"]["state"] == "source_incomplete"), len(cells))
+        for k in ("L1_states", "L2_states", "L3_states", "L4_states"):
+            self.assertEqual(sum(m[k].values()), len(cells))
         pri = res["priorities"]
         self.assertEqual(len(pri["priorities"]) + sum(pri["pairs_not_prioritised"].values()), len(cells))
-        self.assertEqual(sum(res["summary"]["priorities"]["by_disposition"].values()), len(pri["priorities"]))
+        self.assertEqual(sum(res["summary"]["priorities"]["by_disposition_cells"].values()), len(pri["priorities"]))
         u = res["summary"]["units"]
         self.assertEqual(u["families"], u["chembl_families"] + u["source_only_families_unresolved_identity"])
-        for k in ("pct_records_with_link",):
-            x = res["summary"]["catalogue_coverage"][k]
-            self.assertEqual(x["percent"], round(100.0 * x["numerator"] / x["denominator"], 1))
+        x = res["summary"]["catalogue_coverage"]["pct_records_with_headline_link"]
+        self.assertEqual(x["percent"], round(100.0 * x["numerator"] / x["denominator"], 1))
+        o = res["summary"]["observations"]
+        self.assertEqual(o["assertions_listed_in_pertinence_table"] + o["assertions_not_assessed_for_pertinence_not_counted"], o["data_assertions_in_intervention_cards"])
 
     def test_deterministic_regeneration(self):
         a, b = self.run_build(), self.run_build()

@@ -39,8 +39,14 @@ DEFAULT_ROLES = DR / "coverage/target_roles.tsv"
 DOWN = {"INHIBITOR", "ANTAGONIST", "BLOCKER", "NEGATIVE ALLOSTERIC MODULATOR", "NEGATIVE MODULATOR", "ANTISENSE INHIBITOR",
         "RNAI INHIBITOR", "INVERSE AGONIST", "DEGRADER", "ALLOSTERIC ANTAGONIST", "GENE EDITING NEGATIVE MODULATOR"}
 UP = {"AGONIST", "PARTIAL AGONIST", "ACTIVATOR", "POSITIVE ALLOSTERIC MODULATOR", "POSITIVE MODULATOR", "OPENER", "POTENTIATOR", "EXOGENOUS GENE"}
-LINK_KINDS = {"intervention_target", "disease_gene_product", "pathway_member", "effector_constraint"}
+# Headline link kinds: a place where a compound can act on the need. Pathway members are counted apart (never in the
+# headline); effector constraints and readout markers are listed beside, never links.
+LINK_KINDS = {"intervention_target", "disease_gene_product"}
+PATHWAY_KINDS = {"pathway_member"}
+BESIDE_KINDS = {"effector_constraint", "readout_marker"}
 TARGET_KINDS_EVALUABLE = {"intervention_target", "disease_gene_product"}
+PLACEHOLDER_NAMES = {"null", "none", "unknown", ""}
+DEFAULT_ARTEFACTS = DR / "coverage/source_artefacts.tsv"
 
 
 def action_direction(text: str | None) -> str:
@@ -57,6 +63,49 @@ def load_needs(path: Path = DEFAULT_NEEDS) -> dict:
     return json.loads(Path(path).read_text(encoding="utf-8"))
 
 
+def load_artefacts(path: Path = DEFAULT_ARTEFACTS) -> list[dict]:
+    p = Path(path)
+    if not p.exists():
+        return []
+    with open(p, encoding="utf-8", newline="") as fh:
+        return [{**r, "symbol": r["symbol"].upper()} for r in csv.DictReader(fh, delimiter="\t")]
+
+
+def artefact_reason(e: dict, t: dict, rules: list[dict]) -> str | None:
+    """Why a catalogue target row must not count as a link, or None.
+    require_second_source: the DGIdb row from `claim_source` on `symbol` stands alone (no other source on that gene for this record).
+    alias_risk:<PARTNER>: a DGIdb row on `symbol` while the same record carries PARTNER and no ChEMBL row on `symbol`
+    (upstream alias confusion such as PDK1/PDPK1); kept as an unresolved row, not a link."""
+    if t["source"] != "DGIdb interaction":
+        return None
+    gene = (t.get("gene") or "").upper()
+
+    def others(sym, exclude_src=None):
+        for u in e["targets"]:
+            if u is t:
+                continue
+            if u["source"] == "ChEMBL curated mechanism" and sym in [g.upper() for g in u.get("gene_symbols") or []]:
+                return True
+            if u["source"] == "DGIdb interaction" and (u.get("gene") or "").upper() == sym and u.get("claim_source") != exclude_src:
+                return True
+        return False
+    for r in rules:
+        if r["symbol"] != gene:
+            continue
+        if r["claim_source"] not in ("*", t.get("claim_source")):
+            continue
+        if r["rule"] == "require_second_source" and not others(gene, exclude_src=t.get("claim_source")):
+            return f"source_artefact: {t.get('claim_source')} row on {gene} without a second source (see source_artefacts.tsv)"
+        if r["rule"].startswith("alias_risk:"):
+            partner = r["rule"].split(":", 1)[1].upper()
+            has_partner = any((u["source"] == "ChEMBL curated mechanism" and partner in [g.upper() for g in u.get("gene_symbols") or []])
+                              or (u["source"] == "DGIdb interaction" and (u.get("gene") or "").upper() == partner) for u in e["targets"])
+            chembl_own = any(u["source"] == "ChEMBL curated mechanism" and gene in [g.upper() for g in u.get("gene_symbols") or []] for u in e["targets"])
+            if has_partner and not chembl_own:
+                return f"alias_risk: {gene} row on a record that also carries {partner}; unresolved, not counted as a link"
+    return None
+
+
 def load_roles(path: Path = DEFAULT_ROLES) -> dict[tuple[str, str], dict]:
     out = {}
     p = Path(path)
@@ -70,8 +119,9 @@ def load_roles(path: Path = DEFAULT_ROLES) -> dict[tuple[str, str], dict]:
 class Index:
     """Symbol / HGNC-id -> catalogue target rows. Built once per run."""
 
-    def __init__(self, entries: list[dict]):
+    def __init__(self, entries: list[dict], artefacts: list[dict] | None = None):
         self.entries = entries
+        self.artefacts = artefacts or []
         self.by_id = {e["id"]: e for e in entries}
         self.chembl_human = collections.defaultdict(list)   # SYMBOL -> [(entry, target)]
         self.chembl_nonhuman = collections.defaultdict(list)
@@ -124,7 +174,7 @@ def need_direction(need: dict) -> str:
 
 
 def consistency(need: dict, target: dict, action_dir: str, roles: dict) -> tuple[str, str]:
-    """(label, why). Labels: consistent | opposed | direction_unresolved | not_evaluable."""
+    """(label, why). Labels: consistent | opposed | direction_unresolved | not_evaluable. `why` carries the role row's certainty qualifier."""
     nd = need_direction(need)
     if nd in ("uncertain", "modulate"):
         return "direction_unresolved", f"the need's direction is '{nd}': exploration only"
@@ -136,12 +186,15 @@ def consistency(need: dict, target: dict, action_dir: str, roles: dict) -> tuple
     if role is None:
         return "direction_unresolved", "no explicit role row couples this target's activity to the need's quantity (target_roles.tsv)"
     coupling = role["coupling"]
+    q = f" [qualifier: {role.get('qualifier')}]" if role.get("qualifier") else ""
+    if coupling not in ("same", "opposite"):
+        return "direction_unresolved", f"role row for {target['symbol']} is '{coupling}' (inferred, not measured){q}"
     want = {"up": "up", "down": "down", "restore": "up"}[nd]
     if coupling == "opposite":
         want = "down" if want == "up" else "up"
     if action_dir == want:
-        return "consistent", f"{action_dir} on {target['symbol']} with coupling '{coupling}' toward need direction '{nd}'"
-    return "opposed", f"{action_dir} on {target['symbol']} with coupling '{coupling}' against need direction '{nd}'"
+        return "consistent", f"{action_dir} on {target['symbol']} with coupling '{coupling}' toward need direction '{nd}'{q}"
+    return "opposed", f"{action_dir} on {target['symbol']} with coupling '{coupling}' against need direction '{nd}'{q}"
 
 
 def links_for_target(idx: Index, tgt: dict) -> tuple[list, list, list]:
@@ -165,6 +218,12 @@ def associations_for_need(need: dict, idx: Index, roles: dict) -> dict:
             raw = t.get("action_type") if src.startswith("ChEMBL") else t.get("interaction_type")
             ad = action_direction(raw)
             label, why = consistency(need, tgt, ad, roles)
+            excl = artefact_reason(e, t, idx.artefacts)
+            placeholder = (e["name"] or "").strip().lower() in PLACEHOLDER_NAMES
+            if placeholder:
+                excl = excl or "placeholder: DGIdb drug_name literally NULL/none, not a compound"
+            if excl:
+                label, why = "not_evaluable", excl
             limits = []
             if src.startswith("ChEMBL") and t.get("target_type") not in (None, "SINGLE PROTEIN"):
                 limits.append(f"ChEMBL target is a {t['target_type'].lower()}: the link to this gene is not subunit-specific")
@@ -176,6 +235,10 @@ def associations_for_need(need: dict, idx: Index, roles: dict) -> dict:
                     limits.append(f"DGIdb group matched {t['multiplicity']} catalogue records")
             if tgt["target_kind"] == "readout_marker":
                 limits.append("the gene is a readout marker of the need, not an intervention target")
+            if tgt["target_kind"] == "effector_constraint":
+                limits.append("the gene is an effector constraint of the need (the record argues against manipulating it): listed beside, never a link")
+            if tgt["target_kind"] == "pathway_member":
+                limits.append("pathway member: counted apart from intervention-target links, never in the headline")
             assoc.append({
                 "need": need["id"], "target": tgt["symbol"], "hgnc_id": tgt.get("hgnc_id"), "target_kind": tgt["target_kind"],
                 "catalogue_id": e["id"], "compound": e["name"], "family": idx.family[e["id"]],
@@ -183,6 +246,7 @@ def associations_for_need(need: dict, idx: Index, roles: dict) -> dict:
                 "need_direction": nd, "consistency": label, "consistency_why": why,
                 "list_label": "exploration list: the need's direction is unresolved; this is not a list of favourable treatments" if nd in ("uncertain", "modulate") else "direction-evaluable need",
                 "reference_ids": t.get("reference_ids", []), "mechanism_of_action": t.get("mechanism_of_action"),
+                "excluded_from_counts": excl, "certainty_qualifier": (roles.get((need["id"], tgt["symbol"].upper())) or {}).get("qualifier") if label in ("consistent", "opposed") else None,
                 "limits": limits,
                 "pharmacology": {"status_class": e["status_class"], "potency": "NOT_CARRIED (catalogue holds ids and direction only)",
                                  "chembl_max_phase": next((s.get("max_phase") for s in e["status_records"] if s["source"] == "ChEMBL"), None)},
@@ -213,7 +277,7 @@ def compound_to_needs(entry: dict, needs: list[dict], idx: Index, roles: dict, f
     for need in needs:
         syms = {t["symbol"].upper(): t for t in need["targets"]}
         nd = need_direction(need)
-        for _own, t, via in pool:
+        for own, t, via in pool:
             if t["source"] == "ChEMBL curated mechanism":
                 if t.get("organism") != "Homo sapiens":
                     continue
@@ -231,7 +295,10 @@ def compound_to_needs(entry: dict, needs: list[dict], idx: Index, roles: dict, f
                     continue
                 ad = action_direction(raw)
                 label, why = consistency(need, tgt, ad, roles)
-                out.append({"need": need["id"], "target": tgt["symbol"], "target_kind": tgt["target_kind"], "link_source": t["source"],
+                excl = artefact_reason(own, t, idx.artefacts)
+                if excl:
+                    label, why = "not_evaluable", excl
+                out.append({"excluded_from_counts": excl, "need": need["id"], "target": tgt["symbol"], "target_kind": tgt["target_kind"], "link_source": t["source"],
                             "action_raw": raw, "action_on_target": ad, "need_direction": nd, "consistency": label, "consistency_why": why,
                             "exploration_only": nd in ("uncertain", "modulate"), "via_family_member": via})
     seen, uniq = set(), []
@@ -258,6 +325,7 @@ def main(argv=None) -> int:
     ap.add_argument("--catalog", type=Path, default=cc.DEFAULT_CATALOG)
     ap.add_argument("--needs", type=Path, default=DEFAULT_NEEDS)
     ap.add_argument("--roles", type=Path, default=DEFAULT_ROLES)
+    ap.add_argument("--artefacts", type=Path, default=DEFAULT_ARTEFACTS)
     sub = ap.add_subparsers(dest="cmd")
     n = sub.add_parser("need")
     n.add_argument("need_id")
@@ -281,7 +349,7 @@ def main(argv=None) -> int:
             print(f"{x['id']}\t{d}\t{'EXPLORATION' if d in ('uncertain', 'modulate') else 'direction-evaluable'}\t{len(x['targets'])} targets")
         return 0
     entries = cc.load(a.catalog)
-    idx, roles = Index(entries), load_roles(a.roles)
+    idx, roles = Index(entries, load_artefacts(a.artefacts)), load_roles(a.roles)
     if a.cmd == "need":
         nd = next((x for x in needs if x["id"] == a.need_id), None)
         if nd is None:
@@ -292,7 +360,9 @@ def main(argv=None) -> int:
             print(json.dumps(r, indent=1, ensure_ascii=False))
             return 0
         print(f"# {r['need']} direction={r['need_direction']} {'EXPLORATION LIST (not favourable treatments)' if r['exploration_only'] else ''}")
-        print(f"# associations={len(r['associations'])} compounds={len({x['catalogue_id'] for x in r['associations']})} families={len({x['family'] for x in r['associations']})} "
+        kept = [x for x in r["associations"] if not x["excluded_from_counts"] and x["target_kind"] in LINK_KINDS]
+        print(f"# headline links (intervention targets, not excluded): records={len({x['catalogue_id'] for x in kept})} families={len({x['family'] for x in kept})}; "
+              f"all rows listed={len(r['associations'])}; excluded (source artefact / alias risk / placeholder)={sum(1 for x in r['associations'] if x['excluded_from_counts'])} "
               f"identity_guard_hits={len(r['identity_guard_hits'])} nonhuman_chembl_set_aside={r['nonhuman_chembl_rows_set_aside']}")
         for x in r["associations"][: a.limit]:
             print(_print_assoc(x))
@@ -310,7 +380,7 @@ def main(argv=None) -> int:
             for r in res:
                 print(f"## {r['catalogue_id']}\t{r['name']}\t{r['status_class']}\t{','.join(r['access'])}\ttarget rows={r['n_target_rows']}\t{r['family']}")
                 for x in r["needs_touched"]:
-                    print(f"   {x['need']}\t{x['target']}\t{x['action_raw'] or 'UNSTATED'}\t{x['consistency']}{' [exploration]' if x['exploration_only'] else ''}{' via ' + x['via_family_member'] if x['via_family_member'] else ''}")
+                    print(f"   {x['need']}\t{x['target']}\t{x['action_raw'] or 'UNSTATED'}\t{x['consistency']}{' EXCLUDED: ' + x['excluded_from_counts'][:40] if x['excluded_from_counts'] else ''}{' [exploration]' if x['exploration_only'] else ''}{' via ' + x['via_family_member'] if x['via_family_member'] else ''}")
         return 0 if res else 1
     if a.cmd == "target":
         rows = idx.chembl_human.get(a.symbol.upper(), [])

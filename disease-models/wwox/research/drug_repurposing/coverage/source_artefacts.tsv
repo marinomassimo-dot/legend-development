@@ -1,0 +1,6 @@
+claim_source	symbol	rule	evidence
+GuideToPharmacology	ABAT	require_second_source	DGIdb Guide-to-Pharmacology rows for adenosine-receptor ligands carry the gene list ABAT, ABCA1, ABCA2, ABCA3 (an alphabetical-prefix pattern, e.g. adenosine, caffeine, theophylline, istradefylline). 77 of 89 ABAT-linked catalogue records have ABAT only from this source; the genuine ones (vigabatrin, CPP-115, valproate, tiagabine, pyridoxal phosphate) have a ChEMBL or other-source ABAT row (independent audit 2026-10-28, re-verified here)
+GuideToPharmacology	ABCA1	require_second_source	same pattern, not a gene of any need
+GuideToPharmacology	ABCA2	require_second_source	same pattern, not a gene of any need
+GuideToPharmacology	ABCA3	require_second_source	same pattern, not a gene of any need
+*	PDK1	alias_risk:PDPK1	DGIdb PDK1 (hgnc:8809) rows from TdgClinicalTrial or PharmGKB on records that also carry PDPK1 and have no ChEMBL PDK1 mechanism (Osu-03012/AR-12, celecoxib: known PDPK1 inhibitors) are very probably the upstream PDK1/PDPK1 alias confusion; unresolved, kept out of the headline (independent audit 2026-10-28)
