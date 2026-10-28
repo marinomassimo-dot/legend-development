@@ -12,7 +12,7 @@ Nothing here is medical advice and nothing changes the four scientific current f
 | File | What it is | In git (once the task branch is landed) |
 |---|---|---|
 | `catalog_build.py` | fetch (cached, incremental) + build + query + verify; standard library only | yes |
-| `test_catalog_build.py` | 17 offline regressions on a synthetic cache | yes |
+| `test_catalog_build.py` | offline regressions on a synthetic cache, including the refusal and partial-build guarantees below | yes |
 | `catalog.jsonl.gz` | the catalogue, one entry per line, deterministic (sorted, `mtime=0`) | yes (about 6 MB) |
 | `catalog_stats.json` | every count the later view reads, with the reconciliation | yes |
 | `card_links.json` | link of the curated cards to catalogue ids, with rule and an unmatched list | yes |
@@ -154,16 +154,63 @@ backbone.
 ```bash
 python3 -B catalog_build.py fetch                 # NETWORK. Skips sources newer than 30 days; --refresh / --only chembl,dgidb to force
 python3 -B catalog_build.py probe-dsld [--names a,b] [--retry-errors] [--limit N]   # NETWORK, optional, resumable, 3 parallel requests
-python3 -B catalog_build.py build                 # OFFLINE. cache -> catalog.jsonl.gz, stats, card links (about 25 s)
+python3 -B catalog_build.py inputs                # OFFLINE. what the declared version needs: present / missing / mismatching, and how to get each
+python3 -B catalog_build.py build                 # OFFLINE. cache -> catalog.jsonl.gz, stats, card links (about 25 s); REFUSES on an incomplete cache
 python3 -B catalog_build.py verify                # OFFLINE. counts reconcile
-python3 -B test_catalog_build.py                  # OFFLINE. 17 regressions on a synthetic cache
+python3 -B test_catalog_build.py                  # OFFLINE. regressions on a synthetic cache
 python3 -B catalog_build.py all                   # fetch then build
 ```
 
 `build` never touches the network (a regression test forbids it); the ChEMBL entity-type lookup
-for ids mentioned in cards is part of `fetch`. Rebuilding from the cache was verified offline on
-2026-10-28 and produced the same counts. To remove: `git rm -r` this directory and
-`framework/scripts/compound_catalog.py` (plus its row in the scripts README); nothing else imports them.
+for ids mentioned in cards is part of `fetch`.
+
+## Reproducing the declared version (and what a build refuses to do)
+
+The **declared version** is what `cache_manifest.json` records as the last complete retrieval of
+each source: version string, URL, and the sha256 of every file. The cache is the gitignored
+`cache/` of the **root checkout**; a git worktree does not have it. A build therefore starts by
+checking every file the declared version needs: it must exist, and its sha256 must equal the
+manifest. Two files the manifest does not hash are checked for presence only:
+`chembl/id_lookup.json` (written by `fetch`; without it every card id stays `UNRESOLVED` and
+`card_links.json` changes) and `dgidb/live_sources.json` (the `dgidb_age` comparison).
+`dsld/probes.jsonl` is append-only and has no hash either.
+
+Reproduce, in a worktree or anywhere else, with separate commands:
+
+```bash
+LEGEND_CATALOG_CACHE=/path/to/root/disease-models/wwox/research/drug_repurposing/catalog/cache python3 -B catalog_build.py inputs
+LEGEND_CATALOG_CACHE=/path/to/root/disease-models/wwox/research/drug_repurposing/catalog/cache python3 -B catalog_build.py build --check
+LEGEND_CATALOG_CACHE=/path/to/root/disease-models/wwox/research/drug_repurposing/catalog/cache python3 -B catalog_build.py build
+```
+
+* `inputs` lists each required file with its status (`OK`, `PRESENT_UNHASHED`, `MISSING`,
+  `HASH_MISMATCH`), source, pinned hash and the acquisition command; exit 1 if anything is
+  missing. In a worktree it also prints the root checkout's cache path.
+* `build --check` rebuilds in memory, writes nothing and compares the result with the committed
+  `catalog.jsonl.gz`; exit 0 and `MATCH: byte-identical` if the cache reproduces it, exit 4 otherwise.
+* `build` replaces the outputs only from a complete, matching cache. The files are staged as
+  `*.stage` and moved over the targets only after the build and the count reconciliation passed, so a
+  failed build leaves the last valid `catalog.jsonl.gz`, `catalog_stats.json` and `card_links.json`
+  as they were.
+* On a missing or mismatching input, `build` **refuses** (exit 3), names each file, and says how to
+  proceed: point `LEGEND_CATALOG_CACHE` at a cache that holds it, or `fetch --only <source>`.
+  `fetch` downloads what is served now (keyless public downloads only: EBI/ChEMBL, UniChem FTP,
+  DGIdb, guidetopharmacology.org, Hugging Face, api.fda.gov). The DGIdb and GtoPdb URLs serve
+  "latest", so a re-download can differ from the declared files; the build then reports
+  `HASH_MISMATCH` until the manifest is updated by that fetch, at which point it is a **new
+  catalogue version**, not a reproduction. Exact reproduction needs the original cache files.
+* Missing the ChEMBL backbone is always refused. Otherwise an explicit, separate
+  `python3 -B catalog_build.py build --partial` builds without the sources whose input is missing
+  and writes **only** `catalog.PARTIAL.jsonl.gz`, `catalog_stats.PARTIAL.json` and
+  `card_links.PARTIAL.json`; the stats carry `PARTIAL_BUILD` (the missing inputs, the excluded
+  sources, "NOT equivalent to catalog.jsonl.gz") and each excluded source shows state
+  `EXCLUDED_MISSING_OR_MISMATCHING_INPUT`. The complete files are never touched by it.
+
+The build is deterministic: sorted output, `mtime=0`, no dependence on hash randomisation
+(verified by two builds with different `PYTHONHASHSEED`, byte-identical to the committed file).
+Rebuilding from the complete cache was verified offline on 2026-10-28 and produced the same counts.
+To remove: `git rm -r` this directory and `framework/scripts/compound_catalog.py` (plus its row in
+the scripts README); nothing else imports them.
 
 ## Hook for the rest of the module
 
