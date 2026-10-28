@@ -95,19 +95,19 @@ if STAGE == "score":
     W = np.zeros((len(genes), len(ALL)), dtype="float32")
     for j, (u, d) in enumerate(ALL):
         W[u, j] += 1.0 / len(u); W[d, j] -= 1.0 / len(d)
-    S = np.zeros((X.shape[0], len(ALL)), dtype="float32"); stat = np.zeros((X.shape[0], 2), dtype="float32")
+    S = np.lib.format.open_memmap(f"{C}/scores.npy", mode="w+", dtype="float32", shape=(X.shape[0], len(ALL))); stat = np.zeros((X.shape[0], 2), dtype="float32")
     t0 = time.time()
-    for a in range(0, X.shape[0], 4000):
-        blk = np.asarray(X[a:a + 4000]); S[a:a + 4000] = blk @ W
-        stat[a:a + 4000, 0] = np.abs(blk).mean(1); stat[a:a + 4000, 1] = (np.abs(blk) > 2).mean(1)
-        if (a // 4000) % 10 == 0: log("scored", a, "elapsed s", round(time.time() - t0))
+    for a in range(0, X.shape[0], 2000):
+        blk = np.asarray(X[a:a + 2000]); S[a:a + 2000] = blk @ W
+        stat[a:a + 2000, 0] = np.abs(blk).mean(1); stat[a:a + 2000, 1] = (np.abs(blk) > 2).mean(1)
+        if (a // 2000) % 10 == 0: log("scored", a, "elapsed s", round(time.time() - t0))
     # PCA of compound signatures on a fixed random subsample (centred), then projection of every row
     rr = np.random.RandomState(SEED)
-    sub = np.sort(rr.choice(X.shape[0], 30000, replace=False)); A = np.asarray(X[sub]); mu = A.mean(0); A -= mu
+    sub = np.sort(rr.choice(X.shape[0], 10000, replace=False)); A = np.asarray(X[sub]); mu = A.mean(0); A -= mu
     U, s, Vt = np.linalg.svd(A, full_matrices=False); V = Vt[:5].T.astype("float32"); del A
     P = np.zeros((X.shape[0], 5), dtype="float32")
-    for a in range(0, X.shape[0], 4000): P[a:a + 4000] = (np.asarray(X[a:a + 4000]) - mu) @ V
-    np.save(f"{C}/scores.npy", S); np.save(f"{C}/rowstats.npy", stat); np.save(f"{C}/pcs.npy", P)
+    for a in range(0, X.shape[0], 2000): P[a:a + 2000] = (np.asarray(X[a:a + 2000]) - mu) @ V
+    S.flush(); np.save(f"{C}/rowstats.npy", stat); np.save(f"{C}/pcs.npy", P)
     json.dump({"sets": names, "pca_var_explained_top5": [float(x) for x in (s[:5] ** 2 / (s ** 2).sum())],
                "n_in_space": {k: [len(SETS[k][0]), len(SETS[k][1])] for k in NAMED}}, open(f"{C}/score_meta.json", "w"))
     log("score done", S.shape); raise SystemExit(0)
@@ -229,8 +229,12 @@ out["context_hit_rates"] = {"cell_id": strata("cell_id", str), "pert_time_h": st
 ci = [i for i in cgs if info[sigs[i]]["pert_iname"] == "WWOX"]
 bg = {k: {"n_cgs": int(len(cgs)), "pct_zM_ge_3": round(float((ZM[k][cgs] >= 3).mean()), 4), "pct_zM_le_-3": round(float((ZM[k][cgs] <= -3).mean()), 4)} for k in ("S1", "K1", "K2")}
 def pr(k, i): return round(float((ZM[k][cgs] < ZM[k][i]).mean()), 3)
+cgs_cell = np.array([info[sigs[i]]["cell_id"] for i in cgs])
+def prc(k, i):  # percentile among the CGS signatures of the SAME cell line (cross-context control, added 2026-10-28, see the md)
+    m_ = cgs_cell == info[sigs[i]]["cell_id"]; return round(float((ZM[k][cgs][m_] < ZM[k][i]).mean()), 3), int(m_.sum())
+for k in bg: bg[k]["pct_zM_ge_2"] = round(float((ZM[k][cgs] >= 2).mean()), 4)
 out["WWOX_CGS_signatures"] = {"background_over_all_cgs": bg, "rows": [{"sig_id": sigs[i], "cell": info[sigs[i]]["cell_id"], "time_h": info[sigs[i]]["pert_time"], "S1_raw": round(float(S[i, 0]), 3), "S1_zM": round(float(ZM["S1"][i]), 2),
-                                                                       "S1_zP": round(float(ZP["S1"][i]), 2), "S1_zM_percentile_among_cgs": pr("S1", i), "K1_zM": round(float(ZM["K1"][i]), 2), "K2_zM": round(float(ZM["K2"][i]), 2),
+                                                                       "S1_zP": round(float(ZP["S1"][i]), 2), "S1_zM_percentile_among_cgs": pr("S1", i), "S1_zM_percentile_same_cell_line_and_n": prc("S1", i), "K1_zM": round(float(ZM["K1"][i]), 2), "K2_zM": round(float(ZM["K2"][i]), 2),
                                                                        "S3_zM": round(float(ZM["S3"][i]), 2)} for i in ci]}
 json.dump(out, open(f"{G}/derived/lincs_it3_local_level5_summary.json", "w"), indent=1)
 log("report done"); print(json.dumps({k: out[k] for k in ("hit_counts_compound_signatures", "raw_score_correlation_with_S1_over_compound_signatures", "covariate_R2_of_zM_over_compound_signatures", "funnel_compounds_surviving_each_stage", "S1_survivors_n")}, indent=1))
