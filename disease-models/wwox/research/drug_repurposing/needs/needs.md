@@ -78,16 +78,15 @@ residual functional protein); downstream levers are A + partial benefit.
   should open the entry. Statements were audited by the author on 2026-10-28 and then by an independent verifier on eight needs (`locator_audits/2026-10-28_it3_needs_independent_verification.md`); the corrections of both are applied, and the other fourteen needs have had the author's second pass only.
 - Gene Ontology ids were looked up against the EBI QuickGO term service on 2026-10-28 (one was obsolete and was replaced); a
   pathway id is a search hint, not a claim that WWOX acts in the process.
-- HGNC ids and collision notes were taken from `hgnc_complete_set_20261022.json`, which sits in the untracked shared files tree and
-  is not in git; they cannot be re-derived from a clean clone (its sha256 is in the JSON).
+- HGNC ids and collision notes were checked against the live HGNC REST service (read-only, no registration) on 2026-10-28; all 91 symbols returned the stored ids. They were first taken from a snapshot that is not in git.
 - `coverage` is not computed here. `not_included` in the JSON lists what was considered and left out, with reasons.
 
-## Symbol collisions
+## Symbol collisions (checked live against HGNC, 2026-10-28)
 
-`PDK1` (pyruvate dehydrogenase kinase 1) is also an alias of `PDPK1`; `TCF4` is now a different gene from the Wnt factor the papers
-call TCF4 (`TCF7L2`); `MBP` is also maltose-binding protein and an alias of two other genes; `NDUFA4` is no longer an approved symbol
-(now `COXFA4`, complex IV), though the organoid "oxidative arm" panel lists it; `GRIN1` is an alias of `GPRIN1`; `PVALB` of `MB`.
-Search by HGNC id, not by string.
+`PDK1` is also listed as an alias of `PDPK1`; `GRIN1` of `GPRIN1`; `PVALB` is listed as an alias of `MB` (the reverse of what the first draft said); `MBP` of `MBL2` and `PRG2`
+(and is the maltose-binding-protein abbreviation); `HK2` of `KCNA5`, `HOOK2` and `KIF2A`; `XBP1` is a previous symbol of the pseudogene `XBP1P1`; `TCF4` is now a different gene from
+the Wnt factor the papers call TCF4 (`TCF7L2`, whose previous symbol it was); `NDUFA4` is now `COXFA4` (complex IV), though the organoid "oxidative arm" panel still lists it.
+Search by HGNC id, not by string. Each target carries `collision_note` and `confusable_with` where this applies.
 
 ## Using it
 
