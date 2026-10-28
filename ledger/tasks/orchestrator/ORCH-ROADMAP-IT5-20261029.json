@@ -89,7 +89,7 @@
     },
     {
      "step": "P12 redesign first screen and physician use in clear Italian orientation text (scientific citations keep original form): hierarchy, synthetic cards, funnel with explicit units, access categories, need-intervention matrix, mechanism-candidate relation, coverage and gaps; no dense network; sensible denominators; versions/hashes/regeneration in technical drill-down; short profiles (why, WWOX result, external precedent/prediction, counter-evidence, missing proof, next step); fill source titles with cheap cached retrieval (no e-mail to APIs); verify REAL viewports 360 and 390 px with emulation, horizontal overflow, filters, navigation, comparison, print, standalone export; do not label a screenshot 390 px without measuring; new previews",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "scientist-d"
     },
     {
@@ -106,7 +106,7 @@
      "step": "P14 hourly control, background work and effective closure: reliable process/runtime observation (identified PID, not mtime alone, not process name); states active / legitimate wait / finished to collect / Orchestrator really stopped / dead process / unknown; resume request must not start a second execution or a second integrator; do not mark COMPLETE while a required confirmation (the push) is missing; trust: never edit the global trust config, keep one verified instruction for the dead-session case; proofs: long silent job active, waiting for tests, finished work to collect, truly idle resumable session, explicit pause, completed mandate, duplicate request, unreadable state; restart proof distinct from a proof during active work; one logical control; latest real radar run consumed and a small scouting on gaps (identity, quantitative data, perturbations, supplements, scientific representation); ToolUniverse only for a concrete gap; TxGNN/MATRIX only on changed conditions",
      "status": "IN_PROGRESS",
      "owner": "orchestrator",
-     "evidence": "mandate_watch jobs/push-confirmation/idempotency implemented d20635ec with 16 tests and live proofs of 10 states (governance/design_records/mandate_watch_live_proofs_20261029.md); radar + scouting pending"
+     "evidence": "implementation + live proofs of 10 states landed (d20635ec); radar consumed: latest real run 2026-10-28T07:21Z NO_USEFUL_CHANGE (next cron 05:20 UTC 2026-10-29 to be checked), Radar iteration 5 table landed; remaining: real battery run as a tagged job (long silent job active proof) and an idle restart proof, cron/trigger coherence at close"
     }
    ]
   },
