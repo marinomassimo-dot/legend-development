@@ -458,7 +458,7 @@ class RealFiles(unittest.TestCase):
     def test_real_outcomes_of_the_audit_corrections(self):
         per = self.base["summary"]["needs"]["per_need"]
         self.assertEqual(per["NEED-INHIBITORY-HYPOFUNCTION"]["headline_records_intervention_targets"], 11)
-        self.assertEqual(per["NEED-GSK3B-DEREPRESSION"]["headline_records_intervention_targets"], 51)
+        self.assertEqual(per["NEED-GSK3B-DEREPRESSION"]["headline_records_intervention_targets"], 50)   # 51 before relatlimab (anti-LAG3) was removed as a GtoPdb collision
         cells = {(c["row_id"], c["need"]): c for c in self.base["matrix"]["cells"]}
         a51 = cells[("INT:D01_a51", "NEED-MYC-PROGENITOR-PROLIFERATION")]
         self.assertEqual(a51["L3_observed_effect"]["state"], "observed_depth_unknown")
@@ -475,7 +475,8 @@ class RealFiles(unittest.TestCase):
         art = rs.load_artefacts()
         need_syms = {t["symbol"].upper() for n in json.loads((REAL / "needs" / "needs.json").read_text())["needs"] for t in n["targets"]}
         overlap = [a for a in art if a["symbol"].upper() in need_syms]
-        reviewed = {"ABAT": "require_second_source", "PDK1": "alias_risk:PDPK1"}      # the only reviewed overlaps
+        reviewed = {g: "require_second_source" for g in ("ABAT", "GRIN1", "GRIA1", "GRIA2", "GRIA4", "GSK3B", "ATF4", "CTNNB1", "EIF4EBP1", "EIF2S1")}
+        reviewed["PDK1"] = "alias_risk:PDPK1"      # the only reviewed overlaps
         for a in overlap:
             self.assertEqual(a["rule"], reviewed.get(a["symbol"].upper()), f"unreviewed or blanket artefact rule on need target {a['symbol']}")
         self.assertEqual({a["symbol"].upper() for a in overlap}, set(reviewed), "a new artefact/need-target overlap needs a reviewed decision")
