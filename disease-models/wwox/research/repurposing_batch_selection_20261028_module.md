@@ -71,7 +71,7 @@ A curated card carries target, endpoint, direction, context, source, depth, loca
 
 ## Catalogue-derived leads (from coverage/ and lead_dispositions.json; not from the mechanism map)
 
-A catalogue link is a source statement, not a recommendation; the levels are never summed. First table: coverage pairs whose compound has a curated card (a card may restrict the needs it is listed for via `leads_needs`). Second: reasoned endings of searches, including abstentions and opposite mechanisms, each with what would reopen it and the next discriminating experiment. Not medical advice.
+A catalogue target listing (a stated action, or none) is a source statement, not a recommendation; the levels are never summed. First table: coverage pairs whose compound has a curated card (a card may restrict the needs it is listed for via `leads_needs`). Second: reasoned endings of searches, including abstentions and opposite mechanisms, each with what would reopen it and the next discriminating experiment. Not medical advice.
 
 | Card | Compound | Need | Disposition | L1/L2/L3/L4 | Next act | Who |
 |---|---|---|---|---|---|---|

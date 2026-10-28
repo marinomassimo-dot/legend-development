@@ -690,6 +690,7 @@ def build_payload(dr: Path = DEFAULT_DR, source: str = "full") -> dict:
         "records": u["catalogue_records"], "families": u["families"], "chembl_families": u["chembl_families"],
         "source_only_families": u["source_only_families_unresolved_identity"],
         "records_with_target_data": cc["records_with_any_target_row"],
+        "records_with_action": cc["records_with_stated_action_on_a_need_target"], "families_with_action": cc["families_with_stated_action_on_a_need_target"],
         "records_with_link": cc["records_with_documented_link_to_a_need"], "families_with_link": cc["families_with_documented_link_to_a_need"],
         "pct_records_with_link": cc["pct_records_with_link"], "pct_link_of_target_rows": cc["pct_records_with_target_row_that_link"],
         "priority_pairs": pr["records"], "priority_rows": len(prio_rows), "pairs_not_prioritised": sum(pr["pairs_not_prioritised"].values()),
@@ -811,14 +812,18 @@ def render_static(P: dict) -> dict[str, str]:
          f'{E(f["unit_family_rule"])}. {fmt(f["chembl_families"])} ChEMBL families and {fmt(f["source_only_families"])} source-only families whose identity is unresolved. A family is not a distinct drug.', 100),
         ("records_with_target_data", "3", "Records with target data", num("funnel.records_with_target_data", f["records_with_target_data"]), "records",
          f'{pct(f["records_with_target_data"], rec)}% of {fmt(rec)} records carry any target row (ChEMBL mechanism or DGIdb).', pct(f["records_with_target_data"], rec)),
-        ("records_with_link", "4", "Records with a headline link to an intervention target of a need", num("funnel.records_with_link", f["records_with_link"]), "records",
+        ("records_with_action", "4", "Records with a STATED ACTION on an intervention target of a need", num("funnel.records_with_action", f["records_with_action"]), "records",
+         f'Headline, first: the source states what the compound does to the target (inhibitor, agonist, ...). In families: {num("funnel.families_with_action", f["families_with_action"])} of {fmt(fam)}. '
+         f'Still a source statement about a target: not evidence of effect in WWOX and not rescue.', pct(f["records_with_action"], rec)),
+        ("records_with_link", "5", "Records with a TARGET LISTED (intervention target of a need; action stated or not)", num("funnel.records_with_link", f["records_with_link"]), "records",
          f'{f["pct_records_with_link"]["percent"]}% of {fmt(f["pct_records_with_link"]["denominator"])} records; {f["pct_link_of_target_rows"]["percent"]}% of the {fmt(f["pct_link_of_target_rows"]["denominator"])} records with target data. '
-         f'In families: {num("funnel.families_with_link", f["families_with_link"])} of {fmt(fam)}. Headline = intervention targets only (pathway members, effector constraints and readout markers are not headline; see the split below). A link is a source statement, not modulation and not rescue.', pct(f["records_with_link"], rec)),
-        ("priority_pairs", "5", "Priorities", num("funnel.priority_pairs", f["priority_pairs"]), "(family, need) pairs",
+         f'In families: {num("funnel.families_with_link", f["families_with_link"])} of {fmt(fam)}. {fmt(f["records_with_link"] - f["records_with_action"])} of these records state no action (a listing, a bioactivity compilation or an association): they are listed, not documented interactions. '
+         f'Intervention targets only (pathway members, effector constraints and readout markers are not counted; see the split below).', pct(f["records_with_link"], rec)),
+        ("priority_pairs", "6", "Priorities", num("funnel.priority_pairs", f["priority_pairs"]), "(family, need) pairs",
          f'On {num("funnel.priority_rows", f["priority_rows"])} distinct families or interventions; a disposition, not a ranking. A further {num("funnel.pairs_not_prioritised", f["pairs_not_prioritised"])} pairs stay in the matrix only. Out of {fmt(f["cells"])} non-empty pairs.', pct(f["priority_pairs"], f["cells"])),
-        ("card_rows", "6", "Card-attached", num("funnel.card_rows", f["card_rows"]), "families or interventions with a card",
+        ("card_rows", "7", "Card-attached", num("funnel.card_rows", f["card_rows"]), "families or interventions with a card",
          f'{", ".join(f"{fmt(v)} {E(k.replace("_", " "))}" for k, v in f["card_rows_by_kind"].items())}. {num("funnel.card_priority_pairs", f["card_priority_pairs"])} priority pairs on {num("funnel.card_priority_rows", f["card_priority_rows"])} of them.', pct(f["card_rows"], f["rows_in_matrix"])),
-        ("evaluated_records", "7", "Evaluated against WWOX (own definition)", num("funnel.evaluated_records", f["evaluated_records"]), "records",
+        ("evaluated_records", "8", "Evaluated against WWOX (own definition)", num("funnel.evaluated_records", f["evaluated_records"]), "records",
          f'Definition: {E(f["evaluated_meaning"])}. This is NOT the number examined by target match ({num("funnel.examined", f["examined"])} records, which is step 1) and NOT a count of tested drugs.', pct(f["evaluated_records"], rec)),
     ]
     fun = ['<ol class="funnel">']
@@ -829,7 +834,8 @@ def render_static(P: dict) -> dict[str, str]:
                f'{num("funnel.name_twin_families", f["name_twin_families"])} touched families have a name twin in another family (not merged; {num("funnel.families_if_twins_collapsed", f["families_if_twins_collapsed"])} families would touch a need if twins were collapsed: sensitivity only). '
                f'{num("funnel.readout_only_records", f["readout_only_records"])} records touch only readout markers or effector constraints and are not links.</p>')
     fun.append('<h3>Link counts by target kind (unions, each counted once)</h3><table class="tbl" data-table="link-split"><thead><tr><th>Counted</th><th>Records</th><th>Families</th><th>Share of records</th></tr></thead><tbody>'
-               f'<tr><td><b>Headline</b>: intervention targets and disease gene products</td><td>{num("funnel.union_headline_records", f["union_headline_records"])}</td><td>{num("funnel.union_headline_families", f["union_headline_families"])}</td><td>{pct(f["union_headline_records"], rec)}%</td></tr>'
+               f'<tr><td><b>Headline, first</b>: stated action on an intervention target or disease gene product</td><td>{num("funnel.records_with_action", f["records_with_action"])}</td><td>{num("funnel.families_with_action", f["families_with_action"])}</td><td>{pct(f["records_with_action"], rec)}%</td></tr>'
+               f'<tr><td><b>Target listed</b> (headline definition: intervention targets and disease gene products, action stated or not)</td><td>{num("funnel.union_headline_records", f["union_headline_records"])}</td><td>{num("funnel.union_headline_families", f["union_headline_families"])}</td><td>{pct(f["union_headline_records"], rec)}%</td></tr>'
                + (f'<tr><td>Headline plus pathway members (not headline; shown apart)</td><td>{num("funnel.union_pm_records", f["union_pm_records"])}</td><td>{num("funnel.union_pm_families", f["union_pm_families"])}</td><td>{pct(f["union_pm_records"], rec)}%</td></tr>' if f.get("union_pm_records") is not None else "")
                + f'<tr><td>Kept out of links: touch only effector constraints (e.g. MAPT) or readout markers</td><td>{num("funnel.effector_readout_only_records", f["effector_readout_only_records"])}</td><td></td><td>{pct(f["effector_readout_only_records"], rec)}%</td></tr>'
                '</tbody></table>' + (f'<p class="mut">{E(f["headline_definition"])}</p>' if f.get("headline_definition") else ""))
@@ -895,7 +901,7 @@ def render_static(P: dict) -> dict[str, str]:
 
     # leads
     ld = [f'<p class="mut">{E(str(P.get("leads_note") or ""))}</p>' if P.get("leads_note") else ""]
-    ld.append('<p>A catalogue link is a source statement, not a recommendation. Reasoned endings of searches, including abstentions and opposite mechanisms, each with what would reopen it. Same content as the section "Catalogue-derived leads" of <a href="../../repurposing_batch_selection_20261028_module.md">the handoff</a> (<code>../../repurposing_batch_selection_20261028_module.md</code>). Sources: <code>coverage/lead_dispositions.json</code>.</p>')
+    ld.append('<p>A catalogue target listing (a stated action, or none) is a source statement, not a recommendation. Reasoned endings of searches, including abstentions and opposite mechanisms, each with what would reopen it. Same content as the section "Catalogue-derived leads" of <a href="../../repurposing_batch_selection_20261028_module.md">the handoff</a> (<code>../../repurposing_batch_selection_20261028_module.md</code>). Sources: <code>coverage/lead_dispositions.json</code>.</p>')
     ld.append(f'<h3>Lead dispositions ({num("leads.n", len(P["leads"]))})</h3>')
     for d in P["leads"]:
         card = f'<a href="../{E(d["card"])}">{E(d["card"])}</a>' if d.get("card") else "no card"
@@ -1193,7 +1199,9 @@ def render_overview(P: dict) -> str:
     t2 = "".join([
         tile("funnel.records", f["records"], "catalogue records", "source-level substance records screened (salts and duplicates count once each)"),
         tile("funnel.families", f["families"], "catalogue families", "groupings of records; a family is not a distinct drug and not a candidate"),
-        tile("funnel.families_with_link", f["families_with_link"], "families with a documented link", "a link is a source statement about a target, not modulation and not rescue"),
+        tile("funnel.records_with_action", f["records_with_action"], "records with a stated action on a need target", "headline: the source states an action; still a source statement, not evidence of effect or rescue"),
+        tile("funnel.records_with_link", f["records_with_link"], "records with a target listed", "the larger count: includes records whose source states no action (listings, compilations, associations)"),
+        tile("funnel.families_with_link", f["families_with_link"], "families with a target listed", "a listing is a source statement about a target, not modulation and not rescue"),
         tile("funnel.evaluated_records", f["evaluated_records"], "records evaluated against WWOX", "records with any observation against a WWOX need; not a count of tested drugs"),
     ])
     gtxt = {"deep_recovery": ("deep", "Broad, durable recovery"), "partial_benefit": ("partial", "Useful partial benefit")}

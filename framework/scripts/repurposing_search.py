@@ -165,23 +165,28 @@ def exclusion_class(excl: str | None) -> str | None:
     return "source_artefact"
 
 
-def evidence_scope(src: str, t: dict) -> tuple[str, str]:
-    """(target_scope, subunit_selectivity).  What the SOURCE row is about, as the source identifies it:
+SELECTIVE_STATEMENTS = {"selective", "family selective"}
+
+
+def evidence_scope(src: str, t: dict) -> tuple[str, str, str | None]:
+    """(target_scope, subunit_selectivity, source_stated_selectivity).  What the SOURCE row is about, as the source identifies it:
     a single protein with no siblings, a single protein listed among siblings of the same family for the same ligand (class-level
-    evidence), or a complex / group / family.  Only a single protein with no siblings can carry subunit-level evidence; a complex-level
-    or among-siblings statement is NEVER read as selectivity for one subunit."""
+    evidence), or a complex / group / family.  The catalogue never infers subunit selectivity: `source_stated_selectivity` carries the
+    source's own selectivity text verbatim (GtoPdb 'Selective', 'Non-selective', 'Not Determined', ...; None when the source gives none,
+    as ChEMBL does), and `subunit_selectivity` is `source_states_selective` only for a single protein with no same-family sibling
+    whose source text says Selective / Family selective; every other case, including 'Not Determined' and a lone target listing, is
+    `not_established`.  A complex-level or among-siblings statement is NEVER read as selectivity for one subunit."""
+    stated = "; ".join(t.get("selectivity_stated") or []) or None
     if src.startswith("ChEMBL"):
-        tt = t.get("target_type")
-        if tt in (None, "SINGLE PROTEIN"):
-            return "single_protein", "stated_for_this_target"
-        return "complex_or_group", "not_established"
+        return ("single_protein" if t.get("target_type") in (None, "SINGLE PROTEIN") else "complex_or_group"), "not_established", None
     if t.get("target_level") == "complex":
-        return "complex_or_group", "not_established"
+        return "complex_or_group", "not_established", stated
     if t.get("target_level") == "single_protein":
         if t.get("same_family_targets_of_this_ligand", 0) >= 1:
-            return "single_protein_among_siblings", "not_established"
-        return "single_protein", "stated_for_this_target"
-    return "unspecified", "not_established"
+            return "single_protein_among_siblings", "not_established", stated
+        carried = bool(stated) and {x.strip().lower() for x in stated.split(";")} <= SELECTIVE_STATEMENTS
+        return "single_protein", ("source_states_selective" if carried else "not_established"), stated
+    return "unspecified", "not_established", stated
 
 
 def load_roles(path: Path = DEFAULT_ROLES) -> dict[tuple[str, str], dict]:
@@ -306,7 +311,7 @@ def associations_for_need(need: dict, idx: Index, roles: dict) -> dict:
                 excl = excl or "placeholder: DGIdb drug_name literally NULL/none, not a compound"
             if excl:
                 label, why = "not_evaluable", excl
-            scope, subsel = evidence_scope(src, t)
+            scope, subsel, src_sel = evidence_scope(src, t)
             kind = relation_kind(src, t)
             elsewhere = src.startswith("DGIdb") and kind not in CURATED_KINDS and ad == "unresolved" and curated_elsewhere(e, t, {tgt["symbol"].upper()})
             if label in ("consistent", "opposed") and subsel == "not_established" and scope != "unspecified":
@@ -314,6 +319,8 @@ def associations_for_need(need: dict, idx: Index, roles: dict) -> dict:
             limits = []
             if src.startswith("ChEMBL") and t.get("target_type") not in (None, "SINGLE PROTEIN"):
                 limits.append(f"ChEMBL target is a {t['target_type'].lower()}: the link to this gene is not subunit-specific")
+            if src_sel:
+                limits.append(f"source-stated selectivity (GtoPdb, carried as text, not promoted): {src_sel}")
             if t.get("same_family_targets_of_this_ligand", 0) >= 1 and src.startswith("DGIdb"):
                 limits.append(f"GtoPdb lists this ligand on {t['same_family_targets_of_this_ligand'] + 1} targets of the same family: class-level evidence, not subunit selectivity")
             if (t.get("identity") or {}).get("state") == "corrected":
@@ -342,7 +349,7 @@ def associations_for_need(need: dict, idx: Index, roles: dict) -> dict:
                 "list_label": "exploration list: the need's direction is unresolved; this is not a list of favourable treatments" if nd in ("uncertain", "modulate") else "direction-evaluable need",
                 "reference_ids": t.get("reference_ids", []), "mechanism_of_action": t.get("mechanism_of_action"),
                 "excluded_from_counts": excl,
-                "target_scope": scope, "subunit_selectivity": subsel, "relation_kind": kind, "action_stated": ad != "unresolved",
+                "target_scope": scope, "subunit_selectivity": subsel, "source_stated_selectivity": src_sel, "relation_kind": kind, "action_stated": ad != "unresolved",
                 "curated_mechanism_elsewhere": elsewhere,
                 "identity_state": ("source_ids_checked_" + t["identity"]["state"]) if (t.get("identity") or {}).get("method") not in (None, "none") else "as_served_by_source",
                 "iuphar_target_id": t.get("iuphar_target_id"), "iuphar_ligand_id": t.get("iuphar_ligand_id"),

@@ -484,7 +484,7 @@ def probe_names() -> list[str]:
         for r in read_gz_jsonl(xp):
             if not r.get("deleted") and r.get("name"):
                 names.add(r["name"])
-    return sorted(names, key=str.lower)
+    return sorted(names, key=lambda x: (x.lower(), x))
 
 
 # ----------------------------------------------------------------------------- build
@@ -632,19 +632,34 @@ def identity_gtopdb(gt: dict | None, ir: dict) -> list[dict]:
 
 
 PSEUDO_RE = re.compile(r"^(?P<root>.+?)(P\d*|-AS\d+|-IT\d+|-OT\d+)$")
+# loci that are not protein-coding genes a drug could act on: antisense / lncRNA / intronic-overlapping, and endogenous-retrovirus loci
+NONCODING_RE = re.compile(r"-AS\d+$|^LINC\d+|-IT\d+$|-OT\d+$")
+RETROELEMENT_RE = re.compile(r"^(HERV|ERV)[A-Z0-9]*-\d+$|^HERV")
+# a UniProt accession (optionally with the 'UNIPROT:' prefix) names a protein, not a gene symbol
+UNIPROT_ACC_RE = re.compile(r"^(?:UNIPROT:)?(?:[OPQ][0-9][A-Z0-9]{3}[0-9]|[A-NR-Z][0-9](?:[A-Z][A-Z0-9]{2}[0-9]){1,2})$")
 
 
 def claim_symbol_anomaly(ir: dict) -> str | None:
-    """A heuristic FLAG (not proof): a symbol claim that DGIdb resolved to a pseudogene or antisense/lncRNA locus built on that
-    symbol (MCL1 -> ADAMTSL4-AS1, HSP90AA2 -> HSP90AA2P): drugs act on proteins, so the resolved gene is not trusted."""
+    """A heuristic FLAG (not proof, never an identity statement): a claim that is not the served gene's own symbol but DGIdb
+    resolved to a pseudogene, an antisense/lncRNA locus or an endogenous-retrovirus locus.  Drugs act on proteins, so the resolved
+    gene is not trusted.  Covers symbol claims (MCL1 -> ADAMTSL4-AS1, HSP90AA2 -> HSP90AA2P), claims that are a UniProt accession
+    (UNIPROT:Q07820 -> ADAMTSL4-AS1, UNIPROT:Q9Y233 -> LINC00473) and claims that are a protein/target name rather than a gene
+    symbol (ChEMBL POL/ENV/PROTEASE -> ERVW-4/ERVK-20/ERVK-10).  A claim that is itself retroelement-named is left alone."""
     claim, gene = ir["gene_claim_name"].upper(), ir["gene_name"].upper()
-    if ir["interaction_source_db_name"] == "GuideToPharmacology" or ":" in claim or claim == gene:
+    if ir["interaction_source_db_name"] == "GuideToPharmacology" or claim == gene:
         return None
+    if ":" in claim and not UNIPROT_ACC_RE.match(claim):
+        return None
+    bare = claim.split(":", 1)[1] if claim.startswith("UNIPROT:") else claim
     m = PSEUDO_RE.match(gene)
-    if m and m.group("root") == claim:
+    if m and m.group("root") == bare:
         return f"symbol claim {ir['gene_claim_name']} resolved to {ir['gene_name']}, a pseudogene/antisense locus built on that symbol"
-    if re.search(r"-AS\d+$|^LINC\d+|-IT\d+$|-OT\d+$", gene) and not re.search(r"-AS\d+$|^LINC\d+|-IT\d+$|-OT\d+$", claim):
-        return f"symbol claim {ir['gene_claim_name']} resolved to {ir['gene_name']}, a non-coding/pseudogene locus"
+    if NONCODING_RE.search(gene) and not NONCODING_RE.search(bare):
+        what = "a UniProt accession" if UNIPROT_ACC_RE.match(claim) else "a symbol claim"
+        return f"{what} {ir['gene_claim_name']} resolved to {ir['gene_name']}, a non-coding/pseudogene locus"
+    if RETROELEMENT_RE.search(gene) and not RETROELEMENT_RE.search(bare):
+        what = "a UniProt accession" if UNIPROT_ACC_RE.match(claim) else "claim"
+        return f"{what} {ir['gene_claim_name']} resolved to {ir['gene_name']}, an endogenous-retrovirus locus; the claim is not retrovirus-named (a viral protein name is not a human gene symbol)"
     return None
 
 
@@ -679,7 +694,7 @@ def build_catalog(cache: Path | None = None) -> tuple[list[dict], dict]:
             v = (s.get("molecule_synonym") or "").strip()
             if v and v.lower() not in syn and v.lower() != (e["name"] or "").lower():
                 syn[v.lower()] = v
-        e["synonyms"] = sorted(syn.values(), key=str.lower)[:40]
+        e["synonyms"] = sorted(syn.values(), key=lambda x: (x.lower(), x))[:40]
         e["n_synonyms_total"] = len(syn)
         st = r.get("molecule_structures") or {}
         h = r.get("molecule_hierarchy") or {}
@@ -801,7 +816,7 @@ def build_catalog(cache: Path | None = None) -> tuple[list[dict], dict]:
                 only_groups += 1
                 cid = "CAT:DGIDB:" + hashlib.sha1(gname.encode()).hexdigest()[:12]
                 e = new_entry(cid, "dgidb_only", gname.title(), "DGIdb drug_name")
-                e["synonyms"] = sorted({r["drug_claim_name"] for r in g if r["drug_claim_name"].lower() != gname.lower()}, key=str.lower)[:40]
+                e["synonyms"] = sorted({r["drug_claim_name"] for r in g if r["drug_claim_name"].lower() != gname.lower()}, key=lambda x: (x.lower(), x))[:40]
                 e["n_synonyms_total"] = len({r["drug_claim_name"] for r in g})
                 e["ids"] = {"dgidb_drug_name": gname, "concept_ids": sorted({r["concept_id"] for r in g if r["concept_id"] != "NULL"})[:20],
                             "unii": [], "drugbank": [], "chebi": [], "chembl": None, "inchikey": None,
@@ -884,7 +899,7 @@ def build_catalog(cache: Path | None = None) -> tuple[list[dict], dict]:
                 n_new += 1
                 cid = "CAT:" + r["id"]
                 e = new_entry(cid, "matrix_only", r.get("name"), "MATRIX list name")
-                e["synonyms"] = sorted(set(r.get("synonyms") or []), key=str.lower)[:40]
+                e["synonyms"] = sorted(set(r.get("synonyms") or []), key=lambda x: (x.lower(), x))[:40]
                 e["n_synonyms_total"] = len(set(r.get("synonyms") or []))
                 e["ids"] = {"matrix_id": [r["id"]], "drugbank": [r["drugbank_id"]] if r.get("drugbank_id") else [], "chebi": [tid.split(":", 1)[1]] if tid.startswith("CHEBI:") else [],
                             "unii": [], "chembl": None, "inchikey": None, "translator_id": tid or None}

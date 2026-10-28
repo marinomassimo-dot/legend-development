@@ -552,6 +552,22 @@ class TargetIdentityRegressions(unittest.TestCase):
         self.assertEqual((a["target_scope"], a["subunit_selectivity"]), ("single_protein_among_siblings", "not_established"))
         self.assertIn("subunit selectivity not established", a["consistency_why"])
 
+    def test_lone_target_listing_with_not_determined_selectivity_is_not_a_selectivity_statement(self):
+        e = entry("CAT:DGIDB:s", "Deschloroketamine", origin="dgidb_only", targets=[self.gt("hgnc:4585", "GRIN2A", "inhibitor", "confirmed", selectivity_stated=["Not Determined"])])
+        a, = self.run_need([e])
+        self.assertEqual((a["target_scope"], a["subunit_selectivity"], a["source_stated_selectivity"]), ("single_protein", "not_established", "Not Determined"))
+        self.assertIn("subunit selectivity not established", a["consistency_why"])
+        self.assertNotEqual(a["subunit_selectivity"], "stated_for_this_target")
+
+    def test_source_selective_text_is_carried_not_promoted(self):
+        lone = self.run_need([entry("CAT:DGIDB:l", "Lone", origin="dgidb_only", targets=[self.gt("hgnc:4585", "GRIN2A", "inhibitor", "confirmed", selectivity_stated=["Selective"])])])[0]
+        self.assertEqual((lone["subunit_selectivity"], lone["source_stated_selectivity"]), ("source_states_selective", "Selective"))
+        sib = self.run_need([entry("CAT:DGIDB:m", "Among", origin="dgidb_only", targets=[self.gt("hgnc:4585", "GRIN2A", "inhibitor", "confirmed", sibs=3, selectivity_stated=["Selective"])])])[0]
+        self.assertEqual((sib["subunit_selectivity"], sib["source_stated_selectivity"]), ("not_established", "Selective"))   # text kept, catalogue does not infer
+        self.assertTrue(any("carried as text, not promoted" in x for x in sib["limits"]))
+        none = self.run_need([entry("CAT:CHEMBL8", "Chembline", targets=[chembl_t("GRIN2A", "ANTAGONIST")])])[0]
+        self.assertEqual((none["subunit_selectivity"], none["source_stated_selectivity"]), ("not_established", None))
+
     def test_complex_level_chembl_relation_does_not_become_subunit_selectivity(self):
         t = chembl_t("GRIN2A", "NEGATIVE ALLOSTERIC MODULATOR", ttype="PROTEIN COMPLEX GROUP")
         a, = self.run_need([entry("CAT:CHEMBL9", "Channelblockine", targets=[t])])
