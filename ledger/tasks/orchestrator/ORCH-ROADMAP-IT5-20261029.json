@@ -32,9 +32,9 @@
     },
     {
      "step": "P4 reconcile identities through GtoPdb ligands (GtoPdb ligand -> ChEMBL reference -> identity and chemical relations; parent/salt, stereoisomers, one-to-many, ids outside the selection, id-structure conflicts, withdrawn ids; no merge on name or connectivity when a pharmacological distinction would be lost); 510 candidates in closed_loop_it4_e1b_20261028/ligand_identity_merge_candidates.tsv are candidates not validated; independent verifier on normal and edge cases and totals; catalogue, families, access, targets, coverage, priorities, cards regenerated; count changes explained",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "plan",
-     "evidence": "landed fbb904e0 (reconcile_gtopdb_ligands: 485 merged, 14 related-not-merged, 4 rejected, 54 unresolved, 2473 out-of-selection; families 40,753->40,268; headline families 1,189->1,180; build --check MATCH); independent sampled verification running"
+     "evidence": "reconcile_gtopdb_ligands landed fbb904e0; independent verification: 485/485 merged agree, no false merge, defects low (README counts fixed, limits noted); build --check MATCH"
     },
     {
      "step": "P5 species, interaction type and quantitative pharmacology on a bounded informative set: a GABA/ABAT case for H02, a receptor/channel case for neuronal threads, a broad-recovery case from existing cards; species, preparation, single vs complex, binding vs functional, action type, measure, unit, numeric relation incl. inequalities, assay conditions, source; Ki/Kd/IC50/EC50/inactivation parameters never interchangeable; compact tables linked to candidates; at least one research decision re-examined (strengthened, weakened, or unresolved with reason)",
@@ -61,18 +61,19 @@
     },
     {
      "step": "P8 broad recovery beyond read-through: one thread chosen from qualified needs by evidence and gaps (missense residual-function recovery, folding/QC, splicing correction, residual function vs expression); lesion and function to recover, WWOX data, transfer limit from external precedents, catalogue and pharmacology, decisive primary sources, abundance/localisation/interactions/function separated, counter-evidence, discriminating next experiment, card or abstention supported by research actually done",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "scientist-b",
-     "evidence": "missense-protein-rescue cycle (A01 revised, Q230P fate experiment design, required-fold arithmetic) on branch task/it5-p8 48fa460c; blind audit running"
+     "evidence": "missense protein rescue cycle (card A01 revised, Q230P fate experiment design with a wild-type ruler, required-fold arithmetic, HDAC-vs-chaperone separation) blind-audited, 7 defects repaired, landed; receipt FTR-20261028-30266908-02 recorded (885 chain)"
     },
     {
      "step": "P9 partial benefit thread distinct from the VABAM re-examination: need->compounds and compound->WWOX profile, mechanism/context/counter-evidence, source of the result, transfer limit, next measure; drugs, supplements and diets on rationale (diet kept as an intervention with its endpoints); card feeding priorities and queue, or an abstention with research done, missing datum and reopening condition",
-     "status": "TODO",
-     "owner": "scientist-d"
+     "status": "IN_PROGRESS",
+     "owner": "scientist-d",
+     "evidence": "card I01 (PDK inhibition by DCA: premise, seizure, glycaemia) landed; blind audit found one HIGH (cirrhosis glucose sign) + 2 MEDIUM defects; repair in progress; receipt FTR-20261028-38106446-01 recorded"
     },
     {
      "step": "P10 supplements and access categories: incremental, resumable, rate-respecting DSLD advance prioritising compounds/families in cards; ingredient vs product, synonyms, forms and mixtures, name vs identifier link, country and date, source state, ambiguity; name-only stays name-only; no-match is not unavailability; an Italian/European public source if accessible without registration and within terms; measurable increase of pertinent coverage; filters and cards updated; no efficacy/safety implication",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "scientist-d"
     }
    ]
@@ -82,9 +83,9 @@
    "steps": [
     {
      "step": "P11 revise priority groups: group per specific need, favourable/null/mixed/unfavourable result, depth and quality, decisive premise, counter-evidence, information from the next step, known feasibility; never the best group seen in any need as the global group; keep counter-evidence clarification distinct from a favourable hypothesis; no probability, no new scoring framework; explainable rules applied to representative real cases, independently verified, consumed by the interface",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "scientist-d",
-     "evidence": "rules F/C/P positions on branch task/it5-p11 12affd39; verification running"
+     "evidence": "F/C/P position rules (per card and per need, no best-of-needs, counter-evidence clarification distinct from favourable hypothesis) landed; independent re-derivation 16/16; five defects fixed (tool compound, outside-WWOX counter-evidence tag, wild-type-only row, controlled WWOX readout naming, criteria split)"
     },
     {
      "step": "P12 redesign first screen and physician use in clear Italian orientation text (scientific citations keep original form): hierarchy, synthetic cards, funnel with explicit units, access categories, need-intervention matrix, mechanism-candidate relation, coverage and gaps; no dense network; sensible denominators; versions/hashes/regeneration in technical drill-down; short profiles (why, WWOX result, external precedent/prediction, counter-evidence, missing proof, next step); fill source titles with cheap cached retrieval (no e-mail to APIs); verify REAL viewports 360 and 390 px with emulation, horizontal overflow, filters, navigation, comparison, print, standalone export; do not label a screenshot 390 px without measuring; new previews",
