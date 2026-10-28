@@ -65,6 +65,12 @@ class Defects(unittest.TestCase):
     def test_scope_vocabulary(self):
         self.assertTrue(any("evidence_scope" in p for p in self.broken(lambda d: need(d, "NEED-ISR-ATTENUATION")["observed"][0].update(evidence_scope="PROVEN"))))
 
+    def test_need_scope_must_be_backed_by_an_observation(self):
+        def f(d):
+            n = need(d, "NEED-ISR-ATTENUATION")
+            n["evidence_scope"] = n["evidence_scope"] + ["UNVERIFIED_HYPOTHESIS"]
+        self.assertTrue(any("not carried by any observation" in p for p in self.broken(f)))
+
     def test_duplicate_id_and_missing_field(self):
         self.assertTrue(any("duplicate" in p for p in self.broken(lambda d: d["needs"][1].update(id=d["needs"][0]["id"]))))
         self.assertTrue(any("missing field" in p for p in self.broken(lambda d: need(d, "NEED-ISR-ATTENUATION").pop("targets"))))

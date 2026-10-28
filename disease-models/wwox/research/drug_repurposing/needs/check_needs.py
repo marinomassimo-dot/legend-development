@@ -4,7 +4,8 @@
 It protects a few invariants and nothing else:
   * ids are unique and the required fields are present;
   * track and goal are two separate fields with their allowed values;
-  * evidence scopes (per need and per observation) are in the vocabulary;
+  * evidence scopes (per need and per observation) are in the vocabulary, and a need-level scope is backed by
+    at least one observation carrying it;
   * pointers resolve: a manifest locator names an existing manifest, an entry index in range and an
     anchor text that occurs in that entry; a document locator exists; registry ids, hypothesis ids and
     card files that are cited exist.
@@ -69,6 +70,10 @@ def check(doc: dict, root: Path = ROOT) -> tuple[list[str], dict]:
                 problems.append(f"{nid}: {fld} must be an object whose value is one of {sorted(allowed)}")
         if not n.get("evidence_scope") or not set(n["evidence_scope"]) <= SCOPES:
             problems.append(f"{nid}: evidence_scope outside the vocabulary")
+        else:
+            unbacked = set(n["evidence_scope"]) - {o.get("evidence_scope") for o in n.get("observed", [])}
+            if unbacked:
+                problems.append(f"{nid}: need-level scope not carried by any observation: {sorted(unbacked)}")
         src = n.get("sources", {})
         for c in src.get("cards", []):
             m = re.match(r"^(\S+)(?: \((cards_early)\))?$", c)
