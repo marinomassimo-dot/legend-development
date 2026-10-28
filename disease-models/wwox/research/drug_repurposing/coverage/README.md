@@ -116,3 +116,7 @@ Catalogue links are source statements (no potency). DGIdb is a stale export and 
 assertion they do not list is unresolved or uncounted. Cards added after the pertinence table was written (for example the
 apinocaltamide card) have unlisted assertions until someone judges them. Seizure-need cells are symptom-level inferences.
 Name-prefix siblings (lithium salts) are a hint only.
+
+## Known residual limits (final independent check, 2026-10-28)
+
+Recorded rather than fixed, because none changes a headline figure: (1) the artefact detector reports its drops globally, not per need — a future need on an early-alphabet symbol (ADORA, ADRA, AKT1, AR) could lose rows unnoticed; (2) cells whose only comparison is against wild type still carry the name `observed_wwox_system` (the signs and flags disclose it, the name does not); (3) the explicit ABAT/ABCA list in `source_artefacts.tsv` is not yet guarded by a test that fails when a need symbol enters the early alphabetical block without a reviewer decision. See `locator_audits/2026-10-28_it3_coverage_final_check.md`.
