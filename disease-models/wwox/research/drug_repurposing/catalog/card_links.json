@@ -1,0 +1,759 @@
+{
+ "cards": {
+  "A01_pba_class": {
+   "card_files": [
+    "cards/A01_pba_class.card.json",
+    "cards/A01_pba_class.packet.json"
+   ],
+   "compound_ids_outside_catalogue": [],
+   "links": [
+    {
+     "catalogue_id": "CAT:CHEMBL1746",
+     "chembl_id": "CHEMBL1746",
+     "role": "named_member",
+     "rule": "curator_declared_identifier (card_identity_declarations.tsv); curator (scientist-a, 2026-10-27) read the compound name in the card packet and took the ChEMBL id whose pref_name equals it exactly in catalog.jsonl.gz [SODIUM PHENYLBUTYRATE (the card names 'phenylbutyrate'; the glycerol ester CHEMBL2105745 is not asserted)]; ChEMBL id of the record, not a name-similarity score"
+    }
+   ],
+   "non_compound_ids_ignored": []
+  },
+  "A02_proteasome_inhibitor_class": {
+   "card_files": [
+    "cards/A02_proteasome_inhibitor_class.card.json",
+    "cards/A02_proteasome_inhibitor_class.packet.json"
+   ],
+   "compound_ids_outside_catalogue": [],
+   "links": [],
+   "non_compound_ids_ignored": [],
+   "unmatched_reason": "no compound identifier in the card text and no curator declaration; name similarity is not used"
+  },
+  "A03_client_binding_chaperone": {
+   "card_files": [
+    "cards/A03_client_binding_chaperone.card.json",
+    "cards/A03_client_binding_chaperone.packet.json"
+   ],
+   "compound_ids_outside_catalogue": [],
+   "links": [],
+   "non_compound_ids_ignored": [],
+   "unmatched_reason": "no compound identifier in the card text and no curator declaration; name similarity is not used"
+  },
+  "A04_er_proteostasis_regulators": {
+   "card_files": [
+    "cards/A04_er_proteostasis_regulators.card.json",
+    "cards/A04_er_proteostasis_regulators.packet.json"
+   ],
+   "compound_ids_outside_catalogue": [],
+   "links": [],
+   "non_compound_ids_ignored": [],
+   "unmatched_reason": "no compound identifier in the card text and no curator declaration; name similarity is not used"
+  },
+  "A05_hsp70_axis": {
+   "card_files": [
+    "cards/A05_hsp70_axis.card.json",
+    "cards/A05_hsp70_axis.packet.json"
+   ],
+   "compound_ids_outside_catalogue": [],
+   "links": [],
+   "non_compound_ids_ignored": [],
+   "unmatched_reason": "no compound identifier in the card text and no curator declaration; name similarity is not used"
+  },
+  "B01_amlexanox": {
+   "card_files": [
+    "cards/B01_amlexanox.card.json",
+    "cards/B01_amlexanox.packet.json"
+   ],
+   "compound_ids_outside_catalogue": [],
+   "links": [
+    {
+     "catalogue_id": "CAT:CHEMBL1096",
+     "chembl_id": "CHEMBL1096",
+     "role": "identity",
+     "rule": "curator_declared_identifier (card_identity_declarations.tsv); curator (scientist-a, 2026-10-27) read the compound name in the card packet and took the ChEMBL id whose pref_name equals it exactly in catalog.jsonl.gz [AMLEXANOX]; ChEMBL id of the record, not a name-similarity score"
+    }
+   ],
+   "non_compound_ids_ignored": []
+  },
+  "B02_readthrough_class": {
+   "card_files": [
+    "cards/B02_readthrough_class.card.json",
+    "cards/B02_readthrough_class.packet.json"
+   ],
+   "compound_ids_outside_catalogue": [],
+   "links": [
+    {
+     "catalogue_id": "CAT:CHEMBL1096",
+     "chembl_id": "CHEMBL1096",
+     "role": "named_member",
+     "rule": "curator_declared_identifier (card_identity_declarations.tsv); curator (scientist-a, 2026-10-27) read the compound name in the card packet and took the ChEMBL id whose pref_name equals it exactly in catalog.jsonl.gz [AMLEXANOX]; ChEMBL id of the record, not a name-similarity score"
+    },
+    {
+     "catalogue_id": "CAT:CHEMBL256997",
+     "chembl_id": "CHEMBL256997",
+     "role": "named_member",
+     "rule": "curator_declared_identifier (card_identity_declarations.tsv); curator (scientist-a, 2026-10-27) read the compound name in the card packet and took the ChEMBL id whose pref_name equals it exactly in catalog.jsonl.gz [ATALUREN]; ChEMBL id of the record, not a name-similarity score"
+    }
+   ],
+   "non_compound_ids_ignored": []
+  },
+  "C01_aav9_wwox": {
+   "card_files": [
+    "cards/C01_aav9_wwox.card.json",
+    "cards/C01_aav9_wwox.packet.json"
+   ],
+   "compound_ids_outside_catalogue": [],
+   "links": [],
+   "non_compound_ids_ignored": [],
+   "unmatched_reason": "no compound identifier in the card text and no curator declaration; name similarity is not used"
+  },
+  "C02_splice_aso": {
+   "card_files": [
+    "cards/C02_splice_aso.card.json",
+    "cards/C02_splice_aso.packet.json"
+   ],
+   "compound_ids_outside_catalogue": [],
+   "links": [],
+   "non_compound_ids_ignored": [],
+   "unmatched_reason": "no compound identifier in the card text and no curator declaration; name similarity is not used"
+  },
+  "C03_crispra_boost": {
+   "card_files": [
+    "cards/C03_crispra_boost.card.json",
+    "cards/C03_crispra_boost.packet.json"
+   ],
+   "compound_ids_outside_catalogue": [],
+   "links": [],
+   "non_compound_ids_ignored": [],
+   "unmatched_reason": "no compound identifier in the card text and no curator declaration; name similarity is not used"
+  },
+  "C04_aav9_endpoint_families": {
+   "card_files": [
+    "cards/C04_aav9_endpoint_families.card.json",
+    "cards/C04_aav9_endpoint_families.packet.json"
+   ],
+   "compound_ids_outside_catalogue": [],
+   "links": [],
+   "non_compound_ids_ignored": [],
+   "unmatched_reason": "no compound identifier in the card text and no curator declaration; name similarity is not used"
+  },
+  "D01_a51": {
+   "card_files": [
+    "cards/D01_a51.card.json",
+    "cards/D01_a51.packet.json"
+   ],
+   "compound_ids_outside_catalogue": [],
+   "links": [],
+   "non_compound_ids_ignored": [],
+   "unmatched_reason": "no compound identifier in the card text and no curator declaration; name similarity is not used"
+  },
+  "D02_wnt_tankyrase": {
+   "card_files": [
+    "cards/D02_wnt_tankyrase.card.json",
+    "cards/D02_wnt_tankyrase.packet.json"
+   ],
+   "compound_ids_outside_catalogue": [],
+   "links": [],
+   "non_compound_ids_ignored": [],
+   "unmatched_reason": "no compound identifier in the card text and no curator declaration; name similarity is not used"
+  },
+  "E01_isr_modulators": {
+   "card_files": [
+    "cards/E01_isr_modulators.card.json",
+    "cards/E01_isr_modulators.packet.json"
+   ],
+   "compound_ids_outside_catalogue": [],
+   "links": [],
+   "non_compound_ids_ignored": [],
+   "unmatched_reason": "no compound identifier in the card text and no curator declaration; name similarity is not used"
+  },
+  "E02_ldh_inhibition": {
+   "card_files": [
+    "cards/E02_ldh_inhibition.card.json",
+    "cards/E02_ldh_inhibition.packet.json"
+   ],
+   "compound_ids_outside_catalogue": [
+    "CHEMBL3335794"
+   ],
+   "links": [
+    {
+     "catalogue_id": "CAT:CHEMBL1983350",
+     "chembl_id": "CHEMBL1983350",
+     "role": "named_member",
+     "rule": "curator_declared_identifier (card_identity_declarations.tsv); curator (scientist-a, 2026-10-27) read the compound name in the card packet and took the ChEMBL id whose pref_name equals it exactly in catalog.jsonl.gz [STIRIPENTOL]; ChEMBL id of the record, not a name-similarity score"
+    }
+   ],
+   "non_compound_ids_ignored": [
+    "CHEMBL4311969"
+   ]
+  },
+  "E03_pdk_inhibition_dca": {
+   "card_files": [
+    "cards/E03_pdk_inhibition_dca.card.json",
+    "cards/E03_pdk_inhibition_dca.packet.json"
+   ],
+   "compound_ids_outside_catalogue": [
+    "CHEMBL3392645"
+   ],
+   "links": [
+    {
+     "catalogue_id": "CAT:CHEMBL306823",
+     "rule": "chembl_id_mentioned_in_card_text; entity_type COMPOUND per ChEMBL id lookup; a mention, not an identity declaration"
+    }
+   ],
+   "non_compound_ids_ignored": []
+  },
+  "E04_ketogenic_lactate_axis": {
+   "card_files": [
+    "cards/E04_ketogenic_lactate_axis.card.json",
+    "cards/E04_ketogenic_lactate_axis.packet.json"
+   ],
+   "compound_ids_outside_catalogue": [],
+   "links": [],
+   "non_compound_ids_ignored": [],
+   "unmatched_reason": "no compound identifier in the card text and no curator declaration; name similarity is not used"
+  },
+  "EB-CBD-AX-01": {
+   "card_files": [
+    "cards_early/EB-CBD-AX-01.card.json",
+    "cards_early/EB-CBD-AX-01.packet.json"
+   ],
+   "compound_ids_outside_catalogue": [],
+   "links": [
+    {
+     "catalogue_id": "CAT:CHEMBL190461",
+     "chembl_id": "CHEMBL190461",
+     "role": "named_member",
+     "rule": "curator_declared_identifier (card_identity_declarations.tsv); curator (scientist-a, 2026-10-27) read the compound name in the card packet and took the ChEMBL id whose pref_name equals it exactly in catalog.jsonl.gz [CANNABIDIOL]; ChEMBL id of the record, not a name-similarity score"
+    }
+   ],
+   "non_compound_ids_ignored": []
+  },
+  "EB-DEV-AX-01": {
+   "card_files": [
+    "cards_early/EB-DEV-AX-01.card.json",
+    "cards_early/EB-DEV-AX-01.packet.json"
+   ],
+   "compound_ids_outside_catalogue": [],
+   "links": [],
+   "non_compound_ids_ignored": [],
+   "unmatched_reason": "no compound identifier in the card text and no curator declaration; name similarity is not used"
+  },
+  "EB-ETX-01": {
+   "card_files": [
+    "cards_early/EB-ETX-01.card.json",
+    "cards_early/EB-ETX-01.packet.json"
+   ],
+   "compound_ids_outside_catalogue": [],
+   "links": [
+    {
+     "catalogue_id": "CAT:CHEMBL696",
+     "chembl_id": "CHEMBL696",
+     "role": "identity",
+     "rule": "curator_declared_identifier (card_identity_declarations.tsv); curator (scientist-a, 2026-10-27) read the compound name in the card packet and took the ChEMBL id whose pref_name equals it exactly in catalog.jsonl.gz [ETHOSUXIMIDE]; ChEMBL id of the record, not a name-similarity score"
+    }
+   ],
+   "non_compound_ids_ignored": []
+  },
+  "EB-GROWTH-AX-01": {
+   "card_files": [
+    "cards_early/EB-GROWTH-AX-01.card.json",
+    "cards_early/EB-GROWTH-AX-01.packet.json"
+   ],
+   "compound_ids_outside_catalogue": [],
+   "links": [],
+   "non_compound_ids_ignored": [],
+   "unmatched_reason": "no compound identifier in the card text and no curator declaration; name similarity is not used"
+  },
+  "EB-HORM-AX-01": {
+   "card_files": [
+    "cards_early/EB-HORM-AX-01.card.json",
+    "cards_early/EB-HORM-AX-01.packet.json"
+   ],
+   "compound_ids_outside_catalogue": [],
+   "links": [],
+   "non_compound_ids_ignored": [],
+   "unmatched_reason": "no compound identifier in the card text and no curator declaration; name similarity is not used"
+  },
+  "EB-KD-01": {
+   "card_files": [
+    "cards_early/EB-KD-01.card.json",
+    "cards_early/EB-KD-01.packet.json"
+   ],
+   "compound_ids_outside_catalogue": [],
+   "links": [],
+   "non_compound_ids_ignored": [],
+   "unmatched_reason": "no compound identifier in the card text and no curator declaration; name similarity is not used"
+  },
+  "EB-MTOR-AX-01": {
+   "card_files": [
+    "cards_early/EB-MTOR-AX-01.card.json",
+    "cards_early/EB-MTOR-AX-01.packet.json"
+   ],
+   "compound_ids_outside_catalogue": [],
+   "links": [
+    {
+     "catalogue_id": "CAT:CHEMBL413",
+     "chembl_id": "CHEMBL413",
+     "role": "named_member",
+     "rule": "curator_declared_identifier (card_identity_declarations.tsv); curator (scientist-a, 2026-10-27) read the compound name in the card packet and took the ChEMBL id whose pref_name equals it exactly in catalog.jsonl.gz [SIROLIMUS]; ChEMBL id of the record, not a name-similarity score"
+    }
+   ],
+   "non_compound_ids_ignored": []
+  },
+  "EB-PDANCHOR-AX-01": {
+   "card_files": [
+    "cards_early/EB-PDANCHOR-AX-01.card.json",
+    "cards_early/EB-PDANCHOR-AX-01.packet.json"
+   ],
+   "compound_ids_outside_catalogue": [],
+   "links": [],
+   "non_compound_ids_ignored": [],
+   "unmatched_reason": "no compound identifier in the card text and no curator declaration; name similarity is not used"
+  },
+  "EB-VGB-01": {
+   "card_files": [
+    "cards_early/EB-VGB-01.card.json",
+    "cards_early/EB-VGB-01.packet.json"
+   ],
+   "compound_ids_outside_catalogue": [],
+   "links": [
+    {
+     "catalogue_id": "CAT:CHEMBL89598",
+     "chembl_id": "CHEMBL89598",
+     "role": "identity",
+     "rule": "curator_declared_identifier (card_identity_declarations.tsv); curator (scientist-a, 2026-10-27) read the compound name in the card packet and took the ChEMBL id whose pref_name equals it exactly in catalog.jsonl.gz [VIGABATRIN]; ChEMBL id of the record, not a name-similarity score"
+    }
+   ],
+   "non_compound_ids_ignored": []
+  },
+  "F01_glutamate_receptor_node": {
+   "card_files": [
+    "cards/F01_glutamate_receptor_node.card.json",
+    "cards/F01_glutamate_receptor_node.packet.json"
+   ],
+   "compound_ids_outside_catalogue": [],
+   "links": [
+    {
+     "catalogue_id": "CAT:CHEMBL1214124",
+     "rule": "chembl_id_mentioned_in_card_text; entity_type COMPOUND per ChEMBL id lookup; a mention, not an identity declaration"
+    },
+    {
+     "catalogue_id": "CAT:CHEMBL807",
+     "rule": "chembl_id_mentioned_in_card_text; entity_type COMPOUND per ChEMBL id lookup; a mention, not an identity declaration"
+    }
+   ],
+   "non_compound_ids_ignored": []
+  },
+  "F02_myelination_activity_sign": {
+   "card_files": [
+    "cards/F02_myelination_activity_sign.card.json",
+    "cards/F02_myelination_activity_sign.packet.json"
+   ],
+   "compound_ids_outside_catalogue": [],
+   "links": [],
+   "non_compound_ids_ignored": [],
+   "unmatched_reason": "no compound identifier in the card text and no curator declaration; name similarity is not used"
+  },
+  "F03_bumetanide_chloride_gradient": {
+   "card_files": [
+    "cards/F03_bumetanide_chloride_gradient.card.json",
+    "cards/F03_bumetanide_chloride_gradient.packet.json"
+   ],
+   "compound_ids_outside_catalogue": [],
+   "links": [
+    {
+     "catalogue_id": "CAT:CHEMBL1072",
+     "rule": "chembl_id_mentioned_in_card_text; entity_type COMPOUND per ChEMBL id lookup; a mention, not an identity declaration"
+    }
+   ],
+   "non_compound_ids_ignored": []
+  },
+  "G01_lithium_gsk3": {
+   "card_files": [
+    "cards/G01_lithium_gsk3.card.json",
+    "cards/G01_lithium_gsk3.packet.json"
+   ],
+   "compound_ids_outside_catalogue": [],
+   "links": [
+    {
+     "catalogue_id": "CAT:CHEMBL1201333",
+     "chembl_id": "CHEMBL1201333",
+     "role": "identity",
+     "rule": "curator_declared_identifier (card_identity_declarations.tsv); curator (scientist-a, 2026-10-27) read the compound name in the card packet and took the ChEMBL id whose pref_name equals it exactly in catalog.jsonl.gz [LITHIUM (element record; salts are separate entries CHEMBL1200826, CHEMBL2103738 and are not asserted)]; ChEMBL id of the record, not a name-similarity score"
+    }
+   ],
+   "non_compound_ids_ignored": []
+  },
+  "Q-N-01": {
+   "card_files": [
+    "join/cards.json"
+   ],
+   "compound_ids_outside_catalogue": [],
+   "links": [],
+   "non_compound_ids_ignored": [],
+   "unmatched_reason": "no compound identifier in the card text and no curator declaration; name similarity is not used"
+  },
+  "Q-N-02": {
+   "card_files": [
+    "join/cards.json"
+   ],
+   "compound_ids_outside_catalogue": [],
+   "links": [],
+   "non_compound_ids_ignored": [],
+   "unmatched_reason": "no compound identifier in the card text and no curator declaration; name similarity is not used"
+  },
+  "Q-N-03": {
+   "card_files": [
+    "join/cards.json"
+   ],
+   "compound_ids_outside_catalogue": [],
+   "links": [],
+   "non_compound_ids_ignored": [],
+   "unmatched_reason": "no compound identifier in the card text and no curator declaration; name similarity is not used"
+  },
+  "Q-N-04": {
+   "card_files": [
+    "join/cards.json"
+   ],
+   "compound_ids_outside_catalogue": [],
+   "links": [],
+   "non_compound_ids_ignored": [],
+   "unmatched_reason": "no compound identifier in the card text and no curator declaration; name similarity is not used"
+  },
+  "Q-N-05": {
+   "card_files": [
+    "join/cards.json"
+   ],
+   "compound_ids_outside_catalogue": [],
+   "links": [],
+   "non_compound_ids_ignored": [],
+   "unmatched_reason": "no compound identifier in the card text and no curator declaration; name similarity is not used"
+  },
+  "Q-N-06": {
+   "card_files": [
+    "join/cards.json"
+   ],
+   "compound_ids_outside_catalogue": [],
+   "links": [],
+   "non_compound_ids_ignored": [],
+   "unmatched_reason": "no compound identifier in the card text and no curator declaration; name similarity is not used"
+  },
+  "Q-N-07": {
+   "card_files": [
+    "join/cards.json"
+   ],
+   "compound_ids_outside_catalogue": [],
+   "links": [],
+   "non_compound_ids_ignored": [],
+   "unmatched_reason": "no compound identifier in the card text and no curator declaration; name similarity is not used"
+  },
+  "Q-N-08": {
+   "card_files": [
+    "join/cards.json"
+   ],
+   "compound_ids_outside_catalogue": [
+    "CHEMBL257158",
+    "CHEMBL3392645",
+    "CHEMBL445304"
+   ],
+   "links": [
+    {
+     "catalogue_id": "CAT:CHEMBL1650595",
+     "rule": "chembl_id_mentioned_in_card_text; entity_type COMPOUND per ChEMBL id lookup; a mention, not an identity declaration"
+    },
+    {
+     "catalogue_id": "CAT:CHEMBL306823",
+     "rule": "chembl_id_mentioned_in_card_text; entity_type COMPOUND per ChEMBL id lookup; a mention, not an identity declaration"
+    },
+    {
+     "catalogue_id": "CAT:CHEMBL574737",
+     "rule": "chembl_id_mentioned_in_card_text; entity_type COMPOUND per ChEMBL id lookup; a mention, not an identity declaration"
+    }
+   ],
+   "non_compound_ids_ignored": [
+    "CHEMBL2096665",
+    "CHEMBL2534",
+    "CHEMBL3861",
+    "CHEMBL3893",
+    "CHEMBL4141",
+    "CHEMBL4766"
+   ]
+  },
+  "Q-N-09": {
+   "card_files": [
+    "join/cards.json"
+   ],
+   "compound_ids_outside_catalogue": [],
+   "links": [],
+   "non_compound_ids_ignored": [],
+   "unmatched_reason": "no compound identifier in the card text and no curator declaration; name similarity is not used"
+  },
+  "Q-N-10": {
+   "card_files": [
+    "join/cards.json"
+   ],
+   "compound_ids_outside_catalogue": [],
+   "links": [],
+   "non_compound_ids_ignored": [],
+   "unmatched_reason": "no compound identifier in the card text and no curator declaration; name similarity is not used"
+  },
+  "Q-N-11": {
+   "card_files": [
+    "join/cards.json"
+   ],
+   "compound_ids_outside_catalogue": [],
+   "links": [],
+   "non_compound_ids_ignored": [],
+   "unmatched_reason": "no compound identifier in the card text and no curator declaration; name similarity is not used"
+  },
+  "Q-N-12": {
+   "card_files": [
+    "join/cards.json"
+   ],
+   "compound_ids_outside_catalogue": [],
+   "links": [],
+   "non_compound_ids_ignored": [],
+   "unmatched_reason": "no compound identifier in the card text and no curator declaration; name similarity is not used"
+  },
+  "Q-N-13": {
+   "card_files": [
+    "join/cards.json"
+   ],
+   "compound_ids_outside_catalogue": [],
+   "links": [],
+   "non_compound_ids_ignored": [],
+   "unmatched_reason": "no compound identifier in the card text and no curator declaration; name similarity is not used"
+  },
+  "Q-N-14": {
+   "card_files": [
+    "join/cards.json"
+   ],
+   "compound_ids_outside_catalogue": [],
+   "links": [],
+   "non_compound_ids_ignored": [],
+   "unmatched_reason": "no compound identifier in the card text and no curator declaration; name similarity is not used"
+  },
+  "Q-N-15": {
+   "card_files": [
+    "join/cards.json"
+   ],
+   "compound_ids_outside_catalogue": [],
+   "links": [],
+   "non_compound_ids_ignored": [],
+   "unmatched_reason": "no compound identifier in the card text and no curator declaration; name similarity is not used"
+  },
+  "Q-N-16": {
+   "card_files": [
+    "join/cards.json"
+   ],
+   "compound_ids_outside_catalogue": [],
+   "links": [],
+   "non_compound_ids_ignored": [],
+   "unmatched_reason": "no compound identifier in the card text and no curator declaration; name similarity is not used"
+  },
+  "Q-N-17": {
+   "card_files": [
+    "join/cards.json"
+   ],
+   "compound_ids_outside_catalogue": [],
+   "links": [],
+   "non_compound_ids_ignored": [],
+   "unmatched_reason": "no compound identifier in the card text and no curator declaration; name similarity is not used"
+  },
+  "Q-R-01": {
+   "card_files": [
+    "join/cards.json"
+   ],
+   "compound_ids_outside_catalogue": [],
+   "links": [],
+   "non_compound_ids_ignored": [],
+   "unmatched_reason": "no compound identifier in the card text and no curator declaration; name similarity is not used"
+  },
+  "Q-R-02": {
+   "card_files": [
+    "join/cards.json"
+   ],
+   "compound_ids_outside_catalogue": [],
+   "links": [
+    {
+     "catalogue_id": "CAT:CHEMBL1214124",
+     "rule": "chembl_id_mentioned_in_card_text; entity_type COMPOUND per ChEMBL id lookup; a mention, not an identity declaration"
+    },
+    {
+     "catalogue_id": "CAT:CHEMBL807",
+     "rule": "chembl_id_mentioned_in_card_text; entity_type COMPOUND per ChEMBL id lookup; a mention, not an identity declaration"
+    }
+   ],
+   "non_compound_ids_ignored": []
+  },
+  "Q-R-03": {
+   "card_files": [
+    "join/cards.json"
+   ],
+   "compound_ids_outside_catalogue": [],
+   "links": [],
+   "non_compound_ids_ignored": [],
+   "unmatched_reason": "no compound identifier in the card text and no curator declaration; name similarity is not used"
+  },
+  "Q-R-04": {
+   "card_files": [
+    "join/cards.json"
+   ],
+   "compound_ids_outside_catalogue": [],
+   "links": [
+    {
+     "catalogue_id": "CAT:CHEMBL1201333",
+     "rule": "chembl_id_mentioned_in_card_text; entity_type COMPOUND per ChEMBL id lookup; a mention, not an identity declaration"
+    }
+   ],
+   "non_compound_ids_ignored": []
+  },
+  "Q-R-05": {
+   "card_files": [
+    "join/cards.json"
+   ],
+   "compound_ids_outside_catalogue": [],
+   "links": [],
+   "non_compound_ids_ignored": [
+    "CHEMBL4360"
+   ],
+   "unmatched_reason": "no compound identifier in the card text and no curator declaration; name similarity is not used"
+  },
+  "Q-R-06": {
+   "card_files": [
+    "join/cards.json"
+   ],
+   "compound_ids_outside_catalogue": [],
+   "links": [],
+   "non_compound_ids_ignored": [],
+   "unmatched_reason": "no compound identifier in the card text and no curator declaration; name similarity is not used"
+  },
+  "Q-R-07": {
+   "card_files": [
+    "join/cards.json"
+   ],
+   "compound_ids_outside_catalogue": [],
+   "links": [
+    {
+     "catalogue_id": "CAT:CHEMBL1072",
+     "rule": "chembl_id_mentioned_in_card_text; entity_type COMPOUND per ChEMBL id lookup; a mention, not an identity declaration"
+    }
+   ],
+   "non_compound_ids_ignored": []
+  },
+  "Q-R-08": {
+   "card_files": [
+    "join/cards.json"
+   ],
+   "compound_ids_outside_catalogue": [],
+   "links": [],
+   "non_compound_ids_ignored": [],
+   "unmatched_reason": "no compound identifier in the card text and no curator declaration; name similarity is not used"
+  },
+  "Q-R-09": {
+   "card_files": [
+    "join/cards.json"
+   ],
+   "compound_ids_outside_catalogue": [],
+   "links": [],
+   "non_compound_ids_ignored": [],
+   "unmatched_reason": "no compound identifier in the card text and no curator declaration; name similarity is not used"
+  },
+  "Q-R-10": {
+   "card_files": [
+    "join/cards.json"
+   ],
+   "compound_ids_outside_catalogue": [
+    "CHEMBL2171124",
+    "CHEMBL534675"
+   ],
+   "links": [
+    {
+     "catalogue_id": "CAT:CHEMBL3407862",
+     "rule": "chembl_id_mentioned_in_card_text; entity_type COMPOUND per ChEMBL id lookup; a mention, not an identity declaration"
+    }
+   ],
+   "non_compound_ids_ignored": [
+    "CHEMBL4295961",
+    "CHEMBL4630805",
+    "CHEMBL4630830",
+    "CHEMBL5358",
+    "CHEMBL5725120",
+    "CHEMBL5785",
+    "CHEMBL6029",
+    "CHEMBL6030",
+    "CHEMBL6066508",
+    "CHEMBL6067328",
+    "CHEMBL6067331",
+    "CHEMBL6067624"
+   ]
+  },
+  "Q-R-11": {
+   "card_files": [
+    "join/cards.json"
+   ],
+   "compound_ids_outside_catalogue": [
+    "CHEMBL2058994",
+    "CHEMBL3335794"
+   ],
+   "links": [
+    {
+     "catalogue_id": "CAT:CHEMBL1983350",
+     "rule": "chembl_id_mentioned_in_card_text; entity_type COMPOUND per ChEMBL id lookup; a mention, not an identity declaration"
+    },
+    {
+     "catalogue_id": "CAT:CHEMBL4594338",
+     "rule": "chembl_id_mentioned_in_card_text; entity_type COMPOUND per ChEMBL id lookup; a mention, not an identity declaration"
+    }
+   ],
+   "non_compound_ids_ignored": [
+    "CHEMBL4311969",
+    "CHEMBL4835",
+    "CHEMBL4940"
+   ]
+  }
+ },
+ "cards_considered": 58,
+ "cards_with_at_least_one_link": 18,
+ "generated_utc": "2026-10-28T07:34:09Z",
+ "unmatched_cards": [
+  "A02_proteasome_inhibitor_class",
+  "A03_client_binding_chaperone",
+  "A04_er_proteostasis_regulators",
+  "A05_hsp70_axis",
+  "C01_aav9_wwox",
+  "C02_splice_aso",
+  "C03_crispra_boost",
+  "C04_aav9_endpoint_families",
+  "D01_a51",
+  "D02_wnt_tankyrase",
+  "E01_isr_modulators",
+  "E04_ketogenic_lactate_axis",
+  "EB-DEV-AX-01",
+  "EB-GROWTH-AX-01",
+  "EB-HORM-AX-01",
+  "EB-KD-01",
+  "EB-PDANCHOR-AX-01",
+  "F02_myelination_activity_sign",
+  "Q-N-01",
+  "Q-N-02",
+  "Q-N-03",
+  "Q-N-04",
+  "Q-N-05",
+  "Q-N-06",
+  "Q-N-07",
+  "Q-N-09",
+  "Q-N-10",
+  "Q-N-11",
+  "Q-N-12",
+  "Q-N-13",
+  "Q-N-14",
+  "Q-N-15",
+  "Q-N-16",
+  "Q-N-17",
+  "Q-R-01",
+  "Q-R-03",
+  "Q-R-05",
+  "Q-R-06",
+  "Q-R-08",
+  "Q-R-09"
+ ]
+}
