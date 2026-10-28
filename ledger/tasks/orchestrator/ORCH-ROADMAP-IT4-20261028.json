@@ -140,13 +140,15 @@
    "steps": [
     {
      "step": "F1 update the operational roadmap section with the capabilities of this iteration and their real status; module, queue and view regenerated",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "README Roadmap iteration 4 section with measured state; module, queue, view regenerated and checked"
     },
     {
      "step": "F2 remove the four clean integrated temporary worktrees (HEAD, content, status rechecked; targeted removal of regenerable caches only)",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "four it3 worktrees removed after HEAD/ancestry/status rechecks (pycache only, regenerable); all it4 worktrees removed after landing; root checkout only"
     },
     {
      "step": "F3 checks that cover the final SHA (battery on the implementation SHA, gate, LINT, receipts, growth), push validated, remote rechecked before integrating and publishing",
