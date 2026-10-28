@@ -13,6 +13,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import compound_catalog as cc  # noqa: E402
 import repurposing_coverage as cov  # noqa: E402
 import repurposing_search as rs  # noqa: E402
 
@@ -203,8 +204,8 @@ class UnknownVsFailed(Fixture):
         d = {p["row_id"]: p["disposition"] for p in self.run_build()["priorities"]["priorities"] if p["need"] == "N-DOWN"}
         self.assertEqual(d["FAM:CAT:CHEMBL1"], "source_queried_without_result")
         self.write(src_state="FAILED")
-        d2 = {p["disposition"] for p in self.run_build()["priorities"]["priorities"]}
-        self.assertEqual(d2, {"incomplete_or_failed_query"})
+        d2 = {p["row_id"]: p["disposition"] for p in self.run_build()["priorities"]["priorities"] if p["need"] == "N-DOWN"}
+        self.assertEqual(d2["FAM:CAT:CHEMBL1"], "incomplete_or_failed_query")           # the ABSENCE of a target row cannot be concluded from failed sources
 
     def test_target_known_but_not_this_need_is_not_relevant(self):
         self.entries[0]["targets"] = [chembl_t("ZZZ1", "INHIBITOR")]
@@ -324,11 +325,60 @@ class LevelsAndCounts(Fixture):
         self.assertIn("STALE", p["disposition_reason"])                      # absence on a stale source says so
         self.assertTrue(p["source_caveats"])
 
-    def test_any_source_failure_blocks_dispositions(self):
+    # Source failure (replaces test_any_source_failure_blocks_dispositions, which asserted that an error on the openFDA NDC accessibility source
+    # turned EVERY disposition into incomplete_or_failed_query). That encoded the old semantics: an accessibility error erased mechanisms that
+    # ChEMBL/DGIdb had verified, and a failed mechanism source erased positive links that it had not failed to deliver. The correct behaviour
+    # keeps three things apart: positive evidence from a working source, incompleteness of the whole search (visible on every record), and an
+    # absence conclusion that depends on the missing source (the only thing withheld).
+    def _states(self, **bad):
         raw = json.loads((self.root / "cat/catalog_stats.json").read_text())
-        raw["sources"]["openfda_ndc"] = {"state": "FAILED"}
+        for k, v in bad.items():
+            raw["sources"][k] = {"state": v}
         (self.root / "cat/catalog_stats.json").write_text(json.dumps(raw))
-        self.assertEqual({p["disposition"] for p in self.run_build()["priorities"]["priorities"]}, {"incomplete_or_failed_query"})
+        return {(p["row_id"], p["need"]): p for p in self.run_build()["priorities"]["priorities"]}
+
+    def _with_absence(self):
+        self.needs[0]["sources"]["cards"] = ["C-DRUG"]
+        self.entries[0]["targets"] = []
+        self.entries[1]["targets"] = []                       # FAM:CAT:CHEMBL1 is card-cited and has no target row: an absence
+        self.write()
+
+    def test_accessibility_source_error_changes_no_mechanism_disposition_but_stays_visible(self):
+        self._with_absence()
+        base = {k: p["disposition"] for k, p in self._states().items()}
+        bad = self._states(openfda_ndc="FAILED")
+        self.assertEqual({k: p["disposition"] for k, p in bad.items()}, base)               # nothing is erased
+        self.assertNotIn("incomplete_or_failed_query", base.values())
+        self.assertTrue(all(p["search_incompleteness"]["overall_search_incomplete"] for p in bad.values()))      # incompleteness is visible everywhere
+        self.assertFalse(any(p["search_incompleteness"]["this_conclusion_depends_on_a_missing_source"] for p in bad.values()))
+        fam = self.run_build()["matrix"]["rows"]
+        self.assertTrue(all("openfda_ndc" in r["access_caveat"] for r in fam if r["kind"] == "molecule_family"))
+        sm = self.run_build()["summary"]
+        self.assertEqual(sm["search_completeness"]["overall"], "incomplete")
+        self.assertEqual(sm["search_completeness"]["accessibility_or_status_sources_in_hard_state"], ["openfda_ndc"])
+
+    def test_mechanism_source_failure_withholds_only_absence_and_keeps_positive_evidence(self):
+        self._with_absence()
+        base = self._states()
+        pos = {k: p["disposition"] for k, p in base.items() if p["disposition"] not in ("source_queried_without_result", "no_catalogue_link_found")}
+        absent = [k for k, p in base.items() if p["disposition"] in ("source_queried_without_result", "no_catalogue_link_found")]
+        self.assertTrue(pos and absent)
+        bad = self._states(dgidb="INCOMPLETE")
+        for k, d in pos.items():
+            if base[k]["levels"]["L1_documented_link"] == "documented":
+                self.assertEqual(bad[k]["disposition"], d, k)                             # a link verified in a working source stays
+        for k in absent:
+            self.assertEqual(bad[k]["disposition"], "incomplete_or_failed_query", k)      # an absence that needs the missing source is withheld
+            self.assertTrue(bad[k]["search_incompleteness"]["this_conclusion_depends_on_a_missing_source"])
+        self.assertIn("consistent_mechanism_candidate", {p["disposition"] for p in bad.values()})     # the module is still usable
+        # a positive link whose own source is the flagged one carries a caveat instead of being dropped
+        chembl_link = next(p for k, p in bad.items() if p["levels"]["L1_documented_link"] == "documented" and "ChEMBL curated mechanism" in str(base[k]["criteria"]["direction_mechanism"]["link_sources"]))
+        self.assertEqual(chembl_link["search_incompleteness"]["this_conclusion_depends_on_a_missing_source"], False)
+
+    def test_identity_source_failure_is_a_mechanism_class_failure_for_absence(self):
+        self._with_absence()
+        bad = self._states(unichem="FAILED")
+        self.assertEqual(bad[("FAM:CAT:CHEMBL1", "N-DOWN")]["disposition"], "incomplete_or_failed_query")
 
     def test_each_family_counts_once_per_need_and_shared_targets_do_not_double_count(self):
         res = self.run_build()
@@ -372,6 +422,39 @@ class LevelsAndCounts(Fixture):
         self.assertEqual((out / "priorities.json").read_text(), cov.dump(b["priorities"], True))
 
 
+class ConcordantAndOpposedActions(Fixture):
+    """One family can act consistently AND against the same need through different targets or records. Both are kept with their
+    context and no sign is summed; the family must not read as favourable on the consistent action alone."""
+    def setUp(self):
+        super().setUp()
+        self.needs.append(need("N-MIX", "down", [tgt("GRIN1", "HGNC:4584"), tgt("GRIA1", "HGNC:4571")]))
+        self.entries.append(entry("CAT:CHEMBL9", "Bothine", skel="ZZZ", targets=[chembl_t("GRIN1", "ANTAGONIST"), chembl_t("GRIA1", "POSITIVE ALLOSTERIC MODULATOR")]))
+        self.write()
+        (self.root / "roles.tsv").write_text((self.root / "roles.tsv").read_text() + "N-MIX\tGRIN1\tsame\tb\tfirst target\nN-MIX\tGRIA1\tsame\tb\tsecond target\n")
+
+    def test_consistent_and_opposed_actions_are_both_kept_and_not_favourable(self):
+        res = self.run_build()
+        c = next(c for c in res["matrix"]["cells"] if c["row_id"] == "FAM:CAT:CHEMBL9" and c["need"] == "N-MIX")
+        l2 = c["L2_mechanistic_coherence"]
+        self.assertEqual(l2["state"], "mixed_consistent_and_opposed")
+        self.assertEqual((l2["consistent_associations"], l2["opposed_associations"]), (1, 1))
+        self.assertEqual([(a["target"], a["link_source"]) for a in l2["consistent_actions"]], [("GRIN1", "ChEMBL curated mechanism")])
+        self.assertEqual([(a["target"], a["action"]) for a in l2["opposed_actions"]], [("GRIA1", "up")])          # PAM = up, against a need that wants the quantity down
+        self.assertTrue(l2["signs_not_summed"])
+        p = next(p for p in res["priorities"]["priorities"] if p["row_id"] == "FAM:CAT:CHEMBL9" and p["need"] == "N-MIX")
+        self.assertEqual(p["disposition"], "mixed_consistent_and_opposed_actions")             # not consistent_mechanism_candidate
+        self.assertEqual(p["levels"]["L2_mechanistic_coherence"], "mixed_consistent_and_opposed")
+        self.assertTrue(p["actions"]["consistent"] and p["actions"]["opposed"])
+        self.assertIn("no sign is summed", p["disposition_reason"])
+        self.assertEqual(res["summary"]["needs"]["per_need"]["N-MIX"]["families_with_both_consistent_and_opposed"], 1)
+
+    def test_single_direction_families_keep_their_old_dispositions(self):
+        res = self.run_build()
+        d = {(p["row_id"], p["need"]): p["disposition"] for p in res["priorities"]["priorities"]}
+        self.assertEqual(d[("FAM:CAT:CHEMBL1", "N-DOWN")], "consistent_mechanism_candidate")
+        self.assertEqual(d[("FAM:CAT:CHEMBL3", "N-DOWN")], "opposite_mechanism")
+
+
 def ob(aid, kind, sign="benefit", depth="complete_fulltext_read", l3=True, l4=False, comp="OPPOSES_DISEASE_CHANGE", flags=""):
     return {"id": aid, "kind": kind, "sign": sign, "reading_depth": depth, "counts_L3": l3, "counts_L4": l4, "comparison": comp, "flags": flags, "card_id": "C"}
 
@@ -397,6 +480,96 @@ class ObservationRules(unittest.TestCase):
     def test_growth_l4_carries_the_body_weight_note(self):
         _, l4 = cov.observation_levels([ob("W", "readout_in_wwox_system", l4=True, flags="growth=body_weight_only")])
         self.assertIn("body weight only", l4["endpoint_note"])
+
+
+class WildTypeEvidence(unittest.TestCase):
+    """An observation against wild type only, or a drug effect in a wild-type arm, is not an effect in the disease model and not a rescue."""
+    def test_comparison_with_wild_type_only_is_its_own_state_and_never_recovery(self):
+        l3, l4 = cov.observation_levels([ob("G1", "genotype_comparison_vs_wild_type", sign="normalised_vs_wild_type", l4=True)])
+        self.assertEqual(l3["state"], "observed_vs_wild_type_only")
+        self.assertEqual(l4["state"], "none_in_record")                                      # even with counts_L4 and an OPPOSES comparison
+        self.assertEqual(l3["signs_wwox_system_readouts"], {})
+        self.assertEqual(l3["signs_direct_genotype_comparison_vs_wild_type_only"], {"normalised_vs_wild_type": 1})
+        self.assertIn("NOT an effect in the disease model", l3["wild_type_only_note"])
+
+    def test_effect_in_a_wild_type_arm_is_not_a_disease_model_result(self):
+        l3, l4 = cov.observation_levels([ob("W1", "effect_in_wild_type_arm", l3=False)])
+        self.assertEqual(l3["state"], "effect_in_wild_type_only")
+        self.assertEqual((l3["signs_wwox_system_readouts"], l3["assertion_ids"], l4["state"]), ({}, [], "none_in_record"))
+        self.assertEqual(l3["assertion_ids_by_comparison"]["pharmacological_effect_in_wild_type_or_carrier_arm"], ["W1"])
+
+    def test_a_result_in_the_model_keeps_the_cell_observed_and_the_wild_type_rows_beside_it(self):
+        l3, l4 = cov.observation_levels([ob("R", "readout_in_wwox_system", l4=True), ob("G", "genotype_comparison_vs_wild_type", sign="not_normalised_vs_wild_type"),
+                                         ob("W", "effect_in_wild_type_arm", l3=False)])
+        self.assertEqual(l3["state"], "observed_wwox_system")
+        self.assertEqual(l3["signs_wwox_system_readouts"], {"benefit": 1})                   # the wild-type signs are not mixed into it
+        self.assertEqual(l3["signs_direct_genotype_comparison_vs_wild_type_only"], {"not_normalised_vs_wild_type": 1})
+        self.assertEqual(l3["signs_effect_in_wild_type_or_carrier_arms"], {"benefit": 1})
+        self.assertEqual(l4["assertion_ids"], ["R"])
+        meaning = {o["id"]: o["meaning"] for o in l3["observations"]}
+        self.assertEqual(meaning, {"R": "result_in_wwox_model", "G": "direct_genotype_comparison_vs_wild_type_only", "W": "pharmacological_effect_in_wild_type_or_carrier_arm"})
+
+    def test_unknown_depth_comparison_with_wild_type_is_not_observed(self):
+        l3, _ = cov.observation_levels([ob("G", "genotype_comparison_vs_wild_type", sign="normalised_vs_wild_type", depth="UNKNOWN")])
+        self.assertEqual(l3["state"], "observed_depth_unknown")
+
+    def test_observation_keeps_comparator_endpoint_stage_conditions_and_character(self):
+        o = dict(ob("R", "readout_in_wwox_system", flags="high_dose_arm;n=5"), comparator="untreated_same_genotype", endpoint="E", stage="P20", genotype="Wwox-/-", attachment="card")
+        c = dict(ob("C", "case_report_wwox_clinical"), comparator="none_uncontrolled_case_report", endpoint="spasms", stage="infancy")
+        l3, _ = cov.observation_levels([o, c])
+        r = next(x for x in l3["observations"] if x["id"] == "R")
+        self.assertEqual((r["comparator"], r["endpoint"], r["stage_or_time"], r["character"], r["reading_depth"], r["sign"]), ("untreated_same_genotype", "E", "P20", "experimental", "complete_fulltext_read", "benefit"))
+        self.assertEqual(r["conditions"], ["high_dose_arm", "n=5"])
+        self.assertEqual(next(x for x in l3["observations"] if x["id"] == "C")["character"], "clinical_uncontrolled_report")
+
+
+class TargetIdentityRegressions(unittest.TestCase):
+    """Rows are classified through the identifiers the catalogue kept (GtoPdb target id, ChEMBL target type), not through a hand-listed gene set."""
+
+    def gt(self, hgnc, gene, itype, state, level="single_protein", sibs=0, **kw):
+        t = {"source": "DGIdb interaction", "gene": gene, "gene_concept_id": hgnc, "interaction_type": itype, "claim_source": "GuideToPharmacology",
+             "multiplicity": 1, "iuphar_target_id": "456", "iuphar_ligand_id": "4168", "gene_claim_name": "NCBIGENE:456", "target_level": level,
+             "same_family_targets_of_this_ligand": sibs, "identity": {"state": state, "method": "gtopdb_target_id" if state != "unverified" else "gtopdb_pair_lookup", "note": "n"}}
+        t.update(kw)
+        return t
+
+    def run_need(self, entries, direction="down", syms=("GRIN2A",)):
+        n = need("N", direction, [tgt(s, {"GRIN2A": "hgnc:4585", "GRIN1": "hgnc:4584"}[s]) for s in syms])
+        roles = {("N", s): {"coupling": "same", "qualifier": "q"} for s in syms}
+        return rs.associations_for_need(n, rs.Index(entries, []), roles)["associations"]
+
+    def test_unverified_relation_stays_visible_and_is_not_counted(self):
+        e = entry("CAT:DGIDB:u", "Ghostine", origin="dgidb_only", targets=[self.gt("hgnc:4585", "GRIN2A", "inhibitor", "unverified")])
+        a, = self.run_need([e])
+        self.assertTrue(a["excluded_from_counts"].startswith("unconfirmed_identity"))
+        self.assertEqual((a["excluded_reason"], a["consistency"]), ("unconfirmed_identity", "not_evaluable"))   # listed, never promoted to consistent
+
+    def test_confirmed_row_on_the_same_gene_is_counted_and_is_not_subunit_selectivity(self):
+        e = entry("CAT:DGIDB:c", "Dapfive", origin="dgidb_only", targets=[self.gt("hgnc:4585", "GRIN2A", "inhibitor", "confirmed", sibs=3)])
+        a, = self.run_need([e])
+        self.assertIsNone(a["excluded_from_counts"])
+        self.assertEqual(a["consistency"], "consistent")
+        self.assertEqual((a["target_scope"], a["subunit_selectivity"]), ("single_protein_among_siblings", "not_established"))
+        self.assertIn("subunit selectivity not established", a["consistency_why"])
+
+    def test_complex_level_chembl_relation_does_not_become_subunit_selectivity(self):
+        t = chembl_t("GRIN2A", "NEGATIVE ALLOSTERIC MODULATOR", ttype="PROTEIN COMPLEX GROUP")
+        a, = self.run_need([entry("CAT:CHEMBL9", "Channelblockine", targets=[t])])
+        self.assertEqual((a["target_scope"], a["subunit_selectivity"]), ("complex_or_group", "not_established"))
+        self.assertEqual(a["consistency"], "consistent")      # NMDAR-level effect toward the class-level need; the subunit is not resolved
+        self.assertTrue(any("not subunit-specific" in x for x in a["limits"]))
+
+    def test_corrected_row_lands_on_the_verified_gene_not_the_served_one(self):
+        e = entry("CAT:DGIDB:k", "Sting agonist", origin="dgidb_only", targets=[self.gt("hgnc:27962", "STING1", "agonist", "corrected", dgidb_served_gene={"gene": "GRIN1", "gene_concept_id": "hgnc:4584"})])
+        self.assertEqual(self.run_need([e], syms=("GRIN1",)), [])      # the ligand no longer touches GRIN1
+
+    def test_listing_row_with_curated_mechanism_elsewhere_is_flagged_not_dropped(self):
+        listing = dg_t2("hgnc:4585", "GRIN2A", None, "TdgClinicalTrial")
+        e = entry("CAT:CHEMBL8", "Tiagabinish", targets=[chembl_t("SLC6A1", "INHIBITOR"), listing])
+        a, = self.run_need([e])
+        self.assertTrue(a["curated_mechanism_elsewhere"])
+        self.assertFalse(a["excluded_from_counts"])
+        self.assertEqual((a["relation_kind"], a["action_stated"], a["consistency"]), ("target_review_listing", False, "direction_unresolved"))
 
 
 class Detector(Fixture):
@@ -444,21 +617,47 @@ class RealFiles(unittest.TestCase):
     def tearDownClass(cls):
         cls.tmp.cleanup()
 
-    def test_hard_failed_source_on_the_real_files_turns_every_disposition_incomplete(self):
+    # Replaces test_hard_failed_source_on_the_real_files_turns_every_disposition_incomplete (old semantics: one FAILED source flipped all records).
+    def _bad_build(self, source):
         st = json.loads((self.cat / "catalog_stats.json").read_text())
-        st["sources"]["unichem"] = {"state": "FAILED"}
+        keep = st["sources"][source]
+        st["sources"][source] = {"state": "FAILED"}
         (self.cat / "catalog_stats.json").write_text(json.dumps(st))
-        res = cov.build(catalog_dir=self.cat)
-        self.assertEqual({p["disposition"] for p in res["priorities"]["priorities"]}, {"incomplete_or_failed_query"})
-        self.assertEqual(len(res["priorities"]["priorities"]), len(self.base["priorities"]["priorities"]))   # all of them flip, none is dropped
+        try:
+            return cov.build(catalog_dir=self.cat)
+        finally:
+            st["sources"][source] = keep
+            (self.cat / "catalog_stats.json").write_text(json.dumps(st))
+
+    def test_failed_identity_source_on_real_files_withholds_only_absences(self):
+        res = self._bad_build("unichem")
+        base = {(p["row_id"], p["need"]): p["disposition"] for p in self.base["priorities"]["priorities"]}
+        bad = {(p["row_id"], p["need"]): p for p in res["priorities"]["priorities"]}
+        self.assertEqual(set(base), set(bad))                                               # none is dropped
         self.assertEqual(res["summary"]["inputs_status"]["hard_problem_sources"], ["unichem"])
-        st["sources"]["unichem"] = {"state": "OK"}
-        (self.cat / "catalog_stats.json").write_text(json.dumps(st))
+        self.assertTrue(all(p["search_incompleteness"]["overall_search_incomplete"] for p in bad.values()))
+        withheld = {k for k, p in bad.items() if p["disposition"] == "incomplete_or_failed_query"}
+        for k, d in base.items():
+            if d in ("no_catalogue_link_found", "source_queried_without_result"):
+                self.assertIn(k, withheld)                                                   # the absence rests on the missing source
+            elif k not in withheld:
+                self.assertEqual(bad[k]["disposition"], d)                                   # every other record is unchanged
+        for k in withheld:
+            self.assertIn(base[k], ("no_catalogue_link_found", "source_queried_without_result", "insufficient_data"))
+        self.assertGreater(len(base) - len(withheld), len(base) // 2)                        # the module is not blanked
+        self.assertIn("consistent_mechanism_candidate", {p["disposition"] for p in bad.values()})
+
+    def test_failed_accessibility_source_on_real_files_changes_no_disposition(self):
+        base = {(p["row_id"], p["need"]): p["disposition"] for p in self.base["priorities"]["priorities"]}
+        for src in ("openfda_ndc", "dsld"):
+            res = self._bad_build(src)
+            self.assertEqual({(p["row_id"], p["need"]): p["disposition"] for p in res["priorities"]["priorities"]}, base, src)
+            self.assertEqual(res["summary"]["search_completeness"]["overall"], "incomplete")
 
     def test_real_outcomes_of_the_audit_corrections(self):
         per = self.base["summary"]["needs"]["per_need"]
-        self.assertEqual(per["NEED-INHIBITORY-HYPOFUNCTION"]["headline_records_intervention_targets"], 11)
-        self.assertEqual(per["NEED-GSK3B-DEREPRESSION"]["headline_records_intervention_targets"], 50)   # 51 before relatlimab (anti-LAG3) was removed as a GtoPdb collision
+        self.assertEqual(per["NEED-INHIBITORY-HYPOFUNCTION"]["headline_records_intervention_targets"], 12)   # 11 before the GtoPdb rows were re-identified through their target ids (GtoPdb rows re-identified through their target ids)
+        self.assertEqual(per["NEED-GSK3B-DEREPRESSION"]["headline_records_intervention_targets"], 81)   # 50 when GtoPdb rows on GSK3B were dropped by a symbol rule; 31 GSK3B inhibitors recovered through the GtoPdb target id
         cells = {(c["row_id"], c["need"]): c for c in self.base["matrix"]["cells"]}
         a51 = cells[("INT:D01_a51", "NEED-MYC-PROGENITOR-PROLIFERATION")]
         self.assertEqual(a51["L3_observed_effect"]["state"], "observed_depth_unknown")
@@ -468,22 +667,58 @@ class RealFiles(unittest.TestCase):
         self.assertTrue(all(not c["L3_observed_effect"]["unassessed_assertions_on_card"] for c in cells.values() if c["L3_observed_effect"]["state"].startswith("observed")))
         self.assertIn("None of the interventions", self.base["summary"]["plain_statement"])
 
-    def test_artefact_symbols_that_are_need_targets_are_second_source_only_and_reported(self):
-        """A source-artefact row on a symbol that a need really targets (ABAT) must never be a blanket drop: it
-        has to be require_second_source, genuine rows must survive, and the per-need drop count must be reported.
-        Any other artefact symbol that appears among need targets without a documented decision fails here."""
+    def test_real_wild_type_rows_are_encoded_in_data_and_d_apv_stays_off_memantine_and_perampanel(self):
+        rows = cov.load_pertinence(rs.DR / "coverage/assertion_pertinence.tsv")
+        for r in rows:
+            if r["sign"] in ("normalised_vs_wild_type", "not_normalised_vs_wild_type"):
+                self.assertEqual(r["evidence_kind"], "genotype_comparison_vs_wild_type", r["assertion_id"])      # comparison with wild type only
+                self.assertEqual(r["counts_L4"], "no", r["assertion_id"])
+                self.assertEqual(r["comparator"], "wild_type_only", r["assertion_id"])
+            if r["evidence_kind"] == "effect_in_wild_type_arm":
+                self.assertEqual((r["counts_L3"], r["counts_L4"]), ("no", "no"), r["assertion_id"])
+        kinds = {r["assertion_id"]: r["evidence_kind"] for r in rows}
+        self.assertEqual((kinds["DR-LI-002"], kinds["DR-LI-003"]), ("effect_in_wild_type_arm", "effect_in_wild_type_arm"))
+        for r in rows:
+            if r["counts_L3"] == "yes" or r["evidence_kind"] == "effect_in_wild_type_arm":
+                self.assertTrue(r["comparator"], f"{r['assertion_id']} lacks the comparator the sign is measured against")
+        cells = {(c["row_id"], c["need"]): c for c in self.base["matrix"]["cells"]}
+        li = cells[("FAM:CAT:CHEMBL1201333", "NEED-SEIZURE-CONTROL-SYMPTOMATIC")]["L3_observed_effect"]
+        self.assertEqual(li["assertion_ids"], ["DR-LI-001"])                                  # the null-pup result only
+        self.assertEqual(li["assertion_ids_by_comparison"]["pharmacological_effect_in_wild_type_or_carrier_arm"], ["DR-LI-002", "DR-LI-003"])
+        self.assertEqual(li["signs_effect_in_wild_type_or_carrier_arms"], {"benefit": 2})
+        aav = cells[("INT:C04_aav9_endpoint_families", "NEED-SYSTEMIC-GLYCAEMIA-GROWTH")]["L3_observed_effect"]
+        self.assertEqual(aav["assertion_ids_by_comparison"]["direct_genotype_comparison_vs_wild_type_only"], ["DR-AAV-GLU20-HD", "DR-AAV-GLU20-LD"])
+        self.assertNotIn("normalised_vs_wild_type", aav["signs_wwox_system_readouts"])
+        for (rid, nid), c in cells.items():                                                    # no wild-type-only observation is a recovery
+            if c["L3_observed_effect"]["state"] in ("observed_vs_wild_type_only", "effect_in_wild_type_only"):
+                self.assertEqual(c["L4_observed_recovery_in_wwox_system"]["state"], "none_in_record")
+        tool = cells[("INT:F01_glutamate_receptor_node:tool", "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR")]["L3_observed_effect"]
+        self.assertEqual(tool["assertion_ids"], ["DR-W2-001"])
+        for fam in ("FAM:CAT:CHEMBL807", "FAM:CAT:CHEMBL1214124"):                            # memantine, perampanel
+            c = cells.get((fam, "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR"))
+            if c:
+                self.assertNotIn("DR-W2-001", c["L3_observed_effect"]["assertion_ids"])
+                self.assertNotEqual(c["L3_observed_effect"]["state"], "observed_wwox_system")
+                self.assertEqual(c["L4_observed_recovery_in_wwox_system"]["state"], "none_in_record")
+
+    def test_gtopdb_identity_is_checked_through_ids_not_through_a_hand_listed_set(self):
+        """No symbol list: every Guide-to-Pharmacology row of the real catalogue carries the id check, a row counted on ANY need gene
+        is confirmed/corrected through the GtoPdb target id, and a row that could not be checked is excluded as unconfirmed."""
+        entries = {e["id"]: e for e in cc.load(REAL / "catalog" / "catalog.jsonl.gz")}
+        gt = [t for e in entries.values() for t in e["targets"] if t["source"] == "DGIdb interaction" and t.get("claim_source") == "GuideToPharmacology"]
+        self.assertGreater(len(gt), 10000)
+        self.assertTrue(all((t.get("identity") or {}).get("method") in ("gtopdb_target_id", "gtopdb_pair_lookup", "none") for t in gt))
+        self.assertTrue(all(t["identity"]["state"] in ("confirmed", "corrected", "unverified") for t in gt))
+        self.assertTrue(all(t.get("iuphar_target_id") and t.get("gene_claim_name", "").endswith(t["iuphar_target_id"]) for t in gt if t["identity"]["state"] != "unverified"))
+        for a in self.base["associations"]:
+            if a["link_source"].startswith("DGIdb") and a["iuphar_target_id"]:
+                if not a["excluded_from_counts"]:
+                    self.assertIn(a["identity_state"], ("source_ids_checked_confirmed", "source_ids_checked_corrected"))
         art = rs.load_artefacts()
-        need_syms = {t["symbol"].upper() for n in json.loads((REAL / "needs" / "needs.json").read_text())["needs"] for t in n["targets"]}
-        overlap = [a for a in art if a["symbol"].upper() in need_syms]
-        reviewed = {g: "require_second_source" for g in ("ABAT", "GRIN1", "GRIA1", "GRIA2", "GRIA4", "GSK3B", "ATF4", "CTNNB1", "EIF4EBP1", "EIF2S1")}
-        reviewed["PDK1"] = "alias_risk:PDPK1"      # the only reviewed overlaps
-        for a in overlap:
-            self.assertEqual(a["rule"], reviewed.get(a["symbol"].upper()), f"unreviewed or blanket artefact rule on need target {a['symbol']}")
-        self.assertEqual({a["symbol"].upper() for a in overlap}, set(reviewed), "a new artefact/need-target overlap needs a reviewed decision")
+        self.assertEqual({(a["claim_source"], a["rule"].split(":")[0]) for a in art}, {("*", "alias_risk")})   # symbol rules for GtoPdb are gone
         per = self.base["summary"]["needs"]["per_need"]
         for nid, v in per.items():
             self.assertIn("excluded_records_by_reason", v, nid)
-        self.assertGreater(per["NEED-SEIZURE-CONTROL-SYMPTOMATIC"]["excluded_records_by_reason"].get("source_artefact", 0), 0)
         survivors = [x for x in self.base["associations"] if x["need"] == "NEED-SEIZURE-CONTROL-SYMPTOMATIC" and x["target"] == "ABAT" and not x["excluded_from_counts"]]
         self.assertGreaterEqual(len(survivors), 5, "genuine ABAT rows (vigabatrin class) were dropped")
 

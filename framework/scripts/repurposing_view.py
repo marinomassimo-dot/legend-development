@@ -609,7 +609,8 @@ def build_payload(dr: Path = DEFAULT_DR, source: str = "full") -> dict:
                                 l1.get("pathway_member_targets_listed_apart") or [], bool(l1.get("source_caveat_stale"))], k)
             o["l2"] = [l2.get("state"), l2.get("consistent_associations"), l2.get("opposed_associations"), l2.get("unresolved_associations"),
                        [S(json.dumps(q, sort_keys=True) if not isinstance(q, str) else q) for q in (l2.get("certainty_qualifiers") or [])]]
-            sg = {k: l3[k] for k in ("signs_wwox_system_readouts", "signs_case_reports", "signs_other_disease_precedent_not_observed_here", "safety_signals_kept_apart")
+            sg = {k: l3[k] for k in ("signs_wwox_system_readouts", "signs_case_reports", "signs_direct_genotype_comparison_vs_wild_type_only", "signs_effect_in_wild_type_or_carrier_arms",
+                                  "signs_other_disease_precedent_not_observed_here", "safety_signals_kept_apart")
                   if l3.get(k)}
             o["l3"] = [l3.get("state"), l3.get("assertion_ids") or [], l3.get("by_scope") or {}, l3.get("cards") or [], l3.get("measured_null_assertions") or 0, l3.get("inference_assertions") or 0, sg,
                        l3.get("target_engagement_assays_not_readouts") or 0]
@@ -733,7 +734,7 @@ def build_payload(dr: Path = DEFAULT_DR, source: str = "full") -> dict:
     card_leads = []
     for k, p in sorted(prio_by_key.items(), key=lambda kv: (kv[0][1], kv[0][0])):
         r = rows_by_id[k[0]]
-        if r.get("cards") and p["disposition"] in ("consistent_mechanism_candidate", "exploration_candidate", "opposite_mechanism", "source_queried_without_result", "incomplete_or_failed_query"):
+        if r.get("cards") and p["disposition"] in ("consistent_mechanism_candidate", "exploration_candidate", "opposite_mechanism", "mixed_consistent_and_opposed_actions", "source_queried_without_result", "incomplete_or_failed_query"):
             card_leads.append({"row": row_label(r)[0], "need": k[1], "disp": p["disposition"], "levels": [p["levels"].get(x) for x in LEVELS],
                                "cards": [{"id": c["card_id"], "path": card_path(dr, c["card_id"])} for c in r["cards"]]})
     srcs = source_rows(manifest, stats, summary)
@@ -973,7 +974,7 @@ a{color:var(--acc)}code{font-size:.85em;background:var(--accbg);padding:1px 4px;
 .st-truncated{background:var(--warnbg);color:var(--warn);border-style:dashed;font-weight:700}.st-not_fetched{background:transparent;color:var(--mut);border-style:dotted;font-weight:700}.st-other{background:var(--badbg);color:var(--bad);border-style:dashed}
 .warnbar{background:var(--warnbg);border-bottom:3px solid var(--warn);padding:8px 16px;font-size:.9rem}.st-incomplete{background:var(--badbg);color:var(--bad);border-style:dashed;font-weight:700}.lic-warn{color:var(--bad);font-weight:600}.state-none{background:var(--warnbg);padding:6px 10px;border-radius:6px}
 .dp-consistent_mechanism_candidate{background:var(--okbg);color:var(--ok)}.dp-exploration_candidate{background:var(--accbg);color:var(--acc);border-style:dashed}
-.dp-opposite_mechanism{background:var(--badbg);color:var(--bad)}.dp-not_relevant,.dp-no_catalogue_link_found{color:var(--mut)}.dp-insufficient_data{color:var(--mut);border-style:dashed}
+.dp-opposite_mechanism,.dp-mixed_consistent_and_opposed_actions{background:var(--badbg);color:var(--bad)}.dp-mixed_consistent_and_opposed_actions{border-style:dashed}.dp-not_relevant,.dp-no_catalogue_link_found{color:var(--mut)}.dp-insufficient_data{color:var(--mut);border-style:dashed}
 .dp-source_queried_without_result{background:var(--warnbg);color:var(--warn);border-style:dotted}.dp-incomplete_or_failed_query{background:var(--badbg);color:var(--bad);border-style:double;border-width:3px;font-weight:700}
 .filters{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px}.filters label{font-size:.78rem;color:var(--mut);display:flex;flex-direction:column;gap:2px}
 select,input[type=search],button{font:inherit;padding:5px 7px;border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--fg);min-width:0;width:100%}
@@ -982,7 +983,7 @@ button{width:auto;cursor:pointer}.bar-actions{display:flex;gap:8px;align-items:c
 .item{border:1px solid var(--line);border-radius:8px;padding:8px 10px;margin:8px 0;background:var(--card)}
 .item .top{display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline}.item .nm{font-weight:600}.lvls{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:4px 10px;margin-top:6px;font-size:.84rem}
 .lvls div{border-left:3px solid var(--line);padding-left:6px}.lvls .k{color:var(--mut);font-size:.74rem;display:block}
-.v-documented,.v-coherent,.v-observed,.v-observed_wwox_system,.v-observed_experimental{color:var(--ok);font-weight:600}.v-observed_case_level,.v-observed_case_level_only,.v-pathway_member_only,.v-measured_null_only,.v-precedent_other_disease_only,.v-target_engagement_only,.v-safety_signal_only,.v-source_incomplete{color:var(--warn);font-weight:600}.v-opposed{color:var(--bad);font-weight:600}.v-none_found,.v-none,.v-none_in_cards,.v-none_in_record{color:var(--mut)}.v-not_evaluable,.v-direction_unresolved{color:var(--warn)}
+.v-documented,.v-coherent,.v-observed,.v-observed_wwox_system,.v-observed_experimental{color:var(--ok);font-weight:600}.v-observed_case_level,.v-observed_case_level_only,.v-pathway_member_only,.v-measured_null_only,.v-precedent_other_disease_only,.v-target_engagement_only,.v-safety_signal_only,.v-source_incomplete{color:var(--warn);font-weight:600}.v-opposed,.v-mixed_consistent_and_opposed{color:var(--bad);font-weight:600}.v-observed_vs_wild_type_only,.v-effect_in_wild_type_only,.v-observed_depth_unknown{color:var(--warn);font-weight:600}.v-none_found,.v-none,.v-none_in_cards,.v-none_in_record{color:var(--mut)}.v-not_evaluable,.v-direction_unresolved{color:var(--warn)}
 details{margin-top:6px}summary{cursor:pointer;color:var(--acc)}.crit{display:grid;grid-template-columns:minmax(120px,max-content) 1fr;gap:3px 12px;font-size:.84rem;margin-top:6px}.crit dt{color:var(--mut)}.crit dd{margin:0;word-break:break-word}
 .pager{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:8px 0}.needs{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,420px),1fr));gap:10px}
 .ncard{border:1px solid var(--line);border-radius:8px;padding:10px;background:var(--card)}.ncard.explore{border-style:dashed}.ncard h3{margin-top:0;font-size:.95rem}
@@ -996,7 +997,7 @@ JS = r"""
 'use strict';
 var D=JSON.parse(document.getElementById('data').textContent);
 var NEEDS=D.needs,ROWS=D.rows,PAIRS=D.pairs,STR=D.strings,DISP=D.dispositions;
-var LBL={documented:'headline link (intervention target)',pathway_member_only:'pathway member only (not headline)',source_incomplete:'source incomplete (not a negative)',observed_wwox_system:'observed in a WWOX system',observed_case_level_only:'observed in a clinical case report only',measured_null_only:'measured null only',precedent_other_disease_only:'precedent in another disease only',target_engagement_only:'enzyme or cell-free engagement only',safety_signal_only:'safety signal only',observed_experimental:'recovery, experimental WWOX system',observed_case_level:'recovery, case-level (uncontrolled report)',none_found:'queried, none found',not_evaluable:'not evaluable',coherent:'coherent',opposed:'opposed',direction_unresolved:'direction unresolved',none:'none',none_in_cards:'none in cards (not a negative)',observed:'observed',none_in_record:'none in record (not a negative)'};
+var LBL={documented:'headline link (intervention target)',pathway_member_only:'pathway member only (not headline)',source_incomplete:'source incomplete (not a negative)',observed_wwox_system:'result in the WWOX model',observed_vs_wild_type_only:'compared with wild type only (not a disease-model effect, not a rescue)',effect_in_wild_type_only:'effect in a wild-type or carrier arm only (not a disease-model effect)',observed_depth_unknown:'observed, reading depth unknown (not counted)',mixed_consistent_and_opposed:'consistent AND opposed actions (both listed, never summed)',observed_case_level_only:'observed in a clinical case report only',measured_null_only:'measured null only',precedent_other_disease_only:'precedent in another disease only',target_engagement_only:'enzyme or cell-free engagement only',safety_signal_only:'safety signal only',observed_experimental:'recovery, experimental WWOX system',observed_case_level:'recovery, case-level (uncontrolled report)',none_found:'queried, none found',not_evaluable:'not evaluable',coherent:'coherent',opposed:'opposed',direction_unresolved:'direction unresolved',none:'none',none_in_cards:'none in cards (not a negative)',observed:'observed',none_in_record:'none in record (not a negative)'};
 function lbl(s){return LBL[s]||String(s).replace(/_/g,' ');}
 function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
 function $(id){return document.getElementById(id);}

@@ -18,59 +18,63 @@
    ],
    "by_reason": {
     "alias_risk": 2,
-    "placeholder": 33,
-    "source_artefact": 232
+    "placeholder": 33
    },
-   "records": 158
+   "records": 3
   },
   "families_by_number_of_needs_touched": {
-   "1": 891,
-   "2": 78,
-   "3": 7,
+   "1": 1090,
+   "2": 88,
+   "3": 8,
    "5": 1,
    "6": 2
   },
-  "families_touching_a_need_if_name_twins_were_collapsed_SENSITIVITY_ONLY": 855,
-  "families_touching_at_least_one_need_counted_once": 979,
-  "families_with_documented_link_to_a_need": 979,
+  "families_touching_a_need_if_name_twins_were_collapsed_SENSITIVITY_ONLY": 1065,
+  "families_touching_at_least_one_need_counted_once": 1189,
+  "families_with_documented_link_to_a_need": 1189,
   "headline_definition": "a documented link = a catalogue row on an INTERVENTION target (or disease gene product) of a need, excluding source-artefact rows, alias-risk rows and the DGIdb placeholder; pathway members counted apart; effector constraints and readout markers are never links",
-  "headline_families_if_name_twins_collapsed_SENSITIVITY_ONLY": 855,
+  "headline_families_if_name_twins_collapsed_SENSITIVITY_ONLY": 1065,
+  "headline_records_by_strongest_relation": {
+   "action_stated_by_curated_source": 618,
+   "action_stated_by_other_source_only": 12,
+   "link_without_stated_action_only": 588
+  },
   "overlap_warning": "needs share targets (e.g. CACNA1G, ABAT); per-need counts must not be added: use the unions above",
   "pct_records_incl_pathway_members": {
    "denominator": 44211,
-   "numerator": 1261,
-   "percent": 2.9,
+   "numerator": 1471,
+   "percent": 3.3,
    "what": "records with a headline OR pathway-member link / all catalogue records"
   },
   "pct_records_with_headline_link": {
    "denominator": 44211,
-   "numerator": 1008,
-   "percent": 2.3,
+   "numerator": 1218,
+   "percent": 2.8,
    "what": "catalogue records with at least one headline link to any of the needs / all catalogue records; links are source statements, not relevance"
   },
   "pct_records_with_link": {
    "denominator": 44211,
-   "numerator": 1008,
-   "percent": 2.3,
+   "numerator": 1218,
+   "percent": 2.8,
    "what": "catalogue records with at least one headline link to any of the needs / all catalogue records; links are source statements, not relevance"
   },
   "pct_records_with_target_row_that_link": {
    "denominator": 24423,
-   "numerator": 1008,
-   "percent": 4.1,
+   "numerator": 1218,
+   "percent": 5.0,
    "what": "records with a headline link / records carrying any target row"
   },
   "records_examined": 44211,
-  "records_touching_only_effector_constraints_or_readout_markers": 689,
-  "records_touching_only_readout_markers": 689,
+  "records_touching_only_effector_constraints_or_readout_markers": 702,
+  "records_touching_only_readout_markers": 702,
   "records_with_any_target_row": 24423,
-  "records_with_documented_link_to_a_need": 1008,
-  "touched_families_with_a_name_twin_in_another_family_not_merged": 649,
-  "touched_headline_families_with_a_name_twin_not_merged": 649,
-  "union_headline_families": 979,
-  "union_headline_records": 1008,
-  "union_with_pathway_members_families": 1232,
-  "union_with_pathway_members_records": 1261
+  "records_with_documented_link_to_a_need": 1218,
+  "touched_families_with_a_name_twin_in_another_family_not_merged": 715,
+  "touched_headline_families_with_a_name_twin_not_merged": 715,
+  "union_headline_families": 1189,
+  "union_headline_records": 1218,
+  "union_with_pathway_members_families": 1442,
+  "union_with_pathway_members_records": 1471
  },
  "evaluated_vs_records": {
   "interventions_with_a_listed_pertinent_readout_assertion": 7,
@@ -78,7 +82,7 @@
   "records_evaluated_against_wwox_needs_with_any_observation": 7,
   "records_examined_by_target_match": 44211,
   "records_in_catalogue": 44211,
-  "records_with_a_headline_link": 1008,
+  "records_with_a_headline_link": 1218,
   "records_with_target_data_at_all": 24423
  },
  "inputs_status": {
@@ -100,26 +104,26 @@
   "seizure-need cells are symptom-level inferences, not mechanism-linked to WWOX; GRIN and T-type couplings rest on one experiment each"
  ],
  "matrix": {
-  "L1_documented": 1085,
+  "L1_documented": 1307,
   "L1_none_found": 9,
   "L1_not_evaluable": 27,
   "L1_states": {
-   "documented": 1085,
+   "documented": 1307,
    "none_found": 9,
    "not_evaluable": 27,
-   "pathway_member_only": 323
+   "pathway_member_only": 327
   },
-  "L2_coherent": 102,
+  "L2_coherent": 103,
   "L2_states": {
-   "coherent": 102,
-   "direction_unresolved": 317,
-   "none": 58,
-   "not_evaluable": 954,
+   "coherent": 103,
+   "direction_unresolved": 402,
+   "none": 60,
+   "not_evaluable": 1092,
    "opposed": 13
   },
   "L3_observed": 9,
   "L3_states": {
-   "none_in_cards": 1422,
+   "none_in_cards": 1648,
    "observed_case_level_only": 2,
    "observed_depth_unknown": 1,
    "observed_wwox_system": 7,
@@ -128,20 +132,20 @@
   },
   "L4_observed": 4,
   "L4_states": {
-   "none_in_record": 1440,
+   "none_in_record": 1666,
    "observed_case_level": 1,
    "observed_experimental": 3
   },
-  "cells_nonempty": 1444,
-  "cells_possible_rows_x_needs": 27764,
+  "cells_nonempty": 1670,
+  "cells_possible_rows_x_needs": 32384,
   "levels_are_never_summed": true,
   "row_kinds": {
    "intervention_without_catalogue_identity": 12,
-   "molecule_family": 1239,
+   "molecule_family": 1449,
    "non_molecule_intervention": 6,
    "tool_compound_or_genetic_precedent_not_in_catalogue": 5
   },
-  "rows": 1262
+  "rows": 1472
  },
  "needs": {
   "count": 22,
@@ -166,12 +170,12 @@
       "records": 0
      },
      "intervention_target": {
-      "families": 174,
-      "records": 180
+      "families": 173,
+      "records": 179
      },
      "pathway_member": {
-      "families": 11,
-      "records": 11
+      "families": 15,
+      "records": 15
      },
      "readout_marker": {
       "families": 0,
@@ -181,27 +185,29 @@
     "cards_citing_need": [
      "F01_glutamate_receptor_node"
     ],
+    "cells_L3_effect_in_wild_type_only": 0,
     "cells_L3_observed": 1,
     "cells_L3_observed_case_level_only": 0,
+    "cells_L3_observed_vs_wild_type_only": 0,
     "cells_L3_observed_wwox_system": 1,
     "cells_L4_observed": 0,
     "direction": "down",
     "excluded_records_by_reason": {
-     "placeholder": 1,
-     "source_artefact": 17
+     "placeholder": 1
     },
     "exploration_only": false,
-    "families_consistent": 65,
-    "families_incl_pathway_members": 185,
+    "families_consistent": 63,
+    "families_incl_pathway_members": 186,
     "families_opposed": 13,
-    "families_with_documented_link": 174,
-    "headline_families_intervention_targets": 174,
-    "headline_records_intervention_targets": 180,
+    "families_with_both_consistent_and_opposed": 0,
+    "families_with_documented_link": 173,
+    "headline_families_intervention_targets": 173,
+    "headline_records_intervention_targets": 179,
     "identity_guard_hits": 0,
     "link_targets": 8,
     "nonhuman_chembl_rows_set_aside": 0,
-    "records_incl_pathway_members": 191,
-    "records_with_documented_link": 180,
+    "records_incl_pathway_members": 192,
+    "records_with_documented_link": 179,
     "target_kinds": {
      "intervention_target": 8,
      "pathway_member": 1
@@ -220,12 +226,12 @@
       "records": 0
      },
      "intervention_target": {
-      "families": 1,
-      "records": 1
+      "families": 3,
+      "records": 3
      },
      "pathway_member": {
-      "families": 1,
-      "records": 1
+      "families": 3,
+      "records": 3
      },
      "readout_marker": {
       "families": 0,
@@ -235,24 +241,27 @@
     "cards_citing_need": [
      "F03_bumetanide_chloride_gradient"
     ],
+    "cells_L3_effect_in_wild_type_only": 0,
     "cells_L3_observed": 0,
     "cells_L3_observed_case_level_only": 0,
+    "cells_L3_observed_vs_wild_type_only": 0,
     "cells_L3_observed_wwox_system": 0,
     "cells_L4_observed": 0,
     "direction": "uncertain",
     "excluded_records_by_reason": {},
     "exploration_only": true,
     "families_consistent": 0,
-    "families_incl_pathway_members": 1,
+    "families_incl_pathway_members": 5,
     "families_opposed": 0,
-    "families_with_documented_link": 1,
-    "headline_families_intervention_targets": 1,
-    "headline_records_intervention_targets": 1,
+    "families_with_both_consistent_and_opposed": 0,
+    "families_with_documented_link": 3,
+    "headline_families_intervention_targets": 3,
+    "headline_records_intervention_targets": 3,
     "identity_guard_hits": 0,
     "link_targets": 1,
     "nonhuman_chembl_rows_set_aside": 0,
-    "records_incl_pathway_members": 1,
-    "records_with_documented_link": 1,
+    "records_incl_pathway_members": 5,
+    "records_with_documented_link": 3,
     "target_kinds": {
      "intervention_target": 1,
      "pathway_member": 1
@@ -271,12 +280,12 @@
       "records": 444
      },
      "intervention_target": {
-      "families": 50,
-      "records": 50
+      "families": 81,
+      "records": 81
      },
      "pathway_member": {
-      "families": 30,
-      "records": 30
+      "families": 36,
+      "records": 36
      },
      "readout_marker": {
       "families": 0,
@@ -286,26 +295,27 @@
     "cards_citing_need": [
      "G01_lithium_gsk3"
     ],
+    "cells_L3_effect_in_wild_type_only": 0,
     "cells_L3_observed": 0,
     "cells_L3_observed_case_level_only": 0,
+    "cells_L3_observed_vs_wild_type_only": 0,
     "cells_L3_observed_wwox_system": 0,
     "cells_L4_observed": 0,
     "direction": "uncertain",
-    "excluded_records_by_reason": {
-     "source_artefact": 1
-    },
+    "excluded_records_by_reason": {},
     "exploration_only": true,
     "families_consistent": 0,
-    "families_incl_pathway_members": 53,
+    "families_incl_pathway_members": 85,
     "families_opposed": 0,
-    "families_with_documented_link": 50,
-    "headline_families_intervention_targets": 50,
-    "headline_records_intervention_targets": 50,
+    "families_with_both_consistent_and_opposed": 0,
+    "families_with_documented_link": 81,
+    "headline_families_intervention_targets": 81,
+    "headline_records_intervention_targets": 81,
     "identity_guard_hits": 0,
     "link_targets": 1,
     "nonhuman_chembl_rows_set_aside": 0,
-    "records_incl_pathway_members": 53,
-    "records_with_documented_link": 50,
+    "records_incl_pathway_members": 85,
+    "records_with_documented_link": 81,
     "target_kinds": {
      "effector_constraint": 1,
      "intervention_target": 1,
@@ -325,43 +335,45 @@
       "records": 0
      },
      "intervention_target": {
-      "families": 11,
-      "records": 11
+      "families": 12,
+      "records": 12
      },
      "pathway_member": {
       "families": 0,
       "records": 0
      },
      "readout_marker": {
-      "families": 162,
-      "records": 169
+      "families": 165,
+      "records": 172
      }
     },
     "cards_citing_need": [
      "F03_bumetanide_chloride_gradient",
      "EB-VGB-01"
     ],
+    "cells_L3_effect_in_wild_type_only": 0,
     "cells_L3_observed": 0,
     "cells_L3_observed_case_level_only": 0,
+    "cells_L3_observed_vs_wild_type_only": 0,
     "cells_L3_observed_wwox_system": 0,
     "cells_L4_observed": 0,
     "direction": "uncertain",
     "excluded_records_by_reason": {
-     "placeholder": 1,
-     "source_artefact": 77
+     "placeholder": 1
     },
     "exploration_only": true,
     "families_consistent": 0,
-    "families_incl_pathway_members": 11,
+    "families_incl_pathway_members": 12,
     "families_opposed": 0,
-    "families_with_documented_link": 11,
-    "headline_families_intervention_targets": 11,
-    "headline_records_intervention_targets": 11,
+    "families_with_both_consistent_and_opposed": 0,
+    "families_with_documented_link": 12,
+    "headline_families_intervention_targets": 12,
+    "headline_records_intervention_targets": 12,
     "identity_guard_hits": 0,
     "link_targets": 1,
     "nonhuman_chembl_rows_set_aside": 2,
-    "records_incl_pathway_members": 11,
-    "records_with_documented_link": 11,
+    "records_incl_pathway_members": 12,
+    "records_with_documented_link": 12,
     "target_kinds": {
      "intervention_target": 1,
      "readout_marker": 6
@@ -380,8 +392,8 @@
       "records": 0
      },
      "intervention_target": {
-      "families": 9,
-      "records": 9
+      "families": 12,
+      "records": 12
      },
      "pathway_member": {
       "families": 2,
@@ -395,27 +407,29 @@
     "cards_citing_need": [
      "E01_isr_modulators"
     ],
+    "cells_L3_effect_in_wild_type_only": 0,
     "cells_L3_observed": 0,
     "cells_L3_observed_case_level_only": 0,
+    "cells_L3_observed_vs_wild_type_only": 0,
     "cells_L3_observed_wwox_system": 0,
     "cells_L4_observed": 0,
     "direction": "uncertain",
     "excluded_records_by_reason": {
-     "placeholder": 1,
-     "source_artefact": 30
+     "placeholder": 1
     },
     "exploration_only": true,
     "families_consistent": 0,
-    "families_incl_pathway_members": 11,
+    "families_incl_pathway_members": 14,
     "families_opposed": 0,
-    "families_with_documented_link": 9,
-    "headline_families_intervention_targets": 9,
-    "headline_records_intervention_targets": 9,
+    "families_with_both_consistent_and_opposed": 0,
+    "families_with_documented_link": 12,
+    "headline_families_intervention_targets": 12,
+    "headline_records_intervention_targets": 12,
     "identity_guard_hits": 0,
     "link_targets": 7,
     "nonhuman_chembl_rows_set_aside": 0,
-    "records_incl_pathway_members": 11,
-    "records_with_documented_link": 9,
+    "records_incl_pathway_members": 14,
+    "records_with_documented_link": 12,
     "target_kinds": {
      "intervention_target": 7,
      "pathway_member": 2,
@@ -435,8 +449,8 @@
       "records": 0
      },
      "intervention_target": {
-      "families": 6,
-      "records": 6
+      "families": 10,
+      "records": 10
      },
      "pathway_member": {
       "families": 0,
@@ -450,24 +464,27 @@
     "cards_citing_need": [
      "E02_ldh_inhibition"
     ],
+    "cells_L3_effect_in_wild_type_only": 0,
     "cells_L3_observed": 0,
     "cells_L3_observed_case_level_only": 0,
+    "cells_L3_observed_vs_wild_type_only": 0,
     "cells_L3_observed_wwox_system": 0,
     "cells_L4_observed": 0,
     "direction": "uncertain",
     "excluded_records_by_reason": {},
     "exploration_only": true,
     "families_consistent": 0,
-    "families_incl_pathway_members": 6,
+    "families_incl_pathway_members": 10,
     "families_opposed": 0,
-    "families_with_documented_link": 6,
-    "headline_families_intervention_targets": 6,
-    "headline_records_intervention_targets": 6,
+    "families_with_both_consistent_and_opposed": 0,
+    "families_with_documented_link": 10,
+    "headline_families_intervention_targets": 10,
+    "headline_records_intervention_targets": 10,
     "identity_guard_hits": 0,
     "link_targets": 4,
     "nonhuman_chembl_rows_set_aside": 0,
-    "records_incl_pathway_members": 6,
-    "records_with_documented_link": 6,
+    "records_incl_pathway_members": 10,
+    "records_with_documented_link": 10,
     "target_kinds": {
      "identity_guard": 1,
      "intervention_target": 4
@@ -494,15 +511,17 @@
       "records": 5
      },
      "readout_marker": {
-      "families": 6,
-      "records": 6
+      "families": 0,
+      "records": 0
      }
     },
     "cards_citing_need": [
      "E02_ldh_inhibition"
     ],
+    "cells_L3_effect_in_wild_type_only": 0,
     "cells_L3_observed": 0,
     "cells_L3_observed_case_level_only": 0,
+    "cells_L3_observed_vs_wild_type_only": 0,
     "cells_L3_observed_wwox_system": 0,
     "cells_L4_observed": 0,
     "direction": "uncertain",
@@ -511,6 +530,7 @@
     "families_consistent": 0,
     "families_incl_pathway_members": 5,
     "families_opposed": 0,
+    "families_with_both_consistent_and_opposed": 0,
     "families_with_documented_link": 0,
     "headline_families_intervention_targets": 0,
     "headline_records_intervention_targets": 0,
@@ -538,8 +558,8 @@
       "records": 0
      },
      "intervention_target": {
-      "families": 161,
-      "records": 162
+      "families": 184,
+      "records": 185
      },
      "pathway_member": {
       "families": 3,
@@ -553,8 +573,10 @@
     "cards_citing_need": [
      "EB-MTOR-AX-01"
     ],
+    "cells_L3_effect_in_wild_type_only": 0,
     "cells_L3_observed": 0,
     "cells_L3_observed_case_level_only": 0,
+    "cells_L3_observed_vs_wild_type_only": 0,
     "cells_L3_observed_wwox_system": 0,
     "cells_L4_observed": 0,
     "direction": "uncertain",
@@ -563,16 +585,17 @@
     },
     "exploration_only": true,
     "families_consistent": 0,
-    "families_incl_pathway_members": 161,
+    "families_incl_pathway_members": 184,
     "families_opposed": 0,
-    "families_with_documented_link": 161,
-    "headline_families_intervention_targets": 161,
-    "headline_records_intervention_targets": 162,
+    "families_with_both_consistent_and_opposed": 0,
+    "families_with_documented_link": 184,
+    "headline_families_intervention_targets": 184,
+    "headline_records_intervention_targets": 185,
     "identity_guard_hits": 0,
     "link_targets": 1,
     "nonhuman_chembl_rows_set_aside": 0,
-    "records_incl_pathway_members": 162,
-    "records_with_documented_link": 162,
+    "records_incl_pathway_members": 185,
+    "records_with_documented_link": 185,
     "target_kinds": {
      "intervention_target": 1,
      "pathway_member": 1,
@@ -607,8 +630,10 @@
     "cards_citing_need": [
      "D01_a51"
     ],
+    "cells_L3_effect_in_wild_type_only": 0,
     "cells_L3_observed": 0,
     "cells_L3_observed_case_level_only": 0,
+    "cells_L3_observed_vs_wild_type_only": 0,
     "cells_L3_observed_wwox_system": 0,
     "cells_L4_observed": 0,
     "direction": "uncertain",
@@ -619,6 +644,7 @@
     "families_consistent": 0,
     "families_incl_pathway_members": 70,
     "families_opposed": 0,
+    "families_with_both_consistent_and_opposed": 0,
     "families_with_documented_link": 0,
     "headline_families_intervention_targets": 0,
     "headline_records_intervention_targets": 0,
@@ -645,23 +671,25 @@
       "records": 0
      },
      "intervention_target": {
-      "families": 127,
-      "records": 137
+      "families": 204,
+      "records": 214
      },
      "pathway_member": {
       "families": 0,
       "records": 0
      },
      "readout_marker": {
-      "families": 96,
-      "records": 103
+      "families": 111,
+      "records": 118
      }
     },
     "cards_citing_need": [
      "F02_myelination_activity_sign"
     ],
+    "cells_L3_effect_in_wild_type_only": 0,
     "cells_L3_observed": 0,
     "cells_L3_observed_case_level_only": 0,
+    "cells_L3_observed_vs_wild_type_only": 0,
     "cells_L3_observed_wwox_system": 0,
     "cells_L4_observed": 0,
     "direction": "restore",
@@ -670,16 +698,17 @@
     },
     "exploration_only": false,
     "families_consistent": 0,
-    "families_incl_pathway_members": 127,
+    "families_incl_pathway_members": 204,
     "families_opposed": 0,
-    "families_with_documented_link": 127,
-    "headline_families_intervention_targets": 127,
-    "headline_records_intervention_targets": 137,
+    "families_with_both_consistent_and_opposed": 0,
+    "families_with_documented_link": 204,
+    "headline_families_intervention_targets": 204,
+    "headline_records_intervention_targets": 214,
     "identity_guard_hits": 0,
     "link_targets": 1,
     "nonhuman_chembl_rows_set_aside": 0,
-    "records_incl_pathway_members": 137,
-    "records_with_documented_link": 137,
+    "records_incl_pathway_members": 214,
+    "records_with_documented_link": 214,
     "target_kinds": {
      "intervention_target": 1,
      "readout_marker": 5
@@ -698,8 +727,8 @@
       "records": 0
      },
      "intervention_target": {
-      "families": 404,
-      "records": 414
+      "families": 467,
+      "records": 477
      },
      "pathway_member": {
       "families": 0,
@@ -711,8 +740,10 @@
      }
     },
     "cards_citing_need": [],
+    "cells_L3_effect_in_wild_type_only": 0,
     "cells_L3_observed": 0,
     "cells_L3_observed_case_level_only": 0,
+    "cells_L3_observed_vs_wild_type_only": 0,
     "cells_L3_observed_wwox_system": 0,
     "cells_L4_observed": 0,
     "direction": "uncertain",
@@ -721,16 +752,17 @@
     },
     "exploration_only": true,
     "families_consistent": 0,
-    "families_incl_pathway_members": 404,
+    "families_incl_pathway_members": 467,
     "families_opposed": 0,
-    "families_with_documented_link": 404,
-    "headline_families_intervention_targets": 404,
-    "headline_records_intervention_targets": 414,
+    "families_with_both_consistent_and_opposed": 0,
+    "families_with_documented_link": 467,
+    "headline_families_intervention_targets": 467,
+    "headline_records_intervention_targets": 477,
     "identity_guard_hits": 0,
     "link_targets": 7,
     "nonhuman_chembl_rows_set_aside": 0,
-    "records_incl_pathway_members": 414,
-    "records_with_documented_link": 414,
+    "records_incl_pathway_members": 477,
+    "records_with_documented_link": 477,
     "target_kinds": {
      "intervention_target": 7,
      "readout_marker": 3
@@ -757,8 +789,8 @@
       "records": 146
      },
      "readout_marker": {
-      "families": 20,
-      "records": 20
+      "families": 22,
+      "records": 22
      }
     },
     "cards_citing_need": [
@@ -766,8 +798,10 @@
      "E04_ketogenic_lactate_axis",
      "EB-KD-01"
     ],
+    "cells_L3_effect_in_wild_type_only": 0,
     "cells_L3_observed": 0,
     "cells_L3_observed_case_level_only": 0,
+    "cells_L3_observed_vs_wild_type_only": 0,
     "cells_L3_observed_wwox_system": 0,
     "cells_L4_observed": 0,
     "direction": "uncertain",
@@ -779,6 +813,7 @@
     "families_consistent": 0,
     "families_incl_pathway_members": 153,
     "families_opposed": 0,
+    "families_with_both_consistent_and_opposed": 0,
     "families_with_documented_link": 8,
     "headline_families_intervention_targets": 8,
     "headline_records_intervention_targets": 8,
@@ -819,8 +854,10 @@
      }
     },
     "cards_citing_need": [],
+    "cells_L3_effect_in_wild_type_only": 0,
     "cells_L3_observed": 0,
     "cells_L3_observed_case_level_only": 0,
+    "cells_L3_observed_vs_wild_type_only": 0,
     "cells_L3_observed_wwox_system": 0,
     "cells_L4_observed": 0,
     "direction": "uncertain",
@@ -829,6 +866,7 @@
     "families_consistent": 0,
     "families_incl_pathway_members": 4,
     "families_opposed": 0,
+    "families_with_both_consistent_and_opposed": 0,
     "families_with_documented_link": 0,
     "headline_families_intervention_targets": 0,
     "headline_records_intervention_targets": 0,
@@ -854,8 +892,8 @@
       "records": 0
      },
      "intervention_target": {
-      "families": 52,
-      "records": 54
+      "families": 61,
+      "records": 63
      },
      "pathway_member": {
       "families": 0,
@@ -873,27 +911,29 @@
      "EB-HORM-AX-01",
      "EB-DEV-AX-01"
     ],
+    "cells_L3_effect_in_wild_type_only": 0,
     "cells_L3_observed": 4,
     "cells_L3_observed_case_level_only": 2,
+    "cells_L3_observed_vs_wild_type_only": 0,
     "cells_L3_observed_wwox_system": 2,
     "cells_L4_observed": 1,
     "direction": "down",
     "excluded_records_by_reason": {
-     "placeholder": 1,
-     "source_artefact": 77
+     "placeholder": 1
     },
     "exploration_only": false,
-    "families_consistent": 2,
-    "families_incl_pathway_members": 52,
+    "families_consistent": 4,
+    "families_incl_pathway_members": 61,
     "families_opposed": 0,
-    "families_with_documented_link": 52,
-    "headline_families_intervention_targets": 52,
-    "headline_records_intervention_targets": 54,
+    "families_with_both_consistent_and_opposed": 0,
+    "families_with_documented_link": 61,
+    "headline_families_intervention_targets": 61,
+    "headline_records_intervention_targets": 63,
     "identity_guard_hits": 0,
     "link_targets": 2,
     "nonhuman_chembl_rows_set_aside": 0,
-    "records_incl_pathway_members": 54,
-    "records_with_documented_link": 54,
+    "records_incl_pathway_members": 63,
+    "records_with_documented_link": 63,
     "target_kinds": {
      "intervention_target": 2
     },
@@ -927,8 +967,10 @@
      "C04_aav9_endpoint_families",
      "EB-GROWTH-AX-01"
     ],
+    "cells_L3_effect_in_wild_type_only": 0,
     "cells_L3_observed": 1,
     "cells_L3_observed_case_level_only": 0,
+    "cells_L3_observed_vs_wild_type_only": 0,
     "cells_L3_observed_wwox_system": 1,
     "cells_L4_observed": 1,
     "direction": "restore",
@@ -937,6 +979,7 @@
     "families_consistent": 0,
     "families_incl_pathway_members": 0,
     "families_opposed": 0,
+    "families_with_both_consistent_and_opposed": 0,
     "families_with_documented_link": 0,
     "headline_families_intervention_targets": 0,
     "headline_records_intervention_targets": 0,
@@ -960,8 +1003,8 @@
       "records": 0
      },
      "intervention_target": {
-      "families": 64,
-      "records": 66
+      "families": 65,
+      "records": 67
      },
      "pathway_member": {
       "families": 0,
@@ -975,8 +1018,10 @@
     "cards_citing_need": [
      "EB-ETX-01"
     ],
+    "cells_L3_effect_in_wild_type_only": 0,
     "cells_L3_observed": 1,
     "cells_L3_observed_case_level_only": 0,
+    "cells_L3_observed_vs_wild_type_only": 0,
     "cells_L3_observed_wwox_system": 1,
     "cells_L4_observed": 0,
     "direction": "down",
@@ -984,17 +1029,18 @@
      "placeholder": 1
     },
     "exploration_only": false,
-    "families_consistent": 35,
-    "families_incl_pathway_members": 64,
+    "families_consistent": 36,
+    "families_incl_pathway_members": 65,
     "families_opposed": 0,
-    "families_with_documented_link": 64,
-    "headline_families_intervention_targets": 64,
-    "headline_records_intervention_targets": 66,
+    "families_with_both_consistent_and_opposed": 0,
+    "families_with_documented_link": 65,
+    "headline_families_intervention_targets": 65,
+    "headline_records_intervention_targets": 67,
     "identity_guard_hits": 0,
     "link_targets": 3,
     "nonhuman_chembl_rows_set_aside": 0,
-    "records_incl_pathway_members": 66,
-    "records_with_documented_link": 66,
+    "records_incl_pathway_members": 67,
+    "records_with_documented_link": 67,
     "target_kinds": {
      "intervention_target": 3
     },
@@ -1012,43 +1058,45 @@
       "records": 0
      },
      "intervention_target": {
-      "families": 3,
-      "records": 3
+      "families": 12,
+      "records": 12
      },
      "pathway_member": {
-      "families": 41,
-      "records": 41
+      "families": 40,
+      "records": 40
      },
      "readout_marker": {
-      "families": 5,
-      "records": 5
+      "families": 6,
+      "records": 6
      }
     },
     "cards_citing_need": [
      "D02_wnt_tankyrase",
      "D01_a51"
     ],
+    "cells_L3_effect_in_wild_type_only": 0,
     "cells_L3_observed": 0,
     "cells_L3_observed_case_level_only": 0,
+    "cells_L3_observed_vs_wild_type_only": 0,
     "cells_L3_observed_wwox_system": 0,
     "cells_L4_observed": 0,
     "direction": "uncertain",
     "excluded_records_by_reason": {
-     "placeholder": 1,
-     "source_artefact": 30
+     "placeholder": 1
     },
     "exploration_only": true,
     "families_consistent": 0,
-    "families_incl_pathway_members": 44,
+    "families_incl_pathway_members": 52,
     "families_opposed": 0,
-    "families_with_documented_link": 3,
-    "headline_families_intervention_targets": 3,
-    "headline_records_intervention_targets": 3,
+    "families_with_both_consistent_and_opposed": 0,
+    "families_with_documented_link": 12,
+    "headline_families_intervention_targets": 12,
+    "headline_records_intervention_targets": 12,
     "identity_guard_hits": 0,
     "link_targets": 2,
     "nonhuman_chembl_rows_set_aside": 0,
-    "records_incl_pathway_members": 44,
-    "records_with_documented_link": 3,
+    "records_incl_pathway_members": 52,
+    "records_with_documented_link": 12,
     "target_kinds": {
      "identity_guard": 1,
      "intervention_target": 2,
@@ -1084,8 +1132,10 @@
     "cards_citing_need": [
      "C03_crispra_boost"
     ],
+    "cells_L3_effect_in_wild_type_only": 0,
     "cells_L3_observed": 0,
     "cells_L3_observed_case_level_only": 0,
+    "cells_L3_observed_vs_wild_type_only": 0,
     "cells_L3_observed_wwox_system": 0,
     "cells_L4_observed": 0,
     "direction": "up",
@@ -1096,6 +1146,7 @@
     "families_consistent": 0,
     "families_incl_pathway_members": 3,
     "families_opposed": 0,
+    "families_with_both_consistent_and_opposed": 0,
     "families_with_documented_link": 3,
     "headline_families_intervention_targets": 3,
     "headline_records_intervention_targets": 3,
@@ -1137,8 +1188,10 @@
      "C01_aav9_wwox",
      "C04_aav9_endpoint_families"
     ],
+    "cells_L3_effect_in_wild_type_only": 0,
     "cells_L3_observed": 2,
     "cells_L3_observed_case_level_only": 0,
+    "cells_L3_observed_vs_wild_type_only": 0,
     "cells_L3_observed_wwox_system": 2,
     "cells_L4_observed": 2,
     "direction": "restore",
@@ -1149,6 +1202,7 @@
     "families_consistent": 0,
     "families_incl_pathway_members": 3,
     "families_opposed": 0,
+    "families_with_both_consistent_and_opposed": 0,
     "families_with_documented_link": 3,
     "headline_families_intervention_targets": 3,
     "headline_records_intervention_targets": 3,
@@ -1193,8 +1247,10 @@
      "A04_er_proteostasis_regulators",
      "A05_hsp70_axis"
     ],
+    "cells_L3_effect_in_wild_type_only": 0,
     "cells_L3_observed": 0,
     "cells_L3_observed_case_level_only": 0,
+    "cells_L3_observed_vs_wild_type_only": 0,
     "cells_L3_observed_wwox_system": 0,
     "cells_L4_observed": 0,
     "direction": "up",
@@ -1205,6 +1261,7 @@
     "families_consistent": 0,
     "families_incl_pathway_members": 45,
     "families_opposed": 0,
+    "families_with_both_consistent_and_opposed": 0,
     "families_with_documented_link": 3,
     "headline_families_intervention_targets": 3,
     "headline_records_intervention_targets": 3,
@@ -1247,8 +1304,10 @@
      "B01_amlexanox",
      "B02_readthrough_class"
     ],
+    "cells_L3_effect_in_wild_type_only": 0,
     "cells_L3_observed": 0,
     "cells_L3_observed_case_level_only": 0,
+    "cells_L3_observed_vs_wild_type_only": 0,
     "cells_L3_observed_wwox_system": 0,
     "cells_L4_observed": 0,
     "direction": "restore",
@@ -1259,6 +1318,7 @@
     "families_consistent": 0,
     "families_incl_pathway_members": 3,
     "families_opposed": 0,
+    "families_with_both_consistent_and_opposed": 0,
     "families_with_documented_link": 3,
     "headline_families_intervention_targets": 3,
     "headline_records_intervention_targets": 3,
@@ -1299,8 +1359,10 @@
     "cards_citing_need": [
      "C02_splice_aso"
     ],
+    "cells_L3_effect_in_wild_type_only": 0,
     "cells_L3_observed": 0,
     "cells_L3_observed_case_level_only": 0,
+    "cells_L3_observed_vs_wild_type_only": 0,
     "cells_L3_observed_wwox_system": 0,
     "cells_L4_observed": 0,
     "direction": "restore",
@@ -1311,6 +1373,7 @@
     "families_consistent": 0,
     "families_incl_pathway_members": 3,
     "families_opposed": 0,
+    "families_with_both_consistent_and_opposed": 0,
     "families_with_documented_link": 3,
     "headline_families_intervention_targets": 3,
     "headline_records_intervention_targets": 3,
@@ -1336,10 +1399,11 @@
   "listed_by_evidence_kind": {
    "case_report_uninformative": 3,
    "case_report_wwox_clinical": 8,
-   "control_arm_same_experiment": 2,
+   "effect_in_wild_type_arm": 2,
+   "genotype_comparison_vs_wild_type": 5,
    "label_statement": 1,
    "out_of_scope_endpoint": 2,
-   "readout_in_wwox_system": 22,
+   "readout_in_wwox_system": 17,
    "readout_other_disease": 23,
    "safety_signal": 2,
    "target_engagement_assay": 9
@@ -1364,42 +1428,51 @@
    "exploration_candidate",
    "incomplete_or_failed_query",
    "insufficient_data",
+   "mixed_consistent_and_opposed_actions",
    "no_catalogue_link_found",
    "opposite_mechanism",
    "source_queried_without_result"
   ],
   "by_disposition": {
-   "consistent_mechanism_candidate": 102,
-   "exploration_candidate": 216,
-   "insufficient_data": 346,
+   "consistent_mechanism_candidate": 103,
+   "exploration_candidate": 220,
+   "insufficient_data": 356,
    "no_catalogue_link_found": 7,
    "opposite_mechanism": 2,
    "source_queried_without_result": 2
   },
   "by_disposition_cells": {
-   "consistent_mechanism_candidate": 102,
-   "exploration_candidate": 216,
-   "insufficient_data": 346,
+   "consistent_mechanism_candidate": 103,
+   "exploration_candidate": 220,
+   "insufficient_data": 356,
    "no_catalogue_link_found": 7,
    "opposite_mechanism": 2,
    "source_queried_without_result": 2
   },
   "by_disposition_distinct_families_or_rows": {
-   "consistent_mechanism_candidate": 102,
-   "exploration_candidate": 208,
-   "insufficient_data": 307,
+   "consistent_mechanism_candidate": 103,
+   "exploration_candidate": 212,
+   "insufficient_data": 317,
    "no_catalogue_link_found": 6,
    "opposite_mechanism": 2,
    "source_queried_without_result": 1
   },
-  "exploration_flagged": 334,
+  "exploration_flagged": 338,
   "pairs_not_prioritised": {
-   "not_prioritised_no_card_no_coherence_no_approval_or_access": 769
+   "not_prioritised_no_card_no_coherence_no_approval_or_access": 980
   },
-  "records": 675
+  "records": 690
  },
  "schema": "legend.wwox.coverage/1",
- "source_state_vocabulary": "OK | STALE_EXPORT | STALE_AFTER_FAILED_REFRESH | PARTIAL | FAILED | INCOMPLETE | NOT_FETCHED; hard problems (FAILED, INCOMPLETE, NOT_FETCHED) of ANY source turn dispositions into incomplete_or_failed_query; stale states add a caveat to every absence-type result",
+ "search_completeness": {
+  "accessibility_or_status_sources_in_hard_state": [],
+  "hard_problem_sources_by_role": {},
+  "mechanism_or_identity_sources_in_hard_state": [],
+  "overall": "complete",
+  "records_whose_absence_conclusion_is_withheld": 0,
+  "rule": "incompleteness of the search is visible on every record; only an absence that depends on a missing mechanism/identity source is withheld; positive evidence from a working source and accessibility errors do not blank the module"
+ },
+ "source_state_vocabulary": "OK | STALE_EXPORT | STALE_AFTER_FAILED_REFRESH | PARTIAL | FAILED | INCOMPLETE | NOT_FETCHED; a hard problem (FAILED, INCOMPLETE, NOT_FETCHED) of a mechanism or identity source turns only the ABSENCE conclusions into incomplete_or_failed_query and flags every record (search_incompleteness); positive evidence from a working source is unchanged; a hard problem of an accessibility/status source only caveats access categories; stale states add a caveat to every absence-type result",
  "source_states": {
   "chembl": {
    "detail": null,
@@ -1412,6 +1485,10 @@
   "dsld": {
    "detail": "981 of 4697 bulk-list names probed (name-only evidence); affects access categories only",
    "state": "PARTIAL"
+  },
+  "gtopdb": {
+   "detail": null,
+   "state": "OK"
   },
   "matrix": {
    "detail": null,

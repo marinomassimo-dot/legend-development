@@ -70,8 +70,8 @@ class RealData(unittest.TestCase):
 
     def test_priority_counts_equal_sum_of_dispositions(self):
         self.assertEqual(sum(d["n"] for d in self.P["dispositions"]), len(self.pr["priorities"]))
-        self.assertEqual(len(self.P["dispositions"]), 7)
-        self.assertEqual(len({d["id"] for d in self.P["dispositions"]}), 7)
+        self.assertEqual(len(self.P["dispositions"]), 8)   # 7 + mixed_consistent_and_opposed_actions
+        self.assertEqual(len({d["id"] for d in self.P["dispositions"]}), 8)
         got = sum(1 for p in self.P["pairs"] if "p" in p)
         self.assertEqual(got, len(self.pr["priorities"]))
         self.assertEqual(len(self.P["pairs"]), len(self.cm["cells"]))
@@ -138,7 +138,7 @@ class RealData(unittest.TestCase):
         self.assertNotRegex(self.page, r"@import|url\(\s*https?:")
         self.assertNotIn("<link ", self.page)
         hosts = set(re.findall(r'href="https?://([^/"]+)', self.page))
-        self.assertLessEqual(hosts, {"dgidb.org", "civicdb.org", "www.docm.info", "open.fda.gov", "huggingface.co", "www.ebi.ac.uk", "dsld.od.nih.gov", "pubmed.ncbi.nlm.nih.gov", "doi.org"} | {h for h in hosts if h.endswith(".nih.gov") or h.endswith("ebi.ac.uk") or h.endswith("docm.info")})
+        self.assertLessEqual(hosts, {"dgidb.org", "civicdb.org", "www.docm.info", "open.fda.gov", "huggingface.co", "www.ebi.ac.uk", "www.guidetopharmacology.org", "dsld.od.nih.gov", "pubmed.ncbi.nlm.nih.gov", "doi.org"} | {h for h in hosts if h.endswith(".nih.gov") or h.endswith("ebi.ac.uk") or h.endswith("docm.info")})
 
     def test_determinism(self):
         self.assertEqual(rv.build(DR), self.page)
@@ -259,7 +259,7 @@ class Browser(unittest.TestCase):
         d = self.dom()
         for disp in self.P["dispositions"]:
             self.assertRegex(d, rf'data-dn="{disp["id"]}"')
-        self.assertEqual(len(self.P["dispositions"]), 7)
+        self.assertEqual(len(self.P["dispositions"]), 8)   # 7 + mixed_consistent_and_opposed_actions
 
     def test_new_disposition_filter_and_stale_badge(self):
         ids = [d["id"] for d in self.P["dispositions"]]

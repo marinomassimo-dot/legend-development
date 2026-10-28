@@ -23,7 +23,13 @@ FOUR levels, never a score and never summed:
   L4 observed_recovery      an L3 assertion whose bridge comparison is OPPOSES_DISEASE_CHANGE, reading depth known, one dose arm at a time;
                             experimental and case-level kept apart (a technical comparison, not efficacy)
 Source states: OK | STALE_EXPORT (DGIdb 2024-06-10) | STALE_AFTER_FAILED_REFRESH | PARTIAL | FAILED | INCOMPLETE | NOT_FETCHED. A hard problem
-of ANY source makes every disposition incomplete_or_failed_query; a stale source caveats every absence-type result.
+of a source does NOT blank the module. Three things are kept apart: (1) positive evidence (a documented link, a consistent/opposed action, an
+observation) stays what it is, because a working source supports it; (2) the search as a whole is flagged incomplete on every record
+(`search_incompleteness`); (3) only an ABSENCE conclusion (no link found, no target row) that depends on the missing source becomes
+incomplete_or_failed_query. A source's role decides whether it can touch an absence conclusion (SOURCE_ROLES): an error on an accessibility
+source (openFDA NDC, DSLD) only caveats the access categories. A stale source caveats every absence-type result.
+Concordant and opposed actions on one need are both kept (L2 `mixed_consistent_and_opposed`, never summed into one sign).
+Observations against wild type only are not effects in the disease model: see observation_levels.
 
 Units: a coverage statement counts compound FAMILIES (ChEMBL records joined by parent link or InChIKey connectivity block;
 every source-only record is its own family, flagged as possibly duplicate when a name coincides, never merged). Each
@@ -54,10 +60,11 @@ DISPOSITIONS = {
     "consistent_mechanism_candidate": "direction-consistent action on an intervention target of a direction-evaluable need (a mechanism candidate, not a treatment)",
     "exploration_candidate": "a documented link to a need whose direction is unresolved (or an action with no stated sign): exploration only",
     "opposite_mechanism": "the stated action opposes the need's direction (and no consistent action is catalogued)",
+    "mixed_consistent_and_opposed_actions": "the same family has BOTH a direction-consistent and an opposed action on this need; both are listed with target, action and source and no sign is summed: not a favourable profile",
     "no_catalogue_link_found": "identity resolved and targets catalogued, none an intervention target of this need (a statement about the catalogue and its possibly stale sources, not about relevance)",
     "insufficient_data": "a link or an intervention exists but the sign, the identity or the observation needed to decide is missing",
     "source_queried_without_result": "the sources were queried and returned no target or mechanism row for this record",
-    "incomplete_or_failed_query": "a source is FAILED, INCOMPLETE or NOT_FETCHED: this is NOT a negative (a stale source adds a caveat instead)",
+    "incomplete_or_failed_query": "an ABSENCE conclusion (no link or no target row) that depends on a mechanism or identity source in a FAILED, INCOMPLETE or NOT_FETCHED state: NOT a negative. Positive evidence from a working source is not changed by it, and an accessibility-source error never produces it (a stale source adds a caveat instead)",
 }
 
 
@@ -96,6 +103,7 @@ def load_cards(dr: Path = DR) -> dict[str, dict]:
                 ass.append({"id": a["id"], "direction": a.get("direction"), "epistemic_status": a.get("epistemic_status"),
                             "reading_depth": a.get("reading_depth"), "scope": assertion_scope(a), "comparison": cmp_.get(a["id"], "UNRESOLVED"),
                             "species": a.get("context", {}).get("species"), "disease_context": a.get("context", {}).get("disease_id"),
+                                "genotype": a.get("context", {}).get("genotype"), "stage": a.get("context", {}).get("developmental_stage"),
                             "source": a.get("source"), "receipt": a.get("receipt"), "endpoint": a.get("endpoint")})
             out[stem] = {"card_id": stem, "dir": sub, "candidate": p.get("candidate", {}), "route": p.get("route"), "assertions": ass,
                          "endpoint_pursued": (c.get("p4_fields") or {}).get("endpoint_pursued"), "next_step": c.get("next_step"),
@@ -118,9 +126,25 @@ def card_attachments(card_links: Path, modalities: Path) -> tuple[dict, dict]:
 
 # ----------------------------------------------------------------------------- inputs
 PERT_COLS = ("card_id", "assertion_id", "need_id", "subject", "evidence_kind", "sign", "counts_L3", "counts_L4", "flags", "basis")
+OPTIONAL_PERT_COLS = ("comparator",)    # read when present: what the sign is measured AGAINST (untreated_same_genotype, wild_type_only, ...)
+# Evidence kinds and what each one MEANS. Only the first two are an effect in the disease model; the third and fourth are observations
+# against or in wild type and are never a rescue; the fifth is a pure reference arm.
+#   readout_in_wwox_system             result in the WWOX model: a WWOX-deficient system measured (treated vs untreated disease arm, or a dose arm)
+#   case_report_wwox_clinical          uncontrolled clinical report in a WWOX patient
+#   genotype_comparison_vs_wild_type   direct genotype comparison: the WWOX-deficient (treated) arm compared with wild type ONLY, no untreated disease arm
+#   effect_in_wild_type_arm            pharmacological effect of the drug in a wild-type or carrier (heterozygous) arm of the same experiment
+#   control_arm_same_experiment        reference or control arm without a drug effect of its own
 READOUT_KINDS = ("readout_in_wwox_system", "case_report_wwox_clinical")
+WT_COMPARISON_KIND = "genotype_comparison_vs_wild_type"
+WT_EFFECT_KIND = "effect_in_wild_type_arm"
 NOT_AN_OBSERVATION_KINDS = ("case_report_uninformative", "out_of_scope_endpoint", "control_arm_same_experiment")
 HARD_STATES = {"FAILED", "INCOMPLETE", "NOT_FETCHED"}
+# What a source can support. mechanism/identity sources decide whether a link or a target row EXISTS, so their failure can undermine an
+# absence conclusion. accessibility/status_context sources only tell how a substance can be obtained or its regulatory status: their failure
+# caveats access categories and never touches a mechanism or an absence of one. An unknown source is treated as mechanism (conservative).
+SOURCE_ROLES = {"chembl": "mechanism", "dgidb": "mechanism", "unichem": "identity", "matrix": "status_context", "openfda_ndc": "accessibility", "dsld": "accessibility"}
+MECHANISM_ROLES = ("mechanism", "identity")
+LINK_SOURCE_KEY = {"ChEMBL curated mechanism": "chembl", "DGIdb interaction": "dgidb"}
 STALE_STATES = {"STALE_EXPORT", "STALE_AFTER_FAILED_REFRESH"}
 TOOL_SUBJECTS = {"tool_no_catalogue_identity", "genetic_precedent_not_a_compound"}
 
@@ -131,6 +155,10 @@ def load_pertinence(path: Path) -> list[dict]:
         return []
     with open(p, encoding="utf-8", newline="") as fh:
         return [r for r in csv.DictReader(fh, delimiter="\t")]
+
+
+def source_roles_of(names) -> dict:
+    return {k: SOURCE_ROLES.get(k, "mechanism") for k in names}
 
 
 def effective_states(cstats: dict) -> dict:
@@ -167,6 +195,8 @@ def build(needs_path=rs.DEFAULT_NEEDS, catalog_dir: Path = cc.DEFAULT_DIR, dr: P
     stale_roles = sorted(f"{n}/{s}" for (n, s) in roles if n not in need_ids or s not in {t["symbol"].upper() for x in needs if x["id"] == n for t in x["targets"]})
     eff = effective_states(cstats)
     hard = sorted(k for k, v in eff.items() if v["state"] in HARD_STATES)
+    hard_mech = [k for k in hard if SOURCE_ROLES.get(k, "mechanism") in MECHANISM_ROLES]
+    hard_other = [k for k in hard if k not in hard_mech]
     stale = sorted(k for k, v in eff.items() if v["state"] in STALE_STATES)
     measure_next = json.loads((dr / "join/measure_next.json").read_text()) if (dr / "join/measure_next.json").exists() else []
 
@@ -242,7 +272,7 @@ def build(needs_path=rs.DEFAULT_NEEDS, catalog_dir: Path = cc.DEFAULT_DIR, dr: P
             targets_ = [(rid, "tool_subject")]
         for (rid, attach) in targets_:
             obs_by_cell[(rid, nid)].append(dict(a, card_id=cid, attachment=attach, kind=r["evidence_kind"], sign=r["sign"], counts_L3=r["counts_L3"] == "yes",
-                                               counts_L4=r["counts_L4"] == "yes", flags=r["flags"], pert_basis=r["basis"]))
+                                               counts_L4=r["counts_L4"] == "yes", flags=r["flags"], pert_basis=r["basis"], comparator=(r.get("comparator") or "")))
     # a card-cited need gets a cell for the card's own row even when no assertion is listed (so 'none in cards' is visible)
     cited_cells = {(rid, n) for cid, rl in card_rows.items() for (rid, _a) in rl for n, cs in need_cards.items() if cid in cs}
 
@@ -254,6 +284,9 @@ def build(needs_path=rs.DEFAULT_NEEDS, catalog_dir: Path = cc.DEFAULT_DIR, dr: P
     for rr in rows.values():
         if partial and rr["kind"] == "molecule_family":
             rr["access_caveat"] = "; ".join(partial) + "; supplement status is name-only, so unknown/unverified for supplements is not a negative"
+        if hard_other and rr["kind"] == "molecule_family":
+            rr["access_caveat"] = (rr.get("access_caveat", "") + "; " if rr.get("access_caveat") else "") + \
+                f"accessibility/status source(s) {hard_other} in a failed, truncated or never-fetched state: access categories may be incomplete (affects access only, not mechanism)"
     for rid in sorted(rows):
         r = rows[rid]
         for nid, need in need_by.items():
@@ -273,7 +306,7 @@ def build(needs_path=rs.DEFAULT_NEEDS, catalog_dir: Path = cc.DEFAULT_DIR, dr: P
             else:
                 if link:
                     st = "documented"
-                elif hard:
+                elif hard_mech:
                     st = "source_incomplete"
                 elif pw:
                     st = "pathway_member_only"
@@ -290,7 +323,9 @@ def build(needs_path=rs.DEFAULT_NEEDS, catalog_dir: Path = cc.DEFAULT_DIR, dr: P
                     L2 = {"state": "not_evaluable", "why": "need direction is 'uncertain': coherence cannot be evaluated; exploration only",
                           "actions_present": sorted({a["action_on_target"] for a in link})}
                 else:
-                    L2 = {"state": "coherent" if cons else ("opposed" if opp else ("direction_unresolved" if link else "none")),
+                    L2 = {"state": ("mixed_consistent_and_opposed" if cons and opp else "coherent" if cons else ("opposed" if opp else ("direction_unresolved" if link else "none"))),
+                          "consistent_actions": action_contexts(cons), "opposed_actions": action_contexts(opp),
+                          "signs_not_summed": True if cons and opp else None,
                           "consistent_associations": len(cons), "opposed_associations": len(opp),
                           "unresolved_associations": len([a for a in link if a["consistency"] in ("direction_unresolved", "not_evaluable")]),
                           "certainty_qualifiers": sorted({a["certainty_qualifier"] for a in cons + opp if a.get("certainty_qualifier")})}
@@ -338,21 +373,48 @@ def build(needs_path=rs.DEFAULT_NEEDS, catalog_dir: Path = cc.DEFAULT_DIR, dr: P
     return {"matrix": matrix, "priorities": priorities, "summary": summary, "associations": assoc_all}
 
 
+def action_contexts(assocs: list[dict]) -> list[dict]:
+    """The context of each action (target, action, source, record) so that consistent and opposed actions on one need can be read side by
+    side. Duplicates collapse; nothing is counted twice and no sign is combined."""
+    seen, out = set(), []
+    for a in sorted(assocs, key=lambda a: (a["target"], a["catalogue_id"], str(a["action_on_target"]), a["link_source"])):
+        key = (a["target"], a["action_on_target"], a["action_raw"], a["link_source"], a["catalogue_id"])
+        if key in seen:
+            continue
+        seen.add(key)
+        out.append({"target": a["target"], "action": a["action_on_target"], "action_raw": a["action_raw"], "link_source": a["link_source"],
+                    "record": a["catalogue_id"], "compound_record_name": a["compound"], "certainty_qualifier": a.get("certainty_qualifier")})
+    return out
+
+
 def observation_levels(obs: list[dict]) -> tuple[dict, dict]:
-    """L3 and L4 of one cell from its listed assertions. Rules: only readouts in a WWOX system or WWOX case reports count; an assertion
-    whose reading depth is UNKNOWN never reaches `observed_wwox_system`; uninformative case reports, control arms of the same experiment,
-    out-of-scope endpoints, unquantified readouts and listed-but-not-counted rows stay visible under `listed_not_counted`."""
-    counted_pool = [o for o in obs if o["kind"] in READOUT_KINDS and o["counts_L3"]]
+    """L3 and L4 of one cell from its listed assertions. The comparison an observation rests on decides what it means:
+      result in the WWOX model          readout_in_wwox_system, case_report_wwox_clinical: a WWOX-deficient system or patient measured
+                                        against its own untreated state (or a dose arm); the only kinds that reach observed_wwox_system / L4
+      direct genotype comparison        genotype_comparison_vs_wild_type: the WWOX-deficient (treated) arm compared with wild type ONLY,
+                                        no untreated disease arm; informative but not an effect against the disease change, never L4
+      effect in a wild-type arm         effect_in_wild_type_arm: what the drug does in wild-type or carrier animals of the same experiment;
+                                        not an effect in the disease model and not a rescue
+      reference or control              control_arm_same_experiment: reference arm without an effect of its own
+    A cell reads `observed_wwox_system` only when a result in the WWOX model is informative; otherwise the wild-type states
+    (`observed_vs_wild_type_only`, `effect_in_wild_type_only`) say what was actually seen. An assertion whose reading depth is UNKNOWN never
+    reaches an observed state (`observed_depth_unknown`). Uninformative case reports, out-of-scope endpoints, unquantified readouts and
+    listed-but-not-counted rows stay visible under `listed_not_counted`. Each observation keeps its subject row, comparator, endpoint,
+    stage, conditions, sign, reading depth and character (`observations`)."""
+    counted_pool = [o for o in obs if o["kind"] in READOUT_KINDS + (WT_COMPARISON_KIND,) and o["counts_L3"]]
     deep = [o for o in counted_pool if o["reading_depth"] != "UNKNOWN"]
     shallow = [o for o in counted_pool if o["reading_depth"] == "UNKNOWN"]
     wx = [o for o in deep if o["kind"] == "readout_in_wwox_system"]
     cl = [o for o in deep if o["kind"] == "case_report_wwox_clinical"]
+    gc = [o for o in deep if o["kind"] == WT_COMPARISON_KIND]
+    wta_all = [o for o in obs if o["kind"] == WT_EFFECT_KIND]
+    wta = [o for o in wta_all if o["reading_depth"] != "UNKNOWN"]
     oth = [o for o in obs if o["kind"] == "readout_other_disease"]
     te = [o for o in obs if o["kind"] == "target_engagement_assay"]
     saf = [o for o in obs if o["kind"] == "safety_signal"]
     lab = [o for o in obs if o["kind"] == "label_statement"]
     ctrl = [o for o in obs if o["kind"] == "control_arm_same_experiment"]
-    not_counted = [o for o in obs if o not in counted_pool and o["kind"] in READOUT_KINDS + ("case_report_uninformative", "out_of_scope_endpoint")]
+    not_counted = [o for o in obs if o not in counted_pool and o["kind"] in READOUT_KINDS + (WT_COMPARISON_KIND, "case_report_uninformative", "out_of_scope_endpoint")]
     sg = lambda L: dict(collections.Counter(o["sign"] for o in L))
     informative = lambda L: [o for o in L if o["sign"] not in ("null", "unresolved")]
     if wx and informative(wx):
@@ -363,6 +425,10 @@ def observation_levels(obs: list[dict]) -> tuple[dict, dict]:
         st = "observed_depth_unknown"
     elif wx or cl:
         st = "measured_null_only"
+    elif gc:
+        st = "observed_vs_wild_type_only"
+    elif wta:
+        st = "effect_in_wild_type_only"
     elif oth:
         st = "precedent_other_disease_only"
     elif te:
@@ -372,13 +438,29 @@ def observation_levels(obs: list[dict]) -> tuple[dict, dict]:
     else:
         st = "none_in_cards"
     scope_counts = dict(collections.Counter(("wwox_experimental" if o["kind"] == "readout_in_wwox_system" else "wwox_clinical_report") for o in wx + cl))
+    comparison_of = {"readout_in_wwox_system": "result_in_wwox_model", "case_report_wwox_clinical": "result_in_wwox_model", WT_COMPARISON_KIND: "direct_genotype_comparison_vs_wild_type_only",
+                     WT_EFFECT_KIND: "pharmacological_effect_in_wild_type_or_carrier_arm", "control_arm_same_experiment": "reference_or_control_arm"}
+    recorded = [o for o in obs if o["kind"] in comparison_of]
     L3 = {"by_scope": scope_counts, "measured_null_assertions": sum(1 for o in wx + cl if o["sign"] == "null"), "inference_assertions": 0,
-          "state": st, "signs_wwox_system_readouts": sg(wx), "signs_case_reports": sg(cl), "signs_depth_unknown_not_counted_as_observed": sg(shallow),
+          "state": st, "signs_wwox_system_readouts": sg(wx), "signs_case_reports": sg(cl),
+          "signs_direct_genotype_comparison_vs_wild_type_only": sg(gc), "signs_effect_in_wild_type_or_carrier_arms": sg(wta),
+          "signs_depth_unknown_not_counted_as_observed": sg(shallow),
           "signs_other_disease_precedent_not_observed_here": sg(oth), "signs_control_arms_of_the_same_experiment": sg(ctrl),
           "target_engagement_assays_not_readouts": len(te), "safety_signals_kept_apart": sg(saf), "label_statements_not_observations": len(lab),
           "listed_not_counted": sorted({f"{o['id']}:{o['kind']}" for o in not_counted}),
-          "assertion_ids": sorted({o["id"] for o in wx + cl}), "cards": sorted({o["card_id"] for o in obs}),
-          "flags": sorted({f for o in wx + cl + shallow for f in o["flags"].split(";") if f}),
+          "assertion_ids": sorted({o["id"] for o in wx + cl + gc}), "cards": sorted({o["card_id"] for o in obs}),
+          "assertion_ids_by_comparison": {"result_in_wwox_model": sorted({o["id"] for o in wx + cl}), "direct_genotype_comparison_vs_wild_type_only": sorted({o["id"] for o in gc}),
+                                          "pharmacological_effect_in_wild_type_or_carrier_arm": sorted({o["id"] for o in wta_all}),
+                                          "reference_or_control_arm": sorted({o["id"] for o in ctrl})},
+          "wild_type_only_note": ("comparison with wild type only, or an effect in a wild-type/carrier arm: informative, but NOT an effect in the disease model and NOT a rescue"
+                                  if (gc or wta_all) else None),
+          "observations": sorted(({"id": o["id"], "card": o["card_id"], "attached_as": o.get("attachment"), "meaning": comparison_of[o["kind"]], "evidence_kind": o["kind"], "sign": o["sign"],
+                                   "comparator": o.get("comparator") or "not_recorded", "endpoint": o.get("endpoint"), "stage_or_time": o.get("stage"), "genotype": o.get("genotype"),
+                                   "reading_depth": o.get("reading_depth"),
+                                   "character": ("clinical_uncontrolled_report" if o["kind"] == "case_report_wwox_clinical" else "experimental"),
+                                   "counted_in_L3": bool(o["counts_L3"]), "conditions": sorted(f for f in (o.get("flags") or "").split(";") if f)} for o in recorded),
+                                  key=lambda r: (r["id"], r["meaning"])),
+          "flags": sorted({f for o in wx + cl + gc + shallow for f in o["flags"].split(";") if f}),
           "pertinence": "endpoint-level: each assertion is listed for this need in assertion_pertinence.tsv; unlisted assertions are not counted and are flagged per cell as unassessed_assertions_on_card",
           "harm_and_benefit_are_not_pooled": True,
           "absence_note": "none_in_cards is not a negative: cards cover a few dozen interventions" if st == "none_in_cards" and not obs else None}
@@ -390,7 +472,7 @@ def observation_levels(obs: list[dict]) -> tuple[dict, dict]:
           "state": "observed_experimental" if exp else ("observed_case_level" if case else "none_in_record"),
           "assertion_ids": sorted(o["id"] for o in rec), "experimental_assertions": len(exp), "case_level_assertions": len(case),
           "endpoint_note": ("growth = body weight only (blood glucose was not changed)" if "growth=body_weight_only" in notes else None),
-          "definition": "WWOX-system assertion judged by the bridge as opposing the disease change, endpoint pertinent to the need, reading depth known, high-dose arm only for dose-arm designs; a technical comparison, not efficacy or safety. case_level = uncontrolled clinical report"}
+          "definition": "WWOX-system assertion judged by the bridge as opposing the disease change, endpoint pertinent to the need, reading depth known, high-dose arm only for dose-arm designs; a comparison with wild type only or an effect in a wild-type arm is never recovery; a technical comparison, not efficacy or safety. case_level = uncontrolled clinical report"}
     return L3, L4
 
 
@@ -419,12 +501,13 @@ def make_priorities(rows, cells, need_by, cards, card_rows, need_cards, eff, har
         L1, L2, L3, L4 = (c[k] for k in ("L1_documented_link", "L2_mechanistic_coherence", "L3_observed_effect", "L4_observed_recovery_in_wwox_system"))
         nd = rs.need_direction(need)
         qual = L2.get("certainty_qualifiers", []) if isinstance(L2, dict) else []
-        if hard:
-            disp, why = "incomplete_or_failed_query", f"catalogue source(s) {hard} in a failed, truncated or never-fetched state"
-        elif r["kind"] != "molecule_family":
+        if r["kind"] != "molecule_family":
             disp, why = "insufficient_data", "no catalogue identity (non-molecule modality, class-level card or tool subject): links to targets cannot be evaluated"
         elif L1["state"] == "documented":
-            if L2.get("state") == "coherent":
+            if L2.get("state") == "mixed_consistent_and_opposed":
+                disp, why = "mixed_consistent_and_opposed_actions", ("BOTH a direction-consistent and an opposed action are catalogued on this need (" + describe_actions(L2) +
+                                                                       "); the contexts differ and no sign is summed, so this profile is not favourable on the consistent action alone")
+            elif L2.get("state") == "coherent":
                 disp, why = "consistent_mechanism_candidate", "direction-consistent action on an intervention target with explicit coupling" + (f" [qualifier: {'; '.join(qual)}]" if qual else "")
             elif L2.get("state") == "opposed":
                 disp, why = "opposite_mechanism", "the stated action opposes the need's direction; no consistent action catalogued" + (f" [qualifier: {'; '.join(qual)}]" if qual else "")
@@ -440,6 +523,19 @@ def make_priorities(rows, cells, need_by, cards, card_rows, need_cards, eff, har
             disp, why = "no_catalogue_link_found", "by catalogued targets only: this family has target rows and none is an intervention target of this need"
             if card_ids:
                 why += "; a card cites it for this need through a mechanism the catalogue does not describe as a target (the card's rationale is not overridden)"
+        # source failure: positive evidence from a working source is kept; only an absence that rests on a missing mechanism/identity source is incomplete
+        hard_mech = [k for k in hard if SOURCE_ROLES.get(k, "mechanism") in MECHANISM_ROLES]
+        hard_other = [k for k in hard if k not in hard_mech]
+        absence_depends = bool(hard_mech) and r["kind"] == "molecule_family" and L1["state"] == "source_incomplete"
+        if absence_depends:
+            disp, why = "incomplete_or_failed_query", (f"no link was found, but mechanism/identity source(s) {hard_mech} are in a failed, truncated or never-fetched state: "
+                                                     "the absence cannot be concluded (not a negative)")
+        positive_on_hard = sorted({LINK_SOURCE_KEY.get(x, x) for x in L1.get("link_sources", [])} & set(hard)) if L1["state"] == "documented" else []
+        if positive_on_hard:
+            why += f"; caveat: the link rests on source(s) {positive_on_hard} whose retrieval is flagged incomplete"
+        if L3["state"] in ("observed_vs_wild_type_only", "effect_in_wild_type_only"):
+            why += ("; the listed observation is a comparison with wild type only" if L3["state"] == "observed_vs_wild_type_only" else
+                    "; the listed observation is the drug's effect in a wild-type or carrier arm") + ": not an effect in the disease model and not a rescue"
         if disp in ("no_catalogue_link_found", "source_queried_without_result") and L1.get("name_prefix_sibling_families_with_link_HINT_not_evidence"):
             why += "; other records with the same leading name word do link (salt/form families, separate identities, review hint only)"
         if disp in ("no_catalogue_link_found", "source_queried_without_result", "insufficient_data") and stale_note and r["kind"] == "molecule_family":
@@ -450,6 +546,12 @@ def make_priorities(rows, cells, need_by, cards, card_rows, need_cards, eff, har
             "row_id": rid, "name": r["name"], "kind": r["kind"], "need": nid, "need_direction": nd,
             "exploration_only": nd in ("uncertain", "modulate"), "disposition": disp, "disposition_reason": why,
             "source_caveats": stale_note,
+            "search_incompleteness": ({"overall_search_incomplete": True, "sources_in_hard_state": {k: SOURCE_ROLES.get(k, "mechanism") for k in hard},
+                                       "this_conclusion_depends_on_a_missing_source": absence_depends,
+                                       "effect": ("absence conclusion withheld" if absence_depends else
+                                                  "positive or identity-independent conclusion unchanged" + ("; access categories may be incomplete" if hard_other else ""))} if hard else None),
+            "actions": ({"consistent": c["L2_mechanistic_coherence"].get("consistent_actions", []), "opposed": c["L2_mechanistic_coherence"].get("opposed_actions", [])}
+                        if c["L2_mechanistic_coherence"].get("consistent_actions") or c["L2_mechanistic_coherence"].get("opposed_actions") else None),
             "levels": {k: c[k].get("state") for k in ("L1_documented_link", "L2_mechanistic_coherence", "L3_observed_effect", "L4_observed_recovery_in_wwox_system")},
             "certainty_qualifiers": qual,
             "criteria": {
@@ -457,6 +559,8 @@ def make_priorities(rows, cells, need_by, cards, card_rows, need_cards, eff, har
                                    "intervention_L3_state": L3["state"]},
                 "direction_mechanism": {"L2": L2.get("state"), "targets": L1.get("targets", []), "link_sources": L1.get("link_sources", [])},
                 "evidence_quality_independence": {"listed_pertinent_assertions": len(L3["assertion_ids"]), "signs": {"wwox_system": L3["signs_wwox_system_readouts"], "case_reports": L3["signs_case_reports"]},
+                                                  "signs_vs_wild_type_only_not_a_disease_model_effect": L3["signs_direct_genotype_comparison_vs_wild_type_only"],
+                                                  "signs_effect_in_wild_type_or_carrier_arm": L3["signs_effect_in_wild_type_or_carrier_arms"],
                                                   "reading_depths_in_cards": dict(collections.Counter(a["reading_depth"] for a in sel)),
                                                   "note": "shared sources are not independent confirmations; nothing is pooled; harm and benefit stay separate"},
                 "counter_evidence": {"need_counter_evidence_items": len(need["counter_evidence"]), "intervention_signs_harm": L3["safety_signals_kept_apart"],
@@ -477,8 +581,17 @@ def make_priorities(rows, cells, need_by, cards, card_rows, need_cards, eff, har
             "no_probability": "nothing here is a probability of benefit or cure", "priorities": out, "pairs_not_prioritised": dict(skipped)}
 
 
+def describe_actions(l2: dict) -> str:
+    f = lambda L: "; ".join(f"{x['target']} {x['action']} [{x['link_source']}, {x['record']}]" for x in L)
+    return f"consistent: {f(l2.get('consistent_actions', []))} | opposed: {f(l2.get('opposed_actions', []))}"
+
+
 def deepening(disp, c, nd, crs) -> list[str]:
     d = []
+    if disp == "mixed_consistent_and_opposed_actions":
+        d.append("resolve which target and action governs the quantity in the disease system before reading either action as supportive; no net sign is computed")
+    if c["L3_observed_effect"]["state"] in ("observed_vs_wild_type_only", "effect_in_wild_type_only"):
+        d.append("the only observation is against wild type or in a wild-type arm: a treated-versus-untreated arm of the WWOX-deficient system is the missing comparison")
     if nd in ("uncertain", "modulate"):
         d.append("resolve the sign of the need before reading any mechanism as supportive")
     if c["L4_observed_recovery_in_wwox_system"]["state"] == "none_in_record":
@@ -510,6 +623,17 @@ def pct(num, den, what) -> dict:
     return {"numerator": num, "denominator": den, "percent": round(100.0 * num / den, 1) if den else None, "what": what}
 
 
+def headline_by_relation(head: list) -> dict:
+    """Headline records by the strongest kind of statement behind them (never a quality score): a stated action from a curated source,
+    a stated action from another source, or a link whose source states no action (listing / association)."""
+    best = {}
+    for a in head:
+        r = 0 if (a["action_stated"] and a["relation_kind"] in rs.CURATED_KINDS) else 1 if a["action_stated"] else 2
+        best[a["catalogue_id"]] = min(best.get(a["catalogue_id"], 2), r)
+    names = {0: "action_stated_by_curated_source", 1: "action_stated_by_other_source_only", 2: "link_without_stated_action_only"}
+    return {names[k]: sum(1 for v in best.values() if v == k) for k in (0, 1, 2)}
+
+
 def make_summary(entries, idx, rows, cells, per_need, priorities, need_by, cards, need_cards, eff, hard, stale, cstats, stale_roles, stale_pert, missing_cards, assoc_all, pert, ass_index, counted, pathway) -> dict:
     fam_all = set(idx.family.values())
     chembl_fams = {idx.family[e["id"]] for e in entries if e["origin"].startswith("chembl")}
@@ -538,9 +662,12 @@ def make_summary(entries, idx, rows, cells, per_need, priorities, need_by, cards
                     "by_target_kind_records_families": by_kind,
                     "families_consistent": len({x["family"] for x in h if x["consistency"] == "consistent"}),
                     "families_opposed": len({x["family"] for x in h if x["consistency"] == "opposed"}),
+                    "families_with_both_consistent_and_opposed": len({x["family"] for x in h if x["consistency"] == "consistent"} & {x["family"] for x in h if x["consistency"] == "opposed"}),
                     "excluded_records_by_reason": dict(collections.Counter(reason_class(a) for a in {x["catalogue_id"]: x for x in a_all if x["excluded_from_counts"] and x["target_kind"] in (rs.LINK_KINDS | rs.PATHWAY_KINDS)}.values())),
                     "identity_guard_hits": len(per_need[nid]["identity_guard_hits"]), "nonhuman_chembl_rows_set_aside": per_need[nid]["nonhuman_chembl_rows_set_aside"],
                     "cells_L3_observed_wwox_system": sum(1 for c in cs if c["L3_observed_effect"]["state"] == "observed_wwox_system"),
+                    "cells_L3_observed_vs_wild_type_only": sum(1 for c in cs if c["L3_observed_effect"]["state"] == "observed_vs_wild_type_only"),
+                    "cells_L3_effect_in_wild_type_only": sum(1 for c in cs if c["L3_observed_effect"]["state"] == "effect_in_wild_type_only"),
                     "cells_L3_observed_case_level_only": sum(1 for c in cs if c["L3_observed_effect"]["state"] == "observed_case_level_only"),
                     "cells_L4_observed": sum(1 for c in cs if c["L4_observed_recovery_in_wwox_system"]["state"] != "none_in_record"),
                     "cards_citing_need": need_cards[nid], "wwox_system_observations": sum(1 for o in n["observed"] if o["evidence_scope"] == "WWOX_EXPERIMENT_IN_DEE_SYSTEM")}
@@ -567,7 +694,12 @@ def make_summary(entries, idx, rows, cells, per_need, priorities, need_by, cards
                             "single WWOX-system readouts without recovery status. Compound-target links are source statements, not evidence of effect."),
         "access_caveats": [f"{k}: {v['detail']}" for k, v in eff.items() if v["state"] == "PARTIAL"],
         "source_states": {k: {"state": v["state"], "detail": v["detail"]} for k, v in eff.items()},
-        "source_state_vocabulary": "OK | STALE_EXPORT | STALE_AFTER_FAILED_REFRESH | PARTIAL | FAILED | INCOMPLETE | NOT_FETCHED; hard problems (FAILED, INCOMPLETE, NOT_FETCHED) of ANY source turn dispositions into incomplete_or_failed_query; stale states add a caveat to every absence-type result",
+        "source_state_vocabulary": "OK | STALE_EXPORT | STALE_AFTER_FAILED_REFRESH | PARTIAL | FAILED | INCOMPLETE | NOT_FETCHED; a hard problem (FAILED, INCOMPLETE, NOT_FETCHED) of a mechanism or identity source turns only the ABSENCE conclusions into incomplete_or_failed_query and flags every record (search_incompleteness); positive evidence from a working source is unchanged; a hard problem of an accessibility/status source only caveats access categories; stale states add a caveat to every absence-type result",
+        "search_completeness": {"overall": "incomplete" if hard else "complete", "hard_problem_sources_by_role": source_roles_of(hard),
+                                "mechanism_or_identity_sources_in_hard_state": [k for k in hard if SOURCE_ROLES.get(k, "mechanism") in MECHANISM_ROLES],
+                                "accessibility_or_status_sources_in_hard_state": [k for k in hard if SOURCE_ROLES.get(k, "mechanism") not in MECHANISM_ROLES],
+                                "records_whose_absence_conclusion_is_withheld": disp.get("incomplete_or_failed_query", 0),
+                                "rule": "incompleteness of the search is visible on every record; only an absence that depends on a missing mechanism/identity source is withheld; positive evidence from a working source and accessibility errors do not blank the module"},
         "inputs_status": {"hard_problem_sources": hard, "stale_sources": stale, "stale_role_rows": stale_roles, "stale_pertinence_rows": stale_pert,
                           "cards_cited_by_needs_but_missing": missing_cards},
         "needs": {"count": len(need_by), "direction_evaluable": sum(1 for n in need_by.values() if rs.need_direction(n) not in ("uncertain", "modulate")),
@@ -586,6 +718,7 @@ def make_summary(entries, idx, rows, cells, per_need, priorities, need_by, cards
             "pct_records_incl_pathway_members": pct(len(wide_rec), len(entries), "records with a headline OR pathway-member link / all catalogue records"),
             "excluded_rows": {"records": len({a["catalogue_id"] for a in excl}), "by_reason": dict(collections.Counter(reason_class(a) for a in {(a["catalogue_id"], a["need"], a["target"]): a for a in excl}.values())),
                               "alias_risk_rows_unresolved": [{"catalogue_id": c, "compound": n, "gene": g} for c, n, g in alias_rows]},
+            "headline_records_by_strongest_relation": headline_by_relation(head),
             "touched_headline_families_with_a_name_twin_not_merged": sum(1 for f in head_fam if rows.get(f, {}).get("n_possible_duplicates", 0) > 0),
             "headline_families_if_name_twins_collapsed_SENSITIVITY_ONLY": collapsed_count(head_fam, rows),
             "families_by_number_of_needs_touched": {str(k): v for k, v in sorted(dist.items())},

@@ -84,6 +84,11 @@ def artefact_reason(e: dict, t: dict, rules: list[dict], early: dict | None = No
     (upstream alias confusion such as PDK1/PDPK1); kept as an unresolved row, not a link."""
     if t["source"] != "DGIdb interaction":
         return None
+    ident = t.get("identity") or {}
+    if ident.get("state") == "unverified":
+        # the catalogue could not verify this relation through the source's own identifiers (or a heuristic flagged the resolved gene):
+        # the row stays visible as an UNCONFIRMED relation; only the counts that depend on it are restricted
+        return f"unconfirmed_identity: {ident.get('note') or 'identity not verified'} ({t.get('claim_source')}, method {ident.get('method')})"
     gene = (t.get("gene") or "").upper()
 
     def others(sym, exclude_src=None):
@@ -118,6 +123,65 @@ def artefact_reason(e: dict, t: dict, rules: list[dict], early: dict | None = No
             if has_partner and not chembl_own:
                 return f"alias_risk: {gene} row on a record that also carries {partner}; unresolved, not counted as a link"
     return None
+
+
+# What kind of statement a catalogue target row is, by claim source.  Basis: the DGIdb source full names served by its public GraphQL API
+# on 2026-10-28 (sources.nodes.fullName), e.g. TTD = Therapeutic Target Database, TEND/TdgClinicalTrial = literature reviews of drug targets
+# (Rask-Andersen 2011/2014), DTC = Drug Target Commons, FDA = FDA Pharmacogenomic Biomarkers, NCI = NCI Cancer Gene Index.  A source-level
+# table, not a gene list: it says what the row is, never that the compound acts on the gene.
+RELATION_KIND = {"ChEMBL curated mechanism": "curated_mechanism", "ChEMBL": "curated_mechanism", "GuideToPharmacology": "curated_pharmacology",
+                 "TTD": "target_database_listing", "TEND": "target_review_listing", "TdgClinicalTrial": "target_review_listing",
+                 "DTC": "bioactivity_compilation", "PharmGKB": "pharmacogenomic_association", "FDA": "pharmacogenomic_association"}
+CURATED_KINDS = {"curated_mechanism", "curated_pharmacology"}
+
+
+def relation_kind(src: str, t: dict) -> str:
+    if src.startswith("ChEMBL"):
+        return "curated_mechanism"
+    return RELATION_KIND.get(t.get("claim_source"), "cancer_or_other_knowledge_base_association")
+
+
+def curated_elsewhere(e: dict, t: dict, gene_symbols: set[str]) -> bool:
+    """True when the record has a curated row with a STATED action on other genes and none of its curated rows names this gene
+    (an anomaly flag for a listing row, e.g. tiagabine listed on ABAT while its curated mechanism is GAT-1; not proof of error)."""
+    cur_genes, cur_with_action = set(), False
+    for u in e["targets"]:
+        if u["source"] == "ChEMBL curated mechanism" and u.get("organism") == "Homo sapiens":
+            cur_genes |= {g.upper() for g in u.get("gene_symbols") or []}
+            cur_with_action |= action_direction(u.get("action_type")) != "unresolved"
+        elif u["source"] == "DGIdb interaction" and u.get("claim_source") == "GuideToPharmacology" and (u.get("identity") or {}).get("state") in ("confirmed", "corrected"):
+            cur_genes.add((u.get("gene") or "").upper())
+            cur_with_action |= action_direction(u.get("interaction_type")) != "unresolved"
+    return bool(cur_with_action and cur_genes and not (cur_genes & gene_symbols))
+
+
+def exclusion_class(excl: str | None) -> str | None:
+    """One name per kind of exclusion (the reason strings begin with it)."""
+    if not excl:
+        return None
+    for k in ("alias_risk", "placeholder", "unconfirmed_identity"):
+        if excl.startswith(k):
+            return k
+    return "source_artefact"
+
+
+def evidence_scope(src: str, t: dict) -> tuple[str, str]:
+    """(target_scope, subunit_selectivity).  What the SOURCE row is about, as the source identifies it:
+    a single protein with no siblings, a single protein listed among siblings of the same family for the same ligand (class-level
+    evidence), or a complex / group / family.  Only a single protein with no siblings can carry subunit-level evidence; a complex-level
+    or among-siblings statement is NEVER read as selectivity for one subunit."""
+    if src.startswith("ChEMBL"):
+        tt = t.get("target_type")
+        if tt in (None, "SINGLE PROTEIN"):
+            return "single_protein", "stated_for_this_target"
+        return "complex_or_group", "not_established"
+    if t.get("target_level") == "complex":
+        return "complex_or_group", "not_established"
+    if t.get("target_level") == "single_protein":
+        if t.get("same_family_targets_of_this_ligand", 0) >= 1:
+            return "single_protein_among_siblings", "not_established"
+        return "single_protein", "stated_for_this_target"
+    return "unspecified", "not_established"
 
 
 def load_roles(path: Path = DEFAULT_ROLES) -> dict[tuple[str, str], dict]:
@@ -242,9 +306,22 @@ def associations_for_need(need: dict, idx: Index, roles: dict) -> dict:
                 excl = excl or "placeholder: DGIdb drug_name literally NULL/none, not a compound"
             if excl:
                 label, why = "not_evaluable", excl
+            scope, subsel = evidence_scope(src, t)
+            kind = relation_kind(src, t)
+            elsewhere = src.startswith("DGIdb") and kind not in CURATED_KINDS and ad == "unresolved" and curated_elsewhere(e, t, {tgt["symbol"].upper()})
+            if label in ("consistent", "opposed") and subsel == "not_established" and scope != "unspecified":
+                why += f" [evidence scope: {scope}; subunit selectivity not established]"
             limits = []
             if src.startswith("ChEMBL") and t.get("target_type") not in (None, "SINGLE PROTEIN"):
                 limits.append(f"ChEMBL target is a {t['target_type'].lower()}: the link to this gene is not subunit-specific")
+            if t.get("same_family_targets_of_this_ligand", 0) >= 1 and src.startswith("DGIdb"):
+                limits.append(f"GtoPdb lists this ligand on {t['same_family_targets_of_this_ligand'] + 1} targets of the same family: class-level evidence, not subunit selectivity")
+            if (t.get("identity") or {}).get("state") == "corrected":
+                limits.append("gene identity corrected through the source's own target id (DGIdb served " + str((t.get("dgidb_served_gene") or {}).get("gene")) + ")")
+            if elsewhere:
+                limits.append("anomaly flag: the record's curated mechanism names other target(s) with a stated action and none names this gene; this row is an unstated listing, not a documented action on the gene")
+            if t.get("interaction_type_state", "").startswith("CONFLICT"):
+                limits.append("the source states conflicting interaction types for this ligand and target: direction left unresolved")
             if src.startswith("DGIdb"):
                 limits.append(f"DGIdb claim source {t.get('claim_source')}; export of 2024-06-10; interaction type {'stated' if raw else 'UNKNOWN'}")
                 if not raw:
@@ -265,7 +342,11 @@ def associations_for_need(need: dict, idx: Index, roles: dict) -> dict:
                 "list_label": "exploration list: the need's direction is unresolved; this is not a list of favourable treatments" if nd in ("uncertain", "modulate") else "direction-evaluable need",
                 "reference_ids": t.get("reference_ids", []), "mechanism_of_action": t.get("mechanism_of_action"),
                 "excluded_from_counts": excl,
-                "excluded_reason": (None if not excl else ("alias_risk" if excl.startswith("alias_risk") else ("placeholder" if excl.startswith("placeholder") else "source_artefact"))), "certainty_qualifier": (roles.get((need["id"], tgt["symbol"].upper())) or {}).get("qualifier") if label in ("consistent", "opposed") else None,
+                "target_scope": scope, "subunit_selectivity": subsel, "relation_kind": kind, "action_stated": ad != "unresolved",
+                "curated_mechanism_elsewhere": elsewhere,
+                "identity_state": ("source_ids_checked_" + t["identity"]["state"]) if (t.get("identity") or {}).get("method") not in (None, "none") else "as_served_by_source",
+                "iuphar_target_id": t.get("iuphar_target_id"), "iuphar_ligand_id": t.get("iuphar_ligand_id"),
+                "excluded_reason": exclusion_class(excl), "certainty_qualifier": (roles.get((need["id"], tgt["symbol"].upper())) or {}).get("qualifier") if label in ("consistent", "opposed") else None,
                 "limits": limits,
                 "pharmacology": {"status_class": e["status_class"], "potency": "NOT_CARRIED (catalogue holds ids and direction only)",
                                  "chembl_max_phase": next((s.get("max_phase") for s in e["status_records"] if s["source"] == "ChEMBL"), None)},
@@ -317,7 +398,7 @@ def compound_to_needs(entry: dict, needs: list[dict], idx: Index, roles: dict, f
                 excl = artefact_reason(own, t, idx.artefacts, idx.early)
                 if excl:
                     label, why = "not_evaluable", excl
-                out.append({"excluded_from_counts": excl, "excluded_reason": (None if not excl else ("alias_risk" if excl.startswith("alias_risk") else ("placeholder" if excl.startswith("placeholder") else "source_artefact"))), "need": need["id"], "target": tgt["symbol"], "target_kind": tgt["target_kind"], "link_source": t["source"],
+                out.append({"excluded_from_counts": excl, "excluded_reason": exclusion_class(excl), "need": need["id"], "target": tgt["symbol"], "target_kind": tgt["target_kind"], "link_source": t["source"],
                             "action_raw": raw, "action_on_target": ad, "need_direction": nd, "consistency": label, "consistency_why": why,
                             "exploration_only": nd in ("uncertain", "modulate"), "via_family_member": via})
     seen, uniq = set(), []
