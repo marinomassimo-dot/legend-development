@@ -1,0 +1,41 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261027-41380592-01",
+ "study_id": {
+  "pmid": "41380592",
+  "doi": "10.1016/j.redox.2025.103966"
+ },
+ "event_at": "2026-10-27T22:40:00Z",
+ "analysis_at": "2026-10-27T22:40:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-c (Scientist C), package ISR of mandate ORCH-ROADMAP-IT3-20261027; context_policy SOURCE_FIRST for the first pass (the reader read the structured text, the nine main figures and the supplementary images before opening any LEGEND record on the ISR hypothesis or card), then QUESTION_DRIVEN comparison against HYP-20261026-10, HYP-20261026-11 and cards E01 and E02 by targeted retrieval. Acquisition: PMC efetch XML, nine figure JPEGs and the supplementary DOCX from the PMC open-data bucket through framework/scripts/pmc_bucket_fetch.py on 2026-10-27 (CC BY-NC). The receipt was prepared for the integrator and was not appended at preparation time.",
+ "evidence_depth": "complete_fulltext_read",
+ "source_locator": "files/fulltext/PMID41380592_Xu2026_PMC_r2.xml",
+ "source_fingerprint": "5c7fffb1f44fd45d89d1e43ffef3462823f6f92333c2f9f5fb6d505dce86b11a",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "read",
+  "references": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/deepdive_manifests/PMID41380592.json",
+  "disease-models/wwox/research/drug_repurposing/isr_pars2_reading_it3_20261027.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "Work manifest PMID41380592.json (schema 2, 49 verbatim locators: 30 body and 19 figure or supplementary-image attestations), strict verification PASS with the shared checkout as artefact workspace.",
+  "All nine main figure JPEGs and all nine supplementary figure images (extracted from mmc1.docx) were opened as images; the supplementary file carries Table S1 (primers) and no legends.",
+  "The tables key is 'read' for the Key resources table and Table S1 only: the article reports no results table. The limitations key is 'read' for two limitation sentences inside the Discussion: there is no limitations section.",
+  "The reference list (60 items) was counted and searched for WWOX (none) and four titles (refs 27, 31, 48, 49) were looked at; no cited paper and no reference entry was read, so references is not_read."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}
