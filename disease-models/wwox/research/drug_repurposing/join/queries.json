@@ -22541,7 +22541,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "fc77ab03160150c6",
+  "digest": "1ba27edc2cd0072e",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -22562,6 +22562,7 @@
    "PAPER 567"
   ],
   "pmids": [
+   "41380592",
    "42909904"
   ],
   "pmids_via_records": {
@@ -30216,7 +30217,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "44b7471ecdce5589",
+  "digest": "e9278b6bc31224ef",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-008",
@@ -30240,7 +30241,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-REPO-004",
-  "origin_line": 4472,
+  "origin_line": 4473,
   "origin_title": "DL-REPO-004 — LDH lowering rescued fly locomotion once in the amyloid-plus-Wwox-reduction genotype; the approved paediatric epilepsy drug usually linked to LDH inhibits it only weakly in the retrieved measurements (NOT WWOX-DEE evidence)",
   "papers_named": [
    "PAPER 567",

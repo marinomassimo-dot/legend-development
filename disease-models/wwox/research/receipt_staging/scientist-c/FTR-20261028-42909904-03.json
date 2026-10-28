@@ -1,0 +1,41 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261028-42909904-03",
+ "study_id": {
+  "pmid": "42909904",
+  "doi": "10.1093/braincomms/fcag385"
+ },
+ "event_at": "2026-10-28T19:05:00Z",
+ "analysis_at": "2026-10-28T19:05:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-c (Scientist C), mandate ORCH-ROADMAP-IT4-20261028 step B3, QUESTION_DRIVEN targeted re-read of PMID 42909904 for one question: which of its Atf4, Xbp1 and kinase statements are measured, which are inferred, and what do its two cited interactome papers (its references 56 and 58) actually contain. The reader held the 2026-10-28 GCN2/PERK note and the ISR need, and declares QUESTION_DRIVEN. Text taken from the local PMC XML (Europe PMC) and the local supplement package; no download of this paper was needed. The receipt was prepared for the integrator and was not appended at preparation time. Linked to FTR-20261026-42909904-01 (the first complete read) and FTR-20261026-42909904-02 (the lactate-statistics re-inspection, the direct prior).",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID42909904_PMC13684411.xml",
+ "source_fingerprint": "4e571e24a85342f2a72d92a18df1acdebd9efa89dcdf5754c092078d112a23a4",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "not_read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/isr_kinase_interactome_atf4_reconciliation_it4_20261028.md",
+  "disease-models/wwox/research/drug_repurposing/gcn2_perk_measurement_gap_it3_20261028.md",
+  "disease-models/wwox/research/drug_repurposing/needs/needs.json",
+  "disease-models/wwox/research/drug_repurposing/hypcurrent_it4_isr_20261028/ledger_edits.json"
+ ],
+ "evidence_basis": [
+  "Question-driven re-read; reason: new question outside prior coverage (kinase attribution of the Atf4 signal, the exact statistics of the amyloid and no-amyloid comparisons, and the content of the two cited interactome papers), after the 2026-10-28 note had checked references 56 and 58 by keyword only.",
+  "Sections actually read in this session: the Results section on lactate, Atf4, sima and the Xbp1 reporter; the Figure 5 legend (captions only; no figure image was opened); the Discussion paragraphs on Atf4, PERK, GCN1/GCN2 and Xbp1; the Methods subsections on Atf4 immunostaining, image analysis and statistical analysis; the reference-list entries 56 to 60; the Supplementary Figure 5 legend (panels A to G); the supplementary Xbp1 imaging method; the Supplementary Table 1B genotype rows for Figures 5F-G, 5H-I, S5D-E and S5F-G. The coverage map names a section as read where the listed subsections were read; the Abstract, Introduction, other Results, other figure images, other Methods, the remaining supplementary figures and tables were not re-read here and rest on the first receipt.",
+  "Derived checks recorded in the output note: t = 0.0894 with 10 degrees of freedom gives P = 0.9305 (6 vs 6 brains); t = 1.365 with 13 degrees of freedom gives P = 0.1954 (15 brains in total); U = 0 with 6 vs 6 gives the exact two-sided minimum P = 2/924 = 0.0022. No interaction test for Atf4 is reported in the text or the supplement legends read.",
+  "Separately from this receipt: the first-hand reading of the two cited papers is described in the output note, section 8. Hussain 2018 (PMID 30619736): main text read end to end plus supplementary Data Sheets 2 and 3 and symbol searches of Data Sheets 1 and 2; it already carries the complete receipt FTR-20260913-30619736-01 and no new receipt is claimed. Sassano 2021 (PMID 37366380): main text read end to end from the Europe PMC XML, Table 1 read row by row only for its first rows and symbol-searched for the rest, figure and table images not opened; partial; no receipt exists and none is staged here."
+ ],
+ "prior_receipt": "FTR-20261026-42909904-02",
+ "reread_reason": "new_question_outside_prior_coverage"
+}
