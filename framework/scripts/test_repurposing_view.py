@@ -370,7 +370,7 @@ class Curated(unittest.TestCase):
         myc = [l for nid, l in by["D01_a51"]["links"].items() if "MYC" in nid]
         self.assertEqual(len(myc), 1)
         if myc:
-            self.assertEqual(myc[0]["group"], "C2")   # old rule: G1 because a readout in a WWOX system exists
+            self.assertEqual(myc[0]["group"], "C1")   # the wild-type-only row counts neither way, so the null stands alone   # old rule: G1 because a readout in a WWOX system exists
         row = lambda kind, sign, comp="untreated_same_genotype", flags="": {"assertion_id": "a" + sign, "evidence_kind": kind, "sign": sign, "comparator": comp, "flags": flags}
         deep = {"anull": "complete_fulltext_read", "aharm": "complete_fulltext_read", "abenefit": "complete_fulltext_read", "amixed": "complete_fulltext_read"}
         for sign, exp in (("null", "C1"), ("harm", "C1"), ("mixed", "C2")):
@@ -382,7 +382,7 @@ class Curated(unittest.TestCase):
         self.assertEqual(rv.assign_need_position(f, False, True, True)[0], "F1")
         f = rv.classify_rows([row("readout_in_wwox_system", "benefit", comp="none_uncontrolled_case_report")], deep)
         self.assertEqual(rv.assign_need_position(f, False, True, True)[0], "F2")
-        # a depth-unknown favourable reading is thin, never firm
+        # a depth-unknown favourable reading is thin, never controlled
         f = rv.classify_rows([row("readout_in_wwox_system", "benefit")], {})
         self.assertEqual(rv.assign_need_position(f, False, True, True)[0], "F2")
         # an outside-WWOX harm signal with no favourable signal is counter-evidence, not a favourable hypothesis
@@ -413,6 +413,40 @@ class Curated(unittest.TestCase):
         for c in self.PF["cur"]["cands"]:
             for l in c["links"].values():
                 self.assertEqual(l["kind"], rv.POS_BY_ID[l["group"]]["kind"])
+
+    def test_p11fix_tool_compound_outside_counter_neutral_rows_carrier_and_criteria(self):
+        by = {c["id"]: c for c in self.PF["cur"]["cands"]}
+        link = lambda cid, frag: [l for n, l in by[cid]["links"].items() if frag in n][0]
+        # (1) a tool compound is capped at F2 and tagged
+        f01 = link("F01_glutamate_receptor_node", "EXCITATORY")
+        self.assertEqual(f01["group"], "F2")
+        self.assertIn("tool compound, not a candidate drug", f01["tags"])
+        # (2) F positions carry the outside-WWOX counter-evidence tag; the F1 definition says what the test covers
+        self.assertTrue(any("outside WWOX" in t for t in link("H01_apinocaltamide_ttype", "T-TYPE")["tags"]))
+        self.assertIn("WWOX-system result beside it", rv.POS_BY_ID["F1"]["why"])
+        # (3) wild-type-only comparison rows flagged not_a_recovery_comparison count neither way
+        r = lambda sign, flags="", comp="untreated_same_genotype", i="x": {"assertion_id": i, "evidence_kind": "genotype_comparison_vs_wild_type", "sign": sign, "comparator": comp, "flags": flags}
+        f = rv.classify_rows([r("normalised_vs_wild_type", "not_a_recovery_comparison", i="a"), {"assertion_id": "b", "evidence_kind": "readout_in_wwox_system", "sign": "null", "comparator": "untreated_same_genotype", "flags": ""}], {})
+        self.assertEqual(f["result"], "null")
+        self.assertEqual(rv.assign_need_position(f, False, True, True)[0], "C1")
+        self.assertEqual(f["n_not_recovery"], 1)
+        # (4) F1 is named for what it is and the page names the carrying row
+        self.assertIn("controlled WWOX readout", rv.POS_BY_ID["F1"]["label"])
+        self.assertNotIn("firm", rv.POS_BY_ID["F1"]["label"].lower())
+        c01 = link("C01_aav9_wwox", "GENE-ADDITION")
+        self.assertEqual(c01["group"], "F1")
+        self.assertIn("DR-C01-001", c01["carrier"][0])
+        self.assertIn("high_dose_only", c01["carrier"][0])
+        c04 = link("C04_aav9_endpoint_families", "GENE-ADDITION")
+        self.assertEqual(len(c04["carrier"]), 1)
+        self.assertIn("DR-AAV-GFAP-P5HD", c04["carrier"][0])
+        self.assertTrue(any("not normalised vs wild type" in t and "GFAPAREA-LD" in t for t in c04["tags"]))
+        # (5) the F2 criteria say which part of the F1 test failed
+        etx = [x for x in link("EB-ETX-01", "SEIZURE")["criteria"]]
+        met = {x["text"].split(" (found")[0]: x["met"] for x in etx}
+        self.assertTrue(met["a favourable WWOX readout has an untreated same-genotype comparator"])
+        self.assertFalse(met["a favourable WWOX readout carries no weakening flag"])
+        self.assertTrue(any("(found: " in x["text"] for x in etx))
 
     def test_every_position_prints_criteria_met_and_not_met(self):
         for c in self.PF["cur"]["cands"]:
