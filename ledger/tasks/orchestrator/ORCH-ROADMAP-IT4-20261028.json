@@ -107,8 +107,9 @@
     },
     {
      "step": "D3 non-invasive proof: stopped state detected -> request delivered -> Orchestrator resumes authorised work; negative proofs (active, paused, duplicate, complete); or the exact technical limit",
-     "status": "IN_PROGRESS",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "live proof 2026-10-28: session idle+silent >25 min with authorised work remaining -> in-session cron prompt delivered by the runtime (events log 20:31:08 RESUME) -> Orchestrator resumed (this checkpoint, F3 next). Negative proofs: RUNNING at 19:58 and 20:23 (activity inside the 25 min window), explicit PAUSED and COMPLETE on a probe mandate (no request), duplicate suppressed (pending state, unit tests), unknown/failed listing acts on nothing. Limit: the host path that revives a DEAD session via claude --bg --resume fails with Workspace not trusted until the operator accepts the trust dialog once in the repo (not edited by the agent); the in-session cron dies with the session and expires after 7 days. fccf4db5, e6549db0, d5d2d167"
     }
    ]
   },
