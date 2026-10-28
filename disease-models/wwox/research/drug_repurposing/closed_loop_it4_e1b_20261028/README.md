@@ -4,7 +4,7 @@ Non-canonical research material. Not medical advice; no efficacy, wet-lab or cli
 
 ## The question and why this one
 
-**Question.** Is the brain-MRI abnormality (intramyelinic oedema) liability of vigabatrin, the only drug class with human WWOX-DEE partial-benefit reports, different in a hypomyelinated Wwox-deficient brain, and does a retina-sparing sibling (CPP-115) escape it?
+**Question.** Is the brain-MRI abnormality (intramyelinic oedema) liability of vigabatrin, the only drug class with human WWOX-DEE partial-benefit reports, different in a Wwox-deficient brain with a myelin deficit (mouse) or white-matter loss (patients; hypomyelination itself unresolved), and does a retina-sparing sibling (CPP-115) escape it?
 
 **Why this thread (chosen by data).** Four threads were looked at.
 * Vigabatrin / GABA, with ABAT now corrected: the join shows card EB-VGB-01 with "no next measurement defined", the catalogue holds CPP-115 as two unlinked families, and the label text on intramyelinic oedema meets the repository's own myelin and vacuole questions, which had never been put side by side. Chosen.
@@ -14,7 +14,7 @@ Non-canonical research material. Not medical advice; no efficacy, wet-lab or cli
 
 ## Premise verified
 
-* Premise: "VABAM in WWOX-DEE is a real safety signal that distinguishes WWOX" (working model wording). Verified against the sources: the Choi 2026 abstract (closed access, still no open copy on Europe PMC today) reports two children selected for having the finding and gives no denominator; the label (openFDA JSON, effective 2026-06-15, sections 5.3 and 5.4 read in full) puts MRI changes at 22 percent of vigabatrin-treated infants with infantile spasms against 4 percent with other therapies (retrospective, N=205). Two reported children cannot show an excess over that background. The signal is documented; enrichment in WWOX is not supported. The Choi authors themselves leave susceptibility in delayed myelination open.
+* Premise: "VABAM in WWOX-DEE is a real safety signal that distinguishes WWOX" (working model wording). Verified against the sources: the Choi 2026 abstract (closed access, still no open copy on Europe PMC today) reports two children selected for having the finding and gives no denominator; the label (openFDA JSON, effective 2026-06-15, sections 5.3 and 5.4 read in full) puts MRI changes at 22 percent of vigabatrin-treated non-WWOX infants with infantile spasms against 4 percent on other therapies (retrospective, N=205, arm sizes not stated). Two reported children, with no denominator, cannot be shown to exceed (or fall below) those figures. The signal is documented; enrichment in WWOX is not supported. The Choi authors themselves leave susceptibility in delayed myelination open.
 * Second premise: "a retina-sparing sibling is brain-sparing". The only comparison found for CPP-115 is an ERG in rats; no myelin or MRI endpoint exists in any CPP-115 or OV329 source found (PubMed query for CPP-115 or OV329 with myelin, vacuole, white matter terms returned only the two non-histological papers).
 
 ## WWOX knowledge used (and its true depth)
@@ -29,7 +29,7 @@ Non-canonical research material. Not medical advice; no efficacy, wet-lab or cli
 
 ## Counter-evidence and negative results kept
 
-* Two WWOX children selected for the finding against a 22 percent label background; unmeasured follow-up MRI in the other WWOX vigabatrin reports is an unmeasured cell, not a negative; hormonal co-therapy is a rival explanation (two non-WWOX partial reads, conflicting on the MRI finding versus symptoms); disease severity and the underlying white matter disease are rivals.
+* Two WWOX children selected for the finding with no denominator, set beside the label's 22 versus 4 percent in non-WWOX infants; unmeasured follow-up MRI in the other WWOX vigabatrin reports is an unmeasured cell, not a negative; hormonal co-therapy is a rival explanation (two non-WWOX partial reads, conflicting on the MRI finding versus symptoms); disease severity and the underlying white matter disease are rivals.
 * Neonatal and juvenile rat vacuoles are described by the label as distinct from adult intramyelinic oedema; the species bridge is partial.
 * CPP-115: one human infantile-spasms case (PMC5024311, body read), open label, vigabatrin given concurrently for the first year, ketogenic diet and clobazam, parent-reported frequency against an EEG that disagrees in part, baseline MRI with dysmyelination, no repeat brain MRI described; the highest level in the rat spasm model was lethal; spasm cessation was not accelerated. OV329: rodent anticonvulsant abstracts only.
 
@@ -47,7 +47,7 @@ DGIdb carries CPP-115 with an IUPHAR ligand concept id (8284); the catalogue kee
 
 ## Decision it changes
 
-1. The working-model sentence on VABAM should read as documented, case-selected, no denominator, background 22 percent per label; not as a WWOX-specific excess. Ready-to-apply text is in the report of this task.
+1. The working-model sentence on VABAM should read as documented, case-selected, no denominator; not as a WWOX-specific excess (the label's 22 versus 4 percent concerns non-WWOX infants and is not a WWOX rate). Ready-to-apply text is in the report of this task.
 2. EB-VGB-01's "no next measurement defined" is answered by card H02: a genotype-by-exposure test in a surviving Wwox-deficient juvenile model plus a denominator-bearing case count, with predictions registered in both directions.
 3. The sibling inference "retina-sparing means myelin-sparing" is blocked until a brain endpoint exists for CPP-115 or OV329.
 4. No favourable compound is offered. Status of the card: controversial.
@@ -63,6 +63,8 @@ Suites: `test_repurposing_join.py` 54, `test_repurposing_coverage.py` 52, `test_
 * Abstract only: Choi 2026 and every PubMed source of the card except PMC5024311. Label: sections read, cited study not.
 * PMC5024311: body read; Figure 1 image and reference list not read.
 * No full text of any vigabatrin rodent or dog study was opened; the lesion thresholds are the abstracts' statements. The quantitative comparison of CPP-115 and vigabatrin potency was not reproduced (the database values differ from the publication's figure for the inactivation ratio).
-* The 22 versus 4 percent figure is the label's statement of a study not read; "background" is an inference owed a blind audit.
+* The 22 versus 4 percent figure is the label's statement of a study not read; setting a denominator-free report beside it is an inference owed a blind audit; the blind audit (scientist-c) found no HIGH defect and its MEDIUM and LOW defects are repaired in this card.
 * Whether a Wwox-deficient animal survives the vulnerable window is not established here.
 * The 510 merge candidates are not verified individually.
+
+* Repaired after the blind audit: the mechanism text now separates rat (abstract of one electron-microscopy study: myelin-sheath splits), dog and label (gray-matter neuropil vacuolation) and the single-autopsy basis of infant intramyelinic edema; label 8.4 says the juvenile-rat no-effect dose was the lowest level tested (the number is omitted because the card checker forbids dose tokens), against 5.4's 'no no-effect dose established', and the 21473881 versus 25554247 threshold difference is flagged, not reconciled; the 'hypomyelinated' framing is reworded; DA-001 numbers and DA-003 are marked UNVERIFIABLE_SURFACE.

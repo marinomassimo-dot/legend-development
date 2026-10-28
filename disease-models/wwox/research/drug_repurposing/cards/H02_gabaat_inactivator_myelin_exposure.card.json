@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "79feb2193711fcc00ce7dcf31d2ab0e40f5cfd54b8640042a44875bb9ed1c6d8",
+  "input_sha256": "5d2376a75c614d0a1993b998b43813006211ea5c68996d36c698edad6119932e",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -102,7 +102,7 @@
     "coverage_limit": "UNKNOWN"
   },
   "p4_fields": {
-    "endpoint_pursued": "Exposure-limit question for the one drug class with human WWOX-DEE partial-benefit reports (GABA-aminotransferase inactivators): is the vigabatrin brain-MRI abnormality (intramyelinic edema) liability different in a Wwox-deficient, hypomyelinated juvenile brain, and does it extend to the sibling inactivators; spasm control is carried only for the sibling.",
+    "endpoint_pursued": "Exposure-limit question for the one drug class with human WWOX-DEE partial-benefit reports (GABA-aminotransferase inactivators): is the vigabatrin brain-MRI abnormality (intramyelinic edema) liability different in a Wwox-deficient juvenile brain with a myelin deficit (mouse) or white-matter loss (patients; hypomyelination itself unresolved), and does it extend to the sibling inactivators; spasm control is carried only for the sibling.",
     "functional_evidence_available": "None for any sibling in a Wwox system. For vigabatrin in WWOX: single-patient efficacy and null reports on card EB-VGB-01, and two children with the MRI finding (abstract level). No rodent study of vigabatrin or a sibling in a Wwox-deficient animal was found.",
     "temporal_or_model_limit": "The vigabatrin liability is exposure-window dependent in rats and dogs (start age, dosing window, dose level) and reversible on stopping in those species; the human infant data are retrospective. A constitutive Wwox-null mouse dies within weeks, so whether a Wwox-deficient animal survives the vulnerable window is not established here.",
     "cellular_context": {
@@ -126,7 +126,7 @@
     },
     "candidate": {
       "id": "P4-H-02",
-      "name": "GABA-aminotransferase inactivators (vigabatrin; sibling CPP-115): myelin exposure limit in a hypomyelinated WWOX-deficient brain"
+      "name": "GABA-aminotransferase inactivators (vigabatrin; sibling CPP-115): myelin exposure limit in a WWOX-deficient brain with white-matter loss (hypomyelination unresolved in patients)"
     },
     "disease_assertions": [
       {
@@ -147,7 +147,7 @@
           "developmental_stage": "P17"
         },
         "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
-        "note": "Averages as printed: 180 in control against 55 in the neuron-specific knockout (about 3.3 times fewer; the running text rounds to 3.5 to 4). Three mice per genotype and field-level statistics (pseudoreplication). Age P17 is a late-stage window the authors caution about."
+        "note": "Averages as printed: 180 in control against 55 in the neuron-specific knockout (about 3.3 times fewer; the running text rounds to 3.5 to 4). Three mice per genotype and field-level statistics (pseudoreplication). Age P17 is a late-stage window the authors caution about. UNVERIFIABLE_SURFACE for the blind audit (full text closed to it): the numbers 180 and 55, P17 and n 3 are carried from the manifest and are not independently verified; the abstract confirms the direction only."
       },
       {
         "id": "DA-H02-002",
@@ -185,7 +185,7 @@
           "developmental_stage": "infancy"
         },
         "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
-        "note": "Carried only so that the spasm rows of the sibling compound have a disease-side anchor; the vigabatrin efficacy reports themselves stay on card EB-VGB-01 and are not restated here."
+        "note": "Carried only so that the spasm rows of the sibling compound have a disease-side anchor; the vigabatrin efficacy reports themselves stay on card EB-VGB-01 and are not restated here. UNVERIFIABLE_SURFACE for the blind audit (registry record): which side of CLAIM 001 (efficacy side) this endpoint and sign come from is carried, not independently verified."
       }
     ],
     "drug_assertions": [
@@ -195,7 +195,7 @@
         "endpoint": "myelination on histology after exposure from postnatal day 4 (hypomyelination and gliopathy noted from days 4 to 15)",
         "direction": "DECREASE",
         "source": "vigabatrin, immature Sprague Dawley rats, PMID 21473881, abstract; NOT WWOX EVIDENCE",
-        "locator": "PubMed abstract (Study 2, light and transmission electron microscopy)",
+        "locator": "PubMed abstract (light and transmission electron microscopy; the abstract does not say which of its two studies carries the hypomyelination, and the exposure windows read as dosing-duration groups)",
         "epistemic_status": "DATO",
         "reading_depth": "abstract_only",
         "context": {
@@ -206,7 +206,7 @@
           "developmental_stage": "dosing from postnatal day 4 for up to 9 weeks, then a recovery period"
         },
         "evidence_scope": "OTHER_DISEASE_PRECEDENT",
-        "note": "Vigabatrin only. A lesser degree of hypomyelination persisted at longer exposure windows; vacuolation was attenuated after the recovery period. The abstract attributes the hypomyelination to exposure during active myelination."
+        "note": "Vigabatrin only. A lesser degree of hypomyelination persisted at longer exposure windows; vacuolation was attenuated after the recovery period. The abstract attributes the hypomyelination to exposure during active myelination. The abstract words it as 'likely related to vigabatrin exposure during active myelination' and says myelination was delayed but not eliminated."
       },
       {
         "id": "DR-H02-002",
@@ -225,7 +225,7 @@
           "developmental_stage": "assessed at postnatal day 67 and after recovery"
         },
         "evidence_scope": "OTHER_DISEASE_PRECEDENT",
-        "note": "Increased vacuolation only at the highest of three dose levels in the dose-ranging study; effects on food intake, body weight and sexual maturation were dose-related at all three levels. Vigabatrin only."
+        "note": "Increased vacuolation only at the highest of three dose levels in the dose-ranging study; effects on food intake, body weight and sexual maturation were dose-related at all three levels. Vigabatrin only. Cross-study discrepancy not reconciled: here vacuolation increased only at the highest of three levels, while PMID 25554247 (next row) reports changes at the two higher of three levels (different endpoints, stains and designs)."
       },
       {
         "id": "DR-H02-003",
@@ -244,7 +244,7 @@
           "developmental_stage": "dosing windows postnatal days 4-7, 7-14 or 14-30"
         },
         "evidence_scope": "OTHER_DISEASE_PRECEDENT",
-        "note": "The abstract states that earlier stages of myelination appear more vulnerable and that no neuronal degeneration or gliosis was seen at any stage. Vigabatrin only."
+        "note": "The abstract says it 'seems likely' that earlier stages of myelination are more vulnerable and that no neuronal degeneration or gliosis was seen at any stage. Vigabatrin only."
       },
       {
         "id": "DR-H02-004",
@@ -263,7 +263,7 @@
           "developmental_stage": "dosing from postnatal day 22 or 36"
         },
         "evidence_scope": "OTHER_DISEASE_PRECEDENT",
-        "note": "Shows that the start age of exposure decides whether a lesion appears. Vigabatrin only."
+        "note": "Shows that the start age of exposure decides whether a lesion appears. Vigabatrin only. The abstract and label 5.4 describe gray-matter neuropil vacuolation in the dog; it is not shown to be intramyelinic."
       },
       {
         "id": "DR-H02-005",
@@ -271,7 +271,7 @@
         "endpoint": "symmetric MRI signal change (thalamus, basal ganglia, brain stem, cerebellum) in infants with infantile spasms",
         "direction": "INCREASE",
         "source": "US prescribing information for vigabatrin oral solution (openFDA drug label JSON, version effective 2026-06-15, set id 082d818a-4f4e-4675-98c6-91db0294e63c), sections 5.3 and 5.4; NOT WWOX EVIDENCE",
-        "locator": "section 5.3: retrospective epidemiologic study in infants with infantile spasms (N=205), prevalence of MRI changes 22 percent with vigabatrin against 4 percent with other therapies; changes generally resolved on discontinuation; section 5.4: intramyelinic edema at post-mortem in infants; vacuolation in animals at doses within the human therapeutic range with no no-effect dose established; decreased myelination and oligodendrocyte injury in treated rats",
+        "locator": "section 5.3: retrospective epidemiologic study in infants with infantile spasms (N=205), prevalence of MRI changes 22 percent with vigabatrin against 4 percent with other therapies; changes generally resolved on discontinuation; section 5.4: intramyelinic edema at post-mortem in infants; vacuolation in animals at doses within the human therapeutic range with no no-effect dose established; decreased myelination and oligodendrocyte injury in treated rats; section 8.4 states that the no-effect dose for developmental neurotoxicity in juvenile rats was the lowest dose level tested (so 'no no-effect dose established' in 5.4 and 8.4 are in tension, not reconciled here); section 5.3 says the relationship between the animal neurotoxicity findings and the infant MRI findings is unknown, and section 5.4 calls the juvenile-rat vacuolar changes distinct from adult intramyelinic edema",
         "epistemic_status": "DATO",
         "reading_depth": "queried_not_full_read",
         "context": {
@@ -279,10 +279,10 @@
           "genotype": "not stated",
           "species": "human",
           "cell_type": "whole organism, brain MRI",
-          "developmental_stage": "infancy (1 month to 2 years)"
+          "developmental_stage": "infancy (infantile spasms; the labelled indication age is 1 month to 2 years, the age range of the N=205 study is not stated)"
         },
         "evidence_scope": "EXTERNAL_DATABASE_RECORD",
-        "note": "Label sections 5.3, 5.4 and 8.4 and the boxed warning were read in full from the JSON; the cited study itself was not read, so the 22 and 4 percent figures are the label's statement of it. The label states that the specific pattern was not observed in older children and adults. Vigabatrin only."
+        "note": "Label sections 5.3, 5.4 and 8.4 and the boxed warning were read in full from the JSON; the cited study itself was not read, so the 22 and 4 percent figures are the label's statement of it. The label states that the specific pattern was not observed in older children and adults. Vigabatrin only. Section 5.3 also records postmarketing MRI changes in children 6 years and younger treated for refractory complex partial seizures. 22 percent is the prevalence in the vigabatrin-treated infants of that study (non-WWOX, infantile spasms) and 4 percent the comparator on other therapies; arm sizes are not in the label."
       },
       {
         "id": "DR-H02-006",
@@ -320,7 +320,7 @@
           "developmental_stage": "infancy (age not stated in the abstract)"
         },
         "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
-        "note": "A report of two children selected for having the finding: the number of WWOX children given vigabatrin, how many had follow-up MRI, the doses and durations, and whether hormonal therapy was concurrent are not in the abstract. The authors themselves leave susceptibility open. This row cannot show that the rate in WWOX is above the background rate."
+        "note": "A report of two children selected for having the finding: the number of WWOX children given vigabatrin, how many had follow-up MRI, the doses and durations, and whether hormonal therapy was concurrent are not in the abstract. The authors themselves leave susceptibility open. This row has no denominator, so it cannot be shown to exceed (or fall below) any rate, including the label's 22 percent in non-WWOX infants."
       },
       {
         "id": "DR-H02-008",
@@ -400,7 +400,7 @@
       }
     ],
     "p4_fields": {
-      "endpoint_pursued": "Exposure-limit question for the one drug class with human WWOX-DEE partial-benefit reports (GABA-aminotransferase inactivators): is the vigabatrin brain-MRI abnormality (intramyelinic edema) liability different in a Wwox-deficient, hypomyelinated juvenile brain, and does it extend to the sibling inactivators; spasm control is carried only for the sibling.",
+      "endpoint_pursued": "Exposure-limit question for the one drug class with human WWOX-DEE partial-benefit reports (GABA-aminotransferase inactivators): is the vigabatrin brain-MRI abnormality (intramyelinic edema) liability different in a Wwox-deficient juvenile brain with a myelin deficit (mouse) or white-matter loss (patients; hypomyelination itself unresolved), and does it extend to the sibling inactivators; spasm control is carried only for the sibling.",
       "functional_evidence_available": "None for any sibling in a Wwox system. For vigabatrin in WWOX: single-patient efficacy and null reports on card EB-VGB-01, and two children with the MRI finding (abstract level). No rodent study of vigabatrin or a sibling in a Wwox-deficient animal was found.",
       "temporal_or_model_limit": "The vigabatrin liability is exposure-window dependent in rats and dogs (start age, dosing window, dose level) and reversible on stopping in those species; the human infant data are retrospective. A constitutive Wwox-null mouse dies within weeks, so whether a Wwox-deficient animal survives the vulnerable window is not established here.",
       "cellular_context": {
@@ -416,8 +416,8 @@
       "novelty_for_woree": "PARZIALMENTE_TROVATO: the susceptibility question is posed in the last sentence of the Choi 2026 abstract and the label states the myelin liability; the repository holds the VABAM signal (CLAIM 001) and, separately, a rat-mutant vacuole hypothesis (intramyelinic oedema, analysis notes lde_myelin_vacuole_bridge and new_discovery_node). A search of those notes and of superior_node_search finds no mention of vigabatrin or VABAM, so the two have not been put side by side before. Not 'never done': only PubMed, openFDA, ClinicalTrials.gov and the catalogue were searched.",
       "state_of_known_roads": "EB-VGB-01 (efficacy reports against the MRI finding, status CONTROVERSA, no next measurement defined); working-model position of caution for vigabatrin; CLAIM 001, CLAIM 031; needs NEED-INHIBITORY-HYPOFUNCTION (direction uncertain) and NEED-MYELINATION.",
       "pathway_and_objective": "BENEFICIO_PRECOCE, Track A (variant-independent). Safety side of a symptomatic lever.",
-      "expected_contribution": "UNKNOWN. A genotype difference in the rodent lesion would move the working-model sentence from 'documented in WWOX-DEE' to 'enriched or not enriched in WWOX-DEE'; no difference would leave the two reported children explainable by the background rate. Neither outcome says anything about benefit.",
-      "mechanism": "Vigabatrin irreversibly inactivates GABA-aminotransferase and raises brain GABA. The myelin lesion is shown in rats, dogs and infants at exposures inside the therapeutic range, begins as splits of the myelin sheath along the intra-period line, tracks the myelination timetable and reverses on stopping in the animals. Whether it follows from GABA-aminotransferase inactivation as such (a class effect) or from vigabatrin specifically is not established in any source read; the sibling designs address the retinal metabolite hypothesis, not the myelin lesion. Direction for a Wwox-deficient brain is open in both ways: a prolonged immature-myelin window could raise the liability; fewer myelinated axons could lower the substrate (the repository's own counter-argument on the vacuole bridge).",
+      "expected_contribution": "UNKNOWN. A genotype difference in the rodent lesion would move the working-model sentence from 'documented in WWOX-DEE' to 'enriched or not enriched in WWOX-DEE'; no difference would leave the two reported children without a WWOX-specific reading (they would remain a case-selected report with no denominator). Neither outcome says anything about benefit.",
+      "mechanism": "Vigabatrin irreversibly inactivates GABA-aminotransferase and raises brain GABA. Its brain lesions are described with different morphology by species: in immature rats the abstract of one electron-microscopy study reports splits of the myelin sheath along the intra-period line, with vacuoles more prominent at later stages of myelin development and lesion location following the myelination timetable; in juvenile dogs the abstract and the label describe gray-matter neuropil vacuolation not shown to be intramyelinic; the label calls juvenile-rat vacuolar changes distinct from adult intramyelinic edema, says the relation between the animal findings and the infant MRI changes is unknown, and records intramyelinic edema in infants from post-mortem examination (the one autopsy case read here has a pre-existing white-matter lesion; a second autopsy abstract describes white-matter spongiosis). Vacuolation reversed on stopping in rat and dog. Whether the human MRI finding follows from GABA-aminotransferase inactivation as such (a class effect) or from vigabatrin specifically is not established in any source read; the sibling designs address the retinal metabolite hypothesis, not any brain lesion. Direction for a Wwox-deficient brain is open in both ways: a prolonged immature-myelin window could raise the liability; fewer myelinated axons could lower the substrate (the repository's own counter-argument on the vacuole bridge).",
       "sources": {
         "internal": [
           "needs NEED-MYELINATION (O1) and NEED-INHIBITORY-HYPOFUNCTION",
@@ -438,12 +438,12 @@
       "evidence_for_and_against": {
         "for": [
           "The question changes a decision: the working model carries VABAM in WWOX-DEE as 'a real safety signal' and the card EB-VGB-01 has no next measurement; a genotype-by-exposure test in a juvenile rodent window is a concrete, falsifiable next act.",
-          "The lesion is reproducible in rat and dog and its timing follows myelination, so a hypomyelinated model gives a prediction in each direction rather than a vague worry.",
+          "The vigabatrin lesion is reproducible in rat and dog (in the rat it begins at the myelin sheath; in the dog it is described as gray-matter neuropil vacuolation) and its timing follows the exposure window, so a Wwox-deficient model with a myelin deficit gives a prediction in each direction rather than a vague worry.",
           "The Choi 2026 authors themselves ask whether delayed myelination confers susceptibility, and the baseline MRI of both children showed white matter volume loss.",
           "A pre-existing myelin abnormality was named in the pathology case report of 2009 as a reason for concern."
         ],
         "against": [
-          "Two children selected for having the finding cannot exceed a background rate that the label puts at 22 percent in vigabatrin-treated infants with infantile spasms (against 4 percent with other therapies, retrospective, N=205); the denominator of vigabatrin-exposed WWOX children is not in any source read, so 'enriched in WWOX' is not supported and 'documented in WWOX' is all that holds.",
+          "Two children selected for having the finding, with no denominator, cannot be shown to exceed (or fall below) the label's figures: 22 percent MRI changes in vigabatrin-treated non-WWOX infants with infantile spasms against 4 percent on other therapies (retrospective, N=205, arm sizes not stated). The denominator of vigabatrin-exposed WWOX children is not in any source read, so 'enriched in WWOX' is not supported and 'documented in WWOX' is all that holds.",
           "Several WWOX vigabatrin reports on EB-VGB-01 describe no follow-up MRI, so an absence of VABAM in them is an unmeasured cell and not a negative.",
           "Rival explanations for the WWOX findings: concurrent hormonal therapy (associated with symptomatic cases in one non-WWOX cohort, not with the MRI finding in another, both partial reads), disease severity, the underlying white matter disease, and observer bias.",
           "The rodent and dog lesions were found at doses inside the human range, but vacuoles in neonatal and juvenile rats are described as distinct from the adult intramyelinic edema; the species bridge to a human infant is partial.",
@@ -460,26 +460,26 @@
       "scope_of_checks": {
         "support_and_replication": "The WWOX rows come from one report (Choi 2026, abstract) and one mouse paper (Repudi 2021, partial read); everything else is another disease, another species or another compound.",
         "formal_checks": "check_cards.py; the bridge builds the card from the packet. Abstract level for 12 of the 13 PubMed sources; PMC5024311 body read (partial: figure caption only, references not read); label sections read in full, cited study not read; no receipt exists for any row except the carried Repudi 2021 receipt.",
-        "card_inferences_owed_audit": "The synthesis in 'mechanism', both registered predictions, and the reading of 22 versus 4 percent as a background rate are INFERENZA and owed a blind audit by someone other than the producer."
+        "card_inferences_owed_audit": "The synthesis in 'mechanism', both registered predictions, and the comparison of a denominator-free case report with the label's 22 versus 4 percent are INFERENZA and owed a blind audit by someone other than the producer."
       },
       "question_history": [
         "Mandate IT4 E1, question B (scientist-d, 2026-10-28): candidate threads chosen by data, the vigabatrin and GABA thread with ABAT corrected; the sibling question arose when the catalogue showed CPP-115 as two unlinked families and card EB-VGB-01 had no next measurement; the myelin cross-link arose from the label text on intramyelinic edema and the Choi 2026 abstract."
       ],
-      "predictions": "Registered before any such experiment: if the Wwox-deficient juvenile brain is more susceptible, vigabatrin at an exposure window and level that leaves control littermates without lesion produces vacuolation by electron microscopy (splits at the intra-period line) or a further fall in myelin markers in the Wwox-deficient animals, with the lesion at a location that follows the timetable of myelination in that genotype. If susceptibility is lower or equal, no genotype difference appears at matched exposure, and the two reported children are consistent with the background rate. If the Wwox-deficient animals do not survive the window, the experiment is not informative. A negative at unconfirmed brain exposure refutes nothing.",
+      "predictions": "Registered before any such experiment: if the Wwox-deficient juvenile brain is more susceptible, vigabatrin at an exposure window and level that leaves control littermates without lesion produces vacuolation by electron microscopy (splits at the intra-period line) or a further fall in myelin markers in the Wwox-deficient animals, with the lesion at a location that follows the timetable of myelination in that genotype. If susceptibility is lower or equal, no genotype difference appears at matched exposure, and the two reported children carry no WWOX-specific reading from this experiment. If the Wwox-deficient animals do not survive the window, the experiment is not informative. A negative at unconfirmed brain exposure refutes nothing.",
       "next_measurement": "Rodent: a Wwox-deficient juvenile model that survives the exposure window (the neuron-specific deletion is the candidate; survival is to be checked first) against control littermates, vigabatrin against vehicle at an exposure window and level taken from the published rat studies, with confirmed brain exposure, blinded electron microscopy for intramyelinic splits, myelin markers and g-ratio, and a pre-planned genotype-by-treatment interaction test; a sibling arm only if a supply exists. Human, no contact made: a structured case count of every WWOX-DEE child given vigabatrin (denominator), with follow-up MRI done or not, age at start, duration, hormonal co-therapy and outcome, in the natural-history or registry route already noted in the clinical census.",
       "status": "controversial",
-      "value_added": "Adds the missing next measurement for the vigabatrin thread; recasts the WWOX VABAM signal as numerator-only against a 22 percent label background; blocks the inference that a retina-sparing sibling is brain-myelin-sparing; joins, for the first time in the repository, the vigabatrin myelin lesion and the Wwox myelin deficit and vacuole questions; and records that CPP-115 sits in the catalogue as two unlinked families (identity proof by Guide to Pharmacology).",
+      "value_added": "Adds the missing next measurement for the vigabatrin thread; recasts the WWOX VABAM signal as numerator-only (no denominator), set beside the label's 22 versus 4 percent in non-WWOX infants; blocks the inference that a retina-sparing sibling is brain-myelin-sparing; joins, for the first time in the repository, the vigabatrin myelin lesion and the Wwox myelin deficit and vacuole questions; and records that CPP-115 sits in the catalogue as two unlinked families (identity proof by Guide to Pharmacology).",
       "clinical_census": "ClinicalTrials.gov API v2, 2026-10-28, three queries: CPP-115 (1 record: a completed phase 1 safety study in cocaine dependence), OV329 (0), vigabatrin (41 records; none a WWOX study). Earlier census 2026-10-20 found no registered WOREE interventional study. A missing hit does not prove that no study exists. Not a WOREE-specific search for this card."
     },
     "not_known": [
       "How many WWOX-DEE children have received vigabatrin and how many of them had follow-up MRI (the denominator behind the two reported cases).",
-      "Whether a Wwox-deficient juvenile brain is more, equally or less susceptible to the vigabatrin myelin lesion.",
-      "Whether the myelin lesion is a class effect of GABA-aminotransferase inactivation or specific to vigabatrin; any brain histology or MRI with CPP-115 or OV329 in any species.",
+      "Whether a Wwox-deficient juvenile brain is more, equally or less susceptible to the vigabatrin brain lesion.",
+      "Whether the vigabatrin brain lesion is a class effect of GABA-aminotransferase inactivation or specific to vigabatrin; any brain histology or MRI with CPP-115 or OV329 in any species.",
       "Whether hormonal co-therapy was concurrent in the two WWOX MRI reports (full text closed access, no receipt).",
       "ABAT activity and GABA concentration in Wwox-deficient brain."
     ],
     "evidence_against": [
-      "Two children selected for having the finding cannot exceed a background rate that the label puts at 22 percent in vigabatrin-treated infants with infantile spasms (against 4 percent with other therapies, retrospective, N=205); the denominator of vigabatrin-exposed WWOX children is not in any source read, so 'enriched in WWOX' is not supported and 'documented in WWOX' is all that holds.",
+      "Two children selected for having the finding, with no denominator, cannot be shown to exceed (or fall below) the label's figures: 22 percent MRI changes in vigabatrin-treated non-WWOX infants with infantile spasms against 4 percent on other therapies (retrospective, N=205, arm sizes not stated). The denominator of vigabatrin-exposed WWOX children is not in any source read, so 'enriched in WWOX' is not supported and 'documented in WWOX' is all that holds.",
       "Several WWOX vigabatrin reports on EB-VGB-01 describe no follow-up MRI, so an absence of VABAM in them is an unmeasured cell and not a negative.",
       "Rival explanations for the WWOX findings: concurrent hormonal therapy (associated with symptomatic cases in one non-WWOX cohort, not with the MRI finding in another, both partial reads), disease severity, the underlying white matter disease, and observer bias.",
       "The rodent and dog lesions were found at doses inside the human range, but vacuoles in neonatal and juvenile rats are described as distinct from the adult intramyelinic edema; the species bridge to a human infant is partial.",
@@ -501,7 +501,7 @@
     },
     "p4_roadmap_fields": {
       "indication_and_transfer": "Not an indication and not a treatment proposal. It asks whether the exposure limit of the only class with human WWOX-DEE partial-benefit reports is different in this disease. Nothing measured with one compound is transferred to another: vigabatrin rows stay on vigabatrin, CPP-115 rows on CPP-115, and no sibling row is read as evidence about brain MRI because none measures it.",
-      "verification_scope": "{\"support_and_replication\": \"The WWOX rows come from one report (Choi 2026, abstract) and one mouse paper (Repudi 2021, partial read); everything else is another disease, another species or another compound.\", \"formal_checks\": \"check_cards.py; the bridge builds the card from the packet. Abstract level for 12 of the 13 PubMed sources; PMC5024311 body read (partial: figure caption only, references not read); label sections read in full, cited study not read; no receipt exists for any row except the carried Repudi 2021 receipt.\", \"card_inferences_owed_audit\": \"The synthesis in 'mechanism', both registered predictions, and the reading of 22 versus 4 percent as a background rate are INFERENZA and owed a blind audit by someone other than the producer.\"}"
+      "verification_scope": "{\"support_and_replication\": \"The WWOX rows come from one report (Choi 2026, abstract) and one mouse paper (Repudi 2021, partial read); everything else is another disease, another species or another compound.\", \"formal_checks\": \"check_cards.py; the bridge builds the card from the packet. Abstract level for 12 of the 13 PubMed sources; PMC5024311 body read (partial: figure caption only, references not read); label sections read in full, cited study not read; no receipt exists for any row except the carried Repudi 2021 receipt.\", \"card_inferences_owed_audit\": \"The synthesis in 'mechanism', both registered predictions, and the comparison of a denominator-free case report with the label's 22 versus 4 percent are INFERENZA and owed a blind audit by someone other than the producer.\"}"
     },
     "label_lookup": {
       "status": "NOT_ATTEMPTED"
