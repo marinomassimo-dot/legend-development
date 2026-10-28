@@ -1397,11 +1397,11 @@
   }
  },
  "observations": {
-  "assertions_listed_in_pertinence_table": 82,
+  "assertions_listed_in_pertinence_table": 87,
   "assertions_not_assessed_for_pertinence_not_counted": 0,
   "axis_cards_not_interventions": 3,
   "card_interventions": 29,
-  "data_assertions_in_intervention_cards": 82,
+  "data_assertions_in_intervention_cards": 87,
   "listed_by_evidence_kind": {
    "case_report_uninformative": 3,
    "case_report_wwox_clinical": 8,
@@ -1410,17 +1410,17 @@
    "label_statement": 2,
    "out_of_scope_endpoint": 3,
    "readout_in_wwox_system": 17,
-   "readout_other_disease": 29,
+   "readout_other_disease": 34,
    "safety_signal": 4,
    "target_engagement_assay": 10
   },
   "listed_by_sign": {
-   "benefit": 39,
+   "benefit": 43,
    "harm": 12,
    "mixed": 1,
    "normalised_vs_wild_type": 3,
    "not_normalised_vs_wild_type": 2,
-   "null": 13,
+   "null": 14,
    "partial_benefit": 3,
    "unquantified": 2,
    "unresolved": 8

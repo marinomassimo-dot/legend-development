@@ -649,19 +649,21 @@
    ],
    "inferred": [
     "That the Q230P lesion is a degradation problem rather than a synthesis or solubility problem is not known; every proteostasis route below inherits that.",
-    "That raising abundance raises function: severity tracks residual function, not abundance (CLAIM 030), and 'stable but inert' is a demonstrated phenotype for some variants."
+    "That raising abundance raises function: severity tracks residual function, not abundance (CLAIM 030), and 'stable but inert' is a demonstrated phenotype for some variants.",
+    "That a fold gain in mutant protein is useful: a boost multiplies the residual function R (amount relative to wild type times function per molecule) and does not change it, so parity needs the reciprocal of R; R is unmeasured for every WWOX allele, and for the Q230P class the only bound is the unquantified detection floor (IT5 P8, missense_recovery_it5_p8_20261029)."
    ],
    "intervention_direction": {
     "direction": "up",
     "on": "functional (not merely detectable) mutant WWOX protein",
     "rationale": "The protein is not detected while the transcript is reported comparable; restoring the product from this allele would require raising functional protein, if the lesion is a protein-level bottleneck (unresolved).",
     "certainty": "inferred",
-    "do_not_assume": "Direction is conditional on the unresolved bottleneck. Chemical chaperones were judged to act in the wrong compartment (map N-11); HSP70 co-induction carries a hypothesis of harm (N-12); proteasome inhibition is a probe-derived rescue idea that also stabilises misfolded protein. ER/UPR modulators have no stated target because WWOX is a cytosolic enzyme and no measurement places the variant in ER quality control."
+    "do_not_assume": "Direction is conditional on the unresolved bottleneck. Chemical chaperones were judged to act in the wrong compartment (map N-11), an objection that IT5 P8 narrowed: it is not established for a soluble cytosolic client (Munc18-1, where the class and two HDAC-free osmolytes raised a mutant and a class-I HDAC inhibitor did not; no enzyme and no WWOX system tested; an HDAC6 role is open); HSP70 co-induction carries a hypothesis of harm (N-12); proteasome inhibition is a probe-derived rescue idea that also stabilises misfolded protein. ER/UPR modulators have no stated target because WWOX is a cytosolic enzyme and no measurement places the variant in ER quality control."
    },
    "counter_evidence": [
     "Q230P is not P47T and not P252A; no read-across between missense alleles (MECHANISM_TRANSFER_FIREWALL).",
     "Abundance restored without function would be neutral at best (CLAIM 030).",
-    "N-11: 4-phenylbutyrate/TUDCA act on an ER-chaperone rationale and WWOX is cytosolic. N-12: HSP70 co-induction could stabilise an insoluble protein (adjacent-protein precedent: stabilisation gave insoluble protein without activity)."
+    "N-11: 4-phenylbutyrate/TUDCA act on an ER-chaperone rationale and WWOX is cytosolic. N-12: HSP70 co-induction could stabilise an insoluble protein (adjacent-protein precedent: stabilisation gave insoluble protein without activity).",
+    "IT5 P8: in the one soluble cytosolic precedent the treatment gains on mutant protein were small (about 1.05 to 1.65 fold total on four of five variants) against a deficit of tens of fold, and the same gain applies to wild type; a measured turnover difference of about 1.5 to 3 fold explains only part of that deficit, so the cleared-after-synthesis branch is not the only candidate (NOT WWOX EVIDENCE; reader arithmetic on panel estimates)."
    ],
    "sources": {
     "cards": [

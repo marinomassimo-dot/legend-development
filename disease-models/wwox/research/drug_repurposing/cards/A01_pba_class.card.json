@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "cca82737dbba1f2921e6d0807a865f8f250ce8bd043c2044a02b09e39cb3268d",
+  "input_sha256": "fee0d4182182def90571a1ef183decdb1722165c746792489f838c4d2d173560",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -73,6 +73,72 @@
         "context.cell_type: mismatch or unknown",
         "context.developmental_stage: mismatch or unknown"
       ]
+    },
+    {
+      "assertion_id": "DR-A01-006",
+      "status": "UNRESOLVED",
+      "reasons": [
+        "target_id: mismatch or unknown",
+        "endpoint: mismatch or unknown",
+        "context.disease_id: mismatch or unknown",
+        "context.genotype: mismatch or unknown",
+        "context.species: mismatch or unknown",
+        "context.cell_type: mismatch or unknown",
+        "context.developmental_stage: mismatch or unknown"
+      ]
+    },
+    {
+      "assertion_id": "DR-A01-007",
+      "status": "UNRESOLVED",
+      "reasons": [
+        "target_id: mismatch or unknown",
+        "endpoint: mismatch or unknown",
+        "context.disease_id: mismatch or unknown",
+        "context.genotype: mismatch or unknown",
+        "context.species: mismatch or unknown",
+        "context.cell_type: mismatch or unknown",
+        "context.developmental_stage: mismatch or unknown",
+        "reported no change, in a cell that is not comparable: a measured null, not an unmeasured cell"
+      ]
+    },
+    {
+      "assertion_id": "DR-A01-008",
+      "status": "UNRESOLVED",
+      "reasons": [
+        "target_id: mismatch or unknown",
+        "endpoint: mismatch or unknown",
+        "context.disease_id: mismatch or unknown",
+        "context.genotype: mismatch or unknown",
+        "context.species: mismatch or unknown",
+        "context.cell_type: mismatch or unknown",
+        "context.developmental_stage: mismatch or unknown"
+      ]
+    },
+    {
+      "assertion_id": "DR-A01-009",
+      "status": "UNRESOLVED",
+      "reasons": [
+        "target_id: mismatch or unknown",
+        "endpoint: mismatch or unknown",
+        "context.disease_id: mismatch or unknown",
+        "context.genotype: mismatch or unknown",
+        "context.species: mismatch or unknown",
+        "context.cell_type: mismatch or unknown",
+        "context.developmental_stage: mismatch or unknown"
+      ]
+    },
+    {
+      "assertion_id": "DR-A01-010",
+      "status": "UNRESOLVED",
+      "reasons": [
+        "target_id: mismatch or unknown",
+        "endpoint: mismatch or unknown",
+        "context.disease_id: mismatch or unknown",
+        "context.genotype: mismatch or unknown",
+        "context.species: mismatch or unknown",
+        "context.cell_type: mismatch or unknown",
+        "context.developmental_stage: mismatch or unknown"
+      ]
     }
   ],
   "abstention": null,
@@ -94,12 +160,12 @@
   "p4_fields": {
     "endpoint_pursued": "Return of detectable, soluble, functional WWOX protein from a Q230P-class missense lesion; the proximal readout would be total, soluble and pellet WWOX plus a WWOX function assay, none of which exists for this allele.",
     "functional_evidence_available": "None for WWOX. Adjacent precedents measure protein and function together in other proteins and the two come apart in six of them (R1 question 2); no function readout for WWOX is defined in the repository.",
-    "temporal_or_model_limit": "Every precedent is an overexpression cell line, a worm, a fly, a zebrafish null or a short mouse exposure of a membrane or secretory-pathway protein; none is an enzyme from its own promoter, and none measured brain exposure beside mutant-protein level.",
+    "temporal_or_model_limit": "Every precedent is an overexpression cell line, a worm, a fly, a zebrafish null or a short mouse exposure. All but one concern membrane or secretory-pathway proteins; the exception, Munc18-1, is a soluble cytosolic protein that is not an enzyme and carries a dominant-negative mechanism. None is an enzyme from its own promoter, none measured transgene mRNA under treatment beside protein, and none measured brain exposure beside mutant-protein level.",
     "cellular_context": {
       "target_expression": "UNKNOWN for relevant human neural cells and stages; the only Q230P measurement is one patient fibroblast line.",
       "cells_tissue_stage": "Precedents: HEK293/HEK293T, Neuro2a, worm, fly glia, zebrafish larva, knock-in mouse thalamus and cortex. Q230P-relevant neurons and oligodendrocyte-lineage cells: not studied with this class.",
       "coverage": "Target expression and drug selectivity are different questions; neither is answered here. The class is not selective (it raises wild-type protein).",
-      "limits": "WWOX is cytosolic. The measured behaviour of the class as a chaperone of an ER-retained branch concerns membrane or secretory-pathway clients, and the repository withdrew this class once for a wrong-compartment rationale (DIS-004). Whether that objection survives the HDAC-inhibitor and heat-shock-co-induction readings is open (REVIVAL_TRIGGER live). INFERENZA, blind audit OWED."
+      "limits": "WWOX is described here as cytosolic, though its localisation is reported in several compartments and is unmeasured for the Q230P class. The compartment objection that withdrew this class once (DIS-004) is not established for a soluble client: in a soluble cytosolic precedent (Munc18-1) the class and two HDAC-free osmolytes raised the mutant protein while a class-I HDAC inhibitor did not. A role of HDAC6 is open (the comparator does not engage it; no pan-HDAC or HDAC6-selective arm in that paper; a cytosolic enzyme precedent responds to an HDAC6 lever). INFERENZA, blind audit OWED."
     }
   },
   "input": {
@@ -223,27 +289,122 @@
         },
         "measured_result_note": "The HDAC-inhibitor comparator raised the total amount of immature protein with a small, variant-dependent function gain (the authors read non-specific accumulation; partial dissociation of quantity from function, not a clean quantity-up, function-flat case) and worsened an EEG count in one line; the mechanism ascribed to the phenylbutyrate arm (chaperone rather than HDAC inhibition) is inferential, and a direct binding, thermal-stability or folding measurement is NOT ESTABLISHED HERE.",
         "receipt": "FTR-20261021-42157447-01"
+      },
+      {
+        "id": "DR-A01-006",
+        "target_id": "STXBP1:Munc18-1 protein, variant G544D (soluble cytosolic client, aggregation-prone)",
+        "endpoint": "total variant protein, 4-phenylbutyrate arm",
+        "direction": "INCREASE",
+        "source": "Guiberson 2018 (PMID 30266908), Supplementary Figure 12a, mutant panel read in IT5 P8; NOT WWOX EVIDENCE",
+        "locator": "disease-models/wwox/research/drug_repurposing/missense_recovery_it5_p8_20261029/README.md section 4; munc18_cytosolic_precedent_panel_readings_20261029.tsv",
+        "epistemic_status": "DATO",
+        "reading_depth": "partial_fulltext_read",
+        "context": {
+          "disease_id": "STXBP1/Munc18-1 variant (not WWOX); soluble cytosolic client",
+          "genotype": "G544D",
+          "species": "human protein expressed in HEK293T (cDNA under a CMV-promoter plasmid)",
+          "cell_type": "HEK293T",
+          "developmental_stage": "not applicable"
+        },
+        "measured_result_note": "Total mutant protein about 1.8 fold of its own untreated control (three experiments, significance mark printed); wild type rose about 1.8 fold as well, so the gain is not mutant-specific; transgene mRNA under treatment was not measured.",
+        "receipt": "FTR-20261021-30266908-01"
+      },
+      {
+        "id": "DR-A01-007",
+        "target_id": "STXBP1:Munc18-1 protein, variant G544D (soluble cytosolic client, aggregation-prone)",
+        "endpoint": "total variant protein, class-I HDAC-inhibitor comparator (butyrate) at the same applied level",
+        "direction": "NO_CHANGE",
+        "source": "Guiberson 2018 (PMID 30266908), Supplementary Figure 12a, mutant panel read in IT5 P8; NOT WWOX EVIDENCE",
+        "locator": "disease-models/wwox/research/drug_repurposing/missense_recovery_it5_p8_20261029/munc18_cytosolic_precedent_panel_readings_20261029.tsv",
+        "epistemic_status": "DATO",
+        "reading_depth": "partial_fulltext_read",
+        "context": {
+          "disease_id": "STXBP1/Munc18-1 variant (not WWOX); soluble cytosolic client",
+          "genotype": "G544D",
+          "species": "human protein expressed in HEK293T (cDNA under a CMV-promoter plasmid)",
+          "cell_type": "HEK293T",
+          "developmental_stage": "not applicable"
+        },
+        "measured_result_note": "Mutant total protein about 1.05 of untreated control, no significance mark (three experiments); the text lists only the phenylbutyrate class and two osmolytes as stabilising. On wild type the same comparator gave a scattered, unmarked value near 1.95. The comparator is more potent than the phenylbutyrate class on class-I HDAC enzymes and does not engage HDAC6 at the applied level; no pan-HDAC or HDAC6-selective arm exists in this paper. A measured null in a cell that is not comparable.",
+        "receipt": "FTR-20261021-30266908-01"
+      },
+      {
+        "id": "DR-A01-008",
+        "target_id": "STXBP1:Munc18-1 protein, variant G544D (soluble cytosolic client, aggregation-prone)",
+        "endpoint": "total variant protein, two osmolyte chemical chaperones with no HDAC activity (sorbitol, trehalose)",
+        "direction": "INCREASE",
+        "source": "Guiberson 2018 (PMID 30266908), Supplementary Figure 12a, mutant panel read in IT5 P8; NOT WWOX EVIDENCE",
+        "locator": "disease-models/wwox/research/drug_repurposing/missense_recovery_it5_p8_20261029/munc18_cytosolic_precedent_panel_readings_20261029.tsv",
+        "epistemic_status": "DATO",
+        "reading_depth": "partial_fulltext_read",
+        "context": {
+          "disease_id": "STXBP1/Munc18-1 variant (not WWOX); soluble cytosolic client",
+          "genotype": "G544D",
+          "species": "human protein expressed in HEK293T (cDNA under a CMV-promoter plasmid)",
+          "cell_type": "HEK293T",
+          "developmental_stage": "not applicable"
+        },
+        "measured_result_note": "Mutant total protein about 1.8 (sorbitol) and about 2.35 (trehalose) fold of control, significance marks printed; also raised in yeast by a second assay. Both act at high osmolyte levels, so an osmotic effect is not separated from chaperoning; the effect is on wild type as well.",
+        "receipt": "FTR-20261021-30266908-01"
+      },
+      {
+        "id": "DR-A01-009",
+        "target_id": "STXBP1:Munc18-1 vesicle-recycling read-out in Munc18-1-null neurons expressing variants",
+        "endpoint": "synaptotagmin-1 antibody uptake (function of the same protein), 4-phenylbutyrate arm",
+        "direction": "INCREASE",
+        "source": "Guiberson 2018 (PMID 30266908), Figures 3, 4 and 6 read in IT5 P8; NOT WWOX EVIDENCE",
+        "locator": "disease-models/wwox/research/drug_repurposing/missense_recovery_it5_p8_20261029/munc18_quantity_function_arithmetic_20261029.tsv",
+        "epistemic_status": "DATO",
+        "reading_depth": "partial_fulltext_read",
+        "context": {
+          "disease_id": "STXBP1/Munc18-1 variant (not WWOX); soluble cytosolic client",
+          "genotype": "five variants (P335L, R406H, P480L, G544D, G544V)",
+          "species": "mouse neurons, lentiviral human cDNA in a conditional null background",
+          "cell_type": "primary cortical neurons",
+          "developmental_stage": "in culture"
+        },
+        "measured_result_note": "Mutant total protein sits at about 4 to 8 percent of wild type in four of five variants and rises only about 1.05 to 1.65 fold with the class; the soluble fraction roughly doubles (soluble pool about 2 to 4 fold, reader arithmetic); function reaches or exceeds the untreated wild-type range for four of five. Quantity and function are not proportional (read-out saturation or wild-type over-expression not excluded); a steady-state deficit of about 12 to 25 fold is only about 1.5 to 3 fold explained by the measured turnover.",
+        "receipt": "FTR-20261021-30266908-01"
+      },
+      {
+        "id": "DR-A01-010",
+        "target_id": "PAH:phenylalanine hydroxylase protein, p.Phe263Ser (cytosolic enzyme), selective HDAC6 inhibitor (comparator lever, not the phenylbutyrate class)",
+        "endpoint": "liver mutant enzyme protein and plasma phenylalanine (function read-out)",
+        "direction": "INCREASE",
+        "source": "PMID 41274966 (R1 reading, manifest of 2026-10-22); NOT WWOX EVIDENCE",
+        "locator": "disease-models/wwox/research/repurposing_10h_scientist-a_r1d_20261022.md section 3, item 5; deepdive_manifests/PMID41274966.json entries 5 to 7",
+        "epistemic_status": "DATO",
+        "reading_depth": "complete_fulltext_read",
+        "context": {
+          "disease_id": "phenylketonuria model (not WWOX)",
+          "genotype": "homozygous missense (Pah enu2)",
+          "species": "mouse",
+          "cell_type": "liver",
+          "developmental_stage": "adult, 12-week exposure"
+        },
+        "measured_result_note": "Enzyme protein rose toward wild type with acetylated HSP90 up; plasma phenylalanine fell about 44 percent from sham yet stayed about three times wild type; two sham animals against three treated; a higher exposure level caused kidney enlargement, ascites and deaths; no turnover measurement supports the authors' degradation reading. Shows that a cytosolic mutant enzyme can respond to an HDAC6 lever, which butyrate does not engage.",
+        "receipt": "FTR-20261022-41274966-01"
       }
     ],
     "p4_fields": {
       "endpoint_pursued": "Return of detectable, soluble, functional WWOX protein from a Q230P-class missense lesion; the proximal readout would be total, soluble and pellet WWOX plus a WWOX function assay, none of which exists for this allele.",
       "functional_evidence_available": "None for WWOX. Adjacent precedents measure protein and function together in other proteins and the two come apart in six of them (R1 question 2); no function readout for WWOX is defined in the repository.",
-      "temporal_or_model_limit": "Every precedent is an overexpression cell line, a worm, a fly, a zebrafish null or a short mouse exposure of a membrane or secretory-pathway protein; none is an enzyme from its own promoter, and none measured brain exposure beside mutant-protein level.",
+      "temporal_or_model_limit": "Every precedent is an overexpression cell line, a worm, a fly, a zebrafish null or a short mouse exposure. All but one concern membrane or secretory-pathway proteins; the exception, Munc18-1, is a soluble cytosolic protein that is not an enzyme and carries a dominant-negative mechanism. None is an enzyme from its own promoter, none measured transgene mRNA under treatment beside protein, and none measured brain exposure beside mutant-protein level.",
       "cellular_context": {
         "target_expression": "UNKNOWN for relevant human neural cells and stages; the only Q230P measurement is one patient fibroblast line.",
         "cells_tissue_stage": "Precedents: HEK293/HEK293T, Neuro2a, worm, fly glia, zebrafish larva, knock-in mouse thalamus and cortex. Q230P-relevant neurons and oligodendrocyte-lineage cells: not studied with this class.",
         "coverage": "Target expression and drug selectivity are different questions; neither is answered here. The class is not selective (it raises wild-type protein).",
-        "limits": "WWOX is cytosolic. The measured behaviour of the class as a chaperone of an ER-retained branch concerns membrane or secretory-pathway clients, and the repository withdrew this class once for a wrong-compartment rationale (DIS-004). Whether that objection survives the HDAC-inhibitor and heat-shock-co-induction readings is open (REVIVAL_TRIGGER live). INFERENZA, blind audit OWED."
+        "limits": "WWOX is described here as cytosolic, though its localisation is reported in several compartments and is unmeasured for the Q230P class. The compartment objection that withdrew this class once (DIS-004) is not established for a soluble client: in a soluble cytosolic precedent (Munc18-1) the class and two HDAC-free osmolytes raised the mutant protein while a class-I HDAC inhibitor did not. A role of HDAC6 is open (the comparator does not engage it; no pan-HDAC or HDAC6-selective arm in that paper; a cytosolic enzyme precedent responds to an HDAC6 lever). INFERENZA, blind audit OWED."
       }
     },
     "p4_card": {
       "identity": "4-phenylbutyrate (and the related salt forms) and bile-acid chemical chaperones (e.g. the TUDCA class), taken together because TX-003 lists them together. The two are not interchangeable; the SLC6A1 reading found a similar variant-by-variant pattern only for the bile acid. Formulation relevant to any use: UNKNOWN.",
-      "indication_and_transfer": "WOREE (Q230P-class missense) as target. Origin contexts: STXBP1, SLC6A1, GABRA1 and GAT-1 variants in cells, worm, fly, zebrafish and mouse (NOT WWOX EVIDENCE). Bridge limit: a chaperone of an ER-retained membrane protein is not shown to act on a cytosolic SDR enzyme; wild type is raised as well.",
+      "indication_and_transfer": "WOREE (Q230P-class missense) as target. Origin contexts: STXBP1, SLC6A1, GABRA1 and GAT-1 variants in cells, worm, fly, zebrafish and mouse (NOT WWOX EVIDENCE). Bridge limit: one precedent of the lot is a soluble cytosolic client (Munc18-1) where the class raised the mutant, but no enzyme and no WWOX system was tested; wild type is raised as well.",
       "novelty_for_woree": "NON_TROVATO_NELLA_RICERCA as a test in any WWOX system (registry-based, known-roads note section 2.8, 2026-10-20); no dedicated PubMed query for these molecules was run for this card. 4-PBA/TUDCA were carried as TX-003 and withdrawn on rationale (DIS-004), not on a result. NOT MAI_TENTATO-proof: unpublished individual experience is unreachable by any literature query.",
-      "state_of_known_roads": "inconclusive (rationale withdrawn, not refuted; no WWOX test).",
+      "state_of_known_roads": "inconclusive, narrowed in IT5 P8 (rationale withdrawn once, not refuted; compartment objection not established for a soluble client; no WWOX test; HDAC6 role open).",
       "pathway_and_objective": "RECUPERO_PROFONDO.",
       "expected_contribution": "Function recovery of residual WWOX protein is the only contribution hypothesised; compensation, symptom and protection are not claimed. The branch (retained, cleared, insoluble) must be placed before any contribution can be stated.",
-      "mechanism": "Target: the folding or trafficking fate of a destabilised client; type of action debated between chemical chaperone, HDAC inhibition (transcriptional raise of the cDNA), stress-pathway modulation and heat-shock co-induction; direction: up in protein; context: ER-retained membrane clients. In the one paper that compared mechanism classes the evidence for chaperoning is inferential.",
+      "mechanism": "Target: the folding or trafficking fate of a destabilised client; type of action debated among three non-exclusive classes: physical chemical chaperoning (the class and HDAC-free osmolytes both raised a soluble mutant), HDAC6/HSP90-linked acetylation (open for the class: the class engages HDAC6 at applied levels, butyrate does not, one cytosolic enzyme precedent responds to an HDAC6 lever), and class-I HDAC-mediated transcription of the cDNA (a class-I inhibitor did not reproduce the soluble mutant gain; promoter and mRNA-under-treatment controls absent). No source curates a chaperone target or potency for the class; its HDAC potencies are quantified at enzyme level and the applied levels sit well above them. Direction: up in protein; context: ER-retained membrane clients and one soluble cytosolic client.",
       "sources": {
         "internal": [
           "claim_registry_current CLAIM 019, CLAIM 030, CLAIM 032",
@@ -261,36 +422,41 @@
       "evidence_for_and_against": {
         "for": [
           "Allele-specific rescue of a fully ER-retained variant with protein and function read together (GAT-1 G443V, fly seizure-like episodes down).",
-          "Total and surface protein rise in other missense lesions with the class."
+          "Total and surface protein rise in other missense lesions with the class.",
+          "In the soluble cytosolic client, the class and two HDAC-free osmolytes raised the mutant while a class-I HDAC inhibitor did not, and the soluble fraction roughly doubled with a vesicle-recycling read-out at or above the untreated wild-type range for four of five variants (partial dissociation of quantity from function in the favourable direction; NOT WWOX EVIDENCE)."
         ],
         "against": [
           "Wild type is raised in every target: the effect is not mutant-specific.",
           "Not rescued: the partly trafficked G443D; null zebrafish (protein not measured); butyrate raised total immature protein with a small, variant-dependent function gain.",
           "Mouse exposures were short (days); no brain exposure measured beside mutant protein; the human arm of one paper is one uncontrolled child.",
-          "No enzyme-class precedent for the class; the enzyme precedents use degradation blockade or an active-site binder."
+          "No enzyme-class precedent for the class; the enzyme precedents use degradation blockade or an active-site binder.",
+          "The soluble precedent raises wild type as well, adds no enzyme, no route-inhibitor arm and no mRNA under treatment, uses a dominant-negative mechanism WWOX does not have, and its total-protein gain on four of five mutants is only about 1.05 to 1.65 fold.",
+          "A required-fold limit: a boost multiplies the mutant's residual function and does not change it; parity needs the reciprocal of (amount times function per molecule), which is unmeasured for every WWOX allele, and observed gains (about 1.05 to 9 fold) also apply to wild type.",
+          "The measured turnover difference (about 1.5 to 3 fold) explains only a small part of a 12 to 25 fold steady-state deficit in the soluble precedent, so the 'made then cleared' branch is not the only candidate even where turnover is measured."
         ],
-        "transfer_limits": "Cytosolic enzyme versus ER-retained membrane client; overexpression versus own promoter."
+        "transfer_limits": "Soluble monomeric client with a dominant-negative mechanism, or ER-retained membrane client, versus a recessive cytosolic SDR enzyme; overexpression (CMV-promoter plasmid or lentivirus) versus own promoter; wild type raised alike; the in vitro and in vivo gains are protein quantity, not WWOX function."
       },
       "time_to_access": "UNKNOWN. Not documented in the repository.",
       "time_to_benefit": "UNKNOWN. Not documented; no WWOX datum exists from which to estimate it.",
-      "pharmacology": "Potency, relevant exposure and selectivity in a WWOX system: UNKNOWN. In the sources: class not selective for the mutant; brain exposure not measured in any R1 paper.",
+      "pharmacology": "Potency, relevant exposure and selectivity in a WWOX system: UNKNOWN. In the sources: class not selective for the mutant; brain exposure not measured in any R1 paper. Keyless sources (IT5 P8): no folding, binding or thermal-shift datum for the class or for TUDCA in ChEMBL, GtoPdb or DGIdb (ChEMBL mechanism of record is ammonia scavenging for the sodium salt and 'Unknown' for TUDCA; GtoPdb holds no curated interaction for either); HDAC enzyme potencies of the class are in the micromolar to sub-millimolar range and the levels applied in cells were about 8 to 78 times those (enzyme-level arithmetic, not occupancy); butyrate is 4 to 29 times more potent against class I and does not engage HDAC6.",
       "paediatrics_and_interactions": "UNKNOWN. No paediatric suitability is presumed by this card, for the candidate or for any historical authorisation of it for another use.",
       "scope_of_checks": {
         "support_and_replication": "Rescue of the retained branch seen in two papers of one target family (GAT-1 variants); no replication in an enzyme-class or WWOX system.",
         "formal_checks": "R1 readings carry recorded receipts and PASS manifests. The blind audit of six R1 manifests has run (95 triples: 76 supported, 15 overshoot, 2 undershoot, 2 unverifiable; page_adjudications/locator_audit_R1_20261022.md) and its repairs were applied at source; those repairs are not themselves re-audited. This card was audited in page_adjudications/locator_audit_deep_cards_20261022.md; the defects named there are repaired here and the repair is not certified by its author.",
-        "card_inferences_owed_audit": "The wrong-compartment transfer objection (INFERENZA)."
+        "card_inferences_owed_audit": "The wrong-compartment transfer objection (INFERENZA); the IT5 P8 additions: the soluble-client contrast, the applied-level arithmetic, the required-fold limit and the panel-reading estimates (reader estimates, INFERENZA, blind audit OWED)."
       },
       "question_history": [
         "TX-003 (proposed), DIS-004 (withdrawn rationale, live revival trigger: HDAC-inhibitor or HSP co-inducer role)",
         "arimoclomol-type co-induction withdrawn the same day (D-03: HSC70 delivers the mutant to the lysosome)",
         "CLAIM 019 / CLAIM 030 / CLAIM 032 (Q230P: rescue conditional on distinguishing synthesis, solubility and turnover and on showing function of the recovered protein)",
-        "RC-013 (experimental validation of Q230P instability)"
+        "RC-013 (experimental validation of Q230P instability)",
+        "IT5 P8 (scientist-b, 2026-10-28): Munc18-1 mutant panel and neuron quantity-function pair read; HDAC enzyme potencies and applied-level arithmetic added; compartment claim corrected; DR-A01-006 to DR-A01-010 added; revision owed a blind audit by someone else"
       ],
       "predictions": "No engine, no score. The in-silico values recorded in CLAIM 019 are IPOTESI about a folding perturbation of Q230P, not predictions about any drug; they stay IPOTESI.",
-      "next_measurement": "Three-fraction (soluble, pellet, total) plus an inhibitor arm, then a chase from a detectable baseline, on the exact variant, with a WWOX function readout. The result decides whether the class is even addressed to the right branch.",
+      "next_measurement": "Fate first: three-fraction (soluble, pellet, total) plus an orthogonal detection and a route-inhibitor arm on the exact variant, with transgene mRNA measured in the same wells under treatment; then a wild-type titration of the chosen function read-out as a ruler; then a lever panel that separates three classes (a class-I HDAC inhibitor without HDAC6 activity, a pan-HDAC or selective HDAC6 inhibitor, HDAC-free bile acid and osmolytes with an osmotic control), with the arm-outcome predictions registered in both directions (design in missense_recovery_it5_p8_20261029/README.md section 8). No abundance gain is to be read as rescue before the ruler exists.",
       "status": "controversial",
-      "status_reason": "Mechanism of the class contested; rescue allele-specific; rationale withdrawn once and revival trigger live. Deferred until the lesion's fate is placed.",
-      "value_added": "Separates what the class did in other proteins (retained-branch rescue, non-selectivity, non-rescue) from what is unknown for Q230P, and names the compartment objection.",
+      "status_reason": "Mechanism of the class contested among three classes; rescue allele-specific; rationale withdrawn once and the compartment objection narrowed, not removed; revival trigger partly answered (class-I HDAC action does not reproduce the soluble mutant gain; HDAC6 role open). Deferred until the lesion's fate and a wild-type function ruler exist.",
+      "value_added": "Separates what the class did in other proteins (retained-branch rescue, non-selectivity, non-rescue) from what is unknown for Q230P; corrects the compartment transfer claim (one precedent is a soluble cytosolic client); splits the abundance gain into three mechanistic classes with one measured contrast each; adds the required-fold limit and the arm set the fate experiment needs.",
       "clinical_census": "Clinical census, ClinicalTrials.gov API v2, 2026-10-20 (disease-models/wwox/research/drug_repurposing/clinical_census_20261020.md): seven separate queries returned no registered WOREE interventional study; the only synonym-driven record is one observational natural-history registry. Carried with the census's own caution: \"A missing hit does not prove that no study exists.\" It answers seven queries against one registry on one date; unregistered, differently worded, non-NLM or later-registered studies are not excluded."
     },
     "not_known": [
@@ -299,13 +465,18 @@
       "The share of destabilised-missense lesions that are stability lesions for a WWOX SDR-domain variant: the estimates carried in the literature are cited estimates, and the SDR-domain thermal stability is a missing measurement.",
       "No drug has been given to any WWOX model carrying a missense or a splice allele (known-roads note, section 5).",
       "Whether a cytosolic enzyme lesion behaves like the ER-retained branch at all.",
-      "Whether the class, if it acts, acts through chaperoning or through raising expression of the allele."
+      "Whether the class, if it acts, acts through chaperoning or through raising expression of the allele.",
+      "Whether the class acts on a soluble cytosolic mutant through HDAC6/HSP90 acetylation: butyrate does not engage HDAC6 and no pan-HDAC or HDAC6-selective arm exists in the soluble precedent.",
+      "The residual function of the Q230P-class protein per molecule and its amount relative to wild type: the reciprocal of their product is the fold gain any boost would need, and neither factor is measured for any WWOX allele.",
+      "Whether any function read-out of WWOX saturates below wild-type protein, as the soluble precedent's read-out appears to."
     ],
     "evidence_against": [
       "Wild-type protein is raised too.",
       "Null zebrafish negative (protein not measured).",
       "Partly trafficked variant not rescued.",
-      "Rationale withdrawn once in this repository."
+      "Rationale withdrawn once in this repository.",
+      "Class-I HDAC action does not reproduce the soluble mutant gain, but that does not exclude HDAC6 or transcription-linked effects.",
+      "Observed gains also apply to wild type and are small against a deficit of tens of fold."
     ],
     "bridge_gaps_exposed": [
       "G-1 (closed in bridge b96e4cd9; packet rebuilt with NO_CHANGE)",
@@ -321,7 +492,7 @@
       "functional_rescue": "UNKNOWN for WWOX. In other proteins protein and function were measured together: partial, non-selective, variant-dependent."
     },
     "p4_roadmap_fields": {
-      "indication_and_transfer": "WOREE (Q230P-class missense) as target. Origin contexts: STXBP1, SLC6A1, GABRA1 and GAT-1 variants in cells, worm, fly, zebrafish and mouse (NOT WWOX EVIDENCE). Bridge limit: a chaperone of an ER-retained membrane protein is not shown to act on a cytosolic SDR enzyme; wild type is raised as well.",
+      "indication_and_transfer": "WOREE (Q230P-class missense) as target. Origin contexts: STXBP1, SLC6A1, GABRA1 and GAT-1 variants in cells, worm, fly, zebrafish and mouse (NOT WWOX EVIDENCE). Bridge limit: one precedent of the lot is a soluble cytosolic client (Munc18-1) where the class raised the mutant, but no enzyme and no WWOX system was tested; wild type is raised as well.",
       "verification_scope": "{\"support_and_replication\": \"Rescue of the retained branch seen in two papers of one target family (GAT-1 variants); no replication in an enzyme-class or WWOX system.\", \"formal_checks\": \"R1 readings carry recorded receipts and PASS manifests. The blind audit of six R1 manifests has run (95 triples: 76 supported, 15 overshoot, 2 undershoot, 2 unverifiable; page_adjudications/locator_audit_R1_20261022.md) and its repairs were applied at source; those repairs are not themselves re-audited. This card was audited in page_adjudications/locator_audit_deep_cards_20261022.md; the defects named there are repaired here and the repair is not certified by its author.\", \"card_inferences_owed_audit\": \"The wrong-compartment transfer objection (INFERENZA).\"}"
     },
     "label_lookup": {
@@ -335,7 +506,7 @@
       "No dose, route, schedule or paediatric suitability appears; concentrations or exposures of the sources are deliberately not reproduced.",
       "Every adjacent source is labelled NOT WWOX EVIDENCE at class level."
     ],
-    "no_new_reading": "No paper was opened for this card; the sources are the repository's own receipted notes and records."
+    "no_new_reading": "Original cards: no paper was opened. IT5 P8 revision: the Munc18-1 paper's mutant panel of Supplementary Figure 12a, Figures 3 and 6 and the chemical-chaperone passages were re-read (a re-read receipt is staged under receipt_staging/scientist-b and is not yet in the ledger); HDAC potencies were pulled from ChEMBL keyless; the other sources are the repository's own receipted notes."
   },
   "translation": {
     "pediatric_suitability": "UNKNOWN. No paediatric suitability is presumed by this card, for the candidate or for any historical authorisation of it for another use.",
