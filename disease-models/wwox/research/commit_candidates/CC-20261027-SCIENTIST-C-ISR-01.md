@@ -7,3 +7,13 @@
 3. DL-MECH-173: append one sentence citing the precedent (genetic, partial, non-WWOX). Unchanged: R-10, R-11, DL-REPO-004, HYP-20260709-01/-05, E03, E04.
 ## Needs a verifier
 Blind locator audit of the 19 figure attestations (plot readings, one reader); the Fig 6B key inconsistency.
+
+## BATCH DISPOSITION
+
+**Verdict:** PROPAGATED (research layer; `WM_v7.27` preserved)
+**Batch:** `BATCH_20261019_024` (2026-10-28, MINOR, MANUAL, ACTOR_ID `integrator`, task `INT-IT3-BATCH-20261028`)
+
+- **Proposal 1:** receipt `FTR-20261027-41380592-01` recorded by the orchestrator on 2026-10-28 (ledger 880 events, chain verified); cards rebuilt, `check_cards.py` and `repurposing_join.py run` re-run.
+- **Proposal 2:** `hypcurrent_it3_isr_20261027/ledger_edits.json` applied to `HYP-20261026-10` and `HYP-20261026-11` after the blind locator audit (`locator_audits/2026-10-28_it3_pars2_blind_audit.md`: 29 of 30 body locators SUPPORTED, one wording OVERSHOOT, 19 figure readings agreeing). No status, ranking or direction change.
+- **Proposal 3:** one UPDATE bullet on `DL-MECH-173` (genetic, partial, non-WWOX precedent), applied with `record_scoped_edit.py replace-within` because `batch_commit.py propagate` accepts only the four scientific current files.
+- **Unchanged:** `R-10`, `R-11`, `DL-REPO-004`, `HYP-20260709-01/-05`, `E03`, `E04`.
