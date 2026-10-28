@@ -43,7 +43,7 @@ edition: public
 ## 2. DISEASE-MODEL (WORKING-MODEL) VERSION
 
 ```yaml
-working_model_version: WM_v7.27
+working_model_version: WM_v7.28
 working_model_file: disease-models/wwox/registries/working_model_current.md
 narrative_view: disease-models/wwox/disease_model.md
 notes: "Canonical disease-level working model derived from public literature; disease_model.md is its narrative reader-facing view. The private individual-level record is not part of this edition."
@@ -107,12 +107,12 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20261019_024
-last_batch_commit_date: 2026-10-28
+last_batch_commit_id: BATCH_20261019_025
+last_batch_commit_date: 2026-10-29
 last_batch_commit_type: MANUAL
 commit_candidates_propagated: 1
-target_wm_version: WM_v7.27
-trigger: MANUAL (ACTOR_ID integrator, assigned by the Orchestrator). Research layer, no disease-model change, WM_v7.27 preserved: one sentence appended to DL-MECH-173 (CC-20261027-SCIENTIST-C-ISR-01 proposal 3). Previous batch BATCH_20261019_023: iteration-2 candidates propagated in event-ID order after independent verification (hypothesis-ledger current-reading pointers and the verifier's PDH/count residuals, the LDH re-read with five receipts, HYP-20261027-01 with consequence notes and the Fig 6E manifest fix, the LINCS iteration-2 reading with the README row rewritten), plus the WWOX_EXPERIMENT_IN_DEE_SYSTEM label definition.
+target_wm_version: WM_v7.28
+trigger: MANUAL (ACTOR_ID orchestrator by stated assumption, mandate IT5 step P2, executed by the Integrator worker). MINOR WM_v7.28: the BLOCK 1 VABAM bullet is rewritten (two case-selected WWOX-DEE children, abstract level, no denominator; the label's 22 against 4 percent concerns non-WWOX infants; enrichment in WWOX not supported; cautionary position unchanged), CLAIM 001 wave note, PAPER 003 and LIT-003 notes; research layer carries the nonsense-allele enumeration as a prediction and read-through applicability by lesion class to the cards, needs, DIS-41 and the census. Previous batch BATCH_20261019_024: DL-MECH-173 sentence, WM_v7.27 preserved.
 ```
 
 Every batch's scope — the candidates it propagated, newest first back to `BATCH_20260810_001`,
@@ -126,8 +126,8 @@ with the keys written beside each and the notes on `BATCH_20260806_002` — is i
 
 ```yaml
 last_lint_type: LINT_AUTOMATIC
-last_lint_id: LINT_20261028_BATCH_20261019_024
-last_lint_date: 2026-10-28
+last_lint_id: LINT_20261029_BATCH_20261019_025
+last_lint_date: 2026-10-29
 last_lint_result: WARN
 ```
 

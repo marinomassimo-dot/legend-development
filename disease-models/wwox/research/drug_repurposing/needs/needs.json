@@ -448,7 +448,7 @@
    "observed": [
     {
      "id": "O1",
-     "statement": "No read-through experiment on WWOX was found in the sources read, and no systematic enumeration of nonsense alleles with stop-codon identity and the +4 nucleotide exists (the card's wording). Nonsense alleles ARE recorded in this repository's therapeutic-class census, from published reports: p.(Arg54*), p.(Trp44*), p.(Arg264*), p.(Gln191*) and p.Trp218*, each with patients listed, none with an NMD assay, and flagged there as read-through candidates (a repository remark, not a measurement). The reference genotype class (destabilising SDR missense plus canonical splice-acceptor allele) carries no premature stop in the stated analysis.",
+     "statement": "No read-through experiment on WWOX was found in the sources read, and a systematic enumeration of nonsense alleles now exists only as a PREDICTION from sequence (IT4 E1a, 2026-10-28, independently re-derived: 32 single-nucleotide stop-gained alleles of NM_016373.4 in the repository ClinVar snapshot, undated; 23 predicted NMD-sensitive, 1 borderline p.Trp335*, 8 predicted to escape, all in exon 9; the NMD classes are predictions by the 50-55 nt rule, never measurements). Nonsense alleles ARE recorded in this repository's therapeutic-class census, from published reports: p.(Arg54*), p.(Trp44*), p.(Arg264*), p.(Gln191*) and p.Trp218*, each with patients listed, none with an NMD assay, and flagged there as read-through candidates (a repository remark, not a measurement); all five are predicted NMD-sensitive. The reference genotype class (destabilising SDR missense plus canonical splice-acceptor allele) carries no premature stop in the stated analysis, so read-through has no applicable target there: an inference from classification, not evidence that read-through fails, and it stays open for nonsense alleles of other lesion classes. Caveat carried from the E1a note and its independent verification: the unmeasured intron-8 retention outcome predicted for the exon-9 acceptor splice allele would create a stop codon, so even the inference 'no applicable target in the reference genotype class' rests on an unmeasured prediction about that allele.",
      "model_type": "not_applicable",
      "species": "UNKNOWN",
      "genotype": "UNKNOWN",
@@ -488,7 +488,7 @@
     }
    ],
    "inferred": [
-    "Whether any WWOX-DEE allele is read-through-amenable is not established: no read-through or NMD measurement on a recorded nonsense allele exists in the sources read."
+    "Whether any WWOX-DEE allele is read-through-amenable is not established: no read-through or NMD measurement on a recorded nonsense allele exists in the sources read. Whether a recorded nonsense allele escapes NMD is predicted by position (23 sensitive, 1 borderline, 8 escape of 32 ClinVar alleles) and not measured."
    ],
    "intervention_direction": {
     "direction": "restore",
@@ -1142,7 +1142,7 @@
     {
      "model_type": "human_neural_progenitor_shrna_knockdown",
      "species": "human",
-     "genotype": "lentiviral shRNA WWOX knockdown (extent not quantified; one unreplicated blot shows a residual band) versus scrambled shRNA, puromycin-selected stable lines",
+     "genotype": "lentiviral shRNA WWOX knockdown (extent not quantified; one unreplicated blot shows a residual band; not demonstrated in the deposited progenitor CAGE library) versus scrambled shRNA, puromycin-selected stable lines",
      "tissue_or_cells": "H9 embryonic-stem-cell-derived neural progenitors (commercial line), 2D culture, undifferentiated",
      "age_stage": "in vitro, growth-factor-maintained progenitors",
      "pmid": "31543760",
@@ -1154,7 +1154,7 @@
      "readout": "GO biological-process gene-set names, enrichment scores and FDR q-values (Supplementary Tables 2 and 3)",
      "readout_level": "transcript",
      "direction_observed": "set names of amino-acid biosynthesis and translation machinery on the knockdown side (nominal q 0.06 to 0.2); no ISR or UPR set on either side; ATF4-target genes not reported",
-     "limits": "Engineered partial loss of function (a knockdown), not a knockout or patient allele; knockdown depth is unquantified and the one blot shown has a residual WWOX band; commercial hESC-derived line that the authors say differentiates only to neurons. A gene-set name is not an ATF4-target result: the same biosynthetic and ribosomal sets are produced by MYC- or mTORC1-type growth programs, and the member genes are not printed. Threshold is permissive (FDR 0.25; 17 of 108 knockdown-side rows have q below 0.1); replicate number is not stated; GSEA sign convention is read from the table captions. Not a PERK or GCN2 measurement. It is not comparable one-to-one with the organoid ATF4 set (O2): different system, method and level.",
+     "limits": "Engineered partial loss of function (a knockdown), not a knockout or patient allele; knockdown depth is unquantified and the one blot shown has a residual WWOX band; commercial hESC-derived line that the authors say differentiates only to neurons. A gene-set name is not an ATF4-target result: the same biosynthetic and ribosomal sets are produced by MYC- or mTORC1-type growth programs, and the member genes are not printed. Threshold is permissive (FDR 0.25; 17 of 108 knockdown-side rows have q below 0.1); replicate number is not stated; GSEA sign (adjudicated 2026-10-28): Supplementary Table 2 lists 44 rows, all with positive enrichment scores, and Table 3 lists 108 rows (the text says 109), all with negative scores; the two are the positive and negative ends of one ranking, so a negative score in the knockdown table means the set is enriched at the SILENCED end (higher in shWWOX), not depleted; the convention is not printed in the paper and is derived from GSEA practice and the paper's own sentences. The deposit GSE126075 holds ONE library per arm (four libraries, no replicate), so the paper's differential-expression and GSEA statistics cannot be re-derived from it, and WWOX is not lower in the progenitor library at CAGE-tag level (3.35 against 2.90 TPM). Not a PERK or GCN2 measurement. It is not comparable one-to-one with the organoid ATF4 set (O2): different system, method and level.",
      "locators": [
       {
        "kind": "manifest",
@@ -1169,6 +1169,35 @@
        "anchor": "9,427 genes"
       }
      ]
+    },
+    {
+     "model_type": "human_neural_progenitor_shrna_knockdown",
+     "species": "human",
+     "genotype": "lentiviral shRNA WWOX knockdown (not demonstrated in the progenitor CAGE library; about 3 to 4 fold lower tags in neurons, noisy) versus control arm (scrambled per the paper; 'wild type/native' in the deposit)",
+     "tissue_or_cells": "H9 embryonic-stem-cell-derived neural progenitors and day-14 neurons, 2D, CAGE (GSE126075), one library per arm",
+     "age_stage": "in vitro, undifferentiated and day 14",
+     "pmid": "31543760",
+     "locator_status": "DOCUMENT",
+     "evidence_scope": "COMPUTATIONAL_RESULT",
+     "id": "O8",
+     "statement": "Descriptive re-analysis of the deposit GSE126075 (four CAGE libraries, one per arm, no replicate): the pre-listed ISR/ATF4 target set (11 measurable of 12) is higher in the shWWOX library at both stages (centred log2 ratio +0.64 in progenitors, +1.32 in neurons; outside 10,000 expression-matched random sets of each single comparison), with eight of the 11 members higher at both stages, but the progenitor rise rests on a handful of genes (CHAC1, TRIB3, PSAT1, SESN2, ATF5) and the neuron rise is composition-sensitive. ATF4 mRNA is flat in progenitors (-0.15); in neurons it is sparse (6 against 41 tags, about +2 centred) and was set aside by the 10-tag rule. The WWOX-knockout organoid (O2, 4 against 2 libraries; CHAC1 t -11.6, TRIB3 -4.1, SESN2 -4.3) shows the same target set LOWER (-0.33) with the same method. The two systems give opposite signs and differ greatly in design: the direction is unresolved.",
+     "comparison": "knockdown against control within each stage; set mean against expression-matched random sets; same method applied to the organoid",
+     "readout": "ISR target transcripts (CAGE promoter sums; organoid RNA-seq)",
+     "readout_level": "transcript",
+     "direction_observed": "higher in shWWOX progenitors and neurons (n=1 each, composition-sensitive in neurons); lower in the knockout organoid (4 v 2): unresolved",
+     "limits": "One library per arm: no variance, ranks are not p values; WWOX not lower in the progenitor library, only about 3 to 4 fold lower in neurons on 21 versus 83 tags; the control arm may be untransduced (transduction and puromycin confounded with silencing, and a stress signature is what that confound could produce); the shWWOX progenitor library also has lower progenitor-marker transcripts (SOX2, PAX6, HES5; 11 tags each for the last two), so the arms differ in cell state; neuron libraries carry a global composition shift of about -1.3 log2; no ATF4 protein, no eIF2alpha phosphorylation, no kinase measure; not independent of the organoid analysis (different samples, but one operator and one method).",
+     "locators": [
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/hnpc_gse126075_it5_20261029/RESULTS.md",
+       "anchor": "ISR targets"
+      },
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/wwox_systems_comparison_it5_20261029.md",
+       "anchor": "ISR target set"
+      }
+     ]
     }
    ],
    "inferred": [
@@ -1176,14 +1205,15 @@
     "That any ISR elevation is harmful rather than adaptive is unmeasured; Atf4 never perturbed.",
     "That GCN2, rather than PERK or the eIF2B complex, is the ISR node relevant to WWOX loss: the only GCN2 datum is a fly mitochondrial-translation model, and no GCN2 measurement exists in any Wwox system.",
     "That WWOX acts on PERK or GCN2 through a physical association: the fly paper's two cited interactome entries are a low-score, unvalidated GCN1 prey (interaction score 0.133, 10 spectra, HEK293T tandem affinity purification, no empty-vector control described; below the authors' 0.2 candidate line) and a three-spectrum WWOX hit in a PERK proximity-biotinylation list (HEK293-T, mock-cell control), in which GCN1 is a stronger hit (10 spectra) than WWOX; neither shows binding, activation or direction (read 2026-10-28, isr_kinase_interactome_atf4_reconciliation_it4_20261028.md).",
-    "That the amino-acid and translation-machinery gene-set names on the knockdown side of the shRNA progenitor transcriptome (O7) reflect ATF4 activity: the member genes are not printed, ATF4 targets are not named anywhere in the paper, and the same sets arise from MYC- or mTORC1-type growth programs; the gene-level test needs a re-analysis of the deposit GSE126075 (replicate structure not stated)."
+    "That the amino-acid and translation-machinery gene-set names on the knockdown side of the shRNA progenitor transcriptome (O7) reflect ATF4 activity: the member genes are not printed, ATF4 targets are not named anywhere in the paper, and the same sets arise from MYC- or mTORC1-type growth programs; the gene-level test needs a re-analysis of the deposit GSE126075 (the deposit holds one library per arm, so any re-analysis is descriptive; see O8).",
+    "That the human transcript direction of the ISR target set is a WWOX effect: the two human neural systems held give opposite signs from very different designs (O2 lower in a 4 v 2 knockout organoid, O8 higher in one library per arm), so the direction is unresolved, differ in knockout versus knockdown, 3D versus 2D, RNA-seq versus CAGE, and each is confounded (maturity/composition; line state and a possibly native control). The next measurement is ATF4 protein or eIF2alpha phosphorylation with target mRNA in one WWOX-deficient human neural system with a transduction-matched control."
    ],
    "intervention_direction": {
     "direction": "uncertain",
     "on": "eIF2B / PERK-arm output",
-    "rationale": "The proposal is to attenuate a presumed over-activation; the sign of the human readout is unknown and the only signed human datum points down.",
+    "rationale": "The proposal is to attenuate a presumed over-activation; the human transcript direction is UNRESOLVED: the WWOX-knockout organoid (4 v 2) shows the ISR target set lower, while one shRNA library per arm (progenitors, neurons) shows it higher, from systems of very different design; neither measures ATF4 protein or eIF2alpha phosphorylation.",
     "certainty": "context_dependent",
-    "do_not_assume": "Do not read an ISR-attenuating compound as a reversal of an observed WWOX change: no WWOX-dependent ISR increase was found in a human system in the sources read."
+    "do_not_assume": "Do not read an ISR-attenuating compound as a reversal of an observed WWOX change: no WWOX-dependent ISR increase was shown in a human system in the sources read (the one human transcript increase, O8, is n=1 per arm with an undemonstrated knockdown and a possibly untransduced control), and any signature-reversal query built on the organoid list inherits its ISR-lower sign."
    },
    "counter_evidence": [
     "Without amyloid the fly Atf4 comparison was not significant (6 vs 6; an effect as large as the amyloid-arm one is not excluded, and no interaction test was run); the organoid ISR set is lower than chance.",
@@ -1443,11 +1473,41 @@
       }
      ],
      "locator_status": "DOCUMENT"
+    },
+    {
+     "model_type": "human_neural_progenitor_shrna_knockdown",
+     "species": "human",
+     "genotype": "lentiviral shRNA WWOX knockdown (not demonstrated in the progenitor CAGE library; about 3 to 4 fold lower tags in neurons, noisy) versus control arm (scrambled per the paper; 'wild type/native' in the deposit)",
+     "tissue_or_cells": "H9-derived neural progenitors, CAGE (GSE126075), one library per arm; compared with the knockout organoid by the same method",
+     "age_stage": "in vitro, undifferentiated",
+     "pmid": "31543760",
+     "locator_status": "DOCUMENT",
+     "evidence_scope": "COMPUTATIONAL_RESULT",
+     "comparison": "knockdown against control; knockout against wild type",
+     "readout_level": "transcript",
+     "id": "O4",
+     "statement": "Second human neural transcript system: in shWWOX progenitors (one library per arm) PDK1 is lower in SIGN (centred log2 ratio -0.67; 51 against 263 tags) as in the knockout organoid (-0.39), but both are inside the single-gene null (p about 0.49 and 0.30) and the hNPC Poisson interval spans zero; HIF1A mRNA is flat in both (-0.27, -0.11); the PDK family set is indistinguishable from random sets in both. LDHA and a HIF-type glycolysis subset are up in both, but a broader 19-gene glycolysis panel is not distinguishable from chance in hNPC (+0.24, rank 0.20). Progenitor-identity markers fall in the hNPC library (four canonical markers -2.03) while the organoid is set-dependent (four canonical markers +0.11, inside the null), so a single 'less advanced tissue' explanation does not cover both.",
+     "readout": "PDK1, PDK family and glycolytic transcripts",
+     "direction_observed": "PDK1 not raised in either human neural system (lower in sign only); HIF1A mRNA flat; LDHA and a HIF-type glycolysis subset up in both",
+     "limits": "One library per arm; PDH is phosphorylation-controlled and not observed; knockdown not demonstrated in progenitors; different systems; transcript only.",
+     "locators": [
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/wwox_systems_comparison_it5_20261029.md",
+       "anchor": "PDK1 transcript"
+      },
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/hnpc_gse126075_it5_20261029/RESULTS.md",
+       "anchor": "PDK family"
+      }
+     ]
     }
    ],
    "inferred": [
     "That PDK1 inhibits PDH in WWOX-deficient neurons (the middle link of the chain) is inferred and is not supported at transcript level in the one neural datum.",
-    "That ketone bodies, entering below PDH, restore oxidative flux without reactivating PDH is a mechanistic prediction, not an observation."
+    "That ketone bodies, entering below PDH, restore oxidative flux without reactivating PDH is a mechanistic prediction, not an observation.",
+    "That PDK1 is raised in WWOX-deficient human neural cells: PDK1 is not raised in either human neural transcript system held (lower in sign only, inside the single-gene null in both; hNPC one library per arm); HIF1A mRNA is flat in both; the middle link of the chain has no transcript support at PDK1."
    ],
    "intervention_direction": {
     "direction": "uncertain",
@@ -1740,6 +1800,35 @@
       }
      ],
      "locator_status": "REGISTRY_ONLY"
+    },
+    {
+     "model_type": "human_neural_progenitor_shrna_knockdown",
+     "species": "human",
+     "genotype": "lentiviral shRNA WWOX knockdown (not demonstrated in the progenitor CAGE library; about 3 to 4 fold lower tags in neurons, noisy) versus control arm (scrambled per the paper; 'wild type/native' in the deposit)",
+     "tissue_or_cells": "H9-derived neural progenitors, CAGE (GSE126075), one library per arm; compared with the knockout organoid by the same method",
+     "age_stage": "in vitro, undifferentiated",
+     "pmid": "31543760",
+     "locator_status": "DOCUMENT",
+     "evidence_scope": "COMPUTATIONAL_RESULT",
+     "comparison": "knockdown against control; knockout against wild type",
+     "readout_level": "transcript",
+     "id": "O5",
+     "statement": "Second human neural transcript system: LDHA is higher in shWWOX progenitors (centred log2 ratio +1.26, one library per arm) and, less so, in neurons (+0.70), as in the knockout organoid (+0.72, 4 v 2); a HIF-type glycolysis subset (HK2, SLC2A1, LDHA and others) is up in both, but a broader 19-gene glycolysis panel is not distinguishable from chance in hNPC (+0.24, rank 0.20) and the organoid mean is driven by five genes. Progenitor-identity markers do not move together (hNPC drop robust, organoid set-dependent), so the elevation is not explained by one shared maturity shift.",
+     "readout": "LDHA and glycolytic gene-set transcripts",
+     "direction_observed": "LDHA up in both human neural systems; the broader glycolysis panel is not clearly up",
+     "limits": "One library per arm; transcript, not LDH activity or lactate; the arms differ in cell state in the CAGE system; the organoid is confounded with maturity and composition; lactate is unmeasured in human neural cells.",
+     "locators": [
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/wwox_systems_comparison_it5_20261029.md",
+       "anchor": "Glycolysis / lactate"
+      },
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/hnpc_gse126075_it5_20261029/RESULTS.md",
+       "anchor": "Glycolysis and lactate"
+      }
+     ]
     }
    ],
    "inferred": [
@@ -2009,7 +2098,7 @@
      "readout": "GO biological-process gene-set names and q-values; PCA gene contributions",
      "readout_level": "transcript",
      "direction_observed": "mitochondrial translation and import sets on the knockdown side (nominal); OXPHOS direction not reported",
-     "limits": "Set names only, permissive threshold (FDR 0.25), member genes unprinted, replicate number not stated; a mitochondrial-translation or import set does not imply higher or lower respiratory capacity; knockdown not knockout.",
+     "limits": "Set names only, permissive threshold (FDR 0.25), member genes unprinted, replicate number not stated; a mitochondrial-translation or import set does not imply higher or lower respiratory capacity; knockdown not knockout. Sign adjudicated 2026-10-28: all 108 rows of Supplementary Table 3 carry negative enrichment scores and all 44 rows of Table 2 positive; read as the negative and positive ends of one GSEA ranking, 'on the knockdown side' (enriched at the silenced end, higher in shWWOX) is correct and 'negative enrichment' is not depletion (the convention is not printed in the paper). The deposit holds one library per arm, so the statistics cannot be re-derived, and the knockdown is not demonstrated in the progenitor CAGE library.",
      "locators": [
       {
        "kind": "manifest",
@@ -2022,6 +2111,35 @@
        "manifest": "disease-models/wwox/research/deepdive_manifests/PMID31543760.json",
        "entry": 25,
        "anchor": "NDUFS4"
+      }
+     ]
+    },
+    {
+     "model_type": "human_neural_progenitor_shrna_knockdown",
+     "species": "human",
+     "genotype": "lentiviral shRNA WWOX knockdown (not demonstrated in the progenitor CAGE library; about 3 to 4 fold lower tags in neurons, noisy) versus control arm (scrambled per the paper; 'wild type/native' in the deposit)",
+     "tissue_or_cells": "H9-derived neural progenitors and day-14 neurons, CAGE (GSE126075), one library per arm; compared with the knockout organoid (O2) by the same method",
+     "age_stage": "in vitro, undifferentiated and day 14",
+     "pmid": "31543760",
+     "locator_status": "DOCUMENT",
+     "evidence_scope": "COMPUTATIONAL_RESULT",
+     "id": "O7",
+     "statement": "Descriptive transcript re-analysis, same method in two human neural systems: nuclear OXPHOS transcripts (73) are flat in shWWOX progenitors (0.00) and lower in neurons (-0.33), and are lower in the knockout organoid (-0.20), but an unrelated cytosolic-ribosome control set moves as far in every contrast (-0.25, -0.47, -0.26), so no OXPHOS-specific shift exists; mitochondrial translation (MRPL/MRPS) transcripts are HIGHER in shWWOX progenitors (+0.28, n=1, matching the authors' gene-set report) and LOWER in the knockout organoid (-0.15, 4 v 2); the signs differ between two designs that are not comparable one to one; mitochondrial import is higher in progenitors (+0.54) and flat in the organoid.",
+     "comparison": "knockdown against control within stage; knockout against wild type; matched-random-set ranks",
+     "readout": "nuclear OXPHOS, mitochondrial translation and import transcripts",
+     "readout_level": "transcript",
+     "direction_observed": "OXPHOS: no specific shift; mitochondrial translation: opposite signs between the two human systems",
+     "limits": "One library per arm in the CAGE system; transcript is not respiration or complex I activity; knockdown not demonstrated in progenitors; different systems and platforms; the organoid is the same libraries as O2 (one system); the neuron-stage values carry a global composition shift.",
+     "locators": [
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/hnpc_gse126075_it5_20261029/RESULTS.md",
+       "anchor": "Mito translation"
+      },
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/wwox_systems_comparison_it5_20261029.md",
+       "anchor": "Mitochondrial translation"
       }
      ]
     }
@@ -2040,7 +2158,8 @@
    },
    "counter_evidence": [
     "Organoid oxidative panel flat; fly ATP unchanged; human screens normal where done.",
-    "No complex I readout was found in a WWOX system in the sources read."
+    "No complex I readout was found in a WWOX system in the sources read.",
+    "Transcripts cannot rank complex I against other targets: no OXPHOS-specific transcript shift exists in either human neural system, and mitochondrial translation has opposite signs between them (O7)."
    ],
    "sources": {
     "cards": [
@@ -2981,7 +3100,7 @@
     },
     {
      "id": "O2",
-     "statement": "Vigabatrin reports are mixed: in one report spasms resolved in the first of two WWOX-null children and the second child had a partial response with residual cluster spasms at 11 months; another report records visible-seizure reduction in one child with electrical attacks still on video-EEG; another records it ineffective in one null/null child; another records one vigabatrin-resistant case. A brain-MRI abnormality signal (VABAM) is recorded in two cases of a separate cohort.",
+     "statement": "Vigabatrin reports are mixed: in one report spasms resolved in the first of two WWOX-null children and the second child had a partial response with residual cluster spasms at 11 months; another report records visible-seizure reduction in one child with electrical attacks still on video-EEG; another records it ineffective in one null/null child; another records one vigabatrin-resistant case. A brain-MRI abnormality finding (VABAM) is documented in two WWOX-DEE children of a separate case report, selected for the finding, with no denominator of vigabatrin-exposed WWOX children.",
      "model_type": "human_clinical_report",
      "species": "human",
      "genotype": "WWOX-null class children with West syndrome",

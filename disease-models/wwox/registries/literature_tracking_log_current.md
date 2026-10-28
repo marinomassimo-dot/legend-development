@@ -158,7 +158,7 @@ Serves to:
 **Report mentions:** 2026-03-27 flash report; weekly report 2026-03-29
 **Next action:** none
 **Flags:** safety / high value human
-**Note:** Safety anchor. VABAM in 2 WWOX-DEE children on vigabatrin. CLAIM 001 ora conflicting evidence per ingresso di You 2024 e Chong 2023. Posizione clinica generale su vigabatrin invariata.
+**Note:** Safety anchor. VABAM in 2 WWOX-DEE children on vigabatrin (case-selected, abstract level, no denominator of exposed WWOX children; no rate or enrichment claim). CLAIM 001 ora conflicting evidence per ingresso di You 2024 e Chong 2023. Posizione clinica generale su vigabatrin invariata.
 
 ---
 

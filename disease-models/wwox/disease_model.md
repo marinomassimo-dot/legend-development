@@ -40,7 +40,7 @@
 
 ## Literature-anchored data (DATO — WWOX literature)
 
-- VABAM documented in WWOX-DEE with vigabatrin (Choi 2026) — a real safety signal; conflicting with You 2024 (seizure reduction, no documented VABAM).
+- VABAM documented in two WWOX-DEE children on vigabatrin (Choi 2026, abstract level; selected cases, no denominator of exposed WWOX children). The vigabatrin prescribing information gives MRI changes in 22 percent of vigabatrin-treated against 4 percent of other-therapy infants with infantile spasms (non-WWOX), so enrichment in WWOX is not supported by any source read; the cautionary position is unchanged. Conflicting with You 2024 (seizure reduction, no documented VABAM).
 - Network hyperexcitability + AAV-WWOX rescue in organoids (Steinberg 2024).
 - Non-cell-autonomous hypomyelination in neuronal WWOX deletion (Repudi 2021).
 - N/N genotype → higher risk of seizures, hypertonia, respiratory complications vs N/M and M/M (Gao 2025, n=50).

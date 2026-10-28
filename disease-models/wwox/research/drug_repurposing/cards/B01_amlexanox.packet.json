@@ -118,14 +118,14 @@
       "roadmap qualification: 'qualified, not promoted'"
     ],
     "predictions": "None; no engine, no score.",
-    "next_measurement": "For PTC alleles: the enumeration of WWOX PTC alleles with stop identity and +4 nucleotide, then a function measurement on any protein produced. For the missense class: none, the mechanism does not apply.",
+    "next_measurement": "For PTC alleles: a transcript-level NMD measurement on a recorded nonsense allele (the sequence-based enumeration exists since 2026-10-28 as a prediction only), then a function measurement on any protein produced. For the missense class: none, the mechanism does not apply.",
     "status": "deferred with reason",
-    "status_reason": "Ineligible by mechanism for the reference missense; for PTC alleles the eligible class has never been counted.",
+    "status_reason": "Ineligible by mechanism for the reference missense; for PTC alleles the eligible class is counted only as a sequence prediction (32 alleles, NMD classes predicted, none measured).",
     "value_added": "Keeps a qualified road visible without letting protein quantity stand for function.",
     "clinical_census": "Clinical census, ClinicalTrials.gov API v2, 2026-10-20 (disease-models/wwox/research/drug_repurposing/clinical_census_20261020.md): seven separate queries returned no registered WOREE interventional study; the only synonym-driven record is one observational natural-history registry. Carried with the census's own caution: \"A missing hit does not prove that no study exists.\" It answers seven queries against one registry on one date; unregistered, differently worded, non-NLM or later-registered studies are not excluded."
   },
   "not_known": [
-    "Whether any WWOX PTC allele would be read through, and at what efficiency: no count of PTC alleles and no PTC-context annotation exist.",
+    "Whether any WWOX PTC allele would be read through, and at what efficiency: the PTC alleles are enumerated only as a sequence prediction (32 alleles, 23 predicted NMD-sensitive), with no NMD or read-through measurement.",
     "Whether full-length protein produced by read-through of a WWOX PTC would function.",
     "About 57 percent of classifiable individuals in the largest genotype-classified cohort are null/null (56.8 percent in the abstract of the 2025 Neurology cohort of 50 individuals from 45 families, PMID 40875931, confirmed by PubMed abstract on 2026-10-21; the null class pools nonsense, frameshift, splice and deletion alleles, so it is not a nonsense count): for them no recoverable endogenous substrate for any allele-specific lever is established."
   ],

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "9da87e925721320fa6152fa784959de413585446f691a566553c0bf675eb1a8f",
+  "input_sha256": "bdb09a5e78463d98207d62dc322b01ea1794607f28a8b13c0bc9d386cbd18460",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -31,7 +31,7 @@
       "target_expression": "UNKNOWN",
       "cells_tissue_stage": "UNKNOWN",
       "coverage": "UNKNOWN",
-      "limits": "An enumeration is a list, not an experiment; nobody has made it."
+      "limits": "An enumeration is a list, not an experiment; the list exists since 2026-10-28 as a sequence prediction (32 alleles, NMD classes predicted, not measured)."
     }
   },
   "input": {
@@ -46,7 +46,7 @@
       "target_id": "WWOX:protein",
       "endpoint": "full-length WWOX protein from a premature-stop-codon allele",
       "direction": "UNKNOWN",
-      "source": "known-roads § 4.4 (no measurement and no enumeration exist)",
+      "source": "known-roads § 4.4 (no measurement exists; the allele enumeration exists since 2026-10-28 as a sequence prediction only)",
       "locator": "disease-models/wwox/research/repurposing_known_roads_20261020_scientist-a.md § 4.4",
       "epistemic_status": "INFERENZA",
       "reading_depth": "UNKNOWN",
@@ -67,12 +67,12 @@
         "target_expression": "UNKNOWN",
         "cells_tissue_stage": "UNKNOWN",
         "coverage": "UNKNOWN",
-        "limits": "An enumeration is a list, not an experiment; nobody has made it."
+        "limits": "An enumeration is a list, not an experiment; the list exists since 2026-10-28 as a sequence prediction (32 alleles, NMD classes predicted, not measured)."
       }
     },
     "abstention_card": {
       "kind": "ABSTENTION",
-      "missing_datum": "The enumeration: a count of WWOX nonsense alleles with stop-codon identity and the +4 nucleotide, which govern read-through efficiency. No published cohort separates splice from nonsense from frameshift from CNV; the class is pooled into 'null' and its size is unknown.",
+      "missing_datum": "A transcript-level NMD measurement on a recorded WWOX nonsense allele (with and without an NMD-discriminating arm). The enumeration is supplied since 2026-10-28 as a PREDICTION from sequence: 32 single-nucleotide stop-gained alleles of NM_016373.4 in the repository ClinVar snapshot (undated), 23 predicted NMD-sensitive, 1 borderline, 8 predicted to escape, the five census read-through-candidate alleles all predicted NMD-sensitive; the 50-55 nt rule is a prediction, never a measurement, and no WWOX NMD or read-through measurement exists. Caveat carried from the E1a note and its independent verification: the unmeasured intron-8 retention outcome predicted for the exon-9 acceptor splice allele would create a stop codon, so even the inference 'no applicable target in the reference genotype class' rests on an unmeasured prediction about that allele.",
       "search_record": "NON_TROVATO_NELLA_RICERCA, bounded. The zero for the agent names ataluren, PTC124 and ELX-02 was found in the sweep of the WWOX-literature bodies (analysis/wwox_nmd_assay_census_20260922.md) and not across the whole repository: analysis/woree_therapeutic_class_census_20260921.md carries a READ-THROUGH class row naming an ataluren class, and analysis/ft116_cohort_triage_20260921.md calls p.(Arg264Ter) a READ-THROUGH candidate; neither is a WWOX measurement. PubMed WWOX with those terms returned 0 on 2026-10-20 in title/abstract only; not re-runnable offline.",
       "adjacent_context_not_wwox_evidence": [
         "the independent comparator-controlled study (known-roads § 4.3) is the only adjacent head-to-head and concerns amlexanox against ataluren in Fanconi-anaemia cells"
@@ -98,7 +98,7 @@
       "evidence_for_and_against": {
         "for": [],
         "against": [],
-        "transfer_limits": "An enumeration is a list, not an experiment; nobody has made it."
+        "transfer_limits": "An enumeration is a list, not an experiment; the list exists since 2026-10-28 as a sequence prediction (32 alleles, NMD classes predicted, not measured)."
       },
       "time_to_access": "UNKNOWN",
       "time_to_benefit": "UNKNOWN",
@@ -113,13 +113,13 @@
         "known-roads § 4.4"
       ],
       "predictions": "None; no engine, no score.",
-      "next_measurement": "Make the PTC-allele enumeration with context annotation; it would populate or empty the class.",
+      "next_measurement": "A transcript-level NMD assay on a recorded nonsense allele; the sequence-based enumeration (prediction only) is done.",
       "status": "abstention",
       "value_added": "Names the missing datum so that the axis is a recorded gap and not a silence.",
       "clinical_census": "Clinical census, ClinicalTrials.gov API v2, 2026-10-20 (disease-models/wwox/research/drug_repurposing/clinical_census_20261020.md): seven separate queries returned no registered WOREE interventional study; the only synonym-driven record is one observational natural-history registry. Carried with the census's own caution: \"A missing hit does not prove that no study exists.\" It answers seven queries against one registry on one date; unregistered, differently worded, non-NLM or later-registered studies are not excluded."
     },
     "not_known": [
-      "The enumeration: a count of WWOX nonsense alleles with stop-codon identity and the +4 nucleotide, which govern read-through efficiency. No published cohort separates splice from nonsense from frameshift from CNV; the class is pooled into 'null' and its size is unknown."
+      "A transcript-level NMD measurement on a recorded WWOX nonsense allele: the NMD classes of the 32 enumerated alleles are predictions by position. Read-through has no applicable target in the reference genotype class (no stop-gained allele), an inference from classification and not evidence that it fails; it stays open for nonsense alleles of other lesion classes."
     ],
     "evidence_against": [],
     "bridge_gaps_exposed": [],
