@@ -623,6 +623,17 @@ def pct(num, den, what) -> dict:
     return {"numerator": num, "denominator": den, "percent": round(100.0 * num / den, 1) if den else None, "what": what}
 
 
+def headline_by_relation(head: list) -> dict:
+    """Headline records by the strongest kind of statement behind them (never a quality score): a stated action from a curated source,
+    a stated action from another source, or a link whose source states no action (listing / association)."""
+    best = {}
+    for a in head:
+        r = 0 if (a["action_stated"] and a["relation_kind"] in rs.CURATED_KINDS) else 1 if a["action_stated"] else 2
+        best[a["catalogue_id"]] = min(best.get(a["catalogue_id"], 2), r)
+    names = {0: "action_stated_by_curated_source", 1: "action_stated_by_other_source_only", 2: "link_without_stated_action_only"}
+    return {names[k]: sum(1 for v in best.values() if v == k) for k in (0, 1, 2)}
+
+
 def make_summary(entries, idx, rows, cells, per_need, priorities, need_by, cards, need_cards, eff, hard, stale, cstats, stale_roles, stale_pert, missing_cards, assoc_all, pert, ass_index, counted, pathway) -> dict:
     fam_all = set(idx.family.values())
     chembl_fams = {idx.family[e["id"]] for e in entries if e["origin"].startswith("chembl")}
@@ -707,6 +718,7 @@ def make_summary(entries, idx, rows, cells, per_need, priorities, need_by, cards
             "pct_records_incl_pathway_members": pct(len(wide_rec), len(entries), "records with a headline OR pathway-member link / all catalogue records"),
             "excluded_rows": {"records": len({a["catalogue_id"] for a in excl}), "by_reason": dict(collections.Counter(reason_class(a) for a in {(a["catalogue_id"], a["need"], a["target"]): a for a in excl}.values())),
                               "alias_risk_rows_unresolved": [{"catalogue_id": c, "compound": n, "gene": g} for c, n, g in alias_rows]},
+            "headline_records_by_strongest_relation": headline_by_relation(head),
             "touched_headline_families_with_a_name_twin_not_merged": sum(1 for f in head_fam if rows.get(f, {}).get("n_possible_duplicates", 0) > 0),
             "headline_families_if_name_twins_collapsed_SENSITIVITY_ONLY": collapsed_count(head_fam, rows),
             "families_by_number_of_needs_touched": {str(k): v for k, v in sorted(dist.items())},
