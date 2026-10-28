@@ -17844,7 +17844,7 @@
      "novelty_for_woree": "NON_TROVATO_NELLA_RICERCA as a test in any WWOX system (registry-based, known-roads note section 2.8, 2026-10-20); no dedicated PubMed query for these molecules was run for this card. 4-PBA/TUDCA were carried as TX-003 and withdrawn on rationale (DIS-004), not on a result. NOT MAI_TENTATO-proof: unpublished individual experience is unreachable by any literature query.",
      "paediatrics_and_interactions": "UNKNOWN. No paediatric suitability is presumed by this card, for the candidate or for any historical authorisation of it for another use.",
      "pathway_and_objective": "RECUPERO_PROFONDO.",
-     "pharmacology": "Potency, relevant exposure and selectivity in a WWOX system: UNKNOWN. In the sources: class not selective for the mutant; brain exposure not measured in any R1 paper.",
+     "pharmacology": "Potency, relevant exposure and selectivity in a WWOX system: UNKNOWN. Re-examined in IT5 (pharmacology_it5_20261029/proteostasis_pba_a01.tsv): the only measured potency for the class is HDAC inhibition, at micromolar to sub-millimolar values (one HeLa extract study: low micromolar; recombinant enzymes: tens to hundreds of micromolar, with butyrate more potent than phenylbutyrate in the same assay and the order reversed in the HeLa study), while the cell experiments in the cited papers applied roughly half a millimolar to ten millimolar for a day (a toxicity ceiling at four millimolar in one paper) and the bile acid one hundred micromolar; so HDAC inhibition is quantitatively available at the concentrations used and cannot be excluded as the operating mechanism, and there is no numeric value for the chaperone mechanism of either compound, although qualitative active records exist for phenylbutyric acid alone (model-protein aggregation suppression and ER-stress cell protection, each at a single concentration and neither on a disease client); the bile acid has no folding or aggregation record In the sources: class not selective for the mutant; brain exposure not measured in any R1 paper.",
      "predictions": "No engine, no score. The in-silico values recorded in CLAIM 019 are IPOTESI about a folding perturbation of Q230P, not predictions about any drug; they stay IPOTESI.",
      "question_history": [
       "TX-003 (proposed), DIS-004 (withdrawn rationale, live revival trigger: HDAC-inhibitor or HSP co-inducer role)",
@@ -17904,7 +17904,7 @@
      "time_to_benefit": "UNKNOWN"
     }
    },
-   "input_sha256": "47b3081c3d8cb66174729d617253db548c9b6249949d912746d9086b81d041d5",
+   "input_sha256": "b059333481b39f1b90c7bcce09049840b5338d37db5bad575b996e0184295905",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",

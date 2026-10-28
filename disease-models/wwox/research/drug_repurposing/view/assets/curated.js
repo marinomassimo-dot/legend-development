@@ -62,7 +62,7 @@ function needOk(n) {
 }
 
 // ---------------------------------------------------------------- navigation: need -> mechanism -> compounds -> evidence -> next question
-function bestCands(n) { return n.cards.map(function (id) { return CM[id]; }).filter(candOk).sort(function (a, b) { return a.links[n.id].group.localeCompare(b.links[n.id].group) || a.short.localeCompare(b.short); }); }
+function bestCands(n) { return n.cards.map(function (id) { return CM[id]; }).filter(candOk).sort(function (a, b) { return a.short.localeCompare(b.short); }); }   // alphabetical: the position id carries no order
 function navRow(n) {
   var cs = bestCands(n), ob = {};
   n.obs.forEach(function (o) { ob[o.scope] = (ob[o.scope] || 0) + 1; });
@@ -141,7 +141,7 @@ function candHtml(c) {
   var q = profileParts(c), sel = SEL.indexOf(c.id) >= 0, gl = uniq(c.needs.map(function (n) { return c.links[n].group; }).sort());
   var scopes = {}; Object.keys(c.scope_counts.int).forEach(function (k) { scopes[k] = (scopes[k] || 0) + c.scope_counts.int[k]; });
   return '<article class="cand" id="cand-' + esc(c.id) + '" data-cand="' + esc(c.id) + '"><h3>' + esc(c.short) + ' <span class="mut">' + esc(c.id) + '</span></h3>' +
-    '<div>' + (gl.length ? gl.map(grp).join('') : grp('G4')) + chip(goalTxt(c.goal)) + chip(trackTxt(c.track)) + chip('Status: ' + c.status) + (c.access.length ? chip('Access (US evidence): ' + c.access.join(', ')) : chip('Access: no catalogue identity or no evidence obtained')) + '</div>' +
+    '<div>' + (gl.length ? gl.map(grp).join('') : chip('no linked need')) + chip(goalTxt(c.goal)) + chip(trackTxt(c.track)) + chip('Status: ' + c.status) + (c.access.length ? chip('Access (US evidence): ' + c.access.join(', ')) : chip('Access: no catalogue identity or no evidence obtained')) + '</div>' +
     '<div>' + (Object.keys(scopes).length ? Object.keys(scopes).map(function (k) { return sc(k, scopes[k]); }).join('') : '<span class="mini mut">No intervention-side assertion carries a scope in this card.</span>') + '</div>' +
     '<div class="btns noprint"><label><input type="checkbox" data-sel="' + esc(c.id) + '"' + (sel ? ' checked' : '') + '> select for comparison or export</label><button type="button" data-export="' + esc(c.id) + '">Export this card (print / PDF)</button></div>' +
     '<div class="qa"><div><h4>1. Why are we studying it?</h4>' + q.why + '</div><div><h4>2. What was observed in WWOX?</h4>' + q.wwox + '</div><div><h4>3. What comes from other diseases or predictions?</h4>' + q.other + '</div><div><h4>4. Counter-evidence</h4>' + q.counter + '</div><div><h4>5. What proof is missing, and which step would be informative?</h4>' + q.miss + '</div></div>' + techDetails(c) + '</article>';
@@ -150,7 +150,7 @@ var CSORT = 'group';
 function renderCands() {
   var cs = CANDS.filter(candOk);
   if (CSORT === 'name') cs.sort(function (a, b) { return a.short.localeCompare(b.short); });
-  else cs.sort(function (a, b) { return a.group.localeCompare(b.group) || a.short.localeCompare(b.short); });
+  else cs.sort(function (a, b) { return a.positions.join('+').localeCompare(b.positions.join('+')) || a.short.localeCompare(b.short); });   // groups cards that share the same SET of need-level positions; not a ranking
   $('cand-list').innerHTML = cs.length ? cs.map(candHtml).join('') : '<p class="state-none">No candidate card matches these filters.</p>';
   $('cand-n').textContent = cs.length;
   wireCands($('cand-list'));
@@ -178,9 +178,10 @@ function sortItems(a) {
 }
 function rkItem(it, showNeed) {
   var c = it.c, l = it.l, n = NM[it.n];
-  var sum = l.reasons[0][1] + '. Counter-evidence: ' + (c.against.length + n.counter.length) + ' item(s)' + (c.against_note && !c.against.length ? ' (prose)' : '') + '. Next step: ' + (l.reasons[5][1]) + '.';
+  var RS = {}; l.reasons.forEach(function (r) { RS[r[0]] = r[1]; });
+  var sum = 'WWOX result: ' + RS['Result in WWOX systems'] + '. Counter-evidence: ' + (c.against.length + n.counter.length) + ' item(s)' + (c.against_note && !c.against.length ? ' (prose)' : '') + '. Next step: ' + RS['Next step'] + '.';
   return '<div class="rk-item" data-cand="' + esc(c.id) + '" data-need="' + esc(n.id) + '"><b>' + esc(c.short) + '</b>' + (showNeed ? ' <span class="mut">for ' + esc(n.short) + '</span>' : '') + ' ' + grp(l.group) + (c.goal !== n.goal && c.goal ? ' ' + chip('card aim differs from the need aim', '') : '') +
-    '<div class="sum">' + esc(sum) + '</div><details><summary>reasons for this position (six criteria)</summary><ul>' + l.reasons.map(function (r) { return '<li><b>' + esc(r[0]) + ':</b> ' + esc(r[1]) + '</li>'; }).join('') + '</ul><button type="button" class="chip" data-open="' + esc(c.id) + '">open the candidate profile</button></details></div>';
+    '<div class="sum">' + esc(sum) + '</div><details><summary>reasons for this position (criteria met and not met, and the facts behind them)</summary><ul>' + l.reasons.map(function (r) { return '<li><b>' + esc(r[0]) + ':</b> ' + esc(r[1]) + '</li>'; }).join('') + '</ul><button type="button" class="chip" data-open="' + esc(c.id) + '">open the candidate profile</button></details></div>';
 }
 function groupBlock(items, showNeed) {
   var h = '';
