@@ -1,0 +1,28 @@
+__OVERVIEW__
+<section id="navigate" aria-labelledby="h-nav"><h2 id="h-nav">2. Navigate: need, mechanism, compounds and interventions, evidence, next question</h2>
+<p class="mut">Each row follows one biological need from what was observed, to the mechanism that could be moved, to the candidate cards that aim at it, to the evidence behind it and to the question that comes next. Filters apply to this section, to the candidate profiles, to the research-priority groups and to the comparison.</p>
+<div id="cfilters" role="group" aria-label="Filters for the curated views"><div class="fbar">
+<label>Biological area<select id="c-thread"></select></label><label>Need<select id="c-need"></select></label>
+<label>Access category (US evidence)<select id="c-access"></select></label><label>Country evidence<select id="c-country"></select></label>
+<label>Evidence scope<select id="c-scope"></select></label><label>Track<select id="c-track"></select></label>
+<label>Recovery goal<select id="c-goal"></select></label><label>Research status<select id="c-status"></select></label>
+<label>Text search<input type="search" id="c-q" placeholder="name, id, ChEMBL id, need"></label></div>
+<div class="bar-actions"><button type="button" id="c-reset">reset filters</button><span class="cnt" id="c-count" aria-live="polite"></span></div>
+<p class="mini mut">Country: access evidence was obtained for the United States only (openFDA, NIH DSLD, ChEMBL and MATRIX flags); no other country was queried, so the country filter can only separate "US evidence found" from "none obtained". Recovery goal: the goal of a need is its own; the goal of a card is the aim written in the card, and the two can differ.</p></div>
+<div class="navhead" aria-hidden="true"><div>Need</div><div>Mechanism</div><div>Compounds and interventions</div><div>Evidence</div><div>Next question</div></div>
+<div id="nav-list"></div></section>
+<section id="candidates" aria-labelledby="h-cand"><h2 id="h-cand">3. Candidate profiles (<span id="cand-n">0</span> shown)</h2>
+<p class="mut">Each profile answers five questions briefly; the technical details and full tables are one click further down. Evidence scopes are never merged: a WWOX experiment in a DEE system, WWOX biology in another context, an other-disease precedent, a computational result and an unverified hypothesis keep their own labels.</p>
+<div class="btns"><label>Order: <select id="cand-sort"><option value="group">by evidence group, then A to Z</option><option value="name">A to Z</option></select></label></div>
+<div class="note" id="sel-wrap"><b>Selection.</b> <span id="sel-bar"></span></div>
+<div id="cand-list"></div></section>
+<section id="priorities-cur" aria-labelledby="h-rk"><h2 id="h-rk">4. Research priority: what to study further, and why</h2>
+<p class="note">__GROUPNOTE__ This is an ordering of research steps. It is not an efficacy ranking: the number of publications, the number of pathways touched or an L4 cell do not enter it.</p>
+<div class="btns"><label>View: <select id="rk-mode"><option value="need">by need</option><option value="goal">by recovery goal</option></select></label>
+<label>Order inside a group: <select id="rk-sort"><option value="group">A to Z (no order implied)</option><option value="wwox">most WWOX-system readouts (a volume, not a strength)</option><option value="counter">most counter-evidence items (a volume, not a verdict)</option></select></label></div>
+<div id="rk-list"></div></section>
+<section id="compare" aria-labelledby="h-cmp"><h2 id="h-cmp">5. Compare a few candidates</h2>
+<p class="mut">Select two to four cards in the profiles above. Overlaps, complementary coverage and opposed actions are shown. A shared need, or different needs, never implies synergy.</p>
+<div id="cmp-out" aria-live="polite"></div></section>
+<h2 class="band" id="fulldata-band">Full data layer (the screening behind the curated view)</h2>
+<p class="mut" style="margin:0 16px 8px">The sections below are the complete catalogue screening: funnel, access categories, needs, the whole pair matrix, every priority disposition, leads, limits and technical details. They are exhaustive, unranked and not candidate lists.</p>

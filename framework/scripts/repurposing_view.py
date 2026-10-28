@@ -18,7 +18,9 @@ from __future__ import annotations
 import argparse
 import gzip
 import html
+import csv
 import json
+import re
 import sys
 from collections import Counter
 from pathlib import Path
@@ -28,8 +30,10 @@ COUNTED_KINDS = {"intervention_target", "disease_gene_product", "pathway_member"
 ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_DR = ROOT / "disease-models/wwox/research/drug_repurposing"
 REGEN_CMD = "python3 -B framework/scripts/repurposing_coverage.py run && python3 -B framework/scripts/repurposing_view.py run"
-SCHEMA = "legend.wwox.repurposing_view/1"
+SCHEMA = "legend.wwox.repurposing_view/2"
 MAX_BYTES = 6_000_000
+SOURCES = ("full", "shareable")
+OUT_NAME = {"full": "index.html", "shareable": "index_shareable.html"}
 
 LEVELS = ["L1_documented_link", "L2_mechanistic_coherence", "L3_observed_effect", "L4_observed_recovery_in_wwox_system"]
 
@@ -103,7 +107,374 @@ def source_rows(manifest: dict, stats: dict, summary: dict) -> list[dict]:
     return out
 
 
-def build_payload(dr: Path = DEFAULT_DR) -> dict:
+# ------------------------------------------------------------------ data boundary (full | shareable)
+def load_allowlist(dr: Path) -> dict:
+    p = dr / "view/shareable_sources.json"
+    return jload(p) if p.exists() else {"dgidb_claim_sources": {}, "name_sources": {}, "access_scope_prefixes": {}, "own_text": {"allowed": True}}
+
+
+def assoc_tag(a: dict) -> str:
+    """Provenance tag of one association row: 'ChEMBL' or 'DGIdb:<claim source>' (claim source read from the row, else from its limits text)."""
+    if a.get("link_source") == "ChEMBL curated mechanism":
+        return "ChEMBL"
+    cs = a.get("claim_source")
+    if not cs:
+        for lim in a.get("limits") or []:
+            m = re.search(r"claim source (\S+?)[;,]", lim)
+            if m:
+                cs = m.group(1)
+                break
+    return "DGIdb:" + (cs or "unknown")
+
+
+def tag_allowed(tag: str, allow: dict) -> bool:
+    return tag.startswith("DGIdb:") and tag[6:] in (allow.get("dgidb_claim_sources") or {})
+
+
+def read_associations(dr: Path) -> list[dict]:
+    ap = dr / "coverage/associations.jsonl.gz"
+    out = []
+    if ap.exists():
+        with gzip.open(ap, "rt", encoding="utf-8") as fh:
+            for line in fh:
+                out.append(json.loads(line))
+    return out
+
+
+def catalog_names(dr: Path, rep_ids: set) -> dict:
+    """name_source and access-evidence scopes of the representative catalogue records (shareable mode only)."""
+    out = {}
+    with gzip.open(dr / "catalog/catalog.jsonl.gz", "rt", encoding="utf-8") as fh:
+        for line in fh:
+            e = json.loads(line)
+            if e["id"] in rep_ids:
+                out[e["id"]] = {"name_source": e.get("name_source"), "access": [(x.get("category"), x.get("scope") or "") for x in e.get("access") or []]}
+    return out
+
+
+# ------------------------------------------------------------------ curated layer
+SCOPES = [  # code, label, glyph. Glyph + label always travel together; colour is never the only carrier.
+    ("WWOX_EXPERIMENT_IN_DEE_SYSTEM", "WWOX experiment in a DEE system", "●"),
+    ("WWOX_CLINICAL_CASE", "WWOX clinical case report (uncontrolled)", "◐"),
+    ("WWOX_BIOLOGY_OTHER_CONTEXT", "WWOX biology in another context", "■"),
+    ("OTHER_DISEASE_PRECEDENT", "Other-disease precedent", "▲"),
+    ("COMPUTATIONAL_RESULT", "Computational result", "◆"),
+    ("TARGET_ENGAGEMENT", "Enzyme or cell-free assay", "□"),
+    ("EXTERNAL_DATABASE_RECORD", "External database record", "▤"),
+    ("SAFETY_SIGNAL", "Safety signal", "!"),
+    ("UNVERIFIED_HYPOTHESIS", "Unverified hypothesis", "?"),
+    ("UNCLASSIFIED", "Scope not recorded at assertion level", "–"),
+]
+KIND_TO_SCOPE = {"readout_in_wwox_system": "WWOX_EXPERIMENT_IN_DEE_SYSTEM", "case_report_wwox_clinical": "WWOX_CLINICAL_CASE", "readout_other_disease": "OTHER_DISEASE_PRECEDENT",
+                 "target_engagement_assay": "TARGET_ENGAGEMENT", "safety_signal": "SAFETY_SIGNAL"}
+GOALS = {"deep_recovery": "Broad, durable recovery (restore the lost WWOX function)", "partial_benefit": "Useful partial benefit (drugs, supplements, diets)"}
+ROUTE_TO_GOAL = {"RECUPERO_PROFONDO": "deep_recovery", "BENEFICIO_PRECOCE": "partial_benefit"}
+TRACKS = {"A": "Track A: variant-independent (acts whatever the WWOX allele)", "B": "Track B: variant- or lesion-specific (an allele class, a splice site, a stop codon)"}
+THREAD_TEXT = {
+    "WWOX restoration": "Bring WWOX itself back: add the gene, correct the transcript, read through a stop codon, rescue a misfolded protein, or raise endogenous expression.",
+    "Stress signalling and metabolism": "Cell-stress and energy pathways that look disturbed when WWOX is lost: integrated stress response, pyruvate and lactate handling, mitochondrial respiration, redox balance.",
+    "Network excitability": "Why neurons fire too much: excitatory gain, weak inhibition, the chloride and GABA premise, T-type calcium channels.",
+    "Signalling": "Growth and survival signalling that WWOX normally restrains: GSK3beta, Wnt/beta-catenin, mTOR and autophagy.",
+    "Development and glia": "Brain development and support cells: myelin, progenitor proliferation (MYC), neuroinflammation and gliosis.",
+    "Symptom-level": "Symptoms treated in their own right: seizures and spasms, blood glucose and growth.",
+}
+GROUPS = [
+    {"id": "G1", "label": "Group 1: the intervention itself was read out in a WWOX experimental system", "why": "At least one pertinent assertion of the card is a readout in a WWOX-deficient system, and the card names a next step."},
+    {"id": "G2", "label": "Group 2: clinical case reports only (uncontrolled)", "why": "The only WWOX-side data for the intervention are case reports without comparator; the card names a next step."},
+    {"id": "G3", "label": "Group 3: the target is seen altered in WWOX systems; this intervention is not yet tested there", "why": "The need has a WWOX-system observation, the card names a next step, but no readout of this intervention in a WWOX system is recorded."},
+    {"id": "G4", "label": "Group 4: a premise or a next step is missing", "why": "The card is an abstention (a datum is missing before a test can be designed) or the need has no WWOX-system observation."},
+]
+GROUP_NOTE = ("Groups are ordered by how close the evidence on the intervention is to a WWOX system, not by expected benefit. Inside a group the order is alphabetical and means nothing. "
+              "The reasons behind each position are printed with it. There is no score, no probability and no cure ranking.")
+
+
+def clip(t, n=300):
+    t = " ".join(str(t or "").split())
+    if len(t) <= n:
+        return t
+    cut = t[:n]
+    i = max(cut.rfind(". "), cut.rfind("; "))
+    if i > n * 0.5:
+        return cut[: i + 1]
+    return cut[: cut.rfind(" ")] + " …"
+
+
+PMID_RE = re.compile(r"PMID[\s:_]*(\d{6,8})")
+DOI_RE = re.compile(r"\b(10\.\d{4,9}/[^\s\"'<>;,)\]]+)")
+
+
+def short_need(label: str) -> str:
+    t = re.split(r" \(|: ", label or "", maxsplit=1)[0]
+    return clip(t, 90)
+
+
+def pf(card: dict) -> dict:
+    return card["input"].get("p4_card") or card["input"].get("p4_roadmap_fields") or {}
+
+
+def card_status(card: dict) -> tuple[str, str]:
+    """(normalised research status, raw text). The early axis cards write the status in Italian-vocabulary prose; both are kept."""
+    raw = str(pf(card).get("status") or ("abstention" if card.get("abstention") else "hypothesis"))
+    t = raw.lower()
+    if t.startswith("astension") or "abstention" in t:
+        return "abstention", raw
+    if "controvers" in t:
+        return "controversial", raw
+    if "deferred" in t:
+        return "deferred with reason", raw
+    if t.startswith("ipotesi") or "hypothesis" in t:
+        return "hypothesis", raw
+    return "other", raw
+
+
+def load_cards(dr: Path) -> dict:
+    cards = {}
+    for d in ("cards", "cards_early"):
+        if (dr / d).exists():
+            for f in sorted((dr / d).glob("*.card.json")):
+                cards[f.name[: -len(".card.json")]] = (jload(f), d)
+    return cards
+
+
+def build_curated(dr: Path, ctx: dict) -> dict:
+    """Curated, physician-readable layer: threads, goals, candidates, groups. Everything is read from needs, cards, coverage and catalogue files."""
+    needs_doc, summary, matrix, prios, stats, allow = ctx["needs_doc"], ctx["summary"], ctx["matrix"], ctx["prios"], ctx["stats"], ctx["allow"]
+    assoc_by_family = ctx["assoc_by_family"]
+    shareable = ctx["source"] == "shareable"
+    needs = needs_doc["needs"]
+    per_need = summary["needs"]["per_need"]
+
+    # ---- cards
+    cards = ctx["cards"]
+    links = jload(dr / "catalog/card_links.json").get("cards", {}) if (dr / "catalog/card_links.json").exists() else {}
+    titles = {}
+    pc = dr / "join/pubmed_cache"
+    if pc.exists():
+        for f in sorted(pc.glob("*.json")):
+            j = jload(f)
+            if j.get("status") == "MATCH_FOUND" and j.get("title"):
+                titles[str(j.get("pmid"))] = j["title"]
+    pert = []
+    pp = dr / "coverage/assertion_pertinence.tsv"
+    if pp.exists():
+        with open(pp, encoding="utf-8") as fh:
+            pert = list(csv.DictReader(fh, delimiter="\t"))
+    pert_by_id = {(r["card_id"], r["assertion_id"]): r for r in pert}
+
+    # ---- needs
+    def cid_of(x):   # needs list some cards as "EB-KD-01 (cards_early)"
+        return str(x).split(" ")[0]
+    need_cards: dict[str, list[str]] = {n["id"]: list(dict.fromkeys(cid_of(x) for x in (n.get("sources") or {}).get("cards") or [] if cid_of(x) in cards)) for n in needs}
+    rows_by_id = {r["row_id"]: r for r in matrix["rows"]}
+    for c in matrix["cells"]:
+        for cd in rows_by_id[c["row_id"]].get("cards") or []:
+            cid = cd["card_id"] if isinstance(cd, dict) else cd
+            if cid in cards and cid not in need_cards[c["need"]]:
+                need_cards[c["need"]].append(cid)
+    card_needs: dict[str, list[str]] = {}
+    for nid, cl in need_cards.items():
+        for cid in cl:
+            card_needs.setdefault(cid, []).append(nid)
+
+    cneeds = []
+    for n in needs:
+        pn = per_need[n["id"]]
+        obs = []
+        for o in n.get("observed") or []:
+            osc = o.get("evidence_scope")
+            if osc == "WWOX_EXPERIMENT_IN_DEE_SYSTEM" and "clinical" in str(o.get("model_type")):
+                osc = "WWOX_CLINICAL_CASE"   # the needs vocabulary files an uncontrolled case under the experiment scope; the view keeps it apart
+            obs.append({"id": o.get("id"), "scope": osc, "short": clip(o.get("statement"), 260), "full": o.get("statement"), "model": o.get("model_type"), "species": o.get("species"),
+                        "readout": o.get("readout"), "level": o.get("readout_level"), "limits": clip(o.get("limits"), 220), "pmid": o.get("pmid")})
+        idr = n.get("intervention_direction") or {}
+        tg = [t.get("symbol") for t in n.get("targets") or [] if t.get("target_kind") == "intervention_target"]
+        cneeds.append({
+            "id": n["id"], "label": n.get("label"), "short": short_need(n.get("label")), "thread": n.get("family"),
+            "track": (n.get("track") or {}).get("value"), "goal": (n.get("goal") or {}).get("value"), "scopes": n.get("evidence_scope") or [],
+            "obs": obs, "n_wwox_obs": sum(1 for o in obs if o["scope"] in ("WWOX_EXPERIMENT_IN_DEE_SYSTEM", "WWOX_CLINICAL_CASE")), "n_case_obs": sum(1 for o in obs if o["scope"] == "WWOX_CLINICAL_CASE"),
+            "counter": n.get("counter_evidence") or [], "inferred": n.get("inferred") or [],
+            "dir": idr.get("direction"), "dir_on": idr.get("on"), "dir_why": idr.get("rationale"), "dir_cert": idr.get("certainty"), "dir_dna": idr.get("do_not_assume"),
+            "targets": tg[:8], "cards": need_cards[n["id"]], "fam_link": pn.get("families_with_documented_link"),
+            "uncertain": idr.get("direction") == "uncertain", "no_l4": not pn.get("cells_L4_observed"),
+        })
+    nmap = {n["id"]: n for n in cneeds}
+
+    # ---- candidates
+    prio_by_row: dict[str, list[dict]] = {}
+    for p in prios["priorities"]:
+        prio_by_row.setdefault(p["row_id"], []).append(p)
+    card_rows: dict[str, list[dict]] = {}
+    for r in matrix["rows"]:
+        for cd in r.get("cards") or []:
+            cid = cd["card_id"] if isinstance(cd, dict) else cd
+            card_rows.setdefault(cid, []).append(r)
+    scope_codes = [s[0] for s in SCOPES]
+    pre_count = Counter(v[0]["input"]["candidate"]["name"].split(" (")[0].strip().split(": ")[0] for v in cards.values())
+    cands = []
+    for cid in sorted(cards):
+        card, folder = cards[cid]
+        inp = card["input"]
+        f = pf(card)
+        md = inp.get("mission_dimensions") or {}
+        route = md.get("route") or inp.get("route")
+        goal = ROUTE_TO_GOAL.get(route)
+        lneeds = card_needs.get(cid, [])
+        tracks = sorted({nmap[x]["track"] for x in lneeds if nmap[x]["track"]})
+        track = md.get("track") or (tracks[0] if len(tracks) == 1 else None)
+        absn = card.get("abstention") or inp.get("abstention_card")
+        absd = inp.get("abstention_card") if isinstance(inp.get("abstention_card"), dict) else (absn if isinstance(absn, dict) else {})
+        efa_raw = f.get("evidence_for_and_against") or f.get("evidence_pro_contra") or {}
+        efa = efa_raw if isinstance(efa_raw, dict) else {}
+        against_note = efa_raw if isinstance(efa_raw, str) else None
+        against = list(dict.fromkeys(list(inp.get("evidence_against") or []) + list(efa.get("against") or [])))
+        for_ = list(efa.get("for") or [])
+        nxt = f.get("next_measurement") or f.get("next_measure") or ""
+        nk = list(inp.get("not_known") or [])
+        # assertions: intervention side with scope; counts also from the pertinence table
+        asserts = []
+        for a in inp.get("drug_assertions") or []:
+            pr = pert_by_id.get((cid, a.get("id")))
+            sc = a.get("evidence_scope")
+            sc = "UNVERIFIED_HYPOTHESIS" if sc == "UNQUALIFIED" else sc
+            if sc not in scope_codes:
+                sc = KIND_TO_SCOPE.get(pr["evidence_kind"]) if pr else None
+            ctxd = a.get("context") or {}
+            txt = f'{a.get("endpoint") or a.get("target_id")}: {str(a.get("direction") or "").lower()}'
+            ids = sorted(set(PMID_RE.findall(f'{a.get("locator", "")} {a.get("source", "")}')))
+            asserts.append({"id": a.get("id"), "scope": sc or "UNCLASSIFIED", "text": clip(txt, 200), "note": clip(a.get("measured_result_note") or a.get("note") or (pr or {}).get("basis"), 280),
+                            "note_full": a.get("measured_result_note") or a.get("note") or (pr or {}).get("basis"), "species": ctxd.get("species"), "system": clip(ctxd.get("disease_id") or "", 120), "genotype": clip(ctxd.get("genotype") or "", 140),
+                            "depth": a.get("reading_depth"), "sign": (pr or {}).get("sign"), "kind": (pr or {}).get("evidence_kind"), "pmids": ids})
+        # per-link statistics from the module's pertinence table
+        lk = {}
+        for nid in lneeds:
+            rs = [r for r in pert if r["card_id"] == cid and r["need_id"] == nid]
+            n_w = sum(1 for r in rs if r["evidence_kind"] == "readout_in_wwox_system" and r["counts_L3"] == "yes")
+            n_c = sum(1 for r in rs if r["evidence_kind"] == "case_report_wwox_clinical")
+            n_o = sum(1 for r in rs if r["evidence_kind"] == "readout_other_disease")
+            n_null = sum(1 for r in rs if r["sign"] == "null")
+            n_harm = sum(1 for r in rs if r["sign"] == "harm")
+            has_next = bool(nxt) and not absn
+            if absn or not nxt:
+                g = "G4"
+            elif n_w:
+                g = "G1"
+            elif n_c:
+                g = "G2"
+            elif nmap[nid]["n_wwox_obs"]:
+                g = "G3"
+            else:
+                g = "G4"
+            reasons = []
+            reasons.append(("WWOX relevance", f'{n_w} readout(s) of this intervention in a WWOX system; {n_c} case-report assertion(s); {nmap[nid]["n_wwox_obs"]} WWOX-system observation(s) on the need'))
+            reasons.append(("Direction and context", f'need direction: {nmap[nid]["dir"]} on {nmap[nid]["dir_on"]} ({clip(nmap[nid]["dir_cert"], 90)}); {n_o} other-disease readout(s)'))
+            reasons.append(("Quality of evidence", f'reading depths in the card: {", ".join(sorted({a["depth"] for a in asserts if a["depth"]})) or "none recorded"}; sources are not pooled and shared sources are not independent'))
+            reasons.append(("Counter-evidence", ("pro and contra written as prose in the card (not itemised); " if against_note and not against else "") + f'{len(against)} itemised card item(s); {len(nmap[nid]["counter"])} need item(s); {n_null} measured null and {n_harm} harm signal(s) in the pertinent assertions'))
+            reasons.append(("Decisive gap", clip(absd.get("missing_datum") if absn and absd.get("missing_datum") else (nk[0] if nk else "none recorded"), 200)))
+            reasons.append(("Informative next step", "named in the card" if has_next else "not available (abstention or no step named)"))
+            lk[nid] = {"group": g, "n_w": n_w, "n_c": n_c, "n_o": n_o, "n_null": n_null, "n_harm": n_harm, "reasons": reasons}
+        # catalogue side
+        rws = card_rows.get(cid, [])
+        chembl = sorted({x["chembl_id"] for x in (links.get(cid) or {}).get("links", []) if x.get("chembl_id")})
+        acc = sorted({a for r in rws for a in (r.get("access_categories") or [])})
+        # actions on targets from associations (compare view)
+        actions = {}
+        for r in rws:
+            for a in assoc_by_family.get(r["row_id"], []):
+                if a.get("target_kind") != "intervention_target":
+                    continue
+                if shareable and not tag_allowed(assoc_tag(a), allow):
+                    continue
+                key = (a["need"], a.get("target") or a.get("gene"), a.get("action_on_target"), a.get("consistency"))
+                actions[key] = actions.get(key, 0) + 1
+        act = [{"need": k[0], "target": k[1], "action": k[2], "cons": k[3], "n": v} for k, v in sorted(actions.items(), key=lambda kv: (kv[0][0], str(kv[0][1]), str(kv[0][2])))][:40]
+        blob = json.dumps(card, ensure_ascii=False)
+        pm = {}
+        for m in PMID_RE.findall(blob):
+            pm.setdefault(m, "mentioned in the card")
+        for nid in lneeds:
+            for o in nmap[nid]["obs"]:
+                if o["pmid"]:
+                    pm[str(o["pmid"])] = "observation source in the need record"
+        for a in asserts:
+            for m in a["pmids"]:
+                pm[m] = "source of an intervention assertion"
+        dois = sorted(set(x.rstrip(".") for x in DOI_RE.findall(blob)))
+        scope_counts = {"int": dict(Counter(a["scope"] for a in asserts)), "need": dict(Counter(o["scope"] for nid in lneeds for o in nmap[nid]["obs"]))}
+        gset = sorted({v["group"] for v in lk.values()})
+        name = inp["candidate"]["name"].split(" (")[0].strip()
+        pre = name.split(": ")[0]
+        name = pre if pre_count[pre] == 1 else name
+        cands.append({
+            "id": cid, "name": inp["candidate"]["name"], "short": clip(name, 80), "folder": folder, "goal": goal, "track": track, "tracks": tracks, "status": card_status(card)[0], "status_raw": clip(card_status(card)[1], 200),
+            "abstention": bool(absn), "needs": lneeds, "links": lk, "group": gset[0] if gset else "G4", "assessment": card.get("assessment"), "summary": card.get("directional_summary"),
+            "why": clip(f.get("indication_and_transfer") or f.get("identity"), 420), "why_full": f.get("indication_and_transfer") or f.get("identity"),
+            "identity": clip(f.get("identity"), 360), "mechanism": clip(f.get("mechanism"), 360), "novelty": clip(f.get("novelty_for_woree"), 360),
+            "expected": clip(f.get("expected_contribution"), 200), "access_text": clip(f.get("time_to_access"), 240), "pharm": clip(f.get("pharmacology"), 360),
+            "against": against, "against_note": against_note, "for": for_, "transfer_limits": efa.get("transfer_limits"), "not_known": nk,
+            "missing": absd.get("missing_datum") if absd.get("missing_datum") else (nk[0] if nk else None), "reopen": clip(absd.get("search_record"), 260) if absd.get("search_record") else None,
+            "next": clip(nxt, 360), "next_full": nxt, "limits": card.get("limits") or [], "asserts": asserts, "n_disease_assertions": len(inp.get("disease_assertions") or ([inp["disease_assertion"]] if inp.get("disease_assertion") else [])),
+            "access": acc, "country": ("US evidence found" if acc and acc != ["unknown/unverified"] else "no country evidence obtained"), "chembl": chembl, "actions": act,
+            "pmids": [{"id": k, "role": v, "title": titles.get(k)} for k, v in sorted(pm.items())], "dois": dois, "scope_counts": scope_counts,
+            "card_path": f"../{folder}/{cid}.card.json", "n_prio": sum(len(prio_by_row.get(r["row_id"], [])) for r in rws),
+            "disp": dict(sorted(Counter(p["disposition"] for r in rws for p in prio_by_row.get(r["row_id"], [])).items())),
+        })
+    # ---- threads
+    threads = []
+    for fam in dict.fromkeys(n["thread"] for n in cneeds):
+        ids = [n["id"] for n in cneeds if n["thread"] == fam]
+        cs = sorted({c["id"] for c in cands if set(c["needs"]) & set(ids)})
+        threads.append({"id": fam, "name": fam, "text": THREAD_TEXT.get(fam, ""), "needs": ids, "cards": cs,
+                        "goals": dict(Counter(nmap[i]["goal"] for i in ids)), "wwox_obs": sum(nmap[i]["n_wwox_obs"] for i in ids)})
+    # ---- gaps (all computed)
+    n_total = len(cneeds)
+    gaps = [
+        {"kind": "need", "n": sum(1 for n in cneeds if n["no_l4"]), "of": n_total, "text": "needs for which no intervention has an observed recovery in a WWOX system (L4)"},
+        {"kind": "need", "n": sum(1 for n in cneeds if n["n_wwox_obs"] == 0), "of": n_total, "text": "needs with no WWOX-system observation recorded in the needs file"},
+        {"kind": "need", "n": sum(1 for n in cneeds if n["uncertain"]), "of": n_total, "text": "needs whose direction is uncertain, so the sign of a favourable intervention is not known"},
+    ]
+    dates = [x for x in (needs_doc.get("built_on"), (stats.get("generated_utc") or "")[:10]) if x]
+    meta = {"data_date": max(dates) if dates else None, "needs_built_on": needs_doc.get("built_on"), "catalogue_generated": stats.get("generated_utc"), "dgidb_export": "2024-06-10", "source": ctx["source"],
+            "n_cards": len(cands), "n_needs": n_total, "n_cards_by_goal": dict(Counter(c["goal"] for c in cands)), "n_abstentions": sum(1 for c in cands if c["abstention"])}
+    return {"meta": meta, "scopes": [{"code": c, "label": l, "glyph": g} for c, l, g in SCOPES], "goals": GOALS, "tracks": TRACKS, "threads": threads, "needs": cneeds, "cands": cands,
+            "groups": GROUPS, "group_note": GROUP_NOTE, "gaps": gaps}
+
+
+def build_footer(source: str, allow: dict, emitted: Counter, srcs: list[dict]) -> dict:
+    """Attribution and licence footer: what is embedded as content, and what contributed identifiers or counts only."""
+    embedded, counts_only = [], []
+    own = allow.get("own_text") or {}
+    embedded.append({"label": "Cards, needs, priorities and dispositions (this repository)", "licence": own.get("licence"), "attribution": own.get("attribution"), "url": None, "rows": None})
+    by_id = {x["id"]: x for x in srcs}
+    if source == "full":
+        for x in srcs:
+            embedded.append({"label": x["name"], "licence": x.get("licence") or "licence not recorded", "attribution": f'{x["name"]}, version {x.get("version") or "not recorded"}, retrieved {x.get("retrieved_utc") or "not recorded"}',
+                             "url": x.get("terms"), "rows": None})
+        return {"source": source, "embedded": embedded, "counts_only": [], "note": "Full view for local use. It embeds third-party rows (ChEMBL, DGIdb, openFDA, MATRIX) under their own terms; DGIdb-derived rows are not cleared for public release and ChEMBL content is CC BY-SA 3.0. Use the shareable build to circulate."}
+    for tag, n in sorted(emitted.items()):
+        if tag.startswith("DGIdb:"):
+            a = (allow.get("dgidb_claim_sources") or {}).get(tag[6:], {})
+            embedded.append({"label": a.get("label", tag), "licence": a.get("licence"), "attribution": a.get("attribution"), "url": a.get("url"), "rows": n})
+        elif tag.startswith("name:"):
+            a = (allow.get("name_sources") or {}).get(tag[5:], {})
+            embedded.append({"label": a.get("label", tag), "licence": a.get("licence"), "attribution": a.get("attribution"), "url": a.get("url"), "rows": n})
+        elif tag.startswith("access:"):
+            key = tag[7:]
+            lab = (allow.get("access_scope_prefixes") or {}).get(key, key)
+            for a in (allow.get("name_sources") or {}).values():
+                if a.get("label") == lab:
+                    embedded.append({"label": f"{a['label']} (access categories)", "licence": a.get("licence"), "attribution": a.get("attribution"), "url": a.get("url"), "rows": n})
+                    break
+    seen = set()
+    for e in list(embedded):
+        seen.add(e["label"].replace(" (access categories)", ""))
+    for k, v in (allow.get("counts_and_identifiers_only") or {}).items():
+        x = by_id.get(k.lower().replace(" ", "_").replace("nih_", ""))
+        counts_only.append({"label": k, "terms": v, "version": (x or {}).get("version"), "retrieved": (x or {}).get("retrieved_utc")})
+    return {"source": source, "embedded": embedded, "counts_only": counts_only,
+            "note": "Shareable build: a third-party row is embedded only when its provenance is on the allowlist (view/shareable_sources.json). Everything else appears as an identifier or a count. No attribution has been removed."}
+
+
+def build_payload(dr: Path = DEFAULT_DR, source: str = "full") -> dict:
     cov = dr / "coverage"
     summary = jload(cov / "coverage_summary.json")
     matrix = jload(cov / "coverage_matrix.json")
@@ -111,6 +482,35 @@ def build_payload(dr: Path = DEFAULT_DR) -> dict:
     stats = jload(dr / "catalog/catalog_stats.json")
     manifest = jload(dr / "catalog/cache_manifest.json")
     needs_doc = jload(dr / "needs/needs.json")
+    shareable = source == "shareable"
+    if source not in SOURCES:
+        raise SystemExit(f"unknown source {source!r}: use one of {SOURCES}")
+    allow = load_allowlist(dr)
+    assocs = read_associations(dr)
+    assoc_by_family: dict[str, list[dict]] = {}
+    assoc_by_pair: dict[tuple, list[dict]] = {}
+    for a in assocs:
+        assoc_by_family.setdefault(a.get("family"), []).append(a)
+        assoc_by_pair.setdefault((a.get("family"), a["need"]), []).append(a)
+    cards_all = load_cards(dr)
+    card_name = {cid: v[0]["input"]["candidate"]["name"].split(" (")[0].strip() for cid, v in cards_all.items()}
+    emitted: Counter = Counter()   # provenance tag -> rows embedded (drives the attribution footer)
+    reps = {r["row_id"]: r.get("representative") for r in matrix["rows"]}
+    cat_info = catalog_names(dr, {v for v in reps.values() if v}) if shareable else {}
+
+    def row_label(r):
+        """(name, allowed): in shareable mode a name is embedded only if our card names it or its name source is on the allowlist."""
+        if not shareable:
+            return r.get("name"), True
+        if r.get("cards"):
+            cid = r["cards"][0]["card_id"] if isinstance(r["cards"][0], dict) else r["cards"][0]
+            if cid in card_name:
+                return card_name[cid], True
+        ns = (cat_info.get(reps.get(r["row_id"])) or {}).get("name_source")
+        if ns in (allow.get("name_sources") or {}):
+            emitted["name:" + ns] += 1
+            return r.get("name"), True
+        return str(r["row_id"]).split(":", 1)[-1].replace("CAT:", ""), False
 
     needs = needs_doc["needs"]
     need_ids = [n["id"] for n in needs]
@@ -133,10 +533,20 @@ def build_payload(dr: Path = DEFAULT_DR) -> dict:
         for c in r.get("cards") or []:
             cid = c["card_id"] if isinstance(c, dict) else c
             cards.append({"id": cid, "att": c.get("attachment") if isinstance(c, dict) else None, "path": card_path(dr, cid)})
-        rows.append({"id": rid, "name": r.get("name"), "kind": r.get("kind"), "acc": r.get("access_categories") or [],
-                     "st": r.get("status_class") or [], "mod": r.get("modality") if isinstance(r.get("modality"), list) else [r.get("modality")],
+        nm, ok = row_label(r)
+        acc = r.get("access_categories") or []
+        st = r.get("status_class") or []
+        mod = r.get("modality") if isinstance(r.get("modality"), list) else [r.get("modality")]
+        if not ok:   # shareable: identifier and counts only; per-row attributes of a withheld record are not embedded
+            pre = tuple(allow.get("access_scope_prefixes") or ())
+            acc = sorted({c for c, sc in (cat_info.get(reps.get(rid)) or {}).get("access", []) if sc.startswith(pre)}) if pre else []
+            for c, sc in (cat_info.get(reps.get(rid)) or {}).get("access", []):
+                if pre and sc.startswith(pre):
+                    emitted["access:" + sc.split(" ")[0]] += 1
+            st, mod = [], []
+        rows.append({"id": rid, "name": nm, "kind": r.get("kind"), "acc": acc, "st": st, "mod": mod,
                      "rec": r.get("records"), "dup": r.get("n_possible_duplicates") or 0, "cards": cards,
-                     "tr": r.get("target_rows_total")})
+                     "tr": r.get("target_rows_total"), **({"w": 1} if not ok else {})})
 
     # ---- string table for repeated long strings
     strings: list[str] = []
@@ -169,6 +579,23 @@ def build_payload(dr: Path = DEFAULT_DR) -> dict:
     disp_list = sorted(prios.get("dispositions") or summary["priorities"]["all_dispositions_listed"])
     didx = {d: i for i, d in enumerate(disp_list)}
 
+    def share_l1(l1, k):
+        """Shareable: keep targets and source names only from allowlisted associations; the withheld rows are counted."""
+        if not shareable:
+            return l1
+        al = assoc_by_pair.get(k, [])
+        ok = [a for a in al if tag_allowed(assoc_tag(a), allow)]
+        for a in ok:
+            emitted[assoc_tag(a)] += 1
+        genes = {x for a in ok for x in (a.get("target"), a.get("gene"))}
+        l1 = list(l1)
+        l1[2] = [t for t in l1[2] if t in genes]
+        l1[3] = sorted({assoc_tag(a) for a in ok})
+        l1[6] = [t for t in l1[6] if t in genes]
+        if len(ok) < len(al):
+            l1[5] = "withheld: at least one source row of this pair is outside the shareable allowlist; counts are kept"
+        return l1 + [len(al) - len(ok)]
+
     pairs = []
     keys = sorted(cell_keys | set(orphan), key=lambda k: (k[1], k[0]))
     cell_by_key = {(c["row_id"], c["need"]): c for c in cells}
@@ -178,8 +605,8 @@ def build_payload(dr: Path = DEFAULT_DR) -> dict:
         o = {"r": ridx[k[0]], "n": nidx[k[1]]}
         if c:
             l1, l2, l3, l4 = (c[x] for x in LEVELS)
-            o["l1"] = [l1.get("state"), l1.get("associations"), l1.get("targets") or [], l1.get("link_sources") or [], l1.get("readout_marker_only_links") or 0, l1.get("why"),
-                       l1.get("pathway_member_targets_listed_apart") or [], bool(l1.get("source_caveat_stale"))]
+            o["l1"] = share_l1([l1.get("state"), l1.get("associations"), l1.get("targets") or [], l1.get("link_sources") or [], l1.get("readout_marker_only_links") or 0, l1.get("why"),
+                                l1.get("pathway_member_targets_listed_apart") or [], bool(l1.get("source_caveat_stale"))], k)
             o["l2"] = [l2.get("state"), l2.get("consistent_associations"), l2.get("opposed_associations"), l2.get("unresolved_associations"),
                        [S(json.dumps(q, sort_keys=True) if not isinstance(q, str) else q) for q in (l2.get("certainty_qualifiers") or [])]]
             sg = {k: l3[k] for k in ("signs_wwox_system_readouts", "signs_case_reports", "signs_direct_genotype_comparison_vs_wild_type_only", "signs_effect_in_wild_type_or_carrier_arms",
@@ -190,8 +617,13 @@ def build_payload(dr: Path = DEFAULT_DR) -> dict:
             o["l4"] = [l4.get("state"), l4.get("assertion_ids") or [], l4.get("by_scope") or {}, bool(l4.get("via_class_card"))]
             o["x"] = bool(c.get("exploration_only"))
         if p:
+            cr = trim_criteria(p["criteria"])
+            if shareable:
+                al = [a for a in assoc_by_pair.get(k, []) if tag_allowed(assoc_tag(a), allow)]
+                gs = {x for a in al for x in (a.get("target"), a.get("gene"))}
+                cr["dir"] = [cr["dir"][0], sorted({assoc_tag(a) for a in al}), [t for t in cr["dir"][2] if t in gs]]
             o["p"] = {"d": didx[p["disposition"]], "w": S(p["disposition_reason"]), "nd": [S(x) for x in p.get("next_deepening") or []],
-                      "cr": trim_criteria(p["criteria"]), "dup": p.get("possible_duplicates_not_merged") or 0}
+                      "cr": cr, "dup": p.get("possible_duplicates_not_merged") or 0}
             if "l1" not in o:
                 lv = p["levels"]
                 o["l1"] = [lv.get("L1_documented_link"), None, [], [], 0, None, [], False]
@@ -290,24 +722,20 @@ def build_payload(dr: Path = DEFAULT_DR) -> dict:
         "rows_access_in_matrix": dict(sorted(Counter(a for r in matrix["rows"] for a in (r.get("access_categories") or ["(none)"])).items())),
     }
     excl = {}
-    ap = cov / "associations.jsonl.gz"
-    if ap.exists():
-        with gzip.open(ap, "rt", encoding="utf-8") as fh:
-            for line in fh:
-                a = json.loads(line)
-                if a.get("excluded_from_counts") and a.get("target_kind") in COUNTED_KINDS:   # same perimeter as the coverage summary
-                    e = excl.setdefault(a["catalogue_id"], {"id": a["catalogue_id"], "name": a.get("compound"), "reason": a["excluded_from_counts"], "genes": set(), "needs": set(), "src": a.get("link_source")})
-                    e["genes"].add(a.get("gene") or a.get("hgnc_id") or "?")
-                    e["needs"].add(a["need"])
-    excluded_detail = sorted(({"id": e["id"], "name": e["name"], "reason": e["reason"], "genes": sorted(map(str, e["genes"])), "n_needs": len(e["needs"]), "src": e["src"]} for e in excl.values()),
-                             key=lambda e: (e["reason"].split(":")[0], e["id"]))
+    for a in assocs:
+        if a.get("excluded_from_counts") and a.get("target_kind") in COUNTED_KINDS:   # same perimeter as the coverage summary
+            e = excl.setdefault(a["catalogue_id"], {"id": a["catalogue_id"], "name": a.get("compound"), "reason": a["excluded_from_counts"], "genes": set(), "needs": set(), "src": a.get("link_source")})
+            e["genes"].add(a.get("gene") or a.get("hgnc_id") or "?")
+            e["needs"].add(a["need"])
+    excluded_detail = sorted(({"id": e["id"], "name": (e["name"] if not shareable else e["id"].replace("CAT:", "")), "reason": (e["reason"] if not shareable else e["reason"].split(":")[0] + " (detail withheld)"), "genes": (sorted(map(str, e["genes"])) if not shareable else []),
+                               "n_needs": len(e["needs"]), "src": e["src"]} for e in excl.values()), key=lambda e: (e["reason"].split(":")[0], e["id"]))
     leads_path = cov / "lead_dispositions.json"
     leads = jload(leads_path) if leads_path.exists() else {"_note": None, "dispositions": []}
     card_leads = []
     for k, p in sorted(prio_by_key.items(), key=lambda kv: (kv[0][1], kv[0][0])):
         r = rows_by_id[k[0]]
         if r.get("cards") and p["disposition"] in ("consistent_mechanism_candidate", "exploration_candidate", "opposite_mechanism", "mixed_consistent_and_opposed_actions", "source_queried_without_result", "incomplete_or_failed_query"):
-            card_leads.append({"row": r["name"], "need": k[1], "disp": p["disposition"], "levels": [p["levels"].get(x) for x in LEVELS],
+            card_leads.append({"row": row_label(r)[0], "need": k[1], "disp": p["disposition"], "levels": [p["levels"].get(x) for x in LEVELS],
                                "cards": [{"id": c["card_id"], "path": card_path(dr, c["card_id"])} for c in r["cards"]]})
     srcs = source_rows(manifest, stats, summary)
     tech = {
@@ -319,7 +747,11 @@ def build_payload(dr: Path = DEFAULT_DR) -> dict:
         "regeneration": REGEN_CMD, "never_summed": bool(matrix.get("never_summed")),
         "needs_schema": needs_doc.get("schema"), "needs_status": needs_doc.get("status"),
     }
+    ctx = {"needs_doc": needs_doc, "summary": summary, "matrix": matrix, "prios": prios, "stats": stats, "allow": allow, "assoc_by_family": assoc_by_family, "cards": cards_all, "source": source}
+    cur = build_curated(dr, ctx)
+    cur["footer"] = build_footer(source, allow, emitted, srcs)
     return {
+        "source": source, "cur": cur,
         "schema": SCHEMA, "funnel": funnel, "access": access, "matrix_summary": mx, "observations": ob,
         "dispositions": [{"id": d, "n": pr["by_disposition"].get(d, 0), "cells": (pr.get("by_disposition_cells") or {}).get(d, pr["by_disposition"].get(d, 0)),
                           "fam": (pr.get("by_disposition_distinct_families_or_rows") or {}).get(d), "def": (prios.get("dispositions") or {}).get(d)} for d in disp_list],
@@ -693,15 +1125,17 @@ document.body.setAttribute('data-ready','1');
 
 TEMPLATE = """<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>WWOX repurposing exploration view</title>
+<title>WWOX repurposing: curated research view</title>
 <style>__CSS__</style></head><body>
-<header><div class="in"><h1>WWOX drug-repurposing module: exploration view</h1>
-<div class="mut">Local, regenerable, non-canonical research material. Public disease and reference-genotype level only. Not a ranking of treatments, not a probability of benefit, not medical advice. __NNEEDS__ needs, __NPAIRS__ (family, need) pairs in the matrix.</div></div></header>
-__BANNER__<nav><div class="in"><a href="#funnel">Funnel</a><a href="#access">Access</a><a href="#needs">Needs</a><a href="#matrix">Matrix</a><a href="#priorities">Priorities</a><a href="#leads">Leads</a><a href="#limits">Limits</a><a href="#technical">Technical details</a></div></nav>
-<main>
-<section id="funnel"><h2>1. From catalogue to evaluated: what is counted, in which unit</h2>__FUNNEL__</section>
-<section id="access"><h2>2. Distribution by access category</h2>__ACCESS__</section>
-<section id="filters"><h2>Filters <span class="mut">(apply to sections Needs, Matrix and Priorities; shareable through the URL hash, for example <code>#f=disp:exploration_candidate&amp;need:NEED-ISR-ATTENUATION</code>)</span></h2>
+<a class="skip" href="#main">Skip to the content</a>
+<header><div class="in"><h1>WWOX drug repurposing: what to study next, and on what evidence</h1>
+<div class="mut">Local, regenerable, non-canonical research material (__SOURCELABEL__). Public disease and reference-genotype level only. Not a ranking of treatments, not a probability of benefit, not medical advice.</div></div></header>
+__BANNER__<nav aria-label="Sections"><div class="in"><a href="#overview">Overview</a><a href="#navigate">Navigate</a><a href="#candidates">Candidates</a><a href="#priorities-cur">Priorities</a><a href="#compare">Compare</a><a href="#funnel">Full data</a><a href="#limits">Limits</a><a href="#technical">Technical</a><a href="#attribution">Sources</a></div></nav>
+<main id="main">
+__CURATED__
+<section id="funnel"><h2>6. From catalogue to evaluated: what is counted, in which unit</h2>__FUNNEL__</section>
+<section id="access"><h2>7. Distribution by access category</h2>__ACCESS__</section>
+<section id="filters"><h2>Filters for the full matrix <span class="mut">(sections 8 to 10; shareable through the URL hash, for example <code>#f=disp:exploration_candidate&amp;need:NEED-ISR-ATTENUATION</code>)</span></h2>
 <div class="filters">
 <label>Access category<select id="f-access"></select></label><label>Need<select id="f-need"></select></label>
 <label>Need evidence scope<select id="f-scope"></select></label><label>Observation scope (L3/L4)<select id="f-oscope"></select></label>
@@ -709,32 +1143,128 @@ __BANNER__<nav><div class="in"><a href="#funnel">Funnel</a><a href="#access">Acc
 <label>Disposition<select id="f-disp"></select></label><label>Text search<input type="search" id="f-q" placeholder="name, id, target, card, hypothesis"></label></div>
 <div class="bar-actions"><button id="f-reset">reset filters</button><span><span class="cnt" id="cnt-pairs">0</span> of <span id="cnt-pairs-of">0</span> pairs match; <span class="cnt" id="cnt-prio">0</span> of <span id="cnt-prio-of">0</span> prioritised; <span class="cnt" id="cnt-needs">0</span> needs shown</span></div>
 <div class="chips" id="lvl-now" aria-live="polite"></div><div class="chips" id="disp-now"></div></section>
-<section id="needs"><h2>3. Needs: direction, Track, goal, evidence, levels, gaps</h2>
+<section id="needs"><h2>8. Needs: direction, Track, goal, evidence, levels, gaps</h2>
 <p class="mut">A need is a place where the record observed something and an intervention could be aimed. Needs whose direction is <i>uncertain</i> are exploration only: L2 is not evaluable there. Level counts are cells (family, need) and are never summed across levels or needs.</p>
 <div class="needs" id="needs-list"></div></section>
-<section id="matrix"><h2>4. Matrix: interventions and compound families x needs</h2>
+<section id="matrix"><h2>9. Matrix: interventions and compound families x needs</h2>
 <p class="mut">Pair unit: __PAIRUNIT__. Four levels are shown side by side and never summed or scored. Scope is shown on L3 and L4.</p>
 __LEVELS__
 <div class="pager" id="pg-m"></div><div id="matrix-list"></div></section>
-<section id="priorities"><h2>5. Priorities: a disposition per pair, with reasons per criterion</h2>
+<section id="priorities"><h2>10. Dispositions: one per pair, with reasons per criterion</h2>
 __DISPOSITIONS__
 <div class="note">Dispositions are distinct: <b>source queried without result</b> (the sources were asked and returned no row for the record), <b>incomplete or failed query</b> (a source was not in state OK; this is never a negative) and <b>not relevant / no catalogue link found</b> and <b>insufficient data</b> (a decision from the data that exist) are different statements and are not merged.</div>
 <div class="pager" id="pg-p"></div><div id="prio-list"></div></section>
-<section id="leads"><h2>6. Catalogue-derived leads and lead dispositions</h2>__LEADS__</section>
-<section id="limits"><h2>8. Honest limits</h2>__LIMITS__</section>
-<section id="technical"><h2>9. Technical details (separate from the exploration above)</h2>__TECH__</section>
+<section id="leads"><h2>11. Catalogue-derived leads and lead dispositions</h2>__LEADS__</section>
+<section id="limits"><h2>12. Honest limits</h2>__LIMITS__</section>
+<section id="technical"><h2>13. Technical details (separate from the exploration above)</h2>__TECH__</section>
 </main>
+<footer id="attribution" aria-label="Sources and licences">__FOOTER__</footer>
+<div id="export-area" aria-live="polite"></div>
 <script id="data" type="application/json">__DATA__</script>
 <script>__JS__</script>
+<script>__CJS__</script>
 </body></html>
 """
 
 
-def render(P: dict) -> str:
+def read_asset(dr: Path, name: str) -> str:
+    p = dr / "view/assets" / name
+    if not p.exists():
+        raise SystemExit(f"missing view asset {p}")
+    return p.read_text(encoding="utf-8")
+
+
+def render_overview(P: dict) -> str:
+    """First screen, server-rendered from the payload so that it reads without JavaScript."""
+    cur, f = P["cur"], P["funnel"]
+    meta, cands, needs = cur["meta"], cur["cands"], cur["needs"]
+    from urllib.parse import quote
+    n_g = Counter(c["group"] for c in cands)
+
+    def tile(key, val, unit, desc):
+        return f'<div class="tile"><span class="big">{num(key, val)}</span><span class="u">{E(unit)}</span><span class="d">{E(desc)}</span></div>'
+    t1 = "".join([
+        tile("cur.needs", len(needs), "needs", "places where a WWOX-deficient system was observed and an intervention could be aimed"),
+        tile("cur.threads", len(cur["threads"]), "biological threads", "groups of needs that share a biology"),
+        tile("cur.cards", len(cands), "candidate cards", "an intervention, a class or an axis that has been read and written up"),
+        tile("cur.abstentions", meta["n_abstentions"], "abstentions", "cards that name the missing datum instead of a test"),
+        tile("cur.group1", n_g.get("G1", 0), "cards in Group 1", "the intervention itself was read out in a WWOX experimental system"),
+    ])
+    t2 = "".join([
+        tile("funnel.records", f["records"], "catalogue records", "source-level substance records screened (salts and duplicates count once each)"),
+        tile("funnel.families", f["families"], "catalogue families", "groupings of records; a family is not a distinct drug and not a candidate"),
+        tile("funnel.families_with_link", f["families_with_link"], "families with a documented link", "a link is a source statement about a target, not modulation and not rescue"),
+        tile("funnel.evaluated_records", f["evaluated_records"], "records evaluated against WWOX", "records with any observation against a WWOX need; not a count of tested drugs"),
+    ])
+    gtxt = {"deep_recovery": ("deep", "Broad, durable recovery"), "partial_benefit": ("partial", "Useful partial benefit")}
+    panels = []
+    for g, (cls, title) in gtxt.items():
+        cs = [c for c in cands if c["goal"] == g]
+        ns = [n for n in needs if n["goal"] == g]
+        tr = Counter(c["track"] or "not stated" for c in cs)
+        nxt = []
+        for gid in ("G1", "G2", "G3"):
+            names = [c for c in cs if c["group"] == gid]
+            if names:
+                nxt.append(f'<div class="kv"><span class="grp {gid.lower()}">{E(GROUPS[int(gid[1]) - 1]["label"].split(":")[0])}</span> ' + ", ".join(f'<a href="#cand-{E(c["id"])}" data-open="{E(c["id"])}">{E(c["short"])}</a>' for c in names) + "</div>")
+        gaps, seen = [], set()
+        for gid in ("G1", "G3", "G4"):
+            for c in [c for c in cs if c["group"] == gid and c.get("missing") and c["missing"] not in seen][:2]:
+                seen.add(c["missing"])
+                gaps.append(f'<li><b>{E(c["short"])}:</b> {E(clip(c["missing"], 190))}</li>')
+        panels.append(
+            f'<div class="goal {cls}" data-goal="{g}"><h3>{E(title)}</h3><p class="mini">{E(GOALS[g])}. Kept apart from the other possibility: nothing below is added to it.</p>'
+            f'<div class="kv"><b>Needs with this aim:</b> {num("cur.goal." + g + ".needs", len(ns))} needs (in: {E(", ".join(sorted({n["thread"] for n in ns})))})</div>'
+            f'<div class="kv"><b>Candidate cards with this aim:</b> {num("cur.goal." + g + ".cards", len(cs))} cards, {sum(1 for c in cs if c["abstention"])} of them abstentions</div>'
+            f'<div class="kv"><b>Track (a separate field):</b> ' + "; ".join(f"Track {E(k)}: {v}" for k, v in sorted(tr.items())) + '</div>'
+            f'<div class="kv"><b>To study next (cards that name a next step), by evidence group:</b></div>' + ("".join(nxt) or '<p class="mini">None.</p>') +
+            f'<div class="kv"><b>Decisive gaps (missing datum stated in the cards):</b></div><ul class="mini">' + "".join(gaps) + '</ul></div>')
+    th = "".join(
+        f'<div class="thread" data-thread="{E(t["id"])}"><h3>{E(t["name"])}</h3><p>{E(t["text"])}</p>'
+        f'<p class="mini">{len(t["needs"])} needs ({t["goals"].get("deep_recovery", 0)} deep recovery, {t["goals"].get("partial_benefit", 0)} partial benefit); {t["wwox_obs"]} observations in WWOX systems (entries in the need records); {len(t["cards"])} candidate cards linked.</p>'
+        f'<a href="#c=thread:{quote(t["id"])}">show this thread</a></div>' for t in cur["threads"])
+    gaps = "".join(f'<li><b>{g["n"]} of {g["of"]}</b> {E(g["text"])}</li>' for g in cur["gaps"])
+    dd = meta["data_date"]
+    return (
+        '<section id="overview" aria-labelledby="h-over"><h2 id="h-over">1. Overview</h2>'
+        '<p class="lead"><b>Research goal.</b> Find out which existing drugs, supplements, diets and other interventions are worth testing for WWOX-related developmental and epileptic encephalopathy (WWOX-DEE), and say plainly what has been observed in WWOX, what is borrowed from other diseases or from predictions, what argues against it and what proof is missing.</p>'
+        '<dl class="facts"><dt>Perimeter</dt><dd>WWOX-DEE, reference genotype class; public literature and public databases; no individual-level data. Research material for discussion, not medical advice.</dd>'
+        f'<dt>Data date</dt><dd data-k="meta.data_date" data-v="{E(str(dd))}">{E(str(dd))} (catalogue and coverage build {E(str(meta["catalogue_generated"]))}; needs record {E(str(meta["needs_built_on"]))}). DGIdb export dated {E(meta["dgidb_export"])} (stale); this page reads no clock.</dd>'
+        '<dt>Two open possibilities</dt><dd>Broad, durable recovery and useful partial benefit are two separate dimensions, shown side by side below and never combined. <b>Track A</b> (variant-independent) and <b>Track B</b> (variant- or lesion-specific) are a third, independent field.</dd></dl>'
+        '<div class="goals">' + "".join(panels) + '</div>'
+        '<div class="tilegroup">Curated work (read and written up)</div><div class="tiles">' + t1 + '</div>'
+        '<div class="tilegroup">Catalogue screening (large numbers; not candidates)</div><div class="tiles">' + t2 + '</div>'
+        '<p class="mini mut">Different units: a <b>need</b> is a biological question, a <b>card</b> is a written-up candidate, a <b>record</b> is one source entry, a <b>family</b> is a grouping of records. They are never added or compared as one number.</p>'
+        '<h3>Main biological threads (the ' + str(len(needs)) + ' needs grouped)</h3><div class="threads">' + th + '</div>'
+        '<h3>Decisive gaps, counted over the needs</h3><ul>' + gaps + '</ul></section>')
+
+
+def render_footer(P: dict) -> str:
+    ft = P["cur"]["footer"]
+    h = [f'<h2>Sources, licences and attribution ({E(ft["source"])} build)</h2><p>{E(ft["note"])}</p><h3>Embedded as content</h3><ul>']
+    for e in ft["embedded"]:
+        u = f' <a href="{E(e["url"])}" rel="noopener noreferrer">{E(e["url"])}</a>' if e.get("url") else ""
+        n = f' ({e["rows"]} association row(s) embedded)' if e.get("rows") else ""
+        h.append(f'<li><b>{E(e["label"])}</b>{n}: {E(str(e.get("licence") or ""))}. {E(str(e.get("attribution") or ""))}{u}</li>')
+    h.append("</ul>")
+    if ft["counts_only"]:
+        h.append("<h3>Contributed identifiers or counts only (content withheld)</h3><ul>")
+        for e in ft["counts_only"]:
+            h.append(f'<li><b>{E(e["label"])}</b>: {E(e["terms"])}' + (f'; version {E(str(e["version"]))}' if e.get("version") else "") + "</li>")
+        h.append("</ul>")
+    h.append('<p class="mini">Bibliographic identifiers (PubMed, DOI, ChEMBL) are public identifiers of cited works; titles shown come from PubMed records fetched into the module. Nothing here is medical advice.</p>')
+    return "".join(h)
+
+
+def render(P: dict, dr: Path = DEFAULT_DR) -> str:
     st = render_static(P)
     data = json.dumps(P, ensure_ascii=False, sort_keys=True, separators=(",", ":")).replace("</", "<\\/").replace("<!--", "<\\!--")
     page = TEMPLATE
-    page = page.replace("__CSS__", CSS).replace("__JS__", JS)
+    cur_html = read_asset(dr, "curated.html")
+    cur_html = cur_html.replace("__OVERVIEW__", render_overview(P)).replace("__GROUPNOTE__", E(GROUP_NOTE))
+    page = page.replace("__CSS__", CSS + read_asset(dr, "curated.css")).replace("__JS__", JS).replace("__CJS__", read_asset(dr, "curated.js"))
+    page = page.replace("__CURATED__", cur_html).replace("__FOOTER__", render_footer(P))
+    page = page.replace("__SOURCELABEL__", "shareable build: third-party rows limited to the allowlist" if P["source"] == "shareable" else "full local build: includes third-party rows, not for redistribution")
     for k, v in st.items():
         page = page.replace(f"__{k}__", v)
     page = page.replace("__PAIRUNIT__", E(str(P["pair_unit"])))
@@ -742,8 +1272,8 @@ def render(P: dict) -> str:
     return page
 
 
-def build(dr: Path = DEFAULT_DR) -> str:
-    out = render(build_payload(dr))
+def build(dr: Path = DEFAULT_DR, source: str = "full") -> str:
+    out = render(build_payload(dr, source), dr)
     n = len(out.encode("utf-8"))
     if n > MAX_BYTES:
         raise SystemExit(f"view is {n} bytes, above the {MAX_BYTES} budget: trim the projection")
@@ -752,25 +1282,33 @@ def build(dr: Path = DEFAULT_DR) -> str:
 
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0], formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("command", nargs="?", choices=["run", "check"], help="run: write view/index.html; check: exit 1 if it is stale")
+    ap.add_argument("command", nargs="?", choices=["run", "check"], help="run: write the view; check: exit 1 if a file is stale")
     ap.add_argument("--dr", type=Path, default=DEFAULT_DR, help="drug_repurposing directory (default: the module)")
-    ap.add_argument("--out", type=Path, default=None, help="output file (default: <dr>/view/index.html)")
+    ap.add_argument("--source", choices=list(SOURCES), default=None,
+                    help="run: full (default) embeds every row, written to view/index.html; shareable embeds only allowlisted rows (view/shareable_sources.json), written to view/index_shareable.html. check: both unless given")
+    ap.add_argument("--out", type=Path, default=None, help="output file (default: <dr>/view/index.html or index_shareable.html); with check and no --source, only valid for one source")
     a = ap.parse_args(argv)
     if not a.command:
         ap.print_help()
         return 0
-    out = a.out or (a.dr / "view/index.html")
-    text = build(a.dr)
     if a.command == "run":
+        src = a.source or "full"
+        out = a.out or (a.dr / "view" / OUT_NAME[src])
+        text = build(a.dr, src)
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(text, encoding="utf-8")
-        print(f"wrote {out} ({len(text.encode('utf-8')):,} bytes)")
+        print(f"wrote {out} ({len(text.encode('utf-8')):,} bytes, source {src})")
         return 0
-    if not out.exists() or out.read_text(encoding="utf-8") != text:
-        print(f"STALE: {out} differs from a fresh build; run: python3 -B framework/scripts/repurposing_view.py run")
-        return 1
-    print("view is current")
-    return 0
+    rc = 0
+    for src in ([a.source] if a.source else list(SOURCES)):
+        out = a.out if (a.out and a.source) else (a.dr / "view" / OUT_NAME[src])
+        text = build(a.dr, src)
+        if not out.exists() or out.read_text(encoding="utf-8") != text:
+            print(f"STALE: {out} differs from a fresh {src} build; run: python3 -B framework/scripts/repurposing_view.py run" + (" --source shareable" if src == "shareable" else ""))
+            rc = 1
+        else:
+            print(f"view is current ({src})")
+    return rc
 
 
 if __name__ == "__main__":
