@@ -14,18 +14,21 @@
    "steps": [
     {
      "step": "AAV9 CONFLICTING semantics per endpoint + regressions",
-     "status": "IN_PROGRESS",
-     "owner": "plan"
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "bridge: MIXED_ACROSS_ENDPOINTS + discriminators flag; tests; cards rebuilt (main 40c7f4bc)"
     },
     {
      "step": "Guyon 2022 receipt: real targeted read linked to previous, consumers checked",
-     "status": "IN_PROGRESS",
-     "owner": "scientist-d"
+     "status": "DONE",
+     "owner": "scientist-d",
+     "evidence": "Guyon -02 recorded (880-chain), E02 cites -02; verifier wording fixes (dbd215fd)"
     },
     {
      "step": "ChEMBL parent-id fallback regression; HYP-01 Seahorse wording; skip classification by id and cause; roadmap section updated",
-     "status": "IN_PROGRESS",
-     "owner": "plan"
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "ChEMBL regressions, HYP-01 qualifier, skips classified; verifier fixed mandate-continuity test weakening"
     }
    ]
   },
@@ -34,18 +37,21 @@
    "steps": [
     {
      "step": "Compound catalogue from public sources (deterministic, cached, provenance, access categories)",
-     "status": "IN_PROGRESS",
-     "owner": "scientist-a"
+     "status": "DONE",
+     "owner": "scientist-a",
+     "evidence": "catalog merged 2e4ee980: 44,211 source-level records; stats/tests OK; DGIdb licence uncleared for public release"
     },
     {
      "step": "WWOX biological needs table with locators and rationale for direction",
      "status": "IN_PROGRESS",
-     "owner": "scientist-b"
+     "owner": "scientist-b",
+     "evidence": "needs draft merged; independent verification running"
     },
     {
      "step": "Both-direction search + coverage matrix + selection (reversible)",
-     "status": "TODO",
-     "owner": "scientist-a"
+     "status": "IN_PROGRESS",
+     "owner": "scientist-a",
+     "evidence": "phase B search/matrix/selection dispatched to scientist-a"
     },
     {
      "step": "Regenerable first view, counts from data",
@@ -64,18 +70,21 @@
    "steps": [
     {
      "step": "PMID 41380592 PARS2/GCN2/ATF4 + complex I propagation into LDH/PDH design",
-     "status": "IN_PROGRESS",
-     "owner": "scientist-c"
+     "status": "DONE",
+     "owner": "scientist-c",
+     "evidence": "PMID 41380592 receipt recorded; blind audit 29/30 supported + 19 figure agree; HYP-10/-11 edits applied"
     },
     {
      "step": "LINCS GSE92742 offline feasibility and minimal-extract decision",
      "status": "IN_PROGRESS",
-     "owner": "scientist-d"
+     "owner": "scientist-d",
+     "evidence": "LINCS run negative; independent partial rebuild running"
     },
     {
      "step": "Radar: real run consumed, catalogue-update probes, small discovery search, opportunity notes",
-     "status": "IN_PROGRESS",
-     "owner": "plan"
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "radar new probes ran on real state 2026-10-28 07:21, 0 errors; opportunities in scout log"
     },
     {
      "step": "12 UNQUALIFIED cards: link or curate where truly matched; WWOX-value observations",
@@ -95,7 +104,10 @@
    ]
   }
  },
- "DECISIONS_TAKEN": [],
+ "DECISIONS_TAKEN": [
+  "2026-10-28: DGIdb-derived rows kept in the development repo but flagged licence-not-cleared for any public release (public release is operator-owned); catalogue cache copied into main's gitignored catalog/cache so the worktree can be removed.",
+  "2026-10-28: AAV9 comparability: optional timepoint/intervention_level/comparison discriminators join the question key; discordance without declared discriminators is flagged discriminators_declared=false rather than silently treated as firm."
+ ],
  "DEFAULTS_TAKEN": [],
  "STOP_LOG": []
 }
