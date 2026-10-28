@@ -151,7 +151,36 @@ def transcript_cwd(transcript: Path) -> str | None:
     return None
 
 
-def last_activity(transcript: Path, tasks_root: Path | None = None, include_transcript: bool = True) -> float:
+def turn_start(transcript: Path) -> float | None:
+    """Epoch time of the latest real user/prompt entry (not a tool result): the start of the turn
+    that is asking. For the in-session cron this is the cron prompt's arrival."""
+    last = None
+    try:
+        with transcript.open(encoding="utf-8", errors="replace") as fh:
+            for line in fh:
+                try:
+                    e = json.loads(line)
+                except ValueError:
+                    continue
+                if not isinstance(e, dict) or e.get("type") != "user" or e.get("isSidechain"):
+                    continue
+                c = (e.get("message") or {}).get("content")
+                if isinstance(c, list) and all(isinstance(b, dict) and b.get("type") == "tool_result" for b in c):
+                    continue
+                if isinstance(c, list) and not any(isinstance(b, dict) and b.get("type") == "text" for b in c):
+                    continue
+                ts = e.get("timestamp")
+                if isinstance(ts, str):
+                    try:
+                        last = datetime.fromisoformat(ts.replace("Z", "+00:00")).timestamp()
+                    except ValueError:
+                        pass
+    except OSError:
+        return None
+    return last
+
+
+def last_activity(transcript: Path, tasks_root: Path | None = None, include_transcript: bool = True, before: float | None = None) -> float:
     """Latest mtime of the transcript and of that session's background-task output files.
     A session calling the check on itself (the in-session cron) leaves its own transcript out:
     its turn is the request, and counting it would always read as activity."""
@@ -166,7 +195,9 @@ def last_activity(transcript: Path, tasks_root: Path | None = None, include_tran
     try:
         for f in root.glob(f"*/{sid}/tasks/*.output"):
             try:
-                latest = max(latest, f.stat().st_mtime)
+                m = f.stat().st_mtime
+                if before is None or m <= before:     # after `before` it is the caller's own work
+                    latest = max(latest, m)
             except OSError:
                 continue
     except OSError:
@@ -226,9 +257,12 @@ def check(task: str, *, root: Path = ROOT, deliver: str = "none", quiet_minutes:
     session = next((s for s in (live or []) if s.get("sessionId") == sid), None) if sid else None
     if self_call and session is not None:
         session = dict(session, status="idle")      # the caller's own turn is not "busy work"
-    idle = (now - last_activity(transcript, tasks_root, include_transcript=not self_call)) if transcript else None
-    if self_call and idle is not None and idle > 10 * 365 * 86400:
-        idle = None
+    if self_call and transcript:
+        start = turn_start(transcript) or now
+        act = last_activity(transcript, tasks_root, include_transcript=False, before=start)
+        idle = (start - act) if act else None       # activity before the asking turn began
+    else:
+        idle = (now - last_activity(transcript, tasks_root)) if transcript else None
     pend = _load(task)
     out = classify(status, session, live is not None, transcript is not None, idle, pend, signature, now, quiet_minutes)
     out.update({"task": task, "session": sid, "signature": signature[:12]})

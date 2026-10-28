@@ -40,7 +40,8 @@ class Env:
         self.tasks.mkdir()
         self.tr = self.proj / "p" / f"{SID}.jsonl"
         text = f"MANDATE_BOUND: {TASK}" if bound else "hello"
-        self.tr.write_text(json.dumps({"type": "assistant", "cwd": "/work/dir", "message": {"content": [{"type": "text", "text": text}]}}) + "\n")
+        self.tr.write_text(json.dumps({"type": "assistant", "cwd": "/work/dir", "message": {"content": [{"type": "text", "text": text}]}}) + "\n"
+                           + json.dumps({"type": "user", "timestamp": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime(NOW)), "message": {"content": "hourly watch prompt"}}) + "\n")
         old = NOW - age_minutes * 60
         os.utime(self.tr, (old, old))
         os.environ["LEGEND_MANDATE_WATCH_STATE"] = str(t / "state")
@@ -138,16 +139,21 @@ class Watch(unittest.TestCase):
         r = e.check(None) if False else mw.classify({"verdict": "CONTINUE", "message": ""}, None, False, True, 9999, {}, "s", NOW)
         self.assertEqual((r["state"], r["action"]), ("UNKNOWN", "NONE"))
 
-    def test_self_call_ignores_its_own_transcript_but_not_running_subagents(self):
-        e = self.env(record(), age_minutes=0)          # transcript touched "now": it is the cron turn itself
-        r = e.check([{"sessionId": SID, "status": "busy"}], self_call=True)
-        self.assertEqual(r["action"], "RESUME")
+    def test_self_call_ignores_its_own_work_but_not_subagents_running_before_the_turn(self):
+        e = self.env(record(), age_minutes=0)
         d = e.tasks / "proj" / SID / "tasks"
         d.mkdir(parents=True)
-        f = d / "agent.output"
-        f.write_text("x")
-        os.utime(f, (NOW - 30, NOW - 30))
+        own = d / "own_foreground_command.output"
+        own.write_text("x")
+        os.utime(own, (NOW + 5, NOW + 5))              # written after the cron turn began: the caller's own command
+        r = e.check([{"sessionId": SID, "status": "busy"}], self_call=True)
+        self.assertEqual(r["action"], "RESUME")
+        agent = d / "agent.output"
+        agent.write_text("x")
+        os.utime(agent, (NOW - 30, NOW - 30))           # an agent was writing just before the turn began
         self.assertEqual(e.check([{"sessionId": SID, "status": "busy"}], self_call=True)["state"], "RUNNING")
+        os.utime(agent, (NOW - 3600, NOW - 3600))       # an hour earlier: finished long ago
+        self.assertEqual(e.check([{"sessionId": SID, "status": "busy"}], self_call=True)["state"], "STOPPED_RESUMABLE")   # (the request is already pending: dedupe)
 
 
 if __name__ == "__main__":
