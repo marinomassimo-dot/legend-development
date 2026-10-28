@@ -45284,7 +45284,8 @@
     "not_known": [
      "Whether any WWOX-deficient human neural system has raised eIF2 alpha phosphorylation or ATF4 protein, with or without a proteotoxic load.",
      "Whether the fly Atf4 rise is upstream of Ldh (no Atf4 perturbation in the paper).",
-     "Whether the PERK arm or another eIF2 kinase (the paper's Discussion names GCN1/GCN2) is the one engaged.",
+     "Whether the PERK arm or another eIF2 kinase (the paper's Discussion names GCN1/GCN2) is the one engaged. In the one fly PARS2 precedent the engaged kinase was GCN2, with phospho-PERK unchanged, so a PERK-arm inhibitor would not be the matched tool there; which kinase, if any, is engaged in WWOX-deficient neural cells is unmeasured.",
+     "Whether an eIF2B activator, which acts downstream of eIF2 alpha phosphorylation and restores translation, would reproduce the genetic GCN2 or ATF4 suppression: the fly precedent does not separate the ATF4-dependent limb from the translation-repression limb and tested no compound.",
      "Whether attenuating the ISR would help or harm a WWOX-deficient developing brain."
     ],
     "p4_card": {
@@ -45300,15 +45301,16 @@
       "for": [
        "The fly reports a raised Atf4 signal with Wwox reduction plus amyloid (n 6, one antibody).",
        "An eIF2B activator improved memory and tau in a mouse amyloid model.",
-       "A paediatric dataset for an ISR-attenuating drug exists in a different, eIF2B-driven disease."
+       "A paediatric dataset for an ISR-attenuating drug exists in a different, eIF2B-driven disease.",
+       "GENETIC precedent in another disease (Xu 2026, PMID 41380592; read in full, manifest PMID41380592.json entries 1, 3, 30, 33, 34, 35; receipt FTR-20261027-41380592-01): in a fly model of the mitochondrial prolyl-tRNA synthetase lesion behind a developmental and epileptic encephalopathy in people, pan-neuronal RNAi against GCN2 lowered the bang-sensitive fraction from about 87 to about 30 percent and RNAi against ATF4 from about 93 to about 46 percent (three vials of ten flies each; ATF4 spread about 30 to 62), and both shortened the developmental delay. Partial rescues, partial knockdowns measured in the single-RNAi lines only, seizure-like behaviour and developmental timing not separable, no compound and no ISRIB-class agent tested, no mitochondrial readout after suppression, sex not stated for the behavioural assay. It is a question-generating precedent for the ISR need, not a WWOX experiment and not a pharmacological result."
       ],
-      "transfer_limits": "Amyloid load is the context of the fly effect; WWOX-DEE has no stated amyloid load. Adult neurodegeneration trials do not transfer to a developmental encephalopathy."
+      "transfer_limits": "Amyloid load is the context of the fly effect; WWOX-DEE has no stated amyloid load. Adult neurodegeneration trials do not transfer to a developmental encephalopathy. The fly PARS2 precedent (the genetic precedent in the for-list) shows that an ISR can be harmful when a mitochondrial translation lesion drives it and says nothing about whether WWOX loss drives it: no link between WWOX and mitochondrial translation or OXPHOS protein abundance is established by any source read for this card."
      },
      "expected_contribution": "UNKNOWN. If the ISR were elevated and harmful, attenuation could protect function; if it is adaptive, attenuation could add harm. Neither is measured for WWOX.",
      "identity": "ISR attenuators: eIF2B activators (ISRIB and its clinical-stage successors), PERK-arm inhibitors, and repurposed compounds that reverse eIF2 alpha-P-mediated translational repression; guanabenz as the paediatric-experience member. Full per-compound table: lucas_clarke_followup_20261026/compounds_and_sources.md section 2.1.",
      "indication_and_transfer": "WWOX-DEE only IF a WWOX-dependent ISR elevation is shown in a human neural system. Today the transfer rests on a fly amyloid model; the one human knockout transcriptome does not show the signature. No Q230P or null-allele datum exists.",
      "mechanism": "Target: eIF2B (five-subunit complex, EIF2B1-5, HGNC:3257-3261) or the PERK arm (EIF2AK3, HGNC:3255); direction: attenuate the ISR; context: amyloid-stressed fly neurons in the paper; UNKNOWN in WWOX-DEE.",
-     "next_measurement": "Stage 1 (decides everything after it): eIF2 alpha phosphorylation, ATF4 protein and ATF4-target transcripts in WWOX-deficient versus isogenic human neural cells at matched maturity, with and without a defined proteotoxic challenge. If not elevated, park with the reopening condition below. Stage 2 (only if elevated): an eIF2B activator versus vehicle on that readout and on one functional endpoint. In the fly: an Atf4 loss-of-function arm with the Ldh and lactate readouts.",
+     "next_measurement": "Stage 1 (decides everything after it): eIF2 alpha phosphorylation, ATF4 protein and ATF4-target transcripts in WWOX-deficient versus isogenic human neural cells at matched maturity, with and without a defined proteotoxic challenge. If not elevated, park with the reopening condition below. Stage 2 (only if elevated): an eIF2B activator versus vehicle on that readout and on one functional endpoint. In the fly: an Atf4 loss-of-function arm with the Ldh and lactate readouts. Readout design (added 2026-10-27 from the fly PARS2 reading): read the eIF2 kinases separately (phospho-GCN2 and phospho-PERK, not phospho-eIF2 alpha alone), read OXPHOS subunit protein abundance as a covariate because the one precedent ISR is driven by a mitochondrial translation lesion, and keep a basal-ISR-tone control (in that precedent GCN2 RNAi alone lowered phospho-eIF2 alpha below control).",
      "novelty_for_woree": "NON_TROVATO_NELLA_RICERCA as a test: no source retrieved links an ISR modulator to WWOX deficiency; coverage is DGIdb, ChEMBL, Open Targets, PubTator 3 gene censuses and eight PubMed searches on 2026-10-26, and DGIdb, ChEMBL and Open Targets are themselves empty for the eIF2B activators. A zero is a statement about those queries.",
      "paediatrics_and_interactions": "UNKNOWN. No paediatric suitability is presumed by this card, for the candidate or for any historical authorisation of it for another use.",
      "pathway_and_objective": "BENEFICIO_PRECOCE (partial benefit through a downstream lever); Track A (variant-independent), Track B conditional and unmeasured.",
@@ -46253,7 +46255,7 @@
      "time_to_benefit": "UNKNOWN"
     }
    },
-   "input_sha256": "816cec7bd39526d5f6d0ace11773528498504dc00d951545677e9161d6512c9e",
+   "input_sha256": "a223db2866799d17d42c92fbf31e1c4c75594092fc14b692cbe258d533dfc218",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -46651,6 +46653,23 @@
       "receipt_in_ledger": true
      },
      {
+      "assertion": "DA-PARS2-LDH-001",
+      "manifest_entries": [
+       {
+        "entries": [
+         7,
+         8,
+         35
+        ],
+        "locator_count": 49,
+        "manifest": "disease-models/wwox/research/deepdive_manifests/PMID41380592.json",
+        "resolved": true
+       }
+      ],
+      "receipt": "FTR-20261027-41380592-01",
+      "receipt_in_ledger": true
+     },
+     {
       "assertion": "DR-E02-GEN-001",
       "manifest_entries": [
        {
@@ -46805,6 +46824,26 @@
       },
       "source": "discovery_ledger_current DL-BIO-008 (one patient; reading depth not re-verified by this card)",
       "target_id": "human brain lactate (MRS)"
+     },
+     {
+      "context": {
+       "cell_type": "adult fly head, bulk (RNA-seq: three libraries per genotype of thirty five-day-old female heads)",
+       "developmental_stage": "adult, about five days",
+       "disease_id": "Drosophila model of mitochondrial prolyl-tRNA synthetase (PARS2) deficiency (not WWOX, no amyloid)",
+       "genotype": "pan-neuronal dPARS2 RNAi versus control",
+       "species": "Drosophila melanogaster"
+      },
+      "direction": "INCREASE",
+      "endpoint": "Ldh RNA-seq change and Ldh western blot abundance in neuronal dPARS2 knockdown",
+      "epistemic_status": "DATO",
+      "evidence_scope": "OTHER_DISEASE_PRECEDENT",
+      "id": "DA-PARS2-LDH-001",
+      "locator": "disease-models/wwox/research/deepdive_manifests/PMID41380592.json verbatim_locators.entries[7], [8], [35]; Fig 7A-C",
+      "measured_result_note": "Ldh and most other glycolytic transcripts rise, and Ldh PROTEIN abundance rises about ten-fold on one western blot (three samples, one pan-LDH antibody). Abundance only: no Ldh activity, lactate, pyruvate or flux was measured, and Ldh was not read after GCN2 or ATF4 suppression, so the authors' reading of the Ldh rise as ATF4 activity rests on a cited S2-cell study. The model has reduced complex I protein abundance (heads) and phospho-eIF2 alpha raised, so an Ldh rise here accompanies a mitochondrial lesion plus ISR; it is neither a WWOX nor an amyloid context.",
+      "reading_depth": "complete_fulltext_read",
+      "receipt": "FTR-20261027-41380592-01",
+      "source": "Xu 2026, Redox Biol (PMID 41380592, open access CC BY-NC; Drosophila mitochondrial prolyl-tRNA synthetase deficiency; NOT WWOX EVIDENCE: another disease, a fly model)",
+      "target_id": "fly Ldh transcript and Ldh protein (head)"
      }
     ],
     "drug_assertions": [
@@ -46900,7 +46939,7 @@
       "evidence_scope": "OTHER_DISEASE_PRECEDENT",
       "id": "DR-E02-006",
       "locator": "sada_ldh_precedent_p2a_20261026.md sections 2.2 and 2.3; ldh_readings_w13_locators_20261027.md",
-      "measured_result_note": "Cell viability and extracellular acidification fall at tens of micromolar. LDH activity in a lysate of treated cells and on recombinant enzyme falls only at hundreds of micromolar (the size of the lysate inhibition is not in the text and no LDH IC50 exists). Complex I NADH oxidation by isolated mouse heart and liver mitochondria is inhibited from tens of micromolar (plot readings, auditor-confirmed, about 3 points of uncertainty: heart about 48, 5 and 1 percent remaining across the three lowest-to-highest concentrations tested; liver about 67, 36 and 23); no assay compares the two, so potencies are not comparable (INFERENZA: the effective concentrations are ordered complex I below LDH). The text figure of about 70 percent inhibition at the middle concentration is 51 to 53 percent raw in Supplementary Fig 2. The complex I paper reports no inhibition of malate dehydrogenase. Genetic LDHA/B double knockout raises respiratory capacity whereas stiripentol lowers it, so the drug does not phenocopy LDH ablation on respiration (INFERENZA). Cellular effects of stiripentol are therefore not attributable to LDH alone on the available data (the 2026 glioblastoma paper itself reports 'at least a partial role' of LDH). In a mouse glioblastoma xenograft stiripentol prolonged survival (log-rank P 0.002; median survival 80 versus 97 days, human stem-like cells in immunodeficient mice; the dose stated in the Results and legend is not stated in the Methods). None of the sources states which stereoisomer was used. Tumour models: no seizure, neurodevelopment or WWOX meaning.",
+      "measured_result_note": "Cell viability and extracellular acidification fall at tens of micromolar. LDH activity in a lysate of treated cells and on recombinant enzyme falls only at hundreds of micromolar (the size of the lysate inhibition is not in the text and no LDH IC50 exists). NADH-driven oxygen consumption of isolated mouse heart and liver mitochondrial preparations, with complex I as the entry point (a flux readout of the organelle preparation, not an isolated-enzyme activity; the same paper's NADH-activity assays are dye-reduction measures), is inhibited from tens of micromolar (plot readings, auditor-confirmed, about 3 points of uncertainty: heart about 48, 5 and 1 percent remaining across the three lowest-to-highest concentrations tested; liver about 67, 36 and 23); no assay compares the two, so potencies are not comparable (INFERENZA: the effective concentrations are ordered complex I below LDH). The text figure of about 70 percent inhibition at the middle concentration is 51 to 53 percent raw in Supplementary Fig 2. The complex I paper reports no inhibition of malate dehydrogenase. Genetic LDHA/B double knockout raises respiratory capacity whereas stiripentol lowers it, so the drug does not phenocopy LDH ablation on respiration (INFERENZA). Cellular effects of stiripentol are therefore not attributable to LDH alone on the available data (the 2026 glioblastoma paper itself reports 'at least a partial role' of LDH). In a mouse glioblastoma xenograft stiripentol prolonged survival (log-rank P 0.002; median survival 80 versus 97 days, human stem-like cells in immunodeficient mice; the dose stated in the Results and legend is not stated in the Methods). None of the sources states which stereoisomer was used. Tumour models: no seizure, neurodevelopment or WWOX meaning.",
       "reading_depth": "partial_fulltext_read",
       "receipt": "FTR-20261027-42035940-01; FTR-20261027-41570991-01; FTR-20261027-36278433-01; FTR-20261027-36278433-02",
       "source": "Glioblastoma papers (PMID 42035940, 2026; PMID 36278433, 2022) and a complex I paper (PMID 41570991, 2026), all open access; read in part and re-read at 54 verbatim locators (ldh_readings_w13_locators_20261027.md), blind-audited 2026-10-27; PMID 36278433 was then re-read in its open full-text body on 2026-10-28 (receipt -02, partial_fulltext_read: figure legends only, appendix and references unread); NOT WWOX EVIDENCE",
@@ -46968,6 +47007,7 @@
      "Ldh knockdown is detrimental in other fly amyloid models (the authors' own citation).",
      "Weak LDH inhibition by stiripentol in the retrieved measurements (a weak measure is not general inefficacy: assay, substrate level and enzyme source differ, and the 2015 report is unread).",
      "Direct inhibition of mitochondrial complex I by stiripentol, so a metabolic effect is not an LDH effect.",
+     "An Ldh abundance rise also accompanies a complex I-reduced, ISR-activated fly model that has neither WWOX nor amyloid (DA-PARS2-LDH-001), so a raised Ldh in a Wwox-reduced fly does not by itself identify an LDH-specific lesion (INFERENZA: possible confounding by mitochondrial or ISR state).",
      "Human lactate in WWOX deficiency reported normal or extremely low."
     ],
     "external_sources": [
@@ -47201,6 +47241,7 @@
      "Whether stiripentol engages LDH in brain at tolerated exposures (the 2015 report is the claimed source and was not readable; its exposure and enzyme numbers are unknown here).",
      "What the real potency of stiripentol on LDH is: only single-concentration measurements exist and no fitted value.",
      "Which of stiripentol's effects on tumour-cell metabolism and respiration are LDH-mediated and which act through complex I.",
+     "Whether complex I inhibition at the exposures that matter itself recruits the integrated stress response and raises Ldh abundance in neural cells. In a fly model with reduced complex I protein, raised phospho-eIF2 alpha and an Ldh rise (DA-PARS2-LDH-001) that is the observed association and not a test; acute pharmacological inhibition is not the same perturbation, so the link is a question for the complex I arm, not a result.",
      "Whether Ldh lowering is beneficial or harmful without the amyloid context.",
      "Why lactate falls nominally with Wwox reduction without amyloid."
     ],
@@ -47225,7 +47266,7 @@
      "identity": "LDH-directed levers: stiripentol (approved for a paediatric developmental epilepsy; weak LDH inhibition in vitro), GSK2837808A and other research LDHA inhibitors, and the LDHA-directed oligonucleotide nedosiran (approved for primary hyperoxaluria, liver-directed). Per-compound table: compounds_and_sources.md section 2.2.",
      "indication_and_transfer": "WWOX-DEE only IF lactate or LDH activity is shown to be a driver in a WWOX-deficient human neural system. The one fly precedent is amyloid-conditional; human lactate readouts in WWOX deficiency are normal or low in the cited sources (DL-BIO-008, DL-BIO-009).",
      "mechanism": "Target: LDHA (HGNC:6535, P00338) and LDHB (HGNC:6541, P07195); direction: lower LDH activity or lactate production; context: amyloid-stressed fly head in the paper; UNKNOWN in WWOX-DEE. For stiripentol the LDH link is not the established basis of its antiseizure use.",
-     "next_measurement": "In the fly: lactate (enantiomer- or isotope-resolved) in the Ldh-RNAi double genotype, an Ldh-alone arm, and Wwox mRNA in the double line. In human neural cells: LDH activity and the lactate-to-pyruvate relationship in WWOX-deficient versus isogenic cells at matched maturity. Only then a compound arm: stiripentol against a selective LDHA tool at matched exposure, so that its other pharmacology is separable from LDH. The designed comparison (question, model, controls, endpoint, result that would change interpretation) is in sada_ldh_precedent_p2a_20261026.md section 6; it is a proposal, nothing is authorised to run.",
+     "next_measurement": "In the fly: lactate (enantiomer- or isotope-resolved) in the Ldh-RNAi double genotype, an Ldh-alone arm, and Wwox mRNA in the double line. In human neural cells: LDH activity and the lactate-to-pyruvate relationship in WWOX-deficient versus isogenic cells at matched maturity. Only then a compound arm: stiripentol against a selective LDHA tool at matched exposure, so that its other pharmacology is separable from LDH. Readout design (added 2026-10-27 from the fly PARS2 reading): in every arm that perturbs complex I, read the integrated stress response (phospho-eIF2 alpha, ATF4 protein) and Ldh abundance next to Ldh ACTIVITY and lactate, because abundance, activity, metabolite level and flux are separate quantities and a complex I perturbation may raise Ldh abundance through the stress response. The designed comparison (question, model, controls, endpoint, result that would change interpretation) is in sada_ldh_precedent_p2a_20261026.md section 6; it is a proposal, nothing is authorised to run.",
      "novelty_for_woree": "NON_TROVATO_NELLA_RICERCA as a test: no source retrieved links an LDH inhibitor to WWOX deficiency; coverage is the six sources of compounds_and_sources.md and ten PubMed abstracts on 2026-10-26. Update 2026-10-26 (scientist-b, P2a): the 2015 report usually cited for stiripentol and LDH in epilepsy (PMID 25792327) is now identified, is paywalled with no lawful full text found, and is known here only through its abstract and three open-access secondary descriptions; it is a stiripentol-LDH precedent in epilepsy models, not a WWOX datum.",
      "paediatrics_and_interactions": "Stiripentol label: indicated for Dravet syndrome seizures in patients taking clobazam, from six months of age (openFDA label 2026-04-27); the same label means any use here would sit on top of clobazam co-therapy, an interaction this card does not assess. No paediatric suitability for WWOX-DEE is presumed.",
      "pathway_and_objective": "BENEFICIO_PRECOCE; Track A, Track B untested.",
@@ -47480,7 +47521,7 @@
      "time_to_benefit": "UNKNOWN"
     }
    },
-   "input_sha256": "0e8b4b284acb2bdfb349b04fa6ee5b1a19edeea360b40d4d981c1566731319de",
+   "input_sha256": "4c24631af706dffe2861cb6235a99e5fab2f7e4657cd1ad97556135d651f69d2",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",

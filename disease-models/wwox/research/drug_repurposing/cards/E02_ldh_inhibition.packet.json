@@ -136,6 +136,26 @@
     "DA-LC-LAC-002": "SAME SIGN (DECREASE, nominal, without Abeta42); not a replication: other species, tissue and context"
    },
    "evidence_scope": "UNQUALIFIED"
+  },
+  {
+   "id": "DA-PARS2-LDH-001",
+   "target_id": "fly Ldh transcript and Ldh protein (head)",
+   "endpoint": "Ldh RNA-seq change and Ldh western blot abundance in neuronal dPARS2 knockdown",
+   "direction": "INCREASE",
+   "source": "Xu 2026, Redox Biol (PMID 41380592, open access CC BY-NC; Drosophila mitochondrial prolyl-tRNA synthetase deficiency; NOT WWOX EVIDENCE: another disease, a fly model)",
+   "locator": "disease-models/wwox/research/deepdive_manifests/PMID41380592.json verbatim_locators.entries[7], [8], [35]; Fig 7A-C",
+   "epistemic_status": "DATO",
+   "reading_depth": "complete_fulltext_read",
+   "context": {
+    "disease_id": "Drosophila model of mitochondrial prolyl-tRNA synthetase (PARS2) deficiency (not WWOX, no amyloid)",
+    "genotype": "pan-neuronal dPARS2 RNAi versus control",
+    "species": "Drosophila melanogaster",
+    "cell_type": "adult fly head, bulk (RNA-seq: three libraries per genotype of thirty five-day-old female heads)",
+    "developmental_stage": "adult, about five days"
+   },
+   "measured_result_note": "Ldh and most other glycolytic transcripts rise, and Ldh PROTEIN abundance rises about ten-fold on one western blot (three samples, one pan-LDH antibody). Abundance only: no Ldh activity, lactate, pyruvate or flux was measured, and Ldh was not read after GCN2 or ATF4 suppression, so the authors' reading of the Ldh rise as ATF4 activity rests on a cited S2-cell study. The model has reduced complex I protein abundance (heads) and phospho-eIF2 alpha raised, so an Ldh rise here accompanies a mitochondrial lesion plus ISR; it is neither a WWOX nor an amyloid context.",
+   "receipt": "FTR-20261027-41380592-01",
+   "evidence_scope": "OTHER_DISEASE_PRECEDENT"
   }
  ],
  "drug_assertions": [
@@ -363,7 +383,7 @@
    "prediction_isr_ldh_chain_20261026.md"
   ],
   "predictions": "None; no engine, no score.",
-  "next_measurement": "In the fly: lactate (enantiomer- or isotope-resolved) in the Ldh-RNAi double genotype, an Ldh-alone arm, and Wwox mRNA in the double line. In human neural cells: LDH activity and the lactate-to-pyruvate relationship in WWOX-deficient versus isogenic cells at matched maturity. Only then a compound arm: stiripentol against a selective LDHA tool at matched exposure, so that its other pharmacology is separable from LDH. The designed comparison (question, model, controls, endpoint, result that would change interpretation) is in sada_ldh_precedent_p2a_20261026.md section 6; it is a proposal, nothing is authorised to run.",
+  "next_measurement": "In the fly: lactate (enantiomer- or isotope-resolved) in the Ldh-RNAi double genotype, an Ldh-alone arm, and Wwox mRNA in the double line. In human neural cells: LDH activity and the lactate-to-pyruvate relationship in WWOX-deficient versus isogenic cells at matched maturity. Only then a compound arm: stiripentol against a selective LDHA tool at matched exposure, so that its other pharmacology is separable from LDH. Readout design (added 2026-10-27 from the fly PARS2 reading): in every arm that perturbs complex I, read the integrated stress response (phospho-eIF2 alpha, ATF4 protein) and Ldh abundance next to Ldh ACTIVITY and lactate, because abundance, activity, metabolite level and flux are separate quantities and a complex I perturbation may raise Ldh abundance through the stress response. The designed comparison (question, model, controls, endpoint, result that would change interpretation) is in sada_ldh_precedent_p2a_20261026.md section 6; it is a proposal, nothing is authorised to run.",
   "status": "hypothesis",
   "value_added": "Separates the LDH lever into measured (fly, conditional), asserted (the Ldh-to-lactate step) and unmeasured (any human WWOX system), and records that the approved paediatric candidate inhibits LDH only weakly in the retrieved measurements.",
   "clinical_census": "Clinical census, ClinicalTrials.gov API v2, 2026-10-20 (drug_repurposing/clinical_census_20261020.md): seven queries returned no registered WOREE interventional study; it answers seven queries against one registry on one date and a missing hit does not prove that no study exists. Not re-run for this card."
@@ -373,6 +393,7 @@
   "Whether stiripentol engages LDH in brain at tolerated exposures (the 2015 report is the claimed source and was not readable; its exposure and enzyme numbers are unknown here).",
   "What the real potency of stiripentol on LDH is: only single-concentration measurements exist and no fitted value.",
   "Which of stiripentol's effects on tumour-cell metabolism and respiration are LDH-mediated and which act through complex I.",
+  "Whether complex I inhibition at the exposures that matter itself recruits the integrated stress response and raises Ldh abundance in neural cells. In a fly model with reduced complex I protein, raised phospho-eIF2 alpha and an Ldh rise (DA-PARS2-LDH-001) that is the observed association and not a test; acute pharmacological inhibition is not the same perturbation, so the link is a question for the complex I arm, not a result.",
   "Whether Ldh lowering is beneficial or harmful without the amyloid context.",
   "Why lactate falls nominally with Wwox reduction without amyloid."
  ],
@@ -380,6 +401,7 @@
   "Ldh knockdown is detrimental in other fly amyloid models (the authors' own citation).",
   "Weak LDH inhibition by stiripentol in the retrieved measurements (a weak measure is not general inefficacy: assay, substrate level and enzyme source differ, and the 2015 report is unread).",
   "Direct inhibition of mitochondrial complex I by stiripentol, so a metabolic effect is not an LDH effect.",
+  "An Ldh abundance rise also accompanies a complex I-reduced, ISR-activated fly model that has neither WWOX nor amyloid (DA-PARS2-LDH-001), so a raised Ldh in a Wwox-reduced fly does not by itself identify an LDH-specific lesion (INFERENZA: possible confounding by mitochondrial or ISR state).",
   "Human lactate in WWOX deficiency reported normal or extremely low."
  ],
  "bridge_gaps_exposed": [
