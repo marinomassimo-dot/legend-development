@@ -29,10 +29,10 @@ Per need: `id`, `label`, `family`, `track` and `goal` (two separate objects, eac
 - `targets[]`: HGNC symbol and id, role, `target_kind` (`intervention_target`, `pathway_member`, `readout_marker`,
   `disease_gene_product`, `effector_constraint`, `identity_guard`) and a collision note where the symbol is confusable. A
   differentially expressed gene is a `readout_marker`, not a target.
-- `evidence_scope`: the bridge's labels (`WWOX_EXPERIMENT_IN_DEE_SYSTEM`, `WWOX_BIOLOGY_OTHER_CONTEXT`,
+- `evidence_scope` (per observation; the need-level list is the union of its observations): the bridge's labels (`WWOX_EXPERIMENT_IN_DEE_SYSTEM`, `WWOX_BIOLOGY_OTHER_CONTEXT`,
   `OTHER_DISEASE_PRECEDENT`, `COMPUTATIONAL_RESULT`) plus `UNVERIFIED_HYPOTHESIS`; the model type (mouse null, neuron-specific
   deletion, organoid, patient cells, case report, fly) is on each observation. Computational results are repository analyses of
-  deposited data, not experiments.
+  deposited data, not experiments. Non-neural cells, even patient-derived ones (fibroblasts, blood), mouse embryonic fibroblasts and genotype-independent contrasts are labelled `WWOX_BIOLOGY_OTHER_CONTEXT` here, which is stricter than the bridge's wording for patient-derived cells.
 - `coverage`: `NOT_ASSESSED` everywhere; the module sets it.
 
 **Track** A = variant-independent, B = variant- or lesion-specific. **Goal** = `deep_recovery` (restore the lost function) or
@@ -40,27 +40,27 @@ Per need: `id`, `label`, `family`, `track` and `goal` (two separate objects, eac
 read-through, missense rescue and an expression boost are B + deep recovery (the boost works only on an allele that yields
 residual functional protein); downstream levers are A + partial benefit.
 
-## The table (22 needs, 56 observations; computed from `needs.json`)
+## The table (22 needs, 63 observations; computed from `needs.json`)
 
 | Need | Label | Track | Goal | Direction | Basis | Scope(s) present | Intervention targets (first five) |
 |---|---|---|---|---|---|---|---|
 | `WWOX-GENE-ADDITION` | Restore WWOX protein in neurons by gene addition (AAV-type vector) | A | deep | restore | observed | WWOX in DEE-relevant system | - |
-| `WWOX-SPLICE-CORRECTION` | Restore correct WWOX transcript from a canonical splice-acceptor allele (splice-switching, editing) | B | deep | restore | observed | WWOX in DEE-relevant system; computational | - |
+| `WWOX-SPLICE-CORRECTION` | Restore correct WWOX transcript from a canonical splice-acceptor allele (splice-switching, editing) | B | deep | restore | observed | WWOX other context; computational | - |
 | `WWOX-PTC-READTHROUGH` | Read-through of a premature stop codon in a WWOX nonsense allele | B | deep | restore | exploratory question | unverified | - |
-| `WWOX-MISSENSE-PROTEIN-RESCUE` | Rescue a destabilised SDR-domain missense WWOX protein (folding, quality control, degradation) | B | deep | up | observed | WWOX in DEE-relevant system; WWOX other context | - |
-| `WWOX-ENDOGENOUS-BOOST` | Raise endogenous WWOX expression (CRISPRa, anti-miR, small-molecule activators) | B | deep | up | observed | WWOX in DEE-relevant system; WWOX other context | - |
-| `ISR-ATTENUATION` | Integrated stress response (eIF2alpha-ATF4) activity: attenuate a possible over-activation | A | partial | uncertain | observed | WWOX other context; computational | EIF2AK3, EIF2B1, EIF2B2, EIF2B3, EIF2B4 ... |
-| `PDH-PYRUVATE-AXIS` | Pyruvate entry into the TCA cycle (HIF1A-PDK-PDH axis; glycolytic shift) | A | partial | uncertain | observed | WWOX in DEE-relevant system; WWOX other context; computational | PDK1, PDK2, PDK3, PDK4 |
+| `WWOX-MISSENSE-PROTEIN-RESCUE` | Rescue a destabilised SDR-domain missense WWOX protein (folding, quality control, degradation) | B | deep | up | observed | WWOX other context | - |
+| `WWOX-ENDOGENOUS-BOOST` | Raise endogenous WWOX expression (CRISPRa, anti-miR, small-molecule activators) | B | deep | up | observed | WWOX other context | - |
+| `ISR-ATTENUATION` | Integrated stress response (eIF2alpha-ATF4) activity: attenuate a possible over-activation | A | partial | uncertain | observed | WWOX other context; other-disease precedent; computational | EIF2AK3, EIF2B1, EIF2B2, EIF2B3, EIF2B4 ... |
+| `PDH-PYRUVATE-AXIS` | Pyruvate entry into the TCA cycle (HIF1A-PDK-PDH axis; glycolytic shift) | A | partial | uncertain | observed | WWOX other context; computational | PDK1, PDK2, PDK3, PDK4 |
 | `LACTATE-LDH` | Lactate and lactate dehydrogenase activity: lower an elevated LDH/lactate state | A | partial | uncertain | observed | WWOX in DEE-relevant system; WWOX other context; computational | LDHA, LDHB, SLC16A1, SLC16A7 |
 | `MITOCHONDRIAL-RESPIRATION` | Mitochondrial respiration / OXPHOS capacity (including complex I) as a possible WWOX-dependent deficit | A | partial | uncertain | observed | WWOX in DEE-relevant system; WWOX other context; computational | - |
-| `EXCITATORY-GAIN-GLUTAMATE-RECEPTOR` | Excitatory network gain and bursting: glutamate-receptor node (NMDAR, AMPAR); gap-junction/pannexin untested | A | partial | down | observed | WWOX in DEE-relevant system | GRIN1, GRIN2A, GRIN2B, GRIA1, GRIA2 ... |
-| `INHIBITORY-HYPOFUNCTION` | Inhibitory drive: reduced spontaneous inhibition and PV/GABAergic marker deficit | A | partial | uncertain | observed | WWOX in DEE-relevant system | ABAT |
+| `EXCITATORY-GAIN-GLUTAMATE-RECEPTOR` | Excitatory network gain and bursting: glutamate-receptor node (NMDAR, AMPAR); gap-junction/pannexin untested | A | partial | down | observed | WWOX in DEE-relevant system; other-disease precedent | GRIN1, GRIN2A, GRIN2B, GRIA1, GRIA2 ... |
+| `INHIBITORY-HYPOFUNCTION` | Inhibitory drive: reduced spontaneous inhibition and PV/GABAergic marker deficit | A | partial | uncertain | observed | WWOX in DEE-relevant system; computational | ABAT |
 | `GABA-CHLORIDE-GRADIENT` | Chloride gradient and GABA polarity (NKCC1/KCC2): premise unmeasured | A | partial | uncertain | exploratory question | computational; unverified | SLC12A2 |
 | `SEIZURE-CONTROL-SYMPTOMATIC` | Seizure and spasm control as a symptom-level need (distinct from developmental protection) | A | partial | down | observed | WWOX in DEE-relevant system | ABAT, CACNA1G |
 | `T-TYPE-CALCIUM` | T-type calcium channel dependence of provoked seizure in Wwox loss | A | partial | down | observed | WWOX in DEE-relevant system | CACNA1G, CACNA1H, CACNA1I |
 | `MYELINATION` | Hypomyelination: restore myelin / white-matter development | A | partial | restore | observed | WWOX in DEE-relevant system; computational | CHRM1 |
 | `GSK3B-DEREPRESSION` | GSK3beta de-repression (loss of WWOX docking inhibition) | A | partial | uncertain | observed | WWOX in DEE-relevant system; WWOX other context | GSK3B |
-| `WNT-BETA-CATENIN` | Wnt/beta-catenin readout elevated in WWOX-deficient organoids (direction observed; confounded by maturity) | A | partial | uncertain | observed | WWOX in DEE-relevant system; computational | TNKS, TNKS2 |
+| `WNT-BETA-CATENIN` | Wnt/beta-catenin readout elevated in WWOX-deficient organoids (direction observed; confounded by maturity) | A | partial | uncertain | observed | WWOX in DEE-relevant system; WWOX other context; computational | TNKS, TNKS2 |
 | `MYC-PROGENITOR-PROLIFERATION` | MYC elevation and progenitor-state shift in WWOX-deficient radial glia (prenatal developmental substrate) | A | partial | uncertain | observed | WWOX in DEE-relevant system | - |
 | `MTOR-AUTOPHAGY` | mTOR signalling and autophagy: direction unmeasured at protein level | A | partial | uncertain | observed | WWOX in DEE-relevant system | MTOR |
 | `NEUROINFLAMMATION-GLIA` | Neuroinflammation and gliosis (microglia/astrocytes, IL-1beta/TNF/NF-kB signalling) | A | partial | uncertain | observed | WWOX in DEE-relevant system | IL1B, NLRP3, TNF, NFKB1, RELA ... |
@@ -69,13 +69,13 @@ residual functional protein); downstream levers are A + partial benefit.
 
 ## Limits, stated
 
-- Exploratory questions with no WWOX measurement: `WWOX-PTC-READTHROUGH`, `GABA-CHLORIDE-GRADIENT`. They are kept so the gap is a recorded gap.
+- Exploratory questions with no WWOX measurement: `WWOX-PTC-READTHROUGH`, `GABA-CHLORIDE-GRADIENT`. For read-through, nonsense alleles are recorded in the repository's census but no read-through or NMD measurement exists in the sources read. They are kept so the gap is a recorded gap.
 - Computational observations (organoid transcript analyses made in this repository) are transcript, not flux, on six libraries
   (four knockout, two wild type) and confounded with maturity; they carry `COMPUTATIONAL_RESULT`.
 - Human clinical entries are uncontrolled case reports or series, and some rest on a card or a registry record, not on a manifest
   entry (marked by locator kind).
 - A manifest anchor shows the text the pointer lands on, not that the entry supports every word of the statement; a reader
-  should open the entry. Statements were audited against their entries once on 2026-10-28; that audit is not a blind audit.
+  should open the entry. Statements were audited by the author on 2026-10-28 and then by an independent verifier on eight needs (`locator_audits/2026-10-28_it3_needs_independent_verification.md`); the corrections of both are applied, and the other fourteen needs have had the author's second pass only.
 - Gene Ontology ids were looked up against the EBI QuickGO term service on 2026-10-28 (one was obsolete and was replaced); a
   pathway id is a search hint, not a claim that WWOX acts in the process.
 - HGNC ids and collision notes were taken from `hgnc_complete_set_20261022.json`, which sits in the untracked shared files tree and
