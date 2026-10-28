@@ -24,8 +24,9 @@
     },
     {
      "step": "A3 module behaviours: concordant and opposed actions in one family shown together not summed; a failing source changes only the dispositions that depend on it, not a verified mechanism; regressions",
-     "status": "IN_PROGRESS",
-     "owner": "plan"
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "landed locally on main (merge of a3b3ffbb): 47 coverage tests, view/join tests OK; independent verification pending in A4"
     },
     {
      "step": "A4 independent verification of the A1-A3 conclusions from the sources (producer != verifier)",
@@ -39,8 +40,9 @@
    "steps": [
     {
      "step": "B1 wild-type-only comparisons no longer named observed_wwox_system: reference/control, wild-type drug effect, WWOX-model result, direct genotype comparison, recovery comparison; propagate to labels, priorities, view; L3/L4 keep subject, comparator, endpoint, time, sign, depth, controlled/uncontrolled; no d-APV transfer to memantine/perampanel",
-     "status": "IN_PROGRESS",
-     "owner": "plan"
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "a3b3ffbb: wild-type evidence kinds, L3 states observed_vs_wild_type_only / effect_in_wild_type_only, comparator column; real-data counts unchanged; independent verification pending in A4"
     },
     {
      "step": "B2 receipt for the 2026-10-28 GCN2/PERK re-read of PMID 42909904 (new event, linked to -01/-02, real coverage only), Hussain/Sassano depth declared as keyword/passage/full; correct the note's statement about the missing receipt",
@@ -117,8 +119,9 @@
     },
     {
      "step": "E3 latest real daily scout run: consume only relevant differences; small scan for gaps (identity quality, assay selectivity, perturbations, supplement catalogues, reading/presentation tools); ToolUniverse only where it fills a concrete gap; TxGNN/MATRIX only on a changed condition",
-     "status": "TODO",
-     "owner": "scientist-d"
+     "status": "DONE",
+     "owner": "scientist-d",
+     "evidence": "132bab70 landed: Radar iteration 4 table (15 candidates, licences quoted, unverified list); daily run 2026-10-28 NO_USEFUL_CHANGE, LINCS etag change not pertinent; GtoPdb API needs key = registration, rejected; ChEMBL target components give UniProt ids"
     }
    ]
   },
