@@ -7,8 +7,8 @@ Revision 3 (2026-10-28) applies the independent audit of revision 1 and its re-v
 
 **Plain statement (also in `coverage_summary.json` key `plain_statement`):** none of the interventions in this matrix is a catalogued
 repurposing candidate with a controlled recovery in a WWOX system. The only experimental L4 cells are an AAV9 gene therapy (high dose,
-n 5 for spike-wave discharges; for growth, **body weight only**, blood glucose unchanged); the other L4 cells are uncontrolled case-level
-clinical reports (vigabatrin, ketogenic diet). Ethosuximide, lithium and a tool compound (d-APV) have single WWOX-system readouts without
+n 5 for spike-wave discharges; for growth, **body weight only**, blood glucose unchanged); the other L4 cell is an uncontrolled case-level
+clinical report (vigabatrin); the ketogenic-diet record is retrospective, has no denominator and is not counted as L4. Ethosuximide, lithium and a tool compound (d-APV) have single WWOX-system readouts without
 recovery status; A51 has one readout with reading depth UNKNOWN (state `observed_depth_unknown`).
 
 ## One command

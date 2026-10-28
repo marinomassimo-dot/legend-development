@@ -468,6 +468,23 @@ class RealFiles(unittest.TestCase):
         self.assertTrue(all(not c["L3_observed_effect"]["unassessed_assertions_on_card"] for c in cells.values() if c["L3_observed_effect"]["state"].startswith("observed")))
         self.assertIn("None of the interventions", self.base["summary"]["plain_statement"])
 
+    def test_artefact_symbols_that_are_need_targets_are_second_source_only_and_reported(self):
+        """A source-artefact row on a symbol that a need really targets (ABAT) must never be a blanket drop: it
+        has to be require_second_source, genuine rows must survive, and the per-need drop count must be reported.
+        Any other artefact symbol that appears among need targets without a documented decision fails here."""
+        art = rs.load_artefacts()
+        need_syms = {t["symbol"].upper() for n in json.loads((REAL / "needs" / "needs.json").read_text())["needs"] for t in n["targets"]}
+        overlap = [a for a in art if a["symbol"].upper() in need_syms]
+        reviewed = {"ABAT": "require_second_source", "PDK1": "alias_risk:PDPK1"}      # the only reviewed overlaps
+        for a in overlap:
+            self.assertEqual(a["rule"], reviewed.get(a["symbol"].upper()), f"unreviewed or blanket artefact rule on need target {a['symbol']}")
+        self.assertEqual({a["symbol"].upper() for a in overlap}, set(reviewed), "a new artefact/need-target overlap needs a reviewed decision")
+        per = self.base["summary"]["needs"]["per_need"]
+        for nid, v in per.items():
+            self.assertIn("excluded_records_by_reason", v, nid)
+        self.assertGreater(per["NEED-SEIZURE-CONTROL-SYMPTOMATIC"]["excluded_records_by_reason"].get("source_artefact", 0), 0)
+        survivors = [x for x in self.base["associations"] if x["need"] == "NEED-SEIZURE-CONTROL-SYMPTOMATIC" and x["target"] == "ABAT" and not x["excluded_from_counts"]]
+        self.assertGreaterEqual(len(survivors), 5, "genuine ABAT rows (vigabatrin class) were dropped")
 
 
 if __name__ == "__main__":

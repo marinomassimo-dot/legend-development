@@ -563,7 +563,7 @@ def make_summary(entries, idx, rows, cells, per_need, priorities, need_by, cards
                   "coverage_unit": "compound families (each counted once per need); card interventions and tool subjects are separate rows"},
         "plain_statement": ("None of the interventions in this matrix is a catalogued repurposing candidate with a controlled recovery in a WWOX system. The only "
                             "experimental L4 cells are an AAV9 gene therapy (high dose, n 5 for spike-wave discharges; for growth, body weight only, blood glucose unchanged); "
-                            "the other L4 cells are uncontrolled case-level clinical reports (vigabatrin, ketogenic diet). Ethosuximide, lithium and a tool compound (d-APV) have "
+                            "the other L4 cell is an uncontrolled case-level clinical report (vigabatrin); the ketogenic-diet record is retrospective, has no denominator and is not counted as L4. Ethosuximide, lithium and a tool compound (d-APV) have "
                             "single WWOX-system readouts without recovery status. Compound-target links are source statements, not evidence of effect."),
         "access_caveats": [f"{k}: {v['detail']}" for k, v in eff.items() if v["state"] == "PARTIAL"],
         "source_states": {k: {"state": v["state"], "detail": v["detail"]} for k, v in eff.items()},
