@@ -703,6 +703,15 @@ class CatalogueLeadsTest(unittest.TestCase):
                          [("H99_x", "consistent_mechanism_candidate", "the discriminating assay")])
         self.assertEqual(leads["cards"][0]["owner"], "Scientist (card owner)")
 
+    def test_a_card_attached_twice_to_one_family_gives_one_row(self):
+        with tempfile.TemporaryDirectory() as d:
+            cov = self.build(Path(d), [])
+            matrix = json.loads((cov / "coverage_matrix.json").read_text())
+            matrix["rows"][0]["cards"] = [{"card_id": "H99_x", "attachment": "named_member"}, {"card_id": "H99_x", "attachment": "assertion_subject"}]
+            (cov / "coverage_matrix.json").write_text(json.dumps(matrix))
+            rows = rj.catalogue_leads(cov, Path(d) / "cards")["cards"]
+        self.assertEqual(len(rows), 1)
+
     def test_card_without_next_measurement_names_who_must_define_it(self):
         with tempfile.TemporaryDirectory() as d:
             cov = self.build(Path(d), [])

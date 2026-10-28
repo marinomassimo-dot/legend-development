@@ -1336,7 +1336,8 @@ def catalogue_leads(coverage_dir: Path | None = None, cards_dir: Path | None = N
     for pr in priorities:
         if pr["disposition"] not in LEAD_AUTO_DISPOSITIONS:
             continue
-        for card_id in attached.get(pr["row_id"], []):
+        # a card can attach to one family twice (named member and assertion subject): one row per card, not one per attachment
+        for card_id in dict.fromkeys(attached.get(pr["row_id"], [])):
             pk = packet(card_id) or {}
             if pk.get("leads_needs") and pr["need"] not in pk["leads_needs"]:
                 continue
