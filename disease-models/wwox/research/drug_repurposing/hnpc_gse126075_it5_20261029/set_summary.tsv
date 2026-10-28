@@ -1,0 +1,77 @@
+set	role	contrast	n_declared	n_measurable	not_measurable	mean_primary	null_mean	null_lo	null_hi	rank_two_sided	mean_A_uncentred	null_A_uncentred_95	mean_B_renorm	null_B_renorm_95	mean_residual	res_null_95	res_rank
+ATF4_gene	question	C_hNPC	1	1													
+ATF4_gene	question	C_neuron	1	0	ATF4												
+ATF4_gene	question	S_ctrl	1	0	ATF4												
+ATF4_gene	question	S_kd	1	1													
+ISR_targets	question	C_hNPC	12	11	SLC7A11	0.636	-0.002	-0.475	0.478	0.011	0.831	[-0.28,0.67]	0.66	[-0.50,0.50]	0.713	[-0.48,0.49]	0.0028
+ISR_targets	question	C_neuron	12	10	SLC7A11;ATF5	1.316	0.148	-0.231	0.538	0.0	-0.003	[-1.55,-0.77]	1.42	[-0.43,0.55]	1.213	[-0.29,0.48]	0.0
+ISR_targets	question	S_ctrl	12	10	SLC7A11;ATF5	-0.678	-0.044	-0.732	0.624	0.0742	-1.527	[-1.58,-0.24]	-0.776	[-0.83,0.65]			
+ISR_targets	question	S_kd	12	11	SLC7A11	-0.026	-0.024	-0.636	0.603	0.9934	-2.426	[-3.04,-1.80]	-0.074	[-0.76,0.66]	0.497	[-0.47,0.42]	0.0228
+UPR_branches	question	C_hNPC	8	7	PPP1R15A	0.687	0.078	-0.528	0.659	0.0402	0.882	[-0.32,0.86]	0.717	[-0.54,0.71]	0.539	[-0.60,0.57]	0.0602
+UPR_branches	question	C_neuron	8	6	EIF2AK4;PPP1R15A	0.25	-0.04	-0.52	0.453	0.229	-1.069	[-1.83,-0.87]	0.141	[-0.61,0.51]	0.256	[-0.56,0.41]	0.161
+UPR_branches	question	S_ctrl	8	6	EIF2AK4;PPP1R15A	0.352	-0.219	-1.355	0.702	0.2212	-0.496	[-2.20,-0.13]	0.41	[-1.43,0.76]			
+UPR_branches	question	S_kd	8	6	EIF2AK4;PPP1R15A	0.011	-0.13	-1.12	0.741	0.7822	-2.39	[-3.56,-1.63]	-0.057	[-1.28,0.84]	-0.3	[-0.61,0.57]	0.36
+OXPHOS_nuclear	question	C_hNPC	73	72	NDUFA11	-0.002	-0.145	-0.293	-0.0	0.0544	0.192	[-0.10,0.19]	-0.001	[-0.30,-0.00]	0.033	[-0.23,0.06]	0.1146
+OXPHOS_nuclear	question	C_neuron	73	71	NDUFA11;ATP5MF	-0.326	-0.117	-0.243	0.003	0.0004	-1.645	[-1.56,-1.32]	-0.24	[-0.19,0.09]	-0.395	[-0.27,-0.02]	0.0
+OXPHOS_nuclear	question	S_ctrl	73	71	NDUFA11;ATP5MF	-0.357	-0.342	-0.661	-0.045	0.8966	-1.205	[-1.51,-0.90]	-0.319	[-0.62,0.00]			
+OXPHOS_nuclear	question	S_kd	73	71	NDUFA11;ATP5MF	-0.64	-0.309	-0.602	-0.03	0.0262	-3.041	[-3.01,-2.43]	-0.515	[-0.50,0.12]	-0.436	[-0.29,0.02]	0.0
+Mito_translation	question	C_hNPC	80	78	MTIF2;MTIF3	0.282	-0.061	-0.226	0.103	0.0	0.476	[-0.03,0.30]	0.287	[-0.23,0.11]	0.283	[-0.20,0.13]	0.0002
+Mito_translation	question	C_neuron	80	76	MRPS11;MRPS22;MTIF2;MTIF3	-0.109	-0.004	-0.139	0.13	0.1282	-1.429	[-1.46,-1.18]	-0.151	[-0.18,0.13]	-0.153	[-0.17,0.09]	0.1022
+Mito_translation	question	S_ctrl	80	78	MTIF2;MTIF3	-0.154	-0.15	-0.424	0.103	0.9554	-1.002	[-1.27,-0.74]	-0.141	[-0.42,0.13]			
+Mito_translation	question	S_kd	80	76	MRPS11;MRPS22;MTIF2;MTIF3	-0.487	-0.091	-0.345	0.163	0.0018	-2.887	[-2.74,-2.24]	-0.51	[-0.35,0.20]	-0.452	[-0.20,0.12]	0.0
+Mito_import	question	C_hNPC	23	21	TOMM70;TIMM23	0.541	-0.01	-0.338	0.312	0.0006	0.735	[-0.15,0.51]	0.556	[-0.36,0.33]	0.552	[-0.35,0.31]	0.0006
+Mito_import	question	C_neuron	23	19	TOMM70;TIMM9;TIMM17A;TIMM23	0.119	-0.008	-0.275	0.264	0.3404	-1.201	[-1.59,-1.06]	0.1	[-0.35,0.30]	0.079	[-0.31,0.23]	0.381
+Mito_import	question	S_ctrl	23	20	TOMM70;TIMM17A;TIMM23	-0.084	-0.165	-0.705	0.33	0.777	-0.932	[-1.56,-0.52]	-0.054	[-0.74,0.37]			
+Mito_import	question	S_kd	23	20	TOMM70;TIMM9;TIMM23	-0.514	-0.115	-0.646	0.383	0.1328	-2.914	[-3.04,-2.02]	-0.535	[-0.70,0.43]	-0.517	[-0.39,0.26]	0.0074
+Glycolysis_lactate	question	C_hNPC	10	9	PKM	0.464	-0.128	-0.586	0.313	0.0098	0.658	[-0.39,0.51]	0.468	[-0.59,0.33]	0.498	[-0.51,0.34]	0.008
+Glycolysis_lactate	question	C_neuron	10	8	HK2;PKM	0.196	-0.159	-0.521	0.19	0.0452	-1.124	[-1.85,-1.12]	0.322	[-0.49,0.32]	0.118	[-0.58,0.18]	0.105
+Glycolysis_lactate	question	S_ctrl	10	8	HK2;PKM	-0.44	-0.375	-1.46	0.451	0.8022	-1.289	[-2.27,-0.41]	-0.382	[-1.43,0.51]			
+Glycolysis_lactate	question	S_kd	10	8	HK2;PKM	-0.652	-0.414	-1.464	0.458	0.5736	-3.052	[-3.87,-1.93]	-0.465	[-1.39,0.64]	-0.387	[-0.67,0.29]	0.3806
+PDK_family	question	C_hNPC	4	3	PDK4	-0.376	0.013	-0.951	0.951	0.407	-0.181	[-0.74,1.13]	-0.385	[-0.97,1.04]	-0.516	[-0.89,0.84]	0.2406
+PDK_family	question	C_neuron	4	3	PDK4	-0.235	-0.055	-0.742	0.632	0.5898	-1.555	[-2.04,-0.69]	-0.218	[-0.91,0.73]	-0.199	[-0.77,0.60]	0.7208
+PDK_family	question	S_ctrl	4	3	PDK4	0.631	-0.101	-1.506	1.133	0.2302	-0.217	[-2.35,0.33]	0.669	[-1.59,1.27]			
+PDK_family	question	S_kd	4	3	PDK4	0.81	0.059	-1.112	1.298	0.204	-1.59	[-3.53,-1.13]	0.877	[-1.39,1.38]	0.295	[-0.82,0.88]	0.5108
+Lactate_transporters	question	C_hNPC	2	1	SLC16A3												
+Lactate_transporters	question	C_neuron	2	1	SLC16A3												
+Lactate_transporters	question	S_ctrl	2	1	SLC16A3												
+Lactate_transporters	question	S_kd	2	1	SLC16A3												
+Ctl_cytosolic_ribosome	control	C_hNPC	126	126		-0.246	-0.135	-0.248	-0.021	0.053	-0.052	[-0.05,0.17]	-0.248	[-0.25,-0.03]	-0.123	[-0.18,0.04]	0.3628
+Ctl_cytosolic_ribosome	control	C_neuron	126	119	RPL13AP2;RPL14P1;RPL15P4;RPL26L1;RPL35P1;RPL39L;RPS2	-0.469	-0.086	-0.18	0.01	0.0	-1.789	[-1.50,-1.31]	-0.419	[-0.14,0.08]	-0.581	[-0.21,-0.02]	0.0
+Ctl_cytosolic_ribosome	control	S_ctrl	126	123	RPL14P1;RPL39L;RPS2	-0.768	-0.348	-0.587	-0.12	0.0008	-1.617	[-1.43,-0.97]	-0.74	[-0.56,-0.08]			
+Ctl_cytosolic_ribosome	control	S_kd	126	120	RPL13AP2;RPL14P1;RPL15P4;RPL26L1;RPL35P1;RPL39L	-0.95	-0.294	-0.523	-0.075	0.0	-3.35	[-2.93,-2.47]	-0.857	[-0.42,0.07]	-0.461	[-0.25,-0.01]	0.0
+Ctl_housekeeping	control	C_hNPC	12	12		-0.128	-0.168	-0.522	0.175	0.8192	0.067	[-0.33,0.37]	-0.129	[-0.53,0.17]	-0.012	[-0.44,0.26]	0.646
+Ctl_housekeeping	control	C_neuron	12	12		-0.05	-0.169	-0.471	0.119	0.4164	-1.369	[-1.79,-1.20]	0.056	[-0.39,0.22]	-0.164	[-0.50,0.10]	0.8816
+Ctl_housekeeping	control	S_ctrl	12	12		-0.788	-0.419	-1.303	0.293	0.3498	-1.637	[-2.13,-0.54]	-0.728	[-1.29,0.38]			
+Ctl_housekeeping	control	S_kd	12	12		-0.672	-0.373	-1.162	0.327	0.4162	-3.072	[-3.58,-2.08]	-0.501	[-1.10,0.49]	-0.154	[-0.56,0.21]	0.944
+Mk_radial_glia_progenitor	marker_confounder	C_hNPC	11	9	HOPX;CRYAB	-1.17	-0.036	-0.522	0.431	0.0	-0.976	[-0.33,0.62]	-1.222	[-0.53,0.45]	-1.239	[-0.51,0.45]	0.0
+Mk_radial_glia_progenitor	marker_confounder	C_neuron	11	9	HOPX;CRYAB	-0.504	0.006	-0.372	0.392	0.0094	-1.823	[-1.69,-0.92]	-0.518	[-0.46,0.45]	-0.51	[-0.41,0.35]	0.014
+Mk_radial_glia_progenitor	marker_confounder	S_ctrl	11	9	HOPX;CRYAB	0.233	-0.222	-1.07	0.51	0.236	-0.616	[-1.89,-0.36]	0.197	[-1.08,0.57]			
+Mk_radial_glia_progenitor	marker_confounder	S_kd	11	9	HOPX;CRYAB	0.937	-0.053	-0.793	0.653	0.0062	-1.463	[-3.16,-1.75]	0.942	[-0.88,0.71]	0.713	[-0.48,0.48]	0.0048
+Mk_cell_cycle_proliferation	marker_confounder	C_hNPC	6	6		-0.316	-0.133	-0.671	0.368	0.4588	-0.122	[-0.48,0.57]	-0.318	[-0.69,0.35]	-0.089	[-0.60,0.42]	0.9468
+Mk_cell_cycle_proliferation	marker_confounder	C_neuron	6	6		0.126	-0.089	-0.542	0.352	0.3456	-1.194	[-1.86,-0.95]	0.193	[-0.57,0.45]	-0.054	[-0.59,0.34]	0.8144
+Mk_cell_cycle_proliferation	marker_confounder	S_ctrl	6	6		-1.407	-0.295	-1.474	0.642	0.0612	-2.256	[-2.28,-0.17]	-1.367	[-1.44,0.76]			
+Mk_cell_cycle_proliferation	marker_confounder	S_kd	6	6		-0.927	-0.266	-1.325	0.636	0.1826	-3.327	[-3.69,-1.75]	-0.816	[-1.33,0.80]	0.042	[-0.69,0.44]	0.57
+Mk_neuronal_pan	marker_confounder	C_hNPC	9	4	DCX;STMN2;RBFOX3;NEUROD2;NEUROD6	-0.686	0.099	-0.735	0.864	0.0652	-0.491	[-0.52,1.05]	-0.693	[-0.75,0.89]	-0.847	[-0.78,0.74]	0.0364
+Mk_neuronal_pan	marker_confounder	C_neuron	9	5	DCX;RBFOX3;NEUROD2;NEUROD6	-0.76	-0.086	-0.594	0.405	0.0112	-2.079	[-1.90,-0.92]	-0.809	[-0.60,0.48]	-0.747	[-0.65,0.46]	0.0258
+Mk_neuronal_pan	marker_confounder	S_ctrl	9	4	DCX;STMN2;RBFOX3;NEUROD2;NEUROD6	0.745	-0.173	-1.424	0.896	0.0862	-0.103	[-2.25,0.00]	0.821	[-1.53,0.93]			
+Mk_neuronal_pan	marker_confounder	S_kd	9	4	DCX;STMN2;RBFOX3;NEUROD2;NEUROD6	0.673	0.054	-0.956	1.065	0.2046	-1.727	[-3.37,-1.35]	0.67	[-1.16,1.08]	0.076	[-0.66,0.78]	0.9416
+Mk_glutamatergic	marker_confounder	C_hNPC	12	2	SLC17A6;SLC17A7;SATB2;TBR1;BCL11B;CUX2;RELN;FEZF2;EMX1;EMX2												
+Mk_glutamatergic	marker_confounder	C_neuron	12	2	SLC17A6;SLC17A7;SATB2;TBR1;BCL11B;CUX2;RELN;FEZF2;EMX1;EMX2												
+Mk_glutamatergic	marker_confounder	S_ctrl	12	2	SLC17A6;SLC17A7;SATB2;TBR1;BCL11B;CUX2;RELN;FEZF2;EMX1;EMX2												
+Mk_glutamatergic	marker_confounder	S_kd	12	2	SLC17A6;SLC17A7;SATB2;TBR1;BCL11B;CUX2;RELN;FEZF2;EMX1;EMX2												
+Mk_GABAergic	marker_confounder	C_hNPC	11	1	GAD1;GAD2;SLC32A1;DLX1;DLX5;DLX6;LHX6;NKX2-1;SST;NPY												
+Mk_GABAergic	marker_confounder	C_neuron	11	1	GAD1;GAD2;SLC32A1;DLX1;DLX5;DLX6;LHX6;NKX2-1;SST;NPY												
+Mk_GABAergic	marker_confounder	S_ctrl	11	1	GAD1;GAD2;SLC32A1;DLX1;DLX5;DLX6;LHX6;NKX2-1;SST;NPY												
+Mk_GABAergic	marker_confounder	S_kd	11	1	GAD1;GAD2;SLC32A1;DLX1;DLX5;DLX6;LHX6;NKX2-1;SST;NPY												
+Mk_astrocyte_glia	marker_confounder	C_hNPC	11	1	GFAP;S100B;AQP4;ALDH1L1;SLC1A2;AGT;S100A1;OLIG1;OLIG2;PDGFRA												
+Mk_astrocyte_glia	marker_confounder	C_neuron	11	0	GFAP;S100B;AQP4;ALDH1L1;SLC1A2;GJA1;AGT;S100A1;OLIG1;OLIG2;PDGFRA												
+Mk_astrocyte_glia	marker_confounder	S_ctrl	11	1	GFAP;S100B;AQP4;ALDH1L1;SLC1A2;AGT;S100A1;OLIG1;OLIG2;PDGFRA												
+Mk_astrocyte_glia	marker_confounder	S_kd	11	0	GFAP;S100B;AQP4;ALDH1L1;SLC1A2;GJA1;AGT;S100A1;OLIG1;OLIG2;PDGFRA												
+Mk_regional_patterning_non_cortical	marker_confounder	C_hNPC	18	1	OTX2;LHX5;GATA3;EN1;EN2;HOXA2;HOXB2;SHH;FOXG1;LHX2;WNT3;WNT3A;WNT7B;ATOH1;DRGX;HOXA1;HOXB1												
+Mk_regional_patterning_non_cortical	marker_confounder	C_neuron	18	2	OTX2;GATA3;EN1;EN2;HOXA2;HOXB2;SHH;FOXG1;LHX2;WNT3;WNT3A;WNT7B;ATOH1;DRGX;HOXA1;HOXB1												
+Mk_regional_patterning_non_cortical	marker_confounder	S_ctrl	18	1	OTX2;LHX5;GATA3;EN1;EN2;HOXA2;HOXB2;SHH;FOXG1;LHX2;WNT3;WNT3A;WNT7B;ATOH1;DRGX;HOXA1;HOXB1												
+Mk_regional_patterning_non_cortical	marker_confounder	S_kd	18	1	OTX2;LHX5;GATA3;EN1;EN2;HOXA2;HOXB2;SHH;FOXG1;LHX2;WNT3;WNT3A;WNT7B;ATOH1;DRGX;HOXA1;HOXB1												
+Mk_wnt_pathway	marker_confounder	C_hNPC	9	3	LEF1;WNT3;WNT5A;WNT7B;DKK1;DACT2	-0.432	0.096	-1.017	1.207	0.3348	-0.238	[-0.82,1.40]	-0.442	[-1.05,1.24]	-0.531	[-0.97,1.07]	0.2438
+Mk_wnt_pathway	marker_confounder	C_neuron	9	3	LEF1;WNT3;WNT5A;WNT7B;DKK1;DACT2	-0.251	0.302	-0.363	1.056	0.105	-1.57	[-1.70,-0.28]	-0.587	[-0.82,1.09]	-0.24	[-0.44,0.97]	0.1744
+Mk_wnt_pathway	marker_confounder	S_ctrl	9	3	LEF1;WNT3;WNT5A;WNT7B;DKK1;DACT2	0.401	-0.001	-1.224	1.191	0.5032	-0.448	[-2.15,0.37]	0.367	[-1.51,1.23]			
+Mk_wnt_pathway	marker_confounder	S_kd	9	3	LEF1;WNT3;WNT5A;WNT7B;DKK1;DACT2	0.619	0.372	-0.544	1.506	0.5992	-1.781	[-2.96,-0.87]	0.263	[-1.22,1.45]	0.273	[-0.71,1.22]	0.8996
