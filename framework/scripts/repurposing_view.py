@@ -178,14 +178,100 @@ THREAD_TEXT = {
     "Development and glia": "Brain development and support cells: myelin, progenitor proliferation (MYC), neuroinflammation and gliosis.",
     "Symptom-level": "Symptoms treated in their own right: seizures and spasms, blood glucose and growth.",
 }
+# ---------------------------------------------------------------------------------------------
+# Research-priority positions (IT5 P11). One position per card AND per need. There is no global
+# position of a card: the profile lists one position per need and the overview shows the SET of
+# need-level positions. A position names the REASON a next study is interesting; it is not a rank,
+# a score or a probability. All rules live in assign_need_position() so that they have one home.
+# ---------------------------------------------------------------------------------------------
+KIND_FAV, KIND_COUNTER, KIND_PREMISE = "favourable_hypothesis", "counter_evidence_clarification", "premise_missing"
 GROUPS = [
-    {"id": "G1", "label": "Group 1: the intervention itself was read out in a WWOX experimental system", "why": "At least one pertinent assertion of the card is a readout in a WWOX-deficient system, and the card names a next step."},
-    {"id": "G2", "label": "Group 2: clinical case reports only (uncontrolled)", "why": "The only WWOX-side data for the intervention are case reports without comparator; the card names a next step."},
-    {"id": "G3", "label": "Group 3: the target is seen altered in WWOX systems; this intervention is not yet tested there", "why": "The need has a WWOX-system observation, the card names a next step, but no readout of this intervention in a WWOX system is recorded."},
-    {"id": "G4", "label": "Group 4: a premise or a next step is missing", "why": "The card is an abstention (a datum is missing before a test can be designed) or the need has no WWOX-system observation."},
+    {"id": "F1", "kind": KIND_FAV, "label": "F1: Favourable hypothesis, firm WWOX readout", "why": "Reason to study: a favourable result in a WWOX system, read against an untreated comparator of the same genotype from a full or partial text, with no null, unfavourable or mixed WWOX result beside it, and a next step named."},
+    {"id": "F2", "kind": KIND_FAV, "label": "F2: Favourable hypothesis, thin WWOX readout", "why": "Reason to study: a favourable result in a WWOX system, but uncontrolled (case reports, wild-type-only comparison) or of limited depth or specificity, with no null, unfavourable or mixed WWOX result beside it, and a next step named. The next study is to learn whether the signal is real."},
+    {"id": "F3", "kind": KIND_FAV, "label": "F3: Favourable hypothesis from the target, intervention not tested in WWOX", "why": "Reason to study: the need has WWOX-system observations and the intervention has no readout in a WWOX system; what exists comes from other diseases or from target-engagement assays, with no counter-signal alone. A next step is named."},
+    {"id": "C1", "kind": KIND_COUNTER, "label": "C1: Counter-evidence to clarify, null or unfavourable WWOX result", "why": "Reason to study: the only signed WWOX-system result is null or unfavourable. The next study is to learn whether that result is real (dose, timing, genotype, depth of reading), not to confirm a hope."},
+    {"id": "C2", "kind": KIND_COUNTER, "label": "C2: Counter-evidence to clarify, mixed WWOX result", "why": "Reason to study: favourable and null or unfavourable WWOX results stand side by side for this need. The next study is to learn which one holds."},
+    {"id": "C3", "kind": KIND_COUNTER, "label": "C3: Counter-evidence to clarify, harm or null signal from outside WWOX", "why": "Reason to study: no signed WWOX-system result, and what exists outside WWOX (other disease, safety, label) is harm or null with no favourable signal beside it. The next study is to learn whether that signal applies to WWOX."},
+    {"id": "P1", "kind": KIND_PREMISE, "label": "P1: Premise missing, abstention", "why": "The card is an abstention: a datum is missing before any test can be designed. The missing datum is the first thing to obtain."},
+    {"id": "P2", "kind": KIND_PREMISE, "label": "P2: Premise missing, no next step named", "why": "The card names no next step for this need, so no study can be put forward from it."},
+    {"id": "P3", "kind": KIND_PREMISE, "label": "P3: Premise missing, nothing favourable recorded for this intervention on this need, or no WWOX-system observation on the need", "why": "No signed WWOX-system result of the intervention, no outside-WWOX counter-signal to clarify, and either no favourable support for the intervention recorded on this need or no WWOX-system observation on the need. The card links the need by mechanism only; what is missing is stated in the criteria."},
 ]
-GROUP_NOTE = ("Groups are ordered by how close the evidence on the intervention is to a WWOX system, not by expected benefit. Inside a group the order is alphabetical and means nothing. "
-              "The reasons behind each position are printed with it. There is no score, no probability and no cure ranking.")
+POS_BY_ID = {g["id"]: g for g in GROUPS}
+GROUP_NOTE = ("Each candidate-need link has its own position, and the position states the REASON a study is interesting: a favourable hypothesis (F), a counter-evidence to clarify (C) or a missing premise (P). "
+              "A card has no single position: its profile lists one per need, and the overview shows the set of need-level positions, never the best of them. "
+              "The order in which positions are listed is a grouping by kind of reason, not a ranking; inside a position the order is alphabetical and means nothing. "
+              "The criteria met and not met are printed with each position. There is no score, no probability and no cure ranking.")
+FAV_SIGNS = {"benefit", "partial_benefit", "normalised_vs_wild_type"}
+WWOX_KINDS = {"readout_in_wwox_system", "case_report_wwox_clinical", "genotype_comparison_vs_wild_type"}
+OUT_KINDS = {"readout_other_disease", "safety_signal", "label_statement", "case_report_uninformative"}
+WEAK_FLAGS = ("reading_depth", "nonspecific", "graphical", "one_experiment", "case_level", "micrographs", "partial_read", "no_instrument", "no_knockout_arm", "abstract_only")
+FIRM_DEPTHS = {"complete_fulltext_read", "partial_fulltext_read"}
+
+
+def classify_rows(rows: list[dict], depth_of: dict | None = None) -> dict:
+    """Facts for one card x one need from pertinence rows (keys: assertion_id, evidence_kind, sign, flags, comparator). Pure."""
+    depth_of = depth_of or {}
+    w = [r for r in rows if r.get("evidence_kind") in WWOX_KINDS]
+    o = [r for r in rows if r.get("evidence_kind") in OUT_KINDS]
+    cnt = Counter(r.get("sign") for r in w)
+    n_fav = sum(cnt[s] for s in FAV_SIGNS)
+    n_null, n_unf, n_mix = cnt["null"], cnt["harm"], cnt["mixed"]
+    if n_fav and not (n_null or n_unf or n_mix):
+        result = "favourable"
+    elif n_fav or n_mix:
+        result = "mixed" if (n_null or n_unf or n_mix) else "favourable"
+    elif n_unf:
+        result = "unfavourable"
+    elif n_null:
+        result = "null"
+    elif w:
+        result = "unresolved"
+    else:
+        result = "none"
+    firm = []
+    for r in w:
+        if r.get("sign") in FAV_SIGNS and r.get("evidence_kind") == "readout_in_wwox_system":
+            controlled = str(r.get("comparator") or "").startswith(("untreated_same_genotype", "before_and_after"))
+            deep = depth_of.get(r.get("assertion_id")) in FIRM_DEPTHS
+            clean = not any(k in str(r.get("flags") or "") for k in WEAK_FLAGS)
+            if controlled and deep and clean:
+                firm.append(r.get("assertion_id"))
+    o_fav = sum(1 for r in o if r.get("evidence_kind") == "readout_other_disease" and r.get("sign") in FAV_SIGNS)
+    o_counter = sum(1 for r in o if r.get("sign") in ("harm", "null"))
+    return {"result": result, "n_fav": n_fav, "n_null": n_null, "n_unf": n_unf, "n_mix": n_mix, "n_incomplete": cnt["not_normalised_vs_wild_type"], "n_unresolved": cnt["unresolved"] + cnt["unquantified"],
+            "n_wwox_rows": len(w), "firm": firm, "o_fav": o_fav, "o_counter": o_counter, "n_other_rows": len(o), "n_target_engagement": sum(1 for r in rows if r.get("evidence_kind") == "target_engagement_assay"),
+            "n_engagement_fav": sum(1 for r in rows if r.get("evidence_kind") == "target_engagement_assay" and r.get("sign") in FAV_SIGNS)}
+
+
+def assign_need_position(facts: dict, abstention: bool, has_next_step: bool, need_has_wwox_obs: bool) -> tuple[str, list[tuple[str, bool]]]:
+    """THE rule: (position id, criteria as (plain-words statement, met)) for one card x one need. No score, no best-of-needs.
+    facts is the output of classify_rows. Order of tests: abstention; no next step; the WWOX-system result; what exists outside WWOX; the need's own observations."""
+    res = facts["result"]
+    crit = [("the card is not an abstention", not abstention), ("a next step is named", has_next_step)]
+    if abstention:
+        return "P1", crit
+    if not has_next_step:
+        return "P2", crit
+    crit += [("a signed result of the intervention in a WWOX system exists", res in ("favourable", "mixed", "null", "unfavourable"))]
+    if res in ("favourable", "mixed", "null", "unfavourable"):
+        crit += [("no null, unfavourable or mixed result in a WWOX system", res == "favourable")]
+        if res == "favourable":
+            firm = bool(facts["firm"])
+            crit += [("at least one favourable WWOX readout is controlled (untreated same genotype), from a full or partial text, with no weakening flag", firm)]
+            return ("F1" if firm else "F2"), crit
+        return {"mixed": "C2", "null": "C1", "unfavourable": "C1"}[res], crit
+    crit += [("an outside-WWOX harm or null signal stands without a favourable outside signal", facts["o_counter"] > 0 and facts["o_fav"] == 0)]
+    if facts["o_counter"] > 0 and facts["o_fav"] == 0:
+        return "C3", crit
+    support = facts["o_fav"] + facts["n_engagement_fav"]
+    crit += [("some favourable support for the intervention is recorded on this need (other-disease readout or target-engagement assay)", support > 0), ("the need has a WWOX-system observation", need_has_wwox_obs)]
+    return ("F3" if (need_has_wwox_obs and support > 0) else "P3"), crit
+
+
+def overview_positions(links: dict) -> list[str]:
+    """The overview of a card: the SET of its need-level positions, in the fixed display order of GROUPS. Never a single winner."""
+    have = {l["group"] for l in links.values()}
+    return [g["id"] for g in GROUPS if g["id"] in have]
 
 
 def clip(t, n=300):
@@ -346,6 +432,8 @@ def build_curated(dr: Path, ctx: dict) -> dict:
                             "depth": a.get("reading_depth"), "sign": (pr or {}).get("sign"), "kind": (pr or {}).get("evidence_kind"), "pmids": ids})
         # per-link statistics from the module's pertinence table
         lk = {}
+        depth_of = {x["id"]: x["depth"] for x in asserts}
+        acc_c = sorted({a for r in card_rows.get(cid, []) for a in (r.get("access_categories") or []) if a != "unknown/unverified"})
         for nid in lneeds:
             rs = [r for r in pert if r["card_id"] == cid and r["need_id"] == nid]
             n_w = sum(1 for r in rs if r["evidence_kind"] == "readout_in_wwox_system" and r["counts_L3"] == "yes")
@@ -353,25 +441,24 @@ def build_curated(dr: Path, ctx: dict) -> dict:
             n_o = sum(1 for r in rs if r["evidence_kind"] == "readout_other_disease")
             n_null = sum(1 for r in rs if r["sign"] == "null")
             n_harm = sum(1 for r in rs if r["sign"] == "harm")
-            has_next = bool(nxt) and not absn
-            if absn or not nxt:
-                g = "G4"
-            elif n_w:
-                g = "G1"
-            elif n_c:
-                g = "G2"
-            elif nmap[nid]["n_wwox_obs"]:
-                g = "G3"
-            else:
-                g = "G4"
-            reasons = []
-            reasons.append(("WWOX relevance", f'{n_w} readout(s) of this intervention in a WWOX system; {n_c} case-report assertion(s); {nmap[nid]["n_wwox_obs"]} WWOX-system observation(s) on the need'))
-            reasons.append(("Direction and context", f'need direction: {nmap[nid]["dir"]} on {nmap[nid]["dir_on"]} ({clip(nmap[nid]["dir_cert"], 90)}); {n_o} other-disease readout(s)'))
-            reasons.append(("Quality of evidence", f'reading depths in the card: {", ".join(sorted({a["depth"] for a in asserts if a["depth"]})) or "none recorded"}; sources are not pooled and shared sources are not independent'))
-            reasons.append(("Counter-evidence", ("pro and contra written as prose in the card (not itemised); " if against_note and not against else "") + f'{len(against)} itemised card item(s); {len(nmap[nid]["counter"])} need item(s); {n_null} measured null and {n_harm} harm signal(s) in the pertinent assertions'))
-            reasons.append(("Decisive gap", clip(absd.get("missing_datum") if absn and absd.get("missing_datum") else (nk[0] if nk else "none recorded"), 200)))
-            reasons.append(("Informative next step", "named in the card" if has_next else "not available (abstention or no step named)"))
-            lk[nid] = {"group": g, "n_w": n_w, "n_c": n_c, "n_o": n_o, "n_null": n_null, "n_harm": n_harm, "reasons": reasons}
+            has_next = bool(nxt)
+            fx = classify_rows(rs, depth_of)
+            pos, crit = assign_need_position(fx, bool(absn), has_next, bool(nmap[nid]["n_wwox_obs"]))
+            wdepths = sorted({depth_of.get(r["assertion_id"]) or "not recorded" for r in rs if r["evidence_kind"] in WWOX_KINDS})
+            wcomp = sorted({(r.get("comparator") or "none stated") for r in rs if r["evidence_kind"] in WWOX_KINDS})
+            reasons = [
+                ("Result in WWOX systems", f'{fx["result"]}: {fx["n_fav"]} favourable, {fx["n_null"]} null, {fx["n_unf"]} unfavourable, {fx["n_mix"]} mixed, {fx["n_incomplete"]} not normalised, {fx["n_unresolved"]} unresolved or unquantified signed WWOX-system row(s); {nmap[nid]["n_wwox_obs"]} WWOX-system observation(s) on the need'),
+                ("Depth and quality", ("WWOX-side reading depths: " + ", ".join(wdepths) + "; comparators: " + ", ".join(wcomp) + f'; {len(fx["firm"])} favourable row(s) are controlled, deep enough and unflagged' if fx["n_wwox_rows"] else "no WWOX-side row to grade") + ("; row flags: " + clip("; ".join(sorted({f for r in rs if r["evidence_kind"] in WWOX_KINDS for f in str(r.get("flags") or "").split(";") if f})), 240) if fx["n_wwox_rows"] else "") + "; sources are not pooled and shared sources are not independent"),
+                ("Outside WWOX", f'{fx["n_other_rows"]} other-disease, safety or label row(s): {fx["o_fav"]} favourable, {fx["o_counter"]} harm or null; {fx["n_target_engagement"]} target-engagement assay row(s); need direction: {nmap[nid]["dir"]} on {nmap[nid]["dir_on"]} ({clip(nmap[nid]["dir_cert"], 90)})'),
+                ("Counter-evidence", ("pro and contra written as prose in the card (not itemised); " if against_note and not against else "") + f'{len(against)} itemised card item(s); {len(nmap[nid]["counter"])} need item(s); {n_null} null and {n_harm} harm signal(s) in the pertinent assertions'),
+                ("Decisive premise", clip(absd.get("missing_datum") if absn and absd.get("missing_datum") else (nk[0] if nk else "none recorded"), 200)),
+                ("Next step", ("named in the card; the rule does not judge what the step would reveal, read it in the profile" if has_next else "none named")),
+                ("Feasibility actually known", ("US access evidence: " + ", ".join(acc_c) if acc_c else "not known (no access evidence obtained); shown, not assumed, and not used to place the card")),
+                ("Criteria", "met: " + ("; ".join(t for t, m in crit if m) or "none") + ". Not met: " + ("; ".join(t for t, m in crit if not m) or "none")),
+            ]
+            lk[nid] = {"group": pos, "kind": POS_BY_ID[pos]["kind"], "result": fx["result"], "depth_class": ("firm" if fx["firm"] else ("limited" if fx["n_wwox_rows"] else "none")),
+                       "counter_in_rows": bool(fx["o_counter"] or fx["n_null"] or fx["n_unf"] or fx["n_mix"]),
+                       "criteria": [{"text": t, "met": m} for t, m in crit], "n_w": n_w, "n_c": n_c, "n_o": n_o, "n_null": n_null, "n_harm": n_harm, "reasons": reasons}
         # catalogue side
         rws = card_rows.get(cid, [])
         chembl = sorted({x["chembl_id"] for x in (links.get(cid) or {}).get("links", []) if x.get("chembl_id")})
@@ -400,13 +487,12 @@ def build_curated(dr: Path, ctx: dict) -> dict:
                 pm[m] = "source of an intervention assertion"
         dois = sorted(set(x.rstrip(".") for x in DOI_RE.findall(blob)))
         scope_counts = {"int": dict(Counter(a["scope"] for a in asserts)), "need": dict(Counter(o["scope"] for nid in lneeds for o in nmap[nid]["obs"]))}
-        gset = sorted({v["group"] for v in lk.values()})
         name = inp["candidate"]["name"].split(" (")[0].strip()
         pre = name.split(": ")[0]
         name = pre if pre_count[pre] == 1 else name
         cands.append({
             "id": cid, "name": inp["candidate"]["name"], "short": clip(name, 80), "folder": folder, "goal": goal, "track": track, "tracks": tracks, "status": card_status(card)[0], "status_raw": clip(card_status(card)[1], 200),
-            "abstention": bool(absn), "needs": lneeds, "links": lk, "group": gset[0] if gset else "G4", "assessment": card.get("assessment"), "summary": card.get("directional_summary"),
+            "abstention": bool(absn), "needs": lneeds, "links": lk, "positions": overview_positions(lk), "assessment": card.get("assessment"), "summary": card.get("directional_summary"),
             "why": clip(f.get("indication_and_transfer") or f.get("identity"), 420), "why_full": f.get("indication_and_transfer") or f.get("identity"),
             "identity": clip(f.get("identity"), 360), "mechanism": clip(f.get("mechanism"), 360), "novelty": clip(f.get("novelty_for_woree"), 360),
             "expected": clip(f.get("expected_contribution"), 200), "access_text": clip(f.get("time_to_access"), 240), "pharm": clip(f.get("pharmacology"), 360),
@@ -1185,7 +1271,7 @@ def render_overview(P: dict) -> str:
     cur, f = P["cur"], P["funnel"]
     meta, cands, needs = cur["meta"], cur["cands"], cur["needs"]
     from urllib.parse import quote
-    n_g = Counter(c["group"] for c in cands)
+    n_pos = Counter(l["group"] for c in cands for l in c["links"].values())   # need-level links per position; a card is never given one position
 
     def tile(key, val, unit, desc):
         return f'<div class="tile"><span class="big">{num(key, val)}</span><span class="u">{E(unit)}</span><span class="d">{E(desc)}</span></div>'
@@ -1194,7 +1280,8 @@ def render_overview(P: dict) -> str:
         tile("cur.threads", len(cur["threads"]), "biological threads", "groups of needs that share a biology"),
         tile("cur.cards", len(cands), "candidate cards", "an intervention, a class or an axis that has been read and written up"),
         tile("cur.abstentions", meta["n_abstentions"], "abstentions", "cards that name the missing datum instead of a test"),
-        tile("cur.group1", n_g.get("G1", 0), "cards in Group 1", "the intervention itself was read out in a WWOX experimental system"),
+        tile("cur.pos_f1", n_pos.get("F1", 0), "card-need links in position F1", "favourable hypothesis with a firm WWOX readout; a card with several needs is counted once per need, never as one position"),
+        tile("cur.pos_c", sum(n_pos.get(k, 0) for k in ("C1", "C2", "C3")), "card-need links to clarify a counter-evidence", "null, unfavourable or mixed results, or a harm signal, whose clarification is the reason to study"),
     ])
     t2 = "".join([
         tile("funnel.records", f["records"], "catalogue records", "source-level substance records screened (salts and duplicates count once each)"),
@@ -1211,13 +1298,13 @@ def render_overview(P: dict) -> str:
         ns = [n for n in needs if n["goal"] == g]
         tr = Counter(c["track"] or "not stated" for c in cs)
         nxt = []
-        for gid in ("G1", "G2", "G3"):
-            names = [c for c in cs if c["group"] == gid]
+        for gid in ("F1", "F2", "F3", "C1", "C2", "C3"):
+            names = [(c, nid) for c in cs for nid, l in c["links"].items() if l["group"] == gid]
             if names:
-                nxt.append(f'<div class="kv"><span class="grp {gid.lower()}">{E(GROUPS[int(gid[1]) - 1]["label"].split(":")[0])}</span> ' + ", ".join(f'<a href="#cand-{E(c["id"])}" data-open="{E(c["id"])}">{E(c["short"])}</a>' for c in names) + "</div>")
+                nxt.append(f'<div class="kv"><span class="grp {gid.lower()}">{E(POS_BY_ID[gid]["label"])}</span> ' + ", ".join(f'<a href="#cand-{E(c["id"])}" data-open="{E(c["id"])}">{E(c["short"])}</a> <span class="mut">({E(next(n["short"] for n in needs if n["id"] == nid))})</span>' for c, nid in names) + "</div>")
         gaps, seen = [], set()
-        for gid in ("G1", "G3", "G4"):
-            for c in [c for c in cs if c["group"] == gid and c.get("missing") and c["missing"] not in seen][:2]:
+        for c in cs:
+            if c.get("missing") and c["missing"] not in seen and any(l["group"] in ("P1", "P2", "P3", "F3") for l in c["links"].values()) and len(gaps) < 6:
                 seen.add(c["missing"])
                 gaps.append(f'<li><b>{E(c["short"])}:</b> {E(clip(c["missing"], 190))}</li>')
         panels.append(
@@ -1225,7 +1312,7 @@ def render_overview(P: dict) -> str:
             f'<div class="kv"><b>Needs with this aim:</b> {num("cur.goal." + g + ".needs", len(ns))} needs (in: {E(", ".join(sorted({n["thread"] for n in ns})))})</div>'
             f'<div class="kv"><b>Candidate cards with this aim:</b> {num("cur.goal." + g + ".cards", len(cs))} cards, {sum(1 for c in cs if c["abstention"])} of them abstentions</div>'
             f'<div class="kv"><b>Track (a separate field):</b> ' + "; ".join(f"Track {E(k)}: {v}" for k, v in sorted(tr.items())) + '</div>'
-            f'<div class="kv"><b>To study next (cards that name a next step), by evidence group:</b></div>' + ("".join(nxt) or '<p class="mini">None.</p>') +
+            f'<div class="kv"><b>To study next (one entry per card and need; a card can appear under several positions, each for its own need):</b></div>' + ("".join(nxt) or '<p class="mini">None.</p>') +
             f'<div class="kv"><b>Decisive gaps (missing datum stated in the cards):</b></div><ul class="mini">' + "".join(gaps) + '</ul></div>')
     th = "".join(
         f'<div class="thread" data-thread="{E(t["id"])}"><h3>{E(t["name"])}</h3><p>{E(t["text"])}</p>'
@@ -1290,7 +1377,7 @@ def build(dr: Path = DEFAULT_DR, source: str = "full") -> str:
 
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0], formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("command", nargs="?", choices=["run", "check"], help="run: write the view; check: exit 1 if a file is stale")
+    ap.add_argument("command", nargs="?", choices=["run", "check", "positions"], help="run: write the view; check: exit 1 if a file is stale; positions: print one TSV line per card x need with the inputs and the position (for re-derivation)")
     ap.add_argument("--dr", type=Path, default=DEFAULT_DR, help="drug_repurposing directory (default: the module)")
     ap.add_argument("--source", choices=list(SOURCES), default=None,
                     help="run: full (default) embeds every row, written to view/index.html; shareable embeds only allowlisted rows (view/shareable_sources.json), written to view/index_shareable.html. check: both unless given")
@@ -1298,6 +1385,16 @@ def main(argv=None) -> int:
     a = ap.parse_args(argv)
     if not a.command:
         ap.print_help()
+        return 0
+    if a.command == "positions":
+        cur = build_payload(a.dr, a.source or "full")["cur"]
+        nm = {n["id"]: n for n in cur["needs"]}
+        print("\t".join(["card", "need", "result_in_wwox", "depth_class", "position", "kind", "counter_in_rows", "criteria_not_met"]))
+        for c in cur["cands"]:
+            for nid, l in c["links"].items():
+                print("\t".join([c["id"], nid, l["result"], l["depth_class"], l["group"], l["kind"], str(l["counter_in_rows"]), "; ".join(x["text"] for x in l["criteria"] if not x["met"])]))
+            if not c["links"]:
+                print("\t".join([c["id"], "(no linked need)", "", "", "", "", "", ""]))
         return 0
     if a.command == "run":
         src = a.source or "full"
