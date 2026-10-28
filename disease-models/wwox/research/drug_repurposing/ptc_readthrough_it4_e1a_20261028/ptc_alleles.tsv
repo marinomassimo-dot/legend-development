@@ -1,0 +1,33 @@
+cdna	protein	clinvar	classification	review	exon	wt_codon	wt_aa	stop	plus4	context	mismatch_codon_pos	nt_to_last_junction	nmd_prediction	domain	wt_aa_in_reported_insertion_set	wt_restoring_plausible
+c.102C>A	p.Tyr34Ter	VCV001180753	Likely pathogenic	criteria provided, single submitter	1	TAC	Y	UAA	G	UAA-G	3	954	NMD-predicted	WW1	True	True
+c.127C>T	p.Gln43Ter	VCV001068501	Pathogenic	criteria provided, multiple submitters, no conflicts	2	CAG	Q	UAG	U	UAG-U	1	927	NMD-predicted	WW1	True	True
+c.131G>A	p.Trp44Ter	VCV000372547	Pathogenic	criteria provided, multiple submitters, no conflicts	2	TGG	W	UAG	G	UAG-G	2	924	NMD-predicted	WW1	False	False
+c.132G>A	p.Trp44Ter	VCV000489204	Pathogenic	criteria provided, single submitter	2	TGG	W	UGA	G	UGA-G	3	924	NMD-predicted	WW1	True	True
+c.160C>T	p.Arg54Ter	VCV000120325	Pathogenic	criteria provided, multiple submitters, no conflicts	2	CGA	R	UGA	G	UGA-G	1	894	NMD-predicted	N-terminal/linker	True	True
+c.183C>G	p.Tyr61Ter	VCV003366925	Pathogenic	criteria provided, multiple submitters, no conflicts	3	TAC	Y	UAG	G	UAG-G	3	873	NMD-predicted	WW2	True	True
+c.183C>A	p.Tyr61Ter	VCV000373951	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	3	TAC	Y	UAA	G	UAA-G	3	873	NMD-predicted	WW2	True	True
+c.184G>T	p.Gly62Ter	VCV000976436	Pathogenic	criteria provided, single submitter	3	GGA	G	UGA	U	UGA-U	1	870	NMD-predicted	WW2	False	False
+c.196G>T	p.Glu66Ter	VCV003366926	Pathogenic	criteria provided, single submitter	3	GAA	E	UAA	A	UAA-A	1	858	NMD-predicted	WW2	False	False
+c.214C>T	p.Gln72Ter	VCV000449920	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	3	CAA	Q	UAA	G	UAA-G	1	840	NMD-predicted	WW2	True	True
+c.255C>G	p.Tyr85Ter	VCV000419259	Pathogenic	criteria provided, multiple submitters, no conflicts	4	TAC	Y	UAG	U	UAG-U	3	801	NMD-predicted	WW2	True	True
+c.321C>G	p.Tyr107Ter	VCV001072064	Pathogenic	criteria provided, multiple submitters, no conflicts	4	TAC	Y	UAG	G	UAG-G	3	735	NMD-predicted	N-terminal/linker	True	True
+c.321C>A	p.Tyr107Ter	VCV001180630	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	4	TAC	Y	UAA	G	UAA-G	3	735	NMD-predicted	N-terminal/linker	True	True
+c.403G>T	p.Gly135Ter	VCV004850426	Likely pathogenic	criteria provided, single submitter	4	GGA	G	UGA	A	UGA-A	1	651	NMD-predicted	region 125-414, before Y293	False	False
+c.511G>T	p.Glu171Ter	VCV000225517	Likely pathogenic	criteria provided, single submitter	5	GAA	E	UAA	U	UAA-U	1	543	NMD-predicted	region 125-414, before Y293	False	False
+c.571C>T	p.Gln191Ter	VCV004852515	Likely pathogenic	criteria provided, single submitter	6	CAG	Q	UAG	C	UAG-C	1	483	NMD-predicted	region 125-414, before Y293	True	True
+c.583G>T	p.Glu195Ter	VCV000568364	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	6	GAA	E	UAA	G	UAA-G	1	471	NMD-predicted	region 125-414, before Y293	False	False
+c.730C>T	p.Gln244Ter	VCV001033412	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	7	CAG	Q	UAG	G	UAG-G	1	324	NMD-predicted	region 125-414, before Y293	True	True
+c.749C>G	p.Ser250Ter	VCV000284393	Pathogenic	criteria provided, multiple submitters, no conflicts	7	TCA	S	UGA	G	UGA-G	2	306	NMD-predicted	region 125-414, before Y293	False	False
+c.779C>G	p.Ser260Ter	VCV000241104	Pathogenic	criteria provided, single submitter	7	TCA	S	UGA	G	UGA-G	2	276	NMD-predicted	region 125-414, before Y293	False	False
+c.790C>T	p.Arg264Ter	VCV000241105	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	7	CGA	R	UGA	U	UGA-U	1	264	NMD-predicted	region 125-414, before Y293	True	True
+c.863G>A	p.Trp288Ter	VCV002942432	Pathogenic	criteria provided, single submitter	8	TGG	W	UAG	G	UAG-G	2	192	NMD-predicted	region 125-414, before Y293	False	False
+c.864G>A	p.Trp288Ter	VCV003366919	Pathogenic	criteria provided, single submitter	8	TGG	W	UGA	G	UGA-G	3	192	NMD-predicted	region 125-414, before Y293	True	True
+c.1005G>A	p.Trp335Ter	VCV000180249	Pathogenic	no assertion criteria provided	8	TGG	W	UGA	U	UGA-U	3	51	borderline-50-55nt	region 125-414, after Y293	True	True
+c.1057C>T	p.Gln353Ter	VCV001381570	Pathogenic	criteria provided, single submitter	9	CAA	Q	UAA	C	UAA-C	1	-3	NMD-escape-predicted	region 125-414, after Y293	True	True
+c.1060C>T	p.Gln354Ter	VCV002438615	Uncertain significance	criteria provided, single submitter	9	CAG	Q	UAG	G	UAG-G	1	-6	NMD-escape-predicted	region 125-414, after Y293	True	True
+c.1114G>T	p.Gly372Ter	VCV000450593	Pathogenic/Likely pathogenic	criteria provided, multiple submitters, no conflicts	9	GGA	G	UGA	G	UGA-G	1	-60	NMD-escape-predicted	region 125-414, after Y293	False	False
+c.1165C>T	p.Gln389Ter	VCV001356028	Conflicting classifications of pathogenicity	criteria provided, conflicting classifications	9	CAG	Q	UAG	A	UAG-A	1	-111	NMD-escape-predicted	region 125-414, after Y293	True	True
+c.1171G>T	p.Glu391Ter	VCV001329854	Pathogenic	criteria provided, multiple submitters, no conflicts	9	GAA	E	UAA	G	UAA-G	1	-117	NMD-escape-predicted	region 125-414, after Y293	False	False
+c.1193G>A	p.Trp398Ter	VCV003251180	Uncertain significance	criteria provided, single submitter	9	TGG	W	UAG	G	UAG-G	2	-138	NMD-escape-predicted	region 125-414, after Y293	False	False
+c.1204G>T	p.Glu402Ter	VCV000449683	Conflicting classifications of pathogenicity	criteria provided, conflicting classifications	9	GAG	E	UAG	A	UAG-A	1	-150	NMD-escape-predicted	region 125-414, after Y293	False	False
+c.1216C>T	p.Gln406Ter	VCV000838762	Uncertain significance	criteria provided, single submitter	9	CAA	Q	UAA	G	UAA-G	1	-162	NMD-escape-predicted	region 125-414, after Y293	True	True

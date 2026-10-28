@@ -72,6 +72,21 @@
    "owner": "Scientist (replication; not done here)",
    "card": null,
    "record": "closed_loop_it3_20261028/README.md#case-b"
+  },
+  {
+   "id": "LD-006",
+   "need": "NEED-WWOX-PTC-READTHROUGH",
+   "subject": "premature-stop read-through agents (ataluren, aminoglycosides, ELX-02) for WWOX nonsense alleles",
+   "catalogue_ids": [
+    "CAT:CHEMBL256997"
+   ],
+   "decision": "insufficient",
+   "why": "The need lists only WWOX as a target, so the catalogue returns no read-through agent through it; agents sit on the ribosome (ChEMBL: ataluren 80S ribosome modulator). Sequence enumeration of 32 ClinVar nonsense alleles: 23 predicted NMD-sensitive, 1 borderline, 8 predicted escape; all five census 'candidate' alleles are NMD-sensitive, and no allele has the UGA-C context. No WWOX read-through or NMD measurement exists. Closest nonsense-DEE trial (ataluren in CDKL5/Dravet, n=15) was negative.",
+   "reopening_condition": "a measured PTC transcript level in patient-derived cells for a recorded WWOX nonsense allele, or any WWOX read-through experiment",
+   "next_experiment": "transcript-level NMD assay (NMD-discriminating arm) on a patient-derived line carrying p.Arg264* or p.Arg54*, and on a predicted-escape allele such as p.Gln353*",
+   "owner": "Scientist (measurement; not done here)",
+   "card": null,
+   "record": "ptc_readthrough_it4_e1a_20261028/README.md"
   }
  ]
 }
