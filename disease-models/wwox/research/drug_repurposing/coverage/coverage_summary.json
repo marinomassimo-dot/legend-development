@@ -126,10 +126,10 @@
    "precedent_other_disease_only": 9,
    "target_engagement_only": 3
   },
-  "L4_observed": 5,
+  "L4_observed": 4,
   "L4_states": {
-   "none_in_record": 1517,
-   "observed_case_level": 2,
+   "none_in_record": 1518,
+   "observed_case_level": 1,
    "observed_experimental": 3
   },
   "cells_nonempty": 1522,
@@ -872,7 +872,7 @@
     "cells_L3_observed": 4,
     "cells_L3_observed_case_level_only": 2,
     "cells_L3_observed_wwox_system": 2,
-    "cells_L4_observed": 2,
+    "cells_L4_observed": 1,
     "direction": "down",
     "excluded_records_by_reason": {
      "placeholder": 1,
@@ -1340,19 +1340,19 @@
    "target_engagement_assay": 9
   },
   "listed_by_sign": {
-   "benefit": 38,
+   "benefit": 37,
    "harm": 5,
-   "mixed": 3,
-   "normalised_vs_wild_type": 2,
+   "mixed": 1,
+   "normalised_vs_wild_type": 3,
    "not_normalised_vs_wild_type": 2,
    "null": 13,
-   "partial_benefit": 1,
+   "partial_benefit": 3,
    "unquantified": 2,
    "unresolved": 6
   },
   "note": "an assertion is counted per (assertion, need) row of the pertinence table; L3/L4 cells count (row, need) pairs"
  },
- "plain_statement": "None of the interventions in this matrix is a catalogued repurposing candidate with a controlled recovery in a WWOX system. The only experimental L4 cells are an AAV9 gene therapy (high dose, n 5 for spike-wave discharges; for growth, body weight only, blood glucose unchanged); the other L4 cells are uncontrolled case-level clinical reports (vigabatrin, ketogenic diet). Ethosuximide, lithium and a tool compound (d-APV) have single WWOX-system readouts without recovery status. Compound-target links are source statements, not evidence of effect.",
+ "plain_statement": "None of the interventions in this matrix is a catalogued repurposing candidate with a controlled recovery in a WWOX system. The only experimental L4 cells are an AAV9 gene therapy (high dose, n 5 for spike-wave discharges; for growth, body weight only, blood glucose unchanged); the other L4 cell is an uncontrolled case-level clinical report (vigabatrin); the ketogenic-diet record is retrospective, has no denominator and is not counted as L4. Ethosuximide, lithium and a tool compound (d-APV) have single WWOX-system readouts without recovery status. Compound-target links are source statements, not evidence of effect.",
  "priorities": {
   "all_dispositions_listed": [
    "consistent_mechanism_candidate",
