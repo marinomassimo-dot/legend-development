@@ -1,0 +1,15 @@
+compound	study	system	applied_nM	target	enzyme_IC50_label	enzyme_IC50_nM	applied_over_IC50	reading
+PBA	DeLeeuw 2026 (PMID 42157447)	GAT-1 variants, HEK293T (ER-pathway client)	2000000	HDAC1	CHEMBL1469 doc value	64000	31.2	31.2 times the enzyme IC50 (enzyme-level arithmetic, not cellular occupancy)
+PBA	DeLeeuw 2026 (PMID 42157447)	GAT-1 variants, HEK293T (ER-pathway client)	2000000	HDAC1	CHEMBL1746 doc value	162000	12.3	12.3 times the enzyme IC50 (enzyme-level arithmetic, not cellular occupancy)
+PBA	DeLeeuw 2026 (PMID 42157447)	GAT-1 variants, HEK293T (ER-pathway client)	2000000	HDAC6	CHEMBL1469 doc value	240000	8.3	8.3 times the enzyme IC50 (enzyme-level arithmetic, not cellular occupancy)
+PBA	Guiberson 2018 (PMID 30266908)	Munc18-1 variants, HEK293T and neurons (soluble client)	5000000	HDAC1	CHEMBL1469 doc value	64000	78.1	78.1 times the enzyme IC50 (enzyme-level arithmetic, not cellular occupancy)
+PBA	Guiberson 2018 (PMID 30266908)	Munc18-1 variants, HEK293T and neurons (soluble client)	5000000	HDAC1	CHEMBL1746 doc value	162000	30.9	30.9 times the enzyme IC50 (enzyme-level arithmetic, not cellular occupancy)
+PBA	Guiberson 2018 (PMID 30266908)	Munc18-1 variants, HEK293T and neurons (soluble client)	5000000	HDAC6	CHEMBL1469 doc value	240000	20.8	20.8 times the enzyme IC50 (enzyme-level arithmetic, not cellular occupancy)
+sodium butyrate	DeLeeuw 2026 (PMID 42157447)	GAT-1 variants, HEK293T	2000000	HDAC1	CHEMBL62381/14227 low	16000	125.0	125.0 times the enzyme IC50 (enzyme-level arithmetic, not cellular occupancy)
+sodium butyrate	DeLeeuw 2026 (PMID 42157447)	GAT-1 variants, HEK293T	2000000	HDAC1	CHEMBL14227 high	300000	6.7	6.7 times the enzyme IC50 (enzyme-level arithmetic, not cellular occupancy)
+sodium butyrate	DeLeeuw 2026 (PMID 42157447)	GAT-1 variants, HEK293T	2000000	HDAC6	CHEMBL14227 doc value (relation >)	2000000	1.0	at most 1.0 (IC50 is a lower bound): HDAC6 not reliably engaged
+sodium butyrate	Guiberson 2018 (PMID 30266908), Supp Fig 12a	Munc18-1 WT and G544D, HEK293T	5000000	HDAC1	CHEMBL62381/14227 low	16000	312.5	312.5 times the enzyme IC50 (enzyme-level arithmetic, not cellular occupancy)
+sodium butyrate	Guiberson 2018 (PMID 30266908), Supp Fig 12a	Munc18-1 WT and G544D, HEK293T	5000000	HDAC1	CHEMBL14227 high	300000	16.7	16.7 times the enzyme IC50 (enzyme-level arithmetic, not cellular occupancy)
+sodium butyrate	Guiberson 2018 (PMID 30266908), Supp Fig 12a	Munc18-1 WT and G544D, HEK293T	5000000	HDAC6	CHEMBL14227 doc value (relation >)	2000000	2.5	at most 2.5 (IC50 is a lower bound): HDAC6 not reliably engaged
+SAHA vorinostat	DeLeeuw 2026 (PMID 42157447)	GAT-1 variants, HEK293T	2500	HDAC1	median of deposited IC50 rows	76	32.9	32.9 times the enzyme IC50 (enzyme-level arithmetic, not cellular occupancy)
+SAHA vorinostat	DeLeeuw 2026 (PMID 42157447)	GAT-1 variants, HEK293T	2500	HDAC6	median of deposited IC50 rows	38	65.8	65.8 times the enzyme IC50 (enzyme-level arithmetic, not cellular occupancy)
