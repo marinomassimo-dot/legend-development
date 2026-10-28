@@ -119,6 +119,7 @@ def card_attachments(card_links: Path, modalities: Path) -> tuple[dict, dict]:
 # ----------------------------------------------------------------------------- inputs
 PERT_COLS = ("card_id", "assertion_id", "need_id", "subject", "evidence_kind", "sign", "counts_L3", "counts_L4", "flags", "basis")
 READOUT_KINDS = ("readout_in_wwox_system", "case_report_wwox_clinical")
+NOT_AN_OBSERVATION_KINDS = ("case_report_uninformative", "out_of_scope_endpoint", "control_arm_same_experiment")
 HARD_STATES = {"FAILED", "INCOMPLETE", "NOT_FETCHED"}
 STALE_STATES = {"STALE_EXPORT", "STALE_AFTER_FAILED_REFRESH"}
 TOOL_SUBJECTS = {"tool_no_catalogue_identity", "genetic_precedent_not_a_compound"}
@@ -246,8 +247,13 @@ def build(needs_path=rs.DEFAULT_NEEDS, catalog_dir: Path = cc.DEFAULT_DIR, dr: P
     cited_cells = {(rid, n) for cid, rl in card_rows.items() for (rid, _a) in rl for n, cs in need_cards.items() if cid in cs}
 
     cells = {}
+    listed_all = {(r["card_id"], r["assertion_id"]) for r in pert}
     need_by = {n["id"]: n for n in needs}
     stale_caveat = [f"{k}: {eff[k]['detail']}" for k in stale if eff[k].get("detail")]
+    partial = [f"{k}: {v['detail']}" for k, v in eff.items() if v["state"] == "PARTIAL"]
+    for rr in rows.values():
+        if partial and rr["kind"] == "molecule_family":
+            rr["access_caveat"] = "; ".join(partial) + "; supplement status is name-only, so unknown/unverified for supplements is not a negative"
     for rid in sorted(rows):
         r = rows[rid]
         for nid, need in need_by.items():
@@ -289,6 +295,9 @@ def build(needs_path=rs.DEFAULT_NEEDS, catalog_dir: Path = cc.DEFAULT_DIR, dr: P
                           "unresolved_associations": len([a for a in link if a["consistency"] in ("direction_unresolved", "not_evaluable")]),
                           "certainty_qualifiers": sorted({a["certainty_qualifier"] for a in cons + opp if a.get("certainty_qualifier")})}
             L3, L4 = observation_levels(obs)
+            card_set = {o["card_id"] for o in obs} | {x["card_id"] for x in r["cards"]}
+            L3["unassessed_assertions_on_card"] = sorted(f"{cid}/{aid}" for cid in card_set for (c2, aid), a in ass_index.items()
+                                                         if c2 == cid and a["epistemic_status"] == "DATO" and (cid, aid) not in listed_all and not cards[cid]["is_axis"])
             cells[(rid, nid)] = {"row_id": rid, "need": nid, "L1_documented_link": L1, "L2_mechanistic_coherence": L2, "L3_observed_effect": L3,
                                  "L4_observed_recovery_in_wwox_system": L4, "exploration_only": nd_dir in ("uncertain", "modulate")}
 
@@ -330,18 +339,28 @@ def build(needs_path=rs.DEFAULT_NEEDS, catalog_dir: Path = cc.DEFAULT_DIR, dr: P
 
 
 def observation_levels(obs: list[dict]) -> tuple[dict, dict]:
-    wx = [o for o in obs if o["kind"] == "readout_in_wwox_system" and o["counts_L3"]]
-    cl = [o for o in obs if o["kind"] == "case_report_wwox_clinical" and o["counts_L3"]]
+    """L3 and L4 of one cell from its listed assertions. Rules: only readouts in a WWOX system or WWOX case reports count; an assertion
+    whose reading depth is UNKNOWN never reaches `observed_wwox_system`; uninformative case reports, control arms of the same experiment,
+    out-of-scope endpoints, unquantified readouts and listed-but-not-counted rows stay visible under `listed_not_counted`."""
+    counted_pool = [o for o in obs if o["kind"] in READOUT_KINDS and o["counts_L3"]]
+    deep = [o for o in counted_pool if o["reading_depth"] != "UNKNOWN"]
+    shallow = [o for o in counted_pool if o["reading_depth"] == "UNKNOWN"]
+    wx = [o for o in deep if o["kind"] == "readout_in_wwox_system"]
+    cl = [o for o in deep if o["kind"] == "case_report_wwox_clinical"]
     oth = [o for o in obs if o["kind"] == "readout_other_disease"]
     te = [o for o in obs if o["kind"] == "target_engagement_assay"]
     saf = [o for o in obs if o["kind"] == "safety_signal"]
     lab = [o for o in obs if o["kind"] == "label_statement"]
+    ctrl = [o for o in obs if o["kind"] == "control_arm_same_experiment"]
+    not_counted = [o for o in obs if o not in counted_pool and o["kind"] in READOUT_KINDS + ("case_report_uninformative", "out_of_scope_endpoint")]
     sg = lambda L: dict(collections.Counter(o["sign"] for o in L))
-    nonnull = lambda L: [o for o in L if o["sign"] != "null"]
-    if wx and nonnull(wx):
+    informative = lambda L: [o for o in L if o["sign"] not in ("null", "unresolved")]
+    if wx and informative(wx):
         st = "observed_wwox_system"
-    elif cl and nonnull(cl):
+    elif cl and informative(cl):
         st = "observed_case_level_only"
+    elif shallow:
+        st = "observed_depth_unknown"
     elif wx or cl:
         st = "measured_null_only"
     elif oth:
@@ -354,19 +373,23 @@ def observation_levels(obs: list[dict]) -> tuple[dict, dict]:
         st = "none_in_cards"
     scope_counts = dict(collections.Counter(("wwox_experimental" if o["kind"] == "readout_in_wwox_system" else "wwox_clinical_report") for o in wx + cl))
     L3 = {"by_scope": scope_counts, "measured_null_assertions": sum(1 for o in wx + cl if o["sign"] == "null"), "inference_assertions": 0,
-          "state": st, "signs_wwox_system_readouts": sg(wx), "signs_case_reports": sg(cl), "signs_other_disease_precedent_not_observed_here": sg(oth),
+          "state": st, "signs_wwox_system_readouts": sg(wx), "signs_case_reports": sg(cl), "signs_depth_unknown_not_counted_as_observed": sg(shallow),
+          "signs_other_disease_precedent_not_observed_here": sg(oth), "signs_control_arms_of_the_same_experiment": sg(ctrl),
           "target_engagement_assays_not_readouts": len(te), "safety_signals_kept_apart": sg(saf), "label_statements_not_observations": len(lab),
+          "listed_not_counted": sorted({f"{o['id']}:{o['kind']}" for o in not_counted}),
           "assertion_ids": sorted({o["id"] for o in wx + cl}), "cards": sorted({o["card_id"] for o in obs}),
-          "flags": sorted({f for o in wx + cl for f in o["flags"].split(";") if f}),
-          "pertinence": "endpoint-level: each assertion is listed for this need in assertion_pertinence.tsv; unlisted assertions are not counted",
+          "flags": sorted({f for o in wx + cl + shallow for f in o["flags"].split(";") if f}),
+          "pertinence": "endpoint-level: each assertion is listed for this need in assertion_pertinence.tsv; unlisted assertions are not counted and are flagged per cell as unassessed_assertions_on_card",
           "harm_and_benefit_are_not_pooled": True,
           "absence_note": "none_in_cards is not a negative: cards cover a few dozen interventions" if st == "none_in_cards" and not obs else None}
-    rec = [o for o in wx + cl if o["counts_L4"] and o["comparison"] == "OPPOSES_DISEASE_CHANGE" and o["reading_depth"] != "UNKNOWN"]
+    rec = [o for o in wx + cl if o["counts_L4"] and o["comparison"] == "OPPOSES_DISEASE_CHANGE"]
     exp = [o for o in rec if o["kind"] == "readout_in_wwox_system"]
     case = [o for o in rec if o["kind"] == "case_report_wwox_clinical"]
+    notes = sorted({f for o in rec for f in o["flags"].split(";") if f.startswith("growth=")})
     L4 = {"by_scope": {k: v for k, v in (("wwox_experimental", len(exp)), ("wwox_clinical_report", len(case))) if v}, "via_class_card": False,
           "state": "observed_experimental" if exp else ("observed_case_level" if case else "none_in_record"),
           "assertion_ids": sorted(o["id"] for o in rec), "experimental_assertions": len(exp), "case_level_assertions": len(case),
+          "endpoint_note": ("growth = body weight only (blood glucose was not changed)" if "growth=body_weight_only" in notes else None),
           "definition": "WWOX-system assertion judged by the bridge as opposing the disease change, endpoint pertinent to the need, reading depth known, high-dose arm only for dose-arm designs; a technical comparison, not efficacy or safety. case_level = uncontrolled clinical report"}
     return L3, L4
 
@@ -441,7 +464,7 @@ def make_priorities(rows, cells, need_by, cards, card_rows, need_cards, eff, har
                 "potency_and_assay_context": "NOT_CARRIED: the catalogue holds no potency; target-engagement assays are counted apart (" + str(L3["target_engagement_assays_not_readouts"]) + ")",
                 "transferability": {"species_of_assertions": sorted({a["species"] for a in sel if a["species"]}), "scopes": sorted({a["scope"] for a in sel}),
                                     "system_of_interest": "WWOX-DEE reference genotype class; transfer is a stated distance, not a score"},
-                "pharmacology_safety_info": {"status_class": r.get("status_class"), "access_categories": r.get("access_categories"),
+                "pharmacology_safety_info": {"status_class": r.get("status_class"), "access_categories": r.get("access_categories"), "access_caveat": r.get("access_caveat"),
                                              "safety_assessment": "NOT_ASSESSED (catalogue); safety triage is a separate step"},
                 "discriminating_experiment": {"card_endpoint_pursued": [c_["endpoint_pursued"] for c_ in crs if c_["endpoint_pursued"]][:1],
                                               "exists": any(c_["endpoint_pursued"] for c_ in crs)},
@@ -498,7 +521,7 @@ def make_summary(entries, idx, rows, cells, per_need, priorities, need_by, cards
     beside_rec = {a["catalogue_id"] for a in assoc_all if a["target_kind"] in rs.BESIDE_KINDS and not a["excluded_from_counts"]}
     recs_with_targets = sum(1 for e in entries if e["targets"])
     lv = lambda key, st: sum(1 for c in cells.values() if c[key]["state"] == st)
-    reason_class = lambda a: "alias_risk" if a["excluded_from_counts"].startswith("alias_risk") else ("placeholder" if a["excluded_from_counts"].startswith("placeholder") else "source_artefact")
+    reason_class = lambda a: a["excluded_reason"]
     per = {}
     kinds = ("intervention_target", "disease_gene_product", "pathway_member", "effector_constraint", "readout_marker")
     for nid, n in need_by.items():
@@ -538,6 +561,11 @@ def make_summary(entries, idx, rows, cells, per_need, priorities, need_by, cards
                   "families": len(fam_all), "chembl_families": len(chembl_fams), "source_only_families_unresolved_identity": len(fam_all - chembl_fams),
                   "family_rule": "ChEMBL parent link or identical InChIKey connectivity block; source-only records stay singletons; nothing merged on name",
                   "coverage_unit": "compound families (each counted once per need); card interventions and tool subjects are separate rows"},
+        "plain_statement": ("None of the interventions in this matrix is a catalogued repurposing candidate with a controlled recovery in a WWOX system. The only "
+                            "experimental L4 cells are an AAV9 gene therapy (high dose, n 5 for spike-wave discharges; for growth, body weight only, blood glucose unchanged); "
+                            "the other L4 cells are uncontrolled case-level clinical reports (vigabatrin, ketogenic diet). Ethosuximide, lithium and a tool compound (d-APV) have "
+                            "single WWOX-system readouts without recovery status. Compound-target links are source statements, not evidence of effect."),
+        "access_caveats": [f"{k}: {v['detail']}" for k, v in eff.items() if v["state"] == "PARTIAL"],
         "source_states": {k: {"state": v["state"], "detail": v["detail"]} for k, v in eff.items()},
         "source_state_vocabulary": "OK | STALE_EXPORT | STALE_AFTER_FAILED_REFRESH | PARTIAL | FAILED | INCOMPLETE | NOT_FETCHED; hard problems (FAILED, INCOMPLETE, NOT_FETCHED) of ANY source turn dispositions into incomplete_or_failed_query; stale states add a caveat to every absence-type result",
         "inputs_status": {"hard_problem_sources": hard, "stale_sources": stale, "stale_role_rows": stale_roles, "stale_pertinence_rows": stale_pert,

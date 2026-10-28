@@ -78,6 +78,8 @@ class Fixture(unittest.TestCase):
             entry("CAT:DGIDB:null", "Null", origin="dgidb_only", targets=[dg_t2("hgnc:4584", "GRIN1", "inhibitor", "TTD")]),
             entry("CAT:DGIDB:alias", "Aliasine", origin="dgidb_only", targets=[dg_t2("hgnc:8809", "PDK1", "inhibitor", "TdgClinicalTrial"), dg_t2("hgnc:8816", "PDPK1", "inhibitor", "DTC")]),
             entry("CAT:DGIDB:tau", "Tauish", origin="dgidb_only", targets=[dg_t2("hgnc:6893", "MAPT", None, "TTD"), dg_t2("hgnc:4923", "HK2", None, "TTD")]),
+            entry("CAT:DGIDB:exp", "Expandine", origin="dgidb_only", targets=[dg_t2("hgnc:1", "AAAA1", "inhibitor", "GuideToPharmacology"), dg_t2("hgnc:2", "AAAA2", "agonist", "GuideToPharmacology"), dg_t2("hgnc:3", "AAAA3", None, "GuideToPharmacology")]),
+            entry("CAT:DGIDB:fill", "Filler", origin="dgidb_only", targets=[dg_t2(f"hgnc:{100+i}", f"G{i:03d}", None, "TTD") for i in range(80)]),
             entry("CAT:DGIDB:hif", "Hifish", origin="dgidb_only", targets=[dg_t2("hgnc:4910", "HIF1A", None, "TTD")]),
         ]
         self.write()
@@ -95,7 +97,7 @@ class Fixture(unittest.TestCase):
         (self.root / "cat/non_molecule_modalities.tsv").write_text("card_id\tmodality\twhy\tsource\nC-AAV\tgene_replacement_vector\tvector\tt\n")
         (self.root / "needs.json").write_text(json.dumps({"needs": self.needs}))
         (self.root / "roles.tsv").write_text("need_id\tsymbol\tcoupling\tbasis\tqualifier\nN-DOWN\tGRIN1\tsame\tb\tone full block only\nN-DOWN\tGRIA1\tunresolved\tb\tguess\nN-SHARE\tGRIN1\tsame\tb\t\nN-GENE\tWWOX\tsame\tb\t\nN-GONE\tXXX\tsame\tstale\t\n")
-        (self.root / "artefacts.tsv").write_text("claim_source\tsymbol\trule\tevidence\nGuideToPharmacology\tGRIN1\trequire_second_source\ttest\n*\tPDK1\talias_risk:PDPK1\ttest\n")
+        (self.root / "artefacts.tsv").write_text("claim_source\tsymbol\trule\tevidence\nGuideToPharmacology\tGRIN1\trequire_second_source\ttest\nGuideToPharmacology\t*\tearly_alphabet_run:min=3:top=0.08\ttest\n*\tPDK1\talias_risk:PDPK1\ttest\n")
         P = [("C-DRUG", "A1", "N-DOWN", "card", "readout_in_wwox_system", "benefit", "yes", "yes", "high_dose_arm", "b"),
              ("C-DRUG", "A2", "N-DOWN", "CHEMBL3", "readout_other_disease", "harm", "no", "no", "", "b"),
              ("C-DRUG", "A3", "N-DOWN", "card", "target_engagement_assay", "benefit", "no", "no", "", "b"),
@@ -108,8 +110,9 @@ class Fixture(unittest.TestCase):
                 {"id": "A2", "direction": "DECREASE", "epistemic_status": "DATO", "reading_depth": "abstract_only", "source": "s2", "context": {"disease_id": "epilepsy (not WWOX)", "species": "rat"}},
                 {"id": "A3", "direction": "DECREASE", "epistemic_status": "DATO", "reading_depth": "x", "source": "s3", "context": {"disease_id": "enzyme assay (not WWOX)", "species": "human"}},
                 {"id": "A4", "direction": "INCREASE", "epistemic_status": "DATO", "reading_depth": "complete_fulltext_read", "source": "s4", "context": {"disease_id": "Wwox-null mouse WOREE", "species": "mouse"}},
-                {"id": "A5", "direction": "DECREASE", "epistemic_status": "DATO", "reading_depth": "complete_fulltext_read", "source": "s5", "context": {"disease_id": "Wwox-null slices", "species": "mouse"}}],
-             {"A1": "OPPOSES_DISEASE_CHANGE", "A2": "UNRESOLVED", "A3": "UNRESOLVED", "A4": "OPPOSES_DISEASE_CHANGE", "A5": "UNRESOLVED"}),
+                {"id": "A5", "direction": "DECREASE", "epistemic_status": "DATO", "reading_depth": "complete_fulltext_read", "source": "s5", "context": {"disease_id": "Wwox-null slices", "species": "mouse"}},
+                {"id": "A6", "direction": "NO_CHANGE", "epistemic_status": "DATO", "reading_depth": "complete_fulltext_read", "source": "s6", "context": {"disease_id": "Wwox-null mouse WOREE", "species": "mouse"}}],
+             {"A1": "OPPOSES_DISEASE_CHANGE", "A2": "UNRESOLVED", "A3": "UNRESOLVED", "A4": "OPPOSES_DISEASE_CHANGE", "A5": "UNRESOLVED", "A6": "UNRESOLVED"}),
             ("C-AAV", "cards", "AAV", [], {})):
             (self.root / "dr" / sub / f"{stem}.packet.json").write_text(json.dumps({"candidate": {"id": stem, "name": cand}, "route": "r", "drug_assertions": assertions}))
             (self.root / "dr" / sub / f"{stem}.card.json").write_text(json.dumps({"comparisons": [{"assertion_id": k, "status": v} for k, v in comps.items()], "p4_fields": {"endpoint_pursued": "E"}, "next_step": "n", "limits": []}))
@@ -367,6 +370,104 @@ class LevelsAndCounts(Fixture):
         out = self.root / "out"
         cov.write_all(a, out)
         self.assertEqual((out / "priorities.json").read_text(), cov.dump(b["priorities"], True))
+
+
+def ob(aid, kind, sign="benefit", depth="complete_fulltext_read", l3=True, l4=False, comp="OPPOSES_DISEASE_CHANGE", flags=""):
+    return {"id": aid, "kind": kind, "sign": sign, "reading_depth": depth, "counts_L3": l3, "counts_L4": l4, "comparison": comp, "flags": flags, "card_id": "C"}
+
+
+class ObservationRules(unittest.TestCase):
+    def test_unknown_reading_depth_never_reaches_observed_wwox_system(self):
+        l3, l4 = cov.observation_levels([ob("X1", "readout_in_wwox_system", depth="UNKNOWN", l4=True)])
+        self.assertEqual(l3["state"], "observed_depth_unknown")
+        self.assertEqual(l4["state"], "none_in_record")
+        self.assertEqual(l3["signs_depth_unknown_not_counted_as_observed"], {"benefit": 1})
+
+    def test_uninformative_report_and_control_arm_do_not_make_a_null_or_an_observation(self):
+        l3, _ = cov.observation_levels([ob("W7", "case_report_uninformative", sign="null", l3=False), ob("L2", "control_arm_same_experiment")])
+        self.assertEqual(l3["state"], "none_in_cards")
+        self.assertIn("W7:case_report_uninformative", l3["listed_not_counted"])
+        self.assertEqual(l3["signs_control_arms_of_the_same_experiment"], {"benefit": 1})
+
+    def test_null_of_the_same_experiment_stays_visible_beside_a_benefit(self):
+        l3, _ = cov.observation_levels([ob("A", "readout_in_wwox_system"), ob("B", "readout_in_wwox_system", sign="null")])
+        self.assertEqual(l3["signs_wwox_system_readouts"], {"benefit": 1, "null": 1})
+        self.assertEqual(l3["state"], "observed_wwox_system")
+
+    def test_growth_l4_carries_the_body_weight_note(self):
+        _, l4 = cov.observation_levels([ob("W", "readout_in_wwox_system", l4=True, flags="growth=body_weight_only")])
+        self.assertIn("body weight only", l4["endpoint_note"])
+
+
+class Detector(Fixture):
+    def test_generic_alphabetical_prefix_expansion_is_flagged_and_a_lone_early_gene_is_not(self):
+        idx, _ = self.idx()
+        e = next(x for x in self.entries if x["id"] == "CAT:DGIDB:exp")
+        flagged = [rs.artefact_reason(e, t, idx.artefacts, idx.early) for t in e["targets"]]
+        self.assertTrue(all(f and f.startswith("source_artefact") for f in flagged))
+        e2 = dict(e, targets=[e["targets"][0]])                      # one early symbol only: not an expansion run
+        self.assertIsNone(rs.artefact_reason(e2, e2["targets"][0], idx.artefacts, idx.early))
+        e3 = dict(e, targets=e["targets"] + [dg_t2("hgnc:1", "AAAA1", "inhibitor", "TTD")])   # a second source corroborates AAAA1
+        self.assertIsNone(rs.artefact_reason(e3, e3["targets"][0], idx.artefacts, idx.early))
+
+    def test_excluded_rows_carry_an_explicit_reason(self):
+        res = self.run_build()
+        reasons = {a["excluded_reason"] for a in res["associations"] if a["excluded_from_counts"]}
+        self.assertEqual(reasons, {"source_artefact", "alias_risk", "placeholder"})
+        self.assertTrue(all(a["excluded_reason"] is None for a in res["associations"] if not a["excluded_from_counts"]))
+
+    def test_unassessed_assertion_is_flagged_per_cell_and_dsld_partial_is_carried(self):
+        self.write(extra_stats={"dsld": {"bulk_list_probed": 981, "bulk_list_planned_names": 4697}})
+        raw = json.loads((self.root / "cat/catalog_stats.json").read_text())
+        res = self.run_build()
+        c = next(c for c in res["matrix"]["cells"] if c["row_id"] == "FAM:CAT:CHEMBL1" and c["need"] == "N-DOWN")
+        self.assertEqual(c["L3_observed_effect"]["unassessed_assertions_on_card"], ["C-DRUG/A6"])   # A6 (a null of the same experiment) is not listed
+        self.assertEqual(res["summary"]["source_states"]["dsld"]["state"], "PARTIAL")
+        self.assertTrue(res["summary"]["access_caveats"])
+        p = next(p for p in res["priorities"]["priorities"] if p["row_id"] == "FAM:CAT:CHEMBL1")
+        self.assertIn("name-only", p["criteria"]["pharmacology_safety_info"]["access_caveat"])
+
+
+REAL = rs.DR
+@unittest.skipUnless((REAL / "coverage/priorities.json").exists() and (REAL / "catalog/catalog.jsonl.gz").exists(), "real module data not present")
+class RealFiles(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.tmp = tempfile.TemporaryDirectory()
+        cls.cat = Path(cls.tmp.name) / "cat"
+        cls.cat.mkdir()
+        for f in ("catalog.jsonl.gz", "catalog_stats.json", "card_links.json", "non_molecule_modalities.tsv"):
+            (cls.cat / f).write_bytes((REAL / "catalog" / f).read_bytes())
+        cls.base = cov.build()
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.tmp.cleanup()
+
+    def test_hard_failed_source_on_the_real_files_turns_every_disposition_incomplete(self):
+        st = json.loads((self.cat / "catalog_stats.json").read_text())
+        st["sources"]["unichem"] = {"state": "FAILED"}
+        (self.cat / "catalog_stats.json").write_text(json.dumps(st))
+        res = cov.build(catalog_dir=self.cat)
+        self.assertEqual({p["disposition"] for p in res["priorities"]["priorities"]}, {"incomplete_or_failed_query"})
+        self.assertEqual(len(res["priorities"]["priorities"]), len(self.base["priorities"]["priorities"]))   # all of them flip, none is dropped
+        self.assertEqual(res["summary"]["inputs_status"]["hard_problem_sources"], ["unichem"])
+        st["sources"]["unichem"] = {"state": "OK"}
+        (self.cat / "catalog_stats.json").write_text(json.dumps(st))
+
+    def test_real_outcomes_of_the_audit_corrections(self):
+        per = self.base["summary"]["needs"]["per_need"]
+        self.assertEqual(per["NEED-INHIBITORY-HYPOFUNCTION"]["headline_records_intervention_targets"], 11)
+        self.assertEqual(per["NEED-GSK3B-DEREPRESSION"]["headline_records_intervention_targets"], 51)
+        cells = {(c["row_id"], c["need"]): c for c in self.base["matrix"]["cells"]}
+        a51 = cells[("INT:D01_a51", "NEED-MYC-PROGENITOR-PROLIFERATION")]
+        self.assertEqual(a51["L3_observed_effect"]["state"], "observed_depth_unknown")
+        self.assertEqual(a51["L4_observed_recovery_in_wwox_system"]["state"], "none_in_record")
+        pera = [c for (r, n), c in cells.items() if r == "FAM:CAT:CHEMBL1214124" and n == "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR"][0]
+        self.assertEqual(pera["L3_observed_effect"]["state"], "none_in_cards")                           # n=1 polytherapy supports nothing
+        self.assertTrue(all(not c["L3_observed_effect"]["unassessed_assertions_on_card"] for c in cells.values() if c["L3_observed_effect"]["state"].startswith("observed")))
+        self.assertIn("None of the interventions", self.base["summary"]["plain_statement"])
+
 
 
 if __name__ == "__main__":
