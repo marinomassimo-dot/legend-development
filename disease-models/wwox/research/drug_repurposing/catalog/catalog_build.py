@@ -60,7 +60,7 @@ SOURCES = {
         name="UniChem (EMBL-EBI) whole-source mappings ChEMBL<->DrugBank/ChEBI/UNII", licence="EMBL-EBI Terms of Use (UniChem docs, read 2026-10-28, point to them; no CC0 statement found, so none is claimed)",
         terms="https://www.ebi.ac.uk/about/terms-of-use", note="identifier cross-references only; EBI expects attribution"),
     "dgidb": dict(
-        name="DGIdb (drugs.tsv, interactions.tsv)", licence="UNVERIFIED in this task: dgidb.org pages are script-rendered and showed no licence text; DGIdb aggregates claims from other databases whose own terms apply per claim (e.g. TTD, DrugBank, Drugs@FDA); redistribution of claim-derived rows is NOT cleared",
+        name="DGIdb (drugs.tsv, interactions.tsv)", licence="LICENCE NOT CLEARED FOR PUBLIC RELEASE (decision 2026-10-28: DGIdb-derived rows stay in this development repository; the public release is the operator's decision). UNVERIFIED in this task: dgidb.org pages are script-rendered and showed no licence text; DGIdb aggregates claims from other databases whose own terms apply per claim (e.g. TTD, DrugBank, Drugs@FDA); redistribution of claim-derived rows is NOT cleared",
         terms="https://dgidb.org/downloads", note="the TSV release of 2024-06-10 is the newest the site serves at /data/latest"),
     "matrix": dict(
         name="Every Cure MATRIX drug list", licence="CC BY 4.0 (dataset-card metadata of everycure/drug-list, read 2026-10-27, HF API)",

@@ -1,0 +1,574 @@
+{
+ "catalogue_coverage": {
+  "families_by_number_of_needs_touched": {
+   "1": 1446,
+   "17": 1,
+   "2": 263,
+   "3": 21,
+   "4": 5,
+   "5": 2,
+   "6": 1,
+   "8": 1
+  },
+  "families_touching_a_need_if_name_twins_were_collapsed_SENSITIVITY_ONLY": 1608,
+  "families_touching_at_least_one_need_counted_once": 1740,
+  "families_with_documented_link_to_a_need": 1740,
+  "overlap_warning": "needs share targets (e.g. CACNA1G, ABAT); per-need family counts must not be added: use the union above",
+  "pct_records_with_link": {
+   "denominator": 44211,
+   "numerator": 1770,
+   "percent": 4.0,
+   "what": "catalogue records with at least one documented link to a link-type target of any of the needs / all catalogue records; links are source statements, not relevance"
+  },
+  "pct_records_with_target_row_that_link": {
+   "denominator": 24423,
+   "numerator": 1770,
+   "percent": 7.2,
+   "what": "records linked to some need / records carrying any target row"
+  },
+  "records_examined": 44211,
+  "records_touching_only_readout_markers": 351,
+  "records_with_any_target_row": 24423,
+  "records_with_documented_link_to_a_need": 1770,
+  "touched_families_with_a_name_twin_in_another_family_not_merged": 914
+ },
+ "evaluated_vs_records": {
+  "meaning": "'examined' = target-matched against the 22 needs; 'evaluated with observation' = card interventions with at least one data assertion on a need citing the card",
+  "records_evaluated_against_wwox_needs_with_any_observation": 14,
+  "records_examined_by_target_match": 44211,
+  "records_in_catalogue": 44211,
+  "records_with_a_link_to_a_need_target": 1770,
+  "records_with_target_data_at_all": 24423
+ },
+ "inputs_status": {
+  "cards_cited_by_needs_but_missing": [],
+  "catalogue_sources_not_ok": [],
+  "stale_role_rows": []
+ },
+ "limits": [
+  "catalogue links are source statements; no potency is carried",
+  "DGIdb is the 2024-06-10 export",
+  "ChEMBL non-human target rows are set aside, not matched",
+  "card pertinence to a need is card-level",
+  "L4 is a technical bridge comparison, not efficacy",
+  "needs' own WWOX observations are not interventions and fill no compound cell"
+ ],
+ "matrix": {
+  "L1_documented": 2096,
+  "L1_none_found": 430,
+  "L1_not_evaluable": 17,
+  "L2_coherent": 201,
+  "L2_direction_unresolved": 324,
+  "L2_not_evaluable": 1857,
+  "L2_opposed": 63,
+  "L3_inference_only": 0,
+  "L3_measured_null_only": 0,
+  "L3_none_in_cards": 2523,
+  "L3_observed": 20,
+  "L4_observed": 10,
+  "cells_nonempty": 2543,
+  "cells_possible_rows_x_needs": 46134,
+  "levels_are_never_summed": true,
+  "row_kinds": {
+   "intervention_without_catalogue_identity": 8,
+   "molecule_family": 2083,
+   "non_molecule_intervention": 6
+  },
+  "rows": 2097
+ },
+ "needs": {
+  "count": 22,
+  "direction_evaluable": 10,
+  "exploration_only": 12,
+  "needs_with_documented_link_families": 21,
+  "needs_without_any_link_target": [
+   "NEED-SYSTEMIC-GLYCAEMIA-GROWTH"
+  ],
+  "per_need": {
+   "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR": {
+    "cards_citing_need": [
+     "F01_glutamate_receptor_node"
+    ],
+    "cells_L3_observed": 2,
+    "cells_L4_observed": 0,
+    "direction": "down",
+    "exploration_only": false,
+    "families_consistent": 96,
+    "families_opposed": 34,
+    "families_with_documented_link": 203,
+    "identity_guard_hits": 0,
+    "link_targets": 9,
+    "nonhuman_chembl_rows_set_aside": 0,
+    "readout_marker_only_records": 0,
+    "records_with_documented_link": 209,
+    "targets": 9,
+    "wwox_system_observations": 4
+   },
+   "NEED-GABA-CHLORIDE-GRADIENT": {
+    "cards_citing_need": [
+     "F03_bumetanide_chloride_gradient"
+    ],
+    "cells_L3_observed": 0,
+    "cells_L4_observed": 0,
+    "direction": "uncertain",
+    "exploration_only": true,
+    "families_consistent": 0,
+    "families_opposed": 0,
+    "families_with_documented_link": 1,
+    "identity_guard_hits": 0,
+    "link_targets": 2,
+    "nonhuman_chembl_rows_set_aside": 0,
+    "readout_marker_only_records": 0,
+    "records_with_documented_link": 1,
+    "targets": 2,
+    "wwox_system_observations": 0
+   },
+   "NEED-GSK3B-DEREPRESSION": {
+    "cards_citing_need": [
+     "G01_lithium_gsk3"
+    ],
+    "cells_L3_observed": 1,
+    "cells_L4_observed": 1,
+    "direction": "uncertain",
+    "exploration_only": true,
+    "families_consistent": 0,
+    "families_opposed": 0,
+    "families_with_documented_link": 498,
+    "identity_guard_hits": 0,
+    "link_targets": 4,
+    "nonhuman_chembl_rows_set_aside": 0,
+    "readout_marker_only_records": 0,
+    "records_with_documented_link": 498,
+    "targets": 4,
+    "wwox_system_observations": 1
+   },
+   "NEED-INHIBITORY-HYPOFUNCTION": {
+    "cards_citing_need": [
+     "F03_bumetanide_chloride_gradient",
+     "EB-VGB-01"
+    ],
+    "cells_L3_observed": 1,
+    "cells_L4_observed": 1,
+    "direction": "uncertain",
+    "exploration_only": true,
+    "families_consistent": 0,
+    "families_opposed": 0,
+    "families_with_documented_link": 89,
+    "identity_guard_hits": 0,
+    "link_targets": 1,
+    "nonhuman_chembl_rows_set_aside": 2,
+    "readout_marker_only_records": 169,
+    "records_with_documented_link": 89,
+    "targets": 7,
+    "wwox_system_observations": 4
+   },
+   "NEED-ISR-ATTENUATION": {
+    "cards_citing_need": [
+     "E01_isr_modulators"
+    ],
+    "cells_L3_observed": 1,
+    "cells_L4_observed": 0,
+    "direction": "uncertain",
+    "exploration_only": true,
+    "families_consistent": 0,
+    "families_opposed": 0,
+    "families_with_documented_link": 36,
+    "identity_guard_hits": 0,
+    "link_targets": 8,
+    "nonhuman_chembl_rows_set_aside": 0,
+    "readout_marker_only_records": 41,
+    "records_with_documented_link": 36,
+    "targets": 9,
+    "wwox_system_observations": 0
+   },
+   "NEED-LACTATE-LDH": {
+    "cards_citing_need": [
+     "E02_ldh_inhibition"
+    ],
+    "cells_L3_observed": 1,
+    "cells_L4_observed": 0,
+    "direction": "uncertain",
+    "exploration_only": true,
+    "families_consistent": 0,
+    "families_opposed": 0,
+    "families_with_documented_link": 6,
+    "identity_guard_hits": 0,
+    "link_targets": 4,
+    "nonhuman_chembl_rows_set_aside": 0,
+    "readout_marker_only_records": 0,
+    "records_with_documented_link": 6,
+    "targets": 5,
+    "wwox_system_observations": 1
+   },
+   "NEED-MITOCHONDRIAL-RESPIRATION": {
+    "cards_citing_need": [
+     "E02_ldh_inhibition"
+    ],
+    "cells_L3_observed": 1,
+    "cells_L4_observed": 0,
+    "direction": "uncertain",
+    "exploration_only": true,
+    "families_consistent": 0,
+    "families_opposed": 0,
+    "families_with_documented_link": 5,
+    "identity_guard_hits": 6,
+    "link_targets": 3,
+    "nonhuman_chembl_rows_set_aside": 0,
+    "readout_marker_only_records": 6,
+    "records_with_documented_link": 5,
+    "targets": 6,
+    "wwox_system_observations": 1
+   },
+   "NEED-MTOR-AUTOPHAGY": {
+    "cards_citing_need": [
+     "EB-MTOR-AX-01"
+    ],
+    "cells_L3_observed": 0,
+    "cells_L4_observed": 0,
+    "direction": "uncertain",
+    "exploration_only": true,
+    "families_consistent": 0,
+    "families_opposed": 0,
+    "families_with_documented_link": 162,
+    "identity_guard_hits": 0,
+    "link_targets": 2,
+    "nonhuman_chembl_rows_set_aside": 0,
+    "readout_marker_only_records": 22,
+    "records_with_documented_link": 163,
+    "targets": 4,
+    "wwox_system_observations": 1
+   },
+   "NEED-MYC-PROGENITOR-PROLIFERATION": {
+    "cards_citing_need": [
+     "D01_a51"
+    ],
+    "cells_L3_observed": 1,
+    "cells_L4_observed": 1,
+    "direction": "uncertain",
+    "exploration_only": true,
+    "families_consistent": 0,
+    "families_opposed": 0,
+    "families_with_documented_link": 71,
+    "identity_guard_hits": 0,
+    "link_targets": 1,
+    "nonhuman_chembl_rows_set_aside": 0,
+    "readout_marker_only_records": 0,
+    "records_with_documented_link": 71,
+    "targets": 2,
+    "wwox_system_observations": 3
+   },
+   "NEED-MYELINATION": {
+    "cards_citing_need": [
+     "F02_myelination_activity_sign"
+    ],
+    "cells_L3_observed": 0,
+    "cells_L4_observed": 0,
+    "direction": "restore",
+    "exploration_only": false,
+    "families_consistent": 0,
+    "families_opposed": 0,
+    "families_with_documented_link": 128,
+    "identity_guard_hits": 0,
+    "link_targets": 1,
+    "nonhuman_chembl_rows_set_aside": 0,
+    "readout_marker_only_records": 103,
+    "records_with_documented_link": 138,
+    "targets": 6,
+    "wwox_system_observations": 2
+   },
+   "NEED-NEUROINFLAMMATION-GLIA": {
+    "cards_citing_need": [],
+    "cells_L3_observed": 0,
+    "cells_L4_observed": 0,
+    "direction": "uncertain",
+    "exploration_only": true,
+    "families_consistent": 0,
+    "families_opposed": 0,
+    "families_with_documented_link": 405,
+    "identity_guard_hits": 0,
+    "link_targets": 7,
+    "nonhuman_chembl_rows_set_aside": 0,
+    "readout_marker_only_records": 74,
+    "records_with_documented_link": 415,
+    "targets": 10,
+    "wwox_system_observations": 3
+   },
+   "NEED-PDH-PYRUVATE-AXIS": {
+    "cards_citing_need": [
+     "E03_pdk_inhibition_dca",
+     "E04_ketogenic_lactate_axis",
+     "EB-KD-01"
+    ],
+    "cells_L3_observed": 2,
+    "cells_L4_observed": 1,
+    "direction": "uncertain",
+    "exploration_only": true,
+    "families_consistent": 0,
+    "families_opposed": 0,
+    "families_with_documented_link": 156,
+    "identity_guard_hits": 0,
+    "link_targets": 7,
+    "nonhuman_chembl_rows_set_aside": 0,
+    "readout_marker_only_records": 19,
+    "records_with_documented_link": 156,
+    "targets": 9,
+    "wwox_system_observations": 1
+   },
+   "NEED-REDOX-OXIDATIVE-STRESS": {
+    "cards_citing_need": [],
+    "cells_L3_observed": 0,
+    "cells_L4_observed": 0,
+    "direction": "uncertain",
+    "exploration_only": true,
+    "families_consistent": 0,
+    "families_opposed": 0,
+    "families_with_documented_link": 4,
+    "identity_guard_hits": 0,
+    "link_targets": 1,
+    "nonhuman_chembl_rows_set_aside": 0,
+    "readout_marker_only_records": 0,
+    "records_with_documented_link": 4,
+    "targets": 1,
+    "wwox_system_observations": 0
+   },
+   "NEED-SEIZURE-CONTROL-SYMPTOMATIC": {
+    "cards_citing_need": [
+     "EB-KD-01",
+     "EB-VGB-01",
+     "EB-CBD-AX-01",
+     "EB-HORM-AX-01",
+     "EB-DEV-AX-01"
+    ],
+    "cells_L3_observed": 2,
+    "cells_L4_observed": 2,
+    "direction": "down",
+    "exploration_only": false,
+    "families_consistent": 70,
+    "families_opposed": 29,
+    "families_with_documented_link": 130,
+    "identity_guard_hits": 0,
+    "link_targets": 2,
+    "nonhuman_chembl_rows_set_aside": 0,
+    "readout_marker_only_records": 0,
+    "records_with_documented_link": 132,
+    "targets": 2,
+    "wwox_system_observations": 3
+   },
+   "NEED-SYSTEMIC-GLYCAEMIA-GROWTH": {
+    "cards_citing_need": [
+     "C04_aav9_endpoint_families",
+     "EB-GROWTH-AX-01"
+    ],
+    "cells_L3_observed": 1,
+    "cells_L4_observed": 1,
+    "direction": "restore",
+    "exploration_only": false,
+    "families_consistent": 0,
+    "families_opposed": 0,
+    "families_with_documented_link": 0,
+    "identity_guard_hits": 0,
+    "link_targets": 0,
+    "nonhuman_chembl_rows_set_aside": 0,
+    "readout_marker_only_records": 0,
+    "records_with_documented_link": 0,
+    "targets": 0,
+    "wwox_system_observations": 2
+   },
+   "NEED-T-TYPE-CALCIUM": {
+    "cards_citing_need": [
+     "EB-ETX-01"
+    ],
+    "cells_L3_observed": 1,
+    "cells_L4_observed": 0,
+    "direction": "down",
+    "exploration_only": false,
+    "families_consistent": 35,
+    "families_opposed": 0,
+    "families_with_documented_link": 65,
+    "identity_guard_hits": 0,
+    "link_targets": 3,
+    "nonhuman_chembl_rows_set_aside": 0,
+    "readout_marker_only_records": 0,
+    "records_with_documented_link": 67,
+    "targets": 3,
+    "wwox_system_observations": 1
+   },
+   "NEED-WNT-BETA-CATENIN": {
+    "cards_citing_need": [
+     "D02_wnt_tankyrase",
+     "D01_a51"
+    ],
+    "cells_L3_observed": 1,
+    "cells_L4_observed": 1,
+    "direction": "uncertain",
+    "exploration_only": true,
+    "families_consistent": 0,
+    "families_opposed": 0,
+    "families_with_documented_link": 75,
+    "identity_guard_hits": 0,
+    "link_targets": 4,
+    "nonhuman_chembl_rows_set_aside": 0,
+    "readout_marker_only_records": 5,
+    "records_with_documented_link": 75,
+    "targets": 8,
+    "wwox_system_observations": 3
+   },
+   "NEED-WWOX-ENDOGENOUS-BOOST": {
+    "cards_citing_need": [
+     "C03_crispra_boost"
+    ],
+    "cells_L3_observed": 0,
+    "cells_L4_observed": 0,
+    "direction": "up",
+    "exploration_only": false,
+    "families_consistent": 0,
+    "families_opposed": 0,
+    "families_with_documented_link": 4,
+    "identity_guard_hits": 0,
+    "link_targets": 1,
+    "nonhuman_chembl_rows_set_aside": 0,
+    "readout_marker_only_records": 0,
+    "records_with_documented_link": 4,
+    "targets": 1,
+    "wwox_system_observations": 1
+   },
+   "NEED-WWOX-GENE-ADDITION": {
+    "cards_citing_need": [
+     "C01_aav9_wwox",
+     "C04_aav9_endpoint_families"
+    ],
+    "cells_L3_observed": 2,
+    "cells_L4_observed": 2,
+    "direction": "restore",
+    "exploration_only": false,
+    "families_consistent": 0,
+    "families_opposed": 0,
+    "families_with_documented_link": 4,
+    "identity_guard_hits": 0,
+    "link_targets": 1,
+    "nonhuman_chembl_rows_set_aside": 0,
+    "readout_marker_only_records": 0,
+    "records_with_documented_link": 4,
+    "targets": 1,
+    "wwox_system_observations": 3
+   },
+   "NEED-WWOX-MISSENSE-PROTEIN-RESCUE": {
+    "cards_citing_need": [
+     "A01_pba_class",
+     "A02_proteasome_inhibitor_class",
+     "A03_client_binding_chaperone",
+     "A04_er_proteostasis_regulators",
+     "A05_hsp70_axis"
+    ],
+    "cells_L3_observed": 2,
+    "cells_L4_observed": 0,
+    "direction": "up",
+    "exploration_only": false,
+    "families_consistent": 0,
+    "families_opposed": 0,
+    "families_with_documented_link": 46,
+    "identity_guard_hits": 0,
+    "link_targets": 6,
+    "nonhuman_chembl_rows_set_aside": 0,
+    "readout_marker_only_records": 0,
+    "records_with_documented_link": 46,
+    "targets": 6,
+    "wwox_system_observations": 1
+   },
+   "NEED-WWOX-PTC-READTHROUGH": {
+    "cards_citing_need": [
+     "B01_amlexanox",
+     "B02_readthrough_class"
+    ],
+    "cells_L3_observed": 1,
+    "cells_L4_observed": 0,
+    "direction": "restore",
+    "exploration_only": false,
+    "families_consistent": 0,
+    "families_opposed": 0,
+    "families_with_documented_link": 4,
+    "identity_guard_hits": 0,
+    "link_targets": 1,
+    "nonhuman_chembl_rows_set_aside": 0,
+    "readout_marker_only_records": 0,
+    "records_with_documented_link": 4,
+    "targets": 1,
+    "wwox_system_observations": 0
+   },
+   "NEED-WWOX-SPLICE-CORRECTION": {
+    "cards_citing_need": [
+     "C02_splice_aso"
+    ],
+    "cells_L3_observed": 0,
+    "cells_L4_observed": 0,
+    "direction": "restore",
+    "exploration_only": false,
+    "families_consistent": 0,
+    "families_opposed": 0,
+    "families_with_documented_link": 4,
+    "identity_guard_hits": 0,
+    "link_targets": 1,
+    "nonhuman_chembl_rows_set_aside": 0,
+    "readout_marker_only_records": 0,
+    "records_with_documented_link": 4,
+    "targets": 1,
+    "wwox_system_observations": 1
+   }
+  }
+ },
+ "observations": {
+  "axis_cards_not_interventions": 6,
+  "by_scope": {
+   "other_disease_precedent": 26,
+   "wwox_clinical_report": 5,
+   "wwox_experimental": 12
+  },
+  "card_interventions": 24,
+  "data_assertions_with_readout_change_on_cited_needs": 43,
+  "note": "an assertion counts once however many needs cite its card; L3/L4 cells count (row, need) pairs",
+  "of_which_wwox_system_opposing_disease_change": 13
+ },
+ "priorities": {
+  "all_dispositions_listed": [
+   "consistent_mechanism_candidate",
+   "exploration_candidate",
+   "incomplete_or_failed_query",
+   "insufficient_data",
+   "not_relevant",
+   "opposite_mechanism",
+   "source_queried_without_result"
+  ],
+  "by_disposition": {
+   "consistent_mechanism_candidate": 201,
+   "exploration_candidate": 393,
+   "insufficient_data": 209,
+   "not_relevant": 245,
+   "opposite_mechanism": 4,
+   "source_queried_without_result": 1
+  },
+  "exploration_flagged": 604,
+  "pairs_not_prioritised": {
+   "not_prioritised_no_card_no_coherence_no_approval_or_access": 1490
+  },
+  "records": 1053
+ },
+ "schema": "legend.wwox.coverage/1",
+ "source_states": {
+  "chembl": "OK",
+  "dgidb": "OK",
+  "dgidb_note": "export of 2024-06-10; current service coverage not ingested",
+  "dsld": "OK",
+  "matrix": "OK",
+  "openfda_ndc": "OK",
+  "unichem": "OK"
+ },
+ "units": {
+  "catalogue_records": 44211,
+  "chembl_families": 16475,
+  "coverage_unit": "compound families (each counted once per need); card interventions are separate rows",
+  "families": 40753,
+  "family_rule": "ChEMBL parent link or identical InChIKey connectivity block; source-only records stay singletons; nothing merged on name",
+  "records_are": "source-level substance records, not distinct drugs",
+  "source_only_families_unresolved_identity": 24278
+ }
+}
