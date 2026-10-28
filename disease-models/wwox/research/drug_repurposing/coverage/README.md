@@ -122,7 +122,7 @@ DSLD is `PARTIAL` (981 of 4,697 bulk-list names probed, name-only matching): eve
 
 ## Limits
 
-Catalogue links are source statements (no potency). DGIdb is a stale export and its rows are **not cleared for public release**.
+Catalogue links are source statements (no potency). DGIdb is a stale export and its rows are **not cleared for public release**: DGIdb has no data licence of its own and each claim keeps its source's terms (per-source table: `catalog/README.md`, "Licence reconciliation"). The repository is public, and `associations.jsonl.gz` already carries DGIdb-derived rows (3,417) with the claim source in `limits`; this is an open exposure for the operator, not a held-back item.
 `target_roles.tsv`, `source_artefacts.tsv` and `assertion_pertinence.tsv` are curated by hand and reviewable; every pair or
 assertion they do not list is unresolved or uncounted. Cards added after the pertinence table was written (for example the
 apinocaltamide card) have unlisted assertions until someone judges them. Seizure-need cells are symptom-level inferences.

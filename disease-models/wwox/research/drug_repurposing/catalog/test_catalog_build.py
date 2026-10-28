@@ -376,5 +376,155 @@ class OfflineBuildAndHook(Base):
         self.assertEqual(cc.find(entries, access="supplement"), [])  # no evidence is an empty list, not a negative claim
 
 
+class DeclaredInputsAndSafeRebuild(Base):
+    """The build must know which inputs reproduce the declared version, refuse (or declare partial) otherwise,
+    and never replace the last valid outputs with an impoverished result."""
+
+    SENTINEL = b"LAST VALID OUTPUT"
+
+    def setUp(self):
+        super().setUp()
+        self.out = self.root / "out"
+        self.out.mkdir()
+        self._old = (cb.OUT_CATALOG, cb.OUT_STATS, cb.OUT_LINKS, cb.OUT_MODALITIES)
+        cb.OUT_CATALOG, cb.OUT_STATS, cb.OUT_LINKS, cb.OUT_MODALITIES = (self.out / n for n in ("catalog.jsonl.gz", "catalog_stats.json", "card_links.json", "mod.tsv"))
+        self.addCleanup(lambda: (setattr(cb, "OUT_CATALOG", self._old[0]), setattr(cb, "OUT_STATS", self._old[1]),
+                                 setattr(cb, "OUT_LINKS", self._old[2]), setattr(cb, "OUT_MODALITIES", self._old[3])))
+        for p in (cb.OUT_CATALOG, cb.OUT_STATS, cb.OUT_LINKS):
+            p.write_bytes(self.SENTINEL)
+
+    def declare(self, src, rels):
+        """Put the sha256 of the cache files into the manifest, as `fetch` does."""
+        files = [{"path": r, "sha256": cb.sha256_file(self.cache / r)} for r in rels]
+        self.manifest["sources"][src]["data"]["files"] = files
+
+    def world(self, with_gtopdb=True):
+        self.chembl([mol("CHEMBL1", "A", 4.0)])
+        self.declare("chembl", ["chembl/molecules.jsonl.gz", "chembl/mechanisms.jsonl.gz", "chembl/targets.jsonl.gz"])
+        if with_gtopdb:
+            for f in cb.GTOPDB_FILES:
+                (self.cache / "gtopdb").mkdir(parents=True, exist_ok=True)
+                (self.cache / "gtopdb" / f).write_text("# GtoPdb Version: T\nh1,h2\n" if f.startswith("inter") else "# GtoPdb Version: T\nTarget id,Target name\n")
+            self.src("gtopdb", "T")
+            self.declare("gtopdb", ["gtopdb/" + f for f in cb.GTOPDB_FILES])
+        self.write_manifest()
+
+    def untouched(self):
+        for p in (cb.OUT_CATALOG, cb.OUT_STATS, cb.OUT_LINKS):
+            self.assertEqual(p.read_bytes(), self.SENTINEL, p.name)
+        self.assertEqual(sorted(q.name for q in self.out.iterdir()), ["card_links.json", "catalog.jsonl.gz", "catalog_stats.json"])
+
+    def args(self, **kw):
+        import argparse
+        return argparse.Namespace(**({"partial": False, "check": False} | kw))
+
+    def run_build(self, **kw):
+        import contextlib
+        import io
+        err = io.StringIO()
+        with contextlib.redirect_stderr(err), contextlib.redirect_stdout(io.StringIO()):
+            rc = cb.cmd_build(self.args(**kw))
+        return rc, err.getvalue()
+
+    def test_required_inputs_name_source_version_hash_and_how(self):
+        self.world()
+        rows = {r["path"]: r for r in cb.check_inputs(self.cache, cb.load_manifest())}
+        self.assertEqual(rows["gtopdb/interactions.csv"]["status"], "OK")
+        self.assertEqual(rows["gtopdb/interactions.csv"]["how"], "fetch --only gtopdb")
+        self.assertEqual(len(rows["chembl/molecules.jsonl.gz"]["sha256"]), 64)
+        self.assertEqual(rows["chembl/id_lookup.json"]["kind"], "auxiliary")  # needed by the card links, not hashed by the manifest
+
+    def test_complete_cache_builds_and_replaces_the_outputs(self):
+        self.world()
+        (self.cache / "chembl/id_lookup.json").write_text("{}")
+        rc, _ = self.run_build()
+        self.assertEqual(rc, 0)
+        self.assertNotEqual(cb.OUT_CATALOG.read_bytes(), self.SENTINEL)
+        self.assertEqual([e["id"] for e in cb.read_gz_jsonl(cb.OUT_CATALOG)], ["CAT:CHEMBL1"])
+        self.assertEqual(json.loads(cb.OUT_STATS.read_text())["catalog_file"]["sha256"], cb.sha256_file(cb.OUT_CATALOG))
+
+    def test_missing_required_file_refuses_names_it_and_leaves_last_output_untouched(self):
+        self.world()
+        (self.cache / "gtopdb/interactions.csv").unlink()
+        rc, err = self.run_build()
+        self.assertEqual(rc, 3)
+        self.assertIn("BUILD REFUSED", err)
+        self.assertIn("gtopdb/interactions.csv", err)
+        self.assertIn("LEGEND_CATALOG_CACHE", err)
+        self.assertIn("fetch --only gtopdb", err)
+        self.untouched()
+
+    def test_empty_cache_refuses_and_leaves_last_output_untouched(self):
+        self.world()
+        import shutil
+        shutil.rmtree(self.cache)
+        rc, _ = self.run_build()
+        self.assertEqual(rc, 3)
+        self.untouched()
+
+    def test_file_that_does_not_match_the_declared_hash_refuses(self):
+        self.world()
+        (self.cache / "gtopdb/targets_and_families.csv").write_text("# another release\n")
+        rc, err = self.run_build()
+        self.assertEqual(rc, 3)
+        self.assertIn("HASH_MISMATCH", err)
+        self.untouched()
+
+    def test_partial_is_declared_kept_apart_and_never_overwrites_the_complete_files(self):
+        self.world()
+        (self.cache / "gtopdb/interactions.csv").unlink()
+        rc, _ = self.run_build(partial=True)
+        self.assertEqual(rc, 0)
+        for p in (cb.OUT_CATALOG, cb.OUT_STATS, cb.OUT_LINKS):
+            self.assertEqual(p.read_bytes(), self.SENTINEL)
+        self.assertEqual(sorted(q.name for q in self.out.iterdir()),
+                         sorted(["card_links.json", "card_links.PARTIAL.json", "catalog.jsonl.gz", "catalog.PARTIAL.jsonl.gz", "catalog_stats.json", "catalog_stats.PARTIAL.json"]))
+        st = json.loads((self.out / "catalog_stats.PARTIAL.json").read_text())
+        self.assertIn("NOT equivalent", st["PARTIAL_BUILD"]["declared"])
+        self.assertEqual(st["PARTIAL_BUILD"]["sources_excluded"], ["gtopdb"])
+        self.assertEqual(st["sources"]["gtopdb"]["state"], "EXCLUDED_MISSING_OR_MISMATCHING_INPUT")
+        self.assertEqual(st["catalog_file"]["path"], "catalog.PARTIAL.jsonl.gz")
+
+    def test_partial_without_the_chembl_backbone_is_refused_too(self):
+        self.world()
+        (self.cache / "chembl/targets.jsonl.gz").unlink()
+        rc, _ = self.run_build(partial=True)
+        self.assertEqual(rc, 3)
+        self.untouched()
+
+    def test_check_never_writes_and_reports_match_or_difference(self):
+        self.world()
+        (self.cache / "chembl/id_lookup.json").write_text("{}")
+        self.assertEqual(self.run_build()[0], 0)
+        before = {p.name: p.read_bytes() for p in self.out.iterdir()}
+        self.assertEqual(self.run_build(check=True)[0], 0)  # rebuilt == the file just built
+        cb.OUT_CATALOG.write_bytes(b"something else")
+        self.assertEqual(self.run_build(check=True)[0], 4)
+        cb.OUT_CATALOG.write_bytes(before["catalog.jsonl.gz"])
+        self.assertEqual({p.name: p.read_bytes() for p in self.out.iterdir()}, before)
+
+    def test_failed_reconciliation_writes_nothing(self):
+        self.world()
+        (self.cache / "chembl/id_lookup.json").write_text("{}")
+        orig = cb.reconcile
+        cb.reconcile = lambda e, s: ["forced"]
+        try:
+            rc, _ = self.run_build()
+        finally:
+            cb.reconcile = orig
+        self.assertEqual(rc, 2)
+        self.untouched()
+
+    def test_output_is_independent_of_hash_randomisation(self):
+        import subprocess
+        self.world()
+        code = ("import importlib.util,sys,json,hashlib;"
+                f"s=importlib.util.spec_from_file_location('cb',{str(HERE / 'catalog_build.py')!r});m=importlib.util.module_from_spec(s);sys.modules['cb']=m;s.loader.exec_module(m);"
+                f"m.CACHE=m.Path({str(self.cache)!r});m.MANIFEST=m.Path({str(cb.MANIFEST)!r});"
+                "e,_=m.build_catalog();print(hashlib.sha256(json.dumps(e,sort_keys=True).encode()).hexdigest())")
+        seen = {subprocess.run([sys.executable, "-B", "-c", code], capture_output=True, text=True, check=True, env={"PYTHONHASHSEED": h, "PATH": "/usr/bin:/bin"}).stdout for h in ("1", "2", "31337")}
+        self.assertEqual(len(seen), 1)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=1)

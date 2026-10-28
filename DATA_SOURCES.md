@@ -81,6 +81,27 @@ source or binary is redistributed in this repository.
 | `analysis/data/dismech_second_derivation_realigned_016_024_035_manifest.json` | Transformation record for the re-indexing above: source and output hashes, the fields left verbatim, and the count of anchors confirmed | PUBLIC-DERIVED | Written alongside the realigned file, 2026-08-04 | Repository licence. Hashes and field names only; no article text. |
 | `analysis/data/dismech_independent_comparison_rev12.json` | Machine-generated four-axis comparison of the first and independent reconciled derivations | PUBLIC-DERIVED | Generated 2026-08-04 by the Git-anchored Rev. 12 comparator; SHA-256 `6f83e12f4ec4d6454bea0250b75b411c1f7006264d639030e13e6e89908ef5ed` | Repository licence. Includes repository-authored propositions and short source extracts inherited from the two declared sidecars; no full text. Diagnostic output, not semantic equivalence or a scientific verdict. |
 
+## Drug-repurposing module (`disease-models/wwox/research/drug_repurposing/`)
+
+The module embeds content from several databases with different terms. The per-source analysis
+(terms read on the source's own page on 2026-10-28, exact sentences, versions, classes A-D) is in
+`disease-models/wwox/research/drug_repurposing/catalog/README.md`, section "Licence reconciliation".
+This repository is public, so those terms apply to what is already tracked. Summary:
+
+| Source | Terms | Status in the module |
+|---|---|---|
+| DGIdb export 2024-06-10 | no data licence of its own (software MIT); each claim keeps its source's terms | MIXED: 21 claim sources; DTC, CKB-CORE, CGI, OncoKB, MyCancerGenome, CancerCommons, COSMIC are non-commercial or restrictive, TTD/TdgClinicalTrial/TEND/TALC/Clearity unclear or publisher-owned; open exposure for the operator |
+| ChEMBL `ChEMBL_37` | CC BY-SA 3.0 Unported, attribution with URL and release | share-alike applies to the ChEMBL-derived part of the catalogue |
+| Guide to PHARMACOLOGY 2026.3.1 | database ODbL, contents CC BY-SA 4.0 | share-alike; kept apart from other licences |
+| PharmGKB / ClinPGx | CC BY-SA 4.0 | share-alike (rows via DGIdb) |
+| CIViC, DoCM, FDA PGx table | CC0 1.0, CC BY 4.0, public domain (read at each source) | attribution |
+| NCI Cancer Gene Index | public domain declared by DGIdb; source page gone, not verified | treat as identifiers and counts only |
+| openFDA NDC | CC0 1.0; credit requested | used |
+| Every Cure MATRIX drug list | CC BY 4.0 (dataset-card field); scores table not used | used |
+| UniChem | EMBL-EBI Terms of Use, attribution expected; no CC0 claimed | identifiers only |
+| HGNC, Open Targets | CC0 | identifiers |
+| NIH DSLD, DailyMed, ClinicalTrials.gov | terms page not read or inaccessible on 2026-10-28 | counts and identifiers only; no label text |
+
 ## Artifact integrity anchors
 
 The following SHA-256 values were verified on 2026-07-25 against the original

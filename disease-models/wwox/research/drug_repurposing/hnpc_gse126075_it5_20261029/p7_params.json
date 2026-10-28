@@ -1,0 +1,8 @@
+{
+ "counts_sha256": "54259fc10f09567f1cb315bf897976aa7f3e41fd6fa4c1a5481e78bbec4c61f1",
+ "p6_table_sha256": "cdbac3481560f1e53ec5a09f449fafa254b6b89a986b5271815d62c7cf7647b1",
+ "n_genes": 35337,
+ "n_measurable": 15841,
+ "median_uncentred_R": 0.04005707290783815,
+ "seed": 20261029
+}

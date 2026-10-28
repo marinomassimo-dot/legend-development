@@ -14,27 +14,29 @@
    "steps": [
     {
      "step": "P1 licence and reuse terms of the components really reused (explicit redistribution licence, attribution, share-alike, non-commercial, personal/academic, not found/ambiguous, database-specific restrictions); official sources and relevant version; container (DGIdb) vs each embedded content; short reconciliation in existing places; correct wrong attributions; compatible projection for new results; no history rewrite, no visibility change",
-     "status": "TODO",
-     "owner": "scientist-a"
+     "status": "IN_PROGRESS",
+     "owner": "scientist-a",
+     "evidence": "reconciliation landed 67ca6289 (catalog/README.md Licence reconciliation, DATA_SOURCES, THIRD_PARTY_NOTICES, exposure notes); independent verification running"
     },
     {
      "step": "P2 BATCH_COMMIT of the verified iteration-4 material: VABAM wording (selected cases vs demonstrated risk/enrichment; provenance of the label comparison), nonsense-allele enumeration, NMD predictions and limits, read-through applicability by lesion class; no re-identifying variant combination; reach every consumer; derived surfaces regenerated; proof that the module no longer uses the superseded wording",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "orchestrator"
     },
     {
      "step": "P3 reproducible catalogue rebuild: build knows which inputs are required (versions, hashes, dependencies, lawful acquisition, local presence, offline mode); incomplete cache must not silently replace a verified catalogue (refuse with the missing input, or a declared partial output kept apart); last valid output preserved; error proof on missing input; reproducible instruction",
-     "status": "TODO",
-     "owner": "plan"
+     "status": "DONE",
+     "owner": "plan",
+     "evidence": "landed (merge of ab1bfd93): inputs command, build refuses on missing/mismatching inputs (exit 3) leaving outputs untouched, --partial separate, build --check; verified by the Orchestrator on the root cache: inputs COMPLETE, build --check MATCH byte-identical (sha256 4dfcaab2...), 33 tests, hash-seed test"
     },
     {
      "step": "P4 reconcile identities through GtoPdb ligands (GtoPdb ligand -> ChEMBL reference -> identity and chemical relations; parent/salt, stereoisomers, one-to-many, ids outside the selection, id-structure conflicts, withdrawn ids; no merge on name or connectivity when a pharmacological distinction would be lost); 510 candidates in closed_loop_it4_e1b_20261028/ligand_identity_merge_candidates.tsv are candidates not validated; independent verifier on normal and edge cases and totals; catalogue, families, access, targets, coverage, priorities, cards regenerated; count changes explained",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "plan"
     },
     {
      "step": "P5 species, interaction type and quantitative pharmacology on a bounded informative set: a GABA/ABAT case for H02, a receptor/channel case for neuronal threads, a broad-recovery case from existing cards; species, preparation, single vs complex, binding vs functional, action type, measure, unit, numeric relation incl. inequalities, assay conditions, source; Ki/Kd/IC50/EC50/inactivation parameters never interchangeable; compact tables linked to candidates; at least one research decision re-examined (strengthened, weakened, or unresolved with reason)",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "scientist-b"
     }
    ]
@@ -44,12 +46,13 @@
    "steps": [
     {
      "step": "P6 public hNPC data linked to PMID 31543760 (GEO deposit identity, match with the study, technology (CAGE: promoter-resolution handling, not generic RNA-seq), samples and contrasts, biological vs technical replicates, differentiation stage, WWOX perturbation, processed data, quality); questions fixed BEFORE results (ISR/ATF4 transcript signals, mitochondrial/metabolic programmes, differentiation/maturation confounders); descriptive analysis if replicates do not support inference; transcript vs inferred programme activity vs protein/phospho kept apart; reproducible analysis, figures, need updated; computational result on published data; if not acquirable prove the limit through lawful routes",
-     "status": "TODO",
-     "owner": "scientist-c"
+     "status": "IN_PROGRESS",
+     "owner": "scientist-c",
+     "evidence": "analysis landed 32265396 (n=1 per arm, both control gates failed, descriptive only); independent verification and sign adjudication running"
     },
     {
      "step": "P7 comparison across independent WWOX systems (P6 result vs GSE156243 and existing analyses): concordant / discordant / one system only / not comparable; keep knockdown vs knockout, residual WWOX, cell type, maturity, composition, platform, time; correct measurable-gene universe; no pooling across studies; concordance is not flux, activity or rescue; changes or delimits at least one module question; no LINCS rerun",
-     "status": "TODO",
+     "status": "IN_PROGRESS",
      "owner": "scientist-c"
     },
     {
@@ -94,8 +97,9 @@
    "steps": [
     {
      "step": "P14 hourly control, background work and effective closure: reliable process/runtime observation (identified PID, not mtime alone, not process name); states active / legitimate wait / finished to collect / Orchestrator really stopped / dead process / unknown; resume request must not start a second execution or a second integrator; do not mark COMPLETE while a required confirmation (the push) is missing; trust: never edit the global trust config, keep one verified instruction for the dead-session case; proofs: long silent job active, waiting for tests, finished work to collect, truly idle resumable session, explicit pause, completed mandate, duplicate request, unreadable state; restart proof distinct from a proof during active work; one logical control; latest real radar run consumed and a small scouting on gaps (identity, quantitative data, perturbations, supplements, scientific representation); ToolUniverse only for a concrete gap; TxGNN/MATRIX only on changed conditions",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "evidence": "mandate_watch jobs/push-confirmation/idempotency implemented d20635ec with 16 tests and live proofs of 10 states (governance/design_records/mandate_watch_live_proofs_20261029.md); radar + scouting pending"
     }
    ]
   },
