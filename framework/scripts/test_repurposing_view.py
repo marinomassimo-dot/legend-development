@@ -52,6 +52,8 @@ class RealData(unittest.TestCase):
             "funnel.records_with_target_data": sm["catalogue_coverage"]["records_with_any_target_row"],
             "funnel.records_with_link": sm["catalogue_coverage"]["records_with_documented_link_to_a_need"],
             "funnel.families_with_link": sm["catalogue_coverage"]["families_with_documented_link_to_a_need"],
+            "funnel.records_with_action": sm["catalogue_coverage"]["records_with_stated_action_on_a_need_target"],
+            "funnel.families_with_action": sm["catalogue_coverage"]["families_with_stated_action_on_a_need_target"],
             "funnel.priority_pairs": len(self.pr["priorities"]),
             "funnel.priority_rows": len({p["row_id"] for p in self.pr["priorities"]}),
             "funnel.card_rows": sum(1 for r in self.cm["rows"] if r.get("cards")),
@@ -288,6 +290,15 @@ class Curated(unittest.TestCase):
         cls.PF, cls.PS = embedded(cls.full), embedded(cls.share)
         cls.allow = json.loads((DR / "view/shareable_sources.json").read_text())
 
+    def test_action_stated_records_are_headlined_before_the_larger_target_listed_count(self):
+        cc = json.loads((DR / "coverage/coverage_summary.json").read_text())["catalogue_coverage"]
+        self.assertLess(cc["records_with_stated_action_on_a_need_target"], cc["union_headline_records"])
+        self.assertEqual(sum(v for k, v in cc["headline_records_by_strongest_relation"].items() if k.startswith("action_stated")), cc["records_with_stated_action_on_a_need_target"])
+        for html in (self.full, self.share):
+            self.assertLess(html.index('data-step="records_with_action"'), html.index('data-step="records_with_link"'))
+            self.assertNotIn("with a documented link", html)
+            self.assertIn("records with a target listed", html)
+
     def test_units_never_conflated(self):
         n = static_numbers(self.full)
         cur = self.PF["cur"]
@@ -295,7 +306,7 @@ class Curated(unittest.TestCase):
         self.assertEqual(n["cur.cards"], str(len(cur["cands"])))
         self.assertNotEqual(n["cur.cards"], n["funnel.records"])
         for key, unit in (("cur.needs", "needs"), ("cur.cards", "candidate cards"), ("funnel.records", "catalogue records"), ("funnel.families", "catalogue families"),
-                          ("funnel.evaluated_records", "records evaluated against WWOX"), ("funnel.families_with_link", "families with a documented link")):
+                          ("funnel.evaluated_records", "records evaluated against WWOX"), ("funnel.families_with_link", "families with a target listed"), ("funnel.records_with_action", "records with a stated action on a need target"), ("funnel.records_with_link", "records with a target listed")):
             self.assertRegex(self.full, rf'data-k="{re.escape(key)}"[^<]*</b></span><span class="u">{re.escape(unit)}<')
         self.assertIn("never added or compared as one number", self.full)
         self.assertIn("a family is not a distinct drug and not a candidate", self.full)

@@ -11,7 +11,7 @@ Inputs (read at run time, never copied): needs/needs.json, catalog/catalog.jsonl
 card_links.json), cards/*.card.json + *.packet.json, cards_early/*, join/measure_next.json, coverage/target_roles.tsv.
 
 FOUR levels, never a score and never summed:
-  L1 documented_link        the catalogue links a compound family to an INTERVENTION target (or disease gene product) of the need
+  L1 documented_link        (plain wording: TARGET LISTED; a stated action is a separate field, `action_stated`) the catalogue links a compound family to an INTERVENTION target (or disease gene product) of the need
                             (ChEMBL mechanism by human gene symbol, DGIdb by HGNC id). Pathway members are counted apart; effector
                             constraints and readout markers are listed beside and never links; source-artefact rows (source_artefacts.tsv),
                             alias-risk rows and the DGIdb placeholder 'Null' are excluded and listed
@@ -23,7 +23,7 @@ FOUR levels, never a score and never summed:
   L4 observed_recovery      an L3 assertion whose bridge comparison is OPPOSES_DISEASE_CHANGE, reading depth known, one dose arm at a time;
                             experimental and case-level kept apart (a technical comparison, not efficacy)
 Source states: OK | STALE_EXPORT (DGIdb 2024-06-10) | STALE_AFTER_FAILED_REFRESH | PARTIAL | FAILED | INCOMPLETE | NOT_FETCHED. A hard problem
-of a source does NOT blank the module. Three things are kept apart: (1) positive evidence (a documented link, a consistent/opposed action, an
+of a source does NOT blank the module. Three things are kept apart: (1) positive evidence (a target listed, a consistent/opposed action, an
 observation) stays what it is, because a working source supports it; (2) the search as a whole is flagged incomplete on every record
 (`search_incompleteness`); (3) only an ABSENCE conclusion (no link found, no target row) that depends on the missing source becomes
 incomplete_or_failed_query. A source's role decides whether it can touch an absence conclusion (SOURCE_ROLES): an error on an accessibility
@@ -58,7 +58,7 @@ SCHEMA = "legend.wwox.coverage/1"
 EXPLORATION_NOTE = "exploration list: the need's direction is unresolved; entries are not favourable treatments"
 DISPOSITIONS = {
     "consistent_mechanism_candidate": "direction-consistent action on an intervention target of a direction-evaluable need (a mechanism candidate, not a treatment)",
-    "exploration_candidate": "a documented link to a need whose direction is unresolved (or an action with no stated sign): exploration only",
+    "exploration_candidate": "a target listed for a need whose direction is unresolved (or an action with no stated sign): exploration only",
     "opposite_mechanism": "the stated action opposes the need's direction (and no consistent action is catalogued)",
     "mixed_consistent_and_opposed_actions": "the same family has BOTH a direction-consistent and an opposed action on this need; both are listed with target, action and source and no sign is summed: not a favourable profile",
     "no_catalogue_link_found": "identity resolved and targets catalogued, none an intervention target of this need (a statement about the catalogue and its possibly stale sources, not about relevance)",
@@ -641,6 +641,7 @@ def make_summary(entries, idx, rows, cells, per_need, priorities, need_by, cards
     pw = [a for a in assoc_all if pathway(a)]
     excl = [a for a in assoc_all if a["excluded_from_counts"] and a["target_kind"] in (rs.LINK_KINDS | rs.PATHWAY_KINDS)]
     head_rec, head_fam = {a["catalogue_id"] for a in head}, {a["family"] for a in head}
+    act_rec, act_fam = {a["catalogue_id"] for a in head if a["action_stated"]}, {a["family"] for a in head if a["action_stated"]}
     wide_rec, wide_fam = head_rec | {a["catalogue_id"] for a in pw}, head_fam | {a["family"] for a in pw}
     beside_rec = {a["catalogue_id"] for a in assoc_all if a["target_kind"] in rs.BESIDE_KINDS and not a["excluded_from_counts"]}
     recs_with_targets = sum(1 for e in entries if e["targets"])
@@ -708,9 +709,13 @@ def make_summary(entries, idx, rows, cells, per_need, priorities, need_by, cards
                   "needs_with_headline_link_families": sum(1 for v in per.values() if v["headline_families_intervention_targets"] > 0),
                   "per_need": per},
         "catalogue_coverage": {
-            "headline_definition": "a documented link = a catalogue row on an INTERVENTION target (or disease gene product) of a need, excluding source-artefact rows, alias-risk rows and the DGIdb placeholder; pathway members counted apart; effector constraints and readout markers are never links",
+            "headline_definition": "TARGET LISTED (record count, not an action count) = a catalogue row on an INTERVENTION target (or disease gene product) of a need, excluding source-artefact rows, alias-risk rows and the DGIdb placeholder; pathway members counted apart; effector constraints and readout markers are never links",
             "records_examined": len(entries), "records_with_any_target_row": recs_with_targets,
+            "headline_order": "action-stated records first (records_with_stated_action_on_a_need_target), then target-listed records (union_headline_records = all headline records, with or without a stated action); both are record/family counts and neither is an evidence-of-effect count",
+            "records_with_stated_action_on_a_need_target": len(act_rec), "families_with_stated_action_on_a_need_target": len(act_fam),
             "union_headline_records": len(head_rec), "union_headline_families": len(head_fam),
+            "records_target_listed": len(head_rec), "families_target_listed": len(head_fam),
+            "records_target_listed_without_stated_action": len(head_rec - act_rec),
             "union_with_pathway_members_records": len(wide_rec), "union_with_pathway_members_families": len(wide_fam),
             "records_touching_only_effector_constraints_or_readout_markers": len(beside_rec - wide_rec),
             "pct_records_with_headline_link": pct(len(head_rec), len(entries), "catalogue records with at least one headline link to any of the needs / all catalogue records; links are source statements, not relevance"),
@@ -751,8 +756,9 @@ def make_summary(entries, idx, rows, cells, per_need, priorities, need_by, cards
 
 
 def legacy_aliases(sm: dict) -> None:
-    """Keys of the first schema revision, kept so existing consumers (the view) keep reading. They carry the NEW definitions:
-    'documented link' = headline intervention-target link; 'observed' = a pertinent WWOX-system readout or case report."""
+    """Keys of the first schema revision, kept so existing consumers (the view) keep reading. They carry the NEW definitions
+    (the legacy names say 'documented link'; the plain wording everywhere is 'target listed', and the action-stated subset is reported first):
+    'documented link' = headline intervention-target listing, with or without a stated action; 'observed' = a pertinent WWOX-system readout or case report."""
     cc_ = sm["catalogue_coverage"]
     cc_["records_with_documented_link_to_a_need"] = cc_["union_headline_records"]
     cc_["families_with_documented_link_to_a_need"] = cc_["union_headline_families"]

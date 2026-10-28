@@ -43,6 +43,8 @@ Size: about 1.5 MB per file; lists of the full data layer are paginated (30 per 
 
 Revision 2 (corrected coverage layer): headline links are intervention targets only, with pathway members, effector constraints (MAPT) and readout markers shown apart; excluded rows are listed with reasons; L3/L4 use the new state vocabulary (observed in a WWOX system, case-level, measured null, other-disease precedent, enzyme or cell-free engagement, safety signal) and are never summed; dispositions show cells and distinct families; the source-state vocabulary (OK, STALE_EXPORT, STALE_AFTER_FAILED_REFRESH, PARTIAL, FAILED, INCOMPLETE, NOT_FETCHED) is shown with a banner whenever a source is not OK (today DGIdb STALE_EXPORT and DSLD PARTIAL); a section lists the catalogue-derived leads and lead dispositions (`coverage/lead_dispositions.json`) with links to cards and records. All of it is read generically from the JSON.
 
+Revision 3 (association-layer repair): the funnel and the tiles headline the records with a stated action on a need target first (630 records / 603 families) and name the larger count 'target listed' (1,218 records / 1,189 families; 588 state no action), each with its unit.
+
 Sections: funnel with explicit units (records, families, pairs, interventions; "evaluated against
 WWOX" has its own definition), access categories with the unknown share and scope note, needs panel,
 matrix (four levels side by side, never summed), priorities with the seven distinct dispositions and
