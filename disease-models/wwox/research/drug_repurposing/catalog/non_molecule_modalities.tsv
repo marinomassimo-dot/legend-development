@@ -1,0 +1,7 @@
+card_id	modality	why_not_a_molecule_entry	source
+C01_aav9_wwox	gene_replacement_vector	viral-vector gene therapy	card names (cards/*.packet.json candidate.name), curator classification of this task
+C04_aav9_endpoint_families	gene_replacement_vector	viral-vector gene therapy	card names (cards/*.packet.json candidate.name), curator classification of this task
+C03_crispra_boost	gene_regulation_editing_system	CRISPR-based system, delivery-dependent	card names (cards/*.packet.json candidate.name), curator classification of this task
+C02_splice_aso	oligonucleotide_therapy_or_editing	sequence-specific oligonucleotide or editing; a molecule class but no single compound	card names (cards/*.packet.json candidate.name), curator classification of this task
+EB-KD-01	dietary_intervention	diet, composition and course not a compound	card names (cards/*.packet.json candidate.name), curator classification of this task
+E04_ketogenic_lactate_axis	dietary_intervention_plus_transport_blockade	contains a diet; the MCT1 blockade control is a separate compound class	card names (cards/*.packet.json candidate.name), curator classification of this task

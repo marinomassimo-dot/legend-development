@@ -1,0 +1,363 @@
+{
+ "schema_version": 1,
+ "generated_utc": "2026-10-28T07:32:18Z",
+ "unit": "one catalogue entry = one source-level substance record (ChEMBL molecule record incl. salts and stereoisomers; or one source-only substance); NOT a unique chemical entity",
+ "sources": {
+  "chembl": {
+   "state": "OK",
+   "version": "ChEMBL_37 2026-05-01",
+   "retrieved_utc": "2026-10-27T22:41:53Z",
+   "licence": "CC BY-SA 3.0 (verified 2026-10-28, chembl.gitbook.io About: 'made available on a Creative Commons Attribution-Share Alike 3.0 Unported License'); web access under EBI Terms of Use"
+  },
+  "unichem": {
+   "state": "OK",
+   "version": "Last-Modified src1src14.txt.gz=Sat, 24 Oct 2026 21:16:36 GMT; src1src2.txt.gz=Sat, 24 Oct 2026 21:16:01 GMT; src1src7.txt.gz=Sat, 24 Oct 2026 21:16:11 GMT",
+   "retrieved_utc": "2026-10-27T22:41:54Z",
+   "licence": "EMBL-EBI Terms of Use (UniChem docs, read 2026-10-28, point to them; no CC0 statement found, so none is claimed)"
+  },
+  "dgidb": {
+   "state": "OK",
+   "version": "latest as served; Last-Modified Mon, 10 Jun 2024 16:04:52 GMT",
+   "retrieved_utc": "2026-10-27T22:41:58Z",
+   "licence": "UNVERIFIED in this task: dgidb.org pages are script-rendered and showed no licence text; DGIdb aggregates claims from other databases whose own terms apply per claim (e.g. TTD, DrugBank, Drugs@FDA); redistribution of claim-derived rows is NOT cleared"
+  },
+  "matrix": {
+   "state": "OK",
+   "version": "HF commit dc75f85084baf6f014bb8242cacf14e2b301715d",
+   "retrieved_utc": "2026-10-27T22:42:15Z",
+   "licence": "CC BY 4.0 (dataset-card metadata of everycure/drug-list, read 2026-10-27, HF API)"
+  },
+  "openfda_ndc": {
+   "state": "OK",
+   "version": "export_date 2026-10-27",
+   "retrieved_utc": "2026-10-27T22:42:00Z",
+   "licence": "CC0 1.0 / US public domain (verified 2026-10-28 at open.fda.gov/license: 'public domain ... CC0 1.0 Universal dedication', third-party content on the site such as GMDN is excluded; not present in the NDC fields used)"
+  },
+  "dsld": {
+   "state": "OK",
+   "version": "API v9.4.0",
+   "retrieved_utc": "2026-10-28T07:28:15Z",
+   "licence": "CC0 1.0 (API documentation licence block, read 2026-10-27; the documentation page also lists a contact address, which this tool never uses)"
+  }
+ },
+ "entries_total": 44211,
+ "by_origin": {
+  "dgidb_only": 22557,
+  "chembl_selected": 19926,
+  "openfda_unii_only": 1219,
+  "matrix_only": 502,
+  "chembl_parent_added": 7
+ },
+ "by_status_class": {
+  "no_status_statement": 19164,
+  "clinical_candidate": 12403,
+  "approved_any_source": 8813,
+  "phase_unknown": 2455,
+  "tool_probe": 618,
+  "marketed_otc_monograph": 462,
+  "marketed_unapproved_us": 296
+ },
+ "by_modality": {
+  "unknown": 26235,
+  "small_molecule": 15053,
+  "antibody": 1032,
+  "protein_or_peptide": 986,
+  "oligonucleotide": 209,
+  "gene_product": 191,
+  "enzyme": 129,
+  "other:antibody drug conjugate": 109,
+  "cell_product": 105,
+  "other:vaccine component": 90,
+  "oligosaccharide": 72
+ },
+ "access_signature_sums_to_total": {
+  "unknown/unverified": 28296,
+  "experimental": 13014,
+  "prescription": 1893,
+  "OTC": 705,
+  "OTC+prescription": 177,
+  "supplement": 82,
+  "OTC+prescription+supplement": 18,
+  "prescription+supplement": 13,
+  "experimental+supplement": 7,
+  "OTC+supplement": 6
+ },
+ "access_category_overlapping_counts": {
+  "OTC": 906,
+  "experimental": 13021,
+  "prescription": 2101,
+  "supplement": 126,
+  "unknown/unverified": 28296
+ },
+ "access_unknown_unverified_entries": 28296,
+ "universe": {
+  "chembl_distinct_compounds_in_release": 2921148,
+  "chembl_entries_enumerated_in_catalogue": 19933,
+  "chembl_compounds_not_enumerated_bioactive_only": 2901215,
+  "meaning": "the bioactive-molecule universe is the ChEMBL total; the catalogue enumerates only compounds with a clinical-phase statement, a probe flag, or a source row; the rest is counted here and not listed",
+  "entries_with_access_evidence_prescription_or_OTC_or_supplement": 2901,
+  "meaning_of_the_previous": "evidence of access in at least one US listing on a date, scoped per entry; not approval, appropriateness or safety, and not access for a given person or country"
+ },
+ "relations_kept": {
+  "chembl_parent_entries": 16337,
+  "chembl_child_entries_salts_or_forms": 3236,
+  "skeleton_keys_shared_by_more_than_one_entry": 367,
+  "entries_in_shared_skeleton_groups": 796,
+  "child_entries_whose_parent_is_missing_from_catalogue": 0
+ },
+ "merge_report": {
+  "rule": "entries are never merged on name; evidence from another source is attached to an entry only by a declared identifier key (ChEMBL id; UniChem ChEMBL<->DrugBank/ChEBI/UNII; DGIdb chembl: concept ids; MATRIX drugbank_id/ChEBI)",
+  "entries_merged_away": 0,
+  "evidence_attached_by_identifier": {
+   "dgidb_groups_linked_to_chembl": 1146,
+   "matrix_rows_linked_to_chembl": 1425,
+   "ndc_unii_to_entry_links": 2974
+  },
+  "one_to_many_links_note": "a DGIdb drug group, a MATRIX row or a UNII that matches several salt/stereoisomer entries is attached to each of them and flagged multiplicity>1; it is not collapsed",
+  "possible_cross_source_duplicates": "source-only entries (DGIdb, MATRIX, openFDA) that no identifier connects to a ChEMBL entry may describe the same substance as a ChEMBL entry; the entry count is an upper bound for distinct substances"
+ },
+ "dgidb": {
+  "drug_names": 23703,
+  "claims": 81572,
+  "groups_linked_to_chembl_by_identifier": 1146,
+  "groups_linked_to_more_than_one_chembl_entry": 1,
+  "groups_without_enumerated_chembl_entry_became_entries": 22557,
+  "of_which_carry_a_chembl_concept_id_outside_the_enumerated_set": 3519,
+  "interaction_rows": 98239,
+  "interaction_rows_attached_to_entries": 98247,
+  "claim_chembl_versions": [
+   "33"
+  ]
+ },
+ "matrix": {
+  "rows_not_deleted": 1927,
+  "rows_deleted_skipped": 8,
+  "linked_to_chembl_entries": 1425,
+  "linked_to_more_than_one_chembl_entry": 0,
+  "became_entries": 502
+ },
+ "openfda_ndc": {
+  "products_total": 138143,
+  "products_not_finished_human_rx_otc_excluded": 24434,
+  "finished_human_rx_otc_products": 113709,
+  "finished_human_rx_otc_products_without_unii_cannot_be_linked": 9223,
+  "distinct_uniis_in_finished_rx_otc": 5701,
+  "uniis_without_chembl_entry_that_became_entries": 1219,
+  "homeopathic_only_uniis_not_made_entries": 2727,
+  "entries_with_ndc_evidence": 2970,
+  "unii_to_entry_links": 2974
+ },
+ "dsld": {
+  "probes_ok": 1005,
+  "probes_error": 0,
+  "probes_by_set": {
+   "bulk": 981,
+   "targeted": 24
+  },
+  "bulk_list_planned_names": 4697,
+  "bulk_list_probed": 981,
+  "bulk_list_coverage_note": "the bulk probe was interrupted; names not probed have NO supplement evidence either way (unknown, not negative)",
+  "queries_with_exact_name_in_sample": 72,
+  "match_strength": "name_only: DSLD labels carry no identifier; US labels only (not an Italian or EU classification)"
+ },
+ "entries_with_targets": 24423,
+ "entries_with_chembl_curated_mechanism": 6328,
+ "not_obtained": [
+  "dietary-supplement status for any compound that was not probed in DSLD, and for all probed ones except by normalised-name match (DSLD labels carry no identifiers)",
+  "non-US access (EMA, MHRA, PMDA, national lists): no open bulk source was found",
+  "US NDC products without a UNII (cannot be linked by identifier)",
+  "DGIdb newer than the 2024-06-10 TSV release"
+ ],
+ "unresolved_parent_ids": [],
+ "units": {
+  "records_enumerated": 44211,
+  "records_are": "source-level substance records (a salt, a stereoisomer, a formulation record and a source-only row each count once); NOT distinct drugs and NOT distinct chemical entities",
+  "external_declared_total_chembl_distinct_compounds": 2921148,
+  "external_total_vs_acquired": "the ChEMBL figure is the database's own declared total; it is not the number of records acquired, and the two are never added",
+  "chembl_records_acquired": 19933,
+  "chemical_families_reconciled": {
+   "rule": "ChEMBL records joined by parent/child hierarchy or by identical InChIKey first block (connectivity layer); reconciliation shown, nothing merged",
+   "families": 16475,
+   "records_in_families_of_size_gt_1": 6423,
+   "families_of_size_gt_1": 2965,
+   "largest_family": 13,
+   "not_demonstrable_for": "source-only records (no structure, no identifier tying them to a ChEMBL record); they are listed under possible_duplicates"
+  },
+  "possible_duplicates_and_unresolved_identities": {
+   "source_only_records_without_identifier_link_to_chembl": 24278,
+   "of_which_normalised_name_equals_a_chembl_name_or_synonym_NOT_MERGED": 9197,
+   "meaning": "the name coincidence is a flag for human review; identity is unresolved until an identifier says so",
+   "chembl_child_records_with_missing_parent": 0
+  },
+  "modalities": {
+   "unknown": 26235,
+   "small_molecule": 15053,
+   "antibody": 1032,
+   "protein_or_peptide": 986,
+   "oligonucleotide": 209,
+   "gene_product": 191,
+   "enzyme": 129,
+   "other:antibody drug conjugate": 109,
+   "cell_product": 105,
+   "other:vaccine component": 90,
+   "oligosaccharide": 72
+  },
+  "modality_unknown_meaning": "source-only rows carry no molecule type; unknown is not small molecule",
+  "pharmacological_data": {
+   "records_with_chembl_curated_mechanism": 6328,
+   "records_with_dgidb_interaction": 18855,
+   "records_with_any_target_link": 24423,
+   "distinct_target_ids_chembl": 1518,
+   "distinct_gene_symbols": 5302,
+   "meaning": "a target link is a source statement with action type and reference ids; it is not potency and not relevance to WWOX"
+  },
+  "compounds_evaluated_against_WWOX_needs": 0,
+  "evaluated_meaning": "0 until the WWOX needs matrix exists; no record in this catalogue has been scored or ranked for the disease"
+ },
+ "source_verification": {
+  "chembl": {
+   "complete_and_coherent": true,
+   "version": "ChEMBL_37 2026-05-01",
+   "retrieved_utc": "2026-10-27T22:41:53Z",
+   "counts_checked": {
+    "chemical_probe": [
+     807,
+     807
+    ],
+    "mechanisms": [
+     7561,
+     7561
+    ],
+    "parents_added": [
+     7,
+     7
+    ],
+    "phase_ge_0_5": [
+     16809,
+     16809
+    ],
+    "phase_unknown": [
+     2499,
+     2499
+    ],
+    "targets": [
+     1518,
+     1518
+    ]
+   },
+   "files_hash_checked": 3,
+   "problems": [],
+   "last_attempt_status": "OK"
+  },
+  "dgidb": {
+   "complete_and_coherent": true,
+   "version": "latest as served; Last-Modified Mon, 10 Jun 2024 16:04:52 GMT",
+   "retrieved_utc": "2026-10-27T22:41:58Z",
+   "counts_checked": {},
+   "files_hash_checked": 2,
+   "problems": [],
+   "last_attempt_status": "OK"
+  },
+  "dsld": {
+   "complete_and_coherent": true,
+   "version": "API v9.4.0",
+   "retrieved_utc": "2026-10-28T07:28:15Z",
+   "counts_checked": {},
+   "files_hash_checked": 0,
+   "problems": [],
+   "last_attempt_status": "OK"
+  },
+  "matrix": {
+   "complete_and_coherent": true,
+   "version": "HF commit dc75f85084baf6f014bb8242cacf14e2b301715d",
+   "retrieved_utc": "2026-10-27T22:42:15Z",
+   "counts_checked": {},
+   "files_hash_checked": 1,
+   "problems": [],
+   "last_attempt_status": "OK"
+  },
+  "openfda_ndc": {
+   "complete_and_coherent": true,
+   "version": "export_date 2026-10-27",
+   "retrieved_utc": "2026-10-27T22:42:00Z",
+   "counts_checked": {},
+   "files_hash_checked": 1,
+   "problems": [],
+   "last_attempt_status": "OK"
+  },
+  "unichem": {
+   "complete_and_coherent": true,
+   "version": "Last-Modified src1src14.txt.gz=Sat, 24 Oct 2026 21:16:36 GMT; src1src2.txt.gz=Sat, 24 Oct 2026 21:16:01 GMT; src1src7.txt.gz=Sat, 24 Oct 2026 21:16:11 GMT",
+   "retrieved_utc": "2026-10-27T22:41:54Z",
+   "counts_checked": {},
+   "files_hash_checked": 3,
+   "problems": [],
+   "last_attempt_status": "OK"
+  }
+ },
+ "dgidb_age": {
+  "export_in_use": {
+   "file": "drugs.tsv/interactions.tsv served at /data/latest",
+   "last_modified": "Mon, 10 Jun 2024 16:04:52 GMT",
+   "its_ChEMBL_claims_version": "33"
+  },
+  "chembl_in_use": "ChEMBL_37 2026-05-01",
+  "reading": "the TSV export is an OLD export (June 2024, claims from ChEMBL 33) next to ChEMBL_37 (2026-05-01); it is not the current service",
+  "current_service_coverage": "not ingested: the live GraphQL API reports newer source versions (listed below when fetched), but its drug/interaction rows were not downloaded",
+  "live_service_checked_utc": "2026-10-28T07:24:53Z",
+  "sources_where_live_service_differs_from_export": 22,
+  "examples": [
+   {
+    "source": "Wikidata",
+    "export_version": "20240411",
+    "live_service_version": "20260901"
+   },
+   {
+    "source": "CancerCommons",
+    "export_version": "25-Jul-13",
+    "live_service_version": "25-Jul-2013"
+   },
+   {
+    "source": "CGI",
+    "export_version": "2/1/22",
+    "live_service_version": "2022-02-01"
+   },
+   {
+    "source": "RxNorm",
+    "export_version": "20240401",
+    "live_service_version": "20260803"
+   },
+   {
+    "source": "NCIt",
+    "export_version": "24.02d",
+    "live_service_version": "26.07d"
+   },
+   {
+    "source": "TALC",
+    "export_version": "12-May-16",
+    "live_service_version": "12-May-2016"
+   },
+   {
+    "source": "CIViC",
+    "export_version": "10-Apr-24",
+    "live_service_version": "01-September-2026"
+   },
+   {
+    "source": "NCI",
+    "export_version": "14-Sep-17",
+    "live_service_version": "14-September-2017"
+   }
+  ]
+ },
+ "catalog_file": {
+  "path": "catalog.jsonl.gz",
+  "sha256": "fd67f1202a2dc00d5076c1bf56955239b722cc8a54278071d42fbf7a055d5b25",
+  "bytes": 6161443
+ },
+ "card_links": {
+  "cards_considered": 58,
+  "cards_with_at_least_one_link": 18,
+  "unmatched": 40
+ },
+ "non_molecule_modalities_listed_separately": 6
+}

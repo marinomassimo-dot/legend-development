@@ -135,6 +135,7 @@ Run everything as `python3 <path> --help` first. Paths are repo-relative.
 | fetch a public PMC binary behind the cloud-viewer proof-of-work page | `framework/scripts/pmc_pow_fetch.py` |
 | read the text layer of a PDF the operator supplied, and count terms in it **only after positive controls prove the extractor read it** — an unverified zero is a reading of the tool, not of the paper | `framework/scripts/pdf_text_extract.py` |
 | census the public ClinicalTrials.gov registry (API v2, key-less, no pre-filter on phase, masking or status) for the WOREE/WWOX synonym set and the relevant sponsor — **a retrieval record, not evidence**: `MATCH`, `NO_MATCH`, `QUERY_ERROR` and `COVERAGE_INCOMPLETE` are four states and an empty answer never means "no study exists" | `framework/scripts/clinical_census.py` |
+| look up a **compound catalogue** entry by id, name, target or access category, or the entries linked to a curated card — read-only, offline; the catalogue itself is built (network `fetch`, offline `build`) by the disease model's `catalog/catalog_build.py` — **an entry is a source-level record, not a distinct drug; unknown access is not a negative** | `framework/scripts/compound_catalog.py lookup --name <x>` |
 
 ## 6 · Screen the model itself
 

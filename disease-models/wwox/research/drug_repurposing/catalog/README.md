@@ -1,0 +1,197 @@
+# Compound catalogue
+
+Non-canonical research material, built 2026-10-27 (iteration 3, `scientist-a`). A wide,
+updatable, provenance-carrying list of **substances** that the drug-repurposing module can
+look up. It says what exists, under which source and scope. It does **not** say that a
+compound is suitable, safe, effective, or obtainable by anyone: accessibility, approval,
+appropriateness and safety are separate fields, and the last two are always `NOT_ASSESSED`.
+Nothing here is medical advice and nothing changes the four scientific current files.
+
+## What is in the directory
+
+| File | What it is | In git (once the task branch is landed) |
+|---|---|---|
+| `catalog_build.py` | fetch (cached, incremental) + build + query + verify; standard library only | yes |
+| `test_catalog_build.py` | 17 offline regressions on a synthetic cache | yes |
+| `catalog.jsonl.gz` | the catalogue, one entry per line, deterministic (sorted, `mtime=0`) | yes (about 6 MB) |
+| `catalog_stats.json` | every count the later view reads, with the reconciliation | yes |
+| `card_links.json` | link of the curated cards to catalogue ids, with rule and an unmatched list | yes |
+| `card_identity_declarations.tsv` | ten curator declarations (card -> ChEMBL id) used by the link rule `curator_declared_identifier` | yes |
+| `non_molecule_modalities.tsv` | diets, gene replacement and other non-molecule modalities named by the cards, kept **out** of the molecule counts | yes |
+| `cache_manifest.json` | per source: URL, retrieval date, version, sha256, bytes, licence, terms, last attempt status | yes |
+| `cache/` | raw downloads (about 100 MB: ChEMBL pages, NDC zip, DGIdb TSVs) | **no** (gitignored); override with `LEGEND_CATALOG_CACHE` |
+
+## Sources, what each really gave, licences
+
+| Source | Used for | Measured 2026-10-27 | Licence / terms |
+|---|---|---|---|
+| ChEMBL (REST, `ChEMBL_37`, 2026-05-01) | backbone: molecule records with `max_phase`, `first_approval`, `molecule_type`, parent/child hierarchy, InChIKey, synonyms; all curated mechanisms (`action_type`, reference ids); targets | molecules with `max_phase>=0.5`, `max_phase=-1` (unknown phase), or `chemical_probe=1`, plus parents of selected salts; 7 561 mechanisms | CC BY-SA 3.0, re-verified 2026-10-28 (chembl.gitbook.io About). **Share-alike effect:** the ChEMBL-derived part of `catalog.jsonl.gz` (names, hierarchy, mechanisms, status records) is an adaptation and must be redistributed under CC BY-SA 3.0 with EMBL-EBI attribution; the file is a composite whose ChEMBL part keeps that licence |
+| UniChem whole-source mappings (FTP, 3 small files) | identifier cross-references ChEMBL to DrugBank, ChEBI and FDA UNII | 3 files, under 1 MB | EMBL-EBI Terms of Use (the UniChem documentation points to them; **no CC0 statement was found, so none is claimed**); attribution expected |
+| DGIdb `drugs.tsv` / `interactions.tsv` | approval flag per claim, gene-drug interaction type, claim source | **export of 2024-06-10** (the newest `/data/latest` serves; its ChEMBL claims are from ChEMBL 33); 81 572 claims, 98 239 interactions | **Licence not verified in this task** (dgidb.org pages are script-rendered and showed none). The claims come from other databases whose own terms apply per claim (TTD, DrugBank, Drugs@FDA, ...). The DGIdb-derived rows are therefore **not cleared for redistribution**: the integrator decides whether `catalog.jsonl.gz` ships with them |
+| Every Cure MATRIX drug list (Hugging Face, via datasets-server rows) | `approved_usa`, `gras_usa`, ATC, DrugBank and ChEBI ids for 1 927 live rows | HF commit `dc75f85…`, 1 935 rows declared = 1 935 received | CC BY 4.0, from the drug-list dataset-card metadata. The MATRIX knowledge graph and the **scores** table are separate artefacts: nothing is transferred to them from this licence; the scores have no declared licence and are not used |
+| openFDA `drug/ndc` bulk zip | the only open source of a US access category: `product_type` (prescription vs OTC), `marketing_category`, UNII | 138 143 products, export 2026-10-27 | CC0 / public domain (verified 2026-10-28 at open.fda.gov/license; the third-party GMDN notice on that site concerns device content, not the NDC fields used); openFDA disclaimer applies |
+| NIH ODS DSLD API v9 (per-query) | dietary-supplement label evidence | 1 005 name probes OK, 0 errors (981 of the 4 697 bulk-list names, interrupted; 24 targeted) | CC0 (API documentation licence block) |
+
+Not obtained, stated plainly: **no open bulk list of dietary supplements** exists that carries
+identifiers (the NDC directory has no supplement product type; DSLD labels carry no UNII, so
+supplement evidence is name-only and US-only); **no Italian or EU access source was ingested**.
+A quick look (2026-10-28) found two candidates and stopped there: AIFA publishes open data under
+CC BY 4.0 as CSV/XML (`aifa.gov.it/en/open-data`, "liste dei farmaci", transparency lists) and EMA
+publishes website data as JSON (`ema.europa.eu/en/about-us/about-website/download-website-data-json-data-format`,
+centrally authorised medicines only). Neither download URL was verified or fetched, neither
+carries a dietary-supplement list, and **a US classification (OTC, prescription, supplement) is
+not an Italian one**. 9 223 US Rx/OTC NDC products have no UNII and cannot be linked by
+identifier. DrugCentral was not used (no light open bulk file was verified).
+
+**DGIdb is an old export.** The TSV is dated 2024-06-10 and carries ChEMBL 33 claims, next to
+ChEMBL_37 (2026-05-01). The live DGIdb service reports newer source versions (for example
+Wikidata 20240411 in the export vs 20260901, RxNorm 20240401 vs 20260803, CIViC 10-Apr-24 vs
+01-September-2026); `catalog_stats.json` key `dgidb_age` lists them. Only the export's rows are in
+the catalogue: the current service coverage was **not** ingested.
+
+**Supplement probe, what was run.** `probe-dsld` queried the US DSLD for 1 005 names (981 of the
+bulk list, interrupted, so 3 716 bulk names have no supplement evidence either way, which is
+*unknown*, not negative) plus a targeted set of LEGEND-relevant names: lithium (+ carbonate,
+orotate), memantine, pyridoxine / vitamin B6 / pyridoxal 5'-phosphate, dichloroacetate, taurine,
+creatine, beta-hydroxybutyrate, medium-chain triglycerides, cannabidiol, carnitine, melatonin,
+ursodeoxycholic and tauroursodeoxycholic acid, phenylbutyrate, thiamine, riboflavin, magnesium,
+vigabatrin, bumetanide, bortezomib, and one nonsense control. Results (full-text hits / label
+ingredient names equal to the query in the first 50): lithium 439/50, lithium carbonate 12/3,
+taurine 6 978/50, creatine 3 957/49, melatonin 3 144/50, cannabidiol 661/49,
+tauroursodeoxycholic 46/46, pyridoxal 5'-phosphate 3 466/27; **memantine, dichloroacetate,
+phenylbutyrate, vigabatrin, ursodeoxycholic acid: 0 hits** (consistent with drug-only
+substances); **pyridoxine 30 429 hits but 0 equal names** (labels list it under the group
+"Vitamin B6"; this is the limit of name matching, and it shows that a 0 is not a negative);
+**"Vitamin B" 34 740 hits, 0 equal names** (ambiguous term); the nonsense control returned 0.
+Where a name matched, the entry carries `supplement` with `strength: name_only`, `matched_on`,
+example label ids and the retrieval date. It never asserts chemical identity (salt, form, dose
+and product are unknown) and never an Italian status.
+
+## Entry fields (one line of `catalog.jsonl.gz`)
+
+`id` (`CAT:CHEMBL…`, `CAT:DGIDB:<sha1-12 of DGIdb drug_name>`, `CAT:UNII:…`, `CAT:EC:…`, stable
+because it is the source id) · `name`, `name_source`, `synonyms` (capped at 40; `n_synonyms_total`
+is real) · `ids` (ChEMBL, InChIKey and its first block `skeleton_key`, UNII, DrugBank, ChEBI,
+DGIdb name, MATRIX id) · `relations` (`parent`, `is_parent`, `children`) · `molecule_type`,
+`modality`, `chemistry` · `status_records` (a **list**, one per source, each with its own `scope`
+sentence) and `status_class` (a derived one-word summary, rule below) · `access` (a **list** of
+`{category, scope, strength}`) and `access_categories` · `targets` (ChEMBL curated mechanism with
+`action_type`, genes, UniProt, reference ids as `PubMed:id`/`DailyMed:id`; DGIdb interaction with
+type and claim source; **no potency or score is copied**) · `source_records`, `provenance` ·
+`appropriateness` and `safety_assessment` = `NOT_ASSESSED`.
+
+### Access category (multi-valued, scoped, never inferred from approval)
+
+* `prescription` / `OTC`: openFDA NDC finished human products carrying the entry's UNII (UNII
+  reaches ChEMBL entries through UniChem). Homeopathic listings do not count as OTC access.
+  A UNII shared by several salt entries is attached to each and flagged, not collapsed. Scope
+  sentence names the directory date and says "US".
+* `supplement`: a DSLD label whose ingredient name equals the entry name after normalisation.
+  `strength: name_only`, because DSLD offers no identifier. Only probed names can get it.
+* `experimental`: ChEMBL clinical-candidate (`max_phase` 0.5 to 3) or chemical-probe statement
+  and no approval statement in any source used. It says nothing about obtainability.
+* `unknown/unverified`: everything else, including approved compounds with no NDC match. It is
+  **not** a negative: country, product and date dependent.
+
+### `status_class` (derived, one per entry; the records stay in `status_records`)
+
+`approved_any_source` (ChEMBL max_phase 4, DGIdb approved TRUE or MIXED, MATRIX APPROVED, or an
+NDA/ANDA/BLA NDC product) > `marketed_otc_monograph` > `marketed_unapproved_us` >
+`clinical_candidate` > `phase_unknown` > `tool_probe` > `no_status_statement`. The scope of each
+statement is in the record: ChEMBL `max_phase` is "highest phase curated for any indication",
+**not** an agency statement.
+
+## Identity, deduplication, and what was merged
+
+Entries are **never** merged on name. Evidence from another source is attached to an entry
+only through a declared identifier key: ChEMBL id; UniChem ChEMBL to DrugBank, ChEBI or UNII;
+DGIdb `chembl:` concept ids (DGIdb groups its claims by `drug_name`, its own rule); MATRIX
+`drugbank_id` or ChEBI id through UniChem. Salts, stereoisomers and formulations stay separate
+ChEMBL entries with `parent` / `children` kept and a shared `skeleton_key` (InChIKey first
+block) so a reader can see the family. The merge report in `catalog_stats.json` says
+`entries_merged_away: 0` and lists how many source rows were attached by which key. A source row
+that no identifier connects to a ChEMBL entry becomes its own entry, so **the entry count is an
+upper bound on distinct substances**: a DGIdb or openFDA entry can describe a substance that a
+ChEMBL entry also describes. One-to-many links are flagged `multiplicity`.
+
+## Units: what each number counts (`catalog_stats.json`, key `units`)
+
+| Unit | Count | Reading |
+|---|---|---|
+| Records enumerated | 44 211 | source-level substance records. **Not distinct drugs, not distinct chemical entities**: a salt, a stereoisomer and a source-only row each count once |
+| ... by origin | ChEMBL selected 19 926, ChEMBL parents added 7, DGIdb-only 22 557, MATRIX-only 502, openFDA-UNII-only 1 219 | the entry that created the record |
+| External declared total | ChEMBL: 2 921 148 distinct compounds | the database's own figure; **not** records acquired, never added to them |
+| Chemical families reconciled (ChEMBL records only) | 16 475 families; 2 965 with more than one record (6 423 records); largest 13 | parent/child hierarchy or identical InChIKey first block; shown, nothing merged |
+| Possible duplicates / unresolved identities | 24 278 source-only records have no identifier link to a ChEMBL record; 9 197 of them have a normalised name equal to a ChEMBL name or synonym | **not merged**; the coincidence is a review flag, identity is unresolved |
+| Modalities | small molecule 15 053, antibody 1 032, protein/peptide 986, oligonucleotide 209, other biologic classes, **unknown 26 235** (source-only rows) | unknown is not small molecule |
+| With pharmacological data | 6 328 with a ChEMBL curated mechanism; 18 855 with a DGIdb interaction; 24 423 with any target link; 1 518 distinct ChEMBL target ids, 5 302 gene symbols | a source statement with action type and reference ids; not potency, not relevance to WWOX |
+| **Evaluated against WWOX needs** | **0** | no needs matrix exists yet; nothing in the catalogue is scored or ranked for the disease |
+
+Bioactive-molecule universe vs usable-drug universe: the former is the ChEMBL total above; the
+catalogue enumerates 19 933 of its records plus source-only rows. The latter is the subset with
+US prescription, OTC or supplement evidence on a date (2 901 records with prescription, OTC
+evidence from NDC, or a name-only supplement match; overlapping categories are in
+`access_category_overlapping_counts`, and the non-overlapping signature counts sum to the total).
+Neither is an appropriateness or safety statement. Modality: only entries with a molecule record
+count as molecules; diets, gene-replacement vectors and editing systems named by the cards are in
+`non_molecule_modalities.tsv`; NDC allergenics, vaccines, plasma derivatives and cell therapies are
+excluded from the openFDA-created entries.
+
+## Completeness checks (`catalog_stats.json`, key `source_verification`)
+
+Each build recomputes the sha256 of every cached file against `cache_manifest.json` and compares
+declared and received counts: ChEMBL molecule queries 16 809, 2 499, 807 and 7 parents (all equal
+to the paging `total_count`), 7 561 mechanisms, 1 518 targets; NDC parsed records equal the
+declared total (138 143); MATRIX rows equal the declared 1 935. All coherent on 2026-10-28. A
+failed or short download is recorded `FAILED` / `INCOMPLETE` with expected and received counts, the
+previous complete retrieval is kept and shown as `STALE_AFTER_FAILED_REFRESH`, and a source never
+fetched shows `NOT_FETCHED` (absent, never zero). `build` refuses to run without a complete ChEMBL
+backbone.
+
+## Acquisition (network) vs build (offline)
+
+```bash
+python3 -B catalog_build.py fetch                 # NETWORK. Skips sources newer than 30 days; --refresh / --only chembl,dgidb to force
+python3 -B catalog_build.py probe-dsld [--names a,b] [--retry-errors] [--limit N]   # NETWORK, optional, resumable, 3 parallel requests
+python3 -B catalog_build.py build                 # OFFLINE. cache -> catalog.jsonl.gz, stats, card links (about 25 s)
+python3 -B catalog_build.py verify                # OFFLINE. counts reconcile
+python3 -B test_catalog_build.py                  # OFFLINE. 17 regressions on a synthetic cache
+python3 -B catalog_build.py all                   # fetch then build
+```
+
+`build` never touches the network (a regression test forbids it); the ChEMBL entity-type lookup
+for ids mentioned in cards is part of `fetch`. Rebuilding from the cache was verified offline on
+2026-10-28 and produced the same counts. To remove: `git rm -r` this directory and
+`framework/scripts/compound_catalog.py` (plus its row in the scripts README); nothing else imports them.
+
+## Hook for the rest of the module
+
+Generic, read-only, offline code lives in
+[`framework/scripts/compound_catalog.py`](../../../../../framework/scripts/compound_catalog.py);
+the data stays here. From `repurposing_join.py`, `repurposing_bridge.py` or a later coverage builder:
+
+```python
+import compound_catalog as cc                 # framework/scripts on sys.path
+entries = cc.load()                           # catalog.jsonl.gz
+cc.find(entries, name="amlexanox")            # also id=, target=, access=, status=
+cc.for_card("B01_amlexanox")                  # linked entries + the matching rule, or UNMATCHED + reason
+```
+```bash
+python3 framework/scripts/compound_catalog.py lookup --target PTGS1 --access OTC --limit 5
+python3 framework/scripts/compound_catalog.py card B01_amlexanox
+```
+
+An empty result means "no entry matched in this catalogue", never "not a drug". The join and the
+bridge do **not** call it yet; this is the hook, not an integration.
+
+## Card link
+
+`card_links.json` maps the identities in `cards/`, `cards_early/` and `join/cards.json`
+(58 cards considered; **18 with at least one link, 40 unmatched**, each with its reason) by two
+identifier rules. (1) A `CHEMBL` id found in the card text is accepted only if ChEMBL's own
+`chembl_id_lookup` says it is a COMPOUND (the text also holds target and document ids that share
+the prefix; `CHEMBL2534` is a target); it is a **mention**, not an identity declaration; an id
+with no cached lookup stays `UNRESOLVED` and unused. (2) Ten curated declarations in
+`card_identity_declarations.tsv`, each naming role (`identity` or `named_member`) and basis. Name
+similarity is never used. Most unmatched cards are class-level or modality-level and have no
+single compound by design.
