@@ -91,6 +91,7 @@ receipt ledger, not by the identity index, not by a census. Its "no receipt" sta
    model says *"a real safety signal"* and *"conflicting"*, never *"WWOX children are more
    susceptible"*. The claim is clean today. It is recorded here because the sentence is exactly
    the shape that gets firmed up on the next pass.
+   *(Update, `BATCH_20261019_025`, 2026-10-29: the working-model bullet no longer uses the quoted phrase. It now reads: documented in two case-selected children, abstract level, no denominator, enrichment in WWOX not supported by any source read, cautionary position unchanged. This note keeps the earlier wording as the dated record it is.)*
 
 **Date discrepancy, flagged not resolved (§12).** The registry says `Year: 2026`; PubMed's
 `publication_date` is **2025-12-06**, and the DOI is `10.1016/j.pediatrneurol.2025.12.001`, i.e.

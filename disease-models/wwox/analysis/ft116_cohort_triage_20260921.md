@@ -163,7 +163,7 @@ The variant table gives all four WWOX genotypes. Transcript as published in ever
 | Source | `33916893` (**DOS** — dossier of a secondary curation) | 🟢 **primary cohort, full text, persisted, re-matched** |
 | Lever | GENE-REPLACEMENT; **READ-THROUGH candidate** (in-frame PTC) | unchanged — **but the constituency grows by 50 %** |
 
-**Why this is the most valuable line in the file:** allele-specific therapy feasibility scales with how many patients share an allele, and `p.(Arg264Ter)` is the **only nonsense allele in the WWOX literature that would reach three reported patients**. It is also a **READ-THROUGH candidate**, and read-through is the one allele-specific lever in the census with no demonstrated members at all. ⚠️ Overlap with the 2025 registry **cannot be excluded**, so the count is **2–3 patients**, not 3.
+**Why this is the most valuable line in the file:** allele-specific therapy feasibility scales with how many patients share an allele, and `p.(Arg264Ter)` is the **only nonsense allele in the WWOX literature that would reach three reported patients**. It is also a **READ-THROUGH candidate**, and read-through is the one allele-specific lever in the census with no demonstrated members at all. ⚠️ Overlap with the 2025 registry **cannot be excluded**, so the count is **2–3 patients**, not 3. **Update (`BATCH_20261019_025`, 2026-10-29):** the allele is predicted NMD-sensitive by the 50-55 nt rule (a prediction, never a measurement; no WWOX NMD or read-through measurement exists), so «candidate» names a conceivable target, not an assayed one.
 
 ### 6.2 · 🟡 The exon 6–8 deletion — a probable recurrence, on LEGEND's own arithmetic
 

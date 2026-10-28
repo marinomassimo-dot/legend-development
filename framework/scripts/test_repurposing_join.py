@@ -771,5 +771,74 @@ class CatalogueLeadsTest(unittest.TestCase):
         self.assertFalse([r for r in leads["cards"] if r["card"].startswith("H01") and r["need"] != "NEED-T-TYPE-CALCIUM"])
 
 
+class SupersededWordingGone(unittest.TestCase):
+    """BATCH_20261019_025: the VABAM wording and the nonsense-allele statements the module consumes.
+
+    The superseded sentence called VABAM in WWOX-DEE «a real safety signal» and glossed the
+    label's 22 percent as a «background rate». Two case-selected children with no denominator
+    support neither an excess nor a deficit, and 22 percent is the exposed-arm prevalence in
+    non-WWOX infants. These are the consumer surfaces of the module (working model, narrative view,
+    mechanism map, cards, needs, join output, both view files, the latest handoff); dated historical
+    notes and the identifier patch record are quoting the old wording on purpose and are not listed.
+    """
+
+    DR = "disease-models/wwox/research/drug_repurposing/"
+    SURFACES = [
+        "disease-models/wwox/registries/working_model_current.md",
+        "disease-models/wwox/registries/claim_registry_current.md",
+        "disease-models/wwox/disease_model.md",
+        "disease-models/wwox/analysis/mechanism_intervention_map.md",
+        DR + "cards/H02_gabaat_inactivator_myelin_exposure.card.json",
+        DR + "cards/H02_gabaat_inactivator_myelin_exposure.packet.json",
+        DR + "cards_early/EB-VGB-01.card.json",
+        DR + "cards_early/EB-VGB-01.packet.json",
+        DR + "needs/needs.json",
+        DR + "join/queries.json",
+        DR + "join/cards.json",
+        DR + "join/evidence.json",
+        DR + "join/measure_next.json",
+        DR + "view/index.html",
+        DR + "view/index_shareable.html",
+        DR + "closed_loop_it4_e1b_20261028/README.md",
+        "disease-models/wwox/research/repurposing_batch_selection_20261029_module.md",
+    ]
+
+    def read(self, rel):
+        return (ROOT / rel).read_text(encoding="utf-8")
+
+    def test_no_consumer_surface_uses_the_superseded_vabam_wording(self):
+        import re
+        near = re.compile(r"(VABAM|vigabatrin)[^\n]{0,300}background rate|background rate[^\n]{0,300}(VABAM|vigabatrin)", re.I)
+        for rel in self.SURFACES:
+            text = self.read(rel)
+            self.assertNotIn("a real safety signal", text.lower(), rel)
+            self.assertIsNone(near.search(text), rel)
+
+    def test_working_model_states_selected_cases_no_denominator_and_no_enrichment(self):
+        line = next(l for l in self.read(self.SURFACES[0]).splitlines() if l.startswith("- **VABAM**"))
+        for needed in ("two WWOX-DEE children", "no denominator", "22 percent", "4 percent", "not supported",
+                       "exposed-arm prevalence", "cautionary clinical position is unchanged"):
+            self.assertIn(needed, line)
+
+    def test_claim_001_carries_the_wave_note_and_keeps_its_status(self):
+        text = self.read(self.SURFACES[1])
+        block = text.split("## CLAIM 001", 1)[1].split("\n## CLAIM 002", 1)[0]
+        self.assertIn("**Status:** conflicting evidence", block)
+        self.assertIn("BATCH_20261019_025", block)
+        self.assertIn("not supported by any source read", block)
+
+    def test_nonsense_enumeration_is_a_prediction_and_the_nucleotide_is_corrected(self):
+        needs = self.read(self.DR + "needs/needs.json")
+        self.assertIn("PREDICTION", needs)
+        self.assertIn("predictions by the 50-55 nt rule, never measurements", needs)
+        self.assertNotIn("no systematic enumeration of nonsense alleles", needs)
+        census = self.read("disease-models/wwox/analysis/woree_therapeutic_class_census_20260921.md")
+        row = next(l for l in census.splitlines() if l.startswith("| `c.160") and "Arg54" in l)
+        self.assertTrue(row.startswith("| `c.160C>T`"))
+        b02 = self.read(self.DR + "cards/B02_readthrough_class.packet.json")
+        self.assertNotIn("nobody has made it", b02)
+        self.assertIn("inference from classification", b02)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

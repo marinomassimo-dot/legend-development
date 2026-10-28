@@ -448,7 +448,7 @@
    "observed": [
     {
      "id": "O1",
-     "statement": "No read-through experiment on WWOX was found in the sources read, and no systematic enumeration of nonsense alleles with stop-codon identity and the +4 nucleotide exists (the card's wording). Nonsense alleles ARE recorded in this repository's therapeutic-class census, from published reports: p.(Arg54*), p.(Trp44*), p.(Arg264*), p.(Gln191*) and p.Trp218*, each with patients listed, none with an NMD assay, and flagged there as read-through candidates (a repository remark, not a measurement). The reference genotype class (destabilising SDR missense plus canonical splice-acceptor allele) carries no premature stop in the stated analysis.",
+     "statement": "No read-through experiment on WWOX was found in the sources read, and a systematic enumeration of nonsense alleles now exists only as a PREDICTION from sequence (IT4 E1a, 2026-10-28, independently re-derived: 32 single-nucleotide stop-gained alleles of NM_016373.4 in the repository ClinVar snapshot, undated; 23 predicted NMD-sensitive, 1 borderline p.Trp335*, 8 predicted to escape, all in exon 9; the NMD classes are predictions by the 50-55 nt rule, never measurements). Nonsense alleles ARE recorded in this repository's therapeutic-class census, from published reports: p.(Arg54*), p.(Trp44*), p.(Arg264*), p.(Gln191*) and p.Trp218*, each with patients listed, none with an NMD assay, and flagged there as read-through candidates (a repository remark, not a measurement); all five are predicted NMD-sensitive. The reference genotype class (destabilising SDR missense plus canonical splice-acceptor allele) carries no premature stop in the stated analysis, so read-through has no applicable target there: an inference from classification, not evidence that read-through fails, and it stays open for nonsense alleles of other lesion classes.",
      "model_type": "not_applicable",
      "species": "UNKNOWN",
      "genotype": "UNKNOWN",
@@ -488,7 +488,7 @@
     }
    ],
    "inferred": [
-    "Whether any WWOX-DEE allele is read-through-amenable is not established: no read-through or NMD measurement on a recorded nonsense allele exists in the sources read."
+    "Whether any WWOX-DEE allele is read-through-amenable is not established: no read-through or NMD measurement on a recorded nonsense allele exists in the sources read. Whether a recorded nonsense allele escapes NMD is predicted by position (23 sensitive, 1 borderline, 8 escape of 32 ClinVar alleles) and not measured."
    ],
    "intervention_direction": {
     "direction": "restore",
@@ -2981,7 +2981,7 @@
     },
     {
      "id": "O2",
-     "statement": "Vigabatrin reports are mixed: in one report spasms resolved in the first of two WWOX-null children and the second child had a partial response with residual cluster spasms at 11 months; another report records visible-seizure reduction in one child with electrical attacks still on video-EEG; another records it ineffective in one null/null child; another records one vigabatrin-resistant case. A brain-MRI abnormality signal (VABAM) is recorded in two cases of a separate cohort.",
+     "statement": "Vigabatrin reports are mixed: in one report spasms resolved in the first of two WWOX-null children and the second child had a partial response with residual cluster spasms at 11 months; another report records visible-seizure reduction in one child with electrical attacks still on video-EEG; another records it ineffective in one null/null child; another records one vigabatrin-resistant case. A brain-MRI abnormality finding (VABAM) is documented in two WWOX-DEE children of a separate case report, selected for the finding, with no denominator of vigabatrin-exposed WWOX children.",
      "model_type": "human_clinical_report",
      "species": "human",
      "genotype": "WWOX-null class children with West syndrome",
