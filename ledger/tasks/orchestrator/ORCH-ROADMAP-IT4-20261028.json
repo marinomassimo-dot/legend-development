@@ -121,7 +121,7 @@
      "step": "E3 latest real daily scout run: consume only relevant differences; small scan for gaps (identity quality, assay selectivity, perturbations, supplement catalogues, reading/presentation tools); ToolUniverse only where it fills a concrete gap; TxGNN/MATRIX only on a changed condition",
      "status": "DONE",
      "owner": "scientist-d",
-     "evidence": "132bab70 landed: Radar iteration 4 table (15 candidates, licences quoted, unverified list); daily run 2026-10-28 NO_USEFUL_CHANGE, LINCS etag change not pertinent; GtoPdb API needs key = registration, rejected; ChEMBL target components give UniProt ids"
+     "evidence": "132bab70 landed: Radar iteration 4 table (15 candidates, licences quoted, unverified list); daily run 2026-10-28 NO_USEFUL_CHANGE; GtoPdb API needs key = registration, rejected; ChEMBL target components give UniProt ids"
     }
    ]
   },
