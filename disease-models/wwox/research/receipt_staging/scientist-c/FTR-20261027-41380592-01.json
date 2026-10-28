@@ -22,8 +22,7 @@
   "tables": "read",
   "discussion": "read",
   "limitations": "read",
-  "supplementary": "read",
-  "references": "not_read"
+  "supplementary": "read"
  },
  "outputs": [
   "disease-models/wwox/research/deepdive_manifests/PMID41380592.json",
@@ -34,7 +33,7 @@
   "Work manifest PMID41380592.json (schema 2, 49 verbatim locators: 30 body and 19 figure or supplementary-image attestations), strict verification PASS with the shared checkout as artefact workspace.",
   "All nine main figure JPEGs and all nine supplementary figure images (extracted from mmc1.docx) were opened as images; the supplementary file carries Table S1 (primers) and no legends.",
   "The tables key is 'read' for the Key resources table and Table S1 only: the article reports no results table. The limitations key is 'read' for two limitation sentences inside the Discussion: there is no limitations section.",
-  "The reference list (60 items) was counted and searched for WWOX (none) and four titles (refs 27, 31, 48, 49) were looked at; no cited paper and no reference entry was read, so references is not_read."
+  "The reference list (60 items) was counted and searched for WWOX (none) and four titles (refs 27, 31, 48, 49) were looked at; no cited paper and no reference entry was read, so references is not_read. The optional references key is therefore omitted from the coverage map, not claimed."
  ],
  "prior_receipt": null,
  "reread_reason": "first_read"
