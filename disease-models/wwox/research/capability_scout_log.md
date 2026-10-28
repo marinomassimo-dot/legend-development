@@ -1479,3 +1479,9 @@ assertions keyed by endpoint. Cost: hours. **Cost / API / privacy risk:** none.
 **Not verified.** Licence version of DrugCentral; primary licence page of ChEMBL and BindingDB; Chemical Probes Portal terms and API; DSLD data terms and bulk route; Italian register and EU claims register reuse terms; GtoPdb download files; poppler licence; the SigCom library count. No adapter written, nothing installed, no key requested, no address sent to any service.
 
 **Observed cost of this scouting.** 7 web searches, 10 page fetches (3 returned nothing usable: 404, 403, JavaScript shell), about 16 key-less HTTP probes, 4 repository reads; about 2 minutes by the shell clock since worktree creation (model thinking time not included).
+
+### Session close, iteration 4 (2026-10-28): capability gap record
+
+- **Gap with evidence:** no supported way for a host process to deliver a prompt to a LIVE, idle interactive Claude Code session. `claude --bg --resume <id>` starts a copy when the session is already running, and revives a dead session only in a workspace whose trust dialog was accepted in the CLI (`hasTrustDialogAccepted` is false for the repository; probe on 2026-10-28 returned "Workspace not trusted"). Internal messaging sockets and the conversation store were not used (not a documented interface).
+- **Change shipped:** `mandate_watch.py` (one control, two triggers): in-session cron for the live session (the runtime enqueues it only while idle), host cron for a dead session. Live proof 2026-10-28 20:31 UTC.
+- **Residual:** the operator accepting the trust dialog once in the repository would make the dead-session path usable; the in-session cron dies with its session. WATCH: new `claude agents` / Remote Control capabilities that address an idle live session.
