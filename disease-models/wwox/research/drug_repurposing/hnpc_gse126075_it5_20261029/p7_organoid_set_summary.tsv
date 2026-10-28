@@ -1,0 +1,20 @@
+set	n_declared	n_measurable	mean_centred_R	null_lo	null_hi	rank_two_sided	mean_uncentred_R
+ATF4_gene	1	1	None				
+ISR_targets	12	12	-0.327	-0.184	0.306	0.0004	-0.287
+UPR_branches	8	8	0.012	-0.246	0.286	0.8374	0.052
+OXPHOS_nuclear	73	73	-0.197	-0.075	0.099	0.0	-0.157
+Mito_translation	78	77	-0.154	-0.076	0.118	0.0002	-0.114
+Mito_import	23	23	-0.104	-0.145	0.2	0.1538	-0.064
+Glycolysis_lactate	10	10	0.528	-0.216	0.235	0.0006	0.568
+PDK_family	4	4	0.082	-0.351	0.731	0.854	0.122
+Lactate_transporters	2	2	None				
+Ctl_cytosolic_ribosome	126	102	-0.26	-0.062	0.089	0.0	-0.22
+Ctl_housekeeping	12	12	-0.087	-0.217	0.225	0.5322	-0.047
+Mk_radial_glia_progenitor	9	9	0.376	-0.229	0.235	0.0082	0.416
+Mk_cell_cycle_proliferation	6	6	0.045	-0.264	0.365	0.7192	0.085
+Mk_neuronal_pan	5	5	-0.478	-0.297	0.331	0.0018	-0.438
+Mk_glutamatergic	2	2	None				
+Mk_GABAergic	1	1	None				
+Mk_astrocyte_glia	1	1	None				
+Mk_regional_patterning_non_cortical	2	2	None				
+Mk_wnt_pathway	3	3	0.588	-0.39	0.736	0.0964	0.628

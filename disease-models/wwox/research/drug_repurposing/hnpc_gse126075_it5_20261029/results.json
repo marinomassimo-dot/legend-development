@@ -1,4 +1,10 @@
 {
+ "bed_line_counts": {
+  "hNSC": 31702049,
+  "Neurons": 32686868,
+  "hNSC_WWOX_del": 14332108,
+  "Neurons_WWOX_del": 40730002
+ },
  "seed": 20261029,
  "ndraw": 10000,
  "inputs": {
@@ -7,7 +13,7 @@
   "markers": "77d9329cf2d2c6c134bdbc79d9965de33493b2e6bc0dfe5d3dc271604dd246e3"
  },
  "library_tags": {
-  "hNSC": 31702049,
+  "hNSC": 51007825,
   "Neurons": 32686868,
   "hNSC_WWOX_del": 14332108,
   "Neurons_WWOX_del": 40730002
@@ -36,11 +42,11 @@
    "tpm_kd": 3.34912352042002,
    "tpm_ctl": 2.90151560079262,
    "tags_kd": 47.999999999999936,
-   "tags_ctl": 91.98398975059209,
-   "R_centred": -0.015953160006861145,
+   "tags_ctl": 147.99999999999983,
+   "R_centred": -0.01712976358745344,
    "R_uncentred": 0.17835226280632255,
-   "R_B": -0.007900477848239718,
-   "fraction_of_measurable_genes_lower": 0.49078167115902965,
+   "R_B": -0.009762484826729506,
+   "fraction_of_measurable_genes_lower": 0.48962030762611597,
    "measurable": true
   },
   "C_neuron": {
@@ -57,22 +63,22 @@
  },
  "WWOX_silenced_all_three_normalisations_both_stages": false,
  "stage_positive_control": {
-  "Mk_neuronal_pan": 0.745,
-  "Mk_radial_glia_progenitor": 0.233,
-  "Mk_cell_cycle_proliferation": -1.407
+  "Mk_neuronal_pan": 0.744,
+  "Mk_radial_glia_progenitor": 0.232,
+  "Mk_cell_cycle_proliferation": -1.408
  },
  "stage_positive_control_ok": false,
  "global_distribution": {
   "C_hNPC": {
-   "n_measurable": 9275,
-   "median_uncentred_R": 0.1943054228131837,
-   "sd_centred_R": 0.8245797462176426,
-   "frac_abs_centred_R_ge_1": 0.19741239892183288,
+   "n_measurable": 9297,
+   "median_uncentred_R": 0.195482026393776,
+   "sd_centred_R": 0.8322412374773182,
+   "frac_abs_centred_R_ge_1": 0.19920404431537056,
    "stage_fit_slope_intercept_r_n": [
-    0.18037010592690825,
-    0.02683855709091766,
-    0.26401018541958104,
-    8858
+    0.1840975569148473,
+    0.0295625889049062,
+    0.26821549509293113,
+    8872
    ]
   },
   "C_neuron": {
@@ -81,17 +87,17 @@
    "sd_centred_R": 0.6526604481622487,
    "frac_abs_centred_R_ge_1": 0.12008965435885337,
    "stage_fit_slope_intercept_r_n": [
-    -0.10604023147566313,
-    0.03111706032069397,
-    -0.18813739398400778,
-    8422
+    -0.10330642606289092,
+    0.033154979424194195,
+    -0.1836361550357023,
+    8435
    ]
   },
   "S_ctrl": {
-   "n_measurable": 8912,
-   "median_uncentred_R": -0.8485648580640188,
-   "sd_centred_R": 1.177230886289042,
-   "frac_abs_centred_R_ge_1": 0.29275134649910234
+   "n_measurable": 8930,
+   "median_uncentred_R": -0.8473451414984534,
+   "sd_centred_R": 1.1824852877749714,
+   "frac_abs_centred_R_ge_1": 0.29417693169092946
   },
   "S_kd": {
    "n_measurable": 8529,
@@ -99,18 +105,18 @@
    "sd_centred_R": 1.122862812557256,
    "frac_abs_centred_R_ge_1": 0.2790479540391605,
    "stage_fit_slope_intercept_r_n": [
-    0.7275658863200791,
-    0.055082973962606495,
-    0.7373359663307513,
-    8376
+    0.726607843522264,
+    0.0551792339105231,
+    0.7375291185379714,
+    8386
    ]
   }
  },
  "decisions": {
   "ATF4_gene": "too few measurable members",
   "ISR_targets": "inconsistent or confounded (outside the matched null in one or both stages; criteria i-iii: True/False/True)",
-  "UPR_branches": "inconsistent or confounded (outside the matched null in one or both stages; criteria i-iii: False/False/None)",
-  "OXPHOS_nuclear": "inconsistent or confounded (outside the matched null in one or both stages; criteria i-iii: False/False/None)",
+  "UPR_branches": "not distinguishable from matched random sets (not evidence of absence)",
+  "OXPHOS_nuclear": "inconsistent or confounded (outside the matched null in one or both stages; criteria i-iii: True/False/False)",
   "Mito_translation": "inconsistent or confounded (outside the matched null in one or both stages; criteria i-iii: False/True/None)",
   "Mito_import": "inconsistent or confounded (outside the matched null in one or both stages; criteria i-iii: False/False/None)",
   "Glycolysis_lactate": "inconsistent or confounded (outside the matched null in one or both stages; criteria i-iii: True/False/False)",
@@ -120,7 +126,7 @@
   "Ctl_housekeeping": "not distinguishable from matched random sets (not evidence of absence)",
   "Mk_radial_glia_progenitor": "inconsistent or confounded (outside the matched null in one or both stages; criteria i-iii: True/True/True)",
   "Mk_cell_cycle_proliferation": "not distinguishable from matched random sets (not evidence of absence)",
-  "Mk_neuronal_pan": "inconsistent or confounded (outside the matched null in one or both stages; criteria i-iii: False/True/None)",
+  "Mk_neuronal_pan": "inconsistent or confounded (outside the matched null in one or both stages; criteria i-iii: True/True/True)",
   "Mk_glutamatergic": "too few measurable members",
   "Mk_GABAergic": "too few measurable members",
   "Mk_astrocyte_glia": "too few measurable members",
