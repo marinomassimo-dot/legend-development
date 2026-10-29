@@ -8,7 +8,7 @@
  "event_at": "2026-10-29T21:40:00Z",
  "analysis_at": "2026-10-29T00:00:00Z",
  "analysis_time_precision": "minute",
- "workflow": "scientist-b, IT8 package P5. Full JATS text read end to end (Introduction, Methods, Results, Discussion); main Figures 1, 4 and 5 opened as images (files/supplement/PMID37804316/awad340f1.jpg, f4, f5). Question: which eIF2 kinase, which endpoints and which window for a protective ISR in a human CNS disease with myoclonic epilepsy; supplementary PDF and videos not opened. Prepared as JSON for the integrator and staged. Coverage vocabulary is closed: sections read only in part are recorded as not_read (understated), figures opened as images but not exhaustively are recorded as captions_only (understated).",
+ "workflow": "scientist-b, IT8 package P5. Full JATS text read end to end (Introduction, Methods, Results, Discussion); main Figures 1, 4 and 5 opened as images (files/supplement/PMID37804316/awad340f1.jpg, f4, f5). Question: which eIF2 kinase, which endpoints and which window for a protective ISR in a human CNS disease with myoclonic epilepsy; supplementary PDF and videos not opened. Staged as JSON for the integrator. Coverage vocabulary is closed: sections read only in part are recorded as not_read (understated), figures opened as images but not exhaustively are recorded as captions_only (understated).",
  "evidence_depth": "partial_fulltext_read",
  "source_locator": "files/fulltext/PMC10907083_PMID37804316_europepmc_fulltext_2026-10-29.xml",
  "source_fingerprint": "cd1bf1a7c1f6203e2727891bb57fd4a3e13fcdfc566a87d7cc7c6055519fb525",
@@ -29,8 +29,7 @@
  ],
  "evidence_basis": [
   "coverage_map",
-  "work_manifest",
-  "Passages quoted in the output file; extractor text loses italics and superscripts. Coverage understated rather than overstated."
+  "No work manifest and no verbatim_locators exist for this reading; the decisive claims are described in the loop README with section and figure references, not as locator triples. Coverage understated rather than overstated."
  ],
  "reread_reason": "first_read",
  "prior_receipt": null

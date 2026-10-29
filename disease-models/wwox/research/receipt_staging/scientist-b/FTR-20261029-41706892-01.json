@@ -8,7 +8,7 @@
  "event_at": "2026-10-29T21:40:00Z",
  "analysis_at": "2026-10-29T00:00:00Z",
  "analysis_time_precision": "minute",
- "workflow": "scientist-b, IT8 package P5. Full JATS text read end to end; figure legends read, figure images and SI Appendix PDF not opened; Dataset S1 CSV listed, not analysed. Question: is ATF4 protein regulated without mRNA change in neurons, by which stimulus, timescale and n. Prepared as JSON for the integrator and staged.",
+ "workflow": "scientist-b, IT8 package P5. Full JATS text read end to end; figure legends read, figure images and SI Appendix PDF not opened; Dataset S1 CSV listed, not analysed. Question: is ATF4 protein regulated without mRNA change in neurons, by which stimulus, timescale and n. Staged as JSON for the integrator.",
  "evidence_depth": "partial_fulltext_read",
  "source_locator": "files/fulltext/PMC12933080_PMID41706892_europepmc_fulltext_2026-10-29.xml",
  "source_fingerprint": "415c8fc85efd765a875168a9c70a396711aad8450b2fa80b8a078a3d2d1e38f9",
@@ -29,8 +29,7 @@
  ],
  "evidence_basis": [
   "coverage_map",
-  "work_manifest",
-  "Passages quoted in the output file; extractor text loses italics and superscripts. Coverage understated rather than overstated."
+  "No work manifest and no verbatim_locators exist for this reading; the decisive claims are described in the loop README with section and figure references, not as locator triples. Coverage understated rather than overstated."
  ],
  "reread_reason": "first_read",
  "prior_receipt": null

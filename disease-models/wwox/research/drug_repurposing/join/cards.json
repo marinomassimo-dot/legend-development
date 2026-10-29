@@ -46696,8 +46696,8 @@
      "Whether the PERK arm or another eIF2 kinase (the paper's Discussion names GCN1/GCN2) is the one engaged; the two interactome entries behind that naming are a low-score unvalidated GCN1 prey (score 0.133, HEK293T) and a three-spectrum WWOX hit in a PERK proximity list (HEK293-T), neither showing binding or activation. In the one fly PARS2 precedent the engaged kinase was GCN2, with phospho-PERK unchanged, so a PERK-arm inhibitor would not be the matched tool there; which kinase, if any, is engaged in WWOX-deficient neural cells is unmeasured.",
      "Whether an eIF2B activator, which acts downstream of eIF2 alpha phosphorylation and restores translation, would reproduce the genetic GCN2 or ATF4 suppression: the fly precedent does not separate the ATF4-dependent limb from the translation-repression limb and tested no compound.",
      "Whether attenuating the ISR would help or harm a WWOX-deficient developing brain.",
-     "Whether an ATF4 protein or P-eIF2a rise in a WWOX-deficient neural system survives silencing of network activity (tetrodotoxin or an mGluR5 antagonist): group I mGluR activation raises both in minutes without an Atf4 mRNA change in normal mouse hippocampus (PMID 41706892), and WWOX-deficient systems are hyperexcitable (IT8 P5 loop 1).",
-     "Whether the ISR in a WWOX-deficient system is compensatory rather than harmful: in the AFG3L2 precedent (PMID 37804316) HRI or DELE1 loss worsens, and a GADD34-targeted compound improves, patient-cell and mouse endpoints, the opposite sign to the PARS2 fly; the AFG3L2 kinase evidence is siRNA in fibroblasts, GCN2 and PERK were not tested, and the compound's target is disputed (PMID 28447936). Attenuators and potentiators are therefore two arms of one open question, not one direction."
+     "Whether an ATF4 protein or P-eIF2a rise in a WWOX-deficient neural system survives silencing of network activity (tetrodotoxin or an mGluR5 antagonist): group I mGluR agonism raises both in minutes without an Atf4 mRNA change in normal mouse hippocampus (PMID 41706892; that network activity does so is an inference), and WWOX-deficient systems are hyperexcitable (IT8 P5 loop 1).",
+     "Whether the ISR in a WWOX-deficient system is compensatory rather than harmful: in the AFG3L2 precedent (PMID 37804316) HRI or DELE1 loss worsens, and a GADD34-targeted compound improves, patient-cell and mouse endpoints (survival gain about 6 to 7 days at the median by plot reading), a different direction from the PARS2 fly, with different species, endpoint and manipulation; the AFG3L2 kinase evidence is siRNA in fibroblasts, GCN2 and PERK were not tested, and the compound's target is disputed (PMID 28447936). Attenuators and potentiators are therefore two arms of one open question, not one direction."
     ],
     "p4_card": {
      "clinical_census": "Clinical census, ClinicalTrials.gov API v2, 2026-10-20 (drug_repurposing/clinical_census_20261020.md): seven queries returned no registered WOREE interventional study; it answers seven queries against one registry on one date and a missing hit does not prove that no study exists. Not re-run for this card.",
@@ -47666,7 +47666,7 @@
      "time_to_benefit": "UNKNOWN"
     }
    },
-   "input_sha256": "ed84ace26100700c6e3672fd6a23d32a2ddad59176ee0b5e52eafbdfe8f1a7b8",
+   "input_sha256": "1acc504f083294b0974a47c0398876bb3e53f82dcc16a714640c532b4b73619a",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",

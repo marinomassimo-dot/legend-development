@@ -18,17 +18,17 @@
    },
    "^\\.cur\\.(needs|threads|groups|gaps|goals|tracks|scopes|group_note|meta|evidence_graph|work_order|selection|hypotheses|predictive|contexts)(\\.|\\[\\]|$)": {
     "class": "OWN",
-    "values": 3493,
+    "values": 3550,
     "why": "needs, threads, positions, evidence graph, work order and the IT7 selection, comparison, predictive-test and context sections: own text or counts computed from own census files"
    },
    "^\\.cur\\.cands\\[\\]\\.": {
     "class": "OWN",
-    "values": 5925,
+    "values": 5929,
     "why": "card text and computed positions (provenance of the prose: see text audit)"
    },
    "^\\.cur\\.cands\\[\\]\\.(pmids\\[\\]\\.(id|role)|dois\\[\\])$": {
     "class": "BIBLIO",
-    "values": 403,
+    "values": 421,
     "why": "PMID / DOI of a cited work"
    },
    "^\\.cur\\.cands\\[\\]\\.access\\[\\]$": {
@@ -38,12 +38,12 @@
    },
    "^\\.cur\\.cands\\[\\]\\.brief\\.sources\\[\\]\\.(kind|id)$": {
     "class": "BIBLIO",
-    "values": 206,
+    "values": 216,
     "why": "PMID / ChEMBL identifier of an essential source of the one-page synthesis"
    },
    "^\\.cur\\.cands\\[\\]\\.brief\\.sources\\[\\]\\.(title|journal|year)$": {
     "class": "BIBLIO",
-    "values": 309,
+    "values": 324,
     "why": "title, journal, year of an essential source (bibliographic facts)"
    },
    "^\\.cur\\.cands\\[\\]\\.chembl\\[\\]$": {
@@ -53,7 +53,7 @@
    },
    "^\\.cur\\.cands\\[\\]\\.pmids\\[\\]\\.(title|journal|year)$": {
     "class": "BIBLIO",
-    "values": 597,
+    "values": 624,
     "why": "title, journal, year of a cited work (bibliographic facts)"
    },
    "^\\.cur\\.evidence_graph\\.chains\\[\\]\\.(nodes\\[\\]\\.pmids\\[\\]|edges\\[\\]\\.src\\.id)$": {
@@ -73,12 +73,12 @@
    },
    "^\\.cur\\.needs\\[\\]\\.obs\\[\\]\\.(cite)$": {
     "class": "BIBLIO",
-    "values": 85,
+    "values": 90,
     "why": "title, journal, year of a cited work"
    },
    "^\\.cur\\.needs\\[\\]\\.obs\\[\\]\\.pmid$": {
     "class": "BIBLIO",
-    "values": 85,
+    "values": 90,
     "why": "PMID of the observation source"
    },
    "^\\.excluded_detail\\[\\]\\.(id|name|src)$": {
@@ -108,7 +108,7 @@
    },
    "^\\.needs\\[\\]\\.": {
     "class": "OWN",
-    "values": 1657,
+    "values": 1663,
     "why": "needs records written in this repository"
    },
    "^\\.pairs\\[\\]\\.(l2|l3|l4|x|n|r)(\\.|\\[\\]|$)": {
@@ -193,7 +193,7 @@
    "DOI": 5,
    "HGNC": 6,
    "NCT": 0,
-   "PMID": 55
+   "PMID": 58
   },
   "links": {
    "distinct_hrefs": 59,
@@ -212,7 +212,7 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 1942,
+    "forbidden-name": 1965,
     "forbidden-wording": 12
    },
    "co_attested_wording": [
@@ -252,6 +252,7 @@
     "unchecked_without_corpus": 92
    },
    "suppressed_by_exemption": {
+    "bibliographic journal name (validated against the journals of the cache)": 4,
     "category labels of catalogue-wide counts": 1
    }
   },
@@ -433,10 +434,10 @@
   "view_schema": "legend.wwox.repurposing_view/2"
  },
  "embedded_field_classes": {
-  "BIBLIO": 1850,
+  "BIBLIO": 1930,
   "COUNT": 7757,
   "ID": 3048,
-  "OWN": 54109,
+  "OWN": 54176,
   "ROWNAME": 1506,
   "SRC_A": 91,
   "SRC_META": 256,
@@ -495,7 +496,7 @@
   },
   "NOTICE.md": {
    "bytes": 12612,
-   "sha256": "4f650d12ea8f626aadcea1101faee1311a80a4c126e0edf6309c5c61fe4950bf"
+   "sha256": "3f8a534a4a244fe080f011de1157d96eda007f3c01c2cf8aca99f948d0eea555"
   },
   "README.md": {
    "bytes": 4642,
@@ -503,7 +504,7 @@
   },
   "TEXT_PROVENANCE.json": {
    "bytes": 1870,
-   "sha256": "18e294f1e5ef5af604c1a7b4e3c39bbe6151a7d34739bab23996a4ca0789e26b"
+   "sha256": "e1e125ee8737e4f32c229be81f9c90bde9aa458cfc5e47407d5e8eaf8553d2ec"
   },
   "class_b/chembl_cc-by-sa-3.0/CREDIT.txt": {
    "bytes": 1636,
@@ -518,8 +519,8 @@
    "sha256": "d8fe6a3455466783564803428b6318c1c442db6a16dfb97de8a6b7dcf944cc9d"
   },
   "index.html": {
-   "bytes": 2479969,
-   "sha256": "a926f752de06eaa979258bd64aff97f9c159bd2ab85e29d6a2310555c1aaac2a"
+   "bytes": 2497926,
+   "sha256": "5789c86bd39a41ed83f3479e0df047e38231139fae907a399d3af0ca98528393"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",
