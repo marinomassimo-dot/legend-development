@@ -195,7 +195,7 @@
     }
    ],
    "inferred": [
-    "That gene addition would act in humans at the stage a patient is treated (the efficacious window in mouse is perinatal, and the stated reason is model survival).",
+    "That gene addition would recover a manifested deficit: in the mouse every endpoint is measured after neonatal treatment (main cohorts P0-P1; timing arms P1-P5 in S8, small n, no P4 survival) of animals never measured before it (prevention or early-window). The only post-onset add-back is organoid hyperexcitability at week 10 to 16 (post-onset by about three weeks, different organoid cohorts, week 16 only, persistence not measured), which did not correct radial-glia abnormalities.",
     "That a lower dose than the high-dose arm would still help, or that it would not: with two doses the shape of the dose-response is not determined, and no expression difference was measured between the two doses in seven of eight regional comparisons (entry 12).",
     "Partial restoration may suffice in genotype classes that retain a missense allele (inference from a human genotype-phenotype series; not tested)."
    ],
@@ -285,7 +285,7 @@
     "status": "NOT_ASSESSED",
     "note": "Coverage of this need by catalogue compounds is not computed here; the repurposing module sets it."
    },
-   "notes": "Gene addition is a modality, not a repurposing-catalogue compound class; kept as a need so that restoration-level comparators exist for every downstream need.",
+   "notes": "Gene addition is a modality, not a repurposing-catalogue compound class; kept as a need so that restoration-level comparators exist for every downstream need. The goal reads 'deep recovery' as an aim; the evidence is early-window prevention plus one organoid post-onset functional recovery. Do not carry a perinatal result to a later intervention.",
    "basis": "observed"
   },
   {
@@ -3578,7 +3578,7 @@
    "intervention_direction": {
     "direction": "restore",
     "on": "myelin formation / maturation",
-    "rationale": "A structural deficit that partly recovers after the causal (neuronal) rescue, so recovery is achievable in principle. Whether a pharmacological pro-myelinating route works is unresolved: the axonal signal may be absent and activity-dependent myelination may be harmed by NMDAR block.",
+    "rationale": "A structural deficit that is partly prevented when WWOX is restored in neurons at P0-P5; whether an established hypomyelination re-myelinates is unmeasured, and the treated arms of the 2026 paper are unquantified (Fig 6E quantifies MBP for knockout against wild type only). Whether a pharmacological pro-myelinating route works is unresolved: the axonal signal may be absent and activity-dependent myelination may be harmed by NMDAR block.",
     "certainty": "supported_in_WWOX_mouse_model for recovery after the causal rescue; unknown for any pharmacological route",
     "do_not_assume": "Activity-dependent myelination may be worsened by chronic NMDAR block (unmeasured); the myelin window is early (PND5-21 rat); a pro-myelinating agent may not be able to act if the neuron does not signal."
    },
@@ -4329,7 +4329,7 @@
     "status": "NOT_ASSESSED",
     "note": "Coverage of this need by catalogue compounds is not computed here; the repurposing module sets it."
    },
-   "notes": "Developmental window need: protective timing matters more than the target; see NEED-WWOX-GENE-ADDITION counter-evidence on the window.",
+   "notes": "Developmental window need: protective timing matters more than the target; see NEED-WWOX-GENE-ADDITION counter-evidence on the window. Neuron-targeted AAV9-WWOX at week 10 did not correct radial-glia abnormalities; the progenitor phenotype is the part of the disease for which no genetic add-back after onset has been shown.",
    "basis": "observed"
   },
   {
@@ -5224,7 +5224,7 @@
    "intervention_direction": {
     "direction": "restore",
     "on": "glycaemia and growth",
-    "rationale": "Supportive endpoint correction.",
+    "rationale": "Endpoints prevented by early neuronal restoration (glucose normal at P14 and P20 at the high dose, weight wild-type-like at P30); correction after the hypoglycaemia is established was not tested.",
     "certainty": "supported_in_WWOX_mouse_model as an endpoint",
     "do_not_assume": "An endpoint is not an intervention; no compound class is proposed by the record."
    },
