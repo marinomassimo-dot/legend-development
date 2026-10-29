@@ -11,6 +11,8 @@ python3 -B framework/scripts/repurposing_view.py run --source shareable
 python3 -B framework/scripts/repurposing_view.py check
 python3 -B framework/scripts/repurposing_view.py viewports
 python3 -B framework/scripts/repurposing_view.py titles --refresh   # only to refresh source_titles.json
+python3 -B framework/scripts/repurposing_view.py audit-shareable      # proof that the shareable output holds no non-allowlisted value
+python3 -B framework/scripts/repurposing_view.py package              # shareable_package/ (local preview)
 python3 -B framework/scripts/test_repurposing_view.py
 ```
 
@@ -43,7 +45,36 @@ Each profile has "Export this card (print / PDF)"; the URL `#export=<card id>` (
 ## Data boundary
 
 `run --source full` (default) embeds every row and writes `index.html`; DGIdb-derived rows are not cleared for public release and ChEMBL content is CC BY-SA 3.0, so this file is for local use. It is nevertheless tracked in the public repository (checked 2026-10-28), which is an open exposure for the operator.
-`run --source shareable` writes `index_shareable.html` and embeds a third-party row only when its provenance is on the allowlist `shareable_sources.json`: our own cards, needs and priority text; DGIdb rows whose claim source is NCI, FDA, CIViC or DoCM; openFDA; the MATRIX drug list. Everything else (ChEMBL, other DGIdb claim sources, DSLD, UniChem) appears as identifiers and counts: withheld compound names are replaced by the catalogue identifier, per-row status and modality are dropped, excluded-row details keep reasons only. The footer of the output lists the sources actually embedded with licence and attribution, and separately the sources that contributed counts or identifiers only. No attribution is removed to make data look distributable. The licence analysis behind the allowlist is a separate record; this mechanism does not change its conclusions and is not legal advice. Note that the full file is already tracked in the repository.
+
+`run --source shareable` writes `index_shareable.html` and embeds a third-party row only when its provenance is class A in the allowlist `shareable_sources.json`: our own cards, needs and priority text; DGIdb rows whose claim source is FDA, CIViC or DoCM; per-compound access categories stated from openFDA NDC; MATRIX names (none occurs in the current output). Everything else appears as identifiers and counts. IT5 P13 changes (the policy of the licence reconciliation, `../catalog/README.md`, as corrected by its independent verification):
+
+- NCI moved to counts-only (its terms were not read at NCI); MATRIX is class A only for the fields its authors own, never for the ATC, DrugBank and ChEBI identifiers inside it; no DrugBank, ChEBI, ATC, UNII or InChIKey value is embedded.
+- Every claim source of the catalogue is classified (A attribution, B share-alike, C identifiers and counts, D local only) in `claim_source_policy`; an unclassified source fails the audit.
+- Per-row status class and modality are never embedded (they derive from ChEMBL, MATRIX and DGIdb statements); a card row keeps an access category only when the catalogue states it from openFDA NDC (`prescription`, `OTC`) or as an absence (`unknown/unverified`); `experimental` (ChEMBL) and `supplement` (DSLD) are counts-only.
+- The names and gene of the DGIdb rows listed under "excluded from counts" are withheld (the string audit found them in the first version of this boundary).
+- No link leaves the document except to public identifiers: a card is reached through its profile in the same page (`#cand-<id>`); repository file names are printed as text.
+- The footer lists the sources actually embedded, the sources that contributed counts or identifiers only, the identifier and bibliographic sources, and the class-B file shipped apart.
+
+No attribution is removed to make data look distributable. The licence analysis behind the allowlist is a separate record; this mechanism does not change its conclusions and is not legal advice. The full file is already tracked in the repository.
+
+### Proof, not just a mechanism (IT5 P13)
+
+```bash
+python3 -B framework/scripts/repurposing_view.py audit-shareable            # static: provenance map, forbidden values, structure, links
+python3 -B framework/scripts/repurposing_view.py audit-shareable --dynamic  # plus the rendered first screen, every export and standalone download, comparisons, PDF text
+python3 -B framework/scripts/repurposing_shareable_audit.py fetch-labels --out DIR   # optional: openFDA label JSON of the cited drugs, for the text audit
+```
+
+The audit builds a reference of forbidden values from the FULL catalogue (names and synonyms of records whose name source is not allowlisted, ChEMBL mechanism and target wording, DrugBank/ChEBI/ATC/UNII/InChIKey/MATRIX identifiers, claim sources) and fails when any string, row or identifier traceable to it is in the output, wherever it sits: JSON leaf, key, visible text, attribute, script literal, rendered text. Every JSON field must match a provenance rule (own text, bibliographic fact, identifier, count, class-A row, source metadata, or must-be-empty). A value that both a third-party source and our own cards, needs or code contain is counted as co-attested and reported, never silently dropped; a co-attested ChEMBL wording longer than 8 words fails. The text audit compares every output string with the third-party texts held locally (full texts, abstracts, label JSON): an unquoted run over 25 words, or a marked quotation over 12 words without an attribution phrase (30 with one), fails. Mutation tests in `framework/scripts/test_repurposing_view.py` (class `ShareableAudit`) inject a class-C compound name, a whole class-C row with attributes, a non-allowlisted claim source in a pair, ChEMBL wording, DrugBank and ATC identifiers, an unclassified field, a repository link and an e-mail-like string, and require the audit to fail on each; a mutated policy file is also caught.
+
+### Static package (local preview, not published)
+
+```bash
+python3 -B framework/scripts/repurposing_view.py package [--zip PATH]   # writes shareable_package/ (and a deterministic zip)
+python3 -B framework/scripts/repurposing_view.py package --check
+```
+
+`shareable_package/` holds `index.html` (same bytes as `index_shareable.html`), `NOTICE.md` (sources, terms, credit lines, how each condition is met), `COMPARISON.md` (what the full version holds and the package withholds, with counts), `README.md`, `manifest.json` (embedded sources with row and field counts, withheld counts by class, file digests, audit summary), `TEXT_PROVENANCE.json` (written when a local text corpus exists, carried over otherwise), `LICENSES/` (licence texts pinned by sha256 in `shareable_sources.json`) and `class_b/chembl_cc-by-sa-3.0/` (the ChEMBL records of the twelve card compounds as a separate CC BY-SA 3.0 file with its own licence text and credit line). Class-B decision: ChEMBL is shipped apart because its conditions (URL and release in the credit, same licence for the adaptation) can be met exactly and the page embeds no ChEMBL content; GtoPdb (two licences on the same rows) and ClinPGx (policy page unread) stay counts-only. **The package is a local preview. Publishing it on any external surface is the operator's decision and has not been done.**
 
 ## Inputs and layout
 

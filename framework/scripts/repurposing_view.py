@@ -11,6 +11,9 @@ or medical advice. Public disease and reference-genotype level only.
 
   python3 -B framework/scripts/repurposing_view.py run      # (re)generate view/index.html
   python3 -B framework/scripts/repurposing_view.py check    # exit 1 if the file differs from a fresh build
+  python3 -B framework/scripts/repurposing_view.py run --source shareable   # the shareable view (allowlisted rows only)
+  python3 -B framework/scripts/repurposing_view.py audit-shareable          # proof: no non-allowlisted value is in the shareable bytes
+  python3 -B framework/scripts/repurposing_view.py package [--zip PATH]     # view/shareable_package/ (local preview, not published)
   python3 -B framework/scripts/repurposing_view.py --help
 """
 from __future__ import annotations
@@ -206,6 +209,26 @@ def tag_allowed(tag: str, allow: dict) -> bool:
     return tag.startswith("DGIdb:") and tag[6:] in (allow.get("dgidb_claim_sources") or {})
 
 
+def access_category_allowed(cat: str, allow: dict) -> tuple[bool, str | None]:
+    """(embeddable, source label) for one per-compound access category in the shareable build (IT5 P13).
+    A category is kept only when the catalogue states it from a class-A scope (openFDA NDC, MATRIX); 'experimental' (ChEMBL)
+    and 'supplement' (DSLD) are withheld from individual compounds; 'unknown/unverified' is an absence statement, not source content."""
+    if cat == "unknown/unverified":
+        return True, None
+    for label, spec in (allow.get("access_scope_sources") or {}).items():
+        if cat in (spec.get("categories") or []):
+            return spec.get("class") == "A", label
+    return False, None   # a category no source claims is not embedded (fail closed)
+
+
+def share_excluded_rows(ex: dict) -> dict:
+    """Shareable: an excluded row is a DGIdb row (compound name + gene); only its catalogue identifier and the counts are kept (IT5 P13: the string audit found the names here)."""
+    out = dict(ex)
+    if "alias_risk_rows_unresolved" in out:
+        out["alias_risk_rows_unresolved"] = [{"catalogue_id": x.get("catalogue_id")} for x in out["alias_risk_rows_unresolved"]]
+    return out
+
+
 def read_associations(dr: Path) -> list[dict]:
     ap = dr / "coverage/associations.jsonl.gz"
     out = []
@@ -253,6 +276,7 @@ THREAD_TEXT = {
     "Development and glia": "Brain development and support cells: myelin, progenitor proliferation (MYC), neuroinflammation and gliosis.",
     "Symptom-level": "Symptoms treated in their own right: seizures and spasms, blood glucose and growth.",
 }
+CARD_FILE_NOTE_IT = "{id}.card.json (file del repository, non incluso in questo pacchetto)"
 # ---------------------------------------------------------------------------------------------
 # Research-priority positions (IT5 P11). One position per card AND per need. There is no global
 # position of a card: the profile lists one position per need and the overview shows the SET of
@@ -524,7 +548,11 @@ UI_IT = {
     "ft_embedded": "Incluse come contenuto", "ft_counts": "Contribuiscono solo con identificativi o conteggi (contenuto non incluso)", "ft_rows": "righe di associazione incluse",
     "ft_ids": "Gli identificativi bibliografici (PubMed, DOI, ChEMBL) sono identificativi pubblici di opere citate; i titoli mostrati provengono da registri PubMed raccolti nel modulo. Nulla di quanto qui riportato è consiglio medico.",
     "ft_version": "versione",
-    "ft_note_share": "Versione condivisibile: una riga di terze parti è inclusa solo se la sua provenienza è nella lista consentita (view/shareable_sources.json). Tutto il resto compare come identificativo o conteggio. Nessuna attribuzione è stata rimossa. Licenze e attribuzioni sono riportate nella forma originale.",
+    "ft_idsrc": "Identificativi e fatti bibliografici (nessun contenuto di terzi oltre l'identificativo)",
+    "ft_classb": "Contenuto share-alike distribuito in un file separato, non in questa pagina",
+    "ft_classb_note": "Il contenuto ChEMBL (CC BY-SA 3.0) non è incorporato in questa pagina: i record ChEMBL e i meccanismi curati dei composti delle schede sono in un file a parte, con il proprio testo di licenza e la propria riga di credito. Questa pagina e quel file sono distribuiti insieme ma non fusi.",
+    "ft_classb_where": "File nel pacchetto:",
+    "ft_note_share": "Versione condivisibile: una riga di terze parti è inclusa solo se la sua provenienza è nell'elenco delle fonti consentite del repository. Tutto il resto compare come identificativo o conteggio. Nessuna attribuzione è stata rimossa. Licenze e attribuzioni sono riportate nella forma originale.",
     "ft_note_full": "Versione locale completa: include righe di terze parti (ChEMBL, DGIdb, openFDA, MATRIX) alle loro condizioni; le righe derivate da DGIdb non sono autorizzate alla diffusione pubblica e il contenuto ChEMBL è CC BY-SA 3.0. Per la circolazione usare la versione condivisibile.",
     # misc
     "chip_goal": "Obiettivo",
@@ -859,7 +887,9 @@ def build_curated(dr: Path, ctx: dict) -> dict:
         # per-link statistics from the module's pertinence table
         lk = {}
         depth_of = {x["id"]: x["depth"] for x in asserts}
-        acc_c = sorted({a for r in card_rows.get(cid, []) for a in (r.get("access_categories") or []) if a != "unknown/unverified"})
+        def _ok_acc(a):   # shareable: only categories stated from a class-A scope (IT5 P13)
+            return (not shareable) or access_category_allowed(a, allow)[0]
+        acc_c = sorted({a for r in card_rows.get(cid, []) for a in (r.get("access_categories") or []) if a != "unknown/unverified" and _ok_acc(a)})
         for nid in lneeds:
             rs = [r for r in pert if r["card_id"] == cid and r["need_id"] == nid]
             n_w = sum(1 for r in rs if r["evidence_kind"] == "readout_in_wwox_system" and r["counts_L3"] == "yes")
@@ -899,7 +929,7 @@ def build_curated(dr: Path, ctx: dict) -> dict:
         # catalogue side
         rws = card_rows.get(cid, [])
         chembl = sorted({x["chembl_id"] for x in (links.get(cid) or {}).get("links", []) if x.get("chembl_id")})
-        acc = sorted({a for r in rws for a in (r.get("access_categories") or [])})
+        acc = sorted({a for r in rws for a in (r.get("access_categories") or []) if (not shareable) or access_category_allowed(a, allow)[0]})
         # actions on targets from associations (compare view)
         actions = {}
         for r in rws:
@@ -938,7 +968,7 @@ def build_curated(dr: Path, ctx: dict) -> dict:
             "next": clip(nxt, 360), "next_full": nxt, "limits": card.get("limits") or [], "asserts": asserts, "n_disease_assertions": len(inp.get("disease_assertions") or ([inp["disease_assertion"]] if inp.get("disease_assertion") else [])),
             "access": acc, "country": ("US evidence found" if acc and acc != ["unknown/unverified"] else "no country evidence obtained"), "chembl": chembl, "actions": act,
             "pmids": [{"id": k, "role": v, "title": (titles.get(k) or {}).get("title"), "journal": (titles.get(k) or {}).get("journal"), "year": (titles.get(k) or {}).get("year")} for k, v in sorted(pm.items())], "dois": dois, "scope_counts": scope_counts,
-            "card_path": f"../{folder}/{cid}.card.json", "n_prio": sum(len(prio_by_row.get(r["row_id"], [])) for r in rws),
+            "card_path": (f"../{folder}/{cid}.card.json" if not shareable else CARD_FILE_NOTE_IT.format(id=cid)), "n_prio": sum(len(prio_by_row.get(r["row_id"], [])) for r in rws),
             "disp": dict(sorted(Counter(p["disposition"] for r in rws for p in prio_by_row.get(r["row_id"], [])).items())),
         })
     dup = Counter(c["short"] for c in cands)
@@ -985,8 +1015,7 @@ def build_footer(source: str, allow: dict, emitted: Counter, srcs: list[dict]) -
             a = (allow.get("name_sources") or {}).get(tag[5:], {})
             embedded.append({"label": a.get("label", tag), "licence": a.get("licence"), "attribution": a.get("attribution"), "url": a.get("url"), "rows": n})
         elif tag.startswith("access:"):
-            key = tag[7:]
-            lab = (allow.get("access_scope_prefixes") or {}).get(key, key)
+            lab = tag[7:]
             for a in (allow.get("name_sources") or {}).values():
                 if a.get("label") == lab:
                     embedded.append({"label": f"{a['label']} (access categories)", "licence": a.get("licence"), "attribution": a.get("attribution"), "url": a.get("url"), "rows": n})
@@ -997,8 +1026,10 @@ def build_footer(source: str, allow: dict, emitted: Counter, srcs: list[dict]) -
     for k, v in (allow.get("counts_and_identifiers_only") or {}).items():
         x = by_id.get(k.lower().replace(" ", "_").replace("nih_", ""))
         counts_only.append({"label": k, "terms": v, "version": (x or {}).get("version"), "retrieved": (x or {}).get("retrieved_utc")})
-    return {"source": source, "embedded": embedded, "counts_only": counts_only,
-            "note": "Shareable build: a third-party row is embedded only when its provenance is on the allowlist (view/shareable_sources.json). Everything else appears as an identifier or a count. No attribution has been removed."}
+    identifiers = [{"label": k, "licence": v.get("licence"), "attribution": v.get("attribution"), "url": v.get("url")} for k, v in (allow.get("identifier_sources") or {}).items()]
+    class_b = [{"label": k, "licence": v.get("licence"), "credit": v.get("credit"), "path": v.get("path"), "records_of": v.get("records_of")} for k, v in (allow.get("class_b_files") or {}).items()]
+    return {"source": source, "embedded": embedded, "counts_only": counts_only, "identifiers": identifiers, "class_b": class_b,
+            "note": "Shareable build: a third-party row is embedded only when its provenance is on the allowlist (the repository's allowlist of sources). Everything else appears as an identifier or a count. No attribution has been removed."}
 
 
 def build_payload(dr: Path = DEFAULT_DR, source: str = "full") -> dict:
@@ -1039,6 +1070,11 @@ def build_payload(dr: Path = DEFAULT_DR, source: str = "full") -> dict:
             return r.get("name"), True
         return str(r["row_id"]).split(":", 1)[-1].replace("CAT:", ""), False
 
+    def cpath(cid):
+        """Link to a card file. The shareable build has no repository-relative path: a card is reached through its profile in the same page."""
+        p = card_path(dr, cid)
+        return (f"#cand-{cid}" if p else None) if shareable else p
+
     needs = needs_doc["needs"]
     need_ids = [n["id"] for n in needs]
     nidx = {n: i for i, n in enumerate(need_ids)}
@@ -1059,17 +1095,21 @@ def build_payload(dr: Path = DEFAULT_DR, source: str = "full") -> dict:
         cards = []
         for c in r.get("cards") or []:
             cid = c["card_id"] if isinstance(c, dict) else c
-            cards.append({"id": cid, "att": c.get("attachment") if isinstance(c, dict) else None, "path": card_path(dr, cid)})
+            cards.append({"id": cid, "att": c.get("attachment") if isinstance(c, dict) else None, "path": cpath(cid)})
         nm, ok = row_label(r)
         acc = r.get("access_categories") or []
         st = r.get("status_class") or []
         mod = r.get("modality") if isinstance(r.get("modality"), list) else [r.get("modality")]
-        if not ok:   # shareable: identifier and counts only; per-row attributes of a withheld record are not embedded
-            pre = tuple(allow.get("access_scope_prefixes") or ())
-            acc = sorted({c for c, sc in (cat_info.get(reps.get(rid)) or {}).get("access", []) if sc.startswith(pre)}) if pre else []
-            for c, sc in (cat_info.get(reps.get(rid)) or {}).get("access", []):
-                if pre and sc.startswith(pre):
-                    emitted["access:" + sc.split(" ")[0]] += 1
+        if shareable:   # IT5 P13: a row's status class and modality derive from ChEMBL/MATRIX/DGIdb statements; access categories only from class-A scopes. The page never reads st/mod of a row.
+            if ok:
+                kept = [c for c in acc if access_category_allowed(c, allow)[0]]
+                for c in kept:
+                    lab = access_category_allowed(c, allow)[1]
+                    if lab:
+                        emitted["access:" + lab] += 1
+                acc = kept
+            else:   # identifier and counts only; per-row attributes of a withheld record are not embedded
+                acc = []
             st, mod = [], []
         rows.append({"id": rid, "name": nm, "kind": r.get("kind"), "acc": acc, "st": st, "mod": mod,
                      "rec": r.get("records"), "dup": r.get("n_possible_duplicates") or 0, "cards": cards,
@@ -1201,7 +1241,7 @@ def build_payload(dr: Path = DEFAULT_DR, source: str = "full") -> dict:
             "levels": {lv: dict(sorted(lvl_counts[n["id"]][lv].items())) for lv in LEVELS},
             "n_pairs": n_pairs.get(n["id"], 0), "n_prio": n_prio.get(n["id"], 0),
             "gaps": gaps, "counter": n.get("counter_evidence") or [], "inferred": n.get("inferred") or [],
-            "cards": [{"id": c, "path": card_path(dr, c)} for c in (src.get("cards") or [])],
+            "cards": [{"id": c, "path": cpath(c)} for c in (src.get("cards") or [])],
             "hyps": src.get("hypotheses") or [], "map": src.get("map_records") or [], "reg": src.get("registry_ids") or [],
             "papers": [x.get("paper_registry_ids") or [] for x in (src.get("papers") or [])],
             "targets": [(t.get("symbol"), t.get("target_kind")) for t in n.get("targets") or []],
@@ -1237,7 +1277,7 @@ def build_payload(dr: Path = DEFAULT_DR, source: str = "full") -> dict:
         "union_pm_records": cc.get("union_with_pathway_members_records"), "union_pm_families": cc.get("union_with_pathway_members_families"),
         "pct_incl_pm": cc.get("pct_records_incl_pathway_members"),
         "effector_readout_only_records": cc.get("records_touching_only_effector_constraints_or_readout_markers", cc["records_touching_only_readout_markers"]),
-        "excluded_rows": cc.get("excluded_rows") or {},
+        "excluded_rows": share_excluded_rows(cc.get("excluded_rows") or {}) if shareable else (cc.get("excluded_rows") or {}),
         "unit_records": u["records_are"], "unit_coverage": u["coverage_unit"], "unit_family_rule": u["family_rule"],
         "overlap_warning": cc["overlap_warning"],
     }
@@ -1264,7 +1304,7 @@ def build_payload(dr: Path = DEFAULT_DR, source: str = "full") -> dict:
         r = rows_by_id[k[0]]
         if r.get("cards") and p["disposition"] in ("consistent_mechanism_candidate", "exploration_candidate", "opposite_mechanism", "mixed_consistent_and_opposed_actions", "source_queried_without_result", "incomplete_or_failed_query"):
             card_leads.append({"row": row_label(r)[0], "need": k[1], "disp": p["disposition"], "levels": [p["levels"].get(x) for x in LEVELS],
-                               "cards": [{"id": c["card_id"], "path": card_path(dr, c["card_id"])} for c in r["cards"]]})
+                               "cards": [{"id": c["card_id"], "path": cpath(c["card_id"])} for c in r["cards"]]})
     srcs = source_rows(manifest, stats, summary)
     tech = {
         "schema": summary["schema"], "view_schema": SCHEMA, "matrix_schema": matrix.get("schema"),
@@ -1428,12 +1468,16 @@ def render_static(P: dict) -> dict[str, str]:
 
     # leads
     ld = [f'<p class="mut">{E(str(P.get("leads_note") or ""))}</p>' if P.get("leads_note") else ""]
-    ld.append('<p>A catalogue target listing (a stated action, or none) is a source statement, not a recommendation. Reasoned endings of searches, including abstentions and opposite mechanisms, each with what would reopen it. Same content as the section "Catalogue-derived leads" of <a href="../../repurposing_batch_selection_20261028_module.md">the handoff</a> (<code>../../repurposing_batch_selection_20261028_module.md</code>). Sources: <code>coverage/lead_dispositions.json</code>.</p>')
+    share = P["source"] == "shareable"   # no repository-relative link in the shareable build: file names are printed as text
+    if share:
+        ld.append('<p>A catalogue target listing (a stated action, or none) is a source statement, not a recommendation. Reasoned endings of searches, including abstentions and opposite mechanisms, each with what would reopen it. File names below are repository records, printed as text (they are not part of this package).</p>')
+    else:
+        ld.append('<p>A catalogue target listing (a stated action, or none) is a source statement, not a recommendation. Reasoned endings of searches, including abstentions and opposite mechanisms, each with what would reopen it. Same content as the section "Catalogue-derived leads" of <a href="../../repurposing_batch_selection_20261028_module.md">the handoff</a> (<code>../../repurposing_batch_selection_20261028_module.md</code>). Sources: <code>coverage/lead_dispositions.json</code>.</p>')
     ld.append(f'<h3>Lead dispositions ({num("leads.n", len(P["leads"]))})</h3>')
     for d in P["leads"]:
-        card = f'<a href="../{E(d["card"])}">{E(d["card"])}</a>' if d.get("card") else "no card"
+        card = (f'<code>{E(d["card"])}</code>' if share else f'<a href="../{E(d["card"])}">{E(d["card"])}</a>') if d.get("card") else "no card"
         rec = d.get("record")
-        reca = f'<a href="../{E(rec)}">{E(rec)}</a>' if rec else "none"
+        reca = (f'<code>{E(rec)}</code>' if share else f'<a href="../{E(rec)}">{E(rec)}</a>') if rec else "none"
         ld.append(f'<div class="item" data-lead="{E(d["id"])}"><div class="top"><span class="nm">{E(d["id"])}</span><span class="chip">decision: {E(d["decision"])}</span><span class="mut">{E(d["need"])}</span></div>'
                   f'<div>{E(d["subject"])}</div><dl class="crit"><dt>Why</dt><dd>{E(d["why"])}</dd><dt>Reopening condition</dt><dd>{E(d["reopening_condition"])}</dd>'
                   f'<dt>Next experiment</dt><dd>{E(d["next_experiment"])}</dd><dt>Owner</dt><dd>{E(d["owner"])}</dd><dt>Card</dt><dd>{card}</dd><dt>Record</dt><dd>{reca}</dd>'
@@ -1956,6 +2000,17 @@ def render_footer(P: dict) -> str:
         for e in ft["counts_only"]:
             h.append(f'<li><b>{E(e["label"])}</b>: {E(e["terms"])}' + (f'; {E(U["ft_version"])} {E(str(e["version"]))}' if e.get("version") else "") + "</li>")
         h.append("</ul>")
+    if ft.get("identifiers"):
+        h.append(f'<h3>{E(U["ft_idsrc"])}</h3><ul>')
+        for e in ft["identifiers"]:
+            u = f' <a href="{E(e["url"])}" rel="noopener noreferrer">{E(e["url"])}</a>' if e.get("url") else ""
+            h.append(f'<li><b>{E(e["label"])}</b>: {E(str(e.get("licence") or ""))}. {E(str(e.get("attribution") or ""))}{u}</li>')
+        h.append("</ul>")
+    if ft.get("class_b"):
+        h.append(f'<h3>{E(U["ft_classb"])}</h3><p class="mini">{E(U["ft_classb_note"])}</p><ul>')
+        for e in ft["class_b"]:
+            h.append(f'<li><b>{E(e["label"])}</b>: {E(str(e.get("licence") or ""))}. {E(str(e.get("credit") or ""))}. {E(U["ft_classb_where"])} <code>{E(str(e.get("path") or ""))}</code></li>')
+        h.append("</ul>")
     h.append(f'<p class="mini">{E(U["ft_ids"])}</p>')
     return "".join(h)
 
@@ -2218,8 +2273,15 @@ def measure_viewports(html_path: Path, shots: Path | None = None, widths: list |
 
 
 def main(argv=None) -> int:
+    argv = list(sys.argv[1:] if argv is None else argv)
+    if argv and argv[0] in ("audit-shareable", "package"):   # IT5 P13: the proof and the package live in their own small modules
+        if argv[0] == "audit-shareable":
+            import repurposing_shareable_audit as _m
+            return _m.main(["audit"] + argv[1:])
+        import repurposing_shareable_package as _m
+        return _m.main(argv[1:])
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0], formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("command", nargs="?", choices=["run", "check", "positions", "titles", "viewports"], help="run: write the view; check: exit 1 if a file is stale; positions: print one TSV line per card x need with the inputs and the position (for re-derivation); titles: report (or with --refresh, fill) the source-title cache; viewports: measure the page at 360/390/768/1280 px with a real device-metrics emulation")
+    ap.add_argument("command", nargs="?", choices=["run", "check", "positions", "titles", "viewports"], help="(also: audit-shareable, package: see the module docstring) run: write the view; check: exit 1 if a file is stale; positions: print one TSV line per card x need with the inputs and the position (for re-derivation); titles: report (or with --refresh, fill) the source-title cache; viewports: measure the page at 360/390/768/1280 px with a real device-metrics emulation")
     ap.add_argument("--dr", type=Path, default=DEFAULT_DR, help="drug_repurposing directory (default: the module)")
     ap.add_argument("--source", choices=list(SOURCES), default=None,
                     help="run: full (default) embeds every row, written to view/index.html; shareable embeds only allowlisted rows (view/shareable_sources.json), written to view/index_shareable.html. check: both unless given")

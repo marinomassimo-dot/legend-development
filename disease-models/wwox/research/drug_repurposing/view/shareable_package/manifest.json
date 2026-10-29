@@ -1,0 +1,653 @@
+{
+ "audit": {
+  "field_provenance": {
+   "^\\.(funnel|matrix_summary|dispositions|observations|level_defs|leads_note|pair_unit|ranking_note|no_probability|schema|source|exploration_flagged|has_distinct|orphan_priorities)(\\.|\\[\\]|$)": {
+    "class": "OWN",
+    "values": 170,
+    "why": "counts and definitions computed from the module's own outputs"
+   },
+   "^\\.access\\.": {
+    "class": "COUNT",
+    "values": 57,
+    "why": "catalogue-wide counts and category labels (no compound)"
+   },
+   "^\\.card_leads\\[\\]\\.": {
+    "class": "OWN",
+    "values": 106,
+    "why": "lead dispositions attached to cards"
+   },
+   "^\\.cur\\.(needs|threads|groups|gaps|goals|tracks|scopes|group_note|meta)(\\.|\\[\\]|$)": {
+    "class": "OWN",
+    "values": 1416,
+    "why": "needs, threads and positions written in this repository"
+   },
+   "^\\.cur\\.cands\\[\\]\\.": {
+    "class": "OWN",
+    "values": 4591,
+    "why": "card text and computed positions (provenance of the prose: see text audit)"
+   },
+   "^\\.cur\\.cands\\[\\]\\.(pmids\\[\\]\\.(id|role)|dois\\[\\])$": {
+    "class": "BIBLIO",
+    "values": 311,
+    "why": "PMID / DOI of a cited work"
+   },
+   "^\\.cur\\.cands\\[\\]\\.access\\[\\]$": {
+    "class": "SRC_A",
+    "values": 13,
+    "why": "access category stated from openFDA NDC or an absence statement"
+   },
+   "^\\.cur\\.cands\\[\\]\\.chembl\\[\\]$": {
+    "class": "ID",
+    "values": 14,
+    "why": "ChEMBL identifier of a compound named by a card"
+   },
+   "^\\.cur\\.cands\\[\\]\\.pmids\\[\\]\\.(title|journal|year)$": {
+    "class": "BIBLIO",
+    "values": 459,
+    "why": "title, journal, year of a cited work (bibliographic facts)"
+   },
+   "^\\.cur\\.footer\\.": {
+    "class": "SRC_META",
+    "values": 79,
+    "why": "attribution footer: sources, licences, credit lines"
+   },
+   "^\\.cur\\.needs\\[\\]\\.obs\\[\\]\\.(cite)$": {
+    "class": "BIBLIO",
+    "values": 71,
+    "why": "title, journal, year of a cited work"
+   },
+   "^\\.cur\\.needs\\[\\]\\.obs\\[\\]\\.pmid$": {
+    "class": "BIBLIO",
+    "values": 71,
+    "why": "PMID of the observation source"
+   },
+   "^\\.excluded_detail\\[\\]\\.(id|name|src)$": {
+    "class": "ID",
+    "values": 9,
+    "why": "catalogue identifier of an excluded row"
+   },
+   "^\\.excluded_detail\\[\\]\\.(reason|n_needs|genes\\[\\])$": {
+    "class": "COUNT",
+    "values": 6,
+    "why": "reason class and counts of an excluded row"
+   },
+   "^\\.funnel\\.excluded_rows\\.alias_risk_rows_unresolved\\[\\]\\.catalogue_id$": {
+    "class": "ID",
+    "values": 2,
+    "why": "catalogue identifier of an excluded row (name and gene withheld)"
+   },
+   "^\\.leads\\[\\]\\.": {
+    "class": "OWN",
+    "values": 60,
+    "why": "lead dispositions written in this repository"
+   },
+   "^\\.leads\\[\\]\\.catalogue_ids\\[\\]$": {
+    "class": "ID",
+    "values": 5,
+    "why": "catalogue identifiers"
+   },
+   "^\\.needs\\[\\]\\.": {
+    "class": "OWN",
+    "values": 1625,
+    "why": "needs records written in this repository"
+   },
+   "^\\.pairs\\[\\]\\.(l2|l3|l4|x|n|r)(\\.|\\[\\]|$)": {
+    "class": "OWN",
+    "values": 21922,
+    "why": "levels 2-4, indices: computed from cards and needs"
+   },
+   "^\\.pairs\\[\\]\\.l1\\.(state|n_assoc|readout_only|why|stale)$": {
+    "class": "OWN",
+    "values": 8320,
+    "why": "level-1 state, association count and note computed by the coverage tool"
+   },
+   "^\\.pairs\\[\\]\\.l1\\.(targets|pathway)\\[\\]$": {
+    "class": "SRC_A",
+    "values": 19,
+    "why": "gene symbols (HGNC) of class-A association rows"
+   },
+   "^\\.pairs\\[\\]\\.l1\\.sources\\[\\]$": {
+    "class": "SRC_A",
+    "values": 22,
+    "why": "provenance tag of a class-A association row"
+   },
+   "^\\.pairs\\[\\]\\.l1\\.withheld$": {
+    "class": "COUNT",
+    "values": 1664,
+    "why": "number of association rows withheld by the allowlist"
+   },
+   "^\\.pairs\\[\\]\\.p\\.": {
+    "class": "OWN",
+    "values": 11774,
+    "why": "priority criteria computed by the coverage tool"
+   },
+   "^\\.pairs\\[\\]\\.p\\.cr\\.dir\\[\\]\\[\\]$": {
+    "class": "SRC_A",
+    "values": 22,
+    "why": "criteria: class-A link sources and class-A targets"
+   },
+   "^\\.rows\\[\\]\\.(dup|rec|tr|w)$": {
+    "class": "COUNT",
+    "values": 5815,
+    "why": "record counts of a catalogue row"
+   },
+   "^\\.rows\\[\\]\\.(id|kind)$": {
+    "class": "ID",
+    "values": 2926,
+    "why": "catalogue row identifier and row kind"
+   },
+   "^\\.rows\\[\\]\\.acc\\[\\]$": {
+    "class": "SRC_A",
+    "values": 13,
+    "why": "access category stated from openFDA NDC (class A) or an absence statement"
+   },
+   "^\\.rows\\[\\]\\.cards\\[\\]\\.(id|att|path)$": {
+    "class": "OWN",
+    "values": 132,
+    "why": "card attachment (in-page anchor)"
+   },
+   "^\\.rows\\[\\]\\.name$": {
+    "class": "ROWNAME",
+    "values": 1463,
+    "why": "card name (own text), opaque identifier, or a class-A name source"
+   },
+   "^\\.strings\\[\\]$": {
+    "class": "OWN",
+    "values": 46,
+    "why": "string table of repeated coverage-tool sentences"
+   },
+   "^\\.tech\\.": {
+    "class": "SRC_META",
+    "values": 165,
+    "why": "state, version, licence and digests of the sources"
+   },
+   "^\\.ui\\.": {
+    "class": "UI",
+    "values": 505,
+    "why": "Italian orientation text (builder data UI_IT and siblings)"
+   }
+  },
+  "identifiers": {
+   "CAT": 1445,
+   "CHEMBL": 253,
+   "DOI": 5,
+   "HGNC": 6,
+   "NCT": 0,
+   "PMID": 12
+  },
+  "links": {
+   "distinct_hrefs": 47,
+   "external_public": 6,
+   "hosts": [
+    "civicdb.org",
+    "open.fda.gov",
+    "www.docm.info",
+    "www.ebi.ac.uk",
+    "www.genenames.org",
+    "www.nlm.nih.gov"
+   ],
+   "internal_anchors": 41
+  },
+  "reference": {
+   "catalogue_records": 44211,
+   "co_attested": {
+    "forbidden-name": 1359,
+    "forbidden-wording": 11
+   },
+   "co_attested_wording": [
+    [
+     "80s ribosome modulator",
+     "CAT:CHEMBL256997"
+    ],
+    [
+     "gaba a receptor",
+     "CAT:CHEMBL15891"
+    ],
+    [
+     "pyruvate dehydrogenase kinase",
+     "CAT:CHEMBL306823"
+    ],
+    [
+     "reactive oxygen species",
+     "CAT:CHEMBL2105630"
+    ],
+    [
+     "voltage gated t type calcium channel",
+     "CAT:CHEMBL1100"
+    ]
+   ],
+   "forbidden_identifiers": 100768,
+   "forbidden_names": 126046,
+   "forbidden_wordings": 2888,
+   "suppressed_by_exemption": {
+    "category labels of catalogue-wide counts": 1
+   }
+  },
+  "text_provenance_file": "TEXT_PROVENANCE.json",
+  "violations": 0
+ },
+ "class_b_content": {
+  "chembl_ids": [
+   "CHEMBL1096",
+   "CHEMBL1201333",
+   "CHEMBL146927",
+   "CHEMBL1746",
+   "CHEMBL190461",
+   "CHEMBL1983350",
+   "CHEMBL256997",
+   "CHEMBL306823",
+   "CHEMBL413",
+   "CHEMBL4217292",
+   "CHEMBL696",
+   "CHEMBL89598"
+  ],
+  "file": "class_b/chembl_cc-by-sa-3.0/chembl_cc-by-sa-3.0.jsonl",
+  "mechanism_rows": 10,
+  "records": 12,
+  "release": "ChEMBL_37 2026-05-01"
+ },
+ "class_b_files": [
+  {
+   "credit": "ChEMBL, EMBL-EBI, https://www.ebi.ac.uk/chembl/ , release ChEMBL_37 (2026-05-01)",
+   "label": "chembl",
+   "licence": "CC BY-SA 3.0 Unported",
+   "path": "class_b/chembl_cc-by-sa-3.0/chembl_cc-by-sa-3.0.jsonl",
+   "records_of": "card_links.json (the twelve ChEMBL records the module's cards name)"
+  }
+ ],
+ "comparison": {
+  "card_actions_listed_full": 29,
+  "card_actions_listed_shareable": 0,
+  "card_fields_that_differ_count_of_cards": {
+   "access": 6,
+   "actions": 7,
+   "card_path": 33,
+   "country": 4,
+   "links": 6
+  },
+  "cards": 33,
+  "curated_sections": {
+   "cands": "differs",
+   "footer": "differs",
+   "gaps": "identical",
+   "goals": "identical",
+   "group_note": "identical",
+   "groups": "identical",
+   "meta": "differs",
+   "needs": "identical",
+   "scopes": "identical",
+   "threads": "identical",
+   "tracks": "identical"
+  },
+  "excluded_rows_with_names_full": 3,
+  "excluded_rows_with_names_shareable": 0,
+  "needs": 22,
+  "pairs_total": 1664,
+  "pairs_with_target_list_full": 1298,
+  "pairs_with_target_list_shareable": 12,
+  "payload_sections": {
+   "access": "identical",
+   "card_leads": "differs",
+   "cur": "differs",
+   "dispositions": "identical",
+   "excluded_detail": "differs",
+   "exploration_flagged": "identical",
+   "funnel": "differs",
+   "has_distinct": "identical",
+   "leads": "identical",
+   "leads_note": "identical",
+   "level_defs": "identical",
+   "matrix_summary": "identical",
+   "needs": "differs",
+   "no_probability": "identical",
+   "observations": "identical",
+   "orphan_priorities": "identical",
+   "pair_unit": "identical",
+   "pairs": "differs",
+   "ranking_note": "identical",
+   "rows": "differs",
+   "schema": "identical",
+   "strings": "identical",
+   "tech": "identical"
+  },
+  "rows_named_full": 1451,
+  "rows_named_shareable_card_names_only": 37,
+  "rows_total": 1463,
+  "rows_with_access_categories_full": 1440,
+  "rows_with_access_categories_shareable": 11,
+  "rows_with_per_row_status_or_modality_full": 1463,
+  "rows_with_per_row_status_or_modality_shareable": 0,
+  "target_symbols_listed_full": 1746,
+  "target_symbols_listed_shareable": 12
+ },
+ "counts_only_sources": [
+  {
+   "label": "NCI Cancer Gene Index (via DGIdb)",
+   "retrieved": null,
+   "terms": "class C until its terms are read at NCI: DGIdb declares public domain, the Cancer Gene Index page named by DGIdb's importer is gone and cancer.gov's reuse policy names NCI products, not this dataset (P1 independent verification, row L3); rows are counted, never embedded",
+   "version": null
+  },
+  {
+   "label": "ChEMBL",
+   "retrieved": "2026-10-27T22:41:53Z",
+   "terms": "CC BY-SA 3.0 (EMBL-EBI): no ChEMBL content in the single page; ChEMBL identifiers are kept; the ChEMBL records and curated mechanisms of the twelve card compounds are shipped as a separate class-B file with its own licence text and credit line (shareable_package/class_b/chembl_cc-by-sa-3.0/)",
+   "version": "ChEMBL_37 2026-05-01"
+  },
+  {
+   "label": "GtoPdb (via DGIdb and the public download)",
+   "retrieved": null,
+   "terms": "class B, not shipped: database ODbL and contents CC BY-SA 4.0 at once (two licences on the same rows); counts only",
+   "version": null
+  },
+  {
+   "label": "ClinPGx / PharmGKB (via DGIdb)",
+   "retrieved": null,
+   "terms": "class B, not shipped: CC BY-SA 4.0 declared by DGIdb; the data-usage policy page was not read; counts only",
+   "version": null
+  },
+  {
+   "label": "DGIdb (other claim sources: DTC, TTD, TdgClinicalTrial, TEND, JAX-CKB, CGI, MyCancerGenome and its trials, ClearityFoundation, OncoKB, CancerCommons, COSMIC)",
+   "retrieved": null,
+   "terms": "class C: non-commercial, unclear, publisher-table or unknown terms declared by DGIdb; counted, never embedded",
+   "version": null
+  },
+  {
+   "label": "NIH DSLD",
+   "retrieved": "2026-10-28T23:39:55Z",
+   "terms": "probe counts only; supplement access categories of individual compounds are withheld",
+   "version": "API v9.4.0"
+  },
+  {
+   "label": "UniChem",
+   "retrieved": "2026-10-27T22:41:54Z",
+   "terms": "cross-reference identifiers only; none is embedded in the page",
+   "version": "Last-Modified src1src14.txt.gz=Sat, 24 Oct 2026 21:16:36 GMT; src1src2.txt.gz=Sat, 24 Oct 2026 21:16:01 GMT; src1src7.txt.gz=Sat, 24 Oct 2026 21:16:11 GMT"
+  },
+  {
+   "label": "Every Cure MATRIX third-party identifiers (ATC, DrugBank, ChEBI)",
+   "retrieved": null,
+   "terms": "identifiers-only (class C): a dataset-card licence cannot grant rights in third-party content; none is embedded in the page",
+   "version": null
+  },
+  {
+   "label": "DrugBank",
+   "retrieved": null,
+   "terms": "identifiers only; no DrugBank text or table; no DrugBank identifier is embedded in the page",
+   "version": null
+  }
+ ],
+ "data": {
+  "catalogue_generated": "2026-10-28T23:40:16Z",
+  "data_date": "2026-10-28",
+  "dgidb_export": "2024-06-10",
+  "view_schema": "legend.wwox.repurposing_view/2"
+ },
+ "embedded_field_classes": {
+  "BIBLIO": 912,
+  "COUNT": 7542,
+  "ID": 2956,
+  "OWN": 50162,
+  "ROWNAME": 1463,
+  "SRC_A": 89,
+  "SRC_META": 244,
+  "UI": 505
+ },
+ "embedded_sources": [
+  {
+   "attribution": "LEGEND WWOX repurposing module (this repository)",
+   "label": "Cards, needs, priorities and dispositions (this repository)",
+   "licence": "repository licence for original text; third-party rows are not covered by it",
+   "rows": null,
+   "url": null
+  },
+  {
+   "attribution": "CIViC, obtained through DGIdb (export of 2024-06-10); credit given as a courtesy",
+   "label": "CIViC (via DGIdb)",
+   "licence": "CC0 1.0 Universal (licence field reported by the DGIdb service on 2026-10-28)",
+   "rows": 19,
+   "url": "https://civicdb.org/"
+  },
+  {
+   "attribution": "Database of Curated Mutations (DoCM), CC BY 4.0, obtained through DGIdb (export of 2024-06-10)",
+   "label": "DoCM (via DGIdb)",
+   "licence": "CC BY 4.0 (licence field reported by the DGIdb service on 2026-10-28)",
+   "rows": 3,
+   "url": "http://www.docm.info/"
+  },
+  {
+   "attribution": "Data provided by the U.S. Food and Drug Administration. Do not rely on openFDA to make decisions regarding medical care. No FDA endorsement is implied.",
+   "label": "openFDA NDC (access categories)",
+   "licence": "Public domain (openFDA licence page)",
+   "rows": 8,
+   "url": "https://open.fda.gov/license/"
+  }
+ ],
+ "files": {
+  "COMPARISON.md": {
+   "bytes": 5375,
+   "sha256": "3de53d5cd4424ed6b3912d4820997c3c353610698b6fc4f3be6004f7b4cb0475"
+  },
+  "LICENSES/CC-BY-4.0.txt": {
+   "bytes": 18657,
+   "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411"
+  },
+  "LICENSES/CC-BY-SA-3.0.txt": {
+   "bytes": 22240,
+   "sha256": "3f941b3b89cf7b8370ceb83cc76d2120d471b58735d8ca60238a751a48d7f72f"
+  },
+  "LICENSES/CC0-1.0.txt": {
+   "bytes": 7048,
+   "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499"
+  },
+  "LICENSES/LEGEND-MIT.txt": {
+   "bytes": 1075,
+   "sha256": "e5dfa90d88e2069a2e4fd13429e8ebaefb7bd92fbbaede065af905656bc7ba87"
+  },
+  "NOTICE.md": {
+   "bytes": 9325,
+   "sha256": "11d551917985e7867249e744e1db18c955dfe59b155aceac347eb53f0856dc62"
+  },
+  "README.md": {
+   "bytes": 4034,
+   "sha256": "54ceea72ce52834a80565f1dfd5687c6978992cd2204ed450017a3b1d057f556"
+  },
+  "TEXT_PROVENANCE.json": {
+   "bytes": 1468,
+   "sha256": "1ed20bea2c2829b084c6581abe5d552fe637b2058261f015b9ee8af160ed5730"
+  },
+  "class_b/chembl_cc-by-sa-3.0/CREDIT.txt": {
+   "bytes": 1636,
+   "sha256": "b297e01712eb2f5f9741705e531d14b35c794e65e4bb46a596430bbd3d00d0bc"
+  },
+  "class_b/chembl_cc-by-sa-3.0/LICENSE_CC-BY-SA-3.0.txt": {
+   "bytes": 22240,
+   "sha256": "3f941b3b89cf7b8370ceb83cc76d2120d471b58735d8ca60238a751a48d7f72f"
+  },
+  "class_b/chembl_cc-by-sa-3.0/chembl_cc-by-sa-3.0.jsonl": {
+   "bytes": 6677,
+   "sha256": "d8fe6a3455466783564803428b6318c1c442db6a16dfb97de8a6b7dcf944cc9d"
+  },
+  "index.html": {
+   "bytes": 1889109,
+   "sha256": "37b1e1d1988cfcf08893a5d2f4eed0fca2278715e5996e1f1c010a62d4214ebd"
+  }
+ },
+ "generator": "python3 -B framework/scripts/repurposing_view.py package",
+ "identifier_and_bibliographic_sources": [
+  {
+   "attribution": "Gene symbols and HGNC identifiers: HGNC (https://www.genenames.org/)",
+   "label": "HGNC",
+   "licence": "CC0 (genenames.org/about/license); attribution recommended",
+   "url": "https://www.genenames.org/about/license/"
+  },
+  {
+   "attribution": "Bibliographic data: PubMed, National Library of Medicine (https://pubmed.ncbi.nlm.nih.gov/)",
+   "label": "PubMed bibliographic facts",
+   "licence": "bibliographic facts (PMID, title, journal, year); no abstract and no passage of an article is embedded; article and abstract rights stay with their holders (NLM policy)",
+   "url": "https://www.nlm.nih.gov/web_policies.html"
+  },
+  {
+   "attribution": "ChEMBL identifiers (CHEMBL...): EMBL-EBI, https://www.ebi.ac.uk/chembl/, release ChEMBL_37 (2026-05-01)",
+   "label": "ChEMBL identifiers",
+   "licence": "identifiers only; ChEMBL content is not embedded (class B file shipped separately)",
+   "url": "https://www.ebi.ac.uk/chembl/"
+  },
+  {
+   "attribution": "LEGEND WWOX repurposing module (this repository)",
+   "label": "Catalogue record identifiers",
+   "licence": "opaque identifiers of this repository's catalogue (CAT:...), no source content",
+   "url": null
+  }
+ ],
+ "licence_texts": {
+  "LICENSES/CC-BY-4.0.txt": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411",
+  "LICENSES/CC-BY-SA-3.0.txt": "3f941b3b89cf7b8370ceb83cc76d2120d471b58735d8ca60238a751a48d7f72f",
+  "LICENSES/CC0-1.0.txt": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
+  "LICENSES/LEGEND-MIT.txt": "e5dfa90d88e2069a2e4fd13429e8ebaefb7bd92fbbaede065af905656bc7ba87"
+ },
+ "perimeter": "local preview; not published; publication on any external surface needs the operator's decision",
+ "schema": "legend.wwox.repurposing_view.shareable_package/1",
+ "withheld": {
+  "records": 44211,
+  "records_by_name_source": {
+   "ChEMBL pref_name": 19405,
+   "DGIdb drug_name": 22557,
+   "MATRIX list name": 502,
+   "identifier only (appears only in combination products)": 459,
+   "none (ChEMBL has no preferred name)": 528,
+   "openFDA NDC single-ingredient active_ingredient name": 760
+  },
+  "records_by_origin": {
+   "chembl_parent_added": 7,
+   "chembl_selected": 19926,
+   "dgidb_only": 22557,
+   "matrix_only": 502,
+   "openfda_unii_only": 1219
+  },
+  "target_rows_by_claim_source": {
+   "CGI": {
+    "catalogue_rows": 368,
+    "class": "C",
+    "terms": "CC BY-NC 4.0, declared by DGIdb"
+   },
+   "CIViC": {
+    "catalogue_rows": 1120,
+    "class": "A",
+    "terms": "CC0 1.0; verified at docs.civicdb.org"
+   },
+   "COSMIC": {
+    "catalogue_rows": 37,
+    "class": "C",
+    "terms": "custom terms, declared by DGIdb"
+   },
+   "CancerCommons": {
+    "catalogue_rows": 109,
+    "class": "C",
+    "terms": "custom terms, declared by DGIdb"
+   },
+   "ChEMBL": {
+    "catalogue_rows": 16947,
+    "class": "B",
+    "terms": "CC BY-SA 3.0 Unported; attribution: ChEMBL URL and release version"
+   },
+   "ChEMBL curated mechanism": {
+    "catalogue_rows": 8068,
+    "class": "B",
+    "terms": "CC BY-SA 3.0 Unported (ChEMBL curated mechanisms)"
+   },
+   "ClearityFoundationBiomarkers": {
+    "catalogue_rows": 163,
+    "class": "C",
+    "terms": "unknown; data no longer available"
+   },
+   "ClearityFoundationClinicalTrial": {
+    "catalogue_rows": 240,
+    "class": "C",
+    "terms": "unknown; data no longer available"
+   },
+   "DTC": {
+    "catalogue_rows": 23879,
+    "class": "C",
+    "terms": "CC BY-NC-SA 3.0, declared by DGIdb; not verified at source"
+   },
+   "DoCM": {
+    "catalogue_rows": 76,
+    "class": "A",
+    "terms": "CC BY 4.0; verified in the project's archived about page (docm.info now redirects to GitHub)"
+   },
+   "FDA": {
+    "catalogue_rows": 427,
+    "class": "A",
+    "terms": "public domain unless otherwise noted; verified at fda.gov website policies"
+   },
+   "GuideToPharmacology": {
+    "catalogue_rows": 16070,
+    "class": "B",
+    "terms": "ODbL (database) and CC BY-SA 4.0 (contents)"
+   },
+   "JAX-CKB": {
+    "catalogue_rows": 2148,
+    "class": "C",
+    "terms": "CC BY-NC-SA 4.0, declared by DGIdb"
+   },
+   "MyCancerGenome": {
+    "catalogue_rows": 829,
+    "class": "C",
+    "terms": "restrictive custom terms, declared by DGIdb"
+   },
+   "MyCancerGenomeClinicalTrial": {
+    "catalogue_rows": 317,
+    "class": "C",
+    "terms": "restrictive custom terms, declared by DGIdb"
+   },
+   "NCI": {
+    "catalogue_rows": 6231,
+    "class": "C",
+    "terms": "public domain declared by DGIdb only; not verified at NCI"
+   },
+   "OncoKB": {
+    "catalogue_rows": 148,
+    "class": "C",
+    "terms": "non-commercial custom terms, declared by DGIdb"
+   },
+   "PharmGKB": {
+    "catalogue_rows": 5976,
+    "class": "B",
+    "terms": "CC BY-SA 4.0 (ClinPGx); policy page not read"
+   },
+   "TALC": {
+    "catalogue_rows": 602,
+    "class": "C",
+    "terms": "rights in a publisher's supplementary table"
+   },
+   "TEND": {
+    "catalogue_rows": 2242,
+    "class": "C",
+    "terms": "rights in a publisher's supplementary table"
+   },
+   "TTD": {
+    "catalogue_rows": 15246,
+    "class": "C",
+    "terms": "unclear (all rights reserved versus open access), declared by DGIdb"
+   },
+   "TdgClinicalTrial": {
+    "catalogue_rows": 5072,
+    "class": "C",
+    "terms": "rights in a publisher's supplementary table"
+   }
+  },
+  "target_rows_by_class": {
+   "A": 1623,
+   "B": 47061,
+   "C": 57631
+  },
+  "third_party_identifier_values_in_catalogue_not_embedded": {
+   "atc": 4875,
+   "chebi": 13263,
+   "drugbank": 13539,
+   "inchikey": 15242,
+   "matrix_id": 1927,
+   "unii": 15002
+  }
+ }
+}
