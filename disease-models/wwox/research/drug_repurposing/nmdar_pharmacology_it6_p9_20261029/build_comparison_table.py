@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Writes comparison_table.tsv (one row per compound, the same need) and sampled_documents.tsv. Every numeric cell is copied
 from activity_summary.tsv / toolcompound_summary.tsv / the raw rows (ChEMBL_37, retrieved 2026-10-29), or from a document named
 in the 'source_read' column with its depth. Hand-curated text is in this file on purpose so that it is reviewable.

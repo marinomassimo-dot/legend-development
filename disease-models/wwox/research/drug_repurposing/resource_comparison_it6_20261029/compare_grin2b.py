@@ -4,6 +4,8 @@ each resource say about each one? Resources: ChEMBL live REST (adapter, target C
 GtoPdb 2026.3.1 CSV (catalog cache), DGIdb 2024 TSV (catalog cache). Equivalent units: distinct named compounds with
 >=1 record on the target entity; per-record content is compared apart. Writes grin2b_comparison.json."""
 import csv, json, sys, time
+if any(a in ("-h", "--help") for a in sys.argv[1:]):
+    print(__doc__); sys.exit(0)
 from pathlib import Path
 ROOT = Path(__file__).resolve().parents[5]
 sys.path.insert(0, str(ROOT))

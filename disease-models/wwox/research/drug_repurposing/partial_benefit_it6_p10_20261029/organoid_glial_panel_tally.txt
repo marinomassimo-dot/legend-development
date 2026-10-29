@@ -1,0 +1,5 @@
+# microglia_presence {'NOT INFORMATIVE': 4, 'NOT SEPARATED': 2, 'RAISED': 1}
+# astroglial_lineage_homeostatic {'NOT SEPARATED': 12, 'RAISED': 2}
+# reactive_pan {'LOWERED': 3, 'NOT INFORMATIVE': 2, 'NOT SEPARATED': 3, 'RAISED': 2}
+# cytokine_inflammasome {'NOT INFORMATIVE': 4, 'NOT SEPARATED': 6}
+# reference {'NOT SEPARATED': 1}
