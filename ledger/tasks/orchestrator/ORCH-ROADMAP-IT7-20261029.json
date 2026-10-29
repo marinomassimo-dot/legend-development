@@ -72,14 +72,15 @@
    "steps": [
     {
      "step": "P7 R10 physician view extended; redistributable package, destination, rollback",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "evidence": "view extended and verified (browser, numbers); repairs in progress; deploy package prepared (DEPLOY.md, manual-only workflow proposal), publication reserved"
     },
     {
      "step": "P8 R9/R11/R12 scouting, licence inventory of the whole repository, hourly-control path check",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "scouting done and verified (scout_it7_20261029.md; ToolUniverse Reactome trial: REMOVE; Reactome adapter TRIAL; leakage checks TRIAL; TxGNN/MATRIX unchanged); hourly path checked (events.jsonl hourly :37 for IT3-IT6, IT7 from the next run); licence inventory awaiting verifier"
+     "evidence": "scout_it7_20261029.md (verified; ToolUniverse Reactome trial REMOVE; Reactome adapter and leakage checks TRIAL not built: no blocked WWOX question; TxGNN/MATRIX/NeMoCAD unchanged); licence_inventory_it7_20261029.md + history-privacy subcommand (verified; 198 BLOCK blobs in history vs 1 at the tip; reserved decisions listed; push notification sent); hourly path: mandate_watch events show scheduled looks, RUNNING heartbeat now logged (f05f45e3); no automation duplicated, workspace trust untouched"
     }
    ]
   },
