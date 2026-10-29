@@ -28,7 +28,7 @@ directory.
 ## Current capability — read this first
 
 **The state of the capability now is the newest "Roadmap iteration" section below (currently
-iteration 6, task `ORCH-ROADMAP-IT6-20261029`, which supersedes iteration 5 where they differ).**
+iteration 6, task `ORCH-ROADMAP-IT6-20261029`).**
 Every older "measured state" section, the 2026-10-21 stage column and the 2026-10-23 "Stage of the
 capability as a whole" are **historical snapshots**: they stay for provenance, carry the date at
 which they were true, and are not current counts. Numbers that must be current (catalogue size,
@@ -107,7 +107,30 @@ other than its producer (`../locator_audits/2026-10-27_*`). None is therapeutic 
 | Daily scout | **operative**: `framework/scripts/scout_daily.py`, user crontab `20 5 * * *` (05:20 UTC, the only scheduler); silent when nothing changes; report `~/.local/state/legend/scout_daily.json`. 2026-10-27: probes now observe the resource that matters (data card for the MATRIX scores' licence, explorer URL status for TxGNN, latest commit for repositories without releases; availability changes are labelled as such) and a small rotating external search over WWOX gap themes was added (first real search: three opportunities examined, none adopted — decisions in the capability scout log) | `framework/scripts/test_scout_daily.py`, capability scout log | `harness_session_start.py --actor <id>` now prints the radar line (last run, errors, items to examine, pending entries) for plan, junior-harness, the Orchestrator, the integrator and the Scientists; a session lands pending entries with `--append-log` on a task branch |
 | Radar state (2026-10-27, it3) | 20 probes, all baselined (ChEMBL API+FTP, DGIdb data, openFDA NDC date, Open Targets, Every Cure drug list / kg-nodes / kg-edges / scores / code judged separately, SigCom library count, GEO LINCS count, WWOX PubMed); first cron run of the new probes 2026-10-28 05:20 UTC. WATCH: Claude Science connectors, Dryad NMD repurposing list, IxIDN/ORDON, ToolUniverse, TxGNN (reasoned wait, condition unchanged). TRIAL (only if a card needs it): PubChem / BindingDB direct adapters. Read the line with `scout_daily.py --status` | capability scout log, entry 'Radar iteration 3' | a probe error is not 'no change' |
 
-### Roadmap iteration 5 (2026-10-29) — measured state (superseded by iteration 6 where they differ), task `ORCH-ROADMAP-IT5-20261029`
+### Roadmap iteration 6 (2026-10-29) — measured state, CURRENT, task `ORCH-ROADMAP-IT6-20261029`
+
+This is the section that describes the capability now. Iterations 1-5 below are historical; where a count or a statement differs, this section wins. Every decisive conclusion was checked against the sources by an actor other than its producer (reports in `../locator_audits/2026-10-29_it6_*`); the verifiers' defects were repaired before integration. None is an efficacy claim, and nothing here is medical advice.
+
+| Package | Where | What it is, measured | Independent check |
+|---|---|---|---|
+| P1 baseline and entry | this README; `framework/scripts/receipt_linkage.py` | current-capability box; prose lines that still say "receipt staged" are mapped to the recorded ledger event by identifier (read-only, tested) | 35 receipt ids cited by the module, all recorded |
+| P2 F/C/P review | `priority_review_it6_20261029.md`, rules in `priority_rules_it5_20261029.md` | labels re-derived from sources for every card and need; 5 labels changed, code and source labels agree on every link; no new category (two tag kinds retired); work order for the priority needs, no score | blind re-derivation of 22 links, 19 agree; 2 high and 3 medium defects repaired |
+| P3 data census | `wwox_data_census_it6_20261029.md` | no public proteome, phosphoproteome, ISR protein, flux or add-back record for a WWOX-deficient neural system; the best usable material is the mouse P17 deposit | claims reproduced inside the P4 verification |
+| P4 mouse P17 | `mouse_wwox_p17_it6_p4_20261029/` | GSE158681/2, pre-analysis committed first; the ISR sign conflict stays **unresolved** (the third system gives no resolvable sign at about 0.3); Atf4 mRNA lower in all four contrasts (mRNA only); positive control passes | independent rerun byte-identical and independent code agrees; 9 wording defects repaired |
+| P5 function reference | `wwox_function_reference_it6_20261029.md` | wild-type add-back titration in an isogenic null system as the ruler, binding-competence ratio as the orthogonal measure, discrimination table; no WWOX enzymatic activity is assumed | 16 claims vs sources; 8 defects repaired; A01 next measure applied |
+| P6 broad recovery | `broad_recovery_it6_p6_20261029/` | route-blockade thread: for WWOX the premise is missing (new searches), CBS and ASPA precedents show boost without repair and insoluble protein; card A02 revised, stays hypothesis | 17 statements; defects repaired |
+| P7 rescue window | `rescue_window_it6_20261029.md` | every mouse gene-addition endpoint is prevention or early-window; the only post-onset add-back is the organoid; cards C01/C04, needs and registries carry the window state | timing statements verified; 3 medium + 4 low defects repaired |
+| P8 capability | `pharmacology_it6_20261029/P8_capability_trial.md`, `framework/adapters/chembl.py` | ChEMBL adapter extended (accession resolution, activity rows with assay context, declared truncation); an empty single-subunit answer was shown not to be absence (pore blockers are curated against complexes) | 4 live tests + unit tests |
+| P9 NMDAR | `nmdar_pharmacology_it6_p9_20261029/`, card F04 | d-APV shows that bursting needs NMDAR activity; three readings (NMDAR gain, permissive necessity, AMPAR-led drive) are not separated by the data; an isolated NMDAR current is the discriminator; memantine is a translation probe; class table with human exposure | 34 statements; 9 defects repaired |
+| P10 glia | `partial_benefit_it6_p10_20261029/`, card J01 | sign conflict across species (rat deficit from PND 5, mouse excess, organoid no reactive programme); abstention, no compound promoted; time-course design | 27 statements; 8 defects repaired |
+| P11 magnesium | `supplement_diet_it6_p11_20261029/`, card P11 | extracellular Mg2+ as the NMDAR voltage gate; hypothesis only, bath Mg unstated in the source; other nutrient candidates abstained after searches run | 26 statements; 9 defects repaired |
+| P12 resources | `resource_comparison_it6_20261029/` | GluN2B across ChEMBL, GtoPdb, DGIdb and ToolUniverse with the independence of each; ToolUniverse adds nothing here (WATCH); the openFDA-NDC radar probe removed as noise | numbers from the scripts |
+| P13 interface | `view/` (`#brief=`, `#chains`, work order) | one-page synthesis per card (36 of 36 print on one A4 page), five evidence chains typed by edge kind, work order by need with the kind of next study; no overflow at 360, 390, 768, 1280 px | independent browser measurements and content check; 3 high, 9 medium defects repaired |
+| P14 integration | batches `BATCH_20261019_027`, `_028` (working model WM_v7.29, wording only) | 27 receipts recorded (ledger 912), registries, ledgers, map; adversarial review of the batch repaired | review with no high defect |
+
+The catalogue is unchanged (44,211 source-level records). Positions over 51 card-need links: F1 1, F2 5, F3 10, C2 4, C3 3, P1 17, P3 11 (see `priority_review_it6_20261029.md` for the reading rules). Regenerate with the commands of iteration 5 below; the cache lives in the root checkout (`LEGEND_CATALOG_CACHE`).
+
+### Roadmap iteration 5 (2026-10-29) — measured state (historical), task `ORCH-ROADMAP-IT5-20261029`
 
 Iterations 3 and 4 are complete and not reopened. Every conclusion below was checked by an actor other than its producer (audits in `../locator_audits/2026-10-29_it5_*`); verifier corrections were applied before integration. None is an efficacy claim.
 
