@@ -69,8 +69,9 @@
     },
     {
      "step": "P7 scouting and continuity without duplication (radar and hourly executions, two complementary searches)",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "scout merged + independently verified + corrected; no new monitor; radar/hourly read-only"
     }
    ]
   },
