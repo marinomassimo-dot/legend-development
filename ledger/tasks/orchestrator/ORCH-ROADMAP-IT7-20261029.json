@@ -1,0 +1,91 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-ROADMAP-IT7-20261029",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Iteration 7, linked to IT6 (COMPLETE) and roadmap_current.md: from WWOX knowledge to a bounded, verifiable predictive capability (R1-R12). A computational result is not therapeutic efficacy. Both goals stay open; genotype/lesion and depth of benefit are separate dimensions.",
+ "START_UTC": "2026-10-29T13:00:00Z",
+ "BASELINE": "3202b3723d86d73a6745f2d12d9e757b8660f774 = development/main (verified equal after fetch)",
+ "AUTHORISED_QUEUE_20261029C": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_A_RECONCILIATION": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "P0a reconcile P3 census with the rescue-window record: scope of absence statements",
+     "status": "TODO",
+     "owner": "scientist-b"
+    },
+    {
+     "step": "P0b strengthen the window-wording regression (active conclusion vs historical quote)",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_B_PREDICTION": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "P1 R1 biological context and typed WWOX subnetwork for one bounded question",
+     "status": "TODO",
+     "owner": "scientist-a"
+    },
+    {
+     "step": "P2 R2 compound census by method usability, bidirectional exploration",
+     "status": "TODO",
+     "owner": "scientist-b"
+    },
+    {
+     "step": "P3 R3 first predictive network comparison (pre-registered, exploratory unless independent)",
+     "status": "TODO",
+     "owner": "scientist-a"
+    },
+    {
+     "step": "P4 R4 context differences and subgroup hypotheses",
+     "status": "TODO",
+     "owner": "scientist-b"
+    },
+    {
+     "step": "P5 R5 pharmacological comparison for both research objectives",
+     "status": "TODO",
+     "owner": "scientist-a"
+    },
+    {
+     "step": "P6 R6 full-loop demonstration with a null/negative result",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_C_PRESENTATION_AND_OPERATIONS": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "P7 R10 physician view extended; redistributable package, destination, rollback",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "P8 R9/R11/R12 scouting, licence inventory of the whole repository, hourly-control path check",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_D_CLOSE": {
+   "order": 4,
+   "steps": [
+    {
+     "step": "P9 integration, final checks, validated push, cleanup, session closings",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  }
+ },
+ "DECISIONS_TAKEN": [],
+ "DEFAULTS_TAKEN": [],
+ "STOP_LOG": []
+}
