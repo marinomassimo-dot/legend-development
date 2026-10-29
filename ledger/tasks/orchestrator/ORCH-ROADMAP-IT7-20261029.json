@@ -14,8 +14,9 @@
    "steps": [
     {
      "step": "P0a reconcile P3 census with the rescue-window record: scope of absence statements",
-     "status": "TODO",
-     "owner": "scientist-b"
+     "status": "DONE",
+     "owner": "scientist-b",
+     "evidence": "census_reconciliation_it7_20261029.md: four-level table (17 rows), 27 absence statements 13 KEEP/6 NARROW/8 CORRECT; false global claims corrected (a proteome of WWOX-silenced endothelial cells exists; eIF2a phospho blots in a null ovarian line with add-back; organoid add-back single-cell has no vector control); 7 receipts recorded (ledger 920); verifier 5 medium + 5 low repaired; canonical statements listed for batch 029"
     },
     {
      "step": "P0b strengthen the window-wording regression (active conclusion vs historical quote)",
@@ -30,8 +31,9 @@
    "steps": [
     {
      "step": "P1 R1 biological context and typed WWOX subnetwork for one bounded question",
-     "status": "TODO",
-     "owner": "scientist-a"
+     "status": "DONE",
+     "owner": "scientist-a",
+     "evidence": "subnetwork_it7_p1_20261029: glycolysis/PDH/lactate question, 30 nodes 85 edges 225 observations 14 systems, signature SLC2A1 HK2 LDHA LDHB BNIP3 up / PDK1 down; firewall breach (fly rows) found by the verifier and removed with an accession-based check; verifier recomputed ~150 observations; repaired 31446616"
     },
     {
      "step": "P2 R2 compound census by method usability, bidirectional exploration",
