@@ -72,8 +72,9 @@
     },
     {
      "step": "P9 neuronal-need pharmacology deepening",
-     "status": "TODO",
-     "owner": "scientist-a"
+     "status": "DONE",
+     "owner": "scientist-a",
+     "evidence": "nmdar_pharmacology_it6_p9_20261029: three readings unranked, E1 isolated NMDAR current as discriminator, class table with exposure, memantine as translation probe; ChEMBL tool-compound resolution via InChIKey (246 rows); verifier 34 statements, 9 defects repaired (6226916a); card F04 integrated; coverage row(fid) fix with regression"
     },
     {
      "step": "P10 partial benefit beyond ISR-PDH",
