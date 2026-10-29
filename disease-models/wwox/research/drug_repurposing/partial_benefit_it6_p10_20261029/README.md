@@ -13,7 +13,7 @@ a WWOX-DEE genotype class; no individual-level record is used.
 | `organoid_glial_panel_cpm.tsv`, `classify_panel.py`, `organoid_glial_panel_classified.tsv` | the panel and the rule applied as declared |
 | `p47t_thresholded_query.py`, `p47t_thresholded_query.tsv` | named-gene query of the P47T supplementary sheets |
 | `J01_glial_reactivity_modulation.packet.json`, `.card.json` | the card (abstention form, as `F02` and `H02`); the bridge builds it and `cards/check_cards.py` logic returns 0 problems on it |
-| `needs_patch.diff`, `coverage_inputs_note.md` | the exact proposed edits to `needs/needs.json` and the statement about the coverage inputs |
+| `needs_patch.diff`, `integration_note_p10.md` | the exact proposed edits to `needs/needs.json` and the statement about the coverage inputs |
 | `../../receipt_staging/scientist-a/FTR-20261029-*.json` | five staged re-read receipts (the integrator records them; each passes `fulltext_receipts.py record --dry-run`) |
 
 ## 1. The thread, and why this one
@@ -213,7 +213,7 @@ A compound arm is deliberately not designed.
 * **Card.** `J01_glial_reactivity_modulation` (axis J, route BENEFICIO_PRECOCE, track A), status `abstention`, same form as `F02` and `H02`: seven disease assertions with receipts that are already recorded, no drug assertions, `directional_summary` UNRESOLVED, `abstention` NO_DRUG_ASSERTIONS_SUPPLIED. A card in this form is justified because the need now has a time-ordered, species-conflicting record and an auditable search; a promoted candidate card is not, because no compound has an assertion in a matching context. It is placed here, not under `cards/`, because the integrator owns that directory; it cites only recorded receipt ids so that it passes the cards checker unchanged when moved.
 * **Abstention.** No compound is promoted for glial reactivity. Reopening condition: a time course of glial density against first spike in a Wwox-deficient model, or any glial endpoint under a compound in a Wwox system.
 * **Patch.** `needs_patch.diff` (a unified diff against `needs/needs.json`, applied and checked by `needs/check_needs.py --file` on a scratch copy: 0 problems after this README exists) adds observations O4 to O8, two inferences, two counter-evidence lines (three entries), the rationale and `do_not_assume` clauses, targets IL1R1 and CASP1, and the note.
-  After integration: place the card under `cards/`, add it to the need's `sources.cards`, then `repurposing_coverage.py run` and `repurposing_view.py run`. Coverage inputs: see `coverage_inputs_note.md` (no row proposed, with reasons).
+  After integration: place the card under `cards/`, add it to the need's `sources.cards`, then `repurposing_coverage.py run` and `repurposing_view.py run`. Coverage inputs: see `integration_note_p10.md` (no row proposed, with reasons).
 
 ## 14. UNVERIFIED, owed
 
