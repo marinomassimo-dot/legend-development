@@ -11,6 +11,7 @@ What it does, with no network and no download:
 Other modes:
   --wide          print the quantity x context direction table (Markdown) generated from the matrix
   --animal-loo    leave-one-animal-out sign check of the mouse ISR set score (descriptive resampling)
+  --source-loo    the leave-one-gene-out signs that the mouse cycle's own table reports for the same set
 Run with:  python3 -I check_context_matrix.py [--wide | --animal-loo]
 Exit code 0 only if every check passes.
 """
@@ -29,7 +30,7 @@ COLUMNS = ["quantity_id", "quantity", "context_id", "context", "lesion_class", "
            "source_ref", "source_key"]
 DIRECTIONS = {"higher", "lower", "higher_sign_only", "lower_sign_only", "higher_non_specific",
               "lower_non_specific", "no_resolvable_sign", "set_dependent", "sparse", "changed_unsigned",
-              "UNKNOWN"}
+              "at_null_edge", "UNKNOWN"}
 EVIDENCE = {"measured_transcript", "measured_protein", "measured_metabolite", "measured_function",
             "inferred", "none"}
 PROVENANCE = {"cycle_computed_table", "cycle_text_only", "source_paper_carried", "none"}
@@ -37,7 +38,7 @@ NULLSTATE = {"OUT_NULL", "IN_NULL", "NA"}
 SEPSTATE = {"yes", "no", "NA"}
 QUANTITIES = ["Q01", "Q02", "Q03", "Q04", "Q05", "Q06", "Q07", "Q08", "Q09", "Q10", "Q11", "Q12", "Q13", "Q14"]
 CONTEXTS = ["ORG_KO", "HNPC_KD", "NEUR_KD", "MS_HIP", "MN_HIP", "MNULL_HIP", "MS_CTX", "FLY_KD", "FLY_KDA",
-            "RAT", "P47T", "ORG_PT"]
+            "RAT", "P47T", "ORG_PW", "ORG_PS"]
 
 P_ORG_SET = "hnpc_gse126075_it5_20261029/p7_organoid_set_summary.tsv"
 P_ORG_GENE = "hnpc_gse126075_it5_20261029/p7_organoid_key_genes.tsv"
@@ -231,10 +232,20 @@ def animal_loo():
     return 0
 
 
+def source_loo():
+    rows = read_tsv(P_M_SET)
+    print("contrast\tleave_one_out_signs\tall_same_sign")
+    for c in ["H_S", "H_N", "H_null", "C_S"]:
+        r = [x for x in rows if x["contrast"] == c and x["set"] == "ISR_targets" and x["universe_thr_tpm"] == "1.0"][0]
+        print("%s\t%s\t%s" % (c, r["loo_signs"], r["loo_all_same_sign"]))
+    return 0
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--wide", action="store_true", help="print the quantity x context direction table")
     ap.add_argument("--animal-loo", action="store_true", help="leave-one-animal-out sign check of the mouse ISR score")
+    ap.add_argument("--source-loo", action="store_true", help="print the leave-one-animal-out signs the mouse cycle itself reports for the ISR set")
     a = ap.parse_args()
     if a.wide:
         rows, problems = load_matrix(os.path.join(HERE, "context_matrix.tsv"))
@@ -245,6 +256,8 @@ def main():
         return 0
     if a.animal_loo:
         return animal_loo()
+    if a.source_loo:
+        return source_loo()
     return check()
 
 
