@@ -18,7 +18,7 @@
    },
    "^\\.cur\\.(needs|threads|groups|gaps|goals|tracks|scopes|group_note|meta|evidence_graph|work_order|selection|hypotheses|predictive|contexts|ranking)(\\.|\\[\\]|$)": {
     "class": "OWN",
-    "values": 6613,
+    "values": 6617,
     "why": "needs, threads, positions, evidence graph, work order and the IT7 selection, comparison, predictive-test and context sections: own text or counts computed from own census files"
    },
    "^\\.cur\\.cands\\[\\]\\.": {
@@ -447,7 +447,7 @@
   "BIBLIO": 2035,
   "COUNT": 7757,
   "ID": 3048,
-  "OWN": 57229,
+  "OWN": 57233,
   "ROWNAME": 1506,
   "SRC_A": 127,
   "SRC_META": 244,
@@ -529,8 +529,8 @@
    "sha256": "d8fe6a3455466783564803428b6318c1c442db6a16dfb97de8a6b7dcf944cc9d"
   },
   "index.html": {
-   "bytes": 2932692,
-   "sha256": "06d7937050c5e6587539cf11dcba641345b68af4a916a1f49ddcce8cf6657a0b"
+   "bytes": 2932832,
+   "sha256": "fcc866c304b764883a32cf68b0188006ef3a68e5ef3d6e2991552fb3ba3cc676"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",
