@@ -19,11 +19,26 @@ Next free sequence per PMID is `-01` (no ledger event, no staged file in any wor
 
 ## 3. Queue changes (and why that far)
 
+
+
 Applied by `apply_queue_edits.py` (idempotent). Needs: `NEED-ISR-ATTENUATION` O9, O10 + 3 inferred + 1 counter-evidence; `NEED-WWOX-GENE-ADDITION` O4 to O6 + 1 inferred + 1 counter-evidence. Cards (packets edited, cards rebuilt by the bridge): `E01`, `C01`, `C04`. `view/work_order.json`: two entries and a docs id. Positions before and after are compared in section 4. No new need and no new card: no WWOX observation justifies one.
 
 ## 4. Propagation and checks
 
-See section 8 (filled after the run).
+Commands run from the worktree with `LEGEND_CATALOG_CACHE` set to the root checkout's cache.
+
+| Consumer | Result |
+|---|---|
+| `needs/check_needs.py` | OK (90 observations; document locators resolve to the two loop READMEs) |
+| `cards/check_cards.py` | 27 packets, 0 problems; E01, C01, C04 rebuilt by the bridge and equal its output |
+| `repurposing_coverage.py run` | `priorities.json`: 710 rows, 11 changed (7 on `NEED-ISR-ATTENUATION`, 4 on `NEED-WWOX-GENE-ADDITION`), in each only `need_counter_evidence_items` moved; observations are `OTHER_DISEASE_PRECEDENT`, so `wwox_system_observations` is unchanged |
+| `repurposing_view.py positions`, before and after | byte-identical (no signed drug assertion was added, so no F/C/P position moves by rule) |
+| `repurposing_join.py run` | queries 0 changed, evidence 0 changed, derived cards 2 changed (`Q-R-01` from C01, `Q-R-10` from E01); handoff regenerated, 28 rows, text unchanged because the additions sit after each card's first sentence |
+| views | full and shareable pages and the package regenerated; `check` reports both current |
+| regressions | `LoopPropagationIT8P5` in `test_repurposing_coverage.py` (4 tests incl. two mutation tests) and in `test_repurposing_join.py` (4 tests incl. one mutation test: a marker in the E01 packet reaches `Q-R-10` and no other derived card) |
+| `test_repurposing_coverage/join/view`, closed-world guard | run green (see the task report); `scripts/public_release_gate.py`: BLOCKS 0 after rewording one genotype phrase that the gate read as a variant combination |
+
+The release battery (`run_release_regressions.py`) was started and reached `test_repurposing_coverage.py` before its own 3000 s timeout; its one failure (a shebang on the edit script without executable mode) was repaired by removing the shebang; `scripts/test_release_surface.py` was re-run green.
 
 ## 5. Registry, ledger and hypothesis edits NOT mine (for the batch path)
 

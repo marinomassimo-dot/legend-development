@@ -70,7 +70,7 @@ Alternative readouts if antibodies fail: ribosome profiling or puromycin incorpo
 ## 7. Regenerated queue (what was edited, and why that far)
 
 * `needs/needs.json`, `NEED-ISR-ATTENUATION`: observations `O9` (AFG3L2) and `O10` (PNAS) as `OTHER_DISEASE_PRECEDENT`, three inferred lines, one counter-evidence line, `sources` (documents, papers). Direction stays `uncertain`.
-* Card `E01_isr_modulators` (packet, rebuilt): `not_known` and `next_measurement` gain the activity arm, the time arm and the potentiation arm; positions are re-derived by rule (section 8 of the root README of this package).
+* Card `E01_isr_modulators` (packet, rebuilt): `not_known` and `next_measurement` gain the activity arm, the time arm and the potentiation arm; positions are re-derived by rule (section 4 of the package README).
 * `view/work_order.json` entry of the ISR need: question and data updated; docs entry `IT8-P5` added.
 * Not edited: hypothesis ledger, registries, receipt ledger (listed in the package README).
 

@@ -1,6 +1,6 @@
 """IT8 P5: apply the queue edits justified by loop 1 and loop 2 (needs, card packets, work order).
 Idempotent: each edit is skipped when already present. Run from the repository root. Card JSON is rebuilt afterwards with
-framework/scripts/repurposing_bridge.py (see README section 8)."""
+framework/scripts/repurposing_bridge.py (see the package README section 4)."""
 import json, pathlib, sys
 DR = pathlib.Path("disease-models/wwox/research/drug_repurposing")
 L1 = "disease-models/wwox/research/drug_repurposing/advance_it8_p5_20261029/loop1_partial_benefit/README.md"
@@ -25,7 +25,7 @@ def needs(d):
             n["observed"] += [
                 obs("O9", "37804316",
                     "AFG3L2 loss (spastic ataxia type 5, whose clinical spectrum includes myoclonic epilepsy): ISR is postnatal and progressive in mouse cerebellum (P-eIF2a and Atf4 equal at P1, raised at P14); HRI or DELE1 silencing lowers P-eIF2a and slows growth of patient fibroblasts; Sephin-1 improves cell number, Purkinje neuron number, cristae class and pyruvate-stimulated ATP and extends survival by about 10 days (dam gavage from E14, daily from day 1). GCN2 and PERK untested; HRI not tested in vivo; P-eIF2a not reported in treated mice; wild-type mitochondria and ATP also change under Sephin-1.",
-                    "other_animal_model", "mouse and human", "Afg3l2 null mouse; biallelic AFG3L2 patient fibroblasts (not WWOX)", "cerebellum; skin fibroblasts; primary Purkinje cultures", "P1 and P14 pups; prenatal-start treatment", "Afg3l2-/- against +/+; patient against control; treated against vehicle",
+                    "other_animal_model", "mouse and human", "Afg3l2 knockout mouse; fibroblasts from patients with AFG3L2-related disease (not WWOX)", "cerebellum; skin fibroblasts; primary Purkinje cultures", "P1 and P14 pups; prenatal-start treatment", "Afg3l2-/- against +/+; patient against control; treated against vehicle",
                     "P-eIF2a, ATF4 and targets, growth, Purkinje morphology, cristae, ATP, survival", "functional", "ISR raised and its potentiation beneficial in this lesion (sign opposite to the PARS2 fly of O6)",
                     "Not WWOX evidence; one laboratory; small n (3 mice for histology, about 5 treated for survival); the drug target is disputed (PMID 28447936, abstract level); the kinase is shown by siRNA in fibroblasts only; early-window treatment of a lesion present from embryogenesis; read in full 2026-10-29 (receipt FTR-20261029-37804316-01, partial).",
                     L1, "section 1 Brain 2024"),
