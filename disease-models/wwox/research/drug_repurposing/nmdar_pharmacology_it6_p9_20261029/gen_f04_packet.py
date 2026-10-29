@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Writes F04_nmdar_intervention_class.packet.json (the evidence packet of the card). The card itself is built from it by
 framework/scripts/repurposing_bridge.py, never by hand:
     python3 framework/scripts/repurposing_bridge.py F04_nmdar_intervention_class.packet.json > F04_nmdar_intervention_class.card.json

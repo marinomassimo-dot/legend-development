@@ -2,7 +2,7 @@
 """Apply the decision rule declared in prediction_declared_20261029.md to organoid_glial_panel_cpm.tsv.
 Descriptive only: RAISED = all four KO libraries above the larger WT library AND mean-CPM ratio >= 1.5; LOWERED the mirror;
 NOT INFORMATIVE = fewer than 20 raw counts in every library; otherwise NOT SEPARATED. No test, six libraries.
-Usage: classify_panel.py <panel.tsv>   (read-only; prints a TSV to stdout)"""
+Usage: classify_panel.py <panel.tsv>   (read-only; prints a rectangular TSV to stdout and the per-set tally to stderr)"""
 import csv, sys
 SETS = {
  'microglia_presence': 'AIF1 P2RY12 TMEM119 CX3CR1 CSF1R PTPRC TREM2'.split(),
@@ -33,6 +33,5 @@ for s, genes in SETS.items():
         else: cls = 'NOT SEPARATED'
         tally.setdefault(s, []).append(cls)
         print(f"{s}\t{g}\t{'/'.join(f'{x:g}' for x in raw_ko)}\t{'/'.join(f'{x:g}' for x in raw_wt)}\t{mk:.2f}\t{mw:.2f}\t{ratio:.2f}\t{cls}")
-print()
 for s, t in tally.items():
-    print('#', s, {k: t.count(k) for k in sorted(set(t))})
+    print('#', s, {k: t.count(k) for k in sorted(set(t))}, file=sys.stderr)

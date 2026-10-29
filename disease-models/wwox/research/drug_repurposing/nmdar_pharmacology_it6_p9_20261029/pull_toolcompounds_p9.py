@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """P9: tool compounds that the P8 pull could not resolve by name. Resolution is by STANDARD InChIKey taken
 from PubChem (structure checked there by IUPAC name) and looked up in ChEMBL by that key; nothing is typed
 from memory. Then every activity row on NMDA/AMPA/kainate receptor targets is read with the P8 adapter

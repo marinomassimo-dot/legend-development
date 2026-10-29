@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """P9 arithmetic, stated as arithmetic (inputs named; nothing here is a measurement).
 (1) d-APV occupancy at the concentration applied by Breton 2021 (50 uM), from ChEMBL equilibrium constants on rat
     recombinant GluN1/GluN2A-D in oocytes (two documents), assuming a competitive antagonist and agonist well below its

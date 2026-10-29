@@ -41,9 +41,3 @@ cytokine_inflammasome	CCL2	53/12/16/25	24/16	0.70	0.58	1.20	NOT SEPARATED
 cytokine_inflammasome	CXCL8	3/0/0/0	0/6	0.02	0.10	0.20	NOT INFORMATIVE
 cytokine_inflammasome	TGFB1	2151/1846/1615.03/1558.03	2596/1722	47.05	63.56	0.74	NOT SEPARATED
 reference	WWOX	547/488.001/632/420	359.001/302	13.70	9.86	1.39	NOT SEPARATED
-
-# microglia_presence {'NOT INFORMATIVE': 4, 'NOT SEPARATED': 2, 'RAISED': 1}
-# astroglial_lineage_homeostatic {'NOT SEPARATED': 12, 'RAISED': 2}
-# reactive_pan {'LOWERED': 3, 'NOT INFORMATIVE': 2, 'NOT SEPARATED': 3, 'RAISED': 2}
-# cytokine_inflammasome {'NOT INFORMATIVE': 4, 'NOT SEPARATED': 6}
-# reference {'NOT SEPARATED': 1}

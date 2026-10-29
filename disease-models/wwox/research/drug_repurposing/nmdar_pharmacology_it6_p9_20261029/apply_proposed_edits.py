@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Applies the P9 proposed edits to the CURATED inputs of the repurposing module, under --root (a scratch copy; never the checkout
 that is being integrated). proposed_edits.patch is the diff this script produces against the repository on 2026-10-29.
 Touches only: needs/needs.json (one need), coverage/target_roles.tsv, coverage/assertion_pertinence.tsv, and copies the F04 packet and card
