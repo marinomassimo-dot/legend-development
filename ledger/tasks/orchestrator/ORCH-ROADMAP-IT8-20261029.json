@@ -1,0 +1,86 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-ROADMAP-IT8-20261029",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Iteration 8, linked to IT7 (COMPLETE): pharmacological qualification, measured WWOX marginal value, verified sharing preparation and scientific advance. Both goals stay open; a computational result is not therapeutic efficacy.",
+ "START_UTC": "2026-10-29T22:30:00Z",
+ "BASELINE": "101188866f391be0fbfc8e552b9640865454e37e = development/main (verified equal after fetch)",
+ "AUTHORISED_QUEUE_20261029D": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_A_RECONCILIATION": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "P0 baseline and propagation of three IT7 formulations (predictive comparison, WWOX contribution, absence of data)",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_B_PRIVACY_LICENCES": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "P1 classify historical privacy findings read-only (dedup, classes, reachability, tip vs history, scanner vs gate)",
+     "status": "TODO",
+     "owner": "scientist-d"
+    },
+    {
+     "step": "P2 licences: from census to practicable corrections (primary terms, attribution fixes, reserved alternatives)",
+     "status": "TODO",
+     "owner": "scientist-d"
+    }
+   ]
+  },
+  "OBJ_C_SCIENCE": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "P3 pharmacological qualification for a contained set of cases (both objectives)",
+     "status": "TODO",
+     "owner": "scientist-a"
+    },
+    {
+     "step": "P4 marginal contribution of WWOX inputs; new computational experiment only if justified",
+     "status": "TODO",
+     "owner": "scientist-b"
+    },
+    {
+     "step": "P5 scientific advance: complete loop on selected open questions (partial benefit; broad recovery)",
+     "status": "TODO",
+     "owner": "scientist-a"
+    }
+   ]
+  },
+  "OBJ_D_VIEW_AND_OPERATIONS": {
+   "order": 4,
+   "steps": [
+    {
+     "step": "P6 complete the Internet view preparation (service settings, pinned versions, workflow diff, tests, URL/indexing/retirement)",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "P7 scouting and continuity without duplication (radar and hourly executions, two complementary searches)",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_E_CLOSE": {
+   "order": 5,
+   "steps": [
+    {
+     "step": "P8 integration, simplification, final checks, validated push, cleanup, session closings",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  }
+ },
+ "DECISIONS_TAKEN": [],
+ "DEFAULTS_TAKEN": [],
+ "STOP_LOG": []
+}
