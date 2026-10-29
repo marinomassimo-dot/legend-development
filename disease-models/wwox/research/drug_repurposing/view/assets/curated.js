@@ -25,6 +25,8 @@ function grp(g) { var p = T.pos[g]; return '<span class="grp ' + g.toLowerCase()
 function grpS(g) { return '<span class="grp ' + g.toLowerCase() + '" title="' + esc(T.pos[g].label) + '">' + esc(g) + '</span>'; }
 function chip(t, cls) { return '<span class="chip' + (cls ? ' ' + cls : '') + '">' + esc(t) + '</span>'; }
 function goalTxt(g) { return g ? T.chip_goal + ': ' + (g === 'deep_recovery' ? T.goal_deep : T.goal_partial) : T.chip_goal + ': ' + T.track_none; }
+function goalShort(g) { return g ? (g === 'deep_recovery' ? T.goal_deep : T.goal_partial) : T.track_none; }
+function dirOn(n) { return n.dir ? '<b>' + esc(dirTxt(n.dir)) + '</b>' + (n.dir_on ? ' (' + esc(T.nv_on) + ': «' + esc(n.dir_on) + '»)' : '') : ''; }
 function trackTxt(t) { return t ? (t === 'A' ? T.track_A_s : T.track_B_s) : T.track_none_s; }
 function needName(n) { return T.need[n.id] || n.short; }
 function threadName(t) { return (T.thread[t.id] || { name: t.name }).name; }
@@ -81,7 +83,7 @@ function navRow(n) {
   if (!nx) nx = cs.length && cs[0].missing ? '<b>' + esc(cs[0].short) + ' (' + esc(T.nv_missing) + '):</b> ' + esc(first(cs[0].missing, 200)) : '<span class="mut">' + esc(T.nv_next_none) + '</span>';
   return '<article class="navrow" data-need="' + esc(n.id) + '" aria-label="' + esc(needName(n)) + '">' +
     '<div><span class="lab">' + esc(T.nv_c_need) + '</span><b>' + esc(needName(n)) + '</b>' + chip(goalTxt(n.goal)) + chip(trackTxt(n.track)) + '</div>' +
-    '<div><span class="lab">' + esc(T.nv_mech_lab) + '</span>' + (n.dir ? esc(T.nv_dir) + ': <b>' + esc(dirTxt(n.dir)) + '</b> ' + esc(T.nv_on) + ' ' + esc(n.dir_on) : '') + (n.uncertain ? ' <span class="chip">' + esc(T.nv_uncertain) + '</span>' : '') +
+    '<div><span class="lab">' + esc(T.nv_mech_lab) + '</span>' + (n.dir ? esc(T.nv_dir) + ': ' + dirOn(n) : '') + (n.uncertain ? ' <span class="chip">' + esc(T.nv_uncertain) + '</span>' : '') +
     '<div class="mini">' + esc(T.nv_targets) + ': ' + esc(n.targets.join(', ') || T.nv_none) + '</div></div>' +
     '<div><span class="lab">' + esc(T.nv_c_comp) + '</span>' + (cs.length ? cs.map(function (c) { return '<button type="button" class="chip ' + c.links[n.id].group.toLowerCase() + '" data-open="' + esc(c.id) + '">' + esc(c.short) + ' · ' + esc(c.links[n.id].group) + '</button>'; }).join(' ') : '<span class="mut">' + esc(fill(T.nv_comp_none, { n: n.fam_link })) + '</span>') + '</div>' +
     '<div><span class="lab">' + esc(T.nv_c_evid) + '</span>' + (Object.keys(ob).length ? Object.keys(ob).map(function (k) { return sc(k, ob[k]); }).join('') : '<span class="mut">' + esc(T.nv_evid_none) + '</span>') +
@@ -110,14 +112,19 @@ function profileParts(c) {
   var wObs = needsObs.filter(function (o) { return o.scope === 'WWOX_EXPERIMENT_IN_DEE_SYSTEM' || o.scope === 'WWOX_CLINICAL_CASE'; });
   var oObs = needsObs.filter(function (o) { return !(o.scope === 'WWOX_EXPERIMENT_IN_DEE_SYSTEM' || o.scope === 'WWOX_CLINICAL_CASE'); });
   var own = c.asserts.filter(function (a) { return WWOX_SC[a.scope]; });
-  var other = c.asserts.filter(function (a) { return !WWOX_SC[a.scope] && a.scope !== 'SAFETY_SIGNAL'; });
+  function wwoxAssert(a) { return a.scope === 'UNCLASSIFIED' && /WWOX|WOREE/i.test(a.system || '') && !/NOT WWOX/i.test((a.system || '') + ' ' + (a.genotype || '')); }
+  function wwoxObs(o) { return o.scope === 'WWOX_BIOLOGY_OTHER_CONTEXT' || (o.scope === 'COMPUTATIONAL_RESULT' && /knock|wwox/i.test(String(o.model || ''))); }
+  var wOther = c.asserts.filter(wwoxAssert).map(asLine).concat(oObs.filter(wwoxObs).map(obsLine));
+  oObs = oObs.filter(function (o) { return !wwoxObs(o); });
+  var other = c.asserts.filter(function (a) { return !WWOX_SC[a.scope] && a.scope !== 'SAFETY_SIGNAL' && !wwoxAssert(a); });
   var safety = c.asserts.filter(function (a) { return a.scope === 'SAFETY_SIGNAL'; });
   var counter = []; c.needs.forEach(function (nid) { NM[nid].counter.forEach(function (t) { counter.push(t); }); });
   var q = {};
   var gu = uniq(c.needs.map(function (n) { return c.links[n].group; }).sort());
   q.why = (gu.length ? '<p class="mini whyl">' + gu.map(function (g) { return '<b>' + esc(g) + '</b> ' + esc(T.pos[g].plain); }).join('<br>') + '</p>' : '') + '<p>' + more(first(c.why, 240), c.why_full) + '</p>' + (c.needs.length ? '<p class="mini">' + esc(T.q1_needs) + ': ' + c.needs.map(function (n) { return esc(needName(NM[n])); }).join('; ') + '.</p>' : '<p class="mini">' + esc(T.q1_noneed) + '</p>');
   q.wwox = (own.length ? '<p class="mini"><b>' + esc(T.q2_own) + ':</b></p><ul>' + own.slice(0, 2).map(asLine).join('') + '</ul>' + (own.length > 2 ? moreN(own.length - 2) : '') : '<p class="mini"><b>' + esc(T.q2_none) + '</b></p>') +
-    (wObs.length ? '<details class="inl"><summary>' + esc(T.q2_ctx) + '</summary><ul>' + wObs.slice(0, 2).map(obsLine).join('') + '</ul>' + (wObs.length > 2 ? moreN(wObs.length - 2) : '') + '</details>' : '<p class="mini">' + esc(T.q2_noctx) + '</p>');
+    (wObs.length ? '<details class="inl"><summary>' + esc(T.q2_ctx) + '</summary><ul>' + wObs.slice(0, 2).map(obsLine).join('') + '</ul>' + (wObs.length > 2 ? moreN(wObs.length - 2) : '') + '</details>' : '<p class="mini">' + esc(T.q2_noctx) + '</p>') +
+    (wOther.length ? '<details class="inl"><summary>' + esc(T.q2_other) + '</summary><ul>' + wOther.slice(0, 4).join('') + '</ul>' + (wOther.length > 4 ? moreN(wOther.length - 4) : '') + '</details>' : '');
   var oth = other.slice(0, 2).map(asLine).concat(oObs.slice(0, 2).map(obsLine));
   q.other = oth.length ? '<ul>' + oth.join('') + '</ul>' + ((other.length + oObs.length) > oth.length ? moreN(other.length + oObs.length - oth.length) : '') : '<p class="mini">' + esc(T.q3_none) + '</p>';
   var ag = c.against.slice(0, 2).map(function (t) { return '<li>' + esc(first(t, 240)) + '</li>'; }).concat(counter.slice(0, 1).map(function (t) { return '<li><span class="mut">' + esc(T.q4_need) + ':</span> ' + esc(first(t, 220)) + '</li>'; })).concat(safety.slice(0, 1).map(asLine));
@@ -197,7 +204,7 @@ function sortItems(a) {
 }
 function rkItem(it, showNeed) {
   var c = it.c, l = it.l, n = NM[it.n];
-  var sum = T.pr_sum_wwox + ': ' + T['res_' + l.result] + (l.result !== 'none' ? ' (' + fill(T.pr_w_counts, { w: l.n_w, nul: l.n_null, unf: l.n_harm }) + ')' : '') + '. ' + T.pr_sum_counter + ': ' + (c.against.length + n.counter.length) + ' ' + T.pr_sum_item + (c.against_note && !c.against.length ? ' (' + T.pr_sum_prose + ')' : '') + '. ' + T.pr_sum_next + ': ' + (c.next ? T.pr_next_yes : T.pr_next_no) + '.';
+  var sum = T.pr_sum_wwox + ': ' + T['res_' + l.result] + (l.result !== 'none' ? ' (' + fill(T.pr_w_counts, { w: l.n_w, nul: l.n_null, unf: l.n_harm }) + ')' : '') + '. ' + T.pr_sum_counter + ': ' + (c.against.length + n.counter.length) + ' ' + ((c.against.length + n.counter.length) === 1 ? T.pr_sum_item1 : T.pr_sum_item) + (c.against_note && !c.against.length ? ' (' + T.pr_sum_prose + ')' : '') + '. ' + T.pr_sum_next + ': ' + (c.next ? T.pr_next_yes : T.pr_next_no) + '.';
   return '<div class="rk-item" data-cand="' + esc(c.id) + '" data-need="' + esc(n.id) + '"><b>' + esc(c.short) + '</b>' + (showNeed ? ' <span class="mut">' + esc(T.pos_for) + ' ' + esc(needName(n)) + '</span>' : '') + ' ' + grp(l.group) + (l.tags || []).map(function (t) { return ' ' + chip(t, ''); }).join('') + (c.goal !== n.goal && c.goal ? ' ' + chip(T.pr_goal_aim_diff, '') : '') +
     '<div class="sum">' + esc(sum) + '</div><details><summary>' + esc(T.pr_reasons) + '</summary><ul class="crit-list">' + l.criteria.map(function (x) { return '<li class="' + (x.met ? 'met' : 'unmet') + '"><span aria-hidden="true">' + (x.met ? '✓' : '✗') + '</span> <b>' + esc(x.met ? T.crit_met : T.crit_not) + ':</b> ' + critTxt(x.text) + '</li>'; }).join('') + '</ul><details class="inl"><summary>' + esc(T.tc_text_en) + '</summary><ul>' + l.reasons.map(function (r) { return '<li><b>' + esc(r[0]) + ':</b> ' + esc(r[1]) + '</li>'; }).join('') + '</ul></details><button type="button" class="chip" data-open="' + esc(c.id) + '">' + esc(T.pr_open_card) + '</button></details></div>';
 }
@@ -252,10 +259,10 @@ function renderCompare() {
   var cs = SEL.map(function (id) { return CM[id]; });
   function row(label, fn) { return '<tr><th scope="row">' + label + '</th>' + cs.map(function (c) { return '<td>' + fn(c) + '</td>'; }).join('') + '</tr>'; }
   var h = '<div class="cmpwrap"><table class="cmp"><caption class="sr">' + esc(fill(T.cp_caption, { n: cs.length })) + '</caption><thead><tr><th scope="col">' + esc(T.cp_dim) + '</th>' + cs.map(function (c) { return '<th scope="col">' + esc(c.short) + '<div class="mut">' + esc(c.id) + '</div></th>'; }).join('') + '</tr></thead><tbody>';
-  h += row(esc(T.cp_aim), function (c) { return esc(goalTxt(c.goal)); });
+  h += row(esc(T.cp_aim), function (c) { return esc(goalShort(c.goal)); });
   h += row(esc(T.cp_track), function (c) { return esc(trackTxt(c.track)); });
   h += row(esc(T.cp_status), function (c) { return esc(statusTxt(c.status)) + '<br>' + uniq(c.needs.map(function (n) { return c.links[n].group; })).sort().map(grp).join('') + (c.needs.length ? '' : '<span class="mut">' + esc(T.cd_no_need) + '</span>'); });
-  h += row(esc(T.cp_needs), function (c) { return c.needs.length ? '<ul>' + c.needs.map(function (n) { return '<li>' + esc(needName(NM[n])) + ': <b>' + esc(dirTxt(NM[n].dir || '?')) + '</b> ' + esc(T.nv_on) + ' ' + esc(first(NM[n].dir_on || '', 70)) + '</li>'; }).join('') + '</ul>' : '<span class="mut">' + esc(T.cp_none) + '</span>'; });
+  h += row(esc(T.cp_needs), function (c) { return c.needs.length ? '<ul>' + c.needs.map(function (n) { return '<li>' + esc(needName(NM[n])) + ': ' + dirOn({ dir: NM[n].dir || '?', dir_on: first(NM[n].dir_on || '', 70) }) + '</li>'; }).join('') + '</ul>' : '<span class="mut">' + esc(T.cp_none) + '</span>'; });
   h += row(esc(T.cp_actions), function (c) { return c.actions.length ? '<ul>' + c.actions.slice(0, 8).map(function (a) { return '<li>' + esc(a.target) + ': ' + esc(actTxt(a.action)) + ' ' + (/oppos/.test(a.cons) ? '<span class="opp">' + esc(T.opposed) + '</span>' : '<span class="mini">(' + esc(T['cons_' + a.cons] || String(a.cons).replace(/_/g, ' ')) + ')</span>') + '</li>'; }).join('') + '</ul>' + (c.actions.length > 8 ? '<span class="mini">+' + (c.actions.length - 8) + '</span>' : '') : '<span class="mut">' + esc(T.cp_noact) + '</span>'; });
   h += row(esc(T.cp_scopes), function (c) { var k = Object.keys(c.scope_counts.int); return k.length ? k.map(function (s) { return sc(s, c.scope_counts.int[s]); }).join('') : '<span class="mut">' + esc(T.cp_noscope) + '</span>'; });
   h += row(esc(T.cp_against), function (c) { return String(c.against.length) + (c.against_note && !c.against.length ? ' (' + esc(T.cp_prose) + ')' : ''); });
@@ -300,7 +307,7 @@ function exportCard(c) {
   h += ev.length ? '<ul>' + ev.join('') + '</ul>' : '<p>' + esc(T.ex_no_assert) + '</p>';
   if (!c.asserts.some(function (a) { return WWOX_SC[a.scope]; })) h += '<p><b>' + esc(T.q2_none) + '</b></p>';
   h += '<h3>' + esc(T.ex_counter) + '</h3>' + ((c.against.length || counter.length || safety.length || c.against_note) ? '<ul>' + c.against.slice(0, 6).map(function (t) { return '<li>' + esc(first(t, 300)) + '</li>'; }).join('') + counter.slice(0, 3).map(function (t) { return '<li><i>' + esc(T.q4_need) + ':</i> ' + esc(first(t, 280)) + '</li>'; }).join('') + safety.map(function (a) { return '<li>' + sc(a.scope) + ' ' + esc(a.text) + ' ' + esc(first(a.note_full || a.note, 220)) + '</li>'; }).join('') + (c.against_note ? '<li>' + esc(T.ex_asw) + ': ' + esc(first(c.against_note, 400)) + '</li>' : '') + '</ul>' : '<p>' + esc(T.ex_counter_none) + '</p>');
-  h += '<h3>' + esc(T.ex_limits) + '</h3><ul><li>' + esc(T.ex_lim_1) + '</li><li>' + esc(T.ex_lim_2) + '</li>' + (c.transfer_limits ? '<li>' + esc(first(c.transfer_limits, 300)) + '</li>' : '') + '<li>' + esc(T.ex_lim_3) + ': ' + esc(c.access.map(function (a) { return T['acc_' + a] || a; }).join(', ') || T.cp_none) + '.</li>' + c.limits.slice(0, 3).map(function (t) { return '<li>' + esc(t) + '</li>'; }).join('') + '<li>' + esc(T.ex_lim_4) + '</li></ul>';
+  h += '<h3>' + esc(T.ex_limits) + '</h3><ul><li>' + esc(T.ex_lim_1) + '</li><li>' + esc(T.ex_lim_2) + '</li><li>' + esc(T.ex_lim_3) + ': ' + esc(c.access.map(function (a) { return T['acc_' + a] || a; }).join(', ') || T.cp_none) + '.</li><li>' + esc(T.ex_lim_4) + '</li></ul>' + ((c.transfer_limits || c.limits.length) ? '<p class="meta">' + esc(T.ex_lim_card) + '</p><ul>' + (c.transfer_limits ? '<li>' + esc(first(c.transfer_limits, 300)) + '</li>' : '') + c.limits.slice(0, 3).map(function (t) { return '<li>' + esc(t) + '</li>'; }).join('') + '</ul>' : '');
   h += '<h3>' + esc(T.ex_miss) + '</h3><p>' + (c.missing ? '<b>' + esc(T.q5_miss) + ':</b> ' + esc(first(c.missing, 300)) + '. ' : '') + '</p><p>' + (c.next_full ? '<b>' + esc(T.ex_next) + ':</b> ' + esc(first(c.next_full, 900)) : esc(T.q6_none)) + '</p>';
   h += '<h3>' + esc(T.ex_srcs) + '</h3>' + sourcesHtml(c);
   h += '<p class="meta">' + esc(T.ex_gen) + ' (schema ' + esc(D.schema) + ', ' + esc(D.source) + '). ' + esc(D.source === 'shareable' ? T.ex_share : T.ex_full) + '</p></article>';
