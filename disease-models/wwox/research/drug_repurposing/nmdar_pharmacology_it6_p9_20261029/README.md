@@ -69,7 +69,7 @@ Wwox neuron-specific knockout cortex, and may any drug be carried forward on the
 ## 2. The source preparation (Breton 2021, PMID 34634460) and what an NMDAR experiment in it must control
 
 Opened for this question: methods 5.1 to 5.4, results 2.1 to 2.5, Table 1, Figure 3 (image `gr3.jpg`, JPEG, read by eye, no values
-extracted), supplement `mmc1.docx` (Fig S3 legend, Table S1). Staged receipt `FTR-20261029-34634460-01`.
+extracted), supplement `mmc1.docx` (Fig S3 legend, Table S1). Staged receipt `FTR-20261029-34634460-05`.
 
 | Parameter | What the source says | Consequence for an NMDAR experiment |
 |---|---|---|
@@ -231,7 +231,7 @@ bursts confirming.
 
 | Source | Route | Depth | Used for |
 |---|---|---|---|
-| Breton 2021, PMID 34634460 (PMC8609180) | local XML `PMID34634460_Breton2021_PMC.xml` (sha256 934b4e1a...), supplement `mmc1.docx`, figure `gr3.jpg` | partial re-read, new question; receipt staged `FTR-20261029-34634460-01` (prior `FTR-20261019-34634460-01`) | section 2 |
+| Breton 2021, PMID 34634460 (PMC8609180) | local XML `PMID34634460_Breton2021_PMC.xml` (sha256 934b4e1a...), supplement `mmc1.docx`, figure `gr3.jpg` | partial re-read, new question; receipt staged `FTR-20261029-34634460-05` (prior `FTR-20261019-34634460-01`) | section 2 |
 | Phillips et al 2026, Sci Adv, PMID 42201999 (PMC13215171, CC BY) | Europe PMC XML | partial: abstract, introduction, results text on Ca2+ dependence, Discussion on Mg2+ and disinhibition, methods of the slice recording; figures and supplement not opened; receipt staged `FTR-20261029-42201999-01` | memantine state, Mg2+, Ca2+ |
 | Karnstedt et al 2026, Epilepsia, PMID 41489401 (PMC13075606) | Europe PMC XML | partial: abstract and the passages on worsening; the card's earlier reading stays; receipt staged `FTR-20261029-41489401-01` | GRIN series |
 | Auvin et al 2020, PMID 32106360 (PMC7085998) | Europe PMC XML | partial: abstract, clinical-experience and study-design passages; receipt staged `FTR-20261029-32106360-01` | radiprodil exposure |

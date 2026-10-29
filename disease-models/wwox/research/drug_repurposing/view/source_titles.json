@@ -3,10 +3,20 @@
  "schema": "legend.wwox.source_titles/1",
  "source": "NCBI E-utilities esummary (db=pubmed), keyless, one call per 100 ids",
  "titles": {
+  "10541229": {
+   "journal": "J Neurosurg",
+   "title": "Failure of the competitive N-methyl-D-aspartate antagonist Selfotel (CGS 19755) in the treatment of severe head injury: results of two phase III clinical trials. The Selfotel Investigators.",
+   "year": "1999"
+  },
   "10546922": {
    "journal": "Clin Pharmacol Ther",
    "title": "Pharmacokinetics and pharmacodynamics of dichloroacetate in patients with cirrhosis.",
    "year": "1999"
+  },
+  "10657404": {
+   "journal": "Stroke",
+   "title": "Selfotel in acute ischemic stroke : possible neurotoxic effects of an NMDA antagonist.",
+   "year": "2000"
   },
   "14695174": {
    "journal": "Cancer Res",
@@ -32,6 +42,11 @@
    "journal": "Pediatrics",
    "title": "Evaluation of long-term treatment of children with congenital lactic acidosis with dichloroacetate.",
    "year": "2008"
+  },
+  "19261873": {
+   "journal": "J Neurosci",
+   "title": "Mg2+ imparts NMDA receptor subtype selectivity to the Alzheimer's drug memantine.",
+   "year": "2009"
   },
   "19366691": {
    "journal": "J Biol Chem",
@@ -203,6 +218,11 @@
    "title": "Wwox deficiency leads to neurodevelopmental and degenerative neuropathies and glycogen synthase kinase 3β-mediated epileptic seizure activity in mice.",
    "year": "2020"
   },
+  "32106360": {
+   "journal": "Ann Clin Transl Neurol",
+   "title": "Radiprodil, a NR2B negative allosteric modulator, from bench to bedside in infantile spasm syndrome.",
+   "year": "2020"
+  },
   "32730977": {
    "journal": "J Am Acad Child Adolesc Psychiatry",
    "title": "Bumetanide for Core Symptoms of Autism Spectrum Disorder (BAMBI): A Single Center, Double-Blinded, Participant-Randomized, Placebo-Controlled, Phase-2 Superiority Trial.",
@@ -318,6 +338,11 @@
    "title": "Cellular turnover and degradation of the most common missense cystathionine beta-synthase variants causing homocystinuria.",
    "year": "2024"
   },
+  "39442339": {
+   "journal": "Eur J Med Chem",
+   "title": "Dizocilpine derivatives as neuroprotective NMDA receptor antagonists without psychomimetic side effects.",
+   "year": "2024"
+  },
   "39507621": {
    "journal": "Front Genet",
    "title": "Case report: Adult patient with WWOX developmental and epileptic encephalopathy: 40 years of observation.",
@@ -363,6 +388,11 @@
    "title": "WWOX-Related Developmental and Epileptic Encephalopathy: Expanding the Clinical Spectrum and Deciphering the Genotype-Phenotype.",
    "year": "2025"
   },
+  "40994429": {
+   "journal": "Brain",
+   "title": "Inhibition of GluN2B-containing N-methyl-D-aspartate receptors by radiprodil.",
+   "year": "2026"
+  },
   "41124647": {
    "journal": "Adv Sci (Weinh)",
    "title": "Genetic and Functional Evidence Links Germline Biallelic Inactivating Variants in WWOX to Histological Mixed-Type Thyroid Cancer.",
@@ -372,6 +402,11 @@
    "journal": "Sci Rep",
    "title": "Therapeutic effect of histone deacetylase 6 inhibitor for a mouse model of phenylketonuria.",
    "year": "2025"
+  },
+  "41288262": {
+   "journal": "Ann Clin Transl Neurol",
+   "title": "Will Memantine Exacerbate Seizures in People With Epilepsy? A Prospective Cohort Study.",
+   "year": "2026"
   },
   "41380592": {
    "journal": "Redox Biol",
@@ -418,6 +453,11 @@
    "title": "Burst-Suppression EEG in Early Infantile Developmental and Epileptic Encephalopathies: Phenotype, Genotype, and Outcome.",
    "year": "2026"
   },
+  "42201999": {
+   "journal": "Sci Adv",
+   "title": "State-specific inhibition of NMDA receptors by memantine provides insight into NMDAR channel blocker tolerability.",
+   "year": "2026"
+  },
   "42397075": {
    "journal": "Brain",
    "title": "Disrupted WWOX-MYC interplay impairs neurogenesis in human brain organoids.",
@@ -443,6 +483,11 @@
    "title": "DNL343 and Disease Progression in Amyotrophic Lateral Sclerosis: A Randomized Clinical Trial.",
    "year": "2026"
   },
+  "42837646": {
+   "journal": "Neurology",
+   "title": "Dual Antiglutamate Therapy in Super-Refractory Status Epilepticus After Cardiac Arrest (SUPER-CAT Study).",
+   "year": "2026"
+  },
   "42909904": {
    "journal": "Brain Commun",
    "title": "Alzheimer's disease risk gene Wwox controls amyloid pathology through metabolic reprogramming.",
@@ -452,6 +497,11 @@
    "journal": "N Engl J Med",
    "title": "Metabolic effects of dichloroacetate in patients with diabetes mellitus and hyperlipoproteinemia.",
    "year": "1978"
+  },
+  "9872743": {
+   "journal": "Science",
+   "title": "Blockade of NMDA receptors and apoptotic neurodegeneration in the developing brain.",
+   "year": "1999"
   }
  }
 }
