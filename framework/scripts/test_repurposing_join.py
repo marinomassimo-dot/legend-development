@@ -1427,5 +1427,78 @@ class LoopPropagationIT7P6(unittest.TestCase):
                 self.assertEqual(plain, moved, qid)                                                       # the change moved only the linked record
 
 
+class LoopPropagationIT8P5(unittest.TestCase):
+    """IT8 P5: the ISR (E01) and gene-addition (C01, C04) additions reach every consumer. Positive checks by identifier and by the wording
+    the loop wrote; a marker written into a COPY of the E01 packet reaches the derived card Q-R-10 and no other derived card."""
+
+    DR = "disease-models/wwox/research/drug_repurposing/"
+    ADD = {"E01_isr_modulators": "IT8 P5 additions (design only)", "C01_aav9_wwox": "IT8 P5 addition (design only)", "C04_aav9_endpoint_families": "IT8 P5 addition (design only)"}
+
+    def read(self, rel):
+        return (ROOT / rel).read_text(encoding="utf-8")
+
+    def test_packets_cards_and_derived_cards_carry_the_additions(self):
+        derived = {r["query_id"]: r["card"] for r in json.loads(self.read(self.DR + "join/cards.json"))}
+        for card, word in self.ADD.items():
+            packet = json.loads(self.read(self.DR + f"cards/{card}.packet.json"))
+            built = json.loads(self.read(self.DR + f"cards/{card}.card.json"))
+            self.assertIn(word, packet["p4_card"]["next_measurement"], card)
+            self.assertEqual(built["input"]["p4_card"]["next_measurement"], packet["p4_card"]["next_measurement"], card)
+            self.assertNotIn("IT8 P5", json.dumps(packet["drug_assertions"]), card)       # a literature loop adds no signed drug assertion, so no position moves
+        self.assertIn("IT8 P5 additions", derived["Q-R-10"]["input"]["p4_card"]["next_measurement"])
+        self.assertIn("IT8 P5 addition", derived["Q-R-01"]["input"]["p4_card"]["next_measurement"])
+        e01 = json.loads(self.read(self.DR + "cards/E01_isr_modulators.packet.json"))
+        self.assertTrue(any("activity" in x and "41706892" in x for x in e01["not_known"]))
+        self.assertTrue(any("compensatory" in x and "37804316" in x for x in e01["not_known"]))
+
+    def test_work_order_and_views_say_it(self):
+        wo = json.loads(self.read(self.DR + "view/work_order.json"))
+        self.assertIn("IT8-P5", wo["docs"])
+        entries = {e["need"]: e for e in wo["entries"]}
+        for nid in ("NEED-ISR-ATTENUATION", "NEED-WWOX-GENE-ADDITION"):
+            self.assertIn("IT8-P5", entries[nid]["docs"], nid)
+            self.assertIn("IT8-P5", entries[nid]["updated_by"], nid)
+        self.assertIn("activity silencing", entries["NEED-ISR-ATTENUATION"]["data"])
+        self.assertIn("vector control", entries["NEED-WWOX-GENE-ADDITION"]["data"])
+        for page in ("view/index.html", "view/index_shareable.html", "view/shareable_package/index.html"):
+            text = self.read(self.DR + page)
+            self.assertIn("IT8 P5 additions (design only)", text, page)
+            self.assertIn("IT8 P5 record: two completed loops", text, page)
+
+    def test_the_loop_records_name_the_decision_and_the_unverified_transfer(self):
+        for rel in ("advance_it8_p5_20261029/loop1_partial_benefit/README.md", "advance_it8_p5_20261029/loop2_broad_recovery/README.md"):
+            text = self.read(self.DR + rel)
+            for needle in ("PROPOSED", "UNVERIFIED", "## 0. Decision"):
+                self.assertIn(needle, text, rel)
+
+    def test_mutation_a_marker_in_the_e01_packet_reaches_only_the_derived_card_q_r_10(self):
+        marker = "ZZ-MUTATION-MARKER-IT8P5"
+        real_dir = rj.CURATED_CARDS
+        tmp = Path(tempfile.mkdtemp(prefix="p5mut_"))
+        self.addCleanup(shutil.rmtree, tmp, True)
+        alt = tmp / "cards"
+        shutil.copytree(real_dir, alt)
+        path = alt / "E01_isr_modulators.packet.json"
+        packet = json.loads(path.read_text(encoding="utf-8"))
+        packet["p4_card"]["next_measurement"] = marker + " " + packet["p4_card"]["next_measurement"]
+        path.write_text(json.dumps(packet), encoding="utf-8")
+        outputs = {}
+        for label, folder in (("plain", real_dir), ("mutated", alt)):
+            rj.CURATED_CARDS = folder
+            self.addCleanup(setattr, rj, "CURATED_CARDS", real_dir)
+            out = tmp / label
+            out.mkdir()
+            rj.run(out, live=False)
+            outputs[label] = {r["query_id"]: r["card"] for r in json.loads((out / "cards.json").read_text(encoding="utf-8"))}
+        rj.CURATED_CARDS = real_dir
+        self.assertIn(marker, outputs["mutated"]["Q-R-10"]["input"]["p4_card"]["next_measurement"])
+        self.assertNotIn(marker, json.dumps(outputs["plain"]["Q-R-10"]))
+        for qid in outputs["plain"]:
+            if qid != "Q-R-10":
+                moved = re.sub(r'"(input_sha256|sha256|digest)": "[0-9a-f]+"', r'"\1": "-"', json.dumps(outputs["mutated"][qid], sort_keys=True).replace(str(alt) + "/", "cards/"))
+                plain = re.sub(r'"(input_sha256|sha256|digest)": "[0-9a-f]+"', r'"\1": "-"', json.dumps(outputs["plain"][qid], sort_keys=True))
+                self.assertEqual(plain, moved, qid)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

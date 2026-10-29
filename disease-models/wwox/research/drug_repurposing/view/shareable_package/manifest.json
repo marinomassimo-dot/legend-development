@@ -18,17 +18,17 @@
    },
    "^\\.cur\\.(needs|threads|groups|gaps|goals|tracks|scopes|group_note|meta|evidence_graph|work_order|selection|hypotheses|predictive|contexts)(\\.|\\[\\]|$)": {
     "class": "OWN",
-    "values": 3493,
+    "values": 3550,
     "why": "needs, threads, positions, evidence graph, work order and the IT7 selection, comparison, predictive-test and context sections: own text or counts computed from own census files"
    },
    "^\\.cur\\.cands\\[\\]\\.": {
     "class": "OWN",
-    "values": 5925,
+    "values": 5929,
     "why": "card text and computed positions (provenance of the prose: see text audit)"
    },
    "^\\.cur\\.cands\\[\\]\\.(pmids\\[\\]\\.(id|role)|dois\\[\\])$": {
     "class": "BIBLIO",
-    "values": 403,
+    "values": 421,
     "why": "PMID / DOI of a cited work"
    },
    "^\\.cur\\.cands\\[\\]\\.access\\[\\]$": {
@@ -38,12 +38,12 @@
    },
    "^\\.cur\\.cands\\[\\]\\.brief\\.sources\\[\\]\\.(kind|id)$": {
     "class": "BIBLIO",
-    "values": 206,
+    "values": 216,
     "why": "PMID / ChEMBL identifier of an essential source of the one-page synthesis"
    },
    "^\\.cur\\.cands\\[\\]\\.brief\\.sources\\[\\]\\.(title|journal|year)$": {
     "class": "BIBLIO",
-    "values": 309,
+    "values": 324,
     "why": "title, journal, year of an essential source (bibliographic facts)"
    },
    "^\\.cur\\.cands\\[\\]\\.chembl\\[\\]$": {
@@ -53,7 +53,7 @@
    },
    "^\\.cur\\.cands\\[\\]\\.pmids\\[\\]\\.(title|journal|year)$": {
     "class": "BIBLIO",
-    "values": 597,
+    "values": 624,
     "why": "title, journal, year of a cited work (bibliographic facts)"
    },
    "^\\.cur\\.evidence_graph\\.chains\\[\\]\\.(nodes\\[\\]\\.pmids\\[\\]|edges\\[\\]\\.src\\.id)$": {
@@ -73,12 +73,12 @@
    },
    "^\\.cur\\.needs\\[\\]\\.obs\\[\\]\\.(cite)$": {
     "class": "BIBLIO",
-    "values": 85,
+    "values": 90,
     "why": "title, journal, year of a cited work"
    },
    "^\\.cur\\.needs\\[\\]\\.obs\\[\\]\\.pmid$": {
     "class": "BIBLIO",
-    "values": 85,
+    "values": 90,
     "why": "PMID of the observation source"
    },
    "^\\.excluded_detail\\[\\]\\.(id|name|src)$": {
@@ -108,7 +108,7 @@
    },
    "^\\.needs\\[\\]\\.": {
     "class": "OWN",
-    "values": 1657,
+    "values": 1663,
     "why": "needs records written in this repository"
    },
    "^\\.pairs\\[\\]\\.(l2|l3|l4|x|n|r)(\\.|\\[\\]|$)": {
@@ -193,7 +193,7 @@
    "DOI": 5,
    "HGNC": 6,
    "NCT": 0,
-   "PMID": 55
+   "PMID": 58
   },
   "links": {
    "distinct_hrefs": 58,
@@ -211,7 +211,7 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 1939,
+    "forbidden-name": 1959,
     "forbidden-wording": 12
    },
    "co_attested_wording": [
@@ -432,10 +432,10 @@
   "view_schema": "legend.wwox.repurposing_view/2"
  },
  "embedded_field_classes": {
-  "BIBLIO": 1850,
+  "BIBLIO": 1930,
   "COUNT": 7757,
   "ID": 3048,
-  "OWN": 54109,
+  "OWN": 54176,
   "ROWNAME": 1506,
   "SRC_A": 91,
   "SRC_META": 244,
@@ -494,7 +494,7 @@
   },
   "NOTICE.md": {
    "bytes": 10871,
-   "sha256": "2fa560e147b4a999a5cbd1c920baed2c3cd185a201e4c83e3af1f9dc621f6931"
+   "sha256": "6bd8f608f5e71035ec8f715cbed447050a6f932acdff0819a64d1fca497ee079"
   },
   "README.md": {
    "bytes": 4642,
@@ -502,7 +502,7 @@
   },
   "TEXT_PROVENANCE.json": {
    "bytes": 1870,
-   "sha256": "f6cfa02719c97ec773310f4d023799e86e6bb5ad14614bd0c5e007fcce86718d"
+   "sha256": "b0f115d1036a59a6f2cf14629f4f8cb79e68babae801715bbd4b3d77273dfc3e"
   },
   "class_b/chembl_cc-by-sa-3.0/CREDIT.txt": {
    "bytes": 1636,
@@ -517,8 +517,8 @@
    "sha256": "d8fe6a3455466783564803428b6318c1c442db6a16dfb97de8a6b7dcf944cc9d"
   },
   "index.html": {
-   "bytes": 2475675,
-   "sha256": "577a8745ce96be7462c673bc8fffd4e7d83b24acd372ddebbdabe2c9ace05826"
+   "bytes": 2490395,
+   "sha256": "d345006dff695bbef3419fd9cc3c687d820d13bfb27b1611a01b3f023fdc187b"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",
