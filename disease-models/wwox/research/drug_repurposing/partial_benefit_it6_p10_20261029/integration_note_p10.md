@@ -30,7 +30,7 @@ tool is not named in `needs/`, UNVERIFIED which one). The patch was applied and 
   "CAT:CHEMBL2105759"
  ],
  "decision": "abstention",
- "why": "The sign of the glial difference conflicts between species (null and P47T mouse excess; Wwox-mutant rat deficit from PND 5; human organoid no reactive programme), the time order of gliosis and seizures was never measured in the same animals, and every verified compound precedent is acute or post-infectious and null or negative for the outcome that matters (abstract level, NOT WWOX EVIDENCE). Catalogue links exist only as exploration rows (no stated direction for 439 of 738 intervention-target rows).",
+ "why": "The sign of the glial difference conflicts between species (null and P47T mouse excess; Wwox-mutant rat deficit from PND 5; human organoid no reactive programme), the time order of gliosis and seizures was never measured in the same animals, and every verified compound precedent is acute or post-infectious and uncontrolled or uninformative for long-term outcome, with acute seizure-control reports for anakinra and no usable trial-level VX-765 result (abstract level, NOT WWOX EVIDENCE). Catalogue links exist only as exploration rows (no stated direction for 439 of the 642 non-excluded intervention-target rows; 738 intervention-target rows before 96 exclusions).",
  "reopening_condition": "a time course of glial density against first spike in a Wwox-deficient model showing glia above wild type before the first spike, or any glial endpoint after a compound in a Wwox-deficient system",
  "next_experiment": "time course P5 to P17 with simultaneous recording and glial density in cortex and hippocampus (cycle README section 12); no compound arm",
  "owner": "Scientist (wet-lab design; not done here)",
