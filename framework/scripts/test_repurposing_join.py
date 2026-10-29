@@ -957,5 +957,197 @@ class SupersededWordingGoneIT5Batch2(unittest.TestCase):
         self.assertIn("superseded explanation", cov)
 
 
+class SupersededWordingGoneIT6(unittest.TestCase):
+    """BATCH_20261019_027: the iteration-6 results as the registries, ledgers, map and consumers must now state them.
+
+    Positive checks only (what each surface DOES say), plus the exact old strings that were replaced in place:
+      1. the map no longer calls NMDAR «pharmacologically established with d-APV inside the WWOX system» and states that
+         NMDAR activity is required while a raised NMDAR function is not shown; boundary 5 and the R-01 cell state prevention;
+      2. every claim that carried a «rescue» or «NMDAR dependence» reading has a dated wave note naming this batch and keeps its Status;
+      3. the ledgers carry the dated UPDATE bullets (window state, three readings unranked, sign not resolved, no resolvable sign),
+         the earlier headings are still there (append-only), and the magnesium hypothesis exists with Status generated;
+      4. the consumers (cards C01 and C04, needs, the p5 tables, the join output, both views) no longer say «R-class demonstrated»
+         or «would act in humans at the stage a patient is treated» and say early-window / manifested deficit;
+      5. every receipt a PAPER reading update names is recorded in the receipt ledger; the working model is still the version
+         the manifest declares and does not name this batch.
+    It does not prove that a paraphrase outside these strings is absent.
+    """
+
+    DR = "disease-models/wwox/research/drug_repurposing/"
+    BATCH = "BATCH_20261019_027"
+    SURFACES = [
+        "disease-models/wwox/analysis/mechanism_intervention_map.md",
+        DR + "cards/C01_aav9_wwox.card.json",
+        DR + "cards/C01_aav9_wwox.packet.json",
+        DR + "cards/C04_aav9_endpoint_families.card.json",
+        DR + "needs/needs.json",
+        DR + "p5/cells.json",
+        DR + "p5/tables_deep.md",
+        DR + "join/cards.json",
+        DR + "view/index.html",
+        DR + "view/index_shareable.html",
+        "disease-models/wwox/research/repurposing_batch_selection_20261029_module.md",
+    ]
+
+    def read(self, rel):
+        return (ROOT / rel).read_text(encoding="utf-8")
+
+    def block(self, rel, start, end_marker):
+        text = self.read(rel)
+        head = text.split(start, 1)[1]
+        return head.split(end_marker, 1)[0]
+
+    def test_map_says_nmdar_activity_is_required_not_that_nmdar_function_is_raised(self):
+        m = self.read(self.SURFACES[0])
+        self.assertNotIn("ACTIONABLE NODE: NMDAR (pharmacologically established with d-APV inside the WWOX system)", m)
+        self.assertIn("NMDAR ACTIVITY IS REQUIRED for the bursting", m)
+        self.assertIn("a RAISED NMDAR function is NOT shown", m)
+        self.assertIn("three readings fit it and are not ranked", m)
+        self.assertIn("F04_nmdar_intervention_class", m)
+        self.assertIn(self.BATCH, m)
+
+    def test_map_states_gene_addition_as_prevention_in_the_mouse(self):
+        m = self.read(self.SURFACES[0])
+        self.assertIn("5. **Prevention, not recovery (added 2026-10-29", m)
+        self.assertIn("PREVENTED or EARLY-WINDOW", m)
+        self.assertIn("RECOVERED\n   for none", m)
+        self.assertIn("early-window prevention, not recovery of a manifested deficit; CHAIN A boundary 5", m)
+        r01 = m.split("### R-01 ", 1)[1].split("### R-02 ", 1)[0]
+        self.assertIn("updated 2026-10-29 (IT6 P7): in the mouse this is early-window prevention", r01)
+
+    def test_consumers_say_early_window_and_not_recovery_of_a_manifested_deficit(self):
+        for rel in self.SURFACES[1:]:
+            text = self.read(rel)
+            self.assertNotIn("R-class demonstrated", text, rel)
+            self.assertNotIn("act in humans at the stage a patient is treated", text, rel)
+        for rel in (self.DR + "cards/C01_aav9_wwox.packet.json", self.DR + "cards/C04_aav9_endpoint_families.card.json"):
+            self.assertIn("arly-window", self.read(rel), rel)
+        needs = self.read(self.DR + "needs/needs.json")
+        self.assertIn("That gene addition would recover a manifested deficit", needs)
+        self.assertIn("Do not carry a perinatal result to a later intervention", needs)
+        cells = self.read(self.DR + "p5/cells.json")
+        self.assertIn("Early-window restoration by replacement", cells)
+
+    def test_claims_carry_the_wave_note_and_keep_their_status(self):
+        text = self.read("disease-models/wwox/registries/claim_registry_current.md")
+        expect = {
+            "CLAIM 004": ("consolidated baseline", "PREVENTED or EARLY-WINDOW"),
+            "CLAIM 011": ("flagged for review", "PREVENTED or EARLY-WINDOW"),
+            "CLAIM 040": ("in observation", "PREVENTED or EARLY-WINDOW"),
+            "CLAIM 002": ("consolidated baseline", "PREVENTION by construction"),
+            "CLAIM 021": ("consolidated baseline", "NEEDS NMDAR activity"),
+            "CLAIM 005": ("consolidated baseline", "NOT uniform across the Wwox models"),
+        }
+        for cid, (status, phrase) in expect.items():
+            blk = text.split("## " + cid + "\n", 1)[1].split("\n## CLAIM ", 1)[0]
+            self.assertIn("**Status:** " + status, blk, cid)
+            self.assertIn("**Wave note (2026-10-29, `" + self.BATCH + "`", blk, cid)
+            self.assertIn(phrase, blk, cid)
+        c21 = text.split("## CLAIM 021\n", 1)[1].split("\n## CLAIM ", 1)[0]
+        self.assertIn("It is not shown to be a raised NMDAR function", c21)
+        self.assertIn("are NOT ranked here", c21)
+
+    def test_ledgers_carry_the_updates_and_keep_the_earlier_headings(self):
+        disc = self.read("disease-models/wwox/research/discovery_ledger_current.md")
+        def rec(text, ident, nxt):
+            return text.split("### " + ident, 1)[1].split(nxt, 1)[0]
+        for ident, nxt, phrase in (
+            ("DL-MECH-011 ", "\n### ", "PREVENTED or EARLY-WINDOW"),
+            ("DL-MOL-005 ", "\n### ", "early-window prevention in the null mouse"),
+            ("DL-MOL-001 ", "\n### ", "NEEDS NMDAR activity"),
+            ("DL-REPO-002 ", "\n### ", "NOT resolved across the Wwox models"),
+            ("DL-MECH-173 ", "\n### ", "no resolvable sign at about 0.3"),
+            ("DL-BIO-085 ", "\n### ", "No function per molecule has been measured for any WWOX allele"),
+        ):
+            blk = rec(disc, ident, nxt)
+            self.assertIn("UPDATE 2026-10-29 (`" + self.BATCH + "`", blk, ident)
+            self.assertIn(phrase, blk, ident)
+        # append-only: the earlier heading of DL-REPO-002 and the earlier wording of DL-MOL-001 are still there
+        self.assertIn("direzione RISOLTA (WWOX-loss → infiammazione ↑ → serve INIBIRE)", disc)
+        self.assertIn("dipendenza NMDAR dimostrata (Breton)", disc)
+        hyp = self.read("disease-models/wwox/research/therapeutic_hypotheses_ledger_current.md")
+        for ident, phrase in (("HYP-20261027-01 ", "F04_nmdar_intervention_class"), ("HYP-20261026-10 ", "no resolvable sign at about 0.3"),
+                              ("HYP-20260709-08 ", "wild-type function ruler first")):
+            blk = hyp.split("### " + ident, 1)[1].split("\n### ", 1)[0]
+            self.assertIn("UPDATE 2026-10-29 (`" + self.BATCH + "`", blk, ident)
+            self.assertIn(phrase, blk, ident)
+        mg = hyp.split("### HYP-20261029-01 ", 1)[1]
+        self.assertIn("**Status:** `generated`", mg)
+        self.assertIn("the recording bath is not stated", mg)
+        self.assertIn("Not medical advice", mg)
+        self.assertNotIn("HYP-20261029-01", self.read("disease-models/wwox/research/dismissal_ledger_current.md"))
+
+    def test_every_receipt_a_registry_note_names_is_recorded_and_the_working_model_is_untouched(self):
+        ledger = self.read("disease-models/wwox/registries/fulltext_read_receipts.jsonl")
+        recorded = set(re.findall(r'"event_id": ?"(FTR-[0-9]+-[0-9]+-[0-9]+)"', ledger))
+        papers = self.read("disease-models/wwox/registries/paper_registry_current.md")
+        named = set()
+        for line in papers.splitlines():
+            if "**Reading update (2026-10-29, `" + self.BATCH in line:
+                named |= set(re.findall(r"FTR-[0-9]{8}-[0-9]+-[0-9]+", line))
+        self.assertGreaterEqual(len(named), 14)
+        self.assertFalse(named - recorded, sorted(named - recorded))
+        wm = self.read("disease-models/wwox/registries/working_model_current.md")
+        version = re.search(r"\*\*Version:\*\* (WM_v\S+)", wm).group(1)
+        self.assertIn(version.split("_")[1], self.read("framework/state/state_manifest_current.md"))
+        # BATCH_20261019_027 changed no working-model statement; it is named only in the Last update line of its follow-up 028
+        self.assertNotIn(self.BATCH, "\n".join(l for l in wm.splitlines() if not l.startswith("**Last update:**")))
+
+    def test_working_model_wording_after_the_review(self):
+        """BATCH_20261019_028 (WM_v7.29): the ages tested are not a measured window; the durable-rescue lines carry the
+        early-window qualifier; the early-childhood sentence carries a premise tag; the version equals the manifest's."""
+        wm = self.read("disease-models/wwox/registries/working_model_current.md")
+        body = "\n".join(l for l in wm.splitlines() if not l.startswith("**Last update:**"))
+        self.assertNotIn("critical early postnatal window", body)
+        self.assertIn("early postnatal window tested (P0–P5 in mouse: ages tested, not a measured boundary)", wm)
+        self.assertEqual(body.count("(early-window prevention in the null mouse; no after-onset mouse arm)"), 3)
+        self.assertIn("`PREMISE_TAG: DEFAULT_FROM_TEXTBOOK` — an unsourced expert-sentiment sentence", wm)
+        version = re.search(r"\*\*Version:\*\* (WM_v\S+)", wm).group(1)
+        manifest = self.read("framework/state/state_manifest_current.md")
+        self.assertIn("working_model_version: " + version.split("_20")[0], manifest)
+        self.assertIn("`BATCH_20261019_028`", wm.split("\n## Disease identity", 1)[0])
+        hist = self.read("disease-models/wwox/registries/working_model_history.md")
+        self.assertIn("| **WM_v7.29** |", hist)
+        narrative = self.read("disease-models/wwox/disease_model.md")
+        self.assertNotIn("critical early postnatal window", narrative)
+        self.assertIn("ages tested, not a measured boundary", narrative)
+
+    def test_repaired_wording_of_the_review_is_in_place(self):
+        m = self.read(self.SURFACES[0])
+        self.assertIn("read in this corpus (two mouse studies; a bounded search for inducible neural Wwox models found none)", m)
+        self.assertIn("in part (partial, not normalised) for motor score and, at the high dose only, for gliosis", m)
+        self.assertIn("insoluble pellet protein with no measurable activity (yeast and U2OS", m)
+        self.assertNotIn("inert pellet protein", m)
+        self.assertNotIn("a complete competitive block, inside the WWOX system", m)
+        self.assertNotIn("the actionable node is **NMDAR/gap-junction**", m)
+        self.assertIn("**needs NMDAR activity** (the gap-junction half withdrawn", m)
+        self.assertIn("a proposed order of work, not a ranking", m.lower())
+        hyp = self.read("disease-models/wwox/research/therapeutic_hypotheses_ledger_current.md")
+        mg = hyp.split("### HYP-20261029-01 ", 1)[1]
+        self.assertIn("raised K+ or 4-aminopyridine", mg)
+        self.assertIn("so the reachable rise may fall short", mg)
+        self.assertIn("uncorrected for the liquid-junction potential", mg)
+        self.assertNotIn("INFERENZA", mg.split("\n", 3)[2])
+        self.assertIn("**Lever:** 3 (repurposing, nutrient class)", mg)
+        self.assertNotIn("insoluble, inert protein", hyp)
+        h27 = hyp.split("### HYP-20261027-01 ", 1)[1].split("\n### ", 1)[0]
+        self.assertIn("a candidate first drug arm, a proposal and not a ranking", h27)
+        self.assertIn("time-stamped before unblinding", h27)
+        lit = self.read("disease-models/wwox/registries/literature_tracking_log_current.md")
+        self.assertNotIn("insoluble, inert protein", lit)
+        disc = self.read("disease-models/wwox/research/discovery_ledger_current.md")
+        d11 = disc.split("### DL-MECH-011 ", 1)[1].split("\n### ", 1)[0]
+        self.assertIn("in part (partial, not normalised) for motor score", d11)
+        r2 = disc.split("### DL-REPO-002 ", 1)[1].split("\n### ", 1)[0]
+        self.assertIn("superseded in effect by this update", r2)
+        self.assertIn("by the catalogue's own fields", r2)
+        claims = self.read("disease-models/wwox/registries/claim_registry_current.md")
+        c21 = claims.split("## CLAIM 021\n", 1)[1].split("\n## CLAIM ", 1)[0]
+        self.assertNotIn("a complete competitive block", c21)
+        self.assertIn("a competitive antagonist that eliminated the bursting", c21)
+        papers = self.read("disease-models/wwox/registries/paper_registry_current.md")
+        self.assertIn("the only such rescue noted in the readings of this batch", papers)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
