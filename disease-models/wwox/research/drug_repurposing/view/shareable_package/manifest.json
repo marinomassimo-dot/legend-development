@@ -474,7 +474,7 @@
   },
   "TEXT_PROVENANCE.json": {
    "bytes": 1601,
-   "sha256": "321bbc10bb47d3da8df1a85deeb9ae9ddf447c5154a1cb96d65297eaa829d0e5"
+   "sha256": "c7e36f75d41fa10ff6c5848c6188a5862e5decced0bb8d980f85f5503995a848"
   },
   "class_b/chembl_cc-by-sa-3.0/CREDIT.txt": {
    "bytes": 1636,
@@ -490,7 +490,7 @@
   },
   "index.html": {
    "bytes": 2016624,
-   "sha256": "8f57591b636e5406aff7684f2de4e4ebe4734234bbf7003715b9e60d0be54802"
+   "sha256": "91664ab1b9f48be0595c0046d85b147e5680b6b11ddbe24db90b51ed4018c630"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",
