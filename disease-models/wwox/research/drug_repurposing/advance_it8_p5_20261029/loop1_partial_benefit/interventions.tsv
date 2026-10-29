@@ -1,0 +1,8 @@
+arm	route_or_class	catalogue_or_ChEMBL_result_2026-10-29	access_status_in_source	what_is_measured_in_WWOX	note
+attenuation	eIF2B activator class	fosigotifator: two ChEMBL clinical-candidate records, targets=0 (no mechanism row); DNL343 and 2BAct: 0 name matches	clinical_candidate (ChEMBL max_phase carried as stated)	nothing	a zero is about the catalogue not about existence
+attenuation	PERK-arm inhibitors	GSK2606414 and GSK2656157: DGIdb-only records	no_status_statement	nothing	not approved; no tool prioritised
+kinase tool	HRI arm	3 DGIdb-only records (one RIPK1 inhibitor); ChEMBL CHEMBL6029 360 activity rows, first 50 read, truncated, not interpreted	no_status_statement	nothing	genetic loss is the planned attribution
+kinase tool	GCN2 arm	8 catalogue matches (antipsychotics are pharmacogenomic associations); ChEMBL CHEMBL5358 811 rows, first 50 read, truncated	approved records are not GCN2 inhibitors	nothing	genetic loss is the planned attribution
+potentiation	GADD34-targeted class (Sephin-1, icerguastat)	absent from catalogue; ChEMBL molecule and mechanism search NO_MATCH_FOUND	not in the catalogue	nothing	target disputed (PMID 28447936, abstract level)
+potentiation	guanabenz	ChEMBL CHEMBL420 and CHEMBL1200560; one curated mechanism: alpha-2 adrenergic agonist; no PPP1R15A mechanism row	approved_any_source	nothing	one ChEMBL activity row on PPP1R15A belongs to a 2,3-dichloro isomer (IC50 977 nM; PPP1R15B 33 nM), from a review document, primary assay not traced
+genetic	kinase knock-out, uORF-GFP reporter	not a catalogue object	not applicable	nothing	stays a genetic tool

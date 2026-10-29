@@ -43,6 +43,10 @@
     "IT7-P6": {
       "path": "loop_demonstration_it7_p6_20261029/README.md",
       "label": "IT7 P6 record: a null result through the research loop"
+    },
+    "IT8-P5": {
+      "path": "advance_it8_p5_20261029/README.md",
+      "label": "IT8 P5 record: two completed loops (ISR sign and kinase; recovery after onset)"
     }
   },
   "entries": [
@@ -50,12 +54,13 @@
       "need": "NEED-WWOX-GENE-ADDITION",
       "kind": "verificare un'ipotesi",
       "question": "Does an intermediate vector level separate a threshold from a gradient, and is the benefit only prevented inside the first days of life or also recovered when treatment follows onset? No study has measured the phenotype at the day of injection.",
-      "data": "The cards' own next measurement: an intermediate arm defined as a fraction of the higher level, carried to 300 days with survival, weight, glucose, ECoG and quantified myelination; plus a pre-treatment baseline in the same animals or an age-matched cohort, and treated-after-onset arms with a same-age untreated comparator (organoids or a slower-onset model).",
+      "data": "The cards' own next measurement: an intermediate arm defined as a fraction of the higher level, carried to 300 days with survival, weight, glucose, ECoG and quantified myelination; plus a pre-treatment baseline in the same animals or an age-matched cohort, and treated-after-onset arms with a same-age untreated comparator (organoids or a slower-onset model). Added in IT8: a post-onset arm in organoids with a same-organoid baseline and an AAV9 vector control, severe and milder variant classes side by side.",
       "would_change": "Quantified myelination would add a controlled row on the same need; a failure would move the card to C2 by rule; a treated-after-onset arm would show whether the word recovery may be used for that endpoint.",
       "feasibility": "Wet-lab work in a Wwox-null mouse by a laboratory that has the vector; none known in this repository; the source laboratory is one group (the two papers share a senior author). Whether the vector is obtainable: not known.",
       "date": "2026-10-29",
       "updated_by": [
-        "P7"
+        "P7",
+        "IT8-P5"
       ],
       "cards": [
         "C01_aav9_wwox",
@@ -63,7 +68,8 @@
       ],
       "docs": [
         "P7",
-        "REVIEW"
+        "REVIEW",
+        "IT8-P5"
       ],
       "window_state": [
         {
@@ -108,13 +114,14 @@
     {
       "need": "NEED-ISR-ATTENUATION",
       "kind": "verificare un'ipotesi",
-      "question": "Is the ISR kinase arm active at all in WWOX-deficient neural cells? After the mouse P17 transcripts the sign is still unresolved: lower in the organoid, higher in one library per arm of the progenitor line, flat in the mouse.",
-      "data": "Protein and phosphorylation readouts (phospho-eIF2alpha against total, ATF4 protein, targets, translation) in isogenic WWOX-null against corrected neural lines at matched maturity, with challenge arms and kinase attribution by genetics; the decision table is fixed before the run.",
+      "question": "Is the ISR kinase arm active at all in WWOX-deficient neural cells, and is it compensatory or harmful? After the mouse P17 transcripts the sign is unresolved, and two mitochondrial-lesion precedents have opposite signs (protective in one, harmful in the other); neuronal activity alone also raises ATF4 protein without an mRNA change.",
+      "data": "Protein and phosphorylation readouts (phospho-eIF2alpha against total, ATF4 protein, targets, translation) in isogenic WWOX-null against corrected neural lines at matched maturity, with and without activity silencing, sampled before, at and after the first hyperexcitability, with challenge arms and kinase attribution by genetics; the decision table is fixed before the run.",
       "would_change": "A measured elevation would give the need its first controlled WWOX-system row on the pathway; a flat result removes the premise of F3 for card E01. Transcripts alone cannot do either: the mouse analysis found no resolvable sign at about 0.3.",
       "feasibility": "No suitable dataset is held (the progenitor deposit failed its pre-declared gates; the mouse deposits hold transcripts only); availability of isogenic lines: not known.",
       "date": "2026-10-29",
       "updated_by": [
-        "P4"
+        "P4",
+        "IT8-P5"
       ],
       "cards": [
         "E01_isr_modulators"
@@ -122,9 +129,10 @@
       "docs": [
         "P4",
         "ISR-DESIGN",
-        "REVIEW"
+        "REVIEW",
+        "IT8-P5"
       ],
-      "summary_it": "Capire se la risposta integrata allo stress è davvero attiva nelle cellule neurali prive di WWOX: oggi il segno dei trascritti è discordante.",
+      "summary_it": "Capire se la risposta integrata allo stress è attiva nelle cellule neurali prive di WWOX, se compensa o danneggia e quanto dipende dall'attività di rete: oggi il segno è discordante.",
       "feasibility_it": "Nessun insieme di dati adatto in mano; disponibilità di linee isogeniche: non nota."
     },
     {

@@ -105,7 +105,7 @@
       "TX-007"
     ],
     "predictions": "None; no engine, no score.",
-    "next_measurement": "An intermediate-level arm, defined as a fraction of the primary's higher level (never in absolute quantity), carried to 300 days with survival, weight, glycaemia, ECoG and quantified myelin in the same animals; and an independent replication. Either would change whether this is a threshold or a steep continuum.",
+    "next_measurement": "An intermediate-level arm, defined as a fraction of the primary's higher level (never in absolute quantity), carried to 300 days with survival, weight, glycaemia, ECoG and quantified myelin in the same animals; and an independent replication. Either would change whether this is a threshold or a steep continuum. IT8 P5 addition (design only): a post-onset arm in patient or isogenic organoids, recording the same organoids at week 7 or 8, giving AAV9-WWOX or an AAV9 vector control at week 10 and re-recording at weeks 12, 16 and 24, severe and milder variant classes side by side, which supplies the missing same-organoid baseline, vector control and persistence.",
     "status": "hypothesis",
     "status_reason": "Transfer to the reference genotype not established; no replication.",
     "value_added": "Shows which endpoints carry a graded relation and which do not, so a single useful endpoint is not read as a dose-response.",

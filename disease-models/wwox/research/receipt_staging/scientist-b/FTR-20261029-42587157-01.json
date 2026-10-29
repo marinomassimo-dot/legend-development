@@ -1,0 +1,37 @@
+{
+ "event_id": "FTR-20261029-42587157-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "42587157",
+  "doi": "10.1038/s41586-026-10907-8"
+ },
+ "event_at": "2026-10-29T21:40:00Z",
+ "analysis_at": "2026-10-29T00:00:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-b, IT8 package P5. Results sections on Cntnap2 PV-IN synapses, Meis2 restoration, cognition and seizures, and the Discussion read in the JATS text; Methods not read; Figure 5 (seizure panels) opened as an image (files/supplement/PMID42587157/41586_2026_10907_Fig5_HTML.webp); supplementary tables not opened. Question: age at intervention versus age at onset per endpoint, comparator, and whether the effect is lesion-specific. Prepared as JSON for the integrator and staged. Coverage vocabulary is closed: sections read only in part are recorded as not_read (understated), figures opened as images but not exhaustively are recorded as captions_only (understated).",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMC13531005_PMID42587157_europepmc_fulltext_2026-10-29.xml",
+ "source_fingerprint": "8e475e7242229354f6837b63d386782556a19ec3f12eebd14eda536cb416162e",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advance_it8_p5_20261029/loop2_broad_recovery/README.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "Passages quoted in the output file; extractor text loses italics and superscripts. Coverage understated rather than overstated."
+ ],
+ "reread_reason": "first_read",
+ "prior_receipt": null
+}
