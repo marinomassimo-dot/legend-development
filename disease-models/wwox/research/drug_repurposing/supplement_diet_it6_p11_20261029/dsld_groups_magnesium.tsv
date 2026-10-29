@@ -1,0 +1,19 @@
+term	total_groups	group_id	group_name	category	name_equals_query	synonym_equals_query	n_synonyms
+Magnesium	38	82	Magnesium	mineral	True	True	281
+Magnesium	38	7577	Magnesium	non-nutrient/non-botanical	True	True	207
+Magnesium	38	2466	Magnesium Malate	non-nutrient/non-botanical	False	True	19
+Magnesium	38	8432	Magnesiium	mineral	False	True	14
+Magnesium	38	2292	Magnesium Silicate	other	False	False	20
+Magnesium	38	2829	Magnesium carbonate	other	False	False	1
+Magnesium	38	3106	Magnesium Salicylate	other	False	False	1
+Magnesium	38	7582	Magnesium hydroxycitrate	non-nutrient/non-botanical	False	False	1
+Magnesium L-threonate	2	82	Magnesium	mineral	False	True	281
+Magnesium L-threonate	2	7577	Magnesium	non-nutrient/non-botanical	False	True	207
+Magnesium citrate	6	2649	Magnesium Citrate	non-nutrient/non-botanical	True	True	2
+Magnesium citrate	6	82	Magnesium	mineral	False	True	281
+Magnesium citrate	6	7042	Calcium Magnesium Citrate	non-nutrient/non-botanical	False	False	4
+Magnesium citrate	6	7581	Magnesium citrate oxide	non-nutrient/non-botanical	False	False	1
+Magnesium citrate	6	7580	Magnesium citrate malate	non-nutrient/non-botanical	False	False	2
+Magnesium citrate	6	9072	Magnesium citrate laurate	other	False	False	3
+Magnesium glycinate	2	82	Magnesium	mineral	False	True	281
+Magnesium glycinate	2	7577	Magnesium	non-nutrient/non-botanical	False	True	207

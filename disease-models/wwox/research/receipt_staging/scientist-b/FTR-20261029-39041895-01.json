@@ -1,0 +1,37 @@
+{
+ "event_id": "FTR-20261029-39041895-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "39041895",
+  "doi": "10.1002/pro.5123"
+ },
+ "event_at": "2026-10-29T09:00:00Z",
+ "analysis_at": "2026-10-29T08:30:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-b, IT6 step P6. IT6 P6 (broad durable recovery, new question): does degradation-route blockade or proteostasis modulation of a destabilised cytosolic missense enzyme restore enzyme function, which protein fraction rises, and does the outcome depend on the lesion and the expression context. Class-level substitute, NOT WWOX EVIDENCE. Source: Europe PMC fullTextXML (CC licence), saved locally; text extracted with tags removed; prepared as JSON for the integrator and staged, not appended.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID39041895_Mijatovic2024_PMC11264351_epmc_2026-10-29.xml",
+ "source_fingerprint": "ec2a0d1b25f8e85d1a9e2c228711fcd4d887ca22b22b318b7bed7f1d289bc39a",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "captions_only"
+ },
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/broad_recovery_it6_p6_20261029/README.md",
+  "disease-models/wwox/research/drug_repurposing/broad_recovery_it6_p6_20261029/A02_proteasome_inhibitor_class.packet.json"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "Abstract, Results 3.1 to 3.4 and the Discussion read in the text extract (Discussion read from its start and from the paragraph on ER and chaperones to the end); Introduction after its first sentence and Methods not read; figures as captions only; supplementary Figure S1 caption read."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

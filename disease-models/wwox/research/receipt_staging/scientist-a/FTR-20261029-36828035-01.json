@@ -1,0 +1,38 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261029-36828035-01",
+ "study_id": {
+  "pmid": "36828035",
+  "doi": null
+ },
+ "analysis_at": "2026-10-29T07:40:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-a, mandate IT6 package P10, task branch task/it6-p10; context_policy QUESTION_DRIVEN (held: the glial-reactivity thread of NEED-NEUROINFLAMMATION-GLIA). Prepared as a staged JSON for the integrator and not appended at preparation time. Question: do the canonical reactive-astrocyte, microglial-activation and cytokine transcripts appear in the deposited thresholded differential-expression sheets of the P47T homozygote (PFC, CTX, HPC, CB). Route: a derived text of the supplementary xlsx sheets (Supplementary_data_all_sheets_derived.txt, sha256 1ac2a8701d842b124ca686303bb1873142d6114727ab821be8e6191129c5b05d) queried by symbol with a script saved in the cycle directory; the sheets list only genes beyond the paper's thresholds, so absence from them is not a measurement of no change. No article section read.",
+ "evidence_depth": "queried_not_full_read",
+ "source_locator": "files/supplement/PMID36828035/Supplementary_data_all_sheets_derived.txt",
+ "source_fingerprint": "1ac2a8701d842b124ca686303bb1873142d6114727ab821be8e6191129c5b05d",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "figures": "not_read",
+  "tables": "not_present",
+  "discussion": "not_read",
+  "limitations": "not_present",
+  "supplementary": "read",
+  "references": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/partial_benefit_it6_p10_20261029/README.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "supplement query only",
+  "NEW: among the thresholded rows, Gfap, Aif1, Il1b, Tnf, Il6, Lcn2, Serpina3n, Nlrp3, Stat3 and Socs3 are absent in every region (forebrain sheets: |log2 ratio| at least 1; cerebellum sheet: smallest listed ratio about 0.3); C3 is lower in HPC (log ratio -1.26); Serpina3g and Serpina3h are higher in PFC and CTX; Oas1f is higher by 6.0 to 7.3 in all three forebrain regions; Il1b and Tnf, which the paper reports at least twofold higher in cerebellum by qPCR, are not listed in the cerebellum sheet either (reason not established: FDR, expression level or different animals are all possible)"
+ ],
+ "prior_receipt": "FTR-20261021-36828035-05",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "event_at": "2026-10-29T07:50:00Z"
+}

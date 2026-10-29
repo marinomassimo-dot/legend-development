@@ -1,0 +1,14 @@
+query	novel_food_entries	novel_food_status	novel_food_names	health_claim_entries	claim_status_counts
+Magnesium	2	Authorised novel food;Novel food	<p>Magnesium L-threonate</p>;<p>Sodium/magnesium/calcium salts of betahydroxybu	31	Authorised=18;Non-authorised=13
+Magnesium citrate	0			0	
+Magnesium glycinate	0			0	
+Magnesium bisglycinate	0			0	
+Magnesium oxide	0			1	Non-authorised=1
+Magnesium L-threonate	1	Authorised novel food	<p>Magnesium L-threonate</p>	0	
+Magnesium threonate	0			0	
+Magnesium taurate	0			0	
+Magnesium malate	0			0	
+Magnesium chloride	0			0	
+Magnesium sulfate	0			0	
+Magnesium aspartate	0			0	
+Zzzxq nonsense control	0			0	
