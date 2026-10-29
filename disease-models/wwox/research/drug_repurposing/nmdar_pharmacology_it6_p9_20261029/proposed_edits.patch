@@ -1,63 +1,26 @@
 --- a/disease-models/wwox/research/drug_repurposing/needs/needs.json
 +++ b/disease-models/wwox/research/drug_repurposing/needs/needs.json
-@@ -2430,28 +2430,107 @@
-       }
-      ],
-      "locator_status": "DOCUMENT"
+@@ -2487,19 +2487,57 @@
+      "pmid": "34634460",
+      "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+      "locator_status": "MANIFEST"
 +    },
 +    {
-+     "id": "O6",
-+     "statement": "Layer II/III pyramidal neurons of the knockout are depolarised (resting potential -73.62 +/- 1.36 mV against -79.25 +/- 1.99 mV in wild type, heterozygote -75.51 +/- 1.81 mV; 40, 13 and 15 cells) and receive spontaneous inhibitory currents of about half the amplitude (27.5 +/- 19.4 pA against 57.3 +/- 31.0 pA in controls).",
++     "id": "O8",
++     "statement": "The d-APV arm of the burst experiment is 5 slices from 3 animals (51 bursts; the paper's tests are on bursts) at postnatal day 13 to 17, d-APV 50 uM; the d-APV bar carries no significance marker in Fig 3D (bursts absent, no variance). The baseline burst frequency is printed as 2.29 [1.1 to 4.2] per minute in the main text and as 0.84 [0.57 to 1.53] per minute in Supplementary Table S1 (119 bursts, 18 slices, 9 animals); that both refer to the same bursts is an inference, not a statement of the paper.",
 +     "model_type": "mouse_neuron_specific_knockout",
 +     "species": "mouse",
 +     "genotype": "Synapsin-Cre Wwox knockout versus control",
 +     "tissue_or_cells": "layer II/III neocortex",
 +     "age_stage": "postnatal day 13 to 17",
 +     "comparison": "knockout against control",
-+     "readout": "resting membrane potential; sIPSC amplitude",
++     "readout": "d-APV arm design and baseline burst rate",
 +     "readout_level": "functional",
-+     "direction_observed": "resting potential: depolarised; inhibitory amplitude: decreased",
++     "direction_observed": "not applicable (design of the experiment)",
 +     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
-+     "limits": "Cells and pooled events, not animals; unpaired t-tests; no liquid-junction correction (stated in the methods); the heterozygote is also depolarised yet bursts in 4 of 23 slices. A depolarised membrane relieves the Mg2+ block of the NMDAR and reduced inhibition lowers the threshold of a recurrent network: either gives NMDAR-dependent bursting without a receptor change (F04; arithmetic, not a measurement).",
++     "limits": "Fig 3D read by eye from a JPEG; the two printed baselines differ about 2.7-fold and the paper does not explain it (a rate from the median interval against a median of per-slice rates is a possibility, unverified); any graded block read from bursts needs long recordings per condition (F04).",
 +     "pmid": "34634460",
 +     "locators": [
-+      {
-+       "kind": "manifest",
-+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34634460.json",
-+       "entry": 15,
-+       "anchor": "the resting membrane potential was depolarized"
-+      },
-+      {
-+       "kind": "manifest",
-+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34634460.json",
-+       "entry": 7,
-+       "anchor": "S-KOs 27.5"
-+      }
-+     ],
-+     "locator_status": "MANIFEST"
-+    },
-+    {
-+     "id": "O7",
-+     "statement": "The d-APV experiment used slices cut in sucrose and incubated in ACSF with 1.3 mM Mg2+, 1.5 mM Ca2+ and 3.5 mM K+, recorded at 35 degrees C, d-APV 50 uM; the d-APV arm is 5 slices from 3 animals (51 bursts; the tests are on bursts). The baseline burst frequency is printed as 2.29 [1.1 to 4.2] per minute in the main text and as 0.84 [0.57 to 1.53] per minute in Supplementary Table S1 for the same 119 bursts, 18 slices, 9 animals.",
-+     "model_type": "mouse_neuron_specific_knockout",
-+     "species": "mouse",
-+     "genotype": "Synapsin-Cre Wwox knockout versus control",
-+     "tissue_or_cells": "layer II/III neocortex",
-+     "age_stage": "postnatal day 13 to 17",
-+     "comparison": "knockout against control",
-+     "readout": "preparation and baseline burst rate",
-+     "readout_level": "functional",
-+     "direction_observed": "not applicable (conditions of the experiment)",
-+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
-+     "limits": "The recording perfusate is not stated separately from the incubation solution; d-APV carries no significance marker in Fig 3D (bursts absent); the two printed baselines differ about 2.7-fold and the discrepancy is not explained in the paper; potency of any use-dependent pore blocker in this preparation depends on the Mg2+ level and voltage (F04).",
-+     "pmid": "34634460",
-+     "locators": [
-+      {
-+       "kind": "manifest",
-+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34634460.json",
-+       "entry": 21,
-+       "anchor": "1.3 MgSO4"
-+      },
 +      {
 +       "kind": "manifest",
 +       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34634460.json",
@@ -82,27 +45,29 @@
     ],
     "inferred": [
      "That bursting reflects a gain of NMDAR or AMPAR function rather than a permissive dependence (the sign of a partial block is untested).",
--    "That the same node is shared with GRIN-variant epilepsies (convergence argument); in a retrospective GRIN-variant series, memantine benefit split by variant class (14 of 19 gain-of-function versus 3 of 15 loss-of-function/indeterminate), so a shared node does not give the sign. The authors call 4 of the 15 comparator variants non-pathogenic."
-+    "That the same node is shared with GRIN-variant epilepsies (convergence argument); in a retrospective GRIN-variant series, memantine benefit split by variant class (14 of 19 gain-of-function versus 3 of 15 loss-of-function/indeterminate), so a shared node does not give the sign. The authors call 4 of the 15 comparator variants non-pathogenic.",
-+    "That the d-APV dependence is NMDAR gain: three readings fit it (gain of NMDAR current; permissive necessity in a network whose pyramidal neurons are depolarised and receive about half the inhibitory current; AMPAR-led drive), and the data separate none of them (F04)."
+     "That the same node is shared with GRIN-variant epilepsies (convergence argument); in a retrospective GRIN-variant series, memantine benefit split by variant class (14 of 19 gain-of-function versus 3 of 15 loss-of-function/indeterminate), so a shared node does not give the sign. The authors call 4 of the 15 comparator variants non-pathogenic.",
+-    "That the depolarised resting potential (O6), together with the halved inhibitory current amplitude (O3), relieves the voltage-dependent magnesium block of NMDAR enough to explain the NMDAR dependence of the burst: arithmetic in the IT6-P11 record (other cell type, simple occupancy model), never tested in a WWOX system."
++    "That the depolarised resting potential (O6), together with the halved inhibitory current amplitude (O3), relieves the voltage-dependent magnesium block of NMDAR enough to explain the NMDAR dependence of the burst: arithmetic in the IT6-P11 record (other cell type, simple occupancy model), never tested in a WWOX system.",
++    "That the d-APV dependence is NMDAR gain: three readings fit it (gain of NMDAR current; permissive necessity in a network whose pyramidal neurons are depolarised (O6) and receive about half the inhibitory current (O3); AMPAR-led drive), they are not exclusive, and the data separate none of them and rank none (F04)."
     ],
     "intervention_direction": {
      "direction": "down",
      "on": "postsynaptic glutamatergic gain (NMDAR, possibly AMPAR)",
      "rationale": "A perturbation result, not a reversal inference: blocking NMDAR with d-APV abolished the burst in the WWOX-deficient slice (one drug, one preparation).",
      "certainty": "supported_in_WWOX_mouse_model for the tool compound; unknown for any clinically used antagonist",
--    "do_not_assume": "Full competitive block is not a partial block. Memantine and perampanel were not found to have been given to a WWOX system in the sources read. Chronic NMDAR block may cost activity-dependent myelination (unmeasured)."
-+    "do_not_assume": "Full competitive block is not a partial block. Memantine and perampanel were not found to have been given to a WWOX system in the sources read. Chronic NMDAR block may cost activity-dependent myelination (unmeasured). A pore blocker's potency depends on voltage, extracellular Mg2+ and intracellular Ca2+, so a memantine result at the preparation's 1.3 mM Mg2+ is not a GluN2A/2B block unless the Mg2+ level is reported; an effect of a subunit-selective tool (a GluN2B NAM) is an effect of that tool, not of a different drug (F04)."
+-    "do_not_assume": "Full competitive block is not a partial block. Memantine and perampanel were not found to have been given to a WWOX system in the sources read. Chronic NMDAR block may cost activity-dependent myelination (unmeasured). Raising extracellular Mg2+ is the physiological way to lower NMDAR gain, but no Mg2+ manipulation has been done in a WWOX system, the incubation ACSF already contains magnesium and the recording bath is not stated (O7), and the one mouse study read found that an oral magnesium sulfate left cerebrospinal-fluid magnesium unchanged: do not equate a supplement with a bath concentration, and do not treat the open-label infant trials of magnesium sulfate with ACTH as evidence about this node."
++    "do_not_assume": "Full competitive block is not a partial block. Memantine and perampanel were not found to have been given to a WWOX system in the sources read. Chronic NMDAR block may cost activity-dependent myelination (unmeasured). Raising extracellular Mg2+ is the physiological way to lower NMDAR gain, but no Mg2+ manipulation has been done in a WWOX system, the incubation ACSF already contains magnesium and the recording bath is not stated (O7), and the one mouse study read found that an oral magnesium sulfate left cerebrospinal-fluid magnesium unchanged: do not equate a supplement with a bath concentration, and do not treat the open-label infant trials of magnesium sulfate with ACTH as evidence about this node. A pore blocker's potency depends on voltage, extracellular Mg2+ and intracellular Ca2+, so a memantine result at the Mg2+ level of the incubation solution (1.3 mM; the recording bath is not stated) is not a GluN2A/2B block unless the Mg2+ level is reported; an effect of a subunit-selective tool (a GluN2B NAM) is an effect of that tool, not of a different drug (F04)."
     },
     "counter_evidence": [
      "Only a full competitive block (d-APV) has been tried; whether the dependence is permissive or a gain is untested.",
-     "Memantine accelerated provoked seizures in an adult rat model; paediatric effectiveness of memantine is not established on its label (card F01).",
+@@ -2507,11 +2545,14 @@
      "One adult WWOX case on perampanel plus six drugs had no sustained benefit (n 1).",
--    "Pannexin-1 blocker arm went the wrong way untested (map N-16); gap-junction node withdrawn pending occlusion."
-+    "Pannexin-1 blocker arm went the wrong way untested (map N-16); gap-junction node withdrawn pending occlusion.",
-+    "A competitive full-block NMDAR antagonist (selfotel) failed with a harm signal in adult stroke and head-injury trials; NMDAR blockade in the developing rat brain triggers apoptotic neurodegeneration (abstract level); memantine failed two controlled paediatric studies in another disorder and has no paediatric effectiveness on its label (F04).",
-+    "The largest synaptic change in the source is inhibitory (about half the amplitude) and the knockout pyramidal neurons are depolarised: NMDAR-dependent bursting can arise without a receptor change (F04).",
-+    "The d-APV arm carries no significance marker in Fig 3D, the tests are on bursts not animals, and the baseline burst frequency is printed twice with different values."
+     "Pannexin-1 blocker arm went the wrong way untested (map N-16); gap-junction node withdrawn pending occlusion.",
+     "In the one randomised open-label infant trial read with an oral phase (West syndrome, 48 analysed; three days of intramuscular magnesium sulfate then oral, ACTH and antiseizure drugs in both arms) magnesium did not change seizure control (p 0.69); the positive randomised signal used intravenous magnesium sulfate with ACTH and is abstract-level.",
+-    "The magnesium arithmetic gives a modest reduction for a modest rise in extracellular Mg2+, against the complete block of d-APV."
++    "The magnesium arithmetic gives a modest reduction for a modest rise in extracellular Mg2+, against the complete block of d-APV.",
++    "A competitive full-block NMDAR antagonist (selfotel) failed in adult stroke and head-injury trials (stroke: early mortality imbalance; head injury: stopped for concern about deaths and futility, later analysis without a significant mortality difference); NMDAR blockade in the developing rat brain triggers apoptotic neurodegeneration (abstract level); memantine failed two controlled paediatric studies in another disorder and has no paediatric effectiveness on its label (F04).",
++    "The d-APV arm carries no significance marker in Fig 3D, the tests are on bursts not animals, and the baseline burst frequency is printed twice with different values (O8)."
     ],
     "sources": {
      "cards": [
@@ -112,18 +77,17 @@
      ],
      "hypotheses": [
       "HYP-20261027-01"
-@@ -2465,7 +2544,9 @@
-      "N-16",
+@@ -2526,7 +2567,8 @@
       "M2"
      ],
--    "documents": [],
-+    "documents": [
+     "documents": [
+-     "disease-models/wwox/research/drug_repurposing/supplement_diet_it6_p11_20261029/README.md"
++     "disease-models/wwox/research/drug_repurposing/supplement_diet_it6_p11_20261029/README.md",
 +     "disease-models/wwox/research/drug_repurposing/nmdar_pharmacology_it6_p9_20261029/README.md"
-+    ],
+     ],
      "registry_ids": [
       "CLAIM 021",
-      "CLAIM 002",
-@@ -2508,6 +2589,13 @@
+@@ -2570,6 +2612,13 @@
       "target_kind": "intervention_target"
      },
      {
@@ -137,15 +101,22 @@
       "symbol": "GRIA1",
       "role": "AMPAR subunit",
       "hgnc_id": "HGNC:4571",
-@@ -2568,7 +2656,7 @@
+@@ -2630,7 +2679,7 @@
      "status": "NOT_ASSESSED",
      "note": "Coverage of this need by catalogue compounds is not computed here; the repurposing module sets it."
     },
 -   "notes": "Evidence ladder tier for the chain is T1 for the tool compound d-APV only (map CHAIN B re-read).",
-+   "notes": "Evidence ladder tier for the chain is T1 for the tool compound d-APV only (map CHAIN B re-read). P9 (2026-10-29): card F04 compares NMDAR intervention classes on this need; the d-APV result is compatible with gain, permissive necessity and AMPAR-led drive (nothing here separates them).",
++   "notes": "Evidence ladder tier for the chain is T1 for the tool compound d-APV only (map CHAIN B re-read). P9 (2026-10-29): card F04 compares NMDAR intervention classes on this need; the d-APV result is compatible with gain, permissive necessity and AMPAR-led drive (nothing here separates or ranks them).",
     "basis": "observed"
    },
    {
+@@ -5373,4 +5422,4 @@
+    "6. Run: python3 disease-models/wwox/research/drug_repurposing/needs/check_needs.py   (offline) and the test in the same directory."
+   ]
+  }
+-}
+\ No newline at end of file
++}
 --- a/disease-models/wwox/research/drug_repurposing/coverage/target_roles.tsv
 +++ b/disease-models/wwox/research/drug_repurposing/coverage/target_roles.tsv
 @@ -1,7 +1,8 @@
@@ -153,23 +124,23 @@
 -NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN1	same	NMDAR gain named by the need; coupling same: the need's quantity is this target's activity	inferred from ONE full competitive block (d-APV) in neuron-specific Wwox-null slices; partial or use-dependent block untested; no subunit-level datum; in GRIN disease the sign depends on the variant class (gain- vs loss-of-function: 14 of 19 vs 3 of 15 responders)
 -NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN2A	same	NMDAR gain named by the need; coupling same at class level: d-APV blocks the glutamate site, which sits on the GluN2 subunits, so a GluN2-dependent gain is what the block abolished	inferred from ONE full competitive block (d-APV) in neuron-specific Wwox-null slices; partial or use-dependent block untested; no subunit-level datum; in GRIN disease the sign depends on the variant class (gain- vs loss-of-function: 14 of 19 vs 3 of 15 responders); independent audit 2026-10-28 called 'same' mildly overclaimed because d-APV is not subunit-selective: kept at class level on purpose (glutamate site is on GluN2), subunit identity (A vs B) is NOT resolved
 -NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN2B	same	NMDAR gain named by the need; coupling same at class level: d-APV blocks the glutamate site, which sits on the GluN2 subunits, so a GluN2-dependent gain is what the block abolished	inferred from ONE full competitive block (d-APV) in neuron-specific Wwox-null slices; partial or use-dependent block untested; no subunit-level datum; in GRIN disease the sign depends on the variant class (gain- vs loss-of-function: 14 of 19 vs 3 of 15 responders); independent audit 2026-10-28 called 'same' mildly overclaimed because d-APV is not subunit-selective: kept at class level on purpose (glutamate site is on GluN2), subunit identity (A vs B) is NOT resolved
-+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN1	same	NMDAR gain named by the need; coupling same: the need's quantity is this target's activity	inferred from ONE full competitive block (d-APV) in neuron-specific Wwox-null slices; partial or use-dependent block untested; no subunit-level datum; in GRIN disease the sign depends on the variant class (gain- vs loss-of-function: 14 of 19 vs 3 of 15 responders); P9 2026-10-29: the same d-APV result is equally compatible with permissive necessity (depolarised membrane, about half the inhibitory current) and AMPAR-led drive, so 'same' keeps the class-level meaning only (F04)
-+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN2A	same	NMDAR gain named by the need; coupling same at class level: d-APV blocks the glutamate site, which sits on the GluN2 subunits, so a GluN2-dependent gain is what the block abolished	inferred from ONE full competitive block (d-APV) in neuron-specific Wwox-null slices; partial or use-dependent block untested; no subunit-level datum; in GRIN disease the sign depends on the variant class (gain- vs loss-of-function: 14 of 19 vs 3 of 15 responders); independent audit 2026-10-28 called 'same' mildly overclaimed because d-APV is not subunit-selective: kept at class level on purpose (glutamate site is on GluN2), subunit identity (A vs B) is NOT resolved; P9 2026-10-29: the same d-APV result is equally compatible with permissive necessity (depolarised membrane, about half the inhibitory current) and AMPAR-led drive, so 'same' keeps the class-level meaning only (F04)
-+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN2B	same	NMDAR gain named by the need; coupling same at class level: d-APV blocks the glutamate site, which sits on the GluN2 subunits, so a GluN2-dependent gain is what the block abolished	inferred from ONE full competitive block (d-APV) in neuron-specific Wwox-null slices; partial or use-dependent block untested; no subunit-level datum; in GRIN disease the sign depends on the variant class (gain- vs loss-of-function: 14 of 19 vs 3 of 15 responders); independent audit 2026-10-28 called 'same' mildly overclaimed because d-APV is not subunit-selective: kept at class level on purpose (glutamate site is on GluN2), subunit identity (A vs B) is NOT resolved; P9 2026-10-29: the same d-APV result is equally compatible with permissive necessity (depolarised membrane, about half the inhibitory current) and AMPAR-led drive, so 'same' keeps the class-level meaning only (F04)
++NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN1	same	NMDAR gain named by the need; coupling same: the need's quantity is this target's activity	inferred from ONE full competitive block (d-APV) in neuron-specific Wwox-null slices; partial or use-dependent block untested; no subunit-level datum; in GRIN disease the sign depends on the variant class (gain- vs loss-of-function: 14 of 19 vs 3 of 15 responders); P9 2026-10-29: the same d-APV result is compatible with permissive necessity (depolarised membrane, about half the inhibitory current) and AMPAR-led drive; the readings are not ranked, so 'same' keeps the class-level meaning only (F04; unranked)
++NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN2A	same	NMDAR gain named by the need; coupling same at class level: d-APV blocks the glutamate site, which sits on the GluN2 subunits, so a GluN2-dependent gain is what the block abolished	inferred from ONE full competitive block (d-APV) in neuron-specific Wwox-null slices; partial or use-dependent block untested; no subunit-level datum; in GRIN disease the sign depends on the variant class (gain- vs loss-of-function: 14 of 19 vs 3 of 15 responders); independent audit 2026-10-28 called 'same' mildly overclaimed because d-APV is not subunit-selective: kept at class level on purpose (glutamate site is on GluN2), subunit identity (A vs B) is NOT resolved; P9 2026-10-29: the same d-APV result is compatible with permissive necessity (depolarised membrane, about half the inhibitory current) and AMPAR-led drive; the readings are not ranked, so 'same' keeps the class-level meaning only (F04; unranked)
++NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN2B	same	NMDAR gain named by the need; coupling same at class level: d-APV blocks the glutamate site, which sits on the GluN2 subunits, so a GluN2-dependent gain is what the block abolished	inferred from ONE full competitive block (d-APV) in neuron-specific Wwox-null slices; partial or use-dependent block untested; no subunit-level datum; in GRIN disease the sign depends on the variant class (gain- vs loss-of-function: 14 of 19 vs 3 of 15 responders); independent audit 2026-10-28 called 'same' mildly overclaimed because d-APV is not subunit-selective: kept at class level on purpose (glutamate site is on GluN2), subunit identity (A vs B) is NOT resolved; P9 2026-10-29: the same d-APV result is compatible with permissive necessity (depolarised membrane, about half the inhibitory current) and AMPAR-led drive; the readings are not ranked, so 'same' keeps the class-level meaning only (F04; unranked)
 +NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIN2D	unresolved	the need names NMDAR gain at class level; GRIN2D transcripts are present in the week-15 organoid but no subunit-level datum exists, and d-APV is the weakest at GluN2D (occupancy about 70 percent at the applied concentration, arithmetic in the P9 README)	UNRESOLVED at subunit level: no GluN2D datum in a WWOX system; pore blockers act relatively more on GluN2C/2D at physiological Mg2+ (abstract level), which could mean an interneuron effect (F04)
  NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIA1	unresolved	the need says 'possibly AMPAR'; no WWOX datum on AMPAR (the d-APV result is NMDAR-only)	AMPAR role is a guess, not measured: demoted to unresolved
  NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIA2	unresolved	the need says 'possibly AMPAR'; no WWOX datum on AMPAR (the d-APV result is NMDAR-only)	AMPAR role is a guess, not measured: demoted to unresolved
  NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	GRIA3	unresolved	the need says 'possibly AMPAR'; no WWOX datum on AMPAR (the d-APV result is NMDAR-only)	AMPAR role is a guess, not measured: demoted to unresolved
 --- a/disease-models/wwox/research/drug_repurposing/coverage/assertion_pertinence.tsv
 +++ b/disease-models/wwox/research/drug_repurposing/coverage/assertion_pertinence.tsv
-@@ -101,3 +101,16 @@
- I01_pdk_inhibition_dca_premise_seizure_glycaemia	DR-I01-012	NEED-PDH-PYRUVATE-AXIS	CHEMBL306823	safety_signal	unresolved	no	no	not_WWOX;abstract_only;mouse_sepsis;glycaemia_endpoint;hypoglycaemia_reversed	hypoglycaemia reversed in septic mice; opposite sign to the minipig study	
- I01_pdk_inhibition_dca_premise_seizure_glycaemia	DR-I01-013	NEED-PDH-PYRUVATE-AXIS	CHEMBL306823	safety_signal	unresolved	no	no	not_WWOX;abstract_only;adult_cirrhosis_and_healthy;single_infusion;glycaemia_endpoint;modest_fall_in_both_groups	modest fall in glucose production and plasma glucose after acute DCA in cirrhotic and healthy adults alike; the null is the group difference	
- I01_pdk_inhibition_dca_premise_seizure_glycaemia	DR-I01-014	NEED-PDH-PYRUVATE-AXIS	CHEMBL306823	target_engagement_assay	unresolved	no	no	not_WWOX;abstract_only;patient_fibroblasts;response_only_in_PDH_deficient_cells	glycolysis lower with DCA in PDH-deficient cells, no significant effect in control cells; non-neural	
+@@ -113,3 +113,16 @@
+ A02_proteasome_inhibitor_class	DR-A02-008	NEED-WWOX-MISSENSE-PROTEIN-RESCUE	card	readout_other_disease	partial_benefit	no	no	not_WWOX;class_level;wild_type_raised_too;cell_damage_signs;probe_signal_relative_to_vehicle	CBS T191M/I278T human kidney line: half-life and probe activity up under proteasome inhibition; lesion-dependent routes (PMID 39041895)	
+ A02_proteasome_inhibitor_class	DR-A02-009	NEED-WWOX-MISSENSE-PROTEIN-RESCUE	card	readout_other_disease	null	no	no	not_WWOX;class_level;activity_endpoint_only;protein_rose	CBS I278T hamster line: soluble protein up, activity unchanged under HSP70/HSF1 co-expression (PMID 38051092)	
+ A02_proteasome_inhibitor_class	DR-A02-010	NEED-WWOX-MISSENSE-PROTEIN-RESCUE	card	readout_other_disease	null	no	no	not_WWOX;class_level;tolerated_exposure;transgene_mouse	CBS S466L mouse: low exposure carfilzomib, no significant change in homocysteine or activity (PMID 37319242)	
 +F04_nmdar_intervention_class	DR-P9-001	NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	CHEMBL807	target_engagement_assay	unresolved	no	no	voltage_dependent;human_clones_HEK293;ketamine_in_same_document;paper_abstract_only	memantine inhibition at two holding potentials in one document: a potency at one voltage is not a burst-state value	
 +F04_nmdar_intervention_class	DR-P9-002	NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	CHEMBL807	target_engagement_assay	unresolved	no	no	Mg2+_dependent;abstract_only;not_WWOX	extracellular Mg2+ weakens memantine inhibition of GluN2A and GluN2B far more than GluN2C and GluN2D	
 +F04_nmdar_intervention_class	DR-P9-003	NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	CHEMBL807	target_engagement_assay	unresolved	no	no	Ca2+i_dependent;zero_or_low_Mg2+;adult_slices;not_WWOX	memantine inhibition of GluN2A rises with intracellular Ca2+ (state-specific)	
-+F04_nmdar_intervention_class	DR-P9-004	NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	card	safety_signal	harm	no	no	selfotel_CHEMBL39664;competitive_full_block;adult_stroke_and_head_injury;abstract_only;not_WWOX	closest clinical relative of d-APV; stopped in adult trials for deaths and futility (subject kept at card level: a catalogue family with no association row crashes repurposing_coverage.py, see README section 10)	
++F04_nmdar_intervention_class	DR-P9-004	NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	CHEMBL39664	safety_signal	harm	no	no	competitive_full_block;adult_stroke_and_head_injury;abstract_only;not_WWOX	closest clinical relative of d-APV; stopped in adult trials (needs the repurposing_coverage.py row(fid) fix, framework patch in this directory)	
 +F04_nmdar_intervention_class	DR-P9-005	NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	card	safety_signal	harm	no	no	developing_rat_brain;class_statement;abstract_only;not_WWOX	NMDAR blockade in the developing rat brain: apoptotic neurodegeneration	
 +F04_nmdar_intervention_class	DR-P9-006	NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	CHEMBL182066	readout_other_disease	benefit	no	no	GRIN_gain_of_function;in_vitro_and_knock_in_mouse;abstract_only;not_WWOX	GluN2B NAM effective at most tested gain-of-function GRIN variants; not a WWOX system	
 +F04_nmdar_intervention_class	DR-P9-007	NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	CHEMBL182066	readout_other_disease	partial_benefit	no	no	infantile_spasms;n=3;open_label;not_WWOX	three infants: one spasm-free, two improved then worse after withdrawal	
@@ -181,7 +152,7 @@
 +F04_nmdar_intervention_class	DR-P9-013	NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	card	readout_other_disease	benefit	no	no	adult_intensive_care;observational;combined_NMDAR_AMPAR;hepatic_adverse_events;abstract_only;not_WWOX	adult postanoxic status epilepticus; not transferable to a chronic developmental epilepsy	
 --- /dev/null
 +++ b/disease-models/wwox/research/drug_repurposing/cards/F04_nmdar_intervention_class.packet.json
-@@ -0,0 +1,473 @@
+@@ -0,0 +1,472 @@
 +{
 + "schema_version": 1,
 + "axis": "F / P9 intervention-class comparison: postsynaptic glutamatergic gain",
@@ -234,7 +205,7 @@
 +    "cell_type": "layer II/III neocortex, local field potential and pyramidal-cell patch",
 +    "developmental_stage": "postnatal day 13 to 17 (methods and results text)"
 +   },
-+   "measured_result_note": "Control 57.3 +/- 31.0 pA against knockout 27.5 +/- 19.4 pA (verbatim-locator manifest entry 7): the amplitude is about halved, against about six percent for the excitatory amplitude. Reduced inhibition is a second, receptor-independent route to NMDAR-dependent bursting. The p values of the paper are on pooled events (KS test), not animals.",
++   "measured_result_note": "Control 57.3 +/- 31.0 pA against knockout 27.5 +/- 19.4 pA (verbatim-locator manifest entry 7): the amplitude is about halved, against about six percent for the excitatory amplitude. Reduced inhibition is a second, receptor-independent route to NMDAR-dependent bursting. The controls are wild type and heterozygote pooled (S-CTL). The p values of the paper are on pooled events (KS test), not animals.",
 +   "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
 +  },
 +  {
@@ -293,7 +264,7 @@
 +    "cell_type": "heterologous cells",
 +    "developmental_stage": "not applicable"
 +   },
-+   "measured_result_note": "In one patch-clamp document the inhibitory concentration of both blockers is roughly thirty to a hundred times higher at a holding potential 20 mV more depolarised. A burst is a depolarising event (reversal near -31 mV in Breton), so a number measured at one voltage is not a burst-state potency. The paper's methods were not opened.",
++   "measured_result_note": "One closed patch-clamp document lists inhibitory concentrations of both blockers that are far higher at a holding potential 20 mV more depolarised. The size of the shift is physically implausible for a single-site pore block (at most about two-fold per 20 mV is expected) and may reflect protocol, solution or transcription; the paper was not opened and the figures are UNVERIFIED and not used in the card's argument. Voltage dependence of pore block is real in direction, and a burst is a depolarising event, so a potency measured at one voltage is not a burst-state potency.",
 +   "evidence_scope": "EXTERNAL_DATABASE_RECORD"
 +  },
 +  {
@@ -397,7 +368,7 @@
 +   "endpoint": "spasms and tolerability in infants with drug-resistant infantile spasms; juvenile-rat seizure protection by postnatal age",
 +   "direction": "DECREASE",
 +   "source": "Auvin et al 2020, Ann Clin Transl Neurol (PMID 32106360, PMC7085998; open access; NOT WWOX EVIDENCE)",
-+   "locator": "abstract and Methods/Results (PMC XML): three infants, one spasm-free and two improved then worse after withdrawal; dosing capped by an occupancy ceiling; largest seizure protection in rats at postnatal day 12; study ended for recruitment; adult experience in 460 individuals, pain programme ended for lack of efficacy",
++   "locator": "abstract and Methods/Results (PMC XML): three infants, one spasm-free and two improved then worse after withdrawal; dosing capped by an occupancy ceiling; largest seizure protection in rats at postnatal day 12; study ended for recruitment; adult experience in 460 individuals (healthy volunteers and 332 neuropathic-pain patients), pain programme ended for lack of efficacy",
 +   "epistemic_status": "DATO",
 +   "reading_depth": "partial_fulltext_read",
 +   "context": {
@@ -407,7 +378,7 @@
 +    "cell_type": "individual infants (n 3); rat pups",
 +    "developmental_stage": "infancy"
 +   },
-+   "measured_result_note": "Human exposure to a partial, subunit-selective NMDAR block in infants exists, with n 3, open label and no control. The rat age of largest effect (postnatal day 12) sits at the start of the slice window (day 13 to 17).",
++   "measured_result_note": "Human exposure to a partial, subunit-selective NMDAR block in infants exists, with n 3, open label and no control. The rat age of largest seizure protection (postnatal day 12) has no established mapping to the mouse slice window (day 13 to 17).",
 +   "evidence_scope": "OTHER_DISEASE_PRECEDENT"
 +  },
 +  {
@@ -426,7 +397,7 @@
 +    "cell_type": "registry records",
 +    "developmental_stage": "children and adults"
 +   },
-+   "measured_result_note": "Selection is by variant function (gain-of-function): the sign of the NMDAR lesion is a trial entry criterion. No WWOX population is registered. Eligibility texts exclude co-administered glutamate-receptor agonists or antagonists (memantine and perampanel named). The record of one study states that no results are posted; results of the others were not checked.",
++   "measured_result_note": "Selection is by variant function (gain-of-function): the sign of the NMDAR lesion is a trial entry criterion. No WWOX population is registered. The eligibility texts of two studies (the paediatric GRIN gain-of-function phase 1b and the TSC / focal cortical dysplasia study) exclude co-administered glutamate-receptor agonists or antagonists (memantine, perampanel and felbamate named); the phase 3 study's posted eligibility text has no such exclusion. The record of one study states that no results are posted; results of the others were not checked.",
 +   "evidence_scope": "EXTERNAL_DATABASE_RECORD"
 +  },
 +  {
@@ -539,7 +510,7 @@
 + "p4_card": {
 +  "identity": "A class-level comparison of interventions on one need (postsynaptic excitatory gain and bursting in the neuron-specific Wwox knockout cortex). Classes: (A) complete competitive glutamate-site block: d-APV, a tool and the only NMDAR agent applied in a WWOX system, and selfotel, a clinical-stage relative stopped in adult stroke and head-injury trials; (B) use-dependent pore blockers: memantine and ketamine (approved in adults), dextromethorphan, amantadine, dizocilpine (tool); (C) subunit-selective negative allosteric modulators: GluN2B (tools Ro 25-6981 and ifenprodil; radiprodil, clinical stage in GRIN gain-of-function disease and other registrations), GluN2A (tools TCN-201, NVP-AAM077) and GluN2C/2D (tool NAB-14); (E) glycine-site agents (tools L-701,324 and 7-chlorokynurenic acid; D-cycloserine, an approved antibiotic with partial-agonist action); (F) AMPAR: perampanel (approved), NBQX and GYKI 52466 (tools). A compound named here is an identity, not a recommendation, and an effect of a tool compound is not the effect of a different drug.",
 +  "indication_and_transfer": "Only IF the bursting depends on an NMDAR contribution that a partial, subunit-restricted or use-dependent action can lower without the cost of a complete block in a developing brain. The d-APV result fits three readings that predict different things: NMDAR gain (more NMDAR current per synapse), permissive necessity (normal NMDARs that the network recruits because the pyramidal neurons are depolarised and inhibition is reduced) and an AMPAR-led drive. No receptor-level measurement exists in any WWOX system. Transfer to the reference genotype is unmeasured: the slice is a neuron-specific knockout, not an allele.",
-+  "novelty_for_woree": "F01 (2026-10-27) registered a graded memantine versus perampanel versus d-APV experiment. This card keeps F01 intact and supersedes its discriminator, on four findings of 2026-10-29: (1) block by memantine and ketamine depends on voltage (tens-fold between holding potentials 20 mV apart, one document), on extracellular Mg2+ (nearly twenty-fold weaker at GluN2A and GluN2B but about three-fold at GluN2C and GluN2D, abstract level) and on intracellular Ca2+ (GluN2A); the preparation held 1.3 millimolar Mg2+ in its incubation solution, so a memantine result there may reflect GluN2D-containing interneurons rather than pyramidal GluN2A/2B receptors; (2) the knockout pyramidal neurons are about five millivolts depolarised and receive fewer and smaller inhibitory currents, which can produce NMDAR-dependent bursting with a normal receptor; (3) a GluN2B-selective NAM has a ceiling below complete inhibition, a clinical-stage member with human exposure (adults, three infants, registered paediatric studies) and a rat age of largest protection that sits at the start of the slice window; (4) the baseline burst rate is low and is reported twice with different values (about two per minute in the main text, below one per minute in the supplementary table, for the same bursts), so a graded block read from bursts alone needs long recordings per condition and should be backed by a faster NMDAR readout in the same slices. Coverage: PubMed and Europe PMC, ClinicalTrials.gov API v2, ChEMBL_37 and openFDA on 2026-10-29; NON_TROVATO_NELLA_RICERCA for any GluN2B NAM, pore blocker, glycine-site agent or AMPAR antagonist other than d-APV in a Wwox system, not MAI_TENTATO.",
++  "novelty_for_woree": "F01 (2026-10-27) registered a graded memantine versus perampanel versus d-APV experiment. This card keeps F01 intact and supersedes its discriminator, on four findings of 2026-10-29: (1) block by memantine and ketamine depends on extracellular Mg2+ (nearly twenty-fold weaker at GluN2A and GluN2B but about three-fold at GluN2C and GluN2D, abstract level) and on intracellular Ca2+ (GluN2A); the preparation held 1.3 millimolar Mg2+ in its incubation solution, so a memantine result there may reflect GluN2D-containing interneurons rather than pyramidal GluN2A/2B receptors; (2) the knockout pyramidal neurons are about five millivolts depolarised and receive fewer and smaller inhibitory currents, which can produce NMDAR-dependent bursting with a normal receptor; (3) a GluN2B-selective NAM has a ceiling below complete inhibition, a clinical-stage member with human exposure (adults, three infants, registered paediatric studies) and a rat-pup age of largest protection (no species age mapping to the mouse window is established); (4) the baseline burst rate is low and is reported twice with different values (about two per minute in the main text, below one per minute in the supplementary table, for bursts the main text does not count, an inference that they are the same bursts), so a graded block read from bursts alone needs long recordings per condition and should be backed by a faster NMDAR readout in the same slices. Coverage: PubMed and Europe PMC, ClinicalTrials.gov API v2, ChEMBL_37 and openFDA on 2026-10-29; NON_TROVATO_NELLA_RICERCA for any GluN2B NAM, pore blocker, glycine-site agent or AMPAR antagonist other than d-APV in a Wwox system, not MAI_TENTATO.",
 +  "state_of_known_roads": "F01; map R-02 and Chain B; N-15 (seizure or burst control is not development); DL-MECH-002; F02 (activity-dependent myelination) and F03 (chloride gradient, a depolarisation and inhibition lever) as the upstream alternatives if the NMDAR dependence proves permissive.",
 +  "pathway_and_objective": "BENEFICIO_PRECOCE; Track A; Track B untested.",
 +  "expected_contribution": "UNKNOWN. At best the receptor-level fact that decides whether an NMDAR-class intervention is a lever (partial block suffices) or only a symptom tool (near-complete block needed); no developmental benefit is implied.",
@@ -576,8 +547,7 @@
 +   "for": [
 +    "d-APV abolishes bursting in the knockout slice, and the delayed evoked response is d-APV-sensitive at higher stimulus strengths.",
 +    "Excitatory current amplitude is slightly higher in the knockout (sEPSC means 24.7 against 23.3 pA, about six percent, pooled-event tests; the mEPSC panel separates by a sliver); recorded at -70 mV in Mg2+, so AMPAR-weighted.",
-+    "A GluN2B-selective NAM is effective at most tested gain-of-function GRIN variants in vitro and in a gain-of-function knock-in mouse (abstract); memantine benefit in a GRIN series is concentrated in gain-of-function variants.",
-+    "The age of largest seizure protection by a GluN2B NAM in rat pups sits at the start of the slice window."
++    "A GluN2B-selective NAM is effective at most tested gain-of-function GRIN variants in vitro and in a gain-of-function knock-in mouse (abstract); memantine improvement in any domain in a GRIN series is concentrated in gain-of-function variants (mainly behaviour; seizure-frequency reduction was not significantly different)."
 +   ],
 +   "against": [
 +    "NMDAR dependence is not NMDAR gain: depolarised resting potential and reduced inhibition suffice (not tested). The largest synaptic change in the source is inhibitory (sIPSC amplitude 27.5 against 57.3 pA in controls, frequency also reduced), not excitatory.",
@@ -592,7 +562,7 @@
 +  "time_to_access": "Memantine, ketamine, perampanel and D-cycloserine are marketed under adult or other labels; radiprodil is investigational (registered studies only); tool compounds are research reagents. Access for a WWOX study: UNKNOWN.",
 +  "time_to_benefit": "UNKNOWN.",
 +  "pharmacology": "Potency values are in the cycle README and TSV tables, not here. They come from heterogeneous assays (oocyte voltage clamp, HEK or CHO flux, membrane binding, review transcriptions); a median across them describes the literature, not a drug property. One value is repeated across many documents (eliprodil at GluN2B, ketamine in a review document), and target organism and assay organism differ or are blank in many rows. The receptor state (open, desensitised, agonist and co-agonist level, voltage, Mg2+) is not a ChEMBL field and had to be read from assay text or documents.",
-+  "paediatrics_and_interactions": "Memantine label: paediatric safety and effectiveness not established; two controlled paediatric autism studies failed. Perampanel label: partial-onset seizures from 4 years of age; boxed warning for serious psychiatric and behavioural reactions. Radiprodil: investigational; registered paediatric studies are in GRIN gain-of-function disease and TSC or FCD and exclude co-administered glutamate-receptor agonists or antagonists (memantine and perampanel named). Developing-brain NMDAR blockade: apoptotic neurodegeneration in rat pups (abstract). Other interactions: UNKNOWN.",
++  "paediatrics_and_interactions": "Memantine label: paediatric safety and effectiveness not established; two controlled paediatric autism studies failed. Perampanel label: partial-onset seizures from 4 years of age; boxed warning for serious psychiatric and behavioural reactions. Radiprodil: investigational; registered paediatric studies are in GRIN gain-of-function disease and TSC or FCD; two of them (the GRIN phase 1b and the TSC / FCD study) exclude co-administered glutamate-receptor agonists or antagonists (memantine, perampanel and felbamate named), the phase 3 posted text does not. Developing-brain NMDAR blockade: apoptotic neurodegeneration in rat pups (abstract). Other interactions: UNKNOWN.",
 +  "scope_of_checks": "Read in part: Breton 2021 (methods, results 2.1 to 2.5, Table 1, Fig 3, supplement Fig S3 and Table S1), Phillips 2026, Karnstedt 2026 (worsening passages), Auvin 2020, a 2018 review (potency table). Abstract only: Kotermanski 2009, Banke 2026, Ikonomidou 1999, the selfotel trials, a memantine-in-epilepsy cohort, SUPER-CAT, the source paper of document CHEMBL6083260. Registry and label JSON: ClinicalTrials.gov API v2, openFDA. ChEMBL: the P8 pull and a second pull of tool compounds resolved by InChIKey from PubChem; the papers behind most ChEMBL rows were not opened. Not checked: development outcomes of eliprodil and traxoprodil, psychiatric trials of D-cycloserine, any GluN2A, GluN2C/2D or glycine-site compound in a clinical registry.",
 +  "question_history": [
 +   "map R-02 and Chain B",
@@ -600,7 +570,7 @@
 +   "P8 (2026-10-29): activity and assay-context capability trial; five tool compounds unresolved by name",
 +   "P9 (2026-10-29): which class of NMDAR intervention can discriminate permissive dependence from gain; this card"
 +  ],
-+  "predictions": "Registered before any experiment (proposed here; to be fixed by the laboratory before running). (1) If the isolated NMDAR-mediated current is larger in the knockout than in wild type and heterozygote and a GluN2B-selective NAM lowers bursting with a plateau below complete inhibition, NMDAR gain through GluN2B is supported and the GRIN gain-of-function precedents become relevant. (2) If the isolated NMDAR current is not raised and the fraction of NMDAR current that must be blocked to stop bursting is large (near complete), the dependence is permissive: NMDAR block is a symptom tool with no tolerable window, and the upstream levers (resting potential, inhibition) become the mechanism-matched ones. (3) If wild-type slices made to burst by a matched trigger respond to the same blocks with the same concentration-response, the dependence is generic to NMDAR-driven networks and is not a WWOX-specific finding. (4) An AMPAR antagonist abolishing bursts does not separate these readings. Result (2) or (3) closes the NMDAR-lever strand without closing the symptom-tool use.",
++  "predictions": "Proposed before any experiment; criteria, cut-offs and the smallest effect size are to be written and time-stamped by the laboratory before unblinding. The three readings are not ranked and are not exclusive; the isolated NMDAR current decides between them, the pharmacology is exploratory. (1) If the isolated NMDAR-mediated current is larger in the knockout than in wild type and heterozygote, an NMDAR gain component is present and the GRIN gain-of-function precedents become relevant; a GluN2B-selective NAM concentration-response then says how much of that current must be blocked, defined only if bursts are abolished at its plateau (otherwise the result is persistence at the plateau fraction). (2) If the isolated NMDAR current is not raised, the dependence is permissive: no receptor change is needed to explain it, NMDAR block is a symptom tool whose window is read from the pharmacology, and the upstream levers (resting potential, inhibition) become the mechanism-matched ones. (3) If wild-type slices made to burst by a matched trigger respond to the same blocks with the same concentration-response, the dependence is generic to NMDAR-driven networks and is not a WWOX-specific finding. (4) An AMPAR antagonist abolishing bursts is expected under every reading and does not separate them. A permissive result (2) or a generic result (3) closes the NMDAR-lever strand without closing the symptom-tool use.",
 +  "next_measurement": "Wet-lab, not done. Preparation as in the source (neuron-specific knockout with littermate wild type and heterozygote, postnatal day 13 to 17, both sexes, coronal slices, the source's incubation solution, layer II/III recording, burst inclusion criterion as in the source). Unit: the animal, with slices and cells nested (the source tested bursts and cells). In the same slices: (a) NMDAR-isolated current under voltage control with AMPAR and GABA-A blocked, amplitude, decay and the fraction sensitive to a GluN2B NAM and to a GluN2A NAM, plus resting potential and input resistance; (b) concentration-response of d-APV and of a GluN2B-selective NAM tool on the isolated current and on the delayed evoked response, then on bursts, to measure the fraction of NMDAR current that must be blocked to stop bursting; (c) a use-dependent pore blocker with the Mg2+ level and voltage reported, as a translation probe after (a) and (b); (d) wild-type slices made to burst by a matched trigger with the same pharmacology; (e) a time-matched vehicle arm and washout. Counting time: for about twenty percent precision on a rate (25 bursts) a condition needs about eleven minutes at the main-text rate and about half an hour at the supplementary-table rate; the discrepancy between the two reported baselines must be resolved first.",
 +  "status": "hypothesis",
 +  "value_added": "Turns the d-APV result from a yes-or-no into a question with a measurable answer (the fraction of NMDAR current that must be blocked), names the alternative readings that the record had not separated (depolarisation, reduced inhibition, AMPAR drive), and replaces memantine as the discriminating arm with a class whose interpretation does not depend on Mg2+, voltage and Ca2+.",
@@ -657,10 +627,10 @@
 +}
 --- /dev/null
 +++ b/disease-models/wwox/research/drug_repurposing/cards/F04_nmdar_intervention_class.card.json
-@@ -0,0 +1,618 @@
+@@ -0,0 +1,617 @@
 +{
 +  "schema_version": 1,
-+  "input_sha256": "12d00c9b6f6ac46f4aa9e95a9565444005aa3f3535e8efe425f5aab6fe19f508",
++  "input_sha256": "201e489a855f38be4f8924e0d27f6864c5feb751e45c975f91037851e43774f5",
 +  "epistemic_status": "IPOTESI",
 +  "canonical": false,
 +  "assessment": "REQUIRES_QUALIFICATION",
@@ -838,7 +808,7 @@
 +          "cell_type": "layer II/III neocortex, local field potential and pyramidal-cell patch",
 +          "developmental_stage": "postnatal day 13 to 17 (methods and results text)"
 +        },
-+        "measured_result_note": "Control 57.3 +/- 31.0 pA against knockout 27.5 +/- 19.4 pA (verbatim-locator manifest entry 7): the amplitude is about halved, against about six percent for the excitatory amplitude. Reduced inhibition is a second, receptor-independent route to NMDAR-dependent bursting. The p values of the paper are on pooled events (KS test), not animals.",
++        "measured_result_note": "Control 57.3 +/- 31.0 pA against knockout 27.5 +/- 19.4 pA (verbatim-locator manifest entry 7): the amplitude is about halved, against about six percent for the excitatory amplitude. Reduced inhibition is a second, receptor-independent route to NMDAR-dependent bursting. The controls are wild type and heterozygote pooled (S-CTL). The p values of the paper are on pooled events (KS test), not animals.",
 +        "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
 +      },
 +      {
@@ -897,7 +867,7 @@
 +          "cell_type": "heterologous cells",
 +          "developmental_stage": "not applicable"
 +        },
-+        "measured_result_note": "In one patch-clamp document the inhibitory concentration of both blockers is roughly thirty to a hundred times higher at a holding potential 20 mV more depolarised. A burst is a depolarising event (reversal near -31 mV in Breton), so a number measured at one voltage is not a burst-state potency. The paper's methods were not opened.",
++        "measured_result_note": "One closed patch-clamp document lists inhibitory concentrations of both blockers that are far higher at a holding potential 20 mV more depolarised. The size of the shift is physically implausible for a single-site pore block (at most about two-fold per 20 mV is expected) and may reflect protocol, solution or transcription; the paper was not opened and the figures are UNVERIFIED and not used in the card's argument. Voltage dependence of pore block is real in direction, and a burst is a depolarising event, so a potency measured at one voltage is not a burst-state potency.",
 +        "evidence_scope": "EXTERNAL_DATABASE_RECORD"
 +      },
 +      {
@@ -1001,7 +971,7 @@
 +        "endpoint": "spasms and tolerability in infants with drug-resistant infantile spasms; juvenile-rat seizure protection by postnatal age",
 +        "direction": "DECREASE",
 +        "source": "Auvin et al 2020, Ann Clin Transl Neurol (PMID 32106360, PMC7085998; open access; NOT WWOX EVIDENCE)",
-+        "locator": "abstract and Methods/Results (PMC XML): three infants, one spasm-free and two improved then worse after withdrawal; dosing capped by an occupancy ceiling; largest seizure protection in rats at postnatal day 12; study ended for recruitment; adult experience in 460 individuals, pain programme ended for lack of efficacy",
++        "locator": "abstract and Methods/Results (PMC XML): three infants, one spasm-free and two improved then worse after withdrawal; dosing capped by an occupancy ceiling; largest seizure protection in rats at postnatal day 12; study ended for recruitment; adult experience in 460 individuals (healthy volunteers and 332 neuropathic-pain patients), pain programme ended for lack of efficacy",
 +        "epistemic_status": "DATO",
 +        "reading_depth": "partial_fulltext_read",
 +        "context": {
@@ -1011,7 +981,7 @@
 +          "cell_type": "individual infants (n 3); rat pups",
 +          "developmental_stage": "infancy"
 +        },
-+        "measured_result_note": "Human exposure to a partial, subunit-selective NMDAR block in infants exists, with n 3, open label and no control. The rat age of largest effect (postnatal day 12) sits at the start of the slice window (day 13 to 17).",
++        "measured_result_note": "Human exposure to a partial, subunit-selective NMDAR block in infants exists, with n 3, open label and no control. The rat age of largest seizure protection (postnatal day 12) has no established mapping to the mouse slice window (day 13 to 17).",
 +        "evidence_scope": "OTHER_DISEASE_PRECEDENT"
 +      },
 +      {
@@ -1030,7 +1000,7 @@
 +          "cell_type": "registry records",
 +          "developmental_stage": "children and adults"
 +        },
-+        "measured_result_note": "Selection is by variant function (gain-of-function): the sign of the NMDAR lesion is a trial entry criterion. No WWOX population is registered. Eligibility texts exclude co-administered glutamate-receptor agonists or antagonists (memantine and perampanel named). The record of one study states that no results are posted; results of the others were not checked.",
++        "measured_result_note": "Selection is by variant function (gain-of-function): the sign of the NMDAR lesion is a trial entry criterion. No WWOX population is registered. The eligibility texts of two studies (the paediatric GRIN gain-of-function phase 1b and the TSC / focal cortical dysplasia study) exclude co-administered glutamate-receptor agonists or antagonists (memantine, perampanel and felbamate named); the phase 3 study's posted eligibility text has no such exclusion. The record of one study states that no results are posted; results of the others were not checked.",
 +        "evidence_scope": "EXTERNAL_DATABASE_RECORD"
 +      },
 +      {
@@ -1143,7 +1113,7 @@
 +    "p4_card": {
 +      "identity": "A class-level comparison of interventions on one need (postsynaptic excitatory gain and bursting in the neuron-specific Wwox knockout cortex). Classes: (A) complete competitive glutamate-site block: d-APV, a tool and the only NMDAR agent applied in a WWOX system, and selfotel, a clinical-stage relative stopped in adult stroke and head-injury trials; (B) use-dependent pore blockers: memantine and ketamine (approved in adults), dextromethorphan, amantadine, dizocilpine (tool); (C) subunit-selective negative allosteric modulators: GluN2B (tools Ro 25-6981 and ifenprodil; radiprodil, clinical stage in GRIN gain-of-function disease and other registrations), GluN2A (tools TCN-201, NVP-AAM077) and GluN2C/2D (tool NAB-14); (E) glycine-site agents (tools L-701,324 and 7-chlorokynurenic acid; D-cycloserine, an approved antibiotic with partial-agonist action); (F) AMPAR: perampanel (approved), NBQX and GYKI 52466 (tools). A compound named here is an identity, not a recommendation, and an effect of a tool compound is not the effect of a different drug.",
 +      "indication_and_transfer": "Only IF the bursting depends on an NMDAR contribution that a partial, subunit-restricted or use-dependent action can lower without the cost of a complete block in a developing brain. The d-APV result fits three readings that predict different things: NMDAR gain (more NMDAR current per synapse), permissive necessity (normal NMDARs that the network recruits because the pyramidal neurons are depolarised and inhibition is reduced) and an AMPAR-led drive. No receptor-level measurement exists in any WWOX system. Transfer to the reference genotype is unmeasured: the slice is a neuron-specific knockout, not an allele.",
-+      "novelty_for_woree": "F01 (2026-10-27) registered a graded memantine versus perampanel versus d-APV experiment. This card keeps F01 intact and supersedes its discriminator, on four findings of 2026-10-29: (1) block by memantine and ketamine depends on voltage (tens-fold between holding potentials 20 mV apart, one document), on extracellular Mg2+ (nearly twenty-fold weaker at GluN2A and GluN2B but about three-fold at GluN2C and GluN2D, abstract level) and on intracellular Ca2+ (GluN2A); the preparation held 1.3 millimolar Mg2+ in its incubation solution, so a memantine result there may reflect GluN2D-containing interneurons rather than pyramidal GluN2A/2B receptors; (2) the knockout pyramidal neurons are about five millivolts depolarised and receive fewer and smaller inhibitory currents, which can produce NMDAR-dependent bursting with a normal receptor; (3) a GluN2B-selective NAM has a ceiling below complete inhibition, a clinical-stage member with human exposure (adults, three infants, registered paediatric studies) and a rat age of largest protection that sits at the start of the slice window; (4) the baseline burst rate is low and is reported twice with different values (about two per minute in the main text, below one per minute in the supplementary table, for the same bursts), so a graded block read from bursts alone needs long recordings per condition and should be backed by a faster NMDAR readout in the same slices. Coverage: PubMed and Europe PMC, ClinicalTrials.gov API v2, ChEMBL_37 and openFDA on 2026-10-29; NON_TROVATO_NELLA_RICERCA for any GluN2B NAM, pore blocker, glycine-site agent or AMPAR antagonist other than d-APV in a Wwox system, not MAI_TENTATO.",
++      "novelty_for_woree": "F01 (2026-10-27) registered a graded memantine versus perampanel versus d-APV experiment. This card keeps F01 intact and supersedes its discriminator, on four findings of 2026-10-29: (1) block by memantine and ketamine depends on extracellular Mg2+ (nearly twenty-fold weaker at GluN2A and GluN2B but about three-fold at GluN2C and GluN2D, abstract level) and on intracellular Ca2+ (GluN2A); the preparation held 1.3 millimolar Mg2+ in its incubation solution, so a memantine result there may reflect GluN2D-containing interneurons rather than pyramidal GluN2A/2B receptors; (2) the knockout pyramidal neurons are about five millivolts depolarised and receive fewer and smaller inhibitory currents, which can produce NMDAR-dependent bursting with a normal receptor; (3) a GluN2B-selective NAM has a ceiling below complete inhibition, a clinical-stage member with human exposure (adults, three infants, registered paediatric studies) and a rat-pup age of largest protection (no species age mapping to the mouse window is established); (4) the baseline burst rate is low and is reported twice with different values (about two per minute in the main text, below one per minute in the supplementary table, for bursts the main text does not count, an inference that they are the same bursts), so a graded block read from bursts alone needs long recordings per condition and should be backed by a faster NMDAR readout in the same slices. Coverage: PubMed and Europe PMC, ClinicalTrials.gov API v2, ChEMBL_37 and openFDA on 2026-10-29; NON_TROVATO_NELLA_RICERCA for any GluN2B NAM, pore blocker, glycine-site agent or AMPAR antagonist other than d-APV in a Wwox system, not MAI_TENTATO.",
 +      "state_of_known_roads": "F01; map R-02 and Chain B; N-15 (seizure or burst control is not development); DL-MECH-002; F02 (activity-dependent myelination) and F03 (chloride gradient, a depolarisation and inhibition lever) as the upstream alternatives if the NMDAR dependence proves permissive.",
 +      "pathway_and_objective": "BENEFICIO_PRECOCE; Track A; Track B untested.",
 +      "expected_contribution": "UNKNOWN. At best the receptor-level fact that decides whether an NMDAR-class intervention is a lever (partial block suffices) or only a symptom tool (near-complete block needed); no developmental benefit is implied.",
@@ -1180,8 +1150,7 @@
 +        "for": [
 +          "d-APV abolishes bursting in the knockout slice, and the delayed evoked response is d-APV-sensitive at higher stimulus strengths.",
 +          "Excitatory current amplitude is slightly higher in the knockout (sEPSC means 24.7 against 23.3 pA, about six percent, pooled-event tests; the mEPSC panel separates by a sliver); recorded at -70 mV in Mg2+, so AMPAR-weighted.",
-+          "A GluN2B-selective NAM is effective at most tested gain-of-function GRIN variants in vitro and in a gain-of-function knock-in mouse (abstract); memantine benefit in a GRIN series is concentrated in gain-of-function variants.",
-+          "The age of largest seizure protection by a GluN2B NAM in rat pups sits at the start of the slice window."
++          "A GluN2B-selective NAM is effective at most tested gain-of-function GRIN variants in vitro and in a gain-of-function knock-in mouse (abstract); memantine improvement in any domain in a GRIN series is concentrated in gain-of-function variants (mainly behaviour; seizure-frequency reduction was not significantly different)."
 +        ],
 +        "against": [
 +          "NMDAR dependence is not NMDAR gain: depolarised resting potential and reduced inhibition suffice (not tested). The largest synaptic change in the source is inhibitory (sIPSC amplitude 27.5 against 57.3 pA in controls, frequency also reduced), not excitatory.",
@@ -1196,7 +1165,7 @@
 +      "time_to_access": "Memantine, ketamine, perampanel and D-cycloserine are marketed under adult or other labels; radiprodil is investigational (registered studies only); tool compounds are research reagents. Access for a WWOX study: UNKNOWN.",
 +      "time_to_benefit": "UNKNOWN.",
 +      "pharmacology": "Potency values are in the cycle README and TSV tables, not here. They come from heterogeneous assays (oocyte voltage clamp, HEK or CHO flux, membrane binding, review transcriptions); a median across them describes the literature, not a drug property. One value is repeated across many documents (eliprodil at GluN2B, ketamine in a review document), and target organism and assay organism differ or are blank in many rows. The receptor state (open, desensitised, agonist and co-agonist level, voltage, Mg2+) is not a ChEMBL field and had to be read from assay text or documents.",
-+      "paediatrics_and_interactions": "Memantine label: paediatric safety and effectiveness not established; two controlled paediatric autism studies failed. Perampanel label: partial-onset seizures from 4 years of age; boxed warning for serious psychiatric and behavioural reactions. Radiprodil: investigational; registered paediatric studies are in GRIN gain-of-function disease and TSC or FCD and exclude co-administered glutamate-receptor agonists or antagonists (memantine and perampanel named). Developing-brain NMDAR blockade: apoptotic neurodegeneration in rat pups (abstract). Other interactions: UNKNOWN.",
++      "paediatrics_and_interactions": "Memantine label: paediatric safety and effectiveness not established; two controlled paediatric autism studies failed. Perampanel label: partial-onset seizures from 4 years of age; boxed warning for serious psychiatric and behavioural reactions. Radiprodil: investigational; registered paediatric studies are in GRIN gain-of-function disease and TSC or FCD; two of them (the GRIN phase 1b and the TSC / FCD study) exclude co-administered glutamate-receptor agonists or antagonists (memantine, perampanel and felbamate named), the phase 3 posted text does not. Developing-brain NMDAR blockade: apoptotic neurodegeneration in rat pups (abstract). Other interactions: UNKNOWN.",
 +      "scope_of_checks": "Read in part: Breton 2021 (methods, results 2.1 to 2.5, Table 1, Fig 3, supplement Fig S3 and Table S1), Phillips 2026, Karnstedt 2026 (worsening passages), Auvin 2020, a 2018 review (potency table). Abstract only: Kotermanski 2009, Banke 2026, Ikonomidou 1999, the selfotel trials, a memantine-in-epilepsy cohort, SUPER-CAT, the source paper of document CHEMBL6083260. Registry and label JSON: ClinicalTrials.gov API v2, openFDA. ChEMBL: the P8 pull and a second pull of tool compounds resolved by InChIKey from PubChem; the papers behind most ChEMBL rows were not opened. Not checked: development outcomes of eliprodil and traxoprodil, psychiatric trials of D-cycloserine, any GluN2A, GluN2C/2D or glycine-site compound in a clinical registry.",
 +      "question_history": [
 +        "map R-02 and Chain B",
@@ -1204,7 +1173,7 @@
 +        "P8 (2026-10-29): activity and assay-context capability trial; five tool compounds unresolved by name",
 +        "P9 (2026-10-29): which class of NMDAR intervention can discriminate permissive dependence from gain; this card"
 +      ],
-+      "predictions": "Registered before any experiment (proposed here; to be fixed by the laboratory before running). (1) If the isolated NMDAR-mediated current is larger in the knockout than in wild type and heterozygote and a GluN2B-selective NAM lowers bursting with a plateau below complete inhibition, NMDAR gain through GluN2B is supported and the GRIN gain-of-function precedents become relevant. (2) If the isolated NMDAR current is not raised and the fraction of NMDAR current that must be blocked to stop bursting is large (near complete), the dependence is permissive: NMDAR block is a symptom tool with no tolerable window, and the upstream levers (resting potential, inhibition) become the mechanism-matched ones. (3) If wild-type slices made to burst by a matched trigger respond to the same blocks with the same concentration-response, the dependence is generic to NMDAR-driven networks and is not a WWOX-specific finding. (4) An AMPAR antagonist abolishing bursts does not separate these readings. Result (2) or (3) closes the NMDAR-lever strand without closing the symptom-tool use.",
++      "predictions": "Proposed before any experiment; criteria, cut-offs and the smallest effect size are to be written and time-stamped by the laboratory before unblinding. The three readings are not ranked and are not exclusive; the isolated NMDAR current decides between them, the pharmacology is exploratory. (1) If the isolated NMDAR-mediated current is larger in the knockout than in wild type and heterozygote, an NMDAR gain component is present and the GRIN gain-of-function precedents become relevant; a GluN2B-selective NAM concentration-response then says how much of that current must be blocked, defined only if bursts are abolished at its plateau (otherwise the result is persistence at the plateau fraction). (2) If the isolated NMDAR current is not raised, the dependence is permissive: no receptor change is needed to explain it, NMDAR block is a symptom tool whose window is read from the pharmacology, and the upstream levers (resting potential, inhibition) become the mechanism-matched ones. (3) If wild-type slices made to burst by a matched trigger respond to the same blocks with the same concentration-response, the dependence is generic to NMDAR-driven networks and is not a WWOX-specific finding. (4) An AMPAR antagonist abolishing bursts is expected under every reading and does not separate them. A permissive result (2) or a generic result (3) closes the NMDAR-lever strand without closing the symptom-tool use.",
 +      "next_measurement": "Wet-lab, not done. Preparation as in the source (neuron-specific knockout with littermate wild type and heterozygote, postnatal day 13 to 17, both sexes, coronal slices, the source's incubation solution, layer II/III recording, burst inclusion criterion as in the source). Unit: the animal, with slices and cells nested (the source tested bursts and cells). In the same slices: (a) NMDAR-isolated current under voltage control with AMPAR and GABA-A blocked, amplitude, decay and the fraction sensitive to a GluN2B NAM and to a GluN2A NAM, plus resting potential and input resistance; (b) concentration-response of d-APV and of a GluN2B-selective NAM tool on the isolated current and on the delayed evoked response, then on bursts, to measure the fraction of NMDAR current that must be blocked to stop bursting; (c) a use-dependent pore blocker with the Mg2+ level and voltage reported, as a translation probe after (a) and (b); (d) wild-type slices made to burst by a matched trigger with the same pharmacology; (e) a time-matched vehicle arm and washout. Counting time: for about twenty percent precision on a rate (25 bursts) a condition needs about eleven minutes at the main-text rate and about half an hour at the supplementary-table rate; the discrepancy between the two reported baselines must be resolved first.",
 +      "status": "hypothesis",
 +      "value_added": "Turns the d-APV result from a yes-or-no into a question with a measurable answer (the fraction of NMDAR current that must be blocked), names the alternative readings that the record had not separated (depolarisation, reduced inhibition, AMPAR drive), and replaces memantine as the discriminating arm with a class whose interpretation does not depend on Mg2+, voltage and Ca2+.",
