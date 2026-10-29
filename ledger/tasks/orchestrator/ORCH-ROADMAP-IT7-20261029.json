@@ -45,8 +45,9 @@
     },
     {
      "step": "P4 R4 context differences and subgroup hypotheses",
-     "status": "TODO",
-     "owner": "scientist-b"
+     "status": "DONE",
+     "owner": "scientist-b",
+     "evidence": "context_differences_it7_p4_20261029: 14x13 matrix, 89 UNKNOWN, ~6 independent models; no patient subgroup supported; model-system WOREE vs SCAR12 class difference stated as a confounded hypothesis; verifier 67/67 keyed cells recomputed + 17 paper checks; 2 high + 4 medium defects repaired a697f910"
     },
     {
      "step": "P5 R5 pharmacological comparison for both research objectives",
