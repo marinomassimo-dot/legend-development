@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "input_sha256": "96f5cb9928100980ade7af4a14c0e63e45ab17fe64d7f9e4f64f10fd51b8e783",
+ "input_sha256": "b5a2ead096079668e0ff95e968b6aa1e4c161e657dee72c7e385779c7bbd9568",
  "epistemic_status": "IPOTESI",
  "canonical": false,
  "assessment": "REQUIRES_QUALIFICATION",
@@ -478,7 +478,8 @@
      "Without amyloid lactate falls nominally and Ldh does not change.",
      "Stiripentol inhibits LDH only weakly in the single-concentration measurements held (none gives a fitted potency, and the one at the highest concentration is the lowest), and it has other targets, including direct inhibition of mitochondrial complex I, that act at lower concentrations; any benefit would not be attributable to LDH.",
      "LDHA in the organoid is as consistent with immaturity as with WWOX loss.",
-     "Human lactate in WWOX deficiency is reported normal or extremely low."
+     "Human lactate in WWOX deficiency is reported normal or extremely low.",
+     "IT7 P3/P1 (exploratory, independently verified): in an independent WWOX-loss contrast (P47T hippocampus) the LDH isoforms split (LDHA +0.48, LDHB -0.10 against the build direction) and the six-gene module lies inside its null (p 0.060), so the LDHA elevation is not shown to be a reproducible WWOX-loss feature; the signed network and the WWOX-enriched network showed no added value for ranking compounds on this module and the signature route was not detected, not excluded, and stiripentol was outside that comparison by design. A computational result, not engagement data."
     ],
     "transfer_limits": "The fly effect needs amyloid; stiripentol's approved use depends on co-administration with another antiseizure drug and does not establish brain LDH engagement."
    },
@@ -493,10 +494,11 @@
    },
    "question_history": [
     "mandate 2026-10-26 (Lucas-Clarke follow-up)",
-    "prediction_isr_ldh_chain_20261026.md"
+    "prediction_isr_ldh_chain_20261026.md",
+    "IT7 P6 (2026-10-29): the six-gene module did not transfer decisively to an independent WWOX-loss contrast and the network routes showed no added value and the signature route was not detected, not excluded (loop_demonstration_it7_p6_20261029/README.md; P3 numbers independently verified). Status, F/C/P position and the premise are unchanged."
    ],
    "predictions": "None; no engine, no score.",
-   "next_measurement": "In the fly: lactate (enantiomer- or isotope-resolved) in the Ldh-RNAi double genotype, an Ldh-alone arm, and Wwox mRNA in the double line. In human neural cells: LDH activity and the lactate-to-pyruvate relationship in WWOX-deficient versus isogenic cells at matched maturity. Only then a compound arm: stiripentol against a selective LDHA tool at matched exposure, so that its other pharmacology is separable from LDH. Readout design (added 2026-10-27 from the fly PARS2 reading): in every arm that perturbs complex I, read the integrated stress response (phospho-eIF2 alpha, ATF4 protein) and Ldh abundance next to Ldh ACTIVITY and lactate, because abundance, activity, metabolite level and flux are separate quantities and a complex I perturbation may raise Ldh abundance through the stress response. The designed comparison (question, model, controls, endpoint, result that would change interpretation) is in sada_ldh_precedent_p2a_20261026.md section 6; it is a proposal, nothing is authorised to run.",
+   "next_measurement": "IT7 P6 2026-10-29: read LDHA and LDHB activity separately (LDHB was the discordant gene in the P47T transfer test); no computational ranking selects the compound arm. In the fly: lactate (enantiomer- or isotope-resolved) in the Ldh-RNAi double genotype, an Ldh-alone arm, and Wwox mRNA in the double line. In human neural cells: LDH activity and the lactate-to-pyruvate relationship in WWOX-deficient versus isogenic cells at matched maturity. Only then a compound arm: stiripentol against a selective LDHA tool at matched exposure, so that its other pharmacology is separable from LDH. Readout design (added 2026-10-27 from the fly PARS2 reading): in every arm that perturbs complex I, read the integrated stress response (phospho-eIF2 alpha, ATF4 protein) and Ldh abundance next to Ldh ACTIVITY and lactate, because abundance, activity, metabolite level and flux are separate quantities and a complex I perturbation may raise Ldh abundance through the stress response. The designed comparison (question, model, controls, endpoint, result that would change interpretation) is in sada_ldh_precedent_p2a_20261026.md section 6; it is a proposal, nothing is authorised to run.",
    "status": "hypothesis",
    "value_added": "Separates the LDH lever into measured (fly, conditional), asserted (the Ldh-to-lactate step) and unmeasured (any human WWOX system), and records that the approved paediatric candidate inhibits LDH only weakly in the retrieved measurements.",
    "clinical_census": "Clinical census, ClinicalTrials.gov API v2, 2026-10-20 (drug_repurposing/clinical_census_20261020.md): seven queries returned no registered WOREE interventional study; it answers seven queries against one registry on one date and a missing hit does not prove that no study exists. Not re-run for this card."
@@ -515,7 +517,8 @@
    "Weak LDH inhibition by stiripentol in the retrieved measurements (a weak measure is not general inefficacy: assay, substrate level and enzyme source differ, and the 2015 report is unread).",
    "Direct inhibition of mitochondrial complex I by stiripentol, so a metabolic effect is not an LDH effect.",
    "An Ldh abundance rise also accompanies a complex I-reduced, ISR-activated fly model that has neither WWOX nor amyloid (DA-PARS2-LDH-001), so a raised Ldh in a Wwox-reduced fly does not by itself identify an LDH-specific lesion (INFERENZA: possible confounding by mitochondrial or ISR state).",
-   "Human lactate in WWOX deficiency reported normal or extremely low."
+   "Human lactate in WWOX deficiency reported normal or extremely low.",
+   "IT7 P3/P1 (exploratory, independently verified): in an independent WWOX-loss contrast (P47T hippocampus) the LDH isoforms split (LDHA +0.48, LDHB -0.10 against the build direction) and the six-gene module lies inside its null (p 0.060), so the LDHA elevation is not shown to be a reproducible WWOX-loss feature; the signed network and the WWOX-enriched network showed no added value for ranking compounds on this module and the signature route was not detected, not excluded, and stiripentol was outside that comparison by design. A computational result, not engagement data."
   ],
   "bridge_gaps_exposed": [
    "Fly and organoid rows do not share a context, so no directional comparison is formed between them; the one fly-internal comparison (Ldh RNAi against Wwox knockdown on climbing) is a genetic, not a pharmacological, comparison.",

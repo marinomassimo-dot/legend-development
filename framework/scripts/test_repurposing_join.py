@@ -1180,5 +1180,123 @@ class SupersededWordingGoneIT6(unittest.TestCase):
         self.assertIn("the only such rescue noted in the readings of this batch", papers)
 
 
+class LoopPropagationIT7P6(unittest.TestCase):
+    """IT7 P6 (roadmap R6): one inconclusive / negative computational result, entered once in the needs and three cards, reaches
+    every consumer that reads them. Positive checks only: what each surface DOES say, looked up by identifier and by the wording the
+    loop wrote; no surface is asserted to lack anything. Then a mutation test: a marker written into a COPY of a curated card
+    must appear in the card the join derives from it and in the handoff row, and must not appear when the copy is left alone.
+
+    The P3 numbers quoted by the loop were independently verified (the verifier's own draw differs slightly: 0.396 and 0.0595); the checks pin where the
+    wording lives, not that the numbers are final.
+    """
+
+    DR = "disease-models/wwox/research/drug_repurposing/"
+    CARDS = ("I01_pdk_inhibition_dca_premise_seizure_glycaemia", "E03_pdk_inhibition_dca", "E02_ldh_inhibition")
+    PREFIX = {"I01_pdk_inhibition_dca_premise_seizure_glycaemia": "IT7 P6 2026-10-29: decisive measurement unchanged",
+              "E03_pdk_inhibition_dca": "IT7 P6 2026-10-29: the decisive measurement is unchanged and is specified in card I01",
+              "E02_ldh_inhibition": "IT7 P6 2026-10-29: read LDHA and LDHB activity separately"}
+    WORDS = ("INCONCLUSIVE", "NO ADDED VALUE", "IT7 P3/P1 (exploratory, verified)", "not detected, not excluded", "LDHB was the discordant gene")
+
+    def read(self, rel):
+        return (ROOT / rel).read_text(encoding="utf-8")
+
+    def test_needs_and_cards_carry_the_result_with_its_character(self):
+        needs = json.loads(self.read(self.DR + "needs/needs.json"))
+        by = {n["id"]: n for n in needs["needs"]}
+        for nid, ids in (("NEED-PDH-PYRUVATE-AXIS", ("O5", "O6")), ("NEED-LACTATE-LDH", ("O6", "O7"))):
+            obs = {o["id"]: o for o in by[nid]["observed"]}
+            for oid in ids:
+                self.assertEqual(obs[oid]["evidence_scope"], "COMPUTATIONAL_RESULT", (nid, oid))
+            self.assertTrue(any(c.startswith("IT7 P3/P1") for c in by[nid]["counter_evidence"]), nid)
+            self.assertTrue(any("transfer test" in i for i in by[nid]["inferred"]), nid)
+        for card in self.CARDS:
+            packet = json.loads(self.read(self.DR + f"cards/{card}.packet.json"))
+            built = json.loads(self.read(self.DR + f"cards/{card}.card.json"))
+            self.assertTrue(packet["p4_card"]["next_measurement"].startswith(self.PREFIX[card]), card)
+            self.assertEqual(built["input"]["p4_card"]["next_measurement"], packet["p4_card"]["next_measurement"], card)
+            self.assertTrue(any(x.startswith("IT7 P3/P1 (exploratory, independently verified)") for x in packet["evidence_against"]), card)
+            self.assertTrue(any(x.startswith("IT7 P3/P1 (exploratory, independently verified)") for x in packet["p4_card"]["evidence_for_and_against"]["against"]), card)
+            self.assertTrue(any(x.startswith("IT7 P6 (2026-10-29)") for x in packet["p4_card"]["question_history"]), card)
+            # permanent design rule, not today's data: a position is a function of signed drug assertions in WWOX systems, and a computational
+            # method result is not one, so the loop's wording belongs in evidence_against / next_measurement and never in a drug assertion
+            self.assertNotIn("IT7 P3", json.dumps(packet["drug_assertions"]), card)
+            self.assertIn(packet["p4_card"]["status"], ("hypothesis", "controversial", "deferred with reason", "abstention"), card)   # a status in the card vocabulary: the result does not add a rank
+
+    def test_derived_cards_and_handoff_rows_of_the_linked_records_carry_it(self):
+        derived = {r["query_id"]: r["card"] for r in json.loads(self.read(self.DR + "join/cards.json"))}
+        handoff = self.read("disease-models/wwox/research/repurposing_batch_selection_20261029_module.md")
+        for qid, card in (("Q-N-08", "E03_pdk_inhibition_dca"), ("Q-R-11", "E02_ldh_inhibition")):
+            nm = derived[qid]["input"]["p4_card"]["next_measurement"]
+            self.assertTrue(nm.startswith(self.PREFIX[card]), qid)
+            row = [ln for ln in handoff.splitlines() if ln.startswith(f"| " ) and f"`{qid}`" in ln]
+            self.assertTrue(row, qid)
+            self.assertTrue(any(self.PREFIX[card] in ln for ln in row), qid)                              # the regenerated queue shows the new first sentence
+        pdk_rows = [ln for ln in handoff.splitlines() if "I01_pdk_inhibition_dca_premise_seizure_glycaemia" in ln and "NEED-PDH-PYRUVATE-AXIS" in ln]
+        self.assertTrue(pdk_rows and all(self.PREFIX["I01_pdk_inhibition_dca_premise_seizure_glycaemia"] in ln for ln in pdk_rows))
+
+    def test_work_order_and_both_views_say_it(self):
+        wo = json.loads(self.read(self.DR + "view/work_order.json"))
+        self.assertIn("IT7-P6", wo["docs"])
+        entries = {e["need"]: e for e in wo["entries"]}
+        for nid in ("NEED-PDH-PYRUVATE-AXIS", "NEED-LACTATE-LDH"):
+            self.assertIn("IT7-P6", entries[nid]["docs"], nid)
+            self.assertIn("IT7-P6", entries[nid]["updated_by"], nid)
+            self.assertIn("IT7 P6", entries[nid]["data"], nid)
+            self.assertIn("added value", entries[nid]["would_change"], nid)
+            self.assertIn("not detected, not excluded", entries[nid]["would_change"], nid)
+        for page in ("view/index.html", "view/index_shareable.html", "view/shareable_package/index.html"):
+            text = self.read(self.DR + page)
+            for word in self.WORDS:
+                self.assertIn(word, text, (page, word))
+            self.assertIn("IT7 P6 2026-10-29: decisive measurement unchanged", text, page)
+            self.assertIn("IT7 P6 record: a null result through the research loop", text, page)
+
+    def test_work_order_text_contains_the_first_sentence_of_the_card_it_cites(self):
+        """The work order is hand-written: its loop sentence must be the card's own first sentence, so that drift is flagged."""
+        wo = {e["need"]: e for e in json.loads(self.read(self.DR + "view/work_order.json"))["entries"]}
+        for need, card in (("NEED-PDH-PYRUVATE-AXIS", "I01_pdk_inhibition_dca_premise_seizure_glycaemia"), ("NEED-LACTATE-LDH", "E02_ldh_inhibition")):
+            nm = json.loads(self.read(self.DR + f"cards/{card}.packet.json"))["p4_card"]["next_measurement"]
+            first = nm.split(". ", 1)[0] + "."
+            self.assertTrue(first.startswith("IT7 P6"), card)
+            self.assertIn(first, wo[need]["data"], (need, card))
+
+    def test_the_loop_record_names_what_it_does_not_change(self):
+        text = self.read(self.DR + "loop_demonstration_it7_p6_20261029/README.md")
+        for needle in ("INCONCLUSIVE", "NO ADDED VALUE", "F / C / P positions", "not detected, not excluded", "PROPOSED", "Does not change"):
+            self.assertIn(needle, text)
+
+    def test_mutation_a_marker_in_a_curated_card_reaches_the_derived_card_and_the_handoff_row(self):
+        marker = "ZZ-MUTATION-MARKER-IT7P6"
+        real_dir = rj.CURATED_CARDS
+        tmp = Path(tempfile.mkdtemp(prefix="p6mut_"))
+        self.addCleanup(shutil.rmtree, tmp, True)
+        alt = tmp / "cards"
+        shutil.copytree(real_dir, alt)
+        path = alt / "E02_ldh_inhibition.packet.json"
+        packet = json.loads(path.read_text(encoding="utf-8"))
+        packet["p4_card"]["next_measurement"] = marker + " " + packet["p4_card"]["next_measurement"]
+        path.write_text(json.dumps(packet), encoding="utf-8")
+        outputs = {}
+        for label, folder in (("plain", real_dir), ("mutated", alt)):
+            rj.CURATED_CARDS = folder
+            self.addCleanup(setattr, rj, "CURATED_CARDS", real_dir)
+            out = tmp / label
+            out.mkdir()
+            rj.run(out, live=False)
+            cards = [{"query_id": r["query_id"], "card": r["card"]} for r in json.loads((out / "cards.json").read_text(encoding="utf-8"))]
+            queries = {q["query_id"]: q for q in json.loads((out / "queries.json").read_text(encoding="utf-8"))}
+            outputs[label] = ({c["query_id"]: c["card"] for c in cards}, {r["query_id"]: r for r in rj.handoff_rows(cards, queries)})
+        rj.CURATED_CARDS = real_dir
+        self.assertIn(marker, outputs["mutated"][0]["Q-R-11"]["input"]["p4_card"]["next_measurement"])
+        self.assertIn(marker, outputs["mutated"][1]["Q-R-11"]["qualification"]["card_next_measurement"])
+        self.assertNotIn(marker, json.dumps(outputs["plain"][0]["Q-R-11"]))
+        for qid in outputs["plain"][0]:
+            if qid != "Q-R-11":
+                moved = json.dumps(outputs["mutated"][0][qid], sort_keys=True).replace(str(alt) + "/", "cards/")
+                moved = re.sub(r'"(input_sha256|sha256|digest)": "[0-9a-f]+"', r'"\1": "-"', moved)         # a digest covers the packet path, which differs by design
+                plain = re.sub(r'"(input_sha256|sha256|digest)": "[0-9a-f]+"', r'"\1": "-"', json.dumps(outputs["plain"][0][qid], sort_keys=True))
+                self.assertEqual(plain, moved, qid)                                                       # the change moved only the linked record
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
