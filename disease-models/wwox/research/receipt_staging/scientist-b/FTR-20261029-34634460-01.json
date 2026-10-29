@@ -1,0 +1,37 @@
+{
+ "event_id": "FTR-20261029-34634460-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "34634460",
+  "doi": "10.1016/j.nbd.2021.105529"
+ },
+ "event_at": "2026-10-29T10:14:00Z",
+ "analysis_at": "2026-10-29T09:14:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-b, IT6 step P7 (rescue window: prevented versus recovered). Q3: age window, drug duration and washout behaviour of the d-APV arm. Results 2.x, Discussion 3.4, Methods animals read in the EPMC XML; no figure opened. Question-driven, not a re-reading. Prepared as JSON for the integrator and staged.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID34634460_Breton2021_EPMC_2026-09-27.xml",
+ "source_fingerprint": "934b4e1a42ac19f5cd8912994fb171beabdeb94a6631b23d9a383dab1db906aa",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/rescue_window_it6_20261029.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "Passages quoted verbatim in the output file; extractor text loses italics and superscripts; figure panels not opened except where the workflow says so. Understated rather than overstated."
+ ],
+ "prior_receipt": "FTR-20261019-34634460-01",
+ "reread_reason": "new_question_outside_prior_coverage"
+}

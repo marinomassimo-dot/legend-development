@@ -402,7 +402,7 @@ class Curated(unittest.TestCase):
         myc = [l for nid, l in by["D01_a51"]["links"].items() if "MYC" in nid]
         self.assertEqual(len(myc), 1)
         if myc:
-            self.assertEqual(myc[0]["group"], "C1")   # the wild-type-only row counts neither way, so the null stands alone   # old rule: G1 because a readout in a WWOX system exists
+            self.assertEqual(myc[0]["group"], "C2")   # IT6 P2: A51 against the untreated knockout is a favourable progenitor row (Supplementary Fig. 7F); the downstream layer-neuron null stands beside it
         row = lambda kind, sign, comp="untreated_same_genotype", flags="": {"assertion_id": "a" + sign, "evidence_kind": kind, "sign": sign, "comparator": comp, "flags": flags}
         deep = {"anull": "complete_fulltext_read", "aharm": "complete_fulltext_read", "abenefit": "complete_fulltext_read", "amixed": "complete_fulltext_read"}
         for sign, exp in (("null", "C1"), ("harm", "C1"), ("mixed", "C2")):
@@ -465,20 +465,65 @@ class Curated(unittest.TestCase):
         # (4) F1 is named for what it is and the page names the carrying row
         self.assertIn("controlled WWOX readout", rv.POS_BY_ID["F1"]["label"])
         self.assertNotIn("firm", rv.POS_BY_ID["F1"]["label"].lower())
+        # IT6 P2 (V5): n = 5, single channel, "limited cohort" is the same flag as the ethosuximide experiment, so C01 is F2 and C04 carries the need
         c01 = link("C01_aav9_wwox", "GENE-ADDITION")
-        self.assertEqual(c01["group"], "F1")
-        self.assertIn("DR-C01-001", c01["carrier"][0])
-        self.assertIn("high_dose_only", c01["carrier"][0])
+        self.assertEqual(c01["group"], "F2")
+        self.assertEqual(c01["carrier"], [])
         c04 = link("C04_aav9_endpoint_families", "GENE-ADDITION")
-        self.assertEqual(len(c04["carrier"]), 1)
-        self.assertIn("DR-AAV-GFAP-P5HD", c04["carrier"][0])
+        # IT6 P2: the survival row carries its untreated-knockout comparator (Figure 3B caption) and a text statement; the panel-only motor and GFAP rows are graphical; partial benefits never carry F1
+        self.assertEqual([c.split(":")[0] for c in c04["carrier"]], ["DR-AAV-SURV-HD"])
         self.assertTrue(any("not normalised vs wild type" in t and "GFAPAREA-LD" in t for t in c04["tags"]))
         # (5) the F2 criteria say which part of the F1 test failed
         etx = [x for x in link("EB-ETX-01", "SEIZURE")["criteria"]]
         met = {x["text"].split(" (found")[0]: x["met"] for x in etx}
         self.assertTrue(met["a favourable WWOX readout has an untreated same-genotype comparator"])
-        self.assertFalse(met["a favourable WWOX readout carries no weakening flag"])
+        self.assertFalse(met["a favourable WWOX readout carries no reading-limit flag"])   # graphical reading
+        self.assertFalse(met["a favourable WWOX readout carries no design-limit flag"])   # one experiment
         self.assertTrue(any("(found: " in x["text"] for x in etx))
+
+    def test_it6_p2_review_rules(self):
+        """IT6 P2: engagement nulls are counter-evidence; C3 and F3 read the same support; shallow basis, downstream endpoint and sibling-card counters are tags, not categories."""
+        row = lambda kind, sign, i="a", flags="", card="X", need="N", subj="card": {"card_id": card, "need_id": need, "assertion_id": i, "evidence_kind": kind, "sign": sign, "comparator": "", "flags": flags, "subject": subj}
+        # (1) a poor target-engagement assay is a counter row; a favourable one is a favourable outside signal for C3 as it already was for F3
+        f = rv.classify_rows([row("target_engagement_assay", "null")], {})
+        self.assertEqual(f["o_counter"], 1)
+        self.assertEqual(rv.assign_need_position(f, False, True, True)[0], "C3")
+        f = rv.classify_rows([row("target_engagement_assay", "benefit", i="b"), row("readout_other_disease", "null", i="c")], {})
+        self.assertEqual(rv.assign_need_position(f, False, True, True)[0], "F3")
+        self.assertEqual(f["o_counter"], 1)
+        # (2) the shallow tag: no signed row behind the position read beyond abstract/query/unknown depth
+        rr = [row("readout_other_disease", "benefit", i="p"), row("readout_other_disease", "benefit", i="q"), row("safety_signal", "harm", i="h")]
+        self.assertTrue(rv.display_facts(rr, {"p": "abstract_only", "q": "queried_not_full_read", "h": "complete_fulltext_read"})["shallow"]["F_o"])   # V4: a fully read harm row does not hide shallow favourable rows
+        self.assertFalse(rv.display_facts(rr, {"p": "abstract_only", "q": "partial_fulltext_read", "h": "complete_fulltext_read"})["shallow"]["F_o"])
+        self.assertFalse(rv.display_facts(rr, {"p": "abstract_only", "q": "queried_not_full_read", "h": "complete_fulltext_read"})["shallow"]["C_o"])
+        # V3: a partial benefit never carries F1
+        f = rv.classify_rows([row("readout_in_wwox_system", "partial_benefit", i="pb")], {"pb": "complete_fulltext_read"})
+        self.assertEqual(rv.assign_need_position(f, False, True, True)[0], "F2")
+        # (3) a signed WWOX row flagged as downstream of the need is named
+        self.assertEqual(rv.display_facts([row("readout_in_wwox_system", "null", i="d", flags="endpoint_downstream_of_need")], {})["downstream"], ["d"])
+        # (4) sibling counters: same compound, same need, other card; never the card itself, never another need
+        pert = [row("safety_signal", "harm", i="h1", card="H", need="N1", subj="CHEMBL1"), row("safety_signal", "harm", i="h2", card="H", need="N2", subj="CHEMBL1"),
+                row("readout_other_disease", "benefit", i="b1", card="V", need="N1", subj="card"), row("readout_other_disease", "null", i="n1", card="W", need="N1", subj="CHEMBL9")]
+        links = {"V": {"links": [{"chembl_id": "CHEMBL1"}]}}
+        self.assertEqual(rv.sibling_counters("V", "N1", pert, links), {"H": 1})
+        self.assertEqual(rv.sibling_counters("H", "N1", pert, links), {})
+        # (5) on the real data
+        by = {c["id"]: c for c in self.PF["cur"]["cands"]}
+        link = lambda cid, frag: [l for n, l in by[cid]["links"].items() if frag in n][0]
+        self.assertTrue(any("counter-evidence outside WWOX" in t for t in link("E02_ldh_inhibition", "LACTATE")["tags"]))
+        self.assertEqual(link("H01_apinocaltamide_ttype", "SEIZURE")["group"], "F3")
+        self.assertEqual(link("I01_pdk_inhibition_dca_premise_seizure_glycaemia", "LACTATE")["group"], "F3")
+        self.assertTrue(any("same compound, other card H02" in t for t in link("EB-VGB-01", "MYELINATION")["tags"]))
+        self.assertTrue(any("same compound, other card I01" in t for t in link("E03_pdk_inhibition_dca", "SEIZURE")["tags"]))
+        self.assertTrue(any("downstream of the need" in t for t in link("D01_a51", "MYC")["tags"]))
+        self.assertTrue(any("downstream of the need" in t for t in link("EB-ETX-01", "T-TYPE")["tags"]))   # V6
+        # V4: the depth fact is a criterion, not a tag; E01 rests on four abstracts
+        e01 = link("E01_isr_modulators", "ISR")
+        self.assertFalse(any("reading depth" in t for t in e01["tags"]))
+        self.assertTrue(any(x["text"].startswith("the signed rows behind this position were read beyond") and not x["met"] for x in e01["criteria"]))
+        # V1 and V2: the two label corrections
+        self.assertEqual(link("D01_a51", "MYC")["group"], "C2")
+        self.assertEqual(link("EB-KD-01", "SEIZURE")["group"], "C2")
 
     def test_every_position_prints_criteria_met_and_not_met(self):
         for c in self.PF["cur"]["cands"]:
@@ -1138,8 +1183,9 @@ class RulesUntouched(unittest.TestCase):
     def test_position_rules_are_byte_identical_to_the_verified_revision(self):
         import hashlib
         import inspect
-        h = hashlib.sha256((inspect.getsource(rv.classify_rows) + inspect.getsource(rv.assign_need_position) + inspect.getsource(rv.overview_positions)).encode()).hexdigest()[:16]
-        self.assertEqual(h, "244882c7cd5d1965", "the F/C/P rules changed: this view only displays them (IT5 P11 verified revision)")
+        consts = repr([sorted(rv.FAV_SIGNS), sorted(rv.CARRIER_SIGNS), sorted(rv.WWOX_KINDS), sorted(rv.OUT_KINDS), rv.READING_FLAGS, rv.DESIGN_FLAGS, rv.WEAK_FLAGS, rv.NOT_RECOVERY, sorted(rv.FIRM_DEPTHS)])   # IT6 P2 (V7): the constants that decide positions are part of the pin
+        h = hashlib.sha256((inspect.getsource(rv.classify_rows) + inspect.getsource(rv.assign_need_position) + inspect.getsource(rv.overview_positions) + consts).encode()).hexdigest()[:16]
+        self.assertEqual(h, "56e4bfd5f4023311", "the F/C/P rules changed: this view only displays them (IT5 P11 verified revision; re-pinned by IT6 P2 twice: engagement nulls are counter rows, C3 and F3 share one support, reading-limit and design-limit split, partial benefit never carries F1; the pin now also covers the constants that decide positions)")
 
 
 @unittest.skipUnless(HAVE_DATA, "module data absent")

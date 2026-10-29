@@ -1,0 +1,37 @@
+{
+ "event_id": "FTR-20261029-42422765-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "42422765",
+  "doi": "10.1016/j.omta.2026.201791"
+ },
+ "event_at": "2026-10-29T10:10:00Z",
+ "analysis_at": "2026-10-29T09:10:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-b, IT6 step P7 (rescue window: prevented versus recovered). Q1: at injection what is stated about onset, and what are the comparator and follow-up of the P0-P5 arms. Results (timing, ECoG, behaviour), Discussion, Methods ICV paragraph read in the JATS XML (sha256 7bea83346b708e541d2c432e5da4029f69673e1abc3c6fe70926ad0e3ec2eef2); Supplementary Figure S8 rendered from mmc1.pdf p.10 at 300 dpi and opened as an image (panels A-D, I read). Question-driven, not a re-reading. Prepared as JSON for the integrator and staged.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/supplement/PMID42422765/mmc1.pdf",
+ "source_fingerprint": "dd4919a80af937037309eddd2939db4f11af230e00849bf4b362832bcb5572e9",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "captions_only"
+ },
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/rescue_window_it6_20261029.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "Passages quoted verbatim in the output file; extractor text loses italics and superscripts; figure panels not opened except where the workflow says so. Understated rather than overstated."
+ ],
+ "prior_receipt": "FTR-20261023-42422765-01",
+ "reread_reason": "new_question_outside_prior_coverage"
+}

@@ -108,9 +108,9 @@ WATCH = [
      "body": '{"query":"{sources{nodes{sourceDbName sourceDbVersion}}}"}', "path": ["data", "sources", "nodes"],
      "q": "Did any DGIdb source database change version (the repository probe above sees only code)?",
      "vs": "framework/adapters + kg_thin_slice.py read DGIdb; fingerprint = count + hash of the (source, version) records"},
-    {"id": "openFDA-NDC", "kind": "json", "url": "https://api.fda.gov/drug/ndc.json?limit=1", "path": ["meta", "last_updated"],
-     "q": "Date of the last openFDA NDC refresh (drug product / marketed-status catalogue)",
-     "vs": "access-category and product lookups; one call, key-less, far below the 1,000/day limit"},
+    # openFDA-NDC removed 2026-10-29 (iteration 6, triage of the 05:20 selection): `meta.last_updated` is the refresh date of
+    # a product catalogue and moves on nearly every refresh, so the probe selected itself day after day without ever bearing
+    # on a drug, an approval or evidence. The adapter (framework/adapters/openfda.py) still reads NDC on demand.
     {"id": "EveryCure-drug-list", "kind": "hf", "repo": "everycure/drug-list",
      "q": "Did the MATRIX drug list (CC BY 4.0 on its card) change content or terms? Lists are judged apart from scores, graph and code",
      "vs": "p3b1/txgnn_matrix_outcomes_20261026.md section 2.1 (1 935 rows, commit dc75f85 at 2026-10-13)"},

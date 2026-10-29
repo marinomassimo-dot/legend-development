@@ -1,0 +1,59 @@
+{
+ "chembl_live": {
+  "assay_organisms": [
+   "Homo sapiens",
+   "NA",
+   "frog"
+  ],
+  "distinct_molecules_in_retrieved": 1795,
+  "named_molecules_in_retrieved": 18,
+  "requests": 13,
+  "rows_retrieved": 2000,
+  "rows_total": 2365,
+  "rows_with_assay_context": 2000,
+  "seconds": 51.6,
+  "source_version": "ChEMBL_37 2026-05-01",
+  "truncated": true
+ },
+ "dgidb": {
+  "distinct_drugs": 77,
+  "note": "DGIdb carries no potency, assay or species column; its ChEMBL rows come from the imported release named above",
+  "records_on_GRIN2B": 97,
+  "records_with_interaction_type": 66,
+  "records_with_potency": 0,
+  "sources": [
+   "ChEMBL 33",
+   "GuideToPharmacology 2024.1",
+   "PharmGKB 4/5/24",
+   "TEND 1-Aug-11",
+   "TTD 2020.06.01",
+   "TdgClinicalTrial Jan-14"
+  ]
+ },
+ "gtopdb": {
+  "distinct_ligands": 38,
+  "pubmed_ids_present": 5,
+  "records_on_GRIN2B": 38,
+  "records_with_numeric_affinity": 4,
+  "species": [
+   "Human"
+  ],
+  "version": "GtoPdb Version: 2026.3.1 - published: 2026-10-12",
+  "with_action": 31,
+  "with_receptor_site": 28
+ },
+ "name_overlap_normalised": {
+  "caveat": "name-normalised overlap only (salts and synonyms not merged); ChEMBL set is from retrieved rows, a lower bound when truncated",
+  "pairwise_intersections": {
+   "chembl&dgidb": 4,
+   "chembl&gtopdb": 1,
+   "gtopdb&dgidb": 21
+  },
+  "sizes": {
+   "chembl": 18,
+   "dgidb": 77,
+   "gtopdb": 38
+  }
+ },
+ "retrieved_at": "2026-10-29T07:42:18Z"
+}

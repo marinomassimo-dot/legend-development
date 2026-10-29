@@ -1,0 +1,37 @@
+{
+ "event_id": "FTR-20261029-34747138-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "34747138",
+  "doi": "10.15252/emmm.202114599"
+ },
+ "event_at": "2026-10-29T10:11:00Z",
+ "analysis_at": "2026-10-29T09:11:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-b, IT6 step P7 (rescue window: prevented versus recovered). Q1: onset statements, comparator for behaviour and adult firing, follow-up, and the stated reason for P0 treatment. Abstract, Results and Discussion read in the JATS XML; no figure opened. Question-driven, not a re-reading. Prepared as JSON for the integrator and staged.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID34747138_Repudi2021_PMC.xml",
+ "source_fingerprint": "7da156e82cb7014f837d8c29374d888cb99ecc3268d1c383af2c3d0832b988bb",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/rescue_window_it6_20261029.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "Passages quoted verbatim in the output file; extractor text loses italics and superscripts; figure panels not opened except where the workflow says so. Understated rather than overstated."
+ ],
+ "prior_receipt": "FTR-20261019-34747138-01",
+ "reread_reason": "new_question_outside_prior_coverage"
+}
