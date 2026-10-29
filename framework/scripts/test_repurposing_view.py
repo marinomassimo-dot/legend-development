@@ -2032,5 +2032,20 @@ class It7P7Deployment(unittest.TestCase):
         self.assertNotRegex(self.text, r"[Àèéìòù]")      # English, as the repository's other files
 
 
+class JournalNameIsNotACompoundName(unittest.TestCase):
+    """IT8 P5: a cited journal may share a name with a catalogue record ("Nature"). The shareable audit exempts a journal field only when
+    the exact string is a journal of the title cache; any other field or any other string still counts as a forbidden name."""
+
+    def test_exemption_covers_only_the_journal_fields_and_only_cached_journals(self):
+        import repurposing_shareable_audit as au
+        paths = {where: why for rx, why in au.EXEMPT_RE for where in [".cur.cands[].pmids[].journal", ".cur.cands[].brief.sources[].journal", ".cur.cands[].name"] if rx.search(where)}
+        self.assertIn(".cur.cands[].pmids[].journal", paths)
+        self.assertIn(".cur.cands[].brief.sources[].journal", paths)
+        self.assertNotIn(".cur.cands[].name", paths)                                  # a compound name field is never exempt
+        self.assertTrue(all("title" not in why for why in paths.values()))             # routed to the journal branch, not the title branch
+        ref = au.Reference(rv.DEFAULT_DR)
+        self.assertIn("Nature", ref.journals)                                          # the Meis2 record (PMID 42587157) is cited
+        self.assertNotIn("Nature Compound", ref.journals)                              # mutation: a string that is not a cached journal is not exempt
+
 if __name__ == "__main__":
     unittest.main(verbosity=1)

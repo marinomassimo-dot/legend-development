@@ -18,17 +18,17 @@
    },
    "^\\.cur\\.(needs|threads|groups|gaps|goals|tracks|scopes|group_note|meta|evidence_graph|work_order|selection|hypotheses|predictive|contexts)(\\.|\\[\\]|$)": {
     "class": "OWN",
-    "values": 3499,
+    "values": 3556,
     "why": "needs, threads, positions, evidence graph, work order and the IT7 selection, comparison, predictive-test and context sections: own text or counts computed from own census files"
    },
    "^\\.cur\\.cands\\[\\]\\.": {
     "class": "OWN",
-    "values": 5926,
+    "values": 5930,
     "why": "card text and computed positions (provenance of the prose: see text audit)"
    },
    "^\\.cur\\.cands\\[\\]\\.(pmids\\[\\]\\.(id|role)|dois\\[\\])$": {
     "class": "BIBLIO",
-    "values": 409,
+    "values": 427,
     "why": "PMID / DOI of a cited work"
    },
    "^\\.cur\\.cands\\[\\]\\.access\\[\\]$": {
@@ -38,12 +38,12 @@
    },
    "^\\.cur\\.cands\\[\\]\\.brief\\.sources\\[\\]\\.(kind|id)$": {
     "class": "BIBLIO",
-    "values": 206,
+    "values": 216,
     "why": "PMID / ChEMBL identifier of an essential source of the one-page synthesis"
    },
    "^\\.cur\\.cands\\[\\]\\.brief\\.sources\\[\\]\\.(title|journal|year)$": {
     "class": "BIBLIO",
-    "values": 309,
+    "values": 324,
     "why": "title, journal, year of an essential source (bibliographic facts)"
    },
    "^\\.cur\\.cands\\[\\]\\.chembl\\[\\]$": {
@@ -53,7 +53,7 @@
    },
    "^\\.cur\\.cands\\[\\]\\.pmids\\[\\]\\.(title|journal|year)$": {
     "class": "BIBLIO",
-    "values": 606,
+    "values": 633,
     "why": "title, journal, year of a cited work (bibliographic facts)"
    },
    "^\\.cur\\.evidence_graph\\.chains\\[\\]\\.(nodes\\[\\]\\.pmids\\[\\]|edges\\[\\]\\.src\\.id)$": {
@@ -73,12 +73,12 @@
    },
    "^\\.cur\\.needs\\[\\]\\.obs\\[\\]\\.(cite)$": {
     "class": "BIBLIO",
-    "values": 85,
+    "values": 90,
     "why": "title, journal, year of a cited work"
    },
    "^\\.cur\\.needs\\[\\]\\.obs\\[\\]\\.pmid$": {
     "class": "BIBLIO",
-    "values": 85,
+    "values": 90,
     "why": "PMID of the observation source"
    },
    "^\\.excluded_detail\\[\\]\\.(id|name|src)$": {
@@ -108,7 +108,7 @@
    },
    "^\\.needs\\[\\]\\.": {
     "class": "OWN",
-    "values": 1657,
+    "values": 1663,
     "why": "needs records written in this repository"
    },
    "^\\.pairs\\[\\]\\.(l2|l3|l4|x|n|r)(\\.|\\[\\]|$)": {
@@ -193,7 +193,7 @@
    "DOI": 5,
    "HGNC": 6,
    "NCT": 0,
-   "PMID": 55
+   "PMID": 58
   },
   "links": {
    "distinct_hrefs": 59,
@@ -212,7 +212,7 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 1952,
+    "forbidden-name": 1975,
     "forbidden-wording": 12
    },
    "co_attested_wording": [
@@ -252,6 +252,7 @@
     "unchecked_without_corpus": 92
    },
    "suppressed_by_exemption": {
+    "bibliographic journal name (validated against the journals of the cache)": 4,
     "category labels of catalogue-wide counts": 1
    }
   },
@@ -428,15 +429,15 @@
  ],
  "data": {
   "catalogue_generated": "2026-10-28T23:40:16Z",
-  "data_date": "2026-10-29",
+  "data_date": "2026-10-30",
   "dgidb_export": "2024-06-10",
   "view_schema": "legend.wwox.repurposing_view/2"
  },
  "embedded_field_classes": {
-  "BIBLIO": 1865,
+  "BIBLIO": 1945,
   "COUNT": 7757,
   "ID": 3048,
-  "OWN": 54116,
+  "OWN": 54183,
   "ROWNAME": 1506,
   "SRC_A": 91,
   "SRC_META": 256,
@@ -495,15 +496,15 @@
   },
   "NOTICE.md": {
    "bytes": 12612,
-   "sha256": "0cd40c9da986cbe513efc00ed10ac4a914fdb04bd6299ce6eb180e8996611421"
+   "sha256": "64cd941389b2787479e93c4f1cf5c736aaeea31d4e2b0c2065c10a477c8b2a76"
   },
   "README.md": {
    "bytes": 4642,
-   "sha256": "02145ca83f3593ce48e07b79c7d59f6544f92b121085f515a5978f62169f303c"
+   "sha256": "47ba6e781bf7593cc5edcb97927655921929783c4df4ef274b5e1c1c14ed83e2"
   },
   "TEXT_PROVENANCE.json": {
    "bytes": 1870,
-   "sha256": "18e294f1e5ef5af604c1a7b4e3c39bbe6151a7d34739bab23996a4ca0789e26b"
+   "sha256": "e1e125ee8737e4f32c229be81f9c90bde9aa458cfc5e47407d5e8eaf8553d2ec"
   },
   "class_b/chembl_cc-by-sa-3.0/CREDIT.txt": {
    "bytes": 1636,
@@ -518,8 +519,8 @@
    "sha256": "d8fe6a3455466783564803428b6318c1c442db6a16dfb97de8a6b7dcf944cc9d"
   },
   "index.html": {
-   "bytes": 2486729,
-   "sha256": "c5b2eb1ecf6c79cc1bb19f7ac9c81d846cf80b21820bd8bc55c690d6e8b2d8a0"
+   "bytes": 2504686,
+   "sha256": "af8041c7f0894be4eaed16a837f9ec5520be0da9a21bc88870dd427c80fc844b"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",

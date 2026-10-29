@@ -31,7 +31,7 @@ How the conditions are met:
 - **Record names shown in the page (1,506 values in the row table)**: 1,464 are catalogue identifiers (ChEMBL accession numbers and DGIDB: hashes of DGIdb drug names, no name text); 42 are card names written in this repository (16 molecule families, 26 interventions or classes). A card name that coincides with a ChEMBL preferred name is used as the compound's name, a fact, not as a copied ChEMBL field; ChEMBL names as data travel only in the separate class-B file. LEGEND WWOX repurposing module (this repository); ChEMBL identifiers: EMBL-EBI, https://www.ebi.ac.uk/chembl/
 - **Catalogue record identifiers**: opaque identifiers of this repository's catalogue (CAT:...), no source content. LEGEND WWOX repurposing module (this repository)
 
-Identifier census of `index.html` (distinct values): {"CAT": 1485, "CHEMBL": 260, "DOI": 5, "HGNC": 6, "NCT": 0, "PMID": 55}. No abstract and no passage of an article is embedded. Short quotations are marked by quotation marks and attributed (section 6).
+Identifier census of `index.html` (distinct values): {"CAT": 1485, "CHEMBL": 260, "DOI": 5, "HGNC": 6, "NCT": 0, "PMID": 58}. No abstract and no passage of an article is embedded. Short quotations are marked by quotation marks and attributed (section 6).
 
 ## 4. Class B (share-alike): shipped as a separate file, never merged into the page
 

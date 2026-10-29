@@ -1,0 +1,36 @@
+{
+ "event_id": "FTR-20261029-34253921-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "34253921",
+  "doi": "10.1038/s41593-021-00888-4"
+ },
+ "event_at": "2026-10-29T21:40:00Z",
+ "analysis_at": "2026-10-29T00:00:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-b, IT8 package P5. Abstract, Results sections on restoration, time dependency and local restoration, Discussion, tamoxifen/endoxifen Methods read in the PMC JATS text; remaining Methods, figures and supplements not read. Question: what is disrupted, when restored, unit of analysis, within-animal comparison. Staged as JSON for the integrator. Coverage vocabulary is closed: sections read only in part are recorded as not_read (understated), figures opened as images but not exhaustively are recorded as captions_only (understated).",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMC8410666_PMID34253921_ncbi_efetch_pmc_2026-10-29.xml",
+ "source_fingerprint": "0f0ef1bb91da2ee4713291a4450954006974e6375d9268e6170d8a37b23acb4f",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "figures": "not_read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advance_it8_p5_20261029/loop2_broad_recovery/README.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "No work manifest and no verbatim_locators exist for this reading; the decisive claims are described in the loop README with section and figure references, not as locator triples. Coverage understated rather than overstated."
+ ],
+ "reread_reason": "first_read",
+ "prior_receipt": null
+}

@@ -1,0 +1,36 @@
+{
+ "event_id": "FTR-20261029-42190665-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "42190665",
+  "doi": "10.1016/j.xcrm.2026.102832"
+ },
+ "event_at": "2026-10-29T21:40:00Z",
+ "analysis_at": "2026-10-29T00:00:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-b, IT8 package P5. Results on phenotype, AAV replacement and behaviour/seizure rescue, Discussion, Limitations and the AAV injection method read in the JATS text; Introduction, other Methods and figures not read. Question: is a post-onset treatment arm present. Staged as JSON for the integrator. Coverage vocabulary is closed: sections read only in part are recorded as not_read (understated), figures opened as images but not exhaustively are recorded as captions_only (understated).",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMC13293933_PMID42190665_europepmc_fulltext_2026-10-29.xml",
+ "source_fingerprint": "86388e4f28c11e60b4d81d5e3f0f7ef4e39f2d758ae1dd411906f7951db7aced",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "figures": "captions_only",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/advance_it8_p5_20261029/loop2_broad_recovery/README.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "No work manifest and no verbatim_locators exist for this reading; the decisive claims are described in the loop README with section and figure references, not as locator triples. Coverage understated rather than overstated."
+ ],
+ "reread_reason": "first_read",
+ "prior_receipt": null
+}
