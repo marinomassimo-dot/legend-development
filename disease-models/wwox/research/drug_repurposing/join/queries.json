@@ -22759,18 +22759,22 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "07ceefd6e3d0721e",
+  "digest": "97d96d0095de281a",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
    "ids_in_registry_without_pmid": [],
    "ids_named": [
     "PAPER 022",
+    "PAPER 024",
+    "PAPER 113",
     "PAPER 567"
    ],
    "ids_not_found_in_registry": [],
    "ids_reaching_a_pmid": [
     "PAPER 022",
+    "PAPER 024",
+    "PAPER 113",
     "PAPER 567"
    ]
   },
@@ -22780,16 +22784,26 @@
   "origin_title": "DL-MECH-173 — Integrated stress response in WWOX loss: the fly Atf4 rise needs amyloid and the one human knockout transcriptome shows the ATF4/ISR target set LOWER than chance, so no signed human ISR readout exists (NOT WWOX-DEE evidence for the fly part)",
   "papers_named": [
    "PAPER 022",
+   "PAPER 024",
+   "PAPER 113",
    "PAPER 567"
   ],
   "pmids": [
+   "25012504",
    "31543760",
+   "38563965",
    "41380592",
    "42909904"
   ],
   "pmids_via_records": {
+   "25012504": [
+    "PAPER 024"
+   ],
    "31543760": [
     "PAPER 022"
+   ],
+   "38563965": [
+    "PAPER 113"
    ],
    "42909904": [
     "PAPER 567"
@@ -22803,6 +22817,34 @@
    "ISR",
    "LOWER",
    "DEE"
+  ]
+ },
+ {
+  "axis": "all",
+  "claims_named": [],
+  "digest": "46e9ab5d41d7b2ea",
+  "kind": "lead",
+  "leads_named": [],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": []
+  },
+  "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
+  "origin_id": "DL-MECH-174",
+  "origin_line": 4505,
+  "origin_title": "DL-MECH-174 — A six-gene glycolysis and lactate module built in two human WWOX-loss transcript systems does not transfer conclusively to the P47T mouse deposit, and a bounded network comparison found no added value for a signed or WWOX-enriched network (EXPLORATORY, COMPUTATIONAL_RESULT; the signatu",
+  "papers_named": [],
+  "pmids": [],
+  "query_id": "Q-DL-MECH-174",
+  "terms": [
+   "MECH",
+   "WWOX",
+   "P47T",
+   "SLC2A1",
+   "HK2",
+   "LDHA"
   ]
  },
  {
@@ -30515,7 +30557,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "dc00e768f01a4de8",
+  "digest": "0ae6760153250c66",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-008",
@@ -30539,7 +30581,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-REPO-004",
-  "origin_line": 4487,
+  "origin_line": 4488,
   "origin_title": "DL-REPO-004 — LDH lowering rescued fly locomotion once in the amyloid-plus-Wwox-reduction genotype; the approved paediatric epilepsy drug usually linked to LDH inhibits it only weakly in the retrieved measurements (NOT WWOX-DEE evidence)",
   "papers_named": [
    "PAPER 567",

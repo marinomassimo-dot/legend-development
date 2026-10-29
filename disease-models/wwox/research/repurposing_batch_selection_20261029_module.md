@@ -111,7 +111,7 @@ A catalogue target listing (a stated action, or none) is a source statement, not
     - DA-LC-ATF4-002 NO_CHANGE (WWOX_BIOLOGY_OTHER_CONTEXT; complete_fulltext_read; Drosophila melanogaster; neuronal Wwox RNAi versus control RNAi in a LacZ (no amyloid) background) - locator disease-models/wwox/research/deepdive_manifests/PMID42909904.json verbatim_locators.entries[58]; Supplementary Fig 5E - limits: Not significant without amyloid (t 0.0894, P 0.9305, n 6 brains; 95% interval about plus or minus 1.3 pooled SD). A measured non-significant result in a different contrast, not an unmeasured cell and not a demonstrated absence; no interaction test between the two backgrounds is reported (re-read 2026-10-28).
     - same molecule, other endpoint (not a match): DA-GSE-ISR-003 DECREASE (COMPUTATIONAL_RESULT; queried_not_full_read) - locator disease-models/wwox/research/drug_repurposing/gse156243/prediction_isr_ldh_chain_20261026.md, RESULT table
 
-**Repaired but not re-judged:** 24 of the manifests these queries reach hold a locator an audit found adverse whose repair no later audit has judged; 181 of 343 queries reach one. They are not rows here, because half the queue would be one row — an audit of them is owed, and a claim resting on one rests on an unverified repair.
+**Repaired but not re-judged:** 24 of the manifests these queries reach hold a locator an audit found adverse whose repair no later audit has judged; 181 of 344 queries reach one. They are not rows here, because half the queue would be one row — an audit of them is owed, and a claim resting on one rests on an unverified repair.
 
 ## Lead specs (for `discovery_lead.py check`; a Scientist stages them, the join never appends)
 

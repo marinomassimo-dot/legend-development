@@ -1,0 +1,61 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "_note": "Candidate integration, research layer and registry notes, working model WM_v7.29 PRESERVED (no working-model statement contradicted, no bump). Not medical advice; no individual-level data; no re-identifying variant combination.",
+ "TASK_ID": "BATCH_20261019_029",
+ "ALIAS": "INT-IT7-REGISTRIES-20261029",
+ "ACTOR_ID": "integrator",
+ "OWNER": "orchestrator",
+ "CURRENT_STATE": "COMPLETE_ON_TASK_BRANCH",
+ "assigned_on": "2026-10-29",
+ "OBJECTIVE": "Mandate IT7, registries step: register only the verified, proportionate results of iteration 7 (P0a census reconciliation, P3 network comparison, P4 context differences): statements of absence narrowed to the perimeter of the search that was run, the ovarian paper read as a PERK band shift with a total-PERK antibody, a discovery-ledger lead for P3 with hypothesis updates that change no status, an update for P4, reading updates for the papers re-read with a recorded receipt; reach every consumer and regenerate the derived surfaces.",
+ "TASK_CLAIM": {
+  "actor": "integrator (Integrator worker for the orchestrator)",
+  "branch": "task/it7-batch",
+  "worktree": ".claude/worktrees/it7-batch",
+  "base": "f26fe0d0",
+  "landed": "to be landed on main by the orchestrator after the adversarial review; this record is written on the task branch"
+ },
+ "RESULT": {
+  "wm_version": "WM_v7.29 preserved (checked: no PDK1, glycolysis-module or ISR-direction statement in working_model_current; the metabolic line calls the WWOX/HIF1A axis a state indicator and CLAIM 025 stays in observation; the durable-rescue lines were already qualified in WM_v7.29)",
+  "candidates_propagated": 1,
+  "candidate": "CC-20261029-INTEGRATOR-IT7-REGISTRIES-01",
+  "registries": "paper_registry_current: 6 reading updates (PAPER 004, 039, 094, 113, 567, CORPUS-STUB-126); literature_tracking_log_current: 6 notes (LIT-0110, 0365, 0139, 0417, 0838, 0145); claim_registry and working_model: 0 ops; batch_commit.py propagate, dry run then --apply, for each file; candidate_ops_reconcile MATCH, ops_parsed 18",
+  "ledger": "record_scoped_edit.py apply (dry run then --apply): discovery_ledger DL-MECH-173 (2 ops: the census sentence replaced inside the BATCH_20261019_027 update, one dated UPDATE bullet for P0a and P4); therapeutic_hypotheses_ledger HYP-20261026-10 (sentence), HYP-20260709-01, HYP-20260709-05, HYP-20261026-11 (one UPDATE bullet each, no status change, no support added); new lead DL-MECH-174 appended by discovery_lead.py append --apply; dismissal ledger 0 ops",
+  "normal_edits": "mechanism_intervention_map R-10 sentence; needs.json NEED-WWOX-GENE-ADDITION ('found', vector-control note); card J01 packet and card rebuilt with repurposing_bridge.py (cards/ and partial_benefit_it6_p10_20261029/), check_cards 27 packets 0 problems; state manifest and state history",
+  "derived": "pathograph surfaces, repurposing_join run (Q-DL-MECH-174 added, Q-DL-MECH-173 and Q-DL-REPO-004 changed), repurposing_coverage run and check, p5_check 203 cells 0 problems, repurposing_join handoff 2026-10-29, repurposing_view run full and shareable, package and check, audit-shareable PASS; batch_queue, coverage_report, reading_state fresh (not changed)",
+  "proof": "framework/scripts/test_repurposing_join.py::RegistriesIT7 (5 positive-check tests)",
+  "not_registered": "see the candidate section 'What was deliberately NOT registered': no working-model change, no claim created or promoted, no identity records for non-WWOX precedents, the late complete read FTR-20261019-40183510-02 (earlier iteration, non-WWOX), P3 compound results as candidates, P1/P2/P5/P6/P8 tool-level results, the old IT6 candidate text (historical, not edited)",
+  "not_touched": "working_model_current and working_model_history; claim_registry_current; dismissal_ledger_current; fulltext_read_receipts.jsonl (all 7 IT7 receipts already recorded at ledger 920); experiment_ledger; disease_model.md; the historical candidate CC-20261029-INTEGRATOR-IT6-REGISTRIES-01"
+ },
+ "DEFAULTS_TAKEN": [
+  {
+   "condition": "the IT6 candidate CC-20261029-INTEGRATOR-IT6-REGISTRIES-01 carries the superseded census sentence in three places and is already integrated",
+   "default": "not edited (historical); this batch's own candidate carries the corrected wording through the same records, and the ledger sentence is replaced in place inside the IT6 update, as the census reconciliation proposed"
+  },
+  {
+   "condition": "naming a ledger id in a map record changes the query population of that record's join row",
+   "default": "the map R-10 sentence names no ledger id ('see the discovery-ledger update of 2026-10-29 on the integrated stress response')"
+  },
+  {
+   "condition": "batch_commit.py propagate accepts only the four scientific current files",
+   "default": "the discovery and hypotheses ledgers edited with record_scoped_edit.py apply (dry run, then --apply); the new lead through the validated writer discovery_lead.py; no FULL_FALLBACK"
+  },
+  {
+   "condition": "claim notes or ledger text that name a PMID literal trigger lint or gate findings",
+   "default": "papers named by PAPER id, author and year; receipts by event id; no PMID or e-mail literal written"
+  },
+  {
+   "condition": "the P3 verifier's matched-null 95th percentile (0.396) differs from the producer's (0.389)",
+   "default": "neither figure quoted in any registry record"
+  }
+ ],
+ "STOP_LOG": [],
+ "VERIFICATION": {
+  "legend_lint": "WARN, 0 BLOCK (exit 0)",
+  "growth_anchors_check": "PASS",
+  "fulltext_receipts_verify": "OK, 920 chained receipts",
+  "public_release_gate": "PASS, 0 BLOCKS",
+  "candidate_ops_reconcile": "MATCH (18 ops)",
+  "tests": "test_repurposing_join 84 OK (RegistriesIT7 5 tests), test_repurposing_view and test_repurposing_coverage see the commit report, test_tool_routing OK, test_section_references OK, test_no_closed_world_assertions_on_live_state OK, check_needs OK, check_cards 27 packets 0 problems, p5_check 0 problems"
+ }
+}
