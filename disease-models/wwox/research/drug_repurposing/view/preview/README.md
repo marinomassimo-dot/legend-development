@@ -59,7 +59,7 @@ Measured with `python3 -B framework/scripts/repurposing_view.py viewports --shot
 
 ## IT7 P7 additions (selection funnel, hypotheses, predictive test and contexts, printable sections)
 
-Measured with `python3 -B framework/scripts/repurposing_view.py viewports --shots DIR` on the shareable build. Scenarios `selection`, `hypotheses`, `predictive`, `contexts`, `section_selection` and `section_predictive` run at every viewport: innerWidth equals the requested width and scrollWidth does not exceed it at 360 and 390 with mobile emulation (360/360, 390/390), at 768 (753 with the scrollbar) and at 1280 (1265). A4 print, through the `#section=` routes: selection 4 pages, hypotheses 9 pages, predictive test with contexts 5 pages.
+Measured with `python3 -B framework/scripts/repurposing_view.py viewports --shots DIR` on the shareable build. Scenarios `selection`, `hypotheses`, `predictive`, `contexts`, `section_selection` and `section_predictive` run at every viewport: innerWidth equals the requested width and scrollWidth does not exceed it at 360 and 390 with mobile emulation (360/360, 390/390), at 768 (753 with the scrollbar) and at 1280 (1265). A4 print, through the `#section=` routes: selection 4 pages, hypotheses 10 pages, predictive test with contexts 7 pages.
 
 | File | What to look at |
 |---|---|

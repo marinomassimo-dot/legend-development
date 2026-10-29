@@ -1712,7 +1712,7 @@ class It7P7Data(unittest.TestCase):
         self.assertIn("il percentile del modello non è mostrato affatto", self.h)
         self.assertIn("Nessuna probabilità clinica calibrata è mostrata", self.h)
         body = re.sub(r"<[^>]+>", " ", self.h)
-        self.assertEqual(len(re.findall(r"percentil", body, re.I)), body.count("il percentile del modello non è mostrato affatto") + len(re.findall(r"95° percentile", body)))
+        self.assertEqual(len(re.findall(r"percentil", body, re.I)), body.count("il percentile del modello non è mostrato affatto") + len(re.findall(r"95° percentile", body)) + len(re.findall(r"stesso percentile", body)))
         for e in self.cur["hypotheses"]:
             self.assertNotIn("pct_OE", json.dumps(e))
         self.assertNotIn("pct_OE", json.dumps(self.cur["predictive"]))
@@ -1727,15 +1727,32 @@ class It7P7Data(unittest.TestCase):
         for a, x in zip(art, hy):
             for cls in ("hyp-prio", "hyp-model", "hyp-obs"):
                 self.assertIn(cls, a)
-            self.assertEqual(x["model"], "no_added_value" if next(r for r in self.rows5 if r["record_id"] == x["id"])["MODEL_position_P3_P2"].startswith("P3") else "not_evaluated")
-            self.assertIn(html_escape(rv.UI_IT["hyp_model_" + x["model"]]), a)
+            row = next(r for r in self.rows5 if r["record_id"] == x["id"])
+            self.assertEqual(x["model"], "none")      # no record has a model position of its own: P5 says so for every compound
+            self.assertIn("No model position", row["MODEL_position_P3_P2"] + ("" if row["MODEL_position_P3_P2"].startswith("P3") else " No model position"))
+            self.assertIn(html_escape(rv.UI_IT["hyp_model_none"]), a)
+            self.assertEqual(x["model_axis"], row["MODEL_position_P3_P2"].startswith("P3"))
+            self.assertTrue(x["model_reasons"], x["id"])      # every record states why it has no model position
+            for r in x["model_reasons"]:
+                self.assertIn(html_escape(rv.UI_IT["hyp_r_" + r]), a)
             for c, ps in x["positions"].items():
                 for p in ps:
                     self.assertEqual(p["group"], cm[c]["links"][p["need"]]["group"])      # priority = the position the view assigns, not the comparison file's prose
             for lab in ("hyp_dem", "hyp_opp", "hyp_missing", "hyp_ext", "hyp_next"):
                 self.assertIn(html_escape(rv.UI_IT[lab]), a)
-        self.assertEqual(self.h.count("nessun vantaggio dimostrato, esplorativo"), sum(1 for x in hy if x["model"] == "no_added_value"))
-        self.assertEqual(sorted(x["id"] for x in hy if x["model"] == "no_added_value"), ["CMP-04", "CMP-05"])
+        by = {x["id"]: x for x in hy}
+        self.assertEqual(sorted(x["id"] for x in hy if x["model_axis"]), ["CMP-04", "CMP-05"])      # the P3 axis result is quoted for the glycolysis axis only, and as a result about methods
+        self.assertEqual(self.h.count(html_escape(rv.UI_IT["hyp_axis"])), 2)
+        self.assertEqual(self.h.count(html_escape(rv.UI_IT["hyp_axis_note"])), 2)
+        self.assertIn("firewalled", by["CMP-05"]["model_reasons"])
+        self.assertIn("firewalled", by["CMP-07"]["model_reasons"])
+        self.assertTrue(by["CMP-07"]["model_usable"])        # memantine and perampanel are in the usable census
+        self.assertIn("not_compound", by["CMP-03"]["model_reasons"])
+        self.assertIn("not_compound", by["CMP-06"]["model_reasons"])
+        for k in ("hyp_intro_model", "hyp_key"):
+            self.assertIn(html_escape(rv.UI_IT[k]), self.h)
+        self.assertIn("mai un composto", rv.UI_IT["hyp_intro_model"])
+        self.assertNotIn("hyp_model_no_added_value", rv.UI_IT)
 
     def test_hypothesis_mutations_are_refused(self):
         cards, needs = {c["id"] for c in self.cur["cands"]}, {n["id"] for n in self.cur["needs"]}
@@ -1743,6 +1760,12 @@ class It7P7Data(unittest.TestCase):
         r = json.loads(json.dumps(self.rows5))
         r[0]["MODEL_position_P3_P2"] = "Positive: ranks first"
         self.assertTrue(rv.validate_hypotheses(r, cards, needs, set()))
+        r = json.loads(json.dumps(self.rows5))
+        r[4]["MODEL_position_P3_P2"] = r[4]["MODEL_position_P3_P2"].replace("No model position for this compound", "")
+        self.assertTrue(rv.validate_hypotheses(r, cards, needs, set()))      # an axis result that no longer says the compound has no position
+        r = json.loads(json.dumps(self.rows5))
+        r[1]["MODEL_position_P3_P2"] = "None."
+        self.assertTrue(rv.validate_hypotheses(r, cards, needs, set()))      # no reason can be read
         r = json.loads(json.dumps(self.rows5))
         r[1]["hypothesis_cards"] = "ZZ99_missing_card"
         self.assertTrue(rv.validate_hypotheses(r, cards, needs, set()))
@@ -1765,6 +1788,10 @@ class It7P7Data(unittest.TestCase):
         self.assertEqual(pr["verdicts"][1]["numbers"][0]["value"], round(self.p3["rho"]["SIG"], 3))
         self.assertEqual(pr["verdicts"][3]["numbers"][2]["value"], round(self.e1["regions"]["HPC"]["exact_p_one_sided"], 3))
         self.assertEqual(self.nums["pred.universe"], "256")
+        self.assertEqual([n["value"] for n in pr["verdicts"][3]["numbers"]], [0.329, 0.389, 0.06, 0.396])      # both draws of the matched null are on the page
+        self.assertIn("circa 0,39", self.h)
+        self.assertIn("intervallo di confidenza al 90%", self.h)
+        self.assertNotIn("IC90", self.h)
         for v in pr["verdicts"]:
             self.assertTrue(v["reopen_it"])
         self.assertIn("effetto non rilevato, non escluso", self.h)
@@ -1784,6 +1811,10 @@ class It7P7Data(unittest.TestCase):
         d = json.loads(json.dumps(doc))
         d["verdicts"][2]["numbers"][0]["path"] = "rho.NOPE"
         self.assertTrue(rv.validate_predictive(d, self.p3, self.e1))
+        d = json.loads(json.dumps(doc))
+        d["verdicts"][3]["external_values"][0]["check_text"] = "0.999"
+        self.assertTrue(rv.validate_predictive(d, self.p3, self.e1, DR))      # the verifier's draw must still be in the verifier's report
+        self.assertEqual(rv.validate_predictive(doc, self.p3, self.e1, DR), [])
         p3 = json.loads(json.dumps(self.p3))
         p3["rho"]["SIG"] = 0.2
         self.assertTrue(rv.validate_predictive(doc, p3, self.e1))      # the data moved: the text must be re-read
@@ -1801,20 +1832,42 @@ class It7P7Data(unittest.TestCase):
             self.assertEqual(r["higher"] + r["lower"] + r["other"] + r["unknown"], 13)
             for k in ("higher", "lower", "other", "unknown"):
                 self.assertEqual(self.nums[f"ctx.{r['id']}.{k}"], str(r[k]))
-        self.assertEqual({r["id"]: r["verdict"] for r in cx["rows"]}["Q14"], "concordant")
-        self.assertEqual({r["id"]: r["verdict"] for r in cx["rows"]}["Q02"], "discordant")
+        v = {r["id"]: r["verdict"] for r in cx["rows"]}
+        self.assertEqual(v, {"Q01": "no_resolved_sign", "Q02": "discordant", "Q03": "single_system", "Q04": "no_resolved_sign", "Q05": "concordant", "Q06": "no_resolved_sign", "Q07": "discordant",
+                             "Q08": "no_resolved_sign", "Q09": "discordant", "Q10": "discordant", "Q11": "discordant", "Q12": "single_system", "Q13": "discordant", "Q14": "concordant"})
         self.assertIn("Nessun sottogruppo di pazienti è sostenuto da questi dati", self.h)
-        self.assertEqual(cx["verdict_counts"], {"unresolved": 5, "discordant": 3, "no_data": 2, "concordant_no_signal": 2, "single_system": 1, "concordant": 1})
+        self.assertEqual(cx["verdict_counts"], {"no_resolved_sign": 4, "discordant": 6, "single_system": 2, "concordant": 2})
+        # the printed legend IS the rule: re-derive every verdict from the matrix cells, independently of the builder's helper
+        for r in cx["rows"]:
+            cells = [x for x in self.rows4 if x["quantity_id"] == r["id"] and x["direction"] != "UNKNOWN"]
+            signs = {x["direction"] for x in cells if x["direction"] in ("higher", "lower")}
+            models = {}
+            for x in cells:
+                if x["direction"] in ("higher", "lower"):
+                    models.setdefault(x["direction"], set()).add(cx["models_of"][x["context_id"]])
+            want = ("no_data" if not cells else "discordant" if len(signs) == 2 else ("concordant" if len(next(iter(models.values()))) >= 2 else "single_system") if signs else "no_resolved_sign")
+            self.assertEqual(r["verdict"], want, r["id"])
+            self.assertTrue(r["note_it"])
+        for r in cx["rows"]:      # the matrix shows Italian words, not raw tokens, and the full matrix is labelled with the Italian quantity names
+            for d in r["directions"]:
+                self.assertIn("ctx_d_" + d, rv.UI_IT)
+        for tok in ("no_resolvable_sign", "lower_non_specific", "set_dependent", ">UNKNOWN<"):
+            self.assertNotIn(tok, re.sub(r'data-[a-z]+="[^"]*"', "", self.h.split('id="contexts"')[1]))
+        self.assertIn("Ipereccitabilità", self.h)
+        for bad in ("Iperecitabilità", "deposito murino", "nullo appaiato", "furono registrati", "ricongelato", "consigliate"):
+            self.assertNotIn(bad, self.h, bad)
+        self.assertIn("Drosophila (mosca)", self.h)
 
     def test_context_mutations_are_refused(self):
         cv = json.loads((DR / rv.CTX_NAME).read_text())
         st = rv.context_stats(self.rows4, cv)
         self.assertEqual(rv.validate_contexts(cv, self.rows4, st), [])
-        c = json.loads(json.dumps(cv)); c["verdicts"]["Q01"]["verdict"] = "concordant"
-        self.assertTrue(rv.validate_contexts(c, self.rows4, st))                # lower_sign_only is not a resolved sign
-        c = json.loads(json.dumps(cv)); c["verdicts"]["Q14"]["verdict"] = "discordant"
-        self.assertTrue(rv.validate_contexts(c, self.rows4, st))                # no opposite signs
-        c = json.loads(json.dumps(cv)); c["verdicts"]["Q02"]["verdict"] = "concordant_no_signal"
+        for q, wrong in (("Q01", "concordant"), ("Q14", "discordant"), ("Q02", "no_resolved_sign"), ("Q05", "no_resolved_sign"), ("Q07", "no_data"), ("Q03", "no_data"), ("Q12", "concordant")):
+            c = json.loads(json.dumps(cv)); c["verdicts"][q]["expect"] = wrong
+            self.assertTrue(rv.validate_contexts(c, self.rows4, st), (q, wrong))      # the full rule, not a necessary condition
+        c = json.loads(json.dumps(cv)); c["verdicts"]["Q01"]["expect"] = "unresolved"
+        self.assertTrue(rv.validate_contexts(c, self.rows4, st))
+        c = json.loads(json.dumps(cv)); c["verdicts"]["Q04"]["note_it"] = ""
         self.assertTrue(rv.validate_contexts(c, self.rows4, st))
         c = json.loads(json.dumps(cv)); c["expect"]["unknown"] = 90
         self.assertTrue(rv.validate_contexts(c, self.rows4, st))
@@ -1827,6 +1880,19 @@ class It7P7Data(unittest.TestCase):
         r2 = [dict(r) for r in self.rows4]
         r2[0]["direction"] = "UNKNOWN"
         self.assertTrue(rv.validate_contexts(cv, r2, rv.context_stats(r2, cv)))          # the unknown count moved
+        r3 = [dict(r) for r in self.rows4]
+        for r in r3:
+            if r["quantity_id"] == "Q06" and r["context_id"] == "ORG_KO":
+                r["direction"] = "higher"
+        self.assertTrue(rv.validate_contexts(cv, r3, rv.context_stats(r3, cv)))          # a matrix change that moves a verdict must be re-read
+
+    def test_tables_stack_on_a_phone_and_summaries_are_tappable(self):
+        css = (DR / "view/assets/curated.css").read_text()
+        self.assertIn(".tbl.stk td[data-label]::before", css)
+        self.assertIn("details>summary{padding:3px 0;min-height:24px}", css)
+        for t in re.findall(r'<table class="tbl[^"]*stk">.*?</table>', self.h, re.S):
+            self.assertIn("data-label=", t)
+        self.assertEqual(len(re.findall(r'<table class="tbl[^"]*stk">', self.h)), 3)
 
     def test_p4_matrix_checker_passes(self):
         r = subprocess.run([sys.executable, "-I", str(DR / rv.P4_DIR / "check_context_matrix.py")], capture_output=True, text=True, timeout=120)
@@ -1912,6 +1978,14 @@ class It7P7Deployment(unittest.TestCase):
         for bad in ("push", "schedule", "pull_request", "workflow_run"):
             self.assertNotRegex(on, bad)
         self.assertIn("manifest.json", self.wf)
+        top = re.search(r"^permissions:\n((?:  .*\n)+)", self.wf, re.M).group(1)
+        self.assertNotIn("pages", top)          # least privilege: the verify job cannot write Pages
+        self.assertNotIn("id-token", top)
+        dep = self.wf[self.wf.index("  deploy:"):]
+        self.assertIn("pages: write", dep)
+        self.assertIn("id-token: write", dep)
+        self.assertIn("sections 6 and 9", self.wf)
+        self.assertIn("DEPLOY_DOC", self.wf)      # the verify job also checks manifest.json, against the table of DEPLOY.md
         tracked = subprocess.run(["git", "-C", str(DR), "ls-files", "--full-name", "../../../../.github"], capture_output=True, text=True).stdout.split()
         self.assertEqual(tracked, [".github/workflows/public-release-gate.yml"])      # nothing was added under .github
 
@@ -1921,6 +1995,8 @@ class It7P7Deployment(unittest.TestCase):
             self.assertIn(h, self.text)
         for needle in ("without creating an account or spending", "package --check", "audit-shareable --dynamic", "does not change what the history already holds", "act of external publication",
                        "history or visibility remedy", "Nothing has been published", "not verifiable from inside the repository"):
+            self.assertIn(needle, self.text.replace("\n", " ").replace("  ", " "))
+        for needle in ("default branch", "robots", "disable the Pages source", "integrity check, not a content check"):
             self.assertIn(needle, self.text.replace("\n", " ").replace("  ", " "))
         self.assertNotRegex(self.text, r"[Àèéìòù]")      # English, as the repository's other files
 

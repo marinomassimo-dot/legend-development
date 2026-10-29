@@ -1,6 +1,6 @@
 {
  "schema": "legend.wwox.context_verdicts/1",
- "authoring": "Hand-authored from the verdict table of the verified README of the IT7 P4 context-differences record. Counts are read from context_matrix.tsv at build time; the verdict of a quantity is checked against the matrix by necessary conditions (concordant: the same resolved sign in at least two models and none opposite; discordant: opposite resolved signs; concordant_no_signal: every measured cell inside noise; single_system: measured in one model only). No subgroup is supported.",
+ "authoring": "Hand-authored Italian names and one-line notes for the quantities of the IT7 P4 context matrix. The verdict of each quantity is NOT authored: the builder derives it from the matrix by the rule printed on the page (discordant: opposite resolved signs; concordant: the same resolved sign in at least two models; single system: a resolved sign in one model only; no resolved sign: measured cells all inside noise; no data: nothing measured), and `expect` must equal the derived code, so a change of the matrix or of the rule must be re-read here. Where the cautious reading of the P4 record differs it is said in the note. No subgroup is supported.",
  "expect": {
   "contexts": 13,
   "quantities": 14,
@@ -27,67 +27,81 @@
  "model_labels_it": {
   "organoid": "organoide (anche degli organoidi di pazienti)",
   "shrna": "linea shRNA",
-  "mouse_deposit": "deposito murino P17",
-  "fly": "mosca",
+  "mouse_deposit": "dataset murino (P17)",
+  "fly": "Drosophila (mosca)",
   "rat": "ratto",
   "p47t": "topo P47T"
  },
  "verdicts": {
   "Q01": {
-   "verdict": "unresolved",
-   "quantity_it": "mRNA di ATF4 (singolo gene)"
+   "quantity_it": "mRNA di ATF4 (singolo gene)",
+   "expect": "no_resolved_sign",
+   "note_it": "Solo segni non risolti: nel topo cala in tutti e quattro i contrasti ma la differenza poggia in parte sul gruppo di controllo; non è una misura dell'attività."
   },
   "Q02": {
-   "verdict": "discordant",
-   "quantity_it": "Insieme dei bersagli ISR, livello del trascritto"
+   "quantity_it": "Insieme dei bersagli ISR, livello del trascritto",
+   "expect": "discordant",
+   "note_it": "Organoide più basso, linea shRNA più alta; il topo è dentro il rumore e non rompe il pareggio."
   },
   "Q03": {
-   "verdict": "no_data",
-   "quantity_it": "ISR a livello proteico o di fosforilazione"
+   "quantity_it": "ISR a livello proteico o di fosforilazione",
+   "expect": "single_system",
+   "note_it": "Misurato solo nella mosca (più alto solo con amiloide): nessuna misura in sistemi neurali umani o murini."
   },
   "Q04": {
-   "verdict": "concordant_no_signal",
-   "quantity_it": "Rami della risposta UPR, trascritti"
+   "quantity_it": "Rami della risposta UPR, trascritti",
+   "expect": "no_resolved_sign",
+   "note_it": "Dentro il rumore in quasi tutti i contesti; l'unico contrasto murino fuori dal rumore è non specifico."
   },
   "Q05": {
-   "verdict": "unresolved",
-   "quantity_it": "Glicolisi e LDHA, trascritti"
+   "quantity_it": "Glicolisi e LDHA, trascritti",
+   "expect": "concordant",
+   "note_it": "Più alto in organoide e in mosca con amiloide, nessun segno opposto; nel topo nessun segno risolto. Il verdetto prudente del documento P4 è «non risolto tra specie»."
   },
   "Q06": {
-   "verdict": "concordant_no_signal",
-   "quantity_it": "Famiglia PDK e PDK1, trascritti"
+   "quantity_it": "Famiglia PDK e PDK1, trascritti",
+   "expect": "no_resolved_sign",
+   "note_it": "Dentro il rumore in ogni contesto misurato."
   },
   "Q07": {
-   "verdict": "no_data",
-   "quantity_it": "Lattato, flusso o ATP (funzionale)"
+   "quantity_it": "Lattato, flusso o ATP (funzionale)",
+   "expect": "discordant",
+   "note_it": "Più basso nella linea shRNA (resazurina grezza), più alto nella mosca con amiloide; nessuna misura di flusso in cellule neurali."
   },
   "Q08": {
-   "verdict": "unresolved",
-   "quantity_it": "Trascritti OXPHOS nucleari"
+   "quantity_it": "Trascritti OXPHOS nucleari",
+   "expect": "no_resolved_sign",
+   "note_it": "Più bassi in cinque contesti ma non specifici (controlli non correlati si muovono quanto): non letti come segnale respiratorio."
   },
   "Q09": {
-   "verdict": "discordant",
-   "quantity_it": "Trascritti della traduzione mitocondriale"
+   "quantity_it": "Trascritti della traduzione mitocondriale",
+   "expect": "discordant",
+   "note_it": "Più bassi nell'organoide, più alti nella linea shRNA; effetti piccoli."
   },
   "Q10": {
-   "verdict": "unresolved",
-   "quantity_it": "Marcatori dei progenitori (glia radiale)"
+   "quantity_it": "Marcatori dei progenitori (glia radiale)",
+   "expect": "discordant",
+   "note_it": "Calo robusto nei progenitori shRNA ma segni opposti altrove; la composizione del tessuto può spiegarlo. Il documento P4 lo legge come non risolto."
   },
   "Q11": {
-   "verdict": "unresolved",
-   "quantity_it": "Marcatori neuronali"
+   "quantity_it": "Marcatori neuronali",
+   "expect": "discordant",
+   "note_it": "Segni opposti tra linee, topo e organoidi di pazienti; nel topo è l'effetto di composizione atteso. Il documento P4 lo legge come non risolto."
   },
   "Q12": {
-   "verdict": "single_system",
-   "quantity_it": "Trascritti di mielina e oligodendrociti"
+   "quantity_it": "Trascritti di mielina e oligodendrociti",
+   "expect": "single_system",
+   "note_it": "Più bassi nei quattro contrasti murini, che sono un solo modello; nessun altro contesto è stato calcolato."
   },
   "Q13": {
-   "verdict": "discordant",
-   "quantity_it": "Reattività gliale"
+   "quantity_it": "Reattività gliale",
+   "expect": "discordant",
+   "note_it": "Istologia più alta in topo nullo e P47T, più bassa nel ratto; nessun programma reattivo nel trascritto dell'organoide."
   },
   "Q14": {
-   "verdict": "concordant",
-   "quantity_it": "Iperecitabilità di rete o crisi"
+   "quantity_it": "Ipereccitabilità di rete o crisi",
+   "expect": "concordant",
+   "note_it": "Più alta in organoide, topo e P47T e negli organoidi di pazienti: letture diverse, stessa direzione."
   }
  }
 }

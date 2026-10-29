@@ -149,3 +149,12 @@ nav .in a{display:inline-block;min-height:26px;line-height:26px}
 .chip.vd-unresolved,.chip.vd-not_detected_not_excluded,.chip.vd-inconclusive{border:2px dashed var(--mut)}.chip.vd-single_system,.chip.vd-no_data{border:2px dotted var(--mut)}.chip.vd-no_added_value{border:2px solid var(--g4);background:var(--g4bg)}
 .pred-t td,.ctx-t td,.ctx-t th{vertical-align:top}.secprint{max-width:820px}
 @media print{.scrollx{overflow:visible}.sel-ind,.chain{page-break-inside:avoid;break-inside:avoid-page}.hyp{margin:6px 0;padding:6px 8px}.hyp h3{break-after:avoid;font-size:10pt}.hyp-three{break-inside:avoid;grid-template-columns:1fr 1fr 1fr}.hyp-b{padding:3px 6px}.hyp-b h4{font-size:7.5pt}.hyp-dl,.hyp .mini{font-size:8pt}.secprint .hyp-dl dd{margin-bottom:3px}.secprint .tbl{display:table;font-size:8.5pt}.secprint{font-size:9pt}.btnlink{display:none}}
+/* IT7 P7 repairs: stacked tables on a phone (no mid-word breaks), tap targets of at least 24 px on summaries */
+details>summary{padding:3px 0;min-height:24px}
+.tbl.stk th,.tbl.stk td{overflow-wrap:normal;word-break:normal;hyphens:manual}
+@media (max-width:560px){
+ .tbl.stk,.tbl.stk tbody,.tbl.stk tr,.tbl.stk th,.tbl.stk td{display:block;width:auto;overflow:visible}
+ .tbl.stk thead{display:none}.tbl.stk tr{border:1px solid var(--line);border-radius:6px;margin:6px 0;padding:4px 8px}
+ .tbl.stk th,.tbl.stk td{border:0;padding:2px 0}.tbl.stk th[scope=row]{font-weight:700}
+ .tbl.stk td[data-label]::before{content:attr(data-label) ": ";font-size:.76rem;color:var(--mut)}
+}

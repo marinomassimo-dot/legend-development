@@ -18,7 +18,7 @@
    },
    "^\\.cur\\.(needs|threads|groups|gaps|goals|tracks|scopes|group_note|meta|evidence_graph|work_order|selection|hypotheses|predictive|contexts)(\\.|\\[\\]|$)": {
     "class": "OWN",
-    "values": 3449,
+    "values": 3493,
     "why": "needs, threads, positions, evidence graph, work order and the IT7 selection, comparison, predictive-test and context sections: own text or counts computed from own census files"
    },
    "^\\.cur\\.cands\\[\\]\\.": {
@@ -183,7 +183,7 @@
    },
    "^\\.ui\\.": {
     "class": "UI",
-    "values": 760,
+    "values": 779,
     "why": "Italian orientation text (builder data UI_IT and siblings)"
    }
   },
@@ -211,7 +211,7 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 1936,
+    "forbidden-name": 1939,
     "forbidden-wording": 12
    },
    "co_attested_wording": [
@@ -435,11 +435,11 @@
   "BIBLIO": 1850,
   "COUNT": 7757,
   "ID": 3048,
-  "OWN": 54065,
+  "OWN": 54109,
   "ROWNAME": 1506,
   "SRC_A": 91,
   "SRC_META": 244,
-  "UI": 760
+  "UI": 779
  },
  "embedded_sources": [
   {
@@ -517,8 +517,8 @@
    "sha256": "d8fe6a3455466783564803428b6318c1c442db6a16dfb97de8a6b7dcf944cc9d"
   },
   "index.html": {
-   "bytes": 2459249,
-   "sha256": "e961a8b8c740b18caf7e8c0b6010aa2dcdc5e149735e4b9ec050c450ba96ae69"
+   "bytes": 2475675,
+   "sha256": "577a8745ce96be7462c673bc8fffd4e7d83b24acd372ddebbdabe2c9ace05826"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",

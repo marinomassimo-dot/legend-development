@@ -706,7 +706,7 @@ UI_IT7 = {
     "sel_i_need_action": "di cui con un'azione dichiarata su un bersaglio del bisogno", "sel_n_need_action": "L'azione è dichiarata dalla fonte; la direzione verso il bisogno è risolta solo dove una riga di ruolo lo permette.",
     "sel_i_card_linked": "Famiglie collegate a una scheda curata", "sel_n_card_linked": "Il sottoinsieme che ha un'ipotesi scritta e un prossimo passo.",
     "sel_i_cards": "Schede curate", "sel_n_cards": "Interventi o classi, non composti: includono dieta, vettori e integratori.",
-    "sel_i_cards_next": "Schede con un prossimo passo nominato (escluse le astensioni)", "sel_n_cards_next": "Pronte per un test con nome non significa consigliate: nessun composto è raccomandato e nessun dato individuale è usato.",
+    "sel_i_cards_next": "Schede con un prossimo passo nominato (escluse le astensioni)", "sel_n_cards_next": "«Pronta per un test con nome» non significa «consigliata»: nessun composto è raccomandato e nessun dato individuale è usato.",
     "sel_i_needs_plan": "Bisogni con una voce nel piano di verifiche", "sel_n_needs_plan": "Il piano segue l'ordine del registro dei bisogni, senza graduatoria.",
     "sel_ov_h": "Sovrapposizione dei due metodi (firma neurale stretta contro rete), sul solo testabile",
     "sel_ov_note": "Nel «né l'uno né l'altro» del totale cadono anche i composti senza chiave strutturale, il cui stato M-sig è sconosciuto e non negativo: per questo qui il denominatore è il solo testabile.",
@@ -714,22 +714,35 @@ UI_IT7 = {
     "sel_k_h": "Che cosa conta ogni numero: legami biologici e risultati sperimentali",
     "sel_k_note": "Unità: celle (famiglia o intervento × bisogno) della matrice; i livelli non si sommano mai e nessuno è una quota di malattia trattata.",
     "sel_k_l1": "Legame biologico: bersaglio dell'intervento documentato per il bisogno (associazione)", "sel_k_l2": "Coerenza meccanicistica: direzione coerente con il bisogno / opposta / direzione non risolta",
-    "sel_k_l3": "Effetto osservato (L3), di cui in un sistema WWOX", "sel_k_l4": "Recupero osservato in un sistema WWOX (L4), di cui sperimentale",
+    "sel_k_l3": "Effetto osservato, di cui in un sistema WWOX", "sel_k_l4": "Recupero osservato in un sistema WWOX, di cui sperimentale",
     "sel_warn_share": "Una quota di vie biologiche o di bersagli collegati non è una quota di malattia trattata: un legame di bersaglio è un'associazione documentata, non una predizione direzionale né un effetto osservato.",
     "sel_warn_prob": "Nessuna probabilità clinica calibrata è mostrata, perché nessuna è stata validata; il percentile del modello non è mostrato affatto.",
     # hypotheses
+    "hyp_model_none": "nessuna posizione del modello per questa ipotesi",
+    "hyp_axis": "Confronto dei metodi sull'asse glicolisi/lattato: nessun vantaggio dimostrato, esplorativo",
+    "hyp_axis_note": "Riguarda i metodi di ordinamento sul sottoinsieme pilota, non un giudizio sul composto: per questo composto il modello non dà alcuna posizione.",
+    "hyp_r_firewalled": "Escluso di proposito dal confronto dei metodi perché ha una scheda curata (così il confronto non poteva essere regolato sui composti già discussi).",
+    "hyp_r_not_compound": "Non è un composto con una riga di bersaglio: il metodo di rete non si applica.",
+    "hyp_r_outside_question": "Fuori dalla domanda del confronto, che riguardava un modulo di trascritti glicolisi/lattato: proteine, recettori e glia non ne erano oggetto.",
+    "hyp_usable": "I composti sono nel censimento degli utilizzabili (hanno l'input che un metodo richiede) ma non sono stati valutati.",
+    "hyp_intro_model": "Posizione del modello: che cosa dice di questa ipotesi il confronto dei metodi (la prova predittiva, più sotto). Oggi non dice nulla di positivo per nessuna delle nove: «nessuna posizione» significa non valutata, non respinta, e «nessun vantaggio dimostrato» riguarda un metodo sul sottoinsieme pilota, mai un composto.",
+    "hyp_key": "Chiave delle lettere: F ipotesi favorevole, C controevidenza da chiarire, P premessa mancante; il numero dice da dove viene il sostegno (1 controllato in un sistema WWOX, 2 sottile in WWOX, 3 dal bersaglio o da un'altra malattia). Sono posizioni, non un ordine.",
+    "ctx_d_higher": "più alto", "ctx_d_lower": "più basso", "ctx_d_no_resolvable_sign": "nessun segno risolvibile", "ctx_d_UNKNOWN": "sconosciuto", "ctx_d_higher_sign_only": "più alto (solo segno)",
+    "ctx_d_lower_sign_only": "più basso (solo segno)", "ctx_d_lower_non_specific": "più basso, non specifico", "ctx_d_set_dependent": "dipende dall'insieme di geni", "ctx_d_sparse": "dati troppo scarsi",
+    "ctx_d_at_null_edge": "al margine del rumore", "ctx_d_changed_unsigned": "cambiato, senza segno", "ctx_c_note": "Nota", "ctx_v_no_resolved_sign": "nessun segno risolto nei sistemi misurati",
+    "pred_ci_first": "intervallo di confidenza al 90%",
     "hyp_h": "Ipotesi a confronto: priorità di ricerca, posizione del modello ed evidenza osservata",
     "hyp_lead": "Nove ipotesi che coprono i due obiettivi di ricerca e diversi tipi di intervento, scelte per copertura e non per merito. Tre cose restano separate, in blocchi distinti: la priorità di ricerca (posizione F, C o P e motivo del piano di verifiche: dice dove portare il prossimo studio, non se il farmaco funziona), la posizione del modello e l'evidenza osservata in un sistema WWOX. Nessun punteggio combinato, nessun ordine.",
-    "hyp_note_en": "Il testo scientifico dei blocchi è conservato in inglese, come nel confronto originale; potenza ed esposizione non sono riportate in questa versione.",
+    "hyp_note_en": "Il testo scientifico dei blocchi è in inglese, come nel confronto originale. Concentrazioni e percentuali citate dalle fonti descrivono studi esterni: non sono una guida alla dose e non sono evidenza WWOX.",
     "hyp_prio": "Priorità di ricerca", "hyp_prio_card": "scheda", "hyp_prio_on": "sul bisogno", "hyp_plan": "Piano di verifiche",
-    "hyp_model": "Posizione del modello", "hyp_model_no_added_value": "nessun vantaggio dimostrato, esplorativo", "hyp_model_not_evaluated": "il modello non si applica a questa ipotesi (non valutata)",
+    "hyp_model": "Posizione del modello",
     "hyp_obs": "Evidenza osservata in un sistema WWOX", "hyp_dem": "Favorevole: premessa dimostrata", "hyp_opp": "Contraria: effetti opposti o controevidenza", "hyp_missing": "Mancante: premessa non dimostrata",
     "hyp_ext": "Precedenti esterni (non sono evidenza WWOX)", "hyp_ctx": "Contesto di applicabilità", "hyp_track": "Track e genotipo", "hyp_depth": "Profondità del beneficio cercato", "hyp_next": "Prossimo esperimento", "hyp_status": "Stato dell'esperimento",
     "hyp_more": "Dettagli: contesto, evidenza favorevole, contraria e mancante, prossimo esperimento",
     "hyp_none_plan": "nessuna voce nel piano",
     # predictive test
     "pred_h": "Prova predittiva: un confronto esplorativo di metodi", "pred_label": "ESPLORATIVO: un risultato computazionale non è efficacia terapeutica",
-    "pred_q": "Domanda", "pred_methods": "Metodi", "pred_prereg": "Pre-registrazione", "pred_prereg_txt": "Domanda, metodi, soglie e criteri furono registrati prima di aprire qualsiasi valore di valutazione; un emendamento ha ricongelato gli input, ancora prima di aprirne uno. Nessun criterio è stato cambiato dopo un risultato.",
+    "pred_q": "Domanda", "pred_methods": "Metodi", "pred_prereg": "Pre-registrazione", "pred_prereg_txt": "Domanda, metodi, soglie e criteri sono stati registrati prima di aprire qualsiasi valore di valutazione; un emendamento ha congelato di nuovo gli input, ancora prima di aprirne uno. Nessun criterio è stato cambiato dopo un risultato.",
     "pred_universe": "Universo valutato", "pred_universe_txt": "famiglie con {s} firme, scelte per disponibilità di dati tra le {p} del sottoinsieme pilota ({c} famiglie nel catalogo): un sottoinsieme esplorativo, NON uno screening del catalogo.",
     "pred_threshold": "Soglia registrata e potenza", "pred_threshold_txt": "Soglia rho {t}; con {n} famiglie il minimo effetto rilevabile è circa {m}: effetti più piccoli non sono esclusi. «Nessun vantaggio» significa nessun guadagno rilevabile, non che i composti non agiscano sul modulo.",
     "pred_verdict_h": "Verdetto per metodo", "pred_c_cmp": "Confronto", "pred_c_verdict": "Verdetto", "pred_c_num": "Numeri", "pred_c_reopen": "Si riapre se",
@@ -741,9 +754,9 @@ UI_IT7 = {
     "ctx_lead": "Per ogni quantità, che cosa mostrano i sistemi in cui WWOX è perso. Livello del trascritto salvo dove indicato; i contesti sono più numerosi dei modelli indipendenti.",
     "ctx_facts": "{cells} celle ({contexts} contesti × {quantities} quantità): {measured} con una misura o un dato riportato e {unknown} sconosciute. Le sconosciute sono lacune, non zeri. Contando i modelli e non le colonne, i sistemi indipendenti sono circa {models}.",
     "ctx_no_subgroup": "Nessun sottogruppo di pazienti è sostenuto da questi dati: nessuna etichetta di risposta, nessun gruppo computazionale offerto come biomarcatore. I contesti sono sistemi modello, non pazienti.",
-    "ctx_models_h": "Modelli", "ctx_c_q": "Quantità", "ctx_c_hi": "più alto", "ctx_c_lo": "più basso", "ctx_c_ns": "nessun segno", "ctx_c_unk": "sconosciuto", "ctx_c_models": "modelli con segno risolto", "ctx_c_verdict": "Lettura",
-    "ctx_v_concordant": "concordante", "ctx_v_concordant_no_signal": "concordante: nessun segnale", "ctx_v_discordant": "discordante", "ctx_v_unresolved": "non risolto", "ctx_v_single_system": "un solo sistema", "ctx_v_no_data": "nessun dato dove serve",
-    "ctx_def": "Concordante: lo stesso segno risolto in almeno due modelli e nessuno opposto. Discordante: segni risolti opposti. Un segno è «risolto» solo se distinguibile dal rumore con il criterio della fonte; «nessun segno» e «sconosciuto» non sono lo stesso.",
+    "ctx_models_h": "Modelli", "ctx_c_q": "Quantità", "ctx_c_hi": "più alto (n. contesti)", "ctx_c_lo": "più basso (n. contesti)", "ctx_c_ns": "nessun segno (n. contesti)", "ctx_c_unk": "sconosciuto (n. contesti)", "ctx_c_models": "modelli con segno risolto", "ctx_c_verdict": "Lettura",
+    "ctx_v_concordant": "concordante", "ctx_v_discordant": "discordante", "ctx_v_single_system": "un solo sistema", "ctx_v_no_data": "nessun dato",
+    "ctx_def": "La lettura è derivata dalla regola, non assegnata a mano. Discordante: segni risolti di direzione opposta. Concordante: lo stesso segno risolto in almeno due modelli e nessuno opposto. Un solo sistema: segno risolto in un solo modello. Nessun segno risolto: le celle misurate sono tutte dentro il rumore. Nessun dato: nulla è misurato. Un segno è «risolto» solo se distinguibile dal rumore con il criterio della fonte, e si contano i modelli, non le colonne. La lettura prudente del documento originale può essere più cauta: la nota di ogni riga lo dice.",
     "ctx_full": "Matrice completa (quantità × contesto)", "ctx_total": "Totale",
 }
 UI_IT.update(UI_IT7)
@@ -1425,7 +1438,7 @@ P2_DIR, P3_DIR, P4_DIR, P5_DIR = "usable_compounds_it7_p2_20261029", "network_co
 PRED_NAME, CTX_NAME = "view/predictive_test.json", "view/context_verdicts.json"
 PRED_SCHEMA, CTX_SCHEMA = "legend.wwox.predictive_test/1", "legend.wwox.context_verdicts/1"
 VERDICT_CODES = ("no_added_value", "not_detected_not_excluded", "inconclusive")
-CTX_VERDICT_CODES = ("concordant", "concordant_no_signal", "discordant", "unresolved", "single_system", "no_data")
+CTX_VERDICT_CODES = ("concordant", "discordant", "single_system", "no_resolved_sign", "no_data")
 RESOLVED = {"higher": 1, "lower": -1}                       # a direction distinguishable from noise by the source's own criterion
 NO_SIGNAL = {"no_resolvable_sign", "lower_non_specific", "at_null_edge", "sparse"}
 P5_COLUMNS = ("record_id", "hypothesis_cards", "intervention_and_type", "research_objective", "genotype_lesion_applicability_track", "depth_of_benefit_sought", "need_link", "PRIORITY_position_and_work_order_reason",
@@ -1509,7 +1522,7 @@ def dig(o, path: str):
     return o
 
 
-def validate_predictive(doc: dict, p3: dict, e1: dict) -> list[str]:
+def validate_predictive(doc: dict, p3: dict, e1: dict, dr: Path | None = None) -> list[str]:
     errs = []
     if doc.get("schema") != PRED_SCHEMA:
         errs.append(f"schema must be {PRED_SCHEMA}")
@@ -1535,6 +1548,9 @@ def validate_predictive(doc: dict, p3: dict, e1: dict) -> list[str]:
                 continue
             if round(val, n["digits"]) != n["expect"]:
                 errs.append(f"{w}: {n['id']} is {round(val, n['digits'])} in the data but the text expects {n['expect']}")
+        for x in v.get("external_values") or []:   # a value that sits in a verifier's report and not in a data file: the report must still contain it
+            if dr is not None and (dr.parent / x["check_file"]).exists() and x["check_text"] not in (dr.parent / x["check_file"]).read_text(encoding="utf-8"):   # a partial copy of the module (a test fixture) has no report to read
+                errs.append(f"{w}: {x['id']}: {x['check_text']!r} is not in {x['check_file']}")
     if p3.get("nU") != 256 or doc.get("universe", {}).get("pilot_families") is None:
         errs.append("the evaluated universe must be the 256 families of the P3 comparison, stated as a pilot subset")
     return errs
@@ -1568,6 +1584,18 @@ def context_stats(rows: list[dict], cv: dict) -> dict:
     return out
 
 
+def derive_context_verdict(s: dict) -> str:
+    """The reading of one quantity, by the rule printed on the page: discordant (resolved signs of both directions), concordant (one resolved sign in at least two models), single system (a resolved sign in one model only),
+    no resolved sign (measured cells, all inside noise), no data (nothing measured). A sign is resolved only where the source's own criterion says so (higher or lower; a sign-only or non-specific direction is not)."""
+    if s["models_measured"] == 0:
+        return "no_data"
+    if len(s["signs"]) >= 2:
+        return "discordant"
+    if len(s["signs"]) == 1:
+        return "concordant" if s["models_same_sign"] >= 2 else "single_system"
+    return "no_resolved_sign"
+
+
 def validate_contexts(cv: dict, rows: list[dict], stats: dict) -> list[str]:
     errs = []
     if cv.get("schema") != CTX_SCHEMA:
@@ -1589,25 +1617,37 @@ def validate_contexts(cv: dict, rows: list[dict], stats: dict) -> list[str]:
         if m not in cv.get("model_labels_it", {}):
             errs.append(f"model {m} has no Italian label")
     if set(cv.get("verdicts", {})) != set(qs):
-        errs.append("a verdict is required for every quantity and for no other")
+        errs.append("a name and a note are required for every quantity and for no other")
     for q, v in (cv.get("verdicts") or {}).items():
         s = stats.get(q)
         if s is None:
             continue
-        code = v.get("verdict")
-        if code not in CTX_VERDICT_CODES:
-            errs.append(f"{q}: verdict must be one of {CTX_VERDICT_CODES}")
-        elif code == "concordant" and not (len(s["signs"]) == 1 and s["models_same_sign"] >= 2):
-            errs.append(f"{q}: 'concordant' needs the same resolved sign in at least two models and none opposite")
-        elif code == "discordant" and len(s["signs"]) < 2:
-            errs.append(f"{q}: 'discordant' needs opposite resolved signs")
-        elif code == "concordant_no_signal" and (s["higher"] or s["lower"] or any(d not in NO_SIGNAL and d != "UNKNOWN" for d in s["directions"].values())):
-            errs.append(f"{q}: 'concordant_no_signal' needs every measured cell inside noise")
-        elif code == "single_system" and s["models_measured"] != 1:
-            errs.append(f"{q}: 'single_system' needs exactly one model measured")
-        if not v.get("quantity_it"):
-            errs.append(f"{q}: quantity_it is required")
+        if v.get("expect") not in CTX_VERDICT_CODES:
+            errs.append(f"{q}: expect must be one of {CTX_VERDICT_CODES}")
+        elif derive_context_verdict(s) != v["expect"]:
+            errs.append(f"{q}: the rule gives {derive_context_verdict(s)!r} but the note was written for {v['expect']!r}")
+        if not v.get("quantity_it") or not v.get("note_it"):
+            errs.append(f"{q}: quantity_it and note_it are required")
     return errs
+
+
+def eng_clean(t: str) -> str:
+    """English text printed on the Italian page carries no repository file name (the Italian placeholder the shareable policy would insert would sit inside an English sentence)."""
+    return FILE_TOKEN_RE.sub("a repository record", str(t))
+
+
+def classify_model(text: str) -> dict:
+    """What the P5 model cell says, as codes: whether an axis result of the P3 comparison is quoted (it is about the methods on the pilot subset, never a position of the compound), why the compound has no model position,
+    and whether the compound is in the usable census."""
+    t = text.strip()
+    reasons = []
+    if "firewalled" in t:
+        reasons.append("firewalled")
+    if re.search(r"not a compound question|no compound target row|no signed target row", t):
+        reasons.append("not_compound")
+    if re.search(r"transcript module|receptor-physiology|not the glycolysis module|not a transcript question", t):
+        reasons.append("outside_question")
+    return {"axis": t.startswith("P3") and "NO ADDED VALUE" in t, "reasons": reasons, "usable": "usable by the network method" in t}
 
 
 def validate_hypotheses(rows: list[dict], card_ids, need_ids, wo_needs) -> list[str]:
@@ -1625,6 +1665,10 @@ def validate_hypotheses(rows: list[dict], card_ids, need_ids, wo_needs) -> list[
         m = r["MODEL_position_P3_P2"].strip()
         if not (m.startswith("None") or (m.startswith("P3") and "NO ADDED VALUE" in m)):
             errs.append(f"{w}: the model position is neither 'None' nor a P3 'NO ADDED VALUE': the Italian label would be wrong")
+        elif m.startswith("P3") and "No model position for this compound" not in m:
+            errs.append(f"{w}: a P3 axis result without 'No model position for this compound' would read as a position of the compound")
+        elif not classify_model(m)["reasons"]:
+            errs.append(f"{w}: no reason (firewalled, not a compound question, outside the question) can be read from the model cell")
         for k in P5_COLUMNS:
             if not r[k].strip():
                 errs.append(f"{w}: column {k} is empty (write UNKNOWN, never leave it blank)")
@@ -1705,14 +1749,14 @@ def build_it7(dr: Path, funnel: dict, mx: dict, units: dict, cur: dict) -> dict:
         hyp.append({"id": r["record_id"], "cards": cids, "needs": nids, "title": " · ".join(cands[c]["short"] for c in cids),
                     "positions": {c: [{"need": n_, "group": cands[c]["links"][n_]["group"]} for n_ in nids if n_ in cands[c]["links"]] for c in cids},
                     "work_order": [{"need": n, "kind": wo_by[n]["kind"]} for n in nids if n in wo_by],
-                    "model": "no_added_value" if m.startswith("P3") else "not_evaluated",
+                    "model": "none", **{("model_" + k): v for k, v in classify_model(m).items()},
                     "objective": clip_sentence(r["research_objective"], 160), "track": clip_sentence(r["genotype_lesion_applicability_track"], 260), "depth": clip_sentence(r["depth_of_benefit_sought"], 260),
-                    "observed": clip_sentence(r["OBSERVED_wwox_specific_evidence"], 520), "demonstrated": clip_sentence(r["premise_demonstrated"], 360), "missing": clip_sentence(r["premise_missing"], 360),
-                    "external": clip_sentence(r["external_precedents_with_reading_depth"], 520), "opposed": clip_sentence(r["potentially_opposed_effects"], 420),
-                    "next": clip_sentence(r["next_decision_changing_experiment"], 420), "status": clip_sentence(r["experiment_status"], 160)})
+                    "observed": clip_sentence(eng_clean(r["OBSERVED_wwox_specific_evidence"]), 520), "demonstrated": clip_sentence(eng_clean(r["premise_demonstrated"]), 360), "missing": clip_sentence(eng_clean(r["premise_missing"]), 360),
+                    "external": clip_sentence(eng_clean(r["external_precedents_with_reading_depth"]), 520), "opposed": clip_sentence(eng_clean(r["potentially_opposed_effects"]), 420),
+                    "next": clip_sentence(eng_clean(r["next_decision_changing_experiment"]), 420), "status": clip_sentence(r["experiment_status"], 160)})
     # ---- predictive test (P3)
     pred = jload(dr / PRED_NAME)
-    errs = validate_predictive(pred, p3, e1)
+    errs = validate_predictive(pred, p3, e1, dr)
     if errs:
         raise SystemExit(f"{PRED_NAME} is invalid:\n  " + "\n  ".join(errs))
     verdicts = []
@@ -1722,6 +1766,8 @@ def build_it7(dr: Path, funnel: dict, mx: dict, units: dict, cur: dict) -> dict:
         for n in v["numbers"]:
             val = dig(src, n["path"]) - (dig(src, n["minus"]) if n.get("minus") else 0)
             nums.append({"id": n["id"], "value": round(val, n["digits"]), "digits": n["digits"]})
+        for x in v.get("external_values") or []:
+            nums.append({"id": x["id"], "value": x["value"], "digits": x["digits"]})
         verdicts.append({"id": v["id"], "comparison_it": v["comparison_it"], "verdict": v["verdict"], "numbers": nums, "reopen_it": v["reopen_it"]})
     predictive = {"exploratory": True, "question": pred["question"], "question_it": pred["question_it"], "methods": pred["methods"], "preregistration": pred["preregistration"], "threshold": pred["threshold"],
                   "minimum_detectable_effect": pred["minimum_detectable_effect"], "universe": {"families": p3["nU"], "signatures": p3["n_signatures"], "pilot_families": pred["universe"]["pilot_families"], "catalogue_families": n_fam},
@@ -1737,9 +1783,9 @@ def build_it7(dr: Path, funnel: dict, mx: dict, units: dict, cur: dict) -> dict:
     ctx_ids = list(dict.fromkeys(r["context_id"] for r in mrows))
     contexts = {"cells": len(mrows), "unknown": unk, "measured": len(mrows) - unk, "contexts": len(ctx_ids), "quantities": len(st), "models": len(set(cv["models"].values())),
                 "model_labels_it": cv["model_labels_it"], "models_of": cv["models"], "context_ids": ctx_ids,
-                "rows": [{"id": q, "quantity": s["quantity"], "quantity_it": cv["verdicts"][q]["quantity_it"], "verdict": cv["verdicts"][q]["verdict"], "higher": s["higher"], "lower": s["lower"], "other": s["other"],
-                          "unknown": s["unknown"], "models_resolved": s["models_resolved"], "models_measured": s["models_measured"], "directions": [s["directions"][c] for c in ctx_ids]} for q, s in st.items()],
-                "verdict_counts": dict(Counter(v["verdict"] for v in cv["verdicts"].values()))}
+                "rows": [{"id": q, "quantity": s["quantity"], "quantity_it": cv["verdicts"][q]["quantity_it"], "verdict": derive_context_verdict(s), "higher": s["higher"], "lower": s["lower"], "other": s["other"],
+                          "unknown": s["unknown"], "models_resolved": s["models_resolved"], "models_measured": s["models_measured"], "directions": [s["directions"][c] for c in ctx_ids], "note_it": cv["verdicts"][q]["note_it"]} for q, s in st.items()],
+                "verdict_counts": dict(Counter(derive_context_verdict(s) for s in st.values()))}
     return {"selection": selection, "hypotheses": hyp, "predictive": predictive, "contexts": contexts}
 
 
@@ -3038,8 +3084,9 @@ def render_selection(P: dict) -> str:
                          f'<p class="mini sel-note">{E(U["sel_n_" + i["id"]])}{extra}</p></div>')
         steps.append(f'<div class="sel-step" data-step="{E(st["id"])}"><h3>{E(U["sel_s_" + st["id"]])}</h3>{"".join(items)}</div>')
     ov = S["overlap"]
+    ovk = (("both", "sel_ov_both"), ("only_net_usable", "sel_ov_net"), ("only_sig_neural", "sel_ov_sig"), ("neither", "sel_ov_none"), ("denominator", "sel_ov_den"))
     rows = "".join(
-        f'<tr><th scope="row">{E(U["sel_u_" + u[0]])}</th>' + "".join(f'<td>{numit("sel.overlap." + u + "." + k, ov[u][k])}</td>' for k in ("both", "only_net_usable", "only_sig_neural", "neither", "denominator")) + "</tr>"
+        f'<tr><th scope="row">{E(U["sel_u_" + u[0]])}</th>' + "".join(f'<td data-label="{E(U[lab])}">{numit("sel.overlap." + u + "." + k, ov[u][k])}</td>' for k, lab in ovk) + "</tr>"
         for u in ("records", "families"))
     K = S["kinds"]
     kinds = (f'<ul class="sel-kinds"><li><b>{E(U["sel_k_l1"])}:</b> {numit("sel.kinds.L1", K["L1_documented"])}</li>'
@@ -3051,7 +3098,7 @@ def render_selection(P: dict) -> str:
           f'<li><b>{numit("sel.pv.eval_p3", ev["eval_p3"]["families"])}</b> {E(U["sel_pv_eval1"])}</li><li><b>{numit("sel.pv.eval_wwox", ev["eval_wwox_readout"]["records"])}</b> {E(U["sel_pv_eval2"])}</li></ul></div></div>')
     return (f'<section id="selection" aria-labelledby="h-sel"><h2 id="h-sel">{E(U["sel_h"])}</h2><p class="lead">{E(U["sel_lead"])}</p><p class="mini mut">{E(U["sel_units"])}</p>'
             f'<h3>{E(U["sel_pv_h"])}</h3>{pv}{"".join(steps)}'
-            f'<h3>{E(U["sel_ov_h"])}</h3><div class="scrollx"><table class="tbl"><thead><tr><th></th><th>{E(U["sel_ov_both"])}</th><th>{E(U["sel_ov_net"])}</th><th>{E(U["sel_ov_sig"])}</th><th>{E(U["sel_ov_none"])}</th><th>{E(U["sel_ov_den"])}</th></tr></thead><tbody>{rows}</tbody></table></div>'
+            f'<h3>{E(U["sel_ov_h"])}</h3><div class="scrollx"><table class="tbl stk"><thead><tr><th></th><th>{E(U["sel_ov_both"])}</th><th>{E(U["sel_ov_net"])}</th><th>{E(U["sel_ov_sig"])}</th><th>{E(U["sel_ov_none"])}</th><th>{E(U["sel_ov_den"])}</th></tr></thead><tbody>{rows}</tbody></table></div>'
             f'<p class="mini mut">{E(U["sel_ov_note"])}</p><h3>{E(U["sel_k_h"])}</h3><p class="mini mut">{E(U["sel_k_note"])}</p>{kinds}'
             f'<div class="note"><p>{E(U["sel_warn_share"])}</p><p><b>{E(U["sel_warn_prob"])}</b></p></div>'
             f'<p class="noprint"><a class="btnlink" href="#section=selection">{E(U["sec_print"])}</a></p></section>')
@@ -3068,16 +3115,18 @@ def render_hypotheses(P: dict) -> str:
             f'<div class="hyp-card"><b>{E(cm[c]["short"])}</b> <span class="mut">{E(c)}</span> ' + (" ".join(f'{pos_chip(x["group"])} <span class="mini mut">{E(U["hyp_prio_on"])} {E(NEED_IT.get(x["need"], x["need"]))}</span>' for x in h["positions"][c]) or f'<span class="mut">{E(U["cd_no_need"])}</span>') + "</div>"
             for c in h["cards"])
         plan = "".join(f'<div class="mini"><b>{E(U["hyp_plan"])}:</b> <span class="chip wo-k">{E(w["kind"])}</span> <span class="mut">{E(NEED_IT.get(w["need"], w["need"]))}</span></div>' for w in h["work_order"]) or f'<div class="mini mut">{E(U["hyp_none_plan"])}</div>'
-        mcls = "ok" if h["model"] == "no_added_value" else "na"
+        reasons = "".join(f'<li>{E(U["hyp_r_" + r])}</li>' for r in h["model_reasons"])
+        axis = f'<p class="mini"><span class="chip model-ok">{E(U["hyp_axis"])}</span> {E(U["hyp_axis_note"])}</p>' if h["model_axis"] else ""
+        usable = f'<p class="mini">{E(U["hyp_usable"])}</p>' if h["model_usable"] else ""
         arts.append(
-            f'<article class="hyp" id="hyp-{E(h["id"])}" data-hyp="{E(h["id"])}" data-model="{E(h["model"])}"><h3>{E(h["title"])} <span class="mut">{E(h["id"])}</span></h3>'
+            f'<article class="hyp" id="hyp-{E(h["id"])}" data-hyp="{E(h["id"])}" data-model="{E(h["model"])}" data-axis="{1 if h["model_axis"] else 0}"><h3>{E(h["title"])} <span class="mut">{E(h["id"])}</span></h3>'
             f'<div class="hyp-three"><div class="hyp-b hyp-prio"><h4>{E(U["hyp_prio"])}</h4>{prio}{plan}</div>'
-            f'<div class="hyp-b hyp-model"><h4>{E(U["hyp_model"])}</h4><p><span class="chip model-{mcls}">{E(U["hyp_model_" + h["model"]])}</span></p></div>'
+            f'<div class="hyp-b hyp-model"><h4>{E(U["hyp_model"])}</h4><p><span class="chip model-na">{E(U["hyp_model_none"])}</span></p>{axis}<ul class="mini">{reasons}</ul>{usable}</div>'
             f'<div class="hyp-b hyp-obs"><h4>{E(U["hyp_obs"])}</h4><p class="mini">{E(h["observed"])}</p></div></div>'
             f'<details class="inl"><summary>{E(U["hyp_more"])}</summary><dl class="hyp-dl"><dt>{E(U["hyp_track"])}</dt><dd>{E(h["track"])}</dd><dt>{E(U["hyp_depth"])}</dt><dd>{E(h["depth"])}</dd>'
             f'<dt>{E(U["hyp_dem"])}</dt><dd>{E(h["demonstrated"])}</dd><dt>{E(U["hyp_opp"])}</dt><dd>{E(h["opposed"])}</dd><dt>{E(U["hyp_missing"])}</dt><dd>{E(h["missing"])}</dd>'
             f'<dt>{E(U["hyp_ext"])}</dt><dd>{E(h["external"])}</dd><dt>{E(U["hyp_next"])}</dt><dd>{E(h["next"])}</dd><dt>{E(U["hyp_status"])}</dt><dd>{E(h["status"])}</dd></dl></details></article>')
-    return (f'<section id="hypotheses" aria-labelledby="h-hyp"><h2 id="h-hyp">{E(U["hyp_h"])}</h2><p class="lead">{E(U["hyp_lead"])}</p><p class="mini mut">{E(U["hyp_note_en"])} <b>{E(U["sel_warn_prob"])}</b></p>'
+    return (f'<section id="hypotheses" aria-labelledby="h-hyp"><h2 id="h-hyp">{E(U["hyp_h"])}</h2><p class="lead">{E(U["hyp_lead"])}</p><p class="mini">{E(U["hyp_intro_model"])}</p><p class="mini">{E(U["hyp_key"])}</p><p class="mini mut">{E(U["hyp_note_en"])} <b>{E(U["sel_warn_prob"])}</b></p>'
             + "".join(arts) + f'<p class="noprint"><a class="btnlink" href="#section=hypotheses">{E(U["sec_print"])}</a></p></section>')
 
 
@@ -3089,18 +3138,21 @@ def render_predictive(P: dict) -> str:
     vrows = []
     for vi, v in enumerate(pr["verdicts"]):
         nums = "; ".join(f'{E(n["id"])} <b data-k="pred.v{vi}.{ni}" data-v="{n["value"]}">{E(dec_it(n["value"], n["digits"]))}</b>' for ni, n in enumerate(v["numbers"]))
-        vrows.append(f'<tr data-verdict="{E(v["verdict"])}"><td>{E(v["comparison_it"])}</td><td><span class="chip vd vd-{E(v["verdict"])}">{E(U["pred_v_" + v["verdict"]])}</span></td><td>{nums}</td><td class="mini">{E(v["reopen_it"])}</td></tr>')
+        vrows.append(f'<tr data-verdict="{E(v["verdict"])}"><td data-label="{E(U["pred_c_cmp"])}">{E(v["comparison_it"])}</td><td data-label="{E(U["pred_c_verdict"])}"><span class="chip vd vd-{E(v["verdict"])}">{E(U["pred_v_" + v["verdict"]])}</span></td><td data-label="{E(U["pred_c_num"])}">{nums}</td><td class="mini" data-label="{E(U["pred_c_reopen"])}">{E(v["reopen_it"])}</td></tr>')
     meths = "".join(f'<li><b>{E(m["id"])}</b> {E(m["it"])}</li>' for m in pr["methods"])
     uni = pr["universe"]
     uni_txt = (f'<b data-k="pred.universe" data-v="{uni["families"]}">{E(fmt_it(uni["families"]))}</b> ' + E(U["pred_universe_txt"].format(s=fmt_it(uni["signatures"]), p=fmt_it(uni["pilot_families"]), c=fmt_it(uni["catalogue_families"]))))
     thr = E(U["pred_threshold_txt"].format(t=dec_it(pr["threshold"], 2), n=uni["families"], m=dec_it(pr["minimum_detectable_effect"], 3)))
     crow = []
     for r in cx["rows"]:
-        crow.append(f'<tr data-q="{E(r["id"])}" data-verdict="{E(r["verdict"])}"><th scope="row">{E(r["quantity_it"])}<div class="mut mini">{E(r["id"])} · {E(r["quantity"])}</div></th>'
-                    f'<td>{numit("ctx." + r["id"] + ".higher", r["higher"])}</td><td>{numit("ctx." + r["id"] + ".lower", r["lower"])}</td><td>{numit("ctx." + r["id"] + ".other", r["other"])}</td><td>{numit("ctx." + r["id"] + ".unknown", r["unknown"])}</td>'
-                    f'<td>{numit("ctx." + r["id"] + ".models", r["models_resolved"])} / {numit("ctx." + r["id"] + ".measured", r["models_measured"])}</td><td><span class="chip vd vd-{E(r["verdict"])}">{E(U["ctx_v_" + r["verdict"]])}</span></td></tr>')
+        lab = lambda k: E(U[k])
+        crow.append(f'<tr data-q="{E(r["id"])}" data-verdict="{E(r["verdict"])}"><th scope="row">{E(r["quantity_it"])}<div class="mini mut">{E(r["id"])} · {E(r["note_it"])}</div></th>'
+                    f'<td data-label="{lab("ctx_c_hi")}">{numit("ctx." + r["id"] + ".higher", r["higher"])}</td><td data-label="{lab("ctx_c_lo")}">{numit("ctx." + r["id"] + ".lower", r["lower"])}</td>'
+                    f'<td data-label="{lab("ctx_c_ns")}">{numit("ctx." + r["id"] + ".other", r["other"])}</td><td data-label="{lab("ctx_c_unk")}">{numit("ctx." + r["id"] + ".unknown", r["unknown"])}</td>'
+                    f'<td data-label="{lab("ctx_c_models")}">{numit("ctx." + r["id"] + ".models", r["models_resolved"])} / {numit("ctx." + r["id"] + ".measured", r["models_measured"])}</td>'
+                    f'<td data-label="{lab("ctx_c_verdict")}"><span class="chip vd vd-{E(r["verdict"])}">{E(U["ctx_v_" + r["verdict"]])}</span></td></tr>')
     heads = "".join(f"<th>{E(c)}</th>" for c in cx["context_ids"])
-    wide = "".join(f'<tr><th scope="row">{E(r["id"])}</th>' + "".join(f"<td>{E(d)}</td>" for d in r["directions"]) + "</tr>" for r in cx["rows"])
+    wide = "".join(f'<tr><th scope="row">{E(r["quantity_it"])}<div class="mini mut">{E(r["id"])}</div></th>' + "".join(f"<td>{E(U['ctx_d_' + d])}</td>" for d in r["directions"]) + "</tr>" for r in cx["rows"])
     mod = "; ".join(f'{E(c)}: {E(cx["model_labels_it"][cx["models_of"][c]])}' for c in cx["context_ids"])
     facts = U["ctx_facts"].format(cells=f'<b data-k="ctx.cells" data-v="{cx["cells"]}">{fmt_it(cx["cells"])}</b>', contexts=f'<b data-k="ctx.contexts" data-v="{cx["contexts"]}">{cx["contexts"]}</b>',
                                   quantities=f'<b data-k="ctx.quantities" data-v="{cx["quantities"]}">{cx["quantities"]}</b>', measured=f'<b data-k="ctx.measured" data-v="{cx["measured"]}">{cx["measured"]}</b>',
@@ -3108,10 +3160,10 @@ def render_predictive(P: dict) -> str:
     return (f'<section id="predictive" aria-labelledby="h-pred"><h2 id="h-pred">{E(U["pred_h"])}</h2><p class="note"><b>{E(U["pred_label"])}</b></p>'
             f'<dl class="pred-dl"><dt>{E(U["pred_q"])}</dt><dd>{E(pr["question_it"])}</dd><dt>{E(U["pred_methods"])}</dt><dd><ul class="mini">{meths}</ul></dd>'
             f'<dt>{E(U["pred_prereg"])}</dt><dd>{E(U["pred_prereg_txt"])}</dd><dt>{E(U["pred_universe"])}</dt><dd>{uni_txt}</dd><dt>{E(U["pred_threshold"])}</dt><dd>{thr}</dd></dl>'
-            f'<h3>{E(U["pred_verdict_h"])}</h3><div class="scrollx"><table class="tbl pred-t"><thead><tr><th>{E(U["pred_c_cmp"])}</th><th>{E(U["pred_c_verdict"])}</th><th>{E(U["pred_c_num"])}</th><th>{E(U["pred_c_reopen"])}</th></tr></thead><tbody>{"".join(vrows)}</tbody></table></div>'
+            f'<h3>{E(U["pred_verdict_h"])}</h3><div class="scrollx"><table class="tbl pred-t stk"><thead><tr><th>{E(U["pred_c_cmp"])}</th><th>{E(U["pred_c_verdict"])}</th><th>{E(U["pred_c_num"])}</th><th>{E(U["pred_c_reopen"])}</th></tr></thead><tbody>{"".join(vrows)}</tbody></table></div>'
             f'<h3>{E(U["pred_limits_h"])}</h3><ul class="mini">{"".join("<li>" + E(x) + "</li>" for x in pr["limits_it"])}</ul><p class="mini"><b>{E(U["sel_warn_prob"])}</b></p>'
             f'<h2 id="contexts">{E(U["ctx_h"])}</h2><p class="lead">{E(U["ctx_lead"])}</p><p>{facts}</p><div class="note"><b>{E(U["ctx_no_subgroup"])}</b></div><p class="mini mut">{E(U["ctx_def"])}</p>'
-            f'<div class="scrollx"><table class="tbl ctx-t"><thead><tr><th>{E(U["ctx_c_q"])}</th><th>{E(U["ctx_c_hi"])}</th><th>{E(U["ctx_c_lo"])}</th><th>{E(U["ctx_c_ns"])}</th><th>{E(U["ctx_c_unk"])}</th><th>{E(U["ctx_c_models"])}</th><th>{E(U["ctx_c_verdict"])}</th></tr></thead><tbody>{"".join(crow)}</tbody></table></div>'
+            f'<div class="scrollx"><table class="tbl ctx-t stk"><thead><tr><th>{E(U["ctx_c_q"])}</th><th>{E(U["ctx_c_hi"])}</th><th>{E(U["ctx_c_lo"])}</th><th>{E(U["ctx_c_ns"])}</th><th>{E(U["ctx_c_unk"])}</th><th>{E(U["ctx_c_models"])}</th><th>{E(U["ctx_c_verdict"])}</th></tr></thead><tbody>{"".join(crow)}</tbody></table></div>'
             f'<details class="inl"><summary>{E(U["ctx_full"])}</summary><p class="mini mut">{E(U["ctx_models_h"])}: {mod}</p><div class="scrollx"><table class="tbl"><thead><tr><th></th>{heads}</tr></thead><tbody>{wide}</tbody></table></div></details>'
             f'<p class="noprint"><a class="btnlink" href="#section=predictive">{E(U["sec_print"])}</a></p></section>')
 

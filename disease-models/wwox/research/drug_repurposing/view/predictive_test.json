@@ -1,6 +1,6 @@
 {
  "schema": "legend.wwox.predictive_test/1",
- "authoring": "Hand-authored from the verified README of the IT7 P3 comparison. The printed numbers are read at build time from network_comparison_it7_p3_20261029/results/*.json; every 'expect' value must equal the data rounded as stated, or the build fails. Verdict words are the pre-registered ones (with the verifier's reading for the signature route). Exploratory: a computational result is not therapeutic efficacy. No percentile of the model and no probability is carried.",
+ "authoring": "Hand-authored from the verified README of the IT7 P3 comparison. The printed numbers are read at build time from network_comparison_it7_p3_20261029/results/*.json; every 'expect' value must equal the data rounded as stated, or the build fails. Verdict words are the pre-registered ones (with the verifier's reading for the signature route). Exploratory: a computational result is not therapeutic efficacy. No percentile of the model and no probability is carried. The second draw of the P47T matched null (0.396, verifier) is checked at build against the verifier's report.",
  "exploratory": true,
  "question": "Among pilot compound families, does a signed external network, or a transcriptional-signature route, rank compounds by their observed opposition of a six-gene glycolysis/lactate module in held-out neuron-like LINCS contexts better than an unsigned frequency-corrected overlap reference?",
  "question_it": "Tra le famiglie di composti del sottoinsieme pilota, una rete esterna con segno (o la via della firma trascrizionale) ordina i composti per l'opposizione osservata a un modulo di sei geni glicolisi/lattato, in contesti neurali LINCS tenuti fuori dal calcolo, meglio di un riferimento di sovrapposizione senza segno?",
@@ -66,13 +66,13 @@
      "digits": 3
     },
     {
-     "id": "IC90 SIG, estremo inferiore",
+     "id": "intervallo di confidenza al 90% di SIG, estremo inferiore",
      "path": "bootstrap90.SIG.0",
      "expect": 0.039,
      "digits": 3
     },
     {
-     "id": "IC90 SIG, estremo superiore",
+     "id": "intervallo di confidenza al 90% di SIG, estremo superiore",
      "path": "bootstrap90.SIG.1",
      "expect": 0.243,
      "digits": 3
@@ -108,7 +108,7 @@
      "digits": 3
     },
     {
-     "id": "95° percentile del nullo appaiato",
+     "id": "95° percentile della distribuzione nulla appaiata, circa 0,39 (estrazione del produttore)",
      "path": "regions.HPC.null_p95",
      "expect": 0.389,
      "digits": 3
@@ -120,7 +120,16 @@
      "digits": 3
     }
    ],
-   "reopen_it": "un contrasto umano neurale privo di WWOX, replicato, con lettura proteica o di attività appaiata; una coorte P47T più grande"
+   "reopen_it": "un contrasto umano neurale privo di WWOX, replicato, con lettura proteica o di attività appaiata; una coorte P47T più grande",
+   "external_values": [
+    {
+     "id": "stesso percentile, estrazione del verificatore",
+     "value": 0.396,
+     "digits": 3,
+     "check_file": "locator_audits/2026-10-29_it7_p3_verifier.md",
+     "check_text": "0.396"
+    }
+   ]
   }
  ],
  "limits_it": [
