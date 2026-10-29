@@ -1,0 +1,37 @@
+{
+ "event_id": "FTR-20261029-24614743-01",
+ "study_id": {
+  "pmid": "24614743",
+  "doi": "10.1113/jphysiol.2013.267864"
+ },
+ "analysis_at": "2026-10-29T09:15:00Z",
+ "workflow": "scientist-b, IT6 package P11 (supplement and diet). Selected-passage reading of the open-access PMC article XML (CC BY 3.0 in the file): the abstract and the Results paragraphs that state the external-magnesium IC50 values of the NMDA-evoked current at four membrane potentials, with and without ifenprodil, and the model-fitting paragraph of the Discussion. Question: how steep is the voltage dependence of the magnesium block in a native neuronal preparation, as an input to a back-of-envelope estimate, not as a cortical measurement. Prepared as JSON for the integrator and staged.",
+ "evidence_depth": "queried_not_full_read",
+ "source_locator": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4027860/fullTextXML",
+ "source_fingerprint": "1ecd1c7d8cdc744a7354557fbf71b218ef330da9eae77636e54a5c9c78dce28b",
+ "source_kind": "fulltext_remote",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_present",
+  "supplementary": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/supplement_diet_it6_p11_20261029/README.md",
+  "disease-models/wwox/research/drug_repurposing/supplement_diet_it6_p11_20261029/mg_block_arithmetic.py"
+ ],
+ "evidence_basis": [
+  "selected_passages_inspected",
+  "Every coverage value other than the abstract is not_read: the act inspected only the passages listed in the workflow field. The preparation is P7 rat substantia nigra dopaminergic neurones, not cortex."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read",
+ "record_kind": "contemporaneous_receipt",
+ "event_at": "2026-10-29T09:30:00Z",
+ "analysis_time_precision": "minute"
+}

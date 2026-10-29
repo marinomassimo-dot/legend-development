@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "12a37d196e569729f9b0e47851956e6996b8e47e3ba98f7faafc23b178a6bf2f",
+  "input_sha256": "87fc19836b6170c97fa52602ab0a56d7100bd65e15614c44d1f54f7fd40c6647",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -334,7 +334,7 @@
       "identity": "Memantine (approved, uncompetitive NMDAR pore blocker; paediatric safety and effectiveness not established on its label) and perampanel (approved, non-competitive AMPAR antagonist; paediatric label for partial-onset seizures). Tool compounds: d-APV. Both are symptomatic-network levers on one measured phenotype, not WWOX restoration.",
       "indication_and_transfer": "Only IF the neuron-specific Wwox bursting phenotype is driven by a measurable gain in glutamatergic transmission that a partial block of NMDAR or AMPAR corrects without harming activity-dependent maturation. Transfer to the reference genotype is unmeasured for both alleles: the slice model is a Synapsin-Cre knockout, not a missense or splice allele.",
       "novelty_for_woree": "Memantine on the NMDAR node is already map record R-02 (class PROMISING_BUT_MECHANISTIC_GAP). New here: (1) the sign of the receptor lesion decides memantine's response in the one genetic-NMDAR cohort that stratified by function, so the 'GRIN2A corroborates the node' argument (DL-MECH-002) corroborates the node, not the sign; (2) the AMPAR arm, never carried as a node, rests on the only direct synaptic measurement in the knockout (raised mEPSC amplitude), and is untested. Coverage: PubMed searches of 2026-10-27 (GRIN-memantine, neonatal memantine, WWOX myelin), the Karnstedt full text, the repository's perampanel notes; NON_TROVATO_NELLA_RICERCA for any memantine or perampanel arm in a Wwox model, not MAI_TENTATO.",
-      "state_of_known_roads": "map R-02 (memantine), Chain B, N-15 (seizure control is not development), DL-MECH-002, DL-MOL-001; perampanel appears only in cohort notes (repurposing_10h_scientist-d_20261022c.md, parked item) and the adult case.",
+      "state_of_known_roads": "map R-02 (memantine), Chain B, N-15 (seizure control is not development), DL-MECH-002, DL-MOL-001; perampanel appears only in cohort notes (repurposing_10h_scientist-d_20261022c.md, parked item) and the adult case. Related card (proposed, not yet registered): the physiological voltage-dependent NMDAR gate, extracellular magnesium (IT6-P11, supplement_diet_it6_p11_20261029/card).",
       "pathway_and_objective": "BENEFICIO_PRECOCE; Track A; Track B untested.",
       "expected_contribution": "UNKNOWN. At best a reduction of a network state; no developmental benefit is implied.",
       "mechanism": "Targets: NMDAR (GRIN1 with GRIN2A/2B/2D) and AMPAR (GRIA1-4). Direction wanted: lower excitatory gain. Context: juvenile neocortical slice, neuron-specific knockout. Memantine is a use-dependent pore blocker with subunit-dependent, assay-dependent potency; d-APV is a competitive full block: the tool result does not transfer quantitatively to the drug.",
@@ -399,7 +399,8 @@
       "Whether the raised mEPSC amplitude is AMPAR-mediated.",
       "Whether a partial pore block reproduces the full block's effect on bursting.",
       "Whether either drug affects maturation in a developing Wwox-deficient brain.",
-      "The GRIN2A variant class behind the burst-suppression association in the cohort abstract."
+      "The GRIN2A variant class behind the burst-suppression association in the cohort abstract.",
+      "Whether the physiological NMDAR gate, extracellular Mg2+, can be raised enough to offset the knockout's depolarised resting potential and halved inhibitory current (see the IT6-P11 magnesium card and README in drug_repurposing/supplement_diet_it6_p11_20261029)."
     ],
     "evidence_against": [
       "The only memantine-responsive genetic NMDAR group is defined by receptor gain of function; loss-of-function and indeterminate GRIN variants did not respond, so 'an NMDAR gene causes the same phenotype' (DL-MECH-002) does not give the sign.",

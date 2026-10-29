@@ -18,17 +18,17 @@
    },
    "^\\.cur\\.(needs|threads|groups|gaps|goals|tracks|scopes|group_note|meta)(\\.|\\[\\]|$)": {
     "class": "OWN",
-    "values": 1416,
+    "values": 1508,
     "why": "needs, threads and positions written in this repository"
    },
    "^\\.cur\\.cands\\[\\]\\.": {
     "class": "OWN",
-    "values": 4665,
+    "values": 4935,
     "why": "card text and computed positions (provenance of the prose: see text audit)"
    },
    "^\\.cur\\.cands\\[\\]\\.(pmids\\[\\]\\.(id|role)|dois\\[\\])$": {
     "class": "BIBLIO",
-    "values": 313,
+    "values": 367,
     "why": "PMID / DOI of a cited work"
    },
    "^\\.cur\\.cands\\[\\]\\.access\\[\\]$": {
@@ -43,7 +43,7 @@
    },
    "^\\.cur\\.cands\\[\\]\\.pmids\\[\\]\\.(title|journal|year)$": {
     "class": "BIBLIO",
-    "values": 462,
+    "values": 543,
     "why": "title, journal, year of a cited work (bibliographic facts)"
    },
    "^\\.cur\\.footer\\.": {
@@ -53,12 +53,12 @@
    },
    "^\\.cur\\.needs\\[\\]\\.obs\\[\\]\\.(cite)$": {
     "class": "BIBLIO",
-    "values": 71,
+    "values": 80,
     "why": "title, journal, year of a cited work"
    },
    "^\\.cur\\.needs\\[\\]\\.obs\\[\\]\\.pmid$": {
     "class": "BIBLIO",
-    "values": 71,
+    "values": 80,
     "why": "PMID of the observation source"
    },
    "^\\.excluded_detail\\[\\]\\.(id|name|src)$": {
@@ -78,27 +78,27 @@
    },
    "^\\.leads\\[\\]\\.": {
     "class": "OWN",
-    "values": 60,
+    "values": 70,
     "why": "lead dispositions written in this repository"
    },
    "^\\.leads\\[\\]\\.catalogue_ids\\[\\]$": {
     "class": "ID",
-    "values": 5,
+    "values": 11,
     "why": "catalogue identifiers"
    },
    "^\\.needs\\[\\]\\.": {
     "class": "OWN",
-    "values": 1625,
+    "values": 1639,
     "why": "needs records written in this repository"
    },
    "^\\.pairs\\[\\]\\.(l2|l3|l4|x|n|r)(\\.|\\[\\]|$)": {
     "class": "OWN",
-    "values": 21932,
+    "values": 22506,
     "why": "levels 2-4, indices: computed from cards and needs"
    },
    "^\\.pairs\\[\\]\\.l1\\.(state|n_assoc|readout_only|why|stale)$": {
     "class": "OWN",
-    "values": 8320,
+    "values": 8540,
     "why": "level-1 state, association count and note computed by the coverage tool"
    },
    "^\\.pairs\\[\\]\\.l1\\.(targets|pathway)\\[\\]$": {
@@ -113,12 +113,12 @@
    },
    "^\\.pairs\\[\\]\\.l1\\.withheld$": {
     "class": "COUNT",
-    "values": 1664,
+    "values": 1708,
     "why": "number of association rows withheld by the allowlist"
    },
    "^\\.pairs\\[\\]\\.p\\.": {
     "class": "OWN",
-    "values": 11087,
+    "values": 11233,
     "why": "priority criteria computed by the coverage tool"
    },
    "^\\.pairs\\[\\]\\.p\\.cr\\.dir\\[\\]\\[\\]$": {
@@ -128,12 +128,12 @@
    },
    "^\\.rows\\[\\]\\.(dup|rec|tr|w)$": {
     "class": "COUNT",
-    "values": 5815,
+    "values": 5971,
     "why": "record counts of a catalogue row"
    },
    "^\\.rows\\[\\]\\.(id|kind)$": {
     "class": "ID",
-    "values": 2926,
+    "values": 3004,
     "why": "catalogue row identifier and row kind"
    },
    "^\\.rows\\[\\]\\.acc\\[\\]$": {
@@ -148,7 +148,7 @@
    },
    "^\\.rows\\[\\]\\.name$": {
     "class": "ROWNAME",
-    "values": 1463,
+    "values": 1502,
     "why": "card name (own text), opaque identifier, or a class-A name source"
    },
    "^\\.strings\\[\\]$": {
@@ -168,12 +168,12 @@
    }
   },
   "identifiers": {
-   "CAT": 1445,
-   "CHEMBL": 253,
+   "CAT": 1484,
+   "CHEMBL": 259,
    "DOI": 5,
    "HGNC": 6,
    "NCT": 0,
-   "PMID": 11
+   "PMID": 15
   },
   "links": {
    "distinct_hrefs": 47,
@@ -191,10 +191,14 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 1352,
-    "forbidden-wording": 8
+    "forbidden-name": 1525,
+    "forbidden-wording": 10
    },
    "co_attested_wording": [
+    [
+     "caspase 1 inhibitor",
+     "CAT:CHEMBL2105721"
+    ],
     [
      "gaba a receptor",
      "CAT:CHEMBL15891"
@@ -212,17 +216,18 @@
    "forbidden_names": 126046,
    "forbidden_wordings": 2888,
    "pair_unmarked_attested_or_unchecked": {
-    "count": 62,
+    "count": 73,
     "names": [
      "act 709478",
      "apinocaltamide",
      "cpp 115",
+     "hsp70",
      "lithium",
      "nbi 827104",
      "null",
      "proteasome inhibitor"
     ],
-    "unchecked_without_corpus": 62
+    "unchecked_without_corpus": 73
    },
    "suppressed_by_exemption": {
     "category labels of catalogue-wide counts": 1
@@ -268,7 +273,7 @@
    "access_text": 7,
    "actions": 7,
    "asserts": 2,
-   "card_path": 33,
+   "card_path": 35,
    "country": 4,
    "for": 2,
    "identity": 7,
@@ -279,7 +284,7 @@
    "pharm": 2,
    "reopen": 1
   },
-  "cards": 33,
+  "cards": 35,
   "curated_sections": {
    "cands": "differs",
    "footer": "differs",
@@ -296,10 +301,10 @@
   "excluded_rows_with_names_full": 3,
   "excluded_rows_with_names_shareable": 0,
   "needs": 22,
-  "pairs_total": 1664,
-  "pairs_with_status_class_full": 670,
+  "pairs_total": 1708,
+  "pairs_with_status_class_full": 679,
   "pairs_with_status_class_shareable": 0,
-  "pairs_with_target_list_full": 1298,
+  "pairs_with_target_list_full": 1342,
   "pairs_with_target_list_shareable": 12,
   "payload_sections": {
    "access": "identical",
@@ -326,14 +331,14 @@
    "strings": "identical",
    "tech": "differs"
   },
-  "rows_named_full": 1451,
+  "rows_named_full": 1490,
   "rows_named_shareable_card_names_only": 37,
-  "rows_total": 1463,
-  "rows_with_access_categories_full": 1440,
+  "rows_total": 1502,
+  "rows_with_access_categories_full": 1479,
   "rows_with_access_categories_shareable": 11,
-  "rows_with_per_row_status_or_modality_full": 1463,
+  "rows_with_per_row_status_or_modality_full": 1502,
   "rows_with_per_row_status_or_modality_shareable": 0,
-  "target_symbols_listed_full": 1746,
+  "target_symbols_listed_full": 1794,
   "target_symbols_listed_shareable": 12
  },
  "counts_only_sources": [
@@ -399,11 +404,11 @@
   "view_schema": "legend.wwox.repurposing_view/2"
  },
  "embedded_field_classes": {
-  "BIBLIO": 917,
-  "COUNT": 7542,
-  "ID": 2956,
-  "OWN": 49558,
-  "ROWNAME": 1463,
+  "BIBLIO": 1070,
+  "COUNT": 7742,
+  "ID": 3040,
+  "OWN": 50884,
+  "ROWNAME": 1502,
   "SRC_A": 89,
   "SRC_META": 244,
   "UI": 507
@@ -441,7 +446,7 @@
  "files": {
   "COMPARISON.md": {
    "bytes": 6028,
-   "sha256": "b244dc4a819ce4ec662b450189db5b0003a43c5e34b715c562c082d4b7296742"
+   "sha256": "e129082352baf69827a1f65183c7bf1c78ffd2912e802dbe361b1f05e29525cf"
   },
   "LICENSES/CC-BY-4.0.txt": {
    "bytes": 18657,
@@ -460,8 +465,8 @@
    "sha256": "e5dfa90d88e2069a2e4fd13429e8ebaefb7bd92fbbaede065af905656bc7ba87"
   },
   "NOTICE.md": {
-   "bytes": 10848,
-   "sha256": "45aac890e1f26aaed448912d21bf054dbe84bbcfb19b89562a82b746278ed322"
+   "bytes": 10871,
+   "sha256": "ccdf3a8a0975ec467422e14410f2cefc18f2b15ee46bc1629fadabf387fb92d7"
   },
   "README.md": {
    "bytes": 4443,
@@ -469,7 +474,7 @@
   },
   "TEXT_PROVENANCE.json": {
    "bytes": 1601,
-   "sha256": "2e103ec53ef81089443f989a5af9ca39afcdf399556b2e7bfa8b2e4203e1f322"
+   "sha256": "321bbc10bb47d3da8df1a85deeb9ae9ddf447c5154a1cb96d65297eaa829d0e5"
   },
   "class_b/chembl_cc-by-sa-3.0/CREDIT.txt": {
    "bytes": 1636,
@@ -484,8 +489,8 @@
    "sha256": "d8fe6a3455466783564803428b6318c1c442db6a16dfb97de8a6b7dcf944cc9d"
   },
   "index.html": {
-   "bytes": 1885572,
-   "sha256": "1f9bf7e9e61ca4b4ae58c48e2c84a31074b7936c5cb808daa8d9a0f84aee9252"
+   "bytes": 1973251,
+   "sha256": "1754983447a5922ff41e7758105a66d4b5a263a34e1133c5e0448d5113461bc6"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",
@@ -526,7 +531,7 @@
   "card_sentence_redactions": 12,
   "lead_field_redactions": 11,
   "pair_status_rule": "pairs[].p.cr.pha[1] (status classes of the row) is dropped in the shareable build: a status class derives from ChEMBL max_phase, DGIdb approved flags, MATRIX and openFDA together, and the build does not re-derive a class-A-only status per row.",
-  "pairs_status_class_dropped": 670,
+  "pairs_status_class_dropped": 679,
   "repository_file_names_described": 53,
   "rule": "IT5 P13 fix. Own analysis stays in the shareable build: a conclusion at the level of a need, a class or a card subject, in our own words, short, attributed to a published work. Withheld: (1) a sentence that states a compound-target(-action) pair together with its database of origin when the pair is asserted only by a class-B/C catalogue source; (2) a compound named in prose whose only provenance in the repository is a class-B/C catalogue row (it appears in no cited full text and is not a card subject); (3) a per-compound status, phase, approval or access statement attributed to a class-B/C source; (4) repository file names, which cannot be used outside the repository. The replacement keeps the research conclusion and names the withheld source class with the phrase in withheld_phrase. The FULL build keeps everything. The audit enforces (1) and (2) by derivation from the catalogue, (3) and (4) by pattern, and every redaction below must match exactly once or more: a stale redaction fails the build.",
   "withheld_phrase": "dato di una fonte non inclusa in questa versione"

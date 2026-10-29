@@ -1,0 +1,36 @@
+{
+ "event_id": "FTR-20261029-34634460-04",
+ "study_id": {
+  "pmid": "34634460",
+  "doi": "10.1016/j.nbd.2021.105529"
+ },
+ "analysis_at": "2026-10-29T08:20:00Z",
+ "workflow": "scientist-b, IT6 package P11 (supplement and diet). QUESTION_DRIVEN selected-passage re-read of the locally held article XML (the r2 PMC file that the earlier complete read of 2026-10-19 fingerprints), asked a question outside that read: is the bursting slice bathed in a magnesium-free or magnesium-containing medium, and how far is the knockout pyramidal resting potential from the wild-type one. Passages inspected: the highlights and abstract, the slice-preparation and ACSF sentences of the Methods, the electrophysiology and pharmacology subsections, Results 2.2 to 2.6 including the Figure 3, 4 and 6 legends and Table 1, and the Discussion paragraphs on spontaneous bursts and on the in vitro preparation. No figure image was opened. Prepared as JSON for the integrator and staged; the ledger was not written by the preparer.",
+ "evidence_depth": "queried_not_full_read",
+ "source_locator": "files/fulltext/PMID34634460_Wwox_osc2021_PMC_r2.xml",
+ "source_fingerprint": "b01bfa4f6a9cb9cc1d39c167b9953e679639913d56ef74b19b4d59cc05399e02",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_present",
+  "supplementary": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/supplement_diet_it6_p11_20261029/README.md"
+ ],
+ "evidence_basis": [
+  "selected_passages_inspected",
+  "The coverage map reads not_read for every section other than the abstract because the act was not a section-by-section reading: it inspected the passages listed in the workflow field and nothing else. The recording perfusate is not described separately from the incubation ACSF in the Methods text read; the ACSF with 1.3 mM Mg2+ is the only composition stated, and its being the recording medium is an inference carried by the earlier manifest entry 21, not a sentence of the paper."
+ ],
+ "prior_receipt": "FTR-20261019-34634460-01",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "record_kind": "contemporaneous_receipt",
+ "event_at": "2026-10-29T09:30:00Z",
+ "analysis_time_precision": "minute"
+}

@@ -1,0 +1,101 @@
+diff --git a/disease-models/wwox/research/drug_repurposing/needs/needs.json b/disease-models/wwox/research/drug_repurposing/needs/needs.json
+index fcb6cd25..d5f21bf4 100644
+--- a/disease-models/wwox/research/drug_repurposing/needs/needs.json
++++ b/disease-models/wwox/research/drug_repurposing/needs/needs.json
+@@ -2430,24 +2430,82 @@
+       }
+      ],
+      "locator_status": "DOCUMENT"
++    },
++    {
++     "id": "O6",
++     "statement": "Layer II/III pyramidal neurons rest more depolarised in the knockout: resting membrane potential -79.25 mV (wild type), -75.51 mV (heterozygote), -73.62 mV (knockout); the heterozygote and the knockout are marked different from wild type. The Discussion adds that the in vitro preparation holds neurons more hyperpolarised than in vivo, away from the burst threshold.",
++     "comparison": "genotypes against each other",
++     "readout": "resting membrane potential (Table 1)",
++     "readout_level": "functional",
++     "direction_observed": "depolarised in knockout and, less, in heterozygote",
++     "limits": "Means with the printed spread; 13, 15 and 40 neurons from 5, 6 and 15 animals; the heterozygote is pooled with wild type in some analyses of the same paper. The relation of this difference to NMDAR magnesium block is an inference (IT6-P11), not measured.",
++     "locators": [
++      {
++       "kind": "manifest",
++       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34634460.json",
++       "entry": 14,
++       "anchor": "-73.62"
++      },
++      {
++       "kind": "document",
++       "path": "disease-models/wwox/research/drug_repurposing/supplement_diet_it6_p11_20261029/README.md",
++       "anchor": "section 3, arithmetic"
++      }
++     ],
++     "model_type": "mouse_neuron_specific_knockout",
++     "species": "mouse",
++     "genotype": "Synapsin-Cre Wwox knockout versus heterozygote versus wild type",
++     "tissue_or_cells": "layer II/III pyramidal neurons",
++     "age_stage": "juvenile, about two weeks (P13-P17)",
++     "pmid": "34634460",
++     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
++     "locator_status": "MANIFEST"
++    },
++    {
++     "id": "O7",
++     "statement": "The slices in which the knockout bursts were incubated in an ACSF that contains magnesium (the Methods list a magnesium sulfate salt among the components), not in a magnesium-free medium; wild-type slices in the same preparation did not burst (0 of 11). The recording perfusate is not described separately from the incubation ACSF in the Methods text.",
++     "comparison": "medium composition (a condition, not a comparison)",
++     "readout": "ACSF composition as printed",
++     "readout_level": "functional",
++     "direction_observed": "not applicable (incubation ACSF 1.3 mM MgSO4; recording perfusate not stated)",
++     "limits": "That the bath during recording equals the incubation ACSF is an inference carried by the manifest, not a sentence of the paper. The extracellular potassium is 3.5 mM, slightly above the common 2.5 mM, which favours excitability in every genotype alike.",
++     "locators": [
++      {
++       "kind": "manifest",
++       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34634460.json",
++       "entry": 21,
++       "anchor": "1.3 MgSO4-7H2O"
++      }
++     ],
++     "model_type": "mouse_neuron_specific_knockout",
++     "species": "mouse",
++     "genotype": "Synapsin-Cre Wwox knockout versus heterozygote versus wild type",
++     "tissue_or_cells": "layer II/III pyramidal neurons",
++     "age_stage": "juvenile, about two weeks (P13-P17)",
++     "pmid": "34634460",
++     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
++     "locator_status": "MANIFEST"
+     }
+    ],
+    "inferred": [
+     "That bursting reflects a gain of NMDAR or AMPAR function rather than a permissive dependence (the sign of a partial block is untested).",
+-    "That the same node is shared with GRIN-variant epilepsies (convergence argument); in a retrospective GRIN-variant series, memantine benefit split by variant class (14 of 19 gain-of-function versus 3 of 15 loss-of-function/indeterminate), so a shared node does not give the sign. The authors call 4 of the 15 comparator variants non-pathogenic."
++    "That the same node is shared with GRIN-variant epilepsies (convergence argument); in a retrospective GRIN-variant series, memantine benefit split by variant class (14 of 19 gain-of-function versus 3 of 15 loss-of-function/indeterminate), so a shared node does not give the sign. The authors call 4 of the 15 comparator variants non-pathogenic.",
++    "That the depolarised resting potential (O6), together with the halved inhibitory current amplitude (O3), relieves the voltage-dependent magnesium block of NMDAR enough to explain the NMDAR dependence of the burst: arithmetic in the IT6-P11 record (other cell type, simple occupancy model), never tested in a WWOX system."
+    ],
+    "intervention_direction": {
+     "direction": "down",
+     "on": "postsynaptic glutamatergic gain (NMDAR, possibly AMPAR)",
+     "rationale": "A perturbation result, not a reversal inference: blocking NMDAR with d-APV abolished the burst in the WWOX-deficient slice (one drug, one preparation).",
+     "certainty": "supported_in_WWOX_mouse_model for the tool compound; unknown for any clinically used antagonist",
+-    "do_not_assume": "Full competitive block is not a partial block. Memantine and perampanel were not found to have been given to a WWOX system in the sources read. Chronic NMDAR block may cost activity-dependent myelination (unmeasured)."
++    "do_not_assume": "Full competitive block is not a partial block. Memantine and perampanel were not found to have been given to a WWOX system in the sources read. Chronic NMDAR block may cost activity-dependent myelination (unmeasured). Raising extracellular Mg2+ is the physiological way to lower NMDAR gain, but no Mg2+ manipulation has been done in a WWOX system, the incubation ACSF already contains magnesium and the recording bath is not stated (O7), and the one mouse study read found that an oral magnesium sulfate left cerebrospinal-fluid magnesium unchanged: do not equate a supplement with a bath concentration, and do not treat the open-label infant trials of magnesium sulfate with ACTH as evidence about this node."
+    },
+    "counter_evidence": [
+     "Only a full competitive block (d-APV) has been tried; whether the dependence is permissive or a gain is untested.",
+     "Memantine accelerated provoked seizures in an adult rat model; paediatric effectiveness of memantine is not established on its label (card F01).",
+     "One adult WWOX case on perampanel plus six drugs had no sustained benefit (n 1).",
+-    "Pannexin-1 blocker arm went the wrong way untested (map N-16); gap-junction node withdrawn pending occlusion."
++    "Pannexin-1 blocker arm went the wrong way untested (map N-16); gap-junction node withdrawn pending occlusion.",
++    "In the one randomised open-label infant trial read with an oral phase (West syndrome, 48 analysed; three days of intramuscular magnesium sulfate then oral, ACTH and antiseizure drugs in both arms) magnesium did not change seizure control (p 0.69); the positive randomised signal used intravenous magnesium sulfate with ACTH and is abstract-level.",
++    "The magnesium arithmetic gives a modest reduction for a modest rise in extracellular Mg2+, against the complete block of d-APV."
+    ],
+    "sources": {
+     "cards": [
+@@ -2465,7 +2523,9 @@
+      "N-16",
+      "M2"
+     ],
+-    "documents": [],
++    "documents": [
++     "disease-models/wwox/research/drug_repurposing/supplement_diet_it6_p11_20261029/README.md"
++    ],
+     "registry_ids": [
+      "CLAIM 021",
+      "CLAIM 002",

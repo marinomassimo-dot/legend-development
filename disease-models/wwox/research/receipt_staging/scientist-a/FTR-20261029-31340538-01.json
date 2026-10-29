@@ -1,0 +1,38 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261029-31340538-01",
+ "study_id": {
+  "pmid": "31340538",
+  "doi": "10.3390/ijms20143596"
+ },
+ "analysis_at": "2026-10-29T07:20:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-a, mandate IT6 package P10, task branch task/it6-p10; context_policy QUESTION_DRIVEN (held: the glial-reactivity thread of NEED-NEUROINFLAMMATION-GLIA). Prepared as a staged JSON for the integrator and not appended at preparation time. Question: what exactly is the readout, ages, region and replicate count of the REDUCED GFAP and Iba1 measures in the lde/lde rat cortex, and are they measured before or after the age at which the strain becomes seizure-competent. Route: local JATS body (PMC6678113) read at the glia paragraph of Results 2.2, Results 2.3 and the Discussion sentences on seizures; Figure 5 (panels A to E) opened as an image at native size (ijms-20-03596-g005.jpg, sha256 0f7a6573e37a89771b12199bdce2f3b993f593dbde9b471e95c8402cb4ff40f2). Targeted passages only.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID31340538_Tochigi2019_PMC_r2.xml",
+ "source_fingerprint": "02d5615819012880f6054935cf8a7b700a78690e9e8835b3e5364be7b60cf00c",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_present",
+  "references": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/partial_benefit_it6_p10_20261029/README.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "Results 2.2 (glia paragraph) and 2.3, Discussion paragraph on seizures read; Figure 5 A-E opened at native size",
+  "NEW: Figure 5B/5D give GFAP-positive and Iba1-positive cells per mm2 at PND 5, 10, 15, 21 (lde/lde about 0.5 of +/+ for GFAP from PND 5; Iba1 ns at PND 5, then lower); 5E western: GFAP lower only at PND 15 (ns at PND 21), Iba1 lower at all ages and about 0.04 against 0.9 at PND 10 while the counts at PND 10 are about 135 against 190 (the two assays disagree in size at that age); the text dates audiogenic seizures to after PND 16 [Discussion, citing refs 12 and 13, not re-read]"
+ ],
+ "prior_receipt": "FTR-20261019-31340538-01",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "event_at": "2026-10-29T07:50:00Z"
+}

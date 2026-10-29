@@ -1,0 +1,37 @@
+{
+ "event_id": "FTR-20261029-37319242-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "37319242",
+  "doi": "10.1371/journal.pone.0286550"
+ },
+ "event_at": "2026-10-29T09:00:00Z",
+ "analysis_at": "2026-10-29T08:30:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-b, IT6 step P6. IT6 P6 (broad durable recovery, new question): does degradation-route blockade or proteostasis modulation of a destabilised cytosolic missense enzyme restore enzyme function, which protein fraction rises, and does the outcome depend on the lesion and the expression context. Class-level substitute, NOT WWOX EVIDENCE. Source: Europe PMC fullTextXML (CC licence), saved locally; text extracted with tags removed; prepared as JSON for the integrator and staged, not appended.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID37319242_Gupta2023_PMC10270616_epmc_2026-10-29.xml",
+ "source_fingerprint": "5e10695cf7f309324d0c36c6ecdf75d6d25bab7385bbc92da7315e1692e9b7f1",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/broad_recovery_it6_p6_20261029/README.md",
+  "disease-models/wwox/research/drug_repurposing/broad_recovery_it6_p6_20261029/A02_proteasome_inhibitor_class.packet.json"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "Abstract, Introduction, Methods, Results and Discussion read in the text extract; figure captions only (no figure opened as an image, so panel values were not read); supplementary files S1 and S2 not opened; reference list not enumerated; the post-text decision letter and reviewer text in the XML were not used."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

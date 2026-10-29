@@ -28,7 +28,7 @@ How the conditions are met:
 - **ChEMBL identifiers**: identifiers only; ChEMBL content is not embedded (class B file shipped separately). ChEMBL identifiers (CHEMBL...): EMBL-EBI, https://www.ebi.ac.uk/chembl/, release ChEMBL_37 (2026-05-01) https://www.ebi.ac.uk/chembl/
 - **Catalogue record identifiers**: opaque identifiers of this repository's catalogue (CAT:...), no source content. LEGEND WWOX repurposing module (this repository)
 
-Identifier census of `index.html` (distinct values): {"CAT": 1445, "CHEMBL": 253, "DOI": 5, "HGNC": 6, "NCT": 0, "PMID": 11}. No abstract and no passage of an article is embedded. Short quotations are marked by quotation marks and attributed (section 6).
+Identifier census of `index.html` (distinct values): {"CAT": 1484, "CHEMBL": 259, "DOI": 5, "HGNC": 6, "NCT": 0, "PMID": 15}. No abstract and no passage of an article is embedded. Short quotations are marked by quotation marks and attributed (section 6).
 
 ## 4. Class B (share-alike): shipped as a separate file, never merged into the page
 
@@ -62,9 +62,9 @@ Every output string was compared with the full texts, abstracts and openFDA labe
 
 IT5 P13 fix. Own analysis stays in the shareable build: a conclusion at the level of a need, a class or a card subject, in our own words, short, attributed to a published work. Withheld: (1) a sentence that states a compound-target(-action) pair together with its database of origin when the pair is asserted only by a class-B/C catalogue source; (2) a compound named in prose whose only provenance in the repository is a class-B/C catalogue row (it appears in no cited full text and is not a card subject); (3) a per-compound status, phase, approval or access statement attributed to a class-B/C source; (4) repository file names, which cannot be used outside the repository. The replacement keeps the research conclusion and names the withheld source class with the phrase in withheld_phrase. The FULL build keeps everything. The audit enforces (1) and (2) by derivation from the catalogue, (3) and (4) by pattern, and every redaction below must match exactly once or more: a stale redaction fails the build.
 
-Applied in this build: 12 card sentence redactions, 11 lead-field redactions, 670 pair objects stripped of a status class (pairs[].p.cr.pha[1] (status classes of the row) is dropped in the shareable build: a status class derives from ChEMBL max_phase, DGIdb approved flags, MATRIX and openFDA together, and the build does not re-derive a class-A-only status per row.), 53 repository file names replaced by a plain description. The replacement phrase is `dato di una fonte non inclusa in questa versione`.
+Applied in this build: 12 card sentence redactions, 11 lead-field redactions, 679 pair objects stripped of a status class (pairs[].p.cr.pha[1] (status classes of the row) is dropped in the shareable build: a status class derives from ChEMBL max_phase, DGIdb approved flags, MATRIX and openFDA together, and the build does not re-derive a class-A-only status per row.), 53 repository file names replaced by a plain description. The replacement phrase is `dato di una fonte non inclusa in questa versione`.
 
-Short third-party labels that card text also contains (checked against ChEMBL's curated-mechanism and target wording; none longer than 8 words, otherwise the audit fails): `gaba a receptor`; `pyruvate dehydrogenase kinase`; `reactive oxygen species`. They are generic scientific terms that the cards use in their own sentences; they are listed, not hidden.
+Short third-party labels that card text also contains (checked against ChEMBL's curated-mechanism and target wording; none longer than 8 words, otherwise the audit fails): `caspase 1 inhibitor`; `gaba a receptor`; `pyruvate dehydrogenase kinase`; `reactive oxygen species`. They are generic scientific terms that the cards use in their own sentences; they are listed, not hidden.
 
 ## 7. What this notice does not do
 
