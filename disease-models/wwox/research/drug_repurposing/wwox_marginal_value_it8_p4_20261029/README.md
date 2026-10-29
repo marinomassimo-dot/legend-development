@@ -10,8 +10,8 @@ The reference genotype class is a WWOX-DEE genotype class; no individual-level r
 
 | Question asked | Answer | Where |
 |---|---|---|
-| How many qualified WWOX inputs could change the IT7 network input without exposing held-out truth? | **0 of 211** classified inputs | section 3 |
-| How many network edges, nodes or signs would actually change? | **0 edges, 0 nodes, 0 signs.** The four HIF1A edges that IT7 called the WWOX-enriched condition were all already in the external network, with the same sign | section 4 |
+| How many qualified WWOX inputs could change the IT7 network input without exposing held-out truth? | **0 of 211** classified inputs. This is a property of the method's input grammar (signed gene-to-gene edges, compound-target actions, a fixed readout), not a finding about the WWOX record | section 3 |
+| How many network edges, nodes or signs would actually change? | **0 edges, 0 nodes, 0 signs.** The four HIF1A edges of the condition IT7 labelled WWOX-enriched (here: NET-EXT plus 4 duplicate HIF1A edges) were all already in the external network, with the same sign | section 4 |
 | Could a paired comparison detect a change of this size? | No. The whole IT7 "delta" moved no family score by more than 1.4e-5 (0.01 SD of the score); detecting a rank-correlation change of 0.03 needed roughly 6,400 added random edges (9 percent of the network) in a sizing simulation | section 5 |
 | Does any other ground for a new experiment exist (new data, new question, pharmacological qualification, independent control, better signatures)? | None that changes the answer; one is open and unverified (IT8 P3), one costs power (signature filters) | section 6 |
 
@@ -30,13 +30,15 @@ What the method can consume (read from `p3_run.py`): signed gene-to-gene edges, 
 
 | Class | needs (85) | P1 edges (85) | P4 quantities (14) | cards (27) | Total |
 |---|---:|---:|---:|---:|---:|
-| ALREADY REPRESENTED | 5 | 18 | 2 | 0 | **25** |
-| NEW BUT NOT USABLE | 36 | 5 | 4 | 16 | **61** |
+| ALREADY REPRESENTED (see note) | 4 | 18 | 2 | 0 | **24** |
+| NEW BUT NOT USABLE | 38 | 9 | 4 | 5 | **56** |
 | USABLE WITHOUT CONTAMINATING THE EVALUATION | 0 | 0 | 0 | 0 | **0** |
-| NOT SUFFICIENTLY SUPPORTED | 44 | 62 | 8 | 11 | **125** |
+| NOT SUFFICIENTLY SUPPORTED | 43 | 58 | 8 | 22 | **131** |
 | Total | 85 | 85 | 14 | 27 | 211 |
 
-Reason codes (column `reason_code`, text in `reason`): A1 content is the six-gene readout already fixed from the two human build systems (14 P1 edges, 4 needs rows, 2 P4 quantities); A2 gene-to-gene edge already in the external network (the 4 HIF1A edges, and the HIF1A-PDK1 reading of one MEF observation); N1 wrong level (function, protein, phospho, flux, activity, clinical, histology: 23 needs rows plus 5 P1 edges, 1 P4 quantity); N2 intervention response or held-out evaluation datum (firewall; 7 needs rows, 16 cards); N3 variant, lesion, stage or cell-type context with no node or filter (4 needs rows, 2 P4 quantities); N4 self-reference to the IT7 result (2); N5 no readout in the perturbation resource (myelin); S1 not WWOX evidence (6); S2 other species or non-neural context (10); S3 single system, n=1 or 4 v 2, discordant, or sign unresolved (19 needs rows, 62 P1 edges, 5 P4); S4 unmeasured (5 needs, 2 P4, 11 card abstentions); S5 case-series or single-patient report (4); S6 concordant absence of signal (1).
+Note on ALREADY REPRESENTED: under A1 it means *consumed to define the readout*, not *supported*; 11 of the 14 P1 rows in A1 carry the conflict flag. Only A2 (the 4 HIF1A edges) means that a relation is present in the external network.
+
+Reason codes (column `reason_code`, text in `reason`): A1 consumed to define the six-gene readout (14 P1 edges, 4 needs rows, 2 P4 quantities); A2 gene-to-gene edge already in the external network (the 4 HIF1A edges); N1 wrong level (function, protein, phospho, flux, activity, clinical, histology: 24 needs rows, 5 P1 edges, 1 P4 quantity); N2 intervention response or held-out evaluation datum (firewall; 7 needs rows, 5 cards with endpoint outcomes); N3 variant, lesion, stage or cell-type context with no node or filter (4 needs rows, 2 P4 quantities); N4 self-reference to the IT7 result (2); N5 no readout in the perturbation resource (myelin: 4 P1 edges, 1 P4); N6 WWOX-loss state not compound-reachable (1 needs row: the MEF HIF1A/PDK1 observation, whose HIF1A to PDK1 leg is in the network but whose WWOX to HIF1A leg is not representable, and whose observed PDK1 increase opposes the PDK1-down readout); S1 not WWOX-DEE evidence (7); S2 other species or non-neural context (8); S3 single system, n=1 or 4 v 2, discordant, or sign unresolved (19 needs rows, 51 P1 edges, 5 P4); S4 unmeasured (5 needs, 2 P4, 22 cards: 11 abstentions and 11 cards with 0 endpoint outcomes); S5 case-series or single-patient report (4); S6 concordant absence of signal (7 P1 edges, 1 P4).
 
 What the external network lacks for WWOX, dimension by dimension, and why none of it reaches a score:
 
@@ -56,26 +58,26 @@ Honest limits of the classification: it is a judgment table. The `could_add` col
 | Quantity | Value |
 |---|---|
 | External network (IT7 P3 committed tables) | 70,461 signed edges, 8,769 genes |
-| Edges IT7 added in the WWOX-enriched condition | 4 (HIF1A to HK2, SLC2A1, LDHA, PDK1) |
+| Edges added in the IT7 condition labelled WWOX-enriched (neutral label here: NET-EXT plus 4 duplicate HIF1A edges) | 4 (HIF1A to HK2, SLC2A1, LDHA, PDK1) |
 | Of those, already in the external network with the same sign | **4 of 4** (new edges 0, new nodes 0, sign conflicts 0) |
 | HIF1A to all six readout genes in the external network | all six present, sign +1 (CollecTRI for SLC2A1, LDHA, HK2; SIGNOR for the rest, HIF1A-PDK1 through the expanded ARNT/HIF1A complex) |
 | What the "added" edges actually did | duplicated four existing edges: parallel edges that double their weight and raise HIF1A out-degree from 306 to 310 (dilution of its other targets) |
 | Families whose NET score differs, EXT vs WWOX | 80 of 256 (143 have a non-zero score); largest change 1.36e-5 = 0.0097 SD of the score; none above 1e-4; Spearman between the two score vectors 0.99993 |
 | IT7 paired difference | -0.0015, 90 percent interval [-0.004, +0.0002] (re-derived: bootstrap SE 0.0013) |
 
-**Correction to carry forward (not an edit of IT7):** the IT7 wording "the WWOX-enriched condition adds four HIF1A edges that the external network already largely contains" is stronger than stated: it contains all four. S3 was therefore a test of a duplicate-weight perturbation of 0.006 percent of the edges, and its "no added value" says nothing about WWOX knowledge. This agrees with the caution that it cannot be called a test of the WWOX heritage.
+**Correction to carry forward (not an edit of IT7):** the IT7 wording "the WWOX-enriched condition adds four HIF1A edges that the external network already largely contains" is stronger than stated: it contains all four. The "WWOX-enriched" label is a misnomer; the condition is NET-EXT plus 4 duplicate HIF1A edges, a duplicate-weight change of 0.006 percent of the edges, and its "no added value" says nothing about WWOX knowledge. This agrees with the caution that it cannot be called a test of the WWOX heritage. A further IT7-side note (not edited): PRE_REGISTRATION names these edges ED080-ED083 while the committed table (after Amendment 1) numbers them ED077-ED080; the script selects them by content, so no number is affected.
 
 The only other gene-level relations the P1 table holds that involve WWOX are the measured "WWOX loss gives gene X change" rows. They are disease-state observations, not regulation by WWOX:
 
 * WWOX is a **sink** in the external network (7 in-edges: NFKB1, NFKB2, REL, RELA, RELB, TFAP2C, E2F1; 0 out-edges).
-* **0 of the 256 universe families** have WWOX as a target and **0** have a direct target among its 7 regulators, so a compound cannot reach a WWOX out-edge within the 3 propagation hops that matter.
-* Sizing scenarios (not proposals, never an arm): S_A one edge WWOX to HIF1A (-1; the MEF and cancer-cell observation) changes **0 families** (change 0.0). S_B six edges WWOX to the six readouts in the module direction would be circular by construction (the answer for the readout genes is written into the network) and changes 24 families by at most 3.0e-5 (0.021 SD), delta rho 1.7e-5. S_C (both) the same. No relation was invented to make the arms differ; these were computed to show that even the most favourable honest and dishonest encodings do not move the scores.
+* **0 of the 256 universe families** have WWOX as a target and 0 have a direct target among its 7 regulators (0 reach WWOX at hop 1). Counting where signal first reaches the WWOX node: 24 families at hop 2 and 62 more at hop 3, 86 in all. A WWOX out-edge to a readout is inside the K=3 horizon only for the 24 hop-2 families (exactly the 24 that S_B changes); for the other 62 the readout would be a fourth hop. A WWOX to HIF1A edge needs the readout one hop further still, so it changes nothing.
+* Sizing scenarios (not proposals, never an arm): S_A one edge WWOX to HIF1A (-1; the MEF and cancer-cell observation) changes **0 families** (change 0.0), because of the horizon above. S_B six edges WWOX to the six readouts in the module direction would be circular by construction (the answer for the readout genes is written into the network) and changes 24 families by at most 3.0e-5 (0.021 SD), delta rho 1.7e-5. S_C (both) the same. No relation was invented to make the arms differ; these were computed to show that even the most favourable honest and dishonest encodings do not move the scores.
 
 ## 5. Power statement
 
 * IT7 comparison of a method against a reference at n = 256 families: SE of a rank correlation about 0.063, minimum detectable effect about 0.157 (one-sided 5 percent, 80 percent power); re-derived here as 0.1563.
 * A paired difference between two nearly identical score vectors is far more precise than that (bootstrap SE 0.0013 at the observed delta). Precision is not the problem; **there is nothing to detect**: the delta is below the numerical scale of the score.
-* How large would a delta have to be? Sizing simulation (HYPOTHETICAL random sign-random edges between external-network nodes, 12 to 30 replicates per size, never WWOX relations): 4 edges change 0 families (|delta rho| 0); 100 edges (0.14 percent) change a median 17 families, |delta rho| median 0.0003, 95th percentile 0.012; 400 edges, 55 families, 0.003 / 0.013; 1,600 edges (2.3 percent), 108 families, 0.010 / 0.022; **6,400 edges (9.1 percent), 152 families, 0.028 / 0.069**. The registered S3 threshold (0.03) is reached about half the time only at the 9 percent scale. The WWOX record supports at most 7 candidate out-edges, 0 of them reachable. Random edges are a bound on size, not on targeted placement, but no targeted WWOX placement exists (S_B above).
+* How large would a delta have to be? Sizing simulation (HYPOTHETICAL random sign-random edges between external-network nodes, 12 to 30 replicates per size on one shared random stream, never WWOX relations; medians are approximate, one digit): 4 edges change 0 families (|delta rho| 0); 100 edges (0.14 percent) change a median of about 17 families, median |delta rho| about 0.0001 to 0.0003 (verifier re-run 0.0001; 95th percentile about 0.01); 400 edges about 55 families, about 0.003; 1,600 edges (2.3 percent) about 108 families, about 0.004 to 0.010 (verifier 0.0043); **6,400 edges (9.1 percent) about 152 families, about 0.025 to 0.028 (verifier 0.025), 95th percentile about 0.07**. The registered S3 threshold (0.03) is reached about half the time or less only at the 9 percent scale. At most 7 candidate WWOX out-edges exist in the record, and none can move a score beyond 3e-5. Random edges are a bound on size, not on targeted placement, but no targeted WWOX placement exists (S_B above).
 * So the detectable range of a paired edge comparison starts around |delta rho| 0.03 and needs on the order of 10^3 to 10^4 relation changes. The WWOX inputs supply 0.
 
 ## 6. Other grounds for a new experiment, checked
@@ -87,16 +89,17 @@ The only other gene-level relations the P1 table holds that involve WWOX are the
 | Relevant pharmacological qualification | IT8 P3 runs in parallel; at the time of this check `.claude/worktrees/it8-p3` held no committed output | UNVERIFIED; this is the condition most likely to change the answer (section 7) |
 | Independent control | the only independent WWOX-loss contrast, GSE215425 P47T, was already used as E1 (INCONCLUSIVE); the mouse P17 deposits are "seen" | spent; nothing independent left |
 | Signature quality | IT7 applied no quality filter. Counts (no outcome opened): of 1,239 IT7 signatures, 324 of 788 progenitor-like and 140 of 451 neuron-like pass distil_cc_q75 >= 0.2 and pct_self_rank_q25 <= 5 (25 and 14 have no value); only **63 of the 256 families** keep a passing signature in both context classes, so the SE would rise from 0.063 to about 0.13 and the MDE from 0.157 to about 0.32. Of the six readouts only BNIP3 is a measured landmark gene; the other five are inferred in L1000 | a filter trades purity for power and cannot be chosen against the opened IT7 outcome without being post hoc; it does not add WWOX information |
-| Phase II (GSE70138) | 236 neural compound perturbagens, 46 of the 256 universe families have one | adds replicate signatures to a minority of families; a method-power question on wild-type cells, not a WWOX one; IT7 reopening condition (c) |
+| Phase II (GSE70138) | 236 neural compound perturbagens, 46 of the 256 universe families have one (extraction committed: `phase2_neural_perturbagens.tsv`, made by `phase2_neural_counts.py` from the public GEO sig_info table, sha256 b78284478d62029f600d4397334c538d363123110affd2454bf0055bd0678e01, which itself is not committed; the table was not re-downloaded and re-hashed against GEO here, so UNVERIFIED against the live deposit) | adds replicate signatures to a minority of families; a method-power question on wild-type cells, not a WWOX one; IT7 reopening condition (c) |
 
 ## 7. Reopening condition
 
 Reopen a WWOX-informed network comparison only if at least one of these holds, and then register first:
 
 1. a compound-response measurement in a WWOX-deficient human neural system with biological replication and a matched readout, which would also supply the first usable evaluation truth and turn the N2 rows from firewall items into held-out outcomes; or
-2. WWOX-derived relations that a compound can reach: signed regulatory edges from or to WWOX or its regulators in neural cells, or a validated WWOX interactor that is itself a drug target, in numbers of the order of hundreds (section 5), not units; or
+2. WWOX-derived relations that compounds can reach with weight: signed regulatory edges from or to WWOX or its regulators in neural cells, or a validated WWOX interactor that is itself a drug target, such that many universe families reach the new edges within the propagation horizon (today 24 reach WWOX at hop 2 and 62 at hop 3, 0 directly) and the added edge weight moves scores beyond the numerical noise of the score; the random-edge sizing (about 10^3 to 10^4 edges for |delta rho| 0.03) is a rough bound for random edges, not a requirement for targeted ones; or
+2b. re-specifying the method: representing the WWOX-loss state as a seed or node (so that observed consequences of loss can be a source of signal), or a readout with a documented compound-level link, so that the firewall and wrong-level rows have somewhere to enter; this is a new method, to be registered as such, not a repair of this comparison; or
 3. a replicated WWOX-deficient module (at least three libraries per arm in one human neural platform) larger than six genes, replacing the n=1 readout and removing the S3 rows; or
-4. a qualified pharmacological table from IT8 P3 (potency, exposure, neural reach) that changes which families are usable, evaluated with a fresh outcome (phase II signatures, or a quality-filtered set fixed before it is opened).
+4. a qualified pharmacological table from IT8 P3 (potency, exposure, neural reach; UNVERIFIED until that table itself is verified) that changes which families are usable, evaluated with a fresh outcome (phase II signatures, or a quality-filtered set fixed before it is opened).
 
 Until then the honest statement is: the WWOX record, as it stands, adds **no usable input** to this method; it is not evidence that WWOX knowledge is useless for repurposing, only that this method has no place to put it.
 
@@ -107,8 +110,8 @@ Until then the honest statement is: the WWOX record, as it stands, adds **no usa
 * The sizing simulation uses random edges; targeted edge sets near the readouts could behave differently, but none exists for WWOX.
 * The signature-quality counts use conventional thresholds (cc_q75 0.2, self-rank 5 percent) taken as descriptive, not as a recommendation; the 63-family figure is the count of universe families with a passing signature in both context classes by perturbagen id.
 * The fraction of HIF1A edges' sources that are complex expansions (SIGNOR ARNT/HIF1A to HIF1A and ARNT) was not audited.
-* Phase II counts use a copy of the GSE70138 signature table in the session scratch area (not committed) and the phase I pilot context table for family membership.
+* Phase II counts come from the committed extraction `phase2_neural_perturbagens.tsv`; the raw GEO table it was made from is not committed and was not compared with the live deposit (UNVERIFIED), and family membership uses the phase I pilot context table.
 
 ## 9. Files
 
-`README.md` · `wwox_inputs_classified.tsv` · `classify_inputs.py` · `marginal_delta.py` · `marginal_delta_results.json`
+`README.md` · `wwox_inputs_classified.tsv` · `classify_inputs.py` · `marginal_delta.py` · `marginal_delta_results.json` · `phase2_neural_counts.py` · `phase2_neural_perturbagens.tsv`

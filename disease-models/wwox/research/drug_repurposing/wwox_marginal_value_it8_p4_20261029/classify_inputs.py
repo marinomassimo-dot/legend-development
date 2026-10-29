@@ -24,7 +24,7 @@ ROOT = arg("--root"); OUT = arg("--out")
 AR, NU, US, NS = "ALREADY_REPRESENTED", "NEW_BUT_NOT_USABLE", "USABLE_NO_CONTAMINATION", "NOT_SUFFICIENTLY_SUPPORTED"
 
 REASONS = {
-    "A1": "content is the six-gene readout set (SLC2A1, HK2, LDHA, LDHB, BNIP3 up; PDK1 down) already fixed from the two human build systems in IT7 P1/P3; it enters as a readout, not as an edge",
+    "A1": "consumed to define the readout, NOT shown to be supported (most of these rows carry a conflict flag): content is the six-gene readout set (SLC2A1, HK2, LDHA, LDHB, BNIP3 up; PDK1 down) already fixed from the two human build systems in IT7 P1/P3; it enters as a readout, not as an edge",
     "A2": "the relation is a gene-to-gene edge already in the external network with the same sign (SIGNOR and CollecTRI via OmniPath)",
     "N1": "wrong level: the endpoint (function, protein, phospho, flux, activity, clinical, histology, cell fraction) has no node or edge type in a transcript-propagation graph and no compound-level link",
     "N2": "intervention response or held-out evaluation datum: using it as input would expose the answer (IT7 firewall); no usable LINCS signature exists for most of the compounds involved",
@@ -32,10 +32,10 @@ REASONS = {
     "N4": "self-reference: a result of the IT7 comparison itself, not an observation about WWOX",
     "N5": "no readout of this content exists in the perturbation resource (oligodendrocyte genes are not expressed in the neural cell lines of LINCS)",
     "N6": "a WWOX-loss state change is not a compound-reachable relation: WWOX is a sink in the external graph (7 in-edges, 0 out-edges) and no pilot family in the universe targets WWOX or any of its 7 regulators",
-    "S1": "not WWOX evidence: another disease or a class-level precedent (scope OTHER_DISEASE_PRECEDENT)",
+    "S1": "not WWOX-DEE evidence: another disease, a class-level precedent, or WWOX biology in another context (scope OTHER_DISEASE_PRECEDENT or WWOX_BIOLOGY_OTHER_CONTEXT)",
     "S2": "other species or non-neural context (fly, non-neural cell line, fibroblast): ortholog mapping and cell-context transfer unverified; not a human neural network input",
     "S3": "single system, n=1 or 4 v 2 libraries, discordant between systems, sign unresolved or composition-confounded; encoding it would invent a sign",
-    "S4": "unmeasured or no observation exists (abstention, design record, data not shown)",
+    "S4": "unmeasured or no observation exists (abstention, card with 0 endpoint outcomes, design record, data not shown)",
     "S5": "case-series or single-patient report without denominator or replication",
     "S6": "concordant absence of signal: nothing to encode",
 }
@@ -50,7 +50,7 @@ A = {
  ("ISR-ATTENUATION", 1): (NS, "S2"), ("ISR-ATTENUATION", 2): (NS, "S3"), ("ISR-ATTENUATION", 3): (NS, "S1"),
  ("ISR-ATTENUATION", 4): (NS, "S1"), ("ISR-ATTENUATION", 5): (NS, "S1"), ("ISR-ATTENUATION", 6): (NS, "S1"),
  ("ISR-ATTENUATION", 7): (NS, "S1"), ("ISR-ATTENUATION", 8): (NS, "S3"), ("ISR-ATTENUATION", 9): (NS, "S3"),
- ("PDH-PYRUVATE-AXIS", 1): (AR, "A2"), ("PDH-PYRUVATE-AXIS", 2): (NU, "N1"), ("PDH-PYRUVATE-AXIS", 3): (AR, "A1"),
+ ("PDH-PYRUVATE-AXIS", 1): (NU, "N6"), ("PDH-PYRUVATE-AXIS", 2): (NU, "N1"), ("PDH-PYRUVATE-AXIS", 3): (AR, "A1"),
  ("PDH-PYRUVATE-AXIS", 4): (AR, "A1"), ("PDH-PYRUVATE-AXIS", 5): (NU, "N2"), ("PDH-PYRUVATE-AXIS", 6): (NU, "N4"),
  ("LACTATE-LDH", 1): (NS, "S2"), ("LACTATE-LDH", 2): (NS, "S2"), ("LACTATE-LDH", 3): (AR, "A1"), ("LACTATE-LDH", 4): (NS, "S5"),
  ("LACTATE-LDH", 5): (AR, "A1"), ("LACTATE-LDH", 6): (NU, "N2"), ("LACTATE-LDH", 7): (NU, "N4"),
@@ -67,8 +67,8 @@ A = {
  ("SEIZURE-CONTROL-SYMPTOMATIC", 1): (NS, "S5"), ("SEIZURE-CONTROL-SYMPTOMATIC", 2): (NS, "S5"), ("SEIZURE-CONTROL-SYMPTOMATIC", 3): (NS, "S5"),
  ("T-TYPE-CALCIUM", 1): (NU, "N2"),
  ("MYELINATION", 1): (NU, "N1"), ("MYELINATION", 2): (NU, "N2"), ("MYELINATION", 3): (NS, "S3"),
- ("GSK3B-DEREPRESSION", 1): (NU, "N1"), ("GSK3B-DEREPRESSION", 2): (NS, "S2"),
- ("WNT-BETA-CATENIN", 1): (NS, "S3"), ("WNT-BETA-CATENIN", 2): (NS, "S3"), ("WNT-BETA-CATENIN", 3): (NS, "S2"), ("WNT-BETA-CATENIN", 4): (NS, "S3"),
+ ("GSK3B-DEREPRESSION", 1): (NU, "N1"), ("GSK3B-DEREPRESSION", 2): (NU, "N1"),
+ ("WNT-BETA-CATENIN", 1): (NS, "S3"), ("WNT-BETA-CATENIN", 2): (NS, "S3"), ("WNT-BETA-CATENIN", 3): (NS, "S1"), ("WNT-BETA-CATENIN", 4): (NS, "S3"),
  ("MYC-PROGENITOR-PROLIFERATION", 1): (NS, "S3"), ("MYC-PROGENITOR-PROLIFERATION", 2): (NU, "N1"), ("MYC-PROGENITOR-PROLIFERATION", 3): (NU, "N1"),
  ("MTOR-AUTOPHAGY", 1): (NS, "S3"),
  ("NEUROINFLAMMATION-GLIA", 1): (NU, "N1"), ("NEUROINFLAMMATION-GLIA", 2): (NU, "N1"), ("NEUROINFLAMMATION-GLIA", 3): (NU, "N2"),
@@ -110,7 +110,7 @@ for n in needs:
             system=f"{o['model_type']}; {o['species']}; {trunc(o['tissue_or_cells'], 60)}", level=o["readout_level"], content=trunc(f"{o['readout']} -> {o['direction_observed']}"),
             could_add=could_add(o["readout_level"], o["model_type"], o["age_stage"], o["comparison"], o["direction_observed"]),
             cls=c, reason_code=rc, reason=REASONS[rc], scope=o["evidence_scope"],
-            representation_or_delta={"A1": "readout set (p3_run.py UP5/DOWN1); 0 network edges", "A2": "HIF1A->PDK1 present in SIGNOR (ARNT_HIF1A complex) with sign +1; WWOX->HIF1A part not representable (WWOX sink)"}.get(rc, "no input delta"))
+            representation_or_delta=("only the HIF1A->PDK1 leg is in the network (SIGNOR, ARNT_HIF1A complex, +1); the WWOX->HIF1A leg is not representable (WWOX sink, past the K=3 horizon); observed PDK1 UP opposes the PDK1-DOWN readout" if (nid, i) == ("PDH-PYRUVATE-AXIS", 1) else {"A1": "readout set (p3_run.py UP5/DOWN1); 0 network edges", "A2": "HIF1A->PDK1 present in SIGNOR (ARNT_HIF1A complex) with sign +1"}.get(rc, "no input delta")))
 if missing: sys.exit(f"unassigned needs observations: {missing}")
 
 # ---- P1 edges -----------------------------------------------------------------------------------------------------
@@ -122,6 +122,10 @@ for e in csv.DictReader(open(f"{P1}/edges.tsv"), delimiter="\t"):
     tgt = nodes[e["target_node"]]; sym = tgt["symbol"]; et = e["edge_type"]; lvl = e["target_readout"]; sy = e["system_id"]
     if et == "inferred" and e["source_node"].startswith("HGNC:") and e["target_node"].startswith("HGNC:") and e["source_node"] != "HGNC:12799":
         c, rc, rep = AR, "A2", f"{nodes[e['source_node']]['symbol']}->{sym} present in the external network (same sign); 0 new edges"
+    elif et == "measured" and e["direction_status"] == "consistent" and e["sign"] == "no_change":
+        c, rc, rep = NS, "S6", "concordant absence of signal across systems; nothing to encode"
+    elif et == "measured" and e["direction_status"] == "consistent" and sym == "Myelin_OL":
+        c, rc, rep = NU, "N5", "concordant mouse decrease; no readout of oligodendrocyte genes in the neural LINCS lines"
     elif et == "measured" and lvl in ("transcript", "set_transcript") and sym in SIX and sy in HUMAN_BUILD and e["sign"] == ("down" if sym == "PDK1" else "up"):
         c, rc, rep = AR, "A1", "readout gene of the six-gene set; sign equals the build direction in a human build system"
     elif et == "measured" and lvl in ("transcript", "set_transcript") and sy.startswith("mouse_p17"):
@@ -155,7 +159,8 @@ for q, r in seen.items():
 for f in sorted(glob.glob(f"{ROOT}/cards/*.card.json")):
     cd = json.load(open(f)); cid = os.path.basename(f)[: -len(".card.json")]
     abst = bool(cd.get("abstention"))
-    c, rc = (NS, "S4") if abst else (NU, "N2")
+    n_out = len(cd.get("endpoint_outcomes") or [])
+    c, rc = (NS, "S4") if (abst or n_out == 0) else (NU, "N2")
     add(input_id=f"C:{cid}", source_set="cards", source_ref=f"cards/{cid}.card.json", system="compound-class card", level="intervention",
         content=trunc(f"{cd.get('directional_summary')}; {'abstention' if abst else str(len(cd.get('comparisons') or [])) + ' comparisons, ' + str(len(cd.get('endpoint_outcomes') or [])) + ' endpoint outcomes'}"),
         could_add="intervention_response;endpoint" if not abst else "none", cls=c, reason_code=rc, reason=REASONS[rc], scope="card", representation_or_delta="no input delta (compound-target actions come from the P2 tables, not from cards)")

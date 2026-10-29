@@ -236,6 +236,19 @@ fam_with_reg = [f for f in U if any(r in famT[f] for r in wwox_regs)]
 D["families_in_U_with_a_direct_target_among_WWOX_regulators"] = len(fam_with_reg)
 D["those_families"] = [fam_rows[U.index(f)]["name"] for f in fam_with_reg]
 D["families_in_U_with_WWOX_as_target"] = int(sum(1 for f in U if "WWOX" in famT[f]))
+# hop at which each family's signal first reaches the WWOX node (binary reachability over the external graph)
+hop_first = {}
+if "WWOX" in g0.idx:
+    wi = g0.idx["WWOX"]; xb = np.zeros((nU, g0.N), np.float32)
+    for i, f in enumerate(U):
+        for t in famT[f]:
+            if t in g0.idx: xb[i, g0.idx[t]] = 1.0
+    gb = Graph([(a, b, 1) for a, b, _ in ext]); h = xb; seen_w = xb[:, wi] > 0
+    for k in (1, 2, 3):
+        h = (gb.hop(h) > 0).astype(np.float32); new = (h[:, wi] > 0) & ~seen_w; hop_first[k] = int(new.sum()); seen_w |= new
+D["families_first_reaching_WWOX_at_hop"] = hop_first
+D["families_reaching_WWOX_within_K_hops"] = int(sum(hop_first.values()))
+D["reading"] = ("hop 2 + one WWOX out-edge to a readout = hop 3 (inside K=3): S_B can change those families; WWOX->HIF1A needs the readout one hop further (past K=3), so S_A changes nothing")
 def scen(name, add):
     g = Graph(ext + add); S = score(g); dd = S - S0
     return {"scenario": name, "edges": [(a, b, c) for a, b, c in add], "families_changed(>1e-9)": int((np.abs(dd) > 1e-9).sum()),

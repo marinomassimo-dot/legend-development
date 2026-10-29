@@ -327,6 +327,13 @@
   "families_in_U_with_a_direct_target_among_WWOX_regulators": 0,
   "those_families": [],
   "families_in_U_with_WWOX_as_target": 0,
+  "families_first_reaching_WWOX_at_hop": {
+   "1": 0,
+   "2": 24,
+   "3": 62
+  },
+  "families_reaching_WWOX_within_K_hops": 86,
+  "reading": "hop 2 + one WWOX out-edge to a readout = hop 3 (inside K=3): S_B can change those families; WWOX->HIF1A needs the readout one hop further (past K=3), so S_A changes nothing",
   "S_A_WWOX_to_HIF1A_loss_raises_protein_(MEF_and_cancer_cells,_non-neural)": {
    "scenario": "S_A",
    "edges": [
