@@ -1,10 +1,33 @@
 {
   "schema_version": 1,
-  "input_sha256": "4b253f86b549b931424da7615e7e84bc6af228de64e5909c390709f0a4a977b2",
+  "input_sha256": "3357c6e2c34398e574e9e135aa3aa919ab21cb75dd47cd2190e564f42b55cddc",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
   "directional_summary": "UNRESOLVED",
+  "endpoint_outcomes": [
+    {
+      "question": [
+        "seizure_burden",
+        "clinician-reported seizure control",
+        "WOREE (WWOX-related epileptic encephalopathy)",
+        "biallelic WWOX, series class (the three responders carry splice-region or exon-deletion alleles on both sides; no missense responder)",
+        "human",
+        "NOT_APPLICABLE_WHOLE_ORGANISM",
+        "paediatric (infancy to childhood)",
+        "",
+        "",
+        ""
+      ],
+      "statuses": [
+        "OPPOSES_DISEASE_CHANGE"
+      ],
+      "discriminators_declared": false,
+      "assertion_ids": [
+        "A-KD-1"
+      ]
+    }
+  ],
   "comparisons": [
     {
       "assertion_id": "A-KD-1",
@@ -26,6 +49,15 @@
         "target_id: mismatch or unknown",
         "endpoint: mismatch or unknown",
         "direction unknown"
+      ]
+    },
+    {
+      "assertion_id": "A-KD-4",
+      "status": "UNRESOLVED",
+      "reasons": [
+        "endpoint: mismatch or unknown",
+        "context.genotype: mismatch or unknown",
+        "reported no change, in a cell that is not comparable: a measured null, not an unmeasured cell"
       ]
     }
   ],
@@ -136,6 +168,25 @@
           "developmental_stage": "paediatric (infancy to childhood)"
         },
         "note": "The bridge has no sign for 'no difference between columns': an identical row is encoded UNKNOWN and the sentence in this note is the datum. The row is a between-patient label at one timepoint, not a within-patient change under treatment."
+      },
+      {
+        "id": "A-KD-4",
+        "target_id": "seizure_burden",
+        "endpoint": "clinician-reported seizure control on the ketogenic diet",
+        "direction": "NO_CHANGE",
+        "source": "Riva 2022, Front Pediatr (PMID 35573960, PMC9100683); one patient; carried by CLAIM 001 / DL-MOL-007",
+        "locator": "Results, Clinical Features: «The ketogenic diet did not significantly improve seizures and was suspended.»",
+        "epistemic_status": "DATO",
+        "reading_depth": "complete_fulltext_read",
+        "context": {
+          "disease_id": "WOREE (WWOX-related epileptic encephalopathy)",
+          "genotype": "biallelic null: stop variant on one allele and an exon 6 deletion on the other; first-day-of-life onset",
+          "species": "human",
+          "cell_type": "NOT_APPLICABLE_WHOLE_ORGANISM",
+          "developmental_stage": "paediatric (infancy to childhood)"
+        },
+        "note": "n = 1; one sentence in a diagnostic case report; diet duration, ketosis level, seizure counts and the criterion for 'significantly' are not stated; other levers were also tried and failed in the same child. A reported null, not a controlled comparison. Whether this child overlaps the Chong series is not expected (different centre and report) but is not stated. Added IT6 P2 after the independent verification; the sentence was read in the local full text (files/fulltext/PMID35573960_Riva2022_PMC.xml).",
+        "receipt": "FTR-20261003-35573960-01"
       }
     ],
     "label_lookup": {
@@ -227,6 +278,7 @@
     "Technical comparison is not efficacy, safety or experimental validation.",
     "Sources and receipt references are retained, not independently verified.",
     "Shared sources are not independent confirmations; scores are not pooled.",
+    "NO_CHANGE is a reported null effect on that endpoint and context: it is not UNKNOWN (not measured), not evidence of safety, and not proof of futility; a null in a non-comparable cell stays UNRESOLVED.",
     "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
   ]
 }

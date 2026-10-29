@@ -6,7 +6,7 @@
    "words": 22
   }
  ],
- "bibliographic_title_runs": 65,
+ "bibliographic_title_runs": 66,
  "corpus_by_extension": {
   "html": 42,
   "json": 4,
@@ -35,6 +35,11 @@
    "path": ".cur.cands[].asserts[].note_full",
    "run": "no sustained positive effect of treatment was detected",
    "words": 8
+  },
+  {
+   "path": ".cur.cands[].asserts[].note_full",
+   "run": "a marked reduction in both progenitor populations",
+   "words": 7
   }
  ],
  "unquoted_runs_within_limit": 17

@@ -676,7 +676,7 @@ class RealFiles(unittest.TestCase):
         self.assertEqual(per["NEED-GSK3B-DEREPRESSION"]["headline_records_intervention_targets"], 81)   # 50 when GtoPdb rows on GSK3B were dropped by a symbol rule; 31 GSK3B inhibitors recovered through the GtoPdb target id
         cells = {(c["row_id"], c["need"]): c for c in self.base["matrix"]["cells"]}
         a51 = cells[("INT:D01_a51", "NEED-MYC-PROGENITOR-PROLIFERATION")]
-        self.assertEqual(a51["L3_observed_effect"]["state"], "observed_depth_unknown")
+        self.assertEqual(a51["L3_observed_effect"]["state"], "observed_wwox_system")   # IT6 P2 (V1): the paper was read completely (receipt FTR-20260810-42397075-04) and compares A51 with the untreated knockout; it was "observed_depth_unknown" while the card held the depth at UNKNOWN
         self.assertEqual(a51["L4_observed_recovery_in_wwox_system"]["state"], "none_in_record")
         pera = [c for (r, n), c in cells.items() if r == "FAM:CAT:CHEMBL1214124" and n == "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR"][0]
         self.assertEqual(pera["L3_observed_effect"]["state"], "none_in_cards")                           # n=1 polytherapy supports nothing

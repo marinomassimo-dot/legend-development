@@ -3,7 +3,7 @@
   "field_provenance": {
    "^\\.(funnel|matrix_summary|dispositions|observations|level_defs|leads_note|pair_unit|ranking_note|no_probability|schema|source|exploration_flagged|has_distinct|orphan_priorities)(\\.|\\[\\]|$)": {
     "class": "OWN",
-    "values": 170,
+    "values": 169,
     "why": "counts and definitions computed from the module's own outputs"
    },
    "^\\.access\\.": {
@@ -23,12 +23,12 @@
    },
    "^\\.cur\\.cands\\[\\]\\.": {
     "class": "OWN",
-    "values": 4634,
+    "values": 4665,
     "why": "card text and computed positions (provenance of the prose: see text audit)"
    },
    "^\\.cur\\.cands\\[\\]\\.(pmids\\[\\]\\.(id|role)|dois\\[\\])$": {
     "class": "BIBLIO",
-    "values": 311,
+    "values": 313,
     "why": "PMID / DOI of a cited work"
    },
    "^\\.cur\\.cands\\[\\]\\.access\\[\\]$": {
@@ -43,7 +43,7 @@
    },
    "^\\.cur\\.cands\\[\\]\\.pmids\\[\\]\\.(title|journal|year)$": {
     "class": "BIBLIO",
-    "values": 459,
+    "values": 462,
     "why": "title, journal, year of a cited work (bibliographic facts)"
    },
    "^\\.cur\\.footer\\.": {
@@ -93,7 +93,7 @@
    },
    "^\\.pairs\\[\\]\\.(l2|l3|l4|x|n|r)(\\.|\\[\\]|$)": {
     "class": "OWN",
-    "values": 21925,
+    "values": 21932,
     "why": "levels 2-4, indices: computed from cards and needs"
    },
    "^\\.pairs\\[\\]\\.l1\\.(state|n_assoc|readout_only|why|stale)$": {
@@ -163,7 +163,7 @@
    },
    "^\\.ui\\.": {
     "class": "UI",
-    "values": 506,
+    "values": 507,
     "why": "Italian orientation text (builder data UI_IT and siblings)"
    }
   },
@@ -191,7 +191,7 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 1345,
+    "forbidden-name": 1352,
     "forbidden-wording": 8
    },
    "co_attested_wording": [
@@ -399,14 +399,14 @@
   "view_schema": "legend.wwox.repurposing_view/2"
  },
  "embedded_field_classes": {
-  "BIBLIO": 912,
+  "BIBLIO": 917,
   "COUNT": 7542,
   "ID": 2956,
-  "OWN": 49521,
+  "OWN": 49558,
   "ROWNAME": 1463,
   "SRC_A": 89,
   "SRC_META": 244,
-  "UI": 506
+  "UI": 507
  },
  "embedded_sources": [
   {
@@ -468,8 +468,8 @@
    "sha256": "b0cfd9d4f163e81172115d7dbe215d1dc3090c566e03f70c475edb5ee8e5ca08"
   },
   "TEXT_PROVENANCE.json": {
-   "bytes": 1468,
-   "sha256": "1ed20bea2c2829b084c6581abe5d552fe637b2058261f015b9ee8af160ed5730"
+   "bytes": 1601,
+   "sha256": "2e103ec53ef81089443f989a5af9ca39afcdf399556b2e7bfa8b2e4203e1f322"
   },
   "class_b/chembl_cc-by-sa-3.0/CREDIT.txt": {
    "bytes": 1636,
@@ -484,8 +484,8 @@
    "sha256": "d8fe6a3455466783564803428b6318c1c442db6a16dfb97de8a6b7dcf944cc9d"
   },
   "index.html": {
-   "bytes": 1880623,
-   "sha256": "39d026d1e4efa82d682e8de4c13af79bffa749f9c3c8eb31e8d4d9eaac387262"
+   "bytes": 1885572,
+   "sha256": "1f9bf7e9e61ca4b4ae58c48e2c84a31074b7936c5cb808daa8d9a0f84aee9252"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",
