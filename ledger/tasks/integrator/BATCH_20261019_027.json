@@ -1,0 +1,80 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "_note": "Candidate integration, research layer and registry notes, working model WM_v7.28 PRESERVED (no working-model statement changed, no bump). Not medical advice; no individual-level data; no re-identifying variant combination.",
+ "TASK_ID": "BATCH_20261019_027",
+ "ALIAS": "INT-IT6-REGISTRIES-20261029",
+ "ACTOR_ID": "integrator",
+ "OWNER": "orchestrator",
+ "CURRENT_STATE": "COMPLETE_ON_TASK_BRANCH",
+ "assigned_on": "2026-10-29",
+ "OBJECTIVE": "Mandate IT6, registries step: register in the registries and ledgers only the verified, proportionate results of iteration 6 (P3 census, P4 mouse P17, P5 function reference, P6 broad recovery, P7 rescue window, P9 NMDAR, P10 glia, P11 magnesium, P2 priority review): window-state qualifiers on the gene-addition claims, the d-APV reading, the ISR sign after a third system, the glial sign conflict, the function ruler and route blockade, one new hypothesis (extracellular magnesium), reading updates for the papers re-read with a recorded receipt; reach every consumer, regenerate the derived surfaces and prove the module no longer uses the superseded wording.",
+ "TASK_CLAIM": {
+  "actor": "integrator (Integrator worker for the orchestrator)",
+  "branch": "task/it6-batch",
+  "worktree": ".claude/worktrees/it6-batch",
+  "base": "70df75ec",
+  "landed": "to be landed on main by the orchestrator after the adversarial review; this record is written on the task branch"
+ },
+ "RESULT": {
+  "wm_version": "WM_v7.28 preserved (no statement of working_model_current.md changed: searched for AAV9, gene therapy, rescue, NMDAR, bursting, window; the recovery-sounding lines already sit beside 'early postnatal window' and 'post-natal dosing is declared future work'; no bump, no history row, last_wm_* untouched)",
+  "candidates_propagated": 1,
+  "candidate": "CC-20261029-INTEGRATOR-IT6-REGISTRIES-01",
+  "registries": "claim_registry_current: 6 wave notes (CLAIM 004, 011, 040, 002, 021, 005; Status, Type, Title and Summary unchanged); paper_registry_current: 12 reading updates (PAPER 011, 005, 094, 039, 031, 019, 021, 006, 004, 007, 434, CORPUS P318); literature_tracking_log_current: 11 pointer notes (LIT-0011, 0072, 0417, 0365, 0021, 0023, 0318, 0706, 0110, 0077, 006); working_model_current 0 ops; batch_commit.py propagate, dry run then --apply, for each file; candidate_ops_reconcile MATCH, ops_parsed 29",
+  "ledger": "record_scoped_edit.py apply (dry run then --apply), one dated UPDATE bullet each, earlier wording untouched: discovery_ledger DL-MECH-011, DL-MOL-005, DL-MECH-007, DL-MOL-001, DL-BIO-085, DL-REPO-002, DL-MECH-012, DL-MECH-173, DL-MECH-020, DL-REPO-004 (10 ops); therapeutic_hypotheses_ledger HYP-20260709-01, HYP-20261026-10, HYP-20261026-11, HYP-20260709-08, HYP-20261027-01, HYP-20260705-02 (6 ops) and one NEW record HYP-20261029-01 (extracellular magnesium as the NMDAR gate; Status generated, no ranking line) appended by plain append; dismissal_ledger 0 ops",
+  "consumers_reached": "mechanism_intervention_map.md (M1 cell, CHAIN A boundary 5, CHAIN B node line replaced in place plus update, R-01 cell, R-02, R-06, R-09, R-10, R-11 updates); cards C01, C04, F04, J01, P11, A02 and the needs were integrated by the P5, P7, P9, P10, P11 integration commits before this batch; join/cards.json, p5/cells.json and p5/tables_deep.md still held the old card wording ('R-class demonstrated') and are regenerated",
+  "derived": "repurposing_join run (queries shifted by the inserted bullets; PAPER 094 named in two ledger records adds one paper to 16 queries; the map updates of R-09, R-10 and R-11 name no ledger id so that their curated SOURCE_IDS keep their meaning), repurposing_coverage run and check, p5 build and check, repurposing_join handoff 2026-10-29, repurposing_view run full and shareable, package and check, pathograph surfaces; batch_queue, coverage_report and reading_state regenerated and byte-identical",
+  "proof": "framework/scripts/test_repurposing_join.py::SupersededWordingGoneIT6 (6 tests, positive checks plus the exact replaced strings; a mutation of the replaced map string is caught) plus the IT5 classes, 69 tests OK",
+  "not_registered": "see the candidate section 'What was deliberately NOT registered': no working-model change (the 'therapeutic window generally considered still open in early childhood' line is left on purpose); no identity records for the non-WWOX precedents (CBS, NQO1, magnesium, infant spasms, NMDAR class and GRIN papers); no claim created; dismissal ledger untouched; P8 and P12 tool-level work and the P2 labels state no registry fact; the fly-deposit observation of P3 has no receipt and lives only inside the DL-MECH-173 update",
+  "not_touched": "working_model_current and working_model_history; fulltext_read_receipts.jsonl (all 27 IT6 receipts were already recorded: 22 events at ledger 907 and 5 at ledger 912); experiment_ledger; disease_model.md; dated analysis notes"
+ },
+ "DEFAULTS_TAKEN": [
+  {
+   "condition": "batch_commit.py propagate accepts only the four scientific current files",
+   "default": "the discovery and hypotheses ledgers edited with record_scoped_edit.py apply (dry run, then --apply); no FULL_FALLBACK; the dismissal ledger needed no op"
+  },
+  {
+   "condition": "record_scoped_edit.py refuses a new level-3 record inside a level-2 run (RESEGMENTATION) for the hypotheses ledger",
+   "default": "HYP-20261029-01 appended at the end of the file by a plain append after the six record-scoped ops had been applied; the diff shows only the six one-bullet insertions and the appended record"
+  },
+  {
+   "condition": "the hypotheses ledger addresses records by exact heading, not by identity token",
+   "default": "ops addressed by heading (as in the iteration-5 batch)"
+  },
+  {
+   "condition": "snapshot declaration omits append-only ledgers by design",
+   "default": "snapshot backup/20261029_it6_batch (gitignored) taken from the clean tree before any edit; base-qualified route: git checkout 70df75ec -- <path>"
+  },
+  {
+   "condition": "naming a ledger id in a map record changes the query population of that record's join row (R-10 and R-11 SOURCE_IDS are curated so the join does not inherit unrelated families of papers; two curated-link tests failed after the first regeneration)",
+   "default": "the map updates of R-09, R-10 and R-11 and the DL-MECH-020 bullet name no ledger id ('see the discovery-ledger update of 2026-10-29 on ...'); the first regeneration was discarded and rerun"
+  },
+  {
+   "condition": "claim notes that name a PMID trigger UNLINKED_SUPPORT warnings when the paper's Claim links do not name the claim",
+   "default": "claim wave notes name papers by their PAPER id and short name only, no PMID literal; paper Claim links not edited"
+  },
+  {
+   "condition": "a relative link or wikilink inside a candidate under research/ can break the publication gate or LINT",
+   "default": "the candidate shows the ledger bullets without wikilinks; the registry ops keep their wikilinks inside fenced JSON, as in the iteration-5 candidate"
+  },
+  {
+   "condition": "the DL-REPO-002 heading still reads 'direzione RISOLTA'",
+   "default": "heading and earlier bullets untouched (append-only); the UPDATE says the direction is NOT resolved across the Wwox models and points at the earlier CORRECTION of 2026-09-26"
+  }
+ ],
+ "STOP_LOG": [],
+ "VERIFICATION": {
+  "drift": "FRESH (origin/main 030a8a5c; branch base 70df75ec)",
+  "legend_lint": "WARN before and after, 0 BLOCK; output byte-identical to the pre-batch run (exit 0)",
+  "growth_anchors_check": "PASS",
+  "fulltext_receipts_verify": "OK, 912 chained receipts",
+  "public_release_gate": "PASS, 0 BLOCKS",
+  "candidate_ops_reconcile": "MATCH, ops_parsed 29",
+  "tests": "test_repurposing_join 69 OK (incl. SupersededWordingGoneIT6, 6 tests), test_repurposing_coverage 55 OK, test_repurposing_view 92 OK, needs/test_check_needs OK, check_needs OK (22 needs, 81 observations), check_cards 27 packets 0 problems, p5_check 203 cells 0 problems, test_tool_routing OK, test_section_references OK, test_growth_anchors 13 OK, test_batch_commit 23 OK, test_record_scoped_edit 61 OK, test_candidate_ops_reconcile OK"
+ },
+ "ADDENDUM_REPAIR_20261029": {
+  "review": "disease-models/wwox/research/locator_audits/2026-10-29_it6_batch_review.md (commit 9d4a1546; no HIGH)",
+  "scope": "D2 to D13, wording only, record-scoped replace-within edits of this batch's own text (earlier ledger wording untouched), each re-checked against the cycle verifier reports; the map's in-place lines edited per the review",
+  "D1": "filed as the separate MINOR candidate CC-20261029-INTEGRATOR-IT6-WM-01 and applied as BATCH_20261019_028 (WM_v7.29); this record's statement that the working model is left unchanged is superseded by it",
+  "regenerated": "join, coverage, p5, both views, package, handoff 20261029, pathograph"
+ }
+}

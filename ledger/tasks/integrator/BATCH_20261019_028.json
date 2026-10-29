@@ -1,0 +1,44 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "_note": "Single-candidate integration, working-model wording, MINOR bump WM_v7.28 to WM_v7.29. No claim created or reversed, no Status/Type/Summary changed. Not medical advice; no individual-level data.",
+ "TASK_ID": "BATCH_20261019_028",
+ "ALIAS": "INT-IT6-WM-20261029",
+ "ACTOR_ID": "integrator",
+ "OWNER": "orchestrator",
+ "CURRENT_STATE": "COMPLETE_ON_TASK_BRANCH",
+ "assigned_on": "2026-10-29",
+ "OBJECTIVE": "Apply finding D1 and R8 of the adversarial review of BATCH_20261019_027: the working model's 'critical early postnatal window (P0-P5 in mouse)' becomes 'early postnatal window tested (ages tested, not a measured boundary)', three 'durable rescue' lines carry the early-window-prevention qualifier, the window-in-early-childhood sentence carries a premise tag; history row, state manifest version, narrative view.",
+ "TASK_CLAIM": {
+  "actor": "integrator",
+  "branch": "task/it6-batch",
+  "worktree": ".claude/worktrees/it6-batch",
+  "base": "9d4a1546",
+  "landed": "to be landed on main by the orchestrator"
+ },
+ "RESULT": {
+  "wm_version": "WM_v7.29 (MINOR; was WM_v7.28)",
+  "candidates_propagated": 1,
+  "candidate": "CC-20261029-INTEGRATOR-IT6-WM-01",
+  "registries": "working_model_current by batch_commit.py propagate (dry run then --apply), 7 ops; working_model_history by record_scoped_edit.py (Last update note and Changelog row, 2 ops); disease_model.md three lines aligned (normal edit); state manifest working_model_version and target_wm_version WM_v7.29; claim registry, paper registry, literature log, ledgers: 0 ops",
+  "proof": "framework/scripts/test_repurposing_join.py::SupersededWordingGoneIT6 extended (working model and repaired lines)"
+ },
+ "DEFAULTS_TAKEN": [
+  {
+   "condition": "the state manifest carries no last_wm_* keys in its current section",
+   "default": "working_model_version and target_wm_version bumped; the last_wm_* keys live only in historical state_history entries and are not recreated"
+  },
+  {
+   "condition": "the premise tag for the therapeutic-window sentence has no ledger-legend value",
+   "default": "PREMISE_TAG: DEFAULT_FROM_TEXTBOOK (the form used elsewhere in the registries); the sentence itself is unchanged"
+  }
+ ],
+ "STOP_LOG": [],
+ "VERIFICATION": {
+  "legend_lint": "WARN, 0 BLOCK (exit 0)",
+  "growth_anchors_check": "PASS",
+  "fulltext_receipts_verify": "OK, 912 chained receipts",
+  "public_release_gate": "PASS, 0 BLOCKS",
+  "candidate_ops_reconcile": "MATCH (028: 7 ops; 027: 29 ops)",
+  "tests": "test_repurposing_join 71 OK (SupersededWordingGoneIT6 8 tests), test_repurposing_coverage 55 OK, test_repurposing_view 92 OK, test_tool_routing OK, test_section_references OK, p5_check 0 problems"
+ }
+}

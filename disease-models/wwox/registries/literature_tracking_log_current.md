@@ -239,7 +239,7 @@ Serves to:
 **Report mentions:** GABA safety sessions
 **Next action:** normalize identifier
 **Flags:** none
-**Note:** Do not overtranslate as absolute GABA prohibition. Structured caution.
+**Note:** Do not overtranslate as absolute GABA prohibition. Structured caution. Reading update 2026-10-29 (`BATCH_20261019_027`): receipt `FTR-20261029-30290271-01`; no seizure measure stated for the two-week mice. See [[paper_registry_current#PAPER 006]].
 
 ---
 
@@ -389,7 +389,7 @@ Serves to:
 **Working Model impact:** BLOCCO 2 integrated; gene therapy context updated; gliosi come downstream di disfunzione neuronale (P6 ridimensionato)
 **Status:** integrated
 **Next action:** none — chiuso
-**Flags:** preprint flag
+**Flags:** preprint flag Reading update 2026-10-29 (`BATCH_20261019_027`): receipts `FTR-20261029-42422765-01`, `-02`; window state PREVENTED or EARLY-WINDOW, see the wave note on `CLAIM 011`. See [[paper_registry_current#PAPER 011]].
 
 ---
 
@@ -774,7 +774,7 @@ Serves to:
 **Report mentions:** bootstrap
 **Next action:** prioritize full text extraction details
 **Flags:** review trigger / full text needed
-**Note:** Key paper for structural substrate and GSK3β node.
+**Note:** Key paper for structural substrate and GSK3β node. Reading update 2026-10-29 (`BATCH_20261019_027`): receipt `FTR-20261029-32000863-01`; the onset sentence is a lower bound, not a measured onset. See [[paper_registry_current#PAPER 019]].
 
 ---
 
@@ -829,7 +829,7 @@ Serves to:
 **Report mentions:** bootstrap
 **Next action:** none
 **Flags:** none
-**Note:** Key support for prenatal cortex hypomyelination axis.
+**Note:** Key support for prenatal cortex hypomyelination axis. Reading update 2026-10-29 (`BATCH_20261019_027`): receipt `FTR-20261029-31340538-01`; rat glial density LOWER, the opposite sign to the mouse rows. See [[paper_registry_current#PAPER 021]].
 
 ---
 
@@ -2389,7 +2389,7 @@ Serves to:
 **Report mentions:** corpus alignment; BATCH_20260810_005
 **Next action:** none — risolto per promozione; restano dovuti `legend-locator-audit` e le figure dell'Appendix
 **Flags:** il confronto WT-contro-rescued è **non tracciato** nei pannelli dove il rescue appare più forte — non citare *«normalizza»*
-**Note:** Title: Neonatal neuronal WWOX gene therapy rescues Wwox null phenotypes
+**Note:** Title: Neonatal neuronal WWOX gene therapy rescues Wwox null phenotypes Reading update 2026-10-29 (`BATCH_20261019_027`): receipt `FTR-20261029-34747138-01`; window state PREVENTED or EARLY-WINDOW, see the wave note on `CLAIM 004`. See [[paper_registry_current#PAPER 005]].
 
 ---
 
@@ -2528,7 +2528,7 @@ Serves to:
 **Report mentions:** corpus alignment
 **Next action:** none for CLAIM 006/007; remaining sections of the reading's candidate are queued (Purkinje/basket-cell claim, dismissals, reading debt)
 **Flags:** registry records PAPER 007 (canonical) and PAPER 112 (duplicate, append-only)
-**Note:** clinical relevance set to LOW as on `PAPER 007` by `BATCH_20260926_ALDAZ`; the corpus-alignment triage value HIGH is superseded. Title: WWOX P47T partial loss-of-function mutation induces epilepsy, progressive neuroinflammation, and cerebellar degeneration in mice
+**Note:** clinical relevance set to LOW as on `PAPER 007` by `BATCH_20260926_ALDAZ`; the corpus-alignment triage value HIGH is superseded. Title: WWOX P47T partial loss-of-function mutation induces epilepsy, progressive neuroinflammation, and cerebellar degeneration in mice Reading update 2026-10-29 (`BATCH_20261019_027`): receipt `FTR-20261029-36828035-01`; canonical reactive and cytokine transcripts absent from the thresholded sheets. See [[paper_registry_current#PAPER 007]].
 
 ---
 
@@ -3438,7 +3438,7 @@ Serves to:
 **Report mentions:** corpus alignment
 **Next action:** none — the live record for this DOI is [[paper_registry_current#PAPER 004]]; this row is kept as the discovery trace
 **Flags:** corpus placeholder resolved 2026-10-03 by `CC-20261003R-REGISTRY-01` (propagated by `BATCH_20261003_005`); the duplicate identity on the same DOI, `CORPUS-STUB-087`, was already retired to a pointer by `BATCH_20261003_003` from the wave-4 twin `CC-20261003W4-B-REGISTRY-01`, so this candidate's own retirement op was **dropped as already propagated** and no second retirement was written. The reading itself lives on `PAPER 004` and its receipts; no depth marker is restated here, so this row adds no reading to any coverage denominator
-**Note:** Title: Neuronal deletion of Wwox, associated with WOREE syndrome, causes epilepsy and myelin defects
+**Note:** Title: Neuronal deletion of Wwox, associated with WOREE syndrome, causes epilepsy and myelin defects Reading update 2026-10-29 (`BATCH_20261019_027`): receipt `FTR-20261029-33914858-01`; astrocyte-specific deletion scored for delay, weight and survival only. See [[paper_registry_current#PAPER 004]].
 
 ---
 
@@ -9193,7 +9193,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Current status:** screened — B
 **Next action:** full-text retrieval; depth pass if model-shifting
 **Flags:** FASE 1 batch entry / no deep-dive yet
-**Note:** Title: Loss of wwox expression in zebrafish embryos causes edema and alters Ca(2+) dynamics
+**Note:** Title: Loss of wwox expression in zebrafish embryos causes edema and alters Ca(2+) dynamics Reading update 2026-10-29 (`BATCH_20261019_027`): receipt `FTR-20261029-25649963-01`; the rescue RNA is described in the Methods as the ADH-domain region. See [[paper_registry_current#CORPUS P318]].
 
 ## LIT-0319
 **Short title:** The polymorphisms and haplotypes of WWOX gene are associated with the risk of...
@@ -10804,7 +10804,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Current status:** screened — A
 **Next action:** full-text retrieval + deep-dive in next session
 **Flags:** FASE 1 batch entry / no deep-dive yet
-**Note:** Title: Modeling genetic epileptic encephalopathies using brain organoids
+**Note:** Title: Modeling genetic epileptic encephalopathies using brain organoids Reading update 2026-10-29 (`BATCH_20261019_027`): receipt `FTR-20261029-34268881-01`; timing of the add-backs against the first measured phenotype. See [[paper_registry_current#PAPER 039]].
 
 ## LIT-0366
 **Short title:** Methylation status of WWOX gene promoter CpG islands in epithelial ovarian ca...
@@ -12449,7 +12449,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Status:** processed
 **Status note:** complete — read in full, `FTR-20260810-42397075-04`; registry record [[paper_registry_current#PAPER 094]] (status set to the registry record's value by `BATCH_20260926_LITVOCAB`)
 **Discovery window:** post-harvest; this PMID had no literature entry before BATCH_20260920_002
-**Flags:** created by `CC-20260920-EIGHT-RECORD-CLASSIFICATION-01` to give an existing complete reading the entry its PAPER record links to
+**Flags:** created by `CC-20260920-EIGHT-RECORD-CLASSIFICATION-01` to give an existing complete reading the entry its PAPER record links to Reading update 2026-10-29 (`BATCH_20261019_027`): receipt `FTR-20261029-42397075-01`; add-back at week 10 on a phenotype seen at week 7, radial glia not corrected. See [[paper_registry_current#PAPER 094]].
 
 ---
 
@@ -19253,7 +19253,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Report mentions:** research/repurposing_10h_scientist-a_20261021.md
 **Next action:** none — read and registered; claim-level use is held with the group candidate
 **Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-33914734-01` ; manifest `deepdive_manifests/PMID33914734.json`; landing [[paper_registry_current#PAPER 434]]
-**Note:** class-level record. Not medical advice.
+**Note:** class-level record. Not medical advice. Reading update 2026-10-29 (`BATCH_20261019_027`): receipt `FTR-20261029-33914734-02`; route blockade accumulated insoluble pellet protein with no measurable activity (yeast and U2OS; earlier reports also found no residual activity) (NOT WWOX EVIDENCE). See [[paper_registry_current#PAPER 434]].
 
 ---
 ## LIT-0707
