@@ -309,7 +309,7 @@ GROUP_NOTE = ("Each candidate-need link has its own position, and the position s
 UI_IT = {
     # page frame
     "page_title": "WWOX: farmaci e interventi da studiare",
-    "h1": "WWOX: che cosa studiare, e su quali prove",
+    "h1": "WWOX: che cosa studiare, e su quale evidenza",
     "sub": "Materiale di ricerca, non consiglio medico né graduatoria di trattamenti. Livello della malattia e del genotipo di riferimento, nessun dato individuale.",
     "skip": "Vai al contenuto",
     "src_share": "Versione condivisibile: le righe di terze parti sono limitate alla lista consentita.",
@@ -318,27 +318,28 @@ UI_IT = {
     "nav_overview": "Panoramica", "nav_threads": "Filoni", "nav_charts": "Grafici", "nav_navigate": "Esplora", "nav_cards": "Schede",
     "nav_priority": "Priorità", "nav_compare": "Confronto", "nav_tech": "Dettagli tecnici",
     "source_limited": "Alcune fonti hanno uno stato limitato",
-    "source_limited_tail": "Nessun risultato di assenza è una conclusione sulla biologia.",
+    "source_limited_tail": "Un dato assente non è una conclusione sulla biologia.",
     "see_tech": "vedi i dettagli tecnici",
     # overview
     "ov_h": "Panoramica",
-    "ov_lead": "Quali farmaci, integratori, diete e altri interventi esistenti vale la pena studiare per l'encefalopatia epilettica e dello sviluppo legata a WWOX (WWOX-DEE)? Qui si vede che cosa è osservato in WWOX, che cosa viene da altre malattie o da previsioni, che cosa va contro e quale prova manca.",
+    "need_gloss": "Un «bisogno» è un obiettivo biologico: un'alterazione osservata in un sistema WWOX su cui un intervento potrebbe agire.",
+    "ov_lead": "Quali farmaci, integratori, diete e altri interventi esistenti vale la pena studiare per l'encefalopatia epilettica e dello sviluppo legata a WWOX (WWOX-DEE)? Qui si vede che cosa è osservato in WWOX, che cosa viene da altre malattie o da previsioni, che cosa va contro e quale evidenza manca.",
     "warn_h": "Da tenere presente",
-    "warn_1": "Materiale di ricerca per la discussione con il team clinico curante: non è un consiglio medico né una indicazione di trattamento.",
+    "warn_1": "Materiale di ricerca per la discussione con il team clinico curante: non è un consiglio medico né un'indicazione di trattamento.",
     "warn_2": "Una lettera di priorità dice perché vale la pena studiare un intervento, non quanto funzioni: non è un punteggio né una probabilità.",
-    "warn_3": "Che un'informazione manchi (accesso, esito, controprova) non significa che sia negativa: significa che non è stata ottenuta.",
+    "warn_3": "Che un'informazione manchi (accesso, esito, evidenza contraria) non significa che sia negativa: significa che non è stata ottenuta.",
     "how_h": "Come leggere in quattro passi", "how_sum": "Come leggere la pagina",
     "how_1": "Scegli un filone biologico qui sotto.",
     "how_2": "Guarda il motivo della priorità: la lettera F, C o P.",
     "how_3": "Apri la scheda del candidato per le sei risposte brevi.",
-    "how_4": "Leggi la prova che manca e il passo successivo informativo.",
+    "how_4": "Leggi l'evidenza che manca e il passo successivo informativo.",
     "legend_h": "Che cosa significano le lettere",
     "legend_note": "Le lettere sono motivi, non voti. Ogni legame tra candidato e bisogno ha la propria lettera; una scheda può averne più d'una e non ne esiste una «migliore».",
     "fam_F": "Ipotesi favorevole da verificare",
-    "fam_C": "Controprova da chiarire",
+    "fam_C": "Evidenza contraria da chiarire",
     "fam_P": "Premessa mancante",
     "fam_F_txt": "un risultato favorevole, in WWOX o dal bersaglio, giustifica lo studio",
-    "fam_C_txt": "un risultato nullo, misto o sfavorevole va chiarito prima di sperare",
+    "fam_C_txt": "un risultato nullo, misto o sfavorevole va chiarito prima di considerare l'ipotesi",
     "fam_P_txt": "manca un dato: è la prima cosa da ottenere",
     "facts_h": "In cifre (ogni numero ha la sua unità)",
     "unit_needs": "bisogni", "unit_threads": "filoni biologici", "unit_cards": "schede candidato", "unit_abst": "astensioni",
@@ -351,6 +352,8 @@ UI_IT = {
     "perimeter": "Perimetro",
     "perimeter_txt": "WWOX-DEE, classe del genotipo di riferimento; letteratura e basi dati pubbliche; nessun dato individuale.",
     "goals_h": "Due possibilità aperte, due dimensioni separate",
+    "goal_links": "Legami candidato-bisogno per lettera (secondo l'obiettivo del bisogno)",
+    "goal_cross": "I {total} legami candidato-bisogno sono contati tutti, ciascuno una volta, sotto l'obiettivo del bisogno; {cross} di essi collegano una scheda e un bisogno con obiettivi diversi, e per questo il numero di schede di un obiettivo e quello dei suoi legami non coincidono.",
     "goals_note": "Recupero ampio e beneficio parziale non si sommano e non si confrontano. Il Track (A: indipendente dalla variante; B: specifico della variante o della lesione) è un terzo campo indipendente.",
     "goal_deep": "Recupero ampio e duraturo",
     "goal_partial": "Beneficio parziale utile",
@@ -358,7 +361,7 @@ UI_IT = {
     "goal_partial_long": "Beneficio parziale utile (farmaci, integratori, diete)",
     "needs_with_aim": "Bisogni con questo obiettivo",
     "cards_with_aim": "Schede con questo obiettivo",
-    "of_which_abst": "di cui astensioni",
+    "of_which_abst": "di cui {n} astensioni",
     "track_field": "Track (campo separato)",
     "track_none": "non indicato",
     "track_A": "Track A: indipendente dalla variante (agisce qualunque sia l'allele WWOX)",
@@ -366,22 +369,22 @@ UI_IT = {
     "track_A_s": "Track A (indipendente dalla variante)", "track_B_s": "Track B (specifico di variante o lesione)", "track_none_s": "Track: non indicato nella scheda",
     # threads
     "th_h": "Filoni biologici: da dove partire",
-    "th_note": "Ogni scheda riassume un gruppo di bisogni che condividono la biologia: l'obiettivo, i candidati, il motivo della priorità, il tipo di prova e la lacuna decisiva.",
+    "th_note": "Ogni riquadro riassume un gruppo di bisogni che condividono la biologia: l'obiettivo, i candidati, il motivo della priorità, il tipo di evidenza e la lacuna decisiva.",
     "th_aim": "Obiettivo",
     "th_needs_n": "bisogni",
-    "th_deep": "recupero ampio", "th_partial": "beneficio parziale",
+    "th_deep": "di recupero ampio", "th_partial": "di beneficio parziale",
     "th_cands": "Composti e interventi da studiare",
     "th_cands_none": "nessuna scheda candidato",
     "th_more": "altri",
     "th_why": "Motivo della priorità (un legame candidato-bisogno ciascuno)",
-    "th_evid": "Tipo di prova osservata nei bisogni",
+    "th_evid": "Tipo di evidenza osservata nei bisogni",
     "th_evid_none": "nessuna osservazione registrata",
     "th_gap": "Lacuna decisiva",
     "th_gap_wwox": "bisogni senza alcuna osservazione in un sistema WWOX",
     "th_gap_l4": "bisogni per cui nessun intervento ha un recupero osservato in WWOX",
     "th_gap_card": "Dato mancante dichiarato nella scheda",
     "th_explore": "Esplora questo filone",
-    "th_obs_note": "(volume di osservazioni, non forza di prova)",
+    "th_obs_note": "(volume di osservazioni, non forza dell'evidenza)",
     # charts
     "ch_h": "Grafici: uno sguardo d'insieme",
     "ch_note": "Cinque grafici solo dove chiariscono. Nessun grafico misura l'efficacia: il numero di vie biologiche toccate, di pubblicazioni o di record non entra in alcuna priorità.",
@@ -392,17 +395,19 @@ UI_IT = {
     "g1_u_records": "record", "g1_u_families": "famiglie", "g1_u_cards": "schede",
     "g1_rec_sub": "Stessa grandezza in record: {link} record con bersaglio elencato; {act} record con azione dichiarata su un bersaglio di un bisogno.",
     "g1_share": "delle {den} famiglie",
-    "g1_note": "«Bersaglio elencato» è una dichiarazione di una fonte su un bersaglio, non modulazione e non recupero. «Azione dichiarata» dice che cosa fa il composto sul bersaglio (inibitore, agonista…): ancora una dichiarazione di fonte, non una prova di effetto in WWOX. Una famiglia non è un farmaco distinto.",
+    "g1_note": "«Bersaglio elencato» è una dichiarazione di una fonte su un bersaglio, non modulazione e non recupero. «Azione dichiarata» dice che cosa fa il composto sul bersaglio (inibitore, agonista…): ancora una dichiarazione di fonte, non un'evidenza di effetto in WWOX. Una famiglia non è un farmaco distinto.",
     "g1_cards_note": "Unità diversa: composti o interventi che hanno una scheda scritta e letta.",
-    "g2_h": "2. Categorie di accesso (solo evidenza degli Stati Uniti)",
+    "g2_h": "2. Categorie di accesso (evidenza prevalentemente USA)",
     "g2_how": "Come leggere: ogni barra è la quota dei {den} record di catalogo con quella categoria di accesso. Le categorie si sovrappongono (un record può avere evidenza sia OTC sia con prescrizione), quindi le barre non si sommano al totale.",
     "g2_unit": "record", "g2_of": "di", "g2_unknown": "senza alcuna evidenza di accesso",
-    "g2_note": "Evidenza ottenuta solo per gli Stati Uniti (openFDA, NIH DSLD, ChEMBL, MATRIX), alle date di recupero riportate nei dettagli tecnici. Nessun altro paese è stato interrogato. «Sconosciuto» significa non ottenuto, non «non disponibile». Non è un'approvazione, né idoneità per una persona, né un'affermazione di sicurezza.",
-    "acc_supplement": "integratore", "acc_OTC": "da banco (OTC)", "acc_prescription": "con prescrizione", "acc_experimental": "sperimentale", "acc_unknown/unverified": "sconosciuto o non verificato",
+    "g2_note": "Evidenza di accesso proveniente da openFDA e NIH DSLD (specifiche degli Stati Uniti) e da ChEMBL e MATRIX (non specifiche di un paese: per esempio lo stato «in sperimentazione» di ChEMBL non indica un paese), alle date di recupero riportate nei dettagli tecnici. Nessun paese è stato interrogato direttamente oltre agli Stati Uniti. «Sconosciuto» significa non ottenuto, non «non disponibile». Non è un'approvazione, né idoneità per una persona, né un'affermazione di sicurezza.",
+    "acc_supplement": "integratore", "acc_OTC": "da banco (OTC)", "acc_prescription": "con prescrizione", "acc_experimental": "in sperimentazione", "acc_unknown/unverified": "sconosciuto o non verificato",
     "g3_h": "3. Bisogni per interventi: la lettera di ciascun legame",
     "g3_how": "Come leggere: una tabella per filone. Righe: schede candidato; colonne: bisogni. Ogni cella riporta la lettera e il suo significato in parole; la cella vuota (·) significa nessun legame. Il colore non è mai l'unico segnale: contano la lettera, il bordo e il testo.",
     "g3_cand": "Candidato", "g3_empty": "nessun legame",
-    "g3_short_F": "favorevole", "g3_short_C": "controprova", "g3_short_P": "manca premessa",
+    "g3_cell_F1": "ipotesi, esito WWOX controllato", "g3_cell_F2": "ipotesi, esito WWOX debole", "g3_cell_F3": "ipotesi dal bersaglio, nessun test in WWOX",
+    "g3_cell_C1": "evidenza contraria: esito WWOX nullo o sfavorevole", "g3_cell_C2": "evidenza contraria: esito WWOX misto", "g3_cell_C3": "evidenza contraria da fuori WWOX",
+    "g3_cell_P1": "astensione: manca un dato", "g3_cell_P2": "nessun passo successivo", "g3_cell_P3": "manca la premessa",
     "g4_h": "4. Meccanismo e candidati: quali bersagli sono toccati da quali composti",
     "g4_how": "Come leggere: a sinistra il bersaglio, a destra i candidati per cui una fonte dichiara un'azione su quel bersaglio. È una dichiarazione di fonte sul bersaglio, non un effetto in WWOX. «Opposta» significa contraria alla direzione voluta per il bisogno; «direzione non risolta» significa che il segno voluto non è noto.",
     "g4_target": "Bersaglio", "g4_cands": "Candidati e azione dichiarata", "g4_needs": "Bisogni su cui il bersaglio è elencato",
@@ -416,24 +421,24 @@ UI_IT = {
     "g5_need": "Bisogno",
     "g5_c1": "Osservazioni del bisogno in un sistema WWOX", "g5_c2": "Schede collegate", "g5_c3": "Schede con un esito dell'intervento in un sistema WWOX", "g5_c4": "Recupero osservato in WWOX (livello L4)",
     "g5_yes": "sì", "g5_no": "no", "g5_obs": "osservazioni", "g5_obs1": "osservazione", "g5_cards": "schede", "g5_cards1": "scheda",
-    "g5_note": "Il conteggio delle osservazioni è un volume, non una forza di prova; «no» alla colonna L4 non è un risultato negativo: nessun intervento è stato ancora osservato recuperare quel bisogno in WWOX.",
+    "g5_note": "Il conteggio delle osservazioni è un volume, non una forza dell'evidenza; «no» alla colonna L4 non è un risultato negativo: nessun intervento è stato ancora osservato recuperare quel bisogno in WWOX.",
     # navigate
-    "nv_h": "Esplora: bisogno, meccanismo, composti e interventi, prova, prossima domanda",
-    "nv_note": "Ogni riga segue un bisogno biologico: che cosa è stato osservato, quale meccanismo si potrebbe muovere, quali schede candidato lo mirano, quali prove ci sono e quale domanda viene dopo. I filtri valgono per questa sezione, per le schede, per le priorità e per il confronto.",
+    "nv_h": "Esplora: bisogno, meccanismo, composti e interventi, evidenza, prossima domanda",
+    "nv_note": "Ogni riga segue un bisogno biologico: che cosa è stato osservato, quale meccanismo si potrebbe muovere, quali schede candidato lo mirano, quale evidenza c'è e quale domanda viene dopo. I filtri valgono per questa sezione, per le schede, per le priorità e per il confronto.",
     "f_label": "Filtri per le viste curate",
-    "f_thread": "Filone biologico", "f_need": "Bisogno", "f_access": "Categoria di accesso (evidenza USA)", "f_country": "Evidenza per paese", "f_scope": "Tipo di prova",
+    "f_thread": "Filone biologico", "f_need": "Bisogno", "f_access": "Categoria di accesso (evidenza prevalentemente USA)", "f_country": "Evidenza per paese", "f_scope": "Tipo di evidenza",
     "f_track": "Track", "f_goal": "Obiettivo di recupero", "f_status": "Stato della ricerca", "f_q": "Cerca testo",
     "f_q_ph": "nome, id, id ChEMBL, bisogno",
     "f_any_thread": "tutti i filoni", "f_any_need": "tutti i bisogni", "f_any_access": "tutte le categorie", "f_any_country": "tutti", "f_any_scope": "tutti i tipi", "f_any_track": "tutti i Track", "f_any_goal": "tutti gli obiettivi", "f_any_status": "tutti gli stati",
     "f_reset": "azzera i filtri",
-    "f_note": "Paese: l'evidenza di accesso è stata ottenuta solo per gli Stati Uniti; il filtro separa soltanto «evidenza USA trovata» da «nessuna ottenuta». Obiettivo: quello di un bisogno è proprio del bisogno; quello di una scheda è lo scopo scritto nella scheda, e i due possono differire.",
-    "nv_c_need": "Bisogno", "nv_c_mech": "Meccanismo", "nv_c_comp": "Composti e interventi", "nv_c_evid": "Prova", "nv_c_next": "Prossima domanda",
+    "f_note": "Paese: l'evidenza di accesso proviene in parte da fonti statunitensi (openFDA, DSLD) e in parte da fonti non specifiche di un paese (ChEMBL, MATRIX); nessun altro paese è stato interrogato direttamente, quindi il filtro separa soltanto «evidenza di accesso trovata» da «nessuna ottenuta». Obiettivo: quello di un bisogno è proprio del bisogno; quello di una scheda è lo scopo scritto nella scheda, e i due possono differire.",
+    "nv_c_need": "Bisogno", "nv_c_mech": "Meccanismo", "nv_c_comp": "Composti e interventi", "nv_c_evid": "Evidenza", "nv_c_next": "Prossima domanda",
     "nv_mech_lab": "Meccanismo (che cosa si muoverebbe)",
-    "nv_dir": "Direzione voluta", "nv_on": "su", "nv_targets": "Bersagli", "nv_none": "nessuno elencato",
+    "nv_dir": "Direzione voluta", "nv_on": "oggetto", "nv_targets": "Bersagli", "nv_none": "nessuno elencato",
     "nv_uncertain": "segno incerto: solo esplorazione",
     "nv_comp_none": "nessuna scheda ({n} famiglie di catalogo hanno un bersaglio elencato; un elenco non è un candidato)",
     "nv_evid_none": "nessuna osservazione registrata",
-    "nv_evid_line": "{w} in un sistema WWOX (di cui {c} casi clinici non controllati); voci di controprova sul bisogno: {k}",
+    "nv_evid_line": "{w} in un sistema WWOX (di cui {c} casi clinici non controllati); voci di evidenza contraria sul bisogno: {k}",
     "nv_next_none": "Nessuna scheda candidato indica un passo successivo per questo bisogno.",
     "nv_missing": "dato mancante",
     "nv_shown": "{a} di {b} bisogni mostrati",
@@ -443,7 +448,7 @@ UI_IT = {
     # cards
     "cd_h": "Schede candidato",
     "cd_shown": "mostrate",
-    "cd_note": "Ogni scheda risponde brevemente a sei domande; i dettagli tecnici e le tabelle complete sono un clic più in basso. I tipi di prova non si fondono mai: un esperimento WWOX in un sistema DEE, la biologia WWOX in un altro contesto, un precedente di un'altra malattia, un risultato computazionale e un'ipotesi non verificata hanno etichette proprie.",
+    "cd_note": "Ogni scheda risponde brevemente a sei domande; i dettagli tecnici e le tabelle complete sono un clic più in basso. I tipi di evidenza non si fondono mai: un esperimento WWOX in un sistema DEE, la biologia WWOX in un altro contesto, un precedente di un'altra malattia, un risultato computazionale e un'ipotesi non verificata hanno etichette proprie.",
     "cd_order": "Ordine", "cd_o_group": "per insieme di lettere dei legami, poi A-Z", "cd_o_name": "A-Z",
     "cd_sel": "Selezione",
     "cd_sel_none": "Nessuna scheda selezionata. Spunta «seleziona per confronto o esportazione» su due-quattro schede.",
@@ -451,17 +456,17 @@ UI_IT = {
     "cd_none": "Nessuna scheda corrisponde a questi filtri.",
     "cd_pick": "seleziona per confronto o esportazione",
     "cd_export": "Esporta questa scheda (stampa / PDF)",
-    "cd_status": "Stato", "cd_access": "Accesso (evidenza USA)", "cd_access_none": "Accesso: nessuna identità di catalogo o nessuna evidenza ottenuta",
+    "cd_status": "Stato", "cd_access": "Accesso (evidenza prevalentemente USA)", "cd_access_none": "Accesso: nessuna identità di catalogo o nessuna evidenza ottenuta",
     "cd_no_need": "nessun bisogno collegato",
-    "cd_noscope": "Nessuna affermazione sull'intervento ha un tipo di prova in questa scheda.",
-    "q1": "1. Perché lo studiamo", "q2": "2. Risultato in WWOX", "q3": "3. Precedente esterno o previsione", "q4": "4. Controprove", "q5": "5. Prova mancante", "q6": "6. Prossimo passo",
+    "cd_noscope": "Nessuna affermazione sull'intervento ha un tipo di evidenza in questa scheda.",
+    "q1": "1. Perché è in elenco", "q2": "2. Risultato in WWOX", "q3": "3. Precedente esterno o previsione", "q4": "4. Evidenza contraria", "q5": "5. Evidenza mancante", "q6": "6. Prossimo passo",
     "q1_needs": "Bisogni che affronterebbe", "q1_noneed": "Nessun bisogno è collegato a questa scheda.",
     "q2_own": "Questo intervento, provato in un sistema WWOX", "q2_none": "Nella scheda non è registrato alcun esito di questo intervento in un sistema WWOX.",
     "q2_ctx": "Osservazioni sui bisogni collegati in sistemi WWOX (contesto: possono riguardare altri interventi)", "q2_noctx": "I bisogni collegati non hanno osservazioni in sistemi WWOX.",
     "more_in_tech": "{n} altre nei dettagli tecnici.", "more_in_tech1": "{n} altra nei dettagli tecnici.",
     "q3_none": "Nessuno registrato.",
     "q4_note": "Come scritto nella scheda (pro e contro insieme, non elencati)",
-    "q4_need": "bisogno", "q4_none": "In questa scheda non è elencata alcuna controprova (l'assenza nella scheda non è un risultato negativo).",
+    "q4_need": "Bisogno", "q4_none": "In questa scheda non è elencata alcuna evidenza contraria (l'assenza nella scheda non è un risultato negativo).",
     "q5_miss": "Dato mancante", "q5_nomiss": "Non è indicato alcun dato mancante.", "q5_reopen": "Condizione di riapertura",
     "q6_next": "Passo successivo informativo", "q6_none": "Non è indicato un passo successivo (scheda di astensione o di asse).",
     "full_text": "testo completo",
@@ -470,19 +475,21 @@ UI_IT = {
     "tech_sum": "Dettagli tecnici e tabelle complete",
     "tc_identity": "Identità e meccanismo (come scritti nella scheda)", "tc_mech": "Meccanismo", "tc_novelty": "Novità e strade già note", "tc_pharm": "Farmacologia", "tc_access": "Accesso",
     "tc_links_h": "Tutti i bisogni collegati e perché la lettera è questa", "tc_need": "Bisogno", "tc_pos": "Lettera", "tc_crit": "Criteri",
-    "tc_asserts": "Affermazioni sull'intervento nella scheda", "tc_scope": "Tipo di prova", "tc_stmt": "Affermazione", "tc_sys": "Sistema", "tc_depth": "Profondità di lettura", "tc_src": "Fonti",
-    "tc_obs": "Osservazioni nei registri dei bisogni collegati", "tc_against": "Tutte le controprove della scheda", "tc_for": "Prove a favore, come scritte nella scheda", "tc_notknown": "Non noto",
+    "tc_asserts": "Affermazioni sull'intervento nella scheda", "tc_scope": "Tipo di evidenza", "tc_stmt": "Affermazione", "tc_sys": "Sistema", "tc_depth": "Profondità di lettura", "tc_src": "Fonti",
+    "tc_obs": "Osservazioni nei registri dei bisogni collegati", "tc_against": "Tutta l'evidenza contraria della scheda", "tc_for": "Evidenza a favore, come scritte nella scheda", "tc_notknown": "Non noto",
     "tc_actions": "Azioni di catalogo sui bersagli dei bisogni (dichiarazioni di fonte, non modulazione in un sistema WWOX)", "tc_target": "Bersaglio", "tc_action": "Azione", "tc_rel": "Relazione con la direzione voluta",
     "tc_sources": "Fonti per identificativo pubblico", "tc_nosrc": "Nessun identificativo pubblico è collegato a questa scheda.", "tc_compound_id": "identità del composto",
     "tc_cardfile": "File della scheda (percorso nel repository, solo uso locale)", "tc_assess": "Valutazione", "tc_bridge": "sintesi della direzione",
-    "tc_text_en": "Testo tecnico tratto dalla scheda, in inglese.",
+    "q2_other": "Altro materiale su WWOX (calcolo sui dati WWOX, o tipo di evidenza non registrato nella scheda)",
+    "ex_lim_card": "Limiti scritti nella scheda (testo originale in inglese):",
+    "tc_text_en": "Testo tecnico tratto dalla scheda, in inglese; può citare riferimenti interni (CLAIM n, A-xxx-n, T1, DL-…) non necessari alla lettura e non consultabili fuori dal repository.",
     "opposed": "OPPOSTA alla direzione voluta",
     "limits_note": "limiti",
     # priority
     "pr_h": "Priorità di ricerca: che cosa studiare ancora, e perché",
-    "pr_note": "Si tratta di un raggruppamento per il motivo per cui uno studio è interessante, non di un ordine di schede e non di una graduatoria di efficacia: il numero di pubblicazioni, di vie biologiche toccate o una cella L4 non vi entrano. Ogni legame candidato-bisogno ha la propria posizione: ipotesi favorevole (F), controprova da chiarire (C) o premessa mancante (P). L'ordine delle posizioni è un raggruppamento per tipo di motivo; dentro una posizione l'ordine è alfabetico e non significa nulla. I criteri soddisfatti e non soddisfatti sono stampati con ogni posizione.",
+    "pr_note": "Si tratta di un raggruppamento per il motivo per cui uno studio è interessante, non di un ordine di schede e non di una graduatoria di efficacia: il numero di pubblicazioni, di vie biologiche toccate o una cella L4 non vi entrano. Ogni legame candidato-bisogno ha la propria posizione: ipotesi favorevole (F), evidenza contraria da chiarire (C) o premessa mancante (P). L'ordine delle posizioni è un raggruppamento per tipo di motivo; dentro una posizione l'ordine è alfabetico e non significa nulla. I criteri soddisfatti e non soddisfatti sono stampati con ogni posizione.",
     "pr_view": "Vista", "pr_by_need": "per bisogno", "pr_by_goal": "per obiettivo di recupero",
-    "pr_sort": "Ordine dentro un gruppo", "pr_s_az": "A-Z (nessun ordine implicito)", "pr_s_wwox": "più esiti in sistemi WWOX (un volume, non una forza)", "pr_s_counter": "più voci di controprova (un volume, non un verdetto)",
+    "pr_sort": "Ordine dentro un gruppo", "pr_s_az": "A-Z (nessun ordine implicito)", "pr_s_wwox": "più esiti in sistemi WWOX (un volume, non una forza)", "pr_s_counter": "più voci di evidenza contraria (un volume, non un verdetto)",
     "pr_links": "legami", "pr_link": "legame",
     "pr_nolink": "Nessun legame candidato.",
     "pr_need_nocard": "Nessuna scheda candidato è collegata a questo bisogno. Per {n} famiglie di catalogo esiste un bersaglio elencato, ma è una dichiarazione di fonte e non un candidato.",
@@ -490,12 +497,12 @@ UI_IT = {
     "pr_open": "apri il profilo", "pr_open_card": "apri il profilo del candidato",
     "pr_goal_aim_diff": "lo scopo della scheda differisce da quello del bisogno",
     "pr_reasons": "motivi di questa posizione (criteri soddisfatti e non soddisfatti, e i fatti che li sostengono)",
-    "pr_sum_wwox": "Esito in WWOX", "pr_sum_counter": "Controprove", "pr_sum_item": "voci", "pr_sum_prose": "in prosa", "pr_sum_next": "Passo successivo", "pr_next_yes": "indicato nella scheda", "pr_next_no": "non indicato",
+    "pr_sum_wwox": "Esito in WWOX", "pr_sum_counter": "Evidenza contraria", "pr_sum_item": "voci", "pr_sum_item1": "voce", "pr_sum_prose": "in prosa", "pr_sum_next": "Passo successivo", "pr_next_yes": "indicato nella scheda", "pr_next_no": "non indicato",
     "pr_goal_needs": "bisogni con questo obiettivo", "pr_goal_links": "legami candidato-bisogno",
     "res_favourable": "favorevole", "res_mixed": "misto", "res_null": "nullo", "res_unfavourable": "sfavorevole", "res_unresolved": "non risolto", "res_none": "nessun esito in sistemi WWOX",
-    "pr_w_counts": "{w} esiti in sistemi WWOX, {nul} nulli, {unf} sfavorevoli",
+    "pr_w_counts": "esiti in sistemi WWOX: {w}; nulli: {nul}; sfavorevoli: {unf}",
     "crit_met": "soddisfatto", "crit_not": "non soddisfatto",
-    "tag_tool": "composto-strumento, non un farmaco candidato", "tag_outside": "controprova fuori da WWOX in {n} righe", "tag_wt": "{n} confronto/i solo con wild type, contati in nessuna direzione",
+    "tag_tool": "composto-strumento, non un farmaco candidato", "tag_outside": "evidenza contraria fuori da WWOX in {n} righe", "tag_wt": "{n} confronto/i solo con wild type, contati in nessuna direzione",
     "tag_qual": "accanto a un braccio «non normalizzato rispetto al wild type»",
     # compare
     "cp_h": "Confronto tra pochi candidati",
@@ -503,29 +510,29 @@ UI_IT = {
     "cp_pick": "Seleziona da due a quattro schede per confrontarle.",
     "cp_caption": "Confronto di {n} schede candidato",
     "cp_dim": "Dimensione", "cp_aim": "Obiettivo di recupero", "cp_track": "Track", "cp_status": "Stato e lettere", "cp_needs": "Bisogni mirati (direzione voluta)",
-    "cp_actions": "Azioni di catalogo sui bersagli dei bisogni", "cp_scopes": "Tipi di prova (affermazioni nella scheda)", "cp_against": "Voci di controprova nella scheda", "cp_missing": "Dato mancante",
+    "cp_actions": "Azioni di catalogo sui bersagli dei bisogni", "cp_scopes": "Tipi di evidenza (affermazioni nella scheda)", "cp_against": "Voci di evidenza contraria nella scheda", "cp_missing": "Dato mancante",
     "cp_noact": "nessuna riga di azione di catalogo (scheda di classe, basata su gene o di asse: la direzione viene dal registro del bisogno)",
-    "cp_noscope": "nessuna con tipo di prova", "cp_prose": "solo prosa", "cp_none": "nessuno", "cp_nostated": "non dichiarato",
+    "cp_noscope": "nessuna con tipo di evidenza", "cp_prose": "solo prosa", "cp_none": "nessuno", "cp_nostated": "non dichiarato",
     "cp_overlap": "Sovrapposizione", "cp_all": "Bisogni condivisi da tutte le schede selezionate", "cp_two": "Bisogni condivisi da almeno due", "cp_tg": "Bersagli in comune tra i bisogni di due o più schede",
-    "cp_comp": "Complementarità (bisogni diversi, non un effetto congiunto)", "cp_alone": "da sola copre", "cp_nothing": "nulla che le altre non coprano già",
-    "cp_opp_h": "Azioni opposte", "cp_opp_none": "Tra queste schede non è registrata alcuna azione opposta, né nelle righe di catalogo né nelle direzioni volute dei loro bisogni. È un'affermazione sui dati disponibili, non la prova che non esista.",
+    "cp_comp": "Complementarità (bisogni diversi, non un effetto congiunto)", "cp_alone": "— bisogni coperti solo da questa scheda", "cp_nothing": "nessuno: gli altri candidati coprono già gli stessi bisogni",
+    "cp_opp_h": "Azioni opposte", "cp_opp_none": "Tra queste schede non è registrata alcuna azione opposta, né nelle righe di catalogo né nelle direzioni volute dei loro bisogni. È un'affermazione sui dati disponibili, non la dimostrazione che non esista.",
     "cp_opp_acts": "agisce su", "cp_opp_dir": "in senso opposto alla direzione voluta per", "cp_raises": "aumenta mentre", "cp_lowers": "riduce", "cp_on": "Su", "cp_wanted_diff": "La direzione voluta su {t} differisce tra bisogni",
     "cp_nosyn": "Non si inferisce alcuna sinergia.", "cp_nosyn_txt": "Condividere un bisogno, o coprirne di diversi, non dice nulla sul fatto che gli interventi funzionino insieme: interazioni, dosi e sicurezza combinata non sono valutate qui.",
     "cp_max": "Si possono confrontare al massimo quattro schede. Toglierne prima una.",
     "cp_opp_word": "OPPOSTA",
     # export
-    "ex_back": "Torna alla vista", "ex_print": "Stampa o salva come PDF", "ex_dl": "Scarica come HTML autonomo", "ex_n": "{n} scheda/e. I collegamenti sono identificativi pubblici e restano validi fuori da questa cartella.",
+    "ex_back": "Torna alla vista", "ex_print": "Stampa o salva come PDF", "ex_dl": "Scarica come HTML autonomo", "ex_n": "Schede esportate: {n}. I collegamenti sono identificativi pubblici e restano validi fuori da questa cartella.",
     "ex_unknown": "Identificativo di scheda sconosciuto.", "ex_title": "Esportazione",
     "ex_card": "Scheda", "ex_data_date": "Data dei dati", "ex_needs_rec": "registro dei bisogni", "ex_cat_build": "versione del catalogo",
     "ex_perim": "Perimetro", "ex_perim_txt": "encefalopatia epilettica e dello sviluppo legata a WWOX (WWOX-DEE), classe del genotipo di riferimento; solo letteratura e basi dati pubbliche; nessun dato individuale. Materiale di ricerca per la discussione con il team clinico curante: non è consiglio medico, non è una raccomandazione di trattamento, non è una probabilità di beneficio.",
-    "ex_rationale": "Motivazione", "ex_needs": "Bisogni affrontati", "ex_evid": "Prove, per tipo", "ex_ctx": "Osservazioni registrate sui bisogni collegati: solo contesto, possono riguardare altri interventi.",
-    "ex_need_obs": "osservazione sul bisogno", "ex_no_assert": "Nella scheda non è registrata alcuna affermazione con tipo di prova.",
-    "ex_counter": "Controprove", "ex_counter_none": "Nessuna elencata nella scheda (l'assenza non è un risultato negativo).", "ex_asw": "Come scritto nella scheda",
+    "ex_rationale": "Motivazione", "ex_needs": "Bisogni affrontati", "ex_evid": "Evidenza, per tipo", "ex_ctx": "Osservazioni registrate sui bisogni collegati: solo contesto, possono riguardare altri interventi.",
+    "ex_need_obs": "osservazione sul bisogno", "ex_no_assert": "Nella scheda non è registrata alcuna affermazione con tipo di evidenza.",
+    "ex_counter": "Evidenza contraria", "ex_counter_none": "Nessuna elencata nella scheda (l'assenza non è un risultato negativo).", "ex_asw": "Come scritto nella scheda",
     "ex_limits": "Limiti", "ex_lim_1": "Associazione non è modulazione, e modulazione non è recupero; un precedente di un'altra malattia non è un risultato WWOX.",
-    "ex_lim_2": "I tipi di prova restano separati e non sono mai accorpati; fonti condivise non sono conferme indipendenti.",
-    "ex_lim_3": "Le categorie di accesso sono evidenza USA trovata nelle fonti alle date di recupero (non approvazione, non idoneità per una persona, non sicurezza)",
-    "ex_lim_4": "Il testo può citare identificativi interni del repository (per esempio DL-, CLAIM, record di mappa); solo gli identificativi nella tabella delle fonti sono pubblici.",
-    "ex_miss": "Prova mancante e prossimo esperimento", "ex_next": "Passo successivo", "ex_srcs": "Fonti (identificativi pubblici)",
+    "ex_lim_2": "I tipi di evidenza restano separati e non sono mai accorpati; fonti condivise non sono conferme indipendenti.",
+    "ex_lim_3": "Le categorie di accesso sono evidenza di accesso trovata nelle fonti (prevalentemente USA) alle date di recupero (non approvazione, non idoneità per una persona, non sicurezza)",
+    "ex_lim_4": "Il testo delle schede può citare riferimenti interni del repository (per esempio «CLAIM 031», «A-VGB-5», «T1», «DL-…», «verifica cieca», «nessuna ricevuta nel registro»): non servono alla lettura e non sono consultabili fuori dal repository. Solo gli identificativi nella tabella delle fonti sono pubblici.",
+    "ex_miss": "Evidenza mancante e prossimo esperimento", "ex_next": "Passo successivo", "ex_srcs": "Fonti (identificativi pubblici)",
     "ex_gen": "Generato da repurposing_view.py", "ex_share": "Versione condivisibile: vedi il piè di pagina della pagina per le fonti incluse.", "ex_full": "Versione locale completa: non per la ridistribuzione.",
     "ex_std_title": "Scheda candidato WWOX",
     # technical drill-down
@@ -563,24 +570,24 @@ POS_IT = {
     "F3": {"short": "ipotesi favorevole dal bersaglio, non provata in WWOX",
            "label": "F3 · Ipotesi favorevole dal bersaglio, non provata in WWOX",
            "plain": "Il bisogno ha osservazioni in sistemi WWOX, ma l'intervento non è stato testato in WWOX; ciò che esiste viene da altre malattie o da saggi sul bersaglio, senza controsegnali. Un passo successivo è indicato."},
-    "C1": {"short": "controprova da chiarire, esito WWOX nullo o sfavorevole",
-           "label": "C1 · Controprova da chiarire, esito WWOX nullo o sfavorevole",
+    "C1": {"short": "evidenza contraria da chiarire, esito WWOX nullo o sfavorevole",
+           "label": "C1 · Evidenza contraria da chiarire, esito WWOX nullo o sfavorevole",
            "plain": "L'unico risultato con segno in WWOX è nullo o sfavorevole. Lo studio serve a capire se quel risultato è reale (dose, tempi, genotipo, profondità di lettura), non a confermare una speranza."},
-    "C2": {"short": "controprova da chiarire, esito WWOX misto",
-           "label": "C2 · Controprova da chiarire, esito WWOX misto",
+    "C2": {"short": "evidenza contraria da chiarire, esito WWOX misto",
+           "label": "C2 · Evidenza contraria da chiarire, esito WWOX misto",
            "plain": "Per questo bisogno, risultati favorevoli e nulli o sfavorevoli in WWOX stanno uno accanto all'altro. Lo studio serve a capire quale dei due regga."},
-    "C3": {"short": "controprova da chiarire, danno o nullo da fuori WWOX",
-           "label": "C3 · Controprova da chiarire, danno o segnale nullo da fuori WWOX",
+    "C3": {"short": "evidenza contraria da chiarire, danno o nullo da fuori WWOX",
+           "label": "C3 · Evidenza contraria da chiarire, danno o segnale nullo da fuori WWOX",
            "plain": "Nessun risultato con segno in WWOX; ciò che esiste fuori da WWOX (altra malattia, sicurezza, etichetta) è dannoso o nullo, senza un segnale favorevole accanto. Lo studio serve a capire se vale anche per WWOX."},
     "P1": {"short": "premessa mancante, astensione",
            "label": "P1 · Premessa mancante, astensione",
-           "plain": "La scheda è un'astensione: manca un dato prima di poter disegnare un test. Il dato mancante è la prima cosa da ottenere."},
+           "plain": "La scheda è un'astensione: manca un dato prima di poter progettare un test. Il dato mancante è la prima cosa da ottenere."},
     "P2": {"short": "premessa mancante, nessun passo successivo",
            "label": "P2 · Premessa mancante, nessun passo successivo indicato",
            "plain": "La scheda non indica un passo successivo per questo bisogno, quindi da essa non si può proporre alcuno studio."},
     "P3": {"short": "premessa mancante, nessun elemento favorevole registrato",
            "label": "P3 · Premessa mancante, nessun elemento favorevole registrato",
-           "plain": "Nessun risultato con segno dell'intervento in WWOX, nessuna controprova da fuori WWOX da chiarire, e o nessun sostegno favorevole registrato per questo bisogno o nessuna osservazione in sistemi WWOX sul bisogno. La scheda collega il bisogno solo per meccanismo; ciò che manca è dichiarato nei criteri."},
+           "plain": "Nessun risultato con segno dell'intervento in WWOX e nessuna evidenza contraria da chiarire da fuori WWOX; inoltre manca ogni sostegno favorevole registrato per questo bisogno oppure manca ogni osservazione in sistemi WWOX sul bisogno. La scheda collega il bisogno solo per meccanismo; ciò che manca è dichiarato nei criteri."},
 }
 SCOPE_IT = {
     "WWOX_EXPERIMENT_IN_DEE_SYSTEM": "Esperimento WWOX in un sistema DEE",
@@ -592,7 +599,7 @@ SCOPE_IT = {
     "EXTERNAL_DATABASE_RECORD": "Voce di una base dati esterna",
     "SAFETY_SIGNAL": "Segnale di sicurezza",
     "UNVERIFIED_HYPOTHESIS": "Ipotesi non verificata",
-    "UNCLASSIFIED": "Tipo di prova non registrato a livello di affermazione",
+    "UNCLASSIFIED": "Tipo di evidenza non registrato a livello di affermazione",
 }
 GOALS_IT = {"deep_recovery": "Recupero ampio e duraturo (ripristinare la funzione WWOX perduta)", "partial_benefit": "Beneficio parziale utile (farmaci, integratori, diete)"}
 THREAD_IT = {
@@ -628,7 +635,7 @@ NEED_IT = {
     "NEED-SYSTEMIC-GLYCAEMIA-GROWTH": "Scompenso metabolico sistemico",
 }
 STATUS_IT = {"abstention": "astensione", "hypothesis": "ipotesi", "controversial": "controversa", "deferred with reason": "rinviata con motivo"}
-COUNTRY_IT = {"US evidence found": "evidenza USA trovata", "no country evidence obtained": "nessuna evidenza per paese ottenuta"}
+COUNTRY_IT = {"US evidence found": "evidenza di accesso trovata (prevalentemente USA)", "no country evidence obtained": "nessuna evidenza per paese ottenuta"}
 CRIT_IT = {
     "the card is not an abstention": "la scheda non è un'astensione",
     "a next step is named": "è indicato un passo successivo",
@@ -1772,14 +1779,22 @@ def scope_chip(code: str, n: int | None = None) -> str:
     return f'<span class="sc s-{E(code)}"><span class="gl" aria-hidden="true">{E(g)}</span>{E(SCOPE_IT.get(code, code))}' + (f' ×{n}' if n else "") + '</span>'
 
 
+STATE_IT = {"ok": "ok", "failed": "interrogazione non riuscita", "incomplete": "incompleta", "stale": "dati non aggiornati", "truncated": "parziale", "not_fetched": "non acquisita", "other": "stato non riconosciuto"}
+
+
+def state_label_it(x: dict) -> str:
+    """Plain Italian for a source state; the raw code stays in the technical table."""
+    return "esportazione non aggiornata" if "EXPORT" in str(x["status"]).upper() and x["state_class"] == "stale" else STATE_IT.get(x["state_class"], "stato non riconosciuto")
+
+
 def render_banner(P: dict) -> str:
     """One compact line: the source states stay visible; versions, details and the state table live in the technical drill-down."""
     bad = [x for x in P["tech"]["sources"] if x["state_class"] != "ok"]
     if not bad:
         return ""
     U = UI_IT
-    chips = " ".join(f'<span class="st st-{x["state_class"]}" data-banner="{E(x["id"])}">{E(x["name"].split(" (")[0])}: {E(str(x["status"]))}</span>' for x in bad)
-    return (f'<div class="warnbar" id="source-banner" role="note"><b>{E(U["source_limited"])}:</b> {chips} <a href="#technical">{E(U["see_tech"])}</a>. {E(U["source_limited_tail"])}</div>')
+    chips = " ".join(f'<span class="st st-{x["state_class"]}" data-banner="{E(x["id"])}">{E(x["name"].split(" (")[0])}: {E(state_label_it(x))}</span>' for x in bad)
+    return (f'<div class="warnbar" id="source-banner" role="note"><b>{E(U["source_limited"])}:</b> {chips} <a href="#technical">{E(U["see_tech"])}</a>. <span class="btail">{E(U["source_limited_tail"])}</span></div>')
 
 
 def thread_view(cur: dict, t: dict) -> dict:
@@ -1812,7 +1827,7 @@ def render_overview(P: dict) -> str:
     tiles = "".join([tile("cur.needs", len(needs), U["unit_needs"], U["d_needs"]), tile("cur.threads", len(cur["threads"]), U["unit_threads"], U["d_threads"]),
                      tile("cur.cards", len(cands), U["unit_cards"], U["d_cards"]), tile("cur.abstentions", meta["n_abstentions"], U["unit_abst"], U["d_abst"])])
     fam = {"F": ("fam_F", "fam_F_txt"), "C": ("fam_C", "fam_C_txt"), "P": ("fam_P", "fam_P_txt")}
-    legend = "".join(f'<span class="lg lg-{k.lower()}"><span class="grp {k.lower()}1">{k}</span> <b>{E(U[a])}</b><span class="mini mut"> {E(U[b])}</span></span>' for k, (a, b) in fam.items())
+    legend = "".join(f'<span class="lg lg-{k.lower()}"><span class="grp {k.lower()}1" title="{E(U[b])}">{k}</span> <b>{E(U[a])}</b></span>' for k, (a, b) in fam.items())
     legend_all = "".join(f'<li>{pos_chip(g["id"])} <b>{E(POS_IT[g["id"]]["short"])}.</b> <span class="mini">{E(POS_IT[g["id"]]["plain"])}</span></li>' for g in GROUPS)
     gtxt = {"deep_recovery": ("deep", U["goal_deep"], U["goal_deep_long"]), "partial_benefit": ("partial", U["goal_partial"], U["goal_partial_long"])}
     panels = []
@@ -1820,13 +1835,15 @@ def render_overview(P: dict) -> str:
         cs = [c for c in cands if c["goal"] == g]
         ns = [n for n in needs if n["goal"] == g]
         tr = Counter(c["track"] or "none" for c in cs)
-        lk = Counter(l["group"][0] for c in cs for nid, l in c["links"].items() if NM_GOAL(needs, nid) == g)
+        lk = Counter(l["group"][0] for c in cands for nid, l in c["links"].items() if NM_GOAL(needs, nid) == g)   # by the goal of the NEED: every link is counted once, none is dropped
         panels.append(
             f'<div class="goal {cls}" data-goal="{g}"><h3>{E(title)}</h3><p class="mini">{E(long_)}</p>'
             f'<div class="kv"><b>{E(U["needs_with_aim"])}:</b> {numit("cur.goal." + g + ".needs", len(ns))}</div>'
-            f'<div class="kv"><b>{E(U["cards_with_aim"])}:</b> {numit("cur.goal." + g + ".cards", len(cs))} ({sum(1 for c in cs if c["abstention"])} {E(U["of_which_abst"])})</div>'
+            f'<div class="kv"><b>{E(U["cards_with_aim"])}:</b> {numit("cur.goal." + g + ".cards", len(cs))} ({E(U["of_which_abst"].format(n=sum(1 for c in cs if c["abstention"])))})</div>'
             f'<div class="kv"><b>{E(U["track_field"])}:</b> ' + "; ".join(f'Track {E(k)}: {v}' if k != "none" else f'{E(U["track_none"])}: {v}' for k, v in sorted(tr.items())) + '</div>'
-            f'<div class="kv"><b>{E(U["th_why"])}:</b> ' + " ".join(f'<span class="grp {k.lower()}1">{k}</span> ×{lk[k]}' for k in "FCP" if lk[k]) + '</div></div>')
+            f'<div class="kv"><b>{E(U["goal_links"])}:</b> ' + " ".join(f'<span class="grp {k.lower()}1">{k}</span> ×{lk[k]}' for k in "FCP" if lk[k]) + f' <span class="mini mut">({sum(lk.values())})</span></div></div>')
+    n_cross = sum(1 for c in cands if c["goal"] for nid in c["links"] if NM_GOAL(needs, nid) and NM_GOAL(needs, nid) != c["goal"])
+    n_links = sum(len(c["links"]) for c in cands)
     cards = []
     for t in cur["threads"]:
         v = thread_view(cur, t)
@@ -1853,14 +1870,14 @@ def render_overview(P: dict) -> str:
     srcnote = U["src_share" if P["source"] == "shareable" else "src_full"]
     return (
         f'<section id="overview" aria-labelledby="h-over"><h2 id="h-over">{E(U["ov_h"])}</h2>'
-        f'<p class="lead">{E(U["ov_lead"])}</p>'
-        f'<div class="warnstrip" role="note"><b>{E(U["warn_h"])}.</b> {E(U["warn_1"])} {E(U["warn_2"])}</div>'
         f'<div class="legendrow" role="group" aria-label="{E(U["legend_h"])}"><b>{E(U["legend_h"])}:</b> {legend}</div>'
+        f'<p class="lead">{E(U["ov_lead"])} <span class="mini mut">{E(U["need_gloss"])}</span></p>'
+        f'<div class="warnstrip" role="note"><b>{E(U["warn_h"])}.</b> {E(U["warn_1"])} {E(U["warn_2"])}</div>'
         f'<details class="inl howto"><summary>{E(U["how_sum"])}</summary><div class="twocol"><div class="how"><h3>{E(U["how_h"])}</h3><ol><li>{E(U["how_1"])}</li><li>{E(U["how_2"])}</li><li>{E(U["how_3"])}</li><li>{E(U["how_4"])}</li></ol><p class="mini">{E(U["warn_3"])}</p></div>'
         f'<div class="legendbox"><p class="mini mut">{E(U["legend_note"])}</p><ul class="poslist">{legend_all}</ul></div></div></details>'
         f'<p class="meta-line"><b>{E(U["data_date"])}:</b> <span data-k="meta.data_date" data-v="{E(str(dd))}">{E(str(dd))}</span> · <b>{E(U["perimeter"])}:</b> {E(U["perimeter_txt"])} · {E(srcnote)}</p>'
         f'<h3 id="threads">{E(U["th_h"])}</h3><p class="mini mut">{E(U["th_note"])}</p><div class="threads">' + "".join(cards) + '</div>'
-        f'<h3>{E(U["goals_h"])}</h3><p class="mini mut">{E(U["goals_note"])}</p><div class="goals">' + "".join(panels) + '</div>'
+        f'<h3>{E(U["goals_h"])}</h3><p class="mini mut">{E(U["goals_note"])} {E(U["goal_cross"].format(total=n_links, cross=n_cross))}</p><div class="goals">' + "".join(panels) + '</div>'
         f'<h3>{E(U["facts_h"])}</h3><div class="tiles">' + tiles + f'</div><p class="mini mut">{E(U["unit_note"])}</p></section>')
 
 
@@ -1915,7 +1932,7 @@ def render_charts(P: dict) -> str:
                 l = c["links"].get(n["id"])
                 lab = NEED_IT.get(n["id"], n["short"])
                 if l:
-                    g3.append(f'<td data-label="{E(lab)}">{pos_chip(l["group"])}<span class="mxt">{E(U["g3_short_" + l["group"][0]])}</span></td>')
+                    g3.append(f'<td data-label="{E(lab)}">{pos_chip(l["group"])}<span class="mxt">{E(U["g3_cell_" + l["group"]])}</span></td>')
                 else:
                     g3.append(f'<td class="empty" data-label="{E(lab)}"><span aria-label="{E(U["g3_empty"])}">·</span></td>')
             g3.append('</tr>')
@@ -2184,7 +2201,7 @@ class Cdp:
 MEASURE_JS = r"""(function(){var iw=__REQ__,de=document.documentElement,off=[];
 function scrolls(e){for(var p=e.parentElement;p&&p!==document.body;p=p.parentElement){var o=getComputedStyle(p).overflowX;if(o==='auto'||o==='scroll'||o==='hidden')return true}return false}
 var all=document.body.getElementsByTagName('*');for(var i=0;i<all.length&&off.length<6;i++){var e=all[i],r=e.getBoundingClientRect();if(r.width&&r.right>iw+1&&getComputedStyle(e).position!=='fixed'&&!scrolls(e)&&e.offsetParent!==null)off.push(e.tagName.toLowerCase()+(e.id?'#'+e.id:'')+(e.className&&e.className.baseVal===undefined?'.'+String(e.className).split(' ')[0]:'')+' right='+Math.round(r.right))}
-return {innerWidth:window.innerWidth,scrollWidth:de.scrollWidth,bodyScrollWidth:document.body.scrollWidth,clientWidth:de.clientWidth,visualViewportWidth:window.visualViewport?Math.round(window.visualViewport.width):null,ready:document.body.getAttribute('data-cur-ready'),offenders:off}})()"""
+return {legendBottom:(function(){var e=document.querySelector('.legendrow');return e?Math.round(e.getBoundingClientRect().bottom+window.scrollY):null})(),innerWidth:window.innerWidth,scrollWidth:de.scrollWidth,bodyScrollWidth:document.body.scrollWidth,clientWidth:de.clientWidth,visualViewportWidth:window.visualViewport?Math.round(window.visualViewport.width):null,ready:document.body.getAttribute('data-cur-ready'),offenders:off}})()"""
 
 
 def scenarios(P: dict) -> list[tuple[str, str]]:
@@ -2294,6 +2311,7 @@ def main(argv=None) -> int:
             return 0
         res = measure_viewports(out.resolve(), a.shots)
         print("requested\tmobile_emulation\tinnerWidth\tscrollWidth\tvisualViewport\toverflow\tscenario\tnote")
+        print("# first screen: bottom of the F/C/P legend (css px from the top) against the viewport height: " + ", ".join(f'{m["requested"]}x{h}: {m["legendBottom"]}' for m in res for (w, h, _mob) in VIEWPORTS if m["scenario"] == "first_screen" and m["mobile"] and w == m["requested"] and m["requested"] <= 390))
         bad = 0
         for m in res:
             bad += bool(m["overflow"])

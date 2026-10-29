@@ -8,6 +8,8 @@ Each width is a REAL device-metrics emulation (`Emulation.setDeviceMetricsOverri
 emulation a page that overflows would report an `innerWidth` larger than requested, so the check is `scrollWidth <= requested`.
 Screenshots at 360 and 390 px use the mobile emulation. The earlier previews (a 500 px window clamp) were replaced.
 
+Re-measured after the verification fixes (same results). The command also prints the bottom of the F/C/P legend on the first screen: 408 css px from the top at both 360x780 and 390x844, i.e. all three letters are above the fold (a test asserts it).
+
 Measured on the shareable build (innerWidth / scrollWidth in CSS px; all scenarios of the table below were `ok`, none overflowed):
 
 | Requested | Mobile emulation | innerWidth / scrollWidth | Scenarios measured |

@@ -10,13 +10,13 @@ Candidates first (5), then abstentions (7); within each group the order is the c
 |---|---|---|
 | Benefit: the ONE endpoint | Return of detectable, soluble, functional WWOX protein from a Q230P-class missense lesion; the proximal readout would be total, soluble and pellet WWOX plus a WWOX function assay, none of which exists for this allele. | `input.p4_fields.endpoint_pursued` |
 | Benefit: symptomatic or modifying (card's expected contribution) | Function recovery of residual WWOX protein is the only contribution hypothesised; compensation, symptom and protection are not claimed. The branch (retained, cleared, insoluble) must be placed before any contribution can be stated. | `input.p4_card.expected_contribution` |
-| Evidence: state | inconclusive (rationale withdrawn, not refuted; no WWOX test). | `input.p4_card.state_of_known_roads` |
+| Evidence: state | inconclusive, narrowed in IT5 P8 (rationale withdrawn once, not refuted; compartment objection not established for a soluble client; no WWOX test; HDAC6 role open). | `input.p4_card.state_of_known_roads` |
 | Evidence: functional evidence available | None for WWOX. Adjacent precedents measure protein and function together in other proteins and the two come apart in six of them (R1 question 2); no function readout for WWOX is defined in the repository. | `input.p4_fields.functional_evidence_available` |
-| Risk (class-level, as the card carries it) | Potency, relevant exposure and selectivity in a WWOX system: UNKNOWN. In the sources: class not selective for the mutant; brain exposure not measured in any R1 paper. | `input.p4_card.pharmacology` |
+| Risk (class-level, as the card carries it) | Potency, relevant exposure and selectivity in a WWOX system: UNKNOWN. [cut: the card's field continues] | `input.p4_card.pharmacology` |
 | BLOCK-1 status | **UNKNOWN** (no BLOCK-1 field or statement on this card; UNKNOWN is not a pass) | `(none)` |
 | Time to ACCESS | UNKNOWN. Not documented in the repository. | `input.p4_card.time_to_access` |
 | Time to BENEFIT | UNKNOWN. Not documented; no WWOX datum exists from which to estimate it. | `input.p4_card.time_to_benefit` |
-| Feasibility: what must exist to test it | Three-fraction (soluble, pellet, total) plus an inhibitor arm, then a chase from a detectable baseline, on the exact variant, with a WWOX function readout. The result decides whether the class is even addressed to the right branch. | `input.p4_card.next_measurement` |
+| Feasibility: what must exist to test it | Fate first: three-fraction (soluble, pellet, total) plus an orthogonal detection and a route-inhibitor arm on the exact variant, with transgene mRNA measured in the same wells under treatment; [cut: the card's field continues] | `input.p4_card.next_measurement` |
 
 ### P4-A-02 · proteasome-inhibitor class · CANDIDATE · bridge `directional_summary` = UNRESOLVED
 

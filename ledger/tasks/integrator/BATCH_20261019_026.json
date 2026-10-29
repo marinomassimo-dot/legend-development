@@ -1,0 +1,63 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "_note": "Single-candidate integration, research layer and registry notes, working model WM_v7.28 PRESERVED (no working-model statement changed, no bump). Not medical advice; no individual-level data; no re-identifying variant combination.",
+ "TASK_ID": "BATCH_20261019_026",
+ "ALIAS": "INT-IT5-REGISTRIES-20261029",
+ "ACTOR_ID": "orchestrator",
+ "OWNER": "orchestrator",
+ "CURRENT_STATE": "COMPLETE_ON_BRANCH",
+ "assigned_on": "2026-10-29",
+ "OBJECTIVE": "Mandate IT5, registries step (follow-up of P2): register in the ledgers and registries the verified results of the iteration-5 research packages (P5 pharmacology, P6/P7 systems comparison and GSEA sign, P8 missense recovery, P9 card I01, identity correction), reach every consumer, regenerate the derived surfaces and prove the module no longer uses the superseded wording.",
+ "TASK_CLAIM": {
+  "actor": "orchestrator (Integrator worker)",
+  "branch": "task/it5-batch2",
+  "worktree": ".claude/worktrees/it5-batch2",
+  "base": "e90824fb"
+ },
+ "RESULT": {
+  "wm_version": "WM_v7.28 preserved (no statement of working_model_current.md changed: searched for PDK1, ISR, phenylbutyrate, ethosuximide, CPP-115, GSEA, hNPC, dichloroacetate; no bump, no history row, last_wm_* untouched)",
+  "candidates_propagated": 1,
+  "candidate": "CC-20261029-INTEGRATOR-IT5-BATCH2-01",
+  "registries": "claim_registry_current CLAIM 014 wave note (1 op; Status consolidated baseline unchanged); paper_registry_current PAPER 022 reading update (GSEA sign, deposit with one library per arm) and PAPER 431 evidence-depth line (2 ops); literature_tracking_log_current LIT-0024 note and LIT-0703 depth line (2 ops); working_model_current 0 ops; dry run then --apply for each file",
+  "ledger": "record_scoped_edit.py apply (dry run then --apply), one dated UPDATE bullet each, earlier wording untouched: discovery_ledger DL-MECH-020, DL-MECH-170, DL-MECH-173, DL-REPO-004 (4 ops); therapeutic_hypotheses_ledger HYP-20260709-01, -05, -08, HYP-20261026-10, -11 (5 ops); dismissal_ledger DIS-004 (1 op; the WITHDRAWN verdict is not reversed)",
+  "consumers_reached": "mechanism_intervention_map.md (CHAIN E, N-08 with the card I01 path, N-11, N-12, R-10, R-11); dossier PMID31543760 (Supplementary Table 3 sentence, ready-to-apply text of the systems comparison); card E03 (packet two strings, card rebuilt) and needs.json (NEED-PDH-PYRUVATE-AXIS O3 statement, direction_observed, counter-evidence line); coverage/lead_dispositions.json LD-002 and LD-003, closed_loop_it3 README, coverage README, closed_loop_it4_e1b README; test_repurposing_join.py (CuratedLink test for Q-N-08 now expects E03 plus I01; new class SupersededWordingGoneIT5Batch2 with 5 tests)",
+  "derived": "repurposing_join run (queries carry shifted ledger line numbers and the newly named PAPER 022 and PAPER 431; 221 queries and 62 evidence tables changed), repurposing_coverage run and check, p5 build and check, repurposing_view run full and shareable and check, repurposing_join handoff 2026-10-29, pathograph surfaces",
+  "proof": "framework/scripts/test_repurposing_join.py::SupersededWordingGoneIT5Batch2 (5 tests) plus the three IT5 P2 SupersededWordingGone tests, 63 tests OK",
+  "not_touched": "working_model_current and working_model_history; fulltext_read_receipts.jsonl (the P5, P8 and P9 receipts were already recorded: FTR-20261028-30266908-02, -38106446-01, -31543760-06); papers 38106446 and 27668180 have receipts but no PAPER/LIT identity record (not created here); experiment_ledger; disease_model.md; the dated analysis notes and gse156243 notes that quote the earlier PDK1 wording as history"
+ },
+ "DEFAULTS_TAKEN": [
+  {
+   "condition": "batch_commit.py propagate accepts only the four scientific current files",
+   "default": "the discovery, hypotheses and dismissal ledgers edited with record_scoped_edit.py apply (dry run, then --apply); no FULL_FALLBACK"
+  },
+  {
+   "condition": "the snapshot declaration omits append-only ledgers by design",
+   "default": "snapshot backup/20261029_it5_batch2 (gitignored) taken from the clean tree before any edit; base-qualified route: git checkout e90824fb -- <path>"
+  },
+  {
+   "condition": "naming card I01 by path in map record N-08 makes repurposing_join attach a second card to Q-N-08, which test CuratedLink assumed to be one card",
+   "default": "the test now expects the concatenation of the E03 and I01 assertions in the order the record names them (multi-card linking was already supported); the pointer to I01 is kept as a path so the join reads it"
+  },
+  {
+   "condition": "repurposing_join run changes 221 queries and 62 evidence tables because the inserted UPDATE bullets shift ledger line numbers and name PAPER 022 and PAPER 431",
+   "default": "regenerated and committed as derived output of the current ledgers, named in the report"
+  },
+  {
+   "condition": "the DA direction field of card E03 still reads DECREASE for the organoid PDK1 row",
+   "default": "direction field unchanged (card I01 keeps the same convention: DECREASE with a sign-only note); the notes and needs state lower in sign only"
+  },
+  {
+   "condition": "a relative link or wikilink inside a candidate under research/ can break the publication gate or LINT",
+   "default": "the candidate shows wikilinks of the ledger bullets as inline code; the ledgers keep their wikilinks"
+  }
+ ],
+ "STOP_LOG": [],
+ "VERIFICATION": {
+  "drift": "FRESH (origin/main 5f81d12b; branch base e90824fb)",
+  "legend_lint": "WARN before and after, 0 BLOCK; output byte-identical (exit 0)",
+  "growth_anchors_check": "PASS",
+  "fulltext_receipts_verify": "OK, 885 chained receipts",
+  "public_release_gate": "PASS, 0 BLOCKS",
+  "tests": "test_repurposing_join 63 OK, test_repurposing_coverage 54 OK, test_repurposing_view 64 OK, test_repurposing_bridge 16 OK, test_check_needs 12 OK, check_cards 24 packets 0 problems, check_needs OK, p5_check 0 problems, test_tool_routing OK, test_section_references OK"
+ }
+}

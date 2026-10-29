@@ -163,7 +163,7 @@
    },
    "^\\.ui\\.": {
     "class": "UI",
-    "values": 493,
+    "values": 505,
     "why": "Italian orientation text (builder data UI_IT and siblings)"
    }
   },
@@ -191,7 +191,7 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 1352,
+    "forbidden-name": 1359,
     "forbidden-wording": 11
    },
    "co_attested_wording": [
@@ -390,7 +390,7 @@
   "ROWNAME": 1463,
   "SRC_A": 89,
   "SRC_META": 244,
-  "UI": 493
+  "UI": 505
  },
  "embedded_sources": [
   {
@@ -452,8 +452,8 @@
    "sha256": "54ceea72ce52834a80565f1dfd5687c6978992cd2204ed450017a3b1d057f556"
   },
   "TEXT_PROVENANCE.json": {
-   "bytes": 1469,
-   "sha256": "634dd4583d2d5e0624c4532484a9cae30aa1bc76fdc01173f1a3a8ecc451b7ff"
+   "bytes": 1468,
+   "sha256": "1ed20bea2c2829b084c6581abe5d552fe637b2058261f015b9ee8af160ed5730"
   },
   "class_b/chembl_cc-by-sa-3.0/CREDIT.txt": {
    "bytes": 1636,
@@ -468,8 +468,8 @@
    "sha256": "d8fe6a3455466783564803428b6318c1c442db6a16dfb97de8a6b7dcf944cc9d"
   },
   "index.html": {
-   "bytes": 1881754,
-   "sha256": "b026ec770cef83d0eb86bc7a362f9866b9c311b25ad2efa9f1989858febd6030"
+   "bytes": 1889109,
+   "sha256": "37b1e1d1988cfcf08893a5d2f4eed0fca2278715e5996e1f1c010a62d4214ebd"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",

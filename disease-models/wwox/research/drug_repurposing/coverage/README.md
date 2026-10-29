@@ -43,7 +43,7 @@ After `needs.json` or a card changes: regenerate, then regenerate the view (`rep
 * `pathway_member` targets are counted **apart** (`records_incl_pathway_members`); `effector_constraint` (MAPT) and
   `readout_marker` targets are **never** links; identity-guard targets are listed beside.
 * Excluded and listed (`excluded_from_counts` on the association; counts under `catalogue_coverage.excluded_rows`):
-  * **source artefact**: 77 DGIdb Guide-to-Pharmacology records carry ABAT only from a gene list that also holds ABCA1-3
+  * **source artefact** (superseded explanation: written before the iteration-4 finding that DGIdb read the GtoPdb target id as an NCBI Gene id, section "Target identity" below; the count and the exclusion held, the cause named here did not): 77 DGIdb Guide-to-Pharmacology records carry ABAT only from a gene list that also holds ABCA1-3
     (adenosine-receptor ligands: caffeine, theophylline, istradefylline ...). Two rules, both in `source_artefacts.tsv`:
     the verified explicit row (`require_second_source` for ABAT and ABCA1-3) and a **generic detector** for alphabetical-prefix
     gene-list expansions in Guide-to-Pharmacology (a record holding 3 or more symbols from the first 8 percent of the DGIdb symbol list:
