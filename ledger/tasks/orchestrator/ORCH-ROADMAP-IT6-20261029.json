@@ -1,0 +1,111 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-ROADMAP-IT6-20261029",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Iteration 6, linked to ORCH-ROADMAP-IT5-20261029 (COMPLETE) and IT3-IT4: new WWOX evidence, functional-assay reference, pharmacology and operational tools in 14 packages (P1-P14). Both goals stay open: broad durable recovery and useful partial benefit; Track A/B independent.",
+ "START_UTC": "2026-10-29T09:00:00Z",
+ "BASELINE": "030a8a5c23f218cfc0e56e6c7608b22f19741dd9 = development/main (verified equal after fetch)",
+ "AUTHORISED_QUEUE_20261029B": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_A_BASELINE_AND_RULES": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "P1 baseline, README current-capability section, receipt linkage",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "P2 independent F/C/P review + work order per need",
+     "status": "TODO",
+     "owner": "scientist-a"
+    }
+   ]
+  },
+  "OBJ_B_DATA_AND_ASSAYS": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "P3 targeted census of WWOX protein/functional/rescue data",
+     "status": "TODO",
+     "owner": "scientist-b"
+    },
+    {
+     "step": "P4 new analysis on best dataset from P3",
+     "status": "TODO",
+     "owner": "scientist-b"
+    },
+    {
+     "step": "P5 WWOX wild-type function reference (assay comparison)",
+     "status": "TODO",
+     "owner": "scientist-a"
+    },
+    {
+     "step": "P6 broad recovery: new-question cycle",
+     "status": "TODO",
+     "owner": "scientist-a"
+    },
+    {
+     "step": "P7 prevention vs recovery vs time window",
+     "status": "TODO",
+     "owner": "scientist-b"
+    }
+   ]
+  },
+  "OBJ_C_PHARMACOLOGY_AND_TOOLS": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "P8 operationalise one external capability",
+     "status": "TODO",
+     "owner": "orchestrator"
+    },
+    {
+     "step": "P9 neuronal-need pharmacology deepening",
+     "status": "TODO",
+     "owner": "scientist-a"
+    },
+    {
+     "step": "P10 partial benefit beyond ISR-PDH",
+     "status": "TODO",
+     "owner": "scientist-b"
+    },
+    {
+     "step": "P11 supplement/diet biological link",
+     "status": "TODO",
+     "owner": "scientist-a"
+    },
+    {
+     "step": "P12 resource comparison + radar + scouting",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_D_PRESENTATION": {
+   "order": 4,
+   "steps": [
+    {
+     "step": "P13 one-page summary, small evidence graph, priorities",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  },
+  "OBJ_E_CLOSE": {
+   "order": 5,
+   "steps": [
+    {
+     "step": "P14 propagation, integration, continuity, close",
+     "status": "TODO",
+     "owner": "orchestrator"
+    }
+   ]
+  }
+ },
+ "DECISIONS_TAKEN": [],
+ "DEFAULTS_TAKEN": [],
+ "STOP_LOG": []
+}
