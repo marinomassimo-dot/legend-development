@@ -97,7 +97,7 @@ interest is not admission.
 | # | Mechanism | Canonical support | Direction resolved? | Actionable node |
 |---|---|---|---|---|
 | **M1** | **Neuronal WWOX protein deficit** — neuron-restricted loss is sufficient to reproduce the phenotype; restoration rescues multiple domains (given at P0 to P5 in the null mouse: early-window prevention, not recovery of a manifested deficit; CHAIN A boundary 5) | CLAIM 002 · CLAIM 003 · CLAIM 004 · CLAIM 011 · CLAIM 032 | ✅ loss → disease; restoration → rescue | WWOX protein level *in neurons* |
-| **M2** | **Network-state pathology** — spontaneous neocortical bursting, altered oscillatory organization, ↑phase–amplitude coupling; bursting **depends on NMDAR and gap-junction activity** | CLAIM 021 · CLAIM 002 | ✅ hyperexcitable | NMDAR; connexin gap junctions |
+| **M2** | **Network-state pathology** — spontaneous neocortical bursting, altered oscillatory organization, ↑phase–amplitude coupling; bursting **needs NMDAR activity** (the gap-junction half withdrawn 2026-09-27; NMDAR function not shown raised) | CLAIM 021 · CLAIM 002 | ✅ hyperexcitable | NMDAR activity (not shown raised); the connexin node is withdrawn pending occlusion |
 | **M3** | **GABAergic / PV-interneuron dysfunction** — ↓PV⁺ markers (−44% whole hippocampus) and **functionally reduced spontaneous inhibition** in L2/3 pyramidal neurons, against ↑GABAergic markers in organoids | CLAIM 005 · CLAIM 021 · [[meta_gaba_paradox_current]] | ⚠️ **NOT resolved** — see §2.3 | chloride gradient (NKCC1/KCC2) — *unmeasured* |
 | **M4** | **GSK3β de-repression** — WWOX is a **direct physical inhibitor** of GSK3β via an Axin-like docking motif at 388–407, L404 strictly required, S9-independent | CLAIM 016 · CLAIM 035 | ✅ loss → de-repression | GSK3β docking site (not the ATP pocket) |
 | **M5** | **Wnt/β-catenin hyperactivation** — WWOX sequesters DVL2 cytoplasmically; loss de-represses. In WWOX-KO cerebral organoids: nuclear β-catenin ~1.7×, WNT ligands / LEF1 / AXIN2 ↑, partially recovered by W-AAV | [[discovery_ledger_current#DL-MOL-003 — Asse Wnt: direzione RISOLTA (WWOX-loss → IPER-attivazione) → leva = INIBIZIONE Wnt; ⚠️ litio CONTRO-indicato dal meccanismo|DL-MOL-003]] · [[discovery_ledger_current#🎯 DL-MECH-034 — Il fenotipo Warburg è confermato **in tessuto neurale umano**: chiude il gap che indeboliva l'ipotesi chetogenica|DL-MECH-034]] · TX-004 | ✅ **hyper**-activation (a reversal of the first reading) | tankyrase / Wnt–β-catenin |
@@ -197,12 +197,12 @@ WWOX biallelic LoF
 4. **The threshold is known for survival and morphology — not for cognition or epilepsy.** Nobody has
    measured how much WWOX neurodevelopment requires, and haploinsufficiency is tolerated *from
    birth*, whereas a rescue arrives after part of the developmental damage (CLAIM 032, CLAIM 031).
-5. **Prevention, not recovery (added 2026-10-29, `BATCH_20261019_027`, `CC-20261029-INTEGRATOR-IT6-REGISTRIES-01`; IT6 P7).** Every in-vivo genetic rescue in the corpus treats the Wwox-null mouse at P0 to P5
+5. **Prevention, not recovery (added 2026-10-29, `BATCH_20261019_027`, `CC-20261029-INTEGRATOR-IT6-REGISTRIES-01`; IT6 P7).** Every in-vivo genetic rescue read in this corpus (two mouse studies; a bounded search for inducible neural Wwox models found none) treats the Wwox-null mouse at P0 to P5
    (main cohorts P0-P1, timing arms P1-P5) in animals never measured before treatment, and measures at P10 or later against an untreated comparator that is already abnormal: the
-   result is PREVENTED or EARLY-WINDOW for survival, growth, glucose, SWD/ECoG (recording from about P14, a floor of observation, not an onset), motor score and gliosis, and RECOVERED
+   result is PREVENTED or EARLY-WINDOW for survival, growth, glucose, SWD/ECoG (recording from about P14, a floor of observation, not an onset), in part (partial, not normalised) for motor score and, at the high dose only, for gliosis, and RECOVERED
    for none. No treated-after-onset mouse arm exists, and the authors say later intervention was not explored. The timing arms are small and not uniformly successful (S8: a P3 arm,
    n = 3, about 67 percent from about day 24; a P5 arm, n = 7, 75 percent from about day 35 to day 300; no P4 survival curve; treated arms compared with wild type). The only genetic
-   add-back after a documented phenotype is organoid (neuron-directed AAV9-WWOX at week 10 on a hyperexcitability seen at week 7, read at week 16, radial-glia abnormalities not
+   add-back after a documented phenotype read in this corpus is organoid (neuron-directed AAV9-WWOX at week 10 on a hyperexcitability seen at week 7, read at week 16, radial-glia abnormalities of the knockout lines not
    corrected), and the mouse cannot be carried to a later intervention (DL-MECH-011; `drug_repurposing/rescue_window_it6_20261029.md`, independently verified).
 
 ### CHAIN B — the network node (M2)
@@ -215,7 +215,7 @@ neuron-specific WWOX loss
   → bursting DEPENDS ON NMDAR activity [CLAIM 021 — NMDAR half only; the gap-junction half of this
     dependence was WITHDRAWN as not attributable 2026-09-27 (`BATCH_20260927_004`,
     `CC-20260826-GAPJUNCTION-ATTRIBUTION-01`) — see the withdrawn node below]
-  → NODE: NMDAR ACTIVITY IS REQUIRED for the bursting (d-APV, a complete competitive block, inside the WWOX system); a RAISED NMDAR function is NOT shown (three readings, unranked; see the 2026-10-29 update below)
+  → NODE: NMDAR ACTIVITY IS REQUIRED for the bursting (d-APV 50 uM eliminated the bursting inside the WWOX system; a competitive antagonist, no test on that arm); a RAISED NMDAR function is NOT shown (three readings, unranked; see the 2026-10-29 update below)
   → NODE WITHDRAWN PENDING OCCLUSION: connexin gap junctions — the carbenoxolone effect is real and not attributable (no washout reversal; the authors write that CBX *«may not be specific to gap junctions»*, that it *«could block NMDA receptors … which could partially account for our observations»* — a cited possibility with NO concentration attached — and that it *«blocks pannexin channels»*). Not «uninvolved»: untested. (2026-09-27, `BATCH_20260927_004`, `CC-20260826-GAPJUNCTION-ATTRIBUTION-01`.)
   → INTERVENTION: memantine (approved) · MK-801/APV (tools) · carbenoxolone (tool — ⚠️ sits under the
     WITHDRAWN node: CBX's 87% suppression is real but NOT attributable to gap junctions, so this entry
@@ -476,7 +476,7 @@ platform to run it has existed for years.
 
 **Consequence note (2026-10-27, `CC-20261027-SCIENTIST-C-W2-THERAPEUTIC-01`, EXPLORATORY, no status change):** the GRIN2A convergence corroborates the node, not the sign of intervention (memantine benefit tracks gain-of-function GRIN variants in another disease, 14 of 19 with 4 transient versus 3 of 15; retrospective, unblinded); the GRIN2A variant class in the cohort abstract is not stated (abstract only, `NO_RECEIPT`). Derived hypothesis: `HYP-20261027-01`.
 
-🔵 **Update 2026-10-29 (`BATCH_20261019_027`, `CC-20261029-INTEGRATOR-IT6-REGISTRIES-01`; IT6 P9; EXPLORATORY; the Class and the T2 scoring are unchanged).** The DECISIVE_PRECLINICAL_TEST above is superseded as a DISCRIMINATOR by card `F04_nmdar_intervention_class` (F01 stays as the record of the registration of 2026-10-27): a drug effect on bursting does not say which reading of the d-APV result is true (an AMPAR antagonist is expected to stop an NMDAR-dependent burst too), memantine is a state-dependent pore blocker whose effect here may be a GluN2D interneuron effect or an Mg2+ artefact, and the first measurement is the isolated NMDAR current under voltage control; a GluN2B-selective negative allosteric modulator is the first drug arm and memantine the translation probe afterwards. No NMDAR drug is carried forward on the d-APV result alone.
+🔵 **Update 2026-10-29 (`BATCH_20261019_027`, `CC-20261029-INTEGRATOR-IT6-REGISTRIES-01`; IT6 P9; EXPLORATORY; the Class and the T2 scoring are unchanged).** The DECISIVE_PRECLINICAL_TEST above is superseded as a DISCRIMINATOR by card `F04_nmdar_intervention_class` (F01 stays as the record of the registration of 2026-10-27): a drug effect on bursting does not say which reading of the d-APV result is true (an AMPAR antagonist is expected to stop an NMDAR-dependent burst too), memantine is a state-dependent pore blocker whose effect here may be a GluN2D interneuron effect or an Mg2+ artefact, and the first measurement is the isolated NMDAR current under voltage control; a GluN2B-selective negative allosteric modulator is a candidate first drug arm and memantine a candidate translation probe afterwards (a proposal, not a ranking). No NMDAR drug is carried forward on the d-APV result alone.
 
 ---
 
@@ -670,7 +670,7 @@ cannot be ranked at all until one measurement exists.
 **Class:** `PROMISING_BUT_MECHANISTIC_GAP` — the gap is causal, not pharmacological: the branch has
 not been discriminated.
 
-🔵 **Update 2026-10-29 (`BATCH_20261019_027`, `CC-20261029-INTEGRATOR-IT6-REGISTRIES-01`; IT6 P5 and P6; EXPLORATORY; NOT WWOX EVIDENCE for every external item).** Order of work: the wild-type function ruler first (see the discovery-ledger update of 2026-10-29 on abundance and function), then fate, then levers. In the best-resolved cytosolic-enzyme precedent (cystathionine beta-synthase) route blockade returned protein of unequal worth (sufficient for one allele, partial for three, null for one, wild type rising alongside, exposure toxic), and in ASPA C152W it accumulated inert pellet protein; no experiment gave a route blocker to a WWOX missense system beyond the P252A route arms, and no precedent separates stabilisation from a transcript effect. The class stays a probe (card A02 revised; A05 an abstention). Details: the hypotheses-ledger update of 2026-10-29 on the missense allele.
+🔵 **Update 2026-10-29 (`BATCH_20261019_027`, `CC-20261029-INTEGRATOR-IT6-REGISTRIES-01`; IT6 P5 and P6; EXPLORATORY; NOT WWOX EVIDENCE for every external item).** A proposed order of work, not a ranking: the wild-type function ruler first (see the discovery-ledger update of 2026-10-29 on abundance and function), then fate, then levers. In the best-resolved cytosolic-enzyme precedent (cystathionine beta-synthase) route blockade returned protein of unequal worth (sufficient for one allele, partial for three, null for one, wild type rising alongside, exposure toxic), and in ASPA C152W it accumulated insoluble pellet protein with no measurable activity (yeast and U2OS; earlier reports also found no residual activity); no experiment gave a route blocker to a WWOX missense system beyond the P252A route arms, and no precedent separates stabilisation from a transcript effect. The class stays a probe (card A02 revised; A05 an abstention). Details: the hypotheses-ledger update of 2026-10-29 on the missense allele.
 
 ### R-10 — ISRIB-class eIF2B activators and other ISR attenuators (class-level; added 2026-10-26 from the Lucas-Clarke follow-up)
 
@@ -1175,8 +1175,8 @@ and, in the same experiment: *"the neurite outgrowth stimulated by RA was abolis
 1. **Neuronal WWOX protein level (M1).** The only node where loss is *sufficient*, restoration is
    *demonstrated*, and the required efficiency is *quantified* — haploinsufficiency is not
    deleterious, so the threshold sits below 50%, and partial correction may suffice.
-2. **NMDAR / gap-junction dependence of the bursting phenotype (M2).** The only downstream node whose
-   causal dependence was established **inside** a WWOX model.
+2. **NMDAR dependence of the bursting phenotype (M2).** The only downstream node whose
+   dependence on NMDAR **activity** was shown **inside** a WWOX model (d-APV; a raised NMDAR function is not shown; the gap-junction half was withdrawn on 2026-09-27).
 3. **The GSK3β docking site 388–407/L404 (M4).** Residue-resolved, S9-independent — and it doubles as
    a **design constraint** on every stabilizer, because the degron and the function overlap.
 4. **The allele-level protein/sequence lesion (M7/M8).** The only levers that address the cause at the
@@ -1218,7 +1218,7 @@ programme:
 | **PV / interneuron** | Marker-level `DATO` in **one** systemic constitutive KO at two weeks (PV⁺ −44% whole hippocampus; NPY⁺ DG only), with a **measured systemic confounder** (that animal is hypoglycaemic, acidotic, uraemic at P18) and `MARKER_TO_FUNCTION_GATE` unmet — no pan-GABA lineage count, no birthdating, no fate mapping, no apoptosis assay | **Mechanism: admitted. Target: not yet.** No PV-directed intervention is scorable |
 | **GABA / E-I balance** | The **functional** inhibitory deficit is real and independently measured (reduced spontaneous inhibition, L2/3, neuron-specific loss). The **directional paradox** is unresolved — GABAergic markers ↑ in organoids, ↓ in the mouse. `E_GABA`, chloride, NKCC1/KCC2 and the GABA response are **unmeasured in every WWOX system** | **T6.** Bumetanide unrankable; broad GABAergic push carries a documented MRI-abnormality liability (two case-selected WWOX reports, no denominator) and a falsified clinical prediction |
 | **mTOR** | 🔴 **Does not qualify for admission.** The only WWOX-specific datum shows mTOR/EIF4EBP1 **down** and autophagy **down** | **Deprioritized on direction**, with the weakness of the single dataset stated |
-| **Circuit-targeted** | ✅ **This is where the programme is real** — but the actionable node is **NMDAR/gap-junction**, not GABA. It is the one downstream dependence established inside a WWOX model | `PROMISING_BUT_MECHANISTIC_GAP` (R-02) |
+| **Circuit-targeted** | ✅ **This is where the programme is real** — but the node is **NMDAR activity** (required for the bursting, not shown raised; the gap-junction half withdrawn), not GABA. It is the one downstream dependence on a receptor activity shown inside a WWOX model | `PROMISING_BUT_MECHANISTIC_GAP` (R-02) |
 
 **Overall programme verdict:** *the PV/GABA/mTOR programme, as usually formulated, does not hold.* The
 circuit arm survives and relocates to a different receptor; the GABA arm is blocked on a single

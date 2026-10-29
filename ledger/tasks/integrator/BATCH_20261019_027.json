@@ -70,5 +70,11 @@
   "public_release_gate": "PASS, 0 BLOCKS",
   "candidate_ops_reconcile": "MATCH, ops_parsed 29",
   "tests": "test_repurposing_join 69 OK (incl. SupersededWordingGoneIT6, 6 tests), test_repurposing_coverage 55 OK, test_repurposing_view 92 OK, needs/test_check_needs OK, check_needs OK (22 needs, 81 observations), check_cards 27 packets 0 problems, p5_check 203 cells 0 problems, test_tool_routing OK, test_section_references OK, test_growth_anchors 13 OK, test_batch_commit 23 OK, test_record_scoped_edit 61 OK, test_candidate_ops_reconcile OK"
+ },
+ "ADDENDUM_REPAIR_20261029": {
+  "review": "disease-models/wwox/research/locator_audits/2026-10-29_it6_batch_review.md (commit 9d4a1546; no HIGH)",
+  "scope": "D2 to D13, wording only, record-scoped replace-within edits of this batch's own text (earlier ledger wording untouched), each re-checked against the cycle verifier reports; the map's in-place lines edited per the review",
+  "D1": "filed as the separate MINOR candidate CC-20261029-INTEGRATOR-IT6-WM-01 and applied as BATCH_20261019_028 (WM_v7.29); this record's statement that the working model is left unchanged is superseded by it",
+  "regenerated": "join, coverage, p5, both views, package, handoff 20261029, pathograph"
  }
 }

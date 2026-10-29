@@ -333,3 +333,18 @@ The ledger bullets and wave notes restate independently verified material and ad
 - **Glial sign conflict:** propagated to `CLAIM 005` (wave note), `DL-REPO-002`, `DL-MECH-012`, `HYP-20260705-02`, `PAPER 021`, `PAPER 006`, `PAPER 004`, `PAPER 007`, and the map.
 - **Function ruler and route blockade:** propagated to `DL-BIO-085`, `HYP-20260709-08`, `PAPER 434`, and the map.
 - **Unchanged:** every `Status`, `Type`, `Title` and `Summary`; the working model; the dismissal ledger; the receipt ledger; the Status and ranking of every hypothesis touched.
+
+## Addendum 2026-10-29 (repair after the independent adversarial review; same batch, see the batch record `ADDENDUM_REPAIR_20261029`)
+The review (`research/locator_audits/2026-10-29_it6_batch_review.md`, no HIGH) found D1 to D13; D2 to D13 are wording repairs of this batch's own notes (each re-checked against the cycle verifier reports first), made as record-scoped `replace-within` edits of the batch's own text (earlier ledger wording untouched): 3 claim notes (`CLAIM 011`, `CLAIM 002`, `CLAIM 021`), 3 paper updates (`PAPER 094`, `PAPER 434`, `CORPUS P318`), `LIT-0706`, 4 discovery-ledger bullets (`DL-MECH-011`, `DL-MECH-007`, `DL-MOL-001`, `DL-REPO-002`), the `HYP-20260709-08` and `HYP-20261027-01` updates and the new `HYP-20261029-01`, and the map. The statement above that the working model is left unchanged is SUPERSEDED by D1: the working-model wording is filed and applied as the separate MINOR candidate `CC-20261029-INTEGRATOR-IT6-WM-01` (`BATCH_20261019_028`, `WM_v7.29`).
+- D2: motor score stated as partial and not normalised, gliosis at the high dose only (map boundary 5, `DL-MECH-011`).
+- D3: 'inert' replaced by 'insoluble pellet protein with no measurable activity (yeast and U2OS; earlier reports also found no residual activity)' (map R-09, `HYP-20260709-08`, `PAPER 434`, `LIT-0706`).
+- D4: the `HYP-20261029-01` falsifier compares with wild-type slices made to burst by raised K+ or 4-aminopyridine, not by lowered Mg2+.
+- D5: arithmetic stated as 'the reachable rise may fall short' (about +42 percent for a cortical-type slope against +31 percent in healthy mice); uncorrected liquid-junction potential and the shared burst incidence added to the limits.
+- D6: d-APV described as observed (50 uM eliminated the bursting; a competitive antagonist; no test on that arm) in `CLAIM 021`, `DL-MOL-001`, the map and `HYP-20261029-01`.
+- D7: the stale 'actionable node NMDAR/gap-junction' summary lines of the map (M2 row, key-unknown 2, the programme table) restated.
+- D8: the negative-existence claim on `CORPUS P318` reworded to 'the only such rescue noted in the readings of this batch'.
+- D9: radial-glia wording restricted to the knockout lines, with the abstract's neuronal description of the patient-line impairment.
+- D10: 'in the corpus' replaced by 'read in this corpus' with the bounded search stated.
+- D11: F* and the closing criteria stated as exploratory proposals to be time-stamped before unblinding.
+- D12: 'first drug arm' and 'order of work' stated as proposals, not rankings; `Lever: 3 (repurposing, nutrient class)`; `INFERENZA` dropped as a tag.
+- D13: the `DL-REPO-002` heading stated as superseded in effect; the 642-row statement labelled 'by the catalogue's own fields'.

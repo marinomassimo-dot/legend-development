@@ -1090,7 +1090,63 @@ class SupersededWordingGoneIT6(unittest.TestCase):
         wm = self.read("disease-models/wwox/registries/working_model_current.md")
         version = re.search(r"\*\*Version:\*\* (WM_v\S+)", wm).group(1)
         self.assertIn(version.split("_")[1], self.read("framework/state/state_manifest_current.md"))
-        self.assertNotIn(self.BATCH, wm)
+        # BATCH_20261019_027 changed no working-model statement; it is named only in the Last update line of its follow-up 028
+        self.assertNotIn(self.BATCH, "\n".join(l for l in wm.splitlines() if not l.startswith("**Last update:**")))
+
+    def test_working_model_wording_after_the_review(self):
+        """BATCH_20261019_028 (WM_v7.29): the ages tested are not a measured window; the durable-rescue lines carry the
+        early-window qualifier; the early-childhood sentence carries a premise tag; the version equals the manifest's."""
+        wm = self.read("disease-models/wwox/registries/working_model_current.md")
+        body = "\n".join(l for l in wm.splitlines() if not l.startswith("**Last update:**"))
+        self.assertNotIn("critical early postnatal window", body)
+        self.assertIn("early postnatal window tested (P0–P5 in mouse: ages tested, not a measured boundary)", wm)
+        self.assertEqual(body.count("(early-window prevention in the null mouse; no after-onset mouse arm)"), 3)
+        self.assertIn("`PREMISE_TAG: DEFAULT_FROM_TEXTBOOK` — an unsourced expert-sentiment sentence", wm)
+        version = re.search(r"\*\*Version:\*\* (WM_v\S+)", wm).group(1)
+        manifest = self.read("framework/state/state_manifest_current.md")
+        self.assertIn("working_model_version: " + version.split("_20")[0], manifest)
+        self.assertIn("`BATCH_20261019_028`", wm.split("\n## Disease identity", 1)[0])
+        hist = self.read("disease-models/wwox/registries/working_model_history.md")
+        self.assertIn("| **WM_v7.29** |", hist)
+        narrative = self.read("disease-models/wwox/disease_model.md")
+        self.assertNotIn("critical early postnatal window", narrative)
+        self.assertIn("ages tested, not a measured boundary", narrative)
+
+    def test_repaired_wording_of_the_review_is_in_place(self):
+        m = self.read(self.SURFACES[0])
+        self.assertIn("read in this corpus (two mouse studies; a bounded search for inducible neural Wwox models found none)", m)
+        self.assertIn("in part (partial, not normalised) for motor score and, at the high dose only, for gliosis", m)
+        self.assertIn("insoluble pellet protein with no measurable activity (yeast and U2OS", m)
+        self.assertNotIn("inert pellet protein", m)
+        self.assertNotIn("a complete competitive block, inside the WWOX system", m)
+        self.assertNotIn("the actionable node is **NMDAR/gap-junction**", m)
+        self.assertIn("**needs NMDAR activity** (the gap-junction half withdrawn", m)
+        self.assertIn("a proposed order of work, not a ranking", m.lower())
+        hyp = self.read("disease-models/wwox/research/therapeutic_hypotheses_ledger_current.md")
+        mg = hyp.split("### HYP-20261029-01 ", 1)[1]
+        self.assertIn("raised K+ or 4-aminopyridine", mg)
+        self.assertIn("so the reachable rise may fall short", mg)
+        self.assertIn("uncorrected for the liquid-junction potential", mg)
+        self.assertNotIn("INFERENZA", mg.split("\n", 3)[2])
+        self.assertIn("**Lever:** 3 (repurposing, nutrient class)", mg)
+        self.assertNotIn("insoluble, inert protein", hyp)
+        h27 = hyp.split("### HYP-20261027-01 ", 1)[1].split("\n### ", 1)[0]
+        self.assertIn("a candidate first drug arm, a proposal and not a ranking", h27)
+        self.assertIn("time-stamped before unblinding", h27)
+        lit = self.read("disease-models/wwox/registries/literature_tracking_log_current.md")
+        self.assertNotIn("insoluble, inert protein", lit)
+        disc = self.read("disease-models/wwox/research/discovery_ledger_current.md")
+        d11 = disc.split("### DL-MECH-011 ", 1)[1].split("\n### ", 1)[0]
+        self.assertIn("in part (partial, not normalised) for motor score", d11)
+        r2 = disc.split("### DL-REPO-002 ", 1)[1].split("\n### ", 1)[0]
+        self.assertIn("superseded in effect by this update", r2)
+        self.assertIn("by the catalogue's own fields", r2)
+        claims = self.read("disease-models/wwox/registries/claim_registry_current.md")
+        c21 = claims.split("## CLAIM 021\n", 1)[1].split("\n## CLAIM ", 1)[0]
+        self.assertNotIn("a complete competitive block", c21)
+        self.assertIn("a competitive antagonist that eliminated the bursting", c21)
+        papers = self.read("disease-models/wwox/registries/paper_registry_current.md")
+        self.assertIn("the only such rescue noted in the readings of this batch", papers)
 
 
 if __name__ == "__main__":

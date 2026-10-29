@@ -19253,7 +19253,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Report mentions:** research/repurposing_10h_scientist-a_20261021.md
 **Next action:** none — read and registered; claim-level use is held with the group candidate
 **Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261021-33914734-01` ; manifest `deepdive_manifests/PMID33914734.json`; landing [[paper_registry_current#PAPER 434]]
-**Note:** class-level record. Not medical advice. Reading update 2026-10-29 (`BATCH_20261019_027`): receipt `FTR-20261029-33914734-02`; route blockade accumulated insoluble, inert protein (NOT WWOX EVIDENCE). See [[paper_registry_current#PAPER 434]].
+**Note:** class-level record. Not medical advice. Reading update 2026-10-29 (`BATCH_20261019_027`): receipt `FTR-20261029-33914734-02`; route blockade accumulated insoluble pellet protein with no measurable activity (yeast and U2OS; earlier reports also found no residual activity) (NOT WWOX EVIDENCE). See [[paper_registry_current#PAPER 434]].
 
 ---
 ## LIT-0707
