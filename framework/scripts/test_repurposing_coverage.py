@@ -758,5 +758,102 @@ class RealFiles(unittest.TestCase):
         self.assertGreaterEqual(len(survivors), 5, "genuine ABAT rows (vigabatrin class) were dropped")
 
 
+class LoopPropagationIT7P6(unittest.TestCase):
+    """IT7 P6 (roadmap R6): a computational null / inconclusive result entered in the needs reaches the coverage output.
+
+    Positive checks only, on the real needs file, plus two mutation tests that remove or relabel the recorded result in a COPY
+    of the needs file and require the coverage output to move by exactly the amount the change implies:
+      * the counter-evidence item that records the result is counted in `need_counter_evidence_items` of every priority row on its need
+        (remove it from a copy: the count falls by one, and no other criterion of those rows moves);
+      * a COMPUTATIONAL_RESULT observation is not a WWOX-experiment observation (relabel it in a copy: `wwox_system_observations`
+        of that need rises by one - so the real value does not count it).
+    The loop's own records are looked up by identifier, never by count."""
+
+    NEEDS = {"NEED-PDH-PYRUVATE-AXIS": ("O5", "O6"), "NEED-LACTATE-LDH": ("O6", "O7")}
+
+    @classmethod
+    def setUpClass(cls):
+        cls.doc = json.loads(Path(rs.DEFAULT_NEEDS).read_text(encoding="utf-8"))
+        cls.need = {n["id"]: n for n in cls.doc["needs"]}
+        cls.base = cov.build()
+        cls.tmp = tempfile.TemporaryDirectory()
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.tmp.cleanup()
+
+    def loop_obs(self, nid):
+        return {o["id"]: o for o in self.need[nid]["observed"]}
+
+    def loop_counter(self, nid):
+        return [c for c in self.need[nid]["counter_evidence"] if c.startswith("IT7 P3/P1")]
+
+    def test_result_is_recorded_as_computational_result_with_its_character(self):
+        for nid, ids in self.NEEDS.items():
+            obs = self.loop_obs(nid)
+            for oid in ids:
+                self.assertIn(oid, obs, (nid, oid))
+                self.assertEqual(obs[oid]["evidence_scope"], "COMPUTATIONAL_RESULT", (nid, oid))
+                self.assertRegex(obs[oid]["statement"], r"INCONCLUSIVE|NO ADDED VALUE", (nid, oid))
+                self.assertRegex(obs[oid]["limits"], r"independently verified", (nid, oid))
+            self.assertTrue(any("not detected, not excluded" in o["statement"] for i, o in obs.items() if i == ids[1]), nid)   # the signature route keeps the source's wording
+            self.assertEqual(len(self.loop_counter(nid)), 1, nid)
+            self.assertIn("loop_demonstration_it7_p6_20261029/README.md", " ".join(self.need[nid]["sources"]["documents"]), nid)
+            self.assertIn("COMPUTATIONAL_RESULT", self.need[nid]["evidence_scope"], nid)
+
+    def test_counter_evidence_count_in_every_priority_row_follows_the_needs_file(self):
+        rows = self.base["priorities"]["priorities"]
+        for nid in self.NEEDS:
+            mine = [r for r in rows if r["need"] == nid]
+            self.assertTrue(mine, nid)
+            for r in mine:
+                self.assertEqual(r["criteria"]["counter_evidence"]["need_counter_evidence_items"], len(self.need[nid]["counter_evidence"]), (nid, r["row_id"]))
+                self.assertIn("COMPUTATIONAL_RESULT", r["criteria"]["wwox_relevance"]["need_evidence_scopes"], (nid, r["row_id"]))
+
+    def test_wwox_experiment_observations_exclude_the_computational_ones(self):
+        per = self.base["summary"]["needs"]["per_need"]
+        for nid in self.NEEDS:
+            exp = sum(1 for o in self.need[nid]["observed"] if o["evidence_scope"] == "WWOX_EXPERIMENT_IN_DEE_SYSTEM")
+            self.assertEqual(per[nid]["wwox_system_observations"], exp, nid)
+            self.assertGreater(len(self.need[nid]["observed"]), exp, nid)       # computational rows exist beside them and are not counted
+
+    def _build_copy(self, name, mutate):
+        doc = copy.deepcopy(self.doc)
+        mutate({n["id"]: n for n in doc["needs"]})
+        path = Path(self.tmp.name) / name
+        path.write_text(json.dumps(doc), encoding="utf-8")
+        return cov.build(needs_path=path)
+
+    def test_mutation_removing_the_recorded_counter_evidence_lowers_the_count_by_one_and_moves_nothing_else(self):
+        nid = "NEED-PDH-PYRUVATE-AXIS"
+        res = self._build_copy("no_counter.json", lambda m: m[nid].__setitem__("counter_evidence", [c for c in m[nid]["counter_evidence"] if not c.startswith("IT7 P3/P1")]))
+        base = {(r["row_id"], r["need"]): r for r in self.base["priorities"]["priorities"]}
+        mut = {(r["row_id"], r["need"]): r for r in res["priorities"]["priorities"]}
+        self.assertEqual(set(base), set(mut))
+        moved = 0
+        for k, r in base.items():
+            if k[1] != nid:
+                self.assertEqual(mut[k], r, k)                                                 # other needs: byte-identical rows
+                continue
+            self.assertEqual(r["criteria"]["counter_evidence"]["need_counter_evidence_items"] - 1, mut[k]["criteria"]["counter_evidence"]["need_counter_evidence_items"], k)
+            a, b = copy.deepcopy(r), copy.deepcopy(mut[k])
+            a["criteria"]["counter_evidence"].pop("need_counter_evidence_items")
+            b["criteria"]["counter_evidence"].pop("need_counter_evidence_items")
+            self.assertEqual(a, b, k)                                                           # disposition and every other criterion unchanged
+            moved += 1
+        self.assertGreater(moved, 0)
+
+    def test_mutation_relabelling_the_computational_observation_as_an_experiment_is_visible(self):
+        nid = "NEED-LACTATE-LDH"
+        before = self.base["summary"]["needs"]["per_need"][nid]["wwox_system_observations"]
+
+        def relabel(m):
+            for o in m[nid]["observed"]:
+                if o["id"] == "O6":
+                    o["evidence_scope"] = "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
+        res = self._build_copy("relabel.json", relabel)
+        self.assertEqual(res["summary"]["needs"]["per_need"][nid]["wwox_system_observations"], before + 1)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=1)

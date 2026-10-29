@@ -39,6 +39,10 @@
     "P9": {
       "path": "nmdar_pharmacology_it6_p9_20261029/README.md",
       "label": "IT6 P9 record: NMDAR intervention class and the isolated-current discriminator"
+    },
+    "IT7-P6": {
+      "path": "loop_demonstration_it7_p6_20261029/README.md",
+      "label": "IT7 P6 record: a null result through the research loop"
     }
   },
   "entries": [
@@ -127,17 +131,20 @@
       "need": "NEED-PDH-PYRUVATE-AXIS",
       "kind": "verificare un'ipotesi",
       "question": "Is PDH phosphorylation higher in WWOX-deficient neural cells, and does a PDK inhibitor change it in a genotype-dependent way without lowering glucose in a hypoglycaemic model?",
-      "data": "The closing condition of card I01: PDHA1 Ser293 phosphorylation, total PDH, activity and a tracer experiment, genotype by inhibitor; a glycaemia arm in the constitutive knockout, where glucose at P10 is already about 95 against about 130.",
-      "would_change": "A genotype-by-inhibitor interaction would give the first WWOX-system row for DCA on this need; the known glucose-lowering and neuropathy signals would remain as tags.",
+      "data": "The closing condition of card I01: PDHA1 Ser293 phosphorylation, total PDH, activity and a tracer experiment, genotype by inhibitor; a glycaemia arm in the constitutive knockout, where glucose at P10 is already about 95 against about 130. IT7 P6 2026-10-29: decisive measurement unchanged; read PDK1, LDHA, LDHB, HK2, SLC2A1 and BNIP3 transcripts beside it in the same cells, so the replicated WWOX-deficient human neural contrast that the P3 comparison named as missing is also a second transfer test; no computational ranking selects the compound arm. (IT7 P6: the network routes added no value and the signature route was not detected, not excluded.)",
+      "would_change": "A genotype-by-inhibitor interaction would give the first WWOX-system row for DCA on this need; the known glucose-lowering and neuropathy signals would remain as tags. A computational ranking of compounds does not change this: the IT7 P3 comparison found no added value for the network routes and an effect not detected, not excluded for the signature route, so the kind of study and the position of the need are unchanged.",
       "feasibility": "Human fibroblast precedent exists at abstract level; the WWOX-deficient cells (organoids from a public deposit) need an access request that exists as a draft only and is not to be filed from here.",
       "date": "2026-10-29",
-      "updated_by": [],
+      "updated_by": [
+        "IT7-P6"
+      ],
       "cards": [
         "E03_pdk_inhibition_dca",
         "I01_pdk_inhibition_dca_premise_seizure_glycaemia"
       ],
       "docs": [
-        "REVIEW"
+        "REVIEW",
+        "IT7-P6"
       ],
       "summary_it": "Capire se la fosforilazione di PDH è più alta nelle cellule neurali prive di WWOX e se un inibitore di PDK la modifica in modo dipendente dal genotipo.",
       "feasibility_it": "Precedente in fibroblasti umani a livello di abstract; le cellule WWOX-deficienti richiedono una richiesta di accesso solo in bozza, non inoltrata da qui."
@@ -146,16 +153,19 @@
       "need": "NEED-LACTATE-LDH",
       "kind": "verificare un'ipotesi",
       "question": "Is LDH activity or lactate raised in WWOX-deficient neural cells, and does the candidate reach an inhibitory level at all?",
-      "data": "Card E02 next measurement: lactate and LDH activity in WWOX-deficient human neural cells, the fly Ldh-alone arm and Wwox mRNA in the double line; exposure against the 42 to 500 micromolar LDH range.",
-      "would_change": "If lactate is not raised, the need loses its WWOX observation and E02 moves to P3 by rule; if raised and the candidate cannot reach the range, the counter tags stand and a tool-grade inhibitor would be the only way to test the node.",
+      "data": "Card E02 next measurement: lactate and LDH activity in WWOX-deficient human neural cells, the fly Ldh-alone arm and Wwox mRNA in the double line; exposure against the 42 to 500 micromolar LDH range. IT7 P6 2026-10-29: read LDHA and LDHB activity separately (LDHB was the discordant gene in the P47T transfer test); no computational ranking selects the compound arm. (IT7 P6: the network routes added no value and the signature route was not detected, not excluded.)",
+      "would_change": "If lactate is not raised, the need loses its WWOX observation and E02 moves to P3 by rule; if raised and the candidate cannot reach the range, the counter tags stand and a tool-grade inhibitor would be the only way to test the node. A computational ranking of compounds does not change this: the IT7 P3 comparison found no added value for the network routes and an effect not detected, not excluded for the signature route, so the kind of study and the position of the need are unchanged.",
       "feasibility": "Cell lines and fly stocks: not known. A public request draft exists in this directory, but registration or contact is not performed from here.",
       "date": "2026-10-29",
-      "updated_by": [],
+      "updated_by": [
+        "IT7-P6"
+      ],
       "cards": [
         "E02_ldh_inhibition"
       ],
       "docs": [
-        "REVIEW"
+        "REVIEW",
+        "IT7-P6"
       ],
       "summary_it": "Capire se lattato o attività LDH sono aumentati nelle cellule neurali prive di WWOX e se il candidato raggiunge un livello inibitorio.",
       "feasibility_it": "Linee cellulari e stock di mosca: non nota; nessuna richiesta o contatto eseguiti da qui."
