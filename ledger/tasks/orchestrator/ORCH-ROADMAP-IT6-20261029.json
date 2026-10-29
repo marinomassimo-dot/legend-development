@@ -14,8 +14,9 @@
    "steps": [
     {
      "step": "P1 baseline, README current-capability section, receipt linkage",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "baseline: local=remote 030a8a5c before work, state READY, 885 receipts cited by id (35 module-cited IDs all recorded; 21 prose lines superseded, mapped by receipt_linkage.py), disk 100G free; README current-capability box; landed 759eeeeb"
     },
     {
      "step": "P2 independent F/C/P review + work order per need",
@@ -59,8 +60,9 @@
    "steps": [
     {
      "step": "P8 operationalise one external capability",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "ChEMBL adapter extended (uniprot resolution, molecule/target activity rows with assay context, declared truncation), 28 adapter tests; four live tests incl. empty single-protein answer vs complex data; pharmacology_it6_20261029/P8_capability_trial.md"
     },
     {
      "step": "P9 neuronal-need pharmacology deepening",
