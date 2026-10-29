@@ -107,9 +107,9 @@
    "steps": [
     {
      "step": "P14 hourly control, background work and effective closure: reliable process/runtime observation (identified PID, not mtime alone, not process name); states active / legitimate wait / finished to collect / Orchestrator really stopped / dead process / unknown; resume request must not start a second execution or a second integrator; do not mark COMPLETE while a required confirmation (the push) is missing; trust: never edit the global trust config, keep one verified instruction for the dead-session case; proofs: long silent job active, waiting for tests, finished work to collect, truly idle resumable session, explicit pause, completed mandate, duplicate request, unreadable state; restart proof distinct from a proof during active work; one logical control; latest real radar run consumed and a small scouting on gaps (identity, quantitative data, perturbations, supplements, scientific representation); ToolUniverse only for a concrete gap; TxGNN/MATRIX only on changed conditions",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "implementation + live proofs of 10 states landed (d20635ec); radar consumed: latest real run 2026-10-28T07:21Z NO_USEFUL_CHANGE (next cron 05:20 UTC 2026-10-29 to be checked), Radar iteration 5 table landed; remaining: real battery run as a tagged job (long silent job active proof) and an idle restart proof, cron/trigger coherence at close"
+     "evidence": "mandate_watch jobs by process identity, idempotent restart, push confirmation before COMPLETE, live proofs: ten states on a probe mandate; in the real session a long silent tagged job kept the mandate RUNNING (01:44 UTC) and a finished job produced RESUME with finished-job-to-collect and a suppressed duplicate (02:26 UTC); radar iteration 5 consumed (latest real run 2026-10-28T07:21Z NO_USEFUL_CHANGE; next cron 05:20 UTC 2026-10-29 to verify); trust instruction recorded; dead-session revival not claimed operational"
     }
    ]
   },

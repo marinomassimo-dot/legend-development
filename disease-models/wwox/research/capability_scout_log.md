@@ -1536,3 +1536,9 @@ PubChem data-usage policy page (browser-check shell); UniChem and ChEBI data lic
 ### (d) Observed cost of this scouting
 
 6 web searches, 17 page fetches (6 unusable: 404 x3, 403, certificate error, bot-check shell), about 30 key-less GET probes (EBI, NCBI, HGNC, ChEMBL, BindingDB, NIH, GitHub API), 6 local browser runs, 2 pipe-CDP attempts, 1 written scratch probe (outside the repository). Roughly 25 minutes wall clock by estimate (no timer was started; the shell clock at start was 23:36 UTC on 2026-10-28).
+
+### Session close, iteration 5 (2026-10-29): capability gap record
+
+- **Gap with evidence:** agent-written regression tests repeatedly trip repository-wide guards that the writing agent never ran (closed-world absence pins; shebang mode) and a corpus-dependent test with a typed status value: three suites failed in the first final battery.
+- **Change shipped:** the three tests/modes fixed; no new gate. Proportionate follow-up: add the two guard scripts to the briefs of test-writing agents (done in the next briefs).
+- **Capabilities gained this iteration (real status):** reproducible catalogue rebuild with refusal on missing inputs; GtoPdb ligand identity reconciliation; DevTools-protocol viewport measurement from the stdlib; shareable package with a mutation-tested audit; `mandate_watch.py` jobs with process identity. Not operational: restart of a dead session (trust), publication outside the development repository (operator).
