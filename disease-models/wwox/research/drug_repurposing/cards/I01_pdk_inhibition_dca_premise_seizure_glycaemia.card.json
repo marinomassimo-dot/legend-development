@@ -1,721 +1,721 @@
 {
+ "schema_version": 1,
+ "input_sha256": "3eaaca6de78e2415eb8eaaacf90b871aec62007246108c8f068b620cdda6b6d1",
+ "epistemic_status": "IPOTESI",
+ "canonical": false,
+ "assessment": "REQUIRES_QUALIFICATION",
+ "directional_summary": "UNRESOLVED",
+ "endpoint_outcomes": [],
+ "comparisons": [
+  {
+   "assertion_id": "DR-I01-001",
+   "status": "UNRESOLVED",
+   "reasons": [
+    "no disease assertion on this target and endpoint"
+   ]
+  },
+  {
+   "assertion_id": "DR-I01-002",
+   "status": "UNRESOLVED",
+   "reasons": [
+    "no disease assertion on this target and endpoint"
+   ]
+  },
+  {
+   "assertion_id": "DR-I01-003",
+   "status": "UNRESOLVED",
+   "reasons": [
+    "no disease assertion on this target and endpoint"
+   ]
+  },
+  {
+   "assertion_id": "DR-I01-004",
+   "status": "UNRESOLVED",
+   "reasons": [
+    "no disease assertion on this target and endpoint"
+   ]
+  },
+  {
+   "assertion_id": "DR-I01-005",
+   "status": "UNRESOLVED",
+   "reasons": [
+    "no disease assertion on this target and endpoint"
+   ]
+  },
+  {
+   "assertion_id": "DR-I01-006",
+   "status": "UNRESOLVED",
+   "reasons": [
+    "no disease assertion on this target and endpoint"
+   ]
+  },
+  {
+   "assertion_id": "DR-I01-007",
+   "status": "UNRESOLVED",
+   "reasons": [
+    "no disease assertion on this target and endpoint"
+   ]
+  },
+  {
+   "assertion_id": "DR-I01-008",
+   "status": "UNRESOLVED",
+   "reasons": [
+    "no disease assertion on this target and endpoint"
+   ]
+  },
+  {
+   "assertion_id": "DR-I01-009",
+   "status": "UNRESOLVED",
+   "reasons": [
+    "no disease assertion on this target and endpoint"
+   ]
+  },
+  {
+   "assertion_id": "DR-I01-010",
+   "status": "UNRESOLVED",
+   "reasons": [
+    "no disease assertion on this target and endpoint"
+   ]
+  },
+  {
+   "assertion_id": "DR-I01-011",
+   "status": "UNRESOLVED",
+   "reasons": [
+    "no disease assertion on this target and endpoint"
+   ]
+  },
+  {
+   "assertion_id": "DR-I01-012",
+   "status": "UNRESOLVED",
+   "reasons": [
+    "no disease assertion on this target and endpoint"
+   ]
+  },
+  {
+   "assertion_id": "DR-I01-013",
+   "status": "UNRESOLVED",
+   "reasons": [
+    "no disease assertion on this target and endpoint"
+   ]
+  },
+  {
+   "assertion_id": "DR-I01-014",
+   "status": "UNRESOLVED",
+   "reasons": [
+    "no disease assertion on this target and endpoint"
+   ]
+  }
+ ],
+ "abstention": null,
+ "label_lookup": {
+  "status": "NOT_ATTEMPTED",
+  "coverage": "UNKNOWN",
+  "method": "UNKNOWN",
+  "queries": [],
+  "source": "UNKNOWN",
+  "retrieved_at": "UNKNOWN",
+  "client_version": "UNKNOWN",
+  "product_name": "UNKNOWN",
+  "active_ingredient": "UNKNOWN",
+  "formulation": "UNKNOWN",
+  "spl_id": "UNKNOWN",
+  "error": "UNKNOWN",
+  "coverage_limit": "UNKNOWN"
+ },
+ "p4_fields": {
+  "endpoint_pursued": "A WWOX-linked PDH readout that a PDK inhibitor moves (PDHA1 Ser293 phosphorylation, PDH activity, glucose-derived acetyl-CoA labelling) in WWOX-deficient against matched control human neural cells, read as a genotype-by-inhibitor interaction; and, only after that, the glucose, lactate, ketone and alanine time course in Wwox-null pups before any seizure or behavioural endpoint.",
+  "functional_evidence_available": "None for any PDK inhibitor in a WWOX system. In non-WWOX epilepsy models: no anticonvulsant effect and a slight pro-convulsant signal in a mouse study (abstract); a histological neuroprotection result for the DCA plus pyruvate combination in rats after seizure. In children with congenital lactic acidosis: lactate lowering without clinical benefit over six months in a randomized trial.",
+  "temporal_or_model_limit": "The Wwox-null mouse is hypoglycaemic from the first postnatal week and dies within weeks, so a pup experiment runs in the same window as the lethal phenotype and is survivor-conditioned; neuron-specific deletion survival is not established here. The seizure and glucose precedents are adult animals or adult humans except the paediatric mitochondrial-disease trials.",
+  "cellular_context": {
+   "target_expression": "PDK isoforms are expressed in brain; the WWOX-dependent level is UNKNOWN. PDK1 transcript is lower in sign only (inside the single-gene null) in two human neural transcript systems and higher in mouse and human non-neural cells.",
+   "cells_tissue_stage": "No WWOX-deficient human neural system has a PDH activity or phosphorylation measurement.",
+   "coverage": "UNKNOWN",
+   "limits": "Transcript results are not PDH activity. A raised glycolytic signature does not prove a PDH block. PDH restraint is documented after chemoconvulsant status epilepticus in non-WWOX models, which a WWOX-DEE brain may share independent of genotype."
+  }
+ },
+ "input": {
   "schema_version": 1,
-  "input_sha256": "09ae0a7e50c9b6305e65fd40af194798426f1d6e474dc66c289555df84abd69c",
-  "epistemic_status": "IPOTESI",
-  "canonical": false,
-  "assessment": "REQUIRES_QUALIFICATION",
-  "directional_summary": "UNRESOLVED",
-  "endpoint_outcomes": [],
-  "comparisons": [
-    {
-      "assertion_id": "DR-I01-001",
-      "status": "UNRESOLVED",
-      "reasons": [
-        "no disease assertion on this target and endpoint"
-      ]
+  "axis": "I / IT5 P9: useful partial benefit, PDK inhibition (dichloroacetate): premise, seizure endpoint, glycaemia",
+  "route": "BENEFICIO_PRECOCE",
+  "mission_dimensions": {
+   "track": "A",
+   "track_definition": "mission.md section 5: Track A = variant-independent WWOX loss of function; Track B = variant or allele-class specific (e.g. the Q230P missense class); Track C = repurposing, which is a method of reaching A or B, not a third lesion class",
+   "route": "BENEFICIO_PRECOCE",
+   "route_definition": "RECUPERO_PROFONDO = deep recovery of the lost function; BENEFICIO_PRECOCE = concrete partial benefit, symptomatic control or protection of function, with paediatric feasibility and time in view",
+   "route_note": "A downstream metabolic bypass: partial benefit at best, only if a PDH restraint exists; the card tests the premise and the safety side, it does not propose a treatment. Track B: no allele-specific rationale.",
+   "the_two_dimensions_are_independent": "a card keeps both: a variant-independent lever can be a partial-benefit lever, and a lesion-specific one can aim at deep recovery"
+  },
+  "candidate": {
+   "id": "P4-I-01",
+   "name": "PDK inhibition (dichloroacetate): is there a WWOX-linked PDH restraint to release, does it change a seizure endpoint, and which way does it move glucose in a hypoglycaemic model"
+  },
+  "disease_assertions": [
+   {
+    "id": "DA-I01-001",
+    "target_id": "human PDK1 transcript (WWOX-knockout cerebral organoid)",
+    "endpoint": "log2 shift, knockout minus wild type (sign only)",
+    "direction": "DECREASE",
+    "source": "GSE156243 (deposit of PMID 34268881), set-level and gene-level re-analysis by scientist-c; wwox_systems_comparison_it5_20261029.md section 2",
+    "locator": "disease-models/wwox/research/drug_repurposing/wwox_systems_comparison_it5_20261029.md, programme table, row PDK1; matrix TSV",
+    "epistemic_status": "INFERENZA",
+    "reading_depth": "queried_not_full_read",
+    "context": {
+     "disease_id": "WWOX-deficient human cerebral organoid (engineered knockout; not a patient allele)",
+     "genotype": "WWOX knockout versus wild type (4 versus 2 libraries, one laboratory)",
+     "species": "human",
+     "cell_type": "cerebral organoid, bulk RNA",
+     "developmental_stage": "organoid, culture week 15"
     },
-    {
-      "assertion_id": "DR-I01-002",
-      "status": "UNRESOLVED",
-      "reasons": [
-        "no disease assertion on this target and endpoint"
-      ]
+    "evidence_scope": "COMPUTATIONAL_RESULT",
+    "note": "PDK1 -0.39, LOWER IN SIGN ONLY: inside the single-gene null (p about 0.30), so the datum is the absence of support for a raised PDK1, not a demonstrated decrease (the earlier card E03 prints -0.34 for the same comparison; the two runs differ in method and the difference is not reconciled here). The PDK set as a whole is indistinguishable from chance. Transcript, not PDK protein, PDH phosphorylation or activity. The maturity confound of this deposit applies."
+   },
+   {
+    "id": "DA-I01-002",
+    "target_id": "human PDK1 transcript (shRNA WWOX-knockdown neural progenitors and neurons)",
+    "endpoint": "log2 shift, knockdown minus control, CAGE promoter sums (sign only)",
+    "direction": "DECREASE",
+    "source": "GSE126075 (deposit of PMID 31543760), descriptive P6 run, one library per arm; wwox_systems_comparison_it5_20261029.md section 2",
+    "locator": "disease-models/wwox/research/drug_repurposing/wwox_systems_comparison_it5_20261029.md, programme table, row PDK1",
+    "epistemic_status": "INFERENZA",
+    "reading_depth": "queried_not_full_read",
+    "context": {
+     "disease_id": "WWOX-silenced human neural progenitors (shRNA, depth of knockdown not quantified; WWOX not lower in the progenitor CAGE tags)",
+     "genotype": "WWOX shRNA knockdown versus control",
+     "species": "human",
+     "cell_type": "H9-derived neural progenitors",
+     "developmental_stage": "progenitor stage and day-14 neurons"
     },
-    {
-      "assertion_id": "DR-I01-003",
-      "status": "UNRESOLVED",
-      "reasons": [
-        "no disease assertion on this target and endpoint"
-      ]
+    "evidence_scope": "COMPUTATIONAL_RESULT",
+    "note": "Progenitors -0.67, LOWER IN SIGN ONLY: inside the single-gene null (p about 0.49) and the interval (about 0.45, Poisson) spans zero; the day-14 neuron stage shows +0.44 (same interval), so the sign is not concordant across stages and no decrease is demonstrated. n = 1 per arm: descriptive only. The progenitor line also differs in state from its control (radial-glia markers lower), which confounds every metabolic comparison in it."
+   },
+   {
+    "id": "DA-I01-003",
+    "target_id": "PDK transcript (isoform not named in the quoted sentence; Methods name PDK1), human WWOX-knockout fibroblasts",
+    "endpoint": "RT-qPCR expression, knockout against control, normoxia and normoglycaemia",
+    "direction": "INCREASE",
+    "source": "Baryla 2022 (PMID 35328751), Results on glycolysis-gene expression; text re-read in this cycle from the local JATS (Figure 4 sentence)",
+    "locator": "files/fulltext/PMID35328751_Baryla2022_PMC.xml, Results: 'expression levels of SLC2A1, SLC2A4, ENO1, PKM2, and PDK (all p < 0.05) are significantly higher in the WWOX KO cell line than in control'",
+    "epistemic_status": "DATO",
+    "reading_depth": "partial_fulltext_read",
+    "context": {
+     "disease_id": "human non-neural fibroblast line with WWOX knockout (not a DEE-specific neural system)",
+     "genotype": "WWOX CRISPR/Cas9 lentiviral knockout, polyclonal (WWOX mRNA about 3-fold and protein about 8.5-fold lower; the abstract says silenced) versus scrambled-sgRNA control",
+     "species": "human",
+     "cell_type": "fibroblast line (1BR.3.N background)",
+     "developmental_stage": "not applicable"
     },
-    {
-      "assertion_id": "DR-I01-004",
-      "status": "UNRESOLVED",
-      "reasons": [
-        "no disease assertion on this target and endpoint"
-      ]
+    "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+    "note": "The only human WWOX-deficient transcript datum in which PDK is HIGHER; the two human neural transcript systems give PDK1 lower in sign only (inside the single-gene null). The isoform is unspecified in the sentence quoted, but the paper's Methods qPCR list names PDK1. Results name this condition (normoxia and normoglycaemia); the Discussion says PDK mRNA also rose in hypoxia-hyperglycaemia while the Results list for that condition names only PFK1 and PKM2 (internal inconsistency not resolved). n of the qPCR panel not stated in the sentence read. The PDK transcript sign therefore differs between a non-neural human line (up) and two neural transcript systems (not higher, lower only in sign): a cell-type contrast that is confounded (line, method, depth of silencing) and is not a finding about WWOX.",
+    "receipt": "FTR-20261003-35328751-02"
+   },
+   {
+    "id": "DA-I01-004",
+    "target_id": "pyruvate dehydrogenase enzyme activity, human WWOX-knockout fibroblasts",
+    "endpoint": "colorimetric PDH activity assay, knockout against control, four oxygen by glucose conditions",
+    "direction": "NO_CHANGE",
+    "source": "Baryla 2022 (PMID 35328751), Figure 5b and Results; carried through needs NEED-PDH-PYRUVATE-AXIS observation O2; Results sentence re-read in this cycle",
+    "locator": "files/fulltext/PMID35328751_Baryla2022_PMC.xml, Results (normoxia and normoglycaemia): 'the activities of pyruvate dehydrogenase kinase (PDK) and citrate synthase (CS) were not changed' (the sentence that carries the wording flag); Results (hypoxia and normoglycaemia): 'We didn't observed any significantly important differences in the activity of pyruvate [dehydrogenase]' (a different condition, quotation truncated in the source text read); Methods 4.10 names a PDH activity kit; Figure 5 caption: Pyruvate Dehydrogenase",
+    "epistemic_status": "DATO",
+    "reading_depth": "partial_fulltext_read",
+    "context": {
+     "disease_id": "human non-neural fibroblast line with WWOX knockout (not a DEE-specific neural system)",
+     "genotype": "WWOX CRISPR/Cas9 lentiviral knockout, polyclonal (WWOX mRNA about 3-fold and protein about 8.5-fold lower) versus scrambled-sgRNA control",
+     "species": "human",
+     "cell_type": "fibroblast line (1BR.3.N background)",
+     "developmental_stage": "not applicable"
     },
-    {
-      "assertion_id": "DR-I01-005",
-      "status": "UNRESOLVED",
-      "reasons": [
-        "no disease assertion on this target and endpoint"
-      ]
+    "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+    "note": "A null is NO_CHANGE, not proof of normal PDH regulation: n is not stated and PDH phosphorylation is not measured. Wording flag found in this cycle: one Results sentence lists 'pyruvate dehydrogenase kinase (PDK)' among the enzymes whose activity was unchanged, while Methods describe only a PDH kit and Figure 5b is labelled PDH; the repository reads it as the PDH assay (manifest entries 7 and 8); not resolved by the paper. PDH is named as unchanged in the normoxia-hyperglycaemia and hypoxia-normoglycaemia sentences; for hypoxia-hyperglycaemia the text says no effect on enzyme activities. In the same cells hexokinase activity, LDH activity and lactate were higher.",
+    "receipt": "FTR-20261003-35328751-02"
+   },
+   {
+    "id": "DA-I01-005",
+    "target_id": "Pdk1 transcript, Wwox-null mouse embryonic fibroblasts",
+    "endpoint": "expression of HIF1alpha target genes, knockout against wild type, normoxia",
+    "direction": "INCREASE",
+    "source": "the 2014 WWOX and HIF1alpha paper (PMID 25012504), Results on HIF1alpha target genes (the sentence on Pdk1)",
+    "locator": "deepdive_manifests/PMID25012504.json verbatim_locators entry 2",
+    "epistemic_status": "DATO",
+    "reading_depth": "complete_fulltext_read",
+    "context": {
+     "disease_id": "Wwox-null mouse embryonic fibroblasts (non-neural)",
+     "genotype": "Wwox knockout versus wild type",
+     "species": "mouse",
+     "cell_type": "embryonic fibroblasts",
+     "developmental_stage": "not applicable"
     },
-    {
-      "assertion_id": "DR-I01-006",
-      "status": "UNRESOLVED",
-      "reasons": [
-        "no disease assertion on this target and endpoint"
-      ]
+    "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+    "note": "Source of the PDK1-raised premise (map chain D). Transcript level in the text; the byte artefacts behind the receipt (HTML and PDF under files/fulltext) are not present in the root checkout today, only an abstract-stub XML, so the locator was not re-opened in this cycle (UNVERIFIABLE_SURFACE for the blind audit: the Pdk1 sentence was not seen by any reader in this cycle). Mouse, non-neural; PDH phosphorylation and activity not measured.",
+    "receipt": "FTR-20260814-25012504-01"
+   },
+   {
+    "id": "DA-I01-006",
+    "target_id": "blood glucose (whole animal)",
+    "endpoint": "blood glucose concentration, Wwox-null against wild type",
+    "direction": "DECREASE",
+    "source": "Obeid 2026 (PMID 42422765), AAV9 study: P10 untreated knockout about 95 against wild type about 130 (manifest figure attestation); abstract-level statement re-read in this cycle from the local JATS: neuronal-promoter vectors rescue hypoglycaemia; the 2014 WWOX and HIF1alpha paper, abstract: Wwox-deficient mice 'succumb to a lethal hypoglycemia early in life'",
+    "locator": "deepdive_manifests/PMID42422765.json entry 37; files/fulltext/PMID42422765_Obeid2026_PMC_r2.xml (Results on promoters; Figure 1 legend: glucose at P14); deepdive_manifests/PMID25012504.json entry 10 (Figure 1 as drawn: wild type about 130 against knockout about 10)",
+    "epistemic_status": "DATO",
+    "reading_depth": "partial_fulltext_read",
+    "context": {
+     "disease_id": "constitutive Wwox-null mouse",
+     "genotype": "Wwox -/- against wild type",
+     "species": "mouse",
+     "cell_type": "whole animal",
+     "developmental_stage": "P10 to P14 (AAV9 study); young postnatal (the 2014 paper)"
     },
-    {
-      "assertion_id": "DR-I01-007",
-      "status": "UNRESOLVED",
-      "reasons": [
-        "no disease assertion on this target and endpoint"
-      ]
+    "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+    "note": "Two laboratories, two ages, very different magnitudes (about 95 against 130 at P10 in one study; about 10 against 130 in the other, a Figure 1 reading carried from the manifest and not re-opened). Hypoglycaemia is rescued by a neuronal-promoter vector; strong ubiquitous promoters rescued it early only (the paper says the protection was not sustained at later stages); an oligodendrocyte promoter and the weak ubiquitous promoter did not (JATS text read), so it is not a purely peripheral readout. UNVERIFIABLE_SURFACE for the blind audit: both figure readings (about 95 against 130; about 10 against 130) are carried from manifests, and the sentence quoted from the 2014 abstract is a background statement about earlier work, not a result of that paper; but the null dies early, so the endpoint is survivor-conditioned and confounded with feeding, seizures and growth (NEED-SYSTEMIC-GLYCAEMIA-GROWTH).",
+    "receipt": "FTR-20261019-42422765-01"
+   },
+   {
+    "id": "DA-I01-007",
+    "target_id": "lactate, human WWOX-knockout fibroblasts",
+    "endpoint": "lactate concentration, knockout against control, four oxygen by glucose conditions",
+    "direction": "INCREASE",
+    "source": "Baryla 2022 (PMID 35328751), Figure 5d and Results; Results sentence re-read in this cycle",
+    "locator": "files/fulltext/PMID35328751_Baryla2022_PMC.xml, Results: hexokinase 1.6-fold, LDH 1.4-fold, lactate higher in the knockout line (normoxia normoglycaemia), lactate still higher in later conditions",
+    "epistemic_status": "DATO",
+    "reading_depth": "partial_fulltext_read",
+    "context": {
+     "disease_id": "human non-neural fibroblast line with WWOX knockout (not a DEE-specific neural system)",
+     "genotype": "WWOX CRISPR/Cas9 lentiviral knockout, polyclonal (WWOX mRNA about 3-fold and protein about 8.5-fold lower) versus scrambled-sgRNA control",
+     "species": "human",
+     "cell_type": "fibroblast line (1BR.3.N background)",
+     "developmental_stage": "not applicable"
     },
-    {
-      "assertion_id": "DR-I01-008",
-      "status": "UNRESOLVED",
-      "reasons": [
-        "no disease assertion on this target and endpoint"
-      ]
+    "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+    "note": "Non-neural. Together with DA-I01-004 this is a raised-lactate, unchanged-PDH-activity combination: supply-side glycolytic overflow fits it as well as PDH restraint.",
+    "receipt": "FTR-20261003-35328751-02"
+   },
+   {
+    "id": "DA-I01-008",
+    "target_id": "human brain lactate (proton MRS)",
+    "endpoint": "brain lactate level in one WWOX patient",
+    "direction": "DECREASE",
+    "source": "discovery_ledger_current DL-BIO-008 (one patient with a confounding second variant; the ledger records the source full text as read and tags the datum DATO; not re-verified here), carried through needs NEED-LACTATE-LDH observation O4",
+    "locator": "DL-BIO-008 (receipts FTR-20261023-30362252-01 and earlier, partial_fulltext_read)",
+    "epistemic_status": "DATO",
+    "reading_depth": "partial_fulltext_read",
+    "context": {
+     "disease_id": "WWOX-related disorder, one reported patient",
+     "genotype": "UNKNOWN",
+     "species": "human",
+     "cell_type": "brain MRS voxel",
+     "developmental_stage": "child"
     },
-    {
-      "assertion_id": "DR-I01-009",
-      "status": "UNRESOLVED",
-      "reasons": [
-        "no disease assertion on this target and endpoint"
-      ]
-    },
-    {
-      "assertion_id": "DR-I01-010",
-      "status": "UNRESOLVED",
-      "reasons": [
-        "no disease assertion on this target and endpoint"
-      ]
-    },
-    {
-      "assertion_id": "DR-I01-011",
-      "status": "UNRESOLVED",
-      "reasons": [
-        "no disease assertion on this target and endpoint"
-      ]
-    },
-    {
-      "assertion_id": "DR-I01-012",
-      "status": "UNRESOLVED",
-      "reasons": [
-        "no disease assertion on this target and endpoint"
-      ]
-    },
-    {
-      "assertion_id": "DR-I01-013",
-      "status": "UNRESOLVED",
-      "reasons": [
-        "no disease assertion on this target and endpoint"
-      ]
-    },
-    {
-      "assertion_id": "DR-I01-014",
-      "status": "UNRESOLVED",
-      "reasons": [
-        "no disease assertion on this target and endpoint"
-      ]
-    }
+    "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+    "note": "n = 1, confounded by a second variant. It is the only brain-level lactate datum and it points the opposite way from the cell-line rows; it limits any argument that a lactate-lowering lever has a brain lactate excess to act on.",
+    "receipt": "FTR-20261023-30362252-01"
+   }
   ],
-  "abstention": null,
-  "label_lookup": {
-    "status": "NOT_ATTEMPTED",
-    "coverage": "UNKNOWN",
-    "method": "UNKNOWN",
-    "queries": [],
-    "source": "UNKNOWN",
-    "retrieved_at": "UNKNOWN",
-    "client_version": "UNKNOWN",
-    "product_name": "UNKNOWN",
-    "active_ingredient": "UNKNOWN",
-    "formulation": "UNKNOWN",
-    "spl_id": "UNKNOWN",
-    "error": "UNKNOWN",
-    "coverage_limit": "UNKNOWN"
-  },
+  "drug_assertions": [
+   {
+    "id": "DR-I01-001",
+    "target_id": "brain pyruvate dehydrogenase activity",
+    "endpoint": "PDH activity in the chronic stage of the pilocarpine mouse model, DCA against vehicle",
+    "direction": "INCREASE",
+    "source": "dichloroacetate, mouse, Durie 2018 (PMID 29913407), abstract; NOT WWOX EVIDENCE",
+    "locator": "PubMed and Europe PMC abstract (closed access, no open copy): PDH activity reduced by 65% against healthy mice in the epileptic stage, 'partially alleviated with DCA treatment'; PDH protein down 37%, Ser300 phosphorylation up 52%, not significantly changed by DCA",
+    "epistemic_status": "DATO",
+    "reading_depth": "abstract_only",
+    "context": {
+     "disease_id": "pilocarpine status epilepticus mouse epilepsy model, chronic stage (NOT WWOX EVIDENCE)",
+     "genotype": "mice without pilocarpine status epilepticus as controls (strain not stated in the abstract)",
+     "species": "mouse",
+     "cell_type": "brain",
+     "developmental_stage": "adult, chronic stage"
+    },
+    "evidence_scope": "OTHER_DISEASE_PRECEDENT",
+    "note": "Target engagement was partial and the phospho-site did not move significantly; total PDH protein fell 23% in non-epileptic mice on treatment, which the authors offer as a possible reason for the pro-convulsant signal."
+   },
+   {
+    "id": "DR-I01-002",
+    "target_id": "seizure latency (acute flurothyl test)",
+    "endpoint": "latency to seizure, DCA against vehicle, acute test",
+    "direction": "NO_CHANGE",
+    "source": "dichloroacetate, mouse, Durie 2018 (PMID 29913407), abstract; NOT WWOX EVIDENCE",
+    "locator": "abstract: 'DCA treatment did not increase latencies to seizures in the acute flurothyl seizure test'",
+    "epistemic_status": "DATO",
+    "reading_depth": "abstract_only",
+    "context": {
+     "disease_id": "acute chemoconvulsant seizure test (NOT WWOX EVIDENCE)",
+     "genotype": "mice (strain not stated in the abstract)",
+     "species": "mouse",
+     "cell_type": "whole animal",
+     "developmental_stage": "adult"
+    },
+    "evidence_scope": "OTHER_DISEASE_PRECEDENT",
+    "note": "Chronic treatment before the test. One laboratory; the abstract reports no effect size."
+   },
+   {
+    "id": "DR-I01-003",
+    "target_id": "seizure protection (6 Hz test)",
+    "endpoint": "seizure outcome in the 6 Hz test, DCA against vehicle",
+    "direction": "DECREASE",
+    "source": "dichloroacetate, mouse, Durie 2018 (PMID 29913407), abstract; NOT WWOX EVIDENCE",
+    "locator": "abstract: 'slightly proconvulsant in the 6 Hz test'",
+    "epistemic_status": "DATO",
+    "reading_depth": "abstract_only",
+    "context": {
+     "disease_id": "acute electrical seizure test (NOT WWOX EVIDENCE)",
+     "genotype": "mice (strain not stated in the abstract)",
+     "species": "mouse",
+     "cell_type": "whole animal",
+     "developmental_stage": "adult"
+    },
+    "evidence_scope": "OTHER_DISEASE_PRECEDENT",
+    "note": "A small pro-convulsant signal in one test, read from the abstract only; the magnitude and statistics are not available."
+   },
+   {
+    "id": "DR-I01-004",
+    "target_id": "seizure latency (second-hit flurothyl test in chronic epileptic mice)",
+    "endpoint": "latency to seizure, DCA against vehicle in mice with prior status epilepticus",
+    "direction": "NO_CHANGE",
+    "source": "dichloroacetate, mouse, Durie 2018 (PMID 29913407), abstract; NOT WWOX EVIDENCE",
+    "locator": "abstract: latencies were decreased in status-epilepticus against no-status-epilepticus mice and 'were not restored by DCA'; conclusion 'DCA did not have any anti-convulsant effects in the tested models'",
+    "epistemic_status": "DATO",
+    "reading_depth": "abstract_only",
+    "context": {
+     "disease_id": "pilocarpine status epilepticus mouse epilepsy model, chronic stage (NOT WWOX EVIDENCE)",
+     "genotype": "mice (strain not stated in the abstract)",
+     "species": "mouse",
+     "cell_type": "whole animal",
+     "developmental_stage": "adult, chronic stage"
+    },
+    "evidence_scope": "OTHER_DISEASE_PRECEDENT",
+    "note": "The only primary seizure-endpoint test of a PDK inhibitor found in a model in which PDH activity is documented to be reduced. Abstract level; the full text is closed."
+   },
+   {
+    "id": "DR-I01-005",
+    "target_id": "hippocampal neuronal survival after pilocarpine seizure",
+    "endpoint": "NeuN-positive neurons one week after seizure, DCA plus pyruvate against vehicle",
+    "direction": "INCREASE",
+    "source": "dichloroacetate combined with pyruvate, rat, Lee 2022 (PMID 36432491), body partly read; NOT WWOX EVIDENCE",
+    "locator": "files/fulltext/PMID36432491_Lee2022_PMC_r2.xml, Results 3.1 to 3.6; map record N-08 notes that each agent alone did not protect neurons; in the text read this is a Discussion statement citing earlier work (the design had single-agent arms; the figure was not read)",
+    "epistemic_status": "DATO",
+    "reading_depth": "partial_fulltext_read",
+    "context": {
+     "disease_id": "lithium-pilocarpine seizure in adult rats, treatment started after the seizure (NOT WWOX EVIDENCE)",
+     "genotype": "wild-type Sprague Dawley rats",
+     "species": "rat",
+     "cell_type": "hippocampus CA1",
+     "developmental_stage": "adult"
+    },
+    "evidence_scope": "OTHER_DISEASE_PRECEDENT",
+    "note": "Endpoint is histological neuronal survival, not seizure frequency or severity. After seizure PDK2 was higher (83%), PDH lower (62%) and Ser293-phosphorylated PDH higher (62%) in the seizure group: the PDK-PDH restraint is present after chemoconvulsant status epilepticus in this model (seizure, status-epilepticus injury, neuron loss and drug exposure are not separable), in wild-type animals; PDH is measured as protein and phospho-protein level one week out, not activity. Sample sizes differ between Methods and figure legends; western blots n = 3; immunofluorescence on 5 cells per section; one laboratory.",
+    "receipt": "FTR-20261023-36432491-01"
+   },
+   {
+    "id": "DR-I01-006",
+    "target_id": "clinical global assessment, linear growth (children with congenital lactic acidosis)",
+    "endpoint": "Global Assessment of Treatment Efficacy and linear growth over 6 months, DCA against placebo",
+    "direction": "NO_CHANGE",
+    "source": "dichloroacetate, human children, Stacpoole 2006 (PMID 16651305), randomized double-blind trial (43 patients), abstract; NOT WWOX EVIDENCE",
+    "locator": "PubMed abstract: no significant differences in the global assessment, linear growth, or frequency and severity of intercurrent illness",
+    "epistemic_status": "DATO",
+    "reading_depth": "abstract_only",
+    "context": {
+     "disease_id": "congenital lactic acidosis in children, heterogeneous (pyruvate dehydrogenase deficiency, respiratory-chain defects, mitochondrial DNA mutation) (NOT WWOX EVIDENCE)",
+     "genotype": "mixed mitochondrial genotypes",
+     "species": "human",
+     "cell_type": "whole organism",
+     "developmental_stage": "age 0.9 to 19 years"
+    },
+    "evidence_scope": "OTHER_DISEASE_PRECEDENT",
+    "note": "A population in which lactate was persistently or intermittently raised, with a defined defect in most patients, and in which the lever still did not change the clinical outcomes measured over six months. Heterogeneous and short; a null in this design does not exclude a benefit in a defined genotype."
+   },
+   {
+    "id": "DR-I01-007",
+    "target_id": "blood lactate after a carbohydrate meal (children with congenital lactic acidosis)",
+    "endpoint": "meal-induced rise in blood lactate, DCA against placebo",
+    "direction": "DECREASE",
+    "source": "dichloroacetate, human children, Stacpoole 2006 (PMID 16651305), abstract; NOT WWOX EVIDENCE",
+    "locator": "PubMed abstract: 'DCA significantly decreased the rise in blood lactate caused by carbohydrate feeding'; the 2008 long-term abstract adds that median cerebrospinal fluid lactate decreased over time",
+    "epistemic_status": "DATO",
+    "reading_depth": "abstract_only",
+    "context": {
+     "disease_id": "congenital lactic acidosis in children (NOT WWOX EVIDENCE)",
+     "genotype": "mixed mitochondrial genotypes",
+     "species": "human",
+     "cell_type": "blood; cerebrospinal fluid in the long-term study",
+     "developmental_stage": "age 0.9 to 19 years"
+    },
+    "evidence_scope": "OTHER_DISEASE_PRECEDENT",
+    "note": "Target engagement is shown in blood and, in the long-term open-label follow-up (Stacpoole 2008, PMID 18411236, abstract), in cerebrospinal fluid: cerebrospinal fluid lactate fell, but the drug level in cerebrospinal fluid was not measured, so CNS exposure stays UNKNOWN. Engagement did not translate into the clinical endpoints of DR-I01-006."
+   },
+   {
+    "id": "DR-I01-008",
+    "target_id": "peripheral nerve function (adults and children with MELAS)",
+    "endpoint": "onset or worsening of peripheral neuropathy leading to discontinuation, DCA against placebo, crossover",
+    "direction": "DECREASE",
+    "source": "dichloroacetate, human, Kaufmann 2006 (PMID 16476929), randomized trial (30 patients), abstract; NOT WWOX EVIDENCE",
+    "locator": "PubMed abstract: 15 of 15 randomized to DCA taken off study medication against 4 of 15 on placebo; 17 of 19 discontinuations for onset or worsening of peripheral neuropathy; trial terminated early; global assessment not different",
+    "epistemic_status": "DATO",
+    "reading_depth": "abstract_only",
+    "context": {
+     "disease_id": "MELAS with the A3243G mutation (NOT WWOX EVIDENCE)",
+     "genotype": "mitochondrial DNA A3243G",
+     "species": "human",
+     "cell_type": "peripheral nerve",
+     "developmental_stage": "age 10 to 60 years"
+    },
+    "evidence_scope": "OTHER_DISEASE_PRECEDENT",
+    "note": "The largest toxicity signal in the human trial record; the chronic paediatric cohort below saw conduction changes that did not become symptomatic (map N-08, Abdelmalak 2013, partial read). The two settings differ in age, genotype, exposure and follow-up, and they are not reconciled here."
+   },
+   {
+    "id": "DR-I01-009",
+    "target_id": "peroneal nerve conduction velocity (children with congenital lactic acidosis, long-term)",
+    "endpoint": "conduction velocity and distal latency over years of treatment",
+    "direction": "DECREASE",
+    "source": "dichloroacetate, human children, Stacpoole 2008 (PMID 18411236), abstract; NOT WWOX EVIDENCE",
+    "locator": "PubMed abstract: conduction velocity decreased and distal latency increased in peroneal nerves; 'cannot be determined whether this is attributable mainly to the drug or to progression of underlying disease'; standardized height and weight declined slightly and stayed below the first percentile",
+    "epistemic_status": "DATO",
+    "reading_depth": "abstract_only",
+    "context": {
+     "disease_id": "congenital lactic acidosis in children, open-label long-term follow-up (NOT WWOX EVIDENCE)",
+     "genotype": "mixed mitochondrial genotypes",
+     "species": "human",
+     "cell_type": "peripheral nerve",
+     "developmental_stage": "36 children followed up to years"
+    },
+    "evidence_scope": "OTHER_DISEASE_PRECEDENT",
+    "note": "No comparator in the long-term phase; the underlying disease alone causes neuropathy. The same abstract records a 22% rise in 24-hour urinary oxalate."
+   },
+   {
+    "id": "DR-I01-010",
+    "target_id": "fasting plasma glucose (adults with diabetes mellitus or hyperlipoproteinaemia)",
+    "endpoint": "fasting hyperglycaemia after oral DCA for six to seven days",
+    "direction": "DECREASE",
+    "source": "dichloroacetate, human adults, Stacpoole 1978 (PMID 625308), abstract; NOT WWOX EVIDENCE",
+    "locator": "abstract: fasting hyperglycaemia reduced by an average of 24 percent; plasma lactate down 73 percent and alanine down 82 percent; plasma ketone bodies up 71 percent; cholesterol and triglyceride down; mild sedation in some",
+    "epistemic_status": "DATO",
+    "reading_depth": "abstract_only",
+    "context": {
+     "disease_id": "diabetes mellitus and hyperlipoproteinaemia in adults (NOT WWOX EVIDENCE)",
+     "genotype": "none",
+     "species": "human",
+     "cell_type": "plasma",
+     "developmental_stage": "adult"
+    },
+    "evidence_scope": "OTHER_DISEASE_PRECEDENT",
+    "note": "Adults with raised glucose, a course of six to seven days; the abstract does not describe a comparator arm. The fall in lactate and alanine (gluconeogenic precursors) and the rise in ketone bodies are the metabolic signature that also links this lever to the ketogenic-diet question (card E04). The direction of the glucose effect when glucose is already low is the question, and this study cannot answer it."
+   },
+   {
+    "id": "DR-I01-011",
+    "target_id": "blood glucose in endotoxaemia (hepatic glucose output)",
+    "endpoint": "plasma glucose and hepatic glucose output, DCA against untreated endotoxaemic animals",
+    "direction": "DECREASE",
+    "source": "dichloroacetate, minipig, Metabolic effects in endotoxemic minipigs 1986 (PMID 3521930), abstract; NOT WWOX EVIDENCE",
+    "locator": "abstract: the progressive hypoglycaemia of the DCA group fell significantly below the endotoxin-only group (about 34 against 51 in the units printed) through lower hepatic gluconeogenesis and glucose output; lethality unaltered",
+    "epistemic_status": "DATO",
+    "reading_depth": "abstract_only",
+    "context": {
+     "disease_id": "endotoxaemic minipig, lactic acidosis with hypoglycaemia (NOT WWOX EVIDENCE)",
+     "genotype": "none",
+     "species": "pig",
+     "cell_type": "whole animal, liver",
+     "developmental_stage": "adult"
+    },
+    "evidence_scope": "OTHER_DISEASE_PRECEDENT",
+    "note": "Acute infusion in a large animal, five treated animals. One of the settings in which a lactate-lowering lever made an existing hypoglycaemia deeper."
+   },
+   {
+    "id": "DR-I01-012",
+    "target_id": "blood glucose in sepsis",
+    "endpoint": "blood glucose, DCA against untreated septic mice",
+    "direction": "INCREASE",
+    "source": "dichloroacetate, mouse, sepsis model 2022 (PMID 35730570), abstract (open access); NOT WWOX EVIDENCE",
+    "locator": "abstract: DCA 'reversed sepsis-induced anorexia, energy imbalance, inflammation, dyslipidemia, hypoglycemia, and glycine deficiency'",
+    "epistemic_status": "DATO",
+    "reading_depth": "abstract_only",
+    "context": {
+     "disease_id": "cecal ligation and puncture sepsis in mice (NOT WWOX EVIDENCE)",
+     "genotype": "none",
+     "species": "mouse",
+     "cell_type": "whole animal, liver",
+     "developmental_stage": "adult"
+    },
+    "evidence_scope": "OTHER_DISEASE_PRECEDENT",
+    "note": "The only reversal in the glucose set, in a state that is NOT comparable to the minipig: in the open text plasma glucose and lactate (and pyruvate) were LOWER in septic mice, the authors acknowledge a fasting confound, and the same treatment reversed anorexia, so the reversal may follow feeding rather than hepatic glucose output. The comparability premise used in the first version of this card was wrong and is withdrawn."
+   },
+   {
+    "id": "DR-I01-013",
+    "target_id": "endogenous glucose production in cirrhosis",
+    "endpoint": "glucose production by isotope dilution and plasma glucose after intravenous DCA, cirrhotic and healthy subjects",
+    "direction": "DECREASE",
+    "source": "dichloroacetate, human adults, Pharmacokinetics and pharmacodynamics in cirrhosis 1999 (PMID 10546922), abstract; NOT WWOX EVIDENCE",
+    "locator": "abstract: DCA decreased plasma lactate by about 50 percent, glucose production by 7 to 9 percent and plasma glucose by 9 to 14 percent in both subjects with cirrhosis and control subjects; the decreases did not differ between groups (the null is the group difference); clearance about a third of controls",
+    "epistemic_status": "DATO",
+    "reading_depth": "abstract_only",
+    "context": {
+     "disease_id": "end-stage cirrhosis, 7 patients and 6 healthy volunteers (NOT WWOX EVIDENCE)",
+     "genotype": "none",
+     "species": "human",
+     "cell_type": "whole body glucose kinetics",
+     "developmental_stage": "adult"
+    },
+    "evidence_scope": "OTHER_DISEASE_PRECEDENT",
+    "note": "Acute single infusion in 7 adults with cirrhosis and 6 healthy volunteers: a modest fall in glucose production and plasma glucose in BOTH groups; the only null is cirrhosis against control. Isotope-dilution human glucose kinetics, adult, acute; it does not transfer to a hypoglycaemic infant-stage brain-disease model, and it shows the lever lowering glucose in people who were not hypoglycaemic."
+   },
+   {
+    "id": "DR-I01-014",
+    "target_id": "glycolytic flux and lactate production in cultured fibroblasts",
+    "endpoint": "glucose consumption and lactate production with and without DCA, patient against control cells",
+    "direction": "DECREASE",
+    "source": "dichloroacetate, human fibroblasts, Simpson 2006 (PMID 16765624), abstract; NOT WWOX EVIDENCE",
+    "locator": "abstract: in pyruvate dehydrogenase complex-deficient cells DCA decreased average glycolysis by 29%, with no significant effect on control cells, and lactate production did not change in either cell type",
+    "epistemic_status": "DATO",
+    "reading_depth": "abstract_only",
+    "context": {
+     "disease_id": "primary fibroblasts from patients with PDC-E1 mutations and five healthy subjects (NOT WWOX EVIDENCE)",
+     "genotype": "PDC-E1 mutations versus healthy",
+     "species": "human",
+     "cell_type": "fibroblast",
+     "developmental_stage": "not applicable"
+    },
+    "evidence_scope": "OTHER_DISEASE_PRECEDENT",
+    "note": "The response to the PDK inhibitor depended on a pre-existing PDH defect: no significant effect in control cells (six patient lines and five control subjects; the 29% average excludes one patient line with an unusual splicing mutation). It supplies the design of the discriminating experiment (a genotype-by-inhibitor interaction on glucose-derived acetyl-CoA flux), with a precedent for what a responder looks like."
+   }
+  ],
   "p4_fields": {
-    "endpoint_pursued": "A WWOX-linked PDH readout that a PDK inhibitor moves (PDHA1 Ser293 phosphorylation, PDH activity, glucose-derived acetyl-CoA labelling) in WWOX-deficient against matched control human neural cells, read as a genotype-by-inhibitor interaction; and, only after that, the glucose, lactate, ketone and alanine time course in Wwox-null pups before any seizure or behavioural endpoint.",
-    "functional_evidence_available": "None for any PDK inhibitor in a WWOX system. In non-WWOX epilepsy models: no anticonvulsant effect and a slight pro-convulsant signal in a mouse study (abstract); a histological neuroprotection result for the DCA plus pyruvate combination in rats after seizure. In children with congenital lactic acidosis: lactate lowering without clinical benefit over six months in a randomized trial.",
-    "temporal_or_model_limit": "The Wwox-null mouse is hypoglycaemic from the first postnatal week and dies within weeks, so a pup experiment runs in the same window as the lethal phenotype and is survivor-conditioned; neuron-specific deletion survival is not established here. The seizure and glucose precedents are adult animals or adult humans except the paediatric mitochondrial-disease trials.",
-    "cellular_context": {
-      "target_expression": "PDK isoforms are expressed in brain; the WWOX-dependent level is UNKNOWN. PDK1 transcript is lower in sign only (inside the single-gene null) in two human neural transcript systems and higher in mouse and human non-neural cells.",
-      "cells_tissue_stage": "No WWOX-deficient human neural system has a PDH activity or phosphorylation measurement.",
-      "coverage": "UNKNOWN",
-      "limits": "Transcript results are not PDH activity. A raised glycolytic signature does not prove a PDH block. PDH restraint is documented after chemoconvulsant status epilepticus in non-WWOX models, which a WWOX-DEE brain may share independent of genotype."
-    }
+   "endpoint_pursued": "A WWOX-linked PDH readout that a PDK inhibitor moves (PDHA1 Ser293 phosphorylation, PDH activity, glucose-derived acetyl-CoA labelling) in WWOX-deficient against matched control human neural cells, read as a genotype-by-inhibitor interaction; and, only after that, the glucose, lactate, ketone and alanine time course in Wwox-null pups before any seizure or behavioural endpoint.",
+   "functional_evidence_available": "None for any PDK inhibitor in a WWOX system. In non-WWOX epilepsy models: no anticonvulsant effect and a slight pro-convulsant signal in a mouse study (abstract); a histological neuroprotection result for the DCA plus pyruvate combination in rats after seizure. In children with congenital lactic acidosis: lactate lowering without clinical benefit over six months in a randomized trial.",
+   "temporal_or_model_limit": "The Wwox-null mouse is hypoglycaemic from the first postnatal week and dies within weeks, so a pup experiment runs in the same window as the lethal phenotype and is survivor-conditioned; neuron-specific deletion survival is not established here. The seizure and glucose precedents are adult animals or adult humans except the paediatric mitochondrial-disease trials.",
+   "cellular_context": {
+    "target_expression": "PDK isoforms are expressed in brain; the WWOX-dependent level is UNKNOWN. PDK1 transcript is lower in sign only (inside the single-gene null) in two human neural transcript systems and higher in mouse and human non-neural cells.",
+    "cells_tissue_stage": "No WWOX-deficient human neural system has a PDH activity or phosphorylation measurement.",
+    "coverage": "UNKNOWN",
+    "limits": "Transcript results are not PDH activity. A raised glycolytic signature does not prove a PDH block. PDH restraint is documented after chemoconvulsant status epilepticus in non-WWOX models, which a WWOX-DEE brain may share independent of genotype."
+   }
   },
-  "input": {
-    "schema_version": 1,
-    "axis": "I / IT5 P9: useful partial benefit, PDK inhibition (dichloroacetate): premise, seizure endpoint, glycaemia",
-    "route": "BENEFICIO_PRECOCE",
-    "mission_dimensions": {
-      "track": "A",
-      "track_definition": "mission.md section 5: Track A = variant-independent WWOX loss of function; Track B = variant or allele-class specific (e.g. the Q230P missense class); Track C = repurposing, which is a method of reaching A or B, not a third lesion class",
-      "route": "BENEFICIO_PRECOCE",
-      "route_definition": "RECUPERO_PROFONDO = deep recovery of the lost function; BENEFICIO_PRECOCE = concrete partial benefit, symptomatic control or protection of function, with paediatric feasibility and time in view",
-      "route_note": "A downstream metabolic bypass: partial benefit at best, only if a PDH restraint exists; the card tests the premise and the safety side, it does not propose a treatment. Track B: no allele-specific rationale.",
-      "the_two_dimensions_are_independent": "a card keeps both: a variant-independent lever can be a partial-benefit lever, and a lesion-specific one can aim at deep recovery"
-    },
-    "candidate": {
-      "id": "P4-I-01",
-      "name": "PDK inhibition (dichloroacetate): is there a WWOX-linked PDH restraint to release, does it change a seizure endpoint, and which way does it move glucose in a hypoglycaemic model"
-    },
-    "disease_assertions": [
-      {
-        "id": "DA-I01-001",
-        "target_id": "human PDK1 transcript (WWOX-knockout cerebral organoid)",
-        "endpoint": "log2 shift, knockout minus wild type (sign only)",
-        "direction": "DECREASE",
-        "source": "GSE156243 (deposit of PMID 34268881), set-level and gene-level re-analysis by scientist-c; wwox_systems_comparison_it5_20261029.md section 2",
-        "locator": "disease-models/wwox/research/drug_repurposing/wwox_systems_comparison_it5_20261029.md, programme table, row PDK1; matrix TSV",
-        "epistemic_status": "INFERENZA",
-        "reading_depth": "queried_not_full_read",
-        "context": {
-          "disease_id": "WWOX-deficient human cerebral organoid (engineered knockout; not a patient allele)",
-          "genotype": "WWOX knockout versus wild type (4 versus 2 libraries, one laboratory)",
-          "species": "human",
-          "cell_type": "cerebral organoid, bulk RNA",
-          "developmental_stage": "organoid, culture week 15"
-        },
-        "evidence_scope": "COMPUTATIONAL_RESULT",
-        "note": "PDK1 -0.39, LOWER IN SIGN ONLY: inside the single-gene null (p about 0.30), so the datum is the absence of support for a raised PDK1, not a demonstrated decrease (the earlier card E03 prints -0.34 for the same comparison; the two runs differ in method and the difference is not reconciled here). The PDK set as a whole is indistinguishable from chance. Transcript, not PDK protein, PDH phosphorylation or activity. The maturity confound of this deposit applies."
-      },
-      {
-        "id": "DA-I01-002",
-        "target_id": "human PDK1 transcript (shRNA WWOX-knockdown neural progenitors and neurons)",
-        "endpoint": "log2 shift, knockdown minus control, CAGE promoter sums (sign only)",
-        "direction": "DECREASE",
-        "source": "GSE126075 (deposit of PMID 31543760), descriptive P6 run, one library per arm; wwox_systems_comparison_it5_20261029.md section 2",
-        "locator": "disease-models/wwox/research/drug_repurposing/wwox_systems_comparison_it5_20261029.md, programme table, row PDK1",
-        "epistemic_status": "INFERENZA",
-        "reading_depth": "queried_not_full_read",
-        "context": {
-          "disease_id": "WWOX-silenced human neural progenitors (shRNA, depth of knockdown not quantified; WWOX not lower in the progenitor CAGE tags)",
-          "genotype": "WWOX shRNA knockdown versus control",
-          "species": "human",
-          "cell_type": "H9-derived neural progenitors",
-          "developmental_stage": "progenitor stage and day-14 neurons"
-        },
-        "evidence_scope": "COMPUTATIONAL_RESULT",
-        "note": "Progenitors -0.67, LOWER IN SIGN ONLY: inside the single-gene null (p about 0.49) and the interval (about 0.45, Poisson) spans zero; the day-14 neuron stage shows +0.44 (same interval), so the sign is not concordant across stages and no decrease is demonstrated. n = 1 per arm: descriptive only. The progenitor line also differs in state from its control (radial-glia markers lower), which confounds every metabolic comparison in it."
-      },
-      {
-        "id": "DA-I01-003",
-        "target_id": "PDK transcript (isoform not named in the quoted sentence; Methods name PDK1), human WWOX-knockout fibroblasts",
-        "endpoint": "RT-qPCR expression, knockout against control, normoxia and normoglycaemia",
-        "direction": "INCREASE",
-        "source": "Baryla 2022 (PMID 35328751), Results on glycolysis-gene expression; text re-read in this cycle from the local JATS (Figure 4 sentence)",
-        "locator": "files/fulltext/PMID35328751_Baryla2022_PMC.xml, Results: 'expression levels of SLC2A1, SLC2A4, ENO1, PKM2, and PDK (all p < 0.05) are significantly higher in the WWOX KO cell line than in control'",
-        "epistemic_status": "DATO",
-        "reading_depth": "partial_fulltext_read",
-        "context": {
-          "disease_id": "human non-neural fibroblast line with WWOX knockout (not a DEE-specific neural system)",
-          "genotype": "WWOX CRISPR/Cas9 lentiviral knockout, polyclonal (WWOX mRNA about 3-fold and protein about 8.5-fold lower; the abstract says silenced) versus scrambled-sgRNA control",
-          "species": "human",
-          "cell_type": "fibroblast line (1BR.3.N background)",
-          "developmental_stage": "not applicable"
-        },
-        "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
-        "note": "The only human WWOX-deficient transcript datum in which PDK is HIGHER; the two human neural transcript systems give PDK1 lower in sign only (inside the single-gene null). The isoform is unspecified in the sentence quoted, but the paper's Methods qPCR list names PDK1. Results name this condition (normoxia and normoglycaemia); the Discussion says PDK mRNA also rose in hypoxia-hyperglycaemia while the Results list for that condition names only PFK1 and PKM2 (internal inconsistency not resolved). n of the qPCR panel not stated in the sentence read. The PDK transcript sign therefore differs between a non-neural human line (up) and two neural transcript systems (not higher, lower only in sign): a cell-type contrast that is confounded (line, method, depth of silencing) and is not a finding about WWOX.",
-        "receipt": "FTR-20261003-35328751-02"
-      },
-      {
-        "id": "DA-I01-004",
-        "target_id": "pyruvate dehydrogenase enzyme activity, human WWOX-knockout fibroblasts",
-        "endpoint": "colorimetric PDH activity assay, knockout against control, four oxygen by glucose conditions",
-        "direction": "NO_CHANGE",
-        "source": "Baryla 2022 (PMID 35328751), Figure 5b and Results; carried through needs NEED-PDH-PYRUVATE-AXIS observation O2; Results sentence re-read in this cycle",
-        "locator": "files/fulltext/PMID35328751_Baryla2022_PMC.xml, Results (normoxia and normoglycaemia): 'the activities of pyruvate dehydrogenase kinase (PDK) and citrate synthase (CS) were not changed' (the sentence that carries the wording flag); Results (hypoxia and normoglycaemia): 'We didn't observed any significantly important differences in the activity of pyruvate [dehydrogenase]' (a different condition, quotation truncated in the source text read); Methods 4.10 names a PDH activity kit; Figure 5 caption: Pyruvate Dehydrogenase",
-        "epistemic_status": "DATO",
-        "reading_depth": "partial_fulltext_read",
-        "context": {
-          "disease_id": "human non-neural fibroblast line with WWOX knockout (not a DEE-specific neural system)",
-          "genotype": "WWOX CRISPR/Cas9 lentiviral knockout, polyclonal (WWOX mRNA about 3-fold and protein about 8.5-fold lower) versus scrambled-sgRNA control",
-          "species": "human",
-          "cell_type": "fibroblast line (1BR.3.N background)",
-          "developmental_stage": "not applicable"
-        },
-        "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
-        "note": "A null is NO_CHANGE, not proof of normal PDH regulation: n is not stated and PDH phosphorylation is not measured. Wording flag found in this cycle: one Results sentence lists 'pyruvate dehydrogenase kinase (PDK)' among the enzymes whose activity was unchanged, while Methods describe only a PDH kit and Figure 5b is labelled PDH; the repository reads it as the PDH assay (manifest entries 7 and 8); not resolved by the paper. PDH is named as unchanged in the normoxia-hyperglycaemia and hypoxia-normoglycaemia sentences; for hypoxia-hyperglycaemia the text says no effect on enzyme activities. In the same cells hexokinase activity, LDH activity and lactate were higher.",
-        "receipt": "FTR-20261003-35328751-02"
-      },
-      {
-        "id": "DA-I01-005",
-        "target_id": "Pdk1 transcript, Wwox-null mouse embryonic fibroblasts",
-        "endpoint": "expression of HIF1alpha target genes, knockout against wild type, normoxia",
-        "direction": "INCREASE",
-        "source": "the 2014 WWOX and HIF1alpha paper (PMID 25012504), Results on HIF1alpha target genes (the sentence on Pdk1)",
-        "locator": "deepdive_manifests/PMID25012504.json verbatim_locators entry 2",
-        "epistemic_status": "DATO",
-        "reading_depth": "complete_fulltext_read",
-        "context": {
-          "disease_id": "Wwox-null mouse embryonic fibroblasts (non-neural)",
-          "genotype": "Wwox knockout versus wild type",
-          "species": "mouse",
-          "cell_type": "embryonic fibroblasts",
-          "developmental_stage": "not applicable"
-        },
-        "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
-        "note": "Source of the PDK1-raised premise (map chain D). Transcript level in the text; the byte artefacts behind the receipt (HTML and PDF under files/fulltext) are not present in the root checkout today, only an abstract-stub XML, so the locator was not re-opened in this cycle (UNVERIFIABLE_SURFACE for the blind audit: the Pdk1 sentence was not seen by any reader in this cycle). Mouse, non-neural; PDH phosphorylation and activity not measured.",
-        "receipt": "FTR-20260814-25012504-01"
-      },
-      {
-        "id": "DA-I01-006",
-        "target_id": "blood glucose (whole animal)",
-        "endpoint": "blood glucose concentration, Wwox-null against wild type",
-        "direction": "DECREASE",
-        "source": "Obeid 2026 (PMID 42422765), AAV9 study: P10 untreated knockout about 95 against wild type about 130 (manifest figure attestation); abstract-level statement re-read in this cycle from the local JATS: neuronal-promoter vectors rescue hypoglycaemia; the 2014 WWOX and HIF1alpha paper, abstract: Wwox-deficient mice 'succumb to a lethal hypoglycemia early in life'",
-        "locator": "deepdive_manifests/PMID42422765.json entry 37; files/fulltext/PMID42422765_Obeid2026_PMC_r2.xml (Results on promoters; Figure 1 legend: glucose at P14); deepdive_manifests/PMID25012504.json entry 10 (Figure 1 as drawn: wild type about 130 against knockout about 10)",
-        "epistemic_status": "DATO",
-        "reading_depth": "partial_fulltext_read",
-        "context": {
-          "disease_id": "constitutive Wwox-null mouse",
-          "genotype": "Wwox -/- against wild type",
-          "species": "mouse",
-          "cell_type": "whole animal",
-          "developmental_stage": "P10 to P14 (AAV9 study); young postnatal (the 2014 paper)"
-        },
-        "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
-        "note": "Two laboratories, two ages, very different magnitudes (about 95 against 130 at P10 in one study; about 10 against 130 in the other, a Figure 1 reading carried from the manifest and not re-opened). Hypoglycaemia is rescued by a neuronal-promoter vector; strong ubiquitous promoters rescued it early only (the paper says the protection was not sustained at later stages); an oligodendrocyte promoter and the weak ubiquitous promoter did not (JATS text read), so it is not a purely peripheral readout. UNVERIFIABLE_SURFACE for the blind audit: both figure readings (about 95 against 130; about 10 against 130) are carried from manifests, and the sentence quoted from the 2014 abstract is a background statement about earlier work, not a result of that paper; but the null dies early, so the endpoint is survivor-conditioned and confounded with feeding, seizures and growth (NEED-SYSTEMIC-GLYCAEMIA-GROWTH).",
-        "receipt": "FTR-20261019-42422765-01"
-      },
-      {
-        "id": "DA-I01-007",
-        "target_id": "lactate, human WWOX-knockout fibroblasts",
-        "endpoint": "lactate concentration, knockout against control, four oxygen by glucose conditions",
-        "direction": "INCREASE",
-        "source": "Baryla 2022 (PMID 35328751), Figure 5d and Results; Results sentence re-read in this cycle",
-        "locator": "files/fulltext/PMID35328751_Baryla2022_PMC.xml, Results: hexokinase 1.6-fold, LDH 1.4-fold, lactate higher in the knockout line (normoxia normoglycaemia), lactate still higher in later conditions",
-        "epistemic_status": "DATO",
-        "reading_depth": "partial_fulltext_read",
-        "context": {
-          "disease_id": "human non-neural fibroblast line with WWOX knockout (not a DEE-specific neural system)",
-          "genotype": "WWOX CRISPR/Cas9 lentiviral knockout, polyclonal (WWOX mRNA about 3-fold and protein about 8.5-fold lower) versus scrambled-sgRNA control",
-          "species": "human",
-          "cell_type": "fibroblast line (1BR.3.N background)",
-          "developmental_stage": "not applicable"
-        },
-        "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
-        "note": "Non-neural. Together with DA-I01-004 this is a raised-lactate, unchanged-PDH-activity combination: supply-side glycolytic overflow fits it as well as PDH restraint.",
-        "receipt": "FTR-20261003-35328751-02"
-      },
-      {
-        "id": "DA-I01-008",
-        "target_id": "human brain lactate (proton MRS)",
-        "endpoint": "brain lactate level in one WWOX patient",
-        "direction": "DECREASE",
-        "source": "discovery_ledger_current DL-BIO-008 (one patient with a confounding second variant; the ledger records the source full text as read and tags the datum DATO; not re-verified here), carried through needs NEED-LACTATE-LDH observation O4",
-        "locator": "DL-BIO-008 (receipts FTR-20261023-30362252-01 and earlier, partial_fulltext_read)",
-        "epistemic_status": "DATO",
-        "reading_depth": "partial_fulltext_read",
-        "context": {
-          "disease_id": "WWOX-related disorder, one reported patient",
-          "genotype": "UNKNOWN",
-          "species": "human",
-          "cell_type": "brain MRS voxel",
-          "developmental_stage": "child"
-        },
-        "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
-        "note": "n = 1, confounded by a second variant. It is the only brain-level lactate datum and it points the opposite way from the cell-line rows; it limits any argument that a lactate-lowering lever has a brain lactate excess to act on.",
-        "receipt": "FTR-20261023-30362252-01"
-      }
+  "p4_card": {
+   "identity": "Dichloroacetate (DCA), the prototype pyruvate dehydrogenase kinase (PDK) inhibitor: catalogue records CAT:CHEMBL306823 (sodium dichloroacetate, ChEMBL mechanism rows INHIBITOR at PDK1 to PDK4, clinical candidate, access: experimental), CAT:DGIDB:901979e6ba30 (sodium dichloroacetate, DGIdb, status unverified) and CAT:CHEMBL13960 and CAT:DGIDB:b7c34486f9a7 (the acid, no ChEMBL target rows). Identity by identifier: the card asserts CHEMBL306823 only. DCA is an investigational drug with an orphan designation for congenital lactic acidosis; it has no marketed label in openFDA (searches by generic name and active ingredient returned no match on 2026-10-29). Whether any product is sold to consumers as a dietary ingredient was not established here and is handed to the supplement-access worker; access is not efficacy or safety. Related ingredients that act on the same enzyme step through cofactors or substrates (thiamine, alpha-lipoic acid, pyruvate) are not asserted by this card.",
+   "indication_and_transfer": "Not an indication and not a treatment proposal. The card asks what has to be true for a PDK inhibitor to be a partial-benefit lever in a Wwox-deficient brain (a measured PDH restraint that the inhibitor releases), whether the one seizure endpoint tested in a PDH-restrained epilepsy model was favourable (it was not), and which way the glucose endpoint moves in a setting with documented hypoglycaemia. Nothing measured in a mitochondrial-disease population, an adult epilepsy mouse, a diabetic adult or a large animal is transferred to WWOX-DEE.",
+   "novelty_for_woree": "PARZIALMENTE_TROVATO: DCA is on the map (record N-08, parked after the peripheral-nerve narrowing; card E03 holds target-engagement rows and no disease-side PDH datum) and the DCA-with-pyruvate rat seizure paper is read. Not previously in the repository, by a search of the registries' PMID fields and the research notes on 2026-10-29: the primary mouse seizure-endpoint test of DCA (PMID 29913407), the two randomized paediatric and MELAS trials as efficacy evidence (16651305, 16476929 is cited in a trial note only), the glucose-direction literature (625308, 3521930, 35730570, 10546922, 8052155), and the human fibroblast PDK transcript sentence (PMID 35328751). Not 'never done': only PubMed, Europe PMC, ClinicalTrials.gov, openFDA and the catalogue were searched.",
+   "state_of_known_roads": "Card E03 (PDK inhibition, unresolved; translation fields all UNKNOWN); map record N-08 (parked: nerve conduction signal, no WWOX measurement); needs NEED-PDH-PYRUVATE-AXIS (direction uncertain; 'do not treat dichloroacetate as evidence-backed'), NEED-LACTATE-LDH, NEED-SEIZURE-CONTROL-SYMPTOMATIC, NEED-SYSTEMIC-GLYCAEMIA-GROWTH (endpoint and confounder; no compounds by design); card E04 and EB-KD-01 for the ketogenic diet (three depths already, not repeated); the systems comparison of 2026-10-29 (PDK1 lower in both human neural transcript systems, glycolysis and LDHA higher in both).",
+   "pathway_and_objective": "BENEFICIO_PRECOCE, Track A (variant-independent, downstream, allele-blind). Metabolic bypass: partial benefit at best, and only if the bottleneck exists. Safety side: glycaemia and peripheral nerve.",
+   "expected_contribution": "UNKNOWN as benefit. The card sharpens a decision: it separates 'a raised glycolytic signature' (LDHA and a hand-picked HIF-type gene set higher in two human neural transcript systems, a broader 19-gene panel inside the null in the progenitor line) from 'PDH is restrained' (no WWOX activity or phosphorylation datum, PDK1 lower in sign only and inside its single-gene null, PDH activity unchanged in one human line, brain lactate low in one patient) and from 'releasing PDH helps' (no seizure benefit in the only PDH-restrained model tested; no clinical benefit in a randomized paediatric trial despite lactate lowering). If a WWOX-deficient neural system shows an inhibitor-responsive PDH restraint, the lever moves from parked to testable with a defined safety frame; if not, the PDK strand of the module is closed at the premise.",
+   "mechanism": "DCA inhibits PDK isoforms (ChEMBL curated mechanism, enzyme level, potency not reproduced here), lowering inhibitory phosphorylation of PDH and so raising glucose oxidation at the expense of lactate; it also inhibits its own metabolising enzyme (glutathione transferase zeta 1), which makes exposure rise on repeated administration and vary with haplotype and age. The WWOX-side chain proposes WWOX loss, HIF1alpha, PDK1, PDH inhibition and a glycolytic shift. Evidence for the chain, by link: HIF1alpha up and glycolytic shift in mouse embryonic fibroblasts (mouse, non-neural); PDK1 up in the same cells; PDK transcript up in a human knockout fibroblast line; PDK1 lower in sign only (inside the single-gene null) in two human neural transcript systems; PDH activity not different in the human fibroblast line; no PDH phosphorylation, flux or lactate measurement in any WWOX-deficient human neural system. Competing explanations for a raised-lactate, normal-PDH-activity state: supply-side glycolytic overflow (hexokinase and LDH activity higher in the same cells), maturity of the tissue (organoid), and a secondary PDH restraint that follows chemoconvulsant status epilepticus, which is documented in wild-type animals in two epilepsy models (rat after pilocarpine seizure: PDK2 up, PDH down, Ser293 phosphorylation up; mouse chronic stage: PDH activity down by about two thirds). The last point matters for the symptom claim: a WWOX-DEE brain with seizures may carry a PDH restraint that arises after seizure and status-epilepticus injury (not separable from neuron loss or drug exposure in either model), which the seizure-endpoint test (DR-I01-002 to -004) addresses directly and found no anticonvulsant effect.",
+   "sources": {
+    "internal": [
+     "needs NEED-PDH-PYRUVATE-AXIS (O1 to O4), NEED-LACTATE-LDH (O4), NEED-SEIZURE-CONTROL-SYMPTOMATIC, NEED-SYSTEMIC-GLYCAEMIA-GROWTH (O1)",
+     "cards E03_pdk_inhibition_dca, E04_ketogenic_lactate_axis, cards_early/EB-KD-01, H01 and H02 (format precedent)",
+     "wwox_systems_comparison_it5_20261029.md and its matrix (PDK1, glycolysis, ISR rows)",
+     "analysis/mechanism_intervention_map.md record N-08 and the DCA-with-pyruvate seizure paper note",
+     "deepdive_manifests/PMID25012504.json (entries 0, 1, 2, 10, 14), PMID42422765.json (entry 37), PMID35328751.json (entries 7, 8, 9)",
+     "closed_loop_it5_p9_20261029/README.md (searches, readings, depths, source verification)"
     ],
-    "drug_assertions": [
-      {
-        "id": "DR-I01-001",
-        "target_id": "brain pyruvate dehydrogenase activity",
-        "endpoint": "PDH activity in the chronic stage of the pilocarpine mouse model, DCA against vehicle",
-        "direction": "INCREASE",
-        "source": "dichloroacetate, mouse, Durie 2018 (PMID 29913407), abstract; NOT WWOX EVIDENCE",
-        "locator": "PubMed and Europe PMC abstract (closed access, no open copy): PDH activity reduced by 65% against healthy mice in the epileptic stage, 'partially alleviated with DCA treatment'; PDH protein down 37%, Ser300 phosphorylation up 52%, not significantly changed by DCA",
-        "epistemic_status": "DATO",
-        "reading_depth": "abstract_only",
-        "context": {
-          "disease_id": "pilocarpine status epilepticus mouse epilepsy model, chronic stage (NOT WWOX EVIDENCE)",
-          "genotype": "mice without pilocarpine status epilepticus as controls (strain not stated in the abstract)",
-          "species": "mouse",
-          "cell_type": "brain",
-          "developmental_stage": "adult, chronic stage"
-        },
-        "evidence_scope": "OTHER_DISEASE_PRECEDENT",
-        "note": "Target engagement was partial and the phospho-site did not move significantly; total PDH protein fell 23% in non-epileptic mice on treatment, which the authors offer as a possible reason for the pro-convulsant signal."
-      },
-      {
-        "id": "DR-I01-002",
-        "target_id": "seizure latency (acute flurothyl test)",
-        "endpoint": "latency to seizure, DCA against vehicle, acute test",
-        "direction": "NO_CHANGE",
-        "source": "dichloroacetate, mouse, Durie 2018 (PMID 29913407), abstract; NOT WWOX EVIDENCE",
-        "locator": "abstract: 'DCA treatment did not increase latencies to seizures in the acute flurothyl seizure test'",
-        "epistemic_status": "DATO",
-        "reading_depth": "abstract_only",
-        "context": {
-          "disease_id": "acute chemoconvulsant seizure test (NOT WWOX EVIDENCE)",
-          "genotype": "mice (strain not stated in the abstract)",
-          "species": "mouse",
-          "cell_type": "whole animal",
-          "developmental_stage": "adult"
-        },
-        "evidence_scope": "OTHER_DISEASE_PRECEDENT",
-        "note": "Chronic treatment before the test. One laboratory; the abstract reports no effect size."
-      },
-      {
-        "id": "DR-I01-003",
-        "target_id": "seizure protection (6 Hz test)",
-        "endpoint": "seizure outcome in the 6 Hz test, DCA against vehicle",
-        "direction": "DECREASE",
-        "source": "dichloroacetate, mouse, Durie 2018 (PMID 29913407), abstract; NOT WWOX EVIDENCE",
-        "locator": "abstract: 'slightly proconvulsant in the 6 Hz test'",
-        "epistemic_status": "DATO",
-        "reading_depth": "abstract_only",
-        "context": {
-          "disease_id": "acute electrical seizure test (NOT WWOX EVIDENCE)",
-          "genotype": "mice (strain not stated in the abstract)",
-          "species": "mouse",
-          "cell_type": "whole animal",
-          "developmental_stage": "adult"
-        },
-        "evidence_scope": "OTHER_DISEASE_PRECEDENT",
-        "note": "A small pro-convulsant signal in one test, read from the abstract only; the magnitude and statistics are not available."
-      },
-      {
-        "id": "DR-I01-004",
-        "target_id": "seizure latency (second-hit flurothyl test in chronic epileptic mice)",
-        "endpoint": "latency to seizure, DCA against vehicle in mice with prior status epilepticus",
-        "direction": "NO_CHANGE",
-        "source": "dichloroacetate, mouse, Durie 2018 (PMID 29913407), abstract; NOT WWOX EVIDENCE",
-        "locator": "abstract: latencies were decreased in status-epilepticus against no-status-epilepticus mice and 'were not restored by DCA'; conclusion 'DCA did not have any anti-convulsant effects in the tested models'",
-        "epistemic_status": "DATO",
-        "reading_depth": "abstract_only",
-        "context": {
-          "disease_id": "pilocarpine status epilepticus mouse epilepsy model, chronic stage (NOT WWOX EVIDENCE)",
-          "genotype": "mice (strain not stated in the abstract)",
-          "species": "mouse",
-          "cell_type": "whole animal",
-          "developmental_stage": "adult, chronic stage"
-        },
-        "evidence_scope": "OTHER_DISEASE_PRECEDENT",
-        "note": "The only primary seizure-endpoint test of a PDK inhibitor found in a model in which PDH activity is documented to be reduced. Abstract level; the full text is closed."
-      },
-      {
-        "id": "DR-I01-005",
-        "target_id": "hippocampal neuronal survival after pilocarpine seizure",
-        "endpoint": "NeuN-positive neurons one week after seizure, DCA plus pyruvate against vehicle",
-        "direction": "INCREASE",
-        "source": "dichloroacetate combined with pyruvate, rat, Lee 2022 (PMID 36432491), body partly read; NOT WWOX EVIDENCE",
-        "locator": "files/fulltext/PMID36432491_Lee2022_PMC_r2.xml, Results 3.1 to 3.6; map record N-08 notes that each agent alone did not protect neurons; in the text read this is a Discussion statement citing earlier work (the design had single-agent arms; the figure was not read)",
-        "epistemic_status": "DATO",
-        "reading_depth": "partial_fulltext_read",
-        "context": {
-          "disease_id": "lithium-pilocarpine seizure in adult rats, treatment started after the seizure (NOT WWOX EVIDENCE)",
-          "genotype": "wild-type Sprague Dawley rats",
-          "species": "rat",
-          "cell_type": "hippocampus CA1",
-          "developmental_stage": "adult"
-        },
-        "evidence_scope": "OTHER_DISEASE_PRECEDENT",
-        "note": "Endpoint is histological neuronal survival, not seizure frequency or severity. After seizure PDK2 was higher (83%), PDH lower (62%) and Ser293-phosphorylated PDH higher (62%) in the seizure group: the PDK-PDH restraint is present after chemoconvulsant status epilepticus in this model (seizure, status-epilepticus injury, neuron loss and drug exposure are not separable), in wild-type animals; PDH is measured as protein and phospho-protein level one week out, not activity. Sample sizes differ between Methods and figure legends; western blots n = 3; immunofluorescence on 5 cells per section; one laboratory.",
-        "receipt": "FTR-20261023-36432491-01"
-      },
-      {
-        "id": "DR-I01-006",
-        "target_id": "clinical global assessment, linear growth (children with congenital lactic acidosis)",
-        "endpoint": "Global Assessment of Treatment Efficacy and linear growth over 6 months, DCA against placebo",
-        "direction": "NO_CHANGE",
-        "source": "dichloroacetate, human children, Stacpoole 2006 (PMID 16651305), randomized double-blind trial (43 patients), abstract; NOT WWOX EVIDENCE",
-        "locator": "PubMed abstract: no significant differences in the global assessment, linear growth, or frequency and severity of intercurrent illness",
-        "epistemic_status": "DATO",
-        "reading_depth": "abstract_only",
-        "context": {
-          "disease_id": "congenital lactic acidosis in children, heterogeneous (pyruvate dehydrogenase deficiency, respiratory-chain defects, mitochondrial DNA mutation) (NOT WWOX EVIDENCE)",
-          "genotype": "mixed mitochondrial genotypes",
-          "species": "human",
-          "cell_type": "whole organism",
-          "developmental_stage": "age 0.9 to 19 years"
-        },
-        "evidence_scope": "OTHER_DISEASE_PRECEDENT",
-        "note": "A population in which lactate was persistently or intermittently raised, with a defined defect in most patients, and in which the lever still did not change the clinical outcomes measured over six months. Heterogeneous and short; a null in this design does not exclude a benefit in a defined genotype."
-      },
-      {
-        "id": "DR-I01-007",
-        "target_id": "blood lactate after a carbohydrate meal (children with congenital lactic acidosis)",
-        "endpoint": "meal-induced rise in blood lactate, DCA against placebo",
-        "direction": "DECREASE",
-        "source": "dichloroacetate, human children, Stacpoole 2006 (PMID 16651305), abstract; NOT WWOX EVIDENCE",
-        "locator": "PubMed abstract: 'DCA significantly decreased the rise in blood lactate caused by carbohydrate feeding'; the 2008 long-term abstract adds that median cerebrospinal fluid lactate decreased over time",
-        "epistemic_status": "DATO",
-        "reading_depth": "abstract_only",
-        "context": {
-          "disease_id": "congenital lactic acidosis in children (NOT WWOX EVIDENCE)",
-          "genotype": "mixed mitochondrial genotypes",
-          "species": "human",
-          "cell_type": "blood; cerebrospinal fluid in the long-term study",
-          "developmental_stage": "age 0.9 to 19 years"
-        },
-        "evidence_scope": "OTHER_DISEASE_PRECEDENT",
-        "note": "Target engagement is shown in blood and, in the long-term open-label follow-up (Stacpoole 2008, PMID 18411236, abstract), in cerebrospinal fluid: cerebrospinal fluid lactate fell, but the drug level in cerebrospinal fluid was not measured, so CNS exposure stays UNKNOWN. Engagement did not translate into the clinical endpoints of DR-I01-006."
-      },
-      {
-        "id": "DR-I01-008",
-        "target_id": "peripheral nerve function (adults and children with MELAS)",
-        "endpoint": "onset or worsening of peripheral neuropathy leading to discontinuation, DCA against placebo, crossover",
-        "direction": "DECREASE",
-        "source": "dichloroacetate, human, Kaufmann 2006 (PMID 16476929), randomized trial (30 patients), abstract; NOT WWOX EVIDENCE",
-        "locator": "PubMed abstract: 15 of 15 randomized to DCA taken off study medication against 4 of 15 on placebo; 17 of 19 discontinuations for onset or worsening of peripheral neuropathy; trial terminated early; global assessment not different",
-        "epistemic_status": "DATO",
-        "reading_depth": "abstract_only",
-        "context": {
-          "disease_id": "MELAS with the A3243G mutation (NOT WWOX EVIDENCE)",
-          "genotype": "mitochondrial DNA A3243G",
-          "species": "human",
-          "cell_type": "peripheral nerve",
-          "developmental_stage": "age 10 to 60 years"
-        },
-        "evidence_scope": "OTHER_DISEASE_PRECEDENT",
-        "note": "The largest toxicity signal in the human trial record; the chronic paediatric cohort below saw conduction changes that did not become symptomatic (map N-08, Abdelmalak 2013, partial read). The two settings differ in age, genotype, exposure and follow-up, and they are not reconciled here."
-      },
-      {
-        "id": "DR-I01-009",
-        "target_id": "peroneal nerve conduction velocity (children with congenital lactic acidosis, long-term)",
-        "endpoint": "conduction velocity and distal latency over years of treatment",
-        "direction": "DECREASE",
-        "source": "dichloroacetate, human children, Stacpoole 2008 (PMID 18411236), abstract; NOT WWOX EVIDENCE",
-        "locator": "PubMed abstract: conduction velocity decreased and distal latency increased in peroneal nerves; 'cannot be determined whether this is attributable mainly to the drug or to progression of underlying disease'; standardized height and weight declined slightly and stayed below the first percentile",
-        "epistemic_status": "DATO",
-        "reading_depth": "abstract_only",
-        "context": {
-          "disease_id": "congenital lactic acidosis in children, open-label long-term follow-up (NOT WWOX EVIDENCE)",
-          "genotype": "mixed mitochondrial genotypes",
-          "species": "human",
-          "cell_type": "peripheral nerve",
-          "developmental_stage": "36 children followed up to years"
-        },
-        "evidence_scope": "OTHER_DISEASE_PRECEDENT",
-        "note": "No comparator in the long-term phase; the underlying disease alone causes neuropathy. The same abstract records a 22% rise in 24-hour urinary oxalate."
-      },
-      {
-        "id": "DR-I01-010",
-        "target_id": "fasting plasma glucose (adults with diabetes mellitus or hyperlipoproteinaemia)",
-        "endpoint": "fasting hyperglycaemia after oral DCA for six to seven days",
-        "direction": "DECREASE",
-        "source": "dichloroacetate, human adults, Stacpoole 1978 (PMID 625308), abstract; NOT WWOX EVIDENCE",
-        "locator": "abstract: fasting hyperglycaemia reduced by an average of 24 percent; plasma lactate down 73 percent and alanine down 82 percent; plasma ketone bodies up 71 percent; cholesterol and triglyceride down; mild sedation in some",
-        "epistemic_status": "DATO",
-        "reading_depth": "abstract_only",
-        "context": {
-          "disease_id": "diabetes mellitus and hyperlipoproteinaemia in adults (NOT WWOX EVIDENCE)",
-          "genotype": "none",
-          "species": "human",
-          "cell_type": "plasma",
-          "developmental_stage": "adult"
-        },
-        "evidence_scope": "OTHER_DISEASE_PRECEDENT",
-        "note": "Adults with raised glucose, a course of six to seven days; the abstract does not describe a comparator arm. The fall in lactate and alanine (gluconeogenic precursors) and the rise in ketone bodies are the metabolic signature that also links this lever to the ketogenic-diet question (card E04). The direction of the glucose effect when glucose is already low is the question, and this study cannot answer it."
-      },
-      {
-        "id": "DR-I01-011",
-        "target_id": "blood glucose in endotoxaemia (hepatic glucose output)",
-        "endpoint": "plasma glucose and hepatic glucose output, DCA against untreated endotoxaemic animals",
-        "direction": "DECREASE",
-        "source": "dichloroacetate, minipig, Metabolic effects in endotoxemic minipigs 1986 (PMID 3521930), abstract; NOT WWOX EVIDENCE",
-        "locator": "abstract: the progressive hypoglycaemia of the DCA group fell significantly below the endotoxin-only group (about 34 against 51 in the units printed) through lower hepatic gluconeogenesis and glucose output; lethality unaltered",
-        "epistemic_status": "DATO",
-        "reading_depth": "abstract_only",
-        "context": {
-          "disease_id": "endotoxaemic minipig, lactic acidosis with hypoglycaemia (NOT WWOX EVIDENCE)",
-          "genotype": "none",
-          "species": "pig",
-          "cell_type": "whole animal, liver",
-          "developmental_stage": "adult"
-        },
-        "evidence_scope": "OTHER_DISEASE_PRECEDENT",
-        "note": "Acute infusion in a large animal, five treated animals. One of the settings in which a lactate-lowering lever made an existing hypoglycaemia deeper."
-      },
-      {
-        "id": "DR-I01-012",
-        "target_id": "blood glucose in sepsis",
-        "endpoint": "blood glucose, DCA against untreated septic mice",
-        "direction": "INCREASE",
-        "source": "dichloroacetate, mouse, sepsis model 2022 (PMID 35730570), abstract (open access); NOT WWOX EVIDENCE",
-        "locator": "abstract: DCA 'reversed sepsis-induced anorexia, energy imbalance, inflammation, dyslipidemia, hypoglycemia, and glycine deficiency'",
-        "epistemic_status": "DATO",
-        "reading_depth": "abstract_only",
-        "context": {
-          "disease_id": "cecal ligation and puncture sepsis in mice (NOT WWOX EVIDENCE)",
-          "genotype": "none",
-          "species": "mouse",
-          "cell_type": "whole animal, liver",
-          "developmental_stage": "adult"
-        },
-        "evidence_scope": "OTHER_DISEASE_PRECEDENT",
-        "note": "The only reversal in the glucose set, in a state that is NOT comparable to the minipig: in the open text plasma glucose and lactate (and pyruvate) were LOWER in septic mice, the authors acknowledge a fasting confound, and the same treatment reversed anorexia, so the reversal may follow feeding rather than hepatic glucose output. The comparability premise used in the first version of this card was wrong and is withdrawn."
-      },
-      {
-        "id": "DR-I01-013",
-        "target_id": "endogenous glucose production in cirrhosis",
-        "endpoint": "glucose production by isotope dilution and plasma glucose after intravenous DCA, cirrhotic and healthy subjects",
-        "direction": "DECREASE",
-        "source": "dichloroacetate, human adults, Pharmacokinetics and pharmacodynamics in cirrhosis 1999 (PMID 10546922), abstract; NOT WWOX EVIDENCE",
-        "locator": "abstract: DCA decreased plasma lactate by about 50 percent, glucose production by 7 to 9 percent and plasma glucose by 9 to 14 percent in both subjects with cirrhosis and control subjects; the decreases did not differ between groups (the null is the group difference); clearance about a third of controls",
-        "epistemic_status": "DATO",
-        "reading_depth": "abstract_only",
-        "context": {
-          "disease_id": "end-stage cirrhosis, 7 patients and 6 healthy volunteers (NOT WWOX EVIDENCE)",
-          "genotype": "none",
-          "species": "human",
-          "cell_type": "whole body glucose kinetics",
-          "developmental_stage": "adult"
-        },
-        "evidence_scope": "OTHER_DISEASE_PRECEDENT",
-        "note": "Acute single infusion in 7 adults with cirrhosis and 6 healthy volunteers: a modest fall in glucose production and plasma glucose in BOTH groups; the only null is cirrhosis against control. Isotope-dilution human glucose kinetics, adult, acute; it does not transfer to a hypoglycaemic infant-stage brain-disease model, and it shows the lever lowering glucose in people who were not hypoglycaemic."
-      },
-      {
-        "id": "DR-I01-014",
-        "target_id": "glycolytic flux and lactate production in cultured fibroblasts",
-        "endpoint": "glucose consumption and lactate production with and without DCA, patient against control cells",
-        "direction": "DECREASE",
-        "source": "dichloroacetate, human fibroblasts, Simpson 2006 (PMID 16765624), abstract; NOT WWOX EVIDENCE",
-        "locator": "abstract: in pyruvate dehydrogenase complex-deficient cells DCA decreased average glycolysis by 29%, with no significant effect on control cells, and lactate production did not change in either cell type",
-        "epistemic_status": "DATO",
-        "reading_depth": "abstract_only",
-        "context": {
-          "disease_id": "primary fibroblasts from patients with PDC-E1 mutations and five healthy subjects (NOT WWOX EVIDENCE)",
-          "genotype": "PDC-E1 mutations versus healthy",
-          "species": "human",
-          "cell_type": "fibroblast",
-          "developmental_stage": "not applicable"
-        },
-        "evidence_scope": "OTHER_DISEASE_PRECEDENT",
-        "note": "The response to the PDK inhibitor depended on a pre-existing PDH defect: no significant effect in control cells (six patient lines and five control subjects; the 29% average excludes one patient line with an unusual splicing mutation). It supplies the design of the discriminating experiment (a genotype-by-inhibitor interaction on glucose-derived acetyl-CoA flux), with a precedent for what a responder looks like."
-      }
+    "external_not_wwox_evidence": [
+     "PubMed abstracts: 29913407, 16651305, 18411236, 16476929, 625308, 3521930, 35730570, 10546922, 8052155, 16765624, 28914978, 25079374, 9703483, 39462836 (abstract level; none carries a receipt)",
+     "PMC9698956 (Lee 2022, PMID 36432491): partial_fulltext_read under the carried receipt FTR-20261023-36432491-01; PMC10725694 (a 2023 review, PMID 38106446): targeted passages, staged receipt",
+     "ClinicalTrials.gov API v2, 2026-10-29: 27 records for dichloroacetate; relevant: NCT02616484 (phase 3, pyruvate dehydrogenase complex deficiency, active), NCT06931262 (expanded access for that condition), NCT00068913 (MELAS), NCT03356457 (type 1 diabetes and hypoglycaemia); none in a WWOX or epilepsy population",
+     "openFDA drug label API: no match for dichloroacetate by generic name or active ingredient, 2026-10-29"
+    ]
+   },
+   "evidence_for_and_against": {
+    "for": [
+     "The WWOX-side chain is real at its two ends: HK activity, LDH activity and lactate are higher in a human knockout fibroblast line, and LDHA and a hand-picked HIF-type gene set are higher in two human neural transcript systems (a broader 19-gene panel is inside the null in the progenitor line), and PDK1 is reported up in Wwox-null mouse cells; so a PDK-PDH restraint is not excluded.",
+     "In two independent epilepsy models the PDK-PDH restraint is documented (rat after seizure; mouse chronic stage), and a combination of DCA and pyruvate protected hippocampal neurons after seizure in rats (histology, not seizure control); a review reports protection against hypoglycaemia-induced neuronal injury in rats (second-hand).",
+     "Cerebrospinal fluid lactate fell in the long-term paediatric follow-up (drug exposure in the CNS not measured: CNS exposure stays UNKNOWN) and DCA has a documented paediatric safety record in congenital lactic acidosis (a randomized trial, a follow-up of 110 patient-years, an expanded access route for pyruvate dehydrogenase deficiency).",
+     "The response to the inhibitor is genotype dependent in cells (patient cells with a PDH defect shifted, control cells did not), which makes a genotype-by-inhibitor experiment in WWOX-deficient cells informative in both directions."
     ],
-    "p4_fields": {
-      "endpoint_pursued": "A WWOX-linked PDH readout that a PDK inhibitor moves (PDHA1 Ser293 phosphorylation, PDH activity, glucose-derived acetyl-CoA labelling) in WWOX-deficient against matched control human neural cells, read as a genotype-by-inhibitor interaction; and, only after that, the glucose, lactate, ketone and alanine time course in Wwox-null pups before any seizure or behavioural endpoint.",
-      "functional_evidence_available": "None for any PDK inhibitor in a WWOX system. In non-WWOX epilepsy models: no anticonvulsant effect and a slight pro-convulsant signal in a mouse study (abstract); a histological neuroprotection result for the DCA plus pyruvate combination in rats after seizure. In children with congenital lactic acidosis: lactate lowering without clinical benefit over six months in a randomized trial.",
-      "temporal_or_model_limit": "The Wwox-null mouse is hypoglycaemic from the first postnatal week and dies within weeks, so a pup experiment runs in the same window as the lethal phenotype and is survivor-conditioned; neuron-specific deletion survival is not established here. The seizure and glucose precedents are adult animals or adult humans except the paediatric mitochondrial-disease trials.",
-      "cellular_context": {
-        "target_expression": "PDK isoforms are expressed in brain; the WWOX-dependent level is UNKNOWN. PDK1 transcript is lower in sign only (inside the single-gene null) in two human neural transcript systems and higher in mouse and human non-neural cells.",
-        "cells_tissue_stage": "No WWOX-deficient human neural system has a PDH activity or phosphorylation measurement.",
-        "coverage": "UNKNOWN",
-        "limits": "Transcript results are not PDH activity. A raised glycolytic signature does not prove a PDH block. PDH restraint is documented after chemoconvulsant status epilepticus in non-WWOX models, which a WWOX-DEE brain may share independent of genotype."
-      }
-    },
-    "p4_card": {
-      "identity": "Dichloroacetate (DCA), the prototype pyruvate dehydrogenase kinase (PDK) inhibitor: catalogue records CAT:CHEMBL306823 (sodium dichloroacetate, ChEMBL mechanism rows INHIBITOR at PDK1 to PDK4, clinical candidate, access: experimental), CAT:DGIDB:901979e6ba30 (sodium dichloroacetate, DGIdb, status unverified) and CAT:CHEMBL13960 and CAT:DGIDB:b7c34486f9a7 (the acid, no ChEMBL target rows). Identity by identifier: the card asserts CHEMBL306823 only. DCA is an investigational drug with an orphan designation for congenital lactic acidosis; it has no marketed label in openFDA (searches by generic name and active ingredient returned no match on 2026-10-29). Whether any product is sold to consumers as a dietary ingredient was not established here and is handed to the supplement-access worker; access is not efficacy or safety. Related ingredients that act on the same enzyme step through cofactors or substrates (thiamine, alpha-lipoic acid, pyruvate) are not asserted by this card.",
-      "indication_and_transfer": "Not an indication and not a treatment proposal. The card asks what has to be true for a PDK inhibitor to be a partial-benefit lever in a Wwox-deficient brain (a measured PDH restraint that the inhibitor releases), whether the one seizure endpoint tested in a PDH-restrained epilepsy model was favourable (it was not), and which way the glucose endpoint moves in a setting with documented hypoglycaemia. Nothing measured in a mitochondrial-disease population, an adult epilepsy mouse, a diabetic adult or a large animal is transferred to WWOX-DEE.",
-      "novelty_for_woree": "PARZIALMENTE_TROVATO: DCA is on the map (record N-08, parked after the peripheral-nerve narrowing; card E03 holds target-engagement rows and no disease-side PDH datum) and the DCA-with-pyruvate rat seizure paper is read. Not previously in the repository, by a search of the registries' PMID fields and the research notes on 2026-10-29: the primary mouse seizure-endpoint test of DCA (PMID 29913407), the two randomized paediatric and MELAS trials as efficacy evidence (16651305, 16476929 is cited in a trial note only), the glucose-direction literature (625308, 3521930, 35730570, 10546922, 8052155), and the human fibroblast PDK transcript sentence (PMID 35328751). Not 'never done': only PubMed, Europe PMC, ClinicalTrials.gov, openFDA and the catalogue were searched.",
-      "state_of_known_roads": "Card E03 (PDK inhibition, unresolved; translation fields all UNKNOWN); map record N-08 (parked: nerve conduction signal, no WWOX measurement); needs NEED-PDH-PYRUVATE-AXIS (direction uncertain; 'do not treat dichloroacetate as evidence-backed'), NEED-LACTATE-LDH, NEED-SEIZURE-CONTROL-SYMPTOMATIC, NEED-SYSTEMIC-GLYCAEMIA-GROWTH (endpoint and confounder; no compounds by design); card E04 and EB-KD-01 for the ketogenic diet (three depths already, not repeated); the systems comparison of 2026-10-29 (PDK1 lower in both human neural transcript systems, glycolysis and LDHA higher in both).",
-      "pathway_and_objective": "BENEFICIO_PRECOCE, Track A (variant-independent, downstream, allele-blind). Metabolic bypass: partial benefit at best, and only if the bottleneck exists. Safety side: glycaemia and peripheral nerve.",
-      "expected_contribution": "UNKNOWN as benefit. The card sharpens a decision: it separates 'a raised glycolytic signature' (LDHA and a hand-picked HIF-type gene set higher in two human neural transcript systems, a broader 19-gene panel inside the null in the progenitor line) from 'PDH is restrained' (no WWOX activity or phosphorylation datum, PDK1 lower in sign only and inside its single-gene null, PDH activity unchanged in one human line, brain lactate low in one patient) and from 'releasing PDH helps' (no seizure benefit in the only PDH-restrained model tested; no clinical benefit in a randomized paediatric trial despite lactate lowering). If a WWOX-deficient neural system shows an inhibitor-responsive PDH restraint, the lever moves from parked to testable with a defined safety frame; if not, the PDK strand of the module is closed at the premise.",
-      "mechanism": "DCA inhibits PDK isoforms (ChEMBL curated mechanism, enzyme level, potency not reproduced here), lowering inhibitory phosphorylation of PDH and so raising glucose oxidation at the expense of lactate; it also inhibits its own metabolising enzyme (glutathione transferase zeta 1), which makes exposure rise on repeated administration and vary with haplotype and age. The WWOX-side chain proposes WWOX loss, HIF1alpha, PDK1, PDH inhibition and a glycolytic shift. Evidence for the chain, by link: HIF1alpha up and glycolytic shift in mouse embryonic fibroblasts (mouse, non-neural); PDK1 up in the same cells; PDK transcript up in a human knockout fibroblast line; PDK1 lower in sign only (inside the single-gene null) in two human neural transcript systems; PDH activity not different in the human fibroblast line; no PDH phosphorylation, flux or lactate measurement in any WWOX-deficient human neural system. Competing explanations for a raised-lactate, normal-PDH-activity state: supply-side glycolytic overflow (hexokinase and LDH activity higher in the same cells), maturity of the tissue (organoid), and a secondary PDH restraint that follows chemoconvulsant status epilepticus, which is documented in wild-type animals in two epilepsy models (rat after pilocarpine seizure: PDK2 up, PDH down, Ser293 phosphorylation up; mouse chronic stage: PDH activity down by about two thirds). The last point matters for the symptom claim: a WWOX-DEE brain with seizures may carry a PDH restraint that arises after seizure and status-epilepticus injury (not separable from neuron loss or drug exposure in either model), which the seizure-endpoint test (DR-I01-002 to -004) addresses directly and found no anticonvulsant effect.",
-      "sources": {
-        "internal": [
-          "needs NEED-PDH-PYRUVATE-AXIS (O1 to O4), NEED-LACTATE-LDH (O4), NEED-SEIZURE-CONTROL-SYMPTOMATIC, NEED-SYSTEMIC-GLYCAEMIA-GROWTH (O1)",
-          "cards E03_pdk_inhibition_dca, E04_ketogenic_lactate_axis, cards_early/EB-KD-01, H01 and H02 (format precedent)",
-          "wwox_systems_comparison_it5_20261029.md and its matrix (PDK1, glycolysis, ISR rows)",
-          "analysis/mechanism_intervention_map.md record N-08 and the DCA-with-pyruvate seizure paper note",
-          "deepdive_manifests/PMID25012504.json (entries 0, 1, 2, 10, 14), PMID42422765.json (entry 37), PMID35328751.json (entries 7, 8, 9)",
-          "closed_loop_it5_p9_20261029/README.md (searches, readings, depths, source verification)"
-        ],
-        "external_not_wwox_evidence": [
-          "PubMed abstracts: 29913407, 16651305, 18411236, 16476929, 625308, 3521930, 35730570, 10546922, 8052155, 16765624, 28914978, 25079374, 9703483, 39462836 (abstract level; none carries a receipt)",
-          "PMC9698956 (Lee 2022, PMID 36432491): partial_fulltext_read under the carried receipt FTR-20261023-36432491-01; PMC10725694 (a 2023 review, PMID 38106446): targeted passages, staged receipt",
-          "ClinicalTrials.gov API v2, 2026-10-29: 27 records for dichloroacetate; relevant: NCT02616484 (phase 3, pyruvate dehydrogenase complex deficiency, active), NCT06931262 (expanded access for that condition), NCT00068913 (MELAS), NCT03356457 (type 1 diabetes and hypoglycaemia); none in a WWOX or epilepsy population",
-          "openFDA drug label API: no match for dichloroacetate by generic name or active ingredient, 2026-10-29"
-        ]
-      },
-      "evidence_for_and_against": {
-        "for": [
-          "The WWOX-side chain is real at its two ends: HK activity, LDH activity and lactate are higher in a human knockout fibroblast line, and LDHA and a hand-picked HIF-type gene set are higher in two human neural transcript systems (a broader 19-gene panel is inside the null in the progenitor line), and PDK1 is reported up in Wwox-null mouse cells; so a PDK-PDH restraint is not excluded.",
-          "In two independent epilepsy models the PDK-PDH restraint is documented (rat after seizure; mouse chronic stage), and a combination of DCA and pyruvate protected hippocampal neurons after seizure in rats (histology, not seizure control); a review reports protection against hypoglycaemia-induced neuronal injury in rats (second-hand).",
-          "Cerebrospinal fluid lactate fell in the long-term paediatric follow-up (drug exposure in the CNS not measured: CNS exposure stays UNKNOWN) and DCA has a documented paediatric safety record in congenital lactic acidosis (a randomized trial, a follow-up of 110 patient-years, an expanded access route for pyruvate dehydrogenase deficiency).",
-          "The response to the inhibitor is genotype dependent in cells (patient cells with a PDH defect shifted, control cells did not), which makes a genotype-by-inhibitor experiment in WWOX-deficient cells informative in both directions."
-        ],
-        "against": [
-          "No WWOX-deficient neural system has a PDH activity, PDH phosphorylation, flux or lactate measurement; PDK1 transcript is not higher in either human neural system held (lower in sign only, inside the single-gene null: organoid p about 0.30, one shRNA progenitor library at n = 1 per arm p about 0.49; neurons +0.44) and the human fibroblast PDH activity is unchanged; brain lactate is reported extremely low in the one patient with MRS.",
-          "The PDK transcript sign is cell-type dependent (up in mouse and human non-neural cells, lower in sign only in the neural transcript systems); each comparison has a different confound, and the contrast cannot be turned into a statement about WWOX.",
-          "The only primary seizure-endpoint test found of DCA in a PDH-restrained epilepsy model (mouse, chronic pilocarpine; PDH activity down by about two thirds) showed no anticonvulsant effect and a slight pro-convulsant signal in one test (abstract level). The rat protection result is a histology endpoint and uses the combination with pyruvate (the Discussion of that paper cites earlier work for the inactivity of the single agents).",
-          "A randomized double-blind paediatric trial (43 children, heterogeneous mitochondrial disease) lowered post-meal lactate and moved none of the clinical outcomes measured (global assessment, linear growth, intercurrent illness) over six months; the MELAS trial was terminated early for peripheral nerve toxicity; the long-term cohort shows conduction slowing and a below-first-percentile growth trajectory, not separable from the disease.",
-          "The glucose endpoint: the Wwox-null mouse is hypoglycaemic (lethally so in one laboratory's description) with higher glucose uptake in knockout cells, and DCA lowers fasting glucose in diabetic adults while lowering the gluconeogenic precursors lactate and alanine; three of four datasets point to glucose lowering (diabetic adults; endotoxaemic minipigs, deeper hypoglycaemia through lower hepatic glucose output; cirrhotic and healthy adults, a modest fall in glucose production and plasma glucose in both groups) and only the septic mouse shows reversal, alongside reversal of anorexia and with plasma lactate lower, not higher, in the septic mice. The sign for a Wwox-deficient pup is unmeasured. Hypoglycaemia is also confounded in the null with feeding and seizures.",
-          "Exposure is variable by design: DCA inactivates its own clearing enzyme, clearance depends on haplotype and age, and a population model finds the inactivation rate lower in children than adults by a large factor; a monitoring requirement (nerve conduction) is part of the long-term paediatric protocol.",
-          "A thiamine-linked rat observation (oxalate and neuropathy) and one methaemoglobinaemia case report in a glucose-6-phosphate dehydrogenase-deficient neonate (case report, abstract) are further safety notes; neither is WWOX-specific.",
-          "IT7 P3/P1 (provisional, exploratory): the six-gene module under the glycolytic end of the chain was inconclusive in an independent WWOX-loss contrast (P47T hippocampus, p 0.060, inside its null; PDK1 lower by -0.08, not raised), and a signed network, a signature route and a WWOX-enriched network showed no added value for ranking compounds on it; dichloroacetate was outside that comparison by design. A computational result, not engagement or efficacy data."
-        ]
-      },
-      "time_to_access": "UNKNOWN. Catalogue: experimental for the sodium salt (ChEMBL), status unverified in DGIdb; no marketed label in openFDA; a pivotal phase 3 for pyruvate dehydrogenase deficiency is active and an expanded access protocol exists for that diagnosis only (ClinicalTrials.gov, 2026-10-29). Whether a product is sold as a supplement is not established here and is handed over; if one is found, product-level facts do not make the substance evidence-backed or safe. No contact was made.",
-      "time_to_benefit": "UNKNOWN, separately from access. No benefit endpoint is pursued by this card. In the paediatric randomized trial the time frame of the clinical outcomes was six months and none moved; post-meal lactate moved within that window.",
-      "pharmacology": "Mechanism-based irreversible-type self-inhibition of metabolism (glutathione transferase zeta 1 inactivation): repeated administration shifts every subject towards slow metabolism, with a two-fold faster inactivation in subjects lacking a wild-type haplotype and a 25 to 30 fold lower inactivation rate in children than adults in one population model (abstract level); drug kinetics in 17 children plateaued rather than accumulating. Metabolites include oxalate (a 22% rise in urinary oxalate in the long-term cohort) and tyrosine-pathway intermediates (maleylacetone, delta-aminolevulinate rise in the randomized trial). Peripheral neuropathy is the dose-limiting toxicity in adults with MELAS; hepatotoxicity and neoplasia are rodent findings at high chronic doses (1998 review abstract). Oral route in the trials; Cerebrospinal fluid lactate fell in the long-term cohort; CNS drug exposure was not measured. No dose, route or schedule is stated or implied here. Not a label (no label exists).",
-      "paediatrics_and_interactions": "Paediatric trial and long-term experience exist only in congenital lactic acidosis; no data in epilepsy, DEE or WWOX. Interactions with antiseizure medicines and with a ketogenic diet are not characterised here (the long-term cohort notes children with PDH deficiency not on ketogenic diets maintained normal lactate on DCA). The glucose interaction with fasting, a ketogenic diet and feeding difficulty is the question this card raises, not an answer.",
-      "scope_of_checks": {
-        "support_and_replication": "WWOX rows: three transcript results (two computational re-analyses, n = 1 and 4 versus 2; one qPCR sentence), one enzyme null, one mouse glucose set from two laboratories. Everything else is another disease, species or compound. Shared sources are not independent confirmations.",
-        "formal_checks": "check_cards.py; bridge build; abstract level for 11 of the 12 external PubMed sources; PMC9698956 partial body read under the carried receipt; PMC10725694 targeted passages (staged receipt); ClinicalTrials.gov API v2 records read as JSON; openFDA queried; the Baryla 2022 and Obeid 2026 JATS sentences re-read in the root checkout on 2026-10-29; the body artefacts of PMID 25012504 are absent from the root checkout (only an abstract stub is present), so its locators were not re-opened.",
-        "card_inferences_owed_audit": "The synthesis in 'mechanism' (seizure-secondary PDH restraint as a competing explanation; supply-side overflow), the reading of the glucose-sign contrast across pig, mouse and human studies, the cross-system PDK transcript contrast, and both registered predictions are INFERENZA and owed a blind audit by someone other than the producer."
-      },
-      "question_history": [
-        "Mandate IT5, step P9 (scientist-d, 2026-10-29): partial benefit as a thread distinct from vigabatrin (cards H02, EB-VGB-01). Candidates weighed by data: the ketogenic diet (worked at three depths; open items are denominator and metabolic measurements), lithium (G01) and apinocaltamide (H01) already had closed loops, stiripentol (E02) is fully worked in P2a, the glucose and growth need has no compound by design. Chosen: the PDK strand, because the new systems comparison removed its middle link (PDK1 not up) while card E03 still carried an open translation block, and because a literature search from the compound found primary seizure, efficacy and glucose data not yet in the repository.",
-        "Need-to-compound search (NEED-PDH-PYRUVATE-AXIS, NEED-LACTATE-LDH, NEED-REDOX-OXIDATIVE-STRESS, NEED-NEUROINFLAMMATION-GLIA) and compound-to-WWOX-profile search (dichloroacetate, thiamine, alpha-lipoic acid, pyruvate, beta-hydroxybutyrate, decanoic acid, carnitine) are in the cycle README.",
-        "IT7 P6 (2026-10-29): the six-gene module did not transfer decisively to an independent WWOX-loss contrast and no compound-ranking method showed added value (loop_demonstration_it7_p6_20261029/README.md; P3 numbers provisional). Status, F/C/P position and the premise are unchanged."
-      ],
-      "predictions": "Registered before any such experiment, two directions each. (1) In WWOX-deficient human neural cells against isogenic or transduction-matched controls at matched maturity, with PDHA1 Ser293 phosphorylation and PDH activity measured first: if a PDH restraint exists, a PDK inhibitor raises PDH activity and glucose-derived acetyl-CoA labelling more in the deficient cells than in controls (genotype-by-inhibitor interaction), and basal phosphorylation is higher in the deficient cells; if there is no restraint, basal phosphorylation and activity do not differ and the inhibitor shifts both genotypes alike or neither, and the PDK strand is closed at the premise. (2) In a Wwox-deficient pup model that survives the window, with wild-type littermates, a PDK inhibitor against vehicle at confirmed brain exposure: three outcome categories for glucose against vehicle, read in wild-type and deficient pups separately: (i) a fall in the deficient pups beyond the wild-type fall, as in the minipig, with lactate and, if measured, alanine falling, which would end the in vivo thread on safety grounds; (ii) a modest fall of similar size in both genotypes, as in adults, which is a liability whose weight depends on baseline glucose and is read against the hypoglycaemic baseline; (iii) no fall or a rise, as in the septic mouse, which is read only together with food intake; either way glucose is the first readout, before any seizure or behavioural endpoint. A negative with unconfirmed brain exposure is uninformative.",
-      "next_measurement": "IT7 P6 2026-10-29: decisive measurement unchanged; read PDK1, LDHA, LDHB, HK2, SLC2A1 and BNIP3 transcripts beside it in the same cells, so the replicated WWOX-deficient human neural contrast that the P3 comparison named as missing is also a second transfer test; no computational ranking selects the compound arm. Cells: PDHA1 Ser293 phosphorylation (and total PDH), PDH activity, and a glucose-tracer experiment into acetyl-CoA, citrate and lactate in WWOX-deficient human neural cells against matched controls, then with a PDK inhibitor against vehicle, reading the genotype-by-inhibitor interaction; a free-DCA exposure and a second PDK inhibitor of different chemistry as orthogonal controls. Animal, only if the cell result shows restraint: blood glucose, lactate, ketones and alanine time course in P10 to P14 Wwox-null pups against wild-type littermates, inhibitor against vehicle, with brain exposure confirmed and feeding recorded, before any seizure endpoint. Human, no contact made: a structured count of WWOX-DEE children who have had metabolic screens, brain MRS or a ketogenic diet, with glucose events and lactate values (denominator), from the natural history; a registry query of the investigational-drug programme for pyruvate dehydrogenase deficiency is not a WWOX measure.",
-      "status": "controversial",
-      "value_added": "Turns the PDK strand from 'parked, safety-narrowed' into a premise test with a stated closing condition; adds the primary seizure-endpoint negative and the randomized paediatric efficacy null to the repository; flags the glucose endpoint as a sign-unresolved liability in a model whose lethal phenotype is hypoglycaemia (the earlier safety framing was nerve-only); records that PDK transcript direction differs between non-neural cells (up) and neural transcript systems (not higher; lower in sign only) and that the human fibroblast paper's own sentence on 'PDK activity' is a wording flag, and corrects the glucose set (the cirrhosis study shows a modest fall in both groups); and records the supplement-class ingredients near the same enzyme step for access work.",
-      "clinical_census": "ClinicalTrials.gov API v2, 2026-10-29, query by intervention 'dichloroacetate': 27 records (congenital lactic acidosis phase 2 and 3, pyruvate dehydrogenase deficiency phase 3 active, an expanded access protocol, MELAS, cancers, type 1 diabetes and hypoglycaemia physiology, healthy-volunteer pharmacokinetics); none in a WWOX, developmental and epileptic encephalopathy or epilepsy population. Earlier census 2026-10-20 found no registered WOREE interventional study. A missing hit does not prove that no study exists."
-    },
-    "not_known": [
-      "Whether PDH is phosphorylated (restrained) in any WWOX-deficient neural system, human or mouse, and whether a PDK inhibitor releases it more than in control cells.",
-      "Whether the PDK transcript sign difference between non-neural lines (up) and neural transcript systems (down) is biology or confound.",
-      "The direction of the blood glucose response to a PDK inhibitor in a hypoglycaemic Wwox-deficient pup (pig-like deepening or mouse-sepsis-like reversal), and whether the null's hypoglycaemia is hepatic, feeding-related or seizure-related.",
-      "Whether the seizure-endpoint negative in the adult mouse holds in a developmental model or at confirmed brain exposure (the study is abstract-level and closed).",
-      "Brain lactate and PDH state in WWOX-DEE patients (one MRS report with a confounding variant); any metabolic screen denominator.",
-      "Whether any consumer product contains dichloroacetate or the related cofactor ingredients, and with what content; access is not evidence."
-    ],
-    "evidence_against": [
-      "Transcripts, not activity: the chain is supported at its glycolytic end and without support in its middle (PDK1 not higher, lower in sign only and inside its null, in two human neural systems; PDH activity unchanged in the one human line).",
-      "Seizure-secondary PDH restraint is documented in two non-WWOX epilepsy models, so any restraint found in a seizing WWOX brain would not by itself be WWOX-dependent.",
-      "The one primary seizure test of the lever found in a PDH-restrained model was negative (abstract level); the one randomized paediatric trial moved lactate and no clinical outcome; the one randomized MELAS trial ended early for nerve toxicity.",
-      "Hypoglycaemia is the Wwox-null phenotype and the lever lowers glucose in adults with raised glucose and lowers gluconeogenic precursors; the weight of the glucose datasets points to lowering (pig, adults), with one mouse reversal that coincides with feeding recovery; the sign in a hypoglycaemic young animal is unmeasured.",
-      "Rivals for the raised-lactate observations: supply-side glycolytic overflow, tissue maturity (organoid), line differences, and feeding or seizure state in animals.",
-      "IT7 P3/P1 (provisional, exploratory): the six-gene module under the glycolytic end of the chain was inconclusive in an independent WWOX-loss contrast (P47T hippocampus, p 0.060, inside its null; PDK1 lower by -0.08, not raised), and a signed network, a signature route and a WWOX-enriched network showed no added value for ranking compounds on it; dichloroacetate was outside that comparison by design. A computational result, not engagement or efficacy data."
-    ],
-    "bridge_gaps_exposed": [
-      "No drug row is in a context matching a WWOX row, so the bridge forms no sign comparison (UNRESOLVED is a statement about the record, not about the biology).",
-      "The bridge cannot express a group-difference null that sits beside a within-group change (the cirrhosis study: both groups fell, the groups did not differ); the limit lives in the notes.",
-      "The bridge has no field for a lever whose benefit depends on a precondition (PDH restraint); the precondition lives in the card text and the predictions."
-    ],
-    "translation": {
-      "pediatric_suitability": "UNKNOWN",
-      "cns_exposure": "UNKNOWN",
-      "interactions": "UNKNOWN",
-      "access": "UNKNOWN",
-      "time_to_benefit": "UNKNOWN",
-      "functional_rescue": "UNKNOWN"
-    },
-    "p4_roadmap_fields": {
-      "indication_and_transfer": "Not an indication and not a treatment proposal. The card asks what has to be true for a PDK inhibitor to be a partial-benefit lever in a Wwox-deficient brain (a measured PDH restraint that the inhibitor releases), whether the one seizure endpoint tested in a PDH-restrained epilepsy model was favourable (it was not), and which way the glucose endpoint moves in a setting with documented hypoglycaemia. Nothing measured in a mitochondrial-disease population, an adult epilepsy mouse, a diabetic adult or a large animal is transferred to WWOX-DEE.",
-      "verification_scope": "{\"support_and_replication\": \"WWOX rows: three transcript results (two computational re-analyses, n = 1 and 4 versus 2; one qPCR sentence), one enzyme null, one mouse glucose set from two laboratories. Everything else is another disease, species or compound. Shared sources are not independent confirmations.\", \"formal_checks\": \"check_cards.py; bridge build; abstract level for 11 of the 12 external PubMed sources; PMC9698956 partial body read under the carried receipt; PMC10725694 targeted passages (staged receipt); ClinicalTrials.gov API v2 records read as JSON; openFDA queried; the Baryla 2022 and Obeid 2026 JATS sentences re-read in the root checkout on 2026-10-29; the body artefacts of PMID 25012504 are absent from the root checkout (only an abstract stub is present), so its locators were not re-opened.\", \"card_inferences_owed_audit\": \"The synthesis in 'mechanism' (seizure-secondary PDH restraint as a competing explanation; supply-side overflow), the reading of the glucose-sign contrast across pig, mouse and human studies, the cross-system PDK transcript contrast, and both registered predictions are INFERENZA and owed a blind audit by someone other than the producer.\"}"
-    },
-    "label_lookup": {
-      "status": "NOT_ATTEMPTED"
-    },
-    "card_conventions": [
-      "IPOTESI throughout; the bridge forces it. No ranking, probability or blended index is carried.",
-      "directional_summary compares signs only where target, endpoint and every context dimension match; UNRESOLVED is a statement about the record, not about the biology.",
-      "Every non-WWOX row carries NOT WWOX EVIDENCE and is abstract-level unless its depth says otherwise.",
-      "label_lookup is NOT_ATTEMPTED because the bridge has no network; openFDA was queried by the scientist (no match) and is cited in the identity text.",
-      "No dose, route, schedule or paediatric suitability appears; amounts quoted in the sources are omitted from this card."
-    ],
-    "no_new_reading": "Not true: the Baryla 2022 and Obeid 2026 JATS sentences were re-read, PMC9698956 Methods and Results were re-read, ClinicalTrials.gov JSON and Europe PMC abstracts were read, and PMC10725694 passages were read; one receipt is staged (receipt_staging/scientist-d). The new primary-literature PubMed sources are abstract level.",
-    "leads_needs": [
-      "NEED-PDH-PYRUVATE-AXIS",
-      "NEED-SEIZURE-CONTROL-SYMPTOMATIC",
-      "NEED-LACTATE-LDH"
-    ],
-    "leads_needs_note": "Handoff rule: coverage pairs for this card are listed only for these needs. The card does not offer PDK inhibition as a seizure treatment and does not attach compounds to NEED-SYSTEMIC-GLYCAEMIA-GROWTH (endpoint and confounder by design); the glucose rows are attached to the PDH axis as a safety signal."
+    "against": [
+     "No WWOX-deficient neural system has a PDH activity, PDH phosphorylation, flux or lactate measurement; PDK1 transcript is not higher in either human neural system held (lower in sign only, inside the single-gene null: organoid p about 0.30, one shRNA progenitor library at n = 1 per arm p about 0.49; neurons +0.44) and the human fibroblast PDH activity is unchanged; brain lactate is reported extremely low in the one patient with MRS.",
+     "The PDK transcript sign is cell-type dependent (up in mouse and human non-neural cells, lower in sign only in the neural transcript systems); each comparison has a different confound, and the contrast cannot be turned into a statement about WWOX.",
+     "The only primary seizure-endpoint test found of DCA in a PDH-restrained epilepsy model (mouse, chronic pilocarpine; PDH activity down by about two thirds) showed no anticonvulsant effect and a slight pro-convulsant signal in one test (abstract level). The rat protection result is a histology endpoint and uses the combination with pyruvate (the Discussion of that paper cites earlier work for the inactivity of the single agents).",
+     "A randomized double-blind paediatric trial (43 children, heterogeneous mitochondrial disease) lowered post-meal lactate and moved none of the clinical outcomes measured (global assessment, linear growth, intercurrent illness) over six months; the MELAS trial was terminated early for peripheral nerve toxicity; the long-term cohort shows conduction slowing and a below-first-percentile growth trajectory, not separable from the disease.",
+     "The glucose endpoint: the Wwox-null mouse is hypoglycaemic (lethally so in one laboratory's description) with higher glucose uptake in knockout cells, and DCA lowers fasting glucose in diabetic adults while lowering the gluconeogenic precursors lactate and alanine; three of four datasets point to glucose lowering (diabetic adults; endotoxaemic minipigs, deeper hypoglycaemia through lower hepatic glucose output; cirrhotic and healthy adults, a modest fall in glucose production and plasma glucose in both groups) and only the septic mouse shows reversal, alongside reversal of anorexia and with plasma lactate lower, not higher, in the septic mice. The sign for a Wwox-deficient pup is unmeasured. Hypoglycaemia is also confounded in the null with feeding and seizures.",
+     "Exposure is variable by design: DCA inactivates its own clearing enzyme, clearance depends on haplotype and age, and a population model finds the inactivation rate lower in children than adults by a large factor; a monitoring requirement (nerve conduction) is part of the long-term paediatric protocol.",
+     "A thiamine-linked rat observation (oxalate and neuropathy) and one methaemoglobinaemia case report in a glucose-6-phosphate dehydrogenase-deficient neonate (case report, abstract) are further safety notes; neither is WWOX-specific.",
+     "IT7 P3/P1 (exploratory, independently verified): the six-gene module under the glycolytic end of the chain was inconclusive in an independent WWOX-loss contrast (P47T hippocampus, p 0.060, inside its null; PDK1 lower by -0.08, not raised), and a signed network and a WWOX-enriched network showed no added value for ranking compounds on it while a signature route was not detected, not excluded (rho 0.143 against a 0.15 threshold; interval 0.039 to 0.243); dichloroacetate was outside that comparison by design. A computational result, not engagement or efficacy data."
+    ]
+   },
+   "time_to_access": "UNKNOWN. Catalogue: experimental for the sodium salt (ChEMBL), status unverified in DGIdb; no marketed label in openFDA; a pivotal phase 3 for pyruvate dehydrogenase deficiency is active and an expanded access protocol exists for that diagnosis only (ClinicalTrials.gov, 2026-10-29). Whether a product is sold as a supplement is not established here and is handed over; if one is found, product-level facts do not make the substance evidence-backed or safe. No contact was made.",
+   "time_to_benefit": "UNKNOWN, separately from access. No benefit endpoint is pursued by this card. In the paediatric randomized trial the time frame of the clinical outcomes was six months and none moved; post-meal lactate moved within that window.",
+   "pharmacology": "Mechanism-based irreversible-type self-inhibition of metabolism (glutathione transferase zeta 1 inactivation): repeated administration shifts every subject towards slow metabolism, with a two-fold faster inactivation in subjects lacking a wild-type haplotype and a 25 to 30 fold lower inactivation rate in children than adults in one population model (abstract level); drug kinetics in 17 children plateaued rather than accumulating. Metabolites include oxalate (a 22% rise in urinary oxalate in the long-term cohort) and tyrosine-pathway intermediates (maleylacetone, delta-aminolevulinate rise in the randomized trial). Peripheral neuropathy is the dose-limiting toxicity in adults with MELAS; hepatotoxicity and neoplasia are rodent findings at high chronic doses (1998 review abstract). Oral route in the trials; Cerebrospinal fluid lactate fell in the long-term cohort; CNS drug exposure was not measured. No dose, route or schedule is stated or implied here. Not a label (no label exists).",
+   "paediatrics_and_interactions": "Paediatric trial and long-term experience exist only in congenital lactic acidosis; no data in epilepsy, DEE or WWOX. Interactions with antiseizure medicines and with a ketogenic diet are not characterised here (the long-term cohort notes children with PDH deficiency not on ketogenic diets maintained normal lactate on DCA). The glucose interaction with fasting, a ketogenic diet and feeding difficulty is the question this card raises, not an answer.",
+   "scope_of_checks": {
+    "support_and_replication": "WWOX rows: three transcript results (two computational re-analyses, n = 1 and 4 versus 2; one qPCR sentence), one enzyme null, one mouse glucose set from two laboratories. Everything else is another disease, species or compound. Shared sources are not independent confirmations.",
+    "formal_checks": "check_cards.py; bridge build; abstract level for 11 of the 12 external PubMed sources; PMC9698956 partial body read under the carried receipt; PMC10725694 targeted passages (staged receipt); ClinicalTrials.gov API v2 records read as JSON; openFDA queried; the Baryla 2022 and Obeid 2026 JATS sentences re-read in the root checkout on 2026-10-29; the body artefacts of PMID 25012504 are absent from the root checkout (only an abstract stub is present), so its locators were not re-opened.",
+    "card_inferences_owed_audit": "The synthesis in 'mechanism' (seizure-secondary PDH restraint as a competing explanation; supply-side overflow), the reading of the glucose-sign contrast across pig, mouse and human studies, the cross-system PDK transcript contrast, and both registered predictions are INFERENZA and owed a blind audit by someone other than the producer."
+   },
+   "question_history": [
+    "Mandate IT5, step P9 (scientist-d, 2026-10-29): partial benefit as a thread distinct from vigabatrin (cards H02, EB-VGB-01). Candidates weighed by data: the ketogenic diet (worked at three depths; open items are denominator and metabolic measurements), lithium (G01) and apinocaltamide (H01) already had closed loops, stiripentol (E02) is fully worked in P2a, the glucose and growth need has no compound by design. Chosen: the PDK strand, because the new systems comparison removed its middle link (PDK1 not up) while card E03 still carried an open translation block, and because a literature search from the compound found primary seizure, efficacy and glucose data not yet in the repository.",
+    "Need-to-compound search (NEED-PDH-PYRUVATE-AXIS, NEED-LACTATE-LDH, NEED-REDOX-OXIDATIVE-STRESS, NEED-NEUROINFLAMMATION-GLIA) and compound-to-WWOX-profile search (dichloroacetate, thiamine, alpha-lipoic acid, pyruvate, beta-hydroxybutyrate, decanoic acid, carnitine) are in the cycle README.",
+    "IT7 P6 (2026-10-29): the six-gene module did not transfer decisively to an independent WWOX-loss contrast and the network routes showed no added value and the signature route was not detected, not excluded (loop_demonstration_it7_p6_20261029/README.md; P3 numbers independently verified). Status, F/C/P position and the premise are unchanged."
+   ],
+   "predictions": "Registered before any such experiment, two directions each. (1) In WWOX-deficient human neural cells against isogenic or transduction-matched controls at matched maturity, with PDHA1 Ser293 phosphorylation and PDH activity measured first: if a PDH restraint exists, a PDK inhibitor raises PDH activity and glucose-derived acetyl-CoA labelling more in the deficient cells than in controls (genotype-by-inhibitor interaction), and basal phosphorylation is higher in the deficient cells; if there is no restraint, basal phosphorylation and activity do not differ and the inhibitor shifts both genotypes alike or neither, and the PDK strand is closed at the premise. (2) In a Wwox-deficient pup model that survives the window, with wild-type littermates, a PDK inhibitor against vehicle at confirmed brain exposure: three outcome categories for glucose against vehicle, read in wild-type and deficient pups separately: (i) a fall in the deficient pups beyond the wild-type fall, as in the minipig, with lactate and, if measured, alanine falling, which would end the in vivo thread on safety grounds; (ii) a modest fall of similar size in both genotypes, as in adults, which is a liability whose weight depends on baseline glucose and is read against the hypoglycaemic baseline; (iii) no fall or a rise, as in the septic mouse, which is read only together with food intake; either way glucose is the first readout, before any seizure or behavioural endpoint. A negative with unconfirmed brain exposure is uninformative.",
+   "next_measurement": "IT7 P6 2026-10-29: decisive measurement unchanged; read PDK1, LDHA, LDHB, HK2, SLC2A1 and BNIP3 transcripts beside it in the same cells, so the replicated WWOX-deficient human neural contrast that the P3 comparison named as missing is also a second transfer test; no computational ranking selects the compound arm. Cells: PDHA1 Ser293 phosphorylation (and total PDH), PDH activity, and a glucose-tracer experiment into acetyl-CoA, citrate and lactate in WWOX-deficient human neural cells against matched controls, then with a PDK inhibitor against vehicle, reading the genotype-by-inhibitor interaction; a free-DCA exposure and a second PDK inhibitor of different chemistry as orthogonal controls. Animal, only if the cell result shows restraint: blood glucose, lactate, ketones and alanine time course in P10 to P14 Wwox-null pups against wild-type littermates, inhibitor against vehicle, with brain exposure confirmed and feeding recorded, before any seizure endpoint. Human, no contact made: a structured count of WWOX-DEE children who have had metabolic screens, brain MRS or a ketogenic diet, with glucose events and lactate values (denominator), from the natural history; a registry query of the investigational-drug programme for pyruvate dehydrogenase deficiency is not a WWOX measure.",
+   "status": "controversial",
+   "value_added": "Turns the PDK strand from 'parked, safety-narrowed' into a premise test with a stated closing condition; adds the primary seizure-endpoint negative and the randomized paediatric efficacy null to the repository; flags the glucose endpoint as a sign-unresolved liability in a model whose lethal phenotype is hypoglycaemia (the earlier safety framing was nerve-only); records that PDK transcript direction differs between non-neural cells (up) and neural transcript systems (not higher; lower in sign only) and that the human fibroblast paper's own sentence on 'PDK activity' is a wording flag, and corrects the glucose set (the cirrhosis study shows a modest fall in both groups); and records the supplement-class ingredients near the same enzyme step for access work.",
+   "clinical_census": "ClinicalTrials.gov API v2, 2026-10-29, query by intervention 'dichloroacetate': 27 records (congenital lactic acidosis phase 2 and 3, pyruvate dehydrogenase deficiency phase 3 active, an expanded access protocol, MELAS, cancers, type 1 diabetes and hypoglycaemia physiology, healthy-volunteer pharmacokinetics); none in a WWOX, developmental and epileptic encephalopathy or epilepsy population. Earlier census 2026-10-20 found no registered WOREE interventional study. A missing hit does not prove that no study exists."
   },
+  "not_known": [
+   "Whether PDH is phosphorylated (restrained) in any WWOX-deficient neural system, human or mouse, and whether a PDK inhibitor releases it more than in control cells.",
+   "Whether the PDK transcript sign difference between non-neural lines (up) and neural transcript systems (down) is biology or confound.",
+   "The direction of the blood glucose response to a PDK inhibitor in a hypoglycaemic Wwox-deficient pup (pig-like deepening or mouse-sepsis-like reversal), and whether the null's hypoglycaemia is hepatic, feeding-related or seizure-related.",
+   "Whether the seizure-endpoint negative in the adult mouse holds in a developmental model or at confirmed brain exposure (the study is abstract-level and closed).",
+   "Brain lactate and PDH state in WWOX-DEE patients (one MRS report with a confounding variant); any metabolic screen denominator.",
+   "Whether any consumer product contains dichloroacetate or the related cofactor ingredients, and with what content; access is not evidence."
+  ],
+  "evidence_against": [
+   "Transcripts, not activity: the chain is supported at its glycolytic end and without support in its middle (PDK1 not higher, lower in sign only and inside its null, in two human neural systems; PDH activity unchanged in the one human line).",
+   "Seizure-secondary PDH restraint is documented in two non-WWOX epilepsy models, so any restraint found in a seizing WWOX brain would not by itself be WWOX-dependent.",
+   "The one primary seizure test of the lever found in a PDH-restrained model was negative (abstract level); the one randomized paediatric trial moved lactate and no clinical outcome; the one randomized MELAS trial ended early for nerve toxicity.",
+   "Hypoglycaemia is the Wwox-null phenotype and the lever lowers glucose in adults with raised glucose and lowers gluconeogenic precursors; the weight of the glucose datasets points to lowering (pig, adults), with one mouse reversal that coincides with feeding recovery; the sign in a hypoglycaemic young animal is unmeasured.",
+   "Rivals for the raised-lactate observations: supply-side glycolytic overflow, tissue maturity (organoid), line differences, and feeding or seizure state in animals.",
+   "IT7 P3/P1 (exploratory, independently verified): the six-gene module under the glycolytic end of the chain was inconclusive in an independent WWOX-loss contrast (P47T hippocampus, p 0.060, inside its null; PDK1 lower by -0.08, not raised), and a signed network and a WWOX-enriched network showed no added value for ranking compounds on it while a signature route was not detected, not excluded (rho 0.143 against a 0.15 threshold; interval 0.039 to 0.243); dichloroacetate was outside that comparison by design. A computational result, not engagement or efficacy data."
+  ],
+  "bridge_gaps_exposed": [
+   "No drug row is in a context matching a WWOX row, so the bridge forms no sign comparison (UNRESOLVED is a statement about the record, not about the biology).",
+   "The bridge cannot express a group-difference null that sits beside a within-group change (the cirrhosis study: both groups fell, the groups did not differ); the limit lives in the notes.",
+   "The bridge has no field for a lever whose benefit depends on a precondition (PDH restraint); the precondition lives in the card text and the predictions."
+  ],
   "translation": {
-    "pediatric_suitability": "UNKNOWN",
-    "cns_exposure": "UNKNOWN",
-    "interactions": "UNKNOWN",
-    "access": "UNKNOWN",
-    "time_to_benefit": "UNKNOWN",
-    "functional_rescue": "UNKNOWN"
+   "pediatric_suitability": "UNKNOWN",
+   "cns_exposure": "UNKNOWN",
+   "interactions": "UNKNOWN",
+   "access": "UNKNOWN",
+   "time_to_benefit": "UNKNOWN",
+   "functional_rescue": "UNKNOWN"
   },
-  "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
-  "limits": [
-    "Technical comparison is not efficacy, safety or experimental validation.",
-    "Sources and receipt references are retained, not independently verified.",
-    "Shared sources are not independent confirmations; scores are not pooled.",
-    "NO_CHANGE is a reported null effect on that endpoint and context: it is not UNKNOWN (not measured), not evidence of safety, and not proof of futility; a null in a non-comparable cell stays UNRESOLVED.",
-    "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
-  ]
+  "p4_roadmap_fields": {
+   "indication_and_transfer": "Not an indication and not a treatment proposal. The card asks what has to be true for a PDK inhibitor to be a partial-benefit lever in a Wwox-deficient brain (a measured PDH restraint that the inhibitor releases), whether the one seizure endpoint tested in a PDH-restrained epilepsy model was favourable (it was not), and which way the glucose endpoint moves in a setting with documented hypoglycaemia. Nothing measured in a mitochondrial-disease population, an adult epilepsy mouse, a diabetic adult or a large animal is transferred to WWOX-DEE.",
+   "verification_scope": "{\"support_and_replication\": \"WWOX rows: three transcript results (two computational re-analyses, n = 1 and 4 versus 2; one qPCR sentence), one enzyme null, one mouse glucose set from two laboratories. Everything else is another disease, species or compound. Shared sources are not independent confirmations.\", \"formal_checks\": \"check_cards.py; bridge build; abstract level for 11 of the 12 external PubMed sources; PMC9698956 partial body read under the carried receipt; PMC10725694 targeted passages (staged receipt); ClinicalTrials.gov API v2 records read as JSON; openFDA queried; the Baryla 2022 and Obeid 2026 JATS sentences re-read in the root checkout on 2026-10-29; the body artefacts of PMID 25012504 are absent from the root checkout (only an abstract stub is present), so its locators were not re-opened.\", \"card_inferences_owed_audit\": \"The synthesis in 'mechanism' (seizure-secondary PDH restraint as a competing explanation; supply-side overflow), the reading of the glucose-sign contrast across pig, mouse and human studies, the cross-system PDK transcript contrast, and both registered predictions are INFERENZA and owed a blind audit by someone other than the producer.\"}"
+  },
+  "label_lookup": {
+   "status": "NOT_ATTEMPTED"
+  },
+  "card_conventions": [
+   "IPOTESI throughout; the bridge forces it. No ranking, probability or blended index is carried.",
+   "directional_summary compares signs only where target, endpoint and every context dimension match; UNRESOLVED is a statement about the record, not about the biology.",
+   "Every non-WWOX row carries NOT WWOX EVIDENCE and is abstract-level unless its depth says otherwise.",
+   "label_lookup is NOT_ATTEMPTED because the bridge has no network; openFDA was queried by the scientist (no match) and is cited in the identity text.",
+   "No dose, route, schedule or paediatric suitability appears; amounts quoted in the sources are omitted from this card."
+  ],
+  "no_new_reading": "Not true: the Baryla 2022 and Obeid 2026 JATS sentences were re-read, PMC9698956 Methods and Results were re-read, ClinicalTrials.gov JSON and Europe PMC abstracts were read, and PMC10725694 passages were read; one receipt is staged (receipt_staging/scientist-d). The new primary-literature PubMed sources are abstract level.",
+  "leads_needs": [
+   "NEED-PDH-PYRUVATE-AXIS",
+   "NEED-SEIZURE-CONTROL-SYMPTOMATIC",
+   "NEED-LACTATE-LDH"
+  ],
+  "leads_needs_note": "Handoff rule: coverage pairs for this card are listed only for these needs. The card does not offer PDK inhibition as a seizure treatment and does not attach compounds to NEED-SYSTEMIC-GLYCAEMIA-GROWTH (endpoint and confounder by design); the glucose rows are attached to the PDH axis as a safety signal."
+ },
+ "translation": {
+  "pediatric_suitability": "UNKNOWN",
+  "cns_exposure": "UNKNOWN",
+  "interactions": "UNKNOWN",
+  "access": "UNKNOWN",
+  "time_to_benefit": "UNKNOWN",
+  "functional_rescue": "UNKNOWN"
+ },
+ "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
+ "limits": [
+  "Technical comparison is not efficacy, safety or experimental validation.",
+  "Sources and receipt references are retained, not independently verified.",
+  "Shared sources are not independent confirmations; scores are not pooled.",
+  "NO_CHANGE is a reported null effect on that endpoint and context: it is not UNKNOWN (not measured), not evidence of safety, and not proof of futility; a null in a non-comparable cell stays UNRESOLVED.",
+  "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
+ ]
 }
