@@ -20,8 +20,9 @@
     },
     {
      "step": "P2 independent F/C/P review + work order per need",
-     "status": "TODO",
-     "owner": "scientist-a"
+     "status": "DONE",
+     "owner": "scientist-a",
+     "evidence": "priority_review_it6_20261029.md; independent verifier (22 links blind, 19/22 agree; 2 high + 3 medium defects) repaired f2201653; code and source labels agree on 48 links; guard pin 56e4bfd5; no new tag kind"
     }
    ]
   },
@@ -48,8 +49,9 @@
     },
     {
      "step": "P6 broad recovery: new-question cycle",
-     "status": "TODO",
-     "owner": "scientist-a"
+     "status": "DONE",
+     "owner": "scientist-a",
+     "evidence": "broad_recovery_it6_p6_20261029: route-blockade thread, premise missing for WWOX (abstention from new searches), card A02 revised and integrated; verifier 17 statements, defects repaired f82a9064"
     },
     {
      "step": "P7 prevention vs recovery vs time window",
@@ -75,13 +77,15 @@
     },
     {
      "step": "P10 partial benefit beyond ISR-PDH",
-     "status": "TODO",
-     "owner": "scientist-b"
+     "status": "DONE",
+     "owner": "scientist-b",
+     "evidence": "partial_benefit_it6_p10_20261029: glial reactivity; J01 abstention card, needs O4-O10, LD-007; verifier 27 statements, defects repaired 7382f300; integrated"
     },
     {
      "step": "P11 supplement/diet biological link",
-     "status": "TODO",
-     "owner": "scientist-a"
+     "status": "DONE",
+     "owner": "scientist-a",
+     "evidence": "supplement_diet_it6_p11_20261029: extracellular Mg2+ NMDAR gate; hypothesis card P11_magnesium_nmdar_gate; verifier 26 statements, repaired ef632016; integrated"
     },
     {
      "step": "P12 resource comparison + radar + scouting",
