@@ -1,0 +1,616 @@
+{
+  "_comment": "Case definitions for pharm_qualify.py (IT8 P3). Live-derived columns come from the services; the fields below are CURATED statements, each with its source. A literature item is abstract-level unless it says otherwise. Nothing here is medical advice; no dose or individual recommendation.",
+  "cases": [
+    {
+      "id": "Q01",
+      "cards": [
+        "A01_pba_class"
+      ],
+      "needs": [
+        "NEED-WWOX-MISSENSE-PROTEIN-RESCUE"
+      ],
+      "purpose": "broad functional recovery (missense protein recovery lever)",
+      "compounds": [
+        {
+          "label": "phenylbutyrate (sodium salt as tested/labelled; parent acid)",
+          "names": [
+            "sodium phenylbutyrate"
+          ],
+          "ids": [
+            "CHEMBL1746",
+            "CHEMBL1469"
+          ]
+        }
+      ],
+      "target_pattern": "deacetylase|HDAC|Glycogen synthase|Survival motor",
+      "assay_pattern": "HDAC|deacetylase",
+      "fda": [
+        {
+          "generic": "sodium phenylbutyrate",
+          "prefer": "BUPHENYL",
+          "pattern": "C ?max|peak plasma|µg/mL|mcg/mL|mg/dL"
+        }
+      ],
+      "gtopdb": [
+        "phenylbutyrate",
+        "sodium phenylbutyrate",
+        "4-phenylbutyric acid"
+      ],
+      "dgidb": [
+        "PHENYLBUTYRATE",
+        "SODIUM PHENYLBUTYRATE",
+        "4-PHENYLBUTYRIC ACID"
+      ],
+      "selectivity": "HDAC isoforms measured together in one document (class I and IIb in the 10^4 to 10^5 nM range; class IIa above 2,000,000 nM). No chaperone, folding or binding datum for any WWOX or other client exists in ChEMBL, GtoPdb or DGIdb.",
+      "assay_conditions": "Cell experiments in the cards use about 0.5 to 10 mM for about a day (card A01 and CMP-01). ChEMBL cell rows state 1.5 mM for 10 min (HDAC activity, PC3/LNCaP/HeLa), 3 mM for 48 h (SH-SY5Y under ER stress), 92.5 uM for 24 h (mouse forebrain neurons, tubulin acetylation) in their assay descriptions.",
+      "exposure": "US prescription label (see sources): peak plasma 218 ug/mL (about 1.3 mM if expressed as the acid; molar basis of the label figure not stated) after a single 5 g tablet dose in fasting adults. Paediatric suitability for WWOX-DEE UNKNOWN. CSF/brain concentration: UNKNOWN (not found in the label or in the sources queried).",
+      "nervous_system": "HDAC6 tubulin acetylation in mouse primary forebrain neurons at 92.5 uM (ChEMBL row); no WWOX-system datum.",
+      "favourable": "HDAC isoform inhibition is quantified at concentrations reached in plasma at labelled dosing; a chaperone effect is documented only outside WWOX (card A01 assertions).",
+      "contrary": "The same concentrations inhibit class I HDACs, so an effect at the applied levels cannot be assigned to protein folding; wild-type protein rises with the mutant in precedents (card A01).",
+      "unknown": "Folding/chaperone potency; CSF exposure; whether the Q230P-class protein is made then cleared.",
+      "context": "Isogenic WWOX-null human neural line, wild-type titration as function ruler, then lever panel (card A01 next measurement; PROPOSED, not run).",
+      "old_decision": "Experiment design: card A01 lists an HDAC-free arm among several; the concentration window for the PBA arm is the literature range 0.5 to 10 mM with no stated ceiling.",
+      "new_decision": "UNCHANGED as a decision; the numbers quantify it. At a plasma level of about 1.3 mM the HDAC1/2/8 IC50s (64-93 uM) are exceeded about 14-20 fold and HDAC3/6 (240-260 uM) about 5 fold, so a PBA arm cannot be read as a chaperone arm at any concentration of that order; the HDAC-free arm is a condition, not an option. Recorded as the demonstration (b) for this case: the missing datum is a folding/binding measurement of PBA on any client and CSF exposure.",
+      "decision_status": "no_change_data_cannot_change",
+      "changed_datum": "none; missing: chaperone-mechanism potency (searched ChEMBL molecule-first for parent and salt, GtoPdb, DGIdb) and CSF exposure (searched label, PubMed not exhaustive)",
+      "literature": []
+    },
+    {
+      "id": "Q02",
+      "cards": [
+        "A02_proteasome_inhibitor_class"
+      ],
+      "needs": [
+        "NEED-WWOX-MISSENSE-PROTEIN-RESCUE"
+      ],
+      "purpose": "broad functional recovery (missense protein recovery lever)",
+      "compounds": [
+        {
+          "label": "bortezomib",
+          "names": [
+            "bortezomib"
+          ],
+          "ids": [
+            "CHEMBL325041"
+          ]
+        },
+        {
+          "label": "carfilzomib",
+          "names": [
+            "carfilzomib"
+          ],
+          "ids": [
+            "CHEMBL451887"
+          ]
+        },
+        {
+          "label": "marizomib (salinosporamide A)",
+          "names": [
+            "marizomib"
+          ],
+          "ids": [
+            "CHEMBL371405"
+          ]
+        }
+      ],
+      "target_pattern": "[Pp]roteasome|PSMB|Macropain",
+      "assay_pattern": "proteasome|chymotrypsin|PSMB",
+      "fda": [
+        {
+          "generic": "bortezomib",
+          "prefer": "VELCADE",
+          "pattern": "central nervous|blood.brain|CNS|Cmax|C max"
+        }
+      ],
+      "gtopdb": [
+        "bortezomib",
+        "carfilzomib",
+        "marizomib",
+        "salinosporamide A"
+      ],
+      "dgidb": [
+        "BORTEZOMIB",
+        "CARFILZOMIB",
+        "MARIZOMIB"
+      ],
+      "selectivity": "Beta5 (chymotrypsin-like) and immunoproteasome subunits are reported in separate ChEMBL targets and are not merged here; marizomib is described as pan-subunit (abstract of PMID 39974992, a preprint).",
+      "assay_conditions": "Enzymatic and cell-line rows are separated by target name; incubation time is in the assay description where stated and is not structured in ChEMBL.",
+      "exposure": "Oncology agents given parenterally; US label retrieved (see sources). Brain exposure: the bortezomib label was searched for a CNS statement (see label excerpt); marizomib crossing of the blood-brain barrier is asserted in the abstract of PMID 39974992 (preprint, abstract level, not verified against the primary clinical report).",
+      "nervous_system": "Marizomib has a glioblastoma clinical programme (ChEMBL max_phase 3); no neuron or WWOX datum.",
+      "favourable": "Nanomolar potency on human beta5 for all three agents (rows in measures_detail.tsv); a CNS-penetrant member exists in the class.",
+      "contrary": "Toxic windows in all genotypes and a heat-shock confound (card A02, CBS precedent); stabilisation without refolding yields insoluble protein (ASPA precedent).",
+      "unknown": "Route of clearance of the Q230P-class protein (proteasome vs lysosome); neuronal tolerance window.",
+      "context": "Route-first fate experiment with proteasome, lysosome and ERAD arms (card A02; PROPOSED, not run).",
+      "old_decision": "Card A02: class level only, no agent named.",
+      "new_decision": "UNCHANGED. For an in-cell fate experiment potency is not limiting (all three act in the nanomolar range on beta5), so the choice of agent does not change the premise experiment; the agent matters only for a later in-vivo arm, where brain exposure (UNVERIFIED for marizomib) is the discriminator. No agent is named.",
+      "decision_status": "no_change_data_cannot_change",
+      "changed_datum": "none; missing: primary brain-exposure report for marizomib (abstract of a structural preprint only) and any neuron/WWOX viability window",
+      "literature": [
+        {
+          "pmid": "39974992",
+          "doi": "10.1101/2025.01.28.635221",
+          "level": "abstract_only (preprint)",
+          "point": "marizomib covalent 20S inhibitor of all three catalytic subunit pairs; stated ability to cross the blood-brain barrier",
+          "quote": "Its broad-spectrum inhibition of all three proteasome subunits and ability to cross the blood-brain barrier has made it a promising therapeutic candidate for glioblastoma."
+        }
+      ]
+    },
+    {
+      "id": "Q03",
+      "cards": [
+        "E02_ldh_inhibition"
+      ],
+      "needs": [
+        "NEED-LACTATE-LDH"
+      ],
+      "purpose": "partial / bridge benefit (glycolysis-lactate axis)",
+      "compounds": [
+        {
+          "label": "stiripentol (racemate)",
+          "names": [
+            "stiripentol"
+          ],
+          "ids": [
+            "CHEMBL1983350"
+          ]
+        }
+      ],
+      "target_first": [
+        {
+          "label": "human LDHA single-protein target (accession P00338)",
+          "uniprot": "P00338",
+          "target": "CHEMBL4835",
+          "types": [
+            "IC50",
+            "Ki",
+            "Kd"
+          ],
+          "max_rows": 1000,
+          "potent_nM": 100
+        }
+      ],
+      "target_pattern": "GABA|[Ll]actate dehydrogenase|LDH|Unchecked",
+      "assay_pattern": "LDH|lactate dehydrogenase",
+      "fda": [
+        {
+          "generic": "stiripentol",
+          "prefer": "DIACOMIT",
+          "pattern": "mechanism|GABA|lactate|LDH|protein binding|peak plasma|C ?max"
+        }
+      ],
+      "gtopdb": [
+        "stiripentol"
+      ],
+      "dgidb": [
+        "STIRIPENTOL"
+      ],
+      "selectivity": "Stiripentol: GABA-A alpha1beta2gamma2 agonist EC50 46,000 nM (HEK293T, -50 mV, whole cell) versus LDH inhibition 7 percent at 2 mM: the GABA-A action is at least about 40 fold more potent than the LDH action. The mitochondrial complex I action (tens of uM, card E02) is not in ChEMBL.",
+      "assay_conditions": "LDH rows: LDH5 (A4) and LDH1 (B4), cell-free UV-vis, pyruvate substrate, 0.5 and 2 mM stiripentol (document CHEMBL4311969, Bai 2019, Eur J Med Chem, comparator in a chemistry series). Independent: recombinant human LDHA 9.9 percent at 500 uM (Rico-Molina 2024, PMID 39769031, read in IT6/IT7 with receipt FTR-20261026-39769031-01).",
+      "exposure": "Total plasma 17 to 106 uM at about 50 mg/kg/day and free brain 0.2 to 1 uM are from a manufacturer-authored review (secondary, card E02). The US prescription label (see sources) gives no Cmax and states that protein binding is 99 percent and that the anticonvulsant mechanism in humans is unknown, naming GABA-A and cytochrome P450 inhibition as possible mechanisms, not LDH.",
+      "nervous_system": "Brain LDH engagement is asserted by secondary sources citing Sada 2015 (abstract only here); no primary brain datum retrieved.",
+      "favourable": "A mouse seizure suppression with LDH inhibition is reported for Sada 2015 (abstract only, secondary).",
+      "contrary": "Two independent human-enzyme assays give 7 to 9.9 percent inhibition at 0.5 to 2 mM (no fitted IC50); no ChEMBL row of 28 for stiripentol shows an LDH potency; the label itself does not name LDH.",
+      "unknown": "Primary brain concentration; LDH inhibition at tolerated exposure by any readable primary source; lactate in WWOX-deficient neural cells.",
+      "context": "Lactate and LDH activity in WWOX-deficient human neural cells, LDHA and LDHB separately, then a selective LDHA tool at matched exposure (card E02; PROPOSED, not run).",
+      "old_decision": "Work order NEED-LACTATE-LDH (verify a hypothesis): 'is LDH activity or lactate raised in WWOX-deficient neural cells, and does the candidate (stiripentol) reach an inhibitory level at all?', with exposure to be read against the 42 to 500 uM LDH range (a secondary range resting on three sources, one of them second-hand).",
+      "new_decision": "CHANGED (pertinence of the compound). Stiripentol is not carried forward as an LDH-engagement probe: the second half of the question is closed negative on primary data (two independent human-enzyme assays at 0.5 to 2 mM with 7 to 9.9 percent inhibition; no LDH potency in 28 ChEMBL rows; label silent on LDH) and the 42-500 uM range is withdrawn as an exposure target for it. The compound arm of the need becomes a selective LDHA tool (target-first ChEMBL pull lists nanomolar human-LDHA inhibitors) read against stiripentol only as a complex I/GABA-A comparator. The first half (is lactate/LDH raised in WWOX-deficient neural cells) is unchanged and remains the verification.",
+      "decision_status": "changed",
+      "changed_datum": "ChEMBL CHEMBL4311969 LDH5/LDH1 inhibition 7 percent at 2 mM (queried_not_full_read) corroborating PMID 39769031 9.9 percent at 500 uM; US label 2026-04-27 names no LDH mechanism",
+      "literature": []
+    },
+    {
+      "id": "Q04",
+      "cards": [
+        "E03_pdk_inhibition_dca",
+        "I01_pdk_inhibition_dca_premise_seizure_glycaemia"
+      ],
+      "needs": [
+        "NEED-PDH-PYRUVATE-AXIS"
+      ],
+      "purpose": "partial / bridge benefit (PDH axis)",
+      "compounds": [
+        {
+          "label": "dichloroacetic acid (parent)",
+          "names": [
+            "dichloroacetic acid"
+          ],
+          "ids": [
+            "CHEMBL13960"
+          ]
+        },
+        {
+          "label": "sodium dichloroacetate (salt record)",
+          "names": [
+            "sodium dichloroacetate"
+          ],
+          "ids": [
+            "CHEMBL306823"
+          ]
+        }
+      ],
+      "target_first": [
+        {
+          "label": "PDK1 (Q15118)",
+          "uniprot": "Q15118",
+          "target": "CHEMBL4766",
+          "types": [
+            "IC50",
+            "Ki",
+            "Kd"
+          ],
+          "max_rows": 600,
+          "potent_nM": 100
+        },
+        {
+          "label": "PDK2 (Q15119)",
+          "uniprot": "Q15119",
+          "target": "CHEMBL3861",
+          "types": [
+            "IC50",
+            "Ki",
+            "Kd"
+          ],
+          "max_rows": 600,
+          "potent_nM": 100
+        },
+        {
+          "label": "PDK4 (Q16654)",
+          "uniprot": "Q16654",
+          "target": "CHEMBL4141",
+          "types": [
+            "IC50",
+            "Ki",
+            "Kd"
+          ],
+          "max_rows": 600,
+          "potent_nM": 100
+        }
+      ],
+      "target_pattern": "[Pp]yruvate dehydrogenase|PDK|PDHK|HeLa|NCI-H|MG63|L02",
+      "assay_pattern": "PDK|PDHK|pyruvate dehydrogenase|lactate",
+      "fda": [
+        {
+          "generic": "dichloroacetate",
+          "prefer": "",
+          "pattern": "dichloroacetate"
+        }
+      ],
+      "gtopdb": [
+        "dichloroacetate",
+        "dichloroacetic acid"
+      ],
+      "dgidb": [
+        "DICHLOROACETIC ACID",
+        "DICHLOROACETATE",
+        "SODIUM DICHLOROACETATE"
+      ],
+      "selectivity": "Isoform-resolved human recombinant IC50 for dichloroacetic acid (unknown-origin enzymes) in three documents: PDK4 108,000 nM (CHEMBL6121009, 2025) and 727,000 nM (CHEMBL4007440, 2017); PDK2 504,000 nM (2017), 9,000,000 nM (CHEMBL4177695, Sf9 GST-tagged) and above 5,000,000 nM (2025); PDK1 1,025,000 nM (2017), 3,660,000 nM (2025) and 5,100,000 nM (Sf9); PDK3 5,560,000 nM (2017) and above 5,000,000 nM (2025). The spread within one isoform across laboratories (about 7 fold for PDK4, about 18 fold for PDK2) is as large as the spread between isoforms.",
+      "assay_conditions": "Cell-free kinase assays with PDHA1 or myelin basic protein substrates, 20-30 min preincubation (descriptions in measures_detail.tsv); cell rows at 10 mM (lactate production, phospho-PDH Western) and a fibroblast lactate-oxidation EC50 of 130,000 nM (IT7).",
+      "exposure": "Investigational; no marketed US label (openFDA generic-name query returns 404 on 2026-10-29, which is not absence of a label). Dosing studies in children exist (PMID 25079374, 17 children with chronic dosing: plasma drug half-life and trough varied 3 to 6 fold by GSTZ1 haplotype and did not accumulate progressively; abstract states no concentration values, so a numeric Cmax is UNKNOWN here). Brain/CSF concentration UNKNOWN.",
+      "nervous_system": "CSF lactate fall in a cohort (IT7); randomised paediatric trial of congenital lactic acidosis: no improvement in neurological outcome (PMID 16651305 abstract); peripheral neuropathy dose-limiting in adults (card I01).",
+      "favourable": "DCA lowers lactate in cells and in patients (PMID 16651305: blunted postprandial lactate).",
+      "contrary": "No clinical benefit in the controlled paediatric trial; weak enzyme potency (0.1 to 5 mM) so the on-target engagement at any plasma level reached is unestablished; randomised MELAS trial stopped for neuropathy (card I01).",
+      "unknown": "PDH phosphorylation state in WWOX-deficient neural cells; plasma/CSF concentration in the paediatric studies; which PDK isoform dominates in WWOX-deficient neurons.",
+      "context": "PDHA1 Ser293 phosphorylation, PDH activity and glucose tracer, genotype by inhibitor, in WWOX-deficient human neural cells (card I01; PROPOSED, not run).",
+      "old_decision": "Work order NEED-PDH-PYRUVATE-AXIS: genotype-by-inhibitor with DCA as the PDK inhibitor 'free DCA exposure and a second inhibitor of different chemistry as controls'; no potent PDK inhibitor identified.",
+      "new_decision": "CHANGED (pertinence of the compound for the premise experiment; feasibility). DCA enzyme IC50s span 0.1 to above 9 mM across isoforms and laboratories, so a null genotype-by-inhibitor result with DCA at attainable cell concentrations would not distinguish 'PDK does not matter' from 'PDK not inhibited'. The premise experiment therefore takes a nanomolar PDK inhibitor identified by the target-first ChEMBL pull (compounds with IC50 at or below 100 nM on PDK1/PDK2, listed in measures_detail.tsv) as the PROBE and keeps DCA as the clinically known comparator, not the other way round. The compound is named by ChEMBL id only; no purchase, supplier contact or access step is performed.",
+      "decision_status": "changed",
+      "changed_datum": "ChEMBL human PDK isoform IC50 rows for dichloroacetic acid (documents CHEMBL4007440, CHEMBL4177695, CHEMBL6121009) spanning 108,000 to 9,000,000 nM; target-first ChEMBL rows on PDK1, PDK2 and PDK4 with IC50 at or below 100 nM (molecules listed by ChEMBL id in measures_detail.tsv; identity of any named tool compound NOT established here)",
+      "literature": [
+        {
+          "pmid": "25079374",
+          "doi": "10.1002/jcph.371",
+          "level": "abstract_only",
+          "point": "17 children, chronic DCA: kinetics plateaued, 3-6 fold variation by GSTZ1 haplotype",
+          "quote": "chronic DCA exposure did not lead to progressive accumulation of plasma drug concentration; instead, kinetics parameters plateaued"
+        },
+        {
+          "pmid": "16651305",
+          "doi": "10.1542/peds.2005-1226",
+          "level": "abstract_only",
+          "point": "randomised controlled paediatric trial: lactate blunted, no outcome improvement",
+          "quote": "However, it did not improve neurologic or other measures of clinical outcome."
+        }
+      ]
+    },
+    {
+      "id": "Q05",
+      "cards": [
+        "F04_nmdar_intervention_class",
+        "F01_glutamate_receptor_node"
+      ],
+      "needs": [
+        "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR"
+      ],
+      "purpose": "partial / bridge benefit (excitatory gain)",
+      "compounds": [
+        {
+          "label": "memantine (free base; hydrochloride is a child record)",
+          "names": [
+            "memantine"
+          ],
+          "ids": [
+            "CHEMBL807",
+            "CHEMBL1699"
+          ]
+        },
+        {
+          "label": "radiprodil",
+          "names": [
+            "radiprodil"
+          ],
+          "ids": [
+            "CHEMBL182066"
+          ]
+        }
+      ],
+      "target_pattern": "NMDA|GRIN|Glutamate",
+      "assay_pattern": "NMDA|GluN|GRIN",
+      "fda": [
+        {
+          "generic": "memantine",
+          "prefer": "",
+          "pattern": "C ?max|ng/mL|pediatric|children"
+        }
+      ],
+      "gtopdb": [
+        "memantine",
+        "radiprodil"
+      ],
+      "dgidb": [
+        "MEMANTINE",
+        "RADIPRODIL"
+      ],
+      "selectivity": "Memantine: uncompetitive pore blocker, curated against complexes (GRIN1/GRIN2A, GRIN1/GRIN2B, group) not single subunits; ChEMBL action type is NEGATIVE ALLOSTERIC MODULATOR (sign: lowers NMDAR current). Radiprodil: GluN2B-selective antagonist (ChEMBL mechanism on the GRIN1/GRIN2B complex).",
+      "assay_conditions": "Voltage and Mg2+ are not ChEMBL fields; the 840 nM (-60 mV) versus 28,070 nM (-40 mV) memantine pair of IT7 is re-checked below against the document.",
+      "exposure": "Memantine US labels (excerpt in sources): paediatric safety and effectiveness not established. Radiprodil: clinical-stage, paediatric trials selected by gain-of-function variants (IT6 P9). Brain/CSF values UNKNOWN in the label excerpts.",
+      "nervous_system": "d-APV (a tool, not memantine) eliminates spontaneous bursting in the knockout slice (n=5 slices from 3 animals, card F01).",
+      "favourable": "Sign agreement: NMDAR block lowers the d-APV-sensitive bursting in the only WWOX-system row (tool compound).",
+      "contrary": "Memantine failed in two controlled paediatric studies for another indication (label); Mg2+ at 1.3 mM lowers memantine block about 20 fold at rest (abstract-level, IT7).",
+      "unknown": "Isolated NMDAR current in knockout slices; Mg2+- and voltage-matched potency in cortex.",
+      "context": "Isolated NMDAR current under voltage control, then tool concentration-response, pore blocker only afterwards (card F04 step E1; PROPOSED, not run).",
+      "old_decision": "IT7 CMP-07: memantine IC50 840 nM (GluN1/2A, -60 mV) and 28,070 nM at -40 mV in one closed document, a 33 fold shift judged implausible and flagged UNVERIFIED.",
+      "new_decision": "UNCHANGED as a decision; the UNVERIFIED flag is narrowed. Both values are ChEMBL rows of ONE document (CHEMBL6083260, 2024; human GluN1/GluN2A in HEK293, whole-cell patch clamp, glutamate-induced response, -60 mV and -40 mV), so the pair is a curated source statement and not a mix of laboratories; whether ChEMBL transcribed the paper correctly (the paper was not opened) and the Mg2+ and glycine conditions remain UNVERIFIED. The decision that a pore blocker is read only after the isolated current stands, because no ChEMBL potency is matched to the slice's voltage and Mg2+.",
+      "decision_status": "no_change_data_cannot_change",
+      "changed_datum": "none; verified at the row level: ChEMBL rows 840 nM (-60 mV) and 28,070 nM (-40 mV) are from document CHEMBL6083260; missing: potency at the recording voltage and Mg2+ of the source slice, and the paper itself",
+      "literature": []
+    },
+    {
+      "id": "Q06",
+      "cards": [
+        "P11_magnesium_nmdar_gate"
+      ],
+      "needs": [
+        "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR"
+      ],
+      "purpose": "partial / bridge benefit (nutrient; supplement/diet-adjacent)",
+      "compounds": [
+        {
+          "label": "magnesium sulfate (ion as sulfate; parent record)",
+          "names": [
+            "magnesium sulfate"
+          ],
+          "ids": [
+            "CHEMBL3989857",
+            "CHEMBL2021423"
+          ]
+        }
+      ],
+      "target_pattern": ".",
+      "assay_pattern": "magnesium|Mg",
+      "fda": [
+        {
+          "generic": "magnesium sulfate",
+          "prefer": "Hospira",
+          "pattern": "serum magnesium|mg/dL|mEq|CSF|cerebrospinal|pediatric"
+        }
+      ],
+      "gtopdb": [
+        "magnesium",
+        "magnesium sulfate"
+      ],
+      "dgidb": [
+        "MAGNESIUM SULFATE",
+        "MAGNESIUM"
+      ],
+      "selectivity": "Not applicable in ChEMBL: an ion is not curated as a ligand with targets; Mg2+ block is a property of the NMDAR pore with strong voltage dependence (P7 rat neuron figures in card P11, a different cell type).",
+      "assay_conditions": "UNKNOWN from the services; card P11 arithmetic uses IC50 20.9, 53.3 and 173 uM at -90, -70 and -50 mV (borrowed).",
+      "exposure": "US prescription injection label (excerpt in sources) is an obstetric/parenteral product; oral supplements are regulated differently (DSLD name probe: US supplement labels exist for magnesium salts by name, a presence not a frequency). Category is a labelling fact, not a safety statement. CSF response to oral preparations in humans UNKNOWN. The parenteral label (excerpt appended) gives effective anticonvulsant serum concentrations of 2.5 to 7.5 mEq per liter for obstetric use; this is an intravenous product and the figure is not an oral-supplement exposure.",
+      "nervous_system": "Threonate about +30 percent CSF Mg in mouse versus none for oral sulfate (card P11, secondary).",
+      "favourable": "Mechanistic: Mg2+ is the physiological NMDAR gate; a graded rise could lower the unblocked fraction (card P11 arithmetic).",
+      "contrary": "A graded rise removes only part of the residual conductance while d-APV removes all; no WWOX-system Mg2+ row.",
+      "unknown": "Mg2+ block at GluN2A/2B in layer II/III at the slice's Mg2+; serum and CSF Mg in the knockout mouse.",
+      "context": "Graded bath Mg2+ titration with d-APV ceiling in knockout slices (card P11; PROPOSED, not run).",
+      "old_decision": "Card P11 / CMP-08: P3 position, magnesium not reachable by a GRIN target query.",
+      "new_decision": "UNCHANGED, with the search recorded: ChEMBL (both the sulfate and its parent record), GtoPdb and DGIdb hold no Mg2+ potency row for any NMDAR entity, so the datum that could move the position (a Mg2+ block curve at GluN2A/2B in cortical neurons at the slice's voltage) is not in these sources; only a measurement in the slice (card P11 design) supplies it.",
+      "decision_status": "no_change_data_cannot_change",
+      "changed_datum": "none; missing: Mg2+ block potency at cortical GluN2A/2B and CSF Mg response in humans (searched ChEMBL molecule and parent, GtoPdb, DGIdb, openFDA label)",
+      "literature": []
+    },
+    {
+      "id": "Q07",
+      "cards": [
+        "EB-ETX-01",
+        "H01_apinocaltamide_ttype"
+      ],
+      "needs": [
+        "NEED-T-TYPE-CALCIUM",
+        "NEED-SEIZURE-CONTROL-SYMPTOMATIC"
+      ],
+      "purpose": "partial / bridge benefit (the only compound with a WWOX-system seizure row)",
+      "compounds": [
+        {
+          "label": "ethosuximide",
+          "names": [
+            "ethosuximide"
+          ],
+          "ids": [
+            "CHEMBL696"
+          ]
+        },
+        {
+          "label": "apinocaltamide (ACT-709478)",
+          "names": [
+            "apinocaltamide"
+          ],
+          "ids": [
+            "CHEMBL4217292"
+          ]
+        }
+      ],
+      "target_pattern": "T-type|L-type|calcium channel|Cav|P/Q",
+      "assay_pattern": "Cav3|T-type|alpha1",
+      "fda": [
+        {
+          "generic": "ethosuximide",
+          "prefer": "Zarontin",
+          "pattern": "mcg/mL|µg/mL|plasma level|therapeutic|serum"
+        }
+      ],
+      "gtopdb": [
+        "ethosuximide",
+        "apinocaltamide"
+      ],
+      "dgidb": [
+        "ETHOSUXIMIDE",
+        "APINOCALTAMIDE"
+      ],
+      "selectivity": "Apinocaltamide: Cav3.1/3.2/3.3 IC50 6.4/18/7.5 nM (human, HEK293 calcium flux) against Cav1.2 2,410 nM (about 130 to 380 fold), and less than 20 percent inhibition of human Cav1.2/1.3/2.1 at 10 uM in patch clamp (document CHEMBL4177680). Ethosuximide: human alpha1I (Cav3.3) FLIPR IC50 above 5,000,000 nM (document CHEMBL1140166, a screening-format assay). A second ethosuximide row gives IC50 600,000 nM for 'T-type calcium channel (unknown origin)' (document CHEMBL4229462, target unspecified).",
+      "assay_conditions": "Calcium-flux assays (HEK293) for apinocaltamide; the ethosuximide FLIPR value is a censored bound in a different format, so the two numbers are not comparable potencies.",
+      "exposure": "Ethosuximide US label (excerpt appended): average plasma levels within the accepted therapeutic range of 40 to 100 mcg/mL, i.e. about 283 to 708 uM (arithmetic with molecular weight 141.2 g/mol), which brackets the only fitted ChEMBL T-type value (600 uM, target unspecified) and sits far below the FLIPR bound (above 5,000 uM): at therapeutic levels T-type occupancy is at most partial on the data held. Apinocaltamide is a sponsor compound with no label (max_phase 2 in ChEMBL); exposure UNKNOWN.",
+      "nervous_system": "Ethosuximide suppressed PTZ-induced seizure in Wwox-/- mice, not in wild type or heterozygote (Cheng 2020, one experiment, graphical reading, card EB-ETX-01; no drug-by-genotype test).",
+      "favourable": "The only compound with an observed WWOX-system seizure effect; apinocaltamide is a potent, selective T-type tool.",
+      "contrary": "No T-type measurement in the Wwox-null preparation; a class-level progenitor-viability harm signal for T-type blockers in vitro (card).",
+      "unknown": "Whether the ethosuximide sensitivity is T-type mediated; ethosuximide Cav3 potency by patch clamp (the PubMed query for it returned no hit on 2026-10-29; not exhaustive).",
+      "context": "T-type measurement in the Wwox-null preparation plus an apinocaltamide arm (card H01; PROPOSED).",
+      "old_decision": "Work order NEED-T-TYPE-CALCIUM feasibility: 'not known (apinocaltamide is a sponsor compound with no access evidence)'; the question is whether ethosuximide sensitivity reflects T-type involvement.",
+      "new_decision": "UNCHANGED as to kind and position. The data add a quantitative reason why a potent tool is needed: at the labelled therapeutic range ethosuximide sits at about the one fitted T-type value (600 uM, unspecified preparation) and far below the FLIPR bound, so an ethosuximide-only experiment cannot size the T-type occupancy it is meant to test, while apinocaltamide has nanomolar potency on all three Cav3 subtypes. Feasibility of the sponsor compound stays NOT KNOWN (no access step taken).",
+      "decision_status": "no_change_data_cannot_change",
+      "changed_datum": "none; missing: ethosuximide patch-clamp Cav3 potency in a readable primary source and access to apinocaltamide",
+      "literature": []
+    },
+    {
+      "id": "Q08",
+      "cards": [
+        "F03_bumetanide_chloride_gradient"
+      ],
+      "needs": [
+        "NEED-GABA-CHLORIDE-GRADIENT"
+      ],
+      "purpose": "partial / bridge benefit (E_GABA premise)",
+      "compounds": [
+        {
+          "label": "bumetanide",
+          "names": [
+            "bumetanide"
+          ],
+          "ids": [
+            "CHEMBL1072"
+          ]
+        }
+      ],
+      "target_pattern": "Solute carrier family 12|NKCC|cotransport|Na-K-Cl",
+      "assay_pattern": "NKCC|Na-K-Cl|rubidium",
+      "fda": [
+        {
+          "generic": "bumetanide",
+          "prefer": "Cardinal",
+          "pattern": "pharmacokinetic|half-life|protein|neonat|pediatric|brain"
+        }
+      ],
+      "gtopdb": [
+        "bumetanide"
+      ],
+      "dgidb": [
+        "BUMETANIDE"
+      ],
+      "selectivity": "GtoPdb (human, same document PMID 11882915): NKCC2 (kidney-specific) pIC50 6.48 and NKCC1 (basolateral) pIC50 5.60, i.e. about 7.6 fold more potent on the renal transporter. ChEMBL curates the mechanism only on NKCC2 (SLC12A1) and holds NKCC1 as activity rows (HT-29 Rb uptake IC50 1,540 nM; two single-concentration HEK293 readings).",
+      "assay_conditions": "HT-29 rubidium uptake 20 min; HEK293 mbYFPQS chloride-sensor assay single concentration; GtoPdb values from a transporter expression study (original units in the CSV).",
+      "exposure": "Mouse: brain:plasma ratio about 0.015 to 0.02 (PMID 25449033); free brain concentrations reach the NKCC1-inhibitory range only at 10 mg/kg i.v. in mice (PMID 33279441); doses in the human diuretic range do not reach the concentrations needed to inhibit NKCC1 in hippocampal and neocortical neurons (PMID 30248303 abstract). Human CSF value UNKNOWN. Boxed warning present on the US label (fluid and electrolyte depletion). US label: plasma protein binding 94 to 96 percent; neonatal half-life about 6 hours (range up to 15) in small studies.",
+      "nervous_system": "A close derivative that does not inhibit NKCC1 reproduces some CNS effects (PMID 30248303), so CNS effects of bumetanide are not by themselves evidence of NKCC1 action.",
+      "favourable": "Potent NKCC1 inhibition in cells (1.5 to 2.5 uM); NEMO neonatal trial exists (titles only in card).",
+      "contrary": "Poor brain penetration with active efflux; renal transporter more sensitive than NKCC1; no E_GABA measurement in any Wwox system; no transcript hint of a raised NKCC1:KCC2 ratio (card).",
+      "unknown": "E_GABA in Wwox-deficient neurons; human CSF bumetanide.",
+      "context": "Gramicidin perforated-patch E_GABA in Wwox-deficient slices or neurons (card F03 next measurement; PROPOSED).",
+      "old_decision": "Card F03 prediction: if GABA is depolarising, bumetanide 'at a brain-relevant exposure' lowers burst frequency; brain exposure listed as an unknown (cns_exposure UNKNOWN).",
+      "new_decision": "CHANGED (feasibility of the in-vivo arm). The unknown is partly closed from primary mouse pharmacokinetics (brain:plasma about 0.015 to 0.02; free brain in range only at an i.v. dose far above the human diuretic range), so a systemic bumetanide arm cannot be the test of the premise; the premise measurement (E_GABA) is unaffected and is done ex vivo with the compound in the bath, where the NKCC1 IC50 range (1.5 to 2.5 uM) is the exposure target and the renal-selective potency is irrelevant. A negative systemic result is uninformative about NKCC1 and is not to be read as refuting the premise (this already stands in the card prediction).",
+      "decision_status": "changed",
+      "changed_datum": "PMID 25449033 brain:plasma ratio about 0.015-0.02; PMID 33279441 free brain concentration in range only at 10 mg/kg i.v. (abstracts); GtoPdb NKCC1 pIC50 5.60 versus NKCC2 6.48",
+      "literature": [
+        {
+          "pmid": "25449033",
+          "doi": "10.1016/j.ejphar.2014.11.019",
+          "level": "abstract_only",
+          "point": "mouse brain:plasma ratio of bumetanide",
+          "quote": "the brain:plasma ratio (~0.015-0.02) was not altered"
+        },
+        {
+          "pmid": "33279441",
+          "doi": "10.1016/j.yebeh.2020.107616",
+          "level": "abstract_only",
+          "point": "free brain concentration in NKCC1-inhibitory range at 10 mg/kg i.v. in mice",
+          "quote": "With the systemic doses (10 mg/kg i.v.) used, free brain concentrations of bumetanide and torasemide were in the NKCC1-inhibitory concentration range"
+        },
+        {
+          "pmid": "30248303",
+          "doi": "10.1016/j.neuropharm.2018.09.025",
+          "level": "abstract_only",
+          "point": "diuretic-range doses do not reach NKCC1-inhibitory neuronal concentrations; a non-NKCC1-inhibiting derivative shares CNS effects",
+          "quote": "concentrations needed to inhibit NKCC1 in hippocampal and neocortical neurons are not reached when using doses (0.1-0.5 mg/kg) in the range of those approved for use as a diuretic in humans"
+        }
+      ]
+    },
+    {
+      "id": "Q09",
+      "cards": [
+        "G01_lithium_gsk3"
+      ],
+      "needs": [
+        "NEED-SEIZURE-CONTROL-SYMPTOMATIC",
+        "NEED-GSK3B-DEREPRESSION"
+      ],
+      "purpose": "partial / bridge benefit (symptomatic; GSK3 mechanism separate)",
+      "compounds": [
+        {
+          "label": "lithium carbonate",
+          "names": [
+            "lithium carbonate"
+          ],
+          "ids": [
+            "CHEMBL1200826",
+            "CHEMBL1201333"
+          ]
+        }
+      ],
+      "target_pattern": "Glycogen synthase|Inositol|GSK|monophosphatase",
+      "assay_pattern": "GSK|inositol|lithium",
+      "fda": [
+        {
+          "generic": "lithium carbonate",
+          "prefer": "REMEDYREPACK",
+          "pattern": "mEq/L|serum lithium|therapeutic|toxic"
+        }
+      ],
+      "gtopdb": [
+        "lithium"
+      ],
+      "dgidb": [
+        "LITHIUM CARBONATE",
+        "LITHIUM"
+      ],
+      "selectivity": "ChEMBL curates mechanisms on GSK3 (CHEMBL2095188) and IMPase 1 (CHEMBL1786) for the carbonate, but holds no activity row on either target.",
+      "assay_conditions": "UNKNOWN from the services: no potency row in ChEMBL (lithium carbonate: 1 row in Plasmodium falciparum; elemental lithium: none) or GtoPdb.",
+      "exposure": "US prescription label (excerpt appended, effective 2026-04-27): titrate to serum lithium 0.8 to 1.2 mEq/L (acute) and 0.8 to 1 mEq/L (maintenance), i.e. about 0.8 to 1.2 mM for a monovalent ion; boxed warning present (toxicity). Narrow margin. Brain lithium UNKNOWN from these sources. Category: US prescription labelling fact, not a safety statement.",
+      "nervous_system": "Lithium suppressed the provoked seizure in wild type and heterozygote as in the null (Cheng 2020 Figure 7d, card G01): the effect is not genotype-specific.",
+      "favourable": "Seizure suppression in the null (and in controls).",
+      "contrary": "Not genotype-specific; Ser9 dephosphorylation not intermediate in the heterozygote (card).",
+      "unknown": "Direct GSK3 Ki (millimolar-range values are in the literature; none is in the services queried, so none is quoted); brain concentration.",
+      "context": "G01 next measurement (card).",
+      "old_decision": "Card G01: lithium effect not WWOX-specific; GSK3 mechanism attributed in a separate need.",
+      "new_decision": "UNCHANGED, with the search recorded: the potency datum that would test whether the labelled serum range engages GSK3 is absent from ChEMBL (mechanism curated, no activity row), GtoPdb and DGIdb; it is a literature figure not retrieved in this package (UNVERIFIED), so the GSK3-attribution cannot be sized here.",
+      "decision_status": "no_change_data_cannot_change",
+      "changed_datum": "none; missing: a readable primary GSK3/IMPase Ki for lithium and brain lithium concentration (ChEMBL molecule-first on carbonate and elemental lithium, GtoPdb, DGIdb)",
+      "literature": []
+    }
+  ]
+}

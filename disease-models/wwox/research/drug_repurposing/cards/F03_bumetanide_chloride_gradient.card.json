@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "df3d6cec8989eb65da66bf6c1e2ede77e005708f5bac7b47382f6c5c174aa718",
+  "input_sha256": "aa21cc408e1cb2e986e343292f2c59c3cf38786a53fd48799c7f88330fed7311",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -135,7 +135,7 @@
       },
       "time_to_access": "UNKNOWN.",
       "time_to_benefit": "UNKNOWN.",
-      "pharmacology": "NKCC1 activity: one fitted value and two single-concentration readings in ChEMBL (values in the README). Brain exposure not verified here.",
+      "pharmacology": "NKCC1 activity: one fitted value and two single-concentration readings in ChEMBL (values in the README). IT8 P3 2026-10-29: GtoPdb (human, one document) gives pIC50 5.60 for NKCC1 and 6.48 for the kidney transporter, so the drug is about 7.6 fold more potent on the renal target; mouse brain to plasma ratio about 0.015 to 0.02 and efflux at the blood-brain barrier (abstract level); a close derivative that does not inhibit NKCC1 reproduces some CNS effects (PMID 30248303), so a CNS effect of the drug is not evidence of NKCC1 action. A systemic arm is therefore not a test of the premise; the drug is applied in the bath ex vivo, where the NKCC1 range of about 1.5 to 2.5 micromolar is the exposure target.",
       "paediatrics_and_interactions": "Not assessed.",
       "scope_of_checks": {
         "support_and_replication": "One laboratory for every WWOX row used here; no independent replication.",
@@ -147,7 +147,7 @@
         "mandate 2026-10-27 (W2: note the single-experiment ask)"
       ],
       "predictions": "Registered: if GABA is hyperpolarising in the knockout at the age studied, the card closes; if depolarising, bumetanide at a brain-relevant exposure lowers burst frequency, and a negative result at that exposure does not refute the premise.",
-      "next_measurement": "Gramicidin perforated-patch E_GABA in Wwox-deficient versus parental neurons or slices at three ages (including the earliest culturable), NKCC1 and KCC2 protein by immunoblot or immunostaining, GABA puff response; controls: wild type and heterozygote, bicuculline or gabazine sensitivity, an NKCC1 knockdown arm in place of the drug; discriminating result: a depolarised E_GABA specific to the knockout that an NKCC1 manipulation shifts.",
+      "next_measurement": "Gramicidin perforated-patch E_GABA in Wwox-deficient versus parental neurons or slices at three ages (including the earliest culturable), NKCC1 and KCC2 protein by immunoblot or immunostaining, GABA puff response; controls: wild type and heterozygote, bicuculline or gabazine sensitivity, an NKCC1 knockdown arm in place of the drug; the compound is applied in the bath ex vivo and a systemic arm is not used to test the premise (IT8 P3); discriminating result: a depolarised E_GABA specific to the knockout that an NKCC1 manipulation shifts.",
       "status": "abstention",
       "value_added": "Names the premise measurement, corrects the target identity record, adds a transcript-level negative hint.",
       "clinical_census": "Clinical census, ClinicalTrials.gov API v2, 2026-10-20 (drug_repurposing/clinical_census_20261020.md): seven queries returned no registered WOREE interventional study; it answers seven queries against one registry on one date and a missing hit does not prove that no study exists. Not re-run for this card."
@@ -155,7 +155,7 @@
     "not_known": [
       "E_GABA in any Wwox system.",
       "NKCC1 and KCC2 protein levels.",
-      "Brain exposure of bumetanide at a relevant dose."
+      "Human brain or CSF exposure of bumetanide (the mouse brain to plasma ratio is about 0.015 to 0.02, abstract level)."
     ],
     "evidence_against": [
       "No transcript-level hint of a raised NKCC1:KCC2 ratio in the knockout organoid.",
@@ -168,7 +168,7 @@
     ],
     "translation": {
       "pediatric_suitability": "UNKNOWN",
-      "cns_exposure": "UNKNOWN",
+      "cns_exposure": "Mouse primary pharmacokinetics (abstract level, PMID 25449033 and PMID 33279441): brain to plasma ratio about 0.015 to 0.02; free brain concentration in the NKCC1-inhibitory range only at an intravenous dose far above the human diuretic range. Human CSF value UNKNOWN.",
       "interactions": "UNKNOWN",
       "access": "UNKNOWN",
       "time_to_benefit": "UNKNOWN",
@@ -206,7 +206,7 @@
   },
   "translation": {
     "pediatric_suitability": "UNKNOWN",
-    "cns_exposure": "UNKNOWN",
+    "cns_exposure": "Mouse primary pharmacokinetics (abstract level, PMID 25449033 and PMID 33279441): brain to plasma ratio about 0.015 to 0.02; free brain concentration in the NKCC1-inhibitory range only at an intravenous dose far above the human diuretic range. Human CSF value UNKNOWN.",
     "interactions": "UNKNOWN",
     "access": "UNKNOWN",
     "time_to_benefit": "UNKNOWN",
