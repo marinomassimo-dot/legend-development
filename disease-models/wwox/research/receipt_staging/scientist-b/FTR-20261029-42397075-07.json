@@ -1,0 +1,37 @@
+{
+ "event_id": "FTR-20261029-42397075-07",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "42397075",
+  "doi": "10.1093/brain/awag239"
+ },
+ "event_at": "2026-10-29T15:00:00Z",
+ "analysis_at": "2026-10-29T15:00:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-b, IT7 package P0a. Q-B: how many libraries and cells make up the add-back transcriptome? Methods paragraphs 'Library preparation and Single-cell RNA-seq' and 'Single-cell data preprocessing' and the Data availability paragraph read in the bioRxiv v2 layout text (a derived surface used for matching; the preprint is a different version from the published article and is not treated as identical). Question-driven, not a re-reading.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PPR960425_Steinberg2025_bioRxiv-v2.full.pdf",
+ "source_fingerprint": "214a74ffaac665cd11acb7b4036eb8457bf1f6e97bf8d99f34fd8d042ae21268",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "read",
+  "results": "not_read",
+  "figures": "not_read",
+  "tables": "not_present",
+  "discussion": "not_read",
+  "limitations": "not_present",
+  "supplementary": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/census_reconciliation_it7_20261029.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "Passages and figure panels named in the workflow were read at the source; the understated coverage records only what was opened for the stated question. A text layer was used for matching only where the workflow says so; figure panels were opened as images."
+ ],
+ "prior_receipt": "FTR-20261029-42397075-06",
+ "reread_reason": "new_question_outside_prior_coverage"
+}

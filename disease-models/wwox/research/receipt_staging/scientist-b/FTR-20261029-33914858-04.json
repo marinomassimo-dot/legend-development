@@ -1,0 +1,37 @@
+{
+ "event_id": "FTR-20261029-33914858-04",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "33914858",
+  "doi": "10.1093/brain/awab174"
+ },
+ "event_at": "2026-10-29T15:00:00Z",
+ "analysis_at": "2026-10-29T15:00:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-b, IT7 package P0a. Q-C: is GSE158681 the deposit of this paper, which Cre drivers and control genotypes, and what do the supplementary DE tables hold? Data and code availability, the Methods paragraph on conditional models, the Figure 3 legend (n per arm) and the RNA-seq Results paragraph read in the operator-supplied text layer (matching only); the supplement workbook headers and dimensions (File012, File013) were read from the package, the rows were not analysed. Question-driven, not a re-reading.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied.pdf",
+ "source_fingerprint": "113522bb09b42a2dc0252bc1d7b112b66e3a68323ab1348c042f0ac8c8e8fa4c",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "not_present",
+  "discussion": "not_read",
+  "limitations": "not_present",
+  "supplementary": "captions_only"
+ },
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/census_reconciliation_it7_20261029.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "Passages and figure panels named in the workflow were read at the source; the understated coverage records only what was opened for the stated question. A text layer was used for matching only where the workflow says so; figure panels were opened as images."
+ ],
+ "prior_receipt": "FTR-20261003-33914858-03",
+ "reread_reason": "new_question_outside_prior_coverage"
+}
