@@ -55,13 +55,15 @@
     },
     {
      "step": "P5 R5 pharmacological comparison for both research objectives",
-     "status": "TODO",
-     "owner": "scientist-a"
+     "status": "DONE",
+     "owner": "scientist-a",
+     "evidence": "pharmacological_comparison_it7_p5_20261029: 9 records, 21 columns, priority/model position/observed evidence separate, A/B and depth independent, NMDAR/ISR measurements PROPOSED not run; verifier re-derived >=3 cells per row; defects repaired (71b8cd1d)"
     },
     {
      "step": "P6 R6 full-loop demonstration with a null/negative result",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "loop_demonstration_it7_p6_20261029: the P3 computational null (module transfer inconclusive; no method added value) recorded as COMPUTATIONAL_RESULT in 2 needs, 3 cards, work order; positions unchanged by rule; coverage 59 of 710 rows moved (counter-evidence counts only); derived cards/handoff/views regenerated; regressions with mutation tests; independent byte-identical regeneration and own mutations"
     }
    ]
   },
