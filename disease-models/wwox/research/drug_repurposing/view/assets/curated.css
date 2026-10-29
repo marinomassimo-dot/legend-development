@@ -97,3 +97,9 @@ header{padding:12px 0 4px}header h1{font-size:1.3rem;margin:0 0 2px}.subline{mar
 #export-area,.xc{overflow-wrap:anywhere}
 .legendrow{display:flex;flex-wrap:wrap;gap:4px 18px;align-items:baseline;margin:8px 0;font-size:.88rem}.legendrow .lg{display:inline-block;margin:0}.howto{margin:4px 0 8px}
 .cmp th[scope=row]{overflow-wrap:normal;min-width:84px;font-size:.8rem}
+/* P12 fix: legend above the fold at 360x780 and 390x844 */
+.legendrow{margin:4px 0;gap:2px 12px;font-size:.84rem}.legendrow .grp{font-size:.72rem}
+@media (max-width:560px){.btail{display:none}.warnbar{padding:4px 12px}header{padding:8px 0 2px}header h1{font-size:1.1rem}.subline{font-size:.76rem}section#overview{padding-top:8px}#overview h2{margin:0 0 2px;font-size:1rem}}
+/* P12 fix: legend above the fold at 360x780 and 390x844 */
+.legendrow{margin:4px 0;gap:2px 12px;font-size:.84rem}.legendrow .grp{font-size:.72rem}
+@media (max-width:560px){.btail{display:none}.warnbar{padding:4px 12px}header{padding:8px 0 2px}header h1{font-size:1.1rem}.subline{font-size:.76rem}section#overview{padding-top:8px}#overview h2{margin:0 0 2px;font-size:1rem}}

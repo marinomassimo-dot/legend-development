@@ -339,7 +339,7 @@ class Curated(unittest.TestCase):
         self.assertEqual(len(cells), links)
         for cls, letter, word in cells:
             self.assertEqual(cls.upper(), letter)
-            self.assertIn(word, ("favorevole", "controprova", "manca premessa"))
+            self.assertEqual(word, rv.UI_IT["g3_cell_" + letter])
         blob = self.full[self.full.index('id="charts"'):self.full.index('id="navigate"')]
         self.assertNotRegex(blob, r"(?i)pathways?\s*(count|touched)|n_pathway|vie biologiche toccate:\s*\d")
 
@@ -591,7 +591,7 @@ class CuratedBrowser(Browser):
 
     def test_candidate_profile_five_answers_and_scope_labels(self):
         d = self.dom("#c=need:NEED-T-TYPE-CALCIUM")
-        for q in ("1. Perché lo studiamo", "2. Risultato in WWOX", "3. Precedente esterno o previsione", "4. Controprove", "5. Prova mancante", "6. Prossimo passo"):
+        for q in ("1. Perché è in elenco", "2. Risultato in WWOX", "3. Precedente esterno o previsione", "4. Evidenza contraria", "5. Evidenza mancante", "6. Prossimo passo"):
             self.assertIn(q, d)
         self.assertIn("Esperimento WWOX in un sistema DEE", d)
         self.assertIn("Precedente in un'altra malattia", d)
@@ -625,6 +625,59 @@ class CuratedBrowser(Browser):
         self.assertIn("Non si inferisce alcuna sinergia", d)
 
 
+class ItalianFix(unittest.TestCase):
+    """P12 verification fixes: counts, wording, header codes, glossary."""
+
+    @classmethod
+    def setUpClass(cls):
+        if not HAVE_DATA:
+            raise unittest.SkipTest("module data absent")
+        cls.page = rv.build(DR, "shareable")
+        cls.P = embedded(cls.page)
+
+    def test_goal_tiles_count_every_position_link(self):
+        cur = self.P["cur"]
+        n_links = sum(len(c["links"]) for c in cur["cands"])
+        self.assertEqual(n_links, 48)
+        goals = re.findall(r'<div class="goal (?:deep|partial)".*?<span class="mini mut">\((\d+)\)</span></div></div>', self.page, re.S)
+        self.assertEqual(sum(map(int, goals)), n_links)
+        self.assertIn("I 48 legami candidato-bisogno sono contati tutti", self.page)
+
+    def test_no_raw_status_code_in_the_header_and_italian_labels(self):
+        head = self.page[:self.page.index('<nav ')]
+        for code in ("STALE_EXPORT", "PARTIAL", "NOT_FETCHED", "FAILED"):
+            self.assertNotIn(code, head)
+        self.assertIn("esportazione non aggiornata", head)
+        self.assertIn("parziale", head)
+
+    def test_wording_fixes_hold(self):
+        txt = json.dumps(rv.UI_IT, ensure_ascii=False) + json.dumps(rv.POS_IT, ensure_ascii=False)
+        for bad in ("prima di sperare", "Controprova", "controprova", "Prova mancante", "e o nessun", "disegnare un test", "una indicazione", "Perché lo studiamo", "Nessun risultato di assenza"):
+            self.assertNotIn(bad, txt)
+        self.assertIn("prima di considerare l'ipotesi", txt)
+        self.assertIn("progettare un test", txt)
+        self.assertIn("in sperimentazione", rv.UI_IT["acc_experimental"])
+        self.assertIn("ipotesi dal bersaglio, nessun test in WWOX", rv.UI_IT["g3_cell_F3"])
+        self.assertIn("ipotesi, esito WWOX debole", rv.UI_IT["g3_cell_F2"])
+        self.assertIn("prevalentemente USA", rv.UI_IT["g2_h"])
+        self.assertIn("non specifiche di un paese", rv.UI_IT["g2_note"])
+
+    def test_export_explains_internal_tokens_and_does_not_mix_languages(self):
+        self.assertIn("CLAIM 031", rv.UI_IT["ex_lim_4"])
+        self.assertIn("non sono consultabili fuori dal repository", rv.UI_IT["ex_lim_4"])
+        js = (DR / "view/assets/curated.js").read_text(encoding="utf-8")
+        self.assertIn("T.ex_lim_card", js)
+        self.assertEqual(rv.UI_IT["ex_lim_card"].count("inglese"), 1)
+
+    def test_wwox_material_is_kept_out_of_the_external_precedent_section(self):
+        js = (DR / "view/assets/curated.js").read_text(encoding="utf-8")
+        self.assertIn("wwoxAssert", js)
+        self.assertIn("T.q2_other", js)
+
+    def test_readme_has_no_stale_family_count(self):
+        self.assertNotIn("603 families", (DR / "view/README.md").read_text(encoding="utf-8"))
+
+
 class Italian(unittest.TestCase):
     """The physician-facing orientation text is Italian data (UI_IT and its companions), complete for every key the page uses."""
 
@@ -642,7 +695,7 @@ class Italian(unittest.TestCase):
             self.assertIn(k, rv.UI_IT, k)
         for k in ("act_down", "act_up", "act_unresolved", "cons_consistent", "cons_opposed", "cons_direction_unresolved", "dir_restore", "dir_down", "dir_up", "dir_uncertain", "acc_supplement", "acc_OTC", "acc_prescription", "acc_experimental", "acc_unknown/unverified"):
             self.assertIn(k, rv.UI_IT)
-        for k in ("g3_short_F", "g3_short_C", "g3_short_P", "res_favourable", "res_mixed", "res_null", "res_unfavourable", "res_unresolved", "res_none"):
+        for k in ("g3_cell_F1", "g3_cell_F2", "g3_cell_F3", "g3_cell_C1", "g3_cell_C2", "g3_cell_C3", "g3_cell_P1", "g3_cell_P2", "g3_cell_P3", "res_favourable", "res_mixed", "res_null", "res_unfavourable", "res_unresolved", "res_none"):
             self.assertIn(k, rv.UI_IT)
 
     def test_italian_covers_positions_scopes_needs_threads_goals_criteria(self):
@@ -671,7 +724,7 @@ class Italian(unittest.TestCase):
             self.skipTest("module data absent")
         page = rv.build(DR, "shareable")
         head = page[:page.index('id="charts"')]
-        for must in ("Panoramica", "Filoni biologici", "Motivo della priorità", "Tipo di prova osservata nei bisogni", "Lacuna decisiva", "Composti e interventi da studiare",
+        for must in ("Panoramica", "Filoni biologici", "Motivo della priorità", "Tipo di evidenza osservata nei bisogni", "Lacuna decisiva", "Composti e interventi da studiare",
                      "Recupero ampio e duraturo", "Beneficio parziale utile", "Track (campo separato)", "non consiglio medico", "Dettagli tecnici"):
             self.assertIn(must, head)
         # versions, hashes and regeneration live only in the drill-down
@@ -754,6 +807,8 @@ class RealViewports(unittest.TestCase):
             self.assertLessEqual(m["scrollWidth"], m["requested"], (m["scenario"], m["mobile"], m["offenders"]))
             if not m["mobile"]:
                 self.assertEqual(m["innerWidth"], m["requested"])
+            if m["scenario"] == "first_screen" and m["mobile"]:
+                self.assertLess(m["legendBottom"], dict((w, h) for w, h, _ in rv.VIEWPORTS)[m["requested"]], "the F/C/P legend must sit above the fold")
 
 
 if __name__ == "__main__":
