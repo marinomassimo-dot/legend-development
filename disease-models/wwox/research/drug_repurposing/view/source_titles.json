@@ -43,6 +43,16 @@
    "title": "Pathological evidence of vacuolar myelinopathy in a child following vigabatrin administration.",
    "year": "2009"
   },
+  "20152124": {
+   "journal": "Neuron",
+   "title": "Enhancement of learning and memory by elevating brain magnesium.",
+   "year": "2010"
+  },
+  "20435238": {
+   "journal": "Clin Ther",
+   "title": "Three-week combination treatment with ACTH + magnesium sulfate versus ACTH monotherapy for infantile spasms: a 24-week, randomized, open-label, follow-up study in China.",
+   "year": "2010"
+  },
   "21473881": {
    "journal": "Neurotoxicology",
    "title": "Oral toxicity of vigabatrin in immature rats: characterization of intramyelinic edema.",
@@ -63,9 +73,19 @@
    "title": "WW domain-containing oxidoreductase promotes neuronal differentiation via negative regulation of glycogen synthase kinase 3β.",
    "year": "2012"
   },
+  "22406257": {
+   "journal": "Epilepsy Res",
+   "title": "Can magnesium supplementation reduce seizures in people with epilepsy? A hypothesis.",
+   "year": "2012"
+  },
   "24321005": {
    "journal": "Epilepsia",
    "title": "CPP-115, a vigabatrin analogue, decreases spasms in the multiple-hit rat model of infantile spasms.",
+   "year": "2014"
+  },
+  "24614743": {
+   "journal": "J Physiol",
+   "title": "Mg2+ block properties of triheteromeric GluN1-GluN2B-GluN2D NMDA receptors on neonatal rat substantia nigra pars compacta dopaminergic neurones.",
    "year": "2014"
   },
   "25012504": {
@@ -83,6 +103,11 @@
    "title": "Loss of wwox expression in zebrafish embryos causes edema and alters Ca(2+) dynamics.",
    "year": "2015"
   },
+  "25765328": {
+   "journal": "Brain",
+   "title": "Astrocyte uncoupling as a cause of human temporal lobe epilepsy.",
+   "year": "2015"
+  },
   "25765333": {
    "journal": "Lancet Neurol",
    "title": "Bumetanide for the treatment of seizures in newborn babies with hypoxic ischaemic encephalopathy (NEMO): an open-label, dose finding, and feasibility phase 1/2 trial.",
@@ -98,6 +123,11 @@
    "title": "Detection of Mild and Reversible Neurohistopathological Changes in the Brain of Juvenile (Preweaned) Beagle Dogs Treated with Vigabatrin for up to 91 Days.",
    "year": "2015"
   },
+  "26669927": {
+   "journal": "J Neurochem",
+   "title": "Inhibition of Signal Transducer and Activator of Transcription 3 (STAT3) reduces neonatal hypoxic-ischaemic brain damage.",
+   "year": "2016"
+  },
   "27292539": {
    "journal": "Neuron",
    "title": "Oligodendroglial NMDA Receptors Regulate Glucose Import and Axonal Energy Metabolism.",
@@ -107,6 +137,11 @@
    "journal": "Epilepsy Behav Case Rep",
    "title": "A case report on the efficacy of vigabatrin analogue (1S, 3S)-3-amino-4-difluoromethylenyl-1-cyclopentanoic acid (CPP-115) in a patient with infantile spasms.",
    "year": "2016"
+  },
+  "28462453": {
+   "journal": "Neurochem Res",
+   "title": "Preclinical Screening for Treatments for Infantile Spasms in the Multiple Hit Rat Model of Infantile Spasms: An Update.",
+   "year": "2017"
   },
   "28741622": {
    "journal": "Neuropsychopharmacology",
@@ -143,6 +178,11 @@
    "title": "Novel WWOX deleterious variants cause early infantile epileptic encephalopathy, severe developmental delay and dysmorphism among Yemenite Jews.",
    "year": "2019"
   },
+  "31340538": {
+   "journal": "Int J Mol Sci",
+   "title": "Loss of Wwox Causes Defective Development of Cerebral Cortex with Hypomyelination in a Rat Model of Lethal Dwarfism with Epilepsy.",
+   "year": "2019"
+  },
   "31539780": {
    "journal": "Eur J Med Chem",
    "title": "Polygala tenuifolia-Acori tatarinowii herbal pair as an inspiration for substituted cinnamic α-asaronol esters: Design, synthesis, anticonvulsant activity, and inhibition of lactate dehydrogenase study.",
@@ -151,6 +191,11 @@
   "31543760": {
    "journal": "Front Cell Neurosci",
    "title": "The WWOX Gene Influences Cellular Pathways in the Neuronal Differentiation of Human Neural Progenitor Cells.",
+   "year": "2019"
+  },
+  "31806980": {
+   "journal": "Neuropsychiatr Dis Treat",
+   "title": "Treatment Of Magnesium-L-Threonate Elevates The Magnesium Level In The Cerebrospinal Fluid And Attenuates Motor Deficits And Dopamine Neuron Loss In A Mouse Model Of Parkinson's disease.",
    "year": "2019"
   },
   "32000863": {
@@ -187,6 +232,11 @@
    "journal": "Circ Shock",
    "title": "Metabolic effects of sodium dichloroacetate in endotoxemic minipigs.",
    "year": "1986"
+  },
+  "35222658": {
+   "journal": "Iran J Child Neurol",
+   "title": "Role of Magnesium Supplementation in Children with West Syndrome: A Randomized Controlled Clinical Trial.",
+   "year": "2022"
   },
   "35292925": {
    "journal": "Child Psychiatry Hum Dev",
@@ -233,6 +283,11 @@
    "title": "WWOX P47T partial loss-of-function mutation induces epilepsy, progressive neuroinflammation, and cerebellar degeneration in mice phenocopying human SCAR12.",
    "year": "2023"
   },
+  "36967744": {
+   "journal": "Pediatr Investig",
+   "title": "Response to magnesium sulfate and adrenocorticotropic hormone combination therapy for infantile spasms with failed first-line treatments.",
+   "year": "2023"
+  },
   "37319242": {
    "journal": "PLoS One",
    "title": "Examination of two different proteasome inhibitors in reactivating mutant human cystathionine β-synthase in mice.",
@@ -247,6 +302,11 @@
    "journal": "Int J Nanomedicine",
    "title": "Neuroprotective Effects and Therapeutic Potential of Dichloroacetate: Targeting Metabolic Disorders in Nervous System Diseases.",
    "year": "2023"
+  },
+  "38430119": {
+   "journal": "Epilepsia",
+   "title": "Second-line immunotherapy in new onset refractory status epilepticus.",
+   "year": "2024"
   },
   "38443647": {
    "journal": "Adv Ther",
@@ -268,9 +328,24 @@
    "title": "Synthesis and hLDHA Inhibitory Activity of New Stiripentol-Related Compounds of Potential Use in Primary Hyperoxaluria.",
    "year": "2024"
   },
+  "39868255": {
+   "journal": "bioRxiv",
+   "title": "Partial Wwox Loss of Function Increases Severity of Murine Sepsis and Neuroinflammation.",
+   "year": "2025"
+  },
   "40165594": {
    "journal": "Epilepsia",
    "title": "Antiseizure potential of the triple T-type calcium channel blocker ACT-709478 (apinocaltamide) in rodent models.",
+   "year": "2025"
+  },
+  "40481521": {
+   "journal": "Acta Epileptol",
+   "title": "Minocycline in chronic management of febrile infection-related epilepsy syndrome (FIRES): a case series and literature review of treatment strategies.",
+   "year": "2025"
+  },
+  "40614647": {
+   "journal": "Seizure",
+   "title": "Retrospective multicenter study on cryptogenic NORSE/FIRES patients treated with anakinra.",
    "year": "2025"
   },
   "40665325": {
@@ -318,9 +393,19 @@
    "title": "The antiseizure medication stiripentol inhibits mitochondrial complex I by blocking early-stage electron transfer.",
    "year": "2026"
   },
+  "41841337": {
+   "journal": "Epilepsia",
+   "title": "Long-lasting remodeling of astrocytes in an Scna1(+/-) mouse model of Dravet syndrome.",
+   "year": "2026"
+  },
   "42035940": {
    "journal": "Eur J Pharmacol",
    "title": "Mitochondrial dysfunction and senescence accompany glioblastoma cell death triggered by a putative metabolic inhibitor.",
+   "year": "2026"
+  },
+  "42111266": {
+   "journal": "Front Cell Dev Biol",
+   "title": "Pyroptosis in epilepsy: from pathophysiological mechanisms to therapeutic strategies.",
    "year": "2026"
   },
   "42179084": {
