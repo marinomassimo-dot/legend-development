@@ -1,0 +1,38 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261029-32106360-01",
+ "study_id": {
+  "pmid": "32106360",
+  "doi": "10.1002/acn3.50998"
+ },
+ "analysis_at": "2026-10-29T08:06:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-a, mandate IT6 package P9, task branch task/it6-p9; context_policy QUESTION_DRIVEN (held: radiprodil as the clinical-stage GluN2B NAM; the question is what human exposure exists and at what occupancy ceiling, and the age of largest effect in rat pups). Route: Europe PMC fullTextXML for PMC7085998 (open access) saved unmodified in the task worktree files/fulltext (git-ignored). Targeted passages were read: abstract, the clinical-experience and study-design paragraphs (460 adults, 332 pain patients, occupancy ceiling, juvenile toxicology study), and the results and discussion on the three infants. NOT WWOX EVIDENCE.",
+ "evidence_depth": "queried_not_full_read",
+ "source_locator": "files/fulltext/PMID32106360_Auvin2020_PMC7085998.xml",
+ "source_fingerprint": "4a703cd5e11f0db574cc8c79b0d985e4f7512f4b19da0e7dc8225e20eef9aea1",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "supplementary": "not_read",
+  "references": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nmdar_pharmacology_it6_p9_20261029/README.md",
+  "disease-models/wwox/research/drug_repurposing/nmdar_pharmacology_it6_p9_20261029/F04_nmdar_intervention_class.packet.json"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "targeted passages only (abstract; adult experience; occupancy ceiling and juvenile toxicology; the three infants); no section read in full, so depth is queried_not_full_read"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read",
+ "event_at": "2026-10-29T08:06:00Z"
+}
