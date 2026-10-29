@@ -251,6 +251,7 @@
     "unchecked_without_corpus": 92
    },
    "suppressed_by_exemption": {
+    "bibliographic journal name (validated against the journals of the cache)": 4,
     "category labels of catalogue-wide counts": 1
    }
   },
@@ -502,7 +503,7 @@
   },
   "TEXT_PROVENANCE.json": {
    "bytes": 1870,
-   "sha256": "b0f115d1036a59a6f2cf14629f4f8cb79e68babae801715bbd4b3d77273dfc3e"
+   "sha256": "d5ff88bb008ee801ef7ab3d45f4347024617603ed20b7ca542c74d7340e8a8bd"
   },
   "class_b/chembl_cc-by-sa-3.0/CREDIT.txt": {
    "bytes": 1636,
@@ -517,8 +518,8 @@
    "sha256": "d8fe6a3455466783564803428b6318c1c442db6a16dfb97de8a6b7dcf944cc9d"
   },
   "index.html": {
-   "bytes": 2490395,
-   "sha256": "d3784e232a50ff61933b9688570275c69a795a2f73788a50ae115f353cc7feed"
+   "bytes": 2492532,
+   "sha256": "e583f7eda503572ad6a351d81179ce7c12a6d2a0fce16ddacdb4056a7d039ce4"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",

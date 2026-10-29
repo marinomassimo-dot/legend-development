@@ -109,6 +109,8 @@ L1_NAMES = ["state", "n_assoc", "targets", "sources", "readout_only", "why", "pa
 EXEMPT_NAME_HITS = [
     (r"^\.cur\.cands\[\]\.pmids\[\]\.title$", "bibliographic title (validated against the title cache)"),
     (r"^\.cur\.cands\[\]\.brief\.sources\[\]\.title$", "bibliographic title (validated against the title cache)"),
+    (r"^\.cur\.cands\[\]\.pmids\[\]\.journal$", "bibliographic journal name (validated against the journals of the cache)"),
+    (r"^\.cur\.cands\[\]\.brief\.sources\[\]\.journal$", "bibliographic journal name (validated against the journals of the cache)"),
     (r"^\.cur\.evidence_graph\.chains\[\]\.edges\[\]\.src\.title$", "bibliographic title (validated against the title cache)"),
     (r"^\.cur\.needs\[\]\.obs\[\]\.cite$", "bibliographic title (validated against the title cache)"),
     (r"^\.access\.", "category labels of catalogue-wide counts"),
@@ -299,11 +301,14 @@ class Reference:
         self.policy_mismatch = sorted(k for k, v in pol.items() if (v.get("class") == "A") != (k in (self.allow.get("dgidb_claim_sources") or {})) and k not in ("ChEMBL", "ChEMBL curated mechanism"))
         # titles cache for the bibliographic exemption
         self.titles = set()
+        self.journals = set()           # exact journal strings of the title cache: a journal can share a name with a catalogue record (IT8 P5: "Nature")
         tp = dr / rv.TITLES_NAME
         if tp.exists():
             for v in (rv.jload(tp).get("titles") or {}).values():
                 if v.get("title"):
                     self.titles.add(norm(v["title"]))
+                if v.get("journal"):
+                    self.journals.add(v["journal"])
         for f in (dr / "join/pubmed_cache").glob("*.json"):
             try:
                 d = rv.jload(f)
@@ -390,6 +395,8 @@ def scan_strings(items: list[tuple[str, str]], ref: Reference, rep: Report, labe
     id_rx = re.compile(r"[A-Za-z0-9:_-]{5,}")
     tl = sorted((t for t in ref.titles if len(t.split()) >= 4), key=len, reverse=True)
     title_rx = re.compile(r"(?<!\w)(?:" + "|".join(re.escape(t) for t in tl) + r")(?!\w)") if tl else None
+    jl = sorted({norm(j) for j in ref.journals if norm(j)}, key=len, reverse=True)
+    journal_rx = re.compile(r"(?<!\w)(?:" + "|".join(re.escape(j) for j in jl) + r")\s+(?:19|20)\d{2}(?!\w)") if jl else None
     for where, s in items:
         if not isinstance(s, str) or not s:
             continue
@@ -397,12 +404,17 @@ def scan_strings(items: list[tuple[str, str]], ref: Reference, rep: Report, labe
         ns = " ".join(w)
         if title_rx:
             ns = title_rx.sub(" ", ns)   # a bibliographic title is a fact wherever it is printed; it is validated against the cache, then masked
+        if journal_rx:
+            ns = journal_rx.sub(" ", ns)   # "(Journal, 2026)" in a printed citation: a journal of the cache followed by a year is a bibliographic fact, not a compound name
+        if title_rx or journal_rx:
             w = ns.split()
         exempt = next((why for rx, why in EXEMPT_RE if rx.search(where)), None)
         if exempt and "title" in exempt:
             t = strip_cite(s) if where.endswith(".cite") else s
             if norm(t) not in ref.titles:
                 rep.bad("title-not-in-cache", where, s)
+        elif exempt and "journal" in exempt and s not in ref.journals:
+            rep.bad("journal-not-in-cache", where, s)
         done = set()
         for g in grams(w):
             hit = None
