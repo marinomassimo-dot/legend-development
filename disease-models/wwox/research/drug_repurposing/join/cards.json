@@ -11811,7 +11811,7 @@
     "evidence_against": [
      "Three exploratory transcript tests in the one knockout organoid dataset are negative for the chain.",
      "The paper does not name dichloroacetate or any PDH/PDK element.",
-     "IT7 P3/P1 (provisional, exploratory): the six-gene glycolysis/lactate module was inconclusive in an independent WWOX-loss contrast (P47T hippocampus, p 0.060, inside its null; PDK1 lower by -0.08) and no compound-ranking method showed added value; this card's compound was outside that comparison by design. A computational result, not efficacy data."
+     "IT7 P3/P1 (exploratory, independently verified): the six-gene glycolysis/lactate module was inconclusive in an independent WWOX-loss contrast (P47T hippocampus, p 0.060, inside its null; PDK1 lower by -0.08) and the network routes showed no added value for ranking compounds (signature route: not detected, not excluded); this card's compound was outside that comparison by design. A computational result, not efficacy data."
     ],
     "external_sources": [
      {
@@ -13140,7 +13140,7 @@
        "PDK1 transcript is down and the PDK/PDH set is not different from chance in the human knockout organoid (exploratory transcripts).",
        "The sima:GFP reporter (the authors' HIF1alpha homologue) is unchanged in one genotype pair; the authors name Atf4 rather than sima as primarily responsible.",
        "Known neurotoxicity concern for the main compound; the ketogenic hypothesis dominates it on safety.",
-       "IT7 P3/P1 (provisional, exploratory): the six-gene glycolysis/lactate module was inconclusive in an independent WWOX-loss contrast (P47T hippocampus, p 0.060, inside its null; PDK1 lower by -0.08) and no compound-ranking method showed added value; this card's compound was outside that comparison by design. A computational result, not efficacy data."
+       "IT7 P3/P1 (exploratory, independently verified): the six-gene glycolysis/lactate module was inconclusive in an independent WWOX-loss contrast (P47T hippocampus, p 0.060, inside its null; PDK1 lower by -0.08) and the network routes showed no added value for ranking compounds (signature route: not detected, not excluded); this card's compound was outside that comparison by design. A computational result, not efficacy data."
       ],
       "for": [
        "The Lucas-Clarke Ldh rise is the kind of change that could draw pyruvate away from oxidation (logic only)."
@@ -13160,7 +13160,7 @@
      "question_history": [
       "HYP-20260709-05",
       "mandate 2026-10-26 (Lucas-Clarke follow-up)",
-      "IT7 P6 (2026-10-29): the six-gene module did not transfer decisively to an independent WWOX-loss contrast and no compound-ranking method showed added value (loop_demonstration_it7_p6_20261029/README.md; P3 numbers provisional). Status, F/C/P position and the premise are unchanged."
+      "IT7 P6 (2026-10-29): the six-gene module did not transfer decisively to an independent WWOX-loss contrast and the network routes showed no added value and the signature route was not detected, not excluded (loop_demonstration_it7_p6_20261029/README.md; P3 numbers independently verified). Status, F/C/P position and the premise are unchanged."
      ],
      "scope_of_checks": {
       "card_inferences_owed_audit": "Statements marked INFERENZA, including every statement about what a compound would do in WWOX-deficient tissue, are OWED a blind audit by another actor.",
@@ -13906,7 +13906,7 @@
      "time_to_benefit": "UNKNOWN"
     }
    },
-   "input_sha256": "d6b8fa5e5f399f4e5b012f4fd1dae414fe30f5ee268662116a2b06fa97c18d18",
+   "input_sha256": "128c5e898460ec7d3ad8b70b06b0d414fdf06dd136f7fce676ec78ee5e7c24b2",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -48418,7 +48418,7 @@
      "Direct inhibition of mitochondrial complex I by stiripentol, so a metabolic effect is not an LDH effect.",
      "An Ldh abundance rise also accompanies a complex I-reduced, ISR-activated fly model that has neither WWOX nor amyloid (DA-PARS2-LDH-001), so a raised Ldh in a Wwox-reduced fly does not by itself identify an LDH-specific lesion (INFERENZA: possible confounding by mitochondrial or ISR state).",
      "Human lactate in WWOX deficiency reported normal or extremely low.",
-     "IT7 P3/P1 (provisional, exploratory): in an independent WWOX-loss contrast (P47T hippocampus) the LDH isoforms split (LDHA +0.48, LDHB -0.10 against the build direction) and the six-gene module lies inside its null (p 0.060), so the LDHA elevation is not shown to be a reproducible WWOX-loss feature; no method ranked compounds on this module with added value, and stiripentol was outside that comparison by design. A computational result, not engagement data."
+     "IT7 P3/P1 (exploratory, independently verified): in an independent WWOX-loss contrast (P47T hippocampus) the LDH isoforms split (LDHA +0.48, LDHB -0.10 against the build direction) and the six-gene module lies inside its null (p 0.060), so the LDHA elevation is not shown to be a reproducible WWOX-loss feature; the signed network and the WWOX-enriched network showed no added value for ranking compounds on this module and the signature route was not detected, not excluded, and stiripentol was outside that comparison by design. A computational result, not engagement data."
     ],
     "external_sources": [
      {
@@ -48664,7 +48664,7 @@
        "Stiripentol inhibits LDH only weakly in the single-concentration measurements held (none gives a fitted potency, and the one at the highest concentration is the lowest), and it has other targets, including direct inhibition of mitochondrial complex I, that act at lower concentrations; any benefit would not be attributable to LDH.",
        "LDHA in the organoid is as consistent with immaturity as with WWOX loss.",
        "Human lactate in WWOX deficiency is reported normal or extremely low.",
-       "IT7 P3/P1 (provisional, exploratory): in an independent WWOX-loss contrast (P47T hippocampus) the LDH isoforms split (LDHA +0.48, LDHB -0.10 against the build direction) and the six-gene module lies inside its null (p 0.060), so the LDHA elevation is not shown to be a reproducible WWOX-loss feature; no method ranked compounds on this module with added value, and stiripentol was outside that comparison by design. A computational result, not engagement data."
+       "IT7 P3/P1 (exploratory, independently verified): in an independent WWOX-loss contrast (P47T hippocampus) the LDH isoforms split (LDHA +0.48, LDHB -0.10 against the build direction) and the six-gene module lies inside its null (p 0.060), so the LDHA elevation is not shown to be a reproducible WWOX-loss feature; the signed network and the WWOX-enriched network showed no added value for ranking compounds on this module and the signature route was not detected, not excluded, and stiripentol was outside that comparison by design. A computational result, not engagement data."
       ],
       "for": [
        "Ldh RNAi improved climbing in the amyloid-plus-Wwox-reduction fly genotype (once).",
@@ -48686,7 +48686,7 @@
      "question_history": [
       "mandate 2026-10-26 (Lucas-Clarke follow-up)",
       "prediction_isr_ldh_chain_20261026.md",
-      "IT7 P6 (2026-10-29): the six-gene module did not transfer decisively to an independent WWOX-loss contrast and no compound-ranking method showed added value (loop_demonstration_it7_p6_20261029/README.md; P3 numbers provisional). Status, F/C/P position and the premise are unchanged."
+      "IT7 P6 (2026-10-29): the six-gene module did not transfer decisively to an independent WWOX-loss contrast and the network routes showed no added value and the signature route was not detected, not excluded (loop_demonstration_it7_p6_20261029/README.md; P3 numbers independently verified). Status, F/C/P position and the premise are unchanged."
      ],
      "scope_of_checks": {
       "card_inferences_owed_audit": "Statements marked INFERENZA, including every statement about what a compound would do in WWOX-deficient tissue, are OWED a blind audit by another actor.",
@@ -48933,7 +48933,7 @@
      "time_to_benefit": "UNKNOWN"
     }
    },
-   "input_sha256": "f91a273e0cfb9b1aa15b359f9e02b4cd0f9b540c03b68df9bc6428e53cf1897a",
+   "input_sha256": "5fa74c84795dfb18696c19224318ceb6bdd92fb70992a8f78b76a8cbe1cb9bd1",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
