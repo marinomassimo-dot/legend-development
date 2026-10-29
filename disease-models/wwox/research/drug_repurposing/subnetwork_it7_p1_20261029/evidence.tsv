@@ -1,0 +1,15 @@
+evidence_id	kind	pmid	path	anchor	status
+E01	manifest	25012504	disease-models/wwox/research/deepdive_manifests/PMID25012504.json#4	wwox loss raises hif1alpha protein	full-text receipt FTR-20260814-25012504-01
+E02	manifest	25012504	disease-models/wwox/research/deepdive_manifests/PMID25012504.json#2	pdk1	full-text receipt FTR-20260814-25012504-01
+E03	manifest	25012504	disease-models/wwox/research/deepdive_manifests/PMID25012504.json#0	increase in glucose uptake	full-text receipt FTR-20260814-25012504-01
+E04	manifest	25012504	disease-models/wwox/research/deepdive_manifests/PMID25012504.json#5	disappears under hypoxia	full-text receipt FTR-20260814-25012504-01
+E05	manifest	35328751	disease-models/wwox/research/deepdive_manifests/PMID35328751.json#7	lactate is higher in the knockout in all four	manifest entry; figure attestation by hand reading
+E06	manifest	35328751	disease-models/wwox/research/deepdive_manifests/PMID35328751.json#9	two of the four conditions	manifest entry
+E07	manifest	35328751	disease-models/wwox/research/deepdive_manifests/PMID35328751.json#7	no knockout-versus-control bracket	manifest entry; figure attestation by hand reading
+E11	pubmed_abstract	25012504		WWOX, via its first WW domain, physically interacts with HIF1	abstract read via PubMed 2026-10-29; association, not a causal edge
+E12	pubmed_abstract	16517406		inducing pyruvate dehydrogenase kinase 1	abstract read via PubMed 2026-10-29; non-WWOX background, full text not read
+E14	document		disease-models/wwox/research/drug_repurposing/needs/needs.json	extremely low	registry-backed entry DL-BIO-008 quoted in the need; n=1, confounded
+E15	document		disease-models/wwox/research/drug_repurposing/needs/needs.json	human_neural_progenitor_shrna_knockdown	need observation O5; transcript, one library per arm
+E16	document		disease-models/wwox/research/drug_repurposing/hnpc_gse126075_it5_20261029/PRE_ANALYSIS.md	SLC16A1, SLC16A3 per gene	pre-analysis set declaration
+E18	pubmed_abstract	25012504		Wwox-deficient cells exhibited increased HIF1	abstract read via PubMed 2026-10-29; mouse embryonic fibroblasts and cancer cells
+E19	document		disease-models/wwox/research/drug_repurposing/wwox_systems_comparison_it5_20261029.md	HIF1A mRNA flat	comparison paragraph: HIF1A mRNA is flat in organoid and hNPC; HIF1A is stability-controlled
