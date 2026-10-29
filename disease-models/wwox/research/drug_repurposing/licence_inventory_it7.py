@@ -7,6 +7,7 @@ repository, never rewrites history and never changes a ref. Output is determinis
 given `--rev` (the history population is the set of commits reachable from `--rev`).
 
     python3 licence_inventory_it7.py --rev 619418f1 > inventory.txt
+    python3 licence_inventory_it7.py history-privacy --rev 619418f1 > history_privacy.txt   # several minutes
 
 Sections (each prints the command or rule that produced it):
   1  tip, by content family (files, bytes, tabular rows)
@@ -15,7 +16,9 @@ Sections (each prints the command or rule that produced it):
   4  history: binary / document / image files ever committed, tip status, remote reachability
   5  history: versions of the files that embed third-party rows
   6  history: identities in commit metadata (categories and 8-hex digests, never addresses)
-  7  history: blob scan for personal identifiers, machine paths, secrets, licence markers
+  7  history: blob scan for personal identifiers, machine paths, secrets, licence markers (7b: corpus-seed e-mail counts)
+  5b SHA coupling that a history rewrite would have to re-anchor
+  history-privacy (subcommand): the release gate's privacy scan over history-only text blobs, counts and SHAs only
 
 What this does NOT decide: a licence reading is a legal judgement and stays in the
 Markdown report and in `catalog/README.md` ("Licence reconciliation"). Family
@@ -449,6 +452,8 @@ def section6(rev):
             dom = e.lower().rsplit("@", 1)[-1]
             if dom in PERSONAL_DOMAINS:
                 commits[h] = 1
+    nhost = sum(1 for l in git("log", rev, "--format=%ae%x09%ce").splitlines() if any(e.strip().lower().endswith(HOST_SUFFIX) for e in l.split("\t")))
+    print(f"Commits whose author or committer address is host-bound: {nhost} of {git('rev-list', '--count', rev).strip()}.\n")
     refs = [r for r in ("origin/main", "development/main") if git("rev-parse", "--verify", "-q", r, check=False).strip()]
     print(f"Commits with a personal-mailbox author or committer address: {len(commits)}; of those reachable from "
           + ", ".join(f"{r}: {sum(1 for h in commits if subprocess.run(['git','merge-base','--is-ancestor',h,r], cwd=TOP).returncode == 0)}" for r in refs) + ".\n")
@@ -563,13 +568,159 @@ def section0(rev):
     print()
 
 
+def section0b(rev):
+    print("### 0b. Paths ever touched by commits reachable from the rev\n")
+    print(f"Command: `git log {rev} --name-only --format=` , unique; tip = `git ls-files` of the rev. (`--all` would add paths of refs outside the rev and varies with local branches.)\n")
+    ever = {l for l in git("log", rev, "--name-only", "--format=").splitlines() if l}
+    tip = {p for p, _, _ in tip_entries(rev)}
+    bad = [p for p in ever if re.match(r"^(files|staging|_qa|backup|tmp|overlay)/", p)]
+    print(f"paths ever: {len(ever)}; not at the tip: {len(ever - tip)}; under files/, staging/, _qa/, backup/, tmp/, overlay/: {len(bad)}.\n")
+
+
+def section5b(rev):
+    print("### 5b. SHA coupling in tracked text (what a history rewrite would have to re-anchor)\n")
+    print(f"Command: `git grep -I -h -o -E '\\b[0-9a-f]{{40}}\\b' {rev}`, then `git cat-file --batch-check`; descendants by `git merge-base --is-ancestor <start> <commit>`. "
+          "The read-receipt ledger chain and the state-manifest tail anchor are content hashes, not commit hashes; the count of ledger lines holding a 40-hex string is given below.\n")
+    full = sorted({l.split(":")[-1] for l in git("grep", "-I", "-h", "-o", "-E", r"\b[0-9a-f]{40}\b", rev, check=False).splitlines() if l})
+    chk = git("cat-file", "--batch-check", inp="\n".join(full) + "\n").splitlines()
+    commits = [l.split()[0] for l in chk if " commit " in l]
+    unresolved = sum(1 for l in chk if l.endswith("missing"))
+    reach = set(git("rev-list", rev).split())
+    unreach = [c for c in commits if c not in reach]
+    rows = []
+    for start in ("ca506034", "ef20b9ef", "2bd6cde1", "7aeef97c"):
+        full_start = git("rev-parse", start, check=False).strip()
+        n = sum(1 for c in commits if c in reach and subprocess.run(["git", "merge-base", "--is-ancestor", full_start, c], cwd=TOP).returncode == 0) if full_start else 0
+        rows.append((start, n))
+    print(f"distinct 40-hex strings: {len(full)}; resolve to commits: {len(commits)} (not reachable from the rev: {len(unreach)}); resolve to nothing: {unresolved}; other objects: {len(full) - len(commits) - unresolved}.\n")
+    md_table(["rewrite would start at", "referenced commits that would change (descendants, incl. itself)"], rows)
+    seals = git("grep", "-I", "-c", "git_head_at_freeze", rev, check=False).splitlines()
+    nseal = sum(int(l.rsplit(":", 1)[1]) for l in seals if l)
+    short = sorted({l.split(":")[-1] for l in git("grep", "-I", "-h", "-o", "-E", r"\b[0-9a-f]{12}\b", rev, check=False).splitlines() if l})
+    sc = git("cat-file", "--batch-check", inp="\n".join(short) + "\n").splitlines()
+    nshort = sum(1 for l in sc if " commit " in l)
+    ledger = git("show", f"{rev}:disease-models/wwox/registries/fulltext_read_receipts.jsonl", check=False).splitlines()
+    l40 = sum(1 for l in ledger if re.search(r"\b[0-9a-f]{40}\b", l))
+    def n40(path):
+        t = git("show", f"{rev}:{path}", check=False)
+        return len(set(re.findall(r"\b[0-9a-f]{40}\b", t)))
+    print(f"`git_head_at_freeze` occurrences in {len(seals)} files: {nseal}; 12-hex tokens that resolve to commits: {nshort}; "
+          f"ledger lines: {len(ledger)}, of which with a 40-hex string: {l40}; distinct 40-hex strings in `framework/state/state_history.md`: "
+          f"{n40('framework/state/state_history.md')}; in `framework/state/sync_epochs.jsonl`: {n40('framework/state/sync_epochs.jsonl')}.\n")
+
+
+def seed_emails(rev):
+    print("### 7b. Corpus-seed blob versions: e-mail strings\n")
+    path = "disease-models/wwox/registries/corpus_seed_pubmed_20260806.jsonl"
+    print(f"Command: every distinct blob of `{path}` in `git log {rev}`; regex `[A-Za-z0-9._%+-]+@domain` over the raw bytes; records = lines. Values are never printed.\n")
+    blobs = collections.OrderedDict()
+    for l in git("log", rev, "--format=%h %cs", "--", path).splitlines():
+        h, d = l.split()
+        sha = git("rev-parse", f"{h}:{path}", check=False).strip()
+        if sha:
+            blobs.setdefault(sha, (h, d))
+    rx = re.compile(rb"[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+(?:\.[A-Za-z0-9-]+)+")
+    rows = []
+    for sha, data in cat_blobs(list(blobs)):
+        found = rx.findall(data)
+        recs = [l for l in data.split(b"\n") if l.strip()]
+        withm = sum(1 for l in recs if rx.search(l))
+        rows.append((sha[:10], *blobs[sha], len(found), len({f.lower() for f in found}), withm, len(recs)))
+    md_table(["blob", "commit", "date", "occurrences", "distinct", "records with one", "records"], rows)
+
+
+SELF_REF = {"scripts/public_release_gate.py", "scripts/test_public_release_gate.py", "framework/scripts/independent_privacy_scan.py",
+            "scripts/test_independent_privacy_scan.py", "launch/KERNEL_SPEC.md"}
+
+
+def history_privacy(rev):
+    """Run the release gate's own privacy scan over history-only text blobs, outside the repository."""
+    import importlib.util
+    import tempfile
+    from pathlib import Path
+    print("# History privacy scan (generated)\n")
+    print(f"- revision `{git('rev-parse', rev).strip()}`; function: `scan_privacy_and_secrets` of `scripts/public_release_gate.py`, called read-only on a temporary directory "
+          "outside the repository that holds every history-only (blob, path) pair of text type (gate TEXT_SUFFIXES plus .html), at most 30 MB each. "
+          "Binaries, PDFs and larger files are not scanned. Findings are NOT adjudicated: common-word matches of a digest-based detector are possible. "
+          "Only counts, codes and introducing-commit SHAs are printed; no matched text.\n")
+    spec = importlib.util.spec_from_file_location("legend_release_gate", TOP + "/scripts/public_release_gate.py")
+    gate = importlib.util.module_from_spec(spec)
+    sys.modules["legend_release_gate"] = gate
+    spec.loader.exec_module(gate)
+    suffixes = set(gate.TEXT_SUFFIXES) | {".html"}
+    tip_sha = {s for _, s, _ in tip_entries(rev)}
+    objs = [l.split(" ", 1) for l in git("rev-list", "--objects", rev).splitlines() if " " in l]
+    sizes = {}
+    for l in git("cat-file", "--batch-check=%(objectname) %(objecttype) %(objectsize)", inp="\n".join(s for s, _ in objs) + "\n").splitlines():
+        s, t, z = l.split()
+        if t == "blob":
+            sizes[s] = int(z)
+    pairs = sorted({(s, p) for s, p in objs if s in sizes and s not in tip_sha and sizes[s] <= 30_000_000 and "." + p.rsplit(".", 1)[-1].lower() in suffixes})
+    ids = {}
+    with tempfile.TemporaryDirectory(prefix="legend_histscan_") as tmp:
+        root = Path(tmp)
+        by = collections.defaultdict(list)
+        for i, (s, p) in enumerate(pairs):
+            by[s].append((i, p))
+        for s, data in cat_blobs(sorted(by)):
+            for i, p in by[s]:
+                tgt = root / f"h{i:05d}" / p
+                tgt.parent.mkdir(parents=True, exist_ok=True)
+                tgt.write_bytes(data)
+                ids[f"h{i:05d}"] = (s, p)
+        findings = []
+        gate.scan_privacy_and_secrets(root, findings)
+    per = collections.defaultdict(lambda: [0, set()])
+    blk_blobs = {}
+    for f in findings:
+        hid = f.path.split("/", 1)[0]
+        if hid not in ids:
+            continue
+        s, p = ids[hid]
+        k = (f.severity, f.code, p in SELF_REF)
+        per[k][0] += 1
+        per[k][1].add(s)
+        if f.severity == "BLOCK" and p not in SELF_REF:
+            blk_blobs[s] = p
+    allb = {ids[f.path.split("/", 1)[0]][0] for f in findings if f.path.split("/", 1)[0] in ids}
+    ball = {ids[f.path.split("/", 1)[0]][0] for f in findings if f.severity == "BLOCK" and f.path.split("/", 1)[0] in ids}
+    print(f"- scanned (blob, path) pairs: {len(pairs)}; findings: {len(findings)} in {len(allb)} blobs "
+          f"(BLOCK {sum(1 for f in findings if f.severity == 'BLOCK')} in {len(ball)} blobs; REVIEW {sum(1 for f in findings if f.severity == 'REVIEW')}).")
+    print("- gate source, its tests, the independent scanner and `launch/KERNEL_SPEC.md` are listed as self-referential (detector vocabulary).\n")
+    md_table(["severity", "code", "self-referential path", "findings", "blobs"],
+             [(k[0], k[1], "yes" if k[2] else "no", v[0], len(v[1])) for k, v in sorted(per.items(), key=lambda x: (x[0][0], x[0][1], x[0][2]))])
+    # introducing commits for non-self-referential BLOCK blobs
+    intro = collections.defaultdict(set)
+    unm = 0
+    for s in sorted(blk_blobs):
+        lg = git("log", rev, "--format=%h %cs", "--diff-filter=AM", "--find-object=" + s).splitlines()
+        if not lg:
+            unm += 1
+            continue
+        h, d = lg[-1].split()
+        intro[(h, d)].add(s)
+    months = collections.Counter(d[:7] for (_, d) in intro)
+    print(f"Non-self-referential BLOCK blobs: {len(blk_blobs)}; mapped to an introducing commit: {len(blk_blobs) - unm}; not mappable: {unm}; distinct introducing commits: {len(intro)} "
+          f"({', '.join(f'{m}: {n}' for m, n in sorted(months.items()))}); of the blobs, paths still present at the tip: {sum(1 for p in blk_blobs.values() if p in {q for q, _, _ in tip_entries(rev)})}.\n")
+    top = sorted(intro.items(), key=lambda x: (-len(x[1]), x[0]))[:5]
+    print("Largest introducing commits (BLOCK blobs introduced): " + ", ".join(f"{h} {d} ({len(b)})" for (h, d), b in top) + ".\n")
+    print("Introducing commits (short SHA, date): " + "; ".join(f"{h} {d}" for (h, d) in sorted(intro, key=lambda x: (x[1], x[0]))) + "\n")
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--rev", default="HEAD", help="revision to inventory; history = commits reachable from it (default HEAD)")
+    ap.add_argument("command", nargs="?", choices=["inventory", "history-privacy"], default="inventory",
+                    help="inventory (default): sections 0-8; history-privacy: run the release gate's privacy scan over history-only text blobs "
+                         "(read-only, temporary files outside the repository, counts and SHAs only; several minutes)")
     ap.add_argument("--skip-blob-scan", action="store_true", help="skip sections 7 and 8 (they read every historical blob, about 2 GB)")
     a = ap.parse_args()
     rev = a.rev
+    if a.command == "history-privacy":
+        history_privacy(rev)
+        return
     section0(rev)
+    section0b(rev)
     entries = tip_entries(rev)
     tipset = {p for p, _, _ in entries}
     section1(rev, entries)
@@ -578,9 +729,11 @@ def main():
     section3(rev, entries)
     section4(rev)
     section5(rev, pol)
+    section5b(rev)
     section6(rev)
     if not a.skip_blob_scan:
         section7(rev, tipset)
+        seed_emails(rev)
         section8(rev, tipset)
 
 
