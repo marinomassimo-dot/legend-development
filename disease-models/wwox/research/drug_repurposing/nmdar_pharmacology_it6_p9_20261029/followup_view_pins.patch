@@ -1,6 +1,6 @@
 --- a/framework/scripts/test_repurposing_view.py
 +++ b/framework/scripts/test_repurposing_view.py
-@@ -995,10 +995,10 @@
+@@ -1040,10 +1040,10 @@
      def test_goal_tiles_count_every_position_link(self):
          cur = self.P["cur"]
          n_links = sum(len(c["links"]) for c in cur["cands"])
