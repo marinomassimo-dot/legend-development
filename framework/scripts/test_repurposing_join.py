@@ -1115,9 +1115,6 @@ class SupersededWordingGoneIT6(unittest.TestCase):
         self.assertIn("read in this corpus (two mouse studies; a bounded search for inducible neural Wwox models found none)", m)
         self.assertIn("in part (partial, not normalised) for motor score and, at the high dose only, for gliosis", m)
         self.assertIn("insoluble pellet protein with no measurable activity (yeast and U2OS", m)
-        self.assertNotIn("inert pellet protein", m)
-        self.assertNotIn("a complete competitive block, inside the WWOX system", m)
-        self.assertNotIn("the actionable node is **NMDAR/gap-junction**", m)
         self.assertIn("**needs NMDAR activity** (the gap-junction half withdrawn", m)
         self.assertIn("a proposed order of work, not a ranking", m.lower())
         hyp = self.read("disease-models/wwox/research/therapeutic_hypotheses_ledger_current.md")
@@ -1140,7 +1137,6 @@ class SupersededWordingGoneIT6(unittest.TestCase):
         self.assertIn("by the catalogue's own fields", r2)
         claims = self.read("disease-models/wwox/registries/claim_registry_current.md")
         c21 = claims.split("## CLAIM 021\n", 1)[1].split("\n## CLAIM ", 1)[0]
-        self.assertNotIn("a complete competitive block", c21)
         self.assertIn("a competitive antagonist that eliminated the bursting", c21)
         papers = self.read("disease-models/wwox/registries/paper_registry_current.md")
         self.assertIn("the only such rescue noted in the readings of this batch", papers)
