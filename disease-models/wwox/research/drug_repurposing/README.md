@@ -29,7 +29,7 @@ directory.
 ## Current capability — read this first
 
 **The state of the capability now is the newest "Roadmap iteration" section below (currently
-iteration 6, task `ORCH-ROADMAP-IT6-20261029`).**
+iteration 7, task `ORCH-ROADMAP-IT7-20261029`).**
 Every older "measured state" section, the 2026-10-21 stage column and the 2026-10-23 "Stage of the
 capability as a whole" are **historical snapshots**: they stay for provenance, carry the date at
 which they were true, and are not current counts. Numbers that must be current (catalogue size,
@@ -108,7 +108,26 @@ other than its producer (`../locator_audits/2026-10-27_*`). None is therapeutic 
 | Daily scout | **operative**: `framework/scripts/scout_daily.py`, user crontab `20 5 * * *` (05:20 UTC, the only scheduler); silent when nothing changes; report `~/.local/state/legend/scout_daily.json`. 2026-10-27: probes now observe the resource that matters (data card for the MATRIX scores' licence, explorer URL status for TxGNN, latest commit for repositories without releases; availability changes are labelled as such) and a small rotating external search over WWOX gap themes was added (first real search: three opportunities examined, none adopted — decisions in the capability scout log) | `framework/scripts/test_scout_daily.py`, capability scout log | `harness_session_start.py --actor <id>` now prints the radar line (last run, errors, items to examine, pending entries) for plan, junior-harness, the Orchestrator, the integrator and the Scientists; a session lands pending entries with `--append-log` on a task branch |
 | Radar state (2026-10-27, it3) | 20 probes, all baselined (ChEMBL API+FTP, DGIdb data, openFDA NDC date, Open Targets, Every Cure drug list / kg-nodes / kg-edges / scores / code judged separately, SigCom library count, GEO LINCS count, WWOX PubMed); first cron run of the new probes 2026-10-28 05:20 UTC. WATCH: Claude Science connectors, Dryad NMD repurposing list, IxIDN/ORDON, ToolUniverse, TxGNN (reasoned wait, condition unchanged). TRIAL (only if a card needs it): PubChem / BindingDB direct adapters. Read the line with `scout_daily.py --status` | capability scout log, entry 'Radar iteration 3' | a probe error is not 'no change' |
 
-### Roadmap iteration 6 (2026-10-29) — measured state, CURRENT, task `ORCH-ROADMAP-IT6-20261029`
+### Roadmap iteration 7 (2026-10-29) — measured state, CURRENT, task `ORCH-ROADMAP-IT7-20261029`
+
+This section describes the capability now; iteration 6 below is the previous state and differs only where this section says so. Every decisive conclusion was checked against the sources or recomputed by an actor other than its producer (reports in `../locator_audits/2026-10-29_it7_*`), and the verifiers' defects were repaired before integration. A computational result here is never a therapeutic result.
+
+| Package | Where | What it is, measured | Independent check |
+|---|---|---|---|
+| P0a census vs add-back | `census_reconciliation_it7_20261029.md` | four-level table (published / accessible in figures / deposited / adequate); 27 absence statements audited (13 keep, 6 narrow, 8 correct); false global claims corrected (a proteome of WWOX-silenced endothelial cells exists; eIF2a phospho blots exist in a non-neural null line with add-back); canonical wording narrowed through `BATCH_20261019_029` | 14 table rows re-checked at the sources; 5 medium + 5 low repaired |
+| P0b window regression | `test_repurposing_join.py` (`window_overreach`) | an active sentence that presents the tested ages as a demonstrated limit is detected beside the correct text; a historical quote is allowed; mutation-tested | the diagnostic case is now caught |
+| P1 subnetwork | `subnetwork_it7_p1_20261029/` | glycolysis / PDH / lactate question; 30 nodes, 85 typed edges (74 measured), 225 observations over 14 systems; signature SLC2A1 HK2 LDHA LDHB BNIP3 up, PDK1 down; the 0.25 rule passes 1,338 of 8,123 genes, so about 4 of 24 by chance | about 150 observations recomputed; a firewall breach found and removed |
+| P2 usable compounds | `usable_compounds_it7_p2_20261029/` | funnel 44,211 records / 40,268 families -> documented action 16,362 -> M-net 14,125 (corroborated 11,848) -> M-sig neural 1,008; 28,969 records have no structure key (UNKNOWN, not negative); pilot subset 595; bidirectional query with family roll-up | every count recomputed |
+| P3 predictive comparison | `network_comparison_it7_p3_20261029/` | pre-registered before any evaluation value; on 256 families: network rho 0.047, signature 0.143 (not detected, not excluded; minimum detectable effect about 0.157), simple reference -0.085; WWOX-enriched network no different from external-only; module transfer to the P47T deposit inconclusive (p about 0.06); exploratory | rerun byte-identical, independent code agrees |
+| P4 context differences | `context_differences_it7_p4_20261029/` | 14 quantities x 13 contexts, 89 of 182 cells UNKNOWN, about 6 independent models; no patient subgroup supported; the WOREE-vs-SCAR12 organoid difference is a source-reported, confounded hypothesis | 67 of 67 keyed cells recomputed, 17 paper checks; 2 high repaired |
+| P5 pharmacological comparison | `pharmacological_comparison_it7_p5_20261029/` | 9 hypotheses for both research objectives; priority, model position and observed evidence are separate columns; NMDAR and ISR measurements remain PROPOSED | cells re-derived at the sources |
+| P6 full loop | `loop_demonstration_it7_p6_20261029/` | the P3 null recorded as a COMPUTATIONAL_RESULT in 2 needs and 3 cards; positions unchanged by rule; 59 of 710 coverage rows moved (counter-evidence counts only); regenerated join, handoff, work order and views | independent byte-identical regeneration and own mutations |
+| P7 physician view | `view/` (`#section=` routes), `view/DEPLOY.md` | selection funnel with units and denominators, hypotheses with no model position per compound and the reason, the predictive test, context concordance derived by a printed rule; deployment package prepared, publication reserved to the operator | independent browser measurements (360, 390, 768, 1280 px), numbers recomputed; defects repaired |
+| P8 scouting, licences, continuity | `scout_it7_20261029.md`, `licence_inventory_it7_20261029.md` | Reactome adapter and leakage checks TRIAL (not built), ToolUniverse removed after a Reactome trial; licence inventory including history: 198 history blobs with privacy-gate BLOCK hits vs 1 at the tip, an open reserved decision; the hourly control now logs RUNNING checks | verified at the sources; counts recomputed |
+
+Regenerate with the iteration-5 commands below; the cache lives in the root checkout (`LEGEND_CATALOG_CACHE`).
+
+### Roadmap iteration 6 (2026-10-29) — measured state, (previous state), task `ORCH-ROADMAP-IT6-20261029`
 
 This is the section that describes the capability now. Iterations 1-5 below are historical; where a count or a statement differs, this section wins. Every decisive conclusion was checked against the sources by an actor other than its producer (reports in `../locator_audits/2026-10-29_it6_*`); the verifiers' defects were repaired before integration. None is an efficacy claim, and nothing here is medical advice.
 
