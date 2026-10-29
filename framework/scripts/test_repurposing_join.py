@@ -846,12 +846,18 @@ class SupersededWordingGone(unittest.TestCase):
 class SupersededWordingGoneIT5Batch2(unittest.TestCase):
     """BATCH_20261019_026: the iteration-5 results as the module's consumers must now state them.
 
-    Superseded strings pinned: «PDK1 down» for the organoid (it is lower in sign only, inside its
-    single-gene null), «Potency: UNKNOWN» and «no cytosolic client tested» for the phenylbutyrate
-    class (a soluble client was tested; the potency is a bounded, document-dependent statement),
-    the GSEA sign read as depletion, and the family-level-propagation explanation of the
-    Guide-to-Pharmacology rows (the cause is the target id read as an NCBI Gene id).
-    Dated historical notes quote the old wording on purpose and are not listed.
+    What is asserted, and only this, over the listed SURFACES (consumer files, the generated join
+    and views, the latest handoff; dated historical notes are not scanned):
+      1. no sentence about the organoid says PDK1 is down / lower / decreased / reduced unless the same
+         sentence says «sign» (lower in sign only), case-insensitively, plus a few exact old strings;
+      2. no «Potency: UNKNOWN» and no «no cytosolic client (was) tested» (case-insensitive, any spacing);
+      3. no sentence reads the GSEA sign as depletion in the silenced cells unless it negates it
+         (a «deplet» within a sentence of «silenc» with no «not»/«nor»/«no» before it), in the dossier,
+         PAPER 022 and every surface;
+      4. DIS-004 keeps its WITHDRAWN heading and carries an UPDATE «restated, not established» / «NOT reversed»;
+      5. PAPER 022 carries the adjudication, CLAIM 014 keeps its Status, the working model keeps WM_v7.28
+         and does not name this batch; the Guide-to-Pharmacology rows are not explained by family propagation.
+    It does not prove that a paraphrase outside these patterns is absent.
     """
 
     DR = "disease-models/wwox/research/drug_repurposing/"
@@ -876,22 +882,33 @@ class SupersededWordingGoneIT5Batch2(unittest.TestCase):
     def read(self, rel):
         return (ROOT / rel).read_text(encoding="utf-8")
 
+    def sentences(self, text):
+        import re
+        return re.split(r"(?<=[.;])\s+|\n|\\n", text)
+
     def test_organoid_pdk1_is_lower_in_sign_only_everywhere(self):
+        import re
+        pdk = re.compile(r"PDK1\s+(?:is\s+|was\s+|are\s+)?(?:down|lower|decreased|reduced)\b", re.I)
         for rel in self.SURFACES:
             text = self.read(rel)
             for old in ("In the human knockout organoid PDK1 is DOWN", "PDK1 down in human knockout organoid",
                         "glycolytic targets up; PDK1 down", "PDK1 is LOWER, PDHA1"):
                 self.assertNotIn(old, text, (rel, old))
+            for sent in self.sentences(text):
+                if "organoid" in sent.lower() and pdk.search(sent):
+                    self.assertIn("sign", sent.lower(), (rel, sent[:200]))
         packet = self.read(self.DR + "cards/E03_pdk_inhibition_dca.packet.json")
         self.assertIn("lower in sign only", packet)
         needs = self.read(self.DR + "needs/needs.json")
         self.assertIn("PDK1 lower in sign only", needs)
 
     def test_phenylbutyrate_class_wording_no_longer_closed(self):
+        import re
+        closed = re.compile(r"no\s+cytosolic\s+client\s+(?:was\s+|has\s+been\s+)?tested", re.I)
         for rel in self.SURFACES:
             text = self.read(rel)
             self.assertNotIn("Potency: UNKNOWN", text, rel)
-            self.assertNotIn("no cytosolic client tested", text.lower().replace("**", ""), rel)
+            self.assertIsNone(closed.search(text.replace("**", "")), rel)
         ledger = self.read("disease-models/wwox/research/dismissal_ledger_current.md")
         block = ledger.split("### DIS-004", 1)[1].split("\n### DIS-005", 1)[0]
         self.assertIn("WITHDRAWN", ledger.split("### DIS-004", 1)[1].splitlines()[0])
@@ -900,13 +917,22 @@ class SupersededWordingGoneIT5Batch2(unittest.TestCase):
         self.assertIn("NOT reversed", block)
 
     def test_gsea_sign_is_read_as_the_silenced_end_not_as_depletion(self):
-        dossier = self.read("disease-models/wwox/research/fulltext_dossiers/PMID31543760.md")
-        self.assertNotIn("negative enrichment, in the silenced line", dossier)
-        self.assertIn("silenced (shWWOX) end", dossier)
+        import re
+        dep = re.compile(r"deplet\w*[^.;\n]{0,100}silenc|silenc\w*[^.;\n]{0,100}deplet", re.I)
+        negated = re.compile(r"\b(?:not|nor|no|never)\b[^.;\n]{0,40}$", re.I)
+        dossier = "disease-models/wwox/research/fulltext_dossiers/PMID31543760.md"
         paper = self.read("disease-models/wwox/registries/paper_registry_current.md")
-        block = paper.split("## PAPER 022", 1)[1].split("\n## PAPER 023", 1)[0]
-        self.assertIn("NOT depleted in the silenced cells", block)
-        self.assertIn("ONE library per arm", block)
+        p022 = paper.split("## PAPER 022", 1)[1].split("\n## PAPER 023", 1)[0]
+        scanned = [(rel, self.read(rel)) for rel in self.SURFACES + [dossier]] + [("PAPER 022", p022)]
+        for rel, text in scanned:
+            for m in dep.finditer(text):
+                self.assertIsNotNone(negated.search(text[max(0, m.start() - 60):m.start()]) or negated.search(m.group(0)[:0]) or re.search(r"\b(?:not|nor)\b", m.group(0), re.I),
+                                     (rel, m.group(0)[:160]))
+        d = self.read(dossier)
+        self.assertNotIn("negative enrichment, in the silenced line", d)
+        self.assertIn("silenced (shWWOX) end", d)
+        self.assertIn("NOT depleted in the silenced cells", p022)
+        self.assertIn("ONE library per arm", p022)
 
     def test_claim_014_status_and_working_model_version_are_untouched(self):
         claims = self.read("disease-models/wwox/registries/claim_registry_current.md")
