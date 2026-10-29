@@ -1,0 +1,38 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261029-41489401-01",
+ "study_id": {
+  "pmid": "41489401",
+  "doi": "10.1002/epi.70090"
+ },
+ "analysis_at": "2026-10-29T08:06:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-a, mandate IT6 package P9, task branch task/it6-p9; context_policy QUESTION_DRIVEN (held: the F01 reading of this paper, 14 of 19 against 3 of 15; the question is which individuals worsened and whether variants of one gene had opposite outcomes). Route: Europe PMC fullTextXML for PMC13075606 saved unmodified in the task worktree files/fulltext (git-ignored). Targeted passages were read: abstract and the paragraphs on seizure-frequency and EEG worsening (individuals 10, 25, 32; 14, 24, 32) and the GRIN2D variant shared by individuals 32, 33 and 34. Tables, supplements and the rest of the Results were not re-read; the earlier reading recorded in card F01 is unchanged. NOT WWOX EVIDENCE.",
+ "evidence_depth": "queried_not_full_read",
+ "source_locator": "files/fulltext/PMID41489401_Karnstedt2026_Epilepsia_PMC13075606.xml",
+ "source_fingerprint": "250da51ddd131541048f205e33c1343f1c8aee193e649cb7e7d0bdb3ba495656",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "not_read",
+  "figures": "not_read",
+  "tables": "not_read",
+  "discussion": "not_read",
+  "limitations": "not_read",
+  "supplementary": "not_read",
+  "references": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/nmdar_pharmacology_it6_p9_20261029/README.md",
+  "disease-models/wwox/research/drug_repurposing/nmdar_pharmacology_it6_p9_20261029/F04_nmdar_intervention_class.packet.json"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "targeted passages only (abstract; worsening paragraphs; the domain-specific results 12/17 behaviour, 6/11 EEG, 6/12 development, 7/18 against 2/10 seizure-frequency reduction p .417; the shared GRIN2D variant and the age-at-treatment-start explanation); no section read in full, so depth is queried_not_full_read"
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read",
+ "event_at": "2026-10-29T08:06:00Z"
+}

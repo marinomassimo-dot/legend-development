@@ -3,7 +3,7 @@
   "field_provenance": {
    "^\\.(funnel|matrix_summary|dispositions|observations|level_defs|leads_note|pair_unit|ranking_note|no_probability|schema|source|exploration_flagged|has_distinct|orphan_priorities)(\\.|\\[\\]|$)": {
     "class": "OWN",
-    "values": 169,
+    "values": 170,
     "why": "counts and definitions computed from the module's own outputs"
    },
    "^\\.access\\.": {
@@ -13,27 +13,27 @@
    },
    "^\\.card_leads\\[\\]\\.": {
     "class": "OWN",
-    "values": 106,
+    "values": 126,
     "why": "lead dispositions attached to cards"
    },
    "^\\.cur\\.(needs|threads|groups|gaps|goals|tracks|scopes|group_note|meta)(\\.|\\[\\]|$)": {
     "class": "OWN",
-    "values": 1508,
+    "values": 1522,
     "why": "needs, threads and positions written in this repository"
    },
    "^\\.cur\\.cands\\[\\]\\.": {
     "class": "OWN",
-    "values": 4935,
+    "values": 5192,
     "why": "card text and computed positions (provenance of the prose: see text audit)"
    },
    "^\\.cur\\.cands\\[\\]\\.(pmids\\[\\]\\.(id|role)|dois\\[\\])$": {
     "class": "BIBLIO",
-    "values": 367,
+    "values": 391,
     "why": "PMID / DOI of a cited work"
    },
    "^\\.cur\\.cands\\[\\]\\.access\\[\\]$": {
     "class": "SRC_A",
-    "values": 13,
+    "values": 15,
     "why": "access category stated from openFDA NDC or an absence statement"
    },
    "^\\.cur\\.cands\\[\\]\\.chembl\\[\\]$": {
@@ -43,7 +43,7 @@
    },
    "^\\.cur\\.cands\\[\\]\\.pmids\\[\\]\\.(title|journal|year)$": {
     "class": "BIBLIO",
-    "values": 543,
+    "values": 579,
     "why": "title, journal, year of a cited work (bibliographic facts)"
    },
    "^\\.cur\\.footer\\.": {
@@ -53,12 +53,12 @@
    },
    "^\\.cur\\.needs\\[\\]\\.obs\\[\\]\\.(cite)$": {
     "class": "BIBLIO",
-    "values": 80,
+    "values": 81,
     "why": "title, journal, year of a cited work"
    },
    "^\\.cur\\.needs\\[\\]\\.obs\\[\\]\\.pmid$": {
     "class": "BIBLIO",
-    "values": 80,
+    "values": 81,
     "why": "PMID of the observation source"
    },
    "^\\.excluded_detail\\[\\]\\.(id|name|src)$": {
@@ -88,17 +88,17 @@
    },
    "^\\.needs\\[\\]\\.": {
     "class": "OWN",
-    "values": 1639,
+    "values": 1648,
     "why": "needs records written in this repository"
    },
    "^\\.pairs\\[\\]\\.(l2|l3|l4|x|n|r)(\\.|\\[\\]|$)": {
     "class": "OWN",
-    "values": 22506,
+    "values": 22542,
     "why": "levels 2-4, indices: computed from cards and needs"
    },
    "^\\.pairs\\[\\]\\.l1\\.(state|n_assoc|readout_only|why|stale)$": {
     "class": "OWN",
-    "values": 8540,
+    "values": 8550,
     "why": "level-1 state, association count and note computed by the coverage tool"
    },
    "^\\.pairs\\[\\]\\.l1\\.(targets|pathway)\\[\\]$": {
@@ -113,12 +113,12 @@
    },
    "^\\.pairs\\[\\]\\.l1\\.withheld$": {
     "class": "COUNT",
-    "values": 1708,
+    "values": 1710,
     "why": "number of association rows withheld by the allowlist"
    },
    "^\\.pairs\\[\\]\\.p\\.": {
     "class": "OWN",
-    "values": 11233,
+    "values": 11299,
     "why": "priority criteria computed by the coverage tool"
    },
    "^\\.pairs\\[\\]\\.p\\.cr\\.dir\\[\\]\\[\\]$": {
@@ -128,12 +128,12 @@
    },
    "^\\.rows\\[\\]\\.(dup|rec|tr|w)$": {
     "class": "COUNT",
-    "values": 5971,
+    "values": 5976,
     "why": "record counts of a catalogue row"
    },
    "^\\.rows\\[\\]\\.(id|kind)$": {
     "class": "ID",
-    "values": 3004,
+    "values": 3008,
     "why": "catalogue row identifier and row kind"
    },
    "^\\.rows\\[\\]\\.acc\\[\\]$": {
@@ -143,17 +143,17 @@
    },
    "^\\.rows\\[\\]\\.cards\\[\\]\\.(id|att|path)$": {
     "class": "OWN",
-    "values": 132,
+    "values": 147,
     "why": "card attachment (in-page anchor)"
    },
    "^\\.rows\\[\\]\\.name$": {
     "class": "ROWNAME",
-    "values": 1502,
+    "values": 1504,
     "why": "card name (own text), opaque identifier, or a class-A name source"
    },
    "^\\.strings\\[\\]$": {
     "class": "OWN",
-    "values": 46,
+    "values": 47,
     "why": "string table of repeated coverage-tool sentences"
    },
    "^\\.tech\\.": {
@@ -168,15 +168,15 @@
    }
   },
   "identifiers": {
-   "CAT": 1484,
-   "CHEMBL": 259,
+   "CAT": 1485,
+   "CHEMBL": 260,
    "DOI": 5,
    "HGNC": 6,
    "NCT": 0,
    "PMID": 15
   },
   "links": {
-   "distinct_hrefs": 47,
+   "distinct_hrefs": 48,
    "external_public": 6,
    "hosts": [
     "civicdb.org",
@@ -186,12 +186,12 @@
     "www.genenames.org",
     "www.nlm.nih.gov"
    ],
-   "internal_anchors": 41
+   "internal_anchors": 42
   },
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 1530,
+    "forbidden-name": 1576,
     "forbidden-wording": 10
    },
    "co_attested_wording": [
@@ -266,25 +266,25 @@
   }
  ],
  "comparison": {
-  "card_actions_listed_full": 29,
+  "card_actions_listed_full": 39,
   "card_actions_listed_shareable": 0,
   "card_fields_that_differ_count_of_cards": {
-   "access": 6,
+   "access": 7,
    "access_text": 7,
-   "actions": 7,
+   "actions": 8,
    "asserts": 2,
-   "card_path": 35,
+   "card_path": 36,
    "country": 4,
    "for": 2,
    "identity": 7,
-   "links": 6,
+   "links": 7,
    "mechanism": 1,
    "next_full": 2,
    "novelty": 2,
    "pharm": 2,
    "reopen": 1
   },
-  "cards": 35,
+  "cards": 36,
   "curated_sections": {
    "cands": "differs",
    "footer": "differs",
@@ -301,8 +301,8 @@
   "excluded_rows_with_names_full": 3,
   "excluded_rows_with_names_shareable": 0,
   "needs": 22,
-  "pairs_total": 1708,
-  "pairs_with_status_class_full": 679,
+  "pairs_total": 1710,
+  "pairs_with_status_class_full": 680,
   "pairs_with_status_class_shareable": 0,
   "pairs_with_target_list_full": 1342,
   "pairs_with_target_list_shareable": 12,
@@ -331,14 +331,14 @@
    "strings": "identical",
    "tech": "differs"
   },
-  "rows_named_full": 1490,
-  "rows_named_shareable_card_names_only": 37,
-  "rows_total": 1502,
-  "rows_with_access_categories_full": 1479,
+  "rows_named_full": 1492,
+  "rows_named_shareable_card_names_only": 40,
+  "rows_total": 1504,
+  "rows_with_access_categories_full": 1480,
   "rows_with_access_categories_shareable": 11,
-  "rows_with_per_row_status_or_modality_full": 1502,
+  "rows_with_per_row_status_or_modality_full": 1504,
   "rows_with_per_row_status_or_modality_shareable": 0,
-  "target_symbols_listed_full": 1794,
+  "target_symbols_listed_full": 1861,
   "target_symbols_listed_shareable": 12
  },
  "counts_only_sources": [
@@ -404,12 +404,12 @@
   "view_schema": "legend.wwox.repurposing_view/2"
  },
  "embedded_field_classes": {
-  "BIBLIO": 1070,
-  "COUNT": 7742,
-  "ID": 3040,
-  "OWN": 50884,
-  "ROWNAME": 1502,
-  "SRC_A": 89,
+  "BIBLIO": 1132,
+  "COUNT": 7749,
+  "ID": 3044,
+  "OWN": 51313,
+  "ROWNAME": 1504,
+  "SRC_A": 91,
   "SRC_META": 244,
   "UI": 507
  },
@@ -446,7 +446,7 @@
  "files": {
   "COMPARISON.md": {
    "bytes": 6028,
-   "sha256": "e129082352baf69827a1f65183c7bf1c78ffd2912e802dbe361b1f05e29525cf"
+   "sha256": "0b844d8e4dbc2b0b255de2fe72d8ee920d029b60b69b36db7665f67a1af6d2d5"
   },
   "LICENSES/CC-BY-4.0.txt": {
    "bytes": 18657,
@@ -466,7 +466,7 @@
   },
   "NOTICE.md": {
    "bytes": 10871,
-   "sha256": "ccdf3a8a0975ec467422e14410f2cefc18f2b15ee46bc1629fadabf387fb92d7"
+   "sha256": "6e2bf4deb5937e941eaf95e8000c242c42993c1c75fba6df0043a3974f4420f8"
   },
   "README.md": {
    "bytes": 4443,
@@ -489,8 +489,8 @@
    "sha256": "d8fe6a3455466783564803428b6318c1c442db6a16dfb97de8a6b7dcf944cc9d"
   },
   "index.html": {
-   "bytes": 1976062,
-   "sha256": "0684aa40875618f06ecec180092d69eebea90bb314fdaa988fe1c91ec16cf209"
+   "bytes": 2016624,
+   "sha256": "8f57591b636e5406aff7684f2de4e4ebe4734234bbf7003715b9e60d0be54802"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",
@@ -531,7 +531,7 @@
   "card_sentence_redactions": 12,
   "lead_field_redactions": 11,
   "pair_status_rule": "pairs[].p.cr.pha[1] (status classes of the row) is dropped in the shareable build: a status class derives from ChEMBL max_phase, DGIdb approved flags, MATRIX and openFDA together, and the build does not re-derive a class-A-only status per row.",
-  "pairs_status_class_dropped": 679,
+  "pairs_status_class_dropped": 680,
   "repository_file_names_described": 53,
   "rule": "IT5 P13 fix. Own analysis stays in the shareable build: a conclusion at the level of a need, a class or a card subject, in our own words, short, attributed to a published work. Withheld: (1) a sentence that states a compound-target(-action) pair together with its database of origin when the pair is asserted only by a class-B/C catalogue source; (2) a compound named in prose whose only provenance in the repository is a class-B/C catalogue row (it appears in no cited full text and is not a card subject); (3) a per-compound status, phase, approval or access statement attributed to a class-B/C source; (4) repository file names, which cannot be used outside the repository. The replacement keeps the research conclusion and names the withheld source class with the phrase in withheld_phrase. The FULL build keeps everything. The audit enforces (1) and (2) by derivation from the catalogue, (3) and (4) by pattern, and every redaction below must match exactly once or more: a stale redaction fails the build.",
   "withheld_phrase": "dato di una fonte non inclusa in questa versione"

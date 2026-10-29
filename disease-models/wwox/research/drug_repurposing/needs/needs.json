@@ -2487,19 +2487,57 @@
      "pmid": "34634460",
      "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
      "locator_status": "MANIFEST"
+    },
+    {
+     "id": "O8",
+     "statement": "The d-APV arm of the burst experiment is 5 slices from 3 animals (51 bursts; the paper's tests are on bursts) at postnatal day 13 to 17, d-APV 50 uM; the d-APV bar carries no significance marker in Fig 3D (bursts absent, no variance). The baseline burst frequency is printed as 2.29 [1.1 to 4.2] per minute in the main text and as 0.84 [0.57 to 1.53] per minute in Supplementary Table S1 (119 bursts, 18 slices, 9 animals); that both refer to the same bursts is an inference, not a statement of the paper.",
+     "model_type": "mouse_neuron_specific_knockout",
+     "species": "mouse",
+     "genotype": "Synapsin-Cre Wwox knockout versus control",
+     "tissue_or_cells": "layer II/III neocortex",
+     "age_stage": "postnatal day 13 to 17",
+     "comparison": "knockout against control",
+     "readout": "d-APV arm design and baseline burst rate",
+     "readout_level": "functional",
+     "direction_observed": "not applicable (design of the experiment)",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "limits": "Fig 3D read by eye from a JPEG; the two printed baselines differ about 2.7-fold and the paper does not explain it (a rate from the median interval against a median of per-slice rates is a possibility, unverified); any graded block read from bursts needs long recordings per condition (F04).",
+     "pmid": "34634460",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34634460.json",
+       "entry": 23,
+       "anchor": "2.29 [1.1"
+      },
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34634460.json",
+       "entry": 24,
+       "anchor": ".84 [.57"
+      },
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34634460.json",
+       "entry": 16,
+       "anchor": "postnatal day 13 to 17"
+      }
+     ],
+     "locator_status": "MANIFEST"
     }
    ],
    "inferred": [
     "That bursting reflects a gain of NMDAR or AMPAR function rather than a permissive dependence (the sign of a partial block is untested).",
     "That the same node is shared with GRIN-variant epilepsies (convergence argument); in a retrospective GRIN-variant series, memantine benefit split by variant class (14 of 19 gain-of-function versus 3 of 15 loss-of-function/indeterminate), so a shared node does not give the sign. The authors call 4 of the 15 comparator variants non-pathogenic.",
-    "That the depolarised resting potential (O6), together with the halved inhibitory current amplitude (O3), relieves the voltage-dependent magnesium block of NMDAR enough to explain the NMDAR dependence of the burst: arithmetic in the IT6-P11 record (other cell type, simple occupancy model), never tested in a WWOX system."
+    "That the depolarised resting potential (O6), together with the halved inhibitory current amplitude (O3), relieves the voltage-dependent magnesium block of NMDAR enough to explain the NMDAR dependence of the burst: arithmetic in the IT6-P11 record (other cell type, simple occupancy model), never tested in a WWOX system.",
+    "That the d-APV dependence is NMDAR gain: three readings fit it (gain of NMDAR current; permissive necessity in a network whose pyramidal neurons are depolarised (O6) and receive about half the inhibitory current (O3); AMPAR-led drive), they are not exclusive, and the data separate none of them and rank none (F04)."
    ],
    "intervention_direction": {
     "direction": "down",
     "on": "postsynaptic glutamatergic gain (NMDAR, possibly AMPAR)",
     "rationale": "A perturbation result, not a reversal inference: blocking NMDAR with d-APV abolished the burst in the WWOX-deficient slice (one drug, one preparation).",
     "certainty": "supported_in_WWOX_mouse_model for the tool compound; unknown for any clinically used antagonist",
-    "do_not_assume": "Full competitive block is not a partial block. Memantine and perampanel were not found to have been given to a WWOX system in the sources read. Chronic NMDAR block may cost activity-dependent myelination (unmeasured). Raising extracellular Mg2+ is the physiological way to lower NMDAR gain, but no Mg2+ manipulation has been done in a WWOX system, the incubation ACSF already contains magnesium and the recording bath is not stated (O7), and the one mouse study read found that an oral magnesium sulfate left cerebrospinal-fluid magnesium unchanged: do not equate a supplement with a bath concentration, and do not treat the open-label infant trials of magnesium sulfate with ACTH as evidence about this node."
+    "do_not_assume": "Full competitive block is not a partial block. Memantine and perampanel were not found to have been given to a WWOX system in the sources read. Chronic NMDAR block may cost activity-dependent myelination (unmeasured). Raising extracellular Mg2+ is the physiological way to lower NMDAR gain, but no Mg2+ manipulation has been done in a WWOX system, the incubation ACSF already contains magnesium and the recording bath is not stated (O7), and the one mouse study read found that an oral magnesium sulfate left cerebrospinal-fluid magnesium unchanged: do not equate a supplement with a bath concentration, and do not treat the open-label infant trials of magnesium sulfate with ACTH as evidence about this node. A pore blocker's potency depends on voltage, extracellular Mg2+ and intracellular Ca2+, so a memantine result at the Mg2+ level of the incubation solution (1.3 mM; the recording bath is not stated) is not a GluN2A/2B block unless the Mg2+ level is reported; an effect of a subunit-selective tool (a GluN2B NAM) is an effect of that tool, not of a different drug (F04)."
    },
    "counter_evidence": [
     "Only a full competitive block (d-APV) has been tried; whether the dependence is permissive or a gain is untested.",
@@ -2507,11 +2545,14 @@
     "One adult WWOX case on perampanel plus six drugs had no sustained benefit (n 1).",
     "Pannexin-1 blocker arm went the wrong way untested (map N-16); gap-junction node withdrawn pending occlusion.",
     "In the one randomised open-label infant trial read with an oral phase (West syndrome, 48 analysed; three days of intramuscular magnesium sulfate then oral, ACTH and antiseizure drugs in both arms) magnesium did not change seizure control (p 0.69); the positive randomised signal used intravenous magnesium sulfate with ACTH and is abstract-level.",
-    "The magnesium arithmetic gives a modest reduction for a modest rise in extracellular Mg2+, against the complete block of d-APV."
+    "The magnesium arithmetic gives a modest reduction for a modest rise in extracellular Mg2+, against the complete block of d-APV.",
+    "A competitive full-block NMDAR antagonist (selfotel) failed in adult stroke and head-injury trials (stroke: early mortality imbalance; head injury: stopped for concern about deaths and futility, later analysis without a significant mortality difference); NMDAR blockade in the developing rat brain triggers apoptotic neurodegeneration (abstract level); memantine failed two controlled paediatric studies in another disorder and has no paediatric effectiveness on its label (F04).",
+    "The d-APV arm carries no significance marker in Fig 3D, the tests are on bursts not animals, and the baseline burst frequency is printed twice with different values (O8)."
    ],
    "sources": {
     "cards": [
-     "F01_glutamate_receptor_node"
+     "F01_glutamate_receptor_node",
+     "F04_nmdar_intervention_class"
     ],
     "hypotheses": [
      "HYP-20261027-01"
@@ -2526,7 +2567,8 @@
      "M2"
     ],
     "documents": [
-     "disease-models/wwox/research/drug_repurposing/supplement_diet_it6_p11_20261029/README.md"
+     "disease-models/wwox/research/drug_repurposing/supplement_diet_it6_p11_20261029/README.md",
+     "disease-models/wwox/research/drug_repurposing/nmdar_pharmacology_it6_p9_20261029/README.md"
     ],
     "registry_ids": [
      "CLAIM 021",
@@ -2567,6 +2609,13 @@
      "role": "NMDAR subunit",
      "hgnc_id": "HGNC:4586",
      "hgnc_name": "glutamate ionotropic receptor NMDA type subunit 2B",
+     "target_kind": "intervention_target"
+    },
+    {
+     "symbol": "GRIN2D",
+     "role": "NMDAR subunit (transcript present in the week-15 organoid; no subunit-level datum in a WWOX system; pore blockers act relatively more on GluN2C/2D at physiological Mg2+, abstract level)",
+     "hgnc_id": "HGNC:4588",
+     "hgnc_name": "glutamate ionotropic receptor NMDA type subunit 2D",
      "target_kind": "intervention_target"
     },
     {
@@ -2630,7 +2679,7 @@
     "status": "NOT_ASSESSED",
     "note": "Coverage of this need by catalogue compounds is not computed here; the repurposing module sets it."
    },
-   "notes": "Evidence ladder tier for the chain is T1 for the tool compound d-APV only (map CHAIN B re-read).",
+   "notes": "Evidence ladder tier for the chain is T1 for the tool compound d-APV only (map CHAIN B re-read). P9 (2026-10-29): card F04 compares NMDAR intervention classes on this need; the d-APV result is compatible with gain, permissive necessity and AMPAR-led drive (nothing here separates or ranks them).",
    "basis": "observed"
   },
   {
