@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """IT8 P5: apply the queue edits justified by loop 1 and loop 2 (needs, card packets, work order).
 Idempotent: each edit is skipped when already present. Run from the repository root. Card JSON is rebuilt afterwards with
 framework/scripts/repurposing_bridge.py (see README section 8)."""
