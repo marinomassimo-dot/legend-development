@@ -41,6 +41,7 @@ RULES_VERSION = "R1"            # bump when a rule of this file changes meaning 
 SCHEMA = "legend.wwox.ranking/1"
 USABLE = DR / "usable_compounds_it7_p2_20261029"
 COMPARISON = DR / "pharmacological_comparison_it7_p5_20261029" / "comparison.tsv"
+QUALIFICATION = DR / "pharmacological_qualification_it8_p3_20261029" / "comparison.tsv"      # IT8 P3, read when present (reuse, read-only)
 RECEIPTS = ROOT / "disease-models/wwox/registries/fulltext_read_receipts.jsonl"
 REASON_CLASSES = ("new_evidence", "counter_evidence", "identity_correction", "better_pharmacological_qualification", "context_change", "method_revision")
 NON_ASSESSMENT_CHANGES = ("new_entry", "tie_resolution")
@@ -161,6 +162,7 @@ def load_all() -> dict:
         "hyp": {h["id"]: h for h in cur["hypotheses"]},
     }
     ctx["uncarded"] = read_tsv(HERE / "uncarded_items.tsv")
+    ctx["qualification"] = read_tsv(QUALIFICATION) if QUALIFICATION.exists() else []
     return ctx
 
 
@@ -234,6 +236,12 @@ def build_units(ctx: dict, cat: dict) -> list[dict]:
     for r in ctx["comparison"]:
         for c in r["hypothesis_cards"].split(";"):
             comp_by_card[c.strip()] = r
+    qual_by_card: dict[str, list[dict]] = defaultdict(list)
+    for q in ctx.get("qualification") or []:
+        toks = set(re.findall(r"[A-Za-z0-9-]+", q["cards_and_needs"].split("->")[0] + " " + q["cards_and_needs"]))
+        for cid in cands:
+            if cid in q["cards_and_needs"] or cid.split("_")[0] in toks:
+                qual_by_card[cid].append(q)
     prios_by_row_need = defaultdict(list)
     for p in ctx["prios"]["priorities"]:
         prios_by_row_need[(p["row_id"], p["need"])].append(p)
@@ -277,6 +285,7 @@ def build_units(ctx: dict, cat: dict) -> list[dict]:
         u["pmids"] = sorted(set(pm))
         u["receipts"] = {p: len(receipts.get(p, [])) for p in u["pmids"]}
         u["comparison"] = [comp_by_card[c] for c in cards if c in comp_by_card]
+        u["qualification"] = sorted({q["case_id"]: q for c in cards for q in qual_by_card.get(c, [])}.values(), key=lambda q: q["case_id"])
         units.append(u)
     return units
 
@@ -423,11 +432,18 @@ def component_pharm(u: dict, ctx: dict) -> dict:
     comp = u["comparison"]
     if comp:
         c = comp[0]
-        return {"state": "class-level table (IT7 P5); potency in a WWOX system UNKNOWN", "potency_with_assay_context": clip(c["potency_with_assay_context"], 420),
-                "human_exposure": clip(c["human_exposure"], 300), "brain_penetration": clip(c["brain_penetration"], 300), "record": c["record_id"]}
-    ph = [clip(ctx["cands"][c].get("pharm"), 300) for c in u["cards"] if ctx["cands"][c].get("pharm")]
-    return {"state": "not in the pharmacological comparison table; card text only (potency, exposure and nervous-system data UNKNOWN unless the card says otherwise)",
-            "potency_with_assay_context": ph[0] if ph else "UNKNOWN", "human_exposure": "UNKNOWN", "brain_penetration": "UNKNOWN", "record": ""}
+        d = {"state": "class-level table (IT7 P5); potency in a WWOX system UNKNOWN", "potency_with_assay_context": clip(c["potency_with_assay_context"], 420),
+             "human_exposure": clip(c["human_exposure"], 300), "brain_penetration": clip(c["brain_penetration"], 300), "record": c["record_id"]}
+    else:
+        ph = [clip(ctx["cands"][c].get("pharm"), 300) for c in u["cards"] if ctx["cands"][c].get("pharm")]
+        d = {"state": "not in the pharmacological comparison table; card text only (potency, exposure and nervous-system data UNKNOWN unless the card says otherwise)",
+             "potency_with_assay_context": ph[0] if ph else "UNKNOWN", "human_exposure": "UNKNOWN", "brain_penetration": "UNKNOWN", "record": ""}
+    qs = u.get("qualification") or []
+    if qs:
+        d["qualification"] = [{"case": q["case_id"], "status": q["decision_status"], "new_decision": clip(q["new_decision"], 200), "quantitative": clip(q["quantitative_measures_by_assay_type_not_aggregated"], 500),
+                               "human_exposure": clip(q["human_exposure"], 300), "nervous_system_data": clip(q["nervous_system_data"], 300), "contrary": clip(q["contrary_signals"], 300), "unknown": clip(q["unknown_signals"], 300)} for q in qs]
+        d["state"] += "; qualified in IT8 P3 (" + ", ".join(q["case_id"] for q in qs) + "): measures by assay type, never aggregated; a binding or enzyme measure is not functional benefit"
+    return d
 
 
 def component_counter(u: dict, ctx: dict) -> dict:
@@ -632,7 +648,7 @@ def assemble(ctx: dict, cat: dict) -> dict:
             "T2_pertinence": sha16([[r[k] for k in ("card_id", "assertion_id", "need_id", "evidence_kind", "sign", "flags", "comparator")] for r in u["pert"]]),
             "T3_receipts": sha16(sorted(u["receipts"].items())),
             "T4_needs": sha16([(n, ctx["needs"][n].get("n_wwox_obs"), len(ctx["needs"][n].get("obs") or []), len(ctx["needs"][n].get("counter") or []), ctx["needs"][n].get("dir")) for n in sorted(u["per_need"])], [ctx["wo"].get(n, {}).get("would_change") for n in sorted(u["per_need"])]),
-            "T5_pharmacology": sha16(comp_row),
+            "T5_pharmacology": sha16(comp_row, u["qualification"]) if u["qualification"] else sha16(comp_row),
             "T6_identity": sha16(sorted(r["row_id"] for r, _ in u["members"]), sorted({c["row_id"] for c in u["cells"]}), sorted((c["row_id"], c["need"], c["L2_mechanistic_coherence"]["state"], c["L3_observed_effect"]["state"]) for c in u["cells"])),
         }
         out_units.append({
