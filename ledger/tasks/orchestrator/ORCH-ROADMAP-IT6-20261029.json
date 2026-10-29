@@ -101,8 +101,9 @@
    "steps": [
     {
      "step": "P13 one-page summary, small evidence graph, priorities",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "view: #brief one-page synthesis (36/36 one A4 page), evidence graph (5 typed chains, validated), work order by need, window-state chips; independent browser verification (own CDP client, 360/390/1280, 36 briefs printed) 3 high + 9 medium defects repaired (a7756758); shareable audit dynamic green"
     }
    ]
   },
@@ -111,8 +112,9 @@
    "steps": [
     {
      "step": "P14 propagation, integration, continuity, close",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "evidence": "integration done (receipts 913, BATCH_027/028, WM_v7.29); final battery and validated push pending"
     }
    ]
   }
