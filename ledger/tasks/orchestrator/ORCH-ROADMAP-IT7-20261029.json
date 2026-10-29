@@ -74,8 +74,9 @@
     },
     {
      "step": "P8 R9/R11/R12 scouting, licence inventory of the whole repository, hourly-control path check",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "evidence": "scouting done and verified (scout_it7_20261029.md; ToolUniverse Reactome trial: REMOVE; Reactome adapter TRIAL; leakage checks TRIAL; TxGNN/MATRIX unchanged); hourly path checked (events.jsonl hourly :37 for IT3-IT6, IT7 from the next run); licence inventory awaiting verifier"
     }
    ]
   },
