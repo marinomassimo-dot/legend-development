@@ -271,5 +271,80 @@ class ThreeStates(unittest.TestCase):
         self.assertTrue(any("score" in p for p in ra.check_output(bad)))
 
 
+class ChemblActivities(unittest.TestCase):
+    """The iteration-6 activity mode: accession resolution, assay context, pagination, errors."""
+
+    def _fetch(self, total=3, assay_status=200, activity_status=200):
+        rows = [{"activity_id": i, "molecule_chembl_id": f"CHEMBL{i}", "assay_chembl_id": "CHEMBLA1", "standard_type": "IC50",
+                 "standard_relation": "=", "standard_value": "150.0", "standard_units": "nM", "pchembl_value": "6.82",
+                 "target_chembl_id": "CHEMBL1904", "target_organism": "Homo sapiens", "document_chembl_id": "CHEMBLD",
+                 "data_validity_comment": None, "potential_duplicate": 0} for i in range(total)]
+        def fetch(url, params=None, body=None, timeout=20):
+            if "status.json" in url:
+                return 200, {"chembl_db_version": "ChEMBL_T", "chembl_release_date": "2026-01-01"}
+            if "target.json" in url:
+                return 200, {"targets": [{"target_chembl_id": "CHEMBL1904", "target_type": "SINGLE PROTEIN", "organism": "Homo sapiens",
+                                          "target_components": [{"accession": "Q13224"}]},
+                                         {"target_chembl_id": "CHEMBL1907603", "target_type": "PROTEIN COMPLEX", "organism": "Homo sapiens",
+                                          "target_components": [{"accession": "Q05586"}, {"accession": "Q13224"}]}]}
+            if "activity.json" in url:
+                if activity_status != 200:
+                    return activity_status, "boom"
+                off = int(url.split("offset=")[1].split("&")[0]) if "offset=" in url else 0
+                lim = int(url.split("limit=")[1].split("&")[0])
+                page = rows[off:off + lim]
+                return 200, {"page_meta": {"total_count": len(rows), "next": "x" if off + lim < len(rows) else None}, "activities": page}
+            if "assay.json" in url:
+                if assay_status != 200:
+                    return assay_status, "no"
+                return 200, {"assays": [{"assay_chembl_id": "CHEMBLA1", "assay_organism": "frog", "assay_cell_type": "Oocyte"}]}
+            return 404, {}
+        return fetch
+
+    def test_accession_resolves_single_protein_and_complexes_apart(self):
+        out = ra.load("chembl", ADAPTERS).query({"uniprot": "Q13224"}, fetch=self._fetch())
+        self.assertEqual([h["target_type"] for h in out["hits"]], ["SINGLE PROTEIN", "PROTEIN COMPLEX"])
+        self.assertEqual(out["status"], "MATCH_FOUND")
+
+    def test_activity_rows_carry_assay_organism_apart_from_target_organism(self):
+        out = ra.load("chembl", ADAPTERS).query({"target": "CHEMBL1904"}, fetch=self._fetch())
+        h = out["hits"][0]
+        self.assertEqual((h["target_organism"], h["assay_context"]["assay_organism"]), ("Homo sapiens", "frog"))
+        self.assertEqual((out["total_count"], out["retrieved"], out["truncated"]), (3, 3, False))
+        self.assertEqual(ra.check_output(out), [])
+
+    def test_molecule_alone_reads_every_target_and_says_so(self):
+        seen = []
+        base = self._fetch()
+        def fetch(url, params=None, body=None, timeout=20):
+            seen.append(url)
+            return base(url, params, body, timeout)
+        out = ra.load("chembl", ADAPTERS).query({"molecule": "CHEMBL807"}, fetch=fetch)
+        act = [u for u in seen if "activity.json" in u][0]
+        self.assertIn("molecule_chembl_id=CHEMBL807", act)
+        self.assertNotIn("target_chembl_id=", act)
+        self.assertEqual((out["scope"]["target"], out["scope"]["molecule"]), (None, "CHEMBL807"))
+
+    def test_a_hit_page_cap_is_reported_as_truncated(self):
+        out = ra.load("chembl", ADAPTERS).query({"target": "CHEMBL1904", "max_rows": 2}, fetch=self._fetch(total=5))
+        self.assertEqual((out["retrieved"], out["total_count"], out["truncated"]), (2, 5, True))
+        self.assertIn("TRUNCATED", out["note"])
+
+    def test_activity_http_error_is_query_error_never_no_match(self):
+        out = ra.load("chembl", ADAPTERS).query({"target": "CHEMBL1904"}, fetch=self._fetch(activity_status=500))
+        self.assertEqual(out["status"], "QUERY_ERROR")
+        self.assertIn("500", out["error"])
+
+    def test_assay_context_failure_is_declared_and_rows_keep_null_context(self):
+        out = ra.load("chembl", ADAPTERS).query({"target": "CHEMBL1904"}, fetch=self._fetch(assay_status=503))
+        self.assertIn("assay context incomplete", out["note"])
+        self.assertIsNone(out["hits"][0]["assay_context"])
+
+    def test_no_row_under_the_filters_is_no_match_not_absence(self):
+        out = ra.load("chembl", ADAPTERS).query({"target": "CHEMBL1904"}, fetch=self._fetch(total=0))
+        self.assertEqual(out["status"], "NO_MATCH_FOUND")
+        self.assertIn("never absence", out["note"])
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

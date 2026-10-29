@@ -2,8 +2,21 @@
 ChEMBL knows for one gene symbol. REST, key-less, CC BY-SA 3.0. Measured 2026-10-22 (ChEMBL_37).
 
 Request: {"drug": "bortezomib"}  or  {"gene": "WWOX"}
+         or {"uniprot": "Q13224"} / {"target": "CHEMBL1904"}  (measured activities, see below)
 Output hits: one per mechanism (action_type, mechanism_of_action, target_chembl_id, references)
-or one per target found. `max_phase` is carried as the source states it (a development stage,
+or one per target found.
+
+Activities (added 2026-10-29, iteration 6): `uniprot` resolves a stable accession to the ChEMBL
+targets that contain it (SINGLE PROTEIN and complexes are listed apart, never merged); `target` (and/or
+`molecule`, a ChEMBL id, which alone reads every target the molecule was measured on: channel blockers
+are often curated against heteromeric complexes, so a single-protein target can be empty while the complex
+holds the data) reads the activity rows with the assay context (assay organism, cell type, assay type,
+confidence, relationship type) fetched from the assay endpoint. Each row keeps the value as
+the source states it (standard_relation/value/units, pchembl_value, document), flags
+data_validity_comment and potential_duplicate, and the output states `total_count`, `retrieved`
+and `truncated`: a page cap that is hit is reported, never hidden. Optional: `types`
+(default IC50, Ki, Kd, EC50), `max_rows` (default 400, at most 2000), `molecule` (a ChEMBL id).
+An empty answer means "no row under these filters on this date", not that no activity exists. `max_phase` is carried as the source states it (a development stage,
 not a score).
 """
 from __future__ import annotations
@@ -15,9 +28,9 @@ from . import _http
 INFO = {
     "name": "chembl",
     "gives": "curated mechanism of action per drug with its reference; ChEMBL targets per gene",
-    "network": "GET https://www.ebi.ac.uk/chembl/api/data/{status,molecule/search,mechanism,target/search}.json",
+    "network": "GET https://www.ebi.ac.uk/chembl/api/data/{status,molecule/search,mechanism,target/search,target,activity,assay}.json",
     "licence": "CC BY-SA 3.0; key-less, no payment",
-    "inputs": "drug (name) or gene (symbol); one of the two",
+    "inputs": "drug (name), gene (symbol), uniprot (accession) or target (ChEMBL target id); one of them",
     "outputs": "hits: mechanisms or targets; source_version = chembl_db_version",
     "licence_url": "https://chembl.gitbook.io/chembl-interface-documentation/about (Data Licensing) and "
                    "https://www.ebi.ac.uk/about/terms-of-use",
@@ -43,18 +56,100 @@ def _new(request: dict) -> dict:
             "note": "NO_MATCH_FOUND is an answer about this query on this date, never absence", "error": ""}
 
 
+ACTIVITY_TYPES = ("IC50", "Ki", "Kd", "EC50")
+ASSAY_FIELDS = ("assay_organism", "assay_cell_type", "assay_tissue", "assay_type", "assay_test_type", "confidence_score", "relationship_type", "description")
+
+
+def _targets_for_accession(accession: str, out: dict, fetch) -> bool:
+    url = f"{BASE}/target.json?target_components__accession={quote(accession)}&limit=50"
+    out["requests_sent"].append(url)
+    status, payload = fetch(url)
+    if status != 200 or not isinstance(payload, dict):
+        out["error"] = f"HTTP {status}: {str(payload)[:300]}"
+        return False
+    for tg in payload.get("targets") or []:
+        out["hits"].append({"kind": "target", "target_chembl_id": tg.get("target_chembl_id"), "pref_name": tg.get("pref_name"),
+                            "organism": tg.get("organism"), "target_type": tg.get("target_type"),
+                            "accessions": [c.get("accession") for c in tg.get("target_components") or []]})
+    out["status"] = "MATCH_FOUND" if out["hits"] else "NO_MATCH_FOUND"
+    return True
+
+
+def _activities(request: dict, out: dict, fetch) -> dict:
+    target = str(request.get("target", "")).strip()
+    types = request.get("types") or list(ACTIVITY_TYPES)
+    cap = max(1, min(int(request.get("max_rows") or 400), 2000))
+    params = f"standard_type__in={quote(','.join(types))}"
+    if target:
+        params = f"target_chembl_id={quote(target)}&{params}"
+    if request.get("molecule"):
+        params += f"&molecule_chembl_id={quote(str(request['molecule']))}"
+    rows, total, offset = [], None, 0
+    while len(rows) < cap:
+        url = f"{BASE}/activity.json?{params}&limit={min(200, cap - len(rows))}&offset={offset}"
+        out["requests_sent"].append(url)
+        status, payload = fetch(url)
+        if status != 200 or not isinstance(payload, dict):
+            out["error"] = f"HTTP {status}: {str(payload)[:300]}"
+            out["hits"] = [dict(h) for h in rows]
+            out["retrieved"] = len(rows)
+            return out
+        total = (payload.get("page_meta") or {}).get("total_count", total)
+        page = payload.get("activities") or []
+        rows += page
+        offset += len(page)
+        if not page or not (payload.get("page_meta") or {}).get("next"):
+            break
+    assays = {}
+    ids = sorted({r.get("assay_chembl_id") for r in rows if r.get("assay_chembl_id")})
+    for i in range(0, len(ids), 40):
+        url = f"{BASE}/assay.json?assay_chembl_id__in={quote(','.join(ids[i:i+40]))}&limit=100"
+        out["requests_sent"].append(url)
+        status, payload = fetch(url)
+        if status != 200 or not isinstance(payload, dict):
+            out["note"] = f"assay context incomplete: HTTP {status} for assay batch {i // 40 + 1}; rows below carry assay_context=null where missing"
+            continue
+        for a in payload.get("assays") or []:
+            assays[a.get("assay_chembl_id")] = {k: a.get(k) for k in ASSAY_FIELDS}
+    for r in rows:
+        out["hits"].append({"kind": "activity", "activity_id": r.get("activity_id"), "molecule_chembl_id": r.get("molecule_chembl_id"),
+                            "parent_molecule_chembl_id": r.get("parent_molecule_chembl_id"), "molecule_pref_name": r.get("molecule_pref_name"),
+                            "standard_type": r.get("standard_type"), "standard_relation": r.get("standard_relation"),
+                            "standard_value": r.get("standard_value"), "standard_units": r.get("standard_units"),
+                            "pchembl_value": r.get("pchembl_value"), "target_chembl_id": r.get("target_chembl_id"),
+                            "target_organism": r.get("target_organism"), "target_pref_name": r.get("target_pref_name"), "assay_chembl_id": r.get("assay_chembl_id"),
+                            "assay_description": r.get("assay_description"), "assay_context": assays.get(r.get("assay_chembl_id")),
+                            "document_chembl_id": r.get("document_chembl_id"), "document_year": r.get("document_year"),
+                            "data_validity_comment": r.get("data_validity_comment"), "potential_duplicate": r.get("potential_duplicate")})
+    out["total_count"], out["retrieved"] = total, len(rows)
+    out["truncated"] = bool(total is not None and len(rows) < total)
+    out["scope"] = {"target": target or None, "types": types, "molecule": request.get("molecule")}
+    out["status"] = "MATCH_FOUND" if rows else "NO_MATCH_FOUND"
+    if out["truncated"]:
+        out["note"] = (out.get("note", "") + f" TRUNCATED: {len(rows)} of {total} rows retrieved under these filters; the rest were not read.").strip()
+    return out
+
+
 def query(request: dict, fetch=_http.get_json) -> dict:
     out = _new(request)
     drug = str(request.get("drug", "")).strip()
     gene = str(request.get("gene", "")).strip()
-    if not drug and not gene:
-        out["error"] = "drug or gene is required"
+    uniprot = str(request.get("uniprot", "")).strip()
+    target = str(request.get("target", "")).strip()
+    molecule = str(request.get("molecule", "")).strip()
+    if not (drug or gene or uniprot or target or molecule):
+        out["error"] = "drug, gene, uniprot, target or molecule is required"
         return out
     url = f"{BASE}/status.json"
     out["requests_sent"].append(url)
     status, payload = fetch(url)
     if status == 200 and isinstance(payload, dict):
         out["source_version"] = f"{payload.get('chembl_db_version')} {payload.get('chembl_release_date')}"
+    if uniprot:
+        _targets_for_accession(uniprot, out, fetch)
+        return out
+    if target or molecule:
+        return _activities(request, out, fetch)
     if gene:
         url = f"{BASE}/target/search.json?q={quote(gene)}&limit=20"
         out["requests_sent"].append(url)

@@ -1,0 +1,63 @@
+compound	chembl_id	target_chembl_id	target	target_organism	n_rows	n_docs	types	units	median_nM_equal	min_nM	max_nM	assay_organisms	assay_types	cell_or_prep	n_non_equal_relation
+amantadine	CHEMBL660	CHEMBL1907604	Glutamate NMDA receptor; GRIN1/GRIN2A	Homo sapiens	1	1	Ki	nM	10000.0	10000.0	10000.0	Homo sapiens	B	NA	0
+amantadine	CHEMBL660	CHEMBL1907608	Glutamate NMDA receptor	Rattus norvegicus	6	4	IC50	nM	92000.0	92000.0	358000.0	NA;Rattus norvegicus	B,F	NA	0
+amantadine	CHEMBL660	CHEMBL2094124	Glutamate [NMDA] receptor	Homo sapiens	1	1	Ki	nM	10500.0	10500.0	10500.0	NA	B	NA	0
+amantadine	CHEMBL660	CHEMBL2096680	Glutamate NMDA receptor; Grin1/Grin2a	Rattus norvegicus	1	1	IC50	nM	40000.0	40000.0	40000.0	Rattus norvegicus	B	tsA201	0
+dextromethorphan	CHEMBL52440	CHEMBL1907603	Glutamate NMDA receptor; GRIN1/GRIN2B	Homo sapiens	1	1	IC50	nM	15848.9	15848.93	15848.93	Homo sapiens	B	CHO	0
+dextromethorphan	CHEMBL52440	CHEMBL1907604	Glutamate NMDA receptor; GRIN1/GRIN2A	Homo sapiens	2	2	IC50	nM	25579.4	1040.0	50118.72	Homo sapiens	B	CHO;HEK293	0
+dextromethorphan	CHEMBL52440	CHEMBL1907608	Glutamate NMDA receptor	Rattus norvegicus	3	3	IC50,Ki	nM	2246.0	1320.0	4540.0	NA;Rattus norvegicus	B	NA	0
+dextromethorphan	CHEMBL52440	CHEMBL2094124	Glutamate [NMDA] receptor	Homo sapiens	1	1	Ki	nM	1680.0	1680.0	1680.0	NA	B	NA	0
+dextromethorphan	CHEMBL52440	CHEMBL3038504	Ionotropic glutamate receptor NMDA 1/2C	Homo sapiens	1	1	IC50	nM	6309.6	6309.57	6309.57	Homo sapiens	B	CHO	0
+dextromethorphan	CHEMBL52440	CHEMBL3038505	Ionotropic glutamate receptor NMDA 1/2D	Homo sapiens	1	1	IC50	nM	25118.9	25118.86	25118.86	Homo sapiens	B	CHO	0
+dizocilpine (MK-801)	CHEMBL344151	CHEMBL1907608	Glutamate NMDA receptor	Rattus norvegicus	1	1	Ki	nM	2.4	2.4	2.4	NA	B	NA	0
+dizocilpine (MK-801)	CHEMBL344151	CHEMBL311	Glutamate receptor ionotropic, NMDA 2B	Rattus norvegicus	1	1	Ki	nM				Rattus norvegicus	B	NA	1
+eliprodil	CHEMBL28564	CHEMBL1904	Glutamate receptor ionotropic, NMDA 2B	Homo sapiens	8	8	Ki	nM	13.0	13.0	13.0	Homo sapiens	B	L-M(TK-);NA	0
+eliprodil	CHEMBL28564	CHEMBL1907603	Glutamate NMDA receptor; GRIN1/GRIN2B	Homo sapiens	1	1	Ki	nM	13.0	13.0	13.0	Homo sapiens	B	NA	0
+eliprodil	CHEMBL28564	CHEMBL2096666	Glutamate NMDA receptor; Grin1/Grin2b	Rattus norvegicus	1	1	IC50	nM	1400.0	1400.0	1400.0	Rattus norvegicus	F	Oocyte	0
+eliprodil	CHEMBL28564	CHEMBL2096680	Glutamate NMDA receptor; Grin1/Grin2a	Rattus norvegicus	1	1	IC50	nM	100000.0	100000.0	100000.0	Rattus norvegicus	F	Oocyte	0
+eliprodil	CHEMBL28564	CHEMBL2096911	Glutamate NMDA receptor; Grin1/Grin2c	Rattus norvegicus	1	1	IC50	nM	100000.0	100000.0	100000.0	Rattus norvegicus	F	Oocyte	0
+eliprodil	CHEMBL28564	CHEMBL3451	Glutamate (NMDA) receptor subunit zeta 1	Sus scrofa	3	1	IC50	nM	277.0	82.6	11300.0	NA	B	NA	0
+eliprodil	CHEMBL28564	CHEMBL401	Glutamate receptor ionotropic, NMDA 2C	Rattus norvegicus	1	1	IC50	nM	1000.0	1000.0	1000.0	NA	F	NA	0
+esketamine	CHEMBL395091	CHEMBL1907604	Glutamate NMDA receptor; GRIN1/GRIN2A	Homo sapiens	1	1	IC50	nM	11.4	11.4	11.4	Homo sapiens	B	NA	0
+esketamine	CHEMBL395091	CHEMBL1907608	Glutamate NMDA receptor	Rattus norvegicus	4	3	IC50,Ki	nM	665.0	300.0	960.0	Rattus norvegicus	B	NA	0
+ifenprodil	CHEMBL305187	CHEMBL1904	Glutamate receptor ionotropic, NMDA 2B	Homo sapiens	14	12	IC50,Ki	nM	10.0	5.8	340.0	Homo sapiens	B	L-M(TK-);NA;Oocyte	0
+ifenprodil	CHEMBL305187	CHEMBL1907603	Glutamate NMDA receptor; GRIN1/GRIN2B	Homo sapiens	9	7	IC50,Ki	nM	127.8	10.0	340.0	Homo sapiens;NA	B,F	HEK293;NA;Oocyte	0
+ifenprodil	CHEMBL305187	CHEMBL1907608	Glutamate NMDA receptor	Rattus norvegicus	2	2	IC50,Ki	nM	203.1	143.2	263.0	NA;Rattus norvegicus	B,F	NA	0
+ifenprodil	CHEMBL305187	CHEMBL1972	Glutamate receptor ionotropic, NMDA 2A	Homo sapiens	2	2	IC50	nM	92750.0	39500.0	146000.0	Homo sapiens	B	NA	0
+ifenprodil	CHEMBL305187	CHEMBL2096666	Glutamate NMDA receptor; Grin1/Grin2b	Rattus norvegicus	1	1	IC50	nM	73.0	73.0	73.0	Rattus norvegicus	B	Oocyte	0
+ifenprodil	CHEMBL305187	CHEMBL2591	Glutamate receptor ionotropic, NMDA 2D	Homo sapiens	1	1	IC50	nM	75900.0	75900.0	75900.0	Homo sapiens	B	NA	0
+ifenprodil	CHEMBL305187	CHEMBL311	Glutamate receptor ionotropic, NMDA 2B	Rattus norvegicus	10	9	IC50,Ki	None,nM	20.0	11.0	47.0	Rattus norvegicus	B	NA	1
+ifenprodil	CHEMBL305187	CHEMBL4109	Glutamate receptor ionotropic, NMDA 2C	Homo sapiens	1	1	IC50	nM	29100.0	29100.0	29100.0	Homo sapiens	B	NA	0
+ketamine	CHEMBL742	CHEMBL1907603	Glutamate NMDA receptor; GRIN1/GRIN2B	Homo sapiens	5	4	IC50	nM	5011.9	510.0	15220.0	Homo sapiens	B	CHO;HEK293;L13-E6;U2OS	0
+ketamine	CHEMBL742	CHEMBL1907604	Glutamate NMDA receptor; GRIN1/GRIN2A	Homo sapiens	7	6	IC50,Ki	nM	3310.0	180.0	53320.0	Homo sapiens	B	CHO;HEK293;L12-G10;NA;U2OS	0
+ketamine	CHEMBL742	CHEMBL1907608	Glutamate NMDA receptor	Rattus norvegicus	19	5	IC50,Ki	nM	180.0	180.0	10000.0	NA;Rattus norvegicus	B,F	NA	0
+ketamine	CHEMBL742	CHEMBL2094124	Glutamate [NMDA] receptor	Homo sapiens	4	3	Ki	nM	300.0	180.0	1900.0	Homo sapiens;NA	B	NA	0
+ketamine	CHEMBL742	CHEMBL2096666	Glutamate NMDA receptor; Grin1/Grin2b	Rattus norvegicus	1	1	Ki	nM	180.0	180.0	180.0	Rattus norvegicus	B	HEK293	0
+ketamine	CHEMBL742	CHEMBL2096680	Glutamate NMDA receptor; Grin1/Grin2a	Rattus norvegicus	2	2	IC50,Ki	nM	590.0	180.0	1000.0	Rattus norvegicus	B	HEK293;tsA201	0
+ketamine	CHEMBL742	CHEMBL3038504	Ionotropic glutamate receptor NMDA 1/2C	Homo sapiens	1	1	IC50	nM	3981.1	3981.07	3981.07	Homo sapiens	B	CHO	0
+ketamine	CHEMBL742	CHEMBL3038505	Ionotropic glutamate receptor NMDA 1/2D	Homo sapiens	1	1	IC50	nM	10000.0	10000.0	10000.0	Homo sapiens	B	CHO	0
+memantine	CHEMBL807	CHEMBL1907603	Glutamate NMDA receptor; GRIN1/GRIN2B	Homo sapiens	8	7	IC50,Ki	nM	5350.0	780.0	25630.0	Homo sapiens;NA	B,F	CHO;HEK293;L13-E6;Oocyte	0
+memantine	CHEMBL807	CHEMBL1907604	Glutamate NMDA receptor; GRIN1/GRIN2A	Homo sapiens	9	8	IC50	nM	4400.0	0.95	31622.78	Homo sapiens	B,F	CHO;Fibroblast;HEK293;L12-G10;NA;Oocyte	0
+memantine	CHEMBL807	CHEMBL1907608	Glutamate NMDA receptor	Rattus norvegicus	10	7	IC50	nM	1500.0	1090.0	55400.0	NA;Rattus norvegicus	B,F	Cortical neuron;NA	0
+memantine	CHEMBL807	CHEMBL2094124	Glutamate [NMDA] receptor	Homo sapiens	3	3	Ki	nM	540.0	540.0	1200.0	Homo sapiens;NA	B	NA	0
+memantine	CHEMBL807	CHEMBL2096666	Glutamate NMDA receptor; Grin1/Grin2b	Rattus norvegicus	1	1	IC50	nM	5570.0	5570.0	5570.0	Rattus norvegicus	B	Oocyte	0
+memantine	CHEMBL807	CHEMBL2096680	Glutamate NMDA receptor; Grin1/Grin2a	Rattus norvegicus	2	2	IC50	nM	1830.0	1000.0	2660.0	Rattus norvegicus	B	Oocyte;tsA201	0
+memantine	CHEMBL807	CHEMBL3038504	Ionotropic glutamate receptor NMDA 1/2C	Homo sapiens	1	1	IC50	nM	3162.3	3162.28	3162.28	Homo sapiens	B	CHO	0
+memantine	CHEMBL807	CHEMBL3038505	Ionotropic glutamate receptor NMDA 1/2D	Homo sapiens	1	1	IC50	nM	10000.0	10000.0	10000.0	Homo sapiens	B	CHO	0
+memantine	CHEMBL807	CHEMBL311	Glutamate receptor ionotropic, NMDA 2B	Rattus norvegicus	1	1	Ki	nM				Rattus norvegicus	B	NA	1
+memantine	CHEMBL807	CHEMBL330	Glutamate receptor ionotropic, NMDA 1	Rattus norvegicus	1	1	EC50	nM	2720.0	2720.0	2720.0	Rattus norvegicus	B	NA	0
+memantine	CHEMBL807	CHEMBL401	Glutamate receptor ionotropic, NMDA 2C	Rattus norvegicus	1	1	Ki	nM	700.0	700.0	700.0	NA	B	NA	0
+perampanel	CHEMBL1214124	CHEMBL2009	Glutamate receptor 1	Homo sapiens	5	1	IC50	nM	623.0	243.0	6510.0	Homo sapiens	B	CHO-S	0
+perampanel	CHEMBL1214124	CHEMBL3595	Glutamate receptor 3	Homo sapiens	1	1	IC50	nM	2100.0	2100.0	2100.0	Homo sapiens	B	HEK293	0
+radiprodil	CHEMBL182066	CHEMBL1907603	Glutamate NMDA receptor; GRIN1/GRIN2B	Homo sapiens	4	2	IC50	nM	5.0	4.0	69.91	NA	B,F	HEK293;NA	0
+radiprodil	CHEMBL182066	CHEMBL2094124	Glutamate [NMDA] receptor	Homo sapiens	1	1	IC50	nM	6.0	6.0	6.0	NA	B	NA	0
+radiprodil	CHEMBL182066	CHEMBL311	Glutamate receptor ionotropic, NMDA 2B	Rattus norvegicus	2	2	IC50	nM	31.6	31.62	31.62	Rattus norvegicus	B	NA	0
+radiprodil	CHEMBL182066	CHEMBL3442	Glutamate receptor ionotropic, NMDA 2B	Mus musculus	2	2	IC50	nM	3.2	3.162	3.162	Mus musculus	B	HEK293;NA	0
+traxoprodil	CHEMBL17350	CHEMBL1904	Glutamate receptor ionotropic, NMDA 2B	Homo sapiens	2	2	IC50	nM	42.5	11.0	74.0	Homo sapiens	B,F	HEK293;NA	0
+traxoprodil	CHEMBL17350	CHEMBL1907603	Glutamate NMDA receptor; GRIN1/GRIN2B	Homo sapiens	2	2	IC50,Ki	nM	20.5	11.0	30.0	NA	B	NA	0
+traxoprodil	CHEMBL17350	CHEMBL1907608	Glutamate NMDA receptor	Rattus norvegicus	2	1	IC50	nM	10.6	10.2	11.0	NA	F	NA	0
+traxoprodil	CHEMBL17350	CHEMBL2094124	Glutamate [NMDA] receptor	Homo sapiens	2	2	IC50,Ki	nM	9.0	7.0	11.0	NA	B	NA	0
+traxoprodil	CHEMBL17350	CHEMBL2096666	Glutamate NMDA receptor; Grin1/Grin2b	Rattus norvegicus	1	1	IC50	nM	73.0	73.0	73.0	NA	F	NA	0
+traxoprodil	CHEMBL17350	CHEMBL2096680	Glutamate NMDA receptor; Grin1/Grin2a	Rattus norvegicus	1	1	IC50	nM				NA	F	NA	1
+traxoprodil	CHEMBL17350	CHEMBL2096911	Glutamate NMDA receptor; Grin1/Grin2c	Rattus norvegicus	1	1	IC50	nM				NA	F	NA	1
+traxoprodil	CHEMBL17350	CHEMBL311	Glutamate receptor ionotropic, NMDA 2B	Rattus norvegicus	4	3	IC50,Ki	nM	10.5	4.6	41.0	Rattus norvegicus	B,F	NA	0
