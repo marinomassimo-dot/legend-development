@@ -36,8 +36,9 @@
     },
     {
      "step": "P4 new analysis on best dataset from P3",
-     "status": "TODO",
-     "owner": "scientist-b"
+     "status": "DONE",
+     "owner": "scientist-b",
+     "evidence": "mouse_wwox_p17_it6_p4_20261029 (GSE158681/2): pre-analysis committed first; independent rerun byte-identical + own code agrees; ISR sign conflict stays UNRESOLVED (third system flat/no resolvable sign at ~0.3); positive control passes; 9 wording defects repaired (e2fd3208)"
     },
     {
      "step": "P5 WWOX wild-type function reference (assay comparison)",
