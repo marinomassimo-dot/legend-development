@@ -507,7 +507,11 @@ class Curated(unittest.TestCase):
                 self.assertRegex(p["id"], r"^\d{6,8}$")
 
     def test_allowlist_is_the_initial_policy(self):
-        self.assertEqual(set(self.allow["dgidb_claim_sources"]), {"NCI", "FDA", "CIViC", "DoCM"})
+        # NCI moved to counts-only (IT5 P13): its terms were not read at NCI (P1 independent verification)
+        self.assertEqual(set(self.allow["dgidb_claim_sources"]), {"FDA", "CIViC", "DoCM"})
+        self.assertNotIn("NCI", self.allow["dgidb_claim_sources"])
+        self.assertEqual(self.allow["claim_source_policy"]["NCI"]["class"], "C")
+        self.assertEqual({k for k, v in self.allow["claim_source_policy"].items() if v["class"] == "A"}, {"FDA", "CIViC", "DoCM"})
         self.assertEqual(set(self.allow["name_sources"]), {"MATRIX list name", "openFDA NDC single-ingredient active_ingredient name"})
         for v in list(self.allow["dgidb_claim_sources"].values()) + list(self.allow["name_sources"].values()):
             self.assertTrue(v["licence"] and v["attribution"])
@@ -552,7 +556,9 @@ class Curated(unittest.TestCase):
 
     def test_shareable_footer_lists_what_is_embedded(self):
         labels = [e["label"] for e in self.PS["cur"]["footer"]["embedded"]]
-        self.assertTrue(any("NCI" in x for x in labels))
+        self.assertFalse(any("NCI" in x for x in labels), "NCI is counts-only")
+        self.assertTrue(any("CIViC" in x for x in labels))
+        self.assertIn("NCI Cancer Gene Index (via DGIdb)", " ".join(e["label"] for e in self.PS["cur"]["footer"]["counts_only"]))
         for e in self.PS["cur"]["footer"]["embedded"]:
             if e.get("rows"):
                 self.assertGreater(e["rows"], 0)
@@ -573,6 +579,291 @@ class Curated(unittest.TestCase):
         for c in self.PS["cur"]["cands"]:
             for a in c["actions"]:
                 self.assertIn("target", a)
+
+
+@unittest.skipUnless(HAVE_DATA, "module data absent")
+class ShareableAudit(unittest.TestCase):
+    """IT5 P13: the allowlist is a mechanism; the audit is the proof. It reads the bytes of the shareable output and compares them with the FULL catalogue.
+    The mutation tests inject third-party rows into the shareable bytes and require the audit to fail on each."""
+
+    @classmethod
+    def setUpClass(cls):
+        import repurposing_shareable_audit as au
+        import repurposing_shareable_package as pk
+        cls.au, cls.pk = au, pk
+        cls.share = rv.build(DR, "shareable")
+        cls.ref = au.Reference(DR)
+
+    # ---- helpers
+    def audit(self, text):
+        rep, _ = self.au.audit_html(text, DR, self.ref)
+        return rep
+
+    def mutate(self, fn):
+        P = embedded(self.share)
+        fn(P)
+        data = json.dumps(P, ensure_ascii=False, sort_keys=True, separators=(",", ":")).replace("</", "<\\/").replace("<!--", "<\\!--")
+        return re.sub(r'(<script id="data" type="application/json">).*?(</script>)', lambda m: m.group(1) + data + m.group(2), self.share, count=1, flags=re.S)
+
+    def kinds(self, text):
+        return {v["kind"] for v in self.audit(text).violations}
+
+    def dtc_only_name(self):
+        import gzip
+        with gzip.open(DR / "catalog/catalog.jsonl.gz", "rt", encoding="utf-8") as fh:
+            for line in fh:
+                e = json.loads(line)
+                cs = {t.get("claim_source") for t in e.get("targets") or []}
+                n = e.get("name") or ""
+                if e["origin"] == "dgidb_only" and cs == {"DTC"} and n.isalpha() and len(n) >= 8 and self.au.norm(n) not in self.ref.own_grams:
+                    return n, e["id"]
+        self.fail("no DTC-only compound found")
+
+    # ---- the real output
+    def test_shareable_output_passes_the_audit(self):
+        rep = self.audit(self.share)
+        self.assertEqual(rep.violations, [], rep.violations[:5])
+        self.assertGreater(len(self.ref.names), 100000)       # the reference is the whole catalogue, not a sample
+        self.assertGreater(len(self.ref.texts), 1000)
+        self.assertGreater(len(self.ref.ident), 10000)
+        self.assertEqual(self.ref.unclassified_sources, [])
+        self.assertEqual(self.ref.assoc_unverified, 0)
+        self.assertEqual(self.ref.policy_mismatch, [])
+
+    def test_committed_shareable_output_and_package_pass(self):
+        for f in (DR / "view/index_shareable.html", DR / "view/shareable_package/index.html"):
+            if f.exists():
+                self.assertEqual(self.audit(f.read_text(encoding="utf-8")).violations, [], str(f))
+
+    def test_full_build_fails_the_audit(self):
+        k = self.kinds(rv.build(DR, "full"))
+        self.assertIn("not-a-shareable-build", k)
+        self.assertTrue(k & {"forbidden-name", "pair-link-source-not-class-A", "field-must-be-empty"}, k)
+
+    def test_every_payload_field_has_a_provenance_class(self):
+        rep = self.audit(self.share)
+        self.assertEqual([v for v in rep.violations if v["kind"] == "unclassified-field"], [])
+        classes = {r["class"] for r in rep.rules.values()}
+        self.assertTrue({"OWN", "UI", "BIBLIO", "ID", "COUNT", "SRC_A", "SRC_META"} <= classes, classes)
+        self.assertEqual(rep.info["identifiers"]["NCT"], 0)
+
+    def test_string_audit_found_a_real_leak_that_is_now_fixed(self):
+        # IT5 P13: compound names and genes of DGIdb alias-risk rows were embedded in funnel.excluded_rows
+        P = embedded(self.share)
+        for x in P["funnel"]["excluded_rows"]["alias_risk_rows_unresolved"]:
+            self.assertEqual(set(x), {"catalogue_id"})
+        self.assertNotIn("Celecoxib", self.share.split('<script id="data"')[0])
+
+    # ---- mutation: a third-party row injected into the shareable bytes must make the audit fail
+    def test_mutation_class_c_compound_name_in_a_withheld_row(self):
+        name, rid = self.dtc_only_name()
+        t = self.mutate(lambda P: P["rows"][0].__setitem__("name", name))
+        self.assertIn("forbidden-name", self.kinds(t))
+        self.assertEqual(self.audit(self.share).violations, [])    # the unmutated bytes pass
+
+    def test_mutation_class_c_name_in_free_text(self):
+        name, rid = self.dtc_only_name()
+        t = self.mutate(lambda P: P["cur"]["cands"][0].__setitem__("why", P["cur"]["cands"][0]["why"] + " " + name))
+        self.assertIn("forbidden-name", self.kinds(t))
+
+    def test_mutation_whole_class_c_row_with_attributes(self):
+        name, rid = self.dtc_only_name()
+        def f(P):
+            r = P["rows"][0]
+            r.pop("w", None)
+            r.update(name=name, st=["approved_any_source"], mod=["small_molecule"], acc=["experimental"])
+        k = self.kinds(self.mutate(f))
+        self.assertTrue({"forbidden-name", "field-must-be-empty", "row-name-not-from-card-or-class-A-name-source", "access-category-not-class-A"} <= k, k)
+
+    def test_mutation_non_allowlisted_claim_source_in_a_pair(self):
+        for src in ("DGIdb:DTC", "DGIdb:NCI", "ChEMBL"):
+            def f(P, src=src):
+                p = next(q for q in P["pairs"] if q.get("l1"))
+                p["l1"][2] = list(p["l1"][2]) + ["TP53"]
+                p["l1"][3] = list(p["l1"][3]) + [src]
+            k = self.kinds(self.mutate(f))
+            self.assertIn("pair-link-source-not-class-A", k, src)
+            self.assertIn("pair-target-not-backed-by-class-A-row", k, src)
+
+    def test_mutation_chembl_mechanism_wording_and_third_party_identifiers(self):
+        wording = next(w for w in self.ref.texts if len(w.split()) >= 4 and w not in self.ref.own_grams and not all(g in self.ref.own_grams for g in self.au.grams(w.split(), 3)))
+        t = self.mutate(lambda P: P["cur"]["cands"][0].__setitem__("pharm", wording))
+        self.assertIn("forbidden-wording", self.kinds(t))
+        db = next(i for i, k in self.ref.ident.items() if k == "drugbank")
+        atc = next(i for i, k in self.ref.ident.items() if k == "atc")
+        for ident, kind in ((db, "drugbank"), (atc, "atc")):
+            t = self.mutate(lambda P, ident=ident: P["cur"]["cands"][0].__setitem__("identity", "see " + ident))
+            self.assertIn("forbidden-identifier:" + kind, self.kinds(t))
+
+    def test_mutation_unclassified_field_repository_link_and_email(self):
+        self.assertIn("unclassified-field", self.kinds(self.mutate(lambda P: P["rows"][0].__setitem__("extra", "x"))))
+        self.assertIn("link-not-document-or-public-url", self.kinds(re.sub(r"(<body[^>]*>)", lambda m: m.group(1) + '<a href="../cards/A01_pba_class.card.json">card</a>', self.share, count=1)))
+        self.assertIn("e-mail-like-string", self.kinds(self.mutate(lambda P: P["cur"]["cands"][0].__setitem__("why", "write to someone@example.org"))))
+
+    def test_mutation_restoring_the_excluded_row_names(self):
+        def f(P):
+            P["funnel"]["excluded_rows"]["alias_risk_rows_unresolved"][0].update(compound="Celecoxib", gene="PDK1")
+        self.assertIn("field-must-be-empty", self.kinds(self.mutate(f)))
+
+    def test_mutation_of_the_policy_file_is_caught(self):
+        # a temporary copy of the module with DTC wrongly added to the allowlist: the policy table (class C) and the allowlist disagree
+        with tempfile.TemporaryDirectory() as td:
+            dr = Path(td) / "dr"
+            dr.mkdir()
+            for p in DR.iterdir():
+                if p.name != "view":
+                    (dr / p.name).symlink_to(p)
+            shutil.copytree(DR / "view", dr / "view", ignore=shutil.ignore_patterns("shareable_package", "preview", "index*.html"))
+            pol = json.loads((dr / "view/shareable_sources.json").read_text())
+            pol["dgidb_claim_sources"]["DTC"] = {"label": "DTC", "licence": "x", "url": None, "attribution": "x"}
+            (dr / "view/shareable_sources.json").write_text(json.dumps(pol), encoding="utf-8")
+            ref2 = self.au.Reference(dr)
+            self.assertIn("DTC", ref2.policy_mismatch)
+            # and an unclassified claim source fails closed
+            pol["claim_source_policy"].pop("TTD")
+            (dr / "view/shareable_sources.json").write_text(json.dumps(pol), encoding="utf-8")
+            self.assertIn("TTD", self.au.Reference(dr).unclassified_sources)
+
+    def test_cli_exit_codes_and_mutated_file(self):
+        with tempfile.TemporaryDirectory() as td:
+            good, bad = Path(td) / "good.html", Path(td) / "bad.html"
+            good.write_text(self.share, encoding="utf-8")
+            name, _ = self.dtc_only_name()
+            bad.write_text(self.mutate(lambda P: P["rows"][0].__setitem__("name", name)), encoding="utf-8")
+            self.assertEqual(rv.main(["audit-shareable", "--html", str(good), "--no-text"]), 0)
+            self.assertEqual(rv.main(["audit-shareable", "--html", str(bad), "--no-text"]), 1)
+
+    # ---- provenance of the cards' own text
+    def test_text_overlap_catches_a_copied_passage_and_accepts_titles_and_short_quotes(self):
+        passage = "the quick brown fox jumps over the lazy dog while the committee of seven scholars reviews the quarterly report on migratory birds crossing the northern sea in late autumn every single year"
+        with tempfile.TemporaryDirectory() as td:
+            (Path(td) / "a.txt").write_text("Intro. " + passage + " End.", encoding="utf-8")
+            P = {"cur": {"cands": [{"pmids": [{"title": "Migratory birds crossing the northern sea in late autumn every single year"}],
+                                    "why": passage[:200], "short": 'the authors write: "the committee of seven scholars reviews the quarterly report"', "ok": "nothing shared here at all, completely different words"}]}}
+            res = self.au.text_overlap(P, [Path(td)])
+            rep = self.au.Report()
+            s = self.au.judge_text_overlap(res, rep)
+            self.assertEqual(s["titles"], 1)
+            self.assertEqual(len(s["short_marked_quotations"]) + len(s["attributed_quotations"]), 1)
+            self.assertEqual(s["failures"], 1)
+            self.assertEqual([v["kind"] for v in rep.violations], ["verbatim-run-over-limit"])
+
+    def test_recorded_text_provenance_has_no_failure(self):
+        f = DR / "view/shareable_package/TEXT_PROVENANCE.json"
+        if not f.exists():
+            self.skipTest("no recorded text provenance (no local corpus when the package was built)")
+        d = json.loads(f.read_text())
+        self.assertEqual(d["failures"], 0)
+        self.assertGreater(d["corpus_files"], 100)
+        for q in d["short_marked_quotations"]:
+            self.assertLessEqual(q["words"], self.au.SHORT_QUOTE_MAX)
+        for q in d["attributed_quotations"]:
+            self.assertLessEqual(q["words"], self.au.ATTRIBUTED_QUOTE_MAX)
+            self.assertRegex(q["text"], self.au.ATTRIBUTION_WORDS)
+
+    # ---- the package
+    def test_package_is_current_deterministic_and_self_describing(self):
+        files, man = self.pk.build_files(DR, recompute_text=False)
+        self.assertEqual(self.pk.check(DR, files), [], "run: python3 -B framework/scripts/repurposing_view.py package")
+        files2, _ = self.pk.build_files(DR, recompute_text=False)
+        self.assertEqual({k: self.pk.sha(v) for k, v in files.items()}, {k: self.pk.sha(v) for k, v in files2.items()})
+        self.assertEqual(files["index.html"].decode("utf-8"), rv.build(DR, "shareable"))
+        self.assertEqual(files["index.html"], (DR / "view/index_shareable.html").read_bytes())
+        for need in ("index.html", "NOTICE.md", "COMPARISON.md", "README.md", "manifest.json", "LICENSES/CC-BY-SA-3.0.txt", "class_b/chembl_cc-by-sa-3.0/chembl_cc-by-sa-3.0.jsonl",
+                     "class_b/chembl_cc-by-sa-3.0/LICENSE_CC-BY-SA-3.0.txt", "class_b/chembl_cc-by-sa-3.0/CREDIT.txt"):
+            self.assertIn(need, files)
+        self.assertEqual(man["audit"]["violations"], 0)
+        self.assertEqual(set(man["files"]), set(files) - {"manifest.json"})
+        for rel, spec in man["files"].items():
+            self.assertEqual(spec["sha256"], self.pk.sha(files[rel]), rel)
+        notice = files["NOTICE.md"].decode()
+        self.assertIn("LOCAL PREVIEW", notice)
+        self.assertIn("not legal advice", notice.lower())
+        for lab in ("CIViC", "DoCM", "openFDA"):
+            self.assertIn(lab, notice)
+        self.assertIn("the version of ChEMBL is ChEMBL_37", notice + files["class_b/chembl_cc-by-sa-3.0/CREDIT.txt"].decode())
+
+    def test_class_b_file_is_separate_licensed_and_not_merged_into_the_page(self):
+        files, man = self.pk.build_files(DR, recompute_text=False)
+        rows = [json.loads(x) for x in files[self.pk.CHEMBL_FILE].decode().splitlines()]
+        links = json.loads((DR / "catalog/card_links.json").read_text())["cards"]
+        ids = sorted({x["chembl_id"] for v in links.values() for x in v.get("links", []) if x.get("chembl_id")})
+        self.assertEqual([r["chembl_id"] for r in rows], ids)
+        for r in rows:
+            self.assertEqual(r["licence"], "CC BY-SA 3.0 Unported")
+            self.assertEqual(r["chembl_release"], "ChEMBL_37 2026-05-01")
+        credit = files[self.pk.CHEMBL_DIR + "/CREDIT.txt"].decode()
+        self.assertIn("https://www.ebi.ac.uk/chembl/", credit)
+        self.assertIn("ChEMBL_37", credit)
+        self.assertIn("adaptation", credit.lower())
+        self.assertIn(b"Attribution-ShareAlike 3.0 Unported", files[self.pk.CHEMBL_DIR + "/LICENSE_CC-BY-SA-3.0.txt"])
+        page = files["index.html"].decode()
+        wording = [m["mechanism_of_action"] for r in rows for m in r["curated_mechanisms"] if m["mechanism_of_action"] and len(m["mechanism_of_action"].split()) > self.au.WORDING_MAX_WORDS]
+        for w in wording:   # passages; short labels (<= 8 words) that a card quotes with attribution are listed by the audit instead
+            self.assertNotIn(w, page, "ChEMBL mechanism wording must not be in the single page")
+        rep, _ = self.au.audit_html(page, DR, self.ref)
+        listed = [w for w, r in rep.info["reference"]["co_attested_wording"]]
+        self.assertTrue(any("t type calcium channel" in w for w in listed), listed)   # card H01 quotes ChEMBL's label with attribution
+        # the other share-alike sources are not shipped
+        self.assertFalse([k for k in files if "gtopdb" in k.lower() or "clinpgx" in k.lower() or "pharmgkb" in k.lower()])
+        man_b = [x["label"] for x in man["class_b_files"]]
+        self.assertEqual(man_b, ["chembl"])
+
+    def test_package_links_work_outside_the_repository(self):
+        page = rv.build(DR, "shareable")
+        body = re.sub(r"<(script|style)[^>]*>.*?</\1>", " ", page, flags=re.S)
+        for h in re.findall(r'href="([^"]*)"', body):
+            self.assertTrue(h.startswith(("#", "https://", "http://")), h)
+        P = embedded(page)
+        for c in P["cur"]["cands"]:
+            self.assertFalse(c["card_path"].startswith(("../", "cards/")), c["card_path"])
+        for coll in (P["rows"], P["needs"]):
+            for x in coll:
+                for cd in x.get("cards") or []:
+                    self.assertTrue(cd["path"] is None or cd["path"].startswith("#cand-"), cd)
+        self.assertNotRegex(page, r"/home/|/tmp/|\.claude/worktrees")
+
+    def test_zip_is_deterministic(self):
+        import zipfile
+        files, _ = self.pk.build_files(DR, recompute_text=False)
+        with tempfile.TemporaryDirectory() as td:
+            a, b = Path(td) / "a.zip", Path(td) / "b.zip"
+            self.assertEqual(self.pk.make_zip(DR / self.pk.PKG, files, a), self.pk.make_zip(DR / self.pk.PKG, files, b))
+            with zipfile.ZipFile(a) as z:
+                names = z.namelist()
+                self.assertEqual(names, sorted(names))
+                self.assertTrue(all(n.startswith("wwox_repurposing_shareable_package/") for n in names))
+                self.assertEqual(z.read("wwox_repurposing_shareable_package/index.html"), files["index.html"])
+
+    def test_checker_and_package_tools_have_safe_help(self):
+        for m in ("repurposing_shareable_audit.py", "repurposing_shareable_package.py"):
+            r = subprocess.run([sys.executable, "-B", str(Path(__file__).resolve().parent / m), "--help"], capture_output=True, text=True, timeout=60)
+            self.assertEqual(r.returncode, 0, r.stderr[-200:])
+            self.assertTrue(r.stdout.strip())
+
+
+@unittest.skipUnless(HAVE_DATA, "module data absent")
+class ShareableAuditRendered(unittest.TestCase):
+    """The rendered surfaces of the shareable page (first screen, every export, standalone download, comparison, PDF text) hold nothing the static audit forbids."""
+
+    def test_rendered_exports_standalone_comparison_and_pdf_text_pass(self):
+        import repurposing_shareable_audit as au
+        if not rv.find_chromium():
+            self.skipTest("no Chromium binary: the rendered surfaces were NOT scanned")
+        with tempfile.TemporaryDirectory() as td:
+            f = Path(td) / "s.html"
+            text = rv.build(DR, "shareable")
+            f.write_text(text, encoding="utf-8")
+            try:
+                extra, info = au.dynamic_surfaces(f, embedded(text))
+            except Exception as e:
+                self.skipTest("browser could not be driven: " + str(e)[:120])
+            rep, _ = au.audit_html(text, DR, None, extra)
+        self.assertEqual(rep.violations, [], rep.violations[:5])
+        self.assertEqual(info["exports"], info["standalone_downloads"])
+        self.assertGreater(info["exports"], 20)
+        kinds = {w.split(":")[1] for w, _ in extra if w.startswith("rendered:")}
+        self.assertTrue({"first-screen", "export", "standalone", "compare"} <= kinds, kinds)
 
 
 @unittest.skipUnless(HAVE_DATA, "module data absent")

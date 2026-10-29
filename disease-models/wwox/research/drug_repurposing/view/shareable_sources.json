@@ -1,6 +1,6 @@
 {
-  "schema": "legend.wwox.repurposing_view.shareable_sources/1",
-  "policy": "The shareable build (repurposing_view.py run --source shareable) embeds a third-party row only when its provenance is listed here. Every other third-party row is represented by an identifier and by counts. An attribution is never removed to make data look distributable: the footer of the output lists the sources actually embedded, and separately the sources that contributed counts or identifiers only. Policy conclusions are those of the licence analysis of 2026-10-28 (IT4 C4); this file implements the mechanism and decides nothing new. It is not legal advice.",
+  "schema": "legend.wwox.repurposing_view.shareable_sources/2",
+  "policy": "The shareable build (repurposing_view.py run --source shareable) embeds a third-party row only when its provenance is listed here as class A. Every other third-party row is represented by an identifier and by counts. An attribution is never removed to make data look distributable: the footer of the output lists the sources actually embedded, and separately the sources that contributed counts or identifiers only. Classes: A attribution (redistribute with credit, only the fields the source's own authors own); B share-alike (never merged into the single page: a separate file with its own licence text and credit line, or counts only); C identifiers and counts only; D local only. Conclusions are those of the licence reconciliation of 2026-10-28 (IT5 P1, catalog/README.md) as corrected by its independent verification of 2026-10-29 (locator_audits/2026-10-29_it5_p1_independent_verification.md): NCI moves to counts-only until its terms are read at NCI; MATRIX is class A for the fields its authors own (names, approval flags) and identifiers-only for the ATC, DrugBank and ChEBI identifiers inside it. IT5 P13 added the claim_source_policy table (every claim source of the catalogue is classified; an unclassified source fails the audit), the card-row attribute rule and the class-B file for ChEMBL. This file implements the mechanism and decides nothing new in law. It is not legal advice.",
   "own_text": {
     "allowed": true,
     "what": "text and computations produced in this repository: candidate cards, needs, priorities and dispositions, counts",
@@ -8,12 +8,6 @@
     "attribution": "LEGEND WWOX repurposing module (this repository)"
   },
   "dgidb_claim_sources": {
-    "NCI": {
-      "label": "NCI Cancer Gene Index (via DGIdb)",
-      "licence": "Public domain (licence field reported by the DGIdb service on 2026-10-28)",
-      "url": "https://dgidb.org/",
-      "attribution": "National Cancer Institute, Cancer Gene Index, obtained through DGIdb (export of 2024-06-10)"
-    },
     "FDA": {
       "label": "FDA pharmacogenomic biomarkers (via DGIdb)",
       "licence": "Public domain (licence field reported by the DGIdb service on 2026-10-28)",
@@ -47,14 +41,197 @@
       "attribution": "Data provided by the U.S. Food and Drug Administration. Do not rely on openFDA to make decisions regarding medical care. No FDA endorsement is implied."
     }
   },
-  "access_scope_prefixes": {
-    "openFDA": "openFDA NDC",
-    "MATRIX": "Every Cure MATRIX drug list"
-  },
   "counts_and_identifiers_only": {
-    "ChEMBL": "CC BY-SA 3.0 (EMBL-EBI); content withheld, identifiers and counts kept; credit stays in the footer",
-    "DGIdb": "per-source terms; claim sources outside the allowlist are counted, never embedded",
-    "NIH DSLD": "probe counts only",
-    "UniChem": "cross-reference identifiers only"
+    "NCI Cancer Gene Index (via DGIdb)": "class C until its terms are read at NCI: DGIdb declares public domain, the Cancer Gene Index page named by DGIdb's importer is gone and cancer.gov's reuse policy names NCI products, not this dataset (P1 independent verification, row L3); rows are counted, never embedded",
+    "ChEMBL": "CC BY-SA 3.0 (EMBL-EBI): no ChEMBL content in the single page; ChEMBL identifiers are kept; the ChEMBL records and curated mechanisms of the twelve card compounds are shipped as a separate class-B file with its own licence text and credit line (shareable_package/class_b/chembl_cc-by-sa-3.0/)",
+    "GtoPdb (via DGIdb and the public download)": "class B, not shipped: database ODbL and contents CC BY-SA 4.0 at once (two licences on the same rows); counts only",
+    "ClinPGx / PharmGKB (via DGIdb)": "class B, not shipped: CC BY-SA 4.0 declared by DGIdb; the data-usage policy page was not read; counts only",
+    "DGIdb (other claim sources: DTC, TTD, TdgClinicalTrial, TEND, JAX-CKB, CGI, MyCancerGenome and its trials, ClearityFoundation, OncoKB, CancerCommons, COSMIC)": "class C: non-commercial, unclear, publisher-table or unknown terms declared by DGIdb; counted, never embedded",
+    "NIH DSLD": "probe counts only; supplement access categories of individual compounds are withheld",
+    "UniChem": "cross-reference identifiers only; none is embedded in the page",
+    "Every Cure MATRIX third-party identifiers (ATC, DrugBank, ChEBI)": "identifiers-only (class C): a dataset-card licence cannot grant rights in third-party content; none is embedded in the page",
+    "DrugBank": "identifiers only; no DrugBank text or table; no DrugBank identifier is embedded in the page"
+  },
+  "claim_source_policy": {
+    "DTC": {
+      "class": "C",
+      "terms": "CC BY-NC-SA 3.0, declared by DGIdb; not verified at source"
+    },
+    "ChEMBL": {
+      "class": "B",
+      "terms": "CC BY-SA 3.0 Unported; attribution: ChEMBL URL and release version"
+    },
+    "ChEMBL curated mechanism": {
+      "class": "B",
+      "terms": "CC BY-SA 3.0 Unported (ChEMBL curated mechanisms)"
+    },
+    "GuideToPharmacology": {
+      "class": "B",
+      "terms": "ODbL (database) and CC BY-SA 4.0 (contents)"
+    },
+    "TTD": {
+      "class": "C",
+      "terms": "unclear (all rights reserved versus open access), declared by DGIdb"
+    },
+    "NCI": {
+      "class": "C",
+      "terms": "public domain declared by DGIdb only; not verified at NCI"
+    },
+    "PharmGKB": {
+      "class": "B",
+      "terms": "CC BY-SA 4.0 (ClinPGx); policy page not read"
+    },
+    "TdgClinicalTrial": {
+      "class": "C",
+      "terms": "rights in a publisher's supplementary table"
+    },
+    "TEND": {
+      "class": "C",
+      "terms": "rights in a publisher's supplementary table"
+    },
+    "TALC": {
+      "class": "C",
+      "terms": "rights in a publisher's supplementary table"
+    },
+    "JAX-CKB": {
+      "class": "C",
+      "terms": "CC BY-NC-SA 4.0, declared by DGIdb"
+    },
+    "CIViC": {
+      "class": "A",
+      "terms": "CC0 1.0; verified at docs.civicdb.org"
+    },
+    "MyCancerGenome": {
+      "class": "C",
+      "terms": "restrictive custom terms, declared by DGIdb"
+    },
+    "MyCancerGenomeClinicalTrial": {
+      "class": "C",
+      "terms": "restrictive custom terms, declared by DGIdb"
+    },
+    "OncoKB": {
+      "class": "C",
+      "terms": "non-commercial custom terms, declared by DGIdb"
+    },
+    "CancerCommons": {
+      "class": "C",
+      "terms": "custom terms, declared by DGIdb"
+    },
+    "COSMIC": {
+      "class": "C",
+      "terms": "custom terms, declared by DGIdb"
+    },
+    "FDA": {
+      "class": "A",
+      "terms": "public domain unless otherwise noted; verified at fda.gov website policies"
+    },
+    "CGI": {
+      "class": "C",
+      "terms": "CC BY-NC 4.0, declared by DGIdb"
+    },
+    "ClearityFoundationClinicalTrial": {
+      "class": "C",
+      "terms": "unknown; data no longer available"
+    },
+    "ClearityFoundationBiomarkers": {
+      "class": "C",
+      "terms": "unknown; data no longer available"
+    },
+    "DoCM": {
+      "class": "A",
+      "terms": "CC BY 4.0; verified in the project's archived about page (docm.info now redirects to GitHub)"
+    }
+  },
+  "access_scope_sources": {
+    "openFDA NDC": {
+      "match": "openFDA NDC",
+      "class": "A",
+      "categories": [
+        "prescription",
+        "OTC"
+      ],
+      "name_source": "openFDA NDC single-ingredient active_ingredient name"
+    },
+    "Every Cure MATRIX drug list": {
+      "match": "Every Cure MATRIX",
+      "class": "A",
+      "categories": []
+    },
+    "ChEMBL": {
+      "match": "ChEMBL",
+      "class": "B",
+      "categories": [
+        "experimental"
+      ]
+    },
+    "NIH DSLD": {
+      "match": "DSLD",
+      "class": "C",
+      "categories": [
+        "supplement"
+      ]
+    }
+  },
+  "access_scope_rule": "a per-compound access category is embedded only when the catalogue record states it from a class-A scope (openFDA NDC, MATRIX); categories that come from ChEMBL (experimental) or DSLD (supplement) are withheld from individual compounds and survive only as catalogue-wide counts; 'unknown/unverified' is an absence statement, not source content, and is kept",
+  "identifier_sources": {
+    "HGNC": {
+      "licence": "CC0 (genenames.org/about/license); attribution recommended",
+      "attribution": "Gene symbols and HGNC identifiers: HGNC (https://www.genenames.org/)",
+      "url": "https://www.genenames.org/about/license/"
+    },
+    "PubMed bibliographic facts": {
+      "licence": "bibliographic facts (PMID, title, journal, year); no abstract and no passage of an article is embedded; article and abstract rights stay with their holders (NLM policy)",
+      "attribution": "Bibliographic data: PubMed, National Library of Medicine (https://pubmed.ncbi.nlm.nih.gov/)",
+      "url": "https://www.nlm.nih.gov/web_policies.html"
+    },
+    "ChEMBL identifiers": {
+      "licence": "identifiers only; ChEMBL content is not embedded (class B file shipped separately)",
+      "attribution": "ChEMBL identifiers (CHEMBL...): EMBL-EBI, https://www.ebi.ac.uk/chembl/, release ChEMBL_37 (2026-05-01)",
+      "url": "https://www.ebi.ac.uk/chembl/"
+    },
+    "Catalogue record identifiers": {
+      "licence": "opaque identifiers of this repository's catalogue (CAT:...), no source content",
+      "attribution": "LEGEND WWOX repurposing module (this repository)",
+      "url": null
+    }
+  },
+  "class_b_files": {
+    "chembl": {
+      "path": "class_b/chembl_cc-by-sa-3.0/chembl_cc-by-sa-3.0.jsonl",
+      "licence": "CC BY-SA 3.0 Unported",
+      "licence_text": "class_b/chembl_cc-by-sa-3.0/LICENSE_CC-BY-SA-3.0.txt",
+      "credit": "ChEMBL, EMBL-EBI, https://www.ebi.ac.uk/chembl/ , release ChEMBL_37 (2026-05-01)",
+      "release": "ChEMBL_37 2026-05-01",
+      "records_of": "card_links.json (the twelve ChEMBL records the module's cards name)",
+      "fields": [
+        "chembl_id",
+        "pref_name",
+        "molecule_type",
+        "max_phase",
+        "withdrawn_flag",
+        "first_approval_year",
+        "black_box_warning_in_source",
+        "curated_mechanisms[mechanism_of_action, action_type, target_name, target_type, organism, gene_symbols]"
+      ],
+      "changes": "selection of 12 records and of the fields above; reformatted from the catalogue's JSON; no ChEMBL value was altered"
+    }
+  },
+  "licence_texts": {
+    "LICENSES/CC-BY-SA-3.0.txt": {
+      "sha256": "3f941b3b89cf7b8370ceb83cc76d2120d471b58735d8ca60238a751a48d7f72f",
+      "what": "Creative Commons Attribution-ShareAlike 3.0 Unported legal code (creativecommons.org/licenses/by-sa/3.0/legalcode.txt, read 2026-10-29): applies to the class-B ChEMBL file only"
+    },
+    "LICENSES/CC-BY-4.0.txt": {
+      "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411",
+      "what": "Creative Commons Attribution 4.0 International legal code (creativecommons.org/licenses/by/4.0/legalcode.txt, read 2026-10-29): DoCM rows"
+    },
+    "LICENSES/CC0-1.0.txt": {
+      "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
+      "what": "CC0 1.0 Universal legal code (creativecommons.org/publicdomain/zero/1.0/legalcode.txt, read 2026-10-29): CIViC rows, openFDA NDC"
+    },
+    "LICENSES/LEGEND-MIT.txt": {
+      "sha256": "e5dfa90d88e2069a2e4fd13429e8ebaefb7bd92fbbaede065af905656bc7ba87",
+      "what": "the repository LICENSE file (MIT), copied: the licence the repository states for its own files"
+    }
   }
 }
