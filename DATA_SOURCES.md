@@ -90,12 +90,12 @@ This repository is public, so those terms apply to what is already tracked. Summ
 
 | Source | Terms | Status in the module |
 |---|---|---|
-| DGIdb export 2024-06-10 | no data licence of its own (software MIT); each claim keeps its source's terms | MIXED: 21 claim sources; DTC, CKB-CORE, CGI, OncoKB, MyCancerGenome, CancerCommons, COSMIC are non-commercial or restrictive, TTD/TdgClinicalTrial/TEND/TALC/Clearity unclear or publisher-owned; open exposure for the operator |
-| ChEMBL `ChEMBL_37` | CC BY-SA 3.0 Unported, attribution with URL and release | share-alike applies to the ChEMBL-derived part of the catalogue |
+| DGIdb export 2024-06-10 | DGIdb is a container: its public GraphQL service (read 2026-10-29) reports a licence string and link per source and none for DGIdb as a whole; each claim keeps its own source's terms (an absence, not a grant) | MIXED: 21 claim sources; DTC, CKB-CORE, CGI, OncoKB, MyCancerGenome, CancerCommons, COSMIC are non-commercial or restrictive, TTD/TdgClinicalTrial/TEND/TALC/Clearity unclear or publisher-owned; open exposure for the operator |
+| ChEMBL `ChEMBL_37` | CC BY-SA 3.0 Unported (chembl.gitbook.io, read 2026-10-29); attribution "should contain the url of the ChEMBL resource, and also the release version" (chembl.github.io/chembl-licensing, read 2026-10-29) | share-alike applies to the ChEMBL-derived part of the catalogue |
 | Guide to PHARMACOLOGY 2026.3.1 | database ODbL, contents CC BY-SA 4.0 | share-alike; kept apart from other licences |
 | PharmGKB / ClinPGx | CC BY-SA 4.0 | share-alike (rows via DGIdb) |
 | CIViC, DoCM, FDA PGx table | CC0 1.0, CC BY 4.0, public domain (read at each source) | attribution |
-| NCI Cancer Gene Index | public domain declared by DGIdb; source page gone, not verified | treat as identifiers and counts only |
+| NCI Cancer Gene Index | public domain declared by DGIdb; NCI's reuse page (read 2026-10-29) says NCI text is free of copyright unless otherwise indicated, credit NCI, but names neither data nor the Cancer Gene Index | treat as identifiers and counts only until a sentence at NCI covers these rows |
 | openFDA NDC | CC0 1.0; credit requested | used |
 | Every Cure MATRIX drug list | CC BY 4.0 (dataset-card field); scores table not used | used |
 | UniChem | EMBL-EBI Terms of Use, attribution expected; no CC0 claimed | identifiers only |

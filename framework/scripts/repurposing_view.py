@@ -26,6 +26,7 @@ import json
 import re
 import sys
 import textwrap
+import time
 from collections import Counter
 from pathlib import Path
 
@@ -2057,7 +2058,10 @@ def build_footer(source: str, allow: dict, emitted: Counter, srcs: list[dict]) -
         seen.add(e["label"].replace(" (access categories)", ""))
     for k, v in (allow.get("counts_and_identifiers_only") or {}).items():
         x = by_id.get(k.lower().replace(" ", "_").replace("nih_", ""))
-        counts_only.append({"label": k, "terms": v, "version": (x or {}).get("version"), "retrieved": (x or {}).get("retrieved_utc")})
+        ver = (x or {}).get("version")
+        if isinstance(ver, str):   # IT8: "Last-Modified src1src14.txt.gz=Sat, ..." names download files; drop the extension so the file-name scrub does not print a redaction phrase inside the English notice
+            ver = re.sub(r"([\w-]+)\.(?:txt\.gz|tsv\.gz|json|tsv|gz)=", r"\1=", ver)
+        counts_only.append({"label": k, "terms": v, "version": ver, "retrieved": (x or {}).get("retrieved_utc")})
     identifiers = [{"label": k, "licence": v.get("licence"), "attribution": v.get("attribution"), "url": v.get("url")} for k, v in (allow.get("identifier_sources") or {}).items()]
     class_b = [{"label": k, "licence": v.get("licence"), "credit": v.get("credit"), "path": v.get("path"), "records_of": v.get("records_of")} for k, v in (allow.get("class_b_files") or {}).items()]
     return {"source": source, "embedded": embedded, "counts_only": counts_only, "identifiers": identifiers, "class_b": class_b,
@@ -3484,6 +3488,24 @@ class Cdp:
             raise RuntimeError("page script error: " + json.dumps(r["exceptionDetails"])[:300])
         return (r.get("result") or {}).get("value")
 
+    def wait_for(self, expr: str, timeout: float = 90.0, interval: float = 0.1) -> bool:
+        """Poll `expr` in the page until it is truthy or `timeout` seconds pass (IT8: a fixed sleep after the load event failed on a loaded host).
+        Returns whether the condition held; the caller keeps going either way, so a timeout shows up as the same measurement it always gave."""
+        deadline = time.monotonic() + timeout
+        while True:
+            try:
+                if self.evaluate(expr):
+                    return True
+            except RuntimeError:
+                pass
+            if time.monotonic() >= deadline:
+                return False
+            time.sleep(interval)
+
+    def settle(self) -> None:
+        """Two animation frames: layout has been computed after the last script ran (replaces a fixed 350-500 ms sleep once the ready marker is polled)."""
+        self.evaluate("new Promise(function(r){requestAnimationFrame(function(){requestAnimationFrame(function(){r(1)})})})")
+
     def close(self):
         try:
             self.proc.terminate()
@@ -3516,6 +3538,9 @@ def scenarios(P: dict) -> list[tuple[str, str]]:
             ("section_selection", "#section=selection"), ("section_predictive", "#section=predictive")]
 
 
+CUR_READY_JS = "document.body.getAttribute('data-cur-ready')==='1'"   # set by assets/curated.js when the curated part has rendered
+
+
 def measure_viewports(html_path: Path, shots: Path | None = None, widths: list | None = None) -> list[dict]:
     """For each viewport and scenario: the page's OWN innerWidth and documentElement.scrollWidth, read after Emulation.setDeviceMetricsOverride.
     Returns [] when no Chromium exists (the caller reports that, never a fake pass). Print layout is measured with print media emulation at A4 width."""
@@ -3538,7 +3563,8 @@ def measure_viewports(html_path: Path, shots: Path | None = None, widths: list |
                     cdp.events.clear()
                     cdp.call("Page.navigate", url=f"file://{html_path}{frag}")
                     cdp.wait_event("Page.loadEventFired")
-                    cdp.evaluate("new Promise(function(r){setTimeout(r,500)})")
+                    cdp.wait_for(CUR_READY_JS)
+                    cdp.settle()
                     m = cdp.evaluate(MEASURE_JS.replace("__REQ__", str(w)))
                     m.update({"requested": w, "scenario": name, "mobile": mobile, "overflow": m["scrollWidth"] > w or m["innerWidth"] > w})
                     if shots and (mobile or w > 390):
@@ -3563,7 +3589,8 @@ def measure_viewports(html_path: Path, shots: Path | None = None, widths: list |
                 cdp.events.clear()
                 cdp.call("Page.navigate", url=f"file://{html_path}{frag}")
                 cdp.wait_event("Page.loadEventFired")
-                cdp.evaluate("new Promise(function(r){setTimeout(r,500)})")
+                cdp.wait_for(CUR_READY_JS)
+                cdp.settle()
                 m = cdp.evaluate(MEASURE_JS.replace("__REQ__", "794"))
                 pdf = cdp.call("Page.printToPDF", paperWidth=8.27, paperHeight=11.69, printBackground=True, preferCSSPageSize=True)
                 raw = base64.b64decode(pdf["data"])

@@ -664,7 +664,11 @@ def dynamic_surfaces(html_path: Path, P: dict) -> tuple[list[tuple[str, str]], d
                 cdp.events.clear()
                 cdp.call("Page.navigate", url=f"file://{html_path}{frag}")
                 cdp.wait_event("Page.loadEventFired")
-                cdp.evaluate("new Promise(function(r){setTimeout(r,350)})")
+                # IT8: poll for the ready marker and, for an export or section view, for the export area itself; a fixed 350 ms crashed under load
+                cdp.wait_for(rv.CUR_READY_JS)
+                if frag.startswith(("#export=", "#brief=", "#section=")):
+                    cdp.wait_for("(function(){var e=document.getElementById('export-area');return !!e&&e.innerText.length>0})()")
+                cdp.settle()
 
             load("")
             out.append(("rendered:first-screen", cdp.evaluate("(function(){document.querySelectorAll('details').forEach(function(d){d.open=true});return document.body.innerText})()")))
