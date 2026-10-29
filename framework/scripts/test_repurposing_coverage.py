@@ -482,6 +482,25 @@ class ObservationRules(unittest.TestCase):
         self.assertIn("body weight only", l4["endpoint_note"])
 
 
+class AssertionSubjectWithoutAssociationRow(Fixture):
+    """IT6 P9: an assertion whose subject is a catalogue family with NO association row used to raise KeyError (rows[fid] was read in
+    the condition of a conditional expression before row(fid) had created the family row)."""
+    def test_subject_family_with_no_target_rows_is_attached_not_a_crash(self):
+        pert = self.root / "pert.tsv"
+        pert.write_text(pert.read_text() + "\t".join(("C-DRUG", "A7", "N-DOWN", "CHEMBL4", "readout_other_disease", "benefit", "no", "no", "", "b")) + "\n")
+        pk = self.root / "dr/cards/C-DRUG.packet.json"
+        d = json.loads(pk.read_text())
+        a2 = next(a for a in d["drug_assertions"] if a["id"] == "A2")
+        d["drug_assertions"].append(dict(a2, id="A7"))
+        pk.write_text(json.dumps(d))
+        res = self.run_build()                                       # must not raise
+        rows = {r["row_id"]: r for r in res["matrix"]["rows"]} if isinstance(res["matrix"].get("rows"), list) else res["matrix"]["rows"]
+        fid = next(k for k in rows if k.endswith("CAT:CHEMBL4"))
+        self.assertTrue(any(c["card_id"] == "C-DRUG" and c["attachment"] == "assertion_subject" for c in rows[fid]["cards"]))
+        cells = {(c["row_id"], c["need"]): c for c in res["matrix"]["cells"]}
+        self.assertEqual(cells[(fid, "N-DOWN")]["L3_observed_effect"]["state"], "precedent_other_disease_only")
+
+
 class WildTypeEvidence(unittest.TestCase):
     """An observation against wild type only, or a drug effect in a wild-type arm, is not an effect in the disease model and not a rescue."""
     def test_comparison_with_wild_type_only_is_its_own_state_and_never_recovery(self):

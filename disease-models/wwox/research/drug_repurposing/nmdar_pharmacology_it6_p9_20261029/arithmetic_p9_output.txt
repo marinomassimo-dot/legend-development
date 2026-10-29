@@ -1,0 +1,28 @@
+(1) d-APV occupancy at 50 uM (upper bound, no agonist competition); Ki in nM from ChEMBL (CHEMBL84612)
+  CHEMBL1143579  Glutamate NMDA receptor; Grin1/Grin2a         Ki      280 nM  occupancy  99.4%  | with agonist at 1x EC50 (Ki doubled)  98.9%
+  CHEMBL1143579  Glutamate NMDA receptor; Grin1/Grin2b         Ki      460 nM  occupancy  99.1%  | with agonist at 1x EC50 (Ki doubled)  98.2%
+  CHEMBL1143579  Glutamate NMDA receptor; Grin1/Grin2c         Ki     1640 nM  occupancy  96.8%  | with agonist at 1x EC50 (Ki doubled)  93.8%
+  CHEMBL1144378  Glutamate NMDA receptor                       Ki     3830 nM  occupancy  92.9%  | with agonist at 1x EC50 (Ki doubled)  86.7%
+  CHEMBL4024770  Glutamate NMDA receptor; Grin1/Grin2a         Ki      390 nM  occupancy  99.2%  | with agonist at 1x EC50 (Ki doubled)  98.5%
+  CHEMBL4024770  Glutamate NMDA receptor; Grin1/Grin2b         Ki     2800 nM  occupancy  94.7%  | with agonist at 1x EC50 (Ki doubled)  89.9%
+  CHEMBL4024770  Glutamate NMDA receptor; Grin1/Grin2c         Ki     5900 nM  occupancy  89.4%  | with agonist at 1x EC50 (Ki doubled)  80.9%
+  CHEMBL4024770  Ionotropic glutamate receptor NMDA 1/2D       Ki    21000 nM  occupancy  70.4%  | with agonist at 1x EC50 (Ki doubled)  54.3%
+
+(2) one CLOSED document, two holding potentials (CHEMBL6083260, human GluN1/GluN2A or GluN1/GluN2B in HEK293, ChEMBL assay descriptions); UNVERIFIED: a single-site pore block of electrical distance <= 1 predicts at most exp(20/25.7) = 2.2-fold per 20 mV, so these ratios are implausible and are NOT used in the argument
+  memantine GluN2A: IC50 840 nM at -60 mV, 28070 nM at -40 mV  -> ratio 33-fold for 20 mV
+  memantine GluN2B: IC50 780 nM at -60 mV, 25630 nM at -40 mV  -> ratio 33-fold for 20 mV
+  ketamine GluN2A: IC50 500 nM at -60 mV, 53320 nM at -40 mV  -> ratio 107-fold for 20 mV
+  ketamine GluN2B: IC50 510 nM at -60 mV, 15220 nM at -40 mV  -> ratio 30-fold for 20 mV
+
+(3) unblocked fraction at 1.3 mM Mg2+ (Breton incubation ACSF), Jahr-Stevens form (constants unverified)
+  wild type RMP -79.25 mV: unblocked 1.98%  (x1.00 vs wild type)
+  heterozygote RMP -75.51 mV: unblocked 2.48%  (x1.25 vs wild type)
+  knockout RMP -73.62 mV: unblocked 2.78%  (x1.41 vs wild type)
+  (means of Table 1 pyramidal neurons; the function is non-linear, so this illustrates direction and size, not a per-cell value)
+
+(4) counting time for a burst rate; the source reports TWO baselines for the same 119 bursts, 18 slices, 9 animals:
+    main text 2.29 [1.1-4.2] bursts/min (median interval 26.2 s) and supplementary Table S1 0.84 [0.57-1.53] bursts/min (min 0.36, max 3.89)
+   10 bursts:    4.4 min at 2.29/min,   11.9 min at 0.84/min,   17.5 min at 0.57/min; Poisson relative SE   32%
+   25 bursts:   10.9 min at 2.29/min,   29.8 min at 0.84/min,   43.9 min at 0.57/min; Poisson relative SE   20%
+   50 bursts:   21.8 min at 2.29/min,   59.5 min at 0.84/min,   87.7 min at 0.57/min; Poisson relative SE   14%
+  100 bursts:   43.7 min at 2.29/min,  119.0 min at 0.84/min,  175.4 min at 0.57/min; Poisson relative SE   10%
