@@ -1,0 +1,125 @@
+{
+ "seed": 20261029,
+ "ndraw": 10000,
+ "thresholds_tpm": [
+  1.0,
+  0.5,
+  2.0
+ ],
+ "inputs_sha256": {
+  "hippo": "52ff4f078fc3d7600dceb716ddb26bbb2c6bb4134736a388a39d10915399e483",
+  "cortex": "77aecf5cdd194ad638e2e7c5886e04f2583d6c425c6dea22ed3b131be2e8060f",
+  "ensembl92_cdna": "7d2fcb0cbe069c08eff61a77a056f76baadad5f112dcc4e9dd7888832084e3e7",
+  "it5_set_table": "cdbac3481560f1e53ec5a09f449fafa254b6b89a986b5271815d62c7cf7647b1"
+ },
+ "n_genes": {
+  "hippo": 34785,
+  "cortex": 34785
+ },
+ "patch_transcript_tpm_share_dropped_hippo_mean": 0.0004988774872142857,
+ "unknown_transcripts": {
+  "hippo": 0,
+  "cortex": 0
+ },
+ "n_universe": {
+  "H_S": 12825,
+  "H_N": 12691,
+  "H_null": 12800,
+  "C_S": 12588,
+  "CC_SW": 12883,
+  "CC_NW": 12833,
+  "CC_SN": 13181
+ },
+ "median_uncentred_R": {
+  "H_S": -0.3829363310517811,
+  "H_N": -0.25131579559573264,
+  "H_null": -0.2122013102736834,
+  "C_S": -0.19754027031190174,
+  "CC_SW": 0.37163948198656815,
+  "CC_NW": 0.30272040585334725,
+  "CC_SN": 0.053543256871848174
+ },
+ "iqr_centred_R": {
+  "H_S": [
+   -0.2669961907789454,
+   0.2857467162986192
+  ],
+  "H_N": [
+   -0.311618184957018,
+   0.29652757683708064
+  ],
+  "H_null": [
+   -0.16940182711601795,
+   0.15940893282679183
+  ],
+  "C_S": [
+   -0.2340331387765094,
+   0.2358926727197846
+  ],
+  "CC_SW": [
+   -0.37891009127911995,
+   0.3131735796142899
+  ],
+  "CC_NW": [
+   -0.4297135152313766,
+   0.3892990889785849
+  ],
+  "CC_SN": [
+   -0.13684716354592907,
+   0.130080201964972
+  ]
+ },
+ "wwox_gene": "ENSMUSG00000004637.15",
+ "depth": {
+  "H_S": {
+   "ko_mean": 0.48970866666666674,
+   "ctl_mean": 3.3662235000000003,
+   "reduction": 0.854522830505263,
+   "ok": true,
+   "counted": true
+  },
+  "H_N": {
+   "ko_mean": 0.212961,
+   "ctl_mean": 3.548693,
+   "reduction": 0.9399888916849105,
+   "ok": true,
+   "counted": true
+  },
+  "H_null": {
+   "ko_mean": 0.33058750000000003,
+   "ctl_mean": 3.885702333333333,
+   "reduction": 0.9149220728607879,
+   "ok": true,
+   "counted": true
+  },
+  "C_S": {
+   "ko_mean": 5.938738666666666,
+   "ctl_mean": 18.828799999999998,
+   "reduction": 0.6845928223430773,
+   "ok": true,
+   "counted": true
+  },
+  "CC_SW": {
+   "ko_mean": 3.3662235000000003,
+   "ctl_mean": 3.885702333333333,
+   "reduction": 0.1336898168645101,
+   "ok": false,
+   "counted": false
+  },
+  "CC_NW": {
+   "ko_mean": 3.548693,
+   "ctl_mean": 3.885702333333333,
+   "reduction": 0.08673060991891035,
+   "ok": false,
+   "counted": false
+  },
+  "CC_SN": {
+   "ko_mean": 3.3662235000000003,
+   "ctl_mean": 3.548693,
+   "reduction": 0.0514187899601346,
+   "ok": false,
+   "counted": false
+  }
+ },
+ "n_ribosome_ctl_genes": 85
+}

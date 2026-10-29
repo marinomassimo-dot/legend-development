@@ -1,0 +1,27 @@
+set	verdict	counted_contrasts_centredR(*=outside null; s=animal-separated)	C_S_cortex
+ATF4_gene	NOT EVALUABLE (fewer than 3 measurable members)		
+ISR_targets	NOT MOVED (outside null in 0 of 3 counted contrasts)	H_S:+0.13 H_N:-0.13 H_null:-0.02	0.051
+ISR_core5	NOT MOVED (outside null in 0 of 3 counted contrasts)	H_S:+0.31 H_N:+0.09s H_null:+0.08s	0.083
+ISR_org3	NOT EVALUABLE (fewer than 3 measurable members)		
+UPR_branches	NOT MOVED (outside null in 1 of 3 counted contrasts)	H_S:+0.21 H_N:-0.12 H_null:-0.30*s	-0.016
+OXPHOS_nuclear	NOT MOVED (criterion a met for lower, but not animal-separated: H_null; outside null in control-vs-control: CC_SW,CC_NW,CC_SN; cytosolic-ribosome control outside null with same sign: H_N)	H_S:-0.24*s H_N:-0.36*s H_null:-0.08*	0.147s
+Mito_translation	NOT MOVED (outside null in 1 of 3 counted contrasts)	H_S:-0.09s H_N:-0.16*s H_null:-0.04	0.106*s
+Mito_import	NOT MOVED (outside null in 1 of 3 counted contrasts)	H_S:-0.18s H_N:-0.32*s H_null:-0.09	0.028
+Glycolysis_lactate	NOT MOVED (outside null in 0 of 3 counted contrasts)	H_S:-0.09 H_N:-0.19s H_null:-0.18	0.111
+Glycolysis_19	NOT MOVED (outside null in 1 of 3 counted contrasts)	H_S:-0.07 H_N:-0.09 H_null:-0.21*s	0.109
+PDK_family	NOT MOVED (outside null in 0 of 3 counted contrasts)	H_S:+0.39s H_N:+0.19 H_null:-0.30s	0.076
+Lactate_transporters	NOT EVALUABLE (fewer than 3 measurable members)		
+Prog_core4	NOT MOVED (outside null in 1 of 3 counted contrasts)	H_S:-0.17s H_N:+0.00 H_null:+0.37*s	0.120
+Prog_9	NOT MOVED (outside null in 1 of 3 counted contrasts)	H_S:+0.25 H_N:-0.26s H_null:+0.29*s	0.108
+Prog_NESVIM	NOT EVALUABLE (fewer than 3 measurable members)		
+Neuro_5	NOT MOVED (outside null in 0 of 3 counted contrasts)	H_S:+0.30 H_N:+0.28s H_null:+0.14s	0.220s
+Neuro_10	NOT MOVED (outside null in 1 of 3 counted contrasts)	H_S:+0.36s H_N:+0.34s H_null:+0.25*s	0.220s
+Myelin_OL	NOT MOVED (criterion a met for lower, but outside null in control-vs-control: CC_NW,CC_SN; cytosolic-ribosome control outside null with same sign: H_N)	H_S:-1.78*s H_N:-1.02*s H_null:-1.66*s	-0.795*s
+Mk_cell_cycle_proliferation	NOT EVALUABLE (fewer than 3 measurable members)		
+Mk_glutamatergic	NOT EVALUABLE (fewer than 3 measurable members)		
+Mk_GABAergic	NOT EVALUABLE (fewer than 3 measurable members)		
+Mk_astrocyte_glia	NOT EVALUABLE (fewer than 3 measurable members)		
+Mk_regional_patterning_non_cortical	NOT EVALUABLE (fewer than 3 measurable members)		
+Mk_wnt_pathway	NOT MOVED (outside null in 0 of 3 counted contrasts)	H_S:+0.05 H_N:+0.04 H_null:+0.08	-0.409
+Ctl_housekeeping	NOT MOVED (outside null in 0 of 3 counted contrasts)	H_S:+0.37s H_N:+0.24s H_null:+0.04s	0.171
+Ctl_cytosolic_ribosome	NOT MOVED (outside null in 2 of 3 counted contrasts)	H_S:+0.02 H_N:-0.22*s H_null:+0.12*s	0.051
