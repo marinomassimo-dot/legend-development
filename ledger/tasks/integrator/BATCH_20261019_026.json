@@ -5,14 +5,15 @@
  "ALIAS": "INT-IT5-REGISTRIES-20261029",
  "ACTOR_ID": "orchestrator",
  "OWNER": "orchestrator",
- "CURRENT_STATE": "COMPLETE_ON_BRANCH",
+ "CURRENT_STATE": "LANDED_ON_MAIN",
  "assigned_on": "2026-10-29",
  "OBJECTIVE": "Mandate IT5, registries step (follow-up of P2): register in the ledgers and registries the verified results of the iteration-5 research packages (P5 pharmacology, P6/P7 systems comparison and GSEA sign, P8 missense recovery, P9 card I01, identity correction), reach every consumer, regenerate the derived surfaces and prove the module no longer uses the superseded wording.",
  "TASK_CLAIM": {
   "actor": "orchestrator (Integrator worker)",
   "branch": "task/it5-batch2",
   "worktree": ".claude/worktrees/it5-batch2",
-  "base": "e90824fb"
+  "base": "e90824fb",
+  "landed": "merged to main as df960074; the claim branch and worktree no longer exist as working state"
  },
  "RESULT": {
   "wm_version": "WM_v7.28 preserved (no statement of working_model_current.md changed: searched for PDK1, ISR, phenylbutyrate, ethosuximide, CPP-115, GSEA, hNPC, dichloroacetate; no bump, no history row, last_wm_* untouched)",
@@ -59,5 +60,17 @@
   "fulltext_receipts_verify": "OK, 885 chained receipts",
   "public_release_gate": "PASS, 0 BLOCKS",
   "tests": "test_repurposing_join 63 OK, test_repurposing_coverage 54 OK, test_repurposing_view 64 OK, test_repurposing_bridge 16 OK, test_check_needs 12 OK, check_cards 24 packets 0 problems, check_needs OK, p5_check 0 problems, test_tool_routing OK, test_section_references OK"
+ },
+ "ADDENDUM_REPAIR_20261029": {
+  "branch": "task/it5-batch2fix",
+  "scope": "six low defects of the independent review (D1 to D6), repaired in the same batch id because the protocol requires no new batch for dated UPDATE/CORRECTION bullets that restate no claim",
+  "D1": "CORRECTION bullets (DL-MECH-020, DL-REPO-004, HYP-20261026-11, HYP-20260709-01): the five-gene list is the organoid driver set; the progenitor library was scored on the 10-gene HIF-type set (8 of 10 measurable, SLC16A3 absent), sensitivity-unstable at n=1",
+  "D2": "CLAIM 014 and PAPER 022 qualified in place with the verbatim old wording and the correcting candidate: the deposit does not demonstrate the knockdown at tag level; the paper has a single unreplicated Western blot (Supp Fig 1)",
+  "D3": "COMPUTATIONAL_RESULT printed (HYP-20260709-01 correction bullet, map CHAIN E)",
+  "D4": "PDH-restraint caveats added (DL-MECH-020 and HYP-20260709-01 correction bullets, map CHAIN E)",
+  "D5": "this record corrected",
+  "D6": "SupersededWordingGoneIT5Batch2 pins broadened to case-insensitive sentence-level regexes (organoid PDK1 down/lower without sign, no cytosolic client (was) tested, GSEA depletion reading in every surface, dossier and PAPER 022) and its docstring states exactly what is asserted; five mutations (paraphrases in join/cards.json, map, needs.json, dossier) all caught; one own paraphrase in map N-12 caught and reworded",
+  "regenerated": "join, coverage, both views, handoff 20261029",
+  "working_model": "WM_v7.28 still preserved"
  }
 }

@@ -146,3 +146,6 @@ The ledger bullets restate independently verified material and add no new readin
 - **Phenylbutyrate class, T-type premise:** propagated to `DIS-004`, `HYP-20260709-08`, `DL-MECH-170`, `PAPER 431`, `LIT-0703` and the map (N-11, N-12).
 - **Identity correction:** propagated to `LD-002`, `LD-003`, the iteration-3 cycle README and the coverage README.
 - **Unchanged:** every `Status`, `Type` and `Summary`; the working model; `DIS-004` verdict; the `Status` and ranking of every hypothesis touched; `CLAIM 001`; the receipt ledger (no receipt recorded here; the P5, P8 and P9 receipts were already recorded).
+
+## Addendum 2026-10-29 (repair after the independent review; same batch, see the batch record `ADDENDUM_REPAIR_20261029`)
+Six low defects were repaired by dated CORRECTION bullets and verbatim-marked in-place corrections: the five-gene glycolysis list is the organoid's driver set (the progenitor library was scored on the 10-gene HIF-type set, 8 of 10 measurable); the knockdown is not demonstrated at tag level in the deposit, while the paper carries one unreplicated Western blot; COMPUTATIONAL_RESULT printed; the PDH-restraint caveats added; the batch record state corrected; the pins broadened. No claim, status or working-model statement changed.
