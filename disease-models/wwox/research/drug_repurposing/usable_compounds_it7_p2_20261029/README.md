@@ -38,7 +38,7 @@ Phase II was not previously on disk in this checkout; including it adds 107 404 
   A family counts at a step if **any** of its records qualifies; a family can therefore be usable by both methods through two different records
   (this is why "both" is 578 for families and 376 for records).
 * **L1 any target row** — the record has at least one ChEMBL curated-mechanism row or DGIdb interaction row.
-* **L2 documented pharmacological action** — at least one row with a *stated* action (ChEMBL `action_type` present; DGIdb `interaction_type` present and not
+* **L2 documented action (called "pharmacological" in the funnel only in the sense that a source states it)** — it admits 37 ChEMBL `OTHER` rows and non-modulatory classes (vaccine antigen, exogenous protein or gene, releasing, sequestering, chelating, cross-linking agents); it is not a claim that the compound modulates a target. Definition: at least one row with a *stated* action (ChEMBL `action_type` present; DGIdb `interaction_type` present and not
   `other/unknown` and not a source conflict) that passes the catalogue's own artefact rules (`repurposing_search.artefact_reason`: unconfirmed identity, source
   artefacts, alias risk) and is not a placeholder name. Unit: records or families; denominator: all records or all families.
 * **L3 = M-net usable** — an L2 row whose action maps to a **sign** on the target's activity (down: inhibitor, antagonist, blocker, negative modulators, inverse
@@ -47,11 +47,11 @@ Phase II was not previously on disk in this checkout; including it adds 107 404 
   The sign is the source's effect on the target, not an effect on the disease.
 * **M-sig usable (any context)** — the record's InChIKey first block (the catalogue's own family key) equals that of a LINCS compound perturbagen with at least one
   `trt_cp` signature in either series. **M-sig usable (neural, strict)** — at least one such signature in a cell id from `NPC`, `NPC.CAS9`, `NPC.TAK`, `NEU`, `NEU.KCL`,
-  `MNEU.E` (iPSC-derived neural progenitors and neurons; in `cell_info`: primary site central nervous system, or modification text "differentiated … neurons").
+  `MNEU.E` (neural-lineage cells **as `cell_info` describes them**: NPC, NPC.CAS9 (Cas9-engineered) and NPC.TAK are iPSC-derived progenitors, primary site central nervous system; NEU has no recorded origin beyond "terminally differentiated to be neurons"; MNEU.E is embryonic-stem-cell-derived motor neurons; NEU.KCL is KCl-stimulated NEU and has 0 compound signatures).
   `FIBRNPC` (no modification text, primary site skin) is kept apart as lineage UNKNOWN; every FIBRNPC compound also has a strict signature, so strict = extended in counts.
-  `SHSY5Y` has **0** compound signatures. `ASC` is adipose stem cells, **not astrocytes**: no glial compound context exists. All LINCS neural cells are
-  wild-type for WWOX (UNKNOWN genotype is not assumed otherwise).
-* **Overlap** — both / only one / neither, over **all** records (or families); "neither" therefore includes the 22 557 DGIdb-only and other source-only records that have no structure key.
+  `SHSY5Y` has **0** compound signatures. `ASC` is adipose stem cells, **not astrocytes**: no glial compound context exists. For all LINCS neural cells the WWOX
+  genotype is UNKNOWN and no WWOX perturbation is documented.
+* **Overlap** — both / only one / neither, reported over **two denominators**: all records (families), and only those **testable for M-sig** (with a structure key: 15 242 records, 11 899 families). M-sig has three states: yes, no, and **UNKNOWN_NO_STRUCTURE_KEY** (28 969 records; 28 369 families contain no structure-key record at all). In the all-denominator "neither" the UNKNOWN group is included and reads as negative if the reader is careless: it is unknown. `record_usability.tsv.gz` stores `1`, `0` or `UNKNOWN_NO_STRUCTURE_KEY` for the M-sig columns.
 * **Need-link counts** (section 6) — records linked to a need's intervention targets by identifier. This is a *target association*. It is **not** a directional
   prediction, not an observed effect, and a share of pathways or targets linked is **not** a share of the disease treated.
 
@@ -63,7 +63,10 @@ Phase II was not previously on disk in this checkout; including it adds 107 404 
 | L1 with any target row | 24 423 | 23 425 |
 | L2a stated action on any row, before artefact rules | 16 424 | 15 508 |
 | **L2 documented pharmacological action** (rule-passing) | **16 362** | **15 447** |
-| **M-net usable** (signed action, human target, stable id) | **14 125** | **13 379** |
+| **M-net usable** (signed action, human target, stable id; DGIdb-other listing claims taken at face value) | **14 125** | **13 379** |
+| M-net usable, **corroborated** (a ChEMBL or GtoPdb row among the usable rows) | 11 848 | 11 123 |
+| M-sig **testable** (record/family has a structure key) | 15 242 | 11 899 |
+| M-sig **UNKNOWN_NO_STRUCTURE_KEY** (not negative) | 28 969 | 28 369 |
 | **M-sig usable, any context** (trt_cp signature, either phase) | **2 478** | **2 310** |
 | **M-sig usable, neural strict** | **1 008** | **931** |
 | **Actually evaluated** | **0** | **0** |
@@ -71,7 +74,9 @@ Phase II was not previously on disk in this checkout; including it adds 107 404 
 Overlap, M-net vs **M-sig neural**: both 376 records / **578 families**; only M-net 13 749 / 12 801; only M-sig 632 / 353; neither 29 454 / 26 536.
 Overlap, M-net vs **M-sig any context**: both 880 / 1 280; only M-net 13 245 / 12 099; only M-sig 1 598 / 1 030; neither 28 488 / 25 859.
 
-Reading: of 40 268 families, 33 percent are M-net usable and 2.3 percent are M-sig usable in a neural context (5.7 percent in any context); 1.4 percent are usable by both.
+**The same overlaps over the testable denominator only** (structure key present; 15 242 records, 11 899 families): M-net vs M-sig neural: both 376 / 578; only M-net 2 894 / 2 410; only M-sig 632 / 353; neither 11 340 / 8 558. M-net vs M-sig any: both 880 / 1 280; only M-net 2 390 / 1 708; only M-sig 1 598 / 1 030; neither 10 374 / 7 881. In the all-denominator tables the "neither" cell contains the UNKNOWN group (28 969 records / 28 369 families), whose M-sig state is unknown. A name-equality probe by the independent verifier found 2 001 of those families whose name equals a LINCS compound name; it is **not used** (identity unresolved) and is recorded in `counts.json`.
+
+Reading: of 40 268 families, 33 percent are M-net usable (28 percent when only corroborated rows count). M-sig shares have two denominators: neural-usable is 2.3 percent of all families and **7.8 percent of the 11 899 testable families**; any-context 5.7 percent of all and **19.4 percent of testable**; usable by both 1.4 percent of all and 4.9 percent of testable. The all-denominator share understates M-sig because most families cannot be tested.
 These are shares of the **catalogue**, whose composition is set by what the sources list (it is not the bioactive universe: ChEMBL declares 2 921 148 distinct compounds, 19 933 enumerated here).
 
 ### 3.1 M-net by source (records; the three groups are redundant, not independent votes)
@@ -102,7 +107,7 @@ Row level (all 106 315 catalogue target rows): 41 945 carry a stated action; 39 
 * `trt_cp` signatures: 205 034 (phase I) + 107 404 (phase II) = **312 438**; **21 299** distinct compound perturbagens with a signature, 21 236 with an InChIKey (63 cannot be matched), 9 893 distinct connectivity layers, 2 312 of them also present in the catalogue.
 * Neural strict signatures (compound, `trt_cp`): NPC 5 538 (3 625 compounds), NEU 4 440 (2 659), NPC.TAK 1 207 (212), NPC.CAS9 1 032 (169), MNEU.E 355 (63); FIBRNPC 1 312 (626, lineage UNKNOWN). **3 685** perturbagens have a strict neural signature, of which 931 families are in the catalogue.
 * Context richness of those 931 families: median 2 neural signatures per family (max 99); 485 have signatures in 2 or more neural cell ids; only **100** have two or more concentrations at one neural cell and time (a dose-response); most neural signatures are a **single concentration (10 uM) at 24 h or 6 h**. The census does not say whether a signature is of good quality (`sig_metrics` not applied) or whether the concentration is pharmacologically relevant to the target.
-* Match rule: connectivity layer (the catalogue's own family key). By full InChIKey only 2 068 records match (stereo/salt differences), 2 478 by layer. 28 969 records have no structure key (source-only) and **cannot** be matched: UNKNOWN, not negative. Name matching is not used.
+* Match rule: connectivity layer (the catalogue's own family key). By full InChIKey only 2 068 records match (stereo/salt differences), 2 478 by layer. 28 969 records have no structure key and **cannot** be matched: UNKNOWN, not negative. They are not all source-only: 4 691 are ChEMBL records without a structure key (the rest: 22 557 DGIdb-only, 1 219 openFDA-only, 502 MATRIX-only). Name matching is not used.
 
 ## 4. Pilot subset
 
@@ -137,13 +142,13 @@ context, concentration, source affinity value (source value, not interpreted), r
 |---|---|---|---|---|---:|
 | prescription | openFDA NDC finished human prescription products, matched by UNII | US | export 2026-10-27, retrieved 2026-10-27 | identifier match | 2 101 |
 | OTC | openFDA NDC finished human OTC non-homeopathic products, matched by UNII (may be a combination product) | US | export 2026-10-27 | identifier match | 906 |
-| supplement | NIH ODS DSLD label database v9 (API v9.4.0): a label ingredient name, or a DSLD ingredient-group name or synonym, equals the record's name | US labels only | retrieved 2026-10-28; 971 of 4 697 planned bulk names probed plus 75 targeted: **unprobed names are UNKNOWN, not negative** | **name only** (DSLD has no chemical identifier) | 238 |
+| supplement | NIH ODS DSLD (the probe table keeps 36 early ERROR rows, all re-probed OK; the catalogue counts 0 unresolved probe errors) label database v9 (API v9.4.0): a label ingredient name, or a DSLD ingredient-group name or synonym, equals the record's name | US labels only | retrieved 2026-10-28; 971 of 4 697 planned bulk names probed plus 75 targeted: **unprobed names are UNKNOWN, not negative** | **name only** (DSLD has no chemical identifier) | 238 |
 | EU nutrition/health-claims register and Novel Food status catalogue | EU Open Data Portal datasets (DG SANTE) | European Union level, **not Italy or any national list** | dataset last modified 2024-08-13, downloaded 2026-10-28 | name match on probe strings only (`catalog/eu_context_probe.tsv`, 67 probes); **no catalogue record carries an EU access category** | 0 |
 | Italian register of notified supplements | Ministry of Health site | Italy | attempted 2026-10-28 | answered with an anti-bot challenge page, not worked around; **not obtained** | 0 |
 | experimental | ChEMBL ChEMBL_37 2026-05-01: clinical candidate or probe statement and no approval statement | none (says nothing about obtainability) | 2026-05-01 release | source statement | 13 021 |
 | unknown/unverified | no source used states how it is obtained, or an approval is stated but no NDC product matched | none | | none | 28 234 |
 
-**Diets are complex interventions**, never a single molecule: the ketogenic diet and a ketogenic-lactate axis diet are recorded in `catalog/non_molecule_modalities.tsv` as `dietary_intervention`
+**Diets are complex interventions**, never a single molecule: the ketogenic diet and a ketogenic-lactate axis diet are recorded in `catalog/non_molecule_modalities.tsv` as `dietary_intervention` (ketogenic diet) and `dietary_intervention_plus_transport_blockade` (the ketogenic-lactate card, whose transport-blockade control is a separate compound class)
 (composition and course, not a compound) and have no record in any funnel step; vectors, CRISPR systems and oligonucleotide programmes are likewise outside the compound count.
 A supplement hit is a product label listing an ingredient name in the US; it says nothing about dose, form, quality or use in a WWOX-deficient system.
 
@@ -157,11 +162,13 @@ python3 disease-models/wwox/research/drug_repurposing/usable_compounds_it7_p2_20
 ... usable_query.py compound ethosuximide [--json]         # compound -> needs touched, and the inputs each method still lacks
 ```
 
+Output now gives, per record **and rolled up per family** (the census unit; e.g. memantine resolves to the free base, whose family-mate the hydrochloride carries the signed rows), the M-net and M-sig state (M-sig `?` = UNKNOWN, no structure key), a `direction` column (consistent / opposed where a role row couples the target to the need, else UNKNOWN: positive allosteric modulators beside antagonists are not read as one direction) and a `showing N of M` line.
+
 Standard library only, offline, deterministic (the JSON output is byte-identical between runs), reads the catalogue, `needs.json`, `target_roles.tsv`, `record_usability.tsv.gz`; link rules are
 those of `framework/scripts/repurposing_search.py` (identifier links only; artefact rows excluded; uncertain direction gives an exploration list). Example: ethosuximide has
 two catalogue records, a ChEMBL one (M-net usable; LINCS signatures exist but none in a neural context) and a DGIdb-only one (M-net usable; no structure key, so UNKNOWN for M-sig); the query returns both and chooses none.
 
-`need_links.tsv` (records linked to each need's intervention targets and how many each method can use). **Reading:** a count of compounds with a documented link to a target of the need; it is not a directional prediction
+`need_links.tsv` (now also family roll-ups and the count of records whose M-sig state is UNKNOWN; records linked to each need's intervention targets and how many each method can use). **Reading:** a count of compounds with a documented link to a target of the need; it is not a directional prediction
 (10 of 22 needs carry a direction other than `uncertain`, and a role row is also required to call a link consistent or opposed), not an observed effect, and not coverage of the disease. Columns: `records_signed_on_this_need_target` = the link to this need's target states an up/down action; `records_Mnet_usable_anywhere` = the record has a signed documented action on some stable target (not necessarily this one: read the two together, as the first is never larger in meaning).
 Selected rows (linked / signed on the need's target / M-net anywhere / M-sig neural / both): NEED-NEUROINFLAMMATION-GLIA 521 / 183 / 331 / 4 / 4 (exploration);
 NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR 179 / 121 / 143 / 1 / 1; NEED-T-TYPE-CALCIUM 67 / 36 / 44 / 1 / 1; NEED-MYELINATION 214 / 145 / 168 / 3 / 3; NEED-MTOR-AUTOPHAGY 185 / 86 / 137 / 5 / 5 (exploration). Each of the five WWOX-restoration needs links
@@ -169,10 +176,10 @@ the same 3 records (two cancer-drug records and a recombinant protein record tha
 
 ## 7. Gaps and limits (stated, not repaired)
 
-1. **M-sig neural coverage is small and thin**: 931 of 40 268 families; 100 with a dose-response; one concentration (10 uM) and mostly one time point for the rest; all cell contexts are wild-type iPSC-derived cells, no glia, no WWOX-deficient context, no signature quality filter applied. The known confound (one signature family dominating both tails, frequent hitters) applies to any M-sig use and is not re-measured here.
-2. **Source-only records (22 557 DGIdb-only, 1 219 openFDA-only, 502 MATRIX-only) have no structure key** and cannot be matched to LINCS: their M-sig status is UNKNOWN, not negative. They can be M-net usable (9 795 are).
+1. **M-sig neural coverage is small and thin**: 931 of 40 268 families; 100 with a dose-response; one concentration (10 uM) and mostly one time point for the rest; cell contexts are neural-lineage cells of UNKNOWN genotype with no WWOX perturbation documented (progenitors, neurons, ESC-derived motor neurons; NEU.KCL has no compound signature), no glia, no WWOX-deficient context, no signature quality filter applied. The known confound (one signature family dominating both tails, frequent hitters) applies to any M-sig use and is not re-measured here.
+2. **28 969 records have no structure key** (22 557 DGIdb-only, 1 219 openFDA-only, 502 MATRIX-only, **and 4 691 ChEMBL records**) and cannot be matched to LINCS: their M-sig status is UNKNOWN, not negative. They can be M-net usable (9 795 are).
 3. **Duplicate families**: the same compound can appear as a ChEMBL family and as a DGIdb-only family (8 751 source-only records share a normalised name with a ChEMBL record, flagged, not merged); family counts are upper bounds on distinct compounds.
-4. **M-net usable is a documented sign on a stable target, not a measured one**: no potency is carried; concentration is UNKNOWN for all pilot rows; assay context is known for 16 rows; selectivity for 89. Complex-level ChEMBL mechanisms (301 pilot rows) are not subunit-specific.
+4. **M-net usable is a documented sign on a stable target, not a measured one**; DGIdb-other listing claims are taken at face value (4 099 records), so the corroborated figure (ChEMBL or GtoPdb support, 11 848 records) is given beside it; no potency is carried; concentration is UNKNOWN for all pilot rows; assay context is known for 16 rows; selectivity for 89. Complex-level ChEMBL mechanisms (301 pilot rows) are not subunit-specific.
 5. **Exposure and BBB are UNKNOWN for all 595 pilot families** in the sources held; the next acquisition would be a documented brain/CSF exposure source or ChEMBL activity/ADME rows, labelled as measured, not predicted. The ChEMBL activity endpoint is not cached.
 6. **DGIdb export is dated 2024-06-10** (its ChEMBL claims are ChEMBL 33) and its licence is not cleared for public release as a whole (catalogue README); the GtoPdb and ChEMBL fields are share-alike with attribution. Rows here are counts and identifiers, not a redistribution of those fields beyond the derived tables.
 7. **GSE70138 was downloaded for this package** (public, checksummed; not committed). A verifier needs `GSE92742_Broad_LINCS_{pert,sig,cell}_info` and the GSE70138 equivalents named in the script docstring, plus `LEGEND_CATALOG_CACHE` for the pilot detail fields (counts do not depend on the cache).

@@ -226,7 +226,7 @@ def run(a) -> int:
         sig_strict = {p for p in sig_any if any(c[0] in neural_strict for c in ctx[p])}
         sig_ext = {p for p in sig_any if any(c[0] in neural_ext for c in ctx[p])}
         rec[e["id"]] = {"family": fam[e["id"]], "any_target_row": any_t, "stated_action_raw": stated_raw, "stated_action_ok": bool(stated_ok),
-                        "net_usable": bool(signed_ok), "net_groups": groups, "perts": sig_any, "sig_any": bool(sig_any),
+                        "net_usable": bool(signed_ok), "net_corroborated": any(g in ("ChEMBL", "GtoPdb") for g in groups), "net_groups": groups, "perts": sig_any, "sig_any": bool(sig_any),
                         "sig_neural": bool(sig_strict), "sig_neural_ext": bool(sig_ext), "sig_fullkey_any": any(ctx.get(p) for p in perts_full),
                         "has_skeleton": bool(sk), "origin": e["origin"], "modality": e["modality"]}
         row_detail[e["id"]] = signed_ok
@@ -243,15 +243,18 @@ def run(a) -> int:
         fb = {r["family"] for r in rec.values() if r[flagB]}
         return len(fa & fb)
 
-    def overlap(flagA, flagB, unit):
+    fam_testable = {r["family"] for r in rec.values() if r["has_skeleton"]}
+
+    def overlap(flagA, flagB, unit, testable=False):
         if unit == "records":
             A = {i for i, r in rec.items() if r[flagA]}
             B = {i for i, r in rec.items() if r[flagB]}
-            U = set(rec)
+            U = {i for i, r in rec.items() if r["has_skeleton"]} if testable else set(rec)
         else:
             A = {r["family"] for r in rec.values() if r[flagA]}
             B = {r["family"] for r in rec.values() if r[flagB]}
-            U = set(fam_ids)
+            U = set(fam_testable) if testable else set(fam_ids)
+        A, B = A & U, B & U
         return {"both": len(A & B), "only_" + flagA: len(A - B), "only_" + flagB: len(B - A), "neither": len(U - A - B), "denominator": len(U)}
 
     funnel = {}
@@ -266,6 +269,12 @@ def run(a) -> int:
         f["Msig_neural_lineage_context_extended_with_FIBRNPC"] = lvl("sig_neural_ext", unit)
         f["overlap_Mnet_vs_Msig_neural_strict"] = overlap("net_usable", "sig_neural", unit)
         f["overlap_Mnet_vs_Msig_any_context"] = overlap("net_usable", "sig_any", unit)
+        f["L3b_Mnet_corroborated_by_ChEMBL_or_GtoPdb_support"] = lvl("net_corroborated", unit)
+        f["Msig_testable_denominator_has_structure_key"] = sum(1 for r in rec.values() if r["has_skeleton"]) if unit == "records" else len(fam_testable)
+        f["Msig_UNKNOWN_NO_STRUCTURE_KEY"] = (n_rec - f["Msig_testable_denominator_has_structure_key"]) if unit == "records" else len(fam_ids) - len(fam_testable)
+        f["overlap_Mnet_vs_Msig_neural_strict_testable_only"] = overlap("net_usable", "sig_neural", unit, True)
+        f["overlap_Mnet_vs_Msig_any_context_testable_only"] = overlap("net_usable", "sig_any", unit, True)
+        f["overlap_note"] = "'neither' over the full denominator contains the UNKNOWN_NO_STRUCTURE_KEY group, whose M-sig state is unknown, not negative; the *_testable_only overlaps use only records (families) with a structure key"
         f["actually_evaluated"] = 0
         funnel[unit] = f
 
@@ -303,8 +312,8 @@ def run(a) -> int:
                 neural_cell_sig[cell] += n
                 neural_cell_perts[cell].add(p)
     lincs = {
-        "series": {"GSE92742": "phase I (2017 Cell), signatures counted here from sig_info pert_type trt_cp",
-                   "GSE70138": "phase II (2017 expansion), same"},
+        "series": {"GSE92742": "phase I (Broad LINCS L1000, deposited 2017); compound signatures counted here as sig_info rows with pert_type trt_cp",
+                   "GSE70138": "phase II (Broad LINCS L1000 expansion, deposited 2017); counted the same way"},
         "trt_cp_signatures_total": sum(sum(c.values()) for c in ctx.values()), "trt_cp_signatures_by_series": dict(nsig),
         "distinct_compound_perturbagens_with_trt_cp_signature": len(sig_perts),
         "of_which_with_inchikey": len(perts_with_key), "of_which_without_inchikey_cannot_be_matched": len(sig_perts) - len(perts_with_key),
@@ -480,7 +489,7 @@ def run(a) -> int:
         for i in sorted(rec):
             r = rec[i]
             buf.append("\t".join([i, r["family"], r["origin"], r["modality"], *("1" if r[k] else "0" for k in ("any_target_row", "stated_action_ok", "net_usable")),
-                                  "+".join(r["net_groups"]) or "-", *("1" if r[k] else "0" for k in ("sig_any", "sig_neural", "sig_neural_ext"))]))
+                                  "+".join(r["net_groups"]) or "-", *(("1" if r[k] else "0") if r["has_skeleton"] else "UNKNOWN_NO_STRUCTURE_KEY" for k in ("sig_any", "sig_neural", "sig_neural_ext"))]))
         gz.write(("\n".join(buf) + "\n").encode())
 
     # access categories with source / country / date
@@ -502,10 +511,10 @@ def run(a) -> int:
             "compound": "in this census a compound is a family; the record counts are given beside"},
         "definitions": {
             "L1": "record has at least one target row (ChEMBL curated mechanism or DGIdb interaction)",
-            "L2": "at least one row with a STATED action (ChEMBL action_type present; DGIdb interaction_type present and not other/unknown and not a source conflict) that passes the catalogue artefact rules of repurposing_search.artefact_reason (unconfirmed identity, source artefacts, alias risk) and a non-placeholder name",
+            "L2": "(documented action as the source states it, NOT necessarily a pharmacological modulation: it admits 37 ChEMBL OTHER rows and classes such as vaccine antigen, exogenous protein/gene, releasing/sequestering/chelating/cross-linking agent) at least one row with a STATED action (ChEMBL action_type present; DGIdb interaction_type present and not other/unknown and not a source conflict) that passes the catalogue artefact rules of repurposing_search.artefact_reason (unconfirmed identity, source artefacts, alias risk) and a non-placeholder name",
             "L3_Mnet": "L2 row whose action maps to a SIGN (down: inhibitor, antagonist, blocker, negative modulators, inverse agonist, degrader...; up: agonist, activator, positive modulators, opener, potentiator...) on a human target with a stable identifier (ChEMBL: Homo sapiens + target id + UniProt; DGIdb: HGNC concept id). Sign is the source's effect on the TARGET's activity; modulator/binding agent/antibody/unstated are not signed",
             "Msig_any": "the record's InChIKey first block (connectivity layer, the catalogue's own family key) equals the first block of a LINCS compound perturbagen that has at least one trt_cp signature in GSE92742 or GSE70138",
-            "Msig_neural_strict": "as Msig_any, with at least one signature in a cell id of: " + ", ".join(NEURAL_STRICT) + " (iPSC-derived neural progenitors or neurons; cell_info primary_site central nervous system or modification text 'differentiated ... neurons')",
+            "Msig_neural_strict": "as Msig_any, with at least one signature in a cell id of: " + ", ".join(NEURAL_STRICT) + " (neural-lineage cells as cell_info describes them: NPC, NPC.CAS9 (Cas9-engineered) and NPC.TAK are iPSC-derived progenitors with primary_site central nervous system; NEU has no recorded origin beyond 'terminally differentiated to be neurons'; MNEU.E is embryonic-stem-cell-derived motor neurons; NEU.KCL is KCl-stimulated NEU and has 0 compound signatures). Genotype UNKNOWN, no WWOX perturbation documented",
             "Msig_neural_extended": "strict plus FIBRNPC (cell_info gives no modification text and primary_site skin: lineage UNKNOWN, kept apart)",
             "actually_evaluated": "0: no compound has been scored or ranked by either method; usable is an input requirement, not a result"},
         "funnel": funnel,
@@ -521,6 +530,8 @@ def run(a) -> int:
         "lincs": lincs,
         "match_rule_sensitivity": {"records_matched_by_skeleton_any_context": lvl("sig_any", "records"), "records_matched_by_full_InChIKey_any_context": sum(1 for r in rec.values() if r["sig_fullkey_any"]),
                                    "records_with_no_skeleton_key_cannot_be_matched_to_LINCS": sum(1 for r in rec.values() if not r["has_skeleton"]),
+                                   "records_without_structure_key_by_origin": dict(collections.Counter(r["origin"] for r in rec.values() if not r["has_skeleton"])),
+                                   "name_equality_probe_not_used": "the independent verifier found 2,001 of the families without a structure key whose name equals a LINCS compound name; name matching is not used here (identity unresolved)",
                                    "note": "name matching is not used; source-only records without a structure are in the denominator and cannot be counted usable by M-sig (UNKNOWN, not negative)"},
         "pilot": {"definition": "families usable by BOTH M-net and M-sig (neural strict) union the families linked to a curated card (card_links.json)",
                   "both_methods_families": len(pilot_both), "card_linked_families": len(pilot_card), "union_families": len(pilot),

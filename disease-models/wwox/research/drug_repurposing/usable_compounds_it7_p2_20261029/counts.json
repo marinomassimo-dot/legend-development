@@ -93,11 +93,11 @@
  },
  "definitions": {
   "L1": "record has at least one target row (ChEMBL curated mechanism or DGIdb interaction)",
-  "L2": "at least one row with a STATED action (ChEMBL action_type present; DGIdb interaction_type present and not other/unknown and not a source conflict) that passes the catalogue artefact rules of repurposing_search.artefact_reason (unconfirmed identity, source artefacts, alias risk) and a non-placeholder name",
+  "L2": "(documented action as the source states it, NOT necessarily a pharmacological modulation: it admits 37 ChEMBL OTHER rows and classes such as vaccine antigen, exogenous protein/gene, releasing/sequestering/chelating/cross-linking agent) at least one row with a STATED action (ChEMBL action_type present; DGIdb interaction_type present and not other/unknown and not a source conflict) that passes the catalogue artefact rules of repurposing_search.artefact_reason (unconfirmed identity, source artefacts, alias risk) and a non-placeholder name",
   "L3_Mnet": "L2 row whose action maps to a SIGN (down: inhibitor, antagonist, blocker, negative modulators, inverse agonist, degrader...; up: agonist, activator, positive modulators, opener, potentiator...) on a human target with a stable identifier (ChEMBL: Homo sapiens + target id + UniProt; DGIdb: HGNC concept id). Sign is the source's effect on the TARGET's activity; modulator/binding agent/antibody/unstated are not signed",
   "Msig_any": "the record's InChIKey first block (connectivity layer, the catalogue's own family key) equals the first block of a LINCS compound perturbagen that has at least one trt_cp signature in GSE92742 or GSE70138",
   "Msig_neural_extended": "strict plus FIBRNPC (cell_info gives no modification text and primary_site skin: lineage UNKNOWN, kept apart)",
-  "Msig_neural_strict": "as Msig_any, with at least one signature in a cell id of: NPC, NPC.CAS9, NPC.TAK, NEU, NEU.KCL, MNEU.E (iPSC-derived neural progenitors or neurons; cell_info primary_site central nervous system or modification text 'differentiated ... neurons')",
+  "Msig_neural_strict": "as Msig_any, with at least one signature in a cell id of: NPC, NPC.CAS9, NPC.TAK, NEU, NEU.KCL, MNEU.E (neural-lineage cells as cell_info describes them: NPC, NPC.CAS9 (Cas9-engineered) and NPC.TAK are iPSC-derived progenitors with primary_site central nervous system; NEU has no recorded origin beyond 'terminally differentiated to be neurons'; MNEU.E is embryonic-stem-cell-derived motor neurons; NEU.KCL is KCl-stimulated NEU and has 0 compound signatures). Genotype UNKNOWN, no WWOX perturbation documented",
   "actually_evaluated": "0: no compound has been scored or ranked by either method; usable is an input requirement, not a result"
  },
  "eu_registers": {
@@ -116,9 +116,12 @@
    "L2_documented_action_row_passes_artefact_rules": 15447,
    "L2a_stated_action_any_row_before_artefact_rules": 15508,
    "L3_Mnet_usable_signed_action_on_human_target_with_stable_id": 13379,
+   "L3b_Mnet_corroborated_by_ChEMBL_or_GtoPdb_support": 11123,
+   "Msig_UNKNOWN_NO_STRUCTURE_KEY": 28369,
    "Msig_any_context_trt_cp_signature": 2310,
    "Msig_neural_lineage_context_extended_with_FIBRNPC": 931,
    "Msig_neural_lineage_context_strict": 931,
+   "Msig_testable_denominator_has_structure_key": 11899,
    "actually_evaluated": 0,
    "overlap_Mnet_vs_Msig_any_context": {
     "both": 1280,
@@ -127,13 +130,28 @@
     "only_net_usable": 12099,
     "only_sig_any": 1030
    },
+   "overlap_Mnet_vs_Msig_any_context_testable_only": {
+    "both": 1280,
+    "denominator": 11899,
+    "neither": 7881,
+    "only_net_usable": 1708,
+    "only_sig_any": 1030
+   },
    "overlap_Mnet_vs_Msig_neural_strict": {
     "both": 578,
     "denominator": 40268,
     "neither": 26536,
     "only_net_usable": 12801,
     "only_sig_neural": 353
-   }
+   },
+   "overlap_Mnet_vs_Msig_neural_strict_testable_only": {
+    "both": 578,
+    "denominator": 11899,
+    "neither": 8558,
+    "only_net_usable": 2410,
+    "only_sig_neural": 353
+   },
+   "overlap_note": "'neither' over the full denominator contains the UNKNOWN_NO_STRUCTURE_KEY group, whose M-sig state is unknown, not negative; the *_testable_only overlaps use only records (families) with a structure key"
   },
   "records": {
    "L0_catalogued": 44211,
@@ -141,9 +159,12 @@
    "L2_documented_action_row_passes_artefact_rules": 16362,
    "L2a_stated_action_any_row_before_artefact_rules": 16424,
    "L3_Mnet_usable_signed_action_on_human_target_with_stable_id": 14125,
+   "L3b_Mnet_corroborated_by_ChEMBL_or_GtoPdb_support": 11848,
+   "Msig_UNKNOWN_NO_STRUCTURE_KEY": 28969,
    "Msig_any_context_trt_cp_signature": 2478,
    "Msig_neural_lineage_context_extended_with_FIBRNPC": 1008,
    "Msig_neural_lineage_context_strict": 1008,
+   "Msig_testable_denominator_has_structure_key": 15242,
    "actually_evaluated": 0,
    "overlap_Mnet_vs_Msig_any_context": {
     "both": 880,
@@ -152,13 +173,28 @@
     "only_net_usable": 13245,
     "only_sig_any": 1598
    },
+   "overlap_Mnet_vs_Msig_any_context_testable_only": {
+    "both": 880,
+    "denominator": 15242,
+    "neither": 10374,
+    "only_net_usable": 2390,
+    "only_sig_any": 1598
+   },
    "overlap_Mnet_vs_Msig_neural_strict": {
     "both": 376,
     "denominator": 44211,
     "neither": 29454,
     "only_net_usable": 13749,
     "only_sig_neural": 632
-   }
+   },
+   "overlap_Mnet_vs_Msig_neural_strict_testable_only": {
+    "both": 376,
+    "denominator": 15242,
+    "neither": 11340,
+    "only_net_usable": 2894,
+    "only_sig_neural": 632
+   },
+   "overlap_note": "'neither' over the full denominator contains the UNKNOWN_NO_STRUCTURE_KEY group, whose M-sig state is unknown, not negative; the *_testable_only overlaps use only records (families) with a structure key"
   }
  },
  "lincs": {
@@ -239,8 +275,8 @@
   "perturbagens_with_neural_extended_signature": 3685,
   "perturbagens_with_neural_strict_signature": 3685,
   "series": {
-   "GSE70138": "phase II (2017 expansion), same",
-   "GSE92742": "phase I (2017 Cell), signatures counted here from sig_info pert_type trt_cp"
+   "GSE70138": "phase II (Broad LINCS L1000 expansion, deposited 2017); counted the same way",
+   "GSE92742": "phase I (Broad LINCS L1000, deposited 2017); compound signatures counted here as sig_info rows with pert_type trt_cp"
   },
   "trt_cp_signatures_by_series": {
    "GSE70138": 107404,
@@ -249,10 +285,17 @@
   "trt_cp_signatures_total": 312438
  },
  "match_rule_sensitivity": {
+  "name_equality_probe_not_used": "the independent verifier found 2,001 of the families without a structure key whose name equals a LINCS compound name; name matching is not used here (identity unresolved)",
   "note": "name matching is not used; source-only records without a structure are in the denominator and cannot be counted usable by M-sig (UNKNOWN, not negative)",
   "records_matched_by_full_InChIKey_any_context": 2068,
   "records_matched_by_skeleton_any_context": 2478,
-  "records_with_no_skeleton_key_cannot_be_matched_to_LINCS": 28969
+  "records_with_no_skeleton_key_cannot_be_matched_to_LINCS": 28969,
+  "records_without_structure_key_by_origin": {
+   "chembl_selected": 4691,
+   "dgidb_only": 22557,
+   "matrix_only": 502,
+   "openfda_unii_only": 1219
+  }
  },
  "pilot": {
   "both_methods_families": 578,

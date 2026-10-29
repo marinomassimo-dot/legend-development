@@ -1,23 +1,23 @@
-need_id	need_direction	list_label	linked_records_intervention_targets	linked_families	records_signed_on_this_need_target	records_Mnet_usable_anywhere	records_Msig_neural	records_Msig_any	records_both_Mnet_and_Msig_neural
-NEED-WWOX-GENE-ADDITION	restore	direction-evaluable	3	3	0	2	0	0	0
-NEED-WWOX-SPLICE-CORRECTION	restore	direction-evaluable	3	3	0	2	0	0	0
-NEED-WWOX-PTC-READTHROUGH	restore	direction-evaluable	3	3	0	2	0	0	0
-NEED-WWOX-MISSENSE-PROTEIN-RESCUE	up	direction-evaluable	3	3	0	2	0	0	0
-NEED-WWOX-ENDOGENOUS-BOOST	up	direction-evaluable	3	3	0	2	0	0	0
-NEED-ISR-ATTENUATION	uncertain	EXPLORATION	12	12	5	11	0	0	0
-NEED-PDH-PYRUVATE-AXIS	uncertain	EXPLORATION	8	8	4	4	0	0	0
-NEED-LACTATE-LDH	uncertain	EXPLORATION	10	10	4	6	0	0	0
-NEED-MITOCHONDRIAL-RESPIRATION	uncertain	EXPLORATION	0	0	0	0	0	0	0
-NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	down	direction-evaluable	179	173	121	143	1	4	1
-NEED-INHIBITORY-HYPOFUNCTION	uncertain	EXPLORATION	12	12	4	8	0	1	0
-NEED-GABA-CHLORIDE-GRADIENT	uncertain	EXPLORATION	3	3	3	3	0	0	0
-NEED-SEIZURE-CONTROL-SYMPTOMATIC	down	direction-evaluable	63	61	36	45	1	6	1
-NEED-T-TYPE-CALCIUM	down	direction-evaluable	67	65	36	44	1	5	1
-NEED-MYELINATION	restore	direction-evaluable	214	202	145	168	3	5	3
-NEED-GSK3B-DEREPRESSION	uncertain	EXPLORATION	81	80	48	63	0	1	0
-NEED-WNT-BETA-CATENIN	uncertain	EXPLORATION	12	12	11	12	0	0	0
-NEED-MYC-PROGENITOR-PROLIFERATION	uncertain	EXPLORATION	0	0	0	0	0	0	0
-NEED-MTOR-AUTOPHAGY	uncertain	EXPLORATION	185	180	86	137	5	13	5
-NEED-NEUROINFLAMMATION-GLIA	uncertain	EXPLORATION	521	509	183	331	4	10	4
-NEED-REDOX-OXIDATIVE-STRESS	uncertain	EXPLORATION	0	0	0	0	0	0	0
-NEED-SYSTEMIC-GLYCAEMIA-GROWTH	restore	direction-evaluable	0	0	0	0	0	0	0
+need_id	need_direction	list_label	linked_records_intervention_targets	linked_families	records_signed_on_this_need_target	records_Mnet_usable_anywhere	records_Msig_neural	records_Msig_any	records_both_Mnet_and_Msig_neural	records_Msig_UNKNOWN_no_structure_key	families_Mnet_usable_rollup	families_Msig_neural_rollup	families_Msig_UNKNOWN_no_structure_key
+NEED-WWOX-GENE-ADDITION	restore	direction-evaluable	3	3	0	2	0	0	0	3	2	0	3
+NEED-WWOX-SPLICE-CORRECTION	restore	direction-evaluable	3	3	0	2	0	0	0	3	2	0	3
+NEED-WWOX-PTC-READTHROUGH	restore	direction-evaluable	3	3	0	2	0	0	0	3	2	0	3
+NEED-WWOX-MISSENSE-PROTEIN-RESCUE	up	direction-evaluable	3	3	0	2	0	0	0	3	2	0	3
+NEED-WWOX-ENDOGENOUS-BOOST	up	direction-evaluable	3	3	0	2	0	0	0	3	2	0	3
+NEED-ISR-ATTENUATION	uncertain	EXPLORATION	12	12	5	11	0	0	0	12	11	0	11
+NEED-PDH-PYRUVATE-AXIS	uncertain	EXPLORATION	8	8	4	4	0	0	0	7	4	0	7
+NEED-LACTATE-LDH	uncertain	EXPLORATION	10	10	4	6	0	0	0	10	6	0	9
+NEED-MITOCHONDRIAL-RESPIRATION	uncertain	EXPLORATION	0	0	0	0	0	0	0	0	0	0	0
+NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	down	direction-evaluable	179	173	121	143	1	4	1	138	137	5	135
+NEED-INHIBITORY-HYPOFUNCTION	uncertain	EXPLORATION	12	12	4	8	0	1	0	11	8	0	10
+NEED-GABA-CHLORIDE-GRADIENT	uncertain	EXPLORATION	3	3	3	3	0	0	0	3	3	0	3
+NEED-SEIZURE-CONTROL-SYMPTOMATIC	down	direction-evaluable	63	61	36	45	1	6	1	43	45	3	41
+NEED-T-TYPE-CALCIUM	down	direction-evaluable	67	65	36	44	1	5	1	47	44	3	46
+NEED-MYELINATION	restore	direction-evaluable	214	202	145	168	3	5	3	167	156	7	163
+NEED-GSK3B-DEREPRESSION	uncertain	EXPLORATION	81	80	48	63	0	1	0	72	62	2	65
+NEED-WNT-BETA-CATENIN	uncertain	EXPLORATION	12	12	11	12	0	0	0	11	12	0	10
+NEED-MYC-PROGENITOR-PROLIFERATION	uncertain	EXPLORATION	0	0	0	0	0	0	0	0	0	0	0
+NEED-MTOR-AUTOPHAGY	uncertain	EXPLORATION	185	180	86	137	5	13	5	159	132	8	151
+NEED-NEUROINFLAMMATION-GLIA	uncertain	EXPLORATION	521	509	183	331	4	10	4	476	320	14	453
+NEED-REDOX-OXIDATIVE-STRESS	uncertain	EXPLORATION	0	0	0	0	0	0	0	0	0	0	0
+NEED-SYSTEMIC-GLYCAEMIA-GROWTH	restore	direction-evaluable	0	0	0	0	0	0	0	0	0	0	0
