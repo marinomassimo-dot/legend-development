@@ -1,0 +1,37 @@
+{
+ "event_id": "FTR-20261029-38563965-02",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "38563965",
+  "doi": "10.1152/ajplung.00277.2023"
+ },
+ "event_at": "2026-10-29T15:00:00Z",
+ "analysis_at": "2026-10-29T15:00:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-b, IT7 package P0a (census reconciliation). Q-F: is the endothelial TMT-MS proteome deposited, and what does the public supplement table hold? Read in the PMC reader HTML: Methods (Proteomic Analysis), Results first section, Data Availability Statement, Supplemental Data line; the figshare record 25137089 was read through its public API and Supplemental_Table_1.pdf (sha256 774aa45d9eff2d7ffe33a30f74bb09b0d8fc9be0b6dec70dc1b94d6a947e525c, identical to files/supplement copy) was parsed for the symbols named in the output. Question-driven, not a re-reading.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID38563965_Zeng2024_PMC.html",
+ "source_fingerprint": "2af4221b2d18a33693627627e785a3faf536c220f6c3a27c5b318549f688c495",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "not_present",
+  "discussion": "not_read",
+  "limitations": "not_present",
+  "supplementary": "read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/census_reconciliation_it7_20261029.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "Passages and figure panels named in the workflow were read at the source; the understated coverage records only what was opened for the stated question. A text layer was used for matching only where the workflow says so; figure panels were opened as images."
+ ],
+ "prior_receipt": "FTR-20260913-38563965-01",
+ "reread_reason": "new_question_outside_prior_coverage"
+}

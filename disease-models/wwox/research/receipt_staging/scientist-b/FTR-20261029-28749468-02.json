@@ -1,0 +1,37 @@
+{
+ "event_id": "FTR-20261029-28749468-02",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "28749468",
+  "doi": "10.1038/cddis.2017.346"
+ },
+ "event_at": "2026-10-29T15:00:00Z",
+ "analysis_at": "2026-10-29T15:00:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-b, IT7 package P0a. Q-G: which integrated-stress-response readouts does the paper show, in which clones and cells, and is anything deposited? Results (ER stress section), Methods (cell lines), Figure 4 and Figure 5 legends read in the JATS; the Figure 4 and Figure 5 images (native JPEG) were opened. Question-driven, not a re-reading.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID28749468_Janczar2017_PMC.xml",
+ "source_fingerprint": "e55350d9bca5f0e319a97503ac8545ea323876dc0823f7c3e48c45d37a40c4cf",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "not_read",
+  "limitations": "not_present",
+  "supplementary": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/census_reconciliation_it7_20261029.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "Passages and figure panels named in the workflow were read at the source; the understated coverage records only what was opened for the stated question. A text layer was used for matching only where the workflow says so; figure panels were opened as images."
+ ],
+ "prior_receipt": "FTR-20261003-28749468-01",
+ "reread_reason": "new_question_outside_prior_coverage"
+}
