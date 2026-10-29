@@ -129,11 +129,11 @@
   },
   "L3_observed": 9,
   "L3_states": {
-   "none_in_cards": 1637,
+   "none_in_cards": 1636,
    "observed_case_level_only": 2,
    "observed_depth_unknown": 1,
    "observed_wwox_system": 7,
-   "precedent_other_disease_only": 13,
+   "precedent_other_disease_only": 14,
    "target_engagement_only": 4
   },
   "L4_observed": 4,
@@ -1411,9 +1411,9 @@
    "label_statement": 2,
    "out_of_scope_endpoint": 4,
    "readout_in_wwox_system": 17,
-   "readout_other_disease": 38,
+   "readout_other_disease": 40,
    "safety_signal": 10,
-   "target_engagement_assay": 13
+   "target_engagement_assay": 14
   },
   "listed_by_sign": {
    "benefit": 44,
@@ -1421,7 +1421,7 @@
    "mixed": 1,
    "normalised_vs_wild_type": 3,
    "not_normalised_vs_wild_type": 2,
-   "null": 17,
+   "null": 20,
    "partial_benefit": 3,
    "unquantified": 2,
    "unresolved": 15

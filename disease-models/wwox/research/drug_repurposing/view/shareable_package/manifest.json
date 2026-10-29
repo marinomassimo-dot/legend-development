@@ -23,7 +23,7 @@
    },
    "^\\.cur\\.cands\\[\\]\\.": {
     "class": "OWN",
-    "values": 4591,
+    "values": 4634,
     "why": "card text and computed positions (provenance of the prose: see text audit)"
    },
    "^\\.cur\\.cands\\[\\]\\.(pmids\\[\\]\\.(id|role)|dois\\[\\])$": {
@@ -93,7 +93,7 @@
    },
    "^\\.pairs\\[\\]\\.(l2|l3|l4|x|n|r)(\\.|\\[\\]|$)": {
     "class": "OWN",
-    "values": 21922,
+    "values": 21925,
     "why": "levels 2-4, indices: computed from cards and needs"
    },
    "^\\.pairs\\[\\]\\.l1\\.(state|n_assoc|readout_only|why|stale)$": {
@@ -163,7 +163,7 @@
    },
    "^\\.ui\\.": {
     "class": "UI",
-    "values": 505,
+    "values": 506,
     "why": "Italian orientation text (builder data UI_IT and siblings)"
    }
   },
@@ -191,7 +191,7 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 1328,
+    "forbidden-name": 1345,
     "forbidden-wording": 8
    },
    "co_attested_wording": [
@@ -402,11 +402,11 @@
   "BIBLIO": 912,
   "COUNT": 7542,
   "ID": 2956,
-  "OWN": 49475,
+  "OWN": 49521,
   "ROWNAME": 1463,
   "SRC_A": 89,
   "SRC_META": 244,
-  "UI": 505
+  "UI": 506
  },
  "embedded_sources": [
   {
@@ -468,8 +468,8 @@
    "sha256": "b0cfd9d4f163e81172115d7dbe215d1dc3090c566e03f70c475edb5ee8e5ca08"
   },
   "TEXT_PROVENANCE.json": {
-   "bytes": 1469,
-   "sha256": "634dd4583d2d5e0624c4532484a9cae30aa1bc76fdc01173f1a3a8ecc451b7ff"
+   "bytes": 1468,
+   "sha256": "1ed20bea2c2829b084c6581abe5d552fe637b2058261f015b9ee8af160ed5730"
   },
   "class_b/chembl_cc-by-sa-3.0/CREDIT.txt": {
    "bytes": 1636,
@@ -484,8 +484,8 @@
    "sha256": "d8fe6a3455466783564803428b6318c1c442db6a16dfb97de8a6b7dcf944cc9d"
   },
   "index.html": {
-   "bytes": 1875910,
-   "sha256": "fd54dae3b929ac7a647682bde1e6e19680504d446897ab479d10ebfc98640896"
+   "bytes": 1880623,
+   "sha256": "39d026d1e4efa82d682e8de4c13af79bffa749f9c3c8eb31e8d4d9eaac387262"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",
