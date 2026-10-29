@@ -20,6 +20,7 @@ interaction detail and ChEMBL mechanism comments for the pilot tables; without i
 """
 from __future__ import annotations
 
+import re
 import argparse
 import collections
 import csv
@@ -400,7 +401,7 @@ def run(a) -> int:
                     sc = sorted({x["selectivity_comment"] for x in ms if x.get("selectivity_comment")})
                     sel = "; ".join(sc) if sc else "UNKNOWN (no selectivity comment in curated mechanism)"
                     mc = sorted({x["mechanism_comment"] for x in ms if x.get("mechanism_comment")})
-                    assay = "none carried by curated mechanism" + ("; mechanism comment: " + " | ".join(mc) if mc else "")
+                    assay = "none carried by curated mechanism" + ("; mechanism comment: " + " | ".join(mc) if mc else ""); assay = re.sub(r"setid=[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}", "setid=[omitted]", assay)  # label-set UUIDs: hex fragments trip the publication gate
                 else:
                     sel = "UNKNOWN (cache absent)"
                 conc = "UNKNOWN (curated mechanism carries no concentration)"
