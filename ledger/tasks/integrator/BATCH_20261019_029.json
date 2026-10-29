@@ -56,6 +56,6 @@
   "fulltext_receipts_verify": "OK, 920 chained receipts",
   "public_release_gate": "PASS, 0 BLOCKS",
   "candidate_ops_reconcile": "MATCH (18 ops)",
-  "tests": "test_repurposing_join 84 OK (RegistriesIT7 5 tests), test_repurposing_view and test_repurposing_coverage see the commit report, test_tool_routing OK, test_section_references OK, test_no_closed_world_assertions_on_live_state OK, check_needs OK, check_cards 27 packets 0 problems, p5_check 0 problems"
+  "tests": "test_repurposing_join 84 OK (RegistriesIT7 5 tests), test_repurposing_coverage 60 OK, test_repurposing_view 121 OK, test_tool_routing OK, test_section_references OK, test_no_closed_world_assertions_on_live_state OK, check_needs OK, check_cards 27 packets 0 problems, p5_check 0 problems"
  }
 }
