@@ -1,0 +1,330 @@
+{
+ "Mnet_by_source_group": {
+  "families_exclusive_region_counts": {
+   "ChEMBL": 3017,
+   "ChEMBL+DGIdb_other": 551,
+   "ChEMBL+DGIdb_other+GtoPdb": 151,
+   "ChEMBL+GtoPdb": 37,
+   "DGIdb_other": 2256,
+   "DGIdb_other+GtoPdb": 1140,
+   "GtoPdb": 6227
+  },
+  "families_with_at_least_one_usable_row_by_group": {
+   "ChEMBL": 3756,
+   "DGIdb_other": 4098,
+   "GtoPdb": 7555
+  },
+  "groups": {
+   "ChEMBL": "ChEMBL curated mechanism action_type",
+   "DGIdb_other": "DGIdb interaction type from every other claim source (ChEMBL claims v33, DTC, TTD, ...); identity as served",
+   "GtoPdb": "DGIdb rows whose claim source is GuideToPharmacology (target verified or corrected through GtoPdb ids), i.e. GtoPdb action as carried by the catalogue"
+  },
+  "independence_note": "the groups are NOT independent votes: DGIdb carries ChEMBL (v33) and GtoPdb claims, and GtoPdb curates some of the same drugs as ChEMBL; the overlap shows redundancy, not replication",
+  "records_exclusive_region_counts": {
+   "ChEMBL": 3758,
+   "ChEMBL+DGIdb_other": 535,
+   "ChEMBL+DGIdb_other+GtoPdb": 13,
+   "ChEMBL+GtoPdb": 1,
+   "DGIdb_other": 2277,
+   "DGIdb_other+GtoPdb": 1274,
+   "GtoPdb": 6267
+  },
+  "records_with_at_least_one_usable_row_by_group": {
+   "ChEMBL": 4307,
+   "DGIdb_other": 4099,
+   "GtoPdb": 7555
+  },
+  "usable_rows_by_claim_source": {
+   "CancerCommons": 100,
+   "ChEMBL": 10984,
+   "ChEMBL curated mechanism": 5638,
+   "ClearityFoundationClinicalTrial": 237,
+   "DTC": 94,
+   "GuideToPharmacology": 14744,
+   "MyCancerGenome": 595,
+   "MyCancerGenomeClinicalTrial": 314,
+   "TALC": 501
+  }
+ },
+ "Mnet_modality_records": {
+  "antibody": 397,
+  "enzyme": 4,
+  "gene_product": 15,
+  "oligonucleotide": 69,
+  "oligosaccharide": 16,
+  "other:antibody drug conjugate": 46,
+  "protein_or_peptide": 287,
+  "small_molecule": 3167,
+  "unknown": 10124
+ },
+ "Mnet_origin_records": {
+  "chembl_selected": 4330,
+  "dgidb_only": 9795
+ },
+ "Msig_any_modality_records": {
+  "oligosaccharide": 3,
+  "protein_or_peptide": 22,
+  "small_molecule": 2452,
+  "unknown": 1
+ },
+ "Msig_any_origin_records": {
+  "chembl_parent_added": 2,
+  "chembl_selected": 2476
+ },
+ "access_category_sources": {
+  "OTC | identifier_match | US, openFDA NDC export_date 2026-10-27": 906,
+  "experimental | source_statement | ChEMBL ChEMBL_37 2026-05-01": 13021,
+  "prescription | identifier_match | US, openFDA NDC export_date 2026-10-27": 2101,
+  "supplement | name_only | US, NIH ODS DSLD v9": 238,
+  "unknown/unverified | none | approval stated by a source but no US NDC listing matched by identifier; absence from the sources used is not a negative (country, product and date dependent)": 6653,
+  "unknown/unverified | none | no source used states how it is obtained; absence from the sources used is not a negative (country, product and date dependent)": 21581
+ },
+ "access_overlapping_category_counts": {
+  "OTC": 906,
+  "experimental": 13021,
+  "prescription": 2101,
+  "supplement": 238,
+  "unknown/unverified": 28234
+ },
+ "catalogue": {
+  "families_all_record_definition": 40268,
+  "generated_utc": "2026-10-28T23:40:16Z",
+  "records": 44211
+ },
+ "definitions": {
+  "L1": "record has at least one target row (ChEMBL curated mechanism or DGIdb interaction)",
+  "L2": "(documented action as the source states it, NOT necessarily a pharmacological modulation: it admits 37 ChEMBL OTHER rows and classes such as vaccine antigen, exogenous protein/gene, releasing/sequestering/chelating/cross-linking agent) at least one row with a STATED action (ChEMBL action_type present; DGIdb interaction_type present and not other/unknown and not a source conflict) that passes the catalogue artefact rules of repurposing_search.artefact_reason (unconfirmed identity, source artefacts, alias risk) and a non-placeholder name",
+  "L3_Mnet": "L2 row whose action maps to a SIGN (down: inhibitor, antagonist, blocker, negative modulators, inverse agonist, degrader...; up: agonist, activator, positive modulators, opener, potentiator...) on a human target with a stable identifier (ChEMBL: Homo sapiens + target id + UniProt; DGIdb: HGNC concept id). Sign is the source's effect on the TARGET's activity; modulator/binding agent/antibody/unstated are not signed",
+  "Msig_any": "the record's InChIKey first block (connectivity layer, the catalogue's own family key) equals the first block of a LINCS compound perturbagen that has at least one trt_cp signature in GSE92742 or GSE70138",
+  "Msig_neural_extended": "strict plus FIBRNPC (cell_info gives no modification text and primary_site skin: lineage UNKNOWN, kept apart)",
+  "Msig_neural_strict": "as Msig_any, with at least one signature in a cell id of: NPC, NPC.CAS9, NPC.TAK, NEU, NEU.KCL, MNEU.E (neural-lineage cells as cell_info describes them: NPC, NPC.CAS9 (Cas9-engineered) and NPC.TAK are iPSC-derived progenitors with primary_site central nervous system; NEU has no recorded origin beyond 'terminally differentiated to be neurons'; MNEU.E is embryonic-stem-cell-derived motor neurons; NEU.KCL is KCl-stimulated NEU and has 0 compound signatures). Genotype UNKNOWN, no WWOX perturbation documented",
+  "actually_evaluated": "0: no compound has been scored or ranked by either method; usable is an input requirement, not a result"
+ },
+ "eu_registers": {
+  "country_or_jurisdiction": "European Union level (not Italy or any national list)",
+  "dataset_last_modified": "2024-08-13",
+  "downloaded_utc": "2026-10-28",
+  "probe_rows": 67,
+  "reference": "catalog/README.md, section 'European context probe, IT5 P10'",
+  "scope": "name-match probes only (catalog/eu_context_probe.tsv, one row per probe string), not a catalogue-wide field: no catalogue record carries an EU access category",
+  "source": "EU Open Data Portal datasets of DG SANTE: EU register of nutrition and health claims, EU Novel Food status catalogue"
+ },
+ "funnel": {
+  "families": {
+   "L0_catalogued": 40268,
+   "L1_with_any_target_row": 23425,
+   "L2_documented_action_row_passes_artefact_rules": 15447,
+   "L2a_stated_action_any_row_before_artefact_rules": 15508,
+   "L3_Mnet_usable_signed_action_on_human_target_with_stable_id": 13379,
+   "L3b_Mnet_corroborated_by_ChEMBL_or_GtoPdb_support": 11123,
+   "Msig_UNKNOWN_NO_STRUCTURE_KEY": 28369,
+   "Msig_any_context_trt_cp_signature": 2310,
+   "Msig_neural_lineage_context_extended_with_FIBRNPC": 931,
+   "Msig_neural_lineage_context_strict": 931,
+   "Msig_testable_denominator_has_structure_key": 11899,
+   "actually_evaluated": 0,
+   "overlap_Mnet_vs_Msig_any_context": {
+    "both": 1280,
+    "denominator": 40268,
+    "neither": 25859,
+    "only_net_usable": 12099,
+    "only_sig_any": 1030
+   },
+   "overlap_Mnet_vs_Msig_any_context_testable_only": {
+    "both": 1280,
+    "denominator": 11899,
+    "neither": 7881,
+    "only_net_usable": 1708,
+    "only_sig_any": 1030
+   },
+   "overlap_Mnet_vs_Msig_neural_strict": {
+    "both": 578,
+    "denominator": 40268,
+    "neither": 26536,
+    "only_net_usable": 12801,
+    "only_sig_neural": 353
+   },
+   "overlap_Mnet_vs_Msig_neural_strict_testable_only": {
+    "both": 578,
+    "denominator": 11899,
+    "neither": 8558,
+    "only_net_usable": 2410,
+    "only_sig_neural": 353
+   },
+   "overlap_note": "'neither' over the full denominator contains the UNKNOWN_NO_STRUCTURE_KEY group, whose M-sig state is unknown, not negative; the *_testable_only overlaps use only records (families) with a structure key"
+  },
+  "records": {
+   "L0_catalogued": 44211,
+   "L1_with_any_target_row": 24423,
+   "L2_documented_action_row_passes_artefact_rules": 16362,
+   "L2a_stated_action_any_row_before_artefact_rules": 16424,
+   "L3_Mnet_usable_signed_action_on_human_target_with_stable_id": 14125,
+   "L3b_Mnet_corroborated_by_ChEMBL_or_GtoPdb_support": 11848,
+   "Msig_UNKNOWN_NO_STRUCTURE_KEY": 28969,
+   "Msig_any_context_trt_cp_signature": 2478,
+   "Msig_neural_lineage_context_extended_with_FIBRNPC": 1008,
+   "Msig_neural_lineage_context_strict": 1008,
+   "Msig_testable_denominator_has_structure_key": 15242,
+   "actually_evaluated": 0,
+   "overlap_Mnet_vs_Msig_any_context": {
+    "both": 880,
+    "denominator": 44211,
+    "neither": 28488,
+    "only_net_usable": 13245,
+    "only_sig_any": 1598
+   },
+   "overlap_Mnet_vs_Msig_any_context_testable_only": {
+    "both": 880,
+    "denominator": 15242,
+    "neither": 10374,
+    "only_net_usable": 2390,
+    "only_sig_any": 1598
+   },
+   "overlap_Mnet_vs_Msig_neural_strict": {
+    "both": 376,
+    "denominator": 44211,
+    "neither": 29454,
+    "only_net_usable": 13749,
+    "only_sig_neural": 632
+   },
+   "overlap_Mnet_vs_Msig_neural_strict_testable_only": {
+    "both": 376,
+    "denominator": 15242,
+    "neither": 11340,
+    "only_net_usable": 2894,
+    "only_sig_neural": 632
+   },
+   "overlap_note": "'neither' over the full denominator contains the UNKNOWN_NO_STRUCTURE_KEY group, whose M-sig state is unknown, not negative; the *_testable_only overlaps use only records (families) with a structure key"
+  }
+ },
+ "lincs": {
+  "ASC_note": "ASC / ASC.C in cell_info are adipose-derived stem cells (primary_site adipose), NOT astrocytes; no glial compound context is counted",
+  "SHSY5Y_trt_cp_signatures": 0,
+  "distinct_cell_ids_with_compound_signatures": 83,
+  "distinct_compound_perturbagens_with_trt_cp_signature": 21299,
+  "distinct_skeletons_also_in_catalogue": 2312,
+  "distinct_skeletons_among_those": 9893,
+  "files_checksummed_against_series_SHA512SUMS": {
+   "GSE70138_Broad_LINCS_cell_info_2017-04-28.txt.gz": {
+    "matches_series_SHA512SUMS": true,
+    "series": "GSE70138",
+    "sha512": "75b5d4cf9b6f3955bfe888ce22ae85134dd9fd053111c0f0d7b02298640269454267b0bdfcb2dc9ab562e0281b332703eb1d94337e57355945ccc3505b609b4a"
+   },
+   "GSE70138_Broad_LINCS_pert_info_2017-03-06.txt.gz": {
+    "matches_series_SHA512SUMS": true,
+    "series": "GSE70138",
+    "sha512": "b0df8aaa5653c581bd69a3dddd6eaa64e6296a70f40f50b1b80a2854abbee17a9d66e874dc00657c045be738df521f2e673115c1aae9f5972e820e88f0032ddc"
+   },
+   "GSE70138_Broad_LINCS_sig_info_2017-03-06.txt.gz": {
+    "matches_series_SHA512SUMS": true,
+    "series": "GSE70138",
+    "sha512": "8d16dfc3a8fdfba572797f2519f9bc96b687c3666c78d386b53fc997164dd2a8ab5953c0b323795ec7f62de5de4ddbd0285e79f8be48487156479dc8ee0128c9"
+   },
+   "GSE92742_Broad_LINCS_cell_info.txt.gz": {
+    "matches_series_SHA512SUMS": true,
+    "series": "GSE92742",
+    "sha512": "75b5d4cf9b6f3955bfe888ce22ae85134dd9fd053111c0f0d7b02298640269454267b0bdfcb2dc9ab562e0281b332703eb1d94337e57355945ccc3505b609b4a"
+   },
+   "GSE92742_Broad_LINCS_pert_info.txt.gz": {
+    "matches_series_SHA512SUMS": true,
+    "series": "GSE92742",
+    "sha512": "cdba99a4a6204ecdd26adb2338a418e60ac3da9e18d6d75214dea87c3cf06e951f9356e876f581dd7d6081014a428a11b6ad93b68486954cddbae5e29177530b"
+   },
+   "GSE92742_Broad_LINCS_sig_info.txt.gz": {
+    "matches_series_SHA512SUMS": true,
+    "series": "GSE92742",
+    "sha512": "3e334edd319b4abc6f879bec125ad78f869f73f0a222279269b54aac04f81877ed6d2cdcd034adf5efdf378329349242bdcd636113ab78617473dbfae43261c6"
+   }
+  },
+  "neural_cell_compound_counts_trt_cp": {
+   "FIBRNPC": 626,
+   "MNEU.E": 63,
+   "NEU": 2659,
+   "NPC": 3625,
+   "NPC.CAS9": 169,
+   "NPC.TAK": 212
+  },
+  "neural_cell_signature_counts_trt_cp": {
+   "FIBRNPC": 1312,
+   "MNEU.E": 355,
+   "NEU": 4440,
+   "NPC": 5538,
+   "NPC.CAS9": 1032,
+   "NPC.TAK": 1207
+  },
+  "neural_extended_adds": [
+   "FIBRNPC"
+  ],
+  "neural_strict_cell_ids": [
+   "NPC",
+   "NPC.CAS9",
+   "NPC.TAK",
+   "NEU",
+   "NEU.KCL",
+   "MNEU.E"
+  ],
+  "neural_strict_families_stats": {
+   "families": 931,
+   "signatures_per_family_max": 99,
+   "signatures_per_family_median": 2,
+   "with_2_or_more_doses_at_one_neural_cell_and_time": 100,
+   "with_signatures_in_2_or_more_neural_cell_ids": 485
+  },
+  "of_which_with_inchikey": 21236,
+  "of_which_without_inchikey_cannot_be_matched": 63,
+  "perturbagens_with_neural_extended_signature": 3685,
+  "perturbagens_with_neural_strict_signature": 3685,
+  "series": {
+   "GSE70138": "phase II (Broad LINCS L1000 expansion, deposited 2017); counted the same way",
+   "GSE92742": "phase I (Broad LINCS L1000, deposited 2017); compound signatures counted here as sig_info rows with pert_type trt_cp"
+  },
+  "trt_cp_signatures_by_series": {
+   "GSE70138": 107404,
+   "GSE92742": 205034
+  },
+  "trt_cp_signatures_total": 312438
+ },
+ "match_rule_sensitivity": {
+  "name_equality_probe_not_used": "the independent verifier found 2,001 of the families without a structure key whose name equals a LINCS compound name; name matching is not used here (identity unresolved)",
+  "note": "name matching is not used; source-only records without a structure are in the denominator and cannot be counted usable by M-sig (UNKNOWN, not negative)",
+  "records_matched_by_full_InChIKey_any_context": 2068,
+  "records_matched_by_skeleton_any_context": 2478,
+  "records_with_no_skeleton_key_cannot_be_matched_to_LINCS": 28969,
+  "records_without_structure_key_by_origin": {
+   "chembl_selected": 4691,
+   "dgidb_only": 22557,
+   "matrix_only": 502,
+   "openfda_unii_only": 1219
+  }
+ },
+ "pilot": {
+  "both_methods_families": 578,
+  "cache_available": {
+   "chembl_mechanisms": true,
+   "chembl_molecules": true,
+   "gtopdb_interactions": true
+  },
+  "card_linked_and_both": 2,
+  "card_linked_families": 19,
+  "card_linked_families_Mnet_usable": 14,
+  "card_linked_families_Msig_neural": 3,
+  "card_linked_not_in_both": 17,
+  "definition": "families usable by BOTH M-net and M-sig (neural strict) union the families linked to a curated card (card_links.json)",
+  "pilot_lincs_context_rows": 3531,
+  "pilot_net_action_rows": 1425,
+  "union_families": 595
+ },
+ "row_counts": {
+  "rows_excluded_by_catalogue_artefact_rules": 10747,
+  "rows_signed_before_exclusion_and_identity": 39129,
+  "rows_total": 106315,
+  "rows_with_stated_action": 41945
+ },
+ "schema_version": 1,
+ "task": "IT7 P2 / roadmap R2",
+ "units": {
+  "compound": "in this census a compound is a family; the record counts are given beside",
+  "families": "ChEMBL parent/child or identical InChIKey first block, plus the 485 source-only records joined by GtoPdb ligand reconciliation; every other source-only record is its own family (identity unresolved, never merged on name)",
+  "records": "source-level substance records (a salt, a stereoisomer and a source-only row each count once)"
+ }
+}
