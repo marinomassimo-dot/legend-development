@@ -1,7 +1,7 @@
 evidence_id	kind	pmid	path	anchor	status
 E01	manifest	25012504	disease-models/wwox/research/deepdive_manifests/PMID25012504.json#4	wwox loss raises hif1alpha protein	full-text receipt FTR-20260814-25012504-01
 E02	manifest	25012504	disease-models/wwox/research/deepdive_manifests/PMID25012504.json#2	pdk1	full-text receipt FTR-20260814-25012504-01
-E03	manifest	25012504	disease-models/wwox/research/deepdive_manifests/PMID25012504.json#1	glycolytic/respiratory shift	full-text receipt FTR-20260814-25012504-01
+E03	manifest	25012504	disease-models/wwox/research/deepdive_manifests/PMID25012504.json#0	increase in glucose uptake	full-text receipt FTR-20260814-25012504-01
 E04	manifest	25012504	disease-models/wwox/research/deepdive_manifests/PMID25012504.json#5	disappears under hypoxia	full-text receipt FTR-20260814-25012504-01
 E05	manifest	35328751	disease-models/wwox/research/deepdive_manifests/PMID35328751.json#7	lactate is higher in the knockout in all four	manifest entry; figure attestation by hand reading
 E06	manifest	35328751	disease-models/wwox/research/deepdive_manifests/PMID35328751.json#9	two of the four conditions	manifest entry

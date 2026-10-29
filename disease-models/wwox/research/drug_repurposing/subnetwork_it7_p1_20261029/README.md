@@ -13,8 +13,9 @@ does the PDK1 -> PDH link that the chain needs have any support at all?**
 The signed subnetwork that carries the question is in `nodes.tsv` / `edges.tsv`. Its "signature candidates" are chosen by a fixed, mechanical rule
 (`human_concordance` in `nodes.tsv`, recomputed by `subnetwork.py check`): a gene is concordant when its centred log2 ratio is at least 0.25
 in the same direction in BOTH the organoid and the progenitor library. That rule yields five genes up (SLC2A1, HK2, LDHA, LDHB, BNIP3) and one down
-(PDK1). The 0.25 bin is a descriptive reading aid, not a test; PDK1 is lower in sign only (inside its single-gene null in both systems) and is kept
+(PDK1). The neuron library (support only) agrees on just two of the six (LDHA, BNIP3 up); SLC2A1 is lower and PDK1 higher there, LDHB is flat and HK2 is not measurable, so the module is a two-system observation, not a three-system one. The 0.25 bin is a descriptive reading aid, not a test; PDK1 is lower in sign only (inside its single-gene null in both systems) and is kept
 because the chain predicts the opposite, not because it is evidenced.
+Base rate (verifier count, 2026-10-29): genome-wide, 1,338 of the 8,123 genes measurable in both human systems pass this rule, about 16 percent, so about 4 of the 24 network genes pass by chance and the probability of six or more is about 0.19. Passing the rule is therefore weak evidence; P3 must rely on the decile-matched random-set null of the module, never on the rule.
 
 ### Why this question and not the others considered
 | Candidate | Decision | Reason |
@@ -28,7 +29,7 @@ because the chain predicts the opposite, not because it is evidenced.
 
 | System | Role | Unit and n | Platform | Notes |
 |---|---|---|---|---|
-| GSE156243 organoid knockout, week 15 | build | 4 v 2 libraries (batch/differentiation not stated) | RNA-seq counts | the exon deletion leaves the WWOX transcript (+0.42), so the transcript is not a depth check |
+| GSE156243 organoid knockout, week 15 | build | 4 v 2 libraries from one hESC line (WiBR3); the series record says age- and batch-matched, with 2 further wild-type libraries failing QC and dropped; independent differentiations not established | RNA-seq counts | the exon deletion leaves the WWOX transcript (+0.42), so the transcript is not a depth check |
 | GSE126075 shWWOX progenitors | build | 1 library per arm | CAGE | knockdown depth not shown in the progenitor tags; control arm may be untransduced; not a replicate |
 | GSE126075 day-14 neurons | build (support only) | 1 library per arm | CAGE | WWOX about 3 to 4 fold lower; composition-sensitive |
 | GSE158681/2 mouse P17 (4 contrasts) | **seen**: already analysed in IT6 P4, so not held-out | 2 to 3 animals per arm | transcript TPM | used as a comparison column, never as evaluation |
@@ -69,10 +70,10 @@ anything did to a WWOX-deficient system.
 
 ## 5. Files
 
-`nodes.tsv` (30 nodes: 23 genes, 1 perturbation (WWOX), 3 sets, 3 process/metabolite; identity ids, per-system sign columns, concordance) · `edges.tsv` (88 edges: 78 measured, 5 inferred, 2 hypothesised, 3 association) · `observations.tsv` (231 rows, one per node and system, UNKNOWN kept) · `systems.tsv` (15 systems with genotype, tissue, stage, n, unit,
-platform, accession, PMID, reuse terms, time) · `evidence.tsv` (18 verifiable anchors: manifest entry, document phrase, or abstract) ·
-`derived_gene_values.tsv` + `derive_gene_values.py` (per-gene centred values for the three human libraries, recomputed from the deposits with the iteration-5 method;
-inputs are outside the repository, their SHA-256 is printed) · `gene_list.txt` · `subnetwork.py` (`--help`, `build`, `check`).
+`nodes.tsv` (30 nodes: 23 genes, 1 perturbation (WWOX), 3 sets, 3 process/metabolite; identity ids, per-system sign columns, concordance) · `edges.tsv` (85 edges: 74 measured, 5 inferred, 2 hypothesised, 4 association) · `observations.tsv` (225 rows, one per node and system, UNKNOWN kept) · `systems.tsv` (14 systems with genotype, tissue, stage, n, unit,
+platform, accession, PMID, reuse terms, time) · `evidence.tsv` (14 verifiable anchors: manifest entry, document phrase, or abstract) ·
+`derived_gene_values.tsv` + `derived_gene_values.tsv.inputs.txt` + `derive_gene_values.py` (per-gene centred values for the three human libraries, recomputed from the deposits with the iteration-5 method;
+inputs are outside the repository, their SHA-256 values are in the .inputs.txt file) · `gene_list.txt` · `subnetwork.py` (`--help`, `build`, `check`).
 
 Edge sign means: the direction of the target when the source is in `source_state` (WWOX "loss" for measured edges). `no_change` is an observation; `UNKNOWN` is absence of one.
 Measured edges are one per system; counter-evidence ids point at the same node in other systems with a different sign (conflicts are kept, never averaged).
@@ -86,6 +87,8 @@ Reproduce: `python3 subnetwork.py build && python3 subnetwork.py check --hgnc <h
 * Ortholog one-to-one for PDK, SLC16, SLC2, HK, LDH genes (fly Ldh is shared by LDHA and LDHB in the table; mouse mapping by symbol).
 * HIF1A -> PDK1 -> PDH links rest on an abstract-level reading of a non-WWOX paper and on a WWOX paper's MEF/cancer-cell results; full text of the former was not read here.
 * Which module genes a perturbation resource measures directly.
+* Repair notes (verification 2026-10-29): fly head rows were removed (same experiment as a held-out candidate; `check` now fails when one PMID or accession is both used and held out); human fibroblast PDH is UNKNOWN (no significance bracket, n unknown); MEF glucose uptake is typed `functional`, not glycolytic flux; the single patient MRS lactate is an `association` edge with the reported direction kept in the observation row only; the pre-registered prediction document is no longer cited as evidence for any edge.
+* Alias search in the CAGE matrix (HGNC alias and previous symbols): PKM is carried as PKM2 (the matrix symbol; an isoform-level promoter, not the gene total); SLC16A3 (MCT3, MCT4), PDK4 (none), MBP (none) and MOG (BTN6, BTNL11) have no matrix entry under any alias and stay UNKNOWN there.
 * Mouse per-gene values for PFKP, ALDOA, PGK1, ENO1, PKM and BNIP3 are UNKNOWN because the P4 key-gene table does not hold them (set-level values do).
 * Human fibroblast line: the figure arm is called knockout in the data and knockdown in the paper's wording; n of the PDH panel is not stated.
 * PubMed attribution: abstracts of PMID 25012504 and 16517406 were retrieved via PubMed on 2026-10-29.

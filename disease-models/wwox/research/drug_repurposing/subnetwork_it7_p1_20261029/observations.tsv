@@ -70,8 +70,8 @@ O0068	HGNC:3350	mouse_p17_hipp_N	transcript	UNKNOWN							gene not tabulated per
 O0069	HGNC:3350	mouse_p17_hipp_null	transcript	UNKNOWN							gene not tabulated per gene in the P4 key_genes table (set-level values only)
 O0070	HGNC:3350	mouse_p17_ctx_S	transcript	UNKNOWN							gene not tabulated per gene in the P4 key_genes table (set-level values only)
 O0071	HGNC:9021	organoid_ko_w15	transcript	no_change	0.131	centred log2 ratio	disease-models/wwox/research/drug_repurposing/subnetwork_it7_p1_20261029/derived_gene_values.tsv	gene=PKM;system_id=organoid_ko_w15	R_centred		descriptive per-gene value, not a differential-expression call
-O0072	HGNC:9021	hnpc_shwwox_cage	transcript	UNKNOWN		centred log2 ratio	disease-models/wwox/research/drug_repurposing/subnetwork_it7_p1_20261029/derived_gene_values.tsv	gene=PKM;system_id=hnpc_shwwox_cage	R_centred		not measurable under the universe rule (below the count/tag threshold or symbol absent)
-O0073	HGNC:9021	neuron_d14_shwwox_cage	transcript	UNKNOWN		centred log2 ratio	disease-models/wwox/research/drug_repurposing/subnetwork_it7_p1_20261029/derived_gene_values.tsv	gene=PKM;system_id=neuron_d14_shwwox_cage	R_centred		not measurable under the universe rule (below the count/tag threshold or symbol absent)
+O0072	HGNC:9021	hnpc_shwwox_cage	transcript	up	0.732	centred log2 ratio	disease-models/wwox/research/drug_repurposing/subnetwork_it7_p1_20261029/derived_gene_values.tsv	gene=PKM;system_id=hnpc_shwwox_cage	R_centred		descriptive per-gene value, not a differential-expression call
+O0073	HGNC:9021	neuron_d14_shwwox_cage	transcript	down	-0.391	centred log2 ratio	disease-models/wwox/research/drug_repurposing/subnetwork_it7_p1_20261029/derived_gene_values.tsv	gene=PKM;system_id=neuron_d14_shwwox_cage	R_centred		descriptive per-gene value, not a differential-expression call
 O0074	HGNC:9021	mouse_p17_hipp_S	transcript	UNKNOWN							gene not tabulated per gene in the P4 key_genes table (set-level values only)
 O0075	HGNC:9021	mouse_p17_hipp_N	transcript	UNKNOWN							gene not tabulated per gene in the P4 key_genes table (set-level values only)
 O0076	HGNC:9021	mouse_p17_hipp_null	transcript	UNKNOWN							gene not tabulated per gene in the P4 key_genes table (set-level values only)
@@ -191,10 +191,10 @@ O0189	SET:MYELIN_OL_10	mouse_p17_ctx_S	set_transcript	down	-0.795	centred log2 r
 O0190	HGNC:4910	mef_null	protein	up						E01	HIF1A protein raised under normoxia; difference disappears under hypoxia (E04)
 O0191	HGNC:4910	fibroblast_ko	protein	mixed						E06	cytoplasmic HIF1A lower in two of four oxygen x glucose conditions
 O0192	HGNC:8809	mef_null	transcript	up						E02	PDK1 reported as higher; level named only as 'higher levels' in the cited sentence
-O0193	GO:0004739	fibroblast_ko	activity	no_change						E07	no knockout-versus-control difference in any condition; n not stated
+O0193	GO:0004739	fibroblast_ko	activity	UNKNOWN						E07	no significance bracket shown between knockout and control in any condition; n unknown, so this is not significant-with-n, not a demonstrated absence of change
 O0194	CHEBI:24996	fibroblast_ko	metabolite	up						E05	higher in the knockout in all four conditions
 O0195	CHEBI:24996	patient_mrs	functional	down						E14	cerebral lactate reported extremely low; n=1, confounded by a second variant
-O0196	GO:0006096	mef_null	flux	up						E03	glycolytic/respiratory shift measured directly (oxygen consumption lower)
+O0196	GO:0006096	mef_null	functional	up						E03	glucose uptake higher in knockout MEFs (2-NBDG); this is uptake, not glycolytic flux; no extracellular acidification or lactate flux is read here
 O0197	GO:0006096	organoid_ko_w15	none	UNKNOWN							not measured in this system in any source read
 O0198	GO:0006096	hnpc_shwwox_cage	none	UNKNOWN							not measured in this system in any source read
 O0199	GO:0006096	neuron_d14_shwwox_cage	none	UNKNOWN							not measured in this system in any source read

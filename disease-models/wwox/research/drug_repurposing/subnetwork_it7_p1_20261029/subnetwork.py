@@ -37,8 +37,8 @@ FORBIDDEN = ["lincs", "l1000", "sigcom", "reverser", "dichloroacetate", "vigabat
              "q230p", "c.1057-2a>g"]
 
 SYSTEMS = [  # id, role, species, model, perturbation, tissue, stage, n, unit, platform, accession, pmid, reuse, time
-    ("organoid_ko_w15", "training_human", "human", "cerebral organoid, WWOX knockout", "WWOX exon-deletion knockout versus wild type",
-     "bulk organoid RNA", "culture week 15", "4 knockout v 2 wild-type libraries", "library (differentiation batch not stated; UNVERIFIED)",
+    ("organoid_ko_w15", "training_human", "human", "cerebral organoid, WWOX knockout", "WWOX knockout (CRISPR/Cas9, one hESC line WiBR3) versus age- and batch-matched wild type",
+     "bulk organoid RNA", "culture week 15", "4 knockout v 2 wild-type libraries (2 further wild-type libraries failed QC and were dropped per the series record)", "library from one hESC line; independent differentiations not established",
      "RNA-seq counts", "GSE156243", "34268881", "GEO public; no licence text in the record; only derived summaries are committed", "single time point"),
     ("hnpc_shwwox_cage", "training_human", "human", "H9-derived neural progenitors, lentiviral shRNA", "WWOX knockdown (depth not shown in CAGE tags) versus control arm",
      "2D clonal progenitor line", "undifferentiated progenitor", "1 library per arm", "library (not a replicate)", "CAGE promoter sums", "GSE126075", "31543760",
@@ -128,7 +128,7 @@ PROCESS = {  # id -> (label, type, other_id, module)
 EVIDENCE = [  # id, kind, pmid, path, anchor, status
     ("E01", "manifest", "25012504", "disease-models/wwox/research/deepdive_manifests/PMID25012504.json#4", "wwox loss raises hif1alpha protein", "full-text receipt FTR-20260814-25012504-01"),
     ("E02", "manifest", "25012504", "disease-models/wwox/research/deepdive_manifests/PMID25012504.json#2", "pdk1", "full-text receipt FTR-20260814-25012504-01"),
-    ("E03", "manifest", "25012504", "disease-models/wwox/research/deepdive_manifests/PMID25012504.json#1", "glycolytic/respiratory shift", "full-text receipt FTR-20260814-25012504-01"),
+    ("E03", "manifest", "25012504", "disease-models/wwox/research/deepdive_manifests/PMID25012504.json#0", "increase in glucose uptake", "full-text receipt FTR-20260814-25012504-01"),
     ("E04", "manifest", "25012504", "disease-models/wwox/research/deepdive_manifests/PMID25012504.json#5", "disappears under hypoxia", "full-text receipt FTR-20260814-25012504-01"),
     ("E05", "manifest", "35328751", "disease-models/wwox/research/deepdive_manifests/PMID35328751.json#7", "lactate is higher in the knockout in all four", "manifest entry; figure attestation by hand reading"),
     ("E06", "manifest", "35328751", "disease-models/wwox/research/deepdive_manifests/PMID35328751.json#9", "two of the four conditions", "manifest entry"),
@@ -226,10 +226,10 @@ def build_observations():
     lit("HGNC:4910", "mef_null", "protein", "up", "E01", "HIF1A protein raised under normoxia; difference disappears under hypoxia (E04)")
     lit("HGNC:4910", "fibroblast_ko", "protein", "mixed", "E06", "cytoplasmic HIF1A lower in two of four oxygen x glucose conditions")
     lit("HGNC:8809", "mef_null", "transcript", "up", "E02", "PDK1 reported as higher; level named only as 'higher levels' in the cited sentence")
-    lit("GO:0004739", "fibroblast_ko", "activity", "no_change", "E07", "no knockout-versus-control difference in any condition; n not stated")
+    lit("GO:0004739", "fibroblast_ko", "activity", "UNKNOWN", "E07", "no significance bracket shown between knockout and control in any condition; n unknown, so this is not significant-with-n, not a demonstrated absence of change")
     lit("CHEBI:24996", "fibroblast_ko", "metabolite", "up", "E05", "higher in the knockout in all four conditions")
     lit("CHEBI:24996", "patient_mrs", "functional", "down", "E14", "cerebral lactate reported extremely low; n=1, confounded by a second variant")
-    lit("GO:0006096", "mef_null", "flux", "up", "E03", "glycolytic/respiratory shift measured directly (oxygen consumption lower)")
+    lit("GO:0006096", "mef_null", "functional", "up", "E03", "glucose uptake higher in knockout MEFs (2-NBDG); this is uptake, not glycolytic flux; no extracellular acidification or lactate flux is read here")
     # fill UNKNOWN for every unobserved (node, system) of process nodes and perturbation-free combos
     have = {(o[0], o[1]) for o in obs}
     for nid in list(PROCESS):
@@ -329,7 +329,7 @@ def build_edges(obs):
     for o in obs:
         by.setdefault(o[1], []).append(o)
     for t in MEASURED_TARGETS:
-        rows = [o for o in by[t] if o[4] != "UNKNOWN"]
+        rows = [o for o in by[t] if o[4] != "UNKNOWN" and o[2] != "patient_mrs"]
         for o in rows:
             others = [x for x in rows if x[2] != o[2] and x[3] == o[3]]
             counter = [x[0] for x in others if x[4] != o[4]]
@@ -340,6 +340,9 @@ def build_edges(obs):
             s = sysrow[o[2]]
             note = o[11] if o[11] else ""
             add(wwox, "loss", t, o[3], "measured", o[4], o[2], s[4], s[5], s[6], o[3], s[13], status, o[0], ";".join(counter), note)
+    for o in by["CHEBI:24996"]:
+        if o[2] == "patient_mrs" and o[4] != "UNKNOWN":
+            add(wwox, "loss", "CHEBI:24996", "functional", "association", "UNKNOWN", o[2], sysrow[o[2]][4], sysrow[o[2]][5], sysrow[o[2]][6], "functional", sysrow[o[2]][13], "single_system", o[0], "", "one uncontrolled case with a second variant; brain lactate reported extremely low; no comparison arm, so an association, and the observation row keeps the reported direction (down)")
     # structural edges
     add(wwox, "present", "HGNC:4910", "protein", "association", "UNKNOWN", "background", "Wwox-deficient cells and cancer lines; WW1 domain", "cell lines (non-neural)", "not applicable", "physical interaction", "not applicable", "single_system", "E11", "E06", "association only: a physical interaction is not modulation; modulation of HIF1A level is the separate measured edge")
     for tg in ("HGNC:4923", "HGNC:11005", "HGNC:6535"):

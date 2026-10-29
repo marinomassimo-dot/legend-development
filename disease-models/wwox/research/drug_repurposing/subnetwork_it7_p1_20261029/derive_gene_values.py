@@ -7,11 +7,13 @@ are descriptive per-gene values, not differential-expression calls, and one CAGE
 
 Usage: derive_gene_values.py <GSE156243 counts.txt.gz> <GSE126075 gene TPM matrix.txt.gz> <genes.txt> <out.tsv>
        derive_gene_values.py --help
-Reads nothing else; writes only <out.tsv>. The inputs live outside the repository (files/geo/...); their SHA-256 is written into the output header.
+Reads nothing else; writes <out.tsv> and <out.tsv>.inputs.txt (input SHA-256 values, so the TSV keeps one header line). The inputs live outside the repository (files/geo/...).
+Alias rule (HGNC alias/previous symbols present in a matrix, searched 2026-10-29): CAGE matrix PKM -> PKM2. SLC16A3, PDK4, MBP, MOG have no alias in the matrix; they stay absent.
 """
-import sys, gzip, csv, hashlib, statistics, math
+import sys, os, gzip, csv, hashlib, statistics, math
 
 HELP = __doc__
+CAGE_ALIAS = {"PKM": "PKM2"}
 # Library sizes of the CAGE arms (tags): hNSC control recovered from the TSS table (51,007,825; see wwox_systems_comparison_it5 section 6),
 # the others equal their BED line counts (bed_streamed_tagcounts_and_sha256.tsv).
 NTAGS = {"hNSC": 51007825, "hNSC_WWOX_del": 14332108, "Neurons": 32686868, "Neurons_WWOX_del": 40730002}
@@ -76,16 +78,20 @@ def main(argv):
         R = [math.log2((T[kd][i] + .5) / (T[ctl][i] + .5)) for i in range(len(names))]
         Rc, med = centred(R, uni)
         for g in genes:
-            if g in gi:
-                i = gi[g]
-                rows.append((g, sysid, str(bool(uni[i])), f"{Rc[i]:.3f}", f"{R[i]:.3f}", f"{tk[i]:.1f}", f"{tc[i]:.1f}", "estimated_tags_kd_ctl"))
+            gg = g if g in gi else CAGE_ALIAS.get(g, g)
+            if gg in gi:
+                i = gi[gg]
+                unit = "estimated_tags_kd_ctl" + ("" if gg == g else f";matrix_symbol={gg}")
+                rows.append((g, sysid, str(bool(uni[i])), f"{Rc[i]:.3f}", f"{R[i]:.3f}", f"{tk[i]:.1f}", f"{tc[i]:.1f}", unit))
             else:
                 rows.append((g, sysid, "False", "", "", "", "", "symbol_absent_from_matrix"))
     with open(out, "w", newline="") as f:
         f.write("gene\tsystem_id\tmeasurable\tR_centred\tR_uncentred\tsupport_kd\tsupport_ctl\tsupport_unit\n")
         for r in rows:
             f.write("\t".join(r) + "\n")
-    print(f"wrote {len(rows)} rows; sha256 counts={sha(counts)} cage={sha(cage)}")
+    with open(out + ".inputs.txt", "w") as f:
+        f.write(f"counts\t{os.path.basename(counts)}\t{sha(counts)}\ncage\t{os.path.basename(cage)}\t{sha(cage)}\ngene_list\t{os.path.basename(genefile)}\t{sha(genefile)}\n")
+    print(f"wrote {len(rows)} rows and {out}.inputs.txt")
     return 0
 
 
