@@ -16,10 +16,10 @@
     "values": 126,
     "why": "lead dispositions attached to cards"
    },
-   "^\\.cur\\.(needs|threads|groups|gaps|goals|tracks|scopes|group_note|meta|evidence_graph|work_order)(\\.|\\[\\]|$)": {
+   "^\\.cur\\.(needs|threads|groups|gaps|goals|tracks|scopes|group_note|meta|evidence_graph|work_order|selection|hypotheses|predictive|contexts)(\\.|\\[\\]|$)": {
     "class": "OWN",
-    "values": 2637,
-    "why": "needs, threads, positions, evidence graph and work order written in this repository"
+    "values": 3449,
+    "why": "needs, threads, positions, evidence graph, work order and the IT7 selection, comparison, predictive-test and context sections: own text or counts computed from own census files"
    },
    "^\\.cur\\.cands\\[\\]\\.": {
     "class": "OWN",
@@ -183,7 +183,7 @@
    },
    "^\\.ui\\.": {
     "class": "UI",
-    "values": 599,
+    "values": 760,
     "why": "Italian orientation text (builder data UI_IT and siblings)"
    }
   },
@@ -196,7 +196,7 @@
    "PMID": 55
   },
   "links": {
-   "distinct_hrefs": 52,
+   "distinct_hrefs": 58,
    "external_public": 6,
    "hosts": [
     "civicdb.org",
@@ -206,13 +206,13 @@
     "www.genenames.org",
     "www.nlm.nih.gov"
    ],
-   "internal_anchors": 46
+   "internal_anchors": 52
   },
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 1844,
-    "forbidden-wording": 11
+    "forbidden-name": 1936,
+    "forbidden-wording": 12
    },
    "co_attested_wording": [
     [
@@ -236,7 +236,7 @@
    "forbidden_names": 126046,
    "forbidden_wordings": 2888,
    "pair_unmarked_attested_or_unchecked": {
-    "count": 84,
+    "count": 92,
     "names": [
      "act 709478",
      "apinocaltamide",
@@ -248,7 +248,7 @@
      "phenylbutyrate",
      "proteasome inhibitor"
     ],
-    "unchecked_without_corpus": 84
+    "unchecked_without_corpus": 92
    },
    "suppressed_by_exemption": {
     "category labels of catalogue-wide counts": 1
@@ -309,15 +309,19 @@
   "cards": 36,
   "curated_sections": {
    "cands": "differs",
+   "contexts": "identical",
    "evidence_graph": "identical",
    "footer": "differs",
    "gaps": "identical",
    "goals": "identical",
    "group_note": "identical",
    "groups": "identical",
+   "hypotheses": "identical",
    "meta": "differs",
    "needs": "differs",
+   "predictive": "identical",
    "scopes": "identical",
+   "selection": "identical",
    "threads": "identical",
    "tracks": "identical",
    "work_order": "identical"
@@ -431,11 +435,11 @@
   "BIBLIO": 1850,
   "COUNT": 7757,
   "ID": 3048,
-  "OWN": 53253,
+  "OWN": 54065,
   "ROWNAME": 1506,
   "SRC_A": 91,
   "SRC_META": 244,
-  "UI": 599
+  "UI": 760
  },
  "embedded_sources": [
   {
@@ -469,8 +473,8 @@
  ],
  "files": {
   "COMPARISON.md": {
-   "bytes": 6068,
-   "sha256": "ffe7bb4455164f19bd680c2a4eb9ce9c35d3282539f0ef3264d8b855b4f9f7f7"
+   "bytes": 6113,
+   "sha256": "3569aac0a2ca6a008586e67ce47b52533fa9c976366ff1c8c9c52789e1810b2d"
   },
   "LICENSES/CC-BY-4.0.txt": {
    "bytes": 18657,
@@ -493,8 +497,8 @@
    "sha256": "2fa560e147b4a999a5cbd1c920baed2c3cd185a201e4c83e3af1f9dc621f6931"
   },
   "README.md": {
-   "bytes": 4443,
-   "sha256": "1da2dcb80ea1a33cfd8fdd0acdbe256f75a28133375a88e16106b15eab264c24"
+   "bytes": 4642,
+   "sha256": "02145ca83f3593ce48e07b79c7d59f6544f92b121085f515a5978f62169f303c"
   },
   "TEXT_PROVENANCE.json": {
    "bytes": 1870,
@@ -513,8 +517,8 @@
    "sha256": "d8fe6a3455466783564803428b6318c1c442db6a16dfb97de8a6b7dcf944cc9d"
   },
   "index.html": {
-   "bytes": 2324234,
-   "sha256": "edd7744551998ca4e59fd3c5867a81bcc4dd66850723a800a1db6753f9f05e2b"
+   "bytes": 2459077,
+   "sha256": "a4fd47c3da38ea2dcfc842d6d73d4280e7895d0d599caaa84df3984f72138875"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",

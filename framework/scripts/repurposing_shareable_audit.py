@@ -90,7 +90,7 @@ PATH_RULES: list[tuple[str, str, str]] = [
     (r"^\.cur\.cands\[\]\.", "OWN", "card text and computed positions (provenance of the prose: see text audit)"),
     (r"^\.cur\.needs\[\]\.obs\[\]\.(cite)$", "BIBLIO", "title, journal, year of a cited work"),
     (r"^\.cur\.needs\[\]\.obs\[\]\.pmid$", "BIBLIO", "PMID of the observation source"),
-    (r"^\.cur\.(needs|threads|groups|gaps|goals|tracks|scopes|group_note|meta|evidence_graph|work_order)(\.|\[\]|$)", "OWN", "needs, threads, positions, evidence graph and work order written in this repository"),
+    (r"^\.cur\.(needs|threads|groups|gaps|goals|tracks|scopes|group_note|meta|evidence_graph|work_order|selection|hypotheses|predictive|contexts)(\.|\[\]|$)", "OWN", "needs, threads, positions, evidence graph, work order and the IT7 selection, comparison, predictive-test and context sections: own text or counts computed from own census files"),
     (r"^\.cur\.footer\.", "SRC_META", "attribution footer: sources, licences, credit lines"),
     (r"^\.access\.", "COUNT", "catalogue-wide counts and category labels (no compound)"),
     (r"^\.(funnel|matrix_summary|dispositions|observations|level_defs|leads_note|pair_unit|ranking_note|no_probability|schema|source|exploration_flagged|has_distinct|orphan_priorities)(\.|\[\]|$)", "OWN", "counts and definitions computed from the module's own outputs"),
@@ -671,6 +671,10 @@ def dynamic_surfaces(html_path: Path, P: dict) -> tuple[list[tuple[str, str]], d
             HREFS = "Array.from(document.querySelectorAll('a[href]')).map(function(a){return a.getAttribute('href')}).join('\\n')"
             out.append(("rendered-href:first-screen", cdp.evaluate(HREFS)))
             n_std = 0
+            for sid in ("selection", "hypotheses", "predictive"):   # IT7 P7: the printable sections are scanned like the exports
+                load("#section=" + sid)
+                out.append((f"rendered:section:{sid}", cdp.evaluate("document.getElementById('export-area').innerText")))
+                out.append((f"rendered-href:section:{sid}", cdp.evaluate(HREFS)))
             for cid in ids:
                 load("#brief=" + cid)   # IT6 P13: the one-page synthesis and its standalone download are scanned like the dossier
                 out.append((f"rendered:brief:{cid}", cdp.evaluate("document.getElementById('export-area').innerText")))

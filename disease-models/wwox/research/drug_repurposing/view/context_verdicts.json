@@ -1,0 +1,93 @@
+{
+ "schema": "legend.wwox.context_verdicts/1",
+ "authoring": "Hand-authored from the verdict table of the verified README of the IT7 P4 context-differences record. Counts are read from context_matrix.tsv at build time; the verdict of a quantity is checked against the matrix by necessary conditions (concordant: the same resolved sign in at least two models and none opposite; discordant: opposite resolved signs; concordant_no_signal: every measured cell inside noise; single_system: measured in one model only). No subgroup is supported.",
+ "expect": {
+  "contexts": 13,
+  "quantities": 14,
+  "cells": 182,
+  "unknown": 89,
+  "measured": 93,
+  "models": 6
+ },
+ "models": {
+  "ORG_KO": "organoid",
+  "ORG_PW": "organoid",
+  "ORG_PS": "organoid",
+  "HNPC_KD": "shrna",
+  "NEUR_KD": "shrna",
+  "MS_HIP": "mouse_deposit",
+  "MN_HIP": "mouse_deposit",
+  "MNULL_HIP": "mouse_deposit",
+  "MS_CTX": "mouse_deposit",
+  "FLY_KD": "fly",
+  "FLY_KDA": "fly",
+  "RAT": "rat",
+  "P47T": "p47t"
+ },
+ "model_labels_it": {
+  "organoid": "organoide (anche degli organoidi di pazienti)",
+  "shrna": "linea shRNA",
+  "mouse_deposit": "deposito murino P17",
+  "fly": "mosca",
+  "rat": "ratto",
+  "p47t": "topo P47T"
+ },
+ "verdicts": {
+  "Q01": {
+   "verdict": "unresolved",
+   "quantity_it": "mRNA di ATF4 (singolo gene)"
+  },
+  "Q02": {
+   "verdict": "discordant",
+   "quantity_it": "Insieme dei bersagli ISR, livello del trascritto"
+  },
+  "Q03": {
+   "verdict": "no_data",
+   "quantity_it": "ISR a livello proteico o di fosforilazione"
+  },
+  "Q04": {
+   "verdict": "concordant_no_signal",
+   "quantity_it": "Rami della risposta UPR, trascritti"
+  },
+  "Q05": {
+   "verdict": "unresolved",
+   "quantity_it": "Glicolisi e LDHA, trascritti"
+  },
+  "Q06": {
+   "verdict": "concordant_no_signal",
+   "quantity_it": "Famiglia PDK e PDK1, trascritti"
+  },
+  "Q07": {
+   "verdict": "no_data",
+   "quantity_it": "Lattato, flusso o ATP (funzionale)"
+  },
+  "Q08": {
+   "verdict": "unresolved",
+   "quantity_it": "Trascritti OXPHOS nucleari"
+  },
+  "Q09": {
+   "verdict": "discordant",
+   "quantity_it": "Trascritti della traduzione mitocondriale"
+  },
+  "Q10": {
+   "verdict": "unresolved",
+   "quantity_it": "Marcatori dei progenitori (glia radiale)"
+  },
+  "Q11": {
+   "verdict": "unresolved",
+   "quantity_it": "Marcatori neuronali"
+  },
+  "Q12": {
+   "verdict": "single_system",
+   "quantity_it": "Trascritti di mielina e oligodendrociti"
+  },
+  "Q13": {
+   "verdict": "discordant",
+   "quantity_it": "Reattività gliale"
+  },
+  "Q14": {
+   "verdict": "concordant",
+   "quantity_it": "Iperecitabilità di rete o crisi"
+  }
+ }
+}

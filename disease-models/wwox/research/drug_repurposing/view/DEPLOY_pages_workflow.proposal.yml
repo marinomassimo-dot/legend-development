@@ -1,0 +1,69 @@
+# PROPOSAL ONLY. This file is NOT active: it lives under view/, not under .github/workflows/.
+# Activating it is an operator act (see DEPLOY.md, section 8): copy it to .github/workflows/, enable
+# "GitHub Actions" as the Pages source in the repository settings, and run it by hand.
+#
+# What it does: verifies that every file of the shareable package equals the digest recorded in the
+# package's own manifest.json, then publishes exactly that directory as a static site with GitHub Pages.
+# It cannot be triggered by a push, a schedule or a pull request: workflow_dispatch is its only trigger.
+# Before activation, replace each `uses:` tag by the commit SHA of the release you reviewed (this file
+# was written offline and could not look those SHAs up).
+name: Publish the shareable view (manual, proposal)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+env:
+  PACKAGE_DIR: disease-models/wwox/research/drug_repurposing/view/shareable_package
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Every package file equals its digest in manifest.json, and nothing else is in the directory
+        run: |
+          python3 - <<'PY'
+          import hashlib, json, os, sys
+          base = os.environ["PACKAGE_DIR"]
+          man = json.load(open(os.path.join(base, "manifest.json"), encoding="utf-8"))
+          want = man["files"]
+          have = sorted(os.path.relpath(os.path.join(d, f), base) for d, _, fs in os.walk(base) for f in fs)
+          bad = []
+          for rel in have:
+              if rel == "manifest.json":
+                  continue
+              if rel not in want:
+                  bad.append("not in the manifest: " + rel)
+              elif hashlib.sha256(open(os.path.join(base, rel), "rb").read()).hexdigest() != want[rel]["sha256"]:
+                  bad.append("digest differs: " + rel)
+          bad += ["listed but absent: " + r for r in want if r not in have]
+          for must in ("index.html", "NOTICE.md", "LICENSES/CC-BY-SA-3.0.txt"):
+              if must not in have:
+                  bad.append("required file absent: " + must)
+          print("\n".join(bad) or "package matches its manifest")
+          sys.exit(1 if bad else 0)
+          PY
+
+  deploy:
+    needs: verify
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ env.PACKAGE_DIR }}
+      - id: deployment
+        uses: actions/deploy-pages@v4

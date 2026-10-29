@@ -1215,7 +1215,15 @@ class RealViewports(unittest.TestCase):
             if m["scenario"] == "first_screen" and m["mobile"]:
                 self.assertLess(m["legendBottom"], dict((w, h) for w, h, _ in rv.VIEWPORTS)[m["requested"]], "the F/C/P legend must sit above the fold")
         names = {m["scenario"] for m in res}
-        self.assertTrue({"brief", "evidence_graph", "work_order", "print_brief", "print_brief_all"} <= names, names)
+        self.assertTrue({"brief", "evidence_graph", "work_order", "print_brief", "print_brief_all", "selection", "hypotheses", "predictive", "contexts", "section_selection", "section_predictive",
+                         "print_section_selection", "print_section_hypotheses", "print_section_predictive"} <= names, names)
+        for sc in ("selection", "hypotheses", "predictive", "contexts"):
+            for m in res:
+                if m["scenario"] == sc:
+                    self.assertEqual(m["ready"], "1", m)      # IT7 P7 sections are exercised at every viewport
+        for sc, mx in (("print_section_selection", 8), ("print_section_hypotheses", 14), ("print_section_predictive", 8)):
+            pg = next(m for m in res if m["scenario"] == sc)["pdf_pages"]
+            self.assertTrue(1 <= pg <= mx, (sc, pg))      # a section prints on a handful of A4 pages, not on the whole page
         pb = {m["scenario"]: m for m in res if m["scenario"].startswith("print_brief")}
         self.assertEqual(pb["print_brief"]["pdf_pages"], 1, "the longest one-page synthesis must print on ONE A4 page")
         self.assertEqual(pb["print_brief_all"]["pdf_pages"], len(rv.build_payload(DR, "shareable")["cur"]["cands"]), "every card's synthesis prints on exactly one A4 page")
@@ -1611,6 +1619,310 @@ class BriefBrowser(Browser):
         d = self.dom("")
         self.assertEqual(d.count('<svg class="eg"'), 5)
         self.assertIn('data-wo="NEED-ISR-ATTENUATION"', d)       # priorities by need link to the work order
+
+
+# ---------------------------------------------------------------------------- IT7 P7: selection funnel, hypothesis comparison, predictive test, context concordance
+@unittest.skipUnless(HAVE_DATA, "module data absent")
+class It7P7Data(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.P = rv.build_payload(DR)
+        cls.cur = cls.P["cur"]
+        cls.page = rv.build(DR)
+        cls.h = re.sub(r"<script\b.*?</script>", "", cls.page, flags=re.S)
+        cls.counts = json.loads((DR / rv.P2_DIR / "counts.json").read_text())
+        cls.p3 = json.loads((DR / rv.P3_DIR / "results/results_summary.json").read_text())
+        cls.e1 = json.loads((DR / rv.P3_DIR / "results/e1_p47t_summary.json").read_text())
+        cls.rows4 = rv.read_tsv(DR / rv.P4_DIR / "context_matrix.tsv")
+        cls.rows5 = rv.read_tsv(DR / rv.P5_DIR / "comparison.tsv")
+        cls.nums = static_numbers(cls.h)
+        cls.units = json.loads((DR / "coverage/coverage_summary.json").read_text())["units"]
+
+    def ind(self, i):
+        return next(x for st in self.cur["selection"]["steps"] for x in st["indicators"] if x["id"] == i)
+
+    # ---- (1) funnel
+    def test_funnel_follows_the_declared_order_and_every_indicator_names_unit_and_meaning(self):
+        self.assertEqual([st["id"] for st in self.cur["selection"]["steps"]], ["catalogued", "usable", "evaluated", "pertinent", "ready"])
+        for st in self.cur["selection"]["steps"]:
+            self.assertIn("sel_s_" + st["id"], rv.UI_IT)
+            for i in st["indicators"]:
+                for k in ("sel_i_" + i["id"], "sel_n_" + i["id"], "sel_u_" + i["unit"]):
+                    self.assertTrue(rv.UI_IT[k].strip(), k)
+        order = [m.start() for m in (re.search(rf'data-step="{s}"', self.h) for s in ("catalogued", "usable", "evaluated", "pertinent", "ready"))]
+        self.assertEqual(order, sorted(order))
+
+    def test_funnel_counts_reproduce_from_the_per_record_flags(self):
+        re_ = rv.recompute_p2(DR)
+        self.assertEqual(rv.validate_p2_counts(self.counts, re_, self.units), [])
+        f = self.counts["funnel"]
+        for iid, key in (("catalogued", "L0_catalogued"), ("l1", "L1_with_any_target_row"), ("l2", "L2_documented_action_row_passes_artefact_rules"), ("mnet", "L3_Mnet_usable_signed_action_on_human_target_with_stable_id"),
+                         ("mnet_corr", "L3b_Mnet_corroborated_by_ChEMBL_or_GtoPdb_support"), ("msig_testable", "Msig_testable_denominator_has_structure_key"), ("msig_unknown", "Msig_UNKNOWN_NO_STRUCTURE_KEY"),
+                         ("msig_any", "Msig_any_context_trt_cp_signature"), ("msig_neural", "Msig_neural_lineage_context_strict")):
+            self.assertEqual(self.nums[f"sel.{iid}.records"], str(f["records"][key]), iid)
+            self.assertEqual(self.nums[f"sel.{iid}.families"], str(f["families"][key]), iid)
+        self.assertEqual(self.nums["sel.eval_methods.records"], "0")
+        self.assertEqual(self.nums["sel.eval_p3.families"], str(self.p3["nU"]))
+        self.assertEqual(self.nums["sel.eval_wwox_readout.value"], str(self.cur["selection"]["steps"][2]["indicators"][2]["records"]))
+
+    def test_funnel_percentages_and_overlaps_equal_their_numbers(self):
+        for k, v in self.nums.items():
+            m = re.match(r"sel\.(\w+)\.(records|families)\.pct(_testable|_catalogue)?$", k)
+            if not m:
+                continue
+            i = self.ind(m.group(1))
+            den = {"": lambda: i["den_" + m.group(2)], "_testable": lambda: i["testable_" + ("rec" if m.group(2) == "records" else "fam")], "_catalogue": lambda: i.get("den2_fam")}[m.group(3) or ""]()
+            self.assertEqual(v, f"{100 * i[m.group(2)] / den:.1f}", k)
+        for u in ("records", "families"):
+            ov = self.cur["selection"]["overlap"][u]
+            self.assertEqual(ov["both"] + ov["only_net_usable"] + ov["only_sig_neural"] + ov["neither"], ov["denominator"])
+            self.assertEqual(self.nums[f"sel.overlap.{u}.denominator"], str(ov["denominator"]))
+        t = self.ind("msig_unknown")
+        self.assertEqual(sum(b["records"] for b in t["breakdown"]), t["records"])      # the unknown share is fully explained by named reasons
+        self.assertEqual(self.ind("msig_testable")["records"] + t["records"], self.ind("catalogued")["records"])
+
+    def test_funnel_mutations_are_refused(self):
+        re_ = rv.recompute_p2(DR)
+        for path in (("funnel", "records", "L1_with_any_target_row"), ("funnel", "families", "L3_Mnet_usable_signed_action_on_human_target_with_stable_id"), ("funnel", "records", "Msig_neural_lineage_context_strict")):
+            c = json.loads(json.dumps(self.counts))
+            d = c
+            for k in path[:-1]:
+                d = d[k]
+            d[path[-1]] += 1
+            self.assertTrue(rv.validate_p2_counts(c, re_, self.units), path)
+        c = json.loads(json.dumps(self.counts))
+        c["funnel"]["families"]["overlap_Mnet_vs_Msig_neural_strict_testable_only"]["both"] += 1
+        self.assertTrue(rv.validate_p2_counts(c, re_, self.units))
+        c = json.loads(json.dumps(self.counts))
+        c["funnel"]["records"]["actually_evaluated"] = 5
+        self.assertTrue(any("actually_evaluated" in e for e in rv.validate_p2_counts(c, re_, self.units)))
+        c = json.loads(json.dumps(self.counts))
+        c["catalogue"]["records"] += 1
+        self.assertTrue(rv.validate_p2_counts(c, re_, self.units))
+
+    def test_present_is_not_evaluated_and_the_pilot_is_not_a_screening(self):
+        self.assertIn("Presenti nel catalogo non significa valutati", self.h)
+        self.assertEqual(self.p3["nU"], 256)
+        self.assertIn("NON è uno screening del catalogo", self.h)
+        self.assertEqual(self.ind("eval_p3")["den_families"], self.counts["pilot"]["union_families"])
+        self.assertIn("non è una quota di malattia trattata", self.h.replace("Una quota di vie biologiche o di bersagli collegati ", ""))
+        self.assertIn("Una quota di vie biologiche o di bersagli collegati non è una quota di malattia trattata", self.h)
+
+    def test_no_probability_and_no_model_percentile_anywhere(self):
+        self.assertIn("il percentile del modello non è mostrato affatto", self.h)
+        self.assertIn("Nessuna probabilità clinica calibrata è mostrata", self.h)
+        body = re.sub(r"<[^>]+>", " ", self.h)
+        self.assertEqual(len(re.findall(r"percentil", body, re.I)), body.count("il percentile del modello non è mostrato affatto") + len(re.findall(r"95° percentile", body)))
+        for e in self.cur["hypotheses"]:
+            self.assertNotIn("pct_OE", json.dumps(e))
+        self.assertNotIn("pct_OE", json.dumps(self.cur["predictive"]))
+
+    # ---- (2) hypotheses
+    def test_hypotheses_keep_priority_model_and_observation_apart(self):
+        hy = self.cur["hypotheses"]
+        self.assertEqual([x["id"] for x in hy], [r["record_id"] for r in self.rows5])
+        art = re.findall(r'<article class="hyp".*?</article>', self.h, re.S)
+        self.assertEqual(len(art), len(hy))
+        cm = {c["id"]: c for c in self.cur["cands"]}
+        for a, x in zip(art, hy):
+            for cls in ("hyp-prio", "hyp-model", "hyp-obs"):
+                self.assertIn(cls, a)
+            self.assertEqual(x["model"], "no_added_value" if next(r for r in self.rows5 if r["record_id"] == x["id"])["MODEL_position_P3_P2"].startswith("P3") else "not_evaluated")
+            self.assertIn(html_escape(rv.UI_IT["hyp_model_" + x["model"]]), a)
+            for c, ps in x["positions"].items():
+                for p in ps:
+                    self.assertEqual(p["group"], cm[c]["links"][p["need"]]["group"])      # priority = the position the view assigns, not the comparison file's prose
+            for lab in ("hyp_dem", "hyp_opp", "hyp_missing", "hyp_ext", "hyp_next"):
+                self.assertIn(html_escape(rv.UI_IT[lab]), a)
+        self.assertEqual(self.h.count("nessun vantaggio dimostrato, esplorativo"), sum(1 for x in hy if x["model"] == "no_added_value"))
+        self.assertEqual(sorted(x["id"] for x in hy if x["model"] == "no_added_value"), ["CMP-04", "CMP-05"])
+
+    def test_hypothesis_mutations_are_refused(self):
+        cards, needs = {c["id"] for c in self.cur["cands"]}, {n["id"] for n in self.cur["needs"]}
+        self.assertEqual(rv.validate_hypotheses(self.rows5, cards, needs, set()), [])
+        r = json.loads(json.dumps(self.rows5))
+        r[0]["MODEL_position_P3_P2"] = "Positive: ranks first"
+        self.assertTrue(rv.validate_hypotheses(r, cards, needs, set()))
+        r = json.loads(json.dumps(self.rows5))
+        r[1]["hypothesis_cards"] = "ZZ99_missing_card"
+        self.assertTrue(rv.validate_hypotheses(r, cards, needs, set()))
+        r = json.loads(json.dumps(self.rows5))
+        r[2]["need_link"] = "NEED-NOPE"
+        self.assertTrue(rv.validate_hypotheses(r, cards, needs, set()))
+        r = json.loads(json.dumps(self.rows5))
+        r[3]["premise_missing"] = ""
+        self.assertTrue(rv.validate_hypotheses(r, cards, needs, set()))
+
+    # ---- (3) predictive test
+    def test_predictive_test_numbers_equal_the_results_and_label_is_exploratory(self):
+        pr = self.cur["predictive"]
+        self.assertTrue(pr["exploratory"])
+        self.assertIn("ESPLORATIVO: un risultato computazionale non è efficacia terapeutica", self.h)
+        self.assertEqual([v["verdict"] for v in pr["verdicts"]], ["no_added_value", "not_detected_not_excluded", "no_added_value", "inconclusive"])
+        for vi, v in enumerate(pr["verdicts"]):
+            for ni, n in enumerate(v["numbers"]):
+                self.assertEqual(self.nums[f"pred.v{vi}.{ni}"], str(n["value"]))
+        self.assertEqual(pr["verdicts"][1]["numbers"][0]["value"], round(self.p3["rho"]["SIG"], 3))
+        self.assertEqual(pr["verdicts"][3]["numbers"][2]["value"], round(self.e1["regions"]["HPC"]["exact_p_one_sided"], 3))
+        self.assertEqual(self.nums["pred.universe"], "256")
+        for v in pr["verdicts"]:
+            self.assertTrue(v["reopen_it"])
+        self.assertIn("effetto non rilevato, non escluso", self.h)
+
+    def test_predictive_mutations_are_refused(self):
+        doc = json.loads((DR / rv.PRED_NAME).read_text())
+        self.assertEqual(rv.validate_predictive(doc, self.p3, self.e1), [])
+        d = json.loads(json.dumps(doc))
+        d["verdicts"][1]["numbers"][0]["expect"] = 0.15
+        self.assertTrue(rv.validate_predictive(d, self.p3, self.e1))
+        d = json.loads(json.dumps(doc))
+        d["verdicts"][0]["verdict"] = "improved"
+        self.assertTrue(rv.validate_predictive(d, self.p3, self.e1))
+        d = json.loads(json.dumps(doc))
+        d["exploratory"] = False
+        self.assertTrue(rv.validate_predictive(d, self.p3, self.e1))
+        d = json.loads(json.dumps(doc))
+        d["verdicts"][2]["numbers"][0]["path"] = "rho.NOPE"
+        self.assertTrue(rv.validate_predictive(d, self.p3, self.e1))
+        p3 = json.loads(json.dumps(self.p3))
+        p3["rho"]["SIG"] = 0.2
+        self.assertTrue(rv.validate_predictive(doc, p3, self.e1))      # the data moved: the text must be re-read
+
+    # ---- (4) contexts
+    def test_context_view_counts_equal_the_matrix(self):
+        cx = self.cur["contexts"]
+        self.assertEqual((cx["cells"], cx["measured"], cx["unknown"], cx["contexts"], cx["quantities"], cx["models"]), (182, 93, 89, 13, 14, 6))
+        self.assertEqual(sum(1 for r in self.rows4 if r["direction"] == "UNKNOWN"), cx["unknown"])
+        for r in cx["rows"]:
+            cells = [x for x in self.rows4 if x["quantity_id"] == r["id"]]
+            self.assertEqual(r["higher"], sum(1 for x in cells if x["direction"] == "higher"))
+            self.assertEqual(r["lower"], sum(1 for x in cells if x["direction"] == "lower"))
+            self.assertEqual(r["unknown"], sum(1 for x in cells if x["direction"] == "UNKNOWN"))
+            self.assertEqual(r["higher"] + r["lower"] + r["other"] + r["unknown"], 13)
+            for k in ("higher", "lower", "other", "unknown"):
+                self.assertEqual(self.nums[f"ctx.{r['id']}.{k}"], str(r[k]))
+        self.assertEqual({r["id"]: r["verdict"] for r in cx["rows"]}["Q14"], "concordant")
+        self.assertEqual({r["id"]: r["verdict"] for r in cx["rows"]}["Q02"], "discordant")
+        self.assertIn("Nessun sottogruppo di pazienti è sostenuto da questi dati", self.h)
+        self.assertEqual(cx["verdict_counts"], {"unresolved": 5, "discordant": 3, "no_data": 2, "concordant_no_signal": 2, "single_system": 1, "concordant": 1})
+
+    def test_context_mutations_are_refused(self):
+        cv = json.loads((DR / rv.CTX_NAME).read_text())
+        st = rv.context_stats(self.rows4, cv)
+        self.assertEqual(rv.validate_contexts(cv, self.rows4, st), [])
+        c = json.loads(json.dumps(cv)); c["verdicts"]["Q01"]["verdict"] = "concordant"
+        self.assertTrue(rv.validate_contexts(c, self.rows4, st))                # lower_sign_only is not a resolved sign
+        c = json.loads(json.dumps(cv)); c["verdicts"]["Q14"]["verdict"] = "discordant"
+        self.assertTrue(rv.validate_contexts(c, self.rows4, st))                # no opposite signs
+        c = json.loads(json.dumps(cv)); c["verdicts"]["Q02"]["verdict"] = "concordant_no_signal"
+        self.assertTrue(rv.validate_contexts(c, self.rows4, st))
+        c = json.loads(json.dumps(cv)); c["expect"]["unknown"] = 90
+        self.assertTrue(rv.validate_contexts(c, self.rows4, st))
+        c = json.loads(json.dumps(cv)); c["model_labels_it"].pop("rat")
+        self.assertTrue(any("Italian label" in e for e in rv.validate_contexts(c, self.rows4, st)))
+        c = json.loads(json.dumps(cv)); del c["verdicts"]["Q05"]
+        self.assertTrue(rv.validate_contexts(c, self.rows4, st))
+        rows = [dict(r) for r in self.rows4[:-1]]
+        self.assertTrue(rv.validate_contexts(cv, rows, rv.context_stats(rows, cv)))      # a missing cell
+        r2 = [dict(r) for r in self.rows4]
+        r2[0]["direction"] = "UNKNOWN"
+        self.assertTrue(rv.validate_contexts(cv, r2, rv.context_stats(r2, cv)))          # the unknown count moved
+
+    def test_p4_matrix_checker_passes(self):
+        r = subprocess.run([sys.executable, "-I", str(DR / rv.P4_DIR / "check_context_matrix.py")], capture_output=True, text=True, timeout=120)
+        self.assertEqual(r.returncode, 0, r.stdout[-400:] + r.stderr[-400:])
+
+    # ---- (5) readability and no JS-only content
+    def test_new_sections_are_server_rendered_in_italian_and_in_the_navigation(self):
+        for sid, tok in (("selection", "Selezione"), ("hypotheses", "Ipotesi a confronto"), ("predictive", "Prova e contesti")):
+            self.assertIn(f'id="{sid}"', self.h)
+            self.assertIn(f'<a href="#{sid}">{tok}</a>', self.h)
+        self.assertIn('id="contexts"', self.h)
+        js = (DR / "view/assets/curated.js").read_text()
+        self.assertIn("#section=", js)
+        self.assertEqual(self.h.count('href="#section='), 3)
+        for k in ("sec_print", "sec_unknown", "sec_title"):
+            self.assertTrue(rv.UI_IT[k])
+
+    def test_shareable_build_carries_the_new_sections_without_third_party_wording(self):
+        sh = rv.build_payload(DR, "shareable")["cur"]
+        self.assertEqual(sh["selection"], self.cur["selection"])
+        self.assertEqual(sh["predictive"], self.cur["predictive"])
+        page = re.sub(r"<script\b.*?</script>", "", rv.build(DR, "shareable"), flags=re.S)
+        text = " ".join(re.sub(r"<[^>]+>", " ", re.search(rf'<section id="{i}".*?</section>', page, re.S).group(0)) for i in ("selection", "hypotheses", "predictive"))
+        for bad in ("DTC", "TTD", "OncoKB", "CancerCommons", "MyCancerGenome", "TALC", "Drug Target Commons", "DrugBank", "alvocidib", "saracatinib", "pyruvate dehydrogenase kinase inhibitor"):
+            self.assertNotIn(bad, text, bad)
+
+
+class It7P7Browser(Browser):
+    def test_section_print_route_shows_one_section_without_duplicate_ids(self):
+        for sid, h2 in (("selection", "Selezione dei composti"), ("hypotheses", "Ipotesi a confronto"), ("predictive", "Prova predittiva")):
+            d = self.dom("#section=" + sid)
+            area = d[d.index('id="export-area"'):]
+            self.assertIn("exporting", d)
+            self.assertIn(f'data-section="{sid}"', area)
+            self.assertIn(h2, area)
+            self.assertNotIn('class="btnlink"', area)       # the print links of the section itself are not repeated inside it
+
+    def test_sections_render_with_javascript_too(self):
+        d = self.dom("#selection")
+        self.assertEqual(d.count('class="sel-ind"'), sum(len(st["indicators"]) for st in self.P["cur"]["selection"]["steps"]))
+        self.assertEqual(d.count('class="hyp"'), 9)
+
+
+@unittest.skipUnless(HAVE_DATA, "module data absent")
+class It7P7Deployment(unittest.TestCase):
+    """The deployment is PREPARED, not performed: a generated file table, a manual-only workflow kept as a proposal outside .github, and the reserved decision stated."""
+
+    @classmethod
+    def setUpClass(cls):
+        import hashlib
+        import repurposing_shareable_package as pk
+        cls.pk, cls.hashlib = pk, hashlib
+        cls.text = (DR / "view/DEPLOY.md").read_text(encoding="utf-8")
+        cls.wf = (DR / "view/DEPLOY_pages_workflow.proposal.yml").read_text(encoding="utf-8")
+        cls.base = DR / "view/shareable_package"
+
+    def table(self):
+        a, b = self.text.index(self.pk.DEPLOY_BEGIN), self.text.index(self.pk.DEPLOY_END)
+        return {m.group(1): (int(m.group(2)), m.group(3)) for m in re.finditer(r"^\| `([^`]+)` \| (\d+) \| `([0-9a-f]{64})` \|$", self.text[a:b], re.M)}
+
+    def test_file_table_equals_the_package_on_disk_and_the_manifest(self):
+        t = self.table()
+        on_disk = {str(p.relative_to(self.base)): p for p in self.base.rglob("*") if p.is_file()}
+        self.assertEqual(set(t), set(on_disk))
+        man = json.loads((self.base / "manifest.json").read_text())["files"]
+        for rel, (n, h) in t.items():
+            b = on_disk[rel].read_bytes()
+            self.assertEqual((n, h), (len(b), self.hashlib.sha256(b).hexdigest()), rel)
+            if rel != "manifest.json":
+                self.assertEqual(man[rel]["sha256"], h, rel)
+        self.assertIn("NOTICE.md", t)
+        self.assertTrue(any(k.startswith("LICENSES/") for k in t))
+        self.assertTrue(any(k.startswith("class_b/") for k in t))
+        files = {rel: p.read_bytes() for rel, p in on_disk.items()}
+        self.assertEqual(self.pk.deploy_text(DR, files), self.text)      # `package --check` would also pass
+        files["index.html"] += b" "
+        self.assertNotEqual(self.pk.deploy_text(DR, files), self.text)    # mutation: a changed byte makes the table stale
+
+    def test_workflow_is_a_manual_only_proposal_outside_github_dir(self):
+        self.assertIn("PROPOSAL ONLY", self.wf)
+        on = re.search(r"^on:\n((?:  .*\n)+)", self.wf, re.M).group(1)
+        self.assertEqual([l.strip() for l in on.splitlines() if l.strip()], ["workflow_dispatch:"])
+        for bad in ("push", "schedule", "pull_request", "workflow_run"):
+            self.assertNotRegex(on, bad)
+        self.assertIn("manifest.json", self.wf)
+        tracked = subprocess.run(["git", "-C", str(DR), "ls-files", "--full-name", "../../../../.github"], capture_output=True, text=True).stdout.split()
+        self.assertEqual(tracked, [".github/workflows/public-release-gate.yml"])      # nothing was added under .github
+
+    def test_document_states_destinations_rollback_preconditions_and_the_reserved_decision(self):
+        for h in ("## 1. What is deployed", "## 2. Proposed destinations", "## 4. The exact file set and hashes", "## 5. Reproducible build and check", "## 6. Modifications needed",
+                  "## 7. Preconditions", "## 8. Rollback", "## 9. What is reserved to the operator"):
+            self.assertIn(h, self.text)
+        for needle in ("without creating an account or spending", "package --check", "audit-shareable --dynamic", "does not change what the history already holds", "act of external publication",
+                       "history or visibility remedy", "Nothing has been published", "not verifiable from inside the repository"):
+            self.assertIn(needle, self.text.replace("\n", " ").replace("  ", " "))
+        self.assertNotRegex(self.text, r"[Àèéìòù]")      # English, as the repository's other files
 
 
 if __name__ == "__main__":
