@@ -72,12 +72,12 @@ endpoint outcome holds no answer to protect; S4 would be the exact code. Class i
 D9 (documentary, IT7 side, not the producer's). PRE_REGISTRATION.md names the four edges ED080 to ED083; in the committed edge table they are ED077 to ED080 (a P1 repair
 renumbered them), and p3_run.py selects them by content. The producer cites ED077 to ED080 correctly; the pre-registration text should carry a one-line pointer.
 
-## 3. Classification: independent re-derivation of 36 rows from their source locators
+## 3. Classification: independent re-derivation of more than 50 rows from their source locators
 
-Sampled 22 needs rows (random seed fixed, read against the structured observed item in needs.json: statement, model type, readout level, direction), the 14 A1/A2 rows (all
-P1 and needs rows with those codes, read against the edge table and system table), plus 6 P4 and 8 card rows read against their cited files. Result per class:
+Sampled 22 needs rows (fixed random seed, read against the structured observed item in needs.json: statement, model type, readout level, direction) and a further 10 needs rows from a first draw, all 24 A1/A2 rows
+(P1, needs, P4, read against the edge table and system table), 10 P1 rows from the consistent/untested groups, plus 6 P4 and 8 card rows. Class-level result (the sampled rows of each class; counts are of sampled rows, not exhaustive):
 
-* ALREADY_REPRESENTED: 14 of 14 correct in class. A1 rows match the six genes and the build direction; A2 rows (ED077 to ED080) verified against the OmniPath tables above. One mixed row (D5).
+* ALREADY_REPRESENTED: all 24 examined correct in class. A1 rows match the six genes and the build direction; A2 rows (ED077 to ED080) verified against the OmniPath tables above. One mixed row (D5).
 * NEW_BUT_NOT_USABLE: 13 of 13 sampled correct (functional/protein/phospho/activity/clinical levels have no node type; intervention responses are the held-out truth; the IT7 self-reference rows are not WWOX observations).
 * NOT_SUFFICIENTLY_SUPPORTED: 15 of 15 sampled correct in class; 3 reason-code mismatches (D6).
 * Rejections of USABLE that I examined as candidates: (a) the three-line concordant MYC finding (N:MYC-PROGENITOR-PROLIFERATION#2:O2, radial-glia pseudobulk MYC up in the engineered knockout and
