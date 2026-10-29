@@ -49,7 +49,7 @@ the source in this cycle (staged receipt); "carried" means taken from the manife
 |---|---|---|---|---|---|---|---|---|---|
 | 1 | mouse, Wwox-null (full knockout) | hippocampus CA1, CA3, whole (dentate unmarked) | 2 weeks, both sexes | KO v Cre-positive WT | IBA1 and GFAP area fraction; Il6 qPCR | stereology and image fields; qPCR n 4 per group (registry reading) | both area fractions up; Il6 significant, Tnf-a not; cause v consequence left open; no seizure measure on these animals | Hussain 2019, PMID 30290271, entries 16, 17, 12 | text passages re-searched; figures carried |
 | 2 | mouse, Wwox-null | brain, region NOT stated in the caption | P20 | KO v WT | GFAP and Iba1 percent area | not stated per panel | GFAP about 3.7 to 23.7 (***), Iba1 about 4.5 to 7.6 (*): about six-fold v 1.7-fold; SD bars | Obeid 2026, PMID 42422765, Suppl. Fig. S7 B and D, entry 44 | **re-opened**, mmc1.pdf page 9 |
-| 3 | mouse, Wwox-null, neuron-restricted AAV9 at P5 | brain | read age not carried | treated v KO v WT | GFAP-positive cell count | not carried | about 5 (WT), about 44 (KO), about 5 (treated); the S7 treated-arm panels have no untreated-KO column and cannot be read across | Obeid 2026, S8 panel I, entries 9, 44 | carried |
+| 3 | mouse, Wwox-null, neuron-restricted AAV9 at P5 | cortex (panel label, re-opened by the verifier) | read age not carried | treated v KO v WT | GFAP-positive cell count | not carried | about 5 (WT), about 44 (KO), about 5 (treated); the S7 treated-arm panels have no untreated-KO column and cannot be read across | Obeid 2026, S8 panel I, entries 9, 44 | carried |
 | 4 | mouse, P47T knock-in homozygote | hippocampus CA1, CA3, DG | 80 and 250 days | P47T/P47T v WT | Gfap+ number and area; Iba1+ number | 3 per group per age, mixed sex | Gfap+ number about 39 and 56 (progressive, bracketed); Iba1+ about 34 at both ages (not progressive); mutant microglial branching falls with age | Hussain 2023, PMID 36828035, entries 20, 21, 22 | carried; text paragraph re-read |
 | 5 | mouse, P47T homozygote | PFC, CTX, HPC | adult | v WT | regulator and pathway inference (TNF, NF-kB, IL1B, RELA; IL6-JAK-STAT3 set) | 5 per group, RNA-seq | positive in all three regions; transcriptomic inference, not a cytokine measurement | same, entry 41 | carried |
 | 6 | mouse, P47T homozygote | cerebellum | adult | v WT | Il1b, Tnf qPCR | 6 per group | at least two-fold up; ranges overlap WT | same, entries 42, 43 | carried |
@@ -57,18 +57,21 @@ the source in this cycle (staged receipt); "carried" means taken from the manife
 | 8 | rat | microglia, astrocytes, oligodendrocytes | PND 21 | +/+ | Wwox immunostaining | not stated | in neurons, astrocytes (dot-like), oligodendrocytes; NOT in Iba1+ microglia | Tochigi 2019, entry 5, Fig. 6 | text re-read |
 | 9 | mouse, GFAP-Cre (astrocyte) and Olig2-Cre deletions | astrocytes, oligodendrocytes | P17 and survival | KO v control | delay, weight, survival | G-KO 9 v 8; O-KO 10 v 11 | no abnormality; **gliosis, EEG and seizures not reported for G-KO**; authors: a cell-autonomous function in astrocytes is not excluded | Repudi 2021, PMID 33914858, entries 29, 39, Fig. 1J-O legend | **re-searched** (staged) |
 | 10 | mouse, P47T/WT heterozygote, LPS challenge (preprint) | cortex, hippocampus | adult, 12 h | het LPS v WT LPS | microglia, astrocytes, cytokines | 9 per group, 7 of 36 removed as outliers | cortical astrocytes up under LPS (0.0005; own response 0.0040), hippocampal astrocytes flat; TNF-alpha differs, IL-1beta and IL-6 do not; plasma response is the WILD TYPE's | De La Cruz 2025, PMID 39868255, entries 15 to 21, 29 to 31, 34 | carried |
+| 10b | mouse, P47T/WT heterozygote, unchallenged | brain (Iba1, Gfap immunostaining) | adult | het v WT | Iba1 and Gfap immunostaining | not stated | "no differences ... (data not shown)": an unverifiable negative, not evidence that the heterozygote is normal | Hussain 2023, PMID 36828035, entry 11 | carried |
+| 13 | mouse, neuron-restricted deletion (Synapsin-Cre, S-KO) | cortex and hippocampus bulk RNA-seq | P17 | S-KO v S-Control | top differentially expressed genes, among them genes "elicited during epileptic insults including activation of astrocytes" (Fig. 3A, B) | cortex 4 control v 3 KO; hippocampus 2 v 3 | astrocyte-activation-type genes shift in a brain whose astrocytes are expected to keep Wwox because the driver is neuronal (the paper stains intact Wwox only in CC1+ oligodendrocytes, Supplementary Fig. 1D; astrocytic retention is inferred from the driver, UNVERIFIED by staining); the S-KO seizes from P9. Genes not individually tabulated here | Repudi 2021, PMID 33914858, text of Results and Fig. 3 legend, re-searched 2026-10-29 | text re-searched; the heat map was not re-opened |
 | 11 | human cerebral organoid, WWOX knockout | bulk RNA | week 15 | 4 KO v 2 WT libraries | reactive, microglial, cytokine transcripts | 6 libraries | no reactive programme; microglia absent (section 4) | GSE156243 (deposit of PMID 34268881), this cycle | computed here |
 | 12 | mouse, P47T homozygote | PFC, CTX, HPC, CB | adult | v WT | thresholded DEG rows | 5 per group | canonical reactive and cytokine transcripts not listed (section 5) | PMID 36828035 supplement, this cycle | queried here |
 
-Seizure timing the glia have to be read against: the null mouse's recordings begin at about P14 and show spikes (PMID 42422765, Fig. 7;
-text re-read), so no recording earlier than P14 exists there; the rat's seizures are sound-evoked after PND 16 (Tochigi Discussion, citing
-refs 12 and 13, not re-read); the P47T homozygote has chronic spontaneous generalised seizures in adults (> 6 weeks), onset age not
-stated (entries 59 to 61). Row 7's glial deficit therefore sits wholly before the strain's seizure competence; rows 1 and 2 sit where
-the first spikes appear.
+Seizure timing the glia have to be read against (corrected after verification): Repudi 2021 reports spontaneous tonic-clonic seizures "beginning at P9"
+in the neuron-restricted knockout (n = 6 of P14-18 for duration) and, in the null mouse, growth retardation and seizures "within a few days after birth" (Results, text re-checked
+2026-10-29). The null mouse's recordings in PMID 42422765 begin at about P14 and show spikes (Fig. 7; text re-read), so a recording before P14 does not exist in THAT paper, but the onset
+window is earlier than P14 in the Aqeilan-group mice: **P5 to P8 are the only plausible pre-onset ages**, and the earliest glial reads (P14, P20) are all after onset. The rat's seizures are
+sound-evoked after PND 16 (Tochigi Discussion, citing refs 12 and 13, not re-read), so its PND 5 to 15 deficit sits before sound-evoked seizure competence, which is not the same as before any
+seizure (no EEG there). The P47T homozygote has chronic spontaneous generalised seizures in adults (> 6 weeks), onset age not stated (entries 59 to 61).
 
 What follows from the table (an inference, marked INFERENZA): the three "excess" rows are from the null and the missense mouse, the one "deficit" row is a
 rat in a different region with a different assay and a mostly earlier window. The five differences (species, allele, region, assay, age
-window) are confounded; one within-species time course would unconfound them.
+window) are confounded; one within-species time course would unconfound them. Row 13 adds that a neuron-only deletion, whose astrocytes keep Wwox, already shifts astrocyte-activation-type genes at P17: that fits H-seizure or H-signal better than an astrocyte-intrinsic cause (H-glia), without separating H-seizure from H-signal.
 
 ## 3. Re-reads, each with its new question (staged, not recorded)
 
@@ -98,7 +101,7 @@ libraries, week 15, from `files/geo/GSE156243/` (unchanged; not redistributed). 
 |---|---|
 | Microglia presence | P2RY12 0, CX3CR1 about 0.03, PTPRC about 0.1, TREM2 about 0.1 to 0.2 CPM: absent. AIF1 about 8 CPM (not specific to microglia in a neural tissue) not separated; CSF1R not separated. TMEM119 is classed RAISED by the rule (about 1.7 v 0.4 CPM) but it rests on one library (168 raw counts against 26 to 32) at trace level and is not interpreted |
 | Astroglial lineage and homeostatic (14) | 12 not separated, including GFAP (135 v 154 CPM), SLC1A2, SLC1A3, KCNJ10, ADK (15.2 v 15.2), SOX9, FABP7; GJA1 raised (17.6 v 3.3) and AQP4 raised (0.74 v 0.22, trace) |
-| Reactive-pan (10) | genes above 5 CPM in any library: 7; RAISED: 2 (VIM 3214 v 1765; CD44 29.7 v 7.6, both radial-glia/progenitor-associated); LOWERED: SERPINA3, TIMP1, SOCS3 (SOCS3 5.7 v 14.2, a STAT3 target, with STAT3 itself not separated); C3, CEBPD, STAT3 not separated; LCN2, CHI3L1 not informative. 2 of 7 is under the declared half: **no seizure-independent reactive programme in this tissue** |
+| Reactive-pan (10) | genes above 5 CPM in any library: 7 (C3, CD44, VIM, TIMP1, CEBPD, STAT3, SOCS3); RAISED: 2 (VIM 3214 v 1765; CD44 29.7 v 7.6, both radial-glia/progenitor-associated); LOWERED: TIMP1, SOCS3, and SERPINA3 (which is lowered by the rule but never exceeds 3.1 CPM, so it is not among the 7) (SOCS3 5.7 v 14.2, a STAT3 target, with STAT3 itself not separated); C3, CEBPD, STAT3 not separated; LCN2, CHI3L1 not informative. 2 of 7 is under the declared half: **no seizure-independent reactive programme in this tissue** |
 | Cytokine and inflammasome (10) | IL1B, IL6, TNF, CXCL8 not informative (under 20 raw counts); NLRP3 and IL1R1 ratio about 2 at 0.5 CPM, not separated; NFKB1, RELA, CCL2, TGFB1 not separated |
 
 Against the predictions: P1 (microglia near zero) held for the specific markers; P2 (astroglial markers shift with the known maturity
@@ -121,9 +124,8 @@ or cytokine transcripts being beyond a two-fold threshold.
 ## 6. Need to compounds (catalogue)
 
 `python3 framework/scripts/repurposing_search.py need NEED-NEUROINFLAMMATION-GLIA --limit 2000 --json` (offline, 2026-10-29): 854 association rows; 738 on
-intervention targets (101 excluded under the catalogue's own rules), 116 on readout markers (GFAP 44, IL6 72) which are never links; 465 families on
-intervention targets. Of the intervention-target rows, 439 carry no stated action and 203 a stated lowering; only **59 are curated ChEMBL mechanism rows**
-(JAK2 36, TNF 15, IL1B 5, NFKB1 1, NLRP3 1, RELA 1). Status classes among intervention-target rows: no statement 343, approved in any source 248, clinical candidate 48.
+intervention targets (of the 101 rows excluded under the catalogue's own rules, 96 fall among these 738 and 5 among the 116), 116 on readout markers (GFAP 44, IL6 72) which are never links. **Base for every figure that follows: the 642 non-excluded intervention-target rows (738 - 96)**: 465 families; 439 carry no stated action and 203 a stated lowering (439 + 203 = 642); only **59 are curated ChEMBL mechanism rows**
+(JAK2 36, TNF 15, IL1B 5, NFKB1 1, NLRP3 1, RELA 1). Status classes on the same 642 rows: no statement 343, approved in any source 248, clinical candidate 48.
 No row has a WWOX context. The list is an exploration list by the need's own direction (`uncertain`), not a list of favourable treatments, and it is not ranked here.
 
 **Gap found.** `target IL1R1` returns anakinra, AMG-108 and MEDI-8968; `target CASP1` returns belnacasan, emricasan and nivocasan; neither target is on the need, so the two IL-1-axis
@@ -145,13 +147,14 @@ Each was retrieved from PubMed on 2026-10-29 and **only the abstract was read**;
 
 | Precedent | Context | What the abstract says | Use here |
 |---|---|---|---|
-| Giussani 2025, PMID 40614647 | cryptogenic NORSE/FIRES, 14 patients, Italy, retrospective | later anakinra use goes with longer intensive care; "no evidence of efficacy on the long-term neurological outcome was demonstrated" | acute post-infectious syndrome; counter-precedent for transfer |
-| Feng 2025, PMID 40481521 | chronic FIRES, three patients, minocycline | one patient had shorter seizures; no significant change in overall seizure frequency | same |
-| Chen 2026, PMID 42111266 (review) | pyroptosis in epilepsy | the caspase-1 inhibitor VX-765 was safe in a phase II trial in refractory epilepsy and "did not meet its primary efficacy endpoint"; the NLRP3 inhibitor MCC950 was discontinued after hepatic findings | counter-precedent; a secondary source (not traced to the trial paper: UNVERIFIED) |
+| Giussani 2025, PMID 40614647 | cryptogenic NORSE/FIRES, 14 patients, Italy, retrospective, no comparator | later anakinra use goes with longer intensive care; "no evidence of efficacy on the long-term neurological outcome was demonstrated" | uncontrolled and uninformative for long-term outcome (absence of evidence, not a negative); acute post-infectious syndrome |
+| Hanin 2024, PMID 38430119 (pooled case review) | NORSE/FIRES: 28 case reports and series, 75 patients, 52 on anakinra | seizure control within two weeks for up to 73 percent on anakinra (70 percent tocilizumab); no clear effect of timing; "most patients experienced long-term disability and drug-resistant post-NORSE epilepsy"; late anakinra or tocilizumab reduced seizure frequency in 67 percent of a few cases; authors call for prospective studies | acute seizure-control signal in uncontrolled reports with long-term outcome unchanged; added after verification; the acute, immune-triggered context is not the WWOX one |
+| Feng 2025, PMID 40481521 | chronic FIRES, three patients, minocycline | one patient had shorter seizures; no significant change in overall seizure frequency | uncontrolled three-patient series, uninformative; not a counter-precedent |
+| Chen 2026, PMID 42111266 (review) | pyroptosis in epilepsy | the review abstract says VX-765 "demonstrated favorable safety and preliminary efficacy" in a phase II randomized trial in refractory epilepsy and that the trial "did not meet its primary efficacy endpoint"; MCC950 was discontinued after hepatic findings | **UNVERIFIABLE at trial level**: the registry record NCT01048255 (COMPLETED, checked 2026-10-29 through the registry API, read-only) lists a SAFETY and tolerability primary outcome at 18 weeks and has no posted results; no peer-reviewed trial report was found; the review's "primary efficacy endpoint" wording cannot be confirmed, and its "preliminary efficacy" wording was omitted earlier. Not used as a counter-precedent |
 | Galanopoulou 2017, PMID 28462453 | rat multiple-hit infantile-spasms model | VX-765 (and two other agents) had no acute or delayed effect on spasms, well tolerated | counter-precedent in a developmental model |
 | Genin 2026, PMID 41841337 | Scn1a+/- Dravet mouse | astroglial GFAP rises from the aggravation phase (PN20 to 35) relative to an earlier presymptomatic time point; remodelling without tissue damage | a genetic-DEE precedent where glia are tracked against stage with video-EEG: the design template of section 9 |
 | Bedner 2015, PMID 25765328 | human TLE tissue and a mouse model | astrocyte uncoupling temporally preceded neuronal death and spontaneous seizures; induced by LPS | glial change can be upstream of seizures in an acquired model |
-| Hristova 2016, PMID 26669927 | neonatal hypoxia-ischaemia mouse | neuronal or astroglial STAT3 deletion, and JAK2 inhibition, reduced damage and glial activation | a neonatal-injury precedent that STAT3 signalling can be harmful and its removal protective; acute injury, not epilepsy |
+| Hristova 2016, PMID 26669927 | neonatal hypoxia-ischaemia mouse | neuronal STAT3 deletion reduced cell death, tissue loss and microglial and astroglial activation; astroglia-specific deletion reduced cell death, tissue loss and microglial activation (astroglial activation not stated for it); JAK2 inhibition reduced both activations moderately | a neonatal-injury precedent that STAT3 signalling can be harmful; acute injury, not epilepsy |
 | Giussani and others (PMID 42367793, 41265024, 40831349) | FIRES case reports and reviews | titles only; not read | listed so the search is auditable, not used |
 
 ## 9. Counter-evidence (consolidated)
@@ -160,7 +163,7 @@ Each was retrieved from PubMed on 2026-10-29 and **only the abstract was read**;
 2. The human organoid shows no reactive programme (section 4); the P47T sheets do not carry the canonical transcripts (section 5).
 3. Microglia carry no detectable Wwox in the rat; for the astrocyte the deletion was not scored for gliosis (rows 8, 9): the "cause" cannot be assigned to a glial compartment either way.
 4. The neuron-restricted rescue that lowers GFAP also stops seizures and restores survival (row 3): the fall in GFAP does not tell which route it used.
-5. The verified compound precedents are acute or post-infectious and are negative or null for the outcome that matters (section 8).
+5. The verified compound precedents are acute or post-infectious and are **uncontrolled or uninformative for long-term outcome**, with acute seizure-control reports for anakinra (up to 73 percent within two weeks in a pooled case review, uncontrolled) and no usable trial-level result for VX-765 (section 8). They do not show harm; they do not support transfer to a congenital neuron-intrinsic loss either.
 6. The P47T heterozygote LPS result is a difference in significance in places, with seven of 36 animals removed asymmetrically and a plasma response that is the wild type's (row 10; entries 9, 25 to 34).
 7. Glial direction is context-dependent in the abstracts read: STAT3 removal reduced glial activation and damage in neonatal hypoxia-ischaemia and astrocyte uncoupling preceded seizures in a TLE model (section 8), so "dampen gliosis" is not "remove a cause". The commonly stated protective role of reactive astrocytes was NOT verified here (search (i) was not read).
 
@@ -172,7 +175,7 @@ Each was retrieved from PubMed on 2026-10-29 and **only the abstract was read**;
 | Knockout v missense | the excess is seen in the null (rows 1 to 3) and in a WW-domain missense knock-in (row 4); NO glial datum exists in a catalytic-domain missense allele, so no statement is made for it |
 | Acute v chronic | the null dies at about three weeks (rows 1 to 3 read at P14 to P20); the P47T homozygote is read at 80 and 250 days; the compound precedents are acute |
 | Species | mouse excess, rat deficit, human organoid null; no human tissue glial datum |
-| Partial v full loss | the heterozygote LPS preprint is the only partial-loss glial datum and is weak (row 10) |
+| Partial v full loss | the unchallenged P47T heterozygote is reported to show no gliosis, "data not shown" (row 10b: an unverifiable negative); the LPS preprint is the only other partial-loss glial datum and is weak (row 10) |
 
 ## 11. The searches actually run (2026-10-29)
 
@@ -194,6 +197,7 @@ Not run: ClinicalTrials.gov (the census of 2026-10-20 is cited, not repeated), a
 **Design (wet-lab, not done; no compound).** Wwox-null (or neuron-restricted deletion) pups with wild-type littermates. Sampling at P5, P8, P11, P14 and P17 (the null dies at about three weeks); in the same animals, GFAP and Iba1 density and area fraction on the same sections
 in cortex AND hippocampus (so both prior readouts, the rat's density and the mice's area fraction, are measured in both regions); continuous cortical recording from the earliest age an electrode can be placed (the paper's own recordings start at about P14), each animal classified before or after its first spike by a blinded reader; Wwox-null pups treated with the neuron-restricted vector as a control for the neuronal route.
 Statistics at the animal level, not the field.
+Limits of this design, added after verification: (1) histology is terminal, so each age is a separate cohort; "same animals" means the same sections across readouts within an age, and "before or after first spike" can be assigned to an animal only if its own recording covers the pup from before onset to the sampling age. (2) Spontaneous seizures are reported from P9 in the neuron-restricted deletion, so P5 and P8 are the only plausible pre-onset ages; placing an electrode and recording from P5 in a pup of a few grams (about 5 g at P15 in the null, per PMID 42422765 Fig. 3C, which is far lighter at P5) is a feasibility risk and may need a different method (for example video-scored behaviour plus a terminal acute recording). (3) A recording that starts at P14 cannot show that no spike occurred earlier, so "before first spike" is claimed only for animals recorded from the sampled age itself. (4) The rat deficit is cortical and the mouse excess hippocampal or region-unstated; the design measures both regions, which is its strength.
 
 **Predictions, fixed here, before any new data.**
 
@@ -217,7 +221,7 @@ A compound arm is deliberately not designed.
 
 ## 14. UNVERIFIED, owed
 
-* Every external row in section 8 is abstract level; the VX-765 phase II result is taken from a 2026 review, not from the trial paper.
+* Every external row in section 8 is abstract level; the VX-765 phase II efficacy result is UNVERIFIABLE at trial level (review wording only; the registry lists a safety primary outcome and no results); the pooled anakinra review (Hanin 2024) is abstract level.
 * The seizure onset age in the lde/lde rat (sound-evoked after PND 16) is from the Discussion of the 2019 paper citing earlier papers, which were not re-read.
 * Whether the null-mouse S7 tissue is cortex, hippocampus or whole brain (the caption gives none); whether the 2-week mice of PMID 30290271 were seizing.
 * The reason the cerebellum Il1b and Tnf qPCR rise is not in the cerebellum RNA-seq sheet; the Oas1f outlier (strain or passenger effect not checked).
