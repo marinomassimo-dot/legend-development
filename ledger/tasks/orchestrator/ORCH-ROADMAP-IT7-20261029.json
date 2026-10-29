@@ -8,7 +8,7 @@
  "START_UTC": "2026-10-29T13:00:00Z",
  "BASELINE": "3202b3723d86d73a6745f2d12d9e757b8660f774 = development/main (verified equal after fetch)",
  "AUTHORISED_QUEUE_20261029C": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_A_RECONCILIATION": {
    "order": 1,
    "steps": [
@@ -89,13 +89,24 @@
    "steps": [
     {
      "step": "P9 integration, final checks, validated push, cleanup, session closings",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "integration: receipts 920 (7 IT7 events + late 2026-10-19 read earlier), BATCH_20261019_029 (registries, ledgers, map; WM_v7.29 preserved) with adversarial review repaired; README iteration-7 section; self-evaluation and scout entry; release battery PASS WITH SKIPS 163 targets/7 skipped on 8f23b0d73bb0 (mid-session gate BLOCKs on hex fragments repaired; first closed-world and shebang classes already addressed in IT6); validated push of 8f23b0d7 (gate=PASS, verified=ls-remote); lint 0 BLOCK, growth PASS, receipts OK, gate 0 blocks"
     }
    ]
   }
  },
- "DECISIONS_TAKEN": [],
- "DEFAULTS_TAKEN": [],
+ "DECISIONS_TAKEN": [
+  "2026-10-29: question for the first predictive comparison chosen from a data audit (glycolysis/PDH/lactate module; ISR, NMDAR and glia rejected because their sign or readout is not a transcript contrast); criteria pre-registered before any evaluation value; negative result accepted as such.",
+  "2026-10-29: the fly factorial treated as fully held-out after the verifier found a firewall breach; fly rows removed from the network.",
+  "2026-10-29: canonical wording narrowed only through BATCH_20261019_029; working model preserved at WM_v7.29; no claim created or promoted.",
+  "2026-10-29: ToolUniverse removed after a Reactome trial; Reactome adapter and leakage checks left at TRIAL.",
+  "2026-10-29: deployment of the physician view prepared (DEPLOY.md, manual-only workflow proposal outside .github) and NOT published; publication, visibility and history remedies are reserved to the operator; operator notified of the history-privacy finding by push notification."
+ ],
+ "DEFAULTS_TAKEN": [
+  "Intermediate pushes were not made: section 21d requires the battery on the pushed ref and code changed until the end; one validated push after the final battery.",
+  "A headless browser left by an earlier verifier was ended by explicit pid after the operator asked about a long-running activity.",
+  "Staged receipt ids that collided or carried a DOI typo were fixed at the staged file before recording; no ledger line was edited."
+ ],
  "STOP_LOG": []
 }
