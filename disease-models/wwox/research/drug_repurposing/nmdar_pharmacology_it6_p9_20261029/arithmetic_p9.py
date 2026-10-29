@@ -3,7 +3,7 @@
 (1) d-APV occupancy at the concentration applied by Breton 2021 (50 uM), from ChEMBL equilibrium constants on rat
     recombinant GluN1/GluN2A-D in oocytes (two documents), assuming a competitive antagonist and agonist well below its
     EC50 (an UPPER bound on occupancy; endogenous glutamate in a slice lowers it by the factor 1+[A]/EC50).
-(2) Memantine/ketamine potency ratio between two holding potentials in one document (ChEMBL assay descriptions).
+(2) Memantine/ketamine potency ratio between two holding potentials in one closed document (ChEMBL assay descriptions); UNVERIFIED and implausible for a single-site blocker (at most about 2-fold per 20 mV), reported only to show the anomaly.
 (3) Mg2+ block of the NMDAR at the resting potentials of Table 1 of Breton 2021, with the Jahr-Stevens form
     B(V) = 1/(1 + ([Mg]/3.57 mM) * exp(-0.062 * V[mV])); the two constants are literature values NOT re-verified here.
 (4) Counting time needed to estimate a burst rate, from the two baselines reported by Breton 2021 (main text 2.29 and Table S1 0.84 bursts/min).
@@ -20,7 +20,7 @@ for r in raw["rows"]:
 for (doc, tgt), k in sorted(ki.items()):
     occ = 50000.0 / (50000.0 + k)
     print(f"  {doc}  {tgt:45s} Ki {k:8.0f} nM  occupancy {100*occ:5.1f}%  | with agonist at 1x EC50 (Ki doubled) {100*50000/(50000+2*k):5.1f}%")
-print("\n(2) one document, two holding potentials (CHEMBL6083260, human GluN1/GluN2A or GluN1/GluN2B in HEK293, ChEMBL assay descriptions)")
+print("\n(2) one CLOSED document, two holding potentials (CHEMBL6083260, human GluN1/GluN2A or GluN1/GluN2B in HEK293, ChEMBL assay descriptions); UNVERIFIED: a single-site pore block of electrical distance <= 1 predicts at most exp(20/25.7) = 2.2-fold per 20 mV, so these ratios are implausible and are NOT used in the argument")
 pairs = {"memantine GluN2A": (840, 28070), "memantine GluN2B": (780, 25630), "ketamine GluN2A": (500, 53320), "ketamine GluN2B": (510, 15220)}
 for k, (a, b) in pairs.items():
     print(f"  {k}: IC50 {a} nM at -60 mV, {b} nM at -40 mV  -> ratio {b/a:.0f}-fold for 20 mV")
