@@ -19,8 +19,9 @@
     },
     {
      "step": "P0b strengthen the window-wording regression (active conclusion vs historical quote)",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "test_repurposing_join: window_overreach detector (active sentence naming P0-P5/P5 as critical/demonstrated without qualifier; historical citation allowed), applied to WM, narrative and map; mutation tests incl. the diagnostic case; guard test green; e34bd923"
     }
    ]
   },
