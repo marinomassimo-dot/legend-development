@@ -41,6 +41,7 @@ See `COMPARISON.md`. In short: every card, need, position (F/C/P), priority grou
 - Pair-level link existence and association counts are kept for withheld compounds (an identifier with counts); the content of the link (target, action, source) is not. Whether that is acceptable for external circulation is for the operator.
 - Bibliographic titles come from NCBI esummary records collected into a tracked cache; they are facts about published works, listed in `NOTICE.md`.
 - The provenance-of-text check covers the third-party texts held locally (full texts, abstracts, five openFDA label JSON files fetched for the check); a source not held locally was not compared.
+- Prose is protected by an explicit redaction list (`prose_policy`) plus audit checks: compound-target pairs asserted only by class-B/C sources are found by derivation from the catalogue; a compound whose only provenance is a catalogue row is found only when a local full-text corpus is present (otherwise reported as unchecked). A new card or lead sentence of that kind fails the audit until it is redacted.
 - Names shorter than four characters cannot be traced by string and are covered only by the structural checks (rows carry card names or identifiers).
 - The audit proves conformity with the policy file; the policy file is a licence reading that is not legal advice and has components marked uncertain in `NOTICE.md` (not widened).
 

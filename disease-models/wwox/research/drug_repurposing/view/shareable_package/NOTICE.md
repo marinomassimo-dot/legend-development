@@ -28,11 +28,11 @@ How the conditions are met:
 - **ChEMBL identifiers**: identifiers only; ChEMBL content is not embedded (class B file shipped separately). ChEMBL identifiers (CHEMBL...): EMBL-EBI, https://www.ebi.ac.uk/chembl/, release ChEMBL_37 (2026-05-01) https://www.ebi.ac.uk/chembl/
 - **Catalogue record identifiers**: opaque identifiers of this repository's catalogue (CAT:...), no source content. LEGEND WWOX repurposing module (this repository)
 
-Identifier census of `index.html` (distinct values): {"CAT": 1445, "CHEMBL": 253, "DOI": 5, "HGNC": 6, "NCT": 0, "PMID": 12}. No abstract and no passage of an article is embedded. Short quotations are marked by quotation marks and attributed (section 6).
+Identifier census of `index.html` (distinct values): {"CAT": 1445, "CHEMBL": 253, "DOI": 5, "HGNC": 6, "NCT": 0, "PMID": 11}. No abstract and no passage of an article is embedded. Short quotations are marked by quotation marks and attributed (section 6).
 
 ## 4. Class B (share-alike): shipped as a separate file, never merged into the page
 
-- **chembl**: `class_b/chembl_cc-by-sa-3.0/chembl_cc-by-sa-3.0.jsonl` (CC BY-SA 3.0 Unported). ChEMBL, EMBL-EBI, https://www.ebi.ac.uk/chembl/ , release ChEMBL_37 (2026-05-01). Records: card_links.json (the twelve ChEMBL records the module's cards name). Licence text and credit line travel with it in the same folder (`LICENSE_CC-BY-SA-3.0.txt`, `CREDIT.txt`).
+- **chembl**: `class_b/chembl_cc-by-sa-3.0/chembl_cc-by-sa-3.0.jsonl` (CC BY-SA 3.0 Unported). ChEMBL, EMBL-EBI, https://www.ebi.ac.uk/chembl/ , release ChEMBL_37 (2026-05-01). Records: un registro del repository (non incluso in questo pacchetto) (the twelve ChEMBL records the module's cards name). Licence text and credit line travel with it in the same folder (`LICENSE_CC-BY-SA-3.0.txt`, `CREDIT.txt`).
 
 Decision for the three share-alike sources, with reasons:
 
@@ -48,7 +48,7 @@ Decision for the three share-alike sources, with reasons:
 - **ClinPGx / PharmGKB (via DGIdb)**: class B, not shipped: CC BY-SA 4.0 declared by DGIdb; the data-usage policy page was not read; counts only
 - **DGIdb (other claim sources: DTC, TTD, TdgClinicalTrial, TEND, JAX-CKB, CGI, MyCancerGenome and its trials, ClearityFoundation, OncoKB, CancerCommons, COSMIC)**: class C: non-commercial, unclear, publisher-table or unknown terms declared by DGIdb; counted, never embedded
 - **NIH DSLD**: probe counts only; supplement access categories of individual compounds are withheld (version API v9.4.0)
-- **UniChem**: cross-reference identifiers only; none is embedded in the page (version Last-Modified src1src14.txt.gz=Sat, 24 Oct 2026 21:16:36 GMT; src1src2.txt.gz=Sat, 24 Oct 2026 21:16:01 GMT; src1src7.txt.gz=Sat, 24 Oct 2026 21:16:11 GMT)
+- **UniChem**: cross-reference identifiers only; none is embedded in the page (version Last-Modified un registro del repository (non incluso in questo pacchetto)=Sat, 24 Oct 2026 21:16:36 GMT; un registro del repository (non incluso in questo pacchetto)=Sat, 24 Oct 2026 21:16:01 GMT; un registro del repository (non incluso in questo pacchetto)=Sat, 24 Oct 2026 21:16:11 GMT)
 - **Every Cure MATRIX third-party identifiers (ATC, DrugBank, ChEBI)**: identifiers-only (class C): a dataset-card licence cannot grant rights in third-party content; none is embedded in the page
 - **DrugBank**: identifiers only; no DrugBank text or table; no DrugBank identifier is embedded in the page
 
@@ -58,7 +58,13 @@ Withheld catalogue target rows by class: {"A": 1623, "B": 47061, "C": 57631} (cl
 
 Every output string was compared with the full texts, abstracts and openFDA label sections held locally; the result is recorded in `TEXT_PROVENANCE.json`. Bibliographic titles are facts and are listed apart. Quotations are limited to a few marked passages, each short (the longest is one sentence of an article, introduced by `the authors write`); no label section and no abstract is reproduced. The comparison covers only texts held locally when it was run (stated in that file).
 
-Short third-party labels that card text also contains (checked against ChEMBL's curated-mechanism and target wording; none longer than 8 words, otherwise the audit fails): `80s ribosome modulator`; `gaba a receptor`; `pyruvate dehydrogenase kinase`; `reactive oxygen species`; `voltage gated t type calcium channel`. One is a quotation with attribution in card H01 (`ChEMBL_37 curated mechanism: 'Voltage-gated T-type calcium channel blocker'`, a controlled-vocabulary label of five words); the others are generic scientific terms that the cards use in their own sentences. They are listed, not hidden.
+## 6b. Prose policy: own analysis stays, database rows in prose do not
+
+IT5 P13 fix. Own analysis stays in the shareable build: a conclusion at the level of a need, a class or a card subject, in our own words, short, attributed to a published work. Withheld: (1) a sentence that states a compound-target(-action) pair together with its database of origin when the pair is asserted only by a class-B/C catalogue source; (2) a compound named in prose whose only provenance in the repository is a class-B/C catalogue row (it appears in no cited full text and is not a card subject); (3) a per-compound status, phase, approval or access statement attributed to a class-B/C source; (4) repository file names, which cannot be used outside the repository. The replacement keeps the research conclusion and names the withheld source class with the phrase in withheld_phrase. The FULL build keeps everything. The audit enforces (1) and (2) by derivation from the catalogue, (3) and (4) by pattern, and every redaction below must match exactly once or more: a stale redaction fails the build.
+
+Applied in this build: 12 card sentence redactions, 11 lead-field redactions, 670 pair objects stripped of a status class (pairs[].p.cr.pha[1] (status classes of the row) is dropped in the shareable build: a status class derives from ChEMBL max_phase, DGIdb approved flags, MATRIX and openFDA together, and the build does not re-derive a class-A-only status per row.), 53 repository file names replaced by a plain description. The replacement phrase is `dato di una fonte non inclusa in questa versione`.
+
+Short third-party labels that card text also contains (checked against ChEMBL's curated-mechanism and target wording; none longer than 8 words, otherwise the audit fails): `gaba a receptor`; `pyruvate dehydrogenase kinase`; `reactive oxygen species`. They are generic scientific terms that the cards use in their own sentences; they are listed, not hidden.
 
 ## 7. What this notice does not do
 

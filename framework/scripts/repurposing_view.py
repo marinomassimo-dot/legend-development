@@ -229,6 +229,71 @@ def share_excluded_rows(ex: dict) -> dict:
     return out
 
 
+FILE_TOKEN_RE = re.compile(r"(?<![\w/.-])(?:[\w.-]+/)*[\w.-]+\.(?:md|tsv|py|jsonl|json|csv|gz)(?:#[\w-]+)?")
+PACKAGE_FILE_NAMES = {"README.md", "NOTICE.md", "COMPARISON.md", "manifest.json", "TEXT_PROVENANCE.json", "index.html"}
+
+
+def scrub_file_tokens(text: str, allow: dict) -> str:
+    """Shareable: a repository file name cannot be used outside the repository; it is replaced by a plain description."""
+    rep = (allow.get("prose_policy") or {}).get("file_token_replacement") or "a repository record"
+    return FILE_TOKEN_RE.sub(lambda m: m.group(0) if m.group(0) in PACKAGE_FILE_NAMES or m.group(0).startswith("class_b/") else rep, text)
+
+
+def _map_strings(o, fn):
+    if isinstance(o, dict):
+        return {k: _map_strings(v, fn) for k, v in o.items()}
+    if isinstance(o, list):
+        return [_map_strings(v, fn) for v in o]
+    return fn(o) if isinstance(o, str) else o
+
+
+def apply_prose_policy(P: dict, allow: dict) -> dict:
+    """Shareable data boundary for prose (IT5 P13 fix): explicit, exact redactions of sentences that state a class-B/C compound-target pair, a catalogue-only compound or a
+    per-compound status from a class-B/C source (rule: shareable_sources.json prose_policy), then repository file names. A redaction that matches nothing is a build error."""
+    pol = allow.get("prose_policy") or {}
+    # cards: substring replacements over every string of the cards' subtree
+    hits = Counter()
+
+    def cards_fn(t):
+        for i, r in enumerate(pol.get("card_substrings") or []):
+            if r["find"] in t:
+                hits[("card", i)] += 1
+                t = t.replace(r["find"], r["replace"])
+        return t
+    P["cur"]["cands"] = _map_strings(P["cur"]["cands"], cards_fn)
+    for i, r in enumerate(pol.get("card_substrings") or []):
+        if not hits[("card", i)]:
+            raise SystemExit(f"stale prose redaction (no card text contains it): {r['find'][:80]}")
+    leads = [dict(d) for d in P["leads"]]
+    for j, r in enumerate(pol.get("lead_fields") or []):
+        d = next((x for x in leads if x["id"] == r["id"]), None)
+        if d is None or not str(d.get(r["field"]) or "").startswith(r["expect_startswith"]):
+            raise SystemExit(f"stale lead redaction: {r['id']}.{r['field']}")
+        d[r["field"]] = r["replace"]
+    for r in pol.get("lead_substrings") or []:
+        d = next((x for x in leads if x["id"] == r["id"]), None)
+        if d is None or r["find"] not in str(d.get(r["field"]) or ""):
+            raise SystemExit(f"stale lead redaction: {r['id']}.{r['field']}")
+        d[r["field"]] = d[r["field"]].replace(r["find"], r["replace"])
+    for d in leads:   # record and card files are repository paths: described, not printed
+        if d.get("card"):
+            d["card"] = "scheda " + Path(d["card"]).name.split(".")[0]
+        if d.get("record"):
+            d["record"] = "registro di ricerca del repository (non incluso in questo pacchetto)"
+    P["leads"] = leads
+    t = P["tech"]
+    t["regeneration"] = pol.get("regeneration_text") or "see the package README"
+    labels = pol.get("input_labels") or {}
+    t["generated_from"] = {labels.get(k, k): v for k, v in (t.get("generated_from") or {}).items()}
+    t["catalog_file"] = dict(t.get("catalog_file") or {}, path="catalogo dei composti")
+    for k in ("leads", "tech", "cur", "needs", "funnel", "strings", "access", "observations", "dispositions", "level_defs", "excluded_detail", "card_leads"):
+        P[k] = _map_strings(P[k], lambda x: scrub_file_tokens(x, allow))
+    for k in ("leads_note", "pair_unit", "ranking_note", "no_probability"):
+        if isinstance(P.get(k), str):
+            P[k] = scrub_file_tokens(P[k], allow)
+    return P
+
+
 def read_associations(dr: Path) -> list[dict]:
     ap = dr / "coverage/associations.jsonl.gz"
     out = []
@@ -276,7 +341,7 @@ THREAD_TEXT = {
     "Development and glia": "Brain development and support cells: myelin, progenitor proliferation (MYC), neuroinflammation and gliosis.",
     "Symptom-level": "Symptoms treated in their own right: seizures and spasms, blood glucose and growth.",
 }
-CARD_FILE_NOTE_IT = "{id}.card.json (file del repository, non incluso in questo pacchetto)"
+CARD_FILE_NOTE_IT = "scheda {id} (file del repository, non incluso in questo pacchetto)"
 # ---------------------------------------------------------------------------------------------
 # Research-priority positions (IT5 P11). One position per card AND per need. There is no global
 # position of a card: the profile lists one position per need and the overview shows the SET of
@@ -1138,7 +1203,7 @@ def build_payload(dr: Path = DEFAULT_DR, source: str = "full") -> dict:
             "evq": [eq.get("card_assertions"), eq.get("distinct_source_strings"), eq.get("reading_depths") or {}],
             "ctr": [ce.get("intervention_measured_null_assertions"), ce.get("need_counter_evidence_items")],
             "tra": [tr.get("scopes") or [], tr.get("species_of_assertions") or []],
-            "pha": [(cr.get("pharmacology_safety_info") or {}).get("safety_assessment"), (cr.get("pharmacology_safety_info") or {}).get("status_class") or []],
+            "pha": [(cr.get("pharmacology_safety_info") or {}).get("safety_assessment"), [] if shareable else ((cr.get("pharmacology_safety_info") or {}).get("status_class") or [])],
             "pot": cr.get("potency_and_assay_context"),
             "exp": [bool(de.get("exists")), de.get("card_endpoint_pursued") or []],
         }
@@ -1318,7 +1383,7 @@ def build_payload(dr: Path = DEFAULT_DR, source: str = "full") -> dict:
     ctx = {"needs_doc": needs_doc, "summary": summary, "matrix": matrix, "prios": prios, "stats": stats, "allow": allow, "assoc_by_family": assoc_by_family, "cards": cards_all, "source": source}
     cur = build_curated(dr, ctx)
     cur["footer"] = build_footer(source, allow, emitted, srcs)
-    return {
+    P_out = {
         "source": source, "cur": cur,
         "schema": SCHEMA, "funnel": funnel, "access": access, "matrix_summary": mx, "observations": ob,
         "dispositions": [{"id": d, "n": pr["by_disposition"].get(d, 0), "cells": (pr.get("by_disposition_cells") or {}).get(d, pr["by_disposition"].get(d, 0)),
@@ -1328,6 +1393,7 @@ def build_payload(dr: Path = DEFAULT_DR, source: str = "full") -> dict:
         "tech": tech, "excluded_detail": excluded_detail, "leads": leads.get("dispositions") or [], "leads_note": leads.get("_note"), "card_leads": card_leads, "orphan_priorities": len(orphan), "ranking_note": prios.get("ranking"), "no_probability": prios.get("no_probability"),
         "level_defs": dict(matrix.get("levels") or {}), "pair_unit": matrix.get("unit"),
     }
+    return apply_prose_policy(P_out, allow) if shareable else P_out
 
 
 # ------------------------------------------------------------------ static (server-rendered) parts
@@ -2038,6 +2104,9 @@ def fill_tokens(text: str) -> str:
 def render(P: dict, dr: Path = DEFAULT_DR) -> str:
     st = render_static(P)
     P = dict(P, ui=ui_payload())
+    if P["source"] == "shareable":
+        _allow = load_allowlist(dr)
+        P["ui"] = _map_strings(P["ui"], lambda x: scrub_file_tokens(x, _allow))
     data = json.dumps(P, ensure_ascii=False, sort_keys=True, separators=(",", ":")).replace("</", "<\\/").replace("<!--", "<\\!--")
     U = UI_IT
     page = TEMPLATE
@@ -2054,6 +2123,10 @@ def render(P: dict, dr: Path = DEFAULT_DR) -> str:
     for k, v in st.items():
         page = page.replace(f"__{k}__", v)
     page = page.replace("__PAIRUNIT__", E(str(P["pair_unit"])))
+    if P["source"] == "shareable":   # static text written in this builder may name repository files: describe them (the data object is scrubbed in build_payload)
+        allow = load_allowlist(dr)
+        parts = re.split(r"(<script\b[^>]*>.*?</script>|<style\b[^>]*>.*?</style>)", page, flags=re.S)
+        page = "".join(scrub_file_tokens(x, allow) if x.startswith("<script") else (x if x.startswith("<style") else re.sub(r">([^<]+)<", lambda m: ">" + scrub_file_tokens(m.group(1), allow) + "<", x)) for x in parts)
     page = page.replace("__DATA__", data)  # last: the data may contain placeholder-like text
     return page
 
