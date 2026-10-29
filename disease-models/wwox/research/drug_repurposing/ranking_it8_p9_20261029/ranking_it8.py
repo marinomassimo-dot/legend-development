@@ -37,7 +37,7 @@ ROOT = HERE.parents[4]
 DR = HERE.parent
 sys.path.insert(0, str(ROOT / "framework" / "scripts"))
 
-RULES_VERSION = "R1"            # bump when a rule of this file changes meaning (reason class: method_revision)
+RULES_VERSION = "R2"            # bump when a rule of this file changes meaning (reason class: method_revision)
 SCHEMA = "legend.wwox.ranking/1"
 USABLE = DR / "usable_compounds_it7_p2_20261029"
 COMPARISON = DR / "pharmacological_comparison_it7_p5_20261029" / "comparison.tsv"
@@ -53,11 +53,11 @@ LEAD_ORDER = ["F1", "F2", "C2", "C1", "F3", "C3", "P3", "P2", "P1"]
 MERGE_ORDER = ["F1", "F2", "C2", "C1", "C3", "F3", "P3", "P2", "P1"]
 
 GROUPS = {   # id -> (sort key, label, plain statement)
-    "G1": (1, "Strongest WWOX-specific case today", "a favourable result in a WWOX system, read against an untreated comparator of the same genotype from a full or partial text, unflagged, with no null, unfavourable or mixed WWOX-system result beside it (position F1)"),
-    "G2a": (2, "Favourable but thin WWOX-system readout", "a favourable result in a WWOX system with reading or design limits only (uncontrolled, graphical, one experiment, depth-limited), no null beside it (position F2)"),
-    "G2b": (3, "Favourable but thin, specificity uncertain", "as G2a, and the favourable readout also occurs in wild type, or was obtained with a tool compound that is not a candidate drug (position F2 with a specificity flag)"),
-    "G3": (4, "Contested WWOX-system evidence", "favourable and null or unfavourable WWOX-system results side by side, or only a null one; the study is to learn which holds (positions C2, C1)"),
-    "G4a": (5, "Target-based hypothesis, direction-consistent action documented", "no test of the intervention in a WWOX system; favourable support outside WWOX; the need has WWOX-system observations; a catalogue action coherent with the need's direction is documented (position F3)"),
+    "G1": (1, "Strongest WWOX-specific case today (in the mouse null)", "a favourable result in a WWOX system, read against an untreated comparator of the same genotype from a full or partial text, with no position-blocking flag and no null, unfavourable or mixed WWOX-system result beside it (position F1); a reading-quality screen on the rows the position rests on (it may rest on a single row, which the item states), not a size of effect and not a result of recovery after onset"),
+    "G2a": (2, "Favourable but thin WWOX-system readout, specificity not in question", "a favourable result in a WWOX system with reading or design limits only (uncontrolled, graphical, one experiment, depth-limited), no null beside it, and none of the specificity flags below (position F2)"),
+    "G2b": (3, "Favourable but thin, specificity uncertain or untested", "as G2a, and the favourable readout carries a specificity flag: it also occurs in wild type, or it was obtained with a tool compound, or no drug-by-genotype test exists, or the wild-type arm is floor-limited (position F2 with a specificity flag). Not having tested specificity is an unknown, never a clean reading; G2a versus G2b is not an efficacy order"),
+    "G3": (4, "Tried in a WWOX system: results mixed, null or case-level", "favourable and null or unfavourable WWOX-system results side by side, or only a null one; the study is to learn which holds (positions C2, C1). The intervention is listed because it has been tried in a WWOX system, not because its favourable part is stronger than that of untried candidates; the class label of the unit describes the pertinence of the favourable part and is not a verdict"),
+    "G4a": (5, "Target-based hypothesis, direction-consistent action documented", "no test of the intervention in a WWOX system; favourable support outside WWOX; the need has WWOX-system observations; a catalogue action coherent with the need's direction is documented (position F3). The documented action does not by itself support WWOX relevance: the need's WWOX observation may rest on a different intervention"),
     "G4b": (6, "Target-based hypothesis, direction not established", "as G4a but no documented direction-consistent action: the need's direction is uncertain, the action is unresolved, or the unit has no catalogue identity (position F3)"),
     "G5": (7, "Weak pertinence or counter-evidence outside WWOX", "no signed WWOX-system result of the intervention and either a harm or null signal outside WWOX with nothing favourable beside it, or a link by mechanism only (positions C3, P3)"),
     "GU": (8, "Not yet orderable: premise missing", "an abstention (a datum is missing before any test can be designed), no step named, or no linked need of this objective carries a position; NOT a finding that the unit is unpromising"),
@@ -71,6 +71,13 @@ CLASSES = {
     "INSUFF": "STILL INSUFFICIENTLY EVALUATED",
     "EXCL": "EXCLUDED FROM A SPECIFIC COMPARISON WITH REASON",
 }
+SPEC_FLAGS = ("nonspecific_also_in_wild_type", "no_drug_by_genotype_test", "control_variability_comparable_to_effect", "no_treated_wt_arm", "pharmacological_effect_in_wild_type_arm", "pharmacological_effect_in_heterozygous_arm")
+
+
+def is_spec_flag(f: str) -> bool:
+    return f in SPEC_FLAGS or f.startswith("tool_compound")
+
+
 OBJECTIVES = {"broad": "deep_recovery", "partial": "partial_benefit"}
 OBJ_LABEL = {"broad": "Broad, durable functional recovery", "partial": "Partial or bridge benefit"}
 
@@ -162,6 +169,7 @@ def load_all() -> dict:
         "hyp": {h["id"]: h for h in cur["hypotheses"]},
     }
     ctx["uncarded"] = read_tsv(HERE / "uncarded_items.tsv")
+    ctx["caveats"] = read_tsv(HERE / "unit_caveats.tsv")
     ctx["qualification"] = read_tsv(QUALIFICATION) if QUALIFICATION.exists() else []
     return ctx
 
@@ -326,14 +334,14 @@ def view_assessment(u: dict, ctx: dict, obj: str) -> dict:
         g = "G1"
     elif lead == "F2":
         flags = wwox_favourable_flags(u, lead_need)
-        g = "G2b" if any(f == "nonspecific_also_in_wild_type" or f.startswith("tool_compound") for f in flags) else "G2a"
+        g = "G2b" if any(is_spec_flag(f) for f in flags) else "G2a"
     elif lead in ("C1", "C2"):
         g = "G3"
     elif lead == "F3":
         g = "G4a" if coherent_on(u, lead_need) else "G4b"
     else:
         g = "G5"
-    evq = {"G1": "favourable_controlled", "G2a": "favourable_thin", "G2b": "favourable_thin_specificity_uncertain", "G3": "contested", "G4a": "no_wwox_test_target_supported", "G4b": "no_wwox_test_target_hypothesis", "G5": "weak_pertinence_or_outside_counter"}[g]
+    evq = {"G1": "favourable_with_comparator_may_rest_on_one_row", "G2a": "favourable_thin", "G2b": "favourable_thin_specificity_uncertain", "G3": "contested", "G4a": "no_wwox_test_target_supported", "G4b": "no_wwox_test_target_hypothesis", "G5": "weak_pertinence_or_outside_counter"}[g]
     out.update({"lead": lead, "lead_need": lead_need, "group": g, "evidence_quality": evq, "contested": lead in ("F1", "F2", "F3") and bool(counter_needs), "counter_needs": counter_needs,
                 "group_reason": GROUPS[g][2]})
     return out
@@ -571,7 +579,7 @@ def change_triggers(u: dict, va: dict | None, need: str | None) -> dict:
         "C3": "would rise if the harm or null signal were shown not to apply to a WWOX system and a favourable signal were recorded",
         "P3": "would rise if the card recorded a favourable signal for the intervention on this need, or the need acquired a WWOX-system observation",
     }.get(lead or "", "would leave the premise-missing group when the card names the missing datum as obtained or a first test")
-    fall = ("a signed null, unfavourable or mixed result of the intervention in a WWOX system on the lead need moves the position to a counter-evidence group (C1/C2) by rule; "
+    fall = ("a signed null, unfavourable or mixed result beside the favourable rows lowers the group by one step; a counter-evidence group (C1/C2) is reached only when the null stands as the lead; "
             "for a thin readout, a failed replication or a drug-by-genotype test showing the effect in wild type too moves it down within the group")
     leave = "the decisive premise is falsified (see the card's 'premise missing' / 'not known' fields), or the identity is corrected so that the evidence attaches to a different compound"
     return {"rise": rise, "fall": fall, "leave": leave}
@@ -595,6 +603,8 @@ def needs_overview(u: dict, ctx: dict) -> list[dict]:
             ev = "documented_association_target_listed"
         elif any(s.startswith("precedent_other_disease") for s in l3):
             ev = "other_disease_precedent_only"
+            if any(r["need_id"] == nid and "WWOX_patients" in (r["flags"] or "") for r in u["pert"]):
+                ev = "other_disease_precedent_plus_wwox_case_level_signal"
         else:
             ev = "card_inference_by_mechanism_no_catalogue_row"
         out.append({"need": nid, "need_short": nd["short"], "thread": nd["thread"], "objective": "broad" if nd["goal"] == "deep_recovery" else "partial", "need_direction": nd["dir"],
@@ -621,6 +631,12 @@ def depth_label(u: dict, comp: dict) -> tuple[str, str]:
 
 def assemble(ctx: dict, cat: dict) -> dict:
     units = build_units(ctx, cat)
+    known = {u["unit_id"] for u in units}
+    cav: dict[str, dict[str, list]] = defaultdict(lambda: defaultdict(list))
+    for r in ctx["caveats"]:
+        if r["unit_id"] not in known or r["kind"] not in ("limit", "counter", "question", "note", "objective_note", "view_note"):
+            raise SystemExit(f"unit_caveats.tsv: invalid row {r['unit_id']} {r['kind']}")
+        cav[r["unit_id"]][r["kind"]].append(r["text"])
     out_units = []
     for u in units:
         cls, cls_reason = unit_class(u)
@@ -637,14 +653,22 @@ def assemble(ctx: dict, cat: dict) -> dict:
                 va["triggers"] = change_triggers(u, va, need)
                 va["criteria_not_met"] = criteria_not_met(u, need)
                 va["lead_summary"] = lead_need_summary(u, need)
-                va["main_limit"] = clip("; ".join(va["evidence"]["flags"][:6]) or (va["criteria_not_met"][0] if va["criteria_not_met"] else "none stated"), 260)
+                cv = cav.get(u["unit_id"], {})
+                if cv.get("question"):
+                    va["triggers"]["rise"] += " | further questions: " + "; ".join(cv["question"])
+                va["counter_statements"] = list(cv.get("counter", []))
+                va["objective_note"] = " ".join(cv.get("objective_note", []))
+                va["view_note"] = " ".join(cv.get("view_note", [])) if obj == "broad" else ""
+                va["notes"] = list(cv.get("note", []))
+                va["caveat_limits"] = list(cv.get("limit", []))
+                va["main_limit"] = " | ".join([clip("; ".join(va["evidence"]["flags"][:6]) or (va["criteria_not_met"][0] if va["criteria_not_met"] else "none stated"), 260)] + va["caveat_limits"])
             views[obj] = va
         hyp_models = [ctx["hyp"][h] for h in ctx["hyp"] if set(ctx["hyp"][h]["cards"]) & set(u["cards"])]
         exclusions = sorted({r for h in hyp_models for r in h.get("model_reasons") or []})
         pathways = needs_overview(u, ctx)
         comp_row = u["comparison"][0] if u["comparison"] else None
         inputs = {
-            "T1_cards": sha16([ctx["gen_from"].get("cards_and_packets")], u["cards"], [(c, ctx["cands"][c].get("assessment"), ctx["cands"][c].get("summary")) for c in u["cards"]], [(a["id"], a.get("sign"), a.get("scope"), a.get("depth")) for a in u["asserts"]]),
+            "T1_cards": sha16([ctx["gen_from"].get("cards_and_packets")], u["cards"], [(c, ctx["cands"][c].get("assessment"), ctx["cands"][c].get("summary")) for c in u["cards"]], [(a["id"], a.get("sign"), a.get("scope"), a.get("depth")) for a in u["asserts"]], {k: v for k, v in sorted(cav.get(u["unit_id"], {}).items())}),
             "T2_pertinence": sha16([[r[k] for k in ("card_id", "assertion_id", "need_id", "evidence_kind", "sign", "flags", "comparator")] for r in u["pert"]]),
             "T3_receipts": sha16(sorted(u["receipts"].items())),
             "T4_needs": sha16([(n, ctx["needs"][n].get("n_wwox_obs"), len(ctx["needs"][n].get("obs") or []), len(ctx["needs"][n].get("counter") or []), ctx["needs"][n].get("dir")) for n in sorted(u["per_need"])], [ctx["wo"].get(n, {}).get("would_change") for n in sorted(u["per_need"])]),
@@ -660,7 +684,7 @@ def assemble(ctx: dict, cat: dict) -> dict:
                          "access_categories": r.get("access_categories"), "name_twins_not_merged": r.get("possible_duplicate_families_by_name_not_merged") or [], "kind": r.get("kind")} for r, att in u["members"]],
             "pmids": u["pmids"], "receipts_on_cited_pmids": sum(u["receipts"].values()), "model_exclusions": exclusions, "comparison_record": comp_row["record_id"] if comp_row else "",
             "depth_of_benefit_sought": clip(comp_row["depth_of_benefit_sought"], 260) if comp_row else "", "research_objective": clip(comp_row["research_objective"], 200) if comp_row else "",
-            "inputs": inputs, "excluded_from_comparisons": exclusions, "abstention_cards": u["abstention_cards"],
+            "inputs": inputs, "caveats": {k: v for k, v in sorted(cav.get(u["unit_id"], {}).items())}, "excluded_from_comparisons": exclusions, "abstention_cards": u["abstention_cards"],
         })
     return {"units": out_units}
 
@@ -817,7 +841,7 @@ def build_selections(uni: dict) -> dict:
 # ------------------------------------------------------------------------------------------------------------------------ outputs
 UNIT_COLS = ["unit_id", "label", "kind", "cards", "class", "evaluation_depth", "declared_goals", "tracks", "general_group", "broad_group", "broad_lead", "broad_lead_need", "broad_positions", "broad_contested",
              "partial_group", "partial_lead", "partial_lead_need", "partial_positions", "partial_contested", "W_wwox_evidence", "M_mechanism", "T_transferability", "P_pharmacology", "X_counter_evidence",
-             "U_uncertainty", "access", "members", "needs_linked", "needs_linked_denominator", "model_exclusions", "comparison_record", "merge_reason", "class_reason"]
+             "U_uncertainty", "access", "members", "needs_linked", "needs_linked_denominator", "model_exclusions", "comparison_record", "merge_reason", "class_reason", "caveats"]
 
 
 def unit_row(u: dict, need_total: int) -> dict:
@@ -835,7 +859,8 @@ def unit_row(u: dict, need_total: int) -> dict:
             "P_pharmacology": c["P_pharmacology"]["state"], "X_counter_evidence": f"WWOX-system null/harm/mixed assertions {c['X_counter_evidence']['wwox_null_harm_mixed']}; outside-WWOX null/harm {c['X_counter_evidence']['outside_wwox_null_or_harm']}; "
             f"need-level counter items {c['X_counter_evidence']['need_level_counter_items']} ({c['X_counter_evidence']['need_level_counter_items_note']}); opposed-action needs {len(c['X_counter_evidence']['opposed_action_needs'])}",
             "U_uncertainty": c["U_uncertainty"]["text"], "access": u["access"], "members": [m["name"] for m in u["members"]], "needs_linked": len(u["pathways"]), "needs_linked_denominator": need_total,
-            "model_exclusions": u["model_exclusions"], "comparison_record": u["comparison_record"], "merge_reason": u["merge_reason"], "class_reason": u["class_reason"]}
+            "model_exclusions": u["model_exclusions"], "comparison_record": u["comparison_record"], "merge_reason": u["merge_reason"], "class_reason": u["class_reason"],
+            "caveats": " || ".join(f"{k}: {t}" for k, v in u["caveats"].items() for t in v)}
 
 
 NEED_COLS = ["unit_id", "need", "need_short", "thread", "objective", "need_direction", "position", "position_by_card", "same_need_conflict", "link_evidence", "opposed_action", "l1_states", "l2_states",
@@ -870,7 +895,7 @@ def member_rows(uni: dict) -> list[dict]:
 
 
 SEL_COLS = ["view", "position_in_list", "group", "unit_id", "intervention", "objective", "access", "context", "applicability_track", "main_reason", "best_relevant_evidence", "main_limit", "pathways_needs",
-            "next_experiment_or_control", "could_rise", "could_fall", "could_leave", "sources_pmids", "evaluated_on", "evaluation_depth", "contested_elsewhere"]
+            "next_experiment_or_control", "could_rise", "could_fall", "could_leave", "sources_pmids", "evaluated_on", "evaluation_depth", "contested_elsewhere", "counter_evidence_statements", "notes"]
 
 
 def selection_table(uni: dict, sel: dict, as_of: str, units_by_id: dict) -> list[dict]:
@@ -887,16 +912,18 @@ def selection_table(uni: dict, sel: dict, as_of: str, units_by_id: dict) -> list
             ls = va.get("lead_summary") or {}
             lead_short = next((p["need_short"] for p in u["pathways"] if p["need"] == va["lead_need"]), va["lead_need"])
             sg = ", ".join(f"{n} {k}" for k, n in (ls.get("wwox_signs") or {}).items()) or "no signed WWOX-system assertion"
+            dq = " Reading depth of the evidence row: queried or abstract only, not a full read." if (ev["depth"] or "") in ("queried_not_full_read", "abstract_only") else ""
             reason = (f"{GROUPS[va['group']][1]}: lead position {va['lead']} on '{lead_short}' ({va['lead_need']}). On that need: {sg}; outside WWOX {ls.get('outside_favourable', 0)} favourable and "
-                      f"{ls.get('outside_null_or_harm', 0)} null or harm row(s). Mechanism: {comp['M_mechanism']['text']}. "
+                      f"{ls.get('outside_null_or_harm', 0)} null or harm row(s) (some may be class-level rows from other compounds, see the limits). Mechanism: {comp['M_mechanism']['text']}.{dq} "
                       + (f"Counter-evidence on other needs of this objective: {', '.join(va['counter_needs'])}. " if va.get("counter_needs") else ""))
-            rows.append({"view": view, "position_in_list": i, "group": va["group"], "unit_id": uid, "intervention": u["label"], "objective": OBJ_LABEL[obj], "access": u["access"], "context": ctx_txt,
+            rows.append({"view": view, "position_in_list": i, "group": va["group"], "unit_id": uid, "intervention": u["label"], "objective": OBJ_LABEL[obj] + (f" ({va.get('objective_note')})" if va.get("objective_note") else ""), "access": u["access"], "context": ctx_txt,
                          "applicability_track": ", ".join(u["tracks"]) or "UNKNOWN", "main_reason": reason,
                          "best_relevant_evidence": ((("carrier of the position, " if ev.get("carrier_of_position") else "") + f"{ev['id']}: {ev['text']}") + (f" [PMID {', '.join(map(str, ev['pmids']))}]" if ev["pmids"] else "") + (f" (+{ev['other_favourable_wwox_assertions']} other favourable WWOX-system assertion(s) on the unit)" if ev.get("other_favourable_wwox_assertions") else "")), "main_limit": va["main_limit"],
                          "pathways_needs": "",
                          "next_experiment_or_control": va["next"]["question"], "could_rise": va["triggers"]["rise"] + (f" | stored work-order statement: {va['next']['would_change']}" if va["next"].get("would_change") else ""), "could_fall": va["triggers"]["fall"], "could_leave": va["triggers"]["leave"],
                          "sources_pmids": u["pmids"], "evaluated_on": as_of, "evaluation_depth": u["evaluation_depth"] + " " + u["evaluation_depth_text"],
-                         "contested_elsewhere": ", ".join(va.get("counter_needs") or []) or "no"})
+                         "contested_elsewhere": ", ".join(va.get("counter_needs") or []) or "no",
+                         "counter_evidence_statements": " | ".join(va.get("counter_statements") or []) or "none stated beyond the counts", "notes": " | ".join(([va["view_note"]] if va.get("view_note") else []) + (va.get("notes") or [])) or "none"})
     return rows
 
 

@@ -18,7 +18,7 @@
    },
    "^\\.cur\\.(needs|threads|groups|gaps|goals|tracks|scopes|group_note|meta|evidence_graph|work_order|selection|hypotheses|predictive|contexts|ranking)(\\.|\\[\\]|$)": {
     "class": "OWN",
-    "values": 6641,
+    "values": 6713,
     "why": "needs, threads, positions, evidence graph, work order and the IT7 selection, comparison, predictive-test and context sections: own text or counts computed from own census files"
    },
    "^\\.cur\\.cands\\[\\]\\.": {
@@ -193,7 +193,7 @@
    },
    "^\\.ui\\.": {
     "class": "UI",
-    "values": 994,
+    "values": 998,
     "why": "Italian orientation text (builder data UI_IT and siblings)"
    }
   },
@@ -222,7 +222,7 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 2337,
+    "forbidden-name": 2361,
     "forbidden-wording": 12
    },
    "co_attested_wording": [
@@ -262,7 +262,8 @@
     "unchecked_without_corpus": 107
    },
    "suppressed_by_exemption": {
-    "category labels of catalogue-wide counts": 1
+    "category labels of catalogue-wide counts": 1,
+    "inside a bibliographic title (line-broken text layer)": 3
    }
   },
   "text_provenance_file": "TEXT_PROVENANCE.json",
@@ -447,11 +448,11 @@
   "BIBLIO": 2035,
   "COUNT": 7757,
   "ID": 3048,
-  "OWN": 57257,
+  "OWN": 57329,
   "ROWNAME": 1506,
   "SRC_A": 127,
   "SRC_META": 244,
-  "UI": 994
+  "UI": 998
  },
  "embedded_sources": [
   {
@@ -529,8 +530,8 @@
    "sha256": "d8fe6a3455466783564803428b6318c1c442db6a16dfb97de8a6b7dcf944cc9d"
   },
   "index.html": {
-   "bytes": 2938846,
-   "sha256": "63e1d3e45f0c456011bd0cf2401bc376d9a5419e9d12c0108629cae70be492fc"
+   "bytes": 2978494,
+   "sha256": "6d6024770ac1cc36f080b0b360857a50a9e6144d05588e9fea9c5a5a8c1cec2b"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",

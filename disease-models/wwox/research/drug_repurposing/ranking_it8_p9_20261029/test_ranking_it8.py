@@ -62,6 +62,9 @@ class SyntheticRule(unittest.TestCase):
         self.assertEqual(self.grp(["F2"])["group"], "G2a")
         self.assertEqual(self.grp(["F2"], flags=["nonspecific_also_in_wild_type"])["group"], "G2b")
         self.assertEqual(self.grp(["F2"], flags=["tool_compound_d-APV"])["group"], "G2b")
+        self.assertEqual(self.grp(["F2"], flags=["no_drug_by_genotype_test"])["group"], "G2b")
+        self.assertEqual(self.grp(["F2"], flags=["control_variability_comparable_to_effect"])["group"], "G2b")
+        self.assertEqual(self.grp(["F2"], flags=["graphical_reading"])["group"], "G2a")
         self.assertEqual(self.grp(["C2"])["group"], "G3")
         self.assertEqual(self.grp(["C1"])["group"], "G3")
         self.assertEqual(self.grp(["F3"], coherent=True)["group"], "G4a")
@@ -155,7 +158,8 @@ class RealData(unittest.TestCase):
     def test_known_positions_are_reproduced(self):
         self.assertEqual(unit_by_label(self.uni, "AAV9")["views"]["broad"]["group"], "G1")
         self.assertEqual(unit_by_label(self.uni, "AAV9")["views"]["partial"]["group"], "G3")      # the same intervention sits differently by objective
-        self.assertEqual(unit_by_label(self.uni, "Ethosuximide")["views"]["partial"]["group"], "G2a")
+        self.assertEqual(unit_by_label(self.uni, "Ethosuximide")["views"]["partial"]["group"], "G2b")     # not having tested specificity is an unknown, never clean
+        self.assertEqual(unit_by_label(self.uni, "Ethosuximide")["views"]["partial"]["group"], unit_by_label(self.uni, "Lithium")["views"]["partial"]["group"])
         self.assertEqual(unit_by_label(self.uni, "Lithium")["views"]["partial"]["group"], "G2b")     # nonspecific: also acts in wild type
         self.assertEqual(unit_by_label(self.uni, "NMDAR")["views"]["partial"]["group"], "G2b")        # the WWOX readout is a tool compound
         self.assertEqual(unit_by_label(self.uni, "Ketogenic")["views"]["partial"]["group"], "G3")
@@ -227,12 +231,13 @@ class RealData(unittest.TestCase):
             lk["group"] = "C2"
         u2 = rk.assemble(ctx, self.S["cat"])
         self.assertEqual(unit_by_label(u2, "Ethosuximide")["views"]["partial"]["group"], "G3")
+        # removing the specificity flags (an actual wild-type / drug-by-genotype test would clear them) is the only way to G2a
         ctx = copy.deepcopy(self.S["ctx"])
         for r in ctx["pert"]:
             if r["card_id"] == "EB-ETX-01":
-                r["flags"] = (r["flags"] + ";nonspecific_also_in_wild_type").strip(";")
+                r["flags"] = ";".join(f for f in r["flags"].split(";") if not rk.is_spec_flag(f))
         u3 = rk.assemble(ctx, self.S["cat"])
-        self.assertEqual(unit_by_label(u3, "Ethosuximide")["views"]["partial"]["group"], "G2b")
+        self.assertEqual(unit_by_label(u3, "Ethosuximide")["views"]["partial"]["group"], "G2a")
         ctx = copy.deepcopy(self.S["ctx"])
         for lk in ctx["cands"]["C04_aav9_endpoint_families"]["links"].values():
             if lk["group"] == "F1":
@@ -253,6 +258,24 @@ class RealData(unittest.TestCase):
         self.assertEqual(a["T5_pharmacology"], b["T5_pharmacology"])
         o, p = unit_by_label(self.uni, "Lithium")["inputs"], unit_by_label(u2, "Lithium")["inputs"]
         self.assertEqual(o, p)       # unrelated units are untouched
+
+    def test_caveats_reach_the_selected_items(self):
+        sel = {r["unit_id"]: r for r in rk.build_all_rows()} if hasattr(rk, "build_all_rows") else {}
+        a = unit_by_label(self.uni, "Apinocaltamide")["views"]["partial"]
+        self.assertIn("T-type mediation is NOT measured", a["main_limit"])
+        self.assertIn("ethosuximide result", a["main_limit"])
+        aav = unit_by_label(self.uni, "AAV9")["views"]["broad"]
+        self.assertTrue(any("52 versus about 26" in t for t in aav["counter_statements"]))
+        self.assertIn("audit_repair_not_rejudged", aav["main_limit"])
+        self.assertIn("prevention", aav["objective_note"])
+        self.assertIn("test coverage", aav["view_note"])
+        self.assertNotIn("moves the position to a counter-evidence group (C1/C2) by rule", aav["triggers"]["fall"])
+        v = {p["need"]: p for p in unit_by_label(self.uni, "Vigabatrin")["pathways"]}
+        self.assertEqual(v["NEED-MYELINATION"]["link_evidence"], "other_disease_precedent_plus_wwox_case_level_signal")
+        n = unit_by_label(self.uni, "d-APV")["views"]["partial"]
+        self.assertIn("carbenoxolone", n["main_limit"])
+        self.assertIn("no WWOX data", n["main_limit"])
+        self.assertIn("GSK3beta/IMPase", unit_by_label(self.uni, "Lithium")["views"]["partial"]["triggers"]["rise"])
 
     def test_inventory_counts_reconcile(self):
         inv, summ = rk.inventory(self.S["ctx"], self.S["cat"], self.uni)

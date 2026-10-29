@@ -21,6 +21,7 @@ The ranking answers three questions and refuses a fourth:
 |---|---|
 | `ranking_it8.py` | the one script: `run`, `check`, `snapshot`, `diff`, `show`, `--help`; stdlib, offline, no clock, deterministic |
 | `unit_map.tsv` | curated, reviewable: how the 36 cards form 27 ranked interventions and 3 excluded axes, with the reason for every merge |
+| `unit_caveats.tsv` | curated, reviewable (verifier repair, R2): per-intervention limits, counter-statements, questions and notes with source pointers; shown beside the items, never moving a group |
 | `uncarded_items.tsv` | curated, reviewable: 11 interventions identified (searched, abstained, opposed, excluded) that have no card, with source pointers |
 | `units.tsv` | one row per intervention: class, depth, groups per view, the six components, access, members, merge reason |
 | `unit_needs.tsv` | one row per intervention x need: position (per card, with conflicts), kind of link, opposed action, L1-L4 states |
@@ -32,7 +33,7 @@ The ranking answers three questions and refuses a fourth:
 | `unit_inputs.tsv` | per-intervention input digests (one per trigger) used by `diff` and `snapshot` |
 | `ranking.json` | everything above in one document: the feed of the view |
 | `snapshots/`, `changes.tsv` | dated versions of the unit table and the per-unit changes with their reason class |
-| `test_ranking_it8.py` | 26 offline tests, including mutation tests |
+| `test_ranking_it8.py` | 27 offline tests, including mutation tests |
 
 Regenerate: `python3 -B disease-models/wwox/research/drug_repurposing/ranking_it8_p9_20261029/ranking_it8.py run` (needs `LEGEND_CATALOG_CACHE` for the
 view only), then `python3 -B framework/scripts/repurposing_view.py run` and `... run --source shareable`. `check` exits 1 when a file differs from a
@@ -122,11 +123,11 @@ a target hypothesis outranks a mere counter-signal from outside WWOX).
 
 | Group | Lead | Plain statement |
 |---|---|---|
-| G1 | F1 | favourable, read against an untreated same-genotype comparator, full or partial text, unflagged, no null/unfavourable/mixed WWOX-system row beside it; a reading-quality screen, not a size of effect |
-| G2a | F2 | favourable WWOX-system readout with reading or design limits only (uncontrolled, graphical, one experiment), no null beside it |
-| G2b | F2 + specificity flag | as G2a and the effect also occurs in wild type (`nonspecific_also_in_wild_type`) or comes from a tool compound |
-| G3 | C2, C1 | WWOX-system results favourable and null/unfavourable side by side, or only null: the study is to learn which holds |
-| G4a | F3 + coherent action | no test of the intervention in WWOX; favourable support outside; the need has WWOX observations; a documented catalogue action coherent with the need's direction |
+| G1 | F1 | favourable, read against an untreated same-genotype comparator, full or partial text, no position-blocking flag, no null/unfavourable/mixed WWOX-system row beside it; a reading-quality screen on the rows the position rests on, **which may be a single row** (AAV9: high-dose survival, n=30 vs 10, flag `audit_repair_not_rejudged`), not a size of effect and not recovery after onset |
+| G2a | F2, no specificity flag | favourable WWOX-system readout with reading or design limits only (uncontrolled, graphical, one experiment), no null beside it, and none of the specificity flags (currently no intervention is here) |
+| G2b | F2 + specificity flag | as G2a with a specificity flag: the effect also occurs in wild type (`nonspecific_also_in_wild_type`), or a tool compound, or **no drug-by-genotype test / floor-limited wild-type arm** (`no_drug_by_genotype_test`, `control_variability_comparable_to_effect`). Not having tested specificity is an unknown, never a clean reading, so ethosuximide and lithium (one paper, one laboratory, which reports lithium better than ethosuximide) share this group; G2a versus G2b is not an efficacy order |
+| G3 | C2, C1 | tried in a WWOX system with mixed, null or case-level results: the study is to learn which holds. The intervention is listed because it was tried, not because its favourable part is stronger than that of untried candidates; the unit class label (weak pertinence or counter-evidence) describes that favourable part and is not a verdict |
+| G4a | F3 + coherent action | no test of the intervention in WWOX; favourable support outside; the need has WWOX observations; a documented catalogue action coherent with the need's direction (which does not by itself support WWOX relevance: the need's WWOX observation may rest on a different intervention) |
 | G4b | F3 | as G4a with no documented coherent action (uncertain-direction need, unresolved action, or no catalogue identity) |
 | G5 | C3, P3 | harm or null signal outside WWOX with nothing favourable beside it, or a mechanism-only link |
 | GU | P1, P2, or no position on the objective | premise missing: an abstention. **Not a finding that the intervention is unpromising** |
@@ -157,13 +158,13 @@ cards are one intervention. Distinct-paper counts are shown, and the text says t
 ## 3. Selections (requirement E)
 
 A selection lists at most ten interventions from G1, G2a, G2b, G3 and G4a, **only when the evaluation supports them; never padded**; ties stay whole.
-G4b, G5 and GU are listed *apart* with their group and objective (they are not "at the bottom"). Current state (data of 2026-10-29, rules R1):
+G4b, G5 and GU are listed *apart* with their group and objective (they are not "at the bottom"). Current state (data of 2026-10-29, rules R2, after the verifier's repair):
 
 | View | Items | Detail |
 |---|---:|---|
-| General | 8 | AAV9 gene addition (G1, broad); ethosuximide (G2a); lithium, NMDAR/AMPAR class (G2b); A51, ketogenic diet, vigabatrin and GABA-AT inactivators (G3); apinocaltamide (G4a) |
-| Broad, durable functional recovery | 1 | AAV9 gene addition (G1). The next in line, **not selected**, are the 4-phenylbutyrate/bile-acid chaperone class and the proteasome-inhibitor class (G4b, Track B hypotheses whose decisive premise, where the missense protein is lost, is missing); the oligonucleotide, CRISPRa, pharmacological and ER-proteostasis chaperones, HSP70 axis, Wnt-lowering agents and the amlexanox/read-through class are GU or G5 |
-| Partial or bridge benefit | 8 | ethosuximide (G2a); lithium, NMDAR/AMPAR class (G2b); A51, gene addition (growth/glycaemia endpoints), ketogenic diet, vigabatrin (G3); apinocaltamide (G4a). Apart: ISR modulators, LDH inhibition, dichloroacetate (G4b), magnesium (G5) and seven GU |
+| General | 8 | AAV9 gene addition (G1, broad); ethosuximide, lithium, d-APV/NMDAR class (all G2b, a tie); A51, ketogenic diet, vigabatrin and GABA-AT inactivators (G3); apinocaltamide (G4a) |
+| Broad, durable functional recovery | 1 | AAV9 gene addition (G1). One item **because only gene addition has been tested in a WWOX system: a statement about test coverage, not about the field**; organoid gene-addition results (PMID 34268881, 42397075) are same-laboratory context, not separate positions. The next in line, **not selected**, are the 4-phenylbutyrate/bile-acid chaperone class and the proteasome-inhibitor class (G4b, Track B hypotheses whose decisive premise, where the missense protein is lost, is missing); the oligonucleotide, CRISPRa, pharmacological and ER-proteostasis chaperones, HSP70 axis, Wnt-lowering agents and the amlexanox/read-through class are GU or G5 |
+| Partial or bridge benefit | 8 | ethosuximide, lithium, d-APV/NMDAR class (all G2b, a tie); A51, gene addition (growth/glycaemia endpoints), ketogenic diet, vigabatrin (G3); apinocaltamide (G4a). Apart: ISR modulators, LDH inhibition, dichloroacetate (G4b), magnesium (G5) and seven GU |
 
 Each item carries compound, access category, context, objective and applicability (track), group, main reason, best relevant evidence and main limit,
 needs and pathways, next experiment or useful control, what could change its position (rise / fall / leave), sources, date and depth
@@ -172,16 +173,23 @@ needs and pathways, next experiment or useful control, what could change its pos
 **The questions that could change the top positions** (full statements per item in `could_rise` / `could_fall` / `could_leave`):
 
 * **Gene addition (G1, broad):** the day-of-injection baseline and a treated-after-onset arm with a same-age untreated comparator (every mouse endpoint is
-  prevention or early window); an intermediate vector level (threshold versus gradient); quantified myelination; a replication outside the source
-  laboratory. A null on the growth or glycaemia endpoints is already counted (G3 in the partial view). Track A in design; missense lesions with
-  residual function unmeasured.
-* **Ethosuximide (G2a):** a drug-by-genotype test and a second experiment; a T-type measurement in the model (none exists); the discriminating compound
-  apinocaltamide on the same need.
-* **Lithium (G2b):** a drug-by-genotype interaction (the effect is also present in wild type and heterozygote); it rises only if specificity appears.
-* **NMDAR/AMPAR class (G2b):** the isolated NMDAR current in the knockout (the discriminator between NMDAR gain, permissive necessity and AMPAR-led
-  drive) and a pore blocker as a translation probe with Mg2+ and holding potential stated; the one readout is a tool compound (d-APV).
-* **A51, ketogenic diet, vigabatrin (G3):** whether the null rows (same-organoid null, case-report nulls) are real; a controlled readout would lift them.
-* **Apinocaltamide (G4a):** its first WWOX-system readout against an untreated comparator.
+  prevention or early window); an intermediate vector level; quantified myelination; replication outside the source laboratory; an overexpression or
+  ceiling endpoint and tumour surveillance (none exists). Counter-statements carried in the selection row: unmyelinated axons about 52 versus about 26 in
+  wild type (rescue is not normalisation), radial-glia abnormalities not corrected and SATB2 overshoot up to about eleven-fold in treated organoids,
+  lower viability of human neurons with recombinant WWOX (preprint). G1 rests on one row (high-dose survival, n=30 vs 10, `audit_repair_not_rejudged`):
+  adjudicate that audit repair before any claim-level use. A null beside the favourable rows lowers the group by one step.
+* **Ethosuximide (G2b):** a drug-by-genotype test with an informative (not floor-limited) wild-type arm; a T-type measurement in the model (none
+  exists; ChEMBL potency is above 5 mM or 600 uM with no target, against a labelled plasma range of about 283 to 708 uM); the one outside-WWOX harm row
+  is class-level (other T-type blockers).
+* **Lithium (G2b):** a drug-by-genotype interaction (the effect is also present in wild type and heterozygote); GSK3beta/IMPase engagement at the
+  exposure reached (no ChEMBL activity row exists).
+* **d-APV and the NMDAR/AMPAR class (G2b):** the only WWOX readout is d-APV, a tool compound, in neuron-specific knockout slices from one laboratory;
+  memantine, perampanel and the other members have no WWOX data. Rivals not excluded: carbenoxolone (gap-junction blocker, may also block NMDAR)
+  reduced bursts by 87 percent, and heterozygote slices also burst (4 of 23); the isolated NMDAR current is the discriminator.
+* **A51, ketogenic diet, vigabatrin (G3):** whether the null rows are real. A51 identity with the clinical agent BTX A51 is not verified; the
+  vigabatrin favourable rows are queried, not full read, and a WWOX-DEE case-level safety signal exists.
+* **Apinocaltamide (G4a):** its first WWOX-system readout. Its only WWOX link is the ethosuximide result: T-type mediation is not measured, and
+  ethosuximide's T-type potency is weak against the labelled plasma range.
 
 ## 4. Pathways and needs (requirement D)
 
@@ -227,10 +235,10 @@ A4** synthesis (the three selections), `#section=ranking` prints the whole secti
 member name, no status class, no potency or exposure text and only class-A access statements per compound; the other access categories survive as
 counts; catalogue-only uncarded items have their names withheld. `repurposing_shareable_audit.py` has rules for the new subtree.
 
-Checks run (all green at the last commit): `test_ranking_it8.py` (26), `test_repurposing_view.py`, `test_repurposing_coverage.py`,
+Checks run (all green at the last commit): `test_ranking_it8.py` (27), `test_repurposing_view.py`, `test_repurposing_coverage.py`,
 `test_repurposing_join.py`, `repurposing_view.py check`, `repurposing_view.py audit-shareable` (and `--dynamic` where Chromium exists),
 `check_cards.py`, `check_needs.py`, the three release tests, the closed-world guard, `scripts/test_tool_routing.py`, `scripts/public_release_gate.py`.
-Mutation tests: a damaged position moves the group; a damaged flag moves G2a to G2b; a damaged F1 moves G1 to G2a; a damaged pertinence sign changes
+Mutation tests: a damaged position moves the group; removing the specificity flags moves ethosuximide G2b to G2a and a damaged position moves it to G3; a damaged F1 moves G1 to G2a; a damaged pertinence sign changes
 exactly that intervention's input digest; an unmapped or doubly mapped card is refused; a duplicated family changes nothing.
 
 ## 7. Declared coverage
@@ -249,8 +257,10 @@ exactly that intervention's input digest; an unmapped or doubly mapped card is r
 ## 8. Limits and UNVERIFIED
 
 * The group rule is mine and is stated here; the positions it reads are the module's own and were independently reviewed in IT6 (P2 review). The
-  specificity split (G2a/G2b) reads two flags (`nonspecific_also_in_wild_type`, `tool_compound*`) from the pertinence table; other specificity limits
-  (for example a multi-kinase compound) do not move a group.
+  specificity split (G2a/G2b) reads the flags `nonspecific_also_in_wild_type`, `no_drug_by_genotype_test`, `control_variability_comparable_to_effect`, `no_treated_wt_arm`,
+  wild-type or heterozygote drug effects and `tool_compound*` from the pertinence table (`SPEC_FLAGS`); other limits (for example a multi-kinase compound) do not move a group.
+  Curated caveats of the verifier (`unit_caveats.tsv`) are shown beside the items and do not move groups. Membership of a view is widened by any linked need of that objective
+  (gene addition is in the partial view only through its growth/glycaemia need).
 * The G4a/G4b split reads the coverage cells: it is as good as the catalogue's action statements (class-B/C sources, stale DGIdb export, no potency).
 * Counts of PMIDs and receipts are counts of identifiers, not independence.
 * The T3 trigger counts receipts per cited PMID; it does not know whether a receipt concerns the claim the ranking rests on.

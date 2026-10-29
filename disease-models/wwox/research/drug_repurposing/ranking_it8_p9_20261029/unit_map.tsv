@@ -19,7 +19,7 @@ U17	Ethosuximide	single_compound	EB-ETX-01
 U18	ACTH, corticosteroids and phenobarbital-containing regimens (class level)	drug_class	EB-HORM-AX-01			
 U19	mTOR-inhibitor class (sirolimus)	drug_class	EB-MTOR-AX-01			
 U20	Vigabatrin and GABA-aminotransferase inactivators	single_compound_and_class	EB-VGB-01;H02_gabaat_inactivator_myelin_exposure	EB-VGB-01 (WWOX case reports, seizure) and H02 (myelin exposure limit; same compound plus its sibling CPP-115) are one compound's evidence on different needs; counted once, per-need positions kept		
-U21	NMDAR and AMPAR intervention class (d-APV tool, memantine, perampanel and others)	drug_class_with_tool_evidence	F01_glutamate_receptor_node;F04_nmdar_intervention_class	F01 holds the WWOX-system readout (a tool compound) and F04 the class comparison on the same need; the comparison record CMP-07 treats the class; counted once; the WWOX readout belongs to the tool compound only		
+U21	d-APV (a tool compound; the only agent with a WWOX readout) and the NMDAR/AMPAR class (memantine, perampanel, radiprodil and others are untested siblings)	drug_class_with_tool_evidence	F01_glutamate_receptor_node;F04_nmdar_intervention_class	F01 holds the WWOX-system readout (a tool compound) and F04 the class comparison on the same need; the comparison record CMP-07 treats the class; counted once; the WWOX readout belongs to the tool compound only		
 U22	Pro-myelinating agents (activity-dependent myelination sign problem)	mechanism_class	F02_myelination_activity_sign			
 U23	Bumetanide and the chloride gradient	single_compound_class_level	F03_bumetanide_chloride_gradient			
 U24	Lithium	single_compound	G01_lithium_gsk3			
