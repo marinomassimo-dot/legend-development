@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "05e6cb98f7277b549fffbe6c387618100526c9f559b3c382318ab674063f57a5",
+  "input_sha256": "55808a52f6e15dc6729714fbd64c5892980974c9e8ee8946636952fd4ce128bb",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -114,6 +114,20 @@
     },
     {
       "assertion_id": "DR-A02-009",
+      "status": "UNRESOLVED",
+      "reasons": [
+        "target_id: mismatch or unknown",
+        "endpoint: mismatch or unknown",
+        "context.disease_id: mismatch or unknown",
+        "context.genotype: mismatch or unknown",
+        "context.species: mismatch or unknown",
+        "context.cell_type: mismatch or unknown",
+        "context.developmental_stage: mismatch or unknown",
+        "reported no change, in a cell that is not comparable: a measured null, not an unmeasured cell"
+      ]
+    },
+    {
+      "assertion_id": "DR-A02-010",
       "status": "UNRESOLVED",
       "reasons": [
         "target_id: mismatch or unknown",
@@ -272,7 +286,7 @@
           "cell_type": "liver",
           "developmental_stage": "adult, one to two days of treatment"
         },
-        "measured_result_note": "Bortezomib restored activity in these alleles better than carfilzomib although both inhibited the proteasome similarly in liver lysate; the authors found only a weak correlation between proteasome inhibition and activity and infer other mechanisms, including heat-shock chaperone induction; the strength of rescue did not follow chaperone induction either. The authors infer that catalytic-domain alleles must be both stabilised and refolded. Treatment longer than two days caused lethargy and morbidity."
+        "measured_result_note": "Bortezomib restored activity in these alleles better than carfilzomib although both inhibited the proteasome similarly in liver lysate; the authors found only a weak correlation between proteasome inhibition and activity and infer other mechanisms, including heat-shock chaperone induction; the strength of rescue did not follow Hsp70 induction (carfilzomib induced more Hsp70 in several alleles), while Hsp27 induction was higher with bortezomib in I278T and bortezomib rescued more, so chaperone induction is not one variable and Hsp27 is not excluded. The authors infer that catalytic-domain alleles must be both stabilised and refolded. Treatment longer than two days caused lethargy and morbidity."
       },
       {
         "id": "DR-A02-006",
@@ -290,7 +304,7 @@
           "cell_type": "liver",
           "developmental_stage": "adult, short treatment"
         },
-        "measured_result_note": "Neither inhibitor restored significant activity ('a very small amount' with bortezomib). The same allele gained activity with bortezomib in a human kidney-line model (DR-A02-008), so the allele does not fix the outcome: expression context and readout differ. A measured null in this system."
+        "measured_result_note": "Neither inhibitor restored significant activity ('a very small amount' with bortezomib). The same allele gained activity with bortezomib in a human kidney-line model (DR-A02-008), so the allele does not fix the outcome: expression context and readout differ. A measured null in this system. The HEK paper's own summary of the mouse work says bortezomib partially rescued I278T and T191M, which is more generous than the mouse paper's wording; the mouse paper's wording is used here."
       },
       {
         "id": "DR-A02-007",
@@ -308,7 +322,7 @@
           "cell_type": "liver",
           "developmental_stage": "adult, about a month"
         },
-        "measured_result_note": "With tolerated exposure the activity gain was not significant and a white-cell and lymphocyte reduction was still present; homocysteine fell by about half yet stayed far above normal, and one of eight treated animals had the largest response and was also the one with the greatest weight loss and lowest white-cell counts. The authors conclude that proteasome inhibitors are probably not feasible as monotherapy at non-toxic exposure."
+        "measured_result_note": "With tolerated exposure the activity gain was not significant and a white-cell and lymphocyte reduction was still present; homocysteine fell by about half (mean 345 to 179 micromolar, significant linear trend) yet stayed far above normal, with no significant activity gain, and one of eight treated animals had the largest response and was also the one with the greatest weight loss and lowest white-cell counts. The authors conclude that proteasome inhibitors are probably not feasible as monotherapy at non-toxic exposure."
       },
       {
         "id": "DR-A02-008",
@@ -326,7 +340,7 @@
           "cell_type": "HEK293A kidney line",
           "developmental_stage": "culture, 24 h readout"
         },
-        "measured_result_note": "Proteasome inhibition raised the half-life of wild-type CBS about 7.7-fold, T191M about 6.8-fold and I278T about 3.0-fold, and raised a live-cell activity probe signal in all three (wild type trend only); lysosome inhibition acted on wild type and I278T but not T191M; ERAD inhibition raised activity of both mutants without the same change in turnover, so the authors state that higher steady-state level is not a prerequisite for activity rescue and that native tetramer content tracked activity better than total protein. The route is therefore lesion-dependent and the gain also applies to wild type. Inhibitors showed signs of cell damage at the effective levels. Probe signal is relative to each vehicle control, not a per-molecule activity."
+        "measured_result_note": "Proteasome inhibition raised the half-life of wild-type CBS about 7.7-fold, T191M about 6.8-fold and I278T about 3.0-fold, and raised a live-cell activity probe signal in all three (wild type trend only); lysosome inhibition acted on wild type and I278T but not T191M; ERAD inhibition raised the activity of T191M without any change in its half-life, whereas for I278T the ERAD inhibitor raised both half-life (about 1.6-fold) and activity (about 374 percent of vehicle), so the dissociation of activity from turnover rests on T191M alone; the authors conclude that higher steady-state level is not a prerequisite for activity rescue and that native tetramer content tracked activity better than total protein. The route is therefore lesion-dependent and the gain also applies to wild type. Inhibitors showed signs of cell damage at the effective levels. Probe signal is relative to each vehicle control, not a per-molecule activity."
       },
       {
         "id": "DR-A02-009",
@@ -345,6 +359,24 @@
           "developmental_stage": "culture, 48 h after transfection"
         },
         "measured_result_note": "Soluble protein of both alleles rose; activity of R125Q rose 5 to 7-fold to about a tenth of wild type, while I278T activity did not rise at all although the same allele is rescued by proteasome inhibition in mice and in the kidney line. Endpoint recorded for I278T: protein up, activity unchanged (NO_CHANGE for activity). Different intervention and a cell line with strong baseline ER stress, so this is not a clean test of expression context, but it is a measured protein-up activity-flat case for a cytosolic enzyme."
+      },
+      {
+        "id": "DR-A02-010",
+        "target_id": "CBS p.S466L",
+        "endpoint": "serum total homocysteine and liver CBS activity under one week of low-exposure carfilzomib",
+        "direction": "NO_CHANGE",
+        "source": "Gupta 2023, PMID 37319242 (Results 'Low dose/long-duration studies'); NOT WWOX EVIDENCE",
+        "locator": "disease-models/wwox/research/drug_repurposing/broad_recovery_it6_p6_20261029/README.md section 4 row P-4 (S466L low-exposure arm)",
+        "epistemic_status": "DATO",
+        "reading_depth": "partial_fulltext_read",
+        "context": {
+          "disease_id": "CBS deficiency, homocystinuria (not WWOX)",
+          "genotype": "human CBS S466L transgene on a Cbs-null mouse background",
+          "species": "mouse",
+          "cell_type": "liver",
+          "developmental_stage": "adult, one week"
+        },
+        "measured_result_note": "No significant difference in homocysteine or activity; a very slight rise in protein in some animals and no Hsp70 induction. The regulatory-domain allele that was rescued at high exposure (DR-A02-004) was therefore not rescued at tolerated exposure (PMID 37319242, Results 'Low dose/long-duration studies', last paragraph)."
       }
     ],
     "p4_fields": {
@@ -365,7 +397,7 @@
       "state_of_known_roads": "not verified for this disease; and exposure-or-toxicity limit shown by its own precedent (other windows toxic to controls).",
       "pathway_and_objective": "RECUPERO_PROFONDO.",
       "expected_contribution": "Recovery of residual protein only if Q230P is lost at the proteasome; function of any recovered protein is the unanswered question.",
-      "mechanism": "Target: ubiquitin-proteasome (and, for some alleles, lysosomal and ERAD) degradation of the mutant protein, not WWOX; type: blockade, possibly with heat-shock response induction as a confound; direction: protein up if the variant is a substrate of the blocked route; function recovery depends on whether the lesion is a stability lesion (stabilisation may suffice) or a catalytic or folding lesion (stabilisation plus refolding needed). Unknown for Q230P.",
+      "mechanism": "Target: ubiquitin-proteasome (and, for some alleles, lysosomal and ERAD) degradation of the mutant protein, not WWOX; type: blockade, possibly with heat-shock response induction as a confound; direction: protein up if the variant is a substrate of the blocked route; function recovery depends on whether the lesion is a stability lesion (stabilisation may suffice) or a catalytic or folding lesion (stabilisation plus refolding needed). Unknown for Q230P. Expectation for a Q230P-class protein is open and unranked: stabilisation may suffice (as for S466L) or may not (as for the catalytic-domain alleles); the mapping from Q230P to either class rests on a domain label and modelled burial only, CBS and WWOX differ in cofactor and assembly, and the repository red-team record expects a chaperone-mediated-autophagy (lysosomal) route, under which a proteasome arm would not raise the protein.",
       "sources": {
         "internal": [
           "disease-models/wwox/research/repurposing_10h_scientist-a_20261021.md §§ 3, 4 (PB-1)",
@@ -389,9 +421,9 @@
         "against": [
           "The gain applies to wild type too (CBS wild-type half-life up about 7.7-fold under proteasome inhibition): a boost multiplies residual function and does not repair it.",
           "Allele dependence is large: one allele rescued to the transgenic wild-type range in some animals (S466L), three improved (I278T, R266K, R336C), one not at all in the mouse (T191M), and a stable but inactive allele (G307S) not at all; the same T191M allele gained in a cell line. The outcome depends on whether the lesion is a stability lesion or a catalytic one.",
-          "Protein-up with activity-flat in a cytosolic enzyme (CBS I278T with HSP70 or HSF1 co-expression); ASPA C152W stabilised protein exclusively insoluble with no activity detectable.",
-          "Tolerated exposure was ineffective in mice; effective exposure was toxic; the superior drug did not track proteasome inhibition, so the mechanism is not simply route blockade.",
-          "Lysosome-route first for the only WWOX missense with a measured turnover (P252A), and MG-132 did not accumulate even wild-type WWOX there: a proteasome arm may be the wrong lever for the SDR domain class (a nearby SDR enzyme, RDH5, is degraded by autophagy and not by the proteasome; abstract-level only)."
+          "Protein-up with activity-flat in a cytosolic enzyme (CBS I278T with HSP70 or HSF1 co-expression); ASPA C152W stabilised protein exclusively insoluble, the variant could not be assayed for activity in that study and earlier studies found no residual activity in purified protein or cell extracts (mechanism work mainly in yeast, human part in U2OS).",
+          "Tolerated exposure lowered homocysteine by about half without a significant activity gain and with immune-cell toxicity (CBS I278T), and gave no significant change for S466L; effective exposure was toxic; authors: probably not feasible as monotherapy. The superior drug did not track proteasome inhibition, so the mechanism is not simply route blockade.",
+          "Lysosome-route first for the only WWOX missense with a measured turnover (P252A), and MG-132 did not accumulate even wild-type WWOX there: a proteasome arm may be the wrong lever for the SDR domain class (a nearby SDR enzyme, RDH5, is degraded by autophagy and not by the proteasome; abstract-level only). The P252A work used stable overexpression in thyroid-cancer lines (CAL-62, BCPAP), so it is a cancer-line overexpression datum. A second WWOX observation points the same way: MG-132 accumulated truncated WWOX proteins while the normal-size protein did not change in 49 cancer lines (PMID 14695174, abstract-level)."
         ],
         "transfer_limits": "CBS is a pyridoxal-phosphate tetramer whose misfolding concentrates in a regulatory domain, expressed in liver and kidney models; WWOX is an SDR-domain protein in neural cells. Allele classes do not transfer between proteins. Activity is per milligram of lysate or a live-cell probe, not per molecule. Brain exposure of any inhibitor is not assessed here."
       },
@@ -423,14 +455,15 @@
       "No drug has been given to any WWOX model carrying a missense or a splice allele (known-roads note, section 5).",
       "Whether Q230P is a proteasome substrate at all.",
       "Whether the exposure at which a degradation-route blocker restores a cytosolic enzyme in cells (toxic in the best case) is reachable in neural tissue: not assessed.",
-      "Whether the Q230P-class lesion is a stability lesion (a stabilised protein would be active) or a catalytic/folding lesion (stabilisation plus refolding needed): the CBS allele spectrum shows both occur in one enzyme."
+      "Whether the Q230P-class lesion is a stability lesion (a stabilised protein would be active) or a catalytic/folding lesion (stabilisation plus refolding needed): the CBS allele spectrum shows both occur in one enzyme.",
+      "Which CBS allele class, if any, the Q230P class resembles: the analogy rests on a domain label and modelled burial, and the repository red-team record expects a lysosomal (chaperone-mediated autophagy) route rather than a proteasomal one."
     ],
     "evidence_against": [
       "Insoluble stabilised variant with no measurable activity (ASPA C152W).",
       "Toxic windows including in controls.",
       "Gain applies to wild type (CBS wild-type half-life under proteasome inhibition).",
       "Protein-up activity-flat cases (CBS I278T with HSP70 or HSF1 co-expression).",
-      "Tolerated exposure ineffective in mice."
+      "Tolerated exposure lowered homocysteine by about half without a significant activity gain, with immune toxicity (CBS I278T)."
     ],
     "bridge_gaps_exposed": [
       "G-1 (closed in bridge b96e4cd9; packet rebuilt with NO_CHANGE)"

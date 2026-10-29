@@ -24,7 +24,7 @@ dimensions that this set does not make.
 | Id | Axis | Candidate | State (roadmap vocabulary) | Bridge `directional_summary` | `input_sha256` (bridge, full) |
 |---|---|---|---|---|---|
 | `P4-A-01` | A · Q230P-class missense recovery | 4-phenylbutyrate class and bile-acid chemical chaperones | controversial | UNRESOLVED | `7eebb5ed2106299775e78c6a0ff505d71140fcaa123daf83e69437036fc5236f` |
-| `P4-A-02` | A | Proteasome-inhibitor class (degradation blockade) | hypothesis | UNRESOLVED | `dccbcd5b0b5c9f657fa9287cea5554fc87b8e9b7fc2e726af45ed87c7bbde972` |
+| `P4-A-02` | A | Proteasome-inhibitor class (degradation blockade) | hypothesis | UNRESOLVED | `55808a52f6e15dc6729714fbd64c5892980974c9e8ee8946636952fd4ce128bb` |
 | `P4-A-03` | A | Client-binding pharmacological chaperone | abstention | UNRESOLVED | `5e4ae43e3b1ee1d1b0c18c2ad4c8eba69a9f0ec180e9ba6a519cd90c02b40bd6` |
 | `P4-A-04` | A | ER-proteostasis regulators (UPR/ERAD) | abstention | UNRESOLVED | `23b2a4839e74483cbaf3065aa054581b92661ed919473c3f1398d0610407ceaf` |
 | `P4-A-05` | A | HSP70-axis modulation | abstention | UNRESOLVED | `77435531ca722e59b67e2bf0e0150ce4099563bd9be2a642f60a4bb9c3068dfe` |
