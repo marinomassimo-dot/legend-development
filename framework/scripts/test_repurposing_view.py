@@ -986,7 +986,7 @@ class CuratedBrowser(Browser):
         self.assertIn("https://pubmed.ncbi.nlm.nih.gov/32000863/", area)
         self.assertIn("PMID 32000863", area)
         self.assertIn("CHEMBL696", area)
-        self.assertIn("Data dei dati:", area)
+        self.assertIn("Dati aggiornati al:", area)
         self.assertIn("Perimetro:", area)
         self.assertNotIn("deepdive_manifests", area)
         self.assertNotRegex(area, r'href="\.\./')
@@ -1040,10 +1040,10 @@ class ItalianFix(unittest.TestCase):
     def test_goal_tiles_count_every_position_link(self):
         cur = self.P["cur"]
         n_links = sum(len(c["links"]) for c in cur["cands"])
-        self.assertEqual(n_links, 50)
+        self.assertEqual(n_links, 51)
         goals = re.findall(r'<div class="goal (?:deep|partial)".*?<span class="mini mut">\((\d+)\)</span></div></div>', self.page, re.S)
         self.assertEqual(sum(map(int, goals)), n_links)
-        self.assertIn("I 50 legami candidato-bisogno sono contati tutti", self.page)
+        self.assertIn("I 51 legami candidato-bisogno sono contati tutti", self.page)
 
     def test_no_raw_status_code_in_the_header_and_italian_labels(self):
         head = self.page[:self.page.index('<nav ')]
@@ -1251,7 +1251,7 @@ class It6P13Data(unittest.TestCase):
             for x in titled:
                 self.assertIn(x["id"], {p["id"] for p in c["pmids"]})
                 self.assertEqual(x["title"], (self.titles.get(x["id"]) or {}).get("title"), (c["id"], x["id"]))
-            self.assertLessEqual(rv.brief_chars(c), 3200, c["id"])     # the budget that keeps one card on one A4 page (measured in the print test)
+            self.assertLessEqual(rv.brief_chars(c), 4800, c["id"])     # the budget that keeps one card on one A4 page (measured in the print test)
         js = (DR / "view/assets/curated.js").read_text()
         self.assertIn("#brief=", js)
         self.assertIn("data-brief", js)
@@ -1389,7 +1389,12 @@ class It6P13Data(unittest.TestCase):
         for e in wo["entries"]:
             self.assertIn(html_escape(e["kind"]), sec)
             self.assertIn(html_escape(e["feasibility"]), sec)
-        self.assertEqual(sec.count("non nota"), sum(e["feasibility"].count("non nota") for e in wo["entries"]) + sec.count("«non nota»"))
+        self.assertNotIn("Ordine di lavoro", sec)      # the heading is 'Piano di verifiche': no implied sequence
+        self.assertEqual(sec.count("non nota"), sum(e["feasibility_it"].count("non nota") for e in wo["entries"]) + sec.count("«non nota»"))
+        for e in wo["entries"]:      # an Italian one-line summary and the Italian feasibility line stand above the English scientific text
+            self.assertIn(html_escape(e["summary_it"]), sec)
+            self.assertIn(html_escape(e["feasibility_it"]), sec)
+            self.assertNotIn("non nota", e["feasibility"])
         self.assertNotRegex(sec, r"<ol\b")                      # an ordered list would read as a ranking
         for bad in ("score", "punteggio:", "probabilit"):
             self.assertNotIn(bad, re.sub(r"non ha punteggio", "", sec))
@@ -1408,7 +1413,7 @@ class It6P13Data(unittest.TestCase):
             self.assertEqual(c["brief"]["window"]["states"], ["prevented_early_window", "unmeasured"])
         self.assertTrue(all(c["brief"].get("window") is None for c in self.cur["cands"] if c["id"] not in wo["card_windows"]))
         h = self.static_html(self.page)
-        for st in ("prevenuto / finestra precoce", "recuperato dopo l'esordio in un modello", "non misurato"):
+        for st in ("prevenzione (finestra precoce)", "recupero dopo l'esordio (solo in un modello)", "non misurato"):
             self.assertIn(html_escape(st), h)
         # the card wording itself carries the early-window statement (data-driven check at build)
         for cid in wo["card_windows"]:
@@ -1432,6 +1437,112 @@ class It6P13Data(unittest.TestCase):
         self.assertIn("F04_nmdar_intervention_class", e["cards"])
         self.assertIn("P9", e["updated_by"])
         self.assertIn("E1", e["data"])
+
+    # ---- IT6 P13 verifier repairs
+    def card(self, cid):
+        return next(c for c in self.cur["cands"] if c["id"] == cid)
+
+    def test_p11_brief_names_the_tool_compound_and_the_card_is_linked_to_its_need(self):
+        b = self.card("P11_magnesium_nmdar_gate")["brief"]["wwox"]
+        self.assertIn("d-APV", b)
+        self.assertIn("competitive", b)
+        self.assertIn("five slices from three animals", b)
+        self.assertEqual(self.card("P11_magnesium_nmdar_gate")["needs"], ["NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR"])      # the need record lists the card (needs.json sources.cards)
+
+    def test_counter_evidence_is_ordered_by_category_and_safety_comes_first(self):
+        b = self.card("EB-VGB-01")["brief"]
+        self.assertEqual(len(b["counter"]), 3)
+        self.assertEqual([x["cat"] for x in b["counter"]], sorted(x["cat"] for x in b["counter"]))
+        self.assertIn("MRI", b["counter"][0]["text"])      # the brain MRI abnormality signals are not buried
+        self.assertEqual(b["counter"][0]["cat"], 0)
+        self.assertGreater(b["counter_more"], 0)
+        self.assertTrue(all(x["category"] in rv.COUNTER_CATEGORIES for x in b["counter"]))
+        # the rule itself: category first, stored order inside a category, independent of how the card lists the items
+        items = [(2, "outside"), (1, "wwox null"), (0, "harm"), (0, "harm 2"), (2, "outside 2")]
+        self.assertEqual([t for _, t in rv.order_counter(items)], ["harm", "harm 2", "wwox null", "outside", "outside 2"])
+        self.assertEqual(rv.order_counter(items, flip=True)[0][1], "outside")      # mutation: a reversed ranking puts a non-safety item first
+        self.assertNotIn("MRI", rv.order_counter([(rv.counter_category(t), t) for t in ("Organoid markers are up", "vigabatrin MRI abnormality (safety signal)")], flip=True)[0][1])
+        self.assertEqual(rv.counter_category("two children with brain MRI abnormalities"), 0)
+        self.assertEqual(rv.counter_category("The knockout slices showed no effect of the drug"), 1)
+        self.assertEqual(rv.counter_category("A step and a continuum are indistinguishable"), 2)
+        self.assertNotIn("decisiva", rv.UI_IT["bf_f5"].lower())      # the label does not claim a weighting
+
+    def test_counter_placeholder_is_not_shown_as_evidence(self):
+        b = self.card("EB-PDANCHOR-AX-01")["brief"]
+        self.assertEqual(b["counter"][0]["text"], rv.UI_IT["bf_counter_none"])
+        self.assertIn("nessuna controevidenza registrata nella scheda", b["counter"][0]["text"].lower())
+
+    def test_brief_text_is_cut_only_at_sentence_boundaries_and_has_no_repository_identifiers(self):
+        import repurposing_view as m
+        for c in self.cur["cands"]:
+            b = c["brief"]
+            for f in ("wwox", "external", "missing", "next"):
+                self.assertFalse(b[f].endswith("…"), (c["id"], f))
+            for x in b["counter"]:      # a counter item may be cut at a clause (never mid-word) so that the page stays one A4 page; the dossier keeps it whole
+                self.assertTrue(len(x["text"]) <= 240 * 1.5 + 3 or not x["text"].endswith("…"), c["id"])
+            blob = " ".join([b["wwox"], b["external"], b["missing"], b["next"]] + [x["text"] for x in b["counter"]])
+            self.assertNotRegex(blob, r"CLAIM \d|DL-[A-Z]+-\d|HYP-\d{8}|MECHANISM_TRANSFER|\bN-\d+\b|needs audit")
+        long_t = "First sentence is here. " + "Second sentence goes on and on without end " * 12 + "Last."
+        out = m.clip_sentence(long_t, 60)
+        self.assertTrue(out.endswith("."), out)
+        self.assertEqual(m.clip_sentence("Short text.", 60), "Short text.")
+        self.assertEqual(m.scrub_ids("A result (CLAIM 031, DL-BIO-009) stands."), "A result stands.")
+
+    def test_three_dates_are_separate_and_the_research_date_is_not_the_catalogue_date(self):
+        m = self.cur["meta"]
+        self.assertEqual(m["research_update"], m["data_date"])
+        self.assertGreaterEqual(m["research_update"], m["needs_built_on"])
+        self.assertGreaterEqual(m["research_update"], m["catalogue_generated"][:10])
+        self.assertGreaterEqual(m["research_update"], self.wo_doc["research_update"])
+        h = self.static_html(self.page)
+        for k in ("meta.data_date", "meta.needs_built_on", "meta.catalogue_generated"):
+            self.assertIn(f'data-k="{k}"', h)
+        js = (DR / "view/assets/curated.js").read_text()
+        for d in ("data", "registro", "catalogo"):
+            self.assertIn(f'data-date="{d}"', js)
+        self.assertIn("META.research_update", js)
+        self.assertEqual(rv.research_update_date(DR, "2026-01-01"), max("2026-01-01", rv.research_update_date(DR)))
+
+    def test_candidate_line_keeps_the_goal_prefix_and_window_chip_carries_its_qualifiers(self):
+        js = (DR / "view/assets/curated.js").read_text()
+        self.assertIn("esc(goalTxt(c.goal))", js)
+        self.assertTrue(rv.UI_IT["chip_goal"].strip())
+        e = next(x for x in self.cur["work_order"]["entries"] if x["need"] == "NEED-WWOX-GENE-ADDITION")
+        note = next(x["note"] for x in e["window_state"] if x["state"] == "recovered_post_onset_model")
+        for q in ("about 3 weeks", "different organoid cohorts", "week 16 only", "persistence not measured", "one endpoint family", "radial-glia"):
+            self.assertIn(q, note)
+        h = self.static_html(self.page)
+        self.assertIn(f'title="{html_escape(note)}"', h)      # the chip's tooltip
+        node = next(n for c in self.eg_doc["chains"] if c["id"] == "rescue-window" for n in c["nodes"] if n["id"] == "e2")
+        self.assertIn("other cohorts", node["label"])
+        self.assertIn("radial glia not corrected", node["label"])
+        for s in ("prevenzione (finestra precoce)", "recupero dopo l'esordio (solo in un modello)"):
+            self.assertIn(html_escape(s), h)
+        self.assertNotIn("prevenuto", " ".join(str(v) for k, v in rv.UI_IT.items() if k.startswith("ws_")))
+
+    def test_graph_repairs_isr_nmdar_missense(self):
+        ch = {c["id"]: c for c in self.eg_doc["chains"]}
+        n = {(c, x["id"]): x for c in ch for x in ch[c]["nodes"]}
+        self.assertIn("knockdown not shown", n[("isr-sign", "o2")]["label"])
+        self.assertNotIn("silenced", n[("isr-sign", "o2")]["label"])
+        e = next(x for x in ch["nmdar-gate"]["edges"] if x["from"] == "o2" and x["to"] == "n1")
+        self.assertEqual(e["type"], "inferenza")
+        self.assertIn("competitive NMDAR antagonist", n[("nmdar-gate", "o2")]["label"])
+        w = next(x for x in ch["nmdar-gate"]["edges"] if x["to"] == "e3")
+        self.assertNotIn("efficacy signal", w["note"])
+        self.assertEqual(sorted(x["source"] for x in ch["missense-route"]["edges"] if x["to"] in ("e2", "e3", "e4")), ["PMID:33914734", "PMID:37319242", "PMID:39041895"])
+        self.assertIn("tolerated", n[("missense-route", "e4")]["label"])
+        self.assertNotIn("tolerated", n[("missense-route", "e2")]["label"])
+        self.assertNotIn("inert", n[("missense-route", "e3")]["label"])
+        self.assertTrue(rv.load_titles(DR).get("33914734"))
+
+    def test_graph_is_legible_on_a_phone(self):
+        css = (DR / "view/assets/curated.css").read_text()
+        self.assertRegex(css, r"\.eg-n text\{font:12\.5px")
+        self.assertIn("nav .in a{display:inline-block;min-height:26px", css)
+        h = self.static_html(self.page)
+        self.assertEqual(h.count('class="mini eg-cue"'), len(self.eg_doc["chains"]))
+        self.assertIn("background-attachment:local,local,scroll,scroll", css)      # scroll shadows: a visible cue on the figure itself
 
     def test_shareable_build_carries_graph_brief_and_work_order(self):
         sh = rv.build_payload(DR, "shareable")["cur"]

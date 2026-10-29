@@ -112,11 +112,11 @@
  "matrix": {
   "L1_documented": 1342,
   "L1_none_found": 13,
-  "L1_not_evaluable": 29,
+  "L1_not_evaluable": 30,
   "L1_states": {
    "documented": 1342,
    "none_found": 13,
-   "not_evaluable": 29,
+   "not_evaluable": 30,
    "pathway_member_only": 327
   },
   "L2_coherent": 103,
@@ -124,12 +124,12 @@
    "coherent": 103,
    "direction_unresolved": 400,
    "none": 63,
-   "not_evaluable": 1132,
+   "not_evaluable": 1133,
    "opposed": 13
   },
   "L3_observed": 10,
   "L3_states": {
-   "none_in_cards": 1680,
+   "none_in_cards": 1681,
    "observed_case_level_only": 2,
    "observed_wwox_system": 8,
    "precedent_other_disease_only": 16,
@@ -138,11 +138,11 @@
   },
   "L4_observed": 4,
   "L4_states": {
-   "none_in_record": 1707,
+   "none_in_record": 1708,
    "observed_case_level": 1,
    "observed_experimental": 3
   },
-  "cells_nonempty": 1711,
+  "cells_nonempty": 1712,
   "cells_possible_rows_x_needs": 33132,
   "levels_are_never_summed": true,
   "row_kinds": {
@@ -190,7 +190,8 @@
     },
     "cards_citing_need": [
      "F01_glutamate_receptor_node",
-     "F04_nmdar_intervention_class"
+     "F04_nmdar_intervention_class",
+     "P11_magnesium_nmdar_gate"
     ],
     "cells_L3_effect_in_wild_type_only": 0,
     "cells_L3_observed": 1,
@@ -1446,7 +1447,7 @@
   "by_disposition": {
    "consistent_mechanism_candidate": 103,
    "exploration_candidate": 232,
-   "insufficient_data": 359,
+   "insufficient_data": 360,
    "no_catalogue_link_found": 10,
    "opposite_mechanism": 2,
    "source_queried_without_result": 3
@@ -1454,7 +1455,7 @@
   "by_disposition_cells": {
    "consistent_mechanism_candidate": 103,
    "exploration_candidate": 232,
-   "insufficient_data": 359,
+   "insufficient_data": 360,
    "no_catalogue_link_found": 10,
    "opposite_mechanism": 2,
    "source_queried_without_result": 3
@@ -1462,7 +1463,7 @@
   "by_disposition_distinct_families_or_rows": {
    "consistent_mechanism_candidate": 103,
    "exploration_candidate": 224,
-   "insufficient_data": 320,
+   "insufficient_data": 321,
    "no_catalogue_link_found": 8,
    "opposite_mechanism": 2,
    "source_queried_without_result": 2
@@ -1471,7 +1472,7 @@
   "pairs_not_prioritised": {
    "not_prioritised_no_card_no_coherence_no_approval_or_access": 1002
   },
-  "records": 709
+  "records": 710
  },
  "schema": "legend.wwox.coverage/1",
  "search_completeness": {

@@ -28,7 +28,7 @@ How the conditions are met:
 - **ChEMBL identifiers**: identifiers only; ChEMBL content is not embedded (class B file shipped separately). ChEMBL identifiers (CHEMBL...): EMBL-EBI, https://www.ebi.ac.uk/chembl/, release ChEMBL_37 (2026-05-01) https://www.ebi.ac.uk/chembl/
 - **Catalogue record identifiers**: opaque identifiers of this repository's catalogue (CAT:...), no source content. LEGEND WWOX repurposing module (this repository)
 
-Identifier census of `index.html` (distinct values): {"CAT": 1485, "CHEMBL": 260, "DOI": 5, "HGNC": 6, "NCT": 0, "PMID": 53}. No abstract and no passage of an article is embedded. Short quotations are marked by quotation marks and attributed (section 6).
+Identifier census of `index.html` (distinct values): {"CAT": 1485, "CHEMBL": 260, "DOI": 5, "HGNC": 6, "NCT": 0, "PMID": 55}. No abstract and no passage of an article is embedded. Short quotations are marked by quotation marks and attributed (section 6).
 
 ## 4. Class B (share-alike): shipped as a separate file, never merged into the page
 

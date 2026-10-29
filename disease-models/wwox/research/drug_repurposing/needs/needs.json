@@ -2552,7 +2552,8 @@
    "sources": {
     "cards": [
      "F01_glutamate_receptor_node",
-     "F04_nmdar_intervention_class"
+     "F04_nmdar_intervention_class",
+     "P11_magnesium_nmdar_gate"
     ],
     "hypotheses": [
      "HYP-20261027-01"

@@ -319,7 +319,7 @@ function exportCard(c) {
 function enterExport(ids) {
   var cs = ids.map(function (i) { return CM[i]; }).filter(Boolean);
   var area = $('export-area');
-  area.innerHTML = '<div class="btns noprint"><button type="button" id="x-back">' + esc(T.ex_back) + '</button><button type="button" id="x-print">' + esc(T.ex_print) + '</button><button type="button" id="x-dl">' + esc(T.ex_dl) + '</button><span class="mut">' + esc(fill(T.ex_n, { n: cs.length })) + '</span></div>' + (cs.map(exportCard).join('') || '<p class="state-none">' + esc(T.ex_unknown) + '</p>');
+  area.innerHTML = '<div class="btns noprint"><button type="button" id="x-back">' + esc(T.ex_back) + '</button><button type="button" id="x-print">' + esc(T.ex_print) + '</button><button type="button" id="x-dl">' + esc(T.ex_dl) + '</button><span class="mut">' + esc((cs.length === 1 ? T.ex_n1 : fill(T.ex_n, { n: cs.length }))) + '</span></div>' + (cs.map(exportCard).join('') || '<p class="state-none">' + esc(T.ex_unknown) + '</p>');
   document.body.classList.add('exporting');
   document.title = T.ex_title + ': ' + cs.map(function (c) { return c.short; }).join(', ');
   $('x-back').onclick = function () { history.pushState('', '', location.pathname + location.search); leaveExport(); };
@@ -334,7 +334,7 @@ function enterExport(ids) {
 function leaveExport() { document.body.classList.remove('exporting'); document.title = TITLE; }
 
 // ---------------------------------------------------------------- one-page synthesis (#brief=): eight labelled fields per card, one A4 page per card
-var BFCSS = 'body{font:12px/1.45 system-ui,Segoe UI,Roboto,sans-serif;color:#111;background:#fff;margin:0;padding:14px}.bf{border:1px solid #888;border-radius:6px;padding:10px 14px;margin:0 0 14px;max-width:780px}.bf h2{font-size:15px;margin:0}.bf .meta{color:#444;font-size:11px;margin:3px 0}dl.bf8{display:grid;grid-template-columns:132px minmax(0,1fr);gap:4px 12px;margin:8px 0;counter-reset:bf}dl.bf8 dt::before{counter-increment:bf;content:counter(bf) ". "}dl.bf8 dt{font-weight:700;font-size:11px;border-top:1px solid #bbb;padding-top:4px}dl.bf8 dd{margin:0;font-size:12px;border-top:1px solid #bbb;padding-top:4px;overflow-wrap:anywhere}.bf ul{margin:0;padding-left:16px}.bf li{font-size:11px}.url{font-family:monospace;font-size:10px;word-break:break-all}a{color:#000;overflow-wrap:anywhere}.mini{font-size:11px}.mut{color:#444}.chip{border:1px solid #888;border-radius:8px;padding:0 5px}@media print{@page{size:A4;margin:12mm}.noprint{display:none}.bf{border:0;padding:0;margin:0;max-width:none;page-break-after:always;break-after:page}.bf:last-child{page-break-after:auto;break-after:auto}dl.bf8{grid-template-columns:34mm 1fr}dl.bf8 dd,dl.bf8 dt{font-size:9pt}.bf li{font-size:8pt}}@media (max-width:560px){body{padding:8px}.bf{padding:8px 10px}dl.bf8{grid-template-columns:minmax(0,1fr);gap:0}dl.bf8 dt{padding-top:6px}dl.bf8 dd{border-top:0;padding-top:1px}}';
+var BFCSS = 'body{font:12px/1.45 system-ui,Segoe UI,Roboto,sans-serif;color:#111;background:#fff;margin:0;padding:14px}.bf{border:1px solid #888;border-radius:6px;padding:10px 14px;margin:0 0 14px;max-width:780px}.bf h2{font-size:15px;margin:0}.bf .meta{color:#444;font-size:11px;margin:3px 0}dl.bf8{display:grid;grid-template-columns:132px minmax(0,1fr);gap:4px 12px;margin:8px 0;counter-reset:bf}dl.bf8 dt::before{counter-increment:bf;content:counter(bf) ". "}dl.bf8 dt{font-weight:700;font-size:11px;border-top:1px solid #bbb;padding-top:4px}dl.bf8 dd{margin:0;font-size:12px;border-top:1px solid #bbb;padding-top:4px;overflow-wrap:anywhere}.bf ul{margin:0;padding-left:16px}.bf li{font-size:11px}.url{display:none;font-family:monospace;font-size:10px;word-break:break-all}.bf ol{margin:0;padding-left:16px}a{color:#000;overflow-wrap:anywhere}.mini{font-size:11px}.mut{color:#444}.chip{border:1px solid #888;border-radius:8px;padding:0 5px}@media print{@page{size:A4;margin:12mm}.url{display:inline}.noprint{display:none}.bf{border:0;padding:0;margin:0;max-width:none;page-break-after:always;break-after:page}.bf:last-child{page-break-after:auto;break-after:auto}dl.bf8{grid-template-columns:34mm 1fr}dl.bf8 dd,dl.bf8 dt{font-size:9pt}.bf li{font-size:8pt}}@media (max-width:560px){body{padding:8px}.bf{padding:8px 10px}dl.bf8{grid-template-columns:minmax(0,1fr);gap:0}dl.bf8 dt{padding-top:6px}dl.bf8 dd{border-top:0;padding-top:1px}}';
 function briefSrc(s) {
   if (s.kind === 'PMID') return '<li>' + pmidLink(s.id) + ' <span class="url">' + esc(PUBMED + s.id + '/') + '</span>' + (s.title ? ' ' + esc(s.title) : '') + (s.journal || s.year ? ' <span class="mut">[' + esc([s.journal, s.year].filter(Boolean).join(', ')) + ']</span>' : '') + '</li>';
   return '<li>' + ext(CHEMBL + s.id + '/', 'ChEMBL ' + s.id) + ' <span class="url">' + esc(CHEMBL + s.id + '/') + '</span> <span class="mut">(' + esc(T.tc_compound_id) + ')</span></li>';
@@ -343,25 +343,25 @@ function briefCard(c, std) {
   var b = c.brief, gl = uniq(c.needs.map(function (n) { return c.links[n].group; }).sort());
   var f = [
     [T.bf_f1, c.needs.length ? c.needs.map(function (n) { return esc(needName(NM[n])); }).join('; ') : esc(T.bf_no_need)],
-    [T.bf_f2, '<b>' + esc(first(c.name, 170)) + '</b> <span class="mut">(' + esc(goalShort(c.goal)) + '; ' + esc(trackTxt(c.track)) + '; ' + esc(statusTxt(c.status)) + ')</span>'],
+    [T.bf_f2, '<b>' + esc(c.name) + '</b> <span class="mut">(' + esc(goalTxt(c.goal)) + '; ' + esc(trackTxt(c.track)) + '; ' + esc(statusTxt(c.status)) + ')</span>'],
     [T.bf_f3, esc(b.wwox)],
     [T.bf_f4, esc(b.external)],
-    [T.bf_f5, esc(b.counter) + (b.counter_more ? ' <span class="mini mut">(' + esc(fill(T.bf_counter_more, { n: b.counter_more })) + ')</span>' : '') + ' <span class="mini mut">(' + esc(T.bf_f5_note) + ')</span>'],
+    [T.bf_f5, '<ol class="bf-counter">' + b.counter.map(function (x) { return '<li>' + (x.category ? '<span class="mini mut">[' + esc(x.category) + ']</span> ' : '') + esc(x.text) + '</li>'; }).join('') + '</ol>' + (b.counter_more ? '<span class="mini mut">+ ' + esc(fill(T.bf_counter_more, { n: b.counter_more })) + '. </span>' : '') + '<span class="mini mut">(' + esc(T.bf_f5_note) + ')</span>'],
     [T.bf_f6, esc(b.missing)],
     [T.bf_f7, esc(b.next)],
     [T.bf_f8, b.sources.length ? '<ul class="srcs">' + b.sources.map(briefSrc).join('') + '</ul>' : esc(T.bf_src_none)]
   ];
   var dl = f.map(function (x, i) { return '<dt data-field="' + (i + 1) + '">' + esc(x[0]) + '</dt><dd data-field="' + (i + 1) + '">' + x[1] + '</dd>'; }).join('');
   return '<article class="bf" data-brief-card="' + esc(c.id) + '"><h2>' + esc(c.short) + '</h2><div class="meta">' + esc(T.bf_card) + ' ' + esc(c.id) + ' &middot; ' + (gl.length ? gl.map(function (g) { return esc(g + ' ' + T.pos[g].short); }).join(', ') : esc(T.cd_no_need)) + '</div>' +
-    (b.window ? '<p class="meta" data-window="1"><b>' + esc(T.bf_window) + ':</b> ' + b.window.states.map(function (x) { return '<span class="chip">' + esc(T['ws_' + x]) + '</span>'; }).join(' ') + ' ' + esc(b.window.note) + '</p>' : '') +
-    '<p class="meta"><b>' + esc(T.bf_data_date) + ':</b> <span data-date="data">' + esc(META.data_date) + '</span> &middot; <b>' + esc(T.bf_cat_build) + ':</b> <span data-date="catalogo">' + esc(META.catalogue_generated) + '</span> (' + esc(T.bf_dates_note) + ').</p>' +
+    (b.window ? '<p class="meta" data-window="1"><b>' + esc(T.bf_window) + ':</b> ' + b.window.states.map(function (x) { return '<span class="chip" title="' + esc(b.window.note) + '">' + esc(T['ws_' + x]) + '</span>'; }).join(' ') + ' ' + esc(b.window.note) + '</p>' : '') +
+    '<p class="meta"><b>' + esc(T.bf_data_date) + ':</b> <span data-date="data">' + esc(META.research_update) + '</span> &middot; <b>' + esc(T.bf_needs_rec) + '</b> <span data-date="registro">' + esc(META.needs_built_on) + '</span> &middot; <b>' + esc(T.bf_cat_build) + '</b> <span data-date="catalogo">' + esc(META.catalogue_generated) + '</span> (' + esc(T.bf_dates_note) + ').</p>' +
     '<dl class="bf8">' + dl + '</dl>' +
     '<p class="meta"><b>' + esc(T.bf_dossier) + ':</b> ' + (std ? esc(T.bf_dossier_std) + ' <code>#export=' + esc(c.id) + '</code>' : '<a href="#export=' + esc(c.id) + '" data-dossier="' + esc(c.id) + '">#export=' + esc(c.id) + '</a>') + '. ' + esc(T.bf_warn) + ' ' + esc(T.ex_gen) + ' (schema ' + esc(D.schema) + ', ' + esc(D.source) + '). ' + esc(D.source === 'shareable' ? T.ex_share : T.ex_full) + '</p></article>';
 }
 function enterBrief(ids) {
   var cs = ids.map(function (i) { return CM[i]; }).filter(Boolean);
   var area = $('export-area');
-  area.innerHTML = '<div class="btns noprint"><button type="button" id="x-back">' + esc(T.ex_back) + '</button><button type="button" id="x-print">' + esc(T.ex_print) + '</button><button type="button" id="x-dl">' + esc(T.ex_dl) + '</button><button type="button" id="x-dossier">' + esc(T.bf_dossier_open) + '</button><span class="mut">' + esc(fill(T.bf_n, { n: cs.length })) + '</span></div>' + (cs.map(function (c) { return briefCard(c, false); }).join('') || '<p class="state-none">' + esc(T.bf_unknown) + '</p>');
+  area.innerHTML = '<div class="btns noprint"><button type="button" id="x-back">' + esc(T.ex_back) + '</button><button type="button" id="x-print">' + esc(T.ex_print) + '</button><button type="button" id="x-dl">' + esc(T.ex_dl) + '</button><button type="button" id="x-dossier">' + esc(T.bf_dossier_open) + '</button><span class="mut">' + esc((cs.length === 1 ? T.bf_n1 : fill(T.bf_n, { n: cs.length }))) + '</span></div>' + (cs.map(function (c) { return briefCard(c, false); }).join('') || '<p class="state-none">' + esc(T.bf_unknown) + '</p>');
   document.body.classList.add('exporting');
   document.title = T.bf_title + ': ' + cs.map(function (c) { return c.short; }).join(', ');
   $('x-back').onclick = function () { history.pushState('', '', location.pathname + location.search); leaveExport(); };
@@ -390,6 +390,7 @@ function fromHash() {
   if (/^#f=/.test(h)) openTech($('technical'));
   else if (/^#[\w-]+$/.test(h) && $(h.slice(1))) openTech($(h.slice(1)));
 }
+if (window.matchMedia && window.matchMedia('(max-width:560px)').matches) Array.prototype.forEach.call(document.querySelectorAll('.chain details'), function (d) { d.open = true; });
 Object.keys(IDS).forEach(function (k) { $(IDS[k]).addEventListener(k === 'q' ? 'input' : 'change', function () { CF[k] = this.value; renderAll(); }); });
 $('c-reset').onclick = function () { Object.keys(CF).forEach(function (k) { CF[k] = ''; }); syncCtl(); renderAll(); };
 $('rk-mode').onchange = function () { RK.mode = this.value; renderRank(); };

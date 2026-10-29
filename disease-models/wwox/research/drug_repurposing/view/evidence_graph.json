@@ -119,7 +119,7 @@
           "id": "e1",
           "col": "evidenza",
           "scope": "wwox",
-          "label": "Neuron-restricted AAV9 lowers GFAP+ cells (about 44 to about 5): an indirect effect, not glial modulation",
+          "label": "Vector study, not glial modulation: neuron-restricted AAV9 lowers GFAP+ cells (about 44 to about 5)",
           "pmids": [
             "42422765"
           ]
@@ -179,18 +179,25 @@
           "source": "DOC:P10"
         },
         {
-          "from": "i1",
-          "to": "e1",
-          "type": "associazione",
-          "source": "PMID:42422765",
-          "note": "No glial endpoint after any compound in a Wwox-deficient system has been measured."
-        },
-        {
           "from": "e1",
           "to": "x1",
           "type": "inferenza",
           "source": "DOC:P10",
           "note": "Separates a seizure consequence from a seizure-independent signal."
+        },
+        {
+          "from": "m2",
+          "to": "e1",
+          "type": "associazione",
+          "source": "PMID:42422765",
+          "note": "An indirect lowering after neuronal rescue; no glial endpoint after any compound in a Wwox-deficient system has been measured."
+        },
+        {
+          "from": "i1",
+          "to": "x1",
+          "type": "inferenza",
+          "source": "DOC:P10",
+          "note": "The missing datum named by the card."
         }
       ]
     },
@@ -213,7 +220,7 @@
           "id": "o2",
           "col": "osservazione WWOX",
           "scope": "wwox",
-          "label": "The competitive NMDAR antagonist d-APV abolishes the bursting (5 slices from 3 animals)",
+          "label": "d-APV, a competitive NMDAR antagonist, abolishes the bursting, which returns on washout (5 slices, 3 animals): bursting needs NMDAR activity",
           "pmids": [
             "34634460"
           ]
@@ -291,7 +298,7 @@
           "id": "e1",
           "col": "evidenza",
           "scope": "non_wwox",
-          "label": "GRIN-variant series (not WWOX): memantine benefit in 14 of 19 gain-of-function against 3 of 15 other variants",
+          "label": "GRIN-variant series (not WWOX, retrospective): improvement on memantine in 14 of 19 gain-of-function against 3 of 15 other variants",
           "pmids": [
             "41489401"
           ]
@@ -309,7 +316,7 @@
           "id": "e3",
           "col": "evidenza",
           "scope": "non_wwox",
-          "label": "Infants with West syndrome: oral magnesium arm with ACTH, no difference in seizure control (48 analysed)",
+          "label": "Infants with West syndrome: 3 days intramuscular then oral magnesium with ACTH; no difference in seizure control (48 analysed)",
           "pmids": [
             "35222658"
           ]
@@ -343,9 +350,9 @@
         {
           "from": "o2",
           "to": "n1",
-          "type": "risultato sperimentale",
+          "type": "inferenza",
           "source": "PMID:34634460",
-          "note": "One drug, one preparation; a full block is not a partial block."
+          "note": "The datum shows NMDAR dependence, not raised NMDAR function; one drug, one preparation, a full block."
         },
         {
           "from": "n1",
@@ -424,7 +431,7 @@
           "to": "e3",
           "type": "risultato sperimentale",
           "source": "PMID:35222658",
-          "note": "Different aetiology and regimen; shows no efficacy signal for the oral arm."
+          "note": "Different aetiology and regimen; no difference in seizure control, and the source's EEG result is internally inconsistent."
         },
         {
           "from": "e1",
@@ -517,7 +524,7 @@
           "id": "e1",
           "col": "evidenza",
           "scope": "non_wwox",
-          "label": "Cystathionine beta-synthase alleles: blockade sufficed for S466L, helped three catalytic-domain alleles, failed for T191M",
+          "label": "Cystathionine beta-synthase: blockade rescued S466L at high exposure, helped three catalytic-domain alleles, failed for T191M",
           "pmids": [
             "37319242"
           ]
@@ -526,7 +533,7 @@
           "id": "e2",
           "col": "evidenza",
           "scope": "non_wwox",
-          "label": "Same enzyme: wild type rises too; effective exposure damaged cells; tolerated exposure gave no significant activity gain",
+          "label": "Same enzyme in a cell model: wild type rises too; effective inhibitor levels damaged cells",
           "pmids": [
             "39041895"
           ]
@@ -535,13 +542,22 @@
           "id": "e3",
           "col": "evidenza",
           "scope": "non_wwox",
-          "label": "ASPA C152W: blocking the route accumulated insoluble, inert protein (activity not measurable)"
+          "label": "ASPA C152W (Hsp70/Hsp110 route, not the proteasome): protein accumulated insoluble, no measurable activity"
         },
         {
           "id": "x1",
           "col": "esperimento",
           "scope": "proposed",
           "label": "Isogenic null neural line: route arms, solubility and native fractions, half-life, transgene mRNA, function ruler; outcomes fixed in advance"
+        },
+        {
+          "id": "e4",
+          "col": "evidenza",
+          "scope": "non_wwox",
+          "label": "Mouse (same enzyme): tolerated exposure gave no significant activity gain; the allele rescued at high exposure was not rescued",
+          "pmids": [
+            "37319242"
+          ]
         }
       ],
       "edges": [
@@ -600,9 +616,9 @@
         {
           "from": "i1",
           "to": "e3",
-          "type": "risultato sperimentale",
-          "source": "DOC:P6",
-          "note": "Another enzyme: not WWOX evidence."
+          "type": "associazione",
+          "source": "PMID:33914734",
+          "note": "Another enzyme and another route: not WWOX evidence and not a proteasome result."
         },
         {
           "from": "e1",
@@ -618,6 +634,19 @@
         },
         {
           "from": "e3",
+          "to": "x1",
+          "type": "inferenza",
+          "source": "DOC:P6"
+        },
+        {
+          "from": "i1",
+          "to": "e4",
+          "type": "risultato sperimentale",
+          "source": "PMID:37319242",
+          "note": "Another enzyme: not WWOX evidence."
+        },
+        {
+          "from": "e4",
           "to": "x1",
           "type": "inferenza",
           "source": "DOC:P6"
@@ -701,7 +730,7 @@
           "id": "e2",
           "col": "evidenza",
           "scope": "wwox",
-          "label": "Organoids: neuron-directed AAV9 at week 10 reduced hyperexcitability present at week 7 (read at week 16); radial glia not corrected",
+          "label": "Organoids: AAV9 at week 10 after a week-7 phenotype (other cohorts), read at week 16 only; one endpoint; radial glia not corrected",
           "pmids": [
             "42397075"
           ]
@@ -815,7 +844,7 @@
           "id": "o2",
           "col": "osservazione WWOX",
           "scope": "computational",
-          "label": "Neural progenitors with WWOX silenced (one library per arm): ISR target set HIGHER at both stages",
+          "label": "Progenitor line with a WWOX shRNA, one library per arm, knockdown not shown at tag level: ISR set higher (descriptive only)",
           "pmids": [
             "31543760"
           ]
@@ -913,7 +942,7 @@
           "to": "n1",
           "type": "associazione",
           "source": "PMID:31543760",
-          "note": "Descriptive re-analysis; no replicate."
+          "note": "Descriptive re-analysis, n = 1 per arm, no replicate; WWOX was not shown lower in the deposit."
         },
         {
           "from": "o3",

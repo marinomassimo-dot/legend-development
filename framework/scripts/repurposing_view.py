@@ -414,7 +414,7 @@ UI_IT = {
     "d_cards": "interventi, classi o assi già letti e scritti in una scheda",
     "d_abst": "schede che indicano il dato mancante invece di un test",
     "unit_note": "Un bisogno è una domanda biologica, una scheda è un candidato scritto, un record è una voce di fonte, una famiglia è un raggruppamento di record: non si sommano né si confrontano come un solo numero.",
-    "data_date": "Data dei dati",
+    "data_date": "Dati aggiornati al",
     "perimeter": "Perimetro",
     "perimeter_txt": "WWOX-DEE, classe del genotipo di riferimento; letteratura e basi dati pubbliche; nessun dato individuale.",
     "goals_h": "Due possibilità aperte, due dimensioni separate",
@@ -589,7 +589,7 @@ UI_IT = {
     # export
     "ex_back": "Torna alla vista", "ex_print": "Stampa o salva come PDF", "ex_dl": "Scarica come HTML autonomo", "ex_n": "Schede esportate: {n}. I collegamenti sono identificativi pubblici e restano validi fuori da questa cartella.",
     "ex_unknown": "Identificativo di scheda sconosciuto.", "ex_title": "Esportazione",
-    "ex_card": "Scheda", "ex_data_date": "Data dei dati", "ex_needs_rec": "registro dei bisogni", "ex_cat_build": "versione del catalogo",
+    "ex_card": "Scheda", "ex_data_date": "Dati aggiornati al", "ex_needs_rec": "registro dei bisogni", "ex_cat_build": "versione del catalogo",
     "ex_perim": "Perimetro", "ex_perim_txt": "encefalopatia epilettica e dello sviluppo legata a WWOX (WWOX-DEE), classe del genotipo di riferimento; solo letteratura e basi dati pubbliche; nessun dato individuale. Materiale di ricerca per la discussione con il team clinico curante: non è consiglio medico, non è una raccomandazione di trattamento, non è una probabilità di beneficio.",
     "ex_rationale": "Motivazione", "ex_needs": "Bisogni affrontati", "ex_evid": "Evidenza, per tipo", "ex_ctx": "Osservazioni registrate sui bisogni collegati: solo contesto, possono riguardare altri interventi.",
     "ex_need_obs": "osservazione sul bisogno", "ex_no_assert": "Nella scheda non è registrata alcuna affermazione con tipo di evidenza.",
@@ -605,24 +605,24 @@ UI_IT = {
     "cd_brief": "Sintesi (1 pagina)", "cd_sel_brief": "Sintesi (1 pagina) della selezione",
     "bf_title": "Sintesi di una pagina", "bf_std_title": "Sintesi WWOX di una pagina", "bf_card": "Scheda",
     "bf_n": "Sintesi esportate: {n}. Una pagina A4 per scheda; i collegamenti sono identificativi pubblici e restano validi fuori da questa cartella.",
-    "bf_f1": "Domanda (il bisogno)", "bf_f2": "Candidato / intervento", "bf_f3": "Risultato WWOX", "bf_f4": "Precedente esterno", "bf_f5": "Controevidenza decisiva",
+    "bf_f1": "Domanda (il bisogno)", "bf_f2": "Candidato / intervento", "bf_f3": "Risultato WWOX", "bf_f4": "Precedente esterno", "bf_f5": "Controevidenze, per categoria",
     "bf_f6": "Dato mancante", "bf_f7": "Prossimo passo", "bf_f8": "Fonti essenziali (al massimo 5)",
-    "bf_f5_note": "la prima voce che la scheda o il bisogno elencano; non è un giudizio di peso",
-    "bf_counter_more": "altre voci nel dossier completo: {n}",
-    "bf_data_date": "Data dei dati", "bf_cat_build": "Costruzione del catalogo", "bf_dates_note": "due date diverse: la prima è l'ultimo aggiornamento dei dati, la seconda la costruzione del catalogo dei composti",
+    "bf_f5_note": "ordine per categoria: prima sicurezza e danno, poi risultati nulli o sfavorevoli in sistemi WWOX, poi controprove fuori da WWOX; dentro la categoria l'ordine della scheda; non è un giudizio di peso",
+    "bf_counter_more": "{n} altre nella scheda",
+    "bf_data_date": "Dati aggiornati al", "bf_cat_build": "Catalogo costruito il", "bf_dates_note": "tre date diverse: l'ultimo aggiornamento della ricerca (schede, bisogni, registri dei cicli), la data del registro dei bisogni e la costruzione del catalogo dei composti",
     "bf_dossier": "Dossier completo (3-4 pagine, appendice)", "bf_dossier_open": "Apri il dossier completo",
     "bf_dossier_std": "Nel file autonomo il dossier completo non è incluso: si apre dalla pagina principale con",
     "bf_warn": "Materiale di ricerca per la discussione con il team clinico curante: non è consiglio medico e non è una graduatoria di trattamenti. Associazione non è modulazione, e modulazione non è recupero.",
     "bf_wwox_ctx": "Nessun risultato dell'intervento in un sistema WWOX; osservazione del bisogno collegato",
     "bf_wwox_none": "Nessun risultato in un sistema WWOX registrato",
     "bf_ext_none": "Nessun precedente esterno registrato (l'assenza non è un risultato negativo)",
-    "bf_counter_none": "Nessuna elencata nella scheda (l'assenza non è un risultato negativo)",
+    "bf_counter_none": "Nessuna controevidenza registrata nella scheda (l'assenza non è un risultato negativo)",
     "bf_missing_none": "Nessun dato mancante indicato dalla scheda", "bf_next_none": "Nessun passo successivo nella scheda",
     "bf_src_none": "Nessuna fonte con identificativo pubblico", "bf_unknown": "Identificativo di scheda sconosciuto.", "bf_no_need": "nessun bisogno collegato",
     # IT6 P13: small evidence graph (server-rendered SVG)
-    "nav_chains": "Catene",
-    "eg_h": "Catene decisive: dall'osservazione all'esperimento",
-    "eg_lead": "Cinque catene dei cicli dell'iterazione 6, lette da sinistra a destra: osservazione in un sistema WWOX, bisogno, meccanismo, intervento, evidenza, esperimento. Non è una rete di conoscenza e non misura l'efficacia: mostra su che cosa poggia ogni passaggio e che cosa manca.",
+    "nav_chains": "Catene di evidenza",
+    "eg_h": "Catene di evidenza: dall'osservazione all'esperimento",
+    "eg_lead": "Cinque catene tratte dai cicli di lavoro più recenti, lette da sinistra a destra: osservazione in un sistema WWOX, bisogno, meccanismo, intervento, evidenza, esperimento. Non è una rete di conoscenza e non misura l'efficacia: mostra su che cosa poggia ogni passaggio e che cosa manca.",
     "eg_note_en": "Le etichette dei nodi sono testo scientifico conservato nella lingua originale (inglese).",
     "eg_legend_h": "Legenda", "eg_leg_line": "Tipo di arco (stile della linea e lettera)", "eg_leg_nodes": "Riga sotto il nodo: ambito del dato",
     "eg_leg_R": "risultato sperimentale: l'esperimento citato ha misurato proprio quel legame",
@@ -635,17 +635,17 @@ UI_IT = {
     "eg_no_interactome": "Un elenco di interattori (interattoma) non è mai disegnato come arco causale.",
     "eg_table_sum": "Testo alternativo: tabella degli archi", "eg_th_from": "Da", "eg_th_to": "A", "eg_th_type": "Tipo", "eg_th_src": "Fonte", "eg_th_note": "Nota",
     "eg_svg_desc": "{n} nodi e {m} archi; l'elenco completo è nella tabella degli archi sotto la figura.",
-    "eg_date": "Catene scritte il", "eg_open_card": "apri il profilo",
+    "eg_date": "Catene scritte il", "eg_cue": "Scorri la figura in orizzontale per vedere tutte le colonne →", "wo_brief": "In breve", "bf_needs_rec": "Registro dei bisogni del", "ex_n1": "Scheda esportata: 1. I collegamenti sono identificativi pubblici e restano validi fuori da questa cartella.", "bf_n1": "Sintesi esportata: 1. Una pagina A4 per scheda; i collegamenti sono identificativi pubblici e restano validi fuori da questa cartella.", "eg_open_card": "apri il profilo",
     # IT6 P13: updated priorities and order of work
-    "wo_h": "Ordine di lavoro: che cosa verificare, bisogno per bisogno",
-    "wo_note": "Un elenco per bisogno, nell'ordine del registro dei bisogni: non è una graduatoria di bisogni né di trattamenti e non ha punteggio. Per ogni bisogno: il motivo del prossimo studio (verificare un'ipotesi, chiarire una controevidenza o risolvere una premessa, coerente con le posizioni F, C, P del bisogno), la domanda, i dati che potrebbero risolverla, che cosa cambierebbe e la fattibilità realmente nota («non nota» quando non lo è).",
-    "wo_update": "Aggiornamento della ricerca", "wo_catalogue": "Costruzione del catalogo", "wo_dates_note": "due date diverse: la prima è l'ultimo aggiornamento di questo ordine di lavoro, la seconda la costruzione del catalogo dei composti",
-    "wo_kind": "Motivo del prossimo studio", "wo_q": "Domanda", "wo_data": "Dati che potrebbero risolverla", "wo_change": "Che cosa cambierebbe", "wo_feas": "Fattibilità realmente nota",
+    "wo_h": "Piano di verifiche per bisogno",
+    "wo_note": "Un elenco per bisogno, nell'ordine del registro dei bisogni: non è una sequenza di lavoro, non è una graduatoria di bisogni né di trattamenti e non ha punteggio. Per ogni bisogno: il motivo del prossimo studio (verificare un'ipotesi, chiarire una controevidenza o risolvere una premessa, coerente con le posizioni F, C, P del bisogno), una riga in italiano, la domanda, i dati che potrebbero risolverla, che cosa cambierebbe e la fattibilità realmente nota («non nota» quando non lo è).",
+    "wo_update": "Aggiornamento della ricerca", "wo_catalogue": "Catalogo costruito il", "wo_dates_note": "due date diverse: la prima è l'ultimo aggiornamento di questo ordine di lavoro, la seconda la costruzione del catalogo dei composti",
+    "wo_kind": "Motivo del prossimo studio", "wo_q": "Domanda", "wo_data": "Dati che potrebbero risolverla", "wo_change": "Che cosa cambierebbe", "wo_feas": "Fattibilità (solo ciò che è noto)",
     "wo_date": "Data", "wo_upd": "Aggiornato da", "wo_cards": "Schede coinvolte", "wo_pos": "Posizioni del bisogno", "wo_no_pos": "nessuna scheda collegata",
-    "ws_prevented_early_window": "prevenuto / finestra precoce", "ws_recovered_post_onset_model": "recuperato dopo l'esordio in un modello",
+    "ws_prevented_early_window": "prevenzione (finestra precoce)", "ws_recovered_post_onset_model": "recupero dopo l'esordio (solo in un modello)",
     "ws_symptom_suppression_reversible": "soppressione sintomatica reversibile", "ws_unmeasured": "non misurato",
-    "wo_window": "Stato della finestra", "bf_window": "Stato della finestra",
-    "wo_see": "ordine di lavoro di questo bisogno", "wo_text_en": "Testo scientifico in inglese, come memorizzato.", "wo_more": "Dettagli: dati, effetto, fattibilità",
+    "wo_window": "Finestra di intervento", "bf_window": "Finestra di intervento",
+    "wo_see": "piano di verifiche di questo bisogno", "wo_text_en": "Testo scientifico in inglese, come memorizzato.", "wo_more": "Dettagli: dati, effetto, fattibilità",
     # technical drill-down
     "td_sum": "Dettagli tecnici",
     "td_note": "Versioni, impronte digitali, comando di rigenerazione, stati delle fonti e lo screening completo del catalogo. Sono separati dall'esplorazione sopra, in inglese tecnico, esaustivi e non ordinati: non sono elenchi di candidati.",
@@ -957,7 +957,7 @@ NODE_SCOPES = ("wwox", "wwox_other", "non_wwox", "computational", "proposed", "n
 CHAIN_STATES = ("astensione", "ipotesi", "non risolto")
 WO_KINDS = ["verificare un'ipotesi", "chiarire una controevidenza", "risolvere una premessa"]
 KIND_OF_FAMILY = {"F": WO_KINDS[0], "C": WO_KINDS[1], "P": WO_KINDS[2]}
-WO_KEYS = {"need", "kind", "question", "data", "would_change", "feasibility", "date", "updated_by", "cards", "docs", "window_state"}
+WO_KEYS = {"need", "kind", "question", "data", "would_change", "feasibility", "date", "updated_by", "cards", "docs", "window_state", "summary_it", "feasibility_it"}
 WINDOW_STATES = ("prevented_early_window", "recovered_post_onset_model", "symptom_suppression_reversible", "unmeasured")   # P7, rescue_window_it6 section 5: the 'window state' column
 WINDOW_WORDING_RE = re.compile(r"early-window", re.I)   # a prevented/early-window state must be stated in the card or need wording itself
 ISO_DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
@@ -1147,9 +1147,13 @@ def validate_work_order(doc: dict, need_ids: list, groups_by_need: dict, card_id
         last = max(last, pos[nid])
         for k in sorted(set(e) - WO_KEYS):
             errs.append(f"{w}: unknown field {k!r} (no score, rank or probability field exists)")
-        for k in ("question", "data", "would_change", "feasibility"):
+        for k in ("question", "data", "would_change", "feasibility", "summary_it", "feasibility_it"):
             if not str(e.get(k) or "").strip():
-                errs.append(f"{w}: {k} is empty (write 'non nota' when feasibility is not known)")
+                errs.append(f"{w}: {k} is empty (write 'non nota' in feasibility_it when feasibility is not known)")
+        if "not known" in str(e.get("feasibility")) and "non nota" not in str(e.get("feasibility_it")):
+            errs.append(f"{w}: the English feasibility says 'not known' but feasibility_it does not say 'non nota'")
+        if re.search(r"\bnon nota\b", str(e.get("feasibility"))):
+            errs.append(f"{w}: Italian words inside the English feasibility text; put them in feasibility_it")
         if not ISO_DATE_RE.match(str(e.get("date") or "")):
             errs.append(f"{w}: date must be an ISO date")
         if e.get("kind") not in WO_KINDS:
@@ -1189,7 +1193,7 @@ def resolve_work_order(doc: dict, groups_by_need: dict) -> dict:
     docs = {k: v["label"] for k, v in doc["docs"].items()}
     entries = [{"need": e["need"], "kind": e["kind"], "question": e["question"], "data": e["data"], "would_change": e["would_change"], "feasibility": e["feasibility"], "date": e["date"],
                 "updated_by": list(e.get("updated_by") or []), "cards": list(e.get("cards") or []), "docs": [{"id": d, "label": docs[d]} for d in e.get("docs") or []],
-                "window_state": [dict(x) for x in e.get("window_state") or []],
+                "window_state": [dict(x) for x in e.get("window_state") or []], "summary_it": e["summary_it"], "feasibility_it": e["feasibility_it"],
                 "positions": sorted(groups_by_need.get(e["need"]) or [])} for e in doc["entries"]]
     return {"research_update": doc["research_update"], "kinds": list(WO_KINDS), "entries": entries, "window_states": list(WINDOW_STATES),
             "card_windows": {k: {"states": list(v["states"]), "note": v["note"]} for k, v in sorted((doc.get("card_windows") or {}).items())}}
@@ -1216,8 +1220,54 @@ def load_curated_docs(dr: Path, cands: list, cneeds: list, titles: dict, texts: 
     return resolve_graph(out[0], titles), resolve_work_order(out[1], groups)
 
 
+SAFETY_RE = re.compile(r"\b(safety|adverse|toxic\w*|harm\w*|MRI|neuropath\w*|pro-?convuls\w*|hepat\w*|serious|withdrawn|contraindicat\w*|tumou?r\w*)\b", re.I)
+WWOX_NULL_RE = re.compile(r"(?=.*\b(?:Wwox|WWOX|knockout|organoid|null mouse)\b)(?=.*\b(?:null|no (?:effect|benefit|difference|change)|did not|not (?:recovered|reproduc\w+)|unfavourable|worse|failed|negative|ineffective)\b)", re.I | re.S)
+PLACEHOLDER_RE = re.compile(r"^\s*see\b[^.]*\babove\.?\s*$", re.I)
+ID_PAREN_RE = re.compile(r"\s*\([^()]*(?:CLAIM \d+|DL-[A-Z]+-\d+|HYP-\d{8}-\d+|MECHANISM_TRANSFER_FIREWALL|\bN-\d+\b|needs audit|\bmanifest\b)[^()]*\)")
+ID_BARE_RE = re.compile(r"\b(?:(?:[Mm]ap )?N-\d+\b:?\s*|CLAIM \d+|DL-[A-Z]+-\d+|HYP-\d{8}-\d+|MECHANISM_TRANSFER_FIREWALL|DR-[A-Z0-9]+-\d+|[A-Z]-[A-Z]{2,4}-\d+)\b")
+COUNTER_CATEGORIES = ("sicurezza e danno", "risultati nulli o sfavorevoli in sistemi WWOX", "controprove fuori da WWOX e limiti")
+
+
+def scrub_ids(t: str) -> str:
+    """Repository identifiers (CLAIM 031, DL-..., HYP-..., assertion ids) mean nothing outside the repository: they are dropped from the one-page text (the dossier keeps the card text whole)."""
+    t = ID_PAREN_RE.sub("", str(t or ""))
+    t = ID_BARE_RE.sub("", t)
+    return re.sub(r"\s+([,.;:])", r"\1", re.sub(r"\s{2,}", " ", t)).strip()
+
+
+def clip_sentence(t, n: int, hard: float = 3.0) -> str:
+    """Shorten at a sentence boundary, never inside a sentence: the last boundary within n; else the end of the first sentence if it is within hard*n; only a single sentence longer than that is cut, at a clause."""
+    t = " ".join(str(t or "").split())
+    if len(t) <= n * 1.2:
+        return t
+    ends = [m.start() for m in re.finditer(r"(?<=[.;])\s+(?=[A-Z(\[0-9])", t)]
+    within = [e for e in ends if e <= n]
+    if within:
+        return t[:within[-1]].rstrip()
+    first = [e for e in ends if e <= n * hard]
+    if first:
+        return t[:first[0]].rstrip()
+    if len(t) <= n * hard:
+        return t
+    cut = t[:int(n * hard)]
+    i = max(cut.rfind("; "), cut.rfind(", "))
+    return (cut[:i] if i > n * 0.5 else cut[:cut.rfind(" ")]).rstrip(",;") + " …"
+
+
+def counter_category(text: str) -> int:
+    """Deterministic category of a counter-evidence statement: 0 safety or harm signal, 1 null or unfavourable result in a WWOX system, 2 counter-evidence from outside WWOX and design limits."""
+    if SAFETY_RE.search(text):
+        return 0
+    return 1 if WWOX_NULL_RE.search(text) else 2
+
+
+def order_counter(items: list, flip: bool = False) -> list:
+    """(category, text) items in category order; inside a category the stored order of the card, then of the need, is kept (stable sort). `flip` exists for the regression test only."""
+    return sorted(items, key=lambda it: -it[0] if flip else it[0])
+
+
 def make_brief(c: dict, nmap: dict) -> dict:
-    """The one-page synthesis of a card: fields assembled from the card and its needs only (no new claim). Fallback sentences are Italian orientation text; everything else is the stored scientific text."""
+    """The one-page synthesis of a card: fields assembled from the card and its needs only (no new claim). Fallback sentences are Italian orientation text; everything else is the stored scientific text, shortened only at sentence boundaries."""
     U = UI_IT
     wsc = ("WWOX_EXPERIMENT_IN_DEE_SYSTEM", "WWOX_CLINICAL_CASE")
     order = sorted(c["needs"], key=lambda n: (len(nmap[n]["cards"]), n))
@@ -1234,23 +1284,39 @@ def make_brief(c: dict, nmap: dict) -> dict:
     other = [a for a in c["asserts"] if a["scope"] not in wsc and a["scope"] != "SAFETY_SIGNAL" and not is_wwox_assert(a)]
     safety = [a for a in c["asserts"] if a["scope"] == "SAFETY_SIGNAL"]
 
-    def fa(a):
-        return a["text"] + (" – " + clip(a["note"], 150) if a.get("note") else "") + (f" [{a['species']}]" if a.get("species") else "")
+    def fa(a, tgt=True):
+        # the tested target or tool compound is named first: a result of d-APV on the NMDAR must not read as a result of the card's own intervention
+        head = (clip(a["target"], 110) + ": ") if (tgt and a.get("target") and a["target"] not in a["text"]) else ""
+        return head + a["text"] + (" – " + clip_sentence(a.get("note_full") or a["note"], 220) if a.get("note") else "") + (f" [{a['species']}]" if a.get("species") else "")
     if own:
         wwox = " | ".join(fa(a) for a in own[:2])
     elif w_obs:
-        wwox = U["bf_wwox_ctx"] + ": " + clip(w_obs[0]["short"], 240)
+        wwox = U["bf_wwox_ctx"] + ": " + clip_sentence(w_obs[0]["full"] or w_obs[0]["short"], 300)
     else:
         wwox = U["bf_wwox_none"]
-    ext_items = [fa(a) for a in other[:2]] + [o["short"] for o in o_obs[:1]]
+    ext_items = [fa(a, False) for a in other[:2]] + [clip_sentence(o["full"] or o["short"], 260) for o in o_obs[:1]]
     external = " | ".join(ext_items[:2]) if ext_items else U["bf_ext_none"]
-    cnt = [clip(t, 360) for t in c["against"]] + [clip(t, 360) for n in order for t in nmap[n]["counter"]] + [fa(a) for a in safety]
-    if cnt:
-        counter, more = cnt[0], len(cnt) - 1
-    elif c.get("against_note"):
-        counter, more = clip(c["against_note"], 360), 0
-    else:
-        counter, more = U["bf_counter_none"], 0
+    items = []
+    for a in c["asserts"]:
+        if a["scope"] == "SAFETY_SIGNAL" or a.get("sign") == "harm":
+            items.append((0, fa(a)))
+        elif a.get("sign") == "null":
+            items.append((1 if a["scope"] in wsc else 2, fa(a)))
+    for t in list(c["against"]) + [t for n in order for t in nmap[n]["counter"]]:
+        if not PLACEHOLDER_RE.match(str(t)):
+            items.append((counter_category(str(t)), str(t)))
+    seen, uniq_items = set(), []
+    for cat, t in order_counter(items):
+        k = re.sub(r"\W+", " ", t.lower())[:80]
+        if k not in seen:
+            seen.add(k)
+            uniq_items.append((cat, t))
+    if not uniq_items and c.get("against_note") and not PLACEHOLDER_RE.match(str(c["against_note"])):
+        uniq_items = [(counter_category(str(c["against_note"])), str(c["against_note"]))]
+    counter = [{"cat": cat, "category": COUNTER_CATEGORIES[cat], "text": scrub_ids(clip_sentence(t, 240, 1.5))} for cat, t in uniq_items[:3]]
+    if not counter:
+        counter = [{"cat": None, "category": None, "text": U["bf_counter_none"]}]
+    more = max(0, len(uniq_items) - 3)
     pm: list[str] = []
 
     def add(p):
@@ -1271,9 +1337,19 @@ def make_brief(c: dict, nmap: dict) -> dict:
     sources = [{"kind": "PMID", "id": p, "title": (titled.get(p) or {}).get("title"), "journal": (titled.get(p) or {}).get("journal"), "year": (titled.get(p) or {}).get("year")} for p in pm[:BRIEF_SOURCES_MAX]]
     if not sources:
         sources = [{"kind": "ChEMBL", "id": x, "title": None, "journal": None, "year": None} for x in c["chembl"][:BRIEF_SOURCES_MAX]]
-    return {"wwox": clip(wwox, 460), "external": clip(external, 340), "counter": counter, "counter_more": more,
-            "missing": clip(c["missing"], 260) if c.get("missing") else U["bf_missing_none"],
-            "next": clip(c["next_full"], 380) if c.get("next_full") else U["bf_next_none"], "sources": sources}
+    return {"wwox": scrub_ids(clip_sentence(wwox, 520)), "external": scrub_ids(clip_sentence(external, 340)), "counter": counter, "counter_more": more,
+            "missing": scrub_ids(clip_sentence(c["missing"], 280)) if c.get("missing") else U["bf_missing_none"],
+            "next": scrub_ids(clip_sentence(c["next_full"], 600)) if c.get("next_full") else U["bf_next_none"], "sources": sources}
+
+
+def research_update_date(dr: Path, *dates) -> str | None:
+    """Date of the newest research content, kept apart from the needs-register date and from the catalogue build date: the latest of the dates given (needs register, work order, graph) and of the dated cycle records of the module (a file or directory name ending _YYYYMMDD)."""
+    found = [d for d in dates if d]
+    for p in sorted(dr.iterdir()):
+        m = re.search(r"_(20\d\d)(\d\d)(\d\d)(?:\.\w+)?$", p.name)
+        if m:
+            found.append("-".join(m.groups()))
+    return max(found) if found else None
 
 
 def build_curated(dr: Path, ctx: dict) -> dict:
@@ -1377,7 +1453,7 @@ def build_curated(dr: Path, ctx: dict) -> dict:
             ids = sorted(set(PMID_RE.findall(f'{a.get("locator", "")} {a.get("source", "")}')))
             asserts.append({"id": a.get("id"), "scope": sc or "UNCLASSIFIED", "text": clip(txt, 200), "note": clip(a.get("measured_result_note") or a.get("note") or (pr or {}).get("basis"), 280),
                             "note_full": a.get("measured_result_note") or a.get("note") or (pr or {}).get("basis"), "species": ctxd.get("species"), "system": clip(ctxd.get("disease_id") or "", 120), "genotype": clip(ctxd.get("genotype") or "", 140),
-                            "depth": a.get("reading_depth"), "sign": (pr or {}).get("sign"), "kind": (pr or {}).get("evidence_kind"), "pmids": ids})
+                            "depth": a.get("reading_depth"), "target": clip(a.get("target_id") or "", 140), "sign": (pr or {}).get("sign"), "kind": (pr or {}).get("evidence_kind"), "pmids": ids})
         # per-link statistics from the module's pertinence table
         lk = {}
         depth_of = {x["id"]: x["depth"] for x in asserts}
@@ -1498,8 +1574,8 @@ def build_curated(dr: Path, ctx: dict) -> dict:
         {"kind": "need", "n": sum(1 for n in cneeds if n["n_wwox_obs"] == 0), "of": n_total, "text": "needs with no WWOX-system observation recorded in the needs file"},
         {"kind": "need", "n": sum(1 for n in cneeds if n["uncertain"]), "of": n_total, "text": "needs whose direction is uncertain, so the sign of a favourable intervention is not known"},
     ]
-    dates = [x for x in (needs_doc.get("built_on"), (stats.get("generated_utc") or "")[:10]) if x]
-    meta = {"data_date": max(dates) if dates else None, "needs_built_on": needs_doc.get("built_on"), "catalogue_generated": stats.get("generated_utc"), "dgidb_export": "2024-06-10", "source": ctx["source"],
+    research_update = research_update_date(dr, needs_doc.get("built_on"), wo["research_update"], eg.get("date"))
+    meta = {"data_date": research_update, "research_update": research_update, "needs_built_on": needs_doc.get("built_on"), "catalogue_generated": stats.get("generated_utc"), "dgidb_export": "2024-06-10", "source": ctx["source"],
             "n_cards": len(cands), "n_needs": n_total, "n_cards_by_goal": dict(Counter(c["goal"] for c in cands)), "n_abstentions": sum(1 for c in cands if c["abstention"])}
     return {"meta": meta, "scopes": [{"code": c, "label": l, "glyph": g} for c, l, g in SCOPES], "goals": GOALS, "tracks": TRACKS, "threads": threads, "needs": cneeds, "cands": cands,
             "groups": GROUPS, "group_note": GROUP_NOTE, "gaps": gaps, "evidence_graph": eg, "work_order": wo}
@@ -2385,14 +2461,14 @@ def render_overview(P: dict) -> str:
         f'<div class="warnstrip" role="note"><b>{E(U["warn_h"])}.</b> {E(U["warn_1"])} {E(U["warn_2"])}</div>'
         f'<details class="inl howto"><summary>{E(U["how_sum"])}</summary><div class="twocol"><div class="how"><h3>{E(U["how_h"])}</h3><ol><li>{E(U["how_1"])}</li><li>{E(U["how_2"])}</li><li>{E(U["how_3"])}</li><li>{E(U["how_4"])}</li></ol><p class="mini">{E(U["warn_3"])}</p></div>'
         f'<div class="legendbox"><p class="mini mut">{E(U["legend_note"])}</p><ul class="poslist">{legend_all}</ul></div></div></details>'
-        f'<p class="meta-line"><b>{E(U["data_date"])}:</b> <span data-k="meta.data_date" data-v="{E(str(dd))}">{E(str(dd))}</span> · <b>{E(U["perimeter"])}:</b> {E(U["perimeter_txt"])} · {E(srcnote)}</p>'
+        f'<p class="meta-line"><b>{E(U["data_date"])}:</b> <span data-k="meta.data_date" data-v="{E(str(dd))}">{E(str(dd))}</span> · <b>{E(U["bf_needs_rec"])}</b> <span data-k="meta.needs_built_on" data-v="{E(str(meta["needs_built_on"]))}">{E(str(meta["needs_built_on"]))}</span> · <b>{E(U["bf_cat_build"])}</b> <span data-k="meta.catalogue_generated" data-v="{E(str(meta["catalogue_generated"]))}">{E(str(meta["catalogue_generated"]))}</span> · <b>{E(U["perimeter"])}:</b> {E(U["perimeter_txt"])} · {E(srcnote)}</p>'
         f'<h3 id="threads">{E(U["th_h"])}</h3><p class="mini mut">{E(U["th_note"])}</p><div class="threads">' + "".join(cards) + '</div>'
         f'<h3>{E(U["goals_h"])}</h3><p class="mini mut">{E(U["goals_note"])} {E(U["goal_cross"].format(total=n_links, cross=n_cross))}</p><div class="goals">' + "".join(panels) + '</div>'
         f'<h3>{E(U["facts_h"])}</h3><div class="tiles">' + tiles + f'</div><p class="mini mut">{E(U["unit_note"])}</p></section>')
 
 
 # ------------------------------------------------------------------ IT6 P13: server-rendered evidence graph (inline SVG) and work order
-EG_COLW, EG_PITCH, EG_PADX, EG_HEADH, EG_LINEH, EG_PADY, EG_GAP, EG_CHARS = 150, 176, 8, 30, 13, 6, 14, 22
+EG_COLW, EG_PITCH, EG_PADX, EG_HEADH, EG_LINEH, EG_PADY, EG_GAP, EG_CHARS = 172, 196, 8, 30, 15, 6, 14, 24
 
 
 def _wrap(text: str, width: int) -> list[str]:
@@ -2408,7 +2484,7 @@ def layout_chain(ch: dict) -> dict:
         tag = U.get("eg_scope_" + n["scope"], "")
         if n["unresolved"]:
             tag = (U["eg_unres"] + (" · " + tag if tag else ""))
-        tag_lines = _wrap(tag, 26) if tag else []
+        tag_lines = _wrap(tag, 28) if tag else []
         h = EG_PADY * 2 + len(lines) * EG_LINEH + len(tag_lines) * (EG_LINEH - 1)
         cols[n["col"]].append({"n": n, "lines": lines, "tag": tag_lines, "h": h})
     heights = {c: sum(b["h"] for b in bs) + EG_GAP * max(0, len(bs) - 1) for c, bs in cols.items()}
@@ -2470,7 +2546,7 @@ def render_evidence_graph(P: dict) -> str:
             for e in ch["edges"])
         out.append(
             f'<article class="chain" id="chain-{E(ch["id"])}" data-chain="{E(ch["id"])}" data-state="{E(ch["state"])}"><h3>{E(ch["title"])} <span class="grp {"c1" if ch["state"] == "non risolto" else "p1"}">{E(U["eg_state_" + ch["state"].replace(" ", "_")])}</span></h3>'
-            f'<p class="mini">{E(ch["question"])}</p><div class="eg-fig" tabindex="0" role="group" aria-label="{E(ch["title"])}">{render_chain_svg(ch)}</div>'
+            f'<p class="mini">{E(ch["question"])}</p><p class="mini eg-cue">{E(U["eg_cue"])}</p><div class="eg-fig" tabindex="0" role="group" aria-label="{E(ch["title"])}">{render_chain_svg(ch)}</div>'
             f'<details class="inl"><summary>{E(U["eg_table_sum"])} ({len(ch["edges"])})</summary><table class="tbl"><thead><tr><th>{E(U["eg_th_from"])}</th><th>{E(U["eg_th_to"])}</th><th>{E(U["eg_th_type"])}</th><th>{E(U["eg_th_src"])}</th><th>{E(U["eg_th_note"])}</th></tr></thead><tbody>{rows}</tbody></table></details></article>')
     out.append("</section>")
     return "".join(out)
@@ -2488,16 +2564,16 @@ def render_work_order(P: dict) -> str:
     for e in wo["entries"]:
         n = nm[e["need"]]
         pos = "".join(pos_chip(g) for g in e["positions"]) or f'<span class="mut">{E(U["wo_no_pos"])}</span>'
-        ws = "".join(f'<li><span class="chip ws ws-{E(x["state"])}">{E(U["ws_" + x["state"]])}</span> <span class="mini">{E(x["note"])}</span></li>' for x in e["window_state"])
+        ws = "".join(f'<li><span class="chip ws ws-{E(x["state"])}" title="{E(x["note"])}">{E(U["ws_" + x["state"]])}</span> <span class="mini">{E(x["note"])}</span></li>' for x in e["window_state"])
         win = f'<div class="wo-win"><b class="mini">{E(U["wo_window"])}:</b><ul class="mini">{ws}</ul></div>' if ws else ""
         upd = (f'<dt>{E(U["wo_upd"])}</dt><dd>{E(", ".join(e["updated_by"]))}</dd>') if e["updated_by"] else ""
         cards = ", ".join(E(c) for c in e["cards"])
         items.append(
             f'<article class="wo-item" id="wo-{E(e["need"])}" data-need="{E(e["need"])}" data-kind="{E(e["kind"])}"><h4>{E(NEED_IT.get(e["need"], n["short"]))} <span class="mut">{E(e["need"])}</span></h4>'
             f'<div class="wo-meta"><span class="chip wo-k wo-k-{kcls[e["kind"]]}" title="{E(U["wo_kind"])}">{E(U["wo_kind"])}: <b>{E(e["kind"])}</b></span> <span class="mini mut">{E(U["wo_pos"])}:</span> {pos}</div>'
-            f'<p class="wo-q"><b>{E(U["wo_q"])}.</b> {E(e["question"])}</p>{win}'
+            f'<p class="wo-sum"><b>{E(U["wo_brief"])}.</b> {E(e["summary_it"])}</p><p class="wo-q"><b>{E(U["wo_q"])}.</b> {E(e["question"])}</p>{win}'
             f'<details class="inl"><summary>{E(U["wo_more"])}</summary><dl class="wo-dl"><dt>{E(U["wo_data"])}</dt><dd>{E(e["data"])}</dd><dt>{E(U["wo_change"])}</dt><dd>{E(e["would_change"])}</dd>'
-            f'<dt>{E(U["wo_feas"])}</dt><dd class="wo-feas">{E(e["feasibility"])}</dd><dt>{E(U["wo_date"])}</dt><dd>{E(e["date"])}</dd>{upd}<dt>{E(U["wo_cards"])}</dt><dd>{cards}</dd></dl>'
+            f'<dt>{E(U["wo_feas"])}</dt><dd class="wo-feas"><b>{E(e["feasibility_it"])}</b><br>{E(e["feasibility"])}</dd><dt>{E(U["wo_date"])}</dt><dd>{E(e["date"])}</dd>{upd}<dt>{E(U["wo_cards"])}</dt><dd>{cards}</dd></dl>'
             f'<p class="mini mut">{E(U["wo_text_en"])}</p></details></article>')
     return (f'<div id="work-order" class="wo-wrap"><h3>{E(U["wo_h"])}</h3><p class="note">{E(U["wo_note"])}</p>'
             f'<p class="meta-line"><b>{E(U["wo_update"])}:</b> <span data-k="cur.work_order_date" data-v="{E(wo["research_update"])}">{E(wo["research_update"])}</span> · <b>{E(U["wo_catalogue"])}:</b> <span data-k="cur.catalogue_generated" data-v="{E(cat)}">{E(cat)}</span> <span class="mini mut">({E(U["wo_dates_note"])})</span></p>'
