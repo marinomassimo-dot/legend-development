@@ -3412,6 +3412,8 @@ def build_ranking(dr: Path, cur: dict, source: str):
         else:
             acc_text = u["access"]
         pm = {"state": ph["state"], "record": ph["record"]}
+        if ph.get("qualification"):
+            pm["qualification"] = ph["qualification"] if full else [{"case": q["case"], "status": q["status"]} for q in ph["qualification"]]
         if full:
             pm.update({"potency_with_assay_context": ph["potency_with_assay_context"], "human_exposure": ph["human_exposure"], "brain_penetration": ph["brain_penetration"]})
         units.append({
@@ -3507,6 +3509,7 @@ UI_IT8 = {
     "rk_c_W": "Evidenza in WWOX", "rk_c_M": "Coerenza meccanicistica", "rk_c_T": "Trasferibilità", "rk_c_P": "Farmacologia", "rk_c_X": "Controevidenza", "rk_c_U": "Incertezza: misurato, ipotizzato, sconosciuto",
     "rk_c_rep": "Replica", "rk_c_ex": "Esclusioni dai confronti", "rk_c_sum": "Componenti, bisogni e vie", "rk_c_merge": "Perché è una sola voce", "rk_c_mem": "Composti in catalogo (uniti per famiglia; gemelli per nome non uniti)",
     "rk_c_members_n": "famiglie di catalogo collegate",
+    "rk_c_qual": "Qualificazione farmacologica IT8 P3 (misure per tipo di saggio, mai aggregate: una misura di legame o enzimatica non è beneficio funzionale)", "rk_c_qual_status": "Stato della decisione", "rk_c_qual_nerv": "Dati sul sistema nervoso", "rk_c_qual_ctr": "Segnali contrari", "rk_c_qual_unk": "Segnali sconosciuti",
     "rk_c_pot": "Potenza nel contesto del saggio", "rk_c_exp": "Esposizione umana", "rk_c_brain": "Penetrazione nel cervello", "rk_c_expl": "Informazione esplorativa IT7 (non guida la graduatoria)",
     "rk_x_w": "asserzioni nulle, dannose o miste in sistemi WWOX", "rk_x_o": "asserzioni nulle o dannose fuori da WWOX", "rk_x_n": "voci di controevidenza a livello di bisogno (del bisogno, non dell'intervento)", "rk_x_opp": "bisogni con azione documentata opposta",
     "rk_p_h": "Bisogni e vie coinvolte", "rk_p_need": "Bisogno", "rk_p_thread": "Filone", "rk_p_obj": "Obiettivo", "rk_p_pos": "Posizione", "rk_p_link": "Tipo di legame", "rk_p_opp": "Azione opposta",
@@ -3642,7 +3645,10 @@ def rk_unit_detail(R: dict, u: dict, full: bool) -> str:
                                                                                        + (f'; name twins not merged: {E(", ".join(m["twins"]))}' if m["twins"] else "") + '</span></li>' for m in u["members"]) + "</ul>"
     elif not full:
         members = f'<p class="mini mut">{E(U["rk_c_members_n"])}: {numit("rk.members." + u["id"], u["members"])}</p>'
-    pharm = f'<dd>{E(Pm["state"])}' + (f'<br><span class="mini">{E(U["rk_c_pot"])}: {E(Pm["potency_with_assay_context"])}<br>{E(U["rk_c_exp"])}: {E(Pm["human_exposure"])}<br>{E(U["rk_c_brain"])}: {E(Pm["brain_penetration"])}</span>' if "potency_with_assay_context" in Pm else "") + "</dd>"
+    qual = ""
+    for q in Pm.get("qualification") or []:
+        qual += f'<br><span class="mini"><b>{E(U["rk_c_qual"])} {E(q["case"])}:</b> {E(U["rk_c_qual_status"])}: {E(q["status"])}' + (f'; {E(q["new_decision"])}; {E(q["quantitative"])}; {E(U["rk_c_exp"])}: {E(q["human_exposure"])}; {E(U["rk_c_qual_nerv"])}: {E(q["nervous_system_data"])}; {E(U["rk_c_qual_ctr"])}: {E(q["contrary"])}; {E(U["rk_c_qual_unk"])}: {E(q["unknown"])}' if "quantitative" in q else "") + '</span>'
+    pharm = f'<dd>{E(Pm["state"])}' + qual + (f'<br><span class="mini">{E(U["rk_c_pot"])}: {E(Pm["potency_with_assay_context"])}<br>{E(U["rk_c_exp"])}: {E(Pm["human_exposure"])}<br>{E(U["rk_c_brain"])}: {E(Pm["brain_penetration"])}</span>' if "potency_with_assay_context" in Pm else "") + "</dd>"
     return (f'<details class="inl rk-detail" data-unit="{E(u["id"])}"><summary>{E(U["rk_c_sum"])}</summary><dl class="rk-dl">'
             f'<dt>{E(U["rk_c_W"])}</dt><dd>{E(W["text"])} <span class="mini mut">{E(U["rk_c_rep"])}: {E(W["replication"])}; wild-type-only assertions {W["wild_type_only_assertions"]}</span></dd>'
             f'<dt>{E(U["rk_c_M"])}</dt><dd>{E(M["text"])}</dd>'
