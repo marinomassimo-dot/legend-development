@@ -155,3 +155,13 @@ developed on synthetic outcomes. Deviations are written to `DEVIATIONS.md` with 
 ## 9. Planned outputs
 
 `README.md` (results, verdict, limits, UNVERIFIED), `p3_run.py` (`--help` answers without work; stages `inputs`, `e2`, `e1`, `report`), `inputs/INPUTS.tsv` (versions, hashes), small result tables (`signature_scores.tsv`, `family_scores.tsv`, `results_summary.json`, control tables), `DEVIATIONS.md` (if any). Raw downloads stay outside git; hashes are listed.
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+## AMENDMENT 1 (2026-10-29, after commit eadbe26a, before any evaluation value of E1 or E2 was opened): inputs re-frozen from the repaired P1
+
+Section 0a said the P1 copy was the pre-repair commit 8b9861d5 and that a re-diff would follow. P1 was repaired (D1 e190b14c, final **31446616**; fly rows removed, E13 dropped, PDH/MEF/MRS retyped, edge and observation ids renumbered, PKM alias fixed).
+`inputs/nodes.tsv`, `edges.tsv`, `systems.tsv`, `p1_derived_gene_values.tsv` are re-copied from 31446616 (new sha256: nodes 2ffa5f6b..., edges 7f02a941..., systems 1e8eec13..., derived 6e858fbb...; full values in `inputs/INPUTS.tsv`).
+
+What changed in what P3 uses: (a) the six readout genes and directions are **unchanged** (SLC2A1, HK2, LDHA, LDHB, BNIP3 up; PDK1 down); (b) the 20 module gene nodes are **unchanged**; only the PKM concordance label changed (UNKNOWN to not_concordant, PKM now has two CAGE values); (c) the four HIF1A -> HK2/SLC2A1/LDHA/PDK1 inferred edges used by NET-WWOX are the same four, **renumbered ED077-ED080** (was ED080-ED083); the script now selects them by content (inferred, both ends HGNC gene nodes, sign up/down), not by id. No fly row, lactate node or PDH edge is used (unchanged). The 0.25 rule's genome-wide pass rate (1338/8123, about 4 of 24 by chance, P(>=6) about 0.19) is acknowledged: E1 is judged only against the decile-matched null, as already registered.
+No parameter, criterion, universe, control or threshold of this registration is changed. **No evaluation value had been opened**: the only runs so far used P3_SYNTH=1 (seeded noise instead of LINCS z-scores) to test the code. 
