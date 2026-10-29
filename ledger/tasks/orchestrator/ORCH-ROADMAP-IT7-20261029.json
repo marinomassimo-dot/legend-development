@@ -72,9 +72,9 @@
    "steps": [
     {
      "step": "P7 R10 physician view extended; redistributable package, destination, rollback",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "view extended and verified (browser, numbers); repairs in progress; deploy package prepared (DEPLOY.md, manual-only workflow proposal), publication reserved"
+     "evidence": "view: selection funnel from measured units (catalogued/usable/evaluated 0 + 256 pilot/pertinent/ready), 9 hypotheses with priority/model position/observed evidence separate (no model position for any compound; P3 axis result only for the methods), exploratory predictive-test section, context concordance (derived rule, 6 models, no subgroup), #section routes; deployment package DEPLOY.md + manual-only workflow proposal outside .github (publication reserved to the operator); independent browser verification, defects repaired (ef7e38c5); view tests 146 OK; viewports no overflow 360/390/768/1280"
     },
     {
      "step": "P8 R9/R11/R12 scouting, licence inventory of the whole repository, hourly-control path check",
