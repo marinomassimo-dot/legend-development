@@ -35,8 +35,9 @@
     },
     {
      "step": "P2 R2 compound census by method usability, bidirectional exploration",
-     "status": "TODO",
-     "owner": "scientist-b"
+     "status": "DONE",
+     "owner": "scientist-b",
+     "evidence": "usable_compounds_it7_p2_20261029: funnel 44,211 records / 40,268 families -> documented action 16,362 -> M-net 14,125 (corroborated 11,848) -> M-sig neural strict 1,008 (testable-only share 7.8%) -> evaluated 0; pilot subset 595; UNKNOWN state for no-structure-key records; bidirectional query with family roll-up; verifier recomputed all counts, 6 defects repaired 9de71f34"
     },
     {
      "step": "P3 R3 first predictive network comparison (pre-registered, exploratory unless independent)",
