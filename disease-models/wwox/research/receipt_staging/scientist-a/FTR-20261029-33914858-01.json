@@ -1,0 +1,38 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261029-33914858-01",
+ "study_id": {
+  "pmid": "33914858",
+  "doi": null
+ },
+ "analysis_at": "2026-10-29T07:35:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-a, mandate IT6 package P10, task branch task/it6-p10; context_policy QUESTION_DRIVEN (held: the glial-reactivity thread of NEED-NEUROINFLAMMATION-GLIA). Prepared as a staged JSON for the integrator and not appended at preparation time. Question: what was actually scored in the astrocyte-specific (GFAP-Cre) and oligodendrocyte-specific (Olig2-Cre) Wwox deletions when the paper says 'no phenotype abnormalities', in particular whether gliosis, EEG or seizures were assessed. Route: operator-supplied text of the Brain article and the supplementary legend text File009, searched for G-KO and GFAP-Cre passages and the Figure 1J-O legend. Targeted passages only.",
+ "evidence_depth": "queried_not_full_read",
+ "source_locator": "files/fulltext/PMID33914858_Repudi2021_Brain_operator_supplied.txt",
+ "source_fingerprint": "665f777280b0476f6e5cb69997027c1b0ae0052e738a2b68fce0335ef40e7124",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "not_present",
+  "discussion": "not_read",
+  "limitations": "not_present",
+  "supplementary": "read",
+  "references": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/partial_benefit_it6_p10_20261029/README.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "Figure 1 J-O legend: G-KO and O-KO assessed for developmental delay (P17), weight and survival; G-Control n 8 and G-KO n 9, O-Control n 11 and O-KO n 10; no GFAP or Iba1 immunoreactivity, no EEG and no seizure measurement is reported for G-KO in the passages read",
+  "validation of the conditional deletion is by GFAP or CC1 staining (Supplementary Figure 1E and F)"
+ ],
+ "prior_receipt": "FTR-20261003-33914858-03",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "event_at": "2026-10-29T07:50:00Z"
+}
