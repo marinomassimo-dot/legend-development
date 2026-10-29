@@ -52,8 +52,9 @@
     },
     {
      "step": "P7 prevention vs recovery vs time window",
-     "status": "TODO",
-     "owner": "scientist-b"
+     "status": "DONE",
+     "owner": "scientist-b",
+     "evidence": "rescue_window_it6_20261029.md; independent verifier audit (c6c4165c), 3 medium + 4 low defects repaired (7667bba2); 7 receipts staged for the integrator; card/need wording applied in P14"
     }
    ]
   },
