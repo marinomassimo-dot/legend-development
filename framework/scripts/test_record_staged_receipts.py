@@ -45,5 +45,39 @@ class Unrecorded(unittest.TestCase):
             self.assertEqual(["FTR-1-A", "FTR-1-C"], ids)
 
 
+class Collisions(unittest.TestCase):
+    def _root(self, tmp, ledger_rows, staged):
+        root = Path(tmp)
+        (root / m.LEDGER).parent.mkdir(parents=True)
+        (root / m.LEDGER).write_text("".join(json.dumps(r) + "\n" for r in ledger_rows), encoding="utf-8")
+        for actor, name, body in staged:
+            d = root / m.STAGING / actor
+            d.mkdir(parents=True, exist_ok=True)
+            (d / f"{name}.json").write_text(json.dumps(body), encoding="utf-8")
+        return root
+
+    def test_same_id_with_different_content_as_a_recorded_event_is_reported(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = self._root(tmp, [{"event_id": "FTR-1-A", "workflow": "P7"}], [("scientist-a", "FTR-1-A", {"event_id": "FTR-1-A", "workflow": "P9"})])
+            self.assertEqual(1, len(m.collisions(root)))
+            self.assertIn("different content", m.collisions(root)[0])
+
+    def test_a_recorded_receipt_copied_back_over_its_staged_file_is_not_a_collision(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            row = {"event_id": "FTR-1-A", "workflow": "P7", "outputs": ["x"]}
+            root = self._root(tmp, [row], [("scientist-a", "FTR-1-A", dict(row))])
+            self.assertEqual([], m.collisions(root))
+
+    def test_the_same_id_staged_by_two_actors_is_reported(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = self._root(tmp, [], [("scientist-a", "FTR-1-A", {"event_id": "FTR-1-A"}), ("scientist-b", "FTR-1-A", {"event_id": "FTR-1-A"})])
+            self.assertTrue(any("staged twice" in c for c in m.collisions(root)))
+
+    def test_distinct_ids_are_not_a_collision(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = self._root(tmp, [], [("scientist-a", "FTR-1-A", {"event_id": "FTR-1-A"}), ("scientist-b", "FTR-1-B", {"event_id": "FTR-1-B"})])
+            self.assertEqual([], m.collisions(root))
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
