@@ -193,40 +193,34 @@ O0191	HGNC:4910	fibroblast_ko	protein	mixed						E06	cytoplasmic HIF1A lower in 
 O0192	HGNC:8809	mef_null	transcript	up						E02	PDK1 reported as higher; level named only as 'higher levels' in the cited sentence
 O0193	GO:0004739	fibroblast_ko	activity	no_change						E07	no knockout-versus-control difference in any condition; n not stated
 O0194	CHEBI:24996	fibroblast_ko	metabolite	up						E05	higher in the knockout in all four conditions
-O0195	CHEBI:24996	fly_head_rnai_abeta	metabolite	mixed						E09	up only in knockdown plus Abeta42; nominally lower without Abeta42; amyloid context
-O0196	CHEBI:24996	patient_mrs	functional	down						E14	cerebral lactate reported extremely low; n=1, confounded by a second variant
-O0197	GO:0006096	mef_null	flux	up						E03	glycolytic/respiratory shift measured directly (oxygen consumption lower)
-O0198	HGNC:6535	fly_head_rnai_abeta	transcript	up						E08	fly Ldh, log2 fold change about 1.29 in knockdown plus Abeta42 versus Abeta42; ortholog not one-to-one
-O0199	GO:0006096	organoid_ko_w15	none	UNKNOWN							not measured in this system in any source read
-O0200	GO:0006096	hnpc_shwwox_cage	none	UNKNOWN							not measured in this system in any source read
-O0201	GO:0006096	neuron_d14_shwwox_cage	none	UNKNOWN							not measured in this system in any source read
-O0202	GO:0006096	mouse_p17_hipp_S	none	UNKNOWN							not measured in this system in any source read
-O0203	GO:0006096	mouse_p17_hipp_N	none	UNKNOWN							not measured in this system in any source read
-O0204	GO:0006096	mouse_p17_hipp_null	none	UNKNOWN							not measured in this system in any source read
-O0205	GO:0006096	mouse_p17_ctx_S	none	UNKNOWN							not measured in this system in any source read
-O0206	GO:0006096	fibroblast_ko	none	UNKNOWN							not measured in this system in any source read
-O0207	GO:0006096	fly_head_rnai_abeta	none	UNKNOWN							not measured in this system in any source read
-O0208	GO:0006096	patient_mrs	none	UNKNOWN							not measured in this system in any source read
-O0209	GO:0004739	organoid_ko_w15	none	UNKNOWN							not measured in this system in any source read
-O0210	GO:0004739	hnpc_shwwox_cage	none	UNKNOWN							not measured in this system in any source read
-O0211	GO:0004739	neuron_d14_shwwox_cage	none	UNKNOWN							not measured in this system in any source read
-O0212	GO:0004739	mouse_p17_hipp_S	none	UNKNOWN							not measured in this system in any source read
-O0213	GO:0004739	mouse_p17_hipp_N	none	UNKNOWN							not measured in this system in any source read
-O0214	GO:0004739	mouse_p17_hipp_null	none	UNKNOWN							not measured in this system in any source read
-O0215	GO:0004739	mouse_p17_ctx_S	none	UNKNOWN							not measured in this system in any source read
-O0216	GO:0004739	mef_null	none	UNKNOWN							not measured in this system in any source read
-O0217	GO:0004739	fly_head_rnai_abeta	none	UNKNOWN							not measured in this system in any source read
-O0218	GO:0004739	patient_mrs	none	UNKNOWN							not measured in this system in any source read
-O0219	CHEBI:24996	organoid_ko_w15	none	UNKNOWN							not measured in this system in any source read
-O0220	CHEBI:24996	hnpc_shwwox_cage	none	UNKNOWN							not measured in this system in any source read
-O0221	CHEBI:24996	neuron_d14_shwwox_cage	none	UNKNOWN							not measured in this system in any source read
-O0222	CHEBI:24996	mouse_p17_hipp_S	none	UNKNOWN							not measured in this system in any source read
-O0223	CHEBI:24996	mouse_p17_hipp_N	none	UNKNOWN							not measured in this system in any source read
-O0224	CHEBI:24996	mouse_p17_hipp_null	none	UNKNOWN							not measured in this system in any source read
-O0225	CHEBI:24996	mouse_p17_ctx_S	none	UNKNOWN							not measured in this system in any source read
-O0226	CHEBI:24996	mef_null	none	UNKNOWN							not measured in this system in any source read
-O0227	HGNC:4910	fly_head_rnai_abeta	none	UNKNOWN							not measured in this system in any source read
-O0228	HGNC:4910	patient_mrs	none	UNKNOWN							not measured in this system in any source read
-O0229	HGNC:8809	fibroblast_ko	none	UNKNOWN							not measured in this system in any source read
-O0230	HGNC:8809	fly_head_rnai_abeta	none	UNKNOWN							not measured in this system in any source read
-O0231	HGNC:8809	patient_mrs	none	UNKNOWN							not measured in this system in any source read
+O0195	CHEBI:24996	patient_mrs	functional	down						E14	cerebral lactate reported extremely low; n=1, confounded by a second variant
+O0196	GO:0006096	mef_null	flux	up						E03	glycolytic/respiratory shift measured directly (oxygen consumption lower)
+O0197	GO:0006096	organoid_ko_w15	none	UNKNOWN							not measured in this system in any source read
+O0198	GO:0006096	hnpc_shwwox_cage	none	UNKNOWN							not measured in this system in any source read
+O0199	GO:0006096	neuron_d14_shwwox_cage	none	UNKNOWN							not measured in this system in any source read
+O0200	GO:0006096	mouse_p17_hipp_S	none	UNKNOWN							not measured in this system in any source read
+O0201	GO:0006096	mouse_p17_hipp_N	none	UNKNOWN							not measured in this system in any source read
+O0202	GO:0006096	mouse_p17_hipp_null	none	UNKNOWN							not measured in this system in any source read
+O0203	GO:0006096	mouse_p17_ctx_S	none	UNKNOWN							not measured in this system in any source read
+O0204	GO:0006096	fibroblast_ko	none	UNKNOWN							not measured in this system in any source read
+O0205	GO:0006096	patient_mrs	none	UNKNOWN							not measured in this system in any source read
+O0206	GO:0004739	organoid_ko_w15	none	UNKNOWN							not measured in this system in any source read
+O0207	GO:0004739	hnpc_shwwox_cage	none	UNKNOWN							not measured in this system in any source read
+O0208	GO:0004739	neuron_d14_shwwox_cage	none	UNKNOWN							not measured in this system in any source read
+O0209	GO:0004739	mouse_p17_hipp_S	none	UNKNOWN							not measured in this system in any source read
+O0210	GO:0004739	mouse_p17_hipp_N	none	UNKNOWN							not measured in this system in any source read
+O0211	GO:0004739	mouse_p17_hipp_null	none	UNKNOWN							not measured in this system in any source read
+O0212	GO:0004739	mouse_p17_ctx_S	none	UNKNOWN							not measured in this system in any source read
+O0213	GO:0004739	mef_null	none	UNKNOWN							not measured in this system in any source read
+O0214	GO:0004739	patient_mrs	none	UNKNOWN							not measured in this system in any source read
+O0215	CHEBI:24996	organoid_ko_w15	none	UNKNOWN							not measured in this system in any source read
+O0216	CHEBI:24996	hnpc_shwwox_cage	none	UNKNOWN							not measured in this system in any source read
+O0217	CHEBI:24996	neuron_d14_shwwox_cage	none	UNKNOWN							not measured in this system in any source read
+O0218	CHEBI:24996	mouse_p17_hipp_S	none	UNKNOWN							not measured in this system in any source read
+O0219	CHEBI:24996	mouse_p17_hipp_N	none	UNKNOWN							not measured in this system in any source read
+O0220	CHEBI:24996	mouse_p17_hipp_null	none	UNKNOWN							not measured in this system in any source read
+O0221	CHEBI:24996	mouse_p17_ctx_S	none	UNKNOWN							not measured in this system in any source read
+O0222	CHEBI:24996	mef_null	none	UNKNOWN							not measured in this system in any source read
+O0223	HGNC:4910	patient_mrs	none	UNKNOWN							not measured in this system in any source read
+O0224	HGNC:8809	fibroblast_ko	none	UNKNOWN							not measured in this system in any source read
+O0225	HGNC:8809	patient_mrs	none	UNKNOWN							not measured in this system in any source read

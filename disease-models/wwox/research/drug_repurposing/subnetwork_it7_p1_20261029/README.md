@@ -32,7 +32,7 @@ because the chain predicts the opposite, not because it is evidenced.
 | GSE126075 shWWOX progenitors | build | 1 library per arm | CAGE | knockdown depth not shown in the progenitor tags; control arm may be untransduced; not a replicate |
 | GSE126075 day-14 neurons | build (support only) | 1 library per arm | CAGE | WWOX about 3 to 4 fold lower; composition-sensitive |
 | GSE158681/2 mouse P17 (4 contrasts) | **seen**: already analysed in IT6 P4, so not held-out | 2 to 3 animals per arm | transcript TPM | used as a comparison column, never as evaluation |
-| MEF null, human fibroblast knockout, fly head, one patient MRS | context | not extracted / 5 pools / 1 | protein, activity, metabolite | different species or non-neural; they carry the only protein, activity and metabolite observations and are kept as separate columns |
+| MEF null, human fibroblast knockout, one patient MRS | context | not extracted / not extracted / 1 | protein, activity, metabolite | different species or non-neural; they carry the only protein, activity and metabolite observations and are kept as separate columns |
 | **GSE215425 P47T knock-in** (PMID 36828035) | evaluation candidate 1 | 5 v 5 animals; cerebellum 4 v 3; the SAME animals supply all four regions, so regions are not independent | RNA-seq integer counts, processed table | public; read at the source: 37 samples, sex not balanced (wild type 3 male 2 female, mutant 2 male 3 female by sample names); age not extracted (UNVERIFIED); a partial-loss missense in the WW1 domain, not a null. Only the file header and two unrelated rows were inspected; **no network gene was looked at** |
 | E-MTAB-14948/14949 fly factorial | candidate 2 | 4 pooled-head libraries per cell | featureCounts | perturbation depth is not visible in the deposit; ortholog mapping is not one-to-one; amyloid context |
 | GSE158684 snRNA, hippocampal nuclei | candidate 3 | 1 library per arm (nuclei are not replicates) | snRNA-seq | same series family as the seen mouse contrasts, so not independent of them |
@@ -46,7 +46,7 @@ only derived summary numbers are committed here, never a raw table. Free access 
 * **Can be, with limits (exploratory):** a pre-registered transfer test. Fix the six signature genes and their directions from the table
   (organoid + progenitor library only), then ask whether the same directions, and the module mean against its decile-matched null, appear in
   GSE215425 (animal as the unit, one contrast per region, regions not pooled, sex as a covariate or stratum) and, as a weaker second check, in the fly
-  factorial. A negative result narrows "WWOX-loss feature" to "human neural systems of this design"; a positive one is one partial-loss mouse genotype agreeing
+  factorial (its source paper is not used anywhere in the network: the fly head observations were removed after verification because they were the same experiment as this candidate). A negative result narrows "WWOX-loss feature" to "human neural systems of this design"; a positive one is one partial-loss mouse genotype agreeing
   with two human systems, not a rescue or a mechanism. Mouse P17 already argues against LDHA/LDHB, so a flat P47T result is the expected null, not a surprise.
 * **Cannot be:** a test of any compound's effect on WWOX loss. No public record has a compound response in a WWOX-deficient system with a molecular
   readout (IT6 P3 census), so a held-out compound truth does not exist. Any compound-level comparison is limited to mechanism recovery in

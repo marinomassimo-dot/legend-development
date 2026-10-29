@@ -59,8 +59,6 @@ SYSTEMS = [  # id, role, species, model, perturbation, tissue, stage, n, unit, p
     ("fibroblast_ko", "context_other", "human", "human fibroblast line, WWOX knockout (figure arm; knockdown wording UNVERIFIED)", "knockout versus control",
      "non-neural fibroblast", "not applicable", "n not stated for the PDH panel", "not extracted", "enzyme assays, Western", "", "35328751", "published figures",
      "four oxygen x glucose conditions"),
-    ("fly_head_rnai_abeta", "context_other", "Drosophila melanogaster", "pan-neuronal Wwox RNAi, with and without Abeta42", "knockdown plus Abeta42 versus Abeta42 alone",
-     "adult head", "adult day 14", "5 pooled-head replicates", "pool of heads", "RNA-seq, HILIC LC-MS", "", "42909904", "published tables; amyloid context", "day 14"),
     ("patient_mrs", "context_other", "human", "one patient with a confounding second variant", "single case", "brain MRS voxel", "child", "1", "patient",
      "MRS", "", "", "registry entry; uncontrolled", "single scan"),
     ("p47t_knockin_brain", "heldout_candidate", "mouse", "Wwox P47T knock-in (WW1 domain missense, partial loss)", "homozygous versus wild type",
@@ -107,7 +105,7 @@ GLY10 = ["SLC2A1", "HK2", "PFKP", "ALDOA", "PGK1", "ENO1", "LDHA", "PKM", "BNIP3
 PDKF = ["PDK1", "PDK2", "PDK3", "PDK4"]
 HUMAN_SYS = ["organoid_ko_w15", "hnpc_shwwox_cage", "neuron_d14_shwwox_cage"]
 MOUSE_SYS = {"H_S": "mouse_p17_hipp_S", "H_N": "mouse_p17_hipp_N", "H_null": "mouse_p17_hipp_null", "C_S": "mouse_p17_ctx_S"}
-OBS_SYS = HUMAN_SYS + list(MOUSE_SYS.values()) + ["mef_null", "fibroblast_ko", "fly_head_rnai_abeta", "patient_mrs"]
+OBS_SYS = HUMAN_SYS + list(MOUSE_SYS.values()) + ["mef_null", "fibroblast_ko", "patient_mrs"]
 CAVEAT = {
     "HK2": "organoid +2.17 is large; neuron CAGE value is below the 10-tag rule; hNPC one library per arm",
     "LDHA": "organoid value is confounded with maturity (falls with culture time in an unrelated spheroid series); mouse P17 not concordant",
@@ -135,12 +133,8 @@ EVIDENCE = [  # id, kind, pmid, path, anchor, status
     ("E05", "manifest", "35328751", "disease-models/wwox/research/deepdive_manifests/PMID35328751.json#7", "lactate is higher in the knockout in all four", "manifest entry; figure attestation by hand reading"),
     ("E06", "manifest", "35328751", "disease-models/wwox/research/deepdive_manifests/PMID35328751.json#9", "two of the four conditions", "manifest entry"),
     ("E07", "manifest", "35328751", "disease-models/wwox/research/deepdive_manifests/PMID35328751.json#7", "no knockout-versus-control bracket", "manifest entry; figure attestation by hand reading"),
-    ("E08", "manifest", "42909904", "disease-models/wwox/research/deepdive_manifests/PMID42909904.json#29", "ldh is higher", "manifest entry; amyloid fly model"),
-    ("E09", "manifest", "42909904", "disease-models/wwox/research/deepdive_manifests/PMID42909904.json#43", "l-lactate relative abundance", "manifest entry; amyloid fly model"),
-    ("E10", "manifest", "42909904", "disease-models/wwox/research/deepdive_manifests/PMID42909904.json#46", "no differences in atp", "manifest entry; amyloid fly model"),
     ("E11", "pubmed_abstract", "25012504", "", "WWOX, via its first WW domain, physically interacts with HIF1", "abstract read via PubMed 2026-10-29; association, not a causal edge"),
     ("E12", "pubmed_abstract", "16517406", "", "inducing pyruvate dehydrogenase kinase 1", "abstract read via PubMed 2026-10-29; non-WWOX background, full text not read"),
-    ("E13", "document", "", DR + "/gse156243/prediction_hif1a_pdk_chain_20261025.md", "Its chain is:", "document; chain as declared before the organoid genes were read"),
     ("E14", "document", "", DR + "/needs/needs.json", "extremely low", "registry-backed entry DL-BIO-008 quoted in the need; n=1, confounded"),
     ("E15", "document", "", DR + "/needs/needs.json", "human_neural_progenitor_shrna_knockdown", "need observation O5; transcript, one library per arm"),
     ("E16", "document", "", DR + "/hnpc_gse126075_it5_20261029/PRE_ANALYSIS.md", "SLC16A1, SLC16A3 per gene", "pre-analysis set declaration"),
@@ -234,10 +228,8 @@ def build_observations():
     lit("HGNC:8809", "mef_null", "transcript", "up", "E02", "PDK1 reported as higher; level named only as 'higher levels' in the cited sentence")
     lit("GO:0004739", "fibroblast_ko", "activity", "no_change", "E07", "no knockout-versus-control difference in any condition; n not stated")
     lit("CHEBI:24996", "fibroblast_ko", "metabolite", "up", "E05", "higher in the knockout in all four conditions")
-    lit("CHEBI:24996", "fly_head_rnai_abeta", "metabolite", "mixed", "E09", "up only in knockdown plus Abeta42; nominally lower without Abeta42; amyloid context")
     lit("CHEBI:24996", "patient_mrs", "functional", "down", "E14", "cerebral lactate reported extremely low; n=1, confounded by a second variant")
     lit("GO:0006096", "mef_null", "flux", "up", "E03", "glycolytic/respiratory shift measured directly (oxygen consumption lower)")
-    lit("HGNC:6535", "fly_head_rnai_abeta", "transcript", "up", "E08", "fly Ldh, log2 fold change about 1.29 in knockdown plus Abeta42 versus Abeta42; ortholog not one-to-one")
     # fill UNKNOWN for every unobserved (node, system) of process nodes and perturbation-free combos
     have = {(o[0], o[1]) for o in obs}
     for nid in list(PROCESS):
@@ -246,7 +238,7 @@ def build_observations():
                 obs.append([nid, sysid, "none", "UNKNOWN", "", "", "", "", "", "", "not measured in this system in any source read"])
     for sym in ("HIF1A", "PDK1"):
         hid = G[sym][0]
-        for sysid in ("mef_null", "fibroblast_ko", "fly_head_rnai_abeta", "patient_mrs"):
+        for sysid in ("mef_null", "fibroblast_ko", "patient_mrs"):
             if (hid, sysid) not in have:
                 obs.append([hid, sysid, "none", "UNKNOWN", "", "", "", "", "", "", "not measured in this system in any source read"])
     out = []
@@ -351,10 +343,10 @@ def build_edges(obs):
     # structural edges
     add(wwox, "present", "HGNC:4910", "protein", "association", "UNKNOWN", "background", "Wwox-deficient cells and cancer lines; WW1 domain", "cell lines (non-neural)", "not applicable", "physical interaction", "not applicable", "single_system", "E11", "E06", "association only: a physical interaction is not modulation; modulation of HIF1A level is the separate measured edge")
     for tg in ("HGNC:4923", "HGNC:11005", "HGNC:6535"):
-        add("HGNC:4910", "up", tg, "transcript", "inferred", "up", "background", "Wwox-deficient mouse fibroblasts and cancer cells (HIF1A-dependent glycolytic gene expression)", "non-neural cells", "not applicable", "glycolytic gene expression", "not applicable", "single_system", "E18;E13", "E19", "regulation by HIF1A inferred from non-neural WWOX work; HIF1A mRNA is flat in the human neural systems and HIF1A is stability-controlled")
-    add("HGNC:4910", "up", "HGNC:8809", "transcript", "inferred", "up", "background", "mouse and human cells in hypoxia (non-WWOX)", "cell lines", "not applicable", "PDK1 induction", "not applicable", "single_system", "E12;E13", "", "background mechanism from a non-WWOX paper (abstract level); PDK1 transcript is not raised in the human neural systems")
+        add("HGNC:4910", "up", tg, "transcript", "inferred", "up", "background", "Wwox-deficient mouse fibroblasts and cancer cells (HIF1A-dependent glycolytic gene expression)", "non-neural cells", "not applicable", "glycolytic gene expression", "not applicable", "single_system", "E18", "E19", "regulation by HIF1A inferred from non-neural WWOX work; HIF1A mRNA is flat in the human neural systems and HIF1A is stability-controlled")
+    add("HGNC:4910", "up", "HGNC:8809", "transcript", "inferred", "up", "background", "mouse and human cells in hypoxia (non-WWOX)", "cell lines", "not applicable", "PDK1 induction", "not applicable", "single_system", "E12", "", "background mechanism from a non-WWOX paper (abstract level); PDK1 transcript is not raised in the human neural systems")
     add("HGNC:8809", "up", "GO:0004739", "activity", "inferred", "down", "background", "non-WWOX cells", "cell lines", "not applicable", "PDH inhibition by phosphorylation", "not applicable", "single_system", "E12", "E07", "background mechanism; PDH activity shows no difference in the one WWOX-deficient human line measured")
-    add("GO:0004739", "down", "CHEBI:24996", "metabolite", "hypothesised", "up", "none", "not tested", "not tested", "not tested", "lactate level", "not tested", "untested", "E13", "E14;E07", "hypothesised by mass action; brain lactate reported low in one patient; lactate is up in a fibroblast line and in an amyloid fly only")
+    add("GO:0004739", "down", "CHEBI:24996", "metabolite", "hypothesised", "up", "none", "not tested", "not tested", "not tested", "lactate level", "not tested", "untested", "E12", "E14;E07", "hypothesised by mass action; brain lactate reported low in one patient; lactate is up in one fibroblast line")
     add("HGNC:6535", "up", "CHEBI:24996", "metabolite", "hypothesised", "up", "none", "not tested", "not tested", "not tested", "lactate level", "not tested", "untested", "E15", "E14", "transcript rise does not establish lactate; no lactate is measured in any human neural WWOX system")
     for tg in ("HGNC:10922", "HGNC:10924"):
         add(tg, "present", "CHEBI:24996", "metabolite", "association", "UNKNOWN", "background", "not applicable", "not applicable", "not applicable", "monocarboxylate transport", "not applicable", "untested", "E16", "", "transporter-to-metabolite association only; no direction asserted")
@@ -471,6 +463,13 @@ def check(hgnc_path=None):
                     P.append(f"{e['evidence_id']}: anchor not in document")
         if e["kind"] == "pubmed_abstract" and not re.fullmatch(r"\d+", e["pmid"]):
             P.append(f"{e['evidence_id']}: pmid")
+    # one experiment under two system ids (same PMID or same accession) must not be both held out and used
+    for a in T["systems.tsv"]:
+        for b in T["systems.tsv"]:
+            if a["system_id"] < b["system_id"] and (a["role"] == "heldout_candidate") != (b["role"] == "heldout_candidate"):
+                acc = lambda r: {x for x in r["accession"].replace(",", ";").split(";") if x}
+                if (a["pmid"] and a["pmid"] == b["pmid"]) or (acc(a) & acc(b)):
+                    P.append(f"systems {a['system_id']} and {b['system_id']} share a PMID or accession but one is held out (firewall)")
     # observations
     for o in T["observations.tsv"]:
         oid = o["obs_id"]
