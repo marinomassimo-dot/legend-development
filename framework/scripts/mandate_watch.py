@@ -431,8 +431,9 @@ def check(task: str, *, root: Path = ROOT, deliver: str = "none", quiet_minutes:
     elif out["action"] == "RESUME" and deliver == "none" and self_call:
         _save(task, {"requested_at": now, "signature": signature, "session": sid, "via": "in-session"})
         out["delivery"] = "the caller is the session: continue now"
-    if out["state"] != "RUNNING" or out.get("delivery"):
-        log_event("check", **{k: out[k] for k in ("task", "state", "action", "why") if k in out}, delivery=out.get("delivery"))
+    # Every scheduled look is recorded, RUNNING included (iteration 7): a healthy long run used to leave no trace, so
+    # "did the scheduler look at this mandate this hour?" could not be answered from the log.
+    log_event("check", **{k: out[k] for k in ("task", "state", "action", "why") if k in out}, delivery=out.get("delivery"))
     return out
 
 
