@@ -190,14 +190,14 @@
       "url": "https://www.ebi.ac.uk/chembl/"
     },
     "GEO series and UniProt accessions cited in own text": {
-      "licence": "accession identifiers only (GSE126075, GSE156243, UniProt accession numbers); no deposited matrix, sequence or annotation text is embedded; NCBI places no restriction on its data but submitters may claim rights (NCBI policies page, read 2026-10-29); the UniProt licence page was not readable on 2026-10-29",
+      "licence": "accession identifiers only (GSE126075, GSE156243, UniProt accession numbers); no deposited matrix, sequence or annotation text is embedded; NCBI places no restriction on its data but submitters may claim rights (NCBI Policies and Disclaimers page, read 2026-10-29); the UniProt licence page was not readable on 2026-10-29",
       "attribution": "Gene Expression Omnibus, National Center for Biotechnology Information (https://www.ncbi.nlm.nih.gov/geo/); UniProt Consortium (https://www.uniprot.org/)",
-      "url": "https://www.ncbi.nlm.nih.gov/home/about/policies/"
+      "url": "https://www.ncbi.nlm.nih.gov/"
     },
     "ClinVar-derived counts and RefSeq accession in own text": {
-      "licence": "counts computed in this repository from a ClinVar snapshot, and the RefSeq accession NM_016373.4; NCBI information created by or for the US government is public domain, ClinVar asks for attribution of ClinVar and its submitters (NCBI policies page read 2026-10-29; the ClinVar data-use page was not readable)",
+      "licence": "counts computed in this repository from a ClinVar snapshot, and the RefSeq accession NM_016373.4; NCBI information created by or for the US government is public domain, ClinVar asks for attribution of ClinVar and its submitters (NCBI Policies and Disclaimers page read 2026-10-29; the ClinVar data-use page was not readable)",
       "attribution": "Source: NCBI ClinVar and RefSeq, National Library of Medicine (https://www.ncbi.nlm.nih.gov/clinvar/)",
-      "url": "https://www.ncbi.nlm.nih.gov/home/about/policies/"
+      "url": "https://www.ncbi.nlm.nih.gov/"
     },
     "Catalogue record identifiers": {
       "licence": "opaque identifiers of this repository's catalogue (CAT:...), no source content",

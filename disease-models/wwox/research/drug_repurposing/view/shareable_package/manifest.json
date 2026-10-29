@@ -494,8 +494,8 @@
    "sha256": "e5dfa90d88e2069a2e4fd13429e8ebaefb7bd92fbbaede065af905656bc7ba87"
   },
   "NOTICE.md": {
-   "bytes": 12176,
-   "sha256": "de72b8cdf7c59f8e2a04ca4ecfba03a28f858ed1239e2829bb20a0dddd3693cb"
+   "bytes": 12168,
+   "sha256": "f3d3f1333441483d086ec1f74cc391124ef7a25b6b2b0b12e08830a6d46d7d7f"
   },
   "README.md": {
    "bytes": 4642,
@@ -503,7 +503,7 @@
   },
   "TEXT_PROVENANCE.json": {
    "bytes": 1870,
-   "sha256": "222e3c97b417078c4896ac552d53a7ed0048b55978c9e1dc6f01bc2625416f19"
+   "sha256": "18e294f1e5ef5af604c1a7b4e3c39bbe6151a7d34739bab23996a4ca0789e26b"
   },
   "class_b/chembl_cc-by-sa-3.0/CREDIT.txt": {
    "bytes": 1636,
@@ -518,8 +518,8 @@
    "sha256": "d8fe6a3455466783564803428b6318c1c442db6a16dfb97de8a6b7dcf944cc9d"
   },
   "index.html": {
-   "bytes": 2478558,
-   "sha256": "ad5b8350e6e3ba4773f9590f3171537f80f8f047bb598e0a40b544210db6b5f4"
+   "bytes": 2478502,
+   "sha256": "1a92b43cfd2fb5d42fa0c4049e938be8c022fdfac3b9f05b2bfbe069f461087d"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",
@@ -545,14 +545,14 @@
   {
    "attribution": "Gene Expression Omnibus, National Center for Biotechnology Information (https://www.ncbi.nlm.nih.gov/geo/); UniProt Consortium (https://www.uniprot.org/)",
    "label": "GEO series and UniProt accessions cited in own text",
-   "licence": "accession identifiers only (GSE126075, GSE156243, UniProt accession numbers); no deposited matrix, sequence or annotation text is embedded; NCBI places no restriction on its data but submitters may claim rights (NCBI policies page, read 2026-10-29); the UniProt licence page was not readable on 2026-10-29",
-   "url": "https://www.ncbi.nlm.nih.gov/home/about/policies/"
+   "licence": "accession identifiers only (GSE126075, GSE156243, UniProt accession numbers); no deposited matrix, sequence or annotation text is embedded; NCBI places no restriction on its data but submitters may claim rights (NCBI Policies and Disclaimers page, read 2026-10-29); the UniProt licence page was not readable on 2026-10-29",
+   "url": "https://www.ncbi.nlm.nih.gov/"
   },
   {
    "attribution": "Source: NCBI ClinVar and RefSeq, National Library of Medicine (https://www.ncbi.nlm.nih.gov/clinvar/)",
    "label": "ClinVar-derived counts and RefSeq accession in own text",
-   "licence": "counts computed in this repository from a ClinVar snapshot, and the RefSeq accession NM_016373.4; NCBI information created by or for the US government is public domain, ClinVar asks for attribution of ClinVar and its submitters (NCBI policies page read 2026-10-29; the ClinVar data-use page was not readable)",
-   "url": "https://www.ncbi.nlm.nih.gov/home/about/policies/"
+   "licence": "counts computed in this repository from a ClinVar snapshot, and the RefSeq accession NM_016373.4; NCBI information created by or for the US government is public domain, ClinVar asks for attribution of ClinVar and its submitters (NCBI Policies and Disclaimers page read 2026-10-29; the ClinVar data-use page was not readable)",
+   "url": "https://www.ncbi.nlm.nih.gov/"
   },
   {
    "attribution": "LEGEND WWOX repurposing module (this repository)",
