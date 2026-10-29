@@ -1,6 +1,6 @@
 {
  "access_caveats": [
-  "dsld: 981 of 4697 bulk-list names probed (name-only evidence); affects access categories only"
+  "dsld: 971 of 4697 bulk-list names probed (name-only evidence); affects access categories only"
  ],
  "catalogue_coverage": {
   "excluded_rows": {
@@ -1421,10 +1421,10 @@
    "mixed": 1,
    "normalised_vs_wild_type": 3,
    "not_normalised_vs_wild_type": 2,
-   "null": 18,
+   "null": 17,
    "partial_benefit": 3,
    "unquantified": 2,
-   "unresolved": 14
+   "unresolved": 15
   },
   "note": "an assertion is counted per (assertion, need) row of the pertinence table; L3/L4 cells count (row, need) pairs"
  },
@@ -1442,33 +1442,33 @@
   ],
   "by_disposition": {
    "consistent_mechanism_candidate": 103,
-   "exploration_candidate": 222,
-   "insufficient_data": 356,
+   "exploration_candidate": 223,
+   "insufficient_data": 357,
    "no_catalogue_link_found": 10,
    "opposite_mechanism": 2,
    "source_queried_without_result": 2
   },
   "by_disposition_cells": {
    "consistent_mechanism_candidate": 103,
-   "exploration_candidate": 222,
-   "insufficient_data": 356,
+   "exploration_candidate": 223,
+   "insufficient_data": 357,
    "no_catalogue_link_found": 10,
    "opposite_mechanism": 2,
    "source_queried_without_result": 2
   },
   "by_disposition_distinct_families_or_rows": {
    "consistent_mechanism_candidate": 103,
-   "exploration_candidate": 214,
-   "insufficient_data": 317,
+   "exploration_candidate": 215,
+   "insufficient_data": 318,
    "no_catalogue_link_found": 8,
    "opposite_mechanism": 2,
    "source_queried_without_result": 1
   },
-  "exploration_flagged": 341,
+  "exploration_flagged": 342,
   "pairs_not_prioritised": {
-   "not_prioritised_no_card_no_coherence_no_approval_or_access": 969
+   "not_prioritised_no_card_no_coherence_no_approval_or_access": 967
   },
-  "records": 695
+  "records": 697
  },
  "schema": "legend.wwox.coverage/1",
  "search_completeness": {
@@ -1490,7 +1490,7 @@
    "state": "STALE_EXPORT"
   },
   "dsld": {
-   "detail": "981 of 4697 bulk-list names probed (name-only evidence); affects access categories only",
+   "detail": "971 of 4697 bulk-list names probed (name-only evidence); affects access categories only",
    "state": "PARTIAL"
   },
   "gtopdb": {

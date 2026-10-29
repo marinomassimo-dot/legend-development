@@ -1,0 +1,68 @@
+query	novel_food_catalogue_entries	novel_food_status_values	novel_food_example_names	health_claim_entries	health_claim_status_counts	health_claim_example_substances	note
+Dichloroacetate	0			0			name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Dichloroacetic acid	0			0			name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Sodium dichloroacetate	0			0			name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+DCA	0			0			name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Thiamine	0			7	Authorised=7	thiamine	name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Thiamin	0			5	Non-authorised=5	a combination of thiamin riboflavin niacin pantothenic acid ;thiamin b1	name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Thiamine hydrochloride	0			0			name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Thiamine mononitrate	0			0			name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Benfotiamine	1	Novel food	Benfotiamine	0			name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Thiamine pyrophosphate	0			0			name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Vitamin B1	0			6	Non-authorised=6	vitamin b1	name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Alpha-lipoic acid	0			9	Non-authorised=9	alpha lipoic acid;alpha lipoic acid ala	name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Alpha lipoic acid	0			9	Non-authorised=9	alpha lipoic acid;alpha lipoic acid ala	name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Lipoic acid	0			9	Non-authorised=9	alpha lipoic acid;alpha lipoic acid ala	name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Thioctic acid	0			0			name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+R-alpha lipoic acid	0			0			name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Pyruvate	11	Not novel in food supplements	Creatine pyruvate	0			name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Calcium pyruvate	0			0			name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Sodium pyruvate	0			0			name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Pyruvic acid	0			0			name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Beta-hydroxybutyrate	0			0			name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Beta hydroxybutyrate	0			0			name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Beta-hydroxybutyric acid	0			0			name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Calcium beta-hydroxybutyrate	0			0			name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Sodium beta-hydroxybutyrate	0			0			name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Magnesium beta-hydroxybutyrate	0			0			name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Carnitine	11	Not novel in food	Acetyl L-carnitine	17	Non-authorised=17	acetyl l carnitine;amylopectin and l carnitine;carnitine	name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+L-Carnitine	11	Not novel in food	Acetyl L-carnitine	8	Non-authorised=8	acetyl l carnitine;amylopectin and l carnitine;fructose l carnitine	name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Acetyl-L-carnitine	11	Not novel in food	Acetyl L-carnitine	1	Non-authorised=1	acetyl l carnitine	name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+L-carnitine L-tartrate	0			0			name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Propionyl-L-carnitine	0			0			name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Levocarnitine	0			0			name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Coenzyme Q10	1	Not novel in food	Coenzyme Q10	8	Non-authorised=8	coenzyme q10;coenzyme q10 ubiquinone;coenzyme q10 ubiquinone normal cardiovascular function	name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+CoQ10	0			0			name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Ubiquinone	0			6	Non-authorised=6	coenzyme q10 ubiquinone;coenzyme q10 ubiquinone normal cardiovascular function	name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Ubiquinol	0			0			name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Ubidecarenone	0			0			name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Decanoic acid	0			0			name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Capric acid	0			0			name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Caprylic acid	0			0			name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Triheptanoin	0			0			name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Heptanoic acid	0			0			name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Medium chain triglycerides	0			3	Non-authorised=3	medium chain triglycerides mct	name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Phenylbutyrate	0			0			name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+4-Phenylbutyric acid	0			0			name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Sodium phenylbutyrate	0			0			name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Ursodiol	0			0			name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Ursodeoxycholic acid	0			0			name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Tauroursodeoxycholic acid	1	Novel food	Tauroursodeoxycholic acid	0			name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Tudca	0			0			name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Taurursodiol	0			0			name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Ethosuximide	0			0			name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Vigabatrin	0			0			name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Lithium	0			0			name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Lithium carbonate	0			0			name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Lithium orotate	0			0			name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Lithium chloride	0			0			name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Apinocaltamide	0			0			name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Riboflavin	1	Not novel in food	Lactose derived from whey with degraded riboflavin	19	Authorised=15;Non-authorised=4	a combination of artichoke leaf dry extract standardised in ;a combination of thiamin riboflavin niacin pantothenic acid ;riboflavin vitamin b2	name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Biotin	0			33	Authorised=23;Non-authorised=10	a combination of thiamin riboflavin niacin pantothenic acid ;biotin;vitamine b8 vitamin b8 or vitamin h biotin	name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Valproic acid	0			0			name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Stiripentol	0			0			name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Bumetanide	0			0			name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Amlexanox	0			0			name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Metformin	0			0			name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Cannabidiol	1	Novel food	Cannabidiol	0			name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
+Cannabidiol (CBD)	0			0			name match (whole words, normalised) in the EU register text; not a product, a dose, a use or a safety statement; EU-level, not Italian national
