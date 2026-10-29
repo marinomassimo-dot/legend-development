@@ -44,7 +44,8 @@ repository, which only the operator can give: run `claude` once in the repositor
 accept the trust dialog. The watch never edits the global trust configuration.
 The absence of recent commits proves nothing about stopped work and is never read.
 Identity comes from the record and from the session's own `MANDATE_BOUND: <TASK_ID>` line
-(mandate_continuity.py), never from a directory or a process name.
+(mandate_continuity.py), never from a directory or a process name. The marker must START its line in
+the session's own text; the same words after a prefix in a sentence bind nothing (measured 2026-10-29).
 What this does NOT guarantee: that the resumed model chooses well, quota, or a session whose
 host is powered off.
 """
