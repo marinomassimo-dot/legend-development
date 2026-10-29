@@ -1,0 +1,37 @@
+{
+ "event_id": "FTR-20261029-42909904-04",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "42909904",
+  "doi": "10.1093/braincomms/fcag385"
+ },
+ "event_at": "2026-10-29T15:00:00Z",
+ "analysis_at": "2026-10-29T15:00:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-b, IT7 package P0a. Q-E: does the paper report knockdown depth anywhere, and what does its data availability state? Data availability paragraph and the Results sentences on ATP and on the CRISPRa mRNA level read in the JATS; the Supplementary Figure 1 legend read in the derived supplement text (files/fulltext/PMID42909904_supplement/Supplementary_material_derived.txt, sha256 326a1be18b73f4d6af477f4fcd233566262681f6ed276ae44e35dbc41c12348d; matching only, the graph itself was not opened). Question-driven, not a re-reading.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID42909904_PMC13684411.xml",
+ "source_fingerprint": "4e571e24a85342f2a72d92a18df1acdebd9efa89dcdf5754c092078d112a23a4",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "read",
+  "figures": "not_read",
+  "tables": "not_present",
+  "discussion": "not_read",
+  "limitations": "not_present",
+  "supplementary": "captions_only"
+ },
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/census_reconciliation_it7_20261029.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "Passages and figure panels named in the workflow were read at the source; the understated coverage records only what was opened for the stated question. A text layer was used for matching only where the workflow says so; figure panels were opened as images."
+ ],
+ "prior_receipt": "FTR-20261028-42909904-03",
+ "reread_reason": "new_question_outside_prior_coverage"
+}

@@ -1,0 +1,37 @@
+{
+ "event_id": "FTR-20261029-34268881-12",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "34268881",
+  "doi": "10.15252/emmm.202013510"
+ },
+ "event_at": "2026-10-29T15:00:00Z",
+ "analysis_at": "2026-10-29T15:00:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-b, IT7 package P0a. Q-D: which arms of the organoid paper are in GSE156243 and which readouts have an add-back arm? Data and code availability, the Figure 3, Figure 4 and Figure EV2 legends (n per arm, arms named) read in the JATS; the GEO series record (sample list, supplementary file names) was read through the NCBI text endpoint. Question-driven, not a re-reading.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID34268881_Steinberg2021_PMC_r2.xml",
+ "source_fingerprint": "de340289bc6704c9b9ec752f81afed64a02211a83d95d675a1d46f40be6304f6",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "not_present",
+  "discussion": "not_read",
+  "limitations": "not_present",
+  "supplementary": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/census_reconciliation_it7_20261029.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "Passages and figure panels named in the workflow were read at the source; the understated coverage records only what was opened for the stated question. A text layer was used for matching only where the workflow says so; figure panels were opened as images."
+ ],
+ "prior_receipt": "FTR-20261025-34268881-11",
+ "reread_reason": "new_question_outside_prior_coverage"
+}
