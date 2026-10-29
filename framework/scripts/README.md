@@ -180,6 +180,7 @@ Run everything as `python3 <path> --help` first. Paths are repo-relative.
 | classify, hand off, resume or sync a laboratory across hosts | `framework/scripts/legend_handoff.py` |
 | what harness work is due at session start, and the daily radar's last run (non-blocking; `--actor` plan, junior-harness, orchestrator, integrator, scientist-a..d) | `framework/scripts/harness_session_start.py` |
 | may an assigned mandate's turn end — the verdict of its `AUTHORISED_QUEUE` record, and the bounded Claude Code Stop hook that holds a bound session to it | `framework/scripts/mandate_continuity.py` |
+| which ledger event a prose "receipt staged" line now refers to (read-only; by event ID, never from the total count) | `framework/scripts/receipt_linkage.py` |
 | is an open mandate's session still running, and has it stopped with authorised work left (hourly; revives a dead bound session under its own id, never a live one) | `framework/scripts/mandate_watch.py` |
 | the packet that lets a phase start in a new context, derived from artefacts and verified | `framework/scripts/phase_handoff.py` |
 | task display fields derived from every structured queue — never a runtime release decision | `framework/scripts/task_summary.py` |
