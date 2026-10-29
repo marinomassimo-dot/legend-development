@@ -89312,11 +89312,12 @@
  },
  {
   "abstention": null,
-  "complete_reads": 0,
+  "complete_reads": 1,
   "depths": [
+   "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "0dfb8a85f5a6e1bd",
+  "digest": "c46f842e1c846610",
   "locators": 36,
   "origin_id": "DL-MECH-135",
   "papers": 4,
@@ -89353,9 +89354,9 @@
     "locator_count": 10,
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID40183510.json",
     "pmid": "40183510",
-    "reading_depth": "partial_fulltext_read",
-    "receipt_events": 1,
-    "receipt_id": "FTR-20261019-40183510-01",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 2,
+    "receipt_id": "FTR-20261019-40183510-02",
     "repair_unverified": 0,
     "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
     "unaudited_contradictions": 0
@@ -89552,11 +89553,11 @@
  },
  {
   "abstention": null,
-  "complete_reads": 0,
+  "complete_reads": 1,
   "depths": [
-   "partial_fulltext_read"
+   "complete_fulltext_read"
   ],
-  "digest": "10a4f710264b0fab",
+  "digest": "686ec443817a3c37",
   "locators": 10,
   "origin_id": "DL-MECH-138",
   "papers": 1,
@@ -89578,9 +89579,9 @@
     "locator_count": 10,
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID40183510.json",
     "pmid": "40183510",
-    "reading_depth": "partial_fulltext_read",
-    "receipt_events": 1,
-    "receipt_id": "FTR-20261019-40183510-01",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 2,
+    "receipt_id": "FTR-20261019-40183510-02",
     "repair_unverified": 0,
     "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
     "unaudited_contradictions": 0
@@ -89663,12 +89664,11 @@
  },
  {
   "abstention": null,
-  "complete_reads": 2,
+  "complete_reads": 3,
   "depths": [
-   "complete_fulltext_read",
-   "partial_fulltext_read"
+   "complete_fulltext_read"
   ],
-  "digest": "b9f1755dfe65dec5",
+  "digest": "f735149963969fcc",
   "locators": 30,
   "origin_id": "DL-MECH-140",
   "papers": 3,
@@ -89724,9 +89724,9 @@
     "locator_count": 10,
     "manifest": "disease-models/wwox/research/deepdive_manifests/PMID40183510.json",
     "pmid": "40183510",
-    "reading_depth": "partial_fulltext_read",
-    "receipt_events": 1,
-    "receipt_id": "FTR-20261019-40183510-01",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 2,
+    "receipt_id": "FTR-20261019-40183510-02",
     "repair_unverified": 0,
     "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
     "unaudited_contradictions": 0
