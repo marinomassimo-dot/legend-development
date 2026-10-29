@@ -19,26 +19,21 @@ def obs(oid, statement, readout, direction, limits, locators):
             "direction_observed": direction, "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM", "limits": limits, "pmid": "34634460", "locators": locators, "locator_status": "MANIFEST"}
 def man(entry, anchor): return {"kind": "manifest", "manifest": MAN, "entry": entry, "anchor": anchor}
 
-NEW_OBS = [
- obs("O6", "Layer II/III pyramidal neurons of the knockout are depolarised (resting potential -73.62 +/- 1.36 mV against -79.25 +/- 1.99 mV in wild type, heterozygote -75.51 +/- 1.81 mV; 40, 13 and 15 cells) and receive spontaneous inhibitory currents of about half the amplitude (27.5 +/- 19.4 pA against 57.3 +/- 31.0 pA in controls).",
-     "resting membrane potential; sIPSC amplitude", "resting potential: depolarised; inhibitory amplitude: decreased",
-     "Cells and pooled events, not animals; unpaired t-tests; no liquid-junction correction (stated in the methods); the heterozygote is also depolarised yet bursts in 4 of 23 slices. A depolarised membrane relieves the Mg2+ block of the NMDAR and reduced inhibition lowers the threshold of a recurrent network: either gives NMDAR-dependent bursting without a receptor change (F04; arithmetic, not a measurement).",
-     [man(15, "the resting membrane potential was depolarized"), man(7, "S-KOs 27.5")]),
- obs("O7", "The d-APV experiment used slices cut in sucrose and incubated in ACSF with 1.3 mM Mg2+, 1.5 mM Ca2+ and 3.5 mM K+, recorded at 35 degrees C, d-APV 50 uM; the d-APV arm is 5 slices from 3 animals (51 bursts; the tests are on bursts). The baseline burst frequency is printed as 2.29 [1.1 to 4.2] per minute in the main text and as 0.84 [0.57 to 1.53] per minute in Supplementary Table S1 for the same 119 bursts, 18 slices, 9 animals.",
-     "preparation and baseline burst rate", "not applicable (conditions of the experiment)",
-     "The recording perfusate is not stated separately from the incubation solution; d-APV carries no significance marker in Fig 3D (bursts absent); the two printed baselines differ about 2.7-fold and the discrepancy is not explained in the paper; potency of any use-dependent pore blocker in this preparation depends on the Mg2+ level and voltage (F04).",
-     [man(21, "1.3 MgSO4"), man(23, "2.29 [1.1"), man(24, ".84 [.57"), man(16, "postnatal day 13 to 17")]),
+NEW_OBS = [  # O6 (resting potential) and O7 (ACSF) already come from the IT6-P11 needs patch; the inhibitory amplitude is already O3. Only the d-APV design and the double baseline are new.
+ obs("O8", "The d-APV arm of the burst experiment is 5 slices from 3 animals (51 bursts; the paper's tests are on bursts) at postnatal day 13 to 17, d-APV 50 uM; the d-APV bar carries no significance marker in Fig 3D (bursts absent, no variance). The baseline burst frequency is printed as 2.29 [1.1 to 4.2] per minute in the main text and as 0.84 [0.57 to 1.53] per minute in Supplementary Table S1 (119 bursts, 18 slices, 9 animals); that both refer to the same bursts is an inference, not a statement of the paper.",
+     "d-APV arm design and baseline burst rate", "not applicable (design of the experiment)",
+     "Fig 3D read by eye from a JPEG; the two printed baselines differ about 2.7-fold and the paper does not explain it (a rate from the median interval against a median of per-slice rates is a possibility, unverified); any graded block read from bursts needs long recordings per condition (F04).",
+     [man(23, "2.29 [1.1"), man(24, ".84 [.57"), man(16, "postnatal day 13 to 17")]),
 ]
-NEW_INFERRED = "That the d-APV dependence is NMDAR gain: three readings fit it (gain of NMDAR current; permissive necessity in a network whose pyramidal neurons are depolarised and receive about half the inhibitory current; AMPAR-led drive), and the data separate none of them (F04)."
-DO_NOT = " A pore blocker's potency depends on voltage, extracellular Mg2+ and intracellular Ca2+, so a memantine result at the preparation's 1.3 mM Mg2+ is not a GluN2A/2B block unless the Mg2+ level is reported; an effect of a subunit-selective tool (a GluN2B NAM) is an effect of that tool, not of a different drug (F04)."
+NEW_INFERRED = "That the d-APV dependence is NMDAR gain: three readings fit it (gain of NMDAR current; permissive necessity in a network whose pyramidal neurons are depolarised (O6) and receive about half the inhibitory current (O3); AMPAR-led drive), they are not exclusive, and the data separate none of them and rank none (F04)."
+DO_NOT = " A pore blocker's potency depends on voltage, extracellular Mg2+ and intracellular Ca2+, so a memantine result at the Mg2+ level of the incubation solution (1.3 mM; the recording bath is not stated) is not a GluN2A/2B block unless the Mg2+ level is reported; an effect of a subunit-selective tool (a GluN2B NAM) is an effect of that tool, not of a different drug (F04)."
 NEW_COUNTER = [
- "A competitive full-block NMDAR antagonist (selfotel) failed with a harm signal in adult stroke and head-injury trials; NMDAR blockade in the developing rat brain triggers apoptotic neurodegeneration (abstract level); memantine failed two controlled paediatric studies in another disorder and has no paediatric effectiveness on its label (F04).",
- "The largest synaptic change in the source is inhibitory (about half the amplitude) and the knockout pyramidal neurons are depolarised: NMDAR-dependent bursting can arise without a receptor change (F04).",
- "The d-APV arm carries no significance marker in Fig 3D, the tests are on bursts not animals, and the baseline burst frequency is printed twice with different values.",
+ "A competitive full-block NMDAR antagonist (selfotel) failed in adult stroke and head-injury trials (stroke: early mortality imbalance; head injury: stopped for concern about deaths and futility, later analysis without a significant mortality difference); NMDAR blockade in the developing rat brain triggers apoptotic neurodegeneration (abstract level); memantine failed two controlled paediatric studies in another disorder and has no paediatric effectiveness on its label (F04).",
+ "The d-APV arm carries no significance marker in Fig 3D, the tests are on bursts not animals, and the baseline burst frequency is printed twice with different values (O8).",
 ]
 NEW_TARGET = {"symbol": "GRIN2D", "role": "NMDAR subunit (transcript present in the week-15 organoid; no subunit-level datum in a WWOX system; pore blockers act relatively more on GluN2C/2D at physiological Mg2+, abstract level)",
               "hgnc_id": "HGNC:4588", "hgnc_name": "glutamate ionotropic receptor NMDA type subunit 2D", "target_kind": "intervention_target"}
-NOTE_ADD = " P9 (2026-10-29): card F04 compares NMDAR intervention classes on this need; the d-APV result is compatible with gain, permissive necessity and AMPAR-led drive (nothing here separates them)."
+NOTE_ADD = " P9 (2026-10-29): card F04 compares NMDAR intervention classes on this need; the d-APV result is compatible with gain, permissive necessity and AMPAR-led drive (nothing here separates or ranks them)."
 
 def edit_needs(root: Path):
     p = root / "disease-models/wwox/research/drug_repurposing/needs/needs.json"
@@ -59,7 +54,7 @@ def edit_needs(root: Path):
     if "P9 (2026-10-29)" not in n["notes"]: n["notes"] += NOTE_ADD
     p.write_text(json.dumps(d, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
 
-ROLE_ADD = "; P9 2026-10-29: the same d-APV result is equally compatible with permissive necessity (depolarised membrane, about half the inhibitory current) and AMPAR-led drive, so 'same' keeps the class-level meaning only (F04)"
+ROLE_ADD = "; P9 2026-10-29: the same d-APV result is compatible with permissive necessity (depolarised membrane, about half the inhibitory current) and AMPAR-led drive; the readings are not ranked, so 'same' keeps the class-level meaning only (F04; unranked)"
 def edit_roles(root: Path):
     p = root / "disease-models/wwox/research/drug_repurposing/coverage/target_roles.tsv"
     lines = p.read_text(encoding="utf-8").split("\n")
@@ -82,7 +77,7 @@ PERT = [  # assertion, subject, kind, sign, L3, L4, flags, basis
  ("DR-P9-001", "CHEMBL807", "target_engagement_assay", "unresolved", "no", "no", "voltage_dependent;human_clones_HEK293;ketamine_in_same_document;paper_abstract_only", "memantine inhibition at two holding potentials in one document: a potency at one voltage is not a burst-state value"),
  ("DR-P9-002", "CHEMBL807", "target_engagement_assay", "unresolved", "no", "no", "Mg2+_dependent;abstract_only;not_WWOX", "extracellular Mg2+ weakens memantine inhibition of GluN2A and GluN2B far more than GluN2C and GluN2D"),
  ("DR-P9-003", "CHEMBL807", "target_engagement_assay", "unresolved", "no", "no", "Ca2+i_dependent;zero_or_low_Mg2+;adult_slices;not_WWOX", "memantine inhibition of GluN2A rises with intracellular Ca2+ (state-specific)"),
- ("DR-P9-004", "card", "safety_signal", "harm", "no", "no", "selfotel_CHEMBL39664;competitive_full_block;adult_stroke_and_head_injury;abstract_only;not_WWOX", "closest clinical relative of d-APV; stopped in adult trials for deaths and futility (subject kept at card level: a catalogue family with no association row crashes repurposing_coverage.py, see README section 10)"),
+ ("DR-P9-004", "CHEMBL39664", "safety_signal", "harm", "no", "no", "competitive_full_block;adult_stroke_and_head_injury;abstract_only;not_WWOX", "closest clinical relative of d-APV; stopped in adult trials (needs the repurposing_coverage.py row(fid) fix, framework patch in this directory)"),
  ("DR-P9-005", "card", "safety_signal", "harm", "no", "no", "developing_rat_brain;class_statement;abstract_only;not_WWOX", "NMDAR blockade in the developing rat brain: apoptotic neurodegeneration"),
  ("DR-P9-006", "CHEMBL182066", "readout_other_disease", "benefit", "no", "no", "GRIN_gain_of_function;in_vitro_and_knock_in_mouse;abstract_only;not_WWOX", "GluN2B NAM effective at most tested gain-of-function GRIN variants; not a WWOX system"),
  ("DR-P9-007", "CHEMBL182066", "readout_other_disease", "partial_benefit", "no", "no", "infantile_spasms;n=3;open_label;not_WWOX", "three infants: one spasm-free, two improved then worse after withdrawal"),
