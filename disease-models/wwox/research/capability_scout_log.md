@@ -1581,3 +1581,5 @@ Perimeter: zero spend, key-less reads, no account, no contact, nothing installed
 - **Radar and control facts:** daily radar last ran 2026-10-29 05:20 UTC without errors (selected openFDA-NDC, still awaiting triage in the pending log); hourly control logged 288 events, last check 21:37Z, IT8 RUNNING; 6 RESUME actions, 2 failed deliveries on 2026-10-28.
 - **Gap with evidence:** the scout could not source the definitions of `distil_cc_q75` and `pct_self_rank_q25` that IT8 P4 counts. No code shipped; recorded for the next signature-filter registration.
 - **Not verified:** see section 5 of the report.
+
+- **Scope correction (2026-10-30, IT8 scout verification):** the iteration-7 ToolUniverse verdict (REMOVE) is limited to the Reactome-by-accession trial of 24 calls; "adds only a 404-as-success hazard" holds for that trial only, and the other ToolUniverse categories were not tested.
