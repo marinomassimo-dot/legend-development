@@ -90,9 +90,9 @@
     },
     {
      "step": "P12 redesign first screen and physician use in clear Italian orientation text (scientific citations keep original form): hierarchy, synthetic cards, funnel with explicit units, access categories, need-intervention matrix, mechanism-candidate relation, coverage and gaps; no dense network; sensible denominators; versions/hashes/regeneration in technical drill-down; short profiles (why, WWOX result, external precedent/prediction, counter-evidence, missing proof, next step); fill source titles with cheap cached retrieval (no e-mail to APIs); verify REAL viewports 360 and 390 px with emulation, horizontal overflow, filters, navigation, comparison, print, standalone export; do not label a screenshot 390 px without measuring; new previews",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "scientist-d",
-     "evidence": "landed: Italian first screen, funnel with units, access bars, need x intervention matrix, six-answer profiles, title cache (68 PMIDs), real viewport measurement via DevTools protocol (360/360 and 390/390 with mobile emulation); previews 01-09 reviewed by the Orchestrator; independent verification (own CDP measurement, Italian wording, units) running"
+     "evidence": "redesigned first screen (Italian orientation, F/C/P legend above the fold, funnel with units, access bars, need x intervention matrix, six-answer profiles, 68 titles cached) landed; independent verification: viewports reproduce (360/360, 390/390 mobile emulation; 345/375/1265 scrollbar-only), funnel/access/letters match the data; 8 defects + 13 Italian items fixed (64 view tests); previews refreshed"
     },
     {
      "step": "P13 shareable version and proof of embedded content: visible text, embedded JSON, hidden filter data, exported cards, standalone HTML, PDF, comparisons; provenance of the card text itself; apply the P1 findings; where a source allows reuse with attribution or share-alike evaluate honouring it before excluding; reviewable static package, links usable outside the local folder, transparent comparison with the full research version; a concrete distribution mode (external publication needs the authority and does not block the local preview)",
