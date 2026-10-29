@@ -142,7 +142,7 @@ it does not move the group, because the group describes the lead need). Linking 
 | WWOX evidence | `W_wwox_evidence` | WWOX-system and case-report assertions with their signs, reading depth, L4 technical comparisons, replication (distinct papers; independence of the groups is **not** established by a count) |
 | Mechanistic coherence | `M_mechanism` | catalogue families, L2 states over the (family, need) cells, opposed needs; modality and no-identity cases say "not evaluable here" (UNKNOWN, not zero) |
 | Transferability | `T_transferability` | track, species and genotype of the WWOX-side assertions, the cards' stated transfer limits and window notes |
-| Pharmacology | `P_pharmacology` | the IT7 P5 class table where it exists (potency with assay context, human exposure, brain penetration) and always "potency in a WWOX system UNKNOWN"; **IT7 P3/P2 information is carried as exploratory information only and never moves a position** |
+| Pharmacology | `P_pharmacology` | the IT7 P5 class table where it exists (potency with assay context, human exposure, brain penetration) and always "potency in a WWOX system UNKNOWN"; the IT8 P3 qualification of nine cases (`pharmacological_qualification_it8_p3_20261029/comparison.tsv`, read when present: measures by assay type, never aggregated, with exposure, nervous-system data and contrary/unknown signals) is shown beside it for the ten interventions it covers; **IT7 P3/P2 information is carried as exploratory information only and never moves a position** |
 | Counter-evidence | `X_counter_evidence` | WWOX-system null/harm/mixed assertions, outside-WWOX null/harm assertions, need-level counter items (items of the need record, not of the intervention), opposed-action needs |
 | Uncertainty | `U_uncertainty` | of N linked needs: measured / hypothesised / mechanism-only / premise missing; plus the always-unknown items |
 
@@ -207,6 +207,11 @@ intervention is not known there).
   changes (P3 qualification); T6 the catalogue families, cells or L2/L3 states of the intervention change; T7 the rules change (`RULES_VERSION`); T8 the
   existing daily radar reports a changed source, after which `repurposing_coverage.py run` and `ranking_it8.py run` are run. `diff` prints, for each
   moved intervention, the inputs that changed and the suggested reason class.
+* **Demonstrated on this data.** Snapshot 1 (rules R1) enters the 30 entries as `new_entry`. After the IT8 P3 qualification was read, `diff` reported
+  10 interventions with changed pharmacology input (T5) and no group moved; snapshot 2 records them as `input_change_without_order_change` with reason
+  class `better_pharmacological_qualification` (P3 itself states that no F/C/P position changed). Only the P3 comparison table is read from that branch;
+  its card and work-order edits reach this ranking when the branch is integrated: re-running `run`, `diff` then shows T1/T4 changes and the groups are
+  re-derived.
 * **No new information, no change.** `check` regenerates in memory and compares byte by byte; the tests assert it. There is no scheduler, no agent
   role and no gate: the daily scout already exists, and a person runs the three commands (coverage, ranking, view) after a trigger.
 * **Link to the view.** The view reads `ranking.json`, validates it against the cards and needs at build time (an inconsistency is a build error) and
