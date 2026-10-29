@@ -8,7 +8,7 @@
   CHEMBL4024770  Glutamate NMDA receptor; Grin1/Grin2c         Ki     5900 nM  occupancy  89.4%  | with agonist at 1x EC50 (Ki doubled)  80.9%
   CHEMBL4024770  Ionotropic glutamate receptor NMDA 1/2D       Ki    21000 nM  occupancy  70.4%  | with agonist at 1x EC50 (Ki doubled)  54.3%
 
-(2) one document, two holding potentials (CHEMBL6083260, human GluN1/GluN2A or GluN1/GluN2B in HEK293, ChEMBL assay descriptions)
+(2) one CLOSED document, two holding potentials (CHEMBL6083260, human GluN1/GluN2A or GluN1/GluN2B in HEK293, ChEMBL assay descriptions); UNVERIFIED: a single-site pore block of electrical distance <= 1 predicts at most exp(20/25.7) = 2.2-fold per 20 mV, so these ratios are implausible and are NOT used in the argument
   memantine GluN2A: IC50 840 nM at -60 mV, 28070 nM at -40 mV  -> ratio 33-fold for 20 mV
   memantine GluN2B: IC50 780 nM at -60 mV, 25630 nM at -40 mV  -> ratio 33-fold for 20 mV
   ketamine GluN2A: IC50 500 nM at -60 mV, 53320 nM at -40 mV  -> ratio 107-fold for 20 mV
