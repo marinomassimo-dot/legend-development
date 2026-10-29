@@ -795,7 +795,8 @@ class LoopPropagationIT7P6(unittest.TestCase):
                 self.assertIn(oid, obs, (nid, oid))
                 self.assertEqual(obs[oid]["evidence_scope"], "COMPUTATIONAL_RESULT", (nid, oid))
                 self.assertRegex(obs[oid]["statement"], r"INCONCLUSIVE|NO ADDED VALUE", (nid, oid))
-                self.assertRegex(obs[oid]["limits"], r"provisional", (nid, oid))
+                self.assertRegex(obs[oid]["limits"], r"independently verified", (nid, oid))
+            self.assertTrue(any("not detected, not excluded" in o["statement"] for i, o in obs.items() if i == ids[1]), nid)   # the signature route keeps the source's wording
             self.assertEqual(len(self.loop_counter(nid)), 1, nid)
             self.assertIn("loop_demonstration_it7_p6_20261029/README.md", " ".join(self.need[nid]["sources"]["documents"]), nid)
             self.assertIn("COMPUTATIONAL_RESULT", self.need[nid]["evidence_scope"], nid)
