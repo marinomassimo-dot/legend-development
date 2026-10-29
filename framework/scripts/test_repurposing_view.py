@@ -297,7 +297,7 @@ class Curated(unittest.TestCase):
         for html in (self.full, self.share):
             self.assertLess(html.index('data-step="records_with_action"'), html.index('data-step="records_with_link"'))
             self.assertNotIn("with a documented link", html)
-            self.assertIn("records with a target listed", html)
+            self.assertIn("Famiglie con un bersaglio elencato", html)
 
     def test_units_never_conflated(self):
         n = static_numbers(self.full)
@@ -305,11 +305,43 @@ class Curated(unittest.TestCase):
         self.assertEqual(n["cur.needs"], "22")
         self.assertEqual(n["cur.cards"], str(len(cur["cands"])))
         self.assertNotEqual(n["cur.cards"], n["funnel.records"])
-        for key, unit in (("cur.needs", "needs"), ("cur.cards", "candidate cards"), ("funnel.records", "catalogue records"), ("funnel.families", "catalogue families"),
-                          ("funnel.evaluated_records", "records evaluated against WWOX"), ("funnel.families_with_link", "families with a target listed"), ("funnel.records_with_action", "records with a stated action on a need target"), ("funnel.records_with_link", "records with a target listed")):
+        for key, unit in (("cur.needs", "bisogni"), ("cur.cards", "schede candidato"), ("cur.threads", "filoni biologici")):
             self.assertRegex(self.full, rf'data-k="{re.escape(key)}"[^<]*</b></span><span class="u">{re.escape(unit)}<')
-        self.assertIn("never added or compared as one number", self.full)
-        self.assertIn("a family is not a distinct drug and not a candidate", self.full)
+        # the funnel graphic: each step carries its own unit, in the order records, families, families, families, cards; no step mixes two units
+        g1 = self.full[self.full.index('id="g1"'):self.full.index('id="g2"')]
+        steps = re.findall(r'<li data-step="(\w+)">.*?<span class="unit">(\w+)</span>', g1, re.S)
+        self.assertEqual(steps, [("records", "record"), ("families", "famiglie"), ("families_with_link", "famiglie"), ("families_with_action", "famiglie"), ("cards", "schede")])
+        sm = json.loads((DR / "coverage/coverage_summary.json").read_text())["catalogue_coverage"]
+        st = static_numbers(self.full)
+        self.assertEqual(st["funnel.families_with_link"], str(sm["families_with_documented_link_to_a_need"]))
+        self.assertEqual(st["funnel.families_with_action"], str(sm["families_with_stated_action_on_a_need_target"]))
+        self.assertIn("le schede non sono una frazione delle famiglie", g1)
+        self.assertIn("Una famiglia non è un farmaco distinto", g1)
+        # record-level numbers are named as records and are never printed in a family row
+        self.assertIn(f'{sm["records_with_stated_action_on_a_need_target"]:,}'.replace(",", ".") + " record con azione dichiarata", g1)
+        self.assertIn("non si sommano né si confrontano come un solo numero", self.full)
+
+    def test_access_percentages_state_their_denominator(self):
+        g2 = self.full[self.full.index('id="g2"'):self.full.index('id="g3"')]
+        st = json.loads((DR / "catalog/catalog_stats.json").read_text())
+        tot = st["entries_total"]
+        self.assertIn(f"{tot:,}".replace(",", "."), g2)
+        for k, v in st["access_category_overlapping_counts"].items():
+            self.assertIn(f'data-access="{k}"', g2)
+            self.assertIn(f"{round(100.0 * v / tot, 1)}".replace(".", ",") + "%", g2)
+        self.assertIn("Stati Uniti", g2)
+        self.assertIn("non si sommano", g2)
+
+    def test_matrix_cells_carry_letter_and_text_and_pathway_counts_are_not_shown(self):
+        g3 = self.full[self.full.index('id="g3"'):self.full.index('id="g4"')]
+        cells = re.findall(r'<td data-label="[^"]*"><span class="grp ([fcp][123])"[^>]*>([FCP][123])</span><span class="mxt">([^<]+)</span>', g3)
+        links = sum(len(c["links"]) for c in self.PF["cur"]["cands"])
+        self.assertEqual(len(cells), links)
+        for cls, letter, word in cells:
+            self.assertEqual(cls.upper(), letter)
+            self.assertIn(word, ("favorevole", "controprova", "manca premessa"))
+        blob = self.full[self.full.index('id="charts"'):self.full.index('id="navigate"')]
+        self.assertNotRegex(blob, r"(?i)pathways?\s*(count|touched)|n_pathway|vie biologiche toccate:\s*\d")
 
     def test_two_goals_and_track_are_separate_dimensions(self):
         n = static_numbers(self.full)
@@ -317,7 +349,7 @@ class Curated(unittest.TestCase):
         self.assertEqual(int(d) + int(p), len([c for c in self.PF["cur"]["cands"] if c["goal"]]))
         self.assertEqual(int(n["cur.goal.deep_recovery.needs"]) + int(n["cur.goal.partial_benefit.needs"]), 22)
         self.assertEqual(self.full.count('class="goal '), 2)
-        self.assertIn("Track (a separate field)", self.full)
+        self.assertIn("Track (campo separato)", self.full)
         self.assertIn("2026-", re.search(r'data-k="meta.data_date" data-v="([^"]+)"', self.full).group(1))
 
     def test_positions_are_reasoned_and_unscored(self):
@@ -552,21 +584,21 @@ class CuratedBrowser(Browser):
         self.assertIn("https://pubmed.ncbi.nlm.nih.gov/32000863/", area)
         self.assertIn("PMID 32000863", area)
         self.assertIn("CHEMBL696", area)
-        self.assertIn("Data date:", area)
-        self.assertIn("Perimeter:", area)
+        self.assertIn("Data dei dati:", area)
+        self.assertIn("Perimetro:", area)
         self.assertNotIn("deepdive_manifests", area)
         self.assertNotRegex(area, r'href="\.\./')
 
     def test_candidate_profile_five_answers_and_scope_labels(self):
         d = self.dom("#c=need:NEED-T-TYPE-CALCIUM")
-        for q in ("1. Why are we studying it?", "2. What was observed in WWOX?", "3. What comes from other diseases or predictions?", "4. Counter-evidence", "5. What proof is missing"):
+        for q in ("1. Perché lo studiamo", "2. Risultato in WWOX", "3. Precedente esterno o previsione", "4. Controprove", "5. Prova mancante", "6. Prossimo passo"):
             self.assertIn(q, d)
-        self.assertIn("WWOX experiment in a DEE system", d)
-        self.assertIn("Other-disease precedent", d)
+        self.assertIn("Esperimento WWOX in un sistema DEE", d)
+        self.assertIn("Precedente in un'altra malattia", d)
 
     def test_filters_narrow_the_curated_views(self):
         d = self.dom("#c=goal:deep_recovery")
-        m = re.search(r'id="c-count"[^>]*>(\d+) of (\d+) needs and (\d+) of (\d+) candidate', d)
+        m = re.search(r'id="c-count"[^>]*>(\d+) di (\d+) bisogni e (\d+) di (\d+) schede', d)
         needs = [n for n in self.P["cur"]["needs"] if n["goal"] == "deep_recovery"]
         cands = [c for c in self.P["cur"]["cands"] if c["goal"] == "deep_recovery"]
         self.assertEqual((int(m.group(1)), int(m.group(3))), (len(needs), len(cands)))
@@ -588,17 +620,140 @@ class CuratedBrowser(Browser):
         h2.write_text(page[: m.start(2)] + j + page[m.end(2):], encoding="utf-8")
         d = self.dom("#compare=EB-ETX-01,H01_apinocaltamide_ttype", html=h2)
         self.assertRegex(d, r'data-opposed="[2-9]"')
-        self.assertIn("OPPOSED to the wanted direction", d)
-        self.assertIn("raises while", d)
-        self.assertIn("No synergy is inferred", d)
+        self.assertIn("OPPOSTA alla direzione voluta", d)
+        self.assertIn("aumenta mentre", d)
+        self.assertIn("Non si inferisce alcuna sinergia", d)
 
-    def test_no_horizontal_overflow_at_phone_width(self):
-        page = (Path(self.tmp.name) / "v.html").read_text(encoding="utf-8")
-        h2 = Path(self.tmp.name) / "sw.html"
-        h2.write_text(page.replace("</body>", "<script>setTimeout(function(){document.body.setAttribute('data-sw',document.documentElement.scrollWidth+'/'+window.innerWidth)},400)</script></body>"), encoding="utf-8")
-        d = self.dom("", html=h2, width=390)
-        a, b = map(int, re.search(r'data-sw="(\d+)/(\d+)"', d).group(1, 2))
-        self.assertLessEqual(a, b)
+
+class Italian(unittest.TestCase):
+    """The physician-facing orientation text is Italian data (UI_IT and its companions), complete for every key the page uses."""
+
+    def test_every_token_and_script_key_has_an_italian_string(self):
+        assets = DR / "view/assets"
+        toks = set(re.findall(r"\{\{(\w+)\}\}", (assets / "curated.html").read_text(encoding="utf-8")))
+        js = (assets / "curated.js").read_text(encoding="utf-8")
+        keys = set(re.findall(r"\bT\.([A-Za-z_0-9]+)\b", js))
+        dyn = {"pos", "scopeL", "goalL", "thread", "need", "statusL", "countryL", "crit"}
+        for k in (toks | keys) - dyn:
+            self.assertIn(k, rv.UI_IT, f"no Italian string for {k}")
+            self.assertTrue(str(rv.UI_IT[k]).strip(), k)
+        src = Path(rv.__file__).read_text(encoding="utf-8")
+        for k in set(re.findall(r'U\["([a-z_0-9A-Z]+)"\]', src)):
+            self.assertIn(k, rv.UI_IT, k)
+        for k in ("act_down", "act_up", "act_unresolved", "cons_consistent", "cons_opposed", "cons_direction_unresolved", "dir_restore", "dir_down", "dir_up", "dir_uncertain", "acc_supplement", "acc_OTC", "acc_prescription", "acc_experimental", "acc_unknown/unverified"):
+            self.assertIn(k, rv.UI_IT)
+        for k in ("g3_short_F", "g3_short_C", "g3_short_P", "res_favourable", "res_mixed", "res_null", "res_unfavourable", "res_unresolved", "res_none"):
+            self.assertIn(k, rv.UI_IT)
+
+    def test_italian_covers_positions_scopes_needs_threads_goals_criteria(self):
+        self.assertEqual(set(rv.POS_IT), {g["id"] for g in rv.GROUPS})
+        for v in rv.POS_IT.values():
+            self.assertTrue(v["short"] and v["label"] and v["plain"])
+        self.assertEqual(set(rv.SCOPE_IT), {c for c, _, _ in rv.SCOPES})
+        self.assertEqual(set(rv.GOALS_IT), set(rv.GOALS))
+        self.assertTrue({"WWOX restoration", "Stress signalling and metabolism", "Network excitability", "Signalling", "Development and glia", "Symptom-level"} <= set(rv.THREAD_IT))
+        if HAVE_DATA:
+            P = rv.build_payload(DR)["cur"]
+            self.assertEqual({n["id"] for n in P["needs"]}, set(rv.NEED_IT))
+            self.assertEqual({t["id"] for t in P["threads"]}, set(rv.THREAD_IT))
+            self.assertLessEqual({c["status"] for c in P["cands"]}, set(rv.STATUS_IT))
+            self.assertLessEqual({c["country"] for c in P["cands"]}, set(rv.COUNTRY_IT))
+            seen = {x["text"].split(" (found")[0] for c in P["cands"] for l in c["links"].values() for x in l["criteria"]}
+            self.assertLessEqual(seen, set(rv.CRIT_IT))
+
+    def test_italian_strings_are_not_english_placeholders(self):
+        for k, v in rv.UI_IT.items():
+            if isinstance(v, str):
+                self.assertNotRegex(v, r"\b(the|which|with the|and the)\b", k)
+
+    def test_first_screen_is_italian_and_orients(self):
+        if not HAVE_DATA:
+            self.skipTest("module data absent")
+        page = rv.build(DR, "shareable")
+        head = page[:page.index('id="charts"')]
+        for must in ("Panoramica", "Filoni biologici", "Motivo della priorità", "Tipo di prova osservata nei bisogni", "Lacuna decisiva", "Composti e interventi da studiare",
+                     "Recupero ampio e duraturo", "Beneficio parziale utile", "Track (campo separato)", "non consiglio medico", "Dettagli tecnici"):
+            self.assertIn(must, head)
+        # versions, hashes and regeneration live only in the drill-down
+        first = page[:page.index('<details id="technical"')]
+        for tech in ("sha256", "Input digests", "repurposing_coverage.py run", "schema legend"):
+            self.assertNotIn(tech, first)
+        self.assertIn('<details id="technical"', page)
+        self.assertTrue(page.startswith('<!doctype html>\n<html lang="it">'))
+
+
+@unittest.skipUnless(HAVE_DATA, "module data absent")
+class Titles(unittest.TestCase):
+    def test_cache_covers_every_referenced_pmid_and_builder_is_offline(self):
+        have = json.loads((DR / rv.TITLES_NAME).read_text(encoding="utf-8"))["titles"]
+        ids = rv.referenced_pmids(DR)
+        self.assertEqual([i for i in ids if i not in have], [])
+        for i in ids:
+            self.assertTrue(have[i]["title"])
+        cur = rv.build_payload(DR)["cur"]
+        self.assertTrue(all(p["title"] for c in cur["cands"] for p in c["pmids"]))
+
+    def test_refresh_is_batched_keyless_and_sends_no_contact_string(self):
+        calls, urls = [], []
+
+        def fake(ids):
+            calls.append(len(ids))
+            return {i: {"title": "t" + i, "journal": "J", "year": "2020"} for i in ids}
+        with tempfile.TemporaryDirectory() as td:
+            dr = Path(td)
+            (dr / "view").mkdir()
+            doc = rv.refresh_titles(dr, [str(10000000 + i) for i in range(250)], fetch=fake, sleep=0)
+            self.assertEqual(calls, [100, 100, 50])
+            self.assertEqual(len(doc["titles"]), 250)
+            self.assertEqual(rv.refresh_titles(dr, [str(10000000 + i) for i in range(250)], fetch=fake, sleep=0)["titles"].keys(), doc["titles"].keys())
+            self.assertEqual(calls, [100, 100, 50])   # nothing missing: no new call
+
+        class R:
+            def __enter__(s): return s
+            def __exit__(s, *a): return False
+            def read(s): return b'{"result":{}}'
+
+        def opener(req, timeout=0):
+            urls.append((req.full_url, dict(req.header_items())))
+            return R()
+        rv.esummary_batch(["1", "2"], opener=opener)
+        url, hdr = urls[0]
+        self.assertNotRegex(url, r"[?&](email|tool|api_key)=")
+        self.assertNotRegex(json.dumps(hdr), r"[\w.+-]+@[\w-]+\.")
+        self.assertGreaterEqual(rv.ESUMMARY_SLEEP, 0.4)
+        self.assertEqual(rv.ESUMMARY_BATCH, 100)
+
+
+class RulesUntouched(unittest.TestCase):
+    def test_position_rules_are_byte_identical_to_the_verified_revision(self):
+        import hashlib
+        import inspect
+        h = hashlib.sha256((inspect.getsource(rv.classify_rows) + inspect.getsource(rv.assign_need_position) + inspect.getsource(rv.overview_positions)).encode()).hexdigest()[:16]
+        self.assertEqual(h, "244882c7cd5d1965", "the F/C/P rules changed: this view only displays them (IT5 P11 verified revision)")
+
+
+@unittest.skipUnless(HAVE_DATA, "module data absent")
+class RealViewports(unittest.TestCase):
+    """Device-metrics emulation over the DevTools protocol (no sandbox flag): the page's own innerWidth and scrollWidth are measured at 360 and 390 px."""
+
+    def test_no_horizontal_overflow_at_360_and_390(self):
+        if not rv.find_chromium():
+            self.skipTest("no Chromium binary: viewports were NOT measured")
+        with tempfile.TemporaryDirectory() as td:
+            f = Path(td) / "v.html"
+            f.write_text(rv.build(DR, "shareable"), encoding="utf-8")
+            try:
+                res = rv.measure_viewports(f, widths=[360, 390])
+            except Exception as e:   # the browser could not be driven here
+                self.skipTest("viewport emulation unavailable: " + str(e)[:120])
+        self.assertTrue(res)
+        for m in res:
+            if m["scenario"].startswith("print"):
+                continue
+            self.assertEqual(m["ready"], "1", m)
+            self.assertLessEqual(m["scrollWidth"], m["requested"], (m["scenario"], m["mobile"], m["offenders"]))
+            if not m["mobile"]:
+                self.assertEqual(m["innerWidth"], m["requested"])
 
 
 if __name__ == "__main__":

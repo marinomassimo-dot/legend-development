@@ -74,6 +74,81 @@ def card_path(dr: Path, card_id: str):
     return None
 
 
+TITLES_NAME = "view/source_titles.json"
+ESUMMARY = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi"
+ESUMMARY_BATCH = 100      # ids per call
+ESUMMARY_SLEEP = 0.5      # seconds between calls (>= 0.4: keyless E-utilities allow three requests per second)
+
+
+def load_titles(dr: Path) -> dict:
+    """PMID -> {"title","journal","year"}. Reads ONLY files (offline, deterministic): the tracked cache view/source_titles.json first,
+    then the titles already fetched into join/pubmed_cache. Refresh the first with: repurposing_view.py titles --refresh"""
+    out: dict = {}
+    pc = dr / "join/pubmed_cache"
+    if pc.exists():
+        for f in sorted(pc.glob("*.json")):
+            j = jload(f)
+            if j.get("status") == "MATCH_FOUND" and j.get("title"):
+                out[str(j.get("pmid"))] = {"title": j["title"], "journal": None, "year": None}
+    p = dr / TITLES_NAME
+    if p.exists():
+        for k, v in (jload(p).get("titles") or {}).items():
+            if v.get("title"):
+                out[str(k)] = {"title": v["title"], "journal": v.get("journal"), "year": v.get("year")}
+    return out
+
+
+def cite_of(titles: dict, pmid) -> str | None:
+    t = titles.get(str(pmid)) if pmid else None
+    if not t:
+        return None
+    return f'{t["title"]}' + (f' ({", ".join(x for x in (t.get("journal"), t.get("year")) if x)})' if (t.get("journal") or t.get("year")) else "")
+
+
+def referenced_pmids(dr: Path = None) -> list[str]:
+    """Every PMID the cards and the needs point to (what the page prints a source line for)."""
+    cur = build_payload(dr or DEFAULT_DR, "full")["cur"]
+    ids = {p["id"] for c in cur["cands"] for p in c["pmids"]} | {str(o["pmid"]) for n in cur["needs"] for o in n["obs"] if o.get("pmid")}
+    return sorted(ids)
+
+
+def esummary_batch(ids: list[str], opener=None) -> dict:
+    """ONE keyless NCBI esummary call for up to 100 ids. No e-mail, no tool parameter, no contact string of any kind."""
+    import urllib.request
+    from urllib.parse import urlencode
+    url = ESUMMARY + "?" + urlencode({"db": "pubmed", "retmode": "json", "id": ",".join(ids)})
+    req = urllib.request.Request(url, headers={"User-Agent": "legend-repurposing-view"})
+    with (opener or urllib.request.urlopen)(req, timeout=60) as r:
+        res = json.loads(r.read().decode("utf-8")).get("result") or {}
+    out = {}
+    for i in ids:
+        e = res.get(i)
+        if isinstance(e, dict) and e.get("title"):
+            y = re.match(r"(\d{4})", str(e.get("pubdate") or ""))
+            out[i] = {"title": " ".join(str(e["title"]).split()), "journal": e.get("source") or None, "year": y.group(1) if y else None}
+    return out
+
+
+def refresh_titles(dr: Path = None, ids: list[str] | None = None, fetch=None, sleep=None, refetch: bool = False) -> dict:
+    """Fill view/source_titles.json for the referenced PMIDs that it does not hold (all of them with refetch=True)."""
+    import time
+    dr = dr or DEFAULT_DR
+    path = dr / TITLES_NAME
+    cache = jload(path) if path.exists() else {}
+    have = cache.get("titles") or {}
+    want = [i for i in (ids if ids is not None else referenced_pmids(dr)) if refetch or i not in have]
+    fetch = fetch or esummary_batch
+    nsleep = ESUMMARY_SLEEP if sleep is None else sleep
+    for k in range(0, len(want), ESUMMARY_BATCH):
+        if k:
+            time.sleep(nsleep)
+        have.update(fetch(want[k:k + ESUMMARY_BATCH]))
+    doc = {"schema": "legend.wwox.source_titles/1", "source": "NCBI E-utilities esummary (db=pubmed), keyless, one call per 100 ids",
+           "refresh": "python3 -B framework/scripts/repurposing_view.py titles --refresh", "titles": dict(sorted(have.items()))}
+    path.write_text(json.dumps(doc, ensure_ascii=False, indent=1, sort_keys=True) + "\n", encoding="utf-8")
+    return doc
+
+
 def source_rows(manifest: dict, stats: dict, summary: dict) -> list[dict]:
     """One row per catalogue source: state class, raw status, detail, retrieval time, version, licence."""
     out = []
@@ -201,6 +276,345 @@ GROUP_NOTE = ("Each candidate-need link has its own position, and the position s
               "A card has no single position: its profile lists one per need, and the overview shows the set of need-level positions, never the best of them. "
               "The order in which positions are listed is a grouping by kind of reason, not a ranking; inside a position the order is alphabetical and means nothing. "
               "The criteria met and not met are printed with each position. There is no score, no probability and no cure ranking.")
+# ---------------------------------------------------------------------------------------------
+# Italian orientation texts (physician mode). DATA, not logic: the page reads them from the payload
+# (D.ui) and from the server-side renderers; assets use {{key}} tokens. Scientific citations
+# (titles, quotes, identifiers, source passages, compound names) are never translated.
+# P13 (shareable package) reuses these dicts as they are.
+# ---------------------------------------------------------------------------------------------
+UI_IT = {
+    # page frame
+    "page_title": "WWOX: farmaci e interventi da studiare",
+    "h1": "WWOX: che cosa studiare, e su quali prove",
+    "sub": "Materiale di ricerca, non consiglio medico né graduatoria di trattamenti. Livello della malattia e del genotipo di riferimento, nessun dato individuale.",
+    "skip": "Vai al contenuto",
+    "src_share": "Versione condivisibile: le righe di terze parti sono limitate alla lista consentita.",
+    "src_full": "Versione locale completa: include righe di terze parti, non per la ridistribuzione.",
+    "nav_label": "Sezioni",
+    "nav_overview": "Panoramica", "nav_threads": "Filoni", "nav_charts": "Grafici", "nav_navigate": "Esplora", "nav_cards": "Schede",
+    "nav_priority": "Priorità", "nav_compare": "Confronto", "nav_tech": "Dettagli tecnici",
+    "source_limited": "Alcune fonti hanno uno stato limitato",
+    "source_limited_tail": "Nessun risultato di assenza è una conclusione sulla biologia.",
+    "see_tech": "vedi i dettagli tecnici",
+    # overview
+    "ov_h": "Panoramica",
+    "ov_lead": "Quali farmaci, integratori, diete e altri interventi esistenti vale la pena studiare per l'encefalopatia epilettica e dello sviluppo legata a WWOX (WWOX-DEE)? Qui si vede che cosa è osservato in WWOX, che cosa viene da altre malattie o da previsioni, che cosa va contro e quale prova manca.",
+    "warn_h": "Da tenere presente",
+    "warn_1": "Materiale di ricerca per la discussione con il team clinico curante: non è un consiglio medico né una indicazione di trattamento.",
+    "warn_2": "Una lettera di priorità dice perché vale la pena studiare un intervento, non quanto funzioni: non è un punteggio né una probabilità.",
+    "warn_3": "Che un'informazione manchi (accesso, esito, controprova) non significa che sia negativa: significa che non è stata ottenuta.",
+    "how_h": "Come leggere in quattro passi", "how_sum": "Come leggere la pagina",
+    "how_1": "Scegli un filone biologico qui sotto.",
+    "how_2": "Guarda il motivo della priorità: la lettera F, C o P.",
+    "how_3": "Apri la scheda del candidato per le sei risposte brevi.",
+    "how_4": "Leggi la prova che manca e il passo successivo informativo.",
+    "legend_h": "Che cosa significano le lettere",
+    "legend_note": "Le lettere sono motivi, non voti. Ogni legame tra candidato e bisogno ha la propria lettera; una scheda può averne più d'una e non ne esiste una «migliore».",
+    "fam_F": "Ipotesi favorevole da verificare",
+    "fam_C": "Controprova da chiarire",
+    "fam_P": "Premessa mancante",
+    "fam_F_txt": "un risultato favorevole, in WWOX o dal bersaglio, giustifica lo studio",
+    "fam_C_txt": "un risultato nullo, misto o sfavorevole va chiarito prima di sperare",
+    "fam_P_txt": "manca un dato: è la prima cosa da ottenere",
+    "facts_h": "In cifre (ogni numero ha la sua unità)",
+    "unit_needs": "bisogni", "unit_threads": "filoni biologici", "unit_cards": "schede candidato", "unit_abst": "astensioni",
+    "d_needs": "punti in cui in un sistema WWOX si è osservata un'alterazione su cui un intervento potrebbe agire",
+    "d_threads": "gruppi di bisogni che condividono la stessa biologia",
+    "d_cards": "interventi, classi o assi già letti e scritti in una scheda",
+    "d_abst": "schede che indicano il dato mancante invece di un test",
+    "unit_note": "Un bisogno è una domanda biologica, una scheda è un candidato scritto, un record è una voce di fonte, una famiglia è un raggruppamento di record: non si sommano né si confrontano come un solo numero.",
+    "data_date": "Data dei dati",
+    "perimeter": "Perimetro",
+    "perimeter_txt": "WWOX-DEE, classe del genotipo di riferimento; letteratura e basi dati pubbliche; nessun dato individuale.",
+    "goals_h": "Due possibilità aperte, due dimensioni separate",
+    "goals_note": "Recupero ampio e beneficio parziale non si sommano e non si confrontano. Il Track (A: indipendente dalla variante; B: specifico della variante o della lesione) è un terzo campo indipendente.",
+    "goal_deep": "Recupero ampio e duraturo",
+    "goal_partial": "Beneficio parziale utile",
+    "goal_deep_long": "Recupero ampio e duraturo (ripristinare la funzione WWOX perduta)",
+    "goal_partial_long": "Beneficio parziale utile (farmaci, integratori, diete)",
+    "needs_with_aim": "Bisogni con questo obiettivo",
+    "cards_with_aim": "Schede con questo obiettivo",
+    "of_which_abst": "di cui astensioni",
+    "track_field": "Track (campo separato)",
+    "track_none": "non indicato",
+    "track_A": "Track A: indipendente dalla variante (agisce qualunque sia l'allele WWOX)",
+    "track_B": "Track B: specifico della variante o della lesione (una classe di alleli, un sito di splicing, un codone di stop)",
+    "track_A_s": "Track A (indipendente dalla variante)", "track_B_s": "Track B (specifico di variante o lesione)", "track_none_s": "Track: non indicato nella scheda",
+    # threads
+    "th_h": "Filoni biologici: da dove partire",
+    "th_note": "Ogni scheda riassume un gruppo di bisogni che condividono la biologia: l'obiettivo, i candidati, il motivo della priorità, il tipo di prova e la lacuna decisiva.",
+    "th_aim": "Obiettivo",
+    "th_needs_n": "bisogni",
+    "th_deep": "recupero ampio", "th_partial": "beneficio parziale",
+    "th_cands": "Composti e interventi da studiare",
+    "th_cands_none": "nessuna scheda candidato",
+    "th_more": "altri",
+    "th_why": "Motivo della priorità (un legame candidato-bisogno ciascuno)",
+    "th_evid": "Tipo di prova osservata nei bisogni",
+    "th_evid_none": "nessuna osservazione registrata",
+    "th_gap": "Lacuna decisiva",
+    "th_gap_wwox": "bisogni senza alcuna osservazione in un sistema WWOX",
+    "th_gap_l4": "bisogni per cui nessun intervento ha un recupero osservato in WWOX",
+    "th_gap_card": "Dato mancante dichiarato nella scheda",
+    "th_explore": "Esplora questo filone",
+    "th_obs_note": "(volume di osservazioni, non forza di prova)",
+    # charts
+    "ch_h": "Grafici: uno sguardo d'insieme",
+    "ch_note": "Cinque grafici solo dove chiariscono. Nessun grafico misura l'efficacia: il numero di vie biologiche toccate, di pubblicazioni o di record non entra in alcuna priorità.",
+    "g1_h": "1. Dal catalogo alle schede: che cosa viene contato, in quale unità",
+    "g1_how": "Come leggere: ogni riga ha la sua unità. Le barre sono in scala solo entro la stessa unità (record con record, famiglie con famiglie); le schede non sono una frazione delle famiglie.",
+    "g1_records": "Record di catalogo", "g1_families": "Famiglie (raggruppamenti di quei record)",
+    "g1_fam_link": "Famiglie con un bersaglio elencato", "g1_fam_act": "Famiglie con un'azione dichiarata su un bersaglio di un bisogno", "g1_cards": "Schede candidato",
+    "g1_u_records": "record", "g1_u_families": "famiglie", "g1_u_cards": "schede",
+    "g1_rec_sub": "Stessa grandezza in record: {link} record con bersaglio elencato; {act} record con azione dichiarata su un bersaglio di un bisogno.",
+    "g1_share": "delle {den} famiglie",
+    "g1_note": "«Bersaglio elencato» è una dichiarazione di una fonte su un bersaglio, non modulazione e non recupero. «Azione dichiarata» dice che cosa fa il composto sul bersaglio (inibitore, agonista…): ancora una dichiarazione di fonte, non una prova di effetto in WWOX. Una famiglia non è un farmaco distinto.",
+    "g1_cards_note": "Unità diversa: composti o interventi che hanno una scheda scritta e letta.",
+    "g2_h": "2. Categorie di accesso (solo evidenza degli Stati Uniti)",
+    "g2_how": "Come leggere: ogni barra è la quota dei {den} record di catalogo con quella categoria di accesso. Le categorie si sovrappongono (un record può avere evidenza sia OTC sia con prescrizione), quindi le barre non si sommano al totale.",
+    "g2_unit": "record", "g2_of": "di", "g2_unknown": "senza alcuna evidenza di accesso",
+    "g2_note": "Evidenza ottenuta solo per gli Stati Uniti (openFDA, NIH DSLD, ChEMBL, MATRIX), alle date di recupero riportate nei dettagli tecnici. Nessun altro paese è stato interrogato. «Sconosciuto» significa non ottenuto, non «non disponibile». Non è un'approvazione, né idoneità per una persona, né un'affermazione di sicurezza.",
+    "acc_supplement": "integratore", "acc_OTC": "da banco (OTC)", "acc_prescription": "con prescrizione", "acc_experimental": "sperimentale", "acc_unknown/unverified": "sconosciuto o non verificato",
+    "g3_h": "3. Bisogni per interventi: la lettera di ciascun legame",
+    "g3_how": "Come leggere: una tabella per filone. Righe: schede candidato; colonne: bisogni. Ogni cella riporta la lettera e il suo significato in parole; la cella vuota (·) significa nessun legame. Il colore non è mai l'unico segnale: contano la lettera, il bordo e il testo.",
+    "g3_cand": "Candidato", "g3_empty": "nessun legame",
+    "g3_short_F": "favorevole", "g3_short_C": "controprova", "g3_short_P": "manca premessa",
+    "g4_h": "4. Meccanismo e candidati: quali bersagli sono toccati da quali composti",
+    "g4_how": "Come leggere: a sinistra il bersaglio, a destra i candidati per cui una fonte dichiara un'azione su quel bersaglio. È una dichiarazione di fonte sul bersaglio, non un effetto in WWOX. «Opposta» significa contraria alla direzione voluta per il bisogno; «direzione non risolta» significa che il segno voluto non è noto.",
+    "g4_target": "Bersaglio", "g4_cands": "Candidati e azione dichiarata", "g4_needs": "Bisogni su cui il bersaglio è elencato",
+    "g4_none": "Nessuna azione dichiarata su un bersaglio è registrata nelle schede.",
+    "g4_none_share": "In questa versione condivisibile le azioni dichiarate da fonti non incluse nella lista consentita non sono riportate: non significa che non esistano. La versione locale completa le contiene.",
+    "g4_note": "Si tratta delle righe di catalogo collegate alle schede; il numero di vie biologiche non è mostrato perché non misura l'efficacia.",
+    "act_down": "riduce", "act_up": "aumenta", "act_unresolved": "azione non risolta",
+    "cons_consistent": "coerente con la direzione voluta", "cons_opposed": "opposta alla direzione voluta", "cons_direction_unresolved": "direzione non risolta",
+    "g5_h": "5. Che cosa è stato misurato in un sistema WWOX e che cosa no",
+    "g5_how": "Come leggere: per ogni bisogno, quattro domande con risposta in testo. «Sì» e «no» non sono giudizi di valore: dicono solo se il dato esiste nei registri.",
+    "g5_need": "Bisogno",
+    "g5_c1": "Osservazioni del bisogno in un sistema WWOX", "g5_c2": "Schede collegate", "g5_c3": "Schede con un esito dell'intervento in un sistema WWOX", "g5_c4": "Recupero osservato in WWOX (livello L4)",
+    "g5_yes": "sì", "g5_no": "no", "g5_obs": "osservazioni", "g5_obs1": "osservazione", "g5_cards": "schede", "g5_cards1": "scheda",
+    "g5_note": "Il conteggio delle osservazioni è un volume, non una forza di prova; «no» alla colonna L4 non è un risultato negativo: nessun intervento è stato ancora osservato recuperare quel bisogno in WWOX.",
+    # navigate
+    "nv_h": "Esplora: bisogno, meccanismo, composti e interventi, prova, prossima domanda",
+    "nv_note": "Ogni riga segue un bisogno biologico: che cosa è stato osservato, quale meccanismo si potrebbe muovere, quali schede candidato lo mirano, quali prove ci sono e quale domanda viene dopo. I filtri valgono per questa sezione, per le schede, per le priorità e per il confronto.",
+    "f_label": "Filtri per le viste curate",
+    "f_thread": "Filone biologico", "f_need": "Bisogno", "f_access": "Categoria di accesso (evidenza USA)", "f_country": "Evidenza per paese", "f_scope": "Tipo di prova",
+    "f_track": "Track", "f_goal": "Obiettivo di recupero", "f_status": "Stato della ricerca", "f_q": "Cerca testo",
+    "f_q_ph": "nome, id, id ChEMBL, bisogno",
+    "f_any_thread": "tutti i filoni", "f_any_need": "tutti i bisogni", "f_any_access": "tutte le categorie", "f_any_country": "tutti", "f_any_scope": "tutti i tipi", "f_any_track": "tutti i Track", "f_any_goal": "tutti gli obiettivi", "f_any_status": "tutti gli stati",
+    "f_reset": "azzera i filtri",
+    "f_note": "Paese: l'evidenza di accesso è stata ottenuta solo per gli Stati Uniti; il filtro separa soltanto «evidenza USA trovata» da «nessuna ottenuta». Obiettivo: quello di un bisogno è proprio del bisogno; quello di una scheda è lo scopo scritto nella scheda, e i due possono differire.",
+    "nv_c_need": "Bisogno", "nv_c_mech": "Meccanismo", "nv_c_comp": "Composti e interventi", "nv_c_evid": "Prova", "nv_c_next": "Prossima domanda",
+    "nv_mech_lab": "Meccanismo (che cosa si muoverebbe)",
+    "nv_dir": "Direzione voluta", "nv_on": "su", "nv_targets": "Bersagli", "nv_none": "nessuno elencato",
+    "nv_uncertain": "segno incerto: solo esplorazione",
+    "nv_comp_none": "nessuna scheda ({n} famiglie di catalogo hanno un bersaglio elencato; un elenco non è un candidato)",
+    "nv_evid_none": "nessuna osservazione registrata",
+    "nv_evid_line": "{w} in un sistema WWOX (di cui {c} casi clinici non controllati); voci di controprova sul bisogno: {k}",
+    "nv_next_none": "Nessuna scheda candidato indica un passo successivo per questo bisogno.",
+    "nv_missing": "dato mancante",
+    "nv_shown": "{a} di {b} bisogni mostrati",
+    "nv_nomatch": "Nessun bisogno corrisponde a questi filtri (è un risultato del filtro, non una conclusione).",
+    "count_line": "{n1} di {n2} bisogni e {c1} di {c2} schede corrispondono ai filtri",
+    "dir_restore": "ripristinare", "dir_down": "ridurre", "dir_up": "aumentare", "dir_uncertain": "incerta",
+    # cards
+    "cd_h": "Schede candidato",
+    "cd_shown": "mostrate",
+    "cd_note": "Ogni scheda risponde brevemente a sei domande; i dettagli tecnici e le tabelle complete sono un clic più in basso. I tipi di prova non si fondono mai: un esperimento WWOX in un sistema DEE, la biologia WWOX in un altro contesto, un precedente di un'altra malattia, un risultato computazionale e un'ipotesi non verificata hanno etichette proprie.",
+    "cd_order": "Ordine", "cd_o_group": "per insieme di lettere dei legami, poi A-Z", "cd_o_name": "A-Z",
+    "cd_sel": "Selezione",
+    "cd_sel_none": "Nessuna scheda selezionata. Spunta «seleziona per confronto o esportazione» su due-quattro schede.",
+    "cd_sel_clear": "azzera la selezione", "cd_sel_export": "Esporta la selezione (stampa / PDF)",
+    "cd_none": "Nessuna scheda corrisponde a questi filtri.",
+    "cd_pick": "seleziona per confronto o esportazione",
+    "cd_export": "Esporta questa scheda (stampa / PDF)",
+    "cd_status": "Stato", "cd_access": "Accesso (evidenza USA)", "cd_access_none": "Accesso: nessuna identità di catalogo o nessuna evidenza ottenuta",
+    "cd_no_need": "nessun bisogno collegato",
+    "cd_noscope": "Nessuna affermazione sull'intervento ha un tipo di prova in questa scheda.",
+    "q1": "1. Perché lo studiamo", "q2": "2. Risultato in WWOX", "q3": "3. Precedente esterno o previsione", "q4": "4. Controprove", "q5": "5. Prova mancante", "q6": "6. Prossimo passo",
+    "q1_needs": "Bisogni che affronterebbe", "q1_noneed": "Nessun bisogno è collegato a questa scheda.",
+    "q2_own": "Questo intervento, provato in un sistema WWOX", "q2_none": "Nella scheda non è registrato alcun esito di questo intervento in un sistema WWOX.",
+    "q2_ctx": "Osservazioni sui bisogni collegati in sistemi WWOX (contesto: possono riguardare altri interventi)", "q2_noctx": "I bisogni collegati non hanno osservazioni in sistemi WWOX.",
+    "more_in_tech": "{n} altre nei dettagli tecnici.", "more_in_tech1": "{n} altra nei dettagli tecnici.",
+    "q3_none": "Nessuno registrato.",
+    "q4_note": "Come scritto nella scheda (pro e contro insieme, non elencati)",
+    "q4_need": "bisogno", "q4_none": "In questa scheda non è elencata alcuna controprova (l'assenza nella scheda non è un risultato negativo).",
+    "q5_miss": "Dato mancante", "q5_nomiss": "Non è indicato alcun dato mancante.", "q5_reopen": "Condizione di riapertura",
+    "q6_next": "Passo successivo informativo", "q6_none": "Non è indicato un passo successivo (scheda di astensione o di asse).",
+    "full_text": "testo completo",
+    "pos_why_h": "Perché ha questa lettera, bisogno per bisogno",
+    "pos_for": "per",
+    "tech_sum": "Dettagli tecnici e tabelle complete",
+    "tc_identity": "Identità e meccanismo (come scritti nella scheda)", "tc_mech": "Meccanismo", "tc_novelty": "Novità e strade già note", "tc_pharm": "Farmacologia", "tc_access": "Accesso",
+    "tc_links_h": "Tutti i bisogni collegati e perché la lettera è questa", "tc_need": "Bisogno", "tc_pos": "Lettera", "tc_crit": "Criteri",
+    "tc_asserts": "Affermazioni sull'intervento nella scheda", "tc_scope": "Tipo di prova", "tc_stmt": "Affermazione", "tc_sys": "Sistema", "tc_depth": "Profondità di lettura", "tc_src": "Fonti",
+    "tc_obs": "Osservazioni nei registri dei bisogni collegati", "tc_against": "Tutte le controprove della scheda", "tc_for": "Prove a favore, come scritte nella scheda", "tc_notknown": "Non noto",
+    "tc_actions": "Azioni di catalogo sui bersagli dei bisogni (dichiarazioni di fonte, non modulazione in un sistema WWOX)", "tc_target": "Bersaglio", "tc_action": "Azione", "tc_rel": "Relazione con la direzione voluta",
+    "tc_sources": "Fonti per identificativo pubblico", "tc_nosrc": "Nessun identificativo pubblico è collegato a questa scheda.", "tc_compound_id": "identità del composto",
+    "tc_cardfile": "File della scheda (percorso nel repository, solo uso locale)", "tc_assess": "Valutazione", "tc_bridge": "sintesi della direzione",
+    "tc_text_en": "Testo tecnico tratto dalla scheda, in inglese.",
+    "opposed": "OPPOSTA alla direzione voluta",
+    "limits_note": "limiti",
+    # priority
+    "pr_h": "Priorità di ricerca: che cosa studiare ancora, e perché",
+    "pr_note": "Si tratta di un raggruppamento per il motivo per cui uno studio è interessante, non di un ordine di schede e non di una graduatoria di efficacia: il numero di pubblicazioni, di vie biologiche toccate o una cella L4 non vi entrano. Ogni legame candidato-bisogno ha la propria posizione: ipotesi favorevole (F), controprova da chiarire (C) o premessa mancante (P). L'ordine delle posizioni è un raggruppamento per tipo di motivo; dentro una posizione l'ordine è alfabetico e non significa nulla. I criteri soddisfatti e non soddisfatti sono stampati con ogni posizione.",
+    "pr_view": "Vista", "pr_by_need": "per bisogno", "pr_by_goal": "per obiettivo di recupero",
+    "pr_sort": "Ordine dentro un gruppo", "pr_s_az": "A-Z (nessun ordine implicito)", "pr_s_wwox": "più esiti in sistemi WWOX (un volume, non una forza)", "pr_s_counter": "più voci di controprova (un volume, non un verdetto)",
+    "pr_links": "legami", "pr_link": "legame",
+    "pr_nolink": "Nessun legame candidato.",
+    "pr_need_nocard": "Nessuna scheda candidato è collegata a questo bisogno. Per {n} famiglie di catalogo esiste un bersaglio elencato, ma è una dichiarazione di fonte e non un candidato.",
+    "pr_axis_h": "Schede di asse senza bisogno collegato", "pr_axis_note": "Assi di endpoint o di ancoraggio: nessuna lettera si applica; sono elencate perché l'elenco completo resti raggiungibile.",
+    "pr_open": "apri il profilo", "pr_open_card": "apri il profilo del candidato",
+    "pr_goal_aim_diff": "lo scopo della scheda differisce da quello del bisogno",
+    "pr_reasons": "motivi di questa posizione (criteri soddisfatti e non soddisfatti, e i fatti che li sostengono)",
+    "pr_sum_wwox": "Esito in WWOX", "pr_sum_counter": "Controprove", "pr_sum_item": "voci", "pr_sum_prose": "in prosa", "pr_sum_next": "Passo successivo", "pr_next_yes": "indicato nella scheda", "pr_next_no": "non indicato",
+    "pr_goal_needs": "bisogni con questo obiettivo", "pr_goal_links": "legami candidato-bisogno",
+    "res_favourable": "favorevole", "res_mixed": "misto", "res_null": "nullo", "res_unfavourable": "sfavorevole", "res_unresolved": "non risolto", "res_none": "nessun esito in sistemi WWOX",
+    "pr_w_counts": "{w} esiti in sistemi WWOX, {nul} nulli, {unf} sfavorevoli",
+    "crit_met": "soddisfatto", "crit_not": "non soddisfatto",
+    "tag_tool": "composto-strumento, non un farmaco candidato", "tag_outside": "controprova fuori da WWOX in {n} righe", "tag_wt": "{n} confronto/i solo con wild type, contati in nessuna direzione",
+    "tag_qual": "accanto a un braccio «non normalizzato rispetto al wild type»",
+    # compare
+    "cp_h": "Confronto tra pochi candidati",
+    "cp_note": "Seleziona da due a quattro schede nelle schede candidato. Sono mostrati sovrapposizioni, copertura complementare e azioni opposte. Condividere un bisogno, o coprire bisogni diversi, non implica mai sinergia.",
+    "cp_pick": "Seleziona da due a quattro schede per confrontarle.",
+    "cp_caption": "Confronto di {n} schede candidato",
+    "cp_dim": "Dimensione", "cp_aim": "Obiettivo di recupero", "cp_track": "Track", "cp_status": "Stato e lettere", "cp_needs": "Bisogni mirati (direzione voluta)",
+    "cp_actions": "Azioni di catalogo sui bersagli dei bisogni", "cp_scopes": "Tipi di prova (affermazioni nella scheda)", "cp_against": "Voci di controprova nella scheda", "cp_missing": "Dato mancante",
+    "cp_noact": "nessuna riga di azione di catalogo (scheda di classe, basata su gene o di asse: la direzione viene dal registro del bisogno)",
+    "cp_noscope": "nessuna con tipo di prova", "cp_prose": "solo prosa", "cp_none": "nessuno", "cp_nostated": "non dichiarato",
+    "cp_overlap": "Sovrapposizione", "cp_all": "Bisogni condivisi da tutte le schede selezionate", "cp_two": "Bisogni condivisi da almeno due", "cp_tg": "Bersagli in comune tra i bisogni di due o più schede",
+    "cp_comp": "Complementarità (bisogni diversi, non un effetto congiunto)", "cp_alone": "da sola copre", "cp_nothing": "nulla che le altre non coprano già",
+    "cp_opp_h": "Azioni opposte", "cp_opp_none": "Tra queste schede non è registrata alcuna azione opposta, né nelle righe di catalogo né nelle direzioni volute dei loro bisogni. È un'affermazione sui dati disponibili, non la prova che non esista.",
+    "cp_opp_acts": "agisce su", "cp_opp_dir": "in senso opposto alla direzione voluta per", "cp_raises": "aumenta mentre", "cp_lowers": "riduce", "cp_on": "Su", "cp_wanted_diff": "La direzione voluta su {t} differisce tra bisogni",
+    "cp_nosyn": "Non si inferisce alcuna sinergia.", "cp_nosyn_txt": "Condividere un bisogno, o coprirne di diversi, non dice nulla sul fatto che gli interventi funzionino insieme: interazioni, dosi e sicurezza combinata non sono valutate qui.",
+    "cp_max": "Si possono confrontare al massimo quattro schede. Toglierne prima una.",
+    "cp_opp_word": "OPPOSTA",
+    # export
+    "ex_back": "Torna alla vista", "ex_print": "Stampa o salva come PDF", "ex_dl": "Scarica come HTML autonomo", "ex_n": "{n} scheda/e. I collegamenti sono identificativi pubblici e restano validi fuori da questa cartella.",
+    "ex_unknown": "Identificativo di scheda sconosciuto.", "ex_title": "Esportazione",
+    "ex_card": "Scheda", "ex_data_date": "Data dei dati", "ex_needs_rec": "registro dei bisogni", "ex_cat_build": "versione del catalogo",
+    "ex_perim": "Perimetro", "ex_perim_txt": "encefalopatia epilettica e dello sviluppo legata a WWOX (WWOX-DEE), classe del genotipo di riferimento; solo letteratura e basi dati pubbliche; nessun dato individuale. Materiale di ricerca per la discussione con il team clinico curante: non è consiglio medico, non è una raccomandazione di trattamento, non è una probabilità di beneficio.",
+    "ex_rationale": "Motivazione", "ex_needs": "Bisogni affrontati", "ex_evid": "Prove, per tipo", "ex_ctx": "Osservazioni registrate sui bisogni collegati: solo contesto, possono riguardare altri interventi.",
+    "ex_need_obs": "osservazione sul bisogno", "ex_no_assert": "Nella scheda non è registrata alcuna affermazione con tipo di prova.",
+    "ex_counter": "Controprove", "ex_counter_none": "Nessuna elencata nella scheda (l'assenza non è un risultato negativo).", "ex_asw": "Come scritto nella scheda",
+    "ex_limits": "Limiti", "ex_lim_1": "Associazione non è modulazione, e modulazione non è recupero; un precedente di un'altra malattia non è un risultato WWOX.",
+    "ex_lim_2": "I tipi di prova restano separati e non sono mai accorpati; fonti condivise non sono conferme indipendenti.",
+    "ex_lim_3": "Le categorie di accesso sono evidenza USA trovata nelle fonti alle date di recupero (non approvazione, non idoneità per una persona, non sicurezza)",
+    "ex_lim_4": "Il testo può citare identificativi interni del repository (per esempio DL-, CLAIM, record di mappa); solo gli identificativi nella tabella delle fonti sono pubblici.",
+    "ex_miss": "Prova mancante e prossimo esperimento", "ex_next": "Passo successivo", "ex_srcs": "Fonti (identificativi pubblici)",
+    "ex_gen": "Generato da repurposing_view.py", "ex_share": "Versione condivisibile: vedi il piè di pagina della pagina per le fonti incluse.", "ex_full": "Versione locale completa: non per la ridistribuzione.",
+    "ex_std_title": "Scheda candidato WWOX",
+    # technical drill-down
+    "td_sum": "Dettagli tecnici",
+    "td_note": "Versioni, impronte digitali, comando di rigenerazione, stati delle fonti e lo screening completo del catalogo. Sono separati dall'esplorazione sopra, in inglese tecnico, esaustivi e non ordinati: non sono elenchi di candidati.",
+    "td_sources_h": "Stato delle fonti",
+    "td_full_h": "Livello dati completo (lo screening dietro la vista curata)",
+    "td_full_note": "Le sezioni seguenti sono lo screening completo del catalogo: imbuto, categorie di accesso, bisogni, matrice completa delle coppie, ogni disposizione di priorità, piste, limiti e dettagli tecnici. Sono esaustive, senza ordine e non sono elenchi di candidati. Testo tecnico in inglese.",
+    "td_cit_note": "Titoli, citazioni e identificativi delle fonti sono riportati nella forma originale.",
+    # footer
+    "ft_h": "Fonti, licenze e attribuzione",
+    "ft_build": "versione",
+    "ft_embedded": "Incluse come contenuto", "ft_counts": "Contribuiscono solo con identificativi o conteggi (contenuto non incluso)", "ft_rows": "righe di associazione incluse",
+    "ft_ids": "Gli identificativi bibliografici (PubMed, DOI, ChEMBL) sono identificativi pubblici di opere citate; i titoli mostrati provengono da registri PubMed raccolti nel modulo. Nulla di quanto qui riportato è consiglio medico.",
+    "ft_version": "versione",
+    "ft_note_share": "Versione condivisibile: una riga di terze parti è inclusa solo se la sua provenienza è nella lista consentita (view/shareable_sources.json). Tutto il resto compare come identificativo o conteggio. Nessuna attribuzione è stata rimossa. Licenze e attribuzioni sono riportate nella forma originale.",
+    "ft_note_full": "Versione locale completa: include righe di terze parti (ChEMBL, DGIdb, openFDA, MATRIX) alle loro condizioni; le righe derivate da DGIdb non sono autorizzate alla diffusione pubblica e il contenuto ChEMBL è CC BY-SA 3.0. Per la circolazione usare la versione condivisibile.",
+    # misc
+    "chip_goal": "Obiettivo",
+    "pub_year": "anno",
+    "ui_lang_note": "Testi di orientamento in italiano; titoli, citazioni, identificativi, passaggi delle fonti e nomi dei composti restano nella forma originale.",
+}
+
+POS_IT = {
+    "F1": {"short": "ipotesi favorevole, esito WWOX controllato",
+           "label": "F1 · Ipotesi favorevole, esito WWOX controllato",
+           "plain": "Un risultato favorevole in un sistema WWOX, letto contro un gruppo non trattato dello stesso genotipo da un testo completo o parziale, senza risultati nulli, sfavorevoli o misti in WWOX accanto, e con un passo successivo indicato. È un controllo della qualità di lettura, non la misura di un effetto."},
+    "F2": {"short": "ipotesi favorevole, esito WWOX debole",
+           "label": "F2 · Ipotesi favorevole, esito WWOX debole",
+           "plain": "Un risultato favorevole in un sistema WWOX, ma non controllato (casi clinici, confronto solo con wild type) o di profondità o specificità limitata, senza risultati nulli o sfavorevoli accanto. Lo studio serve a capire se il segnale è reale."},
+    "F3": {"short": "ipotesi favorevole dal bersaglio, non provata in WWOX",
+           "label": "F3 · Ipotesi favorevole dal bersaglio, non provata in WWOX",
+           "plain": "Il bisogno ha osservazioni in sistemi WWOX, ma l'intervento non è stato testato in WWOX; ciò che esiste viene da altre malattie o da saggi sul bersaglio, senza controsegnali. Un passo successivo è indicato."},
+    "C1": {"short": "controprova da chiarire, esito WWOX nullo o sfavorevole",
+           "label": "C1 · Controprova da chiarire, esito WWOX nullo o sfavorevole",
+           "plain": "L'unico risultato con segno in WWOX è nullo o sfavorevole. Lo studio serve a capire se quel risultato è reale (dose, tempi, genotipo, profondità di lettura), non a confermare una speranza."},
+    "C2": {"short": "controprova da chiarire, esito WWOX misto",
+           "label": "C2 · Controprova da chiarire, esito WWOX misto",
+           "plain": "Per questo bisogno, risultati favorevoli e nulli o sfavorevoli in WWOX stanno uno accanto all'altro. Lo studio serve a capire quale dei due regga."},
+    "C3": {"short": "controprova da chiarire, danno o nullo da fuori WWOX",
+           "label": "C3 · Controprova da chiarire, danno o segnale nullo da fuori WWOX",
+           "plain": "Nessun risultato con segno in WWOX; ciò che esiste fuori da WWOX (altra malattia, sicurezza, etichetta) è dannoso o nullo, senza un segnale favorevole accanto. Lo studio serve a capire se vale anche per WWOX."},
+    "P1": {"short": "premessa mancante, astensione",
+           "label": "P1 · Premessa mancante, astensione",
+           "plain": "La scheda è un'astensione: manca un dato prima di poter disegnare un test. Il dato mancante è la prima cosa da ottenere."},
+    "P2": {"short": "premessa mancante, nessun passo successivo",
+           "label": "P2 · Premessa mancante, nessun passo successivo indicato",
+           "plain": "La scheda non indica un passo successivo per questo bisogno, quindi da essa non si può proporre alcuno studio."},
+    "P3": {"short": "premessa mancante, nessun elemento favorevole registrato",
+           "label": "P3 · Premessa mancante, nessun elemento favorevole registrato",
+           "plain": "Nessun risultato con segno dell'intervento in WWOX, nessuna controprova da fuori WWOX da chiarire, e o nessun sostegno favorevole registrato per questo bisogno o nessuna osservazione in sistemi WWOX sul bisogno. La scheda collega il bisogno solo per meccanismo; ciò che manca è dichiarato nei criteri."},
+}
+SCOPE_IT = {
+    "WWOX_EXPERIMENT_IN_DEE_SYSTEM": "Esperimento WWOX in un sistema DEE",
+    "WWOX_CLINICAL_CASE": "Caso clinico WWOX (non controllato)",
+    "WWOX_BIOLOGY_OTHER_CONTEXT": "Biologia WWOX in un altro contesto",
+    "OTHER_DISEASE_PRECEDENT": "Precedente in un'altra malattia",
+    "COMPUTATIONAL_RESULT": "Risultato computazionale",
+    "TARGET_ENGAGEMENT": "Saggio enzimatico o privo di cellule",
+    "EXTERNAL_DATABASE_RECORD": "Voce di una base dati esterna",
+    "SAFETY_SIGNAL": "Segnale di sicurezza",
+    "UNVERIFIED_HYPOTHESIS": "Ipotesi non verificata",
+    "UNCLASSIFIED": "Tipo di prova non registrato a livello di affermazione",
+}
+GOALS_IT = {"deep_recovery": "Recupero ampio e duraturo (ripristinare la funzione WWOX perduta)", "partial_benefit": "Beneficio parziale utile (farmaci, integratori, diete)"}
+THREAD_IT = {
+    "WWOX restoration": ("Ripristino di WWOX", "Riportare WWOX stesso: aggiungere il gene, correggere il trascritto, superare un codone di stop, salvare una proteina mal ripiegata o aumentare l'espressione endogena."),
+    "Stress signalling and metabolism": ("Stress cellulare e metabolismo", "Vie di stress e di energia che appaiono alterate quando WWOX manca: risposta integrata allo stress, gestione di piruvato e lattato, respirazione mitocondriale, equilibrio redox."),
+    "Network excitability": ("Eccitabilità di rete", "Perché i neuroni scaricano troppo: guadagno eccitatorio, inibizione debole, la premessa cloro e GABA, canali del calcio di tipo T."),
+    "Signalling": ("Segnalazione di crescita e sopravvivenza", "Vie di crescita e sopravvivenza che WWOX normalmente frena: GSK3beta, Wnt/beta-catenina, mTOR e autofagia."),
+    "Development and glia": ("Sviluppo e glia", "Sviluppo del cervello e cellule di supporto: mielina, proliferazione dei progenitori (MYC), neuroinfiammazione e gliosi."),
+    "Symptom-level": ("Sintomi", "Sintomi trattati di per sé: crisi e spasmi, glicemia e crescita."),
+}
+NEED_IT = {
+    "NEED-WWOX-GENE-ADDITION": "Ripristinare la proteina WWOX nei neuroni aggiungendo il gene",
+    "NEED-WWOX-SPLICE-CORRECTION": "Ripristinare il trascritto WWOX corretto in un allele con accettore di splicing canonico alterato",
+    "NEED-WWOX-PTC-READTHROUGH": "Superare un codone di stop prematuro in un allele non senso di WWOX",
+    "NEED-WWOX-MISSENSE-PROTEIN-RESCUE": "Salvare una proteina WWOX destabilizzata da una variante missenso del dominio SDR",
+    "NEED-WWOX-ENDOGENOUS-BOOST": "Aumentare l'espressione endogena di WWOX",
+    "NEED-ISR-ATTENUATION": "Risposta integrata allo stress",
+    "NEED-PDH-PYRUVATE-AXIS": "Ingresso del piruvato nel ciclo di Krebs",
+    "NEED-LACTATE-LDH": "Lattato e attività della lattato deidrogenasi",
+    "NEED-MITOCHONDRIAL-RESPIRATION": "Respirazione mitocondriale e capacità di fosforilazione ossidativa",
+    "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR": "Guadagno eccitatorio di rete e scariche a raffica",
+    "NEED-INHIBITORY-HYPOFUNCTION": "Controllo inibitorio",
+    "NEED-GABA-CHLORIDE-GRADIENT": "Gradiente del cloro e polarità GABA",
+    "NEED-SEIZURE-CONTROL-SYMPTOMATIC": "Controllo di crisi e spasmi come bisogno sintomatico",
+    "NEED-T-TYPE-CALCIUM": "Sensibilità all'etosuccimide della crisi provocata nella perdita di Wwox",
+    "NEED-MYELINATION": "Ipomielinizzazione",
+    "NEED-GSK3B-DEREPRESSION": "Derepressione di GSK3beta",
+    "NEED-WNT-BETA-CATENIN": "Segnale Wnt/beta-catenina elevato negli organoidi privi di WWOX",
+    "NEED-MYC-PROGENITOR-PROLIFERATION": "Aumento di MYC e spostamento dello stato dei progenitori nella glia radiale priva di WWOX",
+    "NEED-MTOR-AUTOPHAGY": "Segnalazione mTOR e autofagia",
+    "NEED-NEUROINFLAMMATION-GLIA": "Neuroinfiammazione e gliosi",
+    "NEED-REDOX-OXIDATIVE-STRESS": "Equilibrio redox e specie reattive dell'ossigeno",
+    "NEED-SYSTEMIC-GLYCAEMIA-GROWTH": "Scompenso metabolico sistemico",
+}
+STATUS_IT = {"abstention": "astensione", "hypothesis": "ipotesi", "controversial": "controversa", "deferred with reason": "rinviata con motivo"}
+COUNTRY_IT = {"US evidence found": "evidenza USA trovata", "no country evidence obtained": "nessuna evidenza per paese ottenuta"}
+CRIT_IT = {
+    "the card is not an abstention": "la scheda non è un'astensione",
+    "a next step is named": "è indicato un passo successivo",
+    "a signed result of the intervention in a WWOX system exists": "esiste un risultato con segno dell'intervento in un sistema WWOX",
+    "no null, unfavourable or mixed result in a WWOX system": "nessun risultato nullo, sfavorevole o misto in un sistema WWOX",
+    "a favourable WWOX readout has an untreated same-genotype comparator": "un esito favorevole in WWOX ha un confronto non trattato dello stesso genotipo",
+    "a favourable WWOX readout is from a full or partial text reading": "un esito favorevole in WWOX deriva dalla lettura del testo completo o parziale",
+    "a favourable WWOX readout carries no weakening flag": "un esito favorevole in WWOX non porta segnalazioni di debolezza",
+    "one and the same readout meets all three": "uno stesso esito soddisfa tutti e tre i criteri",
+    "an outside-WWOX harm or null signal stands without a favourable outside signal": "fuori da WWOX esiste un segnale di danno o nullo, senza segnale favorevole esterno",
+    "some favourable support for the intervention is recorded on this need (other-disease readout or target-engagement assay)": "per questo bisogno è registrato qualche sostegno favorevole all'intervento (esito in un'altra malattia o saggio sul bersaglio)",
+    "the need has a WWOX-system observation": "il bisogno ha un'osservazione in un sistema WWOX",
+}
+
 FAV_SIGNS = {"benefit", "partial_benefit", "normalised_vs_wild_type"}
 WWOX_KINDS = {"readout_in_wwox_system", "case_report_wwox_clinical", "genotype_comparison_vs_wild_type"}
 OUT_KINDS = {"readout_other_disease", "safety_signal", "label_statement", "case_report_uninformative"}
@@ -344,13 +758,7 @@ def build_curated(dr: Path, ctx: dict) -> dict:
     # ---- cards
     cards = ctx["cards"]
     links = jload(dr / "catalog/card_links.json").get("cards", {}) if (dr / "catalog/card_links.json").exists() else {}
-    titles = {}
-    pc = dr / "join/pubmed_cache"
-    if pc.exists():
-        for f in sorted(pc.glob("*.json")):
-            j = jload(f)
-            if j.get("status") == "MATCH_FOUND" and j.get("title"):
-                titles[str(j.get("pmid"))] = j["title"]
+    titles = load_titles(dr)   # PMID -> {"title","journal","year"}; offline, from the tracked cache plus the join cache
     pert = []
     pp = dr / "coverage/assertion_pertinence.tsv"
     if pp.exists():
@@ -382,7 +790,7 @@ def build_curated(dr: Path, ctx: dict) -> dict:
             if osc == "WWOX_EXPERIMENT_IN_DEE_SYSTEM" and "clinical" in str(o.get("model_type")):
                 osc = "WWOX_CLINICAL_CASE"   # the needs vocabulary files an uncontrolled case under the experiment scope; the view keeps it apart
             obs.append({"id": o.get("id"), "scope": osc, "short": clip(o.get("statement"), 260), "full": o.get("statement"), "model": o.get("model_type"), "species": o.get("species"),
-                        "readout": o.get("readout"), "level": o.get("readout_level"), "limits": clip(o.get("limits"), 220), "pmid": o.get("pmid")})
+                        "readout": o.get("readout"), "level": o.get("readout_level"), "limits": clip(o.get("limits"), 220), "pmid": o.get("pmid"), "cite": cite_of(titles, o.get("pmid"))})
         idr = n.get("intervention_direction") or {}
         tg = [t.get("symbol") for t in n.get("targets") or [] if t.get("target_kind") == "intervention_target"]
         cneeds.append({
@@ -522,10 +930,14 @@ def build_curated(dr: Path, ctx: dict) -> dict:
             "missing": absd.get("missing_datum") if absd.get("missing_datum") else (nk[0] if nk else None), "reopen": clip(absd.get("search_record"), 260) if absd.get("search_record") else None,
             "next": clip(nxt, 360), "next_full": nxt, "limits": card.get("limits") or [], "asserts": asserts, "n_disease_assertions": len(inp.get("disease_assertions") or ([inp["disease_assertion"]] if inp.get("disease_assertion") else [])),
             "access": acc, "country": ("US evidence found" if acc and acc != ["unknown/unverified"] else "no country evidence obtained"), "chembl": chembl, "actions": act,
-            "pmids": [{"id": k, "role": v, "title": titles.get(k)} for k, v in sorted(pm.items())], "dois": dois, "scope_counts": scope_counts,
+            "pmids": [{"id": k, "role": v, "title": (titles.get(k) or {}).get("title"), "journal": (titles.get(k) or {}).get("journal"), "year": (titles.get(k) or {}).get("year")} for k, v in sorted(pm.items())], "dois": dois, "scope_counts": scope_counts,
             "card_path": f"../{folder}/{cid}.card.json", "n_prio": sum(len(prio_by_row.get(r["row_id"], [])) for r in rws),
             "disp": dict(sorted(Counter(p["disposition"] for r in rws for p in prio_by_row.get(r["row_id"], [])).items())),
         })
+    dup = Counter(c["short"] for c in cands)
+    for c in cands:   # two cards can share a display name (for example two PDK-inhibition cards): the id tells them apart
+        if dup[c["short"]] > 1:
+            c["short"] = f'{c["short"]} [{c["id"].split("_")[0]}]'
     # ---- threads
     threads = []
     for fam in dict.fromkeys(n["thread"] for n in cneeds):
@@ -1238,18 +1650,20 @@ document.body.setAttribute('data-ready','1');
 """
 
 TEMPLATE = """<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>WWOX repurposing: curated research view</title>
+<html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>__TITLE__</title>
 <style>__CSS__</style></head><body>
-<a class="skip" href="#main">Skip to the content</a>
-<header><div class="in"><h1>WWOX drug repurposing: what to study next, and on what evidence</h1>
-<div class="mut">Local, regenerable, non-canonical research material (__SOURCELABEL__). Public disease and reference-genotype level only. Not a ranking of treatments, not a probability of benefit, not medical advice.</div></div></header>
-__BANNER__<nav aria-label="Sections"><div class="in"><a href="#overview">Overview</a><a href="#navigate">Navigate</a><a href="#candidates">Candidates</a><a href="#priorities-cur">Priorities</a><a href="#compare">Compare</a><a href="#funnel">Full data</a><a href="#limits">Limits</a><a href="#technical">Technical</a><a href="#attribution">Sources</a></div></nav>
+<a class="skip" href="#main">__SKIP__</a>
+<header><div class="in"><h1>__H1__</h1>
+<p class="subline">__SUB__</p></div></header>
+__BANNER__<nav aria-label="__NAVLABEL__"><div class="in"><a href="#overview">__N_OV__</a><a href="#threads">__N_TH__</a><a href="#charts">__N_CH__</a><a href="#navigate">__N_NAV__</a><a href="#candidates">__N_CA__</a><a href="#priorities-cur">__N_PR__</a><a href="#compare">__N_CP__</a><a href="#technical">__N_TD__</a></div></nav>
 <main id="main">
 __CURATED__
-<section id="funnel"><h2>6. From catalogue to evaluated: what is counted, in which unit</h2>__FUNNEL__</section>
-<section id="access"><h2>7. Distribution by access category</h2>__ACCESS__</section>
-<section id="filters"><h2>Filters for the full matrix <span class="mut">(sections 8 to 10; shareable through the URL hash, for example <code>#f=disp:exploration_candidate&amp;need:NEED-ISR-ATTENUATION</code>)</span></h2>
+<details id="technical" class="techwrap"><summary class="techsum">__TD_SUM__</summary>
+<p class="mut technote">__TD_NOTE__</p>
+<section id="funnel"><h2>Imbuto dal catalogo ai valutati: che cosa è contato, in quale unità</h2>__FUNNEL__</section>
+<section id="access"><h2>Distribuzione per categoria di accesso</h2>__ACCESS__</section>
+<section id="filters"><h2>Filtri per la matrice completa <span class="mut">(sezioni seguenti; shareable through the URL hash, for example <code>#f=disp:exploration_candidate&amp;need:NEED-ISR-ATTENUATION</code>)</span></h2>
 <div class="filters">
 <label>Access category<select id="f-access"></select></label><label>Need<select id="f-need"></select></label>
 <label>Need evidence scope<select id="f-scope"></select></label><label>Observation scope (L3/L4)<select id="f-oscope"></select></label>
@@ -1257,22 +1671,23 @@ __CURATED__
 <label>Disposition<select id="f-disp"></select></label><label>Text search<input type="search" id="f-q" placeholder="name, id, target, card, hypothesis"></label></div>
 <div class="bar-actions"><button id="f-reset">reset filters</button><span><span class="cnt" id="cnt-pairs">0</span> of <span id="cnt-pairs-of">0</span> pairs match; <span class="cnt" id="cnt-prio">0</span> of <span id="cnt-prio-of">0</span> prioritised; <span class="cnt" id="cnt-needs">0</span> needs shown</span></div>
 <div class="chips" id="lvl-now" aria-live="polite"></div><div class="chips" id="disp-now"></div></section>
-<section id="needs"><h2>8. Needs: direction, Track, goal, evidence, levels, gaps</h2>
+<section id="needs"><h2>Bisogni: direzione, Track, obiettivo, prove, livelli, lacune</h2>
 <p class="mut">A need is a place where the record observed something and an intervention could be aimed. Needs whose direction is <i>uncertain</i> are exploration only: L2 is not evaluable there. Level counts are cells (family, need) and are never summed across levels or needs.</p>
 <div class="needs" id="needs-list"></div></section>
-<section id="matrix"><h2>9. Matrix: interventions and compound families x needs</h2>
+<section id="matrix"><h2>Matrice: interventi e famiglie di composti x bisogni</h2>
 <p class="mut">Pair unit: __PAIRUNIT__. Four levels are shown side by side and never summed or scored. Scope is shown on L3 and L4.</p>
 __LEVELS__
 <div class="pager" id="pg-m"></div><div id="matrix-list"></div></section>
-<section id="priorities"><h2>10. Dispositions: one per pair, with reasons per criterion</h2>
+<section id="priorities"><h2>Disposizioni: una per coppia, con motivi per criterio</h2>
 __DISPOSITIONS__
 <div class="note">Dispositions are distinct: <b>source queried without result</b> (the sources were asked and returned no row for the record), <b>incomplete or failed query</b> (a source was not in state OK; this is never a negative) and <b>not relevant / no catalogue link found</b> and <b>insufficient data</b> (a decision from the data that exist) are different statements and are not merged.</div>
 <div class="pager" id="pg-p"></div><div id="prio-list"></div></section>
-<section id="leads"><h2>11. Catalogue-derived leads and lead dispositions</h2>__LEADS__</section>
-<section id="limits"><h2>12. Honest limits</h2>__LIMITS__</section>
-<section id="technical"><h2>13. Technical details (separate from the exploration above)</h2>__TECH__</section>
+<section id="leads"><h2>Piste derivate dal catalogo e loro disposizioni</h2>__LEADS__</section>
+<section id="limits"><h2>Limiti dichiarati</h2>__LIMITS__</section>
+<section id="tech-versions"><h2>Versioni, fonti, impronte digitali e rigenerazione</h2>__TECH__</section>
+</details>
 </main>
-<footer id="attribution" aria-label="Sources and licences">__FOOTER__</footer>
+<footer id="attribution" aria-label="Fonti e licenze">__FOOTER__</footer>
 <div id="export-area" aria-live="polite"></div>
 <script id="data" type="application/json">__DATA__</script>
 <script>__JS__</script>
@@ -1288,100 +1703,282 @@ def read_asset(dr: Path, name: str) -> str:
     return p.read_text(encoding="utf-8")
 
 
+def fmt_it(n) -> str:
+    return f"{n:,}".replace(",", ".") if isinstance(n, int) else str(n)
+
+
+def pct_it(p) -> str:
+    return f"{p}".replace(".", ",") + "%"
+
+
+def numit(key: str, value) -> str:
+    """Headline number in Italian digit grouping; data-v keeps the raw value so a test can compare it with the source JSON."""
+    return f'<b class="num" data-k="{E(key)}" data-v="{E(str(value))}">{E(fmt_it(value))}</b>'
+
+
+def pos_chip(pid: str, n: int | None = None, long: bool = False) -> str:
+    """Letter chip: the letter, its meaning in words and a border style carry the sense; the colour never does alone."""
+    p = POS_IT[pid]
+    lab = pid + (" " + p["short"] if long else "")
+    return f'<span class="grp {pid.lower()}" title="{E(p["label"])}">{E(lab)}' + (f' ×{n}' if n else "") + '</span>'
+
+
+def scope_chip(code: str, n: int | None = None) -> str:
+    g = next((x[2] for x in SCOPES if x[0] == code), "?")
+    return f'<span class="sc s-{E(code)}"><span class="gl" aria-hidden="true">{E(g)}</span>{E(SCOPE_IT.get(code, code))}' + (f' ×{n}' if n else "") + '</span>'
+
+
+def render_banner(P: dict) -> str:
+    """One compact line: the source states stay visible; versions, details and the state table live in the technical drill-down."""
+    bad = [x for x in P["tech"]["sources"] if x["state_class"] != "ok"]
+    if not bad:
+        return ""
+    U = UI_IT
+    chips = " ".join(f'<span class="st st-{x["state_class"]}" data-banner="{E(x["id"])}">{E(x["name"].split(" (")[0])}: {E(str(x["status"]))}</span>' for x in bad)
+    return (f'<div class="warnbar" id="source-banner" role="note"><b>{E(U["source_limited"])}:</b> {chips} <a href="#technical">{E(U["see_tech"])}</a>. {E(U["source_limited_tail"])}</div>')
+
+
+def thread_view(cur: dict, t: dict) -> dict:
+    """Everything one thread card shows, computed from the payload (no rule is applied here: positions are read, never assigned)."""
+    needs = [n for n in cur["needs"] if n["id"] in t["needs"]]
+    links = [(c, nid, c["links"][nid]) for c in cur["cands"] for nid in t["needs"] if nid in c["links"]]
+    by_card: dict[str, list[str]] = {}
+    for c, nid, l in links:
+        by_card.setdefault(c["id"], []).append(l["group"])
+    cmap = {c["id"]: c for c in cur["cands"]}
+    ev = Counter(o["scope"] for n in needs for o in n["obs"])
+    return {"needs": needs, "links": links, "by_card": by_card, "cmap": cmap, "ev": ev,
+            "pos": Counter(l["group"] for _, _, l in links),
+            "n_no_wwox": sum(1 for n in needs if n["n_wwox_obs"] == 0), "n_no_l4": sum(1 for n in needs if n["no_l4"]),
+            "n_links_wwox": sum(1 for _, _, l in links if l["result"] != "none"),
+            "deep": sum(1 for n in needs if n["goal"] == "deep_recovery"), "partial": sum(1 for n in needs if n["goal"] == "partial_benefit"),
+            "tracks": Counter(n["track"] or "none" for n in needs)}
+
+
 def render_overview(P: dict) -> str:
-    """First screen, server-rendered from the payload so that it reads without JavaScript."""
-    cur, f = P["cur"], P["funnel"]
+    """First screen, server-rendered from the payload so that it reads without JavaScript. All orientation text comes from UI_IT."""
+    cur = P["cur"]
     meta, cands, needs = cur["meta"], cur["cands"], cur["needs"]
+    U = UI_IT
     from urllib.parse import quote
     n_pos = Counter(l["group"] for c in cands for l in c["links"].values())   # need-level links per position; a card is never given one position
 
     def tile(key, val, unit, desc):
-        return f'<div class="tile"><span class="big">{num(key, val)}</span><span class="u">{E(unit)}</span><span class="d">{E(desc)}</span></div>'
-    t1 = "".join([
-        tile("cur.needs", len(needs), "needs", "places where a WWOX-deficient system was observed and an intervention could be aimed"),
-        tile("cur.threads", len(cur["threads"]), "biological threads", "groups of needs that share a biology"),
-        tile("cur.cards", len(cands), "candidate cards", "an intervention, a class or an axis that has been read and written up"),
-        tile("cur.abstentions", meta["n_abstentions"], "abstentions", "cards that name the missing datum instead of a test"),
-        tile("cur.pos_f1", n_pos.get("F1", 0), "card-need links in position F1", "favourable hypothesis with a controlled WWOX readout; a card with several needs is counted once per need, never as one position"),
-        tile("cur.pos_c", sum(n_pos.get(k, 0) for k in ("C1", "C2", "C3")), "card-need links to clarify a counter-evidence", "null, unfavourable or mixed results, or a harm signal, whose clarification is the reason to study"),
-    ])
-    t2 = "".join([
-        tile("funnel.records", f["records"], "catalogue records", "source-level substance records screened (salts and duplicates count once each)"),
-        tile("funnel.families", f["families"], "catalogue families", "groupings of records; a family is not a distinct drug and not a candidate"),
-        tile("funnel.records_with_action", f["records_with_action"], "records with a stated action on a need target", "headline: the source states an action; still a source statement, not evidence of effect or rescue"),
-        tile("funnel.records_with_link", f["records_with_link"], "records with a target listed", "the larger count: includes records whose source states no action (listings, compilations, associations)"),
-        tile("funnel.families_with_link", f["families_with_link"], "families with a target listed", "a listing is a source statement about a target, not modulation and not rescue"),
-        tile("funnel.evaluated_records", f["evaluated_records"], "records evaluated against WWOX", "records with any observation against a WWOX need; not a count of tested drugs"),
-    ])
-    gtxt = {"deep_recovery": ("deep", "Broad, durable recovery"), "partial_benefit": ("partial", "Useful partial benefit")}
+        return f'<div class="tile"><span class="big">{numit(key, val)}</span><span class="u">{E(unit)}</span><span class="d">{E(desc)}</span></div>'
+    tiles = "".join([tile("cur.needs", len(needs), U["unit_needs"], U["d_needs"]), tile("cur.threads", len(cur["threads"]), U["unit_threads"], U["d_threads"]),
+                     tile("cur.cards", len(cands), U["unit_cards"], U["d_cards"]), tile("cur.abstentions", meta["n_abstentions"], U["unit_abst"], U["d_abst"])])
+    fam = {"F": ("fam_F", "fam_F_txt"), "C": ("fam_C", "fam_C_txt"), "P": ("fam_P", "fam_P_txt")}
+    legend = "".join(f'<span class="lg lg-{k.lower()}"><span class="grp {k.lower()}1">{k}</span> <b>{E(U[a])}</b><span class="mini mut"> {E(U[b])}</span></span>' for k, (a, b) in fam.items())
+    legend_all = "".join(f'<li>{pos_chip(g["id"])} <b>{E(POS_IT[g["id"]]["short"])}.</b> <span class="mini">{E(POS_IT[g["id"]]["plain"])}</span></li>' for g in GROUPS)
+    gtxt = {"deep_recovery": ("deep", U["goal_deep"], U["goal_deep_long"]), "partial_benefit": ("partial", U["goal_partial"], U["goal_partial_long"])}
     panels = []
-    for g, (cls, title) in gtxt.items():
+    for g, (cls, title, long_) in gtxt.items():
         cs = [c for c in cands if c["goal"] == g]
         ns = [n for n in needs if n["goal"] == g]
-        tr = Counter(c["track"] or "not stated" for c in cs)
-        nxt = []
-        for gid in ("F1", "F2", "F3", "C1", "C2", "C3"):
-            names = [(c, nid) for c in cs for nid, l in c["links"].items() if l["group"] == gid]
-            if names:
-                nxt.append(f'<div class="kv"><span class="grp {gid.lower()}">{E(POS_BY_ID[gid]["label"])}</span> ' + ", ".join(f'<a href="#cand-{E(c["id"])}" data-open="{E(c["id"])}">{E(c["short"])}</a> <span class="mut">({E(next(n["short"] for n in needs if n["id"] == nid))})</span>' for c, nid in names) + "</div>")
-        gaps, seen = [], set()
-        for c in cs:
-            if c.get("missing") and c["missing"] not in seen and any(l["group"] in ("P1", "P2", "P3", "F3") for l in c["links"].values()) and len(gaps) < 6:
-                seen.add(c["missing"])
-                gaps.append(f'<li><b>{E(c["short"])}:</b> {E(clip(c["missing"], 190))}</li>')
+        tr = Counter(c["track"] or "none" for c in cs)
+        lk = Counter(l["group"][0] for c in cs for nid, l in c["links"].items() if NM_GOAL(needs, nid) == g)
         panels.append(
-            f'<div class="goal {cls}" data-goal="{g}"><h3>{E(title)}</h3><p class="mini">{E(GOALS[g])}. Kept apart from the other possibility: nothing below is added to it.</p>'
-            f'<div class="kv"><b>Needs with this aim:</b> {num("cur.goal." + g + ".needs", len(ns))} needs (in: {E(", ".join(sorted({n["thread"] for n in ns})))})</div>'
-            f'<div class="kv"><b>Candidate cards with this aim:</b> {num("cur.goal." + g + ".cards", len(cs))} cards, {sum(1 for c in cs if c["abstention"])} of them abstentions</div>'
-            f'<div class="kv"><b>Track (a separate field):</b> ' + "; ".join(f"Track {E(k)}: {v}" for k, v in sorted(tr.items())) + '</div>'
-            f'<div class="kv"><b>To study next (one entry per card and need; a card can appear under several positions, each for its own need):</b></div>' + ("".join(nxt) or '<p class="mini">None.</p>') +
-            f'<div class="kv"><b>Decisive gaps (missing datum stated in the cards):</b></div><ul class="mini">' + "".join(gaps) + '</ul></div>')
-    th = "".join(
-        f'<div class="thread" data-thread="{E(t["id"])}"><h3>{E(t["name"])}</h3><p>{E(t["text"])}</p>'
-        f'<p class="mini">{len(t["needs"])} needs ({t["goals"].get("deep_recovery", 0)} deep recovery, {t["goals"].get("partial_benefit", 0)} partial benefit); {t["wwox_obs"]} observations in WWOX systems (entries in the need records); {len(t["cards"])} candidate cards linked.</p>'
-        f'<a href="#c=thread:{quote(t["id"])}">show this thread</a></div>' for t in cur["threads"])
-    gaps = "".join(f'<li><b>{g["n"]} of {g["of"]}</b> {E(g["text"])}</li>' for g in cur["gaps"])
+            f'<div class="goal {cls}" data-goal="{g}"><h3>{E(title)}</h3><p class="mini">{E(long_)}</p>'
+            f'<div class="kv"><b>{E(U["needs_with_aim"])}:</b> {numit("cur.goal." + g + ".needs", len(ns))}</div>'
+            f'<div class="kv"><b>{E(U["cards_with_aim"])}:</b> {numit("cur.goal." + g + ".cards", len(cs))} ({sum(1 for c in cs if c["abstention"])} {E(U["of_which_abst"])})</div>'
+            f'<div class="kv"><b>{E(U["track_field"])}:</b> ' + "; ".join(f'Track {E(k)}: {v}' if k != "none" else f'{E(U["track_none"])}: {v}' for k, v in sorted(tr.items())) + '</div>'
+            f'<div class="kv"><b>{E(U["th_why"])}:</b> ' + " ".join(f'<span class="grp {k.lower()}1">{k}</span> ×{lk[k]}' for k in "FCP" if lk[k]) + '</div></div>')
+    cards = []
+    for t in cur["threads"]:
+        v = thread_view(cur, t)
+        nm, tx = THREAD_IT.get(t["id"], (t["name"], t["text"]))
+        cn = sorted(v["by_card"], key=lambda i: v["cmap"][i]["short"].lower())
+        chips = "".join(f'<a class="cc" href="#cand-{E(i)}" data-open="{E(i)}">{E(v["cmap"][i]["short"])} ' + "".join(pos_chip(g) for g in sorted(set(v["by_card"][i]))) + '</a>' for i in cn[:6])
+        more = f'<span class="mini mut"> +{len(cn) - 6} {E(U["th_more"])}</span>' if len(cn) > 6 else ""
+        miss = []
+        for i in cn:
+            c = v["cmap"][i]
+            if c.get("missing") and len(miss) < 3:
+                miss.append(f'<li><b>{E(c["short"])}:</b> {E(clip(c["missing"], 170))}</li>')
+        cards.append(
+            f'<article class="thread" data-thread="{E(t["id"])}"><h3>{E(nm)}</h3><p class="tx">{E(tx)}</p>'
+            f'<p class="dim"><b>{E(U["th_aim"])}:</b> {v["deep"]} {E(U["th_needs_n"])} {E(U["th_deep"])} · {v["partial"]} {E(U["th_needs_n"])} {E(U["th_partial"])} · '
+            + " · ".join(f'Track {E(k)} {n}' for k, n in sorted(v["tracks"].items()) if k != "none") + '</p>'
+            f'<div class="row"><span class="lab">{E(U["th_cands"])}</span>' + (chips + more if chips else f'<span class="mut">{E(U["th_cands_none"])}</span>') + '</div>'
+            f'<div class="row"><span class="lab">{E(U["th_why"])}</span>' + (" ".join(pos_chip(k, n) for k, n in sorted(v["pos"].items())) or f'<span class="mut">{E(U["th_cands_none"])}</span>') + '</div>'
+            f'<div class="row"><span class="lab">{E(U["th_evid"])}</span>' + ("".join(scope_chip(k, n) for k, n in sorted(v["ev"].items(), key=lambda kv: (-kv[1], kv[0]))) or f'<span class="mut">{E(U["th_evid_none"])}</span>') + f'<span class="mini mut"> {E(U["th_obs_note"])}</span></div>'
+            f'<div class="row gap"><span class="lab">{E(U["th_gap"])}</span><ul class="mini"><li>{v["n_no_wwox"]} / {len(v["needs"])} {E(U["th_gap_wwox"])}</li><li>{v["n_no_l4"]} / {len(v["needs"])} {E(U["th_gap_l4"])}</li></ul>'
+            + (f'<details class="inl"><summary>{E(U["th_gap_card"])}</summary><ul class="mini">{"".join(miss)}</ul></details>' if miss else '') + '</div>'
+            f'<a class="go" href="#c=thread:{quote(t["id"])}">{E(U["th_explore"])}</a></article>')
     dd = meta["data_date"]
+    srcnote = U["src_share" if P["source"] == "shareable" else "src_full"]
     return (
-        '<section id="overview" aria-labelledby="h-over"><h2 id="h-over">1. Overview</h2>'
-        '<p class="lead"><b>Research goal.</b> Find out which existing drugs, supplements, diets and other interventions are worth testing for WWOX-related developmental and epileptic encephalopathy (WWOX-DEE), and say plainly what has been observed in WWOX, what is borrowed from other diseases or from predictions, what argues against it and what proof is missing.</p>'
-        '<dl class="facts"><dt>Perimeter</dt><dd>WWOX-DEE, reference genotype class; public literature and public databases; no individual-level data. Research material for discussion, not medical advice.</dd>'
-        f'<dt>Data date</dt><dd data-k="meta.data_date" data-v="{E(str(dd))}">{E(str(dd))} (catalogue and coverage build {E(str(meta["catalogue_generated"]))}; needs record {E(str(meta["needs_built_on"]))}). DGIdb export dated {E(meta["dgidb_export"])} (stale); this page reads no clock.</dd>'
-        '<dt>Two open possibilities</dt><dd>Broad, durable recovery and useful partial benefit are two separate dimensions, shown side by side below and never combined. <b>Track A</b> (variant-independent) and <b>Track B</b> (variant- or lesion-specific) are a third, independent field.</dd></dl>'
-        '<div class="goals">' + "".join(panels) + '</div>'
-        '<div class="tilegroup">Curated work (read and written up)</div><div class="tiles">' + t1 + '</div>'
-        '<div class="tilegroup">Catalogue screening (large numbers; not candidates)</div><div class="tiles">' + t2 + '</div>'
-        '<p class="mini mut">Different units: a <b>need</b> is a biological question, a <b>card</b> is a written-up candidate, a <b>record</b> is one source entry, a <b>family</b> is a grouping of records. They are never added or compared as one number.</p>'
-        '<h3>Main biological threads (the ' + str(len(needs)) + ' needs grouped)</h3><div class="threads">' + th + '</div>'
-        '<h3>Decisive gaps, counted over the needs</h3><ul>' + gaps + '</ul></section>')
+        f'<section id="overview" aria-labelledby="h-over"><h2 id="h-over">{E(U["ov_h"])}</h2>'
+        f'<p class="lead">{E(U["ov_lead"])}</p>'
+        f'<div class="warnstrip" role="note"><b>{E(U["warn_h"])}.</b> {E(U["warn_1"])} {E(U["warn_2"])}</div>'
+        f'<div class="legendrow" role="group" aria-label="{E(U["legend_h"])}"><b>{E(U["legend_h"])}:</b> {legend}</div>'
+        f'<details class="inl howto"><summary>{E(U["how_sum"])}</summary><div class="twocol"><div class="how"><h3>{E(U["how_h"])}</h3><ol><li>{E(U["how_1"])}</li><li>{E(U["how_2"])}</li><li>{E(U["how_3"])}</li><li>{E(U["how_4"])}</li></ol><p class="mini">{E(U["warn_3"])}</p></div>'
+        f'<div class="legendbox"><p class="mini mut">{E(U["legend_note"])}</p><ul class="poslist">{legend_all}</ul></div></div></details>'
+        f'<p class="meta-line"><b>{E(U["data_date"])}:</b> <span data-k="meta.data_date" data-v="{E(str(dd))}">{E(str(dd))}</span> · <b>{E(U["perimeter"])}:</b> {E(U["perimeter_txt"])} · {E(srcnote)}</p>'
+        f'<h3 id="threads">{E(U["th_h"])}</h3><p class="mini mut">{E(U["th_note"])}</p><div class="threads">' + "".join(cards) + '</div>'
+        f'<h3>{E(U["goals_h"])}</h3><p class="mini mut">{E(U["goals_note"])}</p><div class="goals">' + "".join(panels) + '</div>'
+        f'<h3>{E(U["facts_h"])}</h3><div class="tiles">' + tiles + f'</div><p class="mini mut">{E(U["unit_note"])}</p></section>')
+
+
+def NM_GOAL(needs: list, nid: str):
+    return next((n["goal"] for n in needs if n["id"] == nid), None)
+
+
+def render_charts(P: dict) -> str:
+    """The five graphics, server-rendered (inline HTML and CSS, no script). Each carries its unit, its denominator and how to read it."""
+    U, cur, f, a = UI_IT, P["cur"], P["funnel"], P["access"]
+    needs, cands = cur["needs"], cur["cands"]
+    out = [f'<section id="charts" aria-labelledby="h-ch"><h2 id="h-ch">{E(U["ch_h"])}</h2><p class="mini mut">{E(U["ch_note"])}</p>']
+    # 1. funnel
+    fam, rec = f["families"], f["records"]
+    rows = [("records", U["g1_records"], rec, U["g1_u_records"], 100.0, f'data-step="records"', None),
+            ("families", U["g1_families"], fam, U["g1_u_families"], 100.0, 'data-step="families"', None),
+            ("families_with_link", U["g1_fam_link"], f["families_with_link"], U["g1_u_families"], pct(f["families_with_link"], fam), 'data-step="families_with_link"', U["g1_share"].format(den=fmt_it(fam))),
+            ("families_with_action", U["g1_fam_act"], f["families_with_action"], U["g1_u_families"], pct(f["families_with_action"], fam), 'data-step="families_with_action"', U["g1_share"].format(den=fmt_it(fam)))]
+    h = [f'<div class="chart" id="g1"><h3>{E(U["g1_h"])}</h3><p class="mini mut">{E(U["g1_how"])}</p><ol class="fun">']
+    for key, lab, val, unit, p, attr, sharetxt in rows:
+        share = f'<span class="pc">{pct_it(p)} <span class="mini mut">{E(sharetxt)}</span></span>' if sharetxt else ""
+        h.append(f'<li {attr}><div class="fl">{E(lab)}</div><div class="fv">{numit("funnel." + key, val)} <span class="unit">{E(unit)}</span>{share}</div>{bar(p)}</li>')
+    h.append(f'<li data-step="cards"><div class="fl">{E(U["g1_cards"])}</div><div class="fv">{numit("cur.cards", len(cands))} <span class="unit">{E(U["g1_u_cards"])}</span></div><p class="mini mut">{E(U["g1_cards_note"])}</p></li></ol>')
+    h.append(f'<p class="mini">{E(U["g1_rec_sub"].format(link=fmt_it(f["records_with_link"]), act=fmt_it(f["records_with_action"])))}</p>'
+             f'<span hidden data-k="funnel.records_with_link" data-v="{f["records_with_link"]}"></span><span hidden data-k="funnel.records_with_action" data-v="{f["records_with_action"]}"></span>'
+             f'<p class="mini mut">{E(U["g1_note"])}</p></div>')
+    out.append("".join(h))
+    # 2. access
+    tot = a["total"]
+    order = ["supplement", "OTC", "prescription", "experimental", "unknown/unverified"]
+    g2 = [f'<div class="chart" id="g2"><h3>{E(U["g2_h"])}</h3><p class="mini mut">{E(U["g2_how"].format(den=fmt_it(tot)))}</p><ul class="acc">']
+    for k in order + sorted(set(a["overlapping"]) - set(order)):
+        if k in a["overlapping"]:
+            v = a["overlapping"][k]
+            g2.append(f'<li data-access="{E(k)}"><span class="al">{E(U.get("acc_" + k, k))}</span><span class="av">{numit("access." + k, v)} {E(U["g2_unit"])} · {pct_it(pct(v, tot))} {E(U["g2_of"])} {fmt_it(tot)}</span>{bar(pct(v, tot))}</li>')
+    g2.append(f'</ul><p class="mini">{numit("access.unknown", a["unknown"])} {E(U["g2_of"])} {fmt_it(tot)} {E(U["g2_unit"])} ({pct_it(pct(a["unknown"], tot))}) {E(U["g2_unknown"])}.</p><p class="mini mut">{E(U["g2_note"])}</p></div>')
+    out.append("".join(g2))
+    # 3. matrix per thread
+    g3 = [f'<div class="chart" id="g3"><h3>{E(U["g3_h"])}</h3><p class="mini mut">{E(U["g3_how"])}</p>']
+    g3.append('<p class="mxleg">' + "".join(f'{pos_chip(i, long=True)} ' for i in ("F1", "F2", "F3", "C1", "C2", "C3", "P1", "P2", "P3")) + '</p>')
+    for t in cur["threads"]:
+        nm = THREAD_IT.get(t["id"], (t["name"], ""))[0]
+        v = thread_view(cur, t)
+        cs = sorted({c["id"] for c, _, _ in v["links"]}, key=lambda i: v["cmap"][i]["short"].lower())
+        if not cs:
+            continue
+        g3.append(f'<h4>{E(nm)}</h4><div class="mxwrap"><table class="mx stack"><thead><tr><th scope="col">{E(U["g3_cand"])}</th>' + "".join(f'<th scope="col">{E(NEED_IT.get(n["id"], n["short"]))}</th>' for n in v["needs"]) + '</tr></thead><tbody>')
+        for i in cs:
+            c = v["cmap"][i]
+            g3.append(f'<tr><th scope="row">{E(c["short"])}</th>')
+            for n in v["needs"]:
+                l = c["links"].get(n["id"])
+                lab = NEED_IT.get(n["id"], n["short"])
+                if l:
+                    g3.append(f'<td data-label="{E(lab)}">{pos_chip(l["group"])}<span class="mxt">{E(U["g3_short_" + l["group"][0]])}</span></td>')
+                else:
+                    g3.append(f'<td class="empty" data-label="{E(lab)}"><span aria-label="{E(U["g3_empty"])}">·</span></td>')
+            g3.append('</tr>')
+        g3.append('</tbody></table></div>')
+    g3.append('</div>')
+    out.append("".join(g3))
+    # 4. targets <-> candidates (catalogue action rows attached to cards)
+    tg: dict[str, dict] = {}
+    for c in cands:
+        for x in c["actions"]:
+            e = tg.setdefault(str(x["target"]), {"c": {}, "n": set()})
+            e["c"].setdefault(c["id"], set()).add((x["action"], x["cons"]))
+            e["n"].add(x["need"])
+    g4 = [f'<div class="chart" id="g4"><h3>{E(U["g4_h"])}</h3><p class="mini mut">{E(U["g4_how"])}</p>']
+    if tg:
+        g4.append(f'<div class="bip"><div class="bh"><span>{E(U["g4_target"])}</span><span>{E(U["g4_cands"])}</span></div>')
+        cmap = {c["id"]: c for c in cands}
+        nmap = {n["id"]: n for n in needs}
+        for t_, e in sorted(tg.items()):
+            cl = []
+            for cid, acts in sorted(e["c"].items(), key=lambda kv: cmap[kv[0]]["short"].lower()):
+                for act, cons in sorted(acts):
+                    opp = "oppos" in str(cons)
+                    cl.append(f'<span class="bc{" opp" if opp else ""}">{E(cmap[cid]["short"])}: {E(U.get("act_" + str(act), str(act)))} <span class="mini">({E(U.get("cons_" + str(cons), str(cons).replace("_", " ")))})</span></span>')
+            g4.append(f'<div class="br"><div class="bt"><b>{E(t_)}</b><div class="mini mut">{E(U["g4_needs"])}: ' + E("; ".join(NEED_IT.get(n, nmap[n]["short"] if n in nmap else n) for n in sorted(e["n"]))) + f'</div></div><div class="bl">{"".join(cl)}</div></div>')
+        g4.append('</div>')
+    else:
+        g4.append(f'<p class="state-none">{E(U["g4_none_share"] if P["source"] == "shareable" else U["g4_none"])}</p>')
+    g4.append(f'<p class="mini mut">{E(U["g4_note"])}</p></div>')
+    out.append("".join(g4))
+    # 5. coverage and gaps
+    g5 = [f'<div class="chart" id="g5"><h3>{E(U["g5_h"])}</h3><p class="mini mut">{E(U["g5_how"])}</p><div class="mxwrap"><table class="mx stack cov"><thead><tr><th scope="col">{E(U["g5_need"])}</th><th scope="col">{E(U["g5_c1"])}</th><th scope="col">{E(U["g5_c2"])}</th><th scope="col">{E(U["g5_c3"])}</th><th scope="col">{E(U["g5_c4"])}</th></tr></thead><tbody>']
+    cmap = {c["id"]: c for c in cands}
+    for t in cur["threads"]:
+        nm = THREAD_IT.get(t["id"], (t["name"], ""))[0]
+        g5.append(f'<tr class="grow"><th colspan="5" scope="colgroup">{E(nm)}</th></tr>')
+        for n in needs:
+            if n["id"] not in t["needs"]:
+                continue
+            ncs = [cmap[i] for i in n["cards"] if i in cmap]
+            with_res = sum(1 for c in ncs if c["links"].get(n["id"], {}).get("result", "none") != "none")
+            yn = lambda b: f'<span class="yn {"y" if b else "n"}">{E(U["g5_yes"] if b else U["g5_no"])}</span>'
+            g5.append(f'<tr data-need="{E(n["id"])}"><th scope="row">{E(NEED_IT.get(n["id"], n["short"]))}</th>'
+                      f'<td data-label="{E(U["g5_c1"])}">{yn(n["n_wwox_obs"] > 0)} <span class="mini">{n["n_wwox_obs"]} {E(U["g5_obs1"] if n["n_wwox_obs"] == 1 else U["g5_obs"])}</span></td>'
+                      f'<td data-label="{E(U["g5_c2"])}"><span class="mini">{len(ncs)} {E(U["g5_cards1"] if len(ncs) == 1 else U["g5_cards"])}</span></td>'
+                      f'<td data-label="{E(U["g5_c3"])}">{yn(with_res > 0)} <span class="mini">{with_res} {E(U["g5_cards1"] if with_res == 1 else U["g5_cards"])}</span></td>'
+                      f'<td data-label="{E(U["g5_c4"])}">{yn(not n["no_l4"])}</td></tr>')
+    g5.append(f'</tbody></table></div><p class="mini mut">{E(U["g5_note"])}</p></div>')
+    out.append("".join(g5))
+    out.append("</section>")
+    return "".join(out)
 
 
 def render_footer(P: dict) -> str:
+    U = UI_IT
     ft = P["cur"]["footer"]
-    h = [f'<h2>Sources, licences and attribution ({E(ft["source"])} build)</h2><p>{E(ft["note"])}</p><h3>Embedded as content</h3><ul>']
+    h = [f'<h2>{E(U["ft_h"])} ({E(U["ft_build"])} {E(ft["source"])})</h2><p>{E(U["ft_note_share"] if ft["source"] == "shareable" else U["ft_note_full"])}</p><h3>{E(U["ft_embedded"])}</h3><ul>']
     for e in ft["embedded"]:
         u = f' <a href="{E(e["url"])}" rel="noopener noreferrer">{E(e["url"])}</a>' if e.get("url") else ""
-        n = f' ({e["rows"]} association row(s) embedded)' if e.get("rows") else ""
+        n = f' ({e["rows"]} {E(U["ft_rows"])})' if e.get("rows") else ""
         h.append(f'<li><b>{E(e["label"])}</b>{n}: {E(str(e.get("licence") or ""))}. {E(str(e.get("attribution") or ""))}{u}</li>')
     h.append("</ul>")
     if ft["counts_only"]:
-        h.append("<h3>Contributed identifiers or counts only (content withheld)</h3><ul>")
+        h.append(f'<h3>{E(U["ft_counts"])}</h3><ul>')
         for e in ft["counts_only"]:
-            h.append(f'<li><b>{E(e["label"])}</b>: {E(e["terms"])}' + (f'; version {E(str(e["version"]))}' if e.get("version") else "") + "</li>")
+            h.append(f'<li><b>{E(e["label"])}</b>: {E(e["terms"])}' + (f'; {E(U["ft_version"])} {E(str(e["version"]))}' if e.get("version") else "") + "</li>")
         h.append("</ul>")
-    h.append('<p class="mini">Bibliographic identifiers (PubMed, DOI, ChEMBL) are public identifiers of cited works; titles shown come from PubMed records fetched into the module. Nothing here is medical advice.</p>')
+    h.append(f'<p class="mini">{E(U["ft_ids"])}</p>')
     return "".join(h)
+
+
+def ui_payload() -> dict:
+    """Italian orientation strings for the page script (D.ui): one dict, no logic."""
+    ui = dict(UI_IT)
+    ui.update({"pos": POS_IT, "scopeL": SCOPE_IT, "goalL": GOALS_IT, "thread": {k: {"name": v[0], "text": v[1]} for k, v in THREAD_IT.items()}, "need": NEED_IT,
+               "statusL": STATUS_IT, "countryL": COUNTRY_IT, "crit": CRIT_IT})
+    return ui
+
+
+TOKEN_RE = re.compile(r"\{\{(\w+)\}\}")
+
+
+def fill_tokens(text: str) -> str:
+    """Replace {{key}} tokens of an asset with the escaped Italian string; an unknown key is a build error, never a silent blank."""
+    def one(m):
+        if m.group(1) not in UI_IT:
+            raise SystemExit(f"asset token {{{{{m.group(1)}}}}} has no Italian string in UI_IT")
+        return E(UI_IT[m.group(1)])
+    return TOKEN_RE.sub(one, text)
 
 
 def render(P: dict, dr: Path = DEFAULT_DR) -> str:
     st = render_static(P)
+    P = dict(P, ui=ui_payload())
     data = json.dumps(P, ensure_ascii=False, sort_keys=True, separators=(",", ":")).replace("</", "<\\/").replace("<!--", "<\\!--")
+    U = UI_IT
     page = TEMPLATE
-    cur_html = read_asset(dr, "curated.html")
-    cur_html = cur_html.replace("__OVERVIEW__", render_overview(P)).replace("__GROUPNOTE__", E(GROUP_NOTE))
+    cur_html = fill_tokens(read_asset(dr, "curated.html"))
+    cur_html = cur_html.replace("__OVERVIEW__", render_overview(P)).replace("__CHARTS__", render_charts(P))
     page = page.replace("__CSS__", CSS + read_asset(dr, "curated.css")).replace("__JS__", JS).replace("__CJS__", read_asset(dr, "curated.js"))
     page = page.replace("__CURATED__", cur_html).replace("__FOOTER__", render_footer(P))
-    page = page.replace("__SOURCELABEL__", "shareable build: third-party rows limited to the allowlist" if P["source"] == "shareable" else "full local build: includes third-party rows, not for redistribution")
+    for k, key in (("TITLE", "page_title"), ("SKIP", "skip"), ("H1", "h1"), ("SUB", "sub"), ("NAVLABEL", "nav_label"), ("N_OV", "nav_overview"), ("N_TH", "nav_threads"), ("N_CH", "nav_charts"), ("N_NAV", "nav_navigate"),
+                   ("N_CA", "nav_cards"), ("N_PR", "nav_priority"), ("N_CP", "nav_compare"), ("N_TD", "nav_tech"), ("TD_SUM", "td_sum"), ("TD_NOTE", "td_note")):
+        page = page.replace(f"__{k}__", E(U[key]))
+    page = page.replace("__BANNER__", render_banner(P))
+    st = dict(st)
+    st.pop("BANNER", None)
     for k, v in st.items():
         page = page.replace(f"__{k}__", v)
     page = page.replace("__PAIRUNIT__", E(str(P["pair_unit"])))
@@ -1397,17 +1994,249 @@ def build(dr: Path = DEFAULT_DR, source: str = "full") -> str:
     return out
 
 
+# ------------------------------------------------------------------ real viewport emulation (Chromium DevTools Protocol, stdlib only)
+VIEWPORTS = [(360, 780, True), (390, 844, True), (768, 1024, False), (1280, 900, False)]   # (width, height, mobile emulation)
+CHROMIUM_CANDIDATES = ["/snap/chromium/current/usr/lib/chromium-browser/chrome", "chromium", "chromium-browser", "google-chrome"]
+
+
+def find_chromium() -> str | None:
+    import shutil
+    return next((b for b in CHROMIUM_CANDIDATES if shutil.which(b) or Path(b).exists()), None)
+
+
+class Cdp:
+    """A minimal websocket client (RFC 6455, text frames) for one Chromium page target. Launches the browser WITHOUT any sandbox-bypass flag.
+    The window size is irrelevant: Emulation.setDeviceMetricsOverride sets the real layout viewport, which is then MEASURED, not assumed."""
+
+    def __init__(self, binary: str, tmpdir: str):
+        import socket
+        import subprocess
+        import time
+        import urllib.request
+        with socket.socket() as so:
+            so.bind(("127.0.0.1", 0))
+            self.port = so.getsockname()[1]
+        self.proc = subprocess.Popen([binary, "--headless=new", "--disable-gpu", f"--remote-debugging-port={self.port}", f"--user-data-dir={tmpdir}", "about:blank"],
+                                     stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        url = None
+        for _ in range(100):
+            try:
+                tabs = json.loads(urllib.request.urlopen(f"http://127.0.0.1:{self.port}/json/list", timeout=2).read())
+                url = next((t["webSocketDebuggerUrl"] for t in tabs if t.get("type") == "page"), None)
+                if url:
+                    break
+            except Exception:
+                pass
+            time.sleep(0.2)
+        if not url:
+            self.close()
+            raise RuntimeError("Chromium DevTools endpoint did not come up")
+        self.sock = socket.create_connection(("127.0.0.1", self.port), timeout=60)
+        self._handshake(url.split(f":{self.port}", 1)[1])
+        self.n = 0
+        self.events: list = []
+
+    def _handshake(self, path: str):
+        import base64
+        import os
+        key = base64.b64encode(os.urandom(16)).decode()
+        self.sock.sendall((f"GET {path} HTTP/1.1\r\nHost: 127.0.0.1:{self.port}\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-WebSocket-Key: {key}\r\nSec-WebSocket-Version: 13\r\n\r\n").encode())
+        buf = b""
+        while b"\r\n\r\n" not in buf:
+            buf += self.sock.recv(4096)
+        if b" 101 " not in buf.split(b"\r\n", 1)[0]:
+            raise RuntimeError("websocket upgrade refused: " + buf[:80].decode("latin1"))
+        self.buf = buf.split(b"\r\n\r\n", 1)[1]
+
+    def _read(self, n: int) -> bytes:
+        while len(self.buf) < n:
+            chunk = self.sock.recv(1 << 16)
+            if not chunk:
+                raise RuntimeError("websocket closed")
+            self.buf += chunk
+        out, self.buf = self.buf[:n], self.buf[n:]
+        return out
+
+    def _send(self, text: str):
+        import os
+        import struct
+        data = text.encode()
+        head = bytearray([0x81])
+        if len(data) < 126:
+            head.append(0x80 | len(data))
+        elif len(data) < 65536:
+            head += bytes([0x80 | 126]) + struct.pack(">H", len(data))
+        else:
+            head += bytes([0x80 | 127]) + struct.pack(">Q", len(data))
+        mask = os.urandom(4)
+        self.sock.sendall(bytes(head) + mask + bytes(b ^ mask[i % 4] for i, b in enumerate(data)))
+
+    def _recv(self) -> dict:
+        import struct
+        msg = b""
+        while True:
+            b1, b2 = self._read(2)
+            op, ln = b1 & 0x0F, b2 & 0x7F
+            if ln == 126:
+                ln = struct.unpack(">H", self._read(2))[0]
+            elif ln == 127:
+                ln = struct.unpack(">Q", self._read(8))[0]
+            payload = self._read(ln)
+            if op == 8:
+                raise RuntimeError("websocket closed by the browser")
+            if op in (1, 0):
+                msg += payload
+                if b1 & 0x80:
+                    return json.loads(msg.decode())
+
+    def call(self, method: str, **params):
+        self.n += 1
+        mid = self.n
+        self._send(json.dumps({"id": mid, "method": method, "params": params}))
+        while True:
+            m = self._recv()
+            if m.get("id") == mid:
+                if "error" in m:
+                    raise RuntimeError(f"{method}: {m['error']}")
+                return m.get("result") or {}
+            if "method" in m:
+                self.events.append(m["method"])
+
+    def wait_event(self, name: str, tries: int = 400):
+        for _ in range(tries):
+            if name in self.events:
+                self.events.remove(name)
+                return True
+            m = self._recv()
+            if "method" in m:
+                self.events.append(m["method"])
+        return False
+
+    def evaluate(self, expr: str):
+        r = self.call("Runtime.evaluate", expression=expr, returnByValue=True, awaitPromise=True)
+        if "exceptionDetails" in r:
+            raise RuntimeError("page script error: " + json.dumps(r["exceptionDetails"])[:300])
+        return (r.get("result") or {}).get("value")
+
+    def close(self):
+        try:
+            self.proc.terminate()
+            self.proc.wait(timeout=10)
+        except Exception:
+            self.proc.kill()
+
+
+MEASURE_JS = r"""(function(){var iw=__REQ__,de=document.documentElement,off=[];
+function scrolls(e){for(var p=e.parentElement;p&&p!==document.body;p=p.parentElement){var o=getComputedStyle(p).overflowX;if(o==='auto'||o==='scroll'||o==='hidden')return true}return false}
+var all=document.body.getElementsByTagName('*');for(var i=0;i<all.length&&off.length<6;i++){var e=all[i],r=e.getBoundingClientRect();if(r.width&&r.right>iw+1&&getComputedStyle(e).position!=='fixed'&&!scrolls(e)&&e.offsetParent!==null)off.push(e.tagName.toLowerCase()+(e.id?'#'+e.id:'')+(e.className&&e.className.baseVal===undefined?'.'+String(e.className).split(' ')[0]:'')+' right='+Math.round(r.right))}
+return {innerWidth:window.innerWidth,scrollWidth:de.scrollWidth,bodyScrollWidth:document.body.scrollWidth,clientWidth:de.clientWidth,visualViewportWidth:window.visualViewport?Math.round(window.visualViewport.width):null,ready:document.body.getAttribute('data-cur-ready'),offenders:off}})()"""
+
+
+def scenarios(P: dict) -> list[tuple[str, str]]:
+    cur = P["cur"]
+    ids = [c["id"] for c in cur["cands"]]
+    th = next((t["id"] for t in cur["threads"] if t["id"] == "Network excitability"), cur["threads"][0]["id"])
+    a, b = (ids + ids)[:2]
+    from urllib.parse import quote
+    return [("first_screen", ""), ("filtered_thread", "#c=thread:" + quote(th)), ("comparison", f"#compare={a},{b}"), ("export_card", "#export=" + a), ("technical_open", "#tech-versions")]
+
+
+def measure_viewports(html_path: Path, shots: Path | None = None, widths: list | None = None) -> list[dict]:
+    """For each viewport and scenario: the page's OWN innerWidth and documentElement.scrollWidth, read after Emulation.setDeviceMetricsOverride.
+    Returns [] when no Chromium exists (the caller reports that, never a fake pass). Print layout is measured with print media emulation at A4 width."""
+    import base64
+    import tempfile
+    binary = find_chromium()
+    if not binary:
+        return []
+    P = json.loads(re.search(r'<script id="data" type="application/json">(.*?)</script>', html_path.read_text(encoding="utf-8"), re.S).group(1).replace("<\\/", "</").replace("<\\!--", "<!--"))
+    out = []
+    with tempfile.TemporaryDirectory() as td:
+        cdp = Cdp(binary, td)
+        try:
+            cdp.call("Page.enable")
+            runs = [(w, h, mo) for (w, h, mobile) in VIEWPORTS if not widths or w in widths for mo in ((True, False) if mobile else (False,))]
+            for (w, h, mobile) in runs:
+                cdp.call("Emulation.setDeviceMetricsOverride", width=w, height=h, deviceScaleFactor=1, mobile=mobile)
+                for name, frag in scenarios(P):
+                    cdp.call("Page.navigate", url="about:blank")
+                    cdp.events.clear()
+                    cdp.call("Page.navigate", url=f"file://{html_path}{frag}")
+                    cdp.wait_event("Page.loadEventFired")
+                    cdp.evaluate("new Promise(function(r){setTimeout(r,500)})")
+                    m = cdp.evaluate(MEASURE_JS.replace("__REQ__", str(w)))
+                    m.update({"requested": w, "scenario": name, "mobile": mobile, "overflow": m["scrollWidth"] > w or m["innerWidth"] > w})
+                    if shots and (mobile or w > 390):
+                        shots.mkdir(parents=True, exist_ok=True)
+                        anchor = {"comparison": "#compare", "filtered_thread": "#navigate", "technical_open": "#tech-versions", "export_card": "body"}.get(name, "body")
+                        y = cdp.evaluate("(function(){var e=document.querySelector(%s);return e?Math.max(0,Math.round(e.getBoundingClientRect().top+scrollY)-8):0})()" % json.dumps(anchor))
+                        lm = cdp.call("Page.getLayoutMetrics")["cssContentSize"]
+                        tall = name in ("export_card", "comparison") and w <= 390
+                        clip = {"x": 0, "y": y, "width": w, "height": min(int(lm["height"]) - y, 3000 if tall else h), "scale": 1}
+                        shot = cdp.call("Page.captureScreenshot", format="png", clip=clip, captureBeyondViewport=True)
+                        fp = shots / f"{name}_{m['innerWidth']}px.png"
+                        fp.write_bytes(base64.b64decode(shot["data"]))
+                        m["shot"] = fp.name
+                    out.append(m)
+            # print layout: A4 width (794 css px), print media emulated; the page must not overflow and the export view must paginate
+            cdp.call("Emulation.setDeviceMetricsOverride", width=794, height=1123, deviceScaleFactor=1, mobile=False)
+            cdp.call("Emulation.setEmulatedMedia", media="print")
+            for name, frag in (("print_first_screen", ""), ("print_export_card", scenarios(P)[3][1])):
+                cdp.call("Page.navigate", url="about:blank")
+                cdp.events.clear()
+                cdp.call("Page.navigate", url=f"file://{html_path}{frag}")
+                cdp.wait_event("Page.loadEventFired")
+                cdp.evaluate("new Promise(function(r){setTimeout(r,500)})")
+                m = cdp.evaluate(MEASURE_JS.replace("__REQ__", "794"))
+                pdf = cdp.call("Page.printToPDF", paperWidth=8.27, paperHeight=11.69, printBackground=True, preferCSSPageSize=True)
+                raw = base64.b64decode(pdf["data"])
+                m.update({"requested": 794, "scenario": name, "mobile": False, "overflow": m["scrollWidth"] > 794 or m["innerWidth"] > 794, "pdf_pages": len(re.findall(rb"/Type\s*/Page[^s]", raw)), "pdf_bytes": len(raw)})
+                if shots and name == "print_export_card":
+                    (shots / "export_card_print.pdf").write_bytes(raw)
+                out.append(m)
+            cdp.call("Emulation.setEmulatedMedia", media="")
+        finally:
+            cdp.close()
+    return out
+
+
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0], formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("command", nargs="?", choices=["run", "check", "positions"], help="run: write the view; check: exit 1 if a file is stale; positions: print one TSV line per card x need with the inputs and the position (for re-derivation)")
+    ap.add_argument("command", nargs="?", choices=["run", "check", "positions", "titles", "viewports"], help="run: write the view; check: exit 1 if a file is stale; positions: print one TSV line per card x need with the inputs and the position (for re-derivation); titles: report (or with --refresh, fill) the source-title cache; viewports: measure the page at 360/390/768/1280 px with a real device-metrics emulation")
     ap.add_argument("--dr", type=Path, default=DEFAULT_DR, help="drug_repurposing directory (default: the module)")
     ap.add_argument("--source", choices=list(SOURCES), default=None,
                     help="run: full (default) embeds every row, written to view/index.html; shareable embeds only allowlisted rows (view/shareable_sources.json), written to view/index_shareable.html. check: both unless given")
     ap.add_argument("--out", type=Path, default=None, help="output file (default: <dr>/view/index.html or index_shareable.html); with check and no --source, only valid for one source")
+    ap.add_argument("--refresh", action="store_true", help="titles: fetch the missing titles (NCBI esummary, keyless, one call per 100 ids, no e-mail or tool parameter) into view/source_titles.json")
+    ap.add_argument("--refetch", action="store_true", help="titles --refresh: fetch every referenced PMID again, not only the missing ones")
+    ap.add_argument("--shots", type=Path, default=None, help="viewports: directory for screenshots (omit for measurements only)")
     a = ap.parse_args(argv)
     if not a.command:
         ap.print_help()
         return 0
+    if a.command == "titles":
+        ids = referenced_pmids(a.dr)
+        if a.refresh:
+            doc = refresh_titles(a.dr, ids, refetch=a.refetch)
+            have = doc["titles"]
+        else:
+            have = (jload(a.dr / TITLES_NAME).get("titles") if (a.dr / TITLES_NAME).exists() else {}) or {}
+        miss = [i for i in ids if i not in have]
+        print(f"{len(ids)} referenced PMIDs; {len(ids) - len(miss)} titled in {TITLES_NAME}; {len(miss)} without a title" + (": " + ", ".join(miss) if miss else ""))
+        return 0 if (not miss or not a.refresh) else 1
+    if a.command == "viewports":
+        src = a.source or "shareable"
+        out = a.out or (a.dr / "view" / OUT_NAME[src])
+        if not find_chromium():
+            print("SKIP: no Chromium binary found; no viewport was measured")
+            return 0
+        res = measure_viewports(out.resolve(), a.shots)
+        print("requested\tmobile_emulation\tinnerWidth\tscrollWidth\tvisualViewport\toverflow\tscenario\tnote")
+        bad = 0
+        for m in res:
+            bad += bool(m["overflow"])
+            print(f'{m["requested"]}\t{m["mobile"]}\t{m["innerWidth"]}\t{m["scrollWidth"]}\t{m["visualViewportWidth"]}\t{"OVERFLOW" if m["overflow"] else "ok"}\t{m["scenario"]}\t' + ("; ".join(m["offenders"]) or (f'pdf pages {m["pdf_pages"]}' if "pdf_pages" in m else "")))
+        return 1 if bad else 0
     if a.command == "positions":
         cur = build_payload(a.dr, a.source or "full")["cur"]
         nm = {n["id"]: n for n in cur["needs"]}
