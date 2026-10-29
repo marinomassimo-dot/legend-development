@@ -43,7 +43,7 @@ index fcb6cd25..d5f21bf4 100644
 +     "comparison": "medium composition (a condition, not a comparison)",
 +     "readout": "ACSF composition as printed",
 +     "readout_level": "functional",
-+     "direction_observed": "not applicable (bursting occurs at a magnesium-containing bath)",
++     "direction_observed": "not applicable (incubation ACSF 1.3 mM MgSO4; recording perfusate not stated)",
 +     "limits": "That the bath during recording equals the incubation ACSF is an inference carried by the manifest, not a sentence of the paper. The extracellular potassium is 3.5 mM, slightly above the common 2.5 mM, which favours excitability in every genotype alike.",
 +     "locators": [
 +      {
@@ -75,7 +75,7 @@ index fcb6cd25..d5f21bf4 100644
      "rationale": "A perturbation result, not a reversal inference: blocking NMDAR with d-APV abolished the burst in the WWOX-deficient slice (one drug, one preparation).",
      "certainty": "supported_in_WWOX_mouse_model for the tool compound; unknown for any clinically used antagonist",
 -    "do_not_assume": "Full competitive block is not a partial block. Memantine and perampanel were not found to have been given to a WWOX system in the sources read. Chronic NMDAR block may cost activity-dependent myelination (unmeasured)."
-+    "do_not_assume": "Full competitive block is not a partial block. Memantine and perampanel were not found to have been given to a WWOX system in the sources read. Chronic NMDAR block may cost activity-dependent myelination (unmeasured). Raising extracellular Mg2+ is the physiological way to lower NMDAR gain, but no Mg2+ manipulation has been done in a WWOX system, the slice already bursts at a magnesium-containing bath (O7), and the one mouse study read found that an oral magnesium sulfate left cerebrospinal-fluid magnesium unchanged: do not equate a supplement with a bath concentration, and do not treat the open-label infant trials of magnesium sulfate with ACTH as evidence about this node."
++    "do_not_assume": "Full competitive block is not a partial block. Memantine and perampanel were not found to have been given to a WWOX system in the sources read. Chronic NMDAR block may cost activity-dependent myelination (unmeasured). Raising extracellular Mg2+ is the physiological way to lower NMDAR gain, but no Mg2+ manipulation has been done in a WWOX system, the incubation ACSF already contains magnesium and the recording bath is not stated (O7), and the one mouse study read found that an oral magnesium sulfate left cerebrospinal-fluid magnesium unchanged: do not equate a supplement with a bath concentration, and do not treat the open-label infant trials of magnesium sulfate with ACTH as evidence about this node."
     },
     "counter_evidence": [
      "Only a full competitive block (d-APV) has been tried; whether the dependence is permissive or a gain is untested.",
@@ -83,7 +83,7 @@ index fcb6cd25..d5f21bf4 100644
      "One adult WWOX case on perampanel plus six drugs had no sustained benefit (n 1).",
 -    "Pannexin-1 blocker arm went the wrong way untested (map N-16); gap-junction node withdrawn pending occlusion."
 +    "Pannexin-1 blocker arm went the wrong way untested (map N-16); gap-junction node withdrawn pending occlusion.",
-+    "Oral magnesium in the only controlled infant trial read (West syndrome, open label, 48 analysed) did not change seizure control (p 0.69); the positive randomised signal used intravenous magnesium sulfate with ACTH and is abstract-level.",
++    "In the one randomised open-label infant trial read with an oral phase (West syndrome, 48 analysed; three days of intramuscular magnesium sulfate then oral, ACTH and antiseizure drugs in both arms) magnesium did not change seizure control (p 0.69); the positive randomised signal used intravenous magnesium sulfate with ACTH and is abstract-level.",
 +    "The magnesium arithmetic gives a modest reduction for a modest rise in extracellular Mg2+, against the complete block of d-APV."
     ],
     "sources": {

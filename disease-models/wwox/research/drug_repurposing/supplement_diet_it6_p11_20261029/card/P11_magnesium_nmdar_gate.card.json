@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "7b25423bd74c9cef65ee49ece60e116eb1f22b086633272eec7956e775610b52",
+  "input_sha256": "2887a04835dd4f6f8d0098094c6d589f1606fe50717838255aa90b88246ffb1c",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -110,7 +110,7 @@
           "cell_type": "layer II/III neocortex, local field potential and pyramidal-cell patch",
           "developmental_stage": "juvenile, about two weeks of age (as printed; not re-derived here)"
         },
-        "measured_result_note": "Wild type 0 of 11 slices, heterozygote 4 of 23, knockout 36 of 42, all in an ACSF that contains magnesium (manifest entries[21]; the recording perfusate is not stated separately from the incubation ACSF, so that the bath was the same is an inference carried by the manifest, not a sentence of the paper).",
+        "measured_result_note": "Wild type 0 of 11 slices, heterozygote 4 of 23, knockout 36 of 42, slices incubated in an ACSF that contains magnesium (manifest entries[21]; the recording bath is not stated separately from the incubation ACSF, so that the bath was the same is an inference carried by the manifest, not a sentence of the paper). The incidence is cited in the paper to Repudi et al. 2021 from the same group; overlap between the papers was not checked.",
         "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
         "receipt": "FTR-20260810-34634460-02"
       },
@@ -130,7 +130,7 @@
           "cell_type": "layer II/III neocortex, local field potential and pyramidal-cell patch",
           "developmental_stage": "juvenile, about two weeks of age (as printed; not re-derived here)"
         },
-        "measured_result_note": "Table 1: wild type -79.25, heterozygote -75.51, knockout -73.62 mV; the text states the knockout pyramidal neurons were depolarised against wild type. The Discussion adds that the in vitro preparation holds neurons more hyperpolarised than in vivo. Cell numbers 13, 15 and 40 neurons from 5, 6 and 15 animals.",
+        "measured_result_note": "Table 1 (liquid junction potential not corrected, Methods 5.3): wild type -79.25, heterozygote -75.51, knockout -73.62 mV; the text states the knockout pyramidal neurons were depolarised against wild type. The Discussion adds that the in vitro preparation holds neurons more hyperpolarised than in vivo. Cell numbers 13, 15 and 40 neurons from 5, 6 and 15 animals.",
         "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
         "receipt": "FTR-20260810-34634460-02"
       },
@@ -230,7 +230,7 @@
           "cell_type": "children 3 months to 5 years",
           "developmental_stage": "UNKNOWN"
         },
-        "measured_result_note": "Open-label randomised, 52 recruited and 48 analysed per protocol, comparator syrup held calcium and vitamin D without magnesium, no blinding. Seizure control p 0.69 and development p 0.09 (no difference); EEG improvement p 0.04 in the Results and p 0.003 in the Discussion (internal inconsistency). No post-treatment serum magnesium is reported in the text read although the Discussion says supplementation raised it.",
+        "measured_result_note": "Open-label randomised, 52 recruited and 48 analysed per protocol, comparator syrup held calcium and vitamin D without magnesium, no blinding. Seizure control p 0.69 and development p 0.09 (no difference); EEG improvement p 0.04 in the Results and p 0.003 in the Discussion (internal inconsistency). No post-treatment serum magnesium is reported in the text read although the Discussion says supplementation raised it. The EEG p value is not reproducible from Table 2 (about 0.10 by a Fisher test), EEG denominators differ (26 and 22), and Table 3 margins disagree with Table 2.",
         "evidence_scope": "OTHER_DISEASE_PRECEDENT"
       },
       {
@@ -325,7 +325,7 @@
           "Dependence of bursting on NMDAR is permissive as far as measured: the paper says 'a requirement', no NMDAR current or magnesium sensitivity was measured, and the slice already bursts in a medium that contains magnesium.",
           "The magnesium arithmetic (README) gives a modest effect for a modest rise: a full competitive block removes the burst, a graded rise in an ion that is already present removes only part of the residual conductance; whether the burst is threshold-like enough to follow is unknown.",
           "In the one mouse study read, an oral magnesium salt raised serum magnesium and left cerebrospinal-fluid magnesium unchanged; only the threonate raised it, by about a third, in healthy mice, six per subgroup.",
-          "The only controlled infant data for oral magnesium (open label, 48 analysed) found no difference in seizure control; the positive randomised signal (38 infants, abstract only) used intravenous magnesium sulfate with ACTH, which is a prescription route and not a supplement.",
+          "The one randomised open-label infant trial read with an oral phase (three days of intramuscular magnesium sulfate then oral, ACTH and antiseizure drugs in both arms; 48 analysed) found no difference in seizure control; the positive randomised signal (38 infants, abstract only) used intravenous magnesium sulfate with ACTH, which is a prescription route and not a supplement.",
           "Mechanism is not established in the infant trials: they do not show that NMDAR block explains any effect.",
           "One WOREE case received vitamin B6 and zonisamide without relief (abstract-level, n of 1): nothing in the WWOX record says a mineral or vitamin deficiency exists to be repleted."
         ],
@@ -363,7 +363,7 @@
       "Dependence of bursting on NMDAR is permissive as far as measured: the paper says 'a requirement', no NMDAR current or magnesium sensitivity was measured, and the slice already bursts in a medium that contains magnesium.",
       "The magnesium arithmetic (README) gives a modest effect for a modest rise: a full competitive block removes the burst, a graded rise in an ion that is already present removes only part of the residual conductance; whether the burst is threshold-like enough to follow is unknown.",
       "In the one mouse study read, an oral magnesium salt raised serum magnesium and left cerebrospinal-fluid magnesium unchanged; only the threonate raised it, by about a third, in healthy mice, six per subgroup.",
-      "The only controlled infant data for oral magnesium (open label, 48 analysed) found no difference in seizure control; the positive randomised signal (38 infants, abstract only) used intravenous magnesium sulfate with ACTH, which is a prescription route and not a supplement.",
+      "The one randomised open-label infant trial read with an oral phase (three days of intramuscular magnesium sulfate then oral, ACTH and antiseizure drugs in both arms; 48 analysed) found no difference in seizure control; the positive randomised signal (38 infants, abstract only) used intravenous magnesium sulfate with ACTH, which is a prescription route and not a supplement.",
       "Mechanism is not established in the infant trials: they do not show that NMDAR block explains any effect.",
       "One WOREE case received vitamin B6 and zonisamide without relief (abstract-level, n of 1): nothing in the WWOX record says a mineral or vitamin deficiency exists to be repleted."
     ],
