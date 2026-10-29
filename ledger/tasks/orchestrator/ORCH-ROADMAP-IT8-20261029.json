@@ -78,9 +78,21 @@
      "owner": "orchestrator"
     }
    ]
+  },
+  "OBJ_F_RANKING": {
+   "order": 6,
+   "steps": [
+    {
+     "step": "P9 provisional dynamic ranking of interventions (operator addition 2026-10-29): inventory, per-objective views, readable criteria, pathway contribution/direction, Top-10 with explanations, version trace, integration in the view, independent verification of top-position premises",
+     "status": "TODO",
+     "owner": "scientist-a"
+    }
+   ]
   }
  },
- "DECISIONS_TAKEN": [],
+ "DECISIONS_TAKEN": [
+  "2026-10-29: operator addition P9 (graduatoria provvisoria e dinamica) queued without interrupting current packages; closing step P8 stays last."
+ ],
  "DEFAULTS_TAKEN": [],
  "STOP_LOG": []
 }
