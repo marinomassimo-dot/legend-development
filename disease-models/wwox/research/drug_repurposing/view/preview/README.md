@@ -56,3 +56,15 @@ Measured with `python3 -B framework/scripts/repurposing_view.py viewports --shot
 | `10_it6p13_brief_390px.png`, `_1280px`, `10_it6p13_brief_print_A4.pdf` | The `#brief=` view of the longest synthesis: eight numbered fields, data date and catalogue build as two separate dates, pointer to the full dossier |
 | `10_it6p13_evidence_graph_360px.png`, `_1280px` | The five chains as inline SVG; at 360 px the figure scrolls inside its own container, the page does not |
 | `10_it6p13_work_order_390px.png`, `_1280px` | Work order per need inside the priorities section, with the research-update date apart from the catalogue date |
+
+## IT7 P7 additions (selection funnel, hypotheses, predictive test and contexts, printable sections)
+
+Measured with `python3 -B framework/scripts/repurposing_view.py viewports --shots DIR` on the shareable build. Scenarios `selection`, `hypotheses`, `predictive`, `contexts`, `section_selection` and `section_predictive` run at every viewport: innerWidth equals the requested width and scrollWidth does not exceed it at 360 and 390 with mobile emulation (360/360, 390/390), at 768 (753 with the scrollbar) and at 1280 (1265). A4 print, through the `#section=` routes: selection 4 pages, hypotheses 10 pages, predictive test with contexts 7 pages.
+
+| File | What to look at |
+|---|---|
+| `11_it7p7_selection_390px.png`, `_1280px` | The funnel: present in the catalogue against evaluated, then the five steps with unit, denominator and the unknown share with its reasons |
+| `11_it7p7_hypotheses_390px.png`, `_1280px` | Nine hypotheses, each with priority, model position and observed evidence in separate blocks |
+| `11_it7p7_predictive_390px.png`, `_1280px`, `11_it7p7_contexts_360px.png` | The exploratory predictive test and the context concordance table |
+| `11_it7p7_section_*_print_A4.pdf` | Each new section printed on its own |
+

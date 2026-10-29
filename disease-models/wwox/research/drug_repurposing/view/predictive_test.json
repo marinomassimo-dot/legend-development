@@ -1,0 +1,142 @@
+{
+ "schema": "legend.wwox.predictive_test/1",
+ "authoring": "Hand-authored from the verified README of the IT7 P3 comparison. The printed numbers are read at build time from network_comparison_it7_p3_20261029/results/*.json; every 'expect' value must equal the data rounded as stated, or the build fails. Verdict words are the pre-registered ones (with the verifier's reading for the signature route). Exploratory: a computational result is not therapeutic efficacy. No percentile of the model and no probability is carried. The second draw of the P47T matched null (0.396, verifier) is checked at build against the verifier's report.",
+ "exploratory": true,
+ "question": "Among pilot compound families, does a signed external network, or a transcriptional-signature route, rank compounds by their observed opposition of a six-gene glycolysis/lactate module in held-out neuron-like LINCS contexts better than an unsigned frequency-corrected overlap reference?",
+ "question_it": "Tra le famiglie di composti del sottoinsieme pilota, una rete esterna con segno (o la via della firma trascrizionale) ordina i composti per l'opposizione osservata a un modulo di sei geni glicolisi/lattato, in contesti neurali LINCS tenuti fuori dal calcolo, meglio di un riferimento di sovrapposizione senza segno?",
+ "methods": [
+  {
+   "id": "REF-1",
+   "it": "riferimento senza segno: sovrapposizione dei bersagli del composto con i regolatori di primo ordine dei geni, corretta per frequenza"
+  },
+  {
+   "id": "NET-EXT",
+   "it": "rete con segno costruita solo da risorse esterne (propagazione, nessun dato WWOX dentro)"
+  },
+  {
+   "id": "NET-WWOX",
+   "it": "la stessa rete con quattro archi HIF1A curati aggiunti"
+  },
+  {
+   "id": "SIG",
+   "it": "via della firma trascrizionale: opposizione del modulo in cellule simili ai progenitori, valutata in cellule simili ai neuroni"
+  }
+ ],
+ "preregistration": {
+  "before_values": true,
+  "amendment_before_values": true
+ },
+ "threshold": 0.15,
+ "minimum_detectable_effect": 0.157,
+ "universe": {
+  "families_path": "nU",
+  "signatures_path": "n_signatures",
+  "pilot_families": 595
+ },
+ "verdicts": [
+  {
+   "id": "primary",
+   "comparison_it": "Rete con segno (solo risorse esterne) contro riferimento senza segno",
+   "verdict": "no_added_value",
+   "numbers": [
+    {
+     "id": "rho NET-EXT",
+     "path": "rho.NET-EXT",
+     "expect": 0.047,
+     "digits": 3
+    },
+    {
+     "id": "rho REF-1",
+     "path": "rho.REF-1",
+     "expect": -0.085,
+     "digits": 3
+    }
+   ],
+   "reopen_it": "una misura di risposta del composto in un sistema neurale umano privo di WWOX, con replica; potenza dal dato ChEMBL di attività; fase II delle firme; un modulo più grande e replicato"
+  },
+  {
+   "id": "S2",
+   "comparison_it": "Via della firma trascrizionale contro riferimento senza segno",
+   "verdict": "not_detected_not_excluded",
+   "numbers": [
+    {
+     "id": "rho SIG",
+     "path": "rho.SIG",
+     "expect": 0.143,
+     "digits": 3
+    },
+    {
+     "id": "intervallo di confidenza al 90% di SIG, estremo inferiore",
+     "path": "bootstrap90.SIG.0",
+     "expect": 0.039,
+     "digits": 3
+    },
+    {
+     "id": "intervallo di confidenza al 90% di SIG, estremo superiore",
+     "path": "bootstrap90.SIG.1",
+     "expect": 0.243,
+     "digits": 3
+    }
+   ],
+   "reopen_it": "le stesse condizioni, più una firma più grande di sei geni"
+  },
+  {
+   "id": "S3",
+   "comparison_it": "Rete arricchita con archi WWOX contro rete solo esterna",
+   "verdict": "no_added_value",
+   "numbers": [
+    {
+     "id": "rho NET-WWOX meno rho NET-EXT",
+     "path": "rho.NET-WWOX",
+     "minus": "rho.NET-EXT",
+     "expect": -0.0015,
+     "digits": 4
+    }
+   ],
+   "reopen_it": "solo se esistono archi WWOX curati che raggiungono i bersagli dei composti"
+  },
+  {
+   "id": "E1",
+   "comparison_it": "Il modulo si trasferisce a un contrasto indipendente di perdita di WWOX (topo P47T, ippocampo)",
+   "verdict": "inconclusive",
+   "source": "e1",
+   "numbers": [
+    {
+     "id": "contrasto D del modulo",
+     "path": "regions.HPC.D",
+     "expect": 0.329,
+     "digits": 3
+    },
+    {
+     "id": "95° percentile della distribuzione nulla appaiata, circa 0,39 (estrazione del produttore)",
+     "path": "regions.HPC.null_p95",
+     "expect": 0.389,
+     "digits": 3
+    },
+    {
+     "id": "p esatto a una coda",
+     "path": "regions.HPC.exact_p_one_sided",
+     "expect": 0.06,
+     "digits": 3
+    }
+   ],
+   "reopen_it": "un contrasto umano neurale privo di WWOX, replicato, con lettura proteica o di attività appaiata; una coorte P47T più grande",
+   "external_values": [
+    {
+     "id": "stesso percentile, estrazione del verificatore",
+     "value": 0.396,
+     "digits": 3,
+     "check_file": "locator_audits/2026-10-29_it7_p3_verifier.md",
+     "check_text": "0.396"
+    }
+   ]
+  }
+ ],
+ "limits_it": [
+  "Esplorativo: un risultato computazionale non è efficacia terapeutica.",
+  "Cellule neurali selvatiche, non cellule prive di WWOX; livello del trascritto, non dell'attività.",
+  "Le famiglie sono scelte per disponibilità di dati, non per un'analisi del catalogo; una sola concentrazione e poche misure nel tempo.",
+  "Nessuna potenza né esposizione tissutale entra in alcun metodo; la soglia registrata è rho 0,15 e il minimo effetto rilevabile è circa 0,157: effetti più piccoli non sono esclusi.",
+  "Il modulo non è dimostrato come tratto riproducibile della perdita di WWOX: i risultati sui composti non hanno rilevanza WWOX dimostrata."
+ ]
+}
