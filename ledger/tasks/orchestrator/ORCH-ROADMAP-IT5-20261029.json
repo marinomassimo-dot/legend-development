@@ -96,9 +96,9 @@
     },
     {
      "step": "P13 shareable version and proof of embedded content: visible text, embedded JSON, hidden filter data, exported cards, standalone HTML, PDF, comparisons; provenance of the card text itself; apply the P1 findings; where a source allows reuse with attribution or share-alike evaluate honouring it before excluding; reviewable static package, links usable outside the local folder, transparent comparison with the full research version; a concrete distribution mode (external publication needs the authority and does not block the local preview)",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "scientist-a",
-     "evidence": "landed: repurposing_shareable_audit.py (audit-shareable --dynamic, mutation-tested), package command, view/shareable_package/ (NOTICE, COMPARISON, LICENSES, class_b ChEMBL CC BY-SA 3.0 file with credit), NCI counts-only, a real leak (two alias-risk rows) found and fixed; card text provenance check vs 964 local texts; independent leak scan running"
+     "evidence": "shareable package + audit-shareable (mutation-tested) landed; independent leak scan: no identifier leak, three findings (B/C-only pairs in prose, pair status classes, catalogue-only names) repaired and the checker blind spots closed (91 view tests); NCI counts-only; ChEMBL as separate CC BY-SA 3.0 file; no external publication done"
     }
    ]
   },
@@ -118,8 +118,9 @@
    "steps": [
     {
      "step": "F1 integrate progressively and publish validated increments during the session; final battery and checks on the final SHA (not the iteration-4 battery); classify every failure; worktree cleanup (clean, integrated, unused); roadmap section updated with real statuses; final push confirmed by ls-remote BEFORE the mandate is marked COMPLETE",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "IN_PROGRESS",
+     "owner": "orchestrator",
+     "evidence": "README Roadmap iteration 5 written; final battery as a tagged mandate_watch job on the final SHA, then validated push"
     },
     {
      "step": "F2 session closings once at the end of the whole queue (self-eval, capability scout, takeaways) and the final report in Italian with the P1-P14 table",
