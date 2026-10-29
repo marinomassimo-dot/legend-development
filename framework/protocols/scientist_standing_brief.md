@@ -204,3 +204,16 @@ ran; the self-eval verdict and the micro-upgrade — and make sure everything a 
 is also in durable state (the diagnosis under `session_evaluations/`, the task JSON, the
 manifests). Adversarial, not insubordinate: `DISAGREEMENT_UNRESOLVED`, explained, is a legitimate
 outcome. The finding you most want to be true is the one to re-derive from the source.
+
+## Before you commit new files (added 2026-10-29, iteration 6)
+
+Agent-written files tripped repository-wide guards in two consecutive iterations because the writing
+agent never ran them. Before the last commit of a task, in your worktree:
+
+- `python3 -B scripts/test_release_surface.py` — a Python file with a shebang line must be executable
+  (`chmod +x`) or lose the shebang; `python3 -B scripts/test_documented_commands.py` runs every
+  executable script with `--help`, so a script must answer `--help` without doing its work.
+- `python3 -B scripts/test_structured_data_integrity.py` — every TSV or CSV row has the same width; put
+  tallies and notes in a sibling file or on stderr, never as trailing lines of the table.
+- Staged receipt ids: before staging `FTR-<date>-<pmid>-NN`, list the ledger and the other actors'
+  staging directories and take the next free `NN`; `record_staged_receipts.py` now refuses on a collision.
