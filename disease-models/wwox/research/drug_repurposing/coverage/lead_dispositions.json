@@ -87,6 +87,26 @@
    "owner": "Scientist (measurement; not done here)",
    "card": null,
    "record": "ptc_readthrough_it4_e1a_20261028/README.md"
+  },
+  {
+   "id": "LD-007",
+   "need": "NEED-NEUROINFLAMMATION-GLIA",
+   "subject": "IL-1-axis and JAK-STAT agents as a class (IL-1 receptor antagonist via IL1R1; caspase-1 inhibitor via CASP1; IL-1beta antibodies; NLRP3 inhibitor; JAK2 inhibitors)",
+   "catalogue_ids": [
+    "CAT:CHEMBL1201570",
+    "CAT:CHEMBL2107819",
+    "CAT:CHEMBL1201834",
+    "CAT:CHEMBL3989943",
+    "CAT:CHEMBL1789941",
+    "CAT:CHEMBL2105759"
+   ],
+   "decision": "abstention",
+   "why": "The sign of the glial difference conflicts between species (null and P47T mouse excess; Wwox-mutant rat deficit from PND 5; human organoid no reactive programme), the time order of gliosis and seizures was never measured in the same animals, and every verified compound precedent is acute or post-infectious and uncontrolled or uninformative for long-term outcome, with acute seizure-control reports for anakinra and no usable trial-level VX-765 result (abstract level, NOT WWOX EVIDENCE). Catalogue links exist only as exploration rows (no stated direction for 439 of the 642 non-excluded intervention-target rows; 738 intervention-target rows before 96 exclusions).",
+   "reopening_condition": "a time course of glial density against first spike in a Wwox-deficient model showing glia above wild type before the first spike, or any glial endpoint after a compound in a Wwox-deficient system",
+   "next_experiment": "time course P5 to P17 with simultaneous recording and glial density in cortex and hippocampus (cycle README section 12); no compound arm",
+   "owner": "Scientist (wet-lab design; not done here)",
+   "card": "cards/J01_glial_reactivity_modulation.packet.json",
+   "record": "partial_benefit_it6_p10_20261029/README.md#12-the-next-experiment-that-discriminates"
   }
  ]
 }

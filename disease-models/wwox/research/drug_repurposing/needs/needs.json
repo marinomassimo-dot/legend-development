@@ -4546,21 +4546,260 @@
       }
      ],
      "locator_status": "MANIFEST"
+    },
+    {
+     "id": "O4",
+     "statement": "lde/lde rat cerebral cortex: GFAP-positive and Iba1-positive cells per square millimetre are LOWER than in wild type, GFAP from the first age measured (about 470 against 255 at PND 5, then 620 against 330, 1100 against 540, 1570 against 850), Iba1 equal at PND 5 and lower after; western expression is lower for GFAP only at PND 15 and for Iba1 at all ages; at least three males per genotype per age; the authors name the contrast with the Wwox-knockout mouse hippocampus. Audiogenic seizures in this strain are evoked after PND 16 (Discussion, citing earlier papers, not re-read). Re-opened at the source 2026-10-29 (Figure 5 at native size).",
+     "model_type": "other_animal_model",
+     "species": "rat",
+     "genotype": "lde/lde (13-base-pair exon 9 deletion) versus +/+ males",
+     "tissue_or_cells": "cerebral cortex",
+     "age_stage": "postnatal day 5, 10, 15, 21",
+     "comparison": "lde/lde against wild type, per age",
+     "readout": "GFAP-positive and Iba1-positive cell density; western expression of GFAP and Iba1",
+     "readout_level": "protein",
+     "direction_observed": "decreased",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "limits": "Opposite sign to O1 to O3; species, allele, region (cortex against hippocampus), assay (cell density against area fraction) and age window all differ and are not reconciled; the Iba1 western and the Iba1 counts disagree in size at PND 10 (about 0.04 against 0.9 on the blot, about 135 against 190 cells); t-tests per age without correction; litters were reduced to under five pups from about PND 5.",
+     "pmid": "31340538",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID31340538.json",
+       "entry": 4,
+       "anchor": "reduced GFAP-positive and Iba1-positive measures"
+      },
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID31340538.json",
+       "entry": 7,
+       "anchor": "apparently in contrast"
+      },
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID31340538.json",
+       "entry": 9,
+       "anchor": "litter-size intervention"
+      },
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/partial_benefit_it6_p10_20261029/README.md",
+       "anchor": "Figure 5 as re-opened"
+      }
+     ],
+     "locator_status": "MANIFEST"
+    },
+    {
+     "id": "O5",
+     "statement": "Wwox protein is not detected in Iba1-positive microglia of the rat cortex and corpus callosum at PND 21 (it is in neurons, astrocytes and oligodendrocytes); astrocyte-specific (GFAP-Cre) and oligodendrocyte-specific (Olig2-Cre) deletions were scored for developmental delay, weight and survival and were reported as no phenotype, with no gliosis, EEG or seizure measurement reported for them in the passages read; the authors say a cell-autonomous astroglial function is not excluded.",
+     "model_type": "other_animal_model",
+     "species": "rat; mouse",
+     "genotype": "+/+ rat (localisation); Wwox flox/flox with GFAP-Cre or Olig2-Cre versus control (mouse)",
+     "tissue_or_cells": "cerebral cortex; whole animal",
+     "age_stage": "PND 21 (rat); P17 and survival (mouse)",
+     "comparison": "conditional knockout against control",
+     "readout": "Wwox immunoreactivity in microglia; delay, weight and survival after cell-type deletion",
+     "readout_level": "protein",
+     "direction_observed": "no change in the readouts scored",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "limits": "Single immunostaining for the microglial result; the astrocyte arm has nine knockout and eight control animals and was not scored for gliosis or EEG; the deletion is validated by immunofluorescence only.",
+     "pmid": "33914858",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID33914858.json",
+       "entry": 29,
+       "anchor": "FLAT NEGATIVE"
+      },
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID33914858.json",
+       "entry": 39,
+       "anchor": "THE AUTHORS STATE THE LIMIT OF THEIR OWN NEGATIVE"
+      },
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID31340538.json",
+       "entry": 5,
+       "anchor": "not immunostained with antibody to Wwox"
+      },
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/partial_benefit_it6_p10_20261029/README.md",
+       "anchor": "what was scored in the astrocyte-specific"
+      }
+     ],
+     "locator_status": "MANIFEST"
+    },
+    {
+     "id": "O6",
+     "statement": "Wwox-null mouse P20: GFAP percent area about 3.7 in wild type against about 23.7 in knockout, Iba1 percent area about 4.5 against about 7.6 (about six-fold against about 1.7-fold); the caption states no region; the earliest recorded spike activity in the same paper starts at about P14 (continuous ECoG from about P14), so no glial read and no recording exists before that age.",
+     "model_type": "mouse_constitutive_knockout",
+     "species": "mouse",
+     "genotype": "Wwox -/- versus wild type",
+     "tissue_or_cells": "brain (region not stated in the caption)",
+     "age_stage": "P20",
+     "comparison": "knockout against wild type",
+     "readout": "GFAP and Iba1 percent area",
+     "readout_level": "protein",
+     "direction_observed": "increased (GFAP much more than Iba1)",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "limits": "One age; error bars SD; the caption gives no region; no seizure or spike measure is made on the same animals.",
+     "pmid": "42422765",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json",
+       "entry": 44,
+       "anchor": "S7D % GFAP area at P20"
+      },
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/partial_benefit_it6_p10_20261029/README.md",
+       "anchor": "Figure S7 as re-opened"
+      }
+     ],
+     "locator_status": "MANIFEST"
+    },
+    {
+     "id": "O7",
+     "statement": "WWOX-deficient human cerebral organoid (week 15, four knockout against two wild-type libraries, one laboratory): microglial markers are at or near zero; of seven reactive-pan genes above 5 CPM in any library only VIM and CD44 are raised (both radial-glia or progenitor associated), SERPINA3, TIMP1 and SOCS3 are lower, C3 and STAT3 not separated; IL1B, IL6 and TNF are not informative (under 20 raw counts in every library). Rule and predictions were declared before the data were opened.",
+     "model_type": "human_cerebral_organoid_knockout",
+     "species": "human",
+     "genotype": "WWOX knockout versus wild type (engineered; NOT a patient allele)",
+     "tissue_or_cells": "cerebral organoid, bulk RNA",
+     "age_stage": "culture week 15",
+     "comparison": "knockout against wild type, counts per million",
+     "readout": "reactive-astrocyte, microglial and cytokine transcripts",
+     "readout_level": "transcript",
+     "direction_observed": "no reactive programme; progenitor-associated VIM and CD44 raised",
+     "evidence_scope": "COMPUTATIONAL_RESULT",
+     "limits": "Descriptive, six libraries, no test; no microglia and no behavioural seizures in this tissue, so it cannot test a microglial or seizure-driven mechanism; a transcript is not a protein; the deposit has a known maturity confound.",
+     "pmid": null,
+     "locators": [
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/partial_benefit_it6_p10_20261029/organoid_glial_panel_classified.tsv",
+       "anchor": "reactive_pan"
+      },
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/partial_benefit_it6_p10_20261029/prediction_declared_20261029.md",
+       "anchor": "Decision rule"
+      }
+     ],
+     "locator_status": "DOCUMENT"
+    },
+    {
+     "id": "O8",
+     "statement": "P47T homozygous mouse thresholded differential-expression sheets (forebrain regions beyond a two-fold ratio): Gfap, Aif1, Il1b, Tnf, Il6, Lcn2, Serpina3n, Nlrp3, Stat3 and Socs3 are not listed in any region; Serpina3g and Serpina3h are higher in PFC and CTX, C3 is lower in HPC; Oas1f is higher by 6.0 to 7.3 (log2) in all three forebrain regions. Absence from a thresholded list is not a measurement of no change.",
+     "model_type": "mouse_missense_knockin",
+     "species": "mouse",
+     "genotype": "P47T/P47T versus wild type",
+     "tissue_or_cells": "PFC, CTX, HPC, CB",
+     "age_stage": "adult (age not carried here)",
+     "comparison": "homozygote against wild type",
+     "readout": "thresholded RNA-seq differential-expression rows",
+     "readout_level": "transcript",
+     "direction_observed": "canonical reactive and cytokine transcripts not among the listed rows",
+     "evidence_scope": "COMPUTATIONAL_RESULT",
+     "limits": "Derived text of the supplementary sheets; thresholds not identical across regions; the cerebellum sheet does not list Il1b or Tnf although the paper reports both at least two-fold higher there by qPCR (reason not established); the regulator-level inflammatory inference of the paper is built on the listed rows and is not a cytokine measurement.",
+     "pmid": "36828035",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36828035.json",
+       "entry": 41,
+       "anchor": "region-wide"
+      },
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36828035.json",
+       "entry": 67,
+       "anchor": "986 positive and 522 negative"
+      },
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/partial_benefit_it6_p10_20261029/p47t_thresholded_query.tsv",
+       "anchor": "Gfap"
+      }
+     ],
+     "locator_status": "MANIFEST"
+    },
+    {
+     "id": "O9",
+     "statement": "P47T heterozygote, unchallenged: Iba1 and Gfap immunostaining is reported as showing no differences from wild type, declared 'data not shown'; an unverifiable negative that may not be cited as heterozygote normality.",
+     "model_type": "mouse_missense_knockin",
+     "species": "mouse",
+     "genotype": "P47T/WT versus WT/WT",
+     "tissue_or_cells": "brain",
+     "age_stage": "adult",
+     "comparison": "heterozygote against wild type",
+     "readout": "Iba1 and Gfap immunostaining",
+     "readout_level": "protein",
+     "direction_observed": "no change reported, data not shown",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "limits": "Data not shown; no n, region or age carried.",
+     "pmid": "36828035",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36828035.json",
+       "entry": 11,
+       "anchor": "UNVERIFIABLE NEGATIVE"
+      }
+     ],
+     "locator_status": "MANIFEST"
+    },
+    {
+     "id": "O10",
+     "statement": "Neuron-restricted deletion (Synapsin-Cre) at P17: among the top differentially expressed genes of cortex (4 control, 3 knockout) and hippocampus (2 v 3) are genes 'elicited during epileptic insults including activation of astrocytes'; the same mice have spontaneous tonic-clonic seizures from P9. Astrocytic Wwox is expected intact because the driver is neuronal (inferred, not stained; the paper shows intact Wwox in CC1+ oligodendrocytes only). Individual genes not tabulated.",
+     "model_type": "mouse_neuron_specific_knockout",
+     "species": "mouse",
+     "genotype": "Wwox flox/flox with Synapsin-Cre versus control",
+     "tissue_or_cells": "cortex and hippocampus, bulk RNA",
+     "age_stage": "P17",
+     "comparison": "knockout against control",
+     "readout": "top differentially expressed genes (heat map)",
+     "readout_level": "transcript",
+     "direction_observed": "astrocyte-activation-type genes among the differentially expressed (direction not tabulated)",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "limits": "Text statement of the authors; heat map not re-opened; very small n; no EEG-glia pairing.",
+     "pmid": "33914858",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID33914858.json",
+       "entry": 1,
+       "anchor": "MORE OPCs"
+      },
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/partial_benefit_it6_p10_20261029/README.md",
+       "anchor": "Repudi 2021, PMID 33914858, text of Results and Fig. 3 legend"
+      }
+     ],
+     "locator_status": "MANIFEST"
     }
    ],
    "inferred": [
-    "That the glial signal is at least partly secondary to neuronal dysfunction rather than an independent driver (neuron-restricted rescue lowers it, but the same rescue also normalises seizures and survival, so the lowering is indirect)."
+    "That the glial signal is at least partly secondary to neuronal dysfunction rather than an independent driver (neuron-restricted rescue lowers it, but the same rescue also normalises seizures and survival, so the lowering is indirect).",
+    "That the glial sign is not one sign: the null mouse and the P47T mouse show an excess, the rat shows a deficit from PND 5 (before the strain's sound-evoked seizures), and the human organoid shows neither; which of species, allele, region, assay or age window accounts for it is unmeasured. A development-delay-then-seizure-driven crossing is one way to reconcile them; it is a hypothesis, registered as such in the P10 cycle README, not an observation. A neuron-restricted deletion already shifts astrocyte-activation-type genes (O10), which fits a seizure-driven or neuron-derived route better than an astrocyte-intrinsic one, without separating those two.",
+    "That the glial excess is non-cell-autonomous for microglia (no Wwox detected in rat microglia); for astrocytes it is open (astrocyte-specific deletion was not scored for gliosis)."
    ],
    "intervention_direction": {
     "direction": "uncertain",
     "on": "glial activation / inflammatory signalling",
-    "rationale": "Glial activation is increased in two models, but part of it is a consequence of neuronal dysfunction (neuron-restricted rescue lowers it), so whether dampening it benefits function is untested.",
+    "rationale": "Glial activation is increased in two models, but part of it is a consequence of neuronal dysfunction (neuron-restricted rescue lowers it), so whether dampening it benefits function is untested. The sign of the glial difference itself conflicts between species (O4 against O1 to O3, O6), so the direction of any glial lever has no stated premise yet; the first use of this need is as a readout whose sign and time order against the first spike are measured (P10 cycle README, section 7).",
     "certainty": "unknown",
-    "do_not_assume": "The target is downstream of the target: treating it treats an effect; many anti-neuroinflammatory agents failed in neurodegeneration; no compound is identified in the public record."
+    "do_not_assume": "The target is downstream of the target: treating it treats an effect; many anti-neuroinflammatory agents failed in neurodegeneration; no compound is identified in the public record. Nor that an IL-1, caspase-1 or JAK-STAT precedent transfers: the verified precedents are acute or post-infectious and uncontrolled or uninformative for long-term outcome (anakinra in cryptogenic NORSE/FIRES: seizure control in up to 73 percent within two weeks in a pooled uncontrolled review of 75 patients, long-term disability common, and a 14-patient series with no demonstrated long-term benefit; minocycline in chronic FIRES, three patients, uninformative; VX-765 phase II efficacy unverifiable at trial level, the registry lists a safety primary outcome and no results; VX-765 had no effect in a rat infantile-spasms model), all abstract-level and NOT WWOX EVIDENCE."
    },
    "counter_evidence": [
     "Treats an effect (neuron-restricted rescue reduces gliosis); paediatric immunosuppression concerns; class-level only.",
-    "Many anti-inflammatories failed in neurodegenerative disease (other-disease precedent, T4)."
+    "Many anti-inflammatories failed in neurodegenerative disease (other-disease precedent, T4).",
+    "Opposite sign in the Wwox-mutant rat cortex (O4): glial cell density about half of wild type from PND 5; the authors of that paper state the contrast.",
+    "No reactive-astrocyte programme and no microglia in the WWOX-deficient human organoid (O7); canonical reactive and cytokine transcripts are not among the thresholded rows of the P47T mouse (O8, absence is not a measurement).",
+    "Glial direction is context-dependent in the abstracts read (abstract-level, NOT WWOX EVIDENCE): neuronal STAT3 deletion reduced glial activation and damage in neonatal hypoxia-ischaemia (PMID 26669927) and astrocyte uncoupling preceded seizures in a temporal-lobe-epilepsy model (PMID 25765328), so glial change can be upstream of seizures and a glial lever is not simply 'less gliosis'; the commonly stated protective role of reactive astrocytes was NOT verified here."
    ],
    "sources": {
     "cards": [],
@@ -4572,7 +4811,9 @@
      "R-06",
      "M10"
     ],
-    "documents": [],
+    "documents": [
+     "disease-models/wwox/research/drug_repurposing/partial_benefit_it6_p10_20261029/README.md"
+    ],
     "registry_ids": [
      "CLAIM 005",
      "CLAIM 006",
@@ -4600,6 +4841,14 @@
       "paper_registry_ids": [
        "PAPER 011"
       ]
+     },
+     {
+      "pmid": "31340538",
+      "paper_registry_ids": []
+     },
+     {
+      "pmid": "33914858",
+      "paper_registry_ids": []
      }
     ]
    },
@@ -4673,6 +4922,20 @@
      "hgnc_id": "HGNC:352",
      "hgnc_name": "allograft inflammatory factor 1",
      "target_kind": "readout_marker"
+    },
+    {
+     "symbol": "IL1R1",
+     "role": "interleukin 1 receptor type 1 (class-level; target of the IL-1 receptor antagonist; added because the two IL-1-axis agents with epilepsy exposure were not reachable from the need as written; no observation in this need measures it)",
+     "hgnc_id": "HGNC:5993",
+     "hgnc_name": "interleukin 1 receptor type 1",
+     "target_kind": "intervention_target"
+    },
+    {
+     "symbol": "CASP1",
+     "role": "caspase 1 (class-level; target of the caspase-1 inhibitors; added for the same reason; no observation in this need measures it)",
+     "hgnc_id": "HGNC:1499",
+     "hgnc_name": "caspase 1",
+     "target_kind": "intervention_target"
     }
    ],
    "pathways": [
@@ -4688,7 +4951,7 @@
     "status": "NOT_ASSESSED",
     "note": "Coverage of this need by catalogue compounds is not computed here; the repurposing module sets it."
    },
-   "notes": "No card exists for this need; the join's query Q-R-06 is the only machine route.",
+   "notes": "No card exists for this need in cards/; a card for the glial thread was written in the P10 cycle directory (J01_glial_reactivity_modulation) and is to be placed under cards/ by the orchestrator and then cited in sources.cards. The join's query Q-R-06 is the only machine route besides it. Added 2026-10-29 (P10): O4 to O10, two inferences, three counter-evidence lines, targets IL1R1 and CASP1.",
    "basis": "observed"
   },
   {
