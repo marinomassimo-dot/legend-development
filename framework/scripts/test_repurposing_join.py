@@ -957,6 +957,28 @@ class SupersededWordingGoneIT5Batch2(unittest.TestCase):
         self.assertIn("superseded explanation", cov)
 
 
+# --- the window-wording regression (iteration 7, P0b) -------------------------------------------------------------
+# A positive check that the qualified wording exists does not notice an ADDITIONAL active sentence that presents the
+# tested ages as a demonstrated therapeutic limit. This detector reads the ACTIVE sentences of a document: a sentence
+# that names the window (P0-P5 / P5) and asserts it as measured, critical or demonstrated, without the qualifier, is an
+# overreach. A sentence that quotes the old text and says it is superseded is a historical citation and is allowed.
+# It never bans a word: the same words are fine when qualified or quoted as history.
+_WINDOW_REF = re.compile(r"P0\s*[\u2013\u2014-]\s*P5|\bP5\b(?!\s*(?:redox|metabolism|/|state|conceptual|trafficking))", re.I)
+_WINDOW_ASSERT = re.compile(r"\b(critical|demonstrated|established|proven|definitive|measured (?:limit|boundary|window)|therapeutic (?:limit|window)|limit of|shown to (?:close|end))\b", re.I)
+_WINDOW_QUALIFIED = re.compile(r"ages tested|not a measured|not a demonstrated|was tested|that was tested|tested, not|not a definitive|never located|not measured|unmeasured|no after-onset", re.I)
+_WINDOW_HISTORY = re.compile(r"\b(earlier text|formerly|previously (?:read|stated)|read\b.{0,40}superseded|superseded|replaced|withdrawn|historical|was written)\b", re.I)
+
+
+def window_overreach(text: str) -> list:
+    """Active sentences that present the P0-P5 ages as a measured or demonstrated therapeutic limit."""
+    out = []
+    for sentence in re.split(r"(?<=\.)\s+|\n", text):
+        if _WINDOW_REF.search(sentence) and _WINDOW_ASSERT.search(sentence) \
+                and not _WINDOW_QUALIFIED.search(sentence) and not _WINDOW_HISTORY.search(sentence):
+            out.append(sentence.strip())
+    return out
+
+
 class SupersededWordingGoneIT6(unittest.TestCase):
     """BATCH_20261019_027: the iteration-6 results as the registries, ledgers, map and consumers must now state them.
 
@@ -1099,6 +1121,7 @@ class SupersededWordingGoneIT6(unittest.TestCase):
         wm = self.read("disease-models/wwox/registries/working_model_current.md")
         body = "\n".join(l for l in wm.splitlines() if not l.startswith("**Last update:**"))
         self.assertIn("early postnatal window tested (P0–P5 in mouse: ages tested, not a measured boundary)", wm)
+        self.assertEqual(window_overreach(body), [], "an active sentence presents the tested ages as a demonstrated limit")
         self.assertEqual(body.count("(early-window prevention in the null mouse; no after-onset mouse arm)"), 3)
         self.assertIn("`PREMISE_TAG: DEFAULT_FROM_TEXTBOOK` — an unsourced expert-sentiment sentence", wm)
         version = re.search(r"\*\*Version:\*\* (WM_v\S+)", wm).group(1)
@@ -1109,9 +1132,24 @@ class SupersededWordingGoneIT6(unittest.TestCase):
         self.assertIn("| **WM_v7.29** |", hist)
         narrative = self.read("disease-models/wwox/disease_model.md")
         self.assertIn("ages tested, not a measured boundary", narrative)
+        self.assertEqual(window_overreach(narrative), [])
+
+    def test_window_detector_allows_a_correct_conclusion_with_a_historical_quote(self):
+        good = self.read("disease-models/wwox/registries/working_model_current.md")
+        quoted = good + '\nThe 2026-10-28 text read "critical early postnatal window (P0–P5 in mouse)"; it was superseded by this update.\n'
+        self.assertEqual(window_overreach(quoted), [])
+
+    def test_window_detector_catches_an_active_overinterpretation_beside_the_correct_text(self):
+        good = self.read("disease-models/wwox/registries/working_model_current.md")
+        for bad in ("P5 is the experimentally demonstrated therapeutic limit of gene addition.",
+                    "The critical window closes at P5 in the mouse.",
+                    "Treatment after P5 was shown to fail: the limit of the window is established at P0–P5."):
+            self.assertEqual(window_overreach(good), [])
+            self.assertEqual(len(window_overreach(good + "\n" + bad + "\n")), 1, bad)
 
     def test_repaired_wording_of_the_review_is_in_place(self):
         m = self.read(self.SURFACES[0])
+        self.assertEqual(window_overreach(m), [], "the map presents the tested ages as a demonstrated limit")
         self.assertIn("read in this corpus (two mouse studies; a bounded search for inducible neural Wwox models found none)", m)
         self.assertIn("in part (partial, not normalised) for motor score and, at the high dose only, for gliosis", m)
         self.assertIn("insoluble pellet protein with no measurable activity (yeast and U2OS", m)
