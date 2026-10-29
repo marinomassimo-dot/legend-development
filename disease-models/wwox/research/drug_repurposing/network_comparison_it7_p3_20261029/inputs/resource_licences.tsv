@@ -1,0 +1,93 @@
+edge_table	resource	licence_per_OmniPath	purpose	sharing	rows_listing_it
+signor	SIGNOR	CC BY 4.0	commercial	free	55760
+signor	ProtMapper	CC BY 4.0	commercial	free	407
+signor	REACH_ProtMapper	CC BY 4.0	commercial	free	215
+signor	SPIKE_LC	CC BY 4.0	commercial	free	171
+signor	Sparser_ProtMapper	CC BY 4.0	commercial	free	167
+signor	SIGNOR_ProtMapper	CC BY 4.0	commercial	free	148
+signor	SPIKE	CC BY 4.0	commercial	free	117
+signor	Lit-BM-17	CC BY 4.0	commercial	free	108
+signor	SignaLink3	CC BY-SA 3.0	commercial	alike	99
+signor	BioGRID	MIT	commercial	free	80
+signor	InnateDB	DSL	commercial	alike	75
+signor	IntAct	CC BY 4.0	commercial	free	69
+signor	KEGG-MEDICUS	CC BY-SA 4.0	commercial	alike	61
+signor	ACSN	CC BY 4.0	commercial	free	51
+signor	RLIMS-P_ProtMapper	CC BY 4.0	commercial	free	49
+signor	CellPhoneDB	MIT	commercial	free	40
+signor	ConnectomeDB2025	MIT	commercial	free	35
+signor	NetPath	CC BY 2.5	commercial	free	28
+signor	ICELLNET	GPLv3	commercial	alike	26
+signor	CellChatDB	GPLv3	commercial	alike	14
+signor	DIP	CC BY-ND 3.0	commercial	noderiv	14
+signor	connectomeDB2020	MIT	commercial	free	12
+signor	DOMINO	CC BY 2.5	commercial	free	10
+signor	CellTalkDB	GPLv3	commercial	alike	10
+signor	dbPTM	NAR Open Access	commercial	alike	9
+signor	Reactome_ProtMapper	CC0 1.0	commercial	free	8
+signor	HuRI	CC BY 4.0	commercial	free	7
+signor	Adhesome	CC BY 4.0	commercial	free	5
+signor	PhosphoPoint	CC BY-SA 4.0	commercial	alike	4
+signor	Macrophage	CC BY 4.0	commercial	free	3
+signor	CellChatDB-cofactors	GPLv3	commercial	alike	2
+signor	LRdb	GPLv3	commercial	alike	2
+signor	Guide2Pharma	CC BY-SA 3.0	commercial	alike	2
+signor	Wojtowicz2020	CC BY 4.0	commercial	free	2
+signor	CellCall	Artistic-2.0	commercial	alike	2
+signor	ACSN_SignaLink3	CC BY 4.0	commercial	free	1
+signor	NCI-PID_ProtMapper	BSD	commercial	alike	1
+signor	UniProt_LRdb	CC BY 4.0	commercial	free	1
+signor	TCRcuration_SignaLink3	CC BY-SA 3.0	commercial	alike	1
+signor	ARN	CC BY-SA 3.0	commercial	alike	1
+signor	Reactome_LRdb	CC0 1.0	commercial	free	1
+signor	CancerCellMap	CC BY 2.5	commercial	free	1
+collectri	CollecTRI	Composite	composite	composite	51621
+collectri	ExTRI_CollecTRI	CC BY 4.0	commercial	free	42142
+collectri	CollecTRI2	Composite	composite	composite	23521
+collectri	ExTRI2_CollecTRI2	CC BY 4.0	commercial	free	17287
+collectri	NTNU.Curated_CollecTRI	CC BY 4.0	commercial	free	11669
+collectri	DoRothEA	Composite	composite	composite	10565
+collectri	TRRUST_CollecTRI	CC BY-SA 4.0	commercial	alike	10439
+collectri	NTNUcuration_CollecTRI2	CC BY 4.0	commercial	free	8755
+collectri	TRRUST_CollecTRI2	CC BY-SA 4.0	commercial	alike	6466
+collectri	TRRUST	CC BY-SA 4.0	commercial	alike	6458
+collectri	TRRUST_DoRothEA	CC BY-SA 4.0	commercial	alike	5540
+collectri	TfactS_CollecTRI2	CC BY 4.0	commercial	free	4179
+collectri	DoRothEA-A_CollecTRI2	Informal	commercial	free	4055
+collectri	TFactS_CollecTRI	CC BY 4.0	commercial	free	3861
+collectri	HTRI_CollecTRI	LGPLv3	commercial	free	2903
+collectri	DoRothEA-A_CollecTRI	Informal	commercial	free	2614
+collectri	HTRIdb	LGPLv3	commercial	free	2372
+collectri	TRED_DoRothEA	NAR Open Access	commercial	alike	2228
+collectri	RegNetwork_DoRothEA	LGPLv3	commercial	free	2228
+collectri	SIGNOR_CollecTRI	CC BY 4.0	commercial	free	2201
+collectri	PAZAR_DoRothEA	LGPLv3	commercial	free	2052
+collectri	HTRIdb_CollecTRI2	LGPLv3	commercial	free	2015
+collectri	CytReg_CollecTRI	CC BY 4.0	commercial	free	1990
+collectri	HTRIdb_DoRothEA	LGPLv3	commercial	free	1989
+collectri	SIGNOR_CollecTRI2	CC BY 4.0	commercial	free	1937
+collectri	TFactS_DoRothEA	CC BY 4.0	commercial	free	1303
+collectri	Pavlidis2021_CollecTRI	CC BY 4.0	commercial	free	1168
+collectri	ReMap_DoRothEA	CC BY 4.0	commercial	free	1162
+collectri	Pavlidis_CollecTRI2	CC BY 4.0	commercial	free	1110
+collectri	CytReg_CollecTRI2	CC BY 4.0	commercial	free	1006
+collectri	ARACNe-GTEx_DoRothEA	CC BY 4.0	commercial	free	839
+collectri	GOA_CollecTRI2	CC BY 4.0	commercial	free	748
+collectri	GOA_CollecTRI	CC BY 4.0	commercial	free	739
+collectri	SIGNOR	CC BY 4.0	commercial	free	713
+collectri	ENCODE-proximal	CC BY 4.0	commercial	free	673
+collectri	HOCOMOCO_DoRothEA	CC BY 4.0	commercial	free	544
+collectri	JASPAR_DoRothEA	CC BY 4.0	commercial	free	519
+collectri	PAZAR	LGPLv3	commercial	free	401
+collectri	IntAct_DoRothEA	CC BY 4.0	commercial	free	354
+collectri	IntAct_CollecTRI	CC BY 4.0	commercial	free	328
+collectri	ENCODE-distal	CC BY 4.0	commercial	free	293
+collectri	IntAct_CollecTRI2	CC BY 4.0	commercial	free	254
+collectri	ORegAnno_DoRothEA	LGPLv3	commercial	free	252
+collectri	TFe_DoRothEA	CC BY-SA 3.0	commercial	alike	226
+collectri	FANTOM4_DoRothEA	CC BY 4.0	commercial	free	219
+collectri	ORegAnno	LGPLv3	commercial	free	215
+collectri	TRRD_DoRothEA	CC BY 4.0	commercial	free	180
+collectri	DoRothEA-reviews_DoRothEA	CC BY 4.0	commercial	free	141
+collectri	KEGG-MEDICUS	CC BY-SA 4.0	commercial	alike	85
+collectri	NFIRegulomeDB_DoRothEA	LGPLv3	commercial	free	20

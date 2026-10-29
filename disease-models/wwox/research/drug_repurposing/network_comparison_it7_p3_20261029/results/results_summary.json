@@ -1,0 +1,308 @@
+{
+ "synthetic": false,
+ "nU": 256,
+ "n_signatures": 1239,
+ "n_families_B": 505,
+ "n_families_E": 258,
+ "graph_nodes": 8769,
+ "graph_edges": 70461,
+ "families_with_target_in_graph": 254,
+ "REF0_hits_in_578": 0,
+ "REF1_nonzero": 25,
+ "readouts_in_graph": {
+  "SLC2A1": true,
+  "HK2": true,
+  "LDHA": true,
+  "LDHB": true,
+  "BNIP3": true,
+  "PDK1": true
+ },
+ "rho": {
+  "SIG": 0.1429460402838178,
+  "NET-EXT": 0.04744423291814541,
+  "NET-WWOX": 0.04594261531474672,
+  "REF-1": -0.08543285789723414,
+  "BASE-promisc": 0.030615686308724428,
+  "REF-0": 0.0
+ },
+ "tophit_decile": {
+  "SIG": 0.15384615384615385,
+  "NET-EXT": 0.07692307692307693,
+  "NET-WWOX": 0.07692307692307693,
+  "REF-1": 0.07692307692307693,
+  "BASE-promisc": 0.11538461538461539,
+  "REF-0": 0.15384615384615385
+ },
+ "matched_set": {
+  "SIG": {
+   "mean_rank_OE": 148.26923076923077,
+   "p": 0.092
+  },
+  "NET-EXT": {
+   "mean_rank_OE": 108.96153846153847,
+   "p": 0.916
+  },
+  "NET-WWOX": {
+   "mean_rank_OE": 108.96153846153847,
+   "p": 0.923
+  },
+  "REF-1": {
+   "mean_rank_OE": 111.84615384615384,
+   "p": 0.911
+  }
+ },
+ "null_C1": {
+  "NET-EXT": {
+   "p95": 0.10317280111961515,
+   "p50": -0.0022569155459153728,
+   "emp_p": 0.209
+  },
+  "NET-WWOX": {
+   "p95": 0.10360864057871821,
+   "p50": -0.0017423477797283025,
+   "emp_p": 0.216
+  },
+  "REF-1": {
+   "p95": 0.09623277552423687,
+   "p50": 0.00554904914659794,
+   "emp_p": 0.939
+  },
+  "BASE-promisc": {
+   "p95": 0.12455995057779491,
+   "p50": -0.007610307346058986,
+   "emp_p": 0.347
+  },
+  "SIG": {
+   "p95": 0.19999220359349965,
+   "p50": 0.0798748998626688,
+   "emp_p": 0.179
+  }
+ },
+ "null_C2": {
+  "NET-EXT": {
+   "p95": 0.13693572738207566,
+   "p50": 0.01859624455590212,
+   "emp_p": 0.355
+  },
+  "REF-1": {
+   "p95": 0.052191794638724386,
+   "p50": 0.0,
+   "emp_p": 0.87
+  }
+ },
+ "null_C2b_added_not_preregistered": {
+  "NET-EXT": {
+   "p95": 0.13457857124625214,
+   "p50": 0.021293002004121486,
+   "emp_p": 0.358
+  },
+  "REF-1": {
+   "p95": 0.03761234771124326,
+   "p50": -0.05956243338993398,
+   "emp_p": 0.698
+  }
+ },
+ "sign_permuted_networks": {
+  "p50": -0.0031559511073920416,
+  "p90": 0.08351011491895781,
+  "emp_p": 0.175
+ },
+ "placement_of_down_gene": {
+  "SLC2A1": {
+   "NET-EXT": 0.026564490786582236,
+   "SIG": -0.05313930533302815
+  },
+  "HK2": {
+   "NET-EXT": -0.04970601169994623,
+   "SIG": -0.09413838979171435
+  },
+  "LDHA": {
+   "NET-EXT": -0.008435095595773219,
+   "SIG": 0.025398403524834058
+  },
+  "LDHB": {
+   "NET-EXT": 0.01015219195840401,
+   "SIG": -0.0324845502403296
+  },
+  "BNIP3": {
+   "NET-EXT": -0.028660919548277868,
+   "SIG": 0.053396086060883495
+  },
+  "PDK1": {
+   "NET-EXT": 0.04744423291814541,
+   "SIG": 0.1429460402838178
+  }
+ },
+ "rho_global_flip": -0.04744423291814541,
+ "edge_dropout20": {
+  "median": 0.029720357051132795,
+  "p5": -0.051623607139789994,
+  "p95": 0.10188836685536148,
+  "share_positive": 0.68
+ },
+ "rewiring": {
+  "reps": 100,
+  "median": -0.0031778690235715673,
+  "p5": -0.0928496235549567,
+  "p95": 0.13413229304243823
+ },
+ "frequent_hitters": {
+  "SIG": {
+   "flagged": 0,
+   "names_top5": [
+    "CINACALCET HYDROCHLORIDE",
+    "TRIFLUPROMAZINE HYDROCHLORIDE",
+    "QUIZARTINIB DIHYDROCHLORIDE",
+    "BRIMONIDINE TARTRATE",
+    "PAZOPANIB HYDROCHLORIDE"
+   ],
+   "max_rate": 0.185
+  },
+  "NET-EXT": {
+   "flagged": 38,
+   "names_top5": [
+    "ALVOCIDIB HYDROCHLORIDE",
+    "PHA-793887",
+    "AT-7519",
+    "PLUMBAGIN",
+    "SARACATINIB DIFUMARATE"
+   ],
+   "max_rate": 0.429
+  },
+  "REF-1": {
+   "flagged": 26,
+   "names_top5": [
+    "BEPRIDIL",
+    "CALCIFEDIOL ANHYDROUS",
+    "SB-216763",
+    "TELMISARTAN",
+    "PROGESTERONE"
+   ],
+   "max_rate": 0.979
+  }
+ },
+ "rho_without_frequent_hitters": {
+  "SIG": 0.1429460402838178,
+  "NET-EXT": 0.011224283833171755,
+  "NET-WWOX": 0.010276649636355587,
+  "REF-1": -0.09169992041876866
+ },
+ "bootstrap90": {
+  "SIG": [
+   0.03932107915718577,
+   0.24283071151914898
+  ],
+  "NET-EXT": [
+   -0.05964108495622837,
+   0.1503865278699857
+  ],
+  "NET-WWOX": [
+   -0.061567475910958215,
+   0.14719819817916974
+  ],
+  "REF-1": [
+   -0.18643794957382237,
+   0.017720522083873355
+  ]
+ },
+ "diff_vs_REF1_90": {
+  "SIG": [
+   0.0833081001178924,
+   0.36660693736101313
+  ],
+  "NET-EXT": [
+   -0.025651656661343315,
+   0.29560690105625514
+  ],
+  "NET-WWOX": [
+   -0.027553286696586958,
+   0.29284984198292774
+  ]
+ },
+ "diff_WWOX_minus_EXT_90": [
+  -0.0037411526229054063,
+  0.00023361408800968007
+ ],
+ "swapped_contexts": {
+  "SIG": 0.1429460402838178,
+  "NET-EXT": 0.020362368652365268,
+  "NET-WWOX": 0.020672867558897634,
+  "REF-1": -0.02230730256354802
+ },
+ "sensitivities": {
+  "signatures_10uM_24h_only": {
+   "n": 255,
+   "SIG": 0.056534419870310326,
+   "NET-EXT": 0.025311741976733543,
+   "REF-1": -0.10150506251522806
+  },
+  "up5_only_readout": {
+   "SIG": 0.0470716983291371,
+   "NET-EXT": 0.028317500275751712,
+   "REF-1": 0.0012853572732264781
+  },
+  "NET_direct_k0_included": 0.04744423291814541
+ },
+ "known_examples": [
+  {
+   "family": "FAM:CAT:CHEMBL413",
+   "name": "SIROLIMUS",
+   "cards": "EB-MTOR-AX-01",
+   "pct_OE": 0.685546875,
+   "SIG": 0.888671875,
+   "NET-EXT": 0.525390625,
+   "REF-1": 0.451171875
+  }
+ ],
+ "verdicts": {
+  "NET-EXT": {
+   "verdict": "NO ADDED VALUE (no signal)",
+   "criteria": {
+    "S1": false,
+    "S2_C1": false,
+    "S2_C2": false,
+    "S3": false,
+    "S4": false,
+    "S5": false
+   },
+   "rho_diff_vs_REF1": 0.13287709081537954,
+   "diff90": [
+    -0.025651656661343315,
+    0.29560690105625514
+   ]
+  },
+  "SIG": {
+   "verdict": "NO ADDED VALUE (no signal)",
+   "criteria": {
+    "S1": false,
+    "S2_C1": false,
+    "S2_C2": true,
+    "S3": true,
+    "S5": true
+   },
+   "rho_diff_vs_REF1": 0.22837889818105195,
+   "diff90": [
+    0.0833081001178924,
+    0.36660693736101313
+   ]
+  },
+  "NET-WWOX": {
+   "verdict": "NO ADDED VALUE (no signal)",
+   "criteria": {
+    "S1": false,
+    "S2_C1": false,
+    "S2_C2": true,
+    "S3": false,
+    "S4": false,
+    "S5": false
+   },
+   "rho_diff_vs_REF1": 0.13137547321198084,
+   "diff90": [
+    -0.027553286696586958,
+    0.29284984198292774
+   ]
+  }
+ },
+ "WWOX_edges_add_value": false,
+ "wall_seconds": 962
+}

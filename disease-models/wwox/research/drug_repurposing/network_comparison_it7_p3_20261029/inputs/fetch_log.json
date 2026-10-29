@@ -1,0 +1,31 @@
+{
+ "queries": {
+  "A": "https://omnipathdb.org/interactions?resources=SIGNOR&datasets=omnipath,pathwayextra,kinaseextra,tf_target&genesymbols=1&fields=sources,type,references&organisms=9606&format=tsv&license=commercial",
+  "B": "https://omnipathdb.org/interactions?datasets=collectri&genesymbols=1&fields=sources,type,references&organisms=9606&format=tsv&license=commercial",
+  "C": "https://omnipathdb.org/resources?format=json"
+ },
+ "files": {
+  "A": {
+   "bytes": 11721414,
+   "sha256": "8eb28a0566e7ebba56ebde29e5288e96a9d833028917dc86cafde0fc6681d4d1"
+  },
+  "B": {
+   "bytes": 18059565,
+   "sha256": "d08018c0ab2a3321ec2fa6bc96a14f594fd5daeeacd13f50c15f4b4d57cd2d66"
+  },
+  "C": {
+   "bytes": 88433,
+   "sha256": "84f756a977accc3c05a6d026272cd55fd5f52f75fd3d347d7f3460ea1a7a86da"
+  },
+  "signor": {
+   "rows_raw": 66751,
+   "rows_licence_ok": 55866,
+   "signed_edges_written": 55760
+  },
+  "collectri": {
+   "rows_raw": 64516,
+   "rows_licence_ok": 53928,
+   "signed_edges_written": 51621
+  }
+ }
+}
