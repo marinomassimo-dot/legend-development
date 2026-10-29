@@ -68,7 +68,7 @@
    },
    "^\\.cur\\.footer\\.": {
     "class": "SRC_META",
-    "values": 87,
+    "values": 91,
     "why": "attribution footer: sources, licences, credit lines"
    },
    "^\\.cur\\.needs\\[\\]\\.obs\\[\\]\\.(cite)$": {
@@ -212,7 +212,7 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 1939,
+    "forbidden-name": 1942,
     "forbidden-wording": 12
    },
    "co_attested_wording": [
@@ -284,7 +284,7 @@
    "label": "chembl",
    "licence": "CC BY-SA 3.0 Unported",
    "path": "class_b/chembl_cc-by-sa-3.0/chembl_cc-by-sa-3.0.jsonl",
-   "records_of": "un registro del repository (non incluso in questo pacchetto) (the twelve ChEMBL records the module's cards name)"
+   "records_of": "the twelve ChEMBL records the module's cards name (selected through the repository's card-to-catalogue link table, not shipped here)"
   }
  ],
  "comparison": {
@@ -411,7 +411,7 @@
    "label": "UniChem",
    "retrieved": "2026-10-27T22:41:54Z",
    "terms": "cross-reference identifiers only; none is embedded in the page",
-   "version": "Last-Modified un registro del repository (non incluso in questo pacchetto)=Sat, 24 Oct 2026 21:16:36 GMT; un registro del repository (non incluso in questo pacchetto)=Sat, 24 Oct 2026 21:16:01 GMT; un registro del repository (non incluso in questo pacchetto)=Sat, 24 Oct 2026 21:16:11 GMT"
+   "version": "Last-Modified src1src14=Sat, 24 Oct 2026 21:16:36 GMT; src1src2=Sat, 24 Oct 2026 21:16:01 GMT; src1src7=Sat, 24 Oct 2026 21:16:11 GMT"
   },
   {
    "label": "Every Cure MATRIX third-party identifiers (ATC, DrugBank, ChEBI)",
@@ -439,7 +439,7 @@
   "OWN": 54109,
   "ROWNAME": 1506,
   "SRC_A": 91,
-  "SRC_META": 252,
+  "SRC_META": 256,
   "UI": 779
  },
  "embedded_sources": [
@@ -474,8 +474,8 @@
  ],
  "files": {
   "COMPARISON.md": {
-   "bytes": 6384,
-   "sha256": "680da624aba7f996ad70a596aacfefa037c6061a78d7ad9bdfe7490fade82e35"
+   "bytes": 6433,
+   "sha256": "f782e2febc51b8280631f05fd2ff332d8f4eae84eb8399af2f3753e1f60581b0"
   },
   "LICENSES/CC-BY-4.0.txt": {
    "bytes": 18657,
@@ -494,8 +494,8 @@
    "sha256": "e5dfa90d88e2069a2e4fd13429e8ebaefb7bd92fbbaede065af905656bc7ba87"
   },
   "NOTICE.md": {
-   "bytes": 12168,
-   "sha256": "f3d3f1333441483d086ec1f74cc391124ef7a25b6b2b0b12e08830a6d46d7d7f"
+   "bytes": 12612,
+   "sha256": "4f650d12ea8f626aadcea1101faee1311a80a4c126e0edf6309c5c61fe4950bf"
   },
   "README.md": {
    "bytes": 4642,
@@ -518,8 +518,8 @@
    "sha256": "d8fe6a3455466783564803428b6318c1c442db6a16dfb97de8a6b7dcf944cc9d"
   },
   "index.html": {
-   "bytes": 2478502,
-   "sha256": "1a92b43cfd2fb5d42fa0c4049e938be8c022fdfac3b9f05b2bfbe069f461087d"
+   "bytes": 2479427,
+   "sha256": "fa6556dce1943f820ace9f5ae79e3d0fdb4ca7e2eb22d922f2dbc06c9ff58bf0"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",
@@ -555,6 +555,12 @@
    "url": "https://www.ncbi.nlm.nih.gov/"
   },
   {
+   "attribution": "LEGEND WWOX repurposing module (this repository); ChEMBL identifiers: EMBL-EBI, https://www.ebi.ac.uk/chembl/",
+   "label": "Record names shown in the page (1,506 values in the row table)",
+   "licence": "1,464 are catalogue identifiers (ChEMBL accession numbers and DGIDB: hashes of DGIdb drug names, no name text); 42 are card names written in this repository (16 molecule families, 26 interventions or classes). A card name that coincides with a ChEMBL preferred name is used as the compound's name, a fact, not as a copied ChEMBL field; ChEMBL names as data travel only in the separate class-B file",
+   "url": null
+  },
+  {
    "attribution": "LEGEND WWOX repurposing module (this repository)",
    "label": "Catalogue record identifiers",
    "licence": "opaque identifiers of this repository's catalogue (CAT:...), no source content",
@@ -573,7 +579,7 @@
   "lead_field_redactions": 11,
   "pair_status_rule": "pairs[].p.cr.pha[1] (status classes of the row) is dropped in the shareable build: a status class derives from ChEMBL max_phase, DGIdb approved flags, MATRIX and openFDA together, and the build does not re-derive a class-A-only status per row.",
   "pairs_status_class_dropped": 680,
-  "repository_file_names_described": 53,
+  "repository_file_names_described": 46,
   "rule": "IT5 P13 fix. Own analysis stays in the shareable build: a conclusion at the level of a need, a class or a card subject, in our own words, short, attributed to a published work. Withheld: (1) a sentence that states a compound-target(-action) pair together with its database of origin when the pair is asserted only by a class-B/C catalogue source; (2) a compound named in prose whose only provenance in the repository is a class-B/C catalogue row (it appears in no cited full text and is not a card subject); (3) a per-compound status, phase, approval or access statement attributed to a class-B/C source; (4) repository file names, which cannot be used outside the repository. The replacement keeps the research conclusion and names the withheld source class with the phrase in withheld_phrase. The FULL build keeps everything. The audit enforces (1) and (2) by derivation from the catalogue, (3) and (4) by pattern, and every redaction below must match exactly once or more: a stale redaction fails the build.",
   "withheld_phrase": "dato di una fonte non inclusa in questa versione"
  },
@@ -659,7 +665,7 @@
    "JAX-CKB": {
     "catalogue_rows": 2148,
     "class": "C",
-    "terms": "CC BY-NC-SA 4.0, declared by DGIdb"
+    "terms": "CC BY-NC-SA 4.0, declared by DGIdb and read on ckb.jax.org/about/index (2026-10-29)"
    },
    "MyCancerGenome": {
     "catalogue_rows": 829,

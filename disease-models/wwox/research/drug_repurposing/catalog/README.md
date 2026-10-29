@@ -40,6 +40,13 @@ Nothing here is medical advice and nothing changes the four scientific current f
 
 ## Licence reconciliation (IT5 P1, read 2026-10-28)
 
+**Third-party rows, not MIT (IT8 P2).** `catalog.jsonl.gz`, `catalog_stats.json`, `ligand_reconciliation*.tsv`, `non_molecule_modalities.tsv`
+contain rows and fields of ChEMBL (CC BY-SA 3.0), the Guide to PHARMACOLOGY
+(ODbL and CC BY-SA 4.0), ClinPGx (CC BY-SA 4.0) and of DGIdb claim sources under non-commercial or unclear terms (DTC, CKB-CORE, CGI,
+OncoKB, COSMIC, TTD and others). The repository's MIT `LICENSE` does not cover those rows; reuse them only under each source's own terms
+(table below, and `THIRD_PARTY_NOTICES.md`). Whether such a merged file can stay in the public tip is a reserved decision
+(`../licence_corrections_it8_20261029.md`, R1 and R2).
+
 Not legal advice. "Verified" means the sentence was read on the source's own page or code on that date;
 "declared by DGIdb" means only DGIdb's own metadata says so. The DGIdb software state of 2024-06-07
 (importer code, commit `a35759a` of `dgidb/dgidb-v5`, the last before our 2024-06-10 export) declares
@@ -57,7 +64,7 @@ license identified" while DoCM's own page says CC BY 4.0; the source's own page 
 | NCI Cancer Gene Index (6,231) | declared public domain by DGIdb. Corrected 2026-10-29 (IT8 P2): the reuse page DGIdb links to (cancer.gov/policies/copyright-reuse) is live and says text in NCI products is "free of copyright" unless otherwise indicated, credit NCI, graphics may be third-party; it does not say "public domain", does not mention data or datasets, and does not name the Cancer Gene Index. The earlier "page gone" wording referred to a wiki page of the importer, not to the reuse page | cancer.gov/policies/copyright-reuse (read 2026-10-29) | partly: general NCI text policy read; coverage of CGI rows not stated | C (A is arguable if the operator accepts the NCI text policy as covering NCI-curated data) |
 | PharmGKB / ClinPGx (5,976) | CC BY-SA 4.0 | pharmgkb.org / clinpgx.org pages show it; the data-usage-policy page is script-rendered and its text was not read | partly | B |
 | TdgClinicalTrial (5,072), TEND (2,242), TALC (602) | rights in a publisher's supplementary table | declared by DGIdb | no | C |
-| JAX-CKB / CKB-CORE (2,148) | CC BY-NC-SA 4.0 (2024 importer and live) | declared by DGIdb | no | C |
+| JAX-CKB / CKB-CORE (2,148) | CC BY-NC-SA 4.0 (2024 importer and live) | declared by DGIdb; "This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License", ckb.jax.org/about/index, read 2026-10-29 | yes (2026-10-29, IT8 P2) | C |
 | CIViC (1,120) | CC0 1.0 | docs.civicdb.org FAQ: "released under the Creative Commons Public Domain Dedication (CC0 1.0 Universal)" | yes | A |
 | MyCancerGenome (829) + ClinicalTrial (317), OncoKB (148), CancerCommons (109), COSMIC (37) | restrictive / non-commercial custom terms | declared by DGIdb | no | C |
 | FDA PGx biomarkers (427) | public domain | fda.gov website policies: "not copyrighted ... in the public domain and may be republished, reprinted and otherwise used freely"; credit appreciated | yes (FDA site policy, "unless otherwise noted") | A |

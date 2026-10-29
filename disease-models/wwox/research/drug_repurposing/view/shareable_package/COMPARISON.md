@@ -25,7 +25,7 @@ The full version (`view/index.html` in the repository, local use) and this packa
 
 ## Prose redactions (shareable only)
 
-12 card sentences and 11 lead fields that stated a compound-target pair, a catalogue-only compound or a per-compound status from a class-B/C source are rewritten at the level of the need or class and name the withheld source class (`dato di una fonte non inclusa in questa versione`); 53 repository file names are described instead of printed. The conclusion of each lead and card is kept. The rule is in `view/shareable_sources.json` (`prose_policy`) and the audit enforces it.
+12 card sentences and 11 lead fields that stated a compound-target pair, a catalogue-only compound or a per-compound status from a class-B/C source are rewritten at the level of the need or class and name the withheld source class (`dato di una fonte non inclusa in questa versione`); 46 repository file names are described instead of printed. The conclusion of each lead and card is kept. The rule is in `view/shareable_sources.json` (`prose_policy`) and the audit enforces it.
 
 ## Why: counts of catalogue target rows by class
 
@@ -45,7 +45,7 @@ The catalogue holds 44,211 records. Its target rows by class: {"A": 1623, "B": 4
 | DoCM | A (attribution) | 76 | CC BY 4.0; verified in the project's archived about page (docm.info now redirects to GitHub) | 3 |
 | FDA | A (attribution) | 427 | public domain unless otherwise noted; verified at fda.gov website policies | 0 |
 | GuideToPharmacology | B (share-alike) | 16,070 | ODbL (database) and CC BY-SA 4.0 (contents) | 0 |
-| JAX-CKB | C (identifiers and counts) | 2,148 | CC BY-NC-SA 4.0, declared by DGIdb | 0 |
+| JAX-CKB | C (identifiers and counts) | 2,148 | CC BY-NC-SA 4.0, declared by DGIdb and read on ckb.jax.org/about/index (2026-10-29) | 0 |
 | MyCancerGenome | C (identifiers and counts) | 829 | restrictive custom terms, declared by DGIdb | 0 |
 | MyCancerGenomeClinicalTrial | C (identifiers and counts) | 317 | restrictive custom terms, declared by DGIdb | 0 |
 | NCI | C (identifiers and counts) | 6,231 | public domain declared by DGIdb only; NCI reuse page (read 2026-10-29) says NCI text is free of copyright but does not name data or the Cancer Gene Index | 0 |

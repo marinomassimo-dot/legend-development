@@ -95,7 +95,7 @@
     },
     "JAX-CKB": {
       "class": "C",
-      "terms": "CC BY-NC-SA 4.0, declared by DGIdb"
+      "terms": "CC BY-NC-SA 4.0, declared by DGIdb and read on ckb.jax.org/about/index (2026-10-29)"
     },
     "CIViC": {
       "class": "A",
@@ -199,6 +199,11 @@
       "attribution": "Source: NCBI ClinVar and RefSeq, National Library of Medicine (https://www.ncbi.nlm.nih.gov/clinvar/)",
       "url": "https://www.ncbi.nlm.nih.gov/"
     },
+    "Record names shown in the page (1,506 values in the row table)": {
+      "licence": "1,464 are catalogue identifiers (ChEMBL accession numbers and DGIDB: hashes of DGIdb drug names, no name text); 42 are card names written in this repository (16 molecule families, 26 interventions or classes). A card name that coincides with a ChEMBL preferred name is used as the compound's name, a fact, not as a copied ChEMBL field; ChEMBL names as data travel only in the separate class-B file",
+      "attribution": "LEGEND WWOX repurposing module (this repository); ChEMBL identifiers: EMBL-EBI, https://www.ebi.ac.uk/chembl/",
+      "url": null
+    },
     "Catalogue record identifiers": {
       "licence": "opaque identifiers of this repository's catalogue (CAT:...), no source content",
       "attribution": "LEGEND WWOX repurposing module (this repository)",
@@ -212,7 +217,7 @@
       "licence_text": "class_b/chembl_cc-by-sa-3.0/LICENSE_CC-BY-SA-3.0.txt",
       "credit": "ChEMBL, EMBL-EBI, https://www.ebi.ac.uk/chembl/ , release ChEMBL_37 (2026-05-01)",
       "release": "ChEMBL_37 2026-05-01",
-      "records_of": "card_links.json (the twelve ChEMBL records the module's cards name)",
+      "records_of": "the twelve ChEMBL records the module's cards name (selected through the repository's card-to-catalogue link table, not shipped here)",
       "fields": [
         "chembl_id",
         "pref_name",

@@ -166,8 +166,11 @@ Added 2026-10-29 (IT8 P2 licence corrections; evidence and open items in
   NCBI states that information created by or for the US government on its site is within the public
   domain and asks for acknowledgement of NLM (NCBI policies page, read 2026-10-29). Source: NCBI
   RefSeq, National Library of Medicine; the record was not altered.
-- **PRISM and Drug Repurposing Hub.** Only source tags attached to a few compound-level lines of
-  `join/cards.json`; no row or table from either resource is committed. DGIdb reports the Drug
+- **PRISM and Drug Repurposing Hub.** In `join/cards.json` only source tags on a few compound-level
+  lines. In the raw DGIdb responses (`gse156243/kg_lookup/` and
+  `lucas_clarke_followup_20261026/dgidb_raw/`), however, both appear as claim sources with their rows
+  (PRISM in 14 of those files, the Hub in 14), together with MOAlmanac rows (3 files) and dGene entries in
+  the Monarch association files (4 files); the catalogue holds no row of them. DGIdb reports the Drug
   Repurposing Hub as CC BY 4.0 and PRISM as supplementary data of a copyrighted journal article
   (DGIdb service, read 2026-10-29); the Hub site itself could not be read (certificate error).
 - **ChEMBL raw responses** (`lucas_clarke_followup_20261026/chembl_raw/`, 46 files, and the ChEMBL
@@ -187,12 +190,17 @@ Added 2026-10-29 (IT8 P2 licence corrections; evidence and open items in
   reused commercially or redistributed. Their disposition is a reserved decision of the operator.
 - **DGIdb claim-source table** (as reported by the DGIdb service on 2026-10-29): ChEMBL CC BY-SA 3.0;
   GuideToPharmacology CC BY-SA 4.0 (its own site: database ODbL, contents CC BY-SA 4.0); ClinPGx
-  CC BY-SA 4.0; DTC CC BY-NC-SA 3.0; CKB-CORE CC BY-NC-SA 4.0; CGI CC BY-NC 4.0; CIViC CC0 1.0;
+  CC BY-SA 4.0; DTC CC BY-NC-SA 3.0; CKB-CORE CC BY-NC-SA 4.0 (also read on ckb.jax.org/about/index, 2026-10-29); CGI CC BY-NC 4.0; CIViC CC0 1.0;
   DoCM CC BY 4.0; FDA and NCI "public domain" (NCI: see `DATA_SOURCES.md`); COSMIC free for
   non-commercial use only (its own licence page, read 2026-10-29: commercial R&D, products and
   clinical reporting need a commercial licence); OncoKB restrictive, non-commercial; MyCancerGenome
   restrictive, custom, non-commercial; TTD "unclear"; TdgClinicalTrial, TEND, TALC, HingoraniCasas and
-  similar tables are supplementary tables of copyrighted publications.
+  similar tables are supplementary tables of copyrighted publications. DGIdb also lists four other
+  share-alike sources: HumanProteinAtlas (CC BY-SA 3.0), IDG and Pharos (CC BY-SA 4.0) and MOAlmanac
+  (ODbL; contents GPLv2; its own terms page, read 2026-10-29, adds that works produced using the data must be
+  licensed under the ODbL and that diagnostic and clinical use is prohibited). The catalogue holds no row
+  of HumanProteinAtlas, IDG or Pharos (checked 2026-10-29); the raw DGIdb responses hold MOAlmanac rows in 3
+  files and none of the other three.
 - **OmniPath-derived network edge tables** (`network_comparison_it7_p3_20261029/inputs/`). Rows come
   from the OmniPath web service (<https://omnipathdb.org>) and carry, per row, the source resources and,
   in `resource_licences.tsv`, the licence label OmniPath gives each resource. Resource labels found there
