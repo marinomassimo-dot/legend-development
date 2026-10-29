@@ -1,11 +1,10 @@
 file	sha256	provenance
-inputs/INPUTS.tsv	1465a6720989aa52d5fd55e300b900c693ea72c38572383bc4f4a1132b77c777	OmniPath export 2026-10-29, licence-filtered (see PRE_REGISTRATION section 4); raw TSV not committed
 inputs/edges.tsv	7f02a941e4506c3d2baf54a749529b0c8955f649813ac97c3c91f0339c77b709	P1 subnetwork_it7_p1_20261029 at 31446616 (repaired; supersedes 8b9861d5 per AMENDMENT 1)
 inputs/nodes.tsv	2ffa5f6b17be93b3186a6d52825185ee358e5fdfd7477b46331bc059452d3ca1	P1 subnetwork_it7_p1_20261029 at 31446616 (repaired; supersedes 8b9861d5 per AMENDMENT 1)
 inputs/p1_derived_gene_values.tsv	6e858fbb84a4a3c8761d307d89ea6a1b76d1b57e9d3e237867d9a1cb300fea8e	P1 subnetwork_it7_p1_20261029 at 31446616 (repaired; supersedes 8b9861d5 per AMENDMENT 1)
-inputs/pilot_lincs_contexts.tsv	c41c1813a9bc41a9700adf50331029a1a04d6ee8af0af68a421e52749a33d7c0	P2 usable_compounds_it7_p2_20261029 at 7ad3e697
-inputs/pilot_net_actions.tsv	576e7c3379c10a87183082f242f03f46d144c9f4e65c7a4f0490f37458029eea	P2 usable_compounds_it7_p2_20261029 at 7ad3e697
-inputs/pilot_subset.tsv	a41d7231e00b131b554afb1e64b10b4dc1f48770d3fd34bd3bbff87076d3515a	P2 usable_compounds_it7_p2_20261029 at 7ad3e697
+inputs/pilot_lincs_contexts.tsv	c41c1813a9bc41a9700adf50331029a1a04d6ee8af0af68a421e52749a33d7c0	P2 usable_compounds_it7_p2_20261029 at 9de71f34 (repaired head; content identical to 7ad3e697, checked by the verifier)
+inputs/pilot_net_actions.tsv	cf6d30e25f01d26c1ba38b5a746560587138e732732b8b690bc47d71250dba90	P2 usable_compounds_it7_p2_20261029 at 9de71f34 (repaired head; content identical to 7ad3e697); columns trimmed to those the script reads (assay/reference free text dropped by P3 because a reference string trips the release gate's digest check; see DEVIATIONS 8)
+inputs/pilot_subset.tsv	a41d7231e00b131b554afb1e64b10b4dc1f48770d3fd34bd3bbff87076d3515a	P2 usable_compounds_it7_p2_20261029 at 9de71f34 (repaired head; content identical to 7ad3e697, checked by the verifier)
 inputs/systems.tsv	1e8eec134f07c6a97f879e55839206b3f3e2204e295714ae48e3153d4e63d33f	P1 subnetwork_it7_p1_20261029 at 31446616 (repaired; supersedes 8b9861d5 per AMENDMENT 1)
 inputs/collectri_omnipath_edges.tsv.gz	e6d7ba629ccf040654afb805ad02be8b542b5a3569656ff9f79c217dc866b499	OmniPath export 2026-10-29, licence-filtered (see PRE_REGISTRATION section 4); raw TSV not committed
 inputs/signor_omnipath_edges.tsv.gz	a185ac8a166946cafb40a4d1fee2cb2e0ca666e16af470506e3f36d13b8e49e8	OmniPath export 2026-10-29, licence-filtered (see PRE_REGISTRATION section 4); raw TSV not committed
@@ -17,3 +16,6 @@ lincs extract_rows.tsv	331498881b26154ea90b91f991de13806e0c300dbd7f2e6c6dfe10a40
 lincs sig_info	19da29c0ee12ddf27f9698cd0da40beaff58657dcde9d382aae068737e831299	GSE92742
 lincs gene_info	741216ccc53320119b47ab006de3bcad48963c57087c9e07f50f0d6cd088711a	GSE92742
 GSE215425 series matrix	73aa99a6b2a7e5f4018726cb7145fea6be5873d5d3bc77d9550fb9bd03980052	sample metadata only
+inputs/fetch_log.json	6ee7049bcf4c0936dbcfb97bcede2c2cfaedb8d7c47ef5706872ae82ed4114ef	urls, raw-export sha256 and counts written by fetch_network_inputs.py run on 2026-10-29 (reproduces the two edge tables byte for byte)
+inputs/resource_licences.tsv	5d0589ec381aaf4d642200639b6d14ac4fd26549fbb6302cfcc90ca9206e252a	per-resource licence of every source in the two edge tables (from OmniPath resources list, sha256 84f756a9...)
+inputs/INPUTS.tsv	(self-hash not recorded)	this file
