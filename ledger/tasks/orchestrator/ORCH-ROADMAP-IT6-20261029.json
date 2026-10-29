@@ -30,8 +30,9 @@
    "steps": [
     {
      "step": "P3 targeted census of WWOX protein/functional/rescue data",
-     "status": "TODO",
-     "owner": "scientist-b"
+     "status": "DONE",
+     "owner": "scientist-b",
+     "evidence": "census wwox_data_census_it6_20261029.md (c6bc4f19): no adequate public proteome/phospho/ISR-protein/metabolic-flux record; selection GSE158681 for P4; independent reproduction of its claims is part of the P4 verification"
     },
     {
      "step": "P4 new analysis on best dataset from P3",
@@ -40,8 +41,9 @@
     },
     {
      "step": "P5 WWOX wild-type function reference (assay comparison)",
-     "status": "TODO",
-     "owner": "scientist-a"
+     "status": "DONE",
+     "owner": "scientist-a",
+     "evidence": "wwox_function_reference_it6_20261029.md, independently verified (16 claims vs sources), 8 defects repaired (8bdc1d5d); A01 card wording applied in P14"
     },
     {
      "step": "P6 broad recovery: new-question cycle",
@@ -81,8 +83,9 @@
     },
     {
      "step": "P12 resource comparison + radar + scouting",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "resource_comparison_it6_20261029/ (GluN2B across ChEMBL/GtoPdb/DGIdb/ToolUniverse; independence table), radar 05:20 triage: openFDA-NDC probe removed as noise, ToolUniverse WATCH no adoption"
     }
    ]
   },
