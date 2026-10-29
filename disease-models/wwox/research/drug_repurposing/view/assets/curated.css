@@ -158,3 +158,19 @@ details>summary{padding:3px 0;min-height:24px}
  .tbl.stk th,.tbl.stk td{border:0;padding:2px 0}.tbl.stk th[scope=row]{font-weight:700}
  .tbl.stk td[data-label]::before{content:attr(data-label) ": ";font-size:.76rem;color:var(--mut)}
 }
+
+/* ---- IT8 P9: provisional ranking. Every group chip carries its id and a border style; the colour never carries the sense alone. ---- */
+.grp.rg{white-space:normal}.rg-G1{background:var(--g1bg);color:var(--g1);border:2px solid var(--g1)}.rg-G2a{background:var(--g1bg);color:var(--g1);border:1px dashed var(--g1)}.rg-G2b{background:var(--g2bg);color:var(--g2);border:1px dashed var(--g2)}
+.rg-G3{background:var(--g2bg);color:var(--g2);border:2px solid var(--g2)}.rg-G4a{background:var(--g3bg);color:var(--g3);border:2px solid var(--g3)}.rg-G4b{background:var(--g3bg);color:var(--g3);border:1px dotted var(--g3)}
+.rg-G5{background:var(--g4bg);color:var(--g4);border:2px solid var(--g4)}.rg-GU{background:var(--g4bg);color:var(--g4);border:1px dashed var(--g4)}
+.rk-groups li{margin:5px 0}#rk-ctl{margin:10px 0;border:1px solid var(--line);border-radius:8px;padding:8px 10px;background:var(--card)}#rk-ctl .fbar{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,170px),1fr));gap:6px 10px}
+#rk-ctl label{display:flex;flex-direction:column;font-size:.8rem;gap:2px;min-width:0}#rk-ctl select,#rk-ctl input{min-width:0;max-width:100%}#rk-ctl .bar-actions{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;margin-top:8px}
+.rk-item{border:1px solid var(--line);border-left:6px solid var(--g1);border-radius:8px;padding:8px 12px;margin:10px 0;background:var(--card);min-width:0}.rk-item h4{margin:0 0 4px;font-size:1rem}
+.rk-dl{display:grid;grid-template-columns:minmax(0,1fr);gap:0;font-size:.86rem;margin:4px 0}.rk-dl dt{font-weight:700;color:var(--mut);margin-top:6px}.rk-dl dd{margin:0;overflow-wrap:anywhere}
+@media (min-width:760px){.rk-dl{grid-template-columns:200px minmax(0,1fr);gap:4px 12px}.rk-dl dt{margin-top:0}}
+.rk-view[hidden],.rk-hide{display:none!important}.rk-table td,.rk-table th{vertical-align:top}.rk-row-detail td{padding:0 6px 8px}.rk-cl{white-space:normal}.rk-cl-INSUFF,.rk-cl-EXCL{border-style:dashed}.rk-cl-WEAK{border-color:var(--g2)}.rk-cl-ORD{border-color:var(--g1);border-width:2px}
+.rk-detail h5{margin:8px 0 2px;font-size:.88rem}.rk-apart{columns:2;column-gap:20px}.rk-one td,.rk-one th{vertical-align:top;font-size:.82rem}
+@media (max-width:560px){.rk-apart{columns:1}}
+@media print{#rk-ctl{display:none!important}.rk-item{break-inside:avoid;page-break-inside:avoid;margin:5px 0;padding:4px 8px;border-left-width:4px}.rk-dl{font-size:8.5pt}.secprint[data-section=rankingprint] *{font-size:8.5pt!important}.secprint[data-section=rankingprint] h2{font-size:12pt!important}.secprint[data-section=rankingprint] h3{font-size:10pt!important;margin:6px 0 2px}.secprint[data-section=rankingprint] table{border-collapse:collapse}.secprint[data-section=rankingprint] td,.secprint[data-section=rankingprint] th{padding:2px 4px;border:1px solid #888}.rk-row-detail{display:none}}
+@media print{.rk-table thead{display:none}.rk-table,.rk-table tbody,.rk-table tr,.rk-table td,.rk-table th{display:block;width:auto!important}.rk-table tr.rk-row{border-top:1px solid #888;margin-top:4px}.rk-one thead{display:table-header-group}.rk-one tbody{display:table-row-group}.rk-one tr{display:table-row}.rk-one td,.rk-one th{display:table-cell}}
+@media print{.secprint[data-section=rankingprint] table{table-layout:fixed;width:100%}.secprint[data-section=rankingprint] *{font-size:7.5pt!important}.secprint[data-section=rankingprint] h2{font-size:11pt!important}.secprint[data-section=rankingprint] .grp{font-size:7pt!important;padding:0 4px}}
