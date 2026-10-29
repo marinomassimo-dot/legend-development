@@ -1,0 +1,38 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261029-30290271-01",
+ "study_id": {
+  "pmid": "30290271",
+  "doi": null
+ },
+ "analysis_at": "2026-10-29T07:30:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-a, mandate IT6 package P10, task branch task/it6-p10; context_policy QUESTION_DRIVEN (held: the glial-reactivity thread of NEED-NEUROINFLAMMATION-GLIA). Prepared as a staged JSON for the integrator and not appended at preparation time. Question: was seizure activity recorded or stated in the 2-week-old knockout mice in which IBA1 and GFAP area fractions were read, and what does the paper itself say about cause versus consequence. Route: local JATS r2 body (sha256 3672e6...), searched for age, seizure and cause-or-consequence passages; the earlier receipt's saved HTML path (files/fulltext/PMID30290271_Hussain2019.html) is not present on this host, so the r2 JATS is the surface used. Targeted passages only.",
+ "evidence_depth": "queried_not_full_read",
+ "source_locator": "files/fulltext/PMID30290271_Hussain2019_PMC_r2.xml",
+ "source_fingerprint": "3672e629fd6f8d71bbc5512c214a9aedf81fe73a297bed2e1c0a7ee7f73aa1a7",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "read",
+  "results": "read",
+  "figures": "not_read",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_present",
+  "references": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/partial_benefit_it6_p10_20261029/README.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "targeted passages only (age, seizure, cause or consequence)",
+  "NEW: the paper states the animals were 2 weeks old, both sexes, and records no seizure measurement for them; the sentence that activated microglia and astrogliosis are consequences of seizures is cited background (Devinsky 2013), and the Discussion leaves cause versus consequence open"
+ ],
+ "prior_receipt": "FTR-20260806-30290271-01",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "event_at": "2026-10-29T07:50:00Z"
+}

@@ -1,0 +1,38 @@
+{
+ "record_kind": "contemporaneous_receipt",
+ "event_id": "FTR-20261029-42422765-01",
+ "study_id": {
+  "pmid": "42422765",
+  "doi": null
+ },
+ "analysis_at": "2026-10-29T07:25:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-a, mandate IT6 package P10, task branch task/it6-p10; context_policy QUESTION_DRIVEN (held: the glial-reactivity thread of NEED-NEUROINFLAMMATION-GLIA). Prepared as a staged JSON for the integrator and not appended at preparation time. Question: at which age and in which region is the Wwox-null mouse glial excess (Figure S7 B and D) measured, and is any glial read made before the earliest recorded spike activity. Route: local JATS body for the ECoG and neuroinflammation passages; supplementary mmc1.pdf page 9 (Figure S7) rendered at 130 dpi and read for panels A-H and the caption (sha256 dd4919a80af937037309eddd2939db4f11af230e00849bf4b362832bcb5572e9). Targeted passages only.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID42422765_Obeid2026_assets/mmc1.pdf",
+ "source_fingerprint": "dd4919a80af937037309eddd2939db4f11af230e00849bf4b362832bcb5572e9",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "not_read",
+  "introduction": "not_read",
+  "methods": "not_read",
+  "results": "read",
+  "figures": "read",
+  "tables": "not_present",
+  "discussion": "not_read",
+  "limitations": "not_present",
+  "supplementary": "read",
+  "references": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/partial_benefit_it6_p10_20261029/README.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "Figure S7 page rendered: B Iba1 area WT about 4.5, KO about 7.6 (*); D GFAP area WT about 3.7, KO about 23.7 (***); caption gives p20 for A-D and no brain region; F/H treated-arm panels have no untreated-KO column",
+  "Text: continuous ECoG began at about P14, so no recording earlier than P14 exists in this paper"
+ ],
+ "prior_receipt": "FTR-20261023-42422765-01",
+ "reread_reason": "new_question_outside_prior_coverage",
+ "event_at": "2026-10-29T07:50:00Z"
+}

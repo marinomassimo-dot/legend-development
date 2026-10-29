@@ -1,0 +1,139 @@
+group	gene	above_threshold_in	log_ratio_by_region
+pan-reactive astrocyte	Gfap	NOT LISTED	
+pan-reactive astrocyte	Vim	NOT LISTED	
+pan-reactive astrocyte	Serpina3n	NOT LISTED	
+pan-reactive astrocyte	Serpina3g	PFC,CTX	{'PFC': 2.11, 'CTX': 2.11}
+pan-reactive astrocyte	Serpina3h	PFC,CTX	{'PFC': 1.31, 'CTX': 1.91}
+pan-reactive astrocyte	Lcn2	NOT LISTED	
+pan-reactive astrocyte	Steap4	NOT LISTED	
+pan-reactive astrocyte	Cd44	NOT LISTED	
+pan-reactive astrocyte	Timp1	NOT LISTED	
+pan-reactive astrocyte	Osmr	NOT LISTED	
+pan-reactive astrocyte	Cp	NOT LISTED	
+pan-reactive astrocyte	Hspb1	NOT LISTED	
+pan-reactive astrocyte	Nes	PFC	{'PFC': 1.17}
+pan-reactive astrocyte	Aspg	NOT LISTED	
+pan-reactive astrocyte	Gbp2	NOT LISTED	
+pan-reactive astrocyte	Fbln5	NOT LISTED	
+pan-reactive astrocyte	Psmb8	NOT LISTED	
+pan-reactive astrocyte	H2-D1	NOT LISTED	
+pan-reactive astrocyte	H2-T23	NOT LISTED	
+complement and A1-type	C3	HPC	{'HPC': -1.26}
+complement and A1-type	C1qa	NOT LISTED	
+complement and A1-type	C1qb	NOT LISTED	
+complement and A1-type	C1qc	NOT LISTED	
+complement and A1-type	C4b	NOT LISTED	
+complement and A1-type	C3ar1	NOT LISTED	
+complement and A1-type	Srgn	NOT LISTED	
+complement and A1-type	Amigo2	NOT LISTED	
+complement and A1-type	Fkbp5	NOT LISTED	
+complement and A1-type	Iigp1	NOT LISTED	
+complement and A1-type	Serping1	NOT LISTED	
+homeostatic astrocyte	Slc1a2	NOT LISTED	
+homeostatic astrocyte	Slc1a3	NOT LISTED	
+homeostatic astrocyte	Kcnj10	NOT LISTED	
+homeostatic astrocyte	Gja1	NOT LISTED	
+homeostatic astrocyte	Aqp4	NOT LISTED	
+homeostatic astrocyte	Glul	NOT LISTED	
+homeostatic astrocyte	Adk	NOT LISTED	
+homeostatic astrocyte	Gjb6	NOT LISTED	
+homeostatic astrocyte	Aldh1l1	NOT LISTED	
+homeostatic astrocyte	Slc4a4	NOT LISTED	
+homeostatic astrocyte	Atp1a2	NOT LISTED	
+homeostatic astrocyte	Aldoc	NOT LISTED	
+homeostatic astrocyte	Sparcl1	NOT LISTED	
+microglia	Aif1	NOT LISTED	
+microglia	Cx3cr1	NOT LISTED	
+microglia	Tmem119	NOT LISTED	
+microglia	P2ry12	NOT LISTED	
+microglia	Trem2	NOT LISTED	
+microglia	Tyrobp	NOT LISTED	
+microglia	Cd68	NOT LISTED	
+microglia	Itgax	NOT LISTED	
+microglia	Clec7a	NOT LISTED	
+microglia	Cst7	NOT LISTED	
+microglia	Apoe	NOT LISTED	
+microglia	Lyz2	NOT LISTED	
+microglia	Hexb	NOT LISTED	
+microglia	Csf1r	NOT LISTED	
+microglia	Spp1	NOT LISTED	
+microglia	Lgals3	NOT LISTED	
+microglia	Ccl2	NOT LISTED	
+microglia	Ccl3	NOT LISTED	
+microglia	Ccl4	NOT LISTED	
+microglia	Ccl5	NOT LISTED	
+microglia	Cxcl10	NOT LISTED	
+cytokine and inflammasome	Il1b	NOT LISTED	
+cytokine and inflammasome	Il1a	NOT LISTED	
+cytokine and inflammasome	Il1r1	NOT LISTED	
+cytokine and inflammasome	Il1rn	NOT LISTED	
+cytokine and inflammasome	Tnf	NOT LISTED	
+cytokine and inflammasome	Il6	NOT LISTED	
+cytokine and inflammasome	Nlrp3	NOT LISTED	
+cytokine and inflammasome	Casp1	NOT LISTED	
+cytokine and inflammasome	Il18	NOT LISTED	
+cytokine and inflammasome	Ptgs2	NOT LISTED	
+cytokine and inflammasome	Stat3	NOT LISTED	
+cytokine and inflammasome	Socs3	NOT LISTED	
+cytokine and inflammasome	Jak2	NOT LISTED	
+cytokine and inflammasome	Cebpd	NOT LISTED	
+cytokine and inflammasome	Nfkbia	NOT LISTED	
+cytokine and inflammasome	Icam1	NOT LISTED	
+cytokine and inflammasome	Tlr4	NOT LISTED	
+interferon-stimulated	Oas1f	PFC,CTX,HPC	{'PFC': 7.27, 'CTX': 6.02, 'HPC': 7.13}
+interferon-stimulated	Oas1a	NOT LISTED	
+interferon-stimulated	Oas2	NOT LISTED	
+interferon-stimulated	Oas3	NOT LISTED	
+interferon-stimulated	Ifit1	NOT LISTED	
+interferon-stimulated	Ifit3	NOT LISTED	
+interferon-stimulated	Isg15	NOT LISTED	
+interferon-stimulated	Irf7	NOT LISTED	
+interferon-stimulated	Stat1	NOT LISTED	
+interferon-stimulated	Mx1	NOT LISTED	
+interferon-stimulated	Mx2	NOT LISTED	
+immediate-early	Fos	NOT LISTED	
+immediate-early	Fosb	NOT LISTED	
+immediate-early	Jun	NOT LISTED	
+immediate-early	Junb	NOT LISTED	
+immediate-early	Egr1	NOT LISTED	
+immediate-early	Egr2	NOT LISTED	
+immediate-early	Npas4	NOT LISTED	
+immediate-early	Arc	NOT LISTED	
+immediate-early	Nr4a1	NOT LISTED	
+redox (outside the glial thread; listed once for the record)	Nfe2l2	NOT LISTED	
+redox (outside the glial thread; listed once for the record)	Hmox1	NOT LISTED	
+redox (outside the glial thread; listed once for the record)	Nqo1	NOT LISTED	
+redox (outside the glial thread; listed once for the record)	Gclm	NOT LISTED	
+redox (outside the glial thread; listed once for the record)	Gclc	NOT LISTED	
+redox (outside the glial thread; listed once for the record)	Sod1	NOT LISTED	
+redox (outside the glial thread; listed once for the record)	Sod2	NOT LISTED	
+redox (outside the glial thread; listed once for the record)	Gpx1	NOT LISTED	
+redox (outside the glial thread; listed once for the record)	Gpx4	NOT LISTED	
+redox (outside the glial thread; listed once for the record)	Txnrd1	NOT LISTED	
+redox (outside the glial thread; listed once for the record)	Prdx1	NOT LISTED	
+redox (outside the glial thread; listed once for the record)	Slc7a11	NOT LISTED	
+redox (outside the glial thread; listed once for the record)	Gsta4	CB	{'CB': 0.48}
+redox (outside the glial thread; listed once for the record)	Sesn2	NOT LISTED	
+redox (outside the glial thread; listed once for the record)	Fth1	NOT LISTED	
+redox (outside the glial thread; listed once for the record)	Ftl1	NOT LISTED	
+redox (outside the glial thread; listed once for the record)	Cybb	NOT LISTED	
+redox (outside the glial thread; listed once for the record)	Ncf1	NOT LISTED	
+redox (outside the glial thread; listed once for the record)	Ncf2	NOT LISTED	
+redox (outside the glial thread; listed once for the record)	Mt1	CB	{'CB': 0.5}
+redox (outside the glial thread; listed once for the record)	Mt2	NOT LISTED	
+redox (outside the glial thread; listed once for the record)	Mt3	CB	{'CB': 0.52}
+oligodendrocyte lineage and myelin	Mbp	NOT LISTED	
+oligodendrocyte lineage and myelin	Plp1	NOT LISTED	
+oligodendrocyte lineage and myelin	Mog	NOT LISTED	
+oligodendrocyte lineage and myelin	Mag	NOT LISTED	
+oligodendrocyte lineage and myelin	Cnp	NOT LISTED	
+oligodendrocyte lineage and myelin	Olig1	NOT LISTED	
+oligodendrocyte lineage and myelin	Olig2	NOT LISTED	
+oligodendrocyte lineage and myelin	Sox10	NOT LISTED	
+oligodendrocyte lineage and myelin	Pdgfra	NOT LISTED	
+oligodendrocyte lineage and myelin	Cspg4	NOT LISTED	
+oligodendrocyte lineage and myelin	Enpp6	NOT LISTED	
+oligodendrocyte lineage and myelin	Mobp	NOT LISTED	
+oligodendrocyte lineage and myelin	Gpr17	NOT LISTED	
+oligodendrocyte lineage and myelin	Cldn11	NOT LISTED	
+oligodendrocyte lineage and myelin	St18	NOT LISTED	
