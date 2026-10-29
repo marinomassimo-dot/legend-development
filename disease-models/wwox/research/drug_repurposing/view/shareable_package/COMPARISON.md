@@ -7,7 +7,7 @@ The full version (`view/index.html` in the repository, local use) and this packa
 - 36 candidate cards with their six answers, evidence by scope, counter-evidence, next step, public identifiers and F/C/P positions: card text and positions are identical (the only card fields that differ are listed under 'Different').
 - 22 needs and their observations, the threads, groups, goals, funnel, access chart (catalogue-wide counts), matrix summary, dispositions, observations, lead dispositions and the Italian orientation texts.
 - Sections of the data object that are byte-identical: access, dispositions, exploration_flagged, has_distinct, matrix_summary, no_probability, observations, orphan_priorities, pair_unit, ranking_note, schema, strings.
-- Curated sections identical: evidence_graph, gaps, goals, group_note, groups, scopes, threads, tracks, work_order.
+- Curated sections identical: contexts, evidence_graph, gaps, goals, group_note, groups, hypotheses, predictive, scopes, selection, threads, tracks, work_order.
 
 ## Different (withheld here, present in the full version)
 

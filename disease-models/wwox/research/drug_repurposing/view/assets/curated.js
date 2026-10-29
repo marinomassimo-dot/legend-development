@@ -331,6 +331,24 @@ function enterExport(ids) {
   };
   window.scrollTo(0, 0);
 }
+// ---------------------------------------------------------------- one section on its own, for A4 print (#section=selection|hypotheses|predictive)
+function enterSection(id) {
+  var src = { selection: 'selection', hypotheses: 'hypotheses', predictive: 'predictive' }[id] && $(id);
+  var area = $('export-area');
+  if (!src) { area.innerHTML = '<p class="state-none">' + esc(T.sec_unknown) + '</p>'; document.body.classList.add('exporting'); return; }
+  var clone = src.cloneNode(true);
+  Array.prototype.forEach.call(clone.querySelectorAll('.noprint'), function (e) { e.parentNode.removeChild(e); });
+  Array.prototype.forEach.call(clone.querySelectorAll('[id]'), function (e) { e.removeAttribute('id'); });
+  Array.prototype.forEach.call(clone.querySelectorAll('details'), function (d) { d.open = true; });
+  clone.removeAttribute('id');
+  area.innerHTML = '<div class="btns noprint"><button type="button" id="x-back">' + esc(T.ex_back) + '</button><button type="button" id="x-print">' + esc(T.ex_print) + '</button></div><div class="secprint" data-section="' + esc(id) + '"></div>';
+  area.querySelector('.secprint').appendChild(clone);
+  document.body.classList.add('exporting');
+  document.title = T.sec_title + ': ' + (src.querySelector('h2') ? src.querySelector('h2').textContent : id);
+  $('x-back').onclick = function () { history.pushState('', '', location.pathname + location.search + '#' + id); leaveExport(); if ($(id)) $(id).scrollIntoView(); };
+  $('x-print').onclick = function () { window.print(); };
+  window.scrollTo(0, 0);
+}
 function leaveExport() { document.body.classList.remove('exporting'); document.title = TITLE; }
 
 // ---------------------------------------------------------------- one-page synthesis (#brief=): eight labelled fields per card, one A4 page per card
@@ -384,6 +402,7 @@ function fromHash() {
   var h = decodeURIComponent(location.hash || ''), m;
   if ((m = h.match(/^#export=(.+)$/))) { enterExport(m[1].split(',')); return; }
   if ((m = h.match(/^#brief=(.+)$/))) { enterBrief(m[1].split(',')); return; }
+  if ((m = h.match(/^#section=(\w+)$/))) { leaveExport(); enterSection(m[1]); return; }
   leaveExport();
   if ((m = h.match(/^#c=(.*)$/))) { Object.keys(CF).forEach(function (k) { CF[k] = ''; }); m[1].split('&').forEach(function (kv) { var i = kv.indexOf(':'); if (i > 0) { var k = kv.slice(0, i); if (k in CF) CF[k] = kv.slice(i + 1); else if (k === 'rank') RK.mode = kv.slice(i + 1); } }); syncCtl(); $('rk-mode').value = RK.mode; renderAll(); $('navigate').scrollIntoView(); }
   if ((m = h.match(/^#compare=(.+)$/))) { SEL = m[1].split(',').filter(function (i) { return CM[i]; }).slice(0, 4); renderCands(); }

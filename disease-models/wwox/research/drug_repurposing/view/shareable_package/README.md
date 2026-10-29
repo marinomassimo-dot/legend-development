@@ -8,7 +8,7 @@ Research material at disease and reference-genotype level: what to study for WWO
 
 Open `index.html` by double-click or from `file://`. It is one self-contained file (inline CSS and JavaScript, data embedded as JSON); it needs no server, loads nothing from the network and opens identically from any folder or from the unzipped archive. Links inside it go to the same page (`#...` anchors) or to public identifiers (PubMed, DOI, ChEMBL, source licence pages); none is a repository-relative path.
 
-Card export (print / PDF, standalone HTML download) and the comparison view work offline: use the buttons on a card profile, or the URL fragments `#export=<card id>` and `#compare=<id>,<id>`.
+Card export (print / PDF, standalone HTML download) and the comparison view work offline: use the buttons on a card profile, or the URL fragments `#export=<card id>`, `#brief=<card id>` (one A4 page per card) and `#compare=<id>,<id>`; the sections on selection, hypotheses and predictive test print on their own through `#section=selection`, `#section=hypotheses` and `#section=predictive`.
 
 ## Hand it over
 
