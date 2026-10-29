@@ -6,16 +6,16 @@
    "words": 22
   }
  ],
- "bibliographic_title_runs": 65,
+ "bibliographic_title_runs": 66,
  "corpus_by_extension": {
   "html": 42,
-  "json": 14,
+  "json": 4,
   "pdf": 189,
   "txt": 163,
   "xml": 556
  },
- "corpus_files": 964,
- "corpus_words": 13441285,
+ "corpus_files": 954,
+ "corpus_words": 13042633,
  "failures": 0,
  "method": "every string of the shareable data object against the third-party texts held locally (full texts, abstracts, openFDA label JSON), longest verbatim run in words (shingle 7); limits: unquoted phrase <= 25 words, marked quotation <= 12 words, or <= 30 words with an attribution phrase",
  "not_covered": "third-party texts not held locally; label sections that were not fetched",
@@ -35,7 +35,12 @@
    "path": ".cur.cands[].asserts[].note_full",
    "run": "no sustained positive effect of treatment was detected",
    "words": 8
+  },
+  {
+   "path": ".cur.cands[].asserts[].note_full",
+   "run": "a marked reduction in both progenitor populations",
+   "words": 7
   }
  ],
- "unquoted_runs_within_limit": 18
+ "unquoted_runs_within_limit": 17
 }

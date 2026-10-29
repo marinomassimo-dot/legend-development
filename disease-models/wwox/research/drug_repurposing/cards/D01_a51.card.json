@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "309bdb13c11de85bfed3d8654750001949e20178f62857c7d1aac4071447c87b",
+  "input_sha256": "e9e09331e1fb3d073918fb8f776b2377be25c7fa6403b329e4ffcd23dba2a6ab",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -106,7 +106,7 @@
         "source": "DL-THER-089 (same experiment)",
         "locator": "discovery_ledger_current DL-THER-089; disease-models/wwox/research/repurposing_known_roads_20261020_scientist-a.md § 2.4a",
         "epistemic_status": "DATO",
-        "reading_depth": "UNKNOWN",
+        "reading_depth": "complete_fulltext_read",
         "receipt_reference": "FTR-20260810-42397075-04",
         "context": {
           "disease_id": "WWOX-deficient human cerebral organoid model (engineered knockout; NOT a patient allele)",
@@ -115,7 +115,8 @@
           "cell_type": "cerebral organoid progenitors (SOX2+ MYC+)",
           "developmental_stage": "organoid, culture weeks 8 to 15"
         },
-        "measured_result_note": "Treated knockout not significantly different from wild type on this endpoint. No treated-wild-type arm, no dose-response, no randomisation or blinding, one of three experiments the paper excludes from independent differentiations. The compound suppresses two pathways: causal attribution to MYC inherits the ambiguity."
+        "measured_result_note": "Treated knockout organoids: SOX2+MYC+ about 72 percent (knockout) to about 50 with A51, significant against the untreated knockout and not significant against wild type; SOX2+ about 60 to about 33, same pattern (Supplementary Fig. 7F; the paper's text: 'a marked reduction in both progenitor populations'). The comparison with the untreated knockout therefore exists (corrected IT6 P2: an earlier note said treated versus wild type only). No treated-wild-type arm, no dose-response, no randomisation or blinding, one of three experiments the paper excludes from independent differentiations. The compound suppresses two pathways: causal attribution to MYC inherits the ambiguity.",
+        "receipt": "FTR-20260810-42397075-04"
       },
       {
         "id": "DR-D01-002",
@@ -125,7 +126,7 @@
         "source": "DL-THER-089 (same experiment)",
         "locator": "discovery_ledger_current DL-THER-089; disease-models/wwox/research/repurposing_known_roads_20261020_scientist-a.md § 2.4a",
         "epistemic_status": "DATO",
-        "reading_depth": "UNKNOWN",
+        "reading_depth": "complete_fulltext_read",
         "receipt_reference": "FTR-20260810-42397075-04",
         "context": {
           "disease_id": "WWOX-deficient human cerebral organoid model (engineered knockout; NOT a patient allele)",
@@ -134,7 +135,8 @@
           "cell_type": "cerebral organoid progenitors (SOX2+ MYC+)",
           "developmental_stage": "organoid, culture weeks 8 to 15"
         },
-        "measured_result_note": "MEASURED NO RECOVERY: knockout-versus-treated not significant for both markers, CTIP2 remaining far below wild type. Encoded NO_CHANGE; it stays UNRESOLVED because the single disease assertion is on a different endpoint (gap G-2). This row is the split that the first row hides."
+        "measured_result_note": "MEASURED NO RECOVERY: knockout-versus-treated not significant for both markers, CTIP2 remaining far below wild type. Encoded NO_CHANGE; it stays UNRESOLVED because the single disease assertion is on a different endpoint (gap G-2). This row is the split that the first row hides.",
+        "receipt": "FTR-20260810-42397075-04"
       }
     ],
     "p4_fields": {

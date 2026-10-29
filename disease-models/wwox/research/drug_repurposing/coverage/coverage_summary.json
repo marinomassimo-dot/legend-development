@@ -83,9 +83,9 @@
   "union_with_pathway_members_records": 1471
  },
  "evaluated_vs_records": {
-  "interventions_with_a_listed_pertinent_readout_assertion": 7,
+  "interventions_with_a_listed_pertinent_readout_assertion": 8,
   "meaning": "'examined' = target-matched against the needs; the last figure counts matrix rows (families or card interventions) with a pertinent WWOX-system readout or case report",
-  "records_evaluated_against_wwox_needs_with_any_observation": 7,
+  "records_evaluated_against_wwox_needs_with_any_observation": 8,
   "records_examined_by_target_match": 44211,
   "records_in_catalogue": 44211,
   "records_with_a_headline_link": 1218,
@@ -127,13 +127,12 @@
    "not_evaluable": 1086,
    "opposed": 13
   },
-  "L3_observed": 9,
+  "L3_observed": 10,
   "L3_states": {
-   "none_in_cards": 1637,
+   "none_in_cards": 1636,
    "observed_case_level_only": 2,
-   "observed_depth_unknown": 1,
-   "observed_wwox_system": 7,
-   "precedent_other_disease_only": 13,
+   "observed_wwox_system": 8,
+   "precedent_other_disease_only": 14,
    "target_engagement_only": 4
   },
   "L4_observed": 4,
@@ -637,10 +636,10 @@
      "D01_a51"
     ],
     "cells_L3_effect_in_wild_type_only": 0,
-    "cells_L3_observed": 0,
+    "cells_L3_observed": 1,
     "cells_L3_observed_case_level_only": 0,
     "cells_L3_observed_vs_wild_type_only": 0,
-    "cells_L3_observed_wwox_system": 0,
+    "cells_L3_observed_wwox_system": 1,
     "cells_L4_observed": 0,
     "direction": "uncertain",
     "excluded_records_by_reason": {
@@ -1398,30 +1397,30 @@
   }
  },
  "observations": {
-  "assertions_listed_in_pertinence_table": 101,
+  "assertions_listed_in_pertinence_table": 102,
   "assertions_not_assessed_for_pertinence_not_counted": 0,
   "axis_cards_not_interventions": 3,
   "card_interventions": 30,
-  "data_assertions_in_intervention_cards": 101,
+  "data_assertions_in_intervention_cards": 102,
   "listed_by_evidence_kind": {
    "case_report_uninformative": 3,
-   "case_report_wwox_clinical": 8,
+   "case_report_wwox_clinical": 9,
    "effect_in_wild_type_arm": 2,
-   "genotype_comparison_vs_wild_type": 5,
+   "genotype_comparison_vs_wild_type": 4,
    "label_statement": 2,
    "out_of_scope_endpoint": 4,
-   "readout_in_wwox_system": 17,
-   "readout_other_disease": 38,
+   "readout_in_wwox_system": 18,
+   "readout_other_disease": 41,
    "safety_signal": 10,
-   "target_engagement_assay": 13
+   "target_engagement_assay": 14
   },
   "listed_by_sign": {
-   "benefit": 44,
+   "benefit": 46,
    "harm": 15,
    "mixed": 1,
-   "normalised_vs_wild_type": 3,
+   "normalised_vs_wild_type": 2,
    "not_normalised_vs_wild_type": 2,
-   "null": 17,
+   "null": 21,
    "partial_benefit": 3,
    "unquantified": 2,
    "unresolved": 15

@@ -78,6 +78,25 @@
         "developmental_stage": "paediatric (infancy to childhood)"
       },
       "note": "The bridge has no sign for 'no difference between columns': an identical row is encoded UNKNOWN and the sentence in this note is the datum. The row is a between-patient label at one timepoint, not a within-patient change under treatment."
+    },
+    {
+      "id": "A-KD-4",
+      "target_id": "seizure_burden",
+      "endpoint": "clinician-reported seizure control on the ketogenic diet",
+      "direction": "NO_CHANGE",
+      "source": "Riva 2022, Front Pediatr (PMID 35573960, PMC9100683); one patient; carried by CLAIM 001 / DL-MOL-007",
+      "locator": "Results, Clinical Features: «The ketogenic diet did not significantly improve seizures and was suspended.»",
+      "epistemic_status": "DATO",
+      "reading_depth": "complete_fulltext_read",
+      "context": {
+        "disease_id": "WOREE (WWOX-related epileptic encephalopathy)",
+        "genotype": "biallelic null: stop variant on one allele and an exon 6 deletion on the other; first-day-of-life onset",
+        "species": "human",
+        "cell_type": "NOT_APPLICABLE_WHOLE_ORGANISM",
+        "developmental_stage": "paediatric (infancy to childhood)"
+      },
+      "note": "n = 1; one sentence in a diagnostic case report; diet duration, ketosis level, seizure counts and the criterion for 'significantly' are not stated; other levers were also tried and failed in the same child. A reported null, not a controlled comparison. Whether this child overlaps the Chong series is not expected (different centre and report) but is not stated. Added IT6 P2 after the independent verification; the sentence was read in the local full text (files/fulltext/PMID35573960_Riva2022_PMC.xml).",
+      "receipt": "FTR-20261003-35573960-01"
     }
   ],
   "label_lookup": {

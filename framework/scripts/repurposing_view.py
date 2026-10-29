@@ -708,17 +708,23 @@ CRIT_IT = {
     "no null, unfavourable or mixed result in a WWOX system": "nessun risultato nullo, sfavorevole o misto in un sistema WWOX",
     "a favourable WWOX readout has an untreated same-genotype comparator": "un esito favorevole in WWOX ha un confronto non trattato dello stesso genotipo",
     "a favourable WWOX readout is from a full or partial text reading": "un esito favorevole in WWOX deriva dalla lettura del testo completo o parziale",
-    "a favourable WWOX readout carries no weakening flag": "un esito favorevole in WWOX non porta segnalazioni di debolezza",
-    "one and the same readout meets all three": "uno stesso esito soddisfa tutti e tre i criteri",
+    "a favourable WWOX readout carries no reading-limit flag": "un esito favorevole in WWOX non porta limiti di lettura (profondità, lettura grafica, solo micrografie, lettura parziale)",
+    "a favourable WWOX readout carries no design-limit flag": "un esito favorevole in WWOX non porta limiti di disegno sperimentale (composto strumentale, aspecifico anche nel selvatico, un solo esperimento, caso singolo, senza strumento, senza braccio knockout)",
+    "the signed rows behind this position were read beyond abstract, query or unknown depth": "le righe con segno su cui poggia questa posizione sono state lette oltre l'abstract, la query o una profondità ignota",
+    "one and the same readout meets all four": "uno stesso esito soddisfa tutti e quattro i criteri",
     "an outside-WWOX harm or null signal stands without a favourable outside signal": "fuori da WWOX esiste un segnale di danno o nullo, senza segnale favorevole esterno",
     "some favourable support for the intervention is recorded on this need (other-disease readout or target-engagement assay)": "per questo bisogno è registrato qualche sostegno favorevole all'intervento (esito in un'altra malattia o saggio sul bersaglio)",
     "the need has a WWOX-system observation": "il bisogno ha un'osservazione in un sistema WWOX",
 }
 
 FAV_SIGNS = {"benefit", "partial_benefit", "normalised_vs_wild_type"}
+CARRIER_SIGNS = {"benefit"}   # IT6 P2: a partial benefit (postponement, intermediate level) is favourable for the result but never carries F1
 WWOX_KINDS = {"readout_in_wwox_system", "case_report_wwox_clinical", "genotype_comparison_vs_wild_type"}
 OUT_KINDS = {"readout_other_disease", "safety_signal", "label_statement", "case_report_uninformative"}
-WEAK_FLAGS = ("tool_compound", "reading_depth", "nonspecific", "graphical", "one_experiment", "case_level", "micrographs", "partial_read", "no_instrument", "no_knockout_arm", "abstract_only")
+# IT6 P2: how well the source was read is kept apart from how sound the experiment was; both weaken F1, only the page says which
+READING_FLAGS = ("reading_depth", "graphical", "micrographs", "partial_read", "abstract_only")
+DESIGN_FLAGS = ("tool_compound", "nonspecific", "one_experiment", "case_level", "no_instrument", "no_knockout_arm")
+WEAK_FLAGS = READING_FLAGS + DESIGN_FLAGS
 NOT_RECOVERY = "not_a_recovery_comparison"
 FIRM_DEPTHS = {"complete_fulltext_read", "partial_fulltext_read"}
 
@@ -745,24 +751,69 @@ def classify_rows(rows: list[dict], depth_of: dict | None = None) -> dict:
         result = "unresolved"
     else:
         result = "none"
-    firm, ctrl_any, deep_any, clean_any, weak_seen, tool = [], False, False, False, set(), False
+    firm, ctrl_any, deep_any, clean_r_any, clean_d_any, weak_r, weak_d, tool = [], False, False, False, False, set(), set(), False
     for r in w:
         fl = str(r.get("flags") or "")
         tool = tool or "tool_compound" in fl
-        if r.get("sign") in FAV_SIGNS and r.get("evidence_kind") == "readout_in_wwox_system":
+        if r.get("sign") in CARRIER_SIGNS and r.get("evidence_kind") == "readout_in_wwox_system":
             controlled = str(r.get("comparator") or "").startswith(("untreated_same_genotype", "before_and_after"))
             deep = depth_of.get(r.get("assertion_id")) in FIRM_DEPTHS
             bad = [f for f in fl.split(";") if f and any(k in f for k in WEAK_FLAGS)]
-            ctrl_any, deep_any, clean_any = ctrl_any or controlled, deep_any or deep, clean_any or not bad
-            weak_seen.update(bad)
+            bad_r = [f for f in bad if any(k in f for k in READING_FLAGS)]
+            bad_d = [f for f in bad if f not in bad_r]
+            ctrl_any, deep_any, clean_r_any, clean_d_any = ctrl_any or controlled, deep_any or deep, clean_r_any or not bad_r, clean_d_any or not bad_d
+            weak_r.update(bad_r)
+            weak_d.update(bad_d)
             if controlled and deep and not bad:
                 firm.append(r.get("assertion_id"))
     qualifiers = [r.get("assertion_id") for r in w_all if r.get("sign") == "not_normalised_vs_wild_type"]
+    te = [r for r in rows if r.get("evidence_kind") == "target_engagement_assay"]
     o_fav = sum(1 for r in o if r.get("evidence_kind") == "readout_other_disease" and r.get("sign") in FAV_SIGNS)
-    o_counter = sum(1 for r in o if r.get("sign") in ("harm", "null"))
+    # IT6 P2: a target-engagement assay that shows no or poor engagement is counter-evidence like any other null (it was invisible: DR-E02-001/004)
+    o_counter = sum(1 for r in o if r.get("sign") in ("harm", "null")) + sum(1 for r in te if r.get("sign") in ("harm", "null"))
     return {"result": result, "n_fav": n_fav, "n_null": n_null, "n_unf": n_unf, "n_mix": n_mix, "n_incomplete": sum(1 for r in w_all if r.get("sign") == "not_normalised_vs_wild_type"), "n_unresolved": cnt["unresolved"] + cnt["unquantified"],
-            "n_wwox_rows": len(w_all), "n_counted_rows": len(w), "n_not_recovery": len(w_all) - len(w), "firm": firm, "ctrl_any": ctrl_any, "deep_any": deep_any, "clean_any": clean_any, "weak_seen": sorted(weak_seen), "tool": tool, "qualifiers": qualifiers, "o_fav": o_fav, "o_counter": o_counter, "n_other_rows": len(o), "n_target_engagement": sum(1 for r in rows if r.get("evidence_kind") == "target_engagement_assay"),
-            "n_engagement_fav": sum(1 for r in rows if r.get("evidence_kind") == "target_engagement_assay" and r.get("sign") in FAV_SIGNS)}
+            "n_wwox_rows": len(w_all), "n_counted_rows": len(w), "n_not_recovery": len(w_all) - len(w), "firm": firm, "ctrl_any": ctrl_any, "deep_any": deep_any, "clean_read_any": clean_r_any, "clean_design_any": clean_d_any, "weak_reading": sorted(weak_r), "weak_design": sorted(weak_d), "tool": tool, "qualifiers": qualifiers, "o_fav": o_fav, "o_counter": o_counter, "n_other_rows": len(o), "n_target_engagement": sum(1 for r in rows if r.get("evidence_kind") == "target_engagement_assay"),
+            "n_engagement_fav": sum(1 for r in te if r.get("sign") in FAV_SIGNS)}
+
+
+def display_facts(rows: list[dict], depth_of: dict | None = None) -> dict:
+    """IT6 P2: facts that are SHOWN and never decide a position (kept out of classify_rows so that the guard hash covers decisions only).
+    shallow_* = no signed row of that sign set was read beyond abstract, query or unknown depth; the sign set is the one that gives the position its family
+    (F1/F2: favourable WWOX rows; C1/C2: null, harm or mixed WWOX rows; F3: favourable outside rows; C3: harm or null outside rows)."""
+    depth_of = depth_of or {}
+    w = [r for r in rows if r.get("evidence_kind") in WWOX_KINDS and NOT_RECOVERY not in str(r.get("flags") or "")]
+    te = [r for r in rows if r.get("evidence_kind") == "target_engagement_assay"]
+    o = [r for r in rows if r.get("evidence_kind") in OUT_KINDS] + te
+    sets = {"F_w": [r for r in w if r.get("sign") in FAV_SIGNS], "C_w": [r for r in w if r.get("sign") in ("null", "harm", "mixed")],
+            "F_o": [r for r in o if r.get("sign") in FAV_SIGNS and r.get("evidence_kind") in ("readout_other_disease", "target_engagement_assay")], "C_o": [r for r in o if r.get("sign") in ("harm", "null")]}
+    shallow = {k: bool(v) and not any(depth_of.get(r.get("assertion_id")) in FIRM_DEPTHS for r in v) for k, v in sets.items()}
+    n = {k: len(v) for k, v in sets.items()}
+    downstream = sorted({r.get("assertion_id") for r in w if "endpoint_downstream_of_need" in str(r.get("flags") or "")})
+    return {"shallow": shallow, "n_set": n, "downstream": downstream}
+
+
+def card_compounds(cid: str, pert: list[dict], links: dict) -> set:
+    """ChEMBL ids a card is about: those linked in catalog/card_links.json plus those named as the subject of its pertinence rows. Pure."""
+    ids = {x["chembl_id"] for x in (links.get(cid) or {}).get("links", []) if x.get("chembl_id")}
+    ids |= {r["subject"] for r in pert if r["card_id"] == cid and str(r.get("subject") or "").startswith("CHEMBL")}
+    return ids
+
+
+def sibling_counters(cid: str, nid: str, pert: list[dict], links: dict) -> dict:
+    """IT6 P2: harm or null rows on the SAME need that other cards hold for a compound this card is also about. {other card: n rows}.
+    A position is computed from the card's own rows; this makes visible what a sibling card of the same compound found on the need. Pure."""
+    mine = card_compounds(cid, pert, links)
+    out: dict = {}
+    if not mine:
+        return out
+    for r in pert:
+        if r["card_id"] == cid or r["need_id"] != nid or r.get("sign") not in ("harm", "null"):
+            continue
+        subj = str(r.get("subject") or "")
+        theirs = {subj} if subj.startswith("CHEMBL") else card_compounds(r["card_id"], pert, links)
+        if theirs & mine:
+            out[r["card_id"]] = out.get(r["card_id"], 0) + 1
+    return out
 
 
 def assign_need_position(facts: dict, abstention: bool, has_next_step: bool, need_has_wwox_obs: bool) -> tuple[str, list[tuple[str, bool]]]:
@@ -781,14 +832,15 @@ def assign_need_position(facts: dict, abstention: bool, has_next_step: bool, nee
             firm = bool(facts["firm"])
             crit += [("a favourable WWOX readout has an untreated same-genotype comparator", facts["ctrl_any"]),
                      ("a favourable WWOX readout is from a full or partial text reading", facts["deep_any"]),
-                     ("a favourable WWOX readout carries no weakening flag" + (" (found: " + ", ".join(facts["weak_seen"]) + ")" if facts["weak_seen"] else ""), facts["clean_any"]),
-                     ("one and the same readout meets all three", firm)]
+                     ("a favourable WWOX readout carries no reading-limit flag" + (" (found: " + ", ".join(facts["weak_reading"]) + ")" if facts["weak_reading"] else ""), facts["clean_read_any"]),
+                     ("a favourable WWOX readout carries no design-limit flag" + (" (found: " + ", ".join(facts["weak_design"]) + ")" if facts["weak_design"] else ""), facts["clean_design_any"]),
+                     ("one and the same readout meets all four", firm)]
             return ("F1" if firm else "F2"), crit
         return {"mixed": "C2", "null": "C1", "unfavourable": "C1"}[res], crit
-    crit += [("an outside-WWOX harm or null signal stands without a favourable outside signal", facts["o_counter"] > 0 and facts["o_fav"] == 0)]
-    if facts["o_counter"] > 0 and facts["o_fav"] == 0:
+    support = facts["o_fav"] + facts["n_engagement_fav"]   # IT6 P2: C3 and F3 now read the same support (a favourable engagement assay is a favourable outside signal)
+    crit += [("an outside-WWOX harm or null signal stands without a favourable outside signal", facts["o_counter"] > 0 and support == 0)]
+    if facts["o_counter"] > 0 and support == 0:
         return "C3", crit
-    support = facts["o_fav"] + facts["n_engagement_fav"]
     crit += [("some favourable support for the intervention is recorded on this need (other-disease readout or target-engagement assay)", support > 0), ("the need has a WWOX-system observation", need_has_wwox_obs)]
     return ("F3" if (need_has_wwox_obs and support > 0) else "P3"), crit
 
@@ -970,8 +1022,16 @@ def build_curated(dr: Path, ctx: dict) -> dict:
             tags = []
             if fx["tool"]:
                 tags.append("tool compound, not a candidate drug")
-            if pos.startswith("F") and fx["o_counter"]:
+            if (pos.startswith("F") or pos == "P3") and fx["o_counter"]:
                 tags.append(f'counter-evidence outside WWOX in rows ({fx["o_counter"]})')
+            dfx = display_facts(rs, depth_of)
+            fam_set = {"F1": "F_w", "F2": "F_w", "C1": "C_w", "C2": "C_w", "F3": "F_o", "C3": "C_o"}.get(pos)
+            if fam_set:   # a criterion, not a tag: how the rows behind the position were read (decides nothing)
+                crit = crit + [("the signed rows behind this position were read beyond abstract, query or unknown depth (found: " + str(dfx["n_set"][fam_set]) + " row(s))", not dfx["shallow"][fam_set])]
+            if dfx["downstream"]:
+                tags.append("the signed WWOX row(s) " + ", ".join(dfx["downstream"]) + " measure an endpoint downstream of the need, not the need's own readout")
+            for sib, n in sorted(sibling_counters(cid, nid, pert, links).items()):
+                tags.append(f"same compound, other card {sib}: {n} null or harm row(s) on this need")
             if pos == "F1" and fx["qualifiers"]:
                 tags.append("beside a 'not normalised vs wild type' arm (" + ", ".join(fx["qualifiers"]) + ")")
             if fx["n_not_recovery"]:
