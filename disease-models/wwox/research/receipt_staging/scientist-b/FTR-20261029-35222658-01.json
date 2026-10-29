@@ -1,0 +1,36 @@
+{
+ "event_id": "FTR-20261029-35222658-01",
+ "study_id": {
+  "pmid": "35222658",
+  "doi": "10.22037/ijcn.v16i1.30480"
+ },
+ "analysis_at": "2026-10-29T08:40:00Z",
+ "workflow": "scientist-b, IT6 package P11 (supplement and diet). SOURCE_FIRST reading of the open-access PMC article XML retrieved through the Europe PMC full-text endpoint (CC BY 3.0 in the file): abstract, introduction, methods, results, tables and discussion read through the end of the conclusion; the reference list was not read. Question: what was given, to whom, against what comparator, and what the trial can and cannot say about magnesium in infantile spasms. Prepared as JSON for the integrator and staged.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC8752995/fullTextXML",
+ "source_fingerprint": "6f8ae74e32433cdcb0347bf364b9dc4c52e676d1a924740797687c96f23ab348",
+ "source_kind": "fulltext_remote",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_present"
+ },
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/supplement_diet_it6_p11_20261029/README.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "Figure 1 is a flow chart whose image was not opened (caption only), which is why the depth is partial. No verbatim-locator work manifest was built; quotations in the README are checked against the extracted text by a script that ships with the README. The reference list was not read."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read",
+ "record_kind": "contemporaneous_receipt",
+ "event_at": "2026-10-29T09:30:00Z",
+ "analysis_time_precision": "minute"
+}

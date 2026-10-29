@@ -1,0 +1,14 @@
+query	status	dsld_fulltext_hits	sample_size	equal_ingredient_name_in_sample	equal_ingredient_group_in_sample	matched_ingredient_names	matched_ingredient_groups	example_label_ids	retrieved_utc
+Magnesium	OK	77199	50	50	50	Magnesium;Magnesium Stearate;Magnesium Carbonate;Magnesium Hydroxide;Magnesium Citrate	Magnesium	19279;242165;183121	2026-10-29T07:40:50Z
+Magnesium citrate	OK	29280	50	1	0	Magnesium Citrate	Magnesium	227937	2026-10-29T07:40:52Z
+Magnesium glycinate	OK	16847	50	4	0	Magnesium Glycinate	Magnesium	33919;256020;325862	2026-10-29T07:40:54Z
+Magnesium bisglycinate	OK	806	50	7	0	Magnesium Bisglycinate	Magnesium	311313;299358;274414	2026-10-29T07:40:56Z
+Magnesium oxide	OK	12366	50	8	0	Magnesium Oxide	Magnesium	336940;274963;77173	2026-10-29T07:40:59Z
+Magnesium L-threonate	OK	184	50	13	0	Magnesium L-Threonate	Magnesium	231840;245277;231834	2026-10-29T07:41:01Z
+Magnesium threonate	OK	12	12	1	0	Magnesium Threonate	Magnesium	321786	2026-10-29T07:41:03Z
+Magnesium taurate	OK	92	50	8	0	Magnesium Taurate	Magnesiium;Magnesium	241846;271261;302223	2026-10-29T07:41:05Z
+Magnesium malate	OK	28813	50	11	16	Magnesium Malate;Magnesium Malate Trihydrate;DiMagnesium Malate	Magnesium Malate;Magnesium	175495;274962;241839	2026-10-29T07:41:07Z
+Magnesium chloride	OK	305	50	29	0	Magnesium Chloride;Magnesium chloride	Magnesium	241825;315676;286152	2026-10-29T07:41:10Z
+Magnesium sulfate	OK	358	50	19	0	Magnesium Sulfate;MAGNESIUM SULFATE	Magnesium;Magnesiium	215795;27659;13707	2026-10-29T07:41:12Z
+Magnesium aspartate	OK	2512	50	4	0	Magnesium Aspartate	Magnesium	308656;20255;286033	2026-10-29T07:41:14Z
+Zzzxq nonsense control	OK	0	0	0	0				2026-10-29T07:41:16Z

@@ -1,0 +1,42 @@
+id	tool	query	count	what_was_done_with_the_hits
+S01	PubMed (MCP search_articles)	WWOX AND (magnesium OR Mg2+)	0	nothing to triage
+S02	PubMed (MCP)	WWOX AND (thiamine OR lipoic OR carnitine)	1	33854788 inspected: a type 2 diabetes metabolome GWAS naming a WWOX locus; irrelevant
+S03	PubMed (MCP)	WWOX AND (nicotinamide OR NAD+ OR NAD)	3	30385613 (renal-cancer sorafenib germline), 25595186 (review of WWOX in metabolism), 21476439 (in vitro steroid substrate enzymology of the SDR domain with NAD+/NADP+); none tests an NAD+ precursor
+S04	PubMed (MCP)	"WWOX AND (pyridoxine OR pyridoxal OR ""vitamin B6"")"	1	38407561: one WOREE case; vitamin B6 and zonisamide given without relief (abstract-level)
+S05	PubMed (MCP)	"WWOX AND (""vitamin D"" OR calcitriol OR ""omega-3"" OR docosahexaenoic)"	0	nothing to triage
+S06	PubMed (MCP)	WWOX AND (NMDA OR NR2B OR GluN2B)	1	34634460 only (the source paper)
+S07	PubMed (MCP)	"WOREE OR WWOX AND (""spasms"" OR ""ACTH"")"	25	15 PMIDs returned, not triaged one by one; used only to confirm that infantile spasms are a recorded WWOX-DEE phenotype (38407561 carries the MeSH term)
+S08	PubMed (MCP)	magnesium NMDA receptor voltage-dependent block depolarized resting potential neocortical neurons epileptiform	0	over-specified (all terms ANDed)
+S09	PubMed (MCP)	magnesium L-threonate cerebrospinal fluid magnesium oral supplementation	2	37406874, 32241292: rat pain and cystitis models, abstract-level; both report oral threonate preventing or reversing a low cerebrospinal-fluid Mg2+ in diseased rats
+S10	PubMed (MCP)	magnesium AND (epilepsy OR seizures) AND (children OR infantile spasms OR epileptic encephalopathy) AND (treatment OR supplementation)	497	not triaged (broad); the targeted queries below were used instead
+S11	PubMed (MCP)	magnesium GRIN2A OR GRIN2B OR GRIN1 variant NMDA receptor magnesium block treatment patients	3317	discarded: the engine split the OR into unrelated terms
+S12	PubMed (MCP)	magnesium seizures systematic review randomized trial anticonvulsant efficacy	4	39054515 (eclampsia regimens), 35358219 and 26259048 (post-traumatic seizure prophylaxis; one trial of magnesium sulfate, late seizure RR 1.07, CI 0.53 to 2.17, abstract-level), 26485229 (eclampsia, non-randomised)
+S13	PubMed (MCP)	Enhancement of learning and memory by elevating brain magnesium	9	title not matched by the engine; the paper was found by author search below
+S14	PubMed (MCP)	magnesium epilepsy children serum cerebrospinal fluid magnesium level	5	not triaged (1970s to 2015 titles)
+S15	PubMed (MCP)	magnesium sulfate refractory status epilepticus	14	not triaged
+S16	PubMed (MCP)	magnesium sulfate status epilepticus children	6	41054655 (2025 review, magnesium sulfate in paediatric emergency medicine) noted, not read
+S17	PubMed (MCP)	hypomagnesemia seizures infants magnesium treatment	47	not triaged
+S18	PubMed (MCP)	brain magnesium homeostasis blood-brain barrier CSF magnesium regulation oral intake	0	over-specified
+S19	PubMed (MCP)	GRIN2B variant reduced magnesium block gain-of-function epilepsy	0	over-specified
+S20	PubMed (MCP)	GRIN2A GRIN2B variants magnesium sensitivity	0	over-specified
+S21	PubMed (MCP)	extracellular magnesium spontaneous bursting neocortical slices NMDA	3	10350566, 8536673, 7760112 returned, titles not opened
+S22	PubMed (MCP)	magnesium supplementation cerebrospinal fluid magnesium humans	6	titles checked (39684308, 39260790, 35082658, 23321048, 15503623, 1296767): none reports the cerebrospinal-fluid response to oral magnesium in humans
+S23	PubMed (MCP lookup_article_by_citation)	Neuron 2010 Slutsky magnesium learning memory	error	tool call rejected (parameter format); replaced by S28
+S24	Europe PMC REST (curl)	"""magnesium"" AND ""WWOX"" (full text)"	74	top 5 by relevance inspected by title: none about magnesium in WWOX (livestock GWAS, sheep, a review of epilepsy networks, a syndromes review, bovine vesicles); the other 69 not opened
+S25	Europe PMC REST	(TITLE_ABS:WWOX OR TITLE_ABS:WOREE) AND TITLE_ABS:magnesium	0	
+S26	Europe PMC REST	TITLE_ABS(WWOX|WOREE) AND thiamine|lipoic|carnitine|NAD precursors|pyridoxine|omega-3|vitamin D|taurine|creatine (one query each; see README table 1)	magnesium 0; thiamine 0; lipoic 0; carnitine 1; NAD precursors 0; pyridoxine/PLP 2; omega-3 0; vitamin D 0; taurine 1; creatine 1	the non-zero ones opened: carnitine = the diabetes metabolome GWAS; pyridoxine = 38407561 and an MMPSI phenotype paper; taurine = a cattle GWAS; creatine = a neuroendocrine-tumour bioinformatics paper
+S27	Europe PMC REST	"""WWOX"" AND the same terms, full text"	magnesium 101; thiamine 23; lipoic 13; carnitine 60; NAD precursor 94; pyridoxine/PLP 67; omega-3 49; vitamin D 94; taurine 43; creatine 71	full-text co-occurrence counts, mostly incidental (reference lists, methods); not triaged and not used as evidence
+S28	Europe PMC REST	"AUTH:""Slutsky I"" AND magnesium AND learning"	2	20152124 (Neuron 2010) found; no open full text, abstract only
+S29	Europe PMC REST	TITLE:Voltage dependence of NMDA-activated macroscopic conductances predicted by single-channel kinetics	1	PMC6570236 (J Neurosci 1990): the XML endpoint returned HTTP 500 and the PDF render endpoint returned an HTML page, which was not pursued; NOT READ
+S30	Europe PMC REST	TITLE:magnesium AND TITLE:NMDA AND TITLE:block AND TITLE:variants	0	
+S31	Europe PMC REST	(TITLE:Mg2+ OR TITLE:magnesium) AND (TITLE:GluN2A OR GluN2B OR GRIN2A OR GRIN2B OR NMDA receptor variants)	2	24614743 (J Physiol 2014, triheteromeric GluN2B/2D magnesium block, PMC open access: read in selected passages) and 20955720 (memantine potency shift by Mg2+, not opened)
+S32	Europe PMC REST	TITLE:magnesium AND (TITLE:seizure OR epilep*) AND (TITLE:children OR infant* OR paediatric OR pediatric)	2	30193581 (low ionised magnesium in febrile seizure, abstract-level; association only) and a 1988 rat paper
+S33	Europe PMC REST	TITLE:magnesium AND TITLE:cerebrospinal fluid AND (TITLE:oral OR supplement* OR threonate)	1	31806980 (Hou 2019): read in selected passages
+S34	Europe PMC REST	(TITLE:magnesium OR TITLE:MgSO4) AND (TITLE:infantile spasms OR TITLE:West syndrome)	3	36967744, 35222658 (both read), 20435238 (abstract only)
+S35	Europe PMC REST	TITLE:magnesium AND (TITLE:epilepsy OR epileptic) AND (supplementation OR randomized OR trial)	1	22406257 (Epilepsy Res 2012 hypothesis article), abstract only
+S36	Europe PMC REST	magnesium AND (epileptic encephalopathy OR infantile spasms OR West syndrome) (full text)	736	not triaged
+S37	Europe PMC REST	magnesium sulfate AND status epilepticus AND child (full text)	281	not triaged
+S38	Catalogue (catalog_build.py query)	--name magnesium	74 entries	salts and element records listed in README section 6
+S39	Catalogue	"--target GRIN1 / --target GRIN2B / --target ""N-METHYL-D-ASPARTATE RECEPTOR"""	74 / 94 / 0 entries	no entry among the first two lists is a magnesium record (grep on the full output)
+S40	NIH ODS DSLD v9 (catalog_build.py probe-dsld and probe-dsld-groups, scratch cache)	12 magnesium name strings and one nonsense control; 4 group lookups	see dsld_probe_magnesium.tsv, dsld_groups_magnesium.tsv	control returned 0; counts are full-text hits in DSLD, not labels
+S41	EU registers (eu_mg_probe.py on the cached EU Open Data Portal files)	the same 12 strings plus the control	see eu_mg_probe.tsv	name match only
