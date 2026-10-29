@@ -1570,3 +1570,14 @@ Perimeter: zero spend, key-less reads, no account, no contact, nothing installed
 - **Gap with evidence:** verifier agents that start headless browsers leave them running. **Change shipped:** the briefs owe cleanup; the orchestrator ends orphans by explicit pid (no `pkill -f`).
 - **Radar:** no new real run since the iteration-6 close entry; the hourly path was checked on the real scheduler (events show the :37 looks; RUNNING now logged). TxGNN, MATRIX and NeMoCAD: unchanged limits, not reopened.
 - **Not adopted, with reason:** Reactome adapter and the leakage-benchmark checks stay TRIAL (no WWOX question is blocked by their absence); ToolUniverse removed after the Reactome trial (adds only a 404-as-success hazard); PrimeKG, Hetionet, KG-Bench, drexml, CANDO, mira stay WATCH.
+
+## 2026-10-29 · junior-harness · Radar iteration 8, package P7 (scouting)
+
+Perimeter: zero spend, key-less reads, no account, no contact, nothing installed in the repository (one isolated venv, deleted). Full tables, licences and counts: `drug_repurposing/scout_it8_20261029.md`.
+
+- **Named gaps answered:** signature quality, neural compound response, brain exposure, human WWOX RNA, ranking with visible components, parent/salt identity.
+- **Findings:** (1) GSE295444 and GSE295447 (1,680 iPSC-derived samples, cortical and dopaminergic neurons and progenitors, 12 compounds incl. rapamycin and lithium chloride, one dose, 7 h, DMSO controls): TRIAL for two pilot families only; GEO reuse terms UNVERIFIED; not a WWOX system. (2) Lim and Pavlidis 2021 (CC BY): CMap reproducibility is low (top-10 % recovery 17 %); ADOPT as the reading for a pre-fixed signature filter. (3) OREVID (code MIT, data CC BY-NC-SA, single-author preprint): its pre-registered LINCS reversal test is at chance, which corroborates the IT7 null; TRIAL its design (per-evidence-line hit rate, hub exclusion, leakage audit), not its data. (4) B3DB (CC0) gives BBB labels for 9 of the pilot names, logBB for 2, no Kp,uu; no open Kp,uu database found. (5) chembl_structure_pipeline in an isolated venv: 5 of 8 parents as ChEMBL, misses inorganic salts and sodium dichloroacetate; TRIAL as a mismatch check only.
+- **Deltas:** TxGNN unchanged (MIT, last push 2024-05-06, explorer not reachable); MATRIX unchanged limits; Unravel/Foundation: no accession (only mouse WWOX deposits in GEO, plus one human cell line).
+- **Radar and control facts:** daily radar last ran 2026-10-29 05:20 UTC without errors (selected openFDA-NDC, still awaiting triage in the pending log); hourly control logged 288 events, last check 21:37Z, IT8 RUNNING; 6 RESUME actions, 2 failed deliveries on 2026-10-28.
+- **Gap with evidence:** the scout could not source the definitions of `distil_cc_q75` and `pct_self_rank_q25` that IT8 P4 counts. No code shipped; recorded for the next signature-filter registration.
+- **Not verified:** see section 5 of the report.

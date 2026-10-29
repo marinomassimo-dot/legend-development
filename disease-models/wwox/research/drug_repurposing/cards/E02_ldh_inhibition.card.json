@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "input_sha256": "b5a2ead096079668e0ff95e968b6aa1e4c161e657dee72c7e385779c7bbd9568",
+ "input_sha256": "dd7336b98051b938b98fc7970bca65944ab39fd792709ec3fca717825e070bea",
  "epistemic_status": "IPOTESI",
  "canonical": false,
  "assessment": "REQUIRES_QUALIFICATION",
@@ -479,7 +479,7 @@
      "Stiripentol inhibits LDH only weakly in the single-concentration measurements held (none gives a fitted potency, and the one at the highest concentration is the lowest), and it has other targets, including direct inhibition of mitochondrial complex I, that act at lower concentrations; any benefit would not be attributable to LDH.",
      "LDHA in the organoid is as consistent with immaturity as with WWOX loss.",
      "Human lactate in WWOX deficiency is reported normal or extremely low.",
-     "IT7 P3/P1 (exploratory, independently verified): in an independent WWOX-loss contrast (P47T hippocampus) the LDH isoforms split (LDHA +0.48, LDHB -0.10 against the build direction) and the six-gene module lies inside its null (p 0.060), so the LDHA elevation is not shown to be a reproducible WWOX-loss feature; the signed network and the WWOX-enriched network showed no added value for ranking compounds on this module and the signature route was not detected, not excluded, and stiripentol was outside that comparison by design. A computational result, not engagement data."
+     "IT7 P3/P1 (exploratory, independently verified): in an independent WWOX-loss contrast (P47T hippocampus) the LDH isoforms split (LDHA +0.48, LDHB -0.10 against the build direction) and the six-gene module lies inside its null (p 0.060), so the LDHA elevation is not shown to be a reproducible WWOX-loss feature; the signed network and the WWOX-enriched network (the condition with four HIF1A relations added: it tests four added relations, not the value of WWOX knowledge in general) showed no added value for ranking compounds on this module and the signature route was not detected, not excluded, and stiripentol was outside that comparison by design. A computational result, not engagement data."
     ],
     "transfer_limits": "The fly effect needs amyloid; stiripentol's approved use depends on co-administration with another antiseizure drug and does not establish brain LDH engagement."
    },
@@ -518,7 +518,7 @@
    "Direct inhibition of mitochondrial complex I by stiripentol, so a metabolic effect is not an LDH effect.",
    "An Ldh abundance rise also accompanies a complex I-reduced, ISR-activated fly model that has neither WWOX nor amyloid (DA-PARS2-LDH-001), so a raised Ldh in a Wwox-reduced fly does not by itself identify an LDH-specific lesion (INFERENZA: possible confounding by mitochondrial or ISR state).",
    "Human lactate in WWOX deficiency reported normal or extremely low.",
-   "IT7 P3/P1 (exploratory, independently verified): in an independent WWOX-loss contrast (P47T hippocampus) the LDH isoforms split (LDHA +0.48, LDHB -0.10 against the build direction) and the six-gene module lies inside its null (p 0.060), so the LDHA elevation is not shown to be a reproducible WWOX-loss feature; the signed network and the WWOX-enriched network showed no added value for ranking compounds on this module and the signature route was not detected, not excluded, and stiripentol was outside that comparison by design. A computational result, not engagement data."
+   "IT7 P3/P1 (exploratory, independently verified): in an independent WWOX-loss contrast (P47T hippocampus) the LDH isoforms split (LDHA +0.48, LDHB -0.10 against the build direction) and the six-gene module lies inside its null (p 0.060), so the LDHA elevation is not shown to be a reproducible WWOX-loss feature; the signed network and the WWOX-enriched network (the condition with four HIF1A relations added: it tests four added relations, not the value of WWOX knowledge in general) showed no added value for ranking compounds on this module and the signature route was not detected, not excluded, and stiripentol was outside that comparison by design. A computational result, not engagement data."
   ],
   "bridge_gaps_exposed": [
    "Fly and organoid rows do not share a context, so no directional comparison is formed between them; the one fly-internal comparison (Ldh RNAi against Wwox knockdown on climbing) is a genetic, not a pharmacological, comparison.",

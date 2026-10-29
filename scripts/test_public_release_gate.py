@@ -128,6 +128,32 @@ class GateTests(unittest.TestCase):
         self.assertIn("DIRECT_IDENTIFIER", self.scan_text(
             "short.jsonl", '{"candidate_id": "RPC-' + token + '5967531"}\n'))
 
+    def test_identifier_inside_a_canonical_uuid_does_not_block_but_beside_one_it_does(self) -> None:
+        """IT8: the hex-letter private token sat inside DailyMed set-ids and Signature Commons
+        entity ids (8-4-4-4-12 hex), whose groups are shorter than the 12-hex carve-out. Only a
+        match CONTAINED in a canonical UUID is skipped; every neighbour of a UUID still blocks."""
+        token = "".join(map(chr, (98, 101, 97)))
+        name = "".join(map(chr, (77, 97, 115, 115, 105, 109, 111)))
+        inside = f"1a0c3{token}-c87b-4d25-bb44-5f0174da6b34"
+        uuid = "1a0c3a7f-c87b-4d25-bb44-5f0174da6b34"
+        # positive: the token is part of the UUID, in any group and in any case
+        self.assertNotIn("DIRECT_IDENTIFIER", self.scan_text("a.tsv", f"DailyMed:setid={inside}; PubMed:1\n"))
+        self.assertNotIn("DIRECT_IDENTIFIER", self.scan_text(
+            "b.json", '{"g": "f2a04fef-' + f"9{token}-4217-89e0-5c45cc7d8a08" + '"}\n'))
+        self.assertNotIn("DIRECT_IDENTIFIER", self.scan_text("c.md", f"id {inside.upper()} end\n"))
+        # mutations: the same token OUTSIDE the span still blocks
+        for text in (f"{uuid} {token}\n",            # beside a UUID, space
+                     f"{uuid}-{token}\n",            # glued after it with a hyphen
+                     f"{token}-{uuid}\n",            # glued before it with a hyphen
+                     f"{uuid}, {token}, {uuid}\n",   # between two UUIDs
+                     f"1{token}1-c87b-4d25-bb44-5f0174da6b34\n",  # first group is 5 hex: not a UUID
+                     f"1a0c3{token}-c87b-4d25-bb44-5f0174da6b3\n",  # last group is 11 hex: not a UUID
+                     f"{inside}-{token}\n"):          # a UUID containing it AND the token again
+            self.assertIn("DIRECT_IDENTIFIER", self.scan_text("m.md", text), text)
+        # a real identifier next to a UUID that is itself clean must still block
+        self.assertIn("DIRECT_IDENTIFIER", self.scan_text("n.md", f"{uuid} {name}\n"))
+        self.assertIn("DIRECT_IDENTIFIER", self.scan_text("o.md", f"{inside} {name}\n"))
+
     def messages(self, name: str, text: str) -> list[str]:
         root = self.make_repo()
         (root / name).write_text(text, encoding="utf-8")
