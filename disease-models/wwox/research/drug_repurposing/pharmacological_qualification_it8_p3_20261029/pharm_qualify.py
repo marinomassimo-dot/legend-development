@@ -25,6 +25,7 @@ RAW_LIMIT = 1_000_000
 SECTIONS = ("pharmacokinetics", "clinical_pharmacology", "mechanism_of_action", "pediatric_use", "dosage_and_administration", "warnings_and_cautions", "warnings",
             "boxed_warning")   # the last one is read for presence only
 TYPES = ["IC50", "Ki", "Kd", "EC50", "Kb", "Potency", "Inhibition"]
+OTHER_TYPES = ["FC", "AC50", "ED50", "Activity", "Ratio", "Emax", "Imax", "Inhibition_rate"]   # types outside TYPES: read separately, never mixed in
 SIGN = {"INHIBITOR": "down", "ANTAGONIST": "down", "BLOCKER": "down", "NEGATIVE ALLOSTERIC MODULATOR": "down",
         "SEQUESTERING AGENT": "none (binds a metabolite)", "AGONIST": "up", "ACTIVATOR": "up", "OPENER": "up",
         "POSITIVE ALLOSTERIC MODULATOR": "up"}
@@ -144,6 +145,14 @@ def collect(net, case, cache):
                 e["status"][fid] = {"state": state_of(a), "total": a.get("total_count"), "retrieved": a.get("retrieved"),
                                     "truncated": a.get("truncated"), "error": a["error"], "version": a["source_version"], "note": a.get("note", "")[:200]}
                 e["rows"] += a["hits"]
+                s0, p0 = net.get(f"https://www.ebi.ac.uk/chembl/api/data/activity.json?molecule_chembl_id={fid}&limit=1")
+                tot = (p0.get("page_meta") or {}).get("total_count") if s0 == 200 and isinstance(p0, dict) else None
+                e["status"][fid]["unfiltered_total"] = tot
+                e["status"][fid]["unfiltered_http"] = s0
+                if tot is not None and a.get("retrieved") is not None and tot > a["retrieved"]:
+                    o = chembl.query({"molecule": fid, "types": OTHER_TYPES, "max_rows": 2000}, fetch=net.get)
+                    e["status"][fid]["other"] = {"state": state_of(o), "total": o.get("total_count"), "retrieved": o.get("retrieved"), "error": o["error"]}
+                    e.setdefault("rows_other", []).extend(o["hits"])
         res["compounds"].append(e)
     for tf in case.get("target_first", []):
         a = chembl.query({"target": tf["target"], "types": tf["types"], "max_rows": tf["max_rows"]}, fetch=net.get)
@@ -200,14 +209,15 @@ def dgidb_rows(cache, names):
 def detail_rows(res, case):
     rows = []
     for ce in res["compounds"]:
-        for key, rs in sorted(groups(ce["rows"], case["target_pattern"], case.get("assay_pattern")).items(), key=lambda kv: str(kv[0])):
+      for pull, src in (("filtered types", ce["rows"]), ("other types", ce.get("rows_other", []))):
+        for key, rs in sorted(groups(src, case["target_pattern"], case.get("assay_pattern")).items(), key=lambda kv: str(kv[0])):
             vals = [num(r) for r in rs if num(r) is not None]
             docs = sorted({r.get("document_chembl_id") for r in rs if r.get("document_chembl_id")})
             descs = sorted({(r.get("assay_description") or "")[:140] for r in rs})
             orgs = sorted({(r.get("assay_context") or {}).get("assay_organism") or "NA" for r in rs})
             cells = sorted({(r.get("assay_context") or {}).get("assay_cell_type") or "NA" for r in rs})
             pch = [r["pchembl_value"] for r in rs if r.get("pchembl_value")]
-            rows.append([case["id"], ce["label"], key[6], rs[0].get("molecule_pref_name") or "", key[0], key[1], key[2], key[3], key[4], key[5], len(rs), len(docs),
+            rows.append([case["id"], ce["label"] + (" [OTHER TYPES]" if pull == "other types" else ""), key[6], rs[0].get("molecule_pref_name") or "", key[0], key[1], key[2], key[3], key[4], key[5], len(rs), len(docs),
                          fmt(min(vals)) if vals else "", fmt(statistics.median(vals)) if vals else "", fmt(max(vals)) if vals else "",
                          ",".join(pch[:3]), ";".join(orgs), ";".join(cells), ",".join(docs), " || ".join(descs[:2]),
                          ";".join(sorted({str(r.get("data_validity_comment")) for r in rs if r.get("data_validity_comment")}))])
@@ -217,7 +227,7 @@ def detail_rows(res, case):
         pot = sorted(rs, key=num)
         best = [r for r in pot if num(r) <= sp["potent_nM"]]
         mols = sorted({r["molecule_chembl_id"] for r in best})
-        for mid in mols[:12]:
+        for mid in mols:   # every qualifying molecule among the RETRIEVED rows (truncated pulls are declared in the label)
             rr = [r for r in best if r["molecule_chembl_id"] == mid]
             docs = sorted({r["document_chembl_id"] for r in rr})
             rows.append([case["id"], f"TARGET-FIRST {sp['label']} [{tf['state']}; {tf['retrieved']} of {tf['total']} rows]", mid, rr[0].get("molecule_pref_name") or "", rr[0].get("target_pref_name"),
@@ -237,30 +247,35 @@ DETAIL_HEAD = ["case", "compound_or_query", "molecule_chembl_id", "molecule_pref
 def measures_summary(res, case):
     parts = []
     for ce in res["compounds"]:
-        gs = groups(ce["rows"], case["target_pattern"], case.get("assay_pattern"))
         chunks = []
-        for key, rs in sorted(gs.items(), key=lambda kv: (kv[0][0], kv[0][2], kv[0][3])):
-            vals = [num(r) for r in rs if num(r) is not None]
-            tgt = key[0][:38]
-            if key[4] in ("nM", "uM", "mM") and vals:
-                v = fmt(min(vals)) if len(vals) == 1 or min(vals) == max(vals) else f"{fmt(min(vals))}-{fmt(max(vals))}"
-                chunks.append(f"{tgt} [{key[1][:12]}; assay type {key[5]}; {key[6]}] {key[2]} {key[3]} {v} {key[4]} (n={len(rs)})")
-            elif key[2] == "Inhibition":
-                chunks.append(f"{tgt} [{key[1][:12]}; assay type {key[5]}; {key[6]}] % inhibition at stated conc. (n={len(rs)}; see assay text in detail)")
+        for pull, src in (("", ce["rows"]), ("OTHER TYPE ", ce.get("rows_other", []))):
+            gs = groups(src, case["target_pattern"], case.get("assay_pattern"))
+            for key, rs in sorted(gs.items(), key=lambda kv: (kv[0][0], kv[0][2], kv[0][3])):
+                vals = [num(r) for r in rs if num(r) is not None]
+                tgt = key[0][:38]
+                aorg = sorted({(r.get("assay_context") or {}).get("assay_organism") or "NA" for r in rs})
+                note = "" if aorg == ["NA"] or key[1].startswith(aorg[0][:6]) or aorg[0] in key[1] else f"; ASSAY ORGANISM {'/'.join(aorg)}"
+                if pull or (key[4] in ("nM", "uM", "mM") and vals):
+                    v = "no value" if not vals else (fmt(min(vals)) if min(vals) == max(vals) else f"{fmt(min(vals))}-{fmt(max(vals))}")
+                    chunks.append(f"{pull}{tgt} [{key[1][:12]}{note}; assay type {key[5]}; {key[6]}] {key[2]} {key[3]} {v} {key[4]} (n={len(rs)})")
+                elif key[2] == "Inhibition":
+                    chunks.append(f"{tgt} [{key[1][:12]}{note}; assay type {key[5]}; {key[6]}] % inhibition at stated conc. (n={len(rs)}; see assay text in detail)")
         if len(chunks) > 14:
-            chunks = chunks[:14] + [f"... {len(gs) - 14} more groups in measures_detail.tsv"]
+            chunks = chunks[:14] + [f"... {len(chunks) - 14} more groups in measures_detail.tsv"]
         parts.append(f"{ce['label']}: " + (" | ".join(chunks) if chunks else "no row matching the case target/assay filter"))
     for tf in res["target_first"]:
         rs = [r for r in tf["rows"] if r.get("standard_units") == "nM" and rel(r.get("standard_relation")) == "=" and num(r) is not None]
         n_pot = len({r["molecule_chembl_id"] for r in rs if num(r) <= tf["spec"]["potent_nM"]})
-        parts.append(f"target-first {tf['spec']['label']}: {tf['state']}, {tf['retrieved']} of {tf['total']} rows, {n_pot} molecules with an '=' value at or below {tf['spec']['potent_nM']} nM")
+        parts.append(f"target-first {tf['spec']['label']}: {tf['state']}, {tf['retrieved']} of {tf['total']} rows, {n_pot} molecules with an '=' value at or below {tf['spec']['potent_nM']} nM among the retrieved rows, ALL listed by id in measures_detail.tsv")
     return " ## ".join(parts)
 
 
 def status_summary(res):
     parts = []
     for ce in res["compounds"]:
-        st = ", ".join(f"{k}:{v['state']}({v['retrieved']}/{v['total']})" for k, v in ce["status"].items())
+        st = ", ".join(f"{k}:{v['state']}({v['retrieved']} of {v['total']} under the type filter IC50/Ki/Kd/EC50/Kb/Potency/Inhibition; {v.get('unfiltered_total')} unfiltered"
+                       + (f"; other types FC/AC50/ED50/Activity/Ratio/Emax/Imax: {v['other']['state']} {v['other']['retrieved']}" if v.get("other") else "")
+                       + (f"; {v['unfiltered_total'] - v['retrieved'] - ((v.get('other') or {}).get('retrieved') or 0)} rows of further types (toxicity, ADMET, physicochemical and others) NOT read" if v.get("unfiltered_total") not in (None, v['retrieved']) else "") + ")" for k, v in ce["status"].items())
         parts.append(f"{ce['label']}: {st}")
     for tf in res["target_first"]:
         parts.append(f"{tf['spec']['target']}:{tf['state']}({tf['retrieved']}/{tf['total']}{', TRUNCATED' if tf['truncated'] else ''})")
@@ -403,7 +418,7 @@ def selftest():
     net = Net(sleep=sleeps.append, get=flaky)
     r = chembl.query({"molecule": "CHEMBL1", "types": ["IC50"]}, fetch=net.get)
     assert state_of(r) == "NO_ROWS_UNDER_FILTERS", state_of(r)
-    assert [l["status"] for l in net.log if "activity" in l["url"]] == [500, 500, 200] or len(net.log) >= 4, net.log
+    assert [l["status"] for l in net.log if "activity" in l["url"]] == [500, 500, 200], net.log
     assert sleeps and sleeps[0] == 2, sleeps
     # 2: permanent 500 -> SERVICE_ERROR, never NO_ROWS
     net2 = Net(sleep=lambda s: None, get=lambda u, p=None, b=None, t=40: (200, {"chembl_db_version": "T", "chembl_release_date": "x"}) if "status.json" in u else (500, "down"))

@@ -34,6 +34,16 @@ def swap(text, old, new, tag, prev=()):
     return text.replace(old, new)
 
 
+def seg(text, start, end, new, tag):
+    """Replace text[start .. end] (end included) by new; if start is absent and new is present, nothing to do."""
+    if new in text:
+        return text
+    a = text.find(start)
+    assert a >= 0, f"{tag}: start marker absent"
+    b = text.index(end, a) + len(end)
+    return text[:a] + new + text[b:]
+
+
 # ---- cards -------------------------------------------------------------------------------------------------------------------
 def edit_packet(name, fn):
     p = D / "cards" / f"{name}.packet.json"
@@ -46,21 +56,25 @@ def edit_packet(name, fn):
 
 def e02(o):
     c = o["p4_card"]
-    c["next_measurement"] = swap(
-        c["next_measurement"],
-        "Only then a compound arm: stiripentol against a selective LDHA tool at matched exposure, so that its other pharmacology is separable from LDH.",
-        "Only then a compound arm. IT8 P3 2026-10-29: stiripentol is not carried as an LDH-engagement probe, because two independent human-enzyme assays give 7 to 9.9 percent "
-        "inhibition at 0.5 to 2 millimolar (no fitted value), the US label names no LDH mechanism, and the 42 to 500 micromolar range quoted for it is a secondary figure resting "
-        "on three sources; the arm is a selective LDHA tool of nanomolar potency taken from the ChEMBL human LDHA target rows (listed by ChEMBL id in "
-        f"{DOC}/measures_detail.tsv), with stiripentol kept as a complex I and GABA-A comparator so that its other pharmacology is separable from LDH.", "e02.next")
-    c["pharmacology"] = swap(
-        c["pharmacology"], "GSK2837808A: potent on LDHA in vitro,",
-        "IT8 P3 2026-10-29 (ChEMBL molecule-first, 28 rows for the racemate, none with an LDH potency; one comparator document with LDH5 and LDH1 inhibition of 7 percent at 2 millimolar; "
-        "the US label of 2026-04-27 states that the human mechanism is unknown and names GABA-A and cytochrome P450 inhibition as possible mechanisms, gives protein binding of 99 percent and no peak concentration). "
-        "GSK2837808A: potent on LDHA in vitro,", "e02.pharm")
+    c["next_measurement"] = seg(
+        c["next_measurement"], "Only then a compound arm", "separable from LDH.",
+        "Only then a compound arm. IT8 P3 2026-10-29: stiripentol is not carried as the LDH-engagement probe, because the readable enzyme data give 7 percent inhibition at 2 millimolar and about 10 percent at 0.5 millimolar "
+        "(no fitted value: no enzyme-level support), the US label names no LDH mechanism, the one cell-level signal found (four rows of a 2022 glycolate-oxidase and LDHA double-inhibitor series: relative oxalate output 0.27 to 0.70 "
+        "at 10 micromolar in mouse hepatocytes) does not establish LDH engagement, and the 42 to 500 micromolar range quoted for it is a secondary figure; the arm is a nanomolar human-LDHA inhibitor taken from the ChEMBL target rows "
+        f"(every retrieved qualifying molecule is listed by ChEMBL id in {DOC}/measures_detail.tsv, not ranked), with selectivity over LDHB to be established per compound, and stiripentol is kept as a complex I and GABA-A comparator "
+        "so that its other pharmacology is separable from LDH.", "e02.next")
+    c["pharmacology"] = seg(
+        c["pharmacology"], "IT8 P3 2026-10-29 (ChEMBL molecule-first", "no peak concentration). ",
+        "IT8 P3 2026-10-29 (ChEMBL molecule-first on the racemate: 28 rows under the type filter IC50, Ki, Kd, EC50, Kb, Potency and Inhibition, 88 unfiltered, none a fitted LDH potency; one comparator document with LDH5 and LDH1 "
+        "inhibition of 7 percent at 2 millimolar and no value at 0.5 millimolar; four cell-level rows of another document, mouse hepatocyte oxalate output 0.27 to 0.70 at 10 micromolar, a pathway shared with glycolate oxidase, weighed and not decisive; "
+        "the US label of 2026-04-27 states that the human mechanism is unknown and names GABA-A and cytochrome P450 inhibition as possible mechanisms, gives protein binding of 99 percent and no peak concentration). ", "e02.pharm")
     against = c["evidence_for_and_against"]["against"]
-    new = ("IT8 P3 (2026-10-29): the pertinence of stiripentol as a way to test the LDH node is withdrawn on primary data - two independent human-enzyme assays (7 and 9.9 percent inhibition at 2 millimolar and 500 micromolar), "
-           "no LDH potency among its 28 ChEMBL rows, and a label that does not name LDH; the third report (Sada 2015) remains abstract-only and secondary.")
+    new = ("IT8 P3 (2026-10-29): there is no enzyme-level support for stiripentol as a way to test the LDH node - 7 percent inhibition at 2 millimolar (ChEMBL) and about 10 percent at 0.5 millimolar (independent report), "
+           "no fitted LDH potency among its filtered and unfiltered ChEMBL rows, a label that does not name LDH; one cell-level signal (mouse hepatocyte oxalate output at 10 micromolar, shared with glycolate oxidase) is not LDH engagement; "
+           "the third report (Sada 2015) remains abstract-only and secondary.")
+    for i, t in enumerate(against):
+        if t.startswith("IT8 P3 (2026-10-29): the pertinence of stiripentol"):
+            against[i] = new
     if new not in against:
         against.append(new)
 
@@ -76,8 +90,8 @@ def e03(o):
 def i01(o):
     c = o["p4_card"]
     t = c["next_measurement"]
-    a = t.find("IT8 P3 2026-10-29: dichloroacetate inhibits recombinant human PDK isoforms")   # first wording, rejected by the shareable audit
-    if a >= 0:
+    a = t.find("IT8 P3 2026-10-29: dichloroacetate inhibits")
+    if a >= 0:   # earlier wording of the same edit: cut it, then write the current one
         end = "with the free exposure of each measured."
         t = t[:a] + "a free-DCA exposure and a second PDK inhibitor of different chemistry as orthogonal controls." + t[t.index(end, a) + len(end):]
         c["next_measurement"] = t
@@ -85,26 +99,28 @@ def i01(o):
         c["next_measurement"],
         "a free-DCA exposure and a second PDK inhibitor of different chemistry as orthogonal controls.",
         "IT8 P3 2026-10-29: dichloroacetate inhibits the recombinant human kinase isoforms only at high concentrations in curated database rows (from about 0.1 millimolar for the most sensitive isoform to above 5 millimolar for the least, unknown-origin enzymes, with the same isoform differing about 7 to 18 fold between laboratories), so a null with it at cell-attainable concentrations cannot separate "
-        "'the kinase does not matter' from 'the kinase was not inhibited'; the premise experiment therefore uses an inhibitor of nanomolar potency (curated target rows, listed by id in "
-        f"{DOC}/measures_detail.tsv) as the probe and dichloroacetate as the clinically known comparator, with the free exposure of each measured.", "i01.next")
+        "'the kinase does not matter' from 'the kinase was not inhibited'; the premise experiment therefore uses an inhibitor of nanomolar potency (curated target rows; every retrieved qualifying molecule is listed by id in "
+        f"{DOC}/measures_detail.tsv, not ranked, and the kinase pulls are truncated; availability and neuronal engagement are not shown) as the probe and dichloroacetate as the clinically known comparator, with the free exposure of each measured.", "i01.next")
 
 
 def f03(o):
     c = o["p4_card"]
     o["translation"]["cns_exposure"] = (
-        "Mouse primary pharmacokinetics (abstract level, PMID 25449033 and PMID 33279441): brain to plasma ratio about 0.015 to 0.02; free brain concentration in the NKCC1-inhibitory range only at an intravenous dose far above the human diuretic range. Human CSF value UNKNOWN.")
-    c["pharmacology"] = swap(
-        c["pharmacology"], "Brain exposure not verified here.",
+        "Mouse primary pharmacokinetics (abstract level, PMID 25449033 and PMID 33279441): brain to plasma ratio about 0.015 to 0.02; at the single intravenous dose reported, far above the human diuretic range, modelled free brain concentrations were in the NKCC1-inhibitory range. Human CSF value UNKNOWN.")
+    c["pharmacology"] = seg(
+        c["pharmacology"], "IT8 P3 2026-10-29: GtoPdb", "is the exposure target.",
         "IT8 P3 2026-10-29: GtoPdb (human, one document) gives pIC50 5.60 for NKCC1 and 6.48 for the kidney transporter, so the drug is about 7.6 fold more potent on the renal target; mouse brain to plasma ratio about 0.015 to 0.02 "
-        "and efflux at the blood-brain barrier (abstract level); a close derivative that does not inhibit NKCC1 reproduces some CNS effects (PMID 30248303), so a CNS effect of the drug is not evidence of NKCC1 action. "
-        "A systemic arm is therefore not a test of the premise; the drug is applied in the bath ex vivo, where the NKCC1 range of about 1.5 to 2.5 micromolar is the exposure target.", "f03.pharm")
+        "and efflux at the blood-brain barrier (abstract level); at the single intravenous dose reported, far above the diuretic range, modelled free brain concentrations were in the NKCC1-inhibitory range, and diuretic-range doses do not reach neuronal inhibitory concentrations; "
+        "a close derivative that does not inhibit NKCC1 reproduces some CNS effects (PMID 30248303), so a CNS effect of the drug is not evidence of NKCC1 action. "
+        "A systemic arm is therefore interpretable only if the free brain concentration is measured (the neonatal maturation of the barrier and efflux in the Wwox-null model is not addressed by these sources); the premise test is ex vivo with the drug in the bath, where the NKCC1 range of about 1.5 to 2.5 micromolar is the exposure target.", "f03.pharm")
     nk = o["not_known"]
     for i, t in enumerate(nk):
         if t == "Brain exposure of bumetanide at a relevant dose.":
             nk[i] = "Human brain or CSF exposure of bumetanide (the mouse brain to plasma ratio is about 0.015 to 0.02, abstract level)."
     c["next_measurement"] = swap(
         c["next_measurement"], "discriminating result:",
-        "the compound is applied in the bath ex vivo and a systemic arm is not used to test the premise (IT8 P3); discriminating result:", "f03.next")
+        "the compound is applied in the bath ex vivo, and a systemic arm is interpretable only with a measured free brain concentration (IT8 P3); discriminating result:", "f03.next",
+        prev=("the compound is applied in the bath ex vivo and a systemic arm is not used to test the premise (IT8 P3); discriminating result:",))
 
 
 edit_packet("E02_ldh_inhibition", e02)
@@ -125,19 +141,19 @@ for e in w["entries"]:
         O_TAIL = ("A computational ranking of compounds does not change this: the IT7 P3 comparison found no added value for the network routes and an effect not detected, not excluded for the signature route, "
                   "so the kind of study and the position of the need are unchanged.")
         e["question"] = ("Is LDH activity or lactate raised in WWOX-deficient neural cells? (IT8 P3 2026-10-29: the former second half of this question, whether stiripentol reaches an inhibitory level at all, "
-                         "is closed negative on primary data and is no longer asked of it.)")
+                         "is answered without enzyme-level support on primary data and is no longer asked of it.)")
         e["data"] = (O_DATA.replace("exposure against the 42 to 500 micromolar LDH range.", "the 42 to 500 micromolar LDH range is withdrawn as an exposure target for stiripentol (IT8 P3, below).")
-                     + " IT8 P3 2026-10-29: the compound arm is a selective LDHA tool of nanomolar potency chosen from the curated human LDHA target rows; stiripentol stays only as a complex I and GABA-A comparator. "
-                     "Datum: two independent human-enzyme assays with 7 and 9.9 percent inhibition at 2 millimolar and 500 micromolar, no LDH potency among its 28 curated rows, a US label that names no LDH mechanism; "
+                     + " IT8 P3 2026-10-29: the compound arm is a nanomolar human-LDHA inhibitor chosen from the curated target rows (selectivity over LDHB to be established per compound); stiripentol stays only as a complex I and GABA-A comparator. "
+                     "Datum: enzyme data giving 7 percent inhibition at 2 millimolar and about 10 percent at 0.5 millimolar, no fitted LDH potency among its 28 filtered rows (88 unfiltered; one 2022 cell-level mouse-hepatocyte oxalate-output signal weighed, not decisive), a US label that names no LDH mechanism; "
                      "the 42 to 500 micromolar figure is a secondary range.")
-        e["would_change"] = ("If lactate is not raised, the need loses its WWOX observation and E02 moves to P3 by rule; if raised, the node is tested with a selective LDHA tool, not with stiripentol (IT8 P3), "
+        e["would_change"] = ("If lactate is not raised, the need loses its WWOX observation and E02 moves to P3 by rule; if raised, the node is tested with a nanomolar human-LDHA inhibitor, not with stiripentol (IT8 P3), "
                              "and a stiripentol effect would be read as complex I or GABA-A pharmacology. " + O_TAIL)
-        e["summary_it"] = "Capire se lattato o attività LDH sono aumentati nelle cellule neurali prive di WWOX; per lo stiripentolo la domanda sul raggiungimento di un livello inibitorio è chiusa in negativo da dati primari, e il test del nodo usa uno strumento LDHA selettivo."
+        e["summary_it"] = "Capire se lattato o attività LDH sono aumentati nelle cellule neurali prive di WWOX; per lo stiripentolo non c'è sostegno a livello enzimatico da dati primari, e il test del nodo usa un inibitore nanomolare di LDHA umana la cui selettività su LDHB è da stabilire."
     if e["need"] == "NEED-PDH-PYRUVATE-AXIS":
         marker = " IT8 P3 2026-10-29: the probe of the genotype-by-inhibitor arm"
         if marker in e["data"]:
             e["data"] = e["data"][:e["data"].index(marker)]
-        e["data"] = e["data"] + (marker + " is an inhibitor of nanomolar potency (curated target rows, listed by id in the cycle record), with dichloroacetate as the "
+        e["data"] = e["data"] + (marker + " is an inhibitor of nanomolar potency (curated target rows; qualifying retrieved molecules listed by id in the cycle record, not ranked, kinase pulls truncated), with dichloroacetate as the "
                                  "clinically known comparator, because dichloroacetate inhibits the recombinant human kinase isoforms only at about 0.1 to above 5 millimolar in curated database rows and a null at cell-attainable concentrations would be uninterpretable.")
         if "A null with dichloroacetate alone" not in e["would_change"]:
             e["would_change"] = e["would_change"] + " A null with dichloroacetate alone is not read as absence of a PDK effect."
