@@ -20,7 +20,7 @@
      "cut": false
     },
     "evidence_state": {
-     "value": "inconclusive (rationale withdrawn, not refuted; no WWOX test).",
+     "value": "inconclusive, narrowed in IT5 P8 (rationale withdrawn once, not refuted; compartment objection not established for a soluble client; no WWOX test; HDAC6 role open).",
      "card_field": "input.p4_card.state_of_known_roads",
      "cut": false
     },
@@ -30,9 +30,9 @@
      "cut": false
     },
     "risk": {
-     "value": "Potency, relevant exposure and selectivity in a WWOX system: UNKNOWN. In the sources: class not selective for the mutant; brain exposure not measured in any R1 paper.",
+     "value": "Potency, relevant exposure and selectivity in a WWOX system: UNKNOWN.",
      "card_field": "input.p4_card.pharmacology",
-     "cut": false
+     "cut": true
     },
     "block1": {
      "value": "UNKNOWN",
@@ -50,9 +50,9 @@
      "cut": false
     },
     "feasibility": {
-     "value": "Three-fraction (soluble, pellet, total) plus an inhibitor arm, then a chase from a detectable baseline, on the exact variant, with a WWOX function readout. The result decides whether the class is even addressed to the right branch.",
+     "value": "Fate first: three-fraction (soluble, pellet, total) plus an orthogonal detection and a route-inhibitor arm on the exact variant, with transgene mRNA measured in the same wells under treatment;",
      "card_field": "input.p4_card.next_measurement",
-     "cut": false
+     "cut": true
     }
    }
   },

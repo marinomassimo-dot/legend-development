@@ -51,7 +51,7 @@
     "cell_type": "cerebral organoid, bulk RNA",
     "developmental_stage": "organoid, culture week 15"
    },
-   "measured_result_note": "PDK1 -0.34; the PDK/PDH set +0.17 (P 0.22, not different from chance); LDH-to-PDH ratio not shifted (inside the spread of the two wild-type libraries). EXPLORATORY NEGATIVES: transcripts are not PDH activity, flux or metabolite, and do not show that PDH or lactate are normal.",
+   "measured_result_note": "PDK1 -0.34, lower in sign only (the IT5 same-sets re-analysis gives -0.39, inside the single-gene null, p about 0.30; the datum is the absence of support for a raised PDK1, not a demonstrated decrease; see card I01); the PDK/PDH set +0.17 (P 0.22, not different from chance); LDH-to-PDH ratio not shifted (inside the spread of the two wild-type libraries). EXPLORATORY NEGATIVES: transcripts are not PDH activity, flux or metabolite, and do not show that PDH or lactate are normal.",
    "evidence_scope": "COMPUTATIONAL_RESULT"
   },
   {
@@ -116,7 +116,7 @@
  ],
  "p4_fields": {
   "endpoint_pursued": "A WWOX-linked PDH readout that a PDK inhibitor moves: PDH activity (or PDHA1 serine phosphorylation) and pyruvate fate (labelled glucose into acetyl-CoA, citrate, lactate) in WWOX-deficient versus isogenic human neural cells; only then a functional endpoint.",
-  "functional_evidence_available": "None for WWOX at the activity level. The Lucas-Clarke study measured no pyruvate, PDH, PDK or flux. In the human knockout organoid PDK1 is DOWN, the PDK/PDH set is not different from chance and the LDH-to-PDH ratio is not shifted (transcripts).",
+  "functional_evidence_available": "None for WWOX at the activity level. The Lucas-Clarke study measured no pyruvate, PDH, PDK or flux. In the human knockout organoid PDK1 is lower in sign only (inside the single-gene null, p about 0.30; not a demonstrated decrease), the PDK/PDH set is not different from chance and the LDH-to-PDH ratio is not shifted (transcripts).",
   "temporal_or_model_limit": "Fly study with no measurement in this branch; transcripts from one organoid deposit; compound statements are database rows.",
   "cellular_context": {
    "target_expression": "PDK isoforms are expressed in brain; the WWOX-dependent level is UNKNOWN.",

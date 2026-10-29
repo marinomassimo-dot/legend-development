@@ -1454,7 +1454,7 @@
     },
     {
      "id": "O3",
-     "statement": "Human WWOX-knockout cerebral organoid transcriptome: glycolytic HIF1A targets are higher (SLC2A1 +1.40, HK2 +2.18, LDHA +0.75), PDK1 is LOWER, PDHA1 is higher and the oxidative-arm panel is flat. The glycolytic genes also fall with elapsed culture time in an unrelated spheroid series, so the shift is as consistent with a less advanced tissue as with a metabolic block.",
+     "statement": "Human WWOX-knockout cerebral organoid transcriptome: glycolytic HIF1A targets are higher (SLC2A1 +1.40, HK2 +2.18, LDHA +0.75), PDK1 is lower in sign only (-0.39 on the same-sets method, inside the single-gene null, p about 0.30; not a demonstrated decrease), PDHA1 is higher and the oxidative-arm panel is flat. The glycolytic genes also fall with elapsed culture time in an unrelated spheroid series, so the shift is as consistent with a less advanced tissue as with a metabolic block.",
      "model_type": "human_cerebral_organoid_knockout",
      "species": "human",
      "genotype": "WWOX knockout (4 libraries) versus wild type (2 libraries)",
@@ -1463,7 +1463,7 @@
      "comparison": "knockout against wild type",
      "readout": "transcripts of HIF1A-PDK-PDH-glycolysis genes",
      "readout_level": "transcript",
-     "direction_observed": "glycolytic targets up; PDK1 down",
+     "direction_observed": "glycolytic targets up; PDK1 lower in sign only (inside the single-gene null)",
      "evidence_scope": "COMPUTATIONAL_RESULT",
      "limits": "Transcript, not flux; PDH is phosphorylation-controlled; six libraries; the PDK-to-PDH step is not observed in a human system in the sources read.",
      "pmid": null,
@@ -1520,7 +1520,7 @@
     "do_not_assume": "Do not treat a glycolytic signature as proof of a PDH block, and do not treat dichloroacetate as evidence-backed: the PDK-to-PDH link has no WWOX observation."
    },
    "counter_evidence": [
-    "PDK1 down in human knockout organoid; PDH activity unchanged in a human cell line; human metabolic screens reported normal where done (count disputed, map N-06).",
+    "PDK1 lower in sign only in the human knockout organoid (inside the single-gene null) and not raised in the shRNA progenitor library either (n=1 per arm); PDH activity unchanged in a human cell line; human metabolic screens reported normal where done (count disputed, map N-06).",
     "Dichloroacetate carries a peripheral-nerve signal in other settings (map N-08); digoxin (HIF1A inhibition) was judged the wrong clinical object (N-07).",
     "The one severe WOREE case lists the ketogenic diet among ineffective interventions (DL-MOL-007).",
     "In the human fibroblast knockdown line cytoplasmic HIF1alpha is DECREASED in two of four conditions (about 2-fold in normoxia normoglycaemia, nearly 2-fold in hypoxia normoglycaemia; equal or higher in the other two), the opposite sign to the mouse embryonic fibroblast observation; the re-supply arm raises lactate in two conditions, so lactate is not dose-faithful.",

@@ -492,10 +492,13 @@ class CuratedLink(unittest.TestCase):
                                                          "cards_early/EB-KD-01.packet.json"])
 
     def test_curated_observations_arrive_unchanged_with_context_limits_and_a_live_link(self):
-        for query_id, name in (("Q-R-10", "E01_isr_modulators"), ("Q-R-11", "E02_ldh_inhibition"), ("Q-N-08", "E03_pdk_inhibition_dca")):
-            packet, card = self.packet(name), self.cards[query_id]["input"]
-            self.assertEqual(card["disease_assertions"], packet["disease_assertions"], query_id)
-            self.assertEqual(card["drug_assertions"], packet["drug_assertions"], query_id)
+        # Q-N-08 names two cards since BATCH_20261019_026 (E03 target engagement, I01 the PDH-restraint premise);
+        # their assertions arrive unchanged, one card after the other in the order the record names them
+        for query_id, names in (("Q-R-10", ["E01_isr_modulators"]), ("Q-R-11", ["E02_ldh_inhibition"]),
+                                ("Q-N-08", ["E03_pdk_inhibition_dca", "I01_pdk_inhibition_dca_premise_seizure_glycaemia"])):
+            packets, card = [self.packet(n) for n in names], self.cards[query_id]["input"]
+            self.assertEqual(card["disease_assertions"], [r for pk in packets for r in pk["disease_assertions"]], query_id)
+            self.assertEqual(card["drug_assertions"], [r for pk in packets for r in pk["drug_assertions"]], query_id)
             for row in card["disease_assertions"] + card["drug_assertions"]:
                 for field in ("target_id", "endpoint", "direction", "context", "source", "locator", "reading_depth", "evidence_scope"):
                     self.assertTrue(row.get(field), (query_id, row["id"], field))
@@ -838,6 +841,89 @@ class SupersededWordingGone(unittest.TestCase):
         b02 = self.read(self.DR + "cards/B02_readthrough_class.packet.json")
         self.assertNotIn("nobody has made it", b02)
         self.assertIn("inference from classification", b02)
+
+
+class SupersededWordingGoneIT5Batch2(unittest.TestCase):
+    """BATCH_20261019_026: the iteration-5 results as the module's consumers must now state them.
+
+    Superseded strings pinned: «PDK1 down» for the organoid (it is lower in sign only, inside its
+    single-gene null), «Potency: UNKNOWN» and «no cytosolic client tested» for the phenylbutyrate
+    class (a soluble client was tested; the potency is a bounded, document-dependent statement),
+    the GSEA sign read as depletion, and the family-level-propagation explanation of the
+    Guide-to-Pharmacology rows (the cause is the target id read as an NCBI Gene id).
+    Dated historical notes quote the old wording on purpose and are not listed.
+    """
+
+    DR = "disease-models/wwox/research/drug_repurposing/"
+    SURFACES = [
+        "disease-models/wwox/analysis/mechanism_intervention_map.md",
+        DR + "cards/E03_pdk_inhibition_dca.card.json",
+        DR + "cards/E03_pdk_inhibition_dca.packet.json",
+        DR + "cards/A01_pba_class.card.json",
+        DR + "cards/A01_pba_class.packet.json",
+        DR + "cards/I01_pdk_inhibition_dca_premise_seizure_glycaemia.card.json",
+        DR + "needs/needs.json",
+        DR + "coverage/lead_dispositions.json",
+        DR + "join/queries.json",
+        DR + "join/cards.json",
+        DR + "join/evidence.json",
+        DR + "join/measure_next.json",
+        DR + "view/index.html",
+        DR + "view/index_shareable.html",
+        "disease-models/wwox/research/repurposing_batch_selection_20261029_module.md",
+    ]
+
+    def read(self, rel):
+        return (ROOT / rel).read_text(encoding="utf-8")
+
+    def test_organoid_pdk1_is_lower_in_sign_only_everywhere(self):
+        for rel in self.SURFACES:
+            text = self.read(rel)
+            for old in ("In the human knockout organoid PDK1 is DOWN", "PDK1 down in human knockout organoid",
+                        "glycolytic targets up; PDK1 down", "PDK1 is LOWER, PDHA1"):
+                self.assertNotIn(old, text, (rel, old))
+        packet = self.read(self.DR + "cards/E03_pdk_inhibition_dca.packet.json")
+        self.assertIn("lower in sign only", packet)
+        needs = self.read(self.DR + "needs/needs.json")
+        self.assertIn("PDK1 lower in sign only", needs)
+
+    def test_phenylbutyrate_class_wording_no_longer_closed(self):
+        for rel in self.SURFACES:
+            text = self.read(rel)
+            self.assertNotIn("Potency: UNKNOWN", text, rel)
+            self.assertNotIn("no cytosolic client tested", text.lower().replace("**", ""), rel)
+        ledger = self.read("disease-models/wwox/research/dismissal_ledger_current.md")
+        block = ledger.split("### DIS-004", 1)[1].split("\n### DIS-005", 1)[0]
+        self.assertIn("WITHDRAWN", ledger.split("### DIS-004", 1)[1].splitlines()[0])
+        self.assertIn("UPDATE 2026-10-29", block)
+        self.assertIn("restated, not established", block)
+        self.assertIn("NOT reversed", block)
+
+    def test_gsea_sign_is_read_as_the_silenced_end_not_as_depletion(self):
+        dossier = self.read("disease-models/wwox/research/fulltext_dossiers/PMID31543760.md")
+        self.assertNotIn("negative enrichment, in the silenced line", dossier)
+        self.assertIn("silenced (shWWOX) end", dossier)
+        paper = self.read("disease-models/wwox/registries/paper_registry_current.md")
+        block = paper.split("## PAPER 022", 1)[1].split("\n## PAPER 023", 1)[0]
+        self.assertIn("NOT depleted in the silenced cells", block)
+        self.assertIn("ONE library per arm", block)
+
+    def test_claim_014_status_and_working_model_version_are_untouched(self):
+        claims = self.read("disease-models/wwox/registries/claim_registry_current.md")
+        block = claims.split("## CLAIM 014", 1)[1].split("\n## CLAIM 015", 1)[0]
+        self.assertIn("**Status:** consolidated baseline", block)
+        self.assertIn("BATCH_20261019_026", block)
+        wm = self.read("disease-models/wwox/registries/working_model_current.md")
+        self.assertIn("**Version:** WM_v7.28_2026-10-29", wm)
+        self.assertNotIn("BATCH_20261019_026", wm)
+
+    def test_guide_to_pharmacology_rows_are_not_explained_by_family_propagation(self):
+        for rel in (self.DR + "coverage/lead_dispositions.json", "disease-models/wwox/research/repurposing_batch_selection_20261029_module.md"):
+            text = self.read(rel)
+            self.assertNotIn("the same family-level propagation pattern as LD-003", text, rel)
+            self.assertIn("GtoPdb target id", text, rel)
+        cov = self.read(self.DR + "coverage/README.md")
+        self.assertIn("superseded explanation", cov)
 
 
 if __name__ == "__main__":
