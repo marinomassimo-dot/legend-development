@@ -68,6 +68,36 @@ def normalise(receipt: dict, now: datetime) -> tuple[dict, list[str]]:
     return out, changed
 
 
+COMPARE_KEYS = ("study_id", "workflow", "coverage", "outputs", "source_locator")
+
+
+def collisions(root: Path) -> list[str]:
+    """Staged receipts whose event ID is already taken by DIFFERENT content: two parallel packages that both
+    staged `FTR-<date>-<pmid>-01` (seen 2026-10-29, three times). `unrecorded` skips an ID found in the ledger,
+    so without this check the second package's receipt would be dropped silently. Also reports an ID staged
+    twice under different actors."""
+    rows: dict[str, dict] = {}
+    for line in (root / LEDGER).read_text(encoding="utf-8").splitlines():
+        if line.strip():
+            try:
+                r = json.loads(line)
+            except json.JSONDecodeError:
+                continue
+            rows[str(r.get("event_id") or "")] = r
+    seen: dict[str, Path] = {}
+    out: list[str] = []
+    for path in sorted((root / STAGING).glob("*/*.json")):
+        receipt = json.loads(path.read_text(encoding="utf-8"))
+        eid = event_id(path, receipt)
+        if eid in seen:
+            out.append(f"{eid}: staged twice ({seen[eid].parent.name} and {path.parent.name}); rename the later one to the next free sequence number")
+        seen.setdefault(eid, path)
+        led = rows.get(eid)
+        if led is not None and any(receipt.get(k) != led.get(k) for k in COMPARE_KEYS if k in receipt):
+            out.append(f"{eid}: already in the ledger with different content (staged by {path.parent.name}); rename the staged one to the next free sequence number")
+    return out
+
+
 def unrecorded(root: Path, now: datetime) -> list[tuple[str, Path, dict, list[str]]]:
     have = recorded_ids(root / LEDGER)
     found = []
@@ -110,6 +140,12 @@ def main(argv=None) -> int:
     args = parser.parse_args(argv)
     root = Path(args.root).resolve()
     now = datetime.now(timezone.utc)
+    clashes = collisions(root)
+    if clashes:
+        print("EVENT-ID COLLISION — nothing recorded:")
+        for line in clashes:
+            print("  " + line)
+        return 2
     items = unrecorded(root, now)
     if not items:
         print("nothing to record: every staged receipt is already in the ledger")
