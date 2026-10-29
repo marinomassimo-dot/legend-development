@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "input_sha256": "40188b9e6c6f8d91efc0c80b168620f499fbe197d6d57d266f5ddf83ff2146ab",
+ "input_sha256": "d7566600bfaf849ec233fe1c9db99f739071c222aad4bb2f394b90430fb10cc1",
  "epistemic_status": "IPOTESI",
  "canonical": false,
  "assessment": "REQUIRES_QUALIFICATION",
@@ -210,7 +210,7 @@
      "PDK1 transcript is down and the PDK/PDH set is not different from chance in the human knockout organoid (exploratory transcripts).",
      "The sima:GFP reporter (the authors' HIF1alpha homologue) is unchanged in one genotype pair; the authors name Atf4 rather than sima as primarily responsible.",
      "Known neurotoxicity concern for the main compound; the ketogenic hypothesis dominates it on safety.",
-     "IT7 P3/P1 (provisional, exploratory): the six-gene glycolysis/lactate module was inconclusive in an independent WWOX-loss contrast (P47T hippocampus, p 0.060, inside its null; PDK1 lower by -0.08) and no compound-ranking method showed added value; this card's compound was outside that comparison by design. A computational result, not efficacy data."
+     "IT7 P3/P1 (exploratory, independently verified): the six-gene glycolysis/lactate module was inconclusive in an independent WWOX-loss contrast (P47T hippocampus, p 0.060, inside its null; PDK1 lower by -0.08) and the network routes showed no added value for ranking compounds (signature route: not detected, not excluded); this card's compound was outside that comparison by design. A computational result, not efficacy data."
     ],
     "transfer_limits": "No datum from any WWOX system at the activity or flux level."
    },
@@ -226,7 +226,7 @@
    "question_history": [
     "HYP-20260709-05",
     "mandate 2026-10-26 (Lucas-Clarke follow-up)",
-    "IT7 P6 (2026-10-29): the six-gene module did not transfer decisively to an independent WWOX-loss contrast and no compound-ranking method showed added value (loop_demonstration_it7_p6_20261029/README.md; P3 numbers provisional). Status, F/C/P position and the premise are unchanged."
+    "IT7 P6 (2026-10-29): the six-gene module did not transfer decisively to an independent WWOX-loss contrast and the network routes showed no added value and the signature route was not detected, not excluded (loop_demonstration_it7_p6_20261029/README.md; P3 numbers independently verified). Status, F/C/P position and the premise are unchanged."
    ],
    "predictions": "None; no engine, no score.",
    "next_measurement": "IT7 P6 2026-10-29: the decisive measurement is unchanged and is specified in card I01 (PDHA1 Ser293 phosphorylation, activity and tracer, genotype by inhibitor); read PDK1, LDHA, LDHB, HK2, SLC2A1 and BNIP3 transcripts beside it; no computational ranking selects the compound arm. The same discriminating assay as the ketogenic hypothesis, one step finer: PDH activity and labelled-glucose fate in WWOX-deficient versus isogenic human neural cells. If PDH activity and pyruvate fate are normal, HYP-20260709-05 stays parked with a stronger negative; if pyruvate oxidation is blocked, this card and the ketogenic hypothesis are both reopened.",
@@ -242,7 +242,7 @@
   "evidence_against": [
    "Three exploratory transcript tests in the one knockout organoid dataset are negative for the chain.",
    "The paper does not name dichloroacetate or any PDH/PDK element.",
-   "IT7 P3/P1 (provisional, exploratory): the six-gene glycolysis/lactate module was inconclusive in an independent WWOX-loss contrast (P47T hippocampus, p 0.060, inside its null; PDK1 lower by -0.08) and no compound-ranking method showed added value; this card's compound was outside that comparison by design. A computational result, not efficacy data."
+   "IT7 P3/P1 (exploratory, independently verified): the six-gene glycolysis/lactate module was inconclusive in an independent WWOX-loss contrast (P47T hippocampus, p 0.060, inside its null; PDK1 lower by -0.08) and the network routes showed no added value for ranking compounds (signature route: not detected, not excluded); this card's compound was outside that comparison by design. A computational result, not efficacy data."
   ],
   "bridge_gaps_exposed": [
    "The fly row has direction UNKNOWN by design: the study did not measure this branch, so no comparison is formed."
