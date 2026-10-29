@@ -74,6 +74,7 @@ PATH_RULES: list[tuple[str, str, str]] = [
     (r"^\.pairs\[\]\.l1\.(targets|pathway)\[\]$", "SRC_A", "gene symbols (HGNC) of class-A association rows"),
     (r"^\.pairs\[\]\.l1\.sources\[\]$", "SRC_A", "provenance tag of a class-A association row"),
     (r"^\.pairs\[\]\.(l2|l3|l4|x|n|r)(\.|\[\]|$)", "OWN", "levels 2-4, indices: computed from cards and needs"),
+    (r"^\.pairs\[\]\.p\.cr\.pha\[\]\[\]$", "EMPTY", "status classes of a row derive from ChEMBL/DGIdb/MATRIX statements: not embedded in pair objects"),
     (r"^\.pairs\[\]\.p\.cr\.dir\[\]\[\]$", "SRC_A", "criteria: class-A link sources and class-A targets"),
     (r"^\.pairs\[\]\.p\.", "OWN", "priority criteria computed by the coverage tool"),
     (r"^\.strings\[\]$", "OWN", "string table of repeated coverage-tool sentences"),
@@ -203,6 +204,8 @@ class Reference:
         self.texts: dict[str, str] = {}            # normalised long wording (ChEMBL mechanism, action text) -> record id
         self.claim_rows: Counter = Counter()       # claim source -> rows in the catalogue
         self.claims: dict[tuple, set] = defaultdict(set)   # (record id, gene) -> claim sources
+        self.name_records: dict[str, set] = defaultdict(set)   # normalised name or synonym -> record ids
+        self.rec_genes: dict[str, dict] = defaultdict(dict)    # record id -> gene -> claim sources
         self.records = 0
         self.family_of: dict[str, str] = {}
         with gzip.open(dr / "catalog/catalog.jsonl.gz", "rt", encoding="utf-8") as fh:
@@ -225,6 +228,7 @@ class Reference:
                     if not k or re.fullmatch(r"chembl\d+", k) or len(k) < 4 or (len(k) < 5 and not k.isalpha()):
                         continue
                     self.names.setdefault(k, e["id"])
+                    self.name_records[k].add(e["id"])
                 ids = e.get("ids") or {}
                 for kind in ("drugbank", "chebi", "unii", "matrix_id", "iuphar_ligand", "concept_ids"):
                     v = ids.get(kind)
@@ -241,8 +245,10 @@ class Reference:
                     self.claim_rows[cs] += 1
                     if t.get("gene"):
                         self.claims[(e["id"], t["gene"])].add(cs)
+                        self.rec_genes[e["id"]].setdefault(t["gene"], set()).add(cs)
                     for sym in t.get("gene_symbols") or []:
                         self.claims[(e["id"], sym)].add(cs)
+                        self.rec_genes[e["id"]].setdefault(sym, set()).add(cs)
                     for fld in ("mechanism_of_action", "target_name", "action_raw"):
                         w = norm(t.get(fld) or "")
                         if len(w.split()) >= 3:
@@ -270,6 +276,19 @@ class Reference:
             self.gene_ok_pair[(a.get("family"), a["need"])].update(x for x in (a.get("target"), a.get("gene")) if x)
             self.gene_ok_need[a["need"]].update(x for x in (a.get("target"), a.get("gene")) if x)
         pol = self.allow.get("claim_source_policy") or {}
+        # (name, gene) pairs asserted ONLY by class-B/C claim sources, derived from the catalogue (a pair that any record of that name also gets from a class-A source is not in it)
+        class_a = {k for k, v in pol.items() if v.get("class") == "A"}
+        self.pair_bc: dict[str, set] = {}
+        for k, rids in self.name_records.items():
+            if k not in self.names:
+                continue
+            bc, a_ = set(), set()
+            for rid in rids:
+                for g, srcs in self.rec_genes.get(rid, {}).items():
+                    (a_ if srcs & class_a else bc).add(g)
+            bc = {g for g in bc - a_ if len(g) >= 3}
+            if bc:
+                self.pair_bc[k] = bc
         self.unclassified_sources = sorted(s for s in self.claim_rows if s not in pol)
         self.policy_mismatch = sorted(k for k, v in pol.items() if (v.get("class") == "A") != (k in (self.allow.get("dgidb_claim_sources") or {})) and k not in ("ChEMBL", "ChEMBL curated mechanism"))
         # titles cache for the bibliographic exemption
@@ -290,6 +309,13 @@ class Reference:
         self.card_names = set()
         for cid, (card, _) in rv.load_cards(dr).items():
             self.card_names.add(card["input"]["candidate"]["name"].split(" (")[0].strip())
+        self.card_cat_ids = set()
+        lk = dr / "catalog/card_links.json"
+        if lk.exists():
+            for v in (rv.jload(lk).get("cards") or {}).values():
+                for x in v.get("links") or []:
+                    if x.get("catalogue_id"):
+                        self.card_cat_ids.add(x["catalogue_id"])
         self.own_grams = self._own_corpus()
 
     def _own_corpus(self) -> set:
@@ -297,7 +323,7 @@ class Reference:
         for pat in ("cards/*.json", "cards_early/*.json"):
             for f in sorted(self.dr.glob(pat)):
                 parts.append(f.read_text(encoding="utf-8"))
-        for rel in ("needs/needs.json", "coverage/lead_dispositions.json", "view/assets/curated.html", "view/assets/curated.css", "view/assets/curated.js", "view/shareable_sources.json"):
+        for rel in ("needs/needs.json", "coverage/lead_dispositions.json", "view/assets/curated.html", "view/assets/curated.css", "view/assets/curated.js"):
             if (self.dr / rel).exists():
                 parts.append((self.dr / rel).read_text(encoding="utf-8"))
         parts.append(Path(rv.__file__).read_text(encoding="utf-8"))
@@ -311,6 +337,7 @@ class Report:
         self.suppressed: Counter = Counter()
         self.coattested: Counter = Counter()
         self.wording: list[dict] = []
+        self.pair_unmarked: list[dict] = []
         self.rules: dict[str, dict] = {}
         self.info: dict = {}
 
@@ -408,6 +435,63 @@ def scan_strings(items: list[tuple[str, str]], ref: Reference, rep: Report, labe
                 rep.bad("forbidden-identifier:" + kind, f"{label}:{where}", m.group(0))
         if re.search(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+\.[A-Za-z]{2,}", s):
             rep.bad("e-mail-like-string", f"{label}:{where}", s[:80])
+
+
+MARKER_RX = re.compile(r"\b(GtoPdb|Guide[- ]to[- ]Pharmacology|PharmGKB|ClinPGx|DTC|TTD|JAX[- ]CKB|OncoKB|claim source|target rows?|max phase|curated mechanism)\b"
+                       r"|\b(ChEMBL|DGIdb|catalogue)\b[^.;]{0,40}\b(mechanism|rows?|document|statement|potency|activity|action|inhibitor|agonist|antagonist)\b", re.I)
+SENT_RX = re.compile(r"(?<=[.;])\s+")
+FILE_ALLOWED = {"README.md", "NOTICE.md", "COMPARISON.md", "manifest.json", "TEXT_PROVENANCE.json", "index.html"}
+
+
+def pair_scan(items: list[tuple[str, str]], ref: Reference, rep: Report, label: str, literature=None) -> None:
+    """A compound-target pair asserted only by class-B/C claim sources must not be stated in prose or in a pair object.
+    Per sentence: a catalogue name and a gene symbol that the catalogue gives that name only through class-B/C claims.
+    It fails when the sentence names a database or claim (marker) or the compound is catalogue-only (no cited full text, not a card subject)."""
+    names = ref.pair_bc
+    tl = sorted((t for t in ref.titles if len(t.split()) >= 4), key=len, reverse=True)
+    title_rx = re.compile(r"(?<!\w)(?:" + "|".join(re.escape(t) for t in tl) + r")(?!\w)") if tl else None
+    seen = set()
+    for where, s in items:
+        if not isinstance(s, str) or len(s) < 6 or where.endswith("#key"):
+            continue
+        for sent in SENT_RX.split(s):
+            ns = " ".join(tokens(sent))
+            if title_rx:
+                ns = title_rx.sub(" ", ns)
+            w = ns.split()
+            if not w:
+                continue
+            genes = set(re.findall(r"[A-Za-z0-9]+", sent))
+            for g in grams(w):
+                bc = names.get(g)
+                if not bc:
+                    continue
+                common = bc & genes
+                if not common:
+                    continue
+                marker = MARKER_RX.search(sent)
+                subject = bool(ref.name_records.get(g, set()) & ref.card_cat_ids)
+                attested = literature.contains(g) if literature is not None else None
+                catalogue_only = (attested is False) and not subject
+                key = (where, g, tuple(sorted(common)))
+                if key in seen:
+                    continue
+                seen.add(key)
+                if marker or catalogue_only:
+                    rep.bad("class-bc-compound-target-pair-in-text", f"{label}:{where}", f"{g!r} + {sorted(common)} ({'marker ' + marker.group(0) if marker else 'catalogue-only compound'}): {sent[:120]}")
+                else:
+                    rep.pair_unmarked.append({"name": g, "genes": sorted(common), "attested": attested, "subject": subject})
+
+
+def file_token_scan(items: list[tuple[str, str]], rep: Report, label: str) -> None:
+    for where, s in items:
+        if not isinstance(s, str):
+            continue
+        for m in rv.FILE_TOKEN_RE.finditer(s):
+            tok = m.group(0)
+            if tok in FILE_ALLOWED or tok.startswith("class_b/"):
+                continue
+            rep.bad("repository-file-name", f"{label}:{where}", tok)
 
 
 def structural(P: dict, ref: Reference, rep: Report) -> None:
@@ -516,7 +600,7 @@ def identifier_census(text: str) -> dict:
     return {k: len(set(re.findall(rx, text))) for k, rx in kinds.items()}
 
 
-def audit_html(text: str, dr: Path, ref: Reference | None = None, extra_surfaces: list[tuple[str, str]] | None = None) -> tuple[Report, Reference]:
+def audit_html(text: str, dr: Path, ref: Reference | None = None, extra_surfaces: list[tuple[str, str]] | None = None, literature=None) -> tuple[Report, Reference]:
     rep = Report()
     ref = ref or Reference(dr)
     P = extract_payload(text)
@@ -530,15 +614,23 @@ def audit_html(text: str, dr: Path, ref: Reference | None = None, extra_surfaces
         if isinstance(val, str):
             items.append((path + ("#key" if is_key else ""), val))
     scan_strings(items, ref, rep, "data")
-    scan_strings(visible_surfaces(text), ref, rep, "page")
+    vis = visible_surfaces(text)
+    scan_strings(vis, ref, rep, "page")
+    pair_scan(items, ref, rep, "data", literature)
+    pair_scan(vis, ref, rep, "page", literature)
+    file_token_scan(items, rep, "data")
+    file_token_scan(vis, rep, "page")
     rhrefs = []
     if extra_surfaces:
         rhrefs = [h for w, v in extra_surfaces if w.startswith("rendered-href") for h in v.split("\n") if h]
-        scan_strings([x for x in extra_surfaces if not x[0].startswith("rendered-href")], ref, rep, "rendered")
+        rendered = [x for x in extra_surfaces if not x[0].startswith("rendered-href")]
+        scan_strings(rendered, ref, rep, "rendered")
+        pair_scan(rendered, ref, rep, "rendered", literature)
+        file_token_scan(rendered, rep, "rendered")
     link_checks(text, rep, rhrefs)
     rep.info["identifiers"] = identifier_census(text)
     rep.info["reference"] = {"catalogue_records": ref.records, "forbidden_names": len(ref.names), "forbidden_wordings": len(ref.texts), "forbidden_identifiers": len(ref.ident),
-                             "claim_source_rows": dict(sorted(ref.claim_rows.items())), "co_attested": dict(rep.coattested), "co_attested_wording": sorted({(w["wording"], w["record"]) for w in rep.wording}), "suppressed_by_exemption": dict(rep.suppressed)}
+                             "claim_source_rows": dict(sorted(ref.claim_rows.items())), "co_attested": dict(rep.coattested), "pair_unmarked_attested_or_unchecked": {"count": len(rep.pair_unmarked), "unchecked_without_corpus": sum(1 for x in rep.pair_unmarked if x["attested"] is None), "names": sorted({x["name"] for x in rep.pair_unmarked})[:60]}, "co_attested_wording": sorted({(w["wording"], w["record"]) for w in rep.wording}), "suppressed_by_exemption": dict(rep.suppressed)}
     return rep, ref
 
 
@@ -606,8 +698,8 @@ def dynamic_surfaces(html_path: Path, P: dict) -> tuple[list[tuple[str, str]], d
 
 
 # ---------------------------------------------------------------------------- provenance of the cards' own text
-def text_overlap(P: dict, corpus_dirs: list[Path], k: int = 7) -> dict:
-    """Longest verbatim run (in words) of each output string against the third-party texts held locally (full texts, abstracts, label JSON)."""
+def read_corpus(corpus_dirs: list[Path]) -> dict[str, list[str]]:
+    """Token lists of the third-party texts held locally (full texts, abstracts, label JSON)."""
     import subprocess
     texts: dict[str, list[str]] = {}
     for d in corpus_dirs:
@@ -629,6 +721,26 @@ def text_overlap(P: dict, corpus_dirs: list[Path], k: int = 7) -> dict:
             except Exception:
                 continue
             texts[str(f)] = tokens(s)
+    return texts
+
+
+class Literature:
+    """Does a compound name occur in any third-party text held locally (full texts, abstracts, openFDA label JSON)? A name that does not, and is not a card subject,
+    entered the repository only through a catalogue row."""
+
+    def __init__(self, texts: dict[str, list[str]]):
+        self.blob = " | " + " | ".join(" ".join(w) for w in texts.values()) + " | "
+        self.cache: dict[str, bool] = {}
+
+    def contains(self, name: str) -> bool:
+        if name not in self.cache:
+            self.cache[name] = (" " + name + " ") in self.blob
+        return self.cache[name]
+
+
+def text_overlap(P: dict, corpus_dirs: list[Path], k: int = 7, texts: dict | None = None) -> dict:
+    """Longest verbatim run (in words) of each output string against the third-party texts held locally (full texts, abstracts, label JSON)."""
+    texts = texts if texts is not None else read_corpus(corpus_dirs)
     idx: dict[str, str] = {}
     for f, w in texts.items():
         for i in range(len(w) - k + 1):
@@ -772,6 +884,7 @@ def main(argv=None) -> int:
         return fetch_labels(a.out or Path("labels"))
     files = a.html or [p for p in (a.dr / "view/index_shareable.html", a.dr / "view/shareable_package/index.html") if p.exists()]
     ref = Reference(a.dr)
+    corpus_cache: dict = {}
     rc, reports = 0, {}
     for f in files:
         text = f.read_text(encoding="utf-8")
@@ -781,12 +894,15 @@ def main(argv=None) -> int:
             extra, dinfo = dynamic_surfaces(f.resolve(), P)
             if not dinfo.get("chromium"):
                 print("SKIP dynamic: no Chromium binary found; rendered surfaces were NOT scanned")
-        rep, _ = audit_html(text, a.dr, ref, extra)
+        dirs = (a.text_corpus or default_corpus_dirs()) if not a.no_text else []
+        if dirs and corpus_cache.get("dirs") != dirs:
+            corpus_cache.update(dirs=dirs, texts=read_corpus(dirs))
+            corpus_cache["lit"] = Literature(corpus_cache["texts"])
+        rep, _ = audit_html(text, a.dr, ref, extra, corpus_cache.get("lit") if dirs else None)
         rep.info["dynamic"] = dinfo
         if not a.no_text:
-            dirs = a.text_corpus or default_corpus_dirs()
             if dirs:
-                res = text_overlap(P, dirs)
+                res = text_overlap(P, dirs, texts=corpus_cache["texts"])
                 rep.info["text_provenance"] = dict(judge_text_overlap(res, rep), corpus_files=res["corpus_files"], corpus_words=res["corpus_words"])
             else:
                 rep.info["text_provenance"] = "SKIPPED: no local third-party text corpus found"

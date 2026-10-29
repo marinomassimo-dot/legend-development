@@ -118,7 +118,7 @@
    },
    "^\\.pairs\\[\\]\\.p\\.": {
     "class": "OWN",
-    "values": 11774,
+    "values": 11087,
     "why": "priority criteria computed by the coverage tool"
    },
    "^\\.pairs\\[\\]\\.p\\.cr\\.dir\\[\\]\\[\\]$": {
@@ -173,7 +173,7 @@
    "DOI": 5,
    "HGNC": 6,
    "NCT": 0,
-   "PMID": 12
+   "PMID": 11
   },
   "links": {
    "distinct_hrefs": 47,
@@ -191,14 +191,10 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 1359,
-    "forbidden-wording": 11
+    "forbidden-name": 1328,
+    "forbidden-wording": 8
    },
    "co_attested_wording": [
-    [
-     "80s ribosome modulator",
-     "CAT:CHEMBL256997"
-    ],
     [
      "gaba a receptor",
      "CAT:CHEMBL15891"
@@ -210,15 +206,24 @@
     [
      "reactive oxygen species",
      "CAT:CHEMBL2105630"
-    ],
-    [
-     "voltage gated t type calcium channel",
-     "CAT:CHEMBL1100"
     ]
    ],
    "forbidden_identifiers": 100768,
    "forbidden_names": 126046,
    "forbidden_wordings": 2888,
+   "pair_unmarked_attested_or_unchecked": {
+    "count": 62,
+    "names": [
+     "act 709478",
+     "apinocaltamide",
+     "cpp 115",
+     "lithium",
+     "nbi 827104",
+     "null",
+     "proteasome inhibitor"
+    ],
+    "unchecked_without_corpus": 62
+   },
    "suppressed_by_exemption": {
     "category labels of catalogue-wide counts": 1
    }
@@ -252,7 +257,7 @@
    "label": "chembl",
    "licence": "CC BY-SA 3.0 Unported",
    "path": "class_b/chembl_cc-by-sa-3.0/chembl_cc-by-sa-3.0.jsonl",
-   "records_of": "card_links.json (the twelve ChEMBL records the module's cards name)"
+   "records_of": "un registro del repository (non incluso in questo pacchetto) (the twelve ChEMBL records the module's cards name)"
   }
  ],
  "comparison": {
@@ -260,10 +265,19 @@
   "card_actions_listed_shareable": 0,
   "card_fields_that_differ_count_of_cards": {
    "access": 6,
+   "access_text": 7,
    "actions": 7,
+   "asserts": 2,
    "card_path": 33,
    "country": 4,
-   "links": 6
+   "for": 2,
+   "identity": 7,
+   "links": 6,
+   "mechanism": 1,
+   "next_full": 2,
+   "novelty": 2,
+   "pharm": 2,
+   "reopen": 1
   },
   "cards": 33,
   "curated_sections": {
@@ -274,7 +288,7 @@
    "group_note": "identical",
    "groups": "identical",
    "meta": "differs",
-   "needs": "identical",
+   "needs": "differs",
    "scopes": "identical",
    "threads": "identical",
    "tracks": "identical"
@@ -283,6 +297,8 @@
   "excluded_rows_with_names_shareable": 0,
   "needs": 22,
   "pairs_total": 1664,
+  "pairs_with_status_class_full": 670,
+  "pairs_with_status_class_shareable": 0,
   "pairs_with_target_list_full": 1298,
   "pairs_with_target_list_shareable": 12,
   "payload_sections": {
@@ -294,9 +310,9 @@
    "exploration_flagged": "identical",
    "funnel": "differs",
    "has_distinct": "identical",
-   "leads": "identical",
-   "leads_note": "identical",
-   "level_defs": "identical",
+   "leads": "differs",
+   "leads_note": "differs",
+   "level_defs": "differs",
    "matrix_summary": "identical",
    "needs": "differs",
    "no_probability": "identical",
@@ -308,7 +324,7 @@
    "rows": "differs",
    "schema": "identical",
    "strings": "identical",
-   "tech": "identical"
+   "tech": "differs"
   },
   "rows_named_full": 1451,
   "rows_named_shareable_card_names_only": 37,
@@ -361,7 +377,7 @@
    "label": "UniChem",
    "retrieved": "2026-10-27T22:41:54Z",
    "terms": "cross-reference identifiers only; none is embedded in the page",
-   "version": "Last-Modified src1src14.txt.gz=Sat, 24 Oct 2026 21:16:36 GMT; src1src2.txt.gz=Sat, 24 Oct 2026 21:16:01 GMT; src1src7.txt.gz=Sat, 24 Oct 2026 21:16:11 GMT"
+   "version": "Last-Modified un registro del repository (non incluso in questo pacchetto)=Sat, 24 Oct 2026 21:16:36 GMT; un registro del repository (non incluso in questo pacchetto)=Sat, 24 Oct 2026 21:16:01 GMT; un registro del repository (non incluso in questo pacchetto)=Sat, 24 Oct 2026 21:16:11 GMT"
   },
   {
    "label": "Every Cure MATRIX third-party identifiers (ATC, DrugBank, ChEBI)",
@@ -386,7 +402,7 @@
   "BIBLIO": 912,
   "COUNT": 7542,
   "ID": 2956,
-  "OWN": 50162,
+  "OWN": 49475,
   "ROWNAME": 1463,
   "SRC_A": 89,
   "SRC_META": 244,
@@ -424,8 +440,8 @@
  ],
  "files": {
   "COMPARISON.md": {
-   "bytes": 5375,
-   "sha256": "3de53d5cd4424ed6b3912d4820997c3c353610698b6fc4f3be6004f7b4cb0475"
+   "bytes": 6028,
+   "sha256": "b244dc4a819ce4ec662b450189db5b0003a43c5e34b715c562c082d4b7296742"
   },
   "LICENSES/CC-BY-4.0.txt": {
    "bytes": 18657,
@@ -444,16 +460,16 @@
    "sha256": "e5dfa90d88e2069a2e4fd13429e8ebaefb7bd92fbbaede065af905656bc7ba87"
   },
   "NOTICE.md": {
-   "bytes": 9325,
-   "sha256": "11d551917985e7867249e744e1db18c955dfe59b155aceac347eb53f0856dc62"
+   "bytes": 10848,
+   "sha256": "45aac890e1f26aaed448912d21bf054dbe84bbcfb19b89562a82b746278ed322"
   },
   "README.md": {
-   "bytes": 4034,
-   "sha256": "54ceea72ce52834a80565f1dfd5687c6978992cd2204ed450017a3b1d057f556"
+   "bytes": 4443,
+   "sha256": "b0cfd9d4f163e81172115d7dbe215d1dc3090c566e03f70c475edb5ee8e5ca08"
   },
   "TEXT_PROVENANCE.json": {
-   "bytes": 1468,
-   "sha256": "1ed20bea2c2829b084c6581abe5d552fe637b2058261f015b9ee8af160ed5730"
+   "bytes": 1469,
+   "sha256": "634dd4583d2d5e0624c4532484a9cae30aa1bc76fdc01173f1a3a8ecc451b7ff"
   },
   "class_b/chembl_cc-by-sa-3.0/CREDIT.txt": {
    "bytes": 1636,
@@ -468,8 +484,8 @@
    "sha256": "d8fe6a3455466783564803428b6318c1c442db6a16dfb97de8a6b7dcf944cc9d"
   },
   "index.html": {
-   "bytes": 1889109,
-   "sha256": "37b1e1d1988cfcf08893a5d2f4eed0fca2278715e5996e1f1c010a62d4214ebd"
+   "bytes": 1875910,
+   "sha256": "fd54dae3b929ac7a647682bde1e6e19680504d446897ab479d10ebfc98640896"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",
@@ -506,6 +522,15 @@
   "LICENSES/LEGEND-MIT.txt": "e5dfa90d88e2069a2e4fd13429e8ebaefb7bd92fbbaede065af905656bc7ba87"
  },
  "perimeter": "local preview; not published; publication on any external surface needs the operator's decision",
+ "prose_policy": {
+  "card_sentence_redactions": 12,
+  "lead_field_redactions": 11,
+  "pair_status_rule": "pairs[].p.cr.pha[1] (status classes of the row) is dropped in the shareable build: a status class derives from ChEMBL max_phase, DGIdb approved flags, MATRIX and openFDA together, and the build does not re-derive a class-A-only status per row.",
+  "pairs_status_class_dropped": 670,
+  "repository_file_names_described": 53,
+  "rule": "IT5 P13 fix. Own analysis stays in the shareable build: a conclusion at the level of a need, a class or a card subject, in our own words, short, attributed to a published work. Withheld: (1) a sentence that states a compound-target(-action) pair together with its database of origin when the pair is asserted only by a class-B/C catalogue source; (2) a compound named in prose whose only provenance in the repository is a class-B/C catalogue row (it appears in no cited full text and is not a card subject); (3) a per-compound status, phase, approval or access statement attributed to a class-B/C source; (4) repository file names, which cannot be used outside the repository. The replacement keeps the research conclusion and names the withheld source class with the phrase in withheld_phrase. The FULL build keeps everything. The audit enforces (1) and (2) by derivation from the catalogue, (3) and (4) by pattern, and every redaction below must match exactly once or more: a stale redaction fails the build.",
+  "withheld_phrase": "dato di una fonte non inclusa in questa versione"
+ },
  "schema": "legend.wwox.repurposing_view.shareable_package/1",
  "withheld": {
   "records": 44211,

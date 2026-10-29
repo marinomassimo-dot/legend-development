@@ -154,6 +154,7 @@ def compare_payloads(F: dict, S: dict) -> dict:
         "target_symbols_listed_full": sum(len(p["l1"][2]) for p in F["pairs"] if p.get("l1")), "target_symbols_listed_shareable": sum(len(p["l1"][2]) for p in S["pairs"] if p.get("l1")),
         "card_actions_listed_full": sum(len(c["actions"]) for c in F["cur"]["cands"]), "card_actions_listed_shareable": sum(len(c["actions"]) for c in S["cur"]["cands"]),
         "excluded_rows_with_names_full": sum(1 for e in F["excluded_detail"] if e["genes"]), "excluded_rows_with_names_shareable": sum(1 for e in S["excluded_detail"] if e["genes"]),
+        "pairs_with_status_class_full": sum(1 for p in F["pairs"] if p.get("p") and p["p"]["cr"]["pha"][1]), "pairs_with_status_class_shareable": sum(1 for p in S["pairs"] if p.get("p") and p["p"]["cr"]["pha"][1]),
         "cards": len(S["cur"]["cands"]), "needs": len(S["cur"]["needs"]),
     }
 
@@ -195,8 +196,11 @@ def notice_md(allow: dict, S: dict, man: dict) -> str:
     L += ["", f"Withheld catalogue target rows by class: {json.dumps(man['withheld']['target_rows_by_class'], sort_keys=True)} (class A rows are embedded only where they touch a need; see `manifest.json`).", "",
           "## 6. Provenance of the cards' own text", "",
           "Every output string was compared with the full texts, abstracts and openFDA label sections held locally; the result is recorded in `TEXT_PROVENANCE.json`. Bibliographic titles are facts and are listed apart. Quotations are limited to a few marked passages, each short (the longest is one sentence of an article, introduced by `the authors write`); no label section and no abstract is reproduced. The comparison covers only texts held locally when it was run (stated in that file).", "",
+          "## 6b. Prose policy: own analysis stays, database rows in prose do not", "",
+          man["prose_policy"]["rule"], "",
+          f"Applied in this build: {man['prose_policy']['card_sentence_redactions']} card sentence redactions, {man['prose_policy']['lead_field_redactions']} lead-field redactions, {man['prose_policy']['pairs_status_class_dropped']} pair objects stripped of a status class ({man['prose_policy']['pair_status_rule']}), {man['prose_policy']['repository_file_names_described']} repository file names replaced by a plain description. The replacement phrase is `{man['prose_policy']['withheld_phrase']}`.", "",
           f"Short third-party labels that card text also contains (checked against ChEMBL's curated-mechanism and target wording; none longer than {au.WORDING_MAX_WORDS} words, otherwise the audit fails): "
-          + "; ".join(f"`{w}`" for w, r in man["audit"]["reference"]["co_attested_wording"]) + ". One is a quotation with attribution in card H01 (`ChEMBL_37 curated mechanism: 'Voltage-gated T-type calcium channel blocker'`, a controlled-vocabulary label of five words); the others are generic scientific terms that the cards use in their own sentences. They are listed, not hidden.", "",
+          + "; ".join(f"`{w}`" for w, r in man["audit"]["reference"]["co_attested_wording"]) + ". They are generic scientific terms that the cards use in their own sentences; they are listed, not hidden.", "",
           "## 7. What this notice does not do", "",
           "It does not clear anything for publication: the operator decides whether and where to publish. It is not legal advice.", ""]
     return "\n".join(L)
@@ -229,6 +233,7 @@ def readme_md(man: dict) -> str:
         "- Pair-level link existence and association counts are kept for withheld compounds (an identifier with counts); the content of the link (target, action, source) is not. Whether that is acceptable for external circulation is for the operator.",
         "- Bibliographic titles come from NCBI esummary records collected into a tracked cache; they are facts about published works, listed in `NOTICE.md`.",
         "- The provenance-of-text check covers the third-party texts held locally (full texts, abstracts, five openFDA label JSON files fetched for the check); a source not held locally was not compared.",
+        "- Prose is protected by an explicit redaction list (`prose_policy`) plus audit checks: compound-target pairs asserted only by class-B/C sources are found by derivation from the catalogue; a compound whose only provenance is a catalogue row is found only when a local full-text corpus is present (otherwise reported as unchecked). A new card or lead sentence of that kind fails the audit until it is redacted.",
         "- Names shorter than four characters cannot be traced by string and are covered only by the structural checks (rows carry card names or identifiers).",
         "- The audit proves conformity with the policy file; the policy file is a licence reading that is not legal advice and has components marked uncertain in `NOTICE.md` (not widened).", "",
         f"Data date: {man['data']['data_date']}; catalogue built {man['data']['catalogue_generated']}; DGIdb export {man['data']['dgidb_export']}.", ""])
@@ -252,8 +257,11 @@ def comparison_md(man: dict) -> str:
          f"| Matrix pairs with a target list | {c['pairs_with_target_list_full']} of {c['pairs_total']} | {c['pairs_with_target_list_shareable']} of {c['pairs_total']} |",
          f"| Target symbols listed in pairs | {c['target_symbols_listed_full']} | {c['target_symbols_listed_shareable']} |",
          f"| Card actions on targets listed | {c['card_actions_listed_full']} | {c['card_actions_listed_shareable']} |",
+         f"| Pair objects carrying a status class | {c['pairs_with_status_class_full']} | {c['pairs_with_status_class_shareable']} |",
          f"| Excluded rows listed with compound name and gene | {c['excluded_rows_with_names_full']} | {c['excluded_rows_with_names_shareable']} |",
          f"| Card fields that differ (count of cards) | n/a | {json.dumps(c['card_fields_that_differ_count_of_cards'], sort_keys=True)} |", "",
+         "## Prose redactions (shareable only)", "",
+         f"{man['prose_policy']['card_sentence_redactions']} card sentences and {man['prose_policy']['lead_field_redactions']} lead fields that stated a compound-target pair, a catalogue-only compound or a per-compound status from a class-B/C source are rewritten at the level of the need or class and name the withheld source class (`{man['prose_policy']['withheld_phrase']}`); {man['prose_policy']['repository_file_names_described']} repository file names are described instead of printed. The conclusion of each lead and card is kept. The rule is in `view/shareable_sources.json` (`prose_policy`) and the audit enforces it.", "",
          "## Why: counts of catalogue target rows by class", "",
          f"The catalogue holds {cen['records']:,} records. Its target rows by class: {json.dumps(cen['target_rows_by_class'], sort_keys=True)}.", "",
          "| Claim source | Class | Catalogue rows | Terms | In this page |", "|---|---|---|---|---|"]
@@ -303,6 +311,10 @@ def build_files(dr: Path, corpus_dirs: list[Path] | None = None, recompute_text:
         "identifier_and_bibliographic_sources": PS["cur"]["footer"]["identifiers"], "class_b_files": PS["cur"]["footer"]["class_b"],
         "counts_only_sources": PS["cur"]["footer"]["counts_only"], "withheld": census, "comparison": cmp_,
         "audit": audit_info,
+        "prose_policy": {"rule": allow["prose_policy"]["rule"], "withheld_phrase": allow["prose_policy"]["withheld_phrase"], "pair_status_rule": allow["prose_policy"]["pair_status_rule"],
+                         "card_sentence_redactions": len(allow["prose_policy"]["card_substrings"]), "lead_field_redactions": len(allow["prose_policy"]["lead_fields"]) + len(allow["prose_policy"]["lead_substrings"]),
+                         "repository_file_names_described": html.count(allow["prose_policy"]["file_token_replacement"]),
+                         "pairs_status_class_dropped": cmp_["pairs_with_status_class_full"] - cmp_["pairs_with_status_class_shareable"]},
         "class_b_content": {"file": CHEMBL_FILE, "records": len(chembl), "chembl_ids": [r["chembl_id"] for r in chembl], "mechanism_rows": sum(len(r["curated_mechanisms"]) for r in chembl), "release": allow["class_b_files"]["chembl"]["release"]},
         "licence_texts": {k: v["sha256"] for k, v in allow["licence_texts"].items()},
     }

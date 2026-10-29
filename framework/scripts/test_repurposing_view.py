@@ -593,6 +593,7 @@ class ShareableAudit(unittest.TestCase):
         cls.au, cls.pk = au, pk
         cls.share = rv.build(DR, "shareable")
         cls.ref = au.Reference(DR)
+        cls.allow_pol = json.loads((DR / "view/shareable_sources.json").read_text())["prose_policy"]
 
     # ---- helpers
     def audit(self, text):
@@ -761,6 +762,71 @@ class ShareableAudit(unittest.TestCase):
             self.assertLessEqual(q["words"], self.au.ATTRIBUTED_QUOTE_MAX)
             self.assertRegex(q["text"], self.au.ATTRIBUTION_WORDS)
 
+
+    # ---- IT5 P13 fix: prose, pair objects, repository names
+    def test_prose_policy_pairs_names_status_and_paths_are_gone(self):
+        page = self.share
+        for w in ("hesperadin", "ziprasidone", "quetiapine", "flufenamic", "regadenoson", "AZD7545", "VER-246608", "AZD3965", "TTA-A2", "devimistat", "suvecaltamide", "carbenoxolone and flufenamic", "claim source DTC", "81 target rows"):
+            self.assertNotIn(w.lower(), page.lower(), w)
+        P = embedded(page)
+        self.assertFalse([p for p in P["pairs"] if p.get("p") and p["p"]["cr"]["pha"][1]])
+        self.assertIn(self.allow_pol["withheld_phrase"], json.dumps(P["leads"]))
+        for d in P["leads"]:
+            for k in ("card", "record"):
+                if d.get(k):
+                    self.assertNotRegex(d[k], r"\.(md|json)|/")
+        self.assertEqual([m.group(0) for m in rv.FILE_TOKEN_RE.finditer(page) if m.group(0) not in rv.PACKAGE_FILE_NAMES and not m.group(0).startswith("class_b/")], [])
+        # the full build keeps everything
+        full = rv.build(DR, "full")
+        for w in ("Hesperadin", "AZD7545", "claim source DTC"):
+            self.assertIn(w, full)
+
+    def test_stale_prose_redaction_fails_the_build(self):
+        with tempfile.TemporaryDirectory() as td:
+            dr = Path(td) / "dr"
+            dr.mkdir()
+            for p in DR.iterdir():
+                if p.name != "view":
+                    (dr / p.name).symlink_to(p)
+            shutil.copytree(DR / "view", dr / "view", ignore=shutil.ignore_patterns("shareable_package", "preview", "index*.html"))
+            pol = json.loads((dr / "view/shareable_sources.json").read_text())
+            pol["prose_policy"]["card_substrings"].append({"find": "text that no card contains", "replace": "x"})
+            (dr / "view/shareable_sources.json").write_text(json.dumps(pol), encoding="utf-8")
+            with self.assertRaises(SystemExit):
+                rv.build(dr, "shareable")
+
+    def test_mutation_bc_only_pair_in_a_lead_sentence_and_in_a_card(self):
+        # a sentence that names a compound and a target that the catalogue gives it only through class-B/C claims, with a database named
+        name, genes = next((n, g) for n, g in self.ref.pair_bc.items() if n.isalpha() and len(n) > 8 and n not in self.ref.own_grams and not (self.ref.name_records[n] & self.ref.card_cat_ids))
+        gene = sorted(genes)[0]
+        sentence = f"The catalogue lists {name} against {gene} (claim source DTC, 'inhibitor')."
+        t = self.mutate(lambda P: P["leads"][0].__setitem__("why", P["leads"][0]["why"] + " " + sentence))
+        self.assertIn("class-bc-compound-target-pair-in-text", self.kinds(t))
+        t = self.mutate(lambda P: P["cur"]["cands"][3].__setitem__("mechanism", P["cur"]["cands"][3]["mechanism"] + " " + sentence))
+        self.assertIn("class-bc-compound-target-pair-in-text", self.kinds(t))
+        # a database-free sentence about a card subject is own analysis (not a violation)
+        subj = next(n for n, rids in self.ref.name_records.items() if n in self.ref.pair_bc and (rids & self.ref.card_cat_ids) and n.isalpha())
+        sg = sorted(self.ref.pair_bc[subj])[0]
+        t = self.mutate(lambda P: P["leads"][0].__setitem__("why", P["leads"][0]["why"] + f" {subj} acts on {sg}."))
+        self.assertNotIn("class-bc-compound-target-pair-in-text", self.kinds(t))
+        # the same sentence with the pair as a catalogue-only compound is caught when a literature corpus exists
+        dirs = self.au.default_corpus_dirs()
+        if dirs:
+            lit = self.au.Literature(self.au.read_corpus(dirs))
+            self.assertFalse(lit.contains(name))
+            rep, _ = self.au.audit_html(self.mutate(lambda P: P["leads"][0].__setitem__("why", P["leads"][0]["why"] + f" {name} acts on {gene}.")), DR, self.ref, None, lit)
+            self.assertIn("class-bc-compound-target-pair-in-text", {v["kind"] for v in rep.violations})
+
+    def test_mutation_status_class_in_a_pair_object(self):
+        def f(P):
+            p = next(q for q in P["pairs"] if q.get("p"))
+            p["p"]["cr"]["pha"][1] = ["approved_any_source"]
+        self.assertIn("field-must-be-empty", self.kinds(self.mutate(f)))
+
+    def test_mutation_repository_file_name_in_visible_text(self):
+        t = self.mutate(lambda P: P["leads"][0].__setitem__("record", "closed_loop_it3_20261028/README.md#case-a"))
+        self.assertIn("repository-file-name", self.kinds(t))
+
     # ---- the package
     def test_package_is_current_deterministic_and_self_describing(self):
         files, man = self.pk.build_files(DR, recompute_text=False)
@@ -802,8 +868,8 @@ class ShareableAudit(unittest.TestCase):
         for w in wording:   # passages; short labels (<= 8 words) that a card quotes with attribution are listed by the audit instead
             self.assertNotIn(w, page, "ChEMBL mechanism wording must not be in the single page")
         rep, _ = self.au.audit_html(page, DR, self.ref)
-        listed = [w for w, r in rep.info["reference"]["co_attested_wording"]]
-        self.assertTrue(any("t type calcium channel" in w for w in listed), listed)   # card H01 quotes ChEMBL's label with attribution
+        self.assertNotIn("Voltage-gated T-type calcium channel blocker", page, "the card's quotation of a ChEMBL label is withheld in the shareable build (prose policy)")
+        self.assertEqual(rep.violations, [])
         # the other share-alike sources are not shipped
         self.assertFalse([k for k in files if "gtopdb" in k.lower() or "clinpgx" in k.lower() or "pharmgkb" in k.lower()])
         man_b = [x["label"] for x in man["class_b_files"]]
