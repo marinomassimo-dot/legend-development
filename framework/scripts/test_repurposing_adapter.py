@@ -313,6 +313,18 @@ class ChemblActivities(unittest.TestCase):
         self.assertEqual((out["total_count"], out["retrieved"], out["truncated"]), (3, 3, False))
         self.assertEqual(ra.check_output(out), [])
 
+    def test_molecule_alone_reads_every_target_and_says_so(self):
+        seen = []
+        base = self._fetch()
+        def fetch(url, params=None, body=None, timeout=20):
+            seen.append(url)
+            return base(url, params, body, timeout)
+        out = ra.load("chembl", ADAPTERS).query({"molecule": "CHEMBL807"}, fetch=fetch)
+        act = [u for u in seen if "activity.json" in u][0]
+        self.assertIn("molecule_chembl_id=CHEMBL807", act)
+        self.assertNotIn("target_chembl_id=", act)
+        self.assertEqual((out["scope"]["target"], out["scope"]["molecule"]), (None, "CHEMBL807"))
+
     def test_a_hit_page_cap_is_reported_as_truncated(self):
         out = ra.load("chembl", ADAPTERS).query({"target": "CHEMBL1904", "max_rows": 2}, fetch=self._fetch(total=5))
         self.assertEqual((out["retrieved"], out["total_count"], out["truncated"]), (2, 5, True))

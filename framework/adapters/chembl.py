@@ -7,8 +7,10 @@ Output hits: one per mechanism (action_type, mechanism_of_action, target_chembl_
 or one per target found.
 
 Activities (added 2026-10-29, iteration 6): `uniprot` resolves a stable accession to the ChEMBL
-targets that contain it (SINGLE PROTEIN and complexes are listed apart, never merged); `target`
-reads that target's activity rows with the assay context (assay organism, cell type, assay type,
+targets that contain it (SINGLE PROTEIN and complexes are listed apart, never merged); `target` (and/or
+`molecule`, a ChEMBL id, which alone reads every target the molecule was measured on: channel blockers
+are often curated against heteromeric complexes, so a single-protein target can be empty while the complex
+holds the data) reads the activity rows with the assay context (assay organism, cell type, assay type,
 confidence, relationship type) fetched from the assay endpoint. Each row keeps the value as
 the source states it (standard_relation/value/units, pchembl_value, document), flags
 data_validity_comment and potential_duplicate, and the output states `total_count`, `retrieved`
@@ -77,7 +79,9 @@ def _activities(request: dict, out: dict, fetch) -> dict:
     target = str(request.get("target", "")).strip()
     types = request.get("types") or list(ACTIVITY_TYPES)
     cap = max(1, min(int(request.get("max_rows") or 400), 2000))
-    params = f"target_chembl_id={quote(target)}&standard_type__in={quote(','.join(types))}"
+    params = f"standard_type__in={quote(','.join(types))}"
+    if target:
+        params = f"target_chembl_id={quote(target)}&{params}"
     if request.get("molecule"):
         params += f"&molecule_chembl_id={quote(str(request['molecule']))}"
     rows, total, offset = [], None, 0
@@ -113,13 +117,13 @@ def _activities(request: dict, out: dict, fetch) -> dict:
                             "standard_type": r.get("standard_type"), "standard_relation": r.get("standard_relation"),
                             "standard_value": r.get("standard_value"), "standard_units": r.get("standard_units"),
                             "pchembl_value": r.get("pchembl_value"), "target_chembl_id": r.get("target_chembl_id"),
-                            "target_organism": r.get("target_organism"), "assay_chembl_id": r.get("assay_chembl_id"),
+                            "target_organism": r.get("target_organism"), "target_pref_name": r.get("target_pref_name"), "assay_chembl_id": r.get("assay_chembl_id"),
                             "assay_description": r.get("assay_description"), "assay_context": assays.get(r.get("assay_chembl_id")),
                             "document_chembl_id": r.get("document_chembl_id"), "document_year": r.get("document_year"),
                             "data_validity_comment": r.get("data_validity_comment"), "potential_duplicate": r.get("potential_duplicate")})
     out["total_count"], out["retrieved"] = total, len(rows)
     out["truncated"] = bool(total is not None and len(rows) < total)
-    out["scope"] = {"target": target, "types": types, "molecule": request.get("molecule")}
+    out["scope"] = {"target": target or None, "types": types, "molecule": request.get("molecule")}
     out["status"] = "MATCH_FOUND" if rows else "NO_MATCH_FOUND"
     if out["truncated"]:
         out["note"] = (out.get("note", "") + f" TRUNCATED: {len(rows)} of {total} rows retrieved under these filters; the rest were not read.").strip()
@@ -132,8 +136,9 @@ def query(request: dict, fetch=_http.get_json) -> dict:
     gene = str(request.get("gene", "")).strip()
     uniprot = str(request.get("uniprot", "")).strip()
     target = str(request.get("target", "")).strip()
-    if not (drug or gene or uniprot or target):
-        out["error"] = "drug, gene, uniprot or target is required"
+    molecule = str(request.get("molecule", "")).strip()
+    if not (drug or gene or uniprot or target or molecule):
+        out["error"] = "drug, gene, uniprot, target or molecule is required"
         return out
     url = f"{BASE}/status.json"
     out["requests_sent"].append(url)
@@ -143,7 +148,7 @@ def query(request: dict, fetch=_http.get_json) -> dict:
     if uniprot:
         _targets_for_accession(uniprot, out, fetch)
         return out
-    if target:
+    if target or molecule:
         return _activities(request, out, fetch)
     if gene:
         url = f"{BASE}/target/search.json?q={quote(gene)}&limit=20"
