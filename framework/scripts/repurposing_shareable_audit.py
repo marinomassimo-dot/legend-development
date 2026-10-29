@@ -80,13 +80,17 @@ PATH_RULES: list[tuple[str, str, str]] = [
     (r"^\.strings\[\]$", "OWN", "string table of repeated coverage-tool sentences"),
     (r"^\.cur\.cands\[\]\.(pmids\[\]\.(id|role)|dois\[\])$", "BIBLIO", "PMID / DOI of a cited work"),
     (r"^\.cur\.cands\[\]\.pmids\[\]\.(title|journal|year)$", "BIBLIO", "title, journal, year of a cited work (bibliographic facts)"),
+    (r"^\.cur\.cands\[\]\.brief\.sources\[\]\.(kind|id)$", "BIBLIO", "PMID / ChEMBL identifier of an essential source of the one-page synthesis"),
+    (r"^\.cur\.cands\[\]\.brief\.sources\[\]\.(title|journal|year)$", "BIBLIO", "title, journal, year of an essential source (bibliographic facts)"),
+    (r"^\.cur\.evidence_graph\.chains\[\]\.(nodes\[\]\.pmids\[\]|edges\[\]\.src\.id)$", "BIBLIO", "PMID cited by the hand-authored evidence graph"),
+    (r"^\.cur\.evidence_graph\.chains\[\]\.edges\[\]\.src\.title$", "BIBLIO", "title of a cited work (bibliographic fact, from the title cache)"),
     (r"^\.cur\.cands\[\]\.chembl\[\]$", "ID", "ChEMBL identifier of a compound named by a card"),
     (r"^\.cur\.cands\[\]\.actions\[\]\.(need|target|action|cons|n)$", "SRC_A", "stated action on a target, from class-A claim sources only"),
     (r"^\.cur\.cands\[\]\.access\[\]$", "SRC_A", "access category stated from openFDA NDC or an absence statement"),
     (r"^\.cur\.cands\[\]\.", "OWN", "card text and computed positions (provenance of the prose: see text audit)"),
     (r"^\.cur\.needs\[\]\.obs\[\]\.(cite)$", "BIBLIO", "title, journal, year of a cited work"),
     (r"^\.cur\.needs\[\]\.obs\[\]\.pmid$", "BIBLIO", "PMID of the observation source"),
-    (r"^\.cur\.(needs|threads|groups|gaps|goals|tracks|scopes|group_note|meta)(\.|\[\]|$)", "OWN", "needs, threads and positions written in this repository"),
+    (r"^\.cur\.(needs|threads|groups|gaps|goals|tracks|scopes|group_note|meta|evidence_graph|work_order)(\.|\[\]|$)", "OWN", "needs, threads, positions, evidence graph and work order written in this repository"),
     (r"^\.cur\.footer\.", "SRC_META", "attribution footer: sources, licences, credit lines"),
     (r"^\.access\.", "COUNT", "catalogue-wide counts and category labels (no compound)"),
     (r"^\.(funnel|matrix_summary|dispositions|observations|level_defs|leads_note|pair_unit|ranking_note|no_probability|schema|source|exploration_flagged|has_distinct|orphan_priorities)(\.|\[\]|$)", "OWN", "counts and definitions computed from the module's own outputs"),
@@ -104,6 +108,8 @@ L1_NAMES = ["state", "n_assoc", "targets", "sources", "readout_only", "why", "pa
 # and source labels are not compound names). Every suppression is counted in the report.
 EXEMPT_NAME_HITS = [
     (r"^\.cur\.cands\[\]\.pmids\[\]\.title$", "bibliographic title (validated against the title cache)"),
+    (r"^\.cur\.cands\[\]\.brief\.sources\[\]\.title$", "bibliographic title (validated against the title cache)"),
+    (r"^\.cur\.evidence_graph\.chains\[\]\.edges\[\]\.src\.title$", "bibliographic title (validated against the title cache)"),
     (r"^\.cur\.needs\[\]\.obs\[\]\.cite$", "bibliographic title (validated against the title cache)"),
     (r"^\.access\.", "category labels of catalogue-wide counts"),
     (r"^\.tech\.", "names of sources, not compounds"),
@@ -666,6 +672,13 @@ def dynamic_surfaces(html_path: Path, P: dict) -> tuple[list[tuple[str, str]], d
             out.append(("rendered-href:first-screen", cdp.evaluate(HREFS)))
             n_std = 0
             for cid in ids:
+                load("#brief=" + cid)   # IT6 P13: the one-page synthesis and its standalone download are scanned like the dossier
+                out.append((f"rendered:brief:{cid}", cdp.evaluate("document.getElementById('export-area').innerText")))
+                out.append((f"rendered-href:brief:{cid}", cdp.evaluate(HREFS)))
+                bstd = cdp.evaluate("(function(){var cap=null;URL.createObjectURL=function(b){cap=b;return 'blob:x'};var a=document.getElementById('x-dl');if(!a)return Promise.resolve('');a.click();return cap?cap.text():Promise.resolve('')})()")
+                if bstd:
+                    out.append((f"rendered:brief-standalone:{cid}", re.sub(r"<[^>]+>", " ", bstd)))
+                    out.append((f"rendered:brief-standalone-markup:{cid}", bstd))
                 load("#export=" + cid)
                 out.append((f"rendered:export:{cid}", cdp.evaluate("document.getElementById('export-area').innerText")))
                 out.append((f"rendered-href:export:{cid}", cdp.evaluate(HREFS)))

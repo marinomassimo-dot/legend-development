@@ -7,7 +7,7 @@ The full version (`view/index.html` in the repository, local use) and this packa
 - 36 candidate cards with their six answers, evidence by scope, counter-evidence, next step, public identifiers and F/C/P positions: card text and positions are identical (the only card fields that differ are listed under 'Different').
 - 22 needs and their observations, the threads, groups, goals, funnel, access chart (catalogue-wide counts), matrix summary, dispositions, observations, lead dispositions and the Italian orientation texts.
 - Sections of the data object that are byte-identical: access, dispositions, exploration_flagged, has_distinct, matrix_summary, no_probability, observations, orphan_priorities, pair_unit, ranking_note, schema, strings.
-- Curated sections identical: gaps, goals, group_note, groups, scopes, threads, tracks.
+- Curated sections identical: evidence_graph, gaps, goals, group_note, groups, scopes, threads, tracks, work_order.
 
 ## Different (withheld here, present in the full version)
 
@@ -21,7 +21,7 @@ The full version (`view/index.html` in the repository, local use) and this packa
 | Card actions on targets listed | 39 | 0 |
 | Pair objects carrying a status class | 680 | 0 |
 | Excluded rows listed with compound name and gene | 3 | 0 |
-| Card fields that differ (count of cards) | n/a | {"access": 7, "access_text": 7, "actions": 8, "asserts": 2, "card_path": 36, "country": 4, "for": 2, "identity": 7, "links": 7, "mechanism": 1, "next_full": 2, "novelty": 2, "pharm": 2, "reopen": 1} |
+| Card fields that differ (count of cards) | n/a | {"access": 7, "access_text": 7, "actions": 8, "asserts": 2, "brief": 1, "card_path": 36, "country": 4, "for": 2, "identity": 7, "links": 7, "mechanism": 1, "next_full": 2, "novelty": 2, "pharm": 2, "reopen": 1} |
 
 ## Prose redactions (shareable only)
 

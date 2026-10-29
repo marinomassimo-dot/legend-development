@@ -16,14 +16,14 @@
     "values": 126,
     "why": "lead dispositions attached to cards"
    },
-   "^\\.cur\\.(needs|threads|groups|gaps|goals|tracks|scopes|group_note|meta)(\\.|\\[\\]|$)": {
+   "^\\.cur\\.(needs|threads|groups|gaps|goals|tracks|scopes|group_note|meta|evidence_graph|work_order)(\\.|\\[\\]|$)": {
     "class": "OWN",
-    "values": 1522,
-    "why": "needs, threads and positions written in this repository"
+    "values": 2449,
+    "why": "needs, threads, positions, evidence graph and work order written in this repository"
    },
    "^\\.cur\\.cands\\[\\]\\.": {
     "class": "OWN",
-    "values": 5192,
+    "values": 5408,
     "why": "card text and computed positions (provenance of the prose: see text audit)"
    },
    "^\\.cur\\.cands\\[\\]\\.(pmids\\[\\]\\.(id|role)|dois\\[\\])$": {
@@ -36,6 +36,16 @@
     "values": 15,
     "why": "access category stated from openFDA NDC or an absence statement"
    },
+   "^\\.cur\\.cands\\[\\]\\.brief\\.sources\\[\\]\\.(kind|id)$": {
+    "class": "BIBLIO",
+    "values": 196,
+    "why": "PMID / ChEMBL identifier of an essential source of the one-page synthesis"
+   },
+   "^\\.cur\\.cands\\[\\]\\.brief\\.sources\\[\\]\\.(title|journal|year)$": {
+    "class": "BIBLIO",
+    "values": 294,
+    "why": "title, journal, year of an essential source (bibliographic facts)"
+   },
    "^\\.cur\\.cands\\[\\]\\.chembl\\[\\]$": {
     "class": "ID",
     "values": 14,
@@ -45,6 +55,16 @@
     "class": "BIBLIO",
     "values": 579,
     "why": "title, journal, year of a cited work (bibliographic facts)"
+   },
+   "^\\.cur\\.evidence_graph\\.chains\\[\\]\\.(nodes\\[\\]\\.pmids\\[\\]|edges\\[\\]\\.src\\.id)$": {
+    "class": "BIBLIO",
+    "values": 86,
+    "why": "PMID cited by the hand-authored evidence graph"
+   },
+   "^\\.cur\\.evidence_graph\\.chains\\[\\]\\.edges\\[\\]\\.src\\.title$": {
+    "class": "BIBLIO",
+    "values": 60,
+    "why": "title of a cited work (bibliographic fact, from the title cache)"
    },
    "^\\.cur\\.footer\\.": {
     "class": "SRC_META",
@@ -163,7 +183,7 @@
    },
    "^\\.ui\\.": {
     "class": "UI",
-    "values": 507,
+    "values": 588,
     "why": "Italian orientation text (builder data UI_IT and siblings)"
    }
   },
@@ -173,10 +193,10 @@
    "DOI": 5,
    "HGNC": 6,
    "NCT": 0,
-   "PMID": 15
+   "PMID": 53
   },
   "links": {
-   "distinct_hrefs": 48,
+   "distinct_hrefs": 52,
    "external_public": 6,
    "hosts": [
     "civicdb.org",
@@ -186,13 +206,13 @@
     "www.genenames.org",
     "www.nlm.nih.gov"
    ],
-   "internal_anchors": 42
+   "internal_anchors": 46
   },
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 1576,
-    "forbidden-wording": 10
+    "forbidden-name": 1727,
+    "forbidden-wording": 11
    },
    "co_attested_wording": [
     [
@@ -216,7 +236,7 @@
    "forbidden_names": 126046,
    "forbidden_wordings": 2888,
    "pair_unmarked_attested_or_unchecked": {
-    "count": 73,
+    "count": 77,
     "names": [
      "act 709478",
      "apinocaltamide",
@@ -227,7 +247,7 @@
      "null",
      "proteasome inhibitor"
     ],
-    "unchecked_without_corpus": 73
+    "unchecked_without_corpus": 77
    },
    "suppressed_by_exemption": {
     "category labels of catalogue-wide counts": 1
@@ -273,6 +293,7 @@
    "access_text": 7,
    "actions": 8,
    "asserts": 2,
+   "brief": 1,
    "card_path": 36,
    "country": 4,
    "for": 2,
@@ -287,6 +308,7 @@
   "cards": 36,
   "curated_sections": {
    "cands": "differs",
+   "evidence_graph": "identical",
    "footer": "differs",
    "gaps": "identical",
    "goals": "identical",
@@ -296,7 +318,8 @@
    "needs": "differs",
    "scopes": "identical",
    "threads": "identical",
-   "tracks": "identical"
+   "tracks": "identical",
+   "work_order": "identical"
   },
   "excluded_rows_with_names_full": 3,
   "excluded_rows_with_names_shareable": 0,
@@ -404,14 +427,14 @@
   "view_schema": "legend.wwox.repurposing_view/2"
  },
  "embedded_field_classes": {
-  "BIBLIO": 1132,
+  "BIBLIO": 1768,
   "COUNT": 7749,
   "ID": 3044,
-  "OWN": 51313,
+  "OWN": 52456,
   "ROWNAME": 1504,
   "SRC_A": 91,
   "SRC_META": 244,
-  "UI": 507
+  "UI": 588
  },
  "embedded_sources": [
   {
@@ -445,8 +468,8 @@
  ],
  "files": {
   "COMPARISON.md": {
-   "bytes": 6028,
-   "sha256": "0b844d8e4dbc2b0b255de2fe72d8ee920d029b60b69b36db7665f67a1af6d2d5"
+   "bytes": 6068,
+   "sha256": "4ce703d0a40f68b86f50745ccf89eab1d67e4318c0a5ef0b079247f66ab7d793"
   },
   "LICENSES/CC-BY-4.0.txt": {
    "bytes": 18657,
@@ -466,15 +489,15 @@
   },
   "NOTICE.md": {
    "bytes": 10871,
-   "sha256": "6e2bf4deb5937e941eaf95e8000c242c42993c1c75fba6df0043a3974f4420f8"
+   "sha256": "ddaa6191cc32607dadb810bd289f4d21fed71c04e18da23b47195a47e912b13f"
   },
   "README.md": {
    "bytes": 4443,
    "sha256": "b0cfd9d4f163e81172115d7dbe215d1dc3090c566e03f70c475edb5ee8e5ca08"
   },
   "TEXT_PROVENANCE.json": {
-   "bytes": 1601,
-   "sha256": "321bbc10bb47d3da8df1a85deeb9ae9ddf447c5154a1cb96d65297eaa829d0e5"
+   "bytes": 1731,
+   "sha256": "928eeec2bb420657b6f130701ddb1f32a1352e3a95f7372b50fa8546d9733cf4"
   },
   "class_b/chembl_cc-by-sa-3.0/CREDIT.txt": {
    "bytes": 1636,
@@ -489,8 +512,8 @@
    "sha256": "d8fe6a3455466783564803428b6318c1c442db6a16dfb97de8a6b7dcf944cc9d"
   },
   "index.html": {
-   "bytes": 2016624,
-   "sha256": "8f57591b636e5406aff7684f2de4e4ebe4734234bbf7003715b9e60d0be54802"
+   "bytes": 2235979,
+   "sha256": "f98cff30f868ac240160fd16eaf22dbb4a76bed699fd41c3be178709c700755f"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",
