@@ -1906,7 +1906,7 @@ class It7P7Data(unittest.TestCase):
         self.assertIn('id="contexts"', self.h)
         js = (DR / "view/assets/curated.js").read_text()
         self.assertIn("#section=", js)
-        self.assertEqual(self.h.count('href="#section='), 3)
+        self.assertEqual(self.h.count('href="#section='), 7)     # selection, hypotheses, predictive and, from IT8 P9, four on the ranking (controls, print, section end, one-page)
         for k in ("sec_print", "sec_unknown", "sec_title"):
             self.assertTrue(rv.UI_IT[k])
 
