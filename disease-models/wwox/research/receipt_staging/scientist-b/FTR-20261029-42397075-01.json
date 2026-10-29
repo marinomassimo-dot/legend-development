@@ -5,8 +5,8 @@
   "pmid": "42397075",
   "doi": "10.1093/brain/awag239"
  },
- "event_at": "2026-10-29T10:13:00Z",
- "analysis_at": "2026-10-29T09:13:00Z",
+ "event_at": "2026-10-29T08:48:57Z",
+ "analysis_at": "2026-10-29T00:00:00Z",
  "analysis_time_precision": "minute",
  "workflow": "scientist-b, IT6 step P7 (rescue window: prevented versus recovered). Q2: time of AAV9-WWOX infection relative to the first recorded hyperexcitability, comparator and follow-up. Results section Neuron-specific Gene Therapy, Discussion paragraphs on timing, Figure 1 and 6 legends read in the accepted-manuscript text layer (p.12-17); no figure opened. Question-driven, not a re-reading. Prepared as JSON for the integrator and staged.",
  "evidence_depth": "partial_fulltext_read",

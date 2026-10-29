@@ -5,8 +5,8 @@
   "pmid": "34747138",
   "doi": "10.15252/emmm.202114599"
  },
- "event_at": "2026-10-29T10:11:00Z",
- "analysis_at": "2026-10-29T09:11:00Z",
+ "event_at": "2026-10-29T08:48:57Z",
+ "analysis_at": "2026-10-29T00:00:00Z",
  "analysis_time_precision": "minute",
  "workflow": "scientist-b, IT6 step P7 (rescue window: prevented versus recovered). Q1: onset statements, comparator for behaviour and adult firing, follow-up, and the stated reason for P0 treatment. Abstract, Results and Discussion read in the JATS XML; no figure opened. Question-driven, not a re-reading. Prepared as JSON for the integrator and staged.",
  "evidence_depth": "partial_fulltext_read",

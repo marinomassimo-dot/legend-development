@@ -5,7 +5,7 @@
   "pmid": "38051092",
   "doi": "10.1080/10985549.2023.2284147"
  },
- "event_at": "2026-10-29T09:00:00Z",
+ "event_at": "2026-10-29T08:48:57Z",
  "analysis_at": "2026-10-29T08:30:00Z",
  "analysis_time_precision": "minute",
  "workflow": "scientist-b, IT6 step P6. IT6 P6 (broad durable recovery, new question): does degradation-route blockade or proteostasis modulation of a destabilised cytosolic missense enzyme restore enzyme function, which protein fraction rises, and does the outcome depend on the lesion and the expression context. Class-level substitute, NOT WWOX EVIDENCE. Source: Europe PMC fullTextXML (CC licence), saved locally; text extracted with tags removed; prepared as JSON for the integrator and staged, not appended.",

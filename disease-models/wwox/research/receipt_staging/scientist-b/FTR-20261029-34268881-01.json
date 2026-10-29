@@ -5,8 +5,8 @@
   "pmid": "34268881",
   "doi": "10.15252/emmm.202013610"
  },
- "event_at": "2026-10-29T10:12:00Z",
- "analysis_at": "2026-10-29T09:12:00Z",
+ "event_at": "2026-10-29T08:48:57Z",
+ "analysis_at": "2026-10-29T00:00:00Z",
  "analysis_time_precision": "minute",
  "workflow": "scientist-b, IT6 step P7 (rescue window: prevented versus recovered). Q2: timing of the lentiviral and safe-harbour WWOX add-back relative to the first measured phenotype. Results on W-AAV and lenti-WWOX, Figure 2 and EV legends, Methods lentiviral transduction read in the JATS XML; no figure opened. Question-driven, not a re-reading. Prepared as JSON for the integrator and staged.",
  "evidence_depth": "partial_fulltext_read",

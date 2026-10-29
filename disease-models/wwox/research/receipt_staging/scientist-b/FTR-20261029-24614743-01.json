@@ -4,7 +4,7 @@
   "pmid": "24614743",
   "doi": "10.1113/jphysiol.2013.267864"
  },
- "analysis_at": "2026-10-29T09:15:00Z",
+ "analysis_at": "2026-10-29T00:00:00Z",
  "workflow": "scientist-b, IT6 package P11 (supplement and diet). Selected-passage reading of the open-access PMC article XML (CC BY 3.0 in the file): the abstract and the Results paragraphs that state the external-magnesium IC50 values of the NMDA-evoked current at four membrane potentials, with and without ifenprodil, and the model-fitting paragraph of the Discussion. Question: how steep is the voltage dependence of the magnesium block in a native neuronal preparation, as an input to a back-of-envelope estimate, not as a cortical measurement. Prepared as JSON for the integrator and staged.",
  "evidence_depth": "queried_not_full_read",
  "source_locator": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4027860/fullTextXML",
@@ -32,6 +32,6 @@
  "prior_receipt": null,
  "reread_reason": "first_read",
  "record_kind": "contemporaneous_receipt",
- "event_at": "2026-10-29T09:30:00Z",
+ "event_at": "2026-10-29T08:48:57Z",
  "analysis_time_precision": "minute"
 }

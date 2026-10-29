@@ -5,8 +5,8 @@
   "pmid": "34634460",
   "doi": "10.1016/j.nbd.2021.105529"
  },
- "event_at": "2026-10-29T10:14:00Z",
- "analysis_at": "2026-10-29T09:14:00Z",
+ "event_at": "2026-10-29T08:48:57Z",
+ "analysis_at": "2026-10-29T00:00:00Z",
  "analysis_time_precision": "minute",
  "workflow": "scientist-b, IT6 step P7 (rescue window: prevented versus recovered). Q3: age window, drug duration and washout behaviour of the d-APV arm. Results 2.x, Discussion 3.4, Methods animals read in the EPMC XML; no figure opened. Question-driven, not a re-reading. Prepared as JSON for the integrator and staged.",
  "evidence_depth": "partial_fulltext_read",

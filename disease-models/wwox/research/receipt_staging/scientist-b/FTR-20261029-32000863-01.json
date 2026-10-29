@@ -5,8 +5,8 @@
   "pmid": "32000863",
   "doi": "10.1186/s40478-020-0883-3"
  },
- "event_at": "2026-10-29T10:16:00Z",
- "analysis_at": "2026-10-29T09:16:00Z",
+ "event_at": "2026-10-29T08:48:57Z",
+ "analysis_at": "2026-10-29T00:00:00Z",
  "analysis_time_precision": "minute",
  "workflow": "scientist-b, IT6 step P7 (rescue window: prevented versus recovered). Q3: seizure onset statement and the ethosuximide pre-treatment design. A keyword-targeted read of two passages (onset sentence; PTZ/ethosuximide Methods and Results) in the JATS XML; no figure opened. Question-driven, not a re-reading. Prepared as JSON for the integrator and staged.",
  "evidence_depth": "partial_fulltext_read",

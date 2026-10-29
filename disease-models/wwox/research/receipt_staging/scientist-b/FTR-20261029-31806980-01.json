@@ -4,7 +4,7 @@
   "pmid": "31806980",
   "doi": "10.2147/ndt.s230688"
  },
- "analysis_at": "2026-10-29T09:05:00Z",
+ "analysis_at": "2026-10-29T00:00:00Z",
  "workflow": "scientist-b, IT6 package P11 (supplement and diet). Selected-passage reading of the open-access PMC article XML (CC BY-NC in the file): the abstract, the introduction paragraph on blood-brain barrier permeability, the experimental protocol and cerebrospinal-fluid sampling sentences of the Methods, the first Results paragraph on the normal-mouse arm, and the Discussion paragraphs on cerebrospinal-fluid magnesium. Question: what did oral magnesium sulfate versus magnesium L-threonate do to cerebrospinal-fluid magnesium in normal mice. The MPTP-model arm was not read. Prepared as JSON for the integrator and staged.",
  "evidence_depth": "queried_not_full_read",
  "source_locator": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6857673/fullTextXML",
@@ -31,6 +31,6 @@
  "prior_receipt": null,
  "reread_reason": "first_read",
  "record_kind": "contemporaneous_receipt",
- "event_at": "2026-10-29T09:30:00Z",
+ "event_at": "2026-10-29T08:48:57Z",
  "analysis_time_precision": "minute"
 }
