@@ -203,10 +203,10 @@
       "complete_fulltext_read",
       "partial_fulltext_read"
      ],
-     "digest": "a7c82c1edc18d110",
-     "locators": 1012,
+     "digest": "d6f2fbcafdd5b566",
+     "locators": 1043,
      "origin_id": "N-01",
-     "papers": 50,
+     "papers": 51,
      "query_id": "Q-N-01",
      "rows": [
       {
@@ -895,6 +895,25 @@
        "evidence_scope": [
         "UNQUALIFIED"
        ],
+       "locator_count": 31,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID31543760.json",
+       "pmid": "31543760",
+       "reading_depth": "partial_fulltext_read",
+       "receipt_events": 6,
+       "receipt_id": "FTR-20260811-31543760-01",
+       "repair_unverified": 0,
+       "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
+       "evidence_scope": [
+        "UNQUALIFIED"
+       ],
        "locator_count": 25,
        "manifest": "disease-models/wwox/research/deepdive_manifests/PMID32581702.json",
        "pmid": "32581702",
@@ -1509,7 +1528,7 @@
     "route": "BENEFICIO_PRECOCE",
     "schema_version": 1
    },
-   "input_sha256": "9915d6f20642a2a7d444598ff066d2f45258802a47704bb7f1f54a4615aa1451",
+   "input_sha256": "0ce7ebd1d58f7479d5b9ccbccb1ec5690d61540b22eed5e0e281adab6fbb0db2",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -1536,10 +1555,10 @@
      "complete_fulltext_read",
      "partial_fulltext_read"
     ],
-    "digest": "a7c82c1edc18d110",
-    "locators": 1012,
+    "digest": "d6f2fbcafdd5b566",
+    "locators": 1043,
     "origin_id": "N-01",
-    "papers": 50,
+    "papers": 51,
     "query_id": "Q-N-01",
     "rows": [
      {
@@ -2228,6 +2247,25 @@
       "evidence_scope": [
        "UNQUALIFIED"
       ],
+      "locator_count": 31,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID31543760.json",
+      "pmid": "31543760",
+      "reading_depth": "partial_fulltext_read",
+      "receipt_events": 6,
+      "receipt_id": "FTR-20260811-31543760-01",
+      "repair_unverified": 0,
+      "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
+      "evidence_scope": [
+       "UNQUALIFIED"
+      ],
       "locator_count": 25,
       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID32581702.json",
       "pmid": "32581702",
@@ -2793,11 +2831,11 @@
     "NO_MATCH_FOUND is information not available for those queries and that coverage: it is not proof the label is absent, not DRUG_HAS_NO_LABEL, not biological counterevidence and not a reason to drop the candidate."
    ],
    "measure_next": {
-    "dependence": "50_PAPERS_30_COMPLETE",
+    "dependence": "51_PAPERS_30_COMPLETE",
     "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
     "external_hits": 1,
     "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
-    "would_move": "N-01 (disease-models/wwox/analysis/mechanism_intervention_map.md:714)"
+    "would_move": "N-01 (disease-models/wwox/analysis/mechanism_intervention_map.md:716)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -3553,7 +3591,7 @@
     "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
     "external_hits": 1,
     "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
-    "would_move": "N-02 (disease-models/wwox/analysis/mechanism_intervention_map.md:728)"
+    "would_move": "N-02 (disease-models/wwox/analysis/mechanism_intervention_map.md:730)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -3660,7 +3698,7 @@
      "epistemic_status": "IPOTESI",
      "evidence_scope": "UNQUALIFIED",
      "id": "DA-Q-N-03",
-     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:739",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:741",
      "reading_depth": "UNKNOWN",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-03",
      "target_id": "UNKNOWN"
@@ -3793,12 +3831,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*the target is not causally downstream of WWOX.* Precision therapy in",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:739; evidence table digest 2dd7159a9616b187"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:741; evidence table digest 2dd7159a9616b187"
     },
     "route": "UNQUALIFIED",
     "schema_version": 1
    },
-   "input_sha256": "7f3961eee2041e76b374148aca2aa996e185afb7070aa3053135e18a8ff50d1a",
+   "input_sha256": "d8866fdda93b805165e193b98591788fd4395fbc694d2facf6400a6c2beb928b",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -3878,7 +3916,7 @@
     "experiment_sketch": "no laboratory work: the next informative act is a reading",
     "external_hits": 1,
     "measurement": "a complete full-text read of the strongest of these papers, with its receipt",
-    "would_move": "N-03 (disease-models/wwox/analysis/mechanism_intervention_map.md:739)"
+    "would_move": "N-03 (disease-models/wwox/analysis/mechanism_intervention_map.md:741)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -3985,7 +4023,7 @@
      "epistemic_status": "IPOTESI",
      "evidence_scope": "UNQUALIFIED",
      "id": "DA-Q-N-04",
-     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:748",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:750",
      "reading_depth": "complete_fulltext_read",
      "receipt": "FTR-20261003-30361190-01",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-04",
@@ -4524,12 +4562,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*corrects a marker, not the mechanism* — plus an unmeasured premise. VABAM is",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:748; evidence table digest 71501b50de65a15c"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:750; evidence table digest 71501b50de65a15c"
     },
     "route": "UNQUALIFIED",
     "schema_version": 1
    },
-   "input_sha256": "c9417ca8d62b2e6aede527ae95983ea44680ae7c8618f27278c3af9e83cb4557",
+   "input_sha256": "0cf91267ee111a0840e3c9d2e69316adcb84b96fc7b73bc793f820ef199be630",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -5014,7 +5052,7 @@
     "experiment_sketch": "legend-locator-audit over the declared triples",
     "external_hits": 1,
     "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
-    "would_move": "N-04 (disease-models/wwox/analysis/mechanism_intervention_map.md:748)"
+    "would_move": "N-04 (disease-models/wwox/analysis/mechanism_intervention_map.md:750)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -7464,7 +7502,7 @@
     "experiment_sketch": "legend-locator-audit over the declared triples",
     "external_hits": 1,
     "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
-    "would_move": "N-05 (disease-models/wwox/analysis/mechanism_intervention_map.md:758)"
+    "would_move": "N-05 (disease-models/wwox/analysis/mechanism_intervention_map.md:760)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -7571,7 +7609,7 @@
      "epistemic_status": "IPOTESI",
      "evidence_scope": "UNQUALIFIED",
      "id": "DA-Q-N-06",
-     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:774",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:776",
      "reading_depth": "complete_fulltext_read",
      "receipt": "FTR-20260913-15064722-01",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-06",
@@ -7642,10 +7680,10 @@
       "complete_fulltext_read",
       "partial_fulltext_read"
      ],
-     "digest": "ce2d296dda5ebe2f",
-     "locators": 1033,
+     "digest": "809fc9241ef66e01",
+     "locators": 1064,
      "origin_id": "N-06",
-     "papers": 53,
+     "papers": 54,
      "query_id": "Q-N-06",
      "rows": [
       {
@@ -8426,6 +8464,25 @@
        "evidence_scope": [
         "UNQUALIFIED"
        ],
+       "locator_count": 31,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID31543760.json",
+       "pmid": "31543760",
+       "reading_depth": "partial_fulltext_read",
+       "receipt_events": 6,
+       "receipt_id": "FTR-20260811-31543760-01",
+       "repair_unverified": 0,
+       "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
+       "evidence_scope": [
+        "UNQUALIFIED"
+       ],
        "locator_count": 25,
        "manifest": "disease-models/wwox/research/deepdive_manifests/PMID32581702.json",
        "pmid": "32581702",
@@ -9002,12 +9059,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*corrects/reports a biomarker, not the mechanism* — inverted: here the biomarker",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:774; evidence table digest ce2d296dda5ebe2f"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:776; evidence table digest 809fc9241ef66e01"
     },
     "route": "UNQUALIFIED",
     "schema_version": 1
    },
-   "input_sha256": "cc65aaad73ce0289d591d51e3cdb8a18df1bfeb6587681efd75b78fdaa5eb79f",
+   "input_sha256": "27cf7526f8b844636154ea3638047043eadad4e41c4c1a62a71c497ee3747042",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -9031,10 +9088,10 @@
      "complete_fulltext_read",
      "partial_fulltext_read"
     ],
-    "digest": "ce2d296dda5ebe2f",
-    "locators": 1033,
+    "digest": "809fc9241ef66e01",
+    "locators": 1064,
     "origin_id": "N-06",
-    "papers": 53,
+    "papers": 54,
     "query_id": "Q-N-06",
     "rows": [
      {
@@ -9815,6 +9872,25 @@
       "evidence_scope": [
        "UNQUALIFIED"
       ],
+      "locator_count": 31,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID31543760.json",
+      "pmid": "31543760",
+      "reading_depth": "partial_fulltext_read",
+      "receipt_events": 6,
+      "receipt_id": "FTR-20260811-31543760-01",
+      "repair_unverified": 0,
+      "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
+      "evidence_scope": [
+       "UNQUALIFIED"
+      ],
       "locator_count": 25,
       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID32581702.json",
       "pmid": "32581702",
@@ -10384,7 +10460,7 @@
     "experiment_sketch": "legend-locator-audit over the declared triples",
     "external_hits": 1,
     "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
-    "would_move": "N-06 (disease-models/wwox/analysis/mechanism_intervention_map.md:774)"
+    "would_move": "N-06 (disease-models/wwox/analysis/mechanism_intervention_map.md:776)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -10470,7 +10546,7 @@
      "epistemic_status": "IPOTESI",
      "evidence_scope": "UNQUALIFIED",
      "id": "DA-Q-N-07",
-     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:804",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:806",
      "reading_depth": "complete_fulltext_read",
      "receipt": "FTR-20260909-29724996-01",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-07",
@@ -10657,12 +10733,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*toxicity incompatible* + *wrong endpoint*. The only approved drug that corrects a",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:804; evidence table digest e699ae7980fd8560"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:806; evidence table digest e699ae7980fd8560"
     },
     "route": "UNQUALIFIED",
     "schema_version": 1
    },
-   "input_sha256": "b1787a1651a88023ac159a3b082e8bb03b0715fded51fc56fcffdbee8a299c0d",
+   "input_sha256": "b9d5dc53ed8b16fbca430b710006a2a3c940592ddcd3ee3d83f9fb91a549de16",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -10816,7 +10892,7 @@
     "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
     "external_hits": 0,
     "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
-    "would_move": "N-07 (disease-models/wwox/analysis/mechanism_intervention_map.md:804)"
+    "would_move": "N-07 (disease-models/wwox/analysis/mechanism_intervention_map.md:806)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -10857,6 +10933,104 @@
     },
     {
      "assertion_id": "DR-E03-002",
+     "reasons": [
+      "no disease assertion on this target and endpoint"
+     ],
+     "status": "UNRESOLVED"
+    },
+    {
+     "assertion_id": "DR-I01-001",
+     "reasons": [
+      "no disease assertion on this target and endpoint"
+     ],
+     "status": "UNRESOLVED"
+    },
+    {
+     "assertion_id": "DR-I01-002",
+     "reasons": [
+      "no disease assertion on this target and endpoint"
+     ],
+     "status": "UNRESOLVED"
+    },
+    {
+     "assertion_id": "DR-I01-003",
+     "reasons": [
+      "no disease assertion on this target and endpoint"
+     ],
+     "status": "UNRESOLVED"
+    },
+    {
+     "assertion_id": "DR-I01-004",
+     "reasons": [
+      "no disease assertion on this target and endpoint"
+     ],
+     "status": "UNRESOLVED"
+    },
+    {
+     "assertion_id": "DR-I01-005",
+     "reasons": [
+      "no disease assertion on this target and endpoint"
+     ],
+     "status": "UNRESOLVED"
+    },
+    {
+     "assertion_id": "DR-I01-006",
+     "reasons": [
+      "no disease assertion on this target and endpoint"
+     ],
+     "status": "UNRESOLVED"
+    },
+    {
+     "assertion_id": "DR-I01-007",
+     "reasons": [
+      "no disease assertion on this target and endpoint"
+     ],
+     "status": "UNRESOLVED"
+    },
+    {
+     "assertion_id": "DR-I01-008",
+     "reasons": [
+      "no disease assertion on this target and endpoint"
+     ],
+     "status": "UNRESOLVED"
+    },
+    {
+     "assertion_id": "DR-I01-009",
+     "reasons": [
+      "no disease assertion on this target and endpoint"
+     ],
+     "status": "UNRESOLVED"
+    },
+    {
+     "assertion_id": "DR-I01-010",
+     "reasons": [
+      "no disease assertion on this target and endpoint"
+     ],
+     "status": "UNRESOLVED"
+    },
+    {
+     "assertion_id": "DR-I01-011",
+     "reasons": [
+      "no disease assertion on this target and endpoint"
+     ],
+     "status": "UNRESOLVED"
+    },
+    {
+     "assertion_id": "DR-I01-012",
+     "reasons": [
+      "no disease assertion on this target and endpoint"
+     ],
+     "status": "UNRESOLVED"
+    },
+    {
+     "assertion_id": "DR-I01-013",
+     "reasons": [
+      "no disease assertion on this target and endpoint"
+     ],
+     "status": "UNRESOLVED"
+    },
+    {
+     "assertion_id": "DR-I01-014",
      "reasons": [
       "no disease assertion on this target and endpoint"
      ],
@@ -10956,7 +11130,8 @@
      "name": "PDK inhibition (dichloroacetate and research PDK inhibitors) as the pyruvate-oxidation branch, kept separate from what the study measured"
     },
     "curated_from": [
-     "cards/E03_pdk_inhibition_dca.packet.json"
+     "cards/E03_pdk_inhibition_dca.packet.json",
+     "cards/I01_pdk_inhibition_dca_premise_seizure_glycaemia.packet.json"
     ],
     "curation_checks": [
      {
@@ -10973,6 +11148,48 @@
        }
       ],
       "receipt": "FTR-20261026-42909904-01",
+      "receipt_in_ledger": true
+     },
+     {
+      "assertion": "DA-I01-003",
+      "manifest_entries": [],
+      "receipt": "FTR-20261003-35328751-02",
+      "receipt_in_ledger": true
+     },
+     {
+      "assertion": "DA-I01-004",
+      "manifest_entries": [],
+      "receipt": "FTR-20261003-35328751-02",
+      "receipt_in_ledger": true
+     },
+     {
+      "assertion": "DA-I01-005",
+      "manifest_entries": [],
+      "receipt": "FTR-20260814-25012504-01",
+      "receipt_in_ledger": true
+     },
+     {
+      "assertion": "DA-I01-006",
+      "manifest_entries": [],
+      "receipt": "FTR-20261019-42422765-01",
+      "receipt_in_ledger": true
+     },
+     {
+      "assertion": "DA-I01-007",
+      "manifest_entries": [],
+      "receipt": "FTR-20261003-35328751-02",
+      "receipt_in_ledger": true
+     },
+     {
+      "assertion": "DA-I01-008",
+      "manifest_entries": [],
+      "receipt": "FTR-20261023-30362252-01",
+      "receipt_in_ledger": true
+     },
+     {
+      "assertion": "DR-I01-005",
+      "manifest_entries": [],
+      "receipt": "FTR-20261023-36432491-01",
       "receipt_in_ledger": true
      }
     ],
@@ -11012,7 +11229,7 @@
       "evidence_scope": "COMPUTATIONAL_RESULT",
       "id": "DA-GSE-PDK-003",
       "locator": "disease-models/wwox/research/drug_repurposing/gse156243/prediction_hif1a_pdk_chain_20261025.md and prediction_pyruvate_fate_20261026.md",
-      "measured_result_note": "PDK1 -0.34; the PDK/PDH set +0.17 (P 0.22, not different from chance); LDH-to-PDH ratio not shifted (inside the spread of the two wild-type libraries). EXPLORATORY NEGATIVES: transcripts are not PDH activity, flux or metabolite, and do not show that PDH or lactate are normal.",
+      "measured_result_note": "PDK1 -0.34, lower in sign only (the IT5 same-sets re-analysis gives -0.39, inside the single-gene null, p about 0.30; the datum is the absence of support for a raised PDK1, not a demonstrated decrease; see card I01); the PDK/PDH set +0.17 (P 0.22, not different from chance); LDH-to-PDH ratio not shifted (inside the spread of the two wild-type libraries). EXPLORATORY NEGATIVES: transcripts are not PDH activity, flux or metabolite, and do not show that PDH or lactate are normal.",
       "reading_depth": "queried_not_full_read",
       "source": "GSE156243, the deposit of the 2021 organoid paper (PMID 34268881); exploratory set-level analysis by scientist-c",
       "target_id": "human PDK1 transcript and the PDK/PDH transcript set"
@@ -11035,6 +11252,164 @@
       "reading_depth": "queried_not_full_read",
       "source": "GSE156243, the deposit of the 2021 organoid paper (PMID 34268881); exploratory set-level analysis by scientist-c",
       "target_id": "human LDHA transcript"
+     },
+     {
+      "context": {
+       "cell_type": "cerebral organoid, bulk RNA",
+       "developmental_stage": "organoid, culture week 15",
+       "disease_id": "WWOX-deficient human cerebral organoid (engineered knockout; not a patient allele)",
+       "genotype": "WWOX knockout versus wild type (4 versus 2 libraries, one laboratory)",
+       "species": "human"
+      },
+      "direction": "DECREASE",
+      "endpoint": "log2 shift, knockout minus wild type (sign only)",
+      "epistemic_status": "INFERENZA",
+      "evidence_scope": "COMPUTATIONAL_RESULT",
+      "id": "DA-I01-001",
+      "locator": "disease-models/wwox/research/drug_repurposing/wwox_systems_comparison_it5_20261029.md, programme table, row PDK1; matrix TSV",
+      "note": "PDK1 -0.39, LOWER IN SIGN ONLY: inside the single-gene null (p about 0.30), so the datum is the absence of support for a raised PDK1, not a demonstrated decrease (the earlier card E03 prints -0.34 for the same comparison; the two runs differ in method and the difference is not reconciled here). The PDK set as a whole is indistinguishable from chance. Transcript, not PDK protein, PDH phosphorylation or activity. The maturity confound of this deposit applies.",
+      "reading_depth": "queried_not_full_read",
+      "source": "GSE156243 (deposit of PMID 34268881), set-level and gene-level re-analysis by scientist-c; wwox_systems_comparison_it5_20261029.md section 2",
+      "target_id": "human PDK1 transcript (WWOX-knockout cerebral organoid)"
+     },
+     {
+      "context": {
+       "cell_type": "H9-derived neural progenitors",
+       "developmental_stage": "progenitor stage and day-14 neurons",
+       "disease_id": "WWOX-silenced human neural progenitors (shRNA, depth of knockdown not quantified; WWOX not lower in the progenitor CAGE tags)",
+       "genotype": "WWOX shRNA knockdown versus control",
+       "species": "human"
+      },
+      "direction": "DECREASE",
+      "endpoint": "log2 shift, knockdown minus control, CAGE promoter sums (sign only)",
+      "epistemic_status": "INFERENZA",
+      "evidence_scope": "COMPUTATIONAL_RESULT",
+      "id": "DA-I01-002",
+      "locator": "disease-models/wwox/research/drug_repurposing/wwox_systems_comparison_it5_20261029.md, programme table, row PDK1",
+      "note": "Progenitors -0.67, LOWER IN SIGN ONLY: inside the single-gene null (p about 0.49) and the interval (about 0.45, Poisson) spans zero; the day-14 neuron stage shows +0.44 (same interval), so the sign is not concordant across stages and no decrease is demonstrated. n = 1 per arm: descriptive only. The progenitor line also differs in state from its control (radial-glia markers lower), which confounds every metabolic comparison in it.",
+      "reading_depth": "queried_not_full_read",
+      "source": "GSE126075 (deposit of PMID 31543760), descriptive P6 run, one library per arm; wwox_systems_comparison_it5_20261029.md section 2",
+      "target_id": "human PDK1 transcript (shRNA WWOX-knockdown neural progenitors and neurons)"
+     },
+     {
+      "context": {
+       "cell_type": "fibroblast line (1BR.3.N background)",
+       "developmental_stage": "not applicable",
+       "disease_id": "human non-neural fibroblast line with WWOX knockout (not a DEE-specific neural system)",
+       "genotype": "WWOX CRISPR/Cas9 lentiviral knockout, polyclonal (WWOX mRNA about 3-fold and protein about 8.5-fold lower; the abstract says silenced) versus scrambled-sgRNA control",
+       "species": "human"
+      },
+      "direction": "INCREASE",
+      "endpoint": "RT-qPCR expression, knockout against control, normoxia and normoglycaemia",
+      "epistemic_status": "DATO",
+      "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+      "id": "DA-I01-003",
+      "locator": "files/fulltext/PMID35328751_Baryla2022_PMC.xml, Results: 'expression levels of SLC2A1, SLC2A4, ENO1, PKM2, and PDK (all p < 0.05) are significantly higher in the WWOX KO cell line than in control'",
+      "note": "The only human WWOX-deficient transcript datum in which PDK is HIGHER; the two human neural transcript systems give PDK1 lower in sign only (inside the single-gene null). The isoform is unspecified in the sentence quoted, but the paper's Methods qPCR list names PDK1. Results name this condition (normoxia and normoglycaemia); the Discussion says PDK mRNA also rose in hypoxia-hyperglycaemia while the Results list for that condition names only PFK1 and PKM2 (internal inconsistency not resolved). n of the qPCR panel not stated in the sentence read. The PDK transcript sign therefore differs between a non-neural human line (up) and two neural transcript systems (not higher, lower only in sign): a cell-type contrast that is confounded (line, method, depth of silencing) and is not a finding about WWOX.",
+      "reading_depth": "partial_fulltext_read",
+      "receipt": "FTR-20261003-35328751-02",
+      "source": "Baryla 2022 (PMID 35328751), Results on glycolysis-gene expression; text re-read in this cycle from the local JATS (Figure 4 sentence)",
+      "target_id": "PDK transcript (isoform not named in the quoted sentence; Methods name PDK1), human WWOX-knockout fibroblasts"
+     },
+     {
+      "context": {
+       "cell_type": "fibroblast line (1BR.3.N background)",
+       "developmental_stage": "not applicable",
+       "disease_id": "human non-neural fibroblast line with WWOX knockout (not a DEE-specific neural system)",
+       "genotype": "WWOX CRISPR/Cas9 lentiviral knockout, polyclonal (WWOX mRNA about 3-fold and protein about 8.5-fold lower) versus scrambled-sgRNA control",
+       "species": "human"
+      },
+      "direction": "NO_CHANGE",
+      "endpoint": "colorimetric PDH activity assay, knockout against control, four oxygen by glucose conditions",
+      "epistemic_status": "DATO",
+      "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+      "id": "DA-I01-004",
+      "locator": "files/fulltext/PMID35328751_Baryla2022_PMC.xml, Results (normoxia and normoglycaemia): 'the activities of pyruvate dehydrogenase kinase (PDK) and citrate synthase (CS) were not changed' (the sentence that carries the wording flag); Results (hypoxia and normoglycaemia): 'We didn't observed any significantly important differences in the activity of pyruvate [dehydrogenase]' (a different condition, quotation truncated in the source text read); Methods 4.10 names a PDH activity kit; Figure 5 caption: Pyruvate Dehydrogenase",
+      "note": "A null is NO_CHANGE, not proof of normal PDH regulation: n is not stated and PDH phosphorylation is not measured. Wording flag found in this cycle: one Results sentence lists 'pyruvate dehydrogenase kinase (PDK)' among the enzymes whose activity was unchanged, while Methods describe only a PDH kit and Figure 5b is labelled PDH; the repository reads it as the PDH assay (manifest entries 7 and 8); not resolved by the paper. PDH is named as unchanged in the normoxia-hyperglycaemia and hypoxia-normoglycaemia sentences; for hypoxia-hyperglycaemia the text says no effect on enzyme activities. In the same cells hexokinase activity, LDH activity and lactate were higher.",
+      "reading_depth": "partial_fulltext_read",
+      "receipt": "FTR-20261003-35328751-02",
+      "source": "Baryla 2022 (PMID 35328751), Figure 5b and Results; carried through needs NEED-PDH-PYRUVATE-AXIS observation O2; Results sentence re-read in this cycle",
+      "target_id": "pyruvate dehydrogenase enzyme activity, human WWOX-knockout fibroblasts"
+     },
+     {
+      "context": {
+       "cell_type": "embryonic fibroblasts",
+       "developmental_stage": "not applicable",
+       "disease_id": "Wwox-null mouse embryonic fibroblasts (non-neural)",
+       "genotype": "Wwox knockout versus wild type",
+       "species": "mouse"
+      },
+      "direction": "INCREASE",
+      "endpoint": "expression of HIF1alpha target genes, knockout against wild type, normoxia",
+      "epistemic_status": "DATO",
+      "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+      "id": "DA-I01-005",
+      "locator": "deepdive_manifests/PMID25012504.json verbatim_locators entry 2",
+      "note": "Source of the PDK1-raised premise (map chain D). Transcript level in the text; the byte artefacts behind the receipt (HTML and PDF under files/fulltext) are not present in the root checkout today, only an abstract-stub XML, so the locator was not re-opened in this cycle (UNVERIFIABLE_SURFACE for the blind audit: the Pdk1 sentence was not seen by any reader in this cycle). Mouse, non-neural; PDH phosphorylation and activity not measured.",
+      "reading_depth": "complete_fulltext_read",
+      "receipt": "FTR-20260814-25012504-01",
+      "source": "the 2014 WWOX and HIF1alpha paper (PMID 25012504), Results on HIF1alpha target genes (the sentence on Pdk1)",
+      "target_id": "Pdk1 transcript, Wwox-null mouse embryonic fibroblasts"
+     },
+     {
+      "context": {
+       "cell_type": "whole animal",
+       "developmental_stage": "P10 to P14 (AAV9 study); young postnatal (the 2014 paper)",
+       "disease_id": "constitutive Wwox-null mouse",
+       "genotype": "Wwox -/- against wild type",
+       "species": "mouse"
+      },
+      "direction": "DECREASE",
+      "endpoint": "blood glucose concentration, Wwox-null against wild type",
+      "epistemic_status": "DATO",
+      "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+      "id": "DA-I01-006",
+      "locator": "deepdive_manifests/PMID42422765.json entry 37; files/fulltext/PMID42422765_Obeid2026_PMC_r2.xml (Results on promoters; Figure 1 legend: glucose at P14); deepdive_manifests/PMID25012504.json entry 10 (Figure 1 as drawn: wild type about 130 against knockout about 10)",
+      "note": "Two laboratories, two ages, very different magnitudes (about 95 against 130 at P10 in one study; about 10 against 130 in the other, a Figure 1 reading carried from the manifest and not re-opened). Hypoglycaemia is rescued by a neuronal-promoter vector; strong ubiquitous promoters rescued it early only (the paper says the protection was not sustained at later stages); an oligodendrocyte promoter and the weak ubiquitous promoter did not (JATS text read), so it is not a purely peripheral readout. UNVERIFIABLE_SURFACE for the blind audit: both figure readings (about 95 against 130; about 10 against 130) are carried from manifests, and the sentence quoted from the 2014 abstract is a background statement about earlier work, not a result of that paper; but the null dies early, so the endpoint is survivor-conditioned and confounded with feeding, seizures and growth (NEED-SYSTEMIC-GLYCAEMIA-GROWTH).",
+      "reading_depth": "partial_fulltext_read",
+      "receipt": "FTR-20261019-42422765-01",
+      "source": "Obeid 2026 (PMID 42422765), AAV9 study: P10 untreated knockout about 95 against wild type about 130 (manifest figure attestation); abstract-level statement re-read in this cycle from the local JATS: neuronal-promoter vectors rescue hypoglycaemia; the 2014 WWOX and HIF1alpha paper, abstract: Wwox-deficient mice 'succumb to a lethal hypoglycemia early in life'",
+      "target_id": "blood glucose (whole animal)"
+     },
+     {
+      "context": {
+       "cell_type": "fibroblast line (1BR.3.N background)",
+       "developmental_stage": "not applicable",
+       "disease_id": "human non-neural fibroblast line with WWOX knockout (not a DEE-specific neural system)",
+       "genotype": "WWOX CRISPR/Cas9 lentiviral knockout, polyclonal (WWOX mRNA about 3-fold and protein about 8.5-fold lower) versus scrambled-sgRNA control",
+       "species": "human"
+      },
+      "direction": "INCREASE",
+      "endpoint": "lactate concentration, knockout against control, four oxygen by glucose conditions",
+      "epistemic_status": "DATO",
+      "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+      "id": "DA-I01-007",
+      "locator": "files/fulltext/PMID35328751_Baryla2022_PMC.xml, Results: hexokinase 1.6-fold, LDH 1.4-fold, lactate higher in the knockout line (normoxia normoglycaemia), lactate still higher in later conditions",
+      "note": "Non-neural. Together with DA-I01-004 this is a raised-lactate, unchanged-PDH-activity combination: supply-side glycolytic overflow fits it as well as PDH restraint.",
+      "reading_depth": "partial_fulltext_read",
+      "receipt": "FTR-20261003-35328751-02",
+      "source": "Baryla 2022 (PMID 35328751), Figure 5d and Results; Results sentence re-read in this cycle",
+      "target_id": "lactate, human WWOX-knockout fibroblasts"
+     },
+     {
+      "context": {
+       "cell_type": "brain MRS voxel",
+       "developmental_stage": "child",
+       "disease_id": "WWOX-related disorder, one reported patient",
+       "genotype": "UNKNOWN",
+       "species": "human"
+      },
+      "direction": "DECREASE",
+      "endpoint": "brain lactate level in one WWOX patient",
+      "epistemic_status": "DATO",
+      "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+      "id": "DA-I01-008",
+      "locator": "DL-BIO-008 (receipts FTR-20261023-30362252-01 and earlier, partial_fulltext_read)",
+      "note": "n = 1, confounded by a second variant. It is the only brain-level lactate datum and it points the opposite way from the cell-line rows; it limits any argument that a lactate-lowering lever has a brain lactate excess to act on.",
+      "reading_depth": "partial_fulltext_read",
+      "receipt": "FTR-20261023-30362252-01",
+      "source": "discovery_ledger_current DL-BIO-008 (one patient with a confounding second variant; the ledger records the source full text as read and tags the datum DATO; not re-verified here), carried through needs NEED-LACTATE-LDH observation O4",
+      "target_id": "human brain lactate (proton MRS)"
      }
     ],
     "drug_assertions": [
@@ -11075,6 +11450,273 @@
       "reading_depth": "queried_not_full_read",
       "source": "DGIdb (Drug Repurposing Hub, Guide to Pharmacology) and ChEMBL activity rows of CHEMBL3392645; NOT WWOX EVIDENCE",
       "target_id": "human PDK2 enzyme activity"
+     },
+     {
+      "context": {
+       "cell_type": "brain",
+       "developmental_stage": "adult, chronic stage",
+       "disease_id": "pilocarpine status epilepticus mouse epilepsy model, chronic stage (NOT WWOX EVIDENCE)",
+       "genotype": "mice without pilocarpine status epilepticus as controls (strain not stated in the abstract)",
+       "species": "mouse"
+      },
+      "direction": "INCREASE",
+      "endpoint": "PDH activity in the chronic stage of the pilocarpine mouse model, DCA against vehicle",
+      "epistemic_status": "DATO",
+      "evidence_scope": "OTHER_DISEASE_PRECEDENT",
+      "id": "DR-I01-001",
+      "locator": "PubMed and Europe PMC abstract (closed access, no open copy): PDH activity reduced by 65% against healthy mice in the epileptic stage, 'partially alleviated with DCA treatment'; PDH protein down 37%, Ser300 phosphorylation up 52%, not significantly changed by DCA",
+      "note": "Target engagement was partial and the phospho-site did not move significantly; total PDH protein fell 23% in non-epileptic mice on treatment, which the authors offer as a possible reason for the pro-convulsant signal.",
+      "reading_depth": "abstract_only",
+      "source": "dichloroacetate, mouse, Durie 2018 (PMID 29913407), abstract; NOT WWOX EVIDENCE",
+      "target_id": "brain pyruvate dehydrogenase activity"
+     },
+     {
+      "context": {
+       "cell_type": "whole animal",
+       "developmental_stage": "adult",
+       "disease_id": "acute chemoconvulsant seizure test (NOT WWOX EVIDENCE)",
+       "genotype": "mice (strain not stated in the abstract)",
+       "species": "mouse"
+      },
+      "direction": "NO_CHANGE",
+      "endpoint": "latency to seizure, DCA against vehicle, acute test",
+      "epistemic_status": "DATO",
+      "evidence_scope": "OTHER_DISEASE_PRECEDENT",
+      "id": "DR-I01-002",
+      "locator": "abstract: 'DCA treatment did not increase latencies to seizures in the acute flurothyl seizure test'",
+      "note": "Chronic treatment before the test. One laboratory; the abstract reports no effect size.",
+      "reading_depth": "abstract_only",
+      "source": "dichloroacetate, mouse, Durie 2018 (PMID 29913407), abstract; NOT WWOX EVIDENCE",
+      "target_id": "seizure latency (acute flurothyl test)"
+     },
+     {
+      "context": {
+       "cell_type": "whole animal",
+       "developmental_stage": "adult",
+       "disease_id": "acute electrical seizure test (NOT WWOX EVIDENCE)",
+       "genotype": "mice (strain not stated in the abstract)",
+       "species": "mouse"
+      },
+      "direction": "DECREASE",
+      "endpoint": "seizure outcome in the 6 Hz test, DCA against vehicle",
+      "epistemic_status": "DATO",
+      "evidence_scope": "OTHER_DISEASE_PRECEDENT",
+      "id": "DR-I01-003",
+      "locator": "abstract: 'slightly proconvulsant in the 6 Hz test'",
+      "note": "A small pro-convulsant signal in one test, read from the abstract only; the magnitude and statistics are not available.",
+      "reading_depth": "abstract_only",
+      "source": "dichloroacetate, mouse, Durie 2018 (PMID 29913407), abstract; NOT WWOX EVIDENCE",
+      "target_id": "seizure protection (6 Hz test)"
+     },
+     {
+      "context": {
+       "cell_type": "whole animal",
+       "developmental_stage": "adult, chronic stage",
+       "disease_id": "pilocarpine status epilepticus mouse epilepsy model, chronic stage (NOT WWOX EVIDENCE)",
+       "genotype": "mice (strain not stated in the abstract)",
+       "species": "mouse"
+      },
+      "direction": "NO_CHANGE",
+      "endpoint": "latency to seizure, DCA against vehicle in mice with prior status epilepticus",
+      "epistemic_status": "DATO",
+      "evidence_scope": "OTHER_DISEASE_PRECEDENT",
+      "id": "DR-I01-004",
+      "locator": "abstract: latencies were decreased in status-epilepticus against no-status-epilepticus mice and 'were not restored by DCA'; conclusion 'DCA did not have any anti-convulsant effects in the tested models'",
+      "note": "The only primary seizure-endpoint test of a PDK inhibitor found in a model in which PDH activity is documented to be reduced. Abstract level; the full text is closed.",
+      "reading_depth": "abstract_only",
+      "source": "dichloroacetate, mouse, Durie 2018 (PMID 29913407), abstract; NOT WWOX EVIDENCE",
+      "target_id": "seizure latency (second-hit flurothyl test in chronic epileptic mice)"
+     },
+     {
+      "context": {
+       "cell_type": "hippocampus CA1",
+       "developmental_stage": "adult",
+       "disease_id": "lithium-pilocarpine seizure in adult rats, treatment started after the seizure (NOT WWOX EVIDENCE)",
+       "genotype": "wild-type Sprague Dawley rats",
+       "species": "rat"
+      },
+      "direction": "INCREASE",
+      "endpoint": "NeuN-positive neurons one week after seizure, DCA plus pyruvate against vehicle",
+      "epistemic_status": "DATO",
+      "evidence_scope": "OTHER_DISEASE_PRECEDENT",
+      "id": "DR-I01-005",
+      "locator": "files/fulltext/PMID36432491_Lee2022_PMC_r2.xml, Results 3.1 to 3.6; map record N-08 notes that each agent alone did not protect neurons; in the text read this is a Discussion statement citing earlier work (the design had single-agent arms; the figure was not read)",
+      "note": "Endpoint is histological neuronal survival, not seizure frequency or severity. After seizure PDK2 was higher (83%), PDH lower (62%) and Ser293-phosphorylated PDH higher (62%) in the seizure group: the PDK-PDH restraint is present after chemoconvulsant status epilepticus in this model (seizure, status-epilepticus injury, neuron loss and drug exposure are not separable), in wild-type animals; PDH is measured as protein and phospho-protein level one week out, not activity. Sample sizes differ between Methods and figure legends; western blots n = 3; immunofluorescence on 5 cells per section; one laboratory.",
+      "reading_depth": "partial_fulltext_read",
+      "receipt": "FTR-20261023-36432491-01",
+      "source": "dichloroacetate combined with pyruvate, rat, Lee 2022 (PMID 36432491), body partly read; NOT WWOX EVIDENCE",
+      "target_id": "hippocampal neuronal survival after pilocarpine seizure"
+     },
+     {
+      "context": {
+       "cell_type": "whole organism",
+       "developmental_stage": "age 0.9 to 19 years",
+       "disease_id": "congenital lactic acidosis in children, heterogeneous (pyruvate dehydrogenase deficiency, respiratory-chain defects, mitochondrial DNA mutation) (NOT WWOX EVIDENCE)",
+       "genotype": "mixed mitochondrial genotypes",
+       "species": "human"
+      },
+      "direction": "NO_CHANGE",
+      "endpoint": "Global Assessment of Treatment Efficacy and linear growth over 6 months, DCA against placebo",
+      "epistemic_status": "DATO",
+      "evidence_scope": "OTHER_DISEASE_PRECEDENT",
+      "id": "DR-I01-006",
+      "locator": "PubMed abstract: no significant differences in the global assessment, linear growth, or frequency and severity of intercurrent illness",
+      "note": "A population in which lactate was persistently or intermittently raised, with a defined defect in most patients, and in which the lever still did not change the clinical outcomes measured over six months. Heterogeneous and short; a null in this design does not exclude a benefit in a defined genotype.",
+      "reading_depth": "abstract_only",
+      "source": "dichloroacetate, human children, Stacpoole 2006 (PMID 16651305), randomized double-blind trial (43 patients), abstract; NOT WWOX EVIDENCE",
+      "target_id": "clinical global assessment, linear growth (children with congenital lactic acidosis)"
+     },
+     {
+      "context": {
+       "cell_type": "blood; cerebrospinal fluid in the long-term study",
+       "developmental_stage": "age 0.9 to 19 years",
+       "disease_id": "congenital lactic acidosis in children (NOT WWOX EVIDENCE)",
+       "genotype": "mixed mitochondrial genotypes",
+       "species": "human"
+      },
+      "direction": "DECREASE",
+      "endpoint": "meal-induced rise in blood lactate, DCA against placebo",
+      "epistemic_status": "DATO",
+      "evidence_scope": "OTHER_DISEASE_PRECEDENT",
+      "id": "DR-I01-007",
+      "locator": "PubMed abstract: 'DCA significantly decreased the rise in blood lactate caused by carbohydrate feeding'; the 2008 long-term abstract adds that median cerebrospinal fluid lactate decreased over time",
+      "note": "Target engagement is shown in blood and, in the long-term open-label follow-up (Stacpoole 2008, PMID 18411236, abstract), in cerebrospinal fluid: cerebrospinal fluid lactate fell, but the drug level in cerebrospinal fluid was not measured, so CNS exposure stays UNKNOWN. Engagement did not translate into the clinical endpoints of DR-I01-006.",
+      "reading_depth": "abstract_only",
+      "source": "dichloroacetate, human children, Stacpoole 2006 (PMID 16651305), abstract; NOT WWOX EVIDENCE",
+      "target_id": "blood lactate after a carbohydrate meal (children with congenital lactic acidosis)"
+     },
+     {
+      "context": {
+       "cell_type": "peripheral nerve",
+       "developmental_stage": "age 10 to 60 years",
+       "disease_id": "MELAS with the A3243G mutation (NOT WWOX EVIDENCE)",
+       "genotype": "mitochondrial DNA A3243G",
+       "species": "human"
+      },
+      "direction": "DECREASE",
+      "endpoint": "onset or worsening of peripheral neuropathy leading to discontinuation, DCA against placebo, crossover",
+      "epistemic_status": "DATO",
+      "evidence_scope": "OTHER_DISEASE_PRECEDENT",
+      "id": "DR-I01-008",
+      "locator": "PubMed abstract: 15 of 15 randomized to DCA taken off study medication against 4 of 15 on placebo; 17 of 19 discontinuations for onset or worsening of peripheral neuropathy; trial terminated early; global assessment not different",
+      "note": "The largest toxicity signal in the human trial record; the chronic paediatric cohort below saw conduction changes that did not become symptomatic (map N-08, Abdelmalak 2013, partial read). The two settings differ in age, genotype, exposure and follow-up, and they are not reconciled here.",
+      "reading_depth": "abstract_only",
+      "source": "dichloroacetate, human, Kaufmann 2006 (PMID 16476929), randomized trial (30 patients), abstract; NOT WWOX EVIDENCE",
+      "target_id": "peripheral nerve function (adults and children with MELAS)"
+     },
+     {
+      "context": {
+       "cell_type": "peripheral nerve",
+       "developmental_stage": "36 children followed up to years",
+       "disease_id": "congenital lactic acidosis in children, open-label long-term follow-up (NOT WWOX EVIDENCE)",
+       "genotype": "mixed mitochondrial genotypes",
+       "species": "human"
+      },
+      "direction": "DECREASE",
+      "endpoint": "conduction velocity and distal latency over years of treatment",
+      "epistemic_status": "DATO",
+      "evidence_scope": "OTHER_DISEASE_PRECEDENT",
+      "id": "DR-I01-009",
+      "locator": "PubMed abstract: conduction velocity decreased and distal latency increased in peroneal nerves; 'cannot be determined whether this is attributable mainly to the drug or to progression of underlying disease'; standardized height and weight declined slightly and stayed below the first percentile",
+      "note": "No comparator in the long-term phase; the underlying disease alone causes neuropathy. The same abstract records a 22% rise in 24-hour urinary oxalate.",
+      "reading_depth": "abstract_only",
+      "source": "dichloroacetate, human children, Stacpoole 2008 (PMID 18411236), abstract; NOT WWOX EVIDENCE",
+      "target_id": "peroneal nerve conduction velocity (children with congenital lactic acidosis, long-term)"
+     },
+     {
+      "context": {
+       "cell_type": "plasma",
+       "developmental_stage": "adult",
+       "disease_id": "diabetes mellitus and hyperlipoproteinaemia in adults (NOT WWOX EVIDENCE)",
+       "genotype": "none",
+       "species": "human"
+      },
+      "direction": "DECREASE",
+      "endpoint": "fasting hyperglycaemia after oral DCA for six to seven days",
+      "epistemic_status": "DATO",
+      "evidence_scope": "OTHER_DISEASE_PRECEDENT",
+      "id": "DR-I01-010",
+      "locator": "abstract: fasting hyperglycaemia reduced by an average of 24 percent; plasma lactate down 73 percent and alanine down 82 percent; plasma ketone bodies up 71 percent; cholesterol and triglyceride down; mild sedation in some",
+      "note": "Adults with raised glucose, a course of six to seven days; the abstract does not describe a comparator arm. The fall in lactate and alanine (gluconeogenic precursors) and the rise in ketone bodies are the metabolic signature that also links this lever to the ketogenic-diet question (card E04). The direction of the glucose effect when glucose is already low is the question, and this study cannot answer it.",
+      "reading_depth": "abstract_only",
+      "source": "dichloroacetate, human adults, Stacpoole 1978 (PMID 625308), abstract; NOT WWOX EVIDENCE",
+      "target_id": "fasting plasma glucose (adults with diabetes mellitus or hyperlipoproteinaemia)"
+     },
+     {
+      "context": {
+       "cell_type": "whole animal, liver",
+       "developmental_stage": "adult",
+       "disease_id": "endotoxaemic minipig, lactic acidosis with hypoglycaemia (NOT WWOX EVIDENCE)",
+       "genotype": "none",
+       "species": "pig"
+      },
+      "direction": "DECREASE",
+      "endpoint": "plasma glucose and hepatic glucose output, DCA against untreated endotoxaemic animals",
+      "epistemic_status": "DATO",
+      "evidence_scope": "OTHER_DISEASE_PRECEDENT",
+      "id": "DR-I01-011",
+      "locator": "abstract: the progressive hypoglycaemia of the DCA group fell significantly below the endotoxin-only group (about 34 against 51 in the units printed) through lower hepatic gluconeogenesis and glucose output; lethality unaltered",
+      "note": "Acute infusion in a large animal, five treated animals. One of the settings in which a lactate-lowering lever made an existing hypoglycaemia deeper.",
+      "reading_depth": "abstract_only",
+      "source": "dichloroacetate, minipig, Metabolic effects in endotoxemic minipigs 1986 (PMID 3521930), abstract; NOT WWOX EVIDENCE",
+      "target_id": "blood glucose in endotoxaemia (hepatic glucose output)"
+     },
+     {
+      "context": {
+       "cell_type": "whole animal, liver",
+       "developmental_stage": "adult",
+       "disease_id": "cecal ligation and puncture sepsis in mice (NOT WWOX EVIDENCE)",
+       "genotype": "none",
+       "species": "mouse"
+      },
+      "direction": "INCREASE",
+      "endpoint": "blood glucose, DCA against untreated septic mice",
+      "epistemic_status": "DATO",
+      "evidence_scope": "OTHER_DISEASE_PRECEDENT",
+      "id": "DR-I01-012",
+      "locator": "abstract: DCA 'reversed sepsis-induced anorexia, energy imbalance, inflammation, dyslipidemia, hypoglycemia, and glycine deficiency'",
+      "note": "The only reversal in the glucose set, in a state that is NOT comparable to the minipig: in the open text plasma glucose and lactate (and pyruvate) were LOWER in septic mice, the authors acknowledge a fasting confound, and the same treatment reversed anorexia, so the reversal may follow feeding rather than hepatic glucose output. The comparability premise used in the first version of this card was wrong and is withdrawn.",
+      "reading_depth": "abstract_only",
+      "source": "dichloroacetate, mouse, sepsis model 2022 (PMID 35730570), abstract (open access); NOT WWOX EVIDENCE",
+      "target_id": "blood glucose in sepsis"
+     },
+     {
+      "context": {
+       "cell_type": "whole body glucose kinetics",
+       "developmental_stage": "adult",
+       "disease_id": "end-stage cirrhosis, 7 patients and 6 healthy volunteers (NOT WWOX EVIDENCE)",
+       "genotype": "none",
+       "species": "human"
+      },
+      "direction": "DECREASE",
+      "endpoint": "glucose production by isotope dilution and plasma glucose after intravenous DCA, cirrhotic and healthy subjects",
+      "epistemic_status": "DATO",
+      "evidence_scope": "OTHER_DISEASE_PRECEDENT",
+      "id": "DR-I01-013",
+      "locator": "abstract: DCA decreased plasma lactate by about 50 percent, glucose production by 7 to 9 percent and plasma glucose by 9 to 14 percent in both subjects with cirrhosis and control subjects; the decreases did not differ between groups (the null is the group difference); clearance about a third of controls",
+      "note": "Acute single infusion in 7 adults with cirrhosis and 6 healthy volunteers: a modest fall in glucose production and plasma glucose in BOTH groups; the only null is cirrhosis against control. Isotope-dilution human glucose kinetics, adult, acute; it does not transfer to a hypoglycaemic infant-stage brain-disease model, and it shows the lever lowering glucose in people who were not hypoglycaemic.",
+      "reading_depth": "abstract_only",
+      "source": "dichloroacetate, human adults, Pharmacokinetics and pharmacodynamics in cirrhosis 1999 (PMID 10546922), abstract; NOT WWOX EVIDENCE",
+      "target_id": "endogenous glucose production in cirrhosis"
+     },
+     {
+      "context": {
+       "cell_type": "fibroblast",
+       "developmental_stage": "not applicable",
+       "disease_id": "primary fibroblasts from patients with PDC-E1 mutations and five healthy subjects (NOT WWOX EVIDENCE)",
+       "genotype": "PDC-E1 mutations versus healthy",
+       "species": "human"
+      },
+      "direction": "DECREASE",
+      "endpoint": "glucose consumption and lactate production with and without DCA, patient against control cells",
+      "epistemic_status": "DATO",
+      "evidence_scope": "OTHER_DISEASE_PRECEDENT",
+      "id": "DR-I01-014",
+      "locator": "abstract: in pyruvate dehydrogenase complex-deficient cells DCA decreased average glycolysis by 29%, with no significant effect on control cells, and lactate production did not change in either cell type",
+      "note": "The response to the PDK inhibitor depended on a pre-existing PDH defect: no significant effect in control cells (six patient lines and five control subjects; the 29% average excludes one patient line with an unusual splicing mutation). It supplies the design of the discriminating experiment (a genotype-by-inhibitor interaction on glucose-derived acetyl-CoA flux), with a precedent for what a responder looks like.",
+      "reading_depth": "abstract_only",
+      "source": "dichloroacetate, human fibroblasts, Simpson 2006 (PMID 16765624), abstract; NOT WWOX EVIDENCE",
+      "target_id": "glycolytic flux and lactate production in cultured fibroblasts"
      }
     ],
     "evidence_against": [
@@ -11160,10 +11802,10 @@
       "complete_fulltext_read",
       "partial_fulltext_read"
      ],
-     "digest": "dd71e949dec6178b",
-     "locators": 980,
+     "digest": "1b2cd8535a0711b4",
+     "locators": 1011,
      "origin_id": "N-08",
-     "papers": 48,
+     "papers": 49,
      "query_id": "Q-N-08",
      "rows": [
       {
@@ -11437,7 +12079,7 @@
        "contradiction_verdicts": [],
        "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
        "evidence_scope": [
-        "UNQUALIFIED"
+        "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
        ],
        "locator_count": 22,
        "manifest": "disease-models/wwox/research/deepdive_manifests/PMID25012504.json",
@@ -11446,7 +12088,10 @@
        "receipt_events": 1,
        "receipt_id": "FTR-20260814-25012504-01",
        "repair_unverified": 0,
-       "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
+       "scope_basis": [
+        "DA-I01-005",
+        "DA-I01-006"
+       ],
        "unaudited_contradictions": 0
       },
       {
@@ -11767,6 +12412,27 @@
        "contradiction_verdicts": [],
        "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
        "evidence_scope": [
+        "COMPUTATIONAL_RESULT"
+       ],
+       "locator_count": 31,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID31543760.json",
+       "pmid": "31543760",
+       "reading_depth": "partial_fulltext_read",
+       "receipt_events": 6,
+       "receipt_id": "FTR-20260811-31543760-01",
+       "repair_unverified": 0,
+       "scope_basis": [
+        "DA-I01-002"
+       ],
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
+       "evidence_scope": [
         "UNQUALIFIED"
        ],
        "locator_count": 25,
@@ -11877,7 +12543,8 @@
        "repair_unverified": 7,
        "scope_basis": [
         "DA-GSE-PDK-003",
-        "DA-GSE-LDH-002"
+        "DA-GSE-LDH-002",
+        "DA-I01-001"
        ],
        "unaudited_contradictions": 0
       },
@@ -11893,7 +12560,7 @@
        ],
        "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
        "evidence_scope": [
-        "UNQUALIFIED"
+        "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
        ],
        "locator_count": 28,
        "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35328751.json",
@@ -11902,7 +12569,11 @@
        "receipt_events": 5,
        "receipt_id": "FTR-20260921-35328751-01",
        "repair_unverified": 0,
-       "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
+       "scope_basis": [
+        "DA-I01-003",
+        "DA-I01-004",
+        "DA-I01-007"
+       ],
        "unaudited_contradictions": 0
       },
       {
@@ -11992,7 +12663,7 @@
        "contradiction_verdicts": [],
        "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
        "evidence_scope": [
-        "UNQUALIFIED"
+        "OTHER_DISEASE_PRECEDENT"
        ],
        "locator_count": 8,
        "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36432491.json",
@@ -12001,7 +12672,9 @@
        "receipt_events": 1,
        "receipt_id": "FTR-20261023-36432491-01",
        "repair_unverified": 0,
-       "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
+       "scope_basis": [
+        "DR-I01-005"
+       ],
        "unaudited_contradictions": 0
       },
       {
@@ -12358,7 +13031,7 @@
     "mission_dimensions": {
      "route": "BENEFICIO_PRECOCE",
      "route_definition": "RECUPERO_PROFONDO = deep recovery of the lost function; BENEFICIO_PRECOCE = concrete partial benefit, symptomatic control or protection of function, with paediatric feasibility and time in view",
-     "route_note": "A bypass of a postulated bottleneck: partial benefit at best, and only if the bottleneck exists. Not deep recovery. Track B: none.",
+     "route_note": "qualified by several curated cards: P4-E-03; P4-I-01",
      "the_two_dimensions_are_independent": "a card keeps both: a variant-independent lever can be a partial-benefit lever, and a lesion-specific one can aim at deep recovery",
      "track": "A",
      "track_definition": "mission.md section 5: Track A = variant-independent WWOX loss of function; Track B = variant or allele-class specific (e.g. the Q230P missense class); Track C = repurposing, which is a method of reaching A or B, not a third lesion class"
@@ -12433,7 +13106,7 @@
       "target_expression": "PDK isoforms are expressed in brain; the WWOX-dependent level is UNKNOWN."
      },
      "endpoint_pursued": "A WWOX-linked PDH readout that a PDK inhibitor moves: PDH activity (or PDHA1 serine phosphorylation) and pyruvate fate (labelled glucose into acetyl-CoA, citrate, lactate) in WWOX-deficient versus isogenic human neural cells; only then a functional endpoint.",
-     "functional_evidence_available": "None for WWOX at the activity level. The Lucas-Clarke study measured no pyruvate, PDH, PDK or flux. In the human knockout organoid PDK1 is DOWN, the PDK/PDH set is not different from chance and the LDH-to-PDH ratio is not shifted (transcripts).",
+     "functional_evidence_available": "None for WWOX at the activity level. The Lucas-Clarke study measured no pyruvate, PDH, PDK or flux. In the human knockout organoid PDK1 is lower in sign only (inside the single-gene null, p about 0.30; not a demonstrated decrease), the PDK/PDH set is not different from chance and the LDH-to-PDH ratio is not shifted (transcripts).",
      "temporal_or_model_limit": "Fly study with no measurement in this branch; transcripts from one organoid deposit; compound statements are database rows."
     },
     "p4_roadmap_fields": {
@@ -13141,7 +13814,7 @@
      "time_to_benefit": "UNKNOWN"
     }
    },
-   "input_sha256": "df2cb34c2af7dc7b2413f87cad8aa08fe63c133fccae04b5c9738300325d6e87",
+   "input_sha256": "7b9c26e92be8fd7dd0fe28efa9f5f0f8c4b2d159173c1b1db836d830e5f6122e",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -13165,10 +13838,10 @@
      "complete_fulltext_read",
      "partial_fulltext_read"
     ],
-    "digest": "dd71e949dec6178b",
-    "locators": 980,
+    "digest": "1b2cd8535a0711b4",
+    "locators": 1011,
     "origin_id": "N-08",
-    "papers": 48,
+    "papers": 49,
     "query_id": "Q-N-08",
     "rows": [
      {
@@ -13442,7 +14115,7 @@
       "contradiction_verdicts": [],
       "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
       "evidence_scope": [
-       "UNQUALIFIED"
+       "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
       ],
       "locator_count": 22,
       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID25012504.json",
@@ -13451,7 +14124,10 @@
       "receipt_events": 1,
       "receipt_id": "FTR-20260814-25012504-01",
       "repair_unverified": 0,
-      "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
+      "scope_basis": [
+       "DA-I01-005",
+       "DA-I01-006"
+      ],
       "unaudited_contradictions": 0
      },
      {
@@ -13772,6 +14448,27 @@
       "contradiction_verdicts": [],
       "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
       "evidence_scope": [
+       "COMPUTATIONAL_RESULT"
+      ],
+      "locator_count": 31,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID31543760.json",
+      "pmid": "31543760",
+      "reading_depth": "partial_fulltext_read",
+      "receipt_events": 6,
+      "receipt_id": "FTR-20260811-31543760-01",
+      "repair_unverified": 0,
+      "scope_basis": [
+       "DA-I01-002"
+      ],
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
+      "evidence_scope": [
        "UNQUALIFIED"
       ],
       "locator_count": 25,
@@ -13882,7 +14579,8 @@
       "repair_unverified": 7,
       "scope_basis": [
        "DA-GSE-PDK-003",
-       "DA-GSE-LDH-002"
+       "DA-GSE-LDH-002",
+       "DA-I01-001"
       ],
       "unaudited_contradictions": 0
      },
@@ -13898,7 +14596,7 @@
       ],
       "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
       "evidence_scope": [
-       "UNQUALIFIED"
+       "WWOX_EXPERIMENT_IN_DEE_SYSTEM"
       ],
       "locator_count": 28,
       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35328751.json",
@@ -13907,7 +14605,11 @@
       "receipt_events": 5,
       "receipt_id": "FTR-20260921-35328751-01",
       "repair_unverified": 0,
-      "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
+      "scope_basis": [
+       "DA-I01-003",
+       "DA-I01-004",
+       "DA-I01-007"
+      ],
       "unaudited_contradictions": 0
      },
      {
@@ -13997,7 +14699,7 @@
       "contradiction_verdicts": [],
       "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
       "evidence_scope": [
-       "UNQUALIFIED"
+       "OTHER_DISEASE_PRECEDENT"
       ],
       "locator_count": 8,
       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36432491.json",
@@ -14006,7 +14708,9 @@
       "receipt_events": 1,
       "receipt_id": "FTR-20261023-36432491-01",
       "repair_unverified": 0,
-      "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
+      "scope_basis": [
+       "DR-I01-005"
+      ],
       "unaudited_contradictions": 0
      },
      {
@@ -14364,14 +15068,15 @@
     "Technical comparison is not efficacy, safety or experimental validation.",
     "Sources and receipt references are retained, not independently verified.",
     "Shared sources are not independent confirmations; scores are not pooled.",
+    "NO_CHANGE is a reported null effect on that endpoint and context: it is not UNKNOWN (not measured), not evidence of safety, and not proof of futility; a null in a non-comparable cell stays UNRESOLVED.",
     "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
    ],
    "measure_next": {
-    "dependence": "48_PAPERS_29_COMPLETE",
+    "dependence": "49_PAPERS_29_COMPLETE",
     "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
     "external_hits": 1,
     "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
-    "would_move": "N-08 (disease-models/wwox/analysis/mechanism_intervention_map.md:815)"
+    "would_move": "N-08 (disease-models/wwox/analysis/mechanism_intervention_map.md:817)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -14382,7 +15087,7 @@
      "target_expression": "PDK isoforms are expressed in brain; the WWOX-dependent level is UNKNOWN."
     },
     "endpoint_pursued": "A WWOX-linked PDH readout that a PDK inhibitor moves: PDH activity (or PDHA1 serine phosphorylation) and pyruvate fate (labelled glucose into acetyl-CoA, citrate, lactate) in WWOX-deficient versus isogenic human neural cells; only then a functional endpoint.",
-    "functional_evidence_available": "None for WWOX at the activity level. The Lucas-Clarke study measured no pyruvate, PDH, PDK or flux. In the human knockout organoid PDK1 is DOWN, the PDK/PDH set is not different from chance and the LDH-to-PDH ratio is not shifted (transcripts).",
+    "functional_evidence_available": "None for WWOX at the activity level. The Lucas-Clarke study measured no pyruvate, PDH, PDK or flux. In the human knockout organoid PDK1 is lower in sign only (inside the single-gene null, p about 0.30; not a demonstrated decrease), the PDK/PDH set is not different from chance and the LDH-to-PDH ratio is not shifted (transcripts).",
     "temporal_or_model_limit": "Fly study with no measurement in this branch; transcripts from one organoid deposit; compound statements are database rows."
    },
    "schema_version": 1,
@@ -14478,7 +15183,7 @@
      "epistemic_status": "IPOTESI",
      "evidence_scope": "UNQUALIFIED",
      "id": "DA-Q-N-09",
-     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:890",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:893",
      "reading_depth": "UNKNOWN",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-09",
      "target_id": "UNKNOWN"
@@ -14688,12 +15393,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*acts in the wrong direction.* Phospho-Tyr33 WOX1 is **pro-apoptotic**; the peptide",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:890; evidence table digest df5ccd07c21f46dc"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:893; evidence table digest df5ccd07c21f46dc"
     },
     "route": "UNQUALIFIED",
     "schema_version": 1
    },
-   "input_sha256": "b30c19e4983ca52c6cd693ac88333560ded8a730ff5b0a28ee661da36cf7c01c",
+   "input_sha256": "3a8d7a797668604753e05b66ba452f05d7594d950cda65afeeff38fd56b83ce4",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -14850,7 +15555,7 @@
     "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
     "external_hits": 1,
     "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
-    "would_move": "N-09 (disease-models/wwox/analysis/mechanism_intervention_map.md:890)"
+    "would_move": "N-09 (disease-models/wwox/analysis/mechanism_intervention_map.md:893)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -16185,7 +16890,7 @@
     "experiment_sketch": "legend-locator-audit over the declared triples",
     "external_hits": 0,
     "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
-    "would_move": "N-10 (disease-models/wwox/analysis/mechanism_intervention_map.md:900)"
+    "would_move": "N-10 (disease-models/wwox/analysis/mechanism_intervention_map.md:903)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -16774,10 +17479,10 @@
       "complete_fulltext_read",
       "partial_fulltext_read"
      ],
-     "digest": "8483c3ccacb0fdbc",
-     "locators": 991,
+     "digest": "1603450c25a1184c",
+     "locators": 1038,
      "origin_id": "N-11",
-     "papers": 49,
+     "papers": 51,
      "query_id": "Q-N-11",
      "rows": [
       {
@@ -17292,6 +17997,30 @@
        "evidence_scope": [
         "UNQUALIFIED"
        ],
+       "locator_count": 16,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID30266908.json",
+       "pmid": "30266908",
+       "reading_depth": "partial_fulltext_read",
+       "receipt_events": 2,
+       "receipt_id": "FTR-20261021-30266908-01",
+       "repair_unverified": 0,
+       "scope_basis": [
+        "DR-A01-006",
+        "DR-A01-007",
+        "DR-A01-008",
+        "DR-A01-009"
+       ],
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
+       "evidence_scope": [
+        "UNQUALIFIED"
+       ],
        "locator_count": 18,
        "manifest": "disease-models/wwox/research/deepdive_manifests/PMID30356099.json",
        "pmid": "30356099",
@@ -17341,6 +18070,25 @@
        "reading_depth": "complete_fulltext_read",
        "receipt_events": 2,
        "receipt_id": "FTR-20260806-31340538-01",
+       "repair_unverified": 0,
+       "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
+       "evidence_scope": [
+        "UNQUALIFIED"
+       ],
+       "locator_count": 31,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID31543760.json",
+       "pmid": "31543760",
+       "reading_depth": "partial_fulltext_read",
+       "receipt_events": 6,
+       "receipt_id": "FTR-20260811-31543760-01",
        "repair_unverified": 0,
        "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
        "unaudited_contradictions": 0
@@ -18074,7 +18822,7 @@
      "time_to_benefit": "UNKNOWN"
     }
    },
-   "input_sha256": "64416eaa21c043f52a6c98cf145fc41153887720cd27db00440ec10072700933",
+   "input_sha256": "0357de558569efd346326be033466f3942820584815b04934504f183014ce79f",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -18101,10 +18849,10 @@
      "complete_fulltext_read",
      "partial_fulltext_read"
     ],
-    "digest": "8483c3ccacb0fdbc",
-    "locators": 991,
+    "digest": "1603450c25a1184c",
+    "locators": 1038,
     "origin_id": "N-11",
-    "papers": 49,
+    "papers": 51,
     "query_id": "Q-N-11",
     "rows": [
      {
@@ -18619,6 +19367,30 @@
       "evidence_scope": [
        "UNQUALIFIED"
       ],
+      "locator_count": 16,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID30266908.json",
+      "pmid": "30266908",
+      "reading_depth": "partial_fulltext_read",
+      "receipt_events": 2,
+      "receipt_id": "FTR-20261021-30266908-01",
+      "repair_unverified": 0,
+      "scope_basis": [
+       "DR-A01-006",
+       "DR-A01-007",
+       "DR-A01-008",
+       "DR-A01-009"
+      ],
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
+      "evidence_scope": [
+       "UNQUALIFIED"
+      ],
       "locator_count": 18,
       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID30356099.json",
       "pmid": "30356099",
@@ -18668,6 +19440,25 @@
       "reading_depth": "complete_fulltext_read",
       "receipt_events": 2,
       "receipt_id": "FTR-20260806-31340538-01",
+      "repair_unverified": 0,
+      "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
+      "evidence_scope": [
+       "UNQUALIFIED"
+      ],
+      "locator_count": 31,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID31543760.json",
+      "pmid": "31543760",
+      "reading_depth": "partial_fulltext_read",
+      "receipt_events": 6,
+      "receipt_id": "FTR-20260811-31543760-01",
       "repair_unverified": 0,
       "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
       "unaudited_contradictions": 0
@@ -19304,11 +20095,11 @@
     "NO_MATCH_FOUND is information not available for those queries and that coverage: it is not proof the label is absent, not DRUG_HAS_NO_LABEL, not biological counterevidence and not a reason to drop the candidate."
    ],
    "measure_next": {
-    "dependence": "49_PAPERS_29_COMPLETE",
+    "dependence": "51_PAPERS_29_COMPLETE",
     "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
     "external_hits": 0,
     "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
-    "would_move": "N-11 (disease-models/wwox/analysis/mechanism_intervention_map.md:975)"
+    "would_move": "N-11 (disease-models/wwox/analysis/mechanism_intervention_map.md:978)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -20090,7 +20881,7 @@
     "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
     "external_hits": 2,
     "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
-    "would_move": "N-12 (disease-models/wwox/analysis/mechanism_intervention_map.md:984)"
+    "would_move": "N-12 (disease-models/wwox/analysis/mechanism_intervention_map.md:989)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -21892,7 +22683,7 @@
     "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
     "external_hits": 0,
     "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
-    "would_move": "N-13 (disease-models/wwox/analysis/mechanism_intervention_map.md:1036)"
+    "would_move": "N-13 (disease-models/wwox/analysis/mechanism_intervention_map.md:1041)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -22014,7 +22805,7 @@
      "epistemic_status": "IPOTESI",
      "evidence_scope": "UNQUALIFIED",
      "id": "DA-Q-N-14",
-     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:1052",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:1057",
      "reading_depth": "complete_fulltext_read",
      "receipt": "FTR-20261019-17567906-01",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-14",
@@ -22302,12 +23093,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*the direction of the axis is context-dependent and was assumed.* Two independent",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:1052; evidence table digest 2a373e5e71946f0f"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:1057; evidence table digest 2a373e5e71946f0f"
     },
     "route": "UNQUALIFIED",
     "schema_version": 1
    },
-   "input_sha256": "fe33488423a4040b8ec6f81dbb3b92e7139aa949acabee326c24cb75e9280d61",
+   "input_sha256": "bc4a00f6b0c878e5a09450ff0c1c862f3eff8eea03345f2cbdd5abd0f79ba1cc",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -22526,7 +23317,7 @@
     "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
     "external_hits": 1,
     "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
-    "would_move": "N-14 (disease-models/wwox/analysis/mechanism_intervention_map.md:1052)"
+    "would_move": "N-14 (disease-models/wwox/analysis/mechanism_intervention_map.md:1057)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -22612,7 +23403,7 @@
      "epistemic_status": "IPOTESI",
      "evidence_scope": "UNQUALIFIED",
      "id": "DA-Q-N-15",
-     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:1063",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:1068",
      "reading_depth": "complete_fulltext_read",
      "receipt": "FTR-20260913-15064722-01",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-15",
@@ -22662,10 +23453,10 @@
       "complete_fulltext_read",
       "partial_fulltext_read"
      ],
-     "digest": "5fbf16e14941ef76",
-     "locators": 1106,
+     "digest": "0059f43a7ac2c1e8",
+     "locators": 1137,
      "origin_id": "N-15",
-     "papers": 55,
+     "papers": 56,
      "query_id": "Q-N-15",
      "rows": [
       {
@@ -23283,6 +24074,25 @@
        "reading_depth": "complete_fulltext_read",
        "receipt_events": 2,
        "receipt_id": "FTR-20260806-31340538-01",
+       "repair_unverified": 0,
+       "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
+       "evidence_scope": [
+        "UNQUALIFIED"
+       ],
+       "locator_count": 31,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID31543760.json",
+       "pmid": "31543760",
+       "reading_depth": "partial_fulltext_read",
+       "receipt_events": 6,
+       "receipt_id": "FTR-20260811-31543760-01",
        "repair_unverified": 0,
        "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
        "unaudited_contradictions": 0
@@ -24060,12 +24870,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*corrects a biomarker (seizures) but not the mechanism (development)*. **Quoted",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:1063; evidence table digest 5fbf16e14941ef76"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:1068; evidence table digest 0059f43a7ac2c1e8"
     },
     "route": "UNQUALIFIED",
     "schema_version": 1
    },
-   "input_sha256": "a13712644eae5b38f23c68a05268597ce7ae517bab0c20f4ca23baf77dce3c70",
+   "input_sha256": "b1e4a438c0102ca21bb42d18660c36570e33b97f97b1b02de0522765adf28178",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -24089,10 +24899,10 @@
      "complete_fulltext_read",
      "partial_fulltext_read"
     ],
-    "digest": "5fbf16e14941ef76",
-    "locators": 1106,
+    "digest": "0059f43a7ac2c1e8",
+    "locators": 1137,
     "origin_id": "N-15",
-    "papers": 55,
+    "papers": 56,
     "query_id": "Q-N-15",
     "rows": [
      {
@@ -24710,6 +25520,25 @@
       "reading_depth": "complete_fulltext_read",
       "receipt_events": 2,
       "receipt_id": "FTR-20260806-31340538-01",
+      "repair_unverified": 0,
+      "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
+      "evidence_scope": [
+       "UNQUALIFIED"
+      ],
+      "locator_count": 31,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID31543760.json",
+      "pmid": "31543760",
+      "reading_depth": "partial_fulltext_read",
+      "receipt_events": 6,
+      "receipt_id": "FTR-20260811-31543760-01",
       "repair_unverified": 0,
       "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
       "unaudited_contradictions": 0
@@ -25480,7 +26309,7 @@
     "experiment_sketch": "legend-locator-audit over the declared triples",
     "external_hits": 0,
     "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
-    "would_move": "N-15 (disease-models/wwox/analysis/mechanism_intervention_map.md:1063)"
+    "would_move": "N-15 (disease-models/wwox/analysis/mechanism_intervention_map.md:1068)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -25612,7 +26441,7 @@
      "epistemic_status": "IPOTESI",
      "evidence_scope": "UNQUALIFIED",
      "id": "DA-Q-N-16",
-     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:1110",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:1115",
      "reading_depth": "complete_fulltext_read",
      "receipt": "FTR-20260810-34634460-02",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-16",
@@ -25774,12 +26603,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*a negative stated as an absence of effect, when what exists is an untested point estimate in the adverse direction.* In the only WWOX system in which a selective pannexin-1 blocker has ever been applied (`Wwox` S-KO neocortical slice, P13–P17), normalized burst frequency rose to **≈ 2.55 during treatment and ≈ 2.6 at washout against a baseline of 1.0**, carrying **no significance marker and no re",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:1110; evidence table digest 45b479869cdbc0a5"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:1115; evidence table digest 45b479869cdbc0a5"
     },
     "route": "UNQUALIFIED",
     "schema_version": 1
    },
-   "input_sha256": "f40ae0a0c3c88b8bc00236efec5c6efcca9dc35ed3f147dba98a28217a219d7a",
+   "input_sha256": "c283c3b9b292bcad00cc71d3d31e7b5a10a829afadc4577a277b17fdf573cece",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -25856,7 +26685,7 @@
     "experiment_sketch": "replicate the one measurement this query stands on, changing the laboratory or the model but not the endpoint",
     "external_hits": 1,
     "measurement": "an independent measurement of the same endpoint in a second system, or the same system from a second laboratory: the query rests on one reading",
-    "would_move": "N-16 (disease-models/wwox/analysis/mechanism_intervention_map.md:1110)"
+    "would_move": "N-16 (disease-models/wwox/analysis/mechanism_intervention_map.md:1115)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -25984,7 +26813,7 @@
      "epistemic_status": "IPOTESI",
      "evidence_scope": "UNQUALIFIED",
      "id": "DA-Q-N-17",
-     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:1116",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:1121",
      "reading_depth": "complete_fulltext_read",
      "receipt": "FTR-20260913-15064722-01",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md N-17",
@@ -26085,10 +26914,10 @@
       "complete_fulltext_read",
       "partial_fulltext_read"
      ],
-     "digest": "bdf799099f6cc70c",
-     "locators": 1110,
+     "digest": "498fd5449009a68a",
+     "locators": 1141,
      "origin_id": "N-17",
-     "papers": 56,
+     "papers": 57,
      "query_id": "Q-N-17",
      "rows": [
       {
@@ -26732,6 +27561,25 @@
        "reading_depth": "complete_fulltext_read",
        "receipt_events": 2,
        "receipt_id": "FTR-20260806-31340538-01",
+       "repair_unverified": 0,
+       "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
+       "evidence_scope": [
+        "UNQUALIFIED"
+       ],
+       "locator_count": 31,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID31543760.json",
+       "pmid": "31543760",
+       "reading_depth": "partial_fulltext_read",
+       "receipt_events": 6,
+       "receipt_id": "FTR-20260811-31543760-01",
        "repair_unverified": 0,
        "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
        "unaudited_contradictions": 0
@@ -27473,12 +28321,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "*importing a disease's dominant modality because the pathway diagram looks like that disease, without checking which way the arrow points.* CHAIN C reads like a tauopathy — WWOX loss → GSK3β de-repressed → pTau S396/S404 up (`CLAIM 035`, `DL-MECH-019`) — and tauopathy's dominant modality is **tau-lowering**. In the only system where the question was asked, tau-lowering **removes the benefit of bot",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:1116; evidence table digest bdf799099f6cc70c"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:1121; evidence table digest 498fd5449009a68a"
     },
     "route": "UNQUALIFIED",
     "schema_version": 1
    },
-   "input_sha256": "40b4cde68a6fd90b55560f55860c660134538faf3f44543c6f1dc90b6895ec72",
+   "input_sha256": "e36d3ea579e83e0a34c927380cbfa5969e1fa6c28a94a8053cda2dd742ed25db",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -27505,10 +28353,10 @@
      "complete_fulltext_read",
      "partial_fulltext_read"
     ],
-    "digest": "bdf799099f6cc70c",
-    "locators": 1110,
+    "digest": "498fd5449009a68a",
+    "locators": 1141,
     "origin_id": "N-17",
-    "papers": 56,
+    "papers": 57,
     "query_id": "Q-N-17",
     "rows": [
      {
@@ -28152,6 +29000,25 @@
       "reading_depth": "complete_fulltext_read",
       "receipt_events": 2,
       "receipt_id": "FTR-20260806-31340538-01",
+      "repair_unverified": 0,
+      "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
+      "evidence_scope": [
+       "UNQUALIFIED"
+      ],
+      "locator_count": 31,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID31543760.json",
+      "pmid": "31543760",
+      "reading_depth": "partial_fulltext_read",
+      "receipt_events": 6,
+      "receipt_id": "FTR-20260811-31543760-01",
       "repair_unverified": 0,
       "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
       "unaudited_contradictions": 0
@@ -28886,7 +29753,7 @@
     "experiment_sketch": "legend-locator-audit over the declared triples",
     "external_hits": 0,
     "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
-    "would_move": "N-17 (disease-models/wwox/analysis/mechanism_intervention_map.md:1116)"
+    "would_move": "N-17 (disease-models/wwox/analysis/mechanism_intervention_map.md:1121)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -30548,7 +31415,7 @@
     "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
     "external_hits": 1,
     "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
-    "would_move": "R-01 (disease-models/wwox/analysis/mechanism_intervention_map.md:414)"
+    "would_move": "R-01 (disease-models/wwox/analysis/mechanism_intervention_map.md:416)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -31729,7 +32596,7 @@
     "experiment_sketch": "legend-locator-audit over the declared triples",
     "external_hits": 2,
     "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
-    "would_move": "R-02 (disease-models/wwox/analysis/mechanism_intervention_map.md:441)"
+    "would_move": "R-02 (disease-models/wwox/analysis/mechanism_intervention_map.md:443)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -32293,7 +33160,7 @@
     "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
     "external_hits": 2,
     "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
-    "would_move": "R-03 (disease-models/wwox/analysis/mechanism_intervention_map.md:470)"
+    "would_move": "R-03 (disease-models/wwox/analysis/mechanism_intervention_map.md:472)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -33061,7 +33928,7 @@
     "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
     "external_hits": 3,
     "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
-    "would_move": "R-04 (disease-models/wwox/analysis/mechanism_intervention_map.md:497)"
+    "would_move": "R-04 (disease-models/wwox/analysis/mechanism_intervention_map.md:499)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -33522,10 +34389,10 @@
       "complete_fulltext_read",
       "partial_fulltext_read"
      ],
-     "digest": "3ae2d5e371e6c20a",
-     "locators": 1045,
+     "digest": "5a1e9f2907237774",
+     "locators": 1076,
      "origin_id": "R-05",
-     "papers": 50,
+     "papers": 51,
      "query_id": "Q-R-05",
      "rows": [
       {
@@ -34089,6 +34956,25 @@
        "reading_depth": "complete_fulltext_read",
        "receipt_events": 2,
        "receipt_id": "FTR-20260806-31340538-01",
+       "repair_unverified": 0,
+       "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
+       "evidence_scope": [
+        "UNQUALIFIED"
+       ],
+       "locator_count": 31,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID31543760.json",
+       "pmid": "31543760",
+       "reading_depth": "partial_fulltext_read",
+       "receipt_events": 6,
+       "receipt_id": "FTR-20260811-31543760-01",
        "repair_unverified": 0,
        "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
        "unaudited_contradictions": 0
@@ -34955,7 +35841,7 @@
      "time_to_benefit": "UNKNOWN"
     }
    },
-   "input_sha256": "38d780f931ceb425e5167a2990e8ff2fac3f45db6408be99b74fddc3de3f66cf",
+   "input_sha256": "5800d2fbc524dcbd6bd35838f6420ab70a9c290d1c2437a4ee5c9a910b2d4f63",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -34979,10 +35865,10 @@
      "complete_fulltext_read",
      "partial_fulltext_read"
     ],
-    "digest": "3ae2d5e371e6c20a",
-    "locators": 1045,
+    "digest": "5a1e9f2907237774",
+    "locators": 1076,
     "origin_id": "R-05",
-    "papers": 50,
+    "papers": 51,
     "query_id": "Q-R-05",
     "rows": [
      {
@@ -35546,6 +36432,25 @@
       "reading_depth": "complete_fulltext_read",
       "receipt_events": 2,
       "receipt_id": "FTR-20260806-31340538-01",
+      "repair_unverified": 0,
+      "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
+      "evidence_scope": [
+       "UNQUALIFIED"
+      ],
+      "locator_count": 31,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID31543760.json",
+      "pmid": "31543760",
+      "reading_depth": "partial_fulltext_read",
+      "receipt_events": 6,
+      "receipt_id": "FTR-20260811-31543760-01",
       "repair_unverified": 0,
       "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
       "unaudited_contradictions": 0
@@ -36223,11 +37128,11 @@
     "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
    ],
    "measure_next": {
-    "dependence": "50_PAPERS_31_COMPLETE",
+    "dependence": "51_PAPERS_31_COMPLETE",
     "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
     "external_hits": 0,
     "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
-    "would_move": "R-05 (disease-models/wwox/analysis/mechanism_intervention_map.md:525)"
+    "would_move": "R-05 (disease-models/wwox/analysis/mechanism_intervention_map.md:527)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -36334,7 +37239,7 @@
      "epistemic_status": "IPOTESI",
      "evidence_scope": "UNQUALIFIED",
      "id": "DA-Q-R-06",
-     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:553",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:555",
      "reading_depth": "complete_fulltext_read",
      "receipt": "FTR-20260913-14526170-01",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md R-06",
@@ -37440,12 +38345,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "class: IL-1β/NLRP3, MAPK/NF-κB or microglia-targeting agent",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:553; evidence table digest f36f463c0263135f"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:555; evidence table digest f36f463c0263135f"
     },
     "route": "UNQUALIFIED",
     "schema_version": 1
    },
-   "input_sha256": "97474d47f385ff08f161b2d66a08c53e2cf9474e62a440f339375d35a2a6ec0e",
+   "input_sha256": "4898dcff10fa5012dce4c9e9f44beb54b09b4d4d056313325ce0c83968aede88",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -38497,7 +39402,7 @@
     "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
     "external_hits": 1,
     "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
-    "would_move": "R-06 (disease-models/wwox/analysis/mechanism_intervention_map.md:553)"
+    "would_move": "R-06 (disease-models/wwox/analysis/mechanism_intervention_map.md:555)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -39517,7 +40422,7 @@
     "experiment_sketch": "legend-locator-audit over the declared triples",
     "external_hits": 0,
     "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
-    "would_move": "R-07 (disease-models/wwox/analysis/mechanism_intervention_map.md:578)"
+    "would_move": "R-07 (disease-models/wwox/analysis/mechanism_intervention_map.md:580)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -39603,7 +40508,7 @@
      "epistemic_status": "IPOTESI",
      "evidence_scope": "UNQUALIFIED",
      "id": "DA-Q-R-08",
-     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:608",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:610",
      "reading_depth": "complete_fulltext_read",
      "receipt": "FTR-20260913-15064722-01",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md R-08",
@@ -39653,10 +40558,10 @@
       "complete_fulltext_read",
       "partial_fulltext_read"
      ],
-     "digest": "732a157ea6aa6aa8",
-     "locators": 1060,
+     "digest": "e628c6975781a820",
+     "locators": 1091,
      "origin_id": "R-08",
-     "papers": 52,
+     "papers": 53,
      "query_id": "Q-R-08",
      "rows": [
       {
@@ -40325,6 +41230,25 @@
        "evidence_scope": [
         "UNQUALIFIED"
        ],
+       "locator_count": 31,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID31543760.json",
+       "pmid": "31543760",
+       "reading_depth": "partial_fulltext_read",
+       "receipt_events": 6,
+       "receipt_id": "FTR-20260811-31543760-01",
+       "repair_unverified": 0,
+       "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
+       "evidence_scope": [
+        "UNQUALIFIED"
+       ],
        "locator_count": 25,
        "manifest": "disease-models/wwox/research/deepdive_manifests/PMID32581702.json",
        "pmid": "32581702",
@@ -40958,12 +41882,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "cytosine base editor (C→T on the antisense strand) or prime editor",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:608; evidence table digest 732a157ea6aa6aa8"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:610; evidence table digest e628c6975781a820"
     },
     "route": "UNQUALIFIED",
     "schema_version": 1
    },
-   "input_sha256": "8d5c121c9c4b63e0fc5c858fa5c5bab7af6f6529cc224ecc409d7052a65fbff5",
+   "input_sha256": "7acdcde18c632742a4dee23064d04306a05df09a00b902677b33059a39c34a59",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -40987,10 +41911,10 @@
      "complete_fulltext_read",
      "partial_fulltext_read"
     ],
-    "digest": "732a157ea6aa6aa8",
-    "locators": 1060,
+    "digest": "e628c6975781a820",
+    "locators": 1091,
     "origin_id": "R-08",
-    "papers": 52,
+    "papers": 53,
     "query_id": "Q-R-08",
     "rows": [
      {
@@ -41659,6 +42583,25 @@
       "evidence_scope": [
        "UNQUALIFIED"
       ],
+      "locator_count": 31,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID31543760.json",
+      "pmid": "31543760",
+      "reading_depth": "partial_fulltext_read",
+      "receipt_events": 6,
+      "receipt_id": "FTR-20260811-31543760-01",
+      "repair_unverified": 0,
+      "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
+      "evidence_scope": [
+       "UNQUALIFIED"
+      ],
       "locator_count": 25,
       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID32581702.json",
       "pmid": "32581702",
@@ -42285,7 +43228,7 @@
     "experiment_sketch": "legend-locator-audit over the declared triples",
     "external_hits": 0,
     "measurement": "a blind locator audit of the contradicting entries before this query touches a baseline claim",
-    "would_move": "R-08 (disease-models/wwox/analysis/mechanism_intervention_map.md:608)"
+    "would_move": "R-08 (disease-models/wwox/analysis/mechanism_intervention_map.md:610)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -42421,7 +43364,7 @@
      "epistemic_status": "IPOTESI",
      "evidence_scope": "UNQUALIFIED",
      "id": "DA-Q-R-09",
-     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:634",
+     "locator": "disease-models/wwox/analysis/mechanism_intervention_map.md:636",
      "reading_depth": "complete_fulltext_read",
      "receipt": "FTR-20260913-15064722-01",
      "source": "disease-models/wwox/analysis/mechanism_intervention_map.md R-09",
@@ -42530,10 +43473,10 @@
       "complete_fulltext_read",
       "partial_fulltext_read"
      ],
-     "digest": "47a6d8d12da18add",
-     "locators": 991,
+     "digest": "11e078a4faeb530e",
+     "locators": 1022,
      "origin_id": "R-09",
-     "papers": 49,
+     "papers": 50,
      "query_id": "Q-R-09",
      "rows": [
       {
@@ -43097,6 +44040,25 @@
        "reading_depth": "complete_fulltext_read",
        "receipt_events": 2,
        "receipt_id": "FTR-20260806-31340538-01",
+       "repair_unverified": 0,
+       "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
+       "unaudited_contradictions": 0
+      },
+      {
+       "adjudication_files": [],
+       "audit_status": "UNAUDITED",
+       "audited_entries": 0,
+       "contradiction_verdicts": [],
+       "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
+       "evidence_scope": [
+        "UNQUALIFIED"
+       ],
+       "locator_count": 31,
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID31543760.json",
+       "pmid": "31543760",
+       "reading_depth": "partial_fulltext_read",
+       "receipt_events": 6,
+       "receipt_id": "FTR-20260811-31543760-01",
        "repair_unverified": 0,
        "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
        "unaudited_contradictions": 0
@@ -43743,12 +44705,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "conditional; **no molecule is design-ready**. Three families: site-specific pharmacological chaperone · kinetic stabilizer · indirect proteostasis regulator",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:634; evidence table digest 47a6d8d12da18add"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:636; evidence table digest 11e078a4faeb530e"
     },
     "route": "UNQUALIFIED",
     "schema_version": 1
    },
-   "input_sha256": "5d71f8e1c3c8d9ed31789373c8da02512e95ff0ed8eac8d45340597659dce257",
+   "input_sha256": "b89e112680e57be7a88e3d2b14372611f734544618f0c99e380c6f1bde53128b",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
@@ -43775,10 +44737,10 @@
      "complete_fulltext_read",
      "partial_fulltext_read"
     ],
-    "digest": "47a6d8d12da18add",
-    "locators": 991,
+    "digest": "11e078a4faeb530e",
+    "locators": 1022,
     "origin_id": "R-09",
-    "papers": 49,
+    "papers": 50,
     "query_id": "Q-R-09",
     "rows": [
      {
@@ -44342,6 +45304,25 @@
       "reading_depth": "complete_fulltext_read",
       "receipt_events": 2,
       "receipt_id": "FTR-20260806-31340538-01",
+      "repair_unverified": 0,
+      "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
+      "unaudited_contradictions": 0
+     },
+     {
+      "adjudication_files": [],
+      "audit_status": "UNAUDITED",
+      "audited_entries": 0,
+      "contradiction_verdicts": [],
+      "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
+      "evidence_scope": [
+       "UNQUALIFIED"
+      ],
+      "locator_count": 31,
+      "manifest": "disease-models/wwox/research/deepdive_manifests/PMID31543760.json",
+      "pmid": "31543760",
+      "reading_depth": "partial_fulltext_read",
+      "receipt_events": 6,
+      "receipt_id": "FTR-20260811-31543760-01",
       "repair_unverified": 0,
       "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
       "unaudited_contradictions": 0
@@ -44977,11 +45958,11 @@
     "NO_MATCH_FOUND is information not available for those queries and that coverage: it is not proof the label is absent, not DRUG_HAS_NO_LABEL, not biological counterevidence and not a reason to drop the candidate."
    ],
    "measure_next": {
-    "dependence": "49_PAPERS_29_COMPLETE",
+    "dependence": "50_PAPERS_29_COMPLETE",
     "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
     "external_hits": 2,
     "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
-    "would_move": "R-09 (disease-models/wwox/analysis/mechanism_intervention_map.md:634)"
+    "would_move": "R-09 (disease-models/wwox/analysis/mechanism_intervention_map.md:636)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -46575,7 +47556,7 @@
     "experiment_sketch": "replicate the one measurement this query stands on, changing the laboratory or the model but not the endpoint",
     "external_hits": 0,
     "measurement": "an independent measurement of the same endpoint in a second system, or the same system from a second laboratory: the query rests on one reading",
-    "would_move": "R-10 (disease-models/wwox/analysis/mechanism_intervention_map.md:658)"
+    "would_move": "R-10 (disease-models/wwox/analysis/mechanism_intervention_map.md:660)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
@@ -47880,7 +48861,7 @@
     "experiment_sketch": "one experiment holding target and endpoint fixed while the context dimension that is UNKNOWN is the only thing that varies",
     "external_hits": 4,
     "measurement": "the endpoint the rows disagree on, measured in one system that carries both contexts; UNKNOWN context dimensions are what keeps the comparison UNRESOLVED",
-    "would_move": "R-11 (disease-models/wwox/analysis/mechanism_intervention_map.md:684)"
+    "would_move": "R-11 (disease-models/wwox/analysis/mechanism_intervention_map.md:686)"
    },
    "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
    "p4_fields": {
