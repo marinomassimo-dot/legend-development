@@ -46,9 +46,9 @@
     }
   ],
   "p4_fields": {
-    "endpoint_pursued": "Restoration of WWOX function by neuron-directed replacement; the single useful endpoint carried is spike-wave discharge rate. Other measured families (survival, growth and glycaemia, motor score, myelination, gliosis) are in p4_card and are NOT compared by the bridge, which holds one disease assertion per packet.",
+    "endpoint_pursued": "Early-window restoration of WWOX function (before the start of ECoG recording at about P14; phenotype onset never located) by neuron-directed replacement; the single useful endpoint carried is spike-wave discharge rate. Other measured families (survival, growth and glycaemia, motor score, myelination, gliosis) are in p4_card and are NOT compared by the bridge, which holds one disease assertion per packet. SWD rate is read after neonatal treatment of animals never recorded before it; it is a prevention or early-window readout.",
     "functional_evidence_available": "In the Wwox-null mouse, by one laboratory: SWD rate to wild-type level (single vector level); survival to 300 days at the higher vector level; a graded motor score; graded glycaemia at one age; WWOX protein graded; myelination qualitative only; gliosis binary against wild type with no untreated-null comparator in the quantified treated panels.",
-    "temporal_or_model_limit": "Constitutive null, not Q230P; one laboratory (the two papers share senior author and institution); no replication; earliest postnatal treatment ages only and NOT_MEASURED is not SMALLER; no tumour surveillance or overexpression-toxicity endpoint; SWD recorded over one week starting about two weeks after birth; threshold not located.",
+    "temporal_or_model_limit": "Constitutive null, not Q230P; one laboratory (the two papers share senior author and institution); no replication; earliest postnatal treatment ages only and NOT_MEASURED is not SMALLER; no tumour surveillance or overexpression-toxicity endpoint; SWD recorded over one week starting about two weeks after birth; threshold not located. Every endpoint is measured after neonatal treatment (P0 to P5) in animals that were never measured before treatment: the result is PREVENTION or EARLY-WINDOW, not recovery of a manifested deficit. No treated-after-onset arm exists; the authors state later intervention 'was not explored' and that this reflects 'model-specific biological constraints and technical limitations, rather than a definitive boundary'.",
     "cellular_context": {
       "target_expression": "Neuron-directed construct; WWOX protein graded by vector level and regionally uneven, supraphysiological in survivors and survivor-selected (PREMISE: NOBODY_LOOKED on the upper bound).",
       "cells_tissue_stage": "Mouse brain regions; the cerebellum, the organ of the ataxic phenotype, is the region the vector reaches least and no efficacy endpoint was measured there; protein also reaches the sciatic nerve while liver stays at background.",
@@ -62,7 +62,7 @@
     "novelty_for_woree": "Already studied (two mouse papers, one laboratory). A gene-therapy programme for WOREE is recorded at grant level (census § 3); that is not a registered study.",
     "state_of_known_roads": "partial: the only measured rescue in the corpus, complete on several R-class endpoints, with no S, C or D datum.",
     "pathway_and_objective": "RECUPERO_PROFONDO.",
-    "expected_contribution": "Recovery of function by replacement (R-class demonstrated in the null mouse); nothing is stated for clinical benefit.",
+    "expected_contribution": "Early-window restoration by replacement (early-window benefit demonstrated in the null mouse; recovery after onset not tested); nothing is stated for clinical benefit.",
     "mechanism": "Target: WWOX gene dosage in neurons; type: replacement; direction: protein up; context: null mouse brain.",
     "sources": {
       "internal": [
