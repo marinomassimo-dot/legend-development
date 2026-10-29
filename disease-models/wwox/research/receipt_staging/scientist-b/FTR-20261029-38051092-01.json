@@ -1,0 +1,37 @@
+{
+ "event_id": "FTR-20261029-38051092-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "38051092",
+  "doi": "10.1080/10985549.2023.2284147"
+ },
+ "event_at": "2026-10-29T09:00:00Z",
+ "analysis_at": "2026-10-29T08:30:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-b, IT6 step P6. IT6 P6 (broad durable recovery, new question): does degradation-route blockade or proteostasis modulation of a destabilised cytosolic missense enzyme restore enzyme function, which protein fraction rises, and does the outcome depend on the lesion and the expression context. Class-level substitute, NOT WWOX EVIDENCE. Source: Europe PMC fullTextXML (CC licence), saved locally; text extracted with tags removed; prepared as JSON for the integrator and staged, not appended.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMID38051092_Collard2023_PMC10761163_epmc_2026-10-29.xml",
+ "source_fingerprint": "aa01f68b07f97b306df5b3399b1699f52ef0feca2643e0d5da80a7efc6984d37",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/broad_recovery_it6_p6_20261029/README.md",
+  "disease-models/wwox/research/drug_repurposing/broad_recovery_it6_p6_20261029/A02_proteasome_inhibitor_class.packet.json"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "Abstract, Introduction, Results and Discussion read; Methods read up to the CBS activity assay, the remaining methods paragraphs (confocal quantification, statistics) not read; figures as captions only; supplement not opened."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

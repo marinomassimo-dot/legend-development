@@ -1,0 +1,22 @@
+--- a/disease-models/wwox/research/drug_repurposing/needs/needs.json
++++ b/disease-models/wwox/research/drug_repurposing/needs/needs.json
+@@ -650,7 +650,8 @@
+    "inferred": [
+     "That the Q230P lesion is a degradation problem rather than a synthesis or solubility problem is not known; every proteostasis route below inherits that.",
+     "That raising abundance raises function: severity tracks residual function, not abundance (CLAIM 030), and 'stable but inert' is a demonstrated phenotype for some variants.",
+-    "That a fold gain in mutant protein is useful: a boost multiplies the residual function R (amount relative to wild type times function per molecule) and does not change it, so parity needs the reciprocal of R; R is unmeasured for every WWOX allele, and for the Q230P class the only bound is the unquantified detection floor (IT5 P8, missense_recovery_it5_p8_20261029)."
++    "That a fold gain in mutant protein is useful: a boost multiplies the residual function R (amount relative to wild type times function per molecule) and does not change it, so parity needs the reciprocal of R; R is unmeasured for every WWOX allele, and for the Q230P class the only bound is the unquantified detection floor (IT5 P8, missense_recovery_it5_p8_20261029).",
++    "Whether a stabilised Q230P-class protein would be active depends on the lesion class, which is unmeasured: in one cytosolic enzyme (CBS) the same route blocker restored function to the transgenic wild-type range in some animals for a regulatory-domain allele, improved it for three catalytic-domain alleles, not at all for one, and a stable but catalytically impaired allele was not rescued; whether a Q230P-class protein resembles either class is open (domain label and modelled burial only); the outcome for one allele also differed between a mouse liver and a kidney cell line (IT6 P6, broad_recovery_it6_p6_20261029; NOT WWOX EVIDENCE)."
+    ],
+    "intervention_direction": {
+     "direction": "up",
+@@ -663,7 +664,8 @@
+     "Q230P is not P47T and not P252A; no read-across between missense alleles (MECHANISM_TRANSFER_FIREWALL).",
+     "Abundance restored without function would be neutral at best (CLAIM 030).",
+     "N-11: 4-phenylbutyrate/TUDCA act on an ER-chaperone rationale and WWOX is cytosolic. N-12: HSP70 co-induction could stabilise an insoluble protein (adjacent-protein precedent: stabilisation gave insoluble protein without activity).",
+-    "IT5 P8: in the one soluble cytosolic precedent the treatment gains on mutant protein were small (about 1.05 to 1.65 fold total on four of five variants) against a deficit of tens of fold, and the same gain applies to wild type; a measured turnover difference of about 1.5 to 3 fold explains only part of that deficit, so the cleared-after-synthesis branch is not the only candidate (NOT WWOX EVIDENCE; reader arithmetic on panel estimates)."
++    "IT5 P8: in the one soluble cytosolic precedent the treatment gains on mutant protein were small (about 1.05 to 1.65 fold total on four of five variants) against a deficit of tens of fold, and the same gain applies to wild type; a measured turnover difference of about 1.5 to 3 fold explains only part of that deficit, so the cleared-after-synthesis branch is not the only candidate (NOT WWOX EVIDENCE; reader arithmetic on panel estimates).",
++    "IT6 P6: in a cytosolic enzyme (CBS) proteasome inhibition raised wild-type half-life about 7.7-fold, so the gain is a boost for wild type too; tolerated exposure lowered homocysteine by about half without a significant activity gain and with immune-cell toxicity, gave no significant change for S466L, and effective exposure was toxic; protein rose with activity unchanged for one allele under HSP70 or HSF1 co-expression; ASPA C152W stabilised protein was exclusively insoluble with no activity detectable. For the only WWOX missense with a measured turnover (P252A) the route was lysosomal and a proteasome inhibitor did not even accumulate wild type, in stable-overexpression thyroid-cancer lines; MG-132 also left the normal-size protein unchanged in 49 cancer lines (PMID 14695174) (NOT WWOX EVIDENCE for the CBS and ASPA items)."
+    ],
+    "sources": {
+     "cards": [

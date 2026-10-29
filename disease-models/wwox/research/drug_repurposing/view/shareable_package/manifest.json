@@ -18,17 +18,17 @@
    },
    "^\\.cur\\.(needs|threads|groups|gaps|goals|tracks|scopes|group_note|meta)(\\.|\\[\\]|$)": {
     "class": "OWN",
-    "values": 1416,
+    "values": 1418,
     "why": "needs, threads and positions written in this repository"
    },
    "^\\.cur\\.cands\\[\\]\\.": {
     "class": "OWN",
-    "values": 4665,
+    "values": 4760,
     "why": "card text and computed positions (provenance of the prose: see text audit)"
    },
    "^\\.cur\\.cands\\[\\]\\.(pmids\\[\\]\\.(id|role)|dois\\[\\])$": {
     "class": "BIBLIO",
-    "values": 313,
+    "values": 321,
     "why": "PMID / DOI of a cited work"
    },
    "^\\.cur\\.cands\\[\\]\\.access\\[\\]$": {
@@ -43,7 +43,7 @@
    },
    "^\\.cur\\.cands\\[\\]\\.pmids\\[\\]\\.(title|journal|year)$": {
     "class": "BIBLIO",
-    "values": 462,
+    "values": 474,
     "why": "title, journal, year of a cited work (bibliographic facts)"
    },
    "^\\.cur\\.footer\\.": {
@@ -88,12 +88,12 @@
    },
    "^\\.needs\\[\\]\\.": {
     "class": "OWN",
-    "values": 1625,
+    "values": 1627,
     "why": "needs records written in this repository"
    },
    "^\\.pairs\\[\\]\\.(l2|l3|l4|x|n|r)(\\.|\\[\\]|$)": {
     "class": "OWN",
-    "values": 21932,
+    "values": 21934,
     "why": "levels 2-4, indices: computed from cards and needs"
    },
    "^\\.pairs\\[\\]\\.l1\\.(state|n_assoc|readout_only|why|stale)$": {
@@ -118,7 +118,7 @@
    },
    "^\\.pairs\\[\\]\\.p\\.": {
     "class": "OWN",
-    "values": 11087,
+    "values": 11089,
     "why": "priority criteria computed by the coverage tool"
    },
    "^\\.pairs\\[\\]\\.p\\.cr\\.dir\\[\\]\\[\\]$": {
@@ -173,7 +173,7 @@
    "DOI": 5,
    "HGNC": 6,
    "NCT": 0,
-   "PMID": 11
+   "PMID": 13
   },
   "links": {
    "distinct_hrefs": 47,
@@ -191,7 +191,7 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 1352,
+    "forbidden-name": 1414,
     "forbidden-wording": 8
    },
    "co_attested_wording": [
@@ -212,17 +212,18 @@
    "forbidden_names": 126046,
    "forbidden_wordings": 2888,
    "pair_unmarked_attested_or_unchecked": {
-    "count": 62,
+    "count": 69,
     "names": [
      "act 709478",
      "apinocaltamide",
      "cpp 115",
+     "hsp70",
      "lithium",
      "nbi 827104",
      "null",
      "proteasome inhibitor"
     ],
-    "unchecked_without_corpus": 62
+    "unchecked_without_corpus": 69
    },
    "suppressed_by_exemption": {
     "category labels of catalogue-wide counts": 1
@@ -399,10 +400,10 @@
   "view_schema": "legend.wwox.repurposing_view/2"
  },
  "embedded_field_classes": {
-  "BIBLIO": 917,
+  "BIBLIO": 937,
   "COUNT": 7542,
   "ID": 2956,
-  "OWN": 49558,
+  "OWN": 49661,
   "ROWNAME": 1463,
   "SRC_A": 89,
   "SRC_META": 244,
@@ -461,7 +462,7 @@
   },
   "NOTICE.md": {
    "bytes": 10848,
-   "sha256": "45aac890e1f26aaed448912d21bf054dbe84bbcfb19b89562a82b746278ed322"
+   "sha256": "1c41be997a0dcf3c444164883666687a5d18a25db2a516139673a05adbdeb0c3"
   },
   "README.md": {
    "bytes": 4443,
@@ -469,7 +470,7 @@
   },
   "TEXT_PROVENANCE.json": {
    "bytes": 1601,
-   "sha256": "2e103ec53ef81089443f989a5af9ca39afcdf399556b2e7bfa8b2e4203e1f322"
+   "sha256": "5a8fee8eaca6fceebea93d766fd69ad8be378fec296aef1567ce193f4c4b740d"
   },
   "class_b/chembl_cc-by-sa-3.0/CREDIT.txt": {
    "bytes": 1636,
@@ -484,8 +485,8 @@
    "sha256": "d8fe6a3455466783564803428b6318c1c442db6a16dfb97de8a6b7dcf944cc9d"
   },
   "index.html": {
-   "bytes": 1885572,
-   "sha256": "1f9bf7e9e61ca4b4ae58c48e2c84a31074b7936c5cb808daa8d9a0f84aee9252"
+   "bytes": 1902435,
+   "sha256": "40bd9e4da326e63fb9624471bf3c2e06850ca69cbaa4cb3732e53b779b5cbf28"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",
