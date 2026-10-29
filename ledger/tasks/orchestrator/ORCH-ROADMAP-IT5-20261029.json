@@ -8,7 +8,7 @@
  "START_UTC": "2026-10-28T21:00:00Z",
  "BASELINE": "5f81d12bc9da7cadbbc5e15389f5aa5f08987464 = development/main (verified equal after fetch); iteration-4 battery PASS WITH SKIPS 162/7 ran on c5ec0589 and does not validate new code",
  "AUTHORISED_QUEUE_20261029": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_A_CONSOLIDATION": {
    "order": 1,
    "steps": [
@@ -118,19 +118,30 @@
    "steps": [
     {
      "step": "F1 integrate progressively and publish validated increments during the session; final battery and checks on the final SHA (not the iteration-4 battery); classify every failure; worktree cleanup (clean, integrated, unused); roadmap section updated with real statuses; final push confirmed by ls-remote BEFORE the mandate is marked COMPLETE",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "README Roadmap iteration 5 written; final battery as a tagged mandate_watch job on the final SHA, then validated push"
+     "evidence": "final battery: first run on dbdf1cb6 FAIL (3 suites: closed-world guard on batch-2 tests, shebang mode, typed status value) classified and fixed in a9211915; second run on a9211915 PASS WITH SKIPS (162 targets, 7 skipped: environment/corpus); fulltext_receipts verify OK (885), growth_anchors PASS, LINT WARN no BLOCK, gate PASS; validated push of 0dace3cb to development/main verified by ls-remote; worktrees: only the root checkout remains; README Roadmap iteration 5 written"
     },
     {
      "step": "F2 session closings once at the end of the whole queue (self-eval, capability scout, takeaways) and the final report in Italian with the P1-P14 table",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "session_evaluations/2026-10-29_it5_orchestrator.md (session_self_eval PASS), capability_scout_log.md session-close entry, takeaways and the final report in Italian"
     }
    ]
   }
  },
- "DECISIONS_TAKEN": [],
- "DEFAULTS_TAKEN": [],
+ "DECISIONS_TAKEN": [
+  "2026-10-29: licence reconciliation read at the sources and classed A/B/C/D; the repository is public and holds class-C rows in history: NO history rewrite or visibility change (operator); a shareable build with a mutation-tested audit and a separate CC BY-SA 3.0 ChEMBL file was built instead. Reversible: delete view/shareable_package/ and the audit.",
+  "2026-10-29: GtoPdb ligand reconciliation merges only on identical full InChIKey with a ChEMBL record in the catalogue (485); stereo/label/salt cases are related-not-merged; structure-less cases stay unresolved; nothing is deleted. Reversible by removing relations.family_join.",
+  "2026-10-29: the F/C/P priority positions are per card and per need, never best-of-needs; the rules are the builder's own and are printed on the page; tool compounds capped at F2.",
+  "2026-10-29: two BATCH_COMMITs (025, 026) changed registries and ledgers; the working model stayed v7.28 (no statement changed); no claim reversed.",
+  "2026-10-29: ISR direction is recorded as unresolved between systems of very different design; the hNPC deposit is n=1 per arm and descriptive only.",
+  "2026-10-29: continuity: background jobs are judged by process identity via mandate_watch.py job run/list/collect; a COMPLETE record whose closing commit is not on the development remote is not complete; the global workspace-trust config was never edited."
+ ],
+ "DEFAULTS_TAKEN": [
+  "Intermediate pushes were not made: \u00a721d requires the battery on the pushed ref and the code changed until the end; the single validated push happened after the second final battery. Branches whose worktree was detached by task_close were merged by hand once (P6/P7).",
+  "The commit helper does not run the publication gate: audit notes were scrubbed of scratch paths at storage time after two gate refusals."
+ ],
  "STOP_LOG": []
 }
