@@ -1,0 +1,81 @@
+compound	chembl_id	target_chembl_id	target	target_organism	n_rows	n_docs	types	median_nM_equal	min_nM	max_nM	assay_organisms	cell_or_prep
+7-chlorokynurenic acid (glycine-site antagonist)	CHEMBL311389	CHEMBL1907608	Glutamate NMDA receptor	Rattus norvegicus	12	7	IC50,Kb	560.0	320.0	169000.0	NA;Rattus norvegicus	NA
+7-chlorokynurenic acid (glycine-site antagonist)	CHEMBL311389	CHEMBL2093871	Glutamate receptor ionotropic, AMPA	Rattus norvegicus	2	1	IC50,Kb	108000.0	63000.0	153000.0	Rattus norvegicus	NA
+7-chlorokynurenic acid (glycine-site antagonist)	CHEMBL311389	CHEMBL2094119	Glutamate receptor ionotropic, kainate	Rattus norvegicus	2	1	IC50,Kb	50000.0	50000.0	50000.0	Rattus norvegicus	NA
+7-chlorokynurenic acid (glycine-site antagonist)	CHEMBL311389	CHEMBL2096669	Glutamate receptors; NMDA/AMPA	Rattus norvegicus	1	1	Kb	7000.0	7000.0	7000.0	Rattus norvegicus	NA
+D-AP5 (D-APV)	CHEMBL84612	CHEMBL1907608	Glutamate NMDA receptor	Rattus norvegicus	2	2	IC50,Ki	2355.0	880.0	3830.0	NA;Rattus norvegicus	NA
+D-AP5 (D-APV)	CHEMBL84612	CHEMBL2094124	Glutamate [NMDA] receptor	Homo sapiens	2	1	IC50	1938.5	177.0	3700.0	NA	NA
+D-AP5 (D-APV)	CHEMBL84612	CHEMBL2096666	Glutamate NMDA receptor; Grin1/Grin2b	Rattus norvegicus	2	2	Ki	1630.0	460.0	2800.0	Rattus norvegicus	NA;Oocyte
+D-AP5 (D-APV)	CHEMBL84612	CHEMBL2096680	Glutamate NMDA receptor; Grin1/Grin2a	Rattus norvegicus	2	2	Ki	335.0	280.0	390.0	Rattus norvegicus	NA;Oocyte
+D-AP5 (D-APV)	CHEMBL84612	CHEMBL2096911	Glutamate NMDA receptor; Grin1/Grin2c	Rattus norvegicus	2	2	Ki	3770.0	1640.0	5900.0	Rattus norvegicus	NA;Oocyte
+D-AP5 (D-APV)	CHEMBL84612	CHEMBL3038506	Ionotropic glutamate receptor NMDA 1/2D	Rattus norvegicus	1	1	Ki	21000.0	21000.0	21000.0	Rattus norvegicus	NA
+D-cycloserine (glycine-site partial agonist)	CHEMBL771	CHEMBL1907603	Glutamate NMDA receptor; GRIN1/GRIN2B	Homo sapiens	1	1	EC50	7400.0	7400.0	7400.0	Homo sapiens	Oocyte
+D-cycloserine (glycine-site partial agonist)	CHEMBL771	CHEMBL1907604	Glutamate NMDA receptor; GRIN1/GRIN2A	Homo sapiens	1	1	EC50	21000.0	21000.0	21000.0	Homo sapiens	Oocyte
+D-cycloserine (glycine-site partial agonist)	CHEMBL771	CHEMBL1907608	Glutamate NMDA receptor	Rattus norvegicus	2	2	EC50,IC50	2625.0	2300.0	2950.0	NA	NA
+D-cycloserine (glycine-site partial agonist)	CHEMBL771	CHEMBL2096666	Glutamate NMDA receptor; Grin1/Grin2b	Rattus norvegicus	2	2	EC50	8250.0	8200.0	8300.0	Rattus norvegicus	NA;Oocyte
+D-cycloserine (glycine-site partial agonist)	CHEMBL771	CHEMBL2096680	Glutamate NMDA receptor; Grin1/Grin2a	Rattus norvegicus	2	2	EC50	18500.0	18000.0	19000.0	Rattus norvegicus	NA;Oocyte
+D-cycloserine (glycine-site partial agonist)	CHEMBL771	CHEMBL2096911	Glutamate NMDA receptor; Grin1/Grin2c	Rattus norvegicus	2	2	EC50	3050.0	2800.0	3300.0	Rattus norvegicus	NA;Oocyte
+D-cycloserine (glycine-site partial agonist)	CHEMBL771	CHEMBL3038504	Ionotropic glutamate receptor NMDA 1/2C	Homo sapiens	1	1	EC50	4500.0	4500.0	4500.0	Homo sapiens	Oocyte
+D-cycloserine (glycine-site partial agonist)	CHEMBL771	CHEMBL3038505	Ionotropic glutamate receptor NMDA 1/2D	Homo sapiens	1	1	EC50	1500.0	1500.0	1500.0	Homo sapiens	Oocyte
+D-cycloserine (glycine-site partial agonist)	CHEMBL771	CHEMBL3038506	Ionotropic glutamate receptor NMDA 1/2D	Rattus norvegicus	2	2	EC50	2850.0	2800.0	2900.0	Rattus norvegicus	NA;Oocyte
+D-cycloserine (glycine-site partial agonist)	CHEMBL771	CHEMBL330	Glutamate receptor ionotropic, NMDA 1	Rattus norvegicus	1	1	IC50	7370.0	7370.0	7370.0	NA	NA
+D-cycloserine (glycine-site partial agonist)	CHEMBL771	CHEMBL401	Glutamate receptor ionotropic, NMDA 2C	Rattus norvegicus	1	1	EC50	18100.0	18100.0	18100.0	NA	NA
+GYKI 52466 (non-competitive AMPA)	CHEMBL275006	CHEMBL2093871	Glutamate receptor ionotropic, AMPA	Rattus norvegicus	7	6	IC50	12600.0	9000.0	22000.0	NA;Rattus norvegicus	NA
+GYKI 52466 (non-competitive AMPA)	CHEMBL275006	CHEMBL4016	Glutamate receptor 2	Homo sapiens	2	1	Ki	4500.0	4000.0	5000.0	Homo sapiens	NA
+L-701,324 (glycine-site antagonist)	CHEMBL31741	CHEMBL1907608	Glutamate NMDA receptor	Rattus norvegicus	6	5	IC50,Kb,Ki	7.6	1.4	28.0	NA;Rattus norvegicus	NA
+L-701,324 (glycine-site antagonist)	CHEMBL31741	CHEMBL2096666	Glutamate NMDA receptor; Grin1/Grin2b	Rattus norvegicus	1	1	IC50	18.0	18.0	18.0	Rattus norvegicus	NA
+L-701,324 (glycine-site antagonist)	CHEMBL31741	CHEMBL330	Glutamate receptor ionotropic, NMDA 1	Rattus norvegicus	6	6	IC50,Ki	2.0	1.0	14.0	NA;Rattus norvegicus	NA
+NAB-14 (GluN2C/2D NAM)	CHEMBL4583491	CHEMBL2096911	Glutamate NMDA receptor; Grin1/Grin2c	Rattus norvegicus	1	1	IC50	3700.0	3700.0	3700.0	Rattus norvegicus	NA
+NAB-14 (GluN2C/2D NAM)	CHEMBL4583491	CHEMBL3038506	Ionotropic glutamate receptor NMDA 1/2D	Rattus norvegicus	1	1	IC50	2200.0	2200.0	2200.0	Rattus norvegicus	NA
+NBQX (competitive AMPA/kainate)	CHEMBL222519	CHEMBL1907608	Glutamate NMDA receptor	Rattus norvegicus	15	11	IC50,Ki	33000.0	200.0	255000.0	NA;Rattus norvegicus	NA;Oocyte
+NBQX (competitive AMPA/kainate)	CHEMBL222519	CHEMBL1918	Glutamate receptor ionotropic, kainate 1	Homo sapiens	4	3	IC50,Ki	37000.0	11730.0	50000.0	Homo sapiens	HEK293;NA
+NBQX (competitive AMPA/kainate)	CHEMBL222519	CHEMBL2009	Glutamate receptor 1	Homo sapiens	4	3	IC50,Kb,Ki	994.5	389.0	6000.0	Homo sapiens;NA	HEK293;NA;Oocyte
+NBQX (competitive AMPA/kainate)	CHEMBL222519	CHEMBL2093871	Glutamate receptor ionotropic, AMPA	Rattus norvegicus	29	24	IC50,Ki	70.0	0.5	3000.0	NA;Rattus norvegicus	NA;Oocyte
+NBQX (competitive AMPA/kainate)	CHEMBL222519	CHEMBL2094119	Glutamate receptor ionotropic, kainate	Rattus norvegicus	13	9	IC50,Ki	2000.0	31.0	7000.0	NA;Rattus norvegicus	NA;Oocyte
+NBQX (competitive AMPA/kainate)	CHEMBL222519	CHEMBL2094124	Glutamate [NMDA] receptor	Homo sapiens	1	1	IC50				NA	NA
+NBQX (competitive AMPA/kainate)	CHEMBL222519	CHEMBL2096617	Glutamate receptor ionotropic, AMPA	Mus musculus	2	2	IC50,Ki	135.0	70.0	200.0	Mus musculus;NA	NA
+NBQX (competitive AMPA/kainate)	CHEMBL222519	CHEMBL2096670	Glutamate receptor ionotropic AMPA	Homo sapiens	4	4	IC50,Ki	70.0	52.0	200.0	NA	NA
+NBQX (competitive AMPA/kainate)	CHEMBL222519	CHEMBL2109241	Glutamate receptor ionotropic kainate	Homo sapiens	4	4	IC50,Ki	2600.0	2600.0	8000.0	NA	NA
+NBQX (competitive AMPA/kainate)	CHEMBL222519	CHEMBL2919	Glutamate receptor ionotropic, kainate 1	Rattus norvegicus	1	1	Kd	1780.0	1780.0	1780.0	Rattus norvegicus	NA
+NBQX (competitive AMPA/kainate)	CHEMBL222519	CHEMBL3190	Glutamate receptor 4	Homo sapiens	3	3	IC50,Kb,Ki	600.0	102.0	1100.0	Homo sapiens;NA	HEK293;NA;Oocyte
+NBQX (competitive AMPA/kainate)	CHEMBL222519	CHEMBL330	Glutamate receptor ionotropic, NMDA 1	Rattus norvegicus	3	2	IC50,Ki				NA	NA
+NBQX (competitive AMPA/kainate)	CHEMBL222519	CHEMBL3503	Glutamate receptor 2	Rattus norvegicus	1	1	Kb	590.0	590.0	590.0	Rattus norvegicus	HEK293
+NBQX (competitive AMPA/kainate)	CHEMBL222519	CHEMBL3504	Glutamate receptor 3	Rattus norvegicus	1	1	Kb	630.0	630.0	630.0	Rattus norvegicus	HEK293
+NBQX (competitive AMPA/kainate)	CHEMBL222519	CHEMBL3505	Glutamate receptor 4	Rattus norvegicus	1	1	Kb	1600.0	1600.0	1600.0	Rattus norvegicus	HEK293
+NBQX (competitive AMPA/kainate)	CHEMBL222519	CHEMBL3595	Glutamate receptor 3	Homo sapiens	2	2	IC50,Ki	1400.0	900.0	1900.0	Homo sapiens;NA	HEK293;NA
+NBQX (competitive AMPA/kainate)	CHEMBL222519	CHEMBL3683	Glutamate receptor ionotropic, kainate 2	Homo sapiens	5	4	IC50,Ki	21100.0	13200.0	29000.0	Homo sapiens	HEK293;NA;Sf9
+NBQX (competitive AMPA/kainate)	CHEMBL222519	CHEMBL3684	Glutamate receptor ionotropic, kainate 3	Homo sapiens	2	1	IC50,Ki	31000.0	18000.0	44000.0	Homo sapiens	HEK293
+NBQX (competitive AMPA/kainate)	CHEMBL222519	CHEMBL3753	Glutamate receptor 1	Rattus norvegicus	1	1	Kb	2000.0	2000.0	2000.0	Rattus norvegicus	HEK293
+NBQX (competitive AMPA/kainate)	CHEMBL222519	CHEMBL3883294	Glutamate receptor AMPA 1/2	Homo sapiens	2	1	Kb	166.0	166.0	166.0	NA	Oocyte
+NBQX (competitive AMPA/kainate)	CHEMBL222519	CHEMBL401	Glutamate receptor ionotropic, NMDA 2C	Rattus norvegicus	2	2	Ki	33000.0	33000.0	33000.0	NA	NA
+NBQX (competitive AMPA/kainate)	CHEMBL222519	CHEMBL4016	Glutamate receptor 2	Homo sapiens	4	4	IC50,Ki	1380.0	210.0	2500.0	Homo sapiens;NA	HEK293;NA
+NBQX (competitive AMPA/kainate)	CHEMBL222519	CHEMBL4041	Glutamate receptor ionotropic, kainate 5	Rattus norvegicus	1	1	Kd	1780.0	1780.0	1780.0	NA	NA
+NBQX (competitive AMPA/kainate)	CHEMBL222519	CHEMBL4573	Metabotropic glutamate receptor 6	Homo sapiens	1	1	IC50	74000.0	74000.0	74000.0	Homo sapiens	HEK293
+NVP-AAM077 / PEAQX (GluN2A-preferring competitive; first-block match only)	CHEMBL273636	CHEMBL1907603	Glutamate NMDA receptor; GRIN1/GRIN2B	Homo sapiens	1	1	IC50	29600.0	29600.0	29600.0	NA	NA
+NVP-AAM077 / PEAQX (GluN2A-preferring competitive; first-block match only)	CHEMBL273636	CHEMBL1907604	Glutamate NMDA receptor; GRIN1/GRIN2A	Homo sapiens	1	1	IC50	270.0	270.0	270.0	NA	NA
+NVP-AAM077 / PEAQX (GluN2A-preferring competitive; first-block match only)	CHEMBL273636	CHEMBL2094124	Glutamate [NMDA] receptor	Homo sapiens	1	1	IC50	8.0	8.0	8.0	NA	NA
+NVP-AAM077 / PEAQX (GluN2A-preferring competitive; first-block match only)	CHEMBL273636	CHEMBL2096666	Glutamate NMDA receptor; Grin1/Grin2b	Rattus norvegicus	1	1	Ki	67.0	67.0	67.0	Rattus norvegicus	Oocyte
+NVP-AAM077 / PEAQX (GluN2A-preferring competitive; first-block match only)	CHEMBL273636	CHEMBL2096680	Glutamate NMDA receptor; Grin1/Grin2a	Rattus norvegicus	1	1	Ki	5.4	5.4	5.4	Rattus norvegicus	Oocyte
+NVP-AAM077 / PEAQX (GluN2A-preferring competitive; first-block match only)	CHEMBL273636	CHEMBL2096911	Glutamate NMDA receptor; Grin1/Grin2c	Rattus norvegicus	1	1	Ki	11.6	11.6	11.6	Rattus norvegicus	Oocyte
+Ro 25-6981 (free base, GluN2B NAM)	CHEMBL305195	CHEMBL1904	Glutamate receptor ionotropic, NMDA 2B	Homo sapiens	5	5	IC50,Ki	9.0	9.0	173.0	Homo sapiens	LTK-;NA
+Ro 25-6981 (free base, GluN2B NAM)	CHEMBL305195	CHEMBL1907603	Glutamate NMDA receptor; GRIN1/GRIN2B	Homo sapiens	3	3	IC50,Ki	57.0	10.0	57.0	NA	NA
+Ro 25-6981 (free base, GluN2B NAM)	CHEMBL305195	CHEMBL1907608	Glutamate NMDA receptor	Rattus norvegicus	1	1	IC50	159.0	159.0	159.0	Rattus norvegicus	NA
+Ro 25-6981 (free base, GluN2B NAM)	CHEMBL305195	CHEMBL1972	Glutamate receptor ionotropic, NMDA 2A	Homo sapiens	1	1	IC50	52000.0	52000.0	52000.0	Homo sapiens	NA
+Ro 25-6981 (free base, GluN2B NAM)	CHEMBL305195	CHEMBL2094124	Glutamate [NMDA] receptor	Homo sapiens	4	4	IC50,Ki	6.0	5.6	6.0	NA	NA
+Ro 25-6981 (free base, GluN2B NAM)	CHEMBL305195	CHEMBL2096666	Glutamate NMDA receptor; Grin1/Grin2b	Rattus norvegicus	4	3	IC50	9.0	9.0	17.0	NA;Rattus norvegicus	NA;Oocyte
+Ro 25-6981 (free base, GluN2B NAM)	CHEMBL305195	CHEMBL2096680	Glutamate NMDA receptor; Grin1/Grin2a	Rattus norvegicus	1	1	IC50	52000.0	52000.0	52000.0	NA	NA
+Ro 25-6981 (free base, GluN2B NAM)	CHEMBL305195	CHEMBL311	Glutamate receptor ionotropic, NMDA 2B	Rattus norvegicus	3	2	IC50	6.0	6.0	159.0	Rattus norvegicus	NA
+TCN-201 (GluN2A NAM)	CHEMBL2333945	CHEMBL1904	Glutamate receptor ionotropic, NMDA 2B	Homo sapiens	2	1	IC50	50000.0	50000.0	50000.0	Homo sapiens	NA
+TCN-201 (GluN2A NAM)	CHEMBL2333945	CHEMBL1907603	Glutamate NMDA receptor; GRIN1/GRIN2B	Homo sapiens	2	2	IC50	273.0	100.0	446.0	Homo sapiens	NA
+TCN-201 (GluN2A NAM)	CHEMBL2333945	CHEMBL1972	Glutamate receptor ionotropic, NMDA 2A	Homo sapiens	4	2	IC50	215.0	109.0	340.0	Homo sapiens	HEK-293T;NA
+TCN-201 (GluN2A NAM)	CHEMBL2333945	CHEMBL2096680	Glutamate NMDA receptor; Grin1/Grin2a	Rattus norvegicus	2	2	IC50	341.0	170.0	512.0	Rattus norvegicus	NA
+TCN-201 (GluN2A NAM)	CHEMBL2333945	CHEMBL2096911	Glutamate NMDA receptor; Grin1/Grin2c	Rattus norvegicus	1	1	IC50				Rattus norvegicus	NA
+TCN-201 (GluN2A NAM)	CHEMBL2333945	CHEMBL2591	Glutamate receptor ionotropic, NMDA 2D	Homo sapiens	2	1	IC50				Homo sapiens	NA
+TCN-201 (GluN2A NAM)	CHEMBL2333945	CHEMBL3038506	Ionotropic glutamate receptor NMDA 1/2D	Rattus norvegicus	1	1	IC50				Rattus norvegicus	NA
+TCN-201 (GluN2A NAM)	CHEMBL2333945	CHEMBL4109	Glutamate receptor ionotropic, NMDA 2C	Homo sapiens	1	1	IC50				Homo sapiens	NA
+selfotel / CGS 19755 (competitive)	CHEMBL39664	CHEMBL1907608	Glutamate NMDA receptor	Rattus norvegicus	22	15	IC50,Ki	54.0	22.0	22400.0	NA;Rattus norvegicus	NA
+selfotel / CGS 19755 (competitive)	CHEMBL39664	CHEMBL2094124	Glutamate [NMDA] receptor	Homo sapiens	2	1	IC50	827.0	54.0	1600.0	NA	NA
+selfotel / CGS 19755 (competitive)	CHEMBL39664	CHEMBL2096670	Glutamate receptor ionotropic AMPA	Homo sapiens	1	1	IC50	967.0	967.0	967.0	Homo sapiens	NA
+selfotel / CGS 19755 (competitive)	CHEMBL39664	CHEMBL310	Glutamate receptor ionotropic, NMDA 2A	Rattus norvegicus	2	1	IC50	467.5	95.0	840.0	Rattus norvegicus	NA
+selfotel / CGS 19755 (competitive)	CHEMBL39664	CHEMBL3744	Glutamate receptor ionotropic, kainate 3	Rattus norvegicus	1	1	Ki				NA	NA
+selfotel / CGS 19755 (competitive)	CHEMBL39664	CHEMBL3753	Glutamate receptor 1	Rattus norvegicus	1	1	Ki				NA	NA
