@@ -50,7 +50,7 @@
      "cut": false
     },
     "feasibility": {
-     "value": "Fate first: three-fraction (soluble, pellet, total) plus an orthogonal detection and a route-inhibitor arm on the exact variant, with transgene mRNA measured in the same wells under treatment;",
+     "value": "Build the wild-type function ruler first, then fate, then levers.",
      "card_field": "input.p4_card.next_measurement",
      "cut": true
     }
@@ -64,7 +64,7 @@
    "bridge_directional_summary": "UNRESOLVED",
    "dims": {
     "benefit_endpoint": {
-     "value": "Return of Q230P protein from an undetectable baseline by blocking its degradation, read as total, soluble and pellet protein and then function.",
+     "value": "Return of Q230P protein from an undetectable baseline by blocking its degradation, read as total, soluble and pellet protein, native-state fraction and then function against a wild-type ruler.",
      "card_field": "input.p4_fields.endpoint_pursued",
      "cut": false
     },
@@ -79,7 +79,7 @@
      "cut": false
     },
     "evidence_functional": {
-     "value": "None for WWOX. In the closest precedent, a localisation and a myelin-marker readout moved with a partial protein return; a second precedent returned insoluble protein in which no activity could be measured.",
+     "value": "None for WWOX. CBS (cytosolic enzyme): activity and plasma homocysteine restored in mice for some alleles, none for others; ASPA C152W: insoluble protein, no activity detectable; HIKESHI: partial protein return with function-adjacent readouts.",
      "card_field": "input.p4_fields.functional_evidence_available",
      "cut": false
     },
@@ -104,9 +104,9 @@
      "cut": false
     },
     "feasibility": {
-     "value": "Inhibitor-first arm on the exact variant from a detectable baseline, read as soluble/pellet/total protein, with the proteasome and lysosome arms side by side, before any chase.",
+     "value": "Route-first fate experiment on the exact variant in an expression-matched WWOX-null human system: soluble, pellet and total protein with an antibody-independent detection, mRNA in the same wells, half-life by pulse-chase;",
      "card_field": "input.p4_card.next_measurement",
-     "cut": false
+     "cut": true
     }
    }
   },
@@ -172,12 +172,12 @@
    "bridge_directional_summary": "OPPOSES_DISEASE_CHANGE",
    "dims": {
     "benefit_endpoint": {
-     "value": "Restoration of WWOX function by neuron-directed replacement; the single useful endpoint carried is spike-wave discharge rate.",
+     "value": "Early-window restoration of WWOX function (before the start of ECoG recording at about P14; phenotype onset never located) by neuron-directed replacement; the single useful endpoint carried is spike-wave discharge rate.",
      "card_field": "input.p4_fields.endpoint_pursued",
      "cut": true
     },
     "benefit_type": {
-     "value": "Recovery of function by replacement (R-class demonstrated in the null mouse); nothing is stated for clinical benefit.",
+     "value": "Early-window restoration by replacement (early-window benefit demonstrated in the null mouse; recovery after onset not tested); nothing is stated for clinical benefit.",
      "card_field": "input.p4_card.expected_contribution",
      "cut": false
     },

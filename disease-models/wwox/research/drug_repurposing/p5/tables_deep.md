@@ -16,21 +16,21 @@ Candidates first (5), then abstentions (7); within each group the order is the c
 | BLOCK-1 status | **UNKNOWN** (no BLOCK-1 field or statement on this card; UNKNOWN is not a pass) | `(none)` |
 | Time to ACCESS | UNKNOWN. Not documented in the repository. | `input.p4_card.time_to_access` |
 | Time to BENEFIT | UNKNOWN. Not documented; no WWOX datum exists from which to estimate it. | `input.p4_card.time_to_benefit` |
-| Feasibility: what must exist to test it | Fate first: three-fraction (soluble, pellet, total) plus an orthogonal detection and a route-inhibitor arm on the exact variant, with transgene mRNA measured in the same wells under treatment; [cut: the card's field continues] | `input.p4_card.next_measurement` |
+| Feasibility: what must exist to test it | Build the wild-type function ruler first, then fate, then levers. [cut: the card's field continues] | `input.p4_card.next_measurement` |
 
 ### P4-A-02 · proteasome-inhibitor class · CANDIDATE · bridge `directional_summary` = UNRESOLVED
 
 | Dimension | Cell (the card's own field, verbatim, or UNKNOWN) | Card field |
 |---|---|---|
-| Benefit: the ONE endpoint | Return of Q230P protein from an undetectable baseline by blocking its degradation, read as total, soluble and pellet protein and then function. | `input.p4_fields.endpoint_pursued` |
+| Benefit: the ONE endpoint | Return of Q230P protein from an undetectable baseline by blocking its degradation, read as total, soluble and pellet protein, native-state fraction and then function against a wild-type ruler. | `input.p4_fields.endpoint_pursued` |
 | Benefit: symptomatic or modifying (card's expected contribution) | Recovery of residual protein only if Q230P is lost at the proteasome; function of any recovered protein is the unanswered question. | `input.p4_card.expected_contribution` |
 | Evidence: state | not verified for this disease; and exposure-or-toxicity limit shown by its own precedent (other windows toxic to controls). | `input.p4_card.state_of_known_roads` |
-| Evidence: functional evidence available | None for WWOX. In the closest precedent, a localisation and a myelin-marker readout moved with a partial protein return; a second precedent returned insoluble protein in which no activity could be measured. | `input.p4_fields.functional_evidence_available` |
+| Evidence: functional evidence available | None for WWOX. CBS (cytosolic enzyme): activity and plasma homocysteine restored in mice for some alleles, none for others; ASPA C152W: insoluble protein, no activity detectable; HIKESHI: partial protein return with function-adjacent readouts. | `input.p4_fields.functional_evidence_available` |
 | Risk (class-level, as the card carries it) | UNKNOWN for WWOX; toxicity-bounded exposure window in the closest precedent (values not reproduced). | `input.p4_card.pharmacology` |
 | BLOCK-1 status | **UNKNOWN** (no BLOCK-1 field or statement on this card; UNKNOWN is not a pass) | `(none)` |
 | Time to ACCESS | UNKNOWN. Not documented in the repository. | `input.p4_card.time_to_access` |
 | Time to BENEFIT | UNKNOWN. | `input.p4_card.time_to_benefit` |
-| Feasibility: what must exist to test it | Inhibitor-first arm on the exact variant from a detectable baseline, read as soluble/pellet/total protein, with the proteasome and lysosome arms side by side, before any chase. | `input.p4_card.next_measurement` |
+| Feasibility: what must exist to test it | Route-first fate experiment on the exact variant in an expression-matched WWOX-null human system: soluble, pellet and total protein with an antibody-independent detection, mRNA in the same wells, half-life by pulse-chase; [cut: the card's field continues] | `input.p4_card.next_measurement` |
 
 ### P4-B-01 · amlexanox (PTC alleles only) · CANDIDATE · bridge `directional_summary` = UNRESOLVED
 
@@ -50,8 +50,8 @@ Candidates first (5), then abstentions (7); within each group the order is the c
 
 | Dimension | Cell (the card's own field, verbatim, or UNKNOWN) | Card field |
 |---|---|---|
-| Benefit: the ONE endpoint | Restoration of WWOX function by neuron-directed replacement; the single useful endpoint carried is spike-wave discharge rate. [cut: the card's field continues] | `input.p4_fields.endpoint_pursued` |
-| Benefit: symptomatic or modifying (card's expected contribution) | Recovery of function by replacement (R-class demonstrated in the null mouse); nothing is stated for clinical benefit. | `input.p4_card.expected_contribution` |
+| Benefit: the ONE endpoint | Early-window restoration of WWOX function (before the start of ECoG recording at about P14; phenotype onset never located) by neuron-directed replacement; the single useful endpoint carried is spike-wave discharge rate. [cut: the card's field continues] | `input.p4_fields.endpoint_pursued` |
+| Benefit: symptomatic or modifying (card's expected contribution) | Early-window restoration by replacement (early-window benefit demonstrated in the null mouse; recovery after onset not tested); nothing is stated for clinical benefit. | `input.p4_card.expected_contribution` |
 | Evidence: state | partial: the only measured rescue in the corpus, complete on several R-class endpoints, with no S, C or D datum. | `input.p4_card.state_of_known_roads` |
 | Evidence: functional evidence available | In the Wwox-null mouse, by one laboratory: SWD rate to wild-type level (single vector level); survival to 300 days at the higher vector level; a graded motor score; graded glycaemia at one age; WWOX protein graded; myelination qualitative only; [cut: the card's field continues] | `input.p4_fields.functional_evidence_available` |
 | Risk (class-level, as the card carries it) | No tumour surveillance of any kind in a pro-apoptotic tumour suppressor delivered irreversibly; no measured ceiling. [cut: the card's field continues] | `input.p4_card.evidence_for_and_against.against` |
