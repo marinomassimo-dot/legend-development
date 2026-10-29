@@ -3438,7 +3438,7 @@ Serves to:
 **Report mentions:** corpus alignment
 **Next action:** none — the live record for this DOI is [[paper_registry_current#PAPER 004]]; this row is kept as the discovery trace
 **Flags:** corpus placeholder resolved 2026-10-03 by `CC-20261003R-REGISTRY-01` (propagated by `BATCH_20261003_005`); the duplicate identity on the same DOI, `CORPUS-STUB-087`, was already retired to a pointer by `BATCH_20261003_003` from the wave-4 twin `CC-20261003W4-B-REGISTRY-01`, so this candidate's own retirement op was **dropped as already propagated** and no second retirement was written. The reading itself lives on `PAPER 004` and its receipts; no depth marker is restated here, so this row adds no reading to any coverage denominator
-**Note:** Title: Neuronal deletion of Wwox, associated with WOREE syndrome, causes epilepsy and myelin defects Reading update 2026-10-29 (`BATCH_20261019_027`): receipt `FTR-20261029-33914858-01`; astrocyte-specific deletion scored for delay, weight and survival only. See [[paper_registry_current#PAPER 004]].
+**Note:** Title: Neuronal deletion of Wwox, associated with WOREE syndrome, causes epilepsy and myelin defects Reading update 2026-10-29 (`BATCH_20261019_027`): receipt `FTR-20261029-33914858-01`; astrocyte-specific deletion scored for delay, weight and survival only. See [[paper_registry_current#PAPER 004]]. Reading update 2026-10-29 (`BATCH_20261019_029`): receipt `FTR-20261029-33914858-04`; deposit identity and Cre drivers (Nestin-Cre and Synapsin-Cre, stated in the Methods; no accession in the paper). See [[paper_registry_current#PAPER 004]].
 
 ---
 
@@ -4249,7 +4249,7 @@ Serves to:
 **Report mentions:** corpus alignment
 **Next action:** screening and tier assignment
 **Flags:** corpus placeholder / not yet screened
-**Note:** Title: Endothelial knockdown of WWOX increases inflammation in ventilator-induced lung injury
+**Note:** Title: Endothelial knockdown of WWOX increases inflammation in ventilator-induced lung injury Reading update 2026-10-29 (`BATCH_20261019_029`): receipt `FTR-20261029-38563965-02`; non-neural: a siRNA endothelial TMT proteome table is public as a supplement (no ProteomeXchange deposit). See [[paper_registry_current#PAPER 113]].
 
 ---
 
@@ -4413,7 +4413,7 @@ Serves to:
 **Report mentions:** corpus alignment
 **Next action:** screening and tier assignment
 **Flags:** corpus placeholder / not yet screened
-**Note:** Title: WWOX sensitises ovarian cancer cells to paclitaxel via modulation of the ER stress response
+**Note:** Title: WWOX sensitises ovarian cancer cells to paclitaxel via modulation of the ER stress response Reading update 2026-10-29 (`BATCH_20261019_029`): receipt `FTR-20261029-28749468-02`; non-neural: phospho-eIF2A and phospho-IRE-1 blots and a PERK band shift read with a total-PERK antibody, no deposit. See [[paper_registry_current#CORPUS-STUB-126]].
 
 ---
 
@@ -10804,7 +10804,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Current status:** screened — A
 **Next action:** full-text retrieval + deep-dive in next session
 **Flags:** FASE 1 batch entry / no deep-dive yet
-**Note:** Title: Modeling genetic epileptic encephalopathies using brain organoids Reading update 2026-10-29 (`BATCH_20261019_027`): receipt `FTR-20261029-34268881-01`; timing of the add-backs against the first measured phenotype. See [[paper_registry_current#PAPER 039]].
+**Note:** Title: Modeling genetic epileptic encephalopathies using brain organoids Reading update 2026-10-29 (`BATCH_20261019_027`): receipt `FTR-20261029-34268881-01`; timing of the add-backs against the first measured phenotype. See [[paper_registry_current#PAPER 039]]. Reading update 2026-10-29 (`BATCH_20261019_029`): receipt `FTR-20261029-34268881-12`; the add-back arms are not in GSE156243, and their readouts are functional, immunostaining, qPCR and immunoblot. See [[paper_registry_current#PAPER 039]].
 
 ## LIT-0366
 **Short title:** Methylation status of WWOX gene promoter CpG islands in epithelial ovarian ca...
@@ -12449,7 +12449,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Status:** processed
 **Status note:** complete — read in full, `FTR-20260810-42397075-04`; registry record [[paper_registry_current#PAPER 094]] (status set to the registry record's value by `BATCH_20260926_LITVOCAB`)
 **Discovery window:** post-harvest; this PMID had no literature entry before BATCH_20260920_002
-**Flags:** created by `CC-20260920-EIGHT-RECORD-CLASSIFICATION-01` to give an existing complete reading the entry its PAPER record links to Reading update 2026-10-29 (`BATCH_20261019_027`): receipt `FTR-20261029-42397075-01`; add-back at week 10 on a phenotype seen at week 7, radial glia not corrected. See [[paper_registry_current#PAPER 094]].
+**Flags:** created by `CC-20260920-EIGHT-RECORD-CLASSIFICATION-01` to give an existing complete reading the entry its PAPER record links to Reading update 2026-10-29 (`BATCH_20261019_027`): receipt `FTR-20261029-42397075-01`; add-back at week 10 on a phenotype seen at week 7, radial glia not corrected. See [[paper_registry_current#PAPER 094]]. Reading update 2026-10-29 (`BATCH_20261019_029`): receipts `FTR-20261029-42397075-06` and `-07`; the single-cell add-back contrast is against non-treated organoids, one library per condition, the accession is not accessible. See [[paper_registry_current#PAPER 094]].
 
 ---
 
@@ -22422,7 +22422,7 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Report mentions:** `research/fulltext_dossiers/PMID42909904.md` · `research/lucas_clarke_2026_corpus_integration_20261026.md` · `CC-20261026-SCIENTIST-A-LUCASCLARKE-01`
 **Next action:** blind locator audit of the narrowing items; MetaboLights MTBLS12344 (pyruvate rows) not retrieved
 **Evidence depth:** `complete_fulltext_read` — receipt `FTR-20261026-42909904-01`; manifest `deepdive_manifests/PMID42909904.json` (104 locators); landing [[paper_registry_current#PAPER 567]]
-**Note:** class-level record. Not medical advice.
+**Note:** class-level record. Not medical advice. Reading update 2026-10-29 (`BATCH_20261019_029`): receipt `FTR-20261029-42909904-04`; the knockdown depth is in Supplementary Figure 1 (qPCR at eclosion), not in the deposit. See [[paper_registry_current#PAPER 567]].
 
 ---
 ## LIT-0839

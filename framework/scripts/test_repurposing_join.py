@@ -1180,6 +1180,107 @@ class SupersededWordingGoneIT6(unittest.TestCase):
         self.assertIn("the only such rescue noted in the readings of this batch", papers)
 
 
+class RegistriesIT7(unittest.TestCase):
+    """BATCH_20261019_029: the iteration-7 results as the ledgers, registries, map, needs and card J01 must now state them.
+
+    Positive checks only (what each surface DOES say); the absence assertions are on the map, the needs file and the card J01,
+    which are edited in place and are not append-only. The census sentence of the append-only ledgers was replaced in place
+    inside this iteration's own earlier update, so it is checked by its new wording, not by the old one's absence.
+      1. the absence statements carry their perimeter (neural, deposited, 'not found by that search', non-neural examples) in
+         DL-MECH-173, HYP-20261026-10, the map R-10, the need NEED-WWOX-GENE-ADDITION and card J01 (packet and built card);
+      2. the ovarian reading says TOTAL-PERK antibody and a band shift, never a phospho-PERK antibody;
+      3. P3 is a discovery-ledger lead with its verdicts (INCONCLUSIVE; NO ADDED VALUE; not detected, not excluded) and its
+         falsifier, and three hypothesis updates change no status;
+      4. P4: the ISR sign stays unresolved, the Atf4 mRNA control-group caveat, the WOREE and SCAR12 contrast as a confounded
+         source-reported hypothesis, no patient subgroup;
+      5. every receipt a reading update of this batch names is recorded; the working model keeps the version of the manifest.
+    """
+
+    DR = "disease-models/wwox/research/drug_repurposing/"
+    BATCH = "BATCH_20261019_029"
+
+    def read(self, rel):
+        return (ROOT / rel).read_text(encoding="utf-8")
+
+    def record(self, text, ident):
+        return text.split("### " + ident, 1)[1].split("\n### ", 1)[0]
+
+    def test_absence_statements_carry_their_perimeter(self):
+        disc = self.read("disease-models/wwox/research/discovery_ledger_current.md")
+        b173 = self.record(disc, "DL-MECH-173 ")
+        for phrase in ("genetically WWOX-deficient neural system", "not found by that search is not shown absent",
+                       "given as examples and not as a complete list", "TOTAL-PERK antibody, not a phospho-PERK antibody",
+                       "which is not the same as no evidence of depth"):
+            self.assertIn(phrase, b173, phrase)
+        hyp = self.read("disease-models/wwox/research/therapeutic_hypotheses_ledger_current.md")
+        self.assertIn("for a genetically WWOX-deficient neural system (not found by that search is not shown absent",
+                      self.record(hyp, "HYP-20261026-10 "))
+        m = self.read("disease-models/wwox/analysis/mechanism_intervention_map.md")
+        r10 = m.split("### R-10 ", 1)[1].split("### R-11 ", 1)[0]
+        self.assertIn("for a genetically WWOX-deficient neural system (not found by that search is not shown absent", r10)
+        self.assertNotIn("flux record in any WWOX-deficient system", r10)
+        needs = self.read(self.DR + "needs/needs.json")
+        self.assertIn("The only post-onset add-back found is organoid hyperexcitability", needs)
+        self.assertIn("not vector-treated, organoids", needs)
+        self.assertNotIn("The only post-onset add-back is organoid", needs)
+        for name in ("J01_glial_reactivity_modulation.packet.json", "J01_glial_reactivity_modulation.card.json"):
+            text = self.read(self.DR + "cards/" + name)
+            self.assertIn("no study in the P10 reading set was found that reads glia and EEG in the same animals", text, name)
+            self.assertNotIn("no study reads glia and EEG in the same animals", text, name)
+
+    def test_the_ovarian_reading_is_total_perk_and_a_band_shift(self):
+        papers = self.read("disease-models/wwox/registries/paper_registry_current.md")
+        stub = papers.split("## CORPUS-STUB-126", 1)[1].split("\n## ", 1)[0]
+        self.assertIn("**Reading update (2026-10-29, `" + self.BATCH, stub)
+        self.assertIn("TOTAL-PERK antibody and not a phospho-PERK antibody", stub)
+        self.assertIn("NON-NEURAL", stub)
+        lit = self.read("disease-models/wwox/registries/literature_tracking_log_current.md")
+        l145 = lit.split("## LIT-0145", 1)[1].split("\n## ", 1)[0]
+        self.assertIn("a PERK band shift read with a total-PERK antibody", l145)
+
+    def test_p3_lead_and_hypothesis_updates(self):
+        disc = self.read("disease-models/wwox/research/discovery_ledger_current.md")
+        lead = disc.split("### DL-MECH-174 ", 1)[1]
+        self.assertIn("**Status:** open", lead)
+        for phrase in ("INCONCLUSIVE", "NO ADDED VALUE", "NOT DETECTED, NOT EXCLUDED", "5 of 6 genes", "p = 0.060",
+                       "ChEMBL activity endpoint", "GSE70138", "replicated WWOX-deficient human neural contrast",
+                       "carry no demonstrated WWOX-loss relevance"):
+            self.assertIn(phrase, lead, phrase)
+        hyp = self.read("disease-models/wwox/research/therapeutic_hypotheses_ledger_current.md")
+        for ident, status in (("HYP-20260709-01 ", None), ("HYP-20260709-05 ", "`parked`"), ("HYP-20261026-11 ", "`generated`")):
+            blk = self.record(hyp, ident)
+            self.assertIn("UPDATE 2026-10-29 (`" + self.BATCH, blk, ident)
+            self.assertIn("IT7 P3", blk, ident)
+            self.assertIn("no support is added", blk, ident)
+            if status:
+                self.assertIn("Status " + status, blk.split("`" + self.BATCH + "`", 1)[1], ident)
+
+    def test_p4_context_note_on_the_isr_sign(self):
+        disc = self.read("disease-models/wwox/research/discovery_ledger_current.md")
+        upd = self.record(disc, "DL-MECH-173 ").split("`" + self.BATCH + "`", 1)[1]
+        for phrase in ("stays UNRESOLVED when 13 contexts", "182-cell matrix", "rests partly on the control group",
+                       "not an ISR call", "WOREE-against-SCAR12 organoid difference",
+                       "confounded with variant type, individual and batch",
+                       "NO PATIENT SUBGROUP is supported", "no response label is given to anyone"):
+            self.assertIn(phrase, upd, phrase)
+
+    def test_receipts_named_by_the_reading_updates_are_recorded_and_the_working_model_keeps_its_version(self):
+        ledger = self.read("disease-models/wwox/registries/fulltext_read_receipts.jsonl")
+        recorded = set(re.findall(r'"event_id": ?"(FTR-[0-9]+-[0-9]+-[0-9]+)"', ledger))
+        named = set()
+        for rel in ("disease-models/wwox/registries/paper_registry_current.md", "disease-models/wwox/registries/literature_tracking_log_current.md"):
+            for line in self.read(rel).splitlines():
+                if "`" + self.BATCH + "`" in line:
+                    named |= set(re.findall(r"FTR-[0-9]{8}-[0-9]+-[0-9]+", line))
+        mine = {"FTR-20261029-" + x for x in ("28749468-02", "33914858-04", "34268881-12", "38563965-02", "42397075-06", "42397075-07", "42909904-04")}
+        self.assertTrue(mine <= named, sorted(mine - named))   # a literature line may also carry the earlier batch's receipt
+        self.assertFalse(named - recorded, sorted(named - recorded))
+        wm = self.read("disease-models/wwox/registries/working_model_current.md")
+        version = re.search(r"\*\*Version:\*\* (WM_v\S+)", wm).group(1)
+        self.assertIn("working_model_version: " + version.split("_20")[0], self.read("framework/state/state_manifest_current.md"))
+        self.assertIn("`BATCH_20261019_028`", wm.split("\n## Disease identity", 1)[0])
+
+
 class LoopPropagationIT7P6(unittest.TestCase):
     """IT7 P6 (roadmap R6): one inconclusive / negative computational result, entered once in the needs and three cards, reaches
     every consumer that reads them. Positive checks only: what each surface DOES say, looked up by identifier and by the wording the
