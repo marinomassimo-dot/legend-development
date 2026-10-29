@@ -264,7 +264,9 @@ def build(needs_path=rs.DEFAULT_NEEDS, catalog_dir: Path = cc.DEFAULT_DIR, dr: P
             targets_ = card_rows.get(cid, [])
         elif subj.startswith("CHEMBL"):
             fid = idx.family["CAT:" + subj]
-            row(fid)["cards"].append({"card_id": cid, "attachment": "assertion_subject", "rule": "per-assertion subject in assertion_pertinence.tsv"}) if not any(x["card_id"] == cid and x["attachment"] == "assertion_subject" for x in rows[fid]["cards"]) else None
+            frow = row(fid)    # create the family row FIRST: a catalogue family with no association row has none yet (KeyError found in IT6 P9)
+            if not any(x["card_id"] == cid and x["attachment"] == "assertion_subject" for x in frow["cards"]):
+                frow["cards"].append({"card_id": cid, "attachment": "assertion_subject", "rule": "per-assertion subject in assertion_pertinence.tsv"})
             targets_ = [(fid, "assertion_subject")]
         else:
             rid = f"INT:{cid}:tool"
