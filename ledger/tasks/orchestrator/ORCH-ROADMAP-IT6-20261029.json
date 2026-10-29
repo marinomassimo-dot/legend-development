@@ -8,7 +8,7 @@
  "START_UTC": "2026-10-29T09:00:00Z",
  "BASELINE": "030a8a5c23f218cfc0e56e6c7608b22f19741dd9 = development/main (verified equal after fetch)",
  "AUTHORISED_QUEUE_20261029B": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_A_BASELINE_AND_RULES": {
    "order": 1,
    "steps": [
@@ -112,14 +112,24 @@
    "steps": [
     {
      "step": "P14 propagation, integration, continuity, close",
-     "status": "IN_PROGRESS",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "integration done (receipts 913, BATCH_027/028, WM_v7.29); final battery and validated push pending"
+     "evidence": "integration: receipts 913 (28 IT6 events + one late 2026-10-19 complete read), BATCH_20261019_027 and _028 (WM_v7.29, wording only) with an adversarial review repaired, cards/needs/coverage/views regenerated; README iteration-6 section; self-eval and scout entry; release battery PASS WITH SKIPS 163 targets/7 skipped on 232773753c9f (first mid-session run on 6849f33a FAIL: shebang mode and ragged TSV; final-candidate run FAIL: absence assertions on append-only state; both repaired and rerun); validated push 7dd5e872 (gate=PASS, verified=ls-remote); lint 0 BLOCK, growth PASS, receipts OK, gate 0 blocks on 7dd5e872 (documentary commits after the battery SHA: a concurrent roadmap_current.md by another actor, and this record)"
     }
    ]
   }
  },
- "DECISIONS_TAKEN": [],
- "DEFAULTS_TAKEN": [],
+ "DECISIONS_TAKEN": [
+  "2026-10-29: F/C/P review delegated (producer + blind verifier), not an operator reading; rule changes kept within existing categories (two tag kinds retired, none added).",
+  "2026-10-29: P4 uses the mouse P17 deposit chosen by the P3 census; pre-analysis committed before any value was opened; ISR sign conflict left UNRESOLVED.",
+  "2026-10-29: working model bumped once (MINOR, WM_v7.29, wording) only after the adversarial review showed one line asserting a measured window; no claim created or promoted.",
+  "2026-10-29: ToolUniverse WATCH, no adoption (re-serves ChEMBL/GtoPdb rows); openFDA-NDC radar probe removed as noise.",
+  "2026-10-29: repository visibility and history untouched (operator); shareable build remains a local preview."
+ ],
+ "DEFAULTS_TAKEN": [
+  "Intermediate push not made: section 21d requires the battery on the pushed ref and code changed until the end; one validated push after the final battery.",
+  "Staged receipt ids that collided were renamed (-02 or -05), and a never-recorded 2019-10-19 complete read was recorded after re-fetching its evidence (same SHA-256).",
+  "One worktree (P9) was removed with --force after byte-comparing its only ignored files with the root copies."
+ ],
  "STOP_LOG": []
 }
