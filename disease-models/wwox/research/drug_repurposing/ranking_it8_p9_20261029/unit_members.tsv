@@ -1,0 +1,41 @@
+unit_id	family_id	name	cards	roles	records_in_family	status_class	access_categories	name_twins_not_merged	kind
+U01	FAM:CAT:CHEMBL1469	PHENYLBUTANOIC ACID	A01_pba_class	named_member	2	approved_any_source	prescription; unknown/unverified		molecule_family
+U02		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)	A02_proteasome_inhibitor_class						drug_class
+U03		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)	A03_client_binding_chaperone						mechanism_class
+U04		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)	A04_er_proteostasis_regulators						mechanism_class
+U05		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)	A05_hsp70_axis						mechanism_class
+U06	FAM:CAT:CHEMBL1096	AMLEXANOX	B01_amlexanox; B02_readthrough_class	identity; named_member	1	approved_any_source	unknown/unverified	FAM:CAT:DGIDB:911606f13247	molecule_family
+U06	FAM:CAT:CHEMBL256997	ATALUREN	B02_readthrough_class	named_member	1	approved_any_source	unknown/unverified	FAM:CAT:DGIDB:2625a9729f49	molecule_family
+U07		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)	C01_aav9_wwox; C04_aav9_endpoint_families						modality_gene_addition
+U08		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)	C02_splice_aso						modality_oligonucleotide
+U09		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)	C03_crispra_boost						modality_gene_regulation
+U10		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)	D01_a51						experimental_compound
+U11		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)	D02_wnt_tankyrase						mechanism_class
+U12		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)	E01_isr_modulators						mechanism_class
+U13	FAM:CAT:CHEMBL1983350	STIRIPENTOL	E02_ldh_inhibition	assertion_subject; named_member	1	approved_any_source	prescription	FAM:CAT:DGIDB:480750365004	molecule_family
+U13	INT:E02_ldh_inhibition:tool	LDH inhibition or lowering (stiripentol as the approved paediatric member; LDHA tool compounds; an LDHA-directed oligonucleotide approved for another disease) [tool or genetic subject]	E02_ldh_inhibition	tool_subject					tool_compound_or_genetic_precedent_not_in_catalogue
+U14	FAM:CAT:CHEMBL306823	SODIUM DICHLOROACETATE	E03_pdk_inhibition_dca; I01_pdk_inhibition_dca_premise_seizure_glycaemia	assertion_subject; identity	1	clinical_candidate	experimental	FAM:CAT:DGIDB:901979e6ba30	molecule_family
+U14	INT:E03_pdk_inhibition_dca:tool	PDK inhibition (dichloroacetate and research PDK inhibitors) as the pyruvate-oxidation branch, kept separate from what the study measured [tool or genetic subject]	E03_pdk_inhibition_dca	tool_subject					tool_compound_or_genetic_precedent_not_in_catalogue
+U15		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)	E04_ketogenic_lactate_axis; EB-KD-01						diet
+U16	FAM:CAT:CHEMBL190461	CANNABIDIOL	EB-CBD-AX-01	named_member	1	approved_any_source	prescription; supplement	FAM:CAT:DGIDB:ebf63361413e	molecule_family
+U17	FAM:CAT:CHEMBL696	ETHOSUXIMIDE	EB-ETX-01	identity	1	approved_any_source	prescription	FAM:CAT:DGIDB:6998a1a2d947	molecule_family
+U17	INT:EB-ETX-01:tool	Ethosuximide (T-type calcium-channel blocker class contrast; lead DL-MECH-170) [tool or genetic subject]	EB-ETX-01	tool_subject					tool_compound_or_genetic_precedent_not_in_catalogue
+U18		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)	EB-HORM-AX-01						drug_class
+U19	FAM:CAT:CHEMBL413	SIROLIMUS	EB-MTOR-AX-01	named_member	1	approved_any_source	prescription	FAM:CAT:DGIDB:13284e35045a	molecule_family
+U20	FAM:CAT:CHEMBL146927	CPP-115 FREE BASE	H02_gabaat_inactivator_myelin_exposure	assertion_subject; named_member	3	clinical_candidate; no_status_statement	experimental; unknown/unverified		molecule_family
+U20	FAM:CAT:CHEMBL89598	VIGABATRIN	EB-VGB-01; H02_gabaat_inactivator_myelin_exposure	assertion_subject; identity; named_member	1	approved_any_source	prescription	FAM:CAT:DGIDB:358b8a817686	molecule_family
+U21	FAM:CAT:CHEMBL1214124	PERAMPANEL	F01_glutamate_receptor_node; F04_nmdar_intervention_class	assertion_subject	1	approved_any_source	prescription	FAM:CAT:DGIDB:768c891abaa7	molecule_family
+U21	FAM:CAT:CHEMBL1699	MEMANTINE	F01_glutamate_receptor_node; F04_nmdar_intervention_class	assertion_subject	2	approved_any_source	prescription; unknown/unverified		molecule_family
+U21	FAM:CAT:CHEMBL182066	RADIPRODIL	F04_nmdar_intervention_class	assertion_subject	1	clinical_candidate	experimental		molecule_family
+U21	FAM:CAT:CHEMBL39664	SELFOTEL	F04_nmdar_intervention_class	assertion_subject	1	clinical_candidate	experimental	FAM:CAT:DGIDB:7a0554580c65	molecule_family
+U21	INT:F01_glutamate_receptor_node:tool	Glutamate-receptor node of the neuron-specific Wwox bursting phenotype: memantine (NMDAR pore blocker) and perampanel (AMPAR antagonist) [tool or genetic subject]	F01_glutamate_receptor_node	tool_subject					tool_compound_or_genetic_precedent_not_in_catalogue
+U22		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)	F02_myelination_activity_sign						mechanism_class
+U23		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)	F03_bumetanide_chloride_gradient						single_compound_class_level
+U24	FAM:CAT:CHEMBL1201333	LITHIUM	G01_lithium_gsk3	identity	1	clinical_candidate	experimental; supplement	FAM:CAT:DGIDB:be65bb20ae7f	molecule_family
+U25	FAM:CAT:CHEMBL4217292	APINOCALTAMIDE	H01_apinocaltamide_ttype	identity	1	clinical_candidate	experimental	FAM:CAT:DGIDB:b811c040b8a4	molecule_family
+U25	INT:H01_apinocaltamide_ttype:tool	Apinocaltamide (triple T-type calcium channel blocker) as a discriminator of the ethosuximide result [tool or genetic subject]	H01_apinocaltamide_ttype	tool_subject					tool_compound_or_genetic_precedent_not_in_catalogue
+U26		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)	J01_glial_reactivity_modulation						mechanism_class
+U27		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)	P11_magnesium_nmdar_gate						nutrient_ion
+X01		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)	EB-DEV-AX-01						axis_not_an_intervention
+X02		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)	EB-GROWTH-AX-01						axis_not_an_intervention
+X03		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)	EB-PDANCHOR-AX-01						axis_not_an_intervention

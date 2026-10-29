@@ -14,8 +14,9 @@
    "steps": [
     {
      "step": "P0 baseline and propagation of three IT7 formulations (predictive comparison, WWOX contribution, absence of data)",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "baseline reconciled; three IT7 formulations traced to the surfaces that carried the overextension (session self-evaluation, README row, cards E02/I01, needs, view labels) and corrected with positive regression PerimeterOfThePredictiveResultIT8; pilot results, criteria and history untouched; view 146 tests OK"
     }
    ]
   },
