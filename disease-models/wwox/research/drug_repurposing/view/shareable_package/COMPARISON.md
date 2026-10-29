@@ -37,7 +37,7 @@ The catalogue holds 44,211 records. Its target rows by class: {"A": 1623, "B": 4
 | CIViC | A (attribution) | 1,120 | CC0 1.0; verified at docs.civicdb.org | 19 |
 | COSMIC | C (identifiers and counts) | 37 | custom terms, declared by DGIdb | 0 |
 | CancerCommons | C (identifiers and counts) | 109 | custom terms, declared by DGIdb | 0 |
-| ChEMBL | B (share-alike) | 16,947 | CC BY-SA 3.0 Unported; attribution: ChEMBL URL and release version | 0 |
+| ChEMBL | B (share-alike) | 16,947 | CC BY-SA 3.0 Unported (chembl.gitbook.io); attribution: ChEMBL URL and release version (chembl.github.io/chembl-licensing, read 2026-10-29) | 0 |
 | ChEMBL curated mechanism | B (share-alike) | 8,068 | CC BY-SA 3.0 Unported (ChEMBL curated mechanisms) | 0 |
 | ClearityFoundationBiomarkers | C (identifiers and counts) | 163 | unknown; data no longer available | 0 |
 | ClearityFoundationClinicalTrial | C (identifiers and counts) | 240 | unknown; data no longer available | 0 |
@@ -48,9 +48,9 @@ The catalogue holds 44,211 records. Its target rows by class: {"A": 1623, "B": 4
 | JAX-CKB | C (identifiers and counts) | 2,148 | CC BY-NC-SA 4.0, declared by DGIdb | 0 |
 | MyCancerGenome | C (identifiers and counts) | 829 | restrictive custom terms, declared by DGIdb | 0 |
 | MyCancerGenomeClinicalTrial | C (identifiers and counts) | 317 | restrictive custom terms, declared by DGIdb | 0 |
-| NCI | C (identifiers and counts) | 6,231 | public domain declared by DGIdb only; not verified at NCI | 0 |
+| NCI | C (identifiers and counts) | 6,231 | public domain declared by DGIdb only; NCI reuse page (read 2026-10-29) says NCI text is free of copyright but does not name data or the Cancer Gene Index | 0 |
 | OncoKB | C (identifiers and counts) | 148 | non-commercial custom terms, declared by DGIdb | 0 |
-| PharmGKB | B (share-alike) | 5,976 | CC BY-SA 4.0 (ClinPGx); policy page not read | 0 |
+| PharmGKB | B (share-alike) | 5,976 | CC BY-SA 4.0 (ClinPGx), reported by the DGIdb service; the ClinPGx data-usage page is script-rendered and its text could not be read on 2026-10-29 | 0 |
 | TALC | C (identifiers and counts) | 602 | rights in a publisher's supplementary table | 0 |
 | TEND | C (identifiers and counts) | 2,242 | rights in a publisher's supplementary table | 0 |
 | TTD | C (identifiers and counts) | 15,246 | unclear (all rights reserved versus open access), declared by DGIdb | 0 |

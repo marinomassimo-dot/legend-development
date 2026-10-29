@@ -42,7 +42,7 @@
     }
   },
   "counts_and_identifiers_only": {
-    "NCI Cancer Gene Index (via DGIdb)": "class C until its terms are read at NCI: DGIdb declares public domain, the Cancer Gene Index page named by DGIdb's importer is gone and cancer.gov's reuse policy names NCI products, not this dataset (P1 independent verification, row L3); rows are counted, never embedded",
+    "NCI Cancer Gene Index (via DGIdb)": "class C until the Cancer Gene Index is covered by a sentence at NCI: DGIdb declares public domain; NCI's reuse page (cancer.gov/policies/copyright-reuse, read 2026-10-29) says text in NCI products is free of copyright unless otherwise indicated, asks that NCI be credited, and flags third-party graphics, but it uses neither the words public domain nor data or datasets and does not name the Cancer Gene Index (IT7 P8 verifier D4; IT8 P2 re-read); rows are counted, never embedded",
     "ChEMBL": "CC BY-SA 3.0 (EMBL-EBI): no ChEMBL content in the single page; ChEMBL identifiers are kept; the ChEMBL records and curated mechanisms of the twelve card compounds are shipped as a separate class-B file with its own licence text and credit line (shareable_package/class_b/chembl_cc-by-sa-3.0/)",
     "GtoPdb (via DGIdb and the public download)": "class B, not shipped: database ODbL and contents CC BY-SA 4.0 at once (two licences on the same rows); counts only",
     "ClinPGx / PharmGKB (via DGIdb)": "class B, not shipped: CC BY-SA 4.0 declared by DGIdb; the data-usage policy page was not read; counts only",
@@ -59,7 +59,7 @@
     },
     "ChEMBL": {
       "class": "B",
-      "terms": "CC BY-SA 3.0 Unported; attribution: ChEMBL URL and release version"
+      "terms": "CC BY-SA 3.0 Unported (chembl.gitbook.io); attribution: ChEMBL URL and release version (chembl.github.io/chembl-licensing, read 2026-10-29)"
     },
     "ChEMBL curated mechanism": {
       "class": "B",
@@ -75,11 +75,11 @@
     },
     "NCI": {
       "class": "C",
-      "terms": "public domain declared by DGIdb only; not verified at NCI"
+      "terms": "public domain declared by DGIdb only; NCI reuse page (read 2026-10-29) says NCI text is free of copyright but does not name data or the Cancer Gene Index"
     },
     "PharmGKB": {
       "class": "B",
-      "terms": "CC BY-SA 4.0 (ClinPGx); policy page not read"
+      "terms": "CC BY-SA 4.0 (ClinPGx), reported by the DGIdb service; the ClinPGx data-usage page is script-rendered and its text could not be read on 2026-10-29"
     },
     "TdgClinicalTrial": {
       "class": "C",
@@ -188,6 +188,16 @@
       "licence": "identifiers only; ChEMBL content is not embedded (class B file shipped separately)",
       "attribution": "ChEMBL identifiers (CHEMBL...): EMBL-EBI, https://www.ebi.ac.uk/chembl/, release ChEMBL_37 (2026-05-01)",
       "url": "https://www.ebi.ac.uk/chembl/"
+    },
+    "GEO series and UniProt accessions cited in own text": {
+      "licence": "accession identifiers only (GSE126075, GSE156243, UniProt accession numbers); no deposited matrix, sequence or annotation text is embedded; NCBI places no restriction on its data but submitters may claim rights (NCBI policies page, read 2026-10-29); the UniProt licence page was not readable on 2026-10-29",
+      "attribution": "Gene Expression Omnibus, National Center for Biotechnology Information (https://www.ncbi.nlm.nih.gov/geo/); UniProt Consortium (https://www.uniprot.org/)",
+      "url": "https://www.ncbi.nlm.nih.gov/home/about/policies/"
+    },
+    "ClinVar-derived counts and RefSeq accession in own text": {
+      "licence": "counts computed in this repository from a ClinVar snapshot, and the RefSeq accession NM_016373.4; NCBI information created by or for the US government is public domain, ClinVar asks for attribution of ClinVar and its submitters (NCBI policies page read 2026-10-29; the ClinVar data-use page was not readable)",
+      "attribution": "Source: NCBI ClinVar and RefSeq, National Library of Medicine (https://www.ncbi.nlm.nih.gov/clinvar/)",
+      "url": "https://www.ncbi.nlm.nih.gov/home/about/policies/"
     },
     "Catalogue record identifiers": {
       "licence": "opaque identifiers of this repository's catalogue (CAT:...), no source content",

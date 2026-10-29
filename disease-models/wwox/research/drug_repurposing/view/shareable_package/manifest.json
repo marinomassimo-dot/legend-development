@@ -68,7 +68,7 @@
    },
    "^\\.cur\\.footer\\.": {
     "class": "SRC_META",
-    "values": 79,
+    "values": 87,
     "why": "attribution footer: sources, licences, credit lines"
    },
    "^\\.cur\\.needs\\[\\]\\.obs\\[\\]\\.(cite)$": {
@@ -196,14 +196,15 @@
    "PMID": 55
   },
   "links": {
-   "distinct_hrefs": 58,
-   "external_public": 6,
+   "distinct_hrefs": 59,
+   "external_public": 7,
    "hosts": [
     "civicdb.org",
     "open.fda.gov",
     "www.docm.info",
     "www.ebi.ac.uk",
     "www.genenames.org",
+    "www.ncbi.nlm.nih.gov",
     "www.nlm.nih.gov"
    ],
    "internal_anchors": 52
@@ -373,7 +374,7 @@
   {
    "label": "NCI Cancer Gene Index (via DGIdb)",
    "retrieved": null,
-   "terms": "class C until its terms are read at NCI: DGIdb declares public domain, the Cancer Gene Index page named by DGIdb's importer is gone and cancer.gov's reuse policy names NCI products, not this dataset (P1 independent verification, row L3); rows are counted, never embedded",
+   "terms": "class C until the Cancer Gene Index is covered by a sentence at NCI: DGIdb declares public domain; NCI's reuse page (cancer.gov/policies/copyright-reuse, read 2026-10-29) says text in NCI products is free of copyright unless otherwise indicated, asks that NCI be credited, and flags third-party graphics, but it uses neither the words public domain nor data or datasets and does not name the Cancer Gene Index (IT7 P8 verifier D4; IT8 P2 re-read); rows are counted, never embedded",
    "version": null
   },
   {
@@ -438,7 +439,7 @@
   "OWN": 54109,
   "ROWNAME": 1506,
   "SRC_A": 91,
-  "SRC_META": 244,
+  "SRC_META": 252,
   "UI": 779
  },
  "embedded_sources": [
@@ -473,8 +474,8 @@
  ],
  "files": {
   "COMPARISON.md": {
-   "bytes": 6113,
-   "sha256": "3569aac0a2ca6a008586e67ce47b52533fa9c976366ff1c8c9c52789e1810b2d"
+   "bytes": 6384,
+   "sha256": "680da624aba7f996ad70a596aacfefa037c6061a78d7ad9bdfe7490fade82e35"
   },
   "LICENSES/CC-BY-4.0.txt": {
    "bytes": 18657,
@@ -493,8 +494,8 @@
    "sha256": "e5dfa90d88e2069a2e4fd13429e8ebaefb7bd92fbbaede065af905656bc7ba87"
   },
   "NOTICE.md": {
-   "bytes": 10871,
-   "sha256": "2fa560e147b4a999a5cbd1c920baed2c3cd185a201e4c83e3af1f9dc621f6931"
+   "bytes": 12176,
+   "sha256": "de72b8cdf7c59f8e2a04ca4ecfba03a28f858ed1239e2829bb20a0dddd3693cb"
   },
   "README.md": {
    "bytes": 4642,
@@ -502,7 +503,7 @@
   },
   "TEXT_PROVENANCE.json": {
    "bytes": 1870,
-   "sha256": "f6cfa02719c97ec773310f4d023799e86e6bb5ad14614bd0c5e007fcce86718d"
+   "sha256": "222e3c97b417078c4896ac552d53a7ed0048b55978c9e1dc6f01bc2625416f19"
   },
   "class_b/chembl_cc-by-sa-3.0/CREDIT.txt": {
    "bytes": 1636,
@@ -517,8 +518,8 @@
    "sha256": "d8fe6a3455466783564803428b6318c1c442db6a16dfb97de8a6b7dcf944cc9d"
   },
   "index.html": {
-   "bytes": 2475675,
-   "sha256": "577a8745ce96be7462c673bc8fffd4e7d83b24acd372ddebbdabe2c9ace05826"
+   "bytes": 2478558,
+   "sha256": "ad5b8350e6e3ba4773f9590f3171537f80f8f047bb598e0a40b544210db6b5f4"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",
@@ -540,6 +541,18 @@
    "label": "ChEMBL identifiers",
    "licence": "identifiers only; ChEMBL content is not embedded (class B file shipped separately)",
    "url": "https://www.ebi.ac.uk/chembl/"
+  },
+  {
+   "attribution": "Gene Expression Omnibus, National Center for Biotechnology Information (https://www.ncbi.nlm.nih.gov/geo/); UniProt Consortium (https://www.uniprot.org/)",
+   "label": "GEO series and UniProt accessions cited in own text",
+   "licence": "accession identifiers only (GSE126075, GSE156243, UniProt accession numbers); no deposited matrix, sequence or annotation text is embedded; NCBI places no restriction on its data but submitters may claim rights (NCBI policies page, read 2026-10-29); the UniProt licence page was not readable on 2026-10-29",
+   "url": "https://www.ncbi.nlm.nih.gov/home/about/policies/"
+  },
+  {
+   "attribution": "Source: NCBI ClinVar and RefSeq, National Library of Medicine (https://www.ncbi.nlm.nih.gov/clinvar/)",
+   "label": "ClinVar-derived counts and RefSeq accession in own text",
+   "licence": "counts computed in this repository from a ClinVar snapshot, and the RefSeq accession NM_016373.4; NCBI information created by or for the US government is public domain, ClinVar asks for attribution of ClinVar and its submitters (NCBI policies page read 2026-10-29; the ClinVar data-use page was not readable)",
+   "url": "https://www.ncbi.nlm.nih.gov/home/about/policies/"
   },
   {
    "attribution": "LEGEND WWOX repurposing module (this repository)",
@@ -606,7 +619,7 @@
    "ChEMBL": {
     "catalogue_rows": 16947,
     "class": "B",
-    "terms": "CC BY-SA 3.0 Unported; attribution: ChEMBL URL and release version"
+    "terms": "CC BY-SA 3.0 Unported (chembl.gitbook.io); attribution: ChEMBL URL and release version (chembl.github.io/chembl-licensing, read 2026-10-29)"
    },
    "ChEMBL curated mechanism": {
     "catalogue_rows": 8068,
@@ -661,7 +674,7 @@
    "NCI": {
     "catalogue_rows": 6231,
     "class": "C",
-    "terms": "public domain declared by DGIdb only; not verified at NCI"
+    "terms": "public domain declared by DGIdb only; NCI reuse page (read 2026-10-29) says NCI text is free of copyright but does not name data or the Cancer Gene Index"
    },
    "OncoKB": {
     "catalogue_rows": 148,
@@ -671,7 +684,7 @@
    "PharmGKB": {
     "catalogue_rows": 5976,
     "class": "B",
-    "terms": "CC BY-SA 4.0 (ClinPGx); policy page not read"
+    "terms": "CC BY-SA 4.0 (ClinPGx), reported by the DGIdb service; the ClinPGx data-usage page is script-rendered and its text could not be read on 2026-10-29"
    },
    "TALC": {
     "catalogue_rows": 602,
