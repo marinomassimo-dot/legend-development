@@ -60,7 +60,7 @@ def e02(o):
         c["next_measurement"], "Only then a compound arm", "separable from LDH.",
         "Only then a compound arm. IT8 P3 2026-10-29: stiripentol is not carried as the LDH-engagement probe, because the readable enzyme data give 7 percent inhibition at 2 millimolar and about 10 percent at 0.5 millimolar "
         "(no fitted value: no enzyme-level support), the US label names no LDH mechanism, the one cell-level signal found (four rows of a 2022 glycolate-oxidase and LDHA double-inhibitor series: relative oxalate output 0.27 to 0.70 "
-        "at 10 micromolar in mouse hepatocytes) does not establish LDH engagement, and the 42 to 500 micromolar range quoted for it is a secondary figure; the arm is a nanomolar human-LDHA inhibitor taken from the ChEMBL target rows "
+        "at 10 micromolar in mouse hepatocytes) does not establish LDH engagement, and the 42 to 500 micromolar range quoted for it is a secondary figure; the arm is a nanomolar human-LDHA inhibitor taken from the curated database target entries "
         f"(every retrieved qualifying molecule is listed by ChEMBL id in {DOC}/measures_detail.tsv, not ranked), with selectivity over LDHB to be established per compound, and stiripentol is kept as a complex I and GABA-A comparator "
         "so that its other pharmacology is separable from LDH.", "e02.next")
     c["pharmacology"] = seg(
@@ -70,10 +70,10 @@ def e02(o):
         "the US label of 2026-04-27 states that the human mechanism is unknown and names GABA-A and cytochrome P450 inhibition as possible mechanisms, gives protein binding of 99 percent and no peak concentration). ", "e02.pharm")
     against = c["evidence_for_and_against"]["against"]
     new = ("IT8 P3 (2026-10-29): there is no enzyme-level support for stiripentol as a way to test the LDH node - 7 percent inhibition at 2 millimolar (ChEMBL) and about 10 percent at 0.5 millimolar (independent report), "
-           "no fitted LDH potency among its filtered and unfiltered ChEMBL rows, a label that does not name LDH; one cell-level signal (mouse hepatocyte oxalate output at 10 micromolar, shared with glycolate oxidase) is not LDH engagement; "
+           "no fitted LDH potency among the curated database entries read for it, a label that does not name LDH; one cell-level signal (mouse hepatocyte oxalate output at 10 micromolar, shared with glycolate oxidase) is not LDH engagement; "
            "the third report (Sada 2015) remains abstract-only and secondary.")
     for i, t in enumerate(against):
-        if t.startswith("IT8 P3 (2026-10-29): the pertinence of stiripentol"):
+        if t.startswith("IT8 P3 (2026-10-29): "):
             against[i] = new
     if new not in against:
         against.append(new)

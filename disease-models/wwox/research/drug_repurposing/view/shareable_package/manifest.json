@@ -517,8 +517,8 @@
    "sha256": "d8fe6a3455466783564803428b6318c1c442db6a16dfb97de8a6b7dcf944cc9d"
   },
   "index.html": {
-   "bytes": 2482420,
-   "sha256": "19c136a4eefd1667e0d9e8261c60ebacf011cbfa9a33f8b2735691e1bd1b3ddd"
+   "bytes": 2482435,
+   "sha256": "1236a53ad427ba42ad43f64376c3e87c234baa761d1b094a8bebc20eb1b510a9"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",
