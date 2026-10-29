@@ -43,8 +43,9 @@
     },
     {
      "step": "P3 R3 first predictive network comparison (pre-registered, exploratory unless independent)",
-     "status": "TODO",
-     "owner": "scientist-a"
+     "status": "DONE",
+     "owner": "scientist-a",
+     "evidence": "network_comparison_it7_p3_20261029: pre-registered (eadbe26a, amendment ae430b6d, results 0d9d9879); NET external-only rho 0.047, SIG 0.143 (not detected, not excluded; MDE ~0.157), REF-1 -0.085 on a 256-family universe: no added value for any method; WWOX-enriched vs external-only no difference; module transfer to the P47T deposit inconclusive (p=0.060, 5/6 genes); exploratory; verifier reproduced byte-identical and recomputed independently; 2 medium repaired 71436c8a"
     },
     {
      "step": "P4 R4 context differences and subgroup hypotheses",
