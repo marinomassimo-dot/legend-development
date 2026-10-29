@@ -3311,8 +3311,8 @@ RANK_DIR = "ranking_it8_p9_20261029"
 RK_GROUP_IDS = ["G1", "G2a", "G2b", "G3", "G4a", "G4b", "G5", "GU"]
 RK_CLASSES = ["ORD", "WEAK", "INSUFF", "EXCL"]
 RK_VIEWS = ["general", "broad", "partial"]
-RK_LINKS = ["effect_observed_in_wwox_system", "directionally_compatible_documented_action", "documented_association_target_listed", "other_disease_precedent_only", "card_inference_by_mechanism_no_catalogue_row"]
-RK_EVQ = ["favourable_controlled", "favourable_thin", "favourable_thin_specificity_uncertain", "contested", "no_wwox_test_target_supported", "no_wwox_test_target_hypothesis", "weak_pertinence_or_outside_counter", "premise_missing"]
+RK_LINKS = ["effect_observed_in_wwox_system", "directionally_compatible_documented_action", "documented_association_target_listed", "other_disease_precedent_only", "other_disease_precedent_plus_wwox_case_level_signal", "card_inference_by_mechanism_no_catalogue_row"]
+RK_EVQ = ["favourable_with_comparator_may_rest_on_one_row", "favourable_thin", "favourable_thin_specificity_uncertain", "contested", "no_wwox_test_target_supported", "no_wwox_test_target_hypothesis", "weak_pertinence_or_outside_counter", "premise_missing"]
 
 
 def rk_digest_ok(o) -> bool:
@@ -3396,6 +3396,7 @@ def build_ranking(dr: Path, cur: dict, source: str):
                           "contested": bool(va.get("contested")), "counter_needs": va.get("counter_needs") or [], "evq": va["evidence_quality"], "group_reason": va["group_reason"],
                           "evidence": {k: ev.get(k) for k in ("in_wwox", "carrier_of_position", "id", "text", "scope", "species", "genotype", "depth", "pmids", "other_favourable_wwox_assertions")} | {"flags": (ev.get("flags") or [])[:8]},
                           "next": {k: va["next"].get(k) for k in ("kind", "question", "would_change", "feasibility", "need")}, "triggers": va["triggers"], "main_limit": va["main_limit"],
+                          "counter_statements": va.get("counter_statements") or [], "objective_note": va.get("objective_note") or "", "view_note": va.get("view_note") or "", "notes": va.get("notes") or [],
                           "lead_summary": va.get("lead_summary") or {}}
         comp = u["components"]
         ph = comp["P_pharmacology"]
@@ -3478,15 +3479,17 @@ UI_IT8 = {
     "rk_how_3": "Track A/B (dipendenza dalla variante o dalla lesione) è un campo separato dal gruppo: profondità del beneficio e applicabilità genetica sono dimensioni diverse.",
     "rk_how_4": "Un dato assente è «sconosciuto», non zero. Ogni conteggio ha il suo denominatore e non è una quota di malattia trattata; collegare più bisogni non fa salire il gruppo.",
     "rk_groups_h": "Gruppi di priorità",
-    "rk_g_G1": "G1 · Caso più forte oggi, specifico per WWOX", "rk_g_G2a": "G2a · Favorevole ma sottile, esito WWOX con limiti di lettura o disegno",
-    "rk_g_G2b": "G2b · Favorevole ma sottile, specificità incerta", "rk_g_G3": "G3 · Evidenza WWOX contesa o solo nulla",
+    "rk_i_cstat": "Controevidenza (affermazioni dal record dei bisogni)", "rk_i_notes": "Note",
+    "rk_cov_note": "Questa vista elenca un solo intervento per un limite di copertura dei test, non del campo: solo l'aggiunta genica è stata provata in un sistema WWOX.",
+    "rk_g_G1": "G1 · Caso più forte oggi, specifico per WWOX (nel topo nullo)", "rk_g_G2a": "G2a · Favorevole ma sottile, esito WWOX con limiti di lettura o disegno",
+    "rk_g_G2b": "G2b · Favorevole ma sottile, specificità incerta o non testata", "rk_g_G3": "G3 · Provato in un sistema WWOX: risultati misti, nulli o a livello di caso",
     "rk_g_G4a": "G4a · Ipotesi dal bersaglio, azione coerente documentata", "rk_g_G4b": "G4b · Ipotesi dal bersaglio, direzione non stabilita",
     "rk_g_G5": "G5 · Pertinenza debole o controevidenza fuori da WWOX", "rk_g_GU": "GU · Non ancora ordinabile: premessa mancante",
-    "rk_gp_G1": "Un risultato favorevole in un sistema WWOX, letto contro un gruppo non trattato dello stesso genotipo, senza flag di limite e senza risultati nulli o sfavorevoli accanto (posizione F1: un filtro di qualità di lettura, non una misura dell'effetto).",
+    "rk_gp_G1": "Un risultato favorevole in un sistema WWOX, letto contro un gruppo non trattato dello stesso genotipo, senza flag che blocchino la posizione e senza risultati nulli o sfavorevoli accanto (posizione F1: un filtro di qualità di lettura sulle righe che sorreggono la posizione, che può essere una sola riga; non una misura dell'effetto e non un recupero dopo l'esordio).",
     "rk_gp_G2a": "Un risultato favorevole in un sistema WWOX con soli limiti di lettura o di disegno (non controllato, grafico, un solo esperimento), senza risultati nulli accanto (posizione F2).",
-    "rk_gp_G2b": "Come G2a, ma l'effetto compare anche nel wild type oppure è stato ottenuto con un composto-strumento che non è un farmaco candidato.",
-    "rk_gp_G3": "Risultati favorevoli e nulli o sfavorevoli in WWOX uno accanto all'altro, oppure solo un risultato nullo: lo studio serve a capire quale regga (posizioni C2, C1).",
-    "rk_gp_G4a": "Nessun test dell'intervento in WWOX; sostegno favorevole fuori da WWOX; il bisogno ha osservazioni in WWOX; è documentata un'azione coerente con la direzione del bisogno (posizione F3).",
+    "rk_gp_G2b": "Come G2a, ma con un flag di specificità: l'effetto compare anche nel wild type, oppure è un composto-strumento, oppure manca un test farmaco-per-genotipo, oppure il braccio wild type è limitato dal pavimento. Non aver testato la specificità è un dato sconosciuto, mai una lettura pulita; G2a contro G2b non è un ordine di efficacia (la fonte riporta litio meglio di etosuccimide, un solo articolo, un solo laboratorio).",
+    "rk_gp_G3": "Risultati favorevoli e nulli o sfavorevoli in WWOX uno accanto all'altro, oppure solo un risultato nullo: lo studio serve a capire quale regga (posizioni C2, C1). L'intervento è elencato perché è stato provato in un sistema WWOX, non perché la sua parte favorevole sia più forte di quella dei candidati non provati; l'etichetta di classe descrive la pertinenza della parte favorevole e non è un verdetto.",
+    "rk_gp_G4a": "Nessun test dell'intervento in WWOX; sostegno favorevole fuori da WWOX; il bisogno ha osservazioni in WWOX; è documentata un'azione coerente con la direzione del bisogno (posizione F3). L'azione documentata non sostiene da sola la rilevanza per WWOX: l'osservazione WWOX sul bisogno può poggiare su un altro intervento.",
     "rk_gp_G4b": "Come G4a ma senza un'azione coerente documentata: direzione incerta, azione irrisolta o nessuna identità in catalogo (posizione F3).",
     "rk_gp_G5": "Nessun risultato con segno in WWOX, e un segnale di danno o nullo da fuori WWOX senza nulla di favorevole accanto, oppure un collegamento solo per meccanismo (posizioni C3, P3).",
     "rk_gp_GU": "Un'astensione: manca un dato prima di poter progettare un test, o nessun bisogno collegato di questo obiettivo ha una posizione. Non è un giudizio di scarsa promessa.",
@@ -3517,9 +3520,9 @@ UI_IT8 = {
     "rk_p_comp": "Previsione computazionale: nessuna per questo intervento. Il confronto pilota IT7 era esplorativo, ha escluso di proposito le schede curate e non può guidare la graduatoria da solo.",
     "rk_p_shared": "Bisogni condivisi con altri interventi", "rk_p_conflict": "due schede dello stesso intervento hanno posizioni diverse su questo bisogno; resta la posizione che non nasconde la controevidenza",
     "rk_le_effect_observed_in_wwox_system": "effetto osservato nel sistema pertinente", "rk_le_directionally_compatible_documented_action": "azione documentata compatibile con la direzione",
-    "rk_le_documented_association_target_listed": "associazione documentata (bersaglio elencato)", "rk_le_other_disease_precedent_only": "solo precedente in un'altra malattia",
+    "rk_le_documented_association_target_listed": "associazione documentata (bersaglio elencato)", "rk_le_other_disease_precedent_only": "solo precedente in un'altra malattia", "rk_le_other_disease_precedent_plus_wwox_case_level_signal": "precedente in un'altra malattia più un segnale WWOX a livello di caso",
     "rk_le_card_inference_by_mechanism_no_catalogue_row": "inferenza della scheda per meccanismo, nessuna riga di catalogo",
-    "rk_evq_favourable_controlled": "favorevole, controllata", "rk_evq_favourable_thin": "favorevole, sottile", "rk_evq_favourable_thin_specificity_uncertain": "favorevole, sottile, specificità incerta",
+    "rk_evq_favourable_with_comparator_may_rest_on_one_row": "favorevole, con gruppo di confronto, può poggiare su una sola riga", "rk_evq_favourable_thin": "favorevole, sottile", "rk_evq_favourable_thin_specificity_uncertain": "favorevole, sottile, specificità incerta",
     "rk_evq_contested": "contesa", "rk_evq_no_wwox_test_target_supported": "nessun test in WWOX, bersaglio sostenuto", "rk_evq_no_wwox_test_target_hypothesis": "nessun test in WWOX, ipotesi dal bersaglio",
     "rk_evq_weak_pertinence_or_outside_counter": "pertinenza debole o controevidenza esterna", "rk_evq_premise_missing": "premessa mancante",
     "rk_cl_ORD": "VALUTATO E ORDINABILE", "rk_cl_WEAK": "VALUTATO CON PERTINENZA DEBOLE O CONTROEVIDENZA", "rk_cl_INSUFF": "ANCORA INSUFFICIENTEMENTE VALUTATO", "rk_cl_EXCL": "ESCLUSO DA UN CONFRONTO SPECIFICO, CON MOTIVO",
@@ -3593,7 +3596,7 @@ def rk_item(R: dict, view: str, uid: str, full: bool) -> str:
     nx = va["next"]
     return (f'<article class="rk-item" data-unit="{E(uid)}" data-view="{E(view)}"><h4>{E(str(sel["top"].index(uid) + 1))}. {E(rk_label(u))} {rk_g(va["group"])}</h4>'
             f'<dl class="rk-dl">'
-            f'<dt>{E(U["rk_i_obj"])}</dt><dd>{E(OBJ_IT[obj])}</dd>'
+            f'<dt>{E(U["rk_i_obj"])}</dt><dd>{E(OBJ_IT[obj])}' + (f' <span class="mini">({E(va["objective_note"])})</span>' if va.get("objective_note") else "") + '</dd>'
             f'<dt>{E(U["rk_i_track"])}</dt><dd>{E(", ".join("Track " + t for t in u["tracks"]) or U["rk_unknown"])}</dd>'
             f'<dt>{E(U["rk_i_access"])}</dt><dd>{E(u["access"])}</dd>'
             f'<dt>{E(U["rk_i_context"])}</dt><dd>{E(ctx)}</dd>'
@@ -3601,6 +3604,8 @@ def rk_item(R: dict, view: str, uid: str, full: bool) -> str:
             f'<dt>{E(U["rk_i_evid"])}</dt><dd>{E(ev_txt)}</dd>'
             f'<dt>{E(U["rk_i_limit"])}</dt><dd>{E(lim)}</dd>'
             + (f'<dt>{E(U["rk_i_counter"])}</dt><dd>{E(ctr)}</dd>' if ctr else "")
+            + (f'<dt>{E(U["rk_i_cstat"])}</dt><dd><ul class="mini">' + "".join(f"<li>{E(t)}</li>" for t in va["counter_statements"]) + "</ul></dd>" if va.get("counter_statements") else "")
+            + (f'<dt>{E(U["rk_i_notes"])}</dt><dd>{E(" ".join(va["notes"]))}</dd>' if va.get("notes") else "")
             + oth
             + f'<dt>{E(U["rk_i_paths"])}</dt><dd>{E(paths)} <span class="mini mut">{E(U["rk_p_den"].format(n=len(u["pathways"]), m=R["meta"]["needs_total"]))}</span></dd>'
             f'<dt>{E(U["rk_i_next"])}</dt><dd>{E(nx["question"])} <span class="mini mut">[{E(nx.get("kind") or "—")}]</span></dd>'
@@ -3683,7 +3688,8 @@ def render_ranking(P: dict) -> str:
         items = "".join(rk_item(R, v, uid, full) for uid in s["top"]) or f'<p class="state-none">{E(U["rk_top_none"])}</p>'
         by = rk_units_by_id(R)
         apart = "".join(f'<li>{rk_g(a["group"])} {E(by[a["id"]]["label"])} <span class="mini mut">({E(OBJ_IT[a["objective"]])})</span></li>' for a in s["apart"])
-        blocks.append(f'<div class="rk-view" data-view="{v}"><h3>{E(U["rk_top_h"])}: {E(U["rk_v_" + v])} ({numit("rk.top." + v, len(s["top"]))})</h3>{items}'
+        vn = next((R_u["views"]["broad"]["view_note"] for R_u in R["units"] if v == "broad" and R_u["views"]["broad"].get("view_note")), "")
+        blocks.append(f'<div class="rk-view" data-view="{v}"><h3>{E(U["rk_top_h"])}: {E(U["rk_v_" + v])} ({numit("rk.top." + v, len(s["top"]))})</h3>' + (f'<p class="mini note">{E(U["rk_cov_note"])} <span class="mut">({E(vn)})</span></p>' if vn else "") + f'{items}'
                       f'<details class="inl"><summary>{E(U["rk_apart_h"])} ({numit("rk.apart." + v, len(s["apart"]))})</summary><p class="mini mut">{E(U["rk_apart_note"])}</p><ul class="mini rk-apart">{apart}</ul></details></div>')
     # filter controls
     needs = sorted({p["need"] for u in units for p in u["pathways"]})
@@ -3776,8 +3782,12 @@ def render_ranking_onepage(P: dict) -> str:
         sg = ", ".join(f"{n} {k}" for k, n in (ls.get("wwox_signs") or {}).items()) or "no signed WWOX-system assertion"
         why = f'{va["lead"]} on {NEED_IT.get(va["lead_need"], va["lead_need"])}; {sg}'
         rows += (f'<tr><th scope="row" data-label="{E(U["rk_one_c_i"])}">{E(u["label"])}<div class="mini mut">{E(OBJ_IT[obj])} · Track {E(",".join(u["tracks"]) or "?")}</div></th><td data-label="{E(U["rk_one_c_g"])}">{rk_g(va["group"])}</td>'
-                 f'<td data-label="{E(U["rk_one_c_why"])}">{E(clip(why, 120))}</td><td data-label="{E(U["rk_one_c_lim"])}">{E(clip(va["main_limit"], 70))}</td><td data-label="{E(U["rk_one_c_chg"])}">{E(clip(va["triggers"]["rise"], 70))}</td></tr>')
+                 f'<td data-label="{E(U["rk_one_c_why"])}">{E(clip(why, 90))}</td><td data-label="{E(U["rk_one_c_lim"])}">{E(clip(va["main_limit"], 55))}</td><td data-label="{E(U["rk_one_c_chg"])}">{E(clip(va["triggers"]["rise"], 55))}</td></tr>')
     parts.append(f'<h3>{E(U["rk_v_general"])}</h3><table class="tbl stk rk-one"><colgroup><col style="width:24%"><col style="width:7%"><col style="width:27%"><col style="width:21%"><col style="width:21%"></colgroup><thead><tr><th>{E(U["rk_one_c_i"])}</th><th>{E(U["rk_one_c_g"])}</th><th>{E(U["rk_one_c_why"])}</th><th>{E(U["rk_one_c_lim"])}</th><th>{E(U["rk_one_c_chg"])}</th></tr></thead><tbody>{rows}</tbody></table>')
+    for uid in s["top"]:
+        cs_ = by[uid]["views"][s["objective"][uid]].get("counter_statements") or []
+        if cs_:
+            parts.append(f'<p class="mini"><b>{E(by[uid]["label"])} · {E(U["rk_i_cstat"])}:</b> ' + " ".join(E(clip(t, 60)) for t in cs_) + '</p>')
     for v in ("broad", "partial"):
         sv = R["selections"][v]
         parts.append(f'<p class="mini"><b>{E(U["rk_v_" + v])}:</b> ' + "; ".join(f'{E(by[x]["label"])} {rk_g(sv["groups"][x])}' for x in sv["top"]) + '</p>')
