@@ -31,8 +31,9 @@
     },
     {
      "step": "P2 licences: from census to practicable corrections (primary terms, attribution fixes, reserved alternatives)",
-     "status": "TODO",
-     "owner": "scientist-d"
+     "status": "DONE",
+     "owner": "scientist-d",
+     "evidence": "f47b2802 merged; verifier defects repaired; reserved R1-R7 listed"
     }
    ]
   },
