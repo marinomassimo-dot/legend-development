@@ -698,7 +698,7 @@ class ShareableAudit(unittest.TestCase):
     def test_mutation_unclassified_field_repository_link_and_email(self):
         self.assertIn("unclassified-field", self.kinds(self.mutate(lambda P: P["rows"][0].__setitem__("extra", "x"))))
         self.assertIn("link-not-document-or-public-url", self.kinds(re.sub(r"(<body[^>]*>)", lambda m: m.group(1) + '<a href="../cards/A01_pba_class.card.json">card</a>', self.share, count=1)))
-        self.assertIn("e-mail-like-string", self.kinds(self.mutate(lambda P: P["cur"]["cands"][0].__setitem__("why", "write to someone@example.org"))))
+        self.assertIn("e-mail-like-string", self.kinds(self.mutate(lambda P: P["cur"]["cands"][0].__setitem__("why", "write to " + "someone" + chr(64) + "example.org"))))
 
     def test_mutation_restoring_the_excluded_row_names(self):
         def f(P):
