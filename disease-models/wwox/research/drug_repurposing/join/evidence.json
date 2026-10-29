@@ -93321,17 +93321,38 @@
  },
  {
   "abstention": null,
-  "complete_reads": 2,
+  "complete_reads": 4,
   "depths": [
    "complete_fulltext_read",
    "partial_fulltext_read"
   ],
-  "digest": "ac3009b28179afc8",
-  "locators": 184,
+  "digest": "b4fa2c923424ea1f",
+  "locators": 245,
   "origin_id": "DL-MECH-173",
-  "papers": 3,
+  "papers": 5,
   "query_id": "Q-DL-MECH-173",
   "rows": [
+   {
+    "adjudication_files": [
+     "disease-models/wwox/research/page_adjudications/locator_audit_map_repairs_20261024.md"
+    ],
+    "audit_status": "AUDIT_FILE_PRESENT",
+    "audited_entries": 0,
+    "contradiction_verdicts": [],
+    "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
+    "evidence_scope": [
+     "UNQUALIFIED"
+    ],
+    "locator_count": 22,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID25012504.json",
+    "pmid": "25012504",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20260814-25012504-01",
+    "repair_unverified": 0,
+    "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
+    "unaudited_contradictions": 0
+   },
    {
     "adjudication_files": [],
     "audit_status": "UNAUDITED",
@@ -93347,6 +93368,25 @@
     "reading_depth": "partial_fulltext_read",
     "receipt_events": 6,
     "receipt_id": "FTR-20260811-31543760-01",
+    "repair_unverified": 0,
+    "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
+    "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "UNAUDITED",
+    "audited_entries": 0,
+    "contradiction_verdicts": [],
+    "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
+    "evidence_scope": [
+     "UNQUALIFIED"
+    ],
+    "locator_count": 39,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID38563965.json",
+    "pmid": "38563965",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 2,
+    "receipt_id": "FTR-20260913-38563965-01",
     "repair_unverified": 0,
     "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
     "unaudited_contradictions": 0
@@ -93411,6 +93451,18 @@
     "unaudited_contradictions": 0
    }
   ],
+  "unaudited_contradictions": 0
+ },
+ {
+  "abstention": "NO_PAPER: the registry record itself cites no PMID or PAPER id and names no other record; missing datum: a citation in the record",
+  "complete_reads": 0,
+  "depths": [],
+  "digest": "6f2d6e28a0774d48",
+  "locators": 0,
+  "origin_id": "DL-MECH-174",
+  "papers": 0,
+  "query_id": "Q-DL-MECH-174",
+  "rows": [],
   "unaudited_contradictions": 0
  },
  {
