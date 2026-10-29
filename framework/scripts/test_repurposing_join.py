@@ -1186,7 +1186,7 @@ class LoopPropagationIT7P6(unittest.TestCase):
     loop wrote; no surface is asserted to lack anything. Then a mutation test: a marker written into a COPY of a curated card
     must appear in the card the join derives from it and in the handoff row, and must not appear when the copy is left alone.
 
-    The P3 numbers quoted by the loop are provisional (independent verification pending when written); the checks pin where the
+    The P3 numbers quoted by the loop were independently verified (the verifier's own draw differs slightly: 0.396 and 0.0595); the checks pin where the
     wording lives, not that the numbers are final.
     """
 
@@ -1195,7 +1195,7 @@ class LoopPropagationIT7P6(unittest.TestCase):
     PREFIX = {"I01_pdk_inhibition_dca_premise_seizure_glycaemia": "IT7 P6 2026-10-29: decisive measurement unchanged",
               "E03_pdk_inhibition_dca": "IT7 P6 2026-10-29: the decisive measurement is unchanged and is specified in card I01",
               "E02_ldh_inhibition": "IT7 P6 2026-10-29: read LDHA and LDHB activity separately"}
-    WORDS = ("INCONCLUSIVE", "NO ADDED VALUE", "IT7 P3/P1 (provisional)", "LDHB was the discordant gene")
+    WORDS = ("INCONCLUSIVE", "NO ADDED VALUE", "IT7 P3/P1 (exploratory, verified)", "not detected, not excluded", "LDHB was the discordant gene")
 
     def read(self, rel):
         return (ROOT / rel).read_text(encoding="utf-8")
@@ -1214,8 +1214,8 @@ class LoopPropagationIT7P6(unittest.TestCase):
             built = json.loads(self.read(self.DR + f"cards/{card}.card.json"))
             self.assertTrue(packet["p4_card"]["next_measurement"].startswith(self.PREFIX[card]), card)
             self.assertEqual(built["input"]["p4_card"]["next_measurement"], packet["p4_card"]["next_measurement"], card)
-            self.assertTrue(any(x.startswith("IT7 P3/P1 (provisional") for x in packet["evidence_against"]), card)
-            self.assertTrue(any(x.startswith("IT7 P3/P1 (provisional") for x in packet["p4_card"]["evidence_for_and_against"]["against"]), card)
+            self.assertTrue(any(x.startswith("IT7 P3/P1 (exploratory, independently verified)") for x in packet["evidence_against"]), card)
+            self.assertTrue(any(x.startswith("IT7 P3/P1 (exploratory, independently verified)") for x in packet["p4_card"]["evidence_for_and_against"]["against"]), card)
             self.assertTrue(any(x.startswith("IT7 P6 (2026-10-29)") for x in packet["p4_card"]["question_history"]), card)
             # permanent design rule, not today's data: a position is a function of signed drug assertions in WWOX systems, and a computational
             # method result is not one, so the loop's wording belongs in evidence_against / next_measurement and never in a drug assertion
@@ -1243,6 +1243,7 @@ class LoopPropagationIT7P6(unittest.TestCase):
             self.assertIn("IT7-P6", entries[nid]["updated_by"], nid)
             self.assertIn("IT7 P6", entries[nid]["data"], nid)
             self.assertIn("added value", entries[nid]["would_change"], nid)
+            self.assertIn("not detected, not excluded", entries[nid]["would_change"], nid)
         for page in ("view/index.html", "view/index_shareable.html", "view/shareable_package/index.html"):
             text = self.read(self.DR + page)
             for word in self.WORDS:
@@ -1250,9 +1251,18 @@ class LoopPropagationIT7P6(unittest.TestCase):
             self.assertIn("IT7 P6 2026-10-29: decisive measurement unchanged", text, page)
             self.assertIn("IT7 P6 record: a null result through the research loop", text, page)
 
+    def test_work_order_text_contains_the_first_sentence_of_the_card_it_cites(self):
+        """The work order is hand-written: its loop sentence must be the card's own first sentence, so that drift is flagged."""
+        wo = {e["need"]: e for e in json.loads(self.read(self.DR + "view/work_order.json"))["entries"]}
+        for need, card in (("NEED-PDH-PYRUVATE-AXIS", "I01_pdk_inhibition_dca_premise_seizure_glycaemia"), ("NEED-LACTATE-LDH", "E02_ldh_inhibition")):
+            nm = json.loads(self.read(self.DR + f"cards/{card}.packet.json"))["p4_card"]["next_measurement"]
+            first = nm.split(". ", 1)[0] + "."
+            self.assertTrue(first.startswith("IT7 P6"), card)
+            self.assertIn(first, wo[need]["data"], (need, card))
+
     def test_the_loop_record_names_what_it_does_not_change(self):
         text = self.read(self.DR + "loop_demonstration_it7_p6_20261029/README.md")
-        for needle in ("INCONCLUSIVE", "NO ADDED VALUE", "F / C / P positions", "provisional", "PROPOSED", "Does not change"):
+        for needle in ("INCONCLUSIVE", "NO ADDED VALUE", "F / C / P positions", "not detected, not excluded", "PROPOSED", "Does not change"):
             self.assertIn(needle, text)
 
     def test_mutation_a_marker_in_a_curated_card_reaches_the_derived_card_and_the_handoff_row(self):
