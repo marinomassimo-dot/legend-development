@@ -527,6 +527,10 @@ def scan_privacy_and_secrets(root: Path, findings: list[Finding]) -> None:
     short_hex_fragment = re.compile(
         r"(?<![0-9A-Za-z])(?=[0-9A-Fa-f]*[0-9])[0-9A-Fa-f]{8,11}(?![0-9A-Za-z])"
     )
+    uuid_identifier = re.compile(
+        r"(?<![0-9A-Za-z])[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}"
+        r"-[0-9A-Fa-f]{12}(?![0-9A-Za-z])"
+    )
     TRUNCATED_DIGEST_HINT = (
         " If this is a truncated digest or short commit SHA, write the full 64-hex digest: "
         "the repository's convention, exempt by construction (a 12+ hex run is read as a "
@@ -656,11 +660,25 @@ def scan_privacy_and_secrets(root: Path, findings: list[Finding]) -> None:
         digest_spans += [m.span() for m in hex_fragment.finditer(text)]
         # Not added to `digest_spans`: these spans change no verdict, only a message.
         short_spans = [m.span() for m in short_hex_fragment.finditer(text)]
+        uuid_spans: list[tuple[int, int]] | None = None
         for match in identifier_token.finditer(text):
             if not is_sensitive(match.group(0)):
                 continue
             if any(start <= match.start() and match.end() <= end
                    for start, end in digest_spans):
+                continue
+            # A canonical UUID (8-4-4-4-12 hex, at least one digit) is a record identifier, not
+            # prose. Its 8- and 4-hex groups are below the 12-hex carve-out, so the one private
+            # token made only of hex letters read as a name inside DailyMed set-ids and
+            # Signature Commons entity ids (measured on history, IT8: 15 findings, 6 blobs,
+            # every one inside a UUID). Only a match CONTAINED in the UUID is skipped: a token
+            # beside a UUID (space, hyphen, comma) or glued to it is outside the span and
+            # still blocks. Computed lazily, once per file, only for a sensitive word.
+            if uuid_spans is None:
+                uuid_spans = [m.span() for m in uuid_identifier.finditer(text)
+                              if any(ch.isdigit() for ch in m.group(0))]
+            if any(start <= match.start() and match.end() <= end
+                   for start, end in uuid_spans):
                 continue
             if (
                 corpus_seed.search(rel)
