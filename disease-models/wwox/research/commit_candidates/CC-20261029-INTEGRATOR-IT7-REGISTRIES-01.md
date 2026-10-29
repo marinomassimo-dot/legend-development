@@ -4,7 +4,7 @@
 - **Source material (each independently verified and repaired, already landed in the module, not re-enumerated here):** `drug_repurposing/census_reconciliation_it7_20261029.md` (P0a; section 5 is the verdict list KEEP, NARROW, CORRECT for every global statement of absence), `drug_repurposing/network_comparison_it7_p3_20261029/README.md` (P3), `drug_repurposing/context_differences_it7_p4_20261029/README.md` (P4), with the verifier reports `locator_audits/2026-10-29_it7_p0a_verifier.md`, `..._p3_verifier.md` and `..._p4_verifier.md`. The seven receipts these cycles produced were recorded earlier (ledger at 920).
 
 ## What changes and why
-1. **Statements of absence carry the perimeter of the search that was run (P0a, section 5).** The IT6 census sentence ('no public record ... in a WWOX-deficient system') was false as written: it had no neural qualifier. It becomes 'no deposited, downloadable record was found for a genetically WWOX-deficient **neural** system; not found by that search is not shown absent', with non-neural records given as examples and not as a complete list (the metabolic search vocabulary was narrow). The sentence is replaced in place inside this iteration's own earlier text in `DL-MECH-173` and `HYP-20261026-10` and in the map (R-10); the historical candidate `CC-20261029-INTEGRATOR-IT6-REGISTRIES-01` (items 4, and its two update bullets) is NOT edited, it is already integrated, and this candidate carries the corrected wording through the same records. The 'fly head RNA' sentence now says the knockdown depth is in Supplementary Figure 1 of the paper (qPCR in newly eclosed heads) and is not in the deposit.
+1. **Statements of absence carry the perimeter of the search that was run (P0a, section 5).** The IT6 census sentence ('no public record ... in a WWOX-deficient system') was false as written: it had no neural qualifier. It becomes 'no deposited, downloadable record was found for a genetically WWOX-deficient **neural** system; not found by that search is not shown absent', with non-neural records given as examples and not as a complete list (the metabolic search vocabulary was narrow). The sentence is replaced in place in `DL-MECH-173`, `HYP-20261026-10` and the map (R-10). CARVE-OUT, named: those three passages sit in the UPDATE of the previous iteration (`BATCH_20261019_027`, `CC-20261029-INTEGRATOR-IT6-REGISTRIES-01`); they are replaced on the P0a verdict list (C1, C2, C18) because the earlier text was a false global statement, and each replaced passage is tagged '(perimeter wording narrowed by BATCH_20261019_029)'; the historical candidate `CC-20261029-INTEGRATOR-IT6-REGISTRIES-01` (items 4, and its two update bullets) is NOT edited, it is already integrated, and this candidate carries the corrected wording through the same records. The 'fly head RNA' sentence now says the knockdown depth is in Supplementary Figure 1 of the paper (qPCR in newly eclosed heads) and is not in the deposit.
 2. **The ovarian paper reads a PERK band shift with a total-PERK antibody, not a phospho-PERK antibody** (receipt `FTR-20261029-28749468-02`); the wording is carried to the registry stub and the literature-log row, with the phospho-eIF2A and phospho-IRE-1 blots named as the phospho-specific readouts. 'Examples' replaces 'listed' for the non-neural metabolic records.
 3. **The need `NEED-WWOX-GENE-ADDITION`** now reads 'The only post-onset add-back **found** is organoid hyperexcitability ... its single-cell contrast is against non-treated, not vector-treated, organoids'. **Card J01** (packet and card, rebuilt with the bridge, `check_cards` clean): 'no study in the P10 reading set was found that reads glia and EEG in the same animals over the days that bracket onset'. Committed earlier on this branch.
 4. **P3 (network and signature comparison) is registered as a discovery-ledger lead, `DL-MECH-174`** (Status `open`, Tag INFERENZA, EXPLORATORY, COMPUTATIONAL_RESULT): the six-gene glycolysis and lactate module does not transfer conclusively to the P47T deposit (INCONCLUSIVE, hippocampus exact one-sided p = 0.060, 5 of 6 genes); a signed external-only network and a WWOX-enriched network show NO ADDED VALUE; the signature route is NOT DETECTED, NOT EXCLUDED (rho 0.143 against the registered 0.15, interval spanning it). The falsifier and reopening condition (a replicated WWOX-deficient human neural contrast with a matched protein or activity readout, ChEMBL potency, the LINCS phase II signatures) are in the record. Three dated UPDATE bullets on the hypotheses it touches (`HYP-20260709-01`, `HYP-20260709-05`, `HYP-20261026-11`) say that no status changes and no support is added.
@@ -25,7 +25,7 @@
 No statement in `working_model_current.md` changes, so no bump: `WM_v7.29` is preserved, the working-model history gets no row. A reading update, a ledger bullet and a map sentence are not working-model changes.
 
 ## Op lists
-`ops_parsed` is declared per file below, 18 record-scoped ops in all: working model 0, claim registry 0, paper registry 6, literature log 6 (both through `batch_commit.py propagate`, dry run then `--apply`), discovery ledger 2 and hypotheses ledger 4 (through `record_scoped_edit.py apply`, dry run then `--apply`, because `batch_commit.py propagate` accepts only the four scientific current files). One further ledger change is not an op: the new lead `DL-MECH-174` is appended by `discovery_lead.py append` (numbered and written by the validated writer, spec below). The ledger ops replace the census sentence inside the batch `BATCH_20261019_027` update and add one dated UPDATE bullet each; earlier wording is otherwise untouched.
+`ops_parsed` is declared per file below, 31 record-scoped ops in all (18 in the original lists, 13 in the addendum): working model 0, claim registry 0, paper registry 6, literature log 6 (both through `batch_commit.py propagate`, dry run then `--apply`), discovery ledger 2 and hypotheses ledger 4 (through `record_scoped_edit.py apply`, dry run then `--apply`, because `batch_commit.py propagate` accepts only the four scientific current files). One further ledger change is not an op: the new lead `DL-MECH-174` is appended by `discovery_lead.py append` (numbered and written by the validated writer, spec below). The ledger ops replace the census sentence in the `BATCH_20261019_027` update (the carve-out above) and add one dated UPDATE bullet each; earlier wording is otherwise untouched.
 
 ### working_model_current.md (0 ops)
 None.
@@ -208,3 +208,114 @@ The ledger bullets and reading updates restate independently verified material a
 - **P4 context differences:** propagated as an UPDATE on `DL-MECH-173` (sign unresolved, control-group caveat, confounded class hypothesis, no patient subgroup).
 - **Reading updates:** `PAPER 004`, `PAPER 039`, `PAPER 094`, `PAPER 113`, `PAPER 567`, `CORPUS-STUB-126`, `LIT-0110`, `LIT-0365`, `LIT-0139`, `LIT-0417`, `LIT-0838`, `LIT-0145`.
 - **Unchanged:** every `Status`, `Type`, `Title` and `Summary`; the working model; the claim registry; the dismissal ledger; the receipt ledger; the Status and ranking of every hypothesis touched.
+
+## Addendum 2026-10-29 (repair after the independent adversarial review `research/locator_audits/2026-10-29_it7_batch_review.md`; 0 HIGH, 6 MEDIUM, 8 LOW)
+Wording repairs only, as record-scoped `replace-within` edits of this batch's own text (and of the three carve-out passages, tagged), each against the receipts and cycle reports; nothing else is touched. The earlier statement that the replaced passages were "this iteration's own" is withdrawn (M2): they were the previous iteration's, replaced on the P0a verdict list, and are now tagged.
+- M1: map R-10 row WWOX_DIRECT_EVIDENCE 'none in any WWOX-deficient human system' becomes 'none found in a WWOX-deficient human neural system (non-neural examples: see the discovery-ledger ISR update of 2026-10-29)'.
+- M2: carve-out named (above, batch record, test docstring); tag added to the three replaced passages.
+- M3: `DL-MECH-174` quotes 'about 0.39 on the producer's and on the verifier's draw', not 0.389.
+- M4: card J01 item (3) restricted to the deposited week-15 transcripts and the immunofluorescence finding (GFAP and S100B at weeks 15 and 24; GFAP also marks radial glia) added; packet and card rebuilt with the bridge in `cards/` and `partial_benefit_it6_p10_20261029/`, `check_cards` clean.
+- M5: PAPER 567 and PAPER 039 say 'in the sections read' (Methods and Discussion not read per the receipts); LIT-0365 likewise.
+- M6: `RegistriesIT7` asserts the real Status lines of the HYP records and more phrases; docstring corrected; per-phrase mutation run recorded in the batch record.
+- L1 paired-difference interval and the NET-EXT remark; L2 the module was chosen with the mouse P17 deposit already seen as discordant, the neuron library agreed on 2 of 6 genes; L3 'reports no compound-level result'; L4 fly with and without amyloid, 89 of 182 cells UNKNOWN, Atf4 immunofluorescence; L5 'Wwox-deficient cells (mouse embryonic fibroblasts per the registry record; abstract level)'; L7 'P10 reading set' defined in J01; L8 PAPER 004 attribution to the P4 cycle.
+- L6: `rescue_window_it6_20261029.md` rows 'Conditional / inducible' (neural qualifier and the endothelial Cdh5-CreERT2 allele) and the need row ('found', vector-control note) already carry the P0a wording at this branch head; no edit needed.
+
+### Addendum op lists (record-scoped, 13 ops)
+discovery ledger (7 ops, record_scoped_edit.py):
+```json
+[
+ {
+  "op": "replace-within",
+  "id": "DL-MECH-173",
+  "old": "which is not the same as no evidence of depth.",
+  "new": "which is not the same as no evidence of depth. (perimeter wording narrowed by BATCH_20261019_029)"
+ },
+ {
+  "op": "replace-within",
+  "id": "DL-MECH-173",
+  "old": "glycolysis and respiration in Wwox-deficient fibroblasts (abstract level, [[paper_registry_current#PAPER 024]])",
+  "new": "glycolysis and respiration in Wwox-deficient cells (mouse embryonic fibroblasts per the registry record; abstract level, [[paper_registry_current#PAPER 024]])"
+ },
+ {
+  "op": "replace-within",
+  "id": "DL-MECH-173",
+  "old": "stays UNRESOLVED when 13 contexts (human organoid, shRNA progenitors and neurons, four mouse contrasts, fly, rat, the P47T knock-in and two patient-line organoid classes) are put side by side in a pre-declared 182-cell matrix with no combined statistic:",
+  "new": "stays UNRESOLVED when 13 contexts (human organoid, shRNA progenitors and neurons, four mouse contrasts, fly with and without amyloid, rat, the P47T knock-in and two patient-line organoid classes) are put side by side in a pre-declared 182-cell matrix (89 cells are UNKNOWN: gaps, not zeros) with no combined statistic:"
+ },
+ {
+  "op": "replace-within",
+  "id": "DL-MECH-173",
+  "old": "ISR protein or phospho-protein measured only in the fly among these contexts.",
+  "new": "an ISR protein-level readout (Atf4 immunofluorescence, unchanged without amyloid) exists only in the fly among these contexts."
+ },
+ {
+  "op": "replace-within",
+  "id": "DL-MECH-174",
+  "old": "inside the decile-matched null band (95th percentile 0.389)",
+  "new": "inside the decile-matched null band (95th percentile about 0.39 on the producer's and on the verifier's draw)"
+ },
+ {
+  "op": "replace-within",
+  "id": "DL-MECH-174",
+  "old": "so NO ADDED VALUE for the network and for the WWOX-enriched condition at a minimum detectable effect of about rho 0.157.",
+  "new": "so NO ADDED VALUE for the network (minimum detectable effect about rho 0.157 at 256 families; NET-EXT, upper bound 0.15, is the better-supported negative) and for the WWOX-enriched condition (a paired difference, -0.0015 with a 90 percent interval of -0.004 to +0.0002, four HIF1A edges only; the 0.157 does not apply to it)."
+ },
+ {
+  "op": "replace-within",
+  "id": "DL-MECH-174",
+  "old": "to the independent P47T deposit:",
+  "new": "to the independent P47T deposit (the module was chosen with the mouse P17 deposit already seen as discordant for LDHA and LDHB, and the neuron library agreed on only 2 of 6 genes, so the human side is a two-system observation):"
+ }
+]
+```
+hypotheses ledger (2 ops, record_scoped_edit.py):
+```json
+[
+ {
+  "op": "replace-within",
+  "heading": "HYP-20261026-10 — Attenuating the integrated stress response in WWOX loss: no signed human readout yet, so the first experiment is the readout",
+  "old": "not found by that search is not shown absent; non-neural records exist, see the discovery-ledger update of 2026-10-29 on the integrated stress response), so the first experiment stays",
+  "new": "not found by that search is not shown absent; non-neural records exist, see the discovery-ledger update of 2026-10-29 on the integrated stress response (perimeter wording narrowed by BATCH_20261019_029)), so the first experiment stays"
+ },
+ {
+  "op": "replace-within",
+  "heading": "HYP-20261026-11 — LDH lowering as a partial-benefit lever: one fly precedent, an approved candidate whose LDH potency is unresolved, no human WWOX datum",
+  "old": "The compound-ranking comparison (no added value for a signed or WWOX-enriched network; signature route not detected, not excluded) names no LDH agent as a candidate.",
+  "new": "The compound-ranking comparison (no added value for a signed or WWOX-enriched network; signature route not detected, not excluded) reports no compound-level result in the P3 README, so no LDH agent is named or excluded."
+ }
+]
+```
+paper registry (3 ops, batch_commit.py propagate):
+```json
+[
+ {
+  "op": "replace-within",
+  "id": "PAPER 567",
+  "old": "The main text has no knockdown-efficiency statement; Supplementary Figure 1",
+  "new": "In the Results paragraphs and the data-availability paragraph read (Methods and Discussion not read) there is no knockdown-efficiency statement; Supplementary Figure 1"
+ },
+ {
+  "op": "replace-within",
+  "id": "PAPER 039",
+  "old": "and the add-back readouts are functional, immunostaining, qPCR and immunoblot: no proteome, phospho-protein or flux readout of the integrated stress response or of the metabolic pathways.",
+  "new": "and the add-back readouts are functional, immunostaining, qPCR and immunoblot; the legends and Results read show no proteome, phospho-protein or flux readout of the integrated stress response or of the metabolic pathways (Methods and Discussion not read)."
+ },
+ {
+  "op": "replace-within",
+  "id": "PAPER 004",
+  "old": "rests on identical numbers per arm and on Supplementary Table 2, not on a statement of the paper",
+  "new": "rests on identical numbers per arm and on Supplementary Table 2 (both matched in the P4 cycle, not by this receipt), not on a statement of the paper"
+ }
+]
+```
+literature log (1 op, batch_commit.py propagate):
+```json
+[
+ {
+  "op": "replace-within",
+  "id": "LIT-0365",
+  "old": "their readouts are functional, immunostaining, qPCR and immunoblot.",
+  "new": "their readouts, in the legends and Results read, are functional, immunostaining, qPCR and immunoblot."
+ }
+]
+```

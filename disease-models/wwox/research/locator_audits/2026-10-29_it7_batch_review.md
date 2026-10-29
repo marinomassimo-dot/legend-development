@@ -8,7 +8,7 @@ Reviewer (not the producer), 2026-10-29. Object: `git diff f26fe0d0..1d83b54c` o
 |---|---|
 | `legend_lint.py .` | WARN, 0 BLOCK |
 | `growth_anchors.py check` | PASS |
-| `scripts/public_release_gate.py` | PASS, BLOCKS 0 (REVIEW lines are older parent-of-origin items, none in this diff) |
+| `scripts/public_release_gate.py` | PASS, BLOCKS 0 (REVIEW lines are older items, none in this diff) |
 | `fulltext_receipts.py verify` | OK, 920 chained receipts |
 | `candidate_ops_reconcile.py <candidate>` | MATCH, ops_parsed 18 = declared 18 |
 | `test_repurposing_join.py` | 84 OK (includes RegistriesIT7) |

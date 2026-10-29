@@ -10804,7 +10804,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Current status:** screened — A
 **Next action:** full-text retrieval + deep-dive in next session
 **Flags:** FASE 1 batch entry / no deep-dive yet
-**Note:** Title: Modeling genetic epileptic encephalopathies using brain organoids Reading update 2026-10-29 (`BATCH_20261019_027`): receipt `FTR-20261029-34268881-01`; timing of the add-backs against the first measured phenotype. See [[paper_registry_current#PAPER 039]]. Reading update 2026-10-29 (`BATCH_20261019_029`): receipt `FTR-20261029-34268881-12`; the add-back arms are not in GSE156243, and their readouts are functional, immunostaining, qPCR and immunoblot. See [[paper_registry_current#PAPER 039]].
+**Note:** Title: Modeling genetic epileptic encephalopathies using brain organoids Reading update 2026-10-29 (`BATCH_20261019_027`): receipt `FTR-20261029-34268881-01`; timing of the add-backs against the first measured phenotype. See [[paper_registry_current#PAPER 039]]. Reading update 2026-10-29 (`BATCH_20261019_029`): receipt `FTR-20261029-34268881-12`; the add-back arms are not in GSE156243, and their readouts, in the legends and Results read, are functional, immunostaining, qPCR and immunoblot. See [[paper_registry_current#PAPER 039]].
 
 ## LIT-0366
 **Short title:** Methylation status of WWOX gene promoter CpG islands in epithelial ovarian ca...

@@ -1181,19 +1181,23 @@ class SupersededWordingGoneIT6(unittest.TestCase):
 
 
 class RegistriesIT7(unittest.TestCase):
-    """BATCH_20261019_029: the iteration-7 results as the ledgers, registries, map, needs and card J01 must now state them.
+    """BATCH_20261019_029 (with its addendum): the iteration-7 results as the ledgers, registries, map, needs and card J01 must now state them.
 
-    Positive checks only (what each surface DOES say); the absence assertions are on the map, the needs file and the card J01,
-    which are edited in place and are not append-only. The census sentence of the append-only ledgers was replaced in place
-    inside this iteration's own earlier update, so it is checked by its new wording, not by the old one's absence.
-      1. the absence statements carry their perimeter (neural, deposited, 'not found by that search', non-neural examples) in
-         DL-MECH-173, HYP-20261026-10, the map R-10, the need NEED-WWOX-GENE-ADDITION and card J01 (packet and built card);
+    Checks are positive (what each surface DOES say) except a few assertNotIn, which are all on surfaces that are edited in place and
+    are not append-only: the map R-10 row and rows, the needs file and card J01 (packet and built card). The append-only ledgers are
+    checked by their new wording only.
+    Carve-out, named: the census sentence in DL-MECH-173, HYP-20261026-10 and the map R-10 sat in the UPDATE of BATCH_20261019_027
+    (the previous iteration) and was replaced in place on the P0a verdict list (C1, C2, C18) because it was a false global; each
+    replaced passage is tagged '(perimeter wording narrowed by BATCH_20261019_029)'.
+      1. the absence statements carry their perimeter (neural, deposited, 'not found by that search') in DL-MECH-173, HYP-20261026-10,
+         both map R-10 rows, the need NEED-WWOX-GENE-ADDITION and card J01; the PAPER/LIT readings say 'in the sections read';
       2. the ovarian reading says TOTAL-PERK antibody and a band shift, never a phospho-PERK antibody;
-      3. P3 is a discovery-ledger lead with its verdicts (INCONCLUSIVE; NO ADDED VALUE; not detected, not excluded) and its
-         falsifier, and three hypothesis updates change no status;
-      4. P4: the ISR sign stays unresolved, the Atf4 mRNA control-group caveat, the WOREE and SCAR12 contrast as a confounded
-         source-reported hypothesis, no patient subgroup;
+      3. P3 is a discovery-ledger lead with its verdicts and falsifier and three hypothesis updates leave each record's real Status
+         line as it was (asserted on the Status line itself, stored below);
+      4. P4: the ISR sign stays unresolved, the Atf4 control-group caveat, the WOREE and SCAR12 contrast as a confounded hypothesis,
+         no patient subgroup;
       5. every receipt a reading update of this batch names is recorded; the working model keeps the version of the manifest.
+    Mutation-tested: each asserted phrase, altered one at a time in a copy of the surface, makes its test fail (run recorded in the batch record).
     """
 
     DR = "disease-models/wwox/research/drug_repurposing/"
@@ -1219,13 +1223,22 @@ class RegistriesIT7(unittest.TestCase):
         r10 = m.split("### R-10 ", 1)[1].split("### R-11 ", 1)[0]
         self.assertIn("for a genetically WWOX-deficient neural system (not found by that search is not shown absent", r10)
         self.assertNotIn("flux record in any WWOX-deficient system", r10)
+        self.assertIn("none found in a WWOX-deficient human neural system (non-neural examples: see the discovery-ledger ISR update of 2026-10-29)", r10)
+        self.assertNotIn("none in any WWOX-deficient human system", r10)
+        self.assertIn("non-neural records exist, given as examples in the discovery-ledger update of 2026-10-29", r10)
+        self.assertIn("(perimeter wording narrowed by BATCH_20261019_029)", r10)
+        self.assertIn("(perimeter wording narrowed by BATCH_20261019_029)", b173)
+        self.assertIn("(perimeter wording narrowed by BATCH_20261019_029)", self.record(hyp, "HYP-20261026-10 "))
         needs = self.read(self.DR + "needs/needs.json")
         self.assertIn("The only post-onset add-back found is organoid hyperexcitability", needs)
         self.assertIn("not vector-treated, organoids", needs)
         self.assertNotIn("The only post-onset add-back is organoid", needs)
         for name in ("J01_glial_reactivity_modulation.packet.json", "J01_glial_reactivity_modulation.card.json"):
             text = self.read(self.DR + "cards/" + name)
-            self.assertIn("no study in the P10 reading set was found that reads glia and EEG in the same animals", text, name)
+            self.assertIn("no study in the P10 reading set (the papers read for the P10 cycle, listed in partial_benefit_it6_p10_20261029) was found that reads glia and EEG in the same animals", text, name)
+            self.assertIn("In the deposited week-15 organoid transcripts (4 v 2 libraries", text, name)
+            self.assertIn("higher GFAP and S100B by immunofluorescence at weeks 15 and 24", text, name)
+            self.assertNotIn("In the human organoid, without microglia or behavioural seizures, no reactive-astrocyte programme appears", text, name)
             self.assertNotIn("no study reads glia and EEG in the same animals", text, name)
 
     def test_the_ovarian_reading_is_total_perk_and_a_band_shift(self):
@@ -1237,18 +1250,33 @@ class RegistriesIT7(unittest.TestCase):
         lit = self.read("disease-models/wwox/registries/literature_tracking_log_current.md")
         l145 = lit.split("## LIT-0145", 1)[1].split("\n## ", 1)[0]
         self.assertIn("a PERK band shift read with a total-PERK antibody", l145)
+        p567 = papers.split("## PAPER 567", 1)[1].split("\n## ", 1)[0]
+        self.assertIn("(Methods and Discussion not read) there is no knockdown-efficiency statement", p567)
+        p039 = papers.split("## PAPER 039", 1)[1].split("\n## ", 1)[0]
+        self.assertIn("(Methods and Discussion not read)", p039.split("Reading update (2026-10-29, `" + self.BATCH, 1)[1])
+        p004 = papers.split("## PAPER 004", 1)[1].split("\n## ", 1)[0]
+        self.assertIn("both matched in the P4 cycle, not by this receipt", p004)
 
     def test_p3_lead_and_hypothesis_updates(self):
         disc = self.read("disease-models/wwox/research/discovery_ledger_current.md")
         lead = disc.split("### DL-MECH-174 ", 1)[1]
         self.assertIn("**Status:** open", lead)
-        for phrase in ("INCONCLUSIVE", "NO ADDED VALUE", "NOT DETECTED, NOT EXCLUDED", "5 of 6 genes", "p = 0.060",
+        self.assertNotIn("0.389", lead)
+        for phrase in ("95th percentile about 0.39", "the 0.157 does not apply to it", "agreed on only 2 of 6 genes",
+                       "INCONCLUSIVE", "NO ADDED VALUE", "NOT DETECTED, NOT EXCLUDED", "5 of 6 genes", "p = 0.060",
                        "ChEMBL activity endpoint", "GSE70138", "replicated WWOX-deficient human neural contrast",
                        "carry no demonstrated WWOX-loss relevance"):
             self.assertIn(phrase, lead, phrase)
         hyp = self.read("disease-models/wwox/research/therapeutic_hypotheses_ledger_current.md")
+        status_lines = {   # the real Status lines of the records, stored as they stood before this batch (their first words)
+            "HYP-20260709-01 ": "- **Status:** `ranked` \u2192 **`proposed-to-L9`**",
+            "HYP-20260709-05 ": "- **Status:** `generated` \u2192 **`parked`.**",
+            "HYP-20261026-11 ": "- **Status:** `generated` (EXPLORATORY; initial status, no ranking line). Card `P4-E-02`.",
+        }
         for ident, status in (("HYP-20260709-01 ", None), ("HYP-20260709-05 ", "`parked`"), ("HYP-20261026-11 ", "`generated`")):
             blk = self.record(hyp, ident)
+            self.assertIn(status_lines[ident], blk.splitlines(), ident) if ident == "HYP-20261026-11 " else \
+                self.assertTrue(any(l.startswith(status_lines[ident]) for l in blk.splitlines()), ident)
             self.assertIn("UPDATE 2026-10-29 (`" + self.BATCH, blk, ident)
             self.assertIn("IT7 P3", blk, ident)
             self.assertIn("no support is added", blk, ident)
@@ -1258,7 +1286,7 @@ class RegistriesIT7(unittest.TestCase):
     def test_p4_context_note_on_the_isr_sign(self):
         disc = self.read("disease-models/wwox/research/discovery_ledger_current.md")
         upd = self.record(disc, "DL-MECH-173 ").split("`" + self.BATCH + "`", 1)[1]
-        for phrase in ("stays UNRESOLVED when 13 contexts", "182-cell matrix", "rests partly on the control group",
+        for phrase in ("stays UNRESOLVED when 13 contexts", "fly with and without amyloid", "89 cells are UNKNOWN", "Atf4 immunofluorescence, unchanged without amyloid", "182-cell matrix", "rests partly on the control group",
                        "not an ISR call", "WOREE-against-SCAR12 organoid difference",
                        "confounded with variant type, individual and batch",
                        "NO PATIENT SUBGROUP is supported", "no response label is given to anyone"):

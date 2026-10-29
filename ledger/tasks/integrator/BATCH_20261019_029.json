@@ -30,7 +30,7 @@
  "DEFAULTS_TAKEN": [
   {
    "condition": "the IT6 candidate CC-20261029-INTEGRATOR-IT6-REGISTRIES-01 carries the superseded census sentence in three places and is already integrated",
-   "default": "not edited (historical); this batch's own candidate carries the corrected wording through the same records, and the ledger sentence is replaced in place inside the IT6 update, as the census reconciliation proposed"
+   "default": "not edited (historical); this batch's own candidate carries the corrected wording through the same records. CARVE-OUT, named: the census sentence in DL-MECH-173, HYP-20261026-10 and the map R-10 sat in the BATCH_20261019_027 update (previous iteration) and was replaced in place on the P0a verdict list (C1, C2, C18) because it was a false global; each replaced passage is tagged '(perimeter wording narrowed by BATCH_20261019_029)'. The first version of this record called them 'this iteration's own' text; withdrawn by the addendum."
   },
   {
    "condition": "naming a ledger id in a map record changes the query population of that record's join row",
@@ -57,5 +57,13 @@
   "public_release_gate": "PASS, 0 BLOCKS",
   "candidate_ops_reconcile": "MATCH (18 ops)",
   "tests": "test_repurposing_join 84 OK (RegistriesIT7 5 tests), test_repurposing_coverage 60 OK, test_repurposing_view 121 OK, test_tool_routing OK, test_section_references OK, test_no_closed_world_assertions_on_live_state OK, check_needs OK, check_cards 27 packets 0 problems, p5_check 0 problems"
+ },
+ "ADDENDUM_REPAIR_20261029": {
+  "review": "disease-models/wwox/research/locator_audits/2026-10-29_it7_batch_review.md (commit dad3e91d; 0 HIGH, 6 MEDIUM, 8 LOW)",
+  "scope": "wording only, 13 record-scoped ops (discovery ledger 7, hypotheses ledger 2, paper registry 3, literature log 1) plus the map, card J01 packet and card (both directories, rebuilt with the bridge) and the test class; candidate ops_parsed 31, MATCH",
+  "fixed": "M1 map R-10 row; M2 carve-out named and tags added; M3 DL-MECH-174 about 0.39; M4 J01 item (3) restricted to the deposited transcripts with the immunofluorescence finding; M5 'in the sections read' on PAPER 567, PAPER 039, LIT-0365; M6 real Status lines asserted and docstring corrected; L1 to L5, L7, L8 as listed in the candidate addendum",
+  "L6": "not edited: rescue_window_it6_20261029.md rows 'Conditional / inducible' and the need row already carry the P0a wording ('neural deletion studies read here', the endothelial Cdh5-CreERT2 allele, 'found') at this branch head",
+  "mutation_test": "framework/scripts/test_repurposing_join.py::RegistriesIT7: 32 phrases (ledgers, map, registries, needs, J01 packet and card, the receipt ledger) each altered in the last character, one at a time, in a copy restored afterwards; 30 caught on the first run and the 2 survivors (a Status prefix that matched an earlier record, and an unasserted map phrase) fixed and re-run: 0 survived",
+  "regenerated": "pathograph, join (unchanged), coverage (check OK), handoff, both views, package (audit-shareable PASS)"
  }
 }
