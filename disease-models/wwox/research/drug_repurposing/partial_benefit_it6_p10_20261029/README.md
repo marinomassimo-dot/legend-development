@@ -80,7 +80,7 @@ All QUESTION_DRIVEN. Prior receipts were reused; no complete re-read was made.
 | Staged event | Source | New question | Surface | Depth | Prior |
 |---|---|---|---|---|---|
 | `FTR-20261029-31340538-01` | Tochigi 2019 | readout, ages, region and n of the reduced glia; before or after seizure competence? | JATS text, Results 2.2 and 2.3, Discussion; Fig. 5 native | partial | FTR-20261019-31340538-01 |
-| `FTR-20261029-42422765-01` | Obeid 2026 | age and region of the glial excess; any read before the first spike? | mmc1.pdf p. 9 (S7) rendered; ECoG text | partial | FTR-20261023-42422765-01 |
+| `FTR-20261029-42422765-02` | Obeid 2026 | age and region of the glial excess; any read before the first spike? | mmc1.pdf p. 9 (S7) rendered; ECoG text | partial | FTR-20261023-42422765-01 |
 | `FTR-20261029-30290271-01` | Hussain 2019 | was seizure state recorded in the 2-week mice? | r2 JATS (the earlier receipt's HTML path is not present on this host) | queried | FTR-20260806-30290271-01 |
 | `FTR-20261029-33914858-01` | Repudi 2021 | what was scored in the GFAP-Cre and Olig2-Cre deletions? | operator-supplied text; supplementary legend text | queried | FTR-20261003-33914858-03 |
 | `FTR-20261029-36828035-01` | Hussain 2023 | are the canonical reactive and cytokine transcripts in the thresholded sheets? | derived text of the supplementary sheets | queried | FTR-20261021-36828035-05 |
