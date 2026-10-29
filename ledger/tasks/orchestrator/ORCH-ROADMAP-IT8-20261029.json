@@ -25,8 +25,9 @@
    "steps": [
     {
      "step": "P1 classify historical privacy findings read-only (dedup, classes, reachability, tip vs history, scanner vs gate)",
-     "status": "TODO",
-     "owner": "scientist-d"
+     "status": "DONE",
+     "owner": "scientist-d",
+     "evidence": "df7c43cd merged; 204 BLOCK blobs classified, 0 unresolved; gate UUID rule; remedies reserved"
     },
     {
      "step": "P2 licences: from census to practicable corrections (primary terms, attribution fixes, reserved alternatives)",
