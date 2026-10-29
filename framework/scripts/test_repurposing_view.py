@@ -1210,8 +1210,260 @@ class RealViewports(unittest.TestCase):
             self.assertLessEqual(m["scrollWidth"], m["requested"], (m["scenario"], m["mobile"], m["offenders"]))
             if not m["mobile"]:
                 self.assertEqual(m["innerWidth"], m["requested"])
+            if m["scenario"] in ("brief", "evidence_graph", "work_order"):
+                self.assertEqual(m["ready"], "1", m)      # IT6 P13 scenarios are exercised at every viewport
             if m["scenario"] == "first_screen" and m["mobile"]:
                 self.assertLess(m["legendBottom"], dict((w, h) for w, h, _ in rv.VIEWPORTS)[m["requested"]], "the F/C/P legend must sit above the fold")
+        names = {m["scenario"] for m in res}
+        self.assertTrue({"brief", "evidence_graph", "work_order", "print_brief", "print_brief_all"} <= names, names)
+        pb = {m["scenario"]: m for m in res if m["scenario"].startswith("print_brief")}
+        self.assertEqual(pb["print_brief"]["pdf_pages"], 1, "the longest one-page synthesis must print on ONE A4 page")
+        self.assertEqual(pb["print_brief_all"]["pdf_pages"], len(rv.build_payload(DR, "shareable")["cur"]["cands"]), "every card's synthesis prints on exactly one A4 page")
+
+
+# ---------------------------------------------------------------------------- IT6 P13: one-page synthesis, evidence graph, work order
+@unittest.skipUnless(HAVE_DATA, "module data absent")
+class It6P13Data(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.P = rv.build_payload(DR)
+        cls.cur = cls.P["cur"]
+        cls.page = rv.build(DR)
+        cls.titles = rv.load_titles(DR)
+        cls.eg_doc = json.loads((DR / rv.GRAPH_NAME).read_text())
+        cls.wo_doc = json.loads((DR / rv.WORK_ORDER_NAME).read_text())
+        cls.cards = [c["id"] for c in cls.cur["cands"]]
+        cls.needs = [n["id"] for n in cls.cur["needs"]]
+        cls.groups = {n: {l["group"] for c in cls.cur["cands"] for k, l in c["links"].items() if k == n} for n in cls.needs}
+
+    @staticmethod
+    def static_html(page):
+        return re.sub(r"<script\b.*?</script>", "", page, flags=re.S)
+
+    # ---- (1) brief
+    def test_brief_has_eight_fields_and_at_most_five_titled_sources(self):
+        for c in self.cur["cands"]:
+            b = c["brief"]
+            for k in ("wwox", "external", "counter", "missing", "next"):
+                self.assertTrue(str(b[k]).strip(), (c["id"], k))
+            self.assertLessEqual(len(b["sources"]), rv.BRIEF_SOURCES_MAX)
+            titled = [x for x in b["sources"] if x["kind"] == "PMID"]
+            for x in titled:
+                self.assertIn(x["id"], {p["id"] for p in c["pmids"]})
+                self.assertEqual(x["title"], (self.titles.get(x["id"]) or {}).get("title"), (c["id"], x["id"]))
+            self.assertLessEqual(rv.brief_chars(c), 3200, c["id"])     # the budget that keeps one card on one A4 page (measured in the print test)
+        js = (DR / "view/assets/curated.js").read_text()
+        self.assertIn("#brief=", js)
+        self.assertIn("data-brief", js)
+        for i in range(1, 9):
+            self.assertTrue(rv.UI_IT[f"bf_f{i}"])
+            self.assertIn(f"T.bf_f{i}", js)
+        self.assertIn("x-dl", js)     # standalone download, like the dossier
+        self.assertEqual(rv.UI_IT["cd_brief"], "Sintesi (1 pagina)")
+
+    def test_brief_data_date_and_catalogue_build_are_separate_fields(self):
+        js = (DR / "view/assets/curated.js").read_text()
+        self.assertIn('data-date="data"', js)
+        self.assertIn('data-date="catalogo"', js)
+        m = self.cur["meta"]
+        self.assertNotEqual(m["data_date"], m["catalogue_generated"])      # a date and a timestamp: two different facts, never merged
+
+    # ---- (2) graph
+    def test_graph_validates_and_names_the_iteration6_chains(self):
+        errs = rv.validate_evidence_graph(self.eg_doc, self.cards, self.needs, self.titles, DR)
+        self.assertEqual(errs, [])
+        self.assertEqual([c["id"] for c in self.eg_doc["chains"]], ["glia", "nmdar-gate", "missense-route", "rescue-window", "isr-sign"])
+        used = {x for ch in self.eg_doc["chains"] for n in ch["nodes"] for x in n.get("cards", [])}
+        self.assertTrue({"J01_glial_reactivity_modulation", "F01_glutamate_receptor_node", "P11_magnesium_nmdar_gate", "A02_proteasome_inhibitor_class"} <= used)
+        isr = next(c for c in self.eg_doc["chains"] if c["id"] == "isr-sign")
+        self.assertEqual(isr["state"], "non risolto")
+        self.assertTrue(any(n.get("unresolved") for n in isr["nodes"]))
+        self.assertTrue(any(n["col"] == "esperimento" and "phospho" in n["label"] for n in isr["nodes"]))
+
+    def mutated_graph(self, fn):
+        d = json.loads(json.dumps(self.eg_doc))
+        fn(d)
+        return rv.validate_evidence_graph(d, self.cards, self.needs, self.titles, DR)
+
+    def test_graph_mutations_fail(self):
+        first = lambda d: d["chains"][0]
+        self.assertTrue(self.mutated_graph(lambda d: first(d)["nodes"][3].__setitem__("needs", ["NEED-DOES-NOT-EXIST"])))         # dangling need id
+        self.assertTrue(self.mutated_graph(lambda d: first(d)["nodes"][6].__setitem__("cards", ["ZZ99_no_card"])))                # dangling card id
+        self.assertTrue(self.mutated_graph(lambda d: first(d)["nodes"][0].__setitem__("pmids", ["99999999"])))                    # unknown PMID
+        self.assertTrue(self.mutated_graph(lambda d: first(d)["edges"][0].__setitem__("source", "PMID:99999999")))                # unknown source PMID
+        self.assertTrue(self.mutated_graph(lambda d: first(d)["edges"][0].__setitem__("to", "nope")))                             # dangling node
+        self.assertTrue(self.mutated_graph(lambda d: first(d)["edges"][0].pop("type")))                                           # untyped edge
+        self.assertTrue(self.mutated_graph(lambda d: first(d)["edges"][0].__setitem__("type", "causa")))                         # type outside the closed list
+        self.assertTrue(self.mutated_graph(lambda d: first(d)["edges"][0].pop("source")))                                         # edge without a source id
+        self.assertTrue(self.mutated_graph(lambda d: first(d)["edges"][0].__setitem__("source", "DOC:UNDECLARED")))
+        self.assertTrue(self.mutated_graph(lambda d: first(d)["edges"].pop()))                                                    # chain no longer leads to an experiment
+        self.assertTrue(self.mutated_graph(lambda d: first(d)["edges"][0].update({"from": "n1", "to": "o1"})))                    # backwards edge
+        self.assertTrue(self.mutated_graph(lambda d: d["chains"][0]["nodes"].append({"id": "orph", "col": "evidenza", "scope": "none", "label": "orphan"})))
+        self.assertTrue(self.mutated_graph(lambda d: d.__setitem__("columns", list(reversed(d["columns"])))))
+
+    def test_interactome_is_never_a_causal_edge(self):
+        def add(d, typ):
+            ch = d["chains"][0]
+            ch["nodes"].append({"id": "ia", "col": "osservazione WWOX", "scope": "wwox", "label": "Interactome: list of interactors of the protein", "interactome": True})
+            ch["edges"].append({"from": "ia", "to": "n1", "type": typ, "source": "DOC:P10"})
+        self.assertTrue(any("interactome" in e for e in self.mutated_graph(lambda d: add(d, "inferenza"))))
+        self.assertTrue(any("interactome" in e for e in self.mutated_graph(lambda d: add(d, "risultato sperimentale"))))
+        self.assertEqual(self.mutated_graph(lambda d: add(d, "associazione")), [])      # an association is the most it may be
+        self.assertFalse(any(re.search(r"interactom|interactor", n["label"], re.I) for ch in self.eg_doc["chains"] for n in ch["nodes"]))
+
+    def test_graph_is_server_rendered_with_three_edge_styles_legend_and_table(self):
+        h = self.static_html(self.page)
+        self.assertEqual(h.count('<svg class="eg"'), len(self.eg_doc["chains"]))
+        eg = self.cur["evidence_graph"]
+        for ch in eg["chains"]:
+            for n in ch["nodes"]:       # no JS-only content: every node label and the table of edges are in the markup with scripts removed
+                self.assertIn(html_escape(n["label"]), h, n["id"])
+        n_edges = sum(len(c["edges"]) for c in eg["chains"])
+        self.assertEqual(len(re.findall(r'<g class="eg-e" data-edge-type=', h)), n_edges)
+        for code, typ in (("R", "risultato sperimentale"), ("I", "inferenza"), ("A", "associazione")):
+            self.assertIn(f'class="eg-line e-{code}"', h)
+            self.assertEqual(len(re.findall(rf'<g class="eg-e" data-edge-type="{typ}"', h)), sum(1 for c in eg["chains"] for e in c["edges"] if e["type"] == typ))
+        css = (DR / "view/assets/curated.css").read_text()
+        self.assertRegex(css, r"\.eg-line\.e-I\{[^}]*stroke-dasharray:8 5")
+        self.assertRegex(css, r"\.eg-line\.e-A\{[^}]*stroke-dasharray:1\.5 5")
+        self.assertNotRegex(re.search(r"\.eg-line\.e-R\{[^}]*\}", css).group(0), "dasharray")
+        for ch in eg["chains"]:      # table rows == edges (the printed count in each summary equals the data)
+            m = re.search(rf'id="chain-{ch["id"]}".*?<summary>[^<]*\((\d+)\)</summary>(.*?)</article>', h, re.S)
+            self.assertEqual(int(m.group(1)), len(ch["edges"]))
+            self.assertEqual(m.group(2).count("<tr>") - 1, len(ch["edges"]))
+        self.assertIn('id="chains"', h)
+        self.assertIn("scorre in orizzontale al suo interno", h)
+        self.assertNotIn("<script", re.search(r'<section id="chains".*?</section>', h, re.S).group(0))
+
+    # ---- (3) work order
+    def test_work_order_follows_needs_order_and_covers_the_priority_needs(self):
+        ids = [e["need"] for e in self.wo_doc["entries"]]
+        self.assertEqual(ids, sorted(ids, key=self.needs.index))      # the order is the order of needs.json
+        review = (DR / "priority_review_it6_20261029.md").read_text()
+        sec = review[review.index("## 6. Work order"):review.index("## 7.")]
+        eleven = {"NEED-WWOX-GENE-ADDITION", "NEED-SEIZURE-CONTROL-SYMPTOMATIC", "NEED-T-TYPE-CALCIUM", "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR", "NEED-LACTATE-LDH", "NEED-PDH-PYRUVATE-AXIS",
+                  "NEED-ISR-ATTENUATION", "NEED-MYC-PROGENITOR-PROLIFERATION", "NEED-SYSTEMIC-GLYCAEMIA-GROWTH", "NEED-MYELINATION", "NEED-WWOX-MISSENSE-PROTEIN-RESCUE"}
+        self.assertEqual(len([l for l in sec.splitlines() if l.startswith("| ")]), 12)       # header and the eleven rows of the review's table
+        self.assertEqual(set(ids), eleven | {"NEED-NEUROINFLAMMATION-GLIA"})
+        self.assertEqual(self.mutated_wo(lambda d: None), [])
+        by = {e["need"]: e for e in self.wo_doc["entries"]}
+        for nid, upd in (("NEED-NEUROINFLAMMATION-GLIA", "P10"), ("NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR", "P11"), ("NEED-ISR-ATTENUATION", "P4"), ("NEED-WWOX-MISSENSE-PROTEIN-RESCUE", "P6"), ("NEED-WWOX-GENE-ADDITION", "P7")):
+            self.assertIn(upd, by[nid]["updated_by"], nid)
+        self.assertEqual(self.wo_doc["research_update"], "2026-10-29")
+
+    def mutated_wo(self, fn):
+        d = json.loads(json.dumps(self.wo_doc))
+        fn(d)
+        return rv.validate_work_order(d, self.needs, self.groups, self.cards, DR)
+
+    def test_kind_agrees_with_the_fcp_positions_of_the_need(self):
+        for e in self.wo_doc["entries"]:
+            self.assertIn(e["kind"], rv.allowed_kinds(self.groups[e["need"]]), e["need"])
+        # the rule itself
+        self.assertEqual(rv.allowed_kinds(set()), {"risolvere una premessa"})
+        self.assertEqual(rv.allowed_kinds({"F2"}), {"verificare un'ipotesi"})
+        self.assertEqual(rv.allowed_kinds({"F3", "C2", "P1"}), set(rv.WO_KINDS))
+        # mutations: a kind the positions do not support, a dangling need, a swapped order, a score field, an empty feasibility, a bad date
+        e0 = next(i for i, e in enumerate(self.wo_doc["entries"]) if e["need"] == "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR")
+        self.assertTrue(self.mutated_wo(lambda d: d["entries"][e0].__setitem__("kind", "chiarire una controevidenza")))      # F2 only: no counter-evidence on record
+        g0 = next(i for i, e in enumerate(self.wo_doc["entries"]) if e["need"] == "NEED-NEUROINFLAMMATION-GLIA")
+        if not self.groups["NEED-NEUROINFLAMMATION-GLIA"]:      # no card is linked to the need yet: only its premise can be addressed (after the merge that links J01 this branch is skipped)
+            self.assertTrue(self.mutated_wo(lambda d: d["entries"][g0].__setitem__("kind", "verificare un'ipotesi")))
+        self.assertTrue(self.mutated_wo(lambda d: d["entries"][0].__setitem__("kind", "ordinare")))
+        self.assertTrue(self.mutated_wo(lambda d: d["entries"][0].__setitem__("need", "NEED-NOPE")))
+        self.assertTrue(self.mutated_wo(lambda d: d["entries"].reverse()))
+        self.assertTrue(self.mutated_wo(lambda d: d["entries"][0].__setitem__("score", 0.9)))
+        self.assertTrue(self.mutated_wo(lambda d: d["entries"][0].__setitem__("feasibility", "")))
+        self.assertTrue(self.mutated_wo(lambda d: d["entries"][0].__setitem__("date", "29/10/2026")))
+        self.assertTrue(self.mutated_wo(lambda d: d["entries"][0].__setitem__("cards", ["ZZ99"])))
+
+    def test_work_order_is_shown_by_need_with_separate_dates_and_unknown_feasibility(self):
+        h = self.static_html(self.page)
+        sec = re.search(r'<div id="work-order".*?(?=<div class="btns">)', h, re.S).group(0)
+        wo = self.cur["work_order"]
+        self.assertEqual(sec.count('class="wo-item"'), len(wo["entries"]))
+        self.assertEqual([m for m in re.findall(r'data-need="([^"]+)" data-kind', sec)], [e["need"] for e in wo["entries"]])
+        self.assertIn('data-k="cur.work_order_date" data-v="2026-10-29"', sec)
+        self.assertIn(f'data-k="cur.catalogue_generated" data-v="{self.cur["meta"]["catalogue_generated"]}"', sec)
+        self.assertIn("due date diverse", sec)
+        for e in wo["entries"]:
+            self.assertIn(html_escape(e["kind"]), sec)
+            self.assertIn(html_escape(e["feasibility"]), sec)
+        self.assertEqual(sec.count("non nota"), sum(e["feasibility"].count("non nota") for e in wo["entries"]) + sec.count("«non nota»"))
+        self.assertNotRegex(sec, r"<ol\b")                      # an ordered list would read as a ranking
+        for bad in ("score", "punteggio:", "probabilit"):
+            self.assertNotIn(bad, re.sub(r"non ha punteggio", "", sec))
+        # printed counts equal the data: positions chips of each entry are the need's set
+        for e in wo["entries"]:
+            self.assertEqual(e["positions"], sorted(self.groups[e["need"]]))
+
+    def test_shareable_build_carries_graph_brief_and_work_order(self):
+        sh = rv.build_payload(DR, "shareable")["cur"]
+        self.assertEqual(sh["evidence_graph"]["chains"], self.cur["evidence_graph"]["chains"])
+        self.assertEqual(sh["work_order"]["entries"], self.cur["work_order"]["entries"])
+        for path in ("view/evidence_graph.json", "view/work_order.json", "isr_kinase", ".md"):     # no repository path or file name in the shareable page
+            self.assertNotIn(path, self.static_html(rv.build(DR, "shareable")), path)
+
+    def test_leak_audit_catches_a_class_c_name_in_the_graph_and_in_a_brief(self):
+        import repurposing_shareable_audit as au
+        share = rv.build(DR, "shareable")
+        ref = au.Reference(DR)
+        name = None
+        import gzip
+        with gzip.open(DR / "catalog/catalog.jsonl.gz", "rt", encoding="utf-8") as fh:
+            for line in fh:
+                e = json.loads(line)
+                cs = {t.get("claim_source") for t in e.get("targets") or []}
+                n = e.get("name") or ""
+                if e["origin"] == "dgidb_only" and cs == {"DTC"} and n.isalpha() and len(n) >= 8 and au.norm(n) not in ref.own_grams:
+                    name = n
+                    break
+        self.assertTrue(name)
+        def mut(fn):
+            P = embedded(share)
+            fn(P)
+            data = json.dumps(P, ensure_ascii=False, sort_keys=True, separators=(",", ":")).replace("</", "<\\/").replace("<!--", "<\\!--")
+            return re.sub(r'(<script id="data" type="application/json">).*?(</script>)', lambda m: m.group(1) + data + m.group(2), share, count=1, flags=re.S)
+        for fn in (lambda P: P["cur"]["evidence_graph"]["chains"][0]["nodes"][0].__setitem__("label", "x " + name),
+                   lambda P: P["cur"]["cands"][0]["brief"].__setitem__("wwox", "x " + name),
+                   lambda P: P["cur"]["work_order"]["entries"][0].__setitem__("question", "x " + name)):
+            rep, _ = au.audit_html(mut(fn), DR, ref)
+            self.assertIn("forbidden-name", {v["kind"] for v in rep.violations})
+        rep, _ = au.audit_html(share, DR, ref)
+        self.assertEqual(rep.violations, [])
+
+
+def html_escape(s):
+    import html
+    return html.escape(s)
+
+
+class BriefBrowser(Browser):
+    def test_brief_route_renders_eight_fields_and_two_dates(self):
+        cid = "EB-ETX-01"
+        d = self.dom("#brief=" + cid)
+        area = d[d.index('id="export-area"'):]
+        self.assertIn("exporting", d)
+        self.assertEqual(len(re.findall(r'<dt data-field="\d">', area)), 8)
+        for i in range(1, 9):
+            self.assertIn(rv.UI_IT[f"bf_f{i}"], area)
+        self.assertRegex(area, r'data-date="data">\d{4}-\d{2}-\d{2}<')
+        self.assertRegex(area, r'data-date="catalogo">\d{4}-\d{2}-\d{2}T')
+        self.assertIn('href="#export=' + cid + '"', area)
+        self.assertIn("PMID 32000863", area)
+        self.assertEqual(len(re.findall(r"PMID \d+</a>", area)), len(self.cards_brief(cid)))
+
+    def cards_brief(self, cid):
+        return next(c for c in self.P["cur"]["cands"] if c["id"] == cid)["brief"]["sources"]
+
+    def test_profile_has_the_brief_button_beside_the_export_button(self):
+        d = self.dom("#c=need:NEED-T-TYPE-CALCIUM")
+        self.assertRegex(d, r'data-export="EB-ETX-01">[^<]*</button><button type="button" data-brief="EB-ETX-01">Sintesi \(1 pagina\)</button>')
+
+    def test_graph_and_work_order_render_with_javascript_too(self):
+        d = self.dom("")
+        self.assertEqual(d.count('<svg class="eg"'), 5)
+        self.assertIn('data-wo="NEED-ISR-ATTENUATION"', d)       # priorities by need link to the work order
 
 
 if __name__ == "__main__":
