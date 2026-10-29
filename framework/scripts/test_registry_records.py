@@ -777,14 +777,19 @@ class AFieldFilterReportsItsDenominator(unittest.TestCase):
         both halves, and the only typed constant is the status value, whose emptiness the guard
         itself checks.
         """
-        status = "conflicting evidence"
         theme_only = rr.select(ROOT, "wwox", theme="myelin", hops=0,
                                sources=["claim_registry_current"])
         themed = {record.record_id for record, _ in theme_only.hits}
         self.assertTrue(themed, "the theme selection must not be empty, or nothing is narrowed")
-        self.assertEqual(set(), self._independent_claim_scan("Status", status) & themed,
-                         "the corpus changed: a myelin-themed claim now carries this status, so "
-                         "this case needs a new status value")
+        # The status value is DERIVED too: the first status carried by some claim in the registry
+        # and by NO myelin-themed claim (BATCH_20261019_026 added myelin text to CLAIM 001 and made
+        # the previously typed value stop being empty: a typed value is the same defect again).
+        registry_statuses = sorted({m.group(1).strip() for m in
+                                    re.finditer(r"^\*\*Status:\*\*\s*(.*)$", CLAIMS.read_text(encoding="utf-8"), re.M)})
+        status = next((cand for cand in registry_statuses
+                       if self._independent_claim_scan("Status", cand)
+                       and not (self._independent_claim_scan("Status", cand) & themed)), None)
+        self.assertIsNotNone(status, "no status is carried by a claim outside the myelin theme: the case needs a new derivation")
         found = rr.select(ROOT, "wwox", theme="myelin", constraints=[("Status", status)],
                           hops=0, sources=["claim_registry_current"])
         self.assertEqual([], found.hits)

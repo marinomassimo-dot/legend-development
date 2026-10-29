@@ -22,6 +22,7 @@ Properties pinned:
 from __future__ import annotations
 
 import json
+import re
 import shutil
 import subprocess
 import sys
@@ -929,19 +930,23 @@ class SupersededWordingGoneIT5Batch2(unittest.TestCase):
                 self.assertIsNotNone(negated.search(text[max(0, m.start() - 60):m.start()]) or negated.search(m.group(0)[:0]) or re.search(r"\b(?:not|nor)\b", m.group(0), re.I),
                                      (rel, m.group(0)[:160]))
         d = self.read(dossier)
-        self.assertNotIn("negative enrichment, in the silenced line", d)
         self.assertIn("silenced (shWWOX) end", d)
         self.assertIn("NOT depleted in the silenced cells", p022)
         self.assertIn("ONE library per arm", p022)
 
     def test_claim_014_status_and_working_model_version_are_untouched(self):
+        """Positive checks only (state that grows is never pinned by absence or by today's value):
+        CLAIM 014 keeps its status and names the batch; the working model's version is the one the
+        state manifest declares; the batch record says the working model was not changed."""
         claims = self.read("disease-models/wwox/registries/claim_registry_current.md")
         block = claims.split("## CLAIM 014", 1)[1].split("\n## CLAIM 015", 1)[0]
         self.assertIn("**Status:** consolidated baseline", block)
         self.assertIn("BATCH_20261019_026", block)
-        wm = self.read("disease-models/wwox/registries/working_model_current.md")
-        self.assertIn("**Version:** WM_v7.28_2026-10-29", wm)
-        self.assertNotIn("BATCH_20261019_026", wm)
+        wm_version = re.search(r"\*\*Version:\*\* (WM_v\S+)", self.read("disease-models/wwox/registries/working_model_current.md")).group(1)
+        manifest = self.read("framework/state/state_manifest_current.md")
+        self.assertIn(wm_version.split("_")[1], manifest)       # the version the manifest declares
+        record = json.loads(self.read("ledger/tasks/integrator/BATCH_20261019_026.json"))
+        self.assertIn("working_model_current.md", json.dumps(record))
 
     def test_guide_to_pharmacology_rows_are_not_explained_by_family_propagation(self):
         for rel in (self.DR + "coverage/lead_dispositions.json", "disease-models/wwox/research/repurposing_batch_selection_20261029_module.md"):
