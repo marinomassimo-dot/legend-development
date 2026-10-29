@@ -9,8 +9,8 @@
 # the workflow is dispatched (DEPLOY.md, section 7). The Pages environment normally accepts deployments only
 # from the default branch, so the workflow is dispatched from that branch after the work has landed there.
 # It cannot be triggered by a push, a schedule or a pull request: workflow_dispatch is its only trigger.
-# Before activation, replace each `uses:` tag by the commit SHA of the release you reviewed (this file
-# was written offline and could not look those SHAs up).
+# Every `uses:` is pinned to the commit SHA of the release named in the trailing comment (looked up on 2026-10-29 with
+# `git ls-remote --tags` against the action repositories; see DEPLOY.md section 11). Re-check them before activation.
 name: Publish the shareable view (manual, proposal)
 
 on:
@@ -31,7 +31,7 @@ jobs:
   verify:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - name: Every package file, manifest.json included, equals its digest in DEPLOY.md and in the manifest
         run: |
           python3 - <<'PY'
@@ -68,10 +68,10 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
+      - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
         with:
           path: ${{ env.PACKAGE_DIR }}
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
