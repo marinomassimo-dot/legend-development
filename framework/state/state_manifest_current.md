@@ -107,12 +107,12 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20261019_026
+last_batch_commit_id: BATCH_20261019_027
 last_batch_commit_date: 2026-10-29
 last_batch_commit_type: MANUAL
 commit_candidates_propagated: 1
 target_wm_version: WM_v7.28
-trigger: MANUAL (ACTOR_ID orchestrator by stated assumption, mandate IT5 registries step, executed by the Integrator worker). WM_v7.28 preserved, no working-model statement changed: CLAIM 014 wave note, PAPER 022 and PAPER 431 and LIT-0024 and LIT-0703 reading notes, ten dated UPDATE bullets in the discovery, hypotheses and dismissal ledgers (iteration-5 results: ISR sign unresolved, no transcript support at PDK1, GSEA sign, phenylbutyrate compartment objection restated, T-type premise quantified, Guide-to-Pharmacology identity cause), map, card E03, needs, derived surfaces. Previous batch BATCH_20261019_025 (MINOR WM_v7.28: the BLOCK 1 VABAM bullet is rewritten (two case-selected WWOX-DEE children, abstract level, no denominator; the label's 22 against 4 percent concerns non-WWOX infants; enrichment in WWOX not supported; cautionary position unchanged), CLAIM 001 wave note, PAPER 003 and LIT-003 notes; research layer carries the nonsense-allele enumeration as a prediction and read-through applicability by lesion class to the cards, needs, DIS-41 and the census. Previous batch BATCH_20261019_024: DL-MECH-173 sentence, WM_v7.27 preserved.
+trigger: MANUAL (ACTOR_ID integrator, mandate IT6 registries step, executed by the Integrator worker for the orchestrator). WM_v7.28 preserved, no working-model statement changed: wave notes on CLAIM 004, 011, 040, 002, 021 and 005, reading updates on twelve paper records and eleven literature-log records, sixteen dated UPDATE bullets in the discovery and hypotheses ledgers and one new hypothesis (HYP-20261029-01, generated), map, derived surfaces (iteration-6 results: gene addition is prevention or early-window in the mouse, the d-APV result shows that bursting needs NMDAR activity and not that NMDAR function is raised, the ISR sign stays unresolved after a third system, the glial sign conflict, the function ruler and route blockade). Previous batch BATCH_20261019_026: WM_v7.28 preserved, no working-model statement changed: CLAIM 014 wave note, PAPER 022 and PAPER 431 and LIT-0024 and LIT-0703 reading notes, ten dated UPDATE bullets in the discovery, hypotheses and dismissal ledgers (iteration-5 results: ISR sign unresolved, no transcript support at PDK1, GSEA sign, phenylbutyrate compartment objection restated, T-type premise quantified, Guide-to-Pharmacology identity cause), map, card E03, needs, derived surfaces. Previous batch BATCH_20261019_025 (MINOR WM_v7.28: the BLOCK 1 VABAM bullet is rewritten (two case-selected WWOX-DEE children, abstract level, no denominator; the label's 22 against 4 percent concerns non-WWOX infants; enrichment in WWOX not supported; cautionary position unchanged), CLAIM 001 wave note, PAPER 003 and LIT-003 notes; research layer carries the nonsense-allele enumeration as a prediction and read-through applicability by lesion class to the cards, needs, DIS-41 and the census. Previous batch BATCH_20261019_024: DL-MECH-173 sentence, WM_v7.27 preserved.
 ```
 
 Every batch's scope — the candidates it propagated, newest first back to `BATCH_20260810_001`,
@@ -126,7 +126,7 @@ with the keys written beside each and the notes on `BATCH_20260806_002` — is i
 
 ```yaml
 last_lint_type: LINT_AUTOMATIC
-last_lint_id: LINT_20261029_BATCH_20261019_026
+last_lint_id: LINT_20261029_BATCH_20261019_027
 last_lint_date: 2026-10-29
 last_lint_result: WARN
 ```
