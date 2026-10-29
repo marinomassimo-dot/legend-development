@@ -1,0 +1,452 @@
+{
+ "A_input_delta": {
+  "external_edges": 70461,
+  "external_nodes": 8769,
+  "wwox_added_edges": 4,
+  "added_edges": [
+   {
+    "source": "HIF1A",
+    "target": "HK2",
+    "sign": 1,
+    "status": "present_same_sign",
+    "source_in_ext": true,
+    "target_in_ext": true
+   },
+   {
+    "source": "HIF1A",
+    "target": "SLC2A1",
+    "sign": 1,
+    "status": "present_same_sign",
+    "source_in_ext": true,
+    "target_in_ext": true
+   },
+   {
+    "source": "HIF1A",
+    "target": "LDHA",
+    "sign": 1,
+    "status": "present_same_sign",
+    "source_in_ext": true,
+    "target_in_ext": true
+   },
+   {
+    "source": "HIF1A",
+    "target": "PDK1",
+    "sign": 1,
+    "status": "present_same_sign",
+    "source_in_ext": true,
+    "target_in_ext": true
+   }
+  ],
+  "new_edges": 0,
+  "already_present_same_sign": 4,
+  "sign_conflicts": 0,
+  "new_nodes": 0,
+  "WWOX_node_in_external": true,
+  "WWOX_edges_in_external": [
+   [
+    "TFAP2C",
+    "WWOX",
+    1
+   ],
+   [
+    "NFKB1",
+    "WWOX",
+    1
+   ],
+   [
+    "RELA",
+    "WWOX",
+    1
+   ],
+   [
+    "RELB",
+    "WWOX",
+    1
+   ],
+   [
+    "REL",
+    "WWOX",
+    1
+   ],
+   [
+    "NFKB2",
+    "WWOX",
+    1
+   ],
+   [
+    "E2F1",
+    "WWOX",
+    -1
+   ]
+  ],
+  "HIF1A_out_degree_external": 306,
+  "HIF1A_to_six_readouts_in_external": {
+   "SLC2A1": 1,
+   "HK2": 1,
+   "LDHA": 1,
+   "LDHB": 1,
+   "BNIP3": 1,
+   "PDK1": 1
+  },
+  "p1_edge_type_counts": {
+   "measured|transcript": 52,
+   "measured|set_transcript": 18,
+   "inferred|transcript": 4,
+   "measured|protein": 2,
+   "hypothesised|metabolite": 2,
+   "association|metabolite": 2,
+   "measured|functional": 1,
+   "measured|metabolite": 1,
+   "association|functional": 1,
+   "association|protein": 1,
+   "inferred|activity": 1
+  },
+  "p1_gene_gene_edges": [
+   [
+    "HIF1A",
+    "HK2",
+    "inferred",
+    "up"
+   ],
+   [
+    "HIF1A",
+    "SLC2A1",
+    "inferred",
+    "up"
+   ],
+   [
+    "HIF1A",
+    "LDHA",
+    "inferred",
+    "up"
+   ],
+   [
+    "HIF1A",
+    "PDK1",
+    "inferred",
+    "up"
+   ]
+  ],
+  "reproduction_max_abs_diff_NET_EXT": 4.556055515996492e-08,
+  "reproduction_max_abs_diff_NET_WWOX": 4.96806219221161e-08,
+  "families_total": 256,
+  "families_with_any_score_change": 80,
+  "families_with_change_gt_1e-4": 0,
+  "max_abs_score_change": 1.3553479220718145e-05,
+  "sd_of_NET_EXT_scores": 0.0013914303854107857,
+  "max_change_in_sd_units": 0.009740680456161499,
+  "families_nonzero_NET_EXT": 143,
+  "rho_NETEXT_vs_NETWWOX_scores": 0.9999256502375866,
+  "rho_EXT_vs_OE": 0.04744423291814541,
+  "rho_WWOX_vs_OE": 0.04594261531474672,
+  "changed_families": [
+   {
+    "family": "FAM:CAT:CHEMBL102714",
+    "name": "SB-216763",
+    "delta": 1.3553479220718145e-05,
+    "NET_EXT": -8.897017687559128e-05
+   },
+   {
+    "family": "FAM:CAT:CHEMBL1213492",
+    "name": "GIVINOSTAT",
+    "delta": -1.1979136615991592e-05,
+    "NET_EXT": 0.005785240791738033
+   },
+   {
+    "family": "FAM:CAT:CHEMBL235191",
+    "name": "TACEDINALINE",
+    "delta": -1.1979136615991592e-05,
+    "NET_EXT": 0.005785240791738033
+   },
+   {
+    "family": "FAM:CAT:CHEMBL408513",
+    "name": "BELINOSTAT",
+    "delta": -1.1979136615991592e-05,
+    "NET_EXT": 0.005785240791738033
+   },
+   {
+    "family": "FAM:CAT:CHEMBL3545368",
+    "name": "PANOBINOSTAT LACTATE",
+    "delta": -1.1979136615991592e-05,
+    "NET_EXT": 0.005785240791738033
+   },
+   {
+    "family": "FAM:CAT:CHEMBL27759",
+    "name": "ENTINOSTAT",
+    "delta": -1.1979136615991592e-05,
+    "NET_EXT": 0.005785240791738033
+   },
+   {
+    "family": "FAM:CAT:CHEMBL2105763",
+    "name": "QUISINOSTAT",
+    "delta": -1.1979136615991592e-05,
+    "NET_EXT": 0.005785240791738033
+   },
+   {
+    "family": "FAM:CAT:CHEMBL25202",
+    "name": "TAMIBAROTENE",
+    "delta": 1.144743146141991e-05,
+    "NET_EXT": 1.937395063578151e-05
+   },
+   {
+    "family": "FAM:CAT:CHEMBL601719",
+    "name": "CRIZOTINIB",
+    "delta": -9.40664358495269e-06,
+    "NET_EXT": 1.4869030565023422e-05
+   },
+   {
+    "family": "FAM:CAT:CHEMBL1265",
+    "name": "ADAPALENE",
+    "delta": 9.174343176709954e-06,
+    "NET_EXT": 1.4819614989391994e-05
+   }
+  ],
+  "families_whose_targets_reach_HIF1A_within_K_hops_incl_direct": 125,
+  "families_with_direct_target_HIF1A": 0
+ },
+ "B_power": {
+  "note": "HYPOTHETICAL random edges between nodes of the external graph, signs random; sizes only; NOT WWOX relations; O_E is the IT7 opened outcome and is used only to size the paired-difference spread",
+  "observed_paired_diff_rho": -0.0015016176033986889,
+  "observed_paired_diff_boot_SE": 0.0013067305131284517,
+  "observed_paired_diff_boot90": [
+   -0.003982660461577847,
+   0.0002393513946568883
+  ],
+  "independent_rho_SE_at_nU": 0.06286946134619315,
+  "MDE_independent_rho_80pct_power_one_sided_5pct": 0.15632491563730924,
+  "random_edge_additions": [
+   {
+    "edges_added": 4,
+    "pct_of_external_edges": 0.006,
+    "families_changed_median": 0,
+    "abs_d_rho_median": 0.0,
+    "abs_d_rho_p95": 0.0,
+    "reps": 30
+   },
+   {
+    "edges_added": 25,
+    "pct_of_external_edges": 0.035,
+    "families_changed_median": 1,
+    "abs_d_rho_median": 0.0,
+    "abs_d_rho_p95": 0.0007893419103265256,
+    "reps": 30
+   },
+   {
+    "edges_added": 100,
+    "pct_of_external_edges": 0.142,
+    "families_changed_median": 17,
+    "abs_d_rho_median": 0.00028991905211715394,
+    "abs_d_rho_p95": 0.012340817691056561,
+    "reps": 30
+   },
+   {
+    "edges_added": 400,
+    "pct_of_external_edges": 0.568,
+    "families_changed_median": 55,
+    "abs_d_rho_median": 0.0031349088189513083,
+    "abs_d_rho_p95": 0.01279793819426655,
+    "reps": 30
+   },
+   {
+    "edges_added": 1600,
+    "pct_of_external_edges": 2.271,
+    "families_changed_median": 108,
+    "abs_d_rho_median": 0.009822038299557845,
+    "abs_d_rho_p95": 0.022309087307252087,
+    "reps": 30
+   },
+   {
+    "edges_added": 6400,
+    "pct_of_external_edges": 9.083,
+    "families_changed_median": 152,
+    "abs_d_rho_median": 0.0281590464574483,
+    "abs_d_rho_p95": 0.06927899662925788,
+    "reps": 12
+   }
+  ]
+ },
+ "C_signature_quality_counts": {
+  "signatures_in_IT7_scores": 1239,
+  "found_in_sig_metrics": 1239,
+  "by_context_class": {
+   "E": {
+    "n": 451,
+    "cc_missing_(-666)": 25,
+    "pass_cc>=0.2_&_selfrank<=5": 140,
+    "nsample>=3": 273
+   },
+   "B": {
+    "n": 788,
+    "cc_missing_(-666)": 14,
+    "pass_cc>=0.2_&_selfrank<=5": 324,
+    "nsample>=3": 750
+   }
+  },
+  "families_in_U": 256,
+  "families_with_passing_signature_in_B": 154,
+  "families_with_passing_signature_in_E": 92,
+  "families_with_passing_in_both_B_and_E": 63,
+  "six_readouts_L1000_status": {
+   "LDHA": {
+    "landmark_measured": "0",
+    "bing_inferred_or_measured": "1"
+   },
+   "LDHB": {
+    "landmark_measured": "0",
+    "bing_inferred_or_measured": "1"
+   },
+   "SLC2A1": {
+    "landmark_measured": "0",
+    "bing_inferred_or_measured": "1"
+   },
+   "BNIP3": {
+    "landmark_measured": "1",
+    "bing_inferred_or_measured": "1"
+   },
+   "HK2": {
+    "landmark_measured": "0",
+    "bing_inferred_or_measured": "1"
+   },
+   "PDK1": {
+    "landmark_measured": "0",
+    "bing_inferred_or_measured": "1"
+   }
+  }
+ },
+ "D_WWOX_out_edge_scenarios": {
+  "note": "WWOX is a sink in the external graph (in-edges only). Scenario edges are the only gene-level relations the P1 table holds that involve WWOX; they are sized, not adopted. S_B encodes the readout answer in the network (circular by construction).",
+  "WWOX_regulators_in_external": [
+   "E2F1",
+   "NFKB1",
+   "NFKB2",
+   "REL",
+   "RELA",
+   "RELB",
+   "TFAP2C"
+  ],
+  "families_in_U_with_a_direct_target_among_WWOX_regulators": 0,
+  "those_families": [],
+  "families_in_U_with_WWOX_as_target": 0,
+  "families_first_reaching_WWOX_at_hop": {
+   "1": 0,
+   "2": 24,
+   "3": 62
+  },
+  "families_reaching_WWOX_within_K_hops": 86,
+  "reading": "hop 2 + one WWOX out-edge to a readout = hop 3 (inside K=3): S_B can change those families; WWOX->HIF1A needs the readout one hop further (past K=3), so S_A changes nothing",
+  "S_A_WWOX_to_HIF1A_loss_raises_protein_(MEF_and_cancer_cells,_non-neural)": {
+   "scenario": "S_A",
+   "edges": [
+    [
+     "WWOX",
+     "HIF1A",
+     -1
+    ]
+   ],
+   "families_changed(>1e-9)": 0,
+   "families_changed(>1e-4)": 0,
+   "max_abs_change": 0.0,
+   "max_change_in_SD_of_NET_EXT": 0.0,
+   "rho_with_O_E": 0.04744423291814541,
+   "paired_diff_rho_vs_EXT (descriptive, IT7-opened outcome)": 0.0,
+   "spearman_scores_vs_EXT": 1.0
+  },
+  "S_B_WWOX_to_six_readouts_in_module_direction_(circular)": {
+   "scenario": "S_B",
+   "edges": [
+    [
+     "WWOX",
+     "SLC2A1",
+     -1
+    ],
+    [
+     "WWOX",
+     "HK2",
+     -1
+    ],
+    [
+     "WWOX",
+     "LDHA",
+     -1
+    ],
+    [
+     "WWOX",
+     "LDHB",
+     -1
+    ],
+    [
+     "WWOX",
+     "BNIP3",
+     -1
+    ],
+    [
+     "WWOX",
+     "PDK1",
+     1
+    ]
+   ],
+   "families_changed(>1e-9)": 24,
+   "families_changed(>1e-4)": 0,
+   "max_abs_change": 2.9625938623212278e-05,
+   "max_change_in_SD_of_NET_EXT": 0.021291714161634445,
+   "rho_with_O_E": 0.04746144129127853,
+   "paired_diff_rho_vs_EXT (descriptive, IT7-opened outcome)": 1.7208373133119348e-05,
+   "spearman_scores_vs_EXT": 0.9999366070446791
+  },
+  "S_C_both": {
+   "scenario": "S_C",
+   "edges": [
+    [
+     "WWOX",
+     "HIF1A",
+     -1
+    ],
+    [
+     "WWOX",
+     "SLC2A1",
+     -1
+    ],
+    [
+     "WWOX",
+     "HK2",
+     -1
+    ],
+    [
+     "WWOX",
+     "LDHA",
+     -1
+    ],
+    [
+     "WWOX",
+     "LDHB",
+     -1
+    ],
+    [
+     "WWOX",
+     "BNIP3",
+     -1
+    ],
+    [
+     "WWOX",
+     "PDK1",
+     1
+    ]
+   ],
+   "families_changed(>1e-9)": 24,
+   "families_changed(>1e-4)": 0,
+   "max_abs_change": 2.5393659598194063e-05,
+   "max_change_in_SD_of_NET_EXT": 0.018250038847327232,
+   "rho_with_O_E": 0.04746144129127853,
+   "paired_diff_rho_vs_EXT (descriptive, IT7-opened outcome)": 1.7208373133119348e-05,
+   "spearman_scores_vs_EXT": 0.9999366070446791
+  }
+ },
+ "E_card_linked_truth_availability": {
+  "card_linked_families_in_pilot": 19,
+  "card_linked_usable_by_both_methods": 2,
+  "card_linked_in_U": 1,
+  "names_in_U": [
+   "SIROLIMUS"
+  ]
+ }
+}
