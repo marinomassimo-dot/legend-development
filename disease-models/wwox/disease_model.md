@@ -44,7 +44,7 @@
 - Network hyperexcitability + AAV-WWOX rescue in organoids (Steinberg 2024).
 - Non-cell-autonomous hypomyelination in neuronal WWOX deletion (Repudi 2021).
 - N/N genotype → higher risk of seizures, hypertonia, respiratory complications vs N/M and M/M (Gao 2025, n=50).
-- AAV9-hSynI-hWWOX: dose-dependent durable rescue in a Wwox-null murine model, including ECoG/SWD reduction (Obeid 2026).
+- AAV9-hSynI-hWWOX: dose-dependent durable rescue in a Wwox-null murine model, including ECoG/SWD reduction (Obeid 2026) (early-window prevention in the null mouse; no after-onset mouse arm).
 - Ketogenic diet: three of five patients in one WOREE series are reported as responders; the number exposed is not stated, and the one Q230P carrier has no diet entry (Chong 2023; [[claim_registry_current#CLAIM 042]]).
 - In the P47T knock-in mouse, sampled cerebellar regions have fewer calbindin-positive Purkinje profiles than wild type at 80 and 250 days; basket-cell genotype tests are nonsignificant at both ages. This does not test progression within P47T or transfer to Q230P. *(CLAIM 041 / Hussain 2023.)*
 
@@ -84,8 +84,8 @@
 
 - A clinical AAV9-WWOX programme is anticipated (2025–2027).
 - Steinberg 2024 organoids: AAV9-WWOX normalizes Ca²⁺ transients and hyperexcitability; MYC overexpression identified as a key mechanism.
-- Obeid 2026 (Wwox-null murine): AAV9-hSynI-hWWOX — dose-dependent durable rescue (survival, glucose, behavior, myelination, gliosis, SWD/ECoG); neuron-specific targeting; early postnatal ICV delivery.
-- **Design principles:** human synapsin promoter (neuron-specific); WPRE removed (avoid overexpression); dose controlled; critical early postnatal window (P0–P5 in mouse).
+- Obeid 2026 (Wwox-null murine): AAV9-hSynI-hWWOX — dose-dependent durable rescue (survival, glucose, behavior, myelination, gliosis, SWD/ECoG); neuron-specific targeting; early postnatal ICV delivery (early-window prevention in the null mouse; no after-onset mouse arm).
+- **Design principles:** human synapsin promoter (neuron-specific); WPRE removed (avoid overexpression); dose controlled; early postnatal window tested (P0–P5 in mouse: ages tested, not a measured boundary).
 - **Safety caveat:** DRG / peripheral-organ dose-limiting toxicity at high systemic AAV dose → favors targeted/controlled delivery (a pediatric regulatory concern).
 - **Epigenetic option (future / extension):** dCas9/CRISPRa upregulation of endogenous WWOX for **hypomorphic** states — potentially relevant to residual-function missense alleles; not actionable now.
 - **First-in-human (background/observation):** a WWOX gene therapy reported given to an infant with WWOX epilepsy (ICV) — the strongest external signal for the GT axis; awaiting peer-reviewed clinical data. NOT a datum.
