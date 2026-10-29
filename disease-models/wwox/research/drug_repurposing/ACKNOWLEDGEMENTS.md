@@ -17,7 +17,7 @@ Nothing here is medical advice. Not one of these sources certifies efficacy, saf
 ## chembl
 
 - **What we use:** curated mechanism of action per drug with its reference; ChEMBL targets per gene
-- **Access:** GET https://www.ebi.ac.uk/chembl/api/data/{status,molecule/search,mechanism,target/search}.json
+- **Access:** GET https://www.ebi.ac.uk/chembl/api/data/{status,molecule/search,mechanism,target/search,target,activity,assay}.json
 - **Licence:** CC BY-SA 3.0; key-less, no payment
 - **Licence source:** https://chembl.gitbook.io/chembl-interface-documentation/about (Data Licensing) and https://www.ebi.ac.uk/about/terms-of-use — read on 2026-10-23
 - **Terms as read:** 'The ChEMBL data is made available on a Creative Commons Attribution-Share Alike 3.0 Unported License' (share-alike: an adaptation of the data is redistributed under the same licence; this module copies fields verbatim and does not redistribute a derived database). Web services under the EMBL-EBI terms of use: 'EMBL-EBI expects attribution'; no numeric rate limit, use must not prevent service to others. Calculated compound properties come from commercial software and carry their own terms (not consumed here).
