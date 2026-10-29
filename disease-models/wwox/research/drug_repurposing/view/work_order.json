@@ -1,0 +1,326 @@
+{
+  "schema": "legend.wwox.work_order/1",
+  "research_update": "2026-10-29",
+  "authoring": "Hand-authored from the work order of the priority review (section 6) and updated by the iteration-6 cycles. Validated at build time by repurposing_view.py: every need id must exist in the needs register, the entries follow the order of the needs register (no ranking), the kind must agree with the F/C/P positions the view assigns to that need, and the dates are ISO dates. The research-update date is shown apart from the catalogue build date. No score, no probability, no ranking of treatments or of needs. Window states (P7, rescue-window record section 5) are a closed vocabulary; for cards the build checks that the card wording itself carries the early-window statement.",
+  "kinds": [
+    "verificare un'ipotesi",
+    "chiarire una controevidenza",
+    "risolvere una premessa"
+  ],
+  "docs": {
+    "P4": {
+      "path": "mouse_wwox_p17_it6_p4_20261029/README.md",
+      "label": "IT6 P4 record: ISR gene sets in mouse P17 brain"
+    },
+    "P6": {
+      "path": "broad_recovery_it6_p6_20261029/README.md",
+      "label": "IT6 P6 record: route blockade of a destabilised missense protein"
+    },
+    "P7": {
+      "path": "rescue_window_it6_20261029.md",
+      "label": "IT6 P7 record: rescue window"
+    },
+    "P10": {
+      "path": "partial_benefit_it6_p10_20261029/README.md",
+      "label": "IT6 P10 record: glial reactivity"
+    },
+    "P11": {
+      "path": "supplement_diet_it6_p11_20261029/README.md",
+      "label": "IT6 P11 record: magnesium and the NMDAR gate"
+    },
+    "REVIEW": {
+      "path": "priority_review_it6_20261029.md",
+      "label": "IT6 P2 priority review"
+    },
+    "ISR-DESIGN": {
+      "path": "isr_kinase_interactome_atf4_reconciliation_it4_20261028.md",
+      "label": "IT4 note: ISR kinase attribution, revised design"
+    },
+    "P9": {
+      "path": "nmdar_pharmacology_it6_p9_20261029/README.md",
+      "label": "IT6 P9 record: NMDAR intervention class and the isolated-current discriminator"
+    }
+  },
+  "entries": [
+    {
+      "need": "NEED-WWOX-GENE-ADDITION",
+      "kind": "verificare un'ipotesi",
+      "question": "Does an intermediate vector level separate a threshold from a gradient, and is the benefit only prevented inside the first days of life or also recovered when treatment follows onset? No study has measured the phenotype at the day of injection.",
+      "data": "The cards' own next measurement: an intermediate arm defined as a fraction of the higher level, carried to 300 days with survival, weight, glucose, ECoG and quantified myelination; plus a pre-treatment baseline in the same animals or an age-matched cohort, and treated-after-onset arms with a same-age untreated comparator (organoids or a slower-onset model).",
+      "would_change": "Quantified myelination would add a controlled row on the same need; a failure would move the card to C2 by rule; a treated-after-onset arm would show whether the word recovery may be used for that endpoint.",
+      "feasibility": "Wet-lab work in a Wwox-null mouse by a laboratory that has the vector; none known in this repository; the source laboratory is one group (the two papers share a senior author). Whether the vector is obtainable: not known.",
+      "date": "2026-10-29",
+      "updated_by": [
+        "P7"
+      ],
+      "cards": [
+        "C01_aav9_wwox",
+        "C04_aav9_endpoint_families"
+      ],
+      "docs": [
+        "P7",
+        "REVIEW"
+      ],
+      "window_state": [
+        {
+          "state": "prevented_early_window",
+          "note": "Mouse: every endpoint is read after treatment at P0 to P5 in animals never measured before it."
+        },
+        {
+          "state": "recovered_post_onset_model",
+          "note": "Only organoid hyperexcitability: AAV9 given at week 10 on a phenotype recorded at week 7 (post-onset by about 3 weeks, in different organoid cohorts), read at week 16 only; persistence not measured; one endpoint family; radial-glia abnormalities not corrected."
+        },
+        {
+          "state": "unmeasured",
+          "note": "Any mouse treatment after P5, a pre-treatment baseline, reversibility."
+        }
+      ],
+      "summary_it": "Capire se l'aggiunta del gene giova solo se data nei primi giorni di vita (prevenzione) o anche dopo la comparsa del fenotipo, e se la dose intermedia distingue soglia da gradiente.",
+      "feasibility_it": "Laboratorio con il vettore e un topo Wwox-nullo; nessuno noto nel repository. Se il vettore sia ottenibile: non nota."
+    },
+    {
+      "need": "NEED-WWOX-MISSENSE-PROTEIN-RESCUE",
+      "kind": "risolvere una premessa",
+      "question": "Is the Q230P-class protein made and then cleared, by which route (proteasome, lysosome), and does any protein that returns carry function per molecule? The favourable support is outside WWOX only and the abstaining cards wait on the same unmeasured branch.",
+      "data": "A route-and-function experiment on the exact variant in an isogenic WWOX-null human neural line: soluble, pellet and native fractions, half-life, transgene mRNA, route arms and a viability readout in every arm, read against a wild-type function ruler (cards A01 and A02 next measurement; P5 reference for the ruler; outcomes fixed in advance).",
+      "would_change": "No protein with synthesis present closes A02 and A05 for this allele; soluble native protein on the ruler would give the first WWOX-system row on the need; protein without function would give C1; a lysosome-only effect would show the proteasome lever is wrong for this lesion class.",
+      "feasibility": "A cell line expressing the variant is not held; the design is complete, but the function ruler it depends on is a design and not yet validated.",
+      "date": "2026-10-29",
+      "updated_by": [
+        "P6",
+        "P5"
+      ],
+      "cards": [
+        "A01_pba_class",
+        "A02_proteasome_inhibitor_class"
+      ],
+      "docs": [
+        "P6",
+        "REVIEW"
+      ],
+      "summary_it": "Capire se la proteina Q230P viene prodotta e poi eliminata, per quale via, e se quella che torna è funzionante.",
+      "feasibility_it": "Linea cellulare con la variante non disponibile; disegno completo ma il righello di funzione non è ancora validato."
+    },
+    {
+      "need": "NEED-ISR-ATTENUATION",
+      "kind": "verificare un'ipotesi",
+      "question": "Is the ISR kinase arm active at all in WWOX-deficient neural cells? After the mouse P17 transcripts the sign is still unresolved: lower in the organoid, higher in one library per arm of the progenitor line, flat in the mouse.",
+      "data": "Protein and phosphorylation readouts (phospho-eIF2alpha against total, ATF4 protein, targets, translation) in isogenic WWOX-null against corrected neural lines at matched maturity, with challenge arms and kinase attribution by genetics; the decision table is fixed before the run.",
+      "would_change": "A measured elevation would give the need its first controlled WWOX-system row on the pathway; a flat result removes the premise of F3 for card E01. Transcripts alone cannot do either: the mouse analysis found no resolvable sign at about 0.3.",
+      "feasibility": "No suitable dataset is held (the progenitor deposit failed its pre-declared gates; the mouse deposits hold transcripts only); availability of isogenic lines: not known.",
+      "date": "2026-10-29",
+      "updated_by": [
+        "P4"
+      ],
+      "cards": [
+        "E01_isr_modulators"
+      ],
+      "docs": [
+        "P4",
+        "ISR-DESIGN",
+        "REVIEW"
+      ],
+      "summary_it": "Capire se la risposta integrata allo stress è davvero attiva nelle cellule neurali prive di WWOX: oggi il segno dei trascritti è discordante.",
+      "feasibility_it": "Nessun insieme di dati adatto in mano; disponibilità di linee isogeniche: non nota."
+    },
+    {
+      "need": "NEED-PDH-PYRUVATE-AXIS",
+      "kind": "verificare un'ipotesi",
+      "question": "Is PDH phosphorylation higher in WWOX-deficient neural cells, and does a PDK inhibitor change it in a genotype-dependent way without lowering glucose in a hypoglycaemic model?",
+      "data": "The closing condition of card I01: PDHA1 Ser293 phosphorylation, total PDH, activity and a tracer experiment, genotype by inhibitor; a glycaemia arm in the constitutive knockout, where glucose at P10 is already about 95 against about 130.",
+      "would_change": "A genotype-by-inhibitor interaction would give the first WWOX-system row for DCA on this need; the known glucose-lowering and neuropathy signals would remain as tags.",
+      "feasibility": "Human fibroblast precedent exists at abstract level; the WWOX-deficient cells (organoids from a public deposit) need an access request that exists as a draft only and is not to be filed from here.",
+      "date": "2026-10-29",
+      "updated_by": [],
+      "cards": [
+        "E03_pdk_inhibition_dca",
+        "I01_pdk_inhibition_dca_premise_seizure_glycaemia"
+      ],
+      "docs": [
+        "REVIEW"
+      ],
+      "summary_it": "Capire se la fosforilazione di PDH è più alta nelle cellule neurali prive di WWOX e se un inibitore di PDK la modifica in modo dipendente dal genotipo.",
+      "feasibility_it": "Precedente in fibroblasti umani a livello di abstract; le cellule WWOX-deficienti richiedono una richiesta di accesso solo in bozza, non inoltrata da qui."
+    },
+    {
+      "need": "NEED-LACTATE-LDH",
+      "kind": "verificare un'ipotesi",
+      "question": "Is LDH activity or lactate raised in WWOX-deficient neural cells, and does the candidate reach an inhibitory level at all?",
+      "data": "Card E02 next measurement: lactate and LDH activity in WWOX-deficient human neural cells, the fly Ldh-alone arm and Wwox mRNA in the double line; exposure against the 42 to 500 micromolar LDH range.",
+      "would_change": "If lactate is not raised, the need loses its WWOX observation and E02 moves to P3 by rule; if raised and the candidate cannot reach the range, the counter tags stand and a tool-grade inhibitor would be the only way to test the node.",
+      "feasibility": "Cell lines and fly stocks: not known. A public request draft exists in this directory, but registration or contact is not performed from here.",
+      "date": "2026-10-29",
+      "updated_by": [],
+      "cards": [
+        "E02_ldh_inhibition"
+      ],
+      "docs": [
+        "REVIEW"
+      ],
+      "summary_it": "Capire se lattato o attività LDH sono aumentati nelle cellule neurali prive di WWOX e se il candidato raggiunge un livello inibitorio.",
+      "feasibility_it": "Linee cellulari e stock di mosca: non nota; nessuna richiesta o contatto eseguiti da qui."
+    },
+    {
+      "need": "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR",
+      "kind": "verificare un'ipotesi",
+      "question": "Which of three readings (NMDAR gain, permissive necessity, AMPAR-led drive) explains the d-APV-sensitive bursting, and does the bursting depend on the magnesium block? The d-APV result alone does not separate them.",
+      "data": "Card F04, step E1: the isolated NMDAR current under voltage control (AMPAR and GABA-A blocked) in knockout, heterozygote and wild-type slices: amplitude, decay, NMDA:AMPA ratio, GluN2B and GluN2A shares, resting potential and input resistance; then concentration-response of d-APV and of a GluN2B-selective tool, and a use-dependent pore blocker (memantine as a translation probe, with Mg2+ and holding potential stated). Card P11: a graded bath-Mg2+ titration in the source medium with d-APV as ceiling, the composition of the recording bath, and serum and cerebrospinal-fluid Mg in the knockout mouse. The graded memantine against perampanel design of card F01 is superseded as discriminator by F04.",
+      "would_change": "E1 decides whether an NMDAR gain is present or the dependence is permissive; a partial blocker is read only after E1, and without E1 a memantine result cannot be attributed to pyramidal receptors. A titration that cannot lower bursts inside a reachable range closes the magnesium strand.",
+      "feasibility": "Slice electrophysiology in the neuron-specific knockout of the original paper; the line is not held here and whether it is obtainable is not known. Magnesium products have US label evidence by name only; Italy was not checked.",
+      "date": "2026-10-29",
+      "updated_by": [
+        "P9",
+        "P11"
+      ],
+      "cards": [
+        "F01_glutamate_receptor_node",
+        "F04_nmdar_intervention_class",
+        "P11_magnesium_nmdar_gate"
+      ],
+      "docs": [
+        "P9",
+        "P11",
+        "REVIEW"
+      ],
+      "summary_it": "Capire quale di tre letture spiega lo scoppio di attività nelle fette (guadagno NMDAR, dipendenza permissiva, spinta AMPAR) e se dipende dal blocco da magnesio; serve prima la corrente NMDAR isolata (E1).",
+      "feasibility_it": "Elettrofisiologia su fette del knockout neurone-specifico dell'articolo originale: la linea non è disponibile qui, se sia ottenibile non nota; magnesio: etichette USA per nome, Italia non verificata."
+    },
+    {
+      "need": "NEED-SEIZURE-CONTROL-SYMPTOMATIC",
+      "kind": "chiarire una controevidenza",
+      "question": "Is the ethosuximide late-phase effect reproducible with a drug-by-genotype test and a same-day control, is the lithium effect genotype-specific, and do the denominators of the ketogenic-diet and vigabatrin case series keep their C2?",
+      "data": "Next measurements of cards EB-ETX-01, G01 and H01: a concurrent same-day PTZ-alone control in all genotypes, an interaction test, plasma and brain exposure; for the case-level drugs, the denominators (children placed on the diet; hormonal therapy during MRI changes).",
+      "would_change": "A reproduced interaction would give an F1 on the T-type and seizure needs; a not-reproduced one gives C1. For the diet and vigabatrin the denominators decide whether C2 stays.",
+      "feasibility": "The mouse experiment is the one already published by one laboratory; animals and the Wwox-null line are not available here (not known). Denominators: with the case-series authors; contact is out of scope for this repository and not attempted.",
+      "date": "2026-10-29",
+      "updated_by": [],
+      "cards": [
+        "EB-ETX-01",
+        "G01_lithium_gsk3",
+        "EB-KD-01",
+        "EB-VGB-01"
+      ],
+      "docs": [
+        "REVIEW"
+      ],
+      "summary_it": "Capire se l'effetto tardivo dell'etosuccimide è riproducibile con un test farmaco per genotipo, se il litio è specifico per genotipo e se i denominatori delle serie di casi (dieta chetogenica, vigabatrin) mantengono la posizione C2.",
+      "feasibility_it": "Esperimento già pubblicato da un solo laboratorio; animali e linea non disponibili (non nota). Denominatori presso gli autori delle serie; contatto fuori ambito."
+    },
+    {
+      "need": "NEED-T-TYPE-CALCIUM",
+      "kind": "verificare un'ipotesi",
+      "question": "Does the ethosuximide sensitivity reflect T-type involvement, given that no T-type measurement exists and a class-level progenitor-viability harm signal is recorded?",
+      "data": "A T-type channel measurement in the Wwox-null preparation, and the apinocaltamide arm of the same design (card H01 next measurement).",
+      "would_change": "A direct measurement would turn the F2 into a row with a mechanism; a negative would add a null to the need.",
+      "feasibility": "not known (apinocaltamide is a sponsor compound with no access evidence obtained here).",
+      "date": "2026-10-29",
+      "updated_by": [],
+      "cards": [
+        "EB-ETX-01",
+        "H01_apinocaltamide_ttype"
+      ],
+      "docs": [
+        "REVIEW"
+      ],
+      "summary_it": "Capire se la sensibilità all'etosuccimide riflette il canale T, dato che non esiste alcuna misura del canale T.",
+      "feasibility_it": "non nota (composto di uno sponsor, nessuna evidenza di accesso ottenuta qui)."
+    },
+    {
+      "need": "NEED-MYELINATION",
+      "kind": "chiarire una controevidenza",
+      "question": "Does vigabatrin or CPP-115 exposure add myelin injury in a Wwox-deficient juvenile model, given the baseline white-matter loss in the human cases?",
+      "data": "Card H02 next measurement: a juvenile Wwox-deficient model that survives the exposure window (neuron-specific deletion proposed) with myelin endpoints and a dose-start-age series, since the dog and rat data show that start age decides.",
+      "would_change": "A clean absence of added injury would move H02 to a position without harm rows; its presence would make the sibling tag a card-level C3 for vigabatrin as well.",
+      "feasibility": "Animal work; the neuron-specific deletion line is not held here (not known). Human MRI denominators are not available from the abstract.",
+      "date": "2026-10-29",
+      "updated_by": [],
+      "cards": [
+        "H02_gabaat_inactivator_myelin_exposure",
+        "EB-VGB-01"
+      ],
+      "docs": [
+        "REVIEW"
+      ],
+      "summary_it": "Capire se vigabatrin o CPP-115 aggiungono danno alla mielina in un modello giovanile privo di Wwox.",
+      "feasibility_it": "Lavoro su animali; linea con delezione neurone-specifica non disponibile (non nota); denominatori di RM non disponibili dall'abstract."
+    },
+    {
+      "need": "NEED-MYC-PROGENITOR-PROLIFERATION",
+      "kind": "chiarire una controevidenza",
+      "question": "Does the fall in progenitors with A51 hold with a treated wild-type arm and independent differentiations, and is the lack of layer-neuron recovery real or a timing effect?",
+      "data": "Card D01 next measurement: a dose-by-timing series in a developing-cortex model with a treated wild-type arm, progenitor and layer-neuron endpoints, and a more selective MYC inhibitor.",
+      "would_change": "A treated wild-type arm and independent differentiations remove design limits from the favourable row (toward F1 if the other flags are absent); a layer-neuron recovery would remove the counter row; a persistent absence keeps C2.",
+      "feasibility": "A51 is a multi-kinase inhibitor with the safety gate open (card); the organoid line is not held (not known).",
+      "date": "2026-10-29",
+      "updated_by": [],
+      "cards": [
+        "D01_a51"
+      ],
+      "docs": [
+        "REVIEW"
+      ],
+      "summary_it": "Capire se il calo dei progenitori con A51 regge con un braccio di controllo trattato e differenziazioni indipendenti, e se la mancata ripresa dei neuroni di strato è reale.",
+      "feasibility_it": "A51 inibisce più chinasi e il controllo di sicurezza è aperto; linea di organoidi non disponibile (non nota)."
+    },
+    {
+      "need": "NEED-NEUROINFLAMMATION-GLIA",
+      "kind": "risolvere una premessa",
+      "question": "Is glial density in a Wwox-deficient brain below, equal to or above wild type before the first spike? The sign conflicts between species, so no lever has a stated direction, and the glial-reactivity card is an abstention.",
+      "data": "Card J01 next measurement: GFAP and Iba1 density and area fraction in cortex and hippocampus at P5, P8, P11, P14 and P17 in the same pups, with continuous recording from the earliest age, each animal classed before or after its first spike; vector-treated and wild-type controls.",
+      "would_change": "It decides whether this need is a readout, a seizure consequence or a seizure-independent lever. Until then no glial modulator is proposed, and no position moves by itself.",
+      "feasibility": "not known (the null or neuron-restricted deletion line, the recording set-up and the animal facility are not held here).",
+      "date": "2026-10-29",
+      "updated_by": [
+        "P10"
+      ],
+      "cards": [
+        "J01_glial_reactivity_modulation"
+      ],
+      "docs": [
+        "P10"
+      ],
+      "summary_it": "Capire se, prima della prima scarica, la densità gliale in un cervello privo di Wwox è sotto, pari o sopra il selvatico: il segno è discordante tra specie e la scheda J01 si astiene.",
+      "feasibility_it": "non nota (linea nulla o con delezione neuronale, apparato di registrazione e stabulario non disponibili qui)."
+    },
+    {
+      "need": "NEED-SYSTEMIC-GLYCAEMIA-GROWTH",
+      "kind": "chiarire una controevidenza",
+      "question": "Is the P10 glucose difference real (knockout about 95, wild type about 130), and does any dose of the vector correct it?",
+      "data": "A glucose time course with an adequately sized untreated-knockout arm at P10 to P14.",
+      "would_change": "It would resolve the two glucose rows and either remove the C2 or make it a C1.",
+      "feasibility": "Same laboratory and mouse as for gene addition; availability not known.",
+      "date": "2026-10-29",
+      "updated_by": [],
+      "cards": [
+        "C04_aav9_endpoint_families"
+      ],
+      "docs": [
+        "REVIEW"
+      ],
+      "summary_it": "Capire se la differenza di glucosio a P10 è reale e se una dose del vettore la corregge.",
+      "feasibility_it": "Stesso laboratorio e stesso topo dell'aggiunta del gene; disponibilità non nota."
+    }
+  ],
+  "window_states": {
+    "prevented_early_window": "prevented or early-window: treatment precedes the endpoint, onset of the phenotype never located",
+    "recovered_post_onset_model": "recovered after onset in a model: treatment follows a documented phenotype",
+    "symptom_suppression_reversible": "reversible symptomatic suppression of a manifested state",
+    "unmeasured": "not measured"
+  },
+  "card_windows": {
+    "C01_aav9_wwox": {
+      "states": [
+        "prevented_early_window",
+        "unmeasured"
+      ],
+      "note": "Neonatal treatment (P0 to P5) of animals never recorded before it; recovery after onset was not tested in the mouse."
+    },
+    "C04_aav9_endpoint_families": {
+      "states": [
+        "prevented_early_window",
+        "unmeasured"
+      ],
+      "note": "All endpoints read after neonatal treatment; correction after onset (hypoglycaemia, myelin, gliosis) was not tested."
+    }
+  }
+}

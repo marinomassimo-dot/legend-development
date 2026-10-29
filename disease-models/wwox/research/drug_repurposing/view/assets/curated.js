@@ -6,11 +6,12 @@ var D = JSON.parse(document.getElementById('data').textContent);
 var T = D.ui;
 var TITLE = document.title;
 var C = D.cur, NEEDS = C.needs, CANDS = C.cands, META = C.meta;
-var NM = {}, CM = {}, SC = {}, GR = {};
+var NM = {}, CM = {}, SC = {}, GR = {}, WO = {};
 NEEDS.forEach(function (n) { NM[n.id] = n; });
 CANDS.forEach(function (c) { CM[c.id] = c; });
 C.scopes.forEach(function (s) { SC[s.code] = s; });
 C.groups.forEach(function (g) { GR[g.id] = g; });
+(C.work_order.entries || []).forEach(function (e) { WO[e.need] = e; });
 function $(id) { return document.getElementById(id); }
 function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
 function uniq(a) { var o = {}, r = []; a.forEach(function (x) { if (x != null && x !== '' && !o[x]) { o[x] = 1; r.push(x); } }); return r; }
@@ -170,7 +171,7 @@ function candHtml(c) {
   return '<article class="cand" id="cand-' + esc(c.id) + '" data-cand="' + esc(c.id) + '"><h3>' + esc(c.short) + ' <span class="mut">' + esc(c.id) + '</span></h3>' +
     '<div class="chips2">' + (gl.length ? gl.map(grp).join('') : chip(T.cd_no_need)) + chip(goalTxt(c.goal)) + chip(trackTxt(c.track)) + chip(T.cd_status + ': ' + statusTxt(c.status)) + (c.access.length ? chip(T.cd_access + ': ' + c.access.map(function (a) { return T['acc_' + a] || a; }).join(', ')) : chip(T.cd_access_none)) + '</div>' +
     '<div>' + (Object.keys(scopes).length ? Object.keys(scopes).map(function (k) { return sc(k, scopes[k]); }).join('') : '<span class="mini mut">' + esc(T.cd_noscope) + '</span>') + '</div>' +
-    '<div class="btns noprint"><label><input type="checkbox" data-sel="' + esc(c.id) + '"' + (sel ? ' checked' : '') + '> ' + esc(T.cd_pick) + '</label><button type="button" data-export="' + esc(c.id) + '">' + esc(T.cd_export) + '</button></div>' +
+    '<div class="btns noprint"><label><input type="checkbox" data-sel="' + esc(c.id) + '"' + (sel ? ' checked' : '') + '> ' + esc(T.cd_pick) + '</label><button type="button" data-export="' + esc(c.id) + '">' + esc(T.cd_export) + '</button><button type="button" data-brief="' + esc(c.id) + '">' + esc(T.cd_brief) + '</button></div>' +
     '<div class="qa"><div><h4>' + esc(T.q1) + '</h4>' + q.why + '</div><div><h4>' + esc(T.q2) + '</h4>' + q.wwox + '</div><div><h4>' + esc(T.q3) + '</h4>' + q.other + '</div><div><h4>' + esc(T.q4) + '</h4>' + q.counter + '</div><div><h4>' + esc(T.q5) + '</h4>' + q.miss + '</div><div><h4>' + esc(T.q6) + '</h4>' + q.next + '</div></div>' + (c.needs.length ? whyPos(c) : '') + techDetails(c) + '</article>';
 }
 var CSORT = 'group';
@@ -186,6 +187,7 @@ function renderCands() {
 function wireCands(root) {
   Array.prototype.forEach.call(root.querySelectorAll('[data-sel]'), function (b) { b.onchange = function () { toggleSel(b.dataset.sel, b.checked); }; });
   Array.prototype.forEach.call(root.querySelectorAll('[data-export]'), function (b) { b.onclick = function () { location.hash = '#export=' + b.dataset.export; }; });
+  Array.prototype.forEach.call(root.querySelectorAll('[data-brief]'), function (b) { b.onclick = function () { location.hash = '#brief=' + b.dataset.brief; }; });
 }
 function openCand(id) {
   if (!candOk(CM[id])) { Object.keys(CF).forEach(function (k) { CF[k] = ''; }); syncCtl(); renderAll(); }
@@ -223,7 +225,7 @@ function renderRank() {
   if (RK.mode === 'need') {
     NEEDS.filter(needOk).forEach(function (n) {
       var it = links.filter(function (x) { return x.n === n.id; });
-      h += '<section class="rk-need" data-need="' + esc(n.id) + '"><h3>' + esc(needName(n)) + ' <span class="mut">' + esc(goalTxt(n.goal)) + '</span></h3>' + (it.length ? groupBlock(it, false) : '<p class="mini mut">' + esc(fill(T.pr_need_nocard, { n: n.fam_link })) + '</p>') + '</section>';
+      h += '<section class="rk-need" data-need="' + esc(n.id) + '"><h3>' + esc(needName(n)) + ' <span class="mut">' + esc(goalTxt(n.goal)) + '</span></h3>' + (WO[n.id] ? '<p class="mini"><a href="#wo-' + esc(n.id) + '" data-wo="' + esc(n.id) + '">' + esc(T.wo_see) + '</a> <span class="chip wo-k">' + esc(WO[n.id].kind) + '</span></p>' : '') + (it.length ? groupBlock(it, false) : '<p class="mini mut">' + esc(fill(T.pr_need_nocard, { n: n.fam_link })) + '</p>') + '</section>';
     });
     var orphan = CANDS.filter(function (c) { return candOk(c) && !c.needs.length && !CF.need && !CF.thread; });
     if (orphan.length) h += '<section class="rk-need"><h3>' + esc(T.pr_axis_h) + '</h3><p class="mini mut">' + esc(T.pr_axis_note) + '</p>' + orphan.sort(function (a, b) { return a.short.localeCompare(b.short); }).map(function (c) { return '<div class="rk-item"><b>' + esc(c.short) + '</b> ' + chip(T.cd_no_need) + ' ' + esc(first(c.missing || '', 200)) + ' <button type="button" class="chip" data-open="' + esc(c.id) + '">' + esc(T.pr_open) + '</button></div>'; }).join('') + '</section>';
@@ -247,9 +249,10 @@ function toggleSel(id, on) {
 }
 function sgn(d) { return d === 'up' || d === 'restore' ? 1 : (d === 'down' ? -1 : 0); }
 function renderSel() {
-  $('sel-bar').innerHTML = SEL.length ? SEL.map(function (id) { return chip(CM[id].short); }).join(' ') + ' <button type="button" id="sel-clear">' + esc(T.cd_sel_clear) + '</button> <button type="button" id="sel-export">' + esc(T.cd_sel_export) + '</button>' : '<span class="mut">' + esc(T.cd_sel_none) + '</span>';
+  $('sel-bar').innerHTML = SEL.length ? SEL.map(function (id) { return chip(CM[id].short); }).join(' ') + ' <button type="button" id="sel-clear">' + esc(T.cd_sel_clear) + '</button> <button type="button" id="sel-export">' + esc(T.cd_sel_export) + '</button> <button type="button" id="sel-brief">' + esc(T.cd_sel_brief) + '</button>' : '<span class="mut">' + esc(T.cd_sel_none) + '</span>';
   if ($('sel-clear')) $('sel-clear').onclick = function () { SEL = []; renderCands(); };
   if ($('sel-export')) $('sel-export').onclick = function () { location.hash = '#export=' + SEL.join(','); };
+  if ($('sel-brief')) $('sel-brief').onclick = function () { location.hash = '#brief=' + SEL.join(','); };
   renderCompare();
 }
 function actTxt(a) { return T['act_' + a] || a; }
@@ -316,7 +319,7 @@ function exportCard(c) {
 function enterExport(ids) {
   var cs = ids.map(function (i) { return CM[i]; }).filter(Boolean);
   var area = $('export-area');
-  area.innerHTML = '<div class="btns noprint"><button type="button" id="x-back">' + esc(T.ex_back) + '</button><button type="button" id="x-print">' + esc(T.ex_print) + '</button><button type="button" id="x-dl">' + esc(T.ex_dl) + '</button><span class="mut">' + esc(fill(T.ex_n, { n: cs.length })) + '</span></div>' + (cs.map(exportCard).join('') || '<p class="state-none">' + esc(T.ex_unknown) + '</p>');
+  area.innerHTML = '<div class="btns noprint"><button type="button" id="x-back">' + esc(T.ex_back) + '</button><button type="button" id="x-print">' + esc(T.ex_print) + '</button><button type="button" id="x-dl">' + esc(T.ex_dl) + '</button><span class="mut">' + esc((cs.length === 1 ? T.ex_n1 : fill(T.ex_n, { n: cs.length }))) + '</span></div>' + (cs.map(exportCard).join('') || '<p class="state-none">' + esc(T.ex_unknown) + '</p>');
   document.body.classList.add('exporting');
   document.title = T.ex_title + ': ' + cs.map(function (c) { return c.short; }).join(', ');
   $('x-back').onclick = function () { history.pushState('', '', location.pathname + location.search); leaveExport(); };
@@ -330,6 +333,49 @@ function enterExport(ids) {
 }
 function leaveExport() { document.body.classList.remove('exporting'); document.title = TITLE; }
 
+// ---------------------------------------------------------------- one-page synthesis (#brief=): eight labelled fields per card, one A4 page per card
+var BFCSS = 'body{font:12px/1.45 system-ui,Segoe UI,Roboto,sans-serif;color:#111;background:#fff;margin:0;padding:14px}.bf{border:1px solid #888;border-radius:6px;padding:10px 14px;margin:0 0 14px;max-width:780px}.bf h2{font-size:15px;margin:0}.bf .meta{color:#444;font-size:11px;margin:3px 0}dl.bf8{display:grid;grid-template-columns:132px minmax(0,1fr);gap:4px 12px;margin:8px 0;counter-reset:bf}dl.bf8 dt::before{counter-increment:bf;content:counter(bf) ". "}dl.bf8 dt{font-weight:700;font-size:11px;border-top:1px solid #bbb;padding-top:4px}dl.bf8 dd{margin:0;font-size:12px;border-top:1px solid #bbb;padding-top:4px;overflow-wrap:anywhere}.bf ul{margin:0;padding-left:16px}.bf li{font-size:11px}.url{display:none;font-family:monospace;font-size:10px;word-break:break-all}.bf ol{margin:0;padding-left:16px}a{color:#000;overflow-wrap:anywhere}.mini{font-size:11px}.mut{color:#444}.chip{border:1px solid #888;border-radius:8px;padding:0 5px}@media print{@page{size:A4;margin:12mm}.url{display:inline}.noprint{display:none}.bf{border:0;padding:0;margin:0;max-width:none;page-break-after:always;break-after:page}.bf:last-child{page-break-after:auto;break-after:auto}dl.bf8{grid-template-columns:34mm 1fr}dl.bf8 dd,dl.bf8 dt{font-size:9pt}.bf li{font-size:8pt}}@media (max-width:560px){body{padding:8px}.bf{padding:8px 10px}dl.bf8{grid-template-columns:minmax(0,1fr);gap:0}dl.bf8 dt{padding-top:6px}dl.bf8 dd{border-top:0;padding-top:1px}}';
+function briefSrc(s) {
+  if (s.kind === 'PMID') return '<li>' + pmidLink(s.id) + ' <span class="url">' + esc(PUBMED + s.id + '/') + '</span>' + (s.title ? ' ' + esc(s.title) : '') + (s.journal || s.year ? ' <span class="mut">[' + esc([s.journal, s.year].filter(Boolean).join(', ')) + ']</span>' : '') + '</li>';
+  return '<li>' + ext(CHEMBL + s.id + '/', 'ChEMBL ' + s.id) + ' <span class="url">' + esc(CHEMBL + s.id + '/') + '</span> <span class="mut">(' + esc(T.tc_compound_id) + ')</span></li>';
+}
+function briefCard(c, std) {
+  var b = c.brief, gl = uniq(c.needs.map(function (n) { return c.links[n].group; }).sort());
+  var f = [
+    [T.bf_f1, c.needs.length ? c.needs.map(function (n) { return esc(needName(NM[n])); }).join('; ') : esc(T.bf_no_need)],
+    [T.bf_f2, '<b>' + esc(c.name) + '</b> <span class="mut">(' + esc(goalTxt(c.goal)) + '; ' + esc(trackTxt(c.track)) + '; ' + esc(statusTxt(c.status)) + ')</span>'],
+    [T.bf_f3, esc(b.wwox)],
+    [T.bf_f4, esc(b.external)],
+    [T.bf_f5, '<ol class="bf-counter">' + b.counter.map(function (x) { return '<li>' + (x.category ? '<span class="mini mut">[' + esc(x.category) + ']</span> ' : '') + esc(x.text) + '</li>'; }).join('') + '</ol>' + (b.counter_more ? '<span class="mini mut">+ ' + esc(fill(T.bf_counter_more, { n: b.counter_more })) + '. </span>' : '') + '<span class="mini mut">(' + esc(T.bf_f5_note) + ')</span>'],
+    [T.bf_f6, esc(b.missing)],
+    [T.bf_f7, esc(b.next)],
+    [T.bf_f8, b.sources.length ? '<ul class="srcs">' + b.sources.map(briefSrc).join('') + '</ul>' : esc(T.bf_src_none)]
+  ];
+  var dl = f.map(function (x, i) { return '<dt data-field="' + (i + 1) + '">' + esc(x[0]) + '</dt><dd data-field="' + (i + 1) + '">' + x[1] + '</dd>'; }).join('');
+  return '<article class="bf" data-brief-card="' + esc(c.id) + '"><h2>' + esc(c.short) + '</h2><div class="meta">' + esc(T.bf_card) + ' ' + esc(c.id) + ' &middot; ' + (gl.length ? gl.map(function (g) { return esc(g + ' ' + T.pos[g].short); }).join(', ') : esc(T.cd_no_need)) + '</div>' +
+    (b.window ? '<p class="meta" data-window="1"><b>' + esc(T.bf_window) + ':</b> ' + b.window.states.map(function (x) { return '<span class="chip" title="' + esc(b.window.note) + '">' + esc(T['ws_' + x]) + '</span>'; }).join(' ') + ' ' + esc(b.window.note) + '</p>' : '') +
+    '<p class="meta"><b>' + esc(T.bf_data_date) + ':</b> <span data-date="data">' + esc(META.research_update) + '</span> &middot; <b>' + esc(T.bf_needs_rec) + '</b> <span data-date="registro">' + esc(META.needs_built_on) + '</span> &middot; <b>' + esc(T.bf_cat_build) + '</b> <span data-date="catalogo">' + esc(META.catalogue_generated) + '</span> (' + esc(T.bf_dates_note) + ').</p>' +
+    '<dl class="bf8">' + dl + '</dl>' +
+    '<p class="meta"><b>' + esc(T.bf_dossier) + ':</b> ' + (std ? esc(T.bf_dossier_std) + ' <code>#export=' + esc(c.id) + '</code>' : '<a href="#export=' + esc(c.id) + '" data-dossier="' + esc(c.id) + '">#export=' + esc(c.id) + '</a>') + '. ' + esc(T.bf_warn) + ' ' + esc(T.ex_gen) + ' (schema ' + esc(D.schema) + ', ' + esc(D.source) + '). ' + esc(D.source === 'shareable' ? T.ex_share : T.ex_full) + '</p></article>';
+}
+function enterBrief(ids) {
+  var cs = ids.map(function (i) { return CM[i]; }).filter(Boolean);
+  var area = $('export-area');
+  area.innerHTML = '<div class="btns noprint"><button type="button" id="x-back">' + esc(T.ex_back) + '</button><button type="button" id="x-print">' + esc(T.ex_print) + '</button><button type="button" id="x-dl">' + esc(T.ex_dl) + '</button><button type="button" id="x-dossier">' + esc(T.bf_dossier_open) + '</button><span class="mut">' + esc((cs.length === 1 ? T.bf_n1 : fill(T.bf_n, { n: cs.length }))) + '</span></div>' + (cs.map(function (c) { return briefCard(c, false); }).join('') || '<p class="state-none">' + esc(T.bf_unknown) + '</p>');
+  document.body.classList.add('exporting');
+  document.title = T.bf_title + ': ' + cs.map(function (c) { return c.short; }).join(', ');
+  $('x-back').onclick = function () { history.pushState('', '', location.pathname + location.search); leaveExport(); };
+  $('x-print').onclick = function () { window.print(); };
+  $('x-dossier').onclick = function () { location.hash = '#export=' + cs.map(function (c) { return c.id; }).join(','); };
+  $('x-dl').onclick = function () {
+    var body = cs.map(function (c) { return briefCard(c, true); }).join('');
+    var doc = '<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>' + esc(T.bf_std_title) + '</title><style>' + BFCSS + '</style></head><body>' + body + '</body></html>';
+    var a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([doc], { type: 'text/html' })); a.download = 'wwox_sintesi_' + cs.map(function (c) { return c.id; }).join('_') + '.html'; document.body.appendChild(a); a.click(); a.remove();
+  };
+  window.scrollTo(0, 0);
+}
+
+
 // ---------------------------------------------------------------- state <-> controls <-> hash
 function syncCtl() { Object.keys(IDS).forEach(function (k) { $(IDS[k]).value = CF[k]; }); }
 function renderAll() { renderNav(); renderCands(); renderRank(); }
@@ -337,12 +383,14 @@ function openTech(el) { for (var p = el; p; p = p.parentElement) { if (p.tagName
 function fromHash() {
   var h = decodeURIComponent(location.hash || ''), m;
   if ((m = h.match(/^#export=(.+)$/))) { enterExport(m[1].split(',')); return; }
+  if ((m = h.match(/^#brief=(.+)$/))) { enterBrief(m[1].split(',')); return; }
   leaveExport();
   if ((m = h.match(/^#c=(.*)$/))) { Object.keys(CF).forEach(function (k) { CF[k] = ''; }); m[1].split('&').forEach(function (kv) { var i = kv.indexOf(':'); if (i > 0) { var k = kv.slice(0, i); if (k in CF) CF[k] = kv.slice(i + 1); else if (k === 'rank') RK.mode = kv.slice(i + 1); } }); syncCtl(); $('rk-mode').value = RK.mode; renderAll(); $('navigate').scrollIntoView(); }
   if ((m = h.match(/^#compare=(.+)$/))) { SEL = m[1].split(',').filter(function (i) { return CM[i]; }).slice(0, 4); renderCands(); }
   if (/^#f=/.test(h)) openTech($('technical'));
   else if (/^#[\w-]+$/.test(h) && $(h.slice(1))) openTech($(h.slice(1)));
 }
+if (window.matchMedia && window.matchMedia('(max-width:560px)').matches) Array.prototype.forEach.call(document.querySelectorAll('.chain details'), function (d) { d.open = true; });
 Object.keys(IDS).forEach(function (k) { $(IDS[k]).addEventListener(k === 'q' ? 'input' : 'change', function () { CF[k] = this.value; renderAll(); }); });
 $('c-reset').onclick = function () { Object.keys(CF).forEach(function (k) { CF[k] = ''; }); syncCtl(); renderAll(); };
 $('rk-mode').onchange = function () { RK.mode = this.value; renderRank(); };

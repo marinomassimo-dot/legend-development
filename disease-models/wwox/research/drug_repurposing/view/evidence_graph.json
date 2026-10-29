@@ -1,0 +1,1027 @@
+{
+  "schema": "legend.wwox.evidence_graph/1",
+  "date": "2026-10-29",
+  "authoring": "Hand-authored for the decisive chains of the iteration-6 cycles only. Validated at build time by repurposing_view.py: every card id, need id and PMID must exist, every edge carries a type and a source id, every chain has the six columns and is connected from an observation to an experiment. No central knowledge graph and no data store: this file is the whole graph. The excitatory-gain chain uses F04 (P9: three readings of one datum, unranked; the isolated NMDAR current E1 as discriminator; memantine as a translation probe), with F01 and the P11 magnesium card kept where they are decisive.",
+  "columns": [
+    "osservazione WWOX",
+    "bisogno",
+    "meccanismo",
+    "intervento",
+    "evidenza",
+    "esperimento"
+  ],
+  "edge_types": [
+    "risultato sperimentale",
+    "inferenza",
+    "associazione"
+  ],
+  "docs": {
+    "P4": {
+      "path": "mouse_wwox_p17_it6_p4_20261029/README.md",
+      "label": "IT6 P4 record: ISR gene sets in mouse P17 brain"
+    },
+    "P6": {
+      "path": "broad_recovery_it6_p6_20261029/README.md",
+      "label": "IT6 P6 record: route blockade of a destabilised missense protein"
+    },
+    "P7": {
+      "path": "rescue_window_it6_20261029.md",
+      "label": "IT6 P7 record: rescue window (prevented, recovered, unmeasured)"
+    },
+    "P10": {
+      "path": "partial_benefit_it6_p10_20261029/README.md",
+      "label": "IT6 P10 record: glial reactivity"
+    },
+    "P11": {
+      "path": "supplement_diet_it6_p11_20261029/README.md",
+      "label": "IT6 P11 record: magnesium and the NMDAR gate"
+    },
+    "REVIEW": {
+      "path": "priority_review_it6_20261029.md",
+      "label": "IT6 P2 priority review: work order for the priority needs"
+    },
+    "ISR-DESIGN": {
+      "path": "isr_kinase_interactome_atf4_reconciliation_it4_20261028.md",
+      "label": "IT4 note: ISR kinase attribution, revised design"
+    },
+    "P9": {
+      "path": "nmdar_pharmacology_it6_p9_20261029/README.md",
+      "label": "IT6 P9 record: NMDAR intervention class and the isolated-current discriminator"
+    }
+  },
+  "chains": [
+    {
+      "id": "glia",
+      "title": "Glial reactivity",
+      "state": "astensione",
+      "question": "Is glial activation in a Wwox-deficient brain a readout, a seizure consequence or a lever, given that its sign differs between systems?",
+      "nodes": [
+        {
+          "id": "o1",
+          "col": "osservazione WWOX",
+          "scope": "wwox",
+          "label": "Null and P47T mouse: more GFAP and IBA1 signal (excess)",
+          "pmids": [
+            "30290271",
+            "36828035"
+          ]
+        },
+        {
+          "id": "o2",
+          "col": "osservazione WWOX",
+          "scope": "wwox",
+          "label": "Mutant rat cortex: about half the GFAP+ and Iba1+ cells of wild type from PND 5 (deficit)",
+          "pmids": [
+            "31340538"
+          ]
+        },
+        {
+          "id": "o3",
+          "col": "osservazione WWOX",
+          "scope": "computational",
+          "label": "Human WWOX-knockout organoid: no reactive programme, microglia absent",
+          "pmids": [
+            "34268881"
+          ]
+        },
+        {
+          "id": "n1",
+          "col": "bisogno",
+          "scope": "none",
+          "label": "Need: neuroinflammation and gliosis; the sign of the glial difference is not settled",
+          "needs": [
+            "NEED-NEUROINFLAMMATION-GLIA"
+          ]
+        },
+        {
+          "id": "m1",
+          "col": "meccanismo",
+          "scope": "none",
+          "label": "UNRESOLVED: species, allele, region, assay and age window are confounded",
+          "unresolved": true
+        },
+        {
+          "id": "m2",
+          "col": "meccanismo",
+          "scope": "none",
+          "label": "Gliosis may be partly secondary to neuronal dysfunction or seizures"
+        },
+        {
+          "id": "i1",
+          "col": "intervento",
+          "scope": "none",
+          "label": "J01 glial-reactivity modulators: abstention, no premise for the direction of a lever",
+          "cards": [
+            "J01_glial_reactivity_modulation"
+          ]
+        },
+        {
+          "id": "e1",
+          "col": "evidenza",
+          "scope": "wwox",
+          "label": "Vector study, not glial modulation: neuron-restricted AAV9 lowers GFAP+ cells (about 44 to about 5)",
+          "pmids": [
+            "42422765"
+          ]
+        },
+        {
+          "id": "x1",
+          "col": "esperimento",
+          "scope": "proposed",
+          "label": "Same-animal time course P5 to P17: glial density with continuous recording, each animal classed before or after its first spike"
+        }
+      ],
+      "edges": [
+        {
+          "from": "o1",
+          "to": "n1",
+          "type": "associazione",
+          "source": "PMID:30290271",
+          "note": "Also P47T mouse (PMID 36828035)."
+        },
+        {
+          "from": "o2",
+          "to": "n1",
+          "type": "associazione",
+          "source": "PMID:31340538",
+          "note": "Opposite sign; the authors state the contrast."
+        },
+        {
+          "from": "o3",
+          "to": "n1",
+          "type": "associazione",
+          "source": "DOC:P10"
+        },
+        {
+          "from": "n1",
+          "to": "m1",
+          "type": "inferenza",
+          "source": "DOC:P10"
+        },
+        {
+          "from": "n1",
+          "to": "m2",
+          "type": "inferenza",
+          "source": "PMID:42422765",
+          "note": "Neuron-restricted rescue also normalises seizures and survival, so the lowering is indirect."
+        },
+        {
+          "from": "m1",
+          "to": "i1",
+          "type": "inferenza",
+          "source": "DOC:P10",
+          "note": "No premise for a lever: the card abstains."
+        },
+        {
+          "from": "m2",
+          "to": "i1",
+          "type": "inferenza",
+          "source": "DOC:P10"
+        },
+        {
+          "from": "e1",
+          "to": "x1",
+          "type": "inferenza",
+          "source": "DOC:P10",
+          "note": "Separates a seizure consequence from a seizure-independent signal."
+        },
+        {
+          "from": "m2",
+          "to": "e1",
+          "type": "associazione",
+          "source": "PMID:42422765",
+          "note": "An indirect lowering after neuronal rescue; no glial endpoint after any compound in a Wwox-deficient system has been measured."
+        },
+        {
+          "from": "i1",
+          "to": "x1",
+          "type": "inferenza",
+          "source": "DOC:P10",
+          "note": "The missing datum named by the card."
+        }
+      ]
+    },
+    {
+      "id": "nmdar-gate",
+      "title": "NMDAR gate and magnesium",
+      "state": "ipotesi",
+      "question": "Which of three readings explains the d-APV-sensitive bursting of Wwox-deficient slices (NMDAR gain, permissive necessity, AMPAR-led drive), and which kind of block or which magnesium change can tell them apart?",
+      "nodes": [
+        {
+          "id": "o1",
+          "col": "osservazione WWOX",
+          "scope": "wwox",
+          "label": "Neuron-specific knockout slices burst: 36 of 42 knockout, 4 of 23 heterozygote, 0 of 11 wild type",
+          "pmids": [
+            "34634460"
+          ]
+        },
+        {
+          "id": "o2",
+          "col": "osservazione WWOX",
+          "scope": "wwox",
+          "label": "d-APV, a competitive NMDAR antagonist, abolishes the bursting, which returns on washout (5 slices, 3 animals): bursting needs NMDAR activity",
+          "pmids": [
+            "34634460"
+          ]
+        },
+        {
+          "id": "o3",
+          "col": "osservazione WWOX",
+          "scope": "wwox",
+          "label": "Knockout neurons rest more depolarised (-73.6 against -79.3 mV); inhibitory current amplitude about halved",
+          "pmids": [
+            "34634460"
+          ]
+        },
+        {
+          "id": "n1",
+          "col": "bisogno",
+          "scope": "none",
+          "label": "Need: excitatory gain at the d-APV-sensitive glutamate-receptor node",
+          "needs": [
+            "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR"
+          ]
+        },
+        {
+          "id": "m1",
+          "col": "meccanismo",
+          "scope": "none",
+          "label": "Reading 1, NMDAR gain: more NMDAR current per synapse (unranked)"
+        },
+        {
+          "id": "m2",
+          "col": "meccanismo",
+          "scope": "none",
+          "label": "Reading 2, permissive necessity: normal NMDARs recruited because neurons are depolarised and inhibition is reduced (unranked)"
+        },
+        {
+          "id": "m3",
+          "col": "meccanismo",
+          "scope": "none",
+          "label": "Reading 3, AMPAR-led drive: d-APV effect is not the whole story (unranked)"
+        },
+        {
+          "id": "m4",
+          "col": "meccanismo",
+          "scope": "computational",
+          "label": "Mg2+ blocks the NMDAR pore in a voltage-dependent way, so a depolarised cell has a weaker block (arithmetic only, other cell type)"
+        },
+        {
+          "id": "i1",
+          "col": "intervento",
+          "scope": "none",
+          "label": "F04 NMDAR intervention class: which kind of block can tell permissive dependence from gain; memantine only as a translation probe",
+          "cards": [
+            "F04_nmdar_intervention_class"
+          ]
+        },
+        {
+          "id": "i2",
+          "col": "intervento",
+          "scope": "none",
+          "label": "F01 glutamate-receptor node: d-APV is a tool compound; its graded-block design is superseded as discriminator by F04",
+          "cards": [
+            "F01_glutamate_receptor_node"
+          ]
+        },
+        {
+          "id": "i3",
+          "col": "intervento",
+          "scope": "none",
+          "label": "P11 extracellular magnesium as the NMDAR gate (class level, nutrient route)",
+          "cards": [
+            "P11_magnesium_nmdar_gate"
+          ]
+        },
+        {
+          "id": "e1",
+          "col": "evidenza",
+          "scope": "non_wwox",
+          "label": "GRIN-variant series (not WWOX, retrospective): improvement on memantine in 14 of 19 gain-of-function against 3 of 15 other variants",
+          "pmids": [
+            "41489401"
+          ]
+        },
+        {
+          "id": "e2",
+          "col": "evidenza",
+          "scope": "non_wwox",
+          "label": "Healthy mice: oral magnesium sulfate raised serum but not cerebrospinal-fluid Mg; the threonate did",
+          "pmids": [
+            "31806980"
+          ]
+        },
+        {
+          "id": "e3",
+          "col": "evidenza",
+          "scope": "non_wwox",
+          "label": "Infants with West syndrome: 3 days intramuscular then oral magnesium with ACTH; no difference in seizure control (48 analysed)",
+          "pmids": [
+            "35222658"
+          ]
+        },
+        {
+          "id": "x1",
+          "col": "esperimento",
+          "scope": "proposed",
+          "label": "E1: isolated NMDAR current under voltage control in the same slices (amplitude, decay, GluN2 shares); the step that separates the readings"
+        },
+        {
+          "id": "x2",
+          "col": "esperimento",
+          "scope": "proposed",
+          "label": "Graded bath Mg2+ in knockout, heterozygote and wild-type slices in the source medium, d-APV as ceiling; serum and CSF Mg in the mouse"
+        },
+        {
+          "id": "x3",
+          "col": "esperimento",
+          "scope": "proposed",
+          "label": "Use-dependent pore blocker with Mg2+ and holding potential stated, after E1, as a translation probe"
+        }
+      ],
+      "edges": [
+        {
+          "from": "o1",
+          "to": "n1",
+          "type": "associazione",
+          "source": "PMID:34634460"
+        },
+        {
+          "from": "o2",
+          "to": "n1",
+          "type": "inferenza",
+          "source": "PMID:34634460",
+          "note": "The datum shows NMDAR dependence, not raised NMDAR function; one drug, one preparation, a full block."
+        },
+        {
+          "from": "n1",
+          "to": "m1",
+          "type": "inferenza",
+          "source": "DOC:P9",
+          "note": "Three readings fit one datum and predict different things; no receptor-level measurement exists in a WWOX system."
+        },
+        {
+          "from": "n1",
+          "to": "m2",
+          "type": "inferenza",
+          "source": "DOC:P9"
+        },
+        {
+          "from": "n1",
+          "to": "m3",
+          "type": "inferenza",
+          "source": "DOC:P9"
+        },
+        {
+          "from": "o3",
+          "to": "m2",
+          "type": "inferenza",
+          "source": "DOC:P9",
+          "note": "Depolarisation and reduced inhibition can produce NMDAR-dependent bursting with a normal receptor."
+        },
+        {
+          "from": "o3",
+          "to": "m4",
+          "type": "inferenza",
+          "source": "DOC:P11",
+          "note": "No NMDAR current or magnesium sensitivity was measured in a WWOX system."
+        },
+        {
+          "from": "m1",
+          "to": "i1",
+          "type": "inferenza",
+          "source": "DOC:P9"
+        },
+        {
+          "from": "m2",
+          "to": "i1",
+          "type": "inferenza",
+          "source": "DOC:P9"
+        },
+        {
+          "from": "m3",
+          "to": "i2",
+          "type": "inferenza",
+          "source": "DOC:P9",
+          "note": "An AMPAR result does not separate the readings."
+        },
+        {
+          "from": "m4",
+          "to": "i3",
+          "type": "inferenza",
+          "source": "DOC:P11"
+        },
+        {
+          "from": "i1",
+          "to": "e1",
+          "type": "associazione",
+          "source": "PMID:41489401",
+          "note": "Retrospective series in another disease; the sign depends on the variant class."
+        },
+        {
+          "from": "i3",
+          "to": "e2",
+          "type": "risultato sperimentale",
+          "source": "PMID:31806980",
+          "note": "Healthy mice; exposure, not efficacy."
+        },
+        {
+          "from": "i3",
+          "to": "e3",
+          "type": "risultato sperimentale",
+          "source": "PMID:35222658",
+          "note": "Different aetiology and regimen; no difference in seizure control, and the source's EEG result is internally inconsistent."
+        },
+        {
+          "from": "e1",
+          "to": "x3",
+          "type": "inferenza",
+          "source": "DOC:P9"
+        },
+        {
+          "from": "e1",
+          "to": "x1",
+          "type": "inferenza",
+          "source": "DOC:P9",
+          "note": "The sign of memantine in GRIN cohorts depends on variant direction, so E1 comes first."
+        },
+        {
+          "from": "e2",
+          "to": "x2",
+          "type": "inferenza",
+          "source": "DOC:P11"
+        },
+        {
+          "from": "e3",
+          "to": "x2",
+          "type": "inferenza",
+          "source": "DOC:P11"
+        },
+        {
+          "from": "i2",
+          "to": "x1",
+          "type": "inferenza",
+          "source": "DOC:P9"
+        }
+      ]
+    },
+    {
+      "id": "missense-route",
+      "title": "Missense protein and route blockade",
+      "state": "ipotesi",
+      "question": "If a destabilised missense protein is cleared, does blocking the route return protein that carries function, and by which route is it cleared?",
+      "nodes": [
+        {
+          "id": "o1",
+          "col": "osservazione WWOX",
+          "scope": "wwox",
+          "label": "Fibroblasts homozygous for the Q230P missense: transcript comparable to controls, no WWOX band on one membrane",
+          "pmids": [
+            "29808465"
+          ]
+        },
+        {
+          "id": "o2",
+          "col": "osservazione WWOX",
+          "scope": "wwox_other",
+          "label": "A different SDR missense (P252A) in thyroid-cancer lines: low protein, normal mRNA, faster turnover, lysosomal route",
+          "pmids": [
+            "41124647"
+          ]
+        },
+        {
+          "id": "n1",
+          "col": "bisogno",
+          "scope": "none",
+          "label": "Need: rescue a destabilised SDR-domain missense protein",
+          "needs": [
+            "NEED-WWOX-MISSENSE-PROTEIN-RESCUE"
+          ]
+        },
+        {
+          "id": "m1",
+          "col": "meccanismo",
+          "scope": "none",
+          "label": "Premise: the protein is made and then cleared; synthesis, solubility and degradation are not separated for Q230P"
+        },
+        {
+          "id": "m2",
+          "col": "meccanismo",
+          "scope": "none",
+          "label": "The route may be lysosomal, not proteasomal, for this lesion class (read from P252A)"
+        },
+        {
+          "id": "i1",
+          "col": "intervento",
+          "scope": "none",
+          "label": "A02 proteasome-inhibitor class: route blockade, hypothesis at class level",
+          "cards": [
+            "A02_proteasome_inhibitor_class"
+          ]
+        },
+        {
+          "id": "e1",
+          "col": "evidenza",
+          "scope": "non_wwox",
+          "label": "Cystathionine beta-synthase: blockade rescued S466L at high exposure, helped three catalytic-domain alleles, failed for T191M",
+          "pmids": [
+            "37319242"
+          ]
+        },
+        {
+          "id": "e2",
+          "col": "evidenza",
+          "scope": "non_wwox",
+          "label": "Same enzyme in a cell model: wild type rises too; effective inhibitor levels damaged cells",
+          "pmids": [
+            "39041895"
+          ]
+        },
+        {
+          "id": "e3",
+          "col": "evidenza",
+          "scope": "non_wwox",
+          "label": "ASPA C152W (Hsp70/Hsp110 route, not the proteasome): protein accumulated insoluble, no measurable activity"
+        },
+        {
+          "id": "x1",
+          "col": "esperimento",
+          "scope": "proposed",
+          "label": "Isogenic null neural line: route arms, solubility and native fractions, half-life, transgene mRNA, function ruler; outcomes fixed in advance"
+        },
+        {
+          "id": "e4",
+          "col": "evidenza",
+          "scope": "non_wwox",
+          "label": "Mouse (same enzyme): tolerated exposure gave no significant activity gain; the allele rescued at high exposure was not rescued",
+          "pmids": [
+            "37319242"
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "from": "o1",
+          "to": "n1",
+          "type": "associazione",
+          "source": "PMID:29808465"
+        },
+        {
+          "from": "o2",
+          "to": "n1",
+          "type": "associazione",
+          "source": "PMID:41124647",
+          "note": "Another allele: no read-across between missense alleles."
+        },
+        {
+          "from": "n1",
+          "to": "m1",
+          "type": "inferenza",
+          "source": "DOC:P6"
+        },
+        {
+          "from": "o2",
+          "to": "m2",
+          "type": "inferenza",
+          "source": "PMID:41124647"
+        },
+        {
+          "from": "m1",
+          "to": "i1",
+          "type": "inferenza",
+          "source": "DOC:P6"
+        },
+        {
+          "from": "m2",
+          "to": "i1",
+          "type": "inferenza",
+          "source": "PMID:41124647",
+          "note": "If the route is lysosomal the proteasome lever is wrong for this lesion class."
+        },
+        {
+          "from": "i1",
+          "to": "e1",
+          "type": "risultato sperimentale",
+          "source": "PMID:37319242",
+          "note": "Another enzyme: not WWOX evidence."
+        },
+        {
+          "from": "i1",
+          "to": "e2",
+          "type": "risultato sperimentale",
+          "source": "PMID:39041895",
+          "note": "Another enzyme: not WWOX evidence."
+        },
+        {
+          "from": "i1",
+          "to": "e3",
+          "type": "associazione",
+          "source": "PMID:33914734",
+          "note": "Another enzyme and another route: not WWOX evidence and not a proteasome result."
+        },
+        {
+          "from": "e1",
+          "to": "x1",
+          "type": "inferenza",
+          "source": "DOC:P6"
+        },
+        {
+          "from": "e2",
+          "to": "x1",
+          "type": "inferenza",
+          "source": "DOC:P6"
+        },
+        {
+          "from": "e3",
+          "to": "x1",
+          "type": "inferenza",
+          "source": "DOC:P6"
+        },
+        {
+          "from": "i1",
+          "to": "e4",
+          "type": "risultato sperimentale",
+          "source": "PMID:37319242",
+          "note": "Another enzyme: not WWOX evidence."
+        },
+        {
+          "from": "e4",
+          "to": "x1",
+          "type": "inferenza",
+          "source": "DOC:P6"
+        }
+      ]
+    },
+    {
+      "id": "rescue-window",
+      "title": "Rescue window of gene addition",
+      "state": "ipotesi",
+      "question": "Is the benefit of WWOX re-expression a prevention inside the first days of life, or also a recovery after the phenotype has appeared?",
+      "nodes": [
+        {
+          "id": "o1",
+          "col": "osservazione WWOX",
+          "scope": "wwox",
+          "label": "Null mouse: hypoglycaemia from the second week, survival of about three weeks",
+          "pmids": [
+            "34747138",
+            "42422765"
+          ]
+        },
+        {
+          "id": "o2",
+          "col": "osservazione WWOX",
+          "scope": "wwox",
+          "label": "Neuron-specific deletion reproduces the phenotype; oligodendrocyte- and astrocyte-specific deletions show no evident anomaly",
+          "pmids": [
+            "33914858"
+          ]
+        },
+        {
+          "id": "n1",
+          "col": "bisogno",
+          "scope": "none",
+          "label": "Need: restore WWOX protein in neurons by gene addition",
+          "needs": [
+            "NEED-WWOX-GENE-ADDITION"
+          ]
+        },
+        {
+          "id": "m1",
+          "col": "meccanismo",
+          "scope": "none",
+          "label": "A neuronal compartment suffices in the mouse for survival and glycaemia; a neuron-directed vector does not reach the radial-glia substrate"
+        },
+        {
+          "id": "m2",
+          "col": "meccanismo",
+          "scope": "none",
+          "label": "Treatment precedes the endpoints it is judged on, so prevention and recovery cannot be told apart"
+        },
+        {
+          "id": "i1",
+          "col": "intervento",
+          "scope": "none",
+          "label": "C01 AAV9-WWOX: spike-wave discharges, one dose, n = 5",
+          "cards": [
+            "C01_aav9_wwox"
+          ]
+        },
+        {
+          "id": "i2",
+          "col": "intervento",
+          "scope": "none",
+          "label": "C04 AAV9-WWOX: survival and the other endpoint families at the high dose",
+          "cards": [
+            "C04_aav9_endpoint_families"
+          ]
+        },
+        {
+          "id": "e1",
+          "col": "evidenza",
+          "scope": "wwox",
+          "label": "Treated at P0 to P5 and judged from P10; no phenotype measured at the day of injection; later treatment not explored (authors)",
+          "pmids": [
+            "42422765"
+          ]
+        },
+        {
+          "id": "e2",
+          "col": "evidenza",
+          "scope": "wwox",
+          "label": "Organoids: AAV9 at week 10 after a week-7 phenotype (other cohorts), read at week 16 only; one endpoint; radial glia not corrected",
+          "pmids": [
+            "42397075"
+          ]
+        },
+        {
+          "id": "x1",
+          "col": "esperimento",
+          "scope": "proposed",
+          "label": "Pre-treatment baseline in the same animals or an age-matched cohort at injection day (glucose, weight, spike rate, myelin)"
+        },
+        {
+          "id": "x2",
+          "col": "esperimento",
+          "scope": "proposed",
+          "label": "Treated-after-onset arms with a same-age untreated comparator; persistence beyond week 16 in organoids"
+        }
+      ],
+      "edges": [
+        {
+          "from": "o1",
+          "to": "n1",
+          "type": "associazione",
+          "source": "PMID:34747138"
+        },
+        {
+          "from": "o2",
+          "to": "n1",
+          "type": "risultato sperimentale",
+          "source": "PMID:33914858",
+          "note": "Loss in neurons alone reproduces the phenotype."
+        },
+        {
+          "from": "n1",
+          "to": "m1",
+          "type": "inferenza",
+          "source": "DOC:P7"
+        },
+        {
+          "from": "n1",
+          "to": "m2",
+          "type": "inferenza",
+          "source": "DOC:P7"
+        },
+        {
+          "from": "m1",
+          "to": "i1",
+          "type": "inferenza",
+          "source": "DOC:P7"
+        },
+        {
+          "from": "m1",
+          "to": "i2",
+          "type": "inferenza",
+          "source": "DOC:P7"
+        },
+        {
+          "from": "m2",
+          "to": "i2",
+          "type": "inferenza",
+          "source": "DOC:P7"
+        },
+        {
+          "from": "i1",
+          "to": "e1",
+          "type": "risultato sperimentale",
+          "source": "PMID:42422765"
+        },
+        {
+          "from": "i2",
+          "to": "e1",
+          "type": "risultato sperimentale",
+          "source": "PMID:42422765"
+        },
+        {
+          "from": "i1",
+          "to": "e2",
+          "type": "associazione",
+          "source": "PMID:42397075",
+          "note": "Same vector class in a human model, not the same preparation."
+        },
+        {
+          "from": "e1",
+          "to": "x1",
+          "type": "inferenza",
+          "source": "DOC:P7"
+        },
+        {
+          "from": "e2",
+          "to": "x2",
+          "type": "inferenza",
+          "source": "DOC:P7"
+        }
+      ]
+    },
+    {
+      "id": "isr-sign",
+      "title": "Integrated stress response: sign conflict",
+      "state": "non risolto",
+      "question": "Is the integrated stress response raised, lowered or unchanged in WWOX-deficient neural cells? Three systems give three answers at transcript level.",
+      "nodes": [
+        {
+          "id": "o1",
+          "col": "osservazione WWOX",
+          "scope": "computational",
+          "label": "Human WWOX-knockout organoid (4 against 2 libraries): ISR target set LOWER than chance",
+          "pmids": [
+            "34268881"
+          ]
+        },
+        {
+          "id": "o2",
+          "col": "osservazione WWOX",
+          "scope": "computational",
+          "label": "Progenitor line with a WWOX shRNA, one library per arm, knockdown not shown at tag level: ISR set higher (descriptive only)",
+          "pmids": [
+            "31543760"
+          ]
+        },
+        {
+          "id": "o3",
+          "col": "osservazione WWOX",
+          "scope": "computational",
+          "label": "Mouse P17 brain, four deletion contrasts: ISR set inside its matched null in all four; Atf4 mRNA lower (not an ISR call)"
+        },
+        {
+          "id": "o4",
+          "col": "osservazione WWOX",
+          "scope": "wwox_other",
+          "label": "Fly neuronal knockdown with amyloid: Atf4 staining up (6 against 6), not without amyloid",
+          "pmids": [
+            "42909904"
+          ]
+        },
+        {
+          "id": "n1",
+          "col": "bisogno",
+          "scope": "none",
+          "label": "Need: ISR activity, attenuate a possible over-activation; direction uncertain",
+          "needs": [
+            "NEED-ISR-ATTENUATION"
+          ]
+        },
+        {
+          "id": "m1",
+          "col": "meccanismo",
+          "scope": "none",
+          "label": "UNRESOLVED: the sign differs between systems; transcripts only, no protein or phosphorylation measured",
+          "unresolved": true
+        },
+        {
+          "id": "m2",
+          "col": "meccanismo",
+          "scope": "none",
+          "label": "Which eIF2 kinase carries any ISR is unmeasured in every Wwox system"
+        },
+        {
+          "id": "i1",
+          "col": "intervento",
+          "scope": "none",
+          "label": "E01 ISR modulators (eIF2B-targeting class): outside-WWOX rows only",
+          "cards": [
+            "E01_isr_modulators"
+          ]
+        },
+        {
+          "id": "e1",
+          "col": "evidenza",
+          "scope": "non_wwox",
+          "label": "Adult ALS: an eIF2B activator engaged its target, no clinical benefit (ratio 1.04)",
+          "pmids": [
+            "42771346"
+          ]
+        },
+        {
+          "id": "e2",
+          "col": "evidenza",
+          "scope": "non_wwox",
+          "label": "Children with vanishing white matter, single arm: hazard ratio 0.33 against registry controls; serious adverse events in about three quarters",
+          "pmids": [
+            "42586097"
+          ]
+        },
+        {
+          "id": "e3",
+          "col": "evidenza",
+          "scope": "non_wwox",
+          "label": "Fly mitochondrial-synthetase seizure model: GCN2 or ATF4 knockdown lowers bang sensitivity",
+          "pmids": [
+            "41380592"
+          ]
+        },
+        {
+          "id": "x1",
+          "col": "esperimento",
+          "scope": "proposed",
+          "label": "Isogenic null and corrected neural lines: phospho-eIF2alpha, ATF4 protein, targets, translation, kinase attribution; decision table fixed in advance"
+        }
+      ],
+      "edges": [
+        {
+          "from": "o1",
+          "to": "n1",
+          "type": "associazione",
+          "source": "PMID:34268881",
+          "note": "Deposit GSE156243; exploratory."
+        },
+        {
+          "from": "o2",
+          "to": "n1",
+          "type": "associazione",
+          "source": "PMID:31543760",
+          "note": "Descriptive re-analysis, n = 1 per arm, no replicate; WWOX was not shown lower in the deposit."
+        },
+        {
+          "from": "o3",
+          "to": "n1",
+          "type": "associazione",
+          "source": "DOC:P4",
+          "note": "No resolvable sign at about 0.3; a small effect or a protein-level effect is not excluded."
+        },
+        {
+          "from": "o4",
+          "to": "n1",
+          "type": "associazione",
+          "source": "PMID:42909904"
+        },
+        {
+          "from": "n1",
+          "to": "m1",
+          "type": "inferenza",
+          "source": "DOC:P4"
+        },
+        {
+          "from": "n1",
+          "to": "m2",
+          "type": "inferenza",
+          "source": "DOC:ISR-DESIGN"
+        },
+        {
+          "from": "m1",
+          "to": "i1",
+          "type": "inferenza",
+          "source": "DOC:P4",
+          "note": "The premise of an attenuating lever is not established."
+        },
+        {
+          "from": "m2",
+          "to": "i1",
+          "type": "inferenza",
+          "source": "DOC:ISR-DESIGN"
+        },
+        {
+          "from": "i1",
+          "to": "e1",
+          "type": "risultato sperimentale",
+          "source": "PMID:42771346",
+          "note": "Another disease, abstract level."
+        },
+        {
+          "from": "i1",
+          "to": "e2",
+          "type": "risultato sperimentale",
+          "source": "PMID:42586097",
+          "note": "Another disease, abstract level."
+        },
+        {
+          "from": "i1",
+          "to": "e3",
+          "type": "associazione",
+          "source": "PMID:41380592",
+          "note": "Genetic knockdown in a fly model, not the compound class."
+        },
+        {
+          "from": "e1",
+          "to": "x1",
+          "type": "inferenza",
+          "source": "DOC:ISR-DESIGN"
+        },
+        {
+          "from": "e2",
+          "to": "x1",
+          "type": "inferenza",
+          "source": "DOC:ISR-DESIGN"
+        },
+        {
+          "from": "e3",
+          "to": "x1",
+          "type": "inferenza",
+          "source": "DOC:ISR-DESIGN"
+        }
+      ]
+    }
+  ]
+}

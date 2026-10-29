@@ -25,6 +25,7 @@ import csv
 import json
 import re
 import sys
+import textwrap
 from collections import Counter
 from pathlib import Path
 
@@ -413,7 +414,7 @@ UI_IT = {
     "d_cards": "interventi, classi o assi già letti e scritti in una scheda",
     "d_abst": "schede che indicano il dato mancante invece di un test",
     "unit_note": "Un bisogno è una domanda biologica, una scheda è un candidato scritto, un record è una voce di fonte, una famiglia è un raggruppamento di record: non si sommano né si confrontano come un solo numero.",
-    "data_date": "Data dei dati",
+    "data_date": "Dati aggiornati al",
     "perimeter": "Perimetro",
     "perimeter_txt": "WWOX-DEE, classe del genotipo di riferimento; letteratura e basi dati pubbliche; nessun dato individuale.",
     "goals_h": "Due possibilità aperte, due dimensioni separate",
@@ -588,7 +589,7 @@ UI_IT = {
     # export
     "ex_back": "Torna alla vista", "ex_print": "Stampa o salva come PDF", "ex_dl": "Scarica come HTML autonomo", "ex_n": "Schede esportate: {n}. I collegamenti sono identificativi pubblici e restano validi fuori da questa cartella.",
     "ex_unknown": "Identificativo di scheda sconosciuto.", "ex_title": "Esportazione",
-    "ex_card": "Scheda", "ex_data_date": "Data dei dati", "ex_needs_rec": "registro dei bisogni", "ex_cat_build": "versione del catalogo",
+    "ex_card": "Scheda", "ex_data_date": "Dati aggiornati al", "ex_needs_rec": "registro dei bisogni", "ex_cat_build": "versione del catalogo",
     "ex_perim": "Perimetro", "ex_perim_txt": "encefalopatia epilettica e dello sviluppo legata a WWOX (WWOX-DEE), classe del genotipo di riferimento; solo letteratura e basi dati pubbliche; nessun dato individuale. Materiale di ricerca per la discussione con il team clinico curante: non è consiglio medico, non è una raccomandazione di trattamento, non è una probabilità di beneficio.",
     "ex_rationale": "Motivazione", "ex_needs": "Bisogni affrontati", "ex_evid": "Evidenza, per tipo", "ex_ctx": "Osservazioni registrate sui bisogni collegati: solo contesto, possono riguardare altri interventi.",
     "ex_need_obs": "osservazione sul bisogno", "ex_no_assert": "Nella scheda non è registrata alcuna affermazione con tipo di evidenza.",
@@ -600,6 +601,51 @@ UI_IT = {
     "ex_miss": "Evidenza mancante e prossimo esperimento", "ex_next": "Passo successivo", "ex_srcs": "Fonti (identificativi pubblici)",
     "ex_gen": "Generato da repurposing_view.py", "ex_share": "Versione condivisibile: vedi il piè di pagina della pagina per le fonti incluse.", "ex_full": "Versione locale completa: non per la ridistribuzione.",
     "ex_std_title": "Scheda candidato WWOX",
+    # IT6 P13: one-page synthesis (route #brief=)
+    "cd_brief": "Sintesi (1 pagina)", "cd_sel_brief": "Sintesi (1 pagina) della selezione",
+    "bf_title": "Sintesi di una pagina", "bf_std_title": "Sintesi WWOX di una pagina", "bf_card": "Scheda",
+    "bf_n": "Sintesi esportate: {n}. Una pagina A4 per scheda; i collegamenti sono identificativi pubblici e restano validi fuori da questa cartella.",
+    "bf_f1": "Domanda (il bisogno)", "bf_f2": "Candidato / intervento", "bf_f3": "Risultato WWOX", "bf_f4": "Precedente esterno", "bf_f5": "Controevidenze, per categoria",
+    "bf_f6": "Dato mancante", "bf_f7": "Prossimo passo", "bf_f8": "Fonti essenziali (al massimo 5)",
+    "bf_f5_note": "ordine per categoria: prima sicurezza e danno, poi risultati nulli o sfavorevoli in sistemi WWOX, poi controprove fuori da WWOX; dentro la categoria l'ordine della scheda; non è un giudizio di peso",
+    "bf_counter_more": "{n} altre nella scheda",
+    "bf_data_date": "Dati aggiornati al", "bf_cat_build": "Catalogo costruito il", "bf_dates_note": "tre date diverse: l'ultimo aggiornamento della ricerca (schede, bisogni, registri dei cicli), la data del registro dei bisogni e la costruzione del catalogo dei composti",
+    "bf_dossier": "Dossier completo (3-4 pagine, appendice)", "bf_dossier_open": "Apri il dossier completo",
+    "bf_dossier_std": "Nel file autonomo il dossier completo non è incluso: si apre dalla pagina principale con",
+    "bf_warn": "Materiale di ricerca per la discussione con il team clinico curante: non è consiglio medico e non è una graduatoria di trattamenti. Associazione non è modulazione, e modulazione non è recupero.",
+    "bf_wwox_ctx": "Nessun risultato dell'intervento in un sistema WWOX; osservazione del bisogno collegato",
+    "bf_wwox_none": "Nessun risultato in un sistema WWOX registrato",
+    "bf_ext_none": "Nessun precedente esterno registrato (l'assenza non è un risultato negativo)",
+    "bf_counter_none": "Nessuna controevidenza registrata nella scheda (l'assenza non è un risultato negativo)",
+    "bf_missing_none": "Nessun dato mancante indicato dalla scheda", "bf_next_none": "Nessun passo successivo nella scheda",
+    "bf_src_none": "Nessuna fonte con identificativo pubblico", "bf_unknown": "Identificativo di scheda sconosciuto.", "bf_no_need": "nessun bisogno collegato",
+    # IT6 P13: small evidence graph (server-rendered SVG)
+    "nav_chains": "Catene di evidenza",
+    "eg_h": "Catene di evidenza: dall'osservazione all'esperimento",
+    "eg_lead": "Cinque catene tratte dai cicli di lavoro più recenti, lette da sinistra a destra: osservazione in un sistema WWOX, bisogno, meccanismo, intervento, evidenza, esperimento. Non è una rete di conoscenza e non misura l'efficacia: mostra su che cosa poggia ogni passaggio e che cosa manca.",
+    "eg_note_en": "Le etichette dei nodi sono testo scientifico conservato nella lingua originale (inglese).",
+    "eg_legend_h": "Legenda", "eg_leg_line": "Tipo di arco (stile della linea e lettera)", "eg_leg_nodes": "Riga sotto il nodo: ambito del dato",
+    "eg_leg_R": "risultato sperimentale: l'esperimento citato ha misurato proprio quel legame",
+    "eg_leg_I": "inferenza: ragionamento o trasferimento da un altro contesto, non misurato",
+    "eg_leg_A": "associazione: compresenza, correlazione o elenco, senza prova di modulazione",
+    "eg_scope_wwox": "sistema WWOX", "eg_scope_wwox_other": "WWOX, altro contesto", "eg_scope_non_wwox": "fuori WWOX (altra malattia o proteina)",
+    "eg_scope_computational": "analisi su dati pubblici", "eg_scope_proposed": "proposto, non eseguito", "eg_scope_none": "",
+    "eg_state_astensione": "astensione", "eg_state_ipotesi": "ipotesi", "eg_state_non_risolto": "NON RISOLTO", "eg_unres": "NON RISOLTO",
+    "eg_scroll": "La figura scorre in orizzontale al suo interno; la pagina no.",
+    "eg_no_interactome": "Un elenco di interattori (interattoma) non è mai disegnato come arco causale.",
+    "eg_table_sum": "Testo alternativo: tabella degli archi", "eg_th_from": "Da", "eg_th_to": "A", "eg_th_type": "Tipo", "eg_th_src": "Fonte", "eg_th_note": "Nota",
+    "eg_svg_desc": "{n} nodi e {m} archi; l'elenco completo è nella tabella degli archi sotto la figura.",
+    "eg_date": "Catene scritte il", "eg_cue": "Scorri la figura in orizzontale per vedere tutte le colonne →", "wo_brief": "In breve", "bf_needs_rec": "Registro dei bisogni del", "ex_n1": "Scheda esportata: 1. I collegamenti sono identificativi pubblici e restano validi fuori da questa cartella.", "bf_n1": "Sintesi esportata: 1. Una pagina A4 per scheda; i collegamenti sono identificativi pubblici e restano validi fuori da questa cartella.", "eg_open_card": "apri il profilo",
+    # IT6 P13: updated priorities and order of work
+    "wo_h": "Piano di verifiche per bisogno",
+    "wo_note": "Un elenco per bisogno, nell'ordine del registro dei bisogni: non è una sequenza di lavoro, non è una graduatoria di bisogni né di trattamenti e non ha punteggio. Per ogni bisogno: il motivo del prossimo studio (verificare un'ipotesi, chiarire una controevidenza o risolvere una premessa, coerente con le posizioni F, C, P del bisogno), una riga in italiano, la domanda, i dati che potrebbero risolverla, che cosa cambierebbe e la fattibilità realmente nota («non nota» quando non lo è).",
+    "wo_update": "Aggiornamento della ricerca", "wo_catalogue": "Catalogo costruito il", "wo_dates_note": "due date diverse: la prima è l'ultimo aggiornamento di questo ordine di lavoro, la seconda la costruzione del catalogo dei composti",
+    "wo_kind": "Motivo del prossimo studio", "wo_q": "Domanda", "wo_data": "Dati che potrebbero risolverla", "wo_change": "Che cosa cambierebbe", "wo_feas": "Fattibilità (solo ciò che è noto)",
+    "wo_date": "Data", "wo_upd": "Aggiornato da", "wo_cards": "Schede coinvolte", "wo_pos": "Posizioni del bisogno", "wo_no_pos": "nessuna scheda collegata",
+    "ws_prevented_early_window": "prevenzione (finestra precoce)", "ws_recovered_post_onset_model": "recupero dopo l'esordio (solo in un modello)",
+    "ws_symptom_suppression_reversible": "soppressione sintomatica reversibile", "ws_unmeasured": "non misurato",
+    "wo_window": "Finestra di intervento", "bf_window": "Finestra di intervento",
+    "wo_see": "piano di verifiche di questo bisogno", "wo_text_en": "Testo scientifico in inglese, come memorizzato.", "wo_more": "Dettagli: dati, effetto, fattibilità",
     # technical drill-down
     "td_sum": "Dettagli tecnici",
     "td_note": "Versioni, impronte digitali, comando di rigenerazione, stati delle fonti e lo screening completo del catalogo. Sono separati dall'esplorazione sopra, in inglese tecnico, esaustivi e non ordinati: non sono elenchi di candidati.",
@@ -899,6 +945,413 @@ def load_cards(dr: Path) -> dict:
     return cards
 
 
+# ------------------------------------------------------------------ IT6 P13: one-page brief, small evidence graph, work order
+GRAPH_NAME = "view/evidence_graph.json"
+WORK_ORDER_NAME = "view/work_order.json"
+GRAPH_SCHEMA = "legend.wwox.evidence_graph/1"
+WORK_ORDER_SCHEMA = "legend.wwox.work_order/1"
+GRAPH_COLUMNS = ["osservazione WWOX", "bisogno", "meccanismo", "intervento", "evidenza", "esperimento"]
+EDGE_TYPES = ["risultato sperimentale", "inferenza", "associazione"]
+EDGE_CODE = {"risultato sperimentale": "R", "inferenza": "I", "associazione": "A"}
+NODE_SCOPES = ("wwox", "wwox_other", "non_wwox", "computational", "proposed", "none")
+CHAIN_STATES = ("astensione", "ipotesi", "non risolto")
+WO_KINDS = ["verificare un'ipotesi", "chiarire una controevidenza", "risolvere una premessa"]
+KIND_OF_FAMILY = {"F": WO_KINDS[0], "C": WO_KINDS[1], "P": WO_KINDS[2]}
+WO_KEYS = {"need", "kind", "question", "data", "would_change", "feasibility", "date", "updated_by", "cards", "docs", "window_state", "summary_it", "feasibility_it"}
+WINDOW_STATES = ("prevented_early_window", "recovered_post_onset_model", "symptom_suppression_reversible", "unmeasured")   # P7, rescue_window_it6 section 5: the 'window state' column
+WINDOW_WORDING_RE = re.compile(r"early-window", re.I)   # a prevented/early-window state must be stated in the card or need wording itself
+ISO_DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+INTERACTOME_RE = re.compile(r"interactom|interactor|pull-?down|co-?ip\b", re.I)
+NODE_LABEL_MAX = 150
+BRIEF_SOURCES_MAX = 5
+
+
+def allowed_kinds(groups) -> set:
+    """Kinds of next study a need may carry, from the F/C/P positions the view assigns to it: a favourable hypothesis allows verifying it, counter-evidence allows clarifying it, a missing premise allows resolving it.
+    A need with no card position has no hypothesis and no counter-evidence on record, so only its premise can be addressed."""
+    kinds = {KIND_OF_FAMILY[g[0]] for g in groups if g and g[0] in KIND_OF_FAMILY}
+    return kinds or {WO_KINDS[2]}
+
+
+def _doc_problems(docs, dr, where) -> list[str]:
+    errs = []
+    if not isinstance(docs, dict) or not docs:
+        return [f"{where}: docs must be a non-empty map id -> {{path, label}}"]
+    for k, v in docs.items():
+        if not isinstance(v, dict) or not v.get("label") or not v.get("path"):
+            errs.append(f"{where}: doc {k!r} needs a path and a label")
+        elif dr is not None and not (dr / v["path"]).exists():
+            errs.append(f"{where}: doc {k!r} points to a file that does not exist: {v['path']}")
+    return errs
+
+
+def validate_evidence_graph(doc: dict, card_ids, need_ids, titles: dict, dr: Path | None = None) -> list[str]:
+    """Problems of the hand-authored graph (empty list = valid). Every card id, need id and PMID must exist; every edge has a type from the closed list, a source id that exists, and goes forward through the
+    columns; every chain has the six columns and is connected from an observation to an experiment; an interactome or list of interactors is never an endpoint of a causal edge."""
+    errs: list[str] = []
+    if doc.get("schema") != GRAPH_SCHEMA:
+        errs.append(f"schema must be {GRAPH_SCHEMA}")
+    if doc.get("columns") != GRAPH_COLUMNS:
+        errs.append(f"columns must be exactly {GRAPH_COLUMNS}")
+    if doc.get("edge_types") != EDGE_TYPES:
+        errs.append(f"edge_types must be exactly {EDGE_TYPES}")
+    docs = doc.get("docs")
+    errs += _doc_problems(docs, dr, "graph")
+    docs = docs if isinstance(docs, dict) else {}
+    chains = doc.get("chains")
+    if not isinstance(chains, list) or not chains:
+        return errs + ["no chains"]
+    seen_chain = set()
+    card_ids, need_ids = set(card_ids), set(need_ids)
+    for ch in chains:
+        cid = ch.get("id")
+        w = f"chain {cid!r}"
+        if not cid or cid in seen_chain:
+            errs.append(f"{w}: missing or duplicate chain id")
+        seen_chain.add(cid)
+        for k in ("title", "question"):
+            if not ch.get(k):
+                errs.append(f"{w}: {k} is empty")
+        if ch.get("state") not in CHAIN_STATES:
+            errs.append(f"{w}: state must be one of {CHAIN_STATES}")
+        nodes: dict = {}
+        for n in ch.get("nodes") or []:
+            nid = n.get("id")
+            if not nid or nid in nodes:
+                errs.append(f"{w}: missing or duplicate node id {nid!r}")
+                continue
+            nodes[nid] = n
+            if n.get("col") not in GRAPH_COLUMNS:
+                errs.append(f"{w}/{nid}: column {n.get('col')!r} is not one of the six")
+            lab = n.get("label")
+            if not lab or len(lab) > NODE_LABEL_MAX:
+                errs.append(f"{w}/{nid}: label empty or longer than {NODE_LABEL_MAX} characters")
+            if n.get("scope") not in NODE_SCOPES:
+                errs.append(f"{w}/{nid}: scope must be one of {NODE_SCOPES}")
+            for c in n.get("cards") or []:
+                if c not in card_ids:
+                    errs.append(f"{w}/{nid}: dangling card id {c!r}")
+            for x in n.get("needs") or []:
+                if x not in need_ids:
+                    errs.append(f"{w}/{nid}: dangling need id {x!r}")
+            for p in n.get("pmids") or []:
+                if str(p) not in titles:
+                    errs.append(f"{w}/{nid}: PMID {p!r} is not in the source-title cache (unknown PMID)")
+            if n.get("col") == "bisogno" and not n.get("needs"):
+                errs.append(f"{w}/{nid}: a need node must reference a need id")
+            if n.get("col") == "intervento" and not n.get("cards"):
+                errs.append(f"{w}/{nid}: an intervention node must reference a card id")
+        for col in GRAPH_COLUMNS:
+            if not any(n.get("col") == col for n in nodes.values()):
+                errs.append(f"{w}: no node in column {col!r}")
+        idx = {c: i for i, c in enumerate(GRAPH_COLUMNS)}
+        out_e: dict = {k: [] for k in nodes}
+        in_e: dict = {k: [] for k in nodes}
+        for e in ch.get("edges") or []:
+            a, b = e.get("from"), e.get("to")
+            we = f"{w} edge {a!r}->{b!r}"
+            if a not in nodes or b not in nodes:
+                errs.append(f"{we}: dangling node id")
+                continue
+            if e.get("type") not in EDGE_TYPES:
+                errs.append(f"{we}: edge type {e.get('type')!r} is not one of {EDGE_TYPES}")
+            src = str(e.get("source") or "")
+            kind, _, sid = src.partition(":")
+            if kind == "PMID":
+                if sid not in titles:
+                    errs.append(f"{we}: source PMID {sid!r} is not in the source-title cache (unknown PMID)")
+            elif kind == "DOC":
+                if sid not in docs:
+                    errs.append(f"{we}: source document {sid!r} is not declared in docs")
+            else:
+                errs.append(f"{we}: an edge needs a source id, 'PMID:<id>' or 'DOC:<id>'")
+            if idx.get(nodes[a].get("col"), 0) >= idx.get(nodes[b].get("col"), 0):
+                errs.append(f"{we}: an edge must go forward through the columns")
+            for nid in (a, b):
+                nd = nodes[nid]
+                if (nd.get("interactome") or INTERACTOME_RE.search(nd.get("label") or "")) and e.get("type") != "associazione":
+                    errs.append(f"{we}: an interactome or a list of interactors is an association, never a causal edge ({nid})")
+            out_e[a].append(b)
+            in_e[b].append(a)
+        for nid, nd in nodes.items():
+            if not out_e[nid] and not in_e[nid]:
+                errs.append(f"{w}/{nid}: node is on no edge")
+
+        def reach(start, nxt):
+            seen, stack = set(start), list(start)
+            while stack:
+                for m in nxt[stack.pop()]:
+                    if m not in seen:
+                        seen.add(m)
+                        stack.append(m)
+            return seen
+        firsts = [k for k, n in nodes.items() if n.get("col") == GRAPH_COLUMNS[0]]
+        lasts = [k for k, n in nodes.items() if n.get("col") == GRAPH_COLUMNS[-1]]
+        fw, bw = reach(firsts, out_e), reach(lasts, in_e)
+        for nid in nodes:
+            if nid not in fw:
+                errs.append(f"{w}/{nid}: not reachable from an observation")
+            if nid not in bw:
+                errs.append(f"{w}/{nid}: does not lead to an experiment")
+    return errs
+
+
+def validate_work_order(doc: dict, need_ids: list, groups_by_need: dict, card_ids, dr: Path | None = None, texts: dict | None = None) -> list[str]:
+    """Problems of the hand-authored work order. Entries follow the order of the needs register (no ranking), the kind agrees with the F/C/P positions of that need, no score or rank field exists."""
+    errs: list[str] = []
+    if doc.get("schema") != WORK_ORDER_SCHEMA:
+        errs.append(f"schema must be {WORK_ORDER_SCHEMA}")
+    if doc.get("kinds") != WO_KINDS:
+        errs.append(f"kinds must be exactly {WO_KINDS}")
+    if not ISO_DATE_RE.match(str(doc.get("research_update") or "")):
+        errs.append("research_update must be an ISO date")
+    docs = doc.get("docs")
+    errs += _doc_problems(docs, dr, "work order")
+    docs = docs if isinstance(docs, dict) else {}
+    texts = texts or {}
+    if set(doc.get("window_states") or {}) != set(WINDOW_STATES):
+        errs.append(f"window_states must be exactly {WINDOW_STATES}")
+
+    def win_problems(items, key, w):
+        out = []
+        for it in items or []:
+            st = it.get("state") if isinstance(it, dict) else None
+            if st not in WINDOW_STATES:
+                out.append(f"{w}: window state {st!r} is not one of {WINDOW_STATES}")
+            elif st == "prevented_early_window" and key in texts and not WINDOW_WORDING_RE.search(texts[key]):
+                out.append(f"{w}: state {st!r} is not backed by the wording of {key} (no 'early-window' statement)")
+        return out
+    for cid, cw in (doc.get("card_windows") or {}).items():
+        if cid not in set(card_ids):
+            errs.append(f"card_windows: dangling card id {cid!r}")
+        errs += win_problems([{"state": x} for x in cw.get("states") or []], cid, f"card_windows {cid!r}")
+        if not cw.get("states") or not str(cw.get("note") or "").strip():
+            errs.append(f"card_windows {cid!r}: states and note are required")
+    entries = doc.get("entries")
+    if not isinstance(entries, list) or not entries:
+        return errs + ["no entries"]
+    pos = {n: i for i, n in enumerate(need_ids)}
+    last, seen = -1, set()
+    card_ids = set(card_ids)
+    for e in entries:
+        nid = e.get("need")
+        w = f"work order {nid!r}"
+        if nid not in pos:
+            errs.append(f"{w}: dangling need id")
+            continue
+        if nid in seen:
+            errs.append(f"{w}: duplicate entry")
+        seen.add(nid)
+        if pos[nid] <= last:
+            errs.append(f"{w}: entries must follow the order of the needs register (no ranking)")
+        last = max(last, pos[nid])
+        for k in sorted(set(e) - WO_KEYS):
+            errs.append(f"{w}: unknown field {k!r} (no score, rank or probability field exists)")
+        for k in ("question", "data", "would_change", "feasibility", "summary_it", "feasibility_it"):
+            if not str(e.get(k) or "").strip():
+                errs.append(f"{w}: {k} is empty (write 'non nota' in feasibility_it when feasibility is not known)")
+        if "not known" in str(e.get("feasibility")) and "non nota" not in str(e.get("feasibility_it")):
+            errs.append(f"{w}: the English feasibility says 'not known' but feasibility_it does not say 'non nota'")
+        if re.search(r"\bnon nota\b", str(e.get("feasibility"))):
+            errs.append(f"{w}: Italian words inside the English feasibility text; put them in feasibility_it")
+        if not ISO_DATE_RE.match(str(e.get("date") or "")):
+            errs.append(f"{w}: date must be an ISO date")
+        if e.get("kind") not in WO_KINDS:
+            errs.append(f"{w}: kind {e.get('kind')!r} is not one of {WO_KINDS}")
+        elif e["kind"] not in allowed_kinds(groups_by_need.get(nid) or ()):
+            errs.append(f"{w}: kind {e['kind']!r} does not agree with the positions of the need {sorted(groups_by_need.get(nid) or [])}")
+        errs += win_problems(e.get("window_state"), nid, w)
+        for it in e.get("window_state") or []:
+            if not str(it.get("note") or "").strip():
+                errs.append(f"{w}: every window state needs a note")
+        for c in e.get("cards") or []:
+            if c not in card_ids:
+                errs.append(f"{w}: dangling card id {c!r}")
+        for d in e.get("docs") or []:
+            if d not in docs:
+                errs.append(f"{w}: document {d!r} is not declared in docs")
+    return errs
+
+
+def resolve_graph(doc: dict, titles: dict) -> dict:
+    """The graph as embedded in the page: document paths stay out (only labels), every edge source is resolved to a printable id and title."""
+    docs = {k: v["label"] for k, v in doc["docs"].items()}
+    chains = []
+    for ch in doc["chains"]:
+        edges = []
+        for e in ch["edges"]:
+            kind, _, sid = e["source"].partition(":")
+            src = {"kind": kind, "id": sid, "label": f"PMID {sid}" if kind == "PMID" else docs[sid], "title": titles[sid]["title"] if kind == "PMID" else None}
+            edges.append({"from": e["from"], "to": e["to"], "type": e["type"], "source": e["source"], "src": src, "note": e.get("note") or ""})
+        nodes = [{"id": n["id"], "col": n["col"], "scope": n["scope"], "label": n["label"], "pmids": [str(p) for p in n.get("pmids") or []], "cards": list(n.get("cards") or []),
+                  "needs": list(n.get("needs") or []), "unresolved": bool(n.get("unresolved"))} for n in ch["nodes"]]
+        chains.append({"id": ch["id"], "title": ch["title"], "state": ch["state"], "question": ch["question"], "nodes": nodes, "edges": edges})
+    return {"date": doc.get("date"), "columns": list(GRAPH_COLUMNS), "edge_types": list(EDGE_TYPES), "docs": [{"id": k, "label": v} for k, v in docs.items()], "chains": chains}
+
+
+def resolve_work_order(doc: dict, groups_by_need: dict) -> dict:
+    docs = {k: v["label"] for k, v in doc["docs"].items()}
+    entries = [{"need": e["need"], "kind": e["kind"], "question": e["question"], "data": e["data"], "would_change": e["would_change"], "feasibility": e["feasibility"], "date": e["date"],
+                "updated_by": list(e.get("updated_by") or []), "cards": list(e.get("cards") or []), "docs": [{"id": d, "label": docs[d]} for d in e.get("docs") or []],
+                "window_state": [dict(x) for x in e.get("window_state") or []], "summary_it": e["summary_it"], "feasibility_it": e["feasibility_it"],
+                "positions": sorted(groups_by_need.get(e["need"]) or [])} for e in doc["entries"]]
+    return {"research_update": doc["research_update"], "kinds": list(WO_KINDS), "entries": entries, "window_states": list(WINDOW_STATES),
+            "card_windows": {k: {"states": list(v["states"]), "note": v["note"]} for k, v in sorted((doc.get("card_windows") or {}).items())}}
+
+
+def load_curated_docs(dr: Path, cands: list, cneeds: list, titles: dict, texts: dict | None = None) -> tuple[dict, dict]:
+    """Reads and validates view/evidence_graph.json and view/work_order.json against the cards, the needs and the title cache. An invalid file is a build error, never a silent omission."""
+    card_ids = [c["id"] for c in cands]
+    need_ids = [n["id"] for n in cneeds]
+    groups: dict = {n: set() for n in need_ids}
+    for c in cands:
+        for nid, l in c["links"].items():
+            groups[nid].add(l["group"])
+    out = []
+    for name, fn, args in ((GRAPH_NAME, validate_evidence_graph, (card_ids, need_ids, titles, dr)), (WORK_ORDER_NAME, validate_work_order, (need_ids, groups, card_ids, dr, texts))):
+        p = dr / name
+        if not p.exists():
+            raise SystemExit(f"{name} is missing: the evidence graph and the work order are part of the view")
+        doc = jload(p)
+        errs = fn(doc, *args)
+        if errs:
+            raise SystemExit(f"{name} is invalid:\n  " + "\n  ".join(errs))
+        out.append(doc)
+    return resolve_graph(out[0], titles), resolve_work_order(out[1], groups)
+
+
+SAFETY_RE = re.compile(r"\b(safety|adverse|toxic\w*|harm\w*|MRI|neuropath\w*|pro-?convuls\w*|hepat\w*|serious|withdrawn|contraindicat\w*|tumou?r\w*)\b", re.I)
+WWOX_NULL_RE = re.compile(r"(?=.*\b(?:Wwox|WWOX|knockout|organoid|null mouse)\b)(?=.*\b(?:null|no (?:effect|benefit|difference|change)|did not|not (?:recovered|reproduc\w+)|unfavourable|worse|failed|negative|ineffective)\b)", re.I | re.S)
+PLACEHOLDER_RE = re.compile(r"^\s*see\b[^.]*\babove\.?\s*$", re.I)
+ID_PAREN_RE = re.compile(r"\s*\([^()]*(?:CLAIM \d+|DL-[A-Z]+-\d+|HYP-\d{8}-\d+|MECHANISM_TRANSFER_FIREWALL|\bN-\d+\b|needs audit|\bmanifest\b)[^()]*\)")
+ID_BARE_RE = re.compile(r"\b(?:(?:[Mm]ap )?N-\d+\b:?\s*|CLAIM \d+|DL-[A-Z]+-\d+|HYP-\d{8}-\d+|MECHANISM_TRANSFER_FIREWALL|DR-[A-Z0-9]+-\d+|[A-Z]-[A-Z]{2,4}-\d+)\b")
+COUNTER_CATEGORIES = ("sicurezza e danno", "risultati nulli o sfavorevoli in sistemi WWOX", "controprove fuori da WWOX e limiti")
+
+
+def scrub_ids(t: str) -> str:
+    """Repository identifiers (CLAIM 031, DL-..., HYP-..., assertion ids) mean nothing outside the repository: they are dropped from the one-page text (the dossier keeps the card text whole)."""
+    t = ID_PAREN_RE.sub("", str(t or ""))
+    t = ID_BARE_RE.sub("", t)
+    return re.sub(r"\s+([,.;:])", r"\1", re.sub(r"\s{2,}", " ", t)).strip()
+
+
+def clip_sentence(t, n: int, hard: float = 3.0) -> str:
+    """Shorten at a sentence boundary, never inside a sentence: the last boundary within n; else the end of the first sentence if it is within hard*n; only a single sentence longer than that is cut, at a clause."""
+    t = " ".join(str(t or "").split())
+    if len(t) <= n * 1.2:
+        return t
+    ends = [m.start() for m in re.finditer(r"(?<=[.;])\s+(?=[A-Z(\[0-9])", t)]
+    within = [e for e in ends if e <= n]
+    if within:
+        return t[:within[-1]].rstrip()
+    first = [e for e in ends if e <= n * hard]
+    if first:
+        return t[:first[0]].rstrip()
+    if len(t) <= n * hard:
+        return t
+    cut = t[:int(n * hard)]
+    i = max(cut.rfind("; "), cut.rfind(", "))
+    return (cut[:i] if i > n * 0.5 else cut[:cut.rfind(" ")]).rstrip(",;") + " …"
+
+
+def counter_category(text: str) -> int:
+    """Deterministic category of a counter-evidence statement: 0 safety or harm signal, 1 null or unfavourable result in a WWOX system, 2 counter-evidence from outside WWOX and design limits."""
+    if SAFETY_RE.search(text):
+        return 0
+    return 1 if WWOX_NULL_RE.search(text) else 2
+
+
+def order_counter(items: list, flip: bool = False) -> list:
+    """(category, text) items in category order; inside a category the stored order of the card, then of the need, is kept (stable sort). `flip` exists for the regression test only."""
+    return sorted(items, key=lambda it: -it[0] if flip else it[0])
+
+
+def make_brief(c: dict, nmap: dict) -> dict:
+    """The one-page synthesis of a card: fields assembled from the card and its needs only (no new claim). Fallback sentences are Italian orientation text; everything else is the stored scientific text, shortened only at sentence boundaries."""
+    U = UI_IT
+    wsc = ("WWOX_EXPERIMENT_IN_DEE_SYSTEM", "WWOX_CLINICAL_CASE")
+    order = sorted(c["needs"], key=lambda n: (len(nmap[n]["cards"]), n))
+    obs = [o for n in order for o in nmap[n]["obs"]]
+    w_obs = [o for o in obs if o["scope"] in wsc]
+
+    def is_wwox_obs(o):
+        return o["scope"] == "WWOX_BIOLOGY_OTHER_CONTEXT" or (o["scope"] == "COMPUTATIONAL_RESULT" and re.search(r"knock|wwox", str(o.get("model") or ""), re.I))
+
+    def is_wwox_assert(a):
+        return a["scope"] == "UNCLASSIFIED" and re.search(r"WWOX|WOREE", a.get("system") or "", re.I) and not re.search(r"NOT WWOX", (a.get("system") or "") + " " + (a.get("genotype") or ""), re.I)
+    o_obs = [o for o in obs if o["scope"] not in wsc and not is_wwox_obs(o)]
+    own = [a for a in c["asserts"] if a["scope"] in wsc]
+    other = [a for a in c["asserts"] if a["scope"] not in wsc and a["scope"] != "SAFETY_SIGNAL" and not is_wwox_assert(a)]
+    safety = [a for a in c["asserts"] if a["scope"] == "SAFETY_SIGNAL"]
+
+    def fa(a, tgt=True):
+        # the tested target or tool compound is named first: a result of d-APV on the NMDAR must not read as a result of the card's own intervention
+        head = (clip(a["target"], 110) + ": ") if (tgt and a.get("target") and a["target"] not in a["text"]) else ""
+        return head + a["text"] + (" – " + clip_sentence(a.get("note_full") or a["note"], 220) if a.get("note") else "") + (f" [{a['species']}]" if a.get("species") else "")
+    if own:
+        wwox = " | ".join(fa(a) for a in own[:2])
+    elif w_obs:
+        wwox = U["bf_wwox_ctx"] + ": " + clip_sentence(w_obs[0]["full"] or w_obs[0]["short"], 300)
+    else:
+        wwox = U["bf_wwox_none"]
+    ext_items = [fa(a, False) for a in other[:2]] + [clip_sentence(o["full"] or o["short"], 260) for o in o_obs[:1]]
+    external = " | ".join(ext_items[:2]) if ext_items else U["bf_ext_none"]
+    items = []
+    for a in c["asserts"]:
+        if a["scope"] == "SAFETY_SIGNAL" or a.get("sign") == "harm":
+            items.append((0, fa(a)))
+        elif a.get("sign") == "null":
+            items.append((1 if a["scope"] in wsc else 2, fa(a)))
+    for t in list(c["against"]) + [t for n in order for t in nmap[n]["counter"]]:
+        if not PLACEHOLDER_RE.match(str(t)):
+            items.append((counter_category(str(t)), str(t)))
+    seen, uniq_items = set(), []
+    for cat, t in order_counter(items):
+        k = re.sub(r"\W+", " ", t.lower())[:80]
+        if k not in seen:
+            seen.add(k)
+            uniq_items.append((cat, t))
+    if not uniq_items and c.get("against_note") and not PLACEHOLDER_RE.match(str(c["against_note"])):
+        uniq_items = [(counter_category(str(c["against_note"])), str(c["against_note"]))]
+    counter = [{"cat": cat, "category": COUNTER_CATEGORIES[cat], "text": scrub_ids(clip_sentence(t, 240, 1.5))} for cat, t in uniq_items[:3]]
+    if not counter:
+        counter = [{"cat": None, "category": None, "text": U["bf_counter_none"]}]
+    more = max(0, len(uniq_items) - 3)
+    pm: list[str] = []
+
+    def add(p):
+        if p and str(p) not in pm:
+            pm.append(str(p))
+    for a in own:
+        [add(p) for p in a["pmids"]]
+    for o in w_obs:
+        add(o.get("pmid"))
+    for a in other:
+        [add(p) for p in a["pmids"]]
+    for o in o_obs:
+        add(o.get("pmid"))
+    for a in safety:
+        [add(p) for p in a["pmids"]]
+    titled = {p["id"]: p for p in c["pmids"]}
+    pm = [p for p in pm if p in titled and titled[p].get("title")] + [p for p in pm if p not in titled or not titled[p].get("title")]
+    sources = [{"kind": "PMID", "id": p, "title": (titled.get(p) or {}).get("title"), "journal": (titled.get(p) or {}).get("journal"), "year": (titled.get(p) or {}).get("year")} for p in pm[:BRIEF_SOURCES_MAX]]
+    if not sources:
+        sources = [{"kind": "ChEMBL", "id": x, "title": None, "journal": None, "year": None} for x in c["chembl"][:BRIEF_SOURCES_MAX]]
+    return {"wwox": scrub_ids(clip_sentence(wwox, 520)), "external": scrub_ids(clip_sentence(external, 340)), "counter": counter, "counter_more": more,
+            "missing": scrub_ids(clip_sentence(c["missing"], 280)) if c.get("missing") else U["bf_missing_none"],
+            "next": scrub_ids(clip_sentence(c["next_full"], 600)) if c.get("next_full") else U["bf_next_none"], "sources": sources}
+
+
+def research_update_date(dr: Path, *dates) -> str | None:
+    """Date of the newest research content, kept apart from the needs-register date and from the catalogue build date: the latest of the dates given (needs register, work order, graph) and of the dated cycle records of the module (a file or directory name ending _YYYYMMDD)."""
+    found = [d for d in dates if d]
+    for p in sorted(dr.iterdir()):
+        m = re.search(r"_(20\d\d)(\d\d)(\d\d)(?:\.\w+)?$", p.name)
+        if m:
+            found.append("-".join(m.groups()))
+    return max(found) if found else None
+
+
 def build_curated(dr: Path, ctx: dict) -> dict:
     """Curated, physician-readable layer: threads, goals, candidates, groups. Everything is read from needs, cards, coverage and catalogue files."""
     needs_doc, summary, matrix, prios, stats, allow = ctx["needs_doc"], ctx["summary"], ctx["matrix"], ctx["prios"], ctx["stats"], ctx["allow"]
@@ -1000,7 +1453,7 @@ def build_curated(dr: Path, ctx: dict) -> dict:
             ids = sorted(set(PMID_RE.findall(f'{a.get("locator", "")} {a.get("source", "")}')))
             asserts.append({"id": a.get("id"), "scope": sc or "UNCLASSIFIED", "text": clip(txt, 200), "note": clip(a.get("measured_result_note") or a.get("note") or (pr or {}).get("basis"), 280),
                             "note_full": a.get("measured_result_note") or a.get("note") or (pr or {}).get("basis"), "species": ctxd.get("species"), "system": clip(ctxd.get("disease_id") or "", 120), "genotype": clip(ctxd.get("genotype") or "", 140),
-                            "depth": a.get("reading_depth"), "sign": (pr or {}).get("sign"), "kind": (pr or {}).get("evidence_kind"), "pmids": ids})
+                            "depth": a.get("reading_depth"), "target": clip(a.get("target_id") or "", 140), "sign": (pr or {}).get("sign"), "kind": (pr or {}).get("evidence_kind"), "pmids": ids})
         # per-link statistics from the module's pertinence table
         lk = {}
         depth_of = {x["id"]: x["depth"] for x in asserts}
@@ -1100,6 +1553,13 @@ def build_curated(dr: Path, ctx: dict) -> dict:
     for c in cands:   # two cards can share a display name (for example two PDK-inhibition cards): the id tells them apart
         if dup[c["short"]] > 1:
             c["short"] = f'{c["short"]} [{c["id"].split("_")[0]}]'
+    for c in cands:   # IT6 P13: the one-page synthesis (8 fields) is assembled here, from the card and its needs only
+        c["brief"] = make_brief(c, nmap)
+    wtexts = {cid: json.dumps(v[0], ensure_ascii=False) for cid, v in cards.items()}
+    wtexts.update({n["id"]: json.dumps(n, ensure_ascii=False) for n in needs})
+    eg, wo = load_curated_docs(dr, cands, cneeds, titles, wtexts)
+    for c in cands:   # window state (prevented / recovered after onset / reversible suppression / not measured), shown as chips next to the brief
+        c["brief"]["window"] = wo["card_windows"].get(c["id"])
     # ---- threads
     threads = []
     for fam in dict.fromkeys(n["thread"] for n in cneeds):
@@ -1114,11 +1574,11 @@ def build_curated(dr: Path, ctx: dict) -> dict:
         {"kind": "need", "n": sum(1 for n in cneeds if n["n_wwox_obs"] == 0), "of": n_total, "text": "needs with no WWOX-system observation recorded in the needs file"},
         {"kind": "need", "n": sum(1 for n in cneeds if n["uncertain"]), "of": n_total, "text": "needs whose direction is uncertain, so the sign of a favourable intervention is not known"},
     ]
-    dates = [x for x in (needs_doc.get("built_on"), (stats.get("generated_utc") or "")[:10]) if x]
-    meta = {"data_date": max(dates) if dates else None, "needs_built_on": needs_doc.get("built_on"), "catalogue_generated": stats.get("generated_utc"), "dgidb_export": "2024-06-10", "source": ctx["source"],
+    research_update = research_update_date(dr, needs_doc.get("built_on"), wo["research_update"], eg.get("date"))
+    meta = {"data_date": research_update, "research_update": research_update, "needs_built_on": needs_doc.get("built_on"), "catalogue_generated": stats.get("generated_utc"), "dgidb_export": "2024-06-10", "source": ctx["source"],
             "n_cards": len(cands), "n_needs": n_total, "n_cards_by_goal": dict(Counter(c["goal"] for c in cands)), "n_abstentions": sum(1 for c in cands if c["abstention"])}
     return {"meta": meta, "scopes": [{"code": c, "label": l, "glyph": g} for c, l, g in SCOPES], "goals": GOALS, "tracks": TRACKS, "threads": threads, "needs": cneeds, "cands": cands,
-            "groups": GROUPS, "group_note": GROUP_NOTE, "gaps": gaps}
+            "groups": GROUPS, "group_note": GROUP_NOTE, "gaps": gaps, "evidence_graph": eg, "work_order": wo}
 
 
 def build_footer(source: str, allow: dict, emitted: Counter, srcs: list[dict]) -> dict:
@@ -1833,7 +2293,7 @@ TEMPLATE = """<!doctype html>
 <a class="skip" href="#main">__SKIP__</a>
 <header><div class="in"><h1>__H1__</h1>
 <p class="subline">__SUB__</p></div></header>
-__BANNER__<nav aria-label="__NAVLABEL__"><div class="in"><a href="#overview">__N_OV__</a><a href="#threads">__N_TH__</a><a href="#charts">__N_CH__</a><a href="#navigate">__N_NAV__</a><a href="#candidates">__N_CA__</a><a href="#priorities-cur">__N_PR__</a><a href="#compare">__N_CP__</a><a href="#technical">__N_TD__</a></div></nav>
+__BANNER__<nav aria-label="__NAVLABEL__"><div class="in"><a href="#overview">__N_OV__</a><a href="#threads">__N_TH__</a><a href="#chains">__N_EG__</a><a href="#charts">__N_CH__</a><a href="#navigate">__N_NAV__</a><a href="#candidates">__N_CA__</a><a href="#priorities-cur">__N_PR__</a><a href="#compare">__N_CP__</a><a href="#technical">__N_TD__</a></div></nav>
 <main id="main">
 __CURATED__
 <details id="technical" class="techwrap"><summary class="techsum">__TD_SUM__</summary>
@@ -2001,10 +2461,123 @@ def render_overview(P: dict) -> str:
         f'<div class="warnstrip" role="note"><b>{E(U["warn_h"])}.</b> {E(U["warn_1"])} {E(U["warn_2"])}</div>'
         f'<details class="inl howto"><summary>{E(U["how_sum"])}</summary><div class="twocol"><div class="how"><h3>{E(U["how_h"])}</h3><ol><li>{E(U["how_1"])}</li><li>{E(U["how_2"])}</li><li>{E(U["how_3"])}</li><li>{E(U["how_4"])}</li></ol><p class="mini">{E(U["warn_3"])}</p></div>'
         f'<div class="legendbox"><p class="mini mut">{E(U["legend_note"])}</p><ul class="poslist">{legend_all}</ul></div></div></details>'
-        f'<p class="meta-line"><b>{E(U["data_date"])}:</b> <span data-k="meta.data_date" data-v="{E(str(dd))}">{E(str(dd))}</span> · <b>{E(U["perimeter"])}:</b> {E(U["perimeter_txt"])} · {E(srcnote)}</p>'
+        f'<p class="meta-line"><b>{E(U["data_date"])}:</b> <span data-k="meta.data_date" data-v="{E(str(dd))}">{E(str(dd))}</span> · <b>{E(U["bf_needs_rec"])}</b> <span data-k="meta.needs_built_on" data-v="{E(str(meta["needs_built_on"]))}">{E(str(meta["needs_built_on"]))}</span> · <b>{E(U["bf_cat_build"])}</b> <span data-k="meta.catalogue_generated" data-v="{E(str(meta["catalogue_generated"]))}">{E(str(meta["catalogue_generated"]))}</span> · <b>{E(U["perimeter"])}:</b> {E(U["perimeter_txt"])} · {E(srcnote)}</p>'
         f'<h3 id="threads">{E(U["th_h"])}</h3><p class="mini mut">{E(U["th_note"])}</p><div class="threads">' + "".join(cards) + '</div>'
         f'<h3>{E(U["goals_h"])}</h3><p class="mini mut">{E(U["goals_note"])} {E(U["goal_cross"].format(total=n_links, cross=n_cross))}</p><div class="goals">' + "".join(panels) + '</div>'
         f'<h3>{E(U["facts_h"])}</h3><div class="tiles">' + tiles + f'</div><p class="mini mut">{E(U["unit_note"])}</p></section>')
+
+
+# ------------------------------------------------------------------ IT6 P13: server-rendered evidence graph (inline SVG) and work order
+EG_COLW, EG_PITCH, EG_PADX, EG_HEADH, EG_LINEH, EG_PADY, EG_GAP, EG_CHARS = 172, 196, 8, 30, 15, 6, 14, 24
+
+
+def _wrap(text: str, width: int) -> list[str]:
+    return textwrap.wrap(str(text), width=width, break_long_words=True, break_on_hyphens=False) or [""]
+
+
+def layout_chain(ch: dict) -> dict:
+    """Pure geometry of one chain: boxes per node (x, y, w, h, text lines), the width and the height. Deterministic; columns are vertically centred on the tallest one."""
+    U = UI_IT
+    cols: dict[str, list[dict]] = {c: [] for c in GRAPH_COLUMNS}
+    for n in ch["nodes"]:
+        lines = _wrap(n["label"], EG_CHARS)
+        tag = U.get("eg_scope_" + n["scope"], "")
+        if n["unresolved"]:
+            tag = (U["eg_unres"] + (" · " + tag if tag else ""))
+        tag_lines = _wrap(tag, 28) if tag else []
+        h = EG_PADY * 2 + len(lines) * EG_LINEH + len(tag_lines) * (EG_LINEH - 1)
+        cols[n["col"]].append({"n": n, "lines": lines, "tag": tag_lines, "h": h})
+    heights = {c: sum(b["h"] for b in bs) + EG_GAP * max(0, len(bs) - 1) for c, bs in cols.items()}
+    top = max(heights.values())
+    boxes: dict[str, dict] = {}
+    for ci, c in enumerate(GRAPH_COLUMNS):
+        y = EG_HEADH + 8 + (top - heights[c]) / 2
+        for b in cols[c]:
+            boxes[b["n"]["id"]] = {"x": EG_PADX + ci * EG_PITCH, "y": round(y, 1), "w": EG_COLW, "h": b["h"], "lines": b["lines"], "tag": b["tag"], "n": b["n"]}
+            y += b["h"] + EG_GAP
+    return {"boxes": boxes, "width": EG_PADX * 2 + (len(GRAPH_COLUMNS) - 1) * EG_PITCH + EG_COLW, "height": int(EG_HEADH + 8 + top + 12)}
+
+
+def render_chain_svg(ch: dict) -> str:
+    U = UI_IT
+    lay = layout_chain(ch)
+    W, H, boxes = lay["width"], lay["height"], lay["boxes"]
+    cid = E(ch["id"])
+    parts = [f'<svg class="eg" xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-labelledby="eg-t-{cid} eg-d-{cid}">'
+             f'<title id="eg-t-{cid}">{E(ch["title"])}</title><title id="eg-d-{cid}">{E(U["eg_svg_desc"].format(n=len(ch["nodes"]), m=len(ch["edges"])))}</title>'
+             f'<defs><marker id="eg-ar-{cid}" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path class="eg-ar" d="M0,0 L8,4 L0,8 z"/></marker></defs>']
+    for ci, c in enumerate(GRAPH_COLUMNS):
+        parts.append(f'<text class="eg-ch" x="{EG_PADX + ci * EG_PITCH}" y="{EG_HEADH - 10}">{E(c)}</text>')
+    for e in ch["edges"]:
+        a, b = boxes[e["from"]], boxes[e["to"]]
+        x1, y1, x2, y2 = a["x"] + a["w"], a["y"] + a["h"] / 2, b["x"] - 2, b["y"] + b["h"] / 2
+        d = (x2 - x1) / 2
+        code = EDGE_CODE[e["type"]]
+        parts.append(f'<g class="eg-e" data-edge-type="{E(e["type"])}"><path class="eg-line e-{code}" d="M{x1:.1f},{y1:.1f} C{x1 + d:.1f},{y1:.1f} {x2 - d:.1f},{y2:.1f} {x2:.1f},{y2:.1f}" marker-end="url(#eg-ar-{cid})"/>'
+                     f'<g class="eg-b"><circle cx="{(x1 + x2) / 2:.1f}" cy="{(y1 + y2) / 2:.1f}" r="8"/><text x="{(x1 + x2) / 2:.1f}" y="{(y1 + y2) / 2 + 3.2:.1f}">{code}</text></g></g>')
+    for nid, bx in boxes.items():
+        n = bx["n"]
+        txt = "".join(f'<tspan x="{bx["x"] + 6}" y="{bx["y"] + EG_PADY + EG_LINEH * (i + 1) - 3}">{E(t)}</tspan>' for i, t in enumerate(bx["lines"]))
+        ty = bx["y"] + EG_PADY + EG_LINEH * len(bx["lines"])
+        txt += "".join(f'<tspan class="tag" x="{bx["x"] + 6}" y="{ty + (EG_LINEH - 1) * (i + 1) - 2}">{E(t)}</tspan>' for i, t in enumerate(bx["tag"]))
+        cls = f'eg-n sc-{E(n["scope"])}' + (" unres" if n["unresolved"] else "")
+        body = f'<g class="{cls}" data-node="{E(nid)}" data-col="{E(n["col"])}"><rect x="{bx["x"]}" y="{bx["y"]}" width="{bx["w"]}" height="{bx["h"]}" rx="5"/><text>{txt}</text></g>'
+        if n["cards"]:
+            body = f'<a href="#cand-{E(n["cards"][0])}" data-open="{E(n["cards"][0])}"><title>{E(U["eg_open_card"])}: {E(n["cards"][0])}</title>{body}</a>'
+        parts.append(body)
+    parts.append("</svg>")
+    return "".join(parts)
+
+
+def render_evidence_graph(P: dict) -> str:
+    """Section 'Catene': five chains as inline SVG (no JavaScript needed), a legend, and a table of the edges as the text alternative. The figure scrolls inside its own container."""
+    U = UI_IT
+    eg = P["cur"]["evidence_graph"]
+    sw = "".join(f'<li><svg class="eg-sw" width="46" height="12" viewBox="0 0 46 12" aria-hidden="true" focusable="false"><path class="eg-line e-{EDGE_CODE[t]}" d="M2,6 L44,6"/></svg> <b>{EDGE_CODE[t]}</b> <span class="mini">{E(U["eg_leg_" + EDGE_CODE[t]])}</span></li>' for t in EDGE_TYPES)
+    out = [f'<section id="chains" aria-labelledby="h-chains"><h2 id="h-chains">{E(U["eg_h"])}</h2><p class="lead">{E(U["eg_lead"])}</p>'
+           f'<p class="mini mut">{E(U["eg_note_en"])} {E(U["eg_no_interactome"])} {E(U["eg_scroll"])} {E(U["eg_date"])} <span data-k="cur.graph_date" data-v="{E(str(eg["date"]))}">{E(str(eg["date"]))}</span>.</p>'
+           f'<div class="eg-legend" role="group" aria-label="{E(U["eg_legend_h"])}"><b>{E(U["eg_legend_h"])}.</b> {E(U["eg_leg_line"])}:<ul class="eg-leg">{sw}</ul>'
+           f'<p class="mini">{E(U["eg_leg_nodes"])}: ' + "; ".join(E(U["eg_scope_" + s]) for s in ("wwox", "wwox_other", "non_wwox", "computational", "proposed")) + f'. {E(U["eg_unres"])}: <span class="grp c1">{E(U["eg_unres"])}</span></p></div>']
+    for ch in eg["chains"]:
+        nm = {n["id"]: n for n in ch["nodes"]}
+        rows = "".join(
+            f'<tr><td>{E(nm[e["from"]]["label"])}<div class="mut">{E(nm[e["from"]]["col"])}</div></td><td>{E(nm[e["to"]]["label"])}<div class="mut">{E(nm[e["to"]]["col"])}</div></td>'
+            f'<td><b>{E(e["type"])}</b> <span class="mut">({EDGE_CODE[e["type"]]})</span></td><td>{E(e["src"]["label"])}' + (f' <span class="mut">{E(e["src"]["title"])}</span>' if e["src"]["title"] else "") + f'</td><td>{E(e["note"])}</td></tr>'
+            for e in ch["edges"])
+        out.append(
+            f'<article class="chain" id="chain-{E(ch["id"])}" data-chain="{E(ch["id"])}" data-state="{E(ch["state"])}"><h3>{E(ch["title"])} <span class="grp {"c1" if ch["state"] == "non risolto" else "p1"}">{E(U["eg_state_" + ch["state"].replace(" ", "_")])}</span></h3>'
+            f'<p class="mini">{E(ch["question"])}</p><p class="mini eg-cue">{E(U["eg_cue"])}</p><div class="eg-fig" tabindex="0" role="group" aria-label="{E(ch["title"])}">{render_chain_svg(ch)}</div>'
+            f'<details class="inl"><summary>{E(U["eg_table_sum"])} ({len(ch["edges"])})</summary><table class="tbl"><thead><tr><th>{E(U["eg_th_from"])}</th><th>{E(U["eg_th_to"])}</th><th>{E(U["eg_th_type"])}</th><th>{E(U["eg_th_src"])}</th><th>{E(U["eg_th_note"])}</th></tr></thead><tbody>{rows}</tbody></table></details></article>')
+    out.append("</section>")
+    return "".join(out)
+
+
+def render_work_order(P: dict) -> str:
+    """Work order per need, server-rendered inside the priorities section: the reason for the next study, the question, and (one click further) the data, the effect and the feasibility actually known."""
+    U = UI_IT
+    cur = P["cur"]
+    wo = cur["work_order"]
+    cat = str(cur["meta"].get("catalogue_generated"))
+    kcls = {WO_KINDS[0]: "v", WO_KINDS[1]: "c", WO_KINDS[2]: "p"}
+    nm = {n["id"]: n for n in cur["needs"]}
+    items = []
+    for e in wo["entries"]:
+        n = nm[e["need"]]
+        pos = "".join(pos_chip(g) for g in e["positions"]) or f'<span class="mut">{E(U["wo_no_pos"])}</span>'
+        ws = "".join(f'<li><span class="chip ws ws-{E(x["state"])}" title="{E(x["note"])}">{E(U["ws_" + x["state"]])}</span> <span class="mini">{E(x["note"])}</span></li>' for x in e["window_state"])
+        win = f'<div class="wo-win"><b class="mini">{E(U["wo_window"])}:</b><ul class="mini">{ws}</ul></div>' if ws else ""
+        upd = (f'<dt>{E(U["wo_upd"])}</dt><dd>{E(", ".join(e["updated_by"]))}</dd>') if e["updated_by"] else ""
+        cards = ", ".join(E(c) for c in e["cards"])
+        items.append(
+            f'<article class="wo-item" id="wo-{E(e["need"])}" data-need="{E(e["need"])}" data-kind="{E(e["kind"])}"><h4>{E(NEED_IT.get(e["need"], n["short"]))} <span class="mut">{E(e["need"])}</span></h4>'
+            f'<div class="wo-meta"><span class="chip wo-k wo-k-{kcls[e["kind"]]}" title="{E(U["wo_kind"])}">{E(U["wo_kind"])}: <b>{E(e["kind"])}</b></span> <span class="mini mut">{E(U["wo_pos"])}:</span> {pos}</div>'
+            f'<p class="wo-sum"><b>{E(U["wo_brief"])}.</b> {E(e["summary_it"])}</p><p class="wo-q"><b>{E(U["wo_q"])}.</b> {E(e["question"])}</p>{win}'
+            f'<details class="inl"><summary>{E(U["wo_more"])}</summary><dl class="wo-dl"><dt>{E(U["wo_data"])}</dt><dd>{E(e["data"])}</dd><dt>{E(U["wo_change"])}</dt><dd>{E(e["would_change"])}</dd>'
+            f'<dt>{E(U["wo_feas"])}</dt><dd class="wo-feas"><b>{E(e["feasibility_it"])}</b><br>{E(e["feasibility"])}</dd><dt>{E(U["wo_date"])}</dt><dd>{E(e["date"])}</dd>{upd}<dt>{E(U["wo_cards"])}</dt><dd>{cards}</dd></dl>'
+            f'<p class="mini mut">{E(U["wo_text_en"])}</p></details></article>')
+    return (f'<div id="work-order" class="wo-wrap"><h3>{E(U["wo_h"])}</h3><p class="note">{E(U["wo_note"])}</p>'
+            f'<p class="meta-line"><b>{E(U["wo_update"])}:</b> <span data-k="cur.work_order_date" data-v="{E(wo["research_update"])}">{E(wo["research_update"])}</span> · <b>{E(U["wo_catalogue"])}:</b> <span data-k="cur.catalogue_generated" data-v="{E(cat)}">{E(cat)}</span> <span class="mini mut">({E(U["wo_dates_note"])})</span></p>'
+            + "".join(items) + '</div>')
 
 
 def NM_GOAL(needs: list, nid: str):
@@ -2171,10 +2744,10 @@ def render(P: dict, dr: Path = DEFAULT_DR) -> str:
     U = UI_IT
     page = TEMPLATE
     cur_html = fill_tokens(read_asset(dr, "curated.html"))
-    cur_html = cur_html.replace("__OVERVIEW__", render_overview(P)).replace("__CHARTS__", render_charts(P))
+    cur_html = cur_html.replace("__OVERVIEW__", render_overview(P)).replace("__GRAPH__", render_evidence_graph(P)).replace("__WORKORDER__", render_work_order(P)).replace("__CHARTS__", render_charts(P))
     page = page.replace("__CSS__", CSS + read_asset(dr, "curated.css")).replace("__JS__", JS).replace("__CJS__", read_asset(dr, "curated.js"))
     page = page.replace("__CURATED__", cur_html).replace("__FOOTER__", render_footer(P))
-    for k, key in (("TITLE", "page_title"), ("SKIP", "skip"), ("H1", "h1"), ("SUB", "sub"), ("NAVLABEL", "nav_label"), ("N_OV", "nav_overview"), ("N_TH", "nav_threads"), ("N_CH", "nav_charts"), ("N_NAV", "nav_navigate"),
+    for k, key in (("TITLE", "page_title"), ("SKIP", "skip"), ("H1", "h1"), ("SUB", "sub"), ("NAVLABEL", "nav_label"), ("N_OV", "nav_overview"), ("N_TH", "nav_threads"), ("N_EG", "nav_chains"), ("N_CH", "nav_charts"), ("N_NAV", "nav_navigate"),
                    ("N_CA", "nav_cards"), ("N_PR", "nav_priority"), ("N_CP", "nav_compare"), ("N_TD", "nav_tech"), ("TD_SUM", "td_sum"), ("TD_NOTE", "td_note")):
         page = page.replace(f"__{k}__", E(U[key]))
     page = page.replace("__BANNER__", render_banner(P))
@@ -2337,13 +2910,20 @@ var all=document.body.getElementsByTagName('*');for(var i=0;i<all.length&&off.le
 return {legendBottom:(function(){var e=document.querySelector('.legendrow');return e?Math.round(e.getBoundingClientRect().bottom+window.scrollY):null})(),innerWidth:window.innerWidth,scrollWidth:de.scrollWidth,bodyScrollWidth:document.body.scrollWidth,clientWidth:de.clientWidth,visualViewportWidth:window.visualViewport?Math.round(window.visualViewport.width):null,ready:document.body.getAttribute('data-cur-ready'),offenders:off}})()"""
 
 
+def brief_chars(c: dict) -> int:
+    b = c["brief"]
+    return sum(len(str(b[k])) for k in ("wwox", "external", "counter", "missing", "next")) + sum(len(str(s.get("title") or "")) + 40 for s in b["sources"]) + len(c["name"])
+
+
 def scenarios(P: dict) -> list[tuple[str, str]]:
     cur = P["cur"]
     ids = [c["id"] for c in cur["cands"]]
     th = next((t["id"] for t in cur["threads"] if t["id"] == "Network excitability"), cur["threads"][0]["id"])
     a, b = (ids + ids)[:2]
     from urllib.parse import quote
-    return [("first_screen", ""), ("filtered_thread", "#c=thread:" + quote(th)), ("comparison", f"#compare={a},{b}"), ("export_card", "#export=" + a), ("technical_open", "#tech-versions")]
+    longest = max(cur["cands"], key=lambda c: (brief_chars(c), c["id"]))["id"]   # the card whose one-page synthesis is the longest: the worst case for the page limit
+    return [("first_screen", ""), ("filtered_thread", "#c=thread:" + quote(th)), ("comparison", f"#compare={a},{b}"), ("export_card", "#export=" + a), ("technical_open", "#tech-versions"),
+            ("brief", "#brief=" + longest), ("evidence_graph", "#chains"), ("work_order", "#work-order")]
 
 
 def measure_viewports(html_path: Path, shots: Path | None = None, widths: list | None = None) -> list[dict]:
@@ -2373,10 +2953,10 @@ def measure_viewports(html_path: Path, shots: Path | None = None, widths: list |
                     m.update({"requested": w, "scenario": name, "mobile": mobile, "overflow": m["scrollWidth"] > w or m["innerWidth"] > w})
                     if shots and (mobile or w > 390):
                         shots.mkdir(parents=True, exist_ok=True)
-                        anchor = {"comparison": "#compare", "filtered_thread": "#navigate", "technical_open": "#tech-versions", "export_card": "body"}.get(name, "body")
+                        anchor = {"comparison": "#compare", "filtered_thread": "#navigate", "technical_open": "#tech-versions", "export_card": "body", "evidence_graph": "#chains", "work_order": "#work-order"}.get(name, "body")
                         y = cdp.evaluate("(function(){var e=document.querySelector(%s);return e?Math.max(0,Math.round(e.getBoundingClientRect().top+scrollY)-8):0})()" % json.dumps(anchor))
                         lm = cdp.call("Page.getLayoutMetrics")["cssContentSize"]
-                        tall = name in ("export_card", "comparison") and w <= 390
+                        tall = name in ("export_card", "comparison", "brief", "evidence_graph") and w <= 390
                         clip = {"x": 0, "y": y, "width": w, "height": min(int(lm["height"]) - y, 3000 if tall else h), "scale": 1}
                         shot = cdp.call("Page.captureScreenshot", format="png", clip=clip, captureBeyondViewport=True)
                         fp = shots / f"{name}_{m['innerWidth']}px.png"
@@ -2386,7 +2966,8 @@ def measure_viewports(html_path: Path, shots: Path | None = None, widths: list |
             # print layout: A4 width (794 css px), print media emulated; the page must not overflow and the export view must paginate
             cdp.call("Emulation.setDeviceMetricsOverride", width=794, height=1123, deviceScaleFactor=1, mobile=False)
             cdp.call("Emulation.setEmulatedMedia", media="print")
-            for name, frag in (("print_first_screen", ""), ("print_export_card", scenarios(P)[3][1])):
+            sc_by = dict(scenarios(P))
+            for name, frag in (("print_first_screen", ""), ("print_export_card", sc_by["export_card"]), ("print_brief", sc_by["brief"]), ("print_brief_all", "#brief=" + ",".join(c["id"] for c in P["cur"]["cands"]))):
                 cdp.call("Page.navigate", url="about:blank")
                 cdp.events.clear()
                 cdp.call("Page.navigate", url=f"file://{html_path}{frag}")
@@ -2396,8 +2977,8 @@ def measure_viewports(html_path: Path, shots: Path | None = None, widths: list |
                 pdf = cdp.call("Page.printToPDF", paperWidth=8.27, paperHeight=11.69, printBackground=True, preferCSSPageSize=True)
                 raw = base64.b64decode(pdf["data"])
                 m.update({"requested": 794, "scenario": name, "mobile": False, "overflow": m["scrollWidth"] > 794 or m["innerWidth"] > 794, "pdf_pages": len(re.findall(rb"/Type\s*/Page[^s]", raw)), "pdf_bytes": len(raw)})
-                if shots and name == "print_export_card":
-                    (shots / "export_card_print.pdf").write_bytes(raw)
+                if shots and name in ("print_export_card", "print_brief"):
+                    (shots / f"{name[6:]}_print.pdf").write_bytes(raw)
                 out.append(m)
             cdp.call("Emulation.setEmulatedMedia", media="")
         finally:

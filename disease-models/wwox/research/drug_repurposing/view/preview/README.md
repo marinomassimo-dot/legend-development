@@ -38,3 +38,21 @@ Graphic 4 (target to candidate list) is empty in the shareable build by design (
 outside the allowlist) and says so; see it in the full local build.
 
 Regenerate with the commands in `../README.md`, then capture again.
+
+## IT6 P13 additions (one-page synthesis, evidence graph, work order)
+
+Measured with `python3 -B framework/scripts/repurposing_view.py viewports --shots DIR` on the shareable build; scenarios `brief`, `evidence_graph` and `work_order` were added to the five earlier ones and run at every viewport.
+
+| Viewport | Mobile emulation | innerWidth / scrollWidth (each of the three new scenarios) |
+|---|---|---|
+| 360 | yes / no | 360 / 360 and 360 / 345 (scrollbar) |
+| 390 | yes / no | 390 / 390 and 390 / 375 |
+| 768 | no | 768 / 753 |
+| 1280 | no | 1280 / 1265 |
+| 794 (A4 print media) | no | `print_brief` (the longest synthesis): 1 PDF page; `print_brief_all` (every card): 36 pages for 36 cards, so each prints on exactly one A4 page |
+
+| File | What to look at |
+|---|---|
+| `10_it6p13_brief_390px.png`, `_1280px`, `10_it6p13_brief_print_A4.pdf` | The `#brief=` view of the longest synthesis: eight numbered fields, data date and catalogue build as two separate dates, pointer to the full dossier |
+| `10_it6p13_evidence_graph_360px.png`, `_1280px` | The five chains as inline SVG; at 360 px the figure scrolls inside its own container, the page does not |
+| `10_it6p13_work_order_390px.png`, `_1280px` | Work order per need inside the priorities section, with the research-update date apart from the catalogue date |

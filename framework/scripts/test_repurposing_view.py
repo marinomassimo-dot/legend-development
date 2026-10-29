@@ -986,7 +986,7 @@ class CuratedBrowser(Browser):
         self.assertIn("https://pubmed.ncbi.nlm.nih.gov/32000863/", area)
         self.assertIn("PMID 32000863", area)
         self.assertIn("CHEMBL696", area)
-        self.assertIn("Data dei dati:", area)
+        self.assertIn("Dati aggiornati al:", area)
         self.assertIn("Perimetro:", area)
         self.assertNotIn("deepdive_manifests", area)
         self.assertNotRegex(area, r'href="\.\./')
@@ -1040,10 +1040,10 @@ class ItalianFix(unittest.TestCase):
     def test_goal_tiles_count_every_position_link(self):
         cur = self.P["cur"]
         n_links = sum(len(c["links"]) for c in cur["cands"])
-        self.assertEqual(n_links, 49)
+        self.assertEqual(n_links, 51)
         goals = re.findall(r'<div class="goal (?:deep|partial)".*?<span class="mini mut">\((\d+)\)</span></div></div>', self.page, re.S)
         self.assertEqual(sum(map(int, goals)), n_links)
-        self.assertIn("I 49 legami candidato-bisogno sono contati tutti", self.page)
+        self.assertIn("I 51 legami candidato-bisogno sono contati tutti", self.page)
 
     def test_no_raw_status_code_in_the_header_and_italian_labels(self):
         head = self.page[:self.page.index('<nav ')]
@@ -1210,8 +1210,407 @@ class RealViewports(unittest.TestCase):
             self.assertLessEqual(m["scrollWidth"], m["requested"], (m["scenario"], m["mobile"], m["offenders"]))
             if not m["mobile"]:
                 self.assertEqual(m["innerWidth"], m["requested"])
+            if m["scenario"] in ("brief", "evidence_graph", "work_order"):
+                self.assertEqual(m["ready"], "1", m)      # IT6 P13 scenarios are exercised at every viewport
             if m["scenario"] == "first_screen" and m["mobile"]:
                 self.assertLess(m["legendBottom"], dict((w, h) for w, h, _ in rv.VIEWPORTS)[m["requested"]], "the F/C/P legend must sit above the fold")
+        names = {m["scenario"] for m in res}
+        self.assertTrue({"brief", "evidence_graph", "work_order", "print_brief", "print_brief_all"} <= names, names)
+        pb = {m["scenario"]: m for m in res if m["scenario"].startswith("print_brief")}
+        self.assertEqual(pb["print_brief"]["pdf_pages"], 1, "the longest one-page synthesis must print on ONE A4 page")
+        self.assertEqual(pb["print_brief_all"]["pdf_pages"], len(rv.build_payload(DR, "shareable")["cur"]["cands"]), "every card's synthesis prints on exactly one A4 page")
+
+
+# ---------------------------------------------------------------------------- IT6 P13: one-page synthesis, evidence graph, work order
+@unittest.skipUnless(HAVE_DATA, "module data absent")
+class It6P13Data(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.P = rv.build_payload(DR)
+        cls.cur = cls.P["cur"]
+        cls.page = rv.build(DR)
+        cls.titles = rv.load_titles(DR)
+        cls.eg_doc = json.loads((DR / rv.GRAPH_NAME).read_text())
+        cls.wo_doc = json.loads((DR / rv.WORK_ORDER_NAME).read_text())
+        cls.cards = [c["id"] for c in cls.cur["cands"]]
+        cls.needs = [n["id"] for n in cls.cur["needs"]]
+        cls.groups = {n: {l["group"] for c in cls.cur["cands"] for k, l in c["links"].items() if k == n} for n in cls.needs}
+
+    @staticmethod
+    def static_html(page):
+        return re.sub(r"<script\b.*?</script>", "", page, flags=re.S)
+
+    # ---- (1) brief
+    def test_brief_has_eight_fields_and_at_most_five_titled_sources(self):
+        for c in self.cur["cands"]:
+            b = c["brief"]
+            for k in ("wwox", "external", "counter", "missing", "next"):
+                self.assertTrue(str(b[k]).strip(), (c["id"], k))
+            self.assertLessEqual(len(b["sources"]), rv.BRIEF_SOURCES_MAX)
+            titled = [x for x in b["sources"] if x["kind"] == "PMID"]
+            for x in titled:
+                self.assertIn(x["id"], {p["id"] for p in c["pmids"]})
+                self.assertEqual(x["title"], (self.titles.get(x["id"]) or {}).get("title"), (c["id"], x["id"]))
+            self.assertLessEqual(rv.brief_chars(c), 4800, c["id"])     # the budget that keeps one card on one A4 page (measured in the print test)
+        js = (DR / "view/assets/curated.js").read_text()
+        self.assertIn("#brief=", js)
+        self.assertIn("data-brief", js)
+        for i in range(1, 9):
+            self.assertTrue(rv.UI_IT[f"bf_f{i}"])
+            self.assertIn(f"T.bf_f{i}", js)
+        self.assertIn("x-dl", js)     # standalone download, like the dossier
+        self.assertEqual(rv.UI_IT["cd_brief"], "Sintesi (1 pagina)")
+
+    def test_brief_data_date_and_catalogue_build_are_separate_fields(self):
+        js = (DR / "view/assets/curated.js").read_text()
+        self.assertIn('data-date="data"', js)
+        self.assertIn('data-date="catalogo"', js)
+        m = self.cur["meta"]
+        self.assertNotEqual(m["data_date"], m["catalogue_generated"])      # a date and a timestamp: two different facts, never merged
+
+    # ---- (2) graph
+    def test_graph_validates_and_names_the_iteration6_chains(self):
+        errs = rv.validate_evidence_graph(self.eg_doc, self.cards, self.needs, self.titles, DR)
+        self.assertEqual(errs, [])
+        self.assertEqual([c["id"] for c in self.eg_doc["chains"]], ["glia", "nmdar-gate", "missense-route", "rescue-window", "isr-sign"])
+        used = {x for ch in self.eg_doc["chains"] for n in ch["nodes"] for x in n.get("cards", [])}
+        self.assertTrue({"J01_glial_reactivity_modulation", "F01_glutamate_receptor_node", "P11_magnesium_nmdar_gate", "A02_proteasome_inhibitor_class"} <= used)
+        isr = next(c for c in self.eg_doc["chains"] if c["id"] == "isr-sign")
+        self.assertEqual(isr["state"], "non risolto")
+        self.assertTrue(any(n.get("unresolved") for n in isr["nodes"]))
+        self.assertTrue(any(n["col"] == "esperimento" and "phospho" in n["label"] for n in isr["nodes"]))
+
+    def mutated_graph(self, fn):
+        d = json.loads(json.dumps(self.eg_doc))
+        fn(d)
+        return rv.validate_evidence_graph(d, self.cards, self.needs, self.titles, DR)
+
+    def test_graph_mutations_fail(self):
+        first = lambda d: d["chains"][0]
+        self.assertTrue(self.mutated_graph(lambda d: first(d)["nodes"][3].__setitem__("needs", ["NEED-DOES-NOT-EXIST"])))         # dangling need id
+        self.assertTrue(self.mutated_graph(lambda d: first(d)["nodes"][6].__setitem__("cards", ["ZZ99_no_card"])))                # dangling card id
+        self.assertTrue(self.mutated_graph(lambda d: first(d)["nodes"][0].__setitem__("pmids", ["99999999"])))                    # unknown PMID
+        self.assertTrue(self.mutated_graph(lambda d: first(d)["edges"][0].__setitem__("source", "PMID:99999999")))                # unknown source PMID
+        self.assertTrue(self.mutated_graph(lambda d: first(d)["edges"][0].__setitem__("to", "nope")))                             # dangling node
+        self.assertTrue(self.mutated_graph(lambda d: first(d)["edges"][0].pop("type")))                                           # untyped edge
+        self.assertTrue(self.mutated_graph(lambda d: first(d)["edges"][0].__setitem__("type", "causa")))                         # type outside the closed list
+        self.assertTrue(self.mutated_graph(lambda d: first(d)["edges"][0].pop("source")))                                         # edge without a source id
+        self.assertTrue(self.mutated_graph(lambda d: first(d)["edges"][0].__setitem__("source", "DOC:UNDECLARED")))
+        self.assertTrue(self.mutated_graph(lambda d: first(d)["edges"].pop()))                                                    # chain no longer leads to an experiment
+        self.assertTrue(self.mutated_graph(lambda d: first(d)["edges"][0].update({"from": "n1", "to": "o1"})))                    # backwards edge
+        self.assertTrue(self.mutated_graph(lambda d: d["chains"][0]["nodes"].append({"id": "orph", "col": "evidenza", "scope": "none", "label": "orphan"})))
+        self.assertTrue(self.mutated_graph(lambda d: d.__setitem__("columns", list(reversed(d["columns"])))))
+
+    def test_interactome_is_never_a_causal_edge(self):
+        def add(d, typ):
+            ch = d["chains"][0]
+            ch["nodes"].append({"id": "ia", "col": "osservazione WWOX", "scope": "wwox", "label": "Interactome: list of interactors of the protein", "interactome": True})
+            ch["edges"].append({"from": "ia", "to": "n1", "type": typ, "source": "DOC:P10"})
+        self.assertTrue(any("interactome" in e for e in self.mutated_graph(lambda d: add(d, "inferenza"))))
+        self.assertTrue(any("interactome" in e for e in self.mutated_graph(lambda d: add(d, "risultato sperimentale"))))
+        self.assertEqual(self.mutated_graph(lambda d: add(d, "associazione")), [])      # an association is the most it may be
+        self.assertFalse(any(re.search(r"interactom|interactor", n["label"], re.I) for ch in self.eg_doc["chains"] for n in ch["nodes"]))
+
+    def test_graph_is_server_rendered_with_three_edge_styles_legend_and_table(self):
+        h = self.static_html(self.page)
+        self.assertEqual(h.count('<svg class="eg"'), len(self.eg_doc["chains"]))
+        eg = self.cur["evidence_graph"]
+        for ch in eg["chains"]:
+            for n in ch["nodes"]:       # no JS-only content: every node label and the table of edges are in the markup with scripts removed
+                self.assertIn(html_escape(n["label"]), h, n["id"])
+        n_edges = sum(len(c["edges"]) for c in eg["chains"])
+        self.assertEqual(len(re.findall(r'<g class="eg-e" data-edge-type=', h)), n_edges)
+        for code, typ in (("R", "risultato sperimentale"), ("I", "inferenza"), ("A", "associazione")):
+            self.assertIn(f'class="eg-line e-{code}"', h)
+            self.assertEqual(len(re.findall(rf'<g class="eg-e" data-edge-type="{typ}"', h)), sum(1 for c in eg["chains"] for e in c["edges"] if e["type"] == typ))
+        css = (DR / "view/assets/curated.css").read_text()
+        self.assertRegex(css, r"\.eg-line\.e-I\{[^}]*stroke-dasharray:8 5")
+        self.assertRegex(css, r"\.eg-line\.e-A\{[^}]*stroke-dasharray:1\.5 5")
+        self.assertNotRegex(re.search(r"\.eg-line\.e-R\{[^}]*\}", css).group(0), "dasharray")
+        for ch in eg["chains"]:      # table rows == edges (the printed count in each summary equals the data)
+            m = re.search(rf'id="chain-{ch["id"]}".*?<summary>[^<]*\((\d+)\)</summary>(.*?)</article>', h, re.S)
+            self.assertEqual(int(m.group(1)), len(ch["edges"]))
+            self.assertEqual(m.group(2).count("<tr>") - 1, len(ch["edges"]))
+        self.assertIn('id="chains"', h)
+        self.assertIn("scorre in orizzontale al suo interno", h)
+        self.assertNotIn("<script", re.search(r'<section id="chains".*?</section>', h, re.S).group(0))
+
+    # ---- (3) work order
+    def test_work_order_follows_needs_order_and_covers_the_priority_needs(self):
+        ids = [e["need"] for e in self.wo_doc["entries"]]
+        self.assertEqual(ids, sorted(ids, key=self.needs.index))      # the order is the order of needs.json
+        review = (DR / "priority_review_it6_20261029.md").read_text()
+        sec = review[review.index("## 6. Work order"):review.index("## 7.")]
+        eleven = {"NEED-WWOX-GENE-ADDITION", "NEED-SEIZURE-CONTROL-SYMPTOMATIC", "NEED-T-TYPE-CALCIUM", "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR", "NEED-LACTATE-LDH", "NEED-PDH-PYRUVATE-AXIS",
+                  "NEED-ISR-ATTENUATION", "NEED-MYC-PROGENITOR-PROLIFERATION", "NEED-SYSTEMIC-GLYCAEMIA-GROWTH", "NEED-MYELINATION", "NEED-WWOX-MISSENSE-PROTEIN-RESCUE"}
+        self.assertEqual(len([l for l in sec.splitlines() if l.startswith("| ")]), 12)       # header and the eleven rows of the review's table
+        self.assertEqual(set(ids), eleven | {"NEED-NEUROINFLAMMATION-GLIA"})
+        self.assertEqual(self.mutated_wo(lambda d: None), [])
+        by = {e["need"]: e for e in self.wo_doc["entries"]}
+        for nid, upd in (("NEED-NEUROINFLAMMATION-GLIA", "P10"), ("NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR", "P11"), ("NEED-ISR-ATTENUATION", "P4"), ("NEED-WWOX-MISSENSE-PROTEIN-RESCUE", "P6"), ("NEED-WWOX-GENE-ADDITION", "P7")):
+            self.assertIn(upd, by[nid]["updated_by"], nid)
+        self.assertEqual(self.wo_doc["research_update"], "2026-10-29")
+
+    def mutated_wo(self, fn):
+        d = json.loads(json.dumps(self.wo_doc))
+        fn(d)
+        return rv.validate_work_order(d, self.needs, self.groups, self.cards, DR)
+
+    def test_kind_agrees_with_the_fcp_positions_of_the_need(self):
+        for e in self.wo_doc["entries"]:
+            self.assertIn(e["kind"], rv.allowed_kinds(self.groups[e["need"]]), e["need"])
+        # the rule itself
+        self.assertEqual(rv.allowed_kinds(set()), {"risolvere una premessa"})
+        self.assertEqual(rv.allowed_kinds({"F2"}), {"verificare un'ipotesi"})
+        self.assertEqual(rv.allowed_kinds({"F3", "C2", "P1"}), set(rv.WO_KINDS))
+        # mutations: a kind the positions do not support, a dangling need, a swapped order, a score field, an empty feasibility, a bad date
+        e0 = next(i for i, e in enumerate(self.wo_doc["entries"]) if e["need"] == "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR")
+        self.assertTrue(self.mutated_wo(lambda d: d["entries"][e0].__setitem__("kind", "chiarire una controevidenza")))      # F2 only: no counter-evidence on record
+        g0 = next(i for i, e in enumerate(self.wo_doc["entries"]) if e["need"] == "NEED-NEUROINFLAMMATION-GLIA")
+        if not self.groups["NEED-NEUROINFLAMMATION-GLIA"]:      # no card is linked to the need yet: only its premise can be addressed (after the merge that links J01 this branch is skipped)
+            self.assertTrue(self.mutated_wo(lambda d: d["entries"][g0].__setitem__("kind", "verificare un'ipotesi")))
+        self.assertTrue(self.mutated_wo(lambda d: d["entries"][0].__setitem__("kind", "ordinare")))
+        self.assertTrue(self.mutated_wo(lambda d: d["entries"][0].__setitem__("need", "NEED-NOPE")))
+        self.assertTrue(self.mutated_wo(lambda d: d["entries"].reverse()))
+        self.assertTrue(self.mutated_wo(lambda d: d["entries"][0].__setitem__("score", 0.9)))
+        self.assertTrue(self.mutated_wo(lambda d: d["entries"][0].__setitem__("feasibility", "")))
+        self.assertTrue(self.mutated_wo(lambda d: d["entries"][0].__setitem__("date", "29/10/2026")))
+        self.assertTrue(self.mutated_wo(lambda d: d["entries"][0].__setitem__("cards", ["ZZ99"])))
+
+    def test_work_order_is_shown_by_need_with_separate_dates_and_unknown_feasibility(self):
+        h = self.static_html(self.page)
+        sec = re.search(r'<div id="work-order".*?(?=<div class="btns">)', h, re.S).group(0)
+        wo = self.cur["work_order"]
+        self.assertEqual(sec.count('class="wo-item"'), len(wo["entries"]))
+        self.assertEqual([m for m in re.findall(r'data-need="([^"]+)" data-kind', sec)], [e["need"] for e in wo["entries"]])
+        self.assertIn('data-k="cur.work_order_date" data-v="2026-10-29"', sec)
+        self.assertIn(f'data-k="cur.catalogue_generated" data-v="{self.cur["meta"]["catalogue_generated"]}"', sec)
+        self.assertIn("due date diverse", sec)
+        for e in wo["entries"]:
+            self.assertIn(html_escape(e["kind"]), sec)
+            self.assertIn(html_escape(e["feasibility"]), sec)
+        self.assertNotIn("Ordine di lavoro", sec)      # the heading is 'Piano di verifiche': no implied sequence
+        self.assertEqual(sec.count("non nota"), sum(e["feasibility_it"].count("non nota") for e in wo["entries"]) + sec.count("«non nota»"))
+        for e in wo["entries"]:      # an Italian one-line summary and the Italian feasibility line stand above the English scientific text
+            self.assertIn(html_escape(e["summary_it"]), sec)
+            self.assertIn(html_escape(e["feasibility_it"]), sec)
+            self.assertNotIn("non nota", e["feasibility"])
+        self.assertNotRegex(sec, r"<ol\b")                      # an ordered list would read as a ranking
+        for bad in ("score", "punteggio:", "probabilit"):
+            self.assertNotIn(bad, re.sub(r"non ha punteggio", "", sec))
+        # printed counts equal the data: positions chips of each entry are the need's set
+        for e in wo["entries"]:
+            self.assertEqual(e["positions"], sorted(self.groups[e["need"]]))
+
+    # ---- window state (P7)
+    def test_window_state_is_in_the_gene_addition_entry_and_the_c01_c04_briefs(self):
+        wo = self.cur["work_order"]
+        e = next(x for x in wo["entries"] if x["need"] == "NEED-WWOX-GENE-ADDITION")
+        self.assertEqual([x["state"] for x in e["window_state"]], ["prevented_early_window", "recovered_post_onset_model", "unmeasured"])
+        self.assertEqual(set(wo["window_states"]), set(rv.WINDOW_STATES))
+        for cid in ("C01_aav9_wwox", "C04_aav9_endpoint_families"):
+            c = next(x for x in self.cur["cands"] if x["id"] == cid)
+            self.assertEqual(c["brief"]["window"]["states"], ["prevented_early_window", "unmeasured"])
+        self.assertTrue(all(c["brief"].get("window") is None for c in self.cur["cands"] if c["id"] not in wo["card_windows"]))
+        h = self.static_html(self.page)
+        for st in ("prevenzione (finestra precoce)", "recupero dopo l'esordio (solo in un modello)", "non misurato"):
+            self.assertIn(html_escape(st), h)
+        # the card wording itself carries the early-window statement (data-driven check at build)
+        for cid in wo["card_windows"]:
+            self.assertRegex(json.dumps(rv.load_cards(DR)[cid][0]), r"(?i)early-window")
+
+    def test_window_state_mutations_fail(self):
+        self.assertTrue(self.mutated_wo(lambda d: d["entries"][0]["window_state"][0].__setitem__("state", "cured")))
+        self.assertTrue(self.mutated_wo(lambda d: d["card_windows"].__setitem__("ZZ99", {"states": ["unmeasured"], "note": "x"})))
+        d = json.loads(json.dumps(self.wo_doc))
+        d["card_windows"]["F01_glutamate_receptor_node"] = {"states": ["prevented_early_window"], "note": "x"}
+        texts = {c: json.dumps(v[0]) for c, v in rv.load_cards(DR).items()}
+        self.assertTrue(any("early-window" in e for e in rv.validate_work_order(d, self.needs, self.groups, self.cards, DR, texts)))   # F01 does not say early-window
+
+    def test_nmdar_chain_uses_f04_with_three_unranked_readings_and_e1(self):
+        ch = next(c for c in self.eg_doc["chains"] if c["id"] == "nmdar-gate")
+        cards = {x for n in ch["nodes"] for x in n.get("cards", [])}
+        self.assertEqual(cards, {"F01_glutamate_receptor_node", "F04_nmdar_intervention_class", "P11_magnesium_nmdar_gate"})
+        self.assertEqual(sum(1 for n in ch["nodes"] if n["label"].startswith("Reading ")), 3)
+        self.assertTrue(any(n["label"].startswith("E1:") and n["col"] == "esperimento" for n in ch["nodes"]))
+        e = next(x for x in self.wo_doc["entries"] if x["need"] == "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR")
+        self.assertIn("F04_nmdar_intervention_class", e["cards"])
+        self.assertIn("P9", e["updated_by"])
+        self.assertIn("E1", e["data"])
+
+    # ---- IT6 P13 verifier repairs
+    def card(self, cid):
+        return next(c for c in self.cur["cands"] if c["id"] == cid)
+
+    def test_p11_brief_names_the_tool_compound_and_the_card_is_linked_to_its_need(self):
+        b = self.card("P11_magnesium_nmdar_gate")["brief"]["wwox"]
+        self.assertIn("d-APV", b)
+        self.assertIn("competitive", b)
+        self.assertIn("five slices from three animals", b)
+        self.assertEqual(self.card("P11_magnesium_nmdar_gate")["needs"], ["NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR"])      # the need record lists the card (needs.json sources.cards)
+
+    def test_counter_evidence_is_ordered_by_category_and_safety_comes_first(self):
+        b = self.card("EB-VGB-01")["brief"]
+        self.assertEqual(len(b["counter"]), 3)
+        self.assertEqual([x["cat"] for x in b["counter"]], sorted(x["cat"] for x in b["counter"]))
+        self.assertIn("MRI", b["counter"][0]["text"])      # the brain MRI abnormality signals are not buried
+        self.assertEqual(b["counter"][0]["cat"], 0)
+        self.assertGreater(b["counter_more"], 0)
+        self.assertTrue(all(x["category"] in rv.COUNTER_CATEGORIES for x in b["counter"]))
+        # the rule itself: category first, stored order inside a category, independent of how the card lists the items
+        items = [(2, "outside"), (1, "wwox null"), (0, "harm"), (0, "harm 2"), (2, "outside 2")]
+        self.assertEqual([t for _, t in rv.order_counter(items)], ["harm", "harm 2", "wwox null", "outside", "outside 2"])
+        self.assertEqual(rv.order_counter(items, flip=True)[0][1], "outside")      # mutation: a reversed ranking puts a non-safety item first
+        self.assertNotIn("MRI", rv.order_counter([(rv.counter_category(t), t) for t in ("Organoid markers are up", "vigabatrin MRI abnormality (safety signal)")], flip=True)[0][1])
+        self.assertEqual(rv.counter_category("two children with brain MRI abnormalities"), 0)
+        self.assertEqual(rv.counter_category("The knockout slices showed no effect of the drug"), 1)
+        self.assertEqual(rv.counter_category("A step and a continuum are indistinguishable"), 2)
+        self.assertNotIn("decisiva", rv.UI_IT["bf_f5"].lower())      # the label does not claim a weighting
+
+    def test_counter_placeholder_is_not_shown_as_evidence(self):
+        b = self.card("EB-PDANCHOR-AX-01")["brief"]
+        self.assertEqual(b["counter"][0]["text"], rv.UI_IT["bf_counter_none"])
+        self.assertIn("nessuna controevidenza registrata nella scheda", b["counter"][0]["text"].lower())
+
+    def test_brief_text_is_cut_only_at_sentence_boundaries_and_has_no_repository_identifiers(self):
+        import repurposing_view as m
+        for c in self.cur["cands"]:
+            b = c["brief"]
+            for f in ("wwox", "external", "missing", "next"):
+                self.assertFalse(b[f].endswith("…"), (c["id"], f))
+            for x in b["counter"]:      # a counter item may be cut at a clause (never mid-word) so that the page stays one A4 page; the dossier keeps it whole
+                self.assertTrue(len(x["text"]) <= 240 * 1.5 + 3 or not x["text"].endswith("…"), c["id"])
+            blob = " ".join([b["wwox"], b["external"], b["missing"], b["next"]] + [x["text"] for x in b["counter"]])
+            self.assertNotRegex(blob, r"CLAIM \d|DL-[A-Z]+-\d|HYP-\d{8}|MECHANISM_TRANSFER|\bN-\d+\b|needs audit")
+        long_t = "First sentence is here. " + "Second sentence goes on and on without end " * 12 + "Last."
+        out = m.clip_sentence(long_t, 60)
+        self.assertTrue(out.endswith("."), out)
+        self.assertEqual(m.clip_sentence("Short text.", 60), "Short text.")
+        self.assertEqual(m.scrub_ids("A result (CLAIM 031, DL-BIO-009) stands."), "A result stands.")
+
+    def test_three_dates_are_separate_and_the_research_date_is_not_the_catalogue_date(self):
+        m = self.cur["meta"]
+        self.assertEqual(m["research_update"], m["data_date"])
+        self.assertGreaterEqual(m["research_update"], m["needs_built_on"])
+        self.assertGreaterEqual(m["research_update"], m["catalogue_generated"][:10])
+        self.assertGreaterEqual(m["research_update"], self.wo_doc["research_update"])
+        h = self.static_html(self.page)
+        for k in ("meta.data_date", "meta.needs_built_on", "meta.catalogue_generated"):
+            self.assertIn(f'data-k="{k}"', h)
+        js = (DR / "view/assets/curated.js").read_text()
+        for d in ("data", "registro", "catalogo"):
+            self.assertIn(f'data-date="{d}"', js)
+        self.assertIn("META.research_update", js)
+        self.assertEqual(rv.research_update_date(DR, "2026-01-01"), max("2026-01-01", rv.research_update_date(DR)))
+
+    def test_candidate_line_keeps_the_goal_prefix_and_window_chip_carries_its_qualifiers(self):
+        js = (DR / "view/assets/curated.js").read_text()
+        self.assertIn("esc(goalTxt(c.goal))", js)
+        self.assertTrue(rv.UI_IT["chip_goal"].strip())
+        e = next(x for x in self.cur["work_order"]["entries"] if x["need"] == "NEED-WWOX-GENE-ADDITION")
+        note = next(x["note"] for x in e["window_state"] if x["state"] == "recovered_post_onset_model")
+        for q in ("about 3 weeks", "different organoid cohorts", "week 16 only", "persistence not measured", "one endpoint family", "radial-glia"):
+            self.assertIn(q, note)
+        h = self.static_html(self.page)
+        self.assertIn(f'title="{html_escape(note)}"', h)      # the chip's tooltip
+        node = next(n for c in self.eg_doc["chains"] if c["id"] == "rescue-window" for n in c["nodes"] if n["id"] == "e2")
+        self.assertIn("other cohorts", node["label"])
+        self.assertIn("radial glia not corrected", node["label"])
+        for s in ("prevenzione (finestra precoce)", "recupero dopo l'esordio (solo in un modello)"):
+            self.assertIn(html_escape(s), h)
+        self.assertNotIn("prevenuto", " ".join(str(v) for k, v in rv.UI_IT.items() if k.startswith("ws_")))
+
+    def test_graph_repairs_isr_nmdar_missense(self):
+        ch = {c["id"]: c for c in self.eg_doc["chains"]}
+        n = {(c, x["id"]): x for c in ch for x in ch[c]["nodes"]}
+        self.assertIn("knockdown not shown", n[("isr-sign", "o2")]["label"])
+        self.assertNotIn("silenced", n[("isr-sign", "o2")]["label"])
+        e = next(x for x in ch["nmdar-gate"]["edges"] if x["from"] == "o2" and x["to"] == "n1")
+        self.assertEqual(e["type"], "inferenza")
+        self.assertIn("competitive NMDAR antagonist", n[("nmdar-gate", "o2")]["label"])
+        w = next(x for x in ch["nmdar-gate"]["edges"] if x["to"] == "e3")
+        self.assertNotIn("efficacy signal", w["note"])
+        self.assertEqual(sorted(x["source"] for x in ch["missense-route"]["edges"] if x["to"] in ("e2", "e3", "e4")), ["PMID:33914734", "PMID:37319242", "PMID:39041895"])
+        self.assertIn("tolerated", n[("missense-route", "e4")]["label"])
+        self.assertNotIn("tolerated", n[("missense-route", "e2")]["label"])
+        self.assertNotIn("inert", n[("missense-route", "e3")]["label"])
+        self.assertTrue(rv.load_titles(DR).get("33914734"))
+
+    def test_graph_is_legible_on_a_phone(self):
+        css = (DR / "view/assets/curated.css").read_text()
+        self.assertRegex(css, r"\.eg-n text\{font:12\.5px")
+        self.assertIn("nav .in a{display:inline-block;min-height:26px", css)
+        h = self.static_html(self.page)
+        self.assertEqual(h.count('class="mini eg-cue"'), len(self.eg_doc["chains"]))
+        self.assertIn("background-attachment:local,local,scroll,scroll", css)      # scroll shadows: a visible cue on the figure itself
+
+    def test_shareable_build_carries_graph_brief_and_work_order(self):
+        sh = rv.build_payload(DR, "shareable")["cur"]
+        self.assertEqual(sh["evidence_graph"]["chains"], self.cur["evidence_graph"]["chains"])
+        self.assertEqual(sh["work_order"]["entries"], self.cur["work_order"]["entries"])
+        for path in ("view/evidence_graph.json", "view/work_order.json", "isr_kinase", ".md"):     # no repository path or file name in the shareable page
+            self.assertNotIn(path, self.static_html(rv.build(DR, "shareable")), path)
+
+    def test_leak_audit_catches_a_class_c_name_in_the_graph_and_in_a_brief(self):
+        import repurposing_shareable_audit as au
+        share = rv.build(DR, "shareable")
+        ref = au.Reference(DR)
+        name = None
+        import gzip
+        with gzip.open(DR / "catalog/catalog.jsonl.gz", "rt", encoding="utf-8") as fh:
+            for line in fh:
+                e = json.loads(line)
+                cs = {t.get("claim_source") for t in e.get("targets") or []}
+                n = e.get("name") or ""
+                if e["origin"] == "dgidb_only" and cs == {"DTC"} and n.isalpha() and len(n) >= 8 and au.norm(n) not in ref.own_grams:
+                    name = n
+                    break
+        self.assertTrue(name)
+        def mut(fn):
+            P = embedded(share)
+            fn(P)
+            data = json.dumps(P, ensure_ascii=False, sort_keys=True, separators=(",", ":")).replace("</", "<\\/").replace("<!--", "<\\!--")
+            return re.sub(r'(<script id="data" type="application/json">).*?(</script>)', lambda m: m.group(1) + data + m.group(2), share, count=1, flags=re.S)
+        for fn in (lambda P: P["cur"]["evidence_graph"]["chains"][0]["nodes"][0].__setitem__("label", "x " + name),
+                   lambda P: P["cur"]["cands"][0]["brief"].__setitem__("wwox", "x " + name),
+                   lambda P: P["cur"]["work_order"]["entries"][0].__setitem__("question", "x " + name)):
+            rep, _ = au.audit_html(mut(fn), DR, ref)
+            self.assertIn("forbidden-name", {v["kind"] for v in rep.violations})
+        rep, _ = au.audit_html(share, DR, ref)
+        self.assertEqual(rep.violations, [])
+
+
+def html_escape(s):
+    import html
+    return html.escape(s)
+
+
+class BriefBrowser(Browser):
+    def test_brief_route_renders_eight_fields_and_two_dates(self):
+        cid = "EB-ETX-01"
+        d = self.dom("#brief=" + cid)
+        area = d[d.index('id="export-area"'):]
+        self.assertIn("exporting", d)
+        self.assertEqual(len(re.findall(r'<dt data-field="\d">', area)), 8)
+        for i in range(1, 9):
+            self.assertIn(rv.UI_IT[f"bf_f{i}"], area)
+        self.assertRegex(area, r'data-date="data">\d{4}-\d{2}-\d{2}<')
+        self.assertRegex(area, r'data-date="catalogo">\d{4}-\d{2}-\d{2}T')
+        self.assertIn('href="#export=' + cid + '"', area)
+        self.assertIn("PMID 32000863", area)
+        self.assertEqual(len(re.findall(r"PMID \d+</a>", area)), len(self.cards_brief(cid)))
+
+    def cards_brief(self, cid):
+        return next(c for c in self.P["cur"]["cands"] if c["id"] == cid)["brief"]["sources"]
+
+    def test_profile_has_the_brief_button_beside_the_export_button(self):
+        d = self.dom("#c=need:NEED-T-TYPE-CALCIUM")
+        self.assertRegex(d, r'data-export="EB-ETX-01">[^<]*</button><button type="button" data-brief="EB-ETX-01">Sintesi \(1 pagina\)</button>')
+
+    def test_graph_and_work_order_render_with_javascript_too(self):
+        d = self.dom("")
+        self.assertEqual(d.count('<svg class="eg"'), 5)
+        self.assertIn('data-wo="NEED-ISR-ATTENUATION"', d)       # priorities by need link to the work order
 
 
 if __name__ == "__main__":
