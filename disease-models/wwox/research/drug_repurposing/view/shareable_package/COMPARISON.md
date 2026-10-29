@@ -13,10 +13,10 @@ The full version (`view/index.html` in the repository, local use) and this packa
 
 | What | Full | Shareable |
 |---|---|---|
-| Catalogue rows shown with a name | 1492 | 40 (card names only; the other 1464 rows carry an identifier) |
-| Rows with per-row status class or modality | 1504 | 0 |
+| Catalogue rows shown with a name | 1493 | 41 (card names only; the other 1464 rows carry an identifier) |
+| Rows with per-row status class or modality | 1505 | 0 |
 | Rows with a per-row access category | 1480 | 11 (openFDA-stated categories and absence statements only) |
-| Matrix pairs with a target list | 1342 of 1710 | 12 of 1710 |
+| Matrix pairs with a target list | 1342 of 1711 | 12 of 1711 |
 | Target symbols listed in pairs | 1861 | 12 |
 | Card actions on targets listed | 39 | 0 |
 | Pair objects carrying a status class | 680 | 0 |

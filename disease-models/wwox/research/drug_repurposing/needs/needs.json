@@ -4911,7 +4911,9 @@
     "Glial direction is context-dependent in the abstracts read (abstract-level, NOT WWOX EVIDENCE): neuronal STAT3 deletion reduced glial activation and damage in neonatal hypoxia-ischaemia (PMID 26669927) and astrocyte uncoupling preceded seizures in a temporal-lobe-epilepsy model (PMID 25765328), so glial change can be upstream of seizures and a glial lever is not simply 'less gliosis'; the commonly stated protective role of reactive astrocytes was NOT verified here."
    ],
    "sources": {
-    "cards": [],
+    "cards": [
+     "J01_glial_reactivity_modulation"
+    ],
     "hypotheses": [
      "HYP-20260705-02"
     ],
