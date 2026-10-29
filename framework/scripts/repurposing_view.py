@@ -3449,9 +3449,9 @@ def build_ranking(dr: Path, cur: dict, source: str):
         "inventory": {k: inv[k] for k in ("families", "records", "by_class", "by_first_order", "need_linked_families_q1_q2_q3", "need_linked_families_plus_units", "distinct_display_names_total", "distinct_display_names_in_q1",
                                           "q1_with_opposed_action_elsewhere", "mnet_usable_families", "msig_neural_families", "need_linked_by_access_category", "all_families_by_access_category")},
         "queue": {"compounds": S["deepening_queue_compounds"]},
-        "uncarded": [({k: r[k] for k in ("item_id", "item", "kind", "class", "evaluation_depth", "provenance", "related_unit", "reason", "what_would_reopen", "source_pointers")} if (full or r["provenance"] == "own_search") else
-                      {"item_id": r["item_id"], "item": "catalogue-only item (name withheld in this edition)", "kind": r["kind"], "class": r["class"], "evaluation_depth": r["evaluation_depth"], "provenance": r["provenance"],
-                       "related_unit": r["related_unit"], "reason": "withheld in this edition: the item is known only from a catalogue row of licence class B/C", "what_would_reopen": "", "source_pointers": ""}) for r in J.get("uncarded") or []],
+        "uncarded": [({k: r[k] for k in ("item_id", "item", "kind", "class", "evaluation_depth", "provenance", "related_unit", "reason", "what_would_reopen", "source_pointers")} if full else
+                      {"item_id": r["item_id"], "item": "item without a card (name withheld in this edition)", "kind": r["kind"], "class": r["class"], "evaluation_depth": r["evaluation_depth"], "provenance": r["provenance"],
+                       "related_unit": r["related_unit"], "reason": "withheld in this edition (names and reasons of items without a card are in the full edition)", "what_would_reopen": "", "source_pointers": ""}) for r in J.get("uncarded") or []],
         "triggers": [{k: t[k] for k in ("trigger", "what", "detected_by", "re_evaluates", "reason_class_when_order_moves")} for t in trig],
         "history": hist,
     }
@@ -3654,7 +3654,7 @@ def rk_unit_detail(R: dict, u: dict, full: bool) -> str:
             + (f'<dt>{E(U["rk_c_merge"])}</dt><dd>{E(u["merge_reason"])}</dd>' if u["merge_reason"] else "")
             + (f'<dt>{E(U["rk_c_ex"])}</dt><dd>{E(", ".join(U["hyp_r_" + r] for r in u["model_exclusions"]))}</dd>' if u["model_exclusions"] else "")
             + f'</dl><h5>{E(U["rk_p_h"])}</h5><div class="scrollx"><table class="tbl stk"><thead><tr><th>{E(U["rk_p_need"])}</th><th>{E(U["rk_p_thread"])}</th><th>{E(U["rk_p_obj"])}</th><th>{E(U["rk_p_pos"])}</th><th>{E(U["rk_p_link"])}</th><th>{E(U["rk_p_opp"])}</th><th>{E(U["rk_p_shared"])}</th></tr></thead><tbody>'
-            + (prow or f'<tr><td colspan="7">{E(U["rk_none"])}</td></tr>') + f'</tbody></table></div><p class="mini mut">{E(U["rk_p_den"].format(n=len(pths), m=R["meta"]["needs_total"]))} {E(U["rk_p_comp"])}</p>' + members + '</details>')
+            + (prow or f'<tr><td colspan="7" data-label="{E(U["rk_p_need"])}">{E(U["rk_none"])}</td></tr>') + f'</tbody></table></div><p class="mini mut">{E(U["rk_p_den"].format(n=len(pths), m=R["meta"]["needs_total"]))} {E(U["rk_p_comp"])}</p>' + members + '</details>')
 
 
 OBJ_IT = {"broad": "Recupero ampio e duraturo", "partial": "Beneficio parziale o ponte"}
@@ -3728,10 +3728,10 @@ def render_ranking(P: dict) -> str:
                        f'<td data-label="{E(U["rk_unc_c_u"])}">{E(r["related_unit"] or "—")}</td></tr>' for r in R.get("uncarded") or [])
     unc = (f'<h4>{E(U["rk_unc_h"])} ({numit("rk.unc.n", len(R.get("uncarded") or []))})</h4><p class="mini mut">{E(U["rk_unc_note"])}</p><div class="scrollx"><table class="tbl stk"><thead><tr><th>{E(U["rk_unc_c_i"])}</th><th>{E(U["rk_unc_c_c"])}</th><th>{E(U["rk_unc_c_d"])}</th><th>{E(U["rk_unc_c_r"])}</th><th>{E(U["rk_unc_c_u"])}</th></tr></thead><tbody>{unc_rows}</tbody></table></div>') if R.get("uncarded") else ""
     inv = (f'<h3>{E(U["rk_inv_h"])}</h3><p class="mini">{E(U["rk_inv_lead"])}</p>'
-           f'<table class="tbl stk"><thead><tr><th>{E(U["rk_t_class"])}</th><th>{E(U["rk_inv_units"])}</th><th></th></tr></thead><tbody>{cl_rows}</tbody></table>'
+           f'<table class="tbl rk-plain"><thead><tr><th>{E(U["rk_t_class"])}</th><th>{E(U["rk_inv_units"])}</th><th></th></tr></thead><tbody>{cl_rows}</tbody></table>'
            f'<p class="mini">{E(U["rk_inv_units_n"].format(u=len(units), r=M["units_ranked"], x=M["by_class"]["EXCL"], c=len(P["cur"]["cands"])))}</p>'
            f'<p class="mini"><b>{numit("rk.inv.records", I["records"])}</b> record · <b>{numit("rk.inv.families", I["families"])}</b> {E(U["sel_u_f"])}. {E(U["rk_inv_fam_note"])}</p>'
-           f'<h4>{E(U["rk_inv_q"])}</h4><table class="tbl stk"><tbody>{q_rows}</tbody></table>'
+           f'<h4>{E(U["rk_inv_q"])}</h4><table class="tbl rk-plain"><tbody>{q_rows}</tbody></table>'
            f'<p class="mini">{E(U["rk_inv_names"].format(n=I["distinct_display_names_in_q1"]))}. {E(U["rk_inv_opp"])}: {numit("rk.inv.opp", I["q1_with_opposed_action_elsewhere"])}.</p>'
            f'<p class="mini"><b>{E(U["rk_inv_access"])}:</b> {acc_rows}.</p>'
            f'<p class="mini">{E(U["rk_inv_queue"].format(n=R["queue"]["compounds"]))}</p>'
