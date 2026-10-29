@@ -9,16 +9,28 @@ python3 -B framework/scripts/repurposing_coverage.py run
 python3 -B framework/scripts/repurposing_view.py run
 python3 -B framework/scripts/repurposing_view.py run --source shareable
 python3 -B framework/scripts/repurposing_view.py check
+python3 -B framework/scripts/repurposing_view.py viewports
+python3 -B framework/scripts/repurposing_view.py titles --refresh   # only to refresh source_titles.json
 python3 -B framework/scripts/test_repurposing_view.py
 ```
 
 The first refreshes the module data (offline), the second writes the full view, the third the shareable view, the fourth exits 1 if either file is stale (use `--source full` or `--source shareable` to check one), the fifth runs the regressions (browser tests skip when no Chromium is found; no sandbox-bypass flag is used).
 
-## What the page is (revision 3)
+## What the page is (revision 4, IT5 P12)
 
-A physician who does not know the repository reads, in order: (1) overview: research goal, WWOX perimeter, data date, the two open possibilities (broad durable recovery; useful partial benefit) as two separate panels, Track A / Track B as a separate field, the 22 needs grouped into six biological threads, what to study next, the decisive gaps, and counts with explicit units (needs, cards, records, families are never one number); (2) navigation need -> mechanism -> compounds and interventions -> evidence -> next question, with filters (biological area, need, access category, country evidence, evidence scope, Track, recovery goal, research status, text); (3) candidate profiles (31 cards): five short answers (why, what was observed in WWOX, what comes from other diseases or predictions, counter-evidence, missing proof and informative step) and, one click further, the technical details and full tables; (4) research-priority groups per need or per goal (see below); (5) comparison of two to four cards (overlap, complementarity, OPPOSED actions; synergy is never inferred); then the full data layer of the earlier revisions (funnel, access, needs, matrix, dispositions, leads, limits, technical details); the attribution footer closes the page.
+The page is in Italian for the physician: every orientation text (titles, labels, explanations, filters, legends, buttons, how-to-read notes) is Italian; scientific citations (source titles, quotations, identifiers, source passages, card prose, compound names) keep their original form. The Italian strings are data: `UI_IT`, `POS_IT`, `SCOPE_IT`, `GOALS_IT`, `THREAD_IT`, `NEED_IT`, `STATUS_IT`, `COUNTRY_IT` and `CRIT_IT` in `framework/scripts/repurposing_view.py`, embedded as `D.ui` for the page script and filled into the assets as `{{key}}` tokens (an unknown key fails the build). The renderers (`render_overview`, `render_charts`, `render_banner`) and `assets/curated.{html,css,js}` are presentation only; `build_payload` is the data layer.
 
-Evidence scopes keep their own labels everywhere: WWOX experiment in a DEE system; WWOX clinical case report (uncontrolled); WWOX biology in another context; other-disease precedent; computational result; enzyme or cell-free assay; external database record; safety signal; unverified hypothesis; scope not recorded at assertion level. A glyph and the full label always accompany the colour.
+Reading order: (1) first screen: a one-line warning (research material, not medical advice; sources in a limited state), the meaning of the letters F / C / P, then one synthetic card per biological thread (goal as two separate dimensions plus Track as a third field; compounds and interventions to study; the reason for the priority; type of evidence; the decisive gap) and the two goals, the units; (2) five graphics, server-rendered inline HTML and CSS: funnel with explicit units (records, families, families with a target listed, families with a stated action on a need target, cards), access categories (US evidence, denominator stated), needs x interventions per thread (letter and word in every cell), targets to candidates (declared actions), coverage and gaps per need; (3) navigation need -> mechanism -> compounds -> evidence -> next question, with filters; (4) candidate profiles with six short answers (why, WWOX result, external precedent or prediction, counter-evidence, missing proof, next step) and, one click further, the criteria and the full tables; (5) research-priority groups; (6) comparison of two to four cards; (7) "Dettagli tecnici", a closed drill-down holding versions, digests, the regeneration command, the source-state table and the whole catalogue screening (technical English, exhaustive, unranked). Counts of pathways are never shown as a measure of efficacy.
+
+Evidence scopes keep their own labels everywhere (glyph, border style and text; colour is never the only carrier). Letters keep one meaning: F green (solid, dashed, dotted border for F1-F3), C red, P grey.
+
+### Source titles
+
+`source_titles.json` (PMID -> title, journal, year) is a tracked cache; the builder reads only files (offline, deterministic). Refresh it with `python3 -B framework/scripts/repurposing_view.py titles --refresh` (NCBI esummary, keyless, one call per 100 ids, 0.5 s between calls, no `email` or `tool` parameter, no contact string); `titles` alone reports coverage. It covers every PMID the cards and the needs reference.
+
+### Real viewports
+
+`python3 -B framework/scripts/repurposing_view.py viewports [--source shareable] [--shots DIR]` drives Chromium over the DevTools protocol (stdlib websocket client, no sandbox-bypass flag), sets real device metrics at 360, 390, 768 and 1280 px (360 and 390 with and without mobile emulation) and A4 print media, and prints `innerWidth` and `scrollWidth` for the first screen, a filtered thread, the comparison, the card export and the technical drill-down. It prints SKIP when no Chromium exists and exits 1 on overflow. Measured results: `preview/README.md`.
 
 ### Research priority (not efficacy)
 

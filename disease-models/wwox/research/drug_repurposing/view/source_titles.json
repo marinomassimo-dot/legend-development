@@ -1,0 +1,347 @@
+{
+ "refresh": "python3 -B framework/scripts/repurposing_view.py titles --refresh",
+ "schema": "legend.wwox.source_titles/1",
+ "source": "NCBI E-utilities esummary (db=pubmed), keyless, one call per 100 ids",
+ "titles": {
+  "10546922": {
+   "journal": "Clin Pharmacol Ther",
+   "title": "Pharmacokinetics and pharmacodynamics of dichloroacetate in patients with cirrhosis.",
+   "year": "1999"
+  },
+  "16476929": {
+   "journal": "Neurology",
+   "title": "Dichloroacetate causes toxic neuropathy in MELAS: a randomized, controlled clinical trial.",
+   "year": "2006"
+  },
+  "16651305": {
+   "journal": "Pediatrics",
+   "title": "Controlled clinical trial of dichloroacetate for treatment of congenital lactic acidosis in children.",
+   "year": "2006"
+  },
+  "16765624": {
+   "journal": "Mol Genet Metab",
+   "title": "Magnetic resonance spectroscopic investigation of mitochondrial fuel metabolism and energetics in cultured human fibroblasts: effects of pyruvate dehydrogenase complex deficiency and dichloroacetate.",
+   "year": "2006"
+  },
+  "18411236": {
+   "journal": "Pediatrics",
+   "title": "Evaluation of long-term treatment of children with congenital lactic acidosis with dichloroacetate.",
+   "year": "2008"
+  },
+  "19366691": {
+   "journal": "J Biol Chem",
+   "title": "Transforming growth factor beta1 signaling via interaction with cell surface Hyal-2 and recruitment of WWOX/WOX1.",
+   "year": "2009"
+  },
+  "19773459": {
+   "journal": "J Child Neurol",
+   "title": "Pathological evidence of vacuolar myelinopathy in a child following vigabatrin administration.",
+   "year": "2009"
+  },
+  "21473881": {
+   "journal": "Neurotoxicology",
+   "title": "Oral toxicity of vigabatrin in immature rats: characterization of intramyelinic edema.",
+   "year": "2011"
+  },
+  "21476439": {
+   "journal": "Z Naturforsch C J Biosci",
+   "title": "WWOX oxidoreductase--substrate and enzymatic characterization.",
+   "year": "2011"
+  },
+  "22128851": {
+   "journal": "J Med Chem",
+   "title": "(1S, 3S)-3-amino-4-difluoromethylenyl-1-cyclopentanoic acid (CPP-115), a potent γ-aminobutyric acid aminotransferase inactivator for the treatment of cocaine addiction.",
+   "year": "2012"
+  },
+  "22193544": {
+   "journal": "Cell Death Differ",
+   "title": "WW domain-containing oxidoreductase promotes neuronal differentiation via negative regulation of glycogen synthase kinase 3β.",
+   "year": "2012"
+  },
+  "24321005": {
+   "journal": "Epilepsia",
+   "title": "CPP-115, a vigabatrin analogue, decreases spasms in the multiple-hit rat model of infantile spasms.",
+   "year": "2014"
+  },
+  "25012504": {
+   "journal": "Cell Death Differ",
+   "title": "Tumor suppressor WWOX regulates glucose metabolism via HIF1α modulation.",
+   "year": "2014"
+  },
+  "25554247": {
+   "journal": "Neurotoxicology",
+   "title": "Vigabatrin-induced CNS changes in juvenile rats: Induction, progression and recovery of myelin-related changes.",
+   "year": "2015"
+  },
+  "25649963": {
+   "journal": "PeerJ",
+   "title": "Loss of wwox expression in zebrafish embryos causes edema and alters Ca(2+) dynamics.",
+   "year": "2015"
+  },
+  "25765333": {
+   "journal": "Lancet Neurol",
+   "title": "Bumetanide for the treatment of seizures in newborn babies with hypoxic ischaemic encephalopathy (NEMO): an open-label, dose finding, and feasibility phase 1/2 trial.",
+   "year": "2015"
+  },
+  "25792327": {
+   "journal": "Science",
+   "title": "Epilepsy treatment. Targeting LDH enzymes with a stiripentol analog to treat epilepsy.",
+   "year": "2015"
+  },
+  "26157036": {
+   "journal": "Toxicol Pathol",
+   "title": "Detection of Mild and Reversible Neurohistopathological Changes in the Brain of Juvenile (Preweaned) Beagle Dogs Treated with Vigabatrin for up to 91 Days.",
+   "year": "2015"
+  },
+  "27292539": {
+   "journal": "Neuron",
+   "title": "Oligodendroglial NMDA Receptors Regulate Glucose Import and Axonal Energy Metabolism.",
+   "year": "2016"
+  },
+  "27668180": {
+   "journal": "Epilepsy Behav Case Rep",
+   "title": "A case report on the efficacy of vigabatrin analogue (1S, 3S)-3-amino-4-difluoromethylenyl-1-cyclopentanoic acid (CPP-115) in a patient with infantile spasms.",
+   "year": "2016"
+  },
+  "28741622": {
+   "journal": "Neuropsychopharmacology",
+   "title": "In Vivo Detection of CPP-115 Target Engagement in Human Brain.",
+   "year": "2018"
+  },
+  "29808465": {
+   "journal": "Neurogenetics",
+   "title": "A novel missense variant in the SDR domain of the WWOX gene leads to complete loss of WWOX protein with early-onset epileptic encephalopathy and severe developmental delay.",
+   "year": "2018"
+  },
+  "29913407": {
+   "journal": "Epilepsy Res",
+   "title": "The effect of dichloroacetate in mouse models of epilepsy.",
+   "year": "2018"
+  },
+  "30266908": {
+   "journal": "Nat Commun",
+   "title": "Mechanism-based rescue of Munc18-1 dysfunction in varied encephalopathies by chemical chaperones.",
+   "year": "2018"
+  },
+  "30290271": {
+   "journal": "Neurobiol Dis",
+   "title": "Wwox deletion leads to reduced GABA-ergic inhibitory interneuron numbers and activation of microglia and astrocytes in mouse hippocampus.",
+   "year": "2019"
+  },
+  "30361190": {
+   "journal": "Epileptic Disord",
+   "title": "West syndrome, developmental and epileptic encephalopathy, and severe CNS disorder associated with WWOX mutations.",
+   "year": "2018"
+  },
+  "30853297": {
+   "journal": "Eur J Paediatr Neurol",
+   "title": "Novel WWOX deleterious variants cause early infantile epileptic encephalopathy, severe developmental delay and dysmorphism among Yemenite Jews.",
+   "year": "2019"
+  },
+  "31539780": {
+   "journal": "Eur J Med Chem",
+   "title": "Polygala tenuifolia-Acori tatarinowii herbal pair as an inspiration for substituted cinnamic α-asaronol esters: Design, synthesis, anticonvulsant activity, and inhibition of lactate dehydrogenase study.",
+   "year": "2019"
+  },
+  "31543760": {
+   "journal": "Front Cell Neurosci",
+   "title": "The WWOX Gene Influences Cellular Pathways in the Neuronal Differentiation of Human Neural Progenitor Cells.",
+   "year": "2019"
+  },
+  "32000863": {
+   "journal": "Acta Neuropathol Commun",
+   "title": "Wwox deficiency leads to neurodevelopmental and degenerative neuropathies and glycogen synthase kinase 3β-mediated epileptic seizure activity in mice.",
+   "year": "2020"
+  },
+  "32730977": {
+   "journal": "J Am Acad Child Adolesc Psychiatry",
+   "title": "Bumetanide for Core Symptoms of Autism Spectrum Disorder (BAMBI): A Single Center, Double-Blinded, Participant-Randomized, Placebo-Controlled, Phase-2 Superiority Trial.",
+   "year": "2021"
+  },
+  "33914858": {
+   "journal": "Brain",
+   "title": "Neuronal deletion of Wwox, associated with WOREE syndrome, causes epilepsy and myelin defects.",
+   "year": "2021"
+  },
+  "34268881": {
+   "journal": "EMBO Mol Med",
+   "title": "Modeling genetic epileptic encephalopathies using brain organoids.",
+   "year": "2021"
+  },
+  "34634460": {
+   "journal": "Neurobiol Dis",
+   "title": "Altered neocortical oscillations and cellular excitability in an in vitro Wwox knockout mouse model of epileptic encephalopathy.",
+   "year": "2021"
+  },
+  "34747138": {
+   "journal": "EMBO Mol Med",
+   "title": "Neonatal neuronal WWOX gene therapy rescues Wwox null phenotypes.",
+   "year": "2021"
+  },
+  "3521930": {
+   "journal": "Circ Shock",
+   "title": "Metabolic effects of sodium dichloroacetate in endotoxemic minipigs.",
+   "year": "1986"
+  },
+  "35292925": {
+   "journal": "Child Psychiatry Hum Dev",
+   "title": "A Phase III Study of Bumetanide Oral Liquid Formulation for the Treatment of Children and Adolescents Aged Between 7 and 17 Years with Autism Spectrum Disorder (SIGN 1 Trial): Participant Baseline Characteristics.",
+   "year": "2023"
+  },
+  "35328751": {
+   "journal": "Int J Mol Sci",
+   "title": "The WWOX/HIF1A Axis Downregulation Alters Glucose Metabolism and Predispose to Metabolic Disorders.",
+   "year": "2022"
+  },
+  "35501379": {
+   "journal": "Nat Neurosci",
+   "title": "Maladaptive myelination promotes generalized epilepsy progression.",
+   "year": "2022"
+  },
+  "35730570": {
+   "journal": "JCI Insight",
+   "title": "Dichloroacetate improves systemic energy balance and feeding behavior during sepsis.",
+   "year": "2022"
+  },
+  "36278433": {
+   "journal": "EMBO Mol Med",
+   "title": "Lactate dehydrogenases promote glioblastoma growth and invasion via a metabolic symbiosis.",
+   "year": "2022"
+  },
+  "36432491": {
+   "journal": "Nutrients",
+   "title": "Combined Treatment of Dichloroacetic Acid and Pyruvate Increased Neuronal Survival after Seizure.",
+   "year": "2022"
+  },
+  "36537114": {
+   "journal": "Am J Med Genet A",
+   "title": "Expansion of the clinical and molecular spectrum of WWOX-related epileptic encephalopathy.",
+   "year": "2023"
+  },
+  "36828035": {
+   "journal": "Prog Neurobiol",
+   "title": "WWOX P47T partial loss-of-function mutation induces epilepsy, progressive neuroinflammation, and cerebellar degeneration in mice phenocopying human SCAR12.",
+   "year": "2023"
+  },
+  "38106446": {
+   "journal": "Int J Nanomedicine",
+   "title": "Neuroprotective Effects and Therapeutic Potential of Dichloroacetate: Targeting Metabolic Disorders in Nervous System Diseases.",
+   "year": "2023"
+  },
+  "38443647": {
+   "journal": "Adv Ther",
+   "title": "An Update on Stiripentol Mechanisms of Action: A Narrative Review.",
+   "year": "2024"
+  },
+  "39507621": {
+   "journal": "Front Genet",
+   "title": "Case report: Adult patient with WWOX developmental and epileptic encephalopathy: 40 years of observation.",
+   "year": "2024"
+  },
+  "39769031": {
+   "journal": "Int J Mol Sci",
+   "title": "Synthesis and hLDHA Inhibitory Activity of New Stiripentol-Related Compounds of Potential Use in Primary Hyperoxaluria.",
+   "year": "2024"
+  },
+  "40165594": {
+   "journal": "Epilepsia",
+   "title": "Antiseizure potential of the triple T-type calcium channel blocker ACT-709478 (apinocaltamide) in rodent models.",
+   "year": "2025"
+  },
+  "40665325": {
+   "journal": "J Hematol Oncol",
+   "title": "Phase I first-in-human dose escalation study of the oral casein kinase 1α and cyclin dependent kinase 7/9 inhibitor BTX A51 in advanced MDS and AML.",
+   "year": "2025"
+  },
+  "40825784": {
+   "journal": "Nat Commun",
+   "title": "Investigational eIF2B activator DNL343 modulates the integrated stress response in preclinical models of TDP-43 pathology and individuals with ALS in a randomized clinical trial.",
+   "year": "2025"
+  },
+  "40875931": {
+   "journal": "Neurology",
+   "title": "WWOX-Related Developmental and Epileptic Encephalopathy: Expanding the Clinical Spectrum and Deciphering the Genotype-Phenotype.",
+   "year": "2025"
+  },
+  "41124647": {
+   "journal": "Adv Sci (Weinh)",
+   "title": "Genetic and Functional Evidence Links Germline Biallelic Inactivating Variants in WWOX to Histological Mixed-Type Thyroid Cancer.",
+   "year": "2026"
+  },
+  "41274966": {
+   "journal": "Sci Rep",
+   "title": "Therapeutic effect of histone deacetylase 6 inhibitor for a mouse model of phenylketonuria.",
+   "year": "2025"
+  },
+  "41380592": {
+   "journal": "Redox Biol",
+   "title": "Activation of the integrated stress response contributes to developmental delay and seizures caused by mitochondrial prolyl-tRNA synthetase (PARS2) deficiency.",
+   "year": "2026"
+  },
+  "41442931": {
+   "journal": "Pediatr Neurol",
+   "title": "Vigabatrin-Associated Brain Magnetic Resonance Imaging Abnormalities in Two Children With WW domain-containing oxidoreductase-Related Epileptic Encephalopathy Syndrome.",
+   "year": "2026"
+  },
+  "41489401": {
+   "journal": "Epilepsia",
+   "title": "Memantine treatment in individuals with GRIN gain-of-function variants is associated with improvements in behavior, development, and seizure frequency.",
+   "year": "2026"
+  },
+  "41570991": {
+   "journal": "J Biol Chem",
+   "title": "The antiseizure medication stiripentol inhibits mitochondrial complex I by blocking early-stage electron transfer.",
+   "year": "2026"
+  },
+  "42035940": {
+   "journal": "Eur J Pharmacol",
+   "title": "Mitochondrial dysfunction and senescence accompany glioblastoma cell death triggered by a putative metabolic inhibitor.",
+   "year": "2026"
+  },
+  "42179084": {
+   "journal": "J Alzheimers Dis",
+   "title": "Pharmacological targeting of the integrated stress response by 2BAct improves object recognition memory and reduces neuroinflammation in the 5xFAD model of Alzheimer's disease.",
+   "year": "2026"
+  },
+  "42190144": {
+   "journal": "Neurology",
+   "title": "Burst-Suppression EEG in Early Infantile Developmental and Epileptic Encephalopathies: Phenotype, Genotype, and Outcome.",
+   "year": "2026"
+  },
+  "42397075": {
+   "journal": "Brain",
+   "title": "Disrupted WWOX-MYC interplay impairs neurogenesis in human brain organoids.",
+   "year": "2026"
+  },
+  "42422765": {
+   "journal": "Mol Ther Adv",
+   "title": "Neuron-specific WWOX gene therapy produces dose-dependent, durable rescue in a model of WWOX-related epileptic encephalopathy.",
+   "year": "2026"
+  },
+  "42586097": {
+   "journal": "Lancet Neurol",
+   "title": "Safety and efficacy of guanabenz in early-childhood onset vanishing white matter: primary analysis of a single-arm, phase 1/2 trial.",
+   "year": "2026"
+  },
+  "42652189": {
+   "journal": "Biomedicines",
+   "title": "Distinct Roles of NMDA and AMPA Receptors in the Pathogenesis of Hyperbaric Oxygen-Induced Seizures.",
+   "year": "2026"
+  },
+  "42771346": {
+   "journal": "JAMA Netw Open",
+   "title": "DNL343 and Disease Progression in Amyotrophic Lateral Sclerosis: A Randomized Clinical Trial.",
+   "year": "2026"
+  },
+  "42909904": {
+   "journal": "Brain Commun",
+   "title": "Alzheimer's disease risk gene Wwox controls amyloid pathology through metabolic reprogramming.",
+   "year": "2026"
+  },
+  "625308": {
+   "journal": "N Engl J Med",
+   "title": "Metabolic effects of dichloroacetate in patients with diabetes mellitus and hyperlipoproteinemia.",
+   "year": "1978"
+  }
+ }
+}
