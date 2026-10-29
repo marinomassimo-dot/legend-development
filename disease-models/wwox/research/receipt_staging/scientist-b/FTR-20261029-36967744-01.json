@@ -1,0 +1,36 @@
+{
+ "event_id": "FTR-20261029-36967744-01",
+ "study_id": {
+  "pmid": "36967744",
+  "doi": "10.1002/ped4.12368"
+ },
+ "analysis_at": "2026-10-29T08:55:00Z",
+ "workflow": "scientist-b, IT6 package P11 (supplement and diet). SOURCE_FIRST reading of the open-access PMC article XML retrieved through the Europe PMC full-text endpoint (CC BY-NC-ND in the file): abstract, introduction, methods, results, table 1, discussion and the limitation paragraph read; the reference list was not read and the supporting-information table was not accessed. Question: what intravenous magnesium sulfate with ACTH was given to which infants, with what comparator and outcome definition. Prepared as JSON for the integrator and staged.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10030695/fullTextXML",
+ "source_fingerprint": "1f08e87990e3ba67605bb6155e8c0aa244db86e47db9f982ac83d064a1207895",
+ "source_kind": "fulltext_remote",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "read",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "unavailable"
+ },
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/supplement_diet_it6_p11_20261029/README.md"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "Figure 1 is a flow chart whose image was not opened. Supplementary Table S1 (logistic regression) is named in the text and was not accessed. No verbatim-locator work manifest was built."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read",
+ "record_kind": "contemporaneous_receipt",
+ "event_at": "2026-10-29T09:30:00Z",
+ "analysis_time_precision": "minute"
+}
