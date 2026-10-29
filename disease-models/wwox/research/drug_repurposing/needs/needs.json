@@ -1506,13 +1506,71 @@
        "anchor": "PDK family"
       }
      ]
+    },
+    {
+     "model_type": "mouse_p47t_knock_in_hippocampus_computational_reanalysis",
+     "species": "mouse",
+     "genotype": "P47T homozygous knock-in (a partial-loss WW1 missense, not a null) against wild type; 5 versus 5 animals, the same animals supply every region",
+     "tissue_or_cells": "hippocampus, bulk RNA-seq (GSE215425, processed table); module of six genes fixed from the two human neural build systems before the contrast was opened",
+     "age_stage": "adult (age not extracted; UNVERIFIED)",
+     "pmid": "36828035",
+     "locator_status": "DOCUMENT",
+     "evidence_scope": "COMPUTATIONAL_RESULT",
+     "comparison": "knock-in against wild type, animal as the unit, regions not pooled",
+     "readout_level": "transcript",
+     "id": "O5",
+     "statement": "Independent WWOX-loss contrast (IT7 P3, using the IT7 P1 module): in the P47T knock-in hippocampus the six-gene glycolysis/lactate module gives a contrast of +0.329 (positive = WWOX-loss-like) that lies INSIDE its decile-matched null band (95th percentile 0.389); exact one-sided p = 0.060; five of the six genes are in the build direction. The PDH-axis gene PDK1 is lower by -0.08, in the direction of the two human neural build systems (lower in sign only), not raised as the HIF1A-PDK-PDH chain predicts. Registered verdict: INCONCLUSIVE (neither transfers nor fails to transfer).",
+     "readout": "six-gene module contrast (PDK1, LDHA, LDHB, HK2, SLC2A1, BNIP3) against a decile-matched random-set null",
+     "direction_observed": "module higher in sign, inside its null (p 0.060); PDK1 lower in sign only; no PDH phosphorylation, activity or flux observed",
+     "limits": "Transcript only; one partial-loss missense genotype; animals are the unit and regions of one animal are not independent; the concordance rule that chose the genes passes about 4 of 24 genes by chance; PDH is phosphorylation-controlled and not observed; exploratory; independent verification pending (provisional).",
+     "locators": [
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/loop_demonstration_it7_p6_20261029/README.md",
+       "anchor": "INCONCLUSIVE"
+      },
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/subnetwork_it7_p1_20261029/README.md",
+       "anchor": "signature"
+      }
+     ]
+    },
+    {
+     "model_type": "computational_method_comparison_wild_type_neural_cells",
+     "species": "human cell lines (LINCS neural contexts)",
+     "genotype": "not applicable: wild-type neural cells perturbed by compounds",
+     "tissue_or_cells": "256 compound families with a strict neural signature in a progenitor-like and a neuron-like LINCS context; held-out outcome",
+     "age_stage": "not applicable",
+     "locator_status": "DOCUMENT",
+     "evidence_scope": "COMPUTATIONAL_RESULT",
+     "comparison": "three methods against an unsigned reference, ranking compounds by observed opposition of the six-gene module",
+     "readout_level": "computational",
+     "id": "O6",
+     "statement": "Method comparison (IT7 P3): a signed external network, a transcriptional-signature route and a WWOX-enriched network (four curated HIF1A edges added) show NO ADDED VALUE over an unsigned overlap reference at the pre-registered minimum detectable effect (network rho 0.047; signature rho 0.143, just under 0.15 and under its own random-readout null; WWOX-enriched minus external difference -0.0015). The result concerns module opposition by compounds in wild-type neural cells and says nothing about any compound's effect on PDH; card-linked compounds, including the PDK inhibitor of this need, were excluded from the universe by design.",
+     "readout": "rank correlation of each method's compound ranking with the held-out module opposition",
+     "direction_observed": "no detectable signal at rho 0.15 for any method; no added value",
+     "limits": "Exploratory; minimum detectable effect about rho 0.15; 256 compound families chosen by input availability (not a catalogue screen); the outcome is module opposition by compounds in wild-type neural cells, not an effect in WWOX-deficient cells; transcript, not PDH or LDH activity; card-linked compounds were excluded by design; independent verification was pending when this was recorded (provisional).",
+     "locators": [
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/loop_demonstration_it7_p6_20261029/README.md",
+       "anchor": "NO ADDED VALUE"
+      },
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/subnetwork_it7_p1_20261029/README.md",
+       "anchor": "signature"
+      }
+     ]
     }
    ],
    "inferred": [
     "That PDK1 inhibits PDH in WWOX-deficient neurons (the middle link of the chain) is inferred and is not supported at transcript level in the one neural datum.",
     "That ketone bodies, entering below PDH, restore oxidative flux without reactivating PDH is a mechanistic prediction, not an observation.",
     "That PDK1 is raised in WWOX-deficient human neural cells: PDK1 is not raised in either human neural transcript system held (lower in sign only, inside the single-gene null in both; hNPC one library per arm); HIF1A mRNA is flat in both; the middle link of the chain has no transcript support at PDK1.",
-    "That a PDK inhibitor would release a WWOX-dependent PDH restraint (as opposed to a seizure-secondary one) is inferred; the discriminating measurement is PDHA1 Ser293 phosphorylation and PDH activity with a genotype-by-inhibitor interaction in WWOX-deficient human neural cells (card I01)."
+    "That a PDK inhibitor would release a WWOX-dependent PDH restraint (as opposed to a seizure-secondary one) is inferred; the discriminating measurement is PDHA1 Ser293 phosphorylation and PDH activity with a genotype-by-inhibitor interaction in WWOX-deficient human neural cells (card I01).",
+    "That a PDH restraint can be read from a transcript module, or that a compound can be preferred by a computational ranking on that module, is not supported: neither the P47T transfer test nor the method comparison (IT7 P3) measures PDH phosphorylation, activity or flux, and the comparison showed no added value."
    ],
    "intervention_direction": {
     "direction": "uncertain",
@@ -1527,7 +1585,8 @@
     "The one severe WOREE case lists the ketogenic diet among ineffective interventions (DL-MOL-007).",
     "In the human fibroblast knockdown line cytoplasmic HIF1alpha is DECREASED in two of four conditions (about 2-fold in normoxia normoglycaemia, nearly 2-fold in hypoxia normoglycaemia; equal or higher in the other two), the opposite sign to the mouse embryonic fibroblast observation; the re-supply arm raises lactate in two conditions, so lactate is not dose-faithful.",
     "IT5 P9 (card I01): the PDK transcript is HIGHER in a human WWOX-knockout fibroblast line (qPCR, normoxia and normoglycaemia; PMID 35328751) and in Wwox-null mouse cells, and lower in sign only (inside the single-gene null; neurons +0.44) in the two human neural transcript systems: the sign differs by cell type and each comparison has its own confound. PDH restraint (PDK2 up, PDH down, Ser293 phosphorylation up; PDH activity down by about two thirds) is documented after chemoconvulsant status epilepticus in two non-WWOX epilepsy models, so a restraint found in a seizing WWOX-deficient brain would not be shown to be WWOX-dependent by itself.",
-    "IT5 P9 (card I01): the one primary seizure-endpoint test found of dichloroacetate in a PDH-restrained epilepsy model (mouse, abstract level) showed no anticonvulsant effect and a slight pro-convulsant signal in one test; a randomized paediatric trial (congenital lactic acidosis) lowered post-meal lactate without moving the clinical outcomes measured; the Wwox-null mouse is hypoglycaemic and three of four glucose datasets point to lowering with a PDK inhibitor (diabetic adults, cirrhotic and healthy adults, endotoxaemic minipigs) and one septic-mouse study shows reversal alongside anorexia reversal; the sign in a Wwox-deficient animal is unmeasured."
+    "IT5 P9 (card I01): the one primary seizure-endpoint test found of dichloroacetate in a PDH-restrained epilepsy model (mouse, abstract level) showed no anticonvulsant effect and a slight pro-convulsant signal in one test; a randomized paediatric trial (congenital lactic acidosis) lowered post-meal lactate without moving the clinical outcomes measured; the Wwox-null mouse is hypoglycaemic and three of four glucose datasets point to lowering with a PDK inhibitor (diabetic adults, cirrhotic and healthy adults, endotoxaemic minipigs) and one septic-mouse study shows reversal alongside anorexia reversal; the sign in a Wwox-deficient animal is unmeasured.",
+    "IT7 P3/P1 (provisional): the six-gene module on which the glycolytic end of the chain rests did not transfer decisively to an independent WWOX-loss contrast (P47T hippocampus, p 0.060, inside its null; PDK1 lower by -0.08, not raised), and no network, signature or WWOX-enriched method showed added value over a reference for ranking compounds on it (minimum detectable effect about rho 0.15). The module is not shown to be a reproducible WWOX-loss feature, and the computational methods give no reason to prefer a PDK-directed compound over any other."
    ],
    "sources": {
     "cards": [
@@ -1549,7 +1608,9 @@
      "N-07",
      "N-08"
     ],
-    "documents": [],
+    "documents": [
+     "disease-models/wwox/research/drug_repurposing/loop_demonstration_it7_p6_20261029/README.md"
+    ],
     "registry_ids": [
      "DL-MECH-020",
      "DL-MECH-034",
@@ -1837,11 +1898,69 @@
        "anchor": "Glycolysis and lactate"
       }
      ]
+    },
+    {
+     "model_type": "mouse_p47t_knock_in_hippocampus_computational_reanalysis",
+     "species": "mouse",
+     "genotype": "P47T homozygous knock-in (a partial-loss WW1 missense, not a null) against wild type; 5 versus 5 animals, the same animals supply every region",
+     "tissue_or_cells": "hippocampus, bulk RNA-seq (GSE215425, processed table); module of six genes fixed from the two human neural build systems before the contrast was opened",
+     "age_stage": "adult (age not extracted; UNVERIFIED)",
+     "pmid": "36828035",
+     "locator_status": "DOCUMENT",
+     "evidence_scope": "COMPUTATIONAL_RESULT",
+     "comparison": "knock-in against wild type, animal as the unit, regions not pooled",
+     "readout_level": "transcript",
+     "id": "O6",
+     "statement": "Independent WWOX-loss contrast (IT7 P3, IT7 P1 module): in the P47T knock-in hippocampus the six-gene module contrast is +0.329, inside its decile-matched null band (95th percentile 0.389), exact one-sided p = 0.060; five of six genes in the build direction. The lactate-axis genes split: LDHA +0.48 and HK2 +0.66 in the build direction, SLC2A1 +0.18, but LDHB -0.10 against it; the earlier mouse P17 deposits (seen) also argued against LDHA/LDHB. Registered verdict: INCONCLUSIVE.",
+     "readout": "six-gene module contrast and its per-gene directions (LDHA, LDHB, HK2, SLC2A1, BNIP3, PDK1)",
+     "direction_observed": "LDHA higher; LDHB lower (against the build direction); module inside its null (p 0.060); no lactate or LDH activity observed",
+     "limits": "Transcript only; one partial-loss missense genotype; animals are the unit and regions of one animal are not independent; lactate and LDH activity are unmeasured; exploratory; independent verification pending (provisional).",
+     "locators": [
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/loop_demonstration_it7_p6_20261029/README.md",
+       "anchor": "LDHB"
+      },
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/subnetwork_it7_p1_20261029/README.md",
+       "anchor": "signature"
+      }
+     ]
+    },
+    {
+     "model_type": "computational_method_comparison_wild_type_neural_cells",
+     "species": "human cell lines (LINCS neural contexts)",
+     "genotype": "not applicable: wild-type neural cells perturbed by compounds",
+     "tissue_or_cells": "256 compound families with a strict neural signature in a progenitor-like and a neuron-like LINCS context; held-out outcome",
+     "age_stage": "not applicable",
+     "locator_status": "DOCUMENT",
+     "evidence_scope": "COMPUTATIONAL_RESULT",
+     "comparison": "three methods against an unsigned reference, ranking compounds by observed opposition of the six-gene module",
+     "readout_level": "computational",
+     "id": "O7",
+     "statement": "Method comparison (IT7 P3), verdict NO ADDED VALUE: no network, signature or WWOX-enriched method showed added value over an unsigned reference for ranking compounds on the lactate/glycolysis module (network rho 0.047, signature rho 0.143 below the 0.15 threshold; minimum detectable effect about rho 0.15). The candidate of this need, stiripentol, has no signed action on a stable target and no neural LINCS signature, and was outside the universe by design; the result says nothing about LDH engagement.",
+     "readout": "rank correlation of each method's compound ranking with the held-out module opposition",
+     "direction_observed": "no detectable signal at rho 0.15 for any method; no added value",
+     "limits": "Exploratory; minimum detectable effect about rho 0.15; 256 compound families chosen by input availability (not a catalogue screen); the outcome is module opposition by compounds in wild-type neural cells, not an effect in WWOX-deficient cells; transcript, not PDH or LDH activity; card-linked compounds were excluded by design; independent verification was pending when this was recorded (provisional).",
+     "locators": [
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/loop_demonstration_it7_p6_20261029/README.md",
+       "anchor": "NO ADDED VALUE"
+      },
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/subnetwork_it7_p1_20261029/README.md",
+       "anchor": "signature"
+      }
+     ]
     }
    ],
    "inferred": [
     "That lactate or LDH activity is raised in WWOX-deficient human neural cells independent of maturity is not shown.",
-    "Stiripentol's LDH potency is unresolved (single-concentration measures, no fitted potency); its lactate/respiration effects are not an LDH effect (complex I is inhibited at lower concentrations in isolated mitochondria)."
+    "Stiripentol's LDH potency is unresolved (single-concentration measures, no fitted potency); its lactate/respiration effects are not an LDH effect (complex I is inhibited at lower concentrations in isolated mitochondria).",
+    "That the lactate-axis transcripts mark a WWOX-dependent LDH or lactate change is not supported by the independent transfer test (LDHB discordant, module inside its null); lactate and LDH activity remain unmeasured in WWOX-deficient neural cells."
    ],
    "intervention_direction": {
     "direction": "uncertain",
@@ -1853,7 +1972,8 @@
    "counter_evidence": [
     "Human lactate reported normal or extremely low; lactate falls nominally without amyloid; LDHA in the organoid is as consistent with immaturity as with WWOX loss (HYP-20261026-11).",
     "Stiripentol inhibits mitochondrial complex I at concentrations at or below those that inhibit LDH in lysate (see NEED-MITOCHONDRIAL-RESPIRATION).",
-    "Wwox CRISPRa rescue in flies happened without lowering Ldh (entry 82)."
+    "Wwox CRISPRa rescue in flies happened without lowering Ldh (entry 82).",
+    "IT7 P3/P1 (provisional): in an independent WWOX-loss contrast (P47T hippocampus) the LDH isoforms split (LDHA +0.48, LDHB -0.10 against the build direction) and the six-gene module lies inside its null (p 0.060); no method showed added value for ranking compounds on it. The LDHA elevation seen in two human neural transcript systems is not shown to be a reproducible WWOX-loss feature, and no model ranks stiripentol or any LDH-directed compound."
    ],
    "sources": {
     "cards": [
@@ -1867,7 +1987,9 @@
      "R-11",
      "N-06"
     ],
-    "documents": [],
+    "documents": [
+     "disease-models/wwox/research/drug_repurposing/loop_demonstration_it7_p6_20261029/README.md"
+    ],
     "registry_ids": [
      "DL-BIO-007",
      "DL-BIO-008"
