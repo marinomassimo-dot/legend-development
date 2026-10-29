@@ -317,7 +317,7 @@ def run_e2():
     ci = lambda a: [pct(a, 5), pct(a, 95)]
     # ---- swapped contexts and sensitivities ----------------------------------------------------------------------
     swap = {"SIG": spearman(OE, OB), "NET-EXT": spearman(NET, OB), "NET-WWOX": spearman(NETW, OB), "REF-1": spearman(REF1, OB)}
-    sel1024 = np.array([s["dose"] == "10 uM" and s["time"] == "24 h" for s in sigs])
+    sel1024 = np.array([s["dose"].startswith("10 ") and s["time"] == "24 h" for s in sigs])  # dose strings carry the micro sign
     def fam_med_sub(vec, fams, table, mask):
         o = []
         for f in fams:
@@ -388,9 +388,10 @@ def run_e2():
 def run_e1():
     counts = arg("--counts"); out = arg("--out", os.path.join(HERE, "results")); os.makedirs(out, exist_ok=True)
     op = gzip.open if counts.endswith(".gz") else open
-    rows = list(csv.reader(op(counts, "rt")))
+    txt = op(counts, "rt").read().splitlines(); dl = "\t" if "\t" in txt[0] else ","  # the deposit is tab-delimited despite the .csv name
+    rows = list(csv.reader(txt, delimiter=dl))
     hdr = rows[0]; body = rows[1:]
-    gcol = int(os.environ.get("P3_GENE_COL", "0"))
+    gcol = int(os.environ.get("P3_GENE_COL", "1"))
     samples = [(i, h) for i, h in enumerate(hdr) if "_WT/WT_" in h or "_P47T/P47T_" in h]
     gene = [r[gcol] for r in body]
     X = np.array([[float(r[i]) for i, _ in samples] for r in body])
