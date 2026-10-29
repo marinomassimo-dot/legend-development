@@ -15,7 +15,7 @@
   },
   {
    "id": "NET-WWOX",
-   "it": "la stessa rete con quattro archi HIF1A curati aggiunti"
+   "it": "la stessa rete con quattro archi HIF1A curati aggiunti (non rappresenta il patrimonio WWOX)"
   },
   {
    "id": "SIG",
@@ -82,7 +82,7 @@
   },
   {
    "id": "S3",
-   "comparison_it": "Rete arricchita con archi WWOX contro rete solo esterna",
+   "comparison_it": "Rete con quattro archi HIF1A curati aggiunti contro rete solo esterna (non è un test della conoscenza WWOX in generale)",
    "verdict": "no_added_value",
    "numbers": [
     {

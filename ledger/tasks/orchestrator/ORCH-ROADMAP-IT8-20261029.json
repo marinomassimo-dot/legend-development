@@ -14,8 +14,9 @@
    "steps": [
     {
      "step": "P0 baseline and propagation of three IT7 formulations (predictive comparison, WWOX contribution, absence of data)",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "baseline reconciled; three IT7 formulations traced to the surfaces that carried the overextension (session self-evaluation, README row, cards E02/I01, needs, view labels) and corrected with positive regression PerimeterOfThePredictiveResultIT8; pilot results, criteria and history untouched; view 146 tests OK"
     }
    ]
   },
@@ -24,13 +25,15 @@
    "steps": [
     {
      "step": "P1 classify historical privacy findings read-only (dedup, classes, reachability, tip vs history, scanner vs gate)",
-     "status": "TODO",
-     "owner": "scientist-d"
+     "status": "DONE",
+     "owner": "scientist-d",
+     "evidence": "df7c43cd merged; 204 BLOCK blobs classified, 0 unresolved; gate UUID rule; remedies reserved"
     },
     {
      "step": "P2 licences: from census to practicable corrections (primary terms, attribution fixes, reserved alternatives)",
-     "status": "TODO",
-     "owner": "scientist-d"
+     "status": "DONE",
+     "owner": "scientist-d",
+     "evidence": "f47b2802 merged; verifier defects repaired; reserved R1-R7 listed"
     }
    ]
   },
@@ -44,8 +47,9 @@
     },
     {
      "step": "P4 marginal contribution of WWOX inputs; new computational experiment only if justified",
-     "status": "TODO",
-     "owner": "scientist-b"
+     "status": "DONE",
+     "owner": "scientist-b",
+     "evidence": "wwox_marginal_value_it8_p4_20261029: 211 inputs classified (24 already represented, 56 not usable, 0 usable without contaminating the evaluation = a property of the method grammar, 131 not sufficiently supported); the four HIF1A edges of the IT7 'WWOX-enriched' condition were already in the external network (0 new edges/nodes/signs; 80 of 256 scores moved <=1.4e-5): the IT7 label is a misnomer and the condition says nothing about WWOX knowledge; no new experiment justified; reopening conditions; independent verifier recomputed, defects repaired (7d822f3f)"
     },
     {
      "step": "P5 scientific advance: complete loop on selected open questions (partial benefit; broad recovery)",
@@ -78,9 +82,21 @@
      "owner": "orchestrator"
     }
    ]
+  },
+  "OBJ_F_RANKING": {
+   "order": 6,
+   "steps": [
+    {
+     "step": "P9 provisional dynamic ranking of interventions (operator addition 2026-10-29): inventory, per-objective views, readable criteria, pathway contribution/direction, Top-10 with explanations, version trace, integration in the view, independent verification of top-position premises",
+     "status": "TODO",
+     "owner": "scientist-a"
+    }
+   ]
   }
  },
- "DECISIONS_TAKEN": [],
+ "DECISIONS_TAKEN": [
+  "2026-10-29: operator addition P9 (graduatoria provvisoria e dinamica) queued without interrupting current packages; closing step P8 stays last."
+ ],
  "DEFAULTS_TAKEN": [],
  "STOP_LOG": []
 }

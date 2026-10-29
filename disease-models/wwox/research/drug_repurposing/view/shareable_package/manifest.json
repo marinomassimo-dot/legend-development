@@ -68,7 +68,7 @@
    },
    "^\\.cur\\.footer\\.": {
     "class": "SRC_META",
-    "values": 79,
+    "values": 91,
     "why": "attribution footer: sources, licences, credit lines"
    },
    "^\\.cur\\.needs\\[\\]\\.obs\\[\\]\\.(cite)$": {
@@ -196,14 +196,15 @@
    "PMID": 55
   },
   "links": {
-   "distinct_hrefs": 58,
-   "external_public": 6,
+   "distinct_hrefs": 59,
+   "external_public": 7,
    "hosts": [
     "civicdb.org",
     "open.fda.gov",
     "www.docm.info",
     "www.ebi.ac.uk",
     "www.genenames.org",
+    "www.ncbi.nlm.nih.gov",
     "www.nlm.nih.gov"
    ],
    "internal_anchors": 52
@@ -211,7 +212,7 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 1949,
+    "forbidden-name": 1952,
     "forbidden-wording": 12
    },
    "co_attested_wording": [
@@ -283,7 +284,7 @@
    "label": "chembl",
    "licence": "CC BY-SA 3.0 Unported",
    "path": "class_b/chembl_cc-by-sa-3.0/chembl_cc-by-sa-3.0.jsonl",
-   "records_of": "un registro del repository (non incluso in questo pacchetto) (the twelve ChEMBL records the module's cards name)"
+   "records_of": "the twelve ChEMBL records the module's cards name (selected through the repository's card-to-catalogue link table, not shipped here)"
   }
  ],
  "comparison": {
@@ -373,7 +374,7 @@
   {
    "label": "NCI Cancer Gene Index (via DGIdb)",
    "retrieved": null,
-   "terms": "class C until its terms are read at NCI: DGIdb declares public domain, the Cancer Gene Index page named by DGIdb's importer is gone and cancer.gov's reuse policy names NCI products, not this dataset (P1 independent verification, row L3); rows are counted, never embedded",
+   "terms": "class C until the Cancer Gene Index is covered by a sentence at NCI: DGIdb declares public domain; NCI's reuse page (cancer.gov/policies/copyright-reuse, read 2026-10-29) says text in NCI products is free of copyright unless otherwise indicated, asks that NCI be credited, and flags third-party graphics, but it uses neither the words public domain nor data or datasets and does not name the Cancer Gene Index (IT7 P8 verifier D4; IT8 P2 re-read); rows are counted, never embedded",
    "version": null
   },
   {
@@ -410,7 +411,7 @@
    "label": "UniChem",
    "retrieved": "2026-10-27T22:41:54Z",
    "terms": "cross-reference identifiers only; none is embedded in the page",
-   "version": "Last-Modified un registro del repository (non incluso in questo pacchetto)=Sat, 24 Oct 2026 21:16:36 GMT; un registro del repository (non incluso in questo pacchetto)=Sat, 24 Oct 2026 21:16:01 GMT; un registro del repository (non incluso in questo pacchetto)=Sat, 24 Oct 2026 21:16:11 GMT"
+   "version": "Last-Modified src1src14=Sat, 24 Oct 2026 21:16:36 GMT; src1src2=Sat, 24 Oct 2026 21:16:01 GMT; src1src7=Sat, 24 Oct 2026 21:16:11 GMT"
   },
   {
    "label": "Every Cure MATRIX third-party identifiers (ATC, DrugBank, ChEBI)",
@@ -438,7 +439,7 @@
   "OWN": 54116,
   "ROWNAME": 1506,
   "SRC_A": 91,
-  "SRC_META": 244,
+  "SRC_META": 256,
   "UI": 779
  },
  "embedded_sources": [
@@ -473,8 +474,8 @@
  ],
  "files": {
   "COMPARISON.md": {
-   "bytes": 6113,
-   "sha256": "aa8454b18e65ef09f54b0db8f57c80a4e35fbbf12f1e6e1cb1aaa1d21ff0567f"
+   "bytes": 6433,
+   "sha256": "c89e18c74cca5017ffb15a2cfbb4eeb8024598bceba90c8c686bc98b2e733dea"
   },
   "LICENSES/CC-BY-4.0.txt": {
    "bytes": 18657,
@@ -493,8 +494,8 @@
    "sha256": "e5dfa90d88e2069a2e4fd13429e8ebaefb7bd92fbbaede065af905656bc7ba87"
   },
   "NOTICE.md": {
-   "bytes": 10871,
-   "sha256": "0bfa51cb1947cd055c9b1ddb944a44b8911d203894fffb5594c871970b2de2ee"
+   "bytes": 12612,
+   "sha256": "0cd40c9da986cbe513efc00ed10ac4a914fdb04bd6299ce6eb180e8996611421"
   },
   "README.md": {
    "bytes": 4642,
@@ -502,7 +503,7 @@
   },
   "TEXT_PROVENANCE.json": {
    "bytes": 1870,
-   "sha256": "b0f115d1036a59a6f2cf14629f4f8cb79e68babae801715bbd4b3d77273dfc3e"
+   "sha256": "18e294f1e5ef5af604c1a7b4e3c39bbe6151a7d34739bab23996a4ca0789e26b"
   },
   "class_b/chembl_cc-by-sa-3.0/CREDIT.txt": {
    "bytes": 1636,
@@ -517,8 +518,8 @@
    "sha256": "d8fe6a3455466783564803428b6318c1c442db6a16dfb97de8a6b7dcf944cc9d"
   },
   "index.html": {
-   "bytes": 2482435,
-   "sha256": "1236a53ad427ba42ad43f64376c3e87c234baa761d1b094a8bebc20eb1b510a9"
+   "bytes": 2486729,
+   "sha256": "c5b2eb1ecf6c79cc1bb19f7ac9c81d846cf80b21820bd8bc55c690d6e8b2d8a0"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",
@@ -542,6 +543,24 @@
    "url": "https://www.ebi.ac.uk/chembl/"
   },
   {
+   "attribution": "Gene Expression Omnibus, National Center for Biotechnology Information (https://www.ncbi.nlm.nih.gov/geo/); UniProt Consortium (https://www.uniprot.org/)",
+   "label": "GEO series and UniProt accessions cited in own text",
+   "licence": "accession identifiers only (GSE126075, GSE156243, UniProt accession numbers); no deposited matrix, sequence or annotation text is embedded; NCBI places no restriction on its data but submitters may claim rights (NCBI Policies and Disclaimers page, read 2026-10-29); the UniProt licence page was not readable on 2026-10-29",
+   "url": "https://www.ncbi.nlm.nih.gov/"
+  },
+  {
+   "attribution": "Source: NCBI ClinVar and RefSeq, National Library of Medicine (https://www.ncbi.nlm.nih.gov/clinvar/)",
+   "label": "ClinVar-derived counts and RefSeq accession in own text",
+   "licence": "counts computed in this repository from a ClinVar snapshot, and the RefSeq accession NM_016373.4; NCBI information created by or for the US government is public domain, ClinVar asks for attribution of ClinVar and its submitters (NCBI Policies and Disclaimers page read 2026-10-29; the ClinVar data-use page was not readable)",
+   "url": "https://www.ncbi.nlm.nih.gov/"
+  },
+  {
+   "attribution": "LEGEND WWOX repurposing module (this repository); ChEMBL identifiers: EMBL-EBI, https://www.ebi.ac.uk/chembl/",
+   "label": "Record names shown in the page (1,506 values in the row table)",
+   "licence": "1,464 are catalogue identifiers (ChEMBL accession numbers and DGIDB: hashes of DGIdb drug names, no name text); 42 are card names written in this repository (16 molecule families, 26 interventions or classes). A card name that coincides with a ChEMBL preferred name is used as the compound's name, a fact, not as a copied ChEMBL field; ChEMBL names as data travel only in the separate class-B file",
+   "url": null
+  },
+  {
    "attribution": "LEGEND WWOX repurposing module (this repository)",
    "label": "Catalogue record identifiers",
    "licence": "opaque identifiers of this repository's catalogue (CAT:...), no source content",
@@ -560,7 +579,7 @@
   "lead_field_redactions": 11,
   "pair_status_rule": "pairs[].p.cr.pha[1] (status classes of the row) is dropped in the shareable build: a status class derives from ChEMBL max_phase, DGIdb approved flags, MATRIX and openFDA together, and the build does not re-derive a class-A-only status per row.",
   "pairs_status_class_dropped": 680,
-  "repository_file_names_described": 55,
+  "repository_file_names_described": 48,
   "rule": "IT5 P13 fix. Own analysis stays in the shareable build: a conclusion at the level of a need, a class or a card subject, in our own words, short, attributed to a published work. Withheld: (1) a sentence that states a compound-target(-action) pair together with its database of origin when the pair is asserted only by a class-B/C catalogue source; (2) a compound named in prose whose only provenance in the repository is a class-B/C catalogue row (it appears in no cited full text and is not a card subject); (3) a per-compound status, phase, approval or access statement attributed to a class-B/C source; (4) repository file names, which cannot be used outside the repository. The replacement keeps the research conclusion and names the withheld source class with the phrase in withheld_phrase. The FULL build keeps everything. The audit enforces (1) and (2) by derivation from the catalogue, (3) and (4) by pattern, and every redaction below must match exactly once or more: a stale redaction fails the build.",
   "withheld_phrase": "dato di una fonte non inclusa in questa versione"
  },
@@ -606,7 +625,7 @@
    "ChEMBL": {
     "catalogue_rows": 16947,
     "class": "B",
-    "terms": "CC BY-SA 3.0 Unported; attribution: ChEMBL URL and release version"
+    "terms": "CC BY-SA 3.0 Unported (chembl.gitbook.io); attribution: ChEMBL URL and release version (chembl.github.io/chembl-licensing, read 2026-10-29)"
    },
    "ChEMBL curated mechanism": {
     "catalogue_rows": 8068,
@@ -646,7 +665,7 @@
    "JAX-CKB": {
     "catalogue_rows": 2148,
     "class": "C",
-    "terms": "CC BY-NC-SA 4.0, declared by DGIdb"
+    "terms": "CC BY-NC-SA 4.0, declared by DGIdb and read on ckb.jax.org/about/index (2026-10-29)"
    },
    "MyCancerGenome": {
     "catalogue_rows": 829,
@@ -661,7 +680,7 @@
    "NCI": {
     "catalogue_rows": 6231,
     "class": "C",
-    "terms": "public domain declared by DGIdb only; not verified at NCI"
+    "terms": "public domain declared by DGIdb only; NCI reuse page (read 2026-10-29) says NCI text is free of copyright but does not name data or the Cancer Gene Index"
    },
    "OncoKB": {
     "catalogue_rows": 148,
@@ -671,7 +690,7 @@
    "PharmGKB": {
     "catalogue_rows": 5976,
     "class": "B",
-    "terms": "CC BY-SA 4.0 (ClinPGx); policy page not read"
+    "terms": "CC BY-SA 4.0 (ClinPGx), reported by the DGIdb service; the ClinPGx data-usage page is script-rendered and its text could not be read on 2026-10-29"
    },
    "TALC": {
     "catalogue_rows": 602,
