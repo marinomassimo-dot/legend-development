@@ -1397,6 +1397,42 @@ class It6P13Data(unittest.TestCase):
         for e in wo["entries"]:
             self.assertEqual(e["positions"], sorted(self.groups[e["need"]]))
 
+    # ---- window state (P7)
+    def test_window_state_is_in_the_gene_addition_entry_and_the_c01_c04_briefs(self):
+        wo = self.cur["work_order"]
+        e = next(x for x in wo["entries"] if x["need"] == "NEED-WWOX-GENE-ADDITION")
+        self.assertEqual([x["state"] for x in e["window_state"]], ["prevented_early_window", "recovered_post_onset_model", "unmeasured"])
+        self.assertEqual(set(wo["window_states"]), set(rv.WINDOW_STATES))
+        for cid in ("C01_aav9_wwox", "C04_aav9_endpoint_families"):
+            c = next(x for x in self.cur["cands"] if x["id"] == cid)
+            self.assertEqual(c["brief"]["window"]["states"], ["prevented_early_window", "unmeasured"])
+        self.assertTrue(all(c["brief"].get("window") is None for c in self.cur["cands"] if c["id"] not in wo["card_windows"]))
+        h = self.static_html(self.page)
+        for st in ("prevenuto / finestra precoce", "recuperato dopo l'esordio in un modello", "non misurato"):
+            self.assertIn(html_escape(st), h)
+        # the card wording itself carries the early-window statement (data-driven check at build)
+        for cid in wo["card_windows"]:
+            self.assertRegex(json.dumps(rv.load_cards(DR)[cid][0]), r"(?i)early-window")
+
+    def test_window_state_mutations_fail(self):
+        self.assertTrue(self.mutated_wo(lambda d: d["entries"][0]["window_state"][0].__setitem__("state", "cured")))
+        self.assertTrue(self.mutated_wo(lambda d: d["card_windows"].__setitem__("ZZ99", {"states": ["unmeasured"], "note": "x"})))
+        d = json.loads(json.dumps(self.wo_doc))
+        d["card_windows"]["F01_glutamate_receptor_node"] = {"states": ["prevented_early_window"], "note": "x"}
+        texts = {c: json.dumps(v[0]) for c, v in rv.load_cards(DR).items()}
+        self.assertTrue(any("early-window" in e for e in rv.validate_work_order(d, self.needs, self.groups, self.cards, DR, texts)))   # F01 does not say early-window
+
+    def test_nmdar_chain_uses_f04_with_three_unranked_readings_and_e1(self):
+        ch = next(c for c in self.eg_doc["chains"] if c["id"] == "nmdar-gate")
+        cards = {x for n in ch["nodes"] for x in n.get("cards", [])}
+        self.assertEqual(cards, {"F01_glutamate_receptor_node", "F04_nmdar_intervention_class", "P11_magnesium_nmdar_gate"})
+        self.assertEqual(sum(1 for n in ch["nodes"] if n["label"].startswith("Reading ")), 3)
+        self.assertTrue(any(n["label"].startswith("E1:") and n["col"] == "esperimento" for n in ch["nodes"]))
+        e = next(x for x in self.wo_doc["entries"] if x["need"] == "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR")
+        self.assertIn("F04_nmdar_intervention_class", e["cards"])
+        self.assertIn("P9", e["updated_by"])
+        self.assertIn("E1", e["data"])
+
     def test_shareable_build_carries_graph_brief_and_work_order(self):
         sh = rv.build_payload(DR, "shareable")["cur"]
         self.assertEqual(sh["evidence_graph"]["chains"], self.cur["evidence_graph"]["chains"])

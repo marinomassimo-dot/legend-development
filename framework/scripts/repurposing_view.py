@@ -642,6 +642,9 @@ UI_IT = {
     "wo_update": "Aggiornamento della ricerca", "wo_catalogue": "Costruzione del catalogo", "wo_dates_note": "due date diverse: la prima è l'ultimo aggiornamento di questo ordine di lavoro, la seconda la costruzione del catalogo dei composti",
     "wo_kind": "Motivo del prossimo studio", "wo_q": "Domanda", "wo_data": "Dati che potrebbero risolverla", "wo_change": "Che cosa cambierebbe", "wo_feas": "Fattibilità realmente nota",
     "wo_date": "Data", "wo_upd": "Aggiornato da", "wo_cards": "Schede coinvolte", "wo_pos": "Posizioni del bisogno", "wo_no_pos": "nessuna scheda collegata",
+    "ws_prevented_early_window": "prevenuto / finestra precoce", "ws_recovered_post_onset_model": "recuperato dopo l'esordio in un modello",
+    "ws_symptom_suppression_reversible": "soppressione sintomatica reversibile", "ws_unmeasured": "non misurato",
+    "wo_window": "Stato della finestra", "bf_window": "Stato della finestra",
     "wo_see": "ordine di lavoro di questo bisogno", "wo_text_en": "Testo scientifico in inglese, come memorizzato.", "wo_more": "Dettagli: dati, effetto, fattibilità",
     # technical drill-down
     "td_sum": "Dettagli tecnici",
@@ -954,7 +957,9 @@ NODE_SCOPES = ("wwox", "wwox_other", "non_wwox", "computational", "proposed", "n
 CHAIN_STATES = ("astensione", "ipotesi", "non risolto")
 WO_KINDS = ["verificare un'ipotesi", "chiarire una controevidenza", "risolvere una premessa"]
 KIND_OF_FAMILY = {"F": WO_KINDS[0], "C": WO_KINDS[1], "P": WO_KINDS[2]}
-WO_KEYS = {"need", "kind", "question", "data", "would_change", "feasibility", "date", "updated_by", "cards", "docs"}
+WO_KEYS = {"need", "kind", "question", "data", "would_change", "feasibility", "date", "updated_by", "cards", "docs", "window_state"}
+WINDOW_STATES = ("prevented_early_window", "recovered_post_onset_model", "symptom_suppression_reversible", "unmeasured")   # P7, rescue_window_it6 section 5: the 'window state' column
+WINDOW_WORDING_RE = re.compile(r"early-window", re.I)   # a prevented/early-window state must be stated in the card or need wording itself
 ISO_DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 INTERACTOME_RE = re.compile(r"interactom|interactor|pull-?down|co-?ip\b", re.I)
 NODE_LABEL_MAX = 150
@@ -1091,7 +1096,7 @@ def validate_evidence_graph(doc: dict, card_ids, need_ids, titles: dict, dr: Pat
     return errs
 
 
-def validate_work_order(doc: dict, need_ids: list, groups_by_need: dict, card_ids, dr: Path | None = None) -> list[str]:
+def validate_work_order(doc: dict, need_ids: list, groups_by_need: dict, card_ids, dr: Path | None = None, texts: dict | None = None) -> list[str]:
     """Problems of the hand-authored work order. Entries follow the order of the needs register (no ranking), the kind agrees with the F/C/P positions of that need, no score or rank field exists."""
     errs: list[str] = []
     if doc.get("schema") != WORK_ORDER_SCHEMA:
@@ -1103,6 +1108,25 @@ def validate_work_order(doc: dict, need_ids: list, groups_by_need: dict, card_id
     docs = doc.get("docs")
     errs += _doc_problems(docs, dr, "work order")
     docs = docs if isinstance(docs, dict) else {}
+    texts = texts or {}
+    if set(doc.get("window_states") or {}) != set(WINDOW_STATES):
+        errs.append(f"window_states must be exactly {WINDOW_STATES}")
+
+    def win_problems(items, key, w):
+        out = []
+        for it in items or []:
+            st = it.get("state") if isinstance(it, dict) else None
+            if st not in WINDOW_STATES:
+                out.append(f"{w}: window state {st!r} is not one of {WINDOW_STATES}")
+            elif st == "prevented_early_window" and key in texts and not WINDOW_WORDING_RE.search(texts[key]):
+                out.append(f"{w}: state {st!r} is not backed by the wording of {key} (no 'early-window' statement)")
+        return out
+    for cid, cw in (doc.get("card_windows") or {}).items():
+        if cid not in set(card_ids):
+            errs.append(f"card_windows: dangling card id {cid!r}")
+        errs += win_problems([{"state": x} for x in cw.get("states") or []], cid, f"card_windows {cid!r}")
+        if not cw.get("states") or not str(cw.get("note") or "").strip():
+            errs.append(f"card_windows {cid!r}: states and note are required")
     entries = doc.get("entries")
     if not isinstance(entries, list) or not entries:
         return errs + ["no entries"]
@@ -1132,6 +1156,10 @@ def validate_work_order(doc: dict, need_ids: list, groups_by_need: dict, card_id
             errs.append(f"{w}: kind {e.get('kind')!r} is not one of {WO_KINDS}")
         elif e["kind"] not in allowed_kinds(groups_by_need.get(nid) or ()):
             errs.append(f"{w}: kind {e['kind']!r} does not agree with the positions of the need {sorted(groups_by_need.get(nid) or [])}")
+        errs += win_problems(e.get("window_state"), nid, w)
+        for it in e.get("window_state") or []:
+            if not str(it.get("note") or "").strip():
+                errs.append(f"{w}: every window state needs a note")
         for c in e.get("cards") or []:
             if c not in card_ids:
                 errs.append(f"{w}: dangling card id {c!r}")
@@ -1161,11 +1189,13 @@ def resolve_work_order(doc: dict, groups_by_need: dict) -> dict:
     docs = {k: v["label"] for k, v in doc["docs"].items()}
     entries = [{"need": e["need"], "kind": e["kind"], "question": e["question"], "data": e["data"], "would_change": e["would_change"], "feasibility": e["feasibility"], "date": e["date"],
                 "updated_by": list(e.get("updated_by") or []), "cards": list(e.get("cards") or []), "docs": [{"id": d, "label": docs[d]} for d in e.get("docs") or []],
+                "window_state": [dict(x) for x in e.get("window_state") or []],
                 "positions": sorted(groups_by_need.get(e["need"]) or [])} for e in doc["entries"]]
-    return {"research_update": doc["research_update"], "kinds": list(WO_KINDS), "entries": entries}
+    return {"research_update": doc["research_update"], "kinds": list(WO_KINDS), "entries": entries, "window_states": list(WINDOW_STATES),
+            "card_windows": {k: {"states": list(v["states"]), "note": v["note"]} for k, v in sorted((doc.get("card_windows") or {}).items())}}
 
 
-def load_curated_docs(dr: Path, cands: list, cneeds: list, titles: dict) -> tuple[dict, dict]:
+def load_curated_docs(dr: Path, cands: list, cneeds: list, titles: dict, texts: dict | None = None) -> tuple[dict, dict]:
     """Reads and validates view/evidence_graph.json and view/work_order.json against the cards, the needs and the title cache. An invalid file is a build error, never a silent omission."""
     card_ids = [c["id"] for c in cands]
     need_ids = [n["id"] for n in cneeds]
@@ -1174,7 +1204,7 @@ def load_curated_docs(dr: Path, cands: list, cneeds: list, titles: dict) -> tupl
         for nid, l in c["links"].items():
             groups[nid].add(l["group"])
     out = []
-    for name, fn, args in ((GRAPH_NAME, validate_evidence_graph, (card_ids, need_ids, titles, dr)), (WORK_ORDER_NAME, validate_work_order, (need_ids, groups, card_ids, dr))):
+    for name, fn, args in ((GRAPH_NAME, validate_evidence_graph, (card_ids, need_ids, titles, dr)), (WORK_ORDER_NAME, validate_work_order, (need_ids, groups, card_ids, dr, texts))):
         p = dr / name
         if not p.exists():
             raise SystemExit(f"{name} is missing: the evidence graph and the work order are part of the view")
@@ -1449,7 +1479,11 @@ def build_curated(dr: Path, ctx: dict) -> dict:
             c["short"] = f'{c["short"]} [{c["id"].split("_")[0]}]'
     for c in cands:   # IT6 P13: the one-page synthesis (8 fields) is assembled here, from the card and its needs only
         c["brief"] = make_brief(c, nmap)
-    eg, wo = load_curated_docs(dr, cands, cneeds, titles)
+    wtexts = {cid: json.dumps(v[0], ensure_ascii=False) for cid, v in cards.items()}
+    wtexts.update({n["id"]: json.dumps(n, ensure_ascii=False) for n in needs})
+    eg, wo = load_curated_docs(dr, cands, cneeds, titles, wtexts)
+    for c in cands:   # window state (prevented / recovered after onset / reversible suppression / not measured), shown as chips next to the brief
+        c["brief"]["window"] = wo["card_windows"].get(c["id"])
     # ---- threads
     threads = []
     for fam in dict.fromkeys(n["thread"] for n in cneeds):
@@ -2454,12 +2488,14 @@ def render_work_order(P: dict) -> str:
     for e in wo["entries"]:
         n = nm[e["need"]]
         pos = "".join(pos_chip(g) for g in e["positions"]) or f'<span class="mut">{E(U["wo_no_pos"])}</span>'
+        ws = "".join(f'<li><span class="chip ws ws-{E(x["state"])}">{E(U["ws_" + x["state"]])}</span> <span class="mini">{E(x["note"])}</span></li>' for x in e["window_state"])
+        win = f'<div class="wo-win"><b class="mini">{E(U["wo_window"])}:</b><ul class="mini">{ws}</ul></div>' if ws else ""
         upd = (f'<dt>{E(U["wo_upd"])}</dt><dd>{E(", ".join(e["updated_by"]))}</dd>') if e["updated_by"] else ""
         cards = ", ".join(E(c) for c in e["cards"])
         items.append(
             f'<article class="wo-item" id="wo-{E(e["need"])}" data-need="{E(e["need"])}" data-kind="{E(e["kind"])}"><h4>{E(NEED_IT.get(e["need"], n["short"]))} <span class="mut">{E(e["need"])}</span></h4>'
             f'<div class="wo-meta"><span class="chip wo-k wo-k-{kcls[e["kind"]]}" title="{E(U["wo_kind"])}">{E(U["wo_kind"])}: <b>{E(e["kind"])}</b></span> <span class="mini mut">{E(U["wo_pos"])}:</span> {pos}</div>'
-            f'<p class="wo-q"><b>{E(U["wo_q"])}.</b> {E(e["question"])}</p>'
+            f'<p class="wo-q"><b>{E(U["wo_q"])}.</b> {E(e["question"])}</p>{win}'
             f'<details class="inl"><summary>{E(U["wo_more"])}</summary><dl class="wo-dl"><dt>{E(U["wo_data"])}</dt><dd>{E(e["data"])}</dd><dt>{E(U["wo_change"])}</dt><dd>{E(e["would_change"])}</dd>'
             f'<dt>{E(U["wo_feas"])}</dt><dd class="wo-feas">{E(e["feasibility"])}</dd><dt>{E(U["wo_date"])}</dt><dd>{E(e["date"])}</dd>{upd}<dt>{E(U["wo_cards"])}</dt><dd>{cards}</dd></dl>'
             f'<p class="mini mut">{E(U["wo_text_en"])}</p></details></article>')

@@ -1,16 +1,45 @@
 {
   "schema": "legend.wwox.work_order/1",
   "research_update": "2026-10-29",
-  "authoring": "Hand-authored from the work order of the priority review (section 6) and updated by the iteration-6 cycles. Validated at build time by repurposing_view.py: every need id must exist in the needs register, the entries follow the order of the needs register (no ranking), the kind must agree with the F/C/P positions the view assigns to that need, and the dates are ISO dates. The research-update date is shown apart from the catalogue build date. No score, no probability, no ranking of treatments or of needs. Card F04 (P9) was not on main when this file was written; the excitatory-gain entry cites F01 and P11 and is refreshed after that merge.",
-  "kinds": ["verificare un'ipotesi", "chiarire una controevidenza", "risolvere una premessa"],
+  "authoring": "Hand-authored from the work order of the priority review (section 6) and updated by the iteration-6 cycles. Validated at build time by repurposing_view.py: every need id must exist in the needs register, the entries follow the order of the needs register (no ranking), the kind must agree with the F/C/P positions the view assigns to that need, and the dates are ISO dates. The research-update date is shown apart from the catalogue build date. No score, no probability, no ranking of treatments or of needs. Window states (P7, rescue-window record section 5) are a closed vocabulary; for cards the build checks that the card wording itself carries the early-window statement.",
+  "kinds": [
+    "verificare un'ipotesi",
+    "chiarire una controevidenza",
+    "risolvere una premessa"
+  ],
   "docs": {
-    "P4": {"path": "mouse_wwox_p17_it6_p4_20261029/README.md", "label": "IT6 P4 record: ISR gene sets in mouse P17 brain"},
-    "P6": {"path": "broad_recovery_it6_p6_20261029/README.md", "label": "IT6 P6 record: route blockade of a destabilised missense protein"},
-    "P7": {"path": "rescue_window_it6_20261029.md", "label": "IT6 P7 record: rescue window"},
-    "P10": {"path": "partial_benefit_it6_p10_20261029/README.md", "label": "IT6 P10 record: glial reactivity"},
-    "P11": {"path": "supplement_diet_it6_p11_20261029/README.md", "label": "IT6 P11 record: magnesium and the NMDAR gate"},
-    "REVIEW": {"path": "priority_review_it6_20261029.md", "label": "IT6 P2 priority review"},
-    "ISR-DESIGN": {"path": "isr_kinase_interactome_atf4_reconciliation_it4_20261028.md", "label": "IT4 note: ISR kinase attribution, revised design"}
+    "P4": {
+      "path": "mouse_wwox_p17_it6_p4_20261029/README.md",
+      "label": "IT6 P4 record: ISR gene sets in mouse P17 brain"
+    },
+    "P6": {
+      "path": "broad_recovery_it6_p6_20261029/README.md",
+      "label": "IT6 P6 record: route blockade of a destabilised missense protein"
+    },
+    "P7": {
+      "path": "rescue_window_it6_20261029.md",
+      "label": "IT6 P7 record: rescue window"
+    },
+    "P10": {
+      "path": "partial_benefit_it6_p10_20261029/README.md",
+      "label": "IT6 P10 record: glial reactivity"
+    },
+    "P11": {
+      "path": "supplement_diet_it6_p11_20261029/README.md",
+      "label": "IT6 P11 record: magnesium and the NMDAR gate"
+    },
+    "REVIEW": {
+      "path": "priority_review_it6_20261029.md",
+      "label": "IT6 P2 priority review"
+    },
+    "ISR-DESIGN": {
+      "path": "isr_kinase_interactome_atf4_reconciliation_it4_20261028.md",
+      "label": "IT4 note: ISR kinase attribution, revised design"
+    },
+    "P9": {
+      "path": "nmdar_pharmacology_it6_p9_20261029/README.md",
+      "label": "IT6 P9 record: NMDAR intervention class and the isolated-current discriminator"
+    }
   },
   "entries": [
     {
@@ -21,9 +50,31 @@
       "would_change": "Quantified myelination would add a controlled row on the same need; a failure would move the card to C2 by rule; a treated-after-onset arm would show whether the word recovery may be used for that endpoint.",
       "feasibility": "Wet-lab work in a Wwox-null mouse by a laboratory that has the vector; none known in this repository; the source laboratory is one group (the two papers share a senior author). Whether the vector is obtainable: non nota.",
       "date": "2026-10-29",
-      "updated_by": ["P7"],
-      "cards": ["C01_aav9_wwox", "C04_aav9_endpoint_families"],
-      "docs": ["P7", "REVIEW"]
+      "updated_by": [
+        "P7"
+      ],
+      "cards": [
+        "C01_aav9_wwox",
+        "C04_aav9_endpoint_families"
+      ],
+      "docs": [
+        "P7",
+        "REVIEW"
+      ],
+      "window_state": [
+        {
+          "state": "prevented_early_window",
+          "note": "Mouse: every endpoint is read after treatment at P0 to P5 in animals never measured before it."
+        },
+        {
+          "state": "recovered_post_onset_model",
+          "note": "Only organoid hyperexcitability: AAV9 at week 10 on a phenotype present at week 7, read at week 16; radial glia not corrected; persistence not measured."
+        },
+        {
+          "state": "unmeasured",
+          "note": "Any mouse treatment after P5, a pre-treatment baseline, reversibility."
+        }
+      ]
     },
     {
       "need": "NEED-WWOX-MISSENSE-PROTEIN-RESCUE",
@@ -33,9 +84,18 @@
       "would_change": "No protein with synthesis present closes A02 and A05 for this allele; soluble native protein on the ruler would give the first WWOX-system row on the need; protein without function would give C1; a lysosome-only effect would show the proteasome lever is wrong for this lesion class.",
       "feasibility": "A cell line expressing the variant is not held; the design is complete, but the function ruler it depends on is a design and not yet validated.",
       "date": "2026-10-29",
-      "updated_by": ["P6", "P5"],
-      "cards": ["A01_pba_class", "A02_proteasome_inhibitor_class"],
-      "docs": ["P6", "REVIEW"]
+      "updated_by": [
+        "P6",
+        "P5"
+      ],
+      "cards": [
+        "A01_pba_class",
+        "A02_proteasome_inhibitor_class"
+      ],
+      "docs": [
+        "P6",
+        "REVIEW"
+      ]
     },
     {
       "need": "NEED-ISR-ATTENUATION",
@@ -45,9 +105,17 @@
       "would_change": "A measured elevation would give the need its first controlled WWOX-system row on the pathway; a flat result removes the premise of F3 for card E01. Transcripts alone cannot do either: the mouse analysis found no resolvable sign at about 0.3.",
       "feasibility": "No suitable dataset is held (the progenitor deposit failed its pre-declared gates; the mouse deposits hold transcripts only); availability of isogenic lines: non nota.",
       "date": "2026-10-29",
-      "updated_by": ["P4"],
-      "cards": ["E01_isr_modulators"],
-      "docs": ["P4", "ISR-DESIGN", "REVIEW"]
+      "updated_by": [
+        "P4"
+      ],
+      "cards": [
+        "E01_isr_modulators"
+      ],
+      "docs": [
+        "P4",
+        "ISR-DESIGN",
+        "REVIEW"
+      ]
     },
     {
       "need": "NEED-PDH-PYRUVATE-AXIS",
@@ -58,8 +126,13 @@
       "feasibility": "Human fibroblast precedent exists at abstract level; the WWOX-deficient cells (organoids from a public deposit) need an access request that exists as a draft only and is not to be filed from here.",
       "date": "2026-10-29",
       "updated_by": [],
-      "cards": ["E03_pdk_inhibition_dca", "I01_pdk_inhibition_dca_premise_seizure_glycaemia"],
-      "docs": ["REVIEW"]
+      "cards": [
+        "E03_pdk_inhibition_dca",
+        "I01_pdk_inhibition_dca_premise_seizure_glycaemia"
+      ],
+      "docs": [
+        "REVIEW"
+      ]
     },
     {
       "need": "NEED-LACTATE-LDH",
@@ -70,20 +143,35 @@
       "feasibility": "Cell lines and fly stocks: non nota. A public request draft exists in this directory, but registration or contact is not performed from here.",
       "date": "2026-10-29",
       "updated_by": [],
-      "cards": ["E02_ldh_inhibition"],
-      "docs": ["REVIEW"]
+      "cards": [
+        "E02_ldh_inhibition"
+      ],
+      "docs": [
+        "REVIEW"
+      ]
     },
     {
       "need": "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR",
       "kind": "verificare un'ipotesi",
-      "question": "Is the d-APV effect an NMDAR effect (AMPAR untested), does graded blockade keep it, and does the bursting depend on the magnesium block (a gain, or a permissive dependence)?",
-      "data": "Card F01 next measurement: graded memantine against perampanel against d-APV in Wwox-deficient slices with wild-type, heterozygote and vehicle arms; and card P11: a graded bath-Mg2+ titration in knockout, heterozygote and wild-type slices in the source medium with d-APV as ceiling, the composition of the recording bath, the NMDA:AMPA ratio under voltage control, and serum and cerebrospinal-fluid Mg in the knockout mouse.",
-      "would_change": "A graded effect with controls gives a non-tool F1; no effect with a partial blocker gives C1 and shows the tool result does not transfer; a titration that cannot lower bursts inside a reachable range closes the magnesium strand.",
+      "question": "Which of three readings (NMDAR gain, permissive necessity, AMPAR-led drive) explains the d-APV-sensitive bursting, and does the bursting depend on the magnesium block? The d-APV result alone does not separate them.",
+      "data": "Card F04, step E1: the isolated NMDAR current under voltage control (AMPAR and GABA-A blocked) in knockout, heterozygote and wild-type slices: amplitude, decay, NMDA:AMPA ratio, GluN2B and GluN2A shares, resting potential and input resistance; then concentration-response of d-APV and of a GluN2B-selective tool, and a use-dependent pore blocker (memantine as a translation probe, with Mg2+ and holding potential stated). Card P11: a graded bath-Mg2+ titration in the source medium with d-APV as ceiling, the composition of the recording bath, and serum and cerebrospinal-fluid Mg in the knockout mouse. The graded memantine against perampanel design of card F01 is superseded as discriminator by F04.",
+      "would_change": "E1 decides whether an NMDAR gain is present or the dependence is permissive; a partial blocker is read only after E1, and without E1 a memantine result cannot be attributed to pyramidal receptors. A titration that cannot lower bursts inside a reachable range closes the magnesium strand.",
       "feasibility": "Slice electrophysiology in the neuron-specific knockout of the original paper; the line is not held here and whether it is obtainable is non nota. Magnesium products have US label evidence by name only; Italy was not checked.",
       "date": "2026-10-29",
-      "updated_by": ["P11"],
-      "cards": ["F01_glutamate_receptor_node", "P11_magnesium_nmdar_gate"],
-      "docs": ["P11", "REVIEW"]
+      "updated_by": [
+        "P9",
+        "P11"
+      ],
+      "cards": [
+        "F01_glutamate_receptor_node",
+        "F04_nmdar_intervention_class",
+        "P11_magnesium_nmdar_gate"
+      ],
+      "docs": [
+        "P9",
+        "P11",
+        "REVIEW"
+      ]
     },
     {
       "need": "NEED-SEIZURE-CONTROL-SYMPTOMATIC",
@@ -94,8 +182,15 @@
       "feasibility": "The mouse experiment is the one already published by one laboratory; animals and the Wwox-null line are not available here (non nota). Denominators: with the case-series authors; contact is out of scope for this repository and not attempted.",
       "date": "2026-10-29",
       "updated_by": [],
-      "cards": ["EB-ETX-01", "G01_lithium_gsk3", "EB-KD-01", "EB-VGB-01"],
-      "docs": ["REVIEW"]
+      "cards": [
+        "EB-ETX-01",
+        "G01_lithium_gsk3",
+        "EB-KD-01",
+        "EB-VGB-01"
+      ],
+      "docs": [
+        "REVIEW"
+      ]
     },
     {
       "need": "NEED-T-TYPE-CALCIUM",
@@ -106,8 +201,13 @@
       "feasibility": "non nota (apinocaltamide is a sponsor compound with no access evidence obtained here).",
       "date": "2026-10-29",
       "updated_by": [],
-      "cards": ["EB-ETX-01", "H01_apinocaltamide_ttype"],
-      "docs": ["REVIEW"]
+      "cards": [
+        "EB-ETX-01",
+        "H01_apinocaltamide_ttype"
+      ],
+      "docs": [
+        "REVIEW"
+      ]
     },
     {
       "need": "NEED-MYELINATION",
@@ -118,8 +218,13 @@
       "feasibility": "Animal work; the neuron-specific deletion line is not held here (non nota). Human MRI denominators are not available from the abstract.",
       "date": "2026-10-29",
       "updated_by": [],
-      "cards": ["H02_gabaat_inactivator_myelin_exposure", "EB-VGB-01"],
-      "docs": ["REVIEW"]
+      "cards": [
+        "H02_gabaat_inactivator_myelin_exposure",
+        "EB-VGB-01"
+      ],
+      "docs": [
+        "REVIEW"
+      ]
     },
     {
       "need": "NEED-MYC-PROGENITOR-PROLIFERATION",
@@ -130,8 +235,12 @@
       "feasibility": "A51 is a multi-kinase inhibitor with the safety gate open (card); the organoid line is not held (non nota).",
       "date": "2026-10-29",
       "updated_by": [],
-      "cards": ["D01_a51"],
-      "docs": ["REVIEW"]
+      "cards": [
+        "D01_a51"
+      ],
+      "docs": [
+        "REVIEW"
+      ]
     },
     {
       "need": "NEED-NEUROINFLAMMATION-GLIA",
@@ -141,9 +250,15 @@
       "would_change": "It decides whether this need is a readout, a seizure consequence or a seizure-independent lever. Until then no glial modulator is proposed, and no position moves by itself.",
       "feasibility": "non nota (the null or neuron-restricted deletion line, the recording set-up and the animal facility are not held here).",
       "date": "2026-10-29",
-      "updated_by": ["P10"],
-      "cards": ["J01_glial_reactivity_modulation"],
-      "docs": ["P10"]
+      "updated_by": [
+        "P10"
+      ],
+      "cards": [
+        "J01_glial_reactivity_modulation"
+      ],
+      "docs": [
+        "P10"
+      ]
     },
     {
       "need": "NEED-SYSTEMIC-GLYCAEMIA-GROWTH",
@@ -154,8 +269,34 @@
       "feasibility": "Same laboratory and mouse as for gene addition; availability non nota.",
       "date": "2026-10-29",
       "updated_by": [],
-      "cards": ["C04_aav9_endpoint_families"],
-      "docs": ["REVIEW"]
+      "cards": [
+        "C04_aav9_endpoint_families"
+      ],
+      "docs": [
+        "REVIEW"
+      ]
     }
-  ]
+  ],
+  "window_states": {
+    "prevented_early_window": "prevented or early-window: treatment precedes the endpoint, onset of the phenotype never located",
+    "recovered_post_onset_model": "recovered after onset in a model: treatment follows a documented phenotype",
+    "symptom_suppression_reversible": "reversible symptomatic suppression of a manifested state",
+    "unmeasured": "not measured"
+  },
+  "card_windows": {
+    "C01_aav9_wwox": {
+      "states": [
+        "prevented_early_window",
+        "unmeasured"
+      ],
+      "note": "Neonatal treatment (P0 to P5) of animals never recorded before it; recovery after onset was not tested in the mouse."
+    },
+    "C04_aav9_endpoint_families": {
+      "states": [
+        "prevented_early_window",
+        "unmeasured"
+      ],
+      "note": "All endpoints read after neonatal treatment; correction after onset (hypoglycaemia, myelin, gliosis) was not tested."
+    }
+  }
 }

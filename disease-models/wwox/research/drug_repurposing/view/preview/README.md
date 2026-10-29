@@ -49,7 +49,7 @@ Measured with `python3 -B framework/scripts/repurposing_view.py viewports --shot
 | 390 | yes / no | 390 / 390 and 390 / 375 |
 | 768 | no | 768 / 753 |
 | 1280 | no | 1280 / 1265 |
-| 794 (A4 print media) | no | `print_brief` (the longest synthesis): 1 PDF page; `print_brief_all` (every card): 35 pages for 35 cards, so each prints on exactly one A4 page |
+| 794 (A4 print media) | no | `print_brief` (the longest synthesis): 1 PDF page; `print_brief_all` (every card): 36 pages for 36 cards, so each prints on exactly one A4 page |
 
 | File | What to look at |
 |---|---|

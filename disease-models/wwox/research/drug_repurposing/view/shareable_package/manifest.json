@@ -18,12 +18,12 @@
    },
    "^\\.cur\\.(needs|threads|groups|gaps|goals|tracks|scopes|group_note|meta|evidence_graph|work_order)(\\.|\\[\\]|$)": {
     "class": "OWN",
-    "values": 2449,
+    "values": 2534,
     "why": "needs, threads, positions, evidence graph and work order written in this repository"
    },
    "^\\.cur\\.cands\\[\\]\\.": {
     "class": "OWN",
-    "values": 5408,
+    "values": 5448,
     "why": "card text and computed positions (provenance of the prose: see text audit)"
    },
    "^\\.cur\\.cands\\[\\]\\.(pmids\\[\\]\\.(id|role)|dois\\[\\])$": {
@@ -58,12 +58,12 @@
    },
    "^\\.cur\\.evidence_graph\\.chains\\[\\]\\.(nodes\\[\\]\\.pmids\\[\\]|edges\\[\\]\\.src\\.id)$": {
     "class": "BIBLIO",
-    "values": 86,
+    "values": 92,
     "why": "PMID cited by the hand-authored evidence graph"
    },
    "^\\.cur\\.evidence_graph\\.chains\\[\\]\\.edges\\[\\]\\.src\\.title$": {
     "class": "BIBLIO",
-    "values": 60,
+    "values": 66,
     "why": "title of a cited work (bibliographic fact, from the title cache)"
    },
    "^\\.cur\\.footer\\.": {
@@ -183,7 +183,7 @@
    },
    "^\\.ui\\.": {
     "class": "UI",
-    "values": 588,
+    "values": 594,
     "why": "Italian orientation text (builder data UI_IT and siblings)"
    }
   },
@@ -211,7 +211,7 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 1727,
+    "forbidden-name": 1725,
     "forbidden-wording": 11
    },
    "co_attested_wording": [
@@ -427,14 +427,14 @@
   "view_schema": "legend.wwox.repurposing_view/2"
  },
  "embedded_field_classes": {
-  "BIBLIO": 1768,
+  "BIBLIO": 1780,
   "COUNT": 7749,
   "ID": 3044,
-  "OWN": 52456,
+  "OWN": 52581,
   "ROWNAME": 1504,
   "SRC_A": 91,
   "SRC_META": 244,
-  "UI": 588
+  "UI": 594
  },
  "embedded_sources": [
   {
@@ -512,8 +512,8 @@
    "sha256": "d8fe6a3455466783564803428b6318c1c442db6a16dfb97de8a6b7dcf944cc9d"
   },
   "index.html": {
-   "bytes": 2235979,
-   "sha256": "f98cff30f868ac240160fd16eaf22dbb4a76bed699fd41c3be178709c700755f"
+   "bytes": 2249565,
+   "sha256": "9aa1f527ab13e1c6377a811893f9599ac35d448e4008a21b13fdaa98f3182972"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",
