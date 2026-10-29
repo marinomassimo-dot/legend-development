@@ -1,0 +1,31 @@
+unit_id	label	kind	cards	merge_reason	excluded	excluded_reason
+U01	4-phenylbutyrate and bile-acid chemical chaperones (class)	drug_class	A01_pba_class			
+U02	Proteasome-inhibitor class (degradation blockade)	drug_class	A02_proteasome_inhibitor_class			
+U03	Client-binding pharmacological chaperone (SDR-domain ligand)	mechanism_class	A03_client_binding_chaperone			
+U04	ER-proteostasis regulators (IRE1/XBP1s, ERAD)	mechanism_class	A04_er_proteostasis_regulators			
+U05	HSP70-axis modulation	mechanism_class	A05_hsp70_axis			
+U06	PTC read-through agents, amlexanox and class	drug_class	B01_amlexanox;B02_readthrough_class	amlexanox (B01) is a named member of the read-through class (B02); one intervention, counted once		
+U07	AAV9-delivered human WWOX (gene addition)	modality_gene_addition	C01_aav9_wwox;C04_aav9_endpoint_families	C01 and C04 carry endpoint families of the same dose-study experiments; the two papers share a senior author; counted once		
+U08	Splice-correcting antisense oligonucleotide / editing (splice-acceptor allele)	modality_oligonucleotide	C02_splice_aso			
+U09	Endogenous boost (CRISPRa or equivalent)	modality_gene_regulation	C03_crispra_boost			
+U10	A51, a multi-kinase inhibitor (experimental)	experimental_compound	D01_a51			
+U11	Wnt-lowering (tankyrase-type) agents	mechanism_class	D02_wnt_tankyrase			
+U12	Integrated-stress-response modulators (class)	mechanism_class	E01_isr_modulators			
+U13	LDH inhibition or lowering (stiripentol, LDHA tool compounds, oligonucleotide)	drug_class	E02_ldh_inhibition			
+U14	Dichloroacetate and PDK inhibition	drug_class	E03_pdk_inhibition_dca;I01_pdk_inhibition_dca_premise_seizure_glycaemia	E03 and I01 are two cards on the same prototype (dichloroacetate) and its class; the comparison record CMP-05 treats them together; counted once		
+U15	Ketogenic diet (complex dietary intervention)	diet	E04_ketogenic_lactate_axis;EB-KD-01	E04 (lactate-axis card, abstention) and EB-KD-01 (case reports) concern the same diet; the comparison record CMP-06 treats them together; counted once		
+U16	Cannabidiol (class level)	single_compound_class_level	EB-CBD-AX-01			
+U17	Ethosuximide	single_compound	EB-ETX-01			
+U18	ACTH, corticosteroids and phenobarbital-containing regimens (class level)	drug_class	EB-HORM-AX-01			
+U19	mTOR-inhibitor class (sirolimus)	drug_class	EB-MTOR-AX-01			
+U20	Vigabatrin and GABA-aminotransferase inactivators	single_compound_and_class	EB-VGB-01;H02_gabaat_inactivator_myelin_exposure	EB-VGB-01 (WWOX case reports, seizure) and H02 (myelin exposure limit; same compound plus its sibling CPP-115) are one compound's evidence on different needs; counted once, per-need positions kept		
+U21	NMDAR and AMPAR intervention class (d-APV tool, memantine, perampanel and others)	drug_class_with_tool_evidence	F01_glutamate_receptor_node;F04_nmdar_intervention_class	F01 holds the WWOX-system readout (a tool compound) and F04 the class comparison on the same need; the comparison record CMP-07 treats the class; counted once; the WWOX readout belongs to the tool compound only		
+U22	Pro-myelinating agents (activity-dependent myelination sign problem)	mechanism_class	F02_myelination_activity_sign			
+U23	Bumetanide and the chloride gradient	single_compound_class_level	F03_bumetanide_chloride_gradient			
+U24	Lithium	single_compound	G01_lithium_gsk3			
+U25	Apinocaltamide (T-type calcium channel blocker, clinical-stage)	single_compound	H01_apinocaltamide_ttype			
+U26	Glial-reactivity modulators (class)	mechanism_class	J01_glial_reactivity_modulation			
+U27	Extracellular magnesium (nutrient / supplement)	nutrient_ion	P11_magnesium_nmdar_gate			
+X01	Developmental benefit or disease modification (axis)	axis_not_an_intervention	EB-DEV-AX-01		yes	an endpoint axis with no candidate: it is not an intervention and has nothing to rank; excluded from the ranking of interventions
+X02	Growth endpoint (axis)	axis_not_an_intervention	EB-GROWTH-AX-01		yes	an endpoint axis with no candidate: it is not an intervention and has nothing to rank; excluded from the ranking of interventions
+X03	Pharmacodynamic anchor (axis)	axis_not_an_intervention	EB-PDANCHOR-AX-01		yes	an axis with no candidate and no linked need: not an intervention; excluded from the ranking of interventions
