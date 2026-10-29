@@ -1,0 +1,480 @@
+{
+  "schema_version": 1,
+  "input_sha256": "05e6cb98f7277b549fffbe6c387618100526c9f559b3c382318ab674063f57a5",
+  "epistemic_status": "IPOTESI",
+  "canonical": false,
+  "assessment": "REQUIRES_QUALIFICATION",
+  "directional_summary": "UNRESOLVED",
+  "endpoint_outcomes": [],
+  "comparisons": [
+    {
+      "assertion_id": "DR-A02-001",
+      "status": "UNRESOLVED",
+      "reasons": [
+        "target_id: mismatch or unknown",
+        "endpoint: mismatch or unknown",
+        "context.disease_id: mismatch or unknown",
+        "context.genotype: mismatch or unknown",
+        "context.cell_type: mismatch or unknown",
+        "context.developmental_stage: mismatch or unknown"
+      ]
+    },
+    {
+      "assertion_id": "DR-A02-002",
+      "status": "UNRESOLVED",
+      "reasons": [
+        "target_id: mismatch or unknown",
+        "endpoint: mismatch or unknown",
+        "context.disease_id: mismatch or unknown",
+        "context.genotype: mismatch or unknown",
+        "context.species: mismatch or unknown",
+        "context.cell_type: mismatch or unknown",
+        "context.developmental_stage: mismatch or unknown"
+      ]
+    },
+    {
+      "assertion_id": "DR-A02-003",
+      "status": "UNRESOLVED",
+      "reasons": [
+        "target_id: mismatch or unknown",
+        "endpoint: mismatch or unknown",
+        "context.disease_id: mismatch or unknown",
+        "context.genotype: mismatch or unknown",
+        "context.species: mismatch or unknown",
+        "context.cell_type: mismatch or unknown",
+        "context.developmental_stage: mismatch or unknown",
+        "direction unknown"
+      ]
+    },
+    {
+      "assertion_id": "DR-A02-004",
+      "status": "UNRESOLVED",
+      "reasons": [
+        "target_id: mismatch or unknown",
+        "endpoint: mismatch or unknown",
+        "context.disease_id: mismatch or unknown",
+        "context.genotype: mismatch or unknown",
+        "context.species: mismatch or unknown",
+        "context.cell_type: mismatch or unknown",
+        "context.developmental_stage: mismatch or unknown"
+      ]
+    },
+    {
+      "assertion_id": "DR-A02-005",
+      "status": "UNRESOLVED",
+      "reasons": [
+        "target_id: mismatch or unknown",
+        "endpoint: mismatch or unknown",
+        "context.disease_id: mismatch or unknown",
+        "context.genotype: mismatch or unknown",
+        "context.species: mismatch or unknown",
+        "context.cell_type: mismatch or unknown",
+        "context.developmental_stage: mismatch or unknown"
+      ]
+    },
+    {
+      "assertion_id": "DR-A02-006",
+      "status": "UNRESOLVED",
+      "reasons": [
+        "target_id: mismatch or unknown",
+        "endpoint: mismatch or unknown",
+        "context.disease_id: mismatch or unknown",
+        "context.genotype: mismatch or unknown",
+        "context.species: mismatch or unknown",
+        "context.cell_type: mismatch or unknown",
+        "context.developmental_stage: mismatch or unknown",
+        "reported no change, in a cell that is not comparable: a measured null, not an unmeasured cell"
+      ]
+    },
+    {
+      "assertion_id": "DR-A02-007",
+      "status": "UNRESOLVED",
+      "reasons": [
+        "target_id: mismatch or unknown",
+        "endpoint: mismatch or unknown",
+        "context.disease_id: mismatch or unknown",
+        "context.genotype: mismatch or unknown",
+        "context.species: mismatch or unknown",
+        "context.cell_type: mismatch or unknown",
+        "context.developmental_stage: mismatch or unknown",
+        "reported no change, in a cell that is not comparable: a measured null, not an unmeasured cell"
+      ]
+    },
+    {
+      "assertion_id": "DR-A02-008",
+      "status": "UNRESOLVED",
+      "reasons": [
+        "target_id: mismatch or unknown",
+        "endpoint: mismatch or unknown",
+        "context.disease_id: mismatch or unknown",
+        "context.genotype: mismatch or unknown",
+        "context.cell_type: mismatch or unknown",
+        "context.developmental_stage: mismatch or unknown"
+      ]
+    },
+    {
+      "assertion_id": "DR-A02-009",
+      "status": "UNRESOLVED",
+      "reasons": [
+        "target_id: mismatch or unknown",
+        "endpoint: mismatch or unknown",
+        "context.disease_id: mismatch or unknown",
+        "context.genotype: mismatch or unknown",
+        "context.species: mismatch or unknown",
+        "context.cell_type: mismatch or unknown",
+        "context.developmental_stage: mismatch or unknown",
+        "reported no change, in a cell that is not comparable: a measured null, not an unmeasured cell"
+      ]
+    }
+  ],
+  "abstention": null,
+  "label_lookup": {
+    "status": "NOT_ATTEMPTED",
+    "coverage": "UNKNOWN",
+    "method": "UNKNOWN",
+    "queries": [],
+    "source": "UNKNOWN",
+    "retrieved_at": "UNKNOWN",
+    "client_version": "UNKNOWN",
+    "product_name": "UNKNOWN",
+    "active_ingredient": "UNKNOWN",
+    "formulation": "UNKNOWN",
+    "spl_id": "UNKNOWN",
+    "error": "UNKNOWN",
+    "coverage_limit": "UNKNOWN"
+  },
+  "p4_fields": {
+    "endpoint_pursued": "Return of Q230P protein from an undetectable baseline by blocking its degradation, read as total, soluble and pellet protein, native-state fraction and then function against a wild-type ruler.",
+    "functional_evidence_available": "None for WWOX. CBS (cytosolic enzyme): activity and plasma homocysteine restored in mice for some alleles, none for others; ASPA C152W: insoluble protein, no activity detectable; HIKESHI: partial protein return with function-adjacent readouts.",
+    "temporal_or_model_limit": "Cell-culture and liver-transgene mouse precedents; best effect at exposures that caused toxicity; no brain exposure data.",
+    "cellular_context": {
+      "target_expression": "UNKNOWN for the relevant human neural cells.",
+      "cells_tissue_stage": "iPSC-derived oligodendrocytes (HIKESHI), HEK293T libraries, yeast; none WWOX.",
+      "coverage": "Drug selectivity is not a property of a proteasome inhibitor; target expression is a separate question.",
+      "limits": "Global degradation blockade is client-agnostic by design; whether Q230P is a proteasome substrate at all has never been measured."
+    }
+  },
+  "input": {
+    "axis": "A / Q230P-class missense recovery",
+    "route": "RECUPERO_PROFONDO",
+    "candidate": {
+      "id": "P4-A-02",
+      "name": "Proteasome-inhibitor class (degradation blockade) as a probe-derived recovery hypothesis (revised IT6 P6: route and function evidence from a cytosolic enzyme)"
+    },
+    "disease_assertion": {
+      "id": "DA-Q230P-001",
+      "target_id": "WWOX:protein",
+      "endpoint": "WWOX protein detectable by Western blot (lysate fraction not separated)",
+      "direction": "DECREASE",
+      "source": "claim_registry_current CLAIM 019 (functional source: PAPER 041, a single-laboratory study)",
+      "locator": "CLAIM 019, paragraph 'DATO FUNZIONALE, CAUSA NON RISOLTA'; PAPER 041",
+      "epistemic_status": "DATO",
+      "reading_depth": "complete_fulltext_read",
+      "receipt": "FTR-20260923-29808465-02 (body); FTR-20261004-29808465-03 (figures)",
+      "context": {
+        "disease_id": "WWOX-DEE, Q230P-class missense (reference genotype class)",
+        "genotype": "p.Gln230Pro homozygous",
+        "species": "human",
+        "cell_type": "patient-derived fibroblast line (one donor line)",
+        "developmental_stage": "UNKNOWN"
+      },
+      "measured_result_note": "Transcript comparable to reference lines, protein band not detected. One membrane, one exposure, one donor line, no healthy fibroblast control, no densitometry, no n. No proteasome inhibitor, chaperone, synthesis, solubility or half-life measurement exists; the authors leave open impaired translation or premature degradation. The endpoint is 'mRNA normal + protein not detected', not a post-translational mechanism."
+    },
+    "drug_assertions": [
+      {
+        "id": "DR-A02-001",
+        "target_id": "HIKESHI protein, V54L (recessive missense)",
+        "endpoint": "recovered mutant protein in patient iPSC-derived oligodendrocytes",
+        "direction": "INCREASE",
+        "source": "Rathan-Kumar 2026 (R1 reading 42875792); NOT WWOX EVIDENCE",
+        "locator": "disease-models/wwox/research/repurposing_10h_scientist-a_20261021.md § 3, 42875792",
+        "epistemic_status": "DATO",
+        "reading_depth": "partial_fulltext_read",
+        "context": {
+          "disease_id": "HIKESHI-related leukodystrophy (not WWOX)",
+          "genotype": "V54L homozygous",
+          "species": "human",
+          "cell_type": "iPSC-derived oligodendrocytes",
+          "developmental_stage": "culture stage"
+        },
+        "measured_result_note": "Recovery from about 3 to about 20 percent of control only, in one dose-time series without drawn replicates; the inhibitor also induces HSP70 and changes many proteins; other treatment windows were toxic to all genotypes including controls.",
+        "receipt": "FTR-20261021-42875792-01"
+      },
+      {
+        "id": "DR-A02-002",
+        "target_id": "Parkin and ASPA low-abundance variant populations",
+        "endpoint": "low-abundance shoulder of a variant library",
+        "direction": "INCREASE",
+        "source": "Clausen 2024 and Grønbæk-Thygesen 2024 (R1 readings 38378758, 38740822); NOT WWOX EVIDENCE",
+        "locator": "disease-models/wwox/research/repurposing_10h_scientist-a_20261021.md § 1",
+        "epistemic_status": "DATO",
+        "reading_depth": "partial_fulltext_read",
+        "context": {
+          "disease_id": "Parkin and ASPA variant libraries (not WWOX)",
+          "genotype": "single-site variant libraries",
+          "species": "human protein in HEK293T",
+          "cell_type": "HEK293T landing-pad cells",
+          "developmental_stage": "culture"
+        },
+        "measured_result_note": "Flow shift of a library, not a protein recovery measure; a lysosome-inhibitor control did nothing, placing the loss on the proteasome.",
+        "receipt": "FTR-20261021-38378758-01; FTR-20261021-38740822-01"
+      },
+      {
+        "id": "DR-A02-003",
+        "target_id": "ASPA C152W insoluble protein",
+        "endpoint": "activity of the stabilised protein",
+        "direction": "UNKNOWN",
+        "source": "Gersing 2021 (R1 reading 33914734); NOT WWOX EVIDENCE",
+        "locator": "disease-models/wwox/research/repurposing_10h_scientist-a_20261021.md § 1, 33914734",
+        "epistemic_status": "DATO",
+        "reading_depth": "partial_fulltext_read",
+        "context": {
+          "disease_id": "ASPA C152W (not WWOX)",
+          "genotype": "C152W",
+          "species": "yeast and human U2OS",
+          "cell_type": "U2OS",
+          "developmental_stage": "culture"
+        },
+        "measured_result_note": "Stabilising the variant through the Hsp110 axis yielded protein that is insoluble; no enzyme activity could be measured in this study or was found in earlier mammalian-cell work, so activity is NOT MEASURED here, which is not a measured null. Encoded UNKNOWN.",
+        "receipt": "FTR-20261021-33914734-01"
+      },
+      {
+        "id": "DR-A02-004",
+        "target_id": "CBS p.S466L (regulatory-domain missense; active when stabilised)",
+        "endpoint": "liver CBS enzyme activity and serum total homocysteine after proteasome inhibition",
+        "direction": "INCREASE",
+        "source": "Gupta 2023, PMID 37319242 (Results, carfilzomib in Tg-S466L; Discussion para 2); NOT WWOX EVIDENCE",
+        "locator": "disease-models/wwox/research/drug_repurposing/broad_recovery_it6_p6_20261029/README.md section 4 row P-1",
+        "epistemic_status": "DATO",
+        "reading_depth": "partial_fulltext_read",
+        "context": {
+          "disease_id": "CBS deficiency, homocystinuria (not WWOX)",
+          "genotype": "human CBS S466L transgene on a Cbs-null mouse background",
+          "species": "mouse",
+          "cell_type": "liver (zinc-inducible metallothionein-promoter transgene)",
+          "developmental_stage": "adult, short treatment"
+        },
+        "measured_result_note": "Activity reached the range of the wild-type human CBS transgene in some animals and homocysteine fell below detection; the authors state the protein is highly active in bacteria and yeast and unstable only in the mouse, so this is the stabilisation-sufficient case. The same paper reports that catalytic-domain alleles responded less. Figures were read as captions only; values are not reproduced. Transgene driven by an inducible promoter, so wild-type is not an untreated-reference ruler per molecule."
+      },
+      {
+        "id": "DR-A02-005",
+        "target_id": "CBS p.I278T, p.R266K, p.R336C (catalytic-domain missense)",
+        "endpoint": "liver CBS activity and serum total homocysteine after bortezomib versus carfilzomib",
+        "direction": "INCREASE",
+        "source": "Gupta 2023, PMID 37319242 (Results 'Comparison of Carfilzomib and bortezomib'; Discussion para 2); NOT WWOX EVIDENCE",
+        "locator": "disease-models/wwox/research/drug_repurposing/broad_recovery_it6_p6_20261029/README.md section 4 row P-2",
+        "epistemic_status": "DATO",
+        "reading_depth": "partial_fulltext_read",
+        "context": {
+          "disease_id": "CBS deficiency, homocystinuria (not WWOX)",
+          "genotype": "human CBS transgene alleles on a Cbs-null mouse background",
+          "species": "mouse",
+          "cell_type": "liver",
+          "developmental_stage": "adult, one to two days of treatment"
+        },
+        "measured_result_note": "Bortezomib restored activity in these alleles better than carfilzomib although both inhibited the proteasome similarly in liver lysate; the authors found only a weak correlation between proteasome inhibition and activity and infer other mechanisms, including heat-shock chaperone induction; the strength of rescue did not follow chaperone induction either. The authors infer that catalytic-domain alleles must be both stabilised and refolded. Treatment longer than two days caused lethargy and morbidity."
+      },
+      {
+        "id": "DR-A02-006",
+        "target_id": "CBS p.T191M (catalytic-domain missense)",
+        "endpoint": "liver CBS activity after bortezomib or carfilzomib",
+        "direction": "NO_CHANGE",
+        "source": "Gupta 2023, PMID 37319242 (Results, sentence on Tg-T191M); NOT WWOX EVIDENCE",
+        "locator": "disease-models/wwox/research/drug_repurposing/broad_recovery_it6_p6_20261029/README.md section 4 row P-3",
+        "epistemic_status": "DATO",
+        "reading_depth": "partial_fulltext_read",
+        "context": {
+          "disease_id": "CBS deficiency, homocystinuria (not WWOX)",
+          "genotype": "human CBS T191M transgene on a Cbs-null mouse background",
+          "species": "mouse",
+          "cell_type": "liver",
+          "developmental_stage": "adult, short treatment"
+        },
+        "measured_result_note": "Neither inhibitor restored significant activity ('a very small amount' with bortezomib). The same allele gained activity with bortezomib in a human kidney-line model (DR-A02-008), so the allele does not fix the outcome: expression context and readout differ. A measured null in this system."
+      },
+      {
+        "id": "DR-A02-007",
+        "target_id": "CBS p.I278T",
+        "endpoint": "liver CBS activity under long, low-exposure bortezomib, alone or with a heat-shock co-inducer",
+        "direction": "NO_CHANGE",
+        "source": "Gupta 2023, PMID 37319242 (Results 'Low dose/long-duration studies'); NOT WWOX EVIDENCE",
+        "locator": "disease-models/wwox/research/drug_repurposing/broad_recovery_it6_p6_20261029/README.md section 4 row P-4",
+        "epistemic_status": "DATO",
+        "reading_depth": "partial_fulltext_read",
+        "context": {
+          "disease_id": "CBS deficiency, homocystinuria (not WWOX)",
+          "genotype": "human CBS I278T transgene on a Cbs-null mouse background",
+          "species": "mouse",
+          "cell_type": "liver",
+          "developmental_stage": "adult, about a month"
+        },
+        "measured_result_note": "With tolerated exposure the activity gain was not significant and a white-cell and lymphocyte reduction was still present; homocysteine fell by about half yet stayed far above normal, and one of eight treated animals had the largest response and was also the one with the greatest weight loss and lowest white-cell counts. The authors conclude that proteasome inhibitors are probably not feasible as monotherapy at non-toxic exposure."
+      },
+      {
+        "id": "DR-A02-008",
+        "target_id": "CBS p.T191M and p.I278T versus wild type",
+        "endpoint": "half-life by pulse-chase and live-cell hydrogen sulphide production after proteasome, lysosome or ERAD inhibition",
+        "direction": "INCREASE",
+        "source": "Mijatovic 2024, PMID 39041895 (Results 3.3 to 3.4, Figures 5 and 6; Discussion); NOT WWOX EVIDENCE",
+        "locator": "disease-models/wwox/research/drug_repurposing/broad_recovery_it6_p6_20261029/README.md section 4 row P-5",
+        "epistemic_status": "DATO",
+        "reading_depth": "partial_fulltext_read",
+        "context": {
+          "disease_id": "CBS deficiency, homocystinuria (not WWOX)",
+          "genotype": "stable lentiviral expression in a CBS-knockout line",
+          "species": "human",
+          "cell_type": "HEK293A kidney line",
+          "developmental_stage": "culture, 24 h readout"
+        },
+        "measured_result_note": "Proteasome inhibition raised the half-life of wild-type CBS about 7.7-fold, T191M about 6.8-fold and I278T about 3.0-fold, and raised a live-cell activity probe signal in all three (wild type trend only); lysosome inhibition acted on wild type and I278T but not T191M; ERAD inhibition raised activity of both mutants without the same change in turnover, so the authors state that higher steady-state level is not a prerequisite for activity rescue and that native tetramer content tracked activity better than total protein. The route is therefore lesion-dependent and the gain also applies to wild type. Inhibitors showed signs of cell damage at the effective levels. Probe signal is relative to each vehicle control, not a per-molecule activity."
+      },
+      {
+        "id": "DR-A02-009",
+        "target_id": "CBS p.I278T and p.R125Q",
+        "endpoint": "soluble CBS protein and CBS activity after HSP70 or HSF1 co-expression",
+        "direction": "NO_CHANGE",
+        "source": "Collard 2023, PMID 38051092 (Results 'Impact of HSPs coexpression'; Discussion); NOT WWOX EVIDENCE",
+        "locator": "disease-models/wwox/research/drug_repurposing/broad_recovery_it6_p6_20261029/README.md section 4 row P-6",
+        "epistemic_status": "DATO",
+        "reading_depth": "partial_fulltext_read",
+        "context": {
+          "disease_id": "CBS deficiency, homocystinuria (not WWOX)",
+          "genotype": "stable overexpression in a CBS-null hamster fibroblast line",
+          "species": "hamster (human CBS)",
+          "cell_type": "A23 fibroblast",
+          "developmental_stage": "culture, 48 h after transfection"
+        },
+        "measured_result_note": "Soluble protein of both alleles rose; activity of R125Q rose 5 to 7-fold to about a tenth of wild type, while I278T activity did not rise at all although the same allele is rescued by proteasome inhibition in mice and in the kidney line. Endpoint recorded for I278T: protein up, activity unchanged (NO_CHANGE for activity). Different intervention and a cell line with strong baseline ER stress, so this is not a clean test of expression context, but it is a measured protein-up activity-flat case for a cytosolic enzyme."
+      }
+    ],
+    "p4_fields": {
+      "endpoint_pursued": "Return of Q230P protein from an undetectable baseline by blocking its degradation, read as total, soluble and pellet protein, native-state fraction and then function against a wild-type ruler.",
+      "functional_evidence_available": "None for WWOX. CBS (cytosolic enzyme): activity and plasma homocysteine restored in mice for some alleles, none for others; ASPA C152W: insoluble protein, no activity detectable; HIKESHI: partial protein return with function-adjacent readouts.",
+      "temporal_or_model_limit": "Cell-culture and liver-transgene mouse precedents; best effect at exposures that caused toxicity; no brain exposure data.",
+      "cellular_context": {
+        "target_expression": "UNKNOWN for the relevant human neural cells.",
+        "cells_tissue_stage": "iPSC-derived oligodendrocytes (HIKESHI), HEK293T libraries, yeast; none WWOX.",
+        "coverage": "Drug selectivity is not a property of a proteasome inhibitor; target expression is a separate question.",
+        "limits": "Global degradation blockade is client-agnostic by design; whether Q230P is a proteasome substrate at all has never been measured."
+      }
+    },
+    "p4_card": {
+      "identity": "Proteasome-inhibitor class, research-grade or oncology agents, discussed at class level only. No named agent is proposed; formulation: UNKNOWN.",
+      "indication_and_transfer": "WOREE (Q230P-class) as target. Origin: a recessive missense protein in patient iPSC oligodendrocytes plus library studies (NOT WWOX EVIDENCE). This is the closest measured precedent to the Q230P premise in R1 ('normal mRNA, protein absent', partial return with an inhibitor; the transcript level is cited from an earlier report, and whether the paper examined it itself is not established), at the cost of a narrow toxicity-bounded window.",
+      "novelty_for_woree": "NON_TROVATO_NELLA_RICERCA as a test in any WWOX system. IT6 P6 (2026-10-29) ran new queries on Europe PMC and PubMed: WWOX with proteasome-inhibitor names, 244 records, none a WWOX-variant inhibitor arm (the variant-route paper is the P252A study, which used proteasome and lysosome arms; see source list); WWOX with the Q230P protein change, 7 records, none with an inhibitor arm; WWOX with chaperone terms, 111 records, none a WWOX chaperone experiment. Counts are of records matched, not of relevant records; a title/abstract query does not reach Methods or Results. Not MAI_TENTATO.",
+      "state_of_known_roads": "not verified for this disease; and exposure-or-toxicity limit shown by its own precedent (other windows toxic to controls).",
+      "pathway_and_objective": "RECUPERO_PROFONDO.",
+      "expected_contribution": "Recovery of residual protein only if Q230P is lost at the proteasome; function of any recovered protein is the unanswered question.",
+      "mechanism": "Target: ubiquitin-proteasome (and, for some alleles, lysosomal and ERAD) degradation of the mutant protein, not WWOX; type: blockade, possibly with heat-shock response induction as a confound; direction: protein up if the variant is a substrate of the blocked route; function recovery depends on whether the lesion is a stability lesion (stabilisation may suffice) or a catalytic or folding lesion (stabilisation plus refolding needed). Unknown for Q230P.",
+      "sources": {
+        "internal": [
+          "disease-models/wwox/research/repurposing_10h_scientist-a_20261021.md §§ 3, 4 (PB-1)",
+          "disease-models/wwox/research/drug_repurposing/broad_recovery_it6_p6_20261029/README.md section 4"
+        ],
+        "external_not_wwox_evidence": [
+          "HIKESHI patient iPSC study",
+          "Parkin atlas",
+          "ASPA abundance scan",
+          "ASPA C152W study",
+          "CBS missense mouse studies with bortezomib and carfilzomib (Gupta 2023)",
+          "CBS missense HEK293 degradation-route study (Mijatovic 2024)",
+          "CBS missense hamster-cell proteostasis modulation (Collard 2023)"
+        ]
+      },
+      "evidence_for_and_against": {
+        "for": [
+          "In a cytosolic enzyme (CBS) a proteasome inhibitor restored enzyme activity in vivo for a regulatory-domain allele (to the transgenic wild-type range in some animals) and partly for catalytic-domain alleles; in a human cell model the same class raised half-life and activity of two mutants.",
+          "Route can be resolved per allele with ubiquitin-linkage and route-inhibitor arms (CBS: proteasome main, lysosome and ERAD minor and allele-selective)."
+        ],
+        "against": [
+          "The gain applies to wild type too (CBS wild-type half-life up about 7.7-fold under proteasome inhibition): a boost multiplies residual function and does not repair it.",
+          "Allele dependence is large: one allele rescued to the transgenic wild-type range in some animals (S466L), three improved (I278T, R266K, R336C), one not at all in the mouse (T191M), and a stable but inactive allele (G307S) not at all; the same T191M allele gained in a cell line. The outcome depends on whether the lesion is a stability lesion or a catalytic one.",
+          "Protein-up with activity-flat in a cytosolic enzyme (CBS I278T with HSP70 or HSF1 co-expression); ASPA C152W stabilised protein exclusively insoluble with no activity detectable.",
+          "Tolerated exposure was ineffective in mice; effective exposure was toxic; the superior drug did not track proteasome inhibition, so the mechanism is not simply route blockade.",
+          "Lysosome-route first for the only WWOX missense with a measured turnover (P252A), and MG-132 did not accumulate even wild-type WWOX there: a proteasome arm may be the wrong lever for the SDR domain class (a nearby SDR enzyme, RDH5, is degraded by autophagy and not by the proteasome; abstract-level only)."
+        ],
+        "transfer_limits": "CBS is a pyridoxal-phosphate tetramer whose misfolding concentrates in a regulatory domain, expressed in liver and kidney models; WWOX is an SDR-domain protein in neural cells. Allele classes do not transfer between proteins. Activity is per milligram of lysate or a live-cell probe, not per molecule. Brain exposure of any inhibitor is not assessed here."
+      },
+      "time_to_access": "UNKNOWN. Not documented in the repository.",
+      "time_to_benefit": "UNKNOWN.",
+      "pharmacology": "UNKNOWN for WWOX; toxicity-bounded exposure window in the closest precedent (values not reproduced).",
+      "paediatrics_and_interactions": "UNKNOWN. No paediatric suitability is presumed by this card, for the candidate or for any historical authorisation of it for another use.",
+      "scope_of_checks": {
+        "support_and_replication": "No replication of the HIKESHI result is recorded.",
+        "formal_checks": "R1 receipts recorded, manifests PASS. The blind audit of six R1 manifests has run (95 triples: 76 supported, 15 overshoot, 2 undershoot, 2 unverifiable) and its repairs were applied at source; the repairs are not re-audited. This card was audited in page_adjudications/locator_audit_deep_cards_20261022.md; the defects named there are repaired here and the repair is not certified by its author.",
+        "card_inferences_owed_audit": "None added beyond the R1 note."
+      },
+      "question_history": [
+        "R1 dossier premise PB (inhibitor arm first, chase second): KEEP",
+        "CLAIM 019 / CLAIM 030",
+        "IT6 P6 (2026-10-29): new question, does route blockade of a cytosolic missense enzyme restore function, which fraction rises, and does it depend on the lesion: CBS mouse and cell studies read at the source (partial reads), ASPA C152W re-opened on the solubility passages. Card kept at hypothesis."
+      ],
+      "predictions": "None; no engine, no score. Pre-registered outcome meanings are in the cycle README, not here.",
+      "next_measurement": "Route-first fate experiment on the exact variant in an expression-matched WWOX-null human system: soluble, pellet and total protein with an antibody-independent detection, mRNA in the same wells, half-life by pulse-chase; route arms side by side (proteasome, lysosome, ERAD or VCP), each also on the wild-type ruler line and on the null line, with a viability readout; native-oligomer or size-resolved state beside total protein; the P5 wild-type function ruler (binding-competence ratio and a phenotype read on the ruler curve) read at the same protein. Decision meaning is registered before the run in the cycle README section 8.",
+      "status": "hypothesis",
+      "status_reason": "Conditional on an unmeasured route for Q230P; new evidence narrows what a positive result would mean but adds no WWOX datum.",
+      "value_added": "Shows, in a cytosolic enzyme with an activity readout, that route blockade restores function for some alleles and not others, raises wild type as well, and loses to toxicity at tolerated exposure; this converts the Q230P route question into a design with allele-class predictions.",
+      "clinical_census": "Clinical census, ClinicalTrials.gov API v2, 2026-10-20 (disease-models/wwox/research/drug_repurposing/clinical_census_20261020.md): seven separate queries returned no registered WOREE interventional study; the only synonym-driven record is one observational natural-history registry. Carried with the census's own caution: \"A missing hit does not prove that no study exists.\" It answers seven queries against one registry on one date; unregistered, differently worded, non-NLM or later-registered studies are not excluded."
+    },
+    "not_known": [
+      "Where the Q230P protein is lost: never made, made and cleared, made and insoluble, made and epitope-invisible, or truncated. No fractionation, inhibitor, synthesis or half-life datum exists for the exact variant.",
+      "Whether any recovered Q230P protein would carry WWOX function: there is no per-molecule WWOX function assay in the repository, and protein quantity does not imply function (in the R1 lot quantity and function diverged in some systems and function could not be measured in others).",
+      "The share of destabilised-missense lesions that are stability lesions for a WWOX SDR-domain variant: the estimates carried in the literature are cited estimates, and the SDR-domain thermal stability is a missing measurement.",
+      "No drug has been given to any WWOX model carrying a missense or a splice allele (known-roads note, section 5).",
+      "Whether Q230P is a proteasome substrate at all.",
+      "Whether the exposure at which a degradation-route blocker restores a cytosolic enzyme in cells (toxic in the best case) is reachable in neural tissue: not assessed.",
+      "Whether the Q230P-class lesion is a stability lesion (a stabilised protein would be active) or a catalytic/folding lesion (stabilisation plus refolding needed): the CBS allele spectrum shows both occur in one enzyme."
+    ],
+    "evidence_against": [
+      "Insoluble stabilised variant with no measurable activity (ASPA C152W).",
+      "Toxic windows including in controls.",
+      "Gain applies to wild type (CBS wild-type half-life under proteasome inhibition).",
+      "Protein-up activity-flat cases (CBS I278T with HSP70 or HSF1 co-expression).",
+      "Tolerated exposure ineffective in mice."
+    ],
+    "bridge_gaps_exposed": [
+      "G-1 (closed in bridge b96e4cd9; packet rebuilt with NO_CHANGE)"
+    ],
+    "schema_version": 1,
+    "translation": {
+      "pediatric_suitability": "UNKNOWN. No paediatric suitability is presumed by this card, for the candidate or for any historical authorisation of it for another use.",
+      "cns_exposure": "UNKNOWN.",
+      "interactions": "UNKNOWN",
+      "access": "UNKNOWN",
+      "time_to_benefit": "UNKNOWN",
+      "functional_rescue": "UNKNOWN for WWOX. Cytosolic-enzyme precedents (CBS) show activity restored for some alleles and not others; ASPA C152W returned insoluble protein with no activity detectable."
+    },
+    "p4_roadmap_fields": {
+      "indication_and_transfer": "WOREE (Q230P-class) as target. Origin: a recessive missense protein in patient iPSC oligodendrocytes plus library studies (NOT WWOX EVIDENCE). This is the closest measured precedent to the Q230P premise in R1 ('normal mRNA, protein absent', partial return with an inhibitor; the transcript level is cited from an earlier report, and whether the paper examined it itself is not established), at the cost of a narrow toxicity-bounded window.",
+      "verification_scope": "{\"support_and_replication\": \"No replication of the HIKESHI result is recorded.\", \"formal_checks\": \"R1 receipts recorded, manifests PASS. The blind audit of six R1 manifests has run (95 triples: 76 supported, 15 overshoot, 2 undershoot, 2 unverifiable) and its repairs were applied at source; the repairs are not re-audited. This card was audited in page_adjudications/locator_audit_deep_cards_20261022.md; the defects named there are repaired here and the repair is not certified by its author.\", \"card_inferences_owed_audit\": \"None added beyond the R1 note.\"}"
+    },
+    "label_lookup": {
+      "status": "NOT_ATTEMPTED"
+    },
+    "card_conventions": [
+      "IPOTESI throughout; the bridge forces it. No score, rank, probability or blended index is carried, and none may be derived from this card.",
+      "directional_summary compares signs only where target, endpoint and every context dimension match; UNRESOLVED means no matched comparison exists, which is a statement about the record, not about the biology.",
+      "NO_MATCH_FOUND is not 'does not exist'; NON_TROVATO_NELLA_RICERCA is not MAI_TENTATO.",
+      "label_lookup is NOT_ATTEMPTED on every card: the bridge has no network and no pharmacological-label search was run. It is not NO_MATCH_FOUND.",
+      "No dose, route, schedule or paediatric suitability appears; concentrations or exposures of the sources are deliberately not reproduced.",
+      "Every adjacent source is labelled NOT WWOX EVIDENCE at class level."
+    ],
+    "no_new_reading": "IT6 P6: five papers were opened in the act at the depths stated in the cycle README (partial reads of Gupta 2023, Collard 2023, Mijatovic 2024, the ASPA C152W paper, and the NQO1 chaperone paper at abstract and introduction); the receipts are staged, not in the ledger."
+  },
+  "translation": {
+    "pediatric_suitability": "UNKNOWN. No paediatric suitability is presumed by this card, for the candidate or for any historical authorisation of it for another use.",
+    "cns_exposure": "UNKNOWN.",
+    "interactions": "UNKNOWN",
+    "access": "UNKNOWN",
+    "time_to_benefit": "UNKNOWN",
+    "functional_rescue": "UNKNOWN for WWOX. Cytosolic-enzyme precedents (CBS) show activity restored for some alleles and not others; ASPA C152W returned insoluble protein with no activity detectable."
+  },
+  "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
+  "limits": [
+    "Technical comparison is not efficacy, safety or experimental validation.",
+    "Sources and receipt references are retained, not independently verified.",
+    "Shared sources are not independent confirmations; scores are not pooled.",
+    "NO_CHANGE is a reported null effect on that endpoint and context: it is not UNKNOWN (not measured), not evidence of safety, and not proof of futility; a null in a non-comparable cell stays UNRESOLVED.",
+    "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
+  ]
+}
