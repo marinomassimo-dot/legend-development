@@ -76,6 +76,13 @@ class Watch(unittest.TestCase):
         r = e.check([{"sessionId": SID, "status": "busy"}], deliver="resume")
         self.assertEqual((r["state"], r["action"]), ("RUNNING", "NONE"))
 
+    def test_a_running_mandate_still_leaves_a_trace_in_the_event_log(self):
+        e = self.env(record())
+        r = e.check([{"sessionId": SID, "status": "busy"}], deliver="resume")
+        self.assertEqual(r["state"], "RUNNING")
+        lines = [json.loads(l) for l in (Path(os.environ["LEGEND_MANDATE_WATCH_STATE"]) / mw.EVENTS_FILE).read_text().splitlines() if l.strip()]
+        self.assertTrue(any(x.get("task") == TASK and x.get("state") == "RUNNING" for x in lines))
+
     def test_recent_background_task_output_is_running_even_when_idle(self):
         e = self.env(record())
         d = e.tasks / "proj" / SID / "tasks"
