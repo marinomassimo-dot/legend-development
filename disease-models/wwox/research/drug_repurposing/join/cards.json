@@ -11810,7 +11810,8 @@
     ],
     "evidence_against": [
      "Three exploratory transcript tests in the one knockout organoid dataset are negative for the chain.",
-     "The paper does not name dichloroacetate or any PDH/PDK element."
+     "The paper does not name dichloroacetate or any PDH/PDK element.",
+     "IT7 P3/P1 (provisional, exploratory): the six-gene glycolysis/lactate module was inconclusive in an independent WWOX-loss contrast (P47T hippocampus, p 0.060, inside its null; PDK1 lower by -0.08) and no compound-ranking method showed added value; this card's compound was outside that comparison by design. A computational result, not efficacy data."
     ],
     "external_sources": [
      {
@@ -13138,7 +13139,8 @@
        "The study measured nothing in this branch.",
        "PDK1 transcript is down and the PDK/PDH set is not different from chance in the human knockout organoid (exploratory transcripts).",
        "The sima:GFP reporter (the authors' HIF1alpha homologue) is unchanged in one genotype pair; the authors name Atf4 rather than sima as primarily responsible.",
-       "Known neurotoxicity concern for the main compound; the ketogenic hypothesis dominates it on safety."
+       "Known neurotoxicity concern for the main compound; the ketogenic hypothesis dominates it on safety.",
+       "IT7 P3/P1 (provisional, exploratory): the six-gene glycolysis/lactate module was inconclusive in an independent WWOX-loss contrast (P47T hippocampus, p 0.060, inside its null; PDK1 lower by -0.08) and no compound-ranking method showed added value; this card's compound was outside that comparison by design. A computational result, not efficacy data."
       ],
       "for": [
        "The Lucas-Clarke Ldh rise is the kind of change that could draw pyruvate away from oxidation (logic only)."
@@ -13149,7 +13151,7 @@
      "identity": "Dichloroacetate (PDK inhibitor, phase 3 per Open Targets for congenital lactic acidosis, no US label found) and research PDK inhibitors (AZD7545, VER-246608). Devimistat is NOT counted: DGIdb gives it no action type on PDK2-4.",
      "indication_and_transfer": "WWOX-DEE only IF a pyruvate-oxidation block exists in WWOX-deficient neural cells. Nothing in the Lucas-Clarke study tests that; the branch logic (a raised Ldh pulls pyruvate away from oxidation) is indirect by two steps.",
      "mechanism": "Target: PDK1-4 (HGNC:8809-8812; UniProt Q15118, Q15119, Q15120, Q16654), NOT PDPK1 (HGNC:8816); direction: release PDH from inhibitory phosphorylation; context: no WWOX system.",
-     "next_measurement": "The same discriminating assay as the ketogenic hypothesis, one step finer: PDH activity and labelled-glucose fate in WWOX-deficient versus isogenic human neural cells. If PDH activity and pyruvate fate are normal, HYP-20260709-05 stays parked with a stronger negative; if pyruvate oxidation is blocked, this card and the ketogenic hypothesis are both reopened.",
+     "next_measurement": "IT7 P6 2026-10-29: the decisive measurement is unchanged and is specified in card I01 (PDHA1 Ser293 phosphorylation, activity and tracer, genotype by inhibitor); read PDK1, LDHA, LDHB, HK2, SLC2A1 and BNIP3 transcripts beside it; no computational ranking selects the compound arm. The same discriminating assay as the ketogenic hypothesis, one step finer: PDH activity and labelled-glucose fate in WWOX-deficient versus isogenic human neural cells. If PDH activity and pyruvate fate are normal, HYP-20260709-05 stays parked with a stronger negative; if pyruvate oxidation is blocked, this card and the ketogenic hypothesis are both reopened.",
      "novelty_for_woree": "NOT NEW: HYP-20260709-05 and N-08 already hold this candidate (parked; dominated by the ketogenic hypothesis; peripheral-neuropathy flag).",
      "paediatrics_and_interactions": "UNKNOWN. No paediatric suitability is presumed by this card, for the candidate or for any historical authorisation of it for another use.",
      "pathway_and_objective": "BENEFICIO_PRECOCE; Track A.",
@@ -13157,7 +13159,8 @@
      "predictions": "None; no engine, no score.",
      "question_history": [
       "HYP-20260709-05",
-      "mandate 2026-10-26 (Lucas-Clarke follow-up)"
+      "mandate 2026-10-26 (Lucas-Clarke follow-up)",
+      "IT7 P6 (2026-10-29): the six-gene module did not transfer decisively to an independent WWOX-loss contrast and no compound-ranking method showed added value (loop_demonstration_it7_p6_20261029/README.md; P3 numbers provisional). Status, F/C/P position and the premise are unchanged."
      ],
      "scope_of_checks": {
       "card_inferences_owed_audit": "Statements marked INFERENZA, including every statement about what a compound would do in WWOX-deficient tissue, are OWED a blind audit by another actor.",
@@ -13903,7 +13906,7 @@
      "time_to_benefit": "UNKNOWN"
     }
    },
-   "input_sha256": "f48b8f7ccdb7361b7dd96a9f885a29c58169be59587b0173f6159f9950a1250a",
+   "input_sha256": "d6b8fa5e5f399f4e5b012f4fd1dae414fe30f5ee268662116a2b06fa97c18d18",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -48414,7 +48417,8 @@
      "Weak LDH inhibition by stiripentol in the retrieved measurements (a weak measure is not general inefficacy: assay, substrate level and enzyme source differ, and the 2015 report is unread).",
      "Direct inhibition of mitochondrial complex I by stiripentol, so a metabolic effect is not an LDH effect.",
      "An Ldh abundance rise also accompanies a complex I-reduced, ISR-activated fly model that has neither WWOX nor amyloid (DA-PARS2-LDH-001), so a raised Ldh in a Wwox-reduced fly does not by itself identify an LDH-specific lesion (INFERENZA: possible confounding by mitochondrial or ISR state).",
-     "Human lactate in WWOX deficiency reported normal or extremely low."
+     "Human lactate in WWOX deficiency reported normal or extremely low.",
+     "IT7 P3/P1 (provisional, exploratory): in an independent WWOX-loss contrast (P47T hippocampus) the LDH isoforms split (LDHA +0.48, LDHB -0.10 against the build direction) and the six-gene module lies inside its null (p 0.060), so the LDHA elevation is not shown to be a reproducible WWOX-loss feature; no method ranked compounds on this module with added value, and stiripentol was outside that comparison by design. A computational result, not engagement data."
     ],
     "external_sources": [
      {
@@ -48659,7 +48663,8 @@
        "Without amyloid lactate falls nominally and Ldh does not change.",
        "Stiripentol inhibits LDH only weakly in the single-concentration measurements held (none gives a fitted potency, and the one at the highest concentration is the lowest), and it has other targets, including direct inhibition of mitochondrial complex I, that act at lower concentrations; any benefit would not be attributable to LDH.",
        "LDHA in the organoid is as consistent with immaturity as with WWOX loss.",
-       "Human lactate in WWOX deficiency is reported normal or extremely low."
+       "Human lactate in WWOX deficiency is reported normal or extremely low.",
+       "IT7 P3/P1 (provisional, exploratory): in an independent WWOX-loss contrast (P47T hippocampus) the LDH isoforms split (LDHA +0.48, LDHB -0.10 against the build direction) and the six-gene module lies inside its null (p 0.060), so the LDHA elevation is not shown to be a reproducible WWOX-loss feature; no method ranked compounds on this module with added value, and stiripentol was outside that comparison by design. A computational result, not engagement data."
       ],
       "for": [
        "Ldh RNAi improved climbing in the amyloid-plus-Wwox-reduction fly genotype (once).",
@@ -48672,7 +48677,7 @@
      "identity": "LDH-directed levers: stiripentol (approved for a paediatric developmental epilepsy; weak LDH inhibition in vitro), GSK2837808A and other research LDHA inhibitors, and the LDHA-directed oligonucleotide nedosiran (approved for primary hyperoxaluria, liver-directed). Per-compound table: compounds_and_sources.md section 2.2.",
      "indication_and_transfer": "WWOX-DEE only IF lactate or LDH activity is shown to be a driver in a WWOX-deficient human neural system. The one fly precedent is amyloid-conditional; human lactate readouts in WWOX deficiency are normal or low in the cited sources (DL-BIO-008, DL-BIO-009).",
      "mechanism": "Target: LDHA (HGNC:6535, P00338) and LDHB (HGNC:6541, P07195); direction: lower LDH activity or lactate production; context: amyloid-stressed fly head in the paper; UNKNOWN in WWOX-DEE. For stiripentol the LDH link is not the established basis of its antiseizure use.",
-     "next_measurement": "In the fly: lactate (enantiomer- or isotope-resolved) in the Ldh-RNAi double genotype, an Ldh-alone arm, and Wwox mRNA in the double line. In human neural cells: LDH activity and the lactate-to-pyruvate relationship in WWOX-deficient versus isogenic cells at matched maturity. Only then a compound arm: stiripentol against a selective LDHA tool at matched exposure, so that its other pharmacology is separable from LDH. Readout design (added 2026-10-27 from the fly PARS2 reading): in every arm that perturbs complex I, read the integrated stress response (phospho-eIF2 alpha, ATF4 protein) and Ldh abundance next to Ldh ACTIVITY and lactate, because abundance, activity, metabolite level and flux are separate quantities and a complex I perturbation may raise Ldh abundance through the stress response. The designed comparison (question, model, controls, endpoint, result that would change interpretation) is in sada_ldh_precedent_p2a_20261026.md section 6; it is a proposal, nothing is authorised to run.",
+     "next_measurement": "IT7 P6 2026-10-29: read LDHA and LDHB activity separately (LDHB was the discordant gene in the P47T transfer test); no computational ranking selects the compound arm. In the fly: lactate (enantiomer- or isotope-resolved) in the Ldh-RNAi double genotype, an Ldh-alone arm, and Wwox mRNA in the double line. In human neural cells: LDH activity and the lactate-to-pyruvate relationship in WWOX-deficient versus isogenic cells at matched maturity. Only then a compound arm: stiripentol against a selective LDHA tool at matched exposure, so that its other pharmacology is separable from LDH. Readout design (added 2026-10-27 from the fly PARS2 reading): in every arm that perturbs complex I, read the integrated stress response (phospho-eIF2 alpha, ATF4 protein) and Ldh abundance next to Ldh ACTIVITY and lactate, because abundance, activity, metabolite level and flux are separate quantities and a complex I perturbation may raise Ldh abundance through the stress response. The designed comparison (question, model, controls, endpoint, result that would change interpretation) is in sada_ldh_precedent_p2a_20261026.md section 6; it is a proposal, nothing is authorised to run.",
      "novelty_for_woree": "NON_TROVATO_NELLA_RICERCA as a test: no source retrieved links an LDH inhibitor to WWOX deficiency; coverage is the six sources of compounds_and_sources.md and ten PubMed abstracts on 2026-10-26. Update 2026-10-26 (scientist-b, P2a): the 2015 report usually cited for stiripentol and LDH in epilepsy (PMID 25792327) is now identified, is paywalled with no lawful full text found, and is known here only through its abstract and three open-access secondary descriptions; it is a stiripentol-LDH precedent in epilepsy models, not a WWOX datum.",
      "paediatrics_and_interactions": "Stiripentol label: indicated for Dravet syndrome seizures in patients taking clobazam, from six months of age (openFDA label 2026-04-27); the same label means any use here would sit on top of clobazam co-therapy, an interaction this card does not assess. No paediatric suitability for WWOX-DEE is presumed.",
      "pathway_and_objective": "BENEFICIO_PRECOCE; Track A, Track B untested.",
@@ -48680,7 +48685,8 @@
      "predictions": "None; no engine, no score.",
      "question_history": [
       "mandate 2026-10-26 (Lucas-Clarke follow-up)",
-      "prediction_isr_ldh_chain_20261026.md"
+      "prediction_isr_ldh_chain_20261026.md",
+      "IT7 P6 (2026-10-29): the six-gene module did not transfer decisively to an independent WWOX-loss contrast and no compound-ranking method showed added value (loop_demonstration_it7_p6_20261029/README.md; P3 numbers provisional). Status, F/C/P position and the premise are unchanged."
      ],
      "scope_of_checks": {
       "card_inferences_owed_audit": "Statements marked INFERENZA, including every statement about what a compound would do in WWOX-deficient tissue, are OWED a blind audit by another actor.",
@@ -48927,7 +48933,7 @@
      "time_to_benefit": "UNKNOWN"
     }
    },
-   "input_sha256": "d97ccb3c196bdce865467542a7de3a249b5ab18a39fc17eb9395b128dbcee13a",
+   "input_sha256": "f91a273e0cfb9b1aa15b359f9e02b4cd0f9b540c03b68df9bc6428e53cf1897a",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",
