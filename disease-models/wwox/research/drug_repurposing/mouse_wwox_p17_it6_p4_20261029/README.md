@@ -9,14 +9,15 @@ the output directory was regenerated into a second directory and is byte-identic
 ## 1. One-paragraph answer
 
 In four mouse contrasts (hippocampus: neuron-targeted deletion "S", neural-stem/progenitor-targeted deletion "N", germline null; cortex: "S")
-the ISR target set sits **inside its matched null in every contrast** (centred mean +0.14, -0.13, -0.02 and +0.05; none animal-separated).
+the ISR target set sits **inside its matched null in every contrast** (centred mean +0.135, -0.134, -0.019 and +0.051; none animal-separated).
 The mouse therefore does **not** side with the organoid (lower) and does **not** side with the shWWOX line (higher): the sign conflict
-stays **UNRESOLVED**, and a third system with an unambiguous deletion adds a flat transcript signal, not a tiebreak. An organoid-sized
-fall (-0.33) would have sat at or near the lower null edge in H_S and H_N (-0.30, -0.34) and beyond it in H_null and C_S (-0.20, -0.26), so a fall of
-that size is not what these animals show; a small effect of either sign, and any effect at protein/phospho level, is not excluded.
+stays **UNRESOLVED**, and a third system with an unambiguous deletion adds a flat transcript signal, not a tiebreak. The gene-level null bands (+/-0.2 to 0.34) are not an animal-level test: at animal level an organoid-sized fall (-0.33) is excluded
+at about 2.5 SE in H_S, about 5 SE in H_null and about 4.7 SE in cortex, but NOT in H_N (2 v 2; mean -0.13, SE 0.14), and Chac1, Trib3 and Sesn2
+are at or below a few TPM. The honest statement is **no resolvable sign at about 0.3**; a small effect of either sign, and any effect at
+protein/phospho level, is not excluded. Atf4 mRNA itself is lower in all four contrasts (section 3b): an mRNA observation, not an ISR call.
 The dataset behaves as described by its authors (myelin/oligodendrocyte transcripts -0.8 to -1.8 in all four deletion contrasts, all outside the
 null and animal-separated), the deletion is deep (85, 94, 91 percent in the three hippocampal contrasts), and the control-versus-control
-contrasts reveal a large background difference between the control groups that limits every other set (section 4).
+contrasts reveal a large background difference between WT and the two Cre-line control groups that mainly burdens the germline-null contrast (section 4).
 
 ## 2. Deposit verification (details in PRE_ANALYSIS section 2)
 
@@ -25,7 +26,7 @@ all P17, NextSeq 500, Salmon 1.2.1, mm10. Deposits carry transcript TPM only. Th
 match fewer), so release 92 was the gene key. **Deletion visible**, summed Wwox TPM (per animal in `results/wwox_depth.tsv`): hippocampus S 0.49 vs
 3.37 (85 percent lower), N 0.21 vs 3.55 (94 percent), null 0.33 vs 3.89 (91 percent): every hippocampal contrast passes the 50 percent gate.
 Cortex S 5.9 vs 18.8 (68 percent lower, passes) but with overlap between animals (KO 3.8, 5.0, 9.0; controls 8.0, 15.1, 25.7, 26.5): cortex is a weaker, noisier replication.
-**UNVERIFIED** (the deposit does not state): the Cre drivers behind "S" and "N" (series text: neurons; neural stem and progenitors); the control genotype
+Naming: the series design text calls the N control "N-WT", the sample records "N-Control"; which is meant is UNVERIFIED. **UNVERIFIED** (the deposit does not state): the Cre drivers behind "S" and "N" (series text: neurons; neural stem and progenitors); the control genotype
 (Cre-negative or other); sex; litter or batch; the allele; the link to any paper (no PubMed id in either record). The records say "Public on Oct 01 2026".
 Sex was inferred only from Y-linked transcripts (Xist is not in the cDNA key): arms are **not sex-balanced** (hippocampus S KO 2 male 1 female-like vs control 1 and 1; N KO 2 male-like vs control 1 and 1;
 null KO 1 and 1 vs WT all female-like; cortex mixed). Not adjusted.
@@ -52,7 +53,7 @@ null KO 1 and 1 vs WT all female-like; cortex mixed). Not adjusted.
 | Ctl_cytosolic_ribosome (78) | +0.02 [-0.09,+0.18] | -0.22 [-0.10,+0.19] OUT sep | +0.12 [-0.07,+0.06] OUT sep | +0.05 [-0.00,+0.18] | +0.66*, +0.88*, -0.21* |
 
 `*` in the last column = outside its own null in that control-versus-control contrast (no Wwox difference between the arms). Universe threshold
-1 TPM (sensitivities 0.5 and 2 in `results/set_summary.tsv`: signs identical in all 126 contrast-by-set cells except two values within 0.01 of zero: H_N Prog_core4 and CC_NW Prog_9). Figure: `fig1_sets_vs_matched_null.png`.
+1 TPM (sensitivities 0.5 and 2 in `results/set_summary.tsv`: signs identical in 113 of the 115 contrast-by-set cells that have a value at all three thresholds (126 exist), the exceptions being two values within 0.01 of zero: H_N Prog_core4 and CC_NW Prog_9). Figure: `fig1_sets_vs_matched_null.png`.
 Pre-declared decision verdicts are in `results/verdicts.tsv`. Members not resolvable at the mouse key (declared rule, excluded): ATP5ME, NDUFB1, MRPL50P2, TOMM70
 (mouse Tomm70a), GPI (mouse Gpi1) and ALDOA (two non-patch genes carry the symbol), see `results/set_member_resolution.tsv`; TRIB3 is below 1 TPM in every
 contrast (a missing value, not absence), so ISR_targets has 11 measurable members, ISR_org3 (CHAC1, TRIB3, SESN2) has 2 and is not evaluable, and the single gene ATF4 is not a set.
@@ -60,17 +61,23 @@ contrast (a missing value, not absence), so ISR_targets has 11 measurable member
 | Verdict by the pre-declared rule | Sets |
 |---|---|
 | ISR_targets | NOT MOVED: outside the null in 0 of 3 counted contrasts (ISR_core5 also 0 of 3) |
-| OXPHOS_nuclear | criterion (a) met (lower in S -0.24 and N -0.36, null band +/-0.1, animal-separated) but NOT MOVED: it also differs between control groups (+0.48, +0.67, -0.18), the cytosolic-ribosome control moves in H_N, null contrast not separated, cortex opposite (+0.15) |
+| OXPHOS_nuclear | criterion (a) met (lower and outside null in S -0.24, N -0.36 and null -0.08); criterion (b), applied as declared (animal separation in every contrast of the group), fails because H_null is not separated; NOT MOVED, with further reasons: it also differs between control groups (+0.48, +0.67, -0.18), the cytosolic-ribosome control moves in H_N, null contrast not separated, cortex opposite (+0.15) |
 | Mito_translation, Mito_import | NOT MOVED: outside only in H_N; cortex has the opposite sign for translation (+0.11, outside); control groups differ |
 | Glycolysis_lactate (10-gene, 9 measurable), Glycolysis_19, PDK_family | NOT MOVED (Glycolysis_19 outside only in the null contrast, -0.21; PDK_family signs +0.39, +0.19, -0.30) |
-| Prog_core4, Prog_9, Neuro_5, Neuro_10 | NOT MOVED (each outside only in the null contrast, Prog with signs that differ between contrasts; Neuro_10 positive in all four contrasts +0.22 to +0.36 but outside only once) |
+| Prog_core4, Prog_9, Neuro_5, Neuro_10 | NOT MOVED (each outside only in the null contrast, Prog with signs that differ between contrasts and, in H_S, between the two definitions; Neuro_10 positive in all four contrasts +0.22 to +0.36 but outside only once) |
 | Myelin_OL | positive control behaves: lower in all four deletion contrasts (-1.78, -1.02, -1.66, -0.80); not "MOVED" under the rule only because control groups also differ in it |
+
+### 3b. Atf4 mRNA (single gene, observation with its limits)
+
+Atf4 mRNA is lower in all four deletion contrasts: uncentred log2 -0.55 (H_S), -0.97 (H_N), -0.60 (H_null), -0.71 (cortex); centred -0.16, -0.71, -0.39, -0.51; animal-separated in H_S and H_N
+(results/key_genes.tsv). Limits: one gene, 2 to 3 animals, no animal-level test; Atf4 is translationally controlled so its mRNA is not ATF4 activity; nothing is measured at protein or phospho level;
+the ISR target set does not move with it. It is not an ISR call and is not read as support for either human system.
 
 ## 4. What limits every statement (read before using any row above)
 
-1. **The control groups differ from each other as much as knockouts differ from their controls.** Transcriptome-wide, the IQR of centred log2 ratios is
-   about +/-0.28 (H_S), +/-0.30 (H_N), +/-0.16 (null), +/-0.23 (cortex), versus +/-0.35 and +/-0.41 for S-control vs WT and N-control vs WT, and the unrelated cytosolic-ribosome control moves
-   +0.66 and +0.88 between those control groups. The same gene classes (OXPHOS, mito translation, ribosome, UPR) that look "lower" in a cell-targeted deletion differ as much between control groups. The germline-null contrast uses WT controls and is the most exposed; S and N are compared with their own controls.
+1. **WT differs from the two Cre-line control groups about as much as knockouts differ from controls; the two Cre-line control groups differ much less.** Transcriptome-wide, the IQR of centred log2 ratios is
+   about +/-0.28 (H_S), +/-0.30 (H_N), +/-0.16 (null), +/-0.23 (cortex), versus +/-0.35 and +/-0.41 for S-control vs WT and N-control vs WT, but only +/-0.13 for S-control vs N-control; the unrelated cytosolic-ribosome control moves
+   +0.66 and +0.88 between WT and the Cre-line controls (-0.21 between S and N controls). The germline-null contrast uses WT controls and is the most exposed. S and N are compared with their own controls, but OXPHOS, mito translation and mito import also differ between S-control and N-control (-0.18, -0.13, -0.18), so those classes are not clean in H_S and H_N either.
 2. 2 to 3 animals per arm; the gene-level matched null ignores animal-to-animal variance (hence the animal-separation column); smallest possible animal-level permutation p is 0.20 or 0.33.
 3. Composition: myelin/oligodendrocyte transcripts fall 1.7 to 3.4-fold, so neuron and glia fractions shift in bulk tissue; a relative rise of neuronal markers (Neuro_10) is the expected composition effect and is not a cell-state claim.
 4. Sex imbalance (above), unstated batch, unstated driver and control genotype (UNVERIFIED); symbol-based mouse-human orthology; TPM without counts.
@@ -81,18 +88,18 @@ contrast (a missing value, not absence), so ISR_targets has 11 measurable member
 
 | Statement | After P4 |
 |---|---|
-| ISR direction UNRESOLVED (organoid lower vs shWWOX higher) | **Unchanged: still UNRESOLVED.** The third system does not break the tie; its ISR set is flat (and not distinguishable from matched random sets or from control-versus-control differences). Consequence (a)-(c) of that file stand; the matched protein/phospho plus target-mRNA experiment stays the next step. Add to the comparison as one row: mouse, in vivo, three deletion types, "inside null, no sign" |
+| ISR direction UNRESOLVED (organoid lower vs shWWOX higher) | **Unchanged: still UNRESOLVED.** The third system does not break the tie; its ISR set is inside the matched null in every contrast with no resolvable sign at about 0.3 (H_N cannot exclude an organoid-size fall); Atf4 mRNA alone is lower (section 3b). Consequence (a)-(c) of that file stand; the matched protein/phospho plus target-mRNA experiment stays the next step. Add to the comparison as one row: mouse, in vivo, three deletion types, "set inside null, no resolvable sign; Atf4 mRNA lower" |
 | Drug-signature reversal built on the organoid list inherits the ISR-lower sign | **Unchanged**, and now also not supported by a mouse transcript sign; neither refuted |
 | Glycolysis "higher in both human systems" (10-gene HIF-type set) | **Not extended to the mouse**: 10-gene -0.09, -0.19 (cell-targeted), 19-gene -0.07, -0.09; nothing outside the null in the cell-targeted contrasts. The human statement stays set-dependent (organoid and hNPC only); not a refutation (different species, tissue and composition) |
 | PDK1 not raised; middle link of the HIF1A-PDK-PDH chain has no transcript support | **Unchanged**, one more system without support: Pdk1 no consistent sign, PDK family inside null; the finding remains "absence of support" |
-| Progenitor identity: hNPC drop robust, organoid "higher" set-dependent | **Unchanged for the human systems.** In the mouse neither the 4-gene nor the 9-gene definition gives a moved set, and the two disagree in sign in H_S and H_N (so the statement is also set-dependent here); a mouse P17 bulk progenitor set is not a cell-state readout |
+| Progenitor identity: hNPC drop robust, organoid "higher" set-dependent | **Unchanged for the human systems.** In the mouse neither the 4-gene nor the 9-gene definition gives a moved set, and the two disagree in sign in H_S only (-0.17 vs +0.24; H_N is 0.00 vs -0.26) (so the statement is also set-dependent here); a mouse P17 bulk progenitor set is not a cell-state readout |
 | Neuronal markers lower (CAGE neurons) / not clearly lower (organoid) | Mouse: neuronal 5- and 10-gene sets positive in all four contrasts (+0.14 to +0.36), outside the null once; the sign opposes the human "lower" but is composition-confounded (myelin set -0.8 to -1.8) and is below criterion. No change to the human statement |
 | Mitochondrial programmes: OXPHOS / mito translation lower in the organoid | Mouse OXPHOS lower in S and N but not specific (ribosome control and control-versus-control differences move too; cortex opposite): **no corroboration, no refutation** |
 
 For needs and priorities: NEED-ISR-ATTENUATION may receive one observation (evidence_scope COMPUTATIONAL_RESULT, readout_level transcript, model type mouse in vivo
 cell-targeted and null deletion, result "ISR target set not distinguishable from matched random sets and from control-vs-control differences in 4 contrasts; no sign"), with the n of 2 to 3 stated. No
 rank, track, goal or "unmeasured" status (eIF2alpha-P, GCN2/PERK, ATF4 protein, translation) changes, because a flat mRNA result cannot move a protein/phospho/flux question. **I edited no needs file and no current file; that landing is for the integrator.**
-Priority: this lowers the expected value of further transcript re-analyses of public WWOX deposits for the ISR question (a third system with a visible deletion is flat); it raises the relative priority of the matched protein/phospho experiment.
+Priority (a judgement): transcript re-analysis is less likely to settle the ISR question than a matched protein/phospho measurement.
 
 ## 6. Deviations from the pre-analysis, and what stayed open
 
