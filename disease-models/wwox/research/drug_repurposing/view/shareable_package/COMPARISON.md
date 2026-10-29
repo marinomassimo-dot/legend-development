@@ -21,11 +21,11 @@ The full version (`view/index.html` in the repository, local use) and this packa
 | Card actions on targets listed | 39 | 0 |
 | Pair objects carrying a status class | 680 | 0 |
 | Excluded rows listed with compound name and gene | 3 | 0 |
-| Card fields that differ (count of cards) | n/a | {"access": 7, "access_text": 7, "actions": 8, "asserts": 2, "brief": 1, "card_path": 36, "country": 4, "for": 2, "identity": 7, "links": 7, "mechanism": 1, "next_full": 2, "novelty": 2, "pharm": 2, "reopen": 1} |
+| Card fields that differ (count of cards) | n/a | {"access": 7, "access_text": 7, "actions": 8, "asserts": 2, "brief": 1, "card_path": 36, "country": 4, "for": 2, "identity": 7, "links": 7, "mechanism": 1, "next_full": 3, "novelty": 2, "pharm": 2, "reopen": 1} |
 
 ## Prose redactions (shareable only)
 
-12 card sentences and 11 lead fields that stated a compound-target pair, a catalogue-only compound or a per-compound status from a class-B/C source are rewritten at the level of the need or class and name the withheld source class (`dato di una fonte non inclusa in questa versione`); 46 repository file names are described instead of printed. The conclusion of each lead and card is kept. The rule is in `view/shareable_sources.json` (`prose_policy`) and the audit enforces it.
+12 card sentences and 11 lead fields that stated a compound-target pair, a catalogue-only compound or a per-compound status from a class-B/C source are rewritten at the level of the need or class and name the withheld source class (`dato di una fonte non inclusa in questa versione`); 48 repository file names are described instead of printed. The conclusion of each lead and card is kept. The rule is in `view/shareable_sources.json` (`prose_policy`) and the audit enforces it.
 
 ## Why: counts of catalogue target rows by class
 

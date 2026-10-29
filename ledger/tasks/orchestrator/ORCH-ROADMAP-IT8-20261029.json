@@ -42,8 +42,9 @@
    "steps": [
     {
      "step": "P3 pharmacological qualification for a contained set of cases (both objectives)",
-     "status": "TODO",
-     "owner": "scientist-a"
+     "status": "DONE",
+     "owner": "scientist-a",
+     "evidence": "merged at 76a05c47; verifier M1-M4 repaired"
     },
     {
      "step": "P4 marginal contribution of WWOX inputs; new computational experiment only if justified",

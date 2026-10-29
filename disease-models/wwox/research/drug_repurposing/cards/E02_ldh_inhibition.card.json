@@ -1,575 +1,576 @@
 {
- "schema_version": 1,
- "input_sha256": "dd7336b98051b938b98fc7970bca65944ab39fd792709ec3fca717825e070bea",
- "epistemic_status": "IPOTESI",
- "canonical": false,
- "assessment": "REQUIRES_QUALIFICATION",
- "directional_summary": "UNRESOLVED",
- "endpoint_outcomes": [
-  {
-   "question": [
-    "fly startle-induced climbing performance",
-    "climbing height at days 14, 21 and 28",
-    "Drosophila model of Alzheimer's amyloid pathology (not WWOX-DEE)",
-    "neuronal Abeta42 plus neuronal Wwox RNAi (the comparator and the test arm of the Ldh experiment share this background)",
-    "Drosophila melanogaster",
-    "whole fly",
-    "adult, day 14 for omics and Atf4 imaging",
-    "",
-    "",
-    ""
-   ],
-   "statuses": [
-    "OPPOSES_DISEASE_CHANGE"
-   ],
-   "discriminators_declared": false,
-   "assertion_ids": [
-    "DR-E02-GEN-001"
-   ]
-  }
- ],
- "comparisons": [
-  {
-   "assertion_id": "DR-E02-GEN-001",
-   "status": "OPPOSES_DISEASE_CHANGE",
-   "reasons": []
-  },
-  {
-   "assertion_id": "DR-E02-001",
-   "status": "UNRESOLVED",
-   "reasons": [
-    "no disease assertion on this target and endpoint"
-   ]
-  },
-  {
-   "assertion_id": "DR-E02-004",
-   "status": "UNRESOLVED",
-   "reasons": [
-    "no disease assertion on this target and endpoint"
-   ]
-  },
-  {
-   "assertion_id": "DR-E02-005",
-   "status": "UNRESOLVED",
-   "reasons": [
-    "no disease assertion on this target and endpoint"
-   ]
-  },
-  {
-   "assertion_id": "DR-E02-006",
-   "status": "UNRESOLVED",
-   "reasons": [
-    "no disease assertion on this target and endpoint"
-   ]
-  },
-  {
-   "assertion_id": "DR-E02-007",
-   "status": "UNRESOLVED",
-   "reasons": [
-    "no disease assertion on this target and endpoint"
-   ]
-  },
-  {
-   "assertion_id": "DR-E02-002",
-   "status": "UNRESOLVED",
-   "reasons": [
-    "no disease assertion on this target and endpoint"
-   ]
-  },
-  {
-   "assertion_id": "DR-E02-003",
-   "status": "UNRESOLVED",
-   "reasons": [
-    "no disease assertion on this target and endpoint"
-   ]
-  }
- ],
- "abstention": null,
- "label_lookup": {
-  "status": "NOT_ATTEMPTED",
-  "coverage": "UNKNOWN",
-  "method": "UNKNOWN",
-  "queries": [],
-  "source": "UNKNOWN",
-  "retrieved_at": "UNKNOWN",
-  "client_version": "UNKNOWN",
-  "product_name": "UNKNOWN",
-  "active_ingredient": "UNKNOWN",
-  "formulation": "UNKNOWN",
-  "spl_id": "UNKNOWN",
-  "error": "UNKNOWN",
-  "coverage_limit": "UNKNOWN"
- },
- "p4_fields": {
-  "endpoint_pursued": "A WWOX-linked lactate/LDH readout that a compound moves: LDH activity and the lactate-to-pyruvate relationship (enantiomer- or isotope-resolved) in WWOX-deficient versus isogenic human neural cells at matched maturity; then a locomotor, network or myelin endpoint.",
-  "functional_evidence_available": "None for WWOX in humans. Fly: a single partial locomotor rescue by Ldh RNAi in the amyloid-plus-Wwox-reduction genotype. Human knockout organoid: LDHA transcript up but confounded with maturity.",
-  "temporal_or_model_limit": "Fly amyloid model, whole-head metabolomics, partial RNAi; the human row is a transcript.",
-  "cellular_context": {
-   "target_expression": "LDHA and LDHB are broadly expressed; LDHC is testis-restricted by convention and absent from the organoid expression universe.",
-   "cells_tissue_stage": "whole fly head (glia carry the highest Wwox mRNA, so neuronal origin of lactate is not established); bulk organoid RNA.",
-   "coverage": "UNKNOWN.",
-   "limits": "Lactate rises only with Wwox reduction plus amyloid and falls nominally without amyloid; one human MRS datum reports lactate extremely low."
-  }
- },
- "input": {
   "schema_version": 1,
-  "axis": "E / Lucas-Clarke follow-up: lactate dehydrogenase",
-  "route": "BENEFICIO_PRECOCE",
-  "mission_dimensions": {
-   "track": "A",
-   "track_definition": "mission.md section 5: Track A = variant-independent WWOX loss of function; Track B = variant or allele-class specific (e.g. the Q230P missense class); Track C = repurposing, which is a method of reaching A or B, not a third lesion class",
-   "route": "BENEFICIO_PRECOCE",
-   "route_definition": "RECUPERO_PROFONDO = deep recovery of the lost function; BENEFICIO_PRECOCE = concrete partial benefit, symptomatic control or protection of function, with paediatric feasibility and time in view",
-   "route_note": "A downstream metabolic lever with one genetic precedent in a fly (partial locomotor benefit). Not deep recovery; WWOX function would remain lost. Track B (Q230P class): no allele-specific rationale; the lever is allele-blind and untested for any allele.",
-   "the_two_dimensions_are_independent": "a card keeps both: a variant-independent lever can be a partial-benefit lever, and a lesion-specific one can aim at deep recovery"
-  },
-  "candidate": {
-   "id": "P4-E-02",
-   "name": "LDH inhibition or lowering (stiripentol as the approved paediatric member; LDHA tool compounds; an LDHA-directed oligonucleotide approved for another disease)"
-  },
-  "disease_assertions": [
-   {
-    "id": "DA-LC-LDH-001",
-    "target_id": "fly Ldh transcript",
-    "endpoint": "Ldh log2 fold-change in head RNA-seq",
-    "direction": "INCREASE",
-    "source": "PAPER 567 (published Lucas-Clarke 2026 article; Drosophila Alzheimer's-amyloid model; NOT WWOX EVIDENCE: a fly amyloid model, not WWOX-DEE)",
-    "locator": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json verbatim_locators.entries[29], [30], [31]; Supplementary Table 3",
-    "epistemic_status": "DATO",
-    "reading_depth": "complete_fulltext_read",
-    "context": {
-     "disease_id": "Drosophila model of Alzheimer's amyloid pathology (not WWOX-DEE)",
-     "genotype": "neuronal Wwox RNAi plus neuronal Abeta42 (Arctic) versus control RNAi plus Abeta42",
-     "species": "Drosophila melanogaster",
-     "cell_type": "adult fly head or brain (whole head for metabolomics and RNA-seq)",
-     "developmental_stage": "adult, day 14 for omics and Atf4 imaging"
-    },
-    "measured_result_note": "About +1.29 log2 over Abeta42 alone, 4 pools of 10 heads. Abeta42 alone also raises Ldh (+1.11 in the table, 1.19 in the text). Ldh is not among the genes changed by knockdown in the LacZ background.",
-    "receipt": "FTR-20261026-42909904-01",
-    "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT"
-   },
-   {
-    "id": "DA-LC-LAC-001",
-    "target_id": "fly L-lactate (whole-head HILIC LC-MS)",
-    "endpoint": "relative lactate abundance",
-    "direction": "INCREASE",
-    "source": "PAPER 567 (published Lucas-Clarke 2026 article; Drosophila Alzheimer's-amyloid model; NOT WWOX EVIDENCE: a fly amyloid model, not WWOX-DEE)",
-    "locator": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json verbatim_locators.entries[39], [40], [43]; Supplementary Table 4; Fig 5C",
-    "epistemic_status": "DATO",
-    "reading_depth": "complete_fulltext_read",
-    "context": {
-     "disease_id": "Drosophila model of Alzheimer's amyloid pathology (not WWOX-DEE)",
-     "genotype": "neuronal Wwox RNAi plus neuronal Abeta42 (Arctic) versus control RNAi plus Abeta42",
-     "species": "Drosophila melanogaster",
-     "cell_type": "adult fly head or brain (whole head for metabolomics and RNA-seq)",
-     "developmental_stage": "adult, day 14 for omics and Atf4 imaging"
-    },
-    "measured_result_note": "Interaction F 23.606, adjusted P 0.0174; knockdown effect +1.30 log2 under Abeta42. 5 pools of 10 heads, two-way ANOVA on the top 200 features by variance, 10 percent FDR. No flux, no isotope tracing, no NAD/NADH.",
-    "receipt": "FTR-20261026-42909904-01",
-    "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT"
-   },
-   {
-    "id": "DA-LC-LAC-002",
-    "target_id": "fly L-lactate (whole-head HILIC LC-MS)",
-    "endpoint": "relative lactate abundance",
-    "direction": "DECREASE",
-    "source": "PAPER 567 (published Lucas-Clarke 2026 article; Drosophila Alzheimer's-amyloid model; NOT WWOX EVIDENCE: a fly amyloid model, not WWOX-DEE)",
-    "locator": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json verbatim_locators.entries[40]; Supplementary Fig 5A",
-    "epistemic_status": "DATO",
-    "reading_depth": "complete_fulltext_read",
-    "context": {
-     "disease_id": "Drosophila model of Alzheimer's amyloid pathology (not WWOX-DEE)",
-     "genotype": "neuronal Wwox RNAi versus control RNAi in a LacZ (no amyloid) background",
-     "species": "Drosophila melanogaster",
-     "cell_type": "adult fly head or brain (whole head for metabolomics and RNA-seq)",
-     "developmental_stage": "adult, day 14 for omics and Atf4 imaging"
-    },
-    "measured_result_note": "Nominal -0.43 log2 without amyloid (simple effect not tested for significance). The lactate rise is conditional on amyloid.",
-    "receipt": "FTR-20261026-42909904-01",
-    "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT"
-   },
-   {
-    "id": "DA-LC-CLIMB-001",
-    "target_id": "fly startle-induced climbing performance",
-    "endpoint": "climbing height at days 14, 21 and 28",
-    "direction": "DECREASE",
-    "source": "PAPER 567 (published Lucas-Clarke 2026 article; Drosophila Alzheimer's-amyloid model; NOT WWOX EVIDENCE: a fly amyloid model, not WWOX-DEE)",
-    "locator": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json verbatim_locators.entries[19], [53]; Fig 5E",
-    "epistemic_status": "DATO",
-    "reading_depth": "complete_fulltext_read",
-    "context": {
-     "disease_id": "Drosophila model of Alzheimer's amyloid pathology (not WWOX-DEE)",
-     "genotype": "neuronal Abeta42 plus neuronal Wwox RNAi (the comparator and the test arm of the Ldh experiment share this background)",
-     "species": "Drosophila melanogaster",
-     "cell_type": "whole fly",
-     "developmental_stage": "adult, day 14 for omics and Atf4 imaging"
-    },
-    "measured_result_note": "Climbing is lower with Wwox knockdown plus Abeta42 than with control RNAi plus Abeta42; N 4-6 vials.",
-    "receipt": "FTR-20261026-42909904-01",
-    "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT"
-   },
-   {
-    "id": "DA-GSE-LDH-002",
-    "target_id": "human LDHA transcript",
-    "endpoint": "log2 shift, knockout minus wild type",
-    "direction": "INCREASE",
-    "source": "GSE156243, the deposit of the 2021 organoid paper (PMID 34268881); exploratory set-level analysis by scientist-c",
-    "locator": "disease-models/wwox/research/drug_repurposing/gse156243/prediction_isr_ldh_chain_20261026.md, RESULT",
-    "epistemic_status": "INFERENZA",
-    "reading_depth": "queried_not_full_read",
-    "context": {
-     "disease_id": "WWOX-deficient human cerebral organoid model (engineered knockout; NOT a patient allele; no amyloid)",
-     "genotype": "WWOX knockout versus wild type (4 versus 2 libraries, one laboratory)",
-     "species": "human",
-     "cell_type": "cerebral organoid, bulk RNA",
-     "developmental_stage": "organoid, culture week 15"
-    },
-    "measured_result_note": "LDHA +0.75 by the script's shift (+0.91 on the authors' list, padj 5e-6). LDHA also falls with elapsed culture time in WWOX-unperturbed spheroids, so the rise is as consistent with a less advanced tissue as with a WWOX effect. Transcript, not activity.",
-    "evidence_scope": "COMPUTATIONAL_RESULT"
-   },
-   {
-    "id": "DA-BIO008-001",
-    "target_id": "human brain lactate (MRS)",
-    "endpoint": "brain lactate level in one WWOX patient",
-    "direction": "DECREASE",
-    "source": "discovery_ledger_current DL-BIO-008 (one patient; reading depth not re-verified by this card)",
-    "locator": "DL-BIO-008",
-    "epistemic_status": "INFERENZA",
-    "reading_depth": "UNKNOWN",
-    "context": {
-     "disease_id": "WWOX-DEE, one reported patient (class level)",
-     "genotype": "UNKNOWN",
-     "species": "human",
-     "cell_type": "brain MRS voxel",
-     "developmental_stage": "child"
-    },
-    "measured_result_note": "Reported extremely low in one patient; the same entry records raised mouse serum lactate. Not combined with the fly rows: different species, tissue and context.",
-    "sign_vs_contrast": {
-     "DA-LC-LAC-001": "OPPOSITE (DECREASE against INCREASE under Abeta42)",
-     "DA-LC-LAC-002": "SAME SIGN (DECREASE, nominal, without Abeta42); not a replication: other species, tissue and context"
-    },
-    "evidence_scope": "UNQUALIFIED"
-   },
-   {
-    "id": "DA-PARS2-LDH-001",
-    "target_id": "fly Ldh transcript and Ldh protein (head)",
-    "endpoint": "Ldh RNA-seq change and Ldh western blot abundance in neuronal dPARS2 knockdown",
-    "direction": "INCREASE",
-    "source": "Xu 2026, Redox Biol (PMID 41380592, open access CC BY-NC; Drosophila mitochondrial prolyl-tRNA synthetase deficiency; NOT WWOX EVIDENCE: another disease, a fly model)",
-    "locator": "disease-models/wwox/research/deepdive_manifests/PMID41380592.json verbatim_locators.entries[7], [8], [35]; Fig 7A-C",
-    "epistemic_status": "DATO",
-    "reading_depth": "complete_fulltext_read",
-    "context": {
-     "disease_id": "Drosophila model of mitochondrial prolyl-tRNA synthetase (PARS2) deficiency (not WWOX, no amyloid)",
-     "genotype": "pan-neuronal dPARS2 RNAi versus control",
-     "species": "Drosophila melanogaster",
-     "cell_type": "adult fly head, bulk (RNA-seq: three libraries per genotype of thirty five-day-old female heads)",
-     "developmental_stage": "adult, about five days"
-    },
-    "measured_result_note": "Ldh and most other glycolytic transcripts rise, and Ldh PROTEIN abundance rises about ten-fold on one western blot (three samples, one pan-LDH antibody). Abundance only: no Ldh activity, lactate, pyruvate or flux was measured, and Ldh was not read after GCN2 or ATF4 suppression, so the authors' reading of the Ldh rise as ATF4 activity rests on a cited S2-cell study. The model has reduced complex I protein abundance (heads) and phospho-eIF2 alpha raised, so an Ldh rise here accompanies a mitochondrial lesion plus ISR; it is neither a WWOX nor an amyloid context.",
-    "receipt": "FTR-20261027-41380592-01",
-    "evidence_scope": "OTHER_DISEASE_PRECEDENT"
-   }
+  "input_sha256": "19a9b8a44b60c8bf51b1239fe2d17f08b64662066924a2d6be25ac276019114e",
+  "epistemic_status": "IPOTESI",
+  "canonical": false,
+  "assessment": "REQUIRES_QUALIFICATION",
+  "directional_summary": "UNRESOLVED",
+  "endpoint_outcomes": [
+    {
+      "question": [
+        "fly startle-induced climbing performance",
+        "climbing height at days 14, 21 and 28",
+        "Drosophila model of Alzheimer's amyloid pathology (not WWOX-DEE)",
+        "neuronal Abeta42 plus neuronal Wwox RNAi (the comparator and the test arm of the Ldh experiment share this background)",
+        "Drosophila melanogaster",
+        "whole fly",
+        "adult, day 14 for omics and Atf4 imaging",
+        "",
+        "",
+        ""
+      ],
+      "statuses": [
+        "OPPOSES_DISEASE_CHANGE"
+      ],
+      "discriminators_declared": false,
+      "assertion_ids": [
+        "DR-E02-GEN-001"
+      ]
+    }
   ],
-  "drug_assertions": [
-   {
-    "id": "DR-E02-GEN-001",
-    "target_id": "fly startle-induced climbing performance",
-    "endpoint": "climbing height at days 14, 21 and 28",
-    "direction": "INCREASE",
-    "source": "PAPER 567 (published Lucas-Clarke 2026 article; Drosophila Alzheimer's-amyloid model; NOT WWOX EVIDENCE: a fly amyloid model, not WWOX-DEE); GENETIC perturbation of the target, not a compound",
-    "locator": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json verbatim_locators.entries[51], [53], [54], [55], [56]; Fig 5E",
-    "epistemic_status": "DATO",
-    "reading_depth": "complete_fulltext_read",
-    "context": {
-     "disease_id": "Drosophila model of Alzheimer's amyloid pathology (not WWOX-DEE)",
-     "genotype": "neuronal Abeta42 plus neuronal Wwox RNAi (the comparator and the test arm of the Ldh experiment share this background)",
-     "species": "Drosophila melanogaster",
-     "cell_type": "whole fly",
-     "developmental_stage": "adult, day 14 for omics and Atf4 imaging"
+  "comparisons": [
+    {
+      "assertion_id": "DR-E02-GEN-001",
+      "status": "OPPOSES_DISEASE_CHANGE",
+      "reasons": []
     },
-    "measured_result_note": "Partial rescue to or above the control line at day 28; once; no Ldh-alone arm; Wwox mRNA not reported in the double-RNAi line; lactate not measured in it; lifespan and amyloid load not tested; the authors cite Ldh knockdown as detrimental in other fly amyloid models.",
-    "receipt": "FTR-20261026-42909904-01",
-    "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT"
-   },
-   {
-    "id": "DR-E02-001",
-    "target_id": "human LDH5 and LDH1 enzyme activity (cell-free, UV-vis, pyruvate substrate)",
-    "endpoint": "enzyme inhibition by stiripentol as comparator in a chemistry series",
-    "direction": "DECREASE",
-    "source": "ChEMBL document CHEMBL4311969 = Bai 2019, Eur J Med Chem (PMID 31539780: alpha-asaronol esters as anticonvulsant LDH inhibitors; stiripentol is the comparator); NOT WWOX EVIDENCE",
-    "locator": "lucas_clarke_followup_20261026/chembl_named_activities.tsv; document identity from the ChEMBL document record (sada_ldh_precedent_p2a_20261026.md section 4)",
-    "epistemic_status": "DATO",
-    "reading_depth": "queried_not_full_read",
-    "context": {
-     "disease_id": "enzyme assay, not a disease",
-     "genotype": "recombinant human enzymes",
-     "species": "human",
-     "cell_type": "cell-free",
-     "developmental_stage": "not applicable"
+    {
+      "assertion_id": "DR-E02-001",
+      "status": "UNRESOLVED",
+      "reasons": [
+        "no disease assertion on this target and endpoint"
+      ]
     },
-    "measured_result_note": "Single-digit percent inhibition at the highest concentration tested, which is in the millimolar range, and no value for the lower concentration row; no IC50. The article is not read (paywalled; abstract only): substrate level, enzyme source and replicates are unknown. The same document holds stiripentol rows for a GABA-A receptor and for mouse seizure and rotarod assays, so the LDH row is one weak measurement among several. It is the lowest of three single-concentration measurements (see DR-E02-004 and DR-E02-005) at the highest concentration, and is not evidence of inefficacy: the stiripentol enantiomers in DR-E02-004 sit near the figure attributed to DR-E02-005, the racemate is lower, and no study reports a fitted potency for stiripentol.",
-    "evidence_scope": "EXTERNAL_DATABASE_RECORD"
-   },
-   {
-    "id": "DR-E02-004",
-    "target_id": "human LDHA enzyme activity (recombinant, fluorescence of NADH, saturating pyruvate)",
-    "endpoint": "enzyme inhibition by stiripentol (racemate and enantiomers) against synthetic stiripentol-related compounds",
-    "direction": "DECREASE",
-    "source": "Rico-Molina 2024, Int J Mol Sci (PMID 39769031, open access); NOT WWOX EVIDENCE",
-    "locator": "deepdive_manifests/PMID39769031.json entries; Table 2; Supplementary Figures S65 to S67",
-    "epistemic_status": "DATO",
-    "reading_depth": "partial_fulltext_read",
-    "context": {
-     "disease_id": "enzyme assay (primary hyperoxaluria context, not WWOX)",
-     "genotype": "recombinant human LDHA",
-     "species": "human",
-     "cell_type": "cell-free",
-     "developmental_stage": "not applicable"
+    {
+      "assertion_id": "DR-E02-004",
+      "status": "UNRESOLVED",
+      "reasons": [
+        "no disease assertion on this target and endpoint"
+      ]
     },
-    "measured_result_note": "Stiripentol racemate about a tenth inhibition at one high-micromolar concentration; its enantiomers about a third each in the same assay (racemate below both of its enantiomers, undiscussed, and the same racemate-outside-enantiomers scatter, up to two-fold, recurs in the analogue table); iso-stiripentol about a fifth; the IC50 entry for stiripentol is a bound, not a fitted value, and no curve is reported for it (curves only for the analogues; that none was run is an inference). Four analogues reach 46 to 72 percent at that concentration with fitted IC50 between about 100 and about 214 micromolar, steep curves (slope unconstrained by one or two points), no detergent named, 5 percent DMSO, positive-control result not shown: a screen-grade analogue series, no cell, brain or animal datum.",
-    "receipt": "FTR-20261026-39769031-01",
-    "evidence_scope": "OTHER_DISEASE_PRECEDENT"
-   },
-   {
-    "id": "DR-E02-005",
-    "target_id": "LDH enzymes (purified mammalian), neuronal membrane potential, mouse seizure model",
-    "endpoint": "LDH inhibition by stiripentol and by a stiripentol analogue (Sada 2015, Science)",
-    "direction": "DECREASE",
-    "source": "Sada 2015, Science (PMID 25792327; paywalled, no lawful full text found); abstract plus secondary descriptions only; NOT WWOX EVIDENCE",
-    "locator": "PubMed abstract; secondary statements in PMID 39769031 (about 40 percent inhibition at one high-micromolar concentration, both directions), PMID 41570991 (non-competitive) and PMID 36278433 (blood-brain-barrier crossing and cerebral LDH inhibition in mice)",
-    "epistemic_status": "DATO",
-    "reading_depth": "abstract_only",
-    "context": {
-     "disease_id": "epilepsy models (subthalamic neurons; a mouse seizure model; not WWOX)",
-     "genotype": "UNKNOWN (the indexing terms list an inbred ICR mouse strain)",
-     "species": "mouse",
-     "cell_type": "neurons, purified enzyme",
-     "developmental_stage": "UNKNOWN"
+    {
+      "assertion_id": "DR-E02-005",
+      "status": "UNRESOLVED",
+      "reasons": [
+        "no disease assertion on this target and endpoint"
+      ]
     },
-    "measured_result_note": "Abstract: LDH inhibition hyperpolarised neurons (reversed by pyruvate), suppressed seizures in a mouse model, stiripentol is an LDH inhibitor, and a chemical modification gave a more potent inhibitor that suppressed seizures in vivo. The article was NOT read: its enzyme and in vivo numbers, exposure, controls and the analogue's identity are UNKNOWN to this card. The about-forty-percent figure is another laboratory's description of it.",
-    "evidence_scope": "OTHER_DISEASE_PRECEDENT"
-   },
-   {
-    "id": "DR-E02-006",
-    "target_id": "LDH activity in glioblastoma cell lysate and cell viability, and NADH-oxidising enzymes (complex I, malate dehydrogenase)",
-    "endpoint": "cellular effect of stiripentol versus enzyme-level LDH inhibition",
-    "direction": "DECREASE",
-    "source": "Glioblastoma papers (PMID 42035940, 2026; PMID 36278433, 2022) and a complex I paper (PMID 41570991, 2026), all open access; read in part and re-read at 54 verbatim locators (ldh_readings_w13_locators_20261027.md), blind-audited 2026-10-27; PMID 36278433 was then re-read in its open full-text body on 2026-10-28 (receipt -02, partial_fulltext_read: figure legends only, appendix and references unread); NOT WWOX EVIDENCE",
-    "locator": "sada_ldh_precedent_p2a_20261026.md sections 2.2 and 2.3; ldh_readings_w13_locators_20261027.md",
-    "epistemic_status": "DATO",
-    "reading_depth": "partial_fulltext_read",
-    "context": {
-     "disease_id": "glioblastoma and small-cell lung cancer cell lines, isolated mitochondria (not WWOX)",
-     "genotype": "cancer cell lines",
-     "species": "human and mouse",
-     "cell_type": "tumour cell lines; heart and liver mitochondria",
-     "developmental_stage": "not applicable"
+    {
+      "assertion_id": "DR-E02-006",
+      "status": "UNRESOLVED",
+      "reasons": [
+        "no disease assertion on this target and endpoint"
+      ]
     },
-    "measured_result_note": "Cell viability and extracellular acidification fall at tens of micromolar. LDH activity in a lysate of treated cells and on recombinant enzyme falls only at hundreds of micromolar (the size of the lysate inhibition is not in the text and no LDH IC50 exists). NADH-driven oxygen consumption of isolated mouse heart and liver mitochondrial preparations, with complex I as the entry point (a flux readout of the organelle preparation, not an isolated-enzyme activity; the same paper's NADH-activity assays are dye-reduction measures), is inhibited from tens of micromolar (plot readings, auditor-confirmed, about 3 points of uncertainty: heart about 48, 5 and 1 percent remaining across the three lowest-to-highest concentrations tested; liver about 67, 36 and 23); no assay compares the two, so potencies are not comparable (INFERENZA: the effective concentrations are ordered complex I below LDH). The text figure of about 70 percent inhibition at the middle concentration is 51 to 53 percent raw in Supplementary Fig 2. The complex I paper reports no inhibition of malate dehydrogenase. Genetic LDHA/B double knockout raises respiratory capacity whereas stiripentol lowers it, so the drug does not phenocopy LDH ablation on respiration (INFERENZA). Cellular effects of stiripentol are therefore not attributable to LDH alone on the available data (the 2026 glioblastoma paper itself reports 'at least a partial role' of LDH). In a mouse glioblastoma xenograft stiripentol prolonged survival (log-rank P 0.002; median survival 80 versus 97 days, human stem-like cells in immunodeficient mice; the dose stated in the Results and legend is not stated in the Methods). None of the sources states which stereoisomer was used. Tumour models: no seizure, neurodevelopment or WWOX meaning.",
-    "receipt": "FTR-20261027-42035940-01; FTR-20261027-41570991-01; FTR-20261027-36278433-01; FTR-20261027-36278433-02",
-    "evidence_scope": "OTHER_DISEASE_PRECEDENT"
-   },
-   {
-    "id": "DR-E02-007",
-    "target_id": "stiripentol exposure versus in vitro effective concentration (review-level)",
-    "endpoint": "total plasma, estimated free tissue and liver exposure compared with concentrations that inhibit LDH in vitro",
-    "direction": "UNKNOWN",
-    "source": "Bacq 2024, Adv Ther review (PMID 38443647, open access; manufacturer-authored; targeted passages read, receipt FTR-20261027-38443647-01); NOT WWOX EVIDENCE",
-    "locator": "sada_ldh_precedent_p2a_20261026.md section 2.4; ldh_readings_w13_locators_20261027.md",
-    "epistemic_status": "INFERENZA",
-    "reading_depth": "queried_not_full_read",
-    "context": {
-     "disease_id": "Dravet syndrome patients and rats (review of pharmacokinetics; not WWOX)",
-     "genotype": "UNKNOWN",
-     "species": "human and rat",
-     "cell_type": "plasma and tissue",
-     "developmental_stage": "children and adults"
+    {
+      "assertion_id": "DR-E02-007",
+      "status": "UNRESOLVED",
+      "reasons": [
+        "no disease assertion on this target and endpoint"
+      ]
     },
-    "measured_result_note": "The review states that concentrations inhibiting LDH in vitro (tens to hundreds of micromolar) lie at or above total plasma levels at effective antiseizure doses and well above the estimated free tissue level, that brain to plasma ratio in the rat is near one, and that a liver to plasma ratio of about thirty-five was measured once in the rat; it ranks LDH inhibition last in sensitivity among stiripentol's mechanisms. Secondary statement of other people's measurements by a manufacturer-authored review; its Table 2 LDH range rests on three rows (the 2015 report and Guyon 2022 at hundreds of micromolar, the first second-hand; Le Dudal 2019 from tens to hundreds of micromolar, indirect oxalate); not re-derived.",
-    "evidence_scope": "OTHER_DISEASE_PRECEDENT"
-   },
-   {
-    "id": "DR-E02-002",
-    "target_id": "human LDHA enzyme activity (cell-free)",
-    "endpoint": "enzyme inhibition by GSK2837808A",
-    "direction": "DECREASE",
-    "source": "ChEMBL activity rows of CHEMBL3335794; NOT WWOX EVIDENCE",
-    "locator": "lucas_clarke_followup_20261026/chembl_named_activities.tsv",
-    "epistemic_status": "DATO",
-    "reading_depth": "queried_not_full_read",
-    "context": {
-     "disease_id": "enzyme assay, not a disease",
-     "genotype": "recombinant human enzymes",
-     "species": "human",
-     "cell_type": "cell-free",
-     "developmental_stage": "not applicable"
+    {
+      "assertion_id": "DR-E02-002",
+      "status": "UNRESOLVED",
+      "reasons": [
+        "no disease assertion on this target and endpoint"
+      ]
     },
-    "measured_result_note": "Low-nanomolar potency on LDHA and about sixteen-fold selectivity over LDHB in the cited assays; a research tool with no CNS, paediatric or clinical datum.",
-    "evidence_scope": "EXTERNAL_DATABASE_RECORD"
-   },
-   {
-    "id": "DR-E02-003",
-    "target_id": "hepatic oxalate in primary hyperoxaluria",
-    "endpoint": "LDHA lowering by an oligonucleotide (nedosiran)",
-    "direction": "DECREASE",
-    "source": "Open Targets drugAndClinicalCandidates for ENSG00000134333 (approval stage); NOT WWOX EVIDENCE",
-    "locator": "lucas_clarke_followup_20261026/opentargets_lists.tsv",
-    "epistemic_status": "DATO",
-    "reading_depth": "queried_not_full_read",
-    "context": {
-     "disease_id": "primary hyperoxaluria (not WWOX)",
-     "genotype": "AGXT, GRHPR or HOGA1 variants",
-     "species": "human",
-     "cell_type": "hepatocyte-directed",
-     "developmental_stage": "children and adults"
-    },
-    "measured_result_note": "Shows that lowering LDHA in humans is clinically tolerated in the liver; says nothing about brain exposure, and the route is liver-directed.",
-    "evidence_scope": "EXTERNAL_DATABASE_RECORD"
-   }
+    {
+      "assertion_id": "DR-E02-003",
+      "status": "UNRESOLVED",
+      "reasons": [
+        "no disease assertion on this target and endpoint"
+      ]
+    }
   ],
-  "p4_fields": {
-   "endpoint_pursued": "A WWOX-linked lactate/LDH readout that a compound moves: LDH activity and the lactate-to-pyruvate relationship (enantiomer- or isotope-resolved) in WWOX-deficient versus isogenic human neural cells at matched maturity; then a locomotor, network or myelin endpoint.",
-   "functional_evidence_available": "None for WWOX in humans. Fly: a single partial locomotor rescue by Ldh RNAi in the amyloid-plus-Wwox-reduction genotype. Human knockout organoid: LDHA transcript up but confounded with maturity.",
-   "temporal_or_model_limit": "Fly amyloid model, whole-head metabolomics, partial RNAi; the human row is a transcript.",
-   "cellular_context": {
-    "target_expression": "LDHA and LDHB are broadly expressed; LDHC is testis-restricted by convention and absent from the organoid expression universe.",
-    "cells_tissue_stage": "whole fly head (glia carry the highest Wwox mRNA, so neuronal origin of lactate is not established); bulk organoid RNA.",
-    "coverage": "UNKNOWN.",
-    "limits": "Lactate rises only with Wwox reduction plus amyloid and falls nominally without amyloid; one human MRS datum reports lactate extremely low."
-   }
-  },
-  "p4_card": {
-   "identity": "LDH-directed levers: stiripentol (approved for a paediatric developmental epilepsy; weak LDH inhibition in vitro), GSK2837808A and other research LDHA inhibitors, and the LDHA-directed oligonucleotide nedosiran (approved for primary hyperoxaluria, liver-directed). Per-compound table: compounds_and_sources.md section 2.2.",
-   "indication_and_transfer": "WWOX-DEE only IF lactate or LDH activity is shown to be a driver in a WWOX-deficient human neural system. The one fly precedent is amyloid-conditional; human lactate readouts in WWOX deficiency are normal or low in the cited sources (DL-BIO-008, DL-BIO-009).",
-   "novelty_for_woree": "NON_TROVATO_NELLA_RICERCA as a test: no source retrieved links an LDH inhibitor to WWOX deficiency; coverage is the six sources of compounds_and_sources.md and ten PubMed abstracts on 2026-10-26. Update 2026-10-26 (scientist-b, P2a): the 2015 report usually cited for stiripentol and LDH in epilepsy (PMID 25792327) is now identified, is paywalled with no lawful full text found, and is known here only through its abstract and three open-access secondary descriptions; it is a stiripentol-LDH precedent in epilepsy models, not a WWOX datum.",
-   "state_of_known_roads": "not in the earlier hand-made series; relates to map record N-06 (lactate as a readout) and HYP-20260709-01.",
-   "pathway_and_objective": "BENEFICIO_PRECOCE; Track A, Track B untested.",
-   "expected_contribution": "UNKNOWN. A partial locomotor benefit was seen once in the fly with Ldh RNAi; no human or WWOX datum.",
-   "mechanism": "Target: LDHA (HGNC:6535, P00338) and LDHB (HGNC:6541, P07195); direction: lower LDH activity or lactate production; context: amyloid-stressed fly head in the paper; UNKNOWN in WWOX-DEE. For stiripentol the LDH link is not the established basis of its antiseizure use.",
-   "sources": {
-    "internal": [
-     "PAPER 567",
-     "CLAIM 025",
-     "DL-BIO-008",
-     "DL-BIO-009",
-     "N-06",
-     "HYP-20260709-01",
-     "gse156243/prediction_isr_ldh_chain_20261026.md",
-     "lucas_clarke_followup_20261026/biological_needs.md S2"
-    ],
-    "external_not_wwox_evidence": [
-     "ChEMBL activity rows for stiripentol and GSK2837808A (document CHEMBL4311969 is Bai 2019)",
-     "Open Targets: nedosiran as the only LDHA clinical candidate",
-     "Rico-Molina 2024 enzyme paper (partial full-text read, staged receipt)",
-     "Sada 2015 (abstract only; full text not acquired)",
-     "glioblastoma 2022 and 2026 papers, a 2026 complex I paper and a 2024 mechanism review (targeted passages of open-access full texts)",
-     "sada_ldh_precedent_p2a_20261026.md"
-    ]
-   },
-   "evidence_for_and_against": {
-    "for": [
-     "Ldh RNAi improved climbing in the amyloid-plus-Wwox-reduction fly genotype (once).",
-     "Ldh transcript and lactate rise together in that genotype.",
-     "Stiripentol is an approved paediatric epilepsy drug with an LDH link published in epilepsy models (2015 report; abstract-level here) and an LDH-directed analogue series exists; nedosiran shows LDHA lowering is tolerated in humans in the liver."
-    ],
-    "against": [
-     "The Ldh rescue lacks an Ldh-alone arm, a Wwox-mRNA check and a lactate readout, and the authors cite Ldh knockdown as detrimental in other fly amyloid models.",
-     "Without amyloid lactate falls nominally and Ldh does not change.",
-     "Stiripentol inhibits LDH only weakly in the single-concentration measurements held (none gives a fitted potency, and the one at the highest concentration is the lowest), and it has other targets, including direct inhibition of mitochondrial complex I, that act at lower concentrations; any benefit would not be attributable to LDH.",
-     "LDHA in the organoid is as consistent with immaturity as with WWOX loss.",
-     "Human lactate in WWOX deficiency is reported normal or extremely low.",
-     "IT7 P3/P1 (exploratory, independently verified): in an independent WWOX-loss contrast (P47T hippocampus) the LDH isoforms split (LDHA +0.48, LDHB -0.10 against the build direction) and the six-gene module lies inside its null (p 0.060), so the LDHA elevation is not shown to be a reproducible WWOX-loss feature; the signed network and the WWOX-enriched network (the condition with four HIF1A relations added: it tests four added relations, not the value of WWOX knowledge in general) showed no added value for ranking compounds on this module and the signature route was not detected, not excluded, and stiripentol was outside that comparison by design. A computational result, not engagement data."
-    ],
-    "transfer_limits": "The fly effect needs amyloid; stiripentol's approved use depends on co-administration with another antiseizure drug and does not establish brain LDH engagement."
-   },
-   "time_to_access": "UNKNOWN for research use; stiripentol is marketed for another indication (label retrieved, openFDA 2026-04-27).",
-   "time_to_benefit": "UNKNOWN.",
-   "pharmacology": "Stiripentol: marketed formulation with a paediatric label for Dravet syndrome with clobazam; weak LDH inhibition in single-concentration enzyme measurements (no fitted potency; sizes differ between racemate, enantiomers and a database document), effective concentrations for LDH above total plasma levels and far above estimated free tissue levels in a review, other targets at lower concentrations; brain LDH engagement in vivo is asserted by secondary sources citing the 2015 report but not verified here. GSK2837808A: potent on LDHA in vitro, no in vivo or CNS datum retrieved. Nedosiran: liver-directed.",
-   "paediatrics_and_interactions": "Stiripentol label: indicated for Dravet syndrome seizures in patients taking clobazam, from six months of age (openFDA label 2026-04-27); the same label means any use here would sit on top of clobazam co-therapy, an interaction this card does not assess. No paediatric suitability for WWOX-DEE is presumed.",
-   "scope_of_checks": {
-    "support_and_replication": "No independent replication of any fly row is held; the organoid rows are one laboratory's deposit.",
-    "formal_checks": "Disease-side fly rows carry verbatim locators in the manifest (104 entries; entries 31, 49, 89, 94 SUPPORTED by a blind audit, entry 95 narrowed after an OVERSHOOT finding); the compound statements are abstract-level and unaudited.",
-    "card_inferences_owed_audit": "Statements marked INFERENZA, including every statement about what a compound would do in WWOX-deficient tissue, are OWED a blind audit by another actor."
-   },
-   "question_history": [
-    "mandate 2026-10-26 (Lucas-Clarke follow-up)",
-    "prediction_isr_ldh_chain_20261026.md",
-    "IT7 P6 (2026-10-29): the six-gene module did not transfer decisively to an independent WWOX-loss contrast and the network routes showed no added value and the signature route was not detected, not excluded (loop_demonstration_it7_p6_20261029/README.md; P3 numbers independently verified). Status, F/C/P position and the premise are unchanged."
-   ],
-   "predictions": "None; no engine, no score.",
-   "next_measurement": "IT7 P6 2026-10-29: read LDHA and LDHB activity separately (LDHB was the discordant gene in the P47T transfer test); no computational ranking selects the compound arm. In the fly: lactate (enantiomer- or isotope-resolved) in the Ldh-RNAi double genotype, an Ldh-alone arm, and Wwox mRNA in the double line. In human neural cells: LDH activity and the lactate-to-pyruvate relationship in WWOX-deficient versus isogenic cells at matched maturity. Only then a compound arm: stiripentol against a selective LDHA tool at matched exposure, so that its other pharmacology is separable from LDH. Readout design (added 2026-10-27 from the fly PARS2 reading): in every arm that perturbs complex I, read the integrated stress response (phospho-eIF2 alpha, ATF4 protein) and Ldh abundance next to Ldh ACTIVITY and lactate, because abundance, activity, metabolite level and flux are separate quantities and a complex I perturbation may raise Ldh abundance through the stress response. The designed comparison (question, model, controls, endpoint, result that would change interpretation) is in sada_ldh_precedent_p2a_20261026.md section 6; it is a proposal, nothing is authorised to run.",
-   "status": "hypothesis",
-   "value_added": "Separates the LDH lever into measured (fly, conditional), asserted (the Ldh-to-lactate step) and unmeasured (any human WWOX system), and records that the approved paediatric candidate inhibits LDH only weakly in the retrieved measurements.",
-   "clinical_census": "Clinical census, ClinicalTrials.gov API v2, 2026-10-20 (drug_repurposing/clinical_census_20261020.md): seven queries returned no registered WOREE interventional study; it answers seven queries against one registry on one date and a missing hit does not prove that no study exists. Not re-run for this card."
-  },
-  "not_known": [
-   "Whether lactate or LDH activity is altered in WWOX-deficient human neural cells, independent of maturity.",
-   "Whether stiripentol engages LDH in brain at tolerated exposures (the 2015 report is the claimed source and was not readable; its exposure and enzyme numbers are unknown here).",
-   "What the real potency of stiripentol on LDH is: only single-concentration measurements exist and no fitted value.",
-   "Which of stiripentol's effects on tumour-cell metabolism and respiration are LDH-mediated and which act through complex I.",
-   "Whether complex I inhibition at the exposures that matter itself recruits the integrated stress response and raises Ldh abundance in neural cells. In a fly model with reduced complex I protein, raised phospho-eIF2 alpha and an Ldh rise (DA-PARS2-LDH-001) that is the observed association and not a test; acute pharmacological inhibition is not the same perturbation, so the link is a question for the complex I arm, not a result.",
-   "Whether Ldh lowering is beneficial or harmful without the amyloid context.",
-   "Why lactate falls nominally with Wwox reduction without amyloid."
-  ],
-  "evidence_against": [
-   "Ldh knockdown is detrimental in other fly amyloid models (the authors' own citation).",
-   "Weak LDH inhibition by stiripentol in the retrieved measurements (a weak measure is not general inefficacy: assay, substrate level and enzyme source differ, and the 2015 report is unread).",
-   "Direct inhibition of mitochondrial complex I by stiripentol, so a metabolic effect is not an LDH effect.",
-   "An Ldh abundance rise also accompanies a complex I-reduced, ISR-activated fly model that has neither WWOX nor amyloid (DA-PARS2-LDH-001), so a raised Ldh in a Wwox-reduced fly does not by itself identify an LDH-specific lesion (INFERENZA: possible confounding by mitochondrial or ISR state).",
-   "Human lactate in WWOX deficiency reported normal or extremely low.",
-   "IT7 P3/P1 (exploratory, independently verified): in an independent WWOX-loss contrast (P47T hippocampus) the LDH isoforms split (LDHA +0.48, LDHB -0.10 against the build direction) and the six-gene module lies inside its null (p 0.060), so the LDHA elevation is not shown to be a reproducible WWOX-loss feature; the signed network and the WWOX-enriched network (the condition with four HIF1A relations added: it tests four added relations, not the value of WWOX knowledge in general) showed no added value for ranking compounds on this module and the signature route was not detected, not excluded, and stiripentol was outside that comparison by design. A computational result, not engagement data."
-  ],
-  "bridge_gaps_exposed": [
-   "Fly and organoid rows do not share a context, so no directional comparison is formed between them; the one fly-internal comparison (Ldh RNAi against Wwox knockdown on climbing) is a genetic, not a pharmacological, comparison.",
-   "The stiripentol enzyme rows (DR-E02-001, -004, -005) differ in enzyme source, substrate level and single concentration, so no direction is compared across them and no potency is derived."
-  ],
-  "translation": {
-   "pediatric_suitability": "Stiripentol paediatric label for another indication (Dravet, with clobazam); WWOX-DEE UNKNOWN.",
-   "cns_exposure": "UNKNOWN for LDH engagement.",
-   "interactions": "UNKNOWN",
-   "access": "UNKNOWN",
-   "time_to_benefit": "UNKNOWN",
-   "functional_rescue": "UNKNOWN"
-  },
-  "p4_roadmap_fields": {
-   "indication_and_transfer": "WWOX-DEE only IF lactate or LDH activity is shown to be a driver in a WWOX-deficient human neural system. The one fly precedent is amyloid-conditional; human lactate readouts in WWOX deficiency are normal or low in the cited sources (DL-BIO-008, DL-BIO-009).",
-   "verification_scope": "{\"support_and_replication\": \"No independent replication of any fly row is held; the organoid rows are one laboratory's deposit.\", \"formal_checks\": \"Disease-side fly rows carry verbatim locators in the manifest (104 entries; entries 31, 49, 89, 94 SUPPORTED by a blind audit, entry 95 narrowed after an OVERSHOOT finding); the compound statements are abstract-level and unaudited.\", \"card_inferences_owed_audit\": \"Statements marked INFERENZA, including every statement about what a compound would do in WWOX-deficient tissue, are OWED a blind audit by another actor.\"}"
-  },
+  "abstention": null,
   "label_lookup": {
-   "status": "NOT_ATTEMPTED"
+    "status": "NOT_ATTEMPTED",
+    "coverage": "UNKNOWN",
+    "method": "UNKNOWN",
+    "queries": [],
+    "source": "UNKNOWN",
+    "retrieved_at": "UNKNOWN",
+    "client_version": "UNKNOWN",
+    "product_name": "UNKNOWN",
+    "active_ingredient": "UNKNOWN",
+    "formulation": "UNKNOWN",
+    "spl_id": "UNKNOWN",
+    "error": "UNKNOWN",
+    "coverage_limit": "UNKNOWN"
   },
-  "card_conventions": [
-   "IPOTESI throughout; the bridge forces it. No score, rank, probability or blended index is carried.",
-   "directional_summary compares signs only where target, endpoint and every context dimension match; UNRESOLVED is a statement about the record, not about the biology.",
-   "Every disease-side row from the Drosophila article is NOT WWOX-DEE EVIDENCE; the organoid rows are exploratory transcript analyses of one deposit.",
-   "Abstract-level statements from PubMed are labelled abstract_only; none carries a receipt.",
-   "label_lookup is NOT_ATTEMPTED in the bridge: the bridge has no network. The openFDA adapter was run separately and is recorded in lucas_clarke_followup_20261026/compounds_and_sources.md.",
-   "No dose, route, schedule or paediatric suitability appears; assay concentrations of the sources are deliberately not reproduced."
-  ],
-  "no_new_reading": "E02 update 2026-10-26 (scientist-b, P2a): one open-access enzyme paper was read in part by receipt (PMID 39769031; receipt staged, id in CC-20261026-SCIENTIST-B-SADA-LDH-01), four more open-access papers were read at targeted passages without a receipt, and the 2015 Sada report could not be acquired lawfully (abstract only). The Lucas-Clarke rows keep scientist-a's reading (receipt FTR-20261026-42909904-01). E02 update 2026-10-27 (CC-20261027-SCIENTIST-D-LDHREADS-01): rows DR-E02-006 and -007 re-read at locators and blind-audited; receipts FTR-20261027-{42035940,36278433,41570991,38443647,30946030}-01.",
-  "target_census": {
-   "dir": "disease-models/wwox/research/drug_repurposing/lucas_clarke_followup_20261026",
-   "symbols": [
-    "LDHA",
-    "LDHB",
-    "LDHC"
-   ]
-  }
- },
- "translation": {
-  "pediatric_suitability": "Stiripentol paediatric label for another indication (Dravet, with clobazam); WWOX-DEE UNKNOWN.",
-  "cns_exposure": "UNKNOWN for LDH engagement.",
-  "interactions": "UNKNOWN",
-  "access": "UNKNOWN",
-  "time_to_benefit": "UNKNOWN",
-  "functional_rescue": "UNKNOWN"
- },
- "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
- "limits": [
-  "Technical comparison is not efficacy, safety or experimental validation.",
-  "Sources and receipt references are retained, not independently verified.",
-  "Shared sources are not independent confirmations; scores are not pooled.",
-  "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
- ]
+  "p4_fields": {
+    "endpoint_pursued": "A WWOX-linked lactate/LDH readout that a compound moves: LDH activity and the lactate-to-pyruvate relationship (enantiomer- or isotope-resolved) in WWOX-deficient versus isogenic human neural cells at matched maturity; then a locomotor, network or myelin endpoint.",
+    "functional_evidence_available": "None for WWOX in humans. Fly: a single partial locomotor rescue by Ldh RNAi in the amyloid-plus-Wwox-reduction genotype. Human knockout organoid: LDHA transcript up but confounded with maturity.",
+    "temporal_or_model_limit": "Fly amyloid model, whole-head metabolomics, partial RNAi; the human row is a transcript.",
+    "cellular_context": {
+      "target_expression": "LDHA and LDHB are broadly expressed; LDHC is testis-restricted by convention and absent from the organoid expression universe.",
+      "cells_tissue_stage": "whole fly head (glia carry the highest Wwox mRNA, so neuronal origin of lactate is not established); bulk organoid RNA.",
+      "coverage": "UNKNOWN.",
+      "limits": "Lactate rises only with Wwox reduction plus amyloid and falls nominally without amyloid; one human MRS datum reports lactate extremely low."
+    }
+  },
+  "input": {
+    "schema_version": 1,
+    "axis": "E / Lucas-Clarke follow-up: lactate dehydrogenase",
+    "route": "BENEFICIO_PRECOCE",
+    "mission_dimensions": {
+      "track": "A",
+      "track_definition": "mission.md section 5: Track A = variant-independent WWOX loss of function; Track B = variant or allele-class specific (e.g. the Q230P missense class); Track C = repurposing, which is a method of reaching A or B, not a third lesion class",
+      "route": "BENEFICIO_PRECOCE",
+      "route_definition": "RECUPERO_PROFONDO = deep recovery of the lost function; BENEFICIO_PRECOCE = concrete partial benefit, symptomatic control or protection of function, with paediatric feasibility and time in view",
+      "route_note": "A downstream metabolic lever with one genetic precedent in a fly (partial locomotor benefit). Not deep recovery; WWOX function would remain lost. Track B (Q230P class): no allele-specific rationale; the lever is allele-blind and untested for any allele.",
+      "the_two_dimensions_are_independent": "a card keeps both: a variant-independent lever can be a partial-benefit lever, and a lesion-specific one can aim at deep recovery"
+    },
+    "candidate": {
+      "id": "P4-E-02",
+      "name": "LDH inhibition or lowering (stiripentol as the approved paediatric member; LDHA tool compounds; an LDHA-directed oligonucleotide approved for another disease)"
+    },
+    "disease_assertions": [
+      {
+        "id": "DA-LC-LDH-001",
+        "target_id": "fly Ldh transcript",
+        "endpoint": "Ldh log2 fold-change in head RNA-seq",
+        "direction": "INCREASE",
+        "source": "PAPER 567 (published Lucas-Clarke 2026 article; Drosophila Alzheimer's-amyloid model; NOT WWOX EVIDENCE: a fly amyloid model, not WWOX-DEE)",
+        "locator": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json verbatim_locators.entries[29], [30], [31]; Supplementary Table 3",
+        "epistemic_status": "DATO",
+        "reading_depth": "complete_fulltext_read",
+        "context": {
+          "disease_id": "Drosophila model of Alzheimer's amyloid pathology (not WWOX-DEE)",
+          "genotype": "neuronal Wwox RNAi plus neuronal Abeta42 (Arctic) versus control RNAi plus Abeta42",
+          "species": "Drosophila melanogaster",
+          "cell_type": "adult fly head or brain (whole head for metabolomics and RNA-seq)",
+          "developmental_stage": "adult, day 14 for omics and Atf4 imaging"
+        },
+        "measured_result_note": "About +1.29 log2 over Abeta42 alone, 4 pools of 10 heads. Abeta42 alone also raises Ldh (+1.11 in the table, 1.19 in the text). Ldh is not among the genes changed by knockdown in the LacZ background.",
+        "receipt": "FTR-20261026-42909904-01",
+        "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT"
+      },
+      {
+        "id": "DA-LC-LAC-001",
+        "target_id": "fly L-lactate (whole-head HILIC LC-MS)",
+        "endpoint": "relative lactate abundance",
+        "direction": "INCREASE",
+        "source": "PAPER 567 (published Lucas-Clarke 2026 article; Drosophila Alzheimer's-amyloid model; NOT WWOX EVIDENCE: a fly amyloid model, not WWOX-DEE)",
+        "locator": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json verbatim_locators.entries[39], [40], [43]; Supplementary Table 4; Fig 5C",
+        "epistemic_status": "DATO",
+        "reading_depth": "complete_fulltext_read",
+        "context": {
+          "disease_id": "Drosophila model of Alzheimer's amyloid pathology (not WWOX-DEE)",
+          "genotype": "neuronal Wwox RNAi plus neuronal Abeta42 (Arctic) versus control RNAi plus Abeta42",
+          "species": "Drosophila melanogaster",
+          "cell_type": "adult fly head or brain (whole head for metabolomics and RNA-seq)",
+          "developmental_stage": "adult, day 14 for omics and Atf4 imaging"
+        },
+        "measured_result_note": "Interaction F 23.606, adjusted P 0.0174; knockdown effect +1.30 log2 under Abeta42. 5 pools of 10 heads, two-way ANOVA on the top 200 features by variance, 10 percent FDR. No flux, no isotope tracing, no NAD/NADH.",
+        "receipt": "FTR-20261026-42909904-01",
+        "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT"
+      },
+      {
+        "id": "DA-LC-LAC-002",
+        "target_id": "fly L-lactate (whole-head HILIC LC-MS)",
+        "endpoint": "relative lactate abundance",
+        "direction": "DECREASE",
+        "source": "PAPER 567 (published Lucas-Clarke 2026 article; Drosophila Alzheimer's-amyloid model; NOT WWOX EVIDENCE: a fly amyloid model, not WWOX-DEE)",
+        "locator": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json verbatim_locators.entries[40]; Supplementary Fig 5A",
+        "epistemic_status": "DATO",
+        "reading_depth": "complete_fulltext_read",
+        "context": {
+          "disease_id": "Drosophila model of Alzheimer's amyloid pathology (not WWOX-DEE)",
+          "genotype": "neuronal Wwox RNAi versus control RNAi in a LacZ (no amyloid) background",
+          "species": "Drosophila melanogaster",
+          "cell_type": "adult fly head or brain (whole head for metabolomics and RNA-seq)",
+          "developmental_stage": "adult, day 14 for omics and Atf4 imaging"
+        },
+        "measured_result_note": "Nominal -0.43 log2 without amyloid (simple effect not tested for significance). The lactate rise is conditional on amyloid.",
+        "receipt": "FTR-20261026-42909904-01",
+        "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT"
+      },
+      {
+        "id": "DA-LC-CLIMB-001",
+        "target_id": "fly startle-induced climbing performance",
+        "endpoint": "climbing height at days 14, 21 and 28",
+        "direction": "DECREASE",
+        "source": "PAPER 567 (published Lucas-Clarke 2026 article; Drosophila Alzheimer's-amyloid model; NOT WWOX EVIDENCE: a fly amyloid model, not WWOX-DEE)",
+        "locator": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json verbatim_locators.entries[19], [53]; Fig 5E",
+        "epistemic_status": "DATO",
+        "reading_depth": "complete_fulltext_read",
+        "context": {
+          "disease_id": "Drosophila model of Alzheimer's amyloid pathology (not WWOX-DEE)",
+          "genotype": "neuronal Abeta42 plus neuronal Wwox RNAi (the comparator and the test arm of the Ldh experiment share this background)",
+          "species": "Drosophila melanogaster",
+          "cell_type": "whole fly",
+          "developmental_stage": "adult, day 14 for omics and Atf4 imaging"
+        },
+        "measured_result_note": "Climbing is lower with Wwox knockdown plus Abeta42 than with control RNAi plus Abeta42; N 4-6 vials.",
+        "receipt": "FTR-20261026-42909904-01",
+        "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT"
+      },
+      {
+        "id": "DA-GSE-LDH-002",
+        "target_id": "human LDHA transcript",
+        "endpoint": "log2 shift, knockout minus wild type",
+        "direction": "INCREASE",
+        "source": "GSE156243, the deposit of the 2021 organoid paper (PMID 34268881); exploratory set-level analysis by scientist-c",
+        "locator": "disease-models/wwox/research/drug_repurposing/gse156243/prediction_isr_ldh_chain_20261026.md, RESULT",
+        "epistemic_status": "INFERENZA",
+        "reading_depth": "queried_not_full_read",
+        "context": {
+          "disease_id": "WWOX-deficient human cerebral organoid model (engineered knockout; NOT a patient allele; no amyloid)",
+          "genotype": "WWOX knockout versus wild type (4 versus 2 libraries, one laboratory)",
+          "species": "human",
+          "cell_type": "cerebral organoid, bulk RNA",
+          "developmental_stage": "organoid, culture week 15"
+        },
+        "measured_result_note": "LDHA +0.75 by the script's shift (+0.91 on the authors' list, padj 5e-6). LDHA also falls with elapsed culture time in WWOX-unperturbed spheroids, so the rise is as consistent with a less advanced tissue as with a WWOX effect. Transcript, not activity.",
+        "evidence_scope": "COMPUTATIONAL_RESULT"
+      },
+      {
+        "id": "DA-BIO008-001",
+        "target_id": "human brain lactate (MRS)",
+        "endpoint": "brain lactate level in one WWOX patient",
+        "direction": "DECREASE",
+        "source": "discovery_ledger_current DL-BIO-008 (one patient; reading depth not re-verified by this card)",
+        "locator": "DL-BIO-008",
+        "epistemic_status": "INFERENZA",
+        "reading_depth": "UNKNOWN",
+        "context": {
+          "disease_id": "WWOX-DEE, one reported patient (class level)",
+          "genotype": "UNKNOWN",
+          "species": "human",
+          "cell_type": "brain MRS voxel",
+          "developmental_stage": "child"
+        },
+        "measured_result_note": "Reported extremely low in one patient; the same entry records raised mouse serum lactate. Not combined with the fly rows: different species, tissue and context.",
+        "sign_vs_contrast": {
+          "DA-LC-LAC-001": "OPPOSITE (DECREASE against INCREASE under Abeta42)",
+          "DA-LC-LAC-002": "SAME SIGN (DECREASE, nominal, without Abeta42); not a replication: other species, tissue and context"
+        },
+        "evidence_scope": "UNQUALIFIED"
+      },
+      {
+        "id": "DA-PARS2-LDH-001",
+        "target_id": "fly Ldh transcript and Ldh protein (head)",
+        "endpoint": "Ldh RNA-seq change and Ldh western blot abundance in neuronal dPARS2 knockdown",
+        "direction": "INCREASE",
+        "source": "Xu 2026, Redox Biol (PMID 41380592, open access CC BY-NC; Drosophila mitochondrial prolyl-tRNA synthetase deficiency; NOT WWOX EVIDENCE: another disease, a fly model)",
+        "locator": "disease-models/wwox/research/deepdive_manifests/PMID41380592.json verbatim_locators.entries[7], [8], [35]; Fig 7A-C",
+        "epistemic_status": "DATO",
+        "reading_depth": "complete_fulltext_read",
+        "context": {
+          "disease_id": "Drosophila model of mitochondrial prolyl-tRNA synthetase (PARS2) deficiency (not WWOX, no amyloid)",
+          "genotype": "pan-neuronal dPARS2 RNAi versus control",
+          "species": "Drosophila melanogaster",
+          "cell_type": "adult fly head, bulk (RNA-seq: three libraries per genotype of thirty five-day-old female heads)",
+          "developmental_stage": "adult, about five days"
+        },
+        "measured_result_note": "Ldh and most other glycolytic transcripts rise, and Ldh PROTEIN abundance rises about ten-fold on one western blot (three samples, one pan-LDH antibody). Abundance only: no Ldh activity, lactate, pyruvate or flux was measured, and Ldh was not read after GCN2 or ATF4 suppression, so the authors' reading of the Ldh rise as ATF4 activity rests on a cited S2-cell study. The model has reduced complex I protein abundance (heads) and phospho-eIF2 alpha raised, so an Ldh rise here accompanies a mitochondrial lesion plus ISR; it is neither a WWOX nor an amyloid context.",
+        "receipt": "FTR-20261027-41380592-01",
+        "evidence_scope": "OTHER_DISEASE_PRECEDENT"
+      }
+    ],
+    "drug_assertions": [
+      {
+        "id": "DR-E02-GEN-001",
+        "target_id": "fly startle-induced climbing performance",
+        "endpoint": "climbing height at days 14, 21 and 28",
+        "direction": "INCREASE",
+        "source": "PAPER 567 (published Lucas-Clarke 2026 article; Drosophila Alzheimer's-amyloid model; NOT WWOX EVIDENCE: a fly amyloid model, not WWOX-DEE); GENETIC perturbation of the target, not a compound",
+        "locator": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json verbatim_locators.entries[51], [53], [54], [55], [56]; Fig 5E",
+        "epistemic_status": "DATO",
+        "reading_depth": "complete_fulltext_read",
+        "context": {
+          "disease_id": "Drosophila model of Alzheimer's amyloid pathology (not WWOX-DEE)",
+          "genotype": "neuronal Abeta42 plus neuronal Wwox RNAi (the comparator and the test arm of the Ldh experiment share this background)",
+          "species": "Drosophila melanogaster",
+          "cell_type": "whole fly",
+          "developmental_stage": "adult, day 14 for omics and Atf4 imaging"
+        },
+        "measured_result_note": "Partial rescue to or above the control line at day 28; once; no Ldh-alone arm; Wwox mRNA not reported in the double-RNAi line; lactate not measured in it; lifespan and amyloid load not tested; the authors cite Ldh knockdown as detrimental in other fly amyloid models.",
+        "receipt": "FTR-20261026-42909904-01",
+        "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT"
+      },
+      {
+        "id": "DR-E02-001",
+        "target_id": "human LDH5 and LDH1 enzyme activity (cell-free, UV-vis, pyruvate substrate)",
+        "endpoint": "enzyme inhibition by stiripentol as comparator in a chemistry series",
+        "direction": "DECREASE",
+        "source": "ChEMBL document CHEMBL4311969 = Bai 2019, Eur J Med Chem (PMID 31539780: alpha-asaronol esters as anticonvulsant LDH inhibitors; stiripentol is the comparator); NOT WWOX EVIDENCE",
+        "locator": "lucas_clarke_followup_20261026/chembl_named_activities.tsv; document identity from the ChEMBL document record (sada_ldh_precedent_p2a_20261026.md section 4)",
+        "epistemic_status": "DATO",
+        "reading_depth": "queried_not_full_read",
+        "context": {
+          "disease_id": "enzyme assay, not a disease",
+          "genotype": "recombinant human enzymes",
+          "species": "human",
+          "cell_type": "cell-free",
+          "developmental_stage": "not applicable"
+        },
+        "measured_result_note": "Single-digit percent inhibition at the highest concentration tested, which is in the millimolar range, and no value for the lower concentration row; no IC50. The article is not read (paywalled; abstract only): substrate level, enzyme source and replicates are unknown. The same document holds stiripentol rows for a GABA-A receptor and for mouse seizure and rotarod assays, so the LDH row is one weak measurement among several. It is the lowest of three single-concentration measurements (see DR-E02-004 and DR-E02-005) at the highest concentration, and is not evidence of inefficacy: the stiripentol enantiomers in DR-E02-004 sit near the figure attributed to DR-E02-005, the racemate is lower, and no study reports a fitted potency for stiripentol.",
+        "evidence_scope": "EXTERNAL_DATABASE_RECORD"
+      },
+      {
+        "id": "DR-E02-004",
+        "target_id": "human LDHA enzyme activity (recombinant, fluorescence of NADH, saturating pyruvate)",
+        "endpoint": "enzyme inhibition by stiripentol (racemate and enantiomers) against synthetic stiripentol-related compounds",
+        "direction": "DECREASE",
+        "source": "Rico-Molina 2024, Int J Mol Sci (PMID 39769031, open access); NOT WWOX EVIDENCE",
+        "locator": "deepdive_manifests/PMID39769031.json entries; Table 2; Supplementary Figures S65 to S67",
+        "epistemic_status": "DATO",
+        "reading_depth": "partial_fulltext_read",
+        "context": {
+          "disease_id": "enzyme assay (primary hyperoxaluria context, not WWOX)",
+          "genotype": "recombinant human LDHA",
+          "species": "human",
+          "cell_type": "cell-free",
+          "developmental_stage": "not applicable"
+        },
+        "measured_result_note": "Stiripentol racemate about a tenth inhibition at one high-micromolar concentration; its enantiomers about a third each in the same assay (racemate below both of its enantiomers, undiscussed, and the same racemate-outside-enantiomers scatter, up to two-fold, recurs in the analogue table); iso-stiripentol about a fifth; the IC50 entry for stiripentol is a bound, not a fitted value, and no curve is reported for it (curves only for the analogues; that none was run is an inference). Four analogues reach 46 to 72 percent at that concentration with fitted IC50 between about 100 and about 214 micromolar, steep curves (slope unconstrained by one or two points), no detergent named, 5 percent DMSO, positive-control result not shown: a screen-grade analogue series, no cell, brain or animal datum.",
+        "receipt": "FTR-20261026-39769031-01",
+        "evidence_scope": "OTHER_DISEASE_PRECEDENT"
+      },
+      {
+        "id": "DR-E02-005",
+        "target_id": "LDH enzymes (purified mammalian), neuronal membrane potential, mouse seizure model",
+        "endpoint": "LDH inhibition by stiripentol and by a stiripentol analogue (Sada 2015, Science)",
+        "direction": "DECREASE",
+        "source": "Sada 2015, Science (PMID 25792327; paywalled, no lawful full text found); abstract plus secondary descriptions only; NOT WWOX EVIDENCE",
+        "locator": "PubMed abstract; secondary statements in PMID 39769031 (about 40 percent inhibition at one high-micromolar concentration, both directions), PMID 41570991 (non-competitive) and PMID 36278433 (blood-brain-barrier crossing and cerebral LDH inhibition in mice)",
+        "epistemic_status": "DATO",
+        "reading_depth": "abstract_only",
+        "context": {
+          "disease_id": "epilepsy models (subthalamic neurons; a mouse seizure model; not WWOX)",
+          "genotype": "UNKNOWN (the indexing terms list an inbred ICR mouse strain)",
+          "species": "mouse",
+          "cell_type": "neurons, purified enzyme",
+          "developmental_stage": "UNKNOWN"
+        },
+        "measured_result_note": "Abstract: LDH inhibition hyperpolarised neurons (reversed by pyruvate), suppressed seizures in a mouse model, stiripentol is an LDH inhibitor, and a chemical modification gave a more potent inhibitor that suppressed seizures in vivo. The article was NOT read: its enzyme and in vivo numbers, exposure, controls and the analogue's identity are UNKNOWN to this card. The about-forty-percent figure is another laboratory's description of it.",
+        "evidence_scope": "OTHER_DISEASE_PRECEDENT"
+      },
+      {
+        "id": "DR-E02-006",
+        "target_id": "LDH activity in glioblastoma cell lysate and cell viability, and NADH-oxidising enzymes (complex I, malate dehydrogenase)",
+        "endpoint": "cellular effect of stiripentol versus enzyme-level LDH inhibition",
+        "direction": "DECREASE",
+        "source": "Glioblastoma papers (PMID 42035940, 2026; PMID 36278433, 2022) and a complex I paper (PMID 41570991, 2026), all open access; read in part and re-read at 54 verbatim locators (ldh_readings_w13_locators_20261027.md), blind-audited 2026-10-27; PMID 36278433 was then re-read in its open full-text body on 2026-10-28 (receipt -02, partial_fulltext_read: figure legends only, appendix and references unread); NOT WWOX EVIDENCE",
+        "locator": "sada_ldh_precedent_p2a_20261026.md sections 2.2 and 2.3; ldh_readings_w13_locators_20261027.md",
+        "epistemic_status": "DATO",
+        "reading_depth": "partial_fulltext_read",
+        "context": {
+          "disease_id": "glioblastoma and small-cell lung cancer cell lines, isolated mitochondria (not WWOX)",
+          "genotype": "cancer cell lines",
+          "species": "human and mouse",
+          "cell_type": "tumour cell lines; heart and liver mitochondria",
+          "developmental_stage": "not applicable"
+        },
+        "measured_result_note": "Cell viability and extracellular acidification fall at tens of micromolar. LDH activity in a lysate of treated cells and on recombinant enzyme falls only at hundreds of micromolar (the size of the lysate inhibition is not in the text and no LDH IC50 exists). NADH-driven oxygen consumption of isolated mouse heart and liver mitochondrial preparations, with complex I as the entry point (a flux readout of the organelle preparation, not an isolated-enzyme activity; the same paper's NADH-activity assays are dye-reduction measures), is inhibited from tens of micromolar (plot readings, auditor-confirmed, about 3 points of uncertainty: heart about 48, 5 and 1 percent remaining across the three lowest-to-highest concentrations tested; liver about 67, 36 and 23); no assay compares the two, so potencies are not comparable (INFERENZA: the effective concentrations are ordered complex I below LDH). The text figure of about 70 percent inhibition at the middle concentration is 51 to 53 percent raw in Supplementary Fig 2. The complex I paper reports no inhibition of malate dehydrogenase. Genetic LDHA/B double knockout raises respiratory capacity whereas stiripentol lowers it, so the drug does not phenocopy LDH ablation on respiration (INFERENZA). Cellular effects of stiripentol are therefore not attributable to LDH alone on the available data (the 2026 glioblastoma paper itself reports 'at least a partial role' of LDH). In a mouse glioblastoma xenograft stiripentol prolonged survival (log-rank P 0.002; median survival 80 versus 97 days, human stem-like cells in immunodeficient mice; the dose stated in the Results and legend is not stated in the Methods). None of the sources states which stereoisomer was used. Tumour models: no seizure, neurodevelopment or WWOX meaning.",
+        "receipt": "FTR-20261027-42035940-01; FTR-20261027-41570991-01; FTR-20261027-36278433-01; FTR-20261027-36278433-02",
+        "evidence_scope": "OTHER_DISEASE_PRECEDENT"
+      },
+      {
+        "id": "DR-E02-007",
+        "target_id": "stiripentol exposure versus in vitro effective concentration (review-level)",
+        "endpoint": "total plasma, estimated free tissue and liver exposure compared with concentrations that inhibit LDH in vitro",
+        "direction": "UNKNOWN",
+        "source": "Bacq 2024, Adv Ther review (PMID 38443647, open access; manufacturer-authored; targeted passages read, receipt FTR-20261027-38443647-01); NOT WWOX EVIDENCE",
+        "locator": "sada_ldh_precedent_p2a_20261026.md section 2.4; ldh_readings_w13_locators_20261027.md",
+        "epistemic_status": "INFERENZA",
+        "reading_depth": "queried_not_full_read",
+        "context": {
+          "disease_id": "Dravet syndrome patients and rats (review of pharmacokinetics; not WWOX)",
+          "genotype": "UNKNOWN",
+          "species": "human and rat",
+          "cell_type": "plasma and tissue",
+          "developmental_stage": "children and adults"
+        },
+        "measured_result_note": "The review states that concentrations inhibiting LDH in vitro (tens to hundreds of micromolar) lie at or above total plasma levels at effective antiseizure doses and well above the estimated free tissue level, that brain to plasma ratio in the rat is near one, and that a liver to plasma ratio of about thirty-five was measured once in the rat; it ranks LDH inhibition last in sensitivity among stiripentol's mechanisms. Secondary statement of other people's measurements by a manufacturer-authored review; its Table 2 LDH range rests on three rows (the 2015 report and Guyon 2022 at hundreds of micromolar, the first second-hand; Le Dudal 2019 from tens to hundreds of micromolar, indirect oxalate); not re-derived.",
+        "evidence_scope": "OTHER_DISEASE_PRECEDENT"
+      },
+      {
+        "id": "DR-E02-002",
+        "target_id": "human LDHA enzyme activity (cell-free)",
+        "endpoint": "enzyme inhibition by GSK2837808A",
+        "direction": "DECREASE",
+        "source": "ChEMBL activity rows of CHEMBL3335794; NOT WWOX EVIDENCE",
+        "locator": "lucas_clarke_followup_20261026/chembl_named_activities.tsv",
+        "epistemic_status": "DATO",
+        "reading_depth": "queried_not_full_read",
+        "context": {
+          "disease_id": "enzyme assay, not a disease",
+          "genotype": "recombinant human enzymes",
+          "species": "human",
+          "cell_type": "cell-free",
+          "developmental_stage": "not applicable"
+        },
+        "measured_result_note": "Low-nanomolar potency on LDHA and about sixteen-fold selectivity over LDHB in the cited assays; a research tool with no CNS, paediatric or clinical datum.",
+        "evidence_scope": "EXTERNAL_DATABASE_RECORD"
+      },
+      {
+        "id": "DR-E02-003",
+        "target_id": "hepatic oxalate in primary hyperoxaluria",
+        "endpoint": "LDHA lowering by an oligonucleotide (nedosiran)",
+        "direction": "DECREASE",
+        "source": "Open Targets drugAndClinicalCandidates for ENSG00000134333 (approval stage); NOT WWOX EVIDENCE",
+        "locator": "lucas_clarke_followup_20261026/opentargets_lists.tsv",
+        "epistemic_status": "DATO",
+        "reading_depth": "queried_not_full_read",
+        "context": {
+          "disease_id": "primary hyperoxaluria (not WWOX)",
+          "genotype": "AGXT, GRHPR or HOGA1 variants",
+          "species": "human",
+          "cell_type": "hepatocyte-directed",
+          "developmental_stage": "children and adults"
+        },
+        "measured_result_note": "Shows that lowering LDHA in humans is clinically tolerated in the liver; says nothing about brain exposure, and the route is liver-directed.",
+        "evidence_scope": "EXTERNAL_DATABASE_RECORD"
+      }
+    ],
+    "p4_fields": {
+      "endpoint_pursued": "A WWOX-linked lactate/LDH readout that a compound moves: LDH activity and the lactate-to-pyruvate relationship (enantiomer- or isotope-resolved) in WWOX-deficient versus isogenic human neural cells at matched maturity; then a locomotor, network or myelin endpoint.",
+      "functional_evidence_available": "None for WWOX in humans. Fly: a single partial locomotor rescue by Ldh RNAi in the amyloid-plus-Wwox-reduction genotype. Human knockout organoid: LDHA transcript up but confounded with maturity.",
+      "temporal_or_model_limit": "Fly amyloid model, whole-head metabolomics, partial RNAi; the human row is a transcript.",
+      "cellular_context": {
+        "target_expression": "LDHA and LDHB are broadly expressed; LDHC is testis-restricted by convention and absent from the organoid expression universe.",
+        "cells_tissue_stage": "whole fly head (glia carry the highest Wwox mRNA, so neuronal origin of lactate is not established); bulk organoid RNA.",
+        "coverage": "UNKNOWN.",
+        "limits": "Lactate rises only with Wwox reduction plus amyloid and falls nominally without amyloid; one human MRS datum reports lactate extremely low."
+      }
+    },
+    "p4_card": {
+      "identity": "LDH-directed levers: stiripentol (approved for a paediatric developmental epilepsy; weak LDH inhibition in vitro), GSK2837808A and other research LDHA inhibitors, and the LDHA-directed oligonucleotide nedosiran (approved for primary hyperoxaluria, liver-directed). Per-compound table: compounds_and_sources.md section 2.2.",
+      "indication_and_transfer": "WWOX-DEE only IF lactate or LDH activity is shown to be a driver in a WWOX-deficient human neural system. The one fly precedent is amyloid-conditional; human lactate readouts in WWOX deficiency are normal or low in the cited sources (DL-BIO-008, DL-BIO-009).",
+      "novelty_for_woree": "NON_TROVATO_NELLA_RICERCA as a test: no source retrieved links an LDH inhibitor to WWOX deficiency; coverage is the six sources of compounds_and_sources.md and ten PubMed abstracts on 2026-10-26. Update 2026-10-26 (scientist-b, P2a): the 2015 report usually cited for stiripentol and LDH in epilepsy (PMID 25792327) is now identified, is paywalled with no lawful full text found, and is known here only through its abstract and three open-access secondary descriptions; it is a stiripentol-LDH precedent in epilepsy models, not a WWOX datum.",
+      "state_of_known_roads": "not in the earlier hand-made series; relates to map record N-06 (lactate as a readout) and HYP-20260709-01.",
+      "pathway_and_objective": "BENEFICIO_PRECOCE; Track A, Track B untested.",
+      "expected_contribution": "UNKNOWN. A partial locomotor benefit was seen once in the fly with Ldh RNAi; no human or WWOX datum.",
+      "mechanism": "Target: LDHA (HGNC:6535, P00338) and LDHB (HGNC:6541, P07195); direction: lower LDH activity or lactate production; context: amyloid-stressed fly head in the paper; UNKNOWN in WWOX-DEE. For stiripentol the LDH link is not the established basis of its antiseizure use.",
+      "sources": {
+        "internal": [
+          "PAPER 567",
+          "CLAIM 025",
+          "DL-BIO-008",
+          "DL-BIO-009",
+          "N-06",
+          "HYP-20260709-01",
+          "gse156243/prediction_isr_ldh_chain_20261026.md",
+          "lucas_clarke_followup_20261026/biological_needs.md S2"
+        ],
+        "external_not_wwox_evidence": [
+          "ChEMBL activity rows for stiripentol and GSK2837808A (document CHEMBL4311969 is Bai 2019)",
+          "Open Targets: nedosiran as the only LDHA clinical candidate",
+          "Rico-Molina 2024 enzyme paper (partial full-text read, staged receipt)",
+          "Sada 2015 (abstract only; full text not acquired)",
+          "glioblastoma 2022 and 2026 papers, a 2026 complex I paper and a 2024 mechanism review (targeted passages of open-access full texts)",
+          "sada_ldh_precedent_p2a_20261026.md"
+        ]
+      },
+      "evidence_for_and_against": {
+        "for": [
+          "Ldh RNAi improved climbing in the amyloid-plus-Wwox-reduction fly genotype (once).",
+          "Ldh transcript and lactate rise together in that genotype.",
+          "Stiripentol is an approved paediatric epilepsy drug with an LDH link published in epilepsy models (2015 report; abstract-level here) and an LDH-directed analogue series exists; nedosiran shows LDHA lowering is tolerated in humans in the liver."
+        ],
+        "against": [
+          "The Ldh rescue lacks an Ldh-alone arm, a Wwox-mRNA check and a lactate readout, and the authors cite Ldh knockdown as detrimental in other fly amyloid models.",
+          "Without amyloid lactate falls nominally and Ldh does not change.",
+          "Stiripentol inhibits LDH only weakly in the single-concentration measurements held (none gives a fitted potency, and the one at the highest concentration is the lowest), and it has other targets, including direct inhibition of mitochondrial complex I, that act at lower concentrations; any benefit would not be attributable to LDH.",
+          "LDHA in the organoid is as consistent with immaturity as with WWOX loss.",
+          "Human lactate in WWOX deficiency is reported normal or extremely low.",
+          "IT7 P3/P1 (exploratory, independently verified): in an independent WWOX-loss contrast (P47T hippocampus) the LDH isoforms split (LDHA +0.48, LDHB -0.10 against the build direction) and the six-gene module lies inside its null (p 0.060), so the LDHA elevation is not shown to be a reproducible WWOX-loss feature; the signed network and the WWOX-enriched network (the condition with four HIF1A relations added: it tests four added relations, not the value of WWOX knowledge in general) showed no added value for ranking compounds on this module and the signature route was not detected, not excluded, and stiripentol was outside that comparison by design. A computational result, not engagement data.",
+          "IT8 P3 (2026-10-29): there is no enzyme-level support for stiripentol as a way to test the LDH node - 7 percent inhibition at 2 millimolar (ChEMBL) and about 10 percent at 0.5 millimolar (independent report), no fitted LDH potency among the curated database entries read for it, a label that does not name LDH; one cell-level signal (mouse hepatocyte oxalate output at 10 micromolar, shared with glycolate oxidase) is not LDH engagement; the third report (Sada 2015) remains abstract-only and secondary."
+        ],
+        "transfer_limits": "The fly effect needs amyloid; stiripentol's approved use depends on co-administration with another antiseizure drug and does not establish brain LDH engagement."
+      },
+      "time_to_access": "UNKNOWN for research use; stiripentol is marketed for another indication (label retrieved, openFDA 2026-04-27).",
+      "time_to_benefit": "UNKNOWN.",
+      "pharmacology": "Stiripentol: marketed formulation with a paediatric label for Dravet syndrome with clobazam; weak LDH inhibition in single-concentration enzyme measurements (no fitted potency; sizes differ between racemate, enantiomers and a database document), effective concentrations for LDH above total plasma levels and far above estimated free tissue levels in a review, other targets at lower concentrations; brain LDH engagement in vivo is asserted by secondary sources citing the 2015 report but not verified here. IT8 P3 2026-10-29 (ChEMBL molecule-first on the racemate: 28 rows under the type filter IC50, Ki, Kd, EC50, Kb, Potency and Inhibition, 88 unfiltered, none a fitted LDH potency; one comparator document with LDH5 and LDH1 inhibition of 7 percent at 2 millimolar and no value at 0.5 millimolar; four cell-level rows of another document, mouse hepatocyte oxalate output 0.27 to 0.70 at 10 micromolar, a pathway shared with glycolate oxidase, weighed and not decisive; the US label of 2026-04-27 states that the human mechanism is unknown and names GABA-A and cytochrome P450 inhibition as possible mechanisms, gives protein binding of 99 percent and no peak concentration). GSK2837808A: potent on LDHA in vitro, no in vivo or CNS datum retrieved. Nedosiran: liver-directed.",
+      "paediatrics_and_interactions": "Stiripentol label: indicated for Dravet syndrome seizures in patients taking clobazam, from six months of age (openFDA label 2026-04-27); the same label means any use here would sit on top of clobazam co-therapy, an interaction this card does not assess. No paediatric suitability for WWOX-DEE is presumed.",
+      "scope_of_checks": {
+        "support_and_replication": "No independent replication of any fly row is held; the organoid rows are one laboratory's deposit.",
+        "formal_checks": "Disease-side fly rows carry verbatim locators in the manifest (104 entries; entries 31, 49, 89, 94 SUPPORTED by a blind audit, entry 95 narrowed after an OVERSHOOT finding); the compound statements are abstract-level and unaudited.",
+        "card_inferences_owed_audit": "Statements marked INFERENZA, including every statement about what a compound would do in WWOX-deficient tissue, are OWED a blind audit by another actor."
+      },
+      "question_history": [
+        "mandate 2026-10-26 (Lucas-Clarke follow-up)",
+        "prediction_isr_ldh_chain_20261026.md",
+        "IT7 P6 (2026-10-29): the six-gene module did not transfer decisively to an independent WWOX-loss contrast and the network routes showed no added value and the signature route was not detected, not excluded (loop_demonstration_it7_p6_20261029/README.md; P3 numbers independently verified). Status, F/C/P position and the premise are unchanged."
+      ],
+      "predictions": "None; no engine, no score.",
+      "next_measurement": "IT7 P6 2026-10-29: read LDHA and LDHB activity separately (LDHB was the discordant gene in the P47T transfer test); no computational ranking selects the compound arm. In the fly: lactate (enantiomer- or isotope-resolved) in the Ldh-RNAi double genotype, an Ldh-alone arm, and Wwox mRNA in the double line. In human neural cells: LDH activity and the lactate-to-pyruvate relationship in WWOX-deficient versus isogenic cells at matched maturity. Only then a compound arm. IT8 P3 2026-10-29: stiripentol is not carried as the LDH-engagement probe, because the readable enzyme data give 7 percent inhibition at 2 millimolar and about 10 percent at 0.5 millimolar (no fitted value: no enzyme-level support), the US label names no LDH mechanism, the one cell-level signal found (four rows of a 2022 glycolate-oxidase and LDHA double-inhibitor series: relative oxalate output 0.27 to 0.70 at 10 micromolar in mouse hepatocytes) does not establish LDH engagement, and the 42 to 500 micromolar range quoted for it is a secondary figure; the arm is a nanomolar human-LDHA inhibitor taken from the curated database target entries (every retrieved qualifying molecule is listed by ChEMBL id in pharmacological_qualification_it8_p3_20261029/measures_detail.tsv, not ranked), with selectivity over LDHB to be established per compound, and stiripentol is kept as a complex I and GABA-A comparator so that its other pharmacology is separable from LDH. Readout design (added 2026-10-27 from the fly PARS2 reading): in every arm that perturbs complex I, read the integrated stress response (phospho-eIF2 alpha, ATF4 protein) and Ldh abundance next to Ldh ACTIVITY and lactate, because abundance, activity, metabolite level and flux are separate quantities and a complex I perturbation may raise Ldh abundance through the stress response. The designed comparison (question, model, controls, endpoint, result that would change interpretation) is in sada_ldh_precedent_p2a_20261026.md section 6; it is a proposal, nothing is authorised to run.",
+      "status": "hypothesis",
+      "value_added": "Separates the LDH lever into measured (fly, conditional), asserted (the Ldh-to-lactate step) and unmeasured (any human WWOX system), and records that the approved paediatric candidate inhibits LDH only weakly in the retrieved measurements.",
+      "clinical_census": "Clinical census, ClinicalTrials.gov API v2, 2026-10-20 (drug_repurposing/clinical_census_20261020.md): seven queries returned no registered WOREE interventional study; it answers seven queries against one registry on one date and a missing hit does not prove that no study exists. Not re-run for this card."
+    },
+    "not_known": [
+      "Whether lactate or LDH activity is altered in WWOX-deficient human neural cells, independent of maturity.",
+      "Whether stiripentol engages LDH in brain at tolerated exposures (the 2015 report is the claimed source and was not readable; its exposure and enzyme numbers are unknown here).",
+      "What the real potency of stiripentol on LDH is: only single-concentration measurements exist and no fitted value.",
+      "Which of stiripentol's effects on tumour-cell metabolism and respiration are LDH-mediated and which act through complex I.",
+      "Whether complex I inhibition at the exposures that matter itself recruits the integrated stress response and raises Ldh abundance in neural cells. In a fly model with reduced complex I protein, raised phospho-eIF2 alpha and an Ldh rise (DA-PARS2-LDH-001) that is the observed association and not a test; acute pharmacological inhibition is not the same perturbation, so the link is a question for the complex I arm, not a result.",
+      "Whether Ldh lowering is beneficial or harmful without the amyloid context.",
+      "Why lactate falls nominally with Wwox reduction without amyloid."
+    ],
+    "evidence_against": [
+      "Ldh knockdown is detrimental in other fly amyloid models (the authors' own citation).",
+      "Weak LDH inhibition by stiripentol in the retrieved measurements (a weak measure is not general inefficacy: assay, substrate level and enzyme source differ, and the 2015 report is unread).",
+      "Direct inhibition of mitochondrial complex I by stiripentol, so a metabolic effect is not an LDH effect.",
+      "An Ldh abundance rise also accompanies a complex I-reduced, ISR-activated fly model that has neither WWOX nor amyloid (DA-PARS2-LDH-001), so a raised Ldh in a Wwox-reduced fly does not by itself identify an LDH-specific lesion (INFERENZA: possible confounding by mitochondrial or ISR state).",
+      "Human lactate in WWOX deficiency reported normal or extremely low.",
+      "IT7 P3/P1 (exploratory, independently verified): in an independent WWOX-loss contrast (P47T hippocampus) the LDH isoforms split (LDHA +0.48, LDHB -0.10 against the build direction) and the six-gene module lies inside its null (p 0.060), so the LDHA elevation is not shown to be a reproducible WWOX-loss feature; the signed network and the WWOX-enriched network (the condition with four HIF1A relations added: it tests four added relations, not the value of WWOX knowledge in general) showed no added value for ranking compounds on this module and the signature route was not detected, not excluded, and stiripentol was outside that comparison by design. A computational result, not engagement data."
+    ],
+    "bridge_gaps_exposed": [
+      "Fly and organoid rows do not share a context, so no directional comparison is formed between them; the one fly-internal comparison (Ldh RNAi against Wwox knockdown on climbing) is a genetic, not a pharmacological, comparison.",
+      "The stiripentol enzyme rows (DR-E02-001, -004, -005) differ in enzyme source, substrate level and single concentration, so no direction is compared across them and no potency is derived."
+    ],
+    "translation": {
+      "pediatric_suitability": "Stiripentol paediatric label for another indication (Dravet, with clobazam); WWOX-DEE UNKNOWN.",
+      "cns_exposure": "UNKNOWN for LDH engagement.",
+      "interactions": "UNKNOWN",
+      "access": "UNKNOWN",
+      "time_to_benefit": "UNKNOWN",
+      "functional_rescue": "UNKNOWN"
+    },
+    "p4_roadmap_fields": {
+      "indication_and_transfer": "WWOX-DEE only IF lactate or LDH activity is shown to be a driver in a WWOX-deficient human neural system. The one fly precedent is amyloid-conditional; human lactate readouts in WWOX deficiency are normal or low in the cited sources (DL-BIO-008, DL-BIO-009).",
+      "verification_scope": "{\"support_and_replication\": \"No independent replication of any fly row is held; the organoid rows are one laboratory's deposit.\", \"formal_checks\": \"Disease-side fly rows carry verbatim locators in the manifest (104 entries; entries 31, 49, 89, 94 SUPPORTED by a blind audit, entry 95 narrowed after an OVERSHOOT finding); the compound statements are abstract-level and unaudited.\", \"card_inferences_owed_audit\": \"Statements marked INFERENZA, including every statement about what a compound would do in WWOX-deficient tissue, are OWED a blind audit by another actor.\"}"
+    },
+    "label_lookup": {
+      "status": "NOT_ATTEMPTED"
+    },
+    "card_conventions": [
+      "IPOTESI throughout; the bridge forces it. No score, rank, probability or blended index is carried.",
+      "directional_summary compares signs only where target, endpoint and every context dimension match; UNRESOLVED is a statement about the record, not about the biology.",
+      "Every disease-side row from the Drosophila article is NOT WWOX-DEE EVIDENCE; the organoid rows are exploratory transcript analyses of one deposit.",
+      "Abstract-level statements from PubMed are labelled abstract_only; none carries a receipt.",
+      "label_lookup is NOT_ATTEMPTED in the bridge: the bridge has no network. The openFDA adapter was run separately and is recorded in lucas_clarke_followup_20261026/compounds_and_sources.md.",
+      "No dose, route, schedule or paediatric suitability appears; assay concentrations of the sources are deliberately not reproduced."
+    ],
+    "no_new_reading": "E02 update 2026-10-26 (scientist-b, P2a): one open-access enzyme paper was read in part by receipt (PMID 39769031; receipt staged, id in CC-20261026-SCIENTIST-B-SADA-LDH-01), four more open-access papers were read at targeted passages without a receipt, and the 2015 Sada report could not be acquired lawfully (abstract only). The Lucas-Clarke rows keep scientist-a's reading (receipt FTR-20261026-42909904-01). E02 update 2026-10-27 (CC-20261027-SCIENTIST-D-LDHREADS-01): rows DR-E02-006 and -007 re-read at locators and blind-audited; receipts FTR-20261027-{42035940,36278433,41570991,38443647,30946030}-01.",
+    "target_census": {
+      "dir": "disease-models/wwox/research/drug_repurposing/lucas_clarke_followup_20261026",
+      "symbols": [
+        "LDHA",
+        "LDHB",
+        "LDHC"
+      ]
+    }
+  },
+  "translation": {
+    "pediatric_suitability": "Stiripentol paediatric label for another indication (Dravet, with clobazam); WWOX-DEE UNKNOWN.",
+    "cns_exposure": "UNKNOWN for LDH engagement.",
+    "interactions": "UNKNOWN",
+    "access": "UNKNOWN",
+    "time_to_benefit": "UNKNOWN",
+    "functional_rescue": "UNKNOWN"
+  },
+  "next_step": "Qualify provenance and context; specify a proximal functional experiment; apply legend-safety-triage.",
+  "limits": [
+    "Technical comparison is not efficacy, safety or experimental validation.",
+    "Sources and receipt references are retained, not independently verified.",
+    "Shared sources are not independent confirmations; scores are not pooled.",
+    "No pharmacological-label search was run: the label is unknown here, which is not NO_MATCH_FOUND and not an absent label."
+  ]
 }

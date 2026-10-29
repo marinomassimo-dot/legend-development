@@ -18,17 +18,17 @@
    },
    "^\\.cur\\.(needs|threads|groups|gaps|goals|tracks|scopes|group_note|meta|evidence_graph|work_order|selection|hypotheses|predictive|contexts)(\\.|\\[\\]|$)": {
     "class": "OWN",
-    "values": 3550,
+    "values": 3556,
     "why": "needs, threads, positions, evidence graph, work order and the IT7 selection, comparison, predictive-test and context sections: own text or counts computed from own census files"
    },
    "^\\.cur\\.cands\\[\\]\\.": {
     "class": "OWN",
-    "values": 5929,
+    "values": 5930,
     "why": "card text and computed positions (provenance of the prose: see text audit)"
    },
    "^\\.cur\\.cands\\[\\]\\.(pmids\\[\\]\\.(id|role)|dois\\[\\])$": {
     "class": "BIBLIO",
-    "values": 421,
+    "values": 427,
     "why": "PMID / DOI of a cited work"
    },
    "^\\.cur\\.cands\\[\\]\\.access\\[\\]$": {
@@ -53,7 +53,7 @@
    },
    "^\\.cur\\.cands\\[\\]\\.pmids\\[\\]\\.(title|journal|year)$": {
     "class": "BIBLIO",
-    "values": 624,
+    "values": 633,
     "why": "title, journal, year of a cited work (bibliographic facts)"
    },
    "^\\.cur\\.evidence_graph\\.chains\\[\\]\\.(nodes\\[\\]\\.pmids\\[\\]|edges\\[\\]\\.src\\.id)$": {
@@ -212,7 +212,7 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 1965,
+    "forbidden-name": 1975,
     "forbidden-wording": 12
    },
    "co_attested_wording": [
@@ -303,7 +303,7 @@
    "identity": 7,
    "links": 7,
    "mechanism": 1,
-   "next_full": 2,
+   "next_full": 3,
    "novelty": 2,
    "pharm": 2,
    "reopen": 1
@@ -429,15 +429,15 @@
  ],
  "data": {
   "catalogue_generated": "2026-10-28T23:40:16Z",
-  "data_date": "2026-10-29",
+  "data_date": "2026-10-30",
   "dgidb_export": "2024-06-10",
   "view_schema": "legend.wwox.repurposing_view/2"
  },
  "embedded_field_classes": {
-  "BIBLIO": 1930,
+  "BIBLIO": 1945,
   "COUNT": 7757,
   "ID": 3048,
-  "OWN": 54176,
+  "OWN": 54183,
   "ROWNAME": 1506,
   "SRC_A": 91,
   "SRC_META": 256,
@@ -476,7 +476,7 @@
  "files": {
   "COMPARISON.md": {
    "bytes": 6433,
-   "sha256": "f782e2febc51b8280631f05fd2ff332d8f4eae84eb8399af2f3753e1f60581b0"
+   "sha256": "c89e18c74cca5017ffb15a2cfbb4eeb8024598bceba90c8c686bc98b2e733dea"
   },
   "LICENSES/CC-BY-4.0.txt": {
    "bytes": 18657,
@@ -496,11 +496,11 @@
   },
   "NOTICE.md": {
    "bytes": 12612,
-   "sha256": "3f8a534a4a244fe080f011de1157d96eda007f3c01c2cf8aca99f948d0eea555"
+   "sha256": "64cd941389b2787479e93c4f1cf5c736aaeea31d4e2b0c2065c10a477c8b2a76"
   },
   "README.md": {
    "bytes": 4642,
-   "sha256": "02145ca83f3593ce48e07b79c7d59f6544f92b121085f515a5978f62169f303c"
+   "sha256": "47ba6e781bf7593cc5edcb97927655921929783c4df4ef274b5e1c1c14ed83e2"
   },
   "TEXT_PROVENANCE.json": {
    "bytes": 1870,
@@ -519,8 +519,8 @@
    "sha256": "d8fe6a3455466783564803428b6318c1c442db6a16dfb97de8a6b7dcf944cc9d"
   },
   "index.html": {
-   "bytes": 2497926,
-   "sha256": "5789c86bd39a41ed83f3479e0df047e38231139fae907a399d3af0ca98528393"
+   "bytes": 2504686,
+   "sha256": "af8041c7f0894be4eaed16a837f9ec5520be0da9a21bc88870dd427c80fc844b"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",
@@ -580,7 +580,7 @@
   "lead_field_redactions": 11,
   "pair_status_rule": "pairs[].p.cr.pha[1] (status classes of the row) is dropped in the shareable build: a status class derives from ChEMBL max_phase, DGIdb approved flags, MATRIX and openFDA together, and the build does not re-derive a class-A-only status per row.",
   "pairs_status_class_dropped": 680,
-  "repository_file_names_described": 46,
+  "repository_file_names_described": 48,
   "rule": "IT5 P13 fix. Own analysis stays in the shareable build: a conclusion at the level of a need, a class or a card subject, in our own words, short, attributed to a published work. Withheld: (1) a sentence that states a compound-target(-action) pair together with its database of origin when the pair is asserted only by a class-B/C catalogue source; (2) a compound named in prose whose only provenance in the repository is a class-B/C catalogue row (it appears in no cited full text and is not a card subject); (3) a per-compound status, phase, approval or access statement attributed to a class-B/C source; (4) repository file names, which cannot be used outside the repository. The replacement keeps the research conclusion and names the withheld source class with the phrase in withheld_phrase. The FULL build keeps everything. The audit enforces (1) and (2) by derivation from the catalogue, (3) and (4) by pattern, and every redaction below must match exactly once or more: a stale redaction fails the build.",
   "withheld_phrase": "dato di una fonte non inclusa in questa versione"
  },
