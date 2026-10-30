@@ -59,15 +59,15 @@
    "steps": [
     {
      "step": "P5 ranking: unit-type visibility, molecule-level evidence vs class, new-vs-known filter, separate promise/depth/next-experiment",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "scientist-c",
-     "evidence": ""
+     "evidence": "R4 ranking (unit type, member-level evidence, promise/depth/NX separate, origin filter); 61 entries: 14 orderable/5 weak/16 insufficient/26 excluded; 35 ranked = 27 known + 8 generated; no existing group moved"
     },
     {
      "step": "P6 close at least one new case to the queue and the view, with independent verification",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "orchestrator",
-     "evidence": ""
+     "evidence": "case_it9_p6_hif_axis (card K01, needs O7, work order); verifier no HIGH, F1-F6 repaired"
     }
    ]
   },
