@@ -1,0 +1,38 @@
+{
+ "schema": "legend.wwox.work_order_patch_proposal/1",
+ "status": "PROPOSAL ONLY: not applied",
+ "entries_to_add": [
+  {
+   "need": "NEED-REDOX-NRF2",
+   "kind": "risolvere una premessa",
+   "question": "In WWOX-deficient versus isogenic corrected human neural cells that include microglia or CNS-macrophage-like cells, are NRF2 target activity, ROS and IL-6/IL-1beta protein different, and does NFE2L2-dependent activation (KEAP1 knockdown, omaveloxolone, monomethyl fumarate) change viability, lipid peroxidation, network activity or cytokine protein more in knockout than in corrected cells?",
+   "data": "Step 0: nuclear NRF2 and KEAP1 protein, NQO1 activity, NQO1/HMOX1/GCLM/SRXN1 transcripts, ROS reporter at baseline and after an oxidative challenge, IL-6 and IL-1beta protein after LPS with or without ATP. Step 1: the activation arms above and NFE2L2 knockdown, both genotypes, with MEA network activity and SOX2/NEUN fractions. Guards: GFAP/IBA1 counts are held-out endpoints; the six IT7 readout genes cannot decide.",
+   "would_change": "If neither ROS nor NRF2 tone nor cytokine protein differs and activation changes nothing: the axis moves to inert and the card is closed. If ROS is raised and activation corrects it in knockout cells more than in corrected cells (NFE2L2-dependent): arm R advances to a second model; omaveloxolone paediatric limits then become the development question.",
+   "feasibility": "Wet-lab with isogenic human neural cells and a microglia source; two commercial research compounds (availability UNVERIFIED); step 0 is a one-to-two-week assay set; whether a laboratory with the isogenic lines will run it: not known.",
+   "date": "2026-10-31",
+   "updated_by": [
+    "IT10-P2.2"
+   ],
+   "cards": [
+    "L01_nrf2_axis"
+   ],
+   "docs": [
+    "IT10-P2.2"
+   ],
+   "summary_it": "Capire se nelle cellule neurali carenti di WWOX ci sono ROS, tono di NRF2 o citochine (proteina) alterati, e se attivare NRF2 cambia vitalità o attività di rete in modo dipendente da NRF2.",
+   "feasibility_it": "Laboratorio con linee neurali isogeniche e una fonte di microglia; non noto."
+  }
+ ],
+ "entries_to_modify": [
+  {
+   "need": "NEED-NEUROINFLAMMATION-GLIA",
+   "note": "If a work-order entry cites 'Il6 and Tnf-a both significant', correct to 'Il6 significant, Tnf-a not' (needs patch op 1)."
+  }
+ ],
+ "docs_to_add": {
+  "IT10-P2.2": {
+   "path": "axis_it10_p22_20261031/README.md",
+   "label": "IT10 P2.2 record: NRF2 axis and the Il6/Tnf-a correction"
+  }
+ }
+}

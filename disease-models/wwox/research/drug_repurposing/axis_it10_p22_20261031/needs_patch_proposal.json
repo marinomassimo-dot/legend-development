@@ -1,0 +1,186 @@
+{
+ "schema": "legend.wwox.needs_patch_proposal/1",
+ "status": "PROPOSAL ONLY: not applied; validated on a scratch copy with apply_and_check_patch.py (check_needs.py exit status recorded in README section 9)",
+ "ops": [
+  {
+   "op": "replace_observed_statement",
+   "need": "NEED-NEUROINFLAMMATION-GLIA",
+   "observation": "O1",
+   "reason": "IT9 P1 CHANGES.md item 1 quoted the paper as '(significant at p<.05)'; the paper reads '( Il6 significant at p < .05)'. Fig 4E: Il6 about 1.48x with one asterisk, Tnf-a about 1.85x with no mark. The original registry reading was right.",
+   "new_statement": "Systemic knockout hippocampus: IBA1 and GFAP area fractions are increased in CA1, CA3 and whole hippocampus (dentate unmarked); Il6 and Tnf-a transcripts are both about 1.5-fold or more up by qPCR (n 4 per group) but only Il6 reaches p below 0.05 (paper Results 3.3: 'Il6 significant at p < .05'; Fig 4E: Il6 about 1.48x with one asterisk, Tnf-a about 1.85x with a large error bar and no mark). Re-read 2026-10-31 against the publisher text and the figure image; the 2026-10-30 'correction' dropped the word Il6.",
+   "new_limits_append": " Il6 is about 1.48-fold, not strictly above 1.5; Tnf-a is a non-significant increase.",
+   "locator_replace": {
+    "remove_anchor": "il6 but not tnf-a",
+    "note": "the manifest entry 17 anchor 'il6 but not tnf-a' was correct as to significance; keep it"
+   }
+  },
+  {
+   "op": "add_counter_evidence",
+   "need": "NEED-NEUROINFLAMMATION-GLIA",
+   "text": "The null-hippocampus Tnf-a increase is not significant (Fig 4E); only Il6 is. Any proposal whose seed is the null-hippocampus TNF transcript (S085) rests on a non-significant observation; the P47T cerebellum TNF (n 6, p<0.05) is a separate observation."
+  },
+  {
+   "op": "add_need",
+   "need": {
+    "id": "NEED-REDOX-NRF2",
+    "label": "Redox state and NRF2 pathway tone in WWOX-deficient neural cells (ROS, NRF2 target activity, Il6/Il1b output)",
+    "family": "Development and glia",
+    "track": {
+     "value": "A",
+     "basis": "Allele-blind, downstream."
+    },
+    "goal": {
+     "value": "partial_benefit",
+     "basis": "Protection of function if ROS or a cytokine output is harmful; unresolved."
+    },
+    "observed": [
+     {
+      "id": "O1",
+      "statement": "Drosophila neuronal Wwox knockdown raises mitochondrial hydrogen peroxide (roGFP2-Orp1; t 3.221, P 0.0047, N 9-11; Supplementary Fig 2U).",
+      "model_type": "drosophila_knockdown",
+      "species": "Drosophila",
+      "genotype": "neuronal Wwox RNAi versus control",
+      "tissue_or_cells": "neurons",
+      "age_stage": "adult",
+      "comparison": "knockdown against control",
+      "readout": "roGFP2-Orp1 ratio",
+      "readout_level": "activity",
+      "direction_observed": "increased",
+      "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT",
+      "limits": "Invertebrate, one reporter, one panel; not a WWOX-DEE model.",
+      "pmid": "",
+      "locators": [
+       {
+        "kind": "document",
+        "path": "disease-models/wwox/research/drug_repurposing/axis_it10_p22_20261031/premises.tsv",
+        "anchor": "PR6"
+       }
+      ],
+      "locator_status": "DOCUMENT"
+     },
+     {
+      "id": "O2",
+      "statement": "Wwox-null mouse embryonic fibroblasts: ROS is higher in late passage, not in early passage; redox-homeostasis transcripts (Nfe2l2, Nqo1 among them per the manifest; one sample per genotype) are higher in early-passage nulls; N-acetylcysteine corrects senescence escape.",
+      "model_type": "mouse_constitutive_knockout",
+      "species": "mouse",
+      "genotype": "Wwox -/- versus +/-",
+      "tissue_or_cells": "embryonic fibroblasts (non-neural)",
+      "age_stage": "early and late passage",
+      "comparison": "null against heterozygote",
+      "readout": "DHE flow cytometry; microarray heatmap",
+      "readout_level": "activity",
+      "direction_observed": "increased",
+      "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+      "limits": "Non-neural; transcripts of one sample per genotype for the redox set.",
+      "pmid": "37897534",
+      "locators": [
+       {
+        "kind": "manifest",
+        "manifest": "disease-models/wwox/research/deepdive_manifests/PMID37897534.json",
+        "entry": 14,
+        "anchor": "Supplementary Figure 8 is a 16-row Agilent heatmap"
+       }
+      ],
+      "locator_status": "MANIFEST"
+     },
+     {
+      "id": "O3",
+      "statement": "Human WWOX-knockout cerebral organoid, week 15 (4 v 2 libraries, one deposit): IL6 0 counts in all six libraries, IL1B 0-11, TNF 0-1; NFE2L2 0.75x, NQO1 0.73x, HMOX1 1.67x, SRXN1 1.33x (cpm ratio, descriptive): no cytokine-expressing compartment and no coherent NRF2 signature.",
+      "model_type": "human_organoid_knockout",
+      "species": "human",
+      "genotype": "WWOX knockout versus WT",
+      "tissue_or_cells": "cerebral organoid, bulk RNA",
+      "age_stage": "culture week 15",
+      "comparison": "KO against WT",
+      "readout": "RNA counts",
+      "readout_level": "transcript",
+      "direction_observed": "mixed",
+      "evidence_scope": "COMPUTATIONAL_RESULT",
+      "limits": "Unplanned descriptive reading; 4 v 2 libraries; transcripts are not NRF2 activity; no microglia.",
+      "pmid": "",
+      "locators": [
+       {
+        "kind": "document",
+        "path": "disease-models/wwox/research/drug_repurposing/axis_it10_p22_20261031/organoid_nrf2_rows.tsv",
+        "anchor": "NFE2L2"
+       },
+       {
+        "kind": "document",
+        "path": "disease-models/wwox/research/drug_repurposing/axis_it10_p22_20261031/selfaudit_reread_output.txt",
+        "anchor": "C3"
+       }
+      ],
+      "locator_status": "DOCUMENT"
+     }
+    ],
+    "inferred": [
+     "That NRF2 pathway activity, ROS or cytokine protein differ in WWOX-deficient mammalian neural cells: none is measured.",
+     "That an early-passage antioxidant response (raised redox transcripts without raised ROS in MEFs) is adaptive and may already be at ceiling in neural cells: an open question."
+    ],
+    "intervention_direction": {
+     "direction": "uncertain",
+     "on": "NRF2 pathway activity",
+     "rationale": "Raise NRF2 only IF ROS is harmful and NRF2 tone insufficient (arm R) or IF a cytokine-expressing compartment exists and its Il6/Il1b output is harmful (arm C); both conditional, none established.",
+     "certainty": "unknown",
+     "do_not_assume": "That raising NRF2 is beneficial because ROS is raised in a fly or in late-passage fibroblasts; that a macrophage mechanism (Il6, Il1b lowered, Tnf unchanged) operates in microglia; that omaveloxolone or any compound acts in a WWOX-deficient neural cell."
+    },
+    "counter_evidence": [
+     "Human organoid shows no cytokine-expressing cells and no coherent NRF2 signature.",
+     "Early-passage redox transcripts are already higher in Wwox-null MEFs (possible ceiling).",
+     "Rat lde/lde glia are lower than wild type; null-hippocampus Tnf-a is not significant."
+    ],
+    "sources": {
+     "cards": [],
+     "cards_note": "L01_nrf2_axis packet is proposed for cards/ by the orchestrator",
+     "hypotheses": [],
+     "map_records": [],
+     "documents": [
+      "disease-models/wwox/research/drug_repurposing/axis_it10_p22_20261031/README.md"
+     ],
+     "registry_ids": [
+      "DL-MECH-153"
+     ],
+     "papers": [
+      {
+       "pmid": "37897534",
+       "paper_registry_ids": []
+      }
+     ]
+    },
+    "targets": [
+     {
+      "symbol": "NFE2L2",
+      "role": "transcription factor; intervention target (activation)",
+      "hgnc_id": "HGNC:7782",
+      "hgnc_name": "NFE2 like bZIP transcription factor 2",
+      "target_kind": "intervention_target"
+     },
+     {
+      "symbol": "KEAP1",
+      "role": "NRF2 repressor; intervention target (inhibition, covalent)",
+      "hgnc_id": "HGNC:23177",
+      "hgnc_name": "kelch like ECH associated protein 1",
+      "target_kind": "intervention_target"
+     }
+    ],
+    "pathways": [
+     {
+      "id": "GO:0006979",
+      "label": "response to oxidative stress"
+     }
+    ],
+    "evidence_scope": [
+     "WWOX_BIOLOGY_OTHER_CONTEXT",
+     "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "COMPUTATIONAL_RESULT"
+    ],
+    "coverage": {
+     "status": "NOT_ASSESSED",
+     "note": "Set by the repurposing module."
+    },
+    "notes": "Proposed by IT10 P2.2; a draft for orchestrator review, validated only structurally.",
+    "basis": "observed"
+   }
+  }
+ ]
+}

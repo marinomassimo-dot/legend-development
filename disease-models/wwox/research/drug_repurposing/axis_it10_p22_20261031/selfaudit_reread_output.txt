@@ -1,0 +1,20 @@
+PASS A1 results 3.3 attaches significance to Il6 only | y cytokines Il6 and Tnf-a in hippocampal tissue by qRT-PCR. We observed &gt; 1.5 fold upregulation of both cytokines ( Il6 significant at p &lt; .05) in Wwox KO ( n = 4) mice in comparison to Wwox WT (n = 4) mice ( Fig. 4 E ). 3.4. Wwox KO mice hipp
+PASS A2 caption (E) n=4, one asterisk legend
+PASS B1 subset inhibited includes IL6, IL1b
+PASS B2 Tnf not changed in KpCKO BMDMs
+PASS B3 cell type is bone-marrow-derived macrophage, no microglia in text | microglia mentions: 0
+   columns ['cko1', 'cko2', 'cko3', 'cko4', 'cwt1', 'cwt2']
+    IL1B [1.0, 0.0, 1.0, 0.0, 1.0, 11.0] KO/WT=0.07
+    IL6 [0.0, 0.0, 0.0, 0.0, 0.0, 0.0] KO/WT=nan
+    TNF [1.0, 0.0, 1.0, 0.0, 0.0, 0.0] KO/WT=nan
+    NFE2L2 [771.999, 921.073, 813.001, 673.0, 1091.27, 781.0] KO/WT=0.75
+    KEAP1 [2310.0, 2359.0, 2692.0, 2267.0, 2538.0, 2063.0] KO/WT=0.93
+    NQO1 [242.133, 170.704, 306.517, 233.23, 312.592, 266.963] KO/WT=0.73
+    HMOX1 [415.0, 250.0, 578.0, 298.0, 234.0, 177.0] KO/WT=1.67
+PASS C1 IL6 raw count 0 in all six libraries
+PASS C2 IL1B and TNF max raw count <=11 (essentially absent)
+PASS C3 NFE2L2 KO/WT cpm ratio between 0.7 and 0.8 | 0.752
+PASS D1 label has no seizure/convulsion string
+PASS D2 label states perinatal neurobehavioral impairment in offspring
+PASS D3 label: pediatric <16 not established; strong/moderate CYP3A4 inducer avoid
+ALL PASS
