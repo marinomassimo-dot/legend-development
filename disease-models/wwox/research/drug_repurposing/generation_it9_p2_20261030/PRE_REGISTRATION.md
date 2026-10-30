@@ -140,3 +140,14 @@ returns Spearman 1.0 by construction.
 * **A2.2 T2(b) is applied as registered** (>= 4 defined seeds): a degenerate shuffle (identity because all defined seeds share one sign) therefore counts as NOT MET; the summary table also gives the criteria vector (a, a', b, c) so a reader can see
   T2 without (b). This is a registered-verdict-plus-decomposition, not a relaxation: no set is passed because (b) is skipped.
 * **A2.3 T1(d) on a set whose only defined seeds are inert** (no in-network path to any compound target and not a target themselves) is reported as FAILED (d) with the reason, not rescued.
+
+---
+
+## AMENDMENT 3 (2026-10-30, after P1 final was merged; written before the reserved-row check was run)
+
+P1 final (seeds.tsv sha256 65817737...; 111 rows, 58 usable, 17 reserved) yields byte-identical engine seed tables to the version used for Amendments 1-2 (only the recorded hash differs), so the
+test results are unchanged and are not rerun. Adopted from the coordinator's note: `unchanged` is non-directional (already not a seed); Q2 module genes must not be scored by reversal of the IT7 P3 readout and
+Q3 ISR reversal must not be used to score candidates (the SIG arm output for those sets is a generator output only and is never an evaluation); uncertain-direction questions run as conditional arms (already so).
+**Reserved-row check (new, descriptive, no pass/fail):** (i) list every reserved row whose gene also appears as a seed in any set (shared gene) and confirm no reserved row is a seed row;
+(ii) for the genes of reserved gene-level rows (WWOX, LDHA, CACNA1G, PANX1, GFAP, MYC, CTNNB1), report in each set's proposals the number of families with a target on that gene, their best Z_ind_robust rank and the share of those families that are
+direct hits. Reserved process/state rows (GO, STATE:) have no gene representation and cannot be checked. Nothing from the check is fed back into any score; a high rank of a drug that acts on a reserved gene is reported as non-independent when the gene is also a seed, and is never a validation.
