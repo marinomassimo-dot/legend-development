@@ -347,3 +347,36 @@ WWOX-deficient microglia; sulfopin: after a MYC-specific lever); a first WWOX-sy
 ## 12. Note after the IT9 P6 verification (2026-10-31)
 
 The existing entry U27 (extracellular magnesium) has a changed `M_mechanism` text against the R2 state ("no catalogue identity" became "1 catalogue family(ies); L2 over 1 ... none"): a consequence of the earlier P11 identity declaration, not of K01; its class and groups did not move. The K01 caveats were revised (compartment of the fibroblast observation; roxadustat attribution; deciding readout), a method-text change recorded in the snapshot note.
+
+## Matching v3 pilot — 30 October 2026
+
+The [operator-supplied guidance](../matching_guidance_v3.md) is preserved verbatim.
+`matching_pilot_cases.json` contains five relationships in four contrasting cases,
+not a new evidence registry: d-APV versus memantine (no molecule transfer),
+bumetanide (premise and exposure), 4-PBA (residual product versus function), and
+PX-478/HIF (emergent IT9 hypothesis with a neural premise still to measure).
+Its notes are interpretations of the linked packets; the existing member attribution
+is regenerated into `ranking.json` and the full local view. No group, score, top list
+or canonical scientific claim changes. R4 retains its meaning.
+
+Research questions remain visible independently of favorable, unfavorable or unknown
+requirements for the stated development use. These states describe requirements,
+not clinical benefit or an automatic exclusion. A negative result on the biological
+premise must still update the underlying card through the existing scientific route.
+An ex vivo probe and a systemic pediatric candidate need different evidence.
+The pilot includes catalogue member identities and is omitted from the shareable
+projection, preserving its current licensing boundary.
+
+Run the existing `test_ranking_it8.py` suite. Three concrete fixtures in `fixtures/`
+exercise duplicate access to DR-W2-001, d-APV-to-memantine misattribution, and unknown
+bumetanide exposure. They check production attribution/assessment functions; an
+additional integration test checks regeneration and the view/export boundary.
+This pilot demonstrates those three invariants, not all fifteen discovery methods
+and not biological efficacy.
+
+Validation before landing: 43 ranking tests PASS, including the three fixtures and
+export/view integration. Independent hostile review: PASS, no blocking finding;
+performed after the fixtures and implementation. The duplicate fixture covers one
+canonical assertion reached through two access routes; it does not establish general
+lineage deduplication when the same observation has been recoded under different IDs.
+No new full-text reading or scientific evidence was claimed in this increment.

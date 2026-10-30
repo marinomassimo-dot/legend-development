@@ -144,3 +144,19 @@ they do not establish nasal-to-neural validity or independently observed respond
 
 All source descriptions are summarised in original wording. No proprietary code, figures,
 newsletter contents, patient profiles or efficacy percentages are imported by this update.
+
+## Matching guidance v3 — first measured increment, 30 October 2026
+
+The [operator guidance](matching_guidance_v3.md) is the methodological direction.
+The [existing ranking pilot](ranking_it8_p9_20261029/README.md#matching-v3-pilot--30-october-2026)
+projects four contrasting cases (five relationships) into its export and full view:
+member-specific evidence, action/context/benefit hypothesis, research question and
+separate scoped development requirements. This does not implement all discovery
+logics or change biological groups. Three concrete fixtures cover duplicated
+evidence, transfer between molecules, and unknown becoming negative.
+
+Next: use the PX-478/HIF case to resolve the neural protein/functional premise before
+any compound promotion; compare another discovery logic only where it answers a
+named gap. Expand fields to other candidates when the pilot changes a decision.
+Continue the daily radar and the existing deployment/licensing work on their own
+current work orders; no new scheduler, contract or gate is introduced here.

@@ -569,5 +569,78 @@ class LatestSnapshotOrder(unittest.TestCase):
             self.assertEqual(data["id"], "units_2026-10-30_35d7bbbb")
 
 
+class MatchingV3Fixtures(unittest.TestCase):
+    """Concrete cases through the existing attribution, ranking and view functions."""
+
+    @staticmethod
+    def fixture(name):
+        return json.loads((HERE / "fixtures" / (name + ".json")).read_text())
+
+    def raw_unit(self, uid):
+        s = state()
+        return copy.deepcopy(next(u for u in rk.build_units(s["ctx"], s["cat"]) if u["unit_id"] == uid))
+
+    def test_duplicate_evidence_does_not_inflate_evaluation(self):
+        f = self.fixture("duplicate_evidence")
+        u = self.raw_unit(f["unit_id"])
+        before = rk.member_evidence(u)
+        comp = rk.component_wwox(u)
+        groups = [rk.view_assessment(u, state()["ctx"], obj) for obj in rk.OBJECTIVES]
+        row = next(r for r in u["pert"] if r["assertion_id"] == f["assertion_id"])
+        u["pert"].append(dict(row, access_route=f["duplicate_access_route"]))
+        self.assertEqual(rk.member_evidence(u), before)
+        self.assertEqual(rk.component_wwox(u), comp)
+        self.assertEqual([rk.view_assessment(u, state()["ctx"], obj) for obj in rk.OBJECTIVES], groups)
+        member = next(m for m in before if m["member_key"] == f["expected_member"])
+        self.assertEqual(member["assertion_ids"].count(f["assertion_id"]), 1)
+
+    def test_dapv_evidence_does_not_become_memantine_evidence(self):
+        f = self.fixture("no_molecule_transfer")
+        u = self.raw_unit(f["unit_id"])
+        table = rk.member_evidence(u)
+        by = {m["member_key"]: m for m in table}
+        self.assertIn(f["assertion_id"], by[f["tested_member"]]["assertion_ids"])
+        self.assertEqual(by[f["untested_member"]]["tested_in_wwox_system"], "no")
+        self.assertEqual(by[f["untested_member"]]["assertion_ids"], [])
+        corrupted = copy.deepcopy(table)
+        target = next(m for m in corrupted if m["member_key"] == f["untested_member"])
+        target.update(tested_in_wwox_system="yes", assertion_ids=[f["assertion_id"]], wwox_assertions=1)
+        self.assertTrue(rk.validate_attribution(u, corrupted))
+        cases = {c["case_id"]: c for c in rk.matching_pilot(state()["uni"]["units"])}
+        self.assertIn(f["assertion_id"], cases[f["tested_case"]]["evidence_of_this_member"]["assertion_ids"])
+        self.assertEqual(cases[f["untested_case"]]["evidence_of_this_member"]["assertion_ids"], [])
+
+    def test_unknown_requirement_stays_unknown_without_cancelling_research(self):
+        f = self.fixture("unknown_is_not_negative")
+        inputs = json.loads((HERE / "matching_pilot_cases.json").read_text())
+        out = {c["case_id"]: c for c in rk.matching_pilot(state()["uni"]["units"], inputs)}[f["case_id"]]
+        self.assertIn(f["question"], out["development_status"][f["state"]])
+        self.assertNotIn(f["question"], out["development_status"]["unfavorable"])
+        self.assertIn(f["research_question_contains"], out["research_question"])
+        alternative = copy.deepcopy(inputs)
+        c = next(c for c in alternative if c["case_id"] == f["case_id"])
+        next(r for r in c["development_requirements"] if r["question"] == f["question"])["state"] = f["alternative_state"]
+        changed = {c["case_id"]: c for c in rk.matching_pilot(state()["uni"]["units"], alternative)}[f["case_id"]]
+        self.assertIn(f["question"], changed["development_status"]["unfavorable"])
+        self.assertEqual(changed["research_question"], out["research_question"])
+        self.assertEqual(changed["evidence_of_this_member"], out["evidence_of_this_member"])
+
+    def test_pilot_reaches_existing_export_and_full_view(self):
+        import repurposing_view as v
+        exported = json.loads(rk.build_all()["ranking.json"])["matching_pilot"]
+        self.assertEqual(len(exported), 5)  # four contrasting cases; NMDA has two actual members
+        self.assertEqual({c["case_id"] for c in exported}, {"NMDA-tool", "NMDA-member", "chloride", "residual-product", "HIF-emergent"})
+        cur = state()["ctx"]["cur"]
+        full = v.build_ranking(rk.DR, cur, "full")
+        self.assertEqual(full["matching_pilot"], exported)
+        html = v.render_matching_pilot(full["matching_pilot"])
+        self.assertIn('id="matching-v3"', html)
+        self.assertIn("PX-478", html)
+        self.assertIn("sconosciuto", html)
+        self.assertIn("nessun risultato WWOX attribuito", html)
+        self.assertEqual(v.build_ranking(rk.DR, cur, "shareable")["matching_pilot"], [])
+        self.assertEqual(v.render_matching_pilot([]), "")
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=1)

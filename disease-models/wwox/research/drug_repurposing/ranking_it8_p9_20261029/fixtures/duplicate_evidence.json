@@ -1,0 +1,6 @@
+{
+  "unit_id": "U21",
+  "assertion_id": "DR-W2-001",
+  "duplicate_access_route": "a second index of the same paper and experiment",
+  "expected_member": "INT:F01_glutamate_receptor_node:tool"
+}

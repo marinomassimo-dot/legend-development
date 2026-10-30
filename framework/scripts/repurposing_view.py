@@ -3500,6 +3500,9 @@ def build_ranking(dr: Path, cur: dict, source: str):
                  "selectable_groups": [g for g in RK_GROUP_IDS if g in ("G1", "G2a", "G2b", "G3", "G4a")], "groups_en": {g: S["groups"][g] for g in RK_GROUP_IDS}, "classes_en": S["classes"],
                  "reason_classes": S["reason_classes"], "non_assessment_changes": S["non_assessment_changes"], "p3_note": S["p3_note"], "plain_statement": S["plain_statement"]},
         "units": units,
+        # Curated pilot has full-edition member identities. Preserve the existing
+        # shareable projection boundary rather than exporting catalogue-derived names.
+        "matching_pilot": J.get("matching_pilot", []) if full else [],
         "selections": {v: {"top": s["top"], "groups": s["top_groups"], "objective": s["top_objective"], "apart": [{"id": a["unit_id"], "group": a["group"], "objective": a["objective"]} for a in s["not_in_top_listed_apart"]], "n_listed": s["n_listed"], "cut_rule": s["cut_rule"]}
                        for v, s in S["selections"].items()},
         "inventory": {k: inv[k] for k in ("families", "records", "by_class", "by_first_order", "need_linked_families_q1_q2_q3", "need_linked_families_plus_units", "distinct_display_names_total", "distinct_display_names_in_q1",
@@ -3763,6 +3766,30 @@ def rk_unit_detail(R: dict, u: dict, full: bool) -> str:
 OBJ_IT = {"broad": "Recupero ampio e duraturo", "partial": "Beneficio parziale o ponte"}
 
 
+def render_matching_pilot(cases: list[dict]) -> str:
+    if not cases:
+        return ""
+    rows = []
+    states = {"favorable": "favorevole", "unfavorable": "sfavorevole", "unknown": "sconosciuto"}
+    for c in cases:
+        ev = c["evidence_of_this_member"]
+        direct = ", ".join(ev["assertion_ids"]) or "nessun risultato WWOX attribuito a questa molecola"
+        requirements = "".join(f'<li><b>{E(states[r["state"]])}</b>: {E(r["question"])} — {E(r["reason"])}</li>' for r in c["development_requirements"])
+        sources = "; ".join(c["source_pointers"])
+        rows.append(f'<tr><th scope="row">{E(c["compound"])}<br><span class="mini">{E(c["action"])}</span></th>'
+                    f'<td>{E(c["context"])}<br><b>Beneficio ipotizzato:</b> {E(c["benefit_hypothesis"])}'
+                    f'<br><span class="mini">{E(direct)}. {E(c["evidence_limit"])}</span>'
+                    f'<details><summary>Fonti e logica</summary><p class="mini">{E(sources)}</p>'
+                    f'<p class="mini">{E(", ".join(c["discovery_logic"]))}</p></details></td>'
+                    f'<td>{E(c["research_priority"])}<br>{E(c["research_question"])}</td>'
+                    f'<td>{E(c["development_scope"])}<ul class="mini">{requirements}</ul></td></tr>')
+    return ('<details class="inl" id="matching-v3"><summary>Matching v3: composto, azione, contesto e beneficio — pilota</summary>'
+            '<p class="mini">Interpretazioni delle schede esistenti. Priorità di ricerca e requisiti di sviluppo restano separati. '
+            'Sconosciuto non significa negativo; un risultato di classe non è una prova sulla singola molecola. Nessun punteggio di efficacia.</p>'
+            '<table class="tbl"><thead><tr><th>Composto e azione</th><th>Contesto e beneficio</th>'
+            '<th>Prossima ricerca</th><th>Requisiti per lo sviluppo</th></tr></thead><tbody>' + "".join(rows) + '</tbody></table></details>')
+
+
 def render_ranking(P: dict) -> str:
     R = P["cur"].get("ranking")
     if not R:
@@ -3870,7 +3897,7 @@ def render_ranking(P: dict) -> str:
             f'<div class="note"><b>{E(U["rk_not_h"])}.</b><ul class="mini"><li>{E(U["rk_not_1"])}</li><li>{E(U["rk_not_2"])}</li><li>{E(U["rk_not_3"])}</li><li>{E(U["rk_not_4"])}</li></ul></div>'
             f'<details class="inl howto" open><summary>{E(U["rk_how_h"])}</summary><ol class="mini"><li>{E(U["rk_how_1"])}</li><li>{E(U["rk_how_2"])}</li><li>{E(U["rk_how_3"])}</li><li>{E(U["rk_how_4"])}</li></ol><h4>{E(U["rk_three_h"])}</h4><ol class="mini"><li>{E(U["rk_three_1"])}</li><li>{E(U["rk_three_2"])}</li><li>{E(U["rk_three_3"])}</li></ol>'
             f'<h4>{E(U["rk_groups_h"])}</h4><ul class="poslist rk-groups">{groups_legend}</ul><p class="mini">{E(U["rk_sel_note"])}</p><p class="mini mut">{E(U["rk_p3"])}</p></details>'
-            + controls + "".join(blocks) + f'<h3>{E(U["rk_t_h"])} (<span id="rk-n">{len(units)}</span>)</h3><p class="mini mut">{E(U["rk_t_note"])}</p>' + table + inv + evo
+            + render_matching_pilot(R.get("matching_pilot", [])) + controls + "".join(blocks) + f'<h3>{E(U["rk_t_h"])} (<span id="rk-n">{len(units)}</span>)</h3><p class="mini mut">{E(U["rk_t_note"])}</p>' + table + inv + evo
             + f'<p class="noprint"><a class="btnlink" href="#section=ranking">{E(U["sec_print"])}</a></p></section>')
 
 

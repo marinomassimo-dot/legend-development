@@ -1,0 +1,170 @@
+[
+  {
+    "case_id": "NMDA-tool",
+    "as_of": "2026-10-30",
+    "unit_id": "U21",
+    "member_key": "INT:F01_glutamate_receptor_node:tool",
+    "compound": "d-APV",
+    "action": "Blocco competitivo NMDAR; sonda sperimentale.",
+    "context": "Sistema WWOX-deficiente con readout di burst; confronto con controllo trattato necessario per la specificità.",
+    "benefit_hypothesis": "Ridurre il readout di ipereccitabilità senza perdere funzione di rete o maturazione; il secondo punto è da verificare.",
+    "goals": [
+      "partial_benefit"
+    ],
+    "discovery_logic": [
+      "direct_phenotypic_perturbation"
+    ],
+    "research_priority": "Verificare la specificità del risultato già osservato.",
+    "research_question": "Confrontare corrente NMDAR e funzione/maturazione nei sistemi WWOX-deficiente e corretto; non trasferire il risultato a memantina.",
+    "development_scope": "Trasferimento dalla sonda sperimentale a un intervento utilizzabile.",
+    "development_requirements": [
+      {
+        "question": "Trasferibilità dalla sonda a un agente clinico",
+        "state": "unknown",
+        "reason": "Il risultato di d-APV non dimostra il beneficio di un altro antagonista."
+      }
+    ],
+    "evidence_limit": "DR-W2-001 documenta una riduzione dei burst, non un recupero globale né un risultato di memantina.",
+    "source_pointers": [
+      "cards/F01_glutamate_receptor_node.packet.json:DR-W2-001",
+      "ranking_it8_p9_20261029/unit_caveats.tsv:U21"
+    ]
+  },
+  {
+    "case_id": "NMDA-member",
+    "as_of": "2026-10-30",
+    "unit_id": "U21",
+    "member_key": "FAM:CAT:CHEMBL1699",
+    "compound": "Memantina",
+    "action": "Antagonismo NMDAR con farmacologia diversa dalla sonda d-APV.",
+    "context": "Ipotesi di intervento nel sistema WWOX-deficiente; i precedenti GRIN e il risultato d-APV sono contesti distinti.",
+    "benefit_hypothesis": "Beneficio parziale sull’ipereccitabilità, da misurare sulla molecola stessa.",
+    "goals": [
+      "partial_benefit"
+    ],
+    "discovery_logic": [
+      "mechanistic_disease_analogy"
+    ],
+    "research_priority": "Test sulla molecola condizionato alla qualificazione del nodo.",
+    "research_question": "Misurare risposta funzionale e tollerabilità di rete a esposizione definita; includere controlli di genotipo e veicolo.",
+    "development_scope": "Sviluppo di memantina per un beneficio WWOX-specifico.",
+    "development_requirements": [
+      {
+        "question": "Beneficio della molecola nel sistema WWOX",
+        "state": "unknown",
+        "reason": "Nessuna asserzione WWOX attribuita a memantina nella scheda; d-APV non vale come prova sostitutiva."
+      }
+    ],
+    "evidence_limit": "Precedenti esterni con esiti diversi restano esterni. L’assenza di un risultato attribuito non dimostra inattività.",
+    "source_pointers": [
+      "cards/F01_glutamate_receptor_node.packet.json:DR-W2-001..005"
+    ]
+  },
+  {
+    "case_id": "chloride",
+    "as_of": "2026-10-30",
+    "unit_id": "U23",
+    "member_key": "UNIT",
+    "compound": "Bumetanide",
+    "action": "Inibizione NKCC1; ipotesi condizionata al gradiente del cloruro.",
+    "context": "Neuroni WWOX-deficienti a stadi definiti; esposizione diretta in vitro distinta dall’esposizione cerebrale sistemica.",
+    "benefit_hypothesis": "Beneficio parziale solo se spostare E_GABA è funzionalmente favorevole nel modello.",
+    "goals": [
+      "partial_benefit"
+    ],
+    "discovery_logic": [
+      "directional_pathway"
+    ],
+    "research_priority": "Risolvere la premessa prima del test farmacologico.",
+    "research_question": "Misurare E_GABA con patch perforato e rapporto NKCC1/KCC2 nei genotipi; solo dopo valutare il farmaco in bagno.",
+    "development_scope": "Uso sistemico per un effetto neuronale nel SNC, distinto dalla fattibilità della prova in vitro.",
+    "development_requirements": [
+      {
+        "question": "Esposizione cerebrale libera pertinente nel modello e alla dose prevista",
+        "state": "unknown",
+        "reason": "La scarsa penetrazione è un ostacolo noto; manca qui una misura di esposizione sufficiente nel contesto WWOX prescelto."
+      },
+      {
+        "question": "Direzione funzionalmente utile del gradiente del cloruro",
+        "state": "unknown",
+        "reason": "E_GABA nel sistema WWOX prescelto non è misurato nella scheda."
+      }
+    ],
+    "evidence_limit": "Astensione attuale sulla premessa biologica; non è un risultato negativo di trattamento. Il limite di esposizione non annulla l’utilità di misurare E_GABA.",
+    "source_pointers": [
+      "cards/F03_bumetanide_chloride_gradient.packet.json",
+      "pharmacological_qualification_it8_p3_20261029/comparison.tsv"
+    ]
+  },
+  {
+    "case_id": "residual-product",
+    "as_of": "2026-10-30",
+    "unit_id": "U01",
+    "member_key": "FAM:CAT:CHEMBL1469",
+    "compound": "4-PBA / acido fenilbutirrico",
+    "action": "Ipotesi di modulazione della proteostasi; recupero funzionale da distinguere da aumento di proteina.",
+    "context": "Solo alleli e modelli con prodotto residuo realmente presente; destino di Q230P non assunto.",
+    "benefit_hypothesis": "Recuperare una funzione WWOX residua, se il prodotto e la funzione sono recuperabili.",
+    "goals": [
+      "restore_wwox_function"
+    ],
+    "discovery_logic": [
+      "residual_product_rescue",
+      "mechanistic_disease_analogy"
+    ],
+    "research_priority": "Risolvere prodotto residuo e readout funzionale prima di selezionare il composto.",
+    "research_question": "Stabilire riferimento funzionale WT e presenza/destino del prodotto variante; distinguere quantità, solubilità, localizzazione e funzione.",
+    "development_scope": "Sviluppo per una lesione WWOX definita, non per ogni perdita di funzione.",
+    "development_requirements": [
+      {
+        "question": "Presenza e recuperabilità funzionale del prodotto variante",
+        "state": "unknown",
+        "reason": "I precedenti su SLC6A1 e altre proteine non dimostrano recupero di WWOX o Q230P."
+      }
+    ],
+    "evidence_limit": "Nessun risultato WWOX attribuito a questa molecola. Più proteina non equivale a recupero funzionale.",
+    "source_pointers": [
+      "cards/A01_pba_class.packet.json:DR-A01-001",
+      "cards/A01_pba_class.packet.json:p4_fields"
+    ]
+  },
+  {
+    "case_id": "HIF-emergent",
+    "as_of": "2026-10-30",
+    "unit_id": "U28",
+    "member_key": "FAM:CAT:CHEMBL4061538",
+    "compound": "PX-478",
+    "action": "Riduzione HIF-1α descritta in contesti oncologici; selettività nel contesto neurale da qualificare.",
+    "context": "Ipotesi HIF in neuroni/organoidi WWOX-deficienti; segnale RNA neurale distinto da proteina e dai risultati WWOX non neurali.",
+    "benefit_hypothesis": "Compensare un’eventuale componente dannosa della riprogrammazione metabolica; ruolo adattativo o dannoso irrisolto.",
+    "goals": [
+      "compensate_wwox_loss",
+      "partial_benefit"
+    ],
+    "discovery_logic": [
+      "directional_pathway",
+      "signed_network_propagation",
+      "mechanistic_context_transfer"
+    ],
+    "research_priority": "Passo 0 sulla premessa neurale; eventuale uso come sonda, non priorità clinica.",
+    "research_question": "Misurare HIF-1α/HIF-2α proteina, compartimenti e ossigeno nei sistemi WWOX-deficiente e corretto. Se pertinente, perturbazione genetica prima/con la sonda e readout di funzione e vitalità.",
+    "development_scope": "Uso sistemico pediatrico nel SNC; separato dall’eventuale utilità ex vivo della sonda.",
+    "development_requirements": [
+      {
+        "question": "Premessa HIF proteica e ruolo funzionale nel modello neurale",
+        "state": "unknown",
+        "reason": "Il precedente WWOX-HIF è non neurale; RNA e propagazione di rete non misurano proteina né beneficio."
+      },
+      {
+        "question": "Esposizione e tollerabilità pediatriche nel SNC",
+        "state": "unknown",
+        "reason": "Non qualificate qui; struttura con allerta mustard, dati esterni e limiti tossicologici descritti in E-01."
+      }
+    ],
+    "evidence_limit": "Candidato emergente IT9 per una domanda, non efficacia. Non dimostrata selettività; la rete non è conferma indipendente dei suoi seed.",
+    "source_pointers": [
+      "cards/K01_hif_axis_glycolytic_shift.packet.json:DR-K01-001..004",
+      "qualification_it9_p4c_e_20261030/records/E-01_PX-478.md:5,6,8"
+    ]
+  }
+]

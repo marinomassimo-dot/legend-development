@@ -415,3 +415,11 @@ Source: the iteration-2 release battery (verdict `PASS WITH SKIPS (157 targets, 
 | `test_mandate_continuity`, live record | the test pinned `ALDAZ-EXEC-20260913.json`, withdrawn into the recovery inventory (commit d626cde2) and not in the public edition | obsolete assumption | **repaired**: the test now parses every `ORCH-*.json` record that holds a queue (8 in this checkout, as sub-tests); it skips only when none exists |
 
 After the repairs 5 of the 12 skipped cases run (font 1, nothing-acquired fixture 3, live record 1) and 7 remain declared skips (case-sensitive filesystem 1, page crops 3, Suzuki 1, dismech audit 1, Stop hook 1), none of them a code defect. Measured on this branch for the touched suites only; the full battery has not been re-run.
+
+### Matching v3 pilot (30 October 2026)
+
+[Operator guidance, verbatim](matching_guidance_v3.md), with a
+[small implementation in the existing ranking](ranking_it8_p9_20261029/README.md#matching-v3-pilot--30-october-2026):
+four contrasting cases, five compound–action–context–benefit relationships,
+three concrete regression fixtures. Research questions and scoped development
+requirements are separate; no efficacy score or top-list change.
