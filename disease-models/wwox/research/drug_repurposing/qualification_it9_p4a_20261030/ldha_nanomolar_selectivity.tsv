@@ -1,0 +1,206 @@
+molecule_chembl_id	pref_name	parent_chembl_id	record_role	max_phase	chembl_availability_type	first_approval	gtopdb_ligand_id	gtopdb_approved	ldha_best_nM_equals	n_ldha_rows	n_ldhb_rows	n_same_document_pairs	same_document_ldhb_over_ldha_equals	reading
+CHEMBL126519		CHEMBL126519	parent	None	-1				50	7	4	3	0.166667;3.33333;20	same-document LDHA/LDHB pair
+CHEMBL2059009		CHEMBL2059009	parent	None	-1				46	2	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL2059807		CHEMBL2059807	parent	None	-1				69	2	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL2059809		CHEMBL2059809	parent	None	-1				60	2	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL2059811		CHEMBL2059811	parent	None	-1				93	5	1	2	9.01961;6.86567	same-document LDHA/LDHB pair
+CHEMBL2059812		CHEMBL2059812	parent	None	-1				8	2	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL2316885		CHEMBL2316885	parent	None	-1				19	3	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL2316886		CHEMBL2316886	parent	None	-1				68	4	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL3335792		CHEMBL3335792	parent	None	-1				5	1	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL3335794		CHEMBL3335794	parent	None	-1				1.7	8	2	3	16.5385;30.2632;30.2632	same-document LDHA/LDHB pair
+CHEMBL3359440		CHEMBL3359440	parent	None	-1				30	2	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL338325		CHEMBL338325	parent	None	-1				100	2	3	3	1;190;190	same-document LDHA/LDHB pair
+CHEMBL3581177		CHEMBL3581177	parent	None	-1				100	1	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL3581179		CHEMBL3581179	parent	None	-1				60	1	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL3581180		CHEMBL3581180	parent	None	-1				90	1	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL3581181		CHEMBL3581181	parent	None	-1				100	1	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL3581182		CHEMBL3581182	parent	None	-1				60	1	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL3581184		CHEMBL3581184	parent	None	-1				85	1	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL3581194		CHEMBL3581194	parent	None	-1				40	1	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL3581197		CHEMBL3581197	parent	None	-1				6	1	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL3581198		CHEMBL3581198	parent	None	-1				90	1	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL3581199		CHEMBL3581199	parent	None	-1				30	1	1	1	6	same-document LDHA/LDHB pair
+CHEMBL3581200		CHEMBL3581200	parent	None	-1				25	1	1	1	16.4	same-document LDHA/LDHB pair
+CHEMBL3581201		CHEMBL3581201	parent	None	-1				15	1	1	1	9.33333	same-document LDHA/LDHB pair
+CHEMBL3581203		CHEMBL3581203	parent	None	-1				35	1	1	1	6.57143	same-document LDHA/LDHB pair
+CHEMBL3581204		CHEMBL3581204	parent	None	-1				30	1	1	1	4	same-document LDHA/LDHB pair
+CHEMBL3581205		CHEMBL3581205	parent	None	-1				30	1	1	1	16.3333	same-document LDHA/LDHB pair
+CHEMBL3752910		CHEMBL3752910	parent	None	-1		14226		9.012	1	1	1	0.922326	same-document LDHA/LDHB pair
+CHEMBL3763437		CHEMBL3763437	parent	None	-1				30	1	1	1	266.667	same-document LDHA/LDHB pair
+CHEMBL3764412		CHEMBL3764412	parent	None	-1				63.1	2	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL3765327		CHEMBL3765327	parent	None	-1				16	1	1	1	13.75	same-document LDHA/LDHB pair
+CHEMBL4059985		CHEMBL4059985	parent	None	-1				9	2	1	2	0.888889;0.888889	same-document LDHA/LDHB pair
+CHEMBL4062709		CHEMBL4062709	parent	None	-1				65	1	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4065858		CHEMBL4065858	parent	None	-1				3	5	2	5	1.04009;1.04009;1.66667;0.00746269	same-document LDHA/LDHB pair
+CHEMBL4069450		CHEMBL4069450	parent	None	-1				84	2	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4069726		CHEMBL4069726	parent	None	-1				42	1	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4069796		CHEMBL4069796	parent	None	-1				95	2	1	2	1.35789;1.35789	same-document LDHA/LDHB pair
+CHEMBL4075666		CHEMBL4075666	parent	None	-1				65	2	1	2	1.15385;1.15385	same-document LDHA/LDHB pair
+CHEMBL4076027		CHEMBL4076027	parent	None	-1				57	2	1	2	1.36842;1.36842	same-document LDHA/LDHB pair
+CHEMBL4076264		CHEMBL4076264	parent	None	-1				95	2	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4076958		CHEMBL4076958	parent	None	-1				91	2	1	2	1.05495;1.05495	same-document LDHA/LDHB pair
+CHEMBL4080497		CHEMBL4080497	parent	None	-1				38	2	1	2	1.28947;1.28947	same-document LDHA/LDHB pair
+CHEMBL4081890		CHEMBL4081890	parent	None	-1				0.11	8	1	2	0.84375;0.84375	same-document LDHA/LDHB pair
+CHEMBL4090677		CHEMBL4090677	parent	None	-1				19	2	1	2	1.05263;1.05263	same-document LDHA/LDHB pair
+CHEMBL4100845		CHEMBL4100845	parent	None	-1				0.33	3	1	2	0.740741;0.740741	same-document LDHA/LDHB pair
+CHEMBL4101800		CHEMBL4101800	parent	None	-1				53	2	1	2	1.16981;1.16981	same-document LDHA/LDHB pair
+CHEMBL4103659		CHEMBL4103659	parent	None	-1				95	2	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4294999		CHEMBL4294999	parent	None	-1				52	4	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4435570		CHEMBL4435570	parent	None	-1				4	1	1	1	19.25	same-document LDHA/LDHB pair
+CHEMBL4436150		CHEMBL4436150	parent	None	-1				9	1	1	1	3.33333	same-document LDHA/LDHB pair
+CHEMBL4437061		CHEMBL4437061	parent	None	-1				65	1	1	1	3.23077	same-document LDHA/LDHB pair
+CHEMBL4444202		CHEMBL4444202	parent	None	-1				42	1	1	1	6.42857	same-document LDHA/LDHB pair
+CHEMBL4444963		CHEMBL4444963	parent	None	-1				7	1	1	1	7.14286	same-document LDHA/LDHB pair
+CHEMBL4445937		CHEMBL4445937	parent	None	-1				100	1	1	1	4.8	same-document LDHA/LDHB pair
+CHEMBL4450897		CHEMBL4450897	parent	None	-1				16	2	1	2	4.6875;0.0258621	same-document LDHA/LDHB pair
+CHEMBL4453059		CHEMBL4453059	parent	None	-1				15	1	1	1	3.66667	same-document LDHA/LDHB pair
+CHEMBL4467769		CHEMBL4467769	parent	None	-1				5	1	1	1	7	same-document LDHA/LDHB pair
+CHEMBL4468333		CHEMBL4468333	parent	None	-1				47	1	1	1	8.29787	same-document LDHA/LDHB pair
+CHEMBL4474069		CHEMBL4474069	parent	None	-1				80	1	1	1	3.125	same-document LDHA/LDHB pair
+CHEMBL4475593		CHEMBL4475593	parent	None	-1				10	2	1	2	6;0.00983607	same-document LDHA/LDHB pair
+CHEMBL4520899		CHEMBL4520899	parent	None	-1				9	2	1	2	5.44444;0.0731343	same-document LDHA/LDHB pair
+CHEMBL4521960		CHEMBL4521960	parent	None	-1				14	1	1	1	4.07143	same-document LDHA/LDHB pair
+CHEMBL4534918		CHEMBL4534918	parent	None	-1				27	2	1	2	5.18519;0.0358974	same-document LDHA/LDHB pair
+CHEMBL4536094		CHEMBL4536094	parent	None	-1				13	2	1	2	3.53846	same-document LDHA/LDHB pair
+CHEMBL4543194		CHEMBL4543194	parent	None	-1				21	2	1	2	3.80952	same-document LDHA/LDHB pair
+CHEMBL4543949		CHEMBL4543949	parent	None	-1				15	2	1	2	4.66667;0.0137255	same-document LDHA/LDHB pair
+CHEMBL4545064		CHEMBL4545064	parent	None	-1				9	1	1	1	17.7778	same-document LDHA/LDHB pair
+CHEMBL4555982		CHEMBL4555982	parent	None	-1				37	1	1	1	5.13514	same-document LDHA/LDHB pair
+CHEMBL4557701		CHEMBL4557701	parent	None	-1				17	2	1	2	8.23529;0.0141414	same-document LDHA/LDHB pair
+CHEMBL4574842		CHEMBL4574842	parent	None	-1				69	1	1	1	9.56522	same-document LDHA/LDHB pair
+CHEMBL4575930		CHEMBL4575930	parent	None	-1				52	1	1	1	15	same-document LDHA/LDHB pair
+CHEMBL4576717		CHEMBL4576717	parent	None	-1				3	1	1	1	11.6667	same-document LDHA/LDHB pair
+CHEMBL4578904		CHEMBL4578904	parent	None	-1				58	1	1	1	3.44828	same-document LDHA/LDHB pair
+CHEMBL4583899		CHEMBL4583899	parent	None	-1				25	2	1	2	7.2;0.0072	same-document LDHA/LDHB pair
+CHEMBL4589484		CHEMBL4589484	parent	None	-1				55	1	1	1	2.54545	same-document LDHA/LDHB pair
+CHEMBL4591832		CHEMBL4591832	parent	None	-1				82	1	1	1	9.7561	same-document LDHA/LDHB pair
+CHEMBL4740977		CHEMBL4740977	parent	None	-1				12	4	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4741188		CHEMBL4741188	parent	None	-1				23	4	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4742726		CHEMBL4742726	parent	None	-1				31	4	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4746456		CHEMBL4746456	parent	None	-1				25	4	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4746658		CHEMBL4746658	parent	None	-1				15	4	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4747300		CHEMBL4747300	parent	None	-1				7	4	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4748782		CHEMBL4748782	parent	None	-1				0.0667	5	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4749903		CHEMBL4749903	parent	None	-1				7	4	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4751209		CHEMBL4751209	parent	None	-1				47	4	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4751355		CHEMBL4751355	parent	None	-1				15	4	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4751495		CHEMBL4751495	parent	None	-1				10	4	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4752751		CHEMBL4752751	parent	None	-1				11	4	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4752866		CHEMBL4752866	parent	None	-1				24	4	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4752940		CHEMBL4752940	parent	None	-1				6	4	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4753360		CHEMBL4753360	parent	None	-1				59	4	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4753379		CHEMBL4753379	parent	None	-1				0.0634	6	1	1	1.66667	same-document LDHA/LDHB pair
+CHEMBL4754755		CHEMBL4754755	parent	None	-1				15	4	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4754861		CHEMBL4754861	parent	None	-1				36	4	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4755095		CHEMBL4755095	parent	None	-1				36	4	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4756608		CHEMBL4756608	parent	None	-1				33	3	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4758227		CHEMBL4758227	parent	None	-1				25	4	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4758290		CHEMBL4758290	parent	None	-1				15	4	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4759378		CHEMBL4759378	parent	None	-1				7	4	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4759499		CHEMBL4759499	parent	None	-1				8	4	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4760911		CHEMBL4760911	parent	None	-1				9	4	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4761628		CHEMBL4761628	parent	None	-1				21	4	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4761804		CHEMBL4761804	parent	None	-1				36	4	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4762840		CHEMBL4762840	parent	None	-1				50	4	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4762895		CHEMBL4762895	parent	None	-1				33	4	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4762989		CHEMBL4762989	parent	None	-1				14	4	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4763489		CHEMBL4763489	parent	None	-1				14	4	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4763797		CHEMBL4763797	parent	None	-1				38	4	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4763863		CHEMBL4763863	parent	None	-1				52	4	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4764953		CHEMBL4764953	parent	None	-1				74	4	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4777867		CHEMBL4777867	parent	None	-1				9	4	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4777976		CHEMBL4777976	parent	None	-1				33	4	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4780015		CHEMBL4780015	parent	None	-1				87	4	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4782843		CHEMBL4782843	parent	None	-1				0.0193	5	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4783252		CHEMBL4783252	parent	None	-1				9	4	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4783367		CHEMBL4783367	parent	None	-1				13	4	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4783945		CHEMBL4783945	parent	None	-1				8	4	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4784359		CHEMBL4784359	parent	None	-1				54	4	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4784520		CHEMBL4784520	parent	None	-1				17	4	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4784731		CHEMBL4784731	parent	None	-1				16	4	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4785391		CHEMBL4785391	parent	None	-1				24	4	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4786033		CHEMBL4786033	parent	None	-1				23	4	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4786241		CHEMBL4786241	parent	None	-1				23	4	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4786346		CHEMBL4786346	parent	None	-1				39	4	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4786682		CHEMBL4786682	parent	None	-1				3	4	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4786717		CHEMBL4786717	parent	None	-1				9	4	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4787852		CHEMBL4787852	parent	None	-1				0.1235	5	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4787940		CHEMBL4787940	parent	None	-1				11	4	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4788048		CHEMBL4788048	parent	None	-1				24	4	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4790159		CHEMBL4790159	parent	None	-1				8	4	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4791940		CHEMBL4791940	parent	None	-1				32	4	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4792513		CHEMBL4792513	parent	None	-1				1	4	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4793796		CHEMBL4793796	parent	None	-1				52	4	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4794789		CHEMBL4794789	parent	None	-1				9	4	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4797357		CHEMBL4797357	parent	None	-1				5	4	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4799233		CHEMBL4799233	parent	None	-1				47	4	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4846303		CHEMBL4846303	parent	None	-1				27	2	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4846426		CHEMBL4846426	parent	None	-1				17	2	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4846757		CHEMBL4846757	parent	None	-1				77	2	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4847068		CHEMBL4847068	parent	None	-1				0.3	1	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4847105		CHEMBL4847105	parent	None	-1				8	2	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4847591		CHEMBL4847591	parent	None	-1				0.44	4	1	3	296.296;0.34188;0.851064	same-document LDHA/LDHB pair
+CHEMBL4849137		CHEMBL4849137	parent	None	-1				5	2	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4850573		CHEMBL4850573	parent	None	-1				0.07	1	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4851612		CHEMBL4851612	parent	None	-1				34	2	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4851964		CHEMBL4851964	parent	None	-1				84	2	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4852130		CHEMBL4852130	parent	None	-1				5	2	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4853535		CHEMBL4853535	parent	None	-1				13	2	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4854797		CHEMBL4854797	parent	None	-1				26	2	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4854958		CHEMBL4854958	parent	None	-1				0.001	4	1	3	260.87;6;5.45455	same-document LDHA/LDHB pair
+CHEMBL4855986		CHEMBL4855986	parent	None	-1				0.1	1	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4856298		CHEMBL4856298	parent	None	-1				90	2	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4856798		CHEMBL4856798	parent	None	-1				8	3	1	3	250;0.21978;0.425532	same-document LDHA/LDHB pair
+CHEMBL4857168		CHEMBL4857168	parent	None	-1				23	2	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4857703		CHEMBL4857703	parent	None	-1				29	2	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4858373		CHEMBL4858373	parent	None	-1				59	2	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4859303		CHEMBL4859303	parent	None	-1				0.016	4	1	3	263.158;7.24638;8.47458	same-document LDHA/LDHB pair
+CHEMBL4860066		CHEMBL4860066	parent	None	-1				1.1	4	1	3	730.769;21.8391;34.5455	same-document LDHA/LDHB pair
+CHEMBL4861089		CHEMBL4861089	parent	None	-1				6	2	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4861379		CHEMBL4861379	parent	None	-1				0.3	1	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4863968		CHEMBL4863968	parent	None	-1				39	2	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4864519		CHEMBL4864519	parent	None	-1				0.5	1	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4865191		CHEMBL4865191	parent	None	-1				71	2	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4869869		CHEMBL4869869	parent	None	-1				37	2	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4872291		CHEMBL4872291	parent	None	-1				47	2	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4872528		CHEMBL4872528	parent	None	-1				17	2	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4872752		CHEMBL4872752	parent	None	-1				0.91	4	1	3	227.273;7.46269;6.84932	same-document LDHA/LDHB pair
+CHEMBL4873611		CHEMBL4873611	parent	None	-1				0.008	4	1	3	600;2.14286;2.72727	same-document LDHA/LDHB pair
+CHEMBL4873879		CHEMBL4873879	parent	None	-1				0.4	1	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4874506		CHEMBL4874506	parent	None	-1				21	2	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4875236		CHEMBL4875236	parent	None	-1				22	2	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4876708		CHEMBL4876708	parent	None	-1				15	2	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4876783		CHEMBL4876783	parent	None	-1				0.004	4	1	3	375;1.42857;1.57895	same-document LDHA/LDHB pair
+CHEMBL4877797		CHEMBL4877797	parent	None	-1				1.5	4	1	3	3.18471;0.149254;0.322581	same-document LDHA/LDHB pair
+CHEMBL4877988		CHEMBL4877988	parent	None	-1				7	3	1	3	285.714;0.4;0.869565	same-document LDHA/LDHB pair
+CHEMBL4878761		CHEMBL4878761	parent	None	-1				18	2	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL4879296		CHEMBL4879296	parent	None	-1				41	2	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL5171701		CHEMBL5171701	parent	None	-1				13	2	2	4	13.0769;138.462;0.894737;9.47368	same-document LDHA/LDHB pair
+CHEMBL5172378		CHEMBL5172378	parent	None	-1				13	2	2	4	0.684615;23.8462;0.0468421;1.63158	same-document LDHA/LDHB pair
+CHEMBL5176448		CHEMBL5176448	parent	None	-1				2.9	2	2	4	22.4138;113.793;1.03175;5.2381	same-document LDHA/LDHB pair
+CHEMBL5177632		CHEMBL5177632	parent	None	-1				4	1	1	1	11.75	same-document LDHA/LDHB pair
+CHEMBL5180187		CHEMBL5221507	child/salt-or-other-record	None	-1				90	2	2	2	0.5;7.77778	same-document LDHA/LDHB pair
+CHEMBL5181496		CHEMBL5181496	parent	None	-1				0.9	2	2	4	3.11111;34.4444;0.636364;7.04545	same-document LDHA/LDHB pair
+CHEMBL5181996		CHEMBL5181996	parent	None	-1				2.2	2	2	4	6.81818;40.9091;0.681818;4.09091	same-document LDHA/LDHB pair
+CHEMBL5182266		CHEMBL5182266	parent	None	-1				2.9	2	2	4	5.86207;23.4483;2.46377;9.85507	same-document LDHA/LDHB pair
+CHEMBL5183539		CHEMBL5183539	parent	None	-1				1.6	1	1	1	6.125	same-document LDHA/LDHB pair
+CHEMBL5185237		CHEMBL5185237	parent	None	-1				2.5	2	2	4	0.68;15.2;0.154545;3.45455	same-document LDHA/LDHB pair
+CHEMBL5187919		CHEMBL5187919	parent	None	-1				90	1	1	1	9	same-document LDHA/LDHB pair
+CHEMBL5188480		CHEMBL5188480	parent	None	-1				3.8	2	2	4	6.57895;171.053;0.367647;9.55882	same-document LDHA/LDHB pair
+CHEMBL5189798		CHEMBL5189798	parent	None	-1				26	2	2	4	2.88462;36.5385;0.174419;2.2093	same-document LDHA/LDHB pair
+CHEMBL5189879		CHEMBL5189879	parent	None	-1				3.7	1	1	1	12.4324	same-document LDHA/LDHB pair
+CHEMBL5192632		CHEMBL5192632	parent	None	-1				66	1	1	1	6.06061	same-document LDHA/LDHB pair
+CHEMBL5194549		CHEMBL5194549	parent	None	-1				2.5	2	2	4	3.8;36;2.96875;28.125	same-document LDHA/LDHB pair
+CHEMBL5194727		CHEMBL5194727	parent	None	-1				43	1	1	1	6.74419	same-document LDHA/LDHB pair
+CHEMBL5196259		CHEMBL5196259	parent	None	-1				8.6	2	2	4	6.62791;94.186;0.35625;5.0625	same-document LDHA/LDHB pair
+CHEMBL5196929		CHEMBL5196929	parent	None	-1				2.7	2	2	4	3.03704;122.222;0.149091;6	same-document LDHA/LDHB pair
+CHEMBL5197729		CHEMBL5197729	parent	None	-1				36	1	1	1	2.08333	same-document LDHA/LDHB pair
+CHEMBL5201115		CHEMBL5201115	parent	None	-1				1.8	2	2	4	1.22222;47.2222;0.0594595;2.2973	same-document LDHA/LDHB pair
+CHEMBL5202219		CHEMBL5202219	parent	None	-1				10	2	2	4	3.4;29;0.453333;3.86667	same-document LDHA/LDHB pair
+CHEMBL5205566		CHEMBL5205566	parent	None	-1				90	2	2	4	2.22222;8.33333;0.465116;1.74419	same-document LDHA/LDHB pair
+CHEMBL5206296		CHEMBL5206296	parent	None	-1				12.03	1	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)
+CHEMBL5416627		CHEMBL5499297	child/salt-or-other-record	None	-1				2.6	1	1	1	16.5385	same-document LDHA/LDHB pair
+CHEMBL5597066		CHEMBL5597066	parent	None	-1				14.5	5	1	1	351.818	same-document LDHA/LDHB pair
+CHEMBL5597243		CHEMBL5597243	parent	None	-1				72	1	1	1	16.6667	same-document LDHA/LDHB pair
+CHEMBL6150047		CHEMBL6150047	parent	None	-1				25	2	0	0		no LDHB row in ChEMBL (UNKNOWN, not non-selective)

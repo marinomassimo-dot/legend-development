@@ -1,0 +1,94 @@
+{
+ "attempts": 280,
+ "bumetanide_label": {
+  "boxed_warning": true,
+  "effective_time": "20250108",
+  "http": 200,
+  "n": 10,
+  "product_type": "HUMAN PRESCRIPTION DRUG",
+  "snippets": [
+   "Peak activity is reached between 1 and 2 hours.",
+   "Several pharmacokinetic studies have shown that bumetanide, administered orally or parenterally, is eliminated rapidly in humans, with a half-life of between 1 and 1\u00bd hours.",
+   "Plasma protein-binding is in the range of 94% to 96%.",
+   "Small pharmacokinetic studies of intravenous bumetanide in preterm and full-term neonates with respiratory disorders have reported an apparent half-life of approximately 6 hours, with a range up to 15 hours and a serum clearance ranging from 0.2 mL/min/kg to 1.1 mL/min/kg.",
+   "Mean serum half-life of bumetanide was 2.5 hours and 1.5 hours in patients aged less than 2 months and those aged 2 to 6 months, respectively.",
+   "Elimination half-life decreased considerably during the first month of life, from a mean of approximately 6 hours at birth to approximately 2.4 hours at 1 month of age."
+  ]
+ },
+ "collected_gz_bytes": 216085,
+ "collected_kept": true,
+ "ldha": {
+  "retrieved": 1428,
+  "state": "ROWS_RETRIEVED",
+  "total": 1428,
+  "truncated": false
+ },
+ "ldhb": {
+  "retrieved": 373,
+  "state": "ROWS_RETRIEVED",
+  "targets": [
+   "CHEMBL4940"
+  ],
+  "total": 373,
+  "truncated": false
+ },
+ "n_nm": 205,
+ "n_pairs": 185,
+ "n_sel": 205,
+ "n_stir": 88,
+ "non200_attempts": 0,
+ "pdk_docs": {
+  "CHEMBL1131823": {
+   "state": "ROWS_RETRIEVED",
+   "total": 114
+  },
+  "CHEMBL1132309": {
+   "state": "ROWS_RETRIEVED",
+   "total": 53
+  },
+  "CHEMBL1133665": {
+   "state": "ROWS_RETRIEVED",
+   "total": 131
+  },
+  "CHEMBL1133733": {
+   "state": "ROWS_RETRIEVED",
+   "total": 171
+  },
+  "CHEMBL3813671": {
+   "state": "ROWS_RETRIEVED",
+   "total": 106
+  },
+  "CHEMBL4007440": {
+   "state": "ROWS_RETRIEVED",
+   "total": 188
+  },
+  "CHEMBL4177695": {
+   "state": "ROWS_RETRIEVED",
+   "total": 35
+  },
+  "CHEMBL4308888": {
+   "state": "ROWS_RETRIEVED",
+   "total": 57
+  },
+  "CHEMBL5346893": {
+   "state": "ROWS_RETRIEVED",
+   "total": 266
+  },
+  "CHEMBL5370584": {
+   "state": "ROWS_RETRIEVED",
+   "total": 210
+  },
+  "CHEMBL6121009": {
+   "state": "ROWS_RETRIEVED",
+   "total": 113
+  }
+ },
+ "raw_gz_bytes": 423240,
+ "raw_kept": true,
+ "retrieved_on": "2026-10-30",
+ "stiripentol": {
+  "rows": 88,
+  "state": "ROWS_RETRIEVED",
+  "total": 88
+ }
+}

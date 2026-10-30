@@ -1,0 +1,9 @@
+type	relation	value	units	document	target	assay_description
+Inhibition	=	7.0	%	CHEMBL4311969	Unchecked	Inhibition of human LDH5 at 2 mM using sodium pyruvate as substrate by UV-VIS spectrophotometry method relative to control
+Inhibition	=	7.0	%	CHEMBL4311969	Unchecked	Inhibition of human LDH1 at 2 mM using sodium pyruvate as substrate by UV-VIS spectrophotometry method relative to control
+Inhibition	=		%	CHEMBL4311969	Unchecked	Inhibition of human LDH5 at 0.5 mM using sodium pyruvate as substrate by UV-VIS spectrophotometry method relative to control
+Inhibition	=		%	CHEMBL4311969	Unchecked	Inhibition of human LDH1 at 0.5 mM using sodium pyruvate as substrate by UV-VIS spectrophotometry method relative to control
+FC	=	0.27		CHEMBL5120856	Unchecked	Inhibition of GO/LDHA in hyperoxaluric-primary hepatocyte isolated from Grhpr-knockdown PH2 C57BL/6 mouse assessed as relative oxalate output at 10 uM measured at 24 hrs in the presence of glycolate r
+FC	=	0.33		CHEMBL5120856	Unchecked	Inhibition of GO/LDHA in hyperoxaluric-primary hepatocyte isolated from Grhpr-knockdown PH2 C57BL/6 mouse assessed as relative oxalate output at 10 uM measured at 48 hrs in the presence of glycolate r
+FC	=	0.7		CHEMBL5120856	Unchecked	Inhibition of GO/LDHA in hyperoxaluric-primary hepatocyte isolated from Hoga1-knockdown PH3 C57BL/6 mouse assessed as relative oxalate output at 10 uM measured at 24 hrs in the presence of hydroxyprol
+FC	=	0.49		CHEMBL5120856	Unchecked	Inhibition of GO/LDHA in hyperoxaluric-primary hepatocyte isolated from Hoga1-knockdown PH3 C57BL/6 mouse assessed as relative oxalate output at 10 uM measured at 48 hrs in the presence of hydroxyprol

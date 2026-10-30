@@ -18,7 +18,7 @@
    },
    "^\\.cur\\.(needs|threads|groups|gaps|goals|tracks|scopes|group_note|meta|evidence_graph|work_order|selection|hypotheses|predictive|contexts|ranking)(\\.|\\[\\]|$)": {
     "class": "OWN",
-    "values": 6784,
+    "values": 6790,
     "why": "needs, threads, positions, evidence graph, work order and the IT7 selection, comparison, predictive-test and context sections: own text or counts computed from own census files"
    },
    "^\\.cur\\.cands\\[\\]\\.": {
@@ -223,7 +223,7 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 2395,
+    "forbidden-name": 2396,
     "forbidden-wording": 12
    },
    "co_attested_wording": [
@@ -315,7 +315,7 @@
    "identity": 7,
    "links": 7,
    "mechanism": 1,
-   "next_full": 3,
+   "next_full": 2,
    "novelty": 2,
    "pharm": 2,
    "reopen": 1
@@ -450,7 +450,7 @@
   "BIBLIO": 2139,
   "COUNT": 7757,
   "ID": 3048,
-  "OWN": 57411,
+  "OWN": 57417,
   "ROWNAME": 1506,
   "SRC_A": 127,
   "SRC_META": 256,
@@ -489,7 +489,7 @@
  "files": {
   "COMPARISON.md": {
    "bytes": 6433,
-   "sha256": "b4f78876a3856badc33025e491164f5532dffee0e998dc8509201068448e5710"
+   "sha256": "0d2fe90637f823d5928039d00266ea48cbe0b36a44186882d1d0898fd4e891ab"
   },
   "LICENSES/CC-BY-4.0.txt": {
    "bytes": 18657,
@@ -509,7 +509,7 @@
   },
   "NOTICE.md": {
    "bytes": 12612,
-   "sha256": "debfaba09d7a9bde51271c536a2e1a581515fe608926c16d51a7f0e526e2a6a0"
+   "sha256": "05434a21917caa296fc0830f6cdc8e3b5c7183b770c395fe530b39cd4f3e9aa4"
   },
   "README.md": {
    "bytes": 4642,
@@ -532,8 +532,8 @@
    "sha256": "d8fe6a3455466783564803428b6318c1c442db6a16dfb97de8a6b7dcf944cc9d"
   },
   "index.html": {
-   "bytes": 3011008,
-   "sha256": "8d49b41e2cc1b3648d095b6b91cf6ededaec0cfc42caa94dbe9352f0b7da8cc0"
+   "bytes": 3012798,
+   "sha256": "609261f85984888f8fe4b0315a3aec3ff3c24cb2f1c0e0d79a020e978ffc9fe7"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",
@@ -593,7 +593,7 @@
   "lead_field_redactions": 11,
   "pair_status_rule": "pairs[].p.cr.pha[1] (status classes of the row) is dropped in the shareable build: a status class derives from ChEMBL max_phase, DGIdb approved flags, MATRIX and openFDA together, and the build does not re-derive a class-A-only status per row.",
   "pairs_status_class_dropped": 680,
-  "repository_file_names_described": 60,
+  "repository_file_names_described": 59,
   "rule": "IT5 P13 fix. Own analysis stays in the shareable build: a conclusion at the level of a need, a class or a card subject, in our own words, short, attributed to a published work. Withheld: (1) a sentence that states a compound-target(-action) pair together with its database of origin when the pair is asserted only by a class-B/C catalogue source; (2) a compound named in prose whose only provenance in the repository is a class-B/C catalogue row (it appears in no cited full text and is not a card subject); (3) a per-compound status, phase, approval or access statement attributed to a class-B/C source; (4) repository file names, which cannot be used outside the repository. The replacement keeps the research conclusion and names the withheld source class with the phrase in withheld_phrase. The FULL build keeps everything. The audit enforces (1) and (2) by derivation from the catalogue, (3) and (4) by pattern, and every redaction below must match exactly once or more: a stale redaction fails the build.",
   "withheld_phrase": "dato di una fonte non inclusa in questa versione"
  },

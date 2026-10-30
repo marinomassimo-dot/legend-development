@@ -1,0 +1,14 @@
+molecule_chembl_id	isoform_target	document	type	relation	value	units	assay_organism	assay_description
+CHEMBL3335792	LDHA	CHEMBL3351282	IC50	=	5	nM	Homo sapiens	Inhibition of LDHA (unknown origin)
+CHEMBL3335794	LDHA	CHEMBL3351282	IC50	=	2.6	nM	Homo sapiens	Inhibition of LDHA (unknown origin)
+CHEMBL3335794	LDHA	CHEMBL3351282	Ki	=	4.8	nM	Homo sapiens	Inhibition of LDHA (unknown origin)
+CHEMBL3335794	LDHA	CHEMBL3763153	IC50	=	2.6	nM	Homo sapiens	Competitive inhibition of human LDH5 in presence of NADH
+CHEMBL3335794	LDHA	CHEMBL4028893	IC50	=	38	nM	Homo sapiens	Inhibition of human liver LDHA using sodium pyruvate as substrate after 5 mins in presence of NAPDH and EDTA by diaphora
+CHEMBL3335794	LDHA	CHEMBL4028893	IC50	=	38	nM	Homo sapiens	Inhibition of human liver LDHA using sodium pyruvate as substrate after 5 mins in presence of NAPDH and in absence of ED
+CHEMBL3335794	LDHA	CHEMBL4028893	Kd	=	1.7	nM	Homo sapiens	Binding affinity to human His-tagged LDHA in absence of NADH by SPR assay
+CHEMBL3335794	LDHA	CHEMBL4028893	Kd	=	59	nM	Homo sapiens	Binding affinity to human His-tagged LDHA in presence of NADH by SPR assay
+CHEMBL3335794	LDHA	CHEMBL4825721	IC50	=	2.6	nM	Homo sapiens	Competitive inhibition of recombinant human LDHA in the presence of NADH by resazurin dye reduction method
+CHEMBL3335794	LDHB	CHEMBL3763153	IC50	=	43	nM	Homo sapiens	Competitive inhibition of human LDH1 in presence of NADH
+CHEMBL3335794	LDHB	CHEMBL4028893	IC50	=	1150	nM	Homo sapiens	Inhibition of human erythrocytes LDHB using sodium pyruvate as substrate after 5 mins in presence of NAPDH by diaphorase
+CHEMBL3359440	LDHA	CHEMBL3351509	IC50	=	30	nM	Homo sapiens	Inhibition of human LDH-A by biochemical assay
+CHEMBL3359440	LDHA	CHEMBL3351509	IC50	=	610	nM	Homo sapiens	Inhibition of human LDH-A by biochemical assay

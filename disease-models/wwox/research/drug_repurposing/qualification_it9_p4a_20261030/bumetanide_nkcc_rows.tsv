@@ -1,0 +1,4 @@
+target	target_organism	type	relation	value	units	assay_organism	assay_cell_type	document	assay_description
+Solute carrier family 12 member 2	Homo sapiens	Inhibition	=	58.8	%	Homo sapiens	HEK293	CHEMBL5038596	Inhibition of NKCC1 (unknown origin) transfected in HEK293 cells expressing mbYFPQS plasmid assessed as reduction in Cl- influx at 10 uM incubated for 30 mins b
+Solute carrier family 12 member 2	Homo sapiens	Inhibition	=	71.7	%	Homo sapiens	HEK293	CHEMBL5038596	Inhibition of NKCC1 (unknown origin) transfected in HEK293 cells expressing mbYFPQS plasmid assessed as reduction in Cl- influx at 100 uM incubated for 30 mins 
+Solute carrier family 12 member 2	Homo sapiens	IC50	=	1540	nM	Homo sapiens	HT-29	CHEMBL5230131	Inhibition of NKCC1 in human HT-29 cells assessed as inhibition of rubidium uptake incubated for 20 min by atomic absorption spectroscopy

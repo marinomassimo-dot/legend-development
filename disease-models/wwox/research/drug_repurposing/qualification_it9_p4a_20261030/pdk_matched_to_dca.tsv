@@ -1,0 +1,265 @@
+document	isoform	molecule_chembl_id	pref_name	inhibitor_IC50_nM	dca_relation	dca_IC50_nM	ratio_kind	dca_over_inhibitor	inhibitor_assay
+CHEMBL1131823	PDK?	CHEMBL303716		5400	>	2e+06	lower_bound_ratio (DCA censored)	370.37	In vitro inhibitory activity against pyruvate dehydrogenase kinase was determined
+CHEMBL1131823	PDK?	CHEMBL304098		51000	>	2e+06	lower_bound_ratio (DCA censored)	39.2157	In vitro inhibitory activity against pyruvate dehydrogenase kinase was determined
+CHEMBL1131823	PDK?	CHEMBL305511		56000	>	2e+06	lower_bound_ratio (DCA censored)	35.7143	In vitro inhibitory activity against pyruvate dehydrogenase kinase was determined
+CHEMBL1131823	PDK?	CHEMBL307896		5800	>	2e+06	lower_bound_ratio (DCA censored)	344.828	In vitro inhibitory activity against pyruvate dehydrogenase kinase was determined
+CHEMBL1131823	PDK?	CHEMBL440684		840	>	2e+06	lower_bound_ratio (DCA censored)	2380.95	In vitro inhibitory activity against pyruvate dehydrogenase kinase was determined
+CHEMBL1131823	PDK?	CHEMBL70488		9500	>	2e+06	lower_bound_ratio (DCA censored)	210.526	In vitro inhibitory activity against pyruvate dehydrogenase kinase was determined
+CHEMBL1131823	PDK?	CHEMBL70688		6700	>	2e+06	lower_bound_ratio (DCA censored)	298.507	In vitro inhibitory activity against pyruvate dehydrogenase kinase was determined
+CHEMBL1131823	PDK?	CHEMBL70925		36000	>	2e+06	lower_bound_ratio (DCA censored)	55.5556	In vitro inhibitory activity against pyruvate dehydrogenase kinase was determined
+CHEMBL1131823	PDK?	CHEMBL71893	ABIETIC ACID	20000	>	2e+06	lower_bound_ratio (DCA censored)	100	In vitro inhibitory activity against pyruvate dehydrogenase kinase was determined
+CHEMBL1131823	PDK?	CHEMBL757	NANDROLONE	120000	>	2e+06	lower_bound_ratio (DCA censored)	16.6667	In vitro inhibitory activity against pyruvate dehydrogenase kinase was determined
+CHEMBL1132309	PDK?	CHEMBL18861	ZD-6169	9300	>	1e+06	lower_bound_ratio (DCA censored)	107.527	In vitro inhibitory activity against Pyruvate dehydrogenase kinase by primary enzymatic assay
+CHEMBL1132309	PDK?	CHEMBL304292		79	>	1e+06	lower_bound_ratio (DCA censored)	12658.2	In vitro inhibitory activity against Pyruvate dehydrogenase kinase by primary enzymatic assay
+CHEMBL1132309	PDK?	CHEMBL310927		90	>	1e+06	lower_bound_ratio (DCA censored)	11111.1	In vitro inhibitory activity against Pyruvate dehydrogenase kinase by primary enzymatic assay
+CHEMBL1132309	PDK?	CHEMBL316388		16.5	>	1e+06	lower_bound_ratio (DCA censored)	60606.1	In vitro inhibitory activity against Pyruvate dehydrogenase kinase by primary enzymatic assay
+CHEMBL1132309	PDK?	CHEMBL327693		1500	>	1e+06	lower_bound_ratio (DCA censored)	666.667	In vitro inhibitory activity against Pyruvate dehydrogenase kinase by primary enzymatic assay
+CHEMBL1132309	PDK?	CHEMBL328892		200000	>	1e+06	lower_bound_ratio (DCA censored)	5	In vitro inhibitory activity against Pyruvate dehydrogenase kinase by primary enzymatic assay
+CHEMBL1132309	PDK?	CHEMBL329794		6200	>	1e+06	lower_bound_ratio (DCA censored)	161.29	In vitro inhibitory activity against Pyruvate dehydrogenase kinase by primary enzymatic assay
+CHEMBL1132309	PDK?	CHEMBL421689		55	>	1e+06	lower_bound_ratio (DCA censored)	18181.8	In vitro inhibitory activity against Pyruvate dehydrogenase kinase by primary enzymatic assay
+CHEMBL1132309	PDK?	CHEMBL433391		120	>	1e+06	lower_bound_ratio (DCA censored)	8333.33	In vitro inhibitory activity against Pyruvate dehydrogenase kinase by primary enzymatic assay
+CHEMBL1132309	PDK?	CHEMBL82385		82	>	1e+06	lower_bound_ratio (DCA censored)	12195.1	In vitro inhibitory activity against Pyruvate dehydrogenase kinase by primary enzymatic assay
+CHEMBL1132309	PDK?	CHEMBL83151		6700	>	1e+06	lower_bound_ratio (DCA censored)	149.254	In vitro inhibitory activity against Pyruvate dehydrogenase kinase by primary enzymatic assay
+CHEMBL1132309	PDK?	CHEMBL84231		21	>	1e+06	lower_bound_ratio (DCA censored)	47619	In vitro inhibitory activity against Pyruvate dehydrogenase kinase by primary enzymatic assay
+CHEMBL1132309	PDK?	CHEMBL90360		9800	>	1e+06	lower_bound_ratio (DCA censored)	102.041	In vitro inhibitory activity against Pyruvate dehydrogenase kinase by primary enzymatic assay
+CHEMBL1132309	PDK?	CHEMBL92640		35000	>	1e+06	lower_bound_ratio (DCA censored)	28.5714	In vitro inhibitory activity against Pyruvate dehydrogenase kinase by primary enzymatic assay
+CHEMBL1132309	PDK?	CHEMBL92700		9300	>	1e+06	lower_bound_ratio (DCA censored)	107.527	In vitro inhibitory activity against Pyruvate dehydrogenase kinase by primary enzymatic assay
+CHEMBL1132309	PDK?	CHEMBL93045		300	>	1e+06	lower_bound_ratio (DCA censored)	3333.33	In vitro inhibitory activity against Pyruvate dehydrogenase kinase by primary enzymatic assay
+CHEMBL1132309	PDK?	CHEMBL93805		77	>	1e+06	lower_bound_ratio (DCA censored)	12987	In vitro inhibitory activity against Pyruvate dehydrogenase kinase by primary enzymatic assay
+CHEMBL1132309	PDK?	CHEMBL94231		110	>	1e+06	lower_bound_ratio (DCA censored)	9090.91	In vitro inhibitory activity against Pyruvate dehydrogenase kinase by primary enzymatic assay
+CHEMBL1133665	PDK?	CHEMBL1907670		75000	>	1e+06	lower_bound_ratio (DCA censored)	13.3333	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL1907671		11000	>	1e+06	lower_bound_ratio (DCA censored)	90.9091	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL1907862		300	>	1e+06	lower_bound_ratio (DCA censored)	3333.33	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL1907863		3100	>	1e+06	lower_bound_ratio (DCA censored)	322.581	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL304292		79	>	1e+06	lower_bound_ratio (DCA censored)	12658.2	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL309318		4160	>	1e+06	lower_bound_ratio (DCA censored)	240.385	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL309697		40	>	1e+06	lower_bound_ratio (DCA censored)	25000	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL310213		5620	>	1e+06	lower_bound_ratio (DCA censored)	177.936	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL310295		23900	>	1e+06	lower_bound_ratio (DCA censored)	41.841	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL310616		10000	>	1e+06	lower_bound_ratio (DCA censored)	100	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL310879		19.8	>	1e+06	lower_bound_ratio (DCA censored)	50505.1	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL310999		23000	>	1e+06	lower_bound_ratio (DCA censored)	43.4783	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL311125		4.5	>	1e+06	lower_bound_ratio (DCA censored)	222222	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL311208		17000	>	1e+06	lower_bound_ratio (DCA censored)	58.8235	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL311674		2000	>	1e+06	lower_bound_ratio (DCA censored)	500	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL311859		2160	>	1e+06	lower_bound_ratio (DCA censored)	462.963	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL311896		5020	>	1e+06	lower_bound_ratio (DCA censored)	199.203	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL313453		260000	>	1e+06	lower_bound_ratio (DCA censored)	3.84615	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL313822		31700	>	1e+06	lower_bound_ratio (DCA censored)	31.5457	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL313843		3370	>	1e+06	lower_bound_ratio (DCA censored)	296.736	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL313878		14.3	>	1e+06	lower_bound_ratio (DCA censored)	69930.1	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL314190		64	>	1e+06	lower_bound_ratio (DCA censored)	15625	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL315063		49000	>	1e+06	lower_bound_ratio (DCA censored)	20.4082	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL315234		5560	>	1e+06	lower_bound_ratio (DCA censored)	179.856	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL315407		416000	>	1e+06	lower_bound_ratio (DCA censored)	2.40385	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL316226		15000	>	1e+06	lower_bound_ratio (DCA censored)	66.6667	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL316388		16	>	1e+06	lower_bound_ratio (DCA censored)	62500	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL329794		6200	>	1e+06	lower_bound_ratio (DCA censored)	161.29	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL3349325		9.1	>	1e+06	lower_bound_ratio (DCA censored)	109890	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL3349326		49	>	1e+06	lower_bound_ratio (DCA censored)	20408.2	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL3349327		6000	>	1e+06	lower_bound_ratio (DCA censored)	166.667	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL419665		70	>	1e+06	lower_bound_ratio (DCA censored)	14285.7	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL419846		34	>	1e+06	lower_bound_ratio (DCA censored)	29411.8	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL419846		15000	>	1e+06	lower_bound_ratio (DCA censored)	66.6667	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL420219		5000	>	1e+06	lower_bound_ratio (DCA censored)	200	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL443012		13	>	1e+06	lower_bound_ratio (DCA censored)	76923.1	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL79457		179	>	1e+06	lower_bound_ratio (DCA censored)	5586.59	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL79494		560000	>	1e+06	lower_bound_ratio (DCA censored)	1.78571	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL79731		2600	>	1e+06	lower_bound_ratio (DCA censored)	384.615	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL79791		47000	>	1e+06	lower_bound_ratio (DCA censored)	21.2766	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL79830		180000	>	1e+06	lower_bound_ratio (DCA censored)	5.55556	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL79871		173	>	1e+06	lower_bound_ratio (DCA censored)	5780.35	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL80034		28	>	1e+06	lower_bound_ratio (DCA censored)	35714.3	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL80035		19900	>	1e+06	lower_bound_ratio (DCA censored)	50.2513	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL80049		74000	>	1e+06	lower_bound_ratio (DCA censored)	13.5135	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL81085		1e+06	>	1e+06	lower_bound_ratio (DCA censored)	1	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL81574		19	>	1e+06	lower_bound_ratio (DCA censored)	52631.6	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL81720		14000	>	1e+06	lower_bound_ratio (DCA censored)	71.4286	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL81854		17000	>	1e+06	lower_bound_ratio (DCA censored)	58.8235	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL82096		20000	>	1e+06	lower_bound_ratio (DCA censored)	50	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL82385		82	>	1e+06	lower_bound_ratio (DCA censored)	12195.1	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL82585		47000	>	1e+06	lower_bound_ratio (DCA censored)	21.2766	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL83151		6700	>	1e+06	lower_bound_ratio (DCA censored)	149.254	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL83273		3.3	>	1e+06	lower_bound_ratio (DCA censored)	303030	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL83496		310000	>	1e+06	lower_bound_ratio (DCA censored)	3.22581	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL83502		36	>	1e+06	lower_bound_ratio (DCA censored)	27777.8	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL83599		22400	>	1e+06	lower_bound_ratio (DCA censored)	44.6429	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL83727		37	>	1e+06	lower_bound_ratio (DCA censored)	27027	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL83771		112	>	1e+06	lower_bound_ratio (DCA censored)	8928.57	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL83816		150000	>	1e+06	lower_bound_ratio (DCA censored)	6.66667	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL83998		30000	>	1e+06	lower_bound_ratio (DCA censored)	33.3333	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL84185		2840	>	1e+06	lower_bound_ratio (DCA censored)	352.113	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL84231		21	>	1e+06	lower_bound_ratio (DCA censored)	47619	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL84271		25	>	1e+06	lower_bound_ratio (DCA censored)	40000	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL84361		282000	>	1e+06	lower_bound_ratio (DCA censored)	3.5461	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL84406		39	>	1e+06	lower_bound_ratio (DCA censored)	25641	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL84479		2590	>	1e+06	lower_bound_ratio (DCA censored)	386.1	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL90360		9800	>	1e+06	lower_bound_ratio (DCA censored)	102.041	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133665	PDK?	CHEMBL93045		300	>	1e+06	lower_bound_ratio (DCA censored)	3333.33	Inhibitory activity tested against Pyruvate Dehydrogenase Kinase (PDHK) receptor from rats.
+CHEMBL1133733	PDK?	CHEMBL303468		110	>	1e+06	lower_bound_ratio (DCA censored)	9090.91	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL305623		3800	>	1e+06	lower_bound_ratio (DCA censored)	263.158	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL305640		1490	>	1e+06	lower_bound_ratio (DCA censored)	671.141	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL306028		140	>	1e+06	lower_bound_ratio (DCA censored)	7142.86	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL306246		30000	>	1e+06	lower_bound_ratio (DCA censored)	33.3333	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL306281		77	>	1e+06	lower_bound_ratio (DCA censored)	12987	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL306522		73	>	1e+06	lower_bound_ratio (DCA censored)	13698.6	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL306835		29	>	1e+06	lower_bound_ratio (DCA censored)	34482.8	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL306926		1800	>	1e+06	lower_bound_ratio (DCA censored)	555.556	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL306972		19	>	1e+06	lower_bound_ratio (DCA censored)	52631.6	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL307657		2000	>	1e+06	lower_bound_ratio (DCA censored)	500	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL307687		15	>	1e+06	lower_bound_ratio (DCA censored)	66666.7	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL308151		20	>	1e+06	lower_bound_ratio (DCA censored)	50000	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL308156		110	>	1e+06	lower_bound_ratio (DCA censored)	9090.91	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL308412		145000	>	1e+06	lower_bound_ratio (DCA censored)	6.89655	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL308548		240	>	1e+06	lower_bound_ratio (DCA censored)	4166.67	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL308560		2400	>	1e+06	lower_bound_ratio (DCA censored)	416.667	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL308601		2000	>	1e+06	lower_bound_ratio (DCA censored)	500	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL309817		22200	>	1e+06	lower_bound_ratio (DCA censored)	45.045	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL310927		90	>	1e+06	lower_bound_ratio (DCA censored)	11111.1	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL311348		42100	>	1e+06	lower_bound_ratio (DCA censored)	23.753	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL415267		66	>	1e+06	lower_bound_ratio (DCA censored)	15151.5	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL421116		126	>	1e+06	lower_bound_ratio (DCA censored)	7936.51	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL421689		71	>	1e+06	lower_bound_ratio (DCA censored)	14084.5	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL450618		16	>	1e+06	lower_bound_ratio (DCA censored)	62500	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL70343		560	>	1e+06	lower_bound_ratio (DCA censored)	1785.71	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL70439		25000	>	1e+06	lower_bound_ratio (DCA censored)	40	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL70596		150	>	1e+06	lower_bound_ratio (DCA censored)	6666.67	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL70795		9300	>	1e+06	lower_bound_ratio (DCA censored)	107.527	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL70898		77	>	1e+06	lower_bound_ratio (DCA censored)	12987	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL70916		98	>	1e+06	lower_bound_ratio (DCA censored)	10204.1	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL70996		9300	>	1e+06	lower_bound_ratio (DCA censored)	107.527	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL71015		61500	>	1e+06	lower_bound_ratio (DCA censored)	16.2602	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL72021		34	>	1e+06	lower_bound_ratio (DCA censored)	29411.8	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL72106		180	>	1e+06	lower_bound_ratio (DCA censored)	5555.56	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL72128		2800	>	1e+06	lower_bound_ratio (DCA censored)	357.143	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL72149		380	>	1e+06	lower_bound_ratio (DCA censored)	2631.58	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL72204		35	>	1e+06	lower_bound_ratio (DCA censored)	28571.4	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL72298		20	>	1e+06	lower_bound_ratio (DCA censored)	50000	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL72304		16100	>	1e+06	lower_bound_ratio (DCA censored)	62.1118	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL72330		150	>	1e+06	lower_bound_ratio (DCA censored)	6666.67	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL72543		16900	>	1e+06	lower_bound_ratio (DCA censored)	59.1716	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL72567		23	>	1e+06	lower_bound_ratio (DCA censored)	43478.3	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL72581		21800	>	1e+06	lower_bound_ratio (DCA censored)	45.8716	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL72582		47400	>	1e+06	lower_bound_ratio (DCA censored)	21.097	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL72645		32000	>	1e+06	lower_bound_ratio (DCA censored)	31.25	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL72716		1500	>	1e+06	lower_bound_ratio (DCA censored)	666.667	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL72892		17700	>	1e+06	lower_bound_ratio (DCA censored)	56.4972	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL72973		1300	>	1e+06	lower_bound_ratio (DCA censored)	769.231	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL73011		203000	>	1e+06	lower_bound_ratio (DCA censored)	4.92611	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL73014		3000	>	1e+06	lower_bound_ratio (DCA censored)	333.333	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL73035		2700	>	1e+06	lower_bound_ratio (DCA censored)	370.37	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL73048		70	>	1e+06	lower_bound_ratio (DCA censored)	14285.7	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL73062		4730	>	1e+06	lower_bound_ratio (DCA censored)	211.416	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL73068		7.1	>	1e+06	lower_bound_ratio (DCA censored)	140845	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL73099		13	>	1e+06	lower_bound_ratio (DCA censored)	76923.1	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL73100		47	>	1e+06	lower_bound_ratio (DCA censored)	21276.6	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL73109		219	>	1e+06	lower_bound_ratio (DCA censored)	4566.21	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL73191		130	>	1e+06	lower_bound_ratio (DCA censored)	7692.31	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL73204		8.4	>	1e+06	lower_bound_ratio (DCA censored)	119048	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL73337		130	>	1e+06	lower_bound_ratio (DCA censored)	7692.31	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL73372		3660	>	1e+06	lower_bound_ratio (DCA censored)	273.224	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL73391		22600	>	1e+06	lower_bound_ratio (DCA censored)	44.2478	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL73423		6400	>	1e+06	lower_bound_ratio (DCA censored)	156.25	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL73437		596	>	1e+06	lower_bound_ratio (DCA censored)	1677.85	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL73494		920	>	1e+06	lower_bound_ratio (DCA censored)	1086.96	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL73551		32	>	1e+06	lower_bound_ratio (DCA censored)	31250	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL73578		80000	>	1e+06	lower_bound_ratio (DCA censored)	12.5	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL73579		140	>	1e+06	lower_bound_ratio (DCA censored)	7142.86	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL73660		60000	>	1e+06	lower_bound_ratio (DCA censored)	16.6667	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL73999		170000	>	1e+06	lower_bound_ratio (DCA censored)	5.88235	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL74006		1000	>	1e+06	lower_bound_ratio (DCA censored)	1000	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL74225		1200	>	1e+06	lower_bound_ratio (DCA censored)	833.333	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL74281		45800	>	1e+06	lower_bound_ratio (DCA censored)	21.8341	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL74290		17300	>	1e+06	lower_bound_ratio (DCA censored)	57.8035	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL74399		61	>	1e+06	lower_bound_ratio (DCA censored)	16393.4	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL74582		8	>	1e+06	lower_bound_ratio (DCA censored)	125000	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL74677		230	>	1e+06	lower_bound_ratio (DCA censored)	4347.83	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL74949		115	>	1e+06	lower_bound_ratio (DCA censored)	8695.65	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL75001		113	>	1e+06	lower_bound_ratio (DCA censored)	8849.56	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL75507		16	>	1e+06	lower_bound_ratio (DCA censored)	62500	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL75562		380	>	1e+06	lower_bound_ratio (DCA censored)	2631.58	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL75821		10	>	1e+06	lower_bound_ratio (DCA censored)	100000	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL75930		220000	>	1e+06	lower_bound_ratio (DCA censored)	4.54545	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL75939		160	>	1e+06	lower_bound_ratio (DCA censored)	6250	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL76001		300	>	1e+06	lower_bound_ratio (DCA censored)	3333.33	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL76005		4150	>	1e+06	lower_bound_ratio (DCA censored)	240.964	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL1133733	PDK?	CHEMBL76189		87	>	1e+06	lower_bound_ratio (DCA censored)	11494.3	Inhibition of porcine pyruvate dehydrogenase kinase (PDHK)in a primary enzymatic assay
+CHEMBL4007440	PDK1	CHEMBL121556		49	=	1.025e+06	ratio_equals	20918.4	Inhibition of full length His6-tagged PDK1 (unknown origin) expressed in Escherichia coli using full length Hi
+CHEMBL4007440	PDK1	CHEMBL4059513		2437	=	1.025e+06	ratio_equals	420.599	Inhibition of full length His6-tagged PDK1 (unknown origin) expressed in Escherichia coli using full length Hi
+CHEMBL4007440	PDK1	CHEMBL4061486		609	=	1.025e+06	ratio_equals	1683.09	Inhibition of full length His6-tagged PDK1 (unknown origin) expressed in Escherichia coli using full length Hi
+CHEMBL4007440	PDK1	CHEMBL4062439		1701	=	1.025e+06	ratio_equals	602.587	Inhibition of full length His6-tagged PDK1 (unknown origin) expressed in Escherichia coli using full length Hi
+CHEMBL4007440	PDK1	CHEMBL4063998		139	=	1.025e+06	ratio_equals	7374.1	Inhibition of full length His6-tagged PDK1 (unknown origin) expressed in Escherichia coli using full length Hi
+CHEMBL4007440	PDK1	CHEMBL4064283		2854	=	1.025e+06	ratio_equals	359.145	Inhibition of full length His6-tagged PDK1 (unknown origin) expressed in Escherichia coli using full length Hi
+CHEMBL4007440	PDK1	CHEMBL4064600		161	=	1.025e+06	ratio_equals	6366.46	Inhibition of full length His6-tagged PDK1 (unknown origin) expressed in Escherichia coli using full length Hi
+CHEMBL4007440	PDK1	CHEMBL4065201		101	=	1.025e+06	ratio_equals	10148.5	Inhibition of full length His6-tagged PDK1 (unknown origin) expressed in Escherichia coli using full length Hi
+CHEMBL4007440	PDK1	CHEMBL4066722		130	=	1.025e+06	ratio_equals	7884.62	Inhibition of full length His6-tagged PDK1 (unknown origin) expressed in Escherichia coli using full length Hi
+CHEMBL4007440	PDK1	CHEMBL4068171		32	=	1.025e+06	ratio_equals	32031.2	Inhibition of full length His6-tagged PDK1 (unknown origin) expressed in Escherichia coli using full length Hi
+CHEMBL4007440	PDK1	CHEMBL4070900		1048	=	1.025e+06	ratio_equals	978.053	Inhibition of full length His6-tagged PDK1 (unknown origin) expressed in Escherichia coli using full length Hi
+CHEMBL4007440	PDK1	CHEMBL4073795		3875	=	1.025e+06	ratio_equals	264.516	Inhibition of full length His6-tagged PDK1 (unknown origin) expressed in Escherichia coli using full length Hi
+CHEMBL4007440	PDK1	CHEMBL4077710		169	=	1.025e+06	ratio_equals	6065.09	Inhibition of full length His6-tagged PDK1 (unknown origin) expressed in Escherichia coli using full length Hi
+CHEMBL4007440	PDK1	CHEMBL4078087		702	=	1.025e+06	ratio_equals	1460.11	Inhibition of full length His6-tagged PDK1 (unknown origin) expressed in Escherichia coli using full length Hi
+CHEMBL4007440	PDK1	CHEMBL4078888		6832	=	1.025e+06	ratio_equals	150.029	Inhibition of full length His6-tagged PDK1 (unknown origin) expressed in Escherichia coli using full length Hi
+CHEMBL4007440	PDK1	CHEMBL4079044		85	=	1.025e+06	ratio_equals	12058.8	Inhibition of full length His6-tagged PDK1 (unknown origin) expressed in Escherichia coli using full length Hi
+CHEMBL4007440	PDK1	CHEMBL4081482		395	=	1.025e+06	ratio_equals	2594.94	Inhibition of full length His6-tagged PDK1 (unknown origin) expressed in Escherichia coli using full length Hi
+CHEMBL4007440	PDK1	CHEMBL4081635		30	=	1.025e+06	ratio_equals	34166.7	Inhibition of full length His6-tagged PDK1 (unknown origin) expressed in Escherichia coli using full length Hi
+CHEMBL4007440	PDK1	CHEMBL4084147		247	=	1.025e+06	ratio_equals	4149.8	Inhibition of full length His6-tagged PDK1 (unknown origin) expressed in Escherichia coli using full length Hi
+CHEMBL4007440	PDK1	CHEMBL4084258		588	=	1.025e+06	ratio_equals	1743.2	Inhibition of full length His6-tagged PDK1 (unknown origin) expressed in Escherichia coli using full length Hi
+CHEMBL4007440	PDK1	CHEMBL4085111		90	=	1.025e+06	ratio_equals	11388.9	Inhibition of full length His6-tagged PDK1 (unknown origin) expressed in Escherichia coli using full length Hi
+CHEMBL4007440	PDK1	CHEMBL4085566		90	=	1.025e+06	ratio_equals	11388.9	Inhibition of full length His6-tagged PDK1 (unknown origin) expressed in Escherichia coli using full length Hi
+CHEMBL4007440	PDK1	CHEMBL4086485		119	=	1.025e+06	ratio_equals	8613.45	Inhibition of full length His6-tagged PDK1 (unknown origin) expressed in Escherichia coli using full length Hi
+CHEMBL4007440	PDK1	CHEMBL4089356		96	=	1.025e+06	ratio_equals	10677.1	Inhibition of full length His6-tagged PDK1 (unknown origin) expressed in Escherichia coli using full length Hi
+CHEMBL4007440	PDK1	CHEMBL4090859		39	=	1.025e+06	ratio_equals	26282.1	Inhibition of full length His6-tagged PDK1 (unknown origin) expressed in Escherichia coli using full length Hi
+CHEMBL4007440	PDK1	CHEMBL4092012		350	=	1.025e+06	ratio_equals	2928.57	Inhibition of full length His6-tagged PDK1 (unknown origin) expressed in Escherichia coli using full length Hi
+CHEMBL4007440	PDK1	CHEMBL4092286		109	=	1.025e+06	ratio_equals	9403.67	Inhibition of full length His6-tagged PDK1 (unknown origin) expressed in Escherichia coli using full length Hi
+CHEMBL4007440	PDK1	CHEMBL4092859		24	=	1.025e+06	ratio_equals	42708.3	Inhibition of full length His6-tagged PDK1 (unknown origin) expressed in Escherichia coli using full length Hi
+CHEMBL4007440	PDK1	CHEMBL4094247		109	=	1.025e+06	ratio_equals	9403.67	Inhibition of full length His6-tagged PDK1 (unknown origin) expressed in Escherichia coli using full length Hi
+CHEMBL4007440	PDK1	CHEMBL4097062		126	=	1.025e+06	ratio_equals	8134.92	Inhibition of full length His6-tagged PDK1 (unknown origin) expressed in Escherichia coli using full length Hi
+CHEMBL4007440	PDK1	CHEMBL4097995		289	=	1.025e+06	ratio_equals	3546.71	Inhibition of full length His6-tagged PDK1 (unknown origin) expressed in Escherichia coli using full length Hi
+CHEMBL4007440	PDK1	CHEMBL4098129		326	=	1.025e+06	ratio_equals	3144.17	Inhibition of full length His6-tagged PDK1 (unknown origin) expressed in Escherichia coli using full length Hi
+CHEMBL4007440	PDK1	CHEMBL4099635		26	=	1.025e+06	ratio_equals	39423.1	Inhibition of full length His6-tagged PDK1 (unknown origin) expressed in Escherichia coli using full length Hi
+CHEMBL4007440	PDK1	CHEMBL4099758		1459	=	1.025e+06	ratio_equals	702.536	Inhibition of full length His6-tagged PDK1 (unknown origin) expressed in Escherichia coli using full length Hi
+CHEMBL4007440	PDK1	CHEMBL4100594		2414	=	1.025e+06	ratio_equals	424.606	Inhibition of full length His6-tagged PDK1 (unknown origin) expressed in Escherichia coli using full length Hi
+CHEMBL4007440	PDK1	CHEMBL4101976		476	=	1.025e+06	ratio_equals	2153.36	Inhibition of full length His6-tagged PDK1 (unknown origin) expressed in Escherichia coli using full length Hi
+CHEMBL4007440	PDK1	CHEMBL4102222		622	=	1.025e+06	ratio_equals	1647.91	Inhibition of full length His6-tagged PDK1 (unknown origin) expressed in Escherichia coli using full length Hi
+CHEMBL4007440	PDK1	CHEMBL4102360		72	=	1.025e+06	ratio_equals	14236.1	Inhibition of full length His6-tagged PDK1 (unknown origin) expressed in Escherichia coli using full length Hi
+CHEMBL4007440	PDK1	CHEMBL4103061		113	=	1.025e+06	ratio_equals	9070.8	Inhibition of full length His6-tagged PDK1 (unknown origin) expressed in Escherichia coli using full length Hi
+CHEMBL4007440	PDK1	CHEMBL4104382		218	=	1.025e+06	ratio_equals	4701.83	Inhibition of full length His6-tagged PDK1 (unknown origin) expressed in Escherichia coli using full length Hi
+CHEMBL4007440	PDK1	CHEMBL508112	BENZOTHIAZYL DISULFIDE	379	=	1.025e+06	ratio_equals	2704.49	Inhibition of full length His6-tagged PDK1 (unknown origin) expressed in Escherichia coli using full length Hi
+CHEMBL4177695	PDK1	CHEMBL4211565		2970	=	5.1e+06	ratio_equals	1717.17	Inhibition of recombinant human GST-tagged PDK1 expressed in baculovirus infected Sf9 cells using PDHA1 as sub
+CHEMBL4177695	PDK1	CHEMBL4218938		3140	=	5.1e+06	ratio_equals	1624.2	Inhibition of recombinant human GST-tagged PDK1 expressed in baculovirus infected Sf9 cells using PDHA1 as sub
+CHEMBL4177695	PDK2	CHEMBL4211565		5200	=	9e+06	ratio_equals	1730.77	Inhibition of recombinant human GST-tagged PDK2 expressed in baculovirus infected Sf9 cells using PDHA1 as sub
+CHEMBL4177695	PDK2	CHEMBL4218938		10900	=	9e+06	ratio_equals	825.688	Inhibition of recombinant human GST-tagged PDK2 expressed in baculovirus infected Sf9 cells using PDHA1 as sub
+CHEMBL5346893	PDK1	CHEMBL5396356		150	>	100000	lower_bound_ratio (DCA censored)	666.667	Inhibition of PDK1 (unknown origin) incubated for 30 mins followed by substrate addition measured after 60 min
+CHEMBL5346893	PDK1	CHEMBL5411651		30	>	100000	lower_bound_ratio (DCA censored)	3333.33	Inhibition of PDK1 (unknown origin) incubated for 30 mins followed by substrate addition measured after 60 min
+CHEMBL5346893	PDK1	CHEMBL5412018		210	>	100000	lower_bound_ratio (DCA censored)	476.19	Inhibition of PDK1 (unknown origin) incubated for 30 mins followed by substrate addition measured after 60 min
+CHEMBL5346893	PDK1	CHEMBL5436815		60	>	100000	lower_bound_ratio (DCA censored)	1666.67	Inhibition of PDK1 (unknown origin) incubated for 30 mins followed by substrate addition measured after 60 min
+CHEMBL5346893	PDK1	CHEMBL5438177		60	>	100000	lower_bound_ratio (DCA censored)	1666.67	Inhibition of PDK1 (unknown origin) incubated for 30 mins followed by substrate addition measured after 60 min
+CHEMBL6121009	PDK1	CHEMBL3727577		22	=	3.66e+06	ratio_equals	166364	Inhibition of human PDHK1 using myelin basic protein as substrate pre-incubated for 20 min followed by additio
+CHEMBL6121009	PDK1	CHEMBL6144481		1600	=	3.66e+06	ratio_equals	2287.5	Inhibition of human PDHK1 using myelin basic protein as substrate pre-incubated for 20 min followed by additio
+CHEMBL6121009	PDK1	CHEMBL6144719		20000	=	3.66e+06	ratio_equals	183	Inhibition of human PDHK1 using myelin basic protein as substrate pre-incubated for 20 min followed by additio
+CHEMBL6121009	PDK1	CHEMBL6148131		8400	=	3.66e+06	ratio_equals	435.714	Inhibition of human PDHK1 using myelin basic protein as substrate pre-incubated for 20 min followed by additio
+CHEMBL6121009	PDK1	CHEMBL6149247		7800	=	3.66e+06	ratio_equals	469.231	Inhibition of human PDHK1 using myelin basic protein as substrate pre-incubated for 20 min followed by additio
+CHEMBL6121009	PDK1	CHEMBL6150554		2300	=	3.66e+06	ratio_equals	1591.3	Inhibition of human PDHK1 using myelin basic protein as substrate pre-incubated for 20 min followed by additio
+CHEMBL6121009	PDK1	CHEMBL6151732		5800	=	3.66e+06	ratio_equals	631.034	Inhibition of human PDHK1 using myelin basic protein as substrate pre-incubated for 20 min followed by additio
+CHEMBL6121009	PDK1	CHEMBL6160394		10700	=	3.66e+06	ratio_equals	342.056	Inhibition of human PDHK1 using myelin basic protein as substrate pre-incubated for 20 min followed by additio
+CHEMBL6121009	PDK1	CHEMBL6162653		2100	=	3.66e+06	ratio_equals	1742.86	Inhibition of human PDHK1 using myelin basic protein as substrate pre-incubated for 20 min followed by additio
+CHEMBL6121009	PDK1	CHEMBL6163460		3800	=	3.66e+06	ratio_equals	963.158	Inhibition of human PDHK1 using myelin basic protein as substrate pre-incubated for 20 min followed by additio
+CHEMBL6121009	PDK1	CHEMBL6165525		9200	=	3.66e+06	ratio_equals	397.826	Inhibition of human PDHK1 using myelin basic protein as substrate pre-incubated for 20 min followed by additio
+CHEMBL6121009	PDK1	CHEMBL6165706		12400	=	3.66e+06	ratio_equals	295.161	Inhibition of human PDHK1 using myelin basic protein as substrate pre-incubated for 20 min followed by additio
+CHEMBL6121009	PDK1	CHEMBL6170033		8200	=	3.66e+06	ratio_equals	446.341	Inhibition of human PDHK1 using myelin basic protein as substrate pre-incubated for 20 min followed by additio
+CHEMBL6121009	PDK1	CHEMBL6170057		3900	=	3.66e+06	ratio_equals	938.462	Inhibition of human PDHK1 using myelin basic protein as substrate pre-incubated for 20 min followed by additio
+CHEMBL6121009	PDK1	CHEMBL6172670		10500	=	3.66e+06	ratio_equals	348.571	Inhibition of human PDHK1 using myelin basic protein as substrate pre-incubated for 20 min followed by additio
+CHEMBL6121009	PDK1	CHEMBL6173464		2800	=	3.66e+06	ratio_equals	1307.14	Inhibition of human PDHK1 using myelin basic protein as substrate pre-incubated for 20 min followed by additio
+CHEMBL6121009	PDK1	CHEMBL6173830		5000	=	3.66e+06	ratio_equals	732	Inhibition of human PDHK1 using myelin basic protein as substrate pre-incubated for 20 min followed by additio
+CHEMBL6121009	PDK1	CHEMBL6173848		3900	=	3.66e+06	ratio_equals	938.462	Inhibition of human PDHK1 using myelin basic protein as substrate pre-incubated for 20 min followed by additio
+CHEMBL6121009	PDK1	CHEMBL6174377		1800	=	3.66e+06	ratio_equals	2033.33	Inhibition of human PDHK1 using myelin basic protein as substrate pre-incubated for 20 min followed by additio
+CHEMBL6121009	PDK1	CHEMBL6174498		5600	=	3.66e+06	ratio_equals	653.571	Inhibition of human PDHK1 using myelin basic protein as substrate pre-incubated for 20 min followed by additio
+CHEMBL6121009	PDK1	CHEMBL6175279		3000	=	3.66e+06	ratio_equals	1220	Inhibition of human PDHK1 using myelin basic protein as substrate pre-incubated for 20 min followed by additio
+CHEMBL6121009	PDK1	CHEMBL6175768		1500	=	3.66e+06	ratio_equals	2440	Inhibition of human PDHK1 using myelin basic protein as substrate pre-incubated for 20 min followed by additio
+CHEMBL6121009	PDK2	CHEMBL3727577		170	>	5e+06	lower_bound_ratio (DCA censored)	29411.8	Inhibition of human PDHK2 using PDHKtide and Mn2+ as substrates pre-incubated for 20 min followed by addition 
+CHEMBL6121009	PDK3	CHEMBL3727577		27	>	5e+06	lower_bound_ratio (DCA censored)	185185	Inhibition of human PDHK3 using myelin basic protein as substrate pre-incubated for 20 min followed by additio
+CHEMBL6121009	PDK4	CHEMBL3727577		22	=	108000	ratio_equals	4909.09	Inhibition of human PDHK4 using myelin basic protein as substrate pre-incubated for 20 min followed by additio
+CHEMBL6121009	PDK4	CHEMBL6149247		17000	=	108000	ratio_equals	6.35294	Inhibition of human PDHK4 using myelin basic protein as substrate pre-incubated for 20 min followed by additio
+CHEMBL6121009	PDK4	CHEMBL6173848		15500	=	108000	ratio_equals	6.96774	Inhibition of human PDHK4 using myelin basic protein as substrate pre-incubated for 20 min followed by additio
+CHEMBL6121009	PDK4	CHEMBL6174377		23600	=	108000	ratio_equals	4.57627	Inhibition of human PDHK4 using myelin basic protein as substrate pre-incubated for 20 min followed by additio
+CHEMBL6121009	PDK4	CHEMBL6175768		30000	=	108000	ratio_equals	3.6	Inhibition of human PDHK4 using myelin basic protein as substrate pre-incubated for 20 min followed by additio
