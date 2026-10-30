@@ -1,0 +1,56 @@
+{
+ "wells_total": 946431,
+ "wwox_ko_wells": 5,
+ "wwox_ko_plates": 5,
+ "sources_of_wwox_ko": [
+  "source_13"
+ ],
+ "gate": {
+  "wwox_mean_pair_cos": 0.6314712166786194,
+  "null_mean": 0.30928429059730844,
+  "null_p95": 0.6269628852605817,
+  "null_p99": 0.8192662292718887,
+  "wwox_percentile_in_null": 95.1,
+  "plk1_mean_pair_cos": 0.3801543116569519,
+  "plk1_percentile": 74.8,
+  "n_null": 1000,
+  "pass": true
+ },
+ "negcon_wells": 7478,
+ "orf_wells": 5,
+ "orf_gate": {
+  "wwox_orf_mean_pair_cos": 0.09796171635389328,
+  "null_p95": 0.7053647130727766,
+  "percentile": 3.2,
+  "pass": false
+ },
+ "compounds_with_ge2_plates": 115788,
+ "compounds_mapped_to_catalogue": 3348,
+ "plk1_control_top100_hits": [],
+ "plk1_control_pass": false,
+ "plk1_top10_names": [
+  "SYLIRTRYLBYOBO",
+  "VFIOTMQQTAUGQE",
+  "COJHCADETMVSBU",
+  "ZCOAKPWIZHZTPH",
+  "ZOCLDDFPKNVTNQ",
+  "IJJIUSOIKBRXAK",
+  "GALANTAMINE",
+  "PZPPOCZWRGNKIR",
+  "QEEBRPGZBVVINN",
+  "WJLHDYQXCJXZGV"
+ ],
+ "it9_candidate_families_total": 479,
+ "it9_candidate_families_with_jump_profile": 66,
+ "specific_opposers_z_le_-3_top100": 100,
+ "specific_opposers_in_catalogue": 0,
+ "specific_opposers_in_it9": 0,
+ "specific_opposers_in_sigcom_s1": 0,
+ "specific_opposers_new": 0,
+ "z_wwox_distribution": {
+  "min": -5.8135175704956055,
+  "p1": -3.927173376083374,
+  "median": 0.2315136194229126,
+  "max": 5.948239803314209
+ }
+}
