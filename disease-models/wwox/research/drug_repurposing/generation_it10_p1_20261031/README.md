@@ -41,39 +41,40 @@ Nothing here edits a card, a need, the ranking, a registry or the receipt ledger
 
 Run: `python3 dispose_it10.py run` (reads `results_v4/`, compares with the IT9 v3 tables). Files: `results/deepening_candidates.tsv`, `results/dispositions_Q*.tsv`, `results/v3_vs_v4_counts.tsv`, `results/v3_specific_lost_in_v4.tsv`.
 
-**A. A candidate the rule would have resurfaced and F5 removes.** The origin-aware order applied to the IT9 tables puts the fumarates (dimethyl fumarate, monomethyl fumarate, diroximel fumarate, an NRF2 peptide) at the top of the Q5 `H_PROTECT`
-list (two origins, via KEAP1 -P-> RBX1 -P-> NFKBIB -T-> TNF). IT9 P4c-d dropped exactly that chain (RBX1 joins two different E3 ligases). On v4 the chain does not exist and the fumarates leave the list: the fix is in the engine, not in a note.
-The audit on the IT9 best chains: **39 of 161 multi-hop chains had an invalid junction** (Q2 10, Q5 9, Q6 20). Rerun of all seed sets under the three nulls: seed-specific and unflagged families **lost 72** (Q5 33, Q6 36, Q2 2, Q4 1) of 1,225,
-**gained 49** (re-ranking under changed nulls; not validated, section 5).
+**A. A chain IT9 dropped by hand is now removed by the engine.** IT9 P4c-d dropped KEAP1 -P-> RBX1 -P-> NFKBIB -T-> TNF for dimethyl fumarate because RBX1 joins two different E3 ligases, and noted that other chains were not audited. On v4 that chain does not exist (test on the real network); the fumarates sit at ranks 2 to 5 of the unfiltered Q5 `H_PROTECT` origin list (Neoceptin-3 first) and leave it.
+The audit on the IT9 best chains: **39 of 161 opposes/mimics rows (20 of 65 distinct question-chain pairs) had an invalid junction** (rows: Q2 10, Q5 9, Q6 20). Rerun of all seed sets under the three nulls: seed-specific and unflagged families **lost 72** (Q5 33, Q6 36, Q2 2, Q4 1) of 1,225,
+**gained 49** (z-threshold crossings caused by the changed null spread: the gained rows have a median |Q_net_ind| of 0.0008 against 0.0059 for the kept rows, some cross by a hair; read them as noise, not signal, section 5). The adm null still uses the v3 degree and is not junction-aware.
 
-**B. A different candidate to deepen (Q5, `H_HARM`, top 8).**
+**B. Which candidates to deepen (Q5, `H_HARM`, top 8).**
 
 | Rule on | Top 8 (known to LEGEND marked *) |
 |---|---|
 | IT9 tables, v3 rank (what IT9 did) | JTE-151*, CD24Fc, bifonazole, L6H21, BI-2536, dual BRD4/PLK1 inhibitor, compound 6, XY-06-007 |
-| IT9 tables, origin-aware | CD24Fc, bifonazole, L6H21, benziodarone, prenylamine, voclosporin, omaveloxolone, PF-03758309 |
-| **v4 tables, origin-aware** | CD24Fc, bifonazole, L6H21, voclosporin, omaveloxolone, PF-03758309, JTE-151*, BI-2536 |
+| IT9 tables, origin-aware | JTE-151*, ALRT-1550, benziodarone, prenylamine, voclosporin, omaveloxolone, PF-03758309, CD24Fc |
+| **v4 tables, origin-aware** | JTE-151*, ALRT-1550, voclosporin, omaveloxolone, PF-03758309, CD24Fc, bifonazole, L6H21 |
 
-Benziodarone and prenylamine leave through F5 (CALM1 -P-> PPP3CA joins on a complex target); omaveloxolone (NFE2L2 -T(-)-> IL1B, a terminal transcriptional edge) and voclosporin (PPP3CA -P-> NFATC4 -T-> TNF) stay. JTE-151,
-the IT9 first choice, has one origin (PMID 30290271 only) and drops from position 1 to 7. For Q2, Q4 `H_HARM`, Q6 the rules coincide because every candidate has a single origin (Q2 100 of 100 rows, Q6 150 of 150): **no change is the result there**,
-and it says that the z values of those lists measure one dataset.
+Benziodarone and prenylamine leave through F5 (CALM1 -P-> PPP3CA joins on a complex target). Origins: a seed row can cite two articles; S085 (TNF) cites the null hippocampus and the P47T cerebellum, but the null-hippocampus
+Tnf-a increase is not significant at the source (PMC7104842 Results 3.3: "Il6 significant at p < .05"; verified 2026-10-31), so `origin_overrides.tsv` removes that origin and S085 keeps the P47T one. The effect of the origin rule is modest and
+threshold-dependent (a seed row counts when it carries 10 percent of the strongest contribution; at 0.25 and above voclosporin leaves the top 8): in Q5 `H_HARM` 5 of 50 candidates have two origins, in Q5 `H_PROTECT` 15 of 25.
+For Q2, Q4 `H_HARM` and Q6 the rules coincide in the tables because every candidate has a single origin (Q2 75 of 75 opposes/mimics rows, Q6 150 of 150). That result rests on a declared judgement: the two human deposits (GSE156243 organoid, GSE126075 hNPC) are folded to one
+origin because they were read with one method and one derivation; counted as two, Q2 would also have two origins for every candidate. The top-8 Q5 `H_PROTECT` list on v4 is a single mechanism class (FGFR inhibitors), not eight independent leads.
 
 **C. Two hypotheses separated, a candidate kept informative (Q2).** In IT9 roxadustat was DROPPED "as a lever" because it "pushes the seeds in the disease direction by construction", which assumes the HIF-dependent shift is harmful; K01 states the
 role is unresolved. Role-aware, the PHD inhibitors (roxadustat, daprodustat, desidustat) are `H_PROTECT` hypotheses (sustain a possibly adaptive response) paired with PX-478 and the HIF-1alpha lowerers as `H_HARM`, resolved by the same K01 step 0 and
-arms A to C. `dispositions_Q2.tsv` marks roxadustat `REVIEW_ROLE_DEPENDENT_DROP` (the other reasons stay: the engine chain EGLN2-FOXO3 is contradicted and is not what the compound does; the label seizure signal is a SYSTEMIC development limit and
-`dev_constraints.tsv` records it as not affecting an ex vivo probe; the thyromimetic action is a probe-specificity confound). Of the 32 IT9 records, exactly **one** drop depended on the role assumption; the other 31 stand, because they failed at the
-provenance of the chain, the identity, or the contradiction.
+arms A to C. `dispositions_Q2.tsv` marks roxadustat `REVIEW_ROLE_DEPENDENT_REASON` (the other reasons stay: the engine chain EGLN2-FOXO3 is contradicted and is not what the compound does; the label seizure signal is a SYSTEMIC development limit and
+`dev_constraints.tsv` records it as not affecting an ex vivo probe; the thyromimetic action is a probe-specificity confound). `it9_role_dependent_reasons.tsv` lists the IT9 drops whose stated reasons include the role assumption: **roxadustat** (sole stated reason of direction) and **harmine** (one of several reasons: MAO-A selectivity, psychoactivity; its MYC mimics direction is the role-dependent one and the other reasons stand). The remaining drops were read for
+their stated reasons (provenance of the chain, identity, contradiction) and are not reopened; this classification is by the IT9 reason text, not recomputed.
 
-**D. The graph does not find the phenotype-proven leads.** Of the 7 interventions with a signed functional result in a WWOX system, 2 are outside the method's modality (gene addition, diet), 1 has no catalogue identity (A51), **3 have no graph row at all
-(ethosuximide, lithium, vigabatrin)**, 1 is scored but not seed-specific (d-APV, Q4). The graph recovered 0 of the 5 molecules in a seed-specific arm; lithium (GSK3B, Q7) is a direct hit with a zero score. This is a limit of the representation (zero signed
+**D. The graph does not find the phenotype-proven leads.** Of the 7 interventions with a recorded WWOX-system result (admission rule: `tested_in_wwox_system = yes`; sign, depth and readout are carried as columns, and several results are null, mixed or abstract-level), 2 are outside the method's modality (gene addition, diet), 1 has no catalogue identity (A51), **2 have no graph row
+(ethosuximide, vigabatrin)**, d-APV is a direct hit with a zero score (Q4; its own family, status derived per member), and lithium has name twins (carbonate, citrate) that are scored but never seed-specific (Q2, Q5, Q6) and are direct hits with zero score on GSK3B (Q7). The graph recovered 0 of the 5 molecules in a seed-specific arm. This is a limit of the representation (zero signed
 edges to the readout), not a statement about the molecules; the phenotype-first arm is the route by which such candidates enter generation.
 
-## 4. Tests (`test_it10_p1.py`, 21 tests, production code, with inverses)
+## 4. Tests (`test_it10_p1.py`, 31 tests, production code, with inverses)
 
 Junction rule on toy graphs (complex target blocks, complex source blocks, singleton junction unchanged, ends unconstrained, junction off equals v3 on the toy) and on the real network (the DMF chain exists with the filter off, and not with it on;
 HIF1A to BNIP3 as a one-edge chain is kept, the XIAP two-edge chain is not); the role function (unknown keeps both arms, SOURCE_STATED withdraws, a leaning never withdraws, composition holds, a harmful role without a source is refused, the committed roles
 are valid and none asserted); origins (the two deposits fold to one, one article at two levels is two, unreconstructable stays its own); phenotype-first (ethosuximide and lithium enter with NO_GRAPH_ROW, a curated extra enters); exposure (the systemic limit leaves
-the probe eligible, a probe-level block is visible); and the three protected regressions (duplicated evidence, no transfer between molecules, unknown is not negative) by running the existing ranking tests. All 21 pass; the five ranking tests pass.
+the probe eligible, a probe-level block is visible); and the three protected regressions (duplicated evidence, no transfer between molecules, unknown is not negative) by running the existing ranking tests. All pass; the five ranking tests pass. The hostile review (independent oracle for the influence, 5,811 expression and 5,708 protein pairs: 0 mismatches) mutated the engine: 8 mutations were caught, 4 were not; the revision adds tests for protein level, `with_signs`, flag aggregation (OR over records), a three-edge chain, one-edge chains from complex sources, and a toy consistency check of `best_chain` against the influence, and the OR-to-AND and first-hop-channel mutations are now caught (checked by hand).
 
 ## 5. Limits and UNVERIFIED
 
@@ -82,6 +83,7 @@ the probe eligible, a probe-level block is visible); and the three protected reg
   biologically wrong is not claimed, only that the join is not supported by a record that names the junction entity alone.
 * Roles are all unknown: no seed states one. The role-aware arms therefore multiply hypotheses rather than choose between them; their value is the named resolving measurement and the removal of a silent assumption. A question moves to SOURCE_STATED only with a source.
 * Origins are reconstructed from locator text. Two mouse models (null hippocampus, P47T cerebellum) are two origins at the experimental level; they are not evidence of WWOX specificity beyond those models. A seed row with no accession, system id or single PMID is its own origin.
+* Review findings kept as limits: the best chain is the single maximum-weight chain while the score is a signed sum (pre-existing); proximity and `dist_to_set` ignore F5; `adm_indeg` is the v3 degree. `dev_constraints.tsv` column `affects_ex_vivo_probe` is the author's judgement; the facts match the cited IT9 files (reviewer-checked); `question_roles.tsv` prose for Q4, Q6, Q7 no longer says an arm is not a lever (the code keeps those arms conditional, with a risk note).
 * The v3 `selftest` subcommand fails on 3-tuple toy edges (`seed_engine_v3.py selftest`, pre-existing, unreported; classified: unused by the pipeline, replaced by the tests above); not changed.
 * `dev_constraints.tsv` rows are transcribed from IT9 files (cited per row); they were not re-verified at the label source here.
 * The engine reruns took 2 min (30 seed-set by null runs) plus 1.7 min for the tables; `dispose_it10.py` 0.3 s.

@@ -59,9 +59,62 @@ class JunctionRule(unittest.TestCase):
         self.assertGreater(abs(self.influence_at_a(edges, True)), 0.0)
 
     def test_ends_are_not_constrained(self):
-        # a compound target inside a complex source record and a seed inside a complex target are allowed (one-edge chain, no junction)
-        edges = [("B", "C", 1, "T", False, False)]
-        self.assertGreater(abs(self.influence_at_a([("A", "C", 1, "T", False, False)], True)), 0.0)
+        # two-edge chain A -P-> B -T-> C: A sits inside a complex source record and C inside a complex target record; only B is the junction
+        edges = [("A", "B", 1, "P", False, True), ("B", "C", 1, "T", True, False)]
+        self.assertGreater(abs(self.influence_at_a(edges, True)), 0.0)
+
+    def test_one_edge_chain_from_a_complex_source_is_kept(self):
+        self.assertGreater(abs(self.influence_at_a([("A", "C", 1, "T", False, False)], True)), 0.0)      # compound target inside ARNT_HIF1A-type record
+
+    def test_three_edge_chain_checks_every_junction(self):
+        ok = [("A", "B", 1, "P", True, True), ("B", "C", 1, "P", True, True), ("C", "D", 1, "T", True, True)]
+        bad2 = [("A", "B", 1, "P", True, True), ("B", "C", 1, "P", True, False), ("C", "D", 1, "T", True, True)]     # B -> C ends in a complex: second junction fails
+        for e, expect in ((ok, True), (bad2, False)):
+            g = v4.Graph4(e, extras=[]); g.level = "expression"
+            S = np.zeros((1, g.N)); S[0, g.idx["D"]] = 1.0
+            self.assertEqual(abs(float(g.influence_ind(S, hops=3)[0, g.idx["A"]])) > 0, expect)
+
+    def test_protein_level_uses_the_same_rule(self):
+        e = [("A", "B", 1, "P", True, False), ("B", "C", 1, "P", True, True)]       # protein seed C: chain P P, junction B must be alone in A -> B
+        g = v4.Graph4(e, extras=[]); g.level = "protein"
+        S = np.zeros((1, g.N)); S[0, g.idx["C"]] = 1.0
+        self.assertEqual(float(g.influence_ind(S)[0, g.idx["A"]]), 0.0)
+        old = v4.JUNCTION; v4.JUNCTION = False
+        try:
+            self.assertNotEqual(float(g.influence_ind(S)[0, g.idx["A"]]), 0.0)
+        finally:
+            v4.JUNCTION = old
+
+    def test_with_signs_rebuilds_the_junction_arrays(self):
+        e = [("A", "B", 1, "P", True, True), ("B", "C", 1, "T", True, True)]
+        g = v4.Graph4(e, extras=[]); g.level = "expression"
+        S = np.zeros((1, g.N)); S[0, g.idx["C"]] = 1.0
+        flipped = g.with_signs(-g.sg0)
+        self.assertAlmostEqual(float(flipped.influence_ind(S)[0, g.idx["A"]]), float(g.influence_ind(S)[0, g.idx["A"]]))   # two flipped edges: sign product unchanged
+        one = g.with_signs(np.array([1.0, -1.0]))
+        self.assertAlmostEqual(float(one.influence_ind(S)[0, g.idx["A"]]), -float(g.influence_ind(S)[0, g.idx["A"]]))
+        self.assertIsInstance(one, v4.Graph4)
+
+    def test_flag_aggregation_is_any_record(self):
+        import gzip, tempfile
+        with tempfile.TemporaryDirectory() as d:
+            hdr = "source_symbol\ttarget_symbol\tsign\ttype\tsources\n"
+            with gzip.open(Path(d) / "signor_omnipath_edges.tsv.gz", "wt") as fh:
+                fh.write(hdr + "QQA1\tQQB1_QQX1\t1\tpost_translational\tSIGNOR\nQQA1\tQQB1\t1\tpost_translational\tSIGNOR\nQQB1_QQY1\tQQC1\t1\ttranscriptional\tSIGNOR\n")
+            with gzip.open(Path(d) / "collectri_omnipath_edges.tsv.gz", "wt") as fh:
+                fh.write(hdr)
+            E = {(e[0], e[1], e[3]): (e[4], e[5]) for e in v4.read_edges4(d)}
+        self.assertTrue(E[("QQA1", "QQB1", "P")][1])          # one of two records names B alone as target: junction-capable
+        self.assertFalse(E[("QQB1", "QQC1", "T")][0])         # B appears only inside the complex B_Y as a source: not junction-capable
+
+    def test_best_chain_agrees_with_influence_on_a_toy(self):
+        e = [("A", "B", 1, "P", True, False), ("B", "C", 1, "T", True, True), ("A", "D", 1, "P", True, True), ("D", "C", -1, "T", True, True)]
+        g = v4.Graph4(e, extras=[]); g.level = "expression"
+        ch = g.best_chain("A", "C")
+        self.assertIn("A -P(+)-> D", ch)
+        self.assertNotIn("-> B", ch)
+        S = np.zeros((1, g.N)); S[0, g.idx["C"]] = 1.0
+        self.assertLess(float(g.influence_ind(S)[0, g.idx["A"]]), 0.0)              # only the D route (negative) contributes
 
     def test_junction_off_equals_v3_on_a_toy_graph(self):
         edges4 = [("A", "B", 1, "P", True, False), ("B", "C", 1, "T", False, True), ("A", "C", -1, "T", True, True), ("D", "A", 1, "P", True, True)]
@@ -87,9 +140,9 @@ class JunctionRule(unittest.TestCase):
 
     def test_best_chain_junction_in_chain_text(self):
         g = v4.Graph4(v4.read_edges4(), extras=[]); g.level = "expression"
-        self.assertIn("HIF1A", g.best_chain("HIF1A", "BNIP3") or "")                   # one-edge chain: the start may be a complex member
+        self.assertIn("HIF1A -T", g.best_chain("HIF1A", "BNIP3") or "")                  # one-edge chain: the start may be a complex member
         ch = g.best_chain("XIAP", "BNIP3")
-        self.assertTrue(ch is None or "HIF1A -P" in ch or "XIAP -P(+)-> HIF1A" not in ch, ch)   # XIAP -> HIF1A -> BNIP3 needs HIF1A alone as a source: absent
+        self.assertTrue(ch is None or "XIAP -P(+)-> HIF1A" not in ch, ch)                # XIAP -> HIF1A -> BNIP3 needs HIF1A alone as a source: absent for BNIP3
 
 
 class RoleDispositions(unittest.TestCase):
@@ -117,10 +170,16 @@ class RoleDispositions(unittest.TestCase):
         self.assertEqual(dz.disposition("opposes", c)[1], "HELD_UNTIL_COMPOSITION_RESOLVED")
         self.assertEqual(dz.disposition("mimics", c)[1], "HELD_UNTIL_COMPOSITION_RESOLVED")
 
-    def test_a_harmful_role_without_a_source_is_refused(self):
-        with tempfile.TemporaryDirectory() as d:
+    def test_any_stated_role_without_a_source_is_refused(self):
+        for status in ("harmful", "protective", "composition", "mixed"):
+            with tempfile.TemporaryDirectory() as d:
+                p = Path(d) / "roles.tsv"
+                p.write_text(f"question_id\trole_status\trole_basis\tleaning\trole_source\nQ9\t{status}\tNONE\tnone\t\n")
+                with self.assertRaises(SystemExit, msg=status):
+                    dz.load_roles(p)
+        with tempfile.TemporaryDirectory() as d:                      # SOURCE_STATED without a locator is refused too
             p = Path(d) / "roles.tsv"
-            p.write_text("question_id\trole_status\trole_basis\tleaning\nQ9\tharmful\tNONE\tharmful\n")
+            p.write_text("question_id\trole_status\trole_basis\tleaning\trole_source\nQ9\tharmful\tSOURCE_STATED\tharmful\t\n")
             with self.assertRaises(SystemExit):
                 dz.load_roles(p)
 
@@ -145,9 +204,20 @@ class Origins(unittest.TestCase):
         # S100 (MYC expression) and S101 (MYC protein) are one article at two readout levels: two origins, not one (no PMID-only deduplication)
         self.assertNotEqual(dz.canonical_origin(self.seeds["S100"])[0], dz.canonical_origin(self.seeds["S101"])[0])
 
+    def test_a_seed_citing_two_articles_carries_two_origins(self):
+        keys = {k for k, _ in dz.canonical_origins(self.seeds["S085"])}
+        self.assertEqual(keys, {"PMID:30290271|expression", "PMID:36828035|expression"})
+
+    def test_a_non_significant_observation_is_not_an_origin(self):
+        self.assertEqual({k for k, _ in dz.canonical_origins_checked(self.seeds["S085"])}, {"PMID:36828035|expression"})
+        self.assertEqual({k for k, _ in dz.canonical_origins_checked(self.seeds["S086"])}, {"PMID:30290271|expression"})
+
+    def test_hnpc_and_organoid_locators_fold_in_any_letter_case(self):
+        self.assertEqual({dz.canonical_origins(self.seeds[s])[0][0] for s in ("S040", "S044", "S017")}, {"DEPOSITS:GSE156243+GSE126075(+neurons)"})
+
     def test_unreconstructable_origin_stays_its_own_and_is_flagged(self):
         fake = dict(seed_id="SX1", source_locator="", context="", level="expression")
-        self.assertEqual(dz.canonical_origin(fake), ("SEED:SX1", False))
+        self.assertEqual(dz.canonical_origins(fake), [("SEED:SX1", False)])
 
 
 class PhenotypeFirst(unittest.TestCase):
@@ -155,7 +225,9 @@ class PhenotypeFirst(unittest.TestCase):
         v3 = DR / "generation_it9_p2_20261030" / "v3" / "results"
         pf = {r["intervention"].split(",")[0].split(" (")[0]: r for r in dz.phenotype_first(v3, DR, None)}
         self.assertTrue(pf["Ethosuximide"]["graph_status"].startswith("NO_GRAPH_ROW"))
-        self.assertTrue(pf["Lithium"]["graph_status"].startswith("NO_GRAPH_ROW"))
+        self.assertTrue(pf["Lithium"]["graph_status"].startswith("NAME_TWIN_SCORED_NOT_SPECIFIC"))     # salts are separate rows, scored, none seed-specific
+        self.assertTrue(pf["d-APV"]["graph_status"].startswith("DIRECT_HIT_ZERO_SCORE"))                 # its own molecule, not memantine's score
+        self.assertNotIn("SCORED_NOT_SPECIFIC", pf["Vigabatrin"]["graph_status"])
         self.assertEqual(pf["Ethosuximide"]["entry"], "PHENOTYPE_FIRST")
 
     def test_curated_extra_enters_regardless_of_the_graph(self):
@@ -168,15 +240,21 @@ class PhenotypeFirst(unittest.TestCase):
 
 
 class ExposureVersusProbe(unittest.TestCase):
-    def test_systemic_limit_does_not_remove_the_ex_vivo_probe(self):
+    def test_systemic_limit_does_not_remove_the_ex_vivo_probe_but_the_confound_is_visible(self):
         dev = dz.rd(HERE / "dev_constraints.tsv")
         s = dz.dev_scope("Roxadustat", dev)
         self.assertIn("systemic_development_limited", s)
-        self.assertIn("ex_vivo_probe_eligible", s)
+        self.assertIn("ex_vivo_probe_with_confound(probe_specificity)", s)          # usable as a probe, with the thyromimetic confound stated
+        self.assertNotIn("blocked", s)
 
-    def test_a_probe_level_block_is_visible(self):
-        dev = [dict(compound="Fixturedrug", scope="probe_specificity", affects_ex_vivo_probe="no")]
-        self.assertIn("ex_vivo_probe_blocked", dz.dev_scope("Fixturedrug", dev))
+    def test_a_clean_systemic_limit_leaves_the_probe_eligible(self):
+        dev = [dict(compound="Fixturedrug", scope="systemic_development", affects_ex_vivo_probe="no")]
+        s = dz.dev_scope("Fixturedrug", dev)
+        self.assertEqual(s, "systemic_development_limited;ex_vivo_probe_eligible")
+
+    def test_a_probe_level_confound_is_never_reported_as_eligible(self):
+        dev = [dict(compound="Fixturedrug", scope="probe_specificity", affects_ex_vivo_probe="yes")]
+        self.assertNotIn("ex_vivo_probe_eligible", dz.dev_scope("Fixturedrug", dev))
 
 
 class ThreeProtectedRegressions(unittest.TestCase):

@@ -1,0 +1,2 @@
+seed_id	drop_origin	reason	source
+S085	PMID:30290271|expression	the Wwox-null hippocampus Tnf-a increase is not significant (only Il6 is: Results 3.3 "Il6 significant at p < .05", Fig 4E); the seed keeps the P47T origin only	PMC7104842 Results 3.3 re-read 2026-10-31 (orchestrator) and axis_it10_p22_20261031/premises.tsv
