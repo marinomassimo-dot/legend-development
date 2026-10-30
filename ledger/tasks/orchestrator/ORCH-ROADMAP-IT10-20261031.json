@@ -8,7 +8,7 @@
  "START_UTC": "2026-10-31T00:00:00Z",
  "BASELINE": "e7a56ef893865f46299abe07c9ee4f3b0cb425fb = development/main (verified equal after fetch; CI green on that SHA)",
  "AUTHORISED_QUEUE_20261031A": {
-  "MANDATE_STATE": "OPEN",
+  "MANDATE_STATE": "COMPLETE",
   "OBJ_STEP1_GENERATION_PATH": {
    "order": 1,
    "steps": [
@@ -62,7 +62,7 @@
      "step": "closure: integration, battery on final code in clean clone, push, cleanup",
      "status": "DONE",
      "owner": "orchestrator",
-     "evidence": "seven task worktrees removed after verifying 0 unmerged and 0 dirty"
+     "evidence": "seven task worktrees removed after verifying 0 unmerged and 0 dirty; final battery on code 1018e635d72494c7c6f4f2b53bf25fc6936bc963 in a clean no-hardlink clone: PASS WITH SKIPS (170 targets, 7 skipped: case-sensitive filesystem, absent local corpus artefacts, Stop hook not installed), 2481 s, includes the full test_repurposing_view suite; records added after the battery: mandate record, self-evaluation, scout entry"
     }
    ]
   }
