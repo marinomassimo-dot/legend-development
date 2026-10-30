@@ -1,0 +1,5 @@
+nkcc1_ic50_source	free_brain_target_uM	fraction_unbound_in_brain (PMID 33279441 abstract: 6-17 percent for the 3 drugs)	total_brain_uM = free / fu	total_plasma_uM if brain:plasma = 0.02 (PMID 25449033, mouse, total/total)	total_plasma_uM if brain:plasma = 0.015
+NKCC1 IC50 ChEMBL HT-29 cells	1.54	0.06	25.7	1283	1711
+NKCC1 IC50 ChEMBL HT-29 cells	1.54	0.17	9.1	453	604
+NKCC1 IC50 GtoPdb pIC50 5.6 (human, PMID 11882915)	2.51	0.06	41.9	2093	2791
+NKCC1 IC50 GtoPdb pIC50 5.6 (human, PMID 11882915)	2.51	0.17	14.8	739	985
