@@ -4602,3 +4602,13 @@ Leads staged in the candidates of `BATCH_20261019_003` (groups H3, H4 and H5). A
 - `HYP-20261025-09`
 - `DL-MECH-072`
 - **Not medical advice.**
+
+### DL-MECH-178 — HIF axis in the WWOX-deficient glycolytic shift: a mechanism experiment, not a treatment; step 0 is the missing measurement of HIF-1 alpha and HIF-2 alpha protein by compartment and oxygen condition in WWOX-deficient versus corrected neural cells
+
+- **Tag:** IPOTESI
+- **Status:** open
+- **Created:** 2026-10-30 · orchestrator, task ORCH-ROADMAP-IT9-20261030; disease-models/wwox/research/drug_repurposing/case_it9_p6_hif_axis_20261030/ (README, premises.tsv, verifier locator_audits/2026-10-31_it9_p6_verifier.md); the case chain: non-neural WWOX-null cells with higher nuclear HIF-1 alpha (receipt FTR-20260814-25012504-01), a human KO organoid with higher EPAS1, HK2 and SLC2A1 transcripts (4 vs 2 libraries, descriptive), a signed-propagation proposal (IT9 P2 v3, Q2 opposes arm) and its qualification (IT9 P4b-a, P4c-e). Appended by `discovery_lead.py`. Staged as `disease-models/wwox/research/lead_staging/orchestrator/lead_it9_hif_axis.json`.
+- **Causal statement:** IPOTESI: the raised glycolytic transcripts in WWOX-deficient neural systems may be HIF-dependent, which would make the HIF axis, not a single enzyme, the lever that the earlier LDH and PDK cards approach from below; the direct evidence for HIF protein is non-neural only, a human fibroblast line shows lower cytoplasmic HIF-1 alpha in two of four conditions with the nuclear fraction unchanged, and no source read measures HIF protein in WWOX-deficient neural cells, so step 0 is a measurement before any lever.
+- **Falsifying experiment / counter:** HIF-1 alpha and HIF-2 alpha protein, nuclear and cytoplasmic, in normoxia and hypoxia, not higher in WWOX-deficient neural cells than in corrected cells; or knockdown of HIF1A or EPAS1 moving lactate, acidification and glucose uptake not at all; the six IT7 readout genes and the ten-gene glycolysis set cannot decide (guard IT7_READOUT6)
+- **Transfer limit to WWOX:** a mechanism experiment in a cell system; no efficacy, dose or route statement; the only compound named as a lever (PX-478) has no activity annotation in ChEMBL, a nitrogen-mustard alert and adult intravenous phase 1 data only; the prolyl-hydroxylase inhibitor arm is a direction control that raises HIF and lists seizures on its label; belzutifan stays inconclusive because HIF-2 alpha protein in WWOX-deficient neural cells was never measured. Not medical advice.
+- **Not medical advice.**
