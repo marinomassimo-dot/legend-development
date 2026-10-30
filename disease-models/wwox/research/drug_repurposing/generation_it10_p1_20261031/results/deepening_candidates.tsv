@@ -1,193 +1,193 @@
 question	hypothesis	rule	pos	name	arm	rank_v3	n_origins	n_seed_rows	known_to_legend	it9_state	disposition	chain_status
-Q2	H_HARM	IT9_baseline_v3_rank	1	Anti-Hif-1Alpha Lna Antisense Oligonucleotide Ezn-2968	opposes	1	1	15	new_to_legend		CONDITIONAL_IF_HARMFUL	HIF1A -T(+)-> BNIP3 [SIGNOR]
-Q2	H_HARM	IT9_baseline_v3_rank	2	Px-478	opposes	2	1	15	known	KEEP	CONDITIONAL_IF_HARMFUL	HIF1A -T(+)-> BNIP3 [SIGNOR]
-Q2	H_HARM	IT9_baseline_v3_rank	3	Nitroglycerin	opposes	3	1	15	new_to_legend		CONDITIONAL_IF_HARMFUL	HIF1A -T(+)-> BNIP3 [SIGNOR]
-Q2	H_HARM	IT9_baseline_v3_rank	4	Sm-122	opposes	4	1	15	new_to_legend		CONDITIONAL_IF_HARMFUL	XIAP -P(+)-> HIF1A [SIGNOR]; HIF1A -T(+)-> BNIP3 [SIGNOR]
-Q2	H_HARM	IT9_baseline_v3_rank	5	Sm-337	opposes	5	1	15	new_to_legend		CONDITIONAL_IF_HARMFUL	XIAP -P(+)-> HIF1A [SIGNOR]; HIF1A -T(+)-> BNIP3 [SIGNOR]
-Q2	H_HARM	IT9_baseline_v3_rank	6	Azd5582	opposes	6	1	15	new_to_legend		CONDITIONAL_IF_HARMFUL	XIAP -P(+)-> HIF1A [SIGNOR]; HIF1A -T(+)-> BNIP3 [SIGNOR]
-Q2	H_HARM	IT9_baseline_v3_rank	7	ASTX-660	opposes	7	1	15	new_to_legend		CONDITIONAL_IF_HARMFUL	XIAP -P(+)-> HIF1A [SIGNOR]; HIF1A -T(+)-> BNIP3 [SIGNOR]
-Q2	H_HARM	IT9_baseline_v3_rank	8	Bv-6	opposes	8	1	15	new_to_legend		CONDITIONAL_IF_HARMFUL	XIAP -P(+)-> HIF1A [SIGNOR]; HIF1A -T(+)-> BNIP3 [SIGNOR]
-Q2	H_HARM	origin_aware_on_IT9_tables	1	Anti-Hif-1Alpha Lna Antisense Oligonucleotide Ezn-2968	opposes	1	1	15	new_to_legend		CONDITIONAL_IF_HARMFUL	HIF1A -T(+)-> BNIP3 [SIGNOR]
-Q2	H_HARM	origin_aware_on_IT9_tables	2	Px-478	opposes	2	1	15	known	KEEP	CONDITIONAL_IF_HARMFUL	HIF1A -T(+)-> BNIP3 [SIGNOR]
-Q2	H_HARM	origin_aware_on_IT9_tables	3	Nitroglycerin	opposes	3	1	15	new_to_legend		CONDITIONAL_IF_HARMFUL	HIF1A -T(+)-> BNIP3 [SIGNOR]
-Q2	H_HARM	origin_aware_on_IT9_tables	4	Sm-122	opposes	4	1	15	new_to_legend		CONDITIONAL_IF_HARMFUL	XIAP -P(+)-> HIF1A [SIGNOR]; HIF1A -T(+)-> BNIP3 [SIGNOR]
-Q2	H_HARM	origin_aware_on_IT9_tables	5	Sm-337	opposes	5	1	15	new_to_legend		CONDITIONAL_IF_HARMFUL	XIAP -P(+)-> HIF1A [SIGNOR]; HIF1A -T(+)-> BNIP3 [SIGNOR]
-Q2	H_HARM	origin_aware_on_IT9_tables	6	Azd5582	opposes	6	1	15	new_to_legend		CONDITIONAL_IF_HARMFUL	XIAP -P(+)-> HIF1A [SIGNOR]; HIF1A -T(+)-> BNIP3 [SIGNOR]
-Q2	H_HARM	origin_aware_on_IT9_tables	7	ASTX-660	opposes	7	1	15	new_to_legend		CONDITIONAL_IF_HARMFUL	XIAP -P(+)-> HIF1A [SIGNOR]; HIF1A -T(+)-> BNIP3 [SIGNOR]
-Q2	H_HARM	origin_aware_on_IT9_tables	8	Bv-6	opposes	8	1	15	new_to_legend		CONDITIONAL_IF_HARMFUL	XIAP -P(+)-> HIF1A [SIGNOR]; HIF1A -T(+)-> BNIP3 [SIGNOR]
-Q2	H_PROTECT	IT9_baseline_v3_rank	1	Sorafenib	mimics	1	1	2	new_to_legend		CONDITIONAL_IF_PROTECTIVE	ZHX2 -T(-)-> HK2 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
-Q2	H_PROTECT	IT9_baseline_v3_rank	2	Regorafenib	mimics	2	1	2	new_to_legend		CONDITIONAL_IF_PROTECTIVE	ZHX2 -T(-)-> HK2 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
-Q2	H_PROTECT	IT9_baseline_v3_rank	3	Compound 1O [Pmid: 24210504]	mimics	3	1	2	new_to_legend		CONDITIONAL_IF_PROTECTIVE	GRK5 -P(-)-> HDAC5 [SIGNOR]; HDAC5 -T(+)-> SLC2A1 [CollecTRI;TRRUST_CollecTRI;CollecTRI2;E
-Q2	H_PROTECT	IT9_baseline_v3_rank	4	1-Cyclohexyl-N-{[1-(4-Methylphenyl)-1H-Indol-3-Yl]Methyl}Methanamine	mimics	4	1	2	new_to_legend		CONDITIONAL_IF_PROTECTIVE	ESRRA -T(-)-> LDHB [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Cura
-Q2	H_PROTECT	IT9_baseline_v3_rank	5	Xct790	mimics	5	1	2	new_to_legend		CONDITIONAL_IF_PROTECTIVE	ESRRA -T(-)-> LDHB [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Cura
-Q2	H_PROTECT	IT9_baseline_v3_rank	6	Desidustat	mimics	6	1	4	new_to_legend		CONDITIONAL_IF_PROTECTIVE	EGLN2 -P(-)-> FOXO3 [SIGNOR]; FOXO3 -T(+)-> BNIP3 [CollecTRI;ExTRI_CollecTRI;CollecTRI2;Do
-Q2	H_PROTECT	IT9_baseline_v3_rank	7	ROXADUSTAT	mimics	7	1	4	known	DROP	CONDITIONAL_IF_PROTECTIVE	EGLN2 -P(-)-> FOXO3 [SIGNOR]; FOXO3 -T(+)-> SLC2A1 [CollecTRI;NTNUcuration_CollecTRI2;ExTR
-Q2	H_PROTECT	IT9_baseline_v3_rank	8	DAPRODUSTAT	mimics	8	1	4	new_to_legend		CONDITIONAL_IF_PROTECTIVE	EGLN2 -P(-)-> FOXO3 [SIGNOR]; FOXO3 -T(+)-> SLC2A1 [CollecTRI;NTNUcuration_CollecTRI2;ExTR
-Q2	H_PROTECT	origin_aware_on_IT9_tables	1	Sorafenib	mimics	1	1	2	new_to_legend		CONDITIONAL_IF_PROTECTIVE	ZHX2 -T(-)-> HK2 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
-Q2	H_PROTECT	origin_aware_on_IT9_tables	2	Regorafenib	mimics	2	1	2	new_to_legend		CONDITIONAL_IF_PROTECTIVE	ZHX2 -T(-)-> HK2 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
-Q2	H_PROTECT	origin_aware_on_IT9_tables	3	Compound 1O [Pmid: 24210504]	mimics	3	1	2	new_to_legend		CONDITIONAL_IF_PROTECTIVE	GRK5 -P(-)-> HDAC5 [SIGNOR]; HDAC5 -T(+)-> SLC2A1 [CollecTRI;TRRUST_CollecTRI;CollecTRI2;E
-Q2	H_PROTECT	origin_aware_on_IT9_tables	4	1-Cyclohexyl-N-{[1-(4-Methylphenyl)-1H-Indol-3-Yl]Methyl}Methanamine	mimics	4	1	2	new_to_legend		CONDITIONAL_IF_PROTECTIVE	ESRRA -T(-)-> LDHB [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Cura
-Q2	H_PROTECT	origin_aware_on_IT9_tables	5	Xct790	mimics	5	1	2	new_to_legend		CONDITIONAL_IF_PROTECTIVE	ESRRA -T(-)-> LDHB [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Cura
-Q2	H_PROTECT	origin_aware_on_IT9_tables	6	Desidustat	mimics	6	1	4	new_to_legend		CONDITIONAL_IF_PROTECTIVE	EGLN2 -P(-)-> FOXO3 [SIGNOR]; FOXO3 -T(+)-> BNIP3 [CollecTRI;ExTRI_CollecTRI;CollecTRI2;Do
-Q2	H_PROTECT	origin_aware_on_IT9_tables	7	ROXADUSTAT	mimics	7	1	4	known	DROP	CONDITIONAL_IF_PROTECTIVE	EGLN2 -P(-)-> FOXO3 [SIGNOR]; FOXO3 -T(+)-> SLC2A1 [CollecTRI;NTNUcuration_CollecTRI2;ExTR
-Q2	H_PROTECT	origin_aware_on_IT9_tables	8	DAPRODUSTAT	mimics	8	1	4	new_to_legend		CONDITIONAL_IF_PROTECTIVE	EGLN2 -P(-)-> FOXO3 [SIGNOR]; FOXO3 -T(+)-> SLC2A1 [CollecTRI;NTNUcuration_CollecTRI2;ExTR
-Q4	H_HARM	IT9_baseline_v3_rank	1	Mk2A Inhibitor	opposes	1	1	1	new_to_legend		CONDITIONAL_IF_HARMFUL	MAPKAPK2 -P(-)-> CDC25A [SIGNOR;SPIKE_LC;SPIKE]; CDC25A -P(+)-> FOXO1 [SIGNOR]; FOXO1 -T(+
-Q4	H_HARM	IT9_baseline_v3_rank	2	Gamcemetinib	opposes	2	1	1	known	INCONCLUSIVE	CONDITIONAL_IF_HARMFUL	MAPKAPK2 -P(-)-> CDC25A [SIGNOR;SPIKE_LC;SPIKE]; CDC25A -P(+)-> FOXO1 [SIGNOR]; FOXO1 -T(+
-Q4	H_HARM	IT9_baseline_v3_rank	3	(10R)-10-Methyl-3-(6-Methylpyridin-3-Yl)-9,10,11,12-Tetrahydro-8H-[1,4]Diazepino[5',6':4,5]Thieno[3,2-F]Quinolin-8-One	opposes	3	1	1	new_to_legend		CONDITIONAL_IF_HARMFUL	MAPKAPK2 -P(-)-> CDC25A [SIGNOR;SPIKE_LC;SPIKE]; CDC25A -P(+)-> FOXO1 [SIGNOR]; FOXO1 -T(+
-Q4	H_HARM	IT9_baseline_v3_rank	4	Ccg258747	opposes	4	1	1	new_to_legend		CONDITIONAL_IF_HARMFUL	GRK2 -P(+)-> STK3 [SIGNOR;REACH_ProtMapper;ProtMapper;Sparser_ProtMapper;RLIMS-P_ProtMappe
-Q4	H_HARM	IT9_baseline_v3_rank	5	Compound 101 [Pmid: 21596927]	opposes	5	1	1	new_to_legend		CONDITIONAL_IF_HARMFUL	GRK2 -P(+)-> STK3 [SIGNOR;REACH_ProtMapper;ProtMapper;Sparser_ProtMapper;RLIMS-P_ProtMappe
-Q4	H_HARM	IT9_baseline_v3_rank	6	Biib091	opposes	6	1	1	new_to_legend		CONDITIONAL_IF_HARMFUL	BTK -P(-)-> STAT3 [SIGNOR;InnateDB]; STAT3 -T(+)-> NPY [CollecTRI;NTNUcuration_CollecTRI2;
-Q4	H_HARM	IT9_baseline_v3_rank	7	Compound 8A [Pmid: 23713581]	opposes	7	1	1	new_to_legend		CONDITIONAL_IF_HARMFUL	PTPRM -P(-)-> STAT3 [SIGNOR;REACH_ProtMapper;ProtMapper]; STAT3 -T(+)-> NPY [CollecTRI;NTN
-Q4	H_HARM	IT9_baseline_v3_rank	8	Cgi1746	opposes	8	1	1	new_to_legend		CONDITIONAL_IF_HARMFUL	BTK -P(-)-> STAT3 [SIGNOR;InnateDB]; STAT3 -T(+)-> NPY [CollecTRI;NTNUcuration_CollecTRI2;
-Q4	H_HARM	origin_aware_on_IT9_tables	1	Mk2A Inhibitor	opposes	1	1	1	new_to_legend		CONDITIONAL_IF_HARMFUL	MAPKAPK2 -P(-)-> CDC25A [SIGNOR;SPIKE_LC;SPIKE]; CDC25A -P(+)-> FOXO1 [SIGNOR]; FOXO1 -T(+
-Q4	H_HARM	origin_aware_on_IT9_tables	2	Gamcemetinib	opposes	2	1	1	known	INCONCLUSIVE	CONDITIONAL_IF_HARMFUL	MAPKAPK2 -P(-)-> CDC25A [SIGNOR;SPIKE_LC;SPIKE]; CDC25A -P(+)-> FOXO1 [SIGNOR]; FOXO1 -T(+
-Q4	H_HARM	origin_aware_on_IT9_tables	3	(10R)-10-Methyl-3-(6-Methylpyridin-3-Yl)-9,10,11,12-Tetrahydro-8H-[1,4]Diazepino[5',6':4,5]Thieno[3,2-F]Quinolin-8-One	opposes	3	1	1	new_to_legend		CONDITIONAL_IF_HARMFUL	MAPKAPK2 -P(-)-> CDC25A [SIGNOR;SPIKE_LC;SPIKE]; CDC25A -P(+)-> FOXO1 [SIGNOR]; FOXO1 -T(+
-Q4	H_HARM	origin_aware_on_IT9_tables	4	Ccg258747	opposes	4	1	1	new_to_legend		CONDITIONAL_IF_HARMFUL	GRK2 -P(+)-> STK3 [SIGNOR;REACH_ProtMapper;ProtMapper;Sparser_ProtMapper;RLIMS-P_ProtMappe
-Q4	H_HARM	origin_aware_on_IT9_tables	5	Compound 101 [Pmid: 21596927]	opposes	5	1	1	new_to_legend		CONDITIONAL_IF_HARMFUL	GRK2 -P(+)-> STK3 [SIGNOR;REACH_ProtMapper;ProtMapper;Sparser_ProtMapper;RLIMS-P_ProtMappe
-Q4	H_HARM	origin_aware_on_IT9_tables	6	Biib091	opposes	6	1	1	new_to_legend		CONDITIONAL_IF_HARMFUL	BTK -P(-)-> STAT3 [SIGNOR;InnateDB]; STAT3 -T(+)-> NPY [CollecTRI;NTNUcuration_CollecTRI2;
-Q4	H_HARM	origin_aware_on_IT9_tables	7	Compound 8A [Pmid: 23713581]	opposes	7	1	1	new_to_legend		CONDITIONAL_IF_HARMFUL	PTPRM -P(-)-> STAT3 [SIGNOR;REACH_ProtMapper;ProtMapper]; STAT3 -T(+)-> NPY [CollecTRI;NTN
-Q4	H_HARM	origin_aware_on_IT9_tables	8	Cgi1746	opposes	8	1	1	new_to_legend		CONDITIONAL_IF_HARMFUL	BTK -P(-)-> STAT3 [SIGNOR;InnateDB]; STAT3 -T(+)-> NPY [CollecTRI;NTNUcuration_CollecTRI2;
-Q4	H_PROTECT	IT9_baseline_v3_rank	1	Ve-821	mimics	1	1	1	new_to_legend		CONDITIONAL_IF_PROTECTIVE	ATR -P(+)-> ETV1 [SIGNOR]; ETV1 -T(+)-> GRIN2C [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_Co
-Q4	H_PROTECT	IT9_baseline_v3_rank	2	BERZOSERTIB	mimics	2	1	1	new_to_legend		CONDITIONAL_IF_PROTECTIVE	ATR -P(+)-> ETV1 [SIGNOR]; ETV1 -T(+)-> GRIN2C [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_Co
-Q4	H_PROTECT	IT9_baseline_v3_rank	3	CERALASERTIB	mimics	3	1	1	known	DROP	CONDITIONAL_IF_PROTECTIVE	ATR -P(+)-> ETV1 [SIGNOR]; ETV1 -T(+)-> GRIN2C [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_Co
-Q4	H_PROTECT	IT9_baseline_v3_rank	4	ELIMUSERTIB	mimics	4	1	1	new_to_legend		CONDITIONAL_IF_PROTECTIVE	ATR -P(+)-> ETV1 [SIGNOR]; ETV1 -T(+)-> GRIN2C [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_Co
-Q4	H_PROTECT	IT9_baseline_v3_rank	5	M4344	mimics	5	1	1	new_to_legend		CONDITIONAL_IF_PROTECTIVE	ATR -P(+)-> ETV1 [SIGNOR]; ETV1 -T(+)-> GRIN2C [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_Co
-Q4	H_PROTECT	IT9_baseline_v3_rank	6	Tuvusertib	mimics	7	1	1	new_to_legend		CONDITIONAL_IF_PROTECTIVE	ATR -P(+)-> ETV1 [SIGNOR]; ETV1 -T(+)-> GRIN2C [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_Co
-Q4	H_PROTECT	IT9_baseline_v3_rank	7	Gartisertib	mimics	8	1	1	new_to_legend		CONDITIONAL_IF_PROTECTIVE	ATR -P(+)-> ETV1 [SIGNOR]; ETV1 -T(+)-> GRIN2C [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_Co
-Q4	H_PROTECT	IT9_baseline_v3_rank	8	Az20	mimics	10	1	1	new_to_legend		CONDITIONAL_IF_PROTECTIVE	ATR -P(+)-> ETV1 [SIGNOR]; ETV1 -T(+)-> GRIN2C [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_Co
-Q4	H_PROTECT	origin_aware_on_IT9_tables	1	Dactolisib	mimics	13	2	2	new_to_legend		CONDITIONAL_IF_PROTECTIVE	ATR -P(+)-> ETV1 [SIGNOR]; ETV1 -T(+)-> GRIN2C [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_Co
-Q4	H_PROTECT	origin_aware_on_IT9_tables	2	Ve-821	mimics	1	1	1	new_to_legend		CONDITIONAL_IF_PROTECTIVE	ATR -P(+)-> ETV1 [SIGNOR]; ETV1 -T(+)-> GRIN2C [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_Co
-Q4	H_PROTECT	origin_aware_on_IT9_tables	3	BERZOSERTIB	mimics	2	1	1	new_to_legend		CONDITIONAL_IF_PROTECTIVE	ATR -P(+)-> ETV1 [SIGNOR]; ETV1 -T(+)-> GRIN2C [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_Co
-Q4	H_PROTECT	origin_aware_on_IT9_tables	4	CERALASERTIB	mimics	3	1	1	known	DROP	CONDITIONAL_IF_PROTECTIVE	ATR -P(+)-> ETV1 [SIGNOR]; ETV1 -T(+)-> GRIN2C [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_Co
-Q4	H_PROTECT	origin_aware_on_IT9_tables	5	ELIMUSERTIB	mimics	4	1	1	new_to_legend		CONDITIONAL_IF_PROTECTIVE	ATR -P(+)-> ETV1 [SIGNOR]; ETV1 -T(+)-> GRIN2C [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_Co
-Q4	H_PROTECT	origin_aware_on_IT9_tables	6	M4344	mimics	5	1	1	new_to_legend		CONDITIONAL_IF_PROTECTIVE	ATR -P(+)-> ETV1 [SIGNOR]; ETV1 -T(+)-> GRIN2C [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_Co
-Q4	H_PROTECT	origin_aware_on_IT9_tables	7	Tuvusertib	mimics	7	1	1	new_to_legend		CONDITIONAL_IF_PROTECTIVE	ATR -P(+)-> ETV1 [SIGNOR]; ETV1 -T(+)-> GRIN2C [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_Co
-Q4	H_PROTECT	origin_aware_on_IT9_tables	8	Gartisertib	mimics	8	1	1	new_to_legend		CONDITIONAL_IF_PROTECTIVE	ATR -P(+)-> ETV1 [SIGNOR]; ETV1 -T(+)-> GRIN2C [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_Co
-Q5	H_HARM	IT9_baseline_v3_rank	1	JTE-151	opposes	1	2	2	known	INCONCLUSIVE	CONDITIONAL_IF_HARMFUL	RORC -T(+)-> IL6 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
-Q5	H_HARM	IT9_baseline_v3_rank	2	CD24FC	opposes	2	1	2	new_to_legend		CONDITIONAL_IF_HARMFUL	HMGB1 -T(+)-> IL1B [CytReg_CollecTRI2;CollecTRI;CollecTRI2;CytReg_CollecTRI;ExTRI2_CollecT
-Q5	H_HARM	IT9_baseline_v3_rank	3	Bifonazole	opposes	3	1	2	new_to_legend		CONDITIONAL_IF_HARMFUL	HMGB1 -T(+)-> IL1B [CytReg_CollecTRI2;CollecTRI;CollecTRI2;CytReg_CollecTRI;ExTRI2_CollecT
-Q5	H_HARM	IT9_baseline_v3_rank	4	L6H21	opposes	4	1	2	new_to_legend		CONDITIONAL_IF_HARMFUL	LY96 -P(+)-> HMGB1 [SIGNOR]; HMGB1 -T(+)-> IL1B [CytReg_CollecTRI2;CollecTRI;CollecTRI2;Cy
-Q5	H_HARM	IT9_baseline_v3_rank	5	BI-2536	opposes	5	1	1	new_to_legend		CONDITIONAL_IF_HARMFUL	BRD4 -T(+)-> TNF [CollecTRI;CollecTRI2;IntAct_CollecTRI2;ExTRI2_CollecTRI2;IntAct_CollecTR
-Q5	H_HARM	IT9_baseline_v3_rank	6	Dual Brd4/Plk1 Inhibitor 23	opposes	6	1	1	new_to_legend		CONDITIONAL_IF_HARMFUL	BRD4 -T(+)-> TNF [CollecTRI;CollecTRI2;IntAct_CollecTRI2;ExTRI2_CollecTRI2;IntAct_CollecTR
-Q5	H_HARM	IT9_baseline_v3_rank	7	Compound 6 [Pmid: 30125504]	opposes	7	1	1	new_to_legend		CONDITIONAL_IF_HARMFUL	BRD4 -T(+)-> TNF [CollecTRI;CollecTRI2;IntAct_CollecTRI2;ExTRI2_CollecTRI2;IntAct_CollecTR
-Q5	H_HARM	IT9_baseline_v3_rank	8	Xy-06-007	opposes	8	1	1	new_to_legend		CONDITIONAL_IF_HARMFUL	BRD4 -T(+)-> TNF [CollecTRI;CollecTRI2;IntAct_CollecTRI2;ExTRI2_CollecTRI2;IntAct_CollecTR
-Q5	H_HARM	origin_aware_on_IT9_tables	1	JTE-151	opposes	1	2	2	known	INCONCLUSIVE	CONDITIONAL_IF_HARMFUL	RORC -T(+)-> IL6 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
-Q5	H_HARM	origin_aware_on_IT9_tables	2	Alrt 1550	opposes	33	2	2	new_to_legend		CONDITIONAL_IF_HARMFUL	RORC -T(+)-> IL6 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
-Q5	H_HARM	origin_aware_on_IT9_tables	3	BENZIODARONE	opposes	35	2	3	new_to_legend		CONDITIONAL_IF_HARMFUL	CALM1 -P(+)-> PPP3CA [SIGNOR]; PPP3CA -P(+)-> NFATC4 [SIGNOR;KEGG-MEDICUS]; NFATC4 -T(+)->
-Q5	H_HARM	origin_aware_on_IT9_tables	4	PRENYLAMINE	opposes	37	2	3	new_to_legend		CONDITIONAL_IF_HARMFUL	CALM1 -P(+)-> PPP3CA [SIGNOR]; PPP3CA -P(+)-> NFATC4 [SIGNOR;KEGG-MEDICUS]; NFATC4 -T(+)->
-Q5	H_HARM	origin_aware_on_IT9_tables	5	VOCLOSPORIN	opposes	39	2	3	new_to_legend		CONDITIONAL_IF_HARMFUL	PPP3CA -P(+)-> NFATC4 [SIGNOR;KEGG-MEDICUS]; NFATC4 -T(+)-> TNF [CytReg_CollecTRI2;CollecT
-Q5	H_HARM	origin_aware_on_IT9_tables	6	OMAVELOXOLONE	opposes	41	2	3	new_to_legend		CONDITIONAL_IF_HARMFUL	NFE2L2 -T(-)-> IL1B [CytReg_CollecTRI2;CollecTRI;ExTRI_CollecTRI;CollecTRI2;CytReg_CollecT
-Q5	H_HARM	origin_aware_on_IT9_tables	7	Pf-03758309	opposes	43	2	3	new_to_legend		CONDITIONAL_IF_HARMFUL	PAK4 -P(-)-> NFE2L2 [SIGNOR;Sparser_ProtMapper;ProtMapper]; NFE2L2 -T(-)-> IL1B [CytReg_Co
-Q5	H_HARM	origin_aware_on_IT9_tables	8	CD24FC	opposes	2	1	2	new_to_legend		CONDITIONAL_IF_HARMFUL	HMGB1 -T(+)-> IL1B [CytReg_CollecTRI2;CollecTRI;CollecTRI2;CytReg_CollecTRI;ExTRI2_CollecT
-Q5	H_PROTECT	IT9_baseline_v3_rank	1	25-Hydroxycholesterol	mimics	1	2	2	new_to_legend		CONDITIONAL_IF_PROTECTIVE	RORC -T(+)-> IL6 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
-Q5	H_PROTECT	IT9_baseline_v3_rank	2	Gne-3500	mimics	2	2	2	new_to_legend		CONDITIONAL_IF_PROTECTIVE	RORC -T(+)-> IL6 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
-Q5	H_PROTECT	IT9_baseline_v3_rank	3	Sr2211	mimics	3	2	2	new_to_legend		CONDITIONAL_IF_PROTECTIVE	RORC -T(+)-> IL6 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
-Q5	H_PROTECT	IT9_baseline_v3_rank	4	Compound 32 [Pmid: 31638797]	mimics	4	2	2	new_to_legend		CONDITIONAL_IF_PROTECTIVE	RORC -T(+)-> IL6 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
-Q5	H_PROTECT	IT9_baseline_v3_rank	5	Tak-828F	mimics	5	2	2	new_to_legend		CONDITIONAL_IF_PROTECTIVE	RORC -T(+)-> IL6 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
-Q5	H_PROTECT	IT9_baseline_v3_rank	6	Azd0284	mimics	6	2	2	new_to_legend		CONDITIONAL_IF_PROTECTIVE	RORC -T(+)-> IL6 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
-Q5	H_PROTECT	IT9_baseline_v3_rank	7	Rorc2 Inverse Agonist 66 [Pmid: 30130103]	mimics	7	2	2	new_to_legend		CONDITIONAL_IF_PROTECTIVE	RORC -T(+)-> IL6 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
-Q5	H_PROTECT	IT9_baseline_v3_rank	8	Mrl-871	mimics	8	2	2	new_to_legend		CONDITIONAL_IF_PROTECTIVE	RORC -T(+)-> IL6 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
-Q5	H_PROTECT	origin_aware_on_IT9_tables	1	25-Hydroxycholesterol	mimics	1	2	2	new_to_legend		CONDITIONAL_IF_PROTECTIVE	RORC -T(+)-> IL6 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
-Q5	H_PROTECT	origin_aware_on_IT9_tables	2	Gne-3500	mimics	2	2	2	new_to_legend		CONDITIONAL_IF_PROTECTIVE	RORC -T(+)-> IL6 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
-Q5	H_PROTECT	origin_aware_on_IT9_tables	3	Sr2211	mimics	3	2	2	new_to_legend		CONDITIONAL_IF_PROTECTIVE	RORC -T(+)-> IL6 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
-Q5	H_PROTECT	origin_aware_on_IT9_tables	4	Compound 32 [Pmid: 31638797]	mimics	4	2	2	new_to_legend		CONDITIONAL_IF_PROTECTIVE	RORC -T(+)-> IL6 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
-Q5	H_PROTECT	origin_aware_on_IT9_tables	5	Tak-828F	mimics	5	2	2	new_to_legend		CONDITIONAL_IF_PROTECTIVE	RORC -T(+)-> IL6 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
-Q5	H_PROTECT	origin_aware_on_IT9_tables	6	Azd0284	mimics	6	2	2	new_to_legend		CONDITIONAL_IF_PROTECTIVE	RORC -T(+)-> IL6 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
-Q5	H_PROTECT	origin_aware_on_IT9_tables	7	Rorc2 Inverse Agonist 66 [Pmid: 30130103]	mimics	7	2	2	new_to_legend		CONDITIONAL_IF_PROTECTIVE	RORC -T(+)-> IL6 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
-Q5	H_PROTECT	origin_aware_on_IT9_tables	8	Mrl-871	mimics	8	2	2	new_to_legend		CONDITIONAL_IF_PROTECTIVE	RORC -T(+)-> IL6 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
-Q6	H_HARM	IT9_baseline_v3_rank	1	Ag-17724	opposes	1	1	1	new_to_legend		CONDITIONAL_IF_HARMFUL	PIN1 -T(+)-> MYC [CollecTRI;CollecTRI2;GOA_CollecTRI2;ExTRI2_CollecTRI2;GOA_CollecTRI]
-Q6	H_HARM	IT9_baseline_v3_rank	2	Stm2457	opposes	1	1	1	known	DROP	CONDITIONAL_IF_HARMFUL	METTL3 -P(+)-> USP13 [SIGNOR]; USP13 -P(+)-> MYC [SIGNOR]
-Q6	H_HARM	IT9_baseline_v3_rank	3	Bjp-06-005-3	opposes	2	1	1	new_to_legend		CONDITIONAL_IF_HARMFUL	PIN1 -T(+)-> MYC [CollecTRI;CollecTRI2;GOA_CollecTRI2;ExTRI2_CollecTRI2;GOA_CollecTRI]
-Q6	H_HARM	IT9_baseline_v3_rank	4	Stc-15	opposes	2	1	1	new_to_legend		CONDITIONAL_IF_HARMFUL	METTL3 -P(+)-> USP13 [SIGNOR]; USP13 -P(+)-> MYC [SIGNOR]
-Q6	H_HARM	IT9_baseline_v3_rank	5	Compound 20 [Pmid: 25091930]	opposes	3	1	1	new_to_legend		CONDITIONAL_IF_HARMFUL	PIN1 -T(+)-> MYC [CollecTRI;CollecTRI2;GOA_CollecTRI2;ExTRI2_CollecTRI2;GOA_CollecTRI]
-Q6	H_HARM	IT9_baseline_v3_rank	6	Epz004777	opposes	3	1	1	new_to_legend		CONDITIONAL_IF_HARMFUL	DOT1L -P(+)-> MYC [SIGNOR]
-Q6	H_HARM	IT9_baseline_v3_rank	7	Sulfopin	opposes	4	1	1	known	KEEP	CONDITIONAL_IF_HARMFUL	PIN1 -T(+)-> MYC [CollecTRI;CollecTRI2;GOA_CollecTRI2;ExTRI2_CollecTRI2;GOA_CollecTRI]
-Q6	H_HARM	IT9_baseline_v3_rank	8	Sgc0946	opposes	4	1	1	new_to_legend		CONDITIONAL_IF_HARMFUL	DOT1L -P(+)-> MYC [SIGNOR]
-Q6	H_HARM	origin_aware_on_IT9_tables	1	Ag-17724	opposes	1	1	1	new_to_legend		CONDITIONAL_IF_HARMFUL	PIN1 -T(+)-> MYC [CollecTRI;CollecTRI2;GOA_CollecTRI2;ExTRI2_CollecTRI2;GOA_CollecTRI]
-Q6	H_HARM	origin_aware_on_IT9_tables	2	Stm2457	opposes	1	1	1	known	DROP	CONDITIONAL_IF_HARMFUL	METTL3 -P(+)-> USP13 [SIGNOR]; USP13 -P(+)-> MYC [SIGNOR]
-Q6	H_HARM	origin_aware_on_IT9_tables	3	Bjp-06-005-3	opposes	2	1	1	new_to_legend		CONDITIONAL_IF_HARMFUL	PIN1 -T(+)-> MYC [CollecTRI;CollecTRI2;GOA_CollecTRI2;ExTRI2_CollecTRI2;GOA_CollecTRI]
-Q6	H_HARM	origin_aware_on_IT9_tables	4	Stc-15	opposes	2	1	1	new_to_legend		CONDITIONAL_IF_HARMFUL	METTL3 -P(+)-> USP13 [SIGNOR]; USP13 -P(+)-> MYC [SIGNOR]
-Q6	H_HARM	origin_aware_on_IT9_tables	5	Compound 20 [Pmid: 25091930]	opposes	3	1	1	new_to_legend		CONDITIONAL_IF_HARMFUL	PIN1 -T(+)-> MYC [CollecTRI;CollecTRI2;GOA_CollecTRI2;ExTRI2_CollecTRI2;GOA_CollecTRI]
-Q6	H_HARM	origin_aware_on_IT9_tables	6	Epz004777	opposes	3	1	1	new_to_legend		CONDITIONAL_IF_HARMFUL	DOT1L -P(+)-> MYC [SIGNOR]
-Q6	H_HARM	origin_aware_on_IT9_tables	7	Sulfopin	opposes	4	1	1	known	KEEP	CONDITIONAL_IF_HARMFUL	PIN1 -T(+)-> MYC [CollecTRI;CollecTRI2;GOA_CollecTRI2;ExTRI2_CollecTRI2;GOA_CollecTRI]
-Q6	H_HARM	origin_aware_on_IT9_tables	8	Sgc0946	opposes	4	1	1	new_to_legend		CONDITIONAL_IF_HARMFUL	DOT1L -P(+)-> MYC [SIGNOR]
-Q6	H_PROTECT	IT9_baseline_v3_rank	1	Gnf4877	mimics	1	1	1	new_to_legend		CONDITIONAL_IF_PROTECTIVE	DYRK1A -P(-)-> FOXO6 [SIGNOR]; FOXO6 -T(+)-> MYC [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_
-Q6	H_PROTECT	IT9_baseline_v3_rank	2	(+)-Jq1	mimics	1	1	1	new_to_legend		CONDITIONAL_IF_PROTECTIVE	BRD4 -P(-)-> MYC [SIGNOR;REACH_ProtMapper;ProtMapper;Sparser_ProtMapper;SIGNOR_ProtMapper]
-Q6	H_PROTECT	IT9_baseline_v3_rank	3	Compound 2-2C [Pmid: 32003560]	mimics	2	1	1	new_to_legend		CONDITIONAL_IF_PROTECTIVE	DYRK1A -P(-)-> FOXO6 [SIGNOR]; FOXO6 -T(+)-> MYC [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_
-Q6	H_PROTECT	IT9_baseline_v3_rank	4	Compound 3 [Pmid: 25408830]	mimics	2	1	1	new_to_legend		CONDITIONAL_IF_PROTECTIVE	BRD4 -P(-)-> MYC [SIGNOR;REACH_ProtMapper;ProtMapper;Sparser_ProtMapper;SIGNOR_ProtMapper]
-Q6	H_PROTECT	IT9_baseline_v3_rank	5	Gnf2133	mimics	3	1	1	new_to_legend		CONDITIONAL_IF_PROTECTIVE	DYRK1A -P(-)-> FOXO6 [SIGNOR]; FOXO6 -T(+)-> MYC [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_
-Q6	H_PROTECT	IT9_baseline_v3_rank	6	Pfi-1	mimics	3	1	1	new_to_legend		CONDITIONAL_IF_PROTECTIVE	BRD4 -P(-)-> MYC [SIGNOR;REACH_ProtMapper;ProtMapper;Sparser_ProtMapper;SIGNOR_ProtMapper]
-Q6	H_PROTECT	IT9_baseline_v3_rank	7	Ethyl 3-[(E)-2-Amino-1-Cyanoethenyl]-6,7-Dichloro-1-Methyl-1H-Indole-2-Carboxylate	mimics	4	1	1	new_to_legend		CONDITIONAL_IF_PROTECTIVE	DYRK1A -P(-)-> FOXO6 [SIGNOR]; FOXO6 -T(+)-> MYC [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_
-Q6	H_PROTECT	IT9_baseline_v3_rank	8	Ms436	mimics	4	1	1	new_to_legend		CONDITIONAL_IF_PROTECTIVE	BRD4 -P(-)-> MYC [SIGNOR;REACH_ProtMapper;ProtMapper;Sparser_ProtMapper;SIGNOR_ProtMapper]
-Q6	H_PROTECT	origin_aware_on_IT9_tables	1	Gnf4877	mimics	1	1	1	new_to_legend		CONDITIONAL_IF_PROTECTIVE	DYRK1A -P(-)-> FOXO6 [SIGNOR]; FOXO6 -T(+)-> MYC [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_
-Q6	H_PROTECT	origin_aware_on_IT9_tables	2	(+)-Jq1	mimics	1	1	1	new_to_legend		CONDITIONAL_IF_PROTECTIVE	BRD4 -P(-)-> MYC [SIGNOR;REACH_ProtMapper;ProtMapper;Sparser_ProtMapper;SIGNOR_ProtMapper]
-Q6	H_PROTECT	origin_aware_on_IT9_tables	3	Compound 2-2C [Pmid: 32003560]	mimics	2	1	1	new_to_legend		CONDITIONAL_IF_PROTECTIVE	DYRK1A -P(-)-> FOXO6 [SIGNOR]; FOXO6 -T(+)-> MYC [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_
-Q6	H_PROTECT	origin_aware_on_IT9_tables	4	Compound 3 [Pmid: 25408830]	mimics	2	1	1	new_to_legend		CONDITIONAL_IF_PROTECTIVE	BRD4 -P(-)-> MYC [SIGNOR;REACH_ProtMapper;ProtMapper;Sparser_ProtMapper;SIGNOR_ProtMapper]
-Q6	H_PROTECT	origin_aware_on_IT9_tables	5	Gnf2133	mimics	3	1	1	new_to_legend		CONDITIONAL_IF_PROTECTIVE	DYRK1A -P(-)-> FOXO6 [SIGNOR]; FOXO6 -T(+)-> MYC [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_
-Q6	H_PROTECT	origin_aware_on_IT9_tables	6	Pfi-1	mimics	3	1	1	new_to_legend		CONDITIONAL_IF_PROTECTIVE	BRD4 -P(-)-> MYC [SIGNOR;REACH_ProtMapper;ProtMapper;Sparser_ProtMapper;SIGNOR_ProtMapper]
-Q6	H_PROTECT	origin_aware_on_IT9_tables	7	Ethyl 3-[(E)-2-Amino-1-Cyanoethenyl]-6,7-Dichloro-1-Methyl-1H-Indole-2-Carboxylate	mimics	4	1	1	new_to_legend		CONDITIONAL_IF_PROTECTIVE	DYRK1A -P(-)-> FOXO6 [SIGNOR]; FOXO6 -T(+)-> MYC [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_
-Q6	H_PROTECT	origin_aware_on_IT9_tables	8	Ms436	mimics	4	1	1	new_to_legend		CONDITIONAL_IF_PROTECTIVE	BRD4 -P(-)-> MYC [SIGNOR;REACH_ProtMapper;ProtMapper;Sparser_ProtMapper;SIGNOR_ProtMapper]
-Q2	H_HARM	origin_aware_on_v4_tables	1	Anti-Hif-1Alpha Lna Antisense Oligonucleotide Ezn-2968	opposes	1	1	15	new_to_legend		CONDITIONAL_IF_HARMFUL	HIF1A -T(+)-> BNIP3 [SIGNOR]
-Q2	H_HARM	origin_aware_on_v4_tables	2	Px-478	opposes	2	1	15	known	KEEP	CONDITIONAL_IF_HARMFUL	HIF1A -T(+)-> BNIP3 [SIGNOR]
-Q2	H_HARM	origin_aware_on_v4_tables	3	Nitroglycerin	opposes	3	1	15	new_to_legend		CONDITIONAL_IF_HARMFUL	HIF1A -T(+)-> BNIP3 [SIGNOR]
-Q2	H_HARM	origin_aware_on_v4_tables	4	Pracinostat	opposes	4	1	2	new_to_legend		CONDITIONAL_IF_HARMFUL	HDAC5 -T(+)-> SLC2A1 [CollecTRI;TRRUST_CollecTRI;CollecTRI2;ExTRI2_CollecTRI2;TRRUST_Colle
-Q2	H_HARM	origin_aware_on_v4_tables	5	Zavondemstat	opposes	5	1	10	new_to_legend		CONDITIONAL_IF_HARMFUL	KDM4C -P(+)-> HIF1A [SIGNOR]; HIF1A -T(+)-> HK2 [SIGNOR]
-Q2	H_HARM	origin_aware_on_v4_tables	6	Iox1	opposes	6	1	10	new_to_legend		CONDITIONAL_IF_HARMFUL	KDM4C -P(+)-> HIF1A [SIGNOR]; HIF1A -T(+)-> HK2 [SIGNOR]
-Q2	H_HARM	origin_aware_on_v4_tables	7	Ss-208	opposes	7	1	2	new_to_legend		CONDITIONAL_IF_HARMFUL	HDAC5 -T(+)-> SLC2A1 [CollecTRI;TRRUST_CollecTRI;CollecTRI2;ExTRI2_CollecTRI2;TRRUST_Colle
-Q2	H_HARM	origin_aware_on_v4_tables	8	Sm-122	opposes	8	1	10	new_to_legend		CONDITIONAL_IF_HARMFUL	XIAP -P(+)-> HIF1A [SIGNOR]; HIF1A -T(+)-> HK2 [SIGNOR]
-Q2	H_PROTECT	origin_aware_on_v4_tables	1	Sorafenib	mimics	1	1	2	new_to_legend		CONDITIONAL_IF_PROTECTIVE	ZHX2 -T(-)-> HK2 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
-Q2	H_PROTECT	origin_aware_on_v4_tables	2	Regorafenib	mimics	2	1	2	new_to_legend		CONDITIONAL_IF_PROTECTIVE	ZHX2 -T(-)-> HK2 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
-Q2	H_PROTECT	origin_aware_on_v4_tables	3	Compound 1O [Pmid: 24210504]	mimics	3	1	2	new_to_legend		CONDITIONAL_IF_PROTECTIVE	GRK5 -P(-)-> HDAC5 [SIGNOR]; HDAC5 -T(+)-> SLC2A1 [CollecTRI;TRRUST_CollecTRI;CollecTRI2;E
-Q2	H_PROTECT	origin_aware_on_v4_tables	4	G&Ouml; 6983	mimics	4	1	2	new_to_legend		CONDITIONAL_IF_PROTECTIVE	PRKCA -P(-)-> HDAC5 [SIGNOR;SIGNOR_ProtMapper;ProtMapper]; HDAC5 -T(+)-> SLC2A1 [CollecTRI
-Q2	H_PROTECT	origin_aware_on_v4_tables	5	G&Ouml; 6976	mimics	5	1	2	new_to_legend		CONDITIONAL_IF_PROTECTIVE	PRKCA -P(-)-> HDAC5 [SIGNOR;SIGNOR_ProtMapper;ProtMapper]; HDAC5 -T(+)-> SLC2A1 [CollecTRI
-Q2	H_PROTECT	origin_aware_on_v4_tables	6	1-Cyclohexyl-N-{[1-(4-Methylphenyl)-1H-Indol-3-Yl]Methyl}Methanamine	mimics	6	1	2	new_to_legend		CONDITIONAL_IF_PROTECTIVE	ESRRA -T(-)-> LDHB [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Cura
-Q2	H_PROTECT	origin_aware_on_v4_tables	7	Xct790	mimics	7	1	2	new_to_legend		CONDITIONAL_IF_PROTECTIVE	ESRRA -T(-)-> LDHB [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Cura
-Q2	H_PROTECT	origin_aware_on_v4_tables	8	Desidustat	mimics	8	1	4	new_to_legend		CONDITIONAL_IF_PROTECTIVE	EGLN2 -P(-)-> FOXO3 [SIGNOR]; FOXO3 -T(+)-> BNIP3 [CollecTRI;ExTRI_CollecTRI;CollecTRI2;Do
-Q4	H_HARM	origin_aware_on_v4_tables	1	Mk2A Inhibitor	opposes	1	1	1	new_to_legend		CONDITIONAL_IF_HARMFUL	MAPKAPK2 -P(-)-> CDC25A [SIGNOR;SPIKE_LC;SPIKE]; CDC25A -P(+)-> FOXO1 [SIGNOR]; FOXO1 -T(+
-Q4	H_HARM	origin_aware_on_v4_tables	2	Gamcemetinib	opposes	2	1	1	known	INCONCLUSIVE	CONDITIONAL_IF_HARMFUL	MAPKAPK2 -P(-)-> CDC25A [SIGNOR;SPIKE_LC;SPIKE]; CDC25A -P(+)-> FOXO1 [SIGNOR]; FOXO1 -T(+
-Q4	H_HARM	origin_aware_on_v4_tables	3	(10R)-10-Methyl-3-(6-Methylpyridin-3-Yl)-9,10,11,12-Tetrahydro-8H-[1,4]Diazepino[5',6':4,5]Thieno[3,2-F]Quinolin-8-One	opposes	3	1	1	new_to_legend		CONDITIONAL_IF_HARMFUL	MAPKAPK2 -P(-)-> CDC25A [SIGNOR;SPIKE_LC;SPIKE]; CDC25A -P(+)-> FOXO1 [SIGNOR]; FOXO1 -T(+
-Q4	H_HARM	origin_aware_on_v4_tables	4	Compound 8A [Pmid: 23713581]	opposes	4	1	1	new_to_legend		CONDITIONAL_IF_HARMFUL	PTPRM -P(-)-> STAT3 [SIGNOR;REACH_ProtMapper;ProtMapper]; STAT3 -T(+)-> NPY [CollecTRI;NTN
-Q4	H_HARM	origin_aware_on_v4_tables	5	Poseltinib	opposes	5	1	1	new_to_legend		CONDITIONAL_IF_HARMFUL	BTK -P(-)-> STAT3 [SIGNOR;InnateDB]; STAT3 -T(+)-> NPY [CollecTRI;NTNUcuration_CollecTRI2;
-Q4	H_HARM	origin_aware_on_v4_tables	6	Biib091	opposes	6	1	1	new_to_legend		CONDITIONAL_IF_HARMFUL	BTK -P(-)-> STAT3 [SIGNOR;InnateDB]; STAT3 -T(+)-> NPY [CollecTRI;NTNUcuration_CollecTRI2;
-Q4	H_HARM	origin_aware_on_v4_tables	7	Cgi1746	opposes	7	1	1	new_to_legend		CONDITIONAL_IF_HARMFUL	BTK -P(-)-> STAT3 [SIGNOR;InnateDB]; STAT3 -T(+)-> NPY [CollecTRI;NTNUcuration_CollecTRI2;
-Q4	H_HARM	origin_aware_on_v4_tables	8	IBRUTINIB	opposes	8	1	1	new_to_legend		CONDITIONAL_IF_HARMFUL	BTK -P(-)-> STAT3 [SIGNOR;InnateDB]; STAT3 -T(+)-> NPY [CollecTRI;NTNUcuration_CollecTRI2;
-Q4	H_PROTECT	origin_aware_on_v4_tables	1	Dactolisib	mimics	13	2	2	new_to_legend		CONDITIONAL_IF_PROTECTIVE	ATR -P(+)-> ETV1 [SIGNOR]; ETV1 -T(+)-> GRIN2C [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_Co
-Q4	H_PROTECT	origin_aware_on_v4_tables	2	Ve-821	mimics	1	1	1	new_to_legend		CONDITIONAL_IF_PROTECTIVE	ATR -P(+)-> ETV1 [SIGNOR]; ETV1 -T(+)-> GRIN2C [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_Co
-Q4	H_PROTECT	origin_aware_on_v4_tables	3	BERZOSERTIB	mimics	2	1	1	new_to_legend		CONDITIONAL_IF_PROTECTIVE	ATR -P(+)-> ETV1 [SIGNOR]; ETV1 -T(+)-> GRIN2C [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_Co
-Q4	H_PROTECT	origin_aware_on_v4_tables	4	CERALASERTIB	mimics	3	1	1	known	DROP	CONDITIONAL_IF_PROTECTIVE	ATR -P(+)-> ETV1 [SIGNOR]; ETV1 -T(+)-> GRIN2C [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_Co
-Q4	H_PROTECT	origin_aware_on_v4_tables	5	ELIMUSERTIB	mimics	4	1	1	new_to_legend		CONDITIONAL_IF_PROTECTIVE	ATR -P(+)-> ETV1 [SIGNOR]; ETV1 -T(+)-> GRIN2C [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_Co
-Q4	H_PROTECT	origin_aware_on_v4_tables	6	M4344	mimics	5	1	1	new_to_legend		CONDITIONAL_IF_PROTECTIVE	ATR -P(+)-> ETV1 [SIGNOR]; ETV1 -T(+)-> GRIN2C [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_Co
-Q4	H_PROTECT	origin_aware_on_v4_tables	7	Tuvusertib	mimics	7	1	1	new_to_legend		CONDITIONAL_IF_PROTECTIVE	ATR -P(+)-> ETV1 [SIGNOR]; ETV1 -T(+)-> GRIN2C [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_Co
-Q4	H_PROTECT	origin_aware_on_v4_tables	8	Gartisertib	mimics	8	1	1	new_to_legend		CONDITIONAL_IF_PROTECTIVE	ATR -P(+)-> ETV1 [SIGNOR]; ETV1 -T(+)-> GRIN2C [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_Co
-Q5	H_HARM	origin_aware_on_v4_tables	1	JTE-151	opposes	1	2	2	known	INCONCLUSIVE	CONDITIONAL_IF_HARMFUL	RORC -T(+)-> IL6 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
-Q5	H_HARM	origin_aware_on_v4_tables	2	Alrt 1550	opposes	33	2	2	new_to_legend		CONDITIONAL_IF_HARMFUL	RORC -T(+)-> IL6 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
-Q5	H_HARM	origin_aware_on_v4_tables	3	VOCLOSPORIN	opposes	35	2	3	new_to_legend		CONDITIONAL_IF_HARMFUL	PPP3CA -P(+)-> NFATC4 [SIGNOR;KEGG-MEDICUS]; NFATC4 -T(+)-> TNF [CytReg_CollecTRI2;CollecT
-Q5	H_HARM	origin_aware_on_v4_tables	4	OMAVELOXOLONE	opposes	37	2	3	new_to_legend		CONDITIONAL_IF_HARMFUL	NFE2L2 -T(-)-> IL1B [CytReg_CollecTRI2;CollecTRI;ExTRI_CollecTRI;CollecTRI2;CytReg_CollecT
-Q5	H_HARM	origin_aware_on_v4_tables	5	Pf-03758309	opposes	39	2	3	new_to_legend		CONDITIONAL_IF_HARMFUL	PAK4 -P(-)-> NFE2L2 [SIGNOR;Sparser_ProtMapper;ProtMapper]; NFE2L2 -T(-)-> IL1B [CytReg_Co
-Q5	H_HARM	origin_aware_on_v4_tables	6	CD24FC	opposes	2	1	2	new_to_legend		CONDITIONAL_IF_HARMFUL	HMGB1 -T(+)-> IL1B [CytReg_CollecTRI2;CollecTRI;CollecTRI2;CytReg_CollecTRI;ExTRI2_CollecT
-Q5	H_HARM	origin_aware_on_v4_tables	7	Bifonazole	opposes	3	1	2	new_to_legend		CONDITIONAL_IF_HARMFUL	HMGB1 -T(+)-> IL1B [CytReg_CollecTRI2;CollecTRI;CollecTRI2;CytReg_CollecTRI;ExTRI2_CollecT
-Q5	H_HARM	origin_aware_on_v4_tables	8	L6H21	opposes	4	1	2	new_to_legend		CONDITIONAL_IF_HARMFUL	LY96 -P(+)-> HMGB1 [SIGNOR]; HMGB1 -T(+)-> IL1B [CytReg_CollecTRI2;CollecTRI;CollecTRI2;Cy
-Q5	H_PROTECT	origin_aware_on_v4_tables	1	25-Hydroxycholesterol	mimics	1	2	2	new_to_legend		CONDITIONAL_IF_PROTECTIVE	RORC -T(+)-> IL6 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
-Q5	H_PROTECT	origin_aware_on_v4_tables	2	Gne-3500	mimics	2	2	2	new_to_legend		CONDITIONAL_IF_PROTECTIVE	RORC -T(+)-> IL6 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
-Q5	H_PROTECT	origin_aware_on_v4_tables	3	Sr2211	mimics	3	2	2	new_to_legend		CONDITIONAL_IF_PROTECTIVE	RORC -T(+)-> IL6 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
-Q5	H_PROTECT	origin_aware_on_v4_tables	4	Compound 32 [Pmid: 31638797]	mimics	4	2	2	new_to_legend		CONDITIONAL_IF_PROTECTIVE	RORC -T(+)-> IL6 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
-Q5	H_PROTECT	origin_aware_on_v4_tables	5	Tak-828F	mimics	5	2	2	new_to_legend		CONDITIONAL_IF_PROTECTIVE	RORC -T(+)-> IL6 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
-Q5	H_PROTECT	origin_aware_on_v4_tables	6	Azd0284	mimics	6	2	2	new_to_legend		CONDITIONAL_IF_PROTECTIVE	RORC -T(+)-> IL6 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
-Q5	H_PROTECT	origin_aware_on_v4_tables	7	Rorc2 Inverse Agonist 66 [Pmid: 30130103]	mimics	7	2	2	new_to_legend		CONDITIONAL_IF_PROTECTIVE	RORC -T(+)-> IL6 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
-Q5	H_PROTECT	origin_aware_on_v4_tables	8	Mrl-871	mimics	8	2	2	new_to_legend		CONDITIONAL_IF_PROTECTIVE	RORC -T(+)-> IL6 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
-Q6	H_HARM	origin_aware_on_v4_tables	1	Ag-17724	opposes	1	1	1	new_to_legend		CONDITIONAL_IF_HARMFUL	PIN1 -T(+)-> MYC [CollecTRI;CollecTRI2;GOA_CollecTRI2;ExTRI2_CollecTRI2;GOA_CollecTRI]
-Q6	H_HARM	origin_aware_on_v4_tables	2	Stm2457	opposes	1	1	1	known	DROP	CONDITIONAL_IF_HARMFUL	METTL3 -P(+)-> USP13 [SIGNOR]; USP13 -P(+)-> MYC [SIGNOR]
-Q6	H_HARM	origin_aware_on_v4_tables	3	Bjp-06-005-3	opposes	2	1	1	new_to_legend		CONDITIONAL_IF_HARMFUL	PIN1 -T(+)-> MYC [CollecTRI;CollecTRI2;GOA_CollecTRI2;ExTRI2_CollecTRI2;GOA_CollecTRI]
-Q6	H_HARM	origin_aware_on_v4_tables	4	Stc-15	opposes	2	1	1	new_to_legend		CONDITIONAL_IF_HARMFUL	METTL3 -P(+)-> USP13 [SIGNOR]; USP13 -P(+)-> MYC [SIGNOR]
-Q6	H_HARM	origin_aware_on_v4_tables	5	Compound 20 [Pmid: 25091930]	opposes	3	1	1	new_to_legend		CONDITIONAL_IF_HARMFUL	PIN1 -T(+)-> MYC [CollecTRI;CollecTRI2;GOA_CollecTRI2;ExTRI2_CollecTRI2;GOA_CollecTRI]
-Q6	H_HARM	origin_aware_on_v4_tables	6	Epz004777	opposes	3	1	1	new_to_legend		CONDITIONAL_IF_HARMFUL	DOT1L -P(+)-> MYC [SIGNOR]
-Q6	H_HARM	origin_aware_on_v4_tables	7	Sulfopin	opposes	4	1	1	known	KEEP	CONDITIONAL_IF_HARMFUL	PIN1 -T(+)-> MYC [CollecTRI;CollecTRI2;GOA_CollecTRI2;ExTRI2_CollecTRI2;GOA_CollecTRI]
-Q6	H_HARM	origin_aware_on_v4_tables	8	Sgc0946	opposes	4	1	1	new_to_legend		CONDITIONAL_IF_HARMFUL	DOT1L -P(+)-> MYC [SIGNOR]
-Q6	H_PROTECT	origin_aware_on_v4_tables	1	Gnf4877	mimics	1	1	1	new_to_legend		CONDITIONAL_IF_PROTECTIVE	DYRK1A -P(-)-> FOXO6 [SIGNOR]; FOXO6 -T(+)-> MYC [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_
-Q6	H_PROTECT	origin_aware_on_v4_tables	2	Compound 3 [Pmid: 25408830]	mimics	1	1	1	new_to_legend		CONDITIONAL_IF_PROTECTIVE	BRD4 -P(-)-> MYC [SIGNOR;REACH_ProtMapper;ProtMapper;Sparser_ProtMapper;SIGNOR_ProtMapper]
-Q6	H_PROTECT	origin_aware_on_v4_tables	3	Compound 2-2C [Pmid: 32003560]	mimics	2	1	1	new_to_legend		CONDITIONAL_IF_PROTECTIVE	DYRK1A -P(-)-> FOXO6 [SIGNOR]; FOXO6 -T(+)-> MYC [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_
-Q6	H_PROTECT	origin_aware_on_v4_tables	4	Pfi-1	mimics	2	1	1	new_to_legend		CONDITIONAL_IF_PROTECTIVE	BRD4 -P(-)-> MYC [SIGNOR;REACH_ProtMapper;ProtMapper;Sparser_ProtMapper;SIGNOR_ProtMapper]
-Q6	H_PROTECT	origin_aware_on_v4_tables	5	Gnf2133	mimics	3	1	1	new_to_legend		CONDITIONAL_IF_PROTECTIVE	DYRK1A -P(-)-> FOXO6 [SIGNOR]; FOXO6 -T(+)-> MYC [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_
-Q6	H_PROTECT	origin_aware_on_v4_tables	6	Ms436	mimics	3	1	1	new_to_legend		CONDITIONAL_IF_PROTECTIVE	BRD4 -P(-)-> MYC [SIGNOR;REACH_ProtMapper;ProtMapper;Sparser_ProtMapper;SIGNOR_ProtMapper]
-Q6	H_PROTECT	origin_aware_on_v4_tables	7	Ethyl 3-[(E)-2-Amino-1-Cyanoethenyl]-6,7-Dichloro-1-Methyl-1H-Indole-2-Carboxylate	mimics	4	1	1	new_to_legend		CONDITIONAL_IF_PROTECTIVE	DYRK1A -P(-)-> FOXO6 [SIGNOR]; FOXO6 -T(+)-> MYC [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_
-Q6	H_PROTECT	origin_aware_on_v4_tables	8	AMREDOBRESIB	mimics	4	1	1	new_to_legend		CONDITIONAL_IF_PROTECTIVE	BRD4 -P(-)-> MYC [SIGNOR;REACH_ProtMapper;ProtMapper;Sparser_ProtMapper;SIGNOR_ProtMapper]
+Q2	H_HARM	IT9_baseline_v3_rank	1	Anti-Hif-1Alpha Lna Antisense Oligonucleotide Ezn-2968	opposes	1	1	15	new_to_legend	0.113	CONDITIONAL_IF_HARMFUL	HIF1A -T(+)-> BNIP3 [SIGNOR]
+Q2	H_HARM	IT9_baseline_v3_rank	2	Px-478	opposes	2	1	15	known	0.113	CONDITIONAL_IF_HARMFUL	HIF1A -T(+)-> BNIP3 [SIGNOR]
+Q2	H_HARM	IT9_baseline_v3_rank	3	Nitroglycerin	opposes	3	1	15	new_to_legend	0.113	CONDITIONAL_IF_HARMFUL	HIF1A -T(+)-> BNIP3 [SIGNOR]
+Q2	H_HARM	IT9_baseline_v3_rank	4	Sm-122	opposes	4	1	15	new_to_legend	0.113	CONDITIONAL_IF_HARMFUL	XIAP -P(+)-> HIF1A [SIGNOR]; HIF1A -T(+)-> BNIP3 [SIGNOR]
+Q2	H_HARM	IT9_baseline_v3_rank	5	Sm-337	opposes	5	1	15	new_to_legend	0.113	CONDITIONAL_IF_HARMFUL	XIAP -P(+)-> HIF1A [SIGNOR]; HIF1A -T(+)-> BNIP3 [SIGNOR]
+Q2	H_HARM	IT9_baseline_v3_rank	6	Azd5582	opposes	6	1	15	new_to_legend	0.113	CONDITIONAL_IF_HARMFUL	XIAP -P(+)-> HIF1A [SIGNOR]; HIF1A -T(+)-> BNIP3 [SIGNOR]
+Q2	H_HARM	IT9_baseline_v3_rank	7	ASTX-660	opposes	7	1	15	new_to_legend	0.113	CONDITIONAL_IF_HARMFUL	XIAP -P(+)-> HIF1A [SIGNOR]; HIF1A -T(+)-> BNIP3 [SIGNOR]
+Q2	H_HARM	IT9_baseline_v3_rank	8	Bv-6	opposes	8	1	15	new_to_legend	0.113	CONDITIONAL_IF_HARMFUL	XIAP -P(+)-> HIF1A [SIGNOR]; HIF1A -T(+)-> BNIP3 [SIGNOR]
+Q2	H_HARM	origin_aware_on_IT9_tables	1	Anti-Hif-1Alpha Lna Antisense Oligonucleotide Ezn-2968	opposes	1	1	15	new_to_legend	0.113	CONDITIONAL_IF_HARMFUL	HIF1A -T(+)-> BNIP3 [SIGNOR]
+Q2	H_HARM	origin_aware_on_IT9_tables	2	Px-478	opposes	2	1	15	known	0.113	CONDITIONAL_IF_HARMFUL	HIF1A -T(+)-> BNIP3 [SIGNOR]
+Q2	H_HARM	origin_aware_on_IT9_tables	3	Nitroglycerin	opposes	3	1	15	new_to_legend	0.113	CONDITIONAL_IF_HARMFUL	HIF1A -T(+)-> BNIP3 [SIGNOR]
+Q2	H_HARM	origin_aware_on_IT9_tables	4	Sm-122	opposes	4	1	15	new_to_legend	0.113	CONDITIONAL_IF_HARMFUL	XIAP -P(+)-> HIF1A [SIGNOR]; HIF1A -T(+)-> BNIP3 [SIGNOR]
+Q2	H_HARM	origin_aware_on_IT9_tables	5	Sm-337	opposes	5	1	15	new_to_legend	0.113	CONDITIONAL_IF_HARMFUL	XIAP -P(+)-> HIF1A [SIGNOR]; HIF1A -T(+)-> BNIP3 [SIGNOR]
+Q2	H_HARM	origin_aware_on_IT9_tables	6	Azd5582	opposes	6	1	15	new_to_legend	0.113	CONDITIONAL_IF_HARMFUL	XIAP -P(+)-> HIF1A [SIGNOR]; HIF1A -T(+)-> BNIP3 [SIGNOR]
+Q2	H_HARM	origin_aware_on_IT9_tables	7	ASTX-660	opposes	7	1	15	new_to_legend	0.113	CONDITIONAL_IF_HARMFUL	XIAP -P(+)-> HIF1A [SIGNOR]; HIF1A -T(+)-> BNIP3 [SIGNOR]
+Q2	H_HARM	origin_aware_on_IT9_tables	8	Bv-6	opposes	8	1	15	new_to_legend	0.113	CONDITIONAL_IF_HARMFUL	XIAP -P(+)-> HIF1A [SIGNOR]; HIF1A -T(+)-> BNIP3 [SIGNOR]
+Q2	H_PROTECT	IT9_baseline_v3_rank	1	Sorafenib	mimics	1	1	2	new_to_legend	0.758	CONDITIONAL_IF_PROTECTIVE	ZHX2 -T(-)-> HK2 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
+Q2	H_PROTECT	IT9_baseline_v3_rank	2	Regorafenib	mimics	2	1	2	new_to_legend	0.759	CONDITIONAL_IF_PROTECTIVE	ZHX2 -T(-)-> HK2 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
+Q2	H_PROTECT	IT9_baseline_v3_rank	3	Compound 1O [Pmid: 24210504]	mimics	3	1	2	new_to_legend	0.757	CONDITIONAL_IF_PROTECTIVE	GRK5 -P(-)-> HDAC5 [SIGNOR]; HDAC5 -T(+)-> SLC2A1 [CollecTRI;TRRUST_CollecTRI;CollecTRI2;E
+Q2	H_PROTECT	IT9_baseline_v3_rank	4	1-Cyclohexyl-N-{[1-(4-Methylphenyl)-1H-Indol-3-Yl]Methyl}Methanamine	mimics	4	1	2	new_to_legend	0.760	CONDITIONAL_IF_PROTECTIVE	ESRRA -T(-)-> LDHB [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Cura
+Q2	H_PROTECT	IT9_baseline_v3_rank	5	Xct790	mimics	5	1	2	new_to_legend	0.760	CONDITIONAL_IF_PROTECTIVE	ESRRA -T(-)-> LDHB [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Cura
+Q2	H_PROTECT	IT9_baseline_v3_rank	6	Desidustat	mimics	6	1	4	new_to_legend	0.380	CONDITIONAL_IF_PROTECTIVE	EGLN2 -P(-)-> FOXO3 [SIGNOR]; FOXO3 -T(+)-> BNIP3 [CollecTRI;ExTRI_CollecTRI;CollecTRI2;Do
+Q2	H_PROTECT	IT9_baseline_v3_rank	7	ROXADUSTAT	mimics	7	1	4	known	0.382	CONDITIONAL_IF_PROTECTIVE	EGLN2 -P(-)-> FOXO3 [SIGNOR]; FOXO3 -T(+)-> SLC2A1 [CollecTRI;NTNUcuration_CollecTRI2;ExTR
+Q2	H_PROTECT	IT9_baseline_v3_rank	8	DAPRODUSTAT	mimics	8	1	4	new_to_legend	0.382	CONDITIONAL_IF_PROTECTIVE	EGLN2 -P(-)-> FOXO3 [SIGNOR]; FOXO3 -T(+)-> SLC2A1 [CollecTRI;NTNUcuration_CollecTRI2;ExTR
+Q2	H_PROTECT	origin_aware_on_IT9_tables	1	Sorafenib	mimics	1	1	2	new_to_legend	0.758	CONDITIONAL_IF_PROTECTIVE	ZHX2 -T(-)-> HK2 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
+Q2	H_PROTECT	origin_aware_on_IT9_tables	2	Regorafenib	mimics	2	1	2	new_to_legend	0.759	CONDITIONAL_IF_PROTECTIVE	ZHX2 -T(-)-> HK2 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
+Q2	H_PROTECT	origin_aware_on_IT9_tables	3	Compound 1O [Pmid: 24210504]	mimics	3	1	2	new_to_legend	0.757	CONDITIONAL_IF_PROTECTIVE	GRK5 -P(-)-> HDAC5 [SIGNOR]; HDAC5 -T(+)-> SLC2A1 [CollecTRI;TRRUST_CollecTRI;CollecTRI2;E
+Q2	H_PROTECT	origin_aware_on_IT9_tables	4	1-Cyclohexyl-N-{[1-(4-Methylphenyl)-1H-Indol-3-Yl]Methyl}Methanamine	mimics	4	1	2	new_to_legend	0.760	CONDITIONAL_IF_PROTECTIVE	ESRRA -T(-)-> LDHB [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Cura
+Q2	H_PROTECT	origin_aware_on_IT9_tables	5	Xct790	mimics	5	1	2	new_to_legend	0.760	CONDITIONAL_IF_PROTECTIVE	ESRRA -T(-)-> LDHB [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Cura
+Q2	H_PROTECT	origin_aware_on_IT9_tables	6	Desidustat	mimics	6	1	4	new_to_legend	0.380	CONDITIONAL_IF_PROTECTIVE	EGLN2 -P(-)-> FOXO3 [SIGNOR]; FOXO3 -T(+)-> BNIP3 [CollecTRI;ExTRI_CollecTRI;CollecTRI2;Do
+Q2	H_PROTECT	origin_aware_on_IT9_tables	7	ROXADUSTAT	mimics	7	1	4	known	0.382	CONDITIONAL_IF_PROTECTIVE	EGLN2 -P(-)-> FOXO3 [SIGNOR]; FOXO3 -T(+)-> SLC2A1 [CollecTRI;NTNUcuration_CollecTRI2;ExTR
+Q2	H_PROTECT	origin_aware_on_IT9_tables	8	DAPRODUSTAT	mimics	8	1	4	new_to_legend	0.382	CONDITIONAL_IF_PROTECTIVE	EGLN2 -P(-)-> FOXO3 [SIGNOR]; FOXO3 -T(+)-> SLC2A1 [CollecTRI;NTNUcuration_CollecTRI2;ExTR
+Q4	H_HARM	IT9_baseline_v3_rank	1	Mk2A Inhibitor	opposes	1	1	1	new_to_legend	1.000	CONDITIONAL_IF_HARMFUL	MAPKAPK2 -P(-)-> CDC25A [SIGNOR;SPIKE_LC;SPIKE]; CDC25A -P(+)-> FOXO1 [SIGNOR]; FOXO1 -T(+
+Q4	H_HARM	IT9_baseline_v3_rank	2	Gamcemetinib	opposes	2	1	1	known	1.000	CONDITIONAL_IF_HARMFUL	MAPKAPK2 -P(-)-> CDC25A [SIGNOR;SPIKE_LC;SPIKE]; CDC25A -P(+)-> FOXO1 [SIGNOR]; FOXO1 -T(+
+Q4	H_HARM	IT9_baseline_v3_rank	3	(10R)-10-Methyl-3-(6-Methylpyridin-3-Yl)-9,10,11,12-Tetrahydro-8H-[1,4]Diazepino[5',6':4,5]Thieno[3,2-F]Quinolin-8-One	opposes	3	1	1	new_to_legend	1.000	CONDITIONAL_IF_HARMFUL	MAPKAPK2 -P(-)-> CDC25A [SIGNOR;SPIKE_LC;SPIKE]; CDC25A -P(+)-> FOXO1 [SIGNOR]; FOXO1 -T(+
+Q4	H_HARM	IT9_baseline_v3_rank	4	Ccg258747	opposes	4	1	1	new_to_legend	1.000	CONDITIONAL_IF_HARMFUL	GRK2 -P(+)-> STK3 [SIGNOR;REACH_ProtMapper;ProtMapper;Sparser_ProtMapper;RLIMS-P_ProtMappe
+Q4	H_HARM	IT9_baseline_v3_rank	5	Compound 101 [Pmid: 21596927]	opposes	5	1	1	new_to_legend	1.000	CONDITIONAL_IF_HARMFUL	GRK2 -P(+)-> STK3 [SIGNOR;REACH_ProtMapper;ProtMapper;Sparser_ProtMapper;RLIMS-P_ProtMappe
+Q4	H_HARM	IT9_baseline_v3_rank	6	Biib091	opposes	6	1	1	new_to_legend	1.000	CONDITIONAL_IF_HARMFUL	BTK -P(-)-> STAT3 [SIGNOR;InnateDB]; STAT3 -T(+)-> NPY [CollecTRI;NTNUcuration_CollecTRI2;
+Q4	H_HARM	IT9_baseline_v3_rank	7	Compound 8A [Pmid: 23713581]	opposes	7	1	1	new_to_legend	1.000	CONDITIONAL_IF_HARMFUL	PTPRM -P(-)-> STAT3 [SIGNOR;REACH_ProtMapper;ProtMapper]; STAT3 -T(+)-> NPY [CollecTRI;NTN
+Q4	H_HARM	IT9_baseline_v3_rank	8	Cgi1746	opposes	8	1	1	new_to_legend	1.000	CONDITIONAL_IF_HARMFUL	BTK -P(-)-> STAT3 [SIGNOR;InnateDB]; STAT3 -T(+)-> NPY [CollecTRI;NTNUcuration_CollecTRI2;
+Q4	H_HARM	origin_aware_on_IT9_tables	1	Mk2A Inhibitor	opposes	1	1	1	new_to_legend	1.000	CONDITIONAL_IF_HARMFUL	MAPKAPK2 -P(-)-> CDC25A [SIGNOR;SPIKE_LC;SPIKE]; CDC25A -P(+)-> FOXO1 [SIGNOR]; FOXO1 -T(+
+Q4	H_HARM	origin_aware_on_IT9_tables	2	Gamcemetinib	opposes	2	1	1	known	1.000	CONDITIONAL_IF_HARMFUL	MAPKAPK2 -P(-)-> CDC25A [SIGNOR;SPIKE_LC;SPIKE]; CDC25A -P(+)-> FOXO1 [SIGNOR]; FOXO1 -T(+
+Q4	H_HARM	origin_aware_on_IT9_tables	3	(10R)-10-Methyl-3-(6-Methylpyridin-3-Yl)-9,10,11,12-Tetrahydro-8H-[1,4]Diazepino[5',6':4,5]Thieno[3,2-F]Quinolin-8-One	opposes	3	1	1	new_to_legend	1.000	CONDITIONAL_IF_HARMFUL	MAPKAPK2 -P(-)-> CDC25A [SIGNOR;SPIKE_LC;SPIKE]; CDC25A -P(+)-> FOXO1 [SIGNOR]; FOXO1 -T(+
+Q4	H_HARM	origin_aware_on_IT9_tables	4	Ccg258747	opposes	4	1	1	new_to_legend	1.000	CONDITIONAL_IF_HARMFUL	GRK2 -P(+)-> STK3 [SIGNOR;REACH_ProtMapper;ProtMapper;Sparser_ProtMapper;RLIMS-P_ProtMappe
+Q4	H_HARM	origin_aware_on_IT9_tables	5	Compound 101 [Pmid: 21596927]	opposes	5	1	1	new_to_legend	1.000	CONDITIONAL_IF_HARMFUL	GRK2 -P(+)-> STK3 [SIGNOR;REACH_ProtMapper;ProtMapper;Sparser_ProtMapper;RLIMS-P_ProtMappe
+Q4	H_HARM	origin_aware_on_IT9_tables	6	Biib091	opposes	6	1	1	new_to_legend	1.000	CONDITIONAL_IF_HARMFUL	BTK -P(-)-> STAT3 [SIGNOR;InnateDB]; STAT3 -T(+)-> NPY [CollecTRI;NTNUcuration_CollecTRI2;
+Q4	H_HARM	origin_aware_on_IT9_tables	7	Compound 8A [Pmid: 23713581]	opposes	7	1	1	new_to_legend	1.000	CONDITIONAL_IF_HARMFUL	PTPRM -P(-)-> STAT3 [SIGNOR;REACH_ProtMapper;ProtMapper]; STAT3 -T(+)-> NPY [CollecTRI;NTN
+Q4	H_HARM	origin_aware_on_IT9_tables	8	Cgi1746	opposes	8	1	1	new_to_legend	1.000	CONDITIONAL_IF_HARMFUL	BTK -P(-)-> STAT3 [SIGNOR;InnateDB]; STAT3 -T(+)-> NPY [CollecTRI;NTNUcuration_CollecTRI2;
+Q4	H_PROTECT	IT9_baseline_v3_rank	1	Ve-821	mimics	1	1	1	new_to_legend	1.000	CONDITIONAL_IF_PROTECTIVE	ATR -P(+)-> ETV1 [SIGNOR]; ETV1 -T(+)-> GRIN2C [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_Co
+Q4	H_PROTECT	IT9_baseline_v3_rank	2	BERZOSERTIB	mimics	2	1	1	new_to_legend	1.000	CONDITIONAL_IF_PROTECTIVE	ATR -P(+)-> ETV1 [SIGNOR]; ETV1 -T(+)-> GRIN2C [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_Co
+Q4	H_PROTECT	IT9_baseline_v3_rank	3	CERALASERTIB	mimics	3	1	1	known	1.000	CONDITIONAL_IF_PROTECTIVE	ATR -P(+)-> ETV1 [SIGNOR]; ETV1 -T(+)-> GRIN2C [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_Co
+Q4	H_PROTECT	IT9_baseline_v3_rank	4	ELIMUSERTIB	mimics	4	1	1	new_to_legend	1.000	CONDITIONAL_IF_PROTECTIVE	ATR -P(+)-> ETV1 [SIGNOR]; ETV1 -T(+)-> GRIN2C [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_Co
+Q4	H_PROTECT	IT9_baseline_v3_rank	5	M4344	mimics	5	1	1	new_to_legend	1.000	CONDITIONAL_IF_PROTECTIVE	ATR -P(+)-> ETV1 [SIGNOR]; ETV1 -T(+)-> GRIN2C [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_Co
+Q4	H_PROTECT	IT9_baseline_v3_rank	6	Tuvusertib	mimics	7	1	1	new_to_legend	1.000	CONDITIONAL_IF_PROTECTIVE	ATR -P(+)-> ETV1 [SIGNOR]; ETV1 -T(+)-> GRIN2C [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_Co
+Q4	H_PROTECT	IT9_baseline_v3_rank	7	Gartisertib	mimics	8	1	1	new_to_legend	1.000	CONDITIONAL_IF_PROTECTIVE	ATR -P(+)-> ETV1 [SIGNOR]; ETV1 -T(+)-> GRIN2C [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_Co
+Q4	H_PROTECT	IT9_baseline_v3_rank	8	Az20	mimics	10	1	1	new_to_legend	1.000	CONDITIONAL_IF_PROTECTIVE	ATR -P(+)-> ETV1 [SIGNOR]; ETV1 -T(+)-> GRIN2C [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_Co
+Q4	H_PROTECT	origin_aware_on_IT9_tables	1	Dactolisib	mimics	13	2	2	new_to_legend	0.870	CONDITIONAL_IF_PROTECTIVE	ATR -P(+)-> ETV1 [SIGNOR]; ETV1 -T(+)-> GRIN2C [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_Co
+Q4	H_PROTECT	origin_aware_on_IT9_tables	2	Ve-821	mimics	1	1	1	new_to_legend	1.000	CONDITIONAL_IF_PROTECTIVE	ATR -P(+)-> ETV1 [SIGNOR]; ETV1 -T(+)-> GRIN2C [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_Co
+Q4	H_PROTECT	origin_aware_on_IT9_tables	3	BERZOSERTIB	mimics	2	1	1	new_to_legend	1.000	CONDITIONAL_IF_PROTECTIVE	ATR -P(+)-> ETV1 [SIGNOR]; ETV1 -T(+)-> GRIN2C [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_Co
+Q4	H_PROTECT	origin_aware_on_IT9_tables	4	CERALASERTIB	mimics	3	1	1	known	1.000	CONDITIONAL_IF_PROTECTIVE	ATR -P(+)-> ETV1 [SIGNOR]; ETV1 -T(+)-> GRIN2C [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_Co
+Q4	H_PROTECT	origin_aware_on_IT9_tables	5	ELIMUSERTIB	mimics	4	1	1	new_to_legend	1.000	CONDITIONAL_IF_PROTECTIVE	ATR -P(+)-> ETV1 [SIGNOR]; ETV1 -T(+)-> GRIN2C [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_Co
+Q4	H_PROTECT	origin_aware_on_IT9_tables	6	M4344	mimics	5	1	1	new_to_legend	1.000	CONDITIONAL_IF_PROTECTIVE	ATR -P(+)-> ETV1 [SIGNOR]; ETV1 -T(+)-> GRIN2C [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_Co
+Q4	H_PROTECT	origin_aware_on_IT9_tables	7	Tuvusertib	mimics	7	1	1	new_to_legend	1.000	CONDITIONAL_IF_PROTECTIVE	ATR -P(+)-> ETV1 [SIGNOR]; ETV1 -T(+)-> GRIN2C [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_Co
+Q4	H_PROTECT	origin_aware_on_IT9_tables	8	Gartisertib	mimics	8	1	1	new_to_legend	1.000	CONDITIONAL_IF_PROTECTIVE	ATR -P(+)-> ETV1 [SIGNOR]; ETV1 -T(+)-> GRIN2C [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_Co
+Q5	H_HARM	IT9_baseline_v3_rank	1	JTE-151	opposes	1	2	2	known	0.500	CONDITIONAL_IF_HARMFUL	RORC -T(+)-> IL6 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
+Q5	H_HARM	IT9_baseline_v3_rank	2	CD24FC	opposes	2	1	2	new_to_legend	0.500	CONDITIONAL_IF_HARMFUL	HMGB1 -T(+)-> IL1B [CytReg_CollecTRI2;CollecTRI;CollecTRI2;CytReg_CollecTRI;ExTRI2_CollecT
+Q5	H_HARM	IT9_baseline_v3_rank	3	Bifonazole	opposes	3	1	2	new_to_legend	0.500	CONDITIONAL_IF_HARMFUL	HMGB1 -T(+)-> IL1B [CytReg_CollecTRI2;CollecTRI;CollecTRI2;CytReg_CollecTRI;ExTRI2_CollecT
+Q5	H_HARM	IT9_baseline_v3_rank	4	L6H21	opposes	4	1	2	new_to_legend	0.500	CONDITIONAL_IF_HARMFUL	LY96 -P(+)-> HMGB1 [SIGNOR]; HMGB1 -T(+)-> IL1B [CytReg_CollecTRI2;CollecTRI;CollecTRI2;Cy
+Q5	H_HARM	IT9_baseline_v3_rank	5	BI-2536	opposes	5	1	1	new_to_legend	0.995	CONDITIONAL_IF_HARMFUL	BRD4 -T(+)-> TNF [CollecTRI;CollecTRI2;IntAct_CollecTRI2;ExTRI2_CollecTRI2;IntAct_CollecTR
+Q5	H_HARM	IT9_baseline_v3_rank	6	Dual Brd4/Plk1 Inhibitor 23	opposes	6	1	1	new_to_legend	0.995	CONDITIONAL_IF_HARMFUL	BRD4 -T(+)-> TNF [CollecTRI;CollecTRI2;IntAct_CollecTRI2;ExTRI2_CollecTRI2;IntAct_CollecTR
+Q5	H_HARM	IT9_baseline_v3_rank	7	Compound 6 [Pmid: 30125504]	opposes	7	1	1	new_to_legend	0.995	CONDITIONAL_IF_HARMFUL	BRD4 -T(+)-> TNF [CollecTRI;CollecTRI2;IntAct_CollecTRI2;ExTRI2_CollecTRI2;IntAct_CollecTR
+Q5	H_HARM	IT9_baseline_v3_rank	8	Xy-06-007	opposes	8	1	1	new_to_legend	0.995	CONDITIONAL_IF_HARMFUL	BRD4 -T(+)-> TNF [CollecTRI;CollecTRI2;IntAct_CollecTRI2;ExTRI2_CollecTRI2;IntAct_CollecTR
+Q5	H_HARM	origin_aware_on_IT9_tables	1	JTE-151	opposes	1	2	2	known	0.500	CONDITIONAL_IF_HARMFUL	RORC -T(+)-> IL6 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
+Q5	H_HARM	origin_aware_on_IT9_tables	2	Alrt 1550	opposes	33	2	2	new_to_legend	0.500	CONDITIONAL_IF_HARMFUL	RORC -T(+)-> IL6 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
+Q5	H_HARM	origin_aware_on_IT9_tables	3	BENZIODARONE	opposes	35	2	3	new_to_legend	0.466	CONDITIONAL_IF_HARMFUL	CALM1 -P(+)-> PPP3CA [SIGNOR]; PPP3CA -P(+)-> NFATC4 [SIGNOR;KEGG-MEDICUS]; NFATC4 -T(+)->
+Q5	H_HARM	origin_aware_on_IT9_tables	4	PRENYLAMINE	opposes	37	2	3	new_to_legend	0.466	CONDITIONAL_IF_HARMFUL	CALM1 -P(+)-> PPP3CA [SIGNOR]; PPP3CA -P(+)-> NFATC4 [SIGNOR;KEGG-MEDICUS]; NFATC4 -T(+)->
+Q5	H_HARM	origin_aware_on_IT9_tables	5	VOCLOSPORIN	opposes	39	2	3	new_to_legend	0.466	CONDITIONAL_IF_HARMFUL	PPP3CA -P(+)-> NFATC4 [SIGNOR;KEGG-MEDICUS]; NFATC4 -T(+)-> TNF [CytReg_CollecTRI2;CollecT
+Q5	H_HARM	origin_aware_on_IT9_tables	6	OMAVELOXOLONE	opposes	41	2	3	known	0.333	CONDITIONAL_IF_HARMFUL	NFE2L2 -T(-)-> IL1B [CytReg_CollecTRI2;CollecTRI;ExTRI_CollecTRI;CollecTRI2;CytReg_CollecT
+Q5	H_HARM	origin_aware_on_IT9_tables	7	Pf-03758309	opposes	43	2	3	new_to_legend	0.333	CONDITIONAL_IF_HARMFUL	PAK4 -P(-)-> NFE2L2 [SIGNOR;Sparser_ProtMapper;ProtMapper]; NFE2L2 -T(-)-> IL1B [CytReg_Co
+Q5	H_HARM	origin_aware_on_IT9_tables	8	CD24FC	opposes	2	1	2	new_to_legend	0.500	CONDITIONAL_IF_HARMFUL	HMGB1 -T(+)-> IL1B [CytReg_CollecTRI2;CollecTRI;CollecTRI2;CytReg_CollecTRI;ExTRI2_CollecT
+Q5	H_PROTECT	IT9_baseline_v3_rank	1	25-Hydroxycholesterol	mimics	1	2	2	new_to_legend	0.500	CONDITIONAL_IF_PROTECTIVE	RORC -T(+)-> IL6 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
+Q5	H_PROTECT	IT9_baseline_v3_rank	2	Gne-3500	mimics	2	2	2	new_to_legend	0.500	CONDITIONAL_IF_PROTECTIVE	RORC -T(+)-> IL6 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
+Q5	H_PROTECT	IT9_baseline_v3_rank	3	Sr2211	mimics	3	2	2	new_to_legend	0.500	CONDITIONAL_IF_PROTECTIVE	RORC -T(+)-> IL6 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
+Q5	H_PROTECT	IT9_baseline_v3_rank	4	Compound 32 [Pmid: 31638797]	mimics	4	2	2	new_to_legend	0.500	CONDITIONAL_IF_PROTECTIVE	RORC -T(+)-> IL6 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
+Q5	H_PROTECT	IT9_baseline_v3_rank	5	Tak-828F	mimics	5	2	2	new_to_legend	0.500	CONDITIONAL_IF_PROTECTIVE	RORC -T(+)-> IL6 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
+Q5	H_PROTECT	IT9_baseline_v3_rank	6	Azd0284	mimics	6	2	2	new_to_legend	0.500	CONDITIONAL_IF_PROTECTIVE	RORC -T(+)-> IL6 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
+Q5	H_PROTECT	IT9_baseline_v3_rank	7	Rorc2 Inverse Agonist 66 [Pmid: 30130103]	mimics	7	2	2	new_to_legend	0.500	CONDITIONAL_IF_PROTECTIVE	RORC -T(+)-> IL6 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
+Q5	H_PROTECT	IT9_baseline_v3_rank	8	Mrl-871	mimics	8	2	2	new_to_legend	0.500	CONDITIONAL_IF_PROTECTIVE	RORC -T(+)-> IL6 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
+Q5	H_PROTECT	origin_aware_on_IT9_tables	1	25-Hydroxycholesterol	mimics	1	2	2	new_to_legend	0.500	CONDITIONAL_IF_PROTECTIVE	RORC -T(+)-> IL6 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
+Q5	H_PROTECT	origin_aware_on_IT9_tables	2	Gne-3500	mimics	2	2	2	new_to_legend	0.500	CONDITIONAL_IF_PROTECTIVE	RORC -T(+)-> IL6 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
+Q5	H_PROTECT	origin_aware_on_IT9_tables	3	Sr2211	mimics	3	2	2	new_to_legend	0.500	CONDITIONAL_IF_PROTECTIVE	RORC -T(+)-> IL6 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
+Q5	H_PROTECT	origin_aware_on_IT9_tables	4	Compound 32 [Pmid: 31638797]	mimics	4	2	2	new_to_legend	0.500	CONDITIONAL_IF_PROTECTIVE	RORC -T(+)-> IL6 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
+Q5	H_PROTECT	origin_aware_on_IT9_tables	5	Tak-828F	mimics	5	2	2	new_to_legend	0.500	CONDITIONAL_IF_PROTECTIVE	RORC -T(+)-> IL6 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
+Q5	H_PROTECT	origin_aware_on_IT9_tables	6	Azd0284	mimics	6	2	2	new_to_legend	0.500	CONDITIONAL_IF_PROTECTIVE	RORC -T(+)-> IL6 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
+Q5	H_PROTECT	origin_aware_on_IT9_tables	7	Rorc2 Inverse Agonist 66 [Pmid: 30130103]	mimics	7	2	2	new_to_legend	0.500	CONDITIONAL_IF_PROTECTIVE	RORC -T(+)-> IL6 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
+Q5	H_PROTECT	origin_aware_on_IT9_tables	8	Mrl-871	mimics	8	2	2	new_to_legend	0.500	CONDITIONAL_IF_PROTECTIVE	RORC -T(+)-> IL6 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
+Q6	H_HARM	IT9_baseline_v3_rank	1	Ag-17724	opposes	1	1	1	new_to_legend	1.000	CONDITIONAL_IF_HARMFUL	PIN1 -T(+)-> MYC [CollecTRI;CollecTRI2;GOA_CollecTRI2;ExTRI2_CollecTRI2;GOA_CollecTRI]
+Q6	H_HARM	IT9_baseline_v3_rank	2	Stm2457	opposes	1	1	1	known	1.000	CONDITIONAL_IF_HARMFUL	METTL3 -P(+)-> USP13 [SIGNOR]; USP13 -P(+)-> MYC [SIGNOR]
+Q6	H_HARM	IT9_baseline_v3_rank	3	Bjp-06-005-3	opposes	2	1	1	new_to_legend	1.000	CONDITIONAL_IF_HARMFUL	PIN1 -T(+)-> MYC [CollecTRI;CollecTRI2;GOA_CollecTRI2;ExTRI2_CollecTRI2;GOA_CollecTRI]
+Q6	H_HARM	IT9_baseline_v3_rank	4	Stc-15	opposes	2	1	1	new_to_legend	1.000	CONDITIONAL_IF_HARMFUL	METTL3 -P(+)-> USP13 [SIGNOR]; USP13 -P(+)-> MYC [SIGNOR]
+Q6	H_HARM	IT9_baseline_v3_rank	5	Compound 20 [Pmid: 25091930]	opposes	3	1	1	new_to_legend	1.000	CONDITIONAL_IF_HARMFUL	PIN1 -T(+)-> MYC [CollecTRI;CollecTRI2;GOA_CollecTRI2;ExTRI2_CollecTRI2;GOA_CollecTRI]
+Q6	H_HARM	IT9_baseline_v3_rank	6	Epz004777	opposes	3	1	1	new_to_legend	1.000	CONDITIONAL_IF_HARMFUL	DOT1L -P(+)-> MYC [SIGNOR]
+Q6	H_HARM	IT9_baseline_v3_rank	7	Sulfopin	opposes	4	1	1	known	1.000	CONDITIONAL_IF_HARMFUL	PIN1 -T(+)-> MYC [CollecTRI;CollecTRI2;GOA_CollecTRI2;ExTRI2_CollecTRI2;GOA_CollecTRI]
+Q6	H_HARM	IT9_baseline_v3_rank	8	Sgc0946	opposes	4	1	1	new_to_legend	1.000	CONDITIONAL_IF_HARMFUL	DOT1L -P(+)-> MYC [SIGNOR]
+Q6	H_HARM	origin_aware_on_IT9_tables	1	Ag-17724	opposes	1	1	1	new_to_legend	1.000	CONDITIONAL_IF_HARMFUL	PIN1 -T(+)-> MYC [CollecTRI;CollecTRI2;GOA_CollecTRI2;ExTRI2_CollecTRI2;GOA_CollecTRI]
+Q6	H_HARM	origin_aware_on_IT9_tables	2	Stm2457	opposes	1	1	1	known	1.000	CONDITIONAL_IF_HARMFUL	METTL3 -P(+)-> USP13 [SIGNOR]; USP13 -P(+)-> MYC [SIGNOR]
+Q6	H_HARM	origin_aware_on_IT9_tables	3	Bjp-06-005-3	opposes	2	1	1	new_to_legend	1.000	CONDITIONAL_IF_HARMFUL	PIN1 -T(+)-> MYC [CollecTRI;CollecTRI2;GOA_CollecTRI2;ExTRI2_CollecTRI2;GOA_CollecTRI]
+Q6	H_HARM	origin_aware_on_IT9_tables	4	Stc-15	opposes	2	1	1	new_to_legend	1.000	CONDITIONAL_IF_HARMFUL	METTL3 -P(+)-> USP13 [SIGNOR]; USP13 -P(+)-> MYC [SIGNOR]
+Q6	H_HARM	origin_aware_on_IT9_tables	5	Compound 20 [Pmid: 25091930]	opposes	3	1	1	new_to_legend	1.000	CONDITIONAL_IF_HARMFUL	PIN1 -T(+)-> MYC [CollecTRI;CollecTRI2;GOA_CollecTRI2;ExTRI2_CollecTRI2;GOA_CollecTRI]
+Q6	H_HARM	origin_aware_on_IT9_tables	6	Epz004777	opposes	3	1	1	new_to_legend	1.000	CONDITIONAL_IF_HARMFUL	DOT1L -P(+)-> MYC [SIGNOR]
+Q6	H_HARM	origin_aware_on_IT9_tables	7	Sulfopin	opposes	4	1	1	known	1.000	CONDITIONAL_IF_HARMFUL	PIN1 -T(+)-> MYC [CollecTRI;CollecTRI2;GOA_CollecTRI2;ExTRI2_CollecTRI2;GOA_CollecTRI]
+Q6	H_HARM	origin_aware_on_IT9_tables	8	Sgc0946	opposes	4	1	1	new_to_legend	1.000	CONDITIONAL_IF_HARMFUL	DOT1L -P(+)-> MYC [SIGNOR]
+Q6	H_PROTECT	IT9_baseline_v3_rank	1	Gnf4877	mimics	1	1	1	new_to_legend	1.000	CONDITIONAL_IF_PROTECTIVE	DYRK1A -P(-)-> FOXO6 [SIGNOR]; FOXO6 -T(+)-> MYC [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_
+Q6	H_PROTECT	IT9_baseline_v3_rank	2	(+)-Jq1	mimics	1	1	1	new_to_legend	1.000	CONDITIONAL_IF_PROTECTIVE	BRD4 -P(-)-> MYC [SIGNOR;REACH_ProtMapper;ProtMapper;Sparser_ProtMapper;SIGNOR_ProtMapper]
+Q6	H_PROTECT	IT9_baseline_v3_rank	3	Compound 2-2C [Pmid: 32003560]	mimics	2	1	1	new_to_legend	1.000	CONDITIONAL_IF_PROTECTIVE	DYRK1A -P(-)-> FOXO6 [SIGNOR]; FOXO6 -T(+)-> MYC [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_
+Q6	H_PROTECT	IT9_baseline_v3_rank	4	Compound 3 [Pmid: 25408830]	mimics	2	1	1	new_to_legend	1.000	CONDITIONAL_IF_PROTECTIVE	BRD4 -P(-)-> MYC [SIGNOR;REACH_ProtMapper;ProtMapper;Sparser_ProtMapper;SIGNOR_ProtMapper]
+Q6	H_PROTECT	IT9_baseline_v3_rank	5	Gnf2133	mimics	3	1	1	new_to_legend	1.000	CONDITIONAL_IF_PROTECTIVE	DYRK1A -P(-)-> FOXO6 [SIGNOR]; FOXO6 -T(+)-> MYC [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_
+Q6	H_PROTECT	IT9_baseline_v3_rank	6	Pfi-1	mimics	3	1	1	new_to_legend	1.000	CONDITIONAL_IF_PROTECTIVE	BRD4 -P(-)-> MYC [SIGNOR;REACH_ProtMapper;ProtMapper;Sparser_ProtMapper;SIGNOR_ProtMapper]
+Q6	H_PROTECT	IT9_baseline_v3_rank	7	Ethyl 3-[(E)-2-Amino-1-Cyanoethenyl]-6,7-Dichloro-1-Methyl-1H-Indole-2-Carboxylate	mimics	4	1	1	new_to_legend	1.000	CONDITIONAL_IF_PROTECTIVE	DYRK1A -P(-)-> FOXO6 [SIGNOR]; FOXO6 -T(+)-> MYC [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_
+Q6	H_PROTECT	IT9_baseline_v3_rank	8	Ms436	mimics	4	1	1	new_to_legend	1.000	CONDITIONAL_IF_PROTECTIVE	BRD4 -P(-)-> MYC [SIGNOR;REACH_ProtMapper;ProtMapper;Sparser_ProtMapper;SIGNOR_ProtMapper]
+Q6	H_PROTECT	origin_aware_on_IT9_tables	1	Gnf4877	mimics	1	1	1	new_to_legend	1.000	CONDITIONAL_IF_PROTECTIVE	DYRK1A -P(-)-> FOXO6 [SIGNOR]; FOXO6 -T(+)-> MYC [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_
+Q6	H_PROTECT	origin_aware_on_IT9_tables	2	(+)-Jq1	mimics	1	1	1	new_to_legend	1.000	CONDITIONAL_IF_PROTECTIVE	BRD4 -P(-)-> MYC [SIGNOR;REACH_ProtMapper;ProtMapper;Sparser_ProtMapper;SIGNOR_ProtMapper]
+Q6	H_PROTECT	origin_aware_on_IT9_tables	3	Compound 2-2C [Pmid: 32003560]	mimics	2	1	1	new_to_legend	1.000	CONDITIONAL_IF_PROTECTIVE	DYRK1A -P(-)-> FOXO6 [SIGNOR]; FOXO6 -T(+)-> MYC [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_
+Q6	H_PROTECT	origin_aware_on_IT9_tables	4	Compound 3 [Pmid: 25408830]	mimics	2	1	1	new_to_legend	1.000	CONDITIONAL_IF_PROTECTIVE	BRD4 -P(-)-> MYC [SIGNOR;REACH_ProtMapper;ProtMapper;Sparser_ProtMapper;SIGNOR_ProtMapper]
+Q6	H_PROTECT	origin_aware_on_IT9_tables	5	Gnf2133	mimics	3	1	1	new_to_legend	1.000	CONDITIONAL_IF_PROTECTIVE	DYRK1A -P(-)-> FOXO6 [SIGNOR]; FOXO6 -T(+)-> MYC [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_
+Q6	H_PROTECT	origin_aware_on_IT9_tables	6	Pfi-1	mimics	3	1	1	new_to_legend	1.000	CONDITIONAL_IF_PROTECTIVE	BRD4 -P(-)-> MYC [SIGNOR;REACH_ProtMapper;ProtMapper;Sparser_ProtMapper;SIGNOR_ProtMapper]
+Q6	H_PROTECT	origin_aware_on_IT9_tables	7	Ethyl 3-[(E)-2-Amino-1-Cyanoethenyl]-6,7-Dichloro-1-Methyl-1H-Indole-2-Carboxylate	mimics	4	1	1	new_to_legend	1.000	CONDITIONAL_IF_PROTECTIVE	DYRK1A -P(-)-> FOXO6 [SIGNOR]; FOXO6 -T(+)-> MYC [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_
+Q6	H_PROTECT	origin_aware_on_IT9_tables	8	Ms436	mimics	4	1	1	new_to_legend	1.000	CONDITIONAL_IF_PROTECTIVE	BRD4 -P(-)-> MYC [SIGNOR;REACH_ProtMapper;ProtMapper;Sparser_ProtMapper;SIGNOR_ProtMapper]
+Q2	H_HARM	origin_aware_on_v4_tables	1	Anti-Hif-1Alpha Lna Antisense Oligonucleotide Ezn-2968	opposes	1	1	15	new_to_legend	0.113	CONDITIONAL_IF_HARMFUL	HIF1A -T(+)-> BNIP3 [SIGNOR]
+Q2	H_HARM	origin_aware_on_v4_tables	2	Px-478	opposes	2	1	15	known	0.113	CONDITIONAL_IF_HARMFUL	HIF1A -T(+)-> BNIP3 [SIGNOR]
+Q2	H_HARM	origin_aware_on_v4_tables	3	Nitroglycerin	opposes	3	1	15	new_to_legend	0.113	CONDITIONAL_IF_HARMFUL	HIF1A -T(+)-> BNIP3 [SIGNOR]
+Q2	H_HARM	origin_aware_on_v4_tables	4	Pracinostat	opposes	4	1	2	new_to_legend	0.759	CONDITIONAL_IF_HARMFUL	HDAC5 -T(+)-> SLC2A1 [CollecTRI;TRRUST_CollecTRI;CollecTRI2;ExTRI2_CollecTRI2;TRRUST_Colle
+Q2	H_HARM	origin_aware_on_v4_tables	5	Zavondemstat	opposes	5	1	10	new_to_legend	0.246	CONDITIONAL_IF_HARMFUL	KDM4C -P(+)-> HIF1A [SIGNOR]; HIF1A -T(+)-> HK2 [SIGNOR]
+Q2	H_HARM	origin_aware_on_v4_tables	6	Iox1	opposes	6	1	10	new_to_legend	0.246	CONDITIONAL_IF_HARMFUL	KDM4C -P(+)-> HIF1A [SIGNOR]; HIF1A -T(+)-> HK2 [SIGNOR]
+Q2	H_HARM	origin_aware_on_v4_tables	7	Ss-208	opposes	7	1	2	new_to_legend	0.743	CONDITIONAL_IF_HARMFUL	HDAC5 -T(+)-> SLC2A1 [CollecTRI;TRRUST_CollecTRI;CollecTRI2;ExTRI2_CollecTRI2;TRRUST_Colle
+Q2	H_HARM	origin_aware_on_v4_tables	8	Sm-122	opposes	8	1	10	new_to_legend	0.192	CONDITIONAL_IF_HARMFUL	XIAP -P(+)-> HIF1A [SIGNOR]; HIF1A -T(+)-> HK2 [SIGNOR]
+Q2	H_PROTECT	origin_aware_on_v4_tables	1	Sorafenib	mimics	1	1	2	new_to_legend	0.759	CONDITIONAL_IF_PROTECTIVE	ZHX2 -T(-)-> HK2 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
+Q2	H_PROTECT	origin_aware_on_v4_tables	2	Regorafenib	mimics	2	1	2	new_to_legend	0.759	CONDITIONAL_IF_PROTECTIVE	ZHX2 -T(-)-> HK2 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
+Q2	H_PROTECT	origin_aware_on_v4_tables	3	Compound 1O [Pmid: 24210504]	mimics	3	1	2	new_to_legend	0.757	CONDITIONAL_IF_PROTECTIVE	GRK5 -P(-)-> HDAC5 [SIGNOR]; HDAC5 -T(+)-> SLC2A1 [CollecTRI;TRRUST_CollecTRI;CollecTRI2;E
+Q2	H_PROTECT	origin_aware_on_v4_tables	4	G&Ouml; 6983	mimics	4	1	2	new_to_legend	0.749	CONDITIONAL_IF_PROTECTIVE	PRKCA -P(-)-> HDAC5 [SIGNOR;SIGNOR_ProtMapper;ProtMapper]; HDAC5 -T(+)-> SLC2A1 [CollecTRI
+Q2	H_PROTECT	origin_aware_on_v4_tables	5	G&Ouml; 6976	mimics	5	1	2	new_to_legend	0.759	CONDITIONAL_IF_PROTECTIVE	PRKCA -P(-)-> HDAC5 [SIGNOR;SIGNOR_ProtMapper;ProtMapper]; HDAC5 -T(+)-> SLC2A1 [CollecTRI
+Q2	H_PROTECT	origin_aware_on_v4_tables	6	1-Cyclohexyl-N-{[1-(4-Methylphenyl)-1H-Indol-3-Yl]Methyl}Methanamine	mimics	6	1	2	new_to_legend	0.760	CONDITIONAL_IF_PROTECTIVE	ESRRA -T(-)-> LDHB [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Cura
+Q2	H_PROTECT	origin_aware_on_v4_tables	7	Xct790	mimics	7	1	2	new_to_legend	0.760	CONDITIONAL_IF_PROTECTIVE	ESRRA -T(-)-> LDHB [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Cura
+Q2	H_PROTECT	origin_aware_on_v4_tables	8	Desidustat	mimics	8	1	4	new_to_legend	0.380	CONDITIONAL_IF_PROTECTIVE	EGLN2 -P(-)-> FOXO3 [SIGNOR]; FOXO3 -T(+)-> BNIP3 [CollecTRI;ExTRI_CollecTRI;CollecTRI2;Do
+Q4	H_HARM	origin_aware_on_v4_tables	1	Mk2A Inhibitor	opposes	1	1	1	new_to_legend	1.000	CONDITIONAL_IF_HARMFUL	MAPKAPK2 -P(-)-> CDC25A [SIGNOR;SPIKE_LC;SPIKE]; CDC25A -P(+)-> FOXO1 [SIGNOR]; FOXO1 -T(+
+Q4	H_HARM	origin_aware_on_v4_tables	2	Gamcemetinib	opposes	2	1	1	known	1.000	CONDITIONAL_IF_HARMFUL	MAPKAPK2 -P(-)-> CDC25A [SIGNOR;SPIKE_LC;SPIKE]; CDC25A -P(+)-> FOXO1 [SIGNOR]; FOXO1 -T(+
+Q4	H_HARM	origin_aware_on_v4_tables	3	(10R)-10-Methyl-3-(6-Methylpyridin-3-Yl)-9,10,11,12-Tetrahydro-8H-[1,4]Diazepino[5',6':4,5]Thieno[3,2-F]Quinolin-8-One	opposes	3	1	1	new_to_legend	1.000	CONDITIONAL_IF_HARMFUL	MAPKAPK2 -P(-)-> CDC25A [SIGNOR;SPIKE_LC;SPIKE]; CDC25A -P(+)-> FOXO1 [SIGNOR]; FOXO1 -T(+
+Q4	H_HARM	origin_aware_on_v4_tables	4	Compound 8A [Pmid: 23713581]	opposes	4	1	1	new_to_legend	1.000	CONDITIONAL_IF_HARMFUL	PTPRM -P(-)-> STAT3 [SIGNOR;REACH_ProtMapper;ProtMapper]; STAT3 -T(+)-> NPY [CollecTRI;NTN
+Q4	H_HARM	origin_aware_on_v4_tables	5	Poseltinib	opposes	5	1	1	new_to_legend	1.000	CONDITIONAL_IF_HARMFUL	BTK -P(-)-> STAT3 [SIGNOR;InnateDB]; STAT3 -T(+)-> NPY [CollecTRI;NTNUcuration_CollecTRI2;
+Q4	H_HARM	origin_aware_on_v4_tables	6	Biib091	opposes	6	1	1	new_to_legend	1.000	CONDITIONAL_IF_HARMFUL	BTK -P(-)-> STAT3 [SIGNOR;InnateDB]; STAT3 -T(+)-> NPY [CollecTRI;NTNUcuration_CollecTRI2;
+Q4	H_HARM	origin_aware_on_v4_tables	7	Cgi1746	opposes	7	1	1	new_to_legend	1.000	CONDITIONAL_IF_HARMFUL	BTK -P(-)-> STAT3 [SIGNOR;InnateDB]; STAT3 -T(+)-> NPY [CollecTRI;NTNUcuration_CollecTRI2;
+Q4	H_HARM	origin_aware_on_v4_tables	8	IBRUTINIB	opposes	8	1	1	new_to_legend	1.000	CONDITIONAL_IF_HARMFUL	BTK -P(-)-> STAT3 [SIGNOR;InnateDB]; STAT3 -T(+)-> NPY [CollecTRI;NTNUcuration_CollecTRI2;
+Q4	H_PROTECT	origin_aware_on_v4_tables	1	Dactolisib	mimics	13	2	2	new_to_legend	0.870	CONDITIONAL_IF_PROTECTIVE	ATR -P(+)-> ETV1 [SIGNOR]; ETV1 -T(+)-> GRIN2C [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_Co
+Q4	H_PROTECT	origin_aware_on_v4_tables	2	Ve-821	mimics	1	1	1	new_to_legend	1.000	CONDITIONAL_IF_PROTECTIVE	ATR -P(+)-> ETV1 [SIGNOR]; ETV1 -T(+)-> GRIN2C [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_Co
+Q4	H_PROTECT	origin_aware_on_v4_tables	3	BERZOSERTIB	mimics	2	1	1	new_to_legend	1.000	CONDITIONAL_IF_PROTECTIVE	ATR -P(+)-> ETV1 [SIGNOR]; ETV1 -T(+)-> GRIN2C [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_Co
+Q4	H_PROTECT	origin_aware_on_v4_tables	4	CERALASERTIB	mimics	3	1	1	known	1.000	CONDITIONAL_IF_PROTECTIVE	ATR -P(+)-> ETV1 [SIGNOR]; ETV1 -T(+)-> GRIN2C [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_Co
+Q4	H_PROTECT	origin_aware_on_v4_tables	5	ELIMUSERTIB	mimics	4	1	1	new_to_legend	1.000	CONDITIONAL_IF_PROTECTIVE	ATR -P(+)-> ETV1 [SIGNOR]; ETV1 -T(+)-> GRIN2C [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_Co
+Q4	H_PROTECT	origin_aware_on_v4_tables	6	M4344	mimics	5	1	1	new_to_legend	1.000	CONDITIONAL_IF_PROTECTIVE	ATR -P(+)-> ETV1 [SIGNOR]; ETV1 -T(+)-> GRIN2C [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_Co
+Q4	H_PROTECT	origin_aware_on_v4_tables	7	Tuvusertib	mimics	7	1	1	new_to_legend	1.000	CONDITIONAL_IF_PROTECTIVE	ATR -P(+)-> ETV1 [SIGNOR]; ETV1 -T(+)-> GRIN2C [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_Co
+Q4	H_PROTECT	origin_aware_on_v4_tables	8	Gartisertib	mimics	8	1	1	new_to_legend	1.000	CONDITIONAL_IF_PROTECTIVE	ATR -P(+)-> ETV1 [SIGNOR]; ETV1 -T(+)-> GRIN2C [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_Co
+Q5	H_HARM	origin_aware_on_v4_tables	1	JTE-151	opposes	1	2	2	known	0.500	CONDITIONAL_IF_HARMFUL	RORC -T(+)-> IL6 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
+Q5	H_HARM	origin_aware_on_v4_tables	2	Alrt 1550	opposes	33	2	2	new_to_legend	0.500	CONDITIONAL_IF_HARMFUL	RORC -T(+)-> IL6 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
+Q5	H_HARM	origin_aware_on_v4_tables	3	VOCLOSPORIN	opposes	35	2	3	new_to_legend	0.466	CONDITIONAL_IF_HARMFUL	PPP3CA -P(+)-> NFATC4 [SIGNOR;KEGG-MEDICUS]; NFATC4 -T(+)-> TNF [CytReg_CollecTRI2;CollecT
+Q5	H_HARM	origin_aware_on_v4_tables	4	OMAVELOXOLONE	opposes	37	2	3	known	0.333	CONDITIONAL_IF_HARMFUL	NFE2L2 -T(-)-> IL1B [CytReg_CollecTRI2;CollecTRI;ExTRI_CollecTRI;CollecTRI2;CytReg_CollecT
+Q5	H_HARM	origin_aware_on_v4_tables	5	Pf-03758309	opposes	39	2	3	new_to_legend	0.333	CONDITIONAL_IF_HARMFUL	PAK4 -P(-)-> NFE2L2 [SIGNOR;Sparser_ProtMapper;ProtMapper]; NFE2L2 -T(-)-> IL1B [CytReg_Co
+Q5	H_HARM	origin_aware_on_v4_tables	6	CD24FC	opposes	2	1	2	new_to_legend	0.500	CONDITIONAL_IF_HARMFUL	HMGB1 -T(+)-> IL1B [CytReg_CollecTRI2;CollecTRI;CollecTRI2;CytReg_CollecTRI;ExTRI2_CollecT
+Q5	H_HARM	origin_aware_on_v4_tables	7	Bifonazole	opposes	3	1	2	new_to_legend	0.500	CONDITIONAL_IF_HARMFUL	HMGB1 -T(+)-> IL1B [CytReg_CollecTRI2;CollecTRI;CollecTRI2;CytReg_CollecTRI;ExTRI2_CollecT
+Q5	H_HARM	origin_aware_on_v4_tables	8	L6H21	opposes	4	1	2	new_to_legend	0.500	CONDITIONAL_IF_HARMFUL	LY96 -P(+)-> HMGB1 [SIGNOR]; HMGB1 -T(+)-> IL1B [CytReg_CollecTRI2;CollecTRI;CollecTRI2;Cy
+Q5	H_PROTECT	origin_aware_on_v4_tables	1	25-Hydroxycholesterol	mimics	1	2	2	new_to_legend	0.500	CONDITIONAL_IF_PROTECTIVE	RORC -T(+)-> IL6 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
+Q5	H_PROTECT	origin_aware_on_v4_tables	2	Gne-3500	mimics	2	2	2	new_to_legend	0.500	CONDITIONAL_IF_PROTECTIVE	RORC -T(+)-> IL6 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
+Q5	H_PROTECT	origin_aware_on_v4_tables	3	Sr2211	mimics	3	2	2	new_to_legend	0.500	CONDITIONAL_IF_PROTECTIVE	RORC -T(+)-> IL6 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
+Q5	H_PROTECT	origin_aware_on_v4_tables	4	Compound 32 [Pmid: 31638797]	mimics	4	2	2	new_to_legend	0.500	CONDITIONAL_IF_PROTECTIVE	RORC -T(+)-> IL6 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
+Q5	H_PROTECT	origin_aware_on_v4_tables	5	Tak-828F	mimics	5	2	2	new_to_legend	0.500	CONDITIONAL_IF_PROTECTIVE	RORC -T(+)-> IL6 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
+Q5	H_PROTECT	origin_aware_on_v4_tables	6	Azd0284	mimics	6	2	2	new_to_legend	0.500	CONDITIONAL_IF_PROTECTIVE	RORC -T(+)-> IL6 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
+Q5	H_PROTECT	origin_aware_on_v4_tables	7	Rorc2 Inverse Agonist 66 [Pmid: 30130103]	mimics	7	2	2	new_to_legend	0.500	CONDITIONAL_IF_PROTECTIVE	RORC -T(+)-> IL6 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
+Q5	H_PROTECT	origin_aware_on_v4_tables	8	Mrl-871	mimics	8	2	2	new_to_legend	0.500	CONDITIONAL_IF_PROTECTIVE	RORC -T(+)-> IL6 [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_CollecTRI;CollecTRI2;NTNU.Curate
+Q6	H_HARM	origin_aware_on_v4_tables	1	Ag-17724	opposes	1	1	1	new_to_legend	1.000	CONDITIONAL_IF_HARMFUL	PIN1 -T(+)-> MYC [CollecTRI;CollecTRI2;GOA_CollecTRI2;ExTRI2_CollecTRI2;GOA_CollecTRI]
+Q6	H_HARM	origin_aware_on_v4_tables	2	Stm2457	opposes	1	1	1	known	1.000	CONDITIONAL_IF_HARMFUL	METTL3 -P(+)-> USP13 [SIGNOR]; USP13 -P(+)-> MYC [SIGNOR]
+Q6	H_HARM	origin_aware_on_v4_tables	3	Bjp-06-005-3	opposes	2	1	1	new_to_legend	1.000	CONDITIONAL_IF_HARMFUL	PIN1 -T(+)-> MYC [CollecTRI;CollecTRI2;GOA_CollecTRI2;ExTRI2_CollecTRI2;GOA_CollecTRI]
+Q6	H_HARM	origin_aware_on_v4_tables	4	Stc-15	opposes	2	1	1	new_to_legend	1.000	CONDITIONAL_IF_HARMFUL	METTL3 -P(+)-> USP13 [SIGNOR]; USP13 -P(+)-> MYC [SIGNOR]
+Q6	H_HARM	origin_aware_on_v4_tables	5	Compound 20 [Pmid: 25091930]	opposes	3	1	1	new_to_legend	1.000	CONDITIONAL_IF_HARMFUL	PIN1 -T(+)-> MYC [CollecTRI;CollecTRI2;GOA_CollecTRI2;ExTRI2_CollecTRI2;GOA_CollecTRI]
+Q6	H_HARM	origin_aware_on_v4_tables	6	Epz004777	opposes	3	1	1	new_to_legend	1.000	CONDITIONAL_IF_HARMFUL	DOT1L -P(+)-> MYC [SIGNOR]
+Q6	H_HARM	origin_aware_on_v4_tables	7	Sulfopin	opposes	4	1	1	known	1.000	CONDITIONAL_IF_HARMFUL	PIN1 -T(+)-> MYC [CollecTRI;CollecTRI2;GOA_CollecTRI2;ExTRI2_CollecTRI2;GOA_CollecTRI]
+Q6	H_HARM	origin_aware_on_v4_tables	8	Sgc0946	opposes	4	1	1	new_to_legend	1.000	CONDITIONAL_IF_HARMFUL	DOT1L -P(+)-> MYC [SIGNOR]
+Q6	H_PROTECT	origin_aware_on_v4_tables	1	Gnf4877	mimics	1	1	1	new_to_legend	1.000	CONDITIONAL_IF_PROTECTIVE	DYRK1A -P(-)-> FOXO6 [SIGNOR]; FOXO6 -T(+)-> MYC [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_
+Q6	H_PROTECT	origin_aware_on_v4_tables	2	Compound 3 [Pmid: 25408830]	mimics	1	1	1	new_to_legend	1.000	CONDITIONAL_IF_PROTECTIVE	BRD4 -P(-)-> MYC [SIGNOR;REACH_ProtMapper;ProtMapper;Sparser_ProtMapper;SIGNOR_ProtMapper]
+Q6	H_PROTECT	origin_aware_on_v4_tables	3	Compound 2-2C [Pmid: 32003560]	mimics	2	1	1	new_to_legend	1.000	CONDITIONAL_IF_PROTECTIVE	DYRK1A -P(-)-> FOXO6 [SIGNOR]; FOXO6 -T(+)-> MYC [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_
+Q6	H_PROTECT	origin_aware_on_v4_tables	4	Pfi-1	mimics	2	1	1	new_to_legend	1.000	CONDITIONAL_IF_PROTECTIVE	BRD4 -P(-)-> MYC [SIGNOR;REACH_ProtMapper;ProtMapper;Sparser_ProtMapper;SIGNOR_ProtMapper]
+Q6	H_PROTECT	origin_aware_on_v4_tables	5	Gnf2133	mimics	3	1	1	new_to_legend	1.000	CONDITIONAL_IF_PROTECTIVE	DYRK1A -P(-)-> FOXO6 [SIGNOR]; FOXO6 -T(+)-> MYC [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_
+Q6	H_PROTECT	origin_aware_on_v4_tables	6	Ms436	mimics	3	1	1	new_to_legend	1.000	CONDITIONAL_IF_PROTECTIVE	BRD4 -P(-)-> MYC [SIGNOR;REACH_ProtMapper;ProtMapper;Sparser_ProtMapper;SIGNOR_ProtMapper]
+Q6	H_PROTECT	origin_aware_on_v4_tables	7	Ethyl 3-[(E)-2-Amino-1-Cyanoethenyl]-6,7-Dichloro-1-Methyl-1H-Indole-2-Carboxylate	mimics	4	1	1	new_to_legend	1.000	CONDITIONAL_IF_PROTECTIVE	DYRK1A -P(-)-> FOXO6 [SIGNOR]; FOXO6 -T(+)-> MYC [CollecTRI;NTNUcuration_CollecTRI2;ExTRI_
+Q6	H_PROTECT	origin_aware_on_v4_tables	8	AMREDOBRESIB	mimics	4	1	1	new_to_legend	1.000	CONDITIONAL_IF_PROTECTIVE	BRD4 -P(-)-> MYC [SIGNOR;REACH_ProtMapper;ProtMapper;Sparser_ProtMapper;SIGNOR_ProtMapper]

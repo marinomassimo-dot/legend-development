@@ -28,7 +28,7 @@ if len(sys.argv) < 2 or sys.argv[1] in ("-h", "--help"):
     print(__doc__)
     raise SystemExit(0)
 
-import argparse, collections, csv, glob, gzip, json, os, re
+import argparse, collections, csv, glob, gzip, importlib.util, json, os, re, sys
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -36,7 +36,7 @@ DR = HERE.parent
 ROLE_VOCAB = {"harmful", "protective", "mixed", "composition", "unknown", "not_applicable"}
 BASIS_VOCAB = {"SOURCE_STATED", "NONE"}
 COLS = ["question", "seed_set", "arm", "rank", "family_id", "name", "hypothesis", "disposition", "role_status", "resolving_measure",
-        "n_seed_rows", "n_origins", "origin_note", "chain_status", "use_scope", "it9_state", "reconcile", "evaluation_forbidden_on", "v3_row_ref"]
+        "n_seed_rows", "n_origins", "origin_note", "chain_status", "chain_note", "top_seed_share", "contrary_seed_share", "chain_pair_walks", "chain_pair_share", "chain_contrary_walks", "reach_null_z", "use_scope", "it9_state", "reconcile", "evaluation_forbidden_on", "v3_row_ref"]
 
 
 def rd(p, gz=False):
@@ -288,6 +288,58 @@ def deepening(rows_out, v3, dr, it9):
     return out
 
 
+_ENG = None
+_GRAPHS = {}
+
+
+def _graph(level):
+    """v4 graph (edges read once) for walk decomposition; the walks use the same admissibility rules as the score."""
+    global _ENG
+    if _ENG is None:
+        saved = list(sys.argv); sys.argv = ["x", "selftest"]
+        try:
+            spec = importlib.util.spec_from_file_location("seed_engine_v4_dz", HERE / "engine_v4" / "seed_engine_v4.py")
+            _ENG = importlib.util.module_from_spec(spec); sys.modules["seed_engine_v4_dz"] = _ENG; spec.loader.exec_module(_ENG)
+        finally:
+            sys.argv = saved
+        _ENG._edges = _ENG.read_edges4()
+    if level not in _GRAPHS:
+        g = _ENG.Graph4(_ENG._edges, extras=[]); g.level = level; _GRAPHS[level] = g
+    return _GRAPHS[level]
+
+
+def explain_columns(contrib_rows, level):
+    """How much of the real calculation the shown chain stands for. The score is a signed sum over seeds (contrib_total) and, for each seed, over every admissible walk from
+    every target of the family; the displayed chain is ONE walk for the strongest seed. Returns (note, top_seed_share, contrary_seed_share, n_walks, chain_share_of_pair, contrary_walk_share).
+    chain_note: DOMINANT_CHAIN (one seed carries at least half of the gross contribution, no more than 10 percent contrary, one walk at least half of the pair) otherwise PARTIAL_EXAMPLE
+    with the reasons. A walk is arithmetic, not a confirmed mechanism."""
+    vals = [float(c["contrib_total"]) for c in contrib_rows]
+    gross = sum(abs(v) for v in vals)
+    if not vals or gross == 0:
+        return "NO_CONTRIBUTION_ROWS", "", "", "", "", ""
+    net = sum(vals)
+    top = max(contrib_rows, key=lambda c: abs(float(c["contrib_total"])))
+    top_share = abs(float(top["contrib_total"])) / gross
+    contrary = sum(abs(v) for v in vals if net and v * net < 0) / gross
+    t = top["main_target_hops1to3"] or top["main_target_hop0"]
+    nw, bsh, cw = 0, None, None
+    if t and float(top["contrib_hops1to3"] or 0) != 0:
+        g = _graph(level)
+        nw, bsh, cw = _ENG.walk_summary(g.walks(t, top["gene"]))
+    reasons = []
+    if top_share < 0.5:
+        reasons.append(f"strongest seed carries {top_share:.0%} of the gross contribution")
+    if contrary > 0.10:
+        reasons.append(f"{contrary:.0%} of the gross contribution opposes the net")
+    if bsh is not None and bsh < 0.5:
+        reasons.append(f"the shown walk is {bsh:.0%} of its pair's walk mass ({nw} walks)")
+    if cw is not None and cw > 0.10:
+        reasons.append(f"{cw:.0%} of the pair's walk mass opposes")
+    note = "DOMINANT_CHAIN" if not reasons else "PARTIAL_EXAMPLE: " + "; ".join(reasons)
+    f = lambda x: "" if x is None else f"{x:.3f}"
+    return note, f"{top_share:.3f}", f"{contrary:.3f}", nw if nw else "", f(bsh), f(cw)
+
+
 def build(v3, DR):
     """Dispositions of every candidate row of one engine run directory (v3 results, or results_v4)."""
     roles = load_roles(HERE / "question_roles.tsv")
@@ -296,6 +348,10 @@ def build(v3, DR):
     p1 = rd(DR / "generation_it9_p1_20261030" / "seeds.tsv")
     sidx = load_seed_index(str(DR / "generation_it9_p2_20261030" / "seeds_p1"), p1)
     rolereason = {norm(r["compound"]) for r in rd(HERE / "it9_role_dependent_reasons.tsv")}
+    reach = {}                          # IT11: z under the reach-matched null (null genes matched on the F5-admissible reach), where it was run
+    for pr in glob.glob(str(HERE / "results_v4_reach" / "proposals_p1_*_reach.tsv.gz")):
+        sn_ = os.path.basename(pr)[len("proposals_p1_"):-len("_reach.tsv.gz")]
+        reach[sn_] = {r["family_id"]: r["Z_ind_robust"] for r in rd(pr, True)}
     contrib_cache = {}
     n_by = collections.Counter()
     rows_out = collections.defaultdict(list)
@@ -327,8 +383,9 @@ def build(v3, DR):
                         break
             st9 = rec["state"] if rec else ""
             recon = "REVIEW_ROLE_DEPENDENT_REASON" if (rec and norm(rec["compound"]) in rolereason and disp.startswith("CONDITIONAL_IF_PROTECTIVE") and arm == "mimics") else ""
+            ex = explain_columns(contrib_cache[sn].get(r["family_id"], []), "expression" if "expression" in sn else "protein") if arm in ("opposes", "mimics") else ("", "", "", "", "", "")
             rows_out[q].append([q, sn, arm, r["rank"], r["family_id"], nm, hyp, disp, role["role_status"], role["resolving_measure"][:140], nrows, norig, onote,
-                                r["edge_chain_main_target_to_seed_1"][:90], dev_scope(nm, dev) if arm in ("opposes", "mimics") else "", st9, recon,
+                                r["edge_chain_main_target_to_seed_1"][:90], *ex, (reach.get(sn, {}).get(r["family_id"], "") if arm in ("opposes", "mimics") else ""), dev_scope(nm, dev) if arm in ("opposes", "mimics") else "", st9, recon,
                                 r["evaluation_forbidden_on"], f"{os.path.basename(f)}#{arm}{r['rank']}"])
             n_by[(q, arm, disp)] += 1
     return rows_out, n_by, it9
@@ -357,6 +414,19 @@ def cmd_run(a):
         sel = [r[:2] + ["IT9_baseline_v3_rank" if r[2] == "baseline_v3_rank" else "origin_aware_on_IT9_tables"] + r[3:] for r in old] + \
               [r for r in sel if r[2] == "origin_aware_on_v4_tables"]
     write_tsv(out / "deepening_candidates.tsv", SEL_COLS, sel)
+    ex_rows = []
+    for q, rows in sorted(rows_out.items()):
+        sel = [r for r in rows if r[2] in ("opposes", "mimics")]
+        ci = {c: COLS.index(c) for c in COLS}
+        def num(r, c):
+            v = r[ci[c]]
+            return float(v) if v not in ("", None) else None
+        dom = sum(1 for r in sel if str(r[ci["chain_note"]]).startswith("DOMINANT"))
+        ts = sorted(x for x in (num(r, "top_seed_share") for r in sel) if x is not None)
+        ex_rows.append([q, len(sel), dom, len(sel) - dom, f"{ts[len(ts) // 2]:.3f}" if ts else "",
+                        sum(1 for r in sel if (num(r, "contrary_seed_share") or 0) > 0.10), sum(1 for r in sel if (num(r, "chain_pair_share") or 1) < 0.5),
+                        sum(1 for r in sel if (num(r, "chain_contrary_walks") or 0) > 0.10)])
+    write_tsv(out / "explain_summary.tsv", ["question", "rows", "dominant_chain", "partial_example", "median_top_seed_share", "rows_contrary_seed_gt10pct", "rows_best_walk_lt50pct_of_pair", "rows_contrary_walks_gt10pct"], ex_rows)
     pf = phenotype_first(v3, DR, HERE / "phenotype_first_extra.tsv")
     cols = sorted({k for r in pf for k in r})
     with open(out / "phenotype_first.tsv", "w", encoding="utf-8", newline="") as fh:

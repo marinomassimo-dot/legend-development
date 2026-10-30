@@ -1,0 +1,6 @@
+seed_set	specific_under_3_nulls	specific_under_3_nulls_and_reach	lost_by_adding_reach	of_which_reach_z_between_2.5_and_3	spearman_z_total_vs_reach	median_abs_Q_lost	median_abs_Q_kept
+Q2_expression_tiersAB	67	61	6	6	0.920	0.00273	0.03964
+Q4_expression_tiersAB	88	86	2	1	0.930	0.00049	0.00086
+Q5_expression_tiersAB	354	347	7	7	0.985	0.00049	0.00672
+Q6_expression_tiersAB	540	526	14	13	0.967	0.00027	0.00508
+Q6_protein_tiersAB	180	136	44	2	0.912	0.02953	0.06415
