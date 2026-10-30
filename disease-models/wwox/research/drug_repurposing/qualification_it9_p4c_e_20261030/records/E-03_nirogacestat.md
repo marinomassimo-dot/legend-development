@@ -1,6 +1,6 @@
 # E-03 nirogacestat (Q6 expression, opposes; gamma-secretase -> NOTCH3 -> MYC)
 
-Scientist-b4, 2026-10-30. Not medical advice. The Q6 MYC seed is WEAK-DIRECTION-ONLY (`../qualification_it9_p4b_c_20261030/seed_assessment_Q6_MYC.md`): direction of MYC (higher in WWOX-deficient radial glia) is supported, valence is not, so "opposes" and "mimics" stay conditional.
+Scientist-b4, 2026-10-30. Not medical advice. The Q6 MYC seed is WEAK-DIRECTION-ONLY (`../../qualification_it9_p4b_c_20261030/seed_assessment_Q6_MYC.md`): direction of MYC (higher in WWOX-deficient radial glia) is supported, valence is not, so "opposes" and "mimics" stay conditional.
 
 ## Decision (first)
 
