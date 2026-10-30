@@ -1,0 +1,19 @@
+drug	reaction_term	http	reports
+pomalidomide	(all reports)	200	102194
+pomalidomide	Seizure	200	193
+pomalidomide	Convulsion	200	9
+pomalidomide	Epilepsy	200	11
+pomalidomide	Status epilepticus	404	0
+pomalidomide	Generalised tonic-clonic seizure	200	6
+lenalidomide	(all reports)	200	420080
+lenalidomide	Seizure	200	806
+lenalidomide	Convulsion	200	268
+lenalidomide	Epilepsy	200	114
+lenalidomide	Status epilepticus	200	25
+lenalidomide	Generalised tonic-clonic seizure	200	47
+sirolimus	(all reports)	200	13366
+sirolimus	Seizure	200	104
+sirolimus	Convulsion	200	30
+sirolimus	Epilepsy	200	37
+sirolimus	Status epilepticus	200	9
+sirolimus	Generalised tonic-clonic seizure	200	17

@@ -1,0 +1,6 @@
+table	source	target	stimulation_or_residue	inhibition_or_mod	sources	references	curation_effort	extra
+interactions	AURKB	MYC	True	False	ProtMapper;REACH_ProtMapper;SIGNOR;Sparser_ProtMapper	ProtMapper:32049046;SIGNOR:32049046	2	"{""SIGNOR_mechanism"": [""phosphorylation""]}"
+interactions	DYRK1A	MYC	False	True	ProtMapper;REACH_ProtMapper;RLIMS-P_ProtMapper;SIGNOR;Sparser_ProtMapper	SIGNOR:24901999;ProtMapper:24901999	2	"{""SIGNOR_mechanism"": [""phosphorylation""]}"
+interactions	CRBN_CUL4A_DDB1_RBX1	MYC	False	True	SIGNOR	SIGNOR:20551172	1	"{""SIGNOR_mechanism"": [""polyubiquitination""]}"
+interactions	DOT1L	MYC	True	False	SIGNOR	SIGNOR:26199140	1	"{""SIGNOR_mechanism"": [""binding""]}"
+interactions	MTOR	MYC	False	False	HPRD_MIMP;MIMP;PhosphoSite_MIMP;PhosphoSite_ProtMapper;ProtMapper;phosphoELM_MIMP		0	{}

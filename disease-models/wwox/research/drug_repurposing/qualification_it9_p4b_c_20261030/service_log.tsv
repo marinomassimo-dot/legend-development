@@ -1,0 +1,233 @@
+case	attempt	status	seconds	url	error
+P3-10:harmine:chembl	1	200	1.29	https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL269538.json	
+P3-10:harmine:chembl	1	200	0.97	https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_hierarchy__parent_chembl_id=CHEMBL269538&limit=50	
+P3-10:harmine:chembl	1	200	0.29	https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL269538.json	
+P3-10:harmine:chembl	1	200	4.29	https://www.ebi.ac.uk/chembl/api/data/mechanism.json?molecule_chembl_id=CHEMBL269538&limit=200&offset=0	
+P3-10:harmine:chembl	1	200	5.82	https://www.ebi.ac.uk/chembl/api/data/activity.json?molecule_chembl_id=CHEMBL269538&standard_type__in=IC50,Ki,Kd,EC50,DC50,Dmax,Potency,Inhibition&limit=200&offset=0	
+P3-10:harmine:chembl	1	200	2.62	https://www.ebi.ac.uk/chembl/api/data/activity.json?molecule_chembl_id=CHEMBL269538&standard_type__in=IC50,Ki,Kd,EC50,DC50,Dmax,Potency,Inhibition&limit=200&offset=200	
+P3-10:harmine:chembl	1	200	1.52	https://www.ebi.ac.uk/chembl/api/data/activity.json?molecule_chembl_id=CHEMBL269538&standard_type__in=IC50,Ki,Kd,EC50,DC50,Dmax,Potency,Inhibition&limit=200&offset=400	
+P3-10:harmine:chembl	1	200	2.7	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL1075094,CHEMBL1075115,CHEMBL1075117,CHEMBL1075138,CHEMBL1075163,CHEMBL1075280,CHEMBL1075281,CHEMBL1075282,CHEMBL1075283,CHE	
+P3-10:harmine:chembl	1	200	3.2	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL2111389,CHEMBL2111458,CHEMBL213,CHEMBL214,CHEMBL2147,CHEMBL220,CHEMBL222,CHEMBL224,CHEMBL225,CHEMBL228,CHEMBL229,CHEMBL2292	
+P3-10:harmine:chembl	1	200	6.53	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL3879801,CHEMBL390,CHEMBL3905,CHEMBL392,CHEMBL3923,CHEMBL394,CHEMBL395,CHEMBL398,CHEMBL399,CHEMBL400,CHEMBL4036,CHEMBL4040,C	
+P3-10:harmine:chembl	1	200	0.09	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL612849,CHEMBL612851,CHEMBL613102,CHEMBL613142,CHEMBL613508,CHEMBL613831,CHEMBL613859,CHEMBL614039,CHEMBL614088,CHEMBL614139	
+P3-10:harmine:pubchem	1	200	0.42	https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/harmine/property/InChIKey,IUPACName,MolecularFormula,CanonicalSMILES/JSON	
+P3-10:harmine:pubchem	1	200	0.38	https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/inchikey/BXNJHAXVSOCGBA-UHFFFAOYSA-N/property/InChIKey,IUPACName,MolecularFormula/JSON	
+P3-10:harmine:pubchem	1	200	0.36	https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/inchikey/BXNJHAXVSOCGBA-UHFFFAOYSA-N/synonyms/JSON	
+harmine:ctgov	1	200	0.45	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.intr=harmine	
+harmine:ctgov	1	200	0.13	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=epilepsy OR seizure OR epileptic encephalopathy OR infantile spasms&query.intr=harmine	
+harmine:ctgov	1	200	0.14	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=hypomyelination OR leukodystrophy&query.intr=harmine	
+harmine:ctgov	1	200	0.13	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=neurodevelopmental disorder OR intellectual disability OR autism OR microcephaly OR developmental delay OR 	
+harmine:ctgov	1	200	0.13	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=WWOX OR WOREE OR SCAR12&query.intr=harmine	
+harmine:ctgov	1	200	0.13	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=glioma OR glioblastoma OR central nervous system lymphoma OR brain metastases OR medulloblastoma&query.intr	
+harmine:ctgov	1	200	0.15	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.intr=harmine&query.term=child OR children OR pediatric OR paediatric OR infant	
+P3-11:pomalidomide:chembl	1	200	0.12	https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL43452.json	
+P3-11:pomalidomide:chembl	1	200	6.59	https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_hierarchy__parent_chembl_id=CHEMBL43452&limit=50	
+P3-11:pomalidomide:chembl	1	200	4.05	https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL43452.json	
+P3-11:pomalidomide:chembl	1	200	5.21	https://www.ebi.ac.uk/chembl/api/data/mechanism.json?molecule_chembl_id=CHEMBL43452&limit=200&offset=0	
+P3-11:pomalidomide:chembl	1	200	0.19	https://www.ebi.ac.uk/chembl/api/data/activity.json?molecule_chembl_id=CHEMBL43452&standard_type__in=IC50,Ki,Kd,EC50,DC50,Dmax,Potency,Inhibition&limit=200&offset=0	
+P3-11:pomalidomide:chembl	1	200	0.33	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL1795168,CHEMBL1825,CHEMBL1865,CHEMBL1909490,CHEMBL2093863,CHEMBL2366156,CHEMBL372,CHEMBL376,CHEMBL3763007,CHEMBL3763008,CHE	
+P3-11:pomalidomide:chembl	1	200	1.54	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL614725&limit=100	
+P3-11:pomalidomide:pubchem	1	200	0.26	https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/pomalidomide/property/InChIKey,IUPACName,MolecularFormula,CanonicalSMILES/JSON	
+P3-11:pomalidomide:pubchem	1	200	0.22	https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/inchikey/UVSMNLNDYGZFPF-UHFFFAOYSA-N/property/InChIKey,IUPACName,MolecularFormula/JSON	
+P3-11:pomalidomide:pubchem	1	200	0.35	https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/inchikey/UVSMNLNDYGZFPF-UHFFFAOYSA-N/synonyms/JSON	
+pomalidomide:ctgov	1	200	0.61	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.intr=pomalidomide	
+pomalidomide:ctgov	1	200	0.12	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=epilepsy OR seizure OR epileptic encephalopathy OR infantile spasms&query.intr=pomalidomide	
+pomalidomide:ctgov	1	200	0.14	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=hypomyelination OR leukodystrophy&query.intr=pomalidomide	
+pomalidomide:ctgov	1	200	0.13	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=neurodevelopmental disorder OR intellectual disability OR autism OR microcephaly OR developmental delay OR 	
+pomalidomide:ctgov	1	200	0.12	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=WWOX OR WOREE OR SCAR12&query.intr=pomalidomide	
+pomalidomide:ctgov	1	200	0.17	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=glioma OR glioblastoma OR central nervous system lymphoma OR brain metastases OR medulloblastoma&query.intr	
+pomalidomide:ctgov	1	200	0.2	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.intr=pomalidomide&query.term=child OR children OR pediatric OR paediatric OR infant	
+pomalidomide:openfda	1	200	2.64	"https://api.fda.gov/drug/label.json?limit=10&search=openfda.generic_name:""pomalidomide"""	
+P3-12:defosbarasertib:chembl	1	200	5.11	https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL215152.json	
+P3-12:defosbarasertib:chembl	1	200	2.98	https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_hierarchy__parent_chembl_id=CHEMBL215152&limit=50	
+P3-12:defosbarasertib:chembl	1	200	3.15	https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL215152.json	
+P3-12:defosbarasertib:chembl	1	200	0.1	https://www.ebi.ac.uk/chembl/api/data/mechanism.json?molecule_chembl_id=CHEMBL215152&limit=200&offset=0	
+P3-12:defosbarasertib:chembl	1	200	6.87	https://www.ebi.ac.uk/chembl/api/data/activity.json?molecule_chembl_id=CHEMBL215152&standard_type__in=IC50,Ki,Kd,EC50,DC50,Dmax,Potency,Inhibition&limit=200&offset=0	
+P3-12:defosbarasertib:chembl	1	200	0.84	https://www.ebi.ac.uk/chembl/api/data/activity.json?molecule_chembl_id=CHEMBL215152&standard_type__in=IC50,Ki,Kd,EC50,DC50,Dmax,Potency,Inhibition&limit=200&offset=200	
+P3-12:defosbarasertib:chembl	1	200	5.06	https://www.ebi.ac.uk/chembl/api/data/activity.json?molecule_chembl_id=CHEMBL215152&standard_type__in=IC50,Ki,Kd,EC50,DC50,Dmax,Potency,Inhibition&limit=200&offset=400	
+P3-12:defosbarasertib:chembl	1	200	4.58	https://www.ebi.ac.uk/chembl/api/data/activity.json?molecule_chembl_id=CHEMBL215152&standard_type__in=IC50,Ki,Kd,EC50,DC50,Dmax,Potency,Inhibition&limit=200&offset=600	
+P3-12:defosbarasertib:chembl	1	200	5.32	https://www.ebi.ac.uk/chembl/api/data/activity.json?molecule_chembl_id=CHEMBL215152&standard_type__in=IC50,Ki,Kd,EC50,DC50,Dmax,Potency,Inhibition&limit=200&offset=800	
+P3-12:defosbarasertib:chembl	1	200	4.54	https://www.ebi.ac.uk/chembl/api/data/activity.json?molecule_chembl_id=CHEMBL215152&standard_type__in=IC50,Ki,Kd,EC50,DC50,Dmax,Potency,Inhibition&limit=200&offset=1000	
+P3-12:defosbarasertib:chembl	1	200	5.93	https://www.ebi.ac.uk/chembl/api/data/activity.json?molecule_chembl_id=CHEMBL215152&standard_type__in=IC50,Ki,Kd,EC50,DC50,Dmax,Potency,Inhibition&limit=200&offset=1200	
+P3-12:defosbarasertib:chembl	1	200	7.39	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL1075104,CHEMBL1075133,CHEMBL1075155,CHEMBL1075167,CHEMBL1075181,CHEMBL1075195,CHEMBL1163101,CHEMBL1163104,CHEMBL1163106,CHE	
+P3-12:defosbarasertib:chembl	1	200	4.25	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL1974,CHEMBL1981,CHEMBL1991,CHEMBL2002,CHEMBL2007,CHEMBL2010634,CHEMBL203,CHEMBL2041,CHEMBL2068,CHEMBL2069163,CHEMBL2073,CHE	
+P3-12:defosbarasertib:chembl	1	200	16.58	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL2599,CHEMBL260,CHEMBL262,CHEMBL2634,CHEMBL2637,CHEMBL267,CHEMBL2689,CHEMBL2695,CHEMBL2708,CHEMBL2742,CHEMBL2743,CHEMBL2777,	
+P3-12:defosbarasertib:chembl	1	200	10.83	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL3179,CHEMBL3231,CHEMBL3234,CHEMBL3267,CHEMBL3268,CHEMBL3290,CHEMBL331,CHEMBL3313835,CHEMBL3357,CHEMBL3384,CHEMBL3385,CHEMBL	
+P3-12:defosbarasertib:chembl	1	200	0.71	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL3956,CHEMBL3959,CHEMBL3961,CHEMBL3973,CHEMBL3980,CHEMBL3981,CHEMBL3982,CHEMBL3983,CHEMBL3984,CHEMBL3987,CHEMBL3988,CHEMBL40	
+P3-12:defosbarasertib:chembl	1	200	3.31	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL4105857,CHEMBL4105858,CHEMBL4105885,CHEMBL4105886,CHEMBL4105887,CHEMBL4105888,CHEMBL4105889,CHEMBL4105890,CHEMBL4105891,CHE	
+P3-12:defosbarasertib:chembl	1	200	11.84	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL4442,CHEMBL4454,CHEMBL4482,CHEMBL4487,CHEMBL4501,CHEMBL4516,CHEMBL4522,CHEMBL4523,CHEMBL4523582,CHEMBL4524,CHEMBL4525,CHEMB	
+P3-12:defosbarasertib:chembl	1	200	1.14	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL5073,CHEMBL5081,CHEMBL5082,CHEMBL5084,CHEMBL5095,CHEMBL5116,CHEMBL5121,CHEMBL5122,CHEMBL5145,CHEMBL5146,CHEMBL5147,CHEMBL51	
+P3-12:defosbarasertib:chembl	1	200	3.29	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL5467,CHEMBL5469,CHEMBL5476,CHEMBL5483,CHEMBL5491,CHEMBL5518,CHEMBL5519,CHEMBL5520,CHEMBL5543,CHEMBL5546,CHEMBL5547,CHEMBL55	
+P3-12:defosbarasertib:chembl	1	200	1.08	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL5789,CHEMBL5790,CHEMBL5808,CHEMBL5810,CHEMBL5818,CHEMBL5819,CHEMBL5836,CHEMBL5838,CHEMBL5855,CHEMBL5856,CHEMBL5861,CHEMBL59	
+P3-12:defosbarasertib:pubchem	1	200	0.54	https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/defosbarasertib/property/InChIKey,IUPACName,MolecularFormula,CanonicalSMILES/JSON	
+P3-12:defosbarasertib:pubchem	1	200	0.5	https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/barasertib/property/InChIKey,IUPACName,MolecularFormula,CanonicalSMILES/JSON	
+P3-12:defosbarasertib:pubchem	1	200	0.2	https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/inchikey/QYZOGCMHVIGURT-UHFFFAOYSA-N/property/InChIKey,IUPACName,MolecularFormula/JSON	
+P3-12:defosbarasertib:pubchem	1	200	0.23	https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/inchikey/QYZOGCMHVIGURT-UHFFFAOYSA-N/synonyms/JSON	
+defosbarasertib:ctgov	1	200	0.42	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.intr=defosbarasertib OR barasertib OR AZD1152 OR AZD2811	
+defosbarasertib:ctgov	1	200	0.13	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=epilepsy OR seizure OR epileptic encephalopathy OR infantile spasms&query.intr=defosbarasertib OR baraserti	
+defosbarasertib:ctgov	1	200	0.13	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=hypomyelination OR leukodystrophy&query.intr=defosbarasertib OR barasertib OR AZD1152 OR AZD2811	
+defosbarasertib:ctgov	1	200	0.13	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=neurodevelopmental disorder OR intellectual disability OR autism OR microcephaly OR developmental delay OR 	
+defosbarasertib:ctgov	1	200	0.12	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=WWOX OR WOREE OR SCAR12&query.intr=defosbarasertib OR barasertib OR AZD1152 OR AZD2811	
+defosbarasertib:ctgov	1	200	0.14	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=glioma OR glioblastoma OR central nervous system lymphoma OR brain metastases OR medulloblastoma&query.intr	
+defosbarasertib:ctgov	1	200	0.14	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.intr=defosbarasertib OR barasertib OR AZD1152 OR AZD2811&query.term=child OR children OR pediatric OR paediatric	
+P3-13:pinometostat:chembl	1	200	3.35	https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL3414626.json	
+P3-13:pinometostat:chembl	1	200	3.38	https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_hierarchy__parent_chembl_id=CHEMBL3414626&limit=50	
+P3-13:pinometostat:chembl	1	200	0.27	https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL3414626.json	
+P3-13:pinometostat:chembl	1	200	3.43	https://www.ebi.ac.uk/chembl/api/data/mechanism.json?molecule_chembl_id=CHEMBL3414626&limit=200&offset=0	
+P3-13:pinometostat:chembl	1	200	2.52	https://www.ebi.ac.uk/chembl/api/data/activity.json?molecule_chembl_id=CHEMBL3414626&standard_type__in=IC50,Ki,Kd,EC50,DC50,Dmax,Potency,Inhibition&limit=200&offset=0	
+P3-13:pinometostat:chembl	1	200	1.86	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL1795117,CHEMBL1865,CHEMBL2366159,CHEMBL3706572,CHEMBL385,CHEMBL4295761,CHEMBL4295801,CHEMBL4296456,CHEMBL4303835,CHEMBL4523	
+P3-13:pinometostat:pubchem	1	200	0.49	https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/pinometostat/property/InChIKey,IUPACName,MolecularFormula,CanonicalSMILES/JSON	
+P3-13:pinometostat:pubchem	1	200	0.46	https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/EPZ-5676/property/InChIKey,IUPACName,MolecularFormula,CanonicalSMILES/JSON	
+P3-13:pinometostat:pubchem	1	404	0.32	https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/inchikey/LXFOLMYKSYSZQS-LURJZOHASA-N/property/InChIKey,IUPACName,MolecularFormula/JSON	{'Fault': {'Code': 'PUGREST.NotFound', 'Message': 'No CID found', 'Details': ['No CID found that matches the given InChI
+P3-13:pinometostat:pubchem	1	404	0.31	https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/inchikey/LXFOLMYKSYSZQS-LURJZOHASA-N/synonyms/JSON	{'Fault': {'Code': 'PUGREST.NotFound', 'Message': 'No CID found', 'Details': ['No CID found that matches the given InChI
+pinometostat:ctgov	1	200	0.31	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.intr=pinometostat OR EPZ-5676	
+pinometostat:ctgov	1	200	0.12	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=epilepsy OR seizure OR epileptic encephalopathy OR infantile spasms&query.intr=pinometostat OR EPZ-5676	
+pinometostat:ctgov	1	200	0.13	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=hypomyelination OR leukodystrophy&query.intr=pinometostat OR EPZ-5676	
+pinometostat:ctgov	1	200	0.12	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=neurodevelopmental disorder OR intellectual disability OR autism OR microcephaly OR developmental delay OR 	
+pinometostat:ctgov	1	200	0.14	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=WWOX OR WOREE OR SCAR12&query.intr=pinometostat OR EPZ-5676	
+pinometostat:ctgov	1	200	0.13	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=glioma OR glioblastoma OR central nervous system lymphoma OR brain metastases OR medulloblastoma&query.intr	
+pinometostat:ctgov	1	200	0.13	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.intr=pinometostat OR EPZ-5676&query.term=child OR children OR pediatric OR paediatric OR infant	
+P3-16:sirolimus:chembl	1	200	0.38	https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL413.json	
+P3-16:sirolimus:chembl	1	200	1.73	https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_hierarchy__parent_chembl_id=CHEMBL413&limit=50	
+P3-16:sirolimus:chembl	1	200	0.1	https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL413.json	
+P3-16:sirolimus:chembl	1	200	0.09	https://www.ebi.ac.uk/chembl/api/data/mechanism.json?molecule_chembl_id=CHEMBL413&limit=200&offset=0	
+P3-16:sirolimus:chembl	1	200	1.51	https://www.ebi.ac.uk/chembl/api/data/activity.json?molecule_chembl_id=CHEMBL413&standard_type__in=IC50,Ki,Kd,EC50,DC50,Dmax,Potency,Inhibition&limit=200&offset=0	
+P3-16:sirolimus:chembl	1	200	3.24	https://www.ebi.ac.uk/chembl/api/data/activity.json?molecule_chembl_id=CHEMBL413&standard_type__in=IC50,Ki,Kd,EC50,DC50,Dmax,Potency,Inhibition&limit=200&offset=200	
+P3-16:sirolimus:chembl	1	200	5.61	https://www.ebi.ac.uk/chembl/api/data/activity.json?molecule_chembl_id=CHEMBL413&standard_type__in=IC50,Ki,Kd,EC50,DC50,Dmax,Potency,Inhibition&limit=200&offset=400	
+P3-16:sirolimus:chembl	1	200	6.45	https://www.ebi.ac.uk/chembl/api/data/activity.json?molecule_chembl_id=CHEMBL413&standard_type__in=IC50,Ki,Kd,EC50,DC50,Dmax,Potency,Inhibition&limit=200&offset=600	
+P3-16:sirolimus:chembl	1	200	8.53	https://www.ebi.ac.uk/chembl/api/data/activity.json?molecule_chembl_id=CHEMBL413&standard_type__in=IC50,Ki,Kd,EC50,DC50,Dmax,Potency,Inhibition&limit=200&offset=800	
+P3-16:sirolimus:chembl	1	200	13.82	https://www.ebi.ac.uk/chembl/api/data/activity.json?molecule_chembl_id=CHEMBL413&standard_type__in=IC50,Ki,Kd,EC50,DC50,Dmax,Potency,Inhibition&limit=200&offset=1000	
+P3-16:sirolimus:chembl	1	200	1.62	https://www.ebi.ac.uk/chembl/api/data/activity.json?molecule_chembl_id=CHEMBL413&standard_type__in=IC50,Ki,Kd,EC50,DC50,Dmax,Potency,Inhibition&limit=200&offset=1200	
+P3-16:sirolimus:chembl	1	200	4.5	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL1075138,CHEMBL1075181,CHEMBL1075189,CHEMBL1075195,CHEMBL1075407,CHEMBL1075430,CHEMBL1075470,CHEMBL1075499,CHEMBL1075504,CHE	
+P3-16:sirolimus:chembl	1	200	11.8	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL1865,CHEMBL1867,CHEMBL1868,CHEMBL1889,CHEMBL1901,CHEMBL1902,CHEMBL1909043,CHEMBL1909044,CHEMBL1913,CHEMBL1916,CHEMBL1938223	
+P3-16:sirolimus:chembl	1	200	7.55	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL224,CHEMBL225,CHEMBL226,CHEMBL2276,CHEMBL228,CHEMBL2292,CHEMBL230,CHEMBL231,CHEMBL2327,CHEMBL233,CHEMBL2331059,CHEMBL234,CH	
+P3-16:sirolimus:chembl	1	200	0.22	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL2366099,CHEMBL2366100,CHEMBL2366101,CHEMBL2366102,CHEMBL2366104,CHEMBL2366105,CHEMBL2366106,CHEMBL2366107,CHEMBL2366108,CHE	
+P3-16:sirolimus:chembl	1	200	3.69	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL2366160,CHEMBL2366162,CHEMBL2366163,CHEMBL2366165,CHEMBL2366166,CHEMBL2366167,CHEMBL2366168,CHEMBL2366169,CHEMBL2366170,CHE	
+P3-16:sirolimus:chembl	1	200	0.13	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL2366215,CHEMBL2366216,CHEMBL2366218,CHEMBL2366219,CHEMBL2366220,CHEMBL2366221,CHEMBL2366222,CHEMBL2366223,CHEMBL2366224,CHE	
+P3-16:sirolimus:chembl	1	200	6.18	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL2366268,CHEMBL2366271,CHEMBL2366272,CHEMBL2366273,CHEMBL2366274,CHEMBL2366275,CHEMBL2366276,CHEMBL2366277,CHEMBL2366278,CHE	
+P3-16:sirolimus:chembl	1	200	0.15	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL2366328,CHEMBL2366329,CHEMBL2366330,CHEMBL2366331,CHEMBL2366332,CHEMBL2366333,CHEMBL2366334,CHEMBL2366335,CHEMBL2366337,CHE	
+P3-16:sirolimus:chembl	1	200	7.6	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL2428,CHEMBL2430,CHEMBL2431,CHEMBL2434,CHEMBL2447,CHEMBL245,CHEMBL2453,CHEMBL246,CHEMBL248,CHEMBL249,CHEMBL2494,CHEMBL250,CH	
+P3-16:sirolimus:chembl	1	200	0.61	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL2973,CHEMBL299,CHEMBL2996,CHEMBL301,CHEMBL3024,CHEMBL3032,CHEMBL3045,CHEMBL3048,CHEMBL3055,CHEMBL3072,CHEMBL308,CHEMBL3094,	
+P3-16:sirolimus:chembl	1	200	0.27	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL364,CHEMBL3650,CHEMBL366,CHEMBL3709670,CHEMBL3717,CHEMBL372,CHEMBL375,CHEMBL3769292,CHEMBL3778,CHEMBL378,CHEMBL3788,CHEMBL3	
+P3-16:sirolimus:chembl	1	200	11.26	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL4045,CHEMBL4050,CHEMBL4070,CHEMBL4071,CHEMBL4074,CHEMBL4078,CHEMBL4079,CHEMBL4101,CHEMBL4105702,CHEMBL4105703,CHEMBL4105704	
+P3-16:sirolimus:chembl	1	200	1.19	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL4105971,CHEMBL4105972,CHEMBL4105973,CHEMBL4105975,CHEMBL4179,CHEMBL4202,CHEMBL4203,CHEMBL4223,CHEMBL4224,CHEMBL4225,CHEMBL4	
+P3-16:sirolimus:chembl	1	200	0.47	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL4777,CHEMBL4801,CHEMBL4816,CHEMBL4848,CHEMBL4852,CHEMBL4853,CHEMBL4900,CHEMBL4901,CHEMBL4924,CHEMBL4937,CHEMBL4938,CHEMBL49	
+P3-16:sirolimus:chembl	1	200	7.1	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL5465498,CHEMBL5466,CHEMBL5467,CHEMBL5469,CHEMBL5476,CHEMBL5486,CHEMBL5490,CHEMBL5491,CHEMBL5518,CHEMBL5543,CHEMBL5550,CHEMB	
+P3-16:sirolimus:chembl	1	200	0.77	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL612948,CHEMBL613107,CHEMBL613508,CHEMBL613529,CHEMBL613530,CHEMBL613835,CHEMBL613888,CHEMBL613977,CHEMBL613988,CHEMBL613997	
+P3-16:sirolimus:chembl	1	200	0.12	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL614643,CHEMBL614694,CHEMBL614709,CHEMBL614722,CHEMBL614740,CHEMBL614771,CHEMBL614803,CHEMBL614805,CHEMBL614860,CHEMBL614879	
+P3-16:sirolimus:pubchem	1	200	0.54	https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/sirolimus/property/InChIKey,IUPACName,MolecularFormula,CanonicalSMILES/JSON	
+P3-16:sirolimus:pubchem	1	200	0.44	https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/rapamycin/property/InChIKey,IUPACName,MolecularFormula,CanonicalSMILES/JSON	
+P3-16:sirolimus:pubchem	1	200	0.38	https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/inchikey/QFJCIRLUMZQUOT-HPLJOQBZSA-N/property/InChIKey,IUPACName,MolecularFormula/JSON	
+P3-16:sirolimus:pubchem	1	200	0.37	https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/inchikey/QFJCIRLUMZQUOT-HPLJOQBZSA-N/synonyms/JSON	
+sirolimus:ctgov	1	200	0.89	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.intr=sirolimus OR rapamycin	
+sirolimus:ctgov	1	200	0.66	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=epilepsy OR seizure OR epileptic encephalopathy OR infantile spasms&query.intr=sirolimus OR rapamycin	
+sirolimus:ctgov	1	200	0.13	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=hypomyelination OR leukodystrophy&query.intr=sirolimus OR rapamycin	
+sirolimus:ctgov	1	200	0.53	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=neurodevelopmental disorder OR intellectual disability OR autism OR microcephaly OR developmental delay OR 	
+sirolimus:ctgov	1	200	0.14	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=WWOX OR WOREE OR SCAR12&query.intr=sirolimus OR rapamycin	
+sirolimus:ctgov	1	200	0.92	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=glioma OR glioblastoma OR central nervous system lymphoma OR brain metastases OR medulloblastoma&query.intr	
+sirolimus:ctgov	1	200	0.97	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.intr=sirolimus OR rapamycin&query.term=child OR children OR pediatric OR paediatric OR infant	
+sirolimus:openfda	1	200	2.17	"https://api.fda.gov/drug/label.json?limit=10&search=openfda.generic_name:""sirolimus"""	
+P3-19:lenalidomide:chembl	1	200	1.04	https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL848.json	
+P3-19:lenalidomide:chembl	1	200	0.52	https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_hierarchy__parent_chembl_id=CHEMBL848&limit=50	
+P3-19:lenalidomide:chembl	1	200	0.38	https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL848.json	
+P3-19:lenalidomide:chembl	1	200	6.69	https://www.ebi.ac.uk/chembl/api/data/mechanism.json?molecule_chembl_id=CHEMBL848&limit=200&offset=0	
+P3-19:lenalidomide:chembl	1	200	1.06	https://www.ebi.ac.uk/chembl/api/data/activity.json?molecule_chembl_id=CHEMBL848&standard_type__in=IC50,Ki,Kd,EC50,DC50,Dmax,Potency,Inhibition&limit=200&offset=0	
+P3-19:lenalidomide:chembl	1	200	1.09	https://www.ebi.ac.uk/chembl/api/data/activity.json?molecule_chembl_id=CHEMBL848&standard_type__in=IC50,Ki,Kd,EC50,DC50,Dmax,Potency,Inhibition&limit=200&offset=200	
+P3-19:lenalidomide:chembl	1	200	5.25	https://www.ebi.ac.uk/chembl/api/data/activity.json?molecule_chembl_id=CHEMBL848&standard_type__in=IC50,Ki,Kd,EC50,DC50,Dmax,Potency,Inhibition&limit=200&offset=400	
+P3-19:lenalidomide:chembl	1	200	9.81	https://www.ebi.ac.uk/chembl/api/data/activity.json?molecule_chembl_id=CHEMBL848&standard_type__in=IC50,Ki,Kd,EC50,DC50,Dmax,Potency,Inhibition&limit=200&offset=600	
+P3-19:lenalidomide:chembl	1	200	0.19	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL1075382,CHEMBL1075383,CHEMBL1075384,CHEMBL1075385,CHEMBL1075386,CHEMBL1075387,CHEMBL1075391,CHEMBL1075392,CHEMBL1075393,CHE	
+P3-19:lenalidomide:chembl	1	200	5.2	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL1075443,CHEMBL1075444,CHEMBL1075445,CHEMBL1075446,CHEMBL1075447,CHEMBL1075448,CHEMBL1075449,CHEMBL1075450,CHEMBL1075451,CHE	
+P3-19:lenalidomide:chembl	1	200	1.7	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL1075497,CHEMBL1075498,CHEMBL1075499,CHEMBL1075500,CHEMBL1075501,CHEMBL1075502,CHEMBL1075504,CHEMBL1075505,CHEMBL1075509,CHE	
+P3-19:lenalidomide:chembl	1	200	0.74	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL1075560,CHEMBL1075562,CHEMBL1075563,CHEMBL1075564,CHEMBL1075565,CHEMBL1075566,CHEMBL1075567,CHEMBL1075568,CHEMBL1075569,CHE	
+P3-19:lenalidomide:chembl	1	200	0.14	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL2366068,CHEMBL2366069,CHEMBL2366070,CHEMBL2366071,CHEMBL2366072,CHEMBL2366073,CHEMBL2366074,CHEMBL2366076,CHEMBL2366077,CHE	
+P3-19:lenalidomide:chembl	1	200	0.15	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL2366143,CHEMBL2366144,CHEMBL2366145,CHEMBL2366146,CHEMBL2366147,CHEMBL2366148,CHEMBL2366150,CHEMBL2366152,CHEMBL2366154,CHE	
+P3-19:lenalidomide:chembl	1	200	4.49	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL2366215,CHEMBL2366219,CHEMBL2366220,CHEMBL2366221,CHEMBL2366222,CHEMBL2366223,CHEMBL2366224,CHEMBL2366225,CHEMBL2366226,CHE	
+P3-19:lenalidomide:chembl	1	200	0.39	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL2366285,CHEMBL2366287,CHEMBL2366288,CHEMBL2366291,CHEMBL2366292,CHEMBL2366294,CHEMBL2366295,CHEMBL2366296,CHEMBL2366297,CHE	
+P3-19:lenalidomide:chembl	1	200	1.45	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL2366350,CHEMBL2366351,CHEMBL2366355,CHEMBL2366356,CHEMBL2366357,CHEMBL2366358,CHEMBL2366359,CHEMBL2366360,CHEMBL2366362,CHE	
+P3-19:lenalidomide:chembl	1	200	0.09	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL6066767,CHEMBL612250,CHEMBL612255,CHEMBL612256,CHEMBL612258,CHEMBL612262,CHEMBL612263,CHEMBL612264,CHEMBL612279,CHEMBL61244	
+P3-19:lenalidomide:chembl	1	200	4.41	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL613998,CHEMBL614004,CHEMBL614012,CHEMBL614034,CHEMBL614036,CHEMBL614039,CHEMBL614051,CHEMBL614054,CHEMBL614055,CHEMBL614056	
+P3-19:lenalidomide:chembl	1	200	0.11	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL614476,CHEMBL614487,CHEMBL614489,CHEMBL614512,CHEMBL614514,CHEMBL614515,CHEMBL614516,CHEMBL614517,CHEMBL614519,CHEMBL614529	
+P3-19:lenalidomide:chembl	1	200	0.09	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL614905,CHEMBL614908,CHEMBL614912,CHEMBL614913,CHEMBL614916,CHEMBL614917,CHEMBL614919,CHEMBL614920,CHEMBL614923,CHEMBL614925	
+P3-19:lenalidomide:pubchem	1	200	0.26	https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/lenalidomide/property/InChIKey,IUPACName,MolecularFormula,CanonicalSMILES/JSON	
+P3-19:lenalidomide:pubchem	1	200	0.38	https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/inchikey/GOTYRUGSSMKFNF-UHFFFAOYSA-N/property/InChIKey,IUPACName,MolecularFormula/JSON	
+P3-19:lenalidomide:pubchem	1	200	0.35	https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/inchikey/GOTYRUGSSMKFNF-UHFFFAOYSA-N/synonyms/JSON	
+lenalidomide:ctgov	1	200	0.15	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.intr=lenalidomide	
+lenalidomide:ctgov	1	200	0.16	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=epilepsy OR seizure OR epileptic encephalopathy OR infantile spasms&query.intr=lenalidomide	
+lenalidomide:ctgov	1	200	0.12	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=hypomyelination OR leukodystrophy&query.intr=lenalidomide	
+lenalidomide:ctgov	1	200	0.14	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=neurodevelopmental disorder OR intellectual disability OR autism OR microcephaly OR developmental delay OR 	
+lenalidomide:ctgov	1	200	0.12	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=WWOX OR WOREE OR SCAR12&query.intr=lenalidomide	
+lenalidomide:ctgov	1	200	0.61	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=glioma OR glioblastoma OR central nervous system lymphoma OR brain metastases OR medulloblastoma&query.intr	
+lenalidomide:ctgov	1	200	0.38	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.intr=lenalidomide&query.term=child OR children OR pediatric OR paediatric OR infant	
+lenalidomide:openfda	1	200	2.39	"https://api.fda.gov/drug/label.json?limit=10&search=openfda.generic_name:""lenalidomide"""	
+P3-20:AT9283:chembl	1	200	0.09	https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL495727.json	
+P3-20:AT9283:chembl	1	200	0.09	https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_hierarchy__parent_chembl_id=CHEMBL495727&limit=50	
+P3-20:AT9283:chembl	1	200	5.6	https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL495727.json	
+P3-20:AT9283:chembl	1	200	3.54	https://www.ebi.ac.uk/chembl/api/data/mechanism.json?molecule_chembl_id=CHEMBL495727&limit=200&offset=0	
+P3-20:AT9283:chembl	1	200	4.07	https://www.ebi.ac.uk/chembl/api/data/activity.json?molecule_chembl_id=CHEMBL495727&standard_type__in=IC50,Ki,Kd,EC50,DC50,Dmax,Potency,Inhibition&limit=200&offset=0	
+P3-20:AT9283:chembl	1	200	6.65	https://www.ebi.ac.uk/chembl/api/data/activity.json?molecule_chembl_id=CHEMBL495727&standard_type__in=IC50,Ki,Kd,EC50,DC50,Dmax,Potency,Inhibition&limit=200&offset=200	
+P3-20:AT9283:chembl	1	200	2.67	https://www.ebi.ac.uk/chembl/api/data/activity.json?molecule_chembl_id=CHEMBL495727&standard_type__in=IC50,Ki,Kd,EC50,DC50,Dmax,Potency,Inhibition&limit=200&offset=400	
+P3-20:AT9283:chembl	1	200	3.19	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL1075155,CHEMBL1075181,CHEMBL1075195,CHEMBL1163101,CHEMBL1163112,CHEMBL1163117,CHEMBL1163123,CHEMBL1163126,CHEMBL1169596,CHE	
+P3-20:AT9283:chembl	1	200	4.08	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL2426,CHEMBL2428,CHEMBL2431,CHEMBL2447,CHEMBL2453,CHEMBL2494,CHEMBL2508,CHEMBL2543,CHEMBL2546,CHEMBL2553,CHEMBL2568,CHEMBL25	
+P3-20:AT9283:chembl	1	200	6.96	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL3179,CHEMBL3231,CHEMBL3234,CHEMBL3290,CHEMBL331,CHEMBL3313835,CHEMBL3356,CHEMBL3357,CHEMBL3384,CHEMBL3385,CHEMBL3396,CHEMBL	
+P3-20:AT9283:chembl	1	200	0.98	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL3983,CHEMBL3984,CHEMBL3987,CHEMBL3988,CHEMBL4014,CHEMBL4036,CHEMBL4040,CHEMBL4045,CHEMBL4070,CHEMBL4079,CHEMBL4101,CHEMBL41	
+P3-20:AT9283:chembl	1	200	0.78	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL4105891,CHEMBL4105892,CHEMBL4105932,CHEMBL4105933,CHEMBL4105934,CHEMBL4105935,CHEMBL4105937,CHEMBL4105969,CHEMBL4105970,CHE	
+P3-20:AT9283:chembl	1	200	0.58	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL4627,CHEMBL4630,CHEMBL4708,CHEMBL4722,CHEMBL4766,CHEMBL4816,CHEMBL4849,CHEMBL4852,CHEMBL4853,CHEMBL4900,CHEMBL4901,CHEMBL49	
+P3-20:AT9283:chembl	1	200	4.3	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL5518,CHEMBL5550,CHEMBL5552,CHEMBL5553,CHEMBL5579,CHEMBL5600,CHEMBL5604,CHEMBL5606,CHEMBL5615,CHEMBL5679,CHEMBL5681,CHEMBL56	
+P3-20:AT9283:pubchem	1	200	0.91	https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/AT9283/property/InChIKey,IUPACName,MolecularFormula,CanonicalSMILES/JSON	
+P3-20:AT9283:pubchem	1	200	0.2	https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/inchikey/LOLPPWBBNUVNQZ-UHFFFAOYSA-N/property/InChIKey,IUPACName,MolecularFormula/JSON	
+P3-20:AT9283:pubchem	1	200	0.44	https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/inchikey/LOLPPWBBNUVNQZ-UHFFFAOYSA-N/synonyms/JSON	
+AT9283:ctgov	1	200	0.14	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.intr=AT9283	
+AT9283:ctgov	1	200	0.12	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=epilepsy OR seizure OR epileptic encephalopathy OR infantile spasms&query.intr=AT9283	
+AT9283:ctgov	1	200	0.12	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=hypomyelination OR leukodystrophy&query.intr=AT9283	
+AT9283:ctgov	1	200	0.13	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=neurodevelopmental disorder OR intellectual disability OR autism OR microcephaly OR developmental delay OR 	
+AT9283:ctgov	1	200	0.12	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=WWOX OR WOREE OR SCAR12&query.intr=AT9283	
+AT9283:ctgov	1	200	0.14	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=glioma OR glioblastoma OR central nervous system lymphoma OR brain metastases OR medulloblastoma&query.intr	
+AT9283:ctgov	1	200	0.15	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.intr=AT9283&query.term=child OR children OR pediatric OR paediatric OR infant	
+omnipath	1	200	0.11	https://omnipathdb.org/interactions?datasets=omnipath,pathwayextra,kinaseextra&fields=sources,references,curation_effort,extra_attrs,type&format=json&genesymbols=yes&targets=MYC	
+omnipath	1	200	0.09	https://omnipathdb.org/enzsub?enzymes=DYRK1A&fields=sources,references,curation_effort&format=json&genesymbols=yes&substrates=MYC	
+omnipath	1	200	0.11	https://omnipathdb.org/enzsub?enzymes=AURKB&fields=sources,references,curation_effort&format=json&genesymbols=yes&substrates=MYC	
+omnipath	1	200	0.08	https://omnipathdb.org/enzsub?enzymes=DOT1L&fields=sources,references,curation_effort&format=json&genesymbols=yes&substrates=MYC	
+omnipath	1	200	0.07	https://omnipathdb.org/enzsub?enzymes=CUL4A&fields=sources,references,curation_effort&format=json&genesymbols=yes&substrates=MYC	
+omnipath	1	200	0.1	https://omnipathdb.org/enzsub?enzymes=MTOR&fields=sources,references,curation_effort&format=json&genesymbols=yes&substrates=MYC	
+hpa	1	200	0.21	https://www.proteinatlas.org/api/search_download.php?columns=g,eg&compress=no&format=json&search=AURKA	
+hpa	1	200	0.12	https://www.proteinatlas.org/ENSG00000087586.json	
+hpa	1	200	0.18	https://www.proteinatlas.org/api/search_download.php?columns=g,eg&compress=no&format=json&search=AURKB	
+hpa	1	200	0.11	https://www.proteinatlas.org/ENSG00000178999.json	
+hpa	1	200	0.19	https://www.proteinatlas.org/api/search_download.php?columns=g,eg&compress=no&format=json&search=CLK1	
+hpa	1	200	0.11	https://www.proteinatlas.org/ENSG00000013441.json	
+hpa	1	200	0.2	https://www.proteinatlas.org/api/search_download.php?columns=g,eg&compress=no&format=json&search=CRBN	
+hpa	1	200	0.11	https://www.proteinatlas.org/ENSG00000113851.json	
+hpa	1	200	0.19	https://www.proteinatlas.org/api/search_download.php?columns=g,eg&compress=no&format=json&search=CSNK1A1	
+hpa	1	200	0.11	https://www.proteinatlas.org/ENSG00000113712.json	
+hpa	1	200	0.21	https://www.proteinatlas.org/api/search_download.php?columns=g,eg&compress=no&format=json&search=CUL4A	
+hpa	1	200	0.11	https://www.proteinatlas.org/ENSG00000139842.json	
+hpa	1	200	0.18	https://www.proteinatlas.org/api/search_download.php?columns=g,eg&compress=no&format=json&search=DOT1L	
+hpa	1	200	0.11	https://www.proteinatlas.org/ENSG00000104885.json	
+hpa	1	200	0.2	https://www.proteinatlas.org/api/search_download.php?columns=g,eg&compress=no&format=json&search=DYRK1A	
+hpa	1	200	0.11	https://www.proteinatlas.org/ENSG00000157540.json	
+hpa	1	200	0.19	https://www.proteinatlas.org/api/search_download.php?columns=g,eg&compress=no&format=json&search=DYRK1B	
+hpa	1	200	0.11	https://www.proteinatlas.org/ENSG00000105204.json	
+hpa	1	200	0.19	https://www.proteinatlas.org/api/search_download.php?columns=g,eg&compress=no&format=json&search=FKBP1A	
+hpa	1	200	0.11	https://www.proteinatlas.org/ENSG00000088832.json	
+hpa	1	200	0.19	https://www.proteinatlas.org/api/search_download.php?columns=g,eg&compress=no&format=json&search=GSPT1	
+hpa	1	200	0.11	https://www.proteinatlas.org/ENSG00000103342.json	
+hpa	1	200	0.22	https://www.proteinatlas.org/api/search_download.php?columns=g,eg&compress=no&format=json&search=IKZF1	
+hpa	1	200	0.1	https://www.proteinatlas.org/ENSG00000185811.json	
+hpa	1	200	0.18	https://www.proteinatlas.org/api/search_download.php?columns=g,eg&compress=no&format=json&search=IKZF3	
+hpa	1	200	0.11	https://www.proteinatlas.org/ENSG00000161405.json	
+hpa	1	200	0.21	https://www.proteinatlas.org/api/search_download.php?columns=g,eg&compress=no&format=json&search=JAK2	
+hpa	1	200	0.11	https://www.proteinatlas.org/ENSG00000096968.json	
+hpa	1	200	0.19	https://www.proteinatlas.org/api/search_download.php?columns=g,eg&compress=no&format=json&search=MAOA	
+hpa	1	200	0.11	https://www.proteinatlas.org/ENSG00000189221.json	
+hpa	1	200	0.19	https://www.proteinatlas.org/api/search_download.php?columns=g,eg&compress=no&format=json&search=MAOB	
+hpa	1	200	0.12	https://www.proteinatlas.org/ENSG00000069535.json	
+hpa	1	200	0.22	https://www.proteinatlas.org/api/search_download.php?columns=g,eg&compress=no&format=json&search=MTOR	
+hpa	1	200	0.11	https://www.proteinatlas.org/ENSG00000198793.json	
+hpa	1	200	0.28	https://www.proteinatlas.org/api/search_download.php?columns=g,eg&compress=no&format=json&search=MYC	
+hpa	1	200	0.11	https://www.proteinatlas.org/ENSG00000136997.json	
+hpa	1	200	0.19	https://www.proteinatlas.org/api/search_download.php?columns=g,eg&compress=no&format=json&search=SALL4	
+hpa	1	200	0.11	https://www.proteinatlas.org/ENSG00000101115.json	
+hpa	1	200	0.21	https://www.proteinatlas.org/api/search_download.php?columns=g,eg&compress=no&format=json&search=WWOX	
+hpa	1	200	0.11	https://www.proteinatlas.org/ENSG00000186153.json	
+hpa	1	200	0.21	https://www.proteinatlas.org/api/search_download.php?columns=g,eg&compress=no&format=json&search=ZNF692	
+hpa	1	200	0.11	https://www.proteinatlas.org/ENSG00000171163.json	
