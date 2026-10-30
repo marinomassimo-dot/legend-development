@@ -82,8 +82,9 @@
    "steps": [
     {
      "step": "P8 integration, simplification, final checks, validated push, cleanup, session closings",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "battery on fb8c36c9: 164/165 suites green, 1 red (pathograph generated surface stale = regression of mine, fixed in c07509d6, suite rerun OK); push validated"
     }
    ]
   },
