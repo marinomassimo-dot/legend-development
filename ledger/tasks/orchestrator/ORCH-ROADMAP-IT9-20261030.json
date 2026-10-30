@@ -50,7 +50,7 @@
      "step": "P4 qualification of decision-changing candidates; complete truncated LDHA/PDK pulls, LDHB; restate the three IT8 decisions",
      "status": "DONE",
      "owner": "scientist-a",
-     "evidence": "P4a (LDHB/PDK acquisitions complete, 3 IT8 decisions restated) + P4b: 20 qualified: DROP 9, KEEP 1 (belnacasan gated), INCONCLUSIVE 2, REFERENCE 8; main lesson: proposals fail at edge provenance (record-mode mismatch, symbol!=identity, prodrug/active moiety)"
+     "evidence": "P4a + P4b (20) + P4c (12) = 32 qualified candidates; P2 v3 provenance repair; second-round KEEP: PX-478 (HIF axis), sulfopin (PIN1/MYC), apabetalone (BET); belnacasan gated"
     }
    ]
   },
