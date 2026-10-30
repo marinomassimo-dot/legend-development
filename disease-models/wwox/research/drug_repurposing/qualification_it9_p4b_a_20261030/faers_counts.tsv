@@ -1,0 +1,25 @@
+drug	reaction_term_or_total	http_status	report_count
+balsalazide	ALL reports matched	200	505
+ramelteon	ALL reports matched	200	7349
+belzutifan	ALL reports matched	200	618
+balsalazide	Convulsion	200	1
+balsalazide	Seizure	200	5
+balsalazide	Epilepsy	404	0
+balsalazide	Status epilepticus	404	0
+balsalazide	Generalised tonic-clonic seizure	200	1
+balsalazide	Partial seizure	404	0
+balsalazide	Febrile convulsion	404	0
+ramelteon	Convulsion	200	44
+ramelteon	Seizure	200	61
+ramelteon	Epilepsy	200	30
+ramelteon	Status epilepticus	200	5
+ramelteon	Generalised tonic-clonic seizure	200	6
+ramelteon	Partial seizure	404	0
+ramelteon	Febrile convulsion	404	0
+belzutifan	Convulsion	404	0
+belzutifan	Seizure	404	0
+belzutifan	Epilepsy	200	3
+belzutifan	Status epilepticus	404	0
+belzutifan	Generalised tonic-clonic seizure	404	0
+belzutifan	Partial seizure	404	0
+belzutifan	Febrile convulsion	404	0
