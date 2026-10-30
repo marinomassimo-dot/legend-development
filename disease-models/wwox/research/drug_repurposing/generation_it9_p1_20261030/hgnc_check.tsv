@@ -1,47 +1,49 @@
-symbol	hgnc_id	approved_symbol	approved_name	status	matched_via	mgd_id_ortholog_link
-AIF1	HGNC:352	AIF1	allograft inflammatory factor 1	Approved	symbol	MGI:1343098
-ATF4	HGNC:786	ATF4	activating transcription factor 4	Approved	symbol	MGI:88096
-ATF5	HGNC:790	ATF5	activating transcription factor 5	Approved	symbol	MGI:2141857
-AXIN2	HGNC:904	AXIN2	axin 2	Approved	symbol	MGI:1270862
-BNIP3	HGNC:1084	BNIP3	BCL2 interacting protein 3	Approved	symbol	MGI:109326
-CACNA1G	HGNC:1394	CACNA1G	calcium voltage-gated channel subunit alpha1 G	Approved	symbol	MGI:1201678
-CHAC1	HGNC:28680	CHAC1	ChaC glutathione specific gamma-glutamylcyclotransferase 1	Approved	symbol	MGI:1916315
-CTNNB1	HGNC:2514	CTNNB1	catenin beta 1	Approved	symbol	MGI:88276
-DEPTOR	HGNC:22953	DEPTOR	DEP domain containing MTOR interacting protein	Approved	symbol	MGI:2146322
-EIF2AK3	HGNC:3255	EIF2AK3	eukaryotic translation initiation factor 2 alpha kinase 3	Approved	symbol	MGI:1341830
-EIF2S1	HGNC:3265	EIF2S1	eukaryotic translation initiation factor 2 subunit alpha	Approved	symbol	MGI:95299
-EIF4EBP1	HGNC:3288	EIF4EBP1	eukaryotic translation initiation factor 4E binding protein 1	Approved	symbol	MGI:103267
-GABRB2	HGNC:4082	GABRB2	gamma-aminobutyric acid type A receptor subunit beta2	Approved	symbol	MGI:95620
-GABRB3	HGNC:4083	GABRB3	gamma-aminobutyric acid type A receptor subunit beta3	Approved	symbol	MGI:95621
-GAD1	HGNC:4092	GAD1	glutamate decarboxylase 1	Approved	symbol	MGI:95632
-GAD2	HGNC:4093	GAD2	glutamate decarboxylase 2	Approved	symbol	MGI:95634
-GFAP	HGNC:4235	GFAP	glial fibrillary acidic protein	Approved	symbol	MGI:95697
-GSK3B	HGNC:4617	GSK3B	glycogen synthase kinase 3 beta	Approved	symbol	MGI:1861437
-HIF1A	HGNC:4910	HIF1A	hypoxia inducible factor 1 subunit alpha	Approved	symbol	MGI:106918
-HK2	HGNC:4923	HK2	hexokinase 2	Approved	symbol	MGI:1315197
-IL1B	HGNC:5992	IL1B	interleukin 1 beta	Approved	symbol	MGI:96543
-IL6	HGNC:6018	IL6	interleukin 6	Approved	symbol	MGI:96559
-LDHA	HGNC:6535	LDHA	lactate dehydrogenase A	Approved	symbol	MGI:96759
-LDHB	HGNC:6541	LDHB	lactate dehydrogenase B	Approved	symbol	MGI:96763
-LEF1	HGNC:6551	LEF1	lymphoid enhancer binding factor 1	Approved	symbol	MGI:96770
-MBP	HGNC:6925	MBP	myelin basic protein	Approved	symbol	MGI:96925
-MTOR	HGNC:3942	MTOR	mechanistic target of rapamycin kinase	Approved	symbol	MGI:1928394
-MYC	HGNC:7553	MYC	MYC proto-oncogene, bHLH transcription factor	Approved	symbol	MGI:97250
-NKD1	HGNC:17045	NKD1	NKD inhibitor of Wnt signaling pathway 1	Approved	symbol	MGI:2135954
-NPY	HGNC:7955	NPY	neuropeptide Y	Approved	symbol	MGI:97374
-PANX1	HGNC:8599	PANX1	pannexin 1	Approved	symbol	MGI:1860055
-PDHA1	HGNC:8806	PDHA1	pyruvate dehydrogenase E1 subunit alpha 1	Approved	symbol	MGI:97532
-PDK1	HGNC:8809	PDK1	pyruvate dehydrogenase kinase 1	Approved	symbol	MGI:1926119
-PSAT1	HGNC:19129	PSAT1	phosphoserine aminotransferase 1	Approved	symbol	MGI:2183441
-PVALB	HGNC:9704	PVALB	parvalbumin	Approved	symbol	MGI:97821
-RB1CC1	HGNC:15574	RB1CC1	RB1 inducible coiled-coil 1	Approved	symbol	MGI:1341850
-SESN2	HGNC:20746	SESN2	sestrin 2	Approved	symbol	MGI:2651874
-SLC12A2	HGNC:10911	SLC12A2	solute carrier family 12 member 2	Approved	symbol	MGI:101924
-SLC12A5	HGNC:13818	SLC12A5	solute carrier family 12 member 5	Approved	symbol	MGI:1862037
-SLC2A1	HGNC:11005	SLC2A1	solute carrier family 2 member 1	Approved	symbol	MGI:95755
-SOD1	HGNC:11179	SOD1	superoxide dismutase 1	Approved	symbol	MGI:98351
-TCF7L2	HGNC:11641	TCF7L2	transcription factor 7 like 2	Approved	symbol	MGI:1202879
-TNF	HGNC:11892	TNF	tumor necrosis factor	Approved	symbol	MGI:104798
-TRIB3	HGNC:16228	TRIB3	tribbles pseudokinase 3	Approved	symbol	MGI:1345675
-WNT8B	HGNC:12789	WNT8B	Wnt family member 8B	Approved	symbol	MGI:109485
-WWOX	HGNC:12799	WWOX	WW domain containing oxidoreductase	Approved	symbol	MGI:1931237
+symbol	hgnc_id	approved_symbol	approved_name	status	matched_via	mgd_id_ortholog_link	rgd_id_ortholog_link
+AIF1	HGNC:352	AIF1	allograft inflammatory factor 1	Approved	symbol	MGI:1343098	RGD:61924
+ATF4	HGNC:786	ATF4	activating transcription factor 4	Approved	symbol	MGI:88096	RGD:621863
+ATF5	HGNC:790	ATF5	activating transcription factor 5	Approved	symbol	MGI:2141857	RGD:628902
+AXIN2	HGNC:904	AXIN2	axin 2	Approved	symbol	MGI:1270862	RGD:69259
+BNIP3	HGNC:1084	BNIP3	BCL2 interacting protein 3	Approved	symbol	MGI:109326	RGD:620800
+CACNA1G	HGNC:1394	CACNA1G	calcium voltage-gated channel subunit alpha1 G	Approved	symbol	MGI:1201678	RGD:68942
+CHAC1	HGNC:28680	CHAC1	ChaC glutathione specific gamma-glutamylcyclotransferase 1	Approved	symbol	MGI:1916315	RGD:1307153
+CTNNB1	HGNC:2514	CTNNB1	catenin beta 1	Approved	symbol	MGI:88276	RGD:70487
+DEPTOR	HGNC:22953	DEPTOR	DEP domain containing MTOR interacting protein	Approved	symbol	MGI:2146322	RGD:1561030
+EIF2AK3	HGNC:3255	EIF2AK3	eukaryotic translation initiation factor 2 alpha kinase 3	Approved	symbol	MGI:1341830	RGD:70884
+EIF2S1	HGNC:3265	EIF2S1	eukaryotic translation initiation factor 2 subunit alpha	Approved	symbol	MGI:95299	RGD:620963
+EIF4EBP1	HGNC:3288	EIF4EBP1	eukaryotic translation initiation factor 4E binding protein 1	Approved	symbol	MGI:103267	RGD:620259
+GABRB2	HGNC:4082	GABRB2	gamma-aminobutyric acid type A receptor subunit beta2	Approved	symbol	MGI:95620	RGD:2650
+GABRB3	HGNC:4083	GABRB3	gamma-aminobutyric acid type A receptor subunit beta3	Approved	symbol	MGI:95621	RGD:2651
+GAD1	HGNC:4092	GAD1	glutamate decarboxylase 1	Approved	symbol	MGI:95632	RGD:2652
+GAD2	HGNC:4093	GAD2	glutamate decarboxylase 2	Approved	symbol	MGI:95634	RGD:2653
+GFAP	HGNC:4235	GFAP	glial fibrillary acidic protein	Approved	symbol	MGI:95697	RGD:2679
+GRIN2C	HGNC:4587	GRIN2C	glutamate ionotropic receptor NMDA type subunit 2C	Approved	symbol	MGI:95822	RGD:2739
+GRM3	HGNC:4595	GRM3	glutamate metabotropic receptor 3	Approved	symbol	MGI:1351340	RGD:2744
+GSK3B	HGNC:4617	GSK3B	glycogen synthase kinase 3 beta	Approved	symbol	MGI:1861437	RGD:70982
+HIF1A	HGNC:4910	HIF1A	hypoxia inducible factor 1 subunit alpha	Approved	symbol	MGI:106918	RGD:61928
+HK2	HGNC:4923	HK2	hexokinase 2	Approved	symbol	MGI:1315197	RGD:2797
+IL1B	HGNC:5992	IL1B	interleukin 1 beta	Approved	symbol	MGI:96543	RGD:2891
+IL6	HGNC:6018	IL6	interleukin 6	Approved	symbol	MGI:96559	RGD:2901
+KCNA2	HGNC:6220	KCNA2	potassium voltage-gated channel subfamily A member 2	Approved	symbol	MGI:96659	RGD:2950
+LDHA	HGNC:6535	LDHA	lactate dehydrogenase A	Approved	symbol	MGI:96759	RGD:2996
+LDHB	HGNC:6541	LDHB	lactate dehydrogenase B	Approved	symbol	MGI:96763	RGD:2997
+LEF1	HGNC:6551	LEF1	lymphoid enhancer binding factor 1	Approved	symbol	MGI:96770	RGD:620241
+MBP	HGNC:6925	MBP	myelin basic protein	Approved	symbol	MGI:96925	RGD:3054
+MTOR	HGNC:3942	MTOR	mechanistic target of rapamycin kinase	Approved	symbol	MGI:1928394	RGD:68371
+MYC	HGNC:7553	MYC	MYC proto-oncogene, bHLH transcription factor	Approved	symbol	MGI:97250	RGD:3130
+NKD1	HGNC:17045	NKD1	NKD inhibitor of Wnt signaling pathway 1	Approved	symbol	MGI:2135954	RGD:1308491
+NPY	HGNC:7955	NPY	neuropeptide Y	Approved	symbol	MGI:97374	RGD:3197
+PANX1	HGNC:8599	PANX1	pannexin 1	Approved	symbol	MGI:1860055	RGD:735204
+PDHA1	HGNC:8806	PDHA1	pyruvate dehydrogenase E1 subunit alpha 1	Approved	symbol	MGI:97532	RGD:3286
+PDK1	HGNC:8809	PDK1	pyruvate dehydrogenase kinase 1	Approved	symbol	MGI:1926119	RGD:69427
+PSAT1	HGNC:19129	PSAT1	phosphoserine aminotransferase 1	Approved	symbol	MGI:2183441	RGD:735170
+PVALB	HGNC:9704	PVALB	parvalbumin	Approved	symbol	MGI:97821	RGD:3457
+RB1CC1	HGNC:15574	RB1CC1	RB1 inducible coiled-coil 1	Approved	symbol	MGI:1341850	RGD:1309346
+SESN2	HGNC:20746	SESN2	sestrin 2	Approved	symbol	MGI:2651874	RGD:1566319
+SLC12A2	HGNC:10911	SLC12A2	solute carrier family 12 member 2	Approved	symbol	MGI:101924	RGD:620809
+SLC2A1	HGNC:11005	SLC2A1	solute carrier family 2 member 1	Approved	symbol	MGI:95755	RGD:3704
+SOD1	HGNC:11179	SOD1	superoxide dismutase 1	Approved	symbol	MGI:98351	RGD:3731
+TCF7L2	HGNC:11641	TCF7L2	transcription factor 7 like 2	Approved	symbol	MGI:1202879	RGD:1583621
+TNF	HGNC:11892	TNF	tumor necrosis factor	Approved	symbol	MGI:104798	RGD:3876
+TRIB3	HGNC:16228	TRIB3	tribbles pseudokinase 3	Approved	symbol	MGI:1345675	RGD:708432
+WNT8B	HGNC:12789	WNT8B	Wnt family member 8B	Approved	symbol	MGI:109485	RGD:1307644
+WWOX	HGNC:12799	WWOX	WW domain containing oxidoreductase	Approved	symbol	MGI:1931237	RGD:1309927
