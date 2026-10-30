@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+import sys as _s
+if len(_s.argv) > 1 and _s.argv[1] in ("-h", "--help"):
+    print("IT10 P2.1 research script; reads inputs named in README.md of this folder; no options. Run with python3 -I from this folder.")
+    raise SystemExit(0)
 """IT10 P2.1, premise (a), mouse neural data: are HIF-axis and glycolysis transcripts different in Wwox-deleted mouse brain (P17)?
 Inputs (public, key-less, sha256-pinned; same files as mouse_wwox_p17_it6_p4_20261029/inputs/SHA256SUMS), placed in ONE directory:
   GSE158681_Wwox_mutant_Hippo_RNA_TPM_Table.txt.gz  GSE158682_Wwox_neuronal_Del_Cortex_RNA_TPM_Table.txt.gz  Mus_musculus.GRCm38.cdna.all.fa.gz (Ensembl 92)

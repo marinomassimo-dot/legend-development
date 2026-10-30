@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+import sys as _s
+if len(_s.argv) > 1 and _s.argv[1] in ("-h", "--help"):
+    print("IT10 P2.1 research script; reads inputs named in README.md of this folder; no options. Run with python3 -I from this folder.")
+    raise SystemExit(0)
 """IT10 P2.1: mechanical check that every quoted fragment in the 'verbatim locator' columns of premises_it10_p21.tsv and direction_evidence_it10_p21.tsv occurs in the
 source texts that were read (whitespace/case/alpha-normalised; '...' splits a quote into fragments). Usage: python3 -I quote_check_it10_p21.py <scratch_dir> <shared_fulltext_dir>
 Fragments from repository analyses (a5, RESULTS.md) and from line-numbered layout text (a9) are reported as NOT FOUND and verified by eye (disclosed in the README)."""

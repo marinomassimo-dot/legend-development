@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+import sys as _s
+if len(_s.argv) > 1 and _s.argv[1] in ("-h", "--help"):
+    print("IT10 P2.1 research script; reads inputs named in README.md of this folder; no options. Run with python3 -I from this folder.")
+    raise SystemExit(0)
 """IT10 P2.1: offline lookup of each alternative in the compound catalogue (catalog/catalog.jsonl.gz; cache via LEGEND_CATALOG_CACHE).
 Writes catalogue_lookup_it10_p21.tsv: the query string, every catalogue row returned (id, name, modality, status, access category, targets, origin).
 A name with 0 rows is 'not in the catalogue under that string', not 'absent from the world'."""
