@@ -123,3 +123,20 @@ therefore exploratory for the provisional set; they are fixed in advance for eve
 * **A1.4 T2(b) power note.** When fewer than 3 defined seeds disagree in sign with the rest the sign shuffle cannot be expected to move the ranking; the registered criterion is still applied and a failure is reported as a failure.
   Reported next to it: a "flip-the-minority" mutation (the single seed of the less common sign flipped), which is deterministic and does move the ranking where that seed matters.
 * **A1.5 Probes.** Percentile uses mid-ranks for ties. Probe scores are reported for the defined-only arm and for both conditional arms (U+, U-), not for U+ alone.
+
+---
+
+## AMENDMENT 2 (2026-10-30, after the first runs on the P1 seed sets; written before the in-degree variant was run)
+
+Seen before this amendment: the P1 sets (`seeds_p1/`, adapter `p1_adapter.py`) were run once under sections 1-3 and Amendment 1 with total-degree matching. Per set the
+registered verdicts exist in `results/tests_p1_*.json`. What prompted this amendment: (i) the backward propagation of a seed flows over the INCOMING edges of the seed gene, yet the registered
+null matches on in+out degree; for a sink such as WWOX (7 in-edges, 0 out-edges) a random gene of the same total degree has a very different in-degree, so its null is not like with like (Q1: the NET-Z
+top-100 shares a median of 59 families with the null lists); (ii) in sets where every defined seed has the same direction (Q2 expression, Q4 protein) the registered sign shuffle is the identity and
+returns Spearman 1.0 by construction.
+
+* **A2.1 Matching variant M2.** Every test and the NET-Z moments are also run with the null genes matched on the in-degree decile (unique quantile edges; real seed genes excluded; genes absent from the graph matched to absent-from-graph target genes) instead of in+out degree.
+  Both variants are reported side by side; a statement in the README that depends on the null (T2, T4 "specific", NET-Z) is made only if it holds in both, otherwise it is reported as "depends on the null".
+  Criteria are unchanged (section 3). Label suffix `_indeg`.
+* **A2.2 T2(b) is applied as registered** (>= 4 defined seeds): a degenerate shuffle (identity because all defined seeds share one sign) therefore counts as NOT MET; the summary table also gives the criteria vector (a, a', b, c) so a reader can see
+  T2 without (b). This is a registered-verdict-plus-decomposition, not a relaxation: no set is passed because (b) is skipped.
+* **A2.3 T1(d) on a set whose only defined seeds are inert** (no in-network path to any compound target and not a target themselves) is reported as FAILED (d) with the reason, not rescued.

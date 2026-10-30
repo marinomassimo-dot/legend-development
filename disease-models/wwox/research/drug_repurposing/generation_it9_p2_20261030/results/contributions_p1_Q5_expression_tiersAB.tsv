@@ -1,0 +1,680 @@
+family_id	unit_id	seed_id	gene	seed_direction	level	readout_level	direction_status	contrib_hop0	contrib_hops1to3	contrib_total	main_target_hop0	main_target_hops1to3
+FAM:CAT:DGIDB:d23a0b307aad	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.05	0.05		KCNJ8
+FAM:CAT:CHEMBL181	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.0353553	0.0353553		KCNJ8
+FAM:CAT:DGIDB:9a1848b2e12a	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.0353553	0.0353553		KCNJ8
+FAM:CAT:CHEMBL3183703	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.1	0.1		NLRP3
+FAM:CAT:CHEMBL3989943	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.1	0.1		NLRP3
+FAM:CAT:CHEMBL4650350	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.1	0.1		NLRP3
+FAM:CAT:DGIDB:3b46a0ff2a88	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.1	0.1		NLRP3
+FAM:CAT:DGIDB:987ef71eeeb1	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.1	0.1		NLRP3
+FAM:CAT:DGIDB:e837e4cfafd7	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.1	0.1		NLRP3
+FAM:CAT:DGIDB:f0320db1e9f6	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.1	0.1		NLRP3
+FAM:CAT:DGIDB:f9861012416f	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.1	0.1		NLRP3
+FAM:CAT:DGIDB:fc83e79dea8e	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.1	0.1		NLRP3
+FAM:CAT:DGIDB:2e60899cccf5	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.140537	0.140537		CASP1
+FAM:CAT:DGIDB:871f044a9f90	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.140537	0.140537		CASP1
+FAM:CAT:CHEMBL2107819	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.19875	0.19875		CASP1
+FAM:CAT:DGIDB:045ff335316a	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.19875	0.19875		CASP1
+FAM:CAT:DGIDB:1a5439bf05e1	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.19875	0.19875		CASP1
+FAM:CAT:DGIDB:329179d638e2	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.19875	0.19875		CASP1
+FAM:CAT:DGIDB:fb1b27cbf8a6	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.0288675	0.0288675		KCNJ8
+FAM:CAT:DGIDB:6ed5607e5b5e	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.0526622	0.0526622		NR1D1
+FAM:CAT:DGIDB:6ed5607e5b5e	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	3.05998e-05	3.05998e-05		NR1D1
+FAM:CAT:CHEMBL2431768	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.0450883	0.0450883		NAIP
+FAM:CAT:CHEMBL2431768	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-5.80547e-06	-5.80547e-06		BIRC6
+FAM:CAT:CHEMBL2431768	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-3.15801e-07	-3.15801e-07		BIRC6
+FAM:CAT:DGIDB:648262c833d9	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.0450883	0.0450883		NAIP
+FAM:CAT:DGIDB:648262c833d9	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-5.80547e-06	-5.80547e-06		BIRC6
+FAM:CAT:DGIDB:648262c833d9	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-3.15801e-07	-3.15801e-07		BIRC6
+FAM:CAT:CHEMBL2104449	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.025	0.025		KCNJ8
+FAM:CAT:CHEMBL2105160	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.025	0.025		KCNJ8
+FAM:CAT:DGIDB:342d6428af28	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.025	0.025		KCNJ8
+FAM:CAT:DGIDB:da429e38def8	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.025	0.025		KCNJ8
+FAM:CAT:DGIDB:0323631b6138	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.0888818	0.0888818		CASP1
+FAM:CAT:DGIDB:0323631b6138	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	3.29246e-07	3.29246e-07		CASP3
+FAM:CAT:DGIDB:0323631b6138	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	1.14144e-05	1.14144e-05		CASP3
+FAM:CAT:DGIDB:caf143670019	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.0333154	0.0333154		EIF2AK2
+FAM:CAT:DGIDB:caf143670019	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-1.10229e-05	-1.10229e-05		EIF2AK2
+FAM:CAT:DGIDB:caf143670019	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	1.79598e-05	1.79598e-05		EIF2AK2
+FAM:CAT:DGIDB:d2d2a13c770a	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.0333154	0.0333154		EIF2AK2
+FAM:CAT:DGIDB:d2d2a13c770a	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-1.10229e-05	-1.10229e-05		EIF2AK2
+FAM:CAT:DGIDB:d2d2a13c770a	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	1.79598e-05	1.79598e-05		EIF2AK2
+FAM:CAT:DGIDB:0addb0a44032	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-3.25133e-05	-3.25133e-05		RORA
+FAM:CAT:DGIDB:0addb0a44032	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.0172244	0.0172244		RORA
+FAM:CAT:DGIDB:0addb0a44032	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	1.67624e-05	1.67624e-05		RORA
+FAM:CAT:DGIDB:45b2405f8f75	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-3.25133e-05	-3.25133e-05		RORA
+FAM:CAT:DGIDB:45b2405f8f75	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.0172244	0.0172244		RORA
+FAM:CAT:DGIDB:45b2405f8f75	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	1.67624e-05	1.67624e-05		RORA
+FAM:CAT:DGIDB:75ad8857ad10	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-3.25133e-05	-3.25133e-05		RORA
+FAM:CAT:DGIDB:75ad8857ad10	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.0172244	0.0172244		RORA
+FAM:CAT:DGIDB:75ad8857ad10	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	1.67624e-05	1.67624e-05		RORA
+FAM:CAT:DGIDB:806b78a03d44	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.140117	0.140117		CASP1
+FAM:CAT:DGIDB:5afa1b0f10cb	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.0353788	0.0353788		PTPN22
+FAM:CAT:DGIDB:5afa1b0f10cb	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	1.41502e-05	1.41502e-05		PTPN1
+FAM:CAT:DGIDB:5afa1b0f10cb	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-2.06081e-06	-2.06081e-06		PTPN1
+FAM:CAT:DGIDB:9cbaf6d638f2	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.0353788	0.0353788		PTPN22
+FAM:CAT:DGIDB:9cbaf6d638f2	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	1.41502e-05	1.41502e-05		PTPN1
+FAM:CAT:DGIDB:9cbaf6d638f2	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-2.06081e-06	-2.06081e-06		PTPN1
+FAM:CAT:CHEMBL4303525	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.0078169	0.0078169		NFE2L2
+FAM:CAT:CHEMBL4303525	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.0070439	0.0070439		NFE2L2
+FAM:CAT:CHEMBL4303525	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	0.00684518	0.00684518		NFE2L2
+FAM:CAT:DGIDB:300a1f119a63	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.0078169	0.0078169		NFE2L2
+FAM:CAT:DGIDB:300a1f119a63	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.0070439	0.0070439		NFE2L2
+FAM:CAT:DGIDB:300a1f119a63	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	0.00684518	0.00684518		NFE2L2
+FAM:CAT:CHEMBL2105705	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-9.04985e-05	-9.04985e-05		VDR
+FAM:CAT:CHEMBL2105705	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.00825319	0.00825319		VDR
+FAM:CAT:CHEMBL2105705	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	6.92626e-06	6.92626e-06		VDR
+FAM:CAT:CHEMBL1040	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.000127984	-0.000127984		VDR
+FAM:CAT:CHEMBL1040	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.0116718	0.0116718		VDR
+FAM:CAT:CHEMBL1040	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	9.79521e-06	9.79521e-06		VDR
+FAM:CAT:CHEMBL1042	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.000127984	-0.000127984		VDR
+FAM:CAT:CHEMBL1042	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.0116718	0.0116718		VDR
+FAM:CAT:CHEMBL1042	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	9.79521e-06	9.79521e-06		VDR
+FAM:CAT:CHEMBL1200622	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.000127984	-0.000127984		VDR
+FAM:CAT:CHEMBL1200622	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.0116718	0.0116718		VDR
+FAM:CAT:CHEMBL1200622	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	9.79521e-06	9.79521e-06		VDR
+FAM:CAT:CHEMBL1200666	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.000127984	-0.000127984		VDR
+FAM:CAT:CHEMBL1200666	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.0116718	0.0116718		VDR
+FAM:CAT:CHEMBL1200666	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	9.79521e-06	9.79521e-06		VDR
+FAM:CAT:CHEMBL1200810	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.000127984	-0.000127984		VDR
+FAM:CAT:CHEMBL1200810	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.0116718	0.0116718		VDR
+FAM:CAT:CHEMBL1200810	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	9.79521e-06	9.79521e-06		VDR
+FAM:CAT:CHEMBL1536	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.000127984	-0.000127984		VDR
+FAM:CAT:CHEMBL1536	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.0116718	0.0116718		VDR
+FAM:CAT:CHEMBL1536	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	9.79521e-06	9.79521e-06		VDR
+FAM:CAT:CHEMBL1601669	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.000127984	-0.000127984		VDR
+FAM:CAT:CHEMBL1601669	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.0116718	0.0116718		VDR
+FAM:CAT:CHEMBL1601669	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	9.79521e-06	9.79521e-06		VDR
+FAM:CAT:CHEMBL1908376	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.000127984	-0.000127984		VDR
+FAM:CAT:CHEMBL1908376	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.0116718	0.0116718		VDR
+FAM:CAT:CHEMBL1908376	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	9.79521e-06	9.79521e-06		VDR
+FAM:CAT:CHEMBL2104955	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.000127984	-0.000127984		VDR
+FAM:CAT:CHEMBL2104955	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.0116718	0.0116718		VDR
+FAM:CAT:CHEMBL2104955	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	9.79521e-06	9.79521e-06		VDR
+FAM:CAT:CHEMBL2105107	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.000127984	-0.000127984		VDR
+FAM:CAT:CHEMBL2105107	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.0116718	0.0116718		VDR
+FAM:CAT:CHEMBL2105107	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	9.79521e-06	9.79521e-06		VDR
+FAM:CAT:CHEMBL2356023	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.000127984	-0.000127984		VDR
+FAM:CAT:CHEMBL2356023	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.0116718	0.0116718		VDR
+FAM:CAT:CHEMBL2356023	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	9.79521e-06	9.79521e-06		VDR
+FAM:CAT:CHEMBL284121	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.000127984	-0.000127984		VDR
+FAM:CAT:CHEMBL284121	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.0116718	0.0116718		VDR
+FAM:CAT:CHEMBL284121	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	9.79521e-06	9.79521e-06		VDR
+FAM:CAT:CHEMBL3545094	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.000127984	-0.000127984		VDR
+FAM:CAT:CHEMBL3545094	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.0116718	0.0116718		VDR
+FAM:CAT:CHEMBL3545094	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	9.79521e-06	9.79521e-06		VDR
+FAM:CAT:CHEMBL3989862	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.000127984	-0.000127984		VDR
+FAM:CAT:CHEMBL3989862	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.0116718	0.0116718		VDR
+FAM:CAT:CHEMBL3989862	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	9.79521e-06	9.79521e-06		VDR
+FAM:CAT:CHEMBL4297608	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.000127984	-0.000127984		VDR
+FAM:CAT:CHEMBL4297608	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.0116718	0.0116718		VDR
+FAM:CAT:CHEMBL4297608	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	9.79521e-06	9.79521e-06		VDR
+FAM:CAT:CHEMBL605525	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.000127984	-0.000127984		VDR
+FAM:CAT:CHEMBL605525	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.0116718	0.0116718		VDR
+FAM:CAT:CHEMBL605525	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	9.79521e-06	9.79521e-06		VDR
+FAM:CAT:CHEMBL846	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.000127984	-0.000127984		VDR
+FAM:CAT:CHEMBL846	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.0116718	0.0116718		VDR
+FAM:CAT:CHEMBL846	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	9.79521e-06	9.79521e-06		VDR
+FAM:CAT:DGIDB:0cc2ae469263	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.000127984	-0.000127984		VDR
+FAM:CAT:DGIDB:0cc2ae469263	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.0116718	0.0116718		VDR
+FAM:CAT:DGIDB:0cc2ae469263	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	9.79521e-06	9.79521e-06		VDR
+FAM:CAT:DGIDB:1c4444d46e12	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.000127984	-0.000127984		VDR
+FAM:CAT:DGIDB:1c4444d46e12	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.0116718	0.0116718		VDR
+FAM:CAT:DGIDB:1c4444d46e12	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	9.79521e-06	9.79521e-06		VDR
+FAM:CAT:DGIDB:1f6977ce50ed	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.000127984	-0.000127984		VDR
+FAM:CAT:DGIDB:1f6977ce50ed	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.0116718	0.0116718		VDR
+FAM:CAT:DGIDB:1f6977ce50ed	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	9.79521e-06	9.79521e-06		VDR
+FAM:CAT:DGIDB:44d5c33be04e	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.000127984	-0.000127984		VDR
+FAM:CAT:DGIDB:44d5c33be04e	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.0116718	0.0116718		VDR
+FAM:CAT:DGIDB:44d5c33be04e	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	9.79521e-06	9.79521e-06		VDR
+FAM:CAT:DGIDB:56e892e86e90	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.000127984	-0.000127984		VDR
+FAM:CAT:DGIDB:56e892e86e90	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.0116718	0.0116718		VDR
+FAM:CAT:DGIDB:56e892e86e90	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	9.79521e-06	9.79521e-06		VDR
+FAM:CAT:DGIDB:69354161595e	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.000127984	-0.000127984		VDR
+FAM:CAT:DGIDB:69354161595e	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.0116718	0.0116718		VDR
+FAM:CAT:DGIDB:69354161595e	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	9.79521e-06	9.79521e-06		VDR
+FAM:CAT:DGIDB:751d166e1e52	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.000127984	-0.000127984		VDR
+FAM:CAT:DGIDB:751d166e1e52	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.0116718	0.0116718		VDR
+FAM:CAT:DGIDB:751d166e1e52	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	9.79521e-06	9.79521e-06		VDR
+FAM:CAT:DGIDB:80986b1aeb4f	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.000127984	-0.000127984		VDR
+FAM:CAT:DGIDB:80986b1aeb4f	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.0116718	0.0116718		VDR
+FAM:CAT:DGIDB:80986b1aeb4f	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	9.79521e-06	9.79521e-06		VDR
+FAM:CAT:DGIDB:8ed0f4cd93e2	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.000127984	-0.000127984		VDR
+FAM:CAT:DGIDB:8ed0f4cd93e2	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.0116718	0.0116718		VDR
+FAM:CAT:DGIDB:8ed0f4cd93e2	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	9.79521e-06	9.79521e-06		VDR
+FAM:CAT:DGIDB:90b640e2134f	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.000127984	-0.000127984		VDR
+FAM:CAT:DGIDB:90b640e2134f	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.0116718	0.0116718		VDR
+FAM:CAT:DGIDB:90b640e2134f	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	9.79521e-06	9.79521e-06		VDR
+FAM:CAT:DGIDB:a59747178c82	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.000127984	-0.000127984		VDR
+FAM:CAT:DGIDB:a59747178c82	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.0116718	0.0116718		VDR
+FAM:CAT:DGIDB:a59747178c82	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	9.79521e-06	9.79521e-06		VDR
+FAM:CAT:DGIDB:a61a8b72fd3f	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.000127984	-0.000127984		VDR
+FAM:CAT:DGIDB:a61a8b72fd3f	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.0116718	0.0116718		VDR
+FAM:CAT:DGIDB:a61a8b72fd3f	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	9.79521e-06	9.79521e-06		VDR
+FAM:CAT:DGIDB:b28d52919b48	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.000127984	-0.000127984		VDR
+FAM:CAT:DGIDB:b28d52919b48	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.0116718	0.0116718		VDR
+FAM:CAT:DGIDB:b28d52919b48	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	9.79521e-06	9.79521e-06		VDR
+FAM:CAT:DGIDB:d0097bbd6c63	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.000127984	-0.000127984		VDR
+FAM:CAT:DGIDB:d0097bbd6c63	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.0116718	0.0116718		VDR
+FAM:CAT:DGIDB:d0097bbd6c63	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	9.79521e-06	9.79521e-06		VDR
+FAM:CAT:DGIDB:f00011e958ea	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.000127984	-0.000127984		VDR
+FAM:CAT:DGIDB:f00011e958ea	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.0116718	0.0116718		VDR
+FAM:CAT:DGIDB:f00011e958ea	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	9.79521e-06	9.79521e-06		VDR
+FAM:CAT:DGIDB:f6366d581009	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.000127984	-0.000127984		VDR
+FAM:CAT:DGIDB:f6366d581009	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.0116718	0.0116718		VDR
+FAM:CAT:DGIDB:f6366d581009	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	9.79521e-06	9.79521e-06		VDR
+FAM:CAT:DGIDB:fa2c565df7e0	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.000127984	-0.000127984		VDR
+FAM:CAT:DGIDB:fa2c565df7e0	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.0116718	0.0116718		VDR
+FAM:CAT:DGIDB:fa2c565df7e0	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	9.79521e-06	9.79521e-06		VDR
+FAM:CAT:DGIDB:fea95527d588	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.000127984	-0.000127984		VDR
+FAM:CAT:DGIDB:fea95527d588	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.0116718	0.0116718		VDR
+FAM:CAT:DGIDB:fea95527d588	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	9.79521e-06	9.79521e-06		VDR
+FAM:CAT:CHEMBL3545173	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.0188448	0.0188448		RARB
+FAM:CAT:CHEMBL3545173	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	6.72928e-05	6.72928e-05		RARA
+FAM:CAT:CHEMBL3545173	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	8.48377e-05	8.48377e-05		RARA
+FAM:CAT:DGIDB:6abfb05ed0d9	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.0188448	0.0188448		RARB
+FAM:CAT:DGIDB:6abfb05ed0d9	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	6.72928e-05	6.72928e-05		RARA
+FAM:CAT:DGIDB:6abfb05ed0d9	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	8.48377e-05	8.48377e-05		RARA
+FAM:CAT:DGIDB:b52fd29203f7	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.0101578	0.0101578		NR1I3
+FAM:CAT:DGIDB:b52fd29203f7	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.000145515	-0.000145515		NR1I2
+FAM:CAT:DGIDB:b52fd29203f7	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	0.00207809	0.00207809		NR1I2
+FAM:CAT:DGIDB:195f05f106ab	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	1.98772e-05	1.98772e-05		NR1D2
+FAM:CAT:DGIDB:195f05f106ab	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.0341465	0.0341465		NR1D1
+FAM:CAT:DGIDB:195f05f106ab	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-4.2552e-05	-4.2552e-05		NR1D2
+FAM:CAT:DGIDB:e3b018898d85	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	1.98772e-05	1.98772e-05		NR1D2
+FAM:CAT:DGIDB:e3b018898d85	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.0341465	0.0341465		NR1D1
+FAM:CAT:DGIDB:e3b018898d85	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-4.2552e-05	-4.2552e-05		NR1D2
+FAM:CAT:DGIDB:fc1c285d3273	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	1.98772e-05	1.98772e-05		NR1D2
+FAM:CAT:DGIDB:fc1c285d3273	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.0341465	0.0341465		NR1D1
+FAM:CAT:DGIDB:fc1c285d3273	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-4.2552e-05	-4.2552e-05		NR1D2
+FAM:CAT:DGIDB:0be6484eb827	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.00804968	0.00804968		RARA
+FAM:CAT:DGIDB:0be6484eb827	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.000119508	0.000119508		RARA
+FAM:CAT:DGIDB:0be6484eb827	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	0.000158336	0.000158336		RARA
+FAM:CAT:DGIDB:89ce230eac69	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.00804968	0.00804968		RARA
+FAM:CAT:DGIDB:89ce230eac69	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.000119508	0.000119508		RARA
+FAM:CAT:DGIDB:89ce230eac69	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	0.000158336	0.000158336		RARA
+FAM:CAT:DGIDB:9e339adae01c	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.00804968	0.00804968		RARA
+FAM:CAT:DGIDB:9e339adae01c	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.000119508	0.000119508		RARA
+FAM:CAT:DGIDB:9e339adae01c	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	0.000158336	0.000158336		RARA
+FAM:CAT:DGIDB:c15d9585ad2b	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-4.21038e-05	-4.21038e-05		NCOA1
+FAM:CAT:DGIDB:c15d9585ad2b	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.0130288	0.0130288		NCOA1
+FAM:CAT:DGIDB:c15d9585ad2b	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-0.000207662	-0.000207662		NCOA1
+FAM:CAT:CHEMBL3392776	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.00348159	0.00348159		STAT3
+FAM:CAT:CHEMBL3392776	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.00358334	0.00358334		STAT3
+FAM:CAT:CHEMBL3392776	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	0.000234116	0.000234116		STAT3
+FAM:CAT:CHEMBL4452527	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.00348159	0.00348159		STAT3
+FAM:CAT:CHEMBL4452527	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.00358334	0.00358334		STAT3
+FAM:CAT:CHEMBL4452527	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	0.000234116	0.000234116		STAT3
+FAM:CAT:DGIDB:0dfe60cde8de	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.00348159	0.00348159		STAT3
+FAM:CAT:DGIDB:0dfe60cde8de	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.00358334	0.00358334		STAT3
+FAM:CAT:DGIDB:0dfe60cde8de	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	0.000234116	0.000234116		STAT3
+FAM:CAT:DGIDB:5af3dd6c5c76	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.00348159	0.00348159		STAT3
+FAM:CAT:DGIDB:5af3dd6c5c76	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.00358334	0.00358334		STAT3
+FAM:CAT:DGIDB:5af3dd6c5c76	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	0.000234116	0.000234116		STAT3
+FAM:CAT:DGIDB:830f4ec04842	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.00348159	0.00348159		STAT3
+FAM:CAT:DGIDB:830f4ec04842	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.00358334	0.00358334		STAT3
+FAM:CAT:DGIDB:830f4ec04842	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	0.000234116	0.000234116		STAT3
+FAM:CAT:DGIDB:ce496ff00491	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.00348159	0.00348159		STAT3
+FAM:CAT:DGIDB:ce496ff00491	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.00358334	0.00358334		STAT3
+FAM:CAT:DGIDB:ce496ff00491	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	0.000234116	0.000234116		STAT3
+FAM:CAT:DGIDB:c5e1cc9dc0a1	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.0165641	0.0165641		RARB
+FAM:CAT:DGIDB:c5e1cc9dc0a1	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	5.45939e-05	5.45939e-05		RARA
+FAM:CAT:DGIDB:c5e1cc9dc0a1	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	0.000321665	0.000321665		NR2E1
+FAM:CAT:CHEMBL2105721	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.114147	0.114147		CASP1
+FAM:CAT:DGIDB:f9e8089a212a	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.114147	0.114147		CASP1
+FAM:CAT:CHEMBL1091	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.000145798	0.000145798		NR3C1
+FAM:CAT:CHEMBL1091	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.00595095	0.00595095		NR3C1
+FAM:CAT:CHEMBL1091	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	4.77728e-05	4.77728e-05		NR3C1
+FAM:CAT:CHEMBL1152	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.000145798	0.000145798		NR3C1
+FAM:CAT:CHEMBL1152	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.00595095	0.00595095		NR3C1
+FAM:CAT:CHEMBL1152	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	4.77728e-05	4.77728e-05		NR3C1
+FAM:CAT:CHEMBL1159650	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.000145798	0.000145798		NR3C1
+FAM:CAT:CHEMBL1159650	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.00595095	0.00595095		NR3C1
+FAM:CAT:CHEMBL1159650	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	4.77728e-05	4.77728e-05		NR3C1
+FAM:CAT:CHEMBL1161	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.000145798	0.000145798		NR3C1
+FAM:CAT:CHEMBL1161	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.00595095	0.00595095		NR3C1
+FAM:CAT:CHEMBL1161	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	4.77728e-05	4.77728e-05		NR3C1
+FAM:CAT:CHEMBL1200342	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.000145798	0.000145798		NR3C1
+FAM:CAT:CHEMBL1200342	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.00595095	0.00595095		NR3C1
+FAM:CAT:CHEMBL1200342	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	4.77728e-05	4.77728e-05		NR3C1
+FAM:CAT:CHEMBL1200376	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.000145798	0.000145798		NR3C1
+FAM:CAT:CHEMBL1200376	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.00595095	0.00595095		NR3C1
+FAM:CAT:CHEMBL1200376	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	4.77728e-05	4.77728e-05		NR3C1
+FAM:CAT:CHEMBL1200384	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.000145798	0.000145798		NR3C1
+FAM:CAT:CHEMBL1200384	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.00595095	0.00595095		NR3C1
+FAM:CAT:CHEMBL1200384	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	4.77728e-05	4.77728e-05		NR3C1
+FAM:CAT:CHEMBL1200386	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.000145798	0.000145798		NR3C1
+FAM:CAT:CHEMBL1200386	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.00595095	0.00595095		NR3C1
+FAM:CAT:CHEMBL1200386	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	4.77728e-05	4.77728e-05		NR3C1
+FAM:CAT:CHEMBL206834	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.00366041	-0.00366041		LYN
+FAM:CAT:CHEMBL206834	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	5.56095e-05	5.56095e-05		ABL1
+FAM:CAT:CHEMBL206834	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-2.81404e-05	-2.81404e-05		ABL1
+FAM:CAT:DGIDB:5eb290bdaf69	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.00366041	-0.00366041		LYN
+FAM:CAT:DGIDB:5eb290bdaf69	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	5.56095e-05	5.56095e-05		ABL1
+FAM:CAT:DGIDB:5eb290bdaf69	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-2.81404e-05	-2.81404e-05		ABL1
+FAM:CAT:CHEMBL139835	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-9.01653e-05	-9.01653e-05		NR3C1
+FAM:CAT:CHEMBL139835	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00203477	-0.00203477		NR3C1
+FAM:CAT:CHEMBL139835	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-7.65392e-05	-7.65392e-05		PGR
+FAM:CAT:DGIDB:7e3c67305ca1	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-9.01653e-05	-9.01653e-05		NR3C1
+FAM:CAT:DGIDB:7e3c67305ca1	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00203477	-0.00203477		NR3C1
+FAM:CAT:DGIDB:7e3c67305ca1	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-7.65392e-05	-7.65392e-05		PGR
+FAM:CAT:DGIDB:15b56108e84d	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-8.70776e-05	-8.70776e-05		NR3C1
+FAM:CAT:DGIDB:15b56108e84d	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00332715	-0.00332715		NR3C1
+FAM:CAT:DGIDB:15b56108e84d	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	2.54936e-05	2.54936e-05		PGR
+FAM:CAT:DGIDB:c38fb95dbaa5	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-8.70776e-05	-8.70776e-05		NR3C1
+FAM:CAT:DGIDB:c38fb95dbaa5	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00332715	-0.00332715		NR3C1
+FAM:CAT:DGIDB:c38fb95dbaa5	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	2.54936e-05	2.54936e-05		PGR
+FAM:CAT:CHEMBL1170	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	1.8791e-05	1.8791e-05		AR
+FAM:CAT:CHEMBL1170	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00261852	-0.00261852		AR
+FAM:CAT:CHEMBL1170	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-5.58136e-06	-5.58136e-06		AR
+FAM:CAT:CHEMBL1200335	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	1.8791e-05	1.8791e-05		AR
+FAM:CAT:CHEMBL1200335	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00261852	-0.00261852		AR
+FAM:CAT:CHEMBL1200335	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-5.58136e-06	-5.58136e-06		AR
+FAM:CAT:CHEMBL1200412	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	1.8791e-05	1.8791e-05		AR
+FAM:CAT:CHEMBL1200412	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00261852	-0.00261852		AR
+FAM:CAT:CHEMBL1200412	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-5.58136e-06	-5.58136e-06		AR
+FAM:CAT:CHEMBL1200436	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	1.8791e-05	1.8791e-05		AR
+FAM:CAT:CHEMBL1200436	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00261852	-0.00261852		AR
+FAM:CAT:CHEMBL1200436	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-5.58136e-06	-5.58136e-06		AR
+FAM:CAT:CHEMBL1200585	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	1.8791e-05	1.8791e-05		AR
+FAM:CAT:CHEMBL1200585	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00261852	-0.00261852		AR
+FAM:CAT:CHEMBL1200585	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-5.58136e-06	-5.58136e-06		AR
+FAM:CAT:CHEMBL1200623	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	1.8791e-05	1.8791e-05		AR
+FAM:CAT:CHEMBL1200623	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00261852	-0.00261852		AR
+FAM:CAT:CHEMBL1200623	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-5.58136e-06	-5.58136e-06		AR
+FAM:CAT:CHEMBL1200946	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	1.8791e-05	1.8791e-05		AR
+FAM:CAT:CHEMBL1200946	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00261852	-0.00261852		AR
+FAM:CAT:CHEMBL1200946	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-5.58136e-06	-5.58136e-06		AR
+FAM:CAT:CHEMBL1201048	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	1.8791e-05	1.8791e-05		AR
+FAM:CAT:CHEMBL1201048	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00261852	-0.00261852		AR
+FAM:CAT:CHEMBL1201048	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-5.58136e-06	-5.58136e-06		AR
+FAM:CAT:CHEMBL1201101	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	1.8791e-05	1.8791e-05		AR
+FAM:CAT:CHEMBL1201101	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00261852	-0.00261852		AR
+FAM:CAT:CHEMBL1201101	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-5.58136e-06	-5.58136e-06		AR
+FAM:CAT:CHEMBL1395	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	1.8791e-05	1.8791e-05		AR
+FAM:CAT:CHEMBL1395	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00261852	-0.00261852		AR
+FAM:CAT:CHEMBL1395	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-5.58136e-06	-5.58136e-06		AR
+FAM:CAT:CHEMBL1418176	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	1.8791e-05	1.8791e-05		AR
+FAM:CAT:CHEMBL1418176	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00261852	-0.00261852		AR
+FAM:CAT:CHEMBL1418176	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-5.58136e-06	-5.58136e-06		AR
+FAM:CAT:CHEMBL1445	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	1.8791e-05	1.8791e-05		AR
+FAM:CAT:CHEMBL1445	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00261852	-0.00261852		AR
+FAM:CAT:CHEMBL1445	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-5.58136e-06	-5.58136e-06		AR
+FAM:CAT:CHEMBL2079587	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	1.8791e-05	1.8791e-05		AR
+FAM:CAT:CHEMBL2079587	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00261852	-0.00261852		AR
+FAM:CAT:CHEMBL2079587	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-5.58136e-06	-5.58136e-06		AR
+FAM:CAT:CHEMBL2107067	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	1.8791e-05	1.8791e-05		AR
+FAM:CAT:CHEMBL2107067	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00261852	-0.00261852		AR
+FAM:CAT:CHEMBL2107067	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-5.58136e-06	-5.58136e-06		AR
+FAM:CAT:CHEMBL386630	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	1.8791e-05	1.8791e-05		AR
+FAM:CAT:CHEMBL386630	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00261852	-0.00261852		AR
+FAM:CAT:CHEMBL386630	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-5.58136e-06	-5.58136e-06		AR
+FAM:CAT:DGIDB:24f41c19eaf2	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	1.8791e-05	1.8791e-05		AR
+FAM:CAT:DGIDB:24f41c19eaf2	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00261852	-0.00261852		AR
+FAM:CAT:DGIDB:24f41c19eaf2	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-5.58136e-06	-5.58136e-06		AR
+FAM:CAT:DGIDB:3fe53c3a24b2	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	1.8791e-05	1.8791e-05		AR
+FAM:CAT:DGIDB:3fe53c3a24b2	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00261852	-0.00261852		AR
+FAM:CAT:DGIDB:3fe53c3a24b2	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-5.58136e-06	-5.58136e-06		AR
+FAM:CAT:DGIDB:5f120f5a5ec0	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	1.8791e-05	1.8791e-05		AR
+FAM:CAT:DGIDB:5f120f5a5ec0	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00261852	-0.00261852		AR
+FAM:CAT:DGIDB:5f120f5a5ec0	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-5.58136e-06	-5.58136e-06		AR
+FAM:CAT:DGIDB:6f290929d303	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	1.8791e-05	1.8791e-05		AR
+FAM:CAT:DGIDB:6f290929d303	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00261852	-0.00261852		AR
+FAM:CAT:DGIDB:6f290929d303	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-5.58136e-06	-5.58136e-06		AR
+FAM:CAT:DGIDB:70ce494df19e	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	1.8791e-05	1.8791e-05		AR
+FAM:CAT:DGIDB:70ce494df19e	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00261852	-0.00261852		AR
+FAM:CAT:DGIDB:70ce494df19e	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-5.58136e-06	-5.58136e-06		AR
+FAM:CAT:DGIDB:83eaea166871	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	1.8791e-05	1.8791e-05		AR
+FAM:CAT:DGIDB:83eaea166871	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00261852	-0.00261852		AR
+FAM:CAT:DGIDB:83eaea166871	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-5.58136e-06	-5.58136e-06		AR
+FAM:CAT:DGIDB:8e52eead3994	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	1.8791e-05	1.8791e-05		AR
+FAM:CAT:DGIDB:8e52eead3994	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00261852	-0.00261852		AR
+FAM:CAT:DGIDB:8e52eead3994	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-5.58136e-06	-5.58136e-06		AR
+FAM:CAT:DGIDB:97738670fe63	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	1.8791e-05	1.8791e-05		AR
+FAM:CAT:DGIDB:97738670fe63	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00261852	-0.00261852		AR
+FAM:CAT:DGIDB:97738670fe63	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-5.58136e-06	-5.58136e-06		AR
+FAM:CAT:DGIDB:a9c0c1246334	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	1.8791e-05	1.8791e-05		AR
+FAM:CAT:DGIDB:a9c0c1246334	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00261852	-0.00261852		AR
+FAM:CAT:DGIDB:a9c0c1246334	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-5.58136e-06	-5.58136e-06		AR
+FAM:CAT:DGIDB:ace28a052219	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	1.8791e-05	1.8791e-05		AR
+FAM:CAT:DGIDB:ace28a052219	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00261852	-0.00261852		AR
+FAM:CAT:DGIDB:ace28a052219	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-5.58136e-06	-5.58136e-06		AR
+FAM:CAT:DGIDB:af54f618bd1a	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	1.8791e-05	1.8791e-05		AR
+FAM:CAT:DGIDB:af54f618bd1a	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00261852	-0.00261852		AR
+FAM:CAT:DGIDB:af54f618bd1a	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-5.58136e-06	-5.58136e-06		AR
+FAM:CAT:DGIDB:b3c5641e9214	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	1.8791e-05	1.8791e-05		AR
+FAM:CAT:DGIDB:b3c5641e9214	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00261852	-0.00261852		AR
+FAM:CAT:DGIDB:b3c5641e9214	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-5.58136e-06	-5.58136e-06		AR
+FAM:CAT:DGIDB:ccf0411ed98e	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	1.8791e-05	1.8791e-05		AR
+FAM:CAT:DGIDB:ccf0411ed98e	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00261852	-0.00261852		AR
+FAM:CAT:DGIDB:ccf0411ed98e	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-5.58136e-06	-5.58136e-06		AR
+FAM:CAT:DGIDB:d22a611bb50d	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	1.8791e-05	1.8791e-05		AR
+FAM:CAT:DGIDB:d22a611bb50d	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00261852	-0.00261852		AR
+FAM:CAT:DGIDB:d22a611bb50d	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-5.58136e-06	-5.58136e-06		AR
+FAM:CAT:DGIDB:e78bc88ee9d4	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	1.8791e-05	1.8791e-05		AR
+FAM:CAT:DGIDB:e78bc88ee9d4	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00261852	-0.00261852		AR
+FAM:CAT:DGIDB:e78bc88ee9d4	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-5.58136e-06	-5.58136e-06		AR
+FAM:CAT:DGIDB:e8fc14d39448	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	1.8791e-05	1.8791e-05		AR
+FAM:CAT:DGIDB:e8fc14d39448	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00261852	-0.00261852		AR
+FAM:CAT:DGIDB:e8fc14d39448	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-5.58136e-06	-5.58136e-06		AR
+FAM:CAT:DGIDB:fcb6e74032d9	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	1.8791e-05	1.8791e-05		AR
+FAM:CAT:DGIDB:fcb6e74032d9	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00261852	-0.00261852		AR
+FAM:CAT:DGIDB:fcb6e74032d9	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-5.58136e-06	-5.58136e-06		AR
+FAM:CAT:CHEMBL1358	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.00194827	-0.00194827		ESR1
+FAM:CAT:CHEMBL1358	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00210629	-0.00210629		ESR1
+FAM:CAT:CHEMBL1358	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	0.00225174	0.00225174		ESR1
+FAM:CAT:CHEMBL3545210	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.00194827	-0.00194827		ESR1
+FAM:CAT:CHEMBL3545210	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00210629	-0.00210629		ESR1
+FAM:CAT:CHEMBL3545210	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	0.00225174	0.00225174		ESR1
+FAM:CAT:CHEMBL3581693	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.00194827	-0.00194827		ESR1
+FAM:CAT:CHEMBL3581693	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00210629	-0.00210629		ESR1
+FAM:CAT:CHEMBL3581693	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	0.00225174	0.00225174		ESR1
+FAM:CAT:CHEMBL4297509	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.00194827	-0.00194827		ESR1
+FAM:CAT:CHEMBL4297509	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00210629	-0.00210629		ESR1
+FAM:CAT:CHEMBL4297509	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	0.00225174	0.00225174		ESR1
+FAM:CAT:CHEMBL4475463	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.00194827	-0.00194827		ESR1
+FAM:CAT:CHEMBL4475463	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00210629	-0.00210629		ESR1
+FAM:CAT:CHEMBL4475463	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	0.00225174	0.00225174		ESR1
+FAM:CAT:CHEMBL4650316	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.00194827	-0.00194827		ESR1
+FAM:CAT:CHEMBL4650316	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00210629	-0.00210629		ESR1
+FAM:CAT:CHEMBL4650316	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	0.00225174	0.00225174		ESR1
+FAM:CAT:CHEMBL4650365	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.00194827	-0.00194827		ESR1
+FAM:CAT:CHEMBL4650365	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00210629	-0.00210629		ESR1
+FAM:CAT:CHEMBL4650365	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	0.00225174	0.00225174		ESR1
+FAM:CAT:DGIDB:4a2b31fc1086	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.00194827	-0.00194827		ESR1
+FAM:CAT:DGIDB:4a2b31fc1086	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00210629	-0.00210629		ESR1
+FAM:CAT:DGIDB:4a2b31fc1086	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	0.00225174	0.00225174		ESR1
+FAM:CAT:DGIDB:51ca711129b9	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.00194827	-0.00194827		ESR1
+FAM:CAT:DGIDB:51ca711129b9	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00210629	-0.00210629		ESR1
+FAM:CAT:DGIDB:51ca711129b9	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	0.00225174	0.00225174		ESR1
+FAM:CAT:DGIDB:7ce9007760d4	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.00194827	-0.00194827		ESR1
+FAM:CAT:DGIDB:7ce9007760d4	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00210629	-0.00210629		ESR1
+FAM:CAT:DGIDB:7ce9007760d4	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	0.00225174	0.00225174		ESR1
+FAM:CAT:DGIDB:8072505249c7	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.00194827	-0.00194827		ESR1
+FAM:CAT:DGIDB:8072505249c7	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00210629	-0.00210629		ESR1
+FAM:CAT:DGIDB:8072505249c7	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	0.00225174	0.00225174		ESR1
+FAM:CAT:DGIDB:9286266ea33c	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.00194827	-0.00194827		ESR1
+FAM:CAT:DGIDB:9286266ea33c	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00210629	-0.00210629		ESR1
+FAM:CAT:DGIDB:9286266ea33c	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	0.00225174	0.00225174		ESR1
+FAM:CAT:DGIDB:a4349a0e6c97	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.00194827	-0.00194827		ESR1
+FAM:CAT:DGIDB:a4349a0e6c97	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00210629	-0.00210629		ESR1
+FAM:CAT:DGIDB:a4349a0e6c97	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	0.00225174	0.00225174		ESR1
+FAM:CAT:DGIDB:bc21325ec143	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.00194827	-0.00194827		ESR1
+FAM:CAT:DGIDB:bc21325ec143	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00210629	-0.00210629		ESR1
+FAM:CAT:DGIDB:bc21325ec143	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	0.00225174	0.00225174		ESR1
+FAM:CAT:DGIDB:bf4508b20cd0	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.00194827	-0.00194827		ESR1
+FAM:CAT:DGIDB:bf4508b20cd0	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00210629	-0.00210629		ESR1
+FAM:CAT:DGIDB:bf4508b20cd0	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	0.00225174	0.00225174		ESR1
+FAM:CAT:DGIDB:c3756a4bd6c7	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.00194827	-0.00194827		ESR1
+FAM:CAT:DGIDB:c3756a4bd6c7	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00210629	-0.00210629		ESR1
+FAM:CAT:DGIDB:c3756a4bd6c7	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	0.00225174	0.00225174		ESR1
+FAM:CAT:DGIDB:f8f8a78bd93d	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.00194827	-0.00194827		ESR1
+FAM:CAT:DGIDB:f8f8a78bd93d	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00210629	-0.00210629		ESR1
+FAM:CAT:DGIDB:f8f8a78bd93d	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	0.00225174	0.00225174		ESR1
+FAM:CAT:DGIDB:3fac25c60783	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.0126181	-0.0126181		RARB
+FAM:CAT:DGIDB:3fac25c60783	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.00111738	0.00111738		RXRG
+FAM:CAT:DGIDB:3fac25c60783	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-0.000343336	-0.000343336		RXRB
+FAM:CAT:CHEMBL1131	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.0136291	-0.0136291		RARB
+FAM:CAT:CHEMBL1131	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.00120691	0.00120691		RXRG
+FAM:CAT:CHEMBL1131	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-0.000370846	-0.000370846		RXRB
+FAM:CAT:CHEMBL38	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.0136291	-0.0136291		RARB
+FAM:CAT:CHEMBL38	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.00120691	0.00120691		RXRG
+FAM:CAT:CHEMBL38	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-0.000370846	-0.000370846		RXRB
+FAM:CAT:CHEMBL464	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.0136291	-0.0136291		RARB
+FAM:CAT:CHEMBL464	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.00120691	0.00120691		RXRG
+FAM:CAT:CHEMBL464	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-0.000370846	-0.000370846		RXRB
+FAM:CAT:DGIDB:60196ff99a27	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.0136291	-0.0136291		RARB
+FAM:CAT:DGIDB:60196ff99a27	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.00120691	0.00120691		RXRG
+FAM:CAT:DGIDB:60196ff99a27	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-0.000370846	-0.000370846		RXRB
+FAM:CAT:DGIDB:acfbed0024a9	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.0136291	-0.0136291		RARB
+FAM:CAT:DGIDB:acfbed0024a9	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.00120691	0.00120691		RXRG
+FAM:CAT:DGIDB:acfbed0024a9	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-0.000370846	-0.000370846		RXRB
+FAM:CAT:CHEMBL1276308	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.000109048	-0.000109048		NR3C1
+FAM:CAT:CHEMBL1276308	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00407227	-0.00407227		NR3C1
+FAM:CAT:CHEMBL1276308	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	3.01267e-05	3.01267e-05		PGR
+FAM:CAT:DGIDB:7f061bf749aa	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.0132267	-0.0132267		RARB
+FAM:CAT:DGIDB:7f061bf749aa	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00861739	-0.00861739		NR2C2
+FAM:CAT:DGIDB:7f061bf749aa	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-0.00822212	-0.00822212		NR2C2
+FAM:CAT:DGIDB:ae888d8dc593	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.000103095	-0.000103095		NR3C1
+FAM:CAT:DGIDB:ae888d8dc593	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00420796	-0.00420796		NR3C1
+FAM:CAT:DGIDB:ae888d8dc593	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-3.37805e-05	-3.37805e-05		NR3C1
+FAM:CAT:CHEMBL271220	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.000145798	-0.000145798		NR3C1
+FAM:CAT:CHEMBL271220	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00595095	-0.00595095		NR3C1
+FAM:CAT:CHEMBL271220	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-4.77728e-05	-4.77728e-05		NR3C1
+FAM:CAT:CHEMBL3545391	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.000145798	-0.000145798		NR3C1
+FAM:CAT:CHEMBL3545391	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00595095	-0.00595095		NR3C1
+FAM:CAT:CHEMBL3545391	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-4.77728e-05	-4.77728e-05		NR3C1
+FAM:CAT:CHEMBL4068611	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.000145798	-0.000145798		NR3C1
+FAM:CAT:CHEMBL4068611	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00595095	-0.00595095		NR3C1
+FAM:CAT:CHEMBL4068611	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-4.77728e-05	-4.77728e-05		NR3C1
+FAM:CAT:DGIDB:2ea4defd66a7	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.000145798	-0.000145798		NR3C1
+FAM:CAT:DGIDB:2ea4defd66a7	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00595095	-0.00595095		NR3C1
+FAM:CAT:DGIDB:2ea4defd66a7	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-4.77728e-05	-4.77728e-05		NR3C1
+FAM:CAT:DGIDB:50c2a146d931	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.000145798	-0.000145798		NR3C1
+FAM:CAT:DGIDB:50c2a146d931	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00595095	-0.00595095		NR3C1
+FAM:CAT:DGIDB:50c2a146d931	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-4.77728e-05	-4.77728e-05		NR3C1
+FAM:CAT:DGIDB:7b1c6df417ac	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.000145798	-0.000145798		NR3C1
+FAM:CAT:DGIDB:7b1c6df417ac	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.00595095	-0.00595095		NR3C1
+FAM:CAT:DGIDB:7b1c6df417ac	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-4.77728e-05	-4.77728e-05		NR3C1
+FAM:CAT:CHEMBL107430	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.00804968	-0.00804968		RARA
+FAM:CAT:CHEMBL107430	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.000119508	-0.000119508		RARA
+FAM:CAT:CHEMBL107430	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-0.000158336	-0.000158336		RARA
+FAM:CAT:DGIDB:2cab023d9d78	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.00804968	-0.00804968		RARA
+FAM:CAT:DGIDB:2cab023d9d78	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.000119508	-0.000119508		RARA
+FAM:CAT:DGIDB:2cab023d9d78	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-0.000158336	-0.000158336		RARA
+FAM:CAT:DGIDB:8ade50e369ea	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.00804968	-0.00804968		RARA
+FAM:CAT:DGIDB:8ade50e369ea	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.000119508	-0.000119508		RARA
+FAM:CAT:DGIDB:8ade50e369ea	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-0.000158336	-0.000158336		RARA
+FAM:CAT:CHEMBL1265	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.0188448	-0.0188448		RARB
+FAM:CAT:CHEMBL1265	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-6.72928e-05	-6.72928e-05		RARA
+FAM:CAT:CHEMBL1265	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-8.48377e-05	-8.48377e-05		RARA
+FAM:CAT:CHEMBL1657	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.0188448	-0.0188448		RARB
+FAM:CAT:CHEMBL1657	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-6.72928e-05	-6.72928e-05		RARA
+FAM:CAT:CHEMBL1657	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-8.48377e-05	-8.48377e-05		RARA
+FAM:CAT:DGIDB:1777537b2599	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.0188448	-0.0188448		RARB
+FAM:CAT:DGIDB:1777537b2599	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-6.72928e-05	-6.72928e-05		RARA
+FAM:CAT:DGIDB:1777537b2599	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-8.48377e-05	-8.48377e-05		RARA
+FAM:CAT:DGIDB:5a5e52082feb	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.0188448	-0.0188448		RARB
+FAM:CAT:DGIDB:5a5e52082feb	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-6.72928e-05	-6.72928e-05		RARA
+FAM:CAT:DGIDB:5a5e52082feb	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-8.48377e-05	-8.48377e-05		RARA
+FAM:CAT:DGIDB:96958e9a8723	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.0188448	-0.0188448		RARB
+FAM:CAT:DGIDB:96958e9a8723	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-6.72928e-05	-6.72928e-05		RARA
+FAM:CAT:DGIDB:96958e9a8723	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-8.48377e-05	-8.48377e-05		RARA
+FAM:CAT:DGIDB:99960e67dd34	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.0188448	-0.0188448		RARB
+FAM:CAT:DGIDB:99960e67dd34	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-6.72928e-05	-6.72928e-05		RARA
+FAM:CAT:DGIDB:99960e67dd34	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-8.48377e-05	-8.48377e-05		RARA
+FAM:CAT:DGIDB:a2252eb573a8	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.0188448	-0.0188448		RARB
+FAM:CAT:DGIDB:a2252eb573a8	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-6.72928e-05	-6.72928e-05		RARA
+FAM:CAT:DGIDB:a2252eb573a8	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-8.48377e-05	-8.48377e-05		RARA
+FAM:CAT:DGIDB:c567743ed0f6	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.0188448	-0.0188448		RARB
+FAM:CAT:DGIDB:c567743ed0f6	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-6.72928e-05	-6.72928e-05		RARA
+FAM:CAT:DGIDB:c567743ed0f6	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-8.48377e-05	-8.48377e-05		RARA
+FAM:CAT:DGIDB:cde9d0752901	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.0188448	-0.0188448		RARB
+FAM:CAT:DGIDB:cde9d0752901	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-6.72928e-05	-6.72928e-05		RARA
+FAM:CAT:DGIDB:cde9d0752901	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-8.48377e-05	-8.48377e-05		RARA
+FAM:CAT:DGIDB:ef1566b62f47	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.0188448	-0.0188448		RARB
+FAM:CAT:DGIDB:ef1566b62f47	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-6.72928e-05	-6.72928e-05		RARA
+FAM:CAT:DGIDB:ef1566b62f47	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-8.48377e-05	-8.48377e-05		RARA
+FAM:CAT:DGIDB:0dd69e5d8d89	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.000127984	0.000127984		VDR
+FAM:CAT:DGIDB:0dd69e5d8d89	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.0116718	-0.0116718		VDR
+FAM:CAT:DGIDB:0dd69e5d8d89	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-9.79521e-06	-9.79521e-06		VDR
+FAM:CAT:DGIDB:a3d03ae2ef6c	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.0078169	-0.0078169		NFE2L2
+FAM:CAT:DGIDB:a3d03ae2ef6c	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.0070439	-0.0070439		NFE2L2
+FAM:CAT:DGIDB:a3d03ae2ef6c	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-0.00684518	-0.00684518		NFE2L2
+FAM:CAT:DGIDB:f2356402f4c0	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.0175924	-0.0175924		NR1I3
+FAM:CAT:DGIDB:f2356402f4c0	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.000319561	-0.000319561		NR1I2
+FAM:CAT:DGIDB:f2356402f4c0	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	0.00364604	0.00364604		NR1I2
+FAM:CAT:DGIDB:03b1f671920b	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.0155014	-0.0155014		BCL6
+FAM:CAT:DGIDB:03b1f671920b	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-5.38336e-05	-5.38336e-05		BCL6
+FAM:CAT:DGIDB:03b1f671920b	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-0.000631567	-0.000631567		BCL6
+FAM:CAT:DGIDB:5834235c36ff	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.0155014	-0.0155014		BCL6
+FAM:CAT:DGIDB:5834235c36ff	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-5.38336e-05	-5.38336e-05		BCL6
+FAM:CAT:DGIDB:5834235c36ff	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-0.000631567	-0.000631567		BCL6
+FAM:CAT:DGIDB:5be9fe4f2f42	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.0155014	-0.0155014		BCL6
+FAM:CAT:DGIDB:5be9fe4f2f42	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-5.38336e-05	-5.38336e-05		BCL6
+FAM:CAT:DGIDB:5be9fe4f2f42	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-0.000631567	-0.000631567		BCL6
+FAM:CAT:DGIDB:e4331b8a099b	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.0155014	-0.0155014		BCL6
+FAM:CAT:DGIDB:e4331b8a099b	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-5.38336e-05	-5.38336e-05		BCL6
+FAM:CAT:DGIDB:e4331b8a099b	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-0.000631567	-0.000631567		BCL6
+FAM:CAT:DGIDB:2c4cc7dddb4a	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.0250448	-0.0250448		RARB
+FAM:CAT:DGIDB:2c4cc7dddb4a	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-3.10217e-06	-3.10217e-06		RARB
+FAM:CAT:DGIDB:2c4cc7dddb4a	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	8.37556e-06	8.37556e-06		RARB
+FAM:CAT:DGIDB:74f98eb23a87	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.0250448	-0.0250448		RARB
+FAM:CAT:DGIDB:74f98eb23a87	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-3.10217e-06	-3.10217e-06		RARB
+FAM:CAT:DGIDB:74f98eb23a87	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	8.37556e-06	8.37556e-06		RARB
+FAM:CAT:DGIDB:8023244b2afd	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.0250448	-0.0250448		RARB
+FAM:CAT:DGIDB:8023244b2afd	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-3.10217e-06	-3.10217e-06		RARB
+FAM:CAT:DGIDB:8023244b2afd	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	8.37556e-06	8.37556e-06		RARB
+FAM:CAT:DGIDB:c68191de754a	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.0250448	-0.0250448		RARB
+FAM:CAT:DGIDB:c68191de754a	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-3.10217e-06	-3.10217e-06		RARB
+FAM:CAT:DGIDB:c68191de754a	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	8.37556e-06	8.37556e-06		RARB
+FAM:CAT:DGIDB:c2cc6146166d	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.0248804	-0.0248804		NR1I3
+FAM:CAT:DGIDB:c2cc6146166d	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-4.77449e-05	-4.77449e-05		NR1I3
+FAM:CAT:DGIDB:c2cc6146166d	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	3.30082e-05	3.30082e-05		NR1I3
+FAM:CAT:CHEMBL25202	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.0234013	-0.0234013		RARB
+FAM:CAT:CHEMBL25202	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-8.66984e-05	-8.66984e-05		RARA
+FAM:CAT:CHEMBL25202	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-0.000106038	-0.000106038		RARA
+FAM:CAT:DGIDB:7acb9175bd51	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.0223607	-0.0223607		KCNJ8
+FAM:CAT:DGIDB:c7a13951be3c	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.0526622	-0.0526622		NR1D1
+FAM:CAT:DGIDB:c7a13951be3c	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-3.05998e-05	-3.05998e-05		NR1D1
+FAM:CAT:DGIDB:8f7292fc60ff	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.0288675	-0.0288675		KCNJ8
+FAM:CAT:DGIDB:87abb4e16d54	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.0707107	-0.0707107		NLRP1
+FAM:CAT:DGIDB:a0075ef476f9	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.000145798	0.000145798		NR3C1
+FAM:CAT:DGIDB:a0075ef476f9	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.00595095	0.00595095		NR3C1
+FAM:CAT:DGIDB:a0075ef476f9	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	4.77728e-05	4.77728e-05		NR3C1
+FAM:CAT:DGIDB:c19dd34c9850	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.000145798	0.000145798		NR3C1
+FAM:CAT:DGIDB:c19dd34c9850	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.00595095	0.00595095		NR3C1
+FAM:CAT:DGIDB:c19dd34c9850	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	4.77728e-05	4.77728e-05		NR3C1
+FAM:CAT:DGIDB:b7b1e7e5089f	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.000103095	0.000103095		NR3C1
+FAM:CAT:DGIDB:b7b1e7e5089f	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.00420796	0.00420796		NR3C1
+FAM:CAT:DGIDB:b7b1e7e5089f	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	3.37805e-05	3.37805e-05		NR3C1
+FAM:CAT:DGIDB:fd628e474df6	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.000100695	0.000100695		NR3C1
+FAM:CAT:DGIDB:fd628e474df6	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.00421059	0.00421059		NR3C1
+FAM:CAT:DGIDB:fd628e474df6	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	3.26839e-05	3.26839e-05		NR3C1
+FAM:CAT:DGIDB:2ecaa1c90c7e	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	8.70776e-05	8.70776e-05		NR3C1
+FAM:CAT:DGIDB:2ecaa1c90c7e	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.00332715	0.00332715		NR3C1
+FAM:CAT:DGIDB:2ecaa1c90c7e	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-2.54936e-05	-2.54936e-05		PGR
+FAM:CAT:DGIDB:caa68d969f7e	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	1.61113e-05	1.61113e-05		PPARA
+FAM:CAT:DGIDB:caa68d969f7e	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.00014733	0.00014733		PPARA
+FAM:CAT:DGIDB:caa68d969f7e	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	2.6565e-05	2.6565e-05		PPARA
+FAM:CAT:DGIDB:21877a1ad784	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	8.05564e-06	8.05564e-06		PPARA
+FAM:CAT:DGIDB:21877a1ad784	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	7.3665e-05	7.3665e-05		PPARA
+FAM:CAT:DGIDB:21877a1ad784	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	1.32825e-05	1.32825e-05		PPARA
+FAM:CAT:DGIDB:1bda5f56a3bf	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.000184913	-0.000184913		IFNAR1
+FAM:CAT:DGIDB:1bda5f56a3bf	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.000960743	-0.000960743		IFNAR1
+FAM:CAT:DGIDB:1bda5f56a3bf	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-0.000184913	-0.000184913		IFNAR1
+FAM:CAT:DGIDB:7d6af3fd9307	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.000184913	-0.000184913		IFNAR1
+FAM:CAT:DGIDB:7d6af3fd9307	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.000960743	-0.000960743		IFNAR1
+FAM:CAT:DGIDB:7d6af3fd9307	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-0.000184913	-0.000184913		IFNAR1
+FAM:CAT:DGIDB:fe7ff1e03907	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.000184913	-0.000184913		IFNAR1
+FAM:CAT:DGIDB:fe7ff1e03907	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.000960743	-0.000960743		IFNAR1
+FAM:CAT:DGIDB:fe7ff1e03907	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-0.000184913	-0.000184913		IFNAR1
+FAM:CAT:DGIDB:3049a255918c	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	1.26589e-05	1.26589e-05		TUBB
+FAM:CAT:DGIDB:3049a255918c	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-4.32534e-05	-4.32534e-05		TUBB
+FAM:CAT:DGIDB:3049a255918c	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-4.4827e-05	-4.4827e-05		TUBB
+FAM:CAT:DGIDB:ec3ecdc40c41	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-2.93977e-06	-2.93977e-06		PDE2A
+FAM:CAT:DGIDB:ec3ecdc40c41	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-2.93977e-06	-2.93977e-06		PDE2A
+FAM:CAT:DGIDB:ec3ecdc40c41	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	5.78892e-06	5.78892e-06		PTGS2
+FAM:CAT:CHEMBL1201830	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	1	0	1	IL1B	
+FAM:CAT:CHEMBL1201834	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	1	0	1	IL1B	
+FAM:CAT:CHEMBL1743026	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	1	0	1	IL1B	
+FAM:CAT:CHEMBL1743050	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	1	0	1	IL6	
+FAM:CAT:CHEMBL1743070	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	1	0	1	IL6	
+FAM:CAT:CHEMBL1743071	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	1	0	1	IL6	
+FAM:CAT:CHEMBL2108589	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	1	0	1	IL6	
+FAM:CAT:CHEMBL2108591	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	1	0	1	IL6	
+FAM:CAT:CHEMBL2109459	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	1	0	1	IL1B	
+FAM:CAT:CHEMBL2109615	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	1	0	1	IL6	
+FAM:CAT:CHEMBL4297732	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	1	0	1	IL6	
+FAM:CAT:CHEMBL6068160	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	1	0	1	IL6	
+FAM:CAT:DGIDB:08083da7c335	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	1	0	1	IL1B	
+FAM:CAT:DGIDB:336d2d2229a4	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	1	0	1	IL6	
+FAM:CAT:DGIDB:33a3b87b284e	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	1	0	1	IL1B	
+FAM:CAT:DGIDB:450658fc3be8	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	1	0	1	IL6	
+FAM:CAT:DGIDB:6a659f488bd0	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	1	0	1	IL6	
+FAM:CAT:DGIDB:816d882e19f6	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	1	0	1	IL6	
+FAM:CAT:DGIDB:c8221b11292d	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	1	0	1	IL6	
+FAM:CAT:DGIDB:d6a52820b985	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	1	0	1	IL1B	
+FAM:CAT:DGIDB:f6ce53ab1f6a	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	1	0	1	IL6	
+FAM:CAT:DGIDB:f836f65a1f20	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	1	0	1	IL6	
+FAM:CAT:CHEMBL4594518	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0.707107	0	0.707107	IL1B	
+FAM:CAT:DGIDB:1b066b3df1ff	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0.707107	0	0.707107	IL1B	
+FAM:CAT:DGIDB:e78c9b52c084	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.00206197	0.00206197		MTNR1A
+FAM:CAT:CHEMBL1201572	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	1	0	1	TNF	
+FAM:CAT:CHEMBL1201580	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	1	0	1	TNF	
+FAM:CAT:CHEMBL1201581	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	1	0	1	TNF	
+FAM:CAT:CHEMBL1201831	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	1	0	1	TNF	
+FAM:CAT:CHEMBL1201833	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	1	0	1	TNF	
+FAM:CAT:CHEMBL1743054	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	1	0	1	TNF	
+FAM:CAT:CHEMBL1743057	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	1	0	1	TNF	
+FAM:CAT:CHEMBL2107911	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	1	0	1	TNF	
+FAM:CAT:CHEMBL2108208	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	1	0	1	TNF	
+FAM:CAT:CHEMBL2108566	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	1	0	1	TNF	
+FAM:CAT:CHEMBL2108739	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	1	0	1	TNF	
+FAM:CAT:CHEMBL2108887	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	1	0	1	TNF	
+FAM:CAT:CHEMBL2109587	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	1	0	1	TNF	
+FAM:CAT:CHEMBL4297863	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0.707107	0	0.707107	TNF	
+FAM:CAT:DGIDB:19a0fdd3e919	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	1	0	1	TNF	
+FAM:CAT:DGIDB:3ad59977f4b3	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0.707107	0	0.707107	TNF	
+FAM:CAT:DGIDB:575cca50ddbe	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	1	0	1	TNF	
+FAM:CAT:DGIDB:62054f51e80a	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	1	0	1	TNF	
+FAM:CAT:DGIDB:73a27f326b59	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	1	0	1	TNF	
+FAM:CAT:DGIDB:76afb86af839	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	1	0	1	TNF	
+FAM:CAT:DGIDB:8b25aca585c2	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	1	0	1	TNF	
+FAM:CAT:DGIDB:ca7c06af9bf8	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	1	0	1	TNF	
+FAM:CAT:DGIDB:e94243bde99c	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	1	0	1	TNF	
+FAM:CAT:DGIDB:efb24703a281	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	1	0	1	TNF	
+FAM:CAT:DGIDB:f00a4deba5e2	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	1	0	1	TNF	
+FAM:CAT:DGIDB:ffd34c9a95e6	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	1	0	1	TNF	
+FAM:CAT:DGIDB:ea0282a5b0b8	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	3.0177e-07	3.0177e-07		ESR2
+FAM:CAT:DGIDB:ea0282a5b0b8	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-3.78095e-06	-3.78095e-06		GPER1
+FAM:CAT:DGIDB:ea0282a5b0b8	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-0.00378502	-0.00378502		ESR2
+FAM:CAT:DGIDB:363cac102941	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	5.54594e-05	5.54594e-05		PPARG
+FAM:CAT:DGIDB:363cac102941	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.000121178	-0.000121178		PPARG
+FAM:CAT:DGIDB:363cac102941	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-1.29948e-05	-1.29948e-05		PPARG
+FAM:CAT:DGIDB:2ca2a83f60d6	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	5.13123e-07	5.13123e-07		NR1I2
+FAM:CAT:DGIDB:2ca2a83f60d6	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.000202091	-0.000202091		NR1I2
+FAM:CAT:DGIDB:2ca2a83f60d6	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	0.00256164	0.00256164		NR1I2
+FAM:CAT:DGIDB:99b2a1722278	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.000245908	-0.000245908		ADORA2A
+FAM:CAT:DGIDB:99b2a1722278	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-2.90279e-06	-2.90279e-06		PDE2A
+FAM:CAT:DGIDB:99b2a1722278	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-2.90279e-06	-2.90279e-06		PDE2A
+FAM:CAT:DGIDB:5e51ae58bbe1	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.000296821	-0.000296821		RBX1
+FAM:CAT:DGIDB:5e51ae58bbe1	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.000133174	-0.000133174		CRBN
+FAM:CAT:DGIDB:5e51ae58bbe1	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0.353553	-0.00088741	0.352666	TNF	CRBN
+FAM:CAT:DGIDB:26cc97098c32	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.000638877	-0.000638877		HTR2C
+FAM:CAT:DGIDB:9912ba23d4fd	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.00147321	-0.00147321		HTR1A
+FAM:CAT:DGIDB:8fffbbc5ca64	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-3.71535e-06	-3.71535e-06		RPSA
+FAM:CAT:DGIDB:8fffbbc5ca64	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-3.71535e-06	-3.71535e-06		RPSA
+FAM:CAT:DGIDB:8fffbbc5ca64	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	6.27078e-05	6.27078e-05		RPSA
+FAM:CAT:DGIDB:722ab907edd0	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.000419768	-0.000419768		RBX1
+FAM:CAT:DGIDB:722ab907edd0	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.000188337	-0.000188337		CRBN
+FAM:CAT:DGIDB:722ab907edd0	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-0.00125499	-0.00125499		CRBN
+FAM:CAT:DGIDB:a7e9700b4098	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.00108	0.00108		PRKD1
+FAM:CAT:DGIDB:a7e9700b4098	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.000640742	0.000640742		PRKCQ
+FAM:CAT:DGIDB:a7e9700b4098	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-0.000168683	-0.000168683		PRKD3
+FAM:CAT:DGIDB:a4ea6169031f	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	3.39416e-06	3.39416e-06		NR3C2
+FAM:CAT:DGIDB:a4ea6169031f	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-3.7243e-06	-3.7243e-06		NR3C2
+FAM:CAT:DGIDB:a4ea6169031f	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	1.55074e-06	1.55074e-06		NR3C2
+FAM:CAT:DGIDB:0bc1cf72f3bb	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	7.38343e-05	7.38343e-05		MAP2K1
+FAM:CAT:DGIDB:0bc1cf72f3bb	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-0.000235335	-0.000235335		MAP2K1
+FAM:CAT:DGIDB:0bc1cf72f3bb	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-3.37129e-06	-3.37129e-06		RET
+FAM:CAT:DGIDB:8da2cefb9103	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	0.000236371	0.000236371		EGFR
+FAM:CAT:DGIDB:8da2cefb9103	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.000173737	0.000173737		EGFR
+FAM:CAT:DGIDB:8da2cefb9103	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	0.000132828	0.000132828		EGFR
+FAM:CAT:DGIDB:0a77d333b9fe	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-0.000272804	-0.000272804		FGFR3
+FAM:CAT:DGIDB:0a77d333b9fe	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	-0.000272804	-0.000272804		FGFR3
+FAM:CAT:DGIDB:63c35c75665f	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	9.63052e-06	9.63052e-06		MTOR
+FAM:CAT:DGIDB:63c35c75665f	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-4.05108e-06	-4.05108e-06		MTOR
+FAM:CAT:DGIDB:63c35c75665f	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	0.000127689	0.000127689		MTOR
+FAM:CAT:DGIDB:7bfb0ab8cf2a	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-3.05201e-05	-3.05201e-05		AKT1
+FAM:CAT:DGIDB:7bfb0ab8cf2a	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.000308088	0.000308088		AKT1
+FAM:CAT:DGIDB:7bfb0ab8cf2a	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	0.00103069	0.00103069		AKT1
+FAM:CAT:DGIDB:d09b47782159	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-3.05201e-05	-3.05201e-05		AKT1
+FAM:CAT:DGIDB:d09b47782159	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	0.000308088	0.000308088		AKT1
+FAM:CAT:DGIDB:d09b47782159	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	0.00103069	0.00103069		AKT1
+FAM:CAT:DGIDB:b2aa6f68f5aa	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-3.21759e-06	-3.21759e-06		RPSA
+FAM:CAT:DGIDB:b2aa6f68f5aa	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-3.21759e-06	-3.21759e-06		RPSA
+FAM:CAT:DGIDB:b2aa6f68f5aa	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	5.43066e-05	5.43066e-05		RPSA
+FAM:CAT:DGIDB:177eb9401010	Q5_expression_tiersAB:IL1B:IL1B	Q5_expression_tiersAB:IL1B	IL1B	up	1.0000	expression	defined	0	-3.71535e-06	-3.71535e-06		RPSA
+FAM:CAT:DGIDB:177eb9401010	Q5_expression_tiersAB:IL6:IL6	Q5_expression_tiersAB:IL6	IL6	up	1.0000	expression	defined	0	-3.71535e-06	-3.71535e-06		RPSA
+FAM:CAT:DGIDB:177eb9401010	Q5_expression_tiersAB:TNF:TNF	Q5_expression_tiersAB:TNF	TNF	uncertain	1.0000	expression	uncertain_direction(+arm shown)	0	6.27078e-05	6.27078e-05		RPSA

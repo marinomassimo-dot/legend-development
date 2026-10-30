@@ -9,9 +9,9 @@ not medical advice; proves function and sensitivity of a method, never therapeut
 
 Subcommands (all deterministic; numpy only; `--help` does no work):
   build-actions --catalog PATH --out DIR [--cache DIR]   catalogue -> family_actions.tsv.gz + family_meta.tsv.gz (signed targets per family)
-  run      --seeds FILE --actions DIR --label L --out DIR [--universe FILE] [--top N] [--allow-mixed-levels]
+  run      --seeds FILE --actions DIR --label L --out DIR [--universe FILE] [--top N] [--nnull N] [--match total|indeg] [--allow-mixed-levels]
                                                      score a compound universe; writes proposals_L.tsv.gz, contributions_L.tsv, funnel_L.json
-  tests    --seeds FILE --actions DIR --label L --out DIR [--decoy FILE] [--nnull N]
+  tests    --seeds FILE --actions DIR --label L --out DIR [--decoy FILE] [--nnull N] [--match total|indeg]
                                                      T1-T5 of PRE_REGISTRATION.md (function, sensitivity, identity/leakage, added information, mutations)
   explain  --seeds FILE --actions DIR --family FAM:... [--family ...]   per-seed, per-target decomposition of the score of a family
   selftest                                           small synthetic graph with known answers (also run by test_seed_engine.py)
@@ -508,7 +508,7 @@ def cmd_run(a):
     g, comp = eng.g, eng.comp
     out = Path(a.out); out.mkdir(parents=True, exist_ok=True)
     arms = eng.arms()
-    mom = null_moments(eng, eng.seeds, a.nnull, SEED0 + 11)
+    mom = null_moments(eng, eng.seeds, a.nnull, SEED0 + 11, a.match)
     zi_p, zi_m, zi_r = arm_z(arms, mom, "ind")
     zf_p, zf_m, zf_r = arm_z(arms, mom, "full")
     # funnel
@@ -602,13 +602,21 @@ def proximity(eng, dist, nnull, seed=SEED0 + 7):
 
 
 # ------------------------------------------------------------------------------------------------ tests
-def degree_matched_sets(eng, seeds, n, rng):
-    """n random seed sets: each seed gene replaced by a random gene of the same in+out-degree decile (real seed genes excluded);
-    the signed levels are kept. Returns (S_plus, S_minus): uncertain-direction units enter with + (resp. -) their level."""
+def match_bins(g, match):
+    if match == "indeg":
+        deg = g.indeg[:g.Ng]
+    else:
+        deg = (g.indeg + g.outdeg)[:g.Ng]
+    edges = np.unique(np.quantile(deg, np.linspace(0.1, 0.9, 9)))
+    bins = np.digitize(deg, edges)
+    return bins, [np.flatnonzero(bins == b) for b in range(len(edges) + 1)]
+
+
+def degree_matched_sets(eng, seeds, n, rng, match="total"):
+    """n random seed sets: each seed gene replaced by a random gene of the same degree decile (match = total in+out degree [registered] or in-degree [M2]);
+    real seed genes excluded; the signed levels are kept. Returns (S_plus, S_minus): uncertain-direction units enter with + (resp. -) their level."""
     g = eng.g
-    deg = (g.indeg + g.outdeg)[:g.Ng]
-    bins = np.digitize(deg, np.quantile(deg, np.linspace(0.1, 0.9, 9)))
-    pools = [np.flatnonzero(bins == b) for b in range(10)]
+    bins, pools = match_bins(g, match)
     real = {g.idx[x] for x in seeds.genes if x in g.idx}
     extras = np.arange(g.Ng, g.N)
     Sp = np.zeros((n, g.N)); Sm = np.zeros((n, g.N))
@@ -626,10 +634,10 @@ def degree_matched_sets(eng, seeds, n, rng):
     return Sp, Sm
 
 
-def null_moments(eng, seeds, n, seed):
+def null_moments(eng, seeds, n, seed, match="total"):
     """per-family mean and SD of Q (ind and full) under n degree-matched random seed sets, for the U+ and U- arms."""
     rng = np.random.default_rng(seed)
-    Sp, Sm = degree_matched_sets(eng, seeds, n, rng)
+    Sp, Sm = degree_matched_sets(eng, seeds, n, rng, match)
     mom = {}
     for nm, S in (("p", Sp), ("m", Sm)):
         ind, dr = eng.quick_many(S)
@@ -707,7 +715,7 @@ def cmd_tests(a):
     res["T1"] = t1
     # ---------------- T2 (nulls B, independent of the nulls used for the Z moments)
     rngB = np.random.default_rng(SEED0 + 1)
-    Sp, Sm = degree_matched_sets(eng, seeds, NN, rngB)
+    Sp, Sm = degree_matched_sets(eng, seeds, NN, rngB, a.match)
     S_real = (seeds.vec(g.idx, g.N, "defined") + seeds.vec(g.idx, g.N, "uncertain"))[None, :]
     ri, rd = eng.quick_many(S_real)
     real_q = ri[:, 0] + rd[:, 0]
@@ -731,7 +739,7 @@ def cmd_tests(a):
               a_effect_size_1_minus_rho_median=float(1 - np.nanmedian(rhos)),
               a_families_abs_z_gt3=int((np.abs(zc[E]) > 3).sum()), a_families_nonzero=int((np.abs(real_q[E]) > 1e-12).sum()))
     # NET-Z arm (A1.1): moments from nulls A (500 sets), evaluated against nulls B
-    momA = null_moments(eng, seeds, 500, SEED0 + 11)
+    momA = null_moments(eng, seeds, 500, SEED0 + 11, a.match)
     zp = zscore(arms["full_Uplus"], momA["p"]["full"][0], momA["p"]["full"][1])
     zB = (nq - momA["p"]["full"][0][:, None]) / momA["p"]["full"][1][:, None]
     rz, ovz = rank_stats(zp, zB)
@@ -984,9 +992,9 @@ def main():
     b = sp.add_parser("build-actions"); b.add_argument("--catalog", default=str(DEFAULT_CATALOG)); b.add_argument("--out", required=True); b.add_argument("--cache")
     r = sp.add_parser("run"); r.add_argument("--seeds", required=True); r.add_argument("--actions", required=True); r.add_argument("--label", required=True)
     r.add_argument("--out", required=True); r.add_argument("--universe"); r.add_argument("--top", type=int, default=100); r.add_argument("--nprox", type=int, default=500)
-    r.add_argument("--allow-mixed-levels", action="store_true"); r.add_argument("--nnull", type=int, default=500)
+    r.add_argument("--allow-mixed-levels", action="store_true"); r.add_argument("--nnull", type=int, default=500); r.add_argument("--match", choices=["total", "indeg"], default="total")
     t = sp.add_parser("tests"); t.add_argument("--seeds", required=True); t.add_argument("--actions", required=True); t.add_argument("--label", required=True)
-    t.add_argument("--out", required=True); t.add_argument("--decoy"); t.add_argument("--nnull", type=int, default=1000); t.add_argument("--allow-mixed-levels", action="store_true")
+    t.add_argument("--out", required=True); t.add_argument("--decoy"); t.add_argument("--nnull", type=int, default=1000); t.add_argument("--match", choices=["total", "indeg"], default="total"); t.add_argument("--allow-mixed-levels", action="store_true")
     e = sp.add_parser("explain"); e.add_argument("--seeds", required=True); e.add_argument("--actions", required=True); e.add_argument("--family", action="append", required=True)
     e.add_argument("--allow-mixed-levels", action="store_true")
     sp.add_parser("selftest")
