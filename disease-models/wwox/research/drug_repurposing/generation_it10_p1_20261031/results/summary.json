@@ -1,0 +1,34 @@
+{
+ "dispositions": {
+  "Q1|direct_search|DIAGNOSTIC_ONLY": 8,
+  "Q2|direct_search|DIAGNOSTIC_ONLY": 50,
+  "Q2|flagged_mimics|HELD_UNCERTAIN_ACTIVE_MOIETY": 15,
+  "Q2|flagged_opposes|HELD_UNCERTAIN_ACTIVE_MOIETY": 7,
+  "Q2|mimics|CONDITIONAL_IF_PROTECTIVE": 25,
+  "Q2|opposes|CONDITIONAL_IF_HARMFUL": 50,
+  "Q3|direct_search|DIAGNOSTIC_ONLY": 50,
+  "Q4|direct_search|DIAGNOSTIC_ONLY": 53,
+  "Q4|flagged_mimics|HELD_UNCERTAIN_ACTIVE_MOIETY": 4,
+  "Q4|flagged_opposes|HELD_UNCERTAIN_ACTIVE_MOIETY": 1,
+  "Q4|mimics|CONDITIONAL_IF_PROTECTIVE": 25,
+  "Q4|opposes|CONDITIONAL_IF_HARMFUL": 50,
+  "Q5|direct_search|DIAGNOSTIC_ONLY": 50,
+  "Q5|flagged_mimics|HELD_UNCERTAIN_ACTIVE_MOIETY": 15,
+  "Q5|flagged_opposes|HELD_UNCERTAIN_ACTIVE_MOIETY": 25,
+  "Q5|mimics|CONDITIONAL_IF_PROTECTIVE": 25,
+  "Q5|opposes|CONDITIONAL_IF_HARMFUL": 50,
+  "Q6|direct_search|DIAGNOSTIC_ONLY": 100,
+  "Q6|flagged_mimics|HELD_UNCERTAIN_ACTIVE_MOIETY": 15,
+  "Q6|flagged_opposes|HELD_UNCERTAIN_ACTIVE_MOIETY": 27,
+  "Q6|mimics|CONDITIONAL_IF_PROTECTIVE": 50,
+  "Q6|opposes|CONDITIONAL_IF_HARMFUL": 100,
+  "Q7|direct_search|DIAGNOSTIC_ONLY": 50
+ },
+ "phenotype_first": 7,
+ "phenotype_first_graph_status": {
+  "NOT_EXAMINABLE_NO_CATALOGUE_IDENTITY": 1,
+  "NO_GRAPH_ROW": 3,
+  "OUT_OF_METHOD_MODALITY": 2,
+  "SCORED_NOT_SPECIFIC": 1
+ }
+}
