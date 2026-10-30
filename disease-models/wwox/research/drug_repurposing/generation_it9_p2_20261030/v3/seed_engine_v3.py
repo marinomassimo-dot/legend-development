@@ -185,10 +185,29 @@ def make_engine3(a, seeds_path=None, rows=None, meta=None, restrict=None):
     eng.g.level = "expression" if lvl == "expression" else "protein"
     return eng, rows, meta
 
+def selftest3():
+    """IT11 P1.4. The v2 selftest builds an UNTYPED toy graph (3-tuples), which the typed Graph3 cannot read (IndexError at e[3]): a fixture incompatibility, not a production
+    regression (the pipeline always reads typed edges). This version keeps the v2 hand-computed answers on a TYPED toy graph and adds the edge-type controls that give the filter F1 meaning:
+    A -P-> B -T-> C (chain P then T into an expression seed C) and D -T-> C are admissible; E -P-> C (a P edge into an expression seed) and F -T-> A -P-> B -T-> C (T before the last edge) must contribute 0."""
+    edges = [("A", "B", 1, "P"), ("B", "C", -1, "T"), ("D", "C", 1, "T"), ("E", "C", 1, "P"), ("F", "A", 1, "T")]
+    g = Graph3(edges, extras=["Z"]); g.level = "expression"
+    rows = [dict(family_id=f, target_symbol=t, mean_sign=str(sg), groups="ChEMBL", scopes="single_protein") for f, t, sg in
+            [("X", "A", -1), ("Y", "A", 1), ("W", "D", -1), ("V", "C", -1), ("U", "Z", -1), ("P_last", "E", -1), ("T_first", "F", -1)]]
+    comp = se.Compounds(rows)
+    seeds = se.Seeds([dict(unit_id="s1:C", seed_id="s1", gene="C", sign=1, level=1.0, status="defined", readout_level="transcript", evidence_class="transcript_contrast")])
+    eng = se.Engine(g, comp, seeds)
+    ar = eng.arms()
+    q = {f: (ar["ind"][comp.fidx[f]], ar["dir"][comp.fidx[f]]) for f in comp.fams}
+    ok = (abs(q["X"][0] + 0.5) < 1e-12 and abs(q["Y"][0] - 0.5) < 1e-12 and abs(q["W"][0] - 1.0) < 1e-12 and abs(q["V"][1] - 1.0) < 1e-12 and q["U"] == (0.0, 0.0)
+          and q["P_last"][0] == 0.0 and q["T_first"][0] == 0.0)
+    return ok, q
+
+
 se.Graph = Graph3
 se.read_edges = read_edges3
 se.load_seeds = load_seeds3
 se.make_engine = make_engine3
+se.selftest = selftest3
 
 
 def network_report(out):

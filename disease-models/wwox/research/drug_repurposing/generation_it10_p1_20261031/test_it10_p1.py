@@ -145,6 +145,75 @@ class JunctionRule(unittest.TestCase):
         self.assertTrue(ch is None or "XIAP -P(+)-> HIF1A" not in ch, ch)                # XIAP -> HIF1A -> BNIP3 needs HIF1A alone as a source: absent for BNIP3
 
 
+class ExplainsTheCalculation(unittest.TestCase):
+    """P1.1: the shown chain is ONE walk of the strongest seed; the score is a signed sum over seeds and over every admissible walk."""
+
+    def test_walk_sum_equals_influence_on_a_toy_with_two_routes(self):
+        e = [("T", "B", 1, "P", True, True), ("T", "C", 1, "P", True, True), ("B", "S", 1, "T", True, True), ("C", "S", -1, "T", True, True), ("T", "S", 1, "T", True, True)]
+        g = v4.Graph4(e, extras=[]); g.level = "expression"
+        S = np.zeros((1, g.N)); S[0, g.idx["S"]] = 1.0
+        w = g.walks("T", "S")
+        self.assertEqual(len(w), 3)
+        self.assertAlmostEqual(sum(v for _, v in w), float(g.influence_ind(S)[0, g.idx["T"]]))
+        n, best, opp = v4.walk_summary(w)
+        self.assertEqual(n, 3)
+        self.assertGreater(opp, 0.0)                                  # one route opposes the net: the single strongest walk would hide it
+
+    def test_walk_sum_equals_influence_on_real_pairs_at_both_levels(self):
+        for lvl, pairs in (("expression", [("PPP3CA", "TNF"), ("BRD4", "TNF"), ("NFE2L2", "IL1B")]), ("protein", [("METTL3", "MYC"), ("AURKB", "MYC")])):
+            g = v4.Graph4(v4.read_edges4(), extras=[]); g.level = lvl
+            for t, s_ in pairs:
+                S = np.zeros((1, g.N)); S[0, g.idx[s_]] = 1.0
+                self.assertAlmostEqual(sum(v for _, v in g.walks(t, s_)), float(g.influence_ind(S)[0, g.idx[t]]), places=9, msg=f"{lvl} {t}->{s_}")
+
+    def test_the_walk_decomposition_respects_the_junction_rule(self):
+        e = [("A", "B", 1, "P", True, False), ("B", "C", 1, "T", True, True)]
+        g = v4.Graph4(e, extras=[]); g.level = "expression"
+        self.assertEqual(g.walks("A", "C"), [])
+        old = v4.JUNCTION; v4.JUNCTION = False
+        try:
+            self.assertEqual(len(g.walks("A", "C")), 1)
+        finally:
+            v4.JUNCTION = old
+
+    def contrib(self, vals):
+        return [dict(contrib_total=str(v), main_target_hops1to3="", main_target_hop0="", contrib_hops1to3="0", gene="G%d" % i) for i, v in enumerate(vals)]
+
+    def test_one_dominant_seed_is_a_dominant_chain(self):
+        self.assertEqual(dz.explain_columns(self.contrib([1.0, 0.01]), "expression")[0], "DOMINANT_CHAIN")
+
+    def test_many_equal_seeds_make_the_shown_chain_a_partial_example(self):
+        note = dz.explain_columns(self.contrib([0.1] * 6), "expression")[0]
+        self.assertTrue(note.startswith("PARTIAL_EXAMPLE"), note)
+        self.assertIn("17%", note)
+
+    def test_contrary_contributions_are_reported(self):
+        note, top, contrary = dz.explain_columns(self.contrib([1.0, -0.3]), "expression")[:3]
+        self.assertTrue(note.startswith("PARTIAL_EXAMPLE"))
+        self.assertAlmostEqual(float(contrary), 0.3 / 1.3, places=3)
+
+    def test_px478_row_names_what_the_chain_does_not_show(self):
+        rows = {r["name"]: r for r in dz.rd(HERE / "results" / "dispositions_Q2.tsv") if r["arm"] == "opposes"}
+        self.assertTrue(rows["Px-478"]["chain_note"].startswith("PARTIAL_EXAMPLE"))     # 15 seed rows, the strongest carries about a tenth
+
+
+class SelftestCommand(unittest.TestCase):
+    """P1.4: the generator's selftest failed on 3-tuple toy edges (fixture incompatibility with the typed Graph3; not a production regression). It now runs on a typed toy graph."""
+
+    def run_selftest(self, script, *extra):
+        return subprocess.run([sys.executable, "-B", str(script), "selftest", *extra], capture_output=True, text=True)
+
+    def test_v3_and_v4_selftest_pass(self):
+        for script in (DR / "generation_it9_p2_20261030" / "v3" / "seed_engine_v3.py", HERE / "engine_v4" / "seed_engine_v4.py"):
+            r = self.run_selftest(script)
+            self.assertEqual(r.returncode, 0, r.stdout[-300:] + r.stderr[-300:])
+            self.assertIn("selftest PASS", r.stdout)
+
+    def test_the_selftest_fails_when_edge_typing_is_switched_off(self):
+        r = self.run_selftest(HERE / "engine_v4" / "seed_engine_v4.py", "--mode", "all")
+        self.assertNotEqual(r.returncode, 0)                  # the P-edge-into-an-expression-seed and T-first controls then score, so the typing controls are not vacuous
+
+
 class RoleDispositions(unittest.TestCase):
     unknown = dict(role_status="unknown", role_basis="NONE", leaning="none")
 
