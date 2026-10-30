@@ -48420,7 +48420,7 @@
      "Direct inhibition of mitochondrial complex I by stiripentol, so a metabolic effect is not an LDH effect.",
      "An Ldh abundance rise also accompanies a complex I-reduced, ISR-activated fly model that has neither WWOX nor amyloid (DA-PARS2-LDH-001), so a raised Ldh in a Wwox-reduced fly does not by itself identify an LDH-specific lesion (INFERENZA: possible confounding by mitochondrial or ISR state).",
      "Human lactate in WWOX deficiency reported normal or extremely low.",
-     "IT7 P3/P1 (exploratory, independently verified): in an independent WWOX-loss contrast (P47T hippocampus) the LDH isoforms split (LDHA +0.48, LDHB -0.10 against the build direction) and the six-gene module lies inside its null (p 0.060), so the LDHA elevation is not shown to be a reproducible WWOX-loss feature; the signed network and the WWOX-enriched network (the condition with four HIF1A relations added: it tests four added relations, not the value of WWOX knowledge in general) showed no added value for ranking compounds on this module and the signature route was not detected, not excluded, and stiripentol was outside that comparison by design. A computational result, not engagement data."
+     "IT7 P3/P1 (exploratory, independently verified): in an independent WWOX-loss contrast (P47T hippocampus) the LDH isoforms split (LDHA +0.48, LDHB -0.10 against the build direction) and the six-gene module lies inside its null (p 0.060), so the LDHA elevation is not shown to be a reproducible WWOX-loss feature; the signed network and the network labelled WWOX-enriched in IT7 (four duplicated HIF1A edges, already in the external network; the comparison therefore tests nothing about WWOX knowledge in general, and no added value was measurable) showed no added value for ranking compounds on this module and the signature route was not detected, not excluded, and stiripentol was outside that comparison by design. A computational result, not engagement data."
     ],
     "external_sources": [
      {
@@ -48666,7 +48666,7 @@
        "Stiripentol inhibits LDH only weakly in the single-concentration measurements held (none gives a fitted potency, and the one at the highest concentration is the lowest), and it has other targets, including direct inhibition of mitochondrial complex I, that act at lower concentrations; any benefit would not be attributable to LDH.",
        "LDHA in the organoid is as consistent with immaturity as with WWOX loss.",
        "Human lactate in WWOX deficiency is reported normal or extremely low.",
-       "IT7 P3/P1 (exploratory, independently verified): in an independent WWOX-loss contrast (P47T hippocampus) the LDH isoforms split (LDHA +0.48, LDHB -0.10 against the build direction) and the six-gene module lies inside its null (p 0.060), so the LDHA elevation is not shown to be a reproducible WWOX-loss feature; the signed network and the WWOX-enriched network (the condition with four HIF1A relations added: it tests four added relations, not the value of WWOX knowledge in general) showed no added value for ranking compounds on this module and the signature route was not detected, not excluded, and stiripentol was outside that comparison by design. A computational result, not engagement data.",
+       "IT7 P3/P1 (exploratory, independently verified): in an independent WWOX-loss contrast (P47T hippocampus) the LDH isoforms split (LDHA +0.48, LDHB -0.10 against the build direction) and the six-gene module lies inside its null (p 0.060), so the LDHA elevation is not shown to be a reproducible WWOX-loss feature; the signed network and the network labelled WWOX-enriched in IT7 (four duplicated HIF1A edges, already in the external network; the comparison therefore tests nothing about WWOX knowledge in general, and no added value was measurable) showed no added value for ranking compounds on this module and the signature route was not detected, not excluded, and stiripentol was outside that comparison by design. A computational result, not engagement data.",
        "IT8 P3 (2026-10-29): there is no enzyme-level support for stiripentol as a way to test the LDH node - 7 percent inhibition at 2 millimolar (ChEMBL) and about 10 percent at 0.5 millimolar (independent report), no fitted LDH potency among the curated database entries read for it, a label that does not name LDH; one cell-level signal (mouse hepatocyte oxalate output at 10 micromolar, shared with glycolate oxidase) is not LDH engagement; the third report (Sada 2015) remains abstract-only and secondary."
       ],
       "for": [
@@ -48936,7 +48936,7 @@
      "time_to_benefit": "UNKNOWN"
     }
    },
-   "input_sha256": "3c097f7729c026248e386a06a81d385343cbbdc072fb4b28dfcee56f39367bf3",
+   "input_sha256": "f67652ea4aa537799b900d422ba0cb28c6b7a83b55728c69f927e5e163990916",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "framework/adapters/openfda.py",

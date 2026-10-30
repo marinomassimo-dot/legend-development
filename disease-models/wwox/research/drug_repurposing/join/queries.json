@@ -22516,7 +22516,7 @@
   "claims_named": [
    "CLAIM 016"
   ],
-  "digest": "a31b028b4404ef39",
+  "digest": "2bf285a49a8be0be",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-170"
@@ -22535,7 +22535,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-171",
-  "origin_line": 4446,
+  "origin_line": 4447,
   "origin_title": "DL-MECH-171 — Wwox-null and neuronal-deletion hippocampus at P17 shows LOWER T-type transcripts (Cacna1i in all four comparisons; Cacna1h not consistently) [corrected 2026-10-22 from «LOWER T-type transcripts (Cacna1h, Cacna1i), not higher» by `BATCH_20261019_012` on the strength of the blind table ",
   "papers_named": [],
   "pmids": [
@@ -22642,7 +22642,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "02509ffca80049e7",
+  "digest": "4aae8d3072f5dacc",
   "kind": "lead",
   "leads_named": [
    "DL-MECH-170"
@@ -22659,7 +22659,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-172",
-  "origin_line": 4459,
+  "origin_line": 4460,
   "origin_title": "DL-MECH-172 — A direct genotype-by-treatment test of a T-type blocker exists in one mouse mutant and runs opposite to the DL-MECH-170 direction: trimethadione's effect was much weaker in the hyperexcitable mutant [corrected 2026-10-22 from «trimethadione lost its effect in the hyperexcitable mutant»",
   "papers_named": [],
   "pmids": [
@@ -22759,7 +22759,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "97d96d0095de281a",
+  "digest": "02540ccc067e6289",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -22780,7 +22780,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-173",
-  "origin_line": 4473,
+  "origin_line": 4474,
   "origin_title": "DL-MECH-173 — Integrated stress response in WWOX loss: the fly Atf4 rise needs amyloid and the one human knockout transcriptome shows the ATF4/ISR target set LOWER than chance, so no signed human ISR readout exists (NOT WWOX-DEE evidence for the fly part)",
   "papers_named": [
    "PAPER 022",
@@ -22822,7 +22822,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "46e9ab5d41d7b2ea",
+  "digest": "708ec1886357f00a",
   "kind": "lead",
   "leads_named": [],
   "linkage": {
@@ -22833,8 +22833,8 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-MECH-174",
-  "origin_line": 4505,
-  "origin_title": "DL-MECH-174 — A six-gene glycolysis and lactate module built in two human WWOX-loss transcript systems does not transfer conclusively to the P47T mouse deposit, and a bounded network comparison found no added value for a signed or WWOX-enriched network (EXPLORATORY, COMPUTATIONAL_RESULT; the signatu",
+  "origin_line": 4507,
+  "origin_title": "DL-MECH-174 — A six-gene glycolysis and lactate module built in two human WWOX-loss transcript systems does not transfer conclusively to the P47T mouse deposit, and a bounded network comparison found no added value for a signed network or for four duplicate HIF1A edges labelled 'WWOX-enriched' in IT",
   "papers_named": [],
   "pmids": [],
   "query_id": "Q-DL-MECH-174",
@@ -22842,9 +22842,174 @@
    "MECH",
    "WWOX",
    "P47T",
-   "SLC2A1",
-   "HK2",
-   "LDHA"
+   "HIF1A",
+   "IT7",
+   "SLC2A1"
+  ]
+ },
+ {
+  "axis": "all",
+  "claims_named": [],
+  "digest": "f3d62c9cf4425fba",
+  "kind": "lead",
+  "leads_named": [
+   "DL-MECH-173"
+  ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-MECH-173"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-MECH-173"
+   ]
+  },
+  "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
+  "origin_id": "DL-MECH-175",
+  "origin_line": 4520,
+  "origin_title": "DL-MECH-175 — The sign of a mitochondrial-origin integrated stress response depends on the lesion: AFG3L2 evidence points to protective, PARS2 evidence to harmful, and neither fixes a prior for WWOX (EXPLORATORY, OTHER_DISEASE_PRECEDENT)",
+  "papers_named": [],
+  "pmids": [
+   "25012504",
+   "31543760",
+   "38563965",
+   "41380592",
+   "42909904"
+  ],
+  "pmids_via_records": {
+   "25012504": [
+    "DL-MECH-173"
+   ],
+   "31543760": [
+    "DL-MECH-173"
+   ],
+   "38563965": [
+    "DL-MECH-173"
+   ],
+   "41380592": [
+    "DL-MECH-173"
+   ],
+   "42909904": [
+    "DL-MECH-173"
+   ]
+  },
+  "query_id": "Q-DL-MECH-175",
+  "terms": [
+   "MECH",
+   "AFG3L2",
+   "PARS2",
+   "WWOX",
+   "ISR",
+   "HRI"
+  ]
+ },
+ {
+  "axis": "all",
+  "claims_named": [],
+  "digest": "d0f66d2c9759bd04",
+  "kind": "lead",
+  "leads_named": [
+   "DL-MECH-173"
+  ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-MECH-173"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-MECH-173"
+   ]
+  },
+  "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
+  "origin_id": "DL-MECH-176",
+  "origin_line": 4532,
+  "origin_title": "DL-MECH-176 — ATF4 protein and phospho-eIF2a rise within minutes of mGluR activation in neurons without a change in ATF4 mRNA, so a raised ATF4 protein in a hyperexcitable WWOX system needs an activity-silencing control (EXPLORATORY, OTHER_DISEASE_PRECEDENT)",
+  "papers_named": [],
+  "pmids": [
+   "25012504",
+   "31543760",
+   "38563965",
+   "41380592",
+   "42909904"
+  ],
+  "pmids_via_records": {
+   "25012504": [
+    "DL-MECH-173"
+   ],
+   "31543760": [
+    "DL-MECH-173"
+   ],
+   "38563965": [
+    "DL-MECH-173"
+   ],
+   "41380592": [
+    "DL-MECH-173"
+   ],
+   "42909904": [
+    "DL-MECH-173"
+   ]
+  },
+  "query_id": "Q-DL-MECH-176",
+  "terms": [
+   "MECH",
+   "ATF4",
+   "WWOX",
+   "ISR"
+  ]
+ },
+ {
+  "axis": "all",
+  "claims_named": [],
+  "digest": "b871cc24854ca1ff",
+  "kind": "lead",
+  "leads_named": [
+   "DL-MECH-173"
+  ],
+  "linkage": {
+   "ids_in_registry_without_pmid": [],
+   "ids_named": [
+    "DL-MECH-173"
+   ],
+   "ids_not_found_in_registry": [],
+   "ids_reaching_a_pmid": [
+    "DL-MECH-173"
+   ]
+  },
+  "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
+  "origin_id": "DL-MECH-177",
+  "origin_line": 4544,
+  "origin_title": "DL-MECH-177 — Post-onset restoration of circuit and behaviour endpoints is shown for Shank3 (same gene, within-animal) and Meis2 (a different gene, bypass) but not for Csnk2b, which supports an endpoint-class hypothesis for WWOX, not a finding (EXPLORATORY, OTHER_DISEASE_PRECEDENT)",
+  "papers_named": [],
+  "pmids": [
+   "25012504",
+   "31543760",
+   "38563965",
+   "41380592",
+   "42909904"
+  ],
+  "pmids_via_records": {
+   "25012504": [
+    "DL-MECH-173"
+   ],
+   "31543760": [
+    "DL-MECH-173"
+   ],
+   "38563965": [
+    "DL-MECH-173"
+   ],
+   "41380592": [
+    "DL-MECH-173"
+   ],
+   "42909904": [
+    "DL-MECH-173"
+   ]
+  },
+  "query_id": "Q-DL-MECH-177",
+  "terms": [
+   "MECH",
+   "WWOX"
   ]
  },
  {
@@ -30557,7 +30722,7 @@
  {
   "axis": "all",
   "claims_named": [],
-  "digest": "0ae6760153250c66",
+  "digest": "cad32f9c7efae445",
   "kind": "lead",
   "leads_named": [
    "DL-BIO-008",
@@ -30581,7 +30746,7 @@
   },
   "origin_file": "disease-models/wwox/research/discovery_ledger_current.md",
   "origin_id": "DL-REPO-004",
-  "origin_line": 4488,
+  "origin_line": 4489,
   "origin_title": "DL-REPO-004 — LDH lowering rescued fly locomotion once in the amyloid-plus-Wwox-reduction genotype; the approved paediatric epilepsy drug usually linked to LDH inhibits it only weakly in the retrieved measurements (NOT WWOX-DEE evidence)",
   "papers_named": [
    "PAPER 567",

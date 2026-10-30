@@ -749,7 +749,7 @@ UI_IT7 = {
     "pred_verdict_h": "Verdetto per metodo", "pred_c_cmp": "Confronto", "pred_c_verdict": "Verdetto", "pred_c_num": "Numeri", "pred_c_reopen": "Si riapre se",
     "pred_v_no_added_value": "nessun vantaggio dimostrato secondo i criteri preregistrati", "pred_v_not_detected_not_excluded": "effetto non rilevato, non escluso", "pred_v_inconclusive": "non conclusivo",
     "pred_limits_h": "Limiti",
-    "pred_methods_ids": "REF-1 riferimento senza segno; NET-EXT rete con segno solo esterna; NET-WWOX rete con quattro archi HIF1A aggiunti; SIG via della firma",
+    "pred_methods_ids": "REF-1 riferimento senza segno; NET-EXT rete con segno solo esterna; NET-WWOX rete con quattro archi HIF1A duplicati (già nella rete esterna); SIG via della firma",
     # contexts
     "ctx_h": "Confronto tra contesti: concordanze e discordanze tra i sistemi con perdita di WWOX",
     "ctx_lead": "Per ogni quantità, che cosa mostrano i sistemi in cui WWOX è perso. Livello del trascritto salvo dove indicato; i contesti sono più numerosi dei modelli indipendenti.",
