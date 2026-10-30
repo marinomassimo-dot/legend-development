@@ -37,7 +37,7 @@ ROOT = HERE.parents[4]
 DR = HERE.parent
 sys.path.insert(0, str(ROOT / "framework" / "scripts"))
 
-RULES_VERSION = "R2"            # bump when a rule of this file changes meaning (reason class: method_revision)
+RULES_VERSION = "R3"            # bump when a rule of this file changes meaning (reason class: method_revision)
 SCHEMA = "legend.wwox.ranking/1"
 USABLE = DR / "usable_compounds_it7_p2_20261029"
 COMPARISON = DR / "pharmacological_comparison_it7_p5_20261029" / "comparison.tsv"
@@ -77,6 +77,13 @@ SPEC_FLAGS = ("nonspecific_also_in_wild_type", "no_drug_by_genotype_test", "cont
 def is_spec_flag(f: str) -> bool:
     return f in SPEC_FLAGS or f.startswith("tool_compound")
 
+
+UNIT_TYPES = {"molecule": "molecule", "class_of_molecules": "class of molecules", "diet": "diet", "gene_therapy": "gene therapy / gene-based modality", "tool_compound": "tool compound",
+              "tool_compound_and_class": "tool compound + class of molecules", "not_an_intervention": "not an intervention (axis)"}
+ORIGINS = {"known_track_before_it9": "known track from before IT9", "generated_in_it9": "generated in IT9", "reference_or_control": "reference or control"}
+CLASS_LEVEL_TYPES = ("class_of_molecules", "tool_compound_and_class")      # a result for a member or a tool is not a result for the other members
+NX_LEVELS = {"NX1": "decisive: the discriminating next experiment would change a decision (lift or stop)", "NX2": "informative: the next experiment resolves one limit, the decision moves one step at most",
+             "NX3": "low or none today: no discriminating next step is named, or the outcome could not change the decision before a premise exists"}
 
 OBJECTIVES = {"broad": "deep_recovery", "partial": "partial_benefit"}
 OBJ_LABEL = {"broad": "Broad, durable functional recovery", "partial": "Partial or bridge benefit"}
@@ -256,7 +263,9 @@ def build_units(ctx: dict, cat: dict) -> list[dict]:
     units = []
     for m in ctx["unit_map"]:
         cards = [c for c in m["cards"].split(";") if c]
-        u = {"unit_id": m["unit_id"], "label": m["label"], "kind": m["kind"], "cards": cards, "merge_reason": m["merge_reason"],
+        if m.get("unit_type") not in UNIT_TYPES or m.get("origin") not in ORIGINS:
+            raise SystemExit(f"unit_map.tsv: {m['unit_id']} needs a valid unit_type ({', '.join(UNIT_TYPES)}) and origin ({', '.join(ORIGINS)}); got {m.get('unit_type')!r} / {m.get('origin')!r}")
+        u = {"unit_id": m["unit_id"], "label": m["label"], "kind": m["kind"], "unit_type": m["unit_type"], "origin": m["origin"], "cards": cards, "merge_reason": m["merge_reason"],
              "excluded": m["excluded"] == "yes", "excluded_reason": m["excluded_reason"]}
         # ---- positions per need (merge of the unit's cards on the same need) --------------------------------------------------------
         per_need: dict[str, dict] = {}
@@ -629,20 +638,164 @@ def depth_label(u: dict, comp: dict) -> tuple[str, str]:
     return d, t
 
 
+_FAMREC: dict = {}
+
+
+def family_records() -> dict:
+    if not _FAMREC:
+        _FAMREC.update({k: set(v["records"]) for k, v in load_usability().items()})
+    return _FAMREC
+
+
+def attribute_rows(u: dict) -> list[dict]:
+    """Member-level attribution of the pertinence rows of one intervention. A row is attributed ONLY to the member its subject names (a catalogue record of the member's
+    family; a tool compound for the tool subjects of its card). A card-level row ('card') belongs to the molecule/diet/vector for single interventions, to the named
+    identity of the card when the card has one, and otherwise to the CLASS/MECHANISM level, never to a member. A result for a tool compound or for one member is
+    therefore never a result for another member."""
+    fr = family_records()
+    members = []
+    for r, att in u["members"]:
+        if r["kind"] == "molecule_family":
+            members.append({"key": r["row_id"], "name": r["name"].title(), "type": "molecule", "records": fr.get(r["row_id"], set()) | {"CAT:" + r["row_id"].split(":")[-1]},
+                            "identity_cards": sorted({c for c, a in att if a == "identity"}), "cards": sorted({c for c, _ in att}), "rows": []})
+        else:
+            members.append({"key": r["row_id"], "name": u.get("tool_names", {}).get(sorted({c for c, _ in att})[0]) or f"tool compound(s) or precedent named in card {sorted({c for c, _ in att})[0]}", "type": "tool_compound", "records": set(), "identity_cards": [],
+                            "cards": sorted({c for c, _ in att}), "rows": []})
+    single = u["unit_type"] in ("molecule", "diet", "gene_therapy")
+    self_m = {"key": "UNIT", "name": u["label"], "type": u["unit_type"], "records": set(), "identity_cards": [], "cards": u["cards"], "rows": []}
+    class_m = {"key": "CLASS", "name": "class or mechanism level (card-level assertions and unnamed members)", "type": "class_level", "records": set(), "identity_cards": [], "cards": u["cards"], "rows": []}
+    for r in u["pert"]:
+        subj = r["subject"]
+        target = None
+        if subj.startswith("CHEMBL"):
+            target = next((m for m in members if "CAT:" + subj in m["records"]), None)
+        elif subj in ("tool_no_catalogue_identity", "genetic_precedent_not_a_compound"):
+            target = next((m for m in members if m["type"] == "tool_compound" and r["card_id"] in m["cards"]), None)
+        elif subj == "card":
+            if single:
+                target = next((m for m in members if m["type"] == "molecule" and r["card_id"] in m["identity_cards"]), self_m)
+            else:
+                target = next((m for m in members if r["card_id"] in m["identity_cards"]), class_m)
+        if target is None:
+            target = class_m if not single else self_m      # named but not a member of the family set: kept at class level, flagged by the evidence text
+        target["rows"].append(r)
+    keep_self = single and (self_m["rows"] or not members)
+    keep_class = (not single) or class_m["rows"]
+    return members + ([self_m] if keep_self else []) + ([class_m] if keep_class else [])
+
+
+def member_evidence(u: dict) -> list[dict]:
+    asserts = {a["id"]: a for a in u["asserts"]}
+    rank = lambda a: (DEPTH_RANK.get(a.get("depth") or "UNKNOWN", 0), a["id"])
+    res = []
+    for m in attribute_rows(u):
+        seen, signs, best = set(), Counter(), None
+        for r in m["rows"]:
+            if r["evidence_kind"] in WWOX_KINDS and (r["card_id"], r["assertion_id"]) not in seen:
+                seen.add((r["card_id"], r["assertion_id"]))
+                signs[r["sign"]] += 1
+                a = asserts.get(r["assertion_id"])
+                if a and (best is None or rank(a) > rank(best)):
+                    best = a
+        outside = len({(r["card_id"], r["assertion_id"]) for r in m["rows"] if r["evidence_kind"] not in WWOX_KINDS})
+        pm = sorted({str(x) for r in m["rows"] if r["evidence_kind"] in WWOX_KINDS for x in (asserts.get(r["assertion_id"], {}).get("pmids") or [])})
+        tested = bool(seen)
+        res.append({"member": m["name"], "member_type": m["type"], "member_key": m["key"], "tested_in_wwox_system": "yes" if tested else "no", "wwox_assertions": len(seen), "signs": dict(sorted(signs.items())),
+                    "what": clip(best.get("text"), 200) if best else ("no WWOX-system assertion attributed to this member" + (f"; {outside} outside-WWOX assertion(s) attributed" if outside else "")),
+                    "source_pmids": pm, "depth": (best.get("depth") if best else "") or "", "assertion_ids": sorted(a for _, a in seen), "outside_wwox_assertions": outside})
+    return res
+
+
+def evidence_level_note(u: dict, mev: list[dict]) -> dict:
+    """The two readable fields: evidence of the molecule(s) tested, and evidence of the mechanism or class, kept apart."""
+    t = u["unit_type"]
+    if t in CLASS_LEVEL_TYPES:
+        named = [m for m in mev if m["member_type"] in ("molecule", "tool_compound")]
+        tested = [m for m in named if m["tested_in_wwox_system"] == "yes"]
+        mol = ("; ".join(f"{m['member']}: tested in a WWOX system ({m['wwox_assertions']} assertion(s): " + ", ".join(f"{n} {k}" for k, n in m["signs"].items()) + ")" for m in tested) or "no named member has a WWOX-system result")
+        untested = [m["member"] for m in named if m["tested_in_wwox_system"] == "no"]
+        cls = next((m for m in mev if m["member_type"] == "class_level"), None)
+        mech = (f"{cls['wwox_assertions']} class- or mechanism-level WWOX-system assertion(s)" if cls and cls["wwox_assertions"] else "no class- or mechanism-level WWOX-system assertion at card level")
+        tool = [m for m in tested if m["member_type"] == "tool_compound"]
+        if tool:
+            mech += "; a tool-compound result supports the evaluation of the MECHANISM only, not of any clinical agent"
+        return {"of_molecule": mol, "of_mechanism_or_class": mech, "untested_members": untested,
+                "attribution_rule": "a result for a tool compound or one member is not a result for the other members; the unit group describes the mechanism/class evaluation"}
+    return {"of_molecule": "the intervention's own WWOX-system results (all card-level assertions belong to it)", "of_mechanism_or_class": "not applicable: a single intervention, not a class", "untested_members": [],
+            "attribution_rule": "single intervention: its group is its own"}
+
+
+def validate_attribution(u: dict, table: list[dict]) -> list[str]:
+    """Recompute the attribution from the pertinence rows and compare: a member marked tested must own a WWOX row whose subject names it (or whose card-level rows belong to it by the rules)."""
+    errs = []
+    fresh = {m["member_key"]: m for m in member_evidence(u)}
+    for t in table:
+        f = fresh.get(t["member_key"])
+        if f is None:
+            errs.append(f"{u['unit_id']}: member {t['member_key']} is not a member of the intervention")
+        elif (f["tested_in_wwox_system"], f["assertion_ids"]) != (t["tested_in_wwox_system"], t["assertion_ids"]):
+            errs.append(f"{u['unit_id']}: member {t['member']} is attributed {t['assertion_ids']} but its own rows are {f['assertion_ids']}")
+    ids = [i for t in table for i in t["assertion_ids"]]
+    if len(ids) != len(set(ids)):
+        errs.append(f"{u['unit_id']}: one assertion is attributed to more than one member")
+    return errs
+
+
+NX_STAKE = {
+    "F1": ("whether the strongest case holds beyond its single row and its window", "NX2"),
+    "F2": ("whether a thin WWOX-system signal is real and specific: the outcomes lead to opposite decisions (lift or stop)", "NX1"),
+    "C2": ("which of the favourable and null WWOX-system results holds: the outcomes lead to opposite decisions (lift or stop)", "NX1"),
+    "C1": ("whether the only (null) WWOX-system result is real: the outcomes lead to opposite decisions (continue or stop)", "NX1"),
+    "F3": ("first WWOX-system test of a target hypothesis", "NX2"),
+    "C3": ("whether an outside-WWOX harm or null signal applies; no favourable signal exists to lift", "NX3"),
+    "P3": ("a mechanism-only link: the outcome could not change the decision before a premise exists", "NX3"),
+}
+
+
+def next_priority(va: dict) -> dict:
+    """Priority of the NEXT EXPERIMENT (ordinal; information value = how much the discriminating next experiment would change a decision). A rule on the lead position and on
+    what the work order names, NOT on how often a candidate has been studied, NOT on cost. Cost and feasibility are a separate flag."""
+    lead = va.get("lead")
+    nx = va["next"]
+    named = bool((nx.get("question") or "").strip()) and nx.get("question") != "not stated"
+    if lead is None:
+        stake = "no position on this objective: a first datum would decide whether any test can be designed" if (nx.get("kind") == "risolvere una premessa") else "no discriminating next step named"
+        level = "NX2" if (nx.get("kind") == "risolvere una premessa" and named) else "NX3"
+    else:
+        stake, level = NX_STAKE[lead]
+        if lead == "F3" and va.get("group") == "G4a":
+            level, stake = "NX1", "first WWOX-system test of a coherent, selected target hypothesis: the outcomes lead to opposite decisions (continue or stop)"
+        if not named:
+            level, stake = "NX3", "no discriminating next step is named"
+    txt = (nx.get("feasibility") or "")
+    flags = []
+    if re.search(r"not known|none known|no access|not held|unknown", txt, re.I):
+        flags.append("access_or_material_not_known")
+    if re.search(r"wet-lab|animal|organoid|slice|cell line|patch|mouse|mice|culture", txt, re.I):
+        flags.append("new_wet_lab_work_needed")
+    return {"level": level, "level_text": NX_LEVELS[level], "stake": stake, "feasibility_flags": flags or ["unclear"], "feasibility_text": clip(txt, 200)}
+
+
 def assemble(ctx: dict, cat: dict) -> dict:
     units = build_units(ctx, cat)
     known = {u["unit_id"] for u in units}
     cav: dict[str, dict[str, list]] = defaultdict(lambda: defaultdict(list))
     for r in ctx["caveats"]:
-        if r["unit_id"] not in known or r["kind"] not in ("limit", "counter", "question", "note", "objective_note", "view_note"):
+        if r["unit_id"] not in known or r["kind"] not in ("limit", "counter", "question", "note", "objective_note", "view_note", "tool_name"):
             raise SystemExit(f"unit_caveats.tsv: invalid row {r['unit_id']} {r['kind']}")
         cav[r["unit_id"]][r["kind"]].append(r["text"])
+    for u_ in units:
+        u_["tool_names"] = dict(t.split("=", 1) for t in cav.get(u_["unit_id"], {}).get("tool_name", []))
     out_units = []
     for u in units:
         cls, cls_reason = unit_class(u)
         w, mch, tr, ph, ct, un = component_wwox(u), component_mechanism(u), component_transfer(u, ctx), component_pharm(u, ctx), component_counter(u, ctx), component_uncertainty(u)
         d, dtxt = depth_label(u, w)
         acc_txt, acc_cats, acc_items = access_text(u, cat, ctx)
+        mev = member_evidence(u)
+        errs = validate_attribution(u, mev)
+        if errs:
+            raise SystemExit("member attribution is inconsistent:\n  " + "\n  ".join(errs))
         views = {}
         for obj in OBJECTIVES:
             va = view_assessment(u, ctx, obj) if not u["excluded"] else {"objective": obj, "member": False}
@@ -653,6 +806,7 @@ def assemble(ctx: dict, cat: dict) -> dict:
                 va["triggers"] = change_triggers(u, va, need)
                 va["criteria_not_met"] = criteria_not_met(u, need)
                 va["lead_summary"] = lead_need_summary(u, need)
+                va["next_priority"] = next_priority(va)
                 cv = cav.get(u["unit_id"], {})
                 if cv.get("question"):
                     va["triggers"]["rise"] += " | further questions: " + "; ".join(cv["question"])
@@ -676,7 +830,8 @@ def assemble(ctx: dict, cat: dict) -> dict:
             "T6_identity": sha16(sorted(r["row_id"] for r, _ in u["members"]), sorted({c["row_id"] for c in u["cells"]}), sorted((c["row_id"], c["need"], c["L2_mechanistic_coherence"]["state"], c["L3_observed_effect"]["state"]) for c in u["cells"])),
         }
         out_units.append({
-            "unit_id": u["unit_id"], "label": u["label"], "kind": u["kind"], "cards": u["cards"], "merge_reason": u["merge_reason"], "class": cls, "class_label": CLASSES[cls], "class_reason": cls_reason,
+            "unit_id": u["unit_id"], "label": u["label"], "kind": u["kind"], "unit_type": u["unit_type"], "unit_type_label": UNIT_TYPES[u["unit_type"]], "origin": u["origin"], "origin_label": ORIGINS[u["origin"]],
+            "member_evidence": mev, "evidence_level_note": evidence_level_note(u, mev), "cards": u["cards"], "merge_reason": u["merge_reason"], "class": cls, "class_label": CLASSES[cls], "class_reason": cls_reason,
             "declared_goals": u["declared_goals"], "tracks": u["tracks"], "views": views, "components": {"W_wwox_evidence": w, "M_mechanism": mch, "T_transferability": tr, "P_pharmacology": ph, "X_counter_evidence": ct, "U_uncertainty": un},
             "evaluation_depth": d, "evaluation_depth_text": dtxt, "access": acc_txt, "access_categories": acc_cats, "access_items": acc_items,
             "exploratory_it7": clip(comp_row["MODEL_position_P3_P2"], 360) if comp_row else "no pharmacological-comparison record for this unit; no IT7 P3/P2 information", "pathways": pathways,
@@ -839,9 +994,10 @@ def build_selections(uni: dict) -> dict:
 
 
 # ------------------------------------------------------------------------------------------------------------------------ outputs
-UNIT_COLS = ["unit_id", "label", "kind", "cards", "class", "evaluation_depth", "declared_goals", "tracks", "general_group", "broad_group", "broad_lead", "broad_lead_need", "broad_positions", "broad_contested",
+UNIT_COLS = ["unit_id", "label", "unit_type", "origin", "kind", "cards", "class", "evaluation_depth", "declared_goals", "tracks", "general_group", "broad_group", "broad_lead", "broad_lead_need", "broad_positions", "broad_contested",
              "partial_group", "partial_lead", "partial_lead_need", "partial_positions", "partial_contested", "W_wwox_evidence", "M_mechanism", "T_transferability", "P_pharmacology", "X_counter_evidence",
-             "U_uncertainty", "access", "members", "needs_linked", "needs_linked_denominator", "model_exclusions", "comparison_record", "merge_reason", "class_reason", "caveats"]
+             "U_uncertainty", "access", "members", "needs_linked", "needs_linked_denominator", "model_exclusions", "comparison_record", "merge_reason", "class_reason", "caveats", "evidence_of_molecule", "evidence_of_mechanism_or_class", "untested_members",
+             "next_priority_broad", "next_priority_partial", "feasibility_flags"]
 
 
 def unit_row(u: dict, need_total: int) -> dict:
@@ -850,7 +1006,9 @@ def unit_row(u: dict, need_total: int) -> dict:
     gen = min(gens, key=group_sort_key) if gens else ("n/a" if u["class"] == "EXCL" else "GU")
     c = u["components"]
     fmt_pos = lambda va: "; ".join(f"{n}={p_}" for n, p_ in (va.get("positions") or {}).items())
-    return {"unit_id": u["unit_id"], "label": u["label"], "kind": u["kind"], "cards": u["cards"], "class": u["class_label"], "evaluation_depth": u["evaluation_depth"] + " " + u["evaluation_depth_text"],
+    npr = lambda va: va["next_priority"]["level"] if va.get("member") and va.get("next_priority") else ""
+    fl = sorted({f for v in (b, p) if v.get("member") and v.get("next_priority") for f in v["next_priority"]["feasibility_flags"]})
+    return {"unit_id": u["unit_id"], "label": u["label"], "unit_type": u["unit_type_label"], "origin": u["origin_label"], "kind": u["kind"], "cards": u["cards"], "class": u["class_label"], "evaluation_depth": u["evaluation_depth"] + " " + u["evaluation_depth_text"],
             "declared_goals": u["declared_goals"], "tracks": u["tracks"] or "UNKNOWN", "general_group": gen,
             "broad_group": b.get("group", "not a member" if not b.get("member") else "GU"), "broad_lead": b.get("lead"), "broad_lead_need": b.get("lead_need"), "broad_positions": fmt_pos(b),
             "broad_contested": b.get("contested"), "partial_group": p.get("group", "not a member" if not p.get("member") else "GU"), "partial_lead": p.get("lead"), "partial_lead_need": p.get("lead_need"),
@@ -860,7 +1018,9 @@ def unit_row(u: dict, need_total: int) -> dict:
             f"need-level counter items {c['X_counter_evidence']['need_level_counter_items']} ({c['X_counter_evidence']['need_level_counter_items_note']}); opposed-action needs {len(c['X_counter_evidence']['opposed_action_needs'])}",
             "U_uncertainty": c["U_uncertainty"]["text"], "access": u["access"], "members": [m["name"] for m in u["members"]], "needs_linked": len(u["pathways"]), "needs_linked_denominator": need_total,
             "model_exclusions": u["model_exclusions"], "comparison_record": u["comparison_record"], "merge_reason": u["merge_reason"], "class_reason": u["class_reason"],
-            "caveats": " || ".join(f"{k}: {t}" for k, v in u["caveats"].items() for t in v)}
+            "caveats": " || ".join(f"{k}: {t}" for k, v in u["caveats"].items() for t in v),
+            "evidence_of_molecule": u["evidence_level_note"]["of_molecule"], "evidence_of_mechanism_or_class": u["evidence_level_note"]["of_mechanism_or_class"], "untested_members": u["evidence_level_note"]["untested_members"],
+            "next_priority_broad": npr(b), "next_priority_partial": npr(p), "feasibility_flags": fl}
 
 
 NEED_COLS = ["unit_id", "need", "need_short", "thread", "objective", "need_direction", "position", "position_by_card", "same_need_conflict", "link_evidence", "opposed_action", "l1_states", "l2_states",
@@ -894,7 +1054,7 @@ def member_rows(uni: dict) -> list[dict]:
     return rows
 
 
-SEL_COLS = ["view", "position_in_list", "group", "unit_id", "intervention", "objective", "access", "context", "applicability_track", "main_reason", "best_relevant_evidence", "main_limit", "pathways_needs",
+SEL_COLS = ["view", "position_in_list", "unit_type", "origin", "biological_promise_group", "depth_of_evidence", "next_experiment_priority", "next_experiment_stake", "feasibility_flags", "evidence_of_molecule", "evidence_of_mechanism_or_class", "group", "unit_id", "intervention", "objective", "access", "context", "applicability_track", "main_reason", "best_relevant_evidence", "main_limit", "pathways_needs",
             "next_experiment_or_control", "could_rise", "could_fall", "could_leave", "sources_pmids", "evaluated_on", "evaluation_depth", "contested_elsewhere", "counter_evidence_statements", "notes"]
 
 
@@ -916,7 +1076,11 @@ def selection_table(uni: dict, sel: dict, as_of: str, units_by_id: dict) -> list
             reason = (f"{GROUPS[va['group']][1]}: lead position {va['lead']} on '{lead_short}' ({va['lead_need']}). On that need: {sg}; outside WWOX {ls.get('outside_favourable', 0)} favourable and "
                       f"{ls.get('outside_null_or_harm', 0)} null or harm row(s) (some may be class-level rows from other compounds, see the limits). Mechanism: {comp['M_mechanism']['text']}.{dq} "
                       + (f"Counter-evidence on other needs of this objective: {', '.join(va['counter_needs'])}. " if va.get("counter_needs") else ""))
-            rows.append({"view": view, "position_in_list": i, "group": va["group"], "unit_id": uid, "intervention": u["label"], "objective": OBJ_LABEL[obj] + (f" ({va.get('objective_note')})" if va.get("objective_note") else ""), "access": u["access"], "context": ctx_txt,
+            npv = va["next_priority"]
+            rows.append({"view": view, "position_in_list": i, "unit_type": u["unit_type_label"], "origin": u["origin_label"], "biological_promise_group": va["group"],
+                         "depth_of_evidence": u["evaluation_depth"] + " " + u["evaluation_depth_text"], "next_experiment_priority": npv["level"] + ": " + npv["level_text"], "next_experiment_stake": npv["stake"],
+                         "feasibility_flags": npv["feasibility_flags"], "evidence_of_molecule": u["evidence_level_note"]["of_molecule"], "evidence_of_mechanism_or_class": u["evidence_level_note"]["of_mechanism_or_class"],
+                         "group": va["group"], "unit_id": uid, "intervention": u["label"], "objective": OBJ_LABEL[obj] + (f" ({va.get('objective_note')})" if va.get("objective_note") else ""), "access": u["access"], "context": ctx_txt,
                          "applicability_track": ", ".join(u["tracks"]) or "UNKNOWN", "main_reason": reason,
                          "best_relevant_evidence": ((("carrier of the position, " if ev.get("carrier_of_position") else "") + f"{ev['id']}: {ev['text']}") + (f" [PMID {', '.join(map(str, ev['pmids']))}]" if ev["pmids"] else "") + (f" (+{ev['other_favourable_wwox_assertions']} other favourable WWOX-system assertion(s) on the unit)" if ev.get("other_favourable_wwox_assertions") else "")), "main_limit": va["main_limit"],
                          "pathways_needs": "",
@@ -1004,6 +1168,10 @@ def build_all() -> dict[str, bytes]:
     files["unit_needs.tsv"] = tsv_bytes(need_rows(uni), NEED_COLS)
     files["unit_members.tsv"] = tsv_bytes(member_rows(uni), MEMBER_COLS)
     files["selections.tsv"] = tsv_bytes(srows, SEL_COLS)
+    mrows = [{"unit_id": u["unit_id"], "unit_type": u["unit_type_label"], "member": m["member"], "member_type": m["member_type"], "tested_in_wwox_system": m["tested_in_wwox_system"], "wwox_assertions": m["wwox_assertions"],
+              "signs": ", ".join(f"{n} {k}" for k, n in m["signs"].items()), "what": m["what"], "source_pmids": m["source_pmids"], "depth": m["depth"], "assertion_ids": m["assertion_ids"],
+              "outside_wwox_assertions": m["outside_wwox_assertions"]} for u in uni["units"] if u["class"] != "EXCL" for m in u["member_evidence"]]
+    files["member_evidence.tsv"] = tsv_bytes(mrows, ["unit_id", "unit_type", "member", "member_type", "tested_in_wwox_system", "wwox_assertions", "signs", "what", "source_pmids", "depth", "assertion_ids", "outside_wwox_assertions"])
     files["triggers.tsv"] = tsv_bytes(triggers_rows(), ["trigger", "what", "detected_by", "re_evaluates", "reason_class_when_order_moves"])
     inv_cols = ["family_id", "name", "records", "origin", "modality", "status_class", "access_categories", "class", "evaluation_depth", "first_order", "needs_documented_target_link", "needs_pathway_member_only",
                 "needs_direction_consistent", "needs_opposed", "mnet_usable", "msig_neural_strict", "msig_any_context", "units", "name_twins_not_merged", "display_group", "display_group_size", "reason"]
