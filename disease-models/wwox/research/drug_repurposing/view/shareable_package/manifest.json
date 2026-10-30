@@ -18,7 +18,7 @@
    },
    "^\\.cur\\.(needs|threads|groups|gaps|goals|tracks|scopes|group_note|meta|evidence_graph|work_order|selection|hypotheses|predictive|contexts|ranking)(\\.|\\[\\]|$)": {
     "class": "OWN",
-    "values": 9946,
+    "values": 9950,
     "why": "needs, threads, positions, evidence graph, work order and the IT7 selection, comparison, predictive-test and context sections: own text or counts computed from own census files"
    },
    "^\\.cur\\.cands\\[\\]\\.": {
@@ -223,7 +223,7 @@
   "reference": {
    "catalogue_records": 44211,
    "co_attested": {
-    "forbidden-name": 2600,
+    "forbidden-name": 2605,
     "forbidden-wording": 12
    },
    "co_attested_wording": [
@@ -248,7 +248,7 @@
    "forbidden_names": 126046,
    "forbidden_wordings": 2888,
    "pair_unmarked_attested_or_unchecked": {
-    "count": 120,
+    "count": 119,
     "names": [
      "act 709478",
      "apinocaltamide",
@@ -261,7 +261,7 @@
      "proteasome inhibitor",
      "px 478"
     ],
-    "unchecked_without_corpus": 120
+    "unchecked_without_corpus": 119
    },
    "suppressed_by_exemption": {
     "bibliographic journal name (validated against the journals of the cache)": 4,
@@ -454,7 +454,7 @@
   "BIBLIO": 2181,
   "COUNT": 7780,
   "ID": 3061,
-  "OWN": 60948,
+  "OWN": 60952,
   "ROWNAME": 1511,
   "SRC_A": 166,
   "SRC_META": 256,
@@ -536,8 +536,8 @@
    "sha256": "b6b532384b535ebfe354046b00c0767ab94ddae4241e4751218c024288af90aa"
   },
   "index.html": {
-   "bytes": 3424490,
-   "sha256": "3f56b913d566c6e175487b6957d2f8c322402567ecf140380777928827427337"
+   "bytes": 3428627,
+   "sha256": "b0c7921408dec7f1ee9d1c746a9a652698794cbee6078f8750f6c6181341140c"
   }
  },
  "generator": "python3 -B framework/scripts/repurposing_view.py package",

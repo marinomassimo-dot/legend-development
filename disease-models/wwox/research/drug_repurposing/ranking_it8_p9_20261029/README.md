@@ -332,7 +332,7 @@ origin `generated_in_it9`) whose position F3 on `NEED-PDH-PYRUVATE-AXIS` is prod
 Promise (the group), depth (E3q: a qualification record without a card, with the depth stated there) and next-experiment priority (NX, by the same rule) stay separate fields. Non-comparable contexts are not forced into one order: the IT9 entries sit
 in G4b or GU and the Top lists are untouched. An entry's origin is a filter (known track before IT9 / generated in IT9 / reference or control) and the inventory block counts them apart.
 
-**Counts (denominators stated).** Entries: 61 (28 card-based entries U01 to U28, 3 axes, 30 entries from qualification records). Classes: EVALUATED AND ORDERABLE 14, WEAK PERTINENCE OR COUNTER-EVIDENCE 5, STILL INSUFFICIENTLY EVALUATED 16, EXCLUDED 26 (3 axes, 16 DROP, 7 reference/control).
+**Counts (denominators stated).** Entries: 61 = 30 earlier entries (U01 to U27 and 3 axes) + 31 units for the IT9 candidates (U28 through card K01, and 30 proposal entries from 31 qualification records; 32 records in all, JTE-151 has two). Classes: EVALUATED AND ORDERABLE 14, WEAK PERTINENCE OR COUNTER-EVIDENCE 5, STILL INSUFFICIENTLY EVALUATED 16, EXCLUDED 26 (3 axes, 16 DROP, 7 reference/control).
 Ranked (not excluded): 35 = 27 known-track + 8 generated in IT9. **The 32 IT9 qualification records (31 distinct compounds; JTE-151 has two records) ended as: KEEP-AS-PROPOSAL 4** (PX-478 as U28, belnacasan gated, apabetalone conditional, sulfopin conditional),
 **INCONCLUSIVE 5 records / 4 compounds** (belzutifan, JTE-151 twice, infigratinib, gamcemetinib), **DROP 16**, **REFERENCE-ONLY 7**. Still to qualify: 12 abstentions + 4 inconclusive compounds + the 11 uncarded interventions and the 97 Q1 catalogue families.
 
@@ -343,3 +343,7 @@ WWOX-deficient microglia; sulfopin: after a MYC-specific lever); a first WWOX-sy
 **Shareable edition.** The generated proposals are known from catalogue rows and qualification text carrying third-party names and values; the shareable view keeps only state, type, origin, class and group for them (names and values are in the full edition), K01 excepted because the card names its subjects.
 
 **Tests added.** Proposal entries cover exactly the 31 candidate records except E-01 (covered by K01), states map to classes by the table above, no existing group moves, a missing origin or type is refused, and removing a candidate from `proposals_map.tsv` or a record from a qualification table changes the counts.
+
+## 12. Note after the IT9 P6 verification (2026-10-31)
+
+The existing entry U27 (extracellular magnesium) has a changed `M_mechanism` text against the R2 state ("no catalogue identity" became "1 catalogue family(ies); L2 over 1 ... none"): a consequence of the earlier P11 identity declaration, not of K01; its class and groups did not move. The K01 caveats were revised (compartment of the fibroblast observation; roxadustat attribution; deciding readout), a method-text change recorded in the snapshot note.

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "input_sha256": "709e767c2aa40dc2ec78dbd489bfcf38f59be645dbf27b79c20c25c92a8b9938",
+  "input_sha256": "b96425992e31e93a46194f33fb05abda7c87ec7b7e8f2ab9256362f8ab7c619e",
   "epistemic_status": "IPOTESI",
   "canonical": false,
   "assessment": "REQUIRES_QUALIFICATION",
@@ -53,8 +53,8 @@
     "coverage_limit": "UNKNOWN"
   },
   "p4_fields": {
-    "endpoint_pursued": "In WWOX-deficient versus corrected (isogenic) human neural cells: HIF-1alpha and HIF-2alpha protein, then whether lowering the axis (genetic HIF1A and EPAS1 knockdown, singly and together; a PX-478-class lever) lowers lactate or extracellular acidification, glucose uptake and glycolytic genes beyond the six IT7 readout genes, and what that does to network activity, viability and SOX2/NEUN fractions; a prolyl-hydroxylase inhibitor without thyromimetic action is the direction control.",
-    "functional_evidence_available": "None in a WWOX-deficient neural cell at the protein level. Non-neural: HIF-1alpha protein up in Wwox-null mouse embryonic fibroblasts (normoxia) with rescue by HIF1A knockdown; opposite sign in two of four conditions in a human fibroblast line. Human KO organoid: EPAS1 3.80 times, HK2 4.73 times, SLC2A1 2.67 times, HIF1A mRNA flat (transcripts, 4 versus 2 libraries).",
+    "endpoint_pursued": "In WWOX-deficient versus corrected (isogenic) human neural cells: HIF-1alpha and HIF-2alpha protein, then whether lowering the axis (genetic HIF1A and EPAS1 knockdown, singly and together; a PX-478-class lever) lowers lactate or extracellular acidification, glucose uptake and the five other members of the guard-scope 10-gene glycolysis set reported individually (a change there confirms the seed, it does not validate a lever), and what that does to network activity, viability and SOX2/NEUN fractions; a prolyl-hydroxylase inhibitor (a non-thyromimetic one, to be verified) run in both knockout and corrected cells is the direction control. The deciding readout is lactate or extracellular acidification and glucose uptake plus the five genes PGK1, ALDOA, ENO1, PFKP and PKM reported individually; the six IT7 readout genes and the 10-gene glycolysis set they belong to are guard-scope members and cannot decide.",
+    "functional_evidence_available": "None in a WWOX-deficient neural cell at the protein level. Non-neural: HIF-1alpha protein up in Wwox-null mouse embryonic fibroblasts (normoxia) with rescue by HIF1A knockdown; in a human fibroblast line cytoplasmic HIF-1alpha is lower in two of four conditions with the nuclear fraction unchanged (different compartment). Human KO organoid: EPAS1 3.80 times, HK2 4.73 times, SLC2A1 2.67 times, HIF1A mRNA flat (transcripts, 4 versus 2 libraries).",
     "temporal_or_model_limit": "WWOX-HIF-1alpha protein data are from non-neural cells; organoid data are transcripts of one deposit; the compound statements are cancer-model abstracts; human cells at the week of the phenotype are prenatal-equivalent.",
     "cellular_context": {
       "target_expression": "HIF1A and ARNT are detected in all adult tissues (HPA, class level); EPAS1 adult brain expression is vascular; HIF protein in WWOX-deficient neural cells is UNKNOWN.",
@@ -96,7 +96,7 @@
           "cell_type": "embryonic fibroblast; MCF7; brown fat; muscle",
           "developmental_stage": "embryonic fibroblast and adult tissue"
         },
-        "measured_result_note": "HIF-1alpha protein is raised in normoxia with HIF1A mRNA unchanged (less hydroxylation reported); HIF targets are higher; HIF1A knockdown rescues glucose uptake; digoxin lowers glucose, GLUT1 and PHD3 effects in the knockout mice. The difference disappears under hypoxia. No neural cell type was examined.",
+        "measured_result_note": "HIF-1alpha protein is readily detected in the NUCLEI of knockout MEFs in normoxia and barely in wild type (qualitative nuclear-fraction detection), with less hydroxylation; HIF targets are higher; HIF1A knockdown rescues glucose uptake in the knockout MEFs; the difference disappears under hypoxia. HIF1A mRNA is comparable in skeletal muscle of knockout and wild-type mice (the paper's statement is for muscle, not MEFs). In knockout mice digoxin RAISES blood glucose (reversing their low glucose) and lowers GLUT1 and PHD3 expression. No neural cell type was examined.",
         "receipt": "FTR-20260814-25012504-01",
         "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT"
       },
@@ -135,7 +135,7 @@
           "cell_type": "fibroblast line 1BR.3.N",
           "developmental_stage": "cell line"
         },
-        "measured_result_note": "Cytoplasmic HIF-1alpha is LOWER in two of four conditions (about two-fold in normoxia with normoglycaemia and nearly two-fold in hypoxia with normoglycaemia; equal or higher in the other two): the sign is opposite to the mouse embryonic fibroblast observation. Lactate is higher in all four conditions. HIF-1alpha and HIF-2alpha protein have never been measured in a WWOX-deficient neural cell.",
+        "measured_result_note": "Cytoplasmic HIF-1alpha is LOWER in two of four conditions (about two-fold in normoxia with normoglycaemia, p below 0.01, and nearly two-fold in hypoxia with normoglycaemia, p below 0.001; no significant difference is reported for the other two), the nuclear fraction is UNCHANGED (the transcriptionally active pool, the compartment measured in the MEFs), and one blot repetition is shown: the compartments differ from the MEF observation, so this neither confirms nor cleanly contradicts it. Lactate is higher in all four conditions. HIF-1alpha and HIF-2alpha protein have never been measured in a WWOX-deficient neural cell.",
         "receipt": "FTR-20261026-35328751-05",
         "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT"
       }
@@ -201,7 +201,7 @@
       {
         "id": "DR-K01-004",
         "target_id": "HIF stabilisation by prolyl-hydroxylase inhibition (direction control)",
-        "endpoint": "EGLN1 inhibition; seizure and thyromimetic label statements",
+        "endpoint": "EGLN1 inhibition; seizure and secondary-hypothyroidism label statements; thyroid-receptor action reported in a 2025 paper",
         "direction": "INCREASE",
         "source": "compound-database values for roxadustat (EGLN1 IC50 in the nanomolar to micromolar range; thyroid-receptor EC50 in the low nanomolar range), EU product information (seizures common); NOT WWOX EVIDENCE",
         "locator": "disease-models/wwox/research/drug_repurposing/qualification_it9_p4c_e_20261030/records/E-02_roxadustat.md",
@@ -214,13 +214,13 @@
           "cell_type": "enzyme and whole organism",
           "developmental_stage": "adult"
         },
-        "measured_result_note": "A prolyl-hydroxylase inhibitor RAISES HIF: it moves the seeds in the disease direction (a 'mimic'), so it is a direction control for the experiment and not a lever; its own label lists seizures and thyromimetic action, which excludes roxadustat itself as a control in a seizure disorder (a prolyl-hydroxylase inhibitor without thyromimetic action is named in the experiment).",
+        "measured_result_note": "A prolyl-hydroxylase inhibitor RAISES HIF: it moves the seeds in the disease direction (a 'mimic'), so it is a direction control for the experiment and not a lever; its own label lists seizures (and secondary hypothyroidism), and a 2025 paper (Morita 2025, passages read) reports thyromimetic action, which is not a label statement; together with brain necrosis in rats this excludes roxadustat itself as a control in a seizure disorder. A prolyl-hydroxylase inhibitor without thyromimetic action (molidustat, from that single report) is named in the experiment and is TO BE VERIFIED.",
         "evidence_scope": "EXTERNAL_DATABASE_RECORD"
       }
     ],
     "p4_fields": {
-      "endpoint_pursued": "In WWOX-deficient versus corrected (isogenic) human neural cells: HIF-1alpha and HIF-2alpha protein, then whether lowering the axis (genetic HIF1A and EPAS1 knockdown, singly and together; a PX-478-class lever) lowers lactate or extracellular acidification, glucose uptake and glycolytic genes beyond the six IT7 readout genes, and what that does to network activity, viability and SOX2/NEUN fractions; a prolyl-hydroxylase inhibitor without thyromimetic action is the direction control.",
-      "functional_evidence_available": "None in a WWOX-deficient neural cell at the protein level. Non-neural: HIF-1alpha protein up in Wwox-null mouse embryonic fibroblasts (normoxia) with rescue by HIF1A knockdown; opposite sign in two of four conditions in a human fibroblast line. Human KO organoid: EPAS1 3.80 times, HK2 4.73 times, SLC2A1 2.67 times, HIF1A mRNA flat (transcripts, 4 versus 2 libraries).",
+      "endpoint_pursued": "In WWOX-deficient versus corrected (isogenic) human neural cells: HIF-1alpha and HIF-2alpha protein, then whether lowering the axis (genetic HIF1A and EPAS1 knockdown, singly and together; a PX-478-class lever) lowers lactate or extracellular acidification, glucose uptake and the five other members of the guard-scope 10-gene glycolysis set reported individually (a change there confirms the seed, it does not validate a lever), and what that does to network activity, viability and SOX2/NEUN fractions; a prolyl-hydroxylase inhibitor (a non-thyromimetic one, to be verified) run in both knockout and corrected cells is the direction control. The deciding readout is lactate or extracellular acidification and glucose uptake plus the five genes PGK1, ALDOA, ENO1, PFKP and PKM reported individually; the six IT7 readout genes and the 10-gene glycolysis set they belong to are guard-scope members and cannot decide.",
+      "functional_evidence_available": "None in a WWOX-deficient neural cell at the protein level. Non-neural: HIF-1alpha protein up in Wwox-null mouse embryonic fibroblasts (normoxia) with rescue by HIF1A knockdown; in a human fibroblast line cytoplasmic HIF-1alpha is lower in two of four conditions with the nuclear fraction unchanged (different compartment). Human KO organoid: EPAS1 3.80 times, HK2 4.73 times, SLC2A1 2.67 times, HIF1A mRNA flat (transcripts, 4 versus 2 libraries).",
       "temporal_or_model_limit": "WWOX-HIF-1alpha protein data are from non-neural cells; organoid data are transcripts of one deposit; the compound statements are cancer-model abstracts; human cells at the week of the phenotype are prenatal-equivalent.",
       "cellular_context": {
         "target_expression": "HIF1A and ARNT are detected in all adult tissues (HPA, class level); EPAS1 adult brain expression is vascular; HIF protein in WWOX-deficient neural cells is UNKNOWN.",
@@ -261,7 +261,7 @@
         ],
         "against": [
           "HIF1A mRNA is flat and HIF-1alpha protein is not measured in any WWOX-deficient neural cell.",
-          "A human fibroblast line shows LOWER cytoplasmic HIF-1alpha in two of four conditions (opposite sign to the mouse cells).",
+          "A human fibroblast line shows LOWER cytoplasmic HIF-1alpha in two of four conditions with the nuclear fraction unchanged and one blot repetition shown (a different compartment from the nuclear increase in mouse cells: neither confirms nor contradicts it).",
           "The engine edge HIF1A to BNIP3 is review-sourced; the primary record is in non-neural lines.",
           "PX-478 has no activity annotation in the compound database, a nitrogen-mustard alert, only adult phase 1 data and no CNS datum; the HIF axis supports neuronal energy and survival programmes, so lowering it may be harmful.",
           "The organoid glycolytic genes also fall with culture time, so maturity or composition can explain part of the shift (exploratory)."
@@ -270,7 +270,7 @@
       },
       "time_to_access": "UNKNOWN.",
       "time_to_benefit": "UNKNOWN.",
-      "pharmacology": "PX-478: no activity or mechanism annotation in the compound database; action reported in cancer models; mustard alert; adult intravenous phase 1 only. Roxadustat: HIF-prolyl-hydroxylase inhibitor with seizures and thyromimetic action on its label (direction control only). Belzutifan (HIF-2alpha inhibitor) stays INCONCLUSIVE: HIF-2alpha protein in WWOX-deficient neural cells is unmeasured.",
+      "pharmacology": "PX-478: no activity or mechanism annotation in the compound database; action reported in cancer models; mustard alert; adult intravenous phase 1 only. Roxadustat: HIF-prolyl-hydroxylase inhibitor; label: seizures and secondary hypothyroidism; thyromimetic action from a 2025 paper (direction control only). Belzutifan (HIF-2alpha inhibitor) stays INCONCLUSIVE: HIF-2alpha protein in WWOX-deficient neural cells is unmeasured.",
       "paediatrics_and_interactions": "UNKNOWN. No paediatric suitability is presumed by this card, for the candidate or for any historical authorisation of it for another use.",
       "scope_of_checks": {
         "support_and_replication": "One laboratory for the mouse protein data; one deposit for the organoid transcripts; abstract-level compound statements.",
@@ -284,9 +284,9 @@
         "IT9 P6 2026-10-30: this card closes the case with a discriminating experiment with conditional arms"
       ],
       "predictions": "None; no engine, no score. The experiment is proposed, not performed.",
-      "next_measurement": "Discriminating experiment with conditional arms (case record section 7): in WWOX-deficient versus corrected human neural cells measure HIF-1alpha and HIF-2alpha protein first (premise); if raised, genetic HIF1A and EPAS1 knockdown (singly and together) and a PX-478-class lever against a prolyl-hydroxylase 'mimic' as the direction control, reading lactate or extracellular acidification, glucose uptake, HIF targets beyond the six IT7 readout genes, network activity and viability; arms are conditional on the direction of the HIF-dependent shift (adaptive versus harmful). Falsifier: HIF-1alpha and HIF-2alpha protein are not higher in the WWOX-deficient neural cells, or knockdown does not move lactate or the glycolytic module.",
+      "next_measurement": "Discriminating experiment with conditional arms (case record section 7). Step 0: in WWOX-deficient versus corrected human neural cells measure HIF-1alpha and HIF-2alpha protein, nuclear and cytoplasmic fractions separately, in normoxia (2D or progenitor cultures as primary) and in hypoxia; organoids at week 8 to 15 have hypoxic cores, so a hypoxia marker co-stain is required. If raised: genetic HIF1A and EPAS1 knockdown (singly and together) and a PX-478-class lever against a prolyl-hydroxylase inhibitor (non-thyromimetic, TO BE VERIFIED) as the direction control run in BOTH knockout and corrected cells. Deciding readout: lactate or extracellular acidification and glucose uptake plus PGK1, ALDOA, ENO1, PFKP and PKM reported individually (they belong to the guard-scope 10-gene set, so a change there confirms the seed and does not validate a lever); the six IT7 genes cannot decide. Network activity, viability and SOX2/NEUN fractions give the valence (adaptive versus harmful), relative to untreated knockout and to corrected cells; a mixed outcome leaves the valence unresolved. Falsifier: neither HIF protein is higher in the WWOX-deficient neural cells (in the relevant compartment and oxygen condition), or knockdown does not move lactate or glucose uptake.",
       "status": "hypothesis",
-      "value_added": "Puts the HIF axis, the only Q2 item with direct non-neural WWOX support, on one card with its counter-evidence (opposite sign in a human fibroblast line, flat HIF1A mRNA), the dropped and inconclusive neighbours and the guard that bars the six readout genes from evaluation.",
+      "value_added": "Puts the HIF axis, the only Q2 item with direct non-neural WWOX support, on one card with its counter-evidence (cytoplasmic HIF-1alpha lower in a human fibroblast line with the nuclear fraction unchanged, flat HIF1A mRNA), the dropped and inconclusive neighbours and the guard that bars the six readout genes from evaluation.",
       "clinical_census": "ClinicalTrials.gov API v2, 2026-10-30 (IT9 P4c-e): PX-478 one study overall (phase 1, adult solid tumours and lymphoma); epilepsy, seizure, hypomyelination, neurodevelopment, WWOX and paediatric terms 0. A zero is no hits for the query string on that date, not proof that no study exists."
     },
     "not_known": [
@@ -295,7 +295,7 @@
       "Whether PX-478 or any HIF-lowering lever reaches or acts in neural cells at tolerable exposure."
     ],
     "evidence_against": [
-      "Opposite HIF-1alpha sign in a human fibroblast line in two of four conditions.",
+      "Cytoplasmic HIF-1alpha lower in a human fibroblast line in two of four conditions, nuclear fraction unchanged (different compartment from the MEF nuclear increase).",
       "No activity annotation in the compound database, a mustard alert and no CNS data for the one named compound.",
       "The organoid glycolytic genes also fall with culture time (maturity or composition)."
     ],

@@ -132106,6 +132106,653 @@
  },
  {
   "abstention": null,
+  "complete_reads": 4,
+  "depths": [
+   "complete_fulltext_read",
+   "partial_fulltext_read"
+  ],
+  "digest": "174a9578cf7825a7",
+  "locators": 245,
+  "origin_id": "DL-REPO-005",
+  "papers": 5,
+  "query_id": "Q-DL-REPO-005",
+  "rows": [
+   {
+    "adjudication_files": [
+     "disease-models/wwox/research/page_adjudications/locator_audit_map_repairs_20261024.md"
+    ],
+    "audit_status": "AUDIT_FILE_PRESENT",
+    "audited_entries": 0,
+    "contradiction_verdicts": [],
+    "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
+    "evidence_scope": [
+     "UNQUALIFIED"
+    ],
+    "locator_count": 22,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID25012504.json",
+    "pmid": "25012504",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20260814-25012504-01",
+    "repair_unverified": 0,
+    "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
+    "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "UNAUDITED",
+    "audited_entries": 0,
+    "contradiction_verdicts": [],
+    "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
+    "evidence_scope": [
+     "UNQUALIFIED"
+    ],
+    "locator_count": 31,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID31543760.json",
+    "pmid": "31543760",
+    "reading_depth": "partial_fulltext_read",
+    "receipt_events": 6,
+    "receipt_id": "FTR-20260811-31543760-01",
+    "repair_unverified": 0,
+    "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
+    "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "UNAUDITED",
+    "audited_entries": 0,
+    "contradiction_verdicts": [],
+    "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
+    "evidence_scope": [
+     "UNQUALIFIED"
+    ],
+    "locator_count": 39,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID38563965.json",
+    "pmid": "38563965",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 2,
+    "receipt_id": "FTR-20260913-38563965-01",
+    "repair_unverified": 0,
+    "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
+    "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "UNAUDITED",
+    "audited_entries": 0,
+    "contradiction_verdicts": [],
+    "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
+    "evidence_scope": [
+     "UNQUALIFIED"
+    ],
+    "locator_count": 49,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID41380592.json",
+    "pmid": "41380592",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261027-41380592-01",
+    "repair_unverified": 0,
+    "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
+    "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     }
+    ],
+    "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
+    "evidence_scope": [
+     "UNQUALIFIED"
+    ],
+    "locator_count": 104,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+    "pmid": "42909904",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 4,
+    "receipt_id": "FTR-20261026-42909904-01",
+    "repair_unverified": 1,
+    "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
+    "unaudited_contradictions": 0
+   }
+  ],
+  "unaudited_contradictions": 0
+ },
+ {
+  "abstention": "NO_PAPER: the record names DL-MECH-174, which exist in the registry and cite no PMID; missing datum: a paper cited by any record reached",
+  "complete_reads": 0,
+  "depths": [],
+  "digest": "8bb04c10a367e745",
+  "locators": 0,
+  "origin_id": "DL-REPO-006",
+  "papers": 0,
+  "query_id": "Q-DL-REPO-006",
+  "rows": [],
+  "unaudited_contradictions": 0
+ },
+ {
+  "abstention": "NO_PAPER: the record names DL-MECH-174, which exist in the registry and cite no PMID; missing datum: a paper cited by any record reached",
+  "complete_reads": 0,
+  "depths": [],
+  "digest": "59c43c8da1d4089e",
+  "locators": 0,
+  "origin_id": "DL-REPO-007",
+  "papers": 0,
+  "query_id": "Q-DL-REPO-007",
+  "rows": [],
+  "unaudited_contradictions": 0
+ },
+ {
+  "abstention": null,
+  "complete_reads": 12,
+  "depths": [
+   "complete_fulltext_read",
+   "partial_fulltext_read"
+  ],
+  "digest": "dc4fc00910d2b231",
+  "locators": 487,
+  "origin_id": "DL-REPO-008",
+  "papers": 14,
+  "query_id": "Q-DL-REPO-008",
+  "rows": [
+   {
+    "adjudication_files": [],
+    "audit_status": "UNAUDITED",
+    "audited_entries": 0,
+    "contradiction_verdicts": [],
+    "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
+    "evidence_scope": [
+     "UNQUALIFIED"
+    ],
+    "locator_count": 9,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID17360458.json",
+    "pmid": "17360458",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20260811-17360458-01",
+    "repair_unverified": 0,
+    "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
+    "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "UNAUDITED",
+    "audited_entries": 0,
+    "contradiction_verdicts": [],
+    "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
+    "evidence_scope": [
+     "UNQUALIFIED"
+    ],
+    "locator_count": 32,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID17803050.json",
+    "pmid": "17803050",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20260806-17803050-01",
+    "repair_unverified": 0,
+    "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
+    "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "UNAUDITED",
+    "audited_entries": 0,
+    "contradiction_verdicts": [],
+    "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
+    "evidence_scope": [
+     "UNQUALIFIED"
+    ],
+    "locator_count": 30,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID19500159.json",
+    "pmid": "19500159",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20260806-19500159-01",
+    "repair_unverified": 0,
+    "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
+    "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "UNAUDITED",
+    "audited_entries": 0,
+    "contradiction_verdicts": [],
+    "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
+    "evidence_scope": [
+     "UNQUALIFIED"
+    ],
+    "locator_count": 23,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID19936220.json",
+    "pmid": "19936220",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 2,
+    "receipt_id": "FTR-20260806-19936220-01",
+    "repair_unverified": 0,
+    "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
+    "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 2,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/CORRECTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "UNVERIFIABLE_SURFACE/SUPPORTED"
+     }
+    ],
+    "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
+    "evidence_scope": [
+     "UNQUALIFIED"
+    ],
+    "locator_count": 42,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID24369382.json",
+    "pmid": "24369382",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 5,
+    "receipt_id": "FTR-20260913-24369382-01",
+    "repair_unverified": 0,
+    "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
+    "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "UNAUDITED",
+    "audited_entries": 0,
+    "contradiction_verdicts": [],
+    "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
+    "evidence_scope": [
+     "UNQUALIFIED"
+    ],
+    "locator_count": 21,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID30290271.json",
+    "pmid": "30290271",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 2,
+    "receipt_id": "FTR-20260806-30290271-01",
+    "repair_unverified": 0,
+    "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
+    "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 1,
+    "contradiction_verdicts": [
+     {
+      "auditors": 1,
+      "verdict": "PARTIAL"
+     }
+    ],
+    "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
+    "evidence_scope": [
+     "UNQUALIFIED"
+    ],
+    "locator_count": 15,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID31340538.json",
+    "pmid": "31340538",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 3,
+    "receipt_id": "FTR-20260806-31340538-01",
+    "repair_unverified": 0,
+    "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
+    "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 4,
+    "contradiction_verdicts": [
+     {
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     }
+    ],
+    "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
+    "evidence_scope": [
+     "UNQUALIFIED"
+    ],
+    "locator_count": 31,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID32000863.json",
+    "pmid": "32000863",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 4,
+    "receipt_id": "FTR-20260804-32000863-01",
+    "repair_unverified": 0,
+    "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
+    "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [
+     "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
+    ],
+    "audit_status": "AUDIT_FILE_PRESENT",
+    "audited_entries": 0,
+    "contradiction_verdicts": [],
+    "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
+    "evidence_scope": [
+     "UNQUALIFIED"
+    ],
+    "locator_count": 40,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID33914858.json",
+    "pmid": "33914858",
+    "reading_depth": "partial_fulltext_read",
+    "receipt_events": 5,
+    "receipt_id": "FTR-20260923-33914858-01",
+    "repair_unverified": 0,
+    "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
+    "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [
+     "disease-models/wwox/research/page_adjudications/locator_audit_34268881_reread_20261025.md",
+     "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
+     "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
+     "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md"
+    ],
+    "audit_status": "AUDIT_FILE_PRESENT",
+    "audited_entries": 2,
+    "contradiction_verdicts": [
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
+     {
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
+     {
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     }
+    ],
+    "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
+    "evidence_scope": [
+     "UNQUALIFIED"
+    ],
+    "locator_count": 67,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34268881.json",
+    "pmid": "34268881",
+    "reading_depth": "partial_fulltext_read",
+    "receipt_events": 13,
+    "receipt_id": "FTR-20260726-34268881-01",
+    "repair_unverified": 7,
+    "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
+    "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "CONTRADICTIONS_AUDITED",
+    "audited_entries": 17,
+    "contradiction_verdicts": [
+     {
+      "auditors": 1,
+      "verdict": "blind locator audit, 2026-09-13, task ALDAZ-REPAIR-A-20260913: a separate agent with no session history received only (proposition, quote, anchor) triples plus the artefacts - no dossier, no candidate, no claim record, no reader identity. It opened the XML and cut a 3x crop of Fig 1a panel a at native 1801x1412, locating the four antibody rows from a y-darkness profile and running per-lane ImageMagick densitometry."
+     },
+     {
+      "auditors": 1,
+      "verdict": "blind locator audit, 2026-09-13, task ALDAZ-REPAIR-A-20260913: a separate agent with no session history received only (proposition, quote, anchor) triples plus the artefacts - no dossier, no candidate, no claim record, no reader identity. It opened the XML and cut a 3x crop of Fig 1a panel a at native 1801x1412, locating the four antibody rows from a y-darkness profile and running per-lane ImageMagick densitometry."
+     },
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT/CORRECTED"
+     },
+     {
+      "auditors": 1,
+      "verdict": "blind locator audit, 2026-09-13, task ALDAZ-REPAIR-A-20260913: a separate agent with no session history received only (proposition, quote, anchor) triples plus the artefacts - no dossier, no candidate, no claim record, no reader identity. It opened the XML and cut a 3x crop of Fig 1a panel a at native 1801x1412, locating the four antibody rows from a y-darkness profile and running per-lane ImageMagick densitometry."
+     },
+     {
+      "auditors": 1,
+      "verdict": "blind locator audit, 2026-09-13, general-purpose auditor receiving only (proposition, quote, anchor) triples plus the artefacts, no dossier, no claim record, no reader identity; it opened every named image"
+     },
+     {
+      "auditors": 1,
+      "verdict": "blind locator audit, 2026-09-13, general-purpose auditor receiving only (proposition, quote, anchor) triples plus the artefacts, no dossier, no claim record, no reader identity; it opened every named image"
+     },
+     {
+      "auditors": 1,
+      "verdict": "blind locator audit, 2026-09-13, general-purpose auditor receiving only (proposition, quote, anchor) triples plus the artefacts, no dossier, no claim record, no reader identity; it opened every named image"
+     },
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT/CORRECTED"
+     },
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT/CORRECTED"
+     },
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT/CORRECTED"
+     },
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT/CORRECTED"
+     },
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT/CORRECTED"
+     },
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT/CORRECTED"
+     },
+     {
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
+     {
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     }
+    ],
+    "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
+    "evidence_scope": [
+     "UNQUALIFIED"
+    ],
+    "locator_count": 70,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36828035.json",
+    "pmid": "36828035",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 6,
+    "receipt_id": "FTR-20260913-36828035-03",
+    "repair_unverified": 1,
+    "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
+    "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [
+     "disease-models/wwox/research/page_adjudications/locator_audit_deep_cards_20261022.md",
+     "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
+     "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
+     "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
+     "disease-models/wwox/research/page_adjudications/locator_audit_narrowed_entries_20261024.md"
+    ],
+    "audit_status": "AUDIT_FILE_PRESENT",
+    "audited_entries": 3,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     },
+     {
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/SUPPORTED"
+     },
+     {
+      "auditors": 1,
+      "verdict": "SUPPORTED"
+     }
+    ],
+    "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
+    "evidence_scope": [
+     "UNQUALIFIED"
+    ],
+    "locator_count": 49,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42397075.json",
+    "pmid": "42397075",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 11,
+    "receipt_id": "FTR-20260810-42397075-04",
+    "repair_unverified": 1,
+    "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
+    "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [
+     "disease-models/wwox/research/page_adjudications/locator_audit_PMID42422765_20261021.md",
+     "disease-models/wwox/research/page_adjudications/locator_audit_deep_cards_20261022.md",
+     "disease-models/wwox/research/page_adjudications/locator_audit_module_batch_20261023.md",
+     "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs3_20261023.md",
+     "disease-models/wwox/research/page_adjudications/locator_audit_module_repairs_20261023.md",
+     "disease-models/wwox/research/page_adjudications/locator_audit_module_rows_20261023.md"
+    ],
+    "audit_status": "AUDIT_FILE_PRESENT",
+    "audited_entries": 1,
+    "contradiction_verdicts": [
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     },
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     },
+     {
+      "auditors": 1,
+      "verdict": "PARTIAL"
+     },
+     {
+      "auditors": 2,
+      "verdict": "UNDERSHOOT/OVERSHOOT"
+     },
+     {
+      "auditors": 2,
+      "verdict": "OVERSHOOT/OVERSHOOT"
+     },
+     {
+      "auditors": 1,
+      "verdict": "OVERSHOOT"
+     }
+    ],
+    "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
+    "evidence_scope": [
+     "UNQUALIFIED"
+    ],
+    "locator_count": 48,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42422765.json",
+    "pmid": "42422765",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 17,
+    "receipt_id": "FTR-20260814-42422765-06",
+    "repair_unverified": 6,
+    "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
+    "unaudited_contradictions": 0
+   },
+   {
+    "adjudication_files": [],
+    "audit_status": "UNAUDITED",
+    "audited_entries": 0,
+    "contradiction_verdicts": [],
+    "evidence_label": "READING DOCUMENTED (receipt in this repository); applicability to WWOX-DEE not implied",
+    "evidence_scope": [
+     "UNQUALIFIED"
+    ],
+    "locator_count": 10,
+    "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42558002.json",
+    "pmid": "42558002",
+    "reading_depth": "complete_fulltext_read",
+    "receipt_events": 1,
+    "receipt_id": "FTR-20261004-42558002-01",
+    "repair_unverified": 0,
+    "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
+    "unaudited_contradictions": 0
+   }
+  ],
+  "unaudited_contradictions": 0
+ },
+ {
+  "abstention": null,
   "complete_reads": 16,
   "depths": [
    "complete_fulltext_read",

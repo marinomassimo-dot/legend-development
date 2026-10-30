@@ -2167,13 +2167,13 @@
   "inputs": {
    "comparison_rows": 9,
    "coverage_generated_from": {
-    "assertion_pertinence.tsv": "8146cc4460206051",
+    "assertion_pertinence.tsv": "82e55d3452b13985",
     "card_links.json": "6af6f7534bae9142",
-    "cards_and_packets": "0fd21853edf05c71",
+    "cards_and_packets": "57643a545436742d",
     "catalog.jsonl.gz": "75652786013b931d",
     "catalog_stats.json": "3749a19b11aa1ddd",
     "measure_next.json": "bca46967510475c5",
-    "needs.json": "20b81971012f3561",
+    "needs.json": "a82587599ede2d46",
     "source_artefacts.tsv": "222f20137c020b58",
     "target_roles.tsv": "eba59af50b33cfe8"
    },
@@ -2947,7 +2947,7 @@
    ],
    "exploratory_it7": "None. Not in the P3 universe (card-linked families were firewalled out of every method) and P3 tested a transcript module, not protein fate. P2: a class with a catalogued target row only for HDAC at enzyme level; no chaperone target row in ChEMBL, GtoPdb or DGIdb.",
    "inputs": {
-    "T1_cards": "3f9aef11baff279a",
+    "T1_cards": "c7537bb5d9b48e7c",
     "T2_pertinence": "91e62b924fe30a2a",
     "T3_receipts": "52149a4b03e76932",
     "T4_needs": "9ae567485b16c45c",
@@ -3245,7 +3245,7 @@
    ],
    "exploratory_it7": "None; outside the P3 universe and not a transcript question.",
    "inputs": {
-    "T1_cards": "7f1af1394171443d",
+    "T1_cards": "27d93fc5e0de93ee",
     "T2_pertinence": "a99cbab9e0538513",
     "T3_receipts": "f65f2005fcac34e1",
     "T4_needs": "9ae567485b16c45c",
@@ -3498,7 +3498,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "677cdd1deb9e2717",
+    "T1_cards": "0efa73083deac21f",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "51d892749172e3bd",
     "T4_needs": "9ae567485b16c45c",
@@ -3729,7 +3729,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "b3b9cb4fa310b06a",
+    "T1_cards": "8004237f8ae0a2dc",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "d1a40a526bc95810",
     "T4_needs": "9ae567485b16c45c",
@@ -3959,7 +3959,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "af0327214f4834a2",
+    "T1_cards": "4be404e14337d7aa",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "d1a40a526bc95810",
     "T4_needs": "9ae567485b16c45c",
@@ -4225,7 +4225,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "d6aa3e8b9e879766",
+    "T1_cards": "a79cb8c2bf362f93",
     "T2_pertinence": "e8ab801c472fdfe7",
     "T3_receipts": "0efa01184c6ba643",
     "T4_needs": "aa528d3f09f497b0",
@@ -4576,7 +4576,7 @@
    ],
    "exploratory_it7": "None. Gene addition is not a compound question; P2 counts it as direction-evaluable by target only (zero signed records on the need target) and P3 did not touch it.",
    "inputs": {
-    "T1_cards": "22435682126c7e84",
+    "T1_cards": "e6fb5a9497147ce1",
     "T2_pertinence": "59d15d3c06233d6c",
     "T3_receipts": "cd21840b2a4e584e",
     "T4_needs": "82b439e35fc80b6c",
@@ -4960,7 +4960,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "f94cf03abce18cd8",
+    "T1_cards": "1b1b86f8f04901bc",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "4c5d7ee4b7cf4a15",
     "T4_needs": "66cebf15a40b040e",
@@ -5191,7 +5191,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "1b656a9b82437f4a",
+    "T1_cards": "e761fe1bca678e60",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "ad1b95286f64b04c",
     "T4_needs": "10a1be2af4314710",
@@ -5430,7 +5430,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "120a772bd1dd242b",
+    "T1_cards": "57ea0948249f8a33",
     "T2_pertinence": "8e52657c67b7cf9d",
     "T3_receipts": "9704e0c37800b5d7",
     "T4_needs": "610a2835cdde8e39",
@@ -5773,7 +5773,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "e71879bb9ac0e214",
+    "T1_cards": "e886d376d39614c3",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "dc01c05508dcbf56",
     "T4_needs": "55ff62f47762bab4",
@@ -6054,7 +6054,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "040f66e19ea9fbb5",
+    "T1_cards": "285ce8cbda8eae23",
     "T2_pertinence": "079230f81c69cb2e",
     "T3_receipts": "293d407faa57bb47",
     "T4_needs": "932744721b4c9f86",
@@ -6343,7 +6343,7 @@
    ],
    "exploratory_it7": "P3 (IT7, exploratory, minimum detectable effect about rho 0.15, independently verified): NO ADDED VALUE of a signed external network (rho 0.047) or a WWOX-enriched network (difference -0.0015) for ranking compounds by opposition of the six-gene module; the signature route is effect not detected, not excluded (rho 0.143, 0.007 under the 0.15 threshold, 90 pe…",
    "inputs": {
-    "T1_cards": "85b97010a5b15c83",
+    "T1_cards": "ab702acd827834fb",
     "T2_pertinence": "1959a04e90dbf178",
     "T3_receipts": "5c83e6a18e12f4d3",
     "T4_needs": "a3face7aa0d2e275",
@@ -6736,10 +6736,10 @@
    ],
    "exploratory_it7": "P3 (IT7, exploratory, independently verified): the same result as CMP-04 - network routes NO ADDED VALUE, signature route not detected and not excluded (weak positive counter-evidence: lower bound 0.039, top-decile hit rate 15 percent); module transfer inconclusive (null 95th percentile 0.389 and p 0.060 on the producer's draw, 0.396 and 0.0595 on the verif…",
    "inputs": {
-    "T1_cards": "448c3f747f15bf8c",
+    "T1_cards": "c4d4e452b0f29676",
     "T2_pertinence": "4f588d870d868008",
     "T3_receipts": "b410a77ea4345508",
-    "T4_needs": "e44c30832cfe2663",
+    "T4_needs": "ea948eac0b7d4a97",
     "T5_pharmacology": "dd38ed70d7c73b56",
     "T6_identity": "5947102b41b2b474"
    },
@@ -7144,10 +7144,10 @@
    ],
    "exploratory_it7": "None. A diet has no compound target row, so neither P2 method applies, and the P3 negative says nothing about it.",
    "inputs": {
-    "T1_cards": "a7a333615fbfd923",
+    "T1_cards": "a1e19929754f4aa3",
     "T2_pertinence": "d95f7e8dcd00a63d",
     "T3_receipts": "892bcad601ce6d84",
-    "T4_needs": "5561100b9d898a25",
+    "T4_needs": "07066756e2a69167",
     "T5_pharmacology": "ab6539460fdd860d",
     "T6_identity": "67350028339e1f89"
    },
@@ -7464,7 +7464,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "e40d2e82f980601d",
+    "T1_cards": "36dba2d7405ee0ef",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "d2e53556d365e6a4",
     "T4_needs": "77086341166ba9e5",
@@ -7761,7 +7761,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "92ff8e9c044ee658",
+    "T1_cards": "e5b1b2e08223f5cc",
     "T2_pertinence": "8b0a047e9ce40434",
     "T3_receipts": "fb3ea4bd5ed30c08",
     "T4_needs": "3093063f37ac6ad7",
@@ -8104,7 +8104,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "0b117458a2ec6d8a",
+    "T1_cards": "0adaec30a99a6d58",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "d2e53556d365e6a4",
     "T4_needs": "77086341166ba9e5",
@@ -8352,7 +8352,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "a2791b0230557b3a",
+    "T1_cards": "592dc5df6dbf6e71",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "004bf101de3feb3f",
     "T4_needs": "e47c99263fff82cc",
@@ -8667,7 +8667,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "a9f205a022b970e2",
+    "T1_cards": "6c701492566d85ac",
     "T2_pertinence": "094cb2bb03ecb864",
     "T3_receipts": "212be31947637493",
     "T4_needs": "89705b05a4222975",
@@ -9182,7 +9182,7 @@
    ],
    "exploratory_it7": "None from P3 (a receptor-physiology question, not a transcript module; memantine and perampanel are card-linked and firewalled). P2: memantine and perampanel are usable by the network method (signed antagonist actions on GRIN and GRIA targets) and have no neural LINCS signature, so the signature method does not apply; the need has 179 linked records by targ…",
    "inputs": {
-    "T1_cards": "f1a8ccbec134a30a",
+    "T1_cards": "eb3ad40d0552927a",
     "T2_pertinence": "4744af9e5e721d31",
     "T3_receipts": "533fe34f5749cb80",
     "T4_needs": "ce38af3ca4f76c07",
@@ -9629,7 +9629,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "17f413debf468fe6",
+    "T1_cards": "db1a715d55c5ccd8",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "5931d09e617ead46",
     "T4_needs": "69a0fc27d793904a",
@@ -9876,7 +9876,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "6f3f0179a5e1fac8",
+    "T1_cards": "af106cf9241afbb0",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "a729e52b13cb13ec",
     "T4_needs": "5f3af372617a911f",
@@ -10198,7 +10198,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "077b40b586d584c2",
+    "T1_cards": "7aba47b50a7cb078",
     "T2_pertinence": "db0343ccb25dda32",
     "T3_receipts": "1e81e393df77743b",
     "T4_needs": "99f7c86d7134370b",
@@ -10545,7 +10545,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "95dd3cd04a70d277",
+    "T1_cards": "f0203db5f5de0428",
     "T2_pertinence": "904f40dca9a2c7f5",
     "T3_receipts": "e631cecfdfb7956c",
     "T4_needs": "3093063f37ac6ad7",
@@ -10878,7 +10878,7 @@
    ],
    "exploratory_it7": "None from P3 (not the glycolysis module). P2: the need is exploration-only (direction uncertain) with 521 linked records by target association, 331 usable by the network method and 4 neural-signature records among them; association only, no direction toward a need, nothing evaluated.",
    "inputs": {
-    "T1_cards": "e8861fd883af7c50",
+    "T1_cards": "c81ab8465f7a226d",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "137600edf412817c",
     "T4_needs": "a270c9373e572187",
@@ -11175,7 +11175,7 @@
    ],
    "exploratory_it7": "None. An ion has no signed target row for the network method and no neural LINCS perturbation; the P3 negative does not apply.",
    "inputs": {
-    "T1_cards": "356c9a6f8d2db0e3",
+    "T1_cards": "9fbae73a37b2a571",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "679405f21efb5aa3",
     "T4_needs": "ce38af3ca4f76c07",
@@ -11388,11 +11388,11 @@
    ],
    "caveats": {
     "counter": [
-     "A human fibroblast WWOX line shows LOWER cytoplasmic HIF-1alpha in two of four conditions (opposite sign to the mouse embryonic fibroblasts); HIF1A mRNA is flat in both human neural transcript systems.",
-     "The engine edge HIF1A to BNIP3 is a review-sourced SIGNOR record on a complex; the primary record (Bruick 2000) is in non-neural cell lines; the HIF-prolyl-hydroxylase inhibitor roxadustat raises HIF (the disease direction) and its label lists seizures and thyromimetic action."
+     "A human fibroblast WWOX line shows LOWER cytoplasmic HIF-1alpha in two of four conditions with the nuclear fraction unchanged and one blot repetition shown (a different compartment from the mouse nuclear increase: neither confirms nor contradicts it); HIF1A mRNA is flat in both human neural transcript systems.",
+     "The engine edge HIF1A to BNIP3 is a review-sourced SIGNOR record on a complex; the primary record (Bruick 2000) is in non-neural cell lines; the HIF-prolyl-hydroxylase inhibitor roxadustat raises HIF (the disease direction) and its label lists seizures and secondary hypothyroidism, and thyromimetic action is from a 2025 paper, not the label."
     ],
     "limit": [
-     "proposed, not performed. The WWOX-side HIF-1alpha protein data are non-neural (mouse embryonic fibroblasts; a human fibroblast line shows the OPPOSITE sign in two of four conditions); the organoid data are transcripts of one deposit (4 v 2 libraries, EPAS1 3.80x, HK2 4.73x, SLC2A1 2.67x, HIF1A mRNA flat); HIF-1alpha and HIF-2alpha protein in WWOX-deficient neural cells have never been measured. The six IT7 readout genes (SLC2A1, HK2, LDHA, LDHB, BNIP3, PDK1) cannot be used to evaluate any lever (guard IT7_READOUT6). PX-478: no activity annotation in the compound database, a nitrogen-mustard alert, adult intravenous phase 1 only, no CNS datum"
+     "proposed, not performed. The WWOX-side HIF-1alpha protein data are non-neural (mouse embryonic fibroblasts; a human fibroblast line shows LOWER cytoplasmic HIF-1alpha in two of four conditions with the nuclear fraction unchanged - a different compartment from the MEF nuclear increase); the organoid data are transcripts of one deposit (4 v 2 libraries, EPAS1 3.80x, HK2 4.73x, SLC2A1 2.67x, HIF1A mRNA flat); HIF-1alpha and HIF-2alpha protein in WWOX-deficient neural cells have never been measured. The six IT7 readout genes (SLC2A1, HK2, LDHA, LDHB, BNIP3, PDK1) cannot be used to evaluate any lever (guard IT7_READOUT6). PX-478: no activity annotation in the compound database, a nitrogen-mustard alert, adult intravenous phase 1 only, no CNS datum"
     ],
     "next_feasibility": [
      "in vitro in human neural cells (organoids or progenitors from a public deposit need an access request that exists as a draft only); PX-478 supply and purity are UNVERIFIED; belzutifan stays INCONCLUSIVE until HIF-2alpha protein is measured"
@@ -11401,10 +11401,10 @@
      "risolvere una premessa"
     ],
     "next_question": [
-     "In WWOX-deficient versus corrected human neural cells measure HIF-1alpha and HIF-2alpha protein first (premise). If raised: genetic HIF1A and EPAS1 knockdown (singly and together) and a PX-478-class lever against a prolyl-hydroxylase inhibitor without thyromimetic action as the direction control, reading lactate or extracellular acidification, glucose uptake, HIF targets beyond the six IT7 readout genes, network activity and viability; arms are conditional on the direction of the HIF-dependent shift (adaptive or harmful)"
+     "In WWOX-deficient versus corrected human neural cells measure HIF-1alpha and HIF-2alpha protein first (premise), nuclear and cytoplasmic fractions separately, in normoxia and hypoxia (organoid cores are hypoxic: co-stain a hypoxia marker). If raised: genetic HIF1A and EPAS1 knockdown (singly and together) and a PX-478-class lever against a prolyl-hydroxylase inhibitor (non-thyromimetic, to be verified) as the direction control in both knockout and corrected cells. Deciding readout: lactate or extracellular acidification and glucose uptake plus PGK1, ALDOA, ENO1, PFKP and PKM reported individually (guard-scope members of the 10-gene set: a change confirms the seed and does not validate a lever; the six IT7 genes cannot decide); network activity, viability and SOX2/NEUN fractions give the valence; a mixed outcome leaves it unresolved"
     ],
     "question": [
-     "conditional arms: if HIF protein is raised in WWOX-deficient neural cells and lowering the axis lowers lactate AND worsens viability or differentiation, the shift is adaptive (lever dropped); if it improves them, the shift is harmful (lever kept); if protein is not raised, the axis is dropped for neural cells"
+     "conditional arms: if HIF protein is raised in WWOX-deficient neural cells and lowering the axis lowers lactate AND worsens viability or differentiation, the shift is adaptive (lever dropped); if it improves them, the shift is harmful (lever kept); if protein is not raised in the relevant compartment and oxygen condition, the axis is dropped for neural cells; if lactate falls but viability, network activity and differentiation are unchanged or discordant, the shift is HIF-dependent but its valence is unresolved"
     ]
    },
    "class": "ORD",
@@ -11429,7 +11429,7 @@
     "P_pharmacology": {
      "brain_penetration": "UNKNOWN",
      "human_exposure": "UNKNOWN",
-     "potency_with_assay_context": "PX-478: no activity or mechanism annotation in the compound database; action reported in cancer models; mustard alert; adult intravenous phase 1 only. Roxadustat: HIF-prolyl-hydroxylase inhibitor with seizures and thyromimetic action on its label (direction control only).",
+     "potency_with_assay_context": "PX-478: no activity or mechanism annotation in the compound database; action reported in cancer models; mustard alert; adult intravenous phase 1 only. Roxadustat: HIF-prolyl-hydroxylase inhibitor; label: seizures and secondary hypothyroidism; thyromimetic action from a 2025 paper (direction control…",
      "record": "",
      "state": "not in the pharmacological comparison table; card text only (potency, exposure and nervous-system data UNKNOWN unless the card says otherwise)"
     },
@@ -11497,10 +11497,10 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "3e25e85bc2f67f84",
-    "T2_pertinence": "93514b89d6389096",
+    "T1_cards": "c535250dc9bea0ac",
+    "T2_pertinence": "419afd58578b735f",
     "T3_receipts": "3a6b031a2c6556ac",
-    "T4_needs": "956ef70e855a2ea8",
+    "T4_needs": "3cb92de5173d572c",
     "T5_pharmacology": "177f2f40ad8ae91b",
     "T6_identity": "8e6731310b854960"
    },
@@ -11650,13 +11650,13 @@
     },
     "partial": {
      "caveat_limits": [
-      "proposed, not performed. The WWOX-side HIF-1alpha protein data are non-neural (mouse embryonic fibroblasts; a human fibroblast line shows the OPPOSITE sign in two of four conditions); the organoid data are transcripts of one deposit (4 v 2 libraries, EPAS1 3.80x, HK2 4.73x, SLC2A1 2.67x, HIF1A mRNA flat); HIF-1alpha and HIF-2alpha protein in WWOX-deficient neural cells have never been measured. The six IT7 readout genes (SLC2A1, HK2, LDHA, LDHB, BNIP3, PDK1) cannot be used to evaluate any lever (guard IT7_READOUT6). PX-478: no activity annotation in the compound database, a nitrogen-mustard alert, adult intravenous phase 1 only, no CNS datum"
+      "proposed, not performed. The WWOX-side HIF-1alpha protein data are non-neural (mouse embryonic fibroblasts; a human fibroblast line shows LOWER cytoplasmic HIF-1alpha in two of four conditions with the nuclear fraction unchanged - a different compartment from the MEF nuclear increase); the organoid data are transcripts of one deposit (4 v 2 libraries, EPAS1 3.80x, HK2 4.73x, SLC2A1 2.67x, HIF1A mRNA flat); HIF-1alpha and HIF-2alpha protein in WWOX-deficient neural cells have never been measured. The six IT7 readout genes (SLC2A1, HK2, LDHA, LDHB, BNIP3, PDK1) cannot be used to evaluate any lever (guard IT7_READOUT6). PX-478: no activity annotation in the compound database, a nitrogen-mustard alert, adult intravenous phase 1 only, no CNS datum"
      ],
      "contested": false,
      "counter_needs": [],
      "counter_statements": [
-      "A human fibroblast WWOX line shows LOWER cytoplasmic HIF-1alpha in two of four conditions (opposite sign to the mouse embryonic fibroblasts); HIF1A mRNA is flat in both human neural transcript systems.",
-      "The engine edge HIF1A to BNIP3 is a review-sourced SIGNOR record on a complex; the primary record (Bruick 2000) is in non-neural cell lines; the HIF-prolyl-hydroxylase inhibitor roxadustat raises HIF (the disease direction) and its label lists seizures and thyromimetic action."
+      "A human fibroblast WWOX line shows LOWER cytoplasmic HIF-1alpha in two of four conditions with the nuclear fraction unchanged and one blot repetition shown (a different compartment from the mouse nuclear increase: neither confirms nor contradicts it); HIF1A mRNA is flat in both human neural transcript systems.",
+      "The engine edge HIF1A to BNIP3 is a review-sourced SIGNOR record on a complex; the primary record (Bruick 2000) is in non-neural cell lines; the HIF-prolyl-hydroxylase inhibitor roxadustat raises HIF (the disease direction) and its label lists seizures and secondary hypothyroidism, and thyromimetic action is from a 2025 paper, not the label."
      ],
      "criteria_not_met": [
       "a signed result of the intervention in a WWOX system exists",
@@ -11693,14 +11693,14 @@
       "wwox_null_harm_mixed": 0,
       "wwox_signs": {}
      },
-     "main_limit": "abstract_only; cancer_cell_lines_and_xenograft; mechanism_probe; not_WWOX | proposed, not performed. The WWOX-side HIF-1alpha protein data are non-neural (mouse embryonic fibroblasts; a human fibroblast line shows the OPPOSITE sign in two of four conditions); the organoid data are transcripts of one deposit (4 v 2 libraries, EPAS1 3.80x, HK2 4.73x, SLC2A1 2.67x, HIF1A mRNA flat); HIF-1alpha and HIF-2alpha protein in WWOX-deficient neural cells have never been measured. The six IT7 readout genes (SLC2A1, HK2, LDHA, LDHB, BNIP3, PDK1) cannot be used to evaluate any lever (guard IT7_READOUT6). PX-478: no activity annotation in the compound database, a nitrogen-mustard alert, adult intravenous phase 1 only, no CNS datum",
+     "main_limit": "abstract_only; cancer_cell_lines_and_xenograft; mechanism_probe; not_WWOX | proposed, not performed. The WWOX-side HIF-1alpha protein data are non-neural (mouse embryonic fibroblasts; a human fibroblast line shows LOWER cytoplasmic HIF-1alpha in two of four conditions with the nuclear fraction unchanged - a different compartment from the MEF nuclear increase); the organoid data are transcripts of one deposit (4 v 2 libraries, EPAS1 3.80x, HK2 4.73x, SLC2A1 2.67x, HIF1A mRNA flat); HIF-1alpha and HIF-2alpha protein in WWOX-deficient neural cells have never been measured. The six IT7 readout genes (SLC2A1, HK2, LDHA, LDHB, BNIP3, PDK1) cannot be used to evaluate any lever (guard IT7_READOUT6). PX-478: no activity annotation in the compound database, a nitrogen-mustard alert, adult intravenous phase 1 only, no CNS datum",
      "member": true,
      "next": {
       "date": "2026-10-30",
       "feasibility": "in vitro in human neural cells (organoids or progenitors from a public deposit need an access request that exists as a draft only); PX-478 supply and purity are UNVERIFIED; belzutifan stays INCONCLUSIVE until HIF-2alpha protein is measured",
       "kind": "risolvere una premessa",
       "need": "NEED-PDH-PYRUVATE-AXIS",
-      "question": "In WWOX-deficient versus corrected human neural cells measure HIF-1alpha and HIF-2alpha protein first (premise). If raised: genetic HIF1A and EPAS1 knockdown (singly and together) and a PX-478-class lever against a prolyl-hydroxylase inhibitor without thyromimetic action as the direction control, reading lactate or extracellular acidification, glucose uptake, HIF targets beyond the six IT7 readout genes, network activity and viability; arms are conditional on the direction of the HIF-dependent shift (adaptive or harmful)",
+      "question": "In WWOX-deficient versus corrected human neural cells measure HIF-1alpha and HIF-2alpha protein first (premise), nuclear and cytoplasmic fractions separately, in normoxia and hypoxia (organoid cores are hypoxic: co-stain a hypoxia marker). If raised: genetic HIF1A and EPAS1 knockdown (singly and together) and a PX-478-class lever against a prolyl-hydroxylase inhibitor (non-thyromimetic, to be verified) as the direction control in both knockout and corrected cells. Deciding readout: lactate or extracellular acidification and glucose uptake plus PGK1, ALDOA, ENO1, PFKP and PKM reported individually (guard-scope members of the 10-gene set: a change confirms the seed and does not validate a lever; the six IT7 genes cannot decide); network activity, viability and SOX2/NEUN fractions give the valence; a mixed outcome leaves it unresolved",
       "would_change": ""
      },
      "next_priority": {
@@ -11721,7 +11721,7 @@
      "triggers": {
       "fall": "a signed null, unfavourable or mixed result beside the favourable rows lowers the group by one step; a counter-evidence group (C1/C2) is reached only when the null stands as the lead; for a thin readout, a failed replication or a drug-by-genotype test showing the effect in wild type too moves it down within the group",
       "leave": "the decisive premise is falsified (see the card's 'premise missing' / 'not known' fields), or the identity is corrected so that the evidence attaches to a different compound",
-      "rise": "would rise to F2/F1 with a first signed result of the intervention in a WWOX system against an untreated same-genotype comparator; criteria not met now: a signed result of the intervention in a WWOX system exists; an outside-WWOX harm or null signal stands without a favourable outside signal; the signed rows behind this position were read beyond abstract, query or unknown depth (found: 1 row(s)) | further questions: conditional arms: if HIF protein is raised in WWOX-deficient neural cells and lowering the axis lowers lactate AND worsens viability or differentiation, the shift is adaptive (lever dropped); if it improves them, the shift is harmful (lever kept); if protein is not raised, the axis is dropped for neural cells"
+      "rise": "would rise to F2/F1 with a first signed result of the intervention in a WWOX system against an untreated same-genotype comparator; criteria not met now: a signed result of the intervention in a WWOX system exists; an outside-WWOX harm or null signal stands without a favourable outside signal; the signed rows behind this position were read beyond abstract, query or unknown depth (found: 1 row(s)) | further questions: conditional arms: if HIF protein is raised in WWOX-deficient neural cells and lowering the axis lowers lactate AND worsens viability or differentiation, the shift is adaptive (lever dropped); if it improves them, the shift is harmful (lever kept); if protein is not raised in the relevant compartment and oxygen condition, the axis is dropped for neural cells; if lactate falls but viability, network activity and differentiation are unchanged or discordant, the shift is HIF-dependent but its valence is unresolved"
      },
      "view_note": ""
     }
@@ -11815,7 +11815,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "0c020e7a8d11c3d7",
+    "T1_cards": "da19188e6c210ef7",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "d2e53556d365e6a4",
     "T4_needs": "77086341166ba9e5",
@@ -11977,7 +11977,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "0b6ba17664b7cce1",
+    "T1_cards": "be339c04abc306f3",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "c3c30203aefa55c6",
     "T4_needs": "c156cede56e9ac9b",
@@ -12137,7 +12137,7 @@
    "excluded_from_comparisons": [],
    "exploratory_it7": "no pharmacological-comparison record for this unit; no IT7 P3/P2 information",
    "inputs": {
-    "T1_cards": "6f4651f6dfb18569",
+    "T1_cards": "b5ae5f56be99f1ab",
     "T2_pertinence": "c124efeb8d5edb82",
     "T3_receipts": "c124efeb8d5edb82",
     "T4_needs": "97e5657152aa720b",
