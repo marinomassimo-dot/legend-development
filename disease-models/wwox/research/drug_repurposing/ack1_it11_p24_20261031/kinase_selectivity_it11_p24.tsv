@@ -1,0 +1,3 @@
+compound	chembl_record	document	ACK1_TNK2_Kd_nM	SRC_Kd_nM	LCK_Kd_nM	ABL1_Kd_nM	targets_in_document	targets_with_Kd_below_ACK1	targets_Kd_le_100nM	targets_Kd_le_1000nM	note
+dasatinib	CHEMBL5416410	CHEMBL1908390 (Davis 2011, Nat Biotechnol; PMID 22037378)	5.6	0.21	0.2	0.016	379	34	53	83	includes ephrin receptors, KIT, PDGFR, CSF1R, DDR1, YES, FYN (0.79), LYN, CSK; counts by ChEMBL target id, minimum Kd per target
+bosutinib	CHEMBL288441	CHEMBL1908390	29.0	1.0	0.59	0.029	379	36	57	117	includes MAP4K family, ERBB3, BTK, HCK, LYN; same caveats
