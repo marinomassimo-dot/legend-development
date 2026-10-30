@@ -1,0 +1,16 @@
+seed_id	gene	kind	members	direction	level	direction_status	readout_level	evidence_class	species	ortholog_map	source_ref	note
+PROV-ALDOA	ALDOA	gene		uncertain	0.1365	uncertain	transcript	transcript_contrast	human		subnetwork_it7_p1_20261029/derived_gene_values.tsv	mean centred log2 over 3 human systems = 0.273; PROVISIONAL
+PROV-BNIP3	BNIP3	gene		up	0.2273	defined	transcript	transcript_contrast	human		subnetwork_it7_p1_20261029/derived_gene_values.tsv	mean centred log2 over 3 human systems = 0.455; PROVISIONAL
+PROV-HIF1A	HIF1A	gene		uncertain	0.1635	uncertain	transcript	transcript_contrast	human		subnetwork_it7_p1_20261029/derived_gene_values.tsv	mean centred log2 over 3 human systems = -0.327; PROVISIONAL
+PROV-HK1	HK1	gene		uncertain	0.5260	uncertain	transcript	transcript_contrast	human		subnetwork_it7_p1_20261029/derived_gene_values.tsv	mean centred log2 over 3 human systems = 1.052; PROVISIONAL
+PROV-HK2	HK2	gene		up	0.6957	defined	transcript	transcript_contrast	human		subnetwork_it7_p1_20261029/derived_gene_values.tsv	mean centred log2 over 2 human systems = 1.391; PROVISIONAL
+PROV-LDHA	LDHA	gene		up	0.4455	defined	transcript	transcript_contrast	human		subnetwork_it7_p1_20261029/derived_gene_values.tsv	mean centred log2 over 3 human systems = 0.891; PROVISIONAL
+PROV-LDHB	LDHB	gene		up	0.1157	defined	transcript	transcript_contrast	human		subnetwork_it7_p1_20261029/derived_gene_values.tsv	mean centred log2 over 3 human systems = 0.231; PROVISIONAL
+PROV-PDHA1	PDHA1	gene		uncertain	0.1703	uncertain	transcript	transcript_contrast	human		subnetwork_it7_p1_20261029/derived_gene_values.tsv	mean centred log2 over 3 human systems = 0.341; PROVISIONAL
+PROV-PDK1	PDK1	gene		down	0.1028	defined	transcript	transcript_contrast	human		subnetwork_it7_p1_20261029/derived_gene_values.tsv	mean centred log2 over 3 human systems = -0.206; PROVISIONAL
+PROV-PDK2	PDK2	gene		uncertain	0.2117	uncertain	transcript	transcript_contrast	human		subnetwork_it7_p1_20261029/derived_gene_values.tsv	mean centred log2 over 3 human systems = -0.423; PROVISIONAL
+PROV-PDK4	PDK4	gene		uncertain	0.1650	uncertain	transcript	transcript_contrast	human		subnetwork_it7_p1_20261029/derived_gene_values.tsv	mean centred log2 over 1 human systems = 0.330; PROVISIONAL
+PROV-PFKP	PFKP	gene		uncertain	0.2443	uncertain	transcript	transcript_contrast	human		subnetwork_it7_p1_20261029/derived_gene_values.tsv	mean centred log2 over 3 human systems = 0.489; PROVISIONAL
+PROV-SLC16A1	SLC16A1	gene		uncertain	0.2577	uncertain	transcript	transcript_contrast	human		subnetwork_it7_p1_20261029/derived_gene_values.tsv	mean centred log2 over 3 human systems = 0.515; PROVISIONAL
+PROV-SLC16A3	SLC16A3	gene		uncertain	0.3660	uncertain	transcript	transcript_contrast	human		subnetwork_it7_p1_20261029/derived_gene_values.tsv	mean centred log2 over 1 human systems = 0.732; PROVISIONAL
+PROV-SLC2A1	SLC2A1	gene		up	0.2578	defined	transcript	transcript_contrast	human		subnetwork_it7_p1_20261029/derived_gene_values.tsv	mean centred log2 over 3 human systems = 0.516; PROVISIONAL

@@ -99,3 +99,27 @@ PASS of T1, T2, T5 means: the seed vector is read, its entries move the scores, 
 detected identity or construction leak. T4 states how much is new relative to direct targeting. None of it says a proposed compound would help; there is no
 compound-response measurement in a WWOX-deficient system to test it against (IT6 P3, IT7 P0a, IT8 P4). Seed sets are re-run under exactly these criteria when the P1 seeds appear
 (the first run, on the provisional set derived from the IT7 P1 subnetwork, is labelled PROVISIONAL and is a test of the engine, not of the question).
+
+---
+
+## AMENDMENT 1 (2026-10-30, after the first engine run on the PROVISIONAL seeds, before any run on the P1 seeds; full disclosure of what had been seen)
+
+Seen before this amendment (provisional seeds only, 15 seed units from the IT7 P1 subnetwork, 6 with defined direction): the engine runs end to end (examined 12,560
+families); T1 PASS; T5 PASS; T2 criterion (a) and (c) met, criterion (b) not met (sign shuffle: median Spearman 0.92, 167 of 1000 shuffles identical to the real signs, because 5 of 6
+defined seeds share one direction, so a shuffle rarely changes anything); T3 identity restricted-universe check returned 1.0, which is near-tautological (a family whose every
+target is in the graph has the same score in any engine built on it); T4 outcome by the rule above: NONE (9 of the top 100 NET-IND "new and seed-specific"), i.e. the raw Q ranking
+is dominated by network position (HDAC inhibitors and other multi-target regulators), which a degree-matched null exposes. The amendments below were written after seeing this and are
+therefore exploratory for the provisional set; they are fixed in advance for every later seed set (the P1 seeds). Nothing in sections 1-5 is changed; the registered results are reported as registered.
+
+* **A1.1 NET-Z arm (new).** `Z = (Q_real - mean_null) / max(sd_null, floor)` per family, with the null = 500 degree-matched random seed sets (seed 20261030+11) built exactly as in T2(a),
+  separately for the two uncertain-direction arms (U+: uncertain seeds +, U-: uncertain seeds -), and floor = the 5th percentile of the positive null SDs (stops a near-zero denominator creating a large z).
+  Ranking key `Z_robust`: min(Z_U+, Z_U-) when both are positive (opposes under either sign assumption), max when both negative (mimics under either), else 0. NET-Z answers
+  "does this compound's score exceed what the same number of equally connected random genes would give", i.e. it removes the hub effect; it is still a compatibility of directions, not a benefit prediction.
+  T2(a) and T4 are evaluated for NET-Z too, with null draws INDEPENDENT of the draws used for its z (T2 nulls: seed 20261030+1, 1000 sets; the same per-family moments are applied to them).
+* **A1.2 DIRECT-ANY reference (new).** Families with ANY catalogue target row (signed or not, stated action or not) on a seed gene: the unsigned form of the simple "target -> compounds" search.
+  In T4 "new" now means: not in DIRECT (signed), not in DIRECT-ANY and not in INTERACTOR. This can only shrink the "new" count.
+* **A1.3 T3(b) added diagnostics (reported; the registered criterion stays as registered and its near-tautology is stated):** (i) Spearman between Q with the unit norm taken over all signed targets and Q with the norm taken over in-graph targets only;
+  (ii) a table of the unmapped signed target symbols by number of families (so alias errors can be spotted), and the count of M-net-usable families with no gene symbol at all (cannot enter any gene-level method).
+* **A1.4 T2(b) power note.** When fewer than 3 defined seeds disagree in sign with the rest the sign shuffle cannot be expected to move the ranking; the registered criterion is still applied and a failure is reported as a failure.
+  Reported next to it: a "flip-the-minority" mutation (the single seed of the less common sign flipped), which is deterministic and does move the ranking where that seed matters.
+* **A1.5 Probes.** Percentile uses mid-ranks for ties. Probe scores are reported for the defined-only arm and for both conditional arms (U+, U-), not for U+ alone.
