@@ -1,0 +1,13 @@
+drug	reaction_term	http	reports
+nirogacestat	(all reports)	200	838
+nirogacestat	Seizure	404	0
+nirogacestat	Convulsion	404	0
+nirogacestat	Epilepsy	404	0
+nirogacestat	Status epilepticus	404	0
+nirogacestat	Generalised tonic-clonic seizure	404	0
+roxadustat	(all reports)	404	None
+roxadustat	Seizure	404	0
+roxadustat	Convulsion	404	0
+roxadustat	Epilepsy	404	0
+roxadustat	Status epilepticus	404	0
+roxadustat	Generalised tonic-clonic seizure	404	0

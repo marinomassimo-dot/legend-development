@@ -1,0 +1,39 @@
+{
+ "event_id": "FTR-20261030-16847353-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "16847353",
+  "doi": "10.1101/gad.1450406"
+ },
+ "event_at": "2026-10-30T13:00:00Z",
+ "analysis_at": "2026-10-30T13:00:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-b4, IT9 P4c-e. Palomero et al. 2006 (c-Myc is a direct target of Notch1 in T-ALL). Question: what does the SIGNOR record NOTCH1_NOTCH3_RBPJ -> MYC (sign +) describe, does it test NOTCH3, and does a gamma-secretase inhibitor change the MYC transcript? The PMC article page (HTML) rendered to plain text (a derived surface); Abstract, Introduction, all Results and the Discussion were read; Methods and references were not read; supplementary tables were not held.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMC1536060_PMID16847353_pmc_html_fulltext_2026-10-30.txt",
+ "source_fingerprint": "8e9aa5fad9c795d5a91dc70279d5725ac55e05468a4067eabd5858748f608b7c",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "not_read",
+  "references": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/qualification_it9_p4c_e_20261030/records/E-03_nirogacestat.md",
+  "disease-models/wwox/research/drug_repurposing/qualification_it9_p4c_e_20261030/edge_provenance_E.tsv"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "Figures were not opened as images; Methods and the reference list were not read or only in part, as the coverage map states."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}

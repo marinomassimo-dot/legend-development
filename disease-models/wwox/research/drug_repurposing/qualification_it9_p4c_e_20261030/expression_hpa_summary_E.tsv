@@ -1,0 +1,36 @@
+gene	rna_tissue_specificity	rna_tissue_distribution	sc_type_specificity	nCPM_Astrocytes	nCPM_Brain_excitatory_neurons	nCPM_Brain_inhibitory_neurons	nCPM_Oligodendrocyte_progenitor_cells	nCPM_Oligodendrocytes	nCPM_Other_brain_neurons	nCPM_Microglial_cells	single_nuclei_brain_specificity	single_nuclei_brain_distribution	brain_regional_specificity	protein_cell_type_distribution
+APH1A	Low tissue specificity	Detected in all	Cell type enhanced	NULL	NULL	NULL	NULL	NULL	NULL	NULL	Low cell type specificity	Detected in all	Low region specificity	Detected in many
+ARNT	Low tissue specificity	Detected in all	Low cell type specificity	NULL	NULL	NULL	NULL	NULL	NULL	NULL	Low cell type specificity	Detected in all	Low region specificity	Detected in many
+BNIP3	Tissue enhanced	Detected in all	Cell type enhanced	NULL	NULL	NULL	NULL	NULL	NULL	NULL	Low cell type specificity	Detected in all	Low region specificity	Detected in many
+CSNK1A1	Low tissue specificity	Detected in all	Low cell type specificity	NULL	NULL	NULL	NULL	NULL	NULL	NULL	Low cell type specificity	Detected in all	Low region specificity	Detected in all
+CSNK1D	Low tissue specificity	Detected in all	Cell type enhanced	NULL	NULL	NULL	NULL	NULL	NULL	NULL	Low cell type specificity	Detected in all	Low region specificity	Detected in many
+CSNK1E	Low tissue specificity	Detected in all	Cell type enhanced	NULL	NULL	NULL	NULL	NULL	NULL	NULL	Low cell type specificity	Detected in all	Low region specificity	Detected in many
+DYRK1A	Low tissue specificity	Detected in all	Cell type enhanced	NULL	NULL	NULL	NULL	NULL	NULL	NULL	Low cell type specificity	Detected in all	Low region specificity	Detected in many
+EGLN1	Group enriched	Detected in all	Cell type enhanced	NULL	NULL	NULL	NULL	NULL	NULL	NULL	Low cell type specificity	Detected in all	Low region specificity	Detected in all
+EGLN2	Tissue enhanced	Detected in all	Cell type enhanced	NULL	NULL	NULL	NULL	NULL	NULL	NULL	Low cell type specificity	Detected in some	Low region specificity	Detected in single
+EGLN3	Tissue enhanced	Detected in many	Cell type enhanced	NULL	NULL	NULL	NULL	NULL	NULL	NULL	Cell type enhanced	Detected in all	Low region specificity	Not detected
+EPAS1	Tissue enhanced	Detected in all	Cell type enhanced	NULL	NULL	NULL	NULL	NULL	NULL	NULL	Group enriched	Detected in all	Low region specificity	Not detected
+FOXO1	Tissue enhanced	Detected in all	Cell type enhanced	NULL	NULL	NULL	NULL	NULL	NULL	NULL	Cell type enhanced	Detected in many	Low region specificity	Detected in some
+FOXO3	Low tissue specificity	Detected in all	Cell type enhanced	NULL	NULL	NULL	NULL	NULL	NULL	NULL	Low cell type specificity	Detected in all	Low region specificity	Detected in some
+FOXO4	Tissue enhanced	Detected in all	Group enriched	NULL	NULL	NULL	NULL	NULL	NULL	NULL	Low cell type specificity	Detected in many	Low region specificity	Detected in some
+FOXO6	Not detected	Not detected	Cell type enhanced	2.0	2.3	2.6	3.0	3.2	5.8	NULL	Low cell type specificity	Detected in many	Low region specificity	Not detected
+HIF1A	Tissue enhanced	Detected in all	Cell type enhanced	NULL	NULL	NULL	NULL	NULL	NULL	NULL	Low cell type specificity	Detected in all	Low region specificity	Not detected
+HK2	Tissue enhanced	Detected in all	Cell type enhanced	NULL	NULL	NULL	NULL	NULL	NULL	NULL	Group enriched	Detected in many	Low region specificity	Detected in many
+LDHA	Low tissue specificity	Detected in all	Cell type enhanced	NULL	NULL	NULL	NULL	NULL	90.7	NULL	Low cell type specificity	Detected in all	Low region specificity	Detected in all
+LDHB	Tissue enhanced	Detected in all	Cell type enriched	NULL	NULL	NULL	NULL	NULL	NULL	NULL	Low cell type specificity	Detected in all	Low region specificity	Detected in all
+METTL14	Low tissue specificity	Detected in all	Cell type enhanced	NULL	NULL	NULL	NULL	NULL	NULL	NULL	Low cell type specificity	Detected in all	Low region specificity	Detected in many
+METTL3	Low tissue specificity	Detected in all	Cell type enhanced	NULL	NULL	NULL	NULL	NULL	NULL	NULL	Low cell type specificity	Detected in all	Low region specificity	Detected in many
+MYC	Tissue enhanced	Detected in many	Cell type enhanced	NULL	NULL	NULL	NULL	NULL	NULL	NULL	Cell type enhanced	Detected in many	Low region specificity	Detected in single
+NCSTN	Low tissue specificity	Detected in all	Cell type enhanced	NULL	NULL	NULL	NULL	NULL	NULL	NULL	Low cell type specificity	Detected in all	Low region specificity	Detected in all
+NOTCH1	Low tissue specificity	Detected in many	Cell type enhanced	77.3	NULL	NULL	NULL	NULL	NULL	NULL	Cell type enhanced	Detected in many	Low region specificity	Detected in many
+NOTCH2	Low tissue specificity	Detected in all	Cell type enhanced	NULL	NULL	NULL	NULL	NULL	NULL	NULL	Cell type enhanced	Detected in all	Low region specificity	Detected in many
+NOTCH3	Tissue enhanced	Detected in many	Cell type enhanced	NULL	NULL	NULL	NULL	NULL	NULL	NULL	Group enriched	Detected in many	Low region specificity	Detected in some
+PIN1	Tissue enhanced	Detected in all	Cell type enhanced	NULL	NULL	NULL	NULL	NULL	NULL	NULL	Low cell type specificity	Detected in all	Low region specificity	Detected in all
+PSEN1	Low tissue specificity	Detected in all	Cell type enhanced	NULL	NULL	NULL	NULL	545.2	NULL	NULL	Cell type enhanced	Detected in all	Low region specificity	Detected in many
+PSEN2	Low tissue specificity	Detected in all	Cell type enhanced	NULL	7.7	7.8	NULL	NULL	12.2	NULL	Low cell type specificity	Detected in all	Low region specificity	Detected in some
+PSENEN	Tissue enhanced	Detected in all	Cell type enhanced	NULL	NULL	NULL	NULL	NULL	NULL	NULL	Cell type enhanced	Detected in many	Low region specificity	Not detected
+RBPJ	Low tissue specificity	Detected in all	Cell type enhanced	NULL	NULL	NULL	NULL	NULL	NULL	NULL	Low cell type specificity	Detected in all	Low region specificity	Detected in many
+SLC2A1	Tissue enhanced	Detected in many	Cell type enhanced	NULL	NULL	NULL	NULL	NULL	NULL	NULL	Cell type enriched	Detected in all	Low region specificity	Detected in all
+TGFBR1	Low tissue specificity	Detected in all	Cell type enhanced	NULL	NULL	NULL	NULL	NULL	NULL	NULL	Cell type enhanced	Detected in all	Low region specificity	Detected in many
+USP13	Group enriched	Detected in all	Cell type enhanced	NULL	NULL	NULL	59.4	57.2	NULL	NULL	Low cell type specificity	Detected in all	Low region specificity	Detected in many
+WWOX	Low tissue specificity	Detected in all	Cell type enhanced	NULL	NULL	NULL	NULL	NULL	NULL	NULL	Low cell type specificity	Detected in all	Low region specificity	Detected in many

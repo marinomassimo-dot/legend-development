@@ -1,0 +1,186 @@
+item	sha256	bytes
+"https://api.fda.gov/drug/label.json?limit=10&search=openfda.generic_name:""nirogacestat"""	1a108cf6e3a70e859f525d7b34d953b6ead959de311b9915cb90ad25d1841956	114607
+"https://api.fda.gov/drug/label.json?limit=10&search=openfda.generic_name:""roxadustat"""	1818f22c0186ebd0975bd7f677a2a9f882ec697a873ddc09c4f37dbe6e436587	71
+https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=WWOX OR WOREE OR SCAR12&query.intr=D4476 OR D-4476	5a64305c29f5c5a020c0192796f0246a18715a55abb730d29afeedd1cca9ec88	39
+https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=WWOX OR WOREE OR SCAR12&query.intr=PX-478 OR PX478	5a64305c29f5c5a020c0192796f0246a18715a55abb730d29afeedd1cca9ec88	39
+https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=WWOX OR WOREE OR SCAR12&query.intr=STM2457	5a64305c29f5c5a020c0192796f0246a18715a55abb730d29afeedd1cca9ec88	39
+https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=WWOX OR WOREE OR SCAR12&query.intr=nirogacestat OR PF-03084014	5a64305c29f5c5a020c0192796f0246a18715a55abb730d29afeedd1cca9ec88	39
+https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=WWOX OR WOREE OR SCAR12&query.intr=roxadustat OR FG-4592 OR ASP1517	5a64305c29f5c5a020c0192796f0246a18715a55abb730d29afeedd1cca9ec88	39
+https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=WWOX OR WOREE OR SCAR12&query.intr=sulfopin	5a64305c29f5c5a020c0192796f0246a18715a55abb730d29afeedd1cca9ec88	39
+https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=epilepsy OR seizure OR epileptic encephalopathy OR infantile spasms&query.int	5a64305c29f5c5a020c0192796f0246a18715a55abb730d29afeedd1cca9ec88	39
+https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=epilepsy OR seizure OR epileptic encephalopathy OR infantile spasms&query.int	5a64305c29f5c5a020c0192796f0246a18715a55abb730d29afeedd1cca9ec88	39
+https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=epilepsy OR seizure OR epileptic encephalopathy OR infantile spasms&query.int	5a64305c29f5c5a020c0192796f0246a18715a55abb730d29afeedd1cca9ec88	39
+https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=epilepsy OR seizure OR epileptic encephalopathy OR infantile spasms&query.int	5a64305c29f5c5a020c0192796f0246a18715a55abb730d29afeedd1cca9ec88	39
+https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=epilepsy OR seizure OR epileptic encephalopathy OR infantile spasms&query.int	5a64305c29f5c5a020c0192796f0246a18715a55abb730d29afeedd1cca9ec88	39
+https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=epilepsy OR seizure OR epileptic encephalopathy OR infantile spasms&query.int	5a64305c29f5c5a020c0192796f0246a18715a55abb730d29afeedd1cca9ec88	39
+https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=glioma OR glioblastoma OR central nervous system lymphoma OR brain metastases	5a64305c29f5c5a020c0192796f0246a18715a55abb730d29afeedd1cca9ec88	39
+https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=glioma OR glioblastoma OR central nervous system lymphoma OR brain metastases	5a64305c29f5c5a020c0192796f0246a18715a55abb730d29afeedd1cca9ec88	39
+https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=glioma OR glioblastoma OR central nervous system lymphoma OR brain metastases	5a64305c29f5c5a020c0192796f0246a18715a55abb730d29afeedd1cca9ec88	39
+https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=glioma OR glioblastoma OR central nervous system lymphoma OR brain metastases	5a64305c29f5c5a020c0192796f0246a18715a55abb730d29afeedd1cca9ec88	39
+https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=glioma OR glioblastoma OR central nervous system lymphoma OR brain metastases	5a64305c29f5c5a020c0192796f0246a18715a55abb730d29afeedd1cca9ec88	39
+https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=glioma OR glioblastoma OR central nervous system lymphoma OR brain metastases	5a64305c29f5c5a020c0192796f0246a18715a55abb730d29afeedd1cca9ec88	39
+https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=hypomyelination OR leukodystrophy&query.intr=D4476 OR D-4476	5a64305c29f5c5a020c0192796f0246a18715a55abb730d29afeedd1cca9ec88	39
+https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=hypomyelination OR leukodystrophy&query.intr=PX-478 OR PX478	5a64305c29f5c5a020c0192796f0246a18715a55abb730d29afeedd1cca9ec88	39
+https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=hypomyelination OR leukodystrophy&query.intr=STM2457	5a64305c29f5c5a020c0192796f0246a18715a55abb730d29afeedd1cca9ec88	39
+https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=hypomyelination OR leukodystrophy&query.intr=nirogacestat OR PF-03084014	5a64305c29f5c5a020c0192796f0246a18715a55abb730d29afeedd1cca9ec88	39
+https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=hypomyelination OR leukodystrophy&query.intr=roxadustat OR FG-4592 OR ASP1517	5a64305c29f5c5a020c0192796f0246a18715a55abb730d29afeedd1cca9ec88	39
+https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=hypomyelination OR leukodystrophy&query.intr=sulfopin	5a64305c29f5c5a020c0192796f0246a18715a55abb730d29afeedd1cca9ec88	39
+https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=neurodevelopmental disorder OR intellectual disability OR autism OR microceph	5a64305c29f5c5a020c0192796f0246a18715a55abb730d29afeedd1cca9ec88	39
+https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=neurodevelopmental disorder OR intellectual disability OR autism OR microceph	5a64305c29f5c5a020c0192796f0246a18715a55abb730d29afeedd1cca9ec88	39
+https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=neurodevelopmental disorder OR intellectual disability OR autism OR microceph	5a64305c29f5c5a020c0192796f0246a18715a55abb730d29afeedd1cca9ec88	39
+https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=neurodevelopmental disorder OR intellectual disability OR autism OR microceph	5a64305c29f5c5a020c0192796f0246a18715a55abb730d29afeedd1cca9ec88	39
+https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=neurodevelopmental disorder OR intellectual disability OR autism OR microceph	5a64305c29f5c5a020c0192796f0246a18715a55abb730d29afeedd1cca9ec88	39
+https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=neurodevelopmental disorder OR intellectual disability OR autism OR microceph	5a64305c29f5c5a020c0192796f0246a18715a55abb730d29afeedd1cca9ec88	39
+https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.intr=D4476 OR D-4476	5a64305c29f5c5a020c0192796f0246a18715a55abb730d29afeedd1cca9ec88	39
+https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.intr=D4476 OR D-4476&query.term=child OR children OR pediatric OR paediatric OR in	5a64305c29f5c5a020c0192796f0246a18715a55abb730d29afeedd1cca9ec88	39
+https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.intr=PX-478 OR PX478	45f56ee1a130612d9d3ae831566fdf6f8e9ce51ed8aa6943c18fd63f5e49a828	8287
+https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.intr=PX-478 OR PX478&query.term=child OR children OR pediatric OR paediatric OR in	5a64305c29f5c5a020c0192796f0246a18715a55abb730d29afeedd1cca9ec88	39
+https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.intr=STM2457	5a64305c29f5c5a020c0192796f0246a18715a55abb730d29afeedd1cca9ec88	39
+https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.intr=STM2457&query.term=child OR children OR pediatric OR paediatric OR infant	5a64305c29f5c5a020c0192796f0246a18715a55abb730d29afeedd1cca9ec88	39
+https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.intr=nirogacestat OR PF-03084014	18188ded0288333d2f02dfb03f2120ccd461d729e8b9c06cbea1423d0f264e1c	2351155
+https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.intr=nirogacestat OR PF-03084014&query.term=child OR children OR pediatric OR paed	5b47be60f3871868bdea059e812ea84a365b3628288540cc426365ffb3359f2c	688593
+https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.intr=roxadustat OR FG-4592 OR ASP1517	1d6fe8c2d46764fd6b947468db288eceea77a4033d51438cb3d4089b6c674394	1891974
+https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.intr=roxadustat OR FG-4592 OR ASP1517&query.term=child OR children OR pediatric OR	7f4b98b35821209a4dc51a855f77d08050baf7af972dff4cd005baf98b5acec7	74523
+https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.intr=sulfopin	5a64305c29f5c5a020c0192796f0246a18715a55abb730d29afeedd1cca9ec88	39
+https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.intr=sulfopin&query.term=child OR children OR pediatric OR paediatric OR infant	5a64305c29f5c5a020c0192796f0246a18715a55abb730d29afeedd1cca9ec88	39
+https://omnipathdb.org/interactions?datasets=omnipath,pathwayextra,kinaseextra,tf_target,collectri,tf_mirna,ligrecextra&fields=sources,references,curation_effort,type&for	c970445fd58219160eace34cc38655fcd2d9915ea7e4bf096badc4aa53daf5ca	38330
+https://omnipathdb.org/interactions?datasets=omnipath,pathwayextra,kinaseextra,tf_target,collectri,tf_mirna,ligrecextra&fields=sources,references,curation_effort,type&for	12217bd0546dd982e983daff4e730bdb9aedfd16f5b9a1b73818b5f8ea359128	84300
+https://omnipathdb.org/interactions?datasets=omnipath,pathwayextra,kinaseextra,tf_target,collectri,tf_mirna,ligrecextra&fields=sources,references,curation_effort,type&for	ec1ab0ea06976d75edea15bbbd6974be2d5e5a7155d7a8c4495a8d9ef1711708	33985
+https://omnipathdb.org/interactions?datasets=omnipath,pathwayextra,kinaseextra,tf_target,collectri,tf_mirna,ligrecextra&fields=sources,references,curation_effort,type&for	f73c19b70dcfb5ca2b077b7b23332f58d8acc018d5af46138e74abbf3a1894dc	59881
+https://omnipathdb.org/interactions?datasets=omnipath,pathwayextra,kinaseextra,tf_target,collectri,tf_mirna,ligrecextra&fields=sources,references,curation_effort,type&for	50fc33b676d5be45c57563f20fed805e18e6522f98247ce83a32b6e83c0c5b64	118142
+https://omnipathdb.org/interactions?datasets=omnipath,pathwayextra,kinaseextra,tf_target,collectri,tf_mirna,ligrecextra&fields=sources,references,curation_effort,type&for	79793e7f82847ac7d89772a9d15fe38e9e184e841f3cbb1b8b54b403dfbf9b5b	164287
+https://omnipathdb.org/interactions?datasets=omnipath,pathwayextra,kinaseextra,tf_target,collectri,tf_mirna,ligrecextra&fields=sources,references,curation_effort,type&for	aa6c9e1f1ff07ec8bc617cab149a73a8ccb16ee89eeec83092a473f4d0afaa7b	176074
+https://omnipathdb.org/interactions?datasets=omnipath,pathwayextra,kinaseextra,tf_target,collectri,tf_mirna,ligrecextra&fields=sources,references,curation_effort,type&for	f3426f36a09db2ffadd84844137cc8f143eb6faae4a164d95d270ded92985e0c	294356
+https://omnipathdb.org/interactions?datasets=omnipath,pathwayextra,kinaseextra,tf_target,collectri,tf_mirna,ligrecextra&fields=sources,references,curation_effort,type&for	2857624c879546d58af4f6226194529c957bda0a746fd1a07c47ed4cd2f329b2	751930
+https://omnipathdb.org/interactions?datasets=omnipath,pathwayextra,kinaseextra,tf_target,collectri,tf_mirna,ligrecextra&fields=sources,references,curation_effort,type&for	870150acdbaa5467e2fabd6819f42e13c1d680a3c0c12a0f50206ee19ae93f7e	746769
+https://omnipathdb.org/interactions?datasets=omnipath,pathwayextra,kinaseextra,tf_target,collectri,tf_mirna,ligrecextra&fields=sources,references,curation_effort,type&for	0b84aa091eaad10ef9654f0c67a70724a9978c335b1b6feb7e685c630726af57	749971
+https://omnipathdb.org/interactions?datasets=omnipath,pathwayextra,kinaseextra,tf_target,collectri,tf_mirna,ligrecextra&fields=sources,references,curation_effort,type&for	cc1acb82fd1108b514a436700293fa66ee8da0179796f49cdba7bf557ab029ec	757648
+https://omnipathdb.org/interactions?datasets=omnipath,pathwayextra,kinaseextra,tf_target,collectri,tf_mirna,ligrecextra&fields=sources,references,curation_effort,type&for	c8930fbfa0ff0249338675323cba425fecc3da39ac4eb0bbd093c7af74ff84a6	759952
+https://omnipathdb.org/interactions?datasets=omnipath,pathwayextra,kinaseextra,tf_target,collectri,tf_mirna,ligrecextra&fields=sources,references,curation_effort,type&for	d4c8ba128374497933d9813260d4f38981013c87aeca9c4576f6386c24214cd7	294470
+https://omnipathdb.org/interactions?datasets=omnipath,pathwayextra,kinaseextra,tf_target,collectri,tf_mirna,ligrecextra&fields=sources,references,curation_effort,type&for	114124a2739a6ed2f09ff6463a8914ea7de2780fa9954665fee23479495b0fe1	4572
+https://omnipathdb.org/interactions?datasets=omnipath,pathwayextra,kinaseextra,tf_target,collectri,tf_mirna,ligrecextra&fields=sources,references,curation_effort,type&for	51722d17ba32725d1c427a364621c6f12ab87577dfe855f1622d64ddccbd10c8	365759
+https://omnipathdb.org/interactions?datasets=omnipath,pathwayextra,kinaseextra,tf_target,collectri,tf_mirna,ligrecextra&fields=sources,references,curation_effort,type&for	26a610bc9e66f43018958a66403442e0ecbacf734a23028243064658c4be293d	299684
+https://omnipathdb.org/interactions?datasets=omnipath,pathwayextra,kinaseextra,tf_target,collectri,tf_mirna,ligrecextra&fields=sources,references,curation_effort,type&for	0be74f8bd87a88062748c03ec143b10dd1de543a8715e1cfe6c6477ada40852e	311897
+https://omnipathdb.org/interactions?datasets=omnipath,pathwayextra,kinaseextra,tf_target,collectri,tf_mirna,ligrecextra&fields=sources,references,curation_effort,type&for	a100dbe1eb4450c226ccf5221bbee94acb4e9244c6f114d39e3b976b8e8a1940	43925
+https://omnipathdb.org/interactions?datasets=omnipath,pathwayextra,kinaseextra,tf_target,collectri,tf_mirna,ligrecextra&fields=sources,references,curation_effort,type&for	e3a64d9dd9f6f5115ea58498767e3c7450d743b079de7f41cab8484f64adbd86	293547
+https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/inchikey/DPDZHVCKYBCJHW-UHFFFAOYSA-N/property/InChIKey,IUPACName,MolecularFormula/JSON	5f53a27146248a69f6277b0e7a7717ca3609a8e129e3f8382d43b22e58f03a2b	235
+https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/inchikey/DPDZHVCKYBCJHW-UHFFFAOYSA-N/synonyms/JSON	fe345d4ae0f0cc05ae964e6beef98f6daabf5980593b5aae7753b269f21ff9c5	2420
+https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/inchikey/DTBGJTHCIGPRDA-UHFFFAOYSA-N/property/InChIKey,IUPACName,MolecularFormula/JSON	f83827454f8bdbafe660521c98d10a268002142e7820758900d7df182dcc901d	263
+https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/inchikey/DTBGJTHCIGPRDA-UHFFFAOYSA-N/synonyms/JSON	d3b724ba9b15fa83ddab190c92b0561affcd4887e3c05f63f555cf694e6c8590	95
+https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/inchikey/GSKQMLGAUOTSKT-LBPRGKRZSA-N/property/InChIKey,IUPACName,MolecularFormula/JSON	f38c8e5da12fa697bcfc7b070ab466df3e375fbc73239c14b9c67d034a93c364	420
+https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/inchikey/GSKQMLGAUOTSKT-LBPRGKRZSA-N/synonyms/JSON	dd6af741d04093495d96d620e0b05c98c5aa35ee387e85a40550810504a1768d	763
+https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/inchikey/NMHVAHHYKGXBMY-UHFFFAOYSA-N/property/InChIKey,IUPACName,MolecularFormula/JSON	1b0d8ea26924d080209271379482af1dda6bf35e450ab18234f41192be7a2fb6	224
+https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/inchikey/NMHVAHHYKGXBMY-UHFFFAOYSA-N/synonyms/JSON	58886a296ee0f1eaddc84e9dc45cb70a975d642693564b485c1f0f74d18d4a40	1002
+https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/inchikey/VFCRKLWBYMDAED-REWPJTCUSA-N/property/InChIKey,IUPACName,MolecularFormula/JSON	3fbd2200cee64cad1606507e0e7293d31aee08e4abb5b9f5ac0b963ec35a0654	303
+https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/inchikey/VFCRKLWBYMDAED-REWPJTCUSA-N/synonyms/JSON	d1c2b1b194c97004017779fa9675ceeb1076a91217c183c7b8f867738e5a3b16	3341
+https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/inchikey/YOZBGTLTNGAVFU-UHFFFAOYSA-N/property/InChIKey,IUPACName,MolecularFormula/JSON	feb8fee07a43421cf376c0d214f69fe733541f09451d7f08b47c70e4c3de4c0a	228
+https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/inchikey/YOZBGTLTNGAVFU-UHFFFAOYSA-N/synonyms/JSON	44c68d4e13313ebeb89432d645874a6bd53345944d79b12338f53806b868a07a	2289
+https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/D-4476/property/InChIKey,IUPACName,MolecularFormula,CanonicalSMILES/JSON	49f954ec087a0d334d4d6c89a7a0789486b537e9d010964111d5024d5bab5840	325
+https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/D4476/property/InChIKey,IUPACName,MolecularFormula,CanonicalSMILES/JSON	49f954ec087a0d334d4d6c89a7a0789486b537e9d010964111d5024d5bab5840	325
+https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/FG-4592/property/InChIKey,IUPACName,MolecularFormula,CanonicalSMILES/JSON	5aad695c4459bd990affaa54e322263d423a55714fcba56c2ef43f20e71604b9	306
+https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/PF-03084014/property/InChIKey,IUPACName,MolecularFormula,CanonicalSMILES/JSON	023ec130ddb450de11e1beca56bdb70a8ede604048b797c9c377f5895d86be12	396
+https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/PX-478/property/InChIKey,IUPACName,MolecularFormula,CanonicalSMILES/JSON	7bd539d9524a8587bb0101e8758c6665e8439b50012b99273477a30b6a548305	322
+https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/PX478/property/InChIKey,IUPACName,MolecularFormula,CanonicalSMILES/JSON	7bd539d9524a8587bb0101e8758c6665e8439b50012b99273477a30b6a548305	322
+https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/STM2457/property/InChIKey,IUPACName,MolecularFormula,CanonicalSMILES/JSON	30eb913c23389a33c0f971f46a5dfad03e12298eb3e4c944d44c31c5d5bc4546	357
+https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/nirogacestat/property/InChIKey,IUPACName,MolecularFormula,CanonicalSMILES/JSON	023ec130ddb450de11e1beca56bdb70a8ede604048b797c9c377f5895d86be12	396
+https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/roxadustat/property/InChIKey,IUPACName,MolecularFormula,CanonicalSMILES/JSON	5aad695c4459bd990affaa54e322263d423a55714fcba56c2ef43f20e71604b9	306
+https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/sulfopin/property/InChIKey,IUPACName,MolecularFormula,CanonicalSMILES/JSON	d2fe0b124147708e1e0bd241fe8e04a1788d8c76ee771bf24d4173ffc26f7400	285
+https://www.ebi.ac.uk/chembl/api/data/activity.json?molecule_chembl_id=CHEMBL1770916&standard_type__in=IC50,Ki,Kd,EC50,DC50,Dmax,Potency,Inhibition&limit=200&offset=0	8d86fcc08cc898b3beea2cc762faec322ccf4e78da5c46932a985f7ceb20cd5d	25269
+https://www.ebi.ac.uk/chembl/api/data/activity.json?molecule_chembl_id=CHEMBL2338329&standard_type__in=IC50,Ki,Kd,EC50,DC50,Dmax,Potency,Inhibition&limit=200&offset=0	6b589180907a4aee4a99e7c2ac2d76e84605935c3ed9d9d2b8b2aea577106d5a	114787
+https://www.ebi.ac.uk/chembl/api/data/activity.json?molecule_chembl_id=CHEMBL410456&standard_type__in=IC50,Ki,Kd,EC50,DC50,Dmax,Potency,Inhibition&limit=200&offset=0	3ff0a7f74424ffa59a02e2874e6ab2086c0b6e3e6a7e121b7bf71a3005b2c6bf	70191
+https://www.ebi.ac.uk/chembl/api/data/activity.json?molecule_chembl_id=CHEMBL4117516&standard_type__in=IC50,Ki,Kd,EC50,DC50,Dmax,Potency,Inhibition&limit=200&offset=0	7e56138ce20a4ff9ffafc60288eccf34515a7a902a0240f0dc785f9d526b9898	117
+https://www.ebi.ac.uk/chembl/api/data/activity.json?molecule_chembl_id=CHEMBL5397880&standard_type__in=IC50,Ki,Kd,EC50,DC50,Dmax,Potency,Inhibition&limit=200&offset=0	ed9ad287723ab948194eff36c636e32a7cb712e3fbf13bad1e0537f69e125d00	21738
+https://www.ebi.ac.uk/chembl/api/data/activity.json?molecule_chembl_id=CHEMBL5405231&standard_type__in=IC50,Ki,Kd,EC50,DC50,Dmax,Potency,Inhibition&limit=200&offset=0	be6933543fe39f93610f645cb328351f2ed25fb3fef32de6a16dc3667278f019	2382
+https://www.ebi.ac.uk/chembl/api/data/mechanism.json?molecule_chembl_id=CHEMBL1770916&limit=200&offset=0	60e2a9d5f0d00b722402b747d9fa6c46870c69df26de6117b9122a017b3025d3	698
+https://www.ebi.ac.uk/chembl/api/data/mechanism.json?molecule_chembl_id=CHEMBL2338329&limit=200&offset=0	a6b018a8bc2bdae1ad3f909f1c43633fc384e3ab2b3e982e89944da8f5826334	727
+https://www.ebi.ac.uk/chembl/api/data/mechanism.json?molecule_chembl_id=CHEMBL410456&limit=200&offset=0	8a042f8c550caf34482c62a44529a3de1875d2418257a7000bc09c18392a7d16	117
+https://www.ebi.ac.uk/chembl/api/data/mechanism.json?molecule_chembl_id=CHEMBL4117516&limit=200&offset=0	8a042f8c550caf34482c62a44529a3de1875d2418257a7000bc09c18392a7d16	117
+https://www.ebi.ac.uk/chembl/api/data/mechanism.json?molecule_chembl_id=CHEMBL5397880&limit=200&offset=0	8a042f8c550caf34482c62a44529a3de1875d2418257a7000bc09c18392a7d16	117
+https://www.ebi.ac.uk/chembl/api/data/mechanism.json?molecule_chembl_id=CHEMBL5405231&limit=200&offset=0	8a042f8c550caf34482c62a44529a3de1875d2418257a7000bc09c18392a7d16	117
+https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_hierarchy__parent_chembl_id=CHEMBL1770916&limit=50	fb5712e24bd593b0a5a5923cff7f5c7bf1c808707b511fb191b78037c2da5047	11358
+https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_hierarchy__parent_chembl_id=CHEMBL2338329&limit=50	f603949efc97a6cda7639d4c4ef341239ee36cb8a3436ec88b2e28cb0c8b5e1a	5068
+https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_hierarchy__parent_chembl_id=CHEMBL410456&limit=50	f8ad688a886652a40a40d578bcefd1cadff01dd33289c8ab8b5097358728cd10	4369
+https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_hierarchy__parent_chembl_id=CHEMBL4117516&limit=50	4bb3cbdad440917ceb04258f285d9d3ef254e851a95f95ba8d997cc3daa58794	7105
+https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_hierarchy__parent_chembl_id=CHEMBL5397880&limit=50	01849b8795a46c68aaebb28e1ad6f422d9094a58c2b6d2650c267e2ad9760ae9	3109
+https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_hierarchy__parent_chembl_id=CHEMBL5405231&limit=50	2a16a8ced08607230cbaaa908f40cbca1aa741238d80ece6f939f4384046f308	4710
+https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL1770916.json	9692f9ffbb1c4243ca76cd6a13ff9719d313c0208792790e5da1076e7c209fc4	5509
+https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL2338329.json	9912f38ab0c39fa412552d125020f6b03629bd594b47be0bbd07a81caa4ce667	4960
+https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL410456.json	1b4af9ed1c85881818ece75ec938f421bc1b9eabc27d7f53e9590aa65856a228	4261
+https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL4117516.json	887505734ab67506291fb4de9049e426c16aa1fbb469d505d3d09a2e7161f3a1	3355
+https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL5397880.json	c79fe9a350b2944eccdceb813532ca23fcd036874d2aff6c4d094a22be5dcd88	3001
+https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL5405231.json	de615ac395bc456efab510efbd8332ce3975eb6879acb79da960f430b07633da	4602
+https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL1075255,CHEMBL1865,CHEMBL2073,CHEMBL2111458,CHEMBL260,CHEMBL2793,CHEMBL2828,CHEMBL3038493,CHE	06ee2a8d8ce5b82f7e8c5e0661e15d92f7d67e1d062203b43d4e09e8c2ac35f4	562137
+https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL1860,CHEMBL1947,CHEMBL2163175,CHEMBL2331065,CHEMBL3879801,CHEMBL4303835,CHEMBL4523344,CHEMBL4	565734edeb57aac7c500bf8c669fa184c43e48d4131566eb5d0955442d73d2d3	127283
+https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL1865,CHEMBL2094135,CHEMBL3638343,CHEMBL4303835,CHEMBL4523582,CHEMBL612545&limit=100	a89fbcc94297d920be80f6ff6d16fd878b999d877c4360c2c6e3191aa1cb24b3	396308
+https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL2288,CHEMBL387,CHEMBL392,CHEMBL394,CHEMBL400,CHEMBL614335,CHEMBL614882&limit=100	574848f92df84a01f8535be5382dd3355af0b758d0b68b5cad61d95bca63b963	27716
+https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL4739695&limit=100	d6f365687c56bcaf81b807d095a36be8d0d7a73c97eb6ca565832ee6e89f2f76	15583
+https://www.proteinatlas.org/ENSG00000058056.json	906bdbeaf3bf7a0d846377fc8d45d29ceb9fbd07e29210a6c09f706a754cff6c	9771
+https://www.proteinatlas.org/ENSG00000074181.json	2af058b5b8d6318e37b0be7b75efd728e6a6af6ad277eaeb7d5718a3fc6bcde6	10094
+https://www.proteinatlas.org/ENSG00000080815.json	b68416af0df2022fee08c04daf865c2ef29372a5316764f37aa7e189d56feb64	9907
+https://www.proteinatlas.org/ENSG00000100644.json	d5730d31e73c1826c251123ca4805807444c24a82cb3ee2c1134c76d0c2bf72f	9667
+https://www.proteinatlas.org/ENSG00000106799.json	3fe5413131d99ed108c14b132b80c65eaeb5e9aac622d9ad56452485ccef8300	9994
+https://www.proteinatlas.org/ENSG00000111716.json	57fc7ef21a5cf35d9ca2acc518500975c75c435908b570fa325ceb15842acf51	9561
+https://www.proteinatlas.org/ENSG00000113712.json	2b16b92e0c8f91f14b86f1e6dae0f3c59f65d7b142faef104d783bb31718ce04	9472
+https://www.proteinatlas.org/ENSG00000116016.json	095a86dd763e2438f0a0a784f7e91d710c30ebcaf0634974f37b53e29e060d19	10403
+https://www.proteinatlas.org/ENSG00000117362.json	f8ed53bbaf724b610ac90a5b97f23150a4383dbb620d9a639f3796a1aa2dcee1	9358
+https://www.proteinatlas.org/ENSG00000117394.json	4ddde7c49625d119999d36a06725701a74fe36cf8b7d13c4c864b375838d6aa6	10331
+https://www.proteinatlas.org/ENSG00000118689.json	0d184cc816b9401ab5da685e36158c3dc29c515f78e870183650882805c9d83f	9555
+https://www.proteinatlas.org/ENSG00000127445.json	7012c781cb335450dd71e1bb4301e9ffdd440d25eb53dbac2baa44468c403090	9548
+https://www.proteinatlas.org/ENSG00000129521.json	f8fdaff6891044706ba04abbecda9f65e4107c93184d1e526271862522c3031d	9820
+https://www.proteinatlas.org/ENSG00000134250.json	b22626a71ba370ba55094f373512a838b105cb10699d139092e9d3a5a959c0cf	9593
+https://www.proteinatlas.org/ENSG00000134333.json	ba5cf975478c93417766f0f7aa3b05927f0dc6c4b54d4d34f593e0828f1a6145	9780
+https://www.proteinatlas.org/ENSG00000135766.json	b0e57e86c38c5b9902eb1c8fb6aa77bdc4d8b33c59ae6d4bfc2596401e73eb05	10226
+https://www.proteinatlas.org/ENSG00000136997.json	f4c03e5b7456344f4ba1a2b874be9e4c1da554c99b2a0ced4e8c6982dc42c1db	9949
+https://www.proteinatlas.org/ENSG00000141551.json	dd5a301c200ae7be6374db74905ebc14d97107c00e6b3b95ef86d478516c173e	9803
+https://www.proteinatlas.org/ENSG00000143437.json	a5546005f0b1f9bbd8050dfaa1c39a8eb227737e6e3b0e1677d632075af292d8	9521
+https://www.proteinatlas.org/ENSG00000143801.json	bd62f8df686f29a5d6c7730dc5e7f9e63fe00dec46bfdb388a0167a729d19f16	10019
+https://www.proteinatlas.org/ENSG00000145388.json	7167e2e5cd00474fd3ba859529ca9f224f376c5d07ac43d063cae1c25b40e32d	9393
+https://www.proteinatlas.org/ENSG00000148400.json	2def191b858511718cef68153996b22a7b98e4565be76ee67a219cac5d3a9395	9806
+https://www.proteinatlas.org/ENSG00000150907.json	681b27cd1aa0255c60ec8425355df34c2362700a527a0286b9d7b48fe62b3ac6	10055
+https://www.proteinatlas.org/ENSG00000157540.json	39e84dcb0fc12e1d2d12a1f0ed845e382776ed05b4896ea069994050fae265ed	9685
+https://www.proteinatlas.org/ENSG00000159399.json	0408b95f170e7d893b25ad2fd654814cf85be16bc2134edbefa173cf18397e08	9833
+https://www.proteinatlas.org/ENSG00000162736.json	1933c34df1dc7a5abd8569f12042fa4568e5d3c11d3d8c440bb0c653a077f73d	9605
+https://www.proteinatlas.org/ENSG00000165819.json	48b486edfcb0f28a990adc46bc7f6a3f2de03c7cd1dad3717234ba2bab5b77f6	9666
+https://www.proteinatlas.org/ENSG00000168214.json	c66b43e4c2993a3a61bfc8614214fc56665bb668d866d415a614953feb8ae39b	9805
+https://www.proteinatlas.org/ENSG00000176171.json	09d7d854f897212811a427212737631da8cd8de21d1d9208064eace6317c0b6f	9702
+https://www.proteinatlas.org/ENSG00000184481.json	80e43c2a3b31a9d87382c709ba88b14f09a519daf46bab06541eb8ece393d305	9715
+https://www.proteinatlas.org/ENSG00000186153.json	b8d8198150eade4f7b76943e0db97fea74047ba6ce2543c5f1c8a8bfe8e5c3da	9667
+https://www.proteinatlas.org/ENSG00000204060.json	43b704d8c6b44370b1abd19497042615e9fe9c482dc350d7ba6aa0b3fed2934e	6892
+https://www.proteinatlas.org/ENSG00000205155.json	d15f6ad2a2a26e5fd2c83294adca5cbc87731c0a6894b63538b72c6143a66ca2	9596
+https://www.proteinatlas.org/ENSG00000213923.json	15b787a6946b6af05c71d45716f23427ef581c794c5495450087e295d021d1e6	9566
+https://www.proteinatlas.org/ENSG00000269858.json	1104f1c97494544d45a09ca6c3e9e20196a25dc6b28a1c36fed0dc6100e3696e	9387
+https://www.proteinatlas.org/api/search_download.php?columns=g,eg&compress=no&format=json&search=APH1A	a525ee57aec0bdde57dc09fe1d03b00789098c01d0089c0aa6ca2ea897785cd5	56
+https://www.proteinatlas.org/api/search_download.php?columns=g,eg&compress=no&format=json&search=ARNT	977a7d045fc45209d72dd99b78d5d651de6f5b9694c1125629044a09af2b1ff2	743
+https://www.proteinatlas.org/api/search_download.php?columns=g,eg&compress=no&format=json&search=BNIP3	fd784f59d87dd9c6f82364fb97a649cfe2a7899ede852ee87288d9f81469b9a9	106
+https://www.proteinatlas.org/api/search_download.php?columns=g,eg&compress=no&format=json&search=CSNK1A1	50b1bcd576702e5024f94a74e61d39bdac97ae54af8e9cc50fd9d1bf4867d38f	110
+https://www.proteinatlas.org/api/search_download.php?columns=g,eg&compress=no&format=json&search=CSNK1D	4ea5fe1a3ac99a3c54052b78b6d557795c1d3ca5f322c2169ec97faab17a7d12	57
+https://www.proteinatlas.org/api/search_download.php?columns=g,eg&compress=no&format=json&search=CSNK1E	0fff81b7d21bda582f9655a83bf6117a2bfd6946fe28bcf3d5ee47c502584c88	114
+https://www.proteinatlas.org/api/search_download.php?columns=g,eg&compress=no&format=json&search=DYRK1A	ef64f5829f5c989dcd59d137e99d648adc6575f30dc66a799397936b24bafb0d	107
+https://www.proteinatlas.org/api/search_download.php?columns=g,eg&compress=no&format=json&search=EGLN1	90625e45aeb353ce87125c84245d2c90159be2d9964c7604c51064fe80d481ee	56
+https://www.proteinatlas.org/api/search_download.php?columns=g,eg&compress=no&format=json&search=EGLN2	79302ca5668bc3fa3b91c744bac5ed6d0681f78db40807359c22e616f0fd99c6	56
+https://www.proteinatlas.org/api/search_download.php?columns=g,eg&compress=no&format=json&search=EGLN3	2b047bc291ba3cf284517c2fc4ff23f600656fc32896ba3c02f7434486412d3c	105
+https://www.proteinatlas.org/api/search_download.php?columns=g,eg&compress=no&format=json&search=EPAS1	d81d1065a7dd03d0a6c2f91eb221aef442ef79dc529fb7a409fdbb008aee51f0	56
+https://www.proteinatlas.org/api/search_download.php?columns=g,eg&compress=no&format=json&search=FOXO1	83cee955da339fc88585c193fa67060eca868f968b82e9691520e0020968ced2	56
+https://www.proteinatlas.org/api/search_download.php?columns=g,eg&compress=no&format=json&search=FOXO3	d932938bf57ada7b1585cc0777d6ee6656a1f0af95b62cb0f1b3e41b6bb21697	106
+https://www.proteinatlas.org/api/search_download.php?columns=g,eg&compress=no&format=json&search=FOXO4	bef8ed4ee7dbf4012d3420b6f01e80a99ef5175a95ac32a4eb3fb7172ccb39d9	103
+https://www.proteinatlas.org/api/search_download.php?columns=g,eg&compress=no&format=json&search=FOXO6	628b77a0c7717b0dbafacc26053bab538a324ad499bcc82607b0c29134ba48b7	56
+https://www.proteinatlas.org/api/search_download.php?columns=g,eg&compress=no&format=json&search=HIF1A	e5f15c8dcb9b36a629ff04315b3448e0196c685b8870bb736da02fa54ed069a2	353
+https://www.proteinatlas.org/api/search_download.php?columns=g,eg&compress=no&format=json&search=HK2	920b48fbfb751ad0175545fbb5eb4e4ecb8fdae9d8017e97e78c28c3739719f4	444
+https://www.proteinatlas.org/api/search_download.php?columns=g,eg&compress=no&format=json&search=LDHA	c0f791450cbb77bf37f63ca3c38475715c5096d11d50fdb58de7aae3b04333dc	205
+https://www.proteinatlas.org/api/search_download.php?columns=g,eg&compress=no&format=json&search=LDHB	8dc93aa50ba563f81d4ff33f7917a6551d74ed71b7de45d1fb76a8bff4dc60d6	55
+https://www.proteinatlas.org/api/search_download.php?columns=g,eg&compress=no&format=json&search=METTL14	daf00e9301274a77aa445549d002af3680f276349f5b56a866e91ab8e1721a57	58
+https://www.proteinatlas.org/api/search_download.php?columns=g,eg&compress=no&format=json&search=METTL3	ae5ad134964e2ec3dea7b563b79af8827ed66cc34b5c63111704580aaf67544d	57
+https://www.proteinatlas.org/api/search_download.php?columns=g,eg&compress=no&format=json&search=MYC	d40463407e2cd58ecf698eeb9e723197382ea76b0c067e0585020fb504601e74	7763
+https://www.proteinatlas.org/api/search_download.php?columns=g,eg&compress=no&format=json&search=NCSTN	d8e4af040088f1c291d1d5dba90a8613d6321c778948f208f3a97a8428eadc7b	56
+https://www.proteinatlas.org/api/search_download.php?columns=g,eg&compress=no&format=json&search=NOTCH1	6c56f49231581107a7e63dfa168b5d73a11f643276677bf0630e6967180812ea	155
+https://www.proteinatlas.org/api/search_download.php?columns=g,eg&compress=no&format=json&search=NOTCH2	cbb6a82c89fe905c89f8ff2435d27483f6241f721f44771db2835dfbb5abd7b4	369
+https://www.proteinatlas.org/api/search_download.php?columns=g,eg&compress=no&format=json&search=NOTCH3	619f2c399d304a1425777507a7f9ed56ba9411ee36ceb366b0c863d1d4e8d15d	57
+https://www.proteinatlas.org/api/search_download.php?columns=g,eg&compress=no&format=json&search=PIN1	f1c195f1ab4985b853d585624ced85b167f430d0e4894a0a90e8a5b6ca9d128d	502
+https://www.proteinatlas.org/api/search_download.php?columns=g,eg&compress=no&format=json&search=PSEN1	7bb12aa2efcf331ba3a96f6bd86e7c787fe41fd3a5d5bbc25317cf73f0d100a0	153
+https://www.proteinatlas.org/api/search_download.php?columns=g,eg&compress=no&format=json&search=PSEN2	a67370735486a48860015accb0ad2be43c2c330781f53862e7fe5af6b01df725	105
+https://www.proteinatlas.org/api/search_download.php?columns=g,eg&compress=no&format=json&search=PSENEN	0e47167092170c0cee48436a5e65988c39804ff385335ffba87f7e9a991d9849	57
+https://www.proteinatlas.org/api/search_download.php?columns=g,eg&compress=no&format=json&search=RBPJ	a980448a5b65dd27f6739ceba413c5fb72b391a9a03b602cf12d63d38775f3cf	300
+https://www.proteinatlas.org/api/search_download.php?columns=g,eg&compress=no&format=json&search=SLC2A1	99804937ad7ad0737cc2cadf7d0417e446ae0b219b8a0d2bff0af940da0d7756	312
+https://www.proteinatlas.org/api/search_download.php?columns=g,eg&compress=no&format=json&search=TGFBR1	22cddf976cb6459970f4bc74052c28df849a2ad1be6d3d2af95ccdc5a9730770	106
+https://www.proteinatlas.org/api/search_download.php?columns=g,eg&compress=no&format=json&search=USP13	7a96ec6395f6514f6733004706fb357e86b33a962c9e564ffa8bd698ed8cddfd	106
+https://www.proteinatlas.org/api/search_download.php?columns=g,eg&compress=no&format=json&search=WWOX	f11cf228ade8170df10d2a8f7b0ce1342c6007551334e91e0bd154090d7360a5	55

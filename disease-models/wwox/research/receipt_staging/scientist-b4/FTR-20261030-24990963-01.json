@@ -1,0 +1,39 @@
+{
+ "event_id": "FTR-20261030-24990963-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "24990963",
+  "doi": "10.1101/gad.242131.114"
+ },
+ "event_at": "2026-10-30T13:00:00Z",
+ "analysis_at": "2026-10-30T13:00:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-b4, IT9 P4c-e. Zheng et al. 2014 (EglN2 hydroxylates FOXO3a). Question: what does the SIGNOR record EGLN2 -> FOXO3 (sign -) describe, in which cells and at which level, and does it bear on a transcript seed (SLC2A1, BNIP3) and on a prolyl hydroxylase inhibitor (roxadustat)? Europe PMC full-text XML rendered to plain text (a derived surface); Abstract, Introduction, all Results and the Discussion were read; the Methods were read in part (plasmids, cell lines); references and the Supplemental figures were not read.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMC4083087_PMID24990963_europepmc_fulltext_2026-10-30.txt",
+ "source_fingerprint": "6e70abc54dfc7293153b1a7b8e430a144a1d99095a697cc92609f48d20c49e56",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "read",
+  "supplementary": "not_read",
+  "references": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/qualification_it9_p4c_e_20261030/records/E-02_roxadustat.md",
+  "disease-models/wwox/research/drug_repurposing/qualification_it9_p4c_e_20261030/edge_provenance_E.tsv"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "Figures were not opened as images; Methods and the reference list were not read or only in part, as the coverage map states."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}
