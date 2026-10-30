@@ -114,6 +114,35 @@ class SyntheticRule(unittest.TestCase):
         self.assertNotEqual(k("Ketamine"), k("Esketamine"))     # stereoisomers are pharmacologically different and are not merged by this display key
 
 
+class NextPriorityRule(unittest.TestCase):
+    def va(self, lead, group, question="a named discriminating step", kind="verificare un'ipotesi", feas="Animal work; access not known"):
+        return {"lead": lead, "group": group, "next": {"question": question, "kind": kind, "feasibility": feas}}
+
+    def test_levels_follow_the_decision_at_stake(self):
+        self.assertEqual(rk.next_priority(self.va("F2", "G2b"))["level"], "NX1")
+        self.assertEqual(rk.next_priority(self.va("C2", "G3"))["level"], "NX1")
+        self.assertEqual(rk.next_priority(self.va("F3", "G4a"))["level"], "NX1")
+        self.assertEqual(rk.next_priority(self.va("F3", "G4b"))["level"], "NX2")
+        self.assertEqual(rk.next_priority(self.va("F1", "G1"))["level"], "NX2")
+        self.assertEqual(rk.next_priority(self.va("P3", "G5"))["level"], "NX3")
+        self.assertEqual(rk.next_priority(self.va(None, "GU", kind="risolvere una premessa"))["level"], "NX2")
+        self.assertEqual(rk.next_priority(self.va(None, "GU", kind="verificare un'ipotesi"))["level"], "NX3")
+
+    def test_no_named_step_is_low_and_cost_never_moves_the_level(self):
+        self.assertEqual(rk.next_priority(self.va("F2", "G2b", question=""))["level"], "NX3")
+        a = rk.next_priority(self.va("F2", "G2b", feas="Slice electrophysiology; line held"))
+        b = rk.next_priority(self.va("F2", "G2b", feas="Animal work; access not known; none known"))
+        self.assertEqual(a["level"], b["level"])
+        self.assertNotEqual(a["feasibility_flags"], b["feasibility_flags"])
+        self.assertIn("access_or_material_not_known", b["feasibility_flags"])
+
+    def test_the_rule_reads_no_publication_count(self):
+        import inspect
+        src = inspect.getsource(rk.next_priority)
+        for w in ("pmids", "receipts", "n_pmid", "count"):
+            self.assertNotIn(w, src)
+
+
 class RealData(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
@@ -276,6 +305,66 @@ class RealData(unittest.TestCase):
         self.assertIn("carbenoxolone", n["main_limit"])
         self.assertIn("no WWOX data", n["main_limit"])
         self.assertIn("GSK3beta/IMPase", unit_by_label(self.uni, "Lithium")["views"]["partial"]["triggers"]["rise"])
+
+    def test_type_and_origin_are_present_and_valid_for_every_unit(self):
+        for u in self.uni["units"]:
+            self.assertIn(u["unit_type"], rk.UNIT_TYPES)
+            self.assertIn(u["origin"], rk.ORIGINS)
+        self.assertEqual(unit_by_label(self.uni, "AAV9")["unit_type"], "gene_therapy")
+        self.assertEqual(unit_by_label(self.uni, "Ketogenic")["unit_type"], "diet")
+        self.assertEqual(unit_by_label(self.uni, "Ethosuximide")["unit_type"], "molecule")
+        self.assertEqual(unit_by_label(self.uni, "d-APV")["unit_type"], "tool_compound_and_class")
+        self.assertEqual({u["origin"] for u in self.uni["units"]}, {"known_track_before_it9"})
+
+    def test_mutation_missing_or_invalid_type_or_origin_is_refused(self):
+        for col, val in (("origin", ""), ("origin", "invented"), ("unit_type", ""), ("unit_type", "invented")):
+            ctx = copy.deepcopy(self.S["ctx"])
+            ctx["unit_map"][3][col] = val
+            with self.assertRaises(SystemExit):
+                rk.build_units(ctx, self.S["cat"])
+
+    def test_member_evidence_never_credits_a_member_with_another_members_result(self):
+        mem = {m["member"]: m for m in by_id(self.uni, "U21")["member_evidence"]}
+        for name in ("Memantine", "Perampanel", "Radiprodil", "Selfotel"):
+            self.assertEqual(mem[name]["tested_in_wwox_system"], "no", name)
+        tool = next(m for m in mem.values() if m["member_type"] == "tool_compound")
+        self.assertEqual(tool["tested_in_wwox_system"], "yes")
+        self.assertIn("d-APV", tool["member"])
+        note = by_id(self.uni, "U21")["evidence_level_note"]
+        self.assertIn("MECHANISM only", note["of_mechanism_or_class"])
+        self.assertIn("Memantine", note["untested_members"])
+        v = {m["member"]: m for m in by_id(self.uni, "U20")["member_evidence"]}
+        self.assertEqual(v["Vigabatrin"]["tested_in_wwox_system"], "yes")
+        self.assertEqual(v["Cpp-115 Free Base"]["tested_in_wwox_system"], "no")      # vigabatrin data are not data of the other GABA-AT inactivators
+
+    def test_mutation_a_misattributed_row_is_detected(self):
+        ctx = copy.deepcopy(self.S["ctx"])
+        for r in ctx["pert"]:
+            if r["assertion_id"] == "DR-W2-001":
+                r["subject"] = "CHEMBL807"          # the d-APV burst result attributed to memantine
+        u2 = rk.assemble(ctx, self.S["cat"])
+        mem = {m["member"]: m for m in by_id(u2, "U21")["member_evidence"]}
+        self.assertEqual(mem["Memantine"]["tested_in_wwox_system"], "yes")               # the table follows the attribution ...
+        self.assertNotEqual(mem["Memantine"]["tested_in_wwox_system"], {m["member"]: m for m in by_id(self.uni, "U21")["member_evidence"]}["Memantine"]["tested_in_wwox_system"])   # ... and differs from the frozen reading
+        # a hand-edited table that credits an assertion twice, or to a member that does not own it, fails the validator
+        unit = rk.build_units(self.S["ctx"], self.S["cat"])
+        u21 = next(u for u in unit if u["unit_id"] == "U21")
+        table = copy.deepcopy(rk.member_evidence(u21))
+        self.assertEqual(rk.validate_attribution(u21, table), [])
+        tool = next(m for m in table if m["member_type"] == "tool_compound")
+        mem2 = next(m for m in table if m["member"] == "Memantine")
+        mem2["assertion_ids"] = list(tool["assertion_ids"])
+        mem2["tested_in_wwox_system"] = "yes"
+        self.assertTrue(rk.validate_attribution(u21, table))
+
+    def test_three_fields_are_separate_and_groups_did_not_move(self):
+        for u in self.uni["units"]:
+            for v in u["views"].values():
+                if v.get("member"):
+                    self.assertIn(v["next_priority"]["level"], rk.NX_LEVELS)
+        before = {"U07": "G1", "U17": "G2b", "U24": "G2b", "U21": "G2b", "U10": "G3", "U15": "G3", "U20": "G3", "U25": "G4a"}
+        got = {k: min(((rk.GROUP_ORDER.index(v["group"]), v["group"]) for v in by_id(self.uni, k)["views"].values() if v.get("member")))[1] for k in before}
+        self.assertEqual(got, before)
 
     def test_inventory_counts_reconcile(self):
         inv, summ = rk.inventory(self.S["ctx"], self.S["cat"], self.uni)

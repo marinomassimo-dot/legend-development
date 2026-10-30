@@ -21,6 +21,7 @@ The ranking answers three questions and refuses a fourth:
 |---|---|
 | `ranking_it8.py` | the one script: `run`, `check`, `snapshot`, `diff`, `show`, `--help`; stdlib, offline, no clock, deterministic |
 | `unit_map.tsv` | curated, reviewable: how the 36 cards form 27 ranked interventions and 3 excluded axes, with the reason for every merge |
+| `member_evidence.tsv` | (R3) one row per intervention member: tested in a WWOX system yes/no, what, source, depth; class/mechanism level kept apart |
 | `unit_caveats.tsv` | curated, reviewable (verifier repair, R2): per-intervention limits, counter-statements, questions and notes with source pointers; shown beside the items, never moving a group |
 | `uncarded_items.tsv` | curated, reviewable: 11 interventions identified (searched, abstained, opposed, excluded) that have no card, with source pointers |
 | `units.tsv` | one row per intervention: class, depth, groups per view, the six components, access, members, merge reason |
@@ -33,7 +34,7 @@ The ranking answers three questions and refuses a fourth:
 | `unit_inputs.tsv` | per-intervention input digests (one per trigger) used by `diff` and `snapshot` |
 | `ranking.json` | everything above in one document: the feed of the view |
 | `snapshots/`, `changes.tsv` | dated versions of the unit table and the per-unit changes with their reason class |
-| `test_ranking_it8.py` | 27 offline tests, including mutation tests |
+| `test_ranking_it8.py` | 36 offline tests, including mutation tests |
 
 Regenerate: `python3 -B disease-models/wwox/research/drug_repurposing/ranking_it8_p9_20261029/ranking_it8.py run` (needs `LEGEND_CATALOG_CACHE` for the
 view only), then `python3 -B framework/scripts/repurposing_view.py run` and `... run --source shareable`. `check` exits 1 when a file differs from a
@@ -273,3 +274,40 @@ exactly that intervention's input digest; an unmapped or doubly mapped card is r
 None of the four current files is changed. If the Orchestrator decides to record this work: a commit candidate noting the ranking as a non-canonical
 research record (rules R1, 27 interventions, selections), and, only if the verifier confirms them, the G1/G2 premises as `CLAIM` updates through
 `BATCH_COMMIT`. No receipt is needed for this work (no source was newly read).
+
+## 10. IT9 P5 Stage A (rules R3): type, attribution, three separate fields, origin
+
+Only demonstrated limits were corrected; **no group moved** (order digest unchanged; the eight selected interventions keep their groups; snapshot 5 records
+the change as `method_revision`, inputs changed T7 on all entries and T1 on the NMDAR/AMPAR entry, whose tool compound is now named).
+
+1. **Unit type is a visible, filterable field** (`unit_map.tsv` column `unit_type`; badge in the list, the Top items, the one-page print, filter and TSV
+   export): molecule, class of molecules, diet, gene therapy / gene-based modality, tool compound, tool compound + class. An unset or unknown type is a build error.
+2. **Evidence attribution.** `member_evidence.tsv` (and the per-unit table in the view) lists every member with *tested in a WWOX system yes/no*, what, source
+   and depth. A pertinence row is credited only to the member its subject names (a catalogue record of that member's family; the tool subjects of its card);
+   a card-level row belongs to the single intervention, to the card's named identity, or to the **class/mechanism level** and never to another member.
+   Consequences stated in the view: the d-APV result (one tool compound) supports the evaluation of the **mechanism**, not memantine, perampanel, radiprodil
+   or selfotel (all "no WWOX-system assertion"); the vigabatrin results are vigabatrin's, not CPP-115's. Two fields are shown apart: *evidence of the
+   molecule* and *evidence of the mechanism or class*; the unit group of a class entry describes the mechanism/class evaluation. The validator recomputes
+   the attribution and rejects a member credited with an assertion it does not own or an assertion credited twice (mutation-tested).
+3. **Three separate fields**, each readable alone: *biological promise* = the group (positions only; contains neither depth nor next-experiment priority);
+   *depth of evidence* = E0 to E4 with its text; *priority of the next experiment* = NX1 to NX3. Rule (information value = how much the discriminating next
+   experiment would change a decision; a step must be named, else NX3):
+
+   | Lead position | Decision at stake | Level |
+   |---|---|---|
+   | F2 (thin favourable) | is the WWOX-system signal real and specific: the outcomes lead to opposite decisions (lift or stop) | NX1 |
+   | C2 / C1 (contested or only null) | which result holds: lift or stop | NX1 |
+   | F3 in G4a (coherent action, selected) | first WWOX test of a coherent hypothesis: continue or stop | NX1 |
+   | F3 in G4b | first test with the direction not established | NX2 |
+   | F1 (strongest case) | does it hold beyond its single row and window | NX2 |
+   | no position and the work order says "resolve a premise" | a first datum decides whether a test can be designed | NX2 |
+   | C3 / P3 / otherwise, or no step named | the outcome could not change the decision before a premise exists | NX3 |
+
+   The rule reads the lead position and the named step only: **not how often a candidate has been studied** (a frequently studied candidate is not more
+   promising, a little-studied one is not a discovery) and **not cost**. Cost and feasibility are a separate flag (`feasibility_flags`:
+   `access_or_material_not_known`, `new_wet_lab_work_needed`, `unclear`) and never move the level (tested).
+4. **Origin** (`unit_map.tsv` column `origin`; badge, filter, export): `known_track_before_it9` (all 27 current entries), `generated_in_it9` (none yet,
+   reserved for integrated proposals), `reference_or_control`. A missing or unknown origin is a build error.
+
+Before and after (general selection, Top 8): AAV9 gene addition G1; ethosuximide, lithium, d-APV/NMDAR class G2b; A51, ketogenic diet, vigabatrin G3;
+apinocaltamide G4a. Identical before and after; what changed is that each item now states its type, origin, the three fields and which members were tested.

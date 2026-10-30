@@ -1,0 +1,45 @@
+unit_id	unit_type	member	member_type	tested_in_wwox_system	wwox_assertions	signs	what	source_pmids	depth	assertion_ids	outside_wwox_assertions
+U01	class of molecules	Phenylbutanoic Acid	molecule	no	0		no WWOX-system assertion attributed to this member				0
+U01	class of molecules	class or mechanism level (card-level assertions and unnamed members)	class_level	no	0		no WWOX-system assertion attributed to this member; 10 outside-WWOX assertion(s) attributed				10
+U02	class of molecules	class or mechanism level (card-level assertions and unnamed members)	class_level	no	0		no WWOX-system assertion attributed to this member; 10 outside-WWOX assertion(s) attributed				10
+U03	class of molecules	class or mechanism level (card-level assertions and unnamed members)	class_level	no	0		no WWOX-system assertion attributed to this member				0
+U04	class of molecules	class or mechanism level (card-level assertions and unnamed members)	class_level	no	0		no WWOX-system assertion attributed to this member				0
+U05	class of molecules	class or mechanism level (card-level assertions and unnamed members)	class_level	no	0		no WWOX-system assertion attributed to this member				0
+U06	class of molecules	Amlexanox	molecule	no	0		no WWOX-system assertion attributed to this member; 2 outside-WWOX assertion(s) attributed				2
+U06	class of molecules	Ataluren	molecule	no	0		no WWOX-system assertion attributed to this member				0
+U06	class of molecules	class or mechanism level (card-level assertions and unnamed members)	class_level	no	0		no WWOX-system assertion attributed to this member				0
+U07	gene therapy / gene-based modality	AAV9-delivered human WWOX (gene addition)	gene_therapy	yes	12	5 benefit, 1 mixed, 2 null, 2 partial_benefit, 2 unquantified	spike-wave discharge rate per hour on continuous ECoG: decrease	42422765	complete_fulltext_read	DR-AAV-GFAP-P5HD; DR-AAV-GLU10-HD; DR-AAV-GLU10-LD; DR-AAV-MBP-HD; DR-AAV-MBP-LD; DR-AAV-MOTOR-HD; DR-AAV-MOTOR-LD; DR-AAV-SURV-HD; DR-AAV-SURV-LD; DR-AAV-WT-HD; DR-AAV-WT-LD; DR-C01-001	4
+U08	gene therapy / gene-based modality	Splice-correcting antisense oligonucleotide / editing (splice-acceptor allele)	gene_therapy	no	0		no WWOX-system assertion attributed to this member				0
+U09	gene therapy / gene-based modality	Endogenous boost (CRISPRa or equivalent)	gene_therapy	no	0		no WWOX-system assertion attributed to this member				0
+U10	molecule	A51, a multi-kinase inhibitor (experimental)	molecule	yes	2	1 benefit, 1 null	fraction of layer neurons (SATB2+, CTIP2+): no_change		complete_fulltext_read	DR-D01-001; DR-D01-002	0
+U11	class of molecules	class or mechanism level (card-level assertions and unnamed members)	class_level	no	0		no WWOX-system assertion attributed to this member				0
+U12	class of molecules	class or mechanism level (card-level assertions and unnamed members)	class_level	no	0		no WWOX-system assertion attributed to this member; 4 outside-WWOX assertion(s) attributed				4
+U13	class of molecules	Stiripentol	molecule	no	0		no WWOX-system assertion attributed to this member; 5 outside-WWOX assertion(s) attributed				5
+U13	class of molecules	tool compound(s) or precedent named in card E02_ldh_inhibition	tool_compound	no	0		no WWOX-system assertion attributed to this member; 3 outside-WWOX assertion(s) attributed				3
+U13	class of molecules	class or mechanism level (card-level assertions and unnamed members)	class_level	no	0		no WWOX-system assertion attributed to this member				0
+U14	class of molecules	Sodium Dichloroacetate	molecule	no	0		no WWOX-system assertion attributed to this member; 15 outside-WWOX assertion(s) attributed				15
+U14	class of molecules	tool compound(s) or precedent named in card E03_pdk_inhibition_dca	tool_compound	no	0		no WWOX-system assertion attributed to this member; 1 outside-WWOX assertion(s) attributed				1
+U14	class of molecules	class or mechanism level (card-level assertions and unnamed members)	class_level	no	0		no WWOX-system assertion attributed to this member				0
+U15	diet	Ketogenic diet (complex dietary intervention)	diet	yes	2	1 benefit, 1 null	clinician-reported seizure control on the ketogenic diet: no_change	35573960	complete_fulltext_read	A-KD-1; A-KD-4	2
+U16	molecule	Cannabidiol	molecule	no	0		no WWOX-system assertion attributed to this member				0
+U17	molecule	Ethosuximide	molecule	yes	1	1 benefit	PTZ-provoked behavioural seizure score, late phase of the hour (graphical reading): decrease	32000863	complete_fulltext_read	A-ETX-1	0
+U17	molecule	tool compound(s) or precedent named in card EB-ETX-01	tool_compound	no	0		no WWOX-system assertion attributed to this member; 1 outside-WWOX assertion(s) attributed				1
+U18	class of molecules	class or mechanism level (card-level assertions and unnamed members)	class_level	no	0		no WWOX-system assertion attributed to this member				0
+U19	class of molecules	Sirolimus	molecule	no	0		no WWOX-system assertion attributed to this member				0
+U19	class of molecules	class or mechanism level (card-level assertions and unnamed members)	class_level	no	0		no WWOX-system assertion attributed to this member				0
+U20	class of molecules	Cpp-115 Free Base	molecule	no	0		no WWOX-system assertion attributed to this member; 4 outside-WWOX assertion(s) attributed				4
+U20	class of molecules	Vigabatrin	molecule	yes	7	2 benefit, 3 null, 1 partial_benefit, 1 unresolved	clinical cessation of epileptic spasms: unknown		queried_not_full_read	A-VGB-1; A-VGB-10; A-VGB-2; A-VGB-3; A-VGB-4; A-VGB-5; A-VGB-6	11
+U20	class of molecules	class or mechanism level (card-level assertions and unnamed members)	class_level	no	0		no WWOX-system assertion attributed to this member				0
+U21	tool compound + class of molecules	Perampanel	molecule	no	0		no WWOX-system assertion attributed to this member; 3 outside-WWOX assertion(s) attributed				3
+U21	tool compound + class of molecules	Memantine	molecule	no	0		no WWOX-system assertion attributed to this member; 9 outside-WWOX assertion(s) attributed				9
+U21	tool compound + class of molecules	Radiprodil	molecule	no	0		no WWOX-system assertion attributed to this member; 3 outside-WWOX assertion(s) attributed				3
+U21	tool compound + class of molecules	Selfotel	molecule	no	0		no WWOX-system assertion attributed to this member; 1 outside-WWOX assertion(s) attributed				1
+U21	tool compound + class of molecules	d-APV (competitive NMDAR block; a tool compound, not a candidate drug)	tool_compound	yes	1	1 benefit	burst frequency: decrease	34634460	complete_fulltext_read	DR-W2-001	0
+U21	tool compound + class of molecules	class or mechanism level (card-level assertions and unnamed members)	class_level	no	0		no WWOX-system assertion attributed to this member; 3 outside-WWOX assertion(s) attributed				3
+U22	class of molecules	class or mechanism level (card-level assertions and unnamed members)	class_level	no	0		no WWOX-system assertion attributed to this member				0
+U23	molecule	Bumetanide and the chloride gradient	molecule	no	0		no WWOX-system assertion attributed to this member				0
+U24	molecule	Lithium	molecule	yes	1	1 benefit	behavioural seizure stage after one provoking injection, preweaning mice: decrease	32000863	complete_fulltext_read	DR-LI-001	2
+U25	molecule	Apinocaltamide	molecule	no	0		no WWOX-system assertion attributed to this member; 3 outside-WWOX assertion(s) attributed				3
+U25	molecule	tool compound(s) or precedent named in card H01_apinocaltamide_ttype	tool_compound	no	0		no WWOX-system assertion attributed to this member; 1 outside-WWOX assertion(s) attributed				1
+U26	class of molecules	class or mechanism level (card-level assertions and unnamed members)	class_level	no	0		no WWOX-system assertion attributed to this member				0
+U27	molecule	Extracellular magnesium (nutrient / supplement)	molecule	no	0		no WWOX-system assertion attributed to this member				0

@@ -3315,6 +3315,9 @@ RANK_DIR = "ranking_it8_p9_20261029"
 RK_GROUP_IDS = ["G1", "G2a", "G2b", "G3", "G4a", "G4b", "G5", "GU"]
 RK_CLASSES = ["ORD", "WEAK", "INSUFF", "EXCL"]
 RK_VIEWS = ["general", "broad", "partial"]
+RK_TYPES = ["molecule", "class_of_molecules", "diet", "gene_therapy", "tool_compound", "tool_compound_and_class"]
+RK_ORIGINS = ["known_track_before_it9", "generated_in_it9", "reference_or_control"]
+RK_NX = ["NX1", "NX2", "NX3"]
 RK_LINKS = ["effect_observed_in_wwox_system", "directionally_compatible_documented_action", "documented_association_target_listed", "other_disease_precedent_only", "other_disease_precedent_plus_wwox_case_level_signal", "card_inference_by_mechanism_no_catalogue_row"]
 RK_EVQ = ["favourable_with_comparator_may_rest_on_one_row", "favourable_thin", "favourable_thin_specificity_uncertain", "contested", "no_wwox_test_target_supported", "no_wwox_test_target_hypothesis", "weak_pertinence_or_outside_counter", "premise_missing"]
 
@@ -3363,6 +3366,19 @@ def validate_ranking(R: dict, cands: dict, need_ids: set) -> list[str]:
             errs.append(f"selection {view}: more than ten items")
         if set(s["top"]) & {a["id"] for a in s["apart"]}:
             errs.append(f"selection {view}: an item is both listed and apart")
+    for u in R["units"]:
+        if u["class"] != "EXCL" and u.get("unit_type") not in RK_TYPES:
+            errs.append(f"{u['id']}: unit type {u.get('unit_type')!r} is not one of {RK_TYPES}")
+        if u.get("origin") not in RK_ORIGINS:
+            errs.append(f"{u['id']}: origin {u.get('origin')!r} is not one of {RK_ORIGINS}")
+        for obj, va in u["views"].items():
+            if va.get("member") and va.get("next_priority", {}).get("level") not in RK_NX:
+                errs.append(f"{u['id']}.{obj}: no next-experiment priority")
+        if u["class"] != "EXCL" and not u.get("member_evidence"):
+            errs.append(f"{u['id']}: no member-level evidence table")
+        ids = [i for m in u.get("member_evidence") or [] for i in m["assertion_ids"]]
+        if len(ids) != len(set(ids)):
+            errs.append(f"{u['id']}: one assertion is attributed to more than one member")
     for r in R.get("uncarded") or []:
         if r["class"] not in RK_CLASSES or (r["related_unit"] and r["related_unit"] not in units):
             errs.append(f"uncarded {r['item_id']}: invalid class or unit")
@@ -3400,7 +3416,7 @@ def build_ranking(dr: Path, cur: dict, source: str):
                           "contested": bool(va.get("contested")), "counter_needs": va.get("counter_needs") or [], "evq": va["evidence_quality"], "group_reason": va["group_reason"],
                           "evidence": {k: ev.get(k) for k in ("in_wwox", "carrier_of_position", "id", "text", "scope", "species", "genotype", "depth", "pmids", "other_favourable_wwox_assertions")} | {"flags": (ev.get("flags") or [])[:8]},
                           "next": {k: va["next"].get(k) for k in ("kind", "question", "would_change", "feasibility", "need")}, "triggers": va["triggers"], "main_limit": va["main_limit"],
-                          "counter_statements": va.get("counter_statements") or [], "objective_note": va.get("objective_note") or "", "view_note": va.get("view_note") or "", "notes": va.get("notes") or [],
+                          "next_priority": va.get("next_priority"), "counter_statements": va.get("counter_statements") or [], "objective_note": va.get("objective_note") or "", "view_note": va.get("view_note") or "", "notes": va.get("notes") or [],
                           "lead_summary": va.get("lead_summary") or {}}
         comp = u["components"]
         ph = comp["P_pharmacology"]
@@ -3422,7 +3438,11 @@ def build_ranking(dr: Path, cur: dict, source: str):
         if full:
             pm.update({"potency_with_assay_context": ph["potency_with_assay_context"], "human_exposure": ph["human_exposure"], "brain_penetration": ph["brain_penetration"]})
         units.append({
-            "id": u["unit_id"], "label": u["label"], "kind": u["kind"], "class": u["class"], "class_reason": u["class_reason"], "cards": u["cards"], "tracks": u["tracks"], "goals": u["declared_goals"],
+            "id": u["unit_id"], "label": u["label"], "kind": u["kind"], "unit_type": u["unit_type"], "origin": u["origin"], "class": u["class"],
+            "member_evidence": [{k: m[k] for k in ("member_type", "member_key", "tested_in_wwox_system", "wwox_assertions", "signs", "source_pmids", "depth", "assertion_ids", "outside_wwox_assertions")} |
+                                ({"member": m["member"], "what": m["what"]} if (full or m["tested_in_wwox_system"] == "yes" or m["member_type"] == "class_level") else {"member": "untested member (name in the full edition)", "what": "no WWOX-system assertion attributed to this member"})
+                                for m in u["member_evidence"]],
+            "evidence_level": ({k: u["evidence_level_note"][k] for k in ("of_molecule", "of_mechanism_or_class", "attribution_rule")} | {"untested_members": u["evidence_level_note"]["untested_members"] if full else len(u["evidence_level_note"]["untested_members"])}), "class_reason": u["class_reason"], "cards": u["cards"], "tracks": u["tracks"], "goals": u["declared_goals"],
             "depth": u["evaluation_depth"], "depth_text": u["evaluation_depth_text"], "views": views, "merge_reason": u["merge_reason"],
             "comp": {"W": comp["W_wwox_evidence"], "M": {"text": comp["M_mechanism"]["text"], "l2": comp["M_mechanism"]["l2"], "opposed_needs": comp["M_mechanism"]["opposed_needs"], "n_families": len(comp["M_mechanism"]["families"])},
                      "T": comp["T_transferability"], "P": pm, "X": comp["X_counter_evidence"], "U": comp["U_uncertainty"]},
@@ -3551,11 +3571,33 @@ UI_IT8 = {
     "rk_one_h": "Sintesi di una pagina", "rk_one_note": "La selezione generale e le due selezioni per obiettivo in una pagina A4. I campi completi sono nelle schede sopra.",
     "rk_one_c_i": "Intervento", "rk_one_c_g": "Gruppo", "rk_one_c_why": "Motivo principale", "rk_one_c_lim": "Limite principale", "rk_one_c_chg": "Che cosa potrebbe cambiare la posizione",
     "rk_plain_h": "Dichiarazione", "rk_p3": "Informazione esplorativa IT7: il confronto di rete e di firma (256 famiglie) non è stato rilevato né escluso, ha escluso di proposito le schede curate e non può guidare da solo nessuna posizione. Nessuna voce è ordinata o riordinata da esso.",
+    "rk_ty_h": "Tipo", "rk_ty_molecule": "molecola", "rk_ty_class_of_molecules": "classe di molecole", "rk_ty_diet": "dieta", "rk_ty_gene_therapy": "terapia genica / modalità genica", "rk_ty_tool_compound": "composto-strumento",
+    "rk_ty_tool_compound_and_class": "composto-strumento + classe", "rk_or_h": "Origine", "rk_or_known_track_before_it9": "pista nota prima di IT9", "rk_or_generated_in_it9": "generato in IT9", "rk_or_reference_or_control": "riferimento o controllo",
+    "rk_nx_h": "Priorità del prossimo esperimento", "rk_nx_NX1": "NX1 · decisivo", "rk_nx_NX2": "NX2 · informativo", "rk_nx_NX3": "NX3 · basso o nullo oggi",
+    "rk_nxp_NX1": "Il prossimo esperimento discriminante cambierebbe una decisione (alzare o fermare).", "rk_nxp_NX2": "Il prossimo esperimento scioglie un limite; la decisione si sposta di un passo al massimo.",
+    "rk_nxp_NX3": "Nessun passo discriminante indicato, oppure l'esito non potrebbe cambiare la decisione prima che esista una premessa.",
+    "rk_f_type": "Tipo di intervento", "rk_f_origin": "Origine", "rk_f_nx": "Priorità del prossimo esperimento",
+    "rk_three_h": "Tre campi separati, leggibili da soli", "rk_three_1": "Promessa biologica: è il gruppo (G1…GU), calcolato dalle posizioni; non contiene né la profondità né la priorità del prossimo esperimento.",
+    "rk_three_2": "Profondità di evidenza: quanto è stato letto e di che livello (E0…E4); non entra nel gruppo.",
+    "rk_three_3": "Priorità del prossimo esperimento (NX1…NX3): valore informativo = quanto l'esperimento discriminante successivo cambierebbe una decisione. Non dipende da quante volte un candidato è stato studiato (un candidato molto studiato non è per questo più promettente, uno poco studiato non è per questo una scoperta) né dal costo: costo e fattibilità sono un flag a parte.",
+    "rk_i_type": "Tipo e origine", "rk_i_promise": "Promessa biologica (gruppo)", "rk_i_depthf": "Profondità di evidenza", "rk_i_nx": "Priorità del prossimo esperimento", "rk_i_stake": "Che cosa si decide", "rk_i_feasf": "Flag di fattibilità (separati)",
+    "rk_i_evmol": "Evidenza della molecola", "rk_i_evmech": "Evidenza del meccanismo o della classe", "rk_i_untested": "Membri non provati in un sistema WWOX",
+    "rk_me_h": "Evidenza per membro (un risultato di un composto-strumento o di un membro non è un risultato degli altri membri)", "rk_me_member": "Membro", "rk_me_tested": "Provato in un sistema WWOX", "rk_me_what": "Che cosa", "rk_me_src": "Fonte (PMID)", "rk_me_depth": "Profondità",
+    "rk_me_type_molecule": "molecola", "rk_me_type_tool_compound": "composto-strumento", "rk_me_type_class_level": "livello di classe o meccanismo", "rk_me_type_diet": "dieta", "rk_me_type_gene_therapy": "terapia genica", "rk_me_type_class_of_molecules": "classe",
+    "rk_me_type_tool_compound_and_class": "composto-strumento e classe", "rk_me_type_molecule_unit": "molecola",
     "rk_denom_groups": "voci per gruppo e vista", "rk_total": "Totale",
     "rk_unc_h": "Altri interventi individuati, senza scheda", "rk_unc_note": "Cercati, esclusi o con effetto potenzialmente opposto, ma senza una scheda: non sono ordinati e non stanno in fondo. Ognuno ha classe, profondità e che cosa lo riaprirebbe. Una ricerca che si astiene non ha mostrato che l'elemento sia poco promettente.",
     "rk_unc_c_i": "Elemento", "rk_unc_c_c": "Classe", "rk_unc_c_d": "Profondità", "rk_unc_c_r": "Motivo e che cosa lo riaprirebbe", "rk_unc_c_u": "Voce collegata", "rk_unc_n": "{n} voci senza scheda",
 }
 UI_IT.update(UI_IT8)
+
+
+def rk_badges(u: dict, origin: bool = True) -> str:
+    U = UI_IT
+    if not origin:
+        return f'<span class="chip rk-type rk-type-{E(u["unit_type"])}" title="{E(U["rk_ty_h"])}">{E(U["rk_ty_" + u["unit_type"]])}</span>'
+    return (f'<span class="chip rk-type rk-type-{E(u["unit_type"])}" title="{E(U["rk_ty_h"])}">{E(U["rk_ty_" + u["unit_type"]] if "rk_ty_" + u["unit_type"] in U else u["unit_type"])}</span> '
+            f'<span class="chip rk-origin rk-or-{E(u["origin"])}" title="{E(U["rk_or_h"])}">{E(U["rk_or_" + u["origin"]])}</span>')
 
 
 def rk_label(u: dict) -> str:
@@ -3598,8 +3640,14 @@ def rk_item(R: dict, view: str, uid: str, full: bool) -> str:
     if ov.get("member"):
         oth = f'<dt>{E(U["rk_i_also"])}</dt><dd>{rk_g(ov["group"])} <span class="mini mut">{E(OBJ_IT[other])}: {E(U["rk_pos_on"])} {E(str(ov.get("lead")))}</span></dd>'
     nx = va["next"]
-    return (f'<article class="rk-item" data-unit="{E(uid)}" data-view="{E(view)}"><h4>{E(str(sel["top"].index(uid) + 1))}. {E(rk_label(u))} {rk_g(va["group"])}</h4>'
+    return (f'<article class="rk-item" data-unit="{E(uid)}" data-view="{E(view)}"><h4>{E(str(sel["top"].index(uid) + 1))}. {E(rk_label(u))} {rk_badges(u)} {rk_g(va["group"])}</h4>'
             f'<dl class="rk-dl">'
+            f'<dt>{E(U["rk_i_promise"])}</dt><dd>{rk_g(va["group"], True)}</dd>'
+            f'<dt>{E(U["rk_i_depthf"])}</dt><dd>{E(u["depth"])} <span class="mini mut">{E(u["depth_text"])}</span></dd>'
+            f'<dt>{E(U["rk_i_nx"])}</dt><dd><span class="chip rk-nx rk-nx-{va["next_priority"]["level"]}" title="{E(U["rk_nxp_" + va["next_priority"]["level"]])}">{E(U["rk_nx_" + va["next_priority"]["level"]])}</span> <span class="mini">{E(U["rk_i_stake"])}: {E(va["next_priority"]["stake"])}</span></dd>'
+            f'<dt>{E(U["rk_i_feasf"])}</dt><dd>{E(", ".join(va["next_priority"]["feasibility_flags"]))} <span class="mini mut">{E(va["next_priority"]["feasibility_text"])}</span></dd>'
+            f'<dt>{E(U["rk_i_evmol"])}</dt><dd>{E(u["evidence_level"]["of_molecule"])}</dd>'
+            f'<dt>{E(U["rk_i_evmech"])}</dt><dd>{E(u["evidence_level"]["of_mechanism_or_class"])} <span class="mini mut">{E(u["evidence_level"]["attribution_rule"])}</span></dd>'
             f'<dt>{E(U["rk_i_obj"])}</dt><dd>{E(OBJ_IT[obj])}' + (f' <span class="mini">({E(va["objective_note"])})</span>' if va.get("objective_note") else "") + '</dd>'
             f'<dt>{E(U["rk_i_track"])}</dt><dd>{E(", ".join("Track " + t for t in u["tracks"]) or U["rk_unknown"])}</dd>'
             f'<dt>{E(U["rk_i_access"])}</dt><dd>{E(u["access"])}</dd>'
@@ -3627,7 +3675,7 @@ def rk_row_attrs(R: dict, u: dict) -> str:
     gen_g = min(gen, key=RK_GROUP_IDS.index) if gen else ("" if u["class"] == "EXCL" else "GU")
     evq = sorted({u["views"][v]["evq"] for v in ("broad", "partial") if u["views"][v].get("member") and u["views"][v].get("evq")})
     needs = sorted({p["need"] for p in u["pathways"]})
-    return (f'data-unit="{E(u["id"])}" data-class="{u["class"]}" data-g-general="{E(gen_g)}" data-g-broad="{E(g["broad"])}" data-g-partial="{E(g["partial"])}" data-track="{E(" ".join(u["tracks"]))}" '
+    return (f'data-unit="{E(u["id"])}" data-type="{E(u["unit_type"])}" data-origin="{E(u["origin"])}" data-nx="{E(" ".join(sorted({u["views"][v]["next_priority"]["level"] for v in ("broad", "partial") if u["views"][v].get("member") and u["views"][v].get("next_priority")})))}" data-class="{u["class"]}" data-g-general="{E(gen_g)}" data-g-broad="{E(g["broad"])}" data-g-partial="{E(g["partial"])}" data-track="{E(" ".join(u["tracks"]))}" '
             f'data-needs="{E(" ".join(needs))}" data-access="{E(" ".join(u["access_cats"] or ["none"]))}" data-evq="{E(" ".join(evq))}" '
             f'data-text="{E((u["label"] + " " + " ".join(u["cards"]) + " " + " ".join(NEED_IT.get(n, n) for n in needs)).lower())}"')
 
@@ -3668,7 +3716,11 @@ def rk_unit_detail(R: dict, u: dict, full: bool) -> str:
             f'<dt>{E(U["rk_c_U"])}</dt><dd>{E(Un["text"])}; unknown: {E("; ".join(Un["unknown"]))}</dd>'
             + (f'<dt>{E(U["rk_c_merge"])}</dt><dd>{E(u["merge_reason"])}</dd>' if u["merge_reason"] else "")
             + (f'<dt>{E(U["rk_c_ex"])}</dt><dd>{E(", ".join(U["hyp_r_" + r] for r in u["model_exclusions"]))}</dd>' if u["model_exclusions"] else "")
-            + f'</dl><h5>{E(U["rk_p_h"])}</h5><div class="scrollx"><table class="tbl stk"><thead><tr><th>{E(U["rk_p_need"])}</th><th>{E(U["rk_p_thread"])}</th><th>{E(U["rk_p_obj"])}</th><th>{E(U["rk_p_pos"])}</th><th>{E(U["rk_p_link"])}</th><th>{E(U["rk_p_opp"])}</th><th>{E(U["rk_p_shared"])}</th></tr></thead><tbody>'
+            + f'</dl><h5>{E(U["rk_me_h"])}</h5><div class="scrollx"><table class="tbl stk"><thead><tr><th>{E(U["rk_me_member"])}</th><th>{E(U["rk_me_tested"])}</th><th>{E(U["rk_me_what"])}</th><th>{E(U["rk_me_src"])}</th><th>{E(U["rk_me_depth"])}</th></tr></thead><tbody>'
+            + "".join(f'<tr><td data-label="{E(U["rk_me_member"])}">{E(m["member"])}<div class="mini mut">{E(U["rk_me_type_" + m["member_type"]])}</div></td><td data-label="{E(U["rk_me_tested"])}">{E(U["rk_yes"] if m["tested_in_wwox_system"] == "yes" else U["rk_no"])}'
+                      + (f' <span class="mini">({m["wwox_assertions"]}: {E(", ".join(f"{n} {k}" for k, n in m["signs"].items()))})</span>' if m["wwox_assertions"] else "") + '</td>'
+                      f'<td data-label="{E(U["rk_me_what"])}">{E(m["what"])}</td><td data-label="{E(U["rk_me_src"])}">{E(", ".join(m["source_pmids"]) or "—")}</td><td data-label="{E(U["rk_me_depth"])}">{E(m["depth"] or "—")}</td></tr>' for m in u["member_evidence"])
+            + f'</tbody></table></div><h5>{E(U["rk_p_h"])}</h5><div class="scrollx"><table class="tbl stk"><thead><tr><th>{E(U["rk_p_need"])}</th><th>{E(U["rk_p_thread"])}</th><th>{E(U["rk_p_obj"])}</th><th>{E(U["rk_p_pos"])}</th><th>{E(U["rk_p_link"])}</th><th>{E(U["rk_p_opp"])}</th><th>{E(U["rk_p_shared"])}</th></tr></thead><tbody>'
             + (prow or f'<tr><td colspan="7" data-label="{E(U["rk_p_need"])}">{E(U["rk_none"])}</td></tr>') + f'</tbody></table></div><p class="mini mut">{E(U["rk_p_den"].format(n=len(pths), m=R["meta"]["needs_total"]))} {E(U["rk_p_comp"])}</p>' + members + '</details>')
 
 
@@ -3701,6 +3753,9 @@ def render_ranking(P: dict) -> str:
     opt = lambda vals, lab: f'<option value="">{E(U["rk_f_any"])}</option>' + "".join(f'<option value="{E(v)}">{E(lab(v))}</option>' for v in vals)
     controls = (f'<div id="rk-ctl" role="group" aria-label="{E(U["rk_ctl_view"])}"><div class="fbar">'
                 f'<label>{E(U["rk_ctl_view"])}<select id="rk-view">' + "".join(f'<option value="{v}">{E(U["rk_v_" + v])}</option>' for v in RK_VIEWS) + '</select></label>'
+                f'<label>{E(U["rk_f_type"])}<select id="rk-type">' + opt(RK_TYPES, lambda v: U["rk_ty_" + v]) + '</select></label>'
+                f'<label>{E(U["rk_f_origin"])}<select id="rk-origin">' + opt(RK_ORIGINS, lambda v: U["rk_or_" + v]) + '</select></label>'
+                f'<label>{E(U["rk_f_nx"])}<select id="rk-nx">' + opt(RK_NX, lambda v: U["rk_nx_" + v]) + '</select></label>'
                 f'<label>{E(U["rk_f_class"])}<select id="rk-class">' + opt(RK_CLASSES, lambda v: U["rk_cl_" + v]) + '</select></label>'
                 f'<label>{E(U["rk_f_group"])}<select id="rk-group">' + opt(RK_GROUP_IDS, lambda v: U["rk_g_" + v]) + '</select></label>'
                 f'<label>{E(U["rk_f_track"])}<select id="rk-track">' + opt(["A", "B"], lambda v: "Track " + v) + '</select></label>'
@@ -3725,15 +3780,16 @@ def render_ranking(P: dict) -> str:
         lead = ", ".join(f'{v}: {u["views"][v]["lead"]}' for v in ("broad", "partial") if u["views"][v].get("member") and u["views"][v].get("lead")) or "—"
         evq = ", ".join(sorted({U["rk_evq_" + u["views"][v]["evq"]] for v in ("broad", "partial") if u["views"][v].get("member") and u["views"][v].get("evq")})) or "—"
         ctr = u["comp"]["X"]
-        trs.append(f'<tr class="rk-row" {rk_row_attrs(R, u)}><th scope="row" data-label="{E(U["rk_t_unit"])}">{E(u["label"])}<div class="mut mini">{E(u["id"])} · {E(" ".join(u["cards"]))}</div></th>'
+        trs.append(f'<tr class="rk-row" {rk_row_attrs(R, u)}><th scope="row" data-label="{E(U["rk_t_unit"])}">{E(u["label"])}<div>{rk_badges(u)}</div><div class="mut mini">{E(u["id"])} · {E(" ".join(u["cards"]))}</div></th>'
                    f'<td data-label="{E(U["rk_t_class"])}"><span class="chip rk-cl rk-cl-{u["class"]}" title="{E(U["rk_cl_" + u["class"] + "_t"])}">{E(U["rk_cl_" + u["class"]])}</span></td>'
                    f'<td data-label="{E(U["rk_t_gen"])}">{rk_g(gen_g) if gen_g != "—" else "—"}</td><td data-label="{E(U["rk_t_broad"])}">{grp_cell(u, "broad")}</td><td data-label="{E(U["rk_t_part"])}">{grp_cell(u, "partial")}</td>'
                    f'<td data-label="{E(U["rk_t_lead"])}">{E(lead)}</td><td data-label="{E(U["rk_t_evq"])}">{E(evq)}</td>'
                    f'<td data-label="{E(U["rk_t_ctr"])}">{ctr["wwox_null_harm_mixed"]} / {ctr["outside_wwox_null_or_harm"]}</td><td data-label="{E(U["rk_t_track"])}">{E(", ".join(u["tracks"]) or "—")}</td>'
-                   f'<td data-label="{E(U["rk_t_acc"])}">{E(", ".join(U.get("acc_" + a, a) for a in (u["access_cats"] or ["—"])))}</td><td data-label="{E(U["rk_t_depth"])}">{E(u["depth"])}</td></tr>'
-                   f'<tr class="rk-row-detail" data-unit="{E(u["id"])}"><td colspan="11">{rk_unit_detail(R, u, full)}</td></tr>')
+                   f'<td data-label="{E(U["rk_t_acc"])}">{E(", ".join(U.get("acc_" + a, a) for a in (u["access_cats"] or ["—"])))}</td><td data-label="{E(U["rk_t_depth"])}">{E(u["depth"])}</td>'
+                   f'<td data-label="{E(U["rk_nx_h"])}">{E(", ".join(sorted({U["rk_nx_" + u["views"][v]["next_priority"]["level"]].split(" ")[0] for v in ("broad", "partial") if u["views"][v].get("member") and u["views"][v].get("next_priority")})) or "—")}</td></tr>'
+                   f'<tr class="rk-row-detail" data-unit="{E(u["id"])}"><td colspan="12">{rk_unit_detail(R, u, full)}</td></tr>')
     table = (f'<div class="scrollx"><table class="tbl stk rk-table" id="rk-table"><thead><tr><th>{E(U["rk_t_unit"])}</th><th>{E(U["rk_t_class"])}</th><th>{E(U["rk_t_gen"])}</th><th>{E(U["rk_t_broad"])}</th><th>{E(U["rk_t_part"])}</th>'
-             f'<th>{E(U["rk_t_lead"])}</th><th>{E(U["rk_t_evq"])}</th><th>{E(U["rk_t_ctr"])} <span class="mini">(WWOX / {E("fuori")})</span></th><th>{E(U["rk_t_track"])}</th><th>{E(U["rk_t_acc"])}</th><th>{E(U["rk_t_depth"])}</th></tr></thead><tbody>'
+             f'<th>{E(U["rk_t_lead"])}</th><th>{E(U["rk_t_evq"])}</th><th>{E(U["rk_t_ctr"])} <span class="mini">(WWOX / {E("fuori")})</span></th><th>{E(U["rk_t_track"])}</th><th>{E(U["rk_t_acc"])}</th><th>{E(U["rk_t_depth"])}</th><th>{E(U["rk_nx_h"])}</th></tr></thead><tbody>'
              + "".join(trs) + '</tbody></table></div>')
     # inventory
     I = R["inventory"]
@@ -3763,7 +3819,7 @@ def render_ranking(P: dict) -> str:
            f'<h4>{E(U["rk_trg_h"])}</h4><p class="mini">{E(U["rk_trg_note"])}</p><div class="scrollx"><table class="tbl stk"><thead><tr><th>{E(U["rk_trg_c_t"])}</th><th>{E(U["rk_trg_c_d"])}</th><th>{E(U["rk_trg_c_r"])}</th></tr></thead><tbody>{trig}</tbody></table></div>')
     return (f'<section id="ranking" aria-labelledby="h-rk8"><h2 id="h-rk8">{E(U["rk_h"])}</h2><p class="lead">{E(U["rk_lead"])}</p>'
             f'<div class="note"><b>{E(U["rk_not_h"])}.</b><ul class="mini"><li>{E(U["rk_not_1"])}</li><li>{E(U["rk_not_2"])}</li><li>{E(U["rk_not_3"])}</li><li>{E(U["rk_not_4"])}</li></ul></div>'
-            f'<details class="inl howto" open><summary>{E(U["rk_how_h"])}</summary><ol class="mini"><li>{E(U["rk_how_1"])}</li><li>{E(U["rk_how_2"])}</li><li>{E(U["rk_how_3"])}</li><li>{E(U["rk_how_4"])}</li></ol>'
+            f'<details class="inl howto" open><summary>{E(U["rk_how_h"])}</summary><ol class="mini"><li>{E(U["rk_how_1"])}</li><li>{E(U["rk_how_2"])}</li><li>{E(U["rk_how_3"])}</li><li>{E(U["rk_how_4"])}</li></ol><h4>{E(U["rk_three_h"])}</h4><ol class="mini"><li>{E(U["rk_three_1"])}</li><li>{E(U["rk_three_2"])}</li><li>{E(U["rk_three_3"])}</li></ol>'
             f'<h4>{E(U["rk_groups_h"])}</h4><ul class="poslist rk-groups">{groups_legend}</ul><p class="mini">{E(U["rk_sel_note"])}</p><p class="mini mut">{E(U["rk_p3"])}</p></details>'
             + controls + "".join(blocks) + f'<h3>{E(U["rk_t_h"])} (<span id="rk-n">{len(units)}</span>)</h3><p class="mini mut">{E(U["rk_t_note"])}</p>' + table + inv + evo
             + f'<p class="noprint"><a class="btnlink" href="#section=ranking">{E(U["sec_print"])}</a></p></section>')
@@ -3777,6 +3833,10 @@ def render_ranking_onepage(P: dict) -> str:
     by = rk_units_by_id(R)
     parts = []
     s = R["selections"]["general"]
+    origins = {by[x]["origin"] for v_ in R["selections"].values() for x in v_["top"]}
+    same_origin = len(origins) > 1
+    if not same_origin:
+        parts.append(f'<p class="mini"><b>{E(U["rk_or_h"])}:</b> {E(U["rk_or_" + next(iter(origins))])}</p>' if origins else "")
     rows = ""
     for uid in s["top"]:
         u = by[uid]
@@ -3785,7 +3845,7 @@ def render_ranking_onepage(P: dict) -> str:
         ls = va.get("lead_summary") or {}
         sg = ", ".join(f"{n} {k}" for k, n in (ls.get("wwox_signs") or {}).items()) or "no signed WWOX-system assertion"
         why = f'{va["lead"]} on {NEED_IT.get(va["lead_need"], va["lead_need"])}; {sg}'
-        rows += (f'<tr><th scope="row" data-label="{E(U["rk_one_c_i"])}">{E(u["label"])}<div class="mini mut">{E(OBJ_IT[obj])} · Track {E(",".join(u["tracks"]) or "?")}</div></th><td data-label="{E(U["rk_one_c_g"])}">{rk_g(va["group"])}</td>'
+        rows += (f'<tr><th scope="row" data-label="{E(U["rk_one_c_i"])}">{E(u["label"])}<div>{rk_badges(u, same_origin)}</div><div class="mini mut">{E(OBJ_IT[obj])} · Track {E(",".join(u["tracks"]) or "?")}</div></th><td data-label="{E(U["rk_one_c_g"])}">{rk_g(va["group"])}<div class="mini">{E(U["rk_nx_" + va["next_priority"]["level"]].split(" ")[0])}</div></td>'
                  f'<td data-label="{E(U["rk_one_c_why"])}">{E(clip(why, 90))}</td><td data-label="{E(U["rk_one_c_lim"])}">{E(clip(va["main_limit"], 55))}</td><td data-label="{E(U["rk_one_c_chg"])}">{E(clip(va["triggers"]["rise"], 55))}</td></tr>')
     parts.append(f'<h3>{E(U["rk_v_general"])}</h3><table class="tbl stk rk-one"><colgroup><col style="width:24%"><col style="width:7%"><col style="width:27%"><col style="width:21%"><col style="width:21%"></colgroup><thead><tr><th>{E(U["rk_one_c_i"])}</th><th>{E(U["rk_one_c_g"])}</th><th>{E(U["rk_one_c_why"])}</th><th>{E(U["rk_one_c_lim"])}</th><th>{E(U["rk_one_c_chg"])}</th></tr></thead><tbody>{rows}</tbody></table>')
     for uid in s["top"]:
