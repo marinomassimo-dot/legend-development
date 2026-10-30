@@ -1556,7 +1556,7 @@
     },
     {
      "id": "O2",
-     "statement": "Human knockout fibroblast line (a CRISPR/Cas9 sgRNA 'downregulation' line that the paper calls knockout): pyruvate dehydrogenase activity shows no knockout-versus-control difference in any oxygen x glucose condition, while lactate is higher in the knockout in all four conditions; PDK activity is reported unchanged and PDK transcript is significantly higher in the knockout line in normoxia and normoglycaemia (p below 0.05; isoform not stated in the sentence read), a third human system with PDK transcript up, non-neural (corrected 2026-10-30 from 'no PDK activity or protein is measured'; PDK protein is not measured).",
+     "statement": "Human fibroblast line 1BR.3.N transduced with WWOX sgRNA/Cas9 (a polyclonal puromycin-selected pool that the paper calls knockout; WWOX protein about 8.5-fold and mRNA about 3-fold lower; non-neural). Restated 2026-10-31 after IT10 P2.1 and an independent verification: HRE-luciferase activity is HIGHER in 3 of 4 oxygen x glucose conditions; HIF1A mRNA is 1.5 to 1.9-fold higher (significant in 2 of 4); total HIF-1alpha by immunocytochemistry is higher in 2 (the normoxia conditions); lactate is higher in all four; the cytoplasmic HIF-1alpha blot is LOWER in 2 of 4 conditions and the nuclear blot shows no difference (the authors' words: 'We didn't observed WWOX influence on HIF1a protein in nuclear fraction'), yet the authors' Discussion claims increased HIF1A protein with translocation to the nucleus, which their own blot does not show. Pyruvate dehydrogenase activity shows no knockout-versus-control difference in any condition; PDK activity is reported unchanged and PDK transcript is significantly higher in the knockout line in normoxia and normoglycaemia (isoform not stated; PDK protein not measured). One blot repetition is shown; figures not viewed in the IT10 re-read.",
      "model_type": "cell_line",
      "species": "human",
      "genotype": "WWOX knockdown (the figure's knockout arm) versus control",
@@ -1565,9 +1565,9 @@
      "comparison": "knockout against control in four oxygen x glucose conditions",
      "readout": "PDH activity (Figure 5b); lactate; HIF1alpha by fraction (Figure 6)",
      "readout_level": "activity",
-     "direction_observed": "PDH no difference (n unstated); lactate up in all four conditions; cytoplasmic HIF1alpha down in two of four conditions",
+     "direction_observed": "HRE-luciferase up (3 of 4), HIF1A mRNA up (1.5-1.9-fold), total HIF-1alpha up (2 of 4, ICC), lactate up (4 of 4); cytoplasmic HIF1alpha blot down (2 of 4); nuclear blot no difference; PDH no difference",
      "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
-     "limits": "Non-neural; n of the PDH panel not stated; non-significance is neither confirmation nor refutation. Non-neural (non-brain) cells: no transfer to neurons is implied. PDK transcript and activity re-read in the paper's full text 2026-10-30 (the manifest entry 8 reading 'no pdk activity or pdk protein is measured' is superseded for activity and transcript); the knockout line is CRISPR sgRNA downregulation of unquantified depth.",
+     "limits": "Non-neural; n of the PDH panel not stated; non-significance is neither confirmation nor refutation. Non-neural (non-brain) cells: no transfer to neurons is implied. PDK transcript and activity re-read in the paper's full text 2026-10-30 (the manifest entry 8 reading 'no pdk activity or pdk protein is measured' is superseded for activity and transcript); the knockout line is CRISPR sgRNA downregulation of unquantified depth. The readouts disagree on compartment and the polyclonal depletion is partial (about 3-fold mRNA); two independent laboratories (this and the MEF paper) and no neural cell are not five confirmations.",
      "pmid": "35328751",
      "locators": [
       {
@@ -1604,6 +1604,17 @@
        "kind": "document",
        "path": "disease-models/wwox/research/drug_repurposing/cards/I01_pdk_inhibition_dca_premise_seizure_glycaemia.card.json",
        "anchor": "The PDK transcript sign therefore differs between a non-neural human line (up)"
+      },
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35328751.json",
+       "entry": 4,
+       "anchor": "we didn"
+      },
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/hif_it10_p21_20261031/premises_it10_p21.tsv",
+       "anchor": "b4"
       }
      ],
      "locator_status": "MANIFEST"
@@ -1647,7 +1658,7 @@
      "statement": "Second human neural transcript system: in shWWOX progenitors (one library per arm) PDK1 is lower in SIGN (centred log2 ratio -0.67; 51 against 263 tags) as in the knockout organoid (-0.39), but both are inside the single-gene null (p about 0.49 and 0.30) and the hNPC Poisson interval spans zero; HIF1A mRNA is flat in both (-0.27, -0.11); the PDK family set is indistinguishable from random sets in both. LDHA and a HIF-type glycolysis subset are up in both, but a broader 19-gene glycolysis panel is not distinguishable from chance in hNPC (+0.24, rank 0.20). Progenitor-identity markers fall in the hNPC library (four canonical markers -2.03) while the organoid is set-dependent (four canonical markers +0.11, inside the null), so a single 'less advanced tissue' explanation does not cover both.",
      "readout": "PDK1, PDK family and glycolytic transcripts",
      "direction_observed": "PDK1 not raised in either human neural system (lower in sign only); HIF1A mRNA flat; LDHA and a HIF-type glycolysis subset up in both",
-     "limits": "One library per arm; PDH is phosphorylation-controlled and not observed; knockdown not demonstrated in progenitors; different systems; transcript only.",
+     "limits": "One library per arm; PDH is phosphorylation-controlled and not observed; knockdown not demonstrated in progenitors; different systems; transcript only. IT10 P2.1 restatement (2026-10-31): WWOX is not shown lower in the shWWOX progenitor library (IT5 gate 1 failed), so the hNPC rows (seeds S023 and S025) do NOT demonstrate a WWOX effect and cannot count as a second neural system for one.",
      "locators": [
       {
        "kind": "document",
@@ -1658,6 +1669,11 @@
        "kind": "document",
        "path": "disease-models/wwox/research/drug_repurposing/hnpc_gse126075_it5_20261029/RESULTS.md",
        "anchor": "PDK family"
+      },
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/hif_it10_p21_20261031/premises_it10_p21.tsv",
+       "anchor": "a5"
       }
      ]
     },
@@ -1720,7 +1736,7 @@
     },
     {
      "id": "O7",
-     "statement": "Human WWOX-knockout cerebral organoid, descriptive extraction (IT9 P4c-e): EPAS1 (HIF-2alpha gene) transcript is 3.80 times, HK2 4.73 times, SLC2A1 2.67 times and ARNT 1.46 times the wild-type level, HIF1A mRNA 0.84 times (flat) and PDK1 0.78 times; HIF-1alpha and HIF-2alpha PROTEIN were never measured in any WWOX-deficient neural cell. Ratios are of normalised counts, 4 knockout versus 2 wild-type libraries, one deposit; the glycolytic genes also fall with elapsed culture time, so maturity or composition can contribute. HK2, SLC2A1 and PDK1 belong to the six-gene IT7 readout (guard IT7_READOUT6): this is an observation, not an evaluation of any compound.",
+     "statement": "Human WWOX-knockout cerebral organoid, descriptive extraction (IT9 P4c-e): EPAS1 (HIF-2alpha gene) transcript is 3.80 times, HK2 4.73 times, SLC2A1 2.67 times and ARNT 1.46 times the wild-type level, HIF1A mRNA 0.84 times (flat) and PDK1 0.78 times; HIF-1alpha and HIF-2alpha PROTEIN were never measured in any WWOX-deficient neural cell. Ratios are of normalised counts, 4 knockout versus 2 wild-type libraries, one deposit; the glycolytic genes also fall with elapsed culture time, so maturity or composition can contribute. HK2, SLC2A1 and PDK1 belong to the six-gene IT7 readout (guard IT7_READOUT6): this is an observation, not an evaluation of any compound. IT10 P2.1 (descriptive, post hoc): the elevation is selective, a partly canonical hypoxia-response pattern and not a uniform glycolytic upshift (ADM, HK2, P4HA1, SLC2A1, BHLHE40, ANKRD37, EGLN3, DDIT4 up; PGK1, ALDOA, ENO1, PKM, PFKP, NDRG1, CA9 flat), compatible with HIF activity, with oxygen limitation of the organoid and with MYC (+0.56 log2); the knockout's offsets in 12 progenitor and neuronal marker genes predict only a small maturity-related shift (median +0.08 to +0.16 log2) against the observed +0.75 to +2.18, so marker-measured maturity is a minor contributor, which does not exclude composition by unmeasured subpopulations or culture state.",
      "model_type": "human_cerebral_organoid_knockout",
      "species": "human",
      "genotype": "WWOX knockout (4 libraries) versus wild type (2 libraries)",
@@ -1731,16 +1747,106 @@
      "readout_level": "transcript",
      "direction_observed": "EPAS1, HK2, SLC2A1, ARNT higher; HIF1A mRNA flat; PDK1 lower in sign only",
      "evidence_scope": "COMPUTATIONAL_RESULT",
-     "limits": "Transcript, not HIF protein, activity or flux; six libraries; one laboratory; descriptive only, no pre-registered contrast; the HIF-dependence of the shift is not tested.",
+     "limits": "Transcript, not HIF protein, activity or flux; six libraries; one laboratory; descriptive only, no pre-registered contrast; the HIF-dependence of the shift is not tested. The maturity calibration is from another laboratory (six iPSC lines; time is not maturity); the extra hypoxia-response genes were chosen after seeing the IT9 table (exploratory).",
      "pmid": null,
      "locators": [
       {
        "kind": "document",
        "path": "disease-models/wwox/research/drug_repurposing/qualification_it9_p4c_e_20261030/records/E-01_PX-478.md",
        "anchor": "EPAS1 2.8-9.1 v 1.2-1.7 (3.80)"
+      },
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/hif_it10_p21_20261031/maturity_stress_check_it10_p21.tsv",
+       "anchor": "HK2"
       }
      ],
      "locator_status": "DOCUMENT"
+    },
+    {
+     "id": "O8",
+     "statement": "Mouse brain at P17 with Wwox deletion (neuron-targeted, progenitor-targeted and germline; hippocampus and cortex; four contrasts, 2 to 3 knockout versus 2 to 4 control animals) shows NO elevation of HIF-axis or glycolysis transcripts: Hif1a within +-0.2 log2, Hk2 flat, Epas1 lower (-0.21 to -0.58; animal-separated in 3 of 4), Slc2a1, Ldha and Pgk1 lower, Ndrg1 and P4ha1 lower in all four contrasts, Gfap higher. A counter-observation to the organoid rows; it does not side with the organoid (species or in-vivo-versus-organoid disagreement).",
+     "model_type": "mouse_conditional_and_constitutive_knockout",
+     "species": "mouse",
+     "genotype": "Wwox deletion (neuron-targeted, progenitor-targeted, germline) versus control",
+     "tissue_or_cells": "hippocampus and cortex, bulk RNA-seq",
+     "age_stage": "P17",
+     "comparison": "deleted against control, four contrasts",
+     "readout": "HIF-axis and glycolysis transcripts (TPM)",
+     "readout_level": "transcript",
+     "direction_observed": "no elevation; flat to lower",
+     "evidence_scope": "COMPUTATIONAL_RESULT",
+     "limits": "Bulk tissue, TPM, no protein; the animals come from lines with severe epilepsy and death at 3 to 4 weeks; background differences between control groups (IT6); gliosis and hypomyelination change composition; computed post hoc in IT10 P2.1 (exploratory).",
+     "pmid": null,
+     "locators": [
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/hif_it10_p21_20261031/mouse_p17_hif_genes_it10_p21.tsv",
+       "anchor": "Epas1"
+      },
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/hif_it10_p21_20261031/premises_it10_p21.tsv",
+       "anchor": "a6"
+      }
+     ],
+     "locator_status": "DOCUMENT"
+    },
+    {
+     "id": "O9",
+     "statement": "Drosophila neuronal Wwox knockdown in an amyloid-beta 42 background: a sima:GFP reporter (sima is the single fly HIF-alpha) is unchanged (t = 0.6623, P = 0.5185, N = 7 to 9 brains, adult day 14, normoxia). The Results call the reporter 'endogenously tagged', the Methods name 'UAS-sima:GFP' and the stock table a GFP-tagged sima PBac line: the reporter identity is internally inconsistent. The only neural HIF-alpha protein readout in a WWOX-loss model; invertebrate; no HIF-1 versus HIF-2 split is possible; the authors attribute the lactate rise to Atf4, not to sima.",
+     "model_type": "drosophila_knockdown",
+     "species": "Drosophila",
+     "genotype": "pan-neuronal Wwox RNAi versus control, with human amyloid-beta 42 transgene",
+     "tissue_or_cells": "adult fly brain, whole-brain ROI",
+     "age_stage": "adult day 14",
+     "comparison": "knockdown against control",
+     "readout": "sima:GFP fluorescence",
+     "readout_level": "protein",
+     "direction_observed": "no change",
+     "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT",
+     "limits": "Invertebrate, amyloid background, one genotype pair, normoxia only; reporter design unclear (stability versus transcription); not a DEE model; not evidence of absence in mammalian neurons.",
+     "pmid": "42909904",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+       "entry": 66,
+       "anchor": "sima:gfp"
+      },
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42909904.json",
+       "entry": 67,
+       "anchor": "uas-sima:gfp"
+      }
+     ],
+     "locator_status": "MANIFEST"
+    },
+    {
+     "id": "O10",
+     "statement": "P47T knock-in mouse (first WW domain missense), bulk RNA-seq: the text reports hallmark gene-set enrichment of hypoxia, apoptosis and glycolysis in all three forebrain regions (Fig 8b) and, in the cerebellum, glycolysis and hypoxia among matching sets (Fig 9c); the DIRECTION is not stated in the text and the figures were not viewed in IT10 P5. An earlier manifest figure attestation records positive normalised enrichment scores of about 1.3 to 2.3 for these sets in all three regions (carried, not re-verified). An unresolved in-vivo observation beside the P17 counter-observation (O8); omitted by the HIF package of IT10 P2.1.",
+     "model_type": "mouse_knock_in",
+     "species": "mouse",
+     "genotype": "Wwox P47T/P47T versus wild type",
+     "tissue_or_cells": "prefrontal cortex, cortex, hippocampus and cerebellum, bulk RNA-seq",
+     "age_stage": "adult",
+     "comparison": "mutant against wild type",
+     "readout": "hallmark gene-set enrichment (GSEA)",
+     "readout_level": "transcript",
+     "direction_observed": "enrichment reported; direction not stated in the text",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "limits": "Gene-set enrichment is not HIF protein or activity; a missense knock-in is not a null; the NES values are an earlier figure attestation, not re-viewed here; adult, not the P17 stage of O8.",
+     "pmid": "36828035",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID36828035.json",
+       "entry": 41,
+       "anchor": "hypoxia"
+      }
+     ],
+     "locator_status": "MANIFEST"
     }
    ],
    "inferred": [
@@ -1749,7 +1855,11 @@
     "That PDK1 is raised in WWOX-deficient human neural cells: PDK1 is not raised in either human neural transcript system held (lower in sign only, inside the single-gene null in both; hNPC one library per arm); HIF1A mRNA is flat in both; the middle link of the chain has no transcript support at PDK1.",
     "That a PDK inhibitor would release a WWOX-dependent PDH restraint (as opposed to a seizure-secondary one) is inferred; the discriminating measurement is PDHA1 Ser293 phosphorylation and PDH activity with a genotype-by-inhibitor interaction in WWOX-deficient human neural cells (card I01).",
     "That a PDH restraint can be read from a transcript module, or that a compound can be preferred by a computational ranking on that module, is not supported: neither the P47T transfer test nor the method comparison (IT7 P3) measures PDH phosphorylation, activity or flux, and the comparison detected no added value for the network routes (signature route: not detected, not excluded).",
-    "IT9 P6 (conditional): that the HIF-dependent part of the glycolytic shift is harmful (so that lowering the HIF axis could help) or adaptive (so that lowering it would worsen viability or differentiation) is NOT decided by any datum; HIF-1alpha and HIF-2alpha protein in WWOX-deficient neural cells are unmeasured, HIF1A mRNA is flat, and a human fibroblast line shows lower cytoplasmic HIF-1alpha in two of four conditions with the nuclear fraction unchanged (a different compartment from the mouse nuclear increase). Both outcomes of the discriminating experiment on card K01 are conditional hypotheses; the need direction stays uncertain."
+    "IT9 P6 (conditional): that the HIF-dependent part of the glycolytic shift is harmful (so that lowering the HIF axis could help) or adaptive (so that lowering it would worsen viability or differentiation) is NOT decided by any datum; HIF-1alpha and HIF-2alpha protein in WWOX-deficient neural cells are unmeasured, HIF1A mRNA is flat, and a human fibroblast line shows lower cytoplasmic HIF-1alpha in two of four conditions with the nuclear fraction unchanged (a different compartment from the mouse nuclear increase). Both outcomes of the discriminating experiment on card K01 are conditional hypotheses; the need direction stays uncertain.",
+    "IT10 P2.1/P5 (rival explanation, an inference): that the organoid hypoxia-response and glycolytic transcripts reflect culture state, oxygen limitation of the organoid core or cell composition rather than a WWOX-dependent HIF change. Discriminating arm: step 0 at 5 percent oxygen in 2D cultures plus an organoid arm with a hypoxia marker and size matching, with stressed-cell filtering of single-cell data. Marker-measured maturity explains only a minor part; unmeasured subpopulations are not excluded.",
+    "IT10 P2.1/P5 (rival explanation, an inference): that a hyperactive knockout network raises HIF-1alpha and LDHA through AMPK, as any active neural network does, whatever WWOX does to HIF. Discriminating arm: activity-silenced knockout and add-back cultures read for HIF protein, LDHA and lactate.",
+    "IT10 P2.1/P5 (rival explanation, an inference): that MYC-driven progenitor glycolysis explains HK2 and SLC2A1 (MYC +0.56 log2 in the organoid; a primary-author proposal in the 2026 organoid paper, not measured). Discriminating arm: MYC loss-of-function beside HIF1A/EPAS1 knockdown.",
+    "IT10 P2.1/P5 (conditional direction): the valence of any HIF change in a WWOX-deficient developing neuron is open and the literature is two-sided (all non-WWOX): loss of neuronal HIF-alpha worsens neonatal hypoxic-ischaemic injury in mice (H-protect leaning), seizure models give both signs, and a persistent glycolytic state in neurons has its own documented cost (H-harm). 'A prolyl-hydroxylase inhibitor pushes in the disease direction' is withdrawn as a reason: it is a conditional arm, run only beside HIF-null and prolyl-hydroxylase-null controls. Direction stays uncertain."
    ],
    "intervention_direction": {
     "direction": "uncertain",
@@ -1762,10 +1872,12 @@
     "PDK1 lower in sign only in the human knockout organoid (inside the single-gene null) and not raised in the shRNA progenitor library either (n=1 per arm); PDH activity unchanged in a human cell line; human metabolic screens reported normal where done (count disputed, map N-06).",
     "Dichloroacetate carries a peripheral-nerve signal in other settings (map N-08); digoxin (HIF1A inhibition) was judged the wrong clinical object (N-07).",
     "The one severe WOREE case lists the ketogenic diet among ineffective interventions (DL-MOL-007).",
-    "In the human fibroblast knockdown line cytoplasmic HIF1alpha is DECREASED in two of four conditions (about 2-fold in normoxia normoglycaemia, nearly 2-fold in hypoxia normoglycaemia; no significant difference is reported for the other two), the nuclear fraction is unchanged and one blot repetition is shown; the mouse embryonic fibroblast increase is nuclear, so the two observations are in different compartments and neither confirms nor cleanly contradicts the other; the re-supply arm raises lactate in two conditions, so lactate is not dose-faithful.",
+    "In the human fibroblast pool (polyclonal, partial WWOX depletion) cytoplasmic HIF1alpha is DECREASED in two of four conditions (about 2-fold in normoxia normoglycaemia, nearly 2-fold in hypoxia normoglycaemia; no significant difference is reported for the other two) and the nuclear blot shows no difference, one blot repetition shown; the mouse embryonic fibroblast increase is nuclear, so the two are in different compartments and neither confirms nor cleanly contradicts the other. IT10 restatement: the same pool's HRE-luciferase (3 of 4), HIF1A mRNA (1.5 to 1.9-fold), total HIF-1alpha by ICC (2 of 4) and lactate (4 of 4) go UP, so this paper is more concordant with the MEF paper than the cytoplasmic blot alone suggests; the lactate is not dose-faithful (the re-supply arm raises lactate in two conditions).",
     "IT5 P9 (card I01): the PDK transcript is HIGHER in a human WWOX-knockout fibroblast line (qPCR, normoxia and normoglycaemia; PMID 35328751) and in Wwox-null mouse cells, and lower in sign only (inside the single-gene null; neurons +0.44) in the two human neural transcript systems: the sign differs by cell type and each comparison has its own confound. PDH restraint (PDK2 up, PDH down, Ser293 phosphorylation up; PDH activity down by about two thirds) is documented after chemoconvulsant status epilepticus in two non-WWOX epilepsy models, so a restraint found in a seizing WWOX-deficient brain would not be shown to be WWOX-dependent by itself.",
     "IT5 P9 (card I01): the one primary seizure-endpoint test found of dichloroacetate in a PDH-restrained epilepsy model (mouse, abstract level) showed no anticonvulsant effect and a slight pro-convulsant signal in one test; a randomized paediatric trial (congenital lactic acidosis) lowered post-meal lactate without moving the clinical outcomes measured; the Wwox-null mouse is hypoglycaemic and three of four glucose datasets point to lowering with a PDK inhibitor (diabetic adults, cirrhotic and healthy adults, endotoxaemic minipigs) and one septic-mouse study shows reversal alongside anorexia reversal; the sign in a Wwox-deficient animal is unmeasured.",
-    "IT7 P3/P1 (exploratory, verified): the six-gene module on which the glycolytic end of the chain rests did not transfer decisively to an independent WWOX-loss contrast (P47T hippocampus, p 0.060, inside its null; PDK1 lower by -0.08, not raised), and the signed network and the network with four duplicated HIF1A edges, already in the external network; the comparison therefore tests nothing about WWOX knowledge in general, and no added value was measurable showed no added value over a reference for ranking compounds on it while the signature route's effect was not detected and not excluded (rho 0.143, interval 0.039 to 0.243, minimum detectable effect about 0.157; weak positive counter-evidence: lower bound 0.039, top-decile hit rate 15 percent). The module is not shown to be a reproducible WWOX-loss feature, and the computational methods give no reason to prefer a PDK-directed compound over any other."
+    "IT7 P3/P1 (exploratory, verified): the six-gene module on which the glycolytic end of the chain rests did not transfer decisively to an independent WWOX-loss contrast (P47T hippocampus, p 0.060, inside its null; PDK1 lower by -0.08, not raised), and the signed network and the network with four duplicated HIF1A edges, already in the external network; the comparison therefore tests nothing about WWOX knowledge in general, and no added value was measurable showed no added value over a reference for ranking compounds on it while the signature route's effect was not detected and not excluded (rho 0.143, interval 0.039 to 0.243, minimum detectable effect about 0.157; weak positive counter-evidence: lower bound 0.039, top-decile hit rate 15 percent). The module is not shown to be a reproducible WWOX-loss feature, and the computational methods give no reason to prefer a PDK-directed compound over any other.",
+    "IT10 P2.1 (O8): mouse P17 brain with Wwox deletion shows no elevation of HIF-axis or glycolysis transcripts (Hif1a flat, Epas1 and Slc2a1 lower in the contrasts read); the in-vivo brain does not side with the organoid. Bulk transcripts, epileptic lines, post hoc computation.",
+    "IT10 P2.1/P5 (direction): loss of neuronal HIF-1alpha or HIF-2alpha worsens neonatal hypoxic-ischaemic injury in mice (abstract level for most reports; the HIF-1alpha reports come from one research group), so lowering the HIF axis may be harmful; the 'disease direction by construction' argument is withdrawn."
    ],
    "sources": {
     "cards": [
@@ -1789,7 +1901,9 @@
      "N-08"
     ],
     "documents": [
-     "disease-models/wwox/research/drug_repurposing/loop_demonstration_it7_p6_20261029/README.md"
+     "disease-models/wwox/research/drug_repurposing/loop_demonstration_it7_p6_20261029/README.md",
+     "disease-models/wwox/research/drug_repurposing/hif_it10_p21_20261031/README.md",
+     "disease-models/wwox/research/drug_repurposing/case_it9_p6_hif_axis_20261030/README.md"
     ],
     "registry_ids": [
      "DL-MECH-020",
@@ -1810,6 +1924,16 @@
       "pmid": "35328751",
       "paper_registry_ids": [
        "PAPER 023"
+      ]
+     },
+     {
+      "pmid": "42909904",
+      "paper_registry_ids": []
+     },
+     {
+      "pmid": "36828035",
+      "paper_registry_ids": [
+       "PAPER 007"
       ]
      }
     ]
@@ -1918,7 +2042,7 @@
     "status": "NOT_ASSESSED",
     "note": "Coverage of this need by catalogue compounds is not computed here; the repurposing module sets it."
    },
-   "notes": "Collision flagged: PDK1 vs PDPK1 (see targets). The need is the PDH node, not any one compound class (DCA, ketogenic diet, HIF1A inhibitors are routes).",
+   "notes": "Collision flagged: PDK1 vs PDPK1 (see targets). The need is the PDH node, not any one compound class (DCA, ketogenic diet, HIF1A inhibitors are routes). Restated 2026-10-31 (IT10 P5 integrating IT10 P2.1 and an independent verification): O2, O4, O7 extended; O8 to O10 added; rival explanations added as inferences; direction stays uncertain.",
    "basis": "observed"
   },
   {
@@ -4851,7 +4975,7 @@
    "observed": [
     {
      "id": "O1",
-     "statement": "Systemic knockout hippocampus: IBA1 and GFAP area fractions are increased in CA1, CA3 and whole hippocampus (dentate unmarked); Il6 and Tnf-a transcripts are both more than 1.5-fold up by qPCR (p below 0.05, n 4 per group; corrected 2026-10-30 from the earlier registry reading 'Il6, not Tnf-a', against the paper's Results 3.3 read in full text).",
+     "statement": "Systemic knockout hippocampus: IBA1 and GFAP area fractions are increased in CA1, CA3 and whole hippocampus (dentate unmarked); Il6 and Tnf-a transcripts are both about 1.5-fold or more up by qPCR (n 4 per group) but only Il6 reaches p below 0.05 (paper Results 3.3: 'Il6 significant at p < .05'; Fig 4E: Il6 about 1.48x with one asterisk, Tnf-a about 1.85x with a large error bar and no mark). Re-read 2026-10-31 against the publisher text and the figure image; the 2026-10-30 'correction' dropped the word Il6. The authors' own abstract and Discussion nevertheless state that both cytokines are increased ('overexpression of inflammatory cytokines Tnf-a and Il6'), which their significance mark does not support.",
      "model_type": "mouse_constitutive_knockout",
      "species": "mouse",
      "genotype": "mixed-background systemic knockout versus wild type",
@@ -4862,7 +4986,7 @@
      "readout_level": "protein",
      "direction_observed": "increased",
      "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
-     "limits": "Area fraction, not cell number; qPCR at n 4 per group (paper Results 3.3, full text re-read 2026-10-30; the registry/map R-06 reading 'Il6 not Tnf-a' is superseded); A systemic null is expected to be metabolically compromised (CLAIM 036), but that was measured in another knockout at P18 (a different Cre); it was not measured in this paper's knockout.",
+     "limits": "Area fraction, not cell number; qPCR at n 4 per group (paper Results 3.3, full text re-read 2026-10-30; the registry/map R-06 reading 'Il6 not Tnf-a' is superseded); A systemic null is expected to be metabolically compromised (CLAIM 036), but that was measured in another knockout at P18 (a different Cre); it was not measured in this paper's knockout. Il6 is about 1.48-fold, not strictly above 1.5; Tnf-a is a non-significant increase (figure values read by eye, not digitised). The earlier wording of this field ('both significant') is superseded; the registry/map R-06 reading 'Il6 not Tnf-a' was right on significance.",
      "pmid": "30290271",
      "locators": [
       {
@@ -4886,6 +5010,11 @@
        "kind": "document",
        "path": "disease-models/wwox/research/drug_repurposing/generation_it9_p1_20261030/CHANGES.md",
        "anchor": "NEED-NEUROINFLAMMATION-GLIA, observation O1"
+      },
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/axis_it10_p22_20261031/premises.tsv",
+       "anchor": "PR1"
       }
      ],
      "locator_status": "MANIFEST"
@@ -5228,7 +5357,8 @@
     "Many anti-inflammatories failed in neurodegenerative disease (other-disease precedent, T4).",
     "Opposite sign in the Wwox-mutant rat cortex (O4): glial cell density about half of wild type from PND 5; the authors of that paper state the contrast.",
     "No reactive-astrocyte programme and no microglia in the WWOX-deficient human organoid (O7); canonical reactive and cytokine transcripts are not among the thresholded rows of the P47T mouse (O8, absence is not a measurement).",
-    "Glial direction is context-dependent in the abstracts read (abstract-level, NOT WWOX EVIDENCE): neuronal STAT3 deletion reduced glial activation and damage in neonatal hypoxia-ischaemia (PMID 26669927) and astrocyte uncoupling preceded seizures in a temporal-lobe-epilepsy model (PMID 25765328), so glial change can be upstream of seizures and a glial lever is not simply 'less gliosis'; the commonly stated protective role of reactive astrocytes was NOT verified here."
+    "Glial direction is context-dependent in the abstracts read (abstract-level, NOT WWOX EVIDENCE): neuronal STAT3 deletion reduced glial activation and damage in neonatal hypoxia-ischaemia (PMID 26669927) and astrocyte uncoupling preceded seizures in a temporal-lobe-epilepsy model (PMID 25765328), so glial change can be upstream of seizures and a glial lever is not simply 'less gliosis'; the commonly stated protective role of reactive astrocytes was NOT verified here.",
+    "The null-hippocampus Tnf-a increase is not significant (Fig 4E); only Il6 is, although the authors' abstract and Discussion state that both cytokines are increased. Any proposal whose seed is the null-hippocampus TNF transcript (S085) rests on a non-significant observation; the P47T cerebellum TNF (n 6, p below 0.05) is a separate observation."
    ],
    "sources": {
     "cards": [
@@ -5382,7 +5512,7 @@
     "status": "NOT_ASSESSED",
     "note": "Coverage of this need by catalogue compounds is not computed here; the repurposing module sets it."
    },
-   "notes": "No card exists for this need in cards/; a card for the glial thread was written in the P10 cycle directory (J01_glial_reactivity_modulation) and is to be placed under cards/ by the orchestrator and then cited in sources.cards. The join's query Q-R-06 is the only machine route besides it. Added 2026-10-29 (P10): O4 to O10, two inferences, three counter-evidence lines, targets IL1R1 and CASP1.",
+   "notes": "No card exists for this need in cards/; a card for the glial thread was written in the P10 cycle directory (J01_glial_reactivity_modulation) and is to be placed under cards/ by the orchestrator and then cited in sources.cards. The join's query Q-R-06 is the only machine route besides it. Added 2026-10-29 (P10): O4 to O10, two inferences, three counter-evidence lines, targets IL1R1 and CASP1. Correction 2026-10-31 (IT10 P5 integrating IT10 P2.2): O1 restated (Il6 significant, Tnf-a not; authors' contrary claim recorded); counter-evidence added.",
    "basis": "observed"
   },
   {
@@ -5647,6 +5777,169 @@
     "note": "Coverage of this need by catalogue compounds is not computed here; the repurposing module sets it."
    },
    "notes": "search_use: endpoint and confounder only. A catalogue search keyed on this need should return no compounds by design.",
+   "basis": "observed"
+  },
+  {
+   "id": "NEED-REDOX-NRF2",
+   "label": "Redox state and NRF2 pathway tone in WWOX-deficient neural cells (ROS, NRF2 target activity, Il6/Il1b output)",
+   "family": "Development and glia",
+   "track": {
+    "value": "A",
+    "basis": "Allele-blind, downstream."
+   },
+   "goal": {
+    "value": "partial_benefit",
+    "basis": "Protection of function if ROS or a cytokine output is harmful; unresolved."
+   },
+   "observed": [
+    {
+     "id": "O1",
+     "statement": "Drosophila neuronal Wwox knockdown raises mitochondrial hydrogen peroxide (roGFP2-Orp1; t 3.221, P 0.0047, N 9-11; Supplementary Fig 2U).",
+     "model_type": "drosophila_knockdown",
+     "species": "Drosophila",
+     "genotype": "neuronal Wwox RNAi versus control",
+     "tissue_or_cells": "neurons",
+     "age_stage": "adult",
+     "comparison": "knockdown against control",
+     "readout": "roGFP2-Orp1 ratio",
+     "readout_level": "activity",
+     "direction_observed": "increased",
+     "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT",
+     "limits": "Invertebrate, one reporter, one panel; not a WWOX-DEE model.",
+     "pmid": "",
+     "locators": [
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/axis_it10_p22_20261031/premises.tsv",
+       "anchor": "PR6"
+      }
+     ],
+     "locator_status": "DOCUMENT"
+    },
+    {
+     "id": "O2",
+     "statement": "Wwox-null mouse embryonic fibroblasts: ROS is higher in late passage, not in early passage; redox-homeostasis transcripts (Nfe2l2, Nqo1 among them per the manifest; one sample per genotype) are higher in early-passage nulls; N-acetylcysteine corrects senescence escape.",
+     "model_type": "mouse_constitutive_knockout",
+     "species": "mouse",
+     "genotype": "Wwox -/- versus +/-",
+     "tissue_or_cells": "embryonic fibroblasts (non-neural)",
+     "age_stage": "early and late passage",
+     "comparison": "null against heterozygote",
+     "readout": "DHE flow cytometry; microarray heatmap",
+     "readout_level": "activity",
+     "direction_observed": "increased",
+     "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+     "limits": "Non-neural; transcripts of one sample per genotype for the redox set.",
+     "pmid": "37897534",
+     "locators": [
+      {
+       "kind": "manifest",
+       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID37897534.json",
+       "entry": 14,
+       "anchor": "Supplementary Figure 8 is a 16-row Agilent heatmap"
+      }
+     ],
+     "locator_status": "MANIFEST"
+    },
+    {
+     "id": "O3",
+     "statement": "Human WWOX-knockout cerebral organoid, week 15 (4 v 2 libraries, one deposit): IL6 0 counts in all six libraries, IL1B 0-11, TNF 0-1; NFE2L2 0.75x, NQO1 0.73x, HMOX1 1.67x, SRXN1 1.33x (cpm ratio, descriptive): no cytokine-expressing compartment and no coherent NRF2 signature.",
+     "model_type": "human_organoid_knockout",
+     "species": "human",
+     "genotype": "WWOX knockout versus WT",
+     "tissue_or_cells": "cerebral organoid, bulk RNA",
+     "age_stage": "culture week 15",
+     "comparison": "KO against WT",
+     "readout": "RNA counts",
+     "readout_level": "transcript",
+     "direction_observed": "mixed",
+     "evidence_scope": "COMPUTATIONAL_RESULT",
+     "limits": "Unplanned descriptive reading; 4 v 2 libraries; transcripts are not NRF2 activity; no microglia.",
+     "pmid": "",
+     "locators": [
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/axis_it10_p22_20261031/organoid_nrf2_rows.tsv",
+       "anchor": "NFE2L2"
+      },
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/axis_it10_p22_20261031/selfaudit_reread_output.txt",
+       "anchor": "C3"
+      }
+     ],
+     "locator_status": "DOCUMENT"
+    }
+   ],
+   "inferred": [
+    "That NRF2 pathway activity, ROS or cytokine protein differ in WWOX-deficient mammalian neural cells: none is measured.",
+    "That an early-passage antioxidant response (raised redox transcripts without raised ROS in MEFs) is adaptive and may already be at ceiling in neural cells: an open question."
+   ],
+   "intervention_direction": {
+    "direction": "uncertain",
+    "on": "NRF2 pathway activity",
+    "rationale": "Raise NRF2 only IF ROS is harmful and NRF2 tone insufficient (arm R) or IF a cytokine-expressing compartment exists and its Il6/Il1b output is harmful (arm C); both conditional, none established.",
+    "certainty": "unknown",
+    "do_not_assume": "That raising NRF2 is beneficial because ROS is raised in a fly or in late-passage fibroblasts; that a macrophage mechanism (Il6, Il1b lowered, Tnf unchanged) operates in microglia; that omaveloxolone or any compound acts in a WWOX-deficient neural cell."
+   },
+   "counter_evidence": [
+    "Human organoid shows no cytokine-expressing cells and no coherent NRF2 signature.",
+    "Early-passage redox transcripts are already higher in Wwox-null MEFs (possible ceiling).",
+    "Rat lde/lde glia are lower than wild type; null-hippocampus Tnf-a is not significant."
+   ],
+   "sources": {
+    "cards": [
+     "L01_nrf2_axis"
+    ],
+    "hypotheses": [],
+    "map_records": [],
+    "documents": [
+     "disease-models/wwox/research/drug_repurposing/axis_it10_p22_20261031/README.md",
+     "disease-models/wwox/research/drug_repurposing/cards/L01_nrf2_axis.card.json"
+    ],
+    "registry_ids": [
+     "DL-MECH-153"
+    ],
+    "papers": [
+     {
+      "pmid": "37897534",
+      "paper_registry_ids": []
+     }
+    ],
+    "registry_ids_note": "DL-MECH-153 (open lead, IPOTESI) exists and asks the direction of the G6PD and NFE2L2 contribution in the hNPC data against the Wwox-null MEF early-passage redox heatmap: it is the RELATED lead for observation O2 (and the NFE2L2 tone question), not a lead for the NRF2-activation hypothesis, for which no DL lead exists. Kept as the only NFE2L2 lead; checked 2026-10-31 (IT10 P5)."
+   },
+   "targets": [
+    {
+     "symbol": "NFE2L2",
+     "role": "transcription factor; intervention target (activation)",
+     "hgnc_id": "HGNC:7782",
+     "hgnc_name": "NFE2 like bZIP transcription factor 2",
+     "target_kind": "intervention_target"
+    },
+    {
+     "symbol": "KEAP1",
+     "role": "NRF2 repressor; intervention target (inhibition, covalent)",
+     "hgnc_id": "HGNC:23177",
+     "hgnc_name": "kelch like ECH associated protein 1",
+     "target_kind": "intervention_target"
+    }
+   ],
+   "pathways": [
+    {
+     "id": "GO:0006979",
+     "label": "response to oxidative stress"
+    }
+   ],
+   "evidence_scope": [
+    "WWOX_BIOLOGY_OTHER_CONTEXT",
+    "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+    "COMPUTATIONAL_RESULT"
+   ],
+   "coverage": {
+    "status": "NOT_ASSESSED",
+    "note": "Set by the repurposing module."
+   },
+   "notes": "Proposed by IT10 P2.2; a draft for orchestrator review, validated only structurally. Integrated 2026-10-31 (IT10 P5) with card L01_nrf2_axis. OVERLAP: observation O1 (fly roGFP2-Orp1) is the same datum as NEED-REDOX-OXIDATIVE-STRESS O1 and must not be counted twice across the two needs; the existing NEED-REDOX-OXIDATIVE-STRESS is the sign-context need (blocks a wrong-sign antioxidant rationale), this need is the NRF2-activation and cytokine-output need.",
    "basis": "observed"
   }
  ],

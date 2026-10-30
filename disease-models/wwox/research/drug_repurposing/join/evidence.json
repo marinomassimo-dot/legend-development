@@ -93868,6 +93868,18 @@
   "unaudited_contradictions": 0
  },
  {
+  "abstention": "NO_PAPER: the registry record itself cites no PMID or PAPER id and names no other record; missing datum: a citation in the record",
+  "complete_reads": 0,
+  "depths": [],
+  "digest": "1b3c6f8b60eb25a9",
+  "locators": 0,
+  "origin_id": "DL-MECH-178",
+  "papers": 0,
+  "query_id": "Q-DL-MECH-178",
+  "rows": [],
+  "unaudited_contradictions": 0
+ },
+ {
   "abstention": null,
   "complete_reads": 4,
   "depths": [

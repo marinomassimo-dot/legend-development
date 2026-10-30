@@ -1,6 +1,6 @@
 {
   "schema": "legend.wwox.work_order/1",
-  "research_update": "2026-10-29",
+  "research_update": "2026-10-31",
   "authoring": "Hand-authored from the work order of the priority review (section 6) and updated by the iteration-6 cycles. Validated at build time by repurposing_view.py: every need id must exist in the needs register, the entries follow the order of the needs register (no ranking), the kind must agree with the F/C/P positions the view assigns to that need, and the dates are ISO dates. The research-update date is shown apart from the catalogue build date. No score, no probability, no ranking of treatments or of needs. Window states (P7, rescue-window record section 5) are a closed vocabulary; for cards the build checks that the card wording itself carries the early-window statement.",
   "kinds": [
     "verificare un'ipotesi",
@@ -59,6 +59,14 @@
     "IT9-P6": {
       "path": "case_it9_p6_hif_axis_20261030/README.md",
       "label": "IT9 P6 case record: the HIF axis in the glycolytic shift"
+    },
+    "IT10-P2.2": {
+      "path": "axis_it10_p22_20261031/README.md",
+      "label": "IT10 P2.2 record: NRF2 axis and the Il6/Tnf-a correction"
+    },
+    "IT10-P2.1": {
+      "path": "hif_it10_p21_20261031/README.md",
+      "label": "IT10 P2.1 record: the HIF axis reopened in both directions"
     }
   },
   "entries": [
@@ -151,15 +159,16 @@
       "need": "NEED-PDH-PYRUVATE-AXIS",
       "kind": "verificare un'ipotesi",
       "question": "Is PDH phosphorylation higher in WWOX-deficient neural cells, and does a PDK inhibitor change it in a genotype-dependent way without lowering glucose in a hypoglycaemic model?",
-      "data": "The closing condition of card I01: PDHA1 Ser293 phosphorylation, total PDH, activity and a tracer experiment, genotype by inhibitor; a glycaemia arm in the constitutive knockout, where glucose at P10 is already about 95 against about 130. IT7 P6 2026-10-29: decisive measurement unchanged; read PDK1, LDHA, LDHB, HK2, SLC2A1 and BNIP3 transcripts beside it in the same cells, so the replicated WWOX-deficient human neural contrast that the P3 comparison named as missing is also a second transfer test; no computational ranking selects the compound arm. (IT7 P6: the network routes added no value and the signature route was not detected, not excluded.) IT8 P3 2026-10-29, restated IT9 P4a 2026-10-30: a nanomolar pan-isoform inhibitor is added alongside dichloroacetate for the genotype-by-inhibitor arm, because dichloroacetate inhibits the recombinant human kinase isoforms only at about 0.1 to above 5 millimolar in curated database rows and a null with it alone at cell-attainable concentrations would be uninterpretable, whereas in the one document that measured both on all four isoforms the inhibitor acts at about 20 to 170 nanomolar; caveats: pan-isoform (no isoform attribution), availability for research use not stated by the sources, neuronal engagement and brain exposure not shown, second-isoform assay on a different substrate. IT9 P6 2026-10-30 (card K01): the HIF axis upstream of PDK1 is a separate, conditional experiment that can share cells and lysates with this one: HIF-1alpha and HIF-2alpha protein in WWOX-deficient versus corrected human neural cells first (never measured; nuclear and cytoplasmic fractions, normoxia and hypoxia), then genetic HIF1A and EPAS1 knockdown and a PX-478-class lever against a prolyl-hydroxylase 'mimic' as the direction control in knockout and corrected cells; deciding readout lactate or acidification and glucose uptake plus PGK1, ALDOA, ENO1, PFKP and PKM individually (the six readout genes and the 10-gene set are guard-scope members: a change there confirms the seed, it does not validate a lever), with network activity and viability giving the valence; the arms are conditional on the HIF-dependent shift being adaptive or harmful.",
+      "data": "The closing condition of card I01: PDHA1 Ser293 phosphorylation, total PDH, activity and a tracer experiment, genotype by inhibitor; a glycaemia arm in the constitutive knockout, where glucose at P10 is already about 95 against about 130. IT7 P6 2026-10-29: decisive measurement unchanged; read PDK1, LDHA, LDHB, HK2, SLC2A1 and BNIP3 transcripts beside it in the same cells, so the replicated WWOX-deficient human neural contrast that the P3 comparison named as missing is also a second transfer test; no computational ranking selects the compound arm. (IT7 P6: the network routes added no value and the signature route was not detected, not excluded.) IT8 P3 2026-10-29, restated IT9 P4a 2026-10-30: a nanomolar pan-isoform inhibitor is added alongside dichloroacetate for the genotype-by-inhibitor arm, because dichloroacetate inhibits the recombinant human kinase isoforms only at about 0.1 to above 5 millimolar in curated database rows and a null with it alone at cell-attainable concentrations would be uninterpretable, whereas in the one document that measured both on all four isoforms the inhibitor acts at about 20 to 170 nanomolar; caveats: pan-isoform (no isoform attribution), availability for research use not stated by the sources, neuronal engagement and brain exposure not shown, second-isoform assay on a different substrate. IT9 P6 2026-10-30 (card K01): the HIF axis upstream of PDK1 is a separate, conditional experiment that can share cells and lysates with this one: HIF-1alpha and HIF-2alpha protein in WWOX-deficient versus corrected human neural cells first (never measured; nuclear and cytoplasmic fractions, normoxia and hypoxia), then genetic HIF1A and EPAS1 knockdown and a PX-478-class lever, with a genetic-first arm C (VHL or EGLN1 loss; a prolyl-hydroxylase inhibitor only beside HIF-null and prolyl-hydroxylase-null controls, direction conditional (H-protect), not a 'mimic' of a disease direction) in knockout and corrected cells; deciding readout lactate or acidification and glucose uptake plus PGK1, ALDOA, ENO1, PFKP and PKM individually (the six readout genes and the 10-gene set are guard-scope members: a change there confirms the seed, it does not validate a lever), with network activity and viability giving the valence; the arms are conditional on the HIF-dependent shift being adaptive or harmful. IT10 P5 2026-10-31 (restated after IT10 P2.1): step 0 is run at 5 percent oxygen (physioxia) as the primary condition beside 21 and 1 percent, with a hypoxia marker and size matching in any organoid arm, an activity-silenced arm and a MYC loss-of-function arm for the rival explanations, a multielectrode network-activity readout, and two independent knockout clones with isogenic add-back.",
       "would_change": "A genotype-by-inhibitor interaction would give the first WWOX-system row for DCA on this need; the known glucose-lowering and neuropathy signals would remain as tags. A computational ranking of compounds does not change this: the IT7 P3 comparison found no added value for the network routes and an effect not detected, not excluded for the signature route, so the kind of study and the position of the need are unchanged. A null with dichloroacetate alone is not read as absence of a PDK effect. The HIF experiment (card K01) would change a different decision: a negative premise measurement drops the HIF axis for neural cells; knockdown that lowers lactate while viability or differentiation worsen marks the shift as adaptive and drops the lever; the opposite marks it harmful and gives the first WWOX-system row for the lever (F3 to F2 by rule); lactate falling with viability, network activity and differentiation unchanged or discordant leaves the valence unresolved. It does not change the position of the PDK arm of this need.",
       "feasibility": "Human fibroblast precedent exists at abstract level; the WWOX-deficient cells (organoids from a public deposit) need an access request that exists as a draft only and is not to be filed from here.",
-      "date": "2026-10-30",
+      "date": "2026-10-31",
       "updated_by": [
         "IT7-P6",
         "IT8-P3",
         "IT9-P4a",
-        "IT9-P6"
+        "IT9-P6",
+        "IT10-P2.1"
       ],
       "cards": [
         "E03_pdk_inhibition_dca",
@@ -171,9 +180,10 @@
         "IT7-P6",
         "IT8-P3",
         "IT9-P4a",
-        "IT9-P6"
+        "IT9-P6",
+        "IT10-P2.1"
       ],
-      "summary_it": "Capire se la fosforilazione di PDH è più alta nelle cellule neurali prive di WWOX e se un inibitore di PDK la modifica in modo dipendente dal genotipo, aggiungendo un inibitore nanomolare pan-isoforma accanto al dicloroacetato (con riserve su selettività e disponibilità). In più (IT9 P6): un esperimento condizionale sull'asse HIF (proteina HIF-1alfa e HIF-2alfa nelle cellule neurali prive di WWOX, poi knockdown genetico e una leva di classe PX-478 contro un controllo di direzione), proposto e non eseguito.",
+      "summary_it": "Capire se la fosforilazione di PDH è più alta nelle cellule neurali prive di WWOX e se un inibitore di PDK la modifica in modo dipendente dal genotipo, aggiungendo un inibitore nanomolare pan-isoforma accanto al dicloroacetato (con riserve su selettività e disponibilità). In più (IT9 P6): un esperimento condizionale sull'asse HIF (proteina HIF-1alfa e HIF-2alfa nelle cellule neurali prive di WWOX, poi knockdown genetico e una leva di classe PX-478 contro un controllo di direzione), proposto e non eseguito. Restato (IT10 P2.1/P5): la direzione del cambiamento di HIF non è stabilita (condizionale); controllo genetico per primo; ossigeno fisiologico al 5% come condizione primaria; bracci per attività, MYC e stato di coltura.",
       "feasibility_it": "Precedente in fibroblasti umani a livello di abstract; le cellule WWOX-deficienti richiedono una richiesta di accesso solo in bozza, non inoltrata da qui."
     },
     {
@@ -340,6 +350,26 @@
       ],
       "summary_it": "Capire se la differenza di glucosio a P10 è reale e se una dose del vettore la corregge.",
       "feasibility_it": "Stesso laboratorio e stesso topo dell'aggiunta del gene; disponibilità non nota."
+    },
+    {
+      "need": "NEED-REDOX-NRF2",
+      "kind": "verificare un'ipotesi",
+      "question": "In WWOX-deficient versus isogenic corrected human neural cells that include microglia or CNS-macrophage-like cells, are NRF2 target activity, ROS and IL-6/IL-1beta protein different, and does NFE2L2-dependent activation (KEAP1 knockdown, omaveloxolone, monomethyl fumarate) change viability, lipid peroxidation, network activity or cytokine protein more in knockout than in corrected cells?",
+      "data": "Step 0: nuclear NRF2 and KEAP1 protein, NQO1 activity, NQO1/HMOX1/GCLM/SRXN1 transcripts, ROS reporter at baseline and after an oxidative challenge, IL-6 and IL-1beta protein after LPS with or without ATP. Step 1: the activation arms above and NFE2L2 knockdown, both genotypes, with MEA network activity and SOX2/NEUN fractions. Guards: GFAP/IBA1 counts are held-out endpoints; the six IT7 readout genes cannot decide.",
+      "would_change": "If neither ROS nor NRF2 tone nor cytokine protein differs and activation changes nothing: the axis moves to inert and the card is closed. If ROS is raised and activation corrects it in knockout cells more than in corrected cells (NFE2L2-dependent): arm R advances to a second model; omaveloxolone paediatric limits then become the development question.",
+      "feasibility": "Wet-lab with isogenic human neural cells and a microglia source; two commercial research compounds (availability UNVERIFIED); step 0 is a one-to-two-week assay set; whether a laboratory with the isogenic lines will run it: not known. (Kind set to 'verificare un'ipotesi' at integration: the existing rule requires it for a need whose lead position is F3; the P2.2 proposal said 'risolvere una premessa', and the premise-resolving character is carried by step 0.)",
+      "date": "2026-10-31",
+      "updated_by": [
+        "IT10-P2.2"
+      ],
+      "cards": [
+        "L01_nrf2_axis"
+      ],
+      "docs": [
+        "IT10-P2.2"
+      ],
+      "summary_it": "Capire se nelle cellule neurali carenti di WWOX ci sono ROS, tono di NRF2 o citochine (proteina) alterati, e se attivare NRF2 cambia vitalità o attività di rete in modo dipendente da NRF2.",
+      "feasibility_it": "Laboratorio con linee neurali isogeniche e una fonte di microglia; disponibilità non nota."
     }
   ],
   "window_states": {

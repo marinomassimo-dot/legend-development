@@ -512,6 +512,38 @@
     "CHEMBL4117516"
    ]
   },
+  "L01_nrf2_axis": {
+   "card_files": [
+    "cards/L01_nrf2_axis.card.json",
+    "cards/L01_nrf2_axis.packet.json"
+   ],
+   "compound_ids_outside_catalogue": [
+    "CHEMBL4303525"
+   ],
+   "links": [
+    {
+     "catalogue_id": "CAT:CHEMBL4303525",
+     "chembl_id": "CHEMBL4303525",
+     "role": "named_member",
+     "rule": "curator_declared_identifier (card_identity_declarations.tsv); curator (scientist-e, 2026-10-31) took the ChEMBL id of omaveloxolone from the IT10 P2.2 candidates table (identity checked there against ChEMBL: its own active moiety, prodrug flag 0) and confirmed it in catalog.jsonl.gz [CAT:CHEMBL4303525, name OMAVELOXOLONE]; ChEMBL id of the record, not a name-similarity score"
+    },
+    {
+     "catalogue_id": "CAT:CHEMBL589586",
+     "chembl_id": "CHEMBL589586",
+     "role": "named_member",
+     "rule": "curator_declared_identifier (card_identity_declarations.tsv); curator (scientist-e, 2026-10-31) took the ChEMBL id of monomethyl fumarate (the active moiety) from the IT9 P4c-D identity table via the IT10 P2.2 candidates table and confirmed it in catalog.jsonl.gz [CAT:CHEMBL589586]; named as a second NRF2-activating chemotype, a different rationale from the dropped IT9 DMF chain; ChEMBL id of the record, not a name-similarity score"
+    },
+    {
+     "catalogue_id": "CAT:CHEMBL2107333",
+     "chembl_id": "CHEMBL2107333",
+     "role": "named_member",
+     "rule": "curator_declared_identifier (card_identity_declarations.tsv); curator (scientist-e, 2026-10-31) took the ChEMBL id of dimethyl fumarate (the prodrug of monomethyl fumarate) from the IT9 P4c-D identity table via the IT10 P2.2 candidates table and confirmed it in catalog.jsonl.gz [CAT:CHEMBL2107333]; evidence is not transferred between the two fumarates or to omaveloxolone; ChEMBL id of the record, not a name-similarity score"
+    }
+   ],
+   "non_compound_ids_ignored": [
+    "CHEMBL4303525"
+   ]
+  },
   "P11_magnesium_nmdar_gate": {
    "card_files": [
     "cards/P11_magnesium_nmdar_gate.card.json",
@@ -863,9 +895,9 @@
    ]
   }
  },
- "cards_considered": 65,
- "cards_with_at_least_one_link": 23,
- "generated_utc": "2026-10-30T12:24:06Z",
+ "cards_considered": 66,
+ "cards_with_at_least_one_link": 24,
+ "generated_utc": "2026-10-30T18:41:47Z",
  "unmatched_cards": [
   "A02_proteasome_inhibitor_class",
   "A03_client_binding_chaperone",
