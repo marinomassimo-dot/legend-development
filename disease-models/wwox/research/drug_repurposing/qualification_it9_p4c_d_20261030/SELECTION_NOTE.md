@@ -37,3 +37,37 @@ The Orchestrator named the BRD4/BET axis and the HMGB1 axis as examples of mecha
 ### 1.6 Limits (stated in advance)
 
 Thresholds (z cap 20, promiscuity 5, 6 families, phase-based representative) are judgment settings fixed here, not tuned. HGNC group, ChEMBL and ATC fields may fail for some ids: the state is then UNKNOWN and the F-test 'not evaluable' (family stays eligible, flagged), never silently passed.
+
+## Part 2. Result of applying Part 1 (2026-10-30; produced by `select_p4c_d.py`, tables `selection_pool.tsv`, `selection_clusters.tsv`, `selected_p4c_d.tsv`, `excluded_selection_p4c_d.tsv`)
+
+### 2.1 The six families (rule outcome, not re-chosen)
+
+| # | Family (cluster: main target, arm) | Q / seed | Slot | Representative chosen by | Feasibility facts at selection (ChEMBL, fetched 2026-10-30) |
+|---|---|---|---|---|---|
+| 1 | apabetalone (BRD4, opposes) | Q5 / TNF | reserved BET axis (1.5) | highest max_phase in cluster (3) | small molecule, phase 3, no ATC; other eligible BET members: molibresib 2, birabresib 2, ezobresib 2, mivebresib 2, amredobresib 2, pelabresib 3 (L01XX84), RO-6870810 1 |
+| 2 | JTE-151 (RORC, opposes) | Q5 / IL6 | order (a to e) | only eligible opposes member | small molecule type 'Unknown' in ChEMBL, phase 1; re-open allowed by 1.5 |
+| 3 | infigratinib (FGFR3, mimics) | Q5 / IL1B | order (a to e) | max_phase 4 tie with futibatinib and pemigatinib; lowest family id | L01EN03, oral; flagged `oncology_targeted` |
+| 4 | dimethyl fumarate (KEAP1, mimics) | Q5 / TNF | order (a to e) | max_phase 4 tie with diroximel fumarate, equal z; lowest family id | L04AX07, oral; prodrug family of monomethyl fumarate |
+| 5 | gamcemetinib (MAPKAPK2, opposes) | Q4 / NPY | order (a to e) | only eligible member | name-exact identity UNVERIFIED (no structure check); phase 2 |
+| 6 | ceralasertib (ATR, mimics) | Q4 / GRIN2C | Q4 slot (1.3) | max_phase 3 | no ATC; ATR inhibitor |
+
+Counts (units: ChEMBL parent x cluster rows): pool 362 (360 distinct parents or unresolved families) from 439 pool rows (Q5 355 + Q4 84); 64 clusters (main target, arm); clusters with at least one eligible parent 31; exclusions (a row can carry several): E6 no human-exposure statement 193, E5 identity unresolved 153, E8 promiscuous 38, E4 modality 7, E1 round-1 5, E7 withdrawn 4, E3 topical 3; dispositions: selected 6, excluded 234, not taken (not representative or cap) 122.
+
+### 2.2 The two Orchestrator axes
+
+* **BET axis:** one slot reserved and filled (apabetalone as representative by phase). Other BET members are kept in `selection_pool.tsv` with their z values; the qualification record covers BET inhibitors as a class (tool compounds JQ1 and I-BET762/molibresib, birabresib, pelabresib) for CNS exposure and class toxicity, but the candidate of record is apabetalone.
+* **HMGB1 axis: NO eligible family; not forced in.** bifonazole (HMGB1 -T-> IL1B; ChEMBL phase 4) is excluded E3 (topical only by ATC D01AC10; no oral or parenteral route); CD24Fc is excluded as a biologic (an Fc fusion protein; the code marked it E8 promiscuous, 5 signed targets, because ChEMBL types it 'Unknown' and the modality test did not fire; the exclusion intended by 1.2 E4 is the same outcome); L6H21 (LY96 -P-> HMGB1 -T-> IL1B) and neoceptin-3 are excluded E5 (identity unresolved) and E6 (no human exposure). The decisive edge of the whole axis, HMGB1 -T-> IL1B, is nevertheless read in Part 3 for BET-independent reasons (it is the top Q5 text-mined edge with 78 references), as an edge reading with no compound qualified.
+* **Omaveloxolone** (NFE2L2 -T(-)-> IL1B, approved, eligible) was NOT taken: the ordering key (a to e) put six other clusters first (its z, capped at 20, was 6.6 and its seed IL1B was already represented). It is listed as the first not-taken eligible cluster with a stated rule reason, not as a judgement of merit.
+
+### 2.3 Case-by-case judgments required by 1.2 E2 (oncology-targeted agents; written before Part 3)
+
+* infigratinib is an oral FGFR1-3 tyrosine kinase inhibitor (cholangiocarcinoma) kept eligible because ChEMBL/registry knowledge suggests a paediatric non-oncology programme (achondroplasia); that expectation is general knowledge, UNVERIFIED, and is checked in Part 3 (registry search); if absent the exposure statement is oncology-only.
+* ceralasertib is a DNA damage response (ATR) inhibitor developed with chemotherapy or immunotherapy; no chronic non-oncology use is known to me (UNVERIFIED). It stays because 1.2 excludes only cytotoxic agents and 1.3 reserves a Q4 slot; its Q4 base is the weakest (ATR -P-> ETV1 -T-> GRIN2C). A DROP on the edge or on neurodevelopmental toxicity is an admissible outcome.
+* The other flags: none.
+
+### 2.4 Deviations from Part 1 and incidents (disclosed)
+
+1. **Tie-break implementation.** The first run of `select_p4c_d.py` ordered ties inside a cluster by `-len(family_ids)` instead of by lowest family id as written in 1.3. The only changed outcome: cluster KEAP1 (mimics) had diroximel fumarate (one DGIdb-only family id, name-matched identity) as representative; with the written tie-break it is dimethyl fumarate (ChEMBL id). The first-run table is kept as `selected_first_run_tiebreak_bug.tsv`; the code was corrected and the selection recomputed offline from the saved pool (`select_p4c_d.py reselect`). Seen before the correction: the first-run names.
+2. **Service log.** The first live run crashed at its last statement (writing the service log from list rows); all tables except `selection_service_log.tsv` had been written. The live part was re-run in full after the fix (log kept; the pool table of the re-run is compared with the saved one in the README).
+3. **Code gap, no outcome effect:** CD24Fc modality (2.2).
+4. Identity of 'name_exact_unique' parents (gamcemetinib, among others) is UNVERIFIED by structure; verification is item 1 of its record.
