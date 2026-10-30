@@ -1583,3 +1583,7 @@ Perimeter: zero spend, key-less reads, no account, no contact, nothing installed
 - **Not verified:** see section 5 of the report.
 
 - **Scope correction (2026-10-30, IT8 scout verification):** the iteration-7 ToolUniverse verdict (REMOVE) is limited to the Reactome-by-accession trial of 24 calls; "adds only a 404-as-success hazard" holds for that trial only, and the other ToolUniverse categories were not tested.
+
+## 2026-10-30 — iteration 8 close (capability gap record)
+- **Gap with evidence:** none new. The ranking tool's same-day snapshot ordering and the view tooling's fixed sleeps were repaired in-session (CHANGE = tools, with regressions).
+- **Not adopted, with reason:** no new external tool; the IT8 scout candidates stay TRIAL/WATCH with licences flagged (OREVID data CC BY-NC-SA, CMap-Evaluation GPL-3.0).
