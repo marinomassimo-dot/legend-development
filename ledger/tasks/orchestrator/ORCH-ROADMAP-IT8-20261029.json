@@ -54,8 +54,9 @@
     },
     {
      "step": "P5 scientific advance: complete loop on selected open questions (partial benefit; broad recovery)",
-     "status": "TODO",
-     "owner": "scientist-a"
+     "status": "DONE",
+     "owner": "scientist-a",
+     "evidence": "merged; two loops; verifier H1+M1-M6 repaired; 5 receipts recorded (925 chained)"
     }
    ]
   },
