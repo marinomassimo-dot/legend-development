@@ -1,0 +1,73 @@
+{
+ "_schema": "task record, Annex A.1c",
+ "TASK_ID": "ORCH-ROADMAP-IT10-20261031",
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "orchestrator",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Iteration 10: raise LEGEND's capacity to generate and discriminate WWOX drug-repurposing hypotheses: change the generation path with the logic of matching_guidance_v3, apply it to real questions, compare with IT9, and take at least one case through card, queue, ranking and view. Three goals stay open (recover a WWOX function; compensate its loss; functionally relevant partial benefit). A computational result is not therapeutic efficacy; an abstract is not a read; a compatible action is not a predicted benefit.",
+ "START_UTC": "2026-10-31T00:00:00Z",
+ "BASELINE": "e7a56ef893865f46299abe07c9ee4f3b0cb425fb = development/main (verified equal after fetch; CI green on that SHA)",
+ "AUTHORISED_QUEUE_20261031A": {
+  "MANDATE_STATE": "OPEN",
+  "OBJ_STEP1_GENERATION_PATH": {
+   "order": 1,
+   "steps": [
+    {
+     "step": "1.1-1.3 generation path: role-aware arms, origin-aware convergence, phenotype-first entry, member-junction engine v4, exposure vs probe; executable before/after; tests with inverses",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "generation_it10_p1_20261031: 31 tests; v4 reproduces v3 byte for byte with --junction off; 39 of 161 chains invalid, 72 seed-specific families lost, 49 gained (noise); hostile review: F5 matches an independent oracle, 8 of 12 mutations caught then 12 of 12 after revision"
+    }
+   ]
+  },
+  "OBJ_STEP2_RESEARCH": {
+   "order": 2,
+   "steps": [
+    {
+     "step": "2.1 HIF/metabolism follow-up",
+     "status": "DONE",
+     "owner": "scientist-c",
+     "evidence": "hif_it10_p21: neural premise not resolvable with public data, search closed; K01 restated; roxadustat IT9 reason withdrawn, DROP kept on label/pharmacology; no compound recommended"
+    },
+    {
+     "step": "2.2 distinct axis (Q5, NRF2)",
+     "status": "DONE",
+     "owner": "scientist-d",
+     "evidence": "axis_it10_p22: KEEP-AS-PROPOSAL conditional; omaveloxolone new name; Il6/Tnf-a premise error corrected at source; card L01"
+    },
+    {
+     "step": "2.3 Q1 protein-fate gap",
+     "status": "DONE",
+     "owner": "scientist-a",
+     "evidence": "recovery_it10_p23: ACK1 stability slice (dasatinib, bosutinib) conditional on protein present; decisive datum Q230P synthesis vs turnover; reopenable searches R1-R7"
+    },
+    {
+     "step": "2.4 complementary logic",
+     "status": "DONE",
+     "owner": "scientist-b",
+     "evidence": "complementary_it10_p24: JUMP inconclusive, Enrichr no advantage, no connector adopted"
+    }
+   ]
+  },
+  "OBJ_STEP3_OPERATIONAL": {
+   "order": 3,
+   "steps": [
+    {
+     "step": "3.1-3.4 comparison, pipeline propagation, view, verification",
+     "status": "DONE",
+     "owner": "orchestrator + scientist-e",
+     "evidence": "IT9 vs IT10 comparison; L01 card, NEED-REDOX-NRF2, ranking U59-U62, work order, view and shareable package regenerated; independent premise verification; battery see closing entry"
+    },
+    {
+     "step": "closure: integration, battery on final code in clean clone, push, cleanup",
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "seven task worktrees removed after verifying 0 unmerged and 0 dirty"
+    }
+   ]
+  }
+ },
+ "DECISIONS_TAKEN": [],
+ "DEFAULTS_TAKEN": [],
+ "STOP_LOG": []
+}
