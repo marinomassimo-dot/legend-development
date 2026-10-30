@@ -3315,11 +3315,38 @@ RANK_DIR = "ranking_it8_p9_20261029"
 RK_GROUP_IDS = ["G1", "G2a", "G2b", "G3", "G4a", "G4b", "G5", "GU"]
 RK_CLASSES = ["ORD", "WEAK", "INSUFF", "EXCL"]
 RK_VIEWS = ["general", "broad", "partial"]
-RK_TYPES = ["molecule", "class_of_molecules", "diet", "gene_therapy", "tool_compound", "tool_compound_and_class"]
+RK_TYPES = ["molecule", "class_of_molecules", "diet", "gene_therapy", "tool_compound", "tool_compound_and_class", "mechanism_probe"]
 RK_ORIGINS = ["known_track_before_it9", "generated_in_it9", "reference_or_control"]
 RK_NX = ["NX1", "NX2", "NX3"]
-RK_LINKS = ["effect_observed_in_wwox_system", "directionally_compatible_documented_action", "documented_association_target_listed", "other_disease_precedent_only", "other_disease_precedent_plus_wwox_case_level_signal", "card_inference_by_mechanism_no_catalogue_row"]
+RK_LINKS = ["effect_observed_in_wwox_system", "directionally_compatible_documented_action", "documented_association_target_listed", "other_disease_precedent_only", "other_disease_precedent_plus_wwox_case_level_signal", "card_inference_by_mechanism_no_catalogue_row", "computational_prediction_generated_in_it9"]
 RK_EVQ = ["favourable_with_comparator_may_rest_on_one_row", "favourable_thin", "favourable_thin_specificity_uncertain", "contested", "no_wwox_test_target_supported", "no_wwox_test_target_hypothesis", "weak_pertinence_or_outside_counter", "premise_missing"]
+
+
+def rk_proposal_skeleton(u: dict) -> dict:
+    """Shareable edition: a generated proposal is known from catalogue rows and qualification text that carry third-party names and values; only its state, type, origin, class and group stay."""
+    w = "withheld in this edition (names and values of generated proposals are in the full edition)"
+    u = json.loads(json.dumps(u))
+    u["label"] = f"IT9 {u['class_label'].lower()} ({u['unit_id']}): name withheld in this edition"
+    for v in u["views"].values():
+        if v.get("member"):
+            v["evidence"]["text"] = w
+            v["next"] = {"kind": v["next"]["kind"], "question": w, "would_change": w, "feasibility": w, "need": v["next"]["need"]}
+            v["triggers"] = {"rise": w, "fall": w, "leave": w}
+            v["main_limit"] = w
+            v["counter_statements"] = []
+    c = u["components"]
+    c["M_mechanism"]["text"] = w
+    c["T_transferability"]["transfer_limits"] = []
+    c["P_pharmacology"] = {"state": "qualified in IT9; " + w, "potency_with_assay_context": w, "human_exposure": w, "brain_penetration": w, "record": c["P_pharmacology"]["record"]}
+    c["X_counter_evidence"]["tags"] = []
+    c["U_uncertainty"]["unknown"] = [w]
+    c["U_uncertainty"]["text"] = "no WWOX-system result of the compound"
+    u["member_evidence"] = [dict(m, member="proposal (name withheld)", what="no WWOX-system assertion attributed to this member") for m in u["member_evidence"]]
+    u["evidence_level_note"] = {"of_molecule": "no WWOX-system result of the compound (proposed, not performed)", "of_mechanism_or_class": "the WWOX-side link is a seed observation", "untested_members": [], "attribution_rule": u["evidence_level_note"]["attribution_rule"]}
+    u["evaluation_depth_text"] = "IT9 qualification record, no card"
+    u["access"] = w
+    u["merge_reason"] = ""
+    return u
 
 
 def rk_digest_ok(o) -> bool:
@@ -3406,6 +3433,8 @@ def build_ranking(dr: Path, cur: dict, source: str):
     S = J["summary"]
     units = []
     for u in J["units"]:
+        if not full and u["kind"] == "it9_proposal":
+            u = rk_proposal_skeleton(u)
         views = {}
         for obj, va in u["views"].items():
             if not va.get("member"):
@@ -3476,6 +3505,7 @@ def build_ranking(dr: Path, cur: dict, source: str):
         "inventory": {k: inv[k] for k in ("families", "records", "by_class", "by_first_order", "need_linked_families_q1_q2_q3", "need_linked_families_plus_units", "distinct_display_names_total", "distinct_display_names_in_q1",
                                           "q1_with_opposed_action_elsewhere", "mnet_usable_families", "msig_neural_families", "need_linked_by_access_category", "all_families_by_access_category")},
         "queue": {"compounds": S["deepening_queue_compounds"]},
+        "it9": {"summary": S["it9"], "records": [dict(r) if full else {k: ("withheld" if k in ("compound", "decision") else v) for k, v in r.items()} for r in J.get("it9_records") or []]},
         "uncarded": [({k: r[k] for k in ("item_id", "item", "kind", "class", "evaluation_depth", "provenance", "related_unit", "reason", "what_would_reopen", "source_pointers")} if full else
                       {"item_id": r["item_id"], "item": "item without a card (name withheld in this edition)", "kind": r["kind"], "class": r["class"], "evaluation_depth": r["evaluation_depth"], "provenance": r["provenance"],
                        "related_unit": r["related_unit"], "reason": "withheld in this edition (names and reasons of items without a card are in the full edition)", "what_would_reopen": "", "source_pointers": ""}) for r in J.get("uncarded") or []],
@@ -3560,7 +3590,7 @@ UI_IT8 = {
     "rk_q_Q3": "Q3 · collegato solo da un membro di via, contato a parte (E1p)", "rk_q_Q4": "Q4 · azione documentata ma nessun bisogno del modulo collegato (E0a)", "rk_q_Q5": "Q5 · solo record di banca dati (E0)", "rk_q_UNIT": "membri di una voce già ordinata (E3)",
     "rk_inv_of": "di", "rk_inv_names": "{n} nomi distinti in Q1 (dopo raggruppamento per nome e sale, solo per la visualizzazione)", "rk_inv_access": "Categorie di accesso nelle famiglie collegate ai bisogni (si sovrappongono)",
     "rk_inv_opp": "famiglie Q1 con un'azione opposta su un altro bisogno", "rk_inv_queue": "Coda di approfondimento: {n} composti di Q1 su bisogni con osservazioni in WWOX, con stato approvato o accesso non ignoto. Se approfonditi entrerebbero come fratelli di una voce esistente, non come posizioni nuove.",
-    "rk_inv_depth_h": "Profondità di valutazione dichiarata", "rk_inv_depth": "E4 scheda con letture oltre l'abstract · E3 scheda con asserzioni · E2 scheda di astensione · E1c/E1/E1p/E0a/E0 solo catalogo (dal più al meno collegato ai bisogni).",
+    "rk_inv_depth_h": "Profondità di valutazione dichiarata", "rk_inv_depth": "E4 scheda con letture oltre l'abstract · E3 scheda con asserzioni · E3q record di qualificazione IT9 senza scheda · E2 scheda di astensione · E1c/E1/E1p/E0a/E0 solo catalogo (dal più al meno collegato ai bisogni).",
     "rk_ev_h": "Evoluzione: come cambia e quando", "rk_ev_lead": "L'ordine si rigenera da un solo comando, senza nuovo scheduler: senza informazione nuova il risultato è identico byte per byte. Ogni versione è un'istantanea datata; quando un gruppo cambia si dichiara la ragione, e l'ingresso di nuovi composti o la risoluzione di un pareggio non sono scambiati per un cambio di giudizio.",
     "rk_ev_asof": "Dati al", "rk_ev_rules": "Regole versione", "rk_ev_digest": "Impronta dell'ordine", "rk_ev_snaps": "Istantanee registrate", "rk_ev_none": "nessuna ancora: la prima istantanea fissa questo ordine",
     "rk_ev_reasons": "Classi di ragione di un cambio di valutazione", "rk_ev_non": "Cambi che non sono un cambio di giudizio",
@@ -3572,7 +3602,13 @@ UI_IT8 = {
     "rk_one_c_i": "Intervento", "rk_one_c_g": "Gruppo", "rk_one_c_why": "Motivo principale", "rk_one_c_lim": "Limite principale", "rk_one_c_chg": "Che cosa potrebbe cambiare la posizione",
     "rk_plain_h": "Dichiarazione", "rk_p3": "Informazione esplorativa IT7: il confronto di rete e di firma (256 famiglie) non è stato rilevato né escluso, ha escluso di proposito le schede curate e non può guidare da solo nessuna posizione. Nessuna voce è ordinata o riordinata da esso.",
     "rk_ty_h": "Tipo", "rk_ty_molecule": "molecola", "rk_ty_class_of_molecules": "classe di molecole", "rk_ty_diet": "dieta", "rk_ty_gene_therapy": "terapia genica / modalità genica", "rk_ty_tool_compound": "composto-strumento",
-    "rk_ty_tool_compound_and_class": "composto-strumento + classe", "rk_or_h": "Origine", "rk_or_known_track_before_it9": "pista nota prima di IT9", "rk_or_generated_in_it9": "generato in IT9", "rk_or_reference_or_control": "riferimento o controllo",
+    "rk_ty_tool_compound_and_class": "composto-strumento + classe", "rk_ty_mechanism_probe": "sonda di meccanismo (esperimento, non trattamento)",
+    "rk_le_computational_prediction_generated_in_it9": "previsione computazionale generata in IT9 (motore a semi), non un'osservazione",
+    "rk_it9_h": "Candidati qualificati in IT9: proposte generate, riferimenti e scarti", "rk_it9_lead": "Le proposte generate in IT9 sono distinte dalle piste note prima di IT9 (filtro «Origine»). Un record qualificato ha uno stato: PROPOSTA MANTENUTA (ordinata come proposta, mai come risultato), NON CONCLUSIVO (ancora insufficientemente valutato: non è in fondo e non è un giudizio di scarsa promessa), SCARTATO (escluso da questo confronto, con il motivo: supporto insufficiente per la catena o per il passo composto-bersaglio, mai «inattivo»), SOLO RIFERIMENTO (controllo o riferimento).",
+    "rk_it9_n": "{n} record qualificati, {d} composti distinti (JTE-151 ha due record)", "rk_it9_state": "Stato", "rk_it9_count": "Record", "rk_it9_cls": "Classe nella graduatoria",
+    "rk_it9_s_KEEP": "proposta mantenuta", "rk_it9_s_INCONCLUSIVE": "non conclusivo", "rk_it9_s_DROP": "scartato", "rk_it9_s_REFERENCE": "solo riferimento",
+    "rk_it9_org": "Voci per origine", "rk_it9_rec_h": "Elenco dei record", "rk_it9_rec_withheld": "I nomi dei composti dei record con origine solo di catalogo sono nell'edizione completa.",
+    "rk_it9_c_id": "Record", "rk_it9_c_c": "Composto", "rk_it9_c_u": "Voce", "rk_or_h": "Origine", "rk_or_known_track_before_it9": "pista nota prima di IT9", "rk_or_generated_in_it9": "generato in IT9", "rk_or_reference_or_control": "riferimento o controllo",
     "rk_nx_h": "Priorità del prossimo esperimento", "rk_nx_NX1": "NX1 · decisivo", "rk_nx_NX2": "NX2 · informativo", "rk_nx_NX3": "NX3 · basso o nullo oggi",
     "rk_nxp_NX1": "Il prossimo esperimento discriminante cambierebbe una decisione (alzare o fermare).", "rk_nxp_NX2": "Il prossimo esperimento scioglie un limite; la decisione si sposta di un passo al massimo.",
     "rk_nxp_NX3": "Nessun passo discriminante indicato, oppure l'esito non potrebbe cambiare la decisione prima che esista una premessa.",
@@ -3799,6 +3835,19 @@ def render_ranking(P: dict) -> str:
                        f'<td data-label="{E(U["rk_unc_c_d"])}">{E(r["evaluation_depth"])}</td><td data-label="{E(U["rk_unc_c_r"])}">{E(r["reason"])}' + (f' <span class="mini mut">{E(r["what_would_reopen"])}</span>' if r["what_would_reopen"] else "") + '</td>'
                        f'<td data-label="{E(U["rk_unc_c_u"])}">{E(r["related_unit"] or "—")}</td></tr>' for r in R.get("uncarded") or [])
     unc = (f'<h4>{E(U["rk_unc_h"])} ({numit("rk.unc.n", len(R.get("uncarded") or []))})</h4><p class="mini mut">{E(U["rk_unc_note"])}</p><div class="scrollx"><table class="tbl stk"><thead><tr><th>{E(U["rk_unc_c_i"])}</th><th>{E(U["rk_unc_c_c"])}</th><th>{E(U["rk_unc_c_d"])}</th><th>{E(U["rk_unc_c_r"])}</th><th>{E(U["rk_unc_c_u"])}</th></tr></thead><tbody>{unc_rows}</tbody></table></div>') if R.get("uncarded") else ""
+    it9 = R.get("it9") or {}
+    it9_html = ""
+    if it9.get("summary"):
+        sm = it9["summary"]
+        st_rows = "".join(f'<tr><th scope="row">{E(U["rk_it9_s_" + k])}</th><td>{numit("rk.it9.state." + k, v)}</td></tr>' for k, v in sm["by_state"].items())
+        org_rows = "".join(f'<li>{E(U["rk_or_" + k])}: {numit("rk.it9.origin." + k, v)}</li>' for k, v in sm["all_units_by_origin"].items())
+        rec_rows = "".join(f'<tr><th scope="row" data-label="{E(U["rk_it9_c_id"])}">{E(r["cand_id"])}</th><td data-label="{E(U["rk_it9_c_c"])}">{E(r["compound"])}</td><td data-label="{E(U["rk_it9_state"])}">{E(U["rk_it9_s_" + r["state"]])}</td>'
+                           f'<td data-label="{E(U["rk_it9_cls"])}">{E(U["rk_cl_" + r["class"]])}</td><td data-label="{E(U["rk_it9_c_u"])}">{E(r["unit_id"])}</td></tr>' for r in it9["records"])
+        it9_html = (f'<h4>{E(U["rk_it9_h"])}</h4><p class="mini">{E(U["rk_it9_lead"])}</p><p class="mini">{E(U["rk_it9_n"].format(n=sm["records_qualified"], d=sm["distinct_compounds"]))}</p>'
+                    f'<table class="tbl rk-plain"><thead><tr><th>{E(U["rk_it9_state"])}</th><th>{E(U["rk_it9_count"])}</th></tr></thead><tbody>{st_rows}</tbody></table>'
+                    f'<p class="mini"><b>{E(U["rk_it9_org"])}:</b></p><ul class="mini">{org_rows}</ul>'
+                    f'<details class="inl"><summary>{E(U["rk_it9_rec_h"])}</summary>' + ("" if full else f'<p class="mini mut">{E(U["rk_it9_rec_withheld"])}</p>')
+                    + f'<div class="scrollx"><table class="tbl stk"><thead><tr><th>{E(U["rk_it9_c_id"])}</th><th>{E(U["rk_it9_c_c"])}</th><th>{E(U["rk_it9_state"])}</th><th>{E(U["rk_it9_cls"])}</th><th>{E(U["rk_it9_c_u"])}</th></tr></thead><tbody>{rec_rows}</tbody></table></div></details>')
     inv = (f'<h3>{E(U["rk_inv_h"])}</h3><p class="mini">{E(U["rk_inv_lead"])}</p>'
            f'<table class="tbl rk-plain"><thead><tr><th>{E(U["rk_t_class"])}</th><th>{E(U["rk_inv_units"])}</th><th></th></tr></thead><tbody>{cl_rows}</tbody></table>'
            f'<p class="mini">{E(U["rk_inv_units_n"].format(u=len(units), r=M["units_ranked"], x=M["by_class"]["EXCL"], c=len(P["cur"]["cands"])))}</p>'
@@ -3807,7 +3856,7 @@ def render_ranking(P: dict) -> str:
            f'<p class="mini">{E(U["rk_inv_names"].format(n=I["distinct_display_names_in_q1"]))}. {E(U["rk_inv_opp"])}: {numit("rk.inv.opp", I["q1_with_opposed_action_elsewhere"])}.</p>'
            f'<p class="mini"><b>{E(U["rk_inv_access"])}:</b> {acc_rows}.</p>'
            f'<p class="mini">{E(U["rk_inv_queue"].format(n=R["queue"]["compounds"]))}</p>'
-           f'<p class="mini"><b>{E(U["rk_inv_depth_h"])}:</b> {E(U["rk_inv_depth"])}</p>' + unc)
+           f'<p class="mini"><b>{E(U["rk_inv_depth_h"])}:</b> {E(U["rk_inv_depth"])}</p>' + unc + it9_html)
     # evolution
     hist = R["history"]
     hrows = "".join(f'<li><code>{E(h["snapshot"])}</code> · {h["n"]} · ' + ", ".join(f'{E(U.get("rk_r_" + k, k))} {v}' for k, v in h["reasons"].items()) + '</li>' for h in hist) or f'<li class="mut">{E(U["rk_ev_none"])}</li>'

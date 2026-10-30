@@ -1040,10 +1040,10 @@ class ItalianFix(unittest.TestCase):
     def test_goal_tiles_count_every_position_link(self):
         cur = self.P["cur"]
         n_links = sum(len(c["links"]) for c in cur["cands"])
-        self.assertEqual(n_links, 51)
+        self.assertEqual(n_links, 52)
         goals = re.findall(r'<div class="goal (?:deep|partial)".*?<span class="mini mut">\((\d+)\)</span></div></div>', self.page, re.S)
         self.assertEqual(sum(map(int, goals)), n_links)
-        self.assertIn("I 51 legami candidato-bisogno sono contati tutti", self.page)
+        self.assertIn("I 52 legami candidato-bisogno sono contati tutti", self.page)
 
     def test_no_raw_status_code_in_the_header_and_italian_labels(self):
         head = self.page[:self.page.index('<nav ')]
@@ -1923,7 +1923,7 @@ class It7P7Data(unittest.TestCase):
         self.assertIn("details>summary{padding:3px 0;min-height:24px}", css)
         for t in re.findall(r'<table class="tbl[^"]*stk">.*?</table>', self.h, re.S):
             self.assertIn("data-label=", t)
-        self.assertEqual(len(re.findall(r'<table class="tbl[^"]*stk">', self.h)), 3 + 2 * len(self.cur["ranking"]["units"]) + 2)     # three IT7 tables; IT8 P9: one pathway and one member-evidence table per ranked entry, the uncarded items and the triggers
+        self.assertEqual(len(re.findall(r'<table class="tbl[^"]*stk">', self.h)), 3 + 2 * len(self.cur["ranking"]["units"]) + 3)     # three IT7 tables; IT8 P9: one pathway and one member-evidence table per ranked entry, the uncarded items and the triggers
 
     def test_p4_matrix_checker_passes(self):
         r = subprocess.run([sys.executable, "-I", str(DR / rv.P4_DIR / "check_context_matrix.py")], capture_output=True, text=True, timeout=120)

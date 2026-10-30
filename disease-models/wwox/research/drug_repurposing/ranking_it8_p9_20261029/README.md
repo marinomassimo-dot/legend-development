@@ -21,6 +21,8 @@ The ranking answers three questions and refuses a fourth:
 |---|---|
 | `ranking_it8.py` | the one script: `run`, `check`, `snapshot`, `diff`, `show`, `--help`; stdlib, offline, no clock, deterministic |
 | `unit_map.tsv` | curated, reviewable: how the 36 cards form 27 ranked interventions and 3 excluded axes, with the reason for every merge |
+| `proposals_map.tsv` | (R4) curated: which IT9-qualified candidates become which entry, their type, origin and need; the five qualification tables are read as stored |
+| `it9_records.tsv` | (R4) the 32 IT9 qualification records with state, class and entry |
 | `member_evidence.tsv` | (R3) one row per intervention member: tested in a WWOX system yes/no, what, source, depth; class/mechanism level kept apart |
 | `unit_caveats.tsv` | curated, reviewable (verifier repair, R2): per-intervention limits, counter-statements, questions and notes with source pointers; shown beside the items, never moving a group |
 | `uncarded_items.tsv` | curated, reviewable: 11 interventions identified (searched, abstained, opposed, excluded) that have no card, with source pointers |
@@ -34,7 +36,7 @@ The ranking answers three questions and refuses a fourth:
 | `unit_inputs.tsv` | per-intervention input digests (one per trigger) used by `diff` and `snapshot` |
 | `ranking.json` | everything above in one document: the feed of the view |
 | `snapshots/`, `changes.tsv` | dated versions of the unit table and the per-unit changes with their reason class |
-| `test_ranking_it8.py` | 36 offline tests, including mutation tests |
+| `test_ranking_it8.py` | offline tests, including mutation tests (see section 11) |
 
 Regenerate: `python3 -B disease-models/wwox/research/drug_repurposing/ranking_it8_p9_20261029/ranking_it8.py run` (needs `LEGEND_CATALOG_CACHE` for the
 view only), then `python3 -B framework/scripts/repurposing_view.py run` and `... run --source shareable`. `check` exits 1 when a file differs from a
@@ -311,3 +313,33 @@ the change as `method_revision`, inputs changed T7 on all entries and T1 on the 
 
 Before and after (general selection, Top 8): AAV9 gene addition G1; ethosuximide, lithium, d-APV/NMDAR class G2b; A51, ketogenic diet, vigabatrin G3;
 apinocaltamide G4a. Identical before and after; what changed is that each item now states its type, origin, the three fields and which members were tested.
+
+## 11. IT9 P6 and P5 Stage B (rules R4): the IT9-qualified candidates enter the ranking
+
+**What changed.** Rules R4 add one unit type (`mechanism_probe`), one link kind (`computational_prediction_generated_in_it9`), caveat kinds that carry a unit-specific next experiment, and entries for the
+IT9-qualified candidates. **No group of any existing entry moved** (order digest of the existing 30 entries and the three Top-8 lists are unchanged; tested); new entries are `new_entry` in the version trace.
+
+**How the candidates enter (documented proposal rule).** A candidate with a card is an ordinary entry: the card **K01** (IT9 P6, `case_it9_p6_hif_axis_20261030/`) gives entry U28 (PX-478 and the HIF axis; mechanism probe;
+origin `generated_in_it9`) whose position F3 on `NEED-PDH-PYRUVATE-AXIS` is produced by the existing rule. Candidates without a card are read from the five IT9 P4 qualification tables (as stored, no copy) and mapped in `proposals_map.tsv`:
+
+| P4 state | Class in the ranking | Position and group | Shown as |
+|---|---|---|---|
+| KEEP-AS-PROPOSAL | EVALUATED AND ORDERABLE | no WWOX-system result of any compound exists, so the proposal rule gives F3 and the group **G4b** (target-based hypothesis, proposed, not performed); never selectable | ordered, listed apart |
+| INCONCLUSIVE | STILL INSUFFICIENTLY EVALUATED | no position, group **GU**; the missing datum is the next experiment; not at the bottom and not a judgement of low promise | listed apart with its go/no-go |
+| DROP | EXCLUDED FROM A SPECIFIC COMPARISON WITH REASON | none | listed, with the decisive datum as the reason (insufficient support for the chain or the compound-to-target step; never "inactive") |
+| REFERENCE-ONLY | EXCLUDED (reference or control) | none; origin `reference_or_control` | listed, with the entry it is a reference for |
+
+Promise (the group), depth (E3q: a qualification record without a card, with the depth stated there) and next-experiment priority (NX, by the same rule) stay separate fields. Non-comparable contexts are not forced into one order: the IT9 entries sit
+in G4b or GU and the Top lists are untouched. An entry's origin is a filter (known track before IT9 / generated in IT9 / reference or control) and the inventory block counts them apart.
+
+**Counts (denominators stated).** Entries: 61 (28 card-based entries U01 to U28, 3 axes, 30 entries from qualification records). Classes: EVALUATED AND ORDERABLE 14, WEAK PERTINENCE OR COUNTER-EVIDENCE 5, STILL INSUFFICIENTLY EVALUATED 16, EXCLUDED 26 (3 axes, 16 DROP, 7 reference/control).
+Ranked (not excluded): 35 = 27 known-track + 8 generated in IT9. **The 32 IT9 qualification records (31 distinct compounds; JTE-151 has two records) ended as: KEEP-AS-PROPOSAL 4** (PX-478 as U28, belnacasan gated, apabetalone conditional, sulfopin conditional),
+**INCONCLUSIVE 5 records / 4 compounds** (belzutifan, JTE-151 twice, infigratinib, gamcemetinib), **DROP 16**, **REFERENCE-ONLY 7**. Still to qualify: 12 abstentions + 4 inconclusive compounds + the 11 uncarded interventions and the 97 Q1 catalogue families.
+
+**Top positions (unchanged).** General: AAV9 gene addition G1; ethosuximide, lithium, d-APV/NMDAR class G2b; A51, ketogenic diet, vigabatrin G3; apinocaltamide G4a. The four IT9 KEEP entries are G4b, next in line, not selected.
+**Questions that could change them:** for the IT9 entries, their own next experiments (U28: HIF protein in WWOX-deficient neural cells; belnacasan: the gate between the protein-cleavage edge and the transcript seed; apabetalone: baseline cytokines in
+WWOX-deficient microglia; sulfopin: after a MYC-specific lever); a first WWOX-system result for any of them would move it to a thin-favourable or contested group by the existing rule.
+
+**Shareable edition.** The generated proposals are known from catalogue rows and qualification text carrying third-party names and values; the shareable view keeps only state, type, origin, class and group for them (names and values are in the full edition), K01 excepted because the card names its subjects.
+
+**Tests added.** Proposal entries cover exactly the 31 candidate records except E-01 (covered by K01), states map to classes by the table above, no existing group moves, a missing origin or type is refused, and removing a candidate from `proposals_map.tsv` or a record from a qualification table changes the counts.

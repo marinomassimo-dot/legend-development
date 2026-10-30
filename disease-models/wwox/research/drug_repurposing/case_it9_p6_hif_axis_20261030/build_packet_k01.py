@@ -1,0 +1,180 @@
+#!/usr/bin/env python3
+"""Writes cards/K01_hif_axis_glycolytic_shift.packet.json (IT9 P6) and builds the card with the bridge. Deterministic, offline, stdlib.
+
+  build_packet_k01.py           write the packet and the card
+  build_packet_k01.py --check   exit 1 if either stored file differs from a fresh build
+  build_packet_k01.py --help
+
+The packet is a hand-authored statement in the shape of framework/scripts/repurposing_bridge.py (schema 1). Every sentence below is taken from the case record
+(README.md of this directory) and the sources it names; nothing here is a result of this script. Proposed, not performed; no efficacy claim.
+"""
+from __future__ import annotations
+
+import argparse
+import json
+import subprocess
+import sys
+from pathlib import Path
+
+HERE = Path(__file__).resolve().parent
+DR = HERE.parent
+ROOT = HERE.parents[4]
+CARD_ID = "K01_hif_axis_glycolytic_shift"
+CASE = "disease-models/wwox/research/drug_repurposing/case_it9_p6_hif_axis_20261030/README.md"
+P4CE = "disease-models/wwox/research/drug_repurposing/qualification_it9_p4c_e_20261030"
+
+CTX_ORG = {"disease_id": "WWOX-deficient human cerebral organoid model (engineered knockout; NOT a patient allele)", "genotype": "WWOX knockout versus wild type (4 versus 2 libraries, one laboratory)",
+           "species": "human", "cell_type": "cerebral organoid, bulk RNA", "developmental_stage": "organoid, culture week 15"}
+
+
+def packet() -> dict:
+    return {
+        "schema_version": 1,
+        "axis": "K / IT9 P6 case: the HIF axis in the glycolytic shift (Q2)",
+        "route": "BENEFICIO_PRECOCE",
+        "mission_dimensions": {
+            "track": "A",
+            "track_definition": "mission.md section 5: Track A = variant-independent WWOX loss of function; Track B = variant or allele-class specific (e.g. the Q230P missense class); Track C = repurposing, which is a method of reaching A or B, not a third lesion class",
+            "route": "BENEFICIO_PRECOCE",
+            "route_definition": "RECUPERO_PROFONDO = deep recovery of the lost function; BENEFICIO_PRECOCE = concrete partial benefit, symptomatic control or protection of function, with paediatric feasibility and time in view",
+            "route_note": "A mechanism experiment about whether the HIF-dependent part of the glycolytic shift is adaptive or harmful: partial benefit at best, and only if the shift is harmful. Not deep recovery. Track B: none.",
+            "the_two_dimensions_are_independent": "a card keeps both: a variant-independent lever can be a partial-benefit lever, and a lesion-specific one can aim at deep recovery",
+        },
+        "candidate": {"id": "P6-K-01", "name": "HIF axis lowering (genetic HIF1A and EPAS1 knockdown; PX-478-class lever) in the glycolytic shift, with a prolyl-hydroxylase 'mimic' as the direction control: a mechanism experiment, not a treatment"},
+        "disease_assertions": [
+            {"id": "DA-K01-001", "target_id": "HIF-1alpha protein and HIF target genes", "endpoint": "HIF-1alpha protein (normoxia) and HIF target transcripts; glucose uptake after HIF1A knockdown",
+             "direction": "INCREASE", "source": "PMID 25012504 (Abu-Remaileh 2014): Wwox-null mouse embryonic fibroblasts, MCF7 WWOX knockdown, brown fat and muscle of Wwox-null mice; NOT a neural cell type",
+             "locator": "disease-models/wwox/research/deepdive_manifests/PMID25012504.json; needs.json NEED-PDH-PYRUVATE-AXIS observation O1; case record section 2",
+             "epistemic_status": "DATO", "reading_depth": "complete_fulltext_read",
+             "context": {"disease_id": "Wwox-null mouse cells and tissues (non-neural, proliferative)", "genotype": "Wwox-null versus wild type", "species": "mouse and human cell line", "cell_type": "embryonic fibroblast; MCF7; brown fat; muscle", "developmental_stage": "embryonic fibroblast and adult tissue"},
+             "measured_result_note": "HIF-1alpha protein is raised in normoxia with HIF1A mRNA unchanged (less hydroxylation reported); HIF targets are higher; HIF1A knockdown rescues glucose uptake; digoxin lowers glucose, GLUT1 and PHD3 effects in the knockout mice. The difference disappears under hypoxia. No neural cell type was examined.",
+             "receipt": "FTR-20260814-25012504-01", "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT"},
+            {"id": "DA-K01-002", "target_id": "EPAS1, HK2, SLC2A1, ARNT, HIF1A transcripts", "endpoint": "ratio of normalised counts, knockout over wild type", "direction": "INCREASE",
+             "source": "GSE156243, the deposit of the 2021 organoid paper (PMID 34268881); descriptive extraction in the IT9 P4c-e package (organoid_target_gene_rows.tsv); not an evaluation by reversal of any gene set",
+             "locator": P4CE + "/organoid_target_gene_rows.tsv; " + P4CE + "/records/E-01_PX-478.md section 6",
+             "epistemic_status": "INFERENZA", "reading_depth": "queried_not_full_read", "context": CTX_ORG,
+             "measured_result_note": "EPAS1 3.80 times, HK2 4.73 times, SLC2A1 2.67 times, ARNT 1.46 times; HIF1A mRNA 0.84 times (flat, as expected for a protein-level axis); PDK1 0.78 times. Four versus two libraries, one laboratory; the glycolytic genes also fall with elapsed culture time in unperturbed spheroids, so composition or maturity can contribute. HK2, SLC2A1 and PDK1 belong to the six-gene IT7 readout (guard IT7_READOUT6): they are observations here and cannot be used to evaluate any compound.",
+             "evidence_scope": "COMPUTATIONAL_RESULT"},
+            {"id": "DA-K01-003", "target_id": "cytoplasmic HIF-1alpha protein", "endpoint": "HIF-1alpha protein by condition", "direction": "DECREASE",
+             "source": "PMID 35328751: human fibroblast line with WWOX sgRNA (the paper calls it knockout and also a downregulation line; non-neural); normoxia or hypoxia by normo- or hyperglycaemia",
+             "locator": "disease-models/wwox/research/deepdive_manifests/PMID35328751.json; needs.json NEED-PDH-PYRUVATE-AXIS counter_evidence item 4",
+             "epistemic_status": "DATO", "reading_depth": "partial_fulltext_read",
+             "context": {"disease_id": "human fibroblast WWOX sgRNA line (non-neural)", "genotype": "WWOX sgRNA CRISPR/Cas9 lentivirus versus control", "species": "human", "cell_type": "fibroblast line 1BR.3.N", "developmental_stage": "cell line"},
+             "measured_result_note": "Cytoplasmic HIF-1alpha is LOWER in two of four conditions (about two-fold in normoxia with normoglycaemia and nearly two-fold in hypoxia with normoglycaemia; equal or higher in the other two): the sign is opposite to the mouse embryonic fibroblast observation. Lactate is higher in all four conditions. HIF-1alpha and HIF-2alpha protein have never been measured in a WWOX-deficient neural cell.",
+             "receipt": "FTR-20261026-35328751-05", "evidence_scope": "WWOX_BIOLOGY_OTHER_CONTEXT"},
+        ],
+        "drug_assertions": [
+            {"id": "DR-K01-001", "target_id": "HIF-1alpha protein and HIF target genes (GLUT-1, VEGF)", "endpoint": "HIF-1alpha protein, transactivation and target genes after PX-478", "direction": "DECREASE",
+             "source": "PubMed abstracts (Koh 2008, cancer cell lines in normoxia and hypoxia; Welsh 2004, HT-29 colon xenografts); NOT WWOX EVIDENCE",
+             "locator": P4CE + "/records/E-01_PX-478.md sections 2 and 5; literature_abstracts.jsonl",
+             "epistemic_status": "DATO", "reading_depth": "abstract_only",
+             "context": {"disease_id": "cancer cell lines and a colon xenograft (not WWOX)", "genotype": "UNKNOWN", "species": "human cell lines in mouse xenografts", "cell_type": "cancer cell lines", "developmental_stage": "adult mouse"},
+             "measured_result_note": "PX-478 lowers HIF-1alpha protein and transactivation in cancer lines (reported mechanisms: lower HIF1A mRNA, inhibited translation, less deubiquitination) and lowers HIF-1alpha, VEGF and GLUT-1 in xenografts. BNIP3, HK2, LDHA and LDHB are not reported in the abstracts. No neural datum.",
+             "evidence_scope": "OTHER_DISEASE_PRECEDENT"},
+            {"id": "DR-K01-002", "target_id": "behaviour and hippocampal neurons after prenatal hypoxia; body weight and liver enzymes", "endpoint": "ASD-like behaviour, necrotic neurons, body weight, ALP and ALT", "direction": "UNKNOWN",
+             "source": "PubMed abstract of a 2024 rat study of prenatal hypoxia (PX-478 started one or three weeks after birth); NOT WWOX EVIDENCE",
+             "locator": P4CE + "/records/E-01_PX-478.md section 4", "epistemic_status": "DATO", "reading_depth": "abstract_only",
+             "context": {"disease_id": "rat prenatal-hypoxia model with ASD-like behaviour (not WWOX)", "genotype": "UNKNOWN", "species": "rat", "cell_type": "whole animal", "developmental_stage": "postnatal"},
+             "measured_result_note": "Improved behaviour and fewer hippocampal necrotic neurons are reported, and also lower body weight and raised ALP and ALT after the one-week start: a mixed result, abstract only, one model. Kept as UNKNOWN direction because favourable and unfavourable endpoints are reported together.",
+             "evidence_scope": "OTHER_DISEASE_PRECEDENT"},
+            {"id": "DR-K01-003", "target_id": "PX-478 quantitative activity annotation", "endpoint": "any quantitative activity or mechanism annotation", "direction": "UNKNOWN",
+             "source": "compound-database retrieval, molecule-first, for the PX-478 free-base record and its salt record, 2026-10-30; NOT WWOX EVIDENCE",
+             "locator": P4CE + "/chembl_mechanism.tsv; " + P4CE + "/identity.tsv", "epistemic_status": "DATO", "reading_depth": "queried_not_full_read",
+             "context": {"disease_id": "not applicable", "genotype": "not applicable", "species": "not applicable", "cell_type": "not applicable", "developmental_stage": "not applicable"},
+             "measured_result_note": "No quantitative activity annotation and no mechanism annotation is held: an ABSENT datum, not a negative. The structure carries a bis(2-chloroethyl)amino N-oxide (nitrogen-mustard alert); only an adult intravenous phase 1 study is registered; no CNS or paediatric datum.",
+             "evidence_scope": "EXTERNAL_DATABASE_RECORD"},
+            {"id": "DR-K01-004", "target_id": "HIF stabilisation by prolyl-hydroxylase inhibition (direction control)", "endpoint": "EGLN1 inhibition; seizure and thyromimetic label statements", "direction": "INCREASE",
+             "source": "compound-database values for roxadustat (EGLN1 IC50 in the nanomolar to micromolar range; thyroid-receptor EC50 in the low nanomolar range), EU product information (seizures common); NOT WWOX EVIDENCE",
+             "locator": P4CE + "/records/E-02_roxadustat.md", "epistemic_status": "DATO", "reading_depth": "partial_fulltext_read",
+             "context": {"disease_id": "renal anaemia (not WWOX)", "genotype": "UNKNOWN", "species": "human and rodent", "cell_type": "enzyme and whole organism", "developmental_stage": "adult"},
+             "measured_result_note": "A prolyl-hydroxylase inhibitor RAISES HIF: it moves the seeds in the disease direction (a 'mimic'), so it is a direction control for the experiment and not a lever; its own label lists seizures and thyromimetic action, which excludes roxadustat itself as a control in a seizure disorder (a prolyl-hydroxylase inhibitor without thyromimetic action is named in the experiment).",
+             "evidence_scope": "EXTERNAL_DATABASE_RECORD"},
+        ],
+        "p4_fields": {
+            "endpoint_pursued": "In WWOX-deficient versus corrected (isogenic) human neural cells: HIF-1alpha and HIF-2alpha protein, then whether lowering the axis (genetic HIF1A and EPAS1 knockdown, singly and together; a PX-478-class lever) lowers lactate or extracellular acidification, glucose uptake and glycolytic genes beyond the six IT7 readout genes, and what that does to network activity, viability and SOX2/NEUN fractions; a prolyl-hydroxylase inhibitor without thyromimetic action is the direction control.",
+            "functional_evidence_available": "None in a WWOX-deficient neural cell at the protein level. Non-neural: HIF-1alpha protein up in Wwox-null mouse embryonic fibroblasts (normoxia) with rescue by HIF1A knockdown; opposite sign in two of four conditions in a human fibroblast line. Human KO organoid: EPAS1 3.80 times, HK2 4.73 times, SLC2A1 2.67 times, HIF1A mRNA flat (transcripts, 4 versus 2 libraries).",
+            "temporal_or_model_limit": "WWOX-HIF-1alpha protein data are from non-neural cells; organoid data are transcripts of one deposit; the compound statements are cancer-model abstracts; human cells at the week of the phenotype are prenatal-equivalent.",
+            "cellular_context": {"target_expression": "HIF1A and ARNT are detected in all adult tissues (HPA, class level); EPAS1 adult brain expression is vascular; HIF protein in WWOX-deficient neural cells is UNKNOWN.",
+                                 "cells_tissue_stage": "none measured in WWOX-deficient neural cells at the protein level.", "coverage": "UNKNOWN.",
+                                 "limits": "HIF1A mRNA is flat in both human neural systems; the glycolytic transcripts can reflect maturity or composition; transcripts are not flux or HIF activity."},
+        },
+        "p4_card": {
+            "identity": "A mechanism, not one compound: the HIF axis (HIF-1alpha, HIF-2alpha/EPAS1, ARNT). Genetic knockdown is the primary arm; PX-478 (ChEMBL CHEMBL4117516, free base; salt record CHEMBL4061538; verified by structure; a nitrogen-mustard alert) is one PX-478-class pharmacological arm; a prolyl-hydroxylase inhibitor is the direction control (roxadustat is excluded: seizures and thyromimetic action on its label).",
+            "indication_and_transfer": "WWOX-DEE only IF a HIF-dependent part of the glycolytic shift exists in WWOX-deficient neural cells and is harmful. The direction of the shift is uncertain, so both outcomes are conditional hypotheses; nothing here is a treatment proposal.",
+            "novelty_for_woree": "NOT NEW as a pathway (DL-MECH-020 HIF1A to PDK to PDH; digoxin judged the wrong clinical object, N-07). NEW as a generated proposal (IT9 P2 Q2 'opposes' arm, qualified in IT9 P4c-e as KEEP-AS-PROPOSAL, a mechanism experiment).",
+            "state_of_known_roads": "DL-MECH-020, N-07, N-08, HYP-20260709-05 (PDK/DCA, card E03 and I01), card E02 (LDH).",
+            "pathway_and_objective": "BENEFICIO_PRECOCE; Track A.",
+            "expected_contribution": "UNKNOWN. The experiment decides whether the HIF-dependent shift is adaptive (then lowering it should worsen viability or differentiation) or harmful (then lowering it should improve them).",
+            "mechanism": "Targets: HIF1A (HGNC:4910), EPAS1 (HGNC:3374), ARNT (HGNC:700); direction wanted: lower the axis, only IF the shift is harmful; the HIF target genes SLC2A1, HK2, LDHA, LDHB, BNIP3 and PDK1 are the IT7 readout and may not be used to evaluate any compound (guard IT7_READOUT6).",
+            "sources": {"internal": ["DL-MECH-020", "N-07", "PAPER 024 (PMID 25012504)", "PAPER 023 (PMID 35328751)", "case record " + CASE, "generation_it9_p1_20261030/seeds.tsv S022 S023 S025 S028 S031 S032", "qualification_it9_p4c_e_20261030/records/E-01_PX-478.md and E-02_roxadustat.md", "qualification_it9_p4b_a_20261030/records (belzutifan, P3-03)"],
+                        "external_not_wwox_evidence": ["SIGNOR records on the ARNT_HIF1A complex (one review reference) and the primary record Bruick 2000 (HIF-1 to BNIP3, non-neural cell lines)", "PX-478 abstracts (cancer models)", "compound-database values and the EU label for roxadustat"]},
+            "evidence_for_and_against": {
+                "for": ["Wwox-null cells show higher HIF-1alpha protein and HIF targets, rescued by HIF1A knockdown (non-neural, normoxia).", "The human knockout organoid shows EPAS1 3.80 times, HK2 4.73 times and SLC2A1 2.67 times (transcripts)."],
+                "against": ["HIF1A mRNA is flat and HIF-1alpha protein is not measured in any WWOX-deficient neural cell.", "A human fibroblast line shows LOWER cytoplasmic HIF-1alpha in two of four conditions (opposite sign to the mouse cells).", "The engine edge HIF1A to BNIP3 is review-sourced; the primary record is in non-neural lines.", "PX-478 has no activity annotation in the compound database, a nitrogen-mustard alert, only adult phase 1 data and no CNS datum; the HIF axis supports neuronal energy and survival programmes, so lowering it may be harmful.", "The organoid glycolytic genes also fall with culture time, so maturity or composition can explain part of the shift (exploratory)."],
+                "transfer_limits": "No datum from a WWOX-deficient neural cell at the HIF protein or flux level; non-neural cells and cancer models only.",
+            },
+            "time_to_access": "UNKNOWN.",
+            "time_to_benefit": "UNKNOWN.",
+            "pharmacology": "PX-478: no activity or mechanism annotation in the compound database; action reported in cancer models; mustard alert; adult intravenous phase 1 only. Roxadustat: HIF-prolyl-hydroxylase inhibitor with seizures and thyromimetic action on its label (direction control only). Belzutifan (HIF-2alpha inhibitor) stays INCONCLUSIVE: HIF-2alpha protein in WWOX-deficient neural cells is unmeasured.",
+            "paediatrics_and_interactions": "UNKNOWN. No paediatric suitability is presumed by this card, for the candidate or for any historical authorisation of it for another use.",
+            "scope_of_checks": {"support_and_replication": "One laboratory for the mouse protein data; one deposit for the organoid transcripts; abstract-level compound statements.",
+                                "formal_checks": "The 25012504 reading is a complete read with a receipt; the 35328751 reading is partial with receipts; PX-478 statements are abstract level; the case record is a proposal awaiting an independent verification.",
+                                "card_inferences_owed_audit": "Statements marked INFERENZA, including every statement about what a lever would do in WWOX-deficient neural tissue, are OWED a blind audit by another actor."},
+            "question_history": ["IT9 P1 seeds S022, S023, S025, S028, S031, S032 (question Q2)", "IT9 P2 Q2 'opposes' arm (v2, v3 engine)", "IT9 P4b-a (belzutifan INCONCLUSIVE, AR-12 and dichloroacetate reference-only) and P4c-e (PX-478 KEEP-AS-PROPOSAL; roxadustat DROP as a lever)", "IT9 P6 2026-10-30: this card closes the case with a discriminating experiment with conditional arms"],
+            "predictions": "None; no engine, no score. The experiment is proposed, not performed.",
+            "next_measurement": "Discriminating experiment with conditional arms (case record section 7): in WWOX-deficient versus corrected human neural cells measure HIF-1alpha and HIF-2alpha protein first (premise); if raised, genetic HIF1A and EPAS1 knockdown (singly and together) and a PX-478-class lever against a prolyl-hydroxylase 'mimic' as the direction control, reading lactate or extracellular acidification, glucose uptake, HIF targets beyond the six IT7 readout genes, network activity and viability; arms are conditional on the direction of the HIF-dependent shift (adaptive versus harmful). Falsifier: HIF-1alpha and HIF-2alpha protein are not higher in the WWOX-deficient neural cells, or knockdown does not move lactate or the glycolytic module.",
+            "status": "hypothesis",
+            "value_added": "Puts the HIF axis, the only Q2 item with direct non-neural WWOX support, on one card with its counter-evidence (opposite sign in a human fibroblast line, flat HIF1A mRNA), the dropped and inconclusive neighbours and the guard that bars the six readout genes from evaluation.",
+            "clinical_census": "ClinicalTrials.gov API v2, 2026-10-30 (IT9 P4c-e): PX-478 one study overall (phase 1, adult solid tumours and lymphoma); epilepsy, seizure, hypomyelination, neurodevelopment, WWOX and paediatric terms 0. A zero is no hits for the query string on that date, not proof that no study exists.",
+        },
+        "not_known": ["HIF-1alpha and HIF-2alpha protein in any WWOX-deficient neural cell.", "Whether the HIF-dependent part of the glycolytic shift is adaptive or harmful.", "Whether PX-478 or any HIF-lowering lever reaches or acts in neural cells at tolerable exposure."],
+        "evidence_against": ["Opposite HIF-1alpha sign in a human fibroblast line in two of four conditions.", "No activity annotation in the compound database, a mustard alert and no CNS data for the one named compound.", "The organoid glycolytic genes also fall with culture time (maturity or composition)."],
+        "bridge_gaps_exposed": ["The WWOX-side rows are non-neural or transcript-level and the compound rows are cancer-model abstracts: no comparison is formed where target, endpoint and every context dimension must match."],
+        "translation": {"pediatric_suitability": "UNKNOWN", "cns_exposure": "UNKNOWN", "interactions": "UNKNOWN", "access": "UNKNOWN", "time_to_benefit": "UNKNOWN", "functional_rescue": "UNKNOWN"},
+        "p4_roadmap_fields": {"indication_and_transfer": "WWOX-DEE only IF a HIF-dependent part of the glycolytic shift exists in WWOX-deficient neural cells and is harmful.",
+                              "verification_scope": json.dumps({"support_and_replication": "One laboratory for the mouse protein data; one deposit for the organoid transcripts; abstract-level compound statements.",
+                                                                "formal_checks": "The 25012504 reading is a complete read with a receipt; compound statements are abstract level.",
+                                                                "card_inferences_owed_audit": "INFERENZA statements are owed a blind audit by another actor."})},
+        "label_lookup": {"status": "NOT_ATTEMPTED"},
+        "card_conventions": ["IPOTESI throughout; the bridge forces it. No score, rank, probability or blended index is carried.",
+                             "directional_summary compares signs only where target, endpoint and every context dimension match; UNRESOLVED is a statement about the record, not about the biology.",
+                             "Every WWOX-side row is non-neural or transcript-level; compound rows are NOT WWOX EVIDENCE.",
+                             "Abstract-level PubMed statements are labelled abstract_only; none carries a receipt.",
+                             "label_lookup is NOT_ATTEMPTED in the bridge: the bridge has no network.",
+                             "No dose, route, schedule or paediatric suitability appears."],
+        "no_new_reading": "No paper was newly read in full for this card; the readings are those of the IT9 P4c-e and P4b-a packages and the existing receipts named in the assertions.",
+        "target_census": {"dir": P4CE, "symbols": ["HIF1A", "EPAS1", "ARNT", "EGLN1", "BNIP3"]},
+    }
+
+
+def build() -> tuple[str, str]:
+    pk = json.dumps(packet(), indent=1, ensure_ascii=False) + "\n"
+    r = subprocess.run([sys.executable, "-B", str(ROOT / "framework/scripts/repurposing_bridge.py"), "-"], input=pk, capture_output=True, text=True, cwd=ROOT)
+    if r.returncode != 0:
+        # the bridge reads a path: fall back to a temporary file next to the stored packet
+        tmp = DR / "cards" / (CARD_ID + ".packet.json")
+        tmp.write_text(pk, encoding="utf-8")
+        r = subprocess.run([sys.executable, "-B", str(ROOT / "framework/scripts/repurposing_bridge.py"), str(tmp)], capture_output=True, text=True, cwd=ROOT)
+        if r.returncode != 0:
+            raise SystemExit("bridge failed:\n" + r.stdout + r.stderr)
+    return pk, r.stdout
+
+
+def main(argv=None) -> int:
+    ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
+    ap.add_argument("--check", action="store_true")
+    a = ap.parse_args(argv)
+    pk, card = build()
+    pp, cp = DR / "cards" / (CARD_ID + ".packet.json"), DR / "cards" / (CARD_ID + ".card.json")
+    if a.check:
+        ok = pp.exists() and cp.exists() and pp.read_text(encoding="utf-8") == pk and cp.read_text(encoding="utf-8") == card
+        print("K01: current" if ok else "K01: STALE")
+        return 0 if ok else 1
+    pp.write_text(pk, encoding="utf-8")
+    cp.write_text(card, encoding="utf-8")
+    print("wrote", pp.name, cp.name)
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

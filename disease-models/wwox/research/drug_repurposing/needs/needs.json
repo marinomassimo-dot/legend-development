@@ -1717,6 +1717,30 @@
        "anchor": "signature"
       }
      ]
+    },
+    {
+     "id": "O7",
+     "statement": "Human WWOX-knockout cerebral organoid, descriptive extraction (IT9 P4c-e): EPAS1 (HIF-2alpha gene) transcript is 3.80 times, HK2 4.73 times, SLC2A1 2.67 times and ARNT 1.46 times the wild-type level, HIF1A mRNA 0.84 times (flat) and PDK1 0.78 times; HIF-1alpha and HIF-2alpha PROTEIN were never measured in any WWOX-deficient neural cell. Ratios are of normalised counts, 4 knockout versus 2 wild-type libraries, one deposit; the glycolytic genes also fall with elapsed culture time, so maturity or composition can contribute. HK2, SLC2A1 and PDK1 belong to the six-gene IT7 readout (guard IT7_READOUT6): this is an observation, not an evaluation of any compound.",
+     "model_type": "human_cerebral_organoid_knockout",
+     "species": "human",
+     "genotype": "WWOX knockout (4 libraries) versus wild type (2 libraries)",
+     "tissue_or_cells": "bulk organoid RNA",
+     "age_stage": "culture week 15",
+     "comparison": "knockout against wild type",
+     "readout": "transcripts of HIF axis and glycolytic genes",
+     "readout_level": "transcript",
+     "direction_observed": "EPAS1, HK2, SLC2A1, ARNT higher; HIF1A mRNA flat; PDK1 lower in sign only",
+     "evidence_scope": "COMPUTATIONAL_RESULT",
+     "limits": "Transcript, not HIF protein, activity or flux; six libraries; one laboratory; descriptive only, no pre-registered contrast; the HIF-dependence of the shift is not tested.",
+     "pmid": null,
+     "locators": [
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/qualification_it9_p4c_e_20261030/records/E-01_PX-478.md",
+       "anchor": "EPAS1 2.8-9.1 v 1.2-1.7 (3.80)"
+      }
+     ],
+     "locator_status": "DOCUMENT"
     }
    ],
    "inferred": [
@@ -1724,7 +1748,8 @@
     "That ketone bodies, entering below PDH, restore oxidative flux without reactivating PDH is a mechanistic prediction, not an observation.",
     "That PDK1 is raised in WWOX-deficient human neural cells: PDK1 is not raised in either human neural transcript system held (lower in sign only, inside the single-gene null in both; hNPC one library per arm); HIF1A mRNA is flat in both; the middle link of the chain has no transcript support at PDK1.",
     "That a PDK inhibitor would release a WWOX-dependent PDH restraint (as opposed to a seizure-secondary one) is inferred; the discriminating measurement is PDHA1 Ser293 phosphorylation and PDH activity with a genotype-by-inhibitor interaction in WWOX-deficient human neural cells (card I01).",
-    "That a PDH restraint can be read from a transcript module, or that a compound can be preferred by a computational ranking on that module, is not supported: neither the P47T transfer test nor the method comparison (IT7 P3) measures PDH phosphorylation, activity or flux, and the comparison detected no added value for the network routes (signature route: not detected, not excluded)."
+    "That a PDH restraint can be read from a transcript module, or that a compound can be preferred by a computational ranking on that module, is not supported: neither the P47T transfer test nor the method comparison (IT7 P3) measures PDH phosphorylation, activity or flux, and the comparison detected no added value for the network routes (signature route: not detected, not excluded).",
+    "IT9 P6 (conditional): that the HIF-dependent part of the glycolytic shift is harmful (so that lowering the HIF axis could help) or adaptive (so that lowering it would worsen viability or differentiation) is NOT decided by any datum; HIF-1alpha and HIF-2alpha protein in WWOX-deficient neural cells are unmeasured, HIF1A mRNA is flat, and a human fibroblast line shows lower cytoplasmic HIF-1alpha in two of four conditions. Both outcomes of the discriminating experiment on card K01 are conditional hypotheses; the need direction stays uncertain."
    ],
    "intervention_direction": {
     "direction": "uncertain",
@@ -1747,7 +1772,8 @@
      "E03_pdk_inhibition_dca",
      "E04_ketogenic_lactate_axis",
      "EB-KD-01 (cards_early)",
-     "I01_pdk_inhibition_dca_premise_seizure_glycaemia"
+     "I01_pdk_inhibition_dca_premise_seizure_glycaemia",
+     "K01_hif_axis_glycolytic_shift"
     ],
     "hypotheses": [
      "HYP-20260709-01",
@@ -1861,6 +1887,13 @@
       "HOOK2",
       "KIF2A"
      ]
+    },
+    {
+     "symbol": "EPAS1",
+     "role": "HIF-2alpha (endothelial PAS domain protein 1), HIF target gene regulator; transcript higher in the human knockout organoid",
+     "hgnc_id": "HGNC:3374",
+     "hgnc_name": "endothelial PAS domain protein 1",
+     "target_kind": "pathway_member"
     }
    ],
    "pathways": [

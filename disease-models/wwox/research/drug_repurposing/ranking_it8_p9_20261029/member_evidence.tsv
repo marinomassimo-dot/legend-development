@@ -42,4 +42,14 @@ U24	molecule	Lithium	molecule	yes	1	1 benefit	behavioural seizure stage after on
 U25	molecule	Apinocaltamide	molecule	no	0		no WWOX-system assertion attributed to this member; 3 outside-WWOX assertion(s) attributed				3
 U25	molecule	tool compound(s) or precedent named in card H01_apinocaltamide_ttype	tool_compound	no	0		no WWOX-system assertion attributed to this member; 1 outside-WWOX assertion(s) attributed				1
 U26	class of molecules	class or mechanism level (card-level assertions and unnamed members)	class_level	no	0		no WWOX-system assertion attributed to this member				0
-U27	molecule	Extracellular magnesium (nutrient / supplement)	molecule	no	0		no WWOX-system assertion attributed to this member				0
+U27	molecule	Magnesium	molecule	no	0		no WWOX-system assertion attributed to this member				0
+U28	mechanism probe (a compound or genetic tool used for a mechanism experiment, not a treatment)	Roxadustat	molecule	no	0		no WWOX-system assertion attributed to this member; 1 outside-WWOX assertion(s) attributed				1
+U28	mechanism probe (a compound or genetic tool used for a mechanism experiment, not a treatment)	Px-478 Free Base	molecule	no	0		no WWOX-system assertion attributed to this member; 3 outside-WWOX assertion(s) attributed				3
+U28	mechanism probe (a compound or genetic tool used for a mechanism experiment, not a treatment)	class or mechanism level (card-level assertions and unnamed members)	class_level	no	0		no WWOX-system assertion attributed to this member				0
+U29	molecule	Belnacasan (caspase-1 inhibitor prodrug; active acid VRT-043198): gated proposal for the IL-1 axis	molecule	no	0		no WWOX-system assertion: the compound has not been tested in any WWOX system; the entry is a generated, qualified hypothesis				0
+U30	molecule	Apabetalone (BET inhibitor): conditional proposal for the microglial cytokine axis	molecule	no	0		no WWOX-system assertion: the compound has not been tested in any WWOX system; the entry is a generated, qualified hypothesis				0
+U31	mechanism probe (a compound or genetic tool used for a mechanism experiment, not a treatment)	Sulfopin (covalent PIN1 probe): mechanism experiment on MYC, after a MYC-specific lever	tool_compound	no	0		no WWOX-system assertion: the compound has not been tested in any WWOX system; the entry is a generated, qualified hypothesis				0
+U32	molecule	Belzutifan (HIF-2alpha inhibitor)	molecule	no	0		no WWOX-system assertion: the compound has not been tested in any WWOX system; the entry is a generated, qualified hypothesis				0
+U33	molecule	JTE-151 (RORgamma inverse agonist)	molecule	no	0		no WWOX-system assertion: the compound has not been tested in any WWOX system; the entry is a generated, qualified hypothesis				0
+U34	molecule	Infigratinib (FGFR inhibitor)	molecule	no	0		no WWOX-system assertion: the compound has not been tested in any WWOX system; the entry is a generated, qualified hypothesis				0
+U35	molecule	Gamcemetinib (MAPKAPK2 inhibitor)	molecule	no	0		no WWOX-system assertion: the compound has not been tested in any WWOX system; the entry is a generated, qualified hypothesis				0

@@ -1,0 +1,11 @@
+premise_id	premise	where_to_rederive
+P1	Wwox-null MEFs show higher HIF-1alpha protein in normoxia with unchanged mRNA, and HIF1A knockdown rescues glucose uptake (non-neural)	PMID 25012504; manifest `deepdive_manifests/PMID25012504.json`; receipt `FTR-20260814-25012504-01`; needs O1
+P2	A human fibroblast WWOX line shows LOWER cytoplasmic HIF-1alpha in two of four conditions (opposite sign)	PMID 35328751; needs counter_evidence item 4; seed S031
+P3	In the human KO organoid EPAS1 is 3.80x, HK2 4.73x, SLC2A1 2.67x, ARNT 1.46x, HIF1A 0.84x, PDK1 0.78x (4 v 2 libraries)	`qualification_it9_p4c_e_20261030/organoid_target_gene_rows.tsv`; recompute the ratios from GSE156243 normalised counts
+P4	HIF-1alpha and HIF-2alpha protein in WWOX-deficient neural cells were not found in the sources read	the absence statements of `qualification_it9_p4c_e_20261030/records/E-01_PX-478.md` section 6 and needs `inferred`; the search is a negative search
+P5	The engine edge is review-sourced; the primary record is non-neural	`edge_provenance_E.tsv` rows 1 and 2
+P6	PX-478: 0 ChEMBL activity and mechanism rows; mustard alert; adult IV phase 1 only; no CNS data	`chembl_mechanism.tsv`, `identity.tsv`, `trials_summary.tsv`
+P7	A prolyl-hydroxylase inhibitor raises HIF (disease direction); roxadustat label lists seizures and thyromimetic action	`records/E-02_roxadustat.md`
+P8	The six readout genes cannot be used to evaluate a lever (guard `IT7_READOUT6`)	`generation_it9_p1_20261030/guards.tsv`
+P9	The F/C/P position of K01 on `NEED-PDH-PYRUVATE-AXIS` is F3, produced by the existing rule from the pertinence rows	`repurposing_view.py positions`
+P10	The experiment arms are conditional: no outcome is assumed; the need direction stays uncertain	sections 6 and 7

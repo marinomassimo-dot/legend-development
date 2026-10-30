@@ -1,0 +1,32 @@
+cand_id	unit_id	label	unit_type	origin	need	related_unit
+P3-08	U29	Belnacasan (caspase-1 inhibitor prodrug; active acid VRT-043198): gated proposal for the IL-1 axis	molecule	generated_in_it9	NEED-NEUROINFLAMMATION-GLIA	U26
+P4CD-01	U30	Apabetalone (BET inhibitor): conditional proposal for the microglial cytokine axis	molecule	generated_in_it9	NEED-NEUROINFLAMMATION-GLIA	U26
+E-06	U31	Sulfopin (covalent PIN1 probe): mechanism experiment on MYC, after a MYC-specific lever	mechanism_probe	generated_in_it9	NEED-MYC-PROGENITOR-PROLIFERATION	U10
+P3-03	U32	Belzutifan (HIF-2alpha inhibitor)	molecule	generated_in_it9	NEED-PDH-PYRUVATE-AXIS	U28
+P3-09	U33	JTE-151 (RORgamma inverse agonist)	molecule	generated_in_it9	NEED-NEUROINFLAMMATION-GLIA	U26
+P4CD-02	U33	JTE-151 (RORgamma inverse agonist)	molecule	generated_in_it9	NEED-NEUROINFLAMMATION-GLIA	U26
+P4CD-03	U34	Infigratinib (FGFR inhibitor)	molecule	generated_in_it9	NEED-NEUROINFLAMMATION-GLIA	U26
+P4CD-05	U35	Gamcemetinib (MAPKAPK2 inhibitor)	molecule	generated_in_it9	NEED-INHIBITORY-HYPOFUNCTION	
+P3-01	U36	Balsalazide	molecule	generated_in_it9	NEED-PDH-PYRUVATE-AXIS	
+P3-02	U37	Ramelteon	molecule	generated_in_it9	NEED-PDH-PYRUVATE-AXIS	
+P3-04	U38	Ceperognastat (OGA inhibitor)	molecule	generated_in_it9	NEED-PDH-PYRUVATE-AXIS	
+P3-05	U39	Fosfestrol (prodrug of diethylstilbestrol)	molecule	generated_in_it9	NEED-INHIBITORY-HYPOFUNCTION	
+P3-06	U40	Implitapide	molecule	generated_in_it9	NEED-INHIBITORY-HYPOFUNCTION	
+P3-07	U41	Curcumin	molecule	generated_in_it9	NEED-NEUROINFLAMMATION-GLIA	
+P3-10	U42	Harmine	molecule	generated_in_it9	NEED-MYC-PROGENITOR-PROLIFERATION	U10
+P3-11	U43	Pomalidomide	molecule	generated_in_it9	NEED-MYC-PROGENITOR-PROLIFERATION	U10
+P3-12	U44	Defosbarasertib (Aurora B inhibitor)	molecule	generated_in_it9	NEED-MYC-PROGENITOR-PROLIFERATION	U10
+P3-13	U45	Pinometostat (DOT1L inhibitor)	molecule	generated_in_it9	NEED-MYC-PROGENITOR-PROLIFERATION	U10
+P4CD-04	U46	Dimethyl fumarate	molecule	generated_in_it9	NEED-NEUROINFLAMMATION-GLIA	U26
+P4CD-06	U47	Ceralasertib (ATR inhibitor)	molecule	generated_in_it9	NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	
+E-02	U48	Roxadustat (HIF prolyl-hydroxylase inhibitor): dropped as a lever, kept as a direction control of the HIF case	molecule	generated_in_it9	NEED-PDH-PYRUVATE-AXIS	U28
+E-03	U49	Nirogacestat (gamma-secretase inhibitor)	molecule	generated_in_it9	NEED-MYC-PROGENITOR-PROLIFERATION	U10
+E-04	U50	STM2457 (METTL3 inhibitor, tool compound)	mechanism_probe	generated_in_it9	NEED-MYC-PROGENITOR-PROLIFERATION	U10
+E-05	U51	D4476 (casein kinase 1 inhibitor, tool compound)	mechanism_probe	generated_in_it9	NEED-MYC-PROGENITOR-PROLIFERATION	U10
+P3-14	U52	AR-12 (reference: PDPK1, not a PDH-kinase hit)	molecule	reference_or_control	NEED-PDH-PYRUVATE-AXIS	U14
+P3-15	U53	Dichloroacetate (reference for the Q2 engine)	molecule	reference_or_control	NEED-PDH-PYRUVATE-AXIS	U14
+P3-17	U54	Felbamate (reference)	molecule	reference_or_control	NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	U21
+P3-18	U55	Memantine (reference, IT8 P3 qualification reused)	molecule	reference_or_control	NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR	U21
+P3-16	U56	Sirolimus (reference; card EB-MTOR-AX-01 unchanged)	molecule	reference_or_control	NEED-MTOR-AUTOPHAGY	U19
+P3-19	U57	Lenalidomide (artefact control)	molecule	reference_or_control	NEED-MYC-PROGENITOR-PROLIFERATION	
+P3-20	U58	AT9283 (artefact control)	molecule	reference_or_control	NEED-MYC-PROGENITOR-PROLIFERATION	
