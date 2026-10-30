@@ -22449,3 +22449,128 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Note:** class-level record. Not medical advice.
 
 ---
+
+---
+
+## LIT-0840
+**Short title:** Franchino 2024 - OMA1/DELE1/HRI integrated stress response in an AFG3L2 ataxia model (precedent for the sign of the ISR; NOT WWOX EVIDENCE)
+**Authors:** Franchino CA, Brughera M, Baderna V, et al.
+**Year:** 2024
+**Source type:** primary research — other-disease model, peer reviewed
+**Journal/source:** *Brain* 2024;147(3):1043
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 37804316 / DOI 10.1093/brain/awad340
+**Date discovered:** 2026-10-29 (IT8 package P5, Scientist B)
+**Date processed:** 2026-10-29 (`FTR-20261029-37804316-01`)
+**Discovery source:** IT8 package P5 (loop 1)
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_030`; reading is `partial_fulltext_read`, taken from the receipt, never upgraded.
+**Primary pathway:** none for this gene — other-disease precedent
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `drug_repurposing/advance_it8_p5_20261029/loop1_partial_benefit/README.md` · `CC-20261030-INTEGRATOR-IT8-BATCH-01`
+**Next action:** none — read and registered
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261029-37804316-01`; landing [[paper_registry_current#CORPUS-STUB-190]]
+**Note:** class-level record. Read in the Europe PMC full text (Introduction, Methods, Results, Discussion; main Figures 1, 4 and 5 opened as images; supplementary PDF and videos not opened). It reports an ISR that behaves as protective in an AFG3L2 ataxia model (kinase evidence is fibroblast siRNA; the target of the drug used is disputed at abstract level in PMID 28447936); it fixes no prior for the sign of a WWOX ISR. Not medical advice.
+
+---
+
+## LIT-0841
+**Short title:** Mahmood 2026 - ATF4 protein rises with mGluR activation without an mRNA change in neurons (confound for ISR readouts in hyperexcitable systems; NOT WWOX EVIDENCE)
+**Authors:** Mahmood N, Dang CL, Wu PY, et al.
+**Year:** 2026
+**Source type:** primary research — other-disease model, peer reviewed
+**Journal/source:** *Proceedings of the National Academy of Sciences of the USA* 2026;123(8):e2532796123
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 41706892 / DOI 10.1073/pnas.2532796123
+**Date discovered:** 2026-10-29 (IT8 package P5, Scientist B)
+**Date processed:** 2026-10-29 (`FTR-20261029-41706892-01`)
+**Discovery source:** IT8 package P5 (loop 1)
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_030`; reading is `partial_fulltext_read`, taken from the receipt, never upgraded.
+**Primary pathway:** none for this gene — other-disease precedent
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `drug_repurposing/advance_it8_p5_20261029/loop1_partial_benefit/README.md` · `CC-20261030-INTEGRATOR-IT8-BATCH-01`
+**Next action:** none — read and registered
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261029-41706892-01`; landing [[paper_registry_current#CORPUS-STUB-191]]
+**Note:** class-level record. Read in the Europe PMC full text end to end (figure legends read; figure images, the supplementary appendix and the dataset not opened). It shows ATF4 protein and phospho-eIF2a rising within minutes of mGluR agonism in neurons without an mRNA change; that network activity itself drives the rise is an inference, so an activity-silencing control is needed before an ATF4 protein rise in a hyperexcitable WWOX system is read as stress. Not medical advice.
+
+---
+
+## LIT-0842
+**Short title:** Shih 2026 - Meis2 restoration of PV-interneuron circuit, cognition and seizures in adult Cntnap2-null mice (precedent for post-onset restoration by a bypass; NOT WWOX EVIDENCE)
+**Authors:** Shih YT, Alipio JB, Klaft ZJ, et al.
+**Year:** 2026
+**Source type:** primary research — other-disease model, peer reviewed
+**Journal/source:** *Nature* 2026;658(8136):736
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42587157 / DOI 10.1038/s41586-026-10907-8
+**Date discovered:** 2026-10-29 (IT8 package P5, Scientist B)
+**Date processed:** 2026-10-29 (`FTR-20261029-42587157-01`)
+**Discovery source:** IT8 package P5 (loop 2)
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_030`; reading is `partial_fulltext_read`, taken from the receipt, never upgraded.
+**Primary pathway:** none for this gene — other-disease precedent
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `drug_repurposing/advance_it8_p5_20261029/loop2_broad_recovery/README.md` · `CC-20261030-INTEGRATOR-IT8-BATCH-01`
+**Next action:** none — read and registered
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261029-42587157-01`; landing [[paper_registry_current#CORPUS-STUB-192]]
+**Note:** class-level record. Read in part (Results on the PV-interneuron synapses, restoration, cognition and seizures, and the Discussion; Methods and supplementary tables not read; Figure 5 opened as an image). Adult over-expression of a different gene moves circuit and cognitive endpoints toward wild type; the seizure result is suppression after treatment before the stated typical onset age, so reversal and prevention are not separable. Not medical advice.
+
+---
+
+## LIT-0843
+**Short title:** Ding 2026 - Csnk2b gene replacement given at P3 (precedent with no post-onset arm; NOT WWOX EVIDENCE)
+**Authors:** Ding C, Wang X, Yuan Y, et al.
+**Year:** 2026
+**Source type:** primary research — other-disease model, peer reviewed
+**Journal/source:** *Cell Reports Medicine* 2026;7(6):102832
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 42190665 / DOI 10.1016/j.xcrm.2026.102832
+**Date discovered:** 2026-10-29 (IT8 package P5, Scientist B)
+**Date processed:** 2026-10-29 (`FTR-20261029-42190665-01`)
+**Discovery source:** IT8 package P5 (loop 2)
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_030`; reading is `partial_fulltext_read`, taken from the receipt, never upgraded.
+**Primary pathway:** none for this gene — other-disease precedent
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `drug_repurposing/advance_it8_p5_20261029/loop2_broad_recovery/README.md` · `CC-20261030-INTEGRATOR-IT8-BATCH-01`
+**Next action:** none — read and registered
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261029-42190665-01`; landing [[paper_registry_current#CORPUS-STUB-193]]
+**Note:** class-level record. Read in part (Results on the phenotype, AAV replacement and behaviour and seizure rescue, the Discussion, the Limitations and the AAV injection method; Introduction, other Methods and figures not read). Treatment is given at P3 only and its authors say efficacy after symptoms remains to be investigated: it contains no post-onset arm. Not medical advice.
+
+---
+
+## LIT-0844
+**Short title:** Lee 2021 - Shank3 re-expression in adult mice restores sociability and social encoding, within-animal (precedent for post-onset restoration of the same gene; NOT WWOX EVIDENCE)
+**Authors:** Lee DK, Li SW, Bounni F, et al.
+**Year:** 2021
+**Source type:** primary research — other-disease model, peer reviewed
+**Journal/source:** *Nature Neuroscience* 2021;24(9):1243
+**Identifier type:** PMID / DOI
+**Identifier value:** PMID 34253921 / DOI 10.1038/s41593-021-00888-4
+**Date discovered:** 2026-10-29 (IT8 package P5, Scientist B)
+**Date processed:** 2026-10-29 (`FTR-20261029-34253921-01`)
+**Discovery source:** IT8 package P5 (loop 2)
+**Status:** processed
+**Status note:** record created by `BATCH_20261019_030`; reading is `partial_fulltext_read`, taken from the receipt, never upgraded.
+**Primary pathway:** none for this gene — other-disease precedent
+**Transferability:** T4 — NOT WWOX EVIDENCE
+**clinical relevance:** BACKGROUND (non-WWOX). Not medical advice.
+**Claim links:** none
+**Working Model impact:** none
+**Report mentions:** `drug_repurposing/advance_it8_p5_20261029/loop2_broad_recovery/README.md` · `CC-20261030-INTEGRATOR-IT8-BATCH-01`
+**Next action:** none — read and registered
+**Evidence depth:** `partial_fulltext_read` — receipt `FTR-20261029-34253921-01`; landing [[paper_registry_current#CORPUS-STUB-194]]
+**Note:** class-level record. Read in part (abstract, Results on restoration, time dependency and local restoration, the Discussion and the tamoxifen/endoxifen Methods; remaining Methods, figures and supplements not read). Re-expression in adult mice after a lifelong deficit restores sociability and social encoding, with within-animal tracking (heterozygous, males only, one circuit). Not medical advice.

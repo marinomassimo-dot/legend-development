@@ -18268,3 +18268,93 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Next action:** none.
 **LIT link:** [[literature_tracking_log_current#LIT-0548]]
 **Note:** class-level record; summary-statistics study, no individual-level data. Not medical advice.
+
+---
+
+## CORPUS-STUB-190
+**Corpus paper no:** 190
+**Full title:** Sustained OMA1-mediated integrated stress response is beneficial for spastic ataxia type 5
+**Authors:** Franchino CA, Brughera M, Baderna V, et al.
+**Year:** 2024
+**Journal/source:** *Brain* 2024;147(3):1043
+**Identifier:** PMID 37804316 / DOI 10.1093/brain/awad340
+**Status:** processed — read (`FTR-20261029-37804316-01`, `partial_fulltext_read`, **partial full text**)
+**Record provenance:** created by `CC-20261030-INTEGRATOR-IT8-BATCH-01` (`BATCH_20261019_030`, IT8 batch path, Integrator); reading by Scientist B in IT8 package P5 (`drug_repurposing/advance_it8_p5_20261029/loop1_partial_benefit/README.md`) — identity from the artefact's own front matter.
+**Registry role:** 🔵 **OTHER_DISEASE_PRECEDENT — NOT WWOX EVIDENCE.** Read in the Europe PMC full text (Introduction, Methods, Results, Discussion; main Figures 1, 4 and 5 opened as images; supplementary PDF and videos not opened). It reports an ISR that behaves as protective in an AFG3L2 ataxia model (kinase evidence is fibroblast siRNA; the target of the drug used is disputed at abstract level in PMID 28447936); it fixes no prior for the sign of a WWOX ISR.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261029-37804316-01` (no work manifest and no verbatim locators exist for this reading; the receipt understates coverage)
+**Claim links:** none
+**Next action:** none owed by this record; the lead it feeds is ISR sign lesion-dependence (`DL-MECH-175`). Transfer to WWOX is UNVERIFIED.
+**LIT link:** [[literature_tracking_log_current#LIT-0840]]
+**Note:** class-level record; other-disease precedent. Not medical advice.
+
+---
+
+## CORPUS-STUB-191
+**Corpus paper no:** 191
+**Full title:** The ISR downstream effector ATF4 promotes mGluR-dependent long-term depression and associated behavior
+**Authors:** Mahmood N, Dang CL, Wu PY, et al.
+**Year:** 2026
+**Journal/source:** *Proceedings of the National Academy of Sciences of the USA* 2026;123(8):e2532796123
+**Identifier:** PMID 41706892 / DOI 10.1073/pnas.2532796123
+**Status:** processed — read (`FTR-20261029-41706892-01`, `partial_fulltext_read`, **partial full text**)
+**Record provenance:** created by `CC-20261030-INTEGRATOR-IT8-BATCH-01` (`BATCH_20261019_030`, IT8 batch path, Integrator); reading by Scientist B in IT8 package P5 (`drug_repurposing/advance_it8_p5_20261029/loop1_partial_benefit/README.md`) — identity from the artefact's own front matter.
+**Registry role:** 🔵 **OTHER_DISEASE_PRECEDENT — NOT WWOX EVIDENCE.** Read in the Europe PMC full text end to end (figure legends read; figure images, the supplementary appendix and the dataset not opened). It shows ATF4 protein and phospho-eIF2a rising within minutes of mGluR agonism in neurons without an mRNA change; that network activity itself drives the rise is an inference, so an activity-silencing control is needed before an ATF4 protein rise in a hyperexcitable WWOX system is read as stress.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261029-41706892-01` (no work manifest and no verbatim locators exist for this reading; the receipt understates coverage)
+**Claim links:** none
+**Next action:** none owed by this record; the lead it feeds is ATF4 protein and activity control (`DL-MECH-176`). Transfer to WWOX is UNVERIFIED.
+**LIT link:** [[literature_tracking_log_current#LIT-0841]]
+**Note:** class-level record; other-disease precedent. Not medical advice.
+
+---
+
+## CORPUS-STUB-192
+**Corpus paper no:** 192
+**Full title:** Procognitive restoration of PV neuron plasticity in neurodevelopmental disorders
+**Authors:** Shih YT, Alipio JB, Klaft ZJ, et al.
+**Year:** 2026
+**Journal/source:** *Nature* 2026;658(8136):736
+**Identifier:** PMID 42587157 / DOI 10.1038/s41586-026-10907-8
+**Status:** processed — read (`FTR-20261029-42587157-01`, `partial_fulltext_read`, **partial full text**)
+**Record provenance:** created by `CC-20261030-INTEGRATOR-IT8-BATCH-01` (`BATCH_20261019_030`, IT8 batch path, Integrator); reading by Scientist B in IT8 package P5 (`drug_repurposing/advance_it8_p5_20261029/loop2_broad_recovery/README.md`) — identity from the artefact's own front matter.
+**Registry role:** 🔵 **OTHER_DISEASE_PRECEDENT — NOT WWOX EVIDENCE.** Read in part (Results on the PV-interneuron synapses, restoration, cognition and seizures, and the Discussion; Methods and supplementary tables not read; Figure 5 opened as an image). Adult over-expression of a different gene moves circuit and cognitive endpoints toward wild type; the seizure result is suppression after treatment before the stated typical onset age, so reversal and prevention are not separable.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261029-42587157-01` (no work manifest and no verbatim locators exist for this reading; the receipt understates coverage)
+**Claim links:** none
+**Next action:** none owed by this record; the lead it feeds is post-onset restoration, endpoint class (`DL-MECH-177`). Transfer to WWOX is UNVERIFIED.
+**LIT link:** [[literature_tracking_log_current#LIT-0842]]
+**Note:** class-level record; other-disease precedent. Not medical advice.
+
+---
+
+## CORPUS-STUB-193
+**Corpus paper no:** 193
+**Full title:** CSNK2B gene replacement rescues autism-related phenotypes and establishes translational EEG biomarkers
+**Authors:** Ding C, Wang X, Yuan Y, et al.
+**Year:** 2026
+**Journal/source:** *Cell Reports Medicine* 2026;7(6):102832
+**Identifier:** PMID 42190665 / DOI 10.1016/j.xcrm.2026.102832
+**Status:** processed — read (`FTR-20261029-42190665-01`, `partial_fulltext_read`, **partial full text**)
+**Record provenance:** created by `CC-20261030-INTEGRATOR-IT8-BATCH-01` (`BATCH_20261019_030`, IT8 batch path, Integrator); reading by Scientist B in IT8 package P5 (`drug_repurposing/advance_it8_p5_20261029/loop2_broad_recovery/README.md`) — identity from the artefact's own front matter.
+**Registry role:** 🔵 **OTHER_DISEASE_PRECEDENT — NOT WWOX EVIDENCE.** Read in part (Results on the phenotype, AAV replacement and behaviour and seizure rescue, the Discussion, the Limitations and the AAV injection method; Introduction, other Methods and figures not read). Treatment is given at P3 only and its authors say efficacy after symptoms remains to be investigated: it contains no post-onset arm.
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261029-42190665-01` (no work manifest and no verbatim locators exist for this reading; the receipt understates coverage)
+**Claim links:** none
+**Next action:** none owed by this record; the lead it feeds is post-onset restoration, endpoint class (`DL-MECH-177`). Transfer to WWOX is UNVERIFIED.
+**LIT link:** [[literature_tracking_log_current#LIT-0843]]
+**Note:** class-level record; other-disease precedent. Not medical advice.
+
+---
+
+## CORPUS-STUB-194
+**Corpus paper no:** 194
+**Full title:** Reduced sociability and social agency encoding in adult Shank3 mutant mice are restored through gene re-expression in real-time
+**Authors:** Lee DK, Li SW, Bounni F, et al.
+**Year:** 2021
+**Journal/source:** *Nature Neuroscience* 2021;24(9):1243
+**Identifier:** PMID 34253921 / DOI 10.1038/s41593-021-00888-4
+**Status:** processed — read (`FTR-20261029-34253921-01`, `partial_fulltext_read`, **partial full text**)
+**Record provenance:** created by `CC-20261030-INTEGRATOR-IT8-BATCH-01` (`BATCH_20261019_030`, IT8 batch path, Integrator); reading by Scientist B in IT8 package P5 (`drug_repurposing/advance_it8_p5_20261029/loop2_broad_recovery/README.md`) — identity from the artefact's own front matter.
+**Registry role:** 🔵 **OTHER_DISEASE_PRECEDENT — NOT WWOX EVIDENCE.** Read in part (abstract, Results on restoration, time dependency and local restoration, the Discussion and the tamoxifen/endoxifen Methods; remaining Methods, figures and supplements not read). Re-expression in adult mice after a lifelong deficit restores sociability and social encoding, with within-animal tracking (heterozygous, males only, one circuit).
+**Evidence depth:** `partial_fulltext_read` (**partial full text**) — receipt `FTR-20261029-34253921-01` (no work manifest and no verbatim locators exist for this reading; the receipt understates coverage)
+**Claim links:** none
+**Next action:** none owed by this record; the lead it feeds is post-onset restoration, endpoint class (`DL-MECH-177`). Transfer to WWOX is UNVERIFIED.
+**LIT link:** [[literature_tracking_log_current#LIT-0844]]
+**Note:** class-level record; other-disease precedent. Not medical advice.
