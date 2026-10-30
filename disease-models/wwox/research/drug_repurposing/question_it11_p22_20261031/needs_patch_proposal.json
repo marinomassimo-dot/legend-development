@@ -1,0 +1,72 @@
+{
+ "schema": "legend.wwox.needs_patch_proposal/1",
+ "status": "PROPOSAL ONLY: not applied; validated on a scratch copy with apply_and_check_patch.py (check_needs.py exit status in README section 9). The card pointer (sources.cards) is NOT in the scratch test because the card file does not exist until the packet is placed and built.",
+ "ops": [
+  {
+   "op": "append_observation_limits",
+   "need": "NEED-MYC-PROGENITOR-PROLIFERATION",
+   "observation": "O2",
+   "append": " Within the same paper SCAR12 organoids show the MYC-positive fraction up while the radial-glia fraction is wild-type-like and neurons are not reduced (text lines 577 and 585-586), so MYC elevation alone does not give the composition phenotype; the box medians read by eye from Fig 3K are about 18 (wild type), 68 (knockout), 45 (SCAR12) and 55 (WOREE) percent with wide scatter and overlap.",
+   "reason": "the existing O2 limits say the composition phenotype is a knockout feature but do not state the consequence for the driver reading"
+  },
+  {
+   "op": "add_observation",
+   "need": "NEED-MYC-PROGENITOR-PROLIFERATION",
+   "observation": {
+    "id": "O4",
+    "statement": "Neuron-promoter AAV9-WWOX added at week 10 and read at week 16 raises the CTIP2-positive and SATB2-positive fractions of nuclei in WOREE-derived organoids to wild-type level (SCAR12 is already near wild type) and lowers hyperexcitability, without differentially expressed genes or cell-cycle change in radial glia. The layer-marker deficit therefore has a reversible neuron-stage component after the radial-glia phase.",
+    "model_type": "human_cerebral_organoid_knockout",
+    "species": "human",
+    "genotype": "WOREE-derived line, neuron-promoter WWOX add-back versus control vector",
+    "tissue_or_cells": "cerebral organoid cells",
+    "age_stage": "organoid, add-back week 10 to week 16",
+    "comparison": "add-back against control vector, and against wild type",
+    "readout": "CTIP2 and SATB2 fractions of nuclei (Fig 6B); radial-glia differential expression",
+    "readout_level": "protein",
+    "direction_observed": "increased toward wild type",
+    "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
+    "limits": "Fractions of nuclei, not neuron numbers; one laboratory; no untreated WOREE group for the control vector in the shown panel; the authors state neuronal WWOX was not detected in neural organoids at this stage; an intervention response (held out for compound evaluation); overlaps the gene-addition need and must not be counted twice across needs.",
+    "pmid": "42397075",
+    "locators": [
+     {
+      "kind": "document",
+      "path": "disease-models/wwox/research/drug_repurposing/question_it11_p22_20261031/premises.tsv",
+      "anchor": "PR4"
+     }
+    ],
+    "locator_status": "DOCUMENT"
+   }
+  },
+  {
+   "op": "add_counter_evidence",
+   "need": "NEED-MYC-PROGENITOR-PROLIFERATION",
+   "text": "POU5F1 is as prominent as MYC in the knockout radial-glia contrast (Fig 3F: capped significance for both), which fits retained progenitor state without a MYC-specific driver."
+  },
+  {
+   "op": "add_counter_evidence",
+   "need": "NEED-MYC-PROGENITOR-PROLIFERATION",
+   "text": "The inverse WWOX-MYC relation in the reference datasets is a developmental time course (Fig 3H-I), and MYC is phase-coupled in the knockout only (Fig 4D): maturity and cell-cycle state can explain a MYC rise without a driver role."
+  },
+  {
+   "op": "add_counter_evidence",
+   "need": "NEED-MYC-PROGENITOR-PROLIFERATION",
+   "text": "MYCN dosage sets cortical size in both directions (loss: microcephaly; gain: megalencephaly; abstracts of PMIDs 15821734 and 37710961), and progressive microcephaly is part of the WOREE picture (4 of 5 in one cohort, PMID 36537114): lowering MYC-family output could shrink the progenitor pool. Not WWOX evidence."
+  },
+  {
+   "op": "add_counter_evidence",
+   "need": "NEED-MYC-PROGENITOR-PROLIFERATION",
+   "text": "In mouse, neuron-stage (Synapsin-Cre) deletion reproduces the null phenotype as progenitor-stage (nestin-Cre) deletion does (PMID 33914858), and neuron-stage add-back rescues without correcting radial glia: a radial-glia MYC state is not shown to be needed for the severe mouse endpoints."
+  },
+  {
+   "op": "replace_intervention_direction_do_not_assume",
+   "need": "NEED-MYC-PROGENITOR-PROLIFERATION",
+   "new": "Restoring checkpoint competence or suppressing proliferation pharmacologically in a developing compartment has no safe formulation in the record (map section 2.2). A MYC-lowering lever is not assumed beneficial: MYC-family dose is two-sided in cortex, SCAR12 shows MYC elevation without the composition phenotype, and lithium (a Wnt activator) is a risk flag for this window, not a candidate."
+  },
+  {
+   "op": "add_card_pointer_after_card_exists",
+   "need": "NEED-MYC-PROGENITOR-PROLIFERATION",
+   "card": "M01_neurogenic_output_myc_window",
+   "note": "requires the packet to be placed under cards/ and the card built with the bridge; not part of the scratch test"
+  }
+ ]
+}

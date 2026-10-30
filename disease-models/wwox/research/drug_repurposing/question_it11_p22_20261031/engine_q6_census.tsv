@@ -1,0 +1,24 @@
+key	value
+source	disease-models/wwox/research/drug_repurposing/generation_it10_p1_20261031/results/dispositions_Q6.tsv
+rows_total	292
+rows[direct_search|DIAGNOSTIC_ONLY]	100
+rows[flagged_mimics|HELD_UNCERTAIN_ACTIVE_MOIETY]	15
+rows[flagged_opposes|HELD_UNCERTAIN_ACTIVE_MOIETY]	27
+rows[mimics|CONDITIONAL_IF_PROTECTIVE]	50
+rows[opposes|CONDITIONAL_IF_HARMFUL]	100
+candidate_rows_with_one_origin	192
+origin_labels	origins: PMID:42397075|expression=115; (none)=100; origins: PMID:42397075|protein=77
+distinct_family_ids	240
+it9_states	(none)=281; KEEP=1; DROP=7; REFERENCE=3
+first_node[opposes|JAK2]	25
+first_node[mimics|BRD4]	22
+first_node[opposes|AURKB]	18
+first_node[opposes|PIM2]	11
+first_node[mimics|AKT1]	8
+first_node[opposes|PGR]	7
+first_node[opposes|CREBBP]	6
+first_node[opposes|APH1A]	6
+first_node[opposes|PIN1]	5
+first_node[mimics|DYRK1A]	5
+first_node[opposes|DOT1L]	5
+first_node[opposes|CASP3]	4

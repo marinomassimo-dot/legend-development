@@ -1,0 +1,26 @@
+{
+ "schema": "legend.wwox.work_order_patch_proposal/1",
+ "status": "PROPOSAL ONLY: not applied; not validated against repurposing_view.py (the build-time validator), shape copied from the existing entries",
+ "entries_to_replace": [
+  {
+   "need": "NEED-MYC-PROGENITOR-PROLIFERATION",
+   "kind": "chiarire una controevidenza",
+   "question": "Is the MYC rise in WWOX-deficient radial glia a driver, a marker of retained progenitor state or a consequence of the cell-cycle shift, and does the layer-marker deficit that neuron-stage add-back restores define a compartment a postnatal lever could reach?",
+   "data": "Step 0 (computational, on the deposited single-cell data if access is granted): MYC and POU5F1 difference between knockout and wild-type radial glia within G1/G0 only and within matched potency strata. Step 1 (wet lab, two independent knockout clones and corrected lines): genetic MYC lowering against a cytostatic control, with SOX2+MYC+, pH3+ and NEUN+ fractions and absolute cell counts per organoid, wild-type-plus-compound groups included; A51 and a PIN1 probe as comparison arms only; add-back before week 4 and at week 10 with MYC and CTIP2/SATB2 readouts; the SCAR12 line stratified the same way.",
+   "would_change": "If MYC difference vanishes within cell-cycle and potency strata, MYC is a marker and the need moves to inert for lever purposes. If genetic MYC lowering moves neuronal fractions in knockout beyond corrected cells and cell counts hold, the driver reading advances to a second model and the development question (a prenatal window) becomes the limit. If progenitor-stage add-back lowers MYC while neuron-stage add-back restores layer markers alone, the two compartments are separated and only the neuron compartment is a postnatal target.",
+   "feasibility": "Wet lab with isogenic human organoid lines and an inducible MYC lever; the lines are not held (not known); the deposited single-cell data may need an access request.",
+   "date": "2026-10-30",
+   "updated_by": [],
+   "cards": [
+    "D01_a51",
+    "M01_neurogenic_output_myc_window"
+   ],
+   "docs": [
+    "REVIEW"
+   ],
+   "summary_it": "Capire se l'aumento di MYC nella glia radiale e' una causa, un marcatore dello stato progenitore o una conseguenza del ciclo cellulare, e se il deficit dei marcatori di strato corretto dal gene nei neuroni indica un compartimento raggiungibile dopo la nascita.",
+   "feasibility_it": "Laboratorio con linee isogeniche di organoidi e una leva MYC inducibile; linee non disponibili (non nota); dati single-cell depositati con possibile richiesta di accesso."
+  }
+ ],
+ "note": "The existing entry's question (does the A51 fall hold with a treated wild-type arm and independent differentiations) is kept inside Step 1 (wild-type-plus-compound groups, independent clones)."
+}
