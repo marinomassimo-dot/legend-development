@@ -1,0 +1,1718 @@
+work_id	name	target_chembl_id	target_name	target_genes	target_organism	standard_type	units	assay_type	n_rows	n_relation_eq	min_eq	max_eq	n_gt	n_lt	n_documents
+P3-10	harmine	CHEMBL3426	5-hydroxytryptamine receptor 5A	HTR5A	Homo sapiens	Ki	nM	B	2	0			2	0	2
+P3-10	harmine	CHEMBL289	Cytochrome P450 2D6	CYP2D6	Homo sapiens	Ki	nM	A	1	1	50000.0	50000.0	0	0	1
+P3-10	harmine	CHEMBL214	5-hydroxytryptamine receptor 1A	HTR1A	Homo sapiens	Ki	nM	B	1	0			1	0	1
+P3-10	harmine	CHEMBL1898	5-hydroxytryptamine receptor 1B	HTR1B	Homo sapiens	Ki	nM	B	1	0			1	0	1
+P3-10	harmine	CHEMBL1983	5-hydroxytryptamine receptor 1D	HTR1D	Homo sapiens	Ki	nM	B	1	0			1	0	1
+P3-10	harmine	CHEMBL322	5-hydroxytryptamine receptor 2A	Htr2a	Rattus norvegicus	Ki	nM	B	1	1	7790.0	7790.0	0	0	1
+P3-10	harmine	CHEMBL225	5-hydroxytryptamine receptor 2C	HTR2C	Homo sapiens	Ki	nM	B	1	1	9340.0	9340.0	0	0	1
+P3-10	harmine	CHEMBL3371	5-hydroxytryptamine receptor 6	HTR6	Homo sapiens	Ki	nM	B	1	1	1480.0	1480.0	0	0	1
+P3-10	harmine	CHEMBL3155	5-hydroxytryptamine receptor 7	HTR7	Homo sapiens	Ki	nM	B	1	1	5500.0	5500.0	0	0	1
+P3-10	harmine	CHEMBL2096905	Dopamine receptor	DRD1|DRD2|DRD3|DRD4|DRD5	Homo sapiens	Ki	nM	B	1	0			1	0	1
+P3-10	harmine	CHEMBL2111335	Metabotropic glutamate receptor	Grm1|Grm2|Grm3|Grm4|Grm5|Grm6|Grm7|Grm8	Rattus norvegicus	Ki	nM	B	1	0			1	0	1
+P3-10	harmine	CHEMBL2094109	Muscarinic acetylcholine receptor	CHRM1|CHRM2|CHRM3|CHRM4|CHRM5	Homo sapiens	Ki	nM	B	1	0			1	0	1
+P3-10	harmine	CHEMBL229	Alpha-1A adrenergic receptor	ADRA1A	Homo sapiens	Ki	nM	B	1	0			1	0	1
+P3-10	harmine	CHEMBL232	Alpha-1B adrenergic receptor	ADRA1B	Homo sapiens	Ki	nM	B	1	0			1	0	1
+P3-10	harmine	CHEMBL1867	Alpha-2A adrenergic receptor	ADRA2A	Homo sapiens	Ki	nM	B	1	1	2540.0	2540.0	0	0	1
+P3-10	harmine	CHEMBL1942	Alpha-2B adrenergic receptor	ADRA2B	Homo sapiens	Ki	nM	B	1	1	1130.0	1130.0	0	0	1
+P3-10	harmine	CHEMBL1916	Alpha-2C adrenergic receptor	ADRA2C	Homo sapiens	Ki	nM	B	1	1	810.0	810.0	0	0	1
+P3-10	harmine	CHEMBL213	Beta-1 adrenergic receptor	ADRB1	Homo sapiens	Ki	nM	B	1	0			1	0	1
+P3-10	harmine	CHEMBL210	Beta-2 adrenergic receptor	ADRB2	Homo sapiens	Ki	nM	B	1	0			1	0	1
+P3-10	harmine	CHEMBL228	Sodium-dependent serotonin transporter	SLC6A4	Homo sapiens	Ki	nM	B	1	0			1	0	1
+P3-10	harmine	CHEMBL222	Sodium-dependent noradrenaline transporter	SLC6A2	Homo sapiens	Ki	nM	B	1	1	3260.0	3260.0	0	0	1
+P3-10	harmine	CHEMBL2986	Sodium-dependent dopamine transporter	SLC6A3	Bos taurus	Ki	nM	B	1	0			1	0	1
+P3-10	harmine	CHEMBL3923	Nischarin	NISCH	Homo sapiens	Ki	nM	B	2	2	22.0	13800.0	0	0	1
+P3-10	harmine	CHEMBL4036	Cyclin-dependent kinase 5	CDK5	Homo sapiens	Inhibition	%	B	1	1	68.0	68.0	0	0	1
+P3-10	harmine	CHEMBL301	Cyclin-dependent kinase 2	CDK2	Homo sapiens	Inhibition	%	B	1	1	62.0	62.0	0	0	1
+P3-10	harmine	CHEMBL2094128	Cyclin-dependent kinase 2/cyclin A	CCNA1|CCNA2|CDK2	Homo sapiens	IC50	nM	B	3	2	33000.0	35000.0	1	0	3
+P3-10	harmine	CHEMBL1907600	Cyclin-dependent kinase 5/CDK5 activator 1	CDK5|CDK5R1	Homo sapiens	IC50	nM	B	7	4	8000.0	21000.0	3	0	7
+P3-10	harmine	CHEMBL2093867	Protein kinase C (PKC)	PRKCA|PRKCB|PRKCD|PRKCE|PRKCG|PRKCH|PRKCI|PRKCQ|PRKCZ|PRKD1|PRKD3	Homo sapiens	IC50	nM	B	2	0			2	0	2
+P3-10	harmine	CHEMBL258	Tyrosine-protein kinase Lck	LCK	Homo sapiens	IC50	nM	B	2	0			2	0	2
+P3-10	harmine	CHEMBL3905	Tyrosine-protein kinase Lyn	LYN	Homo sapiens	IC50	nM	B	2	0			2	0	2
+P3-10	harmine	CHEMBL1841	Tyrosine-protein kinase Fyn	FYN	Homo sapiens	IC50	nM	B	2	0			2	0	2
+P3-10	harmine	CHEMBL5131	Trypanothione reductase	TPR	Trypanosoma cruzi	Inhibition	%	B	1	1	11.0	11.0	0	0	1
+P3-10	harmine	CHEMBL2828	Casein kinase I isoform delta	CSNK1D	Homo sapiens	IC50	nM	B	1	1	1500.0	1500.0	0	0	1
+P3-10	harmine	CHEMBL2292	Dual specificity tyrosine-phosphorylation-regulated kinase 1A	DYRK1A	Homo sapiens	IC50	nM	B	45	44	8.81	700.0	0	1	35
+P3-10	harmine	CHEMBL4376	Dual specificity tyrosine-phosphorylation-regulated kinase 2	DYRK2	Homo sapiens	IC50	nM	B	13	13	120.0	3166.0	0	0	13
+P3-10	harmine	CHEMBL4575	Dual specificity tyrosine-phosphorylation-regulated kinase 3	DYRK3	Homo sapiens	IC50	nM	B	7	7	210.0	2857.0	0	0	7
+P3-10	harmine	CHEMBL5407	Serine/threonine-protein kinase pim-3	PIM3	Homo sapiens	IC50	nM	B	2	2	4300.0	4300.0	0	0	2
+P3-10	harmine	CHEMBL1951	Amine oxidase [flavin-containing] A	MAOA	Homo sapiens	Ki	nM	B	4	4	1.0	17.0	0	0	4
+P3-10	harmine	CHEMBL4159	3-hydroxyacyl-CoA dehydrogenase type-2	HSD17B10	Homo sapiens	Potency	nM	F	3	3	12589.3	25118.9	0	0	1
+P3-10	harmine	CHEMBL1293226	Lysine-specific demethylase 4E	KDM4E	Homo sapiens	Potency	nM	F	4	4	12589.3	28183.8	0	0	1
+P3-10	harmine	CHEMBL1293232	Survival motor neuron protein	SMN1|SMN2	Homo sapiens	Potency	nM	F	2	2	3162.3	3548.1	0	0	1
+P3-10	harmine	CHEMBL3563	Cruzipain		Trypanosoma cruzi	Potency	nM	F	1	1	39810.7	39810.7	0	0	1
+P3-10	harmine	CHEMBL1293231	Nuclear receptor ROR-gamma	Rorc	Mus musculus	Potency	nM	F	3	3	8912.5	35481.3	0	0	1
+P3-10	harmine	CHEMBL3577	Aldehyde dehydrogenase 1A1	ALDH1A1	Homo sapiens	Potency	nM	F	5	5	5623.4	31622.8	0	0	1
+P3-10	harmine	CHEMBL4261	Hypoxia-inducible factor 1-alpha	HIF1A	Homo sapiens	Potency	nM	F	2	2	6309.6	6309.6	0	0	1
+P3-10	harmine	CHEMBL1293255	15-hydroxyprostaglandin dehydrogenase [NAD(+)]	HPGD	Homo sapiens	Potency	nM	F	4	4	5011.9	31622.8	0	0	1
+P3-10	harmine	CHEMBL289	Cytochrome P450 2D6	CYP2D6	Homo sapiens	Potency	nM	A	1	1	7943.3	7943.3	0	0	1
+P3-10	harmine	CHEMBL340	Cytochrome P450 3A4	CYP3A4	Homo sapiens	Potency	nM	A	6	6	10000.0	39810.7	0	0	1
+P3-10	harmine	CHEMBL2039	Amine oxidase [flavin-containing] B	MAOB	Homo sapiens	Ki	nM	B	1	1	120800.0	120800.0	0	0	1
+P3-10	harmine	CHEMBL1075094	Nuclear factor erythroid 2-related factor 2	NFE2L2	Homo sapiens	Potency	nM	F	1	1	23109.3	23109.3	0	0	1
+P3-10	harmine	CHEMBL5501	Histone acetyltransferase KAT2A	KAT2A	Homo sapiens	Potency	nM	F	1	1	15848.9	15848.9	0	0	1
+P3-10	harmine	CHEMBL2457	Polyunsaturated fatty acid lipoxygenase ALOX15B	ALOX15B	Homo sapiens	Potency	nM	F	1	1	15848.9	15848.9	0	0	1
+P3-10	harmine	CHEMBL4203	Dual specificity protein kinase CLK4	CLK4	Homo sapiens	Potency	nM	F	1	1	67.1	67.1	0	0	1
+P3-10	harmine	CHEMBL4224	Dual specificity protein kinase CLK1	CLK1	Homo sapiens	Inhibition	%	B	1	0			0	0	1
+P3-10	harmine	CHEMBL1741193	Chromobox protein homolog 1	CBX1	Homo sapiens	Potency	nM	F	1	1	89125.1	89125.1	0	0	1
+P3-10	harmine	CHEMBL5027	Flap endonuclease 1	FEN1	Homo sapiens	Potency	nM	F	1	1	50118.7	50118.7	0	0	1
+P3-10	harmine	CHEMBL1293258	Mothers against decapentaplegic homolog 3	SMAD3	Homo sapiens	Potency	nM	F	1	1	35481.3	35481.3	0	0	1
+P3-10	harmine	CHEMBL6035	Thioredoxin reductase 1, cytoplasmic	Txnrd1	Rattus norvegicus	Potency	nM	F	1	1	56234.1	56234.1	0	0	1
+P3-10	harmine	CHEMBL1075163	Serine/threonine-protein kinase haspin	HASPIN	Homo sapiens	IC50	nM	B	3	3	590.0	590.0	0	0	3
+P3-10	harmine	CHEMBL4078	Acetylcholinesterase	ache	Electrophorus electricus	IC50	nM	B	3	3	10100.0	22890.0	0	0	3
+P3-10	harmine	CHEMBL4078	Acetylcholinesterase	ache	Electrophorus electricus	Inhibition	%	B	1	1	74.1	74.1	0	0	1
+P3-10	harmine	CHEMBL220	Acetylcholinesterase	ACHE	Homo sapiens	IC50		B	1	0			0	0	1
+P3-10	harmine	CHEMBL220	Acetylcholinesterase	ACHE	Homo sapiens	Inhibition	%	B	1	1	23.75	23.75	0	0	1
+P3-10	harmine	CHEMBL1795085	Ataxin-2	ATXN2	Homo sapiens	Potency	nM	F	1	1	10000.0	10000.0	0	0	1
+P3-10	harmine	CHEMBL5508	Dual specificity tyrosine-phosphorylation-regulated kinase 1A	Dyrk1a	Rattus norvegicus	Inhibition	%	B	3	2	99.1	99.9	0	0	2
+P3-10	harmine	CHEMBL2147	Serine/threonine-protein kinase pim-1	PIM1	Homo sapiens	IC50	nM	B	2	0			2	0	2
+P3-10	harmine	CHEMBL2366565	Glycogen synthase kinase-3	GSK3-beta|GSK3A	Sus scrofa	IC50	nM	B	4	1	19000.0	19000.0	2	1	4
+P3-10	harmine	CHEMBL262	Glycogen synthase kinase-3 beta	GSK3B	Homo sapiens	IC50	nM	B	7	4	350.0	32100.0	3	0	7
+P3-10	harmine	CHEMBL2850	Glycogen synthase kinase-3 alpha	GSK3A	Homo sapiens	IC50	nM	B	1	0			1	0	1
+P3-10	harmine	CHEMBL5233	Mitogen-activated protein kinase 1	Mapk1	Rattus norvegicus	IC50	nM	B	1	0			1	0	1
+P3-10	harmine	CHEMBL1075115	Dual specificity tyrosine-phosphorylation-regulated kinase 4	DYRK4	Homo sapiens	IC50	nM	B	6	6	8356.0	80000.0	0	0	6
+P3-10	harmine	CHEMBL5543	Dual specificity tyrosine-phosphorylation-regulated kinase 1B	DYRK1B	Homo sapiens	IC50	nM	B	10	10	28.0	292.9	0	0	9
+P3-10	harmine	CHEMBL5508	Dual specificity tyrosine-phosphorylation-regulated kinase 1A	Dyrk1a	Rattus norvegicus	IC50	nM	B	3	3	29.0	56.0	0	0	2
+P3-10	harmine	CHEMBL1075283	Dual specificity protein kinase CLK4	Clk4	Mus musculus	IC50	nM	B	1	1	50.0	50.0	0	0	1
+P3-10	harmine	CHEMBL1075282	Dual specificity protein kinase CLK3	Clk3	Mus musculus	IC50	nM	B	1	0			1	0	1
+P3-10	harmine	CHEMBL1075281	Dual specificity protein kinase CLK2	Clk2	Mus musculus	IC50	nM	B	1	1	280.0	280.0	0	0	1
+P3-10	harmine	CHEMBL2111389	CDK9/cyclin T1	CCNT1|CDK9	Homo sapiens	IC50	nM	B	1	1	720.0	720.0	0	0	1
+P3-10	harmine	CHEMBL2111288	Cyclin-dependent kinase 7/ cyclin H	CCNH|CDK7	Homo sapiens	IC50	nM	B	1	0			1	0	1
+P3-10	harmine	CHEMBL1075280	Dual specificity protein kinase CLK1	Clk1	Mus musculus	IC50	nM	B	1	1	72.0	72.0	0	0	1
+P3-10	harmine	CHEMBL4224	Dual specificity protein kinase CLK1	CLK1	Homo sapiens	IC50	nM	B	6	6	26.0	298.9	0	0	5
+P3-10	harmine	CHEMBL1075138	Tyrosyl-DNA phosphodiesterase 1	TDP1	Homo sapiens	Potency	nM	F	10	10	1636.0	19952.6	0	0	1
+P3-10	harmine	CHEMBL2292	Dual specificity tyrosine-phosphorylation-regulated kinase 1A	DYRK1A	Homo sapiens	Ki	nM	B	1	1	33.0	33.0	0	0	1
+P3-10	harmine	CHEMBL5543	Dual specificity tyrosine-phosphorylation-regulated kinase 1B	DYRK1B	Homo sapiens	Ki	nM	B	1	1	166.0	166.0	0	0	1
+P3-10	harmine	CHEMBL1697668	Solute carrier organic anion transporter family member 1B1	SLCO1B1	Homo sapiens	Inhibition	%	A	1	1	105.32	105.32	0	0	1
+P3-10	harmine	CHEMBL1743121	Solute carrier organic anion transporter family member 1B3	SLCO1B3	Homo sapiens	Inhibition	%	A	1	1	101.75	101.75	0	0	1
+P3-10	harmine	CHEMBL5619	DNA repair nuclease/redox regulator APEX1	APEX1	Homo sapiens	Potency	nM	F	5	5	7943.3	31622.8	0	0	1
+P3-10	harmine	CHEMBL2095188	Glycogen synthase kinase-3	GSK3A|GSK3B	Homo sapiens	IC50	nM	B	2	0			2	0	2
+P3-10	harmine	CHEMBL5543	Dual specificity tyrosine-phosphorylation-regulated kinase 1B	DYRK1B	Homo sapiens	Inhibition	%	B	5	0			0	0	2
+P3-10	harmine	CHEMBL3562163	Endochitinase		Brugia malayi	Inhibition	%	B	1	0			0	0	1
+P3-10	harmine	CHEMBL1795119	Chitinase		Onchocerca volvulus	Ki	nM	B	1	1	3780.0	3780.0	0	0	1
+P3-10	harmine	CHEMBL1795119	Chitinase		Onchocerca volvulus	IC50	nM	B	1	1	7060.0	7060.0	0	0	1
+P3-10	harmine	CHEMBL2093865	Histone deacetylase	HDAC1|HDAC10|HDAC11|HDAC2|HDAC3|HDAC4|HDAC5|HDAC6|HDAC7|HDAC8|HDAC9	Homo sapiens	IC50	nM	B	3	0			3	0	3
+P3-10	harmine	CHEMBL203	Epidermal growth factor receptor	EGFR	Homo sapiens	IC50		B	1	0			0	0	1
+P3-10	harmine	CHEMBL3045	Protein kinase C beta type	PRKCB	Homo sapiens	IC50		B	1	0			0	0	1
+P3-10	harmine	CHEMBL3038494	Casein kinase I delta/epsilon	CSNK1D|CSNK1E	Homo sapiens	IC50	nM	B	1	1	1500.0	1500.0	0	0	1
+P3-10	harmine	CHEMBL3038469	CDK2/Cyclin A2	CCNA2|CDK2	Homo sapiens	IC50	nM	B	1	0			0	1	1
+P3-10	harmine	CHEMBL262	Glycogen synthase kinase-3 beta	GSK3B	Homo sapiens	IC50		B	2	0			0	0	2
+P3-10	harmine	CHEMBL3876	Nuclear factor of activated T-cells, cytoplasmic 1	NFATC1	Homo sapiens	EC50		B	1	0			0	0	1
+P3-10	harmine	CHEMBL2292	Dual specificity tyrosine-phosphorylation-regulated kinase 1A	DYRK1A	Homo sapiens	Inhibition	%	B	6	0			1	0	4
+P3-10	harmine	CHEMBL325	Histone deacetylase 1	HDAC1	Homo sapiens	IC50	nM	B	3	0			3	0	3
+P3-10	harmine	CHEMBL4750	Dual specificity tyrosine-phosphorylation-regulated kinase 1A	Dyrk1a	Mus musculus	Inhibition	%	B	1	0			0	0	1
+P3-10	harmine	CHEMBL1951	Amine oxidase [flavin-containing] A	MAOA	Homo sapiens	Inhibition	%	B	1	1	95.0	95.0	0	0	1
+P3-10	harmine	CHEMBL1867	Alpha-2A adrenergic receptor	ADRA2A	Homo sapiens	Inhibition	%	B	1	1	59.0	59.0	0	0	1
+P3-10	harmine	CHEMBL1942	Alpha-2B adrenergic receptor	ADRA2B	Homo sapiens	Inhibition	%	B	1	1	32.0	32.0	0	0	1
+P3-10	harmine	CHEMBL1916	Alpha-2C adrenergic receptor	ADRA2C	Homo sapiens	Inhibition	%	B	1	1	45.0	45.0	0	0	1
+P3-10	harmine	CHEMBL224	5-hydroxytryptamine receptor 2A	HTR2A	Homo sapiens	Inhibition	%	B	1	1	23.0	23.0	0	0	1
+P3-10	harmine	CHEMBL225	5-hydroxytryptamine receptor 2C	HTR2C	Homo sapiens	Inhibition	%	B	1	1	75.0	75.0	0	0	1
+P3-10	harmine	CHEMBL3371	5-hydroxytryptamine receptor 6	HTR6	Homo sapiens	Inhibition	%	B	1	1	37.0	37.0	0	0	1
+P3-10	harmine	CHEMBL3155	5-hydroxytryptamine receptor 7	HTR7	Homo sapiens	Inhibition	%	B	1	1	30.0	30.0	0	0	1
+P3-10	harmine	CHEMBL222	Sodium-dependent noradrenaline transporter	SLC6A2	Homo sapiens	Inhibition	%	B	1	1	86.0	86.0	0	0	1
+P3-10	harmine	CHEMBL5393	Broad substrate specificity ATP-binding cassette transporter ABCG2	ABCG2	Homo sapiens	IC50	nM	B	1	1	5080.0	5080.0	0	0	1
+P3-10	harmine	CHEMBL5393	Broad substrate specificity ATP-binding cassette transporter ABCG2	ABCG2	Homo sapiens	Inhibition	%	B	1	0			0	0	1
+P3-10	harmine	CHEMBL6080	Protein smoothened	Smo	Mus musculus	Inhibition	%	B	1	0			0	0	1
+P3-10	harmine	CHEMBL262	Glycogen synthase kinase-3 beta	GSK3B	Homo sapiens	Inhibition	%	B	2	1	29.0	29.0	0	0	2
+P3-10	harmine	CHEMBL5719	Cyclin-dependent kinase 8	CDK8	Homo sapiens	Inhibition	%	B	1	0			0	0	1
+P3-10	harmine	CHEMBL6002	Cyclin-dependent kinase 19	CDK19	Homo sapiens	Inhibition	%	B	1	0			0	0	1
+P3-10	harmine	CHEMBL1951	Amine oxidase [flavin-containing] A	MAOA	Homo sapiens	IC50	nM	B	8	7	1.0	60.0	1	0	7
+P3-10	harmine	CHEMBL5763	Cholinesterase	BCHE	Equus caballus	Inhibition	%	B	1	1	74.1	74.1	0	0	1
+P3-10	harmine	CHEMBL5763	Cholinesterase	BCHE	Equus caballus	IC50	nM	B	1	1	13600.0	13600.0	0	0	1
+P3-10	harmine	CHEMBL308	Cyclin-dependent kinase 1	CDK1	Homo sapiens	IC50	nM	B	1	1	17000.0	17000.0	0	0	1
+P3-10	harmine	CHEMBL301	Cyclin-dependent kinase 2	CDK2	Homo sapiens	IC50	nM	B	1	1	33000.0	33000.0	0	0	1
+P3-10	harmine	CHEMBL4036	Cyclin-dependent kinase 5	CDK5	Homo sapiens	IC50	nM	B	1	1	8000.0	8000.0	0	0	1
+P3-10	harmine	CHEMBL3055	Cyclin-dependent kinase 7	CDK7	Homo sapiens	IC50	nM	B	1	0			1	0	1
+P3-10	harmine	CHEMBL3116	Cyclin-dependent kinase 9	CDK9	Homo sapiens	IC50	nM	B	1	1	720.0	720.0	0	0	1
+P3-10	harmine	CHEMBL3231	Rho-associated protein kinase 1	ROCK1	Homo sapiens	IC50	nM	B	1	1	1500.0	1500.0	0	0	1
+P3-10	harmine	CHEMBL2973	Rho-associated protein kinase 2	ROCK2	Homo sapiens	IC50	nM	B	1	0			1	0	1
+P3-10	harmine	CHEMBL4225	Dual specificity protein kinase CLK2	CLK2	Homo sapiens	IC50	nM	B	2	2	120.0	1152.0	0	0	2
+P3-10	harmine	CHEMBL4226	Dual specificity protein kinase CLK3	CLK3	Homo sapiens	IC50	nM	B	2	2	3000.0	8811.0	0	0	2
+P3-10	harmine	CHEMBL4203	Dual specificity protein kinase CLK4	CLK4	Homo sapiens	IC50	nM	B	2	2	24.0	102.2	0	0	2
+P3-10	harmine	CHEMBL4040	Mitogen-activated protein kinase 1	MAPK1	Homo sapiens	IC50	nM	B	1	0			1	0	1
+P3-10	harmine	CHEMBL2094138	cAMP-dependent protein kinase (PKA)	PRKACA|PRKACB|PRKACG	Homo sapiens	IC50	nM	B	1	0			1	0	1
+P3-10	harmine	CHEMBL4937	Casein kinase I isoform epsilon	CSNK1E	Homo sapiens	IC50	nM	B	1	0			1	0	1
+P3-10	harmine	CHEMBL2292	Dual specificity tyrosine-phosphorylation-regulated kinase 1A	DYRK1A	Homo sapiens	Kd	nM	B	2	2	5.474	13.4	0	0	2
+P3-10	harmine	CHEMBL4224	Dual specificity protein kinase CLK1	CLK1	Homo sapiens	Kd	nM	B	1	1	12.11	12.11	0	0	1
+P3-10	harmine	CHEMBL262	Glycogen synthase kinase-3 beta	GSK3B	Homo sapiens	Kd	nM	B	2	1	3560.0	3560.0	1	0	2
+P3-10	harmine	CHEMBL220	Acetylcholinesterase	ACHE	Homo sapiens	IC50	nM	B	1	1	11300.0	11300.0	0	0	1
+P3-10	harmine	CHEMBL3055	Cyclin-dependent kinase 7	CDK7	Homo sapiens	Inhibition	%	B	1	0			0	0	1
+P3-10	harmine	CHEMBL3267	Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit gamma isoform	PIK3CG	Homo sapiens	Inhibition	%	B	1	0			0	0	1
+P3-10	harmine	CHEMBL2111458	Casein kinase I	CSNK1A1|CSNK1D|CSNK1E|CSNK1G1|CSNK1G2	Homo sapiens	Inhibition	%	B	1	0			0	0	1
+P3-10	harmine	CHEMBL1075117	Microtubule-associated protein tau	Mapt	Rattus norvegicus	Inhibition	%	B	1	0			0	0	1
+P3-10	harmine	CHEMBL2039	Amine oxidase [flavin-containing] B	MAOB	Homo sapiens	IC50		B	1	0			0	0	1
+P3-11	pomalidomide	CHEMBL2093863	Phosphodiesterase 4	PDE4A|PDE4B|PDE4C|PDE4D	Homo sapiens	Inhibition	%	B	1	0			0	1	1
+P3-11	pomalidomide	CHEMBL1795168	CDGSH iron-sulfur domain-containing protein 1	CISD1	Homo sapiens	IC50		B	1	0			0	0	1
+P3-11	pomalidomide	CHEMBL1795168	CDGSH iron-sulfur domain-containing protein 1	CISD1	Homo sapiens	Ki		B	1	0			0	0	1
+P3-11	pomalidomide	CHEMBL4296167	Protein cereblon/Zinc finger protein Aiolos	CRBN|IKZF3	Homo sapiens	EC50	nM	B	1	1	22.0	22.0	0	0	1
+P3-11	pomalidomide	CHEMBL4296103	Cereblon/Ikaros	CRBN|IKZF1	Homo sapiens	EC50	nM	B	1	1	24.0	24.0	0	0	1
+P3-11	pomalidomide	CHEMBL3763008	Protein cereblon	CRBN	Homo sapiens	IC50	nM	B	8	8	83.0	25800.0	0	0	7
+P3-11	pomalidomide	CHEMBL3763007	Cereblon isoform 4		Magnetospirillum gryphiswaldense	Ki	nM	B	1	1	800.0	800.0	0	0	1
+P3-11	pomalidomide	CHEMBL4296102	Cereblon/Casein kinase I alpha	CRBN|CSNK1A1	Homo sapiens	Inhibition	%	B	1	0			0	0	1
+P3-11	pomalidomide	CHEMBL3763008	Protein cereblon	CRBN	Homo sapiens	Ki	nM	B	2	2	3300.0	10000.0	0	0	2
+P3-11	pomalidomide	CHEMBL4739701	E3 ubiquitin-protein ligase ZFP91	ZFP91	Homo sapiens	DC50	nM	B	1	1	420.0	420.0	0	0	1
+P3-11	pomalidomide	CHEMBL4523993	Programmed cell death protein 1/Programmed cell death 1 ligand 1	CD274|PDCD1	Homo sapiens	IC50	nM	B	1	0			1	0	1
+P3-11	pomalidomide	CHEMBL1865	Protein deacetylase HDAC6	HDAC6	Homo sapiens	Inhibition	%	B	2	2	-3.62	31.88	0	0	1
+P3-11	pomalidomide	CHEMBL4296103	Cereblon/Ikaros	CRBN|IKZF1	Homo sapiens	DC50	nM	B	3	3	17.0	50.0	0	0	3
+P3-11	pomalidomide	CHEMBL4296137	Protein cereblon/Tyrosine-protein kinase ABL1/Breakpoint cluster region protein	ABL1|BCR|CRBN	Homo sapiens	DC50	nM	B	1	0			1	0	1
+P3-11	pomalidomide	CHEMBL4630734	Protein cereblon/DNA damage-binding protein 1	CRBN|DDB1	Homo sapiens	EC50	nM	B	1	1	9.0	9.0	0	0	1
+P3-11	pomalidomide	CHEMBL4296168	Protein cereblon/Eukaryotic peptide chain release factor GTP-binding subunit ERF3A	CRBN|GSPT1	Homo sapiens	DC50	nM	B	1	0			1	0	1
+P3-11	pomalidomide	CHEMBL5251	Tyrosine-protein kinase BTK	BTK	Homo sapiens	Kd		B	1	0			0	0	1
+P3-11	pomalidomide	CHEMBL5251	Tyrosine-protein kinase BTK	BTK	Homo sapiens	IC50		B	1	0			0	0	1
+P3-11	pomalidomide	CHEMBL4630734	Protein cereblon/DNA damage-binding protein 1	CRBN|DDB1	Homo sapiens	IC50	nM	B	3	3	63.1	1510.0	0	0	3
+P3-11	pomalidomide	CHEMBL4739707	Zinc finger protein Aiolos	IKZF3	Homo sapiens	EC50	nM	B	1	1	20.0	20.0	0	0	1
+P3-11	pomalidomide	CHEMBL3763008	Protein cereblon	CRBN	Homo sapiens	Kd	nM	B	2	2	83.0	157.0	0	0	2
+P3-11	pomalidomide	CHEMBL4296167	Protein cereblon/Zinc finger protein Aiolos	CRBN|IKZF3	Homo sapiens	DC50	nM	B	1	1	13.0	13.0	0	0	1
+P3-11	pomalidomide	CHEMBL5725017	Protein Aster-A	GRAMD1A	Homo sapiens	Kd	nM	B	2	0			2	0	1
+P3-11	pomalidomide	CHEMBL4137	Glyceraldehyde-3-phosphate dehydrogenase, cytosolic	GAPC	Leishmania mexicana	IC50	nM	B	1	1	2900.0	2900.0	0	0	1
+P3-11	pomalidomide	CHEMBL1909490	Interleukin-1 beta	IL1B	Homo sapiens	IC50	nM	B	1	1	47.0	47.0	0	0	1
+P3-11	pomalidomide	CHEMBL1825	Tumor necrosis factor	TNF	Homo sapiens	IC50	nM	B	1	1	33.0	33.0	0	0	1
+P3-11	pomalidomide	CHEMBL4739707	Zinc finger protein Aiolos	IKZF3	Homo sapiens	DC50	nM	B	1	1	170.0	170.0	0	0	1
+P3-12	defosbarasertib	CHEMBL203	Epidermal growth factor receptor	EGFR	Homo sapiens	Ki	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL240	Voltage-gated inwardly rectifying potassium channel KCNH2	KCNH2	Homo sapiens	IC50	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL1957	Insulin-like growth factor 1 receptor	IGF1R	Homo sapiens	Ki	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL258	Tyrosine-protein kinase Lck	LCK	Homo sapiens	Ki	nM	B	1	1	170.0	170.0	0	0	1
+P3-12	defosbarasertib	CHEMBL260	Mitogen-activated protein kinase 14	MAPK14	Homo sapiens	Ki	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL267	Proto-oncogene tyrosine-protein kinase Src	SRC	Homo sapiens	Ki	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL2185	Aurora kinase B	AURKB	Homo sapiens	Ki	nM	B	3	2	0.359	0.37	0	1	3
+P3-12	defosbarasertib	CHEMBL2634	Tyrosine-protein kinase CSK	CSK	Homo sapiens	Ki	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL2148	Tyrosine-protein kinase JAK3	JAK3	Homo sapiens	Ki	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL3024	Serine/threonine-protein kinase PLK1	PLK1	Homo sapiens	Ki	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL279	Vascular endothelial growth factor receptor 2	KDR	Homo sapiens	Ki	nM	B	1	1	1800.0	1800.0	0	0	1
+P3-12	defosbarasertib	CHEMBL2111289	Dual specificity mitogen-activated protein kinase kinase; MEK1/2	MAP2K1|MAP2K2	Homo sapiens	Ki	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL301	Cyclin-dependent kinase 2	CDK2	Homo sapiens	Ki	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL2095217	Fibroblast growth factor receptor	FGFR1|FGFR2|FGFR3|FGFR4	Homo sapiens	Ki	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL2803	Tyrosine-protein kinase ZAP-70	ZAP70	Homo sapiens	Ki	nM	B	1	1	8200.0	8200.0	0	0	1
+P3-12	defosbarasertib	CHEMBL2276	Mitogen-activated protein kinase 8	MAPK8	Homo sapiens	Ki	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL5166	Tyrosine-protein kinase transforming protein Abl	ABL	Abelson murine leukemia virus	Ki	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4630	Serine/threonine-protein kinase Chk1	CHEK1	Homo sapiens	Ki	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL2695	Focal adhesion kinase 1	PTK2	Homo sapiens	Ki	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4722	Aurora kinase A	AURKA	Homo sapiens	Ki	nM	B	1	1	1400.0	1400.0	0	0	1
+P3-12	defosbarasertib	CHEMBL3935	Aurora kinase C	AURKC	Homo sapiens	Ki	nM	B	2	2	17.0	17.03	0	0	2
+P3-12	defosbarasertib	CHEMBL4600	Serine/threonine-protein kinase PAK 1	PAK1	Homo sapiens	Ki	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL2094138	cAMP-dependent protein kinase (PKA)	PRKACA|PRKACB|PRKACG	Homo sapiens	Ki	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4722	Aurora kinase A	AURKA	Homo sapiens	IC50	nM	B	4	4	1368.0	1400.0	0	0	4
+P3-12	defosbarasertib	CHEMBL2185	Aurora kinase B	AURKB	Homo sapiens	IC50	nM	B	8	7	0.3	17.0	0	1	7
+P3-12	defosbarasertib	CHEMBL1974	Receptor-type tyrosine-protein kinase FLT3	FLT3	Homo sapiens	Kd	nM	B	13	13	3.9	670.0	0	0	3
+P3-12	defosbarasertib	CHEMBL1955	Vascular endothelial growth factor receptor 3	FLT4	Homo sapiens	Kd	nM	B	2	1	2900.0	2900.0	1	0	2
+P3-12	defosbarasertib	CHEMBL4223	Tyrosine-protein kinase FRK	FRK	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL2999	Serine/threonine-protein kinase PAK 3	PAK3	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL5790	Cyclin-dependent kinase 17	CDK17	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL5316	Cyclin-dependent kinase 18	CDK18	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL2534	3-phosphoinositide-dependent protein kinase 1	PDPK1	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL6162	Cyclin-dependent kinase 14	CDK14	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL4004	Phosphorylase b kinase gamma catalytic chain, skeletal muscle/heart isoform	PHKG1	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL5969	Phosphatidylinositol 4-phosphate 5-kinase type-1 alpha	PIP5K1A	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL5667	Phosphatidylinositol 5-phosphate 4-kinase type-2 beta	PIP4K2B	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL4924	Ribosomal protein S6 kinase alpha-6	RPS6KA6	Homo sapiens	Kd	nM	B	5	0			5	0	3
+P3-12	defosbarasertib	CHEMBL5426	Myosin light chain kinase family member 4	MYLK4	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL4202	STE20-like serine/threonine-protein kinase	SLK	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL279	Vascular endothelial growth factor receptor 2	KDR	Homo sapiens	Kd	nM	B	2	2	500.0	500.0	0	0	2
+P3-12	defosbarasertib	CHEMBL5491	Wee1-like protein kinase	WEE1	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL5405	Serine/threonine-protein kinase 32C	STK32C	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL2073	Tyrosine-protein kinase Yes	YES1	Homo sapiens	Kd	nM	B	3	2	3800.0	3800.0	1	0	3
+P3-12	defosbarasertib	CHEMBL5552	Serine/threonine-protein kinase 25	STK25	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL3886	Mitogen-activated protein kinase kinase kinase 20	MAP3K20	Homo sapiens	Kd	nM	B	3	2	1700.0	1700.0	1	0	3
+P3-12	defosbarasertib	CHEMBL2803	Tyrosine-protein kinase ZAP-70	ZAP70	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL2918	cAMP-dependent protein kinase catalytic subunit beta	PRKACB	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL5818	cAMP-dependent protein kinase catalytic subunit PRKX	PRKX	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL5469	Protein-tyrosine kinase 2-beta	PTK2B	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL5975	Serine/threonine-protein kinase RIO1	RIOK1	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL4226	Dual specificity protein kinase CLK3	CLK3	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL2634	Tyrosine-protein kinase CSK	CSK	Homo sapiens	Kd	nM	B	3	1	3800.0	3800.0	2	0	3
+P3-12	defosbarasertib	CHEMBL5520	Casein kinase I isoform alpha-like	CSNK1A1L	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL2828	Casein kinase I isoform delta	CSNK1D	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL4937	Casein kinase I isoform epsilon	CSNK1E	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL2543	Casein kinase I isoform gamma-2	CSNK1G2	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL5084	Casein kinase I isoform gamma-3	CSNK1G3	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL4128	Angiopoietin-1 receptor	TEK	Homo sapiens	Kd	nM	B	2	2	1900.0	1900.0	0	0	2
+P3-12	defosbarasertib	CHEMBL5388	Serine/threonine-protein kinase tousled-like 1	TLK1	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL5404	Serine/threonine-protein kinase tousled-like 2	TLK2	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL4527	TRAF2 and NCK-interacting protein kinase	TNIK	Homo sapiens	Kd	nM	B	3	1	8500.0	8500.0	2	0	3
+P3-12	defosbarasertib	CHEMBL4599	Activated CDC42 kinase 1	TNK2	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL2815	High affinity nerve growth factor receptor	NTRK1	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL4898	BDNF/NT-3 growth factors receptor	NTRK2	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL5608	NT-3 growth factor receptor	NTRK3	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL3983	Dual specificity protein kinase TTK	TTK	Homo sapiens	Kd	nM	B	2	2	8500.0	8500.0	0	0	2
+P3-12	defosbarasertib	CHEMBL4367	Tyrosine-protein kinase TXK	TXK	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL3629	Casein kinase II subunit alpha	CSNK2A1	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL4070	Casein kinase II subunit alpha'	CSNK2A2	Homo sapiens	Kd	nM	B	3	1	2217.0	2217.0	2	0	3
+P3-12	defosbarasertib	CHEMBL3123	Death-associated protein kinase 2	DAPK2	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL2468	Death-associated protein kinase 3	DAPK3	Homo sapiens	Kd	nM	B	3	0			3	0	2
+P3-12	defosbarasertib	CHEMBL3980	Serine/threonine-protein kinase 17B	STK17B	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL5543	Dual specificity tyrosine-phosphorylation-regulated kinase 1B	DYRK1B	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL3385	Mitogen-activated protein kinase 3	MAPK3	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL4040	Mitogen-activated protein kinase 1	MAPK1	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL2850	Glycogen synthase kinase-3 alpha	GSK3A	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL262	Glycogen synthase kinase-3 beta	GSK3B	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL3529	Inhibitor of nuclear factor kappa-B kinase subunit epsilon	IKBKE	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL3553	Non-receptor tyrosine-protein kinase TYK2	TYK2	Homo sapiens	Kd	nM	B	4	0			4	0	3
+P3-12	defosbarasertib	CHEMBL5314	Tyrosine-protein kinase receptor TYRO3	TYRO3	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL2276	Mitogen-activated protein kinase 8	MAPK8	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL4179	Mitogen-activated protein kinase 9	MAPK9	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL3836	LIM domain kinase 1	LIMK1	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL5932	LIM domain kinase 2	LIMK2	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL5606	Serine/threonine-protein kinase STK11	STK11	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL5600	MAP/microtubule affinity-regulating kinase 3	MARK3	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL3587	Dual specificity mitogen-activated protein kinase kinase 1	MAP2K1	Homo sapiens	Kd	nM	B	3	1	1900.0	1900.0	2	0	3
+P3-12	defosbarasertib	CHEMBL2964	Dual specificity mitogen-activated protein kinase kinase 2	MAP2K2	Homo sapiens	Kd	nM	B	3	2	4200.0	5700.0	1	0	3
+P3-12	defosbarasertib	CHEMBL2109	Dual specificity mitogen-activated protein kinase kinase 3	MAP2K3	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL4578	Maternal embryonic leucine zipper kinase	MELK	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL4718	MAP kinase-interacting serine/threonine-protein kinase 1	MKNK1	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL3830	AP2-associated protein kinase 1	AAK1	Homo sapiens	Kd	nM	B	3	1	3000.0	3000.0	2	0	3
+P3-12	defosbarasertib	CHEMBL1862	Tyrosine-protein kinase ABL1	ABL1	Homo sapiens	Kd	nM	B	23	15	860.0	9600.0	8	0	3
+P3-12	defosbarasertib	CHEMBL4598	Serine/threonine-protein kinase 4	STK4	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL5941	Serine/threonine-protein kinase 26	STK26	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL4849	Serine/threonine-protein kinase Nek7	NEK7	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL5364	Serine/threonine-protein kinase NLK	NLK	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL260	Mitogen-activated protein kinase 14	MAPK14	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL3961	Mitogen-activated protein kinase 11	MAPK11	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL4674	Mitogen-activated protein kinase 12	MAPK12	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL3234	Tyrosine-protein kinase HCK	HCK	Homo sapiens	Kd	nM	B	3	2	3900.0	3900.0	1	0	3
+P3-12	defosbarasertib	CHEMBL1957	Insulin-like growth factor 1 receptor	IGF1R	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL1981	Insulin receptor	INSR	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL5483	Insulin receptor-related protein	INSRR	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL5081	Interleukin-1 receptor-associated kinase 3	IRAK3	Homo sapiens	Kd	nM	B	3	1	7900.0	7900.0	2	0	3
+P3-12	defosbarasertib	CHEMBL4014	Tyrosine-protein kinase ABL2	ABL2	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL5903	Activin receptor type-1	ACVR1	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL2959	Tyrosine-protein kinase ITK/TSK	ITK	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL2835	Tyrosine-protein kinase JAK1	JAK1	Homo sapiens	Kd	nM	B	4	0			4	0	3
+P3-12	defosbarasertib	CHEMBL2971	Tyrosine-protein kinase JAK2	JAK2	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL2148	Tyrosine-protein kinase JAK3	JAK3	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL2637	Mitogen-activated protein kinase 10	MAPK10	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL1936	Mast/stem cell growth factor receptor Kit	KIT	Homo sapiens	Kd	nM	B	15	15	7.9	4600.0	0	0	3
+P3-12	defosbarasertib	CHEMBL5659	Serine/threonine-protein kinase RIO3	RIOK3	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL5699	Serine/threonine-protein kinase SIK2	SIK2	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL4375	SRSF protein kinase 1	SRPK1	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL5668	SRSF protein kinase 2	SRPK2	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL5310	Activin receptor type-1B	ACVR1B	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL5616	Activin receptor type-2A	ACVR2A	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL5466	Activin receptor type-2B	ACVR2B	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL5311	Activin receptor type-1-like	ACVRL1	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL6005	Serine/threonine-protein kinase 33	STK33	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL5334	Non-receptor tyrosine-protein kinase TNK1	TNK1	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL5260	Serine/threonine-protein kinase TNNI3K	TNNI3K	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL6003	Testis-specific serine/threonine-protein kinase 1	TSSK1B	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL5912	Serine/threonine-protein kinase 32B	STK32B	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL1841	Tyrosine-protein kinase Fyn	FYN	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL4355	Cyclin-G-associated kinase	GAK	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL5358	eIF-2-alpha kinase GCN2	EIF2AK4	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL4045	5'-AMP-activated protein kinase catalytic subunit alpha-1	PRKAA1	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL2116	5'-AMP-activated protein kinase catalytic subunit alpha-2	PRKAA2	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL5547	Ankyrin repeat and protein kinase domain-containing protein 1	ANKK1	Homo sapiens	Kd	nM	B	2	2	1500.0	1500.0	0	0	2
+P3-12	defosbarasertib	CHEMBL5122	Discoidin domain-containing receptor 2	DDR2	Homo sapiens	Kd	nM	B	3	1	6600.0	6600.0	2	0	3
+P3-12	defosbarasertib	CHEMBL5320	Myotonin-protein kinase	DMPK	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL5550	Atypical kinase COQ8A, mitochondrial	COQ8A	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL4282	RAC-alpha serine/threonine-protein kinase	AKT1	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL2431	RAC-beta serine/threonine-protein kinase	AKT2	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL4816	RAC-gamma serine/threonine-protein kinase	AKT3	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL4247	ALK tyrosine kinase receptor	ALK	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL5615	Serine/threonine-protein kinase MRCK gamma	CDC42BPG	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL6167	Serine/threonine-protein kinase LATS1	LATS1	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL5907	Serine/threonine-protein kinase LATS2	LATS2	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL258	Tyrosine-protein kinase Lck	LCK	Homo sapiens	Kd	nM	B	3	3	380.0	2692.0	0	0	3
+P3-12	defosbarasertib	CHEMBL3981	Serine/threonine-protein kinase 10	STK10	Homo sapiens	Kd	nM	B	3	2	2800.0	2800.0	1	0	3
+P3-12	defosbarasertib	CHEMBL5627	Leukocyte tyrosine kinase receptor	LTK	Homo sapiens	Kd	nM	B	2	2	3200.0	3200.0	0	0	2
+P3-12	defosbarasertib	CHEMBL3905	Tyrosine-protein kinase Lyn	LYN	Homo sapiens	Kd	nM	B	3	2	1600.0	1600.0	1	0	3
+P3-12	defosbarasertib	CHEMBL4853	Mitogen-activated protein kinase kinase kinase 4	MAP3K4	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL5285	Mitogen-activated protein kinase kinase kinase 5	MAP3K5	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL5749	Mitogen-activated protein kinase kinase kinase kinase 1	MAP4K1	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL4524	Serine/threonine-protein kinase PAK 5	PAK5	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL4597	Cyclin-dependent kinase 16	CDK16	Homo sapiens	Kd	nM	B	3	2	6300.0	6300.0	1	0	3
+P3-12	defosbarasertib	CHEMBL4525	Serine/threonine-protein kinase 17A	STK17A	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL203	Epidermal growth factor receptor	EGFR	Homo sapiens	Kd	nM	B	23	20	120.0	8800.0	3	0	3
+P3-12	defosbarasertib	CHEMBL5784	NUAK family SNF1-like kinase 1	NUAK1	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL4722	Aurora kinase A	AURKA	Homo sapiens	Kd	nM	B	8	8	109.8	722.0	0	0	4
+P3-12	defosbarasertib	CHEMBL2007	Platelet-derived growth factor receptor alpha	PDGFRA	Homo sapiens	Kd	nM	B	2	2	38.0	38.0	0	0	2
+P3-12	defosbarasertib	CHEMBL1913	Platelet-derived growth factor receptor beta	PDGFRB	Homo sapiens	Kd	nM	B	3	2	41.0	41.0	1	0	3
+P3-12	defosbarasertib	CHEMBL2349	Phosphorylase b kinase gamma catalytic chain, liver/testis isoform	PHKG2	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL4005	Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit alpha isoform	PIK3CA	Homo sapiens	Kd	nM	B	12	0			12	0	2
+P3-12	defosbarasertib	CHEMBL2147	Serine/threonine-protein kinase pim-1	PIM1	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL4523	Serine/threonine-protein kinase pim-2	PIM2	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL5407	Serine/threonine-protein kinase pim-3	PIM3	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL4101	cAMP-dependent protein kinase catalytic subunit alpha	PRKACA	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL3984	Membrane-associated tyrosine- and threonine-specific cdc2-inhibitory kinase	PKMYT1	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL5432	Mitogen-activated protein kinase kinase kinase kinase 3	MAP4K3	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL6166	Mitogen-activated protein kinase kinase kinase kinase 4	MAP4K4	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL2185	Aurora kinase B	AURKB	Homo sapiens	Kd	nM	B	3	3	2.0	7.2	0	0	3
+P3-12	defosbarasertib	CHEMBL4895	Tyrosine-protein kinase receptor UFO	AXL	Homo sapiens	Kd	nM	B	2	2	390.0	390.0	0	0	2
+P3-12	defosbarasertib	CHEMBL4522	BMP-2-inducible protein kinase	BMP2K	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL2250	Tyrosine-protein kinase Blk	BLK	Homo sapiens	Kd	nM	B	2	2	1500.0	1500.0	0	0	2
+P3-12	defosbarasertib	CHEMBL5275	Bone morphogenetic protein receptor type-1A	BMPR1A	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL5467	Bone morphogenetic protein receptor type-2	BMPR2	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL5145	Serine/threonine-protein kinase B-raf	BRAF	Homo sapiens	Kd	nM	B	5	0			5	0	3
+P3-12	defosbarasertib	CHEMBL5650	Serine/threonine-protein kinase BRSK1	BRSK1	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL5073	Calcium/calmodulin-dependent protein kinase type 1D	CAMK1D	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL5258	Calcium/calmodulin-dependent protein kinase type 1G	CAMK1G	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL4852	Mitogen-activated protein kinase kinase kinase kinase 5	MAP4K5	Homo sapiens	Kd	nM	B	3	3	160.0	900.0	0	0	3
+P3-12	defosbarasertib	CHEMBL2208	MAP kinase-activated protein kinase 2	MAPKAPK2	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL3094	MAP kinase-activated protein kinase 5	MAPKAPK5	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL5940	Serine/threonine-protein kinase MARK1	MARK1	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL3831	Serine/threonine-protein kinase MARK2	MARK2	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL5754	MAP/microtubule affinity-regulating kinase 4	MARK4	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL2897	Dual specificity mitogen-activated protein kinase kinase 4	MAP2K4	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL2171	Dual specificity mitogen-activated protein kinase kinase 6	MAP2K6	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL5331	Tyrosine-protein kinase Mer	MERTK	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL3717	Hepatocyte growth factor receptor	MET	Homo sapiens	Kd	nM	B	5	1	5700.0	5700.0	4	0	3
+P3-12	defosbarasertib	CHEMBL4204	MAP kinase-interacting serine/threonine-protein kinase 2	MKNK2	Homo sapiens	Kd	nM	B	2	1	1200.0	1200.0	1	0	2
+P3-12	defosbarasertib	CHEMBL4147	Calcium/calmodulin-dependent protein kinase type II subunit alpha	CAMK2A	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL4121	Calcium/calmodulin-dependent protein kinase type II subunit beta	CAMK2B	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL2801	Calcium/calmodulin-dependent protein kinase type II subunit delta	CAMK2D	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL3829	Calcium/calmodulin-dependent protein kinase type II subunit gamma	CAMK2G	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL2494	Calcium/calmodulin-dependent protein kinase type IV	CAMK4	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL5256	Calcium/calmodulin-dependent protein kinase kinase 1	CAMKK1	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL5284	Calcium/calmodulin-dependent protein kinase kinase 2	CAMKK2	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL5808	Cyclin-dependent kinase 11B	CDK11B	Homo sapiens	Kd	nM	B	2	2	1200.0	1200.0	0	0	2
+P3-12	defosbarasertib	CHEMBL5416	Cyclin-dependent kinase 11A	CDK11A	Homo sapiens	Kd	nM	B	2	2	1000.0	1000.0	0	0	2
+P3-12	defosbarasertib	CHEMBL6002	Cyclin-dependent kinase 19	CDK19	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL5719	Cyclin-dependent kinase 8	CDK8	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL4630	Serine/threonine-protein kinase Chk1	CHEK1	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL3062	Myosin light chain kinase, smooth muscle	Mylk	Gallus gallus	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL2872	Mitogen-activated protein kinase kinase kinase 9	MAP3K9	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL2873	Mitogen-activated protein kinase kinase kinase 10	MAP3K10	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL2708	Mitogen-activated protein kinase kinase kinase 11	MAP3K11	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL4516	Serine/threonine-protein kinase MRCK alpha	CDC42BPA	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL5052	Serine/threonine-protein kinase MRCK beta	CDC42BPB	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL4708	Serine/threonine-protein kinase 3	STK3	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL5082	Serine/threonine-protein kinase 24	STK24	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL5684	Muscle, skeletal receptor tyrosine-protein kinase	MUSK	Homo sapiens	Kd	nM	B	2	2	1500.0	1500.0	0	0	2
+P3-12	defosbarasertib	CHEMBL2428	Myosin light chain kinase, smooth muscle	MYLK	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL2777	Myosin light chain kinase 2, skeletal/cardiac muscle	MYLK2	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL5579	Citron Rho-interacting kinase	CIT	Homo sapiens	Kd	nM	B	3	2	5700.0	5700.0	1	0	3
+P3-12	defosbarasertib	CHEMBL4225	Dual specificity protein kinase CLK2	CLK2	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL4203	Dual specificity protein kinase CLK4	CLK4	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL1844	Macrophage colony-stimulating factor 1 receptor	CSF1R	Homo sapiens	Kd	nM	B	2	2	1400.0	1400.0	0	0	2
+P3-12	defosbarasertib	CHEMBL2426	Casein kinase I isoform gamma-1	CSNK1G1	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL2558	Death-associated protein kinase 1	DAPK1	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL5683	Serine/threonine-protein kinase DCLK1	DCLK1	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL5519	Serine/threonine-protein kinase DCLK2	DCLK2	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL6123	Serine/threonine-protein kinase DCLK3	DCLK3	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL5319	Epithelial discoidin domain-containing receptor 1	DDR1	Homo sapiens	Kd	nM	B	3	2	1800.0	1800.0	1	0	3
+P3-12	defosbarasertib	CHEMBL5546	Myosin-IIIa	MYO3A	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL5654	Myosin-IIIb	MYO3B	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL4851	Serine/threonine-protein kinase 38-like	STK38L	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL5855	Serine/threonine-protein kinase Nek1	NEK1	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL3835	Serine/threonine-protein kinase Nek2	NEK2	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL5044	Serine/threonine-protein kinase Nek5	NEK5	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL4309	Serine/threonine-protein kinase Nek6	NEK6	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL5257	Serine/threonine-protein kinase Nek9	NEK9	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL4600	Serine/threonine-protein kinase PAK 1	PAK1	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL4487	Serine/threonine-protein kinase PAK 2	PAK2	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL4482	Serine/threonine-protein kinase PAK 4	PAK4	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL5753	Atypical kinase COQ8B, mitochondrial	COQ8B	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL3935	Aurora kinase C	AURKC	Homo sapiens	Kd	nM	B	2	2	4.4	4.4	0	0	2
+P3-12	defosbarasertib	CHEMBL3834	Cytoplasmic tyrosine-protein kinase BMX	BMX	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL4574	Serine/threonine-protein kinase BRSK2	BRSK2	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL5251	Tyrosine-protein kinase BTK	BTK	Homo sapiens	Kd	nM	B	3	1	1200.0	1200.0	2	0	3
+P3-12	defosbarasertib	CHEMBL2493	Calcium/calmodulin-dependent protein kinase type 1	CAMK1	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL301	Cyclin-dependent kinase 2	CDK2	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL4442	Cyclin-dependent kinase 3	CDK3	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL4036	Cyclin-dependent kinase 5	CDK5	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL3055	Cyclin-dependent kinase 7	CDK7	Homo sapiens	Kd	nM	B	3	2	6200.0	6200.0	1	0	3
+P3-12	defosbarasertib	CHEMBL3116	Cyclin-dependent kinase 9	CDK9	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL4311	Serine/threonine-protein kinase PAK 6	PAK6	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL5698	NUAK family SNF1-like kinase 2	NUAK2	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL6082	Serine/threonine-protein kinase SIK1	SIK1	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL267	Proto-oncogene tyrosine-protein kinase Src	SRC	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL5703	Tyrosine-protein kinase Srms	SRMS	Homo sapiens	Kd	nM	B	2	2	7900.0	7900.0	0	0	2
+P3-12	defosbarasertib	CHEMBL3938	Serine/threonine-protein kinase 16	STK16	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL4312	Serine/threonine-protein kinase 36	STK36	Homo sapiens	Kd	nM	B	2	2	4600.0	4600.0	0	0	2
+P3-12	defosbarasertib	CHEMBL2599	Tyrosine-protein kinase SYK	SYK	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL4246	Tyrosine-protein kinase Tec	TEC	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL5604	Dual specificity testis-specific protein kinase 1	TESK1	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL4439	TGF-beta receptor type-1	TGFBR1	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL4224	Dual specificity protein kinase CLK1	CLK1	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL5810	Ephrin type-A receptor 1	EPHA1	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL2068	Ephrin type-A receptor 2	EPHA2	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL4954	Ephrin type-A receptor 3	EPHA3	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL3988	Ephrin type-A receptor 4	EPHA4	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL3987	Ephrin type-A receptor 5	EPHA5	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL4526	Ephrin type-A receptor 6	EPHA6	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL4602	Ephrin type-A receptor 7	EPHA7	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL4134	Ephrin type-A receptor 8	EPHA8	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL4267	TGF-beta receptor type-2	TGFBR2	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL5274	Tyrosine-protein kinase receptor Tie-1	TIE1	Homo sapiens	Kd	nM	B	2	2	350.0	350.0	0	0	2
+P3-12	defosbarasertib	CHEMBL3384	Serine/threonine-protein kinase N1	PKN1	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL3032	Serine/threonine-protein kinase N2	PKN2	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL3024	Serine/threonine-protein kinase PLK1	PLK1	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL4897	Serine/threonine-protein kinase PLK3	PLK3	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL3788	Serine/threonine-protein kinase PLK4	PLK4	Homo sapiens	Kd	nM	B	3	2	4700.0	4700.0	1	0	3
+P3-12	defosbarasertib	CHEMBL2996	Protein kinase C delta type	PRKCD	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL3582	Protein kinase C epsilon type	PRKCE	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL3616	Protein kinase C eta type	PRKCH	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL3920	Protein kinase C theta type	PRKCQ	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL3863	Serine/threonine-protein kinase D1	PRKD1	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL5072	Ephrin type-B receptor 1	EPHB1	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL3290	Ephrin type-B receptor 2	EPHB2	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL4901	Ephrin type-B receptor 3	EPHB3	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL5147	Ephrin type-B receptor 4	EPHB4	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL1824	Receptor tyrosine-protein kinase erbB-2	ERBB2	Homo sapiens	Kd	nM	B	2	2	4300.0	4300.0	0	0	2
+P3-12	defosbarasertib	CHEMBL5121	Mitogen-activated protein kinase 6	MAPK6	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL5759	Mitogen-activated protein kinase 4	MAPK4	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL5332	Mitogen-activated protein kinase 7	MAPK7	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL5198	Mitogen-activated protein kinase 15	MAPK15	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL3982	Tyrosine-protein kinase Fer	FER	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL4900	Serine/threonine-protein kinase D2	PRKD2	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL2595	Serine/threonine-protein kinase D3	PRKD3	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL4273	cGMP-dependent protein kinase 1	PRKG1	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL2896	cGMP-dependent protein kinase 2	PRKG2	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL5785	Interferon-induced, double-stranded RNA-activated protein kinase	EIF2AK2	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL2695	Focal adhesion kinase 1	PTK2	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL4601	Protein-tyrosine kinase 6	PTK6	Homo sapiens	Kd	nM	B	3	1	546.0	546.0	2	0	3
+P3-12	defosbarasertib	CHEMBL1906	RAF proto-oncogene serine/threonine-protein kinase	RAF1	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL2041	Proto-oncogene tyrosine-protein kinase receptor Ret	RET	Homo sapiens	Kd	nM	B	7	7	80.0	1278.0	0	0	3
+P3-12	defosbarasertib	CHEMBL5464	Receptor-interacting serine/threonine-protein kinase 1	RIPK1	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL5455	Tyrosine-protein kinase Fes/Fps	FES	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL3650	Fibroblast growth factor receptor 1	FGFR1	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL4142	Fibroblast growth factor receptor 2	FGFR2	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL2742	Fibroblast growth factor receptor 3	FGFR3	Homo sapiens	Kd	nM	B	4	0			4	0	2
+P3-12	defosbarasertib	CHEMBL3973	Fibroblast growth factor receptor 4	FGFR4	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL4454	Tyrosine-protein kinase Fgr	FGR	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL1868	Vascular endothelial growth factor receptor 1	FLT1	Homo sapiens	Kd	nM	B	2	2	110.0	110.0	0	0	2
+P3-12	defosbarasertib	CHEMBL5014	Receptor-interacting serine/threonine-protein kinase 2	RIPK2	Homo sapiens	Kd	nM	B	3	2	1800.0	1800.0	1	0	3
+P3-12	defosbarasertib	CHEMBL5568	Proto-oncogene tyrosine-protein kinase ROS	ROS1	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL2553	Ribosomal protein S6 kinase alpha-1	RPS6KA1	Homo sapiens	Kd	nM	B	5	0			5	0	3
+P3-12	defosbarasertib	CHEMBL3906	Ribosomal protein S6 kinase alpha-2	RPS6KA2	Homo sapiens	Kd	nM	B	4	0			4	0	2
+P3-12	defosbarasertib	CHEMBL2345	Ribosomal protein S6 kinase alpha-3	RPS6KA3	Homo sapiens	Kd	nM	B	3	0			3	0	3
+P3-12	defosbarasertib	CHEMBL3125	Ribosomal protein S6 kinase alpha-4	RPS6KA4	Homo sapiens	Kd	nM	B	5	0			5	0	3
+P3-12	defosbarasertib	CHEMBL4237	Ribosomal protein S6 kinase alpha-5	RPS6KA5	Homo sapiens	Kd	nM	B	5	0			5	0	3
+P3-12	defosbarasertib	CHEMBL1908385	Serine/threonine-protein kinase PknB	pknB	Mycobacterium tuberculosis	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL5651	Serine/threonine-protein kinase 35	STK35	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL2292	Dual specificity tyrosine-phosphorylation-regulated kinase 1A	DYRK1A	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL5856	Cyclin-dependent kinase 15	CDK15	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL1075133	Rhodopsin kinase GRK7	GRK7	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL1075167	Homeodomain-interacting protein kinase 4	HIPK4	Homo sapiens	Kd	nM	B	1	1	97.0	97.0	0	0	1
+P3-12	defosbarasertib	CHEMBL4948	Dual specificity mitogen-activated protein kinase kinase 5	MAP2K5	Homo sapiens	Kd	nM	B	2	2	2.8	405.0	0	0	2
+P3-12	defosbarasertib	CHEMBL3530	Dual specificity mitogen-activated protein kinase kinase 7	MAP2K7	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL5776	Mitogen-activated protein kinase kinase kinase 7	MAP3K7	Homo sapiens	Kd	nM	B	1	1	650.0	650.0	0	0	1
+P3-12	defosbarasertib	CHEMBL5638	Serine/threonine-protein kinase Nek11	NEK11	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL5427	Homeodomain-interacting protein kinase 1	HIPK1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL3542	Serine/threonine-protein kinase NIM1	NIM1K	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4627	Myosin light chain kinase	MYLK3	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL5861	G protein-coupled receptor kinase 4	GRK4	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL1075104	Leucine-rich repeat serine/threonine-protein kinase 2	LRRK2	Homo sapiens	Kd	nM	B	2	0			2	0	1
+P3-12	defosbarasertib	CHEMBL5095	Wee1-like protein kinase 2	WEE2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL5116	Uncharacterized serine/threonine-protein kinase SBK3	SBK3	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL1908386	Dual serine/threonine and tyrosine protein kinase	DSTYK	Homo sapiens	Kd	nM	B	1	1	3000.0	3000.0	0	0	1
+P3-12	defosbarasertib	CHEMBL1908387	Calcium-dependent protein kinase 1	CDPK1	Plasmodium falciparum	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL1908388	Cyclin-dependent kinase 2 homolog	CRK2	Plasmodium falciparum (isolate 3D7)	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL6149	Serine/threonine-protein kinase SIK3	SIK3	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL331	Cyclin-dependent kinase 4	CDK4	Homo sapiens	Kd	nM	B	3	0			3	0	2
+P3-12	defosbarasertib	CHEMBL1163127	Mitogen-activated protein kinase kinase kinase 15	MAP3K15	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL2527	Serine/threonine-protein kinase Chk2	CHEK2	Homo sapiens	Kd	nM	B	1	1	1400.0	1400.0	0	0	1
+P3-12	defosbarasertib	CHEMBL1163129	Serine/threonine-protein kinase SBK1	SBK1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL5518	Misshapen-like kinase 1	MINK1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL3009	Receptor tyrosine-protein kinase erbB-4	ERBB4	Homo sapiens	Kd	nM	B	1	1	470.0	470.0	0	0	1
+P3-12	defosbarasertib	CHEMBL5047	Serine/threonine-protein kinase ULK3	ULK3	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL6150	Serine/threonine-protein kinase 32A	STK32A	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL1163117	Cyclin-dependent kinase-like 3	CDKL3	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL5476	Bone morphogenetic protein receptor type-1B	BMPR1B	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL3476	Inhibitor of nuclear factor kappa-B kinase subunit alpha	CHUK	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL1163101	Serine/threonine-protein kinase/endoribonuclease IRE1	ERN1	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL1991	Inhibitor of nuclear factor kappa-B kinase subunit beta	IKBKB	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL3357	Interleukin-1 receptor-associated kinase 1	IRAK1	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL2793	Casein kinase I isoform alpha	CSNK1A1	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL5838	Receptor tyrosine-protein kinase erbB-3	ERBB3	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4175	Megakaryocyte-associated tyrosine-protein kinase	MATK	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL5970	Mitogen-activated protein kinase kinase kinase 3	MAP3K3	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL2689	Macrophage-stimulating protein receptor	MST1R	Homo sapiens	Kd	nM	B	2	1	2508.0	2508.0	1	0	2
+P3-12	defosbarasertib	CHEMBL5679	Serine/threonine-protein kinase Nek3	NEK3	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL5554	Phosphatidylinositol 4-phosphate 3-kinase C2 domain-containing subunit beta	PIK3C2B	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL3267	Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit gamma isoform	PIK3CG	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL3268	Phosphatidylinositol 4-kinase beta	PI4KB	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL2598	Protein kinase C iota type	PRKCI	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL2939	Mitogen-activated protein kinase 13	MAPK13	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL5607	Rhodopsin kinase GRK1	GRK1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL5819	Serine/threonine-protein kinase Nek4	NEK4	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL1163112	Cyclin-dependent kinase-like 5	CDKL5	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4501	Ribosomal protein S6 kinase beta-1	RPS6KB1	Homo sapiens	Kd	nM	B	2	1	2800.0	2800.0	1	0	2
+P3-12	defosbarasertib	CHEMBL6006	Serine/threonine-protein kinase ULK1	ULK1	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL4376	Dual specificity tyrosine-phosphorylation-regulated kinase 2	DYRK2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL1908381	Peripheral plasma membrane protein CASK	CASK	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL1795192	Cyclin-dependent kinase 13	CDK13	Homo sapiens	Kd	nM	B	2	1	1100.0	1100.0	1	0	2
+P3-12	defosbarasertib	CHEMBL1908382	Serine/threonine-protein kinase PRP4 homolog	PRP4K	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL5728	Cyclin-dependent kinase-like 2	CDKL2	Homo sapiens	Kd	nM	B	1	1	1200.0	1200.0	0	0	1
+P3-12	defosbarasertib	CHEMBL5789	Cyclin-dependent kinase-like 1	CDKL1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL5836	Ephrin type-B receptor 6	EPHB6	Homo sapiens	Kd	nM	B	2	1	50.0	50.0	1	0	2
+P3-12	defosbarasertib	CHEMBL1163120	Phosphatidylinositol 3-kinase C2 domain-containing subunit gamma	PIK3C2G	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL5330	Mitogen-activated protein kinase kinase kinase kinase 2	MAP4K2	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL1163123	Mitogen-activated protein kinase kinase kinase 6	MAP3K6	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL1163124	Mitogen-activated protein kinase kinase kinase 13	MAP3K13	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL2973	Rho-associated protein kinase 2	ROCK2	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL2842	Serine/threonine-protein kinase mTOR	MTOR	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL3130	Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit delta isoform	PIK3CD	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL1163104	Serine/threonine-protein kinase OSR1	OXSR1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL3231	Rho-associated protein kinase 1	ROCK1	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL4577	Homeodomain-interacting protein kinase 3	HIPK3	Homo sapiens	Kd	nM	B	1	1	2500.0	2500.0	0	0	1
+P3-12	defosbarasertib	CHEMBL1163106	Serine/threonine-protein kinase MAK	MAK	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL3956	Mitogen-activated protein kinase kinase kinase 1	MAP3K1	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL3145	Phosphatidylinositol 4,5-bisphosphate 3-kinase catalytic subunit beta isoform	PIK3CB	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL1649059	Serine/threonine-protein kinase VRK2	VRK2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL1908389	Mitogen-activated protein kinase kinase kinase 12	MAP3K12	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL5914	Mitogen-activated protein kinase kinase kinase 2	MAP3K2	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL5938	Serine/threonine-protein kinase PLK2	PLK2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL1075155	Serine/threonine-protein kinase 38	STK38	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL1908383	Phosphatidylinositol 4-phosphate 5-kinase type-1 gamma	PIP5K1C	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL1163108	STE20/SPS1-related proline-alanine-rich protein kinase	STK39	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL5408	Serine/threonine-protein kinase TBK1	TBK1	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL6186	Serine/threonine-protein kinase Sgk3	SGK3	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL5415	SRSF protein kinase 3	SRPK3	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL6029	Eukaryotic translation initiation factor 2-alpha kinase 1	EIF2AK1	Homo sapiens	Kd	nM	B	2	2	1500.0	4326.0	0	0	2
+P3-12	defosbarasertib	CHEMBL1795165	Hormonally up-regulated neu tumor-associated kinase	HUNK	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL5435	Serine/threonine-protein kinase ULK2	ULK2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL1163126	Serine/threonine-protein kinase ICK	CILK1	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL1163128	Microtubule-associated serine/threonine-protein kinase 1	MAST1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL3778	Interleukin-1 receptor-associated kinase 4	IRAK4	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL1075195	Serine/threonine-protein kinase TAO2	TAOK2	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL5701	Serine/threonine-protein kinase TAO3	TAOK3	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL1628470	Transient receptor potential cation channel subfamily M member 6	TRPM6	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL1908384	SNF-related serine/threonine-protein kinase	SNRK	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL6000	Serine/threonine-protein kinase RIO2	RIOK2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL6083	Receptor-interacting serine/threonine-protein kinase 4	RIPK4	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL5261	Serine/threonine-protein kinase TAO1	TAOK1	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL4576	Homeodomain-interacting protein kinase 2	HIPK2	Homo sapiens	Kd	nM	B	1	1	3700.0	3700.0	0	0	1
+P3-12	defosbarasertib	CHEMBL1770034	Phosphatidylinositol 5-phosphate 4-kinase type-2 gamma	PIP4K2C	Homo sapiens	Kd	nM	B	2	0			2	0	2
+P3-12	defosbarasertib	CHEMBL6191	Mitogen-activated protein kinase kinase kinase 19	MAP3K19	Homo sapiens	Kd	nM	B	1	1	2400.0	2400.0	0	0	1
+P3-12	defosbarasertib	CHEMBL4708	Serine/threonine-protein kinase 3	STK3	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL3529	Inhibitor of nuclear factor kappa-B kinase subunit epsilon	IKBKE	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4225	Dual specificity protein kinase CLK2	CLK2	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4897	Serine/threonine-protein kinase PLK3	PLK3	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4516	Serine/threonine-protein kinase MRCK alpha	CDC42BPA	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4147	Calcium/calmodulin-dependent protein kinase type II subunit alpha	CAMK2A	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL3587	Dual specificity mitogen-activated protein kinase kinase 1	MAP2K1	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL5408	Serine/threonine-protein kinase TBK1	TBK1	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4247	ALK tyrosine kinase receptor	ALK	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL2689	Macrophage-stimulating protein receptor	MST1R	Homo sapiens	Ki	nM	F	1	1	1995.26	1995.26	0	0	1
+P3-12	defosbarasertib	CHEMBL3920	Protein kinase C theta type	PRKCQ	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL2971	Tyrosine-protein kinase JAK2	JAK2	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4816	RAC-gamma serine/threonine-protein kinase	AKT3	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL1844	Macrophage colony-stimulating factor 1 receptor	CSF1R	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL5627	Leukocyte tyrosine kinase receptor	LTK	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL5608	NT-3 growth factor receptor	NTRK3	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL3438	Protein kinase C zeta type	PRKCZ	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL2041	Proto-oncogene tyrosine-protein kinase receptor Ret	RET	Homo sapiens	Ki	nM	F	1	1	158.49	158.49	0	0	1
+P3-12	defosbarasertib	CHEMBL4045	5'-AMP-activated protein kinase catalytic subunit alpha-1	PRKAA1	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL2964	Dual specificity mitogen-activated protein kinase kinase 2	MAP2K2	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL260	Mitogen-activated protein kinase 14	MAPK14	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4900	Serine/threonine-protein kinase D2	PRKD2	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL2345	Ribosomal protein S6 kinase alpha-3	RPS6KA3	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL6166	Mitogen-activated protein kinase kinase kinase kinase 4	MAP4K4	Homo sapiens	Ki	nM	F	1	1	3162.28	3162.28	0	0	1
+P3-12	defosbarasertib	CHEMBL2292	Dual specificity tyrosine-phosphorylation-regulated kinase 1A	DYRK1A	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL2996	Protein kinase C delta type	PRKCD	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL2147	Serine/threonine-protein kinase pim-1	PIM1	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL2939	Mitogen-activated protein kinase 13	MAPK13	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL267	Proto-oncogene tyrosine-protein kinase Src	SRC	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL3717	Hepatocyte growth factor receptor	MET	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL5543	Dual specificity tyrosine-phosphorylation-regulated kinase 1B	DYRK1B	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL2973	Rho-associated protein kinase 2	ROCK2	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL3836	LIM domain kinase 1	LIMK1	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL1936	Mast/stem cell growth factor receptor Kit	KIT	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL5600	MAP/microtubule affinity-regulating kinase 3	MARK3	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL3476	Inhibitor of nuclear factor kappa-B kinase subunit alpha	CHUK	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4630	Serine/threonine-protein kinase Chk1	CHEK1	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL279	Vascular endothelial growth factor receptor 2	KDR	Homo sapiens	Ki	nM	F	1	1	251.19	251.19	0	0	1
+P3-12	defosbarasertib	CHEMBL2431	RAC-beta serine/threonine-protein kinase	AKT2	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4599	Activated CDC42 kinase 1	TNK2	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL5818	cAMP-dependent protein kinase catalytic subunit PRKX	PRKX	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL1075104	Leucine-rich repeat serine/threonine-protein kinase 2	LRRK2	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4722	Aurora kinase A	AURKA	Homo sapiens	Ki	nM	F	1	1	316.23	316.23	0	0	1
+P3-12	defosbarasertib	CHEMBL3905	Tyrosine-protein kinase Lyn	LYN	Homo sapiens	Ki	nM	F	1	1	1000.0	1000.0	0	0	1
+P3-12	defosbarasertib	CHEMBL1913	Platelet-derived growth factor receptor beta	PDGFRB	Homo sapiens	Ki	nM	F	1	1	630.96	630.96	0	0	1
+P3-12	defosbarasertib	CHEMBL5678	G protein-coupled receptor kinase 5	GRK5	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4040	Mitogen-activated protein kinase 1	MAPK1	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL258	Tyrosine-protein kinase Lck	LCK	Homo sapiens	Ki	nM	F	1	1	125.89	125.89	0	0	1
+P3-12	defosbarasertib	CHEMBL301	Cyclin-dependent kinase 2	CDK2	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL3629	Casein kinase II subunit alpha	CSNK2A1	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL5261	Serine/threonine-protein kinase TAO1	TAOK1	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL2828	Casein kinase I isoform delta	CSNK1D	Homo sapiens	Ki	nM	F	1	1	5011.87	5011.87	0	0	1
+P3-12	defosbarasertib	CHEMBL2815	High affinity nerve growth factor receptor	NTRK1	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL2850	Glycogen synthase kinase-3 alpha	GSK3A	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL2695	Focal adhesion kinase 1	PTK2	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL3650	Fibroblast growth factor receptor 1	FGFR1	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL3553	Non-receptor tyrosine-protein kinase TYK2	TYK2	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4179	Mitogen-activated protein kinase 9	MAPK9	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL1974	Receptor-type tyrosine-protein kinase FLT3	FLT3	Homo sapiens	Ki	nM	F	1	1	316.23	316.23	0	0	1
+P3-12	defosbarasertib	CHEMBL1862	Tyrosine-protein kinase ABL1	ABL1	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4036	Cyclin-dependent kinase 5	CDK5	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL5314	Tyrosine-protein kinase receptor TYRO3	TYRO3	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL2468	Death-associated protein kinase 3	DAPK3	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL2208	MAP kinase-activated protein kinase 2	MAPKAPK2	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4482	Serine/threonine-protein kinase PAK 4	PAK4	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL2250	Tyrosine-protein kinase Blk	BLK	Homo sapiens	Ki	nM	F	1	1	630.96	630.96	0	0	1
+P3-12	defosbarasertib	CHEMBL203	Epidermal growth factor receptor	EGFR	Homo sapiens	Ki	nM	F	1	1	501.19	501.19	0	0	1
+P3-12	defosbarasertib	CHEMBL5330	Mitogen-activated protein kinase kinase kinase kinase 2	MAP4K2	Homo sapiens	Ki	nM	F	1	1	2511.89	2511.89	0	0	1
+P3-12	defosbarasertib	CHEMBL2276	Mitogen-activated protein kinase 8	MAPK8	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL2793	Casein kinase I isoform alpha	CSNK1A1	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL2959	Tyrosine-protein kinase ITK/TSK	ITK	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL1981	Insulin receptor	INSR	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL1824	Receptor tyrosine-protein kinase erbB-2	ERBB2	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL2068	Ephrin type-A receptor 2	EPHA2	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL2595	Serine/threonine-protein kinase D3	PRKD3	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL2527	Serine/threonine-protein kinase Chk2	CHEK2	Homo sapiens	Ki	nM	F	1	1	1995.26	1995.26	0	0	1
+P3-12	defosbarasertib	CHEMBL5903	Activin receptor type-1	ACVR1	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4600	Serine/threonine-protein kinase PAK 1	PAK1	Homo sapiens	Ki	nM	F	1	1	10000.0	10000.0	0	0	1
+P3-12	defosbarasertib	CHEMBL2938	Protein kinase C gamma type	PRKCG	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4670	MAP kinase-activated protein kinase 3	MAPKAPK3	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL1957	Insulin-like growth factor 1 receptor	IGF1R	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL2007	Platelet-derived growth factor receptor alpha	PDGFRA	Homo sapiens	Ki	nM	F	1	1	251.19	251.19	0	0	1
+P3-12	defosbarasertib	CHEMBL5251	Tyrosine-protein kinase BTK	BTK	Homo sapiens	Ki	nM	F	1	1	3981.07	3981.07	0	0	1
+P3-12	defosbarasertib	CHEMBL2148	Tyrosine-protein kinase JAK3	JAK3	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL5073	Calcium/calmodulin-dependent protein kinase type 1D	CAMK1D	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL1841	Tyrosine-protein kinase Fyn	FYN	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL3024	Serine/threonine-protein kinase PLK1	PLK1	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL1955	Vascular endothelial growth factor receptor 3	FLT4	Homo sapiens	Ki	nM	F	1	1	1258.93	1258.93	0	0	1
+P3-12	defosbarasertib	CHEMBL3835	Serine/threonine-protein kinase Nek2	NEK2	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL5719	Cyclin-dependent kinase 8	CDK8	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL3055	Cyclin-dependent kinase 7	CDK7	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL308	Cyclin-dependent kinase 1	CDK1	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL262	Glycogen synthase kinase-3 beta	GSK3B	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL3231	Rho-associated protein kinase 1	ROCK1	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL3116	Cyclin-dependent kinase 9	CDK9	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4101	cAMP-dependent protein kinase catalytic subunit alpha	PRKACA	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL3778	Interleukin-1 receptor-associated kinase 4	IRAK4	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL1868	Vascular endothelial growth factor receptor 1	FLT1	Homo sapiens	Ki	nM	F	1	1	630.96	630.96	0	0	1
+P3-12	defosbarasertib	CHEMBL4674	Mitogen-activated protein kinase 12	MAPK12	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4282	RAC-alpha serine/threonine-protein kinase	AKT1	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL2534	3-phosphoinositide-dependent protein kinase 1	PDPK1	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4898	BDNF/NT-3 growth factors receptor	NTRK2	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4852	Mitogen-activated protein kinase kinase kinase kinase 5	MAP4K5	Homo sapiens	Ki	nM	F	1	1	19.95	19.95	0	0	1
+P3-12	defosbarasertib	CHEMBL2742	Fibroblast growth factor receptor 3	FGFR3	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL3009	Receptor tyrosine-protein kinase erbB-4	ERBB4	Homo sapiens	Ki	nM	F	1	1	199.53	199.53	0	0	1
+P3-12	defosbarasertib	CHEMBL4203	Dual specificity protein kinase CLK4	CLK4	Homo sapiens	Ki	nM	F	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL1974	Receptor-type tyrosine-protein kinase FLT3	FLT3	Homo sapiens	IC50	nM	B	1	1	100.0	100.0	0	0	1
+P3-12	defosbarasertib	CHEMBL2185	Aurora kinase B	AURKB	Homo sapiens	Inhibition	%	B	7	0			0	0	3
+P3-12	defosbarasertib	CHEMBL4105816	Acyl-CoA dehydrogenase family member 10	ACAD10	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4105707	Acyl-CoA dehydrogenase family member 11	ACAD11	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4105892	Very long-chain specific acyl-CoA dehydrogenase, mitochondrial	ACADVL	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4105748	Peroxisomal acyl-coenzyme A oxidase 1	ACOX1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4105817	Peroxisomal acyl-coenzyme A oxidase 3	ACOX3	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4105818	Long-chain-fatty-acid--CoA ligase 5	ACSL5	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL6090	Actin-related protein 2	ACTR2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4105857	Actin-related protein 3	ACTR3	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4105885	AarF domain-containing protein kinase 1	ADCK1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4105886	Uncharacterized aarF domain-containing protein kinase 5	ADCK5	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL3589	Adenosine kinase	ADK	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4079	Beta-adrenergic receptor kinase 1	GRK2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4938	Adenylate kinase 2, mitochondrial	AK2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4105819	Adenine phosphoribosyltransferase	APRT	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL1169596	Serine/threonine-protein kinase A-Raf	ARAF	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL5146	Breakpoint cluster region protein	BCR	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4105937	Cysteine--tRNA ligase, cytoplasmic	CARS1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL308	Cyclin-dependent kinase 1	CDK1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL3559692	Cyclin-dependent kinase 12	CDK12	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL2508	Cyclin-dependent kinase 6	CDK6	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4105742	Chromodomain-helicase-DNA-binding protein 4	CHD4	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL5681	UMP-CMP kinase	CMPK1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4105975	Cytochrome c1, heme protein, mitochondrial	CYC1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL2447	Deoxycytidine kinase	DCK	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL3769292	dCTP pyrophosphatase 1	DCTPP1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL2010634	ATP-dependent RNA helicase DDX1	DDX1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL5553	ATP-dependent RNA helicase DDX3X	DDX3X	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4105782	ATP-dependent RNA helicase DDX42	DDX42	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4105783	Probable ATP-dependent RNA helicase DDX6	DDX6	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL2331059	Delta(24)-sterol reductase	DHCR24	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4105814	ATP-dependent RNA helicase DHX30	DHX30	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL2189122	DnaJ homolog subfamily A member 1	DNAJA1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4105852	Eukaryotic translation initiation factor 5B	EIF5B	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4105743	General transcription and DNA repair factor IIH helicase subunit XPD	ERCC2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4105932	Serine/threonine-protein kinase/endoribonuclease IRE2	ERN2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4105744	Electron transfer flavoprotein subunit beta	ETFB	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4105969	Phenylalanine--tRNA ligase beta subunit	FARSB	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL3879831	Ferrochelatase, mitochondrial	FECH	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4105815	Glycine--tRNA ligase	GARS1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4105887	Guanine nucleotide-binding protein G(i) subunit alpha-2	GNAI2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4105780	GTP-binding protein 4	GTPBP4	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL2546	Heme oxygenase 2	HMOX2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4105858	Putative heat shock protein HSP 90-beta 2	HSP90AB2P	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4105821	Isoleucine--tRNA ligase, mitochondrial	IARS2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL5247	Scaffold protein ILK	ILK	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL2002	Inosine-5'-monophosphate dehydrogenase 2	IMPDH2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL3313835	S-adenosylmethionine synthase isoform type-2	MAT2A	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4105745	DNA replication licensing factor MCM4	MCM4	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4105779	Midasin	MDN1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4105746	Myosin-10	MYH10	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4105888	Myosin-14	MYH14	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4105935	RNA cytidine acetyltransferase	NAT10	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4105781	NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 13	NDUFA13	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL3959	Ribosyldihydronicotinamide dehydrogenase [quinone]	NQO2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4105704	Obg-like ATPase 1	OLA1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4105705	Dynamin-like GTPase OPA1, mitochondrial	OPA1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL5922	Bifunctional phosphoribosylaminoimidazole carboxylase/phosphoribosylaminoimidazole succinocarboxamide synthetase	PAICS	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL1075181	Pyridoxal kinase	PDXK	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4105856	Phosphatidylethanolamine-binding protein 1	PEBP1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL2972	ATP-dependent 6-phosphofructokinase, platelet type	PFKP	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4105706	Membrane-associated progesterone receptor component 1	PGRMC1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL1795194	Phosphatidylinositol 5-phosphate 4-kinase type-2 alpha	PIP4K2A	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL2743	cAMP-dependent protein kinase catalytic subunit gamma	PRKACG	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL2393	5'-AMP-activated protein kinase subunit gamma-1	PRKAG1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL2453	5'-AMP-activated protein kinase subunit gamma-2	PRKAG2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL2221	cAMP-dependent protein kinase type II-alpha regulatory subunit	PRKAR2A	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL299	Protein kinase C alpha type	PRKCA	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL3045	Protein kinase C beta type	PRKCB	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL3831205	26S proteasome regulatory subunit 6B	PSMC4	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL3856	Glycogen phosphorylase, brain form	PYGB	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL2568	Glycogen phosphorylase, liver form	PYGL	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4105933	Uncharacterized protein FLJ45252		Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4105971	Ras-related protein Rab-10	RAB10	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4105702	Ras-related protein Rab-27A	RAB27A	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4105703	Ras-related protein Rab-6A	RAB6A	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4105853	Rab-like protein 3	RABL3	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL1741190	GTP-binding nuclear protein Ran	RAN	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL1795199	Receptor-interacting serine/threonine-protein kinase 3	RIPK3	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4105891	Septin-9	SEPTIN9	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4105889	Exosome RNA helicase MTR4	MTREX	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL3709670	ADP/ATP translocase 2	SLC25A5	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4105854	ADP/ATP translocase 3	SLC25A6	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4105747	Structural maintenance of chromosomes protein 1A	SMC1A	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4105890	Structural maintenance of chromosomes protein 2	SMC2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4105972	U5 small nuclear ribonucleoprotein 200 kDa helicase	SNRNP200	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4105934	Signal recognition particle receptor subunit alpha	SRPRA	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL1795198	STE20-related kinase adapter protein alpha	STRADA	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4105973	Succinate--CoA ligase [ADP-forming] subunit beta, mitochondrial	SUCLA2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL2069163	Dual specificity testis-specific protein kinase 2	TESK2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4105820	Thyroid hormone receptor-associated protein 3	THRAP3	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL3396	DNA topoisomerase 2-beta	TOP2B	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL1938223	EKC/KEOPS complex subunit TP53RK	TP53RK	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4105970	Elongation factor Tu, mitochondrial	TUFM	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL3179	Tyrosine--tRNA ligase, cytoplasmic	YARS1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-12	defosbarasertib	CHEMBL4523582	Replicase polyprotein 1ab	rep	Severe acute respiratory syndrome coronavirus 2	Inhibition	%	F	2	2	1.323	5.78	0	0	1
+P3-12	defosbarasertib	CHEMBL2185	Aurora kinase B	AURKB	Homo sapiens	Inhibition	%	A	1	1	41.0	41.0	0	0	1
+P3-12	defosbarasertib	CHEMBL1865	Protein deacetylase HDAC6	HDAC6	Homo sapiens	Inhibition	%	B	2	2	3.38	16.45	0	0	1
+P3-12	defosbarasertib	CHEMBL2185	Aurora kinase B	AURKB	Homo sapiens	IC50	nM	F	4	4	5.0	12.0	0	0	1
+P3-12	defosbarasertib	CHEMBL4895	Tyrosine-protein kinase receptor UFO	AXL	Homo sapiens	Inhibition	%	B	1	1	94.58	94.58	0	0	1
+P3-12	defosbarasertib	CHEMBL4895	Tyrosine-protein kinase receptor UFO	AXL	Homo sapiens	IC50	nM	B	1	1	1243.0	1243.0	0	0	1
+P3-13	pinometostat	CHEMBL1795117	Histone-lysine N-methyltransferase, H3 lysine-79 specific	DOT1L	Homo sapiens	Ki	nM	B	4	3	0.012	0.08	0	1	4
+P3-13	pinometostat	CHEMBL1795117	Histone-lysine N-methyltransferase, H3 lysine-79 specific	DOT1L	Homo sapiens	EC50	nM	B	1	1	9.0	9.0	0	0	1
+P3-13	pinometostat	CHEMBL1795117	Histone-lysine N-methyltransferase, H3 lysine-79 specific	DOT1L	Homo sapiens	IC50	nM	B	8	7	0.74	52.0	0	1	5
+P3-13	pinometostat	CHEMBL1795117	Histone-lysine N-methyltransferase, H3 lysine-79 specific	DOT1L	Homo sapiens	Inhibition	%	B	1	0			1	0	1
+P3-13	pinometostat	CHEMBL4523582	Replicase polyprotein 1ab	rep	Severe acute respiratory syndrome coronavirus 2	Inhibition	%	F	2	2	-0.09719	0.14	0	0	1
+P3-13	pinometostat	CHEMBL1865	Protein deacetylase HDAC6	HDAC6	Homo sapiens	Inhibition	%	B	2	2	-2.51	10.99	0	0	1
+P3-13	pinometostat	CHEMBL4295761	Protein AF-9	MLLT3	Homo sapiens	Ki		B	1	0			0	0	1
+P3-13	pinometostat	CHEMBL4295801	Protein ENL	MLLT1	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL1902	Peptidyl-prolyl cis-trans isomerase FKBP1A	FKBP1A	Homo sapiens	IC50	nM	B	5	5	0.45	1.6	0	0	5
+P3-16	sirolimus	CHEMBL2842	Serine/threonine-protein kinase mTOR	MTOR	Homo sapiens	IC50	nM	B	19	17	0.05	5062.0	1	1	13
+P3-16	sirolimus	CHEMBL1902	Peptidyl-prolyl cis-trans isomerase FKBP1A	FKBP1A	Homo sapiens	Ki	nM	B	4	4	0.2	5400.0	0	0	4
+P3-16	sirolimus	CHEMBL4630	Serine/threonine-protein kinase Chk1	CHEK1	Homo sapiens	Inhibition	%	B	1	1	102.0	102.0	0	0	1
+P3-16	sirolimus	CHEMBL258	Tyrosine-protein kinase Lck	LCK	Homo sapiens	Inhibition	%	B	1	1	102.0	102.0	0	0	1
+P3-16	sirolimus	CHEMBL5490	Rho-associated protein kinase 2	Rock2	Rattus norvegicus	Inhibition	%	B	1	1	92.0	92.0	0	0	1
+P3-16	sirolimus	CHEMBL262	Glycogen synthase kinase-3 beta	GSK3B	Homo sapiens	Inhibition	%	B	1	1	89.0	89.0	0	0	1
+P3-16	sirolimus	CHEMBL4501	Ribosomal protein S6 kinase beta-1	RPS6KB1	Homo sapiens	Inhibition	%	B	1	1	109.0	109.0	0	0	1
+P3-16	sirolimus	CHEMBL2343	Serine/threonine-protein kinase Sgk1	SGK1	Homo sapiens	Inhibition	%	B	1	1	108.0	108.0	0	0	1
+P3-16	sirolimus	CHEMBL4282	RAC-alpha serine/threonine-protein kinase	AKT1	Homo sapiens	Inhibition	%	B	2	1	91.0	91.0	0	0	2
+P3-16	sirolimus	CHEMBL4766	[Pyruvate dehydrogenase (acetyl-transferring)] kinase isozyme 1, mitochondrial	PDK1	Homo sapiens	Inhibition	%	B	1	1	110.0	110.0	0	0	1
+P3-16	sirolimus	CHEMBL299	Protein kinase C alpha type	PRKCA	Homo sapiens	Inhibition	%	B	1	1	99.0	99.0	0	0	1
+P3-16	sirolimus	CHEMBL3094	MAP kinase-activated protein kinase 5	MAPKAPK5	Homo sapiens	Inhibition	%	B	1	1	74.0	74.0	0	0	1
+P3-16	sirolimus	CHEMBL4237	Ribosomal protein S6 kinase alpha-5	RPS6KA5	Homo sapiens	Inhibition	%	B	1	1	104.0	104.0	0	0	1
+P3-16	sirolimus	CHEMBL2208	MAP kinase-activated protein kinase 2	MAPKAPK2	Homo sapiens	Inhibition	%	B	1	1	125.0	125.0	0	0	1
+P3-16	sirolimus	CHEMBL2939	Mitogen-activated protein kinase 13	MAPK13	Homo sapiens	Inhibition	%	B	1	1	82.0	82.0	0	0	1
+P3-16	sirolimus	CHEMBL4674	Mitogen-activated protein kinase 12	MAPK12	Homo sapiens	Inhibition	%	B	1	1	100.0	100.0	0	0	1
+P3-16	sirolimus	CHEMBL3961	Mitogen-activated protein kinase 11	MAPK11	Homo sapiens	Inhibition	%	B	1	1	88.0	88.0	0	0	1
+P3-16	sirolimus	CHEMBL260	Mitogen-activated protein kinase 14	MAPK14	Homo sapiens	Inhibition	%	B	1	1	93.0	93.0	0	0	1
+P3-16	sirolimus	CHEMBL2276	Mitogen-activated protein kinase 8	MAPK8	Homo sapiens	Inhibition	%	B	1	1	98.0	98.0	0	0	1
+P3-16	sirolimus	CHEMBL4040	Mitogen-activated protein kinase 1	MAPK1	Homo sapiens	Inhibition	%	B	1	1	90.0	90.0	0	0	1
+P3-16	sirolimus	CHEMBL1293231	Nuclear receptor ROR-gamma	Rorc	Mus musculus	Potency	nM	F	2	2	31622.8	35481.3	0	0	1
+P3-16	sirolimus	CHEMBL4848	Eukaryotic translation initiation factor 4E	EIF4E	Homo sapiens	Kd	nM	B	1	1	0.5	0.5	0	0	1
+P3-16	sirolimus	CHEMBL1781868	Programmed cell death protein 4	PDCD4	Homo sapiens	EC50	nM	B	1	1	50.0	50.0	0	0	1
+P3-16	sirolimus	CHEMBL1293258	Mothers against decapentaplegic homolog 3	SMAD3	Homo sapiens	Potency	nM	F	1	1	12589.3	12589.3	0	0	1
+P3-16	sirolimus	CHEMBL1795087	Ubiquitin carboxyl-terminal hydrolase 1	USP1	Homo sapiens	Potency	nM	F	1	1	35481.3	35481.3	0	0	1
+P3-16	sirolimus	CHEMBL220	Acetylcholinesterase	ACHE	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL220	Acetylcholinesterase	ACHE	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL226	Adenosine receptor A1	ADORA1	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL226	Adenosine receptor A1	ADORA1	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL251	Adenosine receptor A2a	ADORA2A	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL251	Adenosine receptor A2a	ADORA2A	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL256	Adenosine receptor A3	ADORA3	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL256	Adenosine receptor A3	ADORA3	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL319	Alpha-1A adrenergic receptor	Adra1a	Rattus norvegicus	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL319	Alpha-1A adrenergic receptor	Adra1a	Rattus norvegicus	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL315	Alpha-1B adrenergic receptor	Adra1b	Rattus norvegicus	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL315	Alpha-1B adrenergic receptor	Adra1b	Rattus norvegicus	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL223	Alpha-1D adrenergic receptor	ADRA1D	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL223	Alpha-1D adrenergic receptor	ADRA1D	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL1867	Alpha-2A adrenergic receptor	ADRA2A	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL1867	Alpha-2A adrenergic receptor	ADRA2A	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL1942	Alpha-2B adrenergic receptor	ADRA2B	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL1942	Alpha-2B adrenergic receptor	ADRA2B	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL1916	Alpha-2C adrenergic receptor	ADRA2C	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL1916	Alpha-2C adrenergic receptor	ADRA2C	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL213	Beta-1 adrenergic receptor	ADRB1	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL213	Beta-1 adrenergic receptor	ADRB1	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL210	Beta-2 adrenergic receptor	ADRB2	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL210	Beta-2 adrenergic receptor	ADRB2	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL246	Beta-3 adrenergic receptor	ADRB3	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL246	Beta-3 adrenergic receptor	ADRB3	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL222	Sodium-dependent noradrenaline transporter	SLC6A2	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL222	Sodium-dependent noradrenaline transporter	SLC6A2	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL2622	Aldo-keto reductase family 1 member B1	Akr1b1	Rattus norvegicus	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL2622	Aldo-keto reductase family 1 member B1	Akr1b1	Rattus norvegicus	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL4607	Type-2 angiotensin II receptor	AGTR2	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL4607	Type-2 angiotensin II receptor	AGTR2	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL3157	B2 bradykinin receptor	BDKRB2	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL3157	B2 bradykinin receptor	BDKRB2	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL1832	Calcitonin receptor	CALCR	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL1832	Calcitonin receptor	CALCR	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL218	Cannabinoid receptor 1	CNR1	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL218	Cannabinoid receptor 1	CNR1	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL205	Carbonic anhydrase 2	CA2	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL205	Carbonic anhydrase 2	CA2	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL4015	C-C chemokine receptor type 2	CCR2	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL4015	C-C chemokine receptor type 2	CCR2	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL2414	C-C chemokine receptor type 4	CCR4	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL2414	C-C chemokine receptor type 4	CCR4	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL274	C-C chemokine receptor type 5	CCR5	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL274	C-C chemokine receptor type 5	CCR5	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL4029	C-X-C chemokine receptor type 1	CXCR1	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL4029	C-X-C chemokine receptor type 1	CXCR1	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL2434	C-X-C chemokine receptor type 2	CXCR2	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL2434	C-X-C chemokine receptor type 2	CXCR2	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL1901	Cholecystokinin receptor type A	CCKAR	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL1901	Cholecystokinin receptor type A	CCKAR	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL221	Prostaglandin G/H synthase 1	PTGS1	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL221	Prostaglandin G/H synthase 1	PTGS1	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL230	Prostaglandin G/H synthase 2	PTGS2	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL230	Prostaglandin G/H synthase 2	PTGS2	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL3356	Cytochrome P450 1A2	CYP1A2	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL3356	Cytochrome P450 1A2	CYP1A2	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL5282	Cytochrome P450 2A6	CYP2A6	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL5282	Cytochrome P450 2A6	CYP2A6	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL3622	Cytochrome P450 2C19	CYP2C19	Homo sapiens	IC50	nM	B	1	1	4000.0	4000.0	0	0	1
+P3-16	sirolimus	CHEMBL3622	Cytochrome P450 2C19	CYP2C19	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL3397	Cytochrome P450 2C9	CYP2C9	Homo sapiens	IC50	nM	B	1	1	2000.0	2000.0	0	0	1
+P3-16	sirolimus	CHEMBL3397	Cytochrome P450 2C9	CYP2C9	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL289	Cytochrome P450 2D6	CYP2D6	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL289	Cytochrome P450 2D6	CYP2D6	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL5281	Cytochrome P450 2E1	CYP2E1	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL5281	Cytochrome P450 2E1	CYP2E1	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL340	Cytochrome P450 3A4	CYP3A4	Homo sapiens	IC50	nM	B	1	1	2000.0	2000.0	0	0	1
+P3-16	sirolimus	CHEMBL340	Cytochrome P450 3A4	CYP3A4	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL2056	D(1A) dopamine receptor	DRD1	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL2056	D(1A) dopamine receptor	DRD1	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL217	D(2) dopamine receptor	DRD2	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL217	D(2) dopamine receptor	DRD2	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL234	D(3) dopamine receptor	DRD3	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL234	D(3) dopamine receptor	DRD3	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL219	D(4) dopamine receptor	DRD4	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL219	D(4) dopamine receptor	DRD4	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL238	Sodium-dependent dopamine transporter	SLC6A3	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL238	Sodium-dependent dopamine transporter	SLC6A3	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL252	Endothelin-1 receptor	EDNRA	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL252	Endothelin-1 receptor	EDNRA	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL206	Estrogen receptor	ESR1	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL206	Estrogen receptor	ESR1	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL242	Estrogen receptor beta	ESR2	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL242	Estrogen receptor beta	ESR2	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL2034	Glucocorticoid receptor	NR3C1	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL2034	Glucocorticoid receptor	NR3C1	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL231	Histamine H1 receptor	HRH1	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL231	Histamine H1 receptor	HRH1	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL1941	Histamine H2 receptor	HRH2	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL1941	Histamine H2 receptor	HRH2	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL402	3-hydroxy-3-methylglutaryl-coenzyme A reductase	HMGCR	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL402	3-hydroxy-3-methylglutaryl-coenzyme A reductase	HMGCR	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL5486	Insulin receptor	Insr	Rattus norvegicus	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL5486	Insulin receptor	Insr	Rattus norvegicus	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL1909043	Leukotriene C4 synthase	LTC4S	Cavia porcellus	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL1909043	Leukotriene C4 synthase	LTC4S	Cavia porcellus	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL1798	Cysteinyl leukotriene receptor 1	CYSLTR1	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL1798	Cysteinyl leukotriene receptor 1	CYSLTR1	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL4358	Polyunsaturated fatty acid lipoxygenase ALOX15	ALOX15	Oryctolagus cuniculus	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL4358	Polyunsaturated fatty acid lipoxygenase ALOX15	ALOX15	Oryctolagus cuniculus	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL4644	Melanocortin receptor 3	MC3R	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL4644	Melanocortin receptor 3	MC3R	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL259	Melanocortin receptor 4	MC4R	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL259	Melanocortin receptor 4	MC4R	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL4608	Melanocortin receptor 5	MC5R	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL4608	Melanocortin receptor 5	MC5R	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL1951	Amine oxidase [flavin-containing] A	MAOA	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL1951	Amine oxidase [flavin-containing] A	MAOA	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL216	Muscarinic acetylcholine receptor M1	CHRM1	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL216	Muscarinic acetylcholine receptor M1	CHRM1	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL211	Muscarinic acetylcholine receptor M2	CHRM2	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL211	Muscarinic acetylcholine receptor M2	CHRM2	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL245	Muscarinic acetylcholine receptor M3	CHRM3	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL245	Muscarinic acetylcholine receptor M3	CHRM3	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL1821	Muscarinic acetylcholine receptor M4	CHRM4	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL1821	Muscarinic acetylcholine receptor M4	CHRM4	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL2035	Muscarinic acetylcholine receptor M5	CHRM5	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL2035	Muscarinic acetylcholine receptor M5	CHRM5	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL4777	Neuropeptide Y receptor type 1	NPY1R	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL4777	Neuropeptide Y receptor type 1	NPY1R	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL4018	Neuropeptide Y receptor type 2	NPY2R	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL4018	Neuropeptide Y receptor type 2	NPY2R	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL3048	Nitric oxide synthase 1	Nos1	Rattus norvegicus	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL3048	Nitric oxide synthase 1	Nos1	Rattus norvegicus	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL3464	Nitric oxide synthase, inducible	Nos2	Mus musculus	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL3464	Nitric oxide synthase, inducible	Nos2	Mus musculus	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL236	Delta-type opioid receptor	OPRD1	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL236	Delta-type opioid receptor	OPRD1	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL237	Kappa-type opioid receptor	OPRK1	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL237	Kappa-type opioid receptor	OPRK1	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL233	Mu-type opioid receptor	OPRM1	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL233	Mu-type opioid receptor	OPRM1	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL1827	cGMP-specific 3',5'-cyclic phosphodiesterase	PDE5A	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL1827	cGMP-specific 3',5'-cyclic phosphodiesterase	PDE5A	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL250	Platelet-activating factor receptor	PTAFR	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL250	Platelet-activating factor receptor	PTAFR	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL240	Voltage-gated inwardly rectifying potassium channel KCNH2	KCNH2	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL240	Voltage-gated inwardly rectifying potassium channel KCNH2	KCNH2	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL1909044	Progesterone receptor	PGR	Bos taurus	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL1909044	Progesterone receptor	PGR	Bos taurus	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL4074	Angiotensin-converting enzyme	ACE	Oryctolagus cuniculus	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL4074	Angiotensin-converting enzyme	ACE	Oryctolagus cuniculus	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL4801	Caspase-1	CASP1	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL4801	Caspase-1	CASP1	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL4071	Cathepsin G	CTSG	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL4071	Cathepsin G	CTSG	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL248	Neutrophil elastase	ELANE	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL248	Neutrophil elastase	ELANE	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL332	Interstitial collagenase	MMP1	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL332	Interstitial collagenase	MMP1	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL321	Matrix metalloproteinase-9	MMP9	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL321	Matrix metalloproteinase-9	MMP9	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL299	Protein kinase C alpha type	PRKCA	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL299	Protein kinase C alpha type	PRKCA	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL3385	Mitogen-activated protein kinase 3	MAPK3	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL3385	Mitogen-activated protein kinase 3	MAPK3	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL4040	Mitogen-activated protein kinase 1	MAPK1	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL4040	Mitogen-activated protein kinase 1	MAPK1	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL260	Mitogen-activated protein kinase 14	MAPK14	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL260	Mitogen-activated protein kinase 14	MAPK14	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL4445	Protein phosphatase 3 catalytic subunit alpha	PPP3CA	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL4445	Protein phosphatase 3 catalytic subunit alpha	PPP3CA	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL203	Epidermal growth factor receptor	EGFR	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL203	Epidermal growth factor receptor	EGFR	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL1841	Tyrosine-protein kinase Fyn	FYN	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL1841	Tyrosine-protein kinase Fyn	FYN	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL1824	Receptor tyrosine-protein kinase erbB-2	ERBB2	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL1824	Receptor tyrosine-protein kinase erbB-2	ERBB2	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL258	Tyrosine-protein kinase Lck	LCK	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL258	Tyrosine-protein kinase Lck	LCK	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL3243	Receptor-type tyrosine-protein phosphatase C	PTPRC	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL3243	Receptor-type tyrosine-protein phosphatase C	PTPRC	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL273	5-hydroxytryptamine receptor 1A	Htr1a	Rattus norvegicus	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL273	5-hydroxytryptamine receptor 1A	Htr1a	Rattus norvegicus	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL3459	5-hydroxytryptamine receptor 1B	Htr1b	Rattus norvegicus	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL3459	5-hydroxytryptamine receptor 1B	Htr1b	Rattus norvegicus	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL224	5-hydroxytryptamine receptor 2A	HTR2A	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL224	5-hydroxytryptamine receptor 2A	HTR2A	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL1833	5-hydroxytryptamine receptor 2B	HTR2B	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL1833	5-hydroxytryptamine receptor 2B	HTR2B	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL225	5-hydroxytryptamine receptor 2C	HTR2C	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL225	5-hydroxytryptamine receptor 2C	HTR2C	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL5017	5-hydroxytryptamine receptor 4	HTR4	Cavia porcellus	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL5017	5-hydroxytryptamine receptor 4	HTR4	Cavia porcellus	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL3371	5-hydroxytryptamine receptor 6	HTR6	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL3371	5-hydroxytryptamine receptor 6	HTR6	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL228	Sodium-dependent serotonin transporter	SLC6A4	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL228	Sodium-dependent serotonin transporter	SLC6A4	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL287	Sigma non-opioid intracellular receptor 1	SIGMAR1	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL287	Sigma non-opioid intracellular receptor 1	SIGMAR1	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL249	Substance-P receptor	TACR1	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL249	Substance-P receptor	TACR1	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL2327	Substance-K receptor	TACR2	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL2327	Substance-K receptor	TACR2	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL3072	Androgen receptor	Ar	Rattus norvegicus	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL3072	Androgen receptor	Ar	Rattus norvegicus	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL1835	Thromboxane-A synthase	TBXAS1	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL1835	Thromboxane-A synthase	TBXAS1	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL1868	Vascular endothelial growth factor receptor 1	FLT1	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL1868	Vascular endothelial growth factor receptor 1	FLT1	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL5144	Vasoactive intestinal polypeptide receptor 1	VIPR1	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL5144	Vasoactive intestinal polypeptide receptor 1	VIPR1	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL1889	Vasopressin V1a receptor	AVPR1A	Homo sapiens	IC50		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL1889	Vasopressin V1a receptor	AVPR1A	Homo sapiens	Ki		B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL1697668	Solute carrier organic anion transporter family member 1B1	SLCO1B1	Homo sapiens	IC50	nM	F	1	1	1100.0	1100.0	0	0	1
+P3-16	sirolimus	CHEMBL4302	ATP-dependent translocase ABCB1	ABCB1	Homo sapiens	IC50	nM	F	1	1	1250.0	1250.0	0	0	1
+P3-16	sirolimus	CHEMBL1293278	Geminin	GMNN	Homo sapiens	Potency	nM	F	2	2	33498.3	33498.3	0	0	1
+P3-16	sirolimus	CHEMBL4078	Acetylcholinesterase	ache	Electrophorus electricus	Inhibition	%	B	1	1	18.69	18.69	0	0	1
+P3-16	sirolimus	CHEMBL5763	Cholinesterase	BCHE	Equus caballus	Inhibition	%	B	1	1	4.03	4.03	0	0	1
+P3-16	sirolimus	CHEMBL2052031	Peptidyl-prolyl cis-trans isomerase FKBP5	FKBP5	Homo sapiens	Ki	nM	B	1	1	3.0	3.0	0	0	1
+P3-16	sirolimus	CHEMBL1075138	Tyrosyl-DNA phosphodiesterase 1	TDP1	Homo sapiens	Potency	nM	F	6	6	2.4	8912.5	0	0	1
+P3-16	sirolimus	CHEMBL6152	Alpha-synuclein	SNCA	Homo sapiens	Potency	nM	F	1	1	3981.1	3981.1	0	0	1
+P3-16	sirolimus	CHEMBL4296661	mTORC1	MLST8|MTOR|RPTOR	Homo sapiens	Inhibition	%	B	10	0			0	0	6
+P3-16	sirolimus	CHEMBL2430	Peptidyl-prolyl cis-trans isomerase FKBP1B	FKBP1B	Homo sapiens	Kd	nM	B	2	2	0.2	0.6	0	0	2
+P3-16	sirolimus	CHEMBL3401	Nuclear receptor subfamily 1 group I member 2	NR1I2	Homo sapiens	EC50	nM	A	2	2	890.0	10000.0	0	0	1
+P3-16	sirolimus	CHEMBL3258	Leucine--tRNA ligase, cytoplasmic	LARS1	Homo sapiens	Inhibition	%	B	3	0			0	0	3
+P3-16	sirolimus	CHEMBL3988635	Phosphatidylinositol 3-kinase	Pik3ca|Pik3r1	Mus musculus	Inhibition	%	B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL3830	AP2-associated protein kinase 1	AAK1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL1862	Tyrosine-protein kinase ABL1	ABL1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4014	Tyrosine-protein kinase ABL2	ABL2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4105816	Acyl-CoA dehydrogenase family member 10	ACAD10	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4105707	Acyl-CoA dehydrogenase family member 11	ACAD11	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4105892	Very long-chain specific acyl-CoA dehydrogenase, mitochondrial	ACADVL	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4105748	Peroxisomal acyl-coenzyme A oxidase 1	ACOX1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4105817	Peroxisomal acyl-coenzyme A oxidase 3	ACOX3	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL6090	Actin-related protein 2	ACTR2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4105857	Actin-related protein 3	ACTR3	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5903	Activin receptor type-1	ACVR1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5310	Activin receptor type-1B	ACVR1B	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5466	Activin receptor type-2B	ACVR2B	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5311	Activin receptor type-1-like	ACVRL1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4105885	AarF domain-containing protein kinase 1	ADCK1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5550	Atypical kinase COQ8A, mitochondrial	COQ8A	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4105886	Uncharacterized aarF domain-containing protein kinase 5	ADCK5	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL3589	Adenosine kinase	ADK	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4079	Beta-adrenergic receptor kinase 1	GRK2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4938	Adenylate kinase 2, mitochondrial	AK2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4282	RAC-alpha serine/threonine-protein kinase	AKT1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL2431	RAC-beta serine/threonine-protein kinase	AKT2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4816	RAC-gamma serine/threonine-protein kinase	AKT3	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4105819	Adenine phosphoribosyltransferase	APRT	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL1169596	Serine/threonine-protein kinase A-Raf	ARAF	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4722	Aurora kinase A	AURKA	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL2185	Aurora kinase B	AURKB	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5146	Breakpoint cluster region protein	BCR	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4522	BMP-2-inducible protein kinase	BMP2K	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5275	Bone morphogenetic protein receptor type-1A	BMPR1A	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5476	Bone morphogenetic protein receptor type-1B	BMPR1B	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5467	Bone morphogenetic protein receptor type-2	BMPR2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5145	Serine/threonine-protein kinase B-raf	BRAF	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5251	Tyrosine-protein kinase BTK	BTK	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL1772932	Mitotic checkpoint serine/threonine-protein kinase BUB1	BUB1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5258	Calcium/calmodulin-dependent protein kinase type 1G	CAMK1G	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL2801	Calcium/calmodulin-dependent protein kinase type II subunit delta	CAMK2D	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL3829	Calcium/calmodulin-dependent protein kinase type II subunit gamma	CAMK2G	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL2494	Calcium/calmodulin-dependent protein kinase type IV	CAMK4	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5284	Calcium/calmodulin-dependent protein kinase kinase 2	CAMKK2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4105937	Cysteine--tRNA ligase, cytoplasmic	CARS1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4516	Serine/threonine-protein kinase MRCK alpha	CDC42BPA	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5052	Serine/threonine-protein kinase MRCK beta	CDC42BPB	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5615	Serine/threonine-protein kinase MRCK gamma	CDC42BPG	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5443	Cell division cycle 7-related protein kinase	CDC7	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL308	Cyclin-dependent kinase 1	CDK1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL3559692	Cyclin-dependent kinase 12	CDK12	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL1795192	Cyclin-dependent kinase 13	CDK13	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4597	Cyclin-dependent kinase 16	CDK16	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5790	Cyclin-dependent kinase 17	CDK17	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5316	Cyclin-dependent kinase 18	CDK18	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL301	Cyclin-dependent kinase 2	CDK2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL331	Cyclin-dependent kinase 4	CDK4	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4036	Cyclin-dependent kinase 5	CDK5	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL2508	Cyclin-dependent kinase 6	CDK6	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL3055	Cyclin-dependent kinase 7	CDK7	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL3116	Cyclin-dependent kinase 9	CDK9	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL1163112	Cyclin-dependent kinase-like 5	CDKL5	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4105742	Chromodomain-helicase-DNA-binding protein 4	CHD4	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4630	Serine/threonine-protein kinase Chk1	CHEK1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5579	Citron Rho-interacting kinase	CIT	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4224	Dual specificity protein kinase CLK1	CLK1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4225	Dual specificity protein kinase CLK2	CLK2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4226	Dual specificity protein kinase CLK3	CLK3	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4203	Dual specificity protein kinase CLK4	CLK4	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5681	UMP-CMP kinase	CMPK1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL2634	Tyrosine-protein kinase CSK	CSK	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL2793	Casein kinase I isoform alpha	CSNK1A1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL2828	Casein kinase I isoform delta	CSNK1D	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4937	Casein kinase I isoform epsilon	CSNK1E	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL2426	Casein kinase I isoform gamma-1	CSNK1G1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL2543	Casein kinase I isoform gamma-2	CSNK1G2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5084	Casein kinase I isoform gamma-3	CSNK1G3	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4070	Casein kinase II subunit alpha'	CSNK2A2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4105975	Cytochrome c1, heme protein, mitochondrial	CYC1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL2447	Deoxycytidine kinase	DCK	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL3769292	dCTP pyrophosphatase 1	DCTPP1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5319	Epithelial discoidin domain-containing receptor 1	DDR1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5122	Discoidin domain-containing receptor 2	DDR2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL2010634	ATP-dependent RNA helicase DDX1	DDX1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5553	ATP-dependent RNA helicase DDX3X	DDX3X	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4105783	Probable ATP-dependent RNA helicase DDX6	DDX6	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL2331059	Delta(24)-sterol reductase	DHCR24	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4105814	ATP-dependent RNA helicase DHX30	DHX30	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL2189122	DnaJ homolog subfamily A member 1	DNAJA1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL2292	Dual specificity tyrosine-phosphorylation-regulated kinase 1A	DYRK1A	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5543	Dual specificity tyrosine-phosphorylation-regulated kinase 1B	DYRK1B	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL203	Epidermal growth factor receptor	EGFR	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL6029	Eukaryotic translation initiation factor 2-alpha kinase 1	EIF2AK1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4105852	Eukaryotic translation initiation factor 5B	EIF5B	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5810	Ephrin type-A receptor 1	EPHA1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL2068	Ephrin type-A receptor 2	EPHA2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL3988	Ephrin type-A receptor 4	EPHA4	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL3987	Ephrin type-A receptor 5	EPHA5	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL3290	Ephrin type-B receptor 2	EPHB2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4901	Ephrin type-B receptor 3	EPHB3	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5147	Ephrin type-B receptor 4	EPHB4	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5836	Ephrin type-B receptor 6	EPHB6	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4105743	General transcription and DNA repair factor IIH helicase subunit XPD	ERCC2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL1163101	Serine/threonine-protein kinase/endoribonuclease IRE1	ERN1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4105932	Serine/threonine-protein kinase/endoribonuclease IRE2	ERN2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4105744	Electron transfer flavoprotein subunit beta	ETFB	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4105969	Phenylalanine--tRNA ligase beta subunit	FARSB	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL3879831	Ferrochelatase, mitochondrial	FECH	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL3982	Tyrosine-protein kinase Fer	FER	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5455	Tyrosine-protein kinase Fes/Fps	FES	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL3650	Fibroblast growth factor receptor 1	FGFR1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4454	Tyrosine-protein kinase Fgr	FGR	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL1974	Receptor-type tyrosine-protein kinase FLT3	FLT3	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4223	Tyrosine-protein kinase FRK	FRK	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL1841	Tyrosine-protein kinase Fyn	FYN	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4355	Cyclin-G-associated kinase	GAK	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4105815	Glycine--tRNA ligase	GARS1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL6144	G protein-coupled receptor kinase 6	GRK6	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL2850	Glycogen synthase kinase-3 alpha	GSK3A	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL262	Glycogen synthase kinase-3 beta	GSK3B	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4105780	GTP-binding protein 4	GTPBP4	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL3234	Tyrosine-protein kinase HCK	HCK	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL2546	Heme oxygenase 2	HMOX2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4105858	Putative heat shock protein HSP 90-beta 2	HSP90AB2P	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4105821	Isoleucine--tRNA ligase, mitochondrial	IARS2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL1163126	Serine/threonine-protein kinase ICK	CILK1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL1957	Insulin-like growth factor 1 receptor	IGF1R	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL3529	Inhibitor of nuclear factor kappa-B kinase subunit epsilon	IKBKE	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5247	Scaffold protein ILK	ILK	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL2002	Inosine-5'-monophosphate dehydrogenase 2	IMPDH2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL1981	Insulin receptor	INSR	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL3357	Interleukin-1 receptor-associated kinase 1	IRAK1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5081	Interleukin-1 receptor-associated kinase 3	IRAK3	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL3778	Interleukin-1 receptor-associated kinase 4	IRAK4	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL2835	Tyrosine-protein kinase JAK1	JAK1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL2971	Tyrosine-protein kinase JAK2	JAK2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL6167	Serine/threonine-protein kinase LATS1	LATS1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL258	Tyrosine-protein kinase Lck	LCK	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL3836	LIM domain kinase 1	LIMK1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5932	LIM domain kinase 2	LIMK2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL3905	Tyrosine-protein kinase Lyn	LYN	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL3587	Dual specificity mitogen-activated protein kinase kinase 1	MAP2K1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL2964	Dual specificity mitogen-activated protein kinase kinase 2	MAP2K2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL2109	Dual specificity mitogen-activated protein kinase kinase 3	MAP2K3	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4948	Dual specificity mitogen-activated protein kinase kinase 5	MAP2K5	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL2171	Dual specificity mitogen-activated protein kinase kinase 6	MAP2K6	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL3956	Mitogen-activated protein kinase kinase kinase 1	MAP3K1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL2708	Mitogen-activated protein kinase kinase kinase 11	MAP3K11	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5914	Mitogen-activated protein kinase kinase kinase 2	MAP3K2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5970	Mitogen-activated protein kinase kinase kinase 3	MAP3K3	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4853	Mitogen-activated protein kinase kinase kinase 4	MAP3K4	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5285	Mitogen-activated protein kinase kinase kinase 5	MAP3K5	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL1163123	Mitogen-activated protein kinase kinase kinase 6	MAP3K6	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5749	Mitogen-activated protein kinase kinase kinase kinase 1	MAP4K1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5330	Mitogen-activated protein kinase kinase kinase kinase 2	MAP4K2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5432	Mitogen-activated protein kinase kinase kinase kinase 3	MAP4K3	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL6166	Mitogen-activated protein kinase kinase kinase kinase 4	MAP4K4	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4852	Mitogen-activated protein kinase kinase kinase kinase 5	MAP4K5	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4040	Mitogen-activated protein kinase 1	MAPK1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL2637	Mitogen-activated protein kinase 10	MAPK10	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL3961	Mitogen-activated protein kinase 11	MAPK11	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL260	Mitogen-activated protein kinase 14	MAPK14	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5198	Mitogen-activated protein kinase 15	MAPK15	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL3385	Mitogen-activated protein kinase 3	MAPK3	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5332	Mitogen-activated protein kinase 7	MAPK7	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL2276	Mitogen-activated protein kinase 8	MAPK8	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4179	Mitogen-activated protein kinase 9	MAPK9	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL2208	MAP kinase-activated protein kinase 2	MAPKAPK2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL3094	MAP kinase-activated protein kinase 5	MAPKAPK5	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL3831	Serine/threonine-protein kinase MARK2	MARK2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5600	MAP/microtubule affinity-regulating kinase 3	MARK3	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5754	MAP/microtubule affinity-regulating kinase 4	MARK4	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL3313835	S-adenosylmethionine synthase isoform type-2	MAT2A	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4105745	DNA replication licensing factor MCM4	MCM4	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4105779	Midasin	MDN1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4578	Maternal embryonic leucine zipper kinase	MELK	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5331	Tyrosine-protein kinase Mer	MERTK	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL3717	Hepatocyte growth factor receptor	MET	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5518	Misshapen-like kinase 1	MINK1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL2689	Macrophage-stimulating protein receptor	MST1R	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4105746	Myosin-10	MYH10	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4105888	Myosin-14	MYH14	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL2428	Myosin light chain kinase, smooth muscle	MYLK	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4627	Myosin light chain kinase	MYLK3	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4105935	RNA cytidine acetyltransferase	NAT10	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5855	Serine/threonine-protein kinase Nek1	NEK1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL3835	Serine/threonine-protein kinase Nek2	NEK2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5679	Serine/threonine-protein kinase Nek3	NEK3	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5257	Serine/threonine-protein kinase Nek9	NEK9	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5364	Serine/threonine-protein kinase NLK	NLK	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL3959	Ribosyldihydronicotinamide dehydrogenase [quinone]	NQO2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL2815	High affinity nerve growth factor receptor	NTRK1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4105704	Obg-like ATPase 1	OLA1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4105705	Dynamin-like GTPase OPA1, mitochondrial	OPA1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5922	Bifunctional phosphoribosylaminoimidazole carboxylase/phosphoribosylaminoimidazole succinocarboxamide synthetase	PAICS	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4487	Serine/threonine-protein kinase PAK 2	PAK2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4482	Serine/threonine-protein kinase PAK 4	PAK4	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL6054	PAS domain-containing serine/threonine-protein kinase	PASK	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4105855	Choline-phosphate cytidylyltransferase A	PCYT1A	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL1913	Platelet-derived growth factor receptor beta	PDGFRB	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL1075181	Pyridoxal kinase	PDXK	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4105856	Phosphatidylethanolamine-binding protein 1	PEBP1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL2972	ATP-dependent 6-phosphofructokinase, platelet type	PFKP	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL2349	Phosphorylase b kinase gamma catalytic chain, liver/testis isoform	PHKG2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL2147	Serine/threonine-protein kinase pim-1	PIM1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL1795194	Phosphatidylinositol 5-phosphate 4-kinase type-2 alpha	PIP4K2A	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL1770034	Phosphatidylinositol 5-phosphate 4-kinase type-2 gamma	PIP4K2C	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL3984	Membrane-associated tyrosine- and threonine-specific cdc2-inhibitory kinase	PKMYT1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL3384	Serine/threonine-protein kinase N1	PKN1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL3032	Serine/threonine-protein kinase N2	PKN2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL3627581	Serine/threonine-protein kinase N3	PKN3	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL3024	Serine/threonine-protein kinase PLK1	PLK1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL3788	Serine/threonine-protein kinase PLK4	PLK4	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4045	5'-AMP-activated protein kinase catalytic subunit alpha-1	PRKAA1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4101	cAMP-dependent protein kinase catalytic subunit alpha	PRKACA	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL2918	cAMP-dependent protein kinase catalytic subunit beta	PRKACB	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL2393	5'-AMP-activated protein kinase subunit gamma-1	PRKAG1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL2453	5'-AMP-activated protein kinase subunit gamma-2	PRKAG2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL2221	cAMP-dependent protein kinase type II-alpha regulatory subunit	PRKAR2A	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL299	Protein kinase C alpha type	PRKCA	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL3045	Protein kinase C beta type	PRKCB	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL2996	Protein kinase C delta type	PRKCD	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL2598	Protein kinase C iota type	PRKCI	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL3920	Protein kinase C theta type	PRKCQ	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL3438	Protein kinase C zeta type	PRKCZ	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4900	Serine/threonine-protein kinase D2	PRKD2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL2595	Serine/threonine-protein kinase D3	PRKD3	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4273	cGMP-dependent protein kinase 1	PRKG1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL3831205	26S proteasome regulatory subunit 6B	PSMC4	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL2695	Focal adhesion kinase 1	PTK2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5469	Protein-tyrosine kinase 2-beta	PTK2B	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4601	Protein-tyrosine kinase 6	PTK6	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL3856	Glycogen phosphorylase, brain form	PYGB	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL2568	Glycogen phosphorylase, liver form	PYGL	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4105933	Uncharacterized protein FLJ45252		Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4105971	Ras-related protein Rab-10	RAB10	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4105702	Ras-related protein Rab-27A	RAB27A	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4105703	Ras-related protein Rab-6A	RAB6A	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL1741190	GTP-binding nuclear protein Ran	RAN	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL2041	Proto-oncogene tyrosine-protein kinase receptor Ret	RET	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5014	Receptor-interacting serine/threonine-protein kinase 2	RIPK2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL1795199	Receptor-interacting serine/threonine-protein kinase 3	RIPK3	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL3231	Rho-associated protein kinase 1	ROCK1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL2973	Rho-associated protein kinase 2	ROCK2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL2553	Ribosomal protein S6 kinase alpha-1	RPS6KA1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL2345	Ribosomal protein S6 kinase alpha-3	RPS6KA3	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL3125	Ribosomal protein S6 kinase alpha-4	RPS6KA4	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4237	Ribosomal protein S6 kinase alpha-5	RPS6KA5	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4924	Ribosomal protein S6 kinase alpha-6	RPS6KA6	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4501	Ribosomal protein S6 kinase beta-1	RPS6KB1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4105891	Septin-9	SEPTIN9	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5699	Serine/threonine-protein kinase SIK2	SIK2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL6149	Serine/threonine-protein kinase SIK3	SIK3	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4105889	Exosome RNA helicase MTR4	MTREX	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL3709670	ADP/ATP translocase 2	SLC25A5	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4105854	ADP/ATP translocase 3	SLC25A6	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4202	STE20-like serine/threonine-protein kinase	SLK	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4105747	Structural maintenance of chromosomes protein 1A	SMC1A	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4105890	Structural maintenance of chromosomes protein 2	SMC2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4105972	U5 small nuclear ribonucleoprotein 200 kDa helicase	SNRNP200	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL267	Proto-oncogene tyrosine-protein kinase Src	SRC	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4105934	Signal recognition particle receptor subunit alpha	SRPRA	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL3981	Serine/threonine-protein kinase 10	STK10	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5606	Serine/threonine-protein kinase STK11	STK11	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL3938	Serine/threonine-protein kinase 16	STK16	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5082	Serine/threonine-protein kinase 24	STK24	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5941	Serine/threonine-protein kinase 26	STK26	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4708	Serine/threonine-protein kinase 3	STK3	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4598	Serine/threonine-protein kinase 4	STK4	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL1795198	STE20-related kinase adapter protein alpha	STRADA	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4105973	Succinate--CoA ligase [ADP-forming] subunit beta, mitochondrial	SUCLA2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL2599	Tyrosine-protein kinase SYK	SYK	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5261	Serine/threonine-protein kinase TAO1	TAOK1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL1075195	Serine/threonine-protein kinase TAO2	TAOK2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5701	Serine/threonine-protein kinase TAO3	TAOK3	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5408	Serine/threonine-protein kinase TBK1	TBK1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4246	Tyrosine-protein kinase Tec	TEC	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5604	Dual specificity testis-specific protein kinase 1	TESK1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL2069163	Dual specificity testis-specific protein kinase 2	TESK2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4439	TGF-beta receptor type-1	TGFBR1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4267	TGF-beta receptor type-2	TGFBR2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4105820	Thyroid hormone receptor-associated protein 3	THRAP3	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4527	TRAF2 and NCK-interacting protein kinase	TNIK	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5334	Non-receptor tyrosine-protein kinase TNK1	TNK1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4599	Activated CDC42 kinase 1	TNK2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL1806	DNA topoisomerase 2-alpha	TOP2A	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL3396	DNA topoisomerase 2-beta	TOP2B	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL1938223	EKC/KEOPS complex subunit TP53RK	TP53RK	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL3983	Dual specificity protein kinase TTK	TTK	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL4105970	Elongation factor Tu, mitochondrial	TUFM	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL3553	Non-receptor tyrosine-protein kinase TYK2	TYK2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL6006	Serine/threonine-protein kinase ULK1	ULK1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5047	Serine/threonine-protein kinase ULK3	ULK3	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL5491	Wee1-like protein kinase	WEE1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL3179	Tyrosine--tRNA ligase, cytoplasmic	YARS1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL2073	Tyrosine-protein kinase Yes	YES1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL3886	Mitogen-activated protein kinase kinase kinase 20	MAP3K20	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-16	sirolimus	CHEMBL6020	Bile salt export pump	ABCB11	Homo sapiens	IC50	nM	A	1	0			0	1	1
+P3-16	sirolimus	CHEMBL2842	Serine/threonine-protein kinase mTOR	MTOR	Homo sapiens	Inhibition	%	B	8	1	94.88	94.88	0	0	4
+P3-16	sirolimus	CHEMBL4295736	Peptidyl-prolyl cis-trans isomerase FKBP1A	Fkbp1a	Mus musculus	IC50	nM	B	1	1	1.0	1.0	0	0	1
+P3-16	sirolimus	CHEMBL2842	Serine/threonine-protein kinase mTOR	MTOR	Homo sapiens	Kd	nM	B	1	1	0.6	0.6	0	0	1
+P3-16	sirolimus	CHEMBL4693	Sarcoplasmic/endoplasmic reticulum calcium ATPase 1	ATP2A1	Oryctolagus cuniculus	IC50	nM	B	1	1	77000.0	77000.0	0	0	1
+P3-16	sirolimus	CHEMBL1255165	Serine/threonine-protein kinase mTOR	Mtor	Mus musculus	IC50	nM	B	1	1	0.05	0.05	0	0	1
+P3-16	sirolimus	CHEMBL4523582	Replicase polyprotein 1ab	rep	Severe acute respiratory syndrome coronavirus 2	Inhibition	%	F	2	2	12.54	19.32	0	0	1
+P3-16	sirolimus	CHEMBL1902	Peptidyl-prolyl cis-trans isomerase FKBP1A	FKBP1A	Homo sapiens	IC50	nM	A	1	1	20.0	20.0	0	0	1
+P3-16	sirolimus	CHEMBL1902	Peptidyl-prolyl cis-trans isomerase FKBP1A	FKBP1A	Homo sapiens	EC50	nM	B	1	1	36.39	36.39	0	0	1
+P3-16	sirolimus	CHEMBL1865	Protein deacetylase HDAC6	HDAC6	Homo sapiens	Inhibition	%	B	2	2	-28.21	2.89	0	0	1
+P3-16	sirolimus	CHEMBL5393	Broad substrate specificity ATP-binding cassette transporter ABCG2	ABCG2	Homo sapiens	IC50	nM	B	1	1	1900.0	1900.0	0	0	1
+P3-16	sirolimus	CHEMBL4296661	mTORC1	MLST8|MTOR|RPTOR	Homo sapiens	IC50	nM	B	4	3	0.05	450.0	1	0	2
+P3-16	sirolimus	CHEMBL1075189	Pyruvate kinase PKM	PKM	Homo sapiens	IC50	nM	B	2	2	50.0	50.0	0	0	2
+P3-16	sirolimus	CHEMBL2052031	Peptidyl-prolyl cis-trans isomerase FKBP5	FKBP5	Homo sapiens	Kd	nM	B	3	2	3.7	8.5	0	1	3
+P3-16	sirolimus	CHEMBL4050	Peptidyl-prolyl cis-trans isomerase FKBP4	FKBP4	Homo sapiens	Kd	nM	B	2	2	4.2	12.0	0	0	2
+P3-16	sirolimus	CHEMBL2221341	FKBP12A/mTOR	FKBP1A|MTOR	Homo sapiens	EC50	nM	B	1	0			0	1	1
+P3-16	sirolimus	CHEMBL1255165	Serine/threonine-protein kinase mTOR	Mtor	Mus musculus	Inhibition	%	B	12	0			0	0	2
+P3-16	sirolimus	CHEMBL5465384	mTORC1	Mtor	Mus musculus	Inhibition	%	B	4	0			0	0	1
+P3-16	sirolimus	CHEMBL1902	Peptidyl-prolyl cis-trans isomerase FKBP1A	FKBP1A	Homo sapiens	Kd	nM	B	4	3	0.13	12.0	0	1	3
+P3-16	sirolimus	CHEMBL1255161	Proline-rich AKT1 substrate 1	AKT1S1	Homo sapiens	Inhibition	%	B	1	0			0	0	1
+P3-16	sirolimus	CHEMBL3351214	Eukaryotic translation initiation factor 4E-binding protein 1	EIF4EBP1	Homo sapiens	Inhibition	%	B	3	0			0	0	2
+P3-16	sirolimus	CHEMBL3351215	Small ribosomal subunit protein eS6	RPS6	Homo sapiens	Inhibition	%	B	4	0			0	0	1
+P3-19	lenalidomide	CHEMBL2093863	Phosphodiesterase 4	PDE4A|PDE4B|PDE4C|PDE4D	Homo sapiens	Inhibition	%	B	1	0			0	1	1
+P3-19	lenalidomide	CHEMBL6020	Bile salt export pump	ABCB11	Homo sapiens	IC50	nM	A	1	0			1	0	1
+P3-19	lenalidomide	CHEMBL5748	ATP-binding cassette sub-family C member 2	ABCC2	Homo sapiens	IC50	nM	A	1	0			1	0	1
+P3-19	lenalidomide	CHEMBL5918	ATP-binding cassette sub-family C member 3	ABCC3	Homo sapiens	IC50	nM	A	1	0			1	0	1
+P3-19	lenalidomide	CHEMBL1743128	ATP-binding cassette sub-family C member 4	ABCC4	Homo sapiens	IC50	nM	A	1	0			1	0	1
+P3-19	lenalidomide	CHEMBL4296167	Protein cereblon/Zinc finger protein Aiolos	CRBN|IKZF3	Homo sapiens	EC50	nM	B	1	1	87.0	87.0	0	0	1
+P3-19	lenalidomide	CHEMBL4296103	Cereblon/Ikaros	CRBN|IKZF1	Homo sapiens	EC50	nM	B	1	1	67.0	67.0	0	0	1
+P3-19	lenalidomide	CHEMBL3763008	Protein cereblon	CRBN	Homo sapiens	IC50	nM	B	11	11	81.0	37800.0	0	0	10
+P3-19	lenalidomide	CHEMBL3763007	Cereblon isoform 4		Magnetospirillum gryphiswaldense	Ki	nM	B	1	1	3100.0	3100.0	0	0	1
+P3-19	lenalidomide	CHEMBL4296102	Cereblon/Casein kinase I alpha	CRBN|CSNK1A1	Homo sapiens	Inhibition	%	B	1	0			0	0	1
+P3-19	lenalidomide	CHEMBL4296167	Protein cereblon/Zinc finger protein Aiolos	CRBN|IKZF3	Homo sapiens	Inhibition	%	B	1	1	100.0	100.0	0	0	1
+P3-19	lenalidomide	CHEMBL4523582	Replicase polyprotein 1ab	rep	Severe acute respiratory syndrome coronavirus 2	Inhibition	%	F	1	1	25.36	25.36	0	0	1
+P3-19	lenalidomide	CHEMBL1163125	Bromodomain-containing protein 4	BRD4	Homo sapiens	IC50	nM	B	1	1	5190.0	5190.0	0	0	1
+P3-19	lenalidomide	CHEMBL3763008	Protein cereblon	CRBN	Homo sapiens	Ki	nM	B	5	5	800.0	16300.0	0	0	5
+P3-19	lenalidomide	CHEMBL4296103	Cereblon/Ikaros	CRBN|IKZF1	Homo sapiens	DC50	nM	B	2	2	90.0	120.0	0	0	2
+P3-19	lenalidomide	CHEMBL4296137	Protein cereblon/Tyrosine-protein kinase ABL1/Breakpoint cluster region protein	ABL1|BCR|CRBN	Homo sapiens	DC50	nM	B	1	0			1	0	1
+P3-19	lenalidomide	CHEMBL4630734	Protein cereblon/DNA damage-binding protein 1	CRBN|DDB1	Homo sapiens	IC50	nM	B	3	3	110.0	1020.0	0	0	3
+P3-19	lenalidomide	CHEMBL4296168	Protein cereblon/Eukaryotic peptide chain release factor GTP-binding subunit ERF3A	CRBN|GSPT1	Homo sapiens	DC50	nM	B	1	0			1	0	1
+P3-19	lenalidomide	CHEMBL4739707	Zinc finger protein Aiolos	IKZF3	Homo sapiens	EC50	nM	B	2	2	50.0	70.0	0	0	2
+P3-19	lenalidomide	CHEMBL4630734	Protein cereblon/DNA damage-binding protein 1	CRBN|DDB1	Homo sapiens	Kd	nM	B	1	1	170.0	170.0	0	0	1
+P3-19	lenalidomide	CHEMBL3763008	Protein cereblon	CRBN	Homo sapiens	Kd	nM	B	2	2	57.0	178.0	0	0	2
+P3-19	lenalidomide	CHEMBL4137	Glyceraldehyde-3-phosphate dehydrogenase, cytosolic	GAPC	Leishmania mexicana	IC50	nM	B	1	0			1	0	1
+P3-19	lenalidomide	CHEMBL1909490	Interleukin-1 beta	IL1B	Homo sapiens	IC50	nM	B	1	1	390.0	390.0	0	0	1
+P3-19	lenalidomide	CHEMBL1825	Tumor necrosis factor	TNF	Homo sapiens	IC50	nM	B	1	1	220.0	220.0	0	0	1
+P3-19	lenalidomide	CHEMBL6196090	Interferon regulatory factor 4	IRF4	Homo sapiens	IC50	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL340	Cytochrome P450 3A4	CYP3A4	Homo sapiens	IC50	nM	A	1	0			1	0	1
+P3-20	AT9283	CHEMBL289	Cytochrome P450 2D6	CYP2D6	Homo sapiens	IC50	nM	A	1	0			1	0	1
+P3-20	AT9283	CHEMBL3356	Cytochrome P450 1A2	CYP1A2	Homo sapiens	IC50	nM	A	1	0			1	0	1
+P3-20	AT9283	CHEMBL3397	Cytochrome P450 2C9	CYP2C9	Homo sapiens	IC50	nM	A	1	0			1	0	1
+P3-20	AT9283	CHEMBL3622	Cytochrome P450 2C19	CYP2C19	Homo sapiens	IC50	nM	A	1	0			1	0	1
+P3-20	AT9283	CHEMBL2041	Proto-oncogene tyrosine-protein kinase receptor Ret	RET	Homo sapiens	IC50	nM	B	1	1	1.0	1.0	0	0	1
+P3-20	AT9283	CHEMBL2971	Tyrosine-protein kinase JAK2	JAK2	Homo sapiens	IC50	nM	B	11	11	1.0	5800.0	0	0	9
+P3-20	AT9283	CHEMBL4722	Aurora kinase A	AURKA	Homo sapiens	Inhibition	%	B	1	1	52.0	52.0	0	0	1
+P3-20	AT9283	CHEMBL2185	Aurora kinase B	AURKB	Homo sapiens	Inhibition	%	B	1	1	58.0	58.0	0	0	1
+P3-20	AT9283	CHEMBL1862	Tyrosine-protein kinase ABL1	ABL1	Homo sapiens	IC50	nM	B	4	4	4.0	10.0	0	0	3
+P3-20	AT9283	CHEMBL2148	Tyrosine-protein kinase JAK3	JAK3	Homo sapiens	IC50	nM	B	7	7	1.0	17.0	0	0	7
+P3-20	AT9283	CHEMBL262	Glycogen synthase kinase-3 beta	GSK3B	Homo sapiens	IC50	nM	B	1	1	1.0	1.0	0	0	1
+P3-20	AT9283	CHEMBL4142	Fibroblast growth factor receptor 2	FGFR2	Homo sapiens	IC50	nM	B	2	2	1.0	10.0	0	0	1
+P3-20	AT9283	CHEMBL1955	Vascular endothelial growth factor receptor 3	FLT4	Homo sapiens	IC50	nM	B	1	1	1.0	1.0	0	0	1
+P3-20	AT9283	CHEMBL5331	Tyrosine-protein kinase Mer	MERTK	Homo sapiens	IC50	nM	B	1	1	1.0	1.0	0	0	1
+P3-20	AT9283	CHEMBL2345	Ribosomal protein S6 kinase alpha-3	RPS6KA3	Homo sapiens	IC50	nM	B	1	1	1.0	1.0	0	0	1
+P3-20	AT9283	CHEMBL3906	Ribosomal protein S6 kinase alpha-2	RPS6KA2	Homo sapiens	IC50	nM	B	1	1	1.0	1.0	0	0	1
+P3-20	AT9283	CHEMBL3553	Non-receptor tyrosine-protein kinase TYK2	TYK2	Homo sapiens	IC50	nM	B	4	4	1.0	40.0	0	0	3
+P3-20	AT9283	CHEMBL2073	Tyrosine-protein kinase Yes	YES1	Homo sapiens	IC50	nM	B	1	1	1.0	1.0	0	0	1
+P3-20	AT9283	CHEMBL4525	Serine/threonine-protein kinase 17A	STK17A	Homo sapiens	IC50	nM	B	1	1	10.0	10.0	0	0	1
+P3-20	AT9283	CHEMBL3650	Fibroblast growth factor receptor 1	FGFR1	Homo sapiens	IC50	nM	B	2	2	10.0	10.0	0	0	1
+P3-20	AT9283	CHEMBL2742	Fibroblast growth factor receptor 3	FGFR3	Homo sapiens	IC50	nM	B	1	1	10.0	10.0	0	0	1
+P3-20	AT9283	CHEMBL1868	Vascular endothelial growth factor receptor 1	FLT1	Homo sapiens	IC50	nM	B	1	1	10.0	10.0	0	0	1
+P3-20	AT9283	CHEMBL1974	Receptor-type tyrosine-protein kinase FLT3	FLT3	Homo sapiens	IC50	nM	B	2	2	10.0	10.0	0	0	2
+P3-20	AT9283	CHEMBL2007	Platelet-derived growth factor receptor alpha	PDGFRA	Homo sapiens	IC50	nM	B	1	1	10.0	10.0	0	0	1
+P3-20	AT9283	CHEMBL4766	[Pyruvate dehydrogenase (acetyl-transferring)] kinase isozyme 1, mitochondrial	PDK1	Homo sapiens	IC50	nM	B	1	1	10.0	10.0	0	0	1
+P3-20	AT9283	CHEMBL3863	Serine/threonine-protein kinase D1	PRKD1	Homo sapiens	IC50	nM	B	1	1	10.0	10.0	0	0	1
+P3-20	AT9283	CHEMBL3125	Ribosomal protein S6 kinase alpha-4	RPS6KA4	Homo sapiens	IC50	nM	B	1	1	10.0	10.0	0	0	1
+P3-20	AT9283	CHEMBL267	Proto-oncogene tyrosine-protein kinase Src	SRC	Homo sapiens	IC50	nM	B	2	2	10.0	68.53	0	0	2
+P3-20	AT9283	CHEMBL279	Vascular endothelial growth factor receptor 2	KDR	Homo sapiens	IC50	nM	B	2	2	10.0	25.34	0	0	2
+P3-20	AT9283	CHEMBL4722	Aurora kinase A	AURKA	Homo sapiens	IC50	nM	B	4	3	3.0	26.0	0	1	4
+P3-20	AT9283	CHEMBL2185	Aurora kinase B	AURKB	Homo sapiens	IC50	nM	B	6	5	2.7	62.0	0	1	6
+P3-20	AT9283	CHEMBL4722	Aurora kinase A	AURKA	Homo sapiens	Kd	nM	B	2	2	16.0	46.97	0	0	2
+P3-20	AT9283	CHEMBL3830	AP2-associated protein kinase 1	AAK1	Homo sapiens	Kd	nM	B	1	1	17.0	17.0	0	0	1
+P3-20	AT9283	CHEMBL1862	Tyrosine-protein kinase ABL1	ABL1	Homo sapiens	Kd	nM	B	1	1	315.0	315.0	0	0	1
+P3-20	AT9283	CHEMBL4014	Tyrosine-protein kinase ABL2	ABL2	Homo sapiens	Kd	nM	B	1	1	1082.0	1082.0	0	0	1
+P3-20	AT9283	CHEMBL4105816	Acyl-CoA dehydrogenase family member 10	ACAD10	Homo sapiens	Kd	nM	B	1	1	144.0	144.0	0	0	1
+P3-20	AT9283	CHEMBL4105707	Acyl-CoA dehydrogenase family member 11	ACAD11	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4105892	Very long-chain specific acyl-CoA dehydrogenase, mitochondrial	ACADVL	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4105748	Peroxisomal acyl-coenzyme A oxidase 1	ACOX1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4105817	Peroxisomal acyl-coenzyme A oxidase 3	ACOX3	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4105818	Long-chain-fatty-acid--CoA ligase 5	ACSL5	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL6090	Actin-related protein 2	ACTR2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4105857	Actin-related protein 3	ACTR3	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL5903	Activin receptor type-1	ACVR1	Homo sapiens	Kd	nM	B	1	1	78.0	78.0	0	0	1
+P3-20	AT9283	CHEMBL5310	Activin receptor type-1B	ACVR1B	Homo sapiens	Kd	nM	B	1	1	811.0	811.0	0	0	1
+P3-20	AT9283	CHEMBL5466	Activin receptor type-2B	ACVR2B	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL5311	Activin receptor type-1-like	ACVRL1	Homo sapiens	Kd	nM	B	1	1	15.0	15.0	0	0	1
+P3-20	AT9283	CHEMBL4105885	AarF domain-containing protein kinase 1	ADCK1	Homo sapiens	Kd	nM	B	1	1	559.0	559.0	0	0	1
+P3-20	AT9283	CHEMBL5550	Atypical kinase COQ8A, mitochondrial	COQ8A	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4105886	Uncharacterized aarF domain-containing protein kinase 5	ADCK5	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL3589	Adenosine kinase	ADK	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4079	Beta-adrenergic receptor kinase 1	GRK2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4938	Adenylate kinase 2, mitochondrial	AK2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4282	RAC-alpha serine/threonine-protein kinase	AKT1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL2431	RAC-beta serine/threonine-protein kinase	AKT2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4816	RAC-gamma serine/threonine-protein kinase	AKT3	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4247	ALK tyrosine kinase receptor	ALK	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4105819	Adenine phosphoribosyltransferase	APRT	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL1169596	Serine/threonine-protein kinase A-Raf	ARAF	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL2185	Aurora kinase B	AURKB	Homo sapiens	Kd	nM	B	1	1	17.0	17.0	0	0	1
+P3-20	AT9283	CHEMBL5146	Breakpoint cluster region protein	BCR	Homo sapiens	Kd	nM	B	1	1	156.0	156.0	0	0	1
+P3-20	AT9283	CHEMBL4522	BMP-2-inducible protein kinase	BMP2K	Homo sapiens	Kd	nM	B	1	1	34.0	34.0	0	0	1
+P3-20	AT9283	CHEMBL5275	Bone morphogenetic protein receptor type-1A	BMPR1A	Homo sapiens	Kd	nM	B	1	1	388.0	388.0	0	0	1
+P3-20	AT9283	CHEMBL5476	Bone morphogenetic protein receptor type-1B	BMPR1B	Homo sapiens	Kd	nM	B	1	1	21.0	21.0	0	0	1
+P3-20	AT9283	CHEMBL5467	Bone morphogenetic protein receptor type-2	BMPR2	Homo sapiens	Kd	nM	B	1	1	43.0	43.0	0	0	1
+P3-20	AT9283	CHEMBL5145	Serine/threonine-protein kinase B-raf	BRAF	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL5251	Tyrosine-protein kinase BTK	BTK	Homo sapiens	Kd	nM	B	1	1	537.0	537.0	0	0	1
+P3-20	AT9283	CHEMBL1772932	Mitotic checkpoint serine/threonine-protein kinase BUB1	BUB1	Homo sapiens	Kd	nM	B	1	1	94.0	94.0	0	0	1
+P3-20	AT9283	CHEMBL2801	Calcium/calmodulin-dependent protein kinase type II subunit delta	CAMK2D	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL3829	Calcium/calmodulin-dependent protein kinase type II subunit gamma	CAMK2G	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL2494	Calcium/calmodulin-dependent protein kinase type IV	CAMK4	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL5284	Calcium/calmodulin-dependent protein kinase kinase 2	CAMKK2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4105937	Cysteine--tRNA ligase, cytoplasmic	CARS1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4516	Serine/threonine-protein kinase MRCK alpha	CDC42BPA	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL5052	Serine/threonine-protein kinase MRCK beta	CDC42BPB	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL5615	Serine/threonine-protein kinase MRCK gamma	CDC42BPG	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL5443	Cell division cycle 7-related protein kinase	CDC7	Homo sapiens	Kd	nM	B	1	1	511.0	511.0	0	0	1
+P3-20	AT9283	CHEMBL308	Cyclin-dependent kinase 1	CDK1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL1795191	Cyclin-dependent kinase 10	CDK10	Homo sapiens	Kd	nM	B	1	1	9.0	9.0	0	0	1
+P3-20	AT9283	CHEMBL3559692	Cyclin-dependent kinase 12	CDK12	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL1795192	Cyclin-dependent kinase 13	CDK13	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4597	Cyclin-dependent kinase 16	CDK16	Homo sapiens	Kd	nM	B	1	1	32.0	32.0	0	0	1
+P3-20	AT9283	CHEMBL5790	Cyclin-dependent kinase 17	CDK17	Homo sapiens	Kd	nM	B	1	1	1148.0	1148.0	0	0	1
+P3-20	AT9283	CHEMBL301	Cyclin-dependent kinase 2	CDK2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4442	Cyclin-dependent kinase 3	CDK3	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL331	Cyclin-dependent kinase 4	CDK4	Homo sapiens	Kd	nM	B	1	1	1287.0	1287.0	0	0	1
+P3-20	AT9283	CHEMBL4036	Cyclin-dependent kinase 5	CDK5	Homo sapiens	Kd	nM	B	1	1	1385.0	1385.0	0	0	1
+P3-20	AT9283	CHEMBL2508	Cyclin-dependent kinase 6	CDK6	Homo sapiens	Kd	nM	B	1	1	140.0	140.0	0	0	1
+P3-20	AT9283	CHEMBL3055	Cyclin-dependent kinase 7	CDK7	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL3116	Cyclin-dependent kinase 9	CDK9	Homo sapiens	Kd	nM	B	1	1	1640.0	1640.0	0	0	1
+P3-20	AT9283	CHEMBL1163112	Cyclin-dependent kinase-like 5	CDKL5	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4105742	Chromodomain-helicase-DNA-binding protein 4	CHD4	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4630	Serine/threonine-protein kinase Chk1	CHEK1	Homo sapiens	Kd	nM	B	1	1	84.0	84.0	0	0	1
+P3-20	AT9283	CHEMBL5579	Citron Rho-interacting kinase	CIT	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4224	Dual specificity protein kinase CLK1	CLK1	Homo sapiens	Kd	nM	B	1	1	2045.0	2045.0	0	0	1
+P3-20	AT9283	CHEMBL4225	Dual specificity protein kinase CLK2	CLK2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4226	Dual specificity protein kinase CLK3	CLK3	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4203	Dual specificity protein kinase CLK4	CLK4	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL5681	UMP-CMP kinase	CMPK1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL2634	Tyrosine-protein kinase CSK	CSK	Homo sapiens	Kd	nM	B	1	1	1473.0	1473.0	0	0	1
+P3-20	AT9283	CHEMBL2793	Casein kinase I isoform alpha	CSNK1A1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL2828	Casein kinase I isoform delta	CSNK1D	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4937	Casein kinase I isoform epsilon	CSNK1E	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL2426	Casein kinase I isoform gamma-1	CSNK1G1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL2543	Casein kinase I isoform gamma-2	CSNK1G2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL5084	Casein kinase I isoform gamma-3	CSNK1G3	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4070	Casein kinase II subunit alpha'	CSNK2A2	Homo sapiens	Kd	nM	B	1	1	65.0	65.0	0	0	1
+P3-20	AT9283	CHEMBL4105975	Cytochrome c1, heme protein, mitochondrial	CYC1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL2447	Deoxycytidine kinase	DCK	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL3769292	dCTP pyrophosphatase 1	DCTPP1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL5319	Epithelial discoidin domain-containing receptor 1	DDR1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL5122	Discoidin domain-containing receptor 2	DDR2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL2010634	ATP-dependent RNA helicase DDX1	DDX1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL5553	ATP-dependent RNA helicase DDX3X	DDX3X	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4105782	ATP-dependent RNA helicase DDX42	DDX42	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4105783	Probable ATP-dependent RNA helicase DDX6	DDX6	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL2331059	Delta(24)-sterol reductase	DHCR24	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4105814	ATP-dependent RNA helicase DHX30	DHX30	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL2189122	DnaJ homolog subfamily A member 1	DNAJA1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL2292	Dual specificity tyrosine-phosphorylation-regulated kinase 1A	DYRK1A	Homo sapiens	Kd	nM	B	1	1	2447.0	2447.0	0	0	1
+P3-20	AT9283	CHEMBL203	Epidermal growth factor receptor	EGFR	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL6029	Eukaryotic translation initiation factor 2-alpha kinase 1	EIF2AK1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4105852	Eukaryotic translation initiation factor 5B	EIF5B	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL2068	Ephrin type-A receptor 2	EPHA2	Homo sapiens	Kd	nM	B	1	1	1429.0	1429.0	0	0	1
+P3-20	AT9283	CHEMBL3988	Ephrin type-A receptor 4	EPHA4	Homo sapiens	Kd	nM	B	1	1	43942.0	43942.0	0	0	1
+P3-20	AT9283	CHEMBL3987	Ephrin type-A receptor 5	EPHA5	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4602	Ephrin type-A receptor 7	EPHA7	Homo sapiens	Kd	nM	B	1	1	8.0	8.0	0	0	1
+P3-20	AT9283	CHEMBL3290	Ephrin type-B receptor 2	EPHB2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4901	Ephrin type-B receptor 3	EPHB3	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL5147	Ephrin type-B receptor 4	EPHB4	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL5836	Ephrin type-B receptor 6	EPHB6	Homo sapiens	Kd	nM	B	1	1	12.0	12.0	0	0	1
+P3-20	AT9283	CHEMBL4105743	General transcription and DNA repair factor IIH helicase subunit XPD	ERCC2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL1163101	Serine/threonine-protein kinase/endoribonuclease IRE1	ERN1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4105932	Serine/threonine-protein kinase/endoribonuclease IRE2	ERN2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4105744	Electron transfer flavoprotein subunit beta	ETFB	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4105969	Phenylalanine--tRNA ligase beta subunit	FARSB	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL3879831	Ferrochelatase, mitochondrial	FECH	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL3982	Tyrosine-protein kinase Fer	FER	Homo sapiens	Kd	nM	B	1	1	307.0	307.0	0	0	1
+P3-20	AT9283	CHEMBL5455	Tyrosine-protein kinase Fes/Fps	FES	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL3650	Fibroblast growth factor receptor 1	FGFR1	Homo sapiens	Kd	nM	B	1	1	25.0	25.0	0	0	1
+P3-20	AT9283	CHEMBL4454	Tyrosine-protein kinase Fgr	FGR	Homo sapiens	Kd	nM	B	1	1	1537.0	1537.0	0	0	1
+P3-20	AT9283	CHEMBL1974	Receptor-type tyrosine-protein kinase FLT3	FLT3	Homo sapiens	Kd	nM	B	1	1	64.0	64.0	0	0	1
+P3-20	AT9283	CHEMBL4223	Tyrosine-protein kinase FRK	FRK	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL1841	Tyrosine-protein kinase Fyn	FYN	Homo sapiens	Kd	nM	B	1	1	511.0	511.0	0	0	1
+P3-20	AT9283	CHEMBL4355	Cyclin-G-associated kinase	GAK	Homo sapiens	Kd	nM	B	1	1	1610.0	1610.0	0	0	1
+P3-20	AT9283	CHEMBL4105815	Glycine--tRNA ligase	GARS1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4105887	Guanine nucleotide-binding protein G(i) subunit alpha-2	GNAI2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL6144	G protein-coupled receptor kinase 6	GRK6	Homo sapiens	Kd	nM	B	1	1	13552.0	13552.0	0	0	1
+P3-20	AT9283	CHEMBL2850	Glycogen synthase kinase-3 alpha	GSK3A	Homo sapiens	Kd	nM	B	1	1	6.0	6.0	0	0	1
+P3-20	AT9283	CHEMBL262	Glycogen synthase kinase-3 beta	GSK3B	Homo sapiens	Kd	nM	B	1	1	7.0	7.0	0	0	1
+P3-20	AT9283	CHEMBL4105780	GTP-binding protein 4	GTPBP4	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL3234	Tyrosine-protein kinase HCK	HCK	Homo sapiens	Kd	nM	B	1	1	664.0	664.0	0	0	1
+P3-20	AT9283	CHEMBL2546	Heme oxygenase 2	HMOX2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4105858	Putative heat shock protein HSP 90-beta 2	HSP90AB2P	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4105821	Isoleucine--tRNA ligase, mitochondrial	IARS2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL1163126	Serine/threonine-protein kinase ICK	CILK1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL1957	Insulin-like growth factor 1 receptor	IGF1R	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL3529	Inhibitor of nuclear factor kappa-B kinase subunit epsilon	IKBKE	Homo sapiens	Kd	nM	B	1	1	215.0	215.0	0	0	1
+P3-20	AT9283	CHEMBL5247	Scaffold protein ILK	ILK	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL2002	Inosine-5'-monophosphate dehydrogenase 2	IMPDH2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL1981	Insulin receptor	INSR	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL3357	Interleukin-1 receptor-associated kinase 1	IRAK1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL5081	Interleukin-1 receptor-associated kinase 3	IRAK3	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL3778	Interleukin-1 receptor-associated kinase 4	IRAK4	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL2835	Tyrosine-protein kinase JAK1	JAK1	Homo sapiens	Kd	nM	B	2	2	37.0	368.0	0	0	2
+P3-20	AT9283	CHEMBL6167	Serine/threonine-protein kinase LATS1	LATS1	Homo sapiens	Kd	nM	B	1	1	45.0	45.0	0	0	1
+P3-20	AT9283	CHEMBL258	Tyrosine-protein kinase Lck	LCK	Homo sapiens	Kd	nM	B	1	1	890.0	890.0	0	0	1
+P3-20	AT9283	CHEMBL3836	LIM domain kinase 1	LIMK1	Homo sapiens	Kd	nM	B	1	1	1692.0	1692.0	0	0	1
+P3-20	AT9283	CHEMBL5932	LIM domain kinase 2	LIMK2	Homo sapiens	Kd	nM	B	1	1	4432.0	4432.0	0	0	1
+P3-20	AT9283	CHEMBL3905	Tyrosine-protein kinase Lyn	LYN	Homo sapiens	Kd	nM	B	1	1	1420.0	1420.0	0	0	1
+P3-20	AT9283	CHEMBL3587	Dual specificity mitogen-activated protein kinase kinase 1	MAP2K1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL2964	Dual specificity mitogen-activated protein kinase kinase 2	MAP2K2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL2109	Dual specificity mitogen-activated protein kinase kinase 3	MAP2K3	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL2897	Dual specificity mitogen-activated protein kinase kinase 4	MAP2K4	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4948	Dual specificity mitogen-activated protein kinase kinase 5	MAP2K5	Homo sapiens	Kd	nM	B	1	1	47.0	47.0	0	0	1
+P3-20	AT9283	CHEMBL2171	Dual specificity mitogen-activated protein kinase kinase 6	MAP2K6	Homo sapiens	Kd	nM	B	1	1	3545.0	3545.0	0	0	1
+P3-20	AT9283	CHEMBL3956	Mitogen-activated protein kinase kinase kinase 1	MAP3K1	Homo sapiens	Kd	nM	B	1	1	1399.0	1399.0	0	0	1
+P3-20	AT9283	CHEMBL2708	Mitogen-activated protein kinase kinase kinase 11	MAP3K11	Homo sapiens	Kd	nM	B	1	1	56.0	56.0	0	0	1
+P3-20	AT9283	CHEMBL5914	Mitogen-activated protein kinase kinase kinase 2	MAP3K2	Homo sapiens	Kd	nM	B	1	1	277.0	277.0	0	0	1
+P3-20	AT9283	CHEMBL5970	Mitogen-activated protein kinase kinase kinase 3	MAP3K3	Homo sapiens	Kd	nM	B	1	1	345.0	345.0	0	0	1
+P3-20	AT9283	CHEMBL4853	Mitogen-activated protein kinase kinase kinase 4	MAP3K4	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL5285	Mitogen-activated protein kinase kinase kinase 5	MAP3K5	Homo sapiens	Kd	nM	B	1	1	23168.0	23168.0	0	0	1
+P3-20	AT9283	CHEMBL1163123	Mitogen-activated protein kinase kinase kinase 6	MAP3K6	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL5749	Mitogen-activated protein kinase kinase kinase kinase 1	MAP4K1	Homo sapiens	Kd	nM	B	1	1	214.0	214.0	0	0	1
+P3-20	AT9283	CHEMBL5330	Mitogen-activated protein kinase kinase kinase kinase 2	MAP4K2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL5432	Mitogen-activated protein kinase kinase kinase kinase 3	MAP4K3	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL6166	Mitogen-activated protein kinase kinase kinase kinase 4	MAP4K4	Homo sapiens	Kd	nM	B	1	1	108.0	108.0	0	0	1
+P3-20	AT9283	CHEMBL4852	Mitogen-activated protein kinase kinase kinase kinase 5	MAP4K5	Homo sapiens	Kd	nM	B	1	1	2217.0	2217.0	0	0	1
+P3-20	AT9283	CHEMBL4040	Mitogen-activated protein kinase 1	MAPK1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL2637	Mitogen-activated protein kinase 10	MAPK10	Homo sapiens	Kd	nM	B	1	1	358.0	358.0	0	0	1
+P3-20	AT9283	CHEMBL3961	Mitogen-activated protein kinase 11	MAPK11	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL260	Mitogen-activated protein kinase 14	MAPK14	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL5198	Mitogen-activated protein kinase 15	MAPK15	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL3385	Mitogen-activated protein kinase 3	MAPK3	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL5332	Mitogen-activated protein kinase 7	MAPK7	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL2276	Mitogen-activated protein kinase 8	MAPK8	Homo sapiens	Kd	nM	B	1	1	157.0	157.0	0	0	1
+P3-20	AT9283	CHEMBL4179	Mitogen-activated protein kinase 9	MAPK9	Homo sapiens	Kd	nM	B	1	1	509.0	509.0	0	0	1
+P3-20	AT9283	CHEMBL2208	MAP kinase-activated protein kinase 2	MAPKAPK2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL3094	MAP kinase-activated protein kinase 5	MAPKAPK5	Homo sapiens	Kd	nM	B	1	1	589.0	589.0	0	0	1
+P3-20	AT9283	CHEMBL3831	Serine/threonine-protein kinase MARK2	MARK2	Homo sapiens	Kd	nM	B	1	1	1364.0	1364.0	0	0	1
+P3-20	AT9283	CHEMBL5600	MAP/microtubule affinity-regulating kinase 3	MARK3	Homo sapiens	Kd	nM	B	1	1	1370.0	1370.0	0	0	1
+P3-20	AT9283	CHEMBL5754	MAP/microtubule affinity-regulating kinase 4	MARK4	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL3313835	S-adenosylmethionine synthase isoform type-2	MAT2A	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4105745	DNA replication licensing factor MCM4	MCM4	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4105779	Midasin	MDN1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4578	Maternal embryonic leucine zipper kinase	MELK	Homo sapiens	Kd	nM	B	1	1	1795.0	1795.0	0	0	1
+P3-20	AT9283	CHEMBL3717	Hepatocyte growth factor receptor	MET	Homo sapiens	Kd	nM	B	1	1	7.0	7.0	0	0	1
+P3-20	AT9283	CHEMBL5518	Misshapen-like kinase 1	MINK1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL2689	Macrophage-stimulating protein receptor	MST1R	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4105746	Myosin-10	MYH10	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4105888	Myosin-14	MYH14	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL2428	Myosin light chain kinase, smooth muscle	MYLK	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4627	Myosin light chain kinase	MYLK3	Homo sapiens	Kd	nM	B	1	1	129.0	129.0	0	0	1
+P3-20	AT9283	CHEMBL4105935	RNA cytidine acetyltransferase	NAT10	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4105781	NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 13	NDUFA13	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL5855	Serine/threonine-protein kinase Nek1	NEK1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL3835	Serine/threonine-protein kinase Nek2	NEK2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL5679	Serine/threonine-protein kinase Nek3	NEK3	Homo sapiens	Kd	nM	B	1	1	2055.0	2055.0	0	0	1
+P3-20	AT9283	CHEMBL4849	Serine/threonine-protein kinase Nek7	NEK7	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL5257	Serine/threonine-protein kinase Nek9	NEK9	Homo sapiens	Kd	nM	B	1	1	1532.0	1532.0	0	0	1
+P3-20	AT9283	CHEMBL5364	Serine/threonine-protein kinase NLK	NLK	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL3959	Ribosyldihydronicotinamide dehydrogenase [quinone]	NQO2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL2815	High affinity nerve growth factor receptor	NTRK1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL5698	NUAK family SNF1-like kinase 2	NUAK2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4105704	Obg-like ATPase 1	OLA1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4105705	Dynamin-like GTPase OPA1, mitochondrial	OPA1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL5922	Bifunctional phosphoribosylaminoimidazole carboxylase/phosphoribosylaminoimidazole succinocarboxamide synthetase	PAICS	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4487	Serine/threonine-protein kinase PAK 2	PAK2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4482	Serine/threonine-protein kinase PAK 4	PAK4	Homo sapiens	Kd	nM	B	1	1	110.0	110.0	0	0	1
+P3-20	AT9283	CHEMBL4311	Serine/threonine-protein kinase PAK 6	PAK6	Homo sapiens	Kd	nM	B	1	1	213.0	213.0	0	0	1
+P3-20	AT9283	CHEMBL6054	PAS domain-containing serine/threonine-protein kinase	PASK	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4105855	Choline-phosphate cytidylyltransferase A	PCYT1A	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL1913	Platelet-derived growth factor receptor beta	PDGFRB	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL1075181	Pyridoxal kinase	PDXK	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4105856	Phosphatidylethanolamine-binding protein 1	PEBP1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL2972	ATP-dependent 6-phosphofructokinase, platelet type	PFKP	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4105706	Membrane-associated progesterone receptor component 1	PGRMC1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL2349	Phosphorylase b kinase gamma catalytic chain, liver/testis isoform	PHKG2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL2147	Serine/threonine-protein kinase pim-1	PIM1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4523	Serine/threonine-protein kinase pim-2	PIM2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL1770034	Phosphatidylinositol 5-phosphate 4-kinase type-2 gamma	PIP4K2C	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL3984	Membrane-associated tyrosine- and threonine-specific cdc2-inhibitory kinase	PKMYT1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL3384	Serine/threonine-protein kinase N1	PKN1	Homo sapiens	Kd	nM	B	1	1	3088.0	3088.0	0	0	1
+P3-20	AT9283	CHEMBL3032	Serine/threonine-protein kinase N2	PKN2	Homo sapiens	Kd	nM	B	1	1	2767.0	2767.0	0	0	1
+P3-20	AT9283	CHEMBL3627581	Serine/threonine-protein kinase N3	PKN3	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL3024	Serine/threonine-protein kinase PLK1	PLK1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL3788	Serine/threonine-protein kinase PLK4	PLK4	Homo sapiens	Kd	nM	B	1	1	21.0	21.0	0	0	1
+P3-20	AT9283	CHEMBL4045	5'-AMP-activated protein kinase catalytic subunit alpha-1	PRKAA1	Homo sapiens	Kd	nM	B	1	1	50.0	50.0	0	0	1
+P3-20	AT9283	CHEMBL4101	cAMP-dependent protein kinase catalytic subunit alpha	PRKACA	Homo sapiens	Kd	nM	B	1	1	3191.0	3191.0	0	0	1
+P3-20	AT9283	CHEMBL2918	cAMP-dependent protein kinase catalytic subunit beta	PRKACB	Homo sapiens	Kd	nM	B	1	1	927.0	927.0	0	0	1
+P3-20	AT9283	CHEMBL2743	cAMP-dependent protein kinase catalytic subunit gamma	PRKACG	Homo sapiens	Kd	nM	B	1	1	3.0	3.0	0	0	1
+P3-20	AT9283	CHEMBL2393	5'-AMP-activated protein kinase subunit gamma-1	PRKAG1	Homo sapiens	Kd	nM	B	1	1	34.0	34.0	0	0	1
+P3-20	AT9283	CHEMBL2453	5'-AMP-activated protein kinase subunit gamma-2	PRKAG2	Homo sapiens	Kd	nM	B	1	1	62.0	62.0	0	0	1
+P3-20	AT9283	CHEMBL2221	cAMP-dependent protein kinase type II-alpha regulatory subunit	PRKAR2A	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL299	Protein kinase C alpha type	PRKCA	Homo sapiens	Kd	nM	B	1	1	1543.0	1543.0	0	0	1
+P3-20	AT9283	CHEMBL3045	Protein kinase C beta type	PRKCB	Homo sapiens	Kd	nM	B	1	1	3380.0	3380.0	0	0	1
+P3-20	AT9283	CHEMBL2996	Protein kinase C delta type	PRKCD	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL2598	Protein kinase C iota type	PRKCI	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL3920	Protein kinase C theta type	PRKCQ	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4900	Serine/threonine-protein kinase D2	PRKD2	Homo sapiens	Kd	nM	B	1	1	244.0	244.0	0	0	1
+P3-20	AT9283	CHEMBL2595	Serine/threonine-protein kinase D3	PRKD3	Homo sapiens	Kd	nM	B	1	1	532.0	532.0	0	0	1
+P3-20	AT9283	CHEMBL4273	cGMP-dependent protein kinase 1	PRKG1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL3831205	26S proteasome regulatory subunit 6B	PSMC4	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL2695	Focal adhesion kinase 1	PTK2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL5469	Protein-tyrosine kinase 2-beta	PTK2B	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4601	Protein-tyrosine kinase 6	PTK6	Homo sapiens	Kd	nM	B	1	1	188.0	188.0	0	0	1
+P3-20	AT9283	CHEMBL3856	Glycogen phosphorylase, brain form	PYGB	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL2568	Glycogen phosphorylase, liver form	PYGL	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4105933	Uncharacterized protein FLJ45252		Homo sapiens	Kd	nM	B	1	1	24.0	24.0	0	0	1
+P3-20	AT9283	CHEMBL4105971	Ras-related protein Rab-10	RAB10	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4105702	Ras-related protein Rab-27A	RAB27A	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4105703	Ras-related protein Rab-6A	RAB6A	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4105853	Rab-like protein 3	RABL3	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL1741190	GTP-binding nuclear protein Ran	RAN	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL2041	Proto-oncogene tyrosine-protein kinase receptor Ret	RET	Homo sapiens	Kd	nM	B	1	1	11.0	11.0	0	0	1
+P3-20	AT9283	CHEMBL5014	Receptor-interacting serine/threonine-protein kinase 2	RIPK2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL1795199	Receptor-interacting serine/threonine-protein kinase 3	RIPK3	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL3231	Rho-associated protein kinase 1	ROCK1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL2973	Rho-associated protein kinase 2	ROCK2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL2553	Ribosomal protein S6 kinase alpha-1	RPS6KA1	Homo sapiens	Kd	nM	B	1	1	471.0	471.0	0	0	1
+P3-20	AT9283	CHEMBL2345	Ribosomal protein S6 kinase alpha-3	RPS6KA3	Homo sapiens	Kd	nM	B	1	1	108.0	108.0	0	0	1
+P3-20	AT9283	CHEMBL3125	Ribosomal protein S6 kinase alpha-4	RPS6KA4	Homo sapiens	Kd	nM	B	1	1	73.0	73.0	0	0	1
+P3-20	AT9283	CHEMBL4237	Ribosomal protein S6 kinase alpha-5	RPS6KA5	Homo sapiens	Kd	nM	B	1	1	1249.0	1249.0	0	0	1
+P3-20	AT9283	CHEMBL4924	Ribosomal protein S6 kinase alpha-6	RPS6KA6	Homo sapiens	Kd	nM	B	1	1	16.0	16.0	0	0	1
+P3-20	AT9283	CHEMBL4501	Ribosomal protein S6 kinase beta-1	RPS6KB1	Homo sapiens	Kd	nM	B	1	1	117.0	117.0	0	0	1
+P3-20	AT9283	CHEMBL4105891	Septin-9	SEPTIN9	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL5699	Serine/threonine-protein kinase SIK2	SIK2	Homo sapiens	Kd	nM	B	1	1	30.0	30.0	0	0	1
+P3-20	AT9283	CHEMBL6149	Serine/threonine-protein kinase SIK3	SIK3	Homo sapiens	Kd	nM	B	1	1	4108.0	4108.0	0	0	1
+P3-20	AT9283	CHEMBL4105889	Exosome RNA helicase MTR4	MTREX	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL3709670	ADP/ATP translocase 2	SLC25A5	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4105854	ADP/ATP translocase 3	SLC25A6	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4202	STE20-like serine/threonine-protein kinase	SLK	Homo sapiens	Kd	nM	B	1	1	402.0	402.0	0	0	1
+P3-20	AT9283	CHEMBL4105747	Structural maintenance of chromosomes protein 1A	SMC1A	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4105890	Structural maintenance of chromosomes protein 2	SMC2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4105972	U5 small nuclear ribonucleoprotein 200 kDa helicase	SNRNP200	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL267	Proto-oncogene tyrosine-protein kinase Src	SRC	Homo sapiens	Kd	nM	B	1	1	592.0	592.0	0	0	1
+P3-20	AT9283	CHEMBL4105934	Signal recognition particle receptor subunit alpha	SRPRA	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL3981	Serine/threonine-protein kinase 10	STK10	Homo sapiens	Kd	nM	B	1	1	82.0	82.0	0	0	1
+P3-20	AT9283	CHEMBL5606	Serine/threonine-protein kinase STK11	STK11	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL3938	Serine/threonine-protein kinase 16	STK16	Homo sapiens	Kd	nM	B	1	1	1281.0	1281.0	0	0	1
+P3-20	AT9283	CHEMBL5082	Serine/threonine-protein kinase 24	STK24	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL5941	Serine/threonine-protein kinase 26	STK26	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4708	Serine/threonine-protein kinase 3	STK3	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL1075155	Serine/threonine-protein kinase 38	STK38	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4598	Serine/threonine-protein kinase 4	STK4	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL1795198	STE20-related kinase adapter protein alpha	STRADA	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4105973	Succinate--CoA ligase [ADP-forming] subunit beta, mitochondrial	SUCLA2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL2599	Tyrosine-protein kinase SYK	SYK	Homo sapiens	Kd	nM	B	1	1	116.0	116.0	0	0	1
+P3-20	AT9283	CHEMBL5261	Serine/threonine-protein kinase TAO1	TAOK1	Homo sapiens	Kd	nM	B	1	1	2219.0	2219.0	0	0	1
+P3-20	AT9283	CHEMBL1075195	Serine/threonine-protein kinase TAO2	TAOK2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL5701	Serine/threonine-protein kinase TAO3	TAOK3	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL5408	Serine/threonine-protein kinase TBK1	TBK1	Homo sapiens	Kd	nM	B	1	1	102.0	102.0	0	0	1
+P3-20	AT9283	CHEMBL4246	Tyrosine-protein kinase Tec	TEC	Homo sapiens	Kd	nM	B	1	1	135.0	135.0	0	0	1
+P3-20	AT9283	CHEMBL5604	Dual specificity testis-specific protein kinase 1	TESK1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL2069163	Dual specificity testis-specific protein kinase 2	TESK2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4439	TGF-beta receptor type-1	TGFBR1	Homo sapiens	Kd	nM	B	1	1	77.0	77.0	0	0	1
+P3-20	AT9283	CHEMBL4267	TGF-beta receptor type-2	TGFBR2	Homo sapiens	Kd	nM	B	1	1	1384.0	1384.0	0	0	1
+P3-20	AT9283	CHEMBL4105820	Thyroid hormone receptor-associated protein 3	THRAP3	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4527	TRAF2 and NCK-interacting protein kinase	TNIK	Homo sapiens	Kd	nM	B	1	1	801.0	801.0	0	0	1
+P3-20	AT9283	CHEMBL5334	Non-receptor tyrosine-protein kinase TNK1	TNK1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4599	Activated CDC42 kinase 1	TNK2	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL1806	DNA topoisomerase 2-alpha	TOP2A	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL3396	DNA topoisomerase 2-beta	TOP2B	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL1938223	EKC/KEOPS complex subunit TP53RK	TP53RK	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL3983	Dual specificity protein kinase TTK	TTK	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL4105970	Elongation factor Tu, mitochondrial	TUFM	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL3553	Non-receptor tyrosine-protein kinase TYK2	TYK2	Homo sapiens	Kd	nM	B	2	2	12.0	279.0	0	0	2
+P3-20	AT9283	CHEMBL6006	Serine/threonine-protein kinase ULK1	ULK1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL5047	Serine/threonine-protein kinase ULK3	ULK3	Homo sapiens	Kd	nM	B	1	1	45.0	45.0	0	0	1
+P3-20	AT9283	CHEMBL5491	Wee1-like protein kinase	WEE1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL3179	Tyrosine--tRNA ligase, cytoplasmic	YARS1	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL2073	Tyrosine-protein kinase Yes	YES1	Homo sapiens	Kd	nM	B	1	1	574.0	574.0	0	0	1
+P3-20	AT9283	CHEMBL3886	Mitogen-activated protein kinase kinase kinase 20	MAP3K20	Homo sapiens	Kd	nM	B	1	0			1	0	1
+P3-20	AT9283	CHEMBL2971	Tyrosine-protein kinase JAK2	JAK2	Homo sapiens	Kd	nM	B	2	2	3.3	11.0	0	0	2
+P3-20	AT9283	CHEMBL4578	Maternal embryonic leucine zipper kinase	MELK	Homo sapiens	IC50	nM	B	2	2	685.0	685.0	0	0	2
+P3-20	AT9283	CHEMBL4523582	Replicase polyprotein 1ab	rep	Severe acute respiratory syndrome coronavirus 2	Inhibition	%	F	2	2	8.296	16.44	0	0	1
+P3-20	AT9283	CHEMBL4376	Dual specificity tyrosine-phosphorylation-regulated kinase 2	DYRK2	Homo sapiens	IC50	nM	B	1	1	570.0	570.0	0	0	1
+P3-20	AT9283	CHEMBL1163117	Cyclin-dependent kinase-like 3	CDKL3	Homo sapiens	IC50	nM	B	1	1	1100.0	1100.0	0	0	1
+P3-20	AT9283	CHEMBL1865	Protein deacetylase HDAC6	HDAC6	Homo sapiens	Inhibition	%	B	2	2	-6.67	32.28	0	0	1
+P3-20	AT9283	CHEMBL5552	Serine/threonine-protein kinase 25	STK25	Homo sapiens	IC50	nM	B	1	1	460.0	460.0	0	0	1
+P3-20	AT9283	CHEMBL2835	Tyrosine-protein kinase JAK1	JAK1	Homo sapiens	IC50	nM	B	2	2	60.0	65.0	0	0	2
+P3-20	AT9283	CHEMBL2148	Tyrosine-protein kinase JAK3	JAK3	Homo sapiens	Kd	nM	B	1	1	6.6	6.6	0	0	1

@@ -1,0 +1,10 @@
+work_id	name	action_type	mechanism	target_chembl_id	target_name	direct_interaction	disease_efficacy
+P3-11	pomalidomide	INHIBITOR	CRL4(CRBN) E3 ubiquitin ligase inhibitor	CHEMBL3833061		1	1
+P3-16	sirolimus	INHIBITOR	FK506-binding protein 1A inhibitor	CHEMBL1902	Peptidyl-prolyl cis-trans isomerase FKBP1A	1	1
+P3-19	lenalidomide	INHIBITOR	CRL4(CRBN) E3 ubiquitin ligase inhibitor	CHEMBL3833061		1	1
+P3-20	AT9283	INHIBITOR	Tyrosine-protein kinase ABL inhibitor	CHEMBL1862	Tyrosine-protein kinase ABL1	1	1
+P3-20	AT9283	INHIBITOR	Serine/threonine-protein kinase Aurora-A inhibitor	CHEMBL4722	Aurora kinase A	1	1
+P3-20	AT9283	INHIBITOR	Serine/threonine-protein kinase Aurora-B inhibitor	CHEMBL2185	Aurora kinase B	1	1
+P3-20	AT9283	INHIBITOR	Tyrosine-protein kinase receptor FLT3 inhibitor	CHEMBL1974	Receptor-type tyrosine-protein kinase FLT3	1	1
+P3-20	AT9283	INHIBITOR	Tyrosine-protein kinase JAK2 inhibitor	CHEMBL2971	Tyrosine-protein kinase JAK2	1	1
+P3-20	AT9283	INHIBITOR	Tyrosine-protein kinase JAK3 inhibitor	CHEMBL2148	Tyrosine-protein kinase JAK3	1	1

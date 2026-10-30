@@ -1,0 +1,778 @@
+gene	ensembl_or_state	hpa_field	value_json	
+AURKA	ENSG00000087586	Brain expression cluster	"""Cluster 25: Non-specific - Transcription"""	
+AURKA	ENSG00000087586	Protein cell type distribution	"""Not detected"""	
+AURKA	ENSG00000087586	Protein cell type specific Intensity	null	
+AURKA	ENSG00000087586	Protein cell type specificity	"""Not detected"""	
+AURKA	ENSG00000087586	Protein cell type specificity score	null	
+AURKA	ENSG00000087586	RNA brain regional distribution	"""Detected in all"""	
+AURKA	ENSG00000087586	RNA brain regional specific nTPM	null	
+AURKA	ENSG00000087586	RNA brain regional specificity	"""Low region specificity"""	
+AURKA	ENSG00000087586	RNA brain regional specificity score	null	
+AURKA	ENSG00000087586	RNA mouse brain regional distribution	"""Detected in all"""	
+AURKA	ENSG00000087586	RNA mouse brain regional specific nTPM	null	
+AURKA	ENSG00000087586	RNA mouse brain regional specificity	"""Low region specificity"""	
+AURKA	ENSG00000087586	RNA mouse brain regional specificity score	null	
+AURKA	ENSG00000087586	RNA pig brain regional distribution	"""Detected in all"""	
+AURKA	ENSG00000087586	RNA pig brain regional specific nTPM	null	
+AURKA	ENSG00000087586	RNA pig brain regional specificity	"""Low region specificity"""	
+AURKA	ENSG00000087586	RNA pig brain regional specificity score	null	
+AURKA	ENSG00000087586	RNA single cell type distribution	"""Detected in many"""	
+AURKA	ENSG00000087586	RNA single cell type group distribution	"""Detected in many"""	
+AURKA	ENSG00000087586	RNA single cell type group specific nCPM	"{""Oocytes"": ""354.6"", ""Spermatogenic cell types"": ""269.3""}"	
+AURKA	ENSG00000087586	RNA single cell type group specificity	"""Cell type enhanced"""	
+AURKA	ENSG00000087586	RNA single cell type group specificity score	null	
+AURKA	ENSG00000087586	RNA single cell type specific nCPM	"{""Differentiating spermatogonia"": ""49.5"", ""Erythrocyte progenitors"": ""61.8"", ""Extravillous trophoblasts"": ""77.4"", ""Late primary spermatocytes"": ""269.3"", ""Migrating cytotrophoblasts"": ""57.4"", ""Monocyte progenitors"": ""90.0"", ""Oocytes"": ""354.6""}"	
+AURKA	ENSG00000087586	RNA single cell type specificity	"""Cell type enhanced"""	
+AURKA	ENSG00000087586	RNA single cell type specificity score	null	
+AURKA	ENSG00000087586	RNA single nuclei brain distribution	"""Detected in many"""	
+AURKA	ENSG00000087586	RNA single nuclei brain specific nCPM	null	
+AURKA	ENSG00000087586	RNA single nuclei brain specificity	"""Low cell type specificity"""	
+AURKA	ENSG00000087586	RNA single nuclei brain specificity score	null	
+AURKA	ENSG00000087586	RNA tissue cell type enrichment	"[""Lung - Mitotic cells (Lung)"", ""Minor Salivary Gland - Mitotic cells (Minor salivary gland)"", ""Skin - Mitotic cells (Skin)"", ""Spleen - Mitotic cells (Spleen)"", ""Stomach - Mitotic cells (Stomach)"", ""Testis - Early spermatids""]"	
+AURKA	ENSG00000087586	RNA tissue distribution	"""Detected in many"""	
+AURKA	ENSG00000087586	RNA tissue specific nTPM	"{""lymphoid tissue"": ""20.6"", ""testis"": ""28.8""}"	
+AURKA	ENSG00000087586	RNA tissue specificity	"""Tissue enhanced"""	
+AURKA	ENSG00000087586	RNA tissue specificity score	null	
+AURKA	ENSG00000087586	Reliability (Mouse Brain)	null	
+AURKA	ENSG00000087586	Single cell expression cluster	"""Cluster 27: Non-specific - Cell proliferation"""	
+AURKA	ENSG00000087586	Subcellular main location	"[""Mitotic spindle"", ""Centrosome"", ""Basal body""]"	
+AURKB	ENSG00000178999	Brain expression cluster	"""Cluster 25: Non-specific - Transcription"""	
+AURKB	ENSG00000178999	Protein cell type distribution	"""Detected in some"""	
+AURKB	ENSG00000178999	Protein cell type specific Intensity	"{""Granulosa cells"": ""685835.5""}"	
+AURKB	ENSG00000178999	Protein cell type specificity	"""Cell type enriched"""	
+AURKB	ENSG00000178999	Protein cell type specificity score	null	
+AURKB	ENSG00000178999	RNA brain regional distribution	"""Detected in single"""	
+AURKB	ENSG00000178999	RNA brain regional specific nTPM	null	
+AURKB	ENSG00000178999	RNA brain regional specificity	"""Low region specificity"""	
+AURKB	ENSG00000178999	RNA brain regional specificity score	null	
+AURKB	ENSG00000178999	RNA mouse brain regional distribution	"""Detected in some"""	
+AURKB	ENSG00000178999	RNA mouse brain regional specific nTPM	"{""basal ganglia"": ""1.3"", ""white matter"": ""4.0""}"	
+AURKB	ENSG00000178999	RNA mouse brain regional specificity	"""Group enriched"""	
+AURKB	ENSG00000178999	RNA mouse brain regional specificity score	"""5"""	
+AURKB	ENSG00000178999	RNA pig brain regional distribution	"""Detected in all"""	
+AURKB	ENSG00000178999	RNA pig brain regional specific nTPM	null	
+AURKB	ENSG00000178999	RNA pig brain regional specificity	"""Low region specificity"""	
+AURKB	ENSG00000178999	RNA pig brain regional specificity score	null	
+AURKB	ENSG00000178999	RNA single cell type distribution	"""Detected in many"""	
+AURKB	ENSG00000178999	RNA single cell type group distribution	"""Detected in many"""	
+AURKB	ENSG00000178999	RNA single cell type group specific nCPM	"{""Basal cells"": ""59.6"", ""Erythrocytes"": ""49.5"", ""Mononuclear phagocytes"": ""80.5"", ""Proliferating cells"": ""60.0"", ""Trophoblast cells"": ""102.8""}"	
+AURKB	ENSG00000178999	RNA single cell type group specificity	"""Cell type enhanced"""	
+AURKB	ENSG00000178999	RNA single cell type group specificity score	null	
+AURKB	ENSG00000178999	RNA single cell type specific nCPM	"{""Cytotrophoblasts"": ""46.7"", ""Enteric transient amplifying cells"": ""60.0"", ""Erythrocyte progenitors"": ""49.5"", ""Esophageal basal cells"": ""59.6"", ""Extravillous trophoblasts"": ""102.8"", ""Gastric progenitor cells"": ""28.2"", ""Hofbauer cells"": ""48.5"", ""Megakaryocyte progenitors"": ""41.1"", ""Migrating cytotrophoblasts"": ""77.2"", ""Monocyte progenitors"": ""80.5"", ""Neutrophil progenitors"": ""29.6""}"	
+AURKB	ENSG00000178999	RNA single cell type specificity	"""Cell type enhanced"""	
+AURKB	ENSG00000178999	RNA single cell type specificity score	null	
+AURKB	ENSG00000178999	RNA single nuclei brain distribution	"""Not detected"""	
+AURKB	ENSG00000178999	RNA single nuclei brain specific nCPM	null	
+AURKB	ENSG00000178999	RNA single nuclei brain specificity	"""Not detected"""	
+AURKB	ENSG00000178999	RNA single nuclei brain specificity score	null	
+AURKB	ENSG00000178999	RNA tissue cell type enrichment	"[""Adrenal gland - Mitotic cells (Adrenal gland)"", ""Colon - Mitotic cells (Colon)"", ""Heart muscle - Mitotic cells (Heart)"", ""Lung - Mitotic cells (Lung)"", ""Minor Salivary Gland - Mitotic cells (Minor salivary gland)"", ""Skin - Mitotic cells (Skin)"", ""Spleen - Mitotic cells (Spleen)"", ""Stomach - Mitotic cells (Stomach)"", ""Thyroid gland - Mitotic cells (Thyroid)""]"	
+AURKB	ENSG00000178999	RNA tissue distribution	"""Detected in many"""	
+AURKB	ENSG00000178999	RNA tissue specific nTPM	"{""bone marrow"": ""41.6"", ""lymphoid tissue"": ""55.9""}"	
+AURKB	ENSG00000178999	RNA tissue specificity	"""Tissue enhanced"""	
+AURKB	ENSG00000178999	RNA tissue specificity score	null	
+AURKB	ENSG00000178999	Reliability (Mouse Brain)	null	
+AURKB	ENSG00000178999	Single cell expression cluster	"""Cluster 27: Non-specific - Cell proliferation"""	
+AURKB	ENSG00000178999	Subcellular main location	"[""Nucleoplasm""]"	
+CLK1	ENSG00000013441	Brain expression cluster	"""Cluster 28: Oligodendrocytes - Mixed function"""	
+CLK1	ENSG00000013441	Protein cell type distribution	"""Detected in some"""	
+CLK1	ENSG00000013441	Protein cell type specific Intensity	"{""B-cells"": ""1549970.7"", ""Large ducts"": ""474737.2"", ""T-cells"": ""1055439.2""}"	
+CLK1	ENSG00000013441	Protein cell type specificity	"""Group enriched"""	
+CLK1	ENSG00000013441	Protein cell type specificity score	null	
+CLK1	ENSG00000013441	RNA brain regional distribution	"""Detected in all"""	
+CLK1	ENSG00000013441	RNA brain regional specific nTPM	null	
+CLK1	ENSG00000013441	RNA brain regional specificity	"""Low region specificity"""	
+CLK1	ENSG00000013441	RNA brain regional specificity score	null	
+CLK1	ENSG00000013441	RNA mouse brain regional distribution	"""Detected in all"""	
+CLK1	ENSG00000013441	RNA mouse brain regional specific nTPM	null	
+CLK1	ENSG00000013441	RNA mouse brain regional specificity	"""Low region specificity"""	
+CLK1	ENSG00000013441	RNA mouse brain regional specificity score	null	
+CLK1	ENSG00000013441	RNA pig brain regional distribution	"""Detected in all"""	
+CLK1	ENSG00000013441	RNA pig brain regional specific nTPM	null	
+CLK1	ENSG00000013441	RNA pig brain regional specificity	"""Low region specificity"""	
+CLK1	ENSG00000013441	RNA pig brain regional specificity score	null	
+CLK1	ENSG00000013441	RNA single cell type distribution	"""Detected in many"""	
+CLK1	ENSG00000013441	RNA single cell type group distribution	"""Detected in all"""	
+CLK1	ENSG00000013441	RNA single cell type group specific nCPM	null	
+CLK1	ENSG00000013441	RNA single cell type group specificity	"""Low cell type specificity"""	
+CLK1	ENSG00000013441	RNA single cell type group specificity score	null	
+CLK1	ENSG00000013441	RNA single cell type specific nCPM	null	
+CLK1	ENSG00000013441	RNA single cell type specificity	"""Low cell type specificity"""	
+CLK1	ENSG00000013441	RNA single cell type specificity score	null	
+CLK1	ENSG00000013441	RNA single nuclei brain distribution	"""Detected in all"""	
+CLK1	ENSG00000013441	RNA single nuclei brain specific nCPM	null	
+CLK1	ENSG00000013441	RNA single nuclei brain specificity	"""Low cell type specificity"""	
+CLK1	ENSG00000013441	RNA single nuclei brain specificity score	null	
+CLK1	ENSG00000013441	RNA tissue cell type enrichment	"[""Colon - Enteric glia cells""]"	
+CLK1	ENSG00000013441	RNA tissue distribution	"""Detected in all"""	
+CLK1	ENSG00000013441	RNA tissue specific nTPM	null	
+CLK1	ENSG00000013441	RNA tissue specificity	"""Low tissue specificity"""	
+CLK1	ENSG00000013441	RNA tissue specificity score	null	
+CLK1	ENSG00000013441	Reliability (Mouse Brain)	null	
+CLK1	ENSG00000013441	Single cell expression cluster	"""Cluster 75: Non-specific - Chaperones and protein folding"""	
+CLK1	ENSG00000013441	Subcellular main location	"[""Nucleoplasm"", ""Nuclear membrane""]"	
+CRBN	ENSG00000113851	Brain expression cluster	"""Cluster 28: Oligodendrocytes - Mixed function"""	
+CRBN	ENSG00000113851	Protein cell type distribution	"""Detected in many"""	
+CRBN	ENSG00000113851	Protein cell type specific Intensity	null	
+CRBN	ENSG00000113851	Protein cell type specificity	"""Low cell type specificity"""	
+CRBN	ENSG00000113851	Protein cell type specificity score	null	
+CRBN	ENSG00000113851	RNA brain regional distribution	"""Detected in all"""	
+CRBN	ENSG00000113851	RNA brain regional specific nTPM	null	
+CRBN	ENSG00000113851	RNA brain regional specificity	"""Low region specificity"""	
+CRBN	ENSG00000113851	RNA brain regional specificity score	null	
+CRBN	ENSG00000113851	RNA mouse brain regional distribution	"""Detected in all"""	
+CRBN	ENSG00000113851	RNA mouse brain regional specific nTPM	null	
+CRBN	ENSG00000113851	RNA mouse brain regional specificity	"""Low region specificity"""	
+CRBN	ENSG00000113851	RNA mouse brain regional specificity score	null	
+CRBN	ENSG00000113851	RNA pig brain regional distribution	"""Detected in all"""	
+CRBN	ENSG00000113851	RNA pig brain regional specific nTPM	null	
+CRBN	ENSG00000113851	RNA pig brain regional specificity	"""Low region specificity"""	
+CRBN	ENSG00000113851	RNA pig brain regional specificity score	null	
+CRBN	ENSG00000113851	RNA single cell type distribution	"""Detected in all"""	
+CRBN	ENSG00000113851	RNA single cell type group distribution	"""Detected in all"""	
+CRBN	ENSG00000113851	RNA single cell type group specific nCPM	"{""Oocytes"": ""350.0"", ""Platelets"": ""337.4"", ""Spermatogenic cell types"": ""340.3""}"	
+CRBN	ENSG00000113851	RNA single cell type group specificity	"""Cell type enhanced"""	
+CRBN	ENSG00000113851	RNA single cell type group specificity score	null	
+CRBN	ENSG00000113851	RNA single cell type specific nCPM	"{""Late primary spermatocytes"": ""340.3"", ""Oocytes"": ""350.0"", ""Platelets"": ""337.4""}"	
+CRBN	ENSG00000113851	RNA single cell type specificity	"""Cell type enhanced"""	
+CRBN	ENSG00000113851	RNA single cell type specificity score	null	
+CRBN	ENSG00000113851	RNA single nuclei brain distribution	"""Detected in all"""	
+CRBN	ENSG00000113851	RNA single nuclei brain specific nCPM	null	
+CRBN	ENSG00000113851	RNA single nuclei brain specificity	"""Low cell type specificity"""	
+CRBN	ENSG00000113851	RNA single nuclei brain specificity score	null	
+CRBN	ENSG00000113851	RNA tissue cell type enrichment	"[""Spleen - Endothelial cells"", ""Testis - Early spermatids""]"	
+CRBN	ENSG00000113851	RNA tissue distribution	"""Detected in all"""	
+CRBN	ENSG00000113851	RNA tissue specific nTPM	null	
+CRBN	ENSG00000113851	RNA tissue specificity	"""Low tissue specificity"""	
+CRBN	ENSG00000113851	RNA tissue specificity score	null	
+CRBN	ENSG00000113851	Reliability (Mouse Brain)	null	
+CRBN	ENSG00000113851	Single cell expression cluster	"""Cluster 47: Platelets - Hemostasis"""	
+CRBN	ENSG00000113851	Subcellular main location	null	
+CSNK1A1	ENSG00000113712	Brain expression cluster	"""Cluster 55: Non-specific - Transcription"""	
+CSNK1A1	ENSG00000113712	Protein cell type distribution	"""Detected in all"""	
+CSNK1A1	ENSG00000113712	Protein cell type specific Intensity	"{""Keratinocytes"": ""60317133.6""}"	
+CSNK1A1	ENSG00000113712	Protein cell type specificity	"""Cell type enhanced"""	
+CSNK1A1	ENSG00000113712	Protein cell type specificity score	null	
+CSNK1A1	ENSG00000113712	RNA brain regional distribution	"""Detected in all"""	
+CSNK1A1	ENSG00000113712	RNA brain regional specific nTPM	null	
+CSNK1A1	ENSG00000113712	RNA brain regional specificity	"""Low region specificity"""	
+CSNK1A1	ENSG00000113712	RNA brain regional specificity score	null	
+CSNK1A1	ENSG00000113712	RNA mouse brain regional distribution	"""Detected in all"""	
+CSNK1A1	ENSG00000113712	RNA mouse brain regional specific nTPM	null	
+CSNK1A1	ENSG00000113712	RNA mouse brain regional specificity	"""Low region specificity"""	
+CSNK1A1	ENSG00000113712	RNA mouse brain regional specificity score	null	
+CSNK1A1	ENSG00000113712	RNA pig brain regional distribution	"""Detected in all"""	
+CSNK1A1	ENSG00000113712	RNA pig brain regional specific nTPM	null	
+CSNK1A1	ENSG00000113712	RNA pig brain regional specificity	"""Low region specificity"""	
+CSNK1A1	ENSG00000113712	RNA pig brain regional specificity score	null	
+CSNK1A1	ENSG00000113712	RNA single cell type distribution	"""Detected in all"""	
+CSNK1A1	ENSG00000113712	RNA single cell type group distribution	"""Detected in all"""	
+CSNK1A1	ENSG00000113712	RNA single cell type group specific nCPM	null	
+CSNK1A1	ENSG00000113712	RNA single cell type group specificity	"""Low cell type specificity"""	
+CSNK1A1	ENSG00000113712	RNA single cell type group specificity score	null	
+CSNK1A1	ENSG00000113712	RNA single cell type specific nCPM	null	
+CSNK1A1	ENSG00000113712	RNA single cell type specificity	"""Low cell type specificity"""	
+CSNK1A1	ENSG00000113712	RNA single cell type specificity score	null	
+CSNK1A1	ENSG00000113712	RNA single nuclei brain distribution	"""Detected in all"""	
+CSNK1A1	ENSG00000113712	RNA single nuclei brain specific nCPM	null	
+CSNK1A1	ENSG00000113712	RNA single nuclei brain specificity	"""Low cell type specificity"""	
+CSNK1A1	ENSG00000113712	RNA single nuclei brain specificity score	null	
+CSNK1A1	ENSG00000113712	RNA tissue cell type enrichment	"[""Adrenal gland - Adrenal cortex cells""]"	
+CSNK1A1	ENSG00000113712	RNA tissue distribution	"""Detected in all"""	
+CSNK1A1	ENSG00000113712	RNA tissue specific nTPM	null	
+CSNK1A1	ENSG00000113712	RNA tissue specificity	"""Low tissue specificity"""	
+CSNK1A1	ENSG00000113712	RNA tissue specificity score	null	
+CSNK1A1	ENSG00000113712	Reliability (Mouse Brain)	null	
+CSNK1A1	ENSG00000113712	Single cell expression cluster	"""Cluster 12: Endothelial cells - Angiogenesis & vascular homeostasis"""	
+CSNK1A1	ENSG00000113712	Subcellular main location	"[""Cytosol""]"	
+CUL4A	ENSG00000139842	Brain expression cluster	"""Cluster 12: Non-specific - Vasculature"""	
+CUL4A	ENSG00000139842	Protein cell type distribution	"""Detected in all"""	
+CUL4A	ENSG00000139842	Protein cell type specific Intensity	null	
+CUL4A	ENSG00000139842	Protein cell type specificity	"""Low cell type specificity"""	
+CUL4A	ENSG00000139842	Protein cell type specificity score	null	
+CUL4A	ENSG00000139842	RNA brain regional distribution	"""Detected in all"""	
+CUL4A	ENSG00000139842	RNA brain regional specific nTPM	null	
+CUL4A	ENSG00000139842	RNA brain regional specificity	"""Low region specificity"""	
+CUL4A	ENSG00000139842	RNA brain regional specificity score	null	
+CUL4A	ENSG00000139842	RNA mouse brain regional distribution	"""Detected in all"""	
+CUL4A	ENSG00000139842	RNA mouse brain regional specific nTPM	null	
+CUL4A	ENSG00000139842	RNA mouse brain regional specificity	"""Low region specificity"""	
+CUL4A	ENSG00000139842	RNA mouse brain regional specificity score	null	
+CUL4A	ENSG00000139842	RNA pig brain regional distribution	"""Detected in all"""	
+CUL4A	ENSG00000139842	RNA pig brain regional specific nTPM	null	
+CUL4A	ENSG00000139842	RNA pig brain regional specificity	"""Low region specificity"""	
+CUL4A	ENSG00000139842	RNA pig brain regional specificity score	null	
+CUL4A	ENSG00000139842	RNA single cell type distribution	"""Detected in all"""	
+CUL4A	ENSG00000139842	RNA single cell type group distribution	"""Detected in all"""	
+CUL4A	ENSG00000139842	RNA single cell type group specific nCPM	null	
+CUL4A	ENSG00000139842	RNA single cell type group specificity	"""Low cell type specificity"""	
+CUL4A	ENSG00000139842	RNA single cell type group specificity score	null	
+CUL4A	ENSG00000139842	RNA single cell type specific nCPM	null	
+CUL4A	ENSG00000139842	RNA single cell type specificity	"""Low cell type specificity"""	
+CUL4A	ENSG00000139842	RNA single cell type specificity score	null	
+CUL4A	ENSG00000139842	RNA single nuclei brain distribution	"""Detected in all"""	
+CUL4A	ENSG00000139842	RNA single nuclei brain specific nCPM	null	
+CUL4A	ENSG00000139842	RNA single nuclei brain specificity	"""Low cell type specificity"""	
+CUL4A	ENSG00000139842	RNA single nuclei brain specificity score	null	
+CUL4A	ENSG00000139842	RNA tissue cell type enrichment	"[""Testis - Spermatocytes"", ""Testis - Spermatogonia""]"	
+CUL4A	ENSG00000139842	RNA tissue distribution	"""Detected in all"""	
+CUL4A	ENSG00000139842	RNA tissue specific nTPM	"{""skeletal muscle"": ""160.8""}"	
+CUL4A	ENSG00000139842	RNA tissue specificity	"""Tissue enhanced"""	
+CUL4A	ENSG00000139842	RNA tissue specificity score	null	
+CUL4A	ENSG00000139842	Reliability (Mouse Brain)	null	
+CUL4A	ENSG00000139842	Single cell expression cluster	"""Cluster 17: Non-specific - RNA processing"""	
+CUL4A	ENSG00000139842	Subcellular main location	"[""Nucleoplasm""]"	
+DOT1L	ENSG00000104885	Brain expression cluster	"""Cluster 6: Non-specific - Immune response"""	
+DOT1L	ENSG00000104885	Protein cell type distribution	"""Detected in single"""	
+DOT1L	ENSG00000104885	Protein cell type specific Intensity	"{""Granulosa cells"": ""15925.2""}"	
+DOT1L	ENSG00000104885	Protein cell type specificity	"""Cell type enriched"""	
+DOT1L	ENSG00000104885	Protein cell type specificity score	"""159"""	
+DOT1L	ENSG00000104885	RNA brain regional distribution	"""Detected in all"""	
+DOT1L	ENSG00000104885	RNA brain regional specific nTPM	null	
+DOT1L	ENSG00000104885	RNA brain regional specificity	"""Low region specificity"""	
+DOT1L	ENSG00000104885	RNA brain regional specificity score	null	
+DOT1L	ENSG00000104885	RNA mouse brain regional distribution	"""Detected in all"""	
+DOT1L	ENSG00000104885	RNA mouse brain regional specific nTPM	null	
+DOT1L	ENSG00000104885	RNA mouse brain regional specificity	"""Low region specificity"""	
+DOT1L	ENSG00000104885	RNA mouse brain regional specificity score	null	
+DOT1L	ENSG00000104885	RNA pig brain regional distribution	"""Detected in all"""	
+DOT1L	ENSG00000104885	RNA pig brain regional specific nTPM	null	
+DOT1L	ENSG00000104885	RNA pig brain regional specificity	"""Low region specificity"""	
+DOT1L	ENSG00000104885	RNA pig brain regional specificity score	null	
+DOT1L	ENSG00000104885	RNA single cell type distribution	"""Detected in many"""	
+DOT1L	ENSG00000104885	RNA single cell type group distribution	"""Detected in many"""	
+DOT1L	ENSG00000104885	RNA single cell type group specific nCPM	null	
+DOT1L	ENSG00000104885	RNA single cell type group specificity	"""Low cell type specificity"""	
+DOT1L	ENSG00000104885	RNA single cell type group specificity score	null	
+DOT1L	ENSG00000104885	RNA single cell type specific nCPM	"{""Neutrophils"": ""140.2""}"	
+DOT1L	ENSG00000104885	RNA single cell type specificity	"""Cell type enhanced"""	
+DOT1L	ENSG00000104885	RNA single cell type specificity score	null	
+DOT1L	ENSG00000104885	RNA single nuclei brain distribution	"""Detected in all"""	
+DOT1L	ENSG00000104885	RNA single nuclei brain specific nCPM	null	
+DOT1L	ENSG00000104885	RNA single nuclei brain specificity	"""Low cell type specificity"""	
+DOT1L	ENSG00000104885	RNA single nuclei brain specificity score	null	
+DOT1L	ENSG00000104885	RNA tissue cell type enrichment	"[""Kidney - Macrophages"", ""Testis - Early spermatids""]"	
+DOT1L	ENSG00000104885	RNA tissue distribution	"""Detected in all"""	
+DOT1L	ENSG00000104885	RNA tissue specific nTPM	"{""testis"": ""49.2""}"	
+DOT1L	ENSG00000104885	RNA tissue specificity	"""Tissue enhanced"""	
+DOT1L	ENSG00000104885	RNA tissue specificity score	null	
+DOT1L	ENSG00000104885	Reliability (Mouse Brain)	null	
+DOT1L	ENSG00000104885	Single cell expression cluster	"""Cluster 31: Neutrophils - Chemotaxis & Apoptosis"""	
+DOT1L	ENSG00000104885	Subcellular main location	"[""Nucleoplasm""]"	
+DYRK1A	ENSG00000157540	Brain expression cluster	"""Cluster 31: Non-specific - Transcription"""	
+DYRK1A	ENSG00000157540	Protein cell type distribution	"""Detected in many"""	
+DYRK1A	ENSG00000157540	Protein cell type specific Intensity	null	
+DYRK1A	ENSG00000157540	Protein cell type specificity	"""Low cell type specificity"""	
+DYRK1A	ENSG00000157540	Protein cell type specificity score	null	
+DYRK1A	ENSG00000157540	RNA brain regional distribution	"""Detected in all"""	
+DYRK1A	ENSG00000157540	RNA brain regional specific nTPM	null	
+DYRK1A	ENSG00000157540	RNA brain regional specificity	"""Low region specificity"""	
+DYRK1A	ENSG00000157540	RNA brain regional specificity score	null	
+DYRK1A	ENSG00000157540	RNA mouse brain regional distribution	"""Detected in all"""	
+DYRK1A	ENSG00000157540	RNA mouse brain regional specific nTPM	null	
+DYRK1A	ENSG00000157540	RNA mouse brain regional specificity	"""Low region specificity"""	
+DYRK1A	ENSG00000157540	RNA mouse brain regional specificity score	null	
+DYRK1A	ENSG00000157540	RNA pig brain regional distribution	"""Detected in all"""	
+DYRK1A	ENSG00000157540	RNA pig brain regional specific nTPM	null	
+DYRK1A	ENSG00000157540	RNA pig brain regional specificity	"""Low region specificity"""	
+DYRK1A	ENSG00000157540	RNA pig brain regional specificity score	null	
+DYRK1A	ENSG00000157540	RNA single cell type distribution	"""Detected in all"""	
+DYRK1A	ENSG00000157540	RNA single cell type group distribution	"""Detected in all"""	
+DYRK1A	ENSG00000157540	RNA single cell type group specific nCPM	"{""Neutrophils"": ""1182.9""}"	
+DYRK1A	ENSG00000157540	RNA single cell type group specificity	"""Cell type enhanced"""	
+DYRK1A	ENSG00000157540	RNA single cell type group specificity score	null	
+DYRK1A	ENSG00000157540	RNA single cell type specific nCPM	"{""Neutrophils"": ""1182.9""}"	
+DYRK1A	ENSG00000157540	RNA single cell type specificity	"""Cell type enhanced"""	
+DYRK1A	ENSG00000157540	RNA single cell type specificity score	null	
+DYRK1A	ENSG00000157540	RNA single nuclei brain distribution	"""Detected in all"""	
+DYRK1A	ENSG00000157540	RNA single nuclei brain specific nCPM	null	
+DYRK1A	ENSG00000157540	RNA single nuclei brain specificity	"""Low cell type specificity"""	
+DYRK1A	ENSG00000157540	RNA single nuclei brain specificity score	null	
+DYRK1A	ENSG00000157540	RNA tissue cell type enrichment	"[""Spleen - Endothelial cells"", ""Testis - Spermatogonia""]"	
+DYRK1A	ENSG00000157540	RNA tissue distribution	"""Detected in all"""	
+DYRK1A	ENSG00000157540	RNA tissue specific nTPM	null	
+DYRK1A	ENSG00000157540	RNA tissue specificity	"""Low tissue specificity"""	
+DYRK1A	ENSG00000157540	RNA tissue specificity score	null	
+DYRK1A	ENSG00000157540	Reliability (Mouse Brain)	null	
+DYRK1A	ENSG00000157540	Single cell expression cluster	"""Cluster 29: Neutrophils - Innate immune cellular maintenance"""	
+DYRK1A	ENSG00000157540	Subcellular main location	"[""Nuclear speckles""]"	
+DYRK1B	ENSG00000105204	Brain expression cluster	"""Cluster 38: Sub-cortical - Mixed function"""	
+DYRK1B	ENSG00000105204	Protein cell type distribution	"""Detected in some"""	
+DYRK1B	ENSG00000105204	Protein cell type specific Intensity	"{""Skeletal myofibers"": ""999483.4""}"	
+DYRK1B	ENSG00000105204	Protein cell type specificity	"""Cell type enriched"""	
+DYRK1B	ENSG00000105204	Protein cell type specificity score	null	
+DYRK1B	ENSG00000105204	RNA brain regional distribution	"""Detected in all"""	
+DYRK1B	ENSG00000105204	RNA brain regional specific nTPM	null	
+DYRK1B	ENSG00000105204	RNA brain regional specificity	"""Low region specificity"""	
+DYRK1B	ENSG00000105204	RNA brain regional specificity score	null	
+DYRK1B	ENSG00000105204	RNA mouse brain regional distribution	"""Detected in all"""	
+DYRK1B	ENSG00000105204	RNA mouse brain regional specific nTPM	null	
+DYRK1B	ENSG00000105204	RNA mouse brain regional specificity	"""Low region specificity"""	
+DYRK1B	ENSG00000105204	RNA mouse brain regional specificity score	null	
+DYRK1B	ENSG00000105204	RNA pig brain regional distribution	"""Detected in all"""	
+DYRK1B	ENSG00000105204	RNA pig brain regional specific nTPM	null	
+DYRK1B	ENSG00000105204	RNA pig brain regional specificity	"""Low region specificity"""	
+DYRK1B	ENSG00000105204	RNA pig brain regional specificity score	null	
+DYRK1B	ENSG00000105204	RNA single cell type distribution	"""Detected in some"""	
+DYRK1B	ENSG00000105204	RNA single cell type group distribution	"""Detected in some"""	
+DYRK1B	ENSG00000105204	RNA single cell type group specific nCPM	"{""Ciliated cells"": ""18.3"", ""Ductal cells"": ""7.1"", ""Glial cells"": ""8.4"", ""Neuronal cells"": ""10.2"", ""Renal nephron cells"": ""15.2"", ""Spermatogenic cell types"": ""13.8""}"	
+DYRK1B	ENSG00000105204	RNA single cell type group specificity	"""Cell type enhanced"""	
+DYRK1B	ENSG00000105204	RNA single cell type group specificity score	null	
+DYRK1B	ENSG00000105204	RNA single cell type specific nCPM	"{""Astrocytes"": ""8.4"", ""Bergmann glia"": ""6.8"", ""Brain excitatory neurons"": ""8.3"", ""Brain inhibitory neurons"": ""10.1"", ""Choroid plexus epithelial cells"": ""17.1"", ""Distal convoluted tubule cells"": ""8.9"", ""Ependymal cells"": ""18.3"", ""Late spermatids"": ""13.8"", ""Loop of henle epithelial cells"": ""8.9"", ""Oligodendrocyte progenitor cells"": ""8.4"", ""Oligodendrocytes"": ""8.4"", ""Other brain neurons"": ""10.2"", ""Papillary tip epithelial cells"": ""6.4"", ""Podocytes"": ""10.8"", ""Proximal tubule cells"": ""15.2"", ""Renal collecting duct principal cells"": ""7.1"", ""Renal connecting tubule cells"": ""6.8""}"	
+DYRK1B	ENSG00000105204	RNA single cell type specificity	"""Cell type enhanced"""	
+DYRK1B	ENSG00000105204	RNA single cell type specificity score	null	
+DYRK1B	ENSG00000105204	RNA single nuclei brain distribution	"""Detected in all"""	
+DYRK1B	ENSG00000105204	RNA single nuclei brain specific nCPM	null	
+DYRK1B	ENSG00000105204	RNA single nuclei brain specificity	"""Low cell type specificity"""	
+DYRK1B	ENSG00000105204	RNA single nuclei brain specificity score	null	
+DYRK1B	ENSG00000105204	RNA tissue cell type enrichment	"[""Heart muscle - Cardiomyocytes"", ""Skeletal muscle - Skeletal myocytes"", ""Testis - Late spermatids""]"	
+DYRK1B	ENSG00000105204	RNA tissue distribution	"""Detected in all"""	
+DYRK1B	ENSG00000105204	RNA tissue specific nTPM	"{""skeletal muscle"": ""124.8"", ""testis"": ""79.9""}"	
+DYRK1B	ENSG00000105204	RNA tissue specificity	"""Tissue enhanced"""	
+DYRK1B	ENSG00000105204	RNA tissue specificity score	null	
+DYRK1B	ENSG00000105204	Reliability (Mouse Brain)	null	
+DYRK1B	ENSG00000105204	Single cell expression cluster	"""Cluster 98: Neurons - Neurotransmission & signaling"""	
+DYRK1B	ENSG00000105204	Subcellular main location	"[""Nucleoplasm""]"	
+FKBP1A	ENSG00000088832	Brain expression cluster	"""Cluster 33: Neurons - Mixed function"""	
+FKBP1A	ENSG00000088832	Protein cell type distribution	"""Detected in all"""	
+FKBP1A	ENSG00000088832	Protein cell type specific Intensity	"{""Skeletal myofibers"": ""62697813.1""}"	
+FKBP1A	ENSG00000088832	Protein cell type specificity	"""Cell type enhanced"""	
+FKBP1A	ENSG00000088832	Protein cell type specificity score	null	
+FKBP1A	ENSG00000088832	RNA brain regional distribution	"""Detected in all"""	
+FKBP1A	ENSG00000088832	RNA brain regional specific nTPM	null	
+FKBP1A	ENSG00000088832	RNA brain regional specificity	"""Low region specificity"""	
+FKBP1A	ENSG00000088832	RNA brain regional specificity score	null	
+FKBP1A	ENSG00000088832	RNA mouse brain regional distribution	"""Detected in all"""	
+FKBP1A	ENSG00000088832	RNA mouse brain regional specific nTPM	null	
+FKBP1A	ENSG00000088832	RNA mouse brain regional specificity	"""Low region specificity"""	
+FKBP1A	ENSG00000088832	RNA mouse brain regional specificity score	null	
+FKBP1A	ENSG00000088832	RNA pig brain regional distribution	null	
+FKBP1A	ENSG00000088832	RNA pig brain regional specific nTPM	null	
+FKBP1A	ENSG00000088832	RNA pig brain regional specificity	null	
+FKBP1A	ENSG00000088832	RNA pig brain regional specificity score	null	
+FKBP1A	ENSG00000088832	RNA single cell type distribution	"""Detected in many"""	
+FKBP1A	ENSG00000088832	RNA single cell type group distribution	"""Detected in many"""	
+FKBP1A	ENSG00000088832	RNA single cell type group specific nCPM	"{""Apical squamous epithelial cells"": ""37.0""}"	
+FKBP1A	ENSG00000088832	RNA single cell type group specificity	"""Cell type enhanced"""	
+FKBP1A	ENSG00000088832	RNA single cell type group specificity score	null	
+FKBP1A	ENSG00000088832	RNA single cell type specific nCPM	"{""Esophageal apical cells"": ""37.0"", ""Extravillous trophoblasts"": ""27.5"", ""Hofbauer cells"": ""24.7"", ""Late primary spermatocytes"": ""25.6"", ""Late spermatids"": ""30.3"", ""Megakaryocytes"": ""30.9"", ""Platelets"": ""33.8""}"	
+FKBP1A	ENSG00000088832	RNA single cell type specificity	"""Cell type enhanced"""	
+FKBP1A	ENSG00000088832	RNA single cell type specificity score	null	
+FKBP1A	ENSG00000088832	RNA single nuclei brain distribution	"""Detected in many"""	
+FKBP1A	ENSG00000088832	RNA single nuclei brain specific nCPM	null	
+FKBP1A	ENSG00000088832	RNA single nuclei brain specificity	"""Low cell type specificity"""	
+FKBP1A	ENSG00000088832	RNA single nuclei brain specificity score	null	
+FKBP1A	ENSG00000088832	RNA tissue cell type enrichment	"[""Adrenal gland - Adrenal cortex cells"", ""Breast - Endothelial cells"", ""Colon - Endothelial cells"", ""Kidney - Endothelial cells"", ""Skeletal muscle - Endothelial cells""]"	
+FKBP1A	ENSG00000088832	RNA tissue distribution	"""Detected in all"""	
+FKBP1A	ENSG00000088832	RNA tissue specific nTPM	null	
+FKBP1A	ENSG00000088832	RNA tissue specificity	"""Low tissue specificity"""	
+FKBP1A	ENSG00000088832	RNA tissue specificity score	null	
+FKBP1A	ENSG00000088832	Reliability (Mouse Brain)	null	
+FKBP1A	ENSG00000088832	Single cell expression cluster	"""Cluster 45: Colonocytes & Enterocytes - Gastrointestinal absorption & barrier"""	
+FKBP1A	ENSG00000088832	Subcellular main location	"[""Golgi apparatus""]"	
+GSPT1	ENSG00000103342	Brain expression cluster	"""Cluster 28: Oligodendrocytes - Mixed function"""	
+GSPT1	ENSG00000103342	Protein cell type distribution	"""Detected in all"""	
+GSPT1	ENSG00000103342	Protein cell type specific Intensity	null	
+GSPT1	ENSG00000103342	Protein cell type specificity	"""Low cell type specificity"""	
+GSPT1	ENSG00000103342	Protein cell type specificity score	null	
+GSPT1	ENSG00000103342	RNA brain regional distribution	"""Detected in all"""	
+GSPT1	ENSG00000103342	RNA brain regional specific nTPM	null	
+GSPT1	ENSG00000103342	RNA brain regional specificity	"""Low region specificity"""	
+GSPT1	ENSG00000103342	RNA brain regional specificity score	null	
+GSPT1	ENSG00000103342	RNA mouse brain regional distribution	"""Detected in all"""	
+GSPT1	ENSG00000103342	RNA mouse brain regional specific nTPM	null	
+GSPT1	ENSG00000103342	RNA mouse brain regional specificity	"""Low region specificity"""	
+GSPT1	ENSG00000103342	RNA mouse brain regional specificity score	null	
+GSPT1	ENSG00000103342	RNA pig brain regional distribution	"""Detected in all"""	
+GSPT1	ENSG00000103342	RNA pig brain regional specific nTPM	null	
+GSPT1	ENSG00000103342	RNA pig brain regional specificity	"""Low region specificity"""	
+GSPT1	ENSG00000103342	RNA pig brain regional specificity score	null	
+GSPT1	ENSG00000103342	RNA single cell type distribution	"""Detected in many"""	
+GSPT1	ENSG00000103342	RNA single cell type group distribution	"""Detected in all"""	
+GSPT1	ENSG00000103342	RNA single cell type group specific nCPM	null	
+GSPT1	ENSG00000103342	RNA single cell type group specificity	"""Low cell type specificity"""	
+GSPT1	ENSG00000103342	RNA single cell type group specificity score	null	
+GSPT1	ENSG00000103342	RNA single cell type specific nCPM	null	
+GSPT1	ENSG00000103342	RNA single cell type specificity	"""Low cell type specificity"""	
+GSPT1	ENSG00000103342	RNA single cell type specificity score	null	
+GSPT1	ENSG00000103342	RNA single nuclei brain distribution	"""Detected in all"""	
+GSPT1	ENSG00000103342	RNA single nuclei brain specific nCPM	null	
+GSPT1	ENSG00000103342	RNA single nuclei brain specificity	"""Low cell type specificity"""	
+GSPT1	ENSG00000103342	RNA single nuclei brain specificity score	null	
+GSPT1	ENSG00000103342	RNA tissue cell type enrichment	"[""Testis - Spermatocytes""]"	
+GSPT1	ENSG00000103342	RNA tissue distribution	"""Detected in all"""	
+GSPT1	ENSG00000103342	RNA tissue specific nTPM	null	
+GSPT1	ENSG00000103342	RNA tissue specificity	"""Low tissue specificity"""	
+GSPT1	ENSG00000103342	RNA tissue specificity score	null	
+GSPT1	ENSG00000103342	Reliability (Mouse Brain)	null	
+GSPT1	ENSG00000103342	Single cell expression cluster	"""Cluster 9: T-cells - Adaptive immunity: Regulation"""	
+GSPT1	ENSG00000103342	Subcellular main location	"[""Cytosol""]"	
+IKZF1	ENSG00000185811	Brain expression cluster	"""Cluster 20: Macrophages & Microglia - Immune response"""	
+IKZF1	ENSG00000185811	Protein cell type distribution	"""Detected in some"""	
+IKZF1	ENSG00000185811	Protein cell type specific Intensity	"{""B-cells"": ""16176454.8"", ""Neutrophils"": ""32502508.2"", ""T-cells"": ""16109228.2""}"	
+IKZF1	ENSG00000185811	Protein cell type specificity	"""Group enriched"""	
+IKZF1	ENSG00000185811	Protein cell type specificity score	null	
+IKZF1	ENSG00000185811	RNA brain regional distribution	"""Detected in all"""	
+IKZF1	ENSG00000185811	RNA brain regional specific nTPM	null	
+IKZF1	ENSG00000185811	RNA brain regional specificity	"""Low region specificity"""	
+IKZF1	ENSG00000185811	RNA brain regional specificity score	null	
+IKZF1	ENSG00000185811	RNA mouse brain regional distribution	"""Detected in many"""	
+IKZF1	ENSG00000185811	RNA mouse brain regional specific nTPM	null	
+IKZF1	ENSG00000185811	RNA mouse brain regional specificity	"""Low region specificity"""	
+IKZF1	ENSG00000185811	RNA mouse brain regional specificity score	null	
+IKZF1	ENSG00000185811	RNA pig brain regional distribution	"""Detected in all"""	
+IKZF1	ENSG00000185811	RNA pig brain regional specific nTPM	null	
+IKZF1	ENSG00000185811	RNA pig brain regional specificity	"""Low region specificity"""	
+IKZF1	ENSG00000185811	RNA pig brain regional specificity score	null	
+IKZF1	ENSG00000185811	RNA single cell type distribution	"""Detected in many"""	
+IKZF1	ENSG00000185811	RNA single cell type group distribution	"""Detected in many"""	
+IKZF1	ENSG00000185811	RNA single cell type group specific nCPM	"{""NK-cells"": ""596.0"", ""Neutrophils"": ""1672.8"", ""T-cells"": ""747.8""}"	
+IKZF1	ENSG00000185811	RNA single cell type group specificity	"""Cell type enhanced"""	
+IKZF1	ENSG00000185811	RNA single cell type group specificity score	null	
+IKZF1	ENSG00000185811	RNA single cell type specific nCPM	"{""B-cells"": ""398.1"", ""Erythrocyte progenitors"": ""256.6"", ""Hematopoietic stem cells"": ""476.0"", ""Innate lymphoid cells"": ""478.1"", ""Mast cells"": ""347.8"", ""Megakaryocyte-Erythroid progenitors"": ""281.4"", ""Microglia"": ""498.3"", ""Monocyte progenitors"": ""380.4"", ""NK-cells"": ""596.0"", ""Neutrophil progenitors"": ""1672.8"", ""Neutrophils"": ""694.8"", ""Plasma cells"": ""261.3"", ""T-cells"": ""675.2"", ""Thymocytes"": ""747.8"", ""monocytes"": ""257.2"", ""pDCs"": ""352.0""}"	
+IKZF1	ENSG00000185811	RNA single cell type specificity	"""Cell type enhanced"""	
+IKZF1	ENSG00000185811	RNA single cell type specificity score	null	
+IKZF1	ENSG00000185811	RNA single nuclei brain distribution	"""Detected in many"""	
+IKZF1	ENSG00000185811	RNA single nuclei brain specific nCPM	"{""central nervous system macrophage"": ""628.5"", ""leukocyte"": ""1007.4""}"	
+IKZF1	ENSG00000185811	RNA single nuclei brain specificity	"""Group enriched"""	
+IKZF1	ENSG00000185811	RNA single nuclei brain specificity score	"""72"""	
+IKZF1	ENSG00000185811	RNA tissue cell type enrichment	"[""Adipose visceral - T-cells"", ""Skeletal muscle - Macrophages"", ""Stomach - T-cells""]"	
+IKZF1	ENSG00000185811	RNA tissue distribution	"""Detected in many"""	
+IKZF1	ENSG00000185811	RNA tissue specific nTPM	"{""bone marrow"": ""160.4"", ""lymphoid tissue"": ""99.0""}"	
+IKZF1	ENSG00000185811	RNA tissue specificity	"""Group enriched"""	
+IKZF1	ENSG00000185811	RNA tissue specificity score	"""8"""	
+IKZF1	ENSG00000185811	Reliability (Mouse Brain)	null	
+IKZF1	ENSG00000185811	Single cell expression cluster	"""Cluster 37: Neutrophil progenitors - Granulopoiesis"""	
+IKZF1	ENSG00000185811	Subcellular main location	"[""Nucleoplasm""]"	
+IKZF3	ENSG00000161405	Brain expression cluster	"""Cluster 48: Non-specific - Mixed function"""	
+IKZF3	ENSG00000161405	Protein cell type distribution	"""Detected in some"""	
+IKZF3	ENSG00000161405	Protein cell type specific Intensity	"{""B-cells"": ""10963563.5"", ""T-cells"": ""7998358.2""}"	
+IKZF3	ENSG00000161405	Protein cell type specificity	"""Group enriched"""	
+IKZF3	ENSG00000161405	Protein cell type specificity score	null	
+IKZF3	ENSG00000161405	RNA brain regional distribution	"""Detected in all"""	
+IKZF3	ENSG00000161405	RNA brain regional specific nTPM	null	
+IKZF3	ENSG00000161405	RNA brain regional specificity	"""Low region specificity"""	
+IKZF3	ENSG00000161405	RNA brain regional specificity score	null	
+IKZF3	ENSG00000161405	RNA mouse brain regional distribution	"""Not detected"""	
+IKZF3	ENSG00000161405	RNA mouse brain regional specific nTPM	null	
+IKZF3	ENSG00000161405	RNA mouse brain regional specificity	"""Not detected"""	
+IKZF3	ENSG00000161405	RNA mouse brain regional specificity score	null	
+IKZF3	ENSG00000161405	RNA pig brain regional distribution	"""Detected in many"""	
+IKZF3	ENSG00000161405	RNA pig brain regional specific nTPM	null	
+IKZF3	ENSG00000161405	RNA pig brain regional specificity	"""Low region specificity"""	
+IKZF3	ENSG00000161405	RNA pig brain regional specificity score	null	
+IKZF3	ENSG00000161405	RNA single cell type distribution	"""Detected in many"""	
+IKZF3	ENSG00000161405	RNA single cell type group distribution	"""Detected in many"""	
+IKZF3	ENSG00000161405	RNA single cell type group specific nCPM	"{""B-cells"": ""402.3"", ""Mast cells"": ""165.0"", ""NK-cells"": ""309.7"", ""Plasma cells"": ""207.3"", ""T-cells"": ""314.3""}"	
+IKZF3	ENSG00000161405	RNA single cell type group specificity	"""Group enriched"""	
+IKZF3	ENSG00000161405	RNA single cell type group specificity score	"""7"""	
+IKZF3	ENSG00000161405	RNA single cell type specific nCPM	"{""B-cells"": ""402.3"", ""Mast cells"": ""165.0"", ""NK-cells"": ""309.7"", ""Plasma cells"": ""207.3"", ""T-cells"": ""314.3""}"	
+IKZF3	ENSG00000161405	RNA single cell type specificity	"""Group enriched"""	
+IKZF3	ENSG00000161405	RNA single cell type specificity score	"""7"""	
+IKZF3	ENSG00000161405	RNA single nuclei brain distribution	"""Detected in some"""	
+IKZF3	ENSG00000161405	RNA single nuclei brain specific nCPM	"{""leukocyte"": ""417.8""}"	
+IKZF3	ENSG00000161405	RNA single nuclei brain specificity	"""Cell type enriched"""	
+IKZF3	ENSG00000161405	RNA single nuclei brain specificity score	"""48"""	
+IKZF3	ENSG00000161405	RNA tissue cell type enrichment	"[""Adipose subcutaneous - T-cells"", ""Adrenal gland - T-cells"", ""Colon - T-cells"", ""Heart muscle - T-cells"", ""Lung - T-cells"", ""Pituitary gland - T-cells"", ""Prostate - T-cells"", ""Skin - T-cells"", ""Spleen - B-cells (Spleen)"", ""Stomach - T-cells"", ""Testis - Early spermatids"", ""Testis - Late spermatids""]"	
+IKZF3	ENSG00000161405	RNA tissue distribution	"""Detected in many"""	
+IKZF3	ENSG00000161405	RNA tissue specific nTPM	"{""intestine"": ""11.1"", ""lymphoid tissue"": ""38.4""}"	
+IKZF3	ENSG00000161405	RNA tissue specificity	"""Group enriched"""	
+IKZF3	ENSG00000161405	RNA tissue specificity score	"""4"""	
+IKZF3	ENSG00000161405	Reliability (Mouse Brain)	null	
+IKZF3	ENSG00000161405	Single cell expression cluster	"""Cluster 87: B-cells - Adaptive immunity: Humoral response"""	
+IKZF3	ENSG00000161405	Subcellular main location	"[""Nucleoplasm""]"	
+JAK2	ENSG00000096968	Brain expression cluster	"""Cluster 53: Neurons - Mixed function"""	
+JAK2	ENSG00000096968	Protein cell type distribution	"""Detected in many"""	
+JAK2	ENSG00000096968	Protein cell type specific Intensity	"{""Neutrophils"": ""984544.9"", ""Oocytes"": ""1053578.9""}"	
+JAK2	ENSG00000096968	Protein cell type specificity	"""Cell type enhanced"""	
+JAK2	ENSG00000096968	Protein cell type specificity score	null	
+JAK2	ENSG00000096968	RNA brain regional distribution	"""Detected in all"""	
+JAK2	ENSG00000096968	RNA brain regional specific nTPM	null	
+JAK2	ENSG00000096968	RNA brain regional specificity	"""Low region specificity"""	
+JAK2	ENSG00000096968	RNA brain regional specificity score	null	
+JAK2	ENSG00000096968	RNA mouse brain regional distribution	"""Detected in all"""	
+JAK2	ENSG00000096968	RNA mouse brain regional specific nTPM	null	
+JAK2	ENSG00000096968	RNA mouse brain regional specificity	"""Low region specificity"""	
+JAK2	ENSG00000096968	RNA mouse brain regional specificity score	null	
+JAK2	ENSG00000096968	RNA pig brain regional distribution	"""Detected in all"""	
+JAK2	ENSG00000096968	RNA pig brain regional specific nTPM	null	
+JAK2	ENSG00000096968	RNA pig brain regional specificity	"""Low region specificity"""	
+JAK2	ENSG00000096968	RNA pig brain regional specificity score	null	
+JAK2	ENSG00000096968	RNA single cell type distribution	"""Detected in all"""	
+JAK2	ENSG00000096968	RNA single cell type group distribution	"""Detected in all"""	
+JAK2	ENSG00000096968	RNA single cell type group specific nCPM	"{""Neutrophils"": ""666.3""}"	
+JAK2	ENSG00000096968	RNA single cell type group specificity	"""Cell type enhanced"""	
+JAK2	ENSG00000096968	RNA single cell type group specificity score	null	
+JAK2	ENSG00000096968	RNA single cell type specific nCPM	"{""Microglia"": ""371.0"", ""Myonuclei"": ""421.3"", ""Neutrophil progenitors"": ""438.8"", ""Neutrophils"": ""666.3""}"	
+JAK2	ENSG00000096968	RNA single cell type specificity	"""Cell type enhanced"""	
+JAK2	ENSG00000096968	RNA single cell type specificity score	null	
+JAK2	ENSG00000096968	RNA single nuclei brain distribution	"""Detected in all"""	
+JAK2	ENSG00000096968	RNA single nuclei brain specific nCPM	null	
+JAK2	ENSG00000096968	RNA single nuclei brain specificity	"""Low cell type specificity"""	
+JAK2	ENSG00000096968	RNA single nuclei brain specificity score	null	
+JAK2	ENSG00000096968	RNA tissue cell type enrichment	null	
+JAK2	ENSG00000096968	RNA tissue distribution	"""Detected in all"""	
+JAK2	ENSG00000096968	RNA tissue specific nTPM	null	
+JAK2	ENSG00000096968	RNA tissue specificity	"""Low tissue specificity"""	
+JAK2	ENSG00000096968	RNA tissue specificity score	null	
+JAK2	ENSG00000096968	Reliability (Mouse Brain)	null	
+JAK2	ENSG00000096968	Single cell expression cluster	"""Cluster 48: Neutrophils - Phagocytosis & degranulation"""	
+JAK2	ENSG00000096968	Subcellular main location	"[""Nucleoplasm""]"	
+MAOA	ENSG00000189221	Brain expression cluster	"""Cluster 41: Monoamines - Neurotransmitter signalling"""	
+MAOA	ENSG00000189221	Protein cell type distribution	"""Detected in all"""	
+MAOA	ENSG00000189221	Protein cell type specific Intensity	"{""Alveolar cell types"": ""355796198.5""}"	
+MAOA	ENSG00000189221	Protein cell type specificity	"""Cell type enhanced"""	
+MAOA	ENSG00000189221	Protein cell type specificity score	null	
+MAOA	ENSG00000189221	RNA brain regional distribution	"""Detected in all"""	
+MAOA	ENSG00000189221	RNA brain regional specific nTPM	null	
+MAOA	ENSG00000189221	RNA brain regional specificity	"""Low region specificity"""	
+MAOA	ENSG00000189221	RNA brain regional specificity score	null	
+MAOA	ENSG00000189221	RNA mouse brain regional distribution	"""Detected in all"""	
+MAOA	ENSG00000189221	RNA mouse brain regional specific nTPM	null	
+MAOA	ENSG00000189221	RNA mouse brain regional specificity	"""Low region specificity"""	
+MAOA	ENSG00000189221	RNA mouse brain regional specificity score	null	
+MAOA	ENSG00000189221	RNA pig brain regional distribution	"""Detected in all"""	
+MAOA	ENSG00000189221	RNA pig brain regional specific nTPM	null	
+MAOA	ENSG00000189221	RNA pig brain regional specificity	"""Low region specificity"""	
+MAOA	ENSG00000189221	RNA pig brain regional specificity score	null	
+MAOA	ENSG00000189221	RNA single cell type distribution	"""Detected in many"""	
+MAOA	ENSG00000189221	RNA single cell type group distribution	"""Detected in all"""	
+MAOA	ENSG00000189221	RNA single cell type group specific nCPM	"{""Enterocytes"": ""920.0""}"	
+MAOA	ENSG00000189221	RNA single cell type group specificity	"""Cell type enhanced"""	
+MAOA	ENSG00000189221	RNA single cell type group specificity score	null	
+MAOA	ENSG00000189221	RNA single cell type specific nCPM	"{""Adipocytes"": ""378.3"", ""Alveolar cells type 2"": ""420.3"", ""Basal prostatic cells"": ""402.5"", ""Enteric transient amplifying cells"": ""357.0"", ""Enterocytes"": ""920.0"", ""Medullary thymic epithelial cells"": ""355.2"", ""Syncytiotrophoblasts"": ""391.3""}"	
+MAOA	ENSG00000189221	RNA single cell type specificity	"""Cell type enhanced"""	
+MAOA	ENSG00000189221	RNA single cell type specificity score	null	
+MAOA	ENSG00000189221	RNA single nuclei brain distribution	"""Detected in many"""	
+MAOA	ENSG00000189221	RNA single nuclei brain specific nCPM	"{""endothelial cell"": ""246.7"", ""pericyte"": ""107.4""}"	
+MAOA	ENSG00000189221	RNA single nuclei brain specificity	"""Cell type enhanced"""	
+MAOA	ENSG00000189221	RNA single nuclei brain specificity score	null	
+MAOA	ENSG00000189221	RNA tissue cell type enrichment	"[""Adipose subcutaneous - Adipocytes (Subcutaneous)"", ""Adipose visceral - Adipocytes (Visceral)"", ""Adrenal gland - Adrenal cortex cells"", ""Breast - Adipocytes (Breast)"", ""Liver - Hepatocytes"", ""Spleen - Fibroblasts_2"", ""Thyroid gland - Thyroid glandular cells""]"	
+MAOA	ENSG00000189221	RNA tissue distribution	"""Detected in many"""	
+MAOA	ENSG00000189221	RNA tissue specific nTPM	"{""intestine"": ""206.3""}"	
+MAOA	ENSG00000189221	RNA tissue specificity	"""Tissue enhanced"""	
+MAOA	ENSG00000189221	RNA tissue specificity score	null	
+MAOA	ENSG00000189221	Reliability (Mouse Brain)	null	
+MAOA	ENSG00000189221	Single cell expression cluster	"""Cluster 1: Enterocytes - Absorption and Digestion"""	
+MAOA	ENSG00000189221	Subcellular main location	"[""Mitochondria""]"	
+MAOB	ENSG00000069535	Brain expression cluster	"""Cluster 46: Brainstem - Mixed function"""	
+MAOB	ENSG00000069535	Protein cell type distribution	"""Detected in all"""	
+MAOB	ENSG00000069535	Protein cell type specific Intensity	"{""Large ducts"": ""271034200.1"", ""Proximal tubules"": ""252641886.6""}"	
+MAOB	ENSG00000069535	Protein cell type specificity	"""Cell type enhanced"""	
+MAOB	ENSG00000069535	Protein cell type specificity score	null	
+MAOB	ENSG00000069535	RNA brain regional distribution	"""Detected in all"""	
+MAOB	ENSG00000069535	RNA brain regional specific nTPM	null	
+MAOB	ENSG00000069535	RNA brain regional specificity	"""Low region specificity"""	
+MAOB	ENSG00000069535	RNA brain regional specificity score	null	
+MAOB	ENSG00000069535	RNA mouse brain regional distribution	"""Detected in all"""	
+MAOB	ENSG00000069535	RNA mouse brain regional specific nTPM	null	
+MAOB	ENSG00000069535	RNA mouse brain regional specificity	"""Low region specificity"""	
+MAOB	ENSG00000069535	RNA mouse brain regional specificity score	null	
+MAOB	ENSG00000069535	RNA pig brain regional distribution	"""Detected in all"""	
+MAOB	ENSG00000069535	RNA pig brain regional specific nTPM	null	
+MAOB	ENSG00000069535	RNA pig brain regional specificity	"""Low region specificity"""	
+MAOB	ENSG00000069535	RNA pig brain regional specificity score	null	
+MAOB	ENSG00000069535	RNA single cell type distribution	"""Detected in many"""	
+MAOB	ENSG00000069535	RNA single cell type group distribution	"""Detected in many"""	
+MAOB	ENSG00000069535	RNA single cell type group specific nCPM	"{""Hepatocytes"": ""394.4"", ""Myocytes"": ""481.1"", ""Stromal cells"": ""474.1""}"	
+MAOB	ENSG00000069535	RNA single cell type group specificity	"""Cell type enhanced"""	
+MAOB	ENSG00000069535	RNA single cell type group specificity score	null	
+MAOB	ENSG00000069535	RNA single cell type specific nCPM	"{""Adipocytes"": ""169.4"", ""Decidual stromal cells"": ""474.1"", ""Enterocytes"": ""249.0"", ""Ependymal cells"": ""250.7"", ""Hepatocytes"": ""394.4"", ""Mast cells"": ""276.5"", ""Myonuclei"": ""481.1"", ""Neuroendocrine cells"": ""242.5"", ""Other brain neurons"": ""174.2"", ""Ovarian stromal cells"": ""241.8"", ""Smooth muscle cells"": ""174.6""}"	
+MAOB	ENSG00000069535	RNA single cell type specificity	"""Cell type enhanced"""	
+MAOB	ENSG00000069535	RNA single cell type specificity score	null	
+MAOB	ENSG00000069535	RNA single nuclei brain distribution	"""Detected in all"""	
+MAOB	ENSG00000069535	RNA single nuclei brain specific nCPM	"{""ependymal cell"": ""315.8""}"	
+MAOB	ENSG00000069535	RNA single nuclei brain specificity	"""Cell type enhanced"""	
+MAOB	ENSG00000069535	RNA single nuclei brain specificity score	null	
+MAOB	ENSG00000069535	RNA tissue cell type enrichment	"[""Adipose subcutaneous - Adipocytes (Subcutaneous)"", ""Adipose visceral - Adipocytes (Visceral)"", ""Adrenal gland - Adrenal cortex cells"", ""Heart muscle - Cardiomyocytes"", ""Kidney - Proximal tubular cells"", ""Liver - Hepatocytes"", ""Liver - Hepatocytes"", ""Lung - Fibroblasts_1"", ""Prostate - Smooth muscle cells"", ""Spleen - Smooth muscle cells"", ""Thyroid gland - Fibroblasts""]"	
+MAOB	ENSG00000069535	RNA tissue distribution	"""Detected in many"""	
+MAOB	ENSG00000069535	RNA tissue specific nTPM	"{""liver"": ""296.9""}"	
+MAOB	ENSG00000069535	RNA tissue specificity	"""Tissue enhanced"""	
+MAOB	ENSG00000069535	RNA tissue specificity score	null	
+MAOB	ENSG00000069535	Reliability (Mouse Brain)	null	
+MAOB	ENSG00000069535	Single cell expression cluster	"""Cluster 94: Gonadal somatic cells - Mixed function"""	
+MAOB	ENSG00000069535	Subcellular main location	null	
+MTOR	ENSG00000198793	Brain expression cluster	"""Cluster 38: Sub-cortical - Mixed function"""	
+MTOR	ENSG00000198793	Protein cell type distribution	"""Detected in all"""	
+MTOR	ENSG00000198793	Protein cell type specific Intensity	null	
+MTOR	ENSG00000198793	Protein cell type specificity	"""Low cell type specificity"""	
+MTOR	ENSG00000198793	Protein cell type specificity score	null	
+MTOR	ENSG00000198793	RNA brain regional distribution	"""Detected in all"""	
+MTOR	ENSG00000198793	RNA brain regional specific nTPM	null	
+MTOR	ENSG00000198793	RNA brain regional specificity	"""Low region specificity"""	
+MTOR	ENSG00000198793	RNA brain regional specificity score	null	
+MTOR	ENSG00000198793	RNA mouse brain regional distribution	"""Detected in all"""	
+MTOR	ENSG00000198793	RNA mouse brain regional specific nTPM	null	
+MTOR	ENSG00000198793	RNA mouse brain regional specificity	"""Low region specificity"""	
+MTOR	ENSG00000198793	RNA mouse brain regional specificity score	null	
+MTOR	ENSG00000198793	RNA pig brain regional distribution	"""Detected in all"""	
+MTOR	ENSG00000198793	RNA pig brain regional specific nTPM	null	
+MTOR	ENSG00000198793	RNA pig brain regional specificity	"""Low region specificity"""	
+MTOR	ENSG00000198793	RNA pig brain regional specificity score	null	
+MTOR	ENSG00000198793	RNA single cell type distribution	"""Detected in all"""	
+MTOR	ENSG00000198793	RNA single cell type group distribution	"""Detected in all"""	
+MTOR	ENSG00000198793	RNA single cell type group specific nCPM	null	
+MTOR	ENSG00000198793	RNA single cell type group specificity	"""Low cell type specificity"""	
+MTOR	ENSG00000198793	RNA single cell type group specificity score	null	
+MTOR	ENSG00000198793	RNA single cell type specific nCPM	null	
+MTOR	ENSG00000198793	RNA single cell type specificity	"""Low cell type specificity"""	
+MTOR	ENSG00000198793	RNA single cell type specificity score	null	
+MTOR	ENSG00000198793	RNA single nuclei brain distribution	"""Detected in all"""	
+MTOR	ENSG00000198793	RNA single nuclei brain specific nCPM	null	
+MTOR	ENSG00000198793	RNA single nuclei brain specificity	"""Low cell type specificity"""	
+MTOR	ENSG00000198793	RNA single nuclei brain specificity score	null	
+MTOR	ENSG00000198793	RNA tissue cell type enrichment	"[""Testis - Early spermatids"", ""Testis - Spermatocytes""]"	
+MTOR	ENSG00000198793	RNA tissue distribution	"""Detected in all"""	
+MTOR	ENSG00000198793	RNA tissue specific nTPM	null	
+MTOR	ENSG00000198793	RNA tissue specificity	"""Low tissue specificity"""	
+MTOR	ENSG00000198793	RNA tissue specificity score	null	
+MTOR	ENSG00000198793	Reliability (Mouse Brain)	null	
+MTOR	ENSG00000198793	Single cell expression cluster	"""Cluster 7: Non-specific - Transcription"""	
+MTOR	ENSG00000198793	Subcellular main location	"[""Golgi apparatus"", ""Cytosol""]"	
+MYC	ENSG00000136997	Brain expression cluster	"""Cluster 49: Hindbrain - Mixed function"""	
+MYC	ENSG00000136997	Protein cell type distribution	"""Detected in single"""	
+MYC	ENSG00000136997	Protein cell type specific Intensity	"{""Large ducts"": ""23362.0""}"	
+MYC	ENSG00000136997	Protein cell type specificity	"""Cell type enriched"""	
+MYC	ENSG00000136997	Protein cell type specificity score	"""234"""	
+MYC	ENSG00000136997	RNA brain regional distribution	"""Detected in all"""	
+MYC	ENSG00000136997	RNA brain regional specific nTPM	null	
+MYC	ENSG00000136997	RNA brain regional specificity	"""Low region specificity"""	
+MYC	ENSG00000136997	RNA brain regional specificity score	null	
+MYC	ENSG00000136997	RNA mouse brain regional distribution	"""Detected in all"""	
+MYC	ENSG00000136997	RNA mouse brain regional specific nTPM	null	
+MYC	ENSG00000136997	RNA mouse brain regional specificity	"""Low region specificity"""	
+MYC	ENSG00000136997	RNA mouse brain regional specificity score	null	
+MYC	ENSG00000136997	RNA pig brain regional distribution	"""Detected in all"""	
+MYC	ENSG00000136997	RNA pig brain regional specific nTPM	null	
+MYC	ENSG00000136997	RNA pig brain regional specificity	"""Low region specificity"""	
+MYC	ENSG00000136997	RNA pig brain regional specificity score	null	
+MYC	ENSG00000136997	RNA single cell type distribution	"""Detected in many"""	
+MYC	ENSG00000136997	RNA single cell type group distribution	"""Detected in many"""	
+MYC	ENSG00000136997	RNA single cell type group specific nCPM	"{""Basal cells"": ""745.2"", ""Stromal cells"": ""1088.5"", ""Suprabasal cells"": ""718.8""}"	
+MYC	ENSG00000136997	RNA single cell type group specificity	"""Cell type enhanced"""	
+MYC	ENSG00000136997	RNA single cell type group specificity score	null	
+MYC	ENSG00000136997	RNA single cell type specific nCPM	"{""Basal keratinocytes"": ""745.2"", ""Breast secretory cells"": ""398.2"", ""Decidual stromal cells"": ""1088.5"", ""Esophageal basal cells"": ""309.2"", ""Megakaryocyte-Erythroid progenitors"": ""261.0"", ""Pericytes"": ""282.6"", ""Smooth muscle cells"": ""266.7"", ""Suprabasal keratinocytes"": ""718.8""}"	
+MYC	ENSG00000136997	RNA single cell type specificity	"""Cell type enhanced"""	
+MYC	ENSG00000136997	RNA single cell type specificity score	null	
+MYC	ENSG00000136997	RNA single nuclei brain distribution	"""Detected in many"""	
+MYC	ENSG00000136997	RNA single nuclei brain specific nCPM	"{""lower rhombic lip"": ""12.6""}"	
+MYC	ENSG00000136997	RNA single nuclei brain specificity	"""Cell type enhanced"""	
+MYC	ENSG00000136997	RNA single nuclei brain specificity score	null	
+MYC	ENSG00000136997	RNA tissue cell type enrichment	"[""Adipose visceral - Neutrophils""]"	
+MYC	ENSG00000136997	RNA tissue distribution	"""Detected in many"""	
+MYC	ENSG00000136997	RNA tissue specific nTPM	"{""adipose tissue"": ""250.6"", ""skin 1"": ""277.4""}"	
+MYC	ENSG00000136997	RNA tissue specificity	"""Tissue enhanced"""	
+MYC	ENSG00000136997	RNA tissue specificity score	null	
+MYC	ENSG00000136997	Reliability (Mouse Brain)	null	
+MYC	ENSG00000136997	Single cell expression cluster	"""Cluster 103: Non-specific - Basic cellular processes"""	
+MYC	ENSG00000136997	Subcellular main location	"[""Nucleoplasm""]"	
+SALL4	ENSG00000101115	Brain expression cluster	"""Cluster 55: Non-specific - Transcription"""	
+SALL4	ENSG00000101115	Protein cell type distribution	"""Detected in single"""	
+SALL4	ENSG00000101115	Protein cell type specific Intensity	"{""Oocytes"": ""2586181.6""}"	
+SALL4	ENSG00000101115	Protein cell type specificity	"""Cell type enriched"""	
+SALL4	ENSG00000101115	Protein cell type specificity score	"""25862"""	
+SALL4	ENSG00000101115	RNA brain regional distribution	"""Detected in some"""	
+SALL4	ENSG00000101115	RNA brain regional specific nTPM	null	
+SALL4	ENSG00000101115	RNA brain regional specificity	"""Low region specificity"""	
+SALL4	ENSG00000101115	RNA brain regional specificity score	null	
+SALL4	ENSG00000101115	RNA mouse brain regional distribution	"""Not detected"""	
+SALL4	ENSG00000101115	RNA mouse brain regional specific nTPM	null	
+SALL4	ENSG00000101115	RNA mouse brain regional specificity	"""Not detected"""	
+SALL4	ENSG00000101115	RNA mouse brain regional specificity score	null	
+SALL4	ENSG00000101115	RNA pig brain regional distribution	"""Not detected"""	
+SALL4	ENSG00000101115	RNA pig brain regional specific nTPM	null	
+SALL4	ENSG00000101115	RNA pig brain regional specificity	"""Not detected"""	
+SALL4	ENSG00000101115	RNA pig brain regional specificity score	null	
+SALL4	ENSG00000101115	RNA single cell type distribution	"""Detected in some"""	
+SALL4	ENSG00000101115	RNA single cell type group distribution	"""Detected in many"""	
+SALL4	ENSG00000101115	RNA single cell type group specific nCPM	"{""Adrenal endocrine cells"": ""21.3"", ""Neuronal cells"": ""30.1"", ""Reproductive supporting cells"": ""22.7""}"	
+SALL4	ENSG00000101115	RNA single cell type group specificity	"""Cell type enhanced"""	
+SALL4	ENSG00000101115	RNA single cell type group specificity score	null	
+SALL4	ENSG00000101115	RNA single cell type specific nCPM	"{""Adrenal medulla cells"": ""21.3"", ""Conjunctival goblet cells"": ""7.8"", ""Gastric progenitor cells"": ""10.3"", ""Oocytes"": ""9.2"", ""Pancreatic duct cells"": ""11.1"", ""Pancreatic islet cells"": ""7.7"", ""Respiratory secretory cells"": ""7.2"", ""Retinal horizontal cells"": ""30.1"", ""Sertoli cells"": ""22.7"", ""Undifferentiated spermatogonia"": ""11.1"", ""Urothelial cells"": ""6.6""}"	
+SALL4	ENSG00000101115	RNA single cell type specificity	"""Cell type enhanced"""	
+SALL4	ENSG00000101115	RNA single cell type specificity score	null	
+SALL4	ENSG00000101115	RNA single nuclei brain distribution	"""Detected in some"""	
+SALL4	ENSG00000101115	RNA single nuclei brain specific nCPM	"{""fibroblast"": ""3.2""}"	
+SALL4	ENSG00000101115	RNA single nuclei brain specificity	"""Cell type enhanced"""	
+SALL4	ENSG00000101115	RNA single nuclei brain specificity score	null	
+SALL4	ENSG00000101115	RNA tissue cell type enrichment	"[""Testis - Sertoli cells""]"	
+SALL4	ENSG00000101115	RNA tissue distribution	"""Detected in some"""	
+SALL4	ENSG00000101115	RNA tissue specific nTPM	"{""testis"": ""3.8"", ""thyroid gland"": ""5.6""}"	
+SALL4	ENSG00000101115	RNA tissue specificity	"""Tissue enhanced"""	
+SALL4	ENSG00000101115	RNA tissue specificity score	null	
+SALL4	ENSG00000101115	Reliability (Mouse Brain)	null	
+SALL4	ENSG00000101115	Single cell expression cluster	"""Cluster 43: Sertoli cells - Spermatogenesis microenvironment"""	
+SALL4	ENSG00000101115	Subcellular main location	"[""Nucleoplasm""]"	
+WWOX	ENSG00000186153	Brain expression cluster	"""Cluster 55: Non-specific - Transcription"""	
+WWOX	ENSG00000186153	Protein cell type distribution	"""Detected in many"""	
+WWOX	ENSG00000186153	Protein cell type specific Intensity	"{""Keratinocytes"": ""4381064.6""}"	
+WWOX	ENSG00000186153	Protein cell type specificity	"""Cell type enhanced"""	
+WWOX	ENSG00000186153	Protein cell type specificity score	null	
+WWOX	ENSG00000186153	RNA brain regional distribution	"""Detected in all"""	
+WWOX	ENSG00000186153	RNA brain regional specific nTPM	null	
+WWOX	ENSG00000186153	RNA brain regional specificity	"""Low region specificity"""	
+WWOX	ENSG00000186153	RNA brain regional specificity score	null	
+WWOX	ENSG00000186153	RNA mouse brain regional distribution	"""Detected in all"""	
+WWOX	ENSG00000186153	RNA mouse brain regional specific nTPM	null	
+WWOX	ENSG00000186153	RNA mouse brain regional specificity	"""Low region specificity"""	
+WWOX	ENSG00000186153	RNA mouse brain regional specificity score	null	
+WWOX	ENSG00000186153	RNA pig brain regional distribution	"""Detected in all"""	
+WWOX	ENSG00000186153	RNA pig brain regional specific nTPM	null	
+WWOX	ENSG00000186153	RNA pig brain regional specificity	"""Low region specificity"""	
+WWOX	ENSG00000186153	RNA pig brain regional specificity score	null	
+WWOX	ENSG00000186153	RNA single cell type distribution	"""Detected in all"""	
+WWOX	ENSG00000186153	RNA single cell type group distribution	"""Detected in all"""	
+WWOX	ENSG00000186153	RNA single cell type group specific nCPM	"{""Ciliated cells"": ""3104.6"", ""Renal nephron cells"": ""2770.2""}"	
+WWOX	ENSG00000186153	RNA single cell type group specificity	"""Cell type enhanced"""	
+WWOX	ENSG00000186153	RNA single cell type group specificity score	null	
+WWOX	ENSG00000186153	RNA single cell type specific nCPM	"{""Choroid plexus epithelial cells"": ""2148.1"", ""Ependymal cells"": ""3104.6"", ""Podocytes"": ""2770.2""}"	
+WWOX	ENSG00000186153	RNA single cell type specificity	"""Cell type enhanced"""	
+WWOX	ENSG00000186153	RNA single cell type specificity score	null	
+WWOX	ENSG00000186153	RNA single nuclei brain distribution	"""Detected in all"""	
+WWOX	ENSG00000186153	RNA single nuclei brain specific nCPM	null	
+WWOX	ENSG00000186153	RNA single nuclei brain specificity	"""Low cell type specificity"""	
+WWOX	ENSG00000186153	RNA single nuclei brain specificity score	null	
+WWOX	ENSG00000186153	RNA tissue cell type enrichment	"[""Adrenal gland - Adrenal cortex cells"", ""Liver - Hepatocytes"", ""Thyroid gland - Thyroid glandular cells""]"	
+WWOX	ENSG00000186153	RNA tissue distribution	"""Detected in all"""	
+WWOX	ENSG00000186153	RNA tissue specific nTPM	null	
+WWOX	ENSG00000186153	RNA tissue specificity	"""Low tissue specificity"""	
+WWOX	ENSG00000186153	RNA tissue specificity score	null	
+WWOX	ENSG00000186153	Reliability (Mouse Brain)	null	
+WWOX	ENSG00000186153	Single cell expression cluster	"""Cluster 28: Astrocytes - Homeostasis & neuron support"""	
+WWOX	ENSG00000186153	Subcellular main location	"[""Golgi apparatus""]"	
+ZNF692	ENSG00000171163	Brain expression cluster	"""Cluster 6: Non-specific - Immune response"""	
+ZNF692	ENSG00000171163	Protein cell type distribution	"""Not detected"""	
+ZNF692	ENSG00000171163	Protein cell type specific Intensity	null	
+ZNF692	ENSG00000171163	Protein cell type specificity	"""Not detected"""	
+ZNF692	ENSG00000171163	Protein cell type specificity score	null	
+ZNF692	ENSG00000171163	RNA brain regional distribution	"""Detected in all"""	
+ZNF692	ENSG00000171163	RNA brain regional specific nTPM	null	
+ZNF692	ENSG00000171163	RNA brain regional specificity	"""Low region specificity"""	
+ZNF692	ENSG00000171163	RNA brain regional specificity score	null	
+ZNF692	ENSG00000171163	RNA mouse brain regional distribution	"""Detected in all"""	
+ZNF692	ENSG00000171163	RNA mouse brain regional specific nTPM	null	
+ZNF692	ENSG00000171163	RNA mouse brain regional specificity	"""Low region specificity"""	
+ZNF692	ENSG00000171163	RNA mouse brain regional specificity score	null	
+ZNF692	ENSG00000171163	RNA pig brain regional distribution	"""Detected in all"""	
+ZNF692	ENSG00000171163	RNA pig brain regional specific nTPM	null	
+ZNF692	ENSG00000171163	RNA pig brain regional specificity	"""Low region specificity"""	
+ZNF692	ENSG00000171163	RNA pig brain regional specificity score	null	
+ZNF692	ENSG00000171163	RNA single cell type distribution	"""Detected in many"""	
+ZNF692	ENSG00000171163	RNA single cell type group distribution	"""Detected in many"""	
+ZNF692	ENSG00000171163	RNA single cell type group specific nCPM	"{""Spermatogenic cell types"": ""76.3""}"	
+ZNF692	ENSG00000171163	RNA single cell type group specificity	"""Cell type enhanced"""	
+ZNF692	ENSG00000171163	RNA single cell type group specificity score	null	
+ZNF692	ENSG00000171163	RNA single cell type specific nCPM	"{""Late primary spermatocytes"": ""76.3""}"	
+ZNF692	ENSG00000171163	RNA single cell type specificity	"""Cell type enhanced"""	
+ZNF692	ENSG00000171163	RNA single cell type specificity score	null	
+ZNF692	ENSG00000171163	RNA single nuclei brain distribution	"""Detected in all"""	
+ZNF692	ENSG00000171163	RNA single nuclei brain specific nCPM	null	
+ZNF692	ENSG00000171163	RNA single nuclei brain specificity	"""Low cell type specificity"""	
+ZNF692	ENSG00000171163	RNA single nuclei brain specificity score	null	
+ZNF692	ENSG00000171163	RNA tissue cell type enrichment	"[""Testis - Early spermatids""]"	
+ZNF692	ENSG00000171163	RNA tissue distribution	"""Detected in all"""	
+ZNF692	ENSG00000171163	RNA tissue specific nTPM	null	
+ZNF692	ENSG00000171163	RNA tissue specificity	"""Low tissue specificity"""	
+ZNF692	ENSG00000171163	RNA tissue specificity score	null	
+ZNF692	ENSG00000171163	Reliability (Mouse Brain)	null	
+ZNF692	ENSG00000171163	Single cell expression cluster	"""Cluster 53: Late primary spermatocytes - Meiotic division & transition"""	
+ZNF692	ENSG00000171163	Subcellular main location	"[""Nucleoplasm"", ""Nucleoli""]"	
