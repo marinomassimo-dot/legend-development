@@ -1,0 +1,8 @@
+depth	entry	graph_status	intervention	member_type	pmids	readout	source	unit_id	wwox_signs
+complete_fulltext_read	PHENOTYPE_FIRST	OUT_OF_METHOD_MODALITY	AAV9-delivered human WWOX (gene addition)	gene_therapy	42422765	spike-wave discharge rate per hour on continuous ECoG: decrease	member_evidence	U07	5 benefit, 1 mixed, 2 null, 2 partial_benefit, 2 unquantified
+complete_fulltext_read	PHENOTYPE_FIRST	NOT_EXAMINABLE_NO_CATALOGUE_IDENTITY	A51, a multi-kinase inhibitor (experimental)	molecule		fraction of layer neurons (SATB2+, CTIP2+): no_change	member_evidence	U10	1 benefit, 1 null
+complete_fulltext_read	PHENOTYPE_FIRST	OUT_OF_METHOD_MODALITY	Ketogenic diet (complex dietary intervention)	diet	35573960	clinician-reported seizure control on the ketogenic diet: no_change	member_evidence	U15	1 benefit, 1 null
+complete_fulltext_read	PHENOTYPE_FIRST	NO_GRAPH_ROW	Ethosuximide	molecule	32000863	PTZ-provoked behavioural seizure score, late phase of the hour (graphical reading): decrease	member_evidence	U17	1 benefit
+queried_not_full_read	PHENOTYPE_FIRST	NO_GRAPH_ROW	Vigabatrin	molecule		clinical cessation of epileptic spasms: unknown	member_evidence	U20	2 benefit, 3 null, 1 partial_benefit, 1 unresolved
+complete_fulltext_read	PHENOTYPE_FIRST	SCORED_NOT_SPECIFIC:Q4	d-APV (competitive NMDAR block; a tool compound, not a candidate drug)	tool_compound	34634460	burst frequency: decrease	member_evidence	U21	1 benefit
+complete_fulltext_read	PHENOTYPE_FIRST	NO_GRAPH_ROW	Lithium	molecule	32000863	behavioural seizure stage after one provoking injection, preweaning mice: decrease	member_evidence	U24	1 benefit

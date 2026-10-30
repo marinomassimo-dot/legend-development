@@ -1,0 +1,6 @@
+compound	scope	constraint	affects_ex_vivo_probe	source
+roxadustat	systemic_development	EU label: seizures common (1.1% v 0.2%; 2.0% v 1.6%); secondary hypothyroidism; rat brain necrosis at 3 to 6 times the AUC; paediatric use not established	no	qualification_it9_p4c_e_20261030/README.md row E-02 and records/E-02_roxadustat.md; CORRECTION_NOTE_20261031.md
+roxadustat	probe_specificity	thyromimetic action (ChEMBL EC50 12.9 and 32.7 nM; Morita 2025): a thyroid-receptor confound in cells expressing the receptor	yes	qualification_it9_p4c_e_20261030/records/E-02_roxadustat.md; CORRECTION_NOTE_20261031.md
+PX-478	systemic_development	0 ChEMBL activity rows; nitrogen-mustard alert; adult intravenous phase 1 only; no CNS or paediatric data	no	qualification_it9_p4c_e_20261030/README.md row E-01; identity.tsv; trials_summary.tsv
+PX-478	probe_specificity	mustard alkylation can act off the HIF axis: genetic arm A decides, a non-mustard HIF-1alpha inhibitor runs beside it	yes	case_it9_p6_hif_axis_20261030/README.md section 7
+belzutifan	probe_precondition	HIF-2alpha protein in WWOX-deficient neural cells never measured; probe usable only after step 0 shows it	yes	qualification_it9_p4b_a_20261030/README.md

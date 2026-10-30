@@ -1,0 +1,11 @@
+seed_set	arm	v3_specific	kept_in_v4	lost_in_v4	gained_in_v4	v4_specific
+Q2_expression_tiersAB	opposes	46	44	2	2	46
+Q2_expression_tiersAB	mimics	20	20	0	0	20
+Q4_expression_tiersAB	opposes	60	59	1	5	64
+Q4_expression_tiersAB	mimics	24	24	0	0	24
+Q5_expression_tiersAB	opposes	189	162	27	1	163
+Q5_expression_tiersAB	mimics	166	160	6	28	188
+Q6_expression_tiersAB	opposes	296	283	13	4	287
+Q6_expression_tiersAB	mimics	247	224	23	8	232
+Q6_protein_tiersAB	opposes	118	118	0	1	119
+Q6_protein_tiersAB	mimics	59	59	0	0	59

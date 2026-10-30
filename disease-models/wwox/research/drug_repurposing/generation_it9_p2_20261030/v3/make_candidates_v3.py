@@ -3,7 +3,7 @@
 robust arms), direct_search. Each row gives the contributing seeds, the strongest admissible EDGE CHAIN from the main target to the seed with its record modes (T/P) and OmniPath source labels,
 the family flags, and the status of the family in the v2 candidate tables.
 
-  make_candidates_v3.py --seeds-dir ../seeds_p1 --results results --out results [--top-opposes 50] [--top-mimics 25]
+  make_candidates_v3.py --seeds-dir ../seeds_p1 --results results --out results [--top-opposes 50] [--top-mimics 25] [--engine PATH]
 """
 import sys
 if len(sys.argv) < 2 or sys.argv[1] in ("-h", "--help"):
@@ -12,8 +12,12 @@ import argparse, collections, csv, glob, gzip, importlib.util, os
 from pathlib import Path
 HERE = Path(__file__).resolve().parent
 _s = list(sys.argv); sys.argv = ["seed_engine_v3.py", "selftest"]
-spec = importlib.util.spec_from_file_location("seed_engine_v3", HERE / "seed_engine_v3.py")
-m = importlib.util.module_from_spec(spec); spec.loader.exec_module(m); sys.argv = _s
+ENGINE = HERE / "seed_engine_v3.py"          # IT10: --engine PATH loads another engine with the same names (seed_engine_v4.py)
+for _i, _x in enumerate(_s):
+    if _x == "--engine" and _i + 1 < len(_s):
+        ENGINE = Path(_s[_i + 1]).resolve(); del _s[_i:_i + 2]; break
+spec = importlib.util.spec_from_file_location("seed_engine_v3", ENGINE)
+m = importlib.util.module_from_spec(spec); sys.modules["seed_engine_v3"] = m; spec.loader.exec_module(m); sys.argv = _s
 ap = argparse.ArgumentParser(); ap.add_argument("--seeds-dir", required=True); ap.add_argument("--results", required=True); ap.add_argument("--out", required=True)
 ap.add_argument("--top-opposes", type=int, default=50); ap.add_argument("--top-mimics", type=int, default=25)
 a = ap.parse_args()
