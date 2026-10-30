@@ -1,0 +1,27 @@
+case	attempt	status	seconds	url	error
+sel:PX-478	1	200	0.75	https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?limit=5&q=PX-478	
+sel:roxadustat	1	200	1.92	https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?limit=5&q=roxadustat	
+sel:daprodustat	1	200	6.62	https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?limit=5&q=daprodustat	
+sel:vadadustat	1	200	1.7	https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?limit=5&q=vadadustat	
+sel:desidustat	1	200	5.91	https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?limit=5&q=desidustat	
+sel:molidustat	1	200	5.97	https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?limit=5&q=molidustat	
+sel:STC-15	1	200	9.87	https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?limit=5&q=STC-15	
+sel:STM2457	1	200	0.55	https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?limit=5&q=STM2457	
+sel:sulfopin	1	200	11.99	https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?limit=5&q=sulfopin	
+sel:AG-17724	1	200	4.85	https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?limit=5&q=AG-17724	
+sel:BJP-06-005-3	1	200	3.86	https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?limit=5&q=BJP-06-005-3	
+sel:GNF4877	1	200	1.01	https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?limit=5&q=GNF4877	
+sel:GNF2133	1	200	10.77	https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?limit=5&q=GNF2133	
+sel:D4476	1	200	15.13	https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?limit=5&q=D4476	
+sel:IC261	1	200	11.66	https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?limit=5&q=IC261	
+sel:CR8	1	200	3.36	https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?limit=5&q=CR8	
+sel:nirogacestat	1	200	4.91	https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?limit=5&q=nirogacestat	
+sel:MK-0752	1	200	6.93	https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?limit=5&q=MK-0752	
+sel:osugacestat	1	200	14.54	https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?limit=5&q=osugacestat	
+sel:XCT790	1	200	15.24	https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?limit=5&q=XCT790	
+sel:fedratinib	1	200	17.16	https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?limit=5&q=fedratinib	
+sel:pacritinib	1	200	0.11	https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?limit=5&q=pacritinib	
+sel:belzutifan	1	200	12.65	https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?limit=5&q=belzutifan	
+sel:onapristone	1	200	0.22	https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?limit=5&q=onapristone	
+sel:asoprisnil	1	200	8.47	https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?limit=5&q=asoprisnil	
+sel:AZD1080	1	200	0.12	https://www.ebi.ac.uk/chembl/api/data/molecule/search.json?limit=5&q=AZD1080	

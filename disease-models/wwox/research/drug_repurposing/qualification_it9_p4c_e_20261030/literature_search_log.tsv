@@ -1,0 +1,50 @@
+2026-10-30	E-selpapers	TITLE:"PX-478" AND (HIF OR "hypoxia-inducible")	200	25	6
+2026-10-30	E-selpapers	"PX-478" AND (BNIP3 OR "GLUT-1" OR "GLUT1" OR "hexokinase")	200	409	6
+2026-10-30	E-selpapers	"PX-478" AND (brain OR neuron OR glioma OR cortex OR CNS)	200	411	6
+2026-10-30	E-selpapers	TITLE:"sulfopin"	200	4	4
+2026-10-30	E-selpapers	TITLE:"Pin1" AND TITLE:"neuroblastoma" AND (covalent OR inhibitor)	200	0	0
+2026-10-30	E01	"PX-478" AND (WWOX OR WOREE)	200	1	1
+2026-10-30	E01	"PX-478" AND (epilep* OR seizure* OR convuls*)	200	17	4
+2026-10-30	E01	"PX-478" AND (BNIP3 OR GLUT1 OR "GLUT-1" OR HK2 OR "hexokinase 2" OR LDHA)	200	438	4
+2026-10-30	E01	"PX-478" AND (pharmacokinetic* OR "phase I" OR "blood-brain")	200	342	4
+2026-10-30	E02	roxadustat AND (WWOX OR WOREE)	200	2	2
+2026-10-30	E02	roxadustat AND (seizure* OR epilep* OR convuls*)	200	88	4
+2026-10-30	E02	roxadustat AND (thyroid OR "thyroid hormone receptor")	200	133	4
+2026-10-30	E02	roxadustat AND (brain OR neuron* OR "neural progenitor" OR neurodevelopment*)	200	431	4
+2026-10-30	E02	roxadustat AND (FOXO3 OR EGLN2 OR PHD1 OR PHD2 OR PHD3) AND (neural OR neuron* OR brain OR cortex)	200	173	4
+2026-10-30	E03	nirogacestat AND (WWOX OR WOREE)	200	2	2
+2026-10-30	E03	(nirogacestat OR "PF-03084014") AND (brain OR cognit* OR neuro* OR seizure* OR epilep*)	200	577	4
+2026-10-30	E03	("gamma-secretase inhibitor" OR "gamma secretase inhibitor") AND ("neural progenitor" OR "radial glia") AND (differentiation OR neurogenesis)	200	158	4
+2026-10-30	E03	("gamma-secretase inhibitor" OR semagacestat OR avagacestat OR "DAPT") AND (MYC OR "c-Myc") AND ("neural stem" OR "neural progenitor" OR "neurosphere" OR medulloblastoma OR glioma)	200	762	4
+2026-10-30	E03	NOTCH3 AND "radial glia" AND (human OR organoid)	200	149	4
+2026-10-30	E04	(STM2457 OR "METTL3 inhibitor") AND (WWOX OR WOREE)	200	0	0
+2026-10-30	E04	METTL3 AND ("radial glia" OR "neural progenitor" OR cortex OR neurogenesis) AND (knockout OR deletion OR conditional)	200	1044	4
+2026-10-30	E04	STM2457 AND (brain OR neuron* OR "neural" OR glioma OR neuroblastoma)	200	477	4
+2026-10-30	E04	STM2457 AND (pharmacokinetic* OR "in vivo" OR "mouse")	200	916	4
+2026-10-30	E04	USP13 AND (MYC OR "c-Myc") AND (neural OR neuron* OR glioma OR "stem cell")	200	336	4
+2026-10-30	E05	D4476 AND (WWOX OR WOREE)	200	3	3
+2026-10-30	E05	D4476 AND (neural OR neuron* OR brain OR "stem cell" OR cortex OR organoid)	200	274	4
+2026-10-30	E05	FOXO6 AND (neuron* OR brain OR hippocamp* OR "neural progenitor" OR cortex)	200	1019	4
+2026-10-30	E05	FOXO6 AND (MYC OR "c-Myc")	200	425	4
+2026-10-30	E05	FOXO6 AND (DYRK1A OR "casein kinase" OR CSNK1A1)	200	117	4
+2026-10-30	E06	sulfopin AND (WWOX OR WOREE)	200	0	0
+2026-10-30	E06	sulfopin AND (brain OR neural OR neuroblastoma OR "blood-brain" OR CNS)	200	40	4
+2026-10-30	E06	PIN1 AND ("neural progenitor" OR "radial glia" OR cortex OR neurogenesis OR microcephaly)	200	1739	4
+2026-10-30	E06	PIN1 AND MYC AND (transcript* OR mRNA OR expression) AND (neural OR neuron* OR brain)	200	842	4
+2026-10-30	E01p	TITLE:"PX-478" AND (AUTH:"Koh" OR AUTH:"Welsh")	200	2	2
+2026-10-30	E04p	TITLE:"Small-molecule inhibition of METTL3 as a strategy against myeloid leukaemia"	200	1	1
+2026-10-30	E04p	TITLE:"Temporal Control of Mammalian Cortical Neurogenesis by m6A Methylation"	200	1	1
+2026-10-30	E04p	TITLE:"m6A mRNA methylation regulates" AND TITLE:"cortical neurogenesis"	200	0	0
+2026-10-30	E01p	TITLE:"Expression of the gene encoding the proapoptotic Nip3 protein is induced by hypoxia"	200	1	1
+2026-10-30	E06p	TITLE:"FoxO6 regulates memory consolidation and synaptic function"	200	1	1
+2026-10-30	E01w	WWOX AND (HIF1A OR "HIF-1α" OR "HIF1α" OR "hypoxia-inducible factor") AND (glycoly* OR glucose)	200	237	5
+2026-10-30	E01w	WWOX AND (HIF2A OR "HIF-2α" OR EPAS1 OR "HIF-2 alpha" OR "hypoxia-inducible factor 2")	200	82	5
+2026-10-30	E01p	TITLE:"PX-478" AND ("phase I" OR "phase 1" OR "advanced solid") AND AUTH:"Tibes"	200	0	0
+2026-10-30	E03g	semagacestat AND (cognition OR "Alzheimer") AND ("phase 3" OR "randomized") AND TITLE:"semagacestat"	200	10	5
+2026-10-30	E03g	("gamma-secretase inhibitor" OR DAPT OR "LY411575") AND (organoid OR "cortical") AND (Notch) AND (neurogenesis OR differentiation OR "radial glia")	200	1483	5
+2026-10-30	E01w	TITLE:"WWOX" AND TITLE:"HIF1" AND (AUTH:"Aqeilan" OR AUTH:"Abu-Remaileh" OR AUTH:"Chang")	200	0	0
+2026-10-30	E01w	TITLE:WWOX AND (TITLE:"hypoxia-inducible factor" OR TITLE:"HIF1α" OR TITLE:"HIF-1α" OR TITLE:HIF1) AND PUB_YEAR:[2007 TO 2016]	200	2	2
+2026-10-30	E01w	TITLE:WWOX AND (TITLE:"glucose metabolism" OR TITLE:"Warburg") AND PUB_YEAR:[2007 TO 2020]	200	2	2
+2026-10-30	E01ph	"PX-478" AND ("Phase I" OR "dose-limiting" OR "maximum tolerated")	200	268	5
+2026-10-30	BZ	(TITLE_ABS:WWOX) AND (TITLE_ABS:"HIF-2α" OR TITLE_ABS:"HIF2α" OR TITLE_ABS:EPAS1 OR TITLE_ABS:"HIF-2alpha" OR TITLE_ABS:HIF2A)	200	0	0
+2026-10-30	BZ	(TITLE_ABS:WWOX OR TITLE_ABS:WOREE OR TITLE_ABS:SCAR12) AND (TITLE_ABS:"hypoxia-inducible" OR TITLE_ABS:HIF) AND (TITLE_ABS:neural OR TITLE_ABS:neuron* OR TITLE_ABS:brain OR TITLE_ABS:organoid OR TITLE_ABS:cortex)	200	0	0

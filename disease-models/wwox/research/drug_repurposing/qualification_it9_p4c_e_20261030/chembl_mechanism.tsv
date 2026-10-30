@@ -1,0 +1,3 @@
+work_id	name	action_type	mechanism	target_chembl_id	target_name	direct_interaction	disease_efficacy
+E-02	roxadustat	INHIBITOR	Hypoxia-inducible factor prolyl hydroxylase inhibitor	CHEMBL3831261		1	1
+E-03	nirogacestat	INHIBITOR	Gamma-secretase inhibitor	CHEMBL2094135	Gamma-secretase	1	1

@@ -1,0 +1,40 @@
+{
+ "event_id": "FTR-20261030-10922063-01",
+ "record_kind": "contemporaneous_receipt",
+ "study_id": {
+  "pmid": "10922063",
+  "doi": "10.1073/pnas.97.16.9082"
+ },
+ "event_at": "2026-10-30T13:00:00Z",
+ "analysis_at": "2026-10-30T13:00:00Z",
+ "analysis_time_precision": "minute",
+ "workflow": "scientist-b4, IT9 P4c-e. Bruick 2000 (Nip3/BNIP3 is induced by hypoxia through HIF-1). Question: what does the primary record behind HIF1A -> BNIP3 describe (cells, level, sign), and do hypoxia mimetics reach BNIP3 and GLUT-1 transcripts? The PMC article page (HTML) rendered to plain text (a derived surface); the whole body (Abstract, Experimental Procedures, Results, Discussion) was read; figures were read as captions only; the reference list was not read.",
+ "evidence_depth": "partial_fulltext_read",
+ "source_locator": "files/fulltext/PMC16825_PMID10922063_pmc_html_fulltext_2026-10-30.txt",
+ "source_fingerprint": "3aba2128d3305d4612c0dff39911d4f25948498f60cb90c9d486244bd6298120",
+ "source_kind": "fulltext_local",
+ "coverage": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "figures": "captions_only",
+  "tables": "not_present",
+  "discussion": "read",
+  "limitations": "not_present",
+  "supplementary": "not_present",
+  "references": "not_read"
+ },
+ "outputs": [
+  "disease-models/wwox/research/drug_repurposing/qualification_it9_p4c_e_20261030/records/E-01_PX-478.md",
+  "disease-models/wwox/research/drug_repurposing/qualification_it9_p4c_e_20261030/records/E-02_roxadustat.md",
+  "disease-models/wwox/research/drug_repurposing/qualification_it9_p4c_e_20261030/edge_provenance_E.tsv"
+ ],
+ "evidence_basis": [
+  "coverage_map",
+  "work_manifest",
+  "Figures were not opened as images; Methods and the reference list were not read or only in part, as the coverage map states."
+ ],
+ "prior_receipt": null,
+ "reread_reason": "first_read"
+}
