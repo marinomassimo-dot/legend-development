@@ -1,0 +1,13 @@
+# Session self-evaluation: iteration 9 (ORCH-ROADMAP-IT9-20261030), 2026-10-31
+
+Part 1 (executable): `session_self_eval.py`, `fulltext_receipts.py verify` (930 chained receipts after nine IT9 receipts), `legend_lint.py` (0 BLOCK), `growth_anchors.py check` and `public_release_gate.py` (0 BLOCK) were run at the closing commit; the full release battery result is recorded in the mandate record.
+
+Part 2 (judgement; process graded apart from outcome):
+
+1. **The discovery result is mostly negative, and it was earned.** Of 31 distinct compounds taken to qualification, 16 were dropped, 5 left inconclusive and 4 kept as mechanism proposals; no compound shows activity in a WWOX system. The useful finding is about the method: proposals fail at the provenance of the chain, not at the compound. A first provenance repair (record mode, HGNC identity, active moiety) removed all seven registered artefacts but five failure types remained and decided candidates in the second round.
+2. **Independent verification again found defects the producer could not see.** P1 seeds: an error in the needs table about two cytokines, intervention results inside usable rows, an inconsistent usable/reserved rule. P6: a compartment mismatch presented as an opposite sign, a mis-stated digoxin result, an attribution of thyromimetic action to the wrong source. All repaired before integration; attribution: the verifiers, not the producers.
+3. **Process errors.** (a) Several qualification agents disclosed having seen provenance information before writing selection rules; the disclosure is in their notes but the selection was not blind. (b) The P3 selection amended its rules three times after seeing counts or names; each amendment is dated and disclosed, but a purist would call the selection partly post hoc. (c) A placeholder address was sent to an open-access lookup by one agent; it was not an operator address, nothing else was sent. (d) A stale mandate record was closed by the batch integrator with named unmet debts; the closure is reversible and flagged for the operator.
+4. **Scope discipline.** No claim promoted; working model unchanged (WM_v7.29); the HIF case is a conditional proposal, not a result; no history rewrite, visibility change, publication or spend.
+5. **Weak answers owed.** The generation engine cannot use most WWOX data (no tissue context, no magnitude, single-seed sets measure specificity to one gene's regulators); no protein-level or cell-composition model exists; the web view is prepared but not published.
+
+Micro-upgrade delivered: the engine's provenance filters with mutation tests; the scan of html/js/css on the tip with windowing; member-level evidence and origin in the ranking.

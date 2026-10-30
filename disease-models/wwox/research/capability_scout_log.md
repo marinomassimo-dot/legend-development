@@ -1587,3 +1587,7 @@ Perimeter: zero spend, key-less reads, no account, no contact, nothing installed
 ## 2026-10-30 — iteration 8 close (capability gap record)
 - **Gap with evidence:** none new. The ranking tool's same-day snapshot ordering and the view tooling's fixed sleeps were repaired in-session (CHANGE = tools, with regressions).
 - **Not adopted, with reason:** no new external tool; the IT8 scout candidates stay TRIAL/WATCH with licences flagged (OREVID data CC BY-NC-SA, CMap-Evaluation GPL-3.0).
+
+## 2026-10-31 — iteration 9 close (capability gap record)
+- **Gap with evidence:** the catalogue has no action type for molecular glues (cereblon modulators are coded as pathway inhibitors, so every IMiD-class proposal receives a wrong sign), and complex-target credit joins chains through shared members of different complexes. Both were handled by flags in the engine, not fixed in the catalogue. Recorded for the next catalogue rebuild.
+- **Not adopted, with reason:** TxGNN (needs a Python 3.8 + DGL stack; installing a framework to emulate a brand), MATRIX scores (no licence stated); Open Targets was trialled and is already used in substance.
