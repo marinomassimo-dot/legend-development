@@ -1,0 +1,30 @@
+compound	chembl_molecule	target	type	relation	value	units	document	assay	assay_description
+dasatinib (hydrate record; parent CHEMBL1421)	CHEMBL5416410	CHEMBL4599 (TNK2/ACK1, human)	Kd	=	5.6	nM	CHEMBL1150977	CHEMBL1051355	Binding constant for TNK2 kinase domain
+dasatinib (hydrate record; parent CHEMBL1421)	CHEMBL5416410	CHEMBL4599 (TNK2/ACK1, human)	Kd	=	5.6	nM	CHEMBL1908390	CHEMBL1908504	Binding constant for TNK2 kinase domain
+dasatinib (hydrate record; parent CHEMBL1421)	CHEMBL5416410	CHEMBL4599 (TNK2/ACK1, human)	Ki	=	2.512	nM	CHEMBL1201862	CHEMBL1963777	PUBCHEM_BIOASSAY: Navigating the Kinome. (Class of assay: other) Panel member name: ACK1
+dasatinib (hydrate record; parent CHEMBL1421)	CHEMBL5416410	CHEMBL4599 (TNK2/ACK1, human)	Kd	=	6.0	nM	CHEMBL3425491	CHEMBL3429155	Inhibition of ACK1 kinase (unknown origin)
+dasatinib (hydrate record; parent CHEMBL1421)	CHEMBL5416410	CHEMBL4599 (TNK2/ACK1, human)	Kd	=	27.0	nM	CHEMBL3991601	CHEMBL3991914	Kinobeads (epsilon), multiple immobilized ATP-competitive broad spectrum kinase inhibitors, used to assess res
+dasatinib (hydrate record; parent CHEMBL1421)	CHEMBL5416410	CHEMBL4599 (TNK2/ACK1, human)	Ki	<	10.0	nM	CHEMBL4311931	CHEMBL4312066	Binding affinity to wild-type human partial length TNK2 (S159 to D474 residues) expressed in bacterial express
+dasatinib (hydrate record; parent CHEMBL1421)	CHEMBL5416410	CHEMBL4599 (TNK2/ACK1, human)	Activity	<	25.0	%	CHEMBL4806967	CHEMBL4807736	Inhibition of ACK1 (unknown origin) assessed as residual activity measured at 1 uM
+dasatinib (hydrate record; parent CHEMBL1421)	CHEMBL5416410	CHEMBL4599 (TNK2/ACK1, human)	Kd	=	5.6	nM	CHEMBL5260853	CHEMBL5265487	Binding affinity to ACK1 (unknown origin)
+dasatinib (hydrate record; parent CHEMBL1421)	CHEMBL5416410	CHEMBL4599 (TNK2/ACK1, human)	IC50	=	1.0	nM	CHEMBL5260853	CHEMBL5265489	Inhibition of ACK1 (unknown origin)
+dasatinib (hydrate record; parent CHEMBL1421)	CHEMBL5416410	CHEMBL4599 (TNK2/ACK1, human)	Kd	=	6.0	nM	CHEMBL5338762	CHEMBL5341434	Binding affinity to ACK1 (unknown origin) assessed as dissociation constant
+bosutinib	CHEMBL288441	CHEMBL4599 (TNK2/ACK1, human)	IC50	=	2.7	nM	CHEMBL1240341	CHEMBL1244331	Inhibition of TNK2
+bosutinib	CHEMBL288441	CHEMBL4599 (TNK2/ACK1, human)	Kd	=	29.0	nM	CHEMBL1908390	CHEMBL1908504	Binding constant for TNK2 kinase domain
+bosutinib	CHEMBL288441	CHEMBL4599 (TNK2/ACK1, human)	IC50	=	2.7	nM	CHEMBL3425491	CHEMBL3429155	Inhibition of ACK1 kinase (unknown origin)
+bosutinib	CHEMBL288441	CHEMBL4599 (TNK2/ACK1, human)	Kd	=	138.0	nM	CHEMBL3991601	CHEMBL3991914	Kinobeads (epsilon), multiple immobilized ATP-competitive broad spectrum kinase inhibitors, used to assess res
+bosutinib	CHEMBL288441	CHEMBL4599 (TNK2/ACK1, human)	IC50	=	2.7	nM	CHEMBL5260853	CHEMBL5265489	Inhibition of ACK1 (unknown origin)
+lorlatinib	CHEMBL3286830	CHEMBL4599 (TNK2/ACK1, human)	IC50	=	17.0	nM	CHEMBL3286195	CHEMBL3293406	Inhibition of TNK2 (unknown origin) by TR-FRET-based Z'-LYTE assay
+lorlatinib	CHEMBL3286830	CHEMBL4599 (TNK2/ACK1, human)	Ki	=	17.0	nM	CHEMBL5212743	CHEMBL5213164	Selectivity interaction (Z’-LYTE assay (SelectScreen Invitrogen)) EUB0000690a TNK2
+entrectinib	CHEMBL1983268	CHEMBL4599 (TNK2/ACK1, human)	Ki	=	31.62	nM	CHEMBL1201862	CHEMBL1963777	PUBCHEM_BIOASSAY: Navigating the Kinome. (Class of assay: other) Panel member name: ACK1
+entrectinib	CHEMBL1983268	CHEMBL4599 (TNK2/ACK1, human)	IC50	=	70.0	nM	CHEMBL3804811	CHEMBL3807412	Inhibition of ACK1 (unknown origin) in presence of gamma33-ATP
+entrectinib	CHEMBL1983268	CHEMBL4599 (TNK2/ACK1, human)	Kd	=	420.0	nM	CHEMBL3991601	CHEMBL3991914	Kinobeads (epsilon), multiple immobilized ATP-competitive broad spectrum kinase inhibitors, used to assess res
+ceritinib	CHEMBL2403108	CHEMBL4599 (TNK2/ACK1, human)	Kd	=	929.0	nM	CHEMBL3991601	CHEMBL3991914	Kinobeads (epsilon), multiple immobilized ATP-competitive broad spectrum kinase inhibitors, used to assess res
+ceritinib	CHEMBL2403108	CHEMBL4599 (TNK2/ACK1, human)	Activity	=	-1.0	%	CHEMBL4715694	CHEMBL4716211	Inhibition of recombinant N-terminal GST-tagged human ACK1 (1 to 389 residues) expressed in baculovirus infect
+ceritinib	CHEMBL2403108	CHEMBL4599 (TNK2/ACK1, human)	IC50	=	33.6	nM	CHEMBL5260853	CHEMBL5265489	Inhibition of ACK1 (unknown origin)
+sunitinib (weak)	CHEMBL535	CHEMBL4599 (TNK2/ACK1, human)	Kd	=	2200.0	nM	CHEMBL1144455	CHEMBL860662	Average Binding Constant for ACK1; NA=Not Active at 10 uM
+sunitinib (weak)	CHEMBL535	CHEMBL4599 (TNK2/ACK1, human)	Kd	=	8900.0	nM	CHEMBL1150977	CHEMBL1051355	Binding constant for TNK2 kinase domain
+sunitinib (weak)	CHEMBL535	CHEMBL4599 (TNK2/ACK1, human)	Kd	=	8900.0	nM	CHEMBL1908390	CHEMBL1908504	Binding constant for TNK2 kinase domain
+sunitinib (weak)	CHEMBL535	CHEMBL4599 (TNK2/ACK1, human)	Kd	>	30000.0	nM	CHEMBL3991601	CHEMBL3991914	Kinobeads (epsilon), multiple immobilized ATP-competitive broad spectrum kinase inhibitors, used to assess res
+sunitinib (weak)	CHEMBL535	CHEMBL4599 (TNK2/ACK1, human)	IC50	=	7830.0	nM	CHEMBL5260853	CHEMBL5265489	Inhibition of ACK1 (unknown origin)
+sunitinib (weak)	CHEMBL535	CHEMBL4599 (TNK2/ACK1, human)	Inhibition	=	33.0	%	CHEMBL5260853	CHEMBL5265490	Inhibition of ACK1 (unknown origin) at 10 uM relative to control
