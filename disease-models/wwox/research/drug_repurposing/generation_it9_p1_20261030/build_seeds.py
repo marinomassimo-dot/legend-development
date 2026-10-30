@@ -56,7 +56,7 @@ usable("Q1", "WWOX", "gene", "expression", "unchanged",
        "transcript reported comparable to reference lines (one bar per line, no n); together with the protein row it locates the bottleneck after transcription (translation or turnover), which is inferred, not measured",
        "NEED-WWOX-ENDOGENOUS-BOOST:O2 (PMID 29808465)", "human", "C", "expression")
 usable("Q1", "WWOX", "gene", "expression", "down",
-       "human; blood-derived cDNA, non-neural; c.517-2A>G homozygote (canonical splice-acceptor class, a different allele from the reference class's c.1057-2A>G)",
+       "human; blood-derived cDNA, non-neural; c.517-2A>G homozygote (canonical splice-acceptor class, a different allele from the reference class's splice-acceptor allele)",
        "full-length exon-6-containing product absent; only the shorter product (504 bp, interpreted as an 89 bp exon-6 deletion) found, whereas another genotype class shows two products; sequenced per the Methods",
        "NEED-WWOX-SPLICE-CORRECTION:O1 (PMID 30853297)", "human", "C", "expression")
 usable("Q1", "WWOX", "protein", "protein", "down",
@@ -85,7 +85,7 @@ reserved("Q1", "GO:0061684", "process", "function", "uncertain",
 unusable("Q1", "STATE:STABLE_BUT_INERT_MISSENSE", "state", "function", "down", "human; thyroid-carcinoma lines; p.Pro282Ala (stable, loses POLE4 binding and tumour-suppressive function)",
          "UNUSABLE_UNVERIFIED_CARRIED", "reported separation of stable-but-inert from unstable; assignment unverified at source, cancer-assay-dead is not neurologically null; a proband homozygous for both had no WWOX-related nervous-system disease",
          NR + ":O2 (PMID 41124647); FR-IT6P5:W09", "human", "D", "functional_effect")
-unusable("Q1", "WWOX", "gene", "function", "down", "human; in silico; c.1057-2A>G acceptor (reference-class worked example)", "UNUSABLE_PREDICTION_ONLY",
+unusable("Q1", "WWOX", "gene", "function", "down", "human; in silico; the reference class's canonical splice-acceptor allele (worked example)", "UNUSABLE_PREDICTION_ONLY",
          "SpliceAI acceptor loss 0.96, cryptic acceptor gain 0.64 at +8, MaxEntScan 7.28 to -0.67; no transcript measurement of this allele exists in the sources read",
          "NEED-WWOX-SPLICE-CORRECTION:O2", "human", "D", "prediction")
 unusable("Q1", "WWOX", "gene", "expression", "down", "human; in silico; 32 single-nucleotide stop-gained alleles of NM_016373.4 (ClinVar snapshot, undated)", "UNUSABLE_PREDICTION_ONLY",
