@@ -1044,6 +1044,14 @@ def latest_snapshot() -> tuple[Path | None, dict | None]:
     cands = sorted(d.glob("units_*.json"))
     if not cands:
         return None, None
+    # Several snapshots can share a date and the hash in the name has no order: the append order of changes.tsv is the record of which came last.
+    order = {}
+    ch = HERE / "changes.tsv"
+    if ch.exists():
+        for line in ch.read_text(encoding="utf-8").splitlines()[1:]:
+            sid = line.split("\t", 1)[0]
+            order.setdefault(sid, len(order))
+    cands.sort(key=lambda p: (order.get(p.stem, -1), p.name))
     return cands[-1], jload(cands[-1])
 
 

@@ -405,5 +405,23 @@ class WithTheView(unittest.TestCase):
             self.assertTrue(U[k].strip())
 
 
+class LatestSnapshotOrder(unittest.TestCase):
+    def test_latest_follows_append_order_not_the_hash_in_the_name(self):
+        with tempfile.TemporaryDirectory() as td:
+            from pathlib import Path
+            here = Path(td)
+            (here / "snapshots").mkdir()
+            for sid in ("units_2026-10-30_6361aaaa", "units_2026-10-30_35d7bbbb"):
+                (here / "snapshots" / (sid + ".json")).write_text(json.dumps({"id": sid}), encoding="utf-8")
+            (here / "changes.tsv").write_text("snapshot\tunit_id\nunits_2026-10-30_6361aaaa\tU01\nunits_2026-10-30_35d7bbbb\tU01\n", encoding="utf-8")
+            old = rk.HERE
+            rk.HERE = here
+            try:
+                path, data = rk.latest_snapshot()
+            finally:
+                rk.HERE = old
+            self.assertEqual(data["id"], "units_2026-10-30_35d7bbbb")
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=1)
