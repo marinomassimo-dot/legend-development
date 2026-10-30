@@ -76,9 +76,9 @@
    "steps": [
     {
      "step": "P7 sharing, licences, privacy residuals, Internet view delivery preparation, radar and hourly control verification",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "scientist-d",
-     "evidence": ""
+     "evidence": "merged; gate reads html/js/css/patch/diff/cff/example windowed (62 tests); licence table; operator request prepared; radar/hourly verified; gz blind spot open; reserved decisions 1-7 in README"
     }
    ]
   },
