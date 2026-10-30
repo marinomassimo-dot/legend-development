@@ -1556,7 +1556,7 @@
     },
     {
      "id": "O2",
-     "statement": "Human knockout fibroblast line: pyruvate dehydrogenase activity shows no knockout-versus-control difference in any oxygen x glucose condition, while lactate is higher in the knockout in all four conditions; no PDK activity or protein is measured.",
+     "statement": "Human knockout fibroblast line (a CRISPR/Cas9 sgRNA 'downregulation' line that the paper calls knockout): pyruvate dehydrogenase activity shows no knockout-versus-control difference in any oxygen x glucose condition, while lactate is higher in the knockout in all four conditions; PDK activity is reported unchanged and PDK transcript is significantly higher in the knockout line in normoxia and normoglycaemia (p below 0.05; isoform not stated in the sentence read), a third human system with PDK transcript up, non-neural (corrected 2026-10-30 from 'no PDK activity or protein is measured'; PDK protein is not measured).",
      "model_type": "cell_line",
      "species": "human",
      "genotype": "WWOX knockdown (the figure's knockout arm) versus control",
@@ -1567,7 +1567,7 @@
      "readout_level": "activity",
      "direction_observed": "PDH no difference (n unstated); lactate up in all four conditions; cytoplasmic HIF1alpha down in two of four conditions",
      "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
-     "limits": "Non-neural; n of the PDH panel not stated; non-significance is neither confirmation nor refutation. Non-neural (non-brain) cells: no transfer to neurons is implied.",
+     "limits": "Non-neural; n of the PDH panel not stated; non-significance is neither confirmation nor refutation. Non-neural (non-brain) cells: no transfer to neurons is implied. PDK transcript and activity re-read in the paper's full text 2026-10-30 (the manifest entry 8 reading 'no pdk activity or pdk protein is measured' is superseded for activity and transcript); the knockout line is CRISPR sgRNA downregulation of unquantified depth.",
      "pmid": "35328751",
      "locators": [
       {
@@ -1599,6 +1599,11 @@
        "manifest": "disease-models/wwox/research/deepdive_manifests/PMID35328751.json",
        "entry": 2,
        "anchor": "does not restore the lactate endpoint"
+      },
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/cards/I01_pdk_inhibition_dca_premise_seizure_glycaemia.card.json",
+       "anchor": "The PDK transcript sign therefore differs between a non-neural human line (up)"
       }
      ],
      "locator_status": "MANIFEST"
@@ -2621,7 +2626,7 @@
     },
     {
      "id": "O3",
-     "statement": "Spontaneous excitatory current amplitude differs little (control 23.3 +/- 12.0 pA versus knockout 24.7 +/- 13.6 pA). In the miniature (panel B) and spontaneous (panel F) excitatory amplitude distributions the curves run almost on top of one another and separate by a sliver, each marked with a single asterisk; the inhibitory amplitude panel is displaced across most of its width.",
+     "statement": "Mean spontaneous excitatory current amplitude differs little (control 23.3 +/- 12.0 pA versus knockout 24.7 +/- 13.6 pA), but the authors report an increased mEPSC amplitude distribution in the knockout (cumulative probability, Kolmogorov-Smirnov test on pooled events) and more large-amplitude sEPSCs (leftward shift of the distribution) with unchanged frequency; in the figure the excitatory curves separate by a sliver while the inhibitory amplitude panel is displaced across most of its width (corrected 2026-10-30 from 'slight separation only').",
      "model_type": "mouse_neuron_specific_knockout",
      "species": "mouse",
      "genotype": "Synapsin-Cre Wwox knockout versus control",
@@ -2630,9 +2635,9 @@
      "comparison": "knockout against control",
      "readout": "sEPSC and mEPSC amplitude",
      "readout_level": "functional",
-     "direction_observed": "excitatory amplitude: slight separation only; inhibitory amplitude: large decrease",
+     "direction_observed": "excitatory amplitude: distribution increased (mEPSC) and more large sEPSC events, means nearly equal; inhibitory amplitude: large decrease",
      "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
-     "limits": "Pooled events (KS test on events from 10 cells per genotype), not animals; no mEPSC amplitude values are carried by the manifest, and any 'raised mEPSC' reading rests on the card's reading of the paper's text and is not an asymmetry the figure supports.",
+     "limits": "Pooled events (KS test on events from 10 cells per genotype), not animals; no mEPSC amplitude values are carried by the manifest, so the increase rests on the paper's text (full text re-read 2026-10-30) and the cumulative-probability panel; the effect size on means is about six percent.",
      "pmid": "34634460",
      "locators": [
       {
@@ -2651,6 +2656,11 @@
        "manifest": "disease-models/wwox/research/deepdive_manifests/PMID34634460.json",
        "entry": 18,
        "anchor": "separate by a sliver"
+      },
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/generation_it9_p1_20261030/CHANGES.md",
+       "anchor": "NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR, observation O3"
       }
      ],
      "locator_status": "MANIFEST"
@@ -4808,7 +4818,7 @@
    "observed": [
     {
      "id": "O1",
-     "statement": "Systemic knockout hippocampus: IBA1 and GFAP area fractions are increased in CA1, CA3 and whole hippocampus (dentate unmarked); Il6, not Tnf-a, is significant by qPCR. (qPCR at n 4 per group in the registry's reading.)",
+     "statement": "Systemic knockout hippocampus: IBA1 and GFAP area fractions are increased in CA1, CA3 and whole hippocampus (dentate unmarked); Il6 and Tnf-a transcripts are both more than 1.5-fold up by qPCR (p below 0.05, n 4 per group; corrected 2026-10-30 from the earlier registry reading 'Il6, not Tnf-a', against the paper's Results 3.3 read in full text).",
      "model_type": "mouse_constitutive_knockout",
      "species": "mouse",
      "genotype": "mixed-background systemic knockout versus wild type",
@@ -4819,7 +4829,7 @@
      "readout_level": "protein",
      "direction_observed": "increased",
      "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
-     "limits": "Area fraction, not cell number; qPCR at n 4 per group (registry reading, map R-06); A systemic null is expected to be metabolically compromised (CLAIM 036), but that was measured in another knockout at P18 (a different Cre); it was not measured in this paper's knockout.",
+     "limits": "Area fraction, not cell number; qPCR at n 4 per group (paper Results 3.3, full text re-read 2026-10-30; the registry/map R-06 reading 'Il6 not Tnf-a' is superseded); A systemic null is expected to be metabolically compromised (CLAIM 036), but that was measured in another knockout at P18 (a different Cre); it was not measured in this paper's knockout.",
      "pmid": "30290271",
      "locators": [
       {
@@ -4838,6 +4848,11 @@
        "kind": "document",
        "path": "disease-models/wwox/analysis/mechanism_intervention_map.md",
        "anchor": "R-06 WWOX_DIRECT_EVIDENCE: Il6 not Tnf-a at n=4/group"
+      },
+      {
+       "kind": "document",
+       "path": "disease-models/wwox/research/drug_repurposing/generation_it9_p1_20261030/CHANGES.md",
+       "anchor": "NEED-NEUROINFLAMMATION-GLIA, observation O1"
       }
      ],
      "locator_status": "MANIFEST"

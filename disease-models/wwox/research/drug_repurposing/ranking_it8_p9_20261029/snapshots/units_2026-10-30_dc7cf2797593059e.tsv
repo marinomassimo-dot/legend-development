@@ -1,0 +1,31 @@
+unit_id	label	class	broad_group	partial_group
+U01	4-phenylbutyrate and bile-acid chemical chaperones (class)	ORD	G4b	-
+U02	Proteasome-inhibitor class (degradation blockade)	ORD	G4b	-
+U03	Client-binding pharmacological chaperone (SDR-domain ligand)	INSUFF	GU	-
+U04	ER-proteostasis regulators (IRE1/XBP1s, ERAD)	INSUFF	GU	-
+U05	HSP70-axis modulation	INSUFF	GU	-
+U06	PTC read-through agents, amlexanox and class	WEAK	G5	-
+U07	AAV9-delivered human WWOX (gene addition)	ORD	G1	G3
+U08	Splice-correcting antisense oligonucleotide / editing (splice-acceptor allele)	INSUFF	GU	-
+U09	Endogenous boost (CRISPRa or equivalent)	INSUFF	GU	-
+U10	A51, a multi-kinase inhibitor (experimental)	WEAK	GU	G3
+U11	Wnt-lowering (tankyrase-type) agents	INSUFF	GU	GU
+U12	Integrated-stress-response modulators (class)	ORD	-	G4b
+U13	LDH inhibition or lowering (stiripentol, LDHA tool compounds, oligonucleotide)	ORD	-	G4b
+U14	Dichloroacetate and PDK inhibition	ORD	-	G4b
+U15	Ketogenic diet (complex dietary intervention)	WEAK	-	G3
+U16	Cannabidiol (class level)	INSUFF	-	GU
+U17	Ethosuximide	ORD	-	G2b
+U18	ACTH, corticosteroids and phenobarbital-containing regimens (class level)	INSUFF	-	GU
+U19	mTOR-inhibitor class (sirolimus)	INSUFF	-	GU
+U20	Vigabatrin and GABA-aminotransferase inactivators	WEAK	-	G3
+U21	d-APV (a tool compound; the only agent with a WWOX readout) and the NMDAR/AMPAR class (memantine, perampanel, radiprodil and others are untested siblings)	ORD	-	G2b
+U22	Pro-myelinating agents (activity-dependent myelination sign problem)	INSUFF	-	GU
+U23	Bumetanide and the chloride gradient	INSUFF	-	GU
+U24	Lithium	ORD	-	G2b
+U25	Apinocaltamide (T-type calcium channel blocker, clinical-stage)	ORD	-	G4a
+U26	Glial-reactivity modulators (class)	INSUFF	-	GU
+U27	Extracellular magnesium (nutrient / supplement)	WEAK	-	G5
+X01	Developmental benefit or disease modification (axis)	EXCL	-	-
+X02	Growth endpoint (axis)	EXCL	-	-
+X03	Pharmacodynamic anchor (axis)	EXCL	-	-

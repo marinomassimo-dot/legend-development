@@ -391,7 +391,7 @@
   "evidence_for_and_against": {
    "for": [
     "d-APV abolishes bursting in the knockout slice, and the delayed evoked response is d-APV-sensitive at higher stimulus strengths.",
-    "Excitatory current amplitude is slightly higher in the knockout (sEPSC means 24.7 against 23.3 pA, about six percent, pooled-event tests; the mEPSC panel separates by a sliver); recorded at -70 mV in Mg2+, so AMPAR-weighted.",
+    "Excitatory current amplitude distribution is increased in the knockout (the authors report an increased mEPSC amplitude distribution and more large-amplitude sEPSCs, pooled-event Kolmogorov-Smirnov tests, frequency unchanged) while the sEPSC means are close (24.7 against 23.3 pA, about six percent); recorded at -70 mV in Mg2+, so AMPAR-weighted.",
     "A GluN2B-selective NAM is effective at most tested gain-of-function GRIN variants in vitro and in a gain-of-function knock-in mouse (abstract); memantine improvement in any domain in a GRIN series is concentrated in gain-of-function variants (mainly behaviour; seizure-frequency reduction was not significantly different)."
    ],
    "against": [
