@@ -95,3 +95,17 @@ brain is NOT fetched here); existing cards. Not in the profile: potency against 
 Thresholds (Z = 3, hub = 95th percentile, promiscuous = 5, Z cap = 20, class cap = 25 percent, 2 controls, 5 references) are judgment settings, not derived quantities; they are fixed here, not tuned on outcomes.
 The cluster/mechanism-group assignment is mechanical and coarse. HGNC group lookup and ChEMBL/ATC fields may fail for some ids: the state is then `UNKNOWN` and the F-test is `not evaluable` (the family stays eligible
 but flagged), never silently passed as 'feasible'.
+
+---
+
+## AMENDMENT 1 (2026-10-30, after step 1 of the pool build (`pool_build_it9_p3.py`: Z, main target, hop, degree), before any ChEMBL/ATC data, literature count or card match was looked at for a pool family, and before any family name was used)
+
+Seen: aggregate counts only. Pool = 778 distinct families (Q2 124, Q4 protein 52, Q5 160, Q6 491; Q6 expression and protein are one set with one MYC seed). Hub target (degree >= 60) is the main target of
+13 of 124 (Q2), 44 of 52 (Q4 protein), 96 of 160 (Q5) and 308 of 491 (Q6) proposals; all proposals are hops 1 to 3, none hop 0, none on a seed's own target. As written in section 2, 'hub target alone' would make
+nearly all Q4, Q5 and Q6 clusters artefact clusters and leave the quotas of section 5 unfillable. But the Z used for seed-specificity is already a degree-matched-seed null, in which random seeds reach hub targets
+as well, so a hub target is not by itself a failure of seed-specificity. Changes (all other rules unchanged):
+* **Hub target becomes a FLAG and a tie-break, not an exclusion** (key (d) of step 3 gains a first sub-key: non-hub main target before hub main target; it is reported in every table).
+* **Hub-artefact cluster (section 2) is redefined** as: main target is a hub target AND the median promiscuity of the cluster's members is 5 or more. Families that are individually promiscuous (>= 5 signed
+  targets) are flagged `promiscuous`; a promiscuous family can be selected only as an `artefact_control` (still at most 2 in total).
+* Step 1 of section 5 now reads: C = pool families not excluded by section 3, not seed-own-target, not `promiscuous`, and not in a hub-artefact cluster (new definition).
+The comparison 'which clusters are artefacts of hubs' is kept in `clusters.tsv` under both the original definition (hub target alone, column `hub_target_share`) and the amended one (column `hub_artefact_cluster`).
