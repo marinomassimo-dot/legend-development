@@ -35,7 +35,39 @@ U24	FAM:CAT:CHEMBL1201333	LITHIUM	G01_lithium_gsk3	identity	1	clinical_candidate
 U25	FAM:CAT:CHEMBL4217292	APINOCALTAMIDE	H01_apinocaltamide_ttype	identity	1	clinical_candidate	experimental	FAM:CAT:DGIDB:b811c040b8a4	molecule_family
 U25	INT:H01_apinocaltamide_ttype:tool	Apinocaltamide (triple T-type calcium channel blocker) as a discriminator of the ethosuximide result [tool or genetic subject]	H01_apinocaltamide_ttype	tool_subject					tool_compound_or_genetic_precedent_not_in_catalogue
 U26		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)	J01_glial_reactivity_modulation						mechanism_class
-U27		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)	P11_magnesium_nmdar_gate						nutrient_ion
+U27	FAM:CAT:CHEMBL1201230	MAGNESIUM	P11_magnesium_nmdar_gate	identity	1	marketed_unapproved_us	OTC; prescription; supplement	FAM:CAT:DGIDB:fd2b539388df	molecule_family
+U28	FAM:CAT:CHEMBL2338329	ROXADUSTAT	K01_hif_axis_glycolytic_shift	assertion_subject; named_member	1	approved_any_source	unknown/unverified	FAM:CAT:DGIDB:26eddfad55ce	molecule_family
+U28	FAM:CAT:CHEMBL4061538	PX-478 FREE BASE	K01_hif_axis_glycolytic_shift	assertion_subject; named_member	2	clinical_candidate	experimental		molecule_family
 X01		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)	EB-DEV-AX-01						axis_not_an_intervention
 X02		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)	EB-GROWTH-AX-01						axis_not_an_intervention
 X03		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)	EB-PDANCHOR-AX-01						axis_not_an_intervention
+U29		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)							it9_proposal
+U30		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)							it9_proposal
+U31		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)							it9_proposal
+U32		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)							it9_proposal
+U33		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)							it9_proposal
+U34		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)							it9_proposal
+U35		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)							it9_proposal
+U36		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)							it9_proposal
+U37		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)							it9_proposal
+U38		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)							it9_proposal
+U39		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)							it9_proposal
+U40		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)							it9_proposal
+U41		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)							it9_proposal
+U42		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)							it9_proposal
+U43		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)							it9_proposal
+U44		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)							it9_proposal
+U45		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)							it9_proposal
+U46		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)							it9_proposal
+U47		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)							it9_proposal
+U48		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)							it9_proposal
+U49		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)							it9_proposal
+U50		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)							it9_proposal
+U51		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)							it9_proposal
+U52		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)							it9_proposal
+U53		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)							it9_proposal
+U54		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)							it9_proposal
+U55		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)							it9_proposal
+U56		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)							it9_proposal
+U57		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)							it9_proposal
+U58		(no catalogue identity: class, modality or axis named in the card text; a name in prose attaches nothing)							it9_proposal

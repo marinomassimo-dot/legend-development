@@ -37,7 +37,7 @@ ROOT = HERE.parents[4]
 DR = HERE.parent
 sys.path.insert(0, str(ROOT / "framework" / "scripts"))
 
-RULES_VERSION = "R3"            # bump when a rule of this file changes meaning (reason class: method_revision)
+RULES_VERSION = "R4"            # bump when a rule of this file changes meaning (reason class: method_revision)
 SCHEMA = "legend.wwox.ranking/1"
 USABLE = DR / "usable_compounds_it7_p2_20261029"
 COMPARISON = DR / "pharmacological_comparison_it7_p5_20261029" / "comparison.tsv"
@@ -79,7 +79,7 @@ def is_spec_flag(f: str) -> bool:
 
 
 UNIT_TYPES = {"molecule": "molecule", "class_of_molecules": "class of molecules", "diet": "diet", "gene_therapy": "gene therapy / gene-based modality", "tool_compound": "tool compound",
-              "tool_compound_and_class": "tool compound + class of molecules", "not_an_intervention": "not an intervention (axis)"}
+              "tool_compound_and_class": "tool compound + class of molecules", "mechanism_probe": "mechanism probe (a compound or genetic tool used for a mechanism experiment, not a treatment)", "not_an_intervention": "not an intervention (axis)"}
 ORIGINS = {"known_track_before_it9": "known track from before IT9", "generated_in_it9": "generated in IT9", "reference_or_control": "reference or control"}
 CLASS_LEVEL_TYPES = ("class_of_molecules", "tool_compound_and_class")      # a result for a member or a tool is not a result for the other members
 NX_LEVELS = {"NX1": "decisive: the discriminating next experiment would change a decision (lift or stop)", "NX2": "informative: the next experiment resolves one limit, the decision moves one step at most",
@@ -177,6 +177,7 @@ def load_all() -> dict:
     }
     ctx["uncarded"] = read_tsv(HERE / "uncarded_items.tsv")
     ctx["caveats"] = read_tsv(HERE / "unit_caveats.tsv")
+    ctx["qualification_all"] = load_qualification()
     ctx["qualification"] = read_tsv(QUALIFICATION) if QUALIFICATION.exists() else []
     return ctx
 
@@ -776,12 +777,121 @@ def next_priority(va: dict) -> dict:
     return {"level": level, "level_text": NX_LEVELS[level], "stake": stake, "feasibility_flags": flags or ["unclear"], "feasibility_text": clip(txt, 200)}
 
 
+QUAL_SOURCES = [
+    ("P4b-a", "qualification_it9_p4b_a_20261030/qualification_q2_metabolism.tsv", {"promise": "biological_promise_given_seed_link_and_target_action", "depth": "depth_of_evidence", "feas": "feasibility", "prio": "priority_of_next_experiment", "nxt": "next_experiment", "fals": "falsifier", "datum": "decisive_datum", "unv": "unverified"}),
+    ("P4b-b", "qualification_it9_p4b_b_20261030/qualification_b.tsv", {"promise": "biological_promise", "depth": "depth_of_evidence", "feas": "feasibility", "prio": "priority_next_experiment", "nxt": "next_experiment", "fals": "falsifier", "datum": "decisive_datum", "unv": "unverified"}),
+    ("P4b-c", "qualification_it9_p4b_c_20261030/qualification_Q6_group.tsv", {"promise": "biological_promise", "depth": "evidence_depth", "feas": "feasibility", "prio": "next_experiment_priority", "nxt": "decisive_datum_or_next_experiment", "fals": "verification_readout", "datum": "decisive_datum_or_next_experiment", "unv": "unverified"}),
+    ("P4c-d", "qualification_it9_p4c_d_20261030/qualification_D.tsv", {"promise": "biological_promise", "depth": "depth_of_evidence", "feas": "feasibility", "prio": "priority_of_next_experiment", "nxt": "next_experiment", "fals": "falsifier", "datum": "decisive_datum", "unv": "unverified"}),
+    ("P4c-e", "qualification_it9_p4c_e_20261030/qualification_E.tsv", {"promise": "biological_promise", "depth": "depth_of_evidence", "feas": "feasibility", "prio": "priority_next_experiment", "nxt": "next_experiment", "fals": "falsifier", "datum": "decisive_datum", "unv": "unverified"}),
+]
+STATE_CLASS = {"KEEP": "ORD", "INCONCLUSIVE": "INSUFF", "DROP": "EXCL", "REFERENCE": "EXCL"}
+
+
+def load_qualification() -> dict:
+    """The five IT9 P4 qualification tables, read as stored: one record per candidate id (32 records)."""
+    out: dict[str, dict] = {}
+    for pk, rel, m in QUAL_SOURCES:
+        p = DR / rel
+        if not p.exists():
+            continue
+        for r in read_tsv(p):
+            d = r["decision"].upper()
+            state = "KEEP" if d.startswith("KEEP") else "INCONCLUSIVE" if d.startswith("INCONCLUSIVE") else "DROP" if d.startswith("DROP") else "REFERENCE" if d.startswith("REFERENCE") else "UNKNOWN"
+            out[r["cand_id"]] = {"cand_id": r["cand_id"], "package": pk, "name": r["name"], "decision": r["decision"], "state": state, **{k: r.get(v, "") for k, v in m.items()}}
+    return out
+
+
+def proposal_units(ctx: dict) -> tuple[list[dict], list[dict]]:
+    """Units for the IT9-qualified candidates that have no card (KEEP -> ordered as a proposal, INCONCLUSIVE -> still insufficiently evaluated, DROP and REFERENCE -> excluded from
+    this comparison with the reason). No WWOX-system result of any compound exists, so the documented PROPOSAL RULE gives a KEEP proposal the position F3 (target-based hypothesis,
+    nothing tested in WWOX) and the group G4b, and an INCONCLUSIVE one no position (GU, premise missing). Promise, depth and next-experiment priority stay separate."""
+    qual = load_qualification()
+    pm = read_tsv(HERE / "proposals_map.tsv")
+    for r in pm:
+        if r["cand_id"] not in qual:
+            raise SystemExit(f"proposals_map.tsv: {r['cand_id']} is not in a qualification table")
+        if r["unit_type"] not in UNIT_TYPES or r["origin"] not in ORIGINS:
+            raise SystemExit(f"proposals_map.tsv: {r['cand_id']} has an invalid type or origin")
+    by_unit: dict[str, list[dict]] = defaultdict(list)
+    for r in pm:
+        by_unit[r["unit_id"]].append(r)
+    needs = ctx["needs"]
+    units, records = [], []
+    for uid in sorted(by_unit):
+        rs = by_unit[uid]
+        qs = [qual[r["cand_id"]] for r in rs]
+        m0 = rs[0]
+        state = qs[0]["state"]
+        cls = STATE_CLASS[state]
+        nd = needs[m0["need"]]
+        obj = "broad" if nd["goal"] == "deep_recovery" else "partial"
+        join = lambda k, n=400: clip(" || ".join(dict.fromkeys(q[k] for q in qs if q[k])), n)
+        member = cls in ("ORD", "INSUFF")
+        lead = "F3" if cls == "ORD" else None
+        group = "G4b" if cls == "ORD" else "GU"
+        kind = "verificare un'ipotesi" if cls == "ORD" else "risolvere una premessa"
+        stake_nx = None
+        cand_ids = [q["cand_id"] for q in qs]
+        reason_cls = {"ORD": "KEEP-AS-PROPOSAL: the qualification keeps it as a proposal; no WWOX-system result of any compound exists, so the proposal rule gives the position F3 and the group G4b (target-based hypothesis, proposed, not performed)",
+                      "INSUFF": "INCONCLUSIVE: insufficient support, not no activity; the missing datum is named in the next experiment; not placed at the bottom and never ranked below an item shown unpromising",
+                      "EXCL": ("DROP: excluded from this comparison with the reason in the decisive datum (insufficient support for the proposal chain or the compound-to-target step; none is a finding that the compound is inactive)" if state == "DROP"
+                               else "REFERENCE-ONLY: a reference or control record, not a candidate; excluded from this comparison")}[cls]
+        va_next = {"kind": kind, "question": join("nxt"), "would_change": join("fals", 300), "feasibility": join("feas", 240), "need": m0["need"]}
+        lead_va = {"lead": lead, "group": group, "next": va_next}
+        npri = next_priority(lead_va) if member else None
+        trig = {"rise": "would rise if the next experiment returns what the proposal needs: " + join("nxt", 300), "fall": "falsifier: " + join("fals", 300),
+                "leave": "the gate or premise named in the next experiment fails, or the identity is corrected so that the evidence attaches to a different compound"}
+        view = {"member": False}
+        if member:
+            view = {"member": True, "declared": True, "group": group, "lead": lead, "lead_need": m0["need"], "positions": {m0["need"]: lead or "P1"}, "contested": False, "counter_needs": [],
+                    "evidence_quality": "no_wwox_test_target_hypothesis" if lead else "premise_missing", "group_reason": GROUPS[group][2],
+                    "evidence": {"in_wwox": False, "carrier_of_position": False, "id": "", "text": "none recorded for the compound in a WWOX system; the proposal rests on a WWOX-side seed observation and a compound-to-target action from other systems",
+                                 "scope": "", "species": "", "genotype": "", "depth": "", "pmids": [], "flags": [], "other_favourable_wwox_assertions": 0},
+                    "next": va_next, "triggers": trig, "criteria_not_met": ["a signed result of the intervention in a WWOX system exists"], "lead_summary": {"wwox_signs": {}, "wwox_null_harm_mixed": 0, "outside_favourable": 0, "outside_null_or_harm": 0},
+                    "next_priority": npri, "counter_statements": [join("datum", 400)] if cls == "ORD" else [], "objective_note": "", "view_note": "", "notes": [], "caveat_limits": [],
+                    "main_limit": clip(join("unv", 300) + " | decisive datum: " + join("datum", 300), 700)}
+        views = {"broad": view if obj == "broad" else {"member": False}, "partial": view if obj == "partial" else {"member": False}}
+        tx = f"decisive datum: {join('datum', 300)}"
+        comp = {"W_wwox_evidence": {"wwox_assertions": 0, "signs": {}, "wild_type_only_assertions": 0, "favourable_distinct_pmids": [], "read_beyond_abstract": 0, "l4_states": {},
+                                    "text": "none: no result of the compound in a WWOX system; the link to WWOX is a seed observation and a context-free network edge", "replication": "not applicable (no result)"},
+                "M_mechanism": {"families": [], "l1": {}, "l2": {}, "opposed_needs": [], "text": "generated proposal (IT9 seed-based engine): " + tx},
+                "T_transferability": {"track": ["A"], "species_of_wwox_assertions": ["none (no result in a WWOX system)"], "genotypes": [], "transfer_limits": [join("unv", 300)], "window_note": []},
+                "P_pharmacology": {"state": f"qualified in IT9 {qs[0]['package']} ({', '.join(cand_ids)}); promise {join('promise', 60)}; depth {join('depth', 80)}; potency in a WWOX system UNKNOWN",
+                                   "potency_with_assay_context": join("feas", 300), "human_exposure": "see the qualification record", "brain_penetration": "see the qualification record", "record": ", ".join(cand_ids)},
+                "X_counter_evidence": {"wwox_null_harm_mixed": 0, "outside_wwox_null_or_harm": 0, "need_level_counter_items": 0, "need_level_counter_items_note": "proposal without a card: counter-evidence is in the decisive datum",
+                                       "opposed_action_needs": [], "tags": [join("datum", 200)] if cls != "ORD" else []},
+                "U_uncertainty": {"linked_needs": 1 if member else 0, "measured_in_wwox_system": 0, "hypothesised_from_target": 1 if cls == "ORD" else 0, "mechanism_only_or_outside_counter": 0, "premise_missing": 1 if cls == "INSUFF" else 0,
+                                  "unknown": [join("unv", 300)], "text": "no WWOX-system result of the compound; what is unknown: " + join("unv", 200)}}
+        pathways = []
+        if member:
+            pathways = [{"need": m0["need"], "need_short": nd["short"], "thread": nd["thread"], "objective": obj, "need_direction": nd["dir"], "position": lead or "P1", "position_by_card": {}, "same_need_conflict": False,
+                         "link_evidence": "computational_prediction_generated_in_it9", "l1": {}, "l2": {}, "l3": {}, "l4": {}, "opposed_action": False,
+                         "computational_prediction": "seed-based engine (IT9 P2 v2/v3): a compatible-action prediction on a context-free network, not an effect", "wwox_observations_on_need": nd["n_wwox_obs"]}]
+        mt = "tool_compound" if m0["unit_type"] == "mechanism_probe" else "molecule"
+        mev = [{"member": m0["label"], "member_type": mt, "member_key": uid, "tested_in_wwox_system": "no", "wwox_assertions": 0, "signs": {}, "what": "no WWOX-system assertion: the compound has not been tested in any WWOX system; the entry is a generated, qualified hypothesis",
+                "source_pmids": [], "depth": "", "assertion_ids": [], "outside_wwox_assertions": 0}]
+        units.append({"unit_id": uid, "label": m0["label"], "kind": "it9_proposal", "unit_type": m0["unit_type"], "unit_type_label": UNIT_TYPES[m0["unit_type"]], "origin": m0["origin"], "origin_label": ORIGINS[m0["origin"]],
+                      "member_evidence": mev, "evidence_level_note": {"of_molecule": "no WWOX-system result of the compound (proposed, not performed)", "of_mechanism_or_class": "the WWOX-side link is a seed observation on " + nd["short"] + "; no mechanism-level WWOX result for the compound",
+                                                                       "untested_members": [m0["label"]], "attribution_rule": "single qualified candidate: no result is attributed to it from another compound or class"},
+                      "cards": [], "merge_reason": ("two qualification records of the same compound (" + ", ".join(cand_ids) + ") are one entry" if len(qs) > 1 else ""), "class": cls, "class_label": CLASSES[cls], "class_reason": reason_cls,
+                      "declared_goals": [nd["goal"]], "tracks": ["A"], "views": views, "components": comp, "evaluation_depth": "E3q", "evaluation_depth_text": f"IT9 {qs[0]['package']} qualification record ({', '.join(cand_ids)}), no card; depth as stated there: {join('depth', 160)}",
+                      "access": "not assessed here; the qualification record's feasibility field says: " + join("feas", 200), "access_categories": [], "access_items": [],
+                      "exploratory_it7": "generated in IT9 (seed-based engine); the IT7 P3 comparison is not used", "pathways": pathways, "members": [], "pmids": [], "receipts_on_cited_pmids": 0, "model_exclusions": [], "comparison_record": "",
+                      "depth_of_benefit_sought": "", "research_objective": "", "excluded_from_comparisons": [],
+                      "inputs": {"T1_cards": sha16([(q["cand_id"], q["decision"], q["datum"]) for q in qs]), "T2_pertinence": sha16([]), "T3_receipts": sha16([]), "T4_needs": sha16(nd["n_wwox_obs"], nd["dir"]),
+                                 "T5_pharmacology": sha16([(q["promise"], q["depth"], q["feas"], q["prio"]) for q in qs]), "T6_identity": sha16(cand_ids)},
+                      "caveats": {}, "abstention_cards": []})
+        for r, q in zip(rs, qs):
+            records.append({"cand_id": q["cand_id"], "package": q["package"], "compound": q["name"], "state": state, "decision": q["decision"], "unit_id": uid, "class": cls, "origin": m0["origin"], "need": m0["need"]})
+    return units, records
+
+
 def assemble(ctx: dict, cat: dict) -> dict:
     units = build_units(ctx, cat)
     known = {u["unit_id"] for u in units}
     cav: dict[str, dict[str, list]] = defaultdict(lambda: defaultdict(list))
     for r in ctx["caveats"]:
-        if r["unit_id"] not in known or r["kind"] not in ("limit", "counter", "question", "note", "objective_note", "view_note", "tool_name"):
+        if r["unit_id"] not in known or r["kind"] not in ("limit", "counter", "question", "note", "objective_note", "view_note", "tool_name", "next_question", "next_kind", "next_feasibility"):
             raise SystemExit(f"unit_caveats.tsv: invalid row {r['unit_id']} {r['kind']}")
         cav[r["unit_id"]][r["kind"]].append(r["text"])
     for u_ in units:
@@ -806,6 +916,10 @@ def assemble(ctx: dict, cat: dict) -> dict:
                 va["triggers"] = change_triggers(u, va, need)
                 va["criteria_not_met"] = criteria_not_met(u, need)
                 va["lead_summary"] = lead_need_summary(u, need)
+                cvx = cav.get(u["unit_id"], {})
+                if cvx.get("next_question"):
+                    va["next"] = dict(va["next"], question=cvx["next_question"][0], kind=(cvx.get("next_kind") or [va["next"].get("kind")])[0],
+                                      feasibility=(cvx.get("next_feasibility") or [va["next"].get("feasibility")])[0], would_change="")
                 va["next_priority"] = next_priority(va)
                 cv = cav.get(u["unit_id"], {})
                 if cv.get("question"):
@@ -841,7 +955,9 @@ def assemble(ctx: dict, cat: dict) -> dict:
             "depth_of_benefit_sought": clip(comp_row["depth_of_benefit_sought"], 260) if comp_row else "", "research_objective": clip(comp_row["research_objective"], 200) if comp_row else "",
             "inputs": inputs, "caveats": {k: v for k, v in sorted(cav.get(u["unit_id"], {}).items())}, "excluded_from_comparisons": exclusions, "abstention_cards": u["abstention_cards"],
         })
-    return {"units": out_units}
+    pu, precs = proposal_units(ctx)
+    keep_card = [{"cand_id": "E-01", "package": "P4c-e", "compound": "PX-478", "state": "KEEP", "decision": ctx["qualification_all"].get("E-01", {}).get("decision", ""), "unit_id": "U28", "class": "ORD", "origin": "generated_in_it9", "need": "NEED-PDH-PYRUVATE-AXIS"}]
+    return {"units": out_units + pu, "it9_records": sorted(precs + keep_card, key=lambda r: r["cand_id"])}
 
 
 # ------------------------------------------------------------------------------------------------------------------------ catalogue inventory
@@ -1155,6 +1271,11 @@ def build_all() -> dict[str, bytes]:
         "units": {"total_in_map": len(uni["units"]), "ranked_interventions": len(non_excl), "excluded_axes": cls_cnt.get("EXCL", 0), "by_class": {CLASSES[k]: cls_cnt.get(k, 0) for k in CLASSES},
                   "cards_covered": sum(len(u["cards"]) for u in uni["units"]), "cards_total": len(ctx["cands"]),
                   "orderable_in_a_group_of_the_selection": len({uid for v in sel.values() for uid in v["top"]}), "groups_by_objective": grp},
+        "it9": {"records_qualified": len(uni["it9_records"]), "distinct_compounds": len({r["unit_id"] for r in uni["it9_records"]}),
+                "by_state": dict(sorted(Counter(r["state"] for r in uni["it9_records"]).items())), "by_class": {CLASSES[k]: sum(1 for r in uni["it9_records"] if r["class"] == k) for k in CLASSES if any(r["class"] == k for r in uni["it9_records"])},
+                "units_by_origin": dict(sorted(Counter(u["origin"] for u in uni["units"] if u["class"] != "EXCL" or u["origin"] != "known_track_before_it9").items())),
+                "all_units_by_origin": dict(sorted(Counter(u["origin"] for u in uni["units"]).items())),
+                "ranked_by_origin": dict(sorted(Counter(u["origin"] for u in non_excl).items()))},
         "inventory": inv_sum, "deepening_queue_compounds": len(queue),
         "uncarded": {"items": len(unc), "by_class": {CLASSES[k]: sum(1 for r in unc if r["class"] == k) for k in CLASSES}, "by_provenance": dict(sorted(Counter(r["provenance"] for r in unc).items()))}, "selections": sel,
         "needs_total": need_total, "p3_note": "IT7 P3 results (network and signature comparison on 256 families) are exploratory, may not drive the ranking, and card-linked families were firewalled out of that comparison: no unit is ranked or re-ranked by them.",
@@ -1172,6 +1293,7 @@ def build_all() -> dict[str, bytes]:
               "signs": ", ".join(f"{n} {k}" for k, n in m["signs"].items()), "what": m["what"], "source_pmids": m["source_pmids"], "depth": m["depth"], "assertion_ids": m["assertion_ids"],
               "outside_wwox_assertions": m["outside_wwox_assertions"]} for u in uni["units"] if u["class"] != "EXCL" for m in u["member_evidence"]]
     files["member_evidence.tsv"] = tsv_bytes(mrows, ["unit_id", "unit_type", "member", "member_type", "tested_in_wwox_system", "wwox_assertions", "signs", "what", "source_pmids", "depth", "assertion_ids", "outside_wwox_assertions"])
+    files["it9_records.tsv"] = tsv_bytes(uni["it9_records"], ["cand_id", "package", "compound", "state", "decision", "unit_id", "class", "origin", "need"])
     files["triggers.tsv"] = tsv_bytes(triggers_rows(), ["trigger", "what", "detected_by", "re_evaluates", "reason_class_when_order_moves"])
     inv_cols = ["family_id", "name", "records", "origin", "modality", "status_class", "access_categories", "class", "evaluation_depth", "first_order", "needs_documented_target_link", "needs_pathway_member_only",
                 "needs_direction_consistent", "needs_opposed", "mnet_usable", "msig_neural_strict", "msig_any_context", "units", "name_twins_not_merged", "display_group", "display_group_size", "reason"]
@@ -1179,7 +1301,7 @@ def build_all() -> dict[str, bytes]:
     qrows = [{"display_group": q["display_group"], "names": q["names"], "family_ids": q["family_ids"], "needs": q["needs"], "wwox_observations_on_best_need": q["wwox_observations_on_best_need"],
               "status_class": q["status_class"], "access_categories": q["access_categories"], "mnet_usable": q["mnet_usable"], "msig_neural": q["msig_neural"], "units": q["units"], "shares_need_with_units": q["shares_need_with_units"], "why": q["why"]} for q in queue]
     files["deepening_queue.tsv"] = tsv_bytes(qrows, ["display_group", "names", "family_ids", "needs", "wwox_observations_on_best_need", "status_class", "access_categories", "mnet_usable", "msig_neural", "units", "shares_need_with_units", "why"])
-    ing = {"summary": summary, "units": uni["units"], "selection_table": srows, "deepening_queue_head": queue[:40], "uncarded": unc}
+    ing = {"summary": summary, "units": uni["units"], "selection_table": srows, "deepening_queue_head": queue[:40], "uncarded": unc, "it9_records": uni["it9_records"]}
     files["ranking.json"] = json_bytes(ing)
     # per-unit input digests (for the snapshot / diff mechanism)
     drows = [{"unit_id": u["unit_id"], **u["inputs"]} for u in uni["units"]]

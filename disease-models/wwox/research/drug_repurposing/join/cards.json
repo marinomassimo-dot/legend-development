@@ -5269,7 +5269,7 @@
       "partial_fulltext_read",
       "queried_not_full_read"
      ],
-     "digest": "59a774f7436df987",
+     "digest": "62ed92797e67dc02",
      "locators": 804,
      "origin_id": "N-05",
      "papers": 47,
@@ -6312,7 +6312,7 @@
        "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42397075.json",
        "pmid": "42397075",
        "reading_depth": "complete_fulltext_read",
-       "receipt_events": 10,
+       "receipt_events": 11,
        "receipt_id": "FTR-20260810-42397075-04",
        "repair_unverified": 1,
        "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
@@ -6448,7 +6448,7 @@
      "time_to_benefit": "UNKNOWN"
     }
    },
-   "input_sha256": "62f6755afae57b0b84cd59689b034ebdd1acce01d4c2aac315a57a3d374df63a",
+   "input_sha256": "1a1caff4e8c08347ff8dd6a6366f32d7b5656a953fbe5262b0cfca9ab12ee5f3",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -6473,7 +6473,7 @@
      "partial_fulltext_read",
      "queried_not_full_read"
     ],
-    "digest": "59a774f7436df987",
+    "digest": "62ed92797e67dc02",
     "locators": 804,
     "origin_id": "N-05",
     "papers": 47,
@@ -7516,7 +7516,7 @@
       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42397075.json",
       "pmid": "42397075",
       "reading_depth": "complete_fulltext_read",
-      "receipt_events": 10,
+      "receipt_events": 11,
       "receipt_id": "FTR-20260810-42397075-04",
       "repair_unverified": 1,
       "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
@@ -21219,7 +21219,7 @@
       "complete_fulltext_read",
       "partial_fulltext_read"
      ],
-     "digest": "a64269085975900a",
+     "digest": "d354600e77c8be1a",
      "locators": 618,
      "origin_id": "N-13",
      "papers": 30,
@@ -21859,7 +21859,7 @@
        "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42397075.json",
        "pmid": "42397075",
        "reading_depth": "complete_fulltext_read",
-       "receipt_events": 10,
+       "receipt_events": 11,
        "receipt_id": "FTR-20260810-42397075-04",
        "repair_unverified": 1,
        "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
@@ -22034,7 +22034,7 @@
      "time_to_benefit": "UNKNOWN"
     }
    },
-   "input_sha256": "2f718e3fb4d8fb5bc61219d45172841eb89da64165abe3e9354f306dda0952bb",
+   "input_sha256": "7b4ba010f44e8583c54e33e48d34baa21735c6d8a161b029f0910781b27feb39",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -22057,7 +22057,7 @@
      "complete_fulltext_read",
      "partial_fulltext_read"
     ],
-    "digest": "a64269085975900a",
+    "digest": "d354600e77c8be1a",
     "locators": 618,
     "origin_id": "N-13",
     "papers": 30,
@@ -22697,7 +22697,7 @@
       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42397075.json",
       "pmid": "42397075",
       "reading_depth": "complete_fulltext_read",
-      "receipt_events": 10,
+      "receipt_events": 11,
       "receipt_id": "FTR-20260810-42397075-04",
       "repair_unverified": 1,
       "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
@@ -37441,7 +37441,7 @@
       "partial_fulltext_read",
       "queried_not_full_read"
      ],
-     "digest": "dc48d2a37596b077",
+     "digest": "d4d7a22d14d6be39",
      "locators": 817,
      "origin_id": "R-06",
      "papers": 39,
@@ -38436,7 +38436,7 @@
        "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42397075.json",
        "pmid": "42397075",
        "reading_depth": "complete_fulltext_read",
-       "receipt_events": 10,
+       "receipt_events": 11,
        "receipt_id": "FTR-20260810-42397075-04",
        "repair_unverified": 1,
        "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",
@@ -38518,12 +38518,12 @@
     },
     "p4_roadmap_fields": {
      "indication_and_transfer": "class: IL-1β/NLRP3, MAPK/NF-κB or microglia-targeting agent",
-     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:566; evidence table digest dc48d2a37596b077"
+     "verification_scope": "derived by repurposing_join.py from disease-models/wwox/analysis/mechanism_intervention_map.md:566; evidence table digest d4d7a22d14d6be39"
     },
     "route": "UNQUALIFIED",
     "schema_version": 1
    },
-   "input_sha256": "9a4e7f6041b41c18fe648ae5c2031fb195b8bfd32df86a8e39f48f237063c425",
+   "input_sha256": "a158a2f83f7c24cbb64ebe54ef2012e9aaf59bf8bea739809e0204673d91986e",
    "label_lookup": {
     "active_ingredient": "UNKNOWN",
     "client_version": "UNKNOWN",
@@ -38548,7 +38548,7 @@
      "partial_fulltext_read",
      "queried_not_full_read"
     ],
-    "digest": "dc48d2a37596b077",
+    "digest": "d4d7a22d14d6be39",
     "locators": 817,
     "origin_id": "R-06",
     "papers": 39,
@@ -39543,7 +39543,7 @@
       "manifest": "disease-models/wwox/research/deepdive_manifests/PMID42397075.json",
       "pmid": "42397075",
       "reading_depth": "complete_fulltext_read",
-      "receipt_events": 10,
+      "receipt_events": 11,
       "receipt_id": "FTR-20260810-42397075-04",
       "repair_unverified": 1,
       "scope_basis": "no curated assertion cites this reading; the system it studied is not qualified here",

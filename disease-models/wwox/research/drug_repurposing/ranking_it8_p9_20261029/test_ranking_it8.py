@@ -174,7 +174,7 @@ class RealData(unittest.TestCase):
                 self.assertTrue(any(p["position"] in ("F1", "F2", "F3") for p in u["pathways"]), u["unit_id"])
             if u["class"] == "WEAK":
                 self.assertFalse(any(p["position"] in ("F1", "F2", "F3") for p in u["pathways"]), u["unit_id"])
-        self.assertEqual({u["unit_id"] for u in self.uni["units"] if u["class"] == "EXCL"}, {"X01", "X02", "X03"})
+        self.assertEqual({u["unit_id"] for u in self.uni["units"] if u["class"] == "EXCL" and u["kind"] != "it9_proposal"}, {"X01", "X02", "X03"})
 
     def test_insufficient_is_not_at_the_bottom_and_names_the_missing_datum(self):
         for u in self.uni["units"]:
@@ -314,7 +314,8 @@ class RealData(unittest.TestCase):
         self.assertEqual(unit_by_label(self.uni, "Ketogenic")["unit_type"], "diet")
         self.assertEqual(unit_by_label(self.uni, "Ethosuximide")["unit_type"], "molecule")
         self.assertEqual(unit_by_label(self.uni, "d-APV")["unit_type"], "tool_compound_and_class")
-        self.assertEqual({u["origin"] for u in self.uni["units"]}, {"known_track_before_it9"})
+        self.assertEqual({u["origin"] for u in self.uni["units"] if u["cards"] and u["unit_id"] != "U28"}, {"known_track_before_it9"})
+        self.assertEqual({u["origin"] for u in self.uni["units"] if u["unit_id"] in ("U28", "U29")}, {"generated_in_it9"})
 
     def test_mutation_missing_or_invalid_type_or_origin_is_refused(self):
         for col, val in (("origin", ""), ("origin", "invented"), ("unit_type", ""), ("unit_type", "invented")):
@@ -365,6 +366,62 @@ class RealData(unittest.TestCase):
         before = {"U07": "G1", "U17": "G2b", "U24": "G2b", "U21": "G2b", "U10": "G3", "U15": "G3", "U20": "G3", "U25": "G4a"}
         got = {k: min(((rk.GROUP_ORDER.index(v["group"]), v["group"]) for v in by_id(self.uni, k)["views"].values() if v.get("member")))[1] for k in before}
         self.assertEqual(got, before)
+
+    def test_it9_candidates_enter_by_the_documented_rule(self):
+        qual = rk.load_qualification()
+        self.assertEqual(len(qual), 32)
+        self.assertEqual({q["state"] for q in qual.values()}, {"KEEP", "INCONCLUSIVE", "DROP", "REFERENCE"})
+        pm = rk.read_tsv(rk.HERE / "proposals_map.tsv")
+        self.assertEqual({r["cand_id"] for r in pm}, set(qual) - {"E-01"})        # E-01 (PX-478) is the card K01
+        units = {u["unit_id"]: u for u in self.uni["units"]}
+        for r in pm:
+            u = units[r["unit_id"]]
+            st = qual[r["cand_id"]]["state"]
+            self.assertEqual(u["class"], rk.STATE_CLASS[st], r["cand_id"])
+            self.assertEqual(u["origin"], r["origin"])
+            v = u["views"]["partial"]
+            if st == "KEEP":
+                self.assertEqual((v["group"], v["lead"]), ("G4b", "F3"), r["cand_id"])
+            elif st == "INCONCLUSIVE":
+                self.assertEqual(v["group"], "GU", r["cand_id"])
+            else:
+                self.assertFalse(v.get("member"), r["cand_id"])
+                self.assertTrue(u["class_reason"])
+            if st == "REFERENCE":
+                self.assertEqual(u["origin"], "reference_or_control")
+        k = units["U28"]
+        self.assertEqual((k["unit_type"], k["origin"], k["views"]["partial"]["group"]), ("mechanism_probe", "generated_in_it9", "G4b"))
+        self.assertEqual(len({r["unit_id"] for r in self.uni["it9_records"]}), 31)
+        self.assertEqual(len(self.uni["it9_records"]), 32)
+
+    def test_no_existing_group_moved_and_selections_unchanged(self):
+        snap = rk.jload(rk.HERE / "snapshots" / "units_2026-10-30_ba74e7d9792ea776.json")
+        for uid, old in snap["units"].items():
+            u = by_id(self.uni, uid)
+            self.assertEqual((u["views"]["broad"].get("group", "-"), u["views"]["partial"].get("group", "-"), u["class"]), (old["broad"], old["partial"], old["class"]), uid)
+        sel = rk.build_selections(self.uni)
+        self.assertEqual(sel["general"]["top"], ["U07", "U17", "U24", "U21", "U10", "U15", "U20", "U25"])
+        for u in self.uni["units"]:
+            if u["origin"] != "known_track_before_it9":
+                for v in u["views"].values():
+                    self.assertNotIn(v.get("group"), rk.IN_SELECTION[:4])          # a generated proposal is never selectable without a WWOX-system result
+
+    def test_mutation_candidate_state_and_coverage(self):
+        import unittest.mock as mock
+        qual = rk.load_qualification()
+        ctx = self.S["ctx"]
+        gone = {k: v for k, v in qual.items() if k != "P3-08"}
+        with mock.patch.object(rk, "load_qualification", return_value=gone):
+            with self.assertRaises(SystemExit):
+                rk.proposal_units(ctx)
+        flipped = {k: dict(v, state="DROP") if k == "P3-08" else v for k, v in qual.items()}
+        with mock.patch.object(rk, "load_qualification", return_value=flipped):
+            units, _ = rk.proposal_units(ctx)
+        self.assertEqual(next(u for u in units if u["unit_id"] == "U29")["class"], "EXCL")
+        flipped = {k: dict(v, state="KEEP") if k == "P3-03" else v for k, v in qual.items()}
+        with mock.patch.object(rk, "load_qualification", return_value=flipped):
+            units, _ = rk.proposal_units(ctx)
+        self.assertEqual(next(u for u in units if u["unit_id"] == "U32")["views"]["partial"]["group"], "G4b")      # belzutifan would be ordered only if its state changed
 
     def test_inventory_counts_reconcile(self):
         inv, summ = rk.inventory(self.S["ctx"], self.S["cat"], self.uni)

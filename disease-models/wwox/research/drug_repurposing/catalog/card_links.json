@@ -366,6 +366,24 @@
    ],
    "non_compound_ids_ignored": []
   },
+  "F04_nmdar_intervention_class": {
+   "card_files": [
+    "cards/F04_nmdar_intervention_class.card.json",
+    "cards/F04_nmdar_intervention_class.packet.json"
+   ],
+   "compound_ids_outside_catalogue": [
+    "CHEMBL1135273",
+    "CHEMBL1143579",
+    "CHEMBL6083260"
+   ],
+   "links": [],
+   "non_compound_ids_ignored": [
+    "CHEMBL1135273",
+    "CHEMBL1143579",
+    "CHEMBL6083260"
+   ],
+   "unmatched_reason": "no compound identifier in the card text and no curator declaration; name similarity is not used"
+  },
   "G01_lithium_gsk3": {
    "card_files": [
     "cards/G01_lithium_gsk3.card.json",
@@ -454,6 +472,66 @@
    ],
    "non_compound_ids_ignored": [
     "CHEMBL13960"
+   ]
+  },
+  "J01_glial_reactivity_modulation": {
+   "card_files": [
+    "cards/J01_glial_reactivity_modulation.card.json",
+    "cards/J01_glial_reactivity_modulation.packet.json"
+   ],
+   "compound_ids_outside_catalogue": [],
+   "links": [],
+   "non_compound_ids_ignored": [],
+   "unmatched_reason": "no compound identifier in the card text and no curator declaration; name similarity is not used"
+  },
+  "K01_hif_axis_glycolytic_shift": {
+   "card_files": [
+    "cards/K01_hif_axis_glycolytic_shift.card.json",
+    "cards/K01_hif_axis_glycolytic_shift.packet.json"
+   ],
+   "compound_ids_outside_catalogue": [
+    "CHEMBL4061538",
+    "CHEMBL4117516"
+   ],
+   "links": [
+    {
+     "catalogue_id": "CAT:CHEMBL4117516",
+     "chembl_id": "CHEMBL4117516",
+     "role": "named_member",
+     "rule": "curator_declared_identifier (card_identity_declarations.tsv); curator (scientist-c, 2026-10-30) took the ChEMBL id of PX-478 free base from the IT9 P4c-e identity table (verified by structure: InChIKey equals PubChem CID 11234795); the salt record CHEMBL4061538 is the same family and is not asserted separately; ChEMBL id of the record, not a name-similarity score"
+    },
+    {
+     "catalogue_id": "CAT:CHEMBL2338329",
+     "chembl_id": "CHEMBL2338329",
+     "role": "named_member",
+     "rule": "curator_declared_identifier (card_identity_declarations.tsv); curator (scientist-c, 2026-10-30) took the ChEMBL id of roxadustat from the IT9 P4c-e identity table (verified by InChIKey); named as the direction control of the card, not as a lever; ChEMBL id of the record, not a name-similarity score"
+    }
+   ],
+   "non_compound_ids_ignored": [
+    "CHEMBL4061538",
+    "CHEMBL4117516"
+   ]
+  },
+  "P11_magnesium_nmdar_gate": {
+   "card_files": [
+    "cards/P11_magnesium_nmdar_gate.card.json",
+    "cards/P11_magnesium_nmdar_gate.packet.json"
+   ],
+   "compound_ids_outside_catalogue": [
+    "CHEMBL1201230",
+    "CHEMBL3989857"
+   ],
+   "links": [
+    {
+     "catalogue_id": "CAT:CHEMBL1201230",
+     "chembl_id": "CHEMBL1201230",
+     "role": "identity",
+     "rule": "curator_declared_identifier (card_identity_declarations.tsv); curator (scientist-b, 2026-10-29) read the compound name in the card packet and took the ChEMBL id whose pref_name equals it exactly in catalog.jsonl.gz [MAGNESIUM (element record; the sulfate CHEMBL3989857, citrate CHEMBL3989480 and other salts are separate entries and are not asserted; magnesium L-threonate has no catalogue entry)]; ChEMBL id of the record, not a name-similarity score"
+    }
+   ],
+   "non_compound_ids_ignored": [
+    "CHEMBL1201230",
+    "CHEMBL3989857"
    ]
   },
   "Q-N-01": {
@@ -785,9 +863,9 @@
    ]
   }
  },
- "cards_considered": 61,
- "cards_with_at_least_one_link": 21,
- "generated_utc": "2026-10-28T23:40:17Z",
+ "cards_considered": 65,
+ "cards_with_at_least_one_link": 23,
+ "generated_utc": "2026-10-30T12:24:06Z",
  "unmatched_cards": [
   "A02_proteasome_inhibitor_class",
   "A03_client_binding_chaperone",
@@ -807,6 +885,8 @@
   "EB-KD-01",
   "EB-PDANCHOR-AX-01",
   "F02_myelination_activity_sign",
+  "F04_nmdar_intervention_class",
+  "J01_glial_reactivity_modulation",
   "Q-N-01",
   "Q-N-02",
   "Q-N-03",

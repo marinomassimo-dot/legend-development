@@ -45,7 +45,7 @@
   "overlap_warning": "needs share targets (e.g. CACNA1G, ABAT); per-need counts must not be added: use the unions above",
   "pct_records_incl_pathway_members": {
    "denominator": 44211,
-   "numerator": 1510,
+   "numerator": 1513,
    "percent": 3.4,
    "what": "records with a headline OR pathway-member link / all catalogue records"
   },
@@ -79,8 +79,8 @@
   "touched_headline_families_with_a_name_twin_not_merged": 684,
   "union_headline_families": 1222,
   "union_headline_records": 1260,
-  "union_with_pathway_members_families": 1472,
-  "union_with_pathway_members_records": 1510
+  "union_with_pathway_members_families": 1475,
+  "union_with_pathway_members_records": 1513
  },
  "evaluated_vs_records": {
   "interventions_with_a_listed_pertinent_readout_assertion": 8,
@@ -111,47 +111,47 @@
  ],
  "matrix": {
   "L1_documented": 1342,
-  "L1_none_found": 13,
-  "L1_not_evaluable": 30,
+  "L1_none_found": 16,
+  "L1_not_evaluable": 29,
   "L1_states": {
    "documented": 1342,
-   "none_found": 13,
-   "not_evaluable": 30,
-   "pathway_member_only": 327
+   "none_found": 16,
+   "not_evaluable": 29,
+   "pathway_member_only": 330
   },
   "L2_coherent": 103,
   "L2_states": {
    "coherent": 103,
    "direction_unresolved": 400,
-   "none": 63,
-   "not_evaluable": 1133,
+   "none": 64,
+   "not_evaluable": 1137,
    "opposed": 13
   },
   "L3_observed": 10,
   "L3_states": {
-   "none_in_cards": 1681,
+   "none_in_cards": 1684,
    "observed_case_level_only": 2,
    "observed_wwox_system": 8,
-   "precedent_other_disease_only": 16,
-   "safety_signal_only": 1,
+   "precedent_other_disease_only": 17,
+   "safety_signal_only": 2,
    "target_engagement_only": 4
   },
   "L4_observed": 4,
   "L4_states": {
-   "none_in_record": 1708,
+   "none_in_record": 1713,
    "observed_case_level": 1,
    "observed_experimental": 3
   },
-  "cells_nonempty": 1712,
-  "cells_possible_rows_x_needs": 33132,
+  "cells_nonempty": 1717,
+  "cells_possible_rows_x_needs": 33242,
   "levels_are_never_summed": true,
   "row_kinds": {
-   "intervention_without_catalogue_identity": 15,
-   "molecule_family": 1480,
+   "intervention_without_catalogue_identity": 14,
+   "molecule_family": 1486,
    "non_molecule_intervention": 6,
    "tool_compound_or_genetic_precedent_not_in_catalogue": 5
   },
-  "rows": 1506
+  "rows": 1511
  },
  "needs": {
   "count": 22,
@@ -795,8 +795,8 @@
       "records": 8
      },
      "pathway_member": {
-      "families": 146,
-      "records": 146
+      "families": 149,
+      "records": 149
      },
      "readout_marker": {
       "families": 22,
@@ -807,7 +807,8 @@
      "E03_pdk_inhibition_dca",
      "E04_ketogenic_lactate_axis",
      "EB-KD-01",
-     "I01_pdk_inhibition_dca_premise_seizure_glycaemia"
+     "I01_pdk_inhibition_dca_premise_seizure_glycaemia",
+     "K01_hif_axis_glycolytic_shift"
     ],
     "cells_L3_effect_in_wild_type_only": 0,
     "cells_L3_observed": 0,
@@ -822,7 +823,7 @@
     },
     "exploration_only": true,
     "families_consistent": 0,
-    "families_incl_pathway_members": 153,
+    "families_incl_pathway_members": 156,
     "families_opposed": 0,
     "families_with_both_consistent_and_opposed": 0,
     "families_with_documented_link": 8,
@@ -831,14 +832,14 @@
     "identity_guard_hits": 0,
     "link_targets": 4,
     "nonhuman_chembl_rows_set_aside": 0,
-    "records_incl_pathway_members": 153,
+    "records_incl_pathway_members": 156,
     "records_with_documented_link": 8,
     "target_kinds": {
      "intervention_target": 4,
-     "pathway_member": 3,
+     "pathway_member": 4,
      "readout_marker": 2
     },
-    "targets": 9,
+    "targets": 10,
     "wwox_system_observations": 2
    },
    "NEED-REDOX-OXIDATIVE-STRESS": {
@@ -1402,33 +1403,33 @@
   }
  },
  "observations": {
-  "assertions_listed_in_pertinence_table": 122,
+  "assertions_listed_in_pertinence_table": 126,
   "assertions_not_assessed_for_pertinence_not_counted": 6,
   "axis_cards_not_interventions": 3,
-  "card_interventions": 33,
-  "data_assertions_in_intervention_cards": 128,
+  "card_interventions": 34,
+  "data_assertions_in_intervention_cards": 132,
   "listed_by_evidence_kind": {
    "case_report_uninformative": 3,
    "case_report_wwox_clinical": 9,
    "effect_in_wild_type_arm": 2,
    "genotype_comparison_vs_wild_type": 4,
    "label_statement": 4,
-   "out_of_scope_endpoint": 4,
+   "out_of_scope_endpoint": 5,
    "readout_in_wwox_system": 18,
-   "readout_other_disease": 53,
-   "safety_signal": 12,
-   "target_engagement_assay": 18
+   "readout_other_disease": 54,
+   "safety_signal": 13,
+   "target_engagement_assay": 19
   },
   "listed_by_sign": {
-   "benefit": 49,
-   "harm": 17,
+   "benefit": 50,
+   "harm": 18,
    "mixed": 1,
    "normalised_vs_wild_type": 2,
    "not_normalised_vs_wild_type": 2,
    "null": 27,
    "partial_benefit": 6,
    "unquantified": 2,
-   "unresolved": 21
+   "unresolved": 23
   },
   "note": "an assertion is counted per (assertion, need) row of the pertinence table; L3/L4 cells count (row, need) pairs"
  },
@@ -1447,32 +1448,32 @@
   "by_disposition": {
    "consistent_mechanism_candidate": 103,
    "exploration_candidate": 232,
-   "insufficient_data": 360,
-   "no_catalogue_link_found": 10,
+   "insufficient_data": 361,
+   "no_catalogue_link_found": 11,
    "opposite_mechanism": 2,
-   "source_queried_without_result": 3
+   "source_queried_without_result": 5
   },
   "by_disposition_cells": {
    "consistent_mechanism_candidate": 103,
    "exploration_candidate": 232,
-   "insufficient_data": 360,
-   "no_catalogue_link_found": 10,
+   "insufficient_data": 361,
+   "no_catalogue_link_found": 11,
    "opposite_mechanism": 2,
-   "source_queried_without_result": 3
+   "source_queried_without_result": 5
   },
   "by_disposition_distinct_families_or_rows": {
    "consistent_mechanism_candidate": 103,
    "exploration_candidate": 224,
-   "insufficient_data": 321,
-   "no_catalogue_link_found": 8,
+   "insufficient_data": 322,
+   "no_catalogue_link_found": 9,
    "opposite_mechanism": 2,
-   "source_queried_without_result": 2
+   "source_queried_without_result": 4
   },
-  "exploration_flagged": 352,
+  "exploration_flagged": 356,
   "pairs_not_prioritised": {
-   "not_prioritised_no_card_no_coherence_no_approval_or_access": 1002
+   "not_prioritised_no_card_no_coherence_no_approval_or_access": 1003
   },
-  "records": 710
+  "records": 714
  },
  "schema": "legend.wwox.coverage/1",
  "search_completeness": {
