@@ -8,7 +8,7 @@ some record of edge a -> b has b alone as its target, and some record of edge b 
 are not constrained (a compound target may be a complex member; a seed gene may sit in a complex target). One flag: --junction on|off (default on;
 off reproduces v3 exactly).
 
-Same subcommands/options as ../../generation_it9_p2_20261030/v3/seed_engine_v3.py (run, tests, explain, selftest, --mode v3|all, --match adm).
+Subcommands run, tests, explain as in v3 (selftest and network-report are not supported: v3 selftest already fails on 3-tuple edges; use test_it10_p1.py), options --mode v3|all, --match adm. The admissible-in-degree null (--match adm) is still v3's degree and is not junction-aware.
 Not a new engine: v3 is loaded and two names are replaced (read_edges, Graph). A compatible action is not a predicted benefit.
 """
 import sys

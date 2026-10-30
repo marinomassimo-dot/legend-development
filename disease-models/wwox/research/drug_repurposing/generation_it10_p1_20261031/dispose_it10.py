@@ -49,8 +49,10 @@ def load_roles(path):
     for r in rd(path):
         if r["role_status"] not in ROLE_VOCAB or r["role_basis"] not in BASIS_VOCAB:
             raise SystemExit(f"{path}: closed vocabulary violated for {r['question_id']}: {r['role_status']}/{r['role_basis']}")
-        if r["role_status"] in ("harmful", "protective") and r["role_basis"] != "SOURCE_STATED":
-            raise SystemExit(f"{r['question_id']}: a harmful/protective role needs role_basis SOURCE_STATED (a leaning orders arms, it does not set a role)")
+        if r["role_status"] not in ("unknown", "not_applicable") and r["role_basis"] != "SOURCE_STATED":
+            raise SystemExit(f"{r['question_id']}: a {r['role_status']} role needs role_basis SOURCE_STATED (a leaning orders arms, it does not set a role)")
+        if r["role_status"] != "unknown" and r["role_status"] != "not_applicable" and not r.get("role_source", "").strip():
+            raise SystemExit(f"{r['question_id']}: role_source (a locator) is required when the role is stated")
         out[r["question_id"]] = r
     return out
 
@@ -77,34 +79,60 @@ def disposition(arm, role):
 ACC = re.compile(r"\b(GSE\d+|E-MTAB-\d+|PMID\s*\d+|system_id=[A-Za-z0-9_,]+)")
 
 
-def origin_key(seed):
-    """Reconstructable evidence origin of one P1 seed row, or ('', False) when it cannot be rebuilt.
-    Same accession/system id, or same PMID at the same readout level, is ONE origin. Different levels of one article are different
-    origins (complementary measures; the article is returned as origin_group). Not deduplicated by PMID alone."""
+def origin_keys(seed):
+    """Reconstructable evidence origins of one P1 seed row (a list: a seed that cites two articles carries two origins), each (key, reconstructable).
+    Same accession/system id, or same PMID at the same readout level, is ONE origin. Different levels of one article are different origins (complementary
+    measures). Not deduplicated by PMID alone. An unreconstructable origin stays its own and is flagged."""
     loc = seed["source_locator"]
+    txt = loc + " " + seed["context"]
     m = re.search(r"system_id=([A-Za-z0-9_,]+)", loc)
     if m:
-        return "SYS:" + ",".join(sorted(m.group(1).split(","))), True
-    g = re.findall(r"GSE\d+", loc + " " + seed["context"])
+        return [("SYS:" + ",".join(sorted(m.group(1).split(","))), True)]
+    g = sorted({x.upper() for x in re.findall(r"gse\d+", txt, flags=re.I)})
     if g:
-        return "ACC:" + ",".join(sorted(set(g))) + "|" + seed["level"], True
-    p = re.findall(r"PMID\s*(\d+)", loc)
-    if len(p) == 1:
-        return f"PMID:{p[0]}|{seed['level']}", True
+        return [("ACC:" + ",".join(g) + "|" + seed["level"], True)]
+    p = set()
+    for mm in re.finditer(r"PMIDs?\s*", loc):
+        seg = re.split(r"[;)]", loc[mm.end():mm.end() + 80])[0]
+        p |= set(re.findall(r"(?<![-\d])(\d{7,8})(?![-\d])", seg))
+    p = sorted(p)
+    if p:
+        return [(f"PMID:{x}|{seed['level']}", True) for x in p]
     if "CM-IT7P4:" in loc or "SN-IT7P1:" in loc:
         sysm = re.findall(r"(ORG_KO|HNPC_KD|NEUR_KD|MS_HIP|MN_HIP|MNULL_HIP|MS_CTX|organoid_ko_w15|hnpc_shwwox)", loc)
         if sysm:
-            return "SYS:" + ",".join(sorted(set(s.lower() for s in sysm))), True
-    return "SEED:" + seed["seed_id"], False
+            return [("SYS:" + ",".join(sorted(set(x.lower() for x in sysm))), True)]
+    return [("SEED:" + seed["seed_id"], False)]
+
+
+def canonical_origins(seed):
+    """Fold the IT7 derived tables of the two human deposits (GSE156243 organoid, GSE126075 hNPC, neurons) to one origin. This is a judgement: two deposits read
+    with one method and one derivation count once, which makes 'no change' true for Q2 by construction; the fold is declared in the README and tested as intended."""
+    out = []
+    for k, ok in origin_keys(seed):
+        if re.search(r"organoid_ko_w15|hnpc_shwwox|org_ko|hnpc_kd|neur_kd|gse156243|gse126075", k.lower()):
+            k, ok = "DEPOSITS:GSE156243+GSE126075(+neurons)", True
+        out.append((k, ok))
+    return out
+
+
+_OVR = None
+
+
+def canonical_origins_checked(seed):
+    """canonical_origins minus the origins an override row removes (an observation that is not significant at its source does not count as an origin)."""
+    global _OVR
+    if _OVR is None:
+        _OVR = collections.defaultdict(set)
+        for r in rd(HERE / "origin_overrides.tsv"):
+            _OVR[r["seed_id"]].add(r["drop_origin"])
+    keep = [(k, ok) for k, ok in canonical_origins(seed) if k not in _OVR.get(seed["seed_id"], ())]
+    return keep or canonical_origins(seed)
 
 
 def canonical_origin(seed):
-    """Fold the IT7 derived tables (derived_gene_values / contrast map) of the two human deposits into one origin key."""
-    k, ok = origin_key(seed)
-    loc = seed["source_locator"]
-    if k.startswith("SYS:") and re.search(r"organoid_ko_w15|hnpc_shwwox|org_ko|hnpc_kd|neur_kd", k.lower()):
-        return "DEPOSITS:GSE156243+GSE126075(+neurons)", True
-    return k, ok
+    """first origin only (kept for callers that need one key)"""
+    return canonical_origins(seed)[0]
 
 
 def load_seed_index(seeds_dir_p1, p1_seeds):
@@ -134,7 +162,9 @@ def contributing_origins(contrib_rows, seed_index, set_name, frac=0.10):
             if s is None:
                 k, ok = "SEED:" + c["seed_id"], False
             else:
-                k, ok = canonical_origin(s)
+                for k, ok in canonical_origins_checked(s):
+                    origins.setdefault(k, ok)
+                continue
             origins.setdefault(k, ok)
     unrec = sum(1 for ok in origins.values() if not ok)
     note = ("origins: " + "; ".join(sorted(origins))[:160]) + (f"; {unrec} origin(s) not reconstructable" if unrec else "")
@@ -142,56 +172,76 @@ def contributing_origins(contrib_rows, seed_index, set_name, frac=0.10):
 
 
 def dev_scope(name, dev):
+    """Systemic-development limits and probe-level limits are reported side by side. ex_vivo_probe_eligible means no probe-scope row says it affects the probe;
+    a probe_specificity / probe_precondition row that affects the probe (affects_ex_vivo_probe = yes) adds a visible qualifier instead of hiding it."""
     hits = [d for d in dev if d["compound"].lower() in name.lower()]
     if not hits:
         return "unspecified"
-    sys_block = any(d["scope"] == "systemic_development" for d in hits)
-    ex_block = any(d["affects_ex_vivo_probe"] == "no" and d["scope"].startswith("probe") for d in hits)
-    ex = "ex_vivo_probe_eligible" if not ex_block else "ex_vivo_probe_blocked"
-    pre = any(d["scope"] == "probe_precondition" for d in hits)
-    return ("systemic_development_limited;" if sys_block else "") + ex + (";probe_precondition_open" if pre else "")
+    parts = []
+    if any(d["scope"] == "systemic_development" for d in hits):
+        parts.append("systemic_development_limited")
+    probe = [d for d in hits if d["scope"].startswith("probe")]
+    parts.append("ex_vivo_probe_with_confound(" + ",".join(sorted({d["scope"] for d in probe if d["affects_ex_vivo_probe"] == "yes"})) + ")"
+                 if any(d["affects_ex_vivo_probe"] == "yes" for d in probe) else "ex_vivo_probe_eligible")
+    if any(d["scope"] == "probe_precondition" for d in hits):
+        parts.append("probe_precondition_open")
+    return ";".join(parts)
 
 
 def norm(s):
     return re.sub(r"[^a-z0-9]+", "", s.lower())
 
 
+PHENO_ALIASES = {"d-apv": ["d-ap5", "apv", "aminophosphonovalerate", "aminophosphonovaleric"]}
+
+
+def member_tokens(member):
+    t = re.split(r"[ ,(]", member.strip().lower())[0]
+    return [t] + PHENO_ALIASES.get(t, [])
+
+
 def phenotype_first(v3_dir, dr, extra_path):
-    """Interventions with a signed functional result in a WWOX system (ranking member_evidence.tsv, tested_in_wwox_system = yes) plus the
-    curated extras; graph_status is computed against the v3 candidate tables and the full proposal tables, never required."""
+    """Interventions with a recorded WWOX-system result (ranking member_evidence.tsv, tested_in_wwox_system = yes; the admission rule is that, not a requirement that the
+    result be signed or fully read: depth and signs are carried as columns) plus curated extras. graph_status is computed per MEMBER by name, never per unit, and is
+    reported, not required: a salt or name twin that has a row is labelled NAME_TWIN_*, because twins are not merged."""
     me = rd(dr / "ranking_it8_p9_20261029" / "member_evidence.tsv")
-    um = rd(dr / "ranking_it8_p9_20261029" / "unit_members.tsv")
-    fam_by_unit = collections.defaultdict(list)
-    for r in um:
-        if r["family_id"].startswith("FAM:") and ("identity" in r["roles"] or "assertion_subject" in r["roles"] or "named_member" in r["roles"]):
-            fam_by_unit[r["unit_id"]].append((r["family_id"], r["name"]))
     specific = {}
     for f in glob.glob(str(v3_dir / "candidates_Q*.tsv")):
         for r in rd(f):
             if r["arm"] in ("opposes", "mimics") and r["seed_specific_all_three_nulls"] == "1":
-                specific[r["family_id"]] = (r["question"], r["arm"])
-    scored = {}
+                specific.setdefault(norm(r["name"]), []).append((r["question"], r["arm"]))
+    rows = collections.defaultdict(list)       # token-matchable proposal rows: (question, name, nonzero Q, direct hit)
     for f in glob.glob(str(v3_dir / "proposals_p1_*tiers*.tsv.gz")):
         if f.endswith(("_indeg.tsv.gz", "_adm.tsv.gz")):
             continue
         q = os.path.basename(f).split("_")[2]
         for r in rd(f, True):
-            if abs(float(r["Q_net_ind"] or 0)) > 0 or r["direct_hit_any_action_on_seed_gene"] == "1":
-                scored.setdefault(r["family_id"], set()).add(q)
+            rows[norm(r["name"])].append((q, float(r["Q_net_ind"] or 0) != 0, r["direct_hit_any_action_on_seed_gene"] == "1"))
     out = []
     for r in me:
         if r["tested_in_wwox_system"].lower() != "yes":
             continue
-        fams = fam_by_unit.get(r["unit_id"], [])
         mt = r["member_type"]
+        toks = [norm(t) for t in member_tokens(r["member"])]
         if mt in ("gene_therapy", "diet"):
             gs = "OUT_OF_METHOD_MODALITY"
-        elif not fams:
+        elif r["unit_id"] == "U10":
             gs = "NOT_EXAMINABLE_NO_CATALOGUE_IDENTITY"
         else:
-            spec = [specific[f] for f, _ in fams if f in specific]
-            sc = sorted({q for f, _ in fams for q in scored.get(f, ())})
-            gs = ("IN_SEED_SPECIFIC_ARM:" + ";".join(f"{q}/{a}" for q, a in spec)) if spec else (("SCORED_NOT_SPECIFIC:" + ",".join(sc)) if sc else "NO_GRAPH_ROW")
+            names = [n for n in rows if any(n == t or n.startswith(t) for t in toks)]
+            spec = sorted({f"{q}/{a}" for n in names for q, a in specific.get(n, [])})
+            nz = sorted({q for n in names for q, nzq, _ in rows[n] if nzq})
+            dh = sorted({q for n in names for q, _, d in rows[n] if d})
+            if spec:
+                gs = "IN_SEED_SPECIFIC_ARM:" + ";".join(spec)
+            elif nz:
+                gs = "SCORED_NOT_SPECIFIC:" + ",".join(nz)
+            elif dh:
+                gs = "DIRECT_HIT_ZERO_SCORE:" + ",".join(dh)
+            else:
+                gs = "NO_GRAPH_ROW"
+            if names and not spec and any(n not in toks for n in names) and not gs.startswith("NO_GRAPH_ROW"):
+                gs = "NAME_TWIN_" + gs
         out.append(dict(source="member_evidence", unit_id=r["unit_id"], intervention=r["member"], member_type=mt, wwox_signs=r["signs"], readout=r["what"],
                         depth=r["depth"], pmids=r["source_pmids"], graph_status=gs, entry="PHENOTYPE_FIRST"))
     if extra_path and Path(extra_path).exists():
@@ -245,6 +295,7 @@ def build(v3, DR):
     it9 = {norm(r["compound"]): r for r in rd(DR / "ranking_it8_p9_20261029" / "it9_records.tsv")}
     p1 = rd(DR / "generation_it9_p1_20261030" / "seeds.tsv")
     sidx = load_seed_index(str(DR / "generation_it9_p2_20261030" / "seeds_p1"), p1)
+    rolereason = {norm(r["compound"]) for r in rd(HERE / "it9_role_dependent_reasons.tsv")}
     contrib_cache = {}
     n_by = collections.Counter()
     rows_out = collections.defaultdict(list)
@@ -254,6 +305,8 @@ def build(v3, DR):
             role = roles[q]
             arm = r["arm"]
             hyp, disp = disposition(arm, role)
+            if role["role_status"] == "not_applicable" and arm in ("opposes", "mimics"):
+                raise SystemExit(f"{q}: role not_applicable but the engine returned an {arm} row; state the role with a source")
             sn = r["seed_set"]
             if sn not in contrib_cache:
                 p = v3 / f"contributions_p1_{sn}.tsv.gz"
@@ -273,7 +326,7 @@ def build(v3, DR):
                         rec = v
                         break
             st9 = rec["state"] if rec else ""
-            recon = "REVIEW_ROLE_DEPENDENT_DROP" if (rec and rec["state"] == "DROP" and disp.startswith("CONDITIONAL_IF_PROTECTIVE") and arm == "mimics") else ""
+            recon = "REVIEW_ROLE_DEPENDENT_REASON" if (rec and norm(rec["compound"]) in rolereason and disp.startswith("CONDITIONAL_IF_PROTECTIVE") and arm == "mimics") else ""
             rows_out[q].append([q, sn, arm, r["rank"], r["family_id"], nm, hyp, disp, role["role_status"], role["resolving_measure"][:140], nrows, norig, onote,
                                 r["edge_chain_main_target_to_seed_1"][:90], dev_scope(nm, dev) if arm in ("opposes", "mimics") else "", st9, recon,
                                 r["evaluation_forbidden_on"], f"{os.path.basename(f)}#{arm}{r['rank']}"])
