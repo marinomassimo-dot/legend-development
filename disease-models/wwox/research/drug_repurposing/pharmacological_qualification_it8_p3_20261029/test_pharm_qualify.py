@@ -39,7 +39,7 @@ class T(unittest.TestCase):
         e02 = json.load(open(DRUG / "cards/E02_ldh_inhibition.card.json"))
         self.assertIn("IT8 P3 2026-10-29", json.dumps(e02))
         i01 = json.load(open(DRUG / "cards/I01_pdk_inhibition_dca_premise_seizure_glycaemia.card.json"))
-        self.assertIn("nanomolar potency", json.dumps(i01))
+        self.assertIn("more interpretable than dichloroacetate alone", json.dumps(i01))   # restated in IT9 P4a (was: nanomolar potency)
         f03 = json.load(open(DRUG / "cards/F03_bumetanide_chloride_gradient.card.json"))
         self.assertIn("ex vivo", json.dumps(f03))
         wo = json.load(open(DRUG / "view/work_order.json"))
