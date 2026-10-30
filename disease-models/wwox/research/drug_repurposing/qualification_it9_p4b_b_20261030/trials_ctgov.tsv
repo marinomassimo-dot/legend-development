@@ -1,0 +1,23 @@
+cand_id	name	query_term	query_kind	http	total_count	returned	nct_ids_listed
+P3-05	fosfestrol	fosfestrol	intr_only	200	3	3	NCT01389193;NCT03575702;NCT00699751
+P3-05	fosfestrol	fosfestrol	intr_x_neuro	200	0	0	
+P3-05	fosfestrol	diethylstilbestrol diphosphate	intr_only	200	0	0	
+P3-05	fosfestrol	diethylstilbestrol diphosphate	intr_x_neuro	200	0	0	
+P3-05	fosfestrol	diethylstilbestrol	intr_only	200	7	7	NCT01389193;NCT03575702;NCT04268628;NCT00699751;NCT00136526;NCT02217566;NCT00316927
+P3-05	fosfestrol	diethylstilbestrol	intr_x_neuro	200	0	0	
+P3-06	implitapide	implitapide	intr_only	200	3	3	NCT00079859;NCT00079846;NCT00080132
+P3-06	implitapide	implitapide	intr_x_neuro	200	0	0	
+P3-06	implitapide	BAY 13-9952	intr_only	200	0	0	
+P3-06	implitapide	BAY 13-9952	intr_x_neuro	200	0	0	
+P3-07	curcumin	curcumin	intr_only	200	397	100	
+P3-07	curcumin	curcumin	intr_x_neuro	200	2	2	NCT03254680;NCT04007224
+P3-08	belnacasan	belnacasan	intr_only	200	3	3	NCT00205465;NCT05164120;NCT01048255
+P3-08	belnacasan	belnacasan	intr_x_neuro	200	1	1	NCT01048255
+P3-08	belnacasan	VX-765	intr_only	200	3	3	NCT00205465;NCT01501383;NCT01048255
+P3-08	belnacasan	VX-765	intr_x_neuro	200	2	2	NCT01501383;NCT01048255
+P3-09	JTE-151	JTE-151	intr_only	200	0	0	
+P3-09	JTE-151	JTE-151	intr_x_neuro	200	0	0	
+P3-17	felbamate	felbamate	intr_only	200	5	5	NCT00034229;NCT01390909;NCT00404248;NCT03196466;NCT00552526
+P3-17	felbamate	felbamate	intr_x_neuro	200	3	3	NCT01390909;NCT03196466;NCT00552526
+P3-18	memantine	memantine	intr_only	200	271	100	
+P3-18	memantine	memantine	intr_x_neuro	200	25	25	NCT01592747;NCT01844427;NCT03553875;NCT01533493;NCT00586573;NCT01333865;NCT01592773;NCT02670161;NCT01592786;NCT01372449;NCT02304302;NCT04417543;NCT01054599;NCT05664464;NCT01364818;NCT03779672;NCT00872898;NCT00986115;NCT00240760;NCT02811627;NCT01999894;NCT01972074;NCT01078844;NCT02353130;NCT07531940

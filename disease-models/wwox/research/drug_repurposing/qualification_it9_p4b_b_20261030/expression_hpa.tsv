@@ -1,0 +1,18 @@
+gene	http	tissue_specificity	brain_nTPM_if_enriched	sc_specificity	sc_brain_cells_listed_nCPM	snRNA_brain_specificity	snRNA_listed_nCPM
+CASP1	200	Tissue enhanced	not listed	Cell type enhanced	none listed	Group enriched	central nervous system macrophage=38.9; endothelial cell=12.0; leukocyte=43.0
+EP300	200	Low tissue specificity	not listed	Cell type enhanced	none listed	Low cell type specificity	none listed
+ERN1	200	Tissue enhanced	not listed	Cell type enhanced	none listed	Cell type enriched	leukocyte=165.2
+ESR1	200	Tissue enhanced	not listed	Cell type enhanced	none listed	Low cell type specificity	none listed
+ESR2	200	Tissue enhanced	not listed	Cell type enhanced	none listed	Low cell type specificity	none listed
+GAD1	200	Group enriched	69.1	Group enriched	Brain inhibitory neurons=309.1; Oligodendrocyte progenitor cells=137.0; Other brain neurons=168.8	Cell type enhanced	cerebellar inhibitory=469.2; CGE interneuron=438.2; MGE interneuron=554.5; midbrain-derived inhibitory=529.1
+GAD2	200	Tissue enriched	65.4	Cell type enhanced	Brain inhibitory neurons=384.9; Other brain neurons=145.9	Group enriched	cerebellar inhibitory=446.8; CGE interneuron=533.6; eccentric medium spiny neuron=254.3; LAMP5-LHX6 and Chandelier=772.9; medium spiny neuron=397.4; MGE interneuron=455.0; midbrain-derived inhibitory=705.5; splatter=193.3
+GRIN2A	200	Tissue enriched	15.1	Cell type enhanced	Brain excitatory neurons=785.7; Brain inhibitory neurons=509.2; Oligodendrocytes=136.6	Low cell type specificity	none listed
+GRIN2B	200	Tissue enriched	6.8	Cell type enhanced	Brain excitatory neurons=677.9; Brain inhibitory neurons=895.2; Oligodendrocyte progenitor cells=253.8; Other brain neurons=372.0	Low cell type specificity	none listed
+GRIN2C	200	Tissue enriched	113.7	Cell type enhanced	Astrocytes=148.6; Brain excitatory neurons=32.4	Cell type enhanced	astrocyte=133.3; Bergmann glia=60.7; upper rhombic lip=99.1
+IL1B	200	Tissue enhanced	not listed	Cell type enhanced	none listed	Group enriched	central nervous system macrophage=27.1; leukocyte=6.9
+IL6	200	Tissue enhanced	not listed	Cell type enhanced	none listed	Group enriched	central nervous system macrophage=3.4; choroid plexus epithelial cell=2.1; endothelial cell=3.1; vascular associated smooth muscle cell=5.1
+MTTP	200	Group enriched	not listed	Group enriched	none listed	Group enriched	astrocyte=14.8; Bergmann glia=9.2; ependymal cell=30.4
+P4HB	200	Tissue enhanced	not listed	Cell type enhanced	none listed	Low cell type specificity	none listed
+RORC	200	Tissue enhanced	not listed	Cell type enhanced	none listed	Group enriched	choroid plexus epithelial cell=14.8; ependymal cell=21.7
+TNF	200	Tissue enhanced	not listed	Cell type enriched	Microglia=7.8	Group enriched	central nervous system macrophage=11.6; leukocyte=17.3
+XBP1	200	Tissue enhanced	not listed	Cell type enhanced	none listed	Cell type enhanced	leukocyte=66.6
