@@ -1,0 +1,4 @@
+needs: 23  observations: 94  locators: {'manifest': 131, 'document': 70, 'registry': 9, 'gap': 0}
+OK
+ 
+exit 0
