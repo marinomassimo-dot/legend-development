@@ -707,6 +707,31 @@ def member_evidence(u: dict) -> list[dict]:
     return res
 
 
+def matching_pilot(units: list[dict], cases: list[dict] | None = None) -> list[dict]:
+    """Small v3 pilot, projected by this ranking's existing generator. No score or
+    compound promotion: statements remain attributed to the actual member; development
+    requirements do not change the biological group or the research question.
+    Case notes are research interpretations of the linked cards, not new evidence.
+    """
+    if cases is None:
+        cases = jload(HERE / "matching_pilot_cases.json")
+    by_id = {u["unit_id"]: u for u in units}
+    out = []
+    for case in cases:
+        u = by_id[case["unit_id"]]
+        member = next(m for m in u["member_evidence"] if m["member_key"] == case["member_key"])
+        requirements = case["development_requirements"]
+        if any(r["state"] not in ("favorable", "unfavorable", "unknown") for r in requirements):
+            raise ValueError(f"unknown requirement state in {case['case_id']}")
+        out.append({**case, "evidence_of_this_member": {
+            k: member[k] for k in ("tested_in_wwox_system", "assertion_ids", "signs", "source_pmids", "depth", "outside_wwox_assertions")
+        }, "mechanism_context": u["evidence_level_note"]["of_mechanism_or_class"],
+            # These are scoped obstacles/questions, never a compound inactivity verdict.
+            "development_status": {state: [r["question"] for r in requirements if r["state"] == state]
+                                   for state in ("favorable", "unfavorable", "unknown")}})
+    return out
+
+
 def evidence_level_note(u: dict, mev: list[dict]) -> dict:
     """The two readable fields: evidence of the molecule(s) tested, and evidence of the mechanism or class, kept apart."""
     t = u["unit_type"]
@@ -1301,7 +1326,8 @@ def build_all() -> dict[str, bytes]:
     qrows = [{"display_group": q["display_group"], "names": q["names"], "family_ids": q["family_ids"], "needs": q["needs"], "wwox_observations_on_best_need": q["wwox_observations_on_best_need"],
               "status_class": q["status_class"], "access_categories": q["access_categories"], "mnet_usable": q["mnet_usable"], "msig_neural": q["msig_neural"], "units": q["units"], "shares_need_with_units": q["shares_need_with_units"], "why": q["why"]} for q in queue]
     files["deepening_queue.tsv"] = tsv_bytes(qrows, ["display_group", "names", "family_ids", "needs", "wwox_observations_on_best_need", "status_class", "access_categories", "mnet_usable", "msig_neural", "units", "shares_need_with_units", "why"])
-    ing = {"summary": summary, "units": uni["units"], "selection_table": srows, "deepening_queue_head": queue[:40], "uncarded": unc, "it9_records": uni["it9_records"]}
+    ing = {"summary": summary, "units": uni["units"], "selection_table": srows, "deepening_queue_head": queue[:40], "uncarded": unc, "it9_records": uni["it9_records"],
+           "matching_pilot": matching_pilot(uni["units"])}
     files["ranking.json"] = json_bytes(ing)
     # per-unit input digests (for the snapshot / diff mechanism)
     drows = [{"unit_id": u["unit_id"], **u["inputs"]} for u in uni["units"]]

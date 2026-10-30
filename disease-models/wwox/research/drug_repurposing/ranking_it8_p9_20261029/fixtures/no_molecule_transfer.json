@@ -1,0 +1,8 @@
+{
+  "unit_id": "U21",
+  "assertion_id": "DR-W2-001",
+  "tested_member": "INT:F01_glutamate_receptor_node:tool",
+  "untested_member": "FAM:CAT:CHEMBL1699",
+  "tested_case": "NMDA-tool",
+  "untested_case": "NMDA-member"
+}
