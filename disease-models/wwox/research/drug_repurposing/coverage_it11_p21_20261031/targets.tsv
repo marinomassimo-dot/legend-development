@@ -1,0 +1,71 @@
+molecule	family_id	family_name	target	signed_usable	mean_sign	hgnc_id	groups	scopes	family_flags	n_rows_any_action	network_out_edges	network_in_edges
+ethosuximide	FAM:CAT:CHEMBL696	ETHOSUXIMIDE	CACNA1G	1	-1.0000	HGNC:1394	ChEMBL	complex_or_group		1	0	1
+ethosuximide	FAM:CAT:CHEMBL696	ETHOSUXIMIDE	CACNA1H	1	-1.0000	HGNC:1395	ChEMBL	complex_or_group		1	0	6
+ethosuximide	FAM:CAT:CHEMBL696	ETHOSUXIMIDE	CACNA1I	1	-1.0000	HGNC:1396	ChEMBL	complex_or_group		1	0	0
+ethosuximide	FAM:CAT:DGIDB:6998a1a2d947	Ethosuximide	CACNA1G	1	-1.0000	HGNC:1394	DGIdb_other	unspecified		4	0	1
+ethosuximide	FAM:CAT:DGIDB:6998a1a2d947	Ethosuximide	CACNA1H	1	-1.0000	HGNC:1395	DGIdb_other	unspecified		2	0	6
+ethosuximide	FAM:CAT:DGIDB:6998a1a2d947	Ethosuximide	CACNA1I	1	-1.0000	HGNC:1396	DGIdb_other	unspecified		2	0	0
+ethosuximide	FAM:CAT:DGIDB:6998a1a2d947	Ethosuximide	CYP3A4	0						1	0	32
+ethosuximide	FAM:CAT:DGIDB:6998a1a2d947	Ethosuximide	SCN1A	0						1	0	16
+lithium	FAM:CAT:CHEMBL1200826	LITHIUM CARBONATE	GSK3A	1	-1.0000	HGNC:4616	ChEMBL	complex_or_group		1	6	7
+lithium	FAM:CAT:CHEMBL1200826	LITHIUM CARBONATE	GSK3B	1	-1.0000	HGNC:4617	ChEMBL	complex_or_group		1	35	58
+lithium	FAM:CAT:CHEMBL1200826	LITHIUM CARBONATE	IMPA1	1	-1.0000	HGNC:6050	ChEMBL	single_protein		1	0	0
+lithium	FAM:CAT:CHEMBL1201170	LITHIUM CITRATE ANHYDROUS	GSK3A	1	-1.0000	HGNC:4616	ChEMBL	complex_or_group		1	6	7
+lithium	FAM:CAT:CHEMBL1201170	LITHIUM CITRATE ANHYDROUS	GSK3B	1	-1.0000	HGNC:4617	ChEMBL	complex_or_group		1	35	58
+lithium	FAM:CAT:CHEMBL1201170	LITHIUM CITRATE ANHYDROUS	IMPA1	1	-1.0000	HGNC:6050	ChEMBL	single_protein		1	0	0
+lithium	FAM:CAT:DGIDB:be65bb20ae7f	Lithium	ABCB1	0						1	0	78
+lithium	FAM:CAT:DGIDB:be65bb20ae7f	Lithium	ADCY1	0						1	0	4
+lithium	FAM:CAT:DGIDB:be65bb20ae7f	Lithium	ADCY2	0						1	0	0
+lithium	FAM:CAT:DGIDB:be65bb20ae7f	Lithium	ASIC2	0						1	0	0
+lithium	FAM:CAT:DGIDB:be65bb20ae7f	Lithium	BCR	0						1	1	17
+lithium	FAM:CAT:DGIDB:be65bb20ae7f	Lithium	BDNF	0						1	0	35
+lithium	FAM:CAT:DGIDB:be65bb20ae7f	Lithium	CACNG2	0						1	0	0
+lithium	FAM:CAT:DGIDB:be65bb20ae7f	Lithium	CAMK2G	0						1	2	0
+lithium	FAM:CAT:DGIDB:be65bb20ae7f	Lithium	CREB1	0						1	345	15
+lithium	FAM:CAT:DGIDB:be65bb20ae7f	Lithium	CRY1	0						1	3	16
+lithium	FAM:CAT:DGIDB:be65bb20ae7f	Lithium	DRD2	0						1	1	13
+lithium	FAM:CAT:DGIDB:be65bb20ae7f	Lithium	EPHX2	0						1	0	8
+lithium	FAM:CAT:DGIDB:be65bb20ae7f	Lithium	FAM177A1	0						1	0	0
+lithium	FAM:CAT:DGIDB:be65bb20ae7f	Lithium	FAM178B	0						1	0	0
+lithium	FAM:CAT:DGIDB:be65bb20ae7f	Lithium	FAS	0						1	0	35
+lithium	FAM:CAT:DGIDB:be65bb20ae7f	Lithium	FKBP5	0						1	1	5
+lithium	FAM:CAT:DGIDB:be65bb20ae7f	Lithium	GADL1	0						1	0	0
+lithium	FAM:CAT:DGIDB:be65bb20ae7f	Lithium	GFAP	0						1	1	27
+lithium	FAM:CAT:DGIDB:be65bb20ae7f	Lithium	GNRH1	0						1	2	24
+lithium	FAM:CAT:DGIDB:be65bb20ae7f	Lithium	GRAMD1B	0						1	0	0
+lithium	FAM:CAT:DGIDB:be65bb20ae7f	Lithium	HSPA4	0						1	0	40
+lithium	FAM:CAT:DGIDB:be65bb20ae7f	Lithium	HTR1B	0						1	4	0
+lithium	FAM:CAT:DGIDB:be65bb20ae7f	Lithium	HTR2A	0						1	2	2
+lithium	FAM:CAT:DGIDB:be65bb20ae7f	Lithium	IL1B	0						1	0	70
+lithium	FAM:CAT:DGIDB:be65bb20ae7f	Lithium	INPP1	0						1	0	0
+lithium	FAM:CAT:DGIDB:be65bb20ae7f	Lithium	LMO2	0						1	27	9
+lithium	FAM:CAT:DGIDB:be65bb20ae7f	Lithium	MAPK14	0						1	12	14
+lithium	FAM:CAT:DGIDB:be65bb20ae7f	Lithium	MPO	0						1	0	21
+lithium	FAM:CAT:DGIDB:be65bb20ae7f	Lithium	MYC	0						1	695	149
+lithium	FAM:CAT:DGIDB:be65bb20ae7f	Lithium	MYO1H	0						1	0	0
+lithium	FAM:CAT:DGIDB:be65bb20ae7f	Lithium	NFE2L2	0						1	142	12
+lithium	FAM:CAT:DGIDB:be65bb20ae7f	Lithium	NTRK2	0						1	0	12
+lithium	FAM:CAT:DGIDB:be65bb20ae7f	Lithium	NTS	0						1	0	4
+lithium	FAM:CAT:DGIDB:be65bb20ae7f	Lithium	OR52E2	0						1	0	0
+lithium	FAM:CAT:DGIDB:be65bb20ae7f	Lithium	OR52J2P	0						1	0	0
+lithium	FAM:CAT:DGIDB:be65bb20ae7f	Lithium	OR52J3	0						1	0	0
+lithium	FAM:CAT:DGIDB:be65bb20ae7f	Lithium	RABEP1	0						1	0	0
+lithium	FAM:CAT:DGIDB:be65bb20ae7f	Lithium	SCN5A	0						1	0	24
+lithium	FAM:CAT:DGIDB:be65bb20ae7f	Lithium	SH2B1	0						1	4	2
+lithium	FAM:CAT:DGIDB:be65bb20ae7f	Lithium	SST	0						1	0	26
+lithium	FAM:CAT:DGIDB:be65bb20ae7f	Lithium	TNFRSF1B	0						1	0	26
+lithium	FAM:CAT:DGIDB:be65bb20ae7f	Lithium	TPH1	0						1	0	5
+lithium	FAM:CAT:DGIDB:50ccc7b5c33e	Lithium Carbonate	GSK3A	1	-1.0000	HGNC:4616	DGIdb_other	unspecified		1	6	7
+lithium	FAM:CAT:DGIDB:50ccc7b5c33e	Lithium Carbonate	GSK3B	1	-1.0000	HGNC:4617	DGIdb_other;GtoPdb	single_protein;unspecified		2	35	58
+lithium	FAM:CAT:DGIDB:50ccc7b5c33e	Lithium Carbonate	IMPA1	1	-1.0000	HGNC:6050	DGIdb_other;GtoPdb	single_protein;unspecified		2	0	0
+lithium	FAM:CAT:DGIDB:cfa5bd0a6c8c	Lithium Citrate	GSK3A	1	-1.0000	HGNC:4616	DGIdb_other	unspecified		1	6	7
+lithium	FAM:CAT:DGIDB:cfa5bd0a6c8c	Lithium Citrate	GSK3B	1	-1.0000	HGNC:4617	DGIdb_other	unspecified		1	35	58
+lithium	FAM:CAT:DGIDB:cfa5bd0a6c8c	Lithium Citrate	IMPA1	1	-1.0000	HGNC:6050	DGIdb_other	unspecified		1	0	0
+vigabatrin	FAM:CAT:CHEMBL89598	VIGABATRIN	ABAT	1	-1.0000	HGNC:23	ChEMBL	single_protein		1	0	0
+vigabatrin	FAM:CAT:DGIDB:358b8a817686	Vigabatrin	ABAT	1	-1.0000	HGNC:23	DGIdb_other;GtoPdb	single_protein;unspecified		5	0	0
+vigabatrin	FAM:CAT:DGIDB:358b8a817686	Vigabatrin	GABBR1	0						1	4	4
+vigabatrin	FAM:CAT:DGIDB:358b8a817686	Vigabatrin	SLC32A1	1	-1.0000	HGNC:11018	GtoPdb	single_protein		1	0	0
+d-APV	FAM:CAT:DGIDB:b0ca5cf2303c	D-Ap5	GRIN2A	1	-1.0000	HGNC:4585	GtoPdb	single_protein_among_siblings		1	3	6
+d-APV	FAM:CAT:DGIDB:b0ca5cf2303c	D-Ap5	GRIN2B	1	-1.0000	HGNC:4586	GtoPdb	single_protein_among_siblings		1	3	20
+d-APV	FAM:CAT:DGIDB:b0ca5cf2303c	D-Ap5	GRIN2C	1	-1.0000	HGNC:4587	GtoPdb	single_protein_among_siblings		1	3	6
+d-APV	FAM:CAT:DGIDB:b0ca5cf2303c	D-Ap5	GRIN2D	1	-1.0000	HGNC:4588	GtoPdb	single_protein_among_siblings		1	3	4

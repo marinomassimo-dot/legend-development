@@ -1,0 +1,7 @@
+usable families 13308 distinct signed target genes 2373
+genes with out-edges 864 in network at all 1882
+families with >=1 signed target with out-edge 8245 ; with target in network (examined) 12562
+ion-channel/receptor subunit (CACN|SCN|KCN|GRI|GABR|CHRN|HCN|GLR|P2RX|TRP) genes 201 with out-edge 12 in net 101
+GPCR-ish (HTR|DRD|ADR|OPR|CHRM|HRH|ADORA|GRM) genes 63 with out-edge 54 in net 58
+solute carrier (SLC) genes 80 with out-edge 1 in net 52
+CYP genes 33 with out-edge 0 in net 29
