@@ -1,0 +1,11 @@
+seed_set	examined	non_zero_v3	absQz_gt3_total	absQz_gt3_indeg	absQz_gt3_adm	robust_opposes_all_three_nulls	robust_mimics_all_three_nulls	T1	T2	T4_total	T4_adm	T5	T6	admissible_in_edges_to_seed_genes
+Q1_expression_tiersABC	12560	1305	21	14	0	0	0	True	True	NONE/NONE	NONE/NONE	True	True	7
+Q1_protein_tiersABC	12560	0	0	0	0	0	0	False	False	NONE/NONE	NONE/NONE	False	True	0
+Q2_expression_tiersAB	12560	2454	124	64	10	46	20	True	False	ADDS/ADDS	ADDS/ADDS	True	True	110
+Q3_expression_tiersAB	12560	2599	4	14	8	0	0	True	True	NONE/NONE	NONE/NONE	True	True	123
+Q4_expression_tiersAB	12560	1502	164	169	145	60	24	True	False	ADDS/ADDS	ADDS/ADDS	True	True	10
+Q4_protein_tiersAB	12560	1	0	0	0	0	0	True	False	NONE/NONE	NONE/NONE	False	True	0
+Q5_expression_tiersAB	12560	2867	295	259	190	189	166	True	True	ADDS/ADDS	ADDS/ADDS	True	True	282
+Q6_expression_tiersAB	12560	2628	350	359	307	296	247	True	True	ADDS/ADDS	ADDS/ADDS	True	True	109
+Q6_protein_tiersAB	12560	1005	154	197	98	118	59	True	True	ADDS/ADDS	ADDS/ADDS	True	True	40
+Q7_phospho_tiersAB	12560	2017	635	476	496	0	0	True	True	NONE/NONE	NONE/NONE	True	True	34

@@ -1,0 +1,9 @@
+question	seed_set	arm	rank	family_id	name	Z_ind_robust_total_null	Z_ind_robust_indeg_null	Z_ind_robust_adm_null	seed_specific_all_three_nulls	Q_net_ind	compatible_action	conditional_on_uncertain_seeds	also_found_by_direct_search	family_flags	contributing_seed_1	contributing_seed_2	edge_chain_main_target_to_seed_1	v2_status	evaluation_forbidden_on
+Q1	Q1_expression_tiersABC	direct_search	1	FAM:CAT:DGIDB:0bc1cf72f3bb	Sorafenib					0	unsigned_or_no_signed_direct_action		1	none	targets:WWOX		hop0 (target is the seed gene)	n/a	none
+Q1	Q1_expression_tiersABC	direct_search	2	FAM:CAT:DGIDB:925ab80c64cb	Gemcitabine						unsigned_or_no_signed_direct_action		1	none	targets:WWOX		hop0 (target is the seed gene)	n/a	
+Q1	Q1_expression_tiersABC	direct_search	3	FAM:CAT:DGIDB:eef19c54306d	Null						unsigned_or_no_signed_direct_action		1	none	targets:WWOX		hop0 (target is the seed gene)	n/a	
+Q1	Q1_expression_tiersABC	direct_search	4	FAM:CAT:DGIDB:f5e262598b4f	Recombinant Tumor Necrosis Factor Family Protein						unsigned_or_no_signed_direct_action		1	none	targets:WWOX		hop0 (target is the seed gene)	n/a	
+Q1	Q1_protein_tiersABC	direct_search	1	FAM:CAT:DGIDB:0bc1cf72f3bb	Sorafenib						unsigned_or_no_signed_direct_action		1	none	targets:WWOX		hop0 (target is the seed gene)	n/a	
+Q1	Q1_protein_tiersABC	direct_search	2	FAM:CAT:DGIDB:925ab80c64cb	Gemcitabine						unsigned_or_no_signed_direct_action		1	none	targets:WWOX		hop0 (target is the seed gene)	n/a	
+Q1	Q1_protein_tiersABC	direct_search	3	FAM:CAT:DGIDB:eef19c54306d	Null						unsigned_or_no_signed_direct_action		1	none	targets:WWOX		hop0 (target is the seed gene)	n/a	
+Q1	Q1_protein_tiersABC	direct_search	4	FAM:CAT:DGIDB:f5e262598b4f	Recombinant Tumor Necrosis Factor Family Protein						unsigned_or_no_signed_direct_action		1	none	targets:WWOX		hop0 (target is the seed gene)	n/a	

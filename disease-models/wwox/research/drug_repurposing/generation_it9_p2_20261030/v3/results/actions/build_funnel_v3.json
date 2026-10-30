@@ -1,0 +1,671 @@
+{
+ "counts": {
+  "rows_total": 106315,
+  "rows_no_hgnc_id": 9979,
+  "complex_rows_all_members_credited_unresolved": 234,
+  "chembl_rows_resolved_by_symbol_fallback": 182,
+  "complex_member_not_credited_usable_rows": 25,
+  "usable_rows_no_hgnc_id": 76,
+  "dgidb_rows_dropped_copy_of_uncredited_complex_member": 27,
+  "dgidb_usable_rows_dropped_copy_of_uncredited_complex_member": 24,
+  "rows_dropped_alias_collision": 72,
+  "families_total": 40268,
+  "families_with_signed_hgnc_target": 13308,
+  "prodrug_families": 350,
+  "prodrug_families_with_signed_target": 168,
+  "alias_collision_family_gene_pairs": 72,
+  "complex_member_not_credited_pairs": 36
+ },
+ "alias_collision": [
+  [
+   "FAM:CAT:CHEMBL1650595",
+   "AR-12",
+   "PDK1",
+   "PDPK1"
+  ],
+  [
+   "FAM:CAT:CHEMBL1723",
+   "ALFUZOSIN HYDROCHLORIDE",
+   "ADRA1A",
+   "ADRA1D"
+  ],
+  [
+   "FAM:CAT:CHEMBL39541",
+   "DOLASTATIN-10",
+   "TUBB",
+   "TUBB2A"
+  ],
+  [
+   "FAM:CAT:DGIDB:08ce59966000",
+   "Dasatinib Anhydrous",
+   "SLK",
+   "FYN"
+  ],
+  [
+   "FAM:CAT:DGIDB:0a2029c7abac",
+   "Alfuzosin",
+   "ADRA1A",
+   "ADRA1D"
+  ],
+  [
+   "FAM:CAT:DGIDB:0a2029c7abac",
+   "Alfuzosin",
+   "ADRA1A",
+   "ADRA1D"
+  ],
+  [
+   "FAM:CAT:DGIDB:14863088806e",
+   "Colchicine",
+   "TUBB",
+   "TUBB2A"
+  ],
+  [
+   "FAM:CAT:DGIDB:14863088806e",
+   "Colchicine",
+   "TUBB",
+   "TUBB2A"
+  ],
+  [
+   "FAM:CAT:DGIDB:175aae81ecd7",
+   "Dapiprazole",
+   "ADRA1A",
+   "ADRA1D"
+  ],
+  [
+   "FAM:CAT:DGIDB:175aae81ecd7",
+   "Dapiprazole",
+   "ADRA1A",
+   "ADRA1D"
+  ],
+  [
+   "FAM:CAT:DGIDB:241342d64e92",
+   "Silmitasertib",
+   "CSNK2A1",
+   "CSNK2A2"
+  ],
+  [
+   "FAM:CAT:DGIDB:241342d64e92",
+   "Silmitasertib",
+   "CSNK2A1",
+   "CSNK2A2"
+  ],
+  [
+   "FAM:CAT:DGIDB:241342d64e92",
+   "Silmitasertib",
+   "CSNK2A1",
+   "CSNK2A2"
+  ],
+  [
+   "FAM:CAT:DGIDB:264eff64a493",
+   "Naftopidil",
+   "ADRA1A",
+   "ADRA1D"
+  ],
+  [
+   "FAM:CAT:DGIDB:272cae54e81d",
+   "Midodrine",
+   "ADRA1A",
+   "ADRA1D"
+  ],
+  [
+   "FAM:CAT:DGIDB:272cae54e81d",
+   "Midodrine",
+   "ADRA1A",
+   "ADRA1D"
+  ],
+  [
+   "FAM:CAT:DGIDB:2aad4995e71a",
+   "Terazosin",
+   "ADRA1A",
+   "ADRA1D"
+  ],
+  [
+   "FAM:CAT:DGIDB:2aad4995e71a",
+   "Terazosin",
+   "ADRA1A",
+   "ADRA1D"
+  ],
+  [
+   "FAM:CAT:DGIDB:333bc60c0e83",
+   "Norepinephrine",
+   "ADRA1A",
+   "ADRA1D"
+  ],
+  [
+   "FAM:CAT:DGIDB:333bc60c0e83",
+   "Norepinephrine",
+   "ADRA1A",
+   "ADRA1D"
+  ],
+  [
+   "FAM:CAT:DGIDB:333bc60c0e83",
+   "Norepinephrine",
+   "ADRA1A",
+   "ADRA1D"
+  ],
+  [
+   "FAM:CAT:DGIDB:36d6354c5422",
+   "Abt-751",
+   "TUBB",
+   "TUBB2A"
+  ],
+  [
+   "FAM:CAT:DGIDB:36d6354c5422",
+   "Abt-751",
+   "TUBB",
+   "TUBB2A"
+  ],
+  [
+   "FAM:CAT:DGIDB:370ad84c6221",
+   "Tezampanel",
+   "GRIK2",
+   "GRIK5"
+  ],
+  [
+   "FAM:CAT:DGIDB:39ec0f2969b0",
+   "Aflibercept",
+   "PIGF",
+   "PGF"
+  ],
+  [
+   "FAM:CAT:DGIDB:39ec0f2969b0",
+   "Aflibercept",
+   "PIGF",
+   "PGF"
+  ],
+  [
+   "FAM:CAT:DGIDB:49197d67a5b7",
+   "Methoxamine",
+   "ADRA1A",
+   "ADRA1D"
+  ],
+  [
+   "FAM:CAT:DGIDB:49197d67a5b7",
+   "Methoxamine",
+   "ADRA1A",
+   "ADRA1D"
+  ],
+  [
+   "FAM:CAT:DGIDB:49197d67a5b7",
+   "Methoxamine",
+   "ADRA1A",
+   "ADRA1D"
+  ],
+  [
+   "FAM:CAT:DGIDB:5557b4e2f7ac",
+   "Epinephrine",
+   "ADRA1A",
+   "ADRA1D"
+  ],
+  [
+   "FAM:CAT:DGIDB:5557b4e2f7ac",
+   "Epinephrine",
+   "ADRA1A",
+   "ADRA1D"
+  ],
+  [
+   "FAM:CAT:DGIDB:5557b4e2f7ac",
+   "Epinephrine",
+   "ADRA1A",
+   "ADRA1D"
+  ],
+  [
+   "FAM:CAT:DGIDB:562fbe89975e",
+   "Ilorasertib",
+   "SLK",
+   "FYN"
+  ],
+  [
+   "FAM:CAT:DGIDB:6505fa3daab7",
+   "Paclitaxel",
+   "TUBB",
+   "TUBB2A"
+  ],
+  [
+   "FAM:CAT:DGIDB:6505fa3daab7",
+   "Paclitaxel",
+   "TUBB",
+   "TUBB2A"
+  ],
+  [
+   "FAM:CAT:DGIDB:67d1d8073330",
+   "Prazosin",
+   "ADRA1A",
+   "ADRA1D"
+  ],
+  [
+   "FAM:CAT:DGIDB:67d1d8073330",
+   "Prazosin",
+   "ADRA1A",
+   "ADRA1D"
+  ],
+  [
+   "FAM:CAT:DGIDB:72580f43d84e",
+   "Valemetostat",
+   "EZH1",
+   "EZH2"
+  ],
+  [
+   "FAM:CAT:DGIDB:7b74006f4e03",
+   "Ixabepilone",
+   "TUBB",
+   "TUBB2A"
+  ],
+  [
+   "FAM:CAT:DGIDB:7d5783f5ca55",
+   "Carvedilol",
+   "ADRA1A",
+   "ADRA1D"
+  ],
+  [
+   "FAM:CAT:DGIDB:7d5783f5ca55",
+   "Carvedilol",
+   "ADRA1A",
+   "ADRA1D"
+  ],
+  [
+   "FAM:CAT:DGIDB:7eaa8a0a5d76",
+   "Levosimendan",
+   "TNNC1",
+   "TNNI3"
+  ],
+  [
+   "FAM:CAT:DGIDB:7eaa8a0a5d76",
+   "Levosimendan",
+   "TNNC1",
+   "TNNI3"
+  ],
+  [
+   "FAM:CAT:DGIDB:828b4b9ddbca",
+   "Phenylephrine",
+   "ADRA1A",
+   "ADRA1D"
+  ],
+  [
+   "FAM:CAT:DGIDB:828b4b9ddbca",
+   "Phenylephrine",
+   "ADRA1A",
+   "ADRA1D"
+  ],
+  [
+   "FAM:CAT:DGIDB:828b4b9ddbca",
+   "Phenylephrine",
+   "ADRA1A",
+   "ADRA1D"
+  ],
+  [
+   "FAM:CAT:DGIDB:8643362103b5",
+   "Ascorbic Acid",
+   "SLC23A1",
+   "SLC23A2"
+  ],
+  [
+   "FAM:CAT:DGIDB:8643362103b5",
+   "Ascorbic Acid",
+   "SLC23A2",
+   "SLC23A1"
+  ],
+  [
+   "FAM:CAT:DGIDB:8b27150a0af5",
+   "Silodosin",
+   "ADRA1A",
+   "ADRA1D"
+  ],
+  [
+   "FAM:CAT:DGIDB:8b27150a0af5",
+   "Silodosin",
+   "ADRA1A",
+   "ADRA1D"
+  ],
+  [
+   "FAM:CAT:DGIDB:8b27150a0af5",
+   "Silodosin",
+   "ADRA1A",
+   "ADRA1D"
+  ],
+  [
+   "FAM:CAT:DGIDB:9342048459f0",
+   "Tamsulosin Hydrochloride",
+   "ADRA1A",
+   "ADRA1D"
+  ],
+  [
+   "FAM:CAT:DGIDB:9342048459f0",
+   "Tamsulosin Hydrochloride",
+   "ADRA1A",
+   "ADRA1D"
+  ],
+  [
+   "FAM:CAT:DGIDB:9342048459f0",
+   "Tamsulosin Hydrochloride",
+   "ADRA1A",
+   "ADRA1D"
+  ],
+  [
+   "FAM:CAT:DGIDB:b422e10c3d7c",
+   "Oxymetazoline Hydrochloride",
+   "ADRA1A",
+   "ADRA1D"
+  ],
+  [
+   "FAM:CAT:DGIDB:b422e10c3d7c",
+   "Oxymetazoline Hydrochloride",
+   "ADRA1A",
+   "ADRA1D"
+  ],
+  [
+   "FAM:CAT:DGIDB:b513aa4583e9",
+   "Ergoloid Mesylates, Usp",
+   "ADRA1A",
+   "ADRA1D"
+  ],
+  [
+   "FAM:CAT:DGIDB:b513aa4583e9",
+   "Ergoloid Mesylates, Usp",
+   "ADRA1A",
+   "ADRA1D"
+  ],
+  [
+   "FAM:CAT:DGIDB:b60fe1e20b1f",
+   "Phenoxybenzamine",
+   "ADRA1A",
+   "ADRA1D"
+  ],
+  [
+   "FAM:CAT:DGIDB:b60fe1e20b1f",
+   "Phenoxybenzamine",
+   "ADRA1A",
+   "ADRA1D"
+  ],
+  [
+   "FAM:CAT:DGIDB:b7fcd5bc18d0",
+   "Verubulin",
+   "TUBB",
+   "TUBB2A"
+  ],
+  [
+   "FAM:CAT:DGIDB:cb93cddaf888",
+   "Doxazosin Mesylate",
+   "ADRA1A",
+   "ADRA1D"
+  ],
+  [
+   "FAM:CAT:DGIDB:cb93cddaf888",
+   "Doxazosin Mesylate",
+   "ADRA1A",
+   "ADRA1D"
+  ],
+  [
+   "FAM:CAT:DGIDB:cd72c8d5ce76",
+   "Phentolamine",
+   "ADRA1A",
+   "ADRA1D"
+  ],
+  [
+   "FAM:CAT:DGIDB:d0792b78a53d",
+   "Mavacamten",
+   "MYH14",
+   "MYH7B"
+  ],
+  [
+   "FAM:CAT:DGIDB:d0c14bbd1182",
+   "Ephedrine",
+   "ADRA1A",
+   "ADRA1D"
+  ],
+  [
+   "FAM:CAT:DGIDB:d0c14bbd1182",
+   "Ephedrine",
+   "ADRA1A",
+   "ADRA1D"
+  ],
+  [
+   "FAM:CAT:DGIDB:d0c90462bb7d",
+   "Plinabulin",
+   "TUBB",
+   "TUBB2A"
+  ],
+  [
+   "FAM:CAT:DGIDB:dbe9f2f2ef42",
+   "Labetalol",
+   "ADRA1A",
+   "ADRA1D"
+  ],
+  [
+   "FAM:CAT:DGIDB:dbe9f2f2ef42",
+   "Labetalol",
+   "ADRA1A",
+   "ADRA1D"
+  ],
+  [
+   "FAM:CAT:DGIDB:e989d2187793",
+   "Sertindole",
+   "ADRA1A",
+   "ADRA1D"
+  ],
+  [
+   "FAM:CAT:DGIDB:e989d2187793",
+   "Sertindole",
+   "ADRA1A",
+   "ADRA1D"
+  ]
+ ],
+ "complex_not_credited": [
+  [
+   "FAM:CAT:CHEMBL1200694",
+   "SEVOFLURANE",
+   "GLRB",
+   "Glycine receptor (alpha-1/beta)"
+  ],
+  [
+   "FAM:CAT:CHEMBL1200733",
+   "DESFLURANE",
+   "GLRB",
+   "Glycine receptor (alpha-1/beta)"
+  ],
+  [
+   "FAM:CAT:CHEMBL1256",
+   "ISOFLURANE",
+   "GLRB",
+   "Glycine receptor (alpha-1/beta)"
+  ],
+  [
+   "FAM:CAT:CHEMBL1257",
+   "ENFLURANE",
+   "GLRB",
+   "Glycine receptor (alpha-1/beta)"
+  ],
+  [
+   "FAM:CAT:CHEMBL1341",
+   "METHOXYFLURANE",
+   "GLRB",
+   "Glycine receptor (alpha-1/beta)"
+  ],
+  [
+   "FAM:CAT:CHEMBL1762621",
+   "BARDOXOLONE METHYL",
+   "NFE2L2",
+   "Keap1/Nrf2"
+  ],
+  [
+   "FAM:CAT:CHEMBL2104975",
+   "MITRATAPIDE",
+   "P4HB",
+   "Microsomal triglyceride transfer protein"
+  ],
+  [
+   "FAM:CAT:CHEMBL2105662",
+   "LOMITAPIDE MESYLATE",
+   "P4HB",
+   "Microsomal triglyceride transfer protein"
+  ],
+  [
+   "FAM:CAT:CHEMBL2105804",
+   "IMPLITAPIDE",
+   "P4HB",
+   "Microsomal triglyceride transfer protein"
+  ],
+  [
+   "FAM:CAT:CHEMBL2402737",
+   "IDASANUTLIN",
+   "TP53",
+   "Tumour suppressor p53/oncoprotein Mdm2"
+  ],
+  [
+   "FAM:CAT:CHEMBL3125702",
+   "NAVTEMADLIN",
+   "TP53",
+   "Tumour suppressor p53/oncoprotein Mdm2"
+  ],
+  [
+   "FAM:CAT:CHEMBL3301672",
+   "ERITORAN TETRASODIUM",
+   "LY96",
+   "Toll-like receptor 4/MD-2"
+  ],
+  [
+   "FAM:CAT:CHEMBL3653256",
+   "SIREMADLIN",
+   "TP53",
+   "Tumour suppressor p53/oncoprotein Mdm2"
+  ],
+  [
+   "FAM:CAT:CHEMBL3989912",
+   "IBERDOMIDE HYDROCHLORIDE",
+   "RBX1",
+   "CRL4(CRBN) E3 ubiquitin ligase"
+  ],
+  [
+   "FAM:CAT:CHEMBL3989912",
+   "IBERDOMIDE HYDROCHLORIDE",
+   "CUL4A",
+   "CRL4(CRBN) E3 ubiquitin ligase"
+  ],
+  [
+   "FAM:CAT:CHEMBL3989912",
+   "IBERDOMIDE HYDROCHLORIDE",
+   "DDB1",
+   "CRL4(CRBN) E3 ubiquitin ligase"
+  ],
+  [
+   "FAM:CAT:CHEMBL3989912",
+   "IBERDOMIDE",
+   "RBX1",
+   "CRL4(CRBN) E3 ubiquitin ligase"
+  ],
+  [
+   "FAM:CAT:CHEMBL3989912",
+   "IBERDOMIDE",
+   "CUL4A",
+   "CRL4(CRBN) E3 ubiquitin ligase"
+  ],
+  [
+   "FAM:CAT:CHEMBL3989912",
+   "IBERDOMIDE",
+   "DDB1",
+   "CRL4(CRBN) E3 ubiquitin ligase"
+  ],
+  [
+   "FAM:CAT:CHEMBL4091801",
+   "ALRIZOMADLIN",
+   "TP53",
+   "Tumour suppressor p53/oncoprotein Mdm2"
+  ],
+  [
+   "FAM:CAT:CHEMBL410414",
+   "DIRLOTAPIDE",
+   "P4HB",
+   "Microsomal triglyceride transfer protein"
+  ],
+  [
+   "FAM:CAT:CHEMBL4297326",
+   "SLX-4090",
+   "P4HB",
+   "Microsomal triglyceride transfer protein"
+  ],
+  [
+   "FAM:CAT:CHEMBL43452",
+   "POMALIDOMIDE",
+   "RBX1",
+   "CRL4(CRBN) E3 ubiquitin ligase"
+  ],
+  [
+   "FAM:CAT:CHEMBL43452",
+   "POMALIDOMIDE",
+   "CUL4A",
+   "CRL4(CRBN) E3 ubiquitin ligase"
+  ],
+  [
+   "FAM:CAT:CHEMBL43452",
+   "POMALIDOMIDE",
+   "DDB1",
+   "CRL4(CRBN) E3 ubiquitin ligase"
+  ],
+  [
+   "FAM:CAT:CHEMBL468",
+   "THALIDOMIDE",
+   "RBX1",
+   "CRL4(CRBN) E3 ubiquitin ligase"
+  ],
+  [
+   "FAM:CAT:CHEMBL468",
+   "THALIDOMIDE",
+   "CUL4A",
+   "CRL4(CRBN) E3 ubiquitin ligase"
+  ],
+  [
+   "FAM:CAT:CHEMBL468",
+   "THALIDOMIDE",
+   "DDB1",
+   "CRL4(CRBN) E3 ubiquitin ligase"
+  ],
+  [
+   "FAM:CAT:CHEMBL3653256",
+   "SIREMADLIN SUCCINATE",
+   "TP53",
+   "Tumour suppressor p53/oncoprotein Mdm2"
+  ],
+  [
+   "FAM:CAT:CHEMBL6068337",
+   "LENALIDOMIDE HYDROCHLORIDE MONOHYDRATE",
+   "RBX1",
+   "CRL4(CRBN) E3 ubiquitin ligase"
+  ],
+  [
+   "FAM:CAT:CHEMBL6068337",
+   "LENALIDOMIDE HYDROCHLORIDE MONOHYDRATE",
+   "CUL4A",
+   "CRL4(CRBN) E3 ubiquitin ligase"
+  ],
+  [
+   "FAM:CAT:CHEMBL6068337",
+   "LENALIDOMIDE HYDROCHLORIDE MONOHYDRATE",
+   "DDB1",
+   "CRL4(CRBN) E3 ubiquitin ligase"
+  ],
+  [
+   "FAM:CAT:CHEMBL6068337",
+   "LENALIDOMIDE",
+   "RBX1",
+   "CRL4(CRBN) E3 ubiquitin ligase"
+  ],
+  [
+   "FAM:CAT:CHEMBL6068337",
+   "LENALIDOMIDE",
+   "CUL4A",
+   "CRL4(CRBN) E3 ubiquitin ligase"
+  ],
+  [
+   "FAM:CAT:CHEMBL6068337",
+   "LENALIDOMIDE",
+   "DDB1",
+   "CRL4(CRBN) E3 ubiquitin ligase"
+  ],
+  [
+   "FAM:CAT:CHEMBL931",
+   "HALOTHANE",
+   "GLRB",
+   "Glycine receptor (alpha-1/beta)"
+  ]
+ ]
+}

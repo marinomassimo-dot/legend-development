@@ -1,0 +1,2 @@
+HGNC complete set (genenames.org public download, storage.googleapis.com/public-download-files/hgnc/tsv/tsv/hgnc_complete_set.txt), fetched 2026-10-30, 45289 rows, sha256 d93ce6b22d01dc1e1ded28857246951d605ead47ed17ef973ad1142b1d13bed0
+Columns kept: hgnc_id symbol name status alias_symbol prev_symbol uniprot_ids. Licence: stated by HGNC as freely available (CC0); not independently re-verified here (UNVERIFIED).
