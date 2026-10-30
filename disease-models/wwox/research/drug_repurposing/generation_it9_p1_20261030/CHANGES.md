@@ -49,3 +49,7 @@ Schema: the 18 columns of seeds.tsv keep their names and order; two columns are 
 | total | 58/17/31 (+5 gaps) = 111 | 65/26/35 (+5 gaps) = 131 |
 
 Rows whose class, direction, level, question or entity changed: S003, S004, S005, S061, S063, S066, S067, S068, S069, S071, S075, S080, S081, S082, S083, S085, S100, S101, S102, S104 (plus text-only edits to many others; `change_ref` marks every touched row).
+
+## Follow-up (branch task/it9-p1n): the three needs statements were corrected
+
+NEED-NEUROINFLAMMATION-GLIA O1, NEED-PDH-PYRUVATE-AXIS O2 and NEED-EXCITATORY-GAIN-GLUTAMATE-RECEPTOR O3 in `needs/needs.json` now carry the corrected readings (document locators point at this file and at the I01 card). The J01 packet/card wording ("Il6 but not Tnf-a") and the F04 packet/card wording ("separates by a sliver") were corrected and rebuilt with the bridge; the I01, E03 and F01 cards already carried the correct reading. Seeds S030, S085, S086, S112, S113, S061 and S114 already say what the corrected statements say, so no seed row changed. Historical cycle folders (IT6 P10, IT6 P9, IT8 P4 classified inputs, the 2026-10-28 needs verification) keep their original wording as a record of what was read then.

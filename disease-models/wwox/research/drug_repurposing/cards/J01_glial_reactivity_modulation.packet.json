@@ -51,7 +51,7 @@
     "cell_type": "hippocampal subfields",
     "developmental_stage": "2 weeks"
    },
-   "measured_result_note": "Area fraction, not cell number; dentate gyrus unmarked; Il6 but not Tnf-a significant by qPCR; the paper records no seizure measurement for these animals and leaves cause versus consequence open.",
+   "measured_result_note": "Area fraction, not cell number; dentate gyrus unmarked; Il6 and Tnf-a both more than 1.5-fold up by qPCR (p below 0.05, n 4 per group; full text re-read 2026-10-30, correcting the earlier registry reading 'Il6 but not Tnf-a'); the paper records no seizure measurement for these animals and leaves cause versus consequence open.",
    "evidence_scope": "WWOX_EXPERIMENT_IN_DEE_SYSTEM",
    "receipt": "FTR-20260806-30290271-01"
   },
