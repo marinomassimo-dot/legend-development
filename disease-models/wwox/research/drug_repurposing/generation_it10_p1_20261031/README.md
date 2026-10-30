@@ -69,6 +69,8 @@ their stated reasons (provenance of the chain, identity, contradiction) and are 
 (ethosuximide, vigabatrin)**, d-APV is a direct hit with a zero score (Q4; its own family, status derived per member), and lithium has name twins (carbonate, citrate) that are scored but never seed-specific (Q2, Q5, Q6) and are direct hits with zero score on GSK3B (Q7). The graph recovered 0 of the 5 molecules in a seed-specific arm. This is a limit of the representation (zero signed
 edges to the readout), not a statement about the molecules; the phenotype-first arm is the route by which such candidates enter generation.
 
+> **Correction, IT11 (2026-10-31).** The sentence "the graph recovered 0 of the 5 molecules in a seed-specific arm" is wrong as written: `phenotype_first()` read the truncated candidate tables (top 50 opposes / 25 mimics per set). Read from the full seed-specific list, **lithium is a seed-specific `mimics` hit in Q6 expression under all three nulls** (four name-twin families, rank 67 to 70 of 232; z -12.1 / -8.9 / -6.4; the hit is MYC expression in a human seed through GSK3A -P-> NOTCH1 -T-> MYC, a single-gene set, and not the lead's mouse seizure readout, which lithium also lowered in wild-type panels). d-APV's "zero" is the indirect part only: it is a direct hit in the Q4 direct-search arm (Q_direct -0.5). Ethosuximide and vigabatrin have no path to any seed (sink nodes / not network nodes). See `coverage_it11_p21_20261031/`.
+
 ## 4. Tests (`test_it10_p1.py`, 31 tests, production code, with inverses)
 
 Junction rule on toy graphs (complex target blocks, complex source blocks, singleton junction unchanged, ends unconstrained, junction off equals v3 on the toy) and on the real network (the DMF chain exists with the filter off, and not with it on;

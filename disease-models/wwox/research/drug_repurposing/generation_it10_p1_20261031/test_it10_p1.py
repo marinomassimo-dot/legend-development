@@ -294,7 +294,7 @@ class PhenotypeFirst(unittest.TestCase):
         v3 = DR / "generation_it9_p2_20261030" / "v3" / "results"
         pf = {r["intervention"].split(",")[0].split(" (")[0]: r for r in dz.phenotype_first(v3, DR, None)}
         self.assertTrue(pf["Ethosuximide"]["graph_status"].startswith("NO_GRAPH_ROW"))
-        self.assertTrue(pf["Lithium"]["graph_status"].startswith("NAME_TWIN_SCORED_NOT_SPECIFIC"))     # salts are separate rows, scored, none seed-specific
+        self.assertTrue(pf["Lithium"]["graph_status"].startswith("IN_SEED_SPECIFIC_ARM:Q6"))      # IT11: salts are separate rows; the full list holds them as Q6 mimics
         self.assertTrue(pf["d-APV"]["graph_status"].startswith("DIRECT_HIT_ZERO_SCORE"))                 # its own molecule, not memantine's score
         self.assertNotIn("SCORED_NOT_SPECIFIC", pf["Vigabatrin"]["graph_status"])
         self.assertEqual(pf["Ethosuximide"]["entry"], "PHENOTYPE_FIRST")

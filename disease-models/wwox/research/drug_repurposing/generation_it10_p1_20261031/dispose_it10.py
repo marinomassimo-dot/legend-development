@@ -206,10 +206,9 @@ def phenotype_first(v3_dir, dr, extra_path):
     reported, not required: a salt or name twin that has a row is labelled NAME_TWIN_*, because twins are not merged."""
     me = rd(dr / "ranking_it8_p9_20261029" / "member_evidence.tsv")
     specific = {}
-    for f in glob.glob(str(v3_dir / "candidates_Q*.tsv")):
-        for r in rd(f):
-            if r["arm"] in ("opposes", "mimics") and r["seed_specific_all_three_nulls"] == "1":
-                specific.setdefault(norm(r["name"]), []).append((r["question"], r["arm"]))
+    # IT11 P2.1: read the FULL seed-specific list; the candidate tables keep only the top 50 opposes / 25 mimics per set (lithium sat at mimics rank 67 to 70 of 232 in Q6)
+    for r in rd(v3_dir / "v3_seed_specific_all_nulls.tsv"):
+        specific.setdefault(norm(r["name"]), []).append((r["question"], r["arm"]))
     rows = collections.defaultdict(list)       # token-matchable proposal rows: (question, name, nonzero Q, direct hit)
     for f in glob.glob(str(v3_dir / "proposals_p1_*tiers*.tsv.gz")):
         if f.endswith(("_indeg.tsv.gz", "_adm.tsv.gz")):

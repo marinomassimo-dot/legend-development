@@ -27,7 +27,7 @@
  "phenotype_first": 7,
  "phenotype_first_graph_status": {
   "DIRECT_HIT_ZERO_SCORE": 1,
-  "NAME_TWIN_SCORED_NOT_SPECIFIC": 1,
+  "IN_SEED_SPECIFIC_ARM": 1,
   "NOT_EXAMINABLE_NO_CATALOGUE_IDENTITY": 1,
   "NO_GRAPH_ROW": 2,
   "OUT_OF_METHOD_MODALITY": 2
