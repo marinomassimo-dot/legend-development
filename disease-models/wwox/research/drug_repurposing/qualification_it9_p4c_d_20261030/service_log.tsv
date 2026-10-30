@@ -1,0 +1,187 @@
+case	attempt	status	seconds	url	error
+P4CD-01:apabetalone:chembl	1	200	0.41	https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL2393130.json	
+P4CD-01:apabetalone:chembl	1	200	0.88	https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_hierarchy__parent_chembl_id=CHEMBL2393130&limit=50	
+P4CD-01:apabetalone:chembl	1	200	0.12	https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL2393130.json	
+P4CD-01:apabetalone:chembl	1	200	1.07	https://www.ebi.ac.uk/chembl/api/data/mechanism.json?molecule_chembl_id=CHEMBL2393130&limit=200&offset=0	
+P4CD-01:apabetalone:chembl	1	200	2.6	https://www.ebi.ac.uk/chembl/api/data/activity.json?molecule_chembl_id=CHEMBL2393130&standard_type__in=IC50,Ki,Kd,EC50,DC50,Dmax,Potency,Inhibition&limit=200&offset=0	
+P4CD-01:apabetalone:chembl	1	200	5.13	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL1075593,CHEMBL1163125,CHEMBL1293289,CHEMBL1795185,CHEMBL1795186,CHEMBL1865,CHEMBL1937,CHEMBL2093865,CHEMBL2366220,CHEMBL236	
+P4CD-01:apabetalone:pubchem	1	200	0.38	https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/apabetalone/property/InChIKey,IUPACName,MolecularFormula,CanonicalSMILES/JSON	
+P4CD-01:apabetalone:pubchem	1	200	0.35	https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/RVX-208/property/InChIKey,IUPACName,MolecularFormula,CanonicalSMILES/JSON	
+P4CD-01:apabetalone:pubchem	1	200	0.44	https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/inchikey/NETXMUIMUZJUTB-UHFFFAOYSA-N/property/InChIKey,IUPACName,MolecularFormula/JSON	
+P4CD-01:apabetalone:pubchem	1	200	0.4	https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/inchikey/NETXMUIMUZJUTB-UHFFFAOYSA-N/synonyms/JSON	
+apabetalone:ctgov	1	200	0.52	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.intr=apabetalone OR RVX-208 OR RVX208	
+apabetalone:ctgov	1	200	0.14	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=epilepsy OR seizure OR epileptic encephalopathy OR infantile spasms&query.intr=apabetalone OR RVX-208 OR RV	
+apabetalone:ctgov	1	200	0.13	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=hypomyelination OR leukodystrophy&query.intr=apabetalone OR RVX-208 OR RVX208	
+apabetalone:ctgov	1	200	0.13	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=neurodevelopmental disorder OR intellectual disability OR autism OR microcephaly OR developmental delay OR 	
+apabetalone:ctgov	1	200	0.14	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=multiple sclerosis OR neuroinflammation OR Alzheimer disease OR Parkinson disease OR amyotrophic lateral sc	
+apabetalone:ctgov	1	200	0.13	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=WWOX OR WOREE OR SCAR12&query.intr=apabetalone OR RVX-208 OR RVX208	
+apabetalone:ctgov	1	200	0.13	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.intr=apabetalone OR RVX-208 OR RVX208&query.term=child OR children OR pediatric OR paediatric OR infant	
+P4CD-02:JTE-151:chembl	1	200	0.12	https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL3545357.json	
+P4CD-02:JTE-151:chembl	1	200	2.36	https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_hierarchy__parent_chembl_id=CHEMBL3545357&limit=50	
+P4CD-02:JTE-151:chembl	1	200	1.15	https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL3545357.json	
+P4CD-02:JTE-151:chembl	1	200	0.2	https://www.ebi.ac.uk/chembl/api/data/mechanism.json?molecule_chembl_id=CHEMBL3545357&limit=200&offset=0	
+P4CD-02:JTE-151:chembl	1	200	0.2	https://www.ebi.ac.uk/chembl/api/data/activity.json?molecule_chembl_id=CHEMBL3545357&standard_type__in=IC50,Ki,Kd,EC50,DC50,Dmax,Potency,Inhibition&limit=200&offset=0	
+P4CD-02:JTE-151:pubchem	1	200	0.25	https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/JTE-151/property/InChIKey,IUPACName,MolecularFormula,CanonicalSMILES/JSON	
+P4CD-02:JTE-151:pubchem	1	404	0.13	https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/JTE151/property/InChIKey,IUPACName,MolecularFormula,CanonicalSMILES/JSON	{'Fault': {'Code': 'PUGREST.NotFound', 'Message': 'No CID found', 'Details': ['No CID found that matches the given name'
+JTE-151:ctgov	1	200	0.14	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.intr=JTE-151 OR JTE151	
+JTE-151:ctgov	1	200	0.13	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=epilepsy OR seizure OR epileptic encephalopathy OR infantile spasms&query.intr=JTE-151 OR JTE151	
+JTE-151:ctgov	1	200	0.12	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=hypomyelination OR leukodystrophy&query.intr=JTE-151 OR JTE151	
+JTE-151:ctgov	1	200	0.12	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=neurodevelopmental disorder OR intellectual disability OR autism OR microcephaly OR developmental delay OR 	
+JTE-151:ctgov	1	200	0.13	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=multiple sclerosis OR neuroinflammation OR Alzheimer disease OR Parkinson disease OR amyotrophic lateral sc	
+JTE-151:ctgov	1	200	0.49	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=WWOX OR WOREE OR SCAR12&query.intr=JTE-151 OR JTE151	
+JTE-151:ctgov	1	200	0.13	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.intr=JTE-151 OR JTE151&query.term=child OR children OR pediatric OR paediatric OR infant	
+P4CD-03:infigratinib:chembl	1	200	1.09	https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL1852688.json	
+P4CD-03:infigratinib:chembl	1	200	2.05	https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_hierarchy__parent_chembl_id=CHEMBL1852688&limit=50	
+P4CD-03:infigratinib:chembl	1	200	0.49	https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL1852688.json	
+P4CD-03:infigratinib:chembl	1	200	1.65	https://www.ebi.ac.uk/chembl/api/data/mechanism.json?molecule_chembl_id=CHEMBL1852688&limit=200&offset=0	
+P4CD-03:infigratinib:chembl	1	200	1.1	https://www.ebi.ac.uk/chembl/api/data/activity.json?molecule_chembl_id=CHEMBL1852688&standard_type__in=IC50,Ki,Kd,EC50,DC50,Dmax,Potency,Inhibition&limit=200&offset=0	
+P4CD-03:infigratinib:chembl	1	200	2.22	https://www.ebi.ac.uk/chembl/api/data/activity.json?molecule_chembl_id=CHEMBL1852688&standard_type__in=IC50,Ki,Kd,EC50,DC50,Dmax,Potency,Inhibition&limit=200&offset=200	
+P4CD-03:infigratinib:chembl	1	200	2.61	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL1075165,CHEMBL1075173,CHEMBL1075516,CHEMBL1824,CHEMBL1841,CHEMBL1862,CHEMBL1865,CHEMBL1868,CHEMBL1936,CHEMBL1955,CHEMBL1957	
+P4CD-03:infigratinib:chembl	1	200	1.19	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL3384,CHEMBL3396943,CHEMBL3396944,CHEMBL3553,CHEMBL3650,CHEMBL3717,CHEMBL376,CHEMBL3778,CHEMBL3834,CHEMBL3839,CHEMBL3905,CHE	
+P4CD-03:infigratinib:chembl	1	200	2.73	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL5723574,CHEMBL5723575,CHEMBL5723576,CHEMBL5971,CHEMBL6066762,CHEMBL612545,CHEMBL612700,CHEMBL613529,CHEMBL614039,CHEMBL6140	
+P4CD-03:infigratinib:pubchem	1	200	0.27	https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/infigratinib/property/InChIKey,IUPACName,MolecularFormula,CanonicalSMILES/JSON	
+P4CD-03:infigratinib:pubchem	1	200	0.27	https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/BGJ398/property/InChIKey,IUPACName,MolecularFormula,CanonicalSMILES/JSON	
+P4CD-03:infigratinib:pubchem	1	200	0.43	https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/inchikey/QADPYRIHXKWUSV-UHFFFAOYSA-N/property/InChIKey,IUPACName,MolecularFormula/JSON	
+P4CD-03:infigratinib:pubchem	1	200	0.18	https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/inchikey/QADPYRIHXKWUSV-UHFFFAOYSA-N/synonyms/JSON	
+infigratinib:ctgov	1	200	0.17	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.intr=infigratinib OR BGJ398	
+infigratinib:ctgov	1	200	0.13	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=epilepsy OR seizure OR epileptic encephalopathy OR infantile spasms&query.intr=infigratinib OR BGJ398	
+infigratinib:ctgov	1	200	0.12	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=hypomyelination OR leukodystrophy&query.intr=infigratinib OR BGJ398	
+infigratinib:ctgov	1	200	0.29	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=neurodevelopmental disorder OR intellectual disability OR autism OR microcephaly OR developmental delay OR 	
+infigratinib:ctgov	1	200	0.13	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=multiple sclerosis OR neuroinflammation OR Alzheimer disease OR Parkinson disease OR amyotrophic lateral sc	
+infigratinib:ctgov	1	200	0.13	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=WWOX OR WOREE OR SCAR12&query.intr=infigratinib OR BGJ398	
+infigratinib:ctgov	1	200	0.31	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.intr=infigratinib OR BGJ398&query.term=child OR children OR pediatric OR paediatric OR infant	
+infigratinib:openfda	1	404	0.84	"https://api.fda.gov/drug/label.json?limit=10&search=openfda.generic_name:""infigratinib"""	{'error': {'code': 'NOT_FOUND', 'message': 'No matches found!'}}
+P4CD-04:dimethyl fumarate:chembl	1	200	1.82	https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL2107333.json	
+P4CD-04:dimethyl fumarate:chembl	1	200	1.35	https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_hierarchy__parent_chembl_id=CHEMBL2107333&limit=50	
+P4CD-04:dimethyl fumarate:chembl	1	200	1.64	https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL2107333.json	
+P4CD-04:dimethyl fumarate:chembl	1	200	0.76	https://www.ebi.ac.uk/chembl/api/data/mechanism.json?molecule_chembl_id=CHEMBL2107333&limit=200&offset=0	
+P4CD-04:dimethyl fumarate:chembl	1	200	0.28	https://www.ebi.ac.uk/chembl/api/data/activity.json?molecule_chembl_id=CHEMBL2107333&standard_type__in=IC50,Ki,Kd,EC50,DC50,Dmax,Potency,Inhibition&limit=200&offset=0	
+P4CD-04:dimethyl fumarate:chembl	1	200	4.45	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL1075094,CHEMBL1293255,CHEMBL1741208,CHEMBL1865,CHEMBL2345,CHEMBL3038498,CHEMBL358,CHEMBL375,CHEMBL3779755,CHEMBL3785,CHEMBL	
+P4CD-04:dimethyl fumarate:pubchem	1	200	0.45	https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/dimethyl%20fumarate/property/InChIKey,IUPACName,MolecularFormula,CanonicalSMILES/JSON	
+P4CD-04:dimethyl fumarate:pubchem	1	200	0.46	https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/BG-12/property/InChIKey,IUPACName,MolecularFormula,CanonicalSMILES/JSON	
+P4CD-04:dimethyl fumarate:pubchem	1	200	0.46	https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/inchikey/LDCRTTXIJACKKU-ONEGZZNKSA-N/property/InChIKey,IUPACName,MolecularFormula/JSON	
+P4CD-04:dimethyl fumarate:pubchem	1	200	0.16	https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/inchikey/LDCRTTXIJACKKU-ONEGZZNKSA-N/synonyms/JSON	
+dimethyl fumarate:ctgov	1	200	0.75	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.intr=dimethyl fumarate OR BG-12 OR Tecfidera	
+dimethyl fumarate:ctgov	1	200	0.13	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=epilepsy OR seizure OR epileptic encephalopathy OR infantile spasms&query.intr=dimethyl fumarate OR BG-12 O	
+dimethyl fumarate:ctgov	1	200	0.12	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=hypomyelination OR leukodystrophy&query.intr=dimethyl fumarate OR BG-12 OR Tecfidera	
+dimethyl fumarate:ctgov	1	200	0.13	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=neurodevelopmental disorder OR intellectual disability OR autism OR microcephaly OR developmental delay OR 	
+dimethyl fumarate:ctgov	1	200	0.68	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=multiple sclerosis OR neuroinflammation OR Alzheimer disease OR Parkinson disease OR amyotrophic lateral sc	
+dimethyl fumarate:ctgov	1	200	0.13	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=WWOX OR WOREE OR SCAR12&query.intr=dimethyl fumarate OR BG-12 OR Tecfidera	
+dimethyl fumarate:ctgov	1	200	0.57	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.intr=dimethyl fumarate OR BG-12 OR Tecfidera&query.term=child OR children OR pediatric OR paediatric OR infant	
+dimethyl fumarate:openfda	1	200	1.58	"https://api.fda.gov/drug/label.json?limit=10&search=openfda.generic_name:""dimethyl fumarate"""	
+P4CD-04b:monomethyl fumarate:chembl	1	200	0.5	https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL589586.json	
+P4CD-04b:monomethyl fumarate:chembl	1	200	0.3	https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_hierarchy__parent_chembl_id=CHEMBL589586&limit=50	
+P4CD-04b:monomethyl fumarate:chembl	1	200	0.21	https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL589586.json	
+P4CD-04b:monomethyl fumarate:chembl	1	200	0.35	https://www.ebi.ac.uk/chembl/api/data/mechanism.json?molecule_chembl_id=CHEMBL589586&limit=200&offset=0	
+P4CD-04b:monomethyl fumarate:chembl	1	200	0.62	https://www.ebi.ac.uk/chembl/api/data/activity.json?molecule_chembl_id=CHEMBL589586&standard_type__in=IC50,Ki,Kd,EC50,DC50,Dmax,Potency,Inhibition&limit=200&offset=0	
+P4CD-04b:monomethyl fumarate:chembl	1	200	0.45	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL1075094,CHEMBL3785,CHEMBL4303835,CHEMBL614245&limit=100	
+P4CD-04b:monomethyl fumarate:pubchem	1	200	0.42	https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/monomethyl%20fumarate/property/InChIKey,IUPACName,MolecularFormula,CanonicalSMILES/JSON	
+P4CD-04b:monomethyl fumarate:pubchem	1	200	0.23	https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/inchikey/NKHAVTQWNUWKEO-NSCUHMNNSA-N/property/InChIKey,IUPACName,MolecularFormula/JSON	
+P4CD-04b:monomethyl fumarate:pubchem	1	200	0.37	https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/inchikey/NKHAVTQWNUWKEO-NSCUHMNNSA-N/synonyms/JSON	
+monomethyl fumarate:ctgov	1	200	0.15	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.intr=monomethyl fumarate	
+monomethyl fumarate:ctgov	1	200	0.15	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=epilepsy OR seizure OR epileptic encephalopathy OR infantile spasms&query.intr=monomethyl fumarate	
+monomethyl fumarate:ctgov	1	200	0.14	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=hypomyelination OR leukodystrophy&query.intr=monomethyl fumarate	
+monomethyl fumarate:ctgov	1	200	0.12	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=neurodevelopmental disorder OR intellectual disability OR autism OR microcephaly OR developmental delay OR 	
+monomethyl fumarate:ctgov	1	200	0.37	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=multiple sclerosis OR neuroinflammation OR Alzheimer disease OR Parkinson disease OR amyotrophic lateral sc	
+monomethyl fumarate:ctgov	1	200	0.13	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=WWOX OR WOREE OR SCAR12&query.intr=monomethyl fumarate	
+monomethyl fumarate:ctgov	1	200	0.13	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.intr=monomethyl fumarate&query.term=child OR children OR pediatric OR paediatric OR infant	
+monomethyl fumarate:openfda	1	200	1.31	"https://api.fda.gov/drug/label.json?limit=10&search=openfda.generic_name:""monomethyl fumarate"""	
+P4CD-05:gamcemetinib:chembl	1	200	0.1	https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL5314585.json	
+P4CD-05:gamcemetinib:chembl	1	200	0.12	https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_hierarchy__parent_chembl_id=CHEMBL5314585&limit=50	
+P4CD-05:gamcemetinib:chembl	1	200	1.27	https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL5314585.json	
+P4CD-05:gamcemetinib:chembl	1	200	0.14	https://www.ebi.ac.uk/chembl/api/data/mechanism.json?molecule_chembl_id=CHEMBL5314585&limit=200&offset=0	
+P4CD-05:gamcemetinib:chembl	1	200	1.49	https://www.ebi.ac.uk/chembl/api/data/activity.json?molecule_chembl_id=CHEMBL5314585&standard_type__in=IC50,Ki,Kd,EC50,DC50,Dmax,Potency,Inhibition&limit=200&offset=0	
+P4CD-05:gamcemetinib:chembl	1	200	1.52	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL2208&limit=100	
+P4CD-05:gamcemetinib:pubchem	1	200	0.44	https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/gamcemetinib/property/InChIKey,IUPACName,MolecularFormula,CanonicalSMILES/JSON	
+P4CD-05:gamcemetinib:pubchem	1	200	0.47	https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/CC-99677/property/InChIKey,IUPACName,MolecularFormula,CanonicalSMILES/JSON	
+P4CD-05:gamcemetinib:pubchem	1	200	0.25	https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/inchikey/PYOQIOLRFIRRSO-LLVKDONJSA-N/property/InChIKey,IUPACName,MolecularFormula/JSON	
+P4CD-05:gamcemetinib:pubchem	1	200	0.35	https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/inchikey/PYOQIOLRFIRRSO-LLVKDONJSA-N/synonyms/JSON	
+gamcemetinib:ctgov	1	200	0.14	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.intr=gamcemetinib OR CC-99677	
+gamcemetinib:ctgov	1	200	0.13	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=epilepsy OR seizure OR epileptic encephalopathy OR infantile spasms&query.intr=gamcemetinib OR CC-99677	
+gamcemetinib:ctgov	1	200	0.14	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=hypomyelination OR leukodystrophy&query.intr=gamcemetinib OR CC-99677	
+gamcemetinib:ctgov	1	200	0.14	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=neurodevelopmental disorder OR intellectual disability OR autism OR microcephaly OR developmental delay OR 	
+gamcemetinib:ctgov	1	200	0.15	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=multiple sclerosis OR neuroinflammation OR Alzheimer disease OR Parkinson disease OR amyotrophic lateral sc	
+gamcemetinib:ctgov	1	200	0.12	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=WWOX OR WOREE OR SCAR12&query.intr=gamcemetinib OR CC-99677	
+gamcemetinib:ctgov	1	200	0.12	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.intr=gamcemetinib OR CC-99677&query.term=child OR children OR pediatric OR paediatric OR infant	
+P4CD-06:ceralasertib:chembl	1	200	1.67	https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL4285417.json	
+P4CD-06:ceralasertib:chembl	1	200	1.53	https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_hierarchy__parent_chembl_id=CHEMBL4285417&limit=50	
+P4CD-06:ceralasertib:chembl	1	200	0.65	https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL4285417.json	
+P4CD-06:ceralasertib:chembl	1	200	0.65	https://www.ebi.ac.uk/chembl/api/data/mechanism.json?molecule_chembl_id=CHEMBL4285417&limit=200&offset=0	
+P4CD-06:ceralasertib:chembl	1	200	0.87	https://www.ebi.ac.uk/chembl/api/data/activity.json?molecule_chembl_id=CHEMBL4285417&standard_type__in=IC50,Ki,Kd,EC50,DC50,Dmax,Potency,Inhibition&limit=200&offset=0	
+P4CD-06:ceralasertib:chembl	1	200	2.53	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL1163120,CHEMBL1865,CHEMBL240,CHEMBL2506,CHEMBL2842,CHEMBL289,CHEMBL3142,CHEMBL3217390,CHEMBL3356,CHEMBL3397,CHEMBL340,CHEMB	
+P4CD-06:ceralasertib:pubchem	1	200	0.39	https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/ceralasertib/property/InChIKey,IUPACName,MolecularFormula,CanonicalSMILES/JSON	
+P4CD-06:ceralasertib:pubchem	1	200	0.27	https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/AZD6738/property/InChIKey,IUPACName,MolecularFormula,CanonicalSMILES/JSON	
+P4CD-06:ceralasertib:pubchem	1	200	0.24	https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/inchikey/OHUHVTCQTUDPIJ-JYCIKRDWSA-N/property/InChIKey,IUPACName,MolecularFormula/JSON	
+P4CD-06:ceralasertib:pubchem	1	200	0.37	https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/inchikey/OHUHVTCQTUDPIJ-JYCIKRDWSA-N/synonyms/JSON	
+ceralasertib:ctgov	1	200	0.76	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.intr=ceralasertib OR AZD6738	
+ceralasertib:ctgov	1	200	0.12	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=epilepsy OR seizure OR epileptic encephalopathy OR infantile spasms&query.intr=ceralasertib OR AZD6738	
+ceralasertib:ctgov	1	200	0.12	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=hypomyelination OR leukodystrophy&query.intr=ceralasertib OR AZD6738	
+ceralasertib:ctgov	1	200	0.14	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=neurodevelopmental disorder OR intellectual disability OR autism OR microcephaly OR developmental delay OR 	
+ceralasertib:ctgov	1	200	0.15	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=multiple sclerosis OR neuroinflammation OR Alzheimer disease OR Parkinson disease OR amyotrophic lateral sc	
+ceralasertib:ctgov	1	200	0.14	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.cond=WWOX OR WOREE OR SCAR12&query.intr=ceralasertib OR AZD6738	
+ceralasertib:ctgov	1	200	0.31	https://clinicaltrials.gov/api/v2/studies?countTotal=true&format=json&pageSize=30&query.intr=ceralasertib OR AZD6738&query.term=child OR children OR pediatric OR paediatric OR infant	
+P4CD-01b:molibresib (BET class reference):chembl	1	200	1.59	https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL1232461.json	
+P4CD-01b:molibresib (BET class reference):chembl	1	200	0.17	https://www.ebi.ac.uk/chembl/api/data/molecule.json?molecule_hierarchy__parent_chembl_id=CHEMBL1232461&limit=50	
+P4CD-01b:molibresib (BET class reference):chembl	1	200	1.14	https://www.ebi.ac.uk/chembl/api/data/molecule/CHEMBL1232461.json	
+P4CD-01b:molibresib (BET class reference):chembl	1	200	0.17	https://www.ebi.ac.uk/chembl/api/data/mechanism.json?molecule_chembl_id=CHEMBL1232461&limit=200&offset=0	
+P4CD-01b:molibresib (BET class reference):chembl	1	200	2.13	https://www.ebi.ac.uk/chembl/api/data/activity.json?molecule_chembl_id=CHEMBL1232461&standard_type__in=IC50,Ki,Kd,EC50,DC50,Dmax,Potency,Inhibition&limit=200&offset=0	
+P4CD-01b:molibresib (BET class reference):chembl	1	200	3.4	https://www.ebi.ac.uk/chembl/api/data/activity.json?molecule_chembl_id=CHEMBL1232461&standard_type__in=IC50,Ki,Kd,EC50,DC50,Dmax,Potency,Inhibition&limit=200&offset=200	
+P4CD-01b:molibresib (BET class reference):chembl	1	200	0.41	https://www.ebi.ac.uk/chembl/api/data/activity.json?molecule_chembl_id=CHEMBL1232461&standard_type__in=IC50,Ki,Kd,EC50,DC50,Dmax,Potency,Inhibition&limit=200&offset=400	
+P4CD-01b:molibresib (BET class reference):chembl	1	200	0.41	https://www.ebi.ac.uk/chembl/api/data/activity.json?molecule_chembl_id=CHEMBL1232461&standard_type__in=IC50,Ki,Kd,EC50,DC50,Dmax,Potency,Inhibition&limit=200&offset=600	
+P4CD-01b:molibresib (BET class reference):chembl	1	200	2.47	https://www.ebi.ac.uk/chembl/api/data/activity.json?molecule_chembl_id=CHEMBL1232461&standard_type__in=IC50,Ki,Kd,EC50,DC50,Dmax,Potency,Inhibition&limit=200&offset=800	
+P4CD-01b:molibresib (BET class reference):chembl	1	200	1.96	https://www.ebi.ac.uk/chembl/api/data/activity.json?molecule_chembl_id=CHEMBL1232461&standard_type__in=IC50,Ki,Kd,EC50,DC50,Dmax,Potency,Inhibition&limit=200&offset=1000	
+P4CD-01b:molibresib (BET class reference):chembl	1	200	1.23	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL1075097,CHEMBL1075129,CHEMBL1075189,CHEMBL1075317,CHEMBL1075323,CHEMBL1163119,CHEMBL1163125,CHEMBL1229011,CHEMBL1229013,CHE	
+P4CD-01b:molibresib (BET class reference):chembl	1	200	2.83	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL1993,CHEMBL2010624,CHEMBL2010634,CHEMBL2039,CHEMBL2040701,CHEMBL2040704,CHEMBL2056,CHEMBL2062353,CHEMBL2069156,CHEMBL2070,C	
+P4CD-01b:molibresib (BET class reference):chembl	1	200	6.59	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL237,CHEMBL238,CHEMBL240,CHEMBL2401606,CHEMBL2424510,CHEMBL2439,CHEMBL2447,CHEMBL2469,CHEMBL249,CHEMBL2541,CHEMBL2553,CHEMBL	
+P4CD-01b:molibresib (BET class reference):chembl	1	200	1.45	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL3351199,CHEMBL3351202,CHEMBL3351203,CHEMBL3351212,CHEMBL3356,CHEMBL3363,CHEMBL3397,CHEMBL340,CHEMBL3407316,CHEMBL3414416,CH	
+P4CD-01b:molibresib (BET class reference):chembl	1	200	0.69	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL4105742,CHEMBL4105747,CHEMBL4105760,CHEMBL4105771,CHEMBL4105773,CHEMBL4105779,CHEMBL4105788,CHEMBL4105795,CHEMBL4105803,CHE	
+P4CD-01b:molibresib (BET class reference):chembl	1	200	2.15	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL4295763,CHEMBL4295764,CHEMBL4295773,CHEMBL4295778,CHEMBL4295781,CHEMBL4295782,CHEMBL4295798,CHEMBL4295801,CHEMBL4295804,CHE	
+P4CD-01b:molibresib (BET class reference):chembl	1	200	2.73	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL4630813,CHEMBL4630815,CHEMBL4679,CHEMBL4680031,CHEMBL4680038,CHEMBL4703,CHEMBL4722,CHEMBL4739683,CHEMBL4739849,CHEMBL480201	
+P4CD-01b:molibresib (BET class reference):chembl	1	200	1.94	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL5524,CHEMBL5553,CHEMBL5605,CHEMBL5661,CHEMBL5721,CHEMBL5724602,CHEMBL5724603,CHEMBL5724604,CHEMBL5724605,CHEMBL5724606,CHEM	
+P4CD-01b:molibresib (BET class reference):chembl	1	200	1.41	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL5724651,CHEMBL5724652,CHEMBL5724653,CHEMBL5724654,CHEMBL5724655,CHEMBL5724656,CHEMBL5724657,CHEMBL5724658,CHEMBL5724659,CHE	
+P4CD-01b:molibresib (BET class reference):chembl	1	200	1.06	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL5724743,CHEMBL5724744,CHEMBL5724745,CHEMBL5724746,CHEMBL5724747,CHEMBL5724748,CHEMBL5724749,CHEMBL5724750,CHEMBL5724751,CHE	
+P4CD-01b:molibresib (BET class reference):chembl	1	200	5.47	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL5724912,CHEMBL5724913,CHEMBL5725004,CHEMBL5725005,CHEMBL5725006,CHEMBL5725010,CHEMBL5725012,CHEMBL5725016,CHEMBL5725018,CHE	
+P4CD-01b:molibresib (BET class reference):chembl	1	200	0.76	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL5725062,CHEMBL5725063,CHEMBL5725064,CHEMBL5725065,CHEMBL5725067,CHEMBL5725068,CHEMBL5725069,CHEMBL5725070,CHEMBL5725071,CHE	
+P4CD-01b:molibresib (BET class reference):chembl	1	200	1.83	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL5725115,CHEMBL5725116,CHEMBL5725117,CHEMBL5725118,CHEMBL5725120,CHEMBL5725121,CHEMBL5725122,CHEMBL5725123,CHEMBL5725124,CHE	
+P4CD-01b:molibresib (BET class reference):chembl	1	200	4.23	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL5725168,CHEMBL5725169,CHEMBL5725170,CHEMBL5725171,CHEMBL5725172,CHEMBL5725173,CHEMBL5725174,CHEMBL5725175,CHEMBL5725176,CHE	
+P4CD-01b:molibresib (BET class reference):chembl	1	200	5.39	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL6066167,CHEMBL6066168,CHEMBL6066169,CHEMBL6066170,CHEMBL6066171,CHEMBL6066172,CHEMBL6066173,CHEMBL6066174,CHEMBL6066175,CHE	
+P4CD-01b:molibresib (BET class reference):chembl	1	200	0.17	https://www.ebi.ac.uk/chembl/api/data/target.json?target_chembl_id__in=CHEMBL614245,CHEMBL614358,CHEMBL614818,CHEMBL6156,CHEMBL6163&limit=100	
+P4CD-01b:molibresib (BET class reference):pubchem	1	200	0.44	https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/molibresib/property/InChIKey,IUPACName,MolecularFormula,CanonicalSMILES/JSON	
+P4CD-01b:molibresib (BET class reference):pubchem	1	200	0.43	https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/I-BET762/property/InChIKey,IUPACName,MolecularFormula,CanonicalSMILES/JSON	
+P4CD-01b:molibresib (BET class reference):pubchem	1	200	0.24	https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/inchikey/AAAQFGUYHFJNHI-SFHVURJKSA-N/property/InChIKey,IUPACName,MolecularFormula/JSON	
+P4CD-01b:molibresib (BET class reference):pubchem	1	200	0.18	https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/inchikey/AAAQFGUYHFJNHI-SFHVURJKSA-N/synonyms/JSON	
+omnipath	1	200	0.2	https://omnipathdb.org/interactions?datasets=omnipath,pathwayextra,kinaseextra,collectri,tf_target,dorothea&fields=sources,references,curation_effort,type&format=json&genesymbols=yes&sources=BRD4&targ	
+omnipath	1	200	0.2	https://omnipathdb.org/interactions?datasets=omnipath,pathwayextra,kinaseextra,collectri,tf_target,dorothea&fields=sources,references,curation_effort,type&format=json&genesymbols=yes&sources=BRD4&targ	
+omnipath	1	200	0.15	https://omnipathdb.org/interactions?datasets=omnipath,pathwayextra,kinaseextra,collectri,tf_target,dorothea&fields=sources,references,curation_effort,type&format=json&genesymbols=yes&sources=BRD4&targ	
+omnipath	1	200	0.19	https://omnipathdb.org/interactions?datasets=omnipath,pathwayextra,kinaseextra,collectri,tf_target,dorothea&fields=sources,references,curation_effort,type&format=json&genesymbols=yes&sources=BRD3&targ	
+omnipath	1	200	0.18	https://omnipathdb.org/interactions?datasets=omnipath,pathwayextra,kinaseextra,collectri,tf_target,dorothea&fields=sources,references,curation_effort,type&format=json&genesymbols=yes&sources=RORC&targ	
+omnipath	1	200	0.2	https://omnipathdb.org/interactions?datasets=omnipath,pathwayextra,kinaseextra,collectri,tf_target,dorothea&fields=sources,references,curation_effort,type&format=json&genesymbols=yes&sources=RORC&targ	
+omnipath	1	200	0.17	https://omnipathdb.org/interactions?datasets=omnipath,pathwayextra,kinaseextra,collectri,tf_target,dorothea&fields=sources,references,curation_effort,type&format=json&genesymbols=yes&sources=RORC&targ	
+omnipath	1	200	0.13	https://omnipathdb.org/interactions?datasets=omnipath,pathwayextra,kinaseextra,collectri,tf_target,dorothea&fields=sources,references,curation_effort,type&format=json&genesymbols=yes&sources=FGFR3&tar	
+omnipath	1	200	0.14	https://omnipathdb.org/interactions?datasets=omnipath,pathwayextra,kinaseextra,collectri,tf_target,dorothea&fields=sources,references,curation_effort,type&format=json&genesymbols=yes&sources=MAP3K7&ta	
+omnipath	1	200	0.18	https://omnipathdb.org/interactions?datasets=omnipath,pathwayextra,kinaseextra,collectri,tf_target,dorothea&fields=sources,references,curation_effort,type&format=json&genesymbols=yes&sources=NFKBIB&ta	
+omnipath	1	200	0.17	https://omnipathdb.org/interactions?datasets=omnipath,pathwayextra,kinaseextra,collectri,tf_target,dorothea&fields=sources,references,curation_effort,type&format=json&genesymbols=yes&sources=FGFR3&tar	
+omnipath	1	200	0.22	https://omnipathdb.org/interactions?datasets=omnipath,pathwayextra,kinaseextra,collectri,tf_target,dorothea&fields=sources,references,curation_effort,type&format=json&genesymbols=yes&sources=FGFR3&tar	
+omnipath	1	200	0.21	https://omnipathdb.org/interactions?datasets=omnipath,pathwayextra,kinaseextra,collectri,tf_target,dorothea&fields=sources,references,curation_effort,type&format=json&genesymbols=yes&sources=FGFR3&tar	
+omnipath	1	200	0.14	https://omnipathdb.org/interactions?datasets=omnipath,pathwayextra,kinaseextra,collectri,tf_target,dorothea&fields=sources,references,curation_effort,type&format=json&genesymbols=yes&sources=KEAP1&tar	
+omnipath	1	200	0.1	https://omnipathdb.org/interactions?datasets=omnipath,pathwayextra,kinaseextra,collectri,tf_target,dorothea&fields=sources,references,curation_effort,type&format=json&genesymbols=yes&sources=RBX1&targ	
+omnipath	1	200	0.2	https://omnipathdb.org/interactions?datasets=omnipath,pathwayextra,kinaseextra,collectri,tf_target,dorothea&fields=sources,references,curation_effort,type&format=json&genesymbols=yes&sources=NFKBIB&ta	
+omnipath	1	200	0.22	https://omnipathdb.org/interactions?datasets=omnipath,pathwayextra,kinaseextra,collectri,tf_target,dorothea&fields=sources,references,curation_effort,type&format=json&genesymbols=yes&sources=KEAP1&tar	
+omnipath	1	200	0.16	https://omnipathdb.org/interactions?datasets=omnipath,pathwayextra,kinaseextra,collectri,tf_target,dorothea&fields=sources,references,curation_effort,type&format=json&genesymbols=yes&sources=KEAP1&tar	
+omnipath	1	200	0.18	https://omnipathdb.org/interactions?datasets=omnipath,pathwayextra,kinaseextra,collectri,tf_target,dorothea&fields=sources,references,curation_effort,type&format=json&genesymbols=yes&sources=KEAP1&tar	
+omnipath	1	200	0.13	https://omnipathdb.org/interactions?datasets=omnipath,pathwayextra,kinaseextra,collectri,tf_target,dorothea&fields=sources,references,curation_effort,type&format=json&genesymbols=yes&sources=KEAP1&tar	
+omnipath	1	200	0.21	https://omnipathdb.org/interactions?datasets=omnipath,pathwayextra,kinaseextra,collectri,tf_target,dorothea&fields=sources,references,curation_effort,type&format=json&genesymbols=yes&sources=NFE2L2&ta	
+omnipath	1	200	0.21	https://omnipathdb.org/interactions?datasets=omnipath,pathwayextra,kinaseextra,collectri,tf_target,dorothea&fields=sources,references,curation_effort,type&format=json&genesymbols=yes&sources=NFE2L2&ta	
+omnipath	1	200	0.23	https://omnipathdb.org/interactions?datasets=omnipath,pathwayextra,kinaseextra,collectri,tf_target,dorothea&fields=sources,references,curation_effort,type&format=json&genesymbols=yes&sources=NFE2L2&ta	
+omnipath	1	200	0.13	https://omnipathdb.org/interactions?datasets=omnipath,pathwayextra,kinaseextra,collectri,tf_target,dorothea&fields=sources,references,curation_effort,type&format=json&genesymbols=yes&sources=MAPKAPK2&	
+omnipath	1	200	0.12	https://omnipathdb.org/interactions?datasets=omnipath,pathwayextra,kinaseextra,collectri,tf_target,dorothea&fields=sources,references,curation_effort,type&format=json&genesymbols=yes&sources=CDC25A&ta	
+omnipath	1	200	0.17	https://omnipathdb.org/interactions?datasets=omnipath,pathwayextra,kinaseextra,collectri,tf_target,dorothea&fields=sources,references,curation_effort,type&format=json&genesymbols=yes&sources=FOXO1&tar	
+omnipath	1	200	0.13	https://omnipathdb.org/interactions?datasets=omnipath,pathwayextra,kinaseextra,collectri,tf_target,dorothea&fields=sources,references,curation_effort,type&format=json&genesymbols=yes&sources=MAPKAPK2&	
+omnipath	1	200	0.13	https://omnipathdb.org/interactions?datasets=omnipath,pathwayextra,kinaseextra,collectri,tf_target,dorothea&fields=sources,references,curation_effort,type&format=json&genesymbols=yes&sources=MAPKAPK2&	
+omnipath	1	200	0.22	https://omnipathdb.org/interactions?datasets=omnipath,pathwayextra,kinaseextra,collectri,tf_target,dorothea&fields=sources,references,curation_effort,type&format=json&genesymbols=yes&sources=MAPKAPK2&	
+omnipath	1	200	0.16	https://omnipathdb.org/interactions?datasets=omnipath,pathwayextra,kinaseextra,collectri,tf_target,dorothea&fields=sources,references,curation_effort,type&format=json&genesymbols=yes&sources=ATR&targe	
+omnipath	1	200	0.11	https://omnipathdb.org/interactions?datasets=omnipath,pathwayextra,kinaseextra,collectri,tf_target,dorothea&fields=sources,references,curation_effort,type&format=json&genesymbols=yes&sources=ETV1&targ	
+omnipath	1	200	0.17	https://omnipathdb.org/interactions?datasets=omnipath,pathwayextra,kinaseextra,collectri,tf_target,dorothea&fields=sources,references,curation_effort,type&format=json&genesymbols=yes&sources=ATR&targe	
+omnipath	1	200	0.18	https://omnipathdb.org/interactions?datasets=omnipath,pathwayextra,kinaseextra,collectri,tf_target,dorothea&fields=sources,references,curation_effort,type&format=json&genesymbols=yes&sources=HMGB1&tar	
+omnipath	1	200	0.2	https://omnipathdb.org/interactions?datasets=omnipath,pathwayextra,kinaseextra,collectri,tf_target,dorothea&fields=sources,references,curation_effort,type&format=json&genesymbols=yes&sources=HMGB1&tar	
+omnipath	1	200	0.22	https://omnipathdb.org/interactions?datasets=omnipath,pathwayextra,kinaseextra,collectri,tf_target,dorothea&fields=sources,references,curation_effort,type&format=json&genesymbols=yes&sources=HMGB1&tar	

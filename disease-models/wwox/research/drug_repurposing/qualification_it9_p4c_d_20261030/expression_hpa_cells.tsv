@@ -1,0 +1,1051 @@
+gene	ensembl	hpa_table	cell_type	nCPM
+ATR	ENSG00000175054	rna_single_cell_type	astrocytes	66.1
+ATR	ENSG00000175054	rna_single_cell_type	b-cells	162.1
+ATR	ENSG00000175054	rna_single_cell_type	brain excitatory neurons	116.1
+ATR	ENSG00000175054	rna_single_cell_type	brain inhibitory neurons	128.5
+ATR	ENSG00000175054	rna_single_cell_type	hepatocytes	48.7
+ATR	ENSG00000175054	rna_single_cell_type	hofbauer cells	38.5
+ATR	ENSG00000175054	rna_single_cell_type	kupffer cells	55.3
+ATR	ENSG00000175054	rna_single_cell_type	macrophages	94.6
+ATR	ENSG00000175054	rna_single_cell_type	megakaryocytes	0.0
+ATR	ENSG00000175054	rna_single_cell_type	microglia	151.6
+ATR	ENSG00000175054	rna_single_cell_type	monocytes	77.8
+ATR	ENSG00000175054	rna_single_cell_type	neutrophils	24.7
+ATR	ENSG00000175054	rna_single_cell_type	nk-cells	132.6
+ATR	ENSG00000175054	rna_single_cell_type	oligodendrocyte progenitor cells	85.6
+ATR	ENSG00000175054	rna_single_cell_type	oligodendrocytes	96.8
+ATR	ENSG00000175054	rna_single_cell_type	platelets	35.3
+ATR	ENSG00000175054	rna_single_cell_type	t-cells	124.6
+ATR	ENSG00000175054	rna_single_cell_type	vascular endothelial cells	72.4
+ATR	ENSG00000175054	rna_single_nuclei_cluster_type	Bergmann glia	65.7
+ATR	ENSG00000175054	rna_single_nuclei_cluster_type	CGE interneuron	96.8
+ATR	ENSG00000175054	rna_single_nuclei_cluster_type	MGE interneuron	143.0
+ATR	ENSG00000175054	rna_single_nuclei_cluster_type	astrocyte	81.6
+ATR	ENSG00000175054	rna_single_nuclei_cluster_type	central nervous system macrophage	196.1
+ATR	ENSG00000175054	rna_single_nuclei_cluster_type	cerebellar inhibitory	154.4
+ATR	ENSG00000175054	rna_single_nuclei_cluster_type	committed oligodendrocyte precursor	101.2
+ATR	ENSG00000175054	rna_single_nuclei_cluster_type	deep-layer intratelencephalic	142.3
+ATR	ENSG00000175054	rna_single_nuclei_cluster_type	endothelial cell	114.4
+ATR	ENSG00000175054	rna_single_nuclei_cluster_type	ependymal cell	146.1
+ATR	ENSG00000175054	rna_single_nuclei_cluster_type	hippocampal CA1-3	192.3
+ATR	ENSG00000175054	rna_single_nuclei_cluster_type	hippocampal dentate gyrus	156.0
+ATR	ENSG00000175054	rna_single_nuclei_cluster_type	leukocyte	183.5
+ATR	ENSG00000175054	rna_single_nuclei_cluster_type	oligodendrocyte	115.5
+ATR	ENSG00000175054	rna_single_nuclei_cluster_type	oligodendrocyte precursor cell	104.7
+ATR	ENSG00000175054	rna_single_nuclei_cluster_type	pericyte	80.2
+ATR	ENSG00000175054	rna_single_nuclei_cluster_type	upper-layer intratelencephalic	136.9
+BRD2	ENSG00000204256	rna_single_cell_type	astrocytes	55.0
+BRD2	ENSG00000204256	rna_single_cell_type	b-cells	34.2
+BRD2	ENSG00000204256	rna_single_cell_type	brain excitatory neurons	26.9
+BRD2	ENSG00000204256	rna_single_cell_type	brain inhibitory neurons	25.6
+BRD2	ENSG00000204256	rna_single_cell_type	hepatocytes	12.3
+BRD2	ENSG00000204256	rna_single_cell_type	hofbauer cells	16.4
+BRD2	ENSG00000204256	rna_single_cell_type	kupffer cells	10.2
+BRD2	ENSG00000204256	rna_single_cell_type	macrophages	25.9
+BRD2	ENSG00000204256	rna_single_cell_type	megakaryocytes	18.5
+BRD2	ENSG00000204256	rna_single_cell_type	microglia	46.3
+BRD2	ENSG00000204256	rna_single_cell_type	monocytes	27.0
+BRD2	ENSG00000204256	rna_single_cell_type	neutrophils	44.2
+BRD2	ENSG00000204256	rna_single_cell_type	nk-cells	44.4
+BRD2	ENSG00000204256	rna_single_cell_type	oligodendrocyte progenitor cells	28.5
+BRD2	ENSG00000204256	rna_single_cell_type	oligodendrocytes	30.7
+BRD2	ENSG00000204256	rna_single_cell_type	platelets	21.2
+BRD2	ENSG00000204256	rna_single_cell_type	t-cells	54.1
+BRD2	ENSG00000204256	rna_single_cell_type	vascular endothelial cells	31.2
+BRD2	ENSG00000204256	rna_single_nuclei_cluster_type	Bergmann glia	43.8
+BRD2	ENSG00000204256	rna_single_nuclei_cluster_type	CGE interneuron	33.6
+BRD2	ENSG00000204256	rna_single_nuclei_cluster_type	MGE interneuron	28.5
+BRD2	ENSG00000204256	rna_single_nuclei_cluster_type	astrocyte	64.6
+BRD2	ENSG00000204256	rna_single_nuclei_cluster_type	central nervous system macrophage	57.3
+BRD2	ENSG00000204256	rna_single_nuclei_cluster_type	cerebellar inhibitory	30.3
+BRD2	ENSG00000204256	rna_single_nuclei_cluster_type	committed oligodendrocyte precursor	39.1
+BRD2	ENSG00000204256	rna_single_nuclei_cluster_type	deep-layer intratelencephalic	23.0
+BRD2	ENSG00000204256	rna_single_nuclei_cluster_type	endothelial cell	45.8
+BRD2	ENSG00000204256	rna_single_nuclei_cluster_type	ependymal cell	52.8
+BRD2	ENSG00000204256	rna_single_nuclei_cluster_type	hippocampal CA1-3	30.6
+BRD2	ENSG00000204256	rna_single_nuclei_cluster_type	hippocampal dentate gyrus	19.5
+BRD2	ENSG00000204256	rna_single_nuclei_cluster_type	leukocyte	67.7
+BRD2	ENSG00000204256	rna_single_nuclei_cluster_type	oligodendrocyte	33.0
+BRD2	ENSG00000204256	rna_single_nuclei_cluster_type	oligodendrocyte precursor cell	33.0
+BRD2	ENSG00000204256	rna_single_nuclei_cluster_type	pericyte	53.4
+BRD2	ENSG00000204256	rna_single_nuclei_cluster_type	upper-layer intratelencephalic	18.8
+BRD3	ENSG00000169925	rna_single_cell_type	astrocytes	19.4
+BRD3	ENSG00000169925	rna_single_cell_type	b-cells	23.8
+BRD3	ENSG00000169925	rna_single_cell_type	brain excitatory neurons	20.4
+BRD3	ENSG00000169925	rna_single_cell_type	brain inhibitory neurons	21.4
+BRD3	ENSG00000169925	rna_single_cell_type	hepatocytes	42.3
+BRD3	ENSG00000169925	rna_single_cell_type	hofbauer cells	26.3
+BRD3	ENSG00000169925	rna_single_cell_type	kupffer cells	23.6
+BRD3	ENSG00000169925	rna_single_cell_type	macrophages	26.0
+BRD3	ENSG00000169925	rna_single_cell_type	megakaryocytes	43.3
+BRD3	ENSG00000169925	rna_single_cell_type	microglia	25.6
+BRD3	ENSG00000169925	rna_single_cell_type	monocytes	38.2
+BRD3	ENSG00000169925	rna_single_cell_type	neutrophils	32.9
+BRD3	ENSG00000169925	rna_single_cell_type	nk-cells	29.9
+BRD3	ENSG00000169925	rna_single_cell_type	oligodendrocyte progenitor cells	22.4
+BRD3	ENSG00000169925	rna_single_cell_type	oligodendrocytes	23.9
+BRD3	ENSG00000169925	rna_single_cell_type	platelets	238.7
+BRD3	ENSG00000169925	rna_single_cell_type	t-cells	28.4
+BRD3	ENSG00000169925	rna_single_cell_type	vascular endothelial cells	30.2
+BRD3	ENSG00000169925	rna_single_nuclei_cluster_type	Bergmann glia	23.1
+BRD3	ENSG00000169925	rna_single_nuclei_cluster_type	CGE interneuron	34.6
+BRD3	ENSG00000169925	rna_single_nuclei_cluster_type	MGE interneuron	22.8
+BRD3	ENSG00000169925	rna_single_nuclei_cluster_type	astrocyte	22.9
+BRD3	ENSG00000169925	rna_single_nuclei_cluster_type	central nervous system macrophage	33.2
+BRD3	ENSG00000169925	rna_single_nuclei_cluster_type	cerebellar inhibitory	17.1
+BRD3	ENSG00000169925	rna_single_nuclei_cluster_type	committed oligodendrocyte precursor	27.7
+BRD3	ENSG00000169925	rna_single_nuclei_cluster_type	deep-layer intratelencephalic	21.0
+BRD3	ENSG00000169925	rna_single_nuclei_cluster_type	endothelial cell	20.0
+BRD3	ENSG00000169925	rna_single_nuclei_cluster_type	ependymal cell	29.6
+BRD3	ENSG00000169925	rna_single_nuclei_cluster_type	hippocampal CA1-3	18.4
+BRD3	ENSG00000169925	rna_single_nuclei_cluster_type	hippocampal dentate gyrus	19.2
+BRD3	ENSG00000169925	rna_single_nuclei_cluster_type	leukocyte	29.2
+BRD3	ENSG00000169925	rna_single_nuclei_cluster_type	oligodendrocyte	27.0
+BRD3	ENSG00000169925	rna_single_nuclei_cluster_type	oligodendrocyte precursor cell	25.6
+BRD3	ENSG00000169925	rna_single_nuclei_cluster_type	pericyte	26.7
+BRD3	ENSG00000169925	rna_single_nuclei_cluster_type	upper-layer intratelencephalic	19.3
+BRD4	ENSG00000141867	rna_single_cell_type	astrocytes	60.3
+BRD4	ENSG00000141867	rna_single_cell_type	b-cells	204.7
+BRD4	ENSG00000141867	rna_single_cell_type	brain excitatory neurons	77.7
+BRD4	ENSG00000141867	rna_single_cell_type	brain inhibitory neurons	75.3
+BRD4	ENSG00000141867	rna_single_cell_type	hepatocytes	138.0
+BRD4	ENSG00000141867	rna_single_cell_type	hofbauer cells	94.8
+BRD4	ENSG00000141867	rna_single_cell_type	kupffer cells	130.2
+BRD4	ENSG00000141867	rna_single_cell_type	macrophages	156.8
+BRD4	ENSG00000141867	rna_single_cell_type	megakaryocytes	61.8
+BRD4	ENSG00000141867	rna_single_cell_type	microglia	133.5
+BRD4	ENSG00000141867	rna_single_cell_type	monocytes	249.4
+BRD4	ENSG00000141867	rna_single_cell_type	neutrophils	663.6
+BRD4	ENSG00000141867	rna_single_cell_type	nk-cells	146.5
+BRD4	ENSG00000141867	rna_single_cell_type	oligodendrocyte progenitor cells	60.7
+BRD4	ENSG00000141867	rna_single_cell_type	oligodendrocytes	69.9
+BRD4	ENSG00000141867	rna_single_cell_type	platelets	84.7
+BRD4	ENSG00000141867	rna_single_cell_type	t-cells	143.0
+BRD4	ENSG00000141867	rna_single_cell_type	vascular endothelial cells	125.8
+BRD4	ENSG00000141867	rna_single_nuclei_cluster_type	Bergmann glia	64.7
+BRD4	ENSG00000141867	rna_single_nuclei_cluster_type	CGE interneuron	81.5
+BRD4	ENSG00000141867	rna_single_nuclei_cluster_type	MGE interneuron	97.4
+BRD4	ENSG00000141867	rna_single_nuclei_cluster_type	astrocyte	76.7
+BRD4	ENSG00000141867	rna_single_nuclei_cluster_type	central nervous system macrophage	175.1
+BRD4	ENSG00000141867	rna_single_nuclei_cluster_type	cerebellar inhibitory	72.9
+BRD4	ENSG00000141867	rna_single_nuclei_cluster_type	committed oligodendrocyte precursor	79.3
+BRD4	ENSG00000141867	rna_single_nuclei_cluster_type	deep-layer intratelencephalic	109.4
+BRD4	ENSG00000141867	rna_single_nuclei_cluster_type	endothelial cell	137.4
+BRD4	ENSG00000141867	rna_single_nuclei_cluster_type	ependymal cell	77.6
+BRD4	ENSG00000141867	rna_single_nuclei_cluster_type	hippocampal CA1-3	89.4
+BRD4	ENSG00000141867	rna_single_nuclei_cluster_type	hippocampal dentate gyrus	81.6
+BRD4	ENSG00000141867	rna_single_nuclei_cluster_type	leukocyte	163.3
+BRD4	ENSG00000141867	rna_single_nuclei_cluster_type	oligodendrocyte	77.7
+BRD4	ENSG00000141867	rna_single_nuclei_cluster_type	oligodendrocyte precursor cell	71.4
+BRD4	ENSG00000141867	rna_single_nuclei_cluster_type	pericyte	161.8
+BRD4	ENSG00000141867	rna_single_nuclei_cluster_type	upper-layer intratelencephalic	97.7
+BRDT	ENSG00000137948	rna_single_cell_type	astrocytes	0.5
+BRDT	ENSG00000137948	rna_single_cell_type	b-cells	0.4
+BRDT	ENSG00000137948	rna_single_cell_type	brain excitatory neurons	0.7
+BRDT	ENSG00000137948	rna_single_cell_type	brain inhibitory neurons	1.0
+BRDT	ENSG00000137948	rna_single_cell_type	hepatocytes	0.3
+BRDT	ENSG00000137948	rna_single_cell_type	hofbauer cells	2.1
+BRDT	ENSG00000137948	rna_single_cell_type	kupffer cells	1.0
+BRDT	ENSG00000137948	rna_single_cell_type	macrophages	0.6
+BRDT	ENSG00000137948	rna_single_cell_type	megakaryocytes	0.0
+BRDT	ENSG00000137948	rna_single_cell_type	microglia	0.3
+BRDT	ENSG00000137948	rna_single_cell_type	monocytes	0.3
+BRDT	ENSG00000137948	rna_single_cell_type	neutrophils	0.3
+BRDT	ENSG00000137948	rna_single_cell_type	nk-cells	2.3
+BRDT	ENSG00000137948	rna_single_cell_type	oligodendrocyte progenitor cells	0.5
+BRDT	ENSG00000137948	rna_single_cell_type	oligodendrocytes	0.3
+BRDT	ENSG00000137948	rna_single_cell_type	platelets	0.0
+BRDT	ENSG00000137948	rna_single_cell_type	t-cells	6.2
+BRDT	ENSG00000137948	rna_single_cell_type	vascular endothelial cells	2.8
+BRDT	ENSG00000137948	rna_single_nuclei_cluster_type	Bergmann glia	0.2
+BRDT	ENSG00000137948	rna_single_nuclei_cluster_type	CGE interneuron	0.5
+BRDT	ENSG00000137948	rna_single_nuclei_cluster_type	MGE interneuron	0.7
+BRDT	ENSG00000137948	rna_single_nuclei_cluster_type	astrocyte	0.5
+BRDT	ENSG00000137948	rna_single_nuclei_cluster_type	central nervous system macrophage	0.4
+BRDT	ENSG00000137948	rna_single_nuclei_cluster_type	cerebellar inhibitory	0.8
+BRDT	ENSG00000137948	rna_single_nuclei_cluster_type	committed oligodendrocyte precursor	0.3
+BRDT	ENSG00000137948	rna_single_nuclei_cluster_type	deep-layer intratelencephalic	0.9
+BRDT	ENSG00000137948	rna_single_nuclei_cluster_type	endothelial cell	0.5
+BRDT	ENSG00000137948	rna_single_nuclei_cluster_type	ependymal cell	0.6
+BRDT	ENSG00000137948	rna_single_nuclei_cluster_type	hippocampal CA1-3	0.6
+BRDT	ENSG00000137948	rna_single_nuclei_cluster_type	hippocampal dentate gyrus	0.9
+BRDT	ENSG00000137948	rna_single_nuclei_cluster_type	leukocyte	1.3
+BRDT	ENSG00000137948	rna_single_nuclei_cluster_type	oligodendrocyte	0.3
+BRDT	ENSG00000137948	rna_single_nuclei_cluster_type	oligodendrocyte precursor cell	0.5
+BRDT	ENSG00000137948	rna_single_nuclei_cluster_type	pericyte	0.1
+BRDT	ENSG00000137948	rna_single_nuclei_cluster_type	upper-layer intratelencephalic	1.7
+CDC25A	ENSG00000164045	rna_single_cell_type	astrocytes	1.1
+CDC25A	ENSG00000164045	rna_single_cell_type	b-cells	1.0
+CDC25A	ENSG00000164045	rna_single_cell_type	brain excitatory neurons	0.5
+CDC25A	ENSG00000164045	rna_single_cell_type	brain inhibitory neurons	0.7
+CDC25A	ENSG00000164045	rna_single_cell_type	hepatocytes	0.3
+CDC25A	ENSG00000164045	rna_single_cell_type	hofbauer cells	5.1
+CDC25A	ENSG00000164045	rna_single_cell_type	kupffer cells	0.0
+CDC25A	ENSG00000164045	rna_single_cell_type	macrophages	0.8
+CDC25A	ENSG00000164045	rna_single_cell_type	megakaryocytes	6.2
+CDC25A	ENSG00000164045	rna_single_cell_type	microglia	0.3
+CDC25A	ENSG00000164045	rna_single_cell_type	monocytes	0.1
+CDC25A	ENSG00000164045	rna_single_cell_type	neutrophils	0.3
+CDC25A	ENSG00000164045	rna_single_cell_type	nk-cells	0.3
+CDC25A	ENSG00000164045	rna_single_cell_type	oligodendrocyte progenitor cells	1.1
+CDC25A	ENSG00000164045	rna_single_cell_type	oligodendrocytes	0.2
+CDC25A	ENSG00000164045	rna_single_cell_type	platelets	1.4
+CDC25A	ENSG00000164045	rna_single_cell_type	t-cells	0.4
+CDC25A	ENSG00000164045	rna_single_cell_type	vascular endothelial cells	1.2
+CDC25A	ENSG00000164045	rna_single_nuclei_cluster_type	Bergmann glia	0.1
+CDC25A	ENSG00000164045	rna_single_nuclei_cluster_type	CGE interneuron	1.1
+CDC25A	ENSG00000164045	rna_single_nuclei_cluster_type	MGE interneuron	1.4
+CDC25A	ENSG00000164045	rna_single_nuclei_cluster_type	astrocyte	1.1
+CDC25A	ENSG00000164045	rna_single_nuclei_cluster_type	central nervous system macrophage	0.5
+CDC25A	ENSG00000164045	rna_single_nuclei_cluster_type	cerebellar inhibitory	0.5
+CDC25A	ENSG00000164045	rna_single_nuclei_cluster_type	committed oligodendrocyte precursor	0.4
+CDC25A	ENSG00000164045	rna_single_nuclei_cluster_type	deep-layer intratelencephalic	0.2
+CDC25A	ENSG00000164045	rna_single_nuclei_cluster_type	endothelial cell	0.8
+CDC25A	ENSG00000164045	rna_single_nuclei_cluster_type	ependymal cell	0.5
+CDC25A	ENSG00000164045	rna_single_nuclei_cluster_type	hippocampal CA1-3	0.3
+CDC25A	ENSG00000164045	rna_single_nuclei_cluster_type	hippocampal dentate gyrus	0.4
+CDC25A	ENSG00000164045	rna_single_nuclei_cluster_type	leukocyte	0.4
+CDC25A	ENSG00000164045	rna_single_nuclei_cluster_type	oligodendrocyte	0.1
+CDC25A	ENSG00000164045	rna_single_nuclei_cluster_type	oligodendrocyte precursor cell	1.1
+CDC25A	ENSG00000164045	rna_single_nuclei_cluster_type	pericyte	0.7
+CDC25A	ENSG00000164045	rna_single_nuclei_cluster_type	upper-layer intratelencephalic	0.2
+ETV1	ENSG00000006468	rna_single_cell_type	astrocytes	92.7
+ETV1	ENSG00000006468	rna_single_cell_type	b-cells	0.9
+ETV1	ENSG00000006468	rna_single_cell_type	brain excitatory neurons	256.6
+ETV1	ENSG00000006468	rna_single_cell_type	brain inhibitory neurons	42.5
+ETV1	ENSG00000006468	rna_single_cell_type	hepatocytes	20.0
+ETV1	ENSG00000006468	rna_single_cell_type	hofbauer cells	13.5
+ETV1	ENSG00000006468	rna_single_cell_type	kupffer cells	29.7
+ETV1	ENSG00000006468	rna_single_cell_type	macrophages	6.8
+ETV1	ENSG00000006468	rna_single_cell_type	megakaryocytes	0.0
+ETV1	ENSG00000006468	rna_single_cell_type	microglia	14.3
+ETV1	ENSG00000006468	rna_single_cell_type	monocytes	1.2
+ETV1	ENSG00000006468	rna_single_cell_type	neutrophils	8.6
+ETV1	ENSG00000006468	rna_single_cell_type	nk-cells	1.2
+ETV1	ENSG00000006468	rna_single_cell_type	oligodendrocyte progenitor cells	260.0
+ETV1	ENSG00000006468	rna_single_cell_type	oligodendrocytes	4.1
+ETV1	ENSG00000006468	rna_single_cell_type	platelets	0.0
+ETV1	ENSG00000006468	rna_single_cell_type	t-cells	4.7
+ETV1	ENSG00000006468	rna_single_cell_type	vascular endothelial cells	24.2
+ETV1	ENSG00000006468	rna_single_nuclei_cluster_type	Bergmann glia	124.2
+ETV1	ENSG00000006468	rna_single_nuclei_cluster_type	CGE interneuron	49.2
+ETV1	ENSG00000006468	rna_single_nuclei_cluster_type	MGE interneuron	36.4
+ETV1	ENSG00000006468	rna_single_nuclei_cluster_type	astrocyte	90.6
+ETV1	ENSG00000006468	rna_single_nuclei_cluster_type	central nervous system macrophage	20.0
+ETV1	ENSG00000006468	rna_single_nuclei_cluster_type	cerebellar inhibitory	19.7
+ETV1	ENSG00000006468	rna_single_nuclei_cluster_type	committed oligodendrocyte precursor	18.6
+ETV1	ENSG00000006468	rna_single_nuclei_cluster_type	deep-layer intratelencephalic	102.9
+ETV1	ENSG00000006468	rna_single_nuclei_cluster_type	endothelial cell	7.1
+ETV1	ENSG00000006468	rna_single_nuclei_cluster_type	ependymal cell	12.1
+ETV1	ENSG00000006468	rna_single_nuclei_cluster_type	hippocampal CA1-3	208.6
+ETV1	ENSG00000006468	rna_single_nuclei_cluster_type	hippocampal dentate gyrus	15.5
+ETV1	ENSG00000006468	rna_single_nuclei_cluster_type	leukocyte	3.9
+ETV1	ENSG00000006468	rna_single_nuclei_cluster_type	oligodendrocyte	2.4
+ETV1	ENSG00000006468	rna_single_nuclei_cluster_type	oligodendrocyte precursor cell	320.7
+ETV1	ENSG00000006468	rna_single_nuclei_cluster_type	pericyte	85.0
+ETV1	ENSG00000006468	rna_single_nuclei_cluster_type	upper-layer intratelencephalic	17.3
+FGFR1	ENSG00000077782	rna_single_cell_type	astrocytes	90.9
+FGFR1	ENSG00000077782	rna_single_cell_type	b-cells	8.1
+FGFR1	ENSG00000077782	rna_single_cell_type	brain excitatory neurons	87.7
+FGFR1	ENSG00000077782	rna_single_cell_type	brain inhibitory neurons	20.8
+FGFR1	ENSG00000077782	rna_single_cell_type	hepatocytes	0.5
+FGFR1	ENSG00000077782	rna_single_cell_type	hofbauer cells	78.0
+FGFR1	ENSG00000077782	rna_single_cell_type	kupffer cells	19.5
+FGFR1	ENSG00000077782	rna_single_cell_type	macrophages	77.8
+FGFR1	ENSG00000077782	rna_single_cell_type	megakaryocytes	0.0
+FGFR1	ENSG00000077782	rna_single_cell_type	microglia	7.4
+FGFR1	ENSG00000077782	rna_single_cell_type	monocytes	39.7
+FGFR1	ENSG00000077782	rna_single_cell_type	neutrophils	6.8
+FGFR1	ENSG00000077782	rna_single_cell_type	nk-cells	20.5
+FGFR1	ENSG00000077782	rna_single_cell_type	oligodendrocyte progenitor cells	228.4
+FGFR1	ENSG00000077782	rna_single_cell_type	oligodendrocytes	14.2
+FGFR1	ENSG00000077782	rna_single_cell_type	platelets	0.0
+FGFR1	ENSG00000077782	rna_single_cell_type	t-cells	35.1
+FGFR1	ENSG00000077782	rna_single_cell_type	vascular endothelial cells	116.7
+FGFR1	ENSG00000077782	rna_single_nuclei_cluster_type	Bergmann glia	58.6
+FGFR1	ENSG00000077782	rna_single_nuclei_cluster_type	CGE interneuron	25.6
+FGFR1	ENSG00000077782	rna_single_nuclei_cluster_type	MGE interneuron	34.1
+FGFR1	ENSG00000077782	rna_single_nuclei_cluster_type	astrocyte	125.4
+FGFR1	ENSG00000077782	rna_single_nuclei_cluster_type	central nervous system macrophage	15.7
+FGFR1	ENSG00000077782	rna_single_nuclei_cluster_type	cerebellar inhibitory	8.6
+FGFR1	ENSG00000077782	rna_single_nuclei_cluster_type	committed oligodendrocyte precursor	26.5
+FGFR1	ENSG00000077782	rna_single_nuclei_cluster_type	deep-layer intratelencephalic	54.9
+FGFR1	ENSG00000077782	rna_single_nuclei_cluster_type	endothelial cell	134.3
+FGFR1	ENSG00000077782	rna_single_nuclei_cluster_type	ependymal cell	151.2
+FGFR1	ENSG00000077782	rna_single_nuclei_cluster_type	hippocampal CA1-3	39.8
+FGFR1	ENSG00000077782	rna_single_nuclei_cluster_type	hippocampal dentate gyrus	16.7
+FGFR1	ENSG00000077782	rna_single_nuclei_cluster_type	leukocyte	19.1
+FGFR1	ENSG00000077782	rna_single_nuclei_cluster_type	oligodendrocyte	17.6
+FGFR1	ENSG00000077782	rna_single_nuclei_cluster_type	oligodendrocyte precursor cell	258.4
+FGFR1	ENSG00000077782	rna_single_nuclei_cluster_type	pericyte	19.9
+FGFR1	ENSG00000077782	rna_single_nuclei_cluster_type	upper-layer intratelencephalic	17.7
+FGFR2	ENSG00000066468	rna_single_cell_type	astrocytes	236.4
+FGFR2	ENSG00000066468	rna_single_cell_type	b-cells	2.8
+FGFR2	ENSG00000066468	rna_single_cell_type	brain excitatory neurons	8.8
+FGFR2	ENSG00000066468	rna_single_cell_type	brain inhibitory neurons	20.0
+FGFR2	ENSG00000066468	rna_single_cell_type	hepatocytes	7.7
+FGFR2	ENSG00000066468	rna_single_cell_type	hofbauer cells	2.0
+FGFR2	ENSG00000066468	rna_single_cell_type	kupffer cells	0.0
+FGFR2	ENSG00000066468	rna_single_cell_type	macrophages	2.2
+FGFR2	ENSG00000066468	rna_single_cell_type	megakaryocytes	0.0
+FGFR2	ENSG00000066468	rna_single_cell_type	microglia	7.2
+FGFR2	ENSG00000066468	rna_single_cell_type	monocytes	1.6
+FGFR2	ENSG00000066468	rna_single_cell_type	neutrophils	2.7
+FGFR2	ENSG00000066468	rna_single_cell_type	nk-cells	3.0
+FGFR2	ENSG00000066468	rna_single_cell_type	oligodendrocyte progenitor cells	11.5
+FGFR2	ENSG00000066468	rna_single_cell_type	oligodendrocytes	629.1
+FGFR2	ENSG00000066468	rna_single_cell_type	platelets	0.0
+FGFR2	ENSG00000066468	rna_single_cell_type	t-cells	4.4
+FGFR2	ENSG00000066468	rna_single_cell_type	vascular endothelial cells	2.7
+FGFR2	ENSG00000066468	rna_single_nuclei_cluster_type	Bergmann glia	1277.6
+FGFR2	ENSG00000066468	rna_single_nuclei_cluster_type	CGE interneuron	21.5
+FGFR2	ENSG00000066468	rna_single_nuclei_cluster_type	MGE interneuron	29.8
+FGFR2	ENSG00000066468	rna_single_nuclei_cluster_type	astrocyte	203.3
+FGFR2	ENSG00000066468	rna_single_nuclei_cluster_type	central nervous system macrophage	11.2
+FGFR2	ENSG00000066468	rna_single_nuclei_cluster_type	cerebellar inhibitory	11.2
+FGFR2	ENSG00000066468	rna_single_nuclei_cluster_type	committed oligodendrocyte precursor	268.5
+FGFR2	ENSG00000066468	rna_single_nuclei_cluster_type	deep-layer intratelencephalic	1.6
+FGFR2	ENSG00000066468	rna_single_nuclei_cluster_type	endothelial cell	10.2
+FGFR2	ENSG00000066468	rna_single_nuclei_cluster_type	ependymal cell	103.7
+FGFR2	ENSG00000066468	rna_single_nuclei_cluster_type	hippocampal CA1-3	17.0
+FGFR2	ENSG00000066468	rna_single_nuclei_cluster_type	hippocampal dentate gyrus	6.5
+FGFR2	ENSG00000066468	rna_single_nuclei_cluster_type	leukocyte	15.0
+FGFR2	ENSG00000066468	rna_single_nuclei_cluster_type	oligodendrocyte	929.3
+FGFR2	ENSG00000066468	rna_single_nuclei_cluster_type	oligodendrocyte precursor cell	21.7
+FGFR2	ENSG00000066468	rna_single_nuclei_cluster_type	pericyte	7.5
+FGFR2	ENSG00000066468	rna_single_nuclei_cluster_type	upper-layer intratelencephalic	24.5
+FGFR3	ENSG00000068078	rna_single_cell_type	astrocytes	527.6
+FGFR3	ENSG00000068078	rna_single_cell_type	b-cells	2.7
+FGFR3	ENSG00000068078	rna_single_cell_type	brain excitatory neurons	0.6
+FGFR3	ENSG00000068078	rna_single_cell_type	brain inhibitory neurons	0.6
+FGFR3	ENSG00000068078	rna_single_cell_type	hepatocytes	31.9
+FGFR3	ENSG00000068078	rna_single_cell_type	hofbauer cells	0.2
+FGFR3	ENSG00000068078	rna_single_cell_type	kupffer cells	0.0
+FGFR3	ENSG00000068078	rna_single_cell_type	macrophages	1.5
+FGFR3	ENSG00000068078	rna_single_cell_type	megakaryocytes	6.2
+FGFR3	ENSG00000068078	rna_single_cell_type	microglia	5.6
+FGFR3	ENSG00000068078	rna_single_cell_type	monocytes	1.2
+FGFR3	ENSG00000068078	rna_single_cell_type	neutrophils	0.2
+FGFR3	ENSG00000068078	rna_single_cell_type	nk-cells	1.6
+FGFR3	ENSG00000068078	rna_single_cell_type	oligodendrocyte progenitor cells	61.2
+FGFR3	ENSG00000068078	rna_single_cell_type	oligodendrocytes	6.3
+FGFR3	ENSG00000068078	rna_single_cell_type	platelets	0.0
+FGFR3	ENSG00000068078	rna_single_cell_type	t-cells	1.7
+FGFR3	ENSG00000068078	rna_single_cell_type	vascular endothelial cells	5.5
+FGFR3	ENSG00000068078	rna_single_nuclei_cluster_type	Bergmann glia	251.7
+FGFR3	ENSG00000068078	rna_single_nuclei_cluster_type	CGE interneuron	1.1
+FGFR3	ENSG00000068078	rna_single_nuclei_cluster_type	MGE interneuron	0.8
+FGFR3	ENSG00000068078	rna_single_nuclei_cluster_type	astrocyte	516.1
+FGFR3	ENSG00000068078	rna_single_nuclei_cluster_type	central nervous system macrophage	5.7
+FGFR3	ENSG00000068078	rna_single_nuclei_cluster_type	cerebellar inhibitory	1.1
+FGFR3	ENSG00000068078	rna_single_nuclei_cluster_type	committed oligodendrocyte precursor	14.0
+FGFR3	ENSG00000068078	rna_single_nuclei_cluster_type	deep-layer intratelencephalic	0.7
+FGFR3	ENSG00000068078	rna_single_nuclei_cluster_type	endothelial cell	18.0
+FGFR3	ENSG00000068078	rna_single_nuclei_cluster_type	ependymal cell	59.9
+FGFR3	ENSG00000068078	rna_single_nuclei_cluster_type	hippocampal CA1-3	0.5
+FGFR3	ENSG00000068078	rna_single_nuclei_cluster_type	hippocampal dentate gyrus	0.4
+FGFR3	ENSG00000068078	rna_single_nuclei_cluster_type	leukocyte	6.7
+FGFR3	ENSG00000068078	rna_single_nuclei_cluster_type	oligodendrocyte	4.3
+FGFR3	ENSG00000068078	rna_single_nuclei_cluster_type	oligodendrocyte precursor cell	57.5
+FGFR3	ENSG00000068078	rna_single_nuclei_cluster_type	pericyte	3.9
+FGFR3	ENSG00000068078	rna_single_nuclei_cluster_type	upper-layer intratelencephalic	0.7
+FGFR4	ENSG00000160867	rna_single_cell_type	astrocytes	1.2
+FGFR4	ENSG00000160867	rna_single_cell_type	b-cells	0.8
+FGFR4	ENSG00000160867	rna_single_cell_type	brain excitatory neurons	0.6
+FGFR4	ENSG00000160867	rna_single_cell_type	brain inhibitory neurons	0.6
+FGFR4	ENSG00000160867	rna_single_cell_type	hepatocytes	30.3
+FGFR4	ENSG00000160867	rna_single_cell_type	hofbauer cells	0.1
+FGFR4	ENSG00000160867	rna_single_cell_type	kupffer cells	0.0
+FGFR4	ENSG00000160867	rna_single_cell_type	macrophages	0.3
+FGFR4	ENSG00000160867	rna_single_cell_type	megakaryocytes	0.0
+FGFR4	ENSG00000160867	rna_single_cell_type	microglia	0.1
+FGFR4	ENSG00000160867	rna_single_cell_type	monocytes	0.3
+FGFR4	ENSG00000160867	rna_single_cell_type	neutrophils	0.5
+FGFR4	ENSG00000160867	rna_single_cell_type	nk-cells	0.7
+FGFR4	ENSG00000160867	rna_single_cell_type	oligodendrocyte progenitor cells	0.1
+FGFR4	ENSG00000160867	rna_single_cell_type	oligodendrocytes	0.2
+FGFR4	ENSG00000160867	rna_single_cell_type	platelets	0.0
+FGFR4	ENSG00000160867	rna_single_cell_type	t-cells	0.4
+FGFR4	ENSG00000160867	rna_single_cell_type	vascular endothelial cells	0.6
+FGFR4	ENSG00000160867	rna_single_nuclei_cluster_type	Bergmann glia	1.0
+FGFR4	ENSG00000160867	rna_single_nuclei_cluster_type	CGE interneuron	1.3
+FGFR4	ENSG00000160867	rna_single_nuclei_cluster_type	MGE interneuron	0.3
+FGFR4	ENSG00000160867	rna_single_nuclei_cluster_type	astrocyte	1.9
+FGFR4	ENSG00000160867	rna_single_nuclei_cluster_type	central nervous system macrophage	0.0
+FGFR4	ENSG00000160867	rna_single_nuclei_cluster_type	cerebellar inhibitory	0.3
+FGFR4	ENSG00000160867	rna_single_nuclei_cluster_type	committed oligodendrocyte precursor	0.4
+FGFR4	ENSG00000160867	rna_single_nuclei_cluster_type	deep-layer intratelencephalic	0.4
+FGFR4	ENSG00000160867	rna_single_nuclei_cluster_type	endothelial cell	0.4
+FGFR4	ENSG00000160867	rna_single_nuclei_cluster_type	ependymal cell	0.5
+FGFR4	ENSG00000160867	rna_single_nuclei_cluster_type	hippocampal CA1-3	0.9
+FGFR4	ENSG00000160867	rna_single_nuclei_cluster_type	hippocampal dentate gyrus	0.9
+FGFR4	ENSG00000160867	rna_single_nuclei_cluster_type	leukocyte	0.1
+FGFR4	ENSG00000160867	rna_single_nuclei_cluster_type	oligodendrocyte	0.2
+FGFR4	ENSG00000160867	rna_single_nuclei_cluster_type	oligodendrocyte precursor cell	0.4
+FGFR4	ENSG00000160867	rna_single_nuclei_cluster_type	pericyte	2.9
+FGFR4	ENSG00000160867	rna_single_nuclei_cluster_type	upper-layer intratelencephalic	0.9
+FOXO1	ENSG00000150907	rna_single_cell_type	astrocytes	190.6
+FOXO1	ENSG00000150907	rna_single_cell_type	b-cells	251.6
+FOXO1	ENSG00000150907	rna_single_cell_type	brain excitatory neurons	18.2
+FOXO1	ENSG00000150907	rna_single_cell_type	brain inhibitory neurons	77.1
+FOXO1	ENSG00000150907	rna_single_cell_type	hepatocytes	210.7
+FOXO1	ENSG00000150907	rna_single_cell_type	hofbauer cells	74.7
+FOXO1	ENSG00000150907	rna_single_cell_type	kupffer cells	183.5
+FOXO1	ENSG00000150907	rna_single_cell_type	macrophages	156.4
+FOXO1	ENSG00000150907	rna_single_cell_type	megakaryocytes	0.0
+FOXO1	ENSG00000150907	rna_single_cell_type	microglia	113.6
+FOXO1	ENSG00000150907	rna_single_cell_type	monocytes	156.8
+FOXO1	ENSG00000150907	rna_single_cell_type	neutrophils	330.0
+FOXO1	ENSG00000150907	rna_single_cell_type	nk-cells	181.0
+FOXO1	ENSG00000150907	rna_single_cell_type	oligodendrocyte progenitor cells	40.6
+FOXO1	ENSG00000150907	rna_single_cell_type	oligodendrocytes	92.7
+FOXO1	ENSG00000150907	rna_single_cell_type	platelets	22.6
+FOXO1	ENSG00000150907	rna_single_cell_type	t-cells	349.9
+FOXO1	ENSG00000150907	rna_single_cell_type	vascular endothelial cells	305.9
+FOXO1	ENSG00000150907	rna_single_nuclei_cluster_type	Bergmann glia	89.7
+FOXO1	ENSG00000150907	rna_single_nuclei_cluster_type	CGE interneuron	24.7
+FOXO1	ENSG00000150907	rna_single_nuclei_cluster_type	MGE interneuron	5.7
+FOXO1	ENSG00000150907	rna_single_nuclei_cluster_type	astrocyte	243.1
+FOXO1	ENSG00000150907	rna_single_nuclei_cluster_type	central nervous system macrophage	140.0
+FOXO1	ENSG00000150907	rna_single_nuclei_cluster_type	cerebellar inhibitory	5.8
+FOXO1	ENSG00000150907	rna_single_nuclei_cluster_type	committed oligodendrocyte precursor	54.4
+FOXO1	ENSG00000150907	rna_single_nuclei_cluster_type	deep-layer intratelencephalic	11.2
+FOXO1	ENSG00000150907	rna_single_nuclei_cluster_type	endothelial cell	551.9
+FOXO1	ENSG00000150907	rna_single_nuclei_cluster_type	ependymal cell	97.7
+FOXO1	ENSG00000150907	rna_single_nuclei_cluster_type	hippocampal CA1-3	24.1
+FOXO1	ENSG00000150907	rna_single_nuclei_cluster_type	hippocampal dentate gyrus	102.7
+FOXO1	ENSG00000150907	rna_single_nuclei_cluster_type	leukocyte	236.3
+FOXO1	ENSG00000150907	rna_single_nuclei_cluster_type	oligodendrocyte	134.3
+FOXO1	ENSG00000150907	rna_single_nuclei_cluster_type	oligodendrocyte precursor cell	47.7
+FOXO1	ENSG00000150907	rna_single_nuclei_cluster_type	pericyte	42.8
+FOXO1	ENSG00000150907	rna_single_nuclei_cluster_type	upper-layer intratelencephalic	6.4
+GRIN2C	ENSG00000161509	rna_single_cell_type	astrocytes	148.6
+GRIN2C	ENSG00000161509	rna_single_cell_type	b-cells	1.2
+GRIN2C	ENSG00000161509	rna_single_cell_type	brain excitatory neurons	32.4
+GRIN2C	ENSG00000161509	rna_single_cell_type	brain inhibitory neurons	2.6
+GRIN2C	ENSG00000161509	rna_single_cell_type	hepatocytes	0.3
+GRIN2C	ENSG00000161509	rna_single_cell_type	hofbauer cells	42.5
+GRIN2C	ENSG00000161509	rna_single_cell_type	kupffer cells	2.0
+GRIN2C	ENSG00000161509	rna_single_cell_type	macrophages	2.9
+GRIN2C	ENSG00000161509	rna_single_cell_type	megakaryocytes	0.0
+GRIN2C	ENSG00000161509	rna_single_cell_type	microglia	1.3
+GRIN2C	ENSG00000161509	rna_single_cell_type	monocytes	1.2
+GRIN2C	ENSG00000161509	rna_single_cell_type	neutrophils	0.8
+GRIN2C	ENSG00000161509	rna_single_cell_type	nk-cells	2.1
+GRIN2C	ENSG00000161509	rna_single_cell_type	oligodendrocyte progenitor cells	1.8
+GRIN2C	ENSG00000161509	rna_single_cell_type	oligodendrocytes	1.7
+GRIN2C	ENSG00000161509	rna_single_cell_type	platelets	2.8
+GRIN2C	ENSG00000161509	rna_single_cell_type	t-cells	1.9
+GRIN2C	ENSG00000161509	rna_single_cell_type	vascular endothelial cells	0.9
+GRIN2C	ENSG00000161509	rna_single_nuclei_cluster_type	Bergmann glia	60.7
+GRIN2C	ENSG00000161509	rna_single_nuclei_cluster_type	CGE interneuron	0.6
+GRIN2C	ENSG00000161509	rna_single_nuclei_cluster_type	MGE interneuron	3.4
+GRIN2C	ENSG00000161509	rna_single_nuclei_cluster_type	astrocyte	133.3
+GRIN2C	ENSG00000161509	rna_single_nuclei_cluster_type	central nervous system macrophage	2.4
+GRIN2C	ENSG00000161509	rna_single_nuclei_cluster_type	cerebellar inhibitory	9.1
+GRIN2C	ENSG00000161509	rna_single_nuclei_cluster_type	committed oligodendrocyte precursor	3.3
+GRIN2C	ENSG00000161509	rna_single_nuclei_cluster_type	deep-layer intratelencephalic	0.9
+GRIN2C	ENSG00000161509	rna_single_nuclei_cluster_type	endothelial cell	2.2
+GRIN2C	ENSG00000161509	rna_single_nuclei_cluster_type	ependymal cell	3.1
+GRIN2C	ENSG00000161509	rna_single_nuclei_cluster_type	hippocampal CA1-3	1.5
+GRIN2C	ENSG00000161509	rna_single_nuclei_cluster_type	hippocampal dentate gyrus	1.0
+GRIN2C	ENSG00000161509	rna_single_nuclei_cluster_type	leukocyte	2.5
+GRIN2C	ENSG00000161509	rna_single_nuclei_cluster_type	oligodendrocyte	1.9
+GRIN2C	ENSG00000161509	rna_single_nuclei_cluster_type	oligodendrocyte precursor cell	1.5
+GRIN2C	ENSG00000161509	rna_single_nuclei_cluster_type	pericyte	3.3
+GRIN2C	ENSG00000161509	rna_single_nuclei_cluster_type	upper-layer intratelencephalic	1.0
+HCAR2	ENSG00000182782	rna_single_cell_type	astrocytes	0.0
+HCAR2	ENSG00000182782	rna_single_cell_type	b-cells	0.2
+HCAR2	ENSG00000182782	rna_single_cell_type	brain excitatory neurons	0.0
+HCAR2	ENSG00000182782	rna_single_cell_type	brain inhibitory neurons	0.0
+HCAR2	ENSG00000182782	rna_single_cell_type	hepatocytes	0.0
+HCAR2	ENSG00000182782	rna_single_cell_type	hofbauer cells	0.5
+HCAR2	ENSG00000182782	rna_single_cell_type	kupffer cells	3.1
+HCAR2	ENSG00000182782	rna_single_cell_type	macrophages	10.1
+HCAR2	ENSG00000182782	rna_single_cell_type	megakaryocytes	0.0
+HCAR2	ENSG00000182782	rna_single_cell_type	microglia	0.0
+HCAR2	ENSG00000182782	rna_single_cell_type	monocytes	19.5
+HCAR2	ENSG00000182782	rna_single_cell_type	neutrophils	106.4
+HCAR2	ENSG00000182782	rna_single_cell_type	nk-cells	0.2
+HCAR2	ENSG00000182782	rna_single_cell_type	oligodendrocyte progenitor cells	0.1
+HCAR2	ENSG00000182782	rna_single_cell_type	oligodendrocytes	0.0
+HCAR2	ENSG00000182782	rna_single_cell_type	platelets	2.8
+HCAR2	ENSG00000182782	rna_single_cell_type	t-cells	0.5
+HCAR2	ENSG00000182782	rna_single_cell_type	vascular endothelial cells	0.4
+HCAR2	ENSG00000182782	rna_single_nuclei_cluster_type	Bergmann glia	0.0
+HCAR2	ENSG00000182782	rna_single_nuclei_cluster_type	CGE interneuron	0.0
+HCAR2	ENSG00000182782	rna_single_nuclei_cluster_type	MGE interneuron	0.0
+HCAR2	ENSG00000182782	rna_single_nuclei_cluster_type	astrocyte	0.0
+HCAR2	ENSG00000182782	rna_single_nuclei_cluster_type	central nervous system macrophage	0.2
+HCAR2	ENSG00000182782	rna_single_nuclei_cluster_type	cerebellar inhibitory	0.0
+HCAR2	ENSG00000182782	rna_single_nuclei_cluster_type	committed oligodendrocyte precursor	0.0
+HCAR2	ENSG00000182782	rna_single_nuclei_cluster_type	deep-layer intratelencephalic	0.0
+HCAR2	ENSG00000182782	rna_single_nuclei_cluster_type	endothelial cell	0.1
+HCAR2	ENSG00000182782	rna_single_nuclei_cluster_type	ependymal cell	0.0
+HCAR2	ENSG00000182782	rna_single_nuclei_cluster_type	hippocampal CA1-3	0.0
+HCAR2	ENSG00000182782	rna_single_nuclei_cluster_type	hippocampal dentate gyrus	0.0
+HCAR2	ENSG00000182782	rna_single_nuclei_cluster_type	leukocyte	0.1
+HCAR2	ENSG00000182782	rna_single_nuclei_cluster_type	oligodendrocyte	0.0
+HCAR2	ENSG00000182782	rna_single_nuclei_cluster_type	oligodendrocyte precursor cell	0.1
+HCAR2	ENSG00000182782	rna_single_nuclei_cluster_type	pericyte	0.0
+HCAR2	ENSG00000182782	rna_single_nuclei_cluster_type	upper-layer intratelencephalic	0.0
+HMGB1	ENSG00000189403	rna_single_cell_type	astrocytes	327.7
+HMGB1	ENSG00000189403	rna_single_cell_type	b-cells	473.0
+HMGB1	ENSG00000189403	rna_single_cell_type	brain excitatory neurons	249.9
+HMGB1	ENSG00000189403	rna_single_cell_type	brain inhibitory neurons	271.4
+HMGB1	ENSG00000189403	rna_single_cell_type	hepatocytes	635.6
+HMGB1	ENSG00000189403	rna_single_cell_type	hofbauer cells	608.9
+HMGB1	ENSG00000189403	rna_single_cell_type	kupffer cells	411.0
+HMGB1	ENSG00000189403	rna_single_cell_type	macrophages	371.4
+HMGB1	ENSG00000189403	rna_single_cell_type	megakaryocytes	1403.2
+HMGB1	ENSG00000189403	rna_single_cell_type	microglia	162.5
+HMGB1	ENSG00000189403	rna_single_cell_type	monocytes	408.1
+HMGB1	ENSG00000189403	rna_single_cell_type	neutrophils	429.5
+HMGB1	ENSG00000189403	rna_single_cell_type	nk-cells	543.4
+HMGB1	ENSG00000189403	rna_single_cell_type	oligodendrocyte progenitor cells	244.7
+HMGB1	ENSG00000189403	rna_single_cell_type	oligodendrocytes	261.7
+HMGB1	ENSG00000189403	rna_single_cell_type	platelets	1549.8
+HMGB1	ENSG00000189403	rna_single_cell_type	t-cells	536.2
+HMGB1	ENSG00000189403	rna_single_cell_type	vascular endothelial cells	472.4
+HMGB1	ENSG00000189403	rna_single_nuclei_cluster_type	Bergmann glia	383.7
+HMGB1	ENSG00000189403	rna_single_nuclei_cluster_type	CGE interneuron	246.3
+HMGB1	ENSG00000189403	rna_single_nuclei_cluster_type	MGE interneuron	296.8
+HMGB1	ENSG00000189403	rna_single_nuclei_cluster_type	astrocyte	392.3
+HMGB1	ENSG00000189403	rna_single_nuclei_cluster_type	central nervous system macrophage	198.9
+HMGB1	ENSG00000189403	rna_single_nuclei_cluster_type	cerebellar inhibitory	296.3
+HMGB1	ENSG00000189403	rna_single_nuclei_cluster_type	committed oligodendrocyte precursor	250.1
+HMGB1	ENSG00000189403	rna_single_nuclei_cluster_type	deep-layer intratelencephalic	258.4
+HMGB1	ENSG00000189403	rna_single_nuclei_cluster_type	endothelial cell	207.1
+HMGB1	ENSG00000189403	rna_single_nuclei_cluster_type	ependymal cell	490.8
+HMGB1	ENSG00000189403	rna_single_nuclei_cluster_type	hippocampal CA1-3	286.4
+HMGB1	ENSG00000189403	rna_single_nuclei_cluster_type	hippocampal dentate gyrus	201.3
+HMGB1	ENSG00000189403	rna_single_nuclei_cluster_type	leukocyte	239.6
+HMGB1	ENSG00000189403	rna_single_nuclei_cluster_type	oligodendrocyte	330.2
+HMGB1	ENSG00000189403	rna_single_nuclei_cluster_type	oligodendrocyte precursor cell	307.8
+HMGB1	ENSG00000189403	rna_single_nuclei_cluster_type	pericyte	238.2
+HMGB1	ENSG00000189403	rna_single_nuclei_cluster_type	upper-layer intratelencephalic	255.3
+IL1B	ENSG00000125538	rna_single_cell_type	astrocytes	0.0
+IL1B	ENSG00000125538	rna_single_cell_type	b-cells	1.9
+IL1B	ENSG00000125538	rna_single_cell_type	brain excitatory neurons	0.0
+IL1B	ENSG00000125538	rna_single_cell_type	brain inhibitory neurons	0.0
+IL1B	ENSG00000125538	rna_single_cell_type	hepatocytes	0.0
+IL1B	ENSG00000125538	rna_single_cell_type	hofbauer cells	58.7
+IL1B	ENSG00000125538	rna_single_cell_type	kupffer cells	177.3
+IL1B	ENSG00000125538	rna_single_cell_type	macrophages	1016.8
+IL1B	ENSG00000125538	rna_single_cell_type	megakaryocytes	30.9
+IL1B	ENSG00000125538	rna_single_cell_type	microglia	18.7
+IL1B	ENSG00000125538	rna_single_cell_type	monocytes	4378.2
+IL1B	ENSG00000125538	rna_single_cell_type	neutrophils	2506.4
+IL1B	ENSG00000125538	rna_single_cell_type	nk-cells	3.1
+IL1B	ENSG00000125538	rna_single_cell_type	oligodendrocyte progenitor cells	0.0
+IL1B	ENSG00000125538	rna_single_cell_type	oligodendrocytes	0.1
+IL1B	ENSG00000125538	rna_single_cell_type	platelets	36.4
+IL1B	ENSG00000125538	rna_single_cell_type	t-cells	3.2
+IL1B	ENSG00000125538	rna_single_cell_type	vascular endothelial cells	2.2
+IL1B	ENSG00000125538	rna_single_nuclei_cluster_type	Bergmann glia	0.0
+IL1B	ENSG00000125538	rna_single_nuclei_cluster_type	CGE interneuron	0.0
+IL1B	ENSG00000125538	rna_single_nuclei_cluster_type	MGE interneuron	0.0
+IL1B	ENSG00000125538	rna_single_nuclei_cluster_type	astrocyte	0.1
+IL1B	ENSG00000125538	rna_single_nuclei_cluster_type	central nervous system macrophage	27.1
+IL1B	ENSG00000125538	rna_single_nuclei_cluster_type	cerebellar inhibitory	0.0
+IL1B	ENSG00000125538	rna_single_nuclei_cluster_type	committed oligodendrocyte precursor	0.4
+IL1B	ENSG00000125538	rna_single_nuclei_cluster_type	deep-layer intratelencephalic	0.1
+IL1B	ENSG00000125538	rna_single_nuclei_cluster_type	endothelial cell	0.1
+IL1B	ENSG00000125538	rna_single_nuclei_cluster_type	ependymal cell	0.1
+IL1B	ENSG00000125538	rna_single_nuclei_cluster_type	hippocampal CA1-3	0.0
+IL1B	ENSG00000125538	rna_single_nuclei_cluster_type	hippocampal dentate gyrus	0.0
+IL1B	ENSG00000125538	rna_single_nuclei_cluster_type	leukocyte	6.9
+IL1B	ENSG00000125538	rna_single_nuclei_cluster_type	oligodendrocyte	0.0
+IL1B	ENSG00000125538	rna_single_nuclei_cluster_type	oligodendrocyte precursor cell	0.1
+IL1B	ENSG00000125538	rna_single_nuclei_cluster_type	pericyte	0.1
+IL1B	ENSG00000125538	rna_single_nuclei_cluster_type	upper-layer intratelencephalic	0.1
+IL6	ENSG00000136244	rna_single_cell_type	astrocytes	0.0
+IL6	ENSG00000136244	rna_single_cell_type	b-cells	17.1
+IL6	ENSG00000136244	rna_single_cell_type	brain excitatory neurons	0.0
+IL6	ENSG00000136244	rna_single_cell_type	brain inhibitory neurons	0.0
+IL6	ENSG00000136244	rna_single_cell_type	hepatocytes	0.1
+IL6	ENSG00000136244	rna_single_cell_type	hofbauer cells	2.1
+IL6	ENSG00000136244	rna_single_cell_type	kupffer cells	40.0
+IL6	ENSG00000136244	rna_single_cell_type	macrophages	19.5
+IL6	ENSG00000136244	rna_single_cell_type	megakaryocytes	0.0
+IL6	ENSG00000136244	rna_single_cell_type	microglia	3.1
+IL6	ENSG00000136244	rna_single_cell_type	monocytes	55.9
+IL6	ENSG00000136244	rna_single_cell_type	neutrophils	4.6
+IL6	ENSG00000136244	rna_single_cell_type	nk-cells	3.8
+IL6	ENSG00000136244	rna_single_cell_type	oligodendrocyte progenitor cells	0.0
+IL6	ENSG00000136244	rna_single_cell_type	oligodendrocytes	0.0
+IL6	ENSG00000136244	rna_single_cell_type	platelets	0.0
+IL6	ENSG00000136244	rna_single_cell_type	t-cells	3.1
+IL6	ENSG00000136244	rna_single_cell_type	vascular endothelial cells	221.9
+IL6	ENSG00000136244	rna_single_nuclei_cluster_type	Bergmann glia	0.0
+IL6	ENSG00000136244	rna_single_nuclei_cluster_type	CGE interneuron	0.0
+IL6	ENSG00000136244	rna_single_nuclei_cluster_type	MGE interneuron	0.0
+IL6	ENSG00000136244	rna_single_nuclei_cluster_type	astrocyte	0.0
+IL6	ENSG00000136244	rna_single_nuclei_cluster_type	central nervous system macrophage	3.4
+IL6	ENSG00000136244	rna_single_nuclei_cluster_type	cerebellar inhibitory	0.0
+IL6	ENSG00000136244	rna_single_nuclei_cluster_type	committed oligodendrocyte precursor	0.1
+IL6	ENSG00000136244	rna_single_nuclei_cluster_type	deep-layer intratelencephalic	0.0
+IL6	ENSG00000136244	rna_single_nuclei_cluster_type	endothelial cell	3.1
+IL6	ENSG00000136244	rna_single_nuclei_cluster_type	ependymal cell	0.0
+IL6	ENSG00000136244	rna_single_nuclei_cluster_type	hippocampal CA1-3	0.0
+IL6	ENSG00000136244	rna_single_nuclei_cluster_type	hippocampal dentate gyrus	0.0
+IL6	ENSG00000136244	rna_single_nuclei_cluster_type	leukocyte	0.2
+IL6	ENSG00000136244	rna_single_nuclei_cluster_type	oligodendrocyte	0.0
+IL6	ENSG00000136244	rna_single_nuclei_cluster_type	oligodendrocyte precursor cell	0.0
+IL6	ENSG00000136244	rna_single_nuclei_cluster_type	pericyte	0.2
+IL6	ENSG00000136244	rna_single_nuclei_cluster_type	upper-layer intratelencephalic	0.0
+KEAP1	ENSG00000079999	rna_single_cell_type	astrocytes	10.3
+KEAP1	ENSG00000079999	rna_single_cell_type	b-cells	5.8
+KEAP1	ENSG00000079999	rna_single_cell_type	brain excitatory neurons	9.2
+KEAP1	ENSG00000079999	rna_single_cell_type	brain inhibitory neurons	8.8
+KEAP1	ENSG00000079999	rna_single_cell_type	hepatocytes	42.3
+KEAP1	ENSG00000079999	rna_single_cell_type	hofbauer cells	36.7
+KEAP1	ENSG00000079999	rna_single_cell_type	kupffer cells	17.4
+KEAP1	ENSG00000079999	rna_single_cell_type	macrophages	16.2
+KEAP1	ENSG00000079999	rna_single_cell_type	megakaryocytes	74.2
+KEAP1	ENSG00000079999	rna_single_cell_type	microglia	7.3
+KEAP1	ENSG00000079999	rna_single_cell_type	monocytes	17.3
+KEAP1	ENSG00000079999	rna_single_cell_type	neutrophils	15.7
+KEAP1	ENSG00000079999	rna_single_cell_type	nk-cells	18.3
+KEAP1	ENSG00000079999	rna_single_cell_type	oligodendrocyte progenitor cells	12.1
+KEAP1	ENSG00000079999	rna_single_cell_type	oligodendrocytes	24.5
+KEAP1	ENSG00000079999	rna_single_cell_type	platelets	21.2
+KEAP1	ENSG00000079999	rna_single_cell_type	t-cells	13.4
+KEAP1	ENSG00000079999	rna_single_cell_type	vascular endothelial cells	23.4
+KEAP1	ENSG00000079999	rna_single_nuclei_cluster_type	Bergmann glia	14.0
+KEAP1	ENSG00000079999	rna_single_nuclei_cluster_type	CGE interneuron	10.6
+KEAP1	ENSG00000079999	rna_single_nuclei_cluster_type	MGE interneuron	8.8
+KEAP1	ENSG00000079999	rna_single_nuclei_cluster_type	astrocyte	12.2
+KEAP1	ENSG00000079999	rna_single_nuclei_cluster_type	central nervous system macrophage	8.8
+KEAP1	ENSG00000079999	rna_single_nuclei_cluster_type	cerebellar inhibitory	14.4
+KEAP1	ENSG00000079999	rna_single_nuclei_cluster_type	committed oligodendrocyte precursor	17.0
+KEAP1	ENSG00000079999	rna_single_nuclei_cluster_type	deep-layer intratelencephalic	7.0
+KEAP1	ENSG00000079999	rna_single_nuclei_cluster_type	endothelial cell	15.6
+KEAP1	ENSG00000079999	rna_single_nuclei_cluster_type	ependymal cell	13.6
+KEAP1	ENSG00000079999	rna_single_nuclei_cluster_type	hippocampal CA1-3	5.9
+KEAP1	ENSG00000079999	rna_single_nuclei_cluster_type	hippocampal dentate gyrus	5.9
+KEAP1	ENSG00000079999	rna_single_nuclei_cluster_type	leukocyte	11.1
+KEAP1	ENSG00000079999	rna_single_nuclei_cluster_type	oligodendrocyte	27.7
+KEAP1	ENSG00000079999	rna_single_nuclei_cluster_type	oligodendrocyte precursor cell	14.7
+KEAP1	ENSG00000079999	rna_single_nuclei_cluster_type	pericyte	14.5
+KEAP1	ENSG00000079999	rna_single_nuclei_cluster_type	upper-layer intratelencephalic	6.1
+MAP3K7	ENSG00000135341	rna_single_cell_type	astrocytes	65.8
+MAP3K7	ENSG00000135341	rna_single_cell_type	b-cells	56.2
+MAP3K7	ENSG00000135341	rna_single_cell_type	brain excitatory neurons	92.1
+MAP3K7	ENSG00000135341	rna_single_cell_type	brain inhibitory neurons	86.6
+MAP3K7	ENSG00000135341	rna_single_cell_type	hepatocytes	36.7
+MAP3K7	ENSG00000135341	rna_single_cell_type	hofbauer cells	46.7
+MAP3K7	ENSG00000135341	rna_single_cell_type	kupffer cells	71.7
+MAP3K7	ENSG00000135341	rna_single_cell_type	macrophages	63.4
+MAP3K7	ENSG00000135341	rna_single_cell_type	megakaryocytes	12.4
+MAP3K7	ENSG00000135341	rna_single_cell_type	microglia	65.3
+MAP3K7	ENSG00000135341	rna_single_cell_type	monocytes	67.8
+MAP3K7	ENSG00000135341	rna_single_cell_type	neutrophils	105.1
+MAP3K7	ENSG00000135341	rna_single_cell_type	nk-cells	58.2
+MAP3K7	ENSG00000135341	rna_single_cell_type	oligodendrocyte progenitor cells	73.2
+MAP3K7	ENSG00000135341	rna_single_cell_type	oligodendrocytes	130.2
+MAP3K7	ENSG00000135341	rna_single_cell_type	platelets	11.3
+MAP3K7	ENSG00000135341	rna_single_cell_type	t-cells	49.0
+MAP3K7	ENSG00000135341	rna_single_cell_type	vascular endothelial cells	51.8
+MAP3K7	ENSG00000135341	rna_single_nuclei_cluster_type	Bergmann glia	72.2
+MAP3K7	ENSG00000135341	rna_single_nuclei_cluster_type	CGE interneuron	78.5
+MAP3K7	ENSG00000135341	rna_single_nuclei_cluster_type	MGE interneuron	89.2
+MAP3K7	ENSG00000135341	rna_single_nuclei_cluster_type	astrocyte	85.5
+MAP3K7	ENSG00000135341	rna_single_nuclei_cluster_type	central nervous system macrophage	90.2
+MAP3K7	ENSG00000135341	rna_single_nuclei_cluster_type	cerebellar inhibitory	81.4
+MAP3K7	ENSG00000135341	rna_single_nuclei_cluster_type	committed oligodendrocyte precursor	79.6
+MAP3K7	ENSG00000135341	rna_single_nuclei_cluster_type	deep-layer intratelencephalic	103.1
+MAP3K7	ENSG00000135341	rna_single_nuclei_cluster_type	endothelial cell	111.8
+MAP3K7	ENSG00000135341	rna_single_nuclei_cluster_type	ependymal cell	71.4
+MAP3K7	ENSG00000135341	rna_single_nuclei_cluster_type	hippocampal CA1-3	135.7
+MAP3K7	ENSG00000135341	rna_single_nuclei_cluster_type	hippocampal dentate gyrus	110.8
+MAP3K7	ENSG00000135341	rna_single_nuclei_cluster_type	leukocyte	89.6
+MAP3K7	ENSG00000135341	rna_single_nuclei_cluster_type	oligodendrocyte	197.3
+MAP3K7	ENSG00000135341	rna_single_nuclei_cluster_type	oligodendrocyte precursor cell	88.6
+MAP3K7	ENSG00000135341	rna_single_nuclei_cluster_type	pericyte	73.4
+MAP3K7	ENSG00000135341	rna_single_nuclei_cluster_type	upper-layer intratelencephalic	110.3
+MAPKAPK2	ENSG00000162889	rna_single_cell_type	astrocytes	25.5
+MAPKAPK2	ENSG00000162889	rna_single_cell_type	b-cells	69.2
+MAPKAPK2	ENSG00000162889	rna_single_cell_type	brain excitatory neurons	11.0
+MAPKAPK2	ENSG00000162889	rna_single_cell_type	brain inhibitory neurons	11.2
+MAPKAPK2	ENSG00000162889	rna_single_cell_type	hepatocytes	60.4
+MAPKAPK2	ENSG00000162889	rna_single_cell_type	hofbauer cells	55.7
+MAPKAPK2	ENSG00000162889	rna_single_cell_type	kupffer cells	58.4
+MAPKAPK2	ENSG00000162889	rna_single_cell_type	macrophages	113.1
+MAPKAPK2	ENSG00000162889	rna_single_cell_type	megakaryocytes	74.2
+MAPKAPK2	ENSG00000162889	rna_single_cell_type	microglia	33.7
+MAPKAPK2	ENSG00000162889	rna_single_cell_type	monocytes	235.3
+MAPKAPK2	ENSG00000162889	rna_single_cell_type	neutrophils	1055.9
+MAPKAPK2	ENSG00000162889	rna_single_cell_type	nk-cells	104.3
+MAPKAPK2	ENSG00000162889	rna_single_cell_type	oligodendrocyte progenitor cells	17.8
+MAPKAPK2	ENSG00000162889	rna_single_cell_type	oligodendrocytes	26.9
+MAPKAPK2	ENSG00000162889	rna_single_cell_type	platelets	167.9
+MAPKAPK2	ENSG00000162889	rna_single_cell_type	t-cells	105.1
+MAPKAPK2	ENSG00000162889	rna_single_cell_type	vascular endothelial cells	72.6
+MAPKAPK2	ENSG00000162889	rna_single_nuclei_cluster_type	Bergmann glia	20.5
+MAPKAPK2	ENSG00000162889	rna_single_nuclei_cluster_type	CGE interneuron	11.5
+MAPKAPK2	ENSG00000162889	rna_single_nuclei_cluster_type	MGE interneuron	18.4
+MAPKAPK2	ENSG00000162889	rna_single_nuclei_cluster_type	astrocyte	31.8
+MAPKAPK2	ENSG00000162889	rna_single_nuclei_cluster_type	central nervous system macrophage	46.2
+MAPKAPK2	ENSG00000162889	rna_single_nuclei_cluster_type	cerebellar inhibitory	65.7
+MAPKAPK2	ENSG00000162889	rna_single_nuclei_cluster_type	committed oligodendrocyte precursor	27.5
+MAPKAPK2	ENSG00000162889	rna_single_nuclei_cluster_type	deep-layer intratelencephalic	7.2
+MAPKAPK2	ENSG00000162889	rna_single_nuclei_cluster_type	endothelial cell	38.1
+MAPKAPK2	ENSG00000162889	rna_single_nuclei_cluster_type	ependymal cell	38.3
+MAPKAPK2	ENSG00000162889	rna_single_nuclei_cluster_type	hippocampal CA1-3	17.9
+MAPKAPK2	ENSG00000162889	rna_single_nuclei_cluster_type	hippocampal dentate gyrus	8.4
+MAPKAPK2	ENSG00000162889	rna_single_nuclei_cluster_type	leukocyte	87.6
+MAPKAPK2	ENSG00000162889	rna_single_nuclei_cluster_type	oligodendrocyte	35.4
+MAPKAPK2	ENSG00000162889	rna_single_nuclei_cluster_type	oligodendrocyte precursor cell	20.8
+MAPKAPK2	ENSG00000162889	rna_single_nuclei_cluster_type	pericyte	47.0
+MAPKAPK2	ENSG00000162889	rna_single_nuclei_cluster_type	upper-layer intratelencephalic	4.1
+NFE2L2	ENSG00000116044	rna_single_cell_type	astrocytes	137.9
+NFE2L2	ENSG00000116044	rna_single_cell_type	b-cells	182.1
+NFE2L2	ENSG00000116044	rna_single_cell_type	brain excitatory neurons	51.3
+NFE2L2	ENSG00000116044	rna_single_cell_type	brain inhibitory neurons	30.0
+NFE2L2	ENSG00000116044	rna_single_cell_type	hepatocytes	189.4
+NFE2L2	ENSG00000116044	rna_single_cell_type	hofbauer cells	184.0
+NFE2L2	ENSG00000116044	rna_single_cell_type	kupffer cells	210.1
+NFE2L2	ENSG00000116044	rna_single_cell_type	macrophages	500.5
+NFE2L2	ENSG00000116044	rna_single_cell_type	megakaryocytes	74.2
+NFE2L2	ENSG00000116044	rna_single_cell_type	microglia	197.0
+NFE2L2	ENSG00000116044	rna_single_cell_type	monocytes	791.1
+NFE2L2	ENSG00000116044	rna_single_cell_type	neutrophils	2257.6
+NFE2L2	ENSG00000116044	rna_single_cell_type	nk-cells	416.5
+NFE2L2	ENSG00000116044	rna_single_cell_type	oligodendrocyte progenitor cells	101.0
+NFE2L2	ENSG00000116044	rna_single_cell_type	oligodendrocytes	188.6
+NFE2L2	ENSG00000116044	rna_single_cell_type	platelets	118.5
+NFE2L2	ENSG00000116044	rna_single_cell_type	t-cells	259.4
+NFE2L2	ENSG00000116044	rna_single_cell_type	vascular endothelial cells	272.8
+NFE2L2	ENSG00000116044	rna_single_nuclei_cluster_type	Bergmann glia	118.7
+NFE2L2	ENSG00000116044	rna_single_nuclei_cluster_type	CGE interneuron	40.2
+NFE2L2	ENSG00000116044	rna_single_nuclei_cluster_type	MGE interneuron	50.9
+NFE2L2	ENSG00000116044	rna_single_nuclei_cluster_type	astrocyte	152.7
+NFE2L2	ENSG00000116044	rna_single_nuclei_cluster_type	central nervous system macrophage	259.7
+NFE2L2	ENSG00000116044	rna_single_nuclei_cluster_type	cerebellar inhibitory	45.5
+NFE2L2	ENSG00000116044	rna_single_nuclei_cluster_type	committed oligodendrocyte precursor	168.2
+NFE2L2	ENSG00000116044	rna_single_nuclei_cluster_type	deep-layer intratelencephalic	38.9
+NFE2L2	ENSG00000116044	rna_single_nuclei_cluster_type	endothelial cell	201.0
+NFE2L2	ENSG00000116044	rna_single_nuclei_cluster_type	ependymal cell	116.1
+NFE2L2	ENSG00000116044	rna_single_nuclei_cluster_type	hippocampal CA1-3	36.2
+NFE2L2	ENSG00000116044	rna_single_nuclei_cluster_type	hippocampal dentate gyrus	32.1
+NFE2L2	ENSG00000116044	rna_single_nuclei_cluster_type	leukocyte	235.7
+NFE2L2	ENSG00000116044	rna_single_nuclei_cluster_type	oligodendrocyte	213.3
+NFE2L2	ENSG00000116044	rna_single_nuclei_cluster_type	oligodendrocyte precursor cell	116.9
+NFE2L2	ENSG00000116044	rna_single_nuclei_cluster_type	pericyte	123.3
+NFE2L2	ENSG00000116044	rna_single_nuclei_cluster_type	upper-layer intratelencephalic	24.9
+NFKB1	ENSG00000109320	rna_single_cell_type	astrocytes	78.5
+NFKB1	ENSG00000109320	rna_single_cell_type	b-cells	358.9
+NFKB1	ENSG00000109320	rna_single_cell_type	brain excitatory neurons	85.5
+NFKB1	ENSG00000109320	rna_single_cell_type	brain inhibitory neurons	74.9
+NFKB1	ENSG00000109320	rna_single_cell_type	hepatocytes	66.6
+NFKB1	ENSG00000109320	rna_single_cell_type	hofbauer cells	138.2
+NFKB1	ENSG00000109320	rna_single_cell_type	kupffer cells	186.5
+NFKB1	ENSG00000109320	rna_single_cell_type	macrophages	1132.5
+NFKB1	ENSG00000109320	rna_single_cell_type	megakaryocytes	80.4
+NFKB1	ENSG00000109320	rna_single_cell_type	microglia	127.6
+NFKB1	ENSG00000109320	rna_single_cell_type	monocytes	2370.6
+NFKB1	ENSG00000109320	rna_single_cell_type	neutrophils	3104.9
+NFKB1	ENSG00000109320	rna_single_cell_type	nk-cells	795.3
+NFKB1	ENSG00000109320	rna_single_cell_type	oligodendrocyte progenitor cells	95.4
+NFKB1	ENSG00000109320	rna_single_cell_type	oligodendrocytes	150.0
+NFKB1	ENSG00000109320	rna_single_cell_type	platelets	46.3
+NFKB1	ENSG00000109320	rna_single_cell_type	t-cells	440.8
+NFKB1	ENSG00000109320	rna_single_cell_type	vascular endothelial cells	177.4
+NFKB1	ENSG00000109320	rna_single_nuclei_cluster_type	Bergmann glia	98.6
+NFKB1	ENSG00000109320	rna_single_nuclei_cluster_type	CGE interneuron	81.2
+NFKB1	ENSG00000109320	rna_single_nuclei_cluster_type	MGE interneuron	103.6
+NFKB1	ENSG00000109320	rna_single_nuclei_cluster_type	astrocyte	96.9
+NFKB1	ENSG00000109320	rna_single_nuclei_cluster_type	central nervous system macrophage	171.4
+NFKB1	ENSG00000109320	rna_single_nuclei_cluster_type	cerebellar inhibitory	80.1
+NFKB1	ENSG00000109320	rna_single_nuclei_cluster_type	committed oligodendrocyte precursor	127.8
+NFKB1	ENSG00000109320	rna_single_nuclei_cluster_type	deep-layer intratelencephalic	78.5
+NFKB1	ENSG00000109320	rna_single_nuclei_cluster_type	endothelial cell	164.0
+NFKB1	ENSG00000109320	rna_single_nuclei_cluster_type	ependymal cell	48.7
+NFKB1	ENSG00000109320	rna_single_nuclei_cluster_type	hippocampal CA1-3	101.5
+NFKB1	ENSG00000109320	rna_single_nuclei_cluster_type	hippocampal dentate gyrus	85.4
+NFKB1	ENSG00000109320	rna_single_nuclei_cluster_type	leukocyte	199.6
+NFKB1	ENSG00000109320	rna_single_nuclei_cluster_type	oligodendrocyte	193.8
+NFKB1	ENSG00000109320	rna_single_nuclei_cluster_type	oligodendrocyte precursor cell	116.0
+NFKB1	ENSG00000109320	rna_single_nuclei_cluster_type	pericyte	104.1
+NFKB1	ENSG00000109320	rna_single_nuclei_cluster_type	upper-layer intratelencephalic	88.4
+NFKBIB	ENSG00000104825	rna_single_cell_type	astrocytes	5.3
+NFKBIB	ENSG00000104825	rna_single_cell_type	b-cells	4.3
+NFKBIB	ENSG00000104825	rna_single_cell_type	brain excitatory neurons	5.7
+NFKBIB	ENSG00000104825	rna_single_cell_type	brain inhibitory neurons	6.7
+NFKBIB	ENSG00000104825	rna_single_cell_type	hepatocytes	4.7
+NFKBIB	ENSG00000104825	rna_single_cell_type	hofbauer cells	9.9
+NFKBIB	ENSG00000104825	rna_single_cell_type	kupffer cells	5.1
+NFKBIB	ENSG00000104825	rna_single_cell_type	macrophages	5.0
+NFKBIB	ENSG00000104825	rna_single_cell_type	megakaryocytes	0.0
+NFKBIB	ENSG00000104825	rna_single_cell_type	microglia	7.8
+NFKBIB	ENSG00000104825	rna_single_cell_type	monocytes	5.7
+NFKBIB	ENSG00000104825	rna_single_cell_type	neutrophils	6.2
+NFKBIB	ENSG00000104825	rna_single_cell_type	nk-cells	9.7
+NFKBIB	ENSG00000104825	rna_single_cell_type	oligodendrocyte progenitor cells	6.1
+NFKBIB	ENSG00000104825	rna_single_cell_type	oligodendrocytes	16.0
+NFKBIB	ENSG00000104825	rna_single_cell_type	platelets	2.8
+NFKBIB	ENSG00000104825	rna_single_cell_type	t-cells	6.8
+NFKBIB	ENSG00000104825	rna_single_cell_type	vascular endothelial cells	4.9
+NFKBIB	ENSG00000104825	rna_single_nuclei_cluster_type	Bergmann glia	11.4
+NFKBIB	ENSG00000104825	rna_single_nuclei_cluster_type	CGE interneuron	9.0
+NFKBIB	ENSG00000104825	rna_single_nuclei_cluster_type	MGE interneuron	6.9
+NFKBIB	ENSG00000104825	rna_single_nuclei_cluster_type	astrocyte	6.8
+NFKBIB	ENSG00000104825	rna_single_nuclei_cluster_type	central nervous system macrophage	9.6
+NFKBIB	ENSG00000104825	rna_single_nuclei_cluster_type	cerebellar inhibitory	6.6
+NFKBIB	ENSG00000104825	rna_single_nuclei_cluster_type	committed oligodendrocyte precursor	8.8
+NFKBIB	ENSG00000104825	rna_single_nuclei_cluster_type	deep-layer intratelencephalic	5.6
+NFKBIB	ENSG00000104825	rna_single_nuclei_cluster_type	endothelial cell	12.5
+NFKBIB	ENSG00000104825	rna_single_nuclei_cluster_type	ependymal cell	5.7
+NFKBIB	ENSG00000104825	rna_single_nuclei_cluster_type	hippocampal CA1-3	5.3
+NFKBIB	ENSG00000104825	rna_single_nuclei_cluster_type	hippocampal dentate gyrus	4.3
+NFKBIB	ENSG00000104825	rna_single_nuclei_cluster_type	leukocyte	18.6
+NFKBIB	ENSG00000104825	rna_single_nuclei_cluster_type	oligodendrocyte	16.8
+NFKBIB	ENSG00000104825	rna_single_nuclei_cluster_type	oligodendrocyte precursor cell	7.3
+NFKBIB	ENSG00000104825	rna_single_nuclei_cluster_type	pericyte	9.5
+NFKBIB	ENSG00000104825	rna_single_nuclei_cluster_type	upper-layer intratelencephalic	6.7
+NPY	ENSG00000122585	rna_single_cell_type	astrocytes	3.0
+NPY	ENSG00000122585	rna_single_cell_type	b-cells	0.1
+NPY	ENSG00000122585	rna_single_cell_type	brain excitatory neurons	2.0
+NPY	ENSG00000122585	rna_single_cell_type	brain inhibitory neurons	66.2
+NPY	ENSG00000122585	rna_single_cell_type	hepatocytes	0.0
+NPY	ENSG00000122585	rna_single_cell_type	hofbauer cells	0.5
+NPY	ENSG00000122585	rna_single_cell_type	kupffer cells	0.0
+NPY	ENSG00000122585	rna_single_cell_type	macrophages	0.3
+NPY	ENSG00000122585	rna_single_cell_type	megakaryocytes	0.0
+NPY	ENSG00000122585	rna_single_cell_type	microglia	3.5
+NPY	ENSG00000122585	rna_single_cell_type	monocytes	0.8
+NPY	ENSG00000122585	rna_single_cell_type	neutrophils	0.8
+NPY	ENSG00000122585	rna_single_cell_type	nk-cells	0.1
+NPY	ENSG00000122585	rna_single_cell_type	oligodendrocyte progenitor cells	1.6
+NPY	ENSG00000122585	rna_single_cell_type	oligodendrocytes	5.5
+NPY	ENSG00000122585	rna_single_cell_type	platelets	0.0
+NPY	ENSG00000122585	rna_single_cell_type	t-cells	0.5
+NPY	ENSG00000122585	rna_single_cell_type	vascular endothelial cells	0.4
+NPY	ENSG00000122585	rna_single_nuclei_cluster_type	Bergmann glia	2.8
+NPY	ENSG00000122585	rna_single_nuclei_cluster_type	CGE interneuron	25.5
+NPY	ENSG00000122585	rna_single_nuclei_cluster_type	MGE interneuron	211.7
+NPY	ENSG00000122585	rna_single_nuclei_cluster_type	astrocyte	3.7
+NPY	ENSG00000122585	rna_single_nuclei_cluster_type	central nervous system macrophage	3.3
+NPY	ENSG00000122585	rna_single_nuclei_cluster_type	cerebellar inhibitory	1.1
+NPY	ENSG00000122585	rna_single_nuclei_cluster_type	committed oligodendrocyte precursor	7.3
+NPY	ENSG00000122585	rna_single_nuclei_cluster_type	deep-layer intratelencephalic	5.7
+NPY	ENSG00000122585	rna_single_nuclei_cluster_type	endothelial cell	6.6
+NPY	ENSG00000122585	rna_single_nuclei_cluster_type	ependymal cell	3.4
+NPY	ENSG00000122585	rna_single_nuclei_cluster_type	hippocampal CA1-3	2.5
+NPY	ENSG00000122585	rna_single_nuclei_cluster_type	hippocampal dentate gyrus	2.9
+NPY	ENSG00000122585	rna_single_nuclei_cluster_type	leukocyte	2.7
+NPY	ENSG00000122585	rna_single_nuclei_cluster_type	oligodendrocyte	3.4
+NPY	ENSG00000122585	rna_single_nuclei_cluster_type	oligodendrocyte precursor cell	1.8
+NPY	ENSG00000122585	rna_single_nuclei_cluster_type	pericyte	2.8
+NPY	ENSG00000122585	rna_single_nuclei_cluster_type	upper-layer intratelencephalic	3.9
+RBX1	ENSG00000100387	rna_single_cell_type	astrocytes	33.8
+RBX1	ENSG00000100387	rna_single_cell_type	b-cells	106.4
+RBX1	ENSG00000100387	rna_single_cell_type	brain excitatory neurons	63.9
+RBX1	ENSG00000100387	rna_single_cell_type	brain inhibitory neurons	58.2
+RBX1	ENSG00000100387	rna_single_cell_type	hepatocytes	283.3
+RBX1	ENSG00000100387	rna_single_cell_type	hofbauer cells	493.9
+RBX1	ENSG00000100387	rna_single_cell_type	kupffer cells	274.7
+RBX1	ENSG00000100387	rna_single_cell_type	macrophages	153.7
+RBX1	ENSG00000100387	rna_single_cell_type	megakaryocytes	890.2
+RBX1	ENSG00000100387	rna_single_cell_type	microglia	53.7
+RBX1	ENSG00000100387	rna_single_cell_type	monocytes	189.9
+RBX1	ENSG00000100387	rna_single_cell_type	neutrophils	90.1
+RBX1	ENSG00000100387	rna_single_cell_type	nk-cells	107.3
+RBX1	ENSG00000100387	rna_single_cell_type	oligodendrocyte progenitor cells	37.4
+RBX1	ENSG00000100387	rna_single_cell_type	oligodendrocytes	83.6
+RBX1	ENSG00000100387	rna_single_cell_type	platelets	1074.8
+RBX1	ENSG00000100387	rna_single_cell_type	t-cells	128.5
+RBX1	ENSG00000100387	rna_single_cell_type	vascular endothelial cells	158.3
+RBX1	ENSG00000100387	rna_single_nuclei_cluster_type	Bergmann glia	49.7
+RBX1	ENSG00000100387	rna_single_nuclei_cluster_type	CGE interneuron	79.2
+RBX1	ENSG00000100387	rna_single_nuclei_cluster_type	MGE interneuron	64.9
+RBX1	ENSG00000100387	rna_single_nuclei_cluster_type	astrocyte	43.3
+RBX1	ENSG00000100387	rna_single_nuclei_cluster_type	central nervous system macrophage	70.7
+RBX1	ENSG00000100387	rna_single_nuclei_cluster_type	cerebellar inhibitory	75.8
+RBX1	ENSG00000100387	rna_single_nuclei_cluster_type	committed oligodendrocyte precursor	76.1
+RBX1	ENSG00000100387	rna_single_nuclei_cluster_type	deep-layer intratelencephalic	67.6
+RBX1	ENSG00000100387	rna_single_nuclei_cluster_type	endothelial cell	69.2
+RBX1	ENSG00000100387	rna_single_nuclei_cluster_type	ependymal cell	54.0
+RBX1	ENSG00000100387	rna_single_nuclei_cluster_type	hippocampal CA1-3	55.6
+RBX1	ENSG00000100387	rna_single_nuclei_cluster_type	hippocampal dentate gyrus	66.2
+RBX1	ENSG00000100387	rna_single_nuclei_cluster_type	leukocyte	71.9
+RBX1	ENSG00000100387	rna_single_nuclei_cluster_type	oligodendrocyte	109.0
+RBX1	ENSG00000100387	rna_single_nuclei_cluster_type	oligodendrocyte precursor cell	48.0
+RBX1	ENSG00000100387	rna_single_nuclei_cluster_type	pericyte	76.5
+RBX1	ENSG00000100387	rna_single_nuclei_cluster_type	upper-layer intratelencephalic	64.7
+RELA	ENSG00000173039	rna_single_cell_type	astrocytes	12.6
+RELA	ENSG00000173039	rna_single_cell_type	b-cells	23.8
+RELA	ENSG00000173039	rna_single_cell_type	brain excitatory neurons	6.6
+RELA	ENSG00000173039	rna_single_cell_type	brain inhibitory neurons	5.6
+RELA	ENSG00000173039	rna_single_cell_type	hepatocytes	22.5
+RELA	ENSG00000173039	rna_single_cell_type	hofbauer cells	27.1
+RELA	ENSG00000173039	rna_single_cell_type	kupffer cells	22.5
+RELA	ENSG00000173039	rna_single_cell_type	macrophages	23.5
+RELA	ENSG00000173039	rna_single_cell_type	megakaryocytes	61.8
+RELA	ENSG00000173039	rna_single_cell_type	microglia	11.5
+RELA	ENSG00000173039	rna_single_cell_type	monocytes	38.4
+RELA	ENSG00000173039	rna_single_cell_type	neutrophils	70.6
+RELA	ENSG00000173039	rna_single_cell_type	nk-cells	28.5
+RELA	ENSG00000173039	rna_single_cell_type	oligodendrocyte progenitor cells	9.7
+RELA	ENSG00000173039	rna_single_cell_type	oligodendrocytes	13.9
+RELA	ENSG00000173039	rna_single_cell_type	platelets	28.3
+RELA	ENSG00000173039	rna_single_cell_type	t-cells	30.4
+RELA	ENSG00000173039	rna_single_cell_type	vascular endothelial cells	45.1
+RELA	ENSG00000173039	rna_single_nuclei_cluster_type	Bergmann glia	9.6
+RELA	ENSG00000173039	rna_single_nuclei_cluster_type	CGE interneuron	7.3
+RELA	ENSG00000173039	rna_single_nuclei_cluster_type	MGE interneuron	7.2
+RELA	ENSG00000173039	rna_single_nuclei_cluster_type	astrocyte	14.1
+RELA	ENSG00000173039	rna_single_nuclei_cluster_type	central nervous system macrophage	14.7
+RELA	ENSG00000173039	rna_single_nuclei_cluster_type	cerebellar inhibitory	6.9
+RELA	ENSG00000173039	rna_single_nuclei_cluster_type	committed oligodendrocyte precursor	9.6
+RELA	ENSG00000173039	rna_single_nuclei_cluster_type	deep-layer intratelencephalic	6.5
+RELA	ENSG00000173039	rna_single_nuclei_cluster_type	endothelial cell	28.3
+RELA	ENSG00000173039	rna_single_nuclei_cluster_type	ependymal cell	9.3
+RELA	ENSG00000173039	rna_single_nuclei_cluster_type	hippocampal CA1-3	7.3
+RELA	ENSG00000173039	rna_single_nuclei_cluster_type	hippocampal dentate gyrus	3.8
+RELA	ENSG00000173039	rna_single_nuclei_cluster_type	leukocyte	22.3
+RELA	ENSG00000173039	rna_single_nuclei_cluster_type	oligodendrocyte	15.2
+RELA	ENSG00000173039	rna_single_nuclei_cluster_type	oligodendrocyte precursor cell	11.0
+RELA	ENSG00000173039	rna_single_nuclei_cluster_type	pericyte	22.8
+RELA	ENSG00000173039	rna_single_nuclei_cluster_type	upper-layer intratelencephalic	6.5
+RORA	ENSG00000069667	rna_single_cell_type	astrocytes	3789.4
+RORA	ENSG00000069667	rna_single_cell_type	b-cells	82.4
+RORA	ENSG00000069667	rna_single_cell_type	brain excitatory neurons	1141.0
+RORA	ENSG00000069667	rna_single_cell_type	brain inhibitory neurons	2258.0
+RORA	ENSG00000069667	rna_single_cell_type	hepatocytes	1223.7
+RORA	ENSG00000069667	rna_single_cell_type	hofbauer cells	3.6
+RORA	ENSG00000069667	rna_single_cell_type	kupffer cells	35.9
+RORA	ENSG00000069667	rna_single_cell_type	macrophages	49.8
+RORA	ENSG00000069667	rna_single_cell_type	megakaryocytes	6.2
+RORA	ENSG00000069667	rna_single_cell_type	microglia	34.0
+RORA	ENSG00000069667	rna_single_cell_type	monocytes	10.2
+RORA	ENSG00000069667	rna_single_cell_type	neutrophils	24.9
+RORA	ENSG00000069667	rna_single_cell_type	nk-cells	552.0
+RORA	ENSG00000069667	rna_single_cell_type	oligodendrocyte progenitor cells	2380.9
+RORA	ENSG00000069667	rna_single_cell_type	oligodendrocytes	248.5
+RORA	ENSG00000069667	rna_single_cell_type	platelets	8.4
+RORA	ENSG00000069667	rna_single_cell_type	t-cells	874.7
+RORA	ENSG00000069667	rna_single_cell_type	vascular endothelial cells	382.7
+RORA	ENSG00000069667	rna_single_nuclei_cluster_type	Bergmann glia	2507.4
+RORA	ENSG00000069667	rna_single_nuclei_cluster_type	CGE interneuron	1192.1
+RORA	ENSG00000069667	rna_single_nuclei_cluster_type	MGE interneuron	972.8
+RORA	ENSG00000069667	rna_single_nuclei_cluster_type	astrocyte	4308.6
+RORA	ENSG00000069667	rna_single_nuclei_cluster_type	central nervous system macrophage	56.5
+RORA	ENSG00000069667	rna_single_nuclei_cluster_type	cerebellar inhibitory	11925.0
+RORA	ENSG00000069667	rna_single_nuclei_cluster_type	committed oligodendrocyte precursor	768.2
+RORA	ENSG00000069667	rna_single_nuclei_cluster_type	deep-layer intratelencephalic	805.5
+RORA	ENSG00000069667	rna_single_nuclei_cluster_type	endothelial cell	968.8
+RORA	ENSG00000069667	rna_single_nuclei_cluster_type	ependymal cell	1865.2
+RORA	ENSG00000069667	rna_single_nuclei_cluster_type	hippocampal CA1-3	668.7
+RORA	ENSG00000069667	rna_single_nuclei_cluster_type	hippocampal dentate gyrus	542.8
+RORA	ENSG00000069667	rna_single_nuclei_cluster_type	leukocyte	810.4
+RORA	ENSG00000069667	rna_single_nuclei_cluster_type	oligodendrocyte	226.1
+RORA	ENSG00000069667	rna_single_nuclei_cluster_type	oligodendrocyte precursor cell	2767.6
+RORA	ENSG00000069667	rna_single_nuclei_cluster_type	pericyte	4857.8
+RORA	ENSG00000069667	rna_single_nuclei_cluster_type	upper-layer intratelencephalic	747.4
+RORC	ENSG00000143365	rna_single_cell_type	astrocytes	0.4
+RORC	ENSG00000143365	rna_single_cell_type	b-cells	0.3
+RORC	ENSG00000143365	rna_single_cell_type	brain excitatory neurons	1.4
+RORC	ENSG00000143365	rna_single_cell_type	brain inhibitory neurons	0.2
+RORC	ENSG00000143365	rna_single_cell_type	hepatocytes	65.9
+RORC	ENSG00000143365	rna_single_cell_type	hofbauer cells	0.1
+RORC	ENSG00000143365	rna_single_cell_type	kupffer cells	2.0
+RORC	ENSG00000143365	rna_single_cell_type	macrophages	0.6
+RORC	ENSG00000143365	rna_single_cell_type	megakaryocytes	0.0
+RORC	ENSG00000143365	rna_single_cell_type	microglia	0.0
+RORC	ENSG00000143365	rna_single_cell_type	monocytes	0.7
+RORC	ENSG00000143365	rna_single_cell_type	neutrophils	0.7
+RORC	ENSG00000143365	rna_single_cell_type	nk-cells	1.2
+RORC	ENSG00000143365	rna_single_cell_type	oligodendrocyte progenitor cells	0.2
+RORC	ENSG00000143365	rna_single_cell_type	oligodendrocytes	0.1
+RORC	ENSG00000143365	rna_single_cell_type	platelets	0.0
+RORC	ENSG00000143365	rna_single_cell_type	t-cells	6.7
+RORC	ENSG00000143365	rna_single_cell_type	vascular endothelial cells	0.5
+RORC	ENSG00000143365	rna_single_nuclei_cluster_type	Bergmann glia	0.1
+RORC	ENSG00000143365	rna_single_nuclei_cluster_type	CGE interneuron	0.1
+RORC	ENSG00000143365	rna_single_nuclei_cluster_type	MGE interneuron	0.1
+RORC	ENSG00000143365	rna_single_nuclei_cluster_type	astrocyte	1.2
+RORC	ENSG00000143365	rna_single_nuclei_cluster_type	central nervous system macrophage	0.0
+RORC	ENSG00000143365	rna_single_nuclei_cluster_type	cerebellar inhibitory	1.1
+RORC	ENSG00000143365	rna_single_nuclei_cluster_type	committed oligodendrocyte precursor	0.5
+RORC	ENSG00000143365	rna_single_nuclei_cluster_type	deep-layer intratelencephalic	0.3
+RORC	ENSG00000143365	rna_single_nuclei_cluster_type	endothelial cell	0.3
+RORC	ENSG00000143365	rna_single_nuclei_cluster_type	ependymal cell	21.7
+RORC	ENSG00000143365	rna_single_nuclei_cluster_type	hippocampal CA1-3	0.2
+RORC	ENSG00000143365	rna_single_nuclei_cluster_type	hippocampal dentate gyrus	0.1
+RORC	ENSG00000143365	rna_single_nuclei_cluster_type	leukocyte	3.3
+RORC	ENSG00000143365	rna_single_nuclei_cluster_type	oligodendrocyte	0.2
+RORC	ENSG00000143365	rna_single_nuclei_cluster_type	oligodendrocyte precursor cell	0.1
+RORC	ENSG00000143365	rna_single_nuclei_cluster_type	pericyte	0.0
+RORC	ENSG00000143365	rna_single_nuclei_cluster_type	upper-layer intratelencephalic	0.2
+TNF	ENSG00000232810	rna_single_cell_type	astrocytes	0.0
+TNF	ENSG00000232810	rna_single_cell_type	b-cells	0.7
+TNF	ENSG00000232810	rna_single_cell_type	brain excitatory neurons	0.0
+TNF	ENSG00000232810	rna_single_cell_type	brain inhibitory neurons	0.0
+TNF	ENSG00000232810	rna_single_cell_type	hepatocytes	0.0
+TNF	ENSG00000232810	rna_single_cell_type	hofbauer cells	0.0
+TNF	ENSG00000232810	rna_single_cell_type	kupffer cells	0.0
+TNF	ENSG00000232810	rna_single_cell_type	macrophages	0.8
+TNF	ENSG00000232810	rna_single_cell_type	megakaryocytes	0.0
+TNF	ENSG00000232810	rna_single_cell_type	microglia	7.8
+TNF	ENSG00000232810	rna_single_cell_type	monocytes	1.0
+TNF	ENSG00000232810	rna_single_cell_type	neutrophils	0.2
+TNF	ENSG00000232810	rna_single_cell_type	nk-cells	1.4
+TNF	ENSG00000232810	rna_single_cell_type	oligodendrocyte progenitor cells	0.0
+TNF	ENSG00000232810	rna_single_cell_type	oligodendrocytes	0.0
+TNF	ENSG00000232810	rna_single_cell_type	platelets	0.0
+TNF	ENSG00000232810	rna_single_cell_type	t-cells	1.3
+TNF	ENSG00000232810	rna_single_cell_type	vascular endothelial cells	0.1
+TNF	ENSG00000232810	rna_single_nuclei_cluster_type	Bergmann glia	0.0
+TNF	ENSG00000232810	rna_single_nuclei_cluster_type	CGE interneuron	0.0
+TNF	ENSG00000232810	rna_single_nuclei_cluster_type	MGE interneuron	0.0
+TNF	ENSG00000232810	rna_single_nuclei_cluster_type	astrocyte	0.0
+TNF	ENSG00000232810	rna_single_nuclei_cluster_type	central nervous system macrophage	11.6
+TNF	ENSG00000232810	rna_single_nuclei_cluster_type	cerebellar inhibitory	0.0
+TNF	ENSG00000232810	rna_single_nuclei_cluster_type	committed oligodendrocyte precursor	0.0
+TNF	ENSG00000232810	rna_single_nuclei_cluster_type	deep-layer intratelencephalic	0.0
+TNF	ENSG00000232810	rna_single_nuclei_cluster_type	endothelial cell	0.0
+TNF	ENSG00000232810	rna_single_nuclei_cluster_type	ependymal cell	0.0
+TNF	ENSG00000232810	rna_single_nuclei_cluster_type	hippocampal CA1-3	0.0
+TNF	ENSG00000232810	rna_single_nuclei_cluster_type	hippocampal dentate gyrus	0.0
+TNF	ENSG00000232810	rna_single_nuclei_cluster_type	leukocyte	17.3
+TNF	ENSG00000232810	rna_single_nuclei_cluster_type	oligodendrocyte	0.0
+TNF	ENSG00000232810	rna_single_nuclei_cluster_type	oligodendrocyte precursor cell	0.0
+TNF	ENSG00000232810	rna_single_nuclei_cluster_type	pericyte	0.0
+TNF	ENSG00000232810	rna_single_nuclei_cluster_type	upper-layer intratelencephalic	0.0
+WWOX	ENSG00000186153	rna_single_cell_type	astrocytes	1696.2
+WWOX	ENSG00000186153	rna_single_cell_type	b-cells	413.1
+WWOX	ENSG00000186153	rna_single_cell_type	brain excitatory neurons	600.1
+WWOX	ENSG00000186153	rna_single_cell_type	brain inhibitory neurons	465.2
+WWOX	ENSG00000186153	rna_single_cell_type	hepatocytes	585.9
+WWOX	ENSG00000186153	rna_single_cell_type	hofbauer cells	176.7
+WWOX	ENSG00000186153	rna_single_cell_type	kupffer cells	229.6
+WWOX	ENSG00000186153	rna_single_cell_type	macrophages	381.6
+WWOX	ENSG00000186153	rna_single_cell_type	megakaryocytes	30.9
+WWOX	ENSG00000186153	rna_single_cell_type	microglia	769.0
+WWOX	ENSG00000186153	rna_single_cell_type	monocytes	230.6
+WWOX	ENSG00000186153	rna_single_cell_type	neutrophils	24.4
+WWOX	ENSG00000186153	rna_single_cell_type	nk-cells	311.3
+WWOX	ENSG00000186153	rna_single_cell_type	oligodendrocyte progenitor cells	1320.6
+WWOX	ENSG00000186153	rna_single_cell_type	oligodendrocytes	1171.3
+WWOX	ENSG00000186153	rna_single_cell_type	platelets	49.4
+WWOX	ENSG00000186153	rna_single_cell_type	t-cells	339.7
+WWOX	ENSG00000186153	rna_single_cell_type	vascular endothelial cells	367.2
+WWOX	ENSG00000186153	rna_single_nuclei_cluster_type	Bergmann glia	2001.2
+WWOX	ENSG00000186153	rna_single_nuclei_cluster_type	CGE interneuron	617.5
+WWOX	ENSG00000186153	rna_single_nuclei_cluster_type	MGE interneuron	684.4
+WWOX	ENSG00000186153	rna_single_nuclei_cluster_type	astrocyte	2028.8
+WWOX	ENSG00000186153	rna_single_nuclei_cluster_type	central nervous system macrophage	986.3
+WWOX	ENSG00000186153	rna_single_nuclei_cluster_type	cerebellar inhibitory	659.1
+WWOX	ENSG00000186153	rna_single_nuclei_cluster_type	committed oligodendrocyte precursor	920.3
+WWOX	ENSG00000186153	rna_single_nuclei_cluster_type	deep-layer intratelencephalic	382.6
+WWOX	ENSG00000186153	rna_single_nuclei_cluster_type	endothelial cell	757.6
+WWOX	ENSG00000186153	rna_single_nuclei_cluster_type	ependymal cell	3113.1
+WWOX	ENSG00000186153	rna_single_nuclei_cluster_type	hippocampal CA1-3	505.6
+WWOX	ENSG00000186153	rna_single_nuclei_cluster_type	hippocampal dentate gyrus	226.0
+WWOX	ENSG00000186153	rna_single_nuclei_cluster_type	leukocyte	607.4
+WWOX	ENSG00000186153	rna_single_nuclei_cluster_type	oligodendrocyte	1432.6
+WWOX	ENSG00000186153	rna_single_nuclei_cluster_type	oligodendrocyte precursor cell	1508.0
+WWOX	ENSG00000186153	rna_single_nuclei_cluster_type	pericyte	957.7
+WWOX	ENSG00000186153	rna_single_nuclei_cluster_type	upper-layer intratelencephalic	286.4

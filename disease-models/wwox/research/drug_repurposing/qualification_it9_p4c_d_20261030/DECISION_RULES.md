@@ -1,6 +1,6 @@
-# IT9 P4c-D decision rules (written 2026-10-30, after the selection was run and before any qualification datum was fetched or read)
+# IT9 P4c-D decision rules (written 2026-10-30 while the pre-registered selection was running, before its result was known and before any qualification datum was fetched or read)
 
-Scope: the families chosen by `SELECTION_NOTE.md` (Part 1 rules, committed 1278c5d8; Part 2 holds the chosen set). Not medical advice. A database or enzyme measure is not therapeutic benefit; a compatible action of a context-free signed network is not a predicted benefit. Reference genotype: a WWOX-DEE genotype class.
+Scope: the families chosen by `SELECTION_NOTE.md` (Part 1 rules committed 1278c5d8; Part 2 holds the chosen set, committed after this file was written). Not medical advice. A database or enzyme measure is not therapeutic benefit; a compatible action of a context-free signed network is not a predicted benefit. Reference genotype: a WWOX-DEE genotype class.
 
 Allowed decisions: DROP (a decisive datum is named), KEEP-AS-PROPOSAL (specific next experiment, readout, control, falsifier), REFERENCE-ONLY, INCONCLUSIVE (the exact missing datum). "Insufficient support" and "no activity" are labelled differently. Scores are separate and never summed: biological promise (given only the WWOX-seed link and target action), depth of evidence, feasibility, priority of the next experiment; each LOW / MEDIUM / HIGH with the reason.
 
