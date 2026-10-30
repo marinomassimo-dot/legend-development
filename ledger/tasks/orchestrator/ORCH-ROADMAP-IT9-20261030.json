@@ -48,9 +48,9 @@
     },
     {
      "step": "P4 qualification of decision-changing candidates; complete truncated LDHA/PDK pulls, LDHB; restate the three IT8 decisions",
-     "status": "TODO",
+     "status": "DONE",
      "owner": "scientist-a",
-     "evidence": ""
+     "evidence": "P4a (LDHB/PDK acquisitions complete, 3 IT8 decisions restated) + P4b: 20 qualified: DROP 9, KEEP 1 (belnacasan gated), INCONCLUSIVE 2, REFERENCE 8; main lesson: proposals fail at edge provenance (record-mode mismatch, symbol!=identity, prodrug/active moiety)"
     }
    ]
   },
