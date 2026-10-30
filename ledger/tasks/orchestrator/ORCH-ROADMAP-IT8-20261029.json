@@ -65,8 +65,9 @@
    "steps": [
     {
      "step": "P6 complete the Internet view preparation (service settings, pinned versions, workflow diff, tests, URL/indexing/retirement)",
-     "status": "TODO",
-     "owner": "orchestrator"
+     "status": "DONE",
+     "owner": "orchestrator",
+     "evidence": "DEPLOY section 11 + workflow proposal; package current; publication not authorised"
     },
     {
      "step": "P7 scouting and continuity without duplication (radar and hourly executions, two complementary searches)",
@@ -91,8 +92,9 @@
    "steps": [
     {
      "step": "P9 provisional dynamic ranking of interventions (operator addition 2026-10-29): inventory, per-objective views, readable criteria, pathway contribution/direction, Top-10 with explanations, version trace, integration in the view, independent verification of top-position premises",
-     "status": "TODO",
-     "owner": "scientist-a"
+     "status": "DONE",
+     "owner": "scientist-a",
+     "evidence": "ranking merged (R2, 27 interventions, groups tie G2b; verifier HIGH repaired)"
     }
    ]
   }
