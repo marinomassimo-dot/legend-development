@@ -121,3 +121,14 @@ written (no ChEMBL parent = excluded) would exclude about two thirds of the pool
   (3) `dgidb_concept_chembl` (ChEMBL id in the DGIdb concept ids); (4) `name_exact_unique` (the DGIdb/catalogue name equals exactly one ChEMBL `pref_name` or one synonym, case-insensitive; NO structure check: `identity UNVERIFIED`, listed as such); (5) `unresolved`.
 * **F4 now excludes only route (5)**. Routes (2) to (4) keep the family eligible and carry the route as a flag; a family selected through route (4) is marked identity UNVERIFIED in `selected.tsv` and the P4b order starts with identity confirmation.
 * Other rules unchanged. The number of families per route and per outcome is reported in the funnel.
+
+---
+
+## AMENDMENT 3 (2026-10-30, after the first run of `consolidate_select_it9_p3.py`; disclosure of what had been seen)
+
+Seen: the first run selected 22 parents (two over the limit of 20: an implementation error, fixed by reserving the 2 control places; rule 12 to 20 unchanged) and chose the 5 references by family-id order,
+because no known compound is seed-specific (the nine known compounds present in any P2 table are all direct-search or top-list hits) and the rule gave no tie-break; the result (felbamate, GW468816, an ISR-card compound,
+dichloroacetate, selfotel) was three NMDAR/antiseizure compounds out of five, while a card-level NMDAR compound (memantine) and a card-level mTOR compound were left out. Names of selected families were therefore seen
+before this amendment, for references only. Tie-break for references, replacing the last sentence of section 5 step 6: **(i) card-linked before unit-member before deepening-queue only; (ii) one per IT8 P9 unit (or per queue group); (iii) then the order of question sets Q2, Q3, Q4, Q5, Q6;
+(iv) then family id.** No change to any threshold or to the selection of non-reference families. Also fixed (implementation, not rule): for direct-search rows the main target is the family's target that lies on a seed gene (hop 0), so
+that references carry a target, a hop and the seed they hit.
