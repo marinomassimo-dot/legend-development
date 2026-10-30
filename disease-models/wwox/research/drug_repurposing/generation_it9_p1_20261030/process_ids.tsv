@@ -1,0 +1,32 @@
+process_id	label	kind	members_hgnc	definition_source
+SET:GLYCOLYSIS_LACTATE_10	HIF-type glycolysis and lactate set (10 declared genes)	gene_set	SLC2A1,HK2,PFKP,ALDOA,PGK1,ENO1,LDHA,PKM,BNIP3,LDHB	subnetwork_it7_p1_20261029/subnetwork.py GLY10
+SET:ISR_TARGETS_12	canonical ATF4/ISR target set (12 declared; 11 measurable in the CAGE systems)	gene_set	ASNS,ATF5,CHAC1,DDIT3,GADD45A,PCK2,PHGDH,PSAT1,PSPH,SESN2,TRIB3,SLC7A11	hnpc_gse126075_it5_20261029/per_gene_in_sets.tsv set=ISR_targets + p4_mouse_same_sets.py extra SLC7A11
+SET:MITO_TRANSLATION_MRP	mitochondrial translation set (MRPL/MRPS and translation factors; 78 genes in the hNPC table)	gene_set	MRPL*,MRPS*,GFM1,GFM2 (members in hnpc_gse126075_it5_20261029/per_gene_in_sets.tsv set=Mito_translation)	hnpc_gse126075_it5_20261029/per_gene_in_sets.tsv
+SET:MYELIN_OL_10	myelin/oligodendrocyte set (10 declared genes; UGT8A in the declaration is mouse Ugt8a = HGNC UGT8)	gene_set	MBP,PLP1,MOG,MAG,MOBP,CLDN11,CNP,MAL,OPALIN,UGT8	mouse_wwox_p17_it6_p4_20261029/p4_mouse_same_sets.py sets_h['Myelin_OL']
+SET:OXPHOS_NUCLEAR_73	nuclear OXPHOS transcript set (73 genes)	gene_set	(members in hnpc_gse126075_it5_20261029/per_gene_in_sets.tsv set=OXPHOS_nuclear)	hnpc_gse126075_it5_20261029/per_gene_in_sets.tsv
+GO:0004739	pyruvate dehydrogenase (acetyl-transferring) activity	go_mf	PDHA1,PDHB (activity, not expression)	QuickGO 2026-10-30; current
+GO:0006096	glycolysis (GO label; the IT7 P1 table calls it glycolytic process)	go_bp		QuickGO 2026-10-30; current
+CHEBI:24996	lactate	metabolite		subnetwork_it7_p1_20261029/nodes.tsv
+GO:0061684	chaperone-mediated autophagy (search hint only)	go_bp		QuickGO 2026-10-30; current
+GO:0042254	ribosome biogenesis	go_bp		QuickGO 2026-10-30; current
+GO:0008652	amino acid biosynthetic process (nearest current term to the obsolete GO:1901607 the paper's table names)	go_bp		QuickGO 2026-10-30; GO:1901607 obsolete, no replacement
+GO:0006418	tRNA aminoacylation for protein translation (nearest current term to the obsolete GO:0043038 amino acid activation)	go_bp		QuickGO 2026-10-30; GO:0043038 obsolete, no replacement
+GO:1904292	regulation of ERAD pathway	go_bp		QuickGO 2026-10-30; current
+GO:0042552	myelination	go_bp		QuickGO 2026-10-30; current
+STATE:ALLELE_SEVERITY_NOT_TRACKED_BY_PROTEIN_AMOUNT	allele severity not tracked by protein amount	local_state		defined by the rows that use it in seeds.tsv
+STATE:ASTROCYTE_ACTIVATION_GENES_IN_DEG_LIST	astrocyte activation genes in deg list	local_state		defined by the rows that use it in seeds.tsv
+STATE:EXCITATORY_SYNAPTIC_AMPLITUDE	excitatory synaptic amplitude	local_state		defined by the rows that use it in seeds.tsv
+STATE:FASTER_TURNOVER_OF_DESTABILISED_MISSENSE	faster turnover of destabilised missense	local_state		defined by the rows that use it in seeds.tsv
+STATE:HUMAN_SYSTEMIC_METABOLIC_SCREENS_NORMAL	human systemic metabolic screens normal	local_state		defined by the rows that use it in seeds.tsv
+STATE:INHIBITORY_POSTSYNAPTIC_POTENTIAL	inhibitory postsynaptic potential	local_state		defined by the rows that use it in seeds.tsv
+STATE:INHIBITORY_SYNAPTIC_DRIVE	inhibitory synaptic drive	local_state		defined by the rows that use it in seeds.tsv
+STATE:MITOCHONDRIAL_REDOX_ACTIVITY_RESAZURIN	mitochondrial redox activity resazurin	local_state		defined by the rows that use it in seeds.tsv
+STATE:NETWORK_HYPEREXCITABILITY	network hyperexcitability	local_state		defined by the rows that use it in seeds.tsv
+STATE:NMDAR_DEPENDENCE_OF_BURSTING	nmdar dependence of bursting	local_state		defined by the rows that use it in seeds.tsv
+STATE:OLIGODENDROCYTE_OR_ASTROCYTE_SPECIFIC_DELETION_NO_PHENOTYPE	oligodendrocyte or astrocyte specific deletion no phenotype	local_state		defined by the rows that use it in seeds.tsv
+STATE:REACTIVE_GLIAL_PROGRAMME	reactive glial programme	local_state		defined by the rows that use it in seeds.tsv
+STATE:RESTING_MEMBRANE_POTENTIAL	resting membrane potential	local_state		defined by the rows that use it in seeds.tsv
+STATE:SEIZURE_BURDEN	seizure burden	local_state		defined by the rows that use it in seeds.tsv
+STATE:STABLE_BUT_INERT_MISSENSE	stable but inert missense	local_state		defined by the rows that use it in seeds.tsv
+STATE:SYSTEMIC_GLYCAEMIA_AND_GROWTH	systemic glycaemia and growth	local_state		defined by the rows that use it in seeds.tsv
+STATE:WW1_PARTIAL_LOSS_MISSENSE_WITH_PHENOTYPE	ww1 partial loss missense with phenotype	local_state		defined by the rows that use it in seeds.tsv
