@@ -1,0 +1,47 @@
+query	catalogue_answer	catalogue_id	name	modality	status	access_category	targets	origin
+PX-478	3 match(es)	CAT:CHEMBL4061538	PX-478	protein_or_peptide	clinical_candidate	experimental	targets=0	chembl_selected
+PX-478	3 match(es)	CAT:CHEMBL4117516	PX-478 FREE BASE	protein_or_peptide	clinical_candidate	experimental	targets=0	chembl_selected
+PX-478	3 match(es)	CAT:DGIDB:b884da5f3057	Px-478	unknown	no_status_statement	unknown/unverified	targets=3	dgidb_only
+echinomycin	1 match(es)	CAT:DGIDB:18ae02b1cb9b	Echinomycin	unknown	no_status_statement	unknown/unverified	targets=1	dgidb_only
+quinomycin	0 match(es)							
+acriflavine	4 match(es)	CAT:CHEMBL354349	EUFLAVINE	small_molecule	phase_unknown	unknown/unverified	targets=17	chembl_selected
+acriflavine	4 match(es)	CAT:CHEMBL5219994	ACRIFLAVINE	unknown	clinical_candidate	experimental	targets=0	chembl_selected
+acriflavine	4 match(es)	CAT:CHEMBL5219995	ACRIFLAVINE HYDROCHLORIDE	unknown	clinical_candidate	experimental	targets=0	chembl_selected
+acriflavine	4 match(es)	CAT:DGIDB:3adae8367eb3	Acriflavine	unknown	no_status_statement	unknown/unverified	targets=1	dgidb_only
+proflavine	4 match(es)	CAT:CHEMBL1964546	PROFLAVINE SULFATE	small_molecule	clinical_candidate	experimental	targets=1	chembl_selected
+proflavine	4 match(es)	CAT:CHEMBL2105299	PROFLAVINE DIHYDROCHLORIDE	small_molecule	phase_unknown	unknown/unverified	targets=1	chembl_selected
+proflavine	4 match(es)	CAT:CHEMBL55400	PROFLAVINE	small_molecule	clinical_candidate	experimental	targets=1	chembl_selected
+proflavine	4 match(es)	CAT:DGIDB:ff8220de6399	Proflavine	unknown	approved_any_source	unknown/unverified	targets=4	dgidb_only
+KC7F2	0 match(es)							
+topotecan	4 match(es)	CAT:CHEMBL1607	TOPOTECAN HYDROCHLORIDE	small_molecule	approved_any_source	prescription	targets=1	chembl_selected
+topotecan	4 match(es)	CAT:CHEMBL65	CAMPTOTHECIN	small_molecule	phase_unknown	unknown/unverified	targets=0	chembl_selected
+topotecan	4 match(es)	CAT:CHEMBL84	TOPOTECAN	small_molecule	approved_any_source	prescription	targets=0	chembl_selected
+topotecan	4 match(es)	CAT:DGIDB:c42b10052b8a	Topotecan Hydrochloride	unknown	approved_any_source	unknown/unverified	targets=31	dgidb_only
+digoxin	6 match(es)	CAT:CHEMBL1697843	METILDIGOXIN	small_molecule	clinical_candidate	experimental	targets=0	chembl_selected
+digoxin	6 match(es)	CAT:CHEMBL1751	DIGOXIN	small_molecule	approved_any_source	prescription	targets=1	chembl_selected
+digoxin	6 match(es)	CAT:CHEMBL2074725	ACETYLDIGOXIN	small_molecule	phase_unknown	unknown/unverified	targets=2	chembl_selected
+digoxin	6 match(es)	CAT:DGIDB:23b7cb77467f	Metildigoxin	unknown	no_status_statement	unknown/unverified	targets=1	dgidb_only
+digoxin	6 match(es)	CAT:DGIDB:39ac892e7a73	Digoxin	unknown	approved_any_source	unknown/unverified	targets=38	dgidb_only
+digoxin	6 match(es)	CAT:DGIDB:9891847af394	Furosemide/Digoxin Topical Gel Cls003	unknown	no_status_statement	unknown/unverified	targets=1	dgidb_only
+BAY 87-2243	0 match(es)							
+belzutifan	2 match(es)	CAT:CHEMBL4585668	BELZUTIFAN	small_molecule	approved_any_source	unknown/unverified	targets=1	chembl_selected
+belzutifan	2 match(es)	CAT:DGIDB:2b6b69a912a3	Belzutifan	unknown	approved_any_source	unknown/unverified	targets=8	dgidb_only
+PT2385	2 match(es)	CAT:CHEMBL4173075	-	small_molecule	tool_probe	experimental	targets=0	chembl_selected
+PT2385	2 match(es)	CAT:DGIDB:a4417194c8dd	Pt2385	unknown	no_status_statement	unknown/unverified	targets=4	dgidb_only
+daprodustat	2 match(es)	CAT:CHEMBL3544988	DAPRODUSTAT	small_molecule	approved_any_source	prescription	targets=1	chembl_selected
+daprodustat	2 match(es)	CAT:DGIDB:2bf5d66381a2	Daprodustat	unknown	approved_any_source	unknown/unverified	targets=5	dgidb_only
+vadadustat	2 match(es)	CAT:CHEMBL3646221	VADADUSTAT	small_molecule	approved_any_source	prescription	targets=3	chembl_selected
+vadadustat	2 match(es)	CAT:DGIDB:4cf9f1d42d93	Vadadustat	unknown	no_status_statement	unknown/unverified	targets=8	dgidb_only
+molidustat	2 match(es)	CAT:CHEMBL3646118	MOLIDUSTAT	small_molecule	clinical_candidate	experimental	targets=9	chembl_selected
+molidustat	2 match(es)	CAT:CHEMBL3931782	MOLIDUSTAT SODIUM	small_molecule	clinical_candidate	experimental	targets=3	chembl_selected
+enarodustat	2 match(es)	CAT:CHEMBL4297619	ENARODUSTAT	small_molecule	clinical_candidate	experimental	targets=1	chembl_selected
+enarodustat	2 match(es)	CAT:DGIDB:0d9c62d5725a	Enarodustat	unknown	no_status_statement	unknown/unverified	targets=3	dgidb_only
+desidustat	2 match(es)	CAT:CHEMBL4650314	DESIDUSTAT	small_molecule	clinical_candidate	experimental	targets=0	chembl_selected
+desidustat	2 match(es)	CAT:DGIDB:3b5bdd7ae5b5	Desidustat	unknown	no_status_statement	unknown/unverified	targets=1	dgidb_only
+roxadustat	2 match(es)	CAT:CHEMBL2338329	ROXADUSTAT	small_molecule	approved_any_source	unknown/unverified	targets=1	chembl_selected
+roxadustat	2 match(es)	CAT:DGIDB:26eddfad55ce	Roxadustat	unknown	approved_any_source	unknown/unverified	targets=10	dgidb_only
+IOX2	2 match(es)	CAT:CHEMBL3186774	-	small_molecule	tool_probe	experimental	targets=0	chembl_selected
+IOX2	2 match(es)	CAT:DGIDB:68d3230a7a5e	Iox2	unknown	no_status_statement	unknown/unverified	targets=3	dgidb_only
+dimethyloxalylglycine	0 match(es)							
+DMOG	0 match(es)							
+N-oxalylglycine	1 match(es)	CAT:DGIDB:a171345a603e	N-Oxalylglycine	unknown	no_status_statement	unknown/unverified	targets=4	dgidb_only
